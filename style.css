@@ -52,3 +52,7 @@ details p{color:var(--muted);margin:8px 0 0}
 .updated{font-size:.85rem;color:var(--muted)}
 footer{border-top:1px solid var(--line);margin-top:30px;padding:24px 0 40px;font-size:.85rem;color:var(--muted)}
 footer p{margin:6px 0}
+.lang{display:flex;gap:2px}
+.lang a{padding:4px 7px;border-radius:6px;font-size:.8rem;font-weight:700;color:var(--muted);text-decoration:none;border:1px solid transparent}
+.lang a:hover{color:var(--text)}
+.lang a[aria-current]{border-color:var(--line);color:var(--text)}
