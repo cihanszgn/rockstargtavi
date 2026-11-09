@@ -56,3 +56,4 @@ footer p{margin:6px 0}
 .lang a{padding:4px 7px;border-radius:6px;font-size:.8rem;font-weight:700;color:var(--muted);text-decoration:none;border:1px solid transparent}
 .lang a:hover{color:var(--text)}
 .lang a[aria-current]{border-color:var(--line);color:var(--text)}
+@media (max-width:600px){.nav{padding:6px 0;row-gap:4px}.nav ul{order:3;flex:1 1 100%;gap:2px}.nav a.l{padding:5px 8px;font-size:.88rem}}
