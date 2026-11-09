@@ -1,4 +1,4 @@
-# rockstargtavi.com — GTA VI Türkçe Rehber
+# xn--rockstargtav-d5b.com — GTA VI Türkçe Rehber
 
 Bağımsız, Türkçe GTA VI hayran sitesi. Düz HTML + tek `style.css`, derleme adımı yok.
 Yayın: GitHub Pages (`cihanszgn/rockstargtavi`, `main` dalı kökü), özel alan adı `CNAME` dosyasında.
