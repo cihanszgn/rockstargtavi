@@ -20,7 +20,7 @@
     fr: "En mémoire de Mustafa Kemal Atatürk, fondateur de la République de Turquie.",
     es: "En memoria de Mustafa Kemal Atatürk, fundador de la República de Turquía."
   }[dil] || "";
-  var kapatYazi = { en: "Continue to site", fr: "Accéder au site", es: "Ir al sitio" }[dil] || "Siteye geç";
+  var kapatYazi = { en: "Close", fr: "Fermer", es: "Cerrar" }[dil] || "Kapat";
 
   var css = "#anma{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.94);display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;transition:opacity .8s}" +
     "#anma.acik{opacity:1}" +
@@ -30,29 +30,32 @@
     "#anma .yil{font-size:.9rem;color:#888;margin:0 0 12px}" +
     "#anma .soz{font-size:1.5rem;margin:0;color:#fff}" +
     "#anma .alt{font-size:.85rem;color:#999;margin:8px 0 0;font-family:system-ui,sans-serif}" +
-    "#anma button{margin-top:20px;background:none;border:1px solid #666;color:#ccc;padding:8px 18px;border-radius:4px;cursor:pointer;font:inherit;font-size:.9rem}" +
-    "#anma button:hover,#anma button:focus-visible{border-color:#fff;color:#fff}";
+    "#anma .x{position:absolute;top:12px;left:12px;width:40px;height:40px;background:none;border:1px solid #555;border-radius:50%;color:#bbb;font:24px/1 system-ui,sans-serif;cursor:pointer;padding:0}" +
+    "#anma .x:hover,#anma .x:focus-visible{border-color:#fff;color:#fff}";
 
   function kur() {
     var s = document.createElement("style"); s.textContent = css; document.head.appendChild(s);
     var d = document.createElement("div");
     d.id = "anma"; d.setAttribute("role", "dialog"); d.setAttribute("aria-modal", "true"); d.setAttribute("aria-label", "10 Kasım");
-    d.innerHTML = '<figure><img src="/ataturk.jpg" width="520" height="681" alt="Mustafa Kemal Atatürk">' +
+    d.innerHTML = '<button type="button" class="x" aria-label="' + kapatYazi + '" title="' + kapatYazi + '">&times;</button><figure><img src="/ataturk.jpg" width="520" height="681" alt="Mustafa Kemal Atatürk">' +
       '<figcaption><p class="ad">Mustafa Kemal Atatürk</p><p class="yil">1881 – 10 Kasım 1938</p>' +
       '<p class="soz">Saygı ve özlemle anıyoruz.</p>' + (alt ? '<p class="alt">' + alt + "</p>" : "") +
-      '<button type="button">' + kapatYazi + "</button></figcaption></figure>";
+      "</figcaption></figure>";
     document.body.appendChild(d);
     var eskiTasma = document.body.style.overflow; document.body.style.overflow = "hidden";
+    var kapandi = false, sayac;
     function kapat() {
+      if (kapandi) return; kapandi = true; clearTimeout(sayac);
       d.classList.remove("acik");
       setTimeout(function () { d.remove(); document.body.style.overflow = eskiTasma; }, 800);
       document.removeEventListener("keydown", tus);
     }
     function tus(e) { if (e.key === "Escape") kapat(); }
-    d.querySelector("button").addEventListener("click", kapat);
+    d.querySelector(".x").addEventListener("click", kapat);
     d.addEventListener("click", function (e) { if (e.target === d) kapat(); });
     document.addEventListener("keydown", tus);
-    requestAnimationFrame(function () { d.classList.add("acik"); d.querySelector("button").focus(); });
+    sayac = setTimeout(kapat, 10000);
+    requestAnimationFrame(function () { d.classList.add("acik"); d.querySelector(".x").focus(); });
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", kur); else kur();
 })();
