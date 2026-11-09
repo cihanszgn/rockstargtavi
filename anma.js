@@ -38,7 +38,7 @@
     var d = document.createElement("div");
     d.id = "anma"; d.setAttribute("role", "dialog"); d.setAttribute("aria-modal", "true"); d.setAttribute("aria-label", "10 Kasım");
     d.innerHTML = '<button type="button" class="x" aria-label="' + kapatYazi + '" title="' + kapatYazi + '">&times;</button><figure><img src="/ataturk.jpg" width="520" height="681" alt="Mustafa Kemal Atatürk">' +
-      '<figcaption><p class="ad">Mustafa Kemal Atatürk</p><p class="yil">1881 – 10 Kasım 1938</p>' +
+      '<figcaption><p class="ad">Mustafa Kemal Atatürk</p><p class="yil">1881 – ∞</p>' +
       '<p class="soz">Saygı ve özlemle anıyoruz.</p>' + (alt ? '<p class="alt">' + alt + "</p>" : "") +
       "</figcaption></figure>";
     document.body.appendChild(d);
