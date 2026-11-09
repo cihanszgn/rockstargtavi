@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rockstargtavi.com/sitemap.xml

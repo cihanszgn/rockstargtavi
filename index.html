@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GTA VI Türkçe Rehber: Çıkış Tarihi, Haberler ve Hazırlık</title>
+<meta name="description" content="GTA VI (Grand Theft Auto VI) çıkış tarihi, geri sayım, sürümler, ön yükleme ve son haberler. Bağımsız Türkçe hayran rehberi.">
+<link rel="canonical" href="https://rockstargtavi.com/">
+<meta property="og:title" content="GTA VI Türkçe Rehber">
+<meta property="og:description" content="Çıkış tarihi, geri sayım, sürümler ve son haberler. Bağımsız hayran sitesi.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rockstargtavi.com/">
+<meta name="theme-color" content="#0f0b1a">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="logo" href="./">GTA <span>VI</span> Rehber</a>
+  <ul>
+    <li><a class="l" href="./" aria-current="page">Ana sayfa</a></li>
+    <li><a class="l" href="haberler.html">Haberler</a></li>
+    <li><a class="l" href="rehber.html">Hazırlık rehberi</a></li>
+    <li><a class="l" href="hakkinda.html">Hakkında</a></li>
+  </ul>
+</div></header>
+
+<main>
+<div class="hero"><div class="wrap">
+  <h1>GTA VI çıkışına <b>geri sayım</b></h1>
+  <p>Grand Theft Auto VI, <strong>19 Kasım 2026</strong>'da PlayStation 5 ve Xbox Series X|S için çıkıyor. Tarih, sürümler ve hazırlık bilgileri tek sayfada, Türkçe.</p>
+  <div class="cd" id="cd" aria-live="polite">
+    <div><b id="d">–</b><small>gün</small></div>
+    <div><b id="h">–</b><small>saat</small></div>
+    <div><b id="m">–</b><small>dakika</small></div>
+    <div><b id="s">–</b><small>saniye</small></div>
+  </div>
+  <p class="note">Geri sayım Türkiye saatiyle 19 Kasım 00:00'a göredir. Açılış saati platforma ve bölgeye göre değişebilir.</p>
+</div></div>
+
+<section><div class="wrap">
+  <h2>Kısaca GTA VI</h2>
+  <div class="grid">
+    <div class="card"><div class="k">Çıkış tarihi</div><h3>19 Kasım 2026</h3><p>Rockstar'ın açıkladığı resmî tarih. Daha önce 2025 sonbaharı ve 26 Mayıs 2026 olarak duyurulmuştu.</p></div>
+    <div class="card"><div class="k">Platformlar</div><h3>PS5 ve Xbox Series X|S</h3><p>PC sürümü için henüz resmî bir tarih açıklanmadı.</p></div>
+    <div class="card"><div class="k">Sürümler</div><h3>Standard ve Ultimate</h3><p>ABD fiyatları 79,99 $ ve 99,99 $. Türkiye fiyatı için PlayStation Store ve Microsoft Store'a bakın.</p></div>
+    <div class="card"><div class="k">Ön yükleme</div><h3>10 Kasım'dan itibaren</h3><p>Dijital ön sipariş verenler oyunu çıkıştan önce indirmeye başlayabiliyor.</p></div>
+    <div class="card"><div class="k">Mekân</div><h3>Leonida eyaleti ve Vice City</h3><p>Oyun, Florida esintili kurgusal Leonida eyaletinde geçiyor.</p></div>
+    <div class="card"><div class="k">Karakterler</div><h3>Lucia ve Jason</h3><p>Hikâye iki ana karakter üzerinden ilerliyor: Lucia Caminos ve Jason Duval.</p></div>
+  </div>
+  <p style="margin-top:20px"><a class="btn" href="rehber.html">Çıkışa hazırlık rehberi →</a></p>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Son haberler</h2>
+  <ul class="tl">
+    <li><time>Kasım 2026</time><strong>Dijital ön yükleme 10 Kasım'da başlıyor</strong><p>Ön yükleme önce 12 Kasım olarak duyurulmuştu, iki gün öne çekildi.</p></li>
+    <li><time>Haziran 2026</time><strong>Ön siparişler açıldı</strong><p>Standard ve Ultimate olmak üzere iki sürüm duyuruldu.</p></li>
+  </ul>
+  <p><a href="haberler.html">Tüm haberler ve kaynaklar →</a></p>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <p><strong>Bu site bağımsız bir hayran sitesidir.</strong> Rockstar Games veya Take-Two Interactive ile bağlantısı yoktur, onlar tarafından onaylanmamıştır. Grand Theft Auto, GTA ve Rockstar Games adları ilgili sahiplerinin ticari markalarıdır. Resmî bilgi için <a href="https://www.rockstargames.com/VI" rel="noopener">rockstargames.com/VI</a>.</p>
+  <p><a href="hakkinda.html">Hakkında</a> · <a href="gizlilik.html">Gizlilik</a></p>
+</div></footer>
+
+<script>
+(function(){
+  var t=new Date("2026-11-19T00:00:00+03:00").getTime();
+  function p(n){return n<10?"0"+n:n}
+  function tick(){
+    var x=t-Date.now();
+    if(x<=0){document.getElementById("cd").innerHTML='<div><b>Çıktı!</b><small>İyi oyunlar</small></div>';return}
+    document.getElementById("d").textContent=Math.floor(x/864e5);
+    document.getElementById("h").textContent=p(Math.floor(x/36e5)%24);
+    document.getElementById("m").textContent=p(Math.floor(x/6e4)%60);
+    document.getElementById("s").textContent=p(Math.floor(x/1e3)%60);
+    setTimeout(tick,1000);
+  }
+  tick();
+})();
+</script>
+</body>
+</html>
