@@ -1,4 +1,4 @@
-/* 10 Kasım anma ekranı: yalnız Türkiye saatiyle 10 Kasım 2026'da, ilk girişte bir kez gösterilir.
+/* 10 Kasım anma ekranı: yalnız Türkiye saatiyle 10 Kasım 2026'da, gün boyu her yeni ziyarette (sekme başına bir kez) gösterilir.
    Test: sayfa adresine ?anma=1 ekle. Fotoğraf: Wikimedia Commons, kamu malı (1930). */
 (function () {
   var GUN = "2026-11-10", ANAHTAR = "anma-2026-11-10";
@@ -12,7 +12,7 @@
   }
   if (!test) {
     if (bugunTR() !== GUN) return;
-    try { if (localStorage.getItem(ANAHTAR)) return; localStorage.setItem(ANAHTAR, "1"); } catch (e) {}
+    try { if (sessionStorage.getItem(ANAHTAR)) return; sessionStorage.setItem(ANAHTAR, "1"); } catch (e) {}
   }
   var dil = (document.documentElement.lang || "tr").slice(0, 2);
   var alt = {
