@@ -1,0 +1,53 @@
+{
+ "guncel": "2026-11-14T13:41:52Z",
+ "epic": [
+  {
+   "baslik": "Knightica",
+   "slug": "knightica-3be45c",
+   "resim": "https://cdn1.epicgames.com/spt-assets/357100ca5613420e98208c5f14585e9d/knightica-1nuxm.png",
+   "baslangic": "2026-11-12T16:00:00.000Z",
+   "bitis": "2026-11-19T16:00:00.000Z",
+   "durum": "simdi",
+   "normal": 206.0,
+   "para": "TRY"
+  },
+  {
+   "baslik": "Alien: Isolation",
+   "slug": "alien-isolation",
+   "resim": "https://cdn1.epicgames.com/df37f065c3f14eadbf011177396e2966/offer/EGS_AlienIsolation_CreativeAssembly_S5-1920x1080-1cf3b9a86adcefeebf903451b1b3fb49.jpg",
+   "baslangic": "2026-11-19T16:00:00.000Z",
+   "bitis": "2026-11-26T16:00:00.000Z",
+   "durum": "yakinda",
+   "normal": 379.0,
+   "para": "TRY"
+  },
+  {
+   "baslik": "Mark of the Deep",
+   "slug": "mark-of-the-deep-f7dc08",
+   "resim": "https://cdn1.epicgames.com/spt-assets/83a240506a884c10ad8fb99694e57a0d/mark-of-the-deep-w1ygr.png",
+   "baslangic": "2026-11-19T16:00:00.000Z",
+   "bitis": "2026-11-26T16:00:00.000Z",
+   "durum": "yakinda",
+   "normal": 279.0,
+   "para": "TRY"
+  }
+ ],
+ "cheapshark": [
+  {
+   "dealID": "REe9mfdT3TdLdJWWX2dgNfk69WQiyQRifFoydZms2A4%3D",
+   "gameID": "307340",
+   "title": "Knightica",
+   "storeID": "25",
+   "salePrice": 0.0,
+   "normalPrice": 14.99,
+   "savings": 100.0,
+   "metacriticScore": 0,
+   "steamRatingText": "Mostly Positive",
+   "steamRatingPercent": 74,
+   "steamAppID": "3093400",
+   "releaseDate": 1755734400,
+   "dealRating": 9.0,
+   "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3093400/7b0ebe2cc1c7fd1fe219f4fce68edc5003b19a89/capsule_231x87.jpg?t=1794501426"
+  }
+ ]
+}

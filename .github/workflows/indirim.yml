@@ -1,0 +1,45 @@
+# İndirim ve ücretsiz oyun anlık görüntüsünü yeniler, siteyi yeniden derler, değişiklik varsa depoya yazar.
+# Canlı veri tarayıcıda CheapShark'tan gelir; bu dosyalar JavaScript kapalıyken ve CheapShark'a ulaşılamadığında gösterilir.
+# Günlük derleme ayrıca geri sayımları, "kaç gün kaldı" yazılarını ve süresi biten Epic oyunlarını günceller.
+name: Indirim verisi
+
+on:
+  schedule:
+    - cron: "23 4 * * *"    # her gün, Türkiye saatiyle 07:23
+    - cron: "9 16 * * 4"    # perşembe 19:09 (TR): Epic'in haftalık ücretsiz oyunu değiştikten sonra
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: indirim-verisi
+  cancel-in-progress: false
+
+jobs:
+  yenile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Veriyi çek
+        # Bir kaynak hata verirse o dosyanın eski hâli kalır; site yine derlenir.
+        run: python tools/indirim_cek.py || echo "Kaynaklardan biri yanıt vermedi; eski veri kullanılacak."
+
+      - name: Siteyi derle
+        run: python tools/site_derle.py
+
+      - name: Değişikliği depoya yaz
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data/indirimler.json data/ucretsiz.json data/sayfalar.json 'ara-*.json' sitemap.xml '*.html'
+          if ! git diff --cached --quiet; then
+            git commit -m "indirim: günlük veri ve derleme"
+            for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
+          fi

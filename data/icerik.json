@@ -4,6 +4,9 @@
   "tarih": "2026-11-13",
   "oyun": "GTA VI",
   "tur": "haber",
+  "platform": [
+   "Xbox"
+  ],
   "kaynaklar": [
    {
     "url": "https://news.xbox.com/en-us/2026/11/13/next-week-on-xbox-new-games-for-november-16-to-20/",
@@ -59,6 +62,10 @@
   "tarih": "2026-11-12",
   "oyun": "GTA VI",
   "tur": "haber",
+  "platform": [
+   "PS5",
+   "Xbox"
+  ],
   "kaynaklar": [
    {
     "url": "https://blog.youtube/news-and-events/youtube-rockstar-games-gta-vi-launch/",
@@ -114,6 +121,9 @@
   "tarih": "2026-11-10",
   "oyun": "PlayStation Plus Game Catalog",
   "tur": "haber",
+  "platform": [
+   "PS5"
+  ],
   "kaynaklar": [
    {
     "url": "https://blog.playstation.com/2026/11/10/playstation-plus-game-catalog-for-november-death-stranding-2-on-the-beach-like-a-dragon-pirate-yakuza-in-hawaii-atomfall-dragon-quest-iii-hd-2d-remake-and-more",
@@ -169,6 +179,9 @@
   "tarih": "2026-11-12",
   "oyun": "Epic Games Store",
   "tur": "ucretsiz",
+  "platform": [
+   "PC"
+  ],
   "kaynaklar": [
    {
     "url": "https://store.epicgames.com/free-games",
@@ -224,6 +237,9 @@
   "tarih": "2026-11-09",
   "oyun": "Nintendo eShop",
   "tur": "guncelleme",
+  "platform": [
+   "Switch 2"
+  ],
   "kaynaklar": [
    {
     "url": "https://www.nintendo.com/us/whatsnew/coming-soon-gift-digital-games-to-family-group-members",
@@ -279,6 +295,9 @@
   "tarih": "2026-11-12",
   "oyun": "Nintendo Switch 2",
   "tur": "indirim",
+  "platform": [
+   "Switch 2"
+  ],
   "kaynaklar": [
    {
     "url": "https://www.nintendo.com/us/whatsnew/nintendo-announces-black-friday-offers-to-help-spread-joy-this-holiday-season",
@@ -334,6 +353,10 @@
   "tarih": "2026-11-10",
   "oyun": "Football Manager 27",
   "tur": "cikis",
+  "platform": [
+   "PC",
+   "Xbox"
+  ],
   "kaynaklar": [
    {
     "url": "https://news.xbox.com/en-us/2026/11/10/football-manager-27-game-pass-pc-console-xbox",
@@ -389,6 +412,9 @@
   "tarih": "2026-11-10",
   "oyun": "Marathon",
   "tur": "guncelleme",
+  "platform": [
+   "PS5"
+  ],
   "kaynaklar": [
    {
     "url": "https://blog.playstation.com/2026/11/10/marathon-symbiosis-update-launches-december-8-adding-new-pve-and-pvp-modes-weapons-and-more",
@@ -504,6 +530,11 @@
   "tarih": "2026-11-12",
   "oyun": "Halo: Campaign Evolved",
   "tur": "guncelleme",
+  "platform": [
+   "Xbox",
+   "PC",
+   "PS5"
+  ],
   "kaynaklar": [
    {
     "url": "https://news.xbox.com/en-us/2026/11/12/halo-campaign-evolved-firefight-free-update-this-winter",

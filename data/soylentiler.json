@@ -1,0 +1,452 @@
+[
+ {
+  "id": "fairgames-iptal",
+  "tarih": "2026-11-10",
+  "oyun": "Fairgames",
+  "platform": [
+   "PS5",
+   "PC"
+  ],
+  "guven": "yuksek",
+  "durum": "dogrulanmadi",
+  "kaynaklar": [
+   {
+    "url": "https://www.videogameschronicle.com/news/playstation-reportedly-cancels-fairgames-after-recent-playtests",
+    "ad": "VGC",
+    "tarih": "2026-11-10"
+   },
+   {
+    "url": "https://www.eurogamer.net/fairgames-playstation-heist-shooter-live-service-cancelled-haven",
+    "ad": "Eurogamer",
+    "tarih": "2026-11-10"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Fairgames'in iptal edildiği iddia ediliyor: Sony oyun testi sonrası projeyi bitirmiş",
+    "ozet": "Bloomberg'e göre PlayStation, canlı hizmet nişancı oyunu Fairgames'in geliştirmesini durdurdu.",
+    "metin": "Bloomberg'in aktardığına göre Sony yöneticileri çalışanlara gönderdikleri e-postada son oyun testinin geri bildirim ve oyuncu tutma sonuçlarının hedeflerin altında kaldığını yazdı. VGC'ye göre Haven Studios kapanmayacak ve işten çıkarma planlanmıyor. PlayStation iddiaya kamuya açık bir yorum yapmadı.",
+    "guven_nedeni": "Bloomberg dahili bir e-postadan alıntı yapıyor ve iki büyük yayın aktardı, ancak Sony kamuya açık bir doğrulama yapmadı."
+   },
+   "en": {
+    "baslik": "PlayStation reportedly cancels live-service shooter Fairgames after a failed playtest",
+    "ozet": "Bloomberg reports that PlayStation has ended development of the live-service shooter Fairgames.",
+    "metin": "According to Bloomberg, Sony executives told staff in an email that the latest playtest's feedback and retention results fell short of the goals set. VGC reports that Haven Studios will not close and no layoffs are planned. PlayStation has not publicly commented on the claim.",
+    "guven_nedeni": "Bloomberg quotes an internal email and two major outlets relayed it, but Sony has not confirmed it publicly."
+   },
+   "fr": {
+    "baslik": "Selon une rumeur, PlayStation aurait annulé Fairgames après un test de jeu raté",
+    "ozet": "Selon Bloomberg, PlayStation aurait mis fin au développement du jeu de tir en service continu Fairgames.",
+    "metin": "D'après Bloomberg, des dirigeants de Sony auraient écrit aux équipes que les retours et la rétention du dernier test restaient en deçà des objectifs. Selon VGC, Haven Studios ne fermerait pas et aucun licenciement ne serait prévu. PlayStation n'a pas commenté publiquement l'information.",
+    "guven_nedeni": "Bloomberg cite un e-mail interne et deux grands médias l'ont relayé, mais Sony ne l'a pas confirmé publiquement."
+   },
+   "es": {
+    "baslik": "Según un rumor, PlayStation canceló Fairgames tras una prueba de juego fallida",
+    "ozet": "Según Bloomberg, PlayStation habría puesto fin al desarrollo del shooter de servicio continuo Fairgames.",
+    "metin": "Según Bloomberg, directivos de Sony escribieron al personal que los resultados de comentarios y retención de la última prueba quedaron por debajo de los objetivos. VGC indica que Haven Studios no cerraría y no habría despidos. PlayStation no ha comentado públicamente la información.",
+    "guven_nedeni": "Bloomberg cita un correo interno y dos medios importantes lo recogieron, pero Sony no lo ha confirmado públicamente."
+   }
+  }
+ },
+ {
+  "id": "ac-hexe-erteleme",
+  "tarih": "2026-11-08",
+  "oyun": "Assassin's Creed Hexe",
+  "platform": [
+   "PS5",
+   "Xbox",
+   "PC"
+  ],
+  "guven": "orta",
+  "durum": "dogrulanmadi",
+  "kaynaklar": [
+   {
+    "url": "https://www.gamesradar.com/games/assassin-s-creed/assassins-creed-hexe-reportedly-delayed-by-a-year-while-ubisoft-is-apparently-making-another-ac-game-set-in-ancient-rome",
+    "ad": "GamesRadar",
+    "tarih": "2026-11-08"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Assassin's Creed Hexe'nin bir yıl ertelendiği iddia ediliyor, çıkış 2028'e kayabilir",
+    "ozet": "Insider Gaming'e göre Ubisoft, Assassin's Creed Hexe'yi şirket içinde bir yıl daha erteledi.",
+    "metin": "Rapor isimsiz kaynaklara dayanıyor ve daha olası çıkış tarihinin 2028 olduğunu söylüyor. GamesRadar, oyunun yaratıcı yönetmeni Clint Hocking'in bu yıl ayrıldığını, yerine Jean Guesdon'ın geçtiğini hatırlatıyor. Aynı haberde YouTuber j0nathan'ın Mars ve Pocket adlı iki Assassin's Creed projesinden söz ettiği de aktarılıyor.",
+    "guven_nedeni": "İsimsiz kaynaklara dayanıyor ve haberde Ubisoft'tan bir doğrulama aktarılmıyor."
+   },
+   "en": {
+    "baslik": "Assassin's Creed Hexe reportedly delayed internally by another year, possibly to 2028",
+    "ozet": "Insider Gaming reports that Ubisoft has internally delayed Assassin's Creed Hexe by another year.",
+    "metin": "The report relies on anonymous sources and says 2028 is the likelier release window. GamesRadar notes that the game's creative director Clint Hocking left earlier this year, with Jean Guesdon taking over. The same coverage mentions YouTuber j0nathan's claim of two other codenamed Assassin's Creed projects, Mars and Pocket.",
+    "guven_nedeni": "It rests on anonymous sources, and the coverage cites no confirmation from Ubisoft."
+   },
+   "fr": {
+    "baslik": "Selon une rumeur, Assassin's Creed Hexe serait repoussé d'un an, peut-être à 2028",
+    "ozet": "Selon Insider Gaming, Ubisoft aurait repoussé en interne Assassin's Creed Hexe d'une année supplémentaire.",
+    "metin": "Le rapport repose sur des sources anonymes et évoque 2028 comme fenêtre de sortie la plus probable. GamesRadar rappelle que le directeur créatif Clint Hocking a quitté le projet cette année, remplacé par Jean Guesdon. L'article cite aussi le YouTubeur j0nathan, qui parle de deux autres projets Assassin's Creed nommés Mars et Pocket.",
+    "guven_nedeni": "Elle repose sur des sources anonymes et l'article ne cite aucune confirmation d'Ubisoft."
+   },
+   "es": {
+    "baslik": "Según un rumor, Assassin's Creed Hexe se retrasó otro año, posiblemente a 2028",
+    "ozet": "Según Insider Gaming, Ubisoft habría retrasado internamente Assassin's Creed Hexe un año más.",
+    "metin": "El informe se basa en fuentes anónimas y apunta a 2028 como ventana de lanzamiento más probable. GamesRadar recuerda que el director creativo Clint Hocking dejó el proyecto este año y lo sustituyó Jean Guesdon. También menciona al youtuber j0nathan, que habla de otros dos proyectos de Assassin's Creed con nombre en clave, Mars y Pocket.",
+    "guven_nedeni": "Se basa en fuentes anónimas y la cobertura no cita ninguna confirmación de Ubisoft."
+   }
+  }
+ },
+ {
+  "id": "zelda-oot-master-quest",
+  "tarih": "2026-11-07",
+  "oyun": "The Legend of Zelda: Ocarina of Time (remake)",
+  "platform": [
+   "Switch 2"
+  ],
+  "guven": "dusuk",
+  "durum": "dogrulanmadi",
+  "kaynaklar": [
+   {
+    "url": "https://www.nintendolife.com/news/2026/11/rumour-data-found-in-zelda-ocarina-of-time-may-hint-at-master-quest-dlc",
+    "ad": "Nintendo Life",
+    "tarih": "2026-11-07"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Ocarina of Time remake'inde Master Quest DLC'sine dair ipucu bulunduğu iddia ediliyor",
+    "ozet": "Veri madencileri, Zelda: Ocarina of Time remake'inin dosyalarında Master Quest ile ilgili kod bulunduğunu öne sürüyor.",
+    "metin": "Nintendo Life'ın aktardığı söylentiye göre veri madencisi MrCheeze oyunun dosyalarında Master Quest koduna rastladı. Yapımcı Eiji Aonuma, IGN'e bu aşamada belirli bir şey duyurmayacaklarını söyledi ve hayranlar bu yanıtı farklı yorumladı. Resmî bir Master Quest duyurusu bulunmuyor.",
+    "guven_nedeni": "Yalnızca dosyalarda kalan veriye dayanıyor; bu, bir DLC planlandığını kanıtlamaz."
+   },
+   "en": {
+    "baslik": "Data found in Zelda: Ocarina of Time remake reportedly hints at Master Quest DLC",
+    "ozet": "Data miners claim the Switch 2 Zelda: Ocarina of Time remake contains code tied to Master Quest.",
+    "metin": "Nintendo Life reports that data miner MrCheeze found Master Quest code in the game's files. Producer Eiji Aonuma told IGN he did not think they would announce anything specific at this time, an answer fans read in different ways. No official Master Quest announcement exists.",
+    "guven_nedeni": "It rests only on leftover data, which does not prove a DLC is planned."
+   },
+   "fr": {
+    "baslik": "Selon une rumeur, le remake d'Ocarina of Time cacherait un DLC Master Quest",
+    "ozet": "Des dataminers affirment que le remake de Zelda : Ocarina of Time sur Switch 2 contient du code lié à Master Quest.",
+    "metin": "Nintendo Life rapporte que le dataminer MrCheeze a trouvé du code lié à Master Quest dans les fichiers du jeu. Interrogé par IGN, le producteur Eiji Aonuma a répondu qu'il ne pensait pas annoncer quoi que ce soit de précis pour l'instant, une réponse que les fans interprètent de façons différentes. Aucune annonce officielle de Master Quest n'existe.",
+    "guven_nedeni": "Elle repose uniquement sur des données résiduelles, qui ne prouvent pas qu'un DLC est prévu."
+   },
+   "es": {
+    "baslik": "Según un rumor, el remake de Ocarina of Time apunta a un DLC Master Quest",
+    "ozet": "Datamineros afirman que el remake de Zelda: Ocarina of Time para Switch 2 contiene código ligado a Master Quest.",
+    "metin": "Nintendo Life informa de que el datamineo de MrCheeze encontró código de Master Quest en los archivos del juego. Al preguntarle IGN, el productor Eiji Aonuma dijo que no creía que fueran a anunciar nada concreto por ahora, una respuesta que los fans interpretan de formas distintas. No hay ningún anuncio oficial de Master Quest.",
+    "guven_nedeni": "Se basa solo en datos residuales, que no prueban que haya un DLC previsto."
+   }
+  }
+ },
+ {
+  "id": "arkane-lyon-talipler",
+  "tarih": "2026-11-03",
+  "oyun": "Marvel's Blade",
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "guven": "yuksek",
+  "durum": "dogrulanmadi",
+  "kaynaklar": [
+   {
+    "url": "https://www.ign.com/articles/ubisoft-among-suitors-trying-to-buy-marvels-blade-dishonored-studio-arkane-lyon-from-xbox",
+    "ad": "IGN",
+    "tarih": "2026-11-03"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Ubisoft'un Arkane Lyon'u Xbox'tan satın almak istediği iddia ediliyor",
+    "ozet": "Bloomberg'e göre en az üç şirket, Marvel's Blade'i geliştiren Arkane Lyon için Microsoft'a teklif verdi.",
+    "metin": "IGN'in aktardığı rapora göre teklif verenler arasında Ubisoft da var; diğerlerinin kimliği açıklanmadı. Microsoft henüz hiçbir teklifi kabul etmedi. Bloomberg, bir anlaşmanın stüdyonun Marvel's Blade'i bitirmesine izin vereceğini ve oyunun bir iki yıl içinde çıkmasının beklendiğini yazıyor.",
+    "guven_nedeni": "Bloomberg haberi büyük bir yayın tarafından aktarıldı, ancak satışa dair resmî bir açıklama aktarılmıyor."
+   },
+   "en": {
+    "baslik": "Ubisoft reportedly among suitors bidding for Xbox's Arkane Lyon",
+    "ozet": "Bloomberg reports that at least three companies have bid for Arkane Lyon, the studio behind Marvel's Blade.",
+    "metin": "Per IGN's summary of the report, Ubisoft is among the bidders and the other companies have not been identified. Microsoft has not accepted any bid yet. Bloomberg says a deal would let the studio finish Marvel's Blade, which is expected within the next year or two.",
+    "guven_nedeni": "Bloomberg's report was relayed by a major outlet, but no official sale statement is quoted."
+   },
+   "fr": {
+    "baslik": "Selon une rumeur, Ubisoft ferait partie des acheteurs potentiels d'Arkane Lyon",
+    "ozet": "Selon Bloomberg, au moins trois entreprises ont fait une offre pour Arkane Lyon, le studio de Marvel's Blade.",
+    "metin": "D'après le résumé d'IGN, Ubisoft figure parmi les candidats et l'identité des autres n'est pas connue. Microsoft n'a encore accepté aucune offre. Bloomberg précise qu'un accord permettrait au studio de terminer Marvel's Blade, attendu d'ici un à deux ans.",
+    "guven_nedeni": "Le rapport de Bloomberg a été relayé par un grand média, mais aucune déclaration officielle sur une vente n'est citée."
+   },
+   "es": {
+    "baslik": "Según un rumor, Ubisoft está entre los interesados en comprar Arkane Lyon a Xbox",
+    "ozet": "Según Bloomberg, al menos tres empresas han hecho ofertas por Arkane Lyon, el estudio de Marvel's Blade.",
+    "metin": "Según el resumen de IGN, Ubisoft está entre los postores y no se conoce la identidad de los demás. Microsoft aún no ha aceptado ninguna oferta. Bloomberg indica que un acuerdo permitiría al estudio terminar Marvel's Blade, previsto para dentro de uno o dos años.",
+    "guven_nedeni": "El informe de Bloomberg fue recogido por un medio importante, pero no se cita ninguna declaración oficial sobre una venta."
+   }
+  }
+ },
+ {
+  "id": "bend-studio-sonraki-oyun",
+  "tarih": "2026-11-02",
+  "oyun": "Bend Studio'nun yeni oyunu",
+  "platform": [
+   "PS5"
+  ],
+  "guven": "dusuk",
+  "durum": "dogrulanmadi",
+  "kaynaklar": [
+   {
+    "url": "https://www.videogameschronicle.com/news/days-gone-developer-bend-studios-next-game-will-be-revealed-and-released-next-year-report-claims/",
+    "ad": "VGC",
+    "tarih": "2026-11-02"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Bend Studio'nun yeni oyununun 2027'de duyurulup çıkacağı iddia ediliyor",
+    "ozet": "MP1st'in isimsiz kaynaklarına göre Days Gone yapımcısı Bend Studio'nun sonraki oyunu 2027'de hem duyurulacak hem çıkacak.",
+    "metin": "VGC'nin aktardığı iddiaya göre oyun Days Gone devamı değil; üçüncü şahıs bakış açılı, kooperatif oynanabilen ve canlı hizmet modeline dayanmayan bir yapım. Kaynaklar projenin sanıldığından çok daha ileride olduğunu söylüyor. Sony veya Bend Studio'dan bir açıklama aktarılmıyor.",
+    "guven_nedeni": "Yalnızca isimsiz kaynaklara dayanıyor; bir yayın daha aktardı ama bağımsız bir doğrulama yok."
+   },
+   "en": {
+    "baslik": "Bend Studio's next game reportedly to be revealed and released in 2027",
+    "ozet": "MP1st's anonymous sources claim the Days Gone developer's next game will be both revealed and released in 2027.",
+    "metin": "As relayed by VGC, the game is said not to be a Days Gone sequel and to feature third-person play and co-op without being a live service game. The sources claim the project is much further along than people think. No statement from Sony or Bend Studio is quoted.",
+    "guven_nedeni": "It rests solely on anonymous sources; another outlet relayed it but nothing independent confirms it."
+   },
+   "fr": {
+    "baslik": "Selon une rumeur, le prochain jeu de Bend Studio serait dévoilé et sorti en 2027",
+    "ozet": "Selon les sources anonymes de MP1st, le prochain jeu du créateur de Days Gone sera annoncé et lancé en 2027.",
+    "metin": "Selon VGC, le jeu ne serait pas une suite de Days Gone, proposerait une vue à la troisième personne et du coop, sans être un jeu en service continu. Les sources affirment que le projet est bien plus avancé qu'on ne le pense. Aucune déclaration de Sony ou de Bend Studio n'est citée.",
+    "guven_nedeni": "Elle repose uniquement sur des sources anonymes ; un autre média l'a relayée mais rien d'indépendant ne la confirme."
+   },
+   "es": {
+    "baslik": "Según un rumor, el próximo juego de Bend Studio se presentará y lanzará en 2027",
+    "ozet": "Según fuentes anónimas de MP1st, el próximo juego del creador de Days Gone se presentará y lanzará en 2027.",
+    "metin": "Según recoge VGC, el juego no sería una secuela de Days Gone, tendría vista en tercera persona y cooperativo, y no sería un juego de servicio continuo. Las fuentes afirman que el proyecto está mucho más avanzado de lo que se cree. No se cita ninguna declaración de Sony ni de Bend Studio.",
+    "guven_nedeni": "Se basa solo en fuentes anónimas; otro medio lo recogió pero nada independiente lo confirma."
+   }
+  }
+ },
+ {
+  "id": "ea-bioware-battlefront-3",
+  "tarih": "2026-10-30",
+  "oyun": "Star Wars Battlefront 3",
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "guven": "yuksek",
+  "durum": "dogrulanmadi",
+  "kaynaklar": [
+   {
+    "url": "https://kotaku.com/bioware-shut-down-mass-effect-star-wars-battlefront-3-ea-cancel-2000751575",
+    "ad": "Kotaku",
+    "tarih": "2026-10-30"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "EA'nın BioWare'i Star Wars Battlefront 3 uğruna kapattığı iddia ediliyor",
+    "ozet": "Bloomberg'e göre EA, Mass Effect: Universe yerine Star Wars Battlefront 3'ü seçtiği için BioWare'i kapattı.",
+    "metin": "EA stüdyonun kapatıldığını ve erken geliştirmedeki Mass Effect'ten vazgeçildiğini resmen açıkladı; ancak gerekçe Bloomberg'in kaynaklarına dayanıyor. Kotaku'nun aktardığına göre özel sermayeli satın alma sonrası borç yükü, şirketi iki bilimkurgu projesinden birini seçmeye itti. Battlefront 3'ün geliştirmesi henüz başlamamış.",
+    "guven_nedeni": "Kapanış resmî olarak doğrulandı, ancak gerekçe Bloomberg'in isimsiz kaynaklarına dayanıyor ve EA'nın açıklaması bunu doğrulamıyor."
+   },
+   "en": {
+    "baslik": "EA reportedly shut down BioWare to prioritize Star Wars Battlefront 3 over Mass Effect",
+    "ozet": "Bloomberg reports EA chose Star Wars Battlefront 3 over Mass Effect: Universe, which led to BioWare's closure.",
+    "metin": "EA has officially confirmed that it is closing the studio and not moving forward with early Mass Effect development, but the reasoning comes from Bloomberg's sources. Kotaku reports that debt after the private-equity buyout pushed EA to pick one of two sci-fi projects. Battlefront 3 has reportedly not started development yet.",
+    "guven_nedeni": "The closure is official, but the reasoning rests on Bloomberg's sources and EA's own statement does not confirm it."
+   },
+   "fr": {
+    "baslik": "Selon une rumeur, EA a fermé BioWare pour favoriser Star Wars Battlefront 3",
+    "ozet": "Selon Bloomberg, EA a choisi Star Wars Battlefront 3 plutôt que Mass Effect: Universe, ce qui a entraîné la fermeture de BioWare.",
+    "metin": "EA a confirmé officiellement la fermeture du studio et l'abandon du développement initial de Mass Effect, mais la raison avancée vient des sources de Bloomberg. Kotaku rapporte que la dette liée au rachat par un fonds privé aurait poussé EA à choisir l'un de deux projets de science-fiction. Battlefront 3 n'aurait pas encore commencé son développement.",
+    "guven_nedeni": "La fermeture est officielle, mais le motif repose sur les sources de Bloomberg et la déclaration d'EA ne le confirme pas."
+   },
+   "es": {
+    "baslik": "Según un rumor, EA cerró BioWare para priorizar Star Wars Battlefront 3 sobre Mass Effect",
+    "ozet": "Según Bloomberg, EA eligió Star Wars Battlefront 3 antes que Mass Effect: Universe, lo que llevó al cierre de BioWare.",
+    "metin": "EA confirmó oficialmente el cierre del estudio y que no seguirá con el desarrollo inicial de Mass Effect, pero el motivo procede de las fuentes de Bloomberg. Kotaku informa de que la deuda tras la compra por capital privado habría llevado a EA a elegir uno de dos proyectos de ciencia ficción. Battlefront 3 aún no habría empezado a desarrollarse.",
+    "guven_nedeni": "El cierre es oficial, pero el motivo se basa en fuentes de Bloomberg y el comunicado de EA no lo confirma."
+   }
+  }
+ },
+ {
+  "id": "cyberpunk-2-coklu-oyuncu",
+  "tarih": "2026-10-28",
+  "oyun": "Cyberpunk 2",
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "guven": "dusuk",
+  "durum": "dogrulanmadi",
+  "kaynaklar": [
+   {
+    "url": "https://www.eurogamer.net/cyberpunk-2077-multiplayer-quests-cd-projekt-red",
+    "ad": "Eurogamer",
+    "tarih": "2026-10-28"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Cyberpunk 2'nin çok oyunculu görevler içerebileceği iddia ediliyor: iş ilanı ipucu verdi",
+    "ozet": "CD Projekt Red'in yeni bir iş ilanı, Cyberpunk 2'de çok oyunculu öğeler olabileceği tahminini doğurdu.",
+    "metin": "Eurogamer'a göre ilan, \"multiplayer network architecture\" konusunda deneyimli birini arıyor. Haber ayrıca CEO Adam Badowski'nin 2024'te devam oyunu için çok oyunculu öğeleri \"düşündüklerini\" söylediğini hatırlatıyor. Bu çıkarım bir iş ilanına dayanıyor ve stüdyo bir çok oyunculu özelliği doğrulamadı.",
+    "guven_nedeni": "Yalnızca bir iş ilanından yapılan çıkarım; ilan belirli bir oyunu veya özelliği adıyla anmıyor."
+   },
+   "en": {
+    "baslik": "Cyberpunk 2 may reportedly include multiplayer quests, a job listing suggests",
+    "ozet": "A new CD Projekt Red job listing has sparked speculation that Cyberpunk 2 may include multiplayer elements.",
+    "metin": "Eurogamer says the listing seeks someone familiar with \"multiplayer network architecture\". The article also recalls that CEO Adam Badowski said in 2024 the team was \"considering\" multiplayer elements for the sequel. The inference rests on a job listing and the studio has not confirmed any multiplayer feature.",
+    "guven_nedeni": "It is only an inference from a job listing, which does not name any specific game or feature."
+   },
+   "fr": {
+    "baslik": "Selon une rumeur, Cyberpunk 2 aurait des quêtes multijoueurs (offre d'emploi)",
+    "ozet": "Une nouvelle offre d'emploi de CD Projekt Red alimente les spéculations sur des éléments multijoueurs dans Cyberpunk 2.",
+    "metin": "Eurogamer indique que l'offre cherche une personne maîtrisant la « multiplayer network architecture ». L'article rappelle aussi que le PDG Adam Badowski disait en 2024 que l'équipe « envisageait » des éléments multijoueurs pour la suite. Cette déduction repose sur une offre d'emploi et le studio n'a confirmé aucune fonction multijoueur.",
+    "guven_nedeni": "Il s'agit d'une simple déduction tirée d'une offre d'emploi, qui ne nomme aucun jeu ni aucune fonction précise."
+   },
+   "es": {
+    "baslik": "Según un rumor, Cyberpunk 2 tendría misiones multijugador (oferta de empleo)",
+    "ozet": "Una nueva oferta de empleo de CD Projekt Red ha alimentado la especulación sobre elementos multijugador en Cyberpunk 2.",
+    "metin": "Eurogamer señala que la oferta busca a alguien con experiencia en «multiplayer network architecture». El artículo recuerda también que el CEO Adam Badowski dijo en 2024 que el equipo «consideraba» elementos multijugador para la secuela. La deducción se basa en una oferta de empleo y el estudio no ha confirmado ninguna función multijugador.",
+    "guven_nedeni": "Es solo una deducción a partir de una oferta de empleo, que no nombra ningún juego ni función concreta."
+   }
+  }
+ },
+ {
+  "id": "half-life-hlx-valve",
+  "tarih": "2026-10-22",
+  "oyun": "Half-Life HLX",
+  "platform": [
+   "PC"
+  ],
+  "guven": "dusuk",
+  "durum": "dogrulanmadi",
+  "kaynaklar": [
+   {
+    "url": "https://www.ign.com/articles/valve-developer-mistakenly-mentions-rumored-half-life-3-codename",
+    "ad": "IGN",
+    "tarih": "2026-10-22"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Valve çalışanının 'HLX' demesi Half-Life 3 söylentisini yeniden alevlendirdi",
+    "ozet": "Valve'dan Mike Morasky bir konferansta uzun süredir Half-Life 3 olduğu sanılan HLX adını ağzından kaçırdı.",
+    "metin": "IGN'e göre Morasky GameSoundCon'daki soru-cevap oturumunda Deadlock'un ve HLX'in kendi HDR ses sistemlerini kullandığını söyledi. Yıllardır veri madencileri \"HLX\" adlı bir projeye dosyalarda rastlıyor ve bunun Half-Life 3 olduğuna inanılıyor. Valve'ın HLX'in ne olduğuna dair bir açıklaması yok.",
+    "guven_nedeni": "Bir Valve çalışanı HLX adını andı, ama bunun Half-Life 3 olduğu doğrulanmadı."
+   },
+   "en": {
+    "baslik": "Valve developer's slip about \"HLX\" reportedly reignites Half-Life 3 rumors",
+    "ozet": "Valve's Mike Morasky mentioned HLX, long believed to be Half-Life 3's codename, during a conference.",
+    "metin": "IGN reports that Morasky said during a GameSoundCon Q&A that Deadlock and HLX each use their own kind of HDR audio. For years, data miners have found references to a project called \"HLX\" and it is widely believed to be Half-Life 3. Valve has not explained what HLX is.",
+    "guven_nedeni": "A Valve employee named HLX, but nothing confirms that it is Half-Life 3."
+   },
+   "fr": {
+    "baslik": "Selon une rumeur, un lapsus « HLX » chez Valve relance Half-Life 3",
+    "ozet": "Mike Morasky, de Valve, a mentionné lors d'une conférence HLX, longtemps considéré comme le nom de code de Half-Life 3.",
+    "metin": "Selon IGN, Morasky a déclaré lors d'une session de questions à la GameSoundCon que Deadlock et HLX utilisent chacun leur propre type d'audio HDR. Depuis des années, des dataminers trouvent des références à un projet nommé « HLX » et on pense largement qu'il s'agit de Half-Life 3. Valve n'a pas expliqué ce qu'est HLX.",
+    "guven_nedeni": "Un employé de Valve a cité HLX, mais rien ne confirme qu'il s'agisse de Half-Life 3."
+   },
+   "es": {
+    "baslik": "Según un rumor, un desliz «HLX» en Valve reaviva Half-Life 3",
+    "ozet": "Mike Morasky, de Valve, mencionó en una conferencia HLX, que durante mucho tiempo se ha creído que es el nombre en clave de Half-Life 3.",
+    "metin": "Según IGN, Morasky dijo en una sesión de preguntas de la GameSoundCon que Deadlock y HLX usan cada uno su propio tipo de audio HDR. Desde hace años, los datamineros encuentran referencias a un proyecto llamado «HLX» y se cree ampliamente que es Half-Life 3. Valve no ha explicado qué es HLX.",
+    "guven_nedeni": "Un empleado de Valve nombró HLX, pero nada confirma que sea Half-Life 3."
+   }
+  }
+ },
+ {
+  "id": "xbox-helix-fiyat-tarih",
+  "tarih": "2026-10-21",
+  "oyun": "Xbox Project Helix",
+  "platform": [
+   "Xbox",
+   "PC"
+  ],
+  "guven": "orta",
+  "durum": "dogrulanmadi",
+  "kaynaklar": [
+   {
+    "url": "https://www.eurogamer.net/microsoft-next-gen-xbox-helix-date-price",
+    "ad": "Eurogamer",
+    "tarih": "2026-10-21"
+   },
+   {
+    "url": "https://www.videogameschronicle.com/news/report-claims-next-xbox-is-targeting-2028-and-could-cost-between-1200-and-1800",
+    "ad": "VGC",
+    "tarih": "2026-10-21"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Yeni Xbox'ın 1.200-1.800 dolar olabileceği ve 2028'de çıkacağı iddia ediliyor",
+    "ozet": "Fortune'a göre Xbox'ın Project Helix için dahili tahmini fiyatı 1.200 ile 1.800 dolar arasında.",
+    "metin": "Eurogamer'ın aktardığı rapora göre Helix iki cihazdan oluşacak: önce 2027 tatil sezonu hedefiyle bir el konsolu, ardından 2028 tatil sezonu için televizyona bağlanan ana kutu. Fiyat, Xbox'ın sübvansiyon yapılmazsa tüketiciye sunmayı beklediği tutar olarak anlatılıyor. Microsoft bu rakamları açıklamadı.",
+    "guven_nedeni": "Fortune'un raporuna dayanıyor ve iki büyük yayın aktardı, ancak rakamlar dahili tahmin ve Microsoft'tan doğrulama yok."
+   },
+   "en": {
+    "baslik": "Next Xbox reportedly to cost $1,200-$1,800 and arrive in 2028, per Fortune report",
+    "ozet": "Fortune reports that Xbox's internal estimate for Project Helix lands between $1,200 and $1,800.",
+    "metin": "According to the report relayed by Eurogamer, Helix will ship as two devices: a handheld first, targeting holiday 2027, and the main under-the-TV box in holiday 2028. The price is described as what Xbox expects consumers to pay if the console is not subsidised. Microsoft has not announced these figures.",
+    "guven_nedeni": "It rests on Fortune's report and two major outlets relayed it, but the figures are internal estimates with no confirmation from Microsoft."
+   },
+   "fr": {
+    "baslik": "Selon une rumeur, la prochaine Xbox coûterait 1 200 à 1 800 dollars et sortirait en 2028",
+    "ozet": "Selon Fortune, l'estimation interne de Xbox pour le Project Helix se situe entre 1 200 et 1 800 dollars.",
+    "metin": "D'après le rapport relayé par Eurogamer, Helix sortirait en deux appareils : d'abord une console portable visant les fêtes 2027, puis la console de salon pour les fêtes 2028. Le prix est décrit comme celui que Xbox compte demander aux joueurs si la console n'est pas subventionnée. Microsoft n'a pas annoncé ces chiffres.",
+    "guven_nedeni": "Elle repose sur le rapport de Fortune et deux grands médias l'ont relayé, mais ce sont des estimations internes sans confirmation de Microsoft."
+   },
+   "es": {
+    "baslik": "Según un rumor, la próxima Xbox costaría entre 1.200 y 1.800 dólares y llegaría en 2028",
+    "ozet": "Según Fortune, la estimación interna de Xbox para Project Helix se sitúa entre 1.200 y 1.800 dólares.",
+    "metin": "Según el informe recogido por Eurogamer, Helix llegaría en dos dispositivos: primero una portátil con objetivo en las navidades de 2027 y después la consola de sobremesa en las navidades de 2028. El precio se describe como lo que Xbox espera cobrar a los jugadores si la consola no se subvenciona. Microsoft no ha anunciado esas cifras.",
+    "guven_nedeni": "Se basa en el informe de Fortune y dos medios importantes lo recogieron, pero son estimaciones internas sin confirmación de Microsoft."
+   }
+  }
+ },
+ {
+  "id": "gta6-pc-2027-q1",
+  "tarih": "2026-10-13",
+  "oyun": "Grand Theft Auto VI (PC)",
+  "platform": [
+   "PC"
+  ],
+  "guven": "orta",
+  "durum": "dogrulanmadi",
+  "kaynaklar": [
+   {
+    "url": "https://gamesbeat.com/grand-theft-auto-vis-pc-release-is-slated-for-q1-2027",
+    "ad": "GamesBeat",
+    "tarih": "2026-10-13"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "GTA VI'nın PC sürümünün 2027'nin ilk çeyreğinde çıkacağı iddia ediliyor",
+    "ozet": "GamesBeat, dört isimsiz kaynağa dayanarak GTA VI'nın PC sürümünün 2027'nin ilk üç ayında geleceğini yazdı.",
+    "metin": "Habere göre Rockstar, PC sürümünü 2027'nin ilk çeyreğinde çıkarmayı planlıyor; oyun konsollarda 19 Kasım 2026'da çıkacak. Sürümün, konsol sürümüyle aynı kalite çıtasını geçmesi gerekecek. Rockstar'dan bir temsilci yorum talebine yanıt vermedi.",
+    "guven_nedeni": "Dört isimsiz kaynağa dayanan tek bir yayına ait haber; Rockstar bir yorum yapmadı."
+   },
+   "en": {
+    "baslik": "GTA VI's PC version reportedly slated for Q1 2027",
+    "ozet": "Citing four anonymous industry sources, GamesBeat says GTA VI's PC version will arrive in the first three months of 2027.",
+    "metin": "According to the report, Rockstar plans to release the PC version in the first quarter of 2027, while the game launches on consoles on November 19, 2026. The PC version will have to meet the same quality bar as the console release. A Rockstar representative did not respond to a request for comment.",
+    "guven_nedeni": "It comes from a single outlet citing four anonymous sources, and Rockstar has not commented."
+   },
+   "fr": {
+    "baslik": "Selon une rumeur, la version PC de GTA VI sortirait au premier trimestre 2027",
+    "ozet": "S'appuyant sur quatre sources anonymes, GamesBeat affirme que la version PC de GTA VI arrivera dans les trois premiers mois de 2027.",
+    "metin": "Selon l'article, Rockstar prévoit de sortir la version PC au premier trimestre 2027, alors que le jeu sort sur consoles le 19 novembre 2026. La version PC devra atteindre le même niveau de qualité que celle des consoles. Un représentant de Rockstar n'a pas répondu à la demande de commentaire.",
+    "guven_nedeni": "Elle provient d'un seul média s'appuyant sur quatre sources anonymes, et Rockstar n'a pas commenté."
+   },
+   "es": {
+    "baslik": "Según un rumor, la versión de PC de GTA VI llegaría en el primer trimestre de 2027",
+    "ozet": "Basándose en cuatro fuentes anónimas, GamesBeat afirma que la versión de PC de GTA VI llegará en los tres primeros meses de 2027.",
+    "metin": "Según el artículo, Rockstar planea lanzar la versión de PC en el primer trimestre de 2027, mientras que el juego sale en consolas el 19 de noviembre de 2026. La versión de PC tendrá que alcanzar el mismo nivel de calidad que la de consolas. Un representante de Rockstar no respondió a la solicitud de comentarios.",
+    "guven_nedeni": "Procede de un solo medio con cuatro fuentes anónimas, y Rockstar no ha comentado."
+   }
+  }
+ }
+]

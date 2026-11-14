@@ -1,0 +1,717 @@
+[
+ {
+  "id": "gta-vi",
+  "oyun": "Grand Theft Auto VI",
+  "tarih": "2026-11-19",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Rockstar Games",
+  "yayinci": "Rockstar Games",
+  "tur": {
+   "tr": "Aksiyon-macera",
+   "en": "Action-adventure",
+   "fr": "Action-aventure",
+   "es": "Acción y aventura"
+  },
+  "kaynak": {
+   "url": "https://www.rockstargames.com/newswire/article/ak3ak31a49a221/grand-theft-auto-vi-is-now-set-to-launch-november-19-2026",
+   "ad": "Rockstar Games"
+  }
+ },
+ {
+  "id": "hela-of-mice-and-magic",
+  "oyun": "Hela: of Mice & Magic",
+  "tarih": "2026-12-01",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Windup",
+  "yayinci": "Knights Peak",
+  "tur": {
+   "tr": "Kooperatif macera",
+   "en": "Co-op adventure",
+   "fr": "Aventure coopérative",
+   "es": "Aventura cooperativa"
+  },
+  "kaynak": {
+   "url": "https://store.steampowered.com/app/3161310/Hela_of_Mice_Magic",
+   "ad": "Steam"
+  }
+ },
+ {
+  "id": "dawn-of-war-iv",
+  "oyun": "Warhammer 40,000: Dawn of War IV",
+  "tarih": "2026-12-03",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "PC"
+  ],
+  "gelistirici": "King Art Games",
+  "yayinci": "Deep Silver",
+  "tur": {
+   "tr": "Gerçek zamanlı strateji",
+   "en": "Real-time strategy",
+   "fr": "Stratégie en temps réel",
+   "es": "Estrategia en tiempo real"
+  },
+  "kaynak": {
+   "url": "https://store.steampowered.com/app/2272360/Warhammer_40000_Dawn_of_War_IV",
+   "ad": "Steam"
+  }
+ },
+ {
+  "id": "rayman-legends-retold",
+  "oyun": "Rayman Legends Retold",
+  "tarih": "2026-12-03",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "PS5",
+   "Xbox",
+   "PC",
+   "Switch 2"
+  ],
+  "gelistirici": "Ubisoft Montpellier, Ubisoft Milan",
+  "yayinci": "Ubisoft",
+  "tur": {
+   "tr": "Platform",
+   "en": "Platformer",
+   "fr": "Plateforme",
+   "es": "Plataformas"
+  },
+  "kaynak": {
+   "url": "https://www.ubisoft.com/en-us/games/rayman-legends-retold",
+   "ad": "Ubisoft"
+  }
+ },
+ {
+  "id": "xenoblade-3-switch-2",
+  "oyun": "Xenoblade Chronicles 3 Nintendo Switch 2 Edition",
+  "tarih": "2026-12-03",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "Switch 2"
+  ],
+  "gelistirici": "Monolith Soft",
+  "yayinci": "Nintendo",
+  "tur": {
+   "tr": "Rol yapma oyunu",
+   "en": "RPG",
+   "fr": "RPG",
+   "es": "RPG"
+  },
+  "kaynak": {
+   "url": "https://www.nintendo.com/us/store/products/xenoblade-chronicles-3-nintendo-switch-2-edition-switch-2",
+   "ad": "Nintendo"
+  }
+ },
+ {
+  "id": "dq-monsters-withered-world",
+  "oyun": "Dragon Quest Monsters: The Withered World",
+  "tarih": "2026-12-03",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "PS5",
+   "Xbox",
+   "PC",
+   "Switch 2"
+  ],
+  "gelistirici": "Square Enix",
+  "yayinci": "Square Enix",
+  "tur": {
+   "tr": "Rol yapma oyunu",
+   "en": "RPG",
+   "fr": "RPG",
+   "es": "RPG"
+  },
+  "kaynak": {
+   "url": "https://www.square-enix.com/asia/newsportal/en/topics/dragonquest-monsters4/post03",
+   "ad": "Square Enix"
+  }
+ },
+ {
+  "id": "professor-layton-new-world-of-steam",
+  "oyun": "Professor Layton and the New World of Steam",
+  "tarih": "2026-12-10",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "PS5",
+   "PC",
+   "Switch 2"
+  ],
+  "gelistirici": "Level-5",
+  "yayinci": "Level-5",
+  "tur": {
+   "tr": "Bulmaca-macera",
+   "en": "Puzzle adventure",
+   "fr": "Aventure-puzzle",
+   "es": "Aventura de puzles"
+  },
+  "kaynak": {
+   "url": "https://www.rpgfan.com/2026/09/11/professor-layton-new-world-dec-10th",
+   "ad": "RPGFan"
+  }
+ },
+ {
+  "id": "path-of-exile-2-1-0",
+  "oyun": "Path of Exile 2 (1.0)",
+  "tarih": "2026-12-11",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Grinding Gear Games",
+  "yayinci": "Grinding Gear Games",
+  "tur": {
+   "tr": "Aksiyon RPG",
+   "en": "Action RPG",
+   "fr": "RPG d'action",
+   "es": "RPG de acción"
+  },
+  "kaynak": {
+   "url": "https://www.pathofexile.com/forum/view-thread/3999366",
+   "ad": "Grinding Gear Games"
+  }
+ },
+ {
+  "id": "danganronpa-2x2",
+  "oyun": "Danganronpa 2x2",
+  "tarih": "2027-01-14",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "PS5",
+   "Xbox",
+   "PC",
+   "Switch 2"
+  ],
+  "gelistirici": "Gemdrops, Too Kyo Games",
+  "yayinci": "Spike Chunsoft",
+  "tur": {
+   "tr": "Çıkarım aksiyonu",
+   "en": "Deductive action",
+   "fr": "Action déductive",
+   "es": "Acción deductiva"
+  },
+  "kaynak": {
+   "url": "https://www.spike-chunsoft.com/news/danganronpa-2x2-scheduled-for-release-in-north-america-and-europe",
+   "ad": "Spike Chunsoft"
+  }
+ },
+ {
+  "id": "stranger-than-heaven",
+  "oyun": "Stranger Than Heaven",
+  "tarih": "2027-01-15",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "PS5",
+   "Xbox",
+   "PC"
+  ],
+  "gelistirici": "RGG Studio",
+  "yayinci": "Sega",
+  "tur": {
+   "tr": "Aksiyon-macera",
+   "en": "Action-adventure",
+   "fr": "Action-aventure",
+   "es": "Acción y aventura"
+  },
+  "kaynak": {
+   "url": "https://www.sega.co.jp/en/release/260608_3.html",
+   "ad": "SEGA"
+  }
+ },
+ {
+  "id": "forza-horizon-6-ps5",
+  "oyun": "Forza Horizon 6 (PS5)",
+  "tarih": "2027-01-26",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "PS5"
+  ],
+  "gelistirici": "Playground Games",
+  "yayinci": "Xbox Game Studios",
+  "tur": {
+   "tr": "Yarış",
+   "en": "Racing",
+   "fr": "Course",
+   "es": "Carreras"
+  },
+  "kaynak": {
+   "url": "https://www.ign.com/videos/forza-horizon-6-official-ps5-release-date-trailer",
+   "ad": "IGN"
+  }
+ },
+ {
+  "id": "witchbrook",
+  "oyun": "Witchbrook",
+  "tarih": "2027-01-28",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "PS5",
+   "Xbox",
+   "PC",
+   "Switch 2"
+  ],
+  "gelistirici": "Robotality",
+  "yayinci": "Chucklefish",
+  "tur": {
+   "tr": "Yaşam simülasyonu RPG",
+   "en": "Life-sim RPG",
+   "fr": "RPG de simulation de vie",
+   "es": "RPG de simulación de vida"
+  },
+  "kaynak": {
+   "url": "https://www.rpgfan.com/2026/11/01/witchbrook-january-2027-consoles-pc",
+   "ad": "RPGFan"
+  }
+ },
+ {
+  "id": "metroid-ravenous",
+  "oyun": "Metroid Ravenous",
+  "tarih": "2027-01-28",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "Switch 2"
+  ],
+  "gelistirici": "MercurySteam, Nintendo EPD",
+  "yayinci": "Nintendo",
+  "tur": {
+   "tr": "Aksiyon-macera",
+   "en": "Action-adventure",
+   "fr": "Action-aventure",
+   "es": "Acción y aventura"
+  },
+  "kaynak": {
+   "url": "https://www.nintendo.com/us/store/products/metroid-ravenous-switch-2",
+   "ad": "Nintendo"
+  }
+ },
+ {
+  "id": "until-dawn-2",
+  "oyun": "Until Dawn 2",
+  "tarih": "2027-01-28",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "PS5"
+  ],
+  "gelistirici": "Firesprite",
+  "yayinci": "Sony Interactive Entertainment",
+  "tur": {
+   "tr": "Korku macerası",
+   "en": "Horror adventure",
+   "fr": "Aventure d'horreur",
+   "es": "Aventura de terror"
+  },
+  "kaynak": {
+   "url": "https://blog.playstation.com/2026/09/03/until-dawn-2-launches-january-28",
+   "ad": "PlayStation Blog"
+  }
+ },
+ {
+  "id": "metro-2039",
+  "oyun": "Metro 2039",
+  "tarih": "2027-02-04",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "PS5",
+   "Xbox",
+   "PC"
+  ],
+  "gelistirici": "4A Games",
+  "yayinci": "Deep Silver",
+  "tur": {
+   "tr": "Birinci şahıs nişancı",
+   "en": "First-person shooter",
+   "fr": "Jeu de tir à la première personne",
+   "es": "Shooter en primera persona"
+  },
+  "kaynak": {
+   "url": "https://www.deepsilver.com/games/metro2039",
+   "ad": "Deep Silver"
+  }
+ },
+ {
+  "id": "tomb-raider-legacy-of-atlantis",
+  "oyun": "Tomb Raider: Legacy of Atlantis",
+  "tarih": "2027-02-12",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "PS5",
+   "Xbox",
+   "PC"
+  ],
+  "gelistirici": "Crystal Dynamics, Flying Wild Hog",
+  "yayinci": "Amazon Games",
+  "tur": {
+   "tr": "Aksiyon-macera",
+   "en": "Action-adventure",
+   "fr": "Action-aventure",
+   "es": "Acción y aventura"
+  },
+  "kaynak": {
+   "url": "https://gameinformer.com/state-of-play/2026/06/02/tomb-raider-legacy-of-atlantis-gets-february-2027-release-date-in-new",
+   "ad": "Game Informer"
+  }
+ },
+ {
+  "id": "persona-4-revival",
+  "oyun": "Persona 4 Revival",
+  "tarih": "2027-02-18",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "PS5",
+   "Xbox",
+   "PC"
+  ],
+  "gelistirici": "P-Studio",
+  "yayinci": "Sega",
+  "tur": {
+   "tr": "Rol yapma oyunu",
+   "en": "RPG",
+   "fr": "RPG",
+   "es": "RPG"
+  },
+  "kaynak": {
+   "url": "https://sega.co.jp/en/release/260608_4.html",
+   "ad": "SEGA"
+  }
+ },
+ {
+  "id": "fable",
+  "oyun": "Fable",
+  "tarih": "2027-02-23",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "PS5",
+   "Xbox",
+   "PC"
+  ],
+  "gelistirici": "Playground Games",
+  "yayinci": "Xbox Game Studios",
+  "tur": {
+   "tr": "Aksiyon RPG",
+   "en": "Action RPG",
+   "fr": "RPG d'action",
+   "es": "RPG de acción"
+  },
+  "kaynak": {
+   "url": "https://www.xbox.com/en-US/games/fable",
+   "ad": "Xbox"
+  }
+ },
+ {
+  "id": "hyrule-warriors-age-of-calamity-de",
+  "oyun": "Hyrule Warriors: Age of Calamity Definitive Edition",
+  "tarih": "2027-02-25",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "Switch 2"
+  ],
+  "gelistirici": "Koei Tecmo",
+  "yayinci": "Nintendo",
+  "tur": {
+   "tr": "Musou aksiyon",
+   "en": "Musou action",
+   "fr": "Action musou",
+   "es": "Acción musou"
+  },
+  "kaynak": {
+   "url": "https://www.nintendo.com/us/store/products/hyrule-warriors-age-of-calamity-definitive-edition-switch-2",
+   "ad": "Nintendo"
+  }
+ },
+ {
+  "id": "wo-long-2-wings-of-ember",
+  "oyun": "Wo Long 2: Wings of Ember",
+  "tarih": "2027-03-04",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "PS5",
+   "Xbox",
+   "PC",
+   "Switch 2"
+  ],
+  "gelistirici": "Team Ninja",
+  "yayinci": "Koei Tecmo",
+  "tur": {
+   "tr": "Aksiyon RPG",
+   "en": "Action RPG",
+   "fr": "RPG d'action",
+   "es": "RPG de acción"
+  },
+  "kaynak": {
+   "url": "https://www.koeitecmoamerica.com/news/slash-through-a-demon-infested-three-kingdoms-in-wo-long-2-wings-of-ember-coming-march-4-2027",
+   "ad": "KOEI TECMO America"
+  }
+ },
+ {
+  "id": "007-first-light-switch-2",
+  "oyun": "007 First Light (Switch 2)",
+  "tarih": "2027-03-18",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "Switch 2"
+  ],
+  "gelistirici": "IO Interactive",
+  "yayinci": "IO Interactive",
+  "tur": {
+   "tr": "Aksiyon-macera",
+   "en": "Action-adventure",
+   "fr": "Action-aventure",
+   "es": "Acción y aventura"
+  },
+  "kaynak": {
+   "url": "https://ioi.dk/007firstlightgame/news/2026/007-first-light-switch-2-date-confirmed",
+   "ad": "IO Interactive"
+  }
+ },
+ {
+  "id": "exodus",
+  "oyun": "Exodus",
+  "tarih": "2027-04-07",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "PS5",
+   "Xbox",
+   "PC"
+  ],
+  "gelistirici": "Archetype Entertainment",
+  "yayinci": "Wizards of the Coast",
+  "tur": {
+   "tr": "Aksiyon RPG",
+   "en": "Action RPG",
+   "fr": "RPG d'action",
+   "es": "RPG de acción"
+  },
+  "kaynak": {
+   "url": "https://www.exodusgame.com/en-US",
+   "ad": "Exodus"
+  }
+ },
+ {
+  "id": "final-fantasy-vii-revelation",
+  "oyun": "Final Fantasy VII Revelation",
+  "tarih": "2027-04-08",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "PS5",
+   "Xbox",
+   "PC",
+   "Switch 2"
+  ],
+  "gelistirici": "Square Enix",
+  "yayinci": "Square Enix",
+  "tur": {
+   "tr": "Aksiyon RPG",
+   "en": "Action RPG",
+   "fr": "RPG d'action",
+   "es": "RPG de acción"
+  },
+  "kaynak": {
+   "url": "https://www.invenglobal.com/articles/25552/release-date-finally-revealed-final-fantasy-vii-revelation-launches-april-8-2027",
+   "ad": "Inven Global"
+  }
+ },
+ {
+  "id": "god-of-war-laufey",
+  "oyun": "God of War Laufey",
+  "tarih": "2027-05-20",
+  "kesin": true,
+  "pencere": {
+   "tr": "",
+   "en": "",
+   "fr": "",
+   "es": ""
+  },
+  "platform": [
+   "PS5"
+  ],
+  "gelistirici": "Santa Monica Studio",
+  "yayinci": "Sony Interactive Entertainment",
+  "tur": {
+   "tr": "Aksiyon-macera",
+   "en": "Action-adventure",
+   "fr": "Action-aventure",
+   "es": "Acción y aventura"
+  },
+  "kaynak": {
+   "url": "https://hypebeast.com/2026/11/god-of-war-laufey-delayed-to-may-2027-launch",
+   "ad": "Hypebeast"
+  }
+ },
+ {
+  "id": "kingdom-hearts-iv",
+  "oyun": "Kingdom Hearts IV",
+  "tarih": null,
+  "kesin": false,
+  "pencere": {
+   "tr": "2027 sonları",
+   "en": "Late 2027",
+   "fr": "Fin 2027",
+   "es": "Finales de 2027"
+  },
+  "platform": [
+   "PS5",
+   "Xbox",
+   "PC",
+   "Switch 2"
+  ],
+  "gelistirici": "Square Enix",
+  "yayinci": "Square Enix",
+  "tur": {
+   "tr": "Aksiyon RPG",
+   "en": "Action RPG",
+   "fr": "RPG d'action",
+   "es": "RPG de acción"
+  },
+  "kaynak": {
+   "url": "https://www.nintendolife.com/news/2026/08/kingdom-hearts-iv-is-launching-on-switch-2-in-late-2027-heres-a-brand-new-trailer",
+   "ad": "Nintendo Life"
+  }
+ }
+]

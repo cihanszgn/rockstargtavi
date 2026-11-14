@@ -1,26 +1,29 @@
 #!/usr/bin/env python3
-"""Çok oyunlu haber derleyici.
+"""CTRL+A GAME derleyicisi: tek komutla bütün site (4 dil) ve paylaşım kartları.
 
-data/icerik.json  →  4 dilde haber sayfaları, paylaşım kartları (JPEG), RSS,
-site haritası, ana sayfa kutusu ve menü bağlantısı.
+data/icerik.json (+ data/soylentiler.json, takvim.json, indirimler.json, ucretsiz.json)
+  →  ana sayfa, haber merkezi ve haber sayfaları, indirimler, ücretsiz oyunlar, söylentiler,
+     takvim, GTA VI dosyası ve elle yazılmış sayfaların ortak kabuğu (tools/site_derle.py),
+     RSS, site haritası, arama dizini, paylaşım kartları (kart/) ve og.png.
 
-Kullanım:  python tools/sosyal_derle.py
+Kullanım:  py tools/sosyal_derle.py
 Aynı girdiyle tekrar çalıştırmak aynı çıktıyı üretir (değişiklik yoksa git temiz kalır).
+tools/sosyal_yayinla.py bu dosyadan DILLER, GORUNEN, KLASOR, M, SITE ve kart_ad'ı alır.
 """
 from __future__ import annotations
 
-import hashlib
 import html
 import json
 import pathlib
 import re
 import sys
-from email.utils import format_datetime
 from datetime import datetime, timezone
+from email.utils import format_datetime
 
 KOK = pathlib.Path(__file__).resolve().parent.parent
 SITE = "https://ctrl-agame.com"
 GORUNEN = "ctrl-agame.com"
+MARKA = "CTRL+A GAME"
 DILLER = ("tr", "en", "fr", "es")
 ONEK = {"tr": "/", "en": "/en/", "fr": "/fr/", "es": "/es/"}
 HUB = {"tr": "oyun-haberleri.html", "en": "en/game-news.html", "fr": "fr/actus-jeux.html", "es": "es/noticias-juegos.html"}
@@ -42,44 +45,44 @@ M = {
         "menu": "Oyun haberleri", "hub_baslik": "Oyun haberleri: PlayStation, Xbox, Nintendo ve PC",
         "hub_h1": "Oyun haberleri",
         "hub_aciklama": "Tüm platformlardan teyitli oyun haberleri: çıkışlar, ücretsiz oyunlar, indirimler ve güncellemeler. Her haberin resmî kaynağı belirtilir.",
-        "hub_not": "Yalnız resmî duyurulara (PlayStation Blog, Xbox Wire, Nintendo, Epic Games Store, yayıncı siteleri) dayanır; söylenti ve sızıntı yazılmaz.",
-        "guncel": "Son güncelleme", "kaynak": "Kaynak", "devam": "Haberin tamamı →", "tum": "Tüm oyun haberleri →",
-        "geri": "← Tüm oyun haberleri", "kutu": "Diğer oyunlardan haberler", "gta": "GTA VI haberleri →",
+        "hub_not": "Haberler yalnız resmî duyurulara (PlayStation Blog, Xbox Wire, Nintendo, Epic Games Store, yayıncı siteleri) dayanır. Doğrulanmamış iddialar ayrı ve etiketli Söylentiler bölümündedir; sızıntı yazılmaz.",
+        "guncel": "Son güncelleme", "kaynak": "Kaynak", "devam": "Haberin tamamı", "tum": "Tüm oyun haberleri",
+        "geri": "Tüm oyun haberleri", "kutu": "Diğer oyunlardan haberler", "gta": "GTA VI haberleri",
         "tur": {"haber": "Haber", "ucretsiz": "Ücretsiz", "cikis": "Çıkış", "indirim": "İndirim", "guncelleme": "Güncelleme"},
-        "locale": "tr_TR", "feed": "Oyun haberleri (ctrl-agame.com)",
+        "locale": "tr_TR", "feed": f"Oyun haberleri | {MARKA}",
         "oneri": "Bu haber Türkçe de var:", "oneri_link": "Türkçe oku",
     },
     "en": {
         "menu": "Game news", "hub_baslik": "Game news: PlayStation, Xbox, Nintendo and PC",
         "hub_h1": "Game news",
         "hub_aciklama": "Verified gaming news from every platform: launches, free games, deals and updates. Every story links to its official source.",
-        "hub_not": "Based only on official announcements (PlayStation Blog, Xbox Wire, Nintendo, Epic Games Store, publisher sites). No rumors or leaks.",
-        "guncel": "Last updated", "kaynak": "Source", "devam": "Read the full story →", "tum": "All game news →",
-        "geri": "← All game news", "kutu": "News from other games", "gta": "GTA VI news →",
+        "hub_not": "News is based only on official announcements (PlayStation Blog, Xbox Wire, Nintendo, Epic Games Store, publisher sites). Unconfirmed claims live in the separate, clearly labeled Rumors section. No leaks.",
+        "guncel": "Last updated", "kaynak": "Source", "devam": "Read the full story", "tum": "All game news",
+        "geri": "All game news", "kutu": "News from other games", "gta": "GTA VI news",
         "tur": {"haber": "News", "ucretsiz": "Free", "cikis": "Launch", "indirim": "Deal", "guncelleme": "Update"},
-        "locale": "en_US", "feed": "Game news (ctrl-agame.com)",
+        "locale": "en_US", "feed": f"Game news | {MARKA}",
         "oneri": "This story is also available in English:", "oneri_link": "Read in English",
     },
     "fr": {
         "menu": "Actus jeux", "hub_baslik": "Actus jeux vidéo : PlayStation, Xbox, Nintendo et PC",
         "hub_h1": "Actus jeux vidéo",
         "hub_aciklama": "Des actus jeux vidéo vérifiées sur toutes les plateformes : sorties, jeux gratuits, promos et mises à jour. Chaque info cite sa source officielle.",
-        "hub_not": "Uniquement des annonces officielles (PlayStation Blog, Xbox Wire, Nintendo, Epic Games Store, sites des éditeurs). Ni rumeurs ni fuites.",
-        "guncel": "Dernière mise à jour", "kaynak": "Source", "devam": "Lire l'article →", "tum": "Toutes les actus jeux →",
-        "geri": "← Toutes les actus jeux", "kutu": "Actus des autres jeux", "gta": "Actus GTA VI →",
+        "hub_not": "Les actus reposent uniquement sur des annonces officielles (PlayStation Blog, Xbox Wire, Nintendo, Epic Games Store, sites des éditeurs). Les infos non confirmées sont dans la rubrique Rumeurs, à part et clairement signalée. Pas de fuites.",
+        "guncel": "Dernière mise à jour", "kaynak": "Source", "devam": "Lire l'article", "tum": "Toutes les actus jeux",
+        "geri": "Toutes les actus jeux", "kutu": "Actus des autres jeux", "gta": "Actus GTA VI",
         "tur": {"haber": "Actu", "ucretsiz": "Gratuit", "cikis": "Sortie", "indirim": "Promo", "guncelleme": "Mise à jour"},
-        "locale": "fr_FR", "feed": "Actus jeux (ctrl-agame.com)",
+        "locale": "fr_FR", "feed": f"Actus jeux | {MARKA}",
         "oneri": "Cet article existe aussi en français :", "oneri_link": "Lire en français",
     },
     "es": {
         "menu": "Noticias de juegos", "hub_baslik": "Noticias de videojuegos: PlayStation, Xbox, Nintendo y PC",
         "hub_h1": "Noticias de videojuegos",
         "hub_aciklama": "Noticias de videojuegos verificadas de todas las plataformas: lanzamientos, juegos gratis, ofertas y actualizaciones. Cada noticia cita su fuente oficial.",
-        "hub_not": "Solo anuncios oficiales (PlayStation Blog, Xbox Wire, Nintendo, Epic Games Store, webs de las editoras). Sin rumores ni filtraciones.",
-        "guncel": "Última actualización", "kaynak": "Fuente", "devam": "Leer la noticia →", "tum": "Todas las noticias de juegos →",
-        "geri": "← Todas las noticias de juegos", "kutu": "Noticias de otros juegos", "gta": "Noticias de GTA VI →",
+        "hub_not": "Las noticias se basan solo en anuncios oficiales (PlayStation Blog, Xbox Wire, Nintendo, Epic Games Store, webs de las editoras). Lo no confirmado está en la sección Rumores, aparte y bien señalada. Sin filtraciones.",
+        "guncel": "Última actualización", "kaynak": "Fuente", "devam": "Leer la noticia", "tum": "Todas las noticias de juegos",
+        "geri": "Todas las noticias de juegos", "kutu": "Noticias de otros juegos", "gta": "Noticias de GTA VI",
         "tur": {"haber": "Noticia", "ucretsiz": "Gratis", "cikis": "Lanzamiento", "indirim": "Oferta", "guncelleme": "Actualización"},
-        "locale": "es_ES", "feed": "Noticias de juegos (ctrl-agame.com)",
+        "locale": "es_ES", "feed": f"Noticias de juegos | {MARKA}",
         "oneri": "Esta noticia también está en español:", "oneri_link": "Leer en español",
     },
 }
@@ -112,6 +115,8 @@ def yukle() -> list[dict]:
             hatalar.append(f"{k}: tarih YYYY-AA-GG olmalı")
         if x.get("tur") not in TUR:
             hatalar.append(f"{k}: tur {TUR} içinden olmalı")
+        if "platform" in x and not (isinstance(x["platform"], list) and all(isinstance(p, str) and p.strip() for p in x["platform"])):
+            hatalar.append(f"{k}: platform metin listesi olmalı (ör. [\"PS5\", \"PC\"])")
         ks = x.get("kaynaklar") or []
         if not ks or not all(str(s.get("url", "")).startswith("https://") and s.get("ad") for s in ks):
             hatalar.append(f"{k}: en az bir https kaynak (url + ad) gerekli")
@@ -161,163 +166,11 @@ def ayarlar() -> dict:
     return json.loads((KOK / "sosyal" / "ayarlar.json").read_text(encoding="utf-8"))
 
 
-def kabuk(dil: str) -> tuple[str, str]:
-    """Var olan GTA haber sayfasından afiş+header ve footer'ı alır, bağlantıları köke göre mutlak yapar."""
-    kaynak = (KOK / GTA_HABER[dil]).read_text(encoding="utf-8")
-    bas = re.search(r'<div class="unofficial".*?</header>', kaynak, re.S).group(0)
-    son = re.search(r"<footer>.*?</footer>", kaynak, re.S).group(0)
-
-    def mutlak(m: re.Match) -> str:
-        h = m.group(1)
-        if re.match(r"(https?:|/|#|mailto:)", h):
-            return m.group(0)
-        if h in ("./", ""):
-            return f'href="{ONEK[dil]}"'
-        return f'href="{ONEK[dil]}{h}"'
-
-    bas = re.sub(r'href="([^"]*)"', mutlak, bas)
-    son = re.sub(r'href="([^"]*)"', mutlak, son)
-    bas = bas.replace(' aria-current="page"', "")
-    bas = re.sub(r'<div class="lang".*?</div>', "{{DIL_SECICI}}", bas, flags=re.S)
-    bas = bas.replace(f'href="/{HUB[dil]}"', f'href="/{HUB[dil]}" aria-current="page"')
-    return bas, son
-
-
-def dil_secici(dil: str, yollar: dict[str, str]) -> str:
-    etiket = "Dil / Language" if dil == "tr" else "Language" if dil == "en" else "Langue" if dil == "fr" else "Idioma"
-    parcalar = []
-    for d in DILLER:
-        cur = ' aria-current="true"' if d == dil else ""
-        parcalar.append(f'<a href="/{yollar[d]}" hreflang="{d}" lang="{d}"{cur}>{d.upper()}</a>')
-    return f'<div class="lang" aria-label="{etiket}">' + "".join(parcalar) + "</div>"
-
-
-def bas_kismi(dil, baslik, aciklama, yol, yollar, gorsel, tip="website", ek=""):
-    alt = "".join(f'<link rel="alternate" hreflang="{d}" href="{SITE}/{yollar[d]}">\n' for d in DILLER)
-    alt += f'<link rel="alternate" hreflang="x-default" href="{SITE}/{yollar["en"]}">\n'
-    return f"""<!doctype html>
-<html lang="{dil}">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{e(baslik)}</title>
-<meta name="description" content="{e(aciklama)}">
-<link rel="canonical" href="{SITE}/{yol}">
-{alt}<meta property="og:title" content="{e(baslik)}">
-<meta property="og:description" content="{e(aciklama)}">
-<meta property="og:type" content="{tip}">
-<meta property="og:url" content="{SITE}/{yol}">
-<meta property="og:image" content="{SITE}/{gorsel}">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:locale" content="{M[dil]['locale']}">
-<meta property="og:site_name" content="{GORUNEN}">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{e(baslik)}">
-<meta name="twitter:description" content="{e(aciklama)}">
-<meta name="twitter:image" content="{SITE}/{gorsel}">
-<link rel="alternate" type="application/rss+xml" title="{e(M[dil]['feed'])}" href="{SITE}/{FEED[dil]}">
-<meta name="theme-color" content="#0f0b1a">
-<meta name="color-scheme" content="dark">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/style.css">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-67FMKX5E05"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-67FMKX5E05');</script>
-<script src="/anma.js" defer></script>
-{ek}</head>
-<body>
-<a class="skip" href="#main">{ {'tr': 'İçeriğe geç', 'en': 'Skip to content', 'fr': 'Aller au contenu', 'es': 'Ir al contenido'}[dil] }</a>
-"""
-
-
 # Sosyal ağdan gelen ziyaretçiyi tarayıcı diline yönlendirir (yalnız utm_source varsa, bir kez).
 YONLENDIR = """<script>(function(){try{var q=new URLSearchParams(location.search);if(!q.has('utm_source')||q.has('r'))return;
 var s=%s,h=document.documentElement.lang,l=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'']);
 for(var i=0;i<l.length;i++){var d=String(l[i]).slice(0,2).toLowerCase();if(s[d]){if(d!==h){q.set('r','1');location.replace(s[d]+'?'+q.toString()+location.hash);}return;}}}catch(e){}})();</script>
 """
-
-
-def oge_html(dil: str, x: dict, baglanti: bool) -> str:
-    t = x["diller"][dil]
-    kay = x["kaynaklar"][0]
-    tur = M[dil]["tur"][x["tur"]]
-    baslik = f'<a href="/{KLASOR[dil]}/{x["id"]}.html">{e(t["baslik"])}</a>' if baglanti else e(t["baslik"])
-    return (
-        f'    <li id="{x["id"]}"><time datetime="{x["tarih"]}">{tarih_yaz(dil, x["tarih"])}</time>'
-        f'<span class="oh-tur"><span lang="en">{e(x["oyun"])}</span> · {e(tur)}</span><strong>{baslik}</strong>\n'
-        f'      <p>{e(t["ozet"])}</p>\n'
-        f'      <p class="src">{M[dil]["kaynak"]}: <a href="{e(kay["url"])}" rel="noopener">{e(kay["ad"])}, {tarih_yaz(dil, kay.get("tarih", x["tarih"]))}</a></p></li>\n'
-    )
-
-
-# ---------------------------------------------------------------- sayfalar
-def hub_sayfasi(dil: str, veri: list[dict], kabuklar) -> str:
-    m = M[dil]
-    bas, son = kabuklar[dil]
-    bas = bas.replace("{{DIL_SECICI}}", dil_secici(dil, HUB))
-    gorsel = kart_ad(veri[0]["id"], dil, "og") if veri else "og.png"
-    son_tarih = veri[0]["tarih"] if veri else "2026-11-14"
-    liste = "".join(oge_html(dil, x, True) for x in veri)
-    return (
-        bas_kismi(dil, m["hub_baslik"], m["hub_aciklama"], HUB[dil], HUB, gorsel)
-        + bas
-        + f"""
-
-<main id="main"><section><div class="wrap">
-  <h1>{e(m['hub_h1'])}</h1>
-  <p class="updated">{m['guncel']}: {tarih_yaz(dil, son_tarih)}. {e(m['hub_not'])}</p>
-  <ul class="tl oh-liste">
-{liste}  </ul>
-  <p><a href="/{GTA_HABER[dil]}">{m['gta']}</a></p>
-</div></section></main>
-
-"""
-        + son
-        + "\n</body>\n</html>\n"
-    )
-
-
-def haber_sayfasi(dil: str, x: dict, kabuklar) -> str:
-    m = M[dil]
-    t = x["diller"][dil]
-    yollar = {d: f"{KLASOR[d]}/{x['id']}.html" for d in DILLER}
-    bas, son = kabuklar[dil]
-    bas = bas.replace("{{DIL_SECICI}}", dil_secici(dil, yollar))
-    og = kart_ad(x["id"], dil, "og")
-    ld = {
-        "@context": "https://schema.org", "@type": "NewsArticle", "headline": t["baslik"],
-        "description": t["ozet"], "datePublished": x["tarih"], "inLanguage": dil,
-        "image": [f"{SITE}/{og}"], "mainEntityOfPage": f"{SITE}/{yollar[dil]}",
-        "publisher": {"@type": "Organization", "name": GORUNEN, "url": f"{SITE}/"},
-        "isBasedOn": [s["url"] for s in x["kaynaklar"]],
-    }
-    yon = YONLENDIR % json.dumps({d: "/" + yollar[d] for d in DILLER})
-    ek = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n' + yon
-    paragraflar = "".join(f"  <p>{e(p.strip())}</p>\n" for p in re.split(r"\n\s*\n", t["metin"]) if p.strip())
-    kaynaklar = " · ".join(
-        f'<a href="{e(s["url"])}" rel="noopener">{e(s["ad"])}, {tarih_yaz(dil, s.get("tarih", x["tarih"]))}</a>' for s in x["kaynaklar"]
-    )
-    etiket = " ".join(e(s) for s in t.get("etiketler", []))
-    return (
-        bas_kismi(dil, f"{t['baslik']} | {m['menu']}", t["ozet"], yollar[dil], yollar, og, "article", ek)
-        + bas
-        + f"""
-
-<main id="main"><section><div class="wrap oh-haber">
-  <p class="oh-yol"><a href="/{HUB[dil]}">{e(m['menu'])}</a> · {e(x['oyun'])} · {e(m['tur'][x['tur']])}</p>
-  <h1>{e(t['baslik'])}</h1>
-  <p class="updated"><time datetime="{x['tarih']}">{tarih_yaz(dil, x['tarih'])}</time></p>
-  <img class="oh-kart" src="/{og}" width="1200" height="630" alt="{e(t['baslik'])}">
-  <p class="oh-giris">{e(t['ozet'])}</p>
-{paragraflar}  <p class="src">{m['kaynak']}: {kaynaklar}</p>
-  <p class="oh-etiket">{etiket}</p>
-  <p><a href="/{HUB[dil]}">{m['geri']}</a></p>
-</div></section></main>
-
-"""
-        + son
-        + "\n</body>\n</html>\n"
-    )
 
 
 def rss(dil: str, veri: list[dict]) -> str:
@@ -342,93 +195,40 @@ def rss(dil: str, veri: list[dict]) -> str:
     )
 
 
-# ---------------------------------------------------------------- yerinde güncellemeler
-BAS_IM, SON_IM = "<!-- oyun-haberleri:basla -->", "<!-- oyun-haberleri:bitir -->"
-
-
-def isaretli_degistir(metin: str, yeni: str, once: str) -> str:
-    blok = f"{BAS_IM}\n{yeni}{SON_IM}\n"
-    if BAS_IM in metin:
-        return re.sub(re.escape(BAS_IM) + r".*?" + re.escape(SON_IM) + r"\n?", lambda _: blok, metin, flags=re.S)
-    i = metin.rindex(once)
-    return metin[:i] + blok + metin[i:]
-
-
-def ana_sayfa_kutusu(dil: str, veri: list[dict]) -> None:
-    yol = KOK / ("index.html" if dil == "tr" else f"{dil}/index.html")
-    m = M[dil]
-    ogeler = []
-    for x in veri[:4]:
-        t = x["diller"][dil]
-        ogeler.append(
-            f'    <li><time datetime="{x["tarih"]}">{tarih_yaz(dil, x["tarih"])}</time><span class="oh-tur" lang="en">{e(x["oyun"])}</span>'
-            f'<strong>{e(t["baslik"])}</strong><p>{e(t["ozet"])} <a href="/{KLASOR[dil]}/{x["id"]}.html">{m["devam"]}</a></p></li>\n'
-        )
-    kutu = (
-        f'<section><div class="wrap">\n  <h2>{e(m["kutu"])}</h2>\n  <ul class="tl oh-liste">\n'
-        + "".join(ogeler)
-        + f'  </ul>\n  <p><a href="/{HUB[dil]}">{m["tum"]}</a></p>\n</div></section>\n'
-    )
-    yaz(yol, isaretli_degistir(yol.read_text(encoding="utf-8"), kutu, "</main>"))
-
-
-def menuye_ekle() -> int:
-    """Tüm sayfaların menüsüne (Haberler/News bağlantısından sonra) oyun haberleri bağlantısını ekler."""
-    sayi = 0
-    for yol in sorted(KOK.rglob("*.html")):
-        g = yol.relative_to(KOK).as_posix()
-        if g.startswith(("_", ".", KART_KLASOR + "/")):
-            continue
-        dil = g.split("/")[0] if g.split("/")[0] in ("en", "fr", "es") else "tr"
-        metin = yol.read_text(encoding="utf-8")
-        if "<header>" not in metin or f'href="/{HUB[dil]}"' in metin.split("</header>")[0]:
-            continue
-        haber = "haberler.html" if dil == "tr" else "news.html"
-        m = re.search(r'(\n(\s*)<li><a class="l" href="[^"]*' + re.escape(haber) + r'"[^>]*>[^<]*</a></li>)', metin)
-        if not m:
-            continue
-        li = f'\n{m.group(2)}<li><a class="l" href="/{HUB[dil]}">{e(M[dil]["menu"])}</a></li>'
-        metin = metin[: m.end()] + li + metin[m.end():]
-        yaz(yol, metin)
-        sayi += 1
-    return sayi
-
-
-def site_haritasi(veri: list[dict]) -> None:
-    yol = KOK / "sitemap.xml"
-    satirlar = []
-
-    def grup(yollar: dict[str, str], tarih: str):
-        alt = "".join(f'<xhtml:link rel="alternate" hreflang="{d}" href="{SITE}/{yollar[d]}"/>' for d in DILLER)
-        for d in DILLER:
-            satirlar.append(f"  <url><loc>{SITE}/{yollar[d]}</loc><lastmod>{tarih}</lastmod>{alt}</url>\n")
-
-    if veri:
-        grup(HUB, veri[0]["tarih"])
-    for x in veri:
-        grup({d: f"{KLASOR[d]}/{x['id']}.html" for d in DILLER}, x["tarih"])
-    yaz(yol, isaretli_degistir(yol.read_text(encoding="utf-8"), "".join(satirlar), "</urlset>"))
-
-
 # ---------------------------------------------------------------- kartlar
-def kartlar(veri: list[dict]) -> int:
+# Kimlik: lacivert zemin, tuş (keycap) logosu ve etiketleri, başlık "seçili metin" gibi mavi şeritler üstünde.
+ZEMIN, YUZEY, CIZGI = (11, 19, 34), (30, 44, 71), (42, 57, 88)
+YAZI, SOLUK, SECIM, SECIM_ALT, TUS_ALT = (233, 238, 248), (154, 168, 195), (59, 108, 246), (36, 71, 184), (6, 11, 21)
+TUR_RENK = {"haber": YAZI, "ucretsiz": (61, 220, 151), "indirim": (245, 184, 61), "cikis": (141, 176, 255), "guncelleme": SOLUK}
+YAZI_DOSYA = {"genis": "Archivo-ExpandedExtraBold.ttf", "yari": "Archivo-SemiBold.ttf", "duz": "Archivo-Regular.ttf"}
+YEDEK_YAZI = {
+    "genis": ["C:/Windows/Fonts/segoeuib.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"],
+    "yari": ["C:/Windows/Fonts/seguisb.ttf", "C:/Windows/Fonts/segoeuib.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"],
+    "duz": ["C:/Windows/Fonts/segoeui.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"],
+}
+
+
+def kartlar(veri: list[dict]) -> tuple[int, int]:
     from PIL import Image, ImageDraw, ImageFont
 
-    def font(kalin: bool, boy: int):
-        adaylar = (
-            ["C:/Windows/Fonts/segoeuib.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"]
-            if kalin else ["C:/Windows/Fonts/segoeui.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"]
-        )
-        for a in adaylar:
-            if pathlib.Path(a).exists():
-                return ImageFont.truetype(a, boy)
-        raise SystemExit("Yazı tipi bulunamadı (Segoe UI veya DejaVu Sans gerekli).")
+    onbellek: dict = {}
 
-    def sar(ciz, metin, f, gen):
+    def font(tur: str, boy: int):
+        if (tur, boy) not in onbellek:
+            adaylar = [str(KOK / "tools" / "yazi" / YAZI_DOSYA[tur])] + YEDEK_YAZI[tur]
+            for a in adaylar:
+                if pathlib.Path(a).exists():
+                    onbellek[(tur, boy)] = ImageFont.truetype(a, boy)
+                    break
+            else:
+                raise SystemExit("Yazı tipi bulunamadı (tools/yazi/Archivo-*.ttf, Segoe UI veya DejaVu Sans gerekli).")
+        return onbellek[(tur, boy)]
+
+    def sar(c, metin, f, gen):
         satir, satirlar = "", []
         for k in metin.split():
             dene = (satir + " " + k).strip()
-            if ciz.textlength(dene, font=f) <= gen:
+            if c.textlength(dene, font=f) <= gen:
                 satir = dene
             else:
                 if satir:
@@ -438,76 +238,152 @@ def kartlar(veri: list[dict]) -> int:
             satirlar.append(satir)
         return satirlar
 
-    def sigdir(ciz, metin, kalin, buyuk, kucuk, gen, en_cok):
+    def sigdir(c, metin, tur, buyuk, kucuk, gen, en_cok):
         for boy in range(buyuk, kucuk - 1, -2):
-            f = font(kalin, boy)
-            s = sar(ciz, metin, f, gen)
-            if len(s) <= en_cok:
-                return f, s, boy
-        f = font(kalin, kucuk)
-        s = sar(ciz, metin, f, gen)[:en_cok]
+            f = font(tur, boy)
+            s = sar(c, metin, f, gen)
+            if len(s) <= en_cok and all(c.textlength(x, font=f) <= gen for x in s):
+                return f, s
+        f = font(tur, kucuk)
+        s = sar(c, metin, f, gen)[:en_cok]
+        while s and c.textlength(s[-1] + "…", font=f) > gen:
+            s[-1] = s[-1].rsplit(" ", 1)[0] if " " in s[-1] else s[-1][:-1]
         s[-1] = s[-1].rstrip(".,;:") + "…"
-        return f, s, kucuk
+        return f, s
 
-    def zemin(W, H):
-        img = Image.new("RGB", (W, H), (13, 10, 24))
-        px = ImageDraw.Draw(img)
-        for y in range(H):  # üstten alta koyu mor geçiş
-            r = y / H
-            px.line([(0, y), (W, y)], fill=(int(33 - 20 * r), int(26 - 16 * r), int(59 - 35 * r)))
-        for x in range(W):  # üst şerit: pembe → turuncu → sarı
-            r = x / W
-            if r < .55:
-                c = tuple(int(a + (b - a) * r / .55) for a, b in zip((255, 79, 163), (255, 162, 76)))
-            else:
-                c = tuple(int(a + (b - a) * (r - .55) / .45) for a, b in zip((255, 162, 76), (255, 211, 110)))
-            px.line([(x, 0), (x, 11)], fill=c)
+    def kisalt(c, metin, f, gen):
+        if c.textlength(metin, font=f) <= gen:
+            return metin
+        while metin and c.textlength(metin + "…", font=f) > gen:
+            metin = metin[:-1]
+        return metin.rstrip() + "…"
+
+    def tus(c, x, y, metin, f, h, *, mavi=False, renk=YAZI, olc=False):
+        """Bir tuş çizer (ya da yalnız genişliğini ölçer); genişliği döndürür."""
+        pad = round(h * 0.36)
+        w = round(c.textlength(metin, font=f)) + 2 * pad
+        if olc:
+            return w
+        alt = max(4, round(h * 0.1))
+        r = round(h * 0.2)
+        c.rounded_rectangle((x, y + alt, x + w, y + h + alt), radius=r, fill=SECIM_ALT if mavi else TUS_ALT)
+        c.rounded_rectangle((x, y, x + w, y + h), radius=r, fill=SECIM if mavi else YUZEY,
+                            outline=SECIM if mavi else CIZGI, width=2)
+        c.text((x + w / 2, y + (h + f.size * 0.7) / 2), metin, font=f, fill=(255, 255, 255) if mavi else renk, anchor="ms")
+        return w
+
+    def logo(c, x, y, h):
+        f = font("genis", round(h * 0.42))
+        x += tus(c, x, y, "Ctrl", f, h) + round(h * 0.16)
+        fa = font("yari", round(h * 0.5))
+        c.text((x, y + (h + fa.size * 0.7) / 2), "+", font=fa, fill=SOLUK, anchor="ls")
+        x += round(c.textlength("+", font=fa)) + round(h * 0.16)
+        x += tus(c, x, y, "A", f, h, mavi=True) + round(h * 0.3)
+        fg = font("genis", round(h * 0.62))
+        c.text((x, y + (h + fg.size * 0.7) / 2), "GAME", font=fg, fill=YAZI, anchor="ls")
+        return x + round(c.textlength("GAME", font=fg))
+
+    def secili(c, x, y, satirlar, f):
+        """Başlığı seçili metin gibi çizer: her satırın arkasında bitişik mavi şerit."""
+        adim, pad = round(f.size * 1.2), round(f.size * 0.22)
+        for i, s in enumerate(satirlar):
+            ust = y + i * adim
+            c.rectangle((x, ust, x + 2 * pad + round(c.textlength(s, font=f)), ust + adim), fill=SECIM)
+        for i, s in enumerate(satirlar):
+            c.text((x + pad, y + i * adim + round(f.size * 0.95)), s, font=f, fill=(255, 255, 255), anchor="ls")
+        return len(satirlar) * adim
+
+    def kart(x, dil, W, H, ozetli):
+        t, m = x["diller"][dil], M[dil]
+        img = Image.new("RGB", (W, H), ZEMIN)
+        c = ImageDraw.Draw(img)
+        P = 64 if W >= 1200 else 76
+        gen = W - 2 * P
+        # üst satır: logo solda, oyun ve tür tuşları sağda
+        lh = 52 if W >= 1200 else 60
+        lx = logo(c, P, P, lh)
+        th, ft = lh - 8, font("yari", round((lh - 8) * 0.46))
+        tur_ad = m["tur"][x["tur"]]
+        tw = tus(c, 0, 0, tur_ad, ft, th, olc=True)
+        bosluk = W - P - (lx + 40) - tw - 12
+        oyun = kisalt(c, x["oyun"], ft, max(60, bosluk - 2 * round(th * 0.36)))
+        ow = tus(c, 0, 0, oyun, ft, th, olc=True)
+        if ozetli:   # dikey kartta etiketler logonun altına iner
+            ty, tx = P + lh + 40, P
+        else:
+            ty, tx = P + 4, W - P - tw - 12 - ow
+        tx += tus(c, tx, ty, oyun, ft, th) + 12
+        tus(c, tx, ty, tur_ad, ft, th, renk=TUR_RENK.get(x["tur"], YAZI))
+        # alt bilgi
+        yb = H - P
+        c.line([(P, yb - 54), (W - P, yb - 54)], fill=CIZGI, width=2)
+        fs = font("yari", 30 if W >= 1200 else 32)
+        c.text((P, yb), GORUNEN, font=fs, fill=YAZI, anchor="ls")
+        fk = font("duz", 26 if W >= 1200 else 28)
+        iki_nokta = " : " if dil == "fr" else ": "
+        sag = kisalt(c, f"{tarih_yaz(dil, x['tarih'])}   {m['kaynak']}{iki_nokta}{x['kaynaklar'][0]['ad']}", fk,
+                     gen - round(c.textlength(GORUNEN, font=fs)) - 40)
+        c.text((W - P, yb), sag, font=fk, fill=SOLUK, anchor="rs")
+        # başlık (ve dikey kartta özet), üst ile alt bilgi arasında dikey ortalı
+        pad = 2 * round(64 * 0.22)
+        if ozetli:
+            fb, sb = sigdir(c, t["baslik"], "genis", 70, 44, gen - pad, 6)
+            fo, so = sigdir(c, t["ozet"], "duz", 40, 30, gen, 6)
+            ust, alt = ty + th + 40, yb - 54 - 40
+        else:
+            fb, sb = sigdir(c, t["baslik"], "genis", 58, 36, gen - pad, 4)
+            fo, so = None, []
+            ust, alt = P + lh + 34, yb - 54 - 30
+        bh = len(sb) * round(fb.size * 1.2)
+        oh = (36 + len(so) * round(fo.size * 1.35)) if so else 0
+        y = ust + max(0, (alt - ust - bh - oh) // 2)
+        y += secili(c, P, y, sb, fb)
+        if so:
+            y += 36
+            for s in so:
+                c.text((P, y + round(fo.size * 0.95)), s, font=fo, fill=SOLUK, anchor="ls")
+                y += round(fo.size * 1.35)
         return img
 
-    def ciz_kart(x, dil, W, H, ozetli):
-        t = x["diller"][dil]
-        img = zemin(W, H)
+    def marka_karti(W=1200, H=630):
+        """Kökteki og.png: dilden bağımsız marka kartı."""
+        img = Image.new("RGB", (W, H), ZEMIN)
         c = ImageDraw.Draw(img)
-        P = 72 if W >= 1200 else 80
-        gen = W - 2 * P
-        etiket = f"{x['oyun']}  ·  {M[dil]['tur'][x['tur']]}".upper()
-        fe = font(True, 30 if not ozetli else 34)
-        while c.textlength(etiket, font=fe) > gen and fe.size > 20:
-            fe = font(True, fe.size - 2)
-        if ozetli:
-            fb, sb, bb = sigdir(c, t["baslik"], True, 88, 54, gen, 6)
-            fo, so, bo = sigdir(c, t["ozet"], False, 42, 32, gen, 5)
-        else:
-            fb, sb, bb = sigdir(c, t["baslik"], True, 72, 44, gen, 4)
-            fo, so, bo = None, [], 0
-        # içerik bloğunu üst şerit ile alt bilgi arasında dikey ortala
-        blok = fe.size + 34 + len(sb) * int(bb * 1.18) + ((26 + len(so) * int(bo * 1.3)) if so else 0)
-        ust, alt = 12 + P // 2, H - P - 44 - 26 - P // 2
-        y = max(P, ust + (alt - ust - blok) // 2) if ozetli else P + 8
-        c.text((P, y), etiket, font=fe, fill=(255, 162, 76))
-        y += fe.size + 34
-        for s in sb:
-            c.text((P, y), s, font=fb, fill=(246, 242, 255))
-            y += int(bb * 1.18)
-        if so:
-            y += 26
-            for s in so:
-                c.text((P, y), s, font=fo, fill=(185, 174, 214))
-                y += int(bo * 1.3)
-        yb = H - P - 44
-        c.line([(P, yb - 26), (W - P, yb - 26)], fill=(58, 47, 102), width=2)
-        fs = font(True, 34)
-        c.text((P, yb), GORUNEN, font=fs, fill=(46, 230, 200))
-        sag = f"{tarih_yaz(dil, x['tarih'])}  ·  {M[dil]['kaynak']}: {x['kaynaklar'][0]['ad']}"
-        fk = font(False, 28)
-        while c.textlength(sag, font=fk) > gen - c.textlength(GORUNEN, font=fs) - 40 and fk.size > 18:
-            fk = font(False, fk.size - 2)
-        c.text((W - P - c.textlength(sag, font=fk), yb + 6), sag, font=fk, fill=(185, 174, 214))
+        P = 72
+        h = 132
+        f = font("genis", round(h * 0.42))
+        fa = font("yari", round(h * 0.5))
+        fg = font("genis", round(h * 0.6))
+        # ölç, ortala
+        w1, w2 = tus(c, 0, 0, "Ctrl", f, h, olc=True), tus(c, 0, 0, "A", f, h, olc=True)
+        bos = round(h * 0.16)
+        gpad = round(fg.size * 0.18)
+        toplam = w1 + bos + round(c.textlength("+", font=fa)) + bos + w2 + round(h * 0.28) + round(c.textlength("GAME", font=fg)) + 2 * gpad
+        x, y = (W - toplam) // 2, 150
+        x += tus(c, x, y, "Ctrl", f, h) + bos
+        c.text((x, y + (h + fa.size * 0.7) / 2), "+", font=fa, fill=SOLUK, anchor="ls")
+        x += round(c.textlength("+", font=fa)) + bos
+        x += tus(c, x, y, "A", f, h, mavi=True) + round(h * 0.28)
+        gw = round(c.textlength("GAME", font=fg)) + 2 * gpad
+        c.rectangle((x, y - 6, x + gw, y + h + 14), fill=SECIM)
+        c.text((x + gpad, y + (h + fg.size * 0.7) / 2 + 4), "GAME", font=fg, fill=(255, 255, 255), anchor="ls")
+        # platform tuşları
+        fp = font("yari", 30)
+        adlar = ["PlayStation", "Xbox", "Nintendo", "PC"]
+        ph, ara = 60, 18
+        gw = sum(tus(c, 0, 0, a, fp, ph, olc=True) for a in adlar) + ara * (len(adlar) - 1)
+        x, y = (W - gw) // 2, 372
+        for a in adlar:
+            x += tus(c, x, y, a, fp, ph) + ara
+        yb = H - P + 10
+        c.line([(P, yb - 50), (W - P, yb - 50)], fill=CIZGI, width=2)
+        fs = font("yari", 30)
+        c.text((W // 2, yb), GORUNEN, font=fs, fill=SOLUK, anchor="ms")
         return img
 
     def kaydet(img, yol, tip):
         tmp = yol.with_name(yol.stem + ".tmp" + yol.suffix)
-        if tip == "og":  # 128 renkli PNG: metin kartı için ~15 KB, depo şişmez
+        if tip == "og":  # 128 renkli PNG: metin kartı için küçük dosya, depo şişmez
             img.quantize(128, method=Image.Quantize.FASTOCTREE, dither=Image.Dither.NONE).save(tmp, "PNG", optimize=True)
         else:            # Instagram yalnız JPEG kabul eder
             img.save(tmp, "JPEG", quality=85, optimize=True, subsampling=2)
@@ -517,22 +393,23 @@ def kartlar(veri: list[dict]) -> int:
         tmp.replace(yol)
         return 1
 
-    from datetime import date, timedelta
+    from datetime import date
     bugun = date.today()
     ig_diller = [d for d in DILLER if ayarlar()["hesaplar"].get(d, {}).get("instagram")]
     (KOK / KART_KLASOR).mkdir(exist_ok=True)
     gerekli, yeni = set(), 0
+    yeni += kaydet(marka_karti(), KOK / "og.png", "og")
     for x in veri:
         yas = (bugun - date.fromisoformat(x["tarih"])).days
         for dil in DILLER:
             yol = KOK / kart_ad(x["id"], dil, "og")
             gerekli.add(yol.name)
-            yeni += kaydet(ciz_kart(x, dil, 1200, 630, False), yol, "og")
+            yeni += kaydet(kart(x, dil, 1200, 630, False), yol, "og")
             if dil in ig_diller and yas <= IG_SAKLA:
                 yol = KOK / kart_ad(x["id"], dil, "ig")
                 gerekli.add(yol.name)
                 if yas <= IG_GUN or yol.exists():
-                    yeni += kaydet(ciz_kart(x, dil, 1080, 1350, True), yol, "ig")
+                    yeni += kaydet(kart(x, dil, 1080, 1350, True), yol, "ig")
     silinen = 0
     for f in (KOK / KART_KLASOR).iterdir():
         if f.name not in gerekli:
@@ -543,19 +420,15 @@ def kartlar(veri: list[dict]) -> int:
 
 # ---------------------------------------------------------------- ana akış
 def main() -> None:
+    sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+    import site_derle
+
     veri = yukle()
-    eklenen_menu = menuye_ekle()
-    kabuklar = {d: kabuk(d) for d in DILLER}
-    degisen = 0
-    for d in DILLER:
-        degisen += yaz(KOK / HUB[d], hub_sayfasi(d, veri, kabuklar))
-        degisen += yaz(KOK / FEED[d], rss(d, veri))
-        for x in veri:
-            degisen += yaz(KOK / KLASOR[d] / f"{x['id']}.html", haber_sayfasi(d, x, kabuklar))
-        ana_sayfa_kutusu(d, veri)
-    site_haritasi(veri)
+    sonuc = site_derle.derle(veri)
     yeni_kart, silinen = kartlar(veri)
-    print(f"Tamam: {len(veri)} haber, {degisen} sayfa/RSS değişti, {yeni_kart} kart yazıldı, {silinen} eski kart silindi, menüye {eklenen_menu} sayfada bağlantı eklendi.")
+    print(f"Tamam: {len(veri)} haber, {sonuc['sayfa']} sayfa ({sonuc['degisen']} dosya değişti); "
+          f"{sonuc['soylenti']} söylenti, {sonuc['takvim']} çıkış, {sonuc['firsat']} fırsat, {sonuc['epic']} Epic oyunu; "
+          f"{yeni_kart} kart yazıldı, {silinen} eski kart silindi, {sonuc['uyari']} uyarı.")
 
 
 if __name__ == "__main__":
