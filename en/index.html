@@ -59,7 +59,7 @@
     <div><b id="m">-</b><small>minutes</small></div>
     <div><b id="s">-</b><small>seconds</small></div>
   </div>
-  <p class="note">The countdown runs to midnight on November 19 in your own time zone; unlock times may vary by platform and region.</p>
+  <p class="note">The countdown runs to midnight on November 19, Los Angeles time (PST). Unlock times may vary by platform and region.</p>
 </div></div>
 <section><div class="wrap">
   <h2>GTA VI at a glance</h2>
@@ -100,7 +100,7 @@
 
 <script>
 (function(){
-  var t=new Date(2026,10,19,0,0,0).getTime();
+  var t=new Date("2026-11-19T00:00:00-08:00").getTime();
   function p(n){return n<10?"0"+n:n}
   function tick(){
     var x=t-Date.now();

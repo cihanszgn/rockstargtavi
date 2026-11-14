@@ -59,7 +59,7 @@
     <div><b id="m">–</b><small>minutos</small></div>
     <div><b id="s">–</b><small>segundos</small></div>
   </div>
-  <p class="note">La cuenta regresiva apunta a la medianoche del 19 de noviembre en tu zona horaria; la hora de apertura puede variar según la plataforma y la región.</p>
+  <p class="note">La cuenta regresiva apunta a la medianoche del 19 de noviembre, hora de Madrid. La hora de apertura puede variar según la plataforma y la región.</p>
 </div></div>
 
 <section><div class="wrap">
@@ -102,7 +102,7 @@
 
 <script>
 (function(){
-  var t=new Date(2026,10,19,0,0,0).getTime();
+  var t=new Date("2026-11-19T00:00:00+01:00").getTime();
   function p(n){return n<10?"0"+n:n}
   function tick(){
     var x=t-Date.now();
