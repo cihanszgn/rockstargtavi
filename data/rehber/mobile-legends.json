@@ -1,31 +1,39 @@
 {
  "oyun": "mobile-legends",
- "guncelleme": "2026-11-14",
+ "guncelleme": "2026-11-15",
  "surum": "Sezon 42 (16 Eylül 2026)",
  "kaynaklar": [
   {
    "url": "https://play.google.com/store/apps/details?id=com.mobile.legends",
-   "ad": "Mobile Legends: Bang Bang (Google Play)"
+   "ad": "Mobile Legends: Bang Bang, Google Play"
   },
   {
    "url": "https://mlbbhub.com/patch-notes",
-   "ad": "MLBB Hub yama notları (ikincil kaynak)"
+   "ad": "MLBB Hub: patch notes"
   },
   {
    "url": "https://gameverse.app/blog/mobile-legends-ranks",
-   "ad": "Gameverse rank rehberi (ikincil kaynak)"
+   "ad": "Gameverse: MLBB rank tiers"
+  },
+  {
+   "url": "https://esportsinsider.com/mobile-legends-ranks",
+   "ad": "Esports Insider: MLBB rank system"
   },
   {
    "url": "https://timesaver.gg/blog/mobile-legends-credit-score",
-   "ad": "Timesaver Kredi Puanı yazısı (ikincil kaynak)"
+   "ad": "TimeSaver: Credit Score"
   },
   {
    "url": "https://mobile-legends.fandom.com/wiki/Ranked",
-   "ad": "Mobile Legends Wiki: Ranked (topluluk wikisi)"
+   "ad": "Mobile Legends Wiki: Ranked"
   },
   {
    "url": "https://mobile-legends.fandom.com/wiki/Map",
-   "ad": "Mobile Legends Wiki: Map (topluluk wikisi)"
+   "ad": "Mobile Legends Wiki: Map"
+  },
+  {
+   "url": "https://bo3.gg/mlbb/articles/how-to-secure-turtle-in-mlbb-step-by-step-guide-to-winning-early-game",
+   "ad": "bo3.gg: Turtle guide"
   }
  ],
  "diller": {
@@ -47,11 +55,11 @@
     },
     {
      "ad": "Güncel sürüm",
-     "deger": "Sezon 42 (16 Eylül 2026'da başladı); yama numarası ikincil kaynakta 2.2.16a"
+     "deger": "Sezon 42 (16 Eylül 2026'da başladı); yama numarası topluluk kaynaklarına göre 2.2.16a"
     },
     {
      "ad": "Türkçe desteği",
-     "deger": "Türkçe dil seçeneği bu rehberde doğrulanmadı; oyun içi dil menüsüne bak"
+     "deger": "Türkçe dil desteği resmî olarak açıklanmadı; oyun içi dil menüsünden kontrol edin"
     }
    ],
    "bolumler": [
@@ -69,11 +77,11 @@
       },
       {
        "tip": "p",
-       "metin": "En son yama ikincil bir kaynakta 2.2.16a (14 Ekim 2026) olarak geçer; Kasım ortasında yeni bir güncelleme olduğu bildirilmiş olsa da numarası doğrulanmadı. Sezon 43'ün Aralık ortasında başlaması beklenir; bu da kesinleşmedi."
+       "metin": "En son yama numarası resmî olarak açıklanmamıştır; topluluk kaynaklarında 2.2.16a (14 Ekim 2026) geçer. Sezon 43'ün Aralık ortasında başlaması beklenir; tarih kesin değildir. Haritada 2026 Yıllık Harita Değişikliği 28 Eylül 2026'da yayına girdi (topluluk kaynaklarına göre): Healing Turtle, Golden Turret ve Revealing Wisps gibi yenilikler içerir."
       },
       {
        "tip": "ipucu",
-       "metin": "Rehberdeki sayılar Kasım 2026 itibarıyladır. Bazı bilgiler ikincil kaynaktandır ve işaretlenmiştir; oyun içinde doğrula."
+       "metin": "Sayılar Kasım 2026 itibarıyladır; bazı bilgiler topluluk kaynaklarına dayanır ve metinde belirtilmiştir. Oyun içinde doğrulayın."
       }
      ]
     },
@@ -83,23 +91,27 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Yeni hesapta önce eğitim ve ilk görevleri bitir; bunlar hem temel hareketleri öğretir hem de başlangıç ödülleri verir. Ödüllerle açtığın ilk hero'ları harcamadan önce hangi rolü sevdiğini anlamaya çalış."
+       "metin": "Yeni hesapta önce eğitim ve ilk görevleri bitirin; bunlar hem temel hareketleri öğretir hem de başlangıç ödülleri verir. Ödüllerle açtığınız ilk hero'ları harcamadan önce hangi rolü sevdiğini anlamaya çalışın."
       },
       {
        "tip": "p",
-       "metin": "Oyunu Google Play veya App Store'dan indirirsin. Google Play sayfasına göre oyun 12+ yaş derecelidir ve uygulama içi satın alma içerir. Hesap için e-posta veya bağlı bir hesap kullanılır."
+       "metin": "Oyunu Google Play veya App Store'dan indirirsiniz. Google Play sayfasına göre oyun 12+ yaş derecelidir ve uygulama içi satın alma içerir. Hesap için e-posta veya bağlı bir hesap kullanılır."
       },
       {
        "tip": "liste",
        "ogeler": [
         "PC'de oynamak için Google Play Games kullanılır. Gereksinimler: Windows 10 sürüm 2004, 10 GB boş SSD alanı, Intel UHD 630, 4 fiziksel çekirdek, 8 GB RAM ve açık sanallaştırma (virtualization).",
-        "Ağ bağlantın kararlı olsun; Wi-Fi veya iyi bir mobil veri kullan.",
-        "Sunucu saati Türkiye saatinden farklı olabilir; sezon başlangıç ve bitiş saatlerini oyun içinde kontrol et."
+        "Ağ bağlantınız kararlı olsun; Wi-Fi veya iyi bir mobil veri kullanın.",
+        "Sunucu saati Türkiye saatinden farklı olabilir; sezon başlangıç ve bitiş saatlerini oyun içinde kontrol edin."
        ]
       },
       {
        "tip": "uyari",
-       "metin": "Oyunu yalnızca resmi mağazadan indir. 'Ücretsiz elmas' veya hesap vaat eden siteler ve uygulamalar hesabını çaldırabilir."
+       "metin": "Oyunu yalnızca resmi mağazadan indirin. 'Ücretsiz elmas' veya hesap vaat eden siteler ve uygulamalar hesabınızı çaldırabilir."
+      },
+      {
+       "tip": "p",
+       "metin": "Telefonunuz için en önemli şey düzgün bağlantıdır. Wi-Fi veya sağlam bir mobil veri kullanın; maç sırasında bağlantı kopması hem sizi hem takımı cezalandırır. Pil ve ısınma da önemlidir: uzun oturumlarda telefonu şarja bağlayıp kılıfı çıkarmak ısınmayı azaltır. Kulaklık kullanırsanız ayak sesi ve yetenek seslerini daha iyi duyarsınız."
       }
      ]
     },
@@ -111,26 +123,30 @@
        "tip": "adimlar",
        "ogeler": [
         {
-         "baslik": "Eğitimi bitir",
-         "metin": "Hareket, saldırı ve yetenek düğmelerini öğren."
+         "baslik": "Eğitimi bitirin",
+         "metin": "Hareket, saldırı ve yetenek düğmelerini öğrenin."
         },
         {
-         "baslik": "Botlara karşı oyna",
-         "metin": "Rahat hissedene kadar bot maçlarıyla hero ve haritayı dene."
+         "baslik": "Botlara karşı oynayın",
+         "metin": "Rahat hissedene kadar bot maçlarıyla hero ve haritayı deneyin."
         },
         {
-         "baslik": "Klasik (Classic) maçlara geç",
+         "baslik": "Klasik (Classic) maçlara geçin",
          "metin": "Gerçek oyunculara karşı derecesiz oynayarak alış."
         },
         {
-         "baslik": "Rütbeli (Ranked) maça hazırlan",
-         "metin": "Dereceli moda girmek için oyun içi şartlar vardır; kaynaklar arasında farklı (örneğin belli sayıda normal maç veya seviye) bilgiler var, bu yüzden oyunun gösterdiği kilidi esas al."
+         "baslik": "Rütbeli (Ranked) maça hazırlanın",
+         "metin": "Topluluk kaynaklarına göre Ranked için hesap seviyesi 8 ve yeterli sayıda hero gerekir; Moonton bu şartı kendi sayfasında yayımlamamıştır, oyundaki kilit ekranı esastır."
         },
         {
-         "baslik": "Kısa oyun oturumları yap",
+         "baslik": "Kısa oyun oturumları yapın",
          "metin": "Bir veya iki maçtan sonra mola vermek hata sayısını azaltır."
         }
        ]
+      },
+      {
+       "tip": "p",
+       "metin": "İlk günlerde amacınız kazanmak değil, haritayı ve hero'nu tanımaktır. Bir maçta yalnızca iki şeye dikkat edin: hangi lane'de olduğunu ve sıradaki hedefin (kule, Turtle, Lord) ne zaman geldiğini. Maç sonunda ekranda çıkan istatistiklere bakıp en çok neyi yanlış yaptığını bulun; bir sonraki maçta yalnız onu düzeltmeye çalışın. Bu yöntem, rastgele çok oynamaktan daha hızlı ilerletir."
       }
      ]
     },
@@ -140,7 +156,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Oyunda beş temel rol vardır: **Tank, Mage, Marksman, Assassin ve Support**. Ayrıca dövüşçü (Fighter) tipi hero'lar da vardır. Hero'lar ücretsiz rotasyondan veya mağazadan açılır. Aşağıdaki örnekler yıllardır basit kalmış tercihleri gösterir (kendi bilgim; dengede değişiklik olabilir)."
+       "metin": "Oyunda beş temel rol vardır: **Tank, Mage, Marksman, Assassin ve Support**. Ayrıca dövüşçü (Fighter) tipi hero'lar da vardır. Hero'lar ücretsiz rotasyondan veya mağazadan açılır. Aşağıdaki örnekler uzun süredir basit kalmış yaygın acemi tercihleridir, Moonton'un resmî önerisi değildir; denge yamalarla değişebilir."
       },
       {
        "tip": "tablo",
@@ -153,7 +169,7 @@
         [
          "Tank",
          "Tigreal",
-         "Dayanıklı; takım arkadaşlarının önünde durur"
+         "Dayanıklı; takım arkadaşlarınızın önünde durur"
         ],
         [
          "Mage",
@@ -179,7 +195,99 @@
       },
       {
        "tip": "ipucu",
-       "metin": "Bir hafta boyunca aynı iki hero ile oyna. Çok hero denemek yerine birini iyi öğrenmek daha çabuk ilerletir."
+       "metin": "Bir hafta boyunca aynı iki hero ile oynayın. Çok hero denemek yerine birini iyi öğrenmek daha çabuk ilerletir."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Lane / konum",
+        "Kim oynar",
+        "Görevi"
+       ],
+       "satirlar": [
+        [
+         "Gold Lane",
+         "Marksman",
+         "Güvenle farm yapın, kuleleri yık"
+        ],
+        [
+         "EXP Lane",
+         "Dövüşçü",
+         "Tek başına lane; takım savaşlarında dayanıklı hasar"
+        ],
+        [
+         "Mid Lane",
+         "Mage",
+         "Dalga temizleyin, orman ve yan lane'lere yardım edin"
+        ],
+        [
+         "Jungle",
+         "Assassin veya dövüşçü",
+         "Orman kamplarını kes, Turtle ve Lord'u güvene alın"
+        ],
+        [
+         "Roam",
+         "Tank veya Support",
+         "Takımı koruyun, görüş ve ilk kavga olun"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Hangisini seçeceğini bilmiyorsanız Tank ile Roam başlayın: ölmeden takım arkadaşlarınızın önünde durmak mekanik zorluk getirmez ve haritayı öğretir. İkinci seçenek Marksman'dır; Gold Lane'de güvenle farm yapıp haritayı izlersiniz."
+      }
+     ]
+    },
+    {
+     "id": "amblem-buyu",
+     "baslik": "Amblem ve savaş büyüsü seçimi",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Her maçtan önce iki seçim yaparsınız: amblem seti ve savaş büyüsü (battle spell). İkisi de hero'nun rolüne göre belirlenir ve ilk haftalar oyunun önerdiği hazır seçimi kullanmak en güvenlisidir."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Seçim",
+        "Ne işe yarar",
+        "Kime uygun"
+       ],
+       "satirlar": [
+        [
+         "Amblem",
+         "Her tür (Tank, Assassin, Mage, Marksman, Support, Fighter) rolüne göre sabit güç ve üç yetenek seçtirir",
+         "Hero'nun açıklamasındaki önerilen amblemi kullanın"
+        ],
+        [
+         "Retribution (Karşılık)",
+         "Orman canavarlarına ve Turtle ile Lord'a büyük hasar",
+         "Yalnız ormancı; başka büyüyle ormancı olunmaz"
+        ],
+        [
+         "Flicker (Işınlanma)",
+         "Kısa mesafe ışınlanır",
+         "Kaçmak veya kavga başlatmak isteyen çoğu hero"
+        ],
+        [
+         "Purify (Arınma)",
+         "Sersemletme ve yavaşlatmayı temizler",
+         "Kontrole çok maruz kalan hero"
+        ],
+        [
+         "Execute (İnfaz)",
+         "Düşük canlı düşmana hasar verir",
+         "Öldürmek isteyen hero"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Büyüler ve amblemlerin sayısı ile etkileri sezonlara göre değişebilir; mağazada veya hero sayfasında gördüğünüz güncel açıklamayı esas alın. Bir büyü seçtikten sonra bir hafta aynı seçimle oynayın: bekleme süresini ezberlemek her maçı kolaylaştırır."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Ormancıysanız Retribution'ı Turtle ve Lord için saklayın; küçük canavarlara boşa harcamayın."
       }
      ]
     },
@@ -196,8 +304,8 @@
        "ogeler": [
         "**Kuleler:** Önce dış, sonra iç kuleler ve sonunda ana üsteki kristal yıkılır.",
         "**Orman canavarları:** Altın ve seviye verir; Turtle ve Lord gibi hedefler takıma güç katar.",
-        "**Minyonlar:** Altın vermek için öldürülür; son vuruşu yaparak altın kazanırsın.",
-        "**Harita bilgisi:** Mini haritaya sık bak; rakibin lane'ini bırakması tehlike işaretidir."
+        "**Minyonlar:** Altın vermek için öldürülür; son vuruşu yaparak altın kazanırsınız.",
+        "**Harita bilgisi:** Mini haritaya sık bakın; rakibin lane'ini bırakması tehlike işaretidir."
        ]
       },
       {
@@ -236,16 +344,71 @@
      ]
     },
     {
+     "id": "turtle-lord",
+     "baslik": "Turtle ve Lord: zamanlar",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Turtle ve Lord, takıma altın, tecrübe ve güç veren ana tarafsız hedeflerdir. Topluluk kaynaklarına göre ilk Turtle 2:00 civarında çıkar ve yaklaşık her 2 dakikada bir yenilenir; 2026 harita değişikliğinden sonra Turtle'ın davranışının (örneğin Healing Turtle) güncellendiği bildirilmiştir. Lord'un tam çıkış dakikası kaynaklar arasında tutarlı değildir ve Moonton bunu resmî olarak açıklamamıştır; bu yüzden oyun içi sayacı izleyin."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Hedef",
+        "Ne zaman",
+        "Ne verir"
+       ],
+       "satirlar": [
+        [
+         "Turtle",
+         "İlk çıkış 2:00 civarı; yenilenme yaklaşık 2 dakika",
+         "Takıma altın, tecrübe ve kalkan; son vuruşu yapan hero'ya anlık iyileşme ve ek kalkan"
+        ],
+        [
+         "Lord",
+         "Orta oyunda çıkar; kesin dakika resmî olarak açıklanmamış",
+         "Yan lane'leri iten güçlü bir yardımcı; kule yıkmayı hızlandırır"
+        ]
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Çıkıştan 20-25 saniye önce hazırlanın",
+         "metin": "Görüş kurun ve giriş çalılıklarını kontrol edin; geç gelen ilk dövüşü kaybeder."
+        },
+        {
+         "baslik": "Ormancıya Retribution'ı bırakın",
+         "metin": "Herkes aynı anda hedefe vurmasın; hasarı Retribution mesafesine kadar saklayın."
+        },
+        {
+         "baslik": "Dalgayı önce it",
+         "metin": "Orta ve Roam'u hedefe birlikte getirin."
+        },
+        {
+         "baslik": "Güvenli değilse zorlamayın",
+         "metin": "Rakip çalılığı kontrol ediyorsa başka hedef alın, kule vurun."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Hedef için kavga etmeden önce rakip ormancının nerede olduğunu ve takım arkadaşlarınızın canlı olup olmadığını sayın."
+      }
+     ]
+    },
+    {
      "id": "ayarlar",
      "baslik": "Ayarlar: başlangıç değerleri",
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Ayarlarda en çok işe yarayan şey düğme yerleşimidir. Başparmağın bir yeteneğe zor ulaşıyorsa o düğmeyi taşı; tek tek her maçta aynı hareketi yapabilmek, ince grafik ayarından daha değerlidir. Bunu kendi deneyim olarak öneriyorum (kendi bilgim)."
+       "metin": "Ayarlarda en çok işe yarayan şey düğme yerleşimidir. Başparmağınız bir yeteneğe zor ulaşıyorsa o düğmeyi taşıyın; her maçta aynı hareketi yapabilmek, ince grafik ayarından daha değerlidir."
       },
       {
        "tip": "p",
-       "metin": "Bunlar resmi değer değil; genel olarak önerilen başlangıç noktalarıdır. Bot maçında dene."
+       "metin": "Bunlar resmi değer değil; genel olarak önerilen başlangıç noktalarıdır. Bot maçında deneyin."
       },
       {
        "tip": "tablo",
@@ -256,29 +419,76 @@
        "satirlar": [
         [
          "Düğme yerleşimi",
-         "Başparmaklarını rahat ettirecek şekilde düğmeleri biraz büyüt veya yer değiştir"
+         "Başparmaklarını rahat ettirecek şekilde düğmeleri biraz büyüt veya yer değiştirin"
         ],
         [
          "Otomatik hedef",
-         "Saldırıda otomatik hedef seçimini açık bırak"
+         "Saldırıda otomatik hedef seçimini açık bırakın"
         ],
         [
          "Grafik",
-         "Telefonuna uygun; akıcılık görüntüden önemlidir"
+         "Telefonunuza uygun; akıcılık görüntüden önemlidir"
         ],
         [
          "Ses",
-         "Kulaklık tak; yetenek sesi bilgi taşır"
+         "Kulaklık takın; yetenek sesi bilgi taşır"
         ],
         [
          "Ağ",
-         "Wi-Fi veya iyi mobil veri; ping'i oyun içi göstergeden izle"
+         "Wi-Fi veya iyi mobil veri; ping'i oyun içi göstergeden izleyin"
         ]
        ]
       },
       {
        "tip": "ipucu",
-       "metin": "Ayar değiştirince birkaç maç aynı değerle oyna; fikrini hemen bozma."
+       "metin": "Ayar değiştirince birkaç maç aynı değerle oynayın; fikrini hemen bozmayın."
+      }
+     ]
+    },
+    {
+     "id": "elmas-butce",
+     "baslik": "Elmas ve harcamayın bütçesi",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Mobile Legends ücretsiz oynanır; Google Play sayfası oyunu 'Play to Win, not Pay to Win' olarak tanıtır ve uygulama içi satın alma içerir. Elmas gerçek paradır; fiyatlar bölgeye göre değişir, bu yüzden güncel tutarı oyun içi mağazada görün. Savaş Puanı (BP) oynayarak kazanılır ve hero açmak için kullanılır."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Öncelik",
+        "Ne yapın",
+        "Neden"
+       ],
+       "satirlar": [
+        [
+         "1. Hero",
+         "Hero'yu BP ile açın; elmas harcamayın",
+         "Oyunun gücünü etkileyen asıl şey hero'dur, kostüm değildir"
+        ],
+        [
+         "2. Aylık geçiş (Starlight vb.)",
+         "Gerçekten oynayacaksanız değerlendirin",
+         "Kozmetik ve küçük ödüller; kesin içerik ve fiyat mağazada"
+        ],
+        [
+         "3. Kostüm",
+         "Son sıraya bırakın",
+         "Kozmetiktir; oyun gücü vermez"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Aylık bir üst sınır koyun ve harcamayı yaşa göre bir yetişkinle konuşun.",
+        "Üçüncü taraf 'ucuz elmas' sitelerinden ve hesap şifresi isteyen 'yükleme' hizmetlerinden uzak durun.",
+        "Bir satın alma sonrası pişmanlık duyuyorsanız ilk iki hafta hiçbir şey alma kuralı koyun."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "'Ucuz elmas' veya 'ücretsiz elmas' vaat eden siteler hesabınızı çaldırabilir; yalnız oyun içi resmî mağazayı kullanın."
       }
      ]
     },
@@ -288,17 +498,17 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Rank tablosu sezona göre ayrıntı değiştirebilir; yıldız sayıları ve kademe adları güncellemelerle oynanabilir. Bu yüzden aşağıdaki değerleri kesin sayma, kendi ekranındaki sıralama sayfasıyla karşılaştır."
+       "metin": "Rank tablosu sezona göre ayrıntı değiştirebilir; aşağıdaki yıldız sayıları topluluk kaynaklarına dayanır ve Moonton bunları kendi sayfasında tablo olarak yayımlamamıştır. Kesin değer için oyundaki sıralama sayfana bakın."
       },
       {
        "tip": "p",
-       "metin": "Dereceli kademeler ikincil kaynaklara göre şöyledir: Warrior, Elite, Master, Grandmaster, Epic, Legend ve Mythic. Mythic içinde ek ünvanlar vardır: Mythical Honor, Mythical Glory ve Mythical Immortal. Mythic'ten sonra yıldız sayısı devam eder."
+       "metin": "Dereceli kademeler topluluk kaynaklarına göre şöyledir: Warrior, Elite, Master, Grandmaster, Epic, Legend ve Mythic. Mythic içinde ek ünvanlar vardır: Mythical Honor, Mythical Glory ve Mythical Immortal. Mythic'ten sonra yıldız sayısı devam eder."
       },
       {
        "tip": "tablo",
        "basliklar": [
         "Rütbe",
-        "Bölümler (ikincil kaynak)"
+        "Bölümler"
        ],
        "satirlar": [
         [
@@ -334,11 +544,55 @@
       {
        "tip": "liste",
        "ogeler": [
-        "Draft Pick (seçim) ve yasaklama aşaması Epic'ten itibaren başlar (ikincil kaynak).",
-        "Warrior'da kayıp yıldız götürmez (ikincil kaynak).",
-        "Dereceli grup boyutu 1, 2, 3 veya 5 kişi olabilir (ikincil kaynak).",
-        "Kredi Puanı (Credit Score) 100'de başlar, en fazla 110 olur; 90'ın altında dereceli kilitlenebilir (ikincil kaynak)."
+        "Draft Pick (seçim) ve yasaklama aşaması Epic'ten itibaren başlar (topluluk kaynaklarına göre).",
+        "Warrior'da kayıp yıldız götürmez (topluluk kaynaklarına göre).",
+        "Dereceli grup boyutu 1, 2, 3 veya 5 kişi olabilir (topluluk kaynaklarına göre).",
+        "Kredi Puanı (Credit Score) 100'de başlar, en fazla 110 olur; 90'ın altında dereceli kilitlenebilir (topluluk kaynaklarına göre)."
        ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rütbe",
+        "Bölüm",
+        "Yıldız / bölüm"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "III - I",
+         "3"
+        ],
+        [
+         "Elite",
+         "III - I",
+         "4"
+        ],
+        [
+         "Master",
+         "IV - I",
+         "4"
+        ],
+        [
+         "Grandmaster",
+         "V - I",
+         "5"
+        ],
+        [
+         "Epic",
+         "V - I",
+         "5"
+        ],
+        [
+         "Legend",
+         "V - I",
+         "5"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Mythic'te bölüm yoktur; yıldız sayısı artar: Mythic 0-24, Mythical Honor 25, Mythical Glory 50, Mythical Immortal 100 ve üzeri (topluluk kaynaklarına göre). Sezon 42'nin Aralık ortasında bitmesi beklenir; kesin tarih açıklanmamıştır."
       }
      ]
     },
@@ -348,7 +602,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Hataların çoğu bilgi eksikliğinden değil alışkanlıktan gelir. Her maçtan sonra tek bir şeyi not et: neden öldüm, hangi hedefi kaçırdım. Üç dört maçta aynı cevap çıkarsa asıl çalışman gereken şey odur."
+       "metin": "Hataların çoğu bilgi eksikliğinden değil alışkanlıktan gelir. Her maçtan sonra tek bir şeyi not edin: neden öldüm, hangi hedefi kaçırdım. Üç dört maçta aynı cevap çıkarsa asıl çalışmanız gereken şey odur."
       },
       {
        "tip": "liste",
@@ -356,10 +610,18 @@
         "Dereceliye hazır olmadan girmek; önce klasik maçlarla alış.",
         "Takımı beklemeden tek başına kule dalmak.",
         "Mini haritaya bakmamak.",
-        "Takım arkadaşlarını suçlamak; ölünce hatayı kendinde ara.",
+        "Takım arkadaşlarınızı suçlamak; ölünce hatayı kendinizde ara.",
         "Her maçta farklı hero denemek.",
-        "Sinirliyken peş peşe maç oynamak; ara ver."
+        "Sinirliyken peş peşe maç oynamak; ara verin."
        ]
+      },
+      {
+       "tip": "p",
+       "metin": "Sık görülen bir hata, her kavgaya girmektir. Mobile Legends kısa maçlarla oynanır ve bir ölüm geri dönüş süresi nedeniyle kule ve hedef kaybettirir. Canınız azsa geri çekilip iyileşin, haritada rakibin kaybolduğunu gördüğünde çalılıklara dikkat edin. İkinci hata mini haritaya hiç bakmamaktır: bir iki saniyede bir göz atmak, yan lane'e gelen rakibi önceden fark etmenizi sağlar."
+      },
+      {
+       "tip": "p",
+       "metin": "Üçüncü hata, yalnızca öldürme sayısına odaklanmaktır. Maçı kazandıran şey kule yıkmak ve Turtle ile Lord gibi hedefleri almaktır; öldürme ancak bunlara fırsat açtığında değerlidir. Takım arkadaşlarınıza yazıyla saldırmak da kaybettirir: kısa ve nazik bir işaret, öfkeli bir mesajdan çok daha verimlidir. Tilt olduğunu hissederseniz sıradaki maçı oynamadan mola verin."
       }
      ]
     },
@@ -369,24 +631,28 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Çocuk veya genç oyuncular için: oyun içi satın alma ve sohbet ayarlarını bir yetişkinle birlikte kontrol et. Tanımadığın kişilerden gelen bağlantıya tıklama ve kişisel bilgini (adres, okul, telefon) sohbette paylaşma."
+       "metin": "Çocuk veya genç oyuncular için: oyun içi satın alma ve sohbet ayarlarını bir yetişkinle birlikte kontrol edin. Tanımadığınız kişilerden gelen bağlantıya tıklamayın ve kişisel bilginizi (adres, okul, telefon) sohbette paylaşmayın."
       },
       {
        "tip": "p",
-       "metin": "Hesabın senin dijital kasan. Hesabını güvenli bir e-postayla bağla ve şifreni başka sitelerle paylaşma."
+       "metin": "Hesabınız sizin dijital kasanızdır. Hesabınızı güvenli bir e-postayla bağla ve şifrenizi başka sitelerle paylaşmayın."
       },
       {
        "tip": "uyari",
-       "metin": "Hile yazılımı, üçüncü taraf mod uygulamaları, script, rank boost hizmeti, hesap satın alma veya satma, kumar benzeri skin bahis siteleri ve korsan veya sahte 'ücretsiz elmas' siteleri hesabının kalıcı yasaklanmasına yol açabilir. Bunlara yaklaşma."
+       "metin": "Hile yazılımı, üçüncü taraf mod uygulamaları, script, rank boost hizmeti, hesap satın alma veya satma, kumar benzeri skin bahis siteleri ve korsan veya sahte 'ücretsiz elmas' siteleri hesabınızın kalıcı yasaklanmasına yol açabilir. Bunlara yaklaşmayın."
       },
       {
        "tip": "liste",
        "ogeler": [
         "Maçtan sürekli AFK olmak veya bilerek oyunu bozmak yaptırım getirir; bu Kredi Puanını düşürür.",
-        "Takım arkadaşlarına saygılı ol; toksik sohbeti raporla ve sustur.",
-        "Düşük ranklı oyunculara karşı ikinci bir hesapla oynamak (smurf) adil değildir; yapma.",
-        "Hesabını kimseyle paylaşma."
+        "Takım arkadaşlarınıza saygılı olun; toksik sohbeti raporla ve susturun.",
+        "Düşük ranklı oyunculara karşı ikinci bir hesapla oynamak (smurf) adil değildir; yapmayın.",
+        "Hesabınızı kimseyle paylaşmayın."
        ]
+      },
+      {
+       "tip": "p",
+       "metin": "Hesabınızı korumak için güçlü ve yalnız bu oyuna ait bir parola kullanın, mümkünse iki adımlı doğrulamayı açın ve hesap bilgilerinizi hiçbir kişiyle paylaşmayın. Resmî destek bile parolanızı sormaz. Rütbe yükseltme, hesap satın alma veya satma ve yasak programlar hem kuralları bozar hem de hesabınızın kapanmasına yol açabilir; hepsinden uzak durun. Kendi ilerlemeniz, başkasının yaptığından çok daha değerlidir ve oyundan alacağınız keyfi korur."
       }
      ]
     },
@@ -407,19 +673,19 @@
         },
         {
          "s": "Dereceliye ne zaman girerim?",
-         "c": "Oyunun gösterdiği kilit açılınca; kaynaklarda farklı şartlar geçtiği için kesin sayı vermiyoruz."
+         "c": "Topluluk kaynaklarına göre hesap seviyesi 8 ve yeterli hero ile; Moonton resmî olarak yayımlamamıştır, oyundaki kilit esastır."
         },
         {
          "s": "Rankım düşer mi?",
-         "c": "Yıldız kaybedersin; Warrior'da kayıp yıldız götürmez (ikincil kaynak)."
+         "c": "Yıldız kaybedersiniz; Warrior'da kayıp yıldız götürmez (topluluk kaynaklarına göre)."
         },
         {
          "s": "Hangi hero ile başlayayım?",
-         "c": "Basit ve dayanıklı bir hero seç; bir hafta aynı iki hero ile oyna."
+         "c": "Basit ve dayanıklı bir hero seçin; bir hafta aynı iki hero ile oynayın."
         },
         {
          "s": "Türkçe dil var mı?",
-         "c": "Bu rehberde doğrulanmadı; oyun içi dil ayarlarına bak."
+         "c": "Resmî olarak açıklanmamış; oyun içi dil ayarlarından kontrol edin."
         }
        ]
       }
@@ -445,11 +711,11 @@
     },
     {
      "ad": "Current version",
-     "deger": "Season 42 (started September 16, 2026); patch number 2.2.16a per a secondary source"
+     "deger": "Season 42 (started September 16, 2026); patch number 2.2.16a according to community sources"
     },
     {
      "ad": "Turkish support",
-     "deger": "Turkish language option was not verified in this guide; check the in-game language menu"
+     "deger": "Turkish support is not officially stated; check the in-game language menu"
     }
    ],
    "bolumler": [
@@ -467,11 +733,11 @@
       },
       {
        "tip": "p",
-       "metin": "The latest patch appears in a secondary source as 2.2.16a (October 14, 2026); a new update in mid-November was reported but its number was not verified. Season 43 is expected to start in mid-December, which is not confirmed."
+       "metin": "The latest patch number is not officially stated; community sources give 2.2.16a (14 October 2026). Season 43 is expected to start in mid-December; the date is not certain. The 2026 Annual Map Change went live on 28 September 2026 (according to community sources), with additions such as the Healing Turtle, Golden Turret and Revealing Wisps."
       },
       {
        "tip": "ipucu",
-       "metin": "Numbers in this guide are accurate as of November 2026. Some information is from secondary sources and is marked; verify it in the game."
+       "metin": "Numbers in this guide are accurate as of November 2026. Some information comes from community sources and is marked in the text; verify it in the game."
       }
      ]
     },
@@ -498,6 +764,10 @@
       {
        "tip": "uyari",
        "metin": "Download the game only from the official store. Sites and apps promising 'free diamonds' or accounts can get your account stolen."
+      },
+      {
+       "tip": "p",
+       "metin": "The most important thing for your phone is a solid connection. Use Wi-Fi or reliable mobile data; a dropped connection during a match punishes both you and your team. Battery and heat matter too: in long sessions, plugging the phone in and removing the case reduces heating. With headphones you hear footsteps and ability sounds better."
       }
      ]
     },
@@ -522,13 +792,17 @@
         },
         {
          "baslik": "Prepare for Ranked",
-         "metin": "The game has in-game conditions for entering ranked; sources give different details (for example a number of normal matches or a level), so rely on the lock the game shows."
+         "metin": "According to community sources Ranked needs account level 8 and enough heroes; Moonton has not published this on its own page, so the in-game lock screen is what counts."
         },
         {
          "baslik": "Keep play sessions short",
          "metin": "Taking a break after one or two matches reduces mistakes."
         }
        ]
+      },
+      {
+       "tip": "p",
+       "metin": "In the first days your aim is not winning but learning the map and your hero. In a match watch only two things: which lane you are in and when the next objective (tower, Turtle, Lord) arrives. After the match look at the statistics on screen, find the mistake you made most, and in the next match try to fix only that. This method improves you faster than playing a lot at random."
       }
      ]
     },
@@ -538,7 +812,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "The game has five core roles: **Tank, Mage, Marksman, Assassin and Support**. There are also Fighter-type heroes. Heroes unlock through the free rotation or the shop. The examples below show choices that have stayed simple for years (my own knowledge; balance can change)."
+       "metin": "The game has five basic roles: **Tank, Mage, Marksman, Assassin and Support**. There are also Fighter heroes. Heroes are unlocked through the free rotation or the store. The examples below are common beginner picks that have stayed simple for a long time, not an official Moonton recommendation; balance may change with patches."
       },
       {
        "tip": "tablo",
@@ -578,6 +852,98 @@
       {
        "tip": "ipucu",
        "metin": "For a week, play with the same two heroes. Learning one well moves you forward faster than trying many."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Lane / position",
+        "Who plays it",
+        "Job"
+       ],
+       "satirlar": [
+        [
+         "Gold Lane",
+         "Marksman",
+         "Farm safely, break towers"
+        ],
+        [
+         "EXP Lane",
+         "Fighter",
+         "Lane alone; durable damage in team fights"
+        ],
+        [
+         "Mid Lane",
+         "Mage",
+         "Clear waves, help the jungle and side lanes"
+        ],
+        [
+         "Jungle",
+         "Assassin or Fighter",
+         "Clear jungle camps, secure Turtle and Lord"
+        ],
+        [
+         "Roam",
+         "Tank or Support",
+         "Protect the team, give vision and start fights"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "If you do not know which to choose, start with a Tank in the Roam position: standing in front of your teammates without dying brings no mechanical difficulty and teaches you the map. A second option is the Marksman; you farm safely in the Gold Lane and watch the map."
+      }
+     ]
+    },
+    {
+     "id": "amblem-buyu",
+     "baslik": "Emblem and battle spell choice",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Before every match you make two choices: an emblem set and a battle spell. Both depend on the hero's role, and for the first weeks the game's recommended ready choice is the safest."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Choice",
+        "What it does",
+        "Who it suits"
+       ],
+       "satirlar": [
+        [
+         "Emblem",
+         "Each type (Tank, Assassin, Mage, Marksman, Support, Fighter) gives fixed power by role and lets you pick three talents",
+         "Use the emblem recommended in the hero's description"
+        ],
+        [
+         "Retribution",
+         "Deals big damage to jungle monsters, Turtle and Lord",
+         "Jungler only; you cannot jungle with another spell"
+        ],
+        [
+         "Flicker",
+         "Short-range teleport",
+         "Most heroes that want to escape or start a fight"
+        ],
+        [
+         "Purify",
+         "Clears stun and slow",
+         "Heroes often hit by crowd control"
+        ],
+        [
+         "Execute",
+         "Damages a low-health enemy",
+         "Heroes that want to finish kills"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "The number and effects of spells and emblems can change with seasons; follow the current description you see in the shop or the hero page. After picking a spell, play a week with the same choice: memorizing its cooldown makes every match easier."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "If you are the jungler, save Retribution for Turtle and Lord; do not waste it on small camps."
       }
      ]
     },
@@ -634,12 +1000,67 @@
      ]
     },
     {
+     "id": "turtle-lord",
+     "baslik": "Turtle and Lord timings",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Turtle and Lord are the main neutral objectives that give the team gold, experience and power. According to community sources the first Turtle spawns around 2:00 and respawns about every 2 minutes; after the 2026 map change the Turtle's behavior (for example the Healing Turtle) is reported to have been updated. The exact spawn minute of the Lord is not consistent between sources and Moonton has not officially stated it; so watch the in-game timer."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Objective",
+        "When",
+        "What it gives"
+       ],
+       "satirlar": [
+        [
+         "Turtle",
+         "First spawn around 2:00; respawns in about 2 minutes",
+         "Gold, experience and a shield for the team; the hero landing the last hit gets an instant heal and an extra shield"
+        ],
+        [
+         "Lord",
+         "Spawns in the mid game; exact minute not officially stated",
+         "A strong helper that pushes side lanes; speeds up tower breaking"
+        ]
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Prepare 20-25 seconds before the spawn",
+         "metin": "Set up vision and check the entry bushes; whoever arrives late loses the first fight."
+        },
+        {
+         "baslik": "Leave Retribution to the jungler",
+         "metin": "Do not all hit the objective at once; hold damage until the Retribution range."
+        },
+        {
+         "baslik": "Push the wave first",
+         "metin": "Bring Mid and Roam to the objective together."
+        },
+        {
+         "baslik": "Do not force it if unsafe",
+         "metin": "If the enemy controls the bush, take another objective or hit a tower."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Before fighting for an objective, count where the enemy jungler is and whether your teammates are alive."
+      }
+     ]
+    },
+    {
      "id": "ayarlar",
      "baslik": "Settings: starting values",
      "bloklar": [
       {
        "tip": "p",
-       "metin": "The most useful setting is the button layout. If your thumb struggles to reach an ability, move that button; being able to make the same move in every match is worth more than fine graphics tuning. I suggest this from general experience (my own knowledge)."
+       "metin": "The most useful setting is the button layout. If your thumb struggles to reach an ability, move that button; being able to make the same move every match is worth more than fine graphics tuning."
       },
       {
        "tip": "p",
@@ -681,22 +1102,69 @@
      ]
     },
     {
+     "id": "elmas-butce",
+     "baslik": "Diamonds and spending budget",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Mobile Legends is free to play; the Google Play page presents the game as 'Play to Win, not Pay to Win' and notes in-app purchases. Diamonds are real money; prices differ by region, so see the current amount in the in-game store. Battle Points (BP) are earned by playing and used to unlock heroes."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Priority",
+        "What to do",
+        "Why"
+       ],
+       "satirlar": [
+        [
+         "1. Heroes",
+         "Unlock heroes with BP; do not spend diamonds",
+         "What shapes your power is the hero, not a skin"
+        ],
+        [
+         "2. Monthly pass (Starlight etc.)",
+         "Consider it only if you will really play",
+         "Cosmetics and small rewards; exact content and price are in the store"
+        ],
+        [
+         "3. Skins",
+         "Leave them for last",
+         "They are cosmetic; they give no game power"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Set a monthly cap and talk about spending with an adult depending on your age.",
+        "Stay away from third-party 'cheap diamond' sites and top-up services that ask for your account password.",
+        "If you regret a purchase, set a rule of buying nothing for two weeks."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Sites promising 'cheap diamonds' or 'free diamonds' can get your account stolen; use only the official in-game store."
+      }
+     ]
+    },
+    {
      "id": "rank",
      "baslik": "Ranked system and rank table",
      "bloklar": [
       {
        "tip": "p",
-       "metin": "The rank table can change in detail from season to season; star counts and tier names may be adjusted by updates. So do not treat the values below as final; compare them with the ranking page on your own screen."
+       "metin": "The rank table may change in detail by season; the star counts below rest on community sources and Moonton has not published them as a table on its own page. For exact values check the ranking page in your game."
       },
       {
        "tip": "p",
-       "metin": "According to secondary sources the ranked tiers are: Warrior, Elite, Master, Grandmaster, Epic, Legend and Mythic. Mythic has extra titles: Mythical Honor, Mythical Glory and Mythical Immortal. After Mythic the star count keeps running."
+       "metin": "According to community sources the ranked tiers are: Warrior, Elite, Master, Grandmaster, Epic, Legend and Mythic. Mythic has extra titles: Mythical Honor, Mythical Glory and Mythical Immortal. After Mythic the star count keeps running."
       },
       {
        "tip": "tablo",
        "basliklar": [
         "Tier",
-        "Divisions (secondary source)"
+        "Divisions"
        ],
        "satirlar": [
         [
@@ -732,11 +1200,55 @@
       {
        "tip": "liste",
        "ogeler": [
-        "The Draft Pick and ban phase starts from Epic (secondary source).",
-        "Losses in Warrior cost no stars (secondary source).",
-        "A ranked party can be 1, 2, 3 or 5 players (secondary source).",
-        "The Credit Score starts at 100 and tops out at 110; ranked may lock below 90 (secondary source)."
+        "The Draft Pick and ban phase starts from Epic (according to community sources).",
+        "Losses in Warrior cost no stars (according to community sources).",
+        "A ranked party can be 1, 2, 3 or 5 players (according to community sources).",
+        "The Credit Score starts at 100 and tops out at 110; ranked may lock below 90 (according to community sources)."
        ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rank",
+        "Divisions",
+        "Stars per division"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "III - I",
+         "3"
+        ],
+        [
+         "Elite",
+         "III - I",
+         "4"
+        ],
+        [
+         "Master",
+         "IV - I",
+         "4"
+        ],
+        [
+         "Grandmaster",
+         "V - I",
+         "5"
+        ],
+        [
+         "Epic",
+         "V - I",
+         "5"
+        ],
+        [
+         "Legend",
+         "V - I",
+         "5"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Mythic has no divisions; the star count keeps rising: Mythic 0-24, Mythical Honor 25, Mythical Glory 50, Mythical Immortal 100 and up (according to community sources). Season 42 is expected to end in mid-December; the exact date has not been announced."
       }
      ]
     },
@@ -758,6 +1270,14 @@
         "Trying a different hero every match.",
         "Playing back-to-back matches while angry; take a break."
        ]
+      },
+      {
+       "tip": "p",
+       "metin": "A common mistake is joining every fight. Mobile Legends is played in short matches and one death costs towers and objectives because of the respawn time. If your health is low, pull back and heal; when you see an enemy vanish from the map, watch the bushes. The second mistake is never looking at the minimap: a glance every second or two lets you notice an enemy coming to a side lane in advance."
+      },
+      {
+       "tip": "p",
+       "metin": "The third mistake is focusing only on kill count. What wins matches is breaking towers and taking objectives such as the Turtle and Lord; a kill is only valuable when it opens a chance for those. Attacking teammates in chat also loses games: a short, polite ping is far more effective than an angry message. If you feel tilted, take a break instead of starting the next match."
       }
      ]
     },
@@ -785,6 +1305,10 @@
         "Playing on a second account against lower-ranked players (smurfing) is unfair; do not do it.",
         "Never share your account with anyone."
        ]
+      },
+      {
+       "tip": "p",
+       "metin": "To protect your account use a strong password used only for this game, turn on two-step verification if possible, and share your account details with nobody. Even official support does not ask for your password. Rank boosting, buying or selling accounts and banned programs both break the rules and can get your account closed; stay away from all of them. Your own progress is worth far more than someone else's, and it keeps the game fun."
       }
      ]
     },
@@ -805,11 +1329,11 @@
         },
         {
          "s": "When can I play ranked?",
-         "c": "When the lock the game shows opens; sources list different conditions, so we give no exact number."
+         "c": "According to community sources at account level 8 with enough heroes; Moonton has not officially published it, so the in-game lock is what counts."
         },
         {
          "s": "Can my rank drop?",
-         "c": "You lose stars; losses in Warrior cost no stars (secondary source)."
+         "c": "You lose stars; losses in Warrior cost no stars (according to community sources)."
         },
         {
          "s": "Which hero should I start with?",
@@ -817,7 +1341,7 @@
         },
         {
          "s": "Is there Turkish language?",
-         "c": "Not verified in this guide; check the in-game language settings."
+         "c": "Not officially stated; check the in-game language settings."
         }
        ]
       }
@@ -843,11 +1367,11 @@
     },
     {
      "ad": "Version actuelle",
-     "deger": "Saison 42 (commencée le 16 septembre 2026) ; numéro de patch 2.2.16a selon une source secondaire"
+     "deger": "Saison 42 (commencée le 16 septembre 2026) ; numéro de patch 2.2.16a selon des sources communautaires"
     },
     {
      "ad": "Prise en charge du turc",
-     "deger": "L'option de langue turque n'a pas été vérifiée dans ce guide ; regarde le menu de langue du jeu"
+     "deger": "La prise en charge du turc n'est pas indiquée officiellement ; vérifie le menu de langue du jeu"
     }
    ],
    "bolumler": [
@@ -865,11 +1389,11 @@
       },
       {
        "tip": "p",
-       "metin": "Le dernier patch apparaît dans une source secondaire comme 2.2.16a (14 octobre 2026) ; une nouvelle mise à jour de la mi-novembre a été signalée, mais son numéro n'a pas été vérifié. La Saison 43 devrait commencer à la mi-décembre, ce qui n'est pas confirmé."
+       "metin": "Le numéro du dernier patch n'est pas indiqué officiellement ; des sources communautaires donnent 2.2.16a (14 octobre 2026). La saison 43 devrait commencer à la mi-décembre ; la date n'est pas certaine. Le changement annuel de carte 2026 est entré en service le 28 septembre 2026 (selon des sources communautaires), avec des nouveautés comme la Healing Turtle, la Golden Turret et les Revealing Wisps."
       },
       {
        "tip": "ipucu",
-       "metin": "Les chiffres de ce guide sont valables en novembre 2026. Certaines informations viennent de sources secondaires et sont signalées ; vérifie-les en jeu."
+       "metin": "Les chiffres de ce guide sont valables en novembre 2026. Certaines informations viennent de sources communautaires et sont signalées dans le texte ; vérifie-les en jeu."
       }
      ]
     },
@@ -896,6 +1420,10 @@
       {
        "tip": "uyari",
        "metin": "Télécharge le jeu uniquement depuis la boutique officielle. Les sites et applications promettant des « diamants gratuits » ou des comptes peuvent te faire voler ton compte."
+      },
+      {
+       "tip": "p",
+       "metin": "Le plus important pour ton téléphone est une bonne connexion. Utilise le Wi-Fi ou des données mobiles fiables ; une connexion coupée pendant un match pénalise toi et ton équipe. La batterie et la chaleur comptent aussi : lors de longues sessions, brancher le téléphone et retirer la coque réduit la surchauffe. Avec un casque, tu entends mieux les pas et les sons des compétences."
       }
      ]
     },
@@ -908,25 +1436,29 @@
        "ogeler": [
         {
          "baslik": "Termine le tutoriel",
-         "metin": "Apprends les boutons de déplacement, d'attaque et de capacités."
+         "metin": "Apprends les boutons de déplacement, d'attaque et de compétences."
         },
         {
          "baslik": "Joue contre des bots",
-         "metin": "Essaie les héros et la carte en parties contre bots jusqu'à ce que tu te sentes à l'aise."
+         "metin": "Essaie les héros et la carte en matchs contre bots jusqu'à être à l'aise."
         },
         {
-         "baslik": "Passe aux parties Classiques",
-         "metin": "Habitue-toi en jouant non classé contre de vrais joueurs."
+         "baslik": "Passe aux matchs Classic",
+         "metin": "Habitue-toi en jouant sans classement contre de vrais joueurs."
         },
         {
-         "baslik": "Prépare le Classé",
-         "metin": "Le jeu pose des conditions pour entrer en classé ; les sources donnent des détails différents (par exemple un nombre de parties normales ou un niveau), donc fie-toi au verrou affiché par le jeu."
+         "baslik": "Prépare le Classé (Ranked)",
+         "metin": "D'après des sources communautaires, le Classé exige le niveau de compte 8 et assez de héros ; Moonton ne l'a pas publié sur sa page, c'est donc l'écran de verrouillage du jeu qui fait foi."
         },
         {
          "baslik": "Fais de courtes sessions",
-         "metin": "Faire une pause après une ou deux parties réduit les erreurs."
+         "metin": "Faire une pause après un ou deux matchs réduit les erreurs."
         }
        ]
+      },
+      {
+       "tip": "p",
+       "metin": "Les premiers jours, ton but n'est pas de gagner mais de connaître la carte et ton héros. Pendant un match, ne surveille que deux choses : dans quelle voie tu es et quand arrive le prochain objectif (tourelle, Turtle, Lord). Après le match, regarde les statistiques à l'écran, trouve l'erreur que tu as le plus faite et, au match suivant, essaie de corriger seulement celle-là. Cette méthode te fait progresser plus vite que de jouer beaucoup au hasard."
       }
      ]
     },
@@ -936,7 +1468,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Le jeu compte cinq rôles de base : **Tank, Mage, Tireur (Marksman), Assassin et Soutien (Support)**. Il existe aussi des héros de type Combattant (Fighter). Les héros se débloquent via la rotation gratuite ou la boutique. Les exemples ci-dessous montrent des choix restés simples depuis des années (connaissance personnelle ; l'équilibre peut changer)."
+       "metin": "Le jeu compte cinq rôles de base : **Tank, Mage, Marksman, Assassin et Support**. Il y a aussi des héros Fighter. Les héros se débloquent par la rotation gratuite ou la boutique. Les exemples ci-dessous sont des choix courants de débutants restés simples depuis longtemps, pas une recommandation officielle de Moonton ; l'équilibre peut changer avec les patchs."
       },
       {
        "tip": "tablo",
@@ -976,6 +1508,98 @@
       {
        "tip": "ipucu",
        "metin": "Pendant une semaine, joue avec les deux mêmes héros. En apprendre un bien te fait avancer plus vite qu'en essayer beaucoup."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Voie / position",
+        "Qui la joue",
+        "Mission"
+       ],
+       "satirlar": [
+        [
+         "Gold Lane",
+         "Marksman",
+         "Farme en sécurité, détruis les tourelles"
+        ],
+        [
+         "EXP Lane",
+         "Fighter",
+         "Voie en solo ; dégâts solides en combat d'équipe"
+        ],
+        [
+         "Mid Lane",
+         "Mage",
+         "Nettoie les vagues, aide la jungle et les voies latérales"
+        ],
+        [
+         "Jungle",
+         "Assassin ou Fighter",
+         "Nettoie les camps, sécurise Turtle et Lord"
+        ],
+        [
+         "Roam",
+         "Tank ou Support",
+         "Protège l'équipe, apporte de la vision et lance les combats"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Si tu ne sais pas quoi choisir, commence par un Tank en Roam : se tenir devant ses coéquipiers sans mourir n'impose pas de difficulté mécanique et t'apprend la carte. Seconde option, le Marksman ; tu farmes en sécurité sur la Gold Lane et tu surveilles la carte."
+      }
+     ]
+    },
+    {
+     "id": "amblem-buyu",
+     "baslik": "Choix d'emblème et de sort de combat",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Avant chaque match, tu fais deux choix : un jeu d'emblèmes et un sort de combat (battle spell). Les deux dépendent du rôle du héros, et les premières semaines, le choix recommandé tout prêt du jeu est le plus sûr."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Choix",
+        "À quoi ça sert",
+        "À qui ça convient"
+       ],
+       "satirlar": [
+        [
+         "Emblème",
+         "Chaque type (Tank, Assassin, Mage, Marksman, Support, Fighter) donne une puissance fixe selon le rôle et te laisse choisir trois talents",
+         "Utilise l'emblème recommandé dans la description du héros"
+        ],
+        [
+         "Retribution",
+         "Inflige de gros dégâts aux monstres de la jungle, à Turtle et à Lord",
+         "Jungler seulement ; on ne peut pas jungler avec un autre sort"
+        ],
+        [
+         "Flicker",
+         "Téléportation à courte portée",
+         "La plupart des héros qui veulent fuir ou lancer un combat"
+        ],
+        [
+         "Purify",
+         "Retire étourdissement et ralentissement",
+         "Héros souvent touchés par du contrôle"
+        ],
+        [
+         "Execute",
+         "Blesse un ennemi à faible vie",
+         "Héros qui veulent finir les éliminations"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Le nombre et les effets des sorts et des emblèmes peuvent changer selon les saisons ; suis la description actuelle que tu vois dans la boutique ou sur la page du héros. Après avoir choisi un sort, joue une semaine avec le même choix : mémoriser son délai de rechargement facilite chaque match."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si tu es jungler, garde Retribution pour Turtle et Lord ; ne la gaspille pas sur les petits camps."
       }
      ]
     },
@@ -1032,12 +1656,67 @@
      ]
     },
     {
+     "id": "turtle-lord",
+     "baslik": "Turtle et Lord : horaires",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Turtle et Lord sont les principaux objectifs neutres qui donnent à l'équipe de l'or, de l'expérience et de la puissance. D'après des sources communautaires, la première Turtle apparaît vers 2:00 et réapparaît environ toutes les 2 minutes ; après le changement de carte 2026, le comportement de la Turtle (par exemple la Healing Turtle) aurait été mis à jour. La minute exacte d'apparition du Lord n'est pas cohérente entre les sources et Moonton ne l'a pas indiquée officiellement ; surveille donc le chronomètre du jeu."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Objectif",
+        "Quand",
+        "Ce qu'il donne"
+       ],
+       "satirlar": [
+        [
+         "Turtle",
+         "Première apparition vers 2:00 ; réapparition en environ 2 minutes",
+         "Or, expérience et bouclier pour l'équipe ; le héros qui porte le dernier coup reçoit un soin instantané et un bouclier supplémentaire"
+        ],
+        [
+         "Lord",
+         "Apparaît en milieu de partie ; minute exacte non indiquée officiellement",
+         "Un puissant allié qui pousse les voies latérales ; accélère la destruction des tourelles"
+        ]
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Prépare-toi 20 à 25 secondes avant l'apparition",
+         "metin": "Mets de la vision et contrôle les buissons d'entrée ; celui qui arrive en retard perd le premier combat."
+        },
+        {
+         "baslik": "Laisse Retribution au jungler",
+         "metin": "Ne frappez pas tous l'objectif en même temps ; gardez les dégâts jusqu'à la portée de Retribution."
+        },
+        {
+         "baslik": "Pousse d'abord la vague",
+         "metin": "Amène le Mid et le Roam ensemble sur l'objectif."
+        },
+        {
+         "baslik": "Ne force pas si ce n'est pas sûr",
+         "metin": "Si l'ennemi contrôle le buisson, prends un autre objectif ou frappe une tourelle."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Avant de combattre pour un objectif, compte où est le jungler ennemi et si tes coéquipiers sont en vie."
+      }
+     ]
+    },
+    {
      "id": "ayarlar",
      "baslik": "Réglages : valeurs de départ",
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Le réglage le plus utile est la disposition des boutons. Si ton pouce a du mal à atteindre une capacité, déplace ce bouton ; pouvoir faire le même geste à chaque partie vaut plus qu'un réglage graphique fin. Je le conseille d'après l'expérience générale (connaissance personnelle)."
+       "metin": "Le réglage le plus utile est la disposition des boutons. Si ton pouce atteint mal une compétence, déplace ce bouton ; pouvoir faire le même geste à chaque match vaut plus qu'un réglage fin des graphismes."
       },
       {
        "tip": "p",
@@ -1079,22 +1758,69 @@
      ]
     },
     {
+     "id": "elmas-butce",
+     "baslik": "Diamants et budget de dépenses",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Mobile Legends se joue gratuitement ; la page Google Play présente le jeu comme 'Play to Win, not Pay to Win' et signale des achats intégrés. Les diamants sont de l'argent réel ; les prix varient selon la région, vois donc le montant actuel dans la boutique du jeu. Les Points de Bataille (BP) se gagnent en jouant et servent à débloquer des héros."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Priorité",
+        "Que faire",
+        "Pourquoi"
+       ],
+       "satirlar": [
+        [
+         "1. Héros",
+         "Débloque les héros avec des BP ; ne dépense pas de diamants",
+         "Ce qui fait ta puissance, c'est le héros, pas un skin"
+        ],
+        [
+         "2. Pass mensuel (Starlight, etc.)",
+         "Envisage-le seulement si tu joueras vraiment",
+         "Cosmétiques et petites récompenses ; contenu et prix exacts en boutique"
+        ],
+        [
+         "3. Skins",
+         "Garde-les pour la fin",
+         "Ils sont cosmétiques ; ils ne donnent aucune puissance en jeu"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Fixe un plafond mensuel et parle des dépenses avec un adulte selon ton âge.",
+        "Reste loin des sites tiers de 'diamants pas chers' et des services de recharge qui demandent le mot de passe de ton compte.",
+        "Si tu regrettes un achat, impose-toi de ne rien acheter pendant deux semaines."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Les sites qui promettent des 'diamants pas chers' ou 'gratuits' peuvent te faire voler ton compte ; utilise uniquement la boutique officielle du jeu."
+      }
+     ]
+    },
+    {
      "id": "rank",
      "baslik": "Système classé et tableau des rangs",
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Le tableau des rangs peut changer dans le détail d'une saison à l'autre ; les nombres d'étoiles et les noms de paliers peuvent être ajustés par des mises à jour. Ne prends donc pas les valeurs ci-dessous pour définitives ; compare-les avec la page de classement de ton écran."
+       "metin": "Le tableau des rangs peut changer dans le détail selon la saison ; les nombres d'étoiles ci-dessous reposent sur des sources communautaires et Moonton ne les a pas publiés sous forme de tableau sur sa page. Pour les valeurs exactes, regarde la page de classement de ton jeu."
       },
       {
        "tip": "p",
-       "metin": "D'après des sources secondaires, les paliers classés sont : Warrior, Elite, Master, Grandmaster, Epic, Legend et Mythic. Mythic comprend des titres supplémentaires : Mythical Honor, Mythical Glory et Mythical Immortal. Après Mythic, le compte d'étoiles continue."
+       "metin": "D'après des sources communautaires, les paliers classés sont : Warrior, Elite, Master, Grandmaster, Epic, Legend et Mythic. Mythic comprend des titres supplémentaires : Mythical Honor, Mythical Glory et Mythical Immortal. Après Mythic, le compte d'étoiles continue."
       },
       {
        "tip": "tablo",
        "basliklar": [
         "Palier",
-        "Divisions (source secondaire)"
+        "Divisions"
        ],
        "satirlar": [
         [
@@ -1130,11 +1856,55 @@
       {
        "tip": "liste",
        "ogeler": [
-        "La phase de Draft Pick et de bannissement commence à partir d'Epic (source secondaire).",
-        "Les défaites en Warrior ne font pas perdre d'étoiles (source secondaire).",
-        "Un groupe classé peut compter 1, 2, 3 ou 5 joueurs (source secondaire).",
-        "Le Score de crédit commence à 100 et plafonne à 110 ; le classé peut se verrouiller sous 90 (source secondaire)."
+        "La phase de Draft Pick et de bannissement commence à partir d'Epic (selon des sources communautaires).",
+        "Les défaites en Warrior ne font pas perdre d'étoiles (selon des sources communautaires).",
+        "Un groupe classé peut compter 1, 2, 3 ou 5 joueurs (selon des sources communautaires).",
+        "Le Score de crédit commence à 100 et plafonne à 110 ; le classé peut se verrouiller sous 90 (selon des sources communautaires)."
        ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rang",
+        "Divisions",
+        "Étoiles par division"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "III - I",
+         "3"
+        ],
+        [
+         "Elite",
+         "III - I",
+         "4"
+        ],
+        [
+         "Master",
+         "IV - I",
+         "4"
+        ],
+        [
+         "Grandmaster",
+         "V - I",
+         "5"
+        ],
+        [
+         "Epic",
+         "V - I",
+         "5"
+        ],
+        [
+         "Legend",
+         "V - I",
+         "5"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Mythic n'a pas de divisions ; le nombre d'étoiles continue de monter : Mythic 0-24, Mythical Honor 25, Mythical Glory 50, Mythical Immortal 100 et plus (selon des sources communautaires). La saison 42 devrait se terminer à la mi-décembre ; la date exacte n'a pas été annoncée."
       }
      ]
     },
@@ -1156,6 +1926,14 @@
         "Essayer un héros différent à chaque match.",
         "Enchaîner les parties en étant énervé ; fais une pause."
        ]
+      },
+      {
+       "tip": "p",
+       "metin": "Une erreur fréquente est de rejoindre chaque combat. Mobile Legends se joue en matchs courts et une mort coûte des tourelles et des objectifs à cause du temps de réapparition. Si ta vie est basse, recule et soigne-toi ; quand tu vois un ennemi disparaître de la carte, surveille les buissons. La deuxième erreur est de ne jamais regarder la mini-carte : un coup d'œil toutes les une ou deux secondes te permet de repérer à l'avance un ennemi qui arrive sur une voie latérale."
+      },
+      {
+       "tip": "p",
+       "metin": "La troisième erreur est de ne se concentrer que sur le nombre d'éliminations. Ce qui gagne les matchs, c'est détruire des tourelles et prendre des objectifs comme Turtle et Lord ; une élimination n'a de valeur que si elle ouvre une occasion pour cela. Attaquer ses coéquipiers dans le chat fait aussi perdre : un ping court et poli est bien plus efficace qu'un message énervé. Si tu te sens en tilt, fais une pause au lieu de lancer le match suivant."
       }
      ]
     },
@@ -1183,6 +1961,10 @@
         "Jouer sur un second compte contre des joueurs de rang inférieur (smurf) est injuste ; ne le fais pas.",
         "Ne partage jamais ton compte."
        ]
+      },
+      {
+       "tip": "p",
+       "metin": "Pour protéger ton compte, utilise un mot de passe solide propre à ce jeu, active la validation en deux étapes si possible et ne partage tes informations de compte avec personne. Même le support officiel ne demande pas ton mot de passe. Le boost de rang, l'achat ou la vente de comptes et les programmes interdits enfreignent les règles et peuvent faire fermer ton compte ; reste loin de tout cela. Ta propre progression vaut bien plus que celle d'un autre et préserve le plaisir de jouer."
       }
      ]
     },
@@ -1195,27 +1977,27 @@
        "ogeler": [
         {
          "s": "Mobile Legends est-il gratuit ?",
-         "c": "Oui. Le jeu est gratuit ; les achats servent aux cosmétiques."
+         "c": "Oui. Le jeu est gratuit ; les achats sont cosmétiques."
         },
         {
          "s": "Peut-on jouer sur PC ?",
-         "c": "Oui, via Google Play Games ; la configuration est Windows 10 version 2004, 10 Go d'espace SSD et virtualisation activée."
+         "c": "Oui, via Google Play Games ; il faut Windows 10 version 2004, 10 Go d'espace SSD et la virtualisation activée."
         },
         {
          "s": "Quand puis-je jouer en classé ?",
-         "c": "Quand le verrou affiché par le jeu s'ouvre ; les sources indiquent des conditions différentes, donc nous ne donnons pas de nombre exact."
+         "c": "D'après des sources communautaires, au niveau de compte 8 avec assez de héros ; Moonton ne l'a pas publié officiellement, c'est le verrou du jeu qui compte."
         },
         {
          "s": "Mon rang peut-il baisser ?",
-         "c": "Tu perds des étoiles ; les défaites en Warrior n'en font pas perdre (source secondaire)."
+         "c": "Tu perds des étoiles ; en Warrior, les défaites n'en coûtent pas (selon des sources communautaires)."
         },
         {
          "s": "Avec quel héros commencer ?",
-         "c": "Choisis un héros simple et robuste ; joue les deux mêmes pendant une semaine."
+         "c": "Choisis un héros simple et solide ; joue les deux mêmes pendant une semaine."
         },
         {
-         "s": "Y a-t-il une langue turque ?",
-         "c": "Non vérifié dans ce guide ; regarde les réglages de langue du jeu."
+         "s": "Y a-t-il le turc ?",
+         "c": "Non indiqué officiellement ; vérifie les réglages de langue du jeu."
         }
        ]
       }
@@ -1241,11 +2023,11 @@
     },
     {
      "ad": "Versión actual",
-     "deger": "Temporada 42 (empezó el 16 de septiembre de 2026); número de parche 2.2.16a según una fuente secundaria"
+     "deger": "Temporada 42 (empezó el 16 de septiembre de 2026); número de parche 2.2.16a según fuentes de la comunidad"
     },
     {
      "ad": "Compatibilidad con turco",
-     "deger": "La opción de idioma turco no se verificó en esta guía; mira el menú de idioma del juego"
+     "deger": "La compatibilidad con turco no está indicada oficialmente; revisa el menú de idioma del juego"
     }
    ],
    "bolumler": [
@@ -1263,11 +2045,11 @@
       },
       {
        "tip": "p",
-       "metin": "El último parche aparece en una fuente secundaria como 2.2.16a (14 de octubre de 2026); se informó de una nueva actualización a mediados de noviembre, pero su número no se verificó. Se espera que la Temporada 43 empiece a mediados de diciembre, lo cual no está confirmado."
+       "metin": "El número del último parche no está indicado oficialmente; fuentes de la comunidad dan 2.2.16a (14 de octubre de 2026). Se espera que la temporada 43 empiece a mediados de diciembre; la fecha no es segura. El cambio anual de mapa de 2026 entró en vigor el 28 de septiembre de 2026 (según fuentes de la comunidad), con novedades como la Healing Turtle, la Golden Turret y los Revealing Wisps."
       },
       {
        "tip": "ipucu",
-       "metin": "Los números de esta guía son válidos en noviembre de 2026. Algunos datos vienen de fuentes secundarias y están señalados; verifícalos en el juego."
+       "metin": "Los números de esta guía son válidos en noviembre de 2026. Algunos datos vienen de fuentes de la comunidad y están señalados en el texto; verifícalos en el juego."
       }
      ]
     },
@@ -1294,6 +2076,10 @@
       {
        "tip": "uyari",
        "metin": "Descarga el juego solo desde la tienda oficial. Los sitios y aplicaciones que prometen «diamantes gratis» o cuentas pueden hacer que te roben la cuenta."
+      },
+      {
+       "tip": "p",
+       "metin": "Lo más importante para tu teléfono es una buena conexión. Usa Wi-Fi o datos móviles fiables; una conexión caída durante una partida te castiga a ti y a tu equipo. La batería y el calor también cuentan: en sesiones largas, conectar el teléfono y quitar la funda reduce el calentamiento. Con auriculares oyes mejor los pasos y los sonidos de habilidades."
       }
      ]
     },
@@ -1310,21 +2096,25 @@
         },
         {
          "baslik": "Juega contra bots",
-         "metin": "Prueba héroes y el mapa en partidas contra bots hasta que te sientas cómodo."
+         "metin": "Prueba héroes y el mapa en partidas contra bots hasta sentirte cómodo."
         },
         {
-         "baslik": "Pasa a las partidas Clásicas",
-         "metin": "Acostúmbrate jugando sin clasificar contra jugadores reales."
+         "baslik": "Pasa a las partidas Classic",
+         "metin": "Acostúmbrate jugando sin clasificación contra jugadores reales."
         },
         {
-         "baslik": "Prepárate para la Clasificatoria",
-         "metin": "El juego tiene condiciones para entrar en clasificatoria; las fuentes dan detalles distintos (por ejemplo un número de partidas normales o un nivel), así que guíate por el bloqueo que muestra el juego."
+         "baslik": "Prepárate para Ranked",
+         "metin": "Según fuentes de la comunidad, Ranked exige nivel de cuenta 8 y suficientes héroes; Moonton no lo ha publicado en su página, así que cuenta la pantalla de bloqueo del juego."
         },
         {
          "baslik": "Haz sesiones cortas",
-         "metin": "Hacer una pausa tras una o dos partidas reduce los errores."
+         "metin": "Descansar tras una o dos partidas reduce los errores."
         }
        ]
+      },
+      {
+       "tip": "p",
+       "metin": "Los primeros días tu meta no es ganar sino conocer el mapa y tu héroe. En una partida vigila solo dos cosas: en qué línea estás y cuándo llega el siguiente objetivo (torre, Turtle, Lord). Tras la partida mira las estadísticas en pantalla, encuentra el error que más cometiste y en la siguiente partida intenta corregir solo ese. Este método te hace mejorar más rápido que jugar mucho al azar."
       }
      ]
     },
@@ -1334,7 +2124,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "El juego tiene cinco roles básicos: **Tanque, Mago, Tirador (Marksman), Asesino y Apoyo (Support)**. También hay héroes de tipo Luchador (Fighter). Los héroes se desbloquean con la rotación gratuita o la tienda. Los ejemplos de abajo muestran opciones que llevan años siendo sencillas (conocimiento propio; el equilibrio puede cambiar)."
+       "metin": "El juego tiene cinco roles básicos: **Tank, Mage, Marksman, Assassin y Support**. También hay héroes Fighter. Los héroes se desbloquean con la rotación gratuita o la tienda. Los ejemplos de abajo son elecciones comunes de principiantes que llevan tiempo siendo sencillas, no una recomendación oficial de Moonton; el equilibrio puede cambiar con los parches."
       },
       {
        "tip": "tablo",
@@ -1374,6 +2164,98 @@
       {
        "tip": "ipucu",
        "metin": "Durante una semana, juega con los mismos dos héroes. Aprender bien uno te hace avanzar más rápido que probar muchos."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Línea / posición",
+        "Quién la juega",
+        "Tarea"
+       ],
+       "satirlar": [
+        [
+         "Gold Lane",
+         "Marksman",
+         "Farmea con seguridad, rompe torres"
+        ],
+        [
+         "EXP Lane",
+         "Fighter",
+         "Línea en solitario; daño resistente en peleas de equipo"
+        ],
+        [
+         "Mid Lane",
+         "Mage",
+         "Limpia oleadas, ayuda a la jungla y a las líneas laterales"
+        ],
+        [
+         "Jungle",
+         "Assassin o Fighter",
+         "Limpia campamentos, asegura Turtle y Lord"
+        ],
+        [
+         "Roam",
+         "Tank o Support",
+         "Protege al equipo, da visión e inicia peleas"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Si no sabes cuál elegir, empieza con un Tank en Roam: ponerte delante de tus compañeros sin morir no trae dificultad mecánica y te enseña el mapa. Una segunda opción es el Marksman; farmeas con seguridad en la Gold Lane y vigilas el mapa."
+      }
+     ]
+    },
+    {
+     "id": "amblem-buyu",
+     "baslik": "Elección de emblema y hechizo de combate",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Antes de cada partida haces dos elecciones: un conjunto de emblemas y un hechizo de combate (battle spell). Ambos dependen del rol del héroe, y las primeras semanas la elección recomendada ya hecha del juego es la más segura."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Elección",
+        "Para qué sirve",
+        "A quién le conviene"
+       ],
+       "satirlar": [
+        [
+         "Emblema",
+         "Cada tipo (Tank, Assassin, Mage, Marksman, Support, Fighter) da poder fijo según el rol y deja elegir tres talentos",
+         "Usa el emblema recomendado en la descripción del héroe"
+        ],
+        [
+         "Retribution",
+         "Hace mucho daño a monstruos de la jungla, Turtle y Lord",
+         "Solo el jungla; no se puede jungla con otro hechizo"
+        ],
+        [
+         "Flicker",
+         "Teletransporte de corto alcance",
+         "La mayoría de héroes que quieren huir o iniciar una pelea"
+        ],
+        [
+         "Purify",
+         "Quita aturdimiento y ralentización",
+         "Héroes golpeados a menudo por control"
+        ],
+        [
+         "Execute",
+         "Daña a un rival con poca vida",
+         "Héroes que quieren rematar"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "El número y los efectos de hechizos y emblemas pueden cambiar con las temporadas; sigue la descripción actual que ves en la tienda o en la página del héroe. Tras elegir un hechizo, juega una semana con la misma elección: memorizar su reutilización facilita cada partida."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si eres el jungla, guarda Retribution para Turtle y Lord; no la gastes en campamentos pequeños."
       }
      ]
     },
@@ -1430,12 +2312,67 @@
      ]
     },
     {
+     "id": "turtle-lord",
+     "baslik": "Turtle y Lord: tiempos",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Turtle y Lord son los principales objetivos neutrales que dan al equipo oro, experiencia y poder. Según fuentes de la comunidad, la primera Turtle aparece hacia el 2:00 y reaparece cada 2 minutos aproximadamente; tras el cambio de mapa de 2026 se informa de que el comportamiento de la Turtle (por ejemplo la Healing Turtle) se actualizó. El minuto exacto de aparición del Lord no es coherente entre fuentes y Moonton no lo ha indicado oficialmente; vigila el temporizador del juego."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Objetivo",
+        "Cuándo",
+        "Qué da"
+       ],
+       "satirlar": [
+        [
+         "Turtle",
+         "Primera aparición hacia el 2:00; reaparece en unos 2 minutos",
+         "Oro, experiencia y escudo para el equipo; el héroe que da el último golpe recibe una curación instantánea y un escudo extra"
+        ],
+        [
+         "Lord",
+         "Aparece en la fase media; minuto exacto no indicado oficialmente",
+         "Un fuerte aliado que empuja las líneas laterales; acelera la rotura de torres"
+        ]
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Prepárate 20-25 segundos antes de que aparezca",
+         "metin": "Pon visión y controla los arbustos de entrada; quien llega tarde pierde la primera pelea."
+        },
+        {
+         "baslik": "Deja Retribution al jungla",
+         "metin": "No golpeéis todos el objetivo a la vez; guardad el daño hasta el alcance de Retribution."
+        },
+        {
+         "baslik": "Empuja primero la oleada",
+         "metin": "Lleva al Mid y al Roam juntos al objetivo."
+        },
+        {
+         "baslik": "No fuerces si no es seguro",
+         "metin": "Si el rival controla el arbusto, toma otro objetivo o golpea una torre."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Antes de pelear por un objetivo, cuenta dónde está el jungla rival y si tus compañeros están vivos."
+      }
+     ]
+    },
+    {
      "id": "ayarlar",
      "baslik": "Ajustes: valores iniciales",
      "bloklar": [
       {
        "tip": "p",
-       "metin": "El ajuste más útil es la disposición de botones. Si tu pulgar llega mal a una habilidad, mueve ese botón; poder hacer el mismo movimiento en cada partida vale más que un ajuste gráfico fino. Lo sugiero por experiencia general (conocimiento propio)."
+       "metin": "El ajuste más útil es la disposición de los botones. Si tu pulgar llega mal a una habilidad, mueve ese botón; poder hacer el mismo movimiento cada partida vale más que afinar los gráficos."
       },
       {
        "tip": "p",
@@ -1477,22 +2414,69 @@
      ]
     },
     {
+     "id": "elmas-butce",
+     "baslik": "Diamantes y presupuesto de gasto",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Mobile Legends es gratuito; la página de Google Play presenta el juego como 'Play to Win, not Pay to Win' y avisa de compras dentro de la app. Los diamantes son dinero real; los precios varían por región, así que mira el importe actual en la tienda del juego. Los Puntos de Batalla (BP) se ganan jugando y sirven para desbloquear héroes."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Prioridad",
+        "Qué hacer",
+        "Por qué"
+       ],
+       "satirlar": [
+        [
+         "1. Héroes",
+         "Desbloquea héroes con BP; no gastes diamantes",
+         "Lo que da tu poder es el héroe, no una skin"
+        ],
+        [
+         "2. Pase mensual (Starlight, etc.)",
+         "Considéralo solo si de verdad vas a jugar",
+         "Cosméticos y pequeñas recompensas; contenido y precio exactos en la tienda"
+        ],
+        [
+         "3. Skins",
+         "Déjalas para el final",
+         "Son cosméticas; no dan poder en el juego"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Pon un tope mensual y habla del gasto con un adulto según tu edad.",
+        "Aléjate de sitios de terceros de 'diamantes baratos' y de servicios de recarga que piden la contraseña de tu cuenta.",
+        "Si te arrepientes de una compra, ponte la regla de no comprar nada durante dos semanas."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Los sitios que prometen 'diamantes baratos' o 'gratis' pueden hacer que te roben la cuenta; usa solo la tienda oficial del juego."
+      }
+     ]
+    },
+    {
      "id": "rank",
      "baslik": "Sistema competitivo y tabla de rangos",
      "bloklar": [
       {
        "tip": "p",
-       "metin": "La tabla de rangos puede cambiar en detalle de una temporada a otra; el número de estrellas y los nombres de nivel pueden ajustarse con actualizaciones. Por eso no tomes los valores de abajo como definitivos; compáralos con la página de clasificación de tu pantalla."
+       "metin": "La tabla de rangos puede cambiar en detalle según la temporada; los números de estrellas de abajo se basan en fuentes de la comunidad y Moonton no los ha publicado como tabla en su página. Para valores exactos mira la página de clasificación de tu juego."
       },
       {
        "tip": "p",
-       "metin": "Según fuentes secundarias, los niveles clasificatorios son: Warrior, Elite, Master, Grandmaster, Epic, Legend y Mythic. Mythic tiene títulos adicionales: Mythical Honor, Mythical Glory y Mythical Immortal. Tras Mythic, la cuenta de estrellas sigue corriendo."
+       "metin": "Según fuentes de la comunidad, los niveles clasificatorios son: Warrior, Elite, Master, Grandmaster, Epic, Legend y Mythic. Mythic tiene títulos adicionales: Mythical Honor, Mythical Glory y Mythical Immortal. Tras Mythic, la cuenta de estrellas sigue corriendo."
       },
       {
        "tip": "tablo",
        "basliklar": [
         "Nivel",
-        "Divisiones (fuente secundaria)"
+        "Divisiones"
        ],
        "satirlar": [
         [
@@ -1528,11 +2512,55 @@
       {
        "tip": "liste",
        "ogeler": [
-        "La fase de Draft Pick y bloqueo empieza desde Epic (fuente secundaria).",
-        "Las derrotas en Warrior no restan estrellas (fuente secundaria).",
-        "Un grupo clasificatorio puede ser de 1, 2, 3 o 5 jugadores (fuente secundaria).",
-        "La Puntuación de crédito empieza en 100 y llega como máximo a 110; la clasificatoria puede bloquearse por debajo de 90 (fuente secundaria)."
+        "La fase de Draft Pick y bloqueo empieza desde Epic (según fuentes de la comunidad).",
+        "Las derrotas en Warrior no restan estrellas (según fuentes de la comunidad).",
+        "Un grupo clasificatorio puede ser de 1, 2, 3 o 5 jugadores (según fuentes de la comunidad).",
+        "La Puntuación de crédito empieza en 100 y llega como máximo a 110; la clasificatoria puede bloquearse por debajo de 90 (según fuentes de la comunidad)."
        ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rango",
+        "Divisiones",
+        "Estrellas por división"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "III - I",
+         "3"
+        ],
+        [
+         "Elite",
+         "III - I",
+         "4"
+        ],
+        [
+         "Master",
+         "IV - I",
+         "4"
+        ],
+        [
+         "Grandmaster",
+         "V - I",
+         "5"
+        ],
+        [
+         "Epic",
+         "V - I",
+         "5"
+        ],
+        [
+         "Legend",
+         "V - I",
+         "5"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Mythic no tiene divisiones; el número de estrellas sigue subiendo: Mythic 0-24, Mythical Honor 25, Mythical Glory 50, Mythical Immortal 100 o más (según fuentes de la comunidad). Se espera que la temporada 42 termine a mediados de diciembre; la fecha exacta no se ha anunciado."
       }
      ]
     },
@@ -1554,6 +2582,14 @@
         "Probar un héroe distinto en cada partida.",
         "Jugar partidas seguidas estando enfadado; haz una pausa."
        ]
+      },
+      {
+       "tip": "p",
+       "metin": "Un error frecuente es unirse a todas las peleas. Mobile Legends se juega en partidas cortas y una muerte cuesta torres y objetivos por el tiempo de reaparición. Si tu vida es baja, retrocede y cúrate; cuando veas desaparecer a un rival del mapa, vigila los arbustos. El segundo error es no mirar nunca el minimapa: una ojeada cada uno o dos segundos te permite notar de antemano a un rival que llega a una línea lateral."
+      },
+      {
+       "tip": "p",
+       "metin": "El tercer error es centrarse solo en el número de muertes. Lo que gana partidas es romper torres y tomar objetivos como Turtle y Lord; una muerte solo vale cuando abre una oportunidad para eso. Atacar a los compañeros en el chat también hace perder: una señal corta y educada es mucho más eficaz que un mensaje enfadado. Si sientes tilt, descansa en lugar de empezar la siguiente partida."
       }
      ]
     },
@@ -1581,6 +2617,10 @@
         "Jugar con una segunda cuenta contra jugadores de menor rango (smurfing) es injusto; no lo hagas.",
         "No compartas tu cuenta con nadie."
        ]
+      },
+      {
+       "tip": "p",
+       "metin": "Para proteger tu cuenta usa una contraseña fuerte solo para este juego, activa la verificación en dos pasos si es posible y no compartas los datos de tu cuenta con nadie. Ni el soporte oficial te pide la contraseña. El boosting de rango, la compra o venta de cuentas y los programas prohibidos rompen las reglas y pueden hacer que cierren tu cuenta; aléjate de todo ello. Tu propio progreso vale mucho más que el de otro y mantiene la diversión del juego."
       }
      ]
     },
@@ -1593,27 +2633,27 @@
        "ogeler": [
         {
          "s": "¿Mobile Legends es gratis?",
-         "c": "Sí. El juego es gratis; las compras son para cosméticos."
+         "c": "Sí. El juego es gratuito; las compras son cosméticas."
         },
         {
          "s": "¿Se puede jugar en PC?",
-         "c": "Sí, mediante Google Play Games; los requisitos son Windows 10 versión 2004, 10 GB de espacio SSD y virtualización activada."
+         "c": "Sí, mediante Google Play Games; los requisitos son Windows 10 versión 2004, 10 GB de SSD y virtualización activada."
         },
         {
          "s": "¿Cuándo puedo jugar clasificatoria?",
-         "c": "Cuando se abra el bloqueo que muestra el juego; las fuentes dan condiciones distintas, por eso no damos un número exacto."
+         "c": "Según fuentes de la comunidad, con nivel de cuenta 8 y suficientes héroes; Moonton no lo ha publicado oficialmente, cuenta el bloqueo del juego."
         },
         {
          "s": "¿Puede bajar mi rango?",
-         "c": "Pierdes estrellas; las derrotas en Warrior no restan estrellas (fuente secundaria)."
+         "c": "Pierdes estrellas; en Warrior las derrotas no las quitan (según fuentes de la comunidad)."
         },
         {
          "s": "¿Con qué héroe empiezo?",
-         "c": "Elige un héroe sencillo y resistente; juega los mismos dos durante una semana."
+         "c": "Elige un héroe sencillo y resistente; juega con los mismos dos durante una semana."
         },
         {
          "s": "¿Hay idioma turco?",
-         "c": "No verificado en esta guía; mira los ajustes de idioma del juego."
+         "c": "No indicado oficialmente; revisa los ajustes de idioma del juego."
         }
        ]
       }

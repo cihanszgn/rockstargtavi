@@ -1,15 +1,19 @@
 {
  "oyun": "diablo-4",
- "guncelleme": "2026-11-14",
+ "guncelleme": "2026-11-15",
  "surum": "Sezon 15 Hell's Legacy (yama 3.2.1), Lord of Hatred genişlemesi (28 Nisan 2026)",
  "kaynaklar": [
+  {
+   "url": "https://store.steampowered.com/app/2344520/Diablo_IV/",
+   "ad": "Steam: Diablo IV"
+  },
   {
    "url": "https://diablo4.blizzard.com/en-us/lord-of-hatred",
    "ad": "Blizzard: Diablo IV Lord of Hatred"
   },
   {
    "url": "https://www.polygon.com/diablo-4-amazon-class-season-hell-legacy-blizzcon-2026/",
-   "ad": "Polygon: Diablo 4 Amazon class and Season Hell's Legacy"
+   "ad": "Polygon: Season Hell's Legacy"
   },
   {
    "url": "https://www.icy-veins.com/d4/news/diablo-4-lord-of-hatred-overview/",
@@ -29,7 +33,7 @@
   },
   {
    "url": "https://us.shop.battle.net/en-us/product/diablo-iv-lord-of-hatred",
-   "ad": "Battle.net Shop: Diablo IV Lord of Hatred"
+   "ad": "Battle.net Shop: Lord of Hatred"
   }
  ],
  "diller": {
@@ -55,7 +59,7 @@
     },
     {
      "ad": "Türkçe desteği",
-     "deger": "Metin ve altyazı desteği var gibi görünüyor, resmî dil listesi doğrulanmadı"
+     "deger": "Türkçe arayüz ve altyazı var, Türkçe seslendirme yok (Steam mağaza sayfası; 14 dil)"
     }
    ],
    "bolumler": [
@@ -83,7 +87,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Diablo 4 için Battle.net hesabı ve sürekli internet bağlantısı gerekir; oyun çevrimiçidir, tek başına oynasanız bile. PC'de Battle.net veya Steam'den, konsolda Xbox ve PlayStation mağazalarından alınır. Xbox sayfasında Game Pass'ten de söz ediliyor; kapsam değişebildiği için mağazada kontrol edin."
+       "metin": "Diablo 4 için Battle.net hesabı ve sürekli internet bağlantısı gerekir; oyun çevrimiçidir, tek başına oynasanız bile. PC'de Battle.net veya Steam'den, konsolda Xbox ve PlayStation mağazalarından alınır. Xbox sayfasında Game Pass'ten de söz ediliyor; kapsam değişebildiği için mağazada kontrol edin. PC'de Battle.net sürümü için Battle.net masaüstü uygulaması gerekir. Platformlar arası ilerleme hesapla bağlıdır; ancak satın alma her mağazada ayrıdır, bu yüzden hangi platformda oynayacağınıza baştan karar verin."
       },
       {
        "tip": "tablo",
@@ -117,7 +121,7 @@
       },
       {
        "tip": "p",
-       "metin": "Genişlemeleri sonradan almak yerine paketi baştan almak genelde daha ucuzdur. Fiyatlar bölgeye ve kampanyaya göre değişir; kesin tutarı mağazada görün (ben lira fiyatını doğrulayamadım). Sistem gereksinimi için resmî Blizzard sayfasına bakın; bu sayfa değişebilir, o yüzden rakam yazmıyorum."
+       "metin": "Genişlemeleri sonradan almak yerine paketi baştan almak genelde daha ucuzdur. Lord of Hatred'ın ABD fiyatı 49,99 dolardır (Game Informer); Türkiye lira fiyatı resmî olarak açıklanmadı; kesin tutarı kendi mağazanızda görün. Lord of Hatred temel oyunu gerektirir. Sistem gereksinimi tablosu bir sonraki bölümdedir."
       },
       {
        "tip": "uyari",
@@ -174,7 +178,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Sınıflar oynanış tarzı bakımından çok farklıdır. Bir sınıfı beğenmezseniz bir sonraki sezonda başka bir sınıfı denemek sorun değildir. Kısa özet:"
+       "metin": "Sınıflar oynanış tarzı bakımından çok farklıdır. Bir sınıfı beğenmezseniz bir sonraki sezonda başka bir sınıfı denemek sorun değildir. Kısa özet: Yeni gelenler için hasarı uzaktan veren veya yardımcı çağıran sınıflar genelde daha affedicidir. Spiritborn 8 Ekim 2024'te Vessel of Hatred ile, Paladin ve Warlock 28 Nisan 2026'da Lord of Hatred ile geldi. Paladin dört yeminle (oath) ve Arbiter Formu ile oynanır; Warlock cehennem ateşi, çağrılan iblisler ve gizemli büyü kullanır. Genişleme sınıflarını oynamak için ilgili genişlemeye sahip olmanız gerekir."
       },
       {
        "tip": "tablo",
@@ -248,7 +252,7 @@
       },
       {
        "tip": "p",
-       "metin": "Her aşamada hedefiniz bir üst zorluğa geçecek kadar hasar ve dayanıklılık biriktirmektir. Çok yavaş ilerliyorsanız bir alt zorlukta eşya toplayıp geri dönün; hızlı ilerliyorsanız bir üst zorluğu deneyin."
+       "metin": "Her aşamada hedefiniz bir üst zorluğa geçecek kadar hasar ve dayanıklılık biriktirmektir. Çok yavaş ilerliyorsanız bir alt zorlukta eşya toplayıp geri dönün; hızlı ilerliyorsanız bir üst zorluğu deneyin. Seviye 70'te karakterin gücünü gösteren bir sınır yoktur; ilerleme eşya kalitesi ve Pit seviyesiyle ölçülür. Haftalık hedef koymak için bir önceki Pit seviyenizi not edin ve her oturumda bir basamak yukarı çıkmayı deneyin. Bir basamakta üst üste üç kez takılırsanız yapıyı değiştirmeden önce eşyalarınızın direnç ve zırh değerlerine bakın."
       }
      ]
     },
@@ -268,7 +272,242 @@
       },
       {
        "tip": "p",
-       "metin": "Basit kural: bir eşya sizi daha güçlü yapmıyorsa, taşımayın. Ancak efsanevi bir parçanın gücü bazen belli bir yapıya özeldir; emin olmadığınız eşyayı atmadan önce parçalamayı veya depoya koymayı düşünün."
+       "metin": "Basit kural: bir eşya sizi daha güçlü yapmıyorsa, taşımayın. Ancak efsanevi bir parçanın gücü bazen belli bir yapıya özeldir; emin olmadığınız eşyayı atmadan önce parçalamayı veya depoya koymayı düşünün. Eşya listesinde bir parçayı parçalamadan önce kilitleyin; yanlışlıkla parçalanan eşya geri gelmez. Altın sürekli aktığı için kendinize küçük bir bütçe kuralı koyun: önce yaşamsal direnç ve zırh, sonra hasar özellikleri. Kasadaki fazlalıkları düzenli aralıklarla temizleyin, çünkü yer dolunca yeni bir efsanevi eşya için yeriniz kalmaz."
+      }
+     ]
+    },
+    {
+     "id": "gereksinim-ve-platform",
+     "baslik": "Sistem gereksinimi ve platformlar",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4 PC'de Battle.net uygulamasıyla veya Steam üzerinden, konsolda Xbox ve PlayStation'da oynanır. Aşağıdaki değerler Steam mağaza sayfasından alınmıştır; temel oyun içindir ve genişleme ile değişebilir."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Bileşen",
+        "Asgari (1080p, 30 kare, düşük)",
+        "Önerilen"
+       ],
+       "satirlar": [
+        [
+         "İşlemci",
+         "Intel Core i5-2500K veya AMD FX-8350",
+         "Intel Core i5-4670K veya AMD Ryzen 3 1300X"
+        ],
+        [
+         "Bellek",
+         "8 GB RAM",
+         "16 GB RAM"
+        ],
+        [
+         "Ekran kartı",
+         "NVIDIA GTX 660, Intel Arc A380 veya AMD Radeon R9 280",
+         "NVIDIA GTX 970, Intel Arc A750 veya AMD Radeon RX 470 (4 GB)"
+        ],
+        [
+         "Depolama",
+         "90 GB, SSD gerekli",
+         "90 GB SSD"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Başka bir site asgari işlemci olarak FX 8100 yazıyor; küçük farklar sayfaya göre değişebilir, bu yüzden kendi sürümünüzün mağaza sayfasına bakın. Oyun, sabit disk yerine SSD ister; sabit diskte yükleme süreleri uzar."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Tüm sınıflar ve genişlemeler için aynı satın alma gerekir: önce temel oyun, sonra Vessel of Hatred ve Lord of Hatred. Age of Hatred Collection üçünü birlikte verir."
+      }
+     ]
+    },
+    {
+     "id": "torment-basamaklari",
+     "baslik": "Torment basamakları: zorluk nasıl açılır?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "70. seviyeden sonra zorluk seçimi Pit adlı zindan üzerinden açılır. Torment 1, Pit 10'da kilitlenir; sonraki basamaklar belirli Pit seviyelerine ulaştıkça açılır. Aşağıdaki Pit seviyeleri topluluk kaynaklarından derlenmiştir ve sezonlara göre değişebilir."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Basamak",
+        "Açıldığı Pit seviyesi",
+        "Not"
+       ],
+       "satirlar": [
+        [
+         "Torment 1",
+         "Pit 10",
+         "İlk basamak; savunmalarınızda ceza başlar"
+        ],
+        [
+         "Torment 2",
+         "Pit 15",
+         "Her basamakta zırh ve direnç cezası artar"
+        ],
+        [
+         "Torment 3",
+         "Pit 20",
+         "Topluluk videolarına göre ek ödül kapısı"
+        ],
+        [
+         "Torment 5",
+         "Pit 30",
+         "Bundan sonra aralık 10 Pit seviyesine çıkar"
+        ],
+        [
+         "Torment 6",
+         "Pit 40",
+         "Büyük ödül kilitleri burada açılır"
+        ],
+        [
+         "Torment 10",
+         "Pit 80",
+         "Eşya avı için pratik hedef"
+        ],
+        [
+         "Torment 12",
+         "Resmî olarak açıklanmadı",
+         "Desene göre Pit 100 civarı; resmî değil"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Basamak atladıkça canavarlar sertleşir ve sizin zırh ile direnciniz ceza alır. Ölüm sayınız artıyorsa bir alt basamağa dönüp savunma özelliklerinizi doldurun; ödül gelişmek için değil, hayatta kalmak için vardır."
+      }
+     ]
+    },
+    {
+     "id": "sezon-ve-alemler",
+     "baslik": "Sezonlar, Seasonal ve Eternal alem",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4 sezonlarla yenilenir. Sezon yolculuğu (Season Journey) sezon boyunca tamamlanan hedefler ve ödüller zinciridir; savaş bileti de buna eşlik eder. Oyunda iki alem vardır: Seasonal sezon içeriğini, yolculuğu ve savaş biletini taşır; yeni veya yeniden doğmuş bir karakter gerektirir. Eternal alemde sezon içeriği yoktur ve sıfırlanmaz."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Özellik",
+        "Seasonal alem",
+        "Eternal alem"
+       ],
+       "satirlar": [
+        [
+         "Sezon içeriği ve yolculuk",
+         "Var",
+         "Yok"
+        ],
+        [
+         "Savaş bileti",
+         "Var",
+         "Yok"
+        ],
+        [
+         "Karakter",
+         "Yeni veya Rebirth ile gelmiş",
+         "Kalıcı karakterler"
+        ],
+        [
+         "Sıfırlanma",
+         "Sezon sonunda eşyalar Eternal sandığa taşınır",
+         "Sıfırlanmaz"
+        ]
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Sezon başlangıcını bekleyin",
+         "metin": "Yeni sezonun başında bir Seasonal karakter oluşturun; herkes aynı çizgiden başlar."
+        },
+        {
+         "baslik": "Sezon yolculuğunu açın",
+         "metin": "Oyun içi menüden sezon hedeflerine bakın; tamamladıkça ödül kazanırsınız."
+        },
+        {
+         "baslik": "Rebirth'i kullanın",
+         "metin": "Sezon 15 ile gelen Rebirth, Eternal bir karakteri 1. seviyede Seasonal'a çevirir. Sınıf, isim, görünüm, Hardcore durumu, kozmetikler, atlar, evcil hayvanlar ve oyun süresi korunur; eşya ve savaş ilerlemesi korunmaz."
+        },
+        {
+         "baslik": "Sezon sonunda taşıyın",
+         "metin": "Seasonal eşyalar, sonraki sezonun sonuna kadar Eternal sandığa taşınabilir."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Seasonal ve Eternal arasında seçim yapamıyorsanız Seasonal ile başlayın; yeni sezon mekaniğini tüm oyuncularla birlikte öğrenirsiniz."
+      }
+     ]
+    },
+    {
+     "id": "oyun-sonu-ve-gelistirme",
+     "baslik": "Oyun sonu etkinlikleri ve eşya geliştirme",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "War Plans, en çok beş etkinliği oynatma listesi gibi arka arkaya dizen bir yoldur. Aşağıdaki etkinlikler listeye girebilir:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Etkinlik",
+        "Ne yapılır?",
+        "Kime uygun?"
+       ],
+       "satirlar": [
+        [
+         "Helltides",
+         "Açık dünyada canavar sürüleri ve sandıklar",
+         "Hızlı eşya ve kaynak isteyenler"
+        ],
+        [
+         "Whispers",
+         "Kısa dünya görevleri",
+         "Kısa seanslar"
+        ],
+        [
+         "Lair Bosses",
+         "Güçlü patron avı",
+         "Büyük ödül arayanlar"
+        ],
+        [
+         "Nightmare Dungeons",
+         "Zorlaştırılmış zindanlar",
+         "Sezonlar boyunca ana zemin"
+        ],
+        [
+         "Infernal Hordes",
+         "Dalga dalga savaş",
+         "Yoğun savaş sevenler"
+        ],
+        [
+         "Pit of Artificers",
+         "Zamanlı zindan koşusu",
+         "Torment basamağı açmak"
+        ],
+        [
+         "Kurast Undercity",
+         "Kalabalık canavar temizliği",
+         "Hızlı seviye ve altın"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Eşyayı sonradan geliştirmek için iki sistem vardır: **tempering** (ince ayar) ve **masterworking** (ustalık). Tempering ile bir parçaya sınırlı sayıda yeni özellik eklenir; masterworking ile mevcut özellikler kademe kademe güçlenir. Ayrıntılar (kademe sayısı, bedeller, ek özellik havuzu) sezonlara göre değişir; güncel tablo için Maxroll veya resmî yama notlarına bakın. Horadric Cube bu zincirde eşya dönüştürmeye yardım eder."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Geliştirmeye başlamadan önce bir eşyayı gerçekten kullanacağınızdan emin olun; tempering ve masterworking kaynak harcatır, hatalı seçim geri alınamayabilir."
       }
      ]
     },
@@ -374,7 +613,7 @@
     },
     {
      "ad": "Turkish support",
-     "deger": "Text and subtitles appear to be supported; the official language list was not verified"
+     "deger": "Turkish interface and subtitles yes, no Turkish voice-over (Steam store page; 14 languages)"
     }
    ],
    "bolumler": [
@@ -402,7 +641,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Diablo 4 needs a Battle.net account and a constant internet connection; the game is online even when you play alone. On PC you buy it from Battle.net or Steam, on consoles from the Xbox and PlayStation stores. The Xbox page also mentions Game Pass; coverage can change, so check in the store."
+       "metin": "Diablo 4 needs a Battle.net account and a constant internet connection; the game is online even when you play alone. On PC you buy it from Battle.net or Steam, on consoles from the Xbox and PlayStation stores. The Xbox page also mentions Game Pass; coverage can change, so check in the store. For the Battle.net version on PC you need the Battle.net desktop app. Cross-platform progress is tied to the account, but a purchase is separate in each store, so decide up front which platform you will play on."
       },
       {
        "tip": "tablo",
@@ -436,7 +675,7 @@
       },
       {
        "tip": "p",
-       "metin": "Buying the bundle up front is usually cheaper than buying expansions later. Prices vary by region and sale; see the exact amount in the store (I could not verify local prices). For system requirements see Blizzard's official page; it can change, so I do not give numbers here."
+       "metin": "Buying the bundle up front is usually cheaper than buying expansions later. Lord of Hatred costs US$49.99 (Game Informer); the Turkish lira price has not been officially announced, so see the exact amount in your own store. Lord of Hatred requires the base game. The system requirements table is in the next section."
       },
       {
        "tip": "uyari",
@@ -493,7 +732,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "The classes differ a lot in play style. If you do not like one class, it is fine to try another in the next season. Short summary:"
+       "metin": "The classes differ a lot in play style. If you do not like one class, it is fine to try another in the next season. Short summary: For newcomers, classes that deal damage from range or summon helpers are generally more forgiving. Spiritborn arrived on 8 October 2024 with Vessel of Hatred, and Paladin and Warlock on 28 April 2026 with Lord of Hatred. Paladin plays with four oaths and Arbiter Form; Warlock uses hellfire, summoned demons and eldritch magic. To play the expansion classes you must own the matching expansion."
       },
       {
        "tip": "tablo",
@@ -567,7 +806,7 @@
       },
       {
        "tip": "p",
-       "metin": "At every stage your goal is to build enough damage and toughness to move to a higher difficulty. If you are progressing too slowly, gather gear on a lower difficulty and come back; if you are progressing fast, try a higher one."
+       "metin": "At every stage your goal is to build enough damage and toughness to move to a higher difficulty. If you are progressing too slowly, gather gear on a lower difficulty and come back; if you are progressing fast, try a higher one. At level 70 there is no cap showing the character's power; progress is measured by item quality and Pit level. To set a weekly goal, note your previous Pit level and try to climb one step in each session. If you get stuck three times in a row on one step, check the resistance and armor values of your gear before you change your build."
       }
      ]
     },
@@ -587,7 +826,242 @@
       },
       {
        "tip": "p",
-       "metin": "Simple rule: if an item does not make you stronger, do not carry it. But a legendary piece's power is sometimes specific to a build; before throwing away an item you are unsure of, consider salvaging it or putting it in storage."
+       "metin": "Simple rule: if an item does not make you stronger, do not carry it. But a legendary piece's power is sometimes specific to a build; before throwing away an item you are unsure of, consider salvaging it or putting it in storage. In the item list, lock a piece before you salvage anything; an item salvaged by mistake does not come back. Because gold keeps flowing, set yourself a small budget rule: vital resistance and armor first, then damage properties. Clean out the surplus in your stash at regular intervals, because once the space is full you have no room for a new legendary item."
+      }
+     ]
+    },
+    {
+     "id": "gereksinim-ve-platform",
+     "baslik": "System requirements and platforms",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4 is played on PC through the Battle.net app or Steam, and on Xbox and PlayStation on console. The values below come from the Steam store page; they are for the base game and may change with expansions."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Component",
+        "Minimum (1080p, 30 fps, low)",
+        "Recommended"
+       ],
+       "satirlar": [
+        [
+         "Processor",
+         "Intel Core i5-2500K or AMD FX-8350",
+         "Intel Core i5-4670K or AMD Ryzen 3 1300X"
+        ],
+        [
+         "Memory",
+         "8 GB RAM",
+         "16 GB RAM"
+        ],
+        [
+         "Graphics card",
+         "NVIDIA GTX 660, Intel Arc A380 or AMD Radeon R9 280",
+         "NVIDIA GTX 970, Intel Arc A750 or AMD Radeon RX 470 (4 GB)"
+        ],
+        [
+         "Storage",
+         "90 GB, SSD required",
+         "90 GB SSD"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Another site lists the FX 8100 as the minimum processor; small differences vary by page, so check the store page for your version. The game wants an SSD instead of a hard disk; load times grow on a hard disk."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "All classes and expansions need the same purchase chain: base game first, then Vessel of Hatred and Lord of Hatred. The Age of Hatred Collection gives you all three together."
+      }
+     ]
+    },
+    {
+     "id": "torment-basamaklari",
+     "baslik": "Torment tiers: how difficulty unlocks",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "After level 70, difficulty selection opens through the dungeon called the Pit. Torment 1 is locked at Pit 10; later tiers open as you reach certain Pit levels. The Pit levels below are compiled from community sources and may change between seasons."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Tier",
+        "Pit level that unlocks it",
+        "Note"
+       ],
+       "satirlar": [
+        [
+         "Torment 1",
+         "Pit 10",
+         "First tier; penalties to your defenses begin"
+        ],
+        [
+         "Torment 2",
+         "Pit 15",
+         "Armor and resistance penalties grow each tier"
+        ],
+        [
+         "Torment 3",
+         "Pit 20",
+         "An extra reward gate according to community videos"
+        ],
+        [
+         "Torment 5",
+         "Pit 30",
+         "After this the gap grows to 10 Pit levels"
+        ],
+        [
+         "Torment 6",
+         "Pit 40",
+         "Big reward locks open here"
+        ],
+        [
+         "Torment 10",
+         "Pit 80",
+         "Practical goal for loot hunting"
+        ],
+        [
+         "Torment 12",
+         "Not officially announced",
+         "Around Pit 100 by the pattern; not official"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "As you jump tiers, monsters get tougher and your armor and resistance take penalties. If your deaths climb, return to a lower tier and fill out your defensive stats; the reward is for surviving, not for growing."
+      }
+     ]
+    },
+    {
+     "id": "sezon-ve-alemler",
+     "baslik": "Seasons, the Seasonal and Eternal realms",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4 renews itself with seasons. The Season Journey is a chain of goals and rewards completed through the season, and the battle pass comes along with it. The game has two realms: Seasonal carries the season content, the journey and the battle pass, and needs a new or reborn character. The Eternal realm has no season content and never resets."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Feature",
+        "Seasonal realm",
+        "Eternal realm"
+       ],
+       "satirlar": [
+        [
+         "Season content and journey",
+         "Yes",
+         "No"
+        ],
+        [
+         "Battle pass",
+         "Yes",
+         "No"
+        ],
+        [
+         "Character",
+         "New or arrived through Rebirth",
+         "Permanent characters"
+        ],
+        [
+         "Reset",
+         "Items move to the Eternal stash at season end",
+         "Never resets"
+        ]
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Wait for the season start",
+         "metin": "At the start of a new season, create a Seasonal character; everyone starts from the same line."
+        },
+        {
+         "baslik": "Open the season journey",
+         "metin": "Look at the season goals in the in-game menu; you earn rewards as you complete them."
+        },
+        {
+         "baslik": "Use Rebirth",
+         "metin": "Rebirth, added in Season 15, converts an Eternal character to Seasonal at level 1. Class, name, looks, Hardcore state, cosmetics, mounts, pets and playtime are kept; gear and combat progress are not."
+        },
+        {
+         "baslik": "Carry over at season end",
+         "metin": "Seasonal items can be moved to the Eternal stash until the end of the following season."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "If you cannot choose between Seasonal and Eternal, start with Seasonal; you learn the new season mechanic along with every other player."
+      }
+     ]
+    },
+    {
+     "id": "oyun-sonu-ve-gelistirme",
+     "baslik": "Endgame activities and item upgrading",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "War Plans is a path that lines up to five activities one after another like a playlist. The activities below can enter the list:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Activity",
+        "What you do",
+        "Who it suits"
+       ],
+       "satirlar": [
+        [
+         "Helltides",
+         "Monster swarms and chests in the open world",
+         "Those who want fast items and resources"
+        ],
+        [
+         "Whispers",
+         "Short world tasks",
+         "Short sessions"
+        ],
+        [
+         "Lair Bosses",
+         "Hunting powerful bosses",
+         "Those after big rewards"
+        ],
+        [
+         "Nightmare Dungeons",
+         "Harder dungeons",
+         "The main ground across seasons"
+        ],
+        [
+         "Infernal Hordes",
+         "Wave after wave of fighting",
+         "Fans of intense combat"
+        ],
+        [
+         "Pit of Artificers",
+         "Timed dungeon runs",
+         "Unlocking Torment tiers"
+        ],
+        [
+         "Kurast Undercity",
+         "Crowd clearing of monsters",
+         "Quick levels and gold"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "There are two systems for improving an item later: **tempering** and **masterworking**. Tempering adds a limited number of new properties to a piece; masterworking strengthens existing properties step by step. Details (the number of steps, the costs, the extra-property pool) change with seasons; see Maxroll or the official patch notes for the current table. The Horadric Cube helps convert items in this chain."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Before you start upgrading, be sure you will really use an item; tempering and masterworking spend resources and a wrong choice may not be reversible."
       }
      ]
     },
@@ -693,7 +1167,7 @@
     },
     {
      "ad": "Prise en charge du turc",
-     "deger": "Texte et sous-titres semblent pris en charge ; la liste officielle des langues n'a pas été vérifiée"
+     "deger": "Interface et sous-titres en turc oui, pas de doublage turc (page Steam ; 14 langues)"
     }
    ],
    "bolumler": [
@@ -721,7 +1195,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Diablo 4 demande un compte Battle.net et une connexion internet constante ; le jeu est en ligne même quand vous jouez seul. Sur PC, on l'achète sur Battle.net ou Steam, sur console dans les boutiques Xbox et PlayStation. La page Xbox mentionne aussi le Game Pass ; la couverture peut changer, vérifiez en boutique."
+       "metin": "Diablo 4 demande un compte Battle.net et une connexion internet constante ; le jeu est en ligne même quand vous jouez seul. Sur PC, on l'achète sur Battle.net ou Steam, sur console dans les boutiques Xbox et PlayStation. La page Xbox mentionne aussi le Game Pass ; la couverture peut changer, vérifiez en boutique. Pour la version Battle.net sur PC, il faut l'application de bureau Battle.net. La progression multiplateforme est liée au compte, mais l'achat est distinct dans chaque boutique ; décidez donc dès le départ sur quelle plateforme vous jouerez."
       },
       {
        "tip": "tablo",
@@ -755,7 +1229,7 @@
       },
       {
        "tip": "p",
-       "metin": "Acheter le pack dès le départ coûte généralement moins cher que de prendre les extensions plus tard. Les prix varient selon la région et les promotions ; voyez le montant exact en boutique (je n'ai pas pu confirmer les prix locaux). Pour la configuration requise, consultez la page officielle de Blizzard ; elle peut changer, donc je ne donne pas de chiffres ici."
+       "metin": "Acheter le pack dès le départ coûte généralement moins cher que d'acheter les extensions plus tard. Lord of Hatred coûte 49,99 dollars (Game Informer) ; le prix en livres turques n'a pas été annoncé officiellement, consultez le montant exact dans votre boutique. Lord of Hatred exige le jeu de base. Le tableau de la configuration requise est dans la section suivante."
       },
       {
        "tip": "uyari",
@@ -812,7 +1286,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Les classes diffèrent beaucoup par leur style de jeu. Si vous n'aimez pas une classe, essayez-en une autre à la saison suivante. Résumé rapide :"
+       "metin": "Les classes diffèrent beaucoup par leur style de jeu. Si vous n'aimez pas une classe, essayez-en une autre à la saison suivante. Résumé rapide : Pour les nouveaux venus, les classes qui infligent des dégâts à distance ou invoquent des aides sont généralement plus indulgentes. Le Spiritborn est arrivé le 8 octobre 2024 avec Vessel of Hatred, et le Paladin et le Warlock le 28 avril 2026 avec Lord of Hatred. Le Paladin se joue avec quatre serments (oaths) et la forme d'Arbitre ; le Warlock utilise le feu infernal, des démons invoqués et la magie occulte. Pour jouer les classes d'extension, vous devez posséder l'extension correspondante."
       },
       {
        "tip": "tablo",
@@ -886,7 +1360,7 @@
       },
       {
        "tip": "p",
-       "metin": "À chaque étape, votre but est d'accumuler assez de dégâts et de robustesse pour passer à une difficulté supérieure. Si vous progressez trop lentement, ramassez de l'équipement à une difficulté inférieure et revenez ; si vous progressez vite, essayez la suivante."
+       "metin": "À chaque étape, votre but est d'accumuler assez de dégâts et de robustesse pour passer à une difficulté supérieure. Si vous progressez trop lentement, ramassez de l'équipement à une difficulté inférieure et revenez ; si vous progressez vite, essayez la suivante. Au niveau 70, il n'y a pas de plafond montrant la puissance du personnage ; la progression se mesure à la qualité des objets et au niveau de Fosse. Pour fixer un objectif hebdomadaire, notez votre niveau de Fosse précédent et essayez de monter d'un cran à chaque séance. Si vous bloquez trois fois de suite sur un palier, vérifiez les valeurs de résistance et d'armure de votre équipement avant de changer de build."
       }
      ]
     },
@@ -906,7 +1380,242 @@
       },
       {
        "tip": "p",
-       "metin": "Règle simple : si un objet ne vous rend pas plus fort, ne le gardez pas. Mais la puissance d'une pièce légendaire est parfois propre à un build ; avant de jeter un objet dont vous n'êtes pas sûr, pensez à le recycler ou à le ranger."
+       "metin": "Règle simple : si un objet ne vous rend pas plus fort, ne le gardez pas. Mais la puissance d'une pièce légendaire est parfois propre à un build ; avant de jeter un objet dont vous n'êtes pas sûr, pensez à le recycler ou à le ranger. Dans la liste d'objets, verrouillez une pièce avant de recycler quoi que ce soit ; un objet recyclé par erreur ne revient pas. Comme l'or coule en continu, fixez-vous une petite règle de budget : d'abord la résistance et l'armure vitales, ensuite les propriétés de dégâts. Videz régulièrement le surplus de votre coffre, car une fois la place pleine, vous n'avez plus de place pour un nouvel objet légendaire."
+      }
+     ]
+    },
+    {
+     "id": "gereksinim-ve-platform",
+     "baslik": "Configuration requise et plateformes",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4 se joue sur PC via l'application Battle.net ou Steam, et sur Xbox et PlayStation en console. Les valeurs ci-dessous viennent de la page de la boutique Steam ; elles concernent le jeu de base et peuvent changer avec les extensions."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Composant",
+        "Minimum (1080p, 30 images/s, bas)",
+        "Recommandé"
+       ],
+       "satirlar": [
+        [
+         "Processeur",
+         "Intel Core i5-2500K ou AMD FX-8350",
+         "Intel Core i5-4670K ou AMD Ryzen 3 1300X"
+        ],
+        [
+         "Mémoire",
+         "8 Go de RAM",
+         "16 Go de RAM"
+        ],
+        [
+         "Carte graphique",
+         "NVIDIA GTX 660, Intel Arc A380 ou AMD Radeon R9 280",
+         "NVIDIA GTX 970, Intel Arc A750 ou AMD Radeon RX 470 (4 Go)"
+        ],
+        [
+         "Stockage",
+         "90 Go, SSD requis",
+         "90 Go SSD"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Un autre site indique le FX 8100 comme processeur minimum ; de petites différences existent selon la page, vérifiez donc la page de la boutique de votre version. Le jeu veut un SSD plutôt qu'un disque dur ; les chargements s'allongent sur un disque dur."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Toutes les classes et extensions demandent la même chaîne d'achats : le jeu de base d'abord, puis Vessel of Hatred et Lord of Hatred. L'Age of Hatred Collection vous donne les trois ensemble."
+      }
+     ]
+    },
+    {
+     "id": "torment-basamaklari",
+     "baslik": "Paliers de Torment : comment la difficulté se débloque",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Après le niveau 70, le choix de la difficulté s'ouvre via le donjon appelé la Fosse. Torment 1 est verrouillé à la Fosse 10 ; les paliers suivants s'ouvrent à mesure que vous atteignez certains niveaux de Fosse. Les niveaux de Fosse ci-dessous sont compilés à partir de sources de la communauté et peuvent changer d'une saison à l'autre."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Palier",
+        "Niveau de Fosse qui le débloque",
+        "Remarque"
+       ],
+       "satirlar": [
+        [
+         "Torment 1",
+         "Fosse 10",
+         "Premier palier ; les pénalités sur vos défenses commencent"
+        ],
+        [
+         "Torment 2",
+         "Fosse 15",
+         "Les pénalités d'armure et de résistance augmentent à chaque palier"
+        ],
+        [
+         "Torment 3",
+         "Fosse 20",
+         "Une porte de récompense en plus selon des vidéos de la communauté"
+        ],
+        [
+         "Torment 5",
+         "Fosse 30",
+         "Ensuite l'écart passe à 10 niveaux de Fosse"
+        ],
+        [
+         "Torment 6",
+         "Fosse 40",
+         "De grands verrous de récompense s'ouvrent ici"
+        ],
+        [
+         "Torment 10",
+         "Fosse 80",
+         "Objectif pratique pour la chasse au butin"
+        ],
+        [
+         "Torment 12",
+         "Non annoncé officiellement",
+         "Autour de la Fosse 100 d'après le motif ; non officiel"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "En sautant des paliers, les monstres se durcissent et votre armure et vos résistances subissent des pénalités. Si vos morts augmentent, revenez à un palier inférieur et remplissez vos statistiques défensives ; la récompense sert à survivre, pas à progresser."
+      }
+     ]
+    },
+    {
+     "id": "sezon-ve-alemler",
+     "baslik": "Saisons, royaumes Saisonnier et Éternel",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4 se renouvelle par saisons. Le Parcours de saison est une chaîne d'objectifs et de récompenses accomplis durant la saison, accompagnée du passe de combat. Le jeu a deux royaumes : le Saisonnier porte le contenu de saison, le parcours et le passe de combat, et demande un personnage neuf ou renaissant. Le royaume Éternel n'a pas de contenu de saison et ne se réinitialise jamais."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Fonction",
+        "Royaume Saisonnier",
+        "Royaume Éternel"
+       ],
+       "satirlar": [
+        [
+         "Contenu de saison et parcours",
+         "Oui",
+         "Non"
+        ],
+        [
+         "Passe de combat",
+         "Oui",
+         "Non"
+        ],
+        [
+         "Personnage",
+         "Neuf ou venu par Renaissance",
+         "Personnages permanents"
+        ],
+        [
+         "Réinitialisation",
+         "Les objets passent au coffre Éternel en fin de saison",
+         "Jamais"
+        ]
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Attendez le début de saison",
+         "metin": "Au début d'une nouvelle saison, créez un personnage Saisonnier ; tout le monde part de la même ligne."
+        },
+        {
+         "baslik": "Ouvrez le parcours de saison",
+         "metin": "Consultez les objectifs de la saison dans le menu du jeu ; vous gagnez des récompenses en les accomplissant."
+        },
+        {
+         "baslik": "Utilisez la Renaissance",
+         "metin": "La Renaissance, ajoutée en saison 15, convertit un personnage Éternel en Saisonnier au niveau 1. Classe, nom, apparence, état Hardcore, cosmétiques, montures, familiers et temps de jeu sont conservés ; l'équipement et la progression de combat ne le sont pas."
+        },
+        {
+         "baslik": "Transférez en fin de saison",
+         "metin": "Les objets Saisonniers peuvent passer au coffre Éternel jusqu'à la fin de la saison suivante."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si vous ne savez pas choisir entre Saisonnier et Éternel, commencez par le Saisonnier ; vous apprenez la nouvelle mécanique de saison avec tous les autres joueurs."
+      }
+     ]
+    },
+    {
+     "id": "oyun-sonu-ve-gelistirme",
+     "baslik": "Activités de fin de jeu et amélioration des objets",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "War Plans est un parcours qui enchaîne jusqu'à cinq activités comme une liste de lecture. Les activités ci-dessous peuvent y entrer :"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Activité",
+        "Ce que l'on fait",
+        "À qui ça convient"
+       ],
+       "satirlar": [
+        [
+         "Helltides",
+         "Hordes de monstres et coffres en monde ouvert",
+         "Ceux qui veulent des objets et des ressources vite"
+        ],
+        [
+         "Whispers",
+         "Courtes tâches du monde",
+         "Sessions courtes"
+        ],
+        [
+         "Lair Bosses",
+         "Chasse aux boss puissants",
+         "Ceux qui visent de grosses récompenses"
+        ],
+        [
+         "Nightmare Dungeons",
+         "Donjons durcis",
+         "Le terrain principal au fil des saisons"
+        ],
+        [
+         "Infernal Hordes",
+         "Combats par vagues",
+         "Fans de combats intenses"
+        ],
+        [
+         "Pit of Artificers",
+         "Courses de donjon chronométrées",
+         "Débloquer des paliers de Torment"
+        ],
+        [
+         "Kurast Undercity",
+         "Nettoyage de foules de monstres",
+         "Niveaux et or rapides"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Il y a deux systèmes pour améliorer un objet ensuite : le **tempering** et le **masterworking**. Le tempering ajoute à une pièce un nombre limité de nouvelles propriétés ; le masterworking renforce pas à pas les propriétés existantes. Les détails (nombre de paliers, coûts, réserve de propriétés) changent selon les saisons ; voyez Maxroll ou les notes de mise à jour officielles pour le tableau actuel. Le Cube Horadrim aide à convertir les objets dans cette chaîne."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Avant de commencer à améliorer, soyez sûr de vraiment utiliser l'objet ; le tempering et le masterworking consomment des ressources et un mauvais choix peut ne pas être réversible."
       }
      ]
     },
@@ -1012,7 +1721,7 @@
     },
     {
      "ad": "Soporte en turco",
-     "deger": "Parece haber texto y subtítulos; la lista oficial de idiomas no se verificó"
+     "deger": "Interfaz y subtítulos en turco sí, sin doblaje turco (página de Steam; 14 idiomas)"
     }
    ],
    "bolumler": [
@@ -1040,7 +1749,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Diablo 4 necesita una cuenta de Battle.net y conexión a internet constante; el juego es en línea aunque juegues solo. En PC se compra en Battle.net o Steam, en consolas en las tiendas de Xbox y PlayStation. La página de Xbox también menciona Game Pass; la cobertura puede cambiar, así que compruébalo en la tienda."
+       "metin": "Diablo 4 necesita una cuenta de Battle.net y conexión a internet constante; el juego es en línea aunque juegues solo. En PC se compra en Battle.net o Steam, en consolas en las tiendas de Xbox y PlayStation. La página de Xbox también menciona Game Pass; la cobertura puede cambiar, así que compruébalo en la tienda. Para la versión de Battle.net en PC necesitas la aplicación de escritorio Battle.net. El progreso multiplataforma está ligado a la cuenta, pero la compra es independiente en cada tienda, así que decide desde el principio en qué plataforma jugarás."
       },
       {
        "tip": "tablo",
@@ -1074,7 +1783,7 @@
       },
       {
        "tip": "p",
-       "metin": "Comprar el paquete desde el principio suele salir más barato que comprar las expansiones después. Los precios varían según la región y las ofertas; mira la cantidad exacta en la tienda (no pude verificar los precios locales). Para los requisitos del sistema consulta la página oficial de Blizzard; puede cambiar, así que no doy cifras aquí."
+       "metin": "Comprar el paquete desde el principio suele salir más barato que comprar las expansiones después. Lord of Hatred cuesta 49,99 dólares (Game Informer); el precio en liras turcas no se ha anunciado oficialmente, mira la cifra exacta en tu tienda. Lord of Hatred exige el juego base. La tabla de requisitos del sistema está en la siguiente sección."
       },
       {
        "tip": "uyari",
@@ -1131,7 +1840,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Las clases se diferencian mucho en estilo de juego. Si una clase no te gusta, puedes probar otra en la temporada siguiente. Resumen corto:"
+       "metin": "Las clases se diferencian mucho en estilo de juego. Si una clase no te gusta, puedes probar otra en la temporada siguiente. Resumen corto: Para los recién llegados, las clases que dañan a distancia o invocan ayudantes suelen perdonar más. El Spiritborn llegó el 8 de octubre de 2024 con Vessel of Hatred, y el Paladin y el Warlock el 28 de abril de 2026 con Lord of Hatred. El Paladin se juega con cuatro juramentos (oaths) y la forma de Árbitro; el Warlock usa fuego infernal, demonios invocados y magia arcana. Para jugar las clases de expansión debes poseer la expansión correspondiente."
       },
       {
        "tip": "tablo",
@@ -1205,7 +1914,7 @@
       },
       {
        "tip": "p",
-       "metin": "En cada etapa tu objetivo es acumular suficiente daño y resistencia para pasar a una dificultad superior. Si avanzas demasiado despacio, reúne equipo en una dificultad inferior y vuelve; si avanzas rápido, prueba la siguiente."
+       "metin": "En cada etapa tu objetivo es acumular suficiente daño y resistencia para pasar a una dificultad superior. Si avanzas demasiado despacio, reúne equipo en una dificultad inferior y vuelve; si avanzas rápido, prueba la siguiente. En el nivel 70 no hay un tope que muestre el poder del personaje; el progreso se mide por la calidad de los objetos y el nivel del Foso. Para fijar una meta semanal, anota tu nivel de Foso anterior e intenta subir un escalón en cada sesión. Si te atascas tres veces seguidas en un escalón, revisa los valores de resistencia y armadura de tu equipo antes de cambiar de build."
       }
      ]
     },
@@ -1225,7 +1934,242 @@
       },
       {
        "tip": "p",
-       "metin": "Regla simple: si un objeto no te hace más fuerte, no lo cargues. Pero el poder de una pieza legendaria a veces es propio de una configuración; antes de tirar un objeto del que no estés seguro, piensa en desmontarlo o guardarlo."
+       "metin": "Regla simple: si un objeto no te hace más fuerte, no lo cargues. Pero el poder de una pieza legendaria a veces es propio de una configuración; antes de tirar un objeto del que no estés seguro, piensa en desmontarlo o guardarlo. En la lista de objetos, bloquea una pieza antes de desmontar nada; un objeto desmontado por error no vuelve. Como el oro fluye sin parar, ponte una pequeña regla de presupuesto: primero resistencia y armadura vitales, luego propiedades de daño. Limpia con regularidad el excedente del alijo, porque cuando el espacio se llena no te queda sitio para un nuevo objeto legendario."
+      }
+     ]
+    },
+    {
+     "id": "gereksinim-ve-platform",
+     "baslik": "Requisitos del sistema y plataformas",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4 se juega en PC con la app Battle.net o Steam, y en consola en Xbox y PlayStation. Los valores de abajo vienen de la página de la tienda de Steam; son del juego base y pueden cambiar con las expansiones."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Componente",
+        "Mínimo (1080p, 30 fps, bajo)",
+        "Recomendado"
+       ],
+       "satirlar": [
+        [
+         "Procesador",
+         "Intel Core i5-2500K o AMD FX-8350",
+         "Intel Core i5-4670K o AMD Ryzen 3 1300X"
+        ],
+        [
+         "Memoria",
+         "8 GB de RAM",
+         "16 GB de RAM"
+        ],
+        [
+         "Tarjeta gráfica",
+         "NVIDIA GTX 660, Intel Arc A380 o AMD Radeon R9 280",
+         "NVIDIA GTX 970, Intel Arc A750 o AMD Radeon RX 470 (4 GB)"
+        ],
+        [
+         "Almacenamiento",
+         "90 GB, SSD necesario",
+         "90 GB SSD"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Otro sitio indica el FX 8100 como procesador mínimo; hay pequeñas diferencias según la página, así que mira la página de la tienda de tu versión. El juego pide SSD en lugar de disco duro; los tiempos de carga crecen en un disco duro."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Todas las clases y expansiones requieren la misma cadena de compras: primero el juego base, luego Vessel of Hatred y Lord of Hatred. La Age of Hatred Collection te da las tres juntas."
+      }
+     ]
+    },
+    {
+     "id": "torment-basamaklari",
+     "baslik": "Niveles de Torment: cómo se desbloquea la dificultad",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Después del nivel 70, la elección de dificultad se abre a través de la mazmorra llamada el Foso. Torment 1 está bloqueado en el Foso 10; los niveles siguientes se abren al alcanzar ciertos niveles del Foso. Los niveles del Foso de abajo se recopilan de fuentes de la comunidad y pueden cambiar entre temporadas."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Nivel",
+        "Nivel del Foso que lo desbloquea",
+        "Nota"
+       ],
+       "satirlar": [
+        [
+         "Torment 1",
+         "Foso 10",
+         "Primer nivel; empiezan las penalizaciones a tus defensas"
+        ],
+        [
+         "Torment 2",
+         "Foso 15",
+         "Las penalizaciones de armadura y resistencia crecen en cada nivel"
+        ],
+        [
+         "Torment 3",
+         "Foso 20",
+         "Una puerta de recompensa extra según vídeos de la comunidad"
+        ],
+        [
+         "Torment 5",
+         "Foso 30",
+         "Después la separación pasa a 10 niveles del Foso"
+        ],
+        [
+         "Torment 6",
+         "Foso 40",
+         "Aquí se abren grandes bloqueos de recompensa"
+        ],
+        [
+         "Torment 10",
+         "Foso 80",
+         "Meta práctica para cazar botín"
+        ],
+        [
+         "Torment 12",
+         "No anunciado oficialmente",
+         "Alrededor del Foso 100 por el patrón; no oficial"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Al saltar niveles, los monstruos se endurecen y tu armadura y resistencias reciben penalizaciones. Si tus muertes aumentan, vuelve a un nivel inferior y completa tus estadísticas defensivas; la recompensa es para sobrevivir, no para crecer."
+      }
+     ]
+    },
+    {
+     "id": "sezon-ve-alemler",
+     "baslik": "Temporadas, reinos Estacional y Eterno",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4 se renueva con temporadas. El Viaje de temporada es una cadena de objetivos y recompensas que se completan durante la temporada, y el pase de batalla lo acompaña. El juego tiene dos reinos: el Estacional lleva el contenido de temporada, el viaje y el pase de batalla, y exige un personaje nuevo o renacido. El reino Eterno no tiene contenido de temporada y nunca se reinicia."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Función",
+        "Reino Estacional",
+        "Reino Eterno"
+       ],
+       "satirlar": [
+        [
+         "Contenido de temporada y viaje",
+         "Sí",
+         "No"
+        ],
+        [
+         "Pase de batalla",
+         "Sí",
+         "No"
+        ],
+        [
+         "Personaje",
+         "Nuevo o llegado por Renacimiento",
+         "Personajes permanentes"
+        ],
+        [
+         "Reinicio",
+         "Los objetos pasan al alijo Eterno al acabar la temporada",
+         "Nunca se reinicia"
+        ]
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Espera al inicio de temporada",
+         "metin": "Al inicio de una temporada nueva, crea un personaje Estacional; todos parten de la misma línea."
+        },
+        {
+         "baslik": "Abre el viaje de temporada",
+         "metin": "Mira los objetivos de la temporada en el menú del juego; ganas recompensas al completarlos."
+        },
+        {
+         "baslik": "Usa el Renacimiento",
+         "metin": "El Renacimiento, añadido en la temporada 15, convierte un personaje Eterno en Estacional en el nivel 1. Se conservan la clase, el nombre, el aspecto, el estado Hardcore, los cosméticos, las monturas, las mascotas y el tiempo de juego; el equipo y el progreso de combate no."
+        },
+        {
+         "baslik": "Traspasa al final de la temporada",
+         "metin": "Los objetos Estacionales pueden pasar al alijo Eterno hasta el final de la temporada siguiente."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si no puedes elegir entre Estacional y Eterno, empieza por el Estacional; aprendes la nueva mecánica de temporada junto con todos los demás jugadores."
+      }
+     ]
+    },
+    {
+     "id": "oyun-sonu-ve-gelistirme",
+     "baslik": "Actividades de fin de juego y mejora de objetos",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "War Plans es un camino que encadena hasta cinco actividades una tras otra como una lista de reproducción. Las actividades de abajo pueden entrar en la lista:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Actividad",
+        "Qué se hace",
+        "Para quién"
+       ],
+       "satirlar": [
+        [
+         "Helltides",
+         "Enjambres de monstruos y cofres en el mundo abierto",
+         "Quien quiere objetos y recursos rápido"
+        ],
+        [
+         "Whispers",
+         "Tareas cortas del mundo",
+         "Sesiones cortas"
+        ],
+        [
+         "Lair Bosses",
+         "Caza de jefes poderosos",
+         "Quien busca grandes recompensas"
+        ],
+        [
+         "Nightmare Dungeons",
+         "Mazmorras endurecidas",
+         "El terreno principal a lo largo de las temporadas"
+        ],
+        [
+         "Infernal Hordes",
+         "Combate oleada tras oleada",
+         "Fans del combate intenso"
+        ],
+        [
+         "Pit of Artificers",
+         "Carreras de mazmorra cronometradas",
+         "Desbloquear niveles de Torment"
+        ],
+        [
+         "Kurast Undercity",
+         "Limpieza de multitudes de monstruos",
+         "Niveles y oro rápidos"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Hay dos sistemas para mejorar un objeto después: el **tempering** y el **masterworking**. El tempering añade a una pieza un número limitado de propiedades nuevas; el masterworking refuerza paso a paso las propiedades existentes. Los detalles (número de pasos, costes, reserva de propiedades extra) cambian con las temporadas; mira Maxroll o las notas oficiales del parche para la tabla actual. El Cubo Horádrico ayuda a convertir objetos en esta cadena."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Antes de empezar a mejorar, asegúrate de que de verdad usarás el objeto; el tempering y el masterworking gastan recursos y una mala elección puede no ser reversible."
       }
      ]
     },

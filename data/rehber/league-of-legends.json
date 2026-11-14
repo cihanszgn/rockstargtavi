@@ -1,31 +1,39 @@
 {
  "oyun": "league-of-legends",
- "guncelleme": "2026-11-14",
+ "guncelleme": "2026-11-15",
  "surum": "Yama 26.22 / Dereceli 2026 Sezon 3",
  "kaynaklar": [
   {
    "url": "https://www.leagueoflegends.com/en-us/news/game-updates/league-of-legends-patch-26-22-notes",
-   "ad": "League of Legends Patch 26.22 Notes"
+   "ad": "Riot Games: Patch 26.22 notes"
   },
   {
-   "url": "https://www.leagueoflegends.com/en-ph/news/game-updates/league-of-legends-patch-26-15-notes",
-   "ad": "League of Legends Patch 26.15 Notes"
+   "url": "https://support-leagueoflegends.riotgames.com/hc/en-us/articles/201752654-Minimum-and-Recommended-System-Requirements",
+   "ad": "Riot Support: Minimum and recommended system requirements"
   },
   {
    "url": "https://support-leagueoflegends.riotgames.com/hc/en-us/articles/201751894-Unlocking-Game-Modes",
-   "ad": "Unlocking Game Modes"
+   "ad": "Riot Support: Unlocking game modes"
   },
   {
    "url": "https://support-leagueoflegends.riotgames.com/hc/en-us/articles/4406004330643-Ranked-Tiers-Divisions-and-Queues",
-   "ad": "Ranked Tiers, Divisions, and Queues"
+   "ad": "Riot Support: Ranked tiers and queues"
   },
   {
    "url": "https://support-leagueoflegends.riotgames.com/hc/en-us/articles/4405783687443-Placements-Promotions-Series-Demotions-and-Decay",
-   "ad": "Placements, Promotions, Series, Demotions, and Decay"
+   "ad": "Riot Support: Placements, demotion and decay"
   },
   {
    "url": "https://www.leagueoflegends.com/en-ph/news/dev/dev-league-of-legends-classic",
-   "ad": "Dev: League of Legends Classic"
+   "ad": "Riot Games: League Classic dev blog"
+  },
+  {
+   "url": "https://guides-factory.com/guides/lol-objectives-guide",
+   "ad": "Guides Factory: objectives guide"
+  },
+  {
+   "url": "https://www.nerfplz.com/2026/11/voidgrubs-and-rift-herald-explained-10.html",
+   "ad": "NerfPlz: Voidgrub and Herald timers"
   }
  ],
  "diller": {
@@ -51,7 +59,7 @@
     },
     {
      "ad": "Türkçe desteği",
-     "deger": "Türkçe istemci ve bölge seçeneğini kurulum ekranında doğrula (bu rehberde ayrıca doğrulanmadı)"
+     "deger": "Riot destek sayfasında Türkiye bölgesi sunucusu listelenir; Türkçe istemci dili listesi resmî olarak açıklanmamış"
     }
    ],
    "bolumler": [
@@ -65,15 +73,15 @@
       },
       {
        "tip": "p",
-       "metin": "Oyun yamalarla ilerler. Kasım 2026'da güncel yama **26.22**'dir (Riot'un resmi yama notu). Bu yama Mel'in orta oyun gücü, ARAM Mayhem etkinliği ve bazı şampiyonların Klasik moda dönüşü gibi başlıklar içerir. Sonraki yama 26.23 olarak bildirilmiştir (ikincil kaynak)."
+       "metin": "Oyun yamalarla ilerler. Kasım 2026'da güncel yama **26.22**'dir (Riot'un resmi yama notu). Bu yama Mel'in orta oyun gücü, ARAM Mayhem etkinliği ve bazı şampiyonların Klasik moda dönüşü gibi başlıklar içerir. Sonraki yama 26.23 olarak bildirilmiştir (topluluk kaynaklarına göre)."
       },
       {
        "tip": "p",
-       "metin": "2026 Dereceli yılı üç sezona bölünmüştür: Sezon 1 (8 Ocak - 28 Nisan), Sezon 2 (29 Nisan - 28 Temmuz) ve **Sezon 3** (29 Temmuz 2026'da başladı). Yıllık sıfırlamanın Ocak ayı başında yapılması beklenir; kesin tarih için resmi duyuruya bak."
+       "metin": "2026 Dereceli yılı üç sezona bölünmüştür: Sezon 1 (8 Ocak - 28 Nisan), Sezon 2 (29 Nisan - 28 Temmuz) ve **Sezon 3** (29 Temmuz 2026'da başladı). Yıllık sıfırlamanın Ocak ayı başında yapılması beklenir; kesin tarih için resmi duyuruya bakın."
       },
       {
        "tip": "ipucu",
-       "metin": "Rehberdeki sayılar Kasım 2026 itibarıyladır. Yamalarla küçük değişiklikler olabilir; kesin kural için Riot'un destek sayfalarına bak."
+       "metin": "Rehberdeki sayılar Kasım 2026 itibarıyladır. Yamalarla küçük değişiklikler olabilir; kesin kural için Riot'un destek sayfalarına bakın."
       }
      ]
     },
@@ -89,14 +97,14 @@
        "tip": "liste",
        "ogeler": [
         "macOS'ta yalnızca Intel işlemcili Mac'ler desteklenir.",
-        "Windows 11'de TPM 2.0 açık olmalıdır; BIOS'tan açman gerekebilir.",
-        "Bir kurulumdan sonra oyun yamalarını otomatik indirir; ilk açılışta zaman ayır.",
-        "Bölge (sunucu) seçimini kurulum sırasında yap; sonradan değiştirmek zordur."
+        "Windows 11'de TPM 2.0 açık olmalıdır; BIOS'tan açmanız gerekebilir.",
+        "Bir kurulumdan sonra oyun yamalarını otomatik indirir; ilk açılışta zaman ayırın.",
+        "Bölge (sunucu) seçimini kurulum sırasında yapın; sonradan değiştirmek zordur."
        ]
       },
       {
        "tip": "uyari",
-       "metin": "Oyunu yalnızca Riot'un resmi sitesinden indir. Başka sitelerdeki 'ücretsiz RP' veya hesap vaat eden bağlantılar hesabını çaldırabilir."
+       "metin": "Oyunu yalnızca Riot'un resmi sitesinden indirin. Başka sitelerdeki 'ücretsiz RP' veya hesap vaat eden bağlantılar hesabınızı çaldırabilir."
       }
      ]
     },
@@ -108,8 +116,8 @@
        "tip": "adimlar",
        "ogeler": [
         {
-         "baslik": "Eğitimi ve yapay zekaya karşı oyunu dene",
-         "metin": "Eğitim ve Co-op vs. AI maçlarında hareket, saldırı ve yetenekleri öğren."
+         "baslik": "Eğitimi ve yapay zekaya karşı oyunu deneyin",
+         "metin": "Eğitim ve Co-op vs. AI maçlarında hareket, saldırı ve yetenekleri öğrenin."
         },
         {
          "baslik": "3. seviyede Swiftplay ve ARAM",
@@ -117,7 +125,7 @@
         },
         {
          "baslik": "9. seviyede Pratik Araç",
-         "metin": "Pratik Araç ile kendi başına şampiyon ve ek eşya dene."
+         "metin": "Pratik Araç ile kendi başına şampiyon ve ek eşya deneyin."
         },
         {
          "baslik": "10. seviyede Normal Draft",
@@ -137,7 +145,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Summoner's Rift'te beş rol vardır: Üst (Top), Orman (Jungle), Orta (Mid), Alt (Bot) ve Destek (Support). Klasik şampiyonlar Klasik Seviye, mağaza veya haftalık ücretsiz rotasyonla açılır. Aşağıdaki tablo, yıllardır basit kalmış tipik tercihleri gösterir (kendi bilgim; yamalarla güç dengesi değişebilir)."
+       "metin": "Summoner's Rift'te beş rol vardır: Üst (Top), Orman (Jungle), Orta (Mid), Alt (Bot) ve Destek (Support). Klasik şampiyonlar Klasik Seviye, mağaza veya haftalık ücretsiz rotasyonla açılır. Aşağıdaki tablo uzun süredir basit kalmış tipik tercihleri gösterir; bunlar Riot'un resmî önerisi değil, yaygın acemi tercihleridir ve yamalarla güç dengesi değişebilir."
       },
       {
        "tip": "tablo",
@@ -176,11 +184,50 @@
       },
       {
        "tip": "ipucu",
-       "metin": "Bir hafta boyunca aynı rolde ve aynı iki şampiyonla oyna. Çok şampiyon denemek yerine birini iyi öğrenmek daha çabuk ilerletir."
+       "metin": "Bir hafta boyunca aynı rolde ve aynı iki şampiyonla oynayın. Çok şampiyon denemek yerine birini iyi öğrenmek daha çabuk ilerletir."
       },
       {
        "tip": "p",
-       "metin": "Resmi geliştirici duyurusuna göre Klasik modda rünler ve ustalıklar sadeleştirilmiş, IP geri getirilmiştir; yani şampiyon açmak için oynayarak para biriktirebilirsin. Kuruluma yeni başlayanlar için en önemli nokta, ilk günlerde rün ve eşya ayrıntılarına boğulmamaktır: oyunun önerdiği hazır seçimleri kullan ve önce lane'de hayatta kalmaya odaklan."
+       "metin": "Resmi geliştirici duyurusuna göre Klasik modda rünler ve ustalıklar sadeleştirilmiş, IP geri getirilmiştir; yani şampiyon açmak için oynayarak para biriktirebilirsiniz. Kuruluma yeni başlayanlar için en önemli nokta, ilk günlerde rün ve eşya ayrıntılarına boğulmamaktır: oyunun önerdiği hazır seçimleri kullanın ve önce lane'de hayatta kalmaya odaklanın."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rol",
+        "Asıl görevi",
+        "İlk hedefiniz"
+       ],
+       "satirlar": [
+        [
+         "Üst",
+         "Tek başına lane; dayanıklılık ve savaş",
+         "Minyonları son vuruşla alın, ölmeyin"
+        ],
+        [
+         "Orman",
+         "Canavar keser, lane'lere yardıma gider",
+         "Güvenli bir rota öğrenin, ejderha ve Herald'a bakın"
+        ],
+        [
+         "Orta",
+         "Haritanın ortası; her yöne yakın",
+         "Hasar verin, ormancıya bilgi verin"
+        ],
+        [
+         "Alt",
+         "Uzaktan sürekli hasar",
+         "Destekle birlikte ölmeden minyon kes"
+        ],
+        [
+         "Destek",
+         "Görüş, koruma ve takım desteği",
+         "Totem koyun, alt lane'i güvende tutun"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Hangisini seçeceğini bilmiyorsanız Orta veya Destek ile başlayın: Orta rol haritanın ortasında olduğu için maçın akışını görürsünüz; Destek rolü ise çok fazla mekanik beceri istemeden takıma değer katar. Takım seçiminde rolünü ilk söyleyen o rolü alır; sonuncu kalırsanız geriye kalanı oynamak zorunda olabilirsiniz, bu yüzden 2 rol ve her birinde 2 şampiyon öğrenin."
       }
      ]
     },
@@ -190,20 +237,20 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Maçın ilk bölümü **lane** (hat) aşamasıdır: minyonları öldürmek altın verir. Son vuruş (last hit) yaparak altın kazanırsın; bu yüzden minyonları son vuruşla almak temel alışkanlıktır."
+       "metin": "Maçın ilk bölümü **lane** (hat) aşamasıdır: minyonları öldürmek altın verir. Son vuruş (last hit) yaparak altın kazanırsınız; bu yüzden minyonları son vuruşla almak temel alışkanlıktır."
       },
       {
        "tip": "liste",
        "ogeler": [
         "**Kuleler:** Önce dış, sonra iç kuleler, sonra Nexus yıkılır.",
         "**Canavarlar:** Ejderha, Baron ve Rift Herald gibi hedefler takıma kalıcı güç verir.",
-        "**Harita bilgisi:** Mini haritaya her birkaç saniyede bir bak; rakibin lane'ini bırakıp gelmesi tehlike işaretidir.",
-        "**Takım oyunu:** Tek başına kovalamaya çıkma; kaybedilen kule ve ejderha geri gelmez."
+        "**Harita bilgisi:** Mini haritaya her birkaç saniyede bir bakın; rakibin lane'ini bırakıp gelmesi tehlike işaretidir.",
+        "**Takım oyunu:** Tek başına kovalamaya çıkmayın; kaybedilen kule ve ejderha geri gelmez."
        ]
       },
       {
        "tip": "p",
-       "metin": "Yeni oyuncular için en kalıcı ilke: **ölmemek, ölmekten daha fazla altın kazandırır**. Her ölüm sana zaman ve altın kaybettirir."
+       "metin": "Yeni oyuncular için en kalıcı ilke: **ölmemek, ölmekten daha fazla altın kazandırır**. Her ölüm size zaman ve altın kaybettirir."
       },
       {
        "tip": "tablo",
@@ -214,7 +261,7 @@
        "satirlar": [
         [
          "CS (minyon skoru)",
-         "Öldürdüğün minyon sayısı; altın ve seviye için kritik"
+         "Öldürdüğünüz minyon sayısı; altın ve seviye için kritik"
         ],
         [
          "Last hit",
@@ -241,12 +288,174 @@
      ]
     },
     {
+     "id": "dalga-vizyon",
+     "baslik": "Minyon dalgası, altın ve görüş",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Minyonlar belli aralıklarla dalga halinde çıkar ve lane boyunca yürür. Dalgayı doğru yönetmek, kavga etmeden avantaj kazanmanın yoludur: dalgayı rakip kuleye iterseniz rakip kule yakınında zor durur, dalga size doğru gelirse güvenli şekilde farm yapar ve ormancıdan korunursunuz. Büyücü minyonlar ve top minyonlar daha çok altın verir; önce onları öldürmeye çalışın."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Konu",
+        "Ne yapmalısınız",
+        "Not"
+       ],
+       "satirlar": [
+        [
+         "Son vuruş (CS)",
+         "Minyonun canı azalınca vurun; her seferinde aynı hız ve zamanlamayı deneyin",
+         "Riot dakikada kaç CS hedefi olduğunu resmî olarak açıklamamıştır; önce kendi ortalamanızı ölçün, sonra her hafta bir adım artırın"
+        ],
+        [
+         "Altın",
+         "Öldürme, kule ve hedef de altın verir; ama ölünce altın kaybedersiniz",
+         "Boş durmayın: geri dönüp eşya almak savaş gücünü yükseltir"
+        ],
+        [
+         "Geri dönüş (recall)",
+         "Yeni bir eşya alacak kadar altının varsa ve lane güvenliyse geri dönün",
+         "Dalga kule yakınındayken dönerseniz kaybınız az olur"
+        ],
+        [
+         "Gank",
+         "Rakip ormancının hangi tarafta olduğunu tahmin edin",
+         "Orman bilinmiyorsa ileri çıkmayın"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Görüş (vision) savaşın yarısıdır. Gözcü Totemi (ücretsiz, süreli bir eşya) haritada size bakış alanı verir; Kontrol Totemi ise satın alınır ve görünmez rakipleri ve tuzakları ortaya çıkarır. Totemin süresi ve fiyatı yamalarla değişebilir; dükkândaki yazıya bakın. Ejderha, Baron ve nehir girişi gibi hedeflerin çevresine totem koymak, rakibin geldiğini önceden bilmenizi sağlar."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Her geri dönüşte bir totem koyun; boş totem yuvası boşa gitmiş fırsattır.",
+        "Rakip ormancının yeri belli değilse hedef peşinde koşmayın.",
+        "Çalılık ve giriş gibi karanlık yerlere gitmeden önce mini haritaya bakın.",
+        "Destek değilseniz de bir Kontrol Totemi alın; takıma en çok yarayan alımlardan biridir (fiyatı oyunda doğrulayın)."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "İlk hafta hedefiniz öldürme sayısı değil, her maçta ölüm sayınızı bir önceki maçtan azaltmak olsun."
+      }
+     ]
+    },
+    {
+     "id": "hedefler",
+     "baslik": "Harita hedefleri ve zamanları",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Hedefler takıma kalıcı güç ve altın verir. Aşağıdaki zamanlar topluluk kaynaklarına dayanır (Kasım 2026); Riot yamalarla bu süreleri değiştirebilir, bu yüzden güncel yama notuna bakın. Atakhan hedefinin 2026'da haritada olup olmadığı Riot tarafından resmî olarak açıklanmadı; bu nedenle tabloya konmamıştır."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Hedef",
+        "İlk çıkış (yaklaşık)",
+        "Ne verir"
+       ],
+       "satirlar": [
+        [
+         "Rift Scuttler (yengeç)",
+         "2:55",
+         "Görüş ve küçük altın; nehirde"
+        ],
+        [
+         "Ejderha (Elemental Drake)",
+         "5:00; öldürülünce 5 dakikada bir",
+         "Takıma kalıcı bonus; altı türü vardır (Chemtech, Cloud, Hextech, Infernal, Mountain, Ocean)"
+        ],
+        [
+         "Void Grub'lar",
+         "8:00; 14:45'te kaybolur; bir kez çıkar",
+         "Kule yıkımına yardım eden yaratıklar"
+        ],
+        [
+         "Rift Herald",
+         "15:00; 19:45'te kaybolur",
+         "Kuleye çarpan bir yardımcı"
+        ],
+        [
+         "Baron Nashor",
+         "20:00; öldürülünce 6 dakikada tekrar",
+         "Takıma güçlü bir bonus; minyonları güçlendirir"
+        ],
+        [
+         "Ejderha Ruhu ve Elder Ejderha",
+         "4. ejderhayı alan takıma ruh; Elder, 4. ejderhadan 6 dakika sonra",
+         "Maçı bitirmeye yarayan en güçlü bonuslar"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Pratik kural: hedef çıkmadan 30-60 saniye önce lane'indeki dalgayı iterek geri dönün, totem koyun ve takımınızla yaklaşın. Hedef için kavga etmeden önce rakip ormancının nerede olduğunu ve takım arkadaşlarınızın canlı olup olmadığını sayın."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Yukarıdaki süreler yamalarla değişir. Rakamlar topluluk kaynaklarına dayanır; Riot yama notunda aksi yazıyorsa onu esas alın."
+      }
+     ]
+    },
+    {
+     "id": "rune-esya",
+     "baslik": "Rünler ve eşya mantığı",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Rünler, maç başlamadan seçtiğiniz kalıcı güçlendirmelerdir. Beş yol vardır: Hassasiyet (Precision), Hakimiyet (Domination), Büyücülük (Sorcery), Azim (Resolve) ve İlham (Inspiration). Bir ana rün (keystone) ve ona bağlı küçük rünler seçersiniz. Ayrıntıya boğulmayın: oyun, şampiyonun için hazır önerilen rün sayfaları sunar; ilk haftalar onları kullanın ve değiştirme."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Soru",
+        "Basit yanıt"
+       ],
+       "satirlar": [
+        [
+         "Hangi eşyayı almalıyım?",
+         "Dükkânın önerilen eşyalar sekmesinden başlayın; kendi şampiyonun için hazır bir yol sunar"
+        ],
+        [
+         "Hasar mı, dayanıklılık mı?",
+         "Takımda hasar azsa hasar; hep ölüyorsanız dayanıklılık alın"
+        ],
+        [
+         "Rakipte çok büyücü varsa?",
+         "Büyü direnci veren eşyaya bakın; ilk geri dönüşte karar verin"
+        ],
+        [
+         "Ne zaman almalıyım?",
+         "Her geri dönüşte altınının yettiği en iyi eşyayı alın; harcanmamış altınla savaşa girmeyin"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Bir yamada rünleri ve eşyaları sürekli değiştirme; farkı anlamak için en az 5 maç aynı kurulumu oynayın.",
+        "Ana rünün ne işe yaradığını okuyun: bazıları ilk vuruşta, bazıları kısa süreli savaşta çalışır.",
+        "Büyücü bir şampiyona dayanıklılık eşyasını, yetenek odaklı şampiyona saldırı hızı eşyasını düşünmeden almayın; kendi şampiyonunun yetenek açıklamasını okuyun."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Bir eşyanın neden önerildiğini anlamak, listeyi ezberlemekten daha çabuk geliştirir."
+      }
+     ]
+    },
+    {
      "id": "ayarlar",
      "baslik": "Ayarlar: başlangıç değerleri",
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Bunlar resmi değer değil; genel olarak önerilen başlangıç noktalarıdır. Pratik Araç'ta dene."
+       "metin": "Bunlar resmi değer değil; genel olarak önerilen başlangıç noktalarıdır. Pratik Araç'ta deneyin."
       },
       {
        "tip": "tablo",
@@ -257,19 +466,19 @@
        "satirlar": [
         [
          "Fare hassasiyeti",
-         "Orta; haritayı rahat kaydırabileceğin bir değer"
+         "Orta; haritayı rahat kaydırabileceğiniz bir değer"
         ],
         [
          "Saldırı hareketi",
-         "Fareyi sağ tıkla hareket, A tuşu ile saldır; ikisini de dene"
+         "Fareyi sağ tıklayın hareket, A tuşu ile saldırın; ikisini de deneyin"
         ],
         [
          "Yetenek kısayolları",
-         "Hızlı Cast'i dene (Q, W, E, R doğrudan imleç yerine basılır)"
+         "Hızlı Cast'i deneyin (Q, W, E, R doğrudan imleç yerine basılır)"
         ],
         [
          "Mini harita",
-         "Sağ altta bırak; sık bak"
+         "Sağ altta bırakın; sık bakın"
         ],
         [
          "Ses",
@@ -279,7 +488,11 @@
       },
       {
        "tip": "ipucu",
-       "metin": "Ayar değiştirince birkaç maç aynı değerle oyna; fikrini hemen bozma."
+       "metin": "Ayar değiştirince birkaç maç aynı değerle oynayın; fikrini hemen bozmayın."
+      },
+      {
+       "tip": "p",
+       "metin": "Başlatıcıda dil ve bölge seçimini kurulumdan önce kontrol edin; Riot bölge listesini destek sayfasında yayımlar ve Türkiye bölgesi oradadır. Maç sırasında kısayolları tek tek öğrenin: önce yeteneklere Q, W, E, R, sonra eşya tuşlarına geçin. Bir maçta üç şeyi izleyin: kendi canınız, rakibin yeteneğinin bekleme süresi ve mini harita. Bunları her birkaç saniyede bir kontrol etmeyi alışkanlık yapmak, ilk haftanın en değerli antrenmanıdır."
       }
      ]
     },
@@ -289,17 +502,17 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Dereceli kademeler: **Iron, Bronze, Silver, Gold, Platinum, Emerald, Diamond, Master, Grandmaster, Challenger**. Iron'dan Diamond'a kadar her tier IV-I bölümlerine ayrılır ve LP (Lig Puanı) ile ilerlersin. Master ve üstü tek liderlik tablosudur."
+       "metin": "Dereceli kademeler: **Iron, Bronze, Silver, Gold, Platinum, Emerald, Diamond, Master, Grandmaster, Challenger**. Iron'dan Diamond'a kadar her tier IV-I bölümlerine ayrılır ve LP (Lig Puanı) ile ilerlersiniz. Master ve üstü tek liderlik tablosudur."
       },
       {
        "tip": "p",
-       "metin": "İlk 5 yerleştirme maçında LP kaybetmezsin; başlangıç rankı en fazla Diamond III olabilir. İlk kez oynayanlar için Swiftplay ve Normal Draft MMR'si de hesaba katılır. Yerleştirme sırasında oyundan AFK çıkmak yenilgi sayılır."
+       "metin": "İlk 5 yerleştirme maçında LP kaybetmezsiniz; başlangıç rankı en fazla Diamond III olabilir. İlk kez oynayanlar için Swiftplay ve Normal Draft MMR'si de hesaba katılır. Yerleştirme sırasında oyundan AFK çıkmak yenilgi sayılır."
       },
       {
        "tip": "tablo",
        "basliklar": [
-        "Kendi rankın",
-        "Solo/Duo'da eşleşebileceğin oyuncular"
+        "Kendi rankınız",
+        "Solo/Duo'da eşleşebileceğiniz oyuncular"
        ],
        "satirlar": [
         [
@@ -332,9 +545,33 @@
        "tip": "liste",
        "ogeler": [
         "Düşme (demotion) 25, 50 veya 75 LP seviyesinde olur; rank çürümesi (decay) da vardır.",
-        "Solo/Duo'da en fazla bir arkadaşınla (duo) eşleşirsin.",
+        "Solo/Duo'da en fazla bir arkadaşınla (duo) eşleşirsiniz.",
         "Tablo Riot'un resmi destek sayfasından alınmıştır; Diamond ve üstü için sınırlar daha farklıdır."
        ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Kademe",
+        "Bölümler",
+        "Not"
+       ],
+       "satirlar": [
+        [
+         "Iron, Bronze, Silver, Gold, Platinum, Emerald, Diamond",
+         "IV - I (4 bölüm)",
+         "LP ile bölüm atlarsınız"
+        ],
+        [
+         "Master, Grandmaster, Challenger",
+         "Bölüm yok",
+         "Tek liderlik tablosu; sınırlar sezon içinde değişir (Riot destek)"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Yerleştirme ve Dereceli kuralları Riot'un destek sayfalarından alınmıştır. Başlangıç rank'ı her zaman gerçek seviyenizi yansıtmaz; ilk 20-30 dereceli maçta rank'ınız hızlı oynayabilir, buna takılmayın."
       }
      ]
     },
@@ -348,9 +585,9 @@
         "Dereceliye hazır olmadan girmek; önce Normal Draft ile alış.",
         "Minyonları son vuruşla almamak ve sürekli kavga aramak.",
         "Mini haritaya bakmamak.",
-        "Takım arkadaşlarını suçlamak; ölünce hatayı kendinde ara.",
+        "Takım arkadaşlarınızı suçlamak; ölünce hatayı kendinizde ara.",
         "Her maçta farklı şampiyon denemek.",
-        "Tilt olunca (sinirlenince) peş peşe maç oynamak; ara ver."
+        "Tilt olunca (sinirlenince) peş peşe maç oynamak; ara verin."
        ]
       },
       {
@@ -358,21 +595,25 @@
        "ogeler": [
         {
          "baslik": "Her gün",
-         "metin": "Pratik Araç'ta 10 dakika son vuruş çalış."
+         "metin": "Pratik Araç'ta 10 dakika son vuruş çalışın."
         },
         {
          "baslik": "Her maç sonrası",
-         "metin": "Tek bir ölümünün nedenini bul ve sonraki maçta onu düzelt."
+         "metin": "Tek bir ölümünün nedenini bulun ve sonraki maçta onu düzeltin."
         },
         {
          "baslik": "Her hafta",
-         "metin": "Aynı iki şampiyonla en az beş maç oyna."
+         "metin": "Aynı iki şampiyonla en az beş maç oynayın."
         },
         {
          "baslik": "Her ay",
-         "metin": "Ayarlarını gözden geçir; ama fazla değiştirme."
+         "metin": "Ayarlarını gözden geçirin; ama fazla değiştirme."
         }
        ]
+      },
+      {
+       "tip": "p",
+       "metin": "Bir hata yaptığınızda kendinizi suçlamayın; tek bir hatayı seçin, nedenini bulun ve sonraki maçta yalnız onu düzeltin. İlerleme küçük ve sürekli düzeltmelerle gelir."
       }
      ]
     },
@@ -382,19 +623,19 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Hesabın senin dijital kasan. İki aşamalı doğrulamayı aç ve şifreni başka sitelerle paylaşma."
+       "metin": "Hesabınız sizin dijital kasanızdır. İki aşamalı doğrulamayı açın ve şifrenizi başka sitelerle paylaşmayın."
       },
       {
        "tip": "uyari",
-       "metin": "Hile yazılımı, script, otomasyon botu, rank boost hizmeti, hesap satın alma veya satma, kumar benzeri skin bahis siteleri ve korsan veya sahte 'ücretsiz RP' siteleri hesabının kalıcı yasaklanmasına yol açabilir. Bunlara yaklaşma."
+       "metin": "Hile yazılımı, script, otomasyon botu, rank boost hizmeti, hesap satın alma veya satma, kumar benzeri skin bahis siteleri ve korsan veya sahte 'ücretsiz RP' siteleri hesabınızın kalıcı yasaklanmasına yol açabilir. Bunlara yaklaşmayın."
       },
       {
        "tip": "liste",
        "ogeler": [
         "AFK kalmak veya maçı bilerek bozmak (feeding) yaptırım getirir.",
-        "Takım arkadaşlarına saygılı ol; toksik sohbeti raporla ve sustur.",
-        "Düşük ranklı oyunculara karşı ikinci bir hesapla oynamak (smurf) adil değildir; yapma.",
-        "Hesabını kimseyle paylaşma."
+        "Takım arkadaşlarınıza saygılı olun; toksik sohbeti raporla ve susturun.",
+        "Düşük ranklı oyunculara karşı ikinci bir hesapla oynamak (smurf) adil değildir; yapmayın.",
+        "Hesabınızı kimseyle paylaşmayın."
        ]
       }
      ]
@@ -424,7 +665,7 @@
         },
         {
          "s": "Hangi şampiyonla başlayayım?",
-         "c": "Basit ve dayanıklı bir şampiyon seç; bir hafta aynı iki şampiyonla oyna."
+         "c": "Basit ve dayanıklı bir şampiyon seçin; bir hafta aynı iki şampiyonla oynayın."
         },
         {
          "s": "Telefonda oynanır mı?",
@@ -462,7 +703,7 @@
     },
     {
      "ad": "Turkish support",
-     "deger": "Check the Turkish client and region options on the install screen (not separately verified in this guide)"
+     "deger": "Riot's support page lists a Turkey regional server; the list of client languages including Turkish is not officially stated"
     }
    ],
    "bolumler": [
@@ -476,7 +717,7 @@
       },
       {
        "tip": "p",
-       "metin": "The game moves in patches. In November 2026 the current patch is **26.22** (Riot's official patch notes). It covers topics like Mel's midscope, the ARAM Mayhem event and some champions returning to Classic mode. The next patch is reported as 26.23 (secondary source)."
+       "metin": "The game moves in patches. In November 2026 the current patch is **26.22** (Riot's official patch notes). It covers topics like Mel's midscope, the ARAM Mayhem event and some champions returning to Classic mode. The next patch is reported as 26.23 (according to community sources)."
       },
       {
        "tip": "p",
@@ -548,7 +789,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "There are five roles on Summoner's Rift: Top, Jungle, Mid, Bot and Support. Classic champions unlock through Classic Level, the shop or the weekly free rotation. The table below shows typical choices that have stayed simple for years (my own knowledge; balance can change with patches)."
+       "metin": "Summoner's Rift has five roles: Top, Jungle, Mid, Bot and Support. Classic champions are unlocked through Classic Level, the store or the weekly free rotation. The table below shows typical choices that have stayed simple for a long time; they are common beginner picks, not an official Riot recommendation, and balance may change with patches."
       },
       {
        "tip": "tablo",
@@ -592,6 +833,45 @@
       {
        "tip": "p",
        "metin": "According to Riot's official dev post, runes and masteries were simplified in Classic mode and IP was brought back, so you can save currency by playing to unlock champions. The key point for beginners is not to drown in rune and item details in the first days: use the game's recommended presets and focus first on surviving in lane."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Role",
+        "Main job",
+        "Your first goal"
+       ],
+       "satirlar": [
+        [
+         "Top",
+         "Lane alone; tankiness and fighting",
+         "Last-hit minions, do not die"
+        ],
+        [
+         "Jungle",
+         "Kills camps, helps the lanes",
+         "Learn one safe route, watch dragon and Herald"
+        ],
+        [
+         "Mid",
+         "The middle of the map; close to every side",
+         "Deal damage, give the jungler information"
+        ],
+        [
+         "Bot",
+         "Steady ranged damage",
+         "Farm without dying with your support"
+        ],
+        [
+         "Support",
+         "Vision, protection and team help",
+         "Place wards, keep bot lane safe"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "If you do not know which to choose, start with Mid or Support: Mid sits in the middle of the map so you see the flow of the game; Support adds value to the team without demanding much mechanical skill. In champion select the player who calls a role first gets it; if you are last you may have to play what is left, so learn 2 roles and 2 champions in each."
       }
      ]
     },
@@ -652,6 +932,168 @@
      ]
     },
     {
+     "id": "dalga-vizyon",
+     "baslik": "Minion waves, gold and vision",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Minions spawn in waves at set intervals and walk down the lane. Managing the wave well is how you gain an advantage without fighting: if you push the wave into the enemy tower, the enemy stands badly near their tower; if it comes toward you, you farm safely and are protected from the jungler. Caster and cannon minions give more gold; try to kill those first."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Topic",
+        "What to do",
+        "Note"
+       ],
+       "satirlar": [
+        [
+         "Last hit (CS)",
+         "Hit the minion when its health is low; try the same speed and timing every time",
+         "Riot has not officially stated a CS per minute target; first measure your own average, then raise it a step each week"
+        ],
+        [
+         "Gold",
+         "Kills, towers and objectives also give gold; but you lose gold when you die",
+         "Do not idle: going back to buy an item raises your fighting power"
+        ],
+        [
+         "Recall",
+         "Go back when you can afford a new item and the lane is safe",
+         "If you leave while the wave is near your tower you lose little"
+        ],
+        [
+         "Gank",
+         "Guess which side the enemy jungler is on",
+         "If the jungle is unknown, do not step forward"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Vision is half of a fight. A Stealth Ward (a free, timed trinket) gives you view on the map; a Control Ward is bought and reveals invisible enemies and traps. Ward duration and price may change with patches; read the shop text. Placing a ward around objectives such as the dragon, the Baron and the river entrance lets you know in advance that the enemy is coming."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Place a ward on every recall; an empty ward slot is a wasted chance.",
+        "If the enemy jungler's place is unknown, do not chase objectives.",
+        "Before going into dark areas such as brush and entrances, look at the minimap.",
+        "Even if you are not Support, buy a Control Ward; it is one of the most useful purchases for the team (check the price in-game)."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "In your first week, let your goal not be a kill count but to lower your death count from the previous match."
+      }
+     ]
+    },
+    {
+     "id": "hedefler",
+     "baslik": "Map objectives and timings",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Objectives give the team lasting power and gold. The times below rest on community sources (November 2026); Riot may change them with patches, so check the current patch notes. Riot has not officially stated whether the Atakhan objective is still on the map in 2026, so it is not in the table."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Objective",
+        "First spawn (approx.)",
+        "What it gives"
+       ],
+       "satirlar": [
+        [
+         "Rift Scuttler",
+         "2:55",
+         "Vision and a little gold; in the river"
+        ],
+        [
+         "Elemental Drake",
+         "5:00; every 5 minutes after a kill",
+         "A lasting team bonus; six types (Chemtech, Cloud, Hextech, Infernal, Mountain, Ocean)"
+        ],
+        [
+         "Void Grubs",
+         "8:00; leave at 14:45; spawn once",
+         "Creatures that help break towers"
+        ],
+        [
+         "Rift Herald",
+         "15:00; leaves at 19:45",
+         "A helper that charges into a tower"
+        ],
+        [
+         "Baron Nashor",
+         "20:00; 6 minutes after a kill",
+         "A strong team bonus; empowers minions"
+        ],
+        [
+         "Dragon Soul and Elder Dragon",
+         "The soul goes to the team taking the 4th drake; Elder spawns 6 minutes after the 4th drake",
+         "The strongest bonuses for closing out the game"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Practical rule: 30-60 seconds before an objective, push the wave in your lane, go back, buy a ward and approach with your team. Before fighting for an objective count where the enemy jungler is and whether your teammates are alive."
+      },
+      {
+       "tip": "uyari",
+       "metin": "The times above change with patches. The numbers rest on community sources; if a Riot patch note says otherwise, follow it."
+      }
+     ]
+    },
+    {
+     "id": "rune-esya",
+     "baslik": "Runes and item logic",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Runes are lasting boosts you pick before the match starts. There are five paths: Precision, Domination, Sorcery, Resolve and Inspiration. You choose one keystone and the smaller runes tied to it. Do not drown in detail: the game offers ready recommended rune pages for your champion; use them for the first weeks and do not change them."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Question",
+        "Simple answer"
+       ],
+       "satirlar": [
+        [
+         "Which item should I buy?",
+         "Start from the shop's recommended items tab; it offers a ready path for your champion"
+        ],
+        [
+         "Damage or durability?",
+         "If your team lacks damage buy damage; if you always die buy durability"
+        ],
+        [
+         "What if the enemy has many mages?",
+         "Look for items with magic resistance; decide at your first recall"
+        ],
+        [
+         "When should I buy?",
+         "On every recall buy the best item your gold allows; do not enter a fight with unspent gold"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Do not keep changing runes and items in one patch; play the same setup for at least 5 matches to see the difference.",
+        "Read what your keystone does: some work on the first hit, some in short fights.",
+        "Do not put a durability item on a mage or an attack speed item on an ability champion without thinking; read your own champion's ability text."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Understanding why an item is recommended makes you improve faster than memorizing the list."
+      }
+     ]
+    },
+    {
      "id": "ayarlar",
      "baslik": "Settings: starting values",
      "bloklar": [
@@ -691,6 +1133,10 @@
       {
        "tip": "ipucu",
        "metin": "When you change a setting, play a few matches with the same value; do not change your mind right away."
+      },
+      {
+       "tip": "p",
+       "metin": "In the launcher check your language and region choice before installing; Riot publishes the region list on its support page and the Turkey region is there. During a match learn the hotkeys one at a time: first Q, W, E, R for abilities, then the item keys. Watch three things in a match: your own health, the cooldown of the enemy's ability and the minimap. Making a habit of checking them every few seconds is the most valuable practice of your first week."
       }
      ]
     },
@@ -746,6 +1192,30 @@
         "In Solo/Duo you can queue with at most one friend (duo).",
         "The table comes from Riot's official support page; limits for Diamond and above are different."
        ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Tier",
+        "Divisions",
+        "Note"
+       ],
+       "satirlar": [
+        [
+         "Iron, Bronze, Silver, Gold, Platinum, Emerald, Diamond",
+         "IV - I (4 divisions)",
+         "You move up a division with LP"
+        ],
+        [
+         "Master, Grandmaster, Challenger",
+         "No divisions",
+         "A single ladder; the cutoffs shift during the season (Riot support)"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "The placement and Ranked rules come from Riot's support pages. Your starting rank does not always reflect your real level; over your first 20-30 ranked matches your rank may move fast, so do not fixate on it."
       }
      ]
     },
@@ -784,6 +1254,10 @@
          "metin": "Review your settings, but do not change too much."
         }
        ]
+      },
+      {
+       "tip": "p",
+       "metin": "When you make a mistake do not blame yourself; pick one mistake, find its cause and fix only that in the next match. Progress comes from small, steady fixes."
       }
      ]
     },
@@ -873,7 +1347,7 @@
     },
     {
      "ad": "Prise en charge du turc",
-     "deger": "Vérifie le client en turc et la région sur l'écran d'installation (non vérifié séparément dans ce guide)"
+     "deger": "La page d'aide de Riot liste un serveur régional Turquie ; la liste des langues du client, turc compris, n'est pas officiellement indiquée"
     }
    ],
    "bolumler": [
@@ -887,7 +1361,7 @@
       },
       {
        "tip": "p",
-       "metin": "Le jeu avance par patchs. En novembre 2026, le patch actuel est le **26.22** (notes de patch officielles de Riot). Il traite notamment de la puissance de milieu de partie de Mel, de l'événement ARAM Mayhem et du retour de certains champions en mode Classique. Le prochain patch est annoncé comme le 26.23 (source secondaire)."
+       "metin": "Le jeu avance par patchs. En novembre 2026, le patch actuel est le **26.22** (notes de patch officielles de Riot). Il traite notamment de la puissance de milieu de partie de Mel, de l'événement ARAM Mayhem et du retour de certains champions en mode Classique. Le prochain patch est annoncé comme le 26.23 (selon des sources communautaires)."
       },
       {
        "tip": "p",
@@ -959,7 +1433,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Il y a cinq rôles sur la Faille : Haut (Top), Jungle, Milieu (Mid), Bas (Bot) et Soutien (Support). Les champions du mode Classique se débloquent via le Niveau Classique, la boutique ou la rotation gratuite hebdomadaire. Le tableau ci-dessous montre des choix typiques restés simples depuis des années (connaissance personnelle ; l'équilibre peut changer avec les patchs)."
+       "metin": "Summoner's Rift compte cinq rôles : Top, Jungle, Mid, Bot et Support. Les champions Classic se débloquent par le Niveau Classic, la boutique ou la rotation gratuite hebdomadaire. Le tableau ci-dessous montre des choix typiques restés simples depuis longtemps ; ce sont des choix courants de débutants, pas une recommandation officielle de Riot, et l'équilibre peut changer avec les patchs."
       },
       {
        "tip": "tablo",
@@ -1003,6 +1477,45 @@
       {
        "tip": "p",
        "metin": "D'après l'annonce officielle des développeurs, les runes et les maîtrises ont été simplifiées en mode Classique et les PI sont revenus ; tu peux donc économiser en jouant pour débloquer des champions. L'essentiel pour un débutant est de ne pas se noyer dans les détails de runes et d'objets les premiers jours : utilise les choix recommandés par le jeu et concentre-toi d'abord sur la survie en voie."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rôle",
+        "Mission principale",
+        "Ton premier objectif"
+       ],
+       "satirlar": [
+        [
+         "Top",
+         "Voie en solo ; solidité et combat",
+         "Achève les sbires, ne meurs pas"
+        ],
+        [
+         "Jungle",
+         "Tue les camps, aide les voies",
+         "Apprends un trajet sûr, surveille dragon et Herald"
+        ],
+        [
+         "Mid",
+         "Le centre de la carte ; proche de tous les côtés",
+         "Inflige des dégâts, informe le jungler"
+        ],
+        [
+         "Bot",
+         "Dégâts constants à distance",
+         "Farme sans mourir avec ton support"
+        ],
+        [
+         "Support",
+         "Vision, protection et aide d'équipe",
+         "Pose des balises, garde la voie du bas en sécurité"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Si tu ne sais pas quoi choisir, commence par Mid ou Support : le Mid est au centre de la carte et tu vois le rythme de la partie ; le Support apporte de la valeur à l'équipe sans exiger beaucoup de mécanique. En sélection des champions, celui qui annonce un rôle en premier l'obtient ; si tu arrives le dernier, tu devras peut-être jouer ce qui reste, alors apprends 2 rôles et 2 champions pour chacun."
       }
      ]
     },
@@ -1063,6 +1576,168 @@
      ]
     },
     {
+     "id": "dalga-vizyon",
+     "baslik": "Vagues de sbires, or et vision",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Les sbires apparaissent en vagues à intervalles réguliers et avancent le long de la voie. Bien gérer la vague permet de prendre l'avantage sans combattre : si tu pousses la vague vers la tourelle ennemie, l'adversaire est mal placé près de sa tourelle ; si elle vient vers toi, tu farmes en sécurité et tu es protégé du jungler. Les sbires lanceurs de sorts et les sbires de siège donnent plus d'or ; essaie de les tuer d'abord."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Sujet",
+        "Que faire",
+        "Remarque"
+       ],
+       "satirlar": [
+        [
+         "Dernier coup (CS)",
+         "Frappe le sbire quand sa vie est basse ; essaie la même vitesse et le même rythme à chaque fois",
+         "Riot n'a pas indiqué officiellement d'objectif de CS par minute ; mesure d'abord ta propre moyenne, puis augmente-la d'un cran chaque semaine"
+        ],
+        [
+         "Or",
+         "Éliminations, tourelles et objectifs donnent aussi de l'or ; mais tu perds de l'or en mourant",
+         "Ne reste pas inactif : retourner acheter un objet augmente ta puissance de combat"
+        ],
+        [
+         "Retour (recall)",
+         "Reviens quand tu peux t'offrir un nouvel objet et que la voie est sûre",
+         "Si tu pars quand la vague est près de ta tourelle, tu perds peu"
+        ],
+        [
+         "Gank",
+         "Devine de quel côté est le jungler ennemi",
+         "Si la jungle est inconnue, n'avance pas"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "La vision est la moitié d'un combat. Une Balise furtive (un trinket gratuit et temporaire) te donne de la vue sur la carte ; une Balise de contrôle s'achète et révèle les ennemis invisibles et les pièges. La durée et le prix des balises peuvent changer avec les patchs ; lis le texte de la boutique. Poser une balise autour des objectifs comme le dragon, le Baron et l'entrée de la rivière te prévient à l'avance de l'arrivée de l'ennemi."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Pose une balise à chaque retour ; un emplacement vide est une occasion gâchée.",
+        "Si la position du jungler ennemi est inconnue, ne cours pas après les objectifs.",
+        "Avant d'entrer dans des zones sombres comme les buissons et les entrées, regarde la minicarte.",
+        "Même si tu n'es pas Support, achète une Balise de contrôle ; c'est l'un des achats les plus utiles à l'équipe (vérifie le prix en jeu)."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Pendant ta première semaine, ton but n'est pas un nombre d'éliminations mais de baisser ton nombre de morts par rapport au match précédent."
+      }
+     ]
+    },
+    {
+     "id": "hedefler",
+     "baslik": "Objectifs de la carte et horaires",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Les objectifs donnent à l'équipe une puissance durable et de l'or. Les horaires ci-dessous reposent sur des sources communautaires (novembre 2026) ; Riot peut les changer avec les patchs, consulte donc les notes de patch actuelles. Riot n'a pas indiqué officiellement si l'objectif Atakhan est toujours sur la carte en 2026 ; il ne figure donc pas dans le tableau."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Objectif",
+        "Première apparition (environ)",
+        "Ce qu'il donne"
+       ],
+       "satirlar": [
+        [
+         "Rift Scuttler",
+         "2:55",
+         "Vision et un peu d'or ; dans la rivière"
+        ],
+        [
+         "Dragon élémentaire",
+         "5:00 ; toutes les 5 minutes après une mort",
+         "Un bonus d'équipe durable ; six types (Chemtech, Cloud, Hextech, Infernal, Mountain, Ocean)"
+        ],
+        [
+         "Larves du Vide",
+         "8:00 ; partent à 14:45 ; n'apparaissent qu'une fois",
+         "Créatures qui aident à détruire les tourelles"
+        ],
+        [
+         "Héraut de la Faille",
+         "15:00 ; part à 19:45",
+         "Un allié qui charge une tourelle"
+        ],
+        [
+         "Baron Nashor",
+         "20:00 ; 6 minutes après une mort",
+         "Un puissant bonus d'équipe ; renforce les sbires"
+        ],
+        [
+         "Âme du dragon et Dragon ancien",
+         "L'âme revient à l'équipe qui prend le 4e dragon ; l'Ancien apparaît 6 minutes après le 4e dragon",
+         "Les bonus les plus forts pour finir la partie"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Règle pratique : 30 à 60 secondes avant un objectif, pousse la vague de ta voie, reviens, achète une balise et approche avec ton équipe. Avant de combattre pour un objectif, compte où est le jungler ennemi et si tes coéquipiers sont en vie."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Les horaires ci-dessus changent avec les patchs. Les chiffres reposent sur des sources communautaires ; si une note de patch de Riot dit autre chose, suis-la."
+      }
+     ]
+    },
+    {
+     "id": "rune-esya",
+     "baslik": "Runes et logique des objets",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Les runes sont des bonus durables que tu choisis avant le début du match. Il y a cinq voies : Précision, Domination, Sorcellerie, Volonté et Inspiration. Tu choisis une rune maîtresse et les petites runes qui s'y rattachent. Ne te noie pas dans les détails : le jeu propose des pages de runes recommandées toutes prêtes pour ton champion ; utilise-les les premières semaines et ne les change pas."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Question",
+        "Réponse simple"
+       ],
+       "satirlar": [
+        [
+         "Quel objet acheter ?",
+         "Commence par l'onglet des objets recommandés de la boutique ; il propose un parcours tout prêt pour ton champion"
+        ],
+        [
+         "Dégâts ou solidité ?",
+         "Si ton équipe manque de dégâts, prends des dégâts ; si tu meurs toujours, prends de la solidité"
+        ],
+        [
+         "Et si l'ennemi a beaucoup de mages ?",
+         "Cherche des objets de résistance magique ; décide à ton premier retour"
+        ],
+        [
+         "Quand acheter ?",
+         "À chaque retour, achète le meilleur objet que ton or permet ; n'entre pas en combat avec de l'or non dépensé"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Ne change pas tout le temps les runes et les objets dans un même patch ; joue la même configuration au moins 5 matchs pour voir la différence.",
+        "Lis ce que fait ta rune maîtresse : certaines agissent au premier coup, d'autres dans les combats courts.",
+        "Ne mets pas sans réfléchir un objet de solidité sur un mage ni un objet de vitesse d'attaque sur un champion à capacités ; lis la description des capacités de ton champion."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Comprendre pourquoi un objet est recommandé te fait progresser plus vite que de mémoriser la liste."
+      }
+     ]
+    },
+    {
      "id": "ayarlar",
      "baslik": "Réglages : valeurs de départ",
      "bloklar": [
@@ -1102,6 +1777,10 @@
       {
        "tip": "ipucu",
        "metin": "Quand tu changes un réglage, joue quelques matchs avec la même valeur ; ne change pas d'avis tout de suite."
+      },
+      {
+       "tip": "p",
+       "metin": "Dans le lanceur, vérifie ta langue et ta région avant l'installation ; Riot publie la liste des régions sur sa page d'aide et la région Turquie y figure. Pendant un match, apprends les raccourcis un par un : d'abord Q, W, E, R pour les capacités, puis les touches d'objets. Surveille trois choses dans un match : ta propre vie, le délai de rechargement de la capacité de l'ennemi et la minicarte. Prendre l'habitude de les vérifier toutes les quelques secondes est l'entraînement le plus précieux de ta première semaine."
       }
      ]
     },
@@ -1157,6 +1836,30 @@
         "En Solo/Duo, tu peux jouer avec au plus un ami (duo).",
         "Le tableau vient de la page d'aide officielle de Riot ; les limites sont différentes à partir de Diamond."
        ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Palier",
+        "Divisions",
+        "Remarque"
+       ],
+       "satirlar": [
+        [
+         "Iron, Bronze, Silver, Gold, Platinum, Emerald, Diamond",
+         "IV - I (4 divisions)",
+         "Tu montes d'une division avec les LP"
+        ],
+        [
+         "Master, Grandmaster, Challenger",
+         "Pas de division",
+         "Un seul classement ; les seuils évoluent pendant la saison (aide Riot)"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Les règles de placement et de Classé viennent des pages d'aide de Riot. Ton rang de départ ne reflète pas toujours ton vrai niveau ; sur tes 20 à 30 premiers matchs classés, ton rang peut bouger vite, ne t'y fixe pas."
       }
      ]
     },
@@ -1195,6 +1898,10 @@
          "metin": "Revois tes réglages, sans trop en changer."
         }
        ]
+      },
+      {
+       "tip": "p",
+       "metin": "Quand tu fais une erreur, ne te blâme pas ; choisis une seule erreur, trouve sa cause et corrige seulement celle-là au match suivant. Le progrès vient de petites corrections régulières."
       }
      ]
     },
@@ -1284,7 +1991,7 @@
     },
     {
      "ad": "Compatibilidad con turco",
-     "deger": "Revisa el cliente en turco y la región en la pantalla de instalación (no verificado por separado en esta guía)"
+     "deger": "La página de soporte de Riot lista un servidor regional de Turquía; la lista de idiomas del cliente, turco incluido, no está indicada oficialmente"
     }
    ],
    "bolumler": [
@@ -1298,7 +2005,7 @@
       },
       {
        "tip": "p",
-       "metin": "El juego avanza por parches. En noviembre de 2026 el parche actual es el **26.22** (notas de parche oficiales de Riot). Trata temas como el poder de mitad de partida de Mel, el evento ARAM Mayhem y el regreso de algunos campeones al modo Clásico. El siguiente parche se anuncia como el 26.23 (fuente secundaria)."
+       "metin": "El juego avanza por parches. En noviembre de 2026 el parche actual es el **26.22** (notas de parche oficiales de Riot). Trata temas como el poder de mitad de partida de Mel, el evento ARAM Mayhem y el regreso de algunos campeones al modo Clásico. El siguiente parche se anuncia como el 26.23 (según fuentes de la comunidad)."
       },
       {
        "tip": "p",
@@ -1370,7 +2077,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "En la Grieta hay cinco roles: Superior (Top), Jungla (Jungle), Central (Mid), Inferior (Bot) y Apoyo (Support). Los campeones del modo Clásico se desbloquean con el Nivel Clásico, la tienda o la rotación gratuita semanal. La tabla siguiente muestra opciones típicas que llevan años siendo sencillas (conocimiento propio; el equilibrio puede cambiar con los parches)."
+       "metin": "Summoner's Rift tiene cinco roles: Superior (Top), Jungla, Medio (Mid), Inferior (Bot) y Apoyo (Support). Los campeones Classic se desbloquean con el Nivel Classic, la tienda o la rotación gratuita semanal. La tabla de abajo muestra elecciones típicas que llevan tiempo siendo sencillas; son elecciones comunes de principiantes, no una recomendación oficial de Riot, y el equilibrio puede cambiar con los parches."
       },
       {
        "tip": "tablo",
@@ -1414,6 +2121,45 @@
       {
        "tip": "p",
        "metin": "Según la publicación oficial de los desarrolladores, las runas y las maestrías se simplificaron en el modo Clásico y volvió la moneda IP, así que puedes ahorrar jugando para desbloquear campeones. Lo esencial para un principiante es no ahogarse en detalles de runas y objetos los primeros días: usa las opciones recomendadas del juego y concéntrate primero en sobrevivir en línea."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rol",
+        "Tarea principal",
+        "Tu primer objetivo"
+       ],
+       "satirlar": [
+        [
+         "Superior",
+         "Línea en solitario; resistencia y peleas",
+         "Remata súbditos, no mueras"
+        ],
+        [
+         "Jungla",
+         "Mata campamentos, ayuda a las líneas",
+         "Aprende una ruta segura, vigila dragón y Heraldo"
+        ],
+        [
+         "Medio",
+         "El centro del mapa; cerca de todos los lados",
+         "Haz daño, informa al jungla"
+        ],
+        [
+         "Inferior",
+         "Daño constante a distancia",
+         "Farmea sin morir con tu apoyo"
+        ],
+        [
+         "Apoyo",
+         "Visión, protección y ayuda al equipo",
+         "Coloca centinelas, mantén segura la línea inferior"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Si no sabes cuál elegir, empieza con Medio o Apoyo: el Medio está en el centro del mapa y ves el ritmo de la partida; el Apoyo aporta valor al equipo sin exigir mucha habilidad mecánica. En la selección de campeón, quien pide un rol primero lo consigue; si eres el último quizá tengas que jugar lo que quede, así que aprende 2 roles y 2 campeones en cada uno."
       }
      ]
     },
@@ -1474,6 +2220,168 @@
      ]
     },
     {
+     "id": "dalga-vizyon",
+     "baslik": "Oleadas de súbditos, oro y visión",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Los súbditos aparecen en oleadas a intervalos fijos y avanzan por la línea. Gestionar bien la oleada es la forma de ganar ventaja sin pelear: si empujas la oleada hacia la torre enemiga, el rival queda mal parado junto a su torre; si viene hacia ti, farmeas con seguridad y te proteges del jungla. Los súbditos lanzadores y los de asedio dan más oro; intenta matarlos primero."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Tema",
+        "Qué hacer",
+        "Nota"
+       ],
+       "satirlar": [
+        [
+         "Último golpe (CS)",
+         "Golpea al súbdito cuando tenga poca vida; prueba la misma velocidad y ritmo cada vez",
+         "Riot no ha indicado oficialmente un objetivo de CS por minuto; mide primero tu propia media y súbela un paso cada semana"
+        ],
+        [
+         "Oro",
+         "Bajas, torres y objetivos también dan oro; pero pierdes oro al morir",
+         "No te quedes parado: volver a comprar un objeto sube tu poder de combate"
+        ],
+        [
+         "Regreso (recall)",
+         "Vuelve cuando puedas pagar un objeto nuevo y la línea sea segura",
+         "Si te vas con la oleada cerca de tu torre, pierdes poco"
+        ],
+        [
+         "Gank",
+         "Adivina de qué lado está el jungla rival",
+         "Si no sabes dónde está la jungla, no avances"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "La visión es la mitad de una pelea. Un Centinela de sigilo (un objeto gratuito y temporal) te da vista en el mapa; un Centinela de control se compra y revela rivales invisibles y trampas. La duración y el precio pueden cambiar con los parches; lee el texto de la tienda. Colocar un centinela alrededor de objetivos como el dragón, el Barón y la entrada del río te avisa de antemano de que viene el rival."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Coloca un centinela en cada regreso; una ranura vacía es una oportunidad perdida.",
+        "Si no sabes dónde está el jungla rival, no corras tras objetivos.",
+        "Antes de entrar en zonas oscuras como arbustos y entradas, mira el minimapa.",
+        "Aunque no seas Apoyo, compra un Centinela de control; es una de las compras más útiles para el equipo (comprueba el precio en el juego)."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "En tu primera semana, que tu objetivo no sea el número de bajas sino bajar tus muertes respecto a la partida anterior."
+      }
+     ]
+    },
+    {
+     "id": "hedefler",
+     "baslik": "Objetivos del mapa y tiempos",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Los objetivos dan al equipo poder duradero y oro. Los tiempos de abajo se basan en fuentes de la comunidad (noviembre de 2026); Riot puede cambiarlos con los parches, así que mira las notas de parche actuales. Riot no ha indicado oficialmente si el objetivo Atakhan sigue en el mapa en 2026, por eso no figura en la tabla."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Objetivo",
+        "Primera aparición (aprox.)",
+        "Qué da"
+       ],
+       "satirlar": [
+        [
+         "Rift Scuttler",
+         "2:55",
+         "Visión y algo de oro; en el río"
+        ],
+        [
+         "Dragón elemental",
+         "5:00; cada 5 minutos tras una muerte",
+         "Un bonus duradero para el equipo; seis tipos (Chemtech, Cloud, Hextech, Infernal, Mountain, Ocean)"
+        ],
+        [
+         "Larvas del Vacío",
+         "8:00; se van a las 14:45; aparecen una vez",
+         "Criaturas que ayudan a romper torres"
+        ],
+        [
+         "Heraldo de la Grieta",
+         "15:00; se va a las 19:45",
+         "Un aliado que embiste una torre"
+        ],
+        [
+         "Barón Nashor",
+         "20:00; 6 minutos tras una muerte",
+         "Un fuerte bonus de equipo; potencia a los súbditos"
+        ],
+        [
+         "Alma del dragón y Dragón anciano",
+         "El alma va al equipo que toma el 4.º dragón; el Anciano aparece 6 minutos después del 4.º",
+         "Los bonus más fuertes para cerrar la partida"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Regla práctica: 30-60 segundos antes de un objetivo, empuja la oleada de tu línea, vuelve, compra un centinela y acércate con tu equipo. Antes de pelear por un objetivo cuenta dónde está el jungla rival y si tus compañeros están vivos."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Los tiempos de arriba cambian con los parches. Las cifras se basan en fuentes de la comunidad; si una nota de parche de Riot dice otra cosa, síguela."
+      }
+     ]
+    },
+    {
+     "id": "rune-esya",
+     "baslik": "Runas y lógica de objetos",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Las runas son mejoras duraderas que eliges antes de empezar la partida. Hay cinco caminos: Precisión, Dominación, Brujería, Valor e Inspiración. Eliges una runa clave y las runas menores ligadas a ella. No te ahogues en detalles: el juego ofrece páginas de runas recomendadas ya hechas para tu campeón; úsalas las primeras semanas y no las cambies."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Pregunta",
+        "Respuesta sencilla"
+       ],
+       "satirlar": [
+        [
+         "¿Qué objeto compro?",
+         "Empieza por la pestaña de objetos recomendados de la tienda; ofrece un camino ya hecho para tu campeón"
+        ],
+        [
+         "¿Daño o resistencia?",
+         "Si a tu equipo le falta daño, compra daño; si siempre mueres, compra resistencia"
+        ],
+        [
+         "¿Y si el rival tiene muchos magos?",
+         "Busca objetos de resistencia mágica; decide en tu primer regreso"
+        ],
+        [
+         "¿Cuándo comprar?",
+         "En cada regreso compra el mejor objeto que permita tu oro; no entres a pelear con oro sin gastar"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "No cambies runas y objetos todo el rato dentro de un parche; juega la misma configuración al menos 5 partidas para ver la diferencia.",
+        "Lee qué hace tu runa clave: unas actúan en el primer golpe, otras en peleas cortas.",
+        "No pongas sin pensar un objeto de resistencia a un mago ni uno de velocidad de ataque a un campeón de habilidades; lee la descripción de habilidades de tu campeón."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Entender por qué se recomienda un objeto te hace mejorar más rápido que memorizar la lista."
+      }
+     ]
+    },
+    {
      "id": "ayarlar",
      "baslik": "Ajustes: valores iniciales",
      "bloklar": [
@@ -1513,6 +2421,10 @@
       {
        "tip": "ipucu",
        "metin": "Cuando cambies un ajuste, juega unas partidas con el mismo valor; no cambies de opinión enseguida."
+      },
+      {
+       "tip": "p",
+       "metin": "En el lanzador revisa tu idioma y región antes de instalar; Riot publica la lista de regiones en su página de soporte y la región de Turquía está ahí. Durante una partida aprende los atajos de uno en uno: primero Q, W, E, R para las habilidades y luego las teclas de objetos. Vigila tres cosas en una partida: tu propia vida, el tiempo de reutilización de la habilidad del rival y el minimapa. Acostumbrarte a revisarlas cada pocos segundos es el entrenamiento más valioso de tu primera semana."
       }
      ]
     },
@@ -1568,6 +2480,30 @@
         "En Solo/Duo puedes jugar con un amigo como máximo (dúo).",
         "La tabla viene de la página de soporte oficial de Riot; los límites de Diamond en adelante son distintos."
        ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Nivel",
+        "Divisiones",
+        "Nota"
+       ],
+       "satirlar": [
+        [
+         "Iron, Bronze, Silver, Gold, Platinum, Emerald, Diamond",
+         "IV - I (4 divisiones)",
+         "Subes de división con LP"
+        ],
+        [
+         "Master, Grandmaster, Challenger",
+         "Sin divisiones",
+         "Una sola clasificación; los cortes cambian durante la temporada (soporte de Riot)"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Las reglas de colocación y Clasificatoria vienen de las páginas de soporte de Riot. Tu rango inicial no siempre refleja tu nivel real; en tus primeras 20-30 partidas clasificatorias tu rango puede moverse rápido, no te obsesiones."
       }
      ]
     },
@@ -1606,6 +2542,10 @@
          "metin": "Revisa tus ajustes, sin cambiar demasiado."
         }
        ]
+      },
+      {
+       "tip": "p",
+       "metin": "Cuando cometas un error no te culpes; elige un solo error, busca su causa y corrige solo ese en la siguiente partida. El progreso viene de pequeñas correcciones constantes."
       }
      ]
     },

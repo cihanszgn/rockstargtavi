@@ -1,8 +1,12 @@
 {
  "oyun": "path-of-exile-2",
- "guncelleme": "2026-11-14",
+ "guncelleme": "2026-11-15",
  "surum": "0.5.5 Forbidden Rites (Erken Erişim); 1.0 ve ücretsiz oynanış 11 Aralık 2026",
  "kaynaklar": [
+  {
+   "url": "https://store.steampowered.com/app/2694490/Path_of_Exile_2/",
+   "ad": "Steam: Path of Exile 2"
+  },
   {
    "url": "https://www.pathofexile.com/forum/view-thread/4012710",
    "ad": "Path of Exile forum: ExileCon announcements"
@@ -20,8 +24,8 @@
    "ad": "Maxroll: Path of Exile 2 class overview"
   },
   {
-   "url": "https://store.steampowered.com/app/2694490/Path_of_Exile_2/",
-   "ad": "Steam: Path of Exile 2"
+   "url": "https://pathofexile2.com/fullrelease",
+   "ad": "Path of Exile 2: 1.0 full release"
   }
  ],
  "diller": {
@@ -57,11 +61,11 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Path of Exile 2, Grinding Gear Games'in yaptığı karanlık bir aksiyon rol yapma oyunudur. Hayatta kalmak için dikkatli oynamak gerekir: düşmanları öylesine kesmek yerine kaçışı, konumu ve beceri bağlantılarını planlarsınız. Oyun, ilk Path of Exile'dan ayrı bir yapım olarak kendi sınıflarına ve hikâyesine sahiptir."
+       "metin": "Path of Exile 2, Grinding Gear Games'in yaptığı karanlık bir aksiyon rol yapma oyunudur. Hayatta kalmak için dikkatli oynamak gerekir: düşmanları öylesine kesmek yerine kaçışı, konumu ve beceri bağlantılarını planlarsınız. Oyun, ilk Path of Exile'dan ayrı bir yapım olarak kendi sınıflarına ve hikâyesine sahiptir. Oyunun hızı ilk Path of Exile'dan daha ağırdır; her savaş bir karar zinciridir ve bunu sevenler için derin, sevmeyenler için yorucu olabilir."
       },
       {
        "tip": "p",
-       "metin": "Oyun hâlâ **Erken Erişim** aşamasında. Şu anki yama **0.5.5 Forbidden Rites** etkinlik ligi (4 Eylül 2026'dan beri canlı). **1.0 tam sürüm ve ücretsiz oynanış 11 Aralık 2026'da** PC, PS5 ve Xbox Series X|S üzerinde başlıyor. 1.0 ile 5. ve 6. perdeler (kampanyanın tamamlanması), Duelist ve Shadow sınıfları, yeni bir oyun sonu hikâyesi, Conquerors of Wraeclast meydan okuma ligi ve büyük denge değişiklikleri geliyor. İkincil bir kaynağa göre Erken Erişim karakterleri kalıcı bir Erken Erişim ligine taşınıyor ve 1.0 ekonomisine aktarılmıyor; bunu 1.0'a yakın resmî duyurudan doğrulayın."
+       "metin": "Oyun hâlâ **Erken Erişim** aşamasında (6 Aralık 2024'ten beri). Şu anki yama **0.5.5 Forbidden Rites** etkinlik ligi (4 Eylül 2026'dan beri canlı). **1.0 tam sürüm 11 Aralık 2026'da** (PST) PC, PS5 ve Xbox Series X|S üzerinde başlıyor ve herkes için ücretsiz olacak (Inven Global, resmî tam sürüm sayfası). 1.0 ile 5. ve 6. perde (24 yeni bölge, 18 benzersiz patron, 20'den fazla adlı nadir karşılaşma), Shadow ve Duelist sınıfları, Conquerors of Wraeclast meydan okuma ligi ve büyük bir oyun sonu yenilemesi geliyor. **Erken Erişim karakterlerinin 1.0'a nasıl geçeceği** bu yazıdaki kaynaklarda net değil; resmî olarak açıklanmamış kabul edin ve 1.0'a yakın resmî duyuruya bakın."
       },
       {
        "tip": "ipucu",
@@ -80,15 +84,15 @@
       {
        "tip": "tablo",
        "basliklar": [
-        "",
-        "En düşük (ikincil kaynak)",
-        "Önerilen (ikincil kaynak)"
+        "Bileşen",
+        "Asgari (Steam)",
+        "Önerilen (Steam)"
        ],
        "satirlar": [
         [
          "İşlemci",
-         "i7-7700 veya Ryzen 5 2500X",
-         "i5-10500 veya Ryzen 7 3700X"
+         "Intel i7-7700 veya AMD Ryzen 5 2500X",
+         "Intel i5-10500 veya AMD Ryzen 5 3700X"
         ],
         [
          "Bellek (RAM)",
@@ -97,8 +101,13 @@
         ],
         [
          "Ekran kartı",
-         "GTX 960 3 GB, RX 470 veya Arc A380",
-         "RTX 2060 düzeyi"
+         "NVIDIA GTX 960 (3 GB), Intel Arc A380 veya AMD RX 470; en az 3 GB video belleği",
+         "NVIDIA RTX 2060, Intel Arc A770 veya AMD RX 5600 XT"
+        ],
+        [
+         "Sistem ve DirectX",
+         "Windows 10, DirectX 12",
+         "Windows 10, DirectX 12"
         ],
         [
          "Depolama",
@@ -109,7 +118,7 @@
       },
       {
        "tip": "p",
-       "metin": "Bu gereksinimler resmî sayfadan değil ikincil bir siteden alındı; kesin değerler için Steam mağaza sayfasına bakın. **Dil:** Steam'de İngilizce, Fransızca, Almanca, İspanyolca (İspanya), Japonca, Korece, Brezilya Portekizcesi, Rusça ve Tayca listeleniyor; **Türkçe yok**, oyun İngilizce oynanır. Kendi başına İngilizce eşya ve beceri adlarını öğrenmek gerekecek."
+       "metin": "Bu değerler Steam mağaza sayfasındaki resmî gereksinim listesidir. **Dil:** Steam'de 9 dil listeleniyor (arayüz ve altyazı); seslendirme yalnız İngilizcedir. **Türkçe yok**, oyun İngilizce oynanır; eşya ve beceri adlarını İngilizce öğrenmeniz gerekecek."
       },
       {
        "tip": "uyari",
@@ -123,7 +132,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Oyun yeni başlayana ilk bakışta ağır gelebilir. Aşağıdaki sıra, ilk gün için sade bir yoldur."
+       "metin": "Oyun yeni başlayana ilk bakışta ağır gelebilir. Aşağıdaki sıra, ilk gün için sade bir yoldur. İlk saatlerde amacınız hızlı bitirmek değil, sistemi tanımaktır: kaçış hareketini, beceri taşı yuvalarını ve direnç göstergesini her bölümde bir kez kontrol etmek yeterlidir."
       },
       {
        "tip": "adimlar",
@@ -170,7 +179,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Şu anda sekiz sınıf var. Her sınıfın iki veya üç yükseltilmiş uzmanlık (ascendancy) dalı vardır; ilk hedef bir sınıfı sevmek, uzmanlığı sonra seçmektir."
+       "metin": "Şu anda sekiz sınıf var. Her sınıfın iki veya üç yükseltilmiş uzmanlık (ascendancy) dalı vardır; ilk hedef bir sınıfı sevmek, uzmanlığı sonra seçmektir. Uzmanlık dalı, karakterin belirli bir noktadan sonra seçtiği özel güç yoludur ve denemeleri bitirerek açılır. 1.0 ile Shadow (hançer, tuzak ve gizlilik) ve Duelist sınıfları da eklenecek; bu iki sınıfın uzmanlık dalları henüz resmî olarak duyurulmuş değil, bu yüzden tabloda yer almıyor. Sınıf seçimi karakterinizi kalıcı kilitlemez; farklı bir sınıfla yeni karakter açmak ücretsizdir."
       },
       {
        "tip": "tablo",
@@ -244,7 +253,7 @@
       },
       {
        "tip": "p",
-       "metin": "Oyun sonunun ayrıntıları yamadan yamaya değişiyor (0.5.0'da oyun sonu baştan tasarlandı, Trial of Chaos yenilendi). Bu yüzden ezberlemek yerine güncel yama notlarını okumak daha doğrudur."
+       "metin": "Oyun sonunun ayrıntıları yamadan yamaya değişiyor (0.5.0'da oyun sonu baştan tasarlandı, Trial of Chaos yenilendi). Bu yüzden ezberlemek yerine güncel yama notlarını okumak daha doğrudur. Eğer 1.0'ı beklemeyi düşünüyorsanız şimdi kampanyanın ilk dört perdesini deneyip hangi sınıfın size uyduğunu görmek iyi bir hazırlıktır; kampanya geliştirmeleri 5. ve 6. perde ile tamamlanacak."
       }
      ]
     },
@@ -264,7 +273,208 @@
       },
       {
        "tip": "p",
-       "metin": "Basit kural: bir şeyi anlamadan para birimi harcamayın. Yeni oyuncular eşyayı kaybettiren, geri alınmayan bir işlemi denemeden önce kendi bilgisiyle neyi değiştirdiğini anlamalıdır."
+       "metin": "Basit kural: bir şeyi anlamadan para birimi harcamayın. Yeni oyuncular eşyayı kaybettiren, geri alınmayan bir işlemi denemeden önce kendi bilgisiyle neyi değiştirdiğini anlamalıdır. Oyun sonu eşyasının gücü çoğu zaman tek bir parçada değil, dirençleri, ruhu ve hasarı birlikte dengeleyen parçalar bütününde yatar. Bir eşyayı satmadan önce hesabınızın ve sandığınızın uyarılarını okuyun."
+      }
+     ]
+    },
+    {
+     "id": "beceri-ve-destek-taslari",
+     "baslik": "Beceri taşı ve destek taşı sistemi",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Path of Exile 2'de becerileriniz silah ve zırhtaki yuvalara takılan taşlardan gelir. **Beceri taşı** (skill gem) size bir saldırı veya büyü verir; **destek taşı** (support gem) o beceriye bağlanarak davranışını değiştirir, örneğin mermiyi çoğaltır veya hasar ekler. Bir beceri taşına bağlayabileceğiniz destek sayısı sınırlıdır ve bunu taş yuvaları belirler (sayılar yamalara göre değişir). Bu yüzden bir beceriyi seçerken yalnızca hasarına değil, hangi destek taşlarıyla iyi çalıştığına da bakın; iyi bir ikili çoğu zaman tek başına güçlü bir beceriden daha verimlidir."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Beceri taşı edinin",
+         "metin": "Kampanya boyunca eşya ve ödüllerden beceri taşları düşer; sınıfınıza uygun bir ana beceri seçin."
+        },
+        {
+         "baslik": "Yuvaya takın",
+         "metin": "Taşı silahınızdaki veya zırhınızdaki yuvaya yerleştirin; her yuva bir beceri ve ona bağlı destekleri taşır."
+        },
+        {
+         "baslik": "Destek taşı ekleyin",
+         "metin": "Ana beceriye bağlı destek taşları ekleyin; her destek ruh veya mana maliyetini de etkileyebilir."
+        },
+        {
+         "baslik": "Ruh (Spirit) bütçesini izleyin",
+         "metin": "Sürekli açık kalan beceriler ve yaratıklar ruh harcar; ruh bitince yeni sürekli beceri açamazsınız."
+        },
+        {
+         "baslik": "Becerinizi test edin",
+         "metin": "Bir bölgede kısa bir deneme yapın; çalışmıyorsa destek taşlarını değiştirin."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Aynı anda çok sayıda beceri kurmayın. Bir ana beceri ve iki yardımcı beceriyle başlayın; sistem öğrenmesi kolay ama derindir."
+      }
+     ]
+    },
+    {
+     "id": "direnc-ve-savunma",
+     "baslik": "Direnç ve savunma katmanları",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Ölümün çoğu savunma eksiğinden gelir. Hasar kadar katmanlı savunma da gerekir; aşağıdaki tablo ana katmanları özetler (ayrıntı yamaya göre değişir). Direnç üst sınırı ve zorluk cezaları yamaya göre değiştiği için güncel rakamı karakter ekranından okuyun."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Katman",
+        "Ne işe yarar?",
+        "Not"
+       ],
+       "satirlar": [
+        [
+         "Direnç (ateş, soğuk, yıldırım, kaos)",
+         "İlgili elementten gelen hasarı yüzdeyle azaltır",
+         "En kritik katman; eşya değiştirince kontrol edin"
+        ],
+        [
+         "Zırh",
+         "Fiziksel vuruşları azaltır",
+         "Ağır zırh ve kuvvet sınıfları için"
+        ],
+        [
+         "Kaçınma (evasion)",
+         "Vuruşun isabet etme ihtimalini düşürür",
+         "Çeviklik sınıfları için"
+        ],
+        [
+         "Enerji kalkanı",
+         "Sağlığın önünde ek bir tampon",
+         "Zekâ sınıfları için"
+        ],
+        [
+         "Blok",
+         "Bir kısım saldırıyı engeller",
+         "Kalkan veya özel eşyalarla"
+        ],
+        [
+         "Yuvarlanma",
+         "Ölümcül saldırıyı elle atlatmak",
+         "Her sınıfta; beceri ister"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Direnci düşük bir karakterle zorlu patron veya harita denemesi çoğu zaman tek vuruşta biter. Direnç eksiğinizi ilk önce kapatın, sonra hasar ekleyin."
+      }
+     ]
+    },
+    {
+     "id": "para-birimi",
+     "baslik": "Para birimi küreleri tablosu",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Eşya yapmak için kullanılan küreler (orb) hem takas aracı hem güçlendirme malzemesidir. Aşağıdaki tablo yaygın küreleri anlatır; etkileri yamalara göre değişebildiği için güncel tabloyu oyun içi açıklamasından kontrol edin."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Küre",
+        "Kabaca ne yapar?",
+        "Ne zaman kullanılır?"
+       ],
+       "satirlar": [
+        [
+         "Transmutation",
+         "Normal eşyayı büyülü (sihirli) yapar",
+         "Kampanya başı geçici eşya"
+        ],
+        [
+         "Augmentation",
+         "Sihirli eşyaya bir özellik ekler",
+         "Kampanyada ucuz geliştirme"
+        ],
+        [
+         "Regal",
+         "Sihirli eşyayı nadire yükseltir",
+         "Kampanya sonu ve harita başı"
+        ],
+        [
+         "Exalted",
+         "Nadir eşyaya yeni özellik ekler",
+         "Eşyanın yapımı sırasında"
+        ],
+        [
+         "Chaos",
+         "Nadir eşyada bir özelliği yeniler",
+         "Beğenmediğiniz özelliği değiştirmek"
+        ],
+        [
+         "Divine",
+         "Özelliklerin sayısal değerini yeniden belirler",
+         "Değerli eşyanın son rötuşu"
+        ],
+        [
+         "Annulment",
+         "Rastgele bir özelliği siler",
+         "Riskli ve pahalı işlem"
+        ],
+        [
+         "Vaal",
+         "Eşyayı bozabilen riskli yükseltme",
+         "Yalnızca kaybetmeyi göze alırsanız"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Para birimini kampanyada harcamayın; oyun sonunda çok daha değerli olur. Ticaret yalnızca oyunun resmî mekanizmasıyla yapılır."
+      }
+     ]
+    },
+    {
+     "id": "kampanya-ve-harita",
+     "baslik": "Kampanya perdeleri ve oyun sonu haritaları",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Kampanya şu an 1-4 arası perdelerden oluşuyor ve her perde bir büyük patronla biter. 1.0 ile 5. ve 6. perde eklenerek hikâye tamamlanacak (Inven Global). Kampanya bittikten sonra Atlas adlı harita sistemine geçilir:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Aşama",
+        "Ne olur?",
+        "Ne işe yarar?"
+       ],
+       "satirlar": [
+        [
+         "Kampanya perdeleri",
+         "Hikâyeyi bölge bölge izlersiniz",
+         "Seviye, eşya ve beceri tabanı"
+        ],
+        [
+         "Uzmanlık denemeleri",
+         "Ascendancy dalını açarsınız",
+         "Sınıfın asıl gücü"
+        ],
+        [
+         "Harita taşları (waystone)",
+         "Atlas'taki bölümlere girmek için kullanılır",
+         "Daha zor düşman ve daha iyi eşya"
+        ],
+        [
+         "Patron ve etkinlikler",
+         "Atlas'ta özel patronlar ve olaylar",
+         "Değerli ödül ve ekonomi"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Kampanyayı bitirince oyunun zorluğu bir üst kademeyle yeniden oynanabilir. Haritada yeni olan zorluk, sizin savunma ve hasar dengenizi test eder; acele edip yüksek harita denemeyin. Harita taşlarının kademeleri ve harita üzerindeki etkinliklerin ayrıntıları 1.0'da değişecek; Atlas ve oyun sonu yenilemesi hakkında resmî rakamlar henüz açıklanmadı. Güncel bilgi için 1.0 yama notlarını bekleyin."
       }
      ]
     },
@@ -294,7 +504,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Path of Exile hesabınız eşyalarınızı ve ilerlemenizi taşır. Parolanızı, hesap bilgilerinizi ve doğrulama kodlarınızı kimseyle paylaşmayın."
+       "metin": "Path of Exile hesabınız eşyalarınızı ve ilerlemenizi taşır. Parolanızı, hesap bilgilerinizi ve doğrulama kodlarınızı kimseyle paylaşmayın. Ücretsiz oynanış başladığında oyuna yeni oyuncu akını olacağı için sahte hediye, sahte ticaret ve hesap çalma girişimleri artabilir. Hesabınıza iki adımlı doğrulama ekleyin, parolanızı başka hiçbir yerde kullanmayın ve oyun içi bir kişi sizden parola, kod veya dış bir sitede giriş yapmanızı isterse reddedin. Resmî destek sizden asla parolanızı istemez."
       },
       {
        "tip": "liste",
@@ -380,11 +590,11 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Path of Exile 2 is a dark action role-playing game made by Grinding Gear Games. Surviving takes careful play: instead of just cutting enemies down, you plan around escapes, positioning and skill links. It is a separate game from the first Path of Exile, with its own classes and story."
+       "metin": "Path of Exile 2 is a dark action role-playing game made by Grinding Gear Games. Surviving takes careful play: instead of just cutting enemies down, you plan around escapes, positioning and skill links. It is a separate game from the first Path of Exile, with its own classes and story. The pace of the game is heavier than the original Path of Exile; every fight is a chain of decisions, which can be deep for those who like it and tiring for those who do not."
       },
       {
        "tip": "p",
-       "metin": "The game is still in **Early Access**. The current patch is the **0.5.5 Forbidden Rites** event league (live since 4 September 2026). **The 1.0 full release and free-to-play start on 11 December 2026** on PC, PS5 and Xbox Series X|S. 1.0 brings Acts 5 and 6 (completing the campaign), the Duelist and Shadow classes, a new endgame story, the Conquerors of Wraeclast challenge league and large balance changes. According to a secondary source, Early Access characters move to a permanent Early Access league and are not carried into the 1.0 economy; confirm that in the official announcement closer to 1.0."
+       "metin": "The game is still in **Early Access** (since 6 December 2024). The current patch is the **0.5.5 Forbidden Rites** event league (live since 4 September 2026). **The 1.0 full release starts on 11 December 2026** (PST) on PC, PS5 and Xbox Series X|S and will be free for everyone (Inven Global, the official full-release page). 1.0 brings Acts 5 and 6 (24 new areas, 18 unique bosses, more than 20 named rare encounters), the Shadow and Duelist classes, the Conquerors of Wraeclast challenge league and a big endgame overhaul. **How Early Access characters carry over to 1.0** is not clear in the sources used here; treat it as not officially stated and look at the official announcement closer to 1.0."
       },
       {
        "tip": "ipucu",
@@ -403,15 +613,15 @@
       {
        "tip": "tablo",
        "basliklar": [
-        "",
-        "Minimum (secondary source)",
-        "Recommended (secondary source)"
+        "Component",
+        "Minimum (Steam)",
+        "Recommended (Steam)"
        ],
        "satirlar": [
         [
          "Processor",
-         "i7-7700 or Ryzen 5 2500X",
-         "i5-10500 or Ryzen 7 3700X"
+         "Intel i7-7700 or AMD Ryzen 5 2500X",
+         "Intel i5-10500 or AMD Ryzen 5 3700X"
         ],
         [
          "Memory (RAM)",
@@ -420,8 +630,13 @@
         ],
         [
          "Graphics card",
-         "GTX 960 3 GB, RX 470 or Arc A380",
-         "RTX 2060 class"
+         "NVIDIA GTX 960 (3 GB), Intel Arc A380 or AMD RX 470; at least 3 GB of video memory",
+         "NVIDIA RTX 2060, Intel Arc A770 or AMD RX 5600 XT"
+        ],
+        [
+         "System and DirectX",
+         "Windows 10, DirectX 12",
+         "Windows 10, DirectX 12"
         ],
         [
          "Storage",
@@ -432,7 +647,7 @@
       },
       {
        "tip": "p",
-       "metin": "These requirements come from a secondary site rather than the official page; see the Steam store page for exact values. **Language:** Steam lists English, French, German, Spanish (Spain), Japanese, Korean, Brazilian Portuguese, Russian and Thai; **Turkish is not supported**, so the game is played in English. You will have to learn item and skill names in English on your own."
+       "metin": "These values are the official requirements list on the Steam store page. **Language:** Steam lists 9 languages (interface and subtitles); the voice acting is English only. **There is no Turkish**; the game is played in English, so you will have to learn item and skill names in English."
       },
       {
        "tip": "uyari",
@@ -446,7 +661,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "At first glance the game can feel heavy to a beginner. The order below is a plain path for the first day."
+       "metin": "At first glance the game can feel heavy to a beginner. The order below is a plain path for the first day. In the first hours your goal is not to finish fast but to get to know the system: checking the dodge roll, the gem sockets and the resistance display once in each area is enough."
       },
       {
        "tip": "adimlar",
@@ -493,7 +708,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "There are currently eight classes. Each class has two or three ascendancy branches; the first goal is to like a class, and to choose the ascendancy later."
+       "metin": "There are currently eight classes. Each class has two or three ascendancy branches; the first goal is to like a class, and to choose the ascendancy later. An ascendancy is the special power path a character picks at a certain point, unlocked by finishing the trials. With 1.0 the Shadow (daggers, traps and stealth) and Duelist classes will be added too; the ascendancies of these two classes have not been officially announced yet, so they are not in the table. Choosing a class does not lock you in; opening a new character with a different class is free."
       },
       {
        "tip": "tablo",
@@ -567,7 +782,7 @@
       },
       {
        "tip": "p",
-       "metin": "Endgame details change from patch to patch (0.5.0 redesigned the endgame and overhauled Trial of Chaos). So instead of memorizing, it is more accurate to read the current patch notes."
+       "metin": "Endgame details change from patch to patch (0.5.0 redesigned the endgame and overhauled Trial of Chaos). So instead of memorizing, it is more accurate to read the current patch notes. If you plan to wait for 1.0, trying the first four acts of the campaign now to see which class suits you is good preparation; the campaign will be completed with Acts 5 and 6."
       }
      ]
     },
@@ -587,7 +802,208 @@
       },
       {
        "tip": "p",
-       "metin": "Simple rule: do not spend currency on something you do not understand. Before trying an irreversible action that can lose an item, a new player should understand what it changes."
+       "metin": "Simple rule: do not spend currency on something you do not understand. Before trying an irreversible action that can lose an item, a new player should understand what it changes. The strength of endgame gear often lies not in a single piece but in a set of pieces that balance resistances, Spirit and damage together. Before selling an item, read the warnings on your account and stash."
+      }
+     ]
+    },
+    {
+     "id": "beceri-ve-destek-taslari",
+     "baslik": "The skill gem and support gem system",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "In Path of Exile 2 your abilities come from gems socketed into your weapons and armor. A **skill gem** gives you an attack or spell; a **support gem** links to that skill and changes its behavior, for example multiplying the projectile or adding damage. The number of supports you can link to a skill gem is limited and set by the sockets (numbers change with patches). So when choosing a skill, look not only at its damage but also at which supports it works well with; a good pairing is often more efficient than a strong skill on its own."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Get a skill gem",
+         "metin": "Skill gems drop from items and rewards through the campaign; choose a main skill that suits your class."
+        },
+        {
+         "baslik": "Socket it",
+         "metin": "Place the gem in a socket on your weapon or armor; each socket holds a skill and its linked supports."
+        },
+        {
+         "baslik": "Add support gems",
+         "metin": "Add support gems linked to the main skill; each support can also change the Spirit or mana cost."
+        },
+        {
+         "baslik": "Watch the Spirit budget",
+         "metin": "Permanently active skills and minions spend Spirit; when Spirit runs out you cannot turn on a new permanent skill."
+        },
+        {
+         "baslik": "Test your skill",
+         "metin": "Do a short trial in an area; if it does not work, swap the support gems."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Do not build many skills at once. Start with one main skill and two helper skills; the system is easy to learn but deep."
+      }
+     ]
+    },
+    {
+     "id": "direnc-ve-savunma",
+     "baslik": "Resistance and defense layers",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Most deaths come from missing defenses. You need layered defense as well as damage; the table below summarizes the main layers (details change with patches). Because the resistance cap and difficulty penalties change with patches, read the current figure on the character screen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Layer",
+        "What it does",
+        "Note"
+       ],
+       "satirlar": [
+        [
+         "Resistance (fire, cold, lightning, chaos)",
+         "Reduces damage from that element by a percentage",
+         "The most critical layer; check it when you swap gear"
+        ],
+        [
+         "Armor",
+         "Reduces physical hits",
+         "For heavy armor and strength classes"
+        ],
+        [
+         "Evasion",
+         "Lowers the chance a hit lands",
+         "For dexterity classes"
+        ],
+        [
+         "Energy shield",
+         "An extra buffer in front of health",
+         "For intelligence classes"
+        ],
+        [
+         "Block",
+         "Stops part of the attacks",
+         "With shields or special items"
+        ],
+        [
+         "Dodge roll",
+         "Sidestepping a deadly attack by hand",
+         "On every class; takes skill"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Trying a hard boss or map with low resistance often ends in one hit. Close your resistance gap first, then add damage."
+      }
+     ]
+    },
+    {
+     "id": "para-birimi",
+     "baslik": "Currency orb table",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The orbs used to craft items are both a trade tool and an upgrade material. The table below describes the common orbs; since their effects can change with patches, check the current table in the in-game description."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Orb",
+        "Roughly what it does",
+        "When to use it"
+       ],
+       "satirlar": [
+        [
+         "Transmutation",
+         "Makes a normal item magic",
+         "Temporary gear at the campaign start"
+        ],
+        [
+         "Augmentation",
+         "Adds a property to a magic item",
+         "Cheap upgrading in the campaign"
+        ],
+        [
+         "Regal",
+         "Upgrades a magic item to rare",
+         "Late campaign and early maps"
+        ],
+        [
+         "Exalted",
+         "Adds a new property to a rare item",
+         "While crafting an item"
+        ],
+        [
+         "Chaos",
+         "Rerolls a property on a rare item",
+         "Swapping a property you dislike"
+        ],
+        [
+         "Divine",
+         "Rerolls the numeric values of properties",
+         "The final touch on a valuable item"
+        ],
+        [
+         "Annulment",
+         "Removes a random property",
+         "A risky and expensive action"
+        ],
+        [
+         "Vaal",
+         "A risky upgrade that can ruin an item",
+         "Only if you accept losing it"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Do not spend currency during the campaign; it is worth far more in the endgame. Trading happens only through the game's official mechanism."
+      }
+     ]
+    },
+    {
+     "id": "kampanya-ve-harita",
+     "baslik": "Campaign acts and endgame maps",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The campaign currently consists of Acts 1 to 4 and each act ends with a big boss. With 1.0, Acts 5 and 6 are added to complete the story (Inven Global). After the campaign you move to the map system called the Atlas:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Stage",
+        "What happens",
+        "What it is for"
+       ],
+       "satirlar": [
+        [
+         "Campaign acts",
+         "You follow the story area by area",
+         "Level, gear and skill base"
+        ],
+        [
+         "Ascendancy trials",
+         "You unlock the ascendancy branch",
+         "The class's real power"
+        ],
+        [
+         "Waystones",
+         "Used to enter areas on the Atlas",
+         "Harder enemies and better gear"
+        ],
+        [
+         "Bosses and events",
+         "Special bosses and events on the Atlas",
+         "Valuable rewards and economy"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "After you finish the campaign, the game can be replayed at a higher difficulty step. The new difficulty on the maps tests the balance of your defense and damage; do not rush into high maps. The tiers of waystones and the details of events on the map will change in 1.0; official numbers about the Atlas and the endgame overhaul have not been announced yet. Wait for the 1.0 patch notes for current information."
       }
      ]
     },
@@ -617,7 +1033,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Your Path of Exile account carries your items and progress. Do not share your password, account details or verification codes with anyone."
+       "metin": "Your Path of Exile account carries your items and progress. Do not share your password, account details or verification codes with anyone. When free play starts, a flood of new players will arrive, so fake gifts, fake trades and account-stealing attempts may rise. Add two-step verification to your account, do not use your password anywhere else, and refuse if someone in the game asks you for a password, a code or to log in on an outside site. Official support never asks you for your password."
       },
       {
        "tip": "liste",
@@ -703,11 +1119,11 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Path of Exile 2 est un jeu de rôle d'action sombre créé par Grinding Gear Games. Survivre demande de jouer avec soin : au lieu de simplement abattre les ennemis, on planifie les esquives, le placement et les liens de compétences. C'est un jeu distinct du premier Path of Exile, avec ses propres classes et son histoire."
+       "metin": "Path of Exile 2 est un jeu de rôle d'action sombre créé par Grinding Gear Games. Survivre demande de jouer avec soin : au lieu de simplement abattre les ennemis, on planifie les esquives, le placement et les liens de compétences. C'est un jeu distinct du premier Path of Exile, avec ses propres classes et son histoire. Le rythme du jeu est plus lourd que celui du Path of Exile original ; chaque combat est une chaîne de décisions, ce qui peut être profond pour ceux qui aiment et fatigant pour les autres."
       },
       {
        "tip": "p",
-       "metin": "Le jeu est toujours en **accès anticipé**. Le patch actuel est la ligue événementielle **0.5.5 Forbidden Rites** (en ligne depuis le 4 septembre 2026). **La sortie complète 1.0 et le free-to-play commencent le 11 décembre 2026** sur PC, PS5 et Xbox Series X|S. La 1.0 apporte les actes 5 et 6 (qui terminent la campagne), les classes Duelist et Shadow, une nouvelle histoire d'endgame, la ligue de défi Conquerors of Wraeclast et de grands changements d'équilibrage. D'après une source secondaire, les personnages de l'accès anticipé passent dans une ligue d'accès anticipé permanente et ne sont pas repris dans l'économie de la 1.0 ; confirmez-le dans l'annonce officielle à l'approche de la 1.0."
+       "metin": "Le jeu est toujours en **accès anticipé** (depuis le 6 décembre 2024). Le patch actuel est la ligue événement **0.5.5 Forbidden Rites** (en ligne depuis le 4 septembre 2026). **La version complète 1.0 démarre le 11 décembre 2026** (PST) sur PC, PS5 et Xbox Series X|S et sera gratuite pour tous (Inven Global, page officielle de la version complète). La 1.0 apporte les actes 5 et 6 (24 nouvelles zones, 18 boss uniques, plus de 20 rencontres rares nommées), les classes Shadow et Duelist, la ligue défi Conquerors of Wraeclast et une grande refonte de la fin de jeu. **La façon dont les personnages de l'accès anticipé passent en 1.0** n'est pas claire dans les sources utilisées ici ; considérez-la comme non annoncée officiellement et consultez l'annonce officielle plus près de la 1.0."
       },
       {
        "tip": "ipucu",
@@ -726,15 +1142,15 @@
       {
        "tip": "tablo",
        "basliklar": [
-        "",
-        "Minimum (source secondaire)",
-        "Recommandé (source secondaire)"
+        "Composant",
+        "Minimum (Steam)",
+        "Recommandé (Steam)"
        ],
        "satirlar": [
         [
          "Processeur",
-         "i7-7700 ou Ryzen 5 2500X",
-         "i5-10500 ou Ryzen 7 3700X"
+         "Intel i7-7700 ou AMD Ryzen 5 2500X",
+         "Intel i5-10500 ou AMD Ryzen 5 3700X"
         ],
         [
          "Mémoire (RAM)",
@@ -743,19 +1159,24 @@
         ],
         [
          "Carte graphique",
-         "GTX 960 3 Go, RX 470 ou Arc A380",
-         "Classe RTX 2060"
+         "NVIDIA GTX 960 (3 Go), Intel Arc A380 ou AMD RX 470 ; au moins 3 Go de mémoire vidéo",
+         "NVIDIA RTX 2060, Intel Arc A770 ou AMD RX 5600 XT"
+        ],
+        [
+         "Système et DirectX",
+         "Windows 10, DirectX 12",
+         "Windows 10, DirectX 12"
         ],
         [
          "Stockage",
          "100 Go",
-         "100 Go, SSD conseillé"
+         "100 Go, SSD recommandé"
         ]
        ]
       },
       {
        "tip": "p",
-       "metin": "Cette configuration vient d'un site secondaire et non de la page officielle ; voyez la page Steam pour les valeurs exactes. **Langue :** Steam liste l'anglais, le français, l'allemand, l'espagnol (Espagne), le japonais, le coréen, le portugais brésilien, le russe et le thaï ; **le turc n'est pas pris en charge**, le jeu se joue donc en anglais. Il faudra apprendre seul les noms d'objets et de compétences en anglais."
+       "metin": "Ces valeurs sont la liste officielle de la configuration requise de la page Steam. **Langue :** Steam liste 9 langues (interface et sous-titres) ; le doublage est uniquement en anglais. **Il n'y a pas de turc** ; le jeu se joue en anglais, vous devrez donc apprendre les noms des objets et des compétences en anglais."
       },
       {
        "tip": "uyari",
@@ -769,7 +1190,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Au premier coup d'œil, le jeu peut sembler lourd pour un débutant. L'ordre ci-dessous est un chemin simple pour le premier jour."
+       "metin": "Au premier coup d'œil, le jeu peut sembler lourd pour un débutant. L'ordre ci-dessous est un chemin simple pour le premier jour. Dans les premières heures, votre but n'est pas de finir vite mais de connaître le système : vérifier la roulade, les châsses de gemmes et l'affichage des résistances une fois dans chaque zone suffit."
       },
       {
        "tip": "adimlar",
@@ -816,7 +1237,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Il y a actuellement huit classes. Chaque classe a deux ou trois branches d'ascendance (ascendancy) ; le premier but est d'aimer une classe, puis de choisir l'ascendance plus tard."
+       "metin": "Il y a actuellement huit classes. Chaque classe a deux ou trois branches d'ascendance (ascendancy) ; le premier but est d'aimer une classe, puis de choisir l'ascendance plus tard. Une ascendance est la voie de pouvoir spéciale qu'un personnage choisit à un certain moment, débloquée en terminant les épreuves. Avec la 1.0, les classes Shadow (dagues, pièges et furtivité) et Duelist seront aussi ajoutées ; les ascendances de ces deux classes n'ont pas encore été annoncées officiellement, elles ne figurent donc pas dans le tableau. Choisir une classe ne vous enferme pas ; ouvrir un nouveau personnage avec une autre classe est gratuit."
       },
       {
        "tip": "tablo",
@@ -890,7 +1311,7 @@
       },
       {
        "tip": "p",
-       "metin": "Les détails de l'endgame changent de patch en patch (la 0.5.0 a refondu l'endgame et remanié Trial of Chaos). Plutôt que de les mémoriser, mieux vaut lire les notes de patch actuelles."
+       "metin": "Les détails de l'endgame changent de patch en patch (la 0.5.0 a refondu l'endgame et remanié Trial of Chaos). Plutôt que de les mémoriser, mieux vaut lire les notes de patch actuelles. Si vous comptez attendre la 1.0, essayer dès maintenant les quatre premiers actes de la campagne pour voir quelle classe vous convient est une bonne préparation ; la campagne sera complétée par les actes 5 et 6."
       }
      ]
     },
@@ -910,7 +1331,208 @@
       },
       {
        "tip": "p",
-       "metin": "Règle simple : ne dépensez pas de monnaie pour quelque chose que vous ne comprenez pas. Avant d'essayer une action irréversible qui peut faire perdre un objet, un nouveau joueur doit comprendre ce qu'elle change."
+       "metin": "Règle simple : ne dépensez pas de monnaie pour quelque chose que vous ne comprenez pas. Avant d'essayer une action irréversible qui peut faire perdre un objet, un nouveau joueur doit comprendre ce qu'elle change. La force de l'équipement de fin de jeu ne tient souvent pas à une seule pièce mais à un ensemble de pièces qui équilibrent ensemble résistances, Esprit et dégâts. Avant de vendre un objet, lisez les avertissements de votre compte et de votre coffre."
+      }
+     ]
+    },
+    {
+     "id": "beceri-ve-destek-taslari",
+     "baslik": "Le système de gemmes de compétence et de soutien",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Dans Path of Exile 2, vos capacités viennent de gemmes serties dans vos armes et armures. Une **gemme de compétence** vous donne une attaque ou un sort ; une **gemme de soutien** se lie à cette compétence et change son comportement, par exemple en multipliant le projectile ou en ajoutant des dégâts. Le nombre de soutiens que vous pouvez lier à une gemme de compétence est limité et fixé par les châsses (les chiffres changent avec les patchs). Ainsi, en choisissant une compétence, regardez non seulement ses dégâts mais aussi avec quels soutiens elle fonctionne bien ; un bon duo est souvent plus efficace qu'une compétence forte seule."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Obtenez une gemme de compétence",
+         "metin": "Des gemmes de compétence tombent des objets et récompenses durant la campagne ; choisissez une compétence principale adaptée à votre classe."
+        },
+        {
+         "baslik": "Sertissez-la",
+         "metin": "Placez la gemme dans une châsse de votre arme ou armure ; chaque châsse porte une compétence et ses soutiens liés."
+        },
+        {
+         "baslik": "Ajoutez des gemmes de soutien",
+         "metin": "Ajoutez des gemmes de soutien liées à la compétence principale ; chaque soutien peut aussi modifier le coût en Esprit ou en mana."
+        },
+        {
+         "baslik": "Surveillez le budget d'Esprit",
+         "metin": "Les compétences actives en permanence et les serviteurs dépensent de l'Esprit ; quand il est épuisé, vous ne pouvez plus activer de nouvelle compétence permanente."
+        },
+        {
+         "baslik": "Testez votre compétence",
+         "metin": "Faites un court essai dans une zone ; si ça ne marche pas, changez les gemmes de soutien."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Ne montez pas beaucoup de compétences à la fois. Commencez par une compétence principale et deux compétences d'appoint ; le système est facile à apprendre mais profond."
+      }
+     ]
+    },
+    {
+     "id": "direnc-ve-savunma",
+     "baslik": "Résistances et couches de défense",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La plupart des morts viennent d'un manque de défense. Il faut une défense en couches autant que des dégâts ; le tableau ci-dessous résume les couches principales (les détails changent avec les patchs). Comme le plafond de résistance et les pénalités de difficulté changent avec les patchs, lisez le chiffre actuel sur l'écran du personnage."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Couche",
+        "À quoi elle sert",
+        "Remarque"
+       ],
+       "satirlar": [
+        [
+         "Résistance (feu, froid, foudre, chaos)",
+         "Réduit en pourcentage les dégâts de cet élément",
+         "La couche la plus critique ; vérifiez-la quand vous changez d'équipement"
+        ],
+        [
+         "Armure",
+         "Réduit les coups physiques",
+         "Pour les armures lourdes et les classes de force"
+        ],
+        [
+         "Évasion",
+         "Diminue la chance qu'un coup touche",
+         "Pour les classes de dextérité"
+        ],
+        [
+         "Bouclier d'énergie",
+         "Un tampon supplémentaire devant la vie",
+         "Pour les classes d'intelligence"
+        ],
+        [
+         "Blocage",
+         "Arrête une partie des attaques",
+         "Avec des boucliers ou des objets spéciaux"
+        ],
+        [
+         "Roulade",
+         "Esquiver à la main une attaque mortelle",
+         "Sur toutes les classes ; demande de l'habileté"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Tenter un boss ou une carte difficiles avec peu de résistance se termine souvent en un seul coup. Comblez d'abord votre manque de résistance, puis ajoutez des dégâts."
+      }
+     ]
+    },
+    {
+     "id": "para-birimi",
+     "baslik": "Tableau des orbes de monnaie",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Les orbes servant à fabriquer des objets sont à la fois un outil d'échange et un matériau d'amélioration. Le tableau ci-dessous décrit les orbes courants ; leurs effets pouvant changer avec les patchs, vérifiez le tableau actuel dans la description en jeu."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Orbe",
+        "Ce qu'il fait en gros",
+        "Quand l'utiliser"
+       ],
+       "satirlar": [
+        [
+         "Transmutation",
+         "Rend un objet normal magique",
+         "Équipement provisoire au début de la campagne"
+        ],
+        [
+         "Augmentation",
+         "Ajoute une propriété à un objet magique",
+         "Amélioration bon marché en campagne"
+        ],
+        [
+         "Regal",
+         "Fait passer un objet magique en rare",
+         "Fin de campagne et début des cartes"
+        ],
+        [
+         "Exalted",
+         "Ajoute une nouvelle propriété à un objet rare",
+         "Pendant la fabrication d'un objet"
+        ],
+        [
+         "Chaos",
+         "Relance une propriété d'un objet rare",
+         "Remplacer une propriété que vous n'aimez pas"
+        ],
+        [
+         "Divine",
+         "Relance les valeurs numériques des propriétés",
+         "La touche finale d'un objet de valeur"
+        ],
+        [
+         "Annulment",
+         "Supprime une propriété au hasard",
+         "Action risquée et chère"
+        ],
+        [
+         "Vaal",
+         "Amélioration risquée pouvant ruiner un objet",
+         "Seulement si vous acceptez de le perdre"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Ne dépensez pas la monnaie pendant la campagne ; elle vaut bien plus en fin de jeu. L'échange se fait uniquement par le mécanisme officiel du jeu."
+      }
+     ]
+    },
+    {
+     "id": "kampanya-ve-harita",
+     "baslik": "Actes de la campagne et cartes de fin de jeu",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La campagne se compose actuellement des actes 1 à 4 et chaque acte se termine par un gros boss. Avec la 1.0, les actes 5 et 6 sont ajoutés pour compléter l'histoire (Inven Global). Après la campagne, on passe au système de cartes appelé l'Atlas :"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Étape",
+        "Ce qui se passe",
+        "À quoi ça sert"
+       ],
+       "satirlar": [
+        [
+         "Actes de la campagne",
+         "Vous suivez l'histoire zone par zone",
+         "Base de niveau, d'équipement et de compétences"
+        ],
+        [
+         "Épreuves d'ascendance",
+         "Vous débloquez la branche d'ascendance",
+         "La vraie puissance de la classe"
+        ],
+        [
+         "Pierres de voie (waystones)",
+         "Servent à entrer dans les zones de l'Atlas",
+         "Ennemis plus durs et meilleur équipement"
+        ],
+        [
+         "Boss et événements",
+         "Boss et événements spéciaux dans l'Atlas",
+         "Récompenses de valeur et économie"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Une fois la campagne terminée, le jeu peut être rejoué à un cran de difficulté supérieur. La nouvelle difficulté sur les cartes teste l'équilibre de votre défense et de vos dégâts ; ne vous précipitez pas sur de hautes cartes. Les paliers des pierres de voie et les détails des événements sur la carte changeront en 1.0 ; les chiffres officiels sur l'Atlas et la refonte de la fin de jeu n'ont pas encore été annoncés. Attendez les notes de mise à jour de la 1.0 pour une information actuelle."
       }
      ]
     },
@@ -940,7 +1562,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Votre compte Path of Exile porte vos objets et votre progression. Ne partagez votre mot de passe, vos informations de compte ni vos codes de vérification avec personne."
+       "metin": "Votre compte Path of Exile porte vos objets et votre progression. Ne partagez votre mot de passe, vos informations de compte ni vos codes de vérification avec personne. Quand le jeu gratuit commencera, un afflux de nouveaux joueurs arrivera, donc les faux cadeaux, faux échanges et tentatives de vol de compte pourraient augmenter. Ajoutez la vérification en deux étapes à votre compte, n'utilisez votre mot de passe nulle part ailleurs et refusez si quelqu'un en jeu vous demande un mot de passe, un code ou de vous connecter sur un site extérieur. Le support officiel ne vous demande jamais votre mot de passe."
       },
       {
        "tip": "liste",
@@ -1026,11 +1648,11 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Path of Exile 2 es un juego de rol de acción oscuro creado por Grinding Gear Games. Sobrevivir exige jugar con cuidado: en lugar de limitarte a abatir enemigos, planificas esquivas, posición y enlaces de habilidades. Es un juego distinto del primer Path of Exile, con sus propias clases e historia."
+       "metin": "Path of Exile 2 es un juego de rol de acción oscuro creado por Grinding Gear Games. Sobrevivir exige jugar con cuidado: en lugar de limitarte a abatir enemigos, planificas esquivas, posición y enlaces de habilidades. Es un juego distinto del primer Path of Exile, con sus propias clases e historia. El ritmo del juego es más pesado que el del Path of Exile original; cada combate es una cadena de decisiones, lo que puede ser profundo para quien lo disfruta y cansado para quien no."
       },
       {
        "tip": "p",
-       "metin": "El juego sigue en **acceso anticipado**. El parche actual es la liga de evento **0.5.5 Forbidden Rites** (activa desde el 4 de septiembre de 2026). **El lanzamiento completo 1.0 y el free-to-play empiezan el 11 de diciembre de 2026** en PC, PS5 y Xbox Series X|S. La 1.0 trae los actos 5 y 6 (que completan la campaña), las clases Duelist y Shadow, una nueva historia de endgame, la liga de desafío Conquerors of Wraeclast y grandes cambios de equilibrio. Según una fuente secundaria, los personajes del acceso anticipado pasan a una liga de acceso anticipado permanente y no se trasladan a la economía de la 1.0; confírmalo en el anuncio oficial cuando se acerque la 1.0."
+       "metin": "El juego sigue en **acceso anticipado** (desde el 6 de diciembre de 2024). El parche actual es la liga de evento **0.5.5 Forbidden Rites** (activa desde el 4 de septiembre de 2026). **La versión completa 1.0 empieza el 11 de diciembre de 2026** (PST) en PC, PS5 y Xbox Series X|S y será gratuita para todos (Inven Global, página oficial de la versión completa). La 1.0 trae los actos 5 y 6 (24 zonas nuevas, 18 jefes únicos, más de 20 encuentros raros con nombre), las clases Shadow y Duelist, la liga de desafío Conquerors of Wraeclast y una gran renovación del final del juego. **Cómo pasarán los personajes del acceso anticipado a la 1.0** no está claro en las fuentes usadas aquí; considéralo no anunciado oficialmente y mira el anuncio oficial más cerca de la 1.0."
       },
       {
        "tip": "ipucu",
@@ -1049,15 +1671,15 @@
       {
        "tip": "tablo",
        "basliklar": [
-        "",
-        "Mínimo (fuente secundaria)",
-        "Recomendado (fuente secundaria)"
+        "Componente",
+        "Mínimo (Steam)",
+        "Recomendado (Steam)"
        ],
        "satirlar": [
         [
          "Procesador",
-         "i7-7700 o Ryzen 5 2500X",
-         "i5-10500 o Ryzen 7 3700X"
+         "Intel i7-7700 o AMD Ryzen 5 2500X",
+         "Intel i5-10500 o AMD Ryzen 5 3700X"
         ],
         [
          "Memoria (RAM)",
@@ -1066,19 +1688,24 @@
         ],
         [
          "Tarjeta gráfica",
-         "GTX 960 3 GB, RX 470 o Arc A380",
-         "Clase RTX 2060"
+         "NVIDIA GTX 960 (3 GB), Intel Arc A380 o AMD RX 470; al menos 3 GB de memoria de vídeo",
+         "NVIDIA RTX 2060, Intel Arc A770 o AMD RX 5600 XT"
+        ],
+        [
+         "Sistema y DirectX",
+         "Windows 10, DirectX 12",
+         "Windows 10, DirectX 12"
         ],
         [
          "Almacenamiento",
          "100 GB",
-         "100 GB, se recomienda SSD"
+         "100 GB, SSD recomendado"
         ]
        ]
       },
       {
        "tip": "p",
-       "metin": "Estos requisitos vienen de un sitio secundario y no de la página oficial; consulta la página de Steam para los valores exactos. **Idioma:** Steam lista inglés, francés, alemán, español (España), japonés, coreano, portugués de Brasil, ruso y tailandés; **el turco no está soportado**, así que el juego se juega en inglés. Tendrás que aprender por tu cuenta los nombres de objetos y habilidades en inglés."
+       "metin": "Estos valores son la lista oficial de requisitos de la página de Steam. **Idioma:** Steam lista 9 idiomas (interfaz y subtítulos); la voz es solo en inglés. **No hay turco**; el juego se juega en inglés, así que tendrás que aprender los nombres de objetos y habilidades en inglés."
       },
       {
        "tip": "uyari",
@@ -1092,7 +1719,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "A primera vista el juego puede resultar pesado para un principiante. El orden siguiente es un camino sencillo para el primer día."
+       "metin": "A primera vista el juego puede resultar pesado para un principiante. El orden siguiente es un camino sencillo para el primer día. En las primeras horas tu meta no es acabar rápido sino conocer el sistema: basta con revisar la voltereta, los engarces de gemas y el indicador de resistencia una vez en cada zona."
       },
       {
        "tip": "adimlar",
@@ -1139,7 +1766,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Ahora mismo hay ocho clases. Cada clase tiene dos o tres ramas de ascendencia (ascendancy); el primer objetivo es que te guste una clase, y elegir la ascendencia después."
+       "metin": "Ahora mismo hay ocho clases. Cada clase tiene dos o tres ramas de ascendencia (ascendancy); el primer objetivo es que te guste una clase, y elegir la ascendencia después. Una ascendencia es el camino de poder especial que un personaje elige en cierto punto, desbloqueado al terminar las pruebas. Con la 1.0 también se añadirán las clases Shadow (dagas, trampas y sigilo) y Duelist; las ascendencias de estas dos clases aún no se han anunciado oficialmente, así que no figuran en la tabla. Elegir una clase no te encierra; abrir un personaje nuevo con otra clase es gratis."
       },
       {
        "tip": "tablo",
@@ -1213,7 +1840,7 @@
       },
       {
        "tip": "p",
-       "metin": "Los detalles del endgame cambian de parche en parche (la 0.5.0 rediseñó el endgame y renovó Trial of Chaos). Así que, en lugar de memorizar, es más acertado leer las notas del parche actual."
+       "metin": "Los detalles del endgame cambian de parche en parche (la 0.5.0 rediseñó el endgame y renovó Trial of Chaos). Así que, en lugar de memorizar, es más acertado leer las notas del parche actual. Si piensas esperar a la 1.0, probar ahora los cuatro primeros actos de la campaña para ver qué clase te conviene es una buena preparación; la campaña se completará con los actos 5 y 6."
       }
      ]
     },
@@ -1233,7 +1860,208 @@
       },
       {
        "tip": "p",
-       "metin": "Regla simple: no gastes moneda en algo que no entiendes. Antes de probar una acción irreversible que puede hacer perder un objeto, un jugador nuevo debe entender qué cambia."
+       "metin": "Regla simple: no gastes moneda en algo que no entiendes. Antes de probar una acción irreversible que puede hacer perder un objeto, un jugador nuevo debe entender qué cambia. La fuerza del equipo del final del juego a menudo no está en una sola pieza sino en un conjunto de piezas que equilibran juntas resistencias, Espíritu y daño. Antes de vender un objeto, lee las advertencias de tu cuenta y tu alijo."
+      }
+     ]
+    },
+    {
+     "id": "beceri-ve-destek-taslari",
+     "baslik": "El sistema de gemas de habilidad y de apoyo",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "En Path of Exile 2 tus habilidades vienen de gemas engarzadas en tus armas y armaduras. Una **gema de habilidad** te da un ataque o hechizo; una **gema de apoyo** se vincula a esa habilidad y cambia su comportamiento, por ejemplo multiplicando el proyectil o añadiendo daño. El número de apoyos que puedes vincular a una gema de habilidad es limitado y lo fijan los engarces (las cifras cambian con los parches). Por eso, al elegir una habilidad, no mires solo su daño sino también con qué apoyos funciona bien; una buena pareja suele ser más eficaz que una habilidad fuerte por sí sola."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Consigue una gema de habilidad",
+         "metin": "Las gemas de habilidad caen de objetos y recompensas durante la campaña; elige una habilidad principal adecuada a tu clase."
+        },
+        {
+         "baslik": "Engárzala",
+         "metin": "Coloca la gema en un engarce de tu arma o armadura; cada engarce lleva una habilidad y sus apoyos vinculados."
+        },
+        {
+         "baslik": "Añade gemas de apoyo",
+         "metin": "Añade gemas de apoyo vinculadas a la habilidad principal; cada apoyo también puede cambiar el coste de Espíritu o de maná."
+        },
+        {
+         "baslik": "Vigila el presupuesto de Espíritu",
+         "metin": "Las habilidades siempre activas y los esbirros gastan Espíritu; cuando se acaba no puedes activar una nueva habilidad permanente."
+        },
+        {
+         "baslik": "Prueba tu habilidad",
+         "metin": "Haz una prueba corta en una zona; si no funciona, cambia las gemas de apoyo."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "No montes muchas habilidades a la vez. Empieza con una habilidad principal y dos auxiliares; el sistema es fácil de aprender pero profundo."
+      }
+     ]
+    },
+    {
+     "id": "direnc-ve-savunma",
+     "baslik": "Resistencias y capas de defensa",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La mayoría de las muertes vienen de faltas de defensa. Hace falta defensa en capas además de daño; la tabla de abajo resume las capas principales (los detalles cambian con los parches). Como el tope de resistencia y las penalizaciones de dificultad cambian con los parches, lee la cifra actual en la pantalla del personaje."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Capa",
+        "Para qué sirve",
+        "Nota"
+       ],
+       "satirlar": [
+        [
+         "Resistencia (fuego, frío, rayo, caos)",
+         "Reduce en porcentaje el daño de ese elemento",
+         "La capa más crítica; revísala al cambiar de equipo"
+        ],
+        [
+         "Armadura",
+         "Reduce los golpes físicos",
+         "Para armaduras pesadas y clases de fuerza"
+        ],
+        [
+         "Evasión",
+         "Baja la probabilidad de que un golpe acierte",
+         "Para clases de destreza"
+        ],
+        [
+         "Escudo de energía",
+         "Un colchón extra delante de la vida",
+         "Para clases de inteligencia"
+        ],
+        [
+         "Bloqueo",
+         "Detiene parte de los ataques",
+         "Con escudos u objetos especiales"
+        ],
+        [
+         "Voltereta",
+         "Esquivar a mano un ataque mortal",
+         "En todas las clases; requiere habilidad"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Intentar un jefe o mapa difícil con poca resistencia suele acabar de un solo golpe. Cubre primero tu falta de resistencia, luego añade daño."
+      }
+     ]
+    },
+    {
+     "id": "para-birimi",
+     "baslik": "Tabla de orbes de moneda",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Los orbes usados para fabricar objetos son a la vez herramienta de intercambio y material de mejora. La tabla de abajo describe los orbes comunes; como sus efectos pueden cambiar con los parches, comprueba la tabla actual en la descripción dentro del juego."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Orbe",
+        "Qué hace a grandes rasgos",
+        "Cuándo usarlo"
+       ],
+       "satirlar": [
+        [
+         "Transmutation",
+         "Vuelve mágico un objeto normal",
+         "Equipo provisional al inicio de la campaña"
+        ],
+        [
+         "Augmentation",
+         "Añade una propiedad a un objeto mágico",
+         "Mejora barata en la campaña"
+        ],
+        [
+         "Regal",
+         "Sube un objeto mágico a raro",
+         "Final de campaña e inicio de los mapas"
+        ],
+        [
+         "Exalted",
+         "Añade una propiedad nueva a un objeto raro",
+         "Mientras fabricas un objeto"
+        ],
+        [
+         "Chaos",
+         "Rehace una propiedad de un objeto raro",
+         "Cambiar una propiedad que no te gusta"
+        ],
+        [
+         "Divine",
+         "Rehace los valores numéricos de las propiedades",
+         "El toque final de un objeto valioso"
+        ],
+        [
+         "Annulment",
+         "Elimina una propiedad al azar",
+         "Acción arriesgada y cara"
+        ],
+        [
+         "Vaal",
+         "Mejora arriesgada que puede arruinar un objeto",
+         "Solo si aceptas perderlo"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "No gastes moneda durante la campaña; vale mucho más en el final del juego. El comercio se hace solo por el mecanismo oficial del juego."
+      }
+     ]
+    },
+    {
+     "id": "kampanya-ve-harita",
+     "baslik": "Actos de la campaña y mapas del final del juego",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La campaña consta ahora de los actos 1 a 4 y cada acto termina con un gran jefe. Con la 1.0 se añaden los actos 5 y 6 para completar la historia (Inven Global). Tras la campaña se pasa al sistema de mapas llamado el Atlas:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Etapa",
+        "Qué ocurre",
+        "Para qué sirve"
+       ],
+       "satirlar": [
+        [
+         "Actos de la campaña",
+         "Sigues la historia zona por zona",
+         "Base de nivel, equipo y habilidades"
+        ],
+        [
+         "Pruebas de ascendencia",
+         "Desbloqueas la rama de ascendencia",
+         "El verdadero poder de la clase"
+        ],
+        [
+         "Piedras de camino (waystones)",
+         "Sirven para entrar en las zonas del Atlas",
+         "Enemigos más duros y mejor equipo"
+        ],
+        [
+         "Jefes y eventos",
+         "Jefes y eventos especiales en el Atlas",
+         "Recompensas valiosas y economía"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Una vez terminada la campaña, el juego puede rejugarse en un escalón de dificultad superior. La nueva dificultad en los mapas pone a prueba el equilibrio de tu defensa y tu daño; no te apresures a mapas altos. Los niveles de las piedras de camino y los detalles de los eventos en el mapa cambiarán en la 1.0; las cifras oficiales sobre el Atlas y la renovación del final del juego aún no se han anunciado. Espera las notas del parche 1.0 para información actual."
       }
      ]
     },
@@ -1263,7 +2091,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Tu cuenta de Path of Exile lleva tus objetos y tu progreso. No compartas tu contraseña, los datos de tu cuenta ni tus códigos de verificación con nadie."
+       "metin": "Tu cuenta de Path of Exile lleva tus objetos y tu progreso. No compartas tu contraseña, los datos de tu cuenta ni tus códigos de verificación con nadie. Cuando empiece el juego gratuito llegará una avalancha de jugadores nuevos, así que los falsos regalos, los falsos intercambios y los intentos de robo de cuentas pueden aumentar. Añade verificación en dos pasos a tu cuenta, no uses tu contraseña en ningún otro sitio y rechaza si alguien en el juego te pide una contraseña, un código o que inicies sesión en un sitio externo. El soporte oficial nunca te pide tu contraseña."
       },
       {
        "tip": "liste",

@@ -1178,6 +1178,18 @@
     var sayfa = $('.o-sayfa');
     if (!sayfa) return;
     var ic = $('.o-ic', sayfa), icAc = $('.o-ic-ac', sayfa), simdi = $('.o-ic-simdi', sayfa), duyuru = d.getElementById('o-duyuru');
+    var liste = ic && $('.o-ic-liste', ic), baglar = {}, etkin = null;
+    // uzun içindekilerde etkin bağlantı panelin kendi kaydırmasında görünür kalsın (masaüstü: .o-ic, mobil: açık liste); sayfa kaydırılmaz
+    function etkinGoster() {
+      var a = etkin && baglar[etkin];
+      if (!a) return;
+      [ic, liste].forEach(function (k) {
+        if (!k || k.scrollHeight <= k.clientHeight + 1) return;
+        var kr = k.getBoundingClientRect(), ar = a.getBoundingClientRect(), pay = 28;
+        if (ar.top < kr.top + pay) k.scrollTop += ar.top - kr.top - pay;
+        else if (ar.bottom > kr.bottom - pay) k.scrollTop += ar.bottom - kr.bottom + pay;
+      });
+    }
     function icKapat(odak) {
       if (!ic || !ic.classList.contains('acik')) return;
       ic.classList.remove('acik');
@@ -1188,15 +1200,14 @@
         var a = !ic.classList.contains('acik');
         ic.classList.toggle('acik', a);
         icAc.setAttribute('aria-expanded', a ? 'true' : 'false');
+        if (a) etkinGoster();
       });
       ic.addEventListener('click', function (e) { if (e.target.closest('.o-ic-liste a')) icKapat(false); });
       ic.addEventListener('keydown', function (e) { if (e.key === 'Escape') icKapat(true); });
       disariTikla(ic, function () { icKapat(false); });
     }
-    var baglar = {};
     $$('.o-ic-liste a[href^="#"]', sayfa).forEach(function (a) { baglar[decodeURIComponent(a.getAttribute('href').slice(1))] = a; });
     var bolumler = $$('.o-makale section[id]', sayfa).filter(function (s) { return baglar[s.id]; });
-    var etkin = null;
     function isaretle(id) {
       if (id === etkin) return;
       etkin = id;
@@ -1204,6 +1215,7 @@
         if (k === id) baglar[k].setAttribute('aria-current', 'true'); else baglar[k].removeAttribute('aria-current');
       });
       if (simdi) simdi.textContent = id && baglar[id] ? baglar[id].textContent : '';
+      etkinGoster();
     }
     var cubuk = $('.o-ilerleme span', sayfa), makale = $('.o-makale', sayfa), bekle = 0;
     function olc() {

@@ -5,19 +5,35 @@
  "kaynaklar": [
   {
    "url": "https://board.tr.metin2.gameforge.com/",
-   "ad": "Metin2 TR resmî forum (Gameforge)"
+   "ad": "Gameforge: Metin2 TR forum"
   },
   {
-   "url": "https://tr-wiki.metin2.gameforge.com/index.php/Türkiye_Sunucuları",
-   "ad": "Metin2 TR Wiki: Türkiye sunucuları"
+   "url": "https://tr-wiki.metin2.gameforge.com/index.php/T%C3%BCrkiye_Sunucular%C4%B1",
+   "ad": "Metin2 TR Wiki: servers"
   },
   {
-   "url": "https://metin2.support.gameforge.com/",
-   "ad": "Gameforge Metin2 destek merkezi"
+   "url": "https://en-wiki.metin2.gameforge.com/index.php/Main_Page",
+   "ad": "Metin2 Wiki: classes and world map"
   },
   {
-   "url": "https://play.metin2.gameforge.com/",
-   "ad": "Metin2 oyna (Gameforge)"
+   "url": "https://en-wiki.metin2.gameforge.com/index.php/Horse",
+   "ad": "Metin2 Wiki: Horse system"
+  },
+  {
+   "url": "https://en-wiki.metin2.gameforge.com/index.php/Upgrade_Items",
+   "ad": "Metin2 Wiki: Blacksmith upgrades"
+  },
+  {
+   "url": "https://en-wiki.metin2.gameforge.com/index.php/Dragon_Stone_Alchemy",
+   "ad": "Metin2 Wiki: Dragon Stone Alchemy"
+  },
+  {
+   "url": "https://www.pcgamingwiki.com/wiki/Metin2",
+   "ad": "PCGamingWiki: Metin2"
+  },
+  {
+   "url": "https://markets.businessinsider.com/news/stocks/metin2-celebrates-19-years-of-community-combat-and-commitment-1035719833",
+   "ad": "Gameforge: press release (January 2026)"
   }
  ],
  "diller": {
@@ -35,15 +51,15 @@
     },
     {
      "ad": "Fiyat modeli",
-     "deger": "Çoğu sunucu ücretsiz; bazı sunucular ücretli kademeli, oyun içi mağaza var"
+     "deger": "Ücretsiz oynanır (free-to-play); oyun içi mağaza isteğe bağlı. Mağaza fiyatları resmî olarak açıklanmadı"
     },
     {
      "ad": "Güncel sürüm",
-     "deger": "Son yama için resmî wiki ve foruma bakın; Yohara Güçlendirme sunucusu 13 Kasım 2026'da açıldı"
+     "deger": "26.2 güncellemesi (wiki 31 Ekim 2026'da güncellendi); Yohara Güçlendirme sunucusu 13 Kasım 2026'da açıldı"
     },
     {
      "ad": "Türkçe desteği",
-     "deger": "Oyunun Türkiye sürümü Türkçe yayımlanıyor"
+     "deger": "Türkçe: Türkiye sürümünün forumu, wikisi ve desteği Türkçe; PCGamingWiki dil listesinde de Türkçe var"
     }
    ],
    "bolumler": [
@@ -53,7 +69,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Metin2, Gameforge'un yayımladığı eski ve sevilen bir Kore işi çevrimiçi rol yapma oyunudur. Türkiye'de resmî forum, wiki ve destek (ticket) sistemi Gameforge'a aittir. Oyunda beş sınıf, üç krallık ve 120. seviyeden sonra **Şampiyon seviyeleri** bulunur."
+       "metin": "Metin2, Webzen'in geliştirdiği ve Gameforge'un yayımladığı eski ve sevilen bir Kore işi çevrimiçi rol yapma oyunudur; ücretsiz oynanır ve Gameforge'un Ocak 2026 duyurusuna göre 16'dan fazla dilde sunulur (o ay 19. yılını kutladı). Türkiye'de resmî forum, wiki ve destek (ticket) sistemi Gameforge'a aittir. Oyunda beş sınıf, üç krallık ve 120. seviyeden sonra **Şampiyon seviyeleri** bulunur."
       },
       {
        "tip": "p",
@@ -79,7 +95,7 @@
       },
       {
        "tip": "p",
-       "metin": "Türkiye sunucuları wiki'de listelenir. Ücretsiz olanlar arasında Marmara, Ezel, Barbaros, Dandanakan, Arkadaşlar ve Bagjanamu geçer; bazıları 'kapalı' işaretlidir ve yalnız mevcut karakteri olanlara açıktır. Ücretli kademeli sunucular da vardır: RUBY, EMERALD ve SAPPHIRE. Hangi sunucu yeni oyuncuya açık, wiki ve forumdan kontrol edin."
+       "metin": "Türkiye sunucuları wiki'nin 'Türkiye Sunucuları' sayfasında listelenir. Her sunucu 6 kanallıdır. Yeni sunucular SAPPHIRE[Star] ve [Safir] (açılış 08.08.2025); onları RUBY[Lucifer] (07.12.2023) ve RUBY[Charon] (19.08.2022) izler. Marmara, Ezel, Barbaros, Dandanakan, Arkadaşlar ve Bagjanamu klasik sunuculardır; Marmara, Arkadaşlar, Dandanakan ve Bagjanamu 'kapalı sunucu' simgesiyle işaretlidir. Wiki 'geçmiş sunucular' için sunucuların kapanmadığını, birleştirildiğini yazar (Fırtına, Lodos, Apex, Zephyr, Anadolu, ONYX Bazalt, EMERALD Alesta). Sunucuların ücret koşulları resmî olarak açıklanmadı."
       },
       {
        "tip": "tablo",
@@ -90,7 +106,11 @@
        "satirlar": [
         [
          "Fiyat",
-         "Çoğu sunucu ücretsiz; bazıları ücretli kademeli. Oyun içi mağaza isteğe bağlı"
+         "Ücretsiz oynanır; oyun içi mağaza isteğe bağlı. Mağaza fiyatları resmî olarak açıklanmadı"
+        ],
+        [
+         "Platform",
+         "Windows; Gameforge hesabıyla yayıncı sitesinden (Steam'de mevcut değil)"
         ],
         [
          "Sınıflar",
@@ -103,16 +123,24 @@
         [
          "Seviye yapısı",
          "120. seviyeye kadar normal seviye, sonrasında Şampiyon seviyeleri"
+        ],
+        [
+         "Minimum sistem",
+         "Windows 7, Pentium 3 1,0 GHz, 512 MB RAM, 32 MB ekran belleği, 2 GB disk"
+        ],
+        [
+         "Önerilen sistem",
+         "Windows 8, Pentium 4 1,8 GHz, 1 GB RAM, 64 MB ekran belleği, 3 GB disk"
         ]
        ]
       },
       {
        "tip": "p",
-       "metin": "Sunucu seçerken üç şeye bakın: arkadaşlarınızın nerede oynadığı, sunucunun kalabalığı ve ücretli kademe olup olmadığı. Kalabalık bir sunucuda ticaret kolaydır ama rekabet sert olur; küçük sunucuda tersi geçerlidir. Ücretli kademelerde ne verildiğini satın almadan önce resmî sayfadan okuyun."
+       "metin": "Sunucu seçerken üç şeye bakın: arkadaşlarınızın nerede oynadığı, sunucunun kalabalığı ve sunucunun özel bir etkinlik takvimi olup olmadığı (wiki, 'etkinlik sunucusu' simgesiyle bunu işaretler). Kalabalık bir sunucuda ticaret kolaydır ama rekabet sert olur; küçük sunucuda tersi geçerlidir."
       },
       {
        "tip": "uyari",
-       "metin": "Gameforge'un sistem gereksinimlerini oyna sayfasından kontrol edin; burada rakam yazmıyorum çünkü sürüme göre değişir."
+       "metin": "Sistem gereksinimi rakamları PCGamingWiki'den alınmıştır (üçüncü taraf, eski sürüm listesi); Gameforge sayfalarında güncel bir liste yayımlanmamış. Rakamlar düşüktür, ama güncel Windows'ta kurulum ve ekran kartı sürücüsünü kontrol edin."
       }
      ]
     },
@@ -217,6 +245,92 @@
      ]
     },
     {
+     "id": "krallik-harita",
+     "baslik": "Krallıklar ve harita yapısı",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Metin2'de üç krallık vardır: **Chunjo** (sarı bayrak), **Jinno** (mavi bayrak) ve **Shinsoo** (kırmızı bayrak). Resmî wiki'nin dünya haritası her krallık için dört harita listeler: iki normal harita ve iki lonca bölgesi. Krallık seçimi oynanışı çok değiştirmez; asıl fark arkadaşlarınızın nerede olduğudur."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Harita",
+        "Chunjo",
+        "Jinno",
+        "Shinsoo"
+       ],
+       "satirlar": [
+        [
+         "Harita 1",
+         "Joan",
+         "Pyungmoo",
+         "Yongan"
+        ],
+        [
+         "Harita 2",
+         "Bokjung",
+         "Bakra",
+         "Yayang"
+        ],
+        [
+         "Lonca bölgesi",
+         "Waryong",
+         "Imha",
+         "Jungrang"
+        ],
+        [
+         "Lonca bölgesi 2",
+         "Songpa",
+         "Daeyami",
+         "Miryang"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Krallık haritalarının dışında krallığa bağlı olmayan (tarafsız) haritalar bulunur. Wiki'nin gruplandırması aşağıdadır; zindan ve etkinlik haritaları ayrı listelenir."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Harita grubu",
+        "Wiki'de listelenenler"
+       ],
+       "satirlar": [
+        [
+         "Tarafsız haritalar",
+         "Valley of Seungryong, Yongbi Desert, Mount Sohan, Fireland, Hwang Temple, Ghost Forest, Red Forest, Snakefield, Land of Giants"
+        ],
+        [
+         "Maymun zindanları",
+         "Hasun Dong (kolay), Jungsun Dong (normal), Sangsun Dong (zor)"
+        ],
+        [
+         "Yohara bölgesi",
+         "Abandoned Fortress, Dong Gwang Plain, Seo Gwang Wastelands, Gnoll Caves, Nam Gwang Chasm, Yilad Pass, Northwind Canyon ve diğerleri"
+        ],
+        [
+         "Zindanlar",
+         "Demon Tower, Devil's Catacomb, Spider Queen's Nest, Dragon's Temple, Meley's Lair, Zodiac Temple, Red Dragon Fortress, Nemere's Watchtower, Serpent Temple, Sung Mahi Tower, Depths of Greed ve diğerleri"
+        ],
+        [
+         "Etkinlik haritaları",
+         "Combat Zone, Isle of Mist, OX-Competition, Otherworld, Battle Royale, Sung Ma Invasion, Treasure Island"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Harita başına seviye aralığı wiki'de tek bir tabloda verilmiyor ve resmî olarak açıklanmadı; her haritanın wiki sayfasına bakın. Bilinen tek sağlam sıralama atın görev basamaklarıdır: at seviye 2-6 görevleri krallığınızın Harita 1'inde, 7-8 Seungryong Vadisi veya Yongbi Çölü'nde, 9-10 Sohan Dağı veya Doyyumhwan'da (Fireland) yapılır."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Haritaya gitmeden önce wiki'nin dünya haritası sayfasını açık tutun ve o haritanın sayfasında canavar seviyesine bakın; seviyenizin çok üstündeki haritada ilaç harcamak verimsizdir."
+      }
+     ]
+    },
+    {
      "id": "seviye",
      "baslik": "Seviye atlama: hızlı ve verimli yol",
      "bloklar": [
@@ -247,6 +361,54 @@
      ]
     },
     {
+     "id": "at-sistemi",
+     "baslik": "At: ilk binek ve geliştirme",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "At hem hız hem savaş aracıdır. Wiki'ye göre dört tür vardır: acemi (Beginner), savaş (War), askerî (Military) ve güçlü savaş (Mighty War) atı. Her türün mührü, yemi ve diriltme otu farklıdır: acemi atta mühür At Resmi ve yem saman (Hay), savaş atında Silahlı At Kitabı ve havuç, askerî atta Askerî At Kitabı ve kırmızı ginseng, güçlü savaş atında Altın At Kitabı ve Premium kırmızı ginseng."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Tür",
+        "At seviyesi (wiki tablosuna göre)",
+        "Nasıl ilerler?"
+       ],
+       "satirlar": [
+        [
+         "Acemi at",
+         "2-10",
+         "Görev basamakları: 2-6 Harita 1'de, 7-8 Seungryong Vadisi veya Yongbi Çölü'nde, 9-10 Sohan Dağı veya Doyyumhwan'da; her basamak 1 ile 5 kontrol noktası ister"
+        ],
+        [
+         "Savaş atı",
+         "12-20",
+         "Canavar avı: 12 için Bo x5, 13 Chuong x5, 14 Elite Orc General x10, 15 Black Orc x10, 16 Dark Tormentor x10, 17 Claw Poison Spider x10, 18 Desert Outlaw x20, 19 Ice Golem x10, 20 Fighting Tiger x20"
+        ],
+        [
+         "Askerî at",
+         "21-40",
+         "EXP, Yang ve yem: 21. seviye 12.500 EXP, 500.000 Yang, 50 yem; her basamakta Yang 500.000 artar, 30. seviyeden itibaren 5.000.000 Yang ve 50 yem; 40 azamidir"
+        ],
+        [
+         "Güçlü savaş atı",
+         "Askerî atın üstü",
+         "Altın At Kitabı ve Premium kırmızı ginseng kullanılır; ayrıntısı resmî olarak açıklanmadı"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Çağırma ve statlar:** At çağırma (Call Horse) başarı şansı seviye 0'da yüzde 10, 1'de yüzde 15, 2'de yüzde 20, 3'te yüzde 30'dur; 4. seviyeden sonra her seviyede 10 puan artarak 10. seviyede yüzde 100'e ulaşır. Atın statları seviyeyle artar: seviye 1'de VIT 18, INT 9, STR 26, DEX 35; seviye 10'da 23, 12, 35, 46; seviye 20'de 32, 16, 48, 64."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Askerî at basamakları pahalıdır: 30. seviyeden sonra her basamak 5.000.000 Yang ve 50 yem ister. Atı geliştirmeye başlamadan önce Yang bütçenizi ekipman yükseltmeyle bölüştürün."
+      }
+     ]
+    },
+    {
      "id": "ekonomi",
      "baslik": "Yang ve ekonomi: yalnız oyun içi yollar",
      "bloklar": [
@@ -273,6 +435,102 @@
       {
        "tip": "uyari",
        "metin": "Yang, hesap veya eşyayı gerçek parayla satmak ya da satın almak (RMT) oyun kurallarına aykırıdır ve hesabı kapattırır. Yalnız oyun içi ticaret penceresini kullanın."
+      }
+     ]
+    },
+    {
+     "id": "yukseltme",
+     "baslik": "Eşya yükseltme: demirciler ve seçenekleri",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Eşya yükseltme demircilerde yapılır ve her demircinin kuralı farklıdır. Wiki'nin 'Upgrade Items' sayfasına göre seçenekler şunlardır:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Demirci",
+        "Neyi yükseltir?",
+        "Özelliği"
+       ],
+       "satirlar": [
+        [
+         "Demirci (Blacksmith)",
+         "Seviyesi ne olursa olsun her eşya; çoğu epik yükseltme",
+         "Temel başarı şansını verir; epik yükseltme her zaman yüzde 100"
+        ],
+        [
+         "Seon-Pyeong",
+         "Her eşya ve tüm epik yükseltmeler",
+         "Seviye sınırı yok"
+        ],
+        [
+         "Lonca demircisi",
+         "Epik olmayan eşya",
+         "Yüzde 10 daha fazla Yang ister; lonca yalnız bir tür seçer (zırh, silah veya takı)"
+        ],
+        [
+         "Yılan Tapınağı demircisi",
+         "Yalnız eldiven",
+         "Yükseltme eşyası gerekmez; başarısızlıkta eldiven yok olmaz, derecesi 1 düşer"
+        ],
+        [
+         "Şeytan Kulesi demircisi",
+         "90. seviyeye kadar epik olmayan eşya",
+         "Yükseltme eşyası gerekmez; Demirci ve Seon-Pyeong'a göre yüzde 10 ek başarı şansı"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Yükseltme eşyalarının ve başarı oranlarının sayısal listesi resmî olarak açıklanmadı. Yılan Tapınağı'nda eldivenin başarısızlıkta yok olmadığının özellikle yazılması, diğer yükseltmelerde başarısızlığın eşyayı kaybettirebileceğini düşündürür (bu bir çıkarımdır)."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Değerli bir eşyayı yükseltmeden önce ilk denemeleri değersiz eşyada yapıp oranı hissedin; kayıp riskini Yang bütçesine katın ve yalnız oyun içi demircileri kullanın."
+      }
+     ]
+    },
+    {
+     "id": "ejderha-tasi",
+     "baslik": "Ejderha taşı simyası ve biyolog görevleri",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Ejderha Taşı Simyası (Dragon Stone Alchemy), ejderha taşlarını geliştirme sistemidir. Wiki'ye göre sistem ilk kez 13.3 sürümünde geldi, Mythic sınıfı 19.0'da, Amethyst taşı 23.2'de eklendi. Taşlar Simyacı NPC'sine gidilip 'Ejderha taşı arıtma' (Dragon Stone Refinement) seçilerek yükseltilir."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Yükseltme",
+        "Gereken taş",
+        "Başarısızlıkta"
+       ],
+       "satirlar": [
+        [
+         "Sınıf: Rough, Cut, Rare, Antique, Legendary, Mythic",
+         "Her adım için aynı sınıftan 2 taş",
+         "Aynı sınıftan bir taş kalır"
+        ],
+        [
+         "Berraklık (Clarity)",
+         "Her adım için aynı berraklıktan 2 taş",
+         "Aynı berraklıktan bir taş kalır"
+        ],
+        [
+         "Seviye (Level)",
+         "Ayrıntı yayımlanmamış",
+         "Resmî olarak açıklanmamış"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Sayfada ayrıca taş etkinleştirme, süre uzatma ve taş çıkarma başlıkları vardır; ayrıntılarını oyunda Simyacı'dan veya wiki sayfasından öğrenin. Biyolog görevleri için wiki ana sayfası ayrı bir 'Biologist Quests' bağlantısı verir; seviye ve ödül rakamları yamaya göre değişebilir, güncel değerler için o sayfaya bakın."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Her yükseltme denemesi iki taş ister ve başarısızlıkta yalnız bir taş döner; bu yüzden aynı sınıf veya berraklıkta çift topladıktan sonra deneyin."
       }
      ]
     },
@@ -308,6 +566,21 @@
          "Sunucu ekonomisine bağlı"
         ]
        ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Set Bonus ve Set Effect (takım bonusları)",
+        "Energy System (enerji sistemi) ve Pet System (evcil hayvan)",
+        "Costume System, Aura Outfit System ve Shoulder Sash System (kostüm, aura, omuz kuşağı)",
+        "Relic System, Binding System ve Belt System",
+        "Gaya System ve Monster Card System",
+        "Private Shop (özel dükkân) ve Auto-Hunt (otomatik av)"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Yukarıdaki sistemlerin her birinin resmî wiki'de ayrı sayfası vardır; hepsini baştan öğrenmeye çalışmayın. İhtiyacınız olan sistemi bir hedefe bağlayın (ör. ekipman için yükseltme ve set bonusu, hareket için at)."
       },
       {
        "tip": "p",
@@ -354,7 +627,7 @@
        "ogeler": [
         {
          "s": "Metin2 ücretsiz mi?",
-         "c": "Çoğu sunucu ücretsizdir; bazı sunucular ücretli kademelidir. Oyun içi mağaza isteğe bağlıdır."
+         "c": "Evet, oynamak ücretsizdir. Oyun içi mağaza isteğe bağlıdır; mağaza fiyatları resmî olarak açıklanmadı."
         },
         {
          "s": "Yohara Güçlendirme sunucusu nedir?",
@@ -374,7 +647,15 @@
         },
         {
          "s": "Oyun Türkçe mi?",
-         "c": "Türkiye sürümü Türkçe yayımlanıyor."
+         "c": "Türkiye sürümünün forumu, wikisi ve destek sistemi Türkçedir; PCGamingWiki'nin dil listesinde de Türkçe vardır. Oyun içi arayüz dilini resmî sayfadan teyit edin."
+        },
+        {
+         "s": "Sistem gereksinimleri nedir?",
+         "c": "PCGamingWiki'ye göre minimum Windows 7, Pentium 3 1,0 GHz, 512 MB RAM, 32 MB ekran belleği ve 2 GB disk; önerilen Windows 8, Pentium 4 1,8 GHz, 1 GB RAM, 64 MB ekran belleği ve 3 GB disk. Gameforge'un güncel bir listesi yayımlanmamış."
+        },
+        {
+         "s": "Atı nasıl alırım?",
+         "c": "Acemi at görev basamaklarıyla geliştirilir (seviye 2-10), savaş atı canavar avıyla (12-20), askerî at EXP, Yang ve yemle (21-40)."
         }
        ]
       }
@@ -396,15 +677,15 @@
     },
     {
      "ad": "Pricing model",
-     "deger": "Most servers are free; some are paid tiers, with an in-game shop"
+     "deger": "Free to play; the in-game shop is optional. Shop prices are not officially stated"
     },
     {
      "ad": "Current version",
-     "deger": "See the official wiki and forum for the latest patch; the Yohara Boost server opened on 13 November 2026"
+     "deger": "Update 26.2 (wiki updated 31 October 2026); the Yohara Boost server opened on 13 November 2026"
     },
     {
      "ad": "Turkish support",
-     "deger": "The Turkish version of the game is published in Turkish"
+     "deger": "Turkish: the Turkish version's forum, wiki and support are in Turkish; PCGamingWiki's language list also has Turkish"
     }
    ],
    "bolumler": [
@@ -414,7 +695,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Metin2 is an old, well-loved online role-playing game from Korea, published by Gameforge. In Turkey the official forum, wiki and support (ticket) system belong to Gameforge. The game has five classes, three kingdoms and, after level 120, **Champion levels**."
+       "metin": "Metin2 is an old and beloved Korean online RPG developed by Webzen and published by Gameforge; it is free to play and, according to Gameforge's January 2026 announcement, available in more than 16 languages (it celebrated its 19th anniversary that month). In Turkey the official forum, wiki and support (ticket) system belong to Gameforge. The game has five classes, three kingdoms and **Champion levels** after level 120."
       },
       {
        "tip": "p",
@@ -440,7 +721,7 @@
       },
       {
        "tip": "p",
-       "metin": "The Turkish servers are listed on the wiki. Among the free ones are Marmara, Ezel, Barbaros, Dandanakan, Arkadaşlar and Bagjanamu; some are marked 'closed' and are open only to those with an existing character. There are also paid tier servers: RUBY, EMERALD and SAPPHIRE. Check the wiki and forum for which server is open to new players."
+       "metin": "Turkish servers are listed on the wiki's 'Türkiye Sunucuları' page. Every server has 6 channels. The newest servers are SAPPHIRE[Star] and [Safir] (opened 08.08.2025); they are followed by RUBY[Lucifer] (07.12.2023) and RUBY[Charon] (19.08.2022). Marmara, Ezel, Barbaros, Dandanakan, Arkadaşlar and Bagjanamu are classic servers; Marmara, Arkadaşlar, Dandanakan and Bagjanamu carry the 'closed server' icon. For 'past servers' the wiki says servers are not closed but merged (Fırtına, Lodos, Apex, Zephyr, Anadolu, ONYX Bazalt, EMERALD Alesta). Servers' fee conditions are not officially stated."
       },
       {
        "tip": "tablo",
@@ -451,7 +732,11 @@
        "satirlar": [
         [
          "Price",
-         "Most servers are free; some are paid tiers. The in-game shop is optional"
+         "Free to play; the in-game shop is optional. Shop prices are not officially stated"
+        ],
+        [
+         "Platform",
+         "Windows; from the publisher's website with a Gameforge account (not available on Steam)"
         ],
         [
          "Classes",
@@ -463,17 +748,25 @@
         ],
         [
          "Level structure",
-         "Normal levels up to 120, then Champion levels"
+         "Normal levels up to 120, Champion levels after that"
+        ],
+        [
+         "Minimum system",
+         "Windows 7, Pentium 3 1.0 GHz, 512 MB RAM, 32 MB video memory, 2 GB disk"
+        ],
+        [
+         "Recommended system",
+         "Windows 8, Pentium 4 1.8 GHz, 1 GB RAM, 64 MB video memory, 3 GB disk"
         ]
        ]
       },
       {
        "tip": "p",
-       "metin": "When picking a server look at three things: where your friends play, how crowded the server is and whether it is a paid tier. Trading is easy on a crowded server but competition is hard; on a small server the opposite holds. In paid tiers, read from the official page what is given before you buy."
+       "metin": "When choosing a server look at three things: where your friends play, how crowded the server is and whether it has a special event calendar (the wiki marks this with an 'event server' icon). Trade is easy on a crowded server but competition is hard; on a small server it is the other way round."
       },
       {
        "tip": "uyari",
-       "metin": "Check Gameforge's system requirements on the play page; I give no figure here because it changes with the version."
+       "metin": "The system requirement figures come from PCGamingWiki (third party, old version list); The Gameforge pages publish no current list. The figures are low, but on current Windows check the installation and your graphics driver."
       }
      ]
     },
@@ -578,6 +871,92 @@
      ]
     },
     {
+     "id": "krallik-harita",
+     "baslik": "Kingdoms and map structure",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Metin2 has three kingdoms: **Chunjo** (yellow flag), **Jinno** (blue flag) and **Shinsoo** (red flag). The official wiki's world map lists four maps for each kingdom: two normal maps and two guild zones. The kingdom choice does not change gameplay much; the real difference is where your friends are."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Map",
+        "Chunjo",
+        "Jinno",
+        "Shinsoo"
+       ],
+       "satirlar": [
+        [
+         "Map 1",
+         "Joan",
+         "Pyungmoo",
+         "Yongan"
+        ],
+        [
+         "Map 2",
+         "Bokjung",
+         "Bakra",
+         "Yayang"
+        ],
+        [
+         "Guild zone",
+         "Waryong",
+         "Imha",
+         "Jungrang"
+        ],
+        [
+         "Guild zone 2",
+         "Songpa",
+         "Daeyami",
+         "Miryang"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Outside the kingdom maps there are maps not tied to a kingdom (neutral). The wiki's grouping is below; dungeon and event maps are listed separately."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Map group",
+        "Listed on the wiki"
+       ],
+       "satirlar": [
+        [
+         "Neutral maps",
+         "Valley of Seungryong, Yongbi Desert, Mount Sohan, Fireland, Hwang Temple, Ghost Forest, Red Forest, Snakefield, Land of Giants"
+        ],
+        [
+         "Ape dungeons",
+         "Hasun Dong (easy), Jungsun Dong (normal), Sangsun Dong (hard)"
+        ],
+        [
+         "Yohara region",
+         "Abandoned Fortress, Dong Gwang Plain, Seo Gwang Wastelands, Gnoll Caves, Nam Gwang Chasm, Yilad Pass, Northwind Canyon and others"
+        ],
+        [
+         "Dungeons",
+         "Demon Tower, Devil's Catacomb, Spider Queen's Nest, Dragon's Temple, Meley's Lair, Zodiac Temple, Red Dragon Fortress, Nemere's Watchtower, Serpent Temple, Sung Mahi Tower, Depths of Greed and others"
+        ],
+        [
+         "Event maps",
+         "Combat Zone, Isle of Mist, OX-Competition, Otherworld, Battle Royale, Sung Ma Invasion, Treasure Island"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "A level range per map is not given in one table on the wiki and is not officially stated; look at each map's wiki page. The only solid ordering available is the horse quest steps: horse level 2-6 quests are done on your kingdom's Map 1, 7-8 in the Valley of Seungryong or Yongbi Desert, 9-10 on Mount Sohan or Doyyumhwan (Fireland)."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Keep the wiki's world map page open before travelling and check the monster level on that map's page; spending potions on a map far above your level is inefficient."
+      }
+     ]
+    },
+    {
      "id": "seviye",
      "baslik": "Leveling: a fast and efficient route",
      "bloklar": [
@@ -608,6 +987,54 @@
      ]
     },
     {
+     "id": "at-sistemi",
+     "baslik": "Horse: first mount and upgrading",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The horse is both a speed and a combat tool. According to the wiki there are four types: beginner (Beginner), war (War), military (Military) and mighty war (Mighty War) horse. Each type has its own seal, food and reviving herb: for the beginner horse the seal is the Horse Picture and the food is hay, for the war horse the Armed Horse Book and carrot, for the military horse the Military Horse Book and red ginseng, for the mighty war horse the Golden Horse Book and Premium red ginseng."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Type",
+        "Horse level (per the wiki table)",
+        "How it progresses"
+       ],
+       "satirlar": [
+        [
+         "Beginner horse",
+         "2-10",
+         "Quest steps: 2-6 on Map 1, 7-8 in the Valley of Seungryong or Yongbi Desert, 9-10 on Mount Sohan or Doyyumhwan; each step needs 1 to 5 checkpoints"
+        ],
+        [
+         "War horse",
+         "12-20",
+         "Monster hunting: 12 needs Bo x5, 13 Chuong x5, 14 Elite Orc General x10, 15 Black Orc x10, 16 Dark Tormentor x10, 17 Claw Poison Spider x10, 18 Desert Outlaw x20, 19 Ice Golem x10, 20 Fighting Tiger x20"
+        ],
+        [
+         "Military horse",
+         "21-40",
+         "EXP, Yang and fodder: level 21 needs 12,500 EXP, 500,000 Yang, 50 fodder; Yang rises by 500,000 per step, from level 30 it is 5,000,000 Yang and 50 fodder; 40 is the maximum"
+        ],
+        [
+         "Mighty war horse",
+         "Above the military horse",
+         "Uses the Golden Horse Book and Premium red ginseng; details are not officially stated"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Summoning and stats:** the Call Horse success chance is 10% at level 0, 15% at 1, 20% at 2 and 30% at 3; after level 4 it rises by 10 points per level and reaches 100% at level 10. The horse's stats rise with its level: at level 1 VIT 18, INT 9, STR 26, DEX 35; at level 10 23, 12, 35, 46; at level 20 32, 16, 48, 64."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Military horse steps are expensive: after level 30 each step needs 5,000,000 Yang and 50 fodder. Before you start upgrading the horse, split your Yang budget between gear upgrades and the horse."
+      }
+     ]
+    },
+    {
      "id": "ekonomi",
      "baslik": "Yang and economy: in-game routes only",
      "bloklar": [
@@ -634,6 +1061,102 @@
       {
        "tip": "uyari",
        "metin": "Selling or buying Yang, accounts or items for real money (RMT) breaks the rules and gets the account closed. Use only the in-game trade window."
+      }
+     ]
+    },
+    {
+     "id": "yukseltme",
+     "baslik": "Item upgrading: blacksmiths and options",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Item upgrading is done at blacksmiths and each blacksmith has different rules. According to the wiki's 'Upgrade Items' page the options are:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Blacksmith",
+        "What it upgrades",
+        "Feature"
+       ],
+       "satirlar": [
+        [
+         "Blacksmith",
+         "Any item regardless of level; most epic upgrades",
+         "Gives the base success rate; an epic upgrade is always 100%"
+        ],
+        [
+         "Seon-Pyeong",
+         "Any item and all epic upgrades",
+         "No level limit"
+        ],
+        [
+         "Guild blacksmith",
+         "Non-epic items",
+         "Costs 10% more Yang; the guild picks only one type (armour, weapon or jewellery)"
+        ],
+        [
+         "Serpent Temple smith",
+         "Gloves only",
+         "No upgrade items needed; on failure the glove is not destroyed, its grade drops by 1"
+        ],
+        [
+         "Demon Tower blacksmith",
+         "Non-epic items up to level 90",
+         "No upgrade items needed; 10% extra success chance over the Blacksmith and Seon-Pyeong"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "A numeric list of upgrade items and success rates is not officially stated. The fact that the page specifically says the glove is not destroyed on failure at the Serpent Temple suggests that other upgrades can lose the item on failure (this is an inference)."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Before upgrading a valuable item, make your first attempts on worthless items to get a feel for the rate; count the loss risk in your Yang budget and use only the in-game blacksmiths."
+      }
+     ]
+    },
+    {
+     "id": "ejderha-tasi",
+     "baslik": "Dragon stone alchemy and biologist quests",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Dragon Stone Alchemy (DSA) is the system for improving dragon stones. According to the wiki it first arrived in version 13.3, the Mythic class was added in 19.0 and the Amethyst stone in 23.2. Stones are upgraded by going to the Alchemist NPC and choosing 'Dragon Stone Refinement'."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Upgrade",
+        "Stones needed",
+        "On failure"
+       ],
+       "satirlar": [
+        [
+         "Class: Rough, Cut, Rare, Antique, Legendary, Mythic",
+         "2 stones of the same class for each step",
+         "One stone of the same class remains"
+        ],
+        [
+         "Clarity",
+         "2 stones of the same clarity for each step",
+         "One stone of the same clarity remains"
+        ],
+        [
+         "Level",
+         "Detail not published",
+         "Not officially stated"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "The page also has headings on stone activation, time extension and removing stones; learn their details from the Alchemist in game or from the wiki page. For biologist quests the wiki main page gives a separate 'Biologist Quests' link; level and reward figures change with patches, so check that page for current values."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Every upgrade attempt costs two stones and on failure only one comes back; so try after collecting a pair of the same class or clarity."
       }
      ]
     },
@@ -669,6 +1192,21 @@
          "Depends on the server economy"
         ]
        ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Set Bonus and Set Effect (set bonuses)",
+        "Energy System and Pet System",
+        "Costume System, Aura Outfit System and Shoulder Sash System",
+        "Relic System, Binding System and Belt System",
+        "Gaya System and Monster Card System",
+        "Private Shop and Auto-Hunt"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Each of the systems above has its own page on the official wiki; do not try to learn them all at once. Tie the system you need to a goal (e.g. upgrades and set bonuses for gear, the horse for movement)."
       },
       {
        "tip": "p",
@@ -715,7 +1253,7 @@
        "ogeler": [
         {
          "s": "Is Metin2 free?",
-         "c": "Most servers are free; some are paid tiers. The in-game shop is optional."
+         "c": "Yes, it is free to play. The in-game shop is optional; shop prices are not officially stated."
         },
         {
          "s": "What is the Yohara Boost server?",
@@ -734,8 +1272,16 @@
          "c": "1-2 are open to everyone, 3-4 to trusted players and 5-6 to Metin+ members."
         },
         {
-         "s": "Is the game in Turkish?",
-         "c": "The Turkish version is published in Turkish."
+         "s": "Is the game available in Turkish?",
+         "c": "The Turkish version's forum, wiki and support system are in Turkish; PCGamingWiki's language list also has Turkish. Confirm the in-game interface language on the official page."
+        },
+        {
+         "s": "What are the system requirements?",
+         "c": "According to PCGamingWiki the minimum is Windows 7, Pentium 3 1.0 GHz, 512 MB RAM, 32 MB video memory and 2 GB disk; recommended Windows 8, Pentium 4 1.8 GHz, 1 GB RAM, 64 MB video memory and 3 GB disk. Gameforge publishes no current list."
+        },
+        {
+         "s": "How do I get a horse?",
+         "c": "The beginner horse is upgraded with quest steps (levels 2-10), the war horse by monster hunting (12-20), the military horse with EXP, Yang and fodder (21-40)."
         }
        ]
       }
@@ -757,15 +1303,15 @@
     },
     {
      "ad": "Modèle tarifaire",
-     "deger": "La plupart des serveurs sont gratuits ; certains sont payants par paliers, avec une boutique en jeu"
+     "deger": "Gratuit (free-to-play) ; la boutique en jeu est facultative. Les prix de la boutique ne sont pas précisés officiellement"
     },
     {
      "ad": "Version actuelle",
-     "deger": "Dernier patch sur le wiki et le forum officiels ; serveur Yohara Boost ouvert le 13 novembre 2026"
+     "deger": "Mise à jour 26.2 (wiki mis à jour le 31 octobre 2026) ; le serveur Yohara Boost a ouvert le 13 novembre 2026"
     },
     {
      "ad": "Support du turc",
-     "deger": "La version turque du jeu est publiée en turc"
+     "deger": "Turc : le forum, le wiki et le support de la version turque sont en turc ; la liste de langues de PCGamingWiki comprend aussi le turc"
     }
    ],
    "bolumler": [
@@ -775,7 +1321,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Metin2 est un vieux jeu de rôle en ligne coréen très apprécié, publié par Gameforge. En Turquie, le forum officiel, le wiki et le système d'assistance (ticket) appartiennent à Gameforge. Le jeu compte cinq classes, trois royaumes et, après le niveau 120, des **niveaux Champion**."
+       "metin": "Metin2 est un ancien et très aimé RPG en ligne coréen développé par Webzen et publié par Gameforge ; il est gratuit et, selon l'annonce de Gameforge de janvier 2026, disponible en plus de 16 langues (il a fêté son 19e anniversaire ce mois-là). En Turquie, le forum officiel, le wiki et le système de support (ticket) appartiennent à Gameforge. Le jeu compte cinq classes, trois royaumes et des **niveaux Champion** après le niveau 120."
       },
       {
        "tip": "p",
@@ -801,7 +1347,7 @@
       },
       {
        "tip": "p",
-       "metin": "Les serveurs turcs figurent sur le wiki. Parmi les gratuits : Marmara, Ezel, Barbaros, Dandanakan, Arkadaşlar et Bagjanamu ; certains sont marqués « fermé » et ne sont ouverts qu'à ceux qui ont déjà un personnage. Il y a aussi des serveurs payants par paliers : RUBY, EMERALD et SAPPHIRE. Vérifiez sur le wiki et le forum quel serveur accueille les nouveaux joueurs."
+       "metin": "Les serveurs turcs sont listés sur la page « Türkiye Sunucuları » du wiki. Chaque serveur a 6 canaux. Les plus récents sont SAPPHIRE[Star] et [Safir] (ouverts le 08.08.2025) ; viennent ensuite RUBY[Lucifer] (07.12.2023) et RUBY[Charon] (19.08.2022). Marmara, Ezel, Barbaros, Dandanakan, Arkadaşlar et Bagjanamu sont des serveurs classiques ; Marmara, Arkadaşlar, Dandanakan et Bagjanamu portent l'icône « serveur fermé ». Pour les « serveurs passés », le wiki indique que les serveurs ne ferment pas mais fusionnent (Fırtına, Lodos, Apex, Zephyr, Anadolu, ONYX Bazalt, EMERALD Alesta). Les conditions tarifaires des serveurs ne sont pas précisées officiellement."
       },
       {
        "tip": "tablo",
@@ -812,7 +1358,11 @@
        "satirlar": [
         [
          "Prix",
-         "La plupart des serveurs sont gratuits ; certains sont payants par paliers. La boutique en jeu est facultative"
+         "Gratuit ; la boutique en jeu est facultative. Les prix de la boutique ne sont pas précisés officiellement"
+        ],
+        [
+         "Plateforme",
+         "Windows ; depuis le site de l'éditeur avec un compte Gameforge (pas disponible sur Steam)"
         ],
         [
          "Classes",
@@ -825,16 +1375,24 @@
         [
          "Structure des niveaux",
          "Niveaux normaux jusqu'à 120, puis niveaux Champion"
+        ],
+        [
+         "Système minimum",
+         "Windows 7, Pentium 3 1,0 GHz, 512 Mo de RAM, 32 Mo de mémoire vidéo, 2 Go de disque"
+        ],
+        [
+         "Système recommandé",
+         "Windows 8, Pentium 4 1,8 GHz, 1 Go de RAM, 64 Mo de mémoire vidéo, 3 Go de disque"
         ]
        ]
       },
       {
        "tip": "p",
-       "metin": "En choisissant un serveur, regardez trois choses : où jouent vos amis, l'affluence du serveur et s'il s'agit d'un palier payant. Le commerce est facile sur un serveur très fréquenté, mais la concurrence est rude ; sur un petit serveur, c'est l'inverse. Dans les paliers payants, lisez sur la page officielle ce qui est offert avant d'acheter."
+       "metin": "En choisissant un serveur, regardez trois choses : où jouent vos amis, l'affluence du serveur et s'il a un calendrier d'événements spécial (le wiki le marque par une icône « serveur d'événement »). Le commerce est facile sur un serveur très peuplé mais la concurrence y est rude ; sur un petit serveur, c'est l'inverse."
       },
       {
        "tip": "uyari",
-       "metin": "Vérifiez la configuration requise de Gameforge sur la page de jeu ; je n'indique pas de chiffre ici car il change selon la version."
+       "metin": "Les chiffres de configuration viennent de PCGamingWiki (tiers, ancienne liste de versions) ; les pages Gameforge ne publient aucune liste actuelle. Les chiffres sont bas, mais sous un Windows actuel, vérifiez l'installation et votre pilote graphique."
       }
      ]
     },
@@ -939,6 +1497,92 @@
      ]
     },
     {
+     "id": "krallik-harita",
+     "baslik": "Royaumes et structure des cartes",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Metin2 compte trois royaumes : **Chunjo** (drapeau jaune), **Jinno** (drapeau bleu) et **Shinsoo** (drapeau rouge). La carte du monde du wiki officiel liste quatre cartes par royaume : deux cartes normales et deux zones de guilde. Le choix du royaume change peu le jeu ; la vraie différence, c'est où se trouvent vos amis."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Carte",
+        "Chunjo",
+        "Jinno",
+        "Shinsoo"
+       ],
+       "satirlar": [
+        [
+         "Carte 1",
+         "Joan",
+         "Pyungmoo",
+         "Yongan"
+        ],
+        [
+         "Carte 2",
+         "Bokjung",
+         "Bakra",
+         "Yayang"
+        ],
+        [
+         "Zone de guilde",
+         "Waryong",
+         "Imha",
+         "Jungrang"
+        ],
+        [
+         "Zone de guilde 2",
+         "Songpa",
+         "Daeyami",
+         "Miryang"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "En dehors des cartes de royaume, il existe des cartes non liées à un royaume (neutres). Le regroupement du wiki figure ci-dessous ; les donjons et les cartes d'événement sont listés à part."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Groupe de cartes",
+        "Listé sur le wiki"
+       ],
+       "satirlar": [
+        [
+         "Cartes neutres",
+         "Valley of Seungryong, Yongbi Desert, Mount Sohan, Fireland, Hwang Temple, Ghost Forest, Red Forest, Snakefield, Land of Giants"
+        ],
+        [
+         "Donjons des singes",
+         "Hasun Dong (facile), Jungsun Dong (normal), Sangsun Dong (difficile)"
+        ],
+        [
+         "Région de Yohara",
+         "Abandoned Fortress, Dong Gwang Plain, Seo Gwang Wastelands, Gnoll Caves, Nam Gwang Chasm, Yilad Pass, Northwind Canyon et d'autres"
+        ],
+        [
+         "Donjons",
+         "Demon Tower, Devil's Catacomb, Spider Queen's Nest, Dragon's Temple, Meley's Lair, Zodiac Temple, Red Dragon Fortress, Nemere's Watchtower, Serpent Temple, Sung Mahi Tower, Depths of Greed et d'autres"
+        ],
+        [
+         "Cartes d'événement",
+         "Combat Zone, Isle of Mist, OX-Competition, Otherworld, Battle Royale, Sung Ma Invasion, Treasure Island"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Une tranche de niveau par carte n'est pas donnée dans un seul tableau sur le wiki et n'est pas précisée officiellement ; consultez la page wiki de chaque carte. Le seul ordre solide disponible est celui des étapes de quête du cheval : les quêtes du niveau 2 à 6 se font sur la Carte 1 de votre royaume, 7-8 dans la Valley of Seungryong ou le Yongbi Desert, 9-10 au Mount Sohan ou à Doyyumhwan (Fireland)."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Gardez la page de carte du monde du wiki ouverte avant de voyager et vérifiez le niveau des monstres sur la page de la carte ; dépenser des potions sur une carte très au-dessus de votre niveau est inefficace."
+      }
+     ]
+    },
+    {
      "id": "seviye",
      "baslik": "Monter en niveau : une voie rapide et efficace",
      "bloklar": [
@@ -969,6 +1613,54 @@
      ]
     },
     {
+     "id": "at-sistemi",
+     "baslik": "Cheval : première monture et amélioration",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Le cheval est à la fois un outil de vitesse et de combat. Selon le wiki, il existe quatre types : cheval débutant (Beginner), de guerre (War), militaire (Military) et de guerre puissant (Mighty War). Chaque type a son sceau, sa nourriture et son herbe de réanimation : pour le cheval débutant, le sceau est l'Horse Picture et la nourriture le foin (Hay) ; pour le cheval de guerre, l'Armed Horse Book et la carotte ; pour le militaire, le Military Horse Book et le ginseng rouge ; pour le puissant, le Golden Horse Book et le ginseng rouge Premium."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Type",
+        "Niveau du cheval (selon le tableau du wiki)",
+        "Comment il progresse"
+       ],
+       "satirlar": [
+        [
+         "Cheval débutant",
+         "2-10",
+         "Étapes de quête : 2-6 sur la Carte 1, 7-8 dans la Valley of Seungryong ou le Yongbi Desert, 9-10 au Mount Sohan ou à Doyyumhwan ; chaque étape demande 1 à 5 points de contrôle"
+        ],
+        [
+         "Cheval de guerre",
+         "12-20",
+         "Chasse aux monstres : 12 demande Bo x5, 13 Chuong x5, 14 Elite Orc General x10, 15 Black Orc x10, 16 Dark Tormentor x10, 17 Claw Poison Spider x10, 18 Desert Outlaw x20, 19 Ice Golem x10, 20 Fighting Tiger x20"
+        ],
+        [
+         "Cheval militaire",
+         "21-40",
+         "EXP, Yang et fourrage : le niveau 21 demande 12 500 EXP, 500 000 Yang, 50 fourrages ; le Yang augmente de 500 000 par étape, dès le niveau 30 c'est 5 000 000 Yang et 50 fourrages ; 40 est le maximum"
+        ],
+        [
+         "Cheval de guerre puissant",
+         "Au-dessus du militaire",
+         "Utilise le Golden Horse Book et le ginseng rouge Premium ; les détails ne sont pas précisés officiellement"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Appel et stats :** la chance de réussite de l'appel du cheval (Call Horse) est de 10 % au niveau 0, 15 % au 1, 20 % au 2 et 30 % au 3 ; après le niveau 4 elle augmente de 10 points par niveau et atteint 100 % au niveau 10. Les stats du cheval montent avec son niveau : au niveau 1, VIT 18, INT 9, STR 26, DEX 35 ; au niveau 10, 23, 12, 35, 46 ; au niveau 20, 32, 16, 48, 64."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Les étapes du cheval militaire sont chères : après le niveau 30, chaque étape demande 5 000 000 Yang et 50 fourrages. Avant d'améliorer le cheval, répartissez votre budget de Yang entre l'amélioration de l'équipement et le cheval."
+      }
+     ]
+    },
+    {
      "id": "ekonomi",
      "baslik": "Yang et économie : uniquement en jeu",
      "bloklar": [
@@ -995,6 +1687,102 @@
       {
        "tip": "uyari",
        "metin": "Vendre ou acheter du Yang, des comptes ou des objets contre de l'argent réel (RMT) enfreint les règles et fait fermer le compte. Utilisez uniquement la fenêtre d'échange en jeu."
+      }
+     ]
+    },
+    {
+     "id": "yukseltme",
+     "baslik": "Amélioration d'objets : forgerons et options",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "L'amélioration d'objets se fait chez les forgerons et chaque forgeron a ses propres règles. Selon la page « Upgrade Items » du wiki, les options sont les suivantes :"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Forgeron",
+        "Ce qu'il améliore",
+        "Particularité"
+       ],
+       "satirlar": [
+        [
+         "Forgeron (Blacksmith)",
+         "Tout objet quel que soit son niveau ; la plupart des améliorations épiques",
+         "Donne le taux de réussite de base ; une amélioration épique est toujours à 100 %"
+        ],
+        [
+         "Seon-Pyeong",
+         "Tout objet et toutes les améliorations épiques",
+         "Pas de limite de niveau"
+        ],
+        [
+         "Forgeron de guilde",
+         "Objets non épiques",
+         "Coûte 10 % de Yang en plus ; la guilde ne choisit qu'un type (armure, arme ou bijou)"
+        ],
+        [
+         "Forgeron du Serpent Temple",
+         "Gants uniquement",
+         "Pas d'objets d'amélioration nécessaires ; en cas d'échec le gant n'est pas détruit, son grade baisse de 1"
+        ],
+        [
+         "Forgeron de la Demon Tower",
+         "Objets non épiques jusqu'au niveau 90",
+         "Pas d'objets d'amélioration nécessaires ; 10 % de chance de réussite en plus par rapport au Forgeron et à Seon-Pyeong"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Une liste chiffrée des objets d'amélioration et des taux de réussite n'est pas précisée officiellement. Le fait que la page précise que le gant n'est pas détruit en cas d'échec au Serpent Temple laisse penser que d'autres améliorations peuvent faire perdre l'objet en cas d'échec (c'est une déduction)."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Avant d'améliorer un objet de valeur, faites vos premiers essais sur des objets sans valeur pour sentir le taux ; comptez le risque de perte dans votre budget de Yang et n'utilisez que les forgerons du jeu."
+      }
+     ]
+    },
+    {
+     "id": "ejderha-tasi",
+     "baslik": "Alchimie des pierres de dragon et quêtes du biologiste",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "L'alchimie des pierres de dragon (Dragon Stone Alchemy, DSA) est le système d'amélioration des pierres de dragon. Selon le wiki, elle est apparue dans la version 13.3, la classe Mythic a été ajoutée en 19.0 et la pierre Amethyst en 23.2. On améliore les pierres en allant voir le PNJ Alchimiste et en choisissant « Dragon Stone Refinement »."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Amélioration",
+        "Pierres nécessaires",
+        "En cas d'échec"
+       ],
+       "satirlar": [
+        [
+         "Classe : Rough, Cut, Rare, Antique, Legendary, Mythic",
+         "2 pierres de la même classe pour chaque étape",
+         "Une pierre de la même classe reste"
+        ],
+        [
+         "Clarté (Clarity)",
+         "2 pierres de la même clarté pour chaque étape",
+         "Une pierre de la même clarté reste"
+        ],
+        [
+         "Niveau (Level)",
+         "Détail non publié",
+         "Non précisé officiellement"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "La page comporte aussi des rubriques sur l'activation des pierres, la prolongation de durée et le retrait des pierres ; renseignez-vous sur leurs détails auprès de l'Alchimiste en jeu ou sur la page du wiki. Pour les quêtes du biologiste, la page d'accueil du wiki donne un lien « Biologist Quests » distinct ; les niveaux et récompenses changent avec les mises à jour, consultez donc cette page pour les valeurs actuelles."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Chaque tentative d'amélioration coûte deux pierres et en cas d'échec une seule revient ; essayez donc une fois que vous avez réuni une paire de même classe ou de même clarté."
       }
      ]
     },
@@ -1030,6 +1818,21 @@
          "Dépend de l'économie du serveur"
         ]
        ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Set Bonus et Set Effect (bonus de panoplie)",
+        "Energy System et Pet System (familier)",
+        "Costume System, Aura Outfit System et Shoulder Sash System",
+        "Relic System, Binding System et Belt System",
+        "Gaya System et Monster Card System",
+        "Private Shop (boutique privée) et Auto-Hunt (chasse automatique)"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Chacun des systèmes ci-dessus a sa propre page sur le wiki officiel ; n'essayez pas de tous les apprendre d'un coup. Rattachez le système dont vous avez besoin à un objectif (p. ex. amélioration et bonus de panoplie pour l'équipement, le cheval pour les déplacements)."
       },
       {
        "tip": "p",
@@ -1076,7 +1879,7 @@
        "ogeler": [
         {
          "s": "Metin2 est-il gratuit ?",
-         "c": "La plupart des serveurs sont gratuits ; certains sont payants par paliers. La boutique en jeu est facultative."
+         "c": "Oui, il est gratuit. La boutique en jeu est facultative ; les prix de la boutique ne sont pas précisés officiellement."
         },
         {
          "s": "Qu'est-ce que le serveur Yohara Boost ?",
@@ -1095,8 +1898,16 @@
          "c": "1-2 sont ouverts à tous, 3-4 aux joueurs de confiance et 5-6 aux membres Metin+."
         },
         {
-         "s": "Le jeu est-il en turc ?",
-         "c": "La version turque est publiée en turc."
+         "s": "Le jeu existe-t-il en turc ?",
+         "c": "Le forum, le wiki et le système de support de la version turque sont en turc ; la liste de langues de PCGamingWiki comprend aussi le turc. Confirmez la langue de l'interface en jeu sur la page officielle."
+        },
+        {
+         "s": "Quelle est la configuration requise ?",
+         "c": "Selon PCGamingWiki, minimum Windows 7, Pentium 3 1,0 GHz, 512 Mo de RAM, 32 Mo de mémoire vidéo et 2 Go de disque ; recommandé Windows 8, Pentium 4 1,8 GHz, 1 Go de RAM, 64 Mo de mémoire vidéo et 3 Go de disque. Gameforge ne publie pas de liste actuelle."
+        },
+        {
+         "s": "Comment obtenir un cheval ?",
+         "c": "Le cheval débutant s'améliore par étapes de quête (niveaux 2-10), le cheval de guerre par la chasse aux monstres (12-20), le cheval militaire avec EXP, Yang et fourrage (21-40)."
         }
        ]
       }
@@ -1118,15 +1929,15 @@
     },
     {
      "ad": "Modelo de precio",
-     "deger": "La mayoría de los servidores son gratis; algunos son de pago por niveles, con tienda en el juego"
+     "deger": "Gratuito (free-to-play); la tienda del juego es opcional. Los precios de la tienda no están indicados oficialmente"
     },
     {
      "ad": "Versión actual",
-     "deger": "Último parche en la wiki y el foro oficiales; el servidor Yohara Boost abrió el 13 de noviembre de 2026"
+     "deger": "Actualización 26.2 (wiki actualizada el 31 de octubre de 2026); el servidor Yohara Boost abrió el 13 de noviembre de 2026"
     },
     {
      "ad": "Soporte en turco",
-     "deger": "La versión turca del juego se publica en turco"
+     "deger": "Turco: el foro, la wiki y el soporte de la versión turca están en turco; la lista de idiomas de PCGamingWiki también incluye turco"
     }
    ],
    "bolumler": [
@@ -1136,7 +1947,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Metin2 es un viejo y querido juego de rol en línea de origen coreano, publicado por Gameforge. En Turquía, el foro oficial, la wiki y el sistema de soporte (ticket) pertenecen a Gameforge. El juego tiene cinco clases, tres reinos y, tras el nivel 120, **niveles Campeón**."
+       "metin": "Metin2 es un antiguo y querido RPG online coreano desarrollado por Webzen y publicado por Gameforge; es gratuito y, según el anuncio de Gameforge de enero de 2026, está disponible en más de 16 idiomas (ese mes cumplió 19 años). En Turquía el foro oficial, la wiki y el sistema de soporte (ticket) pertenecen a Gameforge. El juego tiene cinco clases, tres reinos y **niveles de Campeón** a partir del nivel 120."
       },
       {
        "tip": "p",
@@ -1162,7 +1973,7 @@
       },
       {
        "tip": "p",
-       "metin": "Los servidores turcos están en la wiki. Entre los gratuitos figuran Marmara, Ezel, Barbaros, Dandanakan, Arkadaşlar y Bagjanamu; algunos aparecen como «cerrados» y solo se abren a quien ya tiene personaje. También hay servidores de pago por niveles: RUBY, EMERALD y SAPPHIRE. Comprueba en la wiki y el foro qué servidor admite jugadores nuevos."
+       "metin": "Los servidores turcos se listan en la página «Türkiye Sunucuları» de la wiki. Cada servidor tiene 6 canales. Los más nuevos son SAPPHIRE[Star] y [Safir] (abiertos el 08.08.2025); les siguen RUBY[Lucifer] (07.12.2023) y RUBY[Charon] (19.08.2022). Marmara, Ezel, Barbaros, Dandanakan, Arkadaşlar y Bagjanamu son servidores clásicos; Marmara, Arkadaşlar, Dandanakan y Bagjanamu llevan el icono de «servidor cerrado». Para los «servidores pasados» la wiki dice que los servidores no se cierran sino que se fusionan (Fırtına, Lodos, Apex, Zephyr, Anadolu, ONYX Bazalt, EMERALD Alesta). Las condiciones de pago de los servidores no están indicadas oficialmente."
       },
       {
        "tip": "tablo",
@@ -1173,7 +1984,11 @@
        "satirlar": [
         [
          "Precio",
-         "La mayoría de los servidores son gratis; algunos son de pago por niveles. La tienda del juego es opcional"
+         "Gratuito; la tienda del juego es opcional. Los precios de la tienda no están indicados oficialmente"
+        ],
+        [
+         "Plataforma",
+         "Windows; desde el sitio del editor con una cuenta Gameforge (no disponible en Steam)"
         ],
         [
          "Clases",
@@ -1185,17 +2000,25 @@
         ],
         [
          "Estructura de niveles",
-         "Niveles normales hasta el 120, luego niveles Campeón"
+         "Niveles normales hasta el 120, después niveles de Campeón"
+        ],
+        [
+         "Sistema mínimo",
+         "Windows 7, Pentium 3 1,0 GHz, 512 MB de RAM, 32 MB de memoria de vídeo, 2 GB de disco"
+        ],
+        [
+         "Sistema recomendado",
+         "Windows 8, Pentium 4 1,8 GHz, 1 GB de RAM, 64 MB de memoria de vídeo, 3 GB de disco"
         ]
        ]
       },
       {
        "tip": "p",
-       "metin": "Al elegir servidor fíjate en tres cosas: dónde juegan tus amigos, lo concurrido que está el servidor y si es un nivel de pago. En un servidor concurrido comerciar es fácil pero la competencia es dura; en uno pequeño ocurre lo contrario. En los niveles de pago, lee en la página oficial qué se ofrece antes de comprar."
+       "metin": "Al elegir servidor, fíjate en tres cosas: dónde juegan tus amigos, lo concurrido que está el servidor y si tiene un calendario de eventos especial (la wiki lo marca con un icono de «servidor de eventos»). En un servidor concurrido el comercio es fácil pero la competencia es dura; en uno pequeño ocurre lo contrario."
       },
       {
        "tip": "uyari",
-       "metin": "Comprueba los requisitos de sistema de Gameforge en la página de juego; no pongo cifras porque cambian con la versión."
+       "metin": "Las cifras de requisitos vienen de PCGamingWiki (tercero, lista de versión antigua); las páginas de Gameforge no publican una lista actual. Las cifras son bajas, pero en un Windows actual revisa la instalación y tu controlador gráfico."
       }
      ]
     },
@@ -1300,6 +2123,92 @@
      ]
     },
     {
+     "id": "krallik-harita",
+     "baslik": "Reinos y estructura de mapas",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Metin2 tiene tres reinos: **Chunjo** (bandera amarilla), **Jinno** (bandera azul) y **Shinsoo** (bandera roja). El mapa del mundo de la wiki oficial lista cuatro mapas por reino: dos mapas normales y dos zonas de gremio. La elección de reino cambia poco el juego; la verdadera diferencia es dónde están tus amigos."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Mapa",
+        "Chunjo",
+        "Jinno",
+        "Shinsoo"
+       ],
+       "satirlar": [
+        [
+         "Mapa 1",
+         "Joan",
+         "Pyungmoo",
+         "Yongan"
+        ],
+        [
+         "Mapa 2",
+         "Bokjung",
+         "Bakra",
+         "Yayang"
+        ],
+        [
+         "Zona de gremio",
+         "Waryong",
+         "Imha",
+         "Jungrang"
+        ],
+        [
+         "Zona de gremio 2",
+         "Songpa",
+         "Daeyami",
+         "Miryang"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Fuera de los mapas de reino hay mapas no ligados a un reino (neutrales). La agrupación de la wiki está abajo; las mazmorras y los mapas de evento se listan aparte."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Grupo de mapas",
+        "Listado en la wiki"
+       ],
+       "satirlar": [
+        [
+         "Mapas neutrales",
+         "Valley of Seungryong, Yongbi Desert, Mount Sohan, Fireland, Hwang Temple, Ghost Forest, Red Forest, Snakefield, Land of Giants"
+        ],
+        [
+         "Mazmorras de monos",
+         "Hasun Dong (fácil), Jungsun Dong (normal), Sangsun Dong (difícil)"
+        ],
+        [
+         "Región de Yohara",
+         "Abandoned Fortress, Dong Gwang Plain, Seo Gwang Wastelands, Gnoll Caves, Nam Gwang Chasm, Yilad Pass, Northwind Canyon y otros"
+        ],
+        [
+         "Mazmorras",
+         "Demon Tower, Devil's Catacomb, Spider Queen's Nest, Dragon's Temple, Meley's Lair, Zodiac Temple, Red Dragon Fortress, Nemere's Watchtower, Serpent Temple, Sung Mahi Tower, Depths of Greed y otras"
+        ],
+        [
+         "Mapas de evento",
+         "Combat Zone, Isle of Mist, OX-Competition, Otherworld, Battle Royale, Sung Ma Invasion, Treasure Island"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Un rango de nivel por mapa no figura en una sola tabla en la wiki y no está indicado oficialmente; mira la página de la wiki de cada mapa. El único orden sólido disponible son los pasos de misión del caballo: las misiones de nivel 2 a 6 se hacen en el Mapa 1 de tu reino, 7-8 en el Valley of Seungryong o el Yongbi Desert, 9-10 en Mount Sohan o Doyyumhwan (Fireland)."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Mantén abierta la página del mapa del mundo de la wiki antes de viajar y comprueba el nivel de los monstruos en la página del mapa; gastar pociones en un mapa muy por encima de tu nivel es ineficiente."
+      }
+     ]
+    },
+    {
      "id": "seviye",
      "baslik": "Subir de nivel: una ruta rápida y eficiente",
      "bloklar": [
@@ -1330,6 +2239,54 @@
      ]
     },
     {
+     "id": "at-sistemi",
+     "baslik": "Caballo: primera montura y mejora",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "El caballo es a la vez herramienta de velocidad y de combate. Según la wiki hay cuatro tipos: caballo principiante (Beginner), de guerra (War), militar (Military) y de guerra poderoso (Mighty War). Cada tipo tiene su sello, su comida y su hierba de reanimación: para el principiante el sello es la Horse Picture y la comida el heno (Hay); para el de guerra el Armed Horse Book y la zanahoria; para el militar el Military Horse Book y el ginseng rojo; para el poderoso el Golden Horse Book y el ginseng rojo Premium."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Tipo",
+        "Nivel del caballo (según la tabla de la wiki)",
+        "Cómo progresa"
+       ],
+       "satirlar": [
+        [
+         "Caballo principiante",
+         "2-10",
+         "Pasos de misión: 2-6 en el Mapa 1, 7-8 en el Valley of Seungryong o el Yongbi Desert, 9-10 en Mount Sohan o Doyyumhwan; cada paso pide de 1 a 5 puntos de control"
+        ],
+        [
+         "Caballo de guerra",
+         "12-20",
+         "Caza de monstruos: 12 pide Bo x5, 13 Chuong x5, 14 Elite Orc General x10, 15 Black Orc x10, 16 Dark Tormentor x10, 17 Claw Poison Spider x10, 18 Desert Outlaw x20, 19 Ice Golem x10, 20 Fighting Tiger x20"
+        ],
+        [
+         "Caballo militar",
+         "21-40",
+         "EXP, Yang y forraje: el nivel 21 pide 12.500 EXP, 500.000 Yang y 50 de forraje; el Yang sube 500.000 por paso, desde el nivel 30 son 5.000.000 de Yang y 50 de forraje; 40 es el máximo"
+        ],
+        [
+         "Caballo de guerra poderoso",
+         "Por encima del militar",
+         "Usa el Golden Horse Book y el ginseng rojo Premium; los detalles no están indicados oficialmente"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Invocación y estadísticas:** la probabilidad de éxito de Call Horse es del 10 % en el nivel 0, 15 % en el 1, 20 % en el 2 y 30 % en el 3; tras el nivel 4 sube 10 puntos por nivel y llega al 100 % en el nivel 10. Las estadísticas del caballo suben con su nivel: en el nivel 1 VIT 18, INT 9, STR 26, DEX 35; en el nivel 10 23, 12, 35, 46; en el nivel 20 32, 16, 48, 64."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Los pasos del caballo militar son caros: tras el nivel 30 cada paso pide 5.000.000 de Yang y 50 de forraje. Antes de empezar a mejorar el caballo, reparte tu presupuesto de Yang entre la mejora del equipo y el caballo."
+      }
+     ]
+    },
+    {
      "id": "ekonomi",
      "baslik": "Yang y economía: solo dentro del juego",
      "bloklar": [
@@ -1356,6 +2313,102 @@
       {
        "tip": "uyari",
        "metin": "Vender o comprar Yang, cuentas u objetos por dinero real (RMT) infringe las normas y hace que cierren la cuenta. Usa solo la ventana de comercio del juego."
+      }
+     ]
+    },
+    {
+     "id": "yukseltme",
+     "baslik": "Mejora de objetos: herreros y opciones",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La mejora de objetos se hace en los herreros y cada herrero tiene reglas distintas. Según la página «Upgrade Items» de la wiki, las opciones son estas:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Herrero",
+        "Qué mejora",
+        "Particularidad"
+       ],
+       "satirlar": [
+        [
+         "Herrero (Blacksmith)",
+         "Cualquier objeto sin importar su nivel; la mayoría de mejoras épicas",
+         "Da la probabilidad de éxito base; una mejora épica es siempre del 100 %"
+        ],
+        [
+         "Seon-Pyeong",
+         "Cualquier objeto y todas las mejoras épicas",
+         "Sin límite de nivel"
+        ],
+        [
+         "Herrero de gremio",
+         "Objetos no épicos",
+         "Cuesta un 10 % más de Yang; el gremio elige solo un tipo (armadura, arma o joyería)"
+        ],
+        [
+         "Herrero del Serpent Temple",
+         "Solo guantes",
+         "No necesita objetos de mejora; si falla, el guante no se destruye y su grado baja 1"
+        ],
+        [
+         "Herrero de la Demon Tower",
+         "Objetos no épicos hasta el nivel 90",
+         "No necesita objetos de mejora; 10 % extra de probabilidad de éxito sobre el Herrero y Seon-Pyeong"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Una lista numérica de objetos de mejora y probabilidades de éxito no está indicada oficialmente. El hecho de que la página aclare que el guante no se destruye al fallar en el Serpent Temple sugiere que otras mejoras pueden hacer perder el objeto al fallar (es una deducción)."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Antes de mejorar un objeto valioso, haz los primeros intentos con objetos sin valor para notar la probabilidad; cuenta el riesgo de pérdida en tu presupuesto de Yang y usa solo los herreros del juego."
+      }
+     ]
+    },
+    {
+     "id": "ejderha-tasi",
+     "baslik": "Alquimia de piedras de dragón y misiones del biólogo",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La alquimia de piedras de dragón (Dragon Stone Alchemy, DSA) es el sistema para mejorar piedras de dragón. Según la wiki llegó por primera vez en la versión 13.3, la clase Mythic se añadió en la 19.0 y la piedra Amethyst en la 23.2. Las piedras se mejoran acudiendo al PNJ Alquimista y eligiendo «Dragon Stone Refinement»."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Mejora",
+        "Piedras necesarias",
+        "Si falla"
+       ],
+       "satirlar": [
+        [
+         "Clase: Rough, Cut, Rare, Antique, Legendary, Mythic",
+         "2 piedras de la misma clase por cada paso",
+         "Queda una piedra de la misma clase"
+        ],
+        [
+         "Claridad (Clarity)",
+         "2 piedras de la misma claridad por cada paso",
+         "Queda una piedra de la misma claridad"
+        ],
+        [
+         "Nivel (Level)",
+         "Detalle no publicado",
+         "No indicado oficialmente"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "La página también tiene apartados sobre activación de piedras, ampliación de tiempo y retirada de piedras; consulta sus detalles con el Alquimista en el juego o en la página de la wiki. Para las misiones del biólogo, la página principal de la wiki da un enlace aparte «Biologist Quests»; las cifras de nivel y de recompensa cambian con las actualizaciones, así que consulta esa página para los valores actuales."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Cada intento de mejora cuesta dos piedras y si falla solo vuelve una; por eso inténtalo cuando hayas reunido una pareja de la misma clase o claridad."
       }
      ]
     },
@@ -1391,6 +2444,21 @@
          "Depende de la economía del servidor"
         ]
        ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Set Bonus y Set Effect (bonificaciones de conjunto)",
+        "Energy System y Pet System (mascota)",
+        "Costume System, Aura Outfit System y Shoulder Sash System",
+        "Relic System, Binding System y Belt System",
+        "Gaya System y Monster Card System",
+        "Private Shop (tienda privada) y Auto-Hunt (caza automática)"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Cada uno de los sistemas anteriores tiene su propia página en la wiki oficial; no intentes aprenderlos todos de golpe. Ata el sistema que necesites a un objetivo (p. ej. mejora y bonificaciones de conjunto para el equipo, el caballo para el desplazamiento)."
       },
       {
        "tip": "p",
@@ -1437,7 +2505,7 @@
        "ogeler": [
         {
          "s": "¿Metin2 es gratis?",
-         "c": "La mayoría de los servidores son gratis; algunos son de pago por niveles. La tienda del juego es opcional."
+         "c": "Sí, es gratuito. La tienda del juego es opcional; los precios de la tienda no están indicados oficialmente."
         },
         {
          "s": "¿Qué es el servidor Yohara Boost?",
@@ -1457,7 +2525,15 @@
         },
         {
          "s": "¿El juego está en turco?",
-         "c": "La versión turca se publica en turco."
+         "c": "El foro, la wiki y el sistema de soporte de la versión turca están en turco; la lista de idiomas de PCGamingWiki también incluye turco. Confirma el idioma de la interfaz del juego en la página oficial."
+        },
+        {
+         "s": "¿Cuáles son los requisitos del sistema?",
+         "c": "Según PCGamingWiki, mínimo Windows 7, Pentium 3 1,0 GHz, 512 MB de RAM, 32 MB de memoria de vídeo y 2 GB de disco; recomendado Windows 8, Pentium 4 1,8 GHz, 1 GB de RAM, 64 MB de memoria de vídeo y 3 GB de disco. Gameforge no publica una lista actual."
+        },
+        {
+         "s": "¿Cómo consigo un caballo?",
+         "c": "El caballo principiante se mejora con pasos de misión (niveles 2-10), el de guerra cazando monstruos (12-20), el militar con EXP, Yang y forraje (21-40)."
         }
        ]
       }

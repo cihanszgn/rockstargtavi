@@ -8,32 +8,32 @@
    "ad": "NTTGame: Knight Online"
   },
   {
-   "url": "https://www.nttgame.com/tr/register",
-   "ad": "NTTGame: hesap kaydı"
-  },
-  {
    "url": "https://korehberi.com/haberler/knight-online-yeni-server-ne-zaman-acilacak-2026",
-   "ad": "KO Rehberi: yeni server ne zaman açılacak"
+   "ad": "KO Rehberi: new server opening date"
   },
   {
    "url": "https://korehberi.com/genel/knight-online-yeni-server-isimleri-belli-oldu-2026",
-   "ad": "KO Rehberi: yeni server isimleri"
-  },
-  {
-   "url": "https://knightpin.com/blog/knight-online-yeni-server",
-   "ad": "Knightpin: yeni server ve sunucu listesi"
-  },
-  {
-   "url": "https://knightpin.com/blog/knight-online-sistem-gereksinimleri",
-   "ad": "Knightpin: sistem gereksinimleri 2026"
+   "ad": "KO Rehberi: new server names"
   },
   {
    "url": "https://korehberi.com/knight-online/baslangic-rehberi",
-   "ad": "KO Rehberi: başlangıç rehberi"
+   "ad": "KO Rehberi: beginner's guide"
   },
   {
    "url": "https://store.steampowered.com/app/389430/Knight_Online",
    "ad": "Steam: Knight Online (SteamKO)"
+  },
+  {
+   "url": "https://korehberi.com/knight-online/etkinlikler",
+   "ad": "KO Rehberi: event schedule"
+  },
+  {
+   "url": "https://korehberi.com/knight-online/bolgeler",
+   "ad": "KO Rehberi: zones"
+  },
+  {
+   "url": "https://korehberi.com/knight-online/siniflar/warrior",
+   "ad": "KO Rehberi: Warrior class"
   }
  ],
  "diller": {
@@ -51,7 +51,7 @@
     },
     {
      "ad": "Fiyat modeli",
-     "deger": "Oynaması ücretsiz; premium ve oyun içi satın alımlar var"
+     "deger": "Oynaması ücretsiz (Steam sayfasında 'Free To Play'); premium ve kozmetik ürünler NPoints ile alınır, tutarlar resmî PUS sayfasındadır"
     },
     {
      "ad": "Güncel sürüm",
@@ -59,7 +59,7 @@
     },
     {
      "ad": "Türkçe desteği",
-     "deger": "Oyun Türkçe yayımlanıyor (NTTGame Türkiye)"
+     "deger": "Evet: oyun NTTGame Türkiye tarafından Türkçe yayımlanıyor; Steam sayfası da Türkçe arayüz, ses ve altyazı gösteriyor"
     }
    ],
    "bolumler": [
@@ -99,7 +99,7 @@
       },
       {
        "tip": "p",
-       "metin": "Yeni sunucuların açılışı **ön kayıtla** yapıldı: 15-29 Ekim birinci, 29 Ekim-12 Kasım ikinci dönem (sunucu seçimi), 10-11 Kasım karakter oluşturma. Ön kayıt yaptırmayan hesaplar yeni sunuculara giremedi. Telefon doğrulaması ve OTP+ (tek kullanımlık şifre uygulaması) zorunluydu; OTP+ 15 Ekim'de AnyOTP'nin yerini aldı. Şu an yeni sunucuya girip giremeyeceğinizi NTTGame'in duyurusundan kontrol edin."
+       "metin": "Yeni sunucuların açılışı **ön kayıtla** yapıldı: 15-29 Ekim birinci, 29 Ekim-12 Kasım ikinci dönem (sunucu seçimi), 10-11 Kasım karakter oluşturma. Telefon doğrulaması ve OTP+ (tek kullanımlık şifre uygulaması) zorunluydu; OTP+ 15 Ekim'de AnyOTP'nin yerini aldı. Açılış 12 Kasım 2026'da yapıldı; açılıştan sonra ön kayıt şartının sürüp sürmediği resmî olarak açıklanmadı."
       },
       {
        "tip": "tablo",
@@ -110,15 +110,23 @@
        "satirlar": [
         [
          "Fiyat",
-         "Oynaması ücretsiz; premium ve kozmetik ürünler NPoints ile alınıyor, güncel fiyatlar resmî PUS sayfasında"
+         "Oynaması ücretsiz (Steam: Free To Play); premium ve kozmetik ürünler NPoints ile alınıyor"
         ],
         [
          "İşletim sistemi",
-         "Yalnızca Windows; Windows 10 veya 11 önerilir. Mac ve telefon sürümü yok"
+         "Yalnızca Windows. Steam sayfası en düşük gereksinimde Windows 2000'den 10'a kadar sürümleri sayıyor; Steam istemcisi 1 Ocak 2024'ten beri yalnız Windows 10 ve sonrasını destekliyor"
+        ],
+        [
+         "İşlemci / bellek / depolama",
+         "Steam sayfasına göre en düşük: Pentium 3 600 MHz, 512 MB RAM, 2 GB boş alan"
         ],
         [
          "Ekran kartı",
-         "Ayrı ekran kartı şart değil; güncel sürücüsü olan tümleşik grafik yeterli"
+         "3B hızlandırma yeterli (Steam sayfası); ayrı ekran kartı şart değil"
+        ],
+        [
+         "Dil",
+         "Türkçe: arayüz, ses ve altyazı (Steam sayfası)"
         ],
         [
          "Güvenlik",
@@ -128,7 +136,7 @@
       },
       {
        "tip": "uyari",
-       "metin": "Resmî sistem gereksinimi sayfası çok eski Windows sürümlerini yazıyor. Bugünkü gerçek ihtiyaç çok düşüktür; sayfadaki eski değerlere bakıp oyundan vazgeçmeyin."
+       "metin": "Steam sayfasındaki gereksinimler çok eski bir bilgisayarı tarif ediyor. Gerçek ihtiyacın bunun üstünde olabilir ama modern bir bilgisayar için sorun çıkması beklenmez; ayrıntılı güncel değer resmî olarak açıklanmadı, bu yüzden bu tablo en düşük (minimum) değerlerdir."
       }
      ]
     },
@@ -233,6 +241,58 @@
      ]
     },
     {
+     "id": "irk-sinif",
+     "baslik": "Irklar, ustalık unvanları ve statü dağılımı",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "KO Rehberi'ne göre ulusun içinde birkaç ırk vardır. **El Morad** tarafında Barbarian, El Morad Male (erkek), El Morad Female (kadın) ve Porutu; **Karus** tarafında Arch Tuarek, Tuarek, Wrinkle Tuarek, Pury Tuarek ve Kurian bulunur. Ortak sınıflar için ırkın görünüşü dışında oynanış farkı yoktur; ırk seçimi ağırlıkla görünüm ve hangi sınıfın seçilebildiğini belirler (Warrior örneğinde Barbarian, El Morad Male, El Morad Female ve Arch Tuarek seçilebiliyor)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Sınıf",
+        "Beceri kolları (KO Rehberi)",
+        "Ustalık unvanı"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Attack, Defense, Passion / Berserking",
+         "Blade Master (El Morad), Berserker Hero (Karus)"
+        ],
+        [
+         "Rogue",
+         "Archery, Assassinate, Search / Explore",
+         "Kasar Hood (El Morad), Shadow Vain (Karus)"
+        ],
+        [
+         "Mage",
+         "Büyü kolları",
+         "Resmî olarak açıklanmadı"
+        ],
+        [
+         "Priest",
+         "Şifa ve destek kolları",
+         "Resmî olarak açıklanmadı"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Warrior sayfası birincil statı **STR** (Strength, güç) olarak gösterir ve yakın dövüşün tankı olarak anlatır; güçlü bir boss kesilirken ilk ihtiyaç duyulan karakterdir. Rogue ise hız ve yetenekle öne çıkar: Assassin (suikastçı) kısa sürede çok hasar verir, Archer (okçu) oyundaki en uzak menzili taşır."
+      },
+      {
+       "tip": "p",
+       "metin": "**Statü ve beceri dağılımı:** her seviyede 3 statü puanı kazanırsınız. KO Rehberi Warrior için 'Berserker' ve 'Attacker' diye iki öneri dağılım yayımlıyor ve bunların yalnızca öneri olduğunu, farklı build'lerin mümkün olduğunu söylüyor. Genel mantık: hasar sınıfları ana statıyı, dayanıklılık için HP'yi, büyü sınıfları INT ve MP'yi artırır; ne yaptığınızı bilmiyorsanız önce HP ve ana statıyı dengeleyin, sonra rolünüze göre kaydırın."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Statü dağılımını yalnız bir videodan kopyalamayın. Sınıf sayfasındaki öneri dağılımı yazı olarak okuyun, çünkü dağılım oyunun sürümüne göre değişir."
+      }
+     ]
+    },
+    {
      "id": "seviye",
      "baslik": "Seviye atlama: nasıl hızlı ve verimli?",
      "bloklar": [
@@ -263,6 +323,139 @@
      ]
     },
     {
+     "id": "bolgeler",
+     "baslik": "Bölgeler: nerede ne yapılır?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "KO Rehberi haritaları dört gruba ayırır. Hangi bölgenin hangi seviyeye uygun olduğunu bu sayfa vermiyor; seviye aralıkları ayrı bir 'Level Expleri' sayfasında tutuluyor. Aşağıdaki tabloda seviye aralığı verilmez, çünkü bu sayılar resmî olarak açıklanmadı; oyun içi bölge adlarına ve NPC yönlendirmelerine bakın."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Grup",
+        "Bölgeler"
+       ],
+       "satirlar": [
+        [
+         "Genel",
+         "Moradon, El Morad, Karus, Eslant, Delos (Abyss)"
+        ],
+        [
+         "PvP",
+         "Ardream, Ronark Land Base, Ronark Land, Kalluga Valley, Alseids Plain, Nereidth Island, Oreads, Nieds Triangle, Napies Gorge"
+        ],
+        [
+         "Etkinlik",
+         "Kellino Temple (Forgotten Temple), Juraid Mountain, Krowaz's Dominion, Bifrost, Under the Castle, Chaos Dungeon"
+        ],
+        [
+         "Diğer",
+         "Caitharos Arena, Zipang"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Moradon** iki ulusun ortak şehridir; pazar, depo ve Magic Anvil burada. Yeni sunucularda Ardream ve Ronark Land Base haritaları olmadığı için PvP Ronark Land'de yapılır. Seviye atarken pratik kural: bir bölgede canavarlar sizi çok hızlı öldürüyorsa bir alt kademeye dönün, çok kolay ölüyorsa bir üst kademeye geçin."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Bölgeler arası geçişte ölürseniz EXP kaybedersiniz. Yeni bir bölgeye ilk girişte partiyle ya da arkadaşla gitmek en güvenli yoldur."
+      }
+     ]
+    },
+    {
+     "id": "etkinlik",
+     "baslik": "Etkinlik saatleri: günlük ve haftalık takvim",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Aşağıdaki saatler KO Rehberi'nin etkinlik sayfasından alındı; sayfa Türkiye yerel saatine göre ayarlı ve Ocak 2026'da güncellenmiş görünüyor. Saatler değişebilir; oyun içindeki geri sayım ve resmî duyuru esastır. USKO NTTGame'in resmî istemcisi, STKO Steam sürümüdür."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Etkinlik",
+        "USKO saatleri",
+        "STKO (Steam) saatleri"
+       ],
+       "satirlar": [
+        [
+         "Border Defense War (BDW)",
+         "02:00, 13:00, 19:00",
+         "01:00, 07:00, 12:00, 16:00, 20:00"
+        ],
+        [
+         "Chaos",
+         "00:00, 12:00",
+         "10:00, 14:00, 22:00"
+        ],
+        [
+         "Juraid Mountain (JR)",
+         "07:40, 22:40",
+         "02:40, 13:40"
+        ],
+        [
+         "Forgotten Temple (FT)",
+         "03:00, 22:00",
+         "08:00, 23:00"
+        ],
+        [
+         "Bifrost",
+         "02:00, 14:00, 21:00",
+         "00:00, 10:00, 17:00"
+        ],
+        [
+         "Krowaz",
+         "10:00, 21:00",
+         "06:00, 19:00"
+        ],
+        [
+         "Lunar War",
+         "14:00, 20:00 (Pazartesi ve Cumartesi)",
+         "04:00, 11:00, 21:00 (Salı ve Pazar)"
+        ],
+        [
+         "Castle Siege War (CSW)",
+         "20:30 (Pazar)",
+         "21:00 (Cumartesi)"
+        ],
+        [
+         "Under the Castle (UTC)",
+         "21:00 (Cuma)",
+         "00:00 (Pazar)"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Gün bilgisi tablodaki ok işaretlerine göredir; Lunar War, CSW ve UTC haftalık, diğerleri günlüktür. **Draki's Tower** sürekli açıktır. Twisted Moradon, Knight Royale, Puzzle, Kartopu Savaşı, Coin, Dolunay, Full Moon Rift ve Bekârların İntikamı gibi etkinlikler geçici olup sayfada o sırada 'etkin değil' görünüyordu. Dark Lunar War kaldırılmıştır."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Günlük",
+         "metin": "Seviye atarken Chaos, BDW ve Juraid saatlerini takvime yazın; ödülleri hızlı yükselmek ve eşya için kullanışlıdır."
+        },
+        {
+         "baslik": "Haftalık",
+         "metin": "Lunar War, CSW ve UTC için klanınızla saat belirleyin; bunlar parti ve organizasyon ister."
+        },
+        {
+         "baslik": "Her gün",
+         "metin": "Draki's Tower'a uğrayın; sürekli açık olduğu için zamanlama derdi yoktur."
+        }
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Etkinlik ödüllerini ve saatlerini gerçek para karşılığı satan üçüncü taraf sitelere güvenmeyin. Yalnız oyun içi ve resmî duyurulara bakın."
+      }
+     ]
+    },
+    {
      "id": "ekonomi",
      "baslik": "Para ve ekonomi: yalnız oyun içi yollar",
      "bloklar": [
@@ -281,6 +474,36 @@
       {
        "tip": "uyari",
        "metin": "Oyun parasını, eşyayı veya hesabı gerçek parayla başka oyunculara satmak (RMT) ve bunun için üçüncü taraf siteleri kullanmak oyun kurallarına aykırıdır ve hesabınızın kapanmasına yol açar. Resmî PUS dışında alışveriş yapmayın."
+      }
+     ]
+    },
+    {
+     "id": "yukseltme-klan",
+     "baslik": "Eşya yükseltme, klan ve kale savaşı",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**Yükseltme mantığı:** eşya Moradon'daki Magic Anvil (Charon'un yanında) ile yükseltilir. Her denemede eşya yükselebilir, aynı kalabilir ya da yok olabilir; oyun içi başarı oranları ve gereken malzeme listesi resmî olarak açıklanmadı. Genel mantık: yükseltme seviyesi arttıkça başarısızlık riski artar, bu yüzden değerli eşyayı sırayla değil, kaybetmeyi göze aldığınız yedek eşyalarla deneyin."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Önce ucuz ve ikinci el eşyayla yükseltmeyi öğrenin.",
+        "Tek seferde tüm birikimi tek bir eşyaya harcamayın.",
+        "Bir yükseltme için gereken malzemeyi satın almadan önce ortalama pazar fiyatına bakın."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Klan ve kale savaşı:** klan, etkinliklere birlikte girmenin ve eşya paylaşmanın merkezidir. **Castle Siege War (CSW)** haftada bir yapılan ve klanların kaleyi ele geçirmek için savaştığı etkinliktir; **Under the Castle (UTC)** ve **Lunar War** da klan organizasyonu gerektirir. Kaleyi ele geçiren klanın ne kazandığı resmî olarak açıklanmadı; bunu klan liderinizden öğrenin."
+      },
+      {
+       "tip": "p",
+       "metin": "**Premium türleri:** oyunda Switching Premium ve War Premium gibi ürünler NPoints ile alınır. Her birinin süresi, fiyatı ve sağladığı avantaj resmî PUS sayfasında listelenir; bu değerler yamaya göre değişebilir. Satın almadan önce sayfadaki açıklamayı okuyun."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Yükseltme başarısız olduğunda eşya geri gelmez. Bunu hesap desteğine şikâyet etmek sonucu değiştirmez; riski bilerek deneyin."
       }
      ]
     },
@@ -349,7 +572,7 @@
         },
         {
          "s": "Yeni sunuculara hâlâ girilebilir mi?",
-         "c": "Açılış ön kayıtla yapıldı. Şu an giriş koşullarını NTTGame'in duyurusundan kontrol edin."
+         "c": "Açılış 12 Kasım 2026'da yapıldı. Açılıştan sonra ön kayıt şartının sürüp sürmediği resmî olarak açıklanmadı; giriş denemesini hesabınızla yapabilirsiniz ve ret alırsanız NTTGame duyurusuna bakın."
         },
         {
          "s": "Hangi ulusu seçmeliyim?",
@@ -357,7 +580,7 @@
         },
         {
          "s": "Seviye sınırı kaç?",
-         "c": "83; ardından rebirth sistemi var. Koşulları oyun içinden teyit edin."
+         "c": "83. 83. seviyede %100 EXP toplayınca rebirth yapılabilir; koşullar 'Seviye atlama' bölümünde yazılıdır."
         },
         {
          "s": "Telefonda oynanır mı?",
@@ -387,7 +610,7 @@
     },
     {
      "ad": "Pricing model",
-     "deger": "Free to play; premium and in-game purchases exist"
+     "deger": "Free to play (the Steam page says 'Free To Play'); premium and cosmetic items are bought with NPoints, prices are on the official PUS page"
     },
     {
      "ad": "Current version",
@@ -395,7 +618,7 @@
     },
     {
      "ad": "Turkish support",
-     "deger": "The game is published in Turkish (NTTGame Turkey)"
+     "deger": "Yes: the game is published in Turkish by NTTGame Turkey; the Steam page also lists Turkish interface, audio and subtitles"
     }
    ],
    "bolumler": [
@@ -435,7 +658,7 @@
       },
       {
        "tip": "p",
-       "metin": "The new servers opened through **pre-registration**: 15-29 October was the first window, 29 October-12 November the second (server choice), and 10-11 November was character creation. Accounts that did not pre-register could not enter the new servers. Phone verification and OTP+ (a one-time-password app) were mandatory; OTP+ replaced AnyOTP on 15 October. Check NTTGame's announcement for whether you can enter a new server right now."
+       "metin": "The new servers opened with **pre-registration**: 15-29 October first period, 29 October-12 November second period (server choice), 10-11 November character creation. Phone verification and OTP+ (a one-time-password app) were required; OTP+ replaced AnyOTP on 15 October. The launch happened on 12 November 2026; whether pre-registration is still required after launch has not been officially stated."
       },
       {
        "tip": "tablo",
@@ -446,15 +669,23 @@
        "satirlar": [
         [
          "Price",
-         "Free to play; premium and cosmetic items are bought with NPoints, current prices are on the official PUS page"
+         "Free to play (Steam: Free To Play); premium and cosmetic items are bought with NPoints"
         ],
         [
          "Operating system",
-         "Windows only; Windows 10 or 11 recommended. No Mac or phone version"
+         "Windows only. The Steam page lists Windows 2000 up to 10 for the minimum; the Steam client has supported only Windows 10 and later since 1 January 2024"
+        ],
+        [
+         "CPU / memory / storage",
+         "Minimum per the Steam page: Pentium 3 600 MHz, 512 MB RAM, 2 GB free space"
         ],
         [
          "Graphics card",
-         "A separate card is not required; integrated graphics with current drivers is enough"
+         "3D acceleration is enough (Steam page); a dedicated card is not required"
+        ],
+        [
+         "Language",
+         "Turkish: interface, audio and subtitles (Steam page)"
         ],
         [
          "Security",
@@ -464,7 +695,7 @@
       },
       {
        "tip": "uyari",
-       "metin": "The official system requirements page lists very old Windows versions. The real need today is very low; do not give up on the game because of the old values on that page."
+       "metin": "The Steam requirements describe a very old computer. Real needs may be higher, but a modern PC is not expected to have problems; a detailed current figure is not officially stated, so this table lists minimum values only."
       }
      ]
     },
@@ -569,6 +800,58 @@
      ]
     },
     {
+     "id": "irk-sinif",
+     "baslik": "Races, master titles and stat distribution",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "According to KO Rehberi each nation has several races. On the **El Morad** side there are Barbarian, El Morad Male, El Morad Female and Porutu; on the **Karus** side Arch Tuarek, Tuarek, Wrinkle Tuarek, Pury Tuarek and Kurian. For the shared classes the race changes the look rather than the play; the race mainly decides appearance and which class you can pick (for Warrior the options are Barbarian, El Morad Male, El Morad Female and Arch Tuarek)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Class",
+        "Skill branches (KO Rehberi)",
+        "Master title"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Attack, Defense, Passion / Berserking",
+         "Blade Master (El Morad), Berserker Hero (Karus)"
+        ],
+        [
+         "Rogue",
+         "Archery, Assassinate, Search / Explore",
+         "Kasar Hood (El Morad), Shadow Vain (Karus)"
+        ],
+        [
+         "Mage",
+         "Spell branches",
+         "Not officially stated"
+        ],
+        [
+         "Priest",
+         "Healing and support branches",
+         "Not officially stated"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "The Warrior page shows **STR** (Strength) as the main stat and describes the class as the melee tank; it is the first character needed when a strong boss is killed. The Rogue stands out for speed and skill: the Assassin deals a lot of damage quickly and the Archer has the longest range in the game."
+      },
+      {
+       "tip": "p",
+       "metin": "**Stat and skill distribution:** you gain 3 stat points per level. For Warrior, KO Rehberi publishes two suggested distributions called 'Berserker' and 'Attacker' and says they are only suggestions, other builds are possible. General logic: damage classes raise their main stat, HP adds survivability, caster classes raise INT and MP; if you are unsure, balance HP and the main stat first, then shift toward your role."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Do not copy a stat build only from a video. Read the suggested distribution on the class page as text, because builds change with the game version."
+      }
+     ]
+    },
+    {
      "id": "seviye",
      "baslik": "Leveling: a fast and efficient route",
      "bloklar": [
@@ -599,6 +882,139 @@
      ]
     },
     {
+     "id": "bolgeler",
+     "baslik": "Zones: what to do where",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "KO Rehberi sorts the maps into four groups. This page does not say which zone suits which level; level ranges are kept on a separate 'Level Expleri' page. The table below gives no level numbers, because they are not officially stated; follow in-game zone names and NPC hints."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Group",
+        "Zones"
+       ],
+       "satirlar": [
+        [
+         "General",
+         "Moradon, El Morad, Karus, Eslant, Delos (Abyss)"
+        ],
+        [
+         "PvP",
+         "Ardream, Ronark Land Base, Ronark Land, Kalluga Valley, Alseids Plain, Nereidth Island, Oreads, Nieds Triangle, Napies Gorge"
+        ],
+        [
+         "Event",
+         "Kellino Temple (Forgotten Temple), Juraid Mountain, Krowaz's Dominion, Bifrost, Under the Castle, Chaos Dungeon"
+        ],
+        [
+         "Other",
+         "Caitharos Arena, Zipang"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Moradon** is the shared city of both nations; the market, storage and the Magic Anvil are here. On the new servers Ardream and Ronark Land Base do not exist, so PvP takes place in Ronark Land. Practical rule while leveling: if monsters kill you too fast in a zone go back one tier, and if it is too easy move one tier up."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "If you die while crossing zones you lose EXP. The safest way into a new zone for the first time is with a party or a friend."
+      }
+     ]
+    },
+    {
+     "id": "etkinlik",
+     "baslik": "Event times: daily and weekly calendar",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The times below come from the KO Rehberi event page; the page is set to Turkey local time and looks updated in January 2026. Times can change; the in-game countdown and official announcements are final. USKO is the official NTTGame client, STKO is the Steam version."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Event",
+        "USKO times",
+        "STKO (Steam) times"
+       ],
+       "satirlar": [
+        [
+         "Border Defense War (BDW)",
+         "02:00, 13:00, 19:00",
+         "01:00, 07:00, 12:00, 16:00, 20:00"
+        ],
+        [
+         "Chaos",
+         "00:00, 12:00",
+         "10:00, 14:00, 22:00"
+        ],
+        [
+         "Juraid Mountain (JR)",
+         "07:40, 22:40",
+         "02:40, 13:40"
+        ],
+        [
+         "Forgotten Temple (FT)",
+         "03:00, 22:00",
+         "08:00, 23:00"
+        ],
+        [
+         "Bifrost",
+         "02:00, 14:00, 21:00",
+         "00:00, 10:00, 17:00"
+        ],
+        [
+         "Krowaz",
+         "10:00, 21:00",
+         "06:00, 19:00"
+        ],
+        [
+         "Lunar War",
+         "14:00, 20:00 (Monday and Saturday)",
+         "04:00, 11:00, 21:00 (Tuesday and Sunday)"
+        ],
+        [
+         "Castle Siege War (CSW)",
+         "20:30 (Sunday)",
+         "21:00 (Saturday)"
+        ],
+        [
+         "Under the Castle (UTC)",
+         "21:00 (Friday)",
+         "00:00 (Sunday)"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "The day information follows the arrows in the table; Lunar War, CSW and UTC are weekly, the others daily. **Draki's Tower** is always open. Twisted Moradon, Knight Royale, Puzzle, Snowball War, Coin, Full Moon, Full Moon Rift and the Bachelors' Revenge are temporary events and showed as 'not active' on the page at that moment. Dark Lunar War has been removed."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Daily",
+         "metin": "While leveling, put the Chaos, BDW and Juraid times in your calendar; the rewards help you rise fast and gear up."
+        },
+        {
+         "baslik": "Weekly",
+         "metin": "Agree times with your clan for Lunar War, CSW and UTC; these need a party and organization."
+        },
+        {
+         "baslik": "Every day",
+         "metin": "Drop by Draki's Tower; since it is always open there is no timing trouble."
+        }
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Do not trust third-party sites that sell event rewards or times for real money. Look only at in-game and official announcements."
+      }
+     ]
+    },
+    {
      "id": "ekonomi",
      "baslik": "Money and economy: in-game routes only",
      "bloklar": [
@@ -617,6 +1033,36 @@
       {
        "tip": "uyari",
        "metin": "Selling in-game currency, items or accounts to other players for real money (RMT) and using third-party sites for it breaks the game rules and gets your account closed. Do not trade outside the official PUS."
+      }
+     ]
+    },
+    {
+     "id": "yukseltme-klan",
+     "baslik": "Item upgrades, clans and castle war",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**Upgrade logic:** items are upgraded at the Magic Anvil in Moradon (next to Charon). Each attempt can raise the item, leave it the same or destroy it; the in-game success rates and the material list are not officially stated. General logic: the failure risk rises as the upgrade level rises, so try valuable items last and test with spare items you can afford to lose."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Learn upgrading first on cheap or second-hand items.",
+        "Do not spend all your savings on a single item in one go.",
+        "Check the average market price before buying the material for an upgrade."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Clan and castle war:** the clan is the center for joining events together and sharing items. **Castle Siege War (CSW)** is the weekly event where clans fight to take the castle; **Under the Castle (UTC)** and **Lunar War** also need clan organization. What the clan holding the castle wins is not officially stated, so ask your clan leader."
+      },
+      {
+       "tip": "p",
+       "metin": "**Premium types:** the game sells items such as Switching Premium and War Premium for NPoints. Each one's duration, price and benefit is listed on the official PUS page; these figures change with patches, so check the listing on that page. Read the description on the page before you buy."
+      },
+      {
+       "tip": "uyari",
+       "metin": "When an upgrade fails the item does not come back. Complaining to account support does not change the outcome; try it knowing the risk."
       }
      ]
     },
@@ -684,8 +1130,8 @@
          "c": "Yes, it is free to play. Premium and cosmetic products are optional."
         },
         {
-         "s": "Can I still enter the new servers?",
-         "c": "The launch went through pre-registration. Check NTTGame's announcement for the entry conditions right now."
+         "s": "Can I still join the new servers?",
+         "c": "The launch was on 12 November 2026. Whether pre-registration is still required after launch has not been officially stated; try with your account, and if you are refused check the NTTGame announcement."
         },
         {
          "s": "Which nation should I choose?",
@@ -693,7 +1139,7 @@
         },
         {
          "s": "What is the level cap?",
-         "c": "83, followed by the rebirth system. Confirm the conditions in the game."
+         "c": "83. At 83 with 100% EXP you can do a rebirth; the conditions are written in the 'Leveling' section."
         },
         {
          "s": "Can I play on a phone?",
@@ -723,7 +1169,7 @@
     },
     {
      "ad": "Modèle tarifaire",
-     "deger": "Gratuit ; premium et achats en jeu disponibles"
+     "deger": "Gratuit (la page Steam indique 'Free To Play'); les objets premium et cosmétiques s'achètent avec des NPoints, les prix sont sur la page PUS officielle"
     },
     {
      "ad": "Version actuelle",
@@ -731,7 +1177,7 @@
     },
     {
      "ad": "Support du turc",
-     "deger": "Le jeu est publié en turc (NTTGame Turquie)"
+     "deger": "Oui : le jeu est publié en turc par NTTGame Turquie ; la page Steam indique aussi interface, voix et sous-titres en turc"
     }
    ],
    "bolumler": [
@@ -771,7 +1217,7 @@
       },
       {
        "tip": "p",
-       "metin": "Les nouveaux serveurs ont ouvert via une **préinscription** : du 15 au 29 octobre la première période, du 29 octobre au 12 novembre la seconde (choix du serveur), et les 10-11 novembre la création de personnage. Les comptes non préinscrits n'ont pas pu entrer. La vérification par téléphone et OTP+ (application de mot de passe à usage unique) étaient obligatoires ; OTP+ a remplacé AnyOTP le 15 octobre. Vérifiez dans l'annonce de NTTGame si l'entrée est possible aujourd'hui."
+       "metin": "Les nouveaux serveurs ont ouvert avec une **préinscription** : 15-29 octobre première période, 29 octobre-12 novembre deuxième période (choix du serveur), 10-11 novembre création de personnage. La vérification par téléphone et OTP+ (application de mot de passe à usage unique) étaient obligatoires ; OTP+ a remplacé AnyOTP le 15 octobre. Le lancement a eu lieu le 12 novembre 2026 ; le maintien de la préinscription après le lancement n'est pas précisé officiellement."
       },
       {
        "tip": "tablo",
@@ -782,25 +1228,33 @@
        "satirlar": [
         [
          "Prix",
-         "Gratuit ; premium et objets cosmétiques s'achètent avec des NPoints, prix actuels sur la page PUS officielle"
+         "Gratuit (Steam : Free To Play) ; les objets premium et cosmétiques s'achètent avec des NPoints"
         ],
         [
          "Système",
-         "Windows uniquement ; Windows 10 ou 11 conseillé. Pas de version Mac ni mobile"
+         "Windows uniquement. La page Steam cite de Windows 2000 à 10 pour le minimum ; le client Steam ne prend en charge que Windows 10 et suivants depuis le 1er janvier 2024"
+        ],
+        [
+         "Processeur / mémoire / stockage",
+         "Minimum selon Steam : Pentium 3 600 MHz, 512 Mo de RAM, 2 Go d'espace libre"
         ],
         [
          "Carte graphique",
-         "Une carte dédiée n'est pas nécessaire ; un graphique intégré avec pilotes à jour suffit"
+         "L'accélération 3D suffit (page Steam) ; une carte dédiée n'est pas obligatoire"
+        ],
+        [
+         "Langue",
+         "Turc : interface, voix et sous-titres (page Steam)"
         ],
         [
          "Sécurité",
-         "Vérification par téléphone et OTP+ exigés pour les nouveaux serveurs"
+         "Vérification par téléphone et OTP+ demandés pour les nouveaux serveurs"
         ]
        ]
       },
       {
        "tip": "uyari",
-       "metin": "La page officielle de configuration requise liste de très vieilles versions de Windows. Le besoin réel est très faible aujourd'hui ; ne renoncez pas au jeu à cause de ces anciennes valeurs."
+       "metin": "La configuration Steam décrit un ordinateur très ancien. Les besoins réels peuvent être plus élevés, mais un PC moderne ne devrait pas poser de problème ; une valeur détaillée actuelle n'est pas officiellement indiquée, ce tableau donne donc seulement les valeurs minimales."
       }
      ]
     },
@@ -905,6 +1359,58 @@
      ]
     },
     {
+     "id": "irk-sinif",
+     "baslik": "Races, titres de maître et répartition des stats",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Selon KO Rehberi, chaque nation compte plusieurs races. Côté **El Morad** : Barbarian, El Morad Male, El Morad Female et Porutu ; côté **Karus** : Arch Tuarek, Tuarek, Wrinkle Tuarek, Pury Tuarek et Kurian. Pour les classes communes, la race change l'apparence plus que le jeu ; elle détermine surtout le look et la classe choisissable (pour le Warrior : Barbarian, El Morad Male, El Morad Female et Arch Tuarek)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Classe",
+        "Branches de compétences (KO Rehberi)",
+        "Titre de maître"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Attack, Defense, Passion / Berserking",
+         "Blade Master (El Morad), Berserker Hero (Karus)"
+        ],
+        [
+         "Rogue",
+         "Archery, Assassinate, Search / Explore",
+         "Kasar Hood (El Morad), Shadow Vain (Karus)"
+        ],
+        [
+         "Mage",
+         "Branches de sorts",
+         "Non précisé officiellement"
+        ],
+        [
+         "Priest",
+         "Branches de soin et de soutien",
+         "Non précisé officiellement"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "La page du Warrior donne **STR** (Strength, force) comme stat principale et décrit la classe comme le tank de mêlée ; c'est le premier personnage nécessaire quand on tue un boss puissant. Le Rogue se distingue par sa vitesse et son habileté : l'Assassin inflige beaucoup de dégâts en peu de temps, l'Archer a la plus longue portée du jeu."
+      },
+      {
+       "tip": "p",
+       "metin": "**Répartition des stats et compétences :** vous gagnez 3 points de stat par niveau. Pour le Warrior, KO Rehberi publie deux répartitions suggérées, 'Berserker' et 'Attacker', et précise qu'elles ne sont que des suggestions, d'autres builds étant possibles. Logique générale : les classes de dégâts montent leur stat principale, les PV augmentent la survie, les lanceurs de sorts montent INT et MP ; en cas de doute, équilibrez d'abord PV et stat principale, puis orientez selon votre rôle."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Ne copiez pas un build de stats uniquement depuis une vidéo. Lisez la répartition suggérée sur la page de la classe, car les builds changent avec la version du jeu."
+      }
+     ]
+    },
+    {
      "id": "seviye",
      "baslik": "Monter en niveau : une voie rapide et efficace",
      "bloklar": [
@@ -935,6 +1441,139 @@
      ]
     },
     {
+     "id": "bolgeler",
+     "baslik": "Zones : que faire où",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "KO Rehberi range les cartes en quatre groupes. Cette page n'indique pas quelle zone convient à quel niveau ; les tranches de niveau sont sur une page séparée 'Level Expleri'. Le tableau ci-dessous ne donne aucun niveau, car ils ne sont pas précisés officiellement ; suivez les noms de zones en jeu et les indications des PNJ."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Groupe",
+        "Zones"
+       ],
+       "satirlar": [
+        [
+         "Général",
+         "Moradon, El Morad, Karus, Eslant, Delos (Abyss)"
+        ],
+        [
+         "PvP",
+         "Ardream, Ronark Land Base, Ronark Land, Kalluga Valley, Alseids Plain, Nereidth Island, Oreads, Nieds Triangle, Napies Gorge"
+        ],
+        [
+         "Événement",
+         "Kellino Temple (Forgotten Temple), Juraid Mountain, Krowaz's Dominion, Bifrost, Under the Castle, Chaos Dungeon"
+        ],
+        [
+         "Autre",
+         "Caitharos Arena, Zipang"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Moradon** est la ville commune aux deux nations ; le marché, le coffre et la Magic Anvil s'y trouvent. Sur les nouveaux serveurs Ardream et Ronark Land Base n'existent pas, donc le PvP se déroule à Ronark Land. Règle pratique en montant de niveau : si les monstres vous tuent trop vite dans une zone, revenez d'un cran, et si c'est trop facile, montez d'un cran."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si vous mourez en changeant de zone, vous perdez de l'EXP. Le plus sûr pour entrer la première fois dans une nouvelle zone est d'y aller en groupe ou avec un ami."
+      }
+     ]
+    },
+    {
+     "id": "etkinlik",
+     "baslik": "Horaires des événements : calendrier quotidien et hebdomadaire",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Les horaires ci-dessous viennent de la page d'événements de KO Rehberi ; elle est réglée sur l'heure locale de Turquie et semble mise à jour en janvier 2026. Les horaires peuvent changer ; le compte à rebours en jeu et les annonces officielles font foi. USKO est le client officiel de NTTGame, STKO la version Steam."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Événement",
+        "Horaires USKO",
+        "Horaires STKO (Steam)"
+       ],
+       "satirlar": [
+        [
+         "Border Defense War (BDW)",
+         "02:00, 13:00, 19:00",
+         "01:00, 07:00, 12:00, 16:00, 20:00"
+        ],
+        [
+         "Chaos",
+         "00:00, 12:00",
+         "10:00, 14:00, 22:00"
+        ],
+        [
+         "Juraid Mountain (JR)",
+         "07:40, 22:40",
+         "02:40, 13:40"
+        ],
+        [
+         "Forgotten Temple (FT)",
+         "03:00, 22:00",
+         "08:00, 23:00"
+        ],
+        [
+         "Bifrost",
+         "02:00, 14:00, 21:00",
+         "00:00, 10:00, 17:00"
+        ],
+        [
+         "Krowaz",
+         "10:00, 21:00",
+         "06:00, 19:00"
+        ],
+        [
+         "Lunar War",
+         "14:00, 20:00 (lundi et samedi)",
+         "04:00, 11:00, 21:00 (mardi et dimanche)"
+        ],
+        [
+         "Castle Siege War (CSW)",
+         "20:30 (dimanche)",
+         "21:00 (samedi)"
+        ],
+        [
+         "Under the Castle (UTC)",
+         "21:00 (vendredi)",
+         "00:00 (dimanche)"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "L'indication des jours suit les flèches du tableau ; Lunar War, CSW et UTC sont hebdomadaires, les autres quotidiens. **Draki's Tower** est toujours ouverte. Twisted Moradon, Knight Royale, Puzzle, la Guerre de boules de neige, Coin, Pleine Lune, Full Moon Rift et la Revanche des célibataires sont des événements temporaires et apparaissaient 'inactifs' sur la page à ce moment-là. Dark Lunar War a été supprimé."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Quotidien",
+         "metin": "En montant de niveau, notez les horaires de Chaos, BDW et Juraid dans votre agenda ; les récompenses aident à monter vite et à s'équiper."
+        },
+        {
+         "baslik": "Hebdomadaire",
+         "metin": "Fixez des horaires avec votre clan pour Lunar War, CSW et UTC ; ils demandent un groupe et de l'organisation."
+        },
+        {
+         "baslik": "Chaque jour",
+         "metin": "Passez à Draki's Tower ; toujours ouverte, elle ne pose aucun souci d'horaire."
+        }
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Ne faites pas confiance aux sites tiers qui vendent récompenses ou horaires d'événements contre de l'argent réel. Consultez uniquement les annonces en jeu et officielles."
+      }
+     ]
+    },
+    {
      "id": "ekonomi",
      "baslik": "Argent et économie : uniquement en jeu",
      "bloklar": [
@@ -953,6 +1592,36 @@
       {
        "tip": "uyari",
        "metin": "Vendre de la monnaie, des objets ou des comptes à d'autres joueurs contre de l'argent réel (RMT) et passer par des sites tiers enfreint les règles et fait fermer votre compte. Ne commercez pas en dehors du PUS officiel."
+      }
+     ]
+    },
+    {
+     "id": "yukseltme-klan",
+     "baslik": "Amélioration d'objets, clan et guerre des châteaux",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**Logique d'amélioration :** les objets s'améliorent à la Magic Anvil de Moradon (près de Charon). Chaque essai peut améliorer l'objet, le laisser identique ou le détruire ; les taux de réussite en jeu et la liste des matériaux ne sont pas précisés officiellement. Logique générale : le risque d'échec augmente avec le niveau d'amélioration, alors essayez les objets précieux en dernier et testez avec des objets de rechange que vous pouvez perdre."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Apprenez d'abord l'amélioration sur des objets bon marché ou d'occasion.",
+        "Ne dépensez pas toutes vos économies sur un seul objet d'un coup.",
+        "Vérifiez le prix moyen du marché avant d'acheter le matériau d'une amélioration."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Clan et guerre des châteaux :** le clan est le centre pour participer ensemble aux événements et partager des objets. **Castle Siege War (CSW)** est l'événement hebdomadaire où les clans se battent pour prendre le château ; **Under the Castle (UTC)** et **Lunar War** demandent aussi une organisation de clan. Ce que gagne le clan qui tient le château n'est pas précisé officiellement, demandez donc à votre chef de clan."
+      },
+      {
+       "tip": "p",
+       "metin": "**Types de premium :** le jeu vend des objets comme Switching Premium et War Premium contre des NPoints. La durée, le prix et l'avantage de chacun sont listés sur la page PUS officielle ; ces données changent avec les mises à jour, consultez donc la liste de cette page. Lisez la description sur la page avant d'acheter."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Quand une amélioration échoue, l'objet ne revient pas. Se plaindre au support du compte ne change pas le résultat ; tentez-le en connaissant le risque."
       }
      ]
     },
@@ -1020,16 +1689,16 @@
          "c": "Oui, il est gratuit. Les produits premium et cosmétiques sont facultatifs."
         },
         {
-         "s": "Peut-on encore entrer sur les nouveaux serveurs ?",
-         "c": "L'ouverture s'est faite par préinscription. Consultez l'annonce de NTTGame pour les conditions d'entrée actuelles."
+         "s": "Peut-on encore rejoindre les nouveaux serveurs ?",
+         "c": "Le lancement a eu lieu le 12 novembre 2026. Le maintien de la préinscription après le lancement n'est pas précisé officiellement ; essayez avec votre compte et, en cas de refus, consultez l'annonce de NTTGame."
         },
         {
          "s": "Quelle nation choisir ?",
          "c": "Les deux sont de force égale. Prenez celle de vos amis."
         },
         {
-         "s": "Quel est le niveau maximum ?",
-         "c": "83, suivi du système de renaissance. Confirmez les conditions en jeu."
+         "s": "Quel est le niveau maximal ?",
+         "c": "83. À 83 avec 100 % d'EXP, on peut faire un rebirth ; les conditions sont écrites dans la section 'Monter de niveau'."
         },
         {
          "s": "Peut-on jouer sur téléphone ?",
@@ -1059,7 +1728,7 @@
     },
     {
      "ad": "Modelo de precio",
-     "deger": "Gratis; hay premium y compras dentro del juego"
+     "deger": "Gratis (la página de Steam indica 'Free To Play'); los objetos premium y cosméticos se compran con NPoints, los precios están en la página PUS oficial"
     },
     {
      "ad": "Versión actual",
@@ -1067,7 +1736,7 @@
     },
     {
      "ad": "Soporte en turco",
-     "deger": "El juego se publica en turco (NTTGame Turquía)"
+     "deger": "Sí: el juego lo publica en turco NTTGame Turquía; la página de Steam también indica interfaz, voces y subtítulos en turco"
     }
    ],
    "bolumler": [
@@ -1107,7 +1776,7 @@
       },
       {
        "tip": "p",
-       "metin": "Los nuevos servidores abrieron con **preinscripción**: del 15 al 29 de octubre la primera ventana, del 29 de octubre al 12 de noviembre la segunda (elección de servidor) y el 10 y 11 de noviembre la creación de personaje. Las cuentas sin preinscripción no pudieron entrar. La verificación por teléfono y OTP+ (aplicación de contraseña de un solo uso) eran obligatorias; OTP+ sustituyó a AnyOTP el 15 de octubre. Comprueba en el anuncio de NTTGame si hoy se puede entrar."
+       "metin": "Los nuevos servidores abrieron con **preinscripción**: 15-29 de octubre primer periodo, 29 de octubre-12 de noviembre segundo periodo (elección de servidor), 10-11 de noviembre creación de personaje. La verificación por teléfono y OTP+ (aplicación de contraseña de un solo uso) fueron obligatorias; OTP+ reemplazó a AnyOTP el 15 de octubre. El lanzamiento fue el 12 de noviembre de 2026; no está indicado oficialmente si la preinscripción sigue exigiéndose después del lanzamiento."
       },
       {
        "tip": "tablo",
@@ -1118,25 +1787,33 @@
        "satirlar": [
         [
          "Precio",
-         "Gratis; premium y objetos cosméticos se compran con NPoints, precios actuales en la página PUS oficial"
+         "Gratis (Steam: Free To Play); los objetos premium y cosméticos se compran con NPoints"
         ],
         [
          "Sistema operativo",
-         "Solo Windows; se recomienda Windows 10 u 11. Sin versión para Mac ni móvil"
+         "Solo Windows. La página de Steam cita de Windows 2000 a 10 como mínimo; el cliente de Steam solo admite Windows 10 y posteriores desde el 1 de enero de 2024"
+        ],
+        [
+         "Procesador / memoria / almacenamiento",
+         "Mínimo según Steam: Pentium 3 600 MHz, 512 MB de RAM, 2 GB libres"
         ],
         [
          "Tarjeta gráfica",
-         "No hace falta una dedicada; basta con gráficos integrados con controladores actualizados"
+         "Basta con aceleración 3D (página de Steam); no se exige tarjeta dedicada"
+        ],
+        [
+         "Idioma",
+         "Turco: interfaz, voces y subtítulos (página de Steam)"
         ],
         [
          "Seguridad",
-         "Se exigieron verificación por teléfono y OTP+ para los nuevos servidores"
+         "Verificación por teléfono y OTP+ se pidieron para los nuevos servidores"
         ]
        ]
       },
       {
        "tip": "uyari",
-       "metin": "La página oficial de requisitos lista versiones de Windows muy antiguas. La necesidad real hoy es muy baja; no renuncies al juego por esos valores antiguos."
+       "metin": "Los requisitos de Steam describen un ordenador muy antiguo. Las necesidades reales pueden ser mayores, pero en un PC moderno no se esperan problemas; un valor detallado actual no está indicado oficialmente, así que esta tabla recoge solo los valores mínimos."
       }
      ]
     },
@@ -1241,6 +1918,58 @@
      ]
     },
     {
+     "id": "irk-sinif",
+     "baslik": "Razas, títulos de maestro y reparto de estadísticas",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Según KO Rehberi, cada nación tiene varias razas. En el lado de **El Morad**: Barbarian, El Morad Male, El Morad Female y Porutu; en el de **Karus**: Arch Tuarek, Tuarek, Wrinkle Tuarek, Pury Tuarek y Kurian. En las clases comunes la raza cambia el aspecto más que el juego; decide sobre todo el aspecto y qué clase se puede elegir (para el Warrior: Barbarian, El Morad Male, El Morad Female y Arch Tuarek)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Clase",
+        "Ramas de habilidades (KO Rehberi)",
+        "Título de maestro"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Attack, Defense, Passion / Berserking",
+         "Blade Master (El Morad), Berserker Hero (Karus)"
+        ],
+        [
+         "Rogue",
+         "Archery, Assassinate, Search / Explore",
+         "Kasar Hood (El Morad), Shadow Vain (Karus)"
+        ],
+        [
+         "Mage",
+         "Ramas de hechizos",
+         "No indicado oficialmente"
+        ],
+        [
+         "Priest",
+         "Ramas de curación y apoyo",
+         "No indicado oficialmente"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "La página del Warrior muestra **STR** (Strength, fuerza) como estadística principal y describe la clase como el tanque cuerpo a cuerpo; es el primer personaje necesario al matar a un jefe fuerte. El Rogue destaca por velocidad y habilidad: el Assassin hace mucho daño en poco tiempo y el Archer tiene el mayor alcance del juego."
+      },
+      {
+       "tip": "p",
+       "metin": "**Reparto de estadísticas y habilidades:** ganas 3 puntos de estadística por nivel. Para el Warrior, KO Rehberi publica dos repartos sugeridos llamados 'Berserker' y 'Attacker' y aclara que son solo sugerencias, pues otros builds son posibles. Lógica general: las clases de daño suben su estadística principal, los PV dan supervivencia y los lanzadores suben INT y MP; si dudas, equilibra primero PV y estadística principal y luego inclínate hacia tu rol."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "No copies un build de estadísticas solo de un vídeo. Lee el reparto sugerido en la página de la clase como texto, porque los builds cambian con la versión del juego."
+      }
+     ]
+    },
+    {
      "id": "seviye",
      "baslik": "Subir de nivel: una ruta rápida y eficiente",
      "bloklar": [
@@ -1271,6 +2000,139 @@
      ]
     },
     {
+     "id": "bolgeler",
+     "baslik": "Zonas: qué hacer dónde",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "KO Rehberi agrupa los mapas en cuatro grupos. Esta página no dice qué zona conviene a qué nivel; los rangos de nivel están en otra página, 'Level Expleri', que no abrí. Por eso la tabla de abajo no incluye niveles, que no están indicados oficialmente; sigue los nombres de zona del juego y las pistas de los PNJ."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Grupo",
+        "Zonas"
+       ],
+       "satirlar": [
+        [
+         "General",
+         "Moradon, El Morad, Karus, Eslant, Delos (Abyss)"
+        ],
+        [
+         "PvP",
+         "Ardream, Ronark Land Base, Ronark Land, Kalluga Valley, Alseids Plain, Nereidth Island, Oreads, Nieds Triangle, Napies Gorge"
+        ],
+        [
+         "Evento",
+         "Kellino Temple (Forgotten Temple), Juraid Mountain, Krowaz's Dominion, Bifrost, Under the Castle, Chaos Dungeon"
+        ],
+        [
+         "Otras",
+         "Caitharos Arena, Zipang"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Moradon** es la ciudad común de las dos naciones; aquí están el mercado, el almacén y la Magic Anvil. En los nuevos servidores no existen Ardream ni Ronark Land Base, así que el PvP se hace en Ronark Land. Regla práctica al subir de nivel: si los monstruos te matan demasiado rápido en una zona, baja un escalón; si es demasiado fácil, sube uno."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si mueres al cambiar de zona pierdes EXP. Lo más seguro para entrar por primera vez en una zona nueva es ir en grupo o con un amigo."
+      }
+     ]
+    },
+    {
+     "id": "etkinlik",
+     "baslik": "Horarios de eventos: calendario diario y semanal",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Los horarios de abajo vienen de la página de eventos de KO Rehberi; está ajustada a la hora local de Turquía y parece actualizada en enero de 2026. Los horarios pueden cambiar; la cuenta atrás del juego y los anuncios oficiales mandan. USKO es el cliente oficial de NTTGame y STKO la versión de Steam."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Evento",
+        "Horarios USKO",
+        "Horarios STKO (Steam)"
+       ],
+       "satirlar": [
+        [
+         "Border Defense War (BDW)",
+         "02:00, 13:00, 19:00",
+         "01:00, 07:00, 12:00, 16:00, 20:00"
+        ],
+        [
+         "Chaos",
+         "00:00, 12:00",
+         "10:00, 14:00, 22:00"
+        ],
+        [
+         "Juraid Mountain (JR)",
+         "07:40, 22:40",
+         "02:40, 13:40"
+        ],
+        [
+         "Forgotten Temple (FT)",
+         "03:00, 22:00",
+         "08:00, 23:00"
+        ],
+        [
+         "Bifrost",
+         "02:00, 14:00, 21:00",
+         "00:00, 10:00, 17:00"
+        ],
+        [
+         "Krowaz",
+         "10:00, 21:00",
+         "06:00, 19:00"
+        ],
+        [
+         "Lunar War",
+         "14:00, 20:00 (lunes y sábado)",
+         "04:00, 11:00, 21:00 (martes y domingo)"
+        ],
+        [
+         "Castle Siege War (CSW)",
+         "20:30 (domingo)",
+         "21:00 (sábado)"
+        ],
+        [
+         "Under the Castle (UTC)",
+         "21:00 (viernes)",
+         "00:00 (domingo)"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "La indicación de días sigue las flechas de la tabla; Lunar War, CSW y UTC son semanales y los demás diarios. **Draki's Tower** está siempre abierta. Twisted Moradon, Knight Royale, Puzzle, la Guerra de bolas de nieve, Coin, Luna llena, Full Moon Rift y la Venganza de los solteros son eventos temporales y aparecían como 'no activos' en la página en ese momento. Dark Lunar War fue eliminado."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Diario",
+         "metin": "Al subir de nivel, apunta en tu calendario los horarios de Chaos, BDW y Juraid; las recompensas ayudan a subir rápido y a equiparte."
+        },
+        {
+         "baslik": "Semanal",
+         "metin": "Acuerda horarios con tu clan para Lunar War, CSW y UTC; requieren grupo y organización."
+        },
+        {
+         "baslik": "Cada día",
+         "metin": "Pasa por Draki's Tower; como está siempre abierta no hay problema de horario."
+        }
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "No confíes en sitios de terceros que venden recompensas u horarios de eventos por dinero real. Mira solo los anuncios del juego y los oficiales."
+      }
+     ]
+    },
+    {
      "id": "ekonomi",
      "baslik": "Dinero y economía: solo dentro del juego",
      "bloklar": [
@@ -1289,6 +2151,36 @@
       {
        "tip": "uyari",
        "metin": "Vender moneda del juego, objetos o cuentas a otros jugadores por dinero real (RMT) y usar sitios de terceros para ello infringe las normas y hace que cierren tu cuenta. No comercies fuera del PUS oficial."
+      }
+     ]
+    },
+    {
+     "id": "yukseltme-klan",
+     "baslik": "Mejora de objetos, clan y guerra de castillos",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**Lógica de mejora:** los objetos se mejoran en la Magic Anvil de Moradon (junto a Charon). Cada intento puede subir el objeto, dejarlo igual o destruirlo; las tasas de éxito del juego y la lista de materiales no están indicadas oficialmente. Lógica general: el riesgo de fallo sube con el nivel de mejora, por eso prueba los objetos valiosos al final y ensaya con objetos de repuesto que puedas permitirte perder."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Aprende primero a mejorar con objetos baratos o de segunda mano.",
+        "No gastes todos tus ahorros en un solo objeto de golpe.",
+        "Mira el precio medio del mercado antes de comprar el material de una mejora."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Clan y guerra de castillos:** el clan es el centro para entrar juntos en eventos y compartir objetos. **Castle Siege War (CSW)** es el evento semanal en que los clanes luchan por tomar el castillo; **Under the Castle (UTC)** y **Lunar War** también requieren organización de clan. Lo que gana el clan que tiene el castillo no está indicado oficialmente, así que pregúntaselo al líder de tu clan."
+      },
+      {
+       "tip": "p",
+       "metin": "**Tipos de premium:** el juego vende objetos como Switching Premium y War Premium por NPoints. La duración, el precio y la ventaja de cada uno figuran en la página PUS oficial; estos datos cambian con las actualizaciones, así que consulta el listado de esa página. Lee la descripción de la página antes de comprar."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Cuando una mejora falla, el objeto no vuelve. Quejarse al soporte de la cuenta no cambia el resultado; inténtalo conociendo el riesgo."
       }
      ]
     },
@@ -1356,8 +2248,8 @@
          "c": "Sí, es gratis. Los productos premium y cosméticos son opcionales."
         },
         {
-         "s": "¿Todavía se puede entrar en los nuevos servidores?",
-         "c": "La apertura fue con preinscripción. Consulta el anuncio de NTTGame para las condiciones de entrada actuales."
+         "s": "¿Se puede entrar todavía en los nuevos servidores?",
+         "c": "El lanzamiento fue el 12 de noviembre de 2026. No está indicado oficialmente si la preinscripción sigue exigiéndose tras el lanzamiento; prueba con tu cuenta y, si te rechazan, consulta el anuncio de NTTGame."
         },
         {
          "s": "¿Qué nación elijo?",
@@ -1365,7 +2257,7 @@
         },
         {
          "s": "¿Cuál es el nivel máximo?",
-         "c": "83, seguido del sistema de renacimiento. Confirma las condiciones en el juego."
+         "c": "83. Con 83 y 100 % de EXP se puede hacer un rebirth; las condiciones están en la sección 'Subir de nivel'."
         },
         {
          "s": "¿Se puede jugar en el móvil?",

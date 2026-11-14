@@ -1,8 +1,16 @@
 {
  "oyun": "genshin-impact",
- "guncelleme": "2026-11-14",
+ "guncelleme": "2026-11-15",
  "surum": "7.2 Hour of Ruin (4 Kasım 2026)",
  "kaynaklar": [
+  {
+   "url": "https://store.epicgames.com/en-US/p/genshin-impact",
+   "ad": "Epic Games Store: Genshin Impact"
+  },
+  {
+   "url": "https://genshin.hoyoverse.com/en/gift",
+   "ad": "HoYoverse: Redeem Code"
+  },
   {
    "url": "https://www.icy-veins.com/genshin-impact/patch-overview",
    "ad": "Icy Veins: Genshin Impact patch overview"
@@ -35,7 +43,7 @@
     },
     {
      "ad": "Platform",
-     "deger": "PC, PlayStation, iOS, Android (diğer platformlar için resmî siteye bakın)"
+     "deger": "PC, PS5, Xbox Series X|S, iOS, Android, HarmonyOS NEXT (PS4 desteği 8 Nisan 2026'da bitti; Switch çıkmadı)"
     },
     {
      "ad": "Fiyat modeli",
@@ -47,7 +55,7 @@
     },
     {
      "ad": "Türkçe desteği",
-     "deger": "Doğrulanamadı; oyun içi dil listesini kontrol edin"
+     "deger": "Var; 16 metin dilinden biri Türkçe (Epic mağaza sayfası). Seslendirme Çince, İngilizce, Japonca, Korece"
     }
    ],
    "bolumler": [
@@ -75,15 +83,46 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Genshin Impact PC, PlayStation ve mobil (iOS, Android) cihazlarda oynanır. Hesabınız platformlar arasında kullanılabilir; ancak bazı platformlarda ilerleme paylaşımının sınırları olabilir, kayıttan önce resmî açıklamaya bakın."
+       "metin": "Genshin Impact PC, PS5, Xbox Series X|S (20 Kasım 2024'ten beri), iOS, Android ve HarmonyOS NEXT (10 Eylül 2025'ten beri) üzerinde oynanır. PS4 desteği 8 Nisan 2026'da sona erdi; Nintendo Switch sürümü çıkmadı. Oyun ücretsizdir; ana kazanç \"gacha\" (şansa dayalı dilek) sistemidir. Hesap platformlar arası kullanılabilir; ilerleme paylaşımının sınırlarını kayıttan önce resmî açıklamada kontrol edin."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Bileşen",
+        "Asgari (PC, Epic)",
+        "Önerilen (PC, Epic)"
+       ],
+       "satirlar": [
+        [
+         "Sistem",
+         "Windows 10 64 bit",
+         "Windows 10 64 bit"
+        ],
+        [
+         "İşlemci",
+         "6. nesil Intel Core i5 veya AMD Ryzen",
+         "7. nesil Intel Core i7 veya AMD Ryzen 5000 serisi"
+        ],
+        [
+         "Bellek (RAM)",
+         "8 GB",
+         "16 GB"
+        ],
+        [
+         "Ekran kartı",
+         "NVIDIA GeForce GTX 1050, DirectX 11",
+         "NVIDIA GeForce GTX 1060 (6 GB)"
+        ],
+        [
+         "Depolama",
+         "110 GB",
+         "150 GB"
+        ]
+       ]
       },
       {
        "tip": "p",
-       "metin": "**Sistem gereksinimleri** sürümle birlikte arttı. Eski kaynaklarda PC için en az Windows 10, 6. nesil i5, 8 GB RAM, GT 1030 ve 30 GB yer yazıyor; yeni kaynaklarda 100-150 GB ve GTX 1060 düzeyi geçiyor. Bu çelişki yüzünden kesin rakamı resmî indirme sayfasından kontrol edin. Disk yeri her yeni sürümle büyüdüğü için SSD ve bol boş yer yardımcı olur."
-      },
-      {
-       "tip": "p",
-       "metin": "**Dil:** oyun birçok dili destekler, ancak Türkçe metin desteğini doğrulayamadım; 2020'deki resmî listede 13 dil vardı ve Türkçe yoktu. Kurmadan önce oyun içi ayar menüsünden dil listesine bakın."
+       "metin": "**Dil:** Epic mağaza sayfasına göre Türkçe metin desteği vardır (16 metin dili); seslendirme Çince, İngilizce, Japonca ve Korece. Disk yeri her yeni sürümle büyüdüğü için SSD ve bol boş yer yardımcı olur; üstteki değerler Epic sayfasındandır ve sürümle değişebilir."
       },
       {
        "tip": "uyari",
@@ -257,6 +296,248 @@
      ]
     },
     {
+     "id": "tepkimeler-ve-takim",
+     "baslik": "Element tepkimeleri ve takım rolleri",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Genshin'in temel mantığı elementleri birleştirmektir. Aynı hedefe farklı elementleri sürdüğünüzde tepkime (elemental reaction) oluşur. Aşağıdaki tablo ana tepkimelerin kısa özetidir (oyun içi öğretici ve resmî wiki ile uyumlu): Tepkimeyi tetiklemek için önce bir elementi hedefe uygulamanız, sonra ikinci elementle vurmanız gerekir. Düşmanın üzerinde beliren element simgesine bakın: simge varsa tepkime için doğru zamandır. Aynı elementi art arda uygulamak tepkime vermez; bu yüzden karakter sırasını sık değiştirmek gerekir."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Tepkime",
+        "Elementler",
+        "Kabaca etkisi"
+       ],
+       "satirlar": [
+        [
+         "Buharlaşma (Vaporize)",
+         "Hydro + Pyro",
+         "Hasar çarpanı"
+        ],
+        [
+         "Erime (Melt)",
+         "Cryo + Pyro",
+         "Hasar çarpanı"
+        ],
+        [
+         "Aşırı Yük (Overloaded)",
+         "Electro + Pyro",
+         "Patlama ve geri itme"
+        ],
+        [
+         "Süper İletken (Superconduct)",
+         "Cryo + Electro",
+         "Fiziksel direnci yarıya (%50) düşürür"
+        ],
+        [
+         "Elektrik Yükü (Electro-Charged)",
+         "Hydro + Electro",
+         "Sürekli hasar"
+        ],
+        [
+         "Donma (Frozen)",
+         "Hydro + Cryo",
+         "Hedefi dondurur"
+        ],
+        [
+         "Savrulma (Swirl)",
+         "Anemo + başka element",
+         "Elementi çevredeki düşmanlara yayar"
+        ],
+        [
+         "Kristalleşme (Crystallize)",
+         "Geo + başka element",
+         "Kalkan kristali bırakır"
+        ],
+        [
+         "Yanma (Burning)",
+         "Dendro + Pyro",
+         "Alan hasarı ve yanma"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Dendro ile gelen Çiçeklenme (Bloom), Hiperçiçek (Hyperbloom), Yeşerme (Burgeon), Hızlanma, Zorlama (Aggravate) ve Yayılma (Spread) gibi tepkimeler daha ileri düzeydir; ayrıca Kırılma (Shatter) donmuş hedefe ağır silahla vurunca olur. İlk günlerde yalnızca buharlaşma, erime ve savrulmayı bilmeniz yeter. Yeni başlayan biri için pratik kural şudur: bir karakter elementi uygular, diğeri aynı hedefe farklı elementle vurur; uzun, karmaşık zincirler kurmak gerekmez. Tepkime isimlerini ezberlemek yerine oyun içi öğreticideki kısa deneme alanında her birini birer kez görmek daha hızlı öğretir."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rol",
+        "Görev",
+        "Örnek mantık"
+       ],
+       "satirlar": [
+        [
+         "Ana hasarcı",
+         "Sahada en çok hasarı verir",
+         "Sürekli ekranda kalan karakter"
+        ],
+        [
+         "Alt hasarcı",
+         "Elementi uygular, tepkimeyi kurar",
+         "Kısa sürede element uygular"
+        ],
+        [
+         "Destek",
+         "Güçlendirir veya iyileştirir",
+         "Takımın direncini ve hasarını artırır"
+        ],
+        [
+         "Savunucu",
+         "Kalkanla korur",
+         "Zor patronda hayatta kalma sağlar"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Dört karakterlik ekipte iki farklı element yeterlidir; üç element zorunlu değildir. Önce iki karakterle çalışan bir tepkime kurup oyunun öğretici ve haritayla tadına bakın."
+      }
+     ]
+    },
+    {
+     "id": "recine-ve-rutin",
+     "baslik": "Reçine bütçesi ve günlük rutin",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Reçine (Original Resin), alanlardan ve patronlardan ödül almak için harcanır. Üst sınırı 200'dür ve 8 dakikada bir tane yenilenir; yani boşken tam dolması yaklaşık 27 saat sürer. Kırılgan Reçine (Fragile Resin) 60 reçine değerinde bir ek kaynaktır ve Yoğun Reçine (Condensed Resin) alanlardan çıkan ödülü bir sonraki seferde artırmaya yarar (ayrıntı için oyun içi açıklamaya bakın). Reçine yalnızca belirli ödül alanlarında (alan, patron) harcanır; keşif, sandık ve komisyon gibi işler reçine istemez. Bu yüzden reçine boşalınca oyun biter diye düşünmeyin: reçine tükendiğinde haritada keşfe, hikâyeye veya etkinliklere dönebilirsiniz. Önemli olan, dolu reçineyi uzun süre boşta bırakmamaktır."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Günlük komisyonları yapın",
+         "metin": "Her gün komisyon görevlerini bitirin; yalnızca kısa süre alır ve ek ödül verir."
+        },
+        {
+         "baslik": "Reçinenizi harcayın",
+         "metin": "Reçinenin dolmasını beklemeden en çok ihtiyaç duyduğunuz malzemenin alanına girin; sınır 200'ü geçmesin."
+        },
+        {
+         "baslik": "Haftalık patronları atlamayın",
+         "metin": "Haftalık patron ilk seferlerde indirimli reçine ister (sayı sürümle değişebilir)."
+        },
+        {
+         "baslik": "Kodları ve etkinlikleri kontrol edin",
+         "metin": "Etkinlik ödülleri zaman sınırlıdır; takvime yazın."
+        },
+        {
+         "baslik": "Haritada keşif yapın",
+         "metin": "Sandıklar ve gizemler reçine harcamadan kaynak verir."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Bir reçine bütçesi çıkarın: bir gün boş, bir gün dolu geçirmeyin. Düzenli küçük harcama, uzun seanslardan daha verimlidir."
+      }
+     ]
+    },
+    {
+     "id": "kod-ve-parasiz-oyun",
+     "baslik": "Kod kullanma ve parasız oyuncu planı",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Resmî kodlar (redeem code) oyun içi ödül verir. **Kod kullanma şartı:** genellikle Macera Rütbesi 10 gerekir; bazı etkinlik kodları farklı koşul isteyebilir. Kodları HoYoverse'ün resmî hediye sayfasından (genshin.hoyoverse.com/en/gift) veya oyun içinden kullanabilirsiniz; ödüller oyun içi posta kutusuna düşer ve yaklaşık 30 gün saklanır. Şu an geçerli bir kodun son kullanma tarihi 16 Kasım 2026 00:00'dır (UTC+8). Kodlar küçük harfle ya da büyük harfle yazılsa da doğru karakterlerle girilmelidir; süresi dolmuş veya zaten kullanılmış bir kod hata verir. Aynı kodu aynı hesapta ikinci kez kullanamazsınız. Kod ödüllerini ilk kullanışta alırsınız; bu yüzden geçerli kodları boşa harcamadan, ödülleri hemen toplayın."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Resmî sayfaya gidin",
+         "metin": "Kod yalnızca resmî kod sayfasında veya oyun içinde girilir."
+        },
+        {
+         "baslik": "Oyun içinden girin",
+         "metin": "Paimon Menüsü > Ayarlar > Hesap > Kod Kullan yolunu izleyin."
+        },
+        {
+         "baslik": "Postayı kontrol edin",
+         "metin": "Ödül postaya gelir; süresi dolmadan alın."
+        }
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Parasız oyuncu önceliği",
+        "Neden?"
+       ],
+       "satirlar": [
+        [
+         "Hikâye ve keşif",
+         "Ücretsiz dilek malzemesi ve karakter verir"
+        ],
+        [
+         "Kodlar ve etkinlikler",
+         "Düzenli ücretsiz ödül sağlar"
+        ],
+        [
+         "Tek ekip, az karakter",
+         "Kaynağı dağıtmadan güçlendirir"
+        ],
+        [
+         "Dilekleri biriktirme",
+         "İstediğiniz karakter için garantiye yaklaştırır"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Kodları yalnızca resmî kaynaklardan alın. Parola, doğrulama kodu veya giriş isteyen \"ücretsiz kod\" siteleri dolandırıcıdır."
+      }
+     ]
+    },
+    {
+     "id": "rutbe-kilometre-taslari",
+     "baslik": "Macera Rütbesi kilometre taşları",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "En yüksek Macera Rütbesi 60'tır ve dünya seviyesi en fazla 9'a kadar yükselir. Aşağıdaki tablo oyunun başlıca açılışlarını özetler; Macera Rütbesi 10 ve üst sınırlar resmî kaynaklarda yer alır; diğer eşikler yaklaşıktır ve sürüme göre değişebilir."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rütbe",
+        "Neyi açar?",
+        "Not"
+       ],
+       "satirlar": [
+        [
+         "10",
+         "Kod kullanma",
+         "Resmî kaynak"
+        ],
+        [
+         "16 (yaklaşık)",
+         "Çok oyunculu mod",
+         "Sürüme göre değişebilir"
+        ],
+        [
+         "20 (yaklaşık)",
+         "Spiral Abyss gibi zorlu içerikler",
+         "Sürüme göre değişebilir"
+        ],
+        [
+         "60",
+         "En yüksek rütbe",
+         "Resmî sayfa"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Yüksek rütbeye ulaşmak aceleye değer değildir; rütbe seviyeniz arttıkça düşmanlar güçlenir. Karakterleriniz hazır değilse düşük dünya seviyesinde kalmak sorun değildir. Rütbe artışını hızlandırmak yerine hikâye görevlerini ve keşfi doğal akışında yapmak, hem karakter gelişimini hem de kaynak toplamayı dengede tutar. Zorlandığınız bir alanda takılırsanız karakter seviyesini, silahı ve yadigârları kontrol etmek çoğu zaman rütbeyi yükseltmekten daha etkilidir; bu yüzden önce kadronuzu güçlendirin."
+      }
+     ]
+    },
+    {
      "id": "sik-hatalar",
      "baslik": "Yeni başlayanların sık hataları",
      "bloklar": [
@@ -313,7 +594,7 @@
         },
         {
          "s": "Oyun Türkçe mi?",
-         "c": "Türkçe metin desteğini doğrulayamadım. Oyun içi dil menüsünden kontrol edin."
+         "c": "Evet, Türkçe metin desteği vardır (Epic mağaza sayfasına göre 16 metin dili); seslendirme Çince, İngilizce, Japonca ve Korece."
         },
         {
          "s": "Hangi cihazlarda oynanır?",
@@ -347,7 +628,7 @@
     },
     {
      "ad": "Platform",
-     "deger": "PC, PlayStation, iOS, Android (check the official site for other platforms)"
+     "deger": "PC, PS5, Xbox Series X|S, iOS, Android, HarmonyOS NEXT (PS4 support ended 8 April 2026; no Switch release)"
     },
     {
      "ad": "Pricing model",
@@ -359,7 +640,7 @@
     },
     {
      "ad": "Turkish support",
-     "deger": "Could not be verified; check the in-game language list"
+     "deger": "Yes; Turkish is one of 16 text languages (Epic store page). Voice-over in Chinese, English, Japanese, Korean"
     }
    ],
    "bolumler": [
@@ -387,15 +668,46 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Genshin Impact runs on PC, PlayStation and mobile (iOS, Android). Your account can be used across platforms; however, progress sharing may have limits on some platforms, so check the official explanation before you sign up."
+       "metin": "Genshin Impact is played on PC, PS5, Xbox Series X|S (since 20 November 2024), iOS, Android and HarmonyOS NEXT (since 10 September 2025). PS4 support ended on 8 April 2026; the Nintendo Switch version has not been released. The game is free; its income comes from the gacha (luck-based wish) system. An account works across platforms; check the limits of progress sharing in the official statement before you register."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Component",
+        "Minimum (PC, Epic)",
+        "Recommended (PC, Epic)"
+       ],
+       "satirlar": [
+        [
+         "System",
+         "Windows 10 64-bit",
+         "Windows 10 64-bit"
+        ],
+        [
+         "Processor",
+         "6th-gen Intel Core i5 or AMD Ryzen",
+         "7th-gen Intel Core i7 or AMD Ryzen 5000 series"
+        ],
+        [
+         "Memory (RAM)",
+         "8 GB",
+         "16 GB"
+        ],
+        [
+         "Graphics card",
+         "NVIDIA GeForce GTX 1050, DirectX 11",
+         "NVIDIA GeForce GTX 1060 (6 GB)"
+        ],
+        [
+         "Storage",
+         "110 GB",
+         "150 GB"
+        ]
+       ]
       },
       {
        "tip": "p",
-       "metin": "**System requirements** have grown with the versions. Older sources list for PC at least Windows 10, a 6th generation i5, 8 GB RAM, a GT 1030 and 30 GB of space; newer sources mention 100-150 GB and a GTX 1060 class card. Because of this conflict, check the exact figures on the official download page. As disk space grows with each new version, an SSD and plenty of free space help."
-      },
-      {
-       "tip": "p",
-       "metin": "**Language:** the game supports many languages, but I could not verify Turkish text support; the official list in 2020 had 13 languages and Turkish was not among them. Check the language list in the in-game settings menu before installing."
+       "metin": "**Language:** according to the Epic store page, Turkish text is supported (16 text languages); the voice-over is Chinese, English, Japanese and Korean. Disk use grows with each new version, so an SSD and plenty of free space help; the values above come from the Epic page and may change with versions."
       },
       {
        "tip": "uyari",
@@ -569,6 +881,248 @@
      ]
     },
     {
+     "id": "tepkimeler-ve-takim",
+     "baslik": "Elemental reactions and team roles",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The core idea of Genshin is combining elements. Applying different elements to the same target creates an elemental reaction. The table below is a short summary of the main reactions (consistent with the in-game tutorial and the official wiki): To trigger a reaction you first apply one element to the target and then hit it with a second element. Watch the element icon that appears on the enemy: if the icon is there, it is the right moment for a reaction. Applying the same element repeatedly gives no reaction, so you need to switch characters often."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Reaction",
+        "Elements",
+        "Rough effect"
+       ],
+       "satirlar": [
+        [
+         "Vaporize",
+         "Hydro + Pyro",
+         "Damage multiplier"
+        ],
+        [
+         "Melt",
+         "Cryo + Pyro",
+         "Damage multiplier"
+        ],
+        [
+         "Overloaded",
+         "Electro + Pyro",
+         "Explosion and knockback"
+        ],
+        [
+         "Superconduct",
+         "Cryo + Electro",
+         "Lowers physical resistance by half (50%)"
+        ],
+        [
+         "Electro-Charged",
+         "Hydro + Electro",
+         "Continuous damage"
+        ],
+        [
+         "Frozen",
+         "Hydro + Cryo",
+         "Freezes the target"
+        ],
+        [
+         "Swirl",
+         "Anemo + another element",
+         "Spreads the element to nearby enemies"
+        ],
+        [
+         "Crystallize",
+         "Geo + another element",
+         "Leaves a shield crystal"
+        ],
+        [
+         "Burning",
+         "Dendro + Pyro",
+         "Area damage and burning"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Reactions that come with Dendro such as Bloom, Hyperbloom, Burgeon, Quicken, Aggravate and Spread are more advanced; Shatter also happens when you hit a frozen target with a heavy weapon. In the first days you only need to know Vaporize, Melt and Swirl. A practical rule for a beginner: one character applies the element and another hits the same target with a different element; there is no need to build long, complicated chains. Instead of memorizing reaction names, seeing each of them once in the short practice area of the in-game tutorial teaches faster."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Role",
+        "Job",
+        "Example logic"
+       ],
+       "satirlar": [
+        [
+         "Main damage dealer",
+         "Deals the most damage on the field",
+         "The character that stays on screen"
+        ],
+        [
+         "Sub damage dealer",
+         "Applies the element and sets up the reaction",
+         "Applies the element in a short time"
+        ],
+        [
+         "Support",
+         "Buffs or heals",
+         "Raises the team's resistance and damage"
+        ],
+        [
+         "Defender",
+         "Protects with a shield",
+         "Keeps you alive on a hard boss"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "In a four-character team two different elements are enough; three are not required. First build a reaction that works with two characters and get a feel for it with the tutorial and the map."
+      }
+     ]
+    },
+    {
+     "id": "recine-ve-rutin",
+     "baslik": "Resin budget and a daily routine",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Original Resin is spent to get rewards from domains and bosses. Its cap is 200 and one regenerates every 8 minutes, so from empty it takes about 27 hours to fill. Fragile Resin is an extra resource worth 60 resin, and Condensed Resin is used to boost the reward from domains on a later run (see the in-game description for details). Resin is spent only in certain reward places (domains, bosses); things like exploration, chests and commissions do not ask for resin. So do not think the game is over when the resin runs out: when it is used up, you can return to exploring the map, the story or events. What matters is not leaving full resin idle for a long time."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Do the daily commissions",
+         "metin": "Finish the commission tasks every day; they take little time and give extra rewards."
+        },
+        {
+         "baslik": "Spend your resin",
+         "metin": "Without waiting for the resin to fill, enter the domain of the material you need most; do not let it pass the 200 cap."
+        },
+        {
+         "baslik": "Do not skip weekly bosses",
+         "metin": "Weekly bosses ask for discounted resin on the first runs (the number may change with versions)."
+        },
+        {
+         "baslik": "Check codes and events",
+         "metin": "Event rewards are time-limited; put them on your calendar."
+        },
+        {
+         "baslik": "Explore the map",
+         "metin": "Chests and mysteries give resources without spending resin."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Make a resin budget: do not alternate an empty day and a full day. Regular small spending is more efficient than long sessions."
+      }
+     ]
+    },
+    {
+     "id": "kod-ve-parasiz-oyun",
+     "baslik": "Redeeming codes and a free-to-play plan",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Official codes (redeem codes) give in-game rewards. **Redeem condition:** usually Adventure Rank 10 is needed; some event codes may ask for different conditions. You can redeem codes on HoYoverse's official gift page (genshin.hoyoverse.com/en/gift) or in the game; rewards land in the in-game mailbox and are kept for about 30 days. The expiry of a currently valid code is 16 November 2026 at 00:00 (UTC+8). Whether codes are written in lower or upper case, they must be entered with the right characters; an expired or already used code gives an error. You cannot use the same code a second time on the same account. You receive the code rewards on first use, so collect the rewards right away without letting valid codes go to waste."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Go to the official page",
+         "metin": "Codes are entered only on the official code page or in the game."
+        },
+        {
+         "baslik": "Enter it in the game",
+         "metin": "Follow Paimon Menu > Settings > Account > Redeem Code."
+        },
+        {
+         "baslik": "Check the mail",
+         "metin": "The reward arrives in the mail; collect it before it expires."
+        }
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Free-to-play priority",
+        "Why?"
+       ],
+       "satirlar": [
+        [
+         "Story and exploration",
+         "Gives free wish materials and characters"
+        ],
+        [
+         "Codes and events",
+         "Provide regular free rewards"
+        ],
+        [
+         "One team, few characters",
+         "Strengthens without spreading resources"
+        ],
+        [
+         "Saving wishes",
+         "Brings you closer to the guarantee for the character you want"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Take codes only from official sources. Free-code sites that ask for a password, a verification code or a login are scams."
+      }
+     ]
+    },
+    {
+     "id": "rutbe-kilometre-taslari",
+     "baslik": "Adventure Rank milestones",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The highest Adventure Rank is 60 and the world level rises to at most 9. The table below summarizes the game's main unlocks; Adventure Rank 10 and the upper limits appear in official sources; the other thresholds are approximate and may change with versions."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rank",
+        "What it unlocks",
+        "Note"
+       ],
+       "satirlar": [
+        [
+         "10",
+         "Redeeming codes",
+         "Official source"
+        ],
+        [
+         "16 (approx.)",
+         "Co-op mode",
+         "May change with versions"
+        ],
+        [
+         "20 (approx.)",
+         "Hard content such as the Spiral Abyss",
+         "May change with versions"
+        ],
+        [
+         "60",
+         "The highest rank",
+         "Official page"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Reaching a high rank is not worth rushing; as your rank rises, enemies get stronger. If your characters are not ready, staying at a low world level is fine. Instead of speeding up the rank, doing story quests and exploration at their natural pace keeps both character growth and resource gathering in balance. If you get stuck in an area, checking character level, weapon and artifacts is often more effective than raising your rank; so strengthen your roster first."
+      }
+     ]
+    },
+    {
      "id": "sik-hatalar",
      "baslik": "Common beginner mistakes",
      "bloklar": [
@@ -625,7 +1179,7 @@
         },
         {
          "s": "Is the game in Turkish?",
-         "c": "I could not verify Turkish text support. Check the in-game language menu."
+         "c": "Yes, Turkish text is supported (16 text languages according to the Epic store page); the voice-over is Chinese, English, Japanese and Korean."
         },
         {
          "s": "Which devices does it run on?",
@@ -659,7 +1213,7 @@
     },
     {
      "ad": "Plateforme",
-     "deger": "PC, PlayStation, iOS, Android (voir le site officiel pour les autres plateformes)"
+     "deger": "PC, PS5, Xbox Series X|S, iOS, Android, HarmonyOS NEXT (le support PS4 a pris fin le 8 avril 2026 ; pas de sortie Switch)"
     },
     {
      "ad": "Modèle économique",
@@ -671,7 +1225,7 @@
     },
     {
      "ad": "Prise en charge du turc",
-     "deger": "Non vérifiée ; consultez la liste des langues dans le jeu"
+     "deger": "Oui ; le turc fait partie des 16 langues de texte (page Epic). Doublage en chinois, anglais, japonais, coréen"
     }
    ],
    "bolumler": [
@@ -699,15 +1253,46 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Genshin Impact se joue sur PC, PlayStation et mobile (iOS, Android). Votre compte peut servir sur plusieurs plateformes ; toutefois, le partage de progression peut avoir des limites sur certaines plateformes, consultez l'explication officielle avant de vous inscrire."
+       "metin": "Genshin Impact se joue sur PC, PS5, Xbox Series X|S (depuis le 20 novembre 2024), iOS, Android et HarmonyOS NEXT (depuis le 10 septembre 2025). Le support de la PS4 a pris fin le 8 avril 2026 ; la version Nintendo Switch n'est pas sortie. Le jeu est gratuit ; ses revenus viennent du système gacha (vœux basés sur la chance). Un compte fonctionne d'une plateforme à l'autre ; vérifiez les limites du partage de progression dans la déclaration officielle avant de vous inscrire."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Composant",
+        "Minimum (PC, Epic)",
+        "Recommandé (PC, Epic)"
+       ],
+       "satirlar": [
+        [
+         "Système",
+         "Windows 10 64 bits",
+         "Windows 10 64 bits"
+        ],
+        [
+         "Processeur",
+         "Intel Core i5 de 6e génération ou AMD Ryzen",
+         "Intel Core i7 de 7e génération ou AMD Ryzen série 5000"
+        ],
+        [
+         "Mémoire (RAM)",
+         "8 Go",
+         "16 Go"
+        ],
+        [
+         "Carte graphique",
+         "NVIDIA GeForce GTX 1050, DirectX 11",
+         "NVIDIA GeForce GTX 1060 (6 Go)"
+        ],
+        [
+         "Stockage",
+         "110 Go",
+         "150 Go"
+        ]
+       ]
       },
       {
        "tip": "p",
-       "metin": "**La configuration requise** a augmenté avec les versions. Les anciennes sources indiquent pour PC au moins Windows 10, un i5 de 6e génération, 8 Go de RAM, une GT 1030 et 30 Go d'espace ; les sources récentes évoquent 100 à 150 Go et une carte de classe GTX 1060. À cause de ce conflit, vérifiez les chiffres exacts sur la page de téléchargement officielle. Comme l'espace disque grandit à chaque version, un SSD et beaucoup d'espace libre aident."
-      },
-      {
-       "tip": "p",
-       "metin": "**Langue :** le jeu prend en charge de nombreuses langues, mais je n'ai pas pu vérifier la prise en charge du texte en turc ; la liste officielle de 2020 comptait 13 langues et le turc n'y figurait pas. Consultez la liste des langues dans le menu des paramètres du jeu avant d'installer."
+       "metin": "**Langue :** d'après la page de la boutique Epic, le texte en turc est pris en charge (16 langues de texte) ; le doublage est en chinois, anglais, japonais et coréen. L'espace disque grandit à chaque nouvelle version, donc un SSD et beaucoup d'espace libre aident ; les valeurs ci-dessus viennent de la page Epic et peuvent changer avec les versions."
       },
       {
        "tip": "uyari",
@@ -881,6 +1466,248 @@
      ]
     },
     {
+     "id": "tepkimeler-ve-takim",
+     "baslik": "Réactions élémentaires et rôles d'équipe",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "L'idée centrale de Genshin est de combiner les éléments. Appliquer des éléments différents à la même cible crée une réaction élémentaire. Le tableau ci-dessous résume les principales réactions (conforme au tutoriel du jeu et au wiki officiel) : Pour déclencher une réaction, vous appliquez d'abord un élément à la cible, puis vous la frappez avec un second élément. Regardez l'icône d'élément qui apparaît sur l'ennemi : si elle est là, c'est le bon moment pour une réaction. Appliquer le même élément en boucle ne donne aucune réaction ; il faut donc changer souvent de personnage."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Réaction",
+        "Éléments",
+        "Effet approximatif"
+       ],
+       "satirlar": [
+        [
+         "Vaporisation (Vaporize)",
+         "Hydro + Pyro",
+         "Multiplicateur de dégâts"
+        ],
+        [
+         "Fonte (Melt)",
+         "Cryo + Pyro",
+         "Multiplicateur de dégâts"
+        ],
+        [
+         "Surcharge (Overloaded)",
+         "Électro + Pyro",
+         "Explosion et recul"
+        ],
+        [
+         "Superconduction",
+         "Cryo + Électro",
+         "Réduit de moitié (50 %) la résistance physique"
+        ],
+        [
+         "Électro-chargé",
+         "Hydro + Électro",
+         "Dégâts continus"
+        ],
+        [
+         "Gelé (Frozen)",
+         "Hydro + Cryo",
+         "Gèle la cible"
+        ],
+        [
+         "Tourbillon (Swirl)",
+         "Anémo + un autre élément",
+         "Propage l'élément aux ennemis proches"
+        ],
+        [
+         "Cristallisation",
+         "Géo + un autre élément",
+         "Laisse un cristal bouclier"
+        ],
+        [
+         "Brûlure (Burning)",
+         "Dendro + Pyro",
+         "Dégâts de zone et brûlure"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Les réactions qui viennent avec le Dendro, comme Floraison (Bloom), Hyperfloraison, Éclosion (Burgeon), Accélération, Aggravation et Propagation, sont plus avancées ; le Brisement (Shatter) a aussi lieu quand on frappe une cible gelée avec une arme lourde. Dans les premiers jours, il suffit de connaître Vaporisation, Fonte et Tourbillon. Une règle pratique pour un débutant : un personnage applique l'élément et un autre frappe la même cible avec un élément différent ; inutile de monter de longues chaînes compliquées. Plutôt que de mémoriser les noms des réactions, en voir chacune une fois dans la courte zone d'essai du tutoriel en jeu apprend plus vite."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rôle",
+        "Tâche",
+        "Logique d'exemple"
+       ],
+       "satirlar": [
+        [
+         "Principal pourvoyeur de dégâts",
+         "Inflige le plus de dégâts sur le terrain",
+         "Le personnage qui reste à l'écran"
+        ],
+        [
+         "Pourvoyeur de dégâts secondaire",
+         "Applique l'élément et prépare la réaction",
+         "Applique l'élément en peu de temps"
+        ],
+        [
+         "Soutien",
+         "Renforce ou soigne",
+         "Augmente la résistance et les dégâts de l'équipe"
+        ],
+        [
+         "Défenseur",
+         "Protège avec un bouclier",
+         "Vous garde en vie face à un boss difficile"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Dans une équipe de quatre personnages, deux éléments différents suffisent ; trois ne sont pas obligatoires. Montez d'abord une réaction qui marche avec deux personnages et prenez le pli avec le tutoriel et la carte."
+      }
+     ]
+    },
+    {
+     "id": "recine-ve-rutin",
+     "baslik": "Budget de résine et routine quotidienne",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La résine d'origine (Original Resin) se dépense pour obtenir des récompenses dans les domaines et contre les boss. Son plafond est de 200 et une se régénère toutes les 8 minutes ; de vide à plein, il faut donc environ 27 heures. La résine fragile (Fragile Resin) est une ressource supplémentaire valant 60 résine, et la résine condensée (Condensed Resin) sert à augmenter la récompense d'un domaine lors d'une prochaine tentative (voir la description en jeu pour les détails). La résine ne se dépense que dans certains lieux de récompense (domaines, boss) ; l'exploration, les coffres et les commissions n'en demandent pas. Ne pensez donc pas que le jeu s'arrête quand la résine est épuisée : une fois utilisée, vous pouvez retourner explorer la carte, suivre l'histoire ou faire les événements. L'important est de ne pas laisser longtemps la résine pleine inutilisée."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Faites les commissions quotidiennes",
+         "metin": "Terminez les tâches de commission chaque jour ; elles prennent peu de temps et donnent des récompenses en plus."
+        },
+        {
+         "baslik": "Dépensez votre résine",
+         "metin": "Sans attendre qu'elle soit pleine, entrez dans le domaine du matériau dont vous avez le plus besoin ; ne la laissez pas dépasser le plafond de 200."
+        },
+        {
+         "baslik": "Ne sautez pas les boss hebdomadaires",
+         "metin": "Les boss hebdomadaires demandent de la résine à prix réduit lors des premières tentatives (le chiffre peut changer avec les versions)."
+        },
+        {
+         "baslik": "Vérifiez codes et événements",
+         "metin": "Les récompenses d'événement sont limitées dans le temps ; notez-les dans votre calendrier."
+        },
+        {
+         "baslik": "Explorez la carte",
+         "metin": "Coffres et mystères donnent des ressources sans dépenser de résine."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Faites un budget de résine : n'alternez pas un jour vide et un jour plein. De petites dépenses régulières sont plus efficaces que de longues séances."
+      }
+     ]
+    },
+    {
+     "id": "kod-ve-parasiz-oyun",
+     "baslik": "Utiliser des codes et plan sans argent",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Les codes officiels (redeem codes) donnent des récompenses en jeu. **Condition d'utilisation :** il faut généralement le Rang d'Aventure 10 ; certains codes d'événement peuvent demander d'autres conditions. Vous pouvez utiliser les codes sur la page cadeau officielle de HoYoverse (genshin.hoyoverse.com/en/gift) ou dans le jeu ; les récompenses arrivent dans la boîte aux lettres du jeu et sont conservées environ 30 jours. L'expiration d'un code actuellement valide est le 16 novembre 2026 à 00:00 (UTC+8). Que les codes soient écrits en minuscules ou en majuscules, ils doivent être saisis avec les bons caractères ; un code expiré ou déjà utilisé donne une erreur. Vous ne pouvez pas utiliser le même code une seconde fois sur le même compte. Vous recevez les récompenses du code dès la première utilisation ; récupérez-les donc tout de suite, sans laisser perdre les codes valides."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Allez sur la page officielle",
+         "metin": "Les codes se saisissent uniquement sur la page officielle des codes ou dans le jeu."
+        },
+        {
+         "baslik": "Saisissez-le dans le jeu",
+         "metin": "Suivez Menu Paimon > Paramètres > Compte > Utiliser un code."
+        },
+        {
+         "baslik": "Vérifiez le courrier",
+         "metin": "La récompense arrive par courrier ; récupérez-la avant son expiration."
+        }
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Priorité sans argent",
+        "Pourquoi ?"
+       ],
+       "satirlar": [
+        [
+         "Histoire et exploration",
+         "Donne gratuitement des matériaux de vœux et des personnages"
+        ],
+        [
+         "Codes et événements",
+         "Fournissent des récompenses gratuites régulières"
+        ],
+        [
+         "Une équipe, peu de personnages",
+         "Renforce sans disperser les ressources"
+        ],
+        [
+         "Économiser les vœux",
+         "Vous rapproche de la garantie pour le personnage voulu"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Prenez les codes uniquement auprès de sources officielles. Les sites de codes gratuits qui demandent un mot de passe, un code de vérification ou une connexion sont des arnaques."
+      }
+     ]
+    },
+    {
+     "id": "rutbe-kilometre-taslari",
+     "baslik": "Jalons du Rang d'Aventure",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Le Rang d'Aventure maximal est 60 et le niveau du monde monte à 9 au plus. Le tableau ci-dessous résume les principaux déblocages du jeu ; le Rang d'Aventure 10 et les limites supérieures figurent dans les sources officielles ; les autres seuils sont approximatifs et peuvent changer avec les versions."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rang",
+        "Ce que ça débloque",
+        "Remarque"
+       ],
+       "satirlar": [
+        [
+         "10",
+         "Utilisation de codes",
+         "Source officielle"
+        ],
+        [
+         "16 (environ)",
+         "Mode coopératif",
+         "Peut changer selon les versions"
+        ],
+        [
+         "20 (environ)",
+         "Contenu difficile comme l'Abîme spiralé",
+         "Peut changer selon les versions"
+        ],
+        [
+         "60",
+         "Le rang maximal",
+         "Page officielle"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Atteindre un rang élevé ne vaut pas la précipitation ; à mesure que votre rang monte, les ennemis se renforcent. Si vos personnages ne sont pas prêts, rester à un niveau du monde bas est très bien. Plutôt que d'accélérer le rang, faire les quêtes d'histoire et l'exploration à leur rythme naturel garde en équilibre la progression des personnages et la collecte de ressources. Si vous êtes bloqué dans une zone, vérifier le niveau des personnages, l'arme et les artéfacts est souvent plus efficace que monter le rang ; renforcez donc d'abord votre équipe."
+      }
+     ]
+    },
+    {
      "id": "sik-hatalar",
      "baslik": "Erreurs fréquentes des débutants",
      "bloklar": [
@@ -937,7 +1764,7 @@
         },
         {
          "s": "Le jeu est-il en turc ?",
-         "c": "Je n'ai pas pu vérifier la prise en charge du texte en turc. Consultez le menu des langues dans le jeu."
+         "c": "Oui, le texte en turc est pris en charge (16 langues de texte d'après la page Epic) ; le doublage est en chinois, anglais, japonais et coréen."
         },
         {
          "s": "Sur quels appareils fonctionne-t-il ?",
@@ -971,7 +1798,7 @@
     },
     {
      "ad": "Plataforma",
-     "deger": "PC, PlayStation, iOS, Android (consulta el sitio oficial para otras plataformas)"
+     "deger": "PC, PS5, Xbox Series X|S, iOS, Android, HarmonyOS NEXT (el soporte de PS4 terminó el 8 de abril de 2026; sin versión de Switch)"
     },
     {
      "ad": "Modelo de precio",
@@ -983,7 +1810,7 @@
     },
     {
      "ad": "Soporte en turco",
-     "deger": "No verificado; revisa la lista de idiomas dentro del juego"
+     "deger": "Sí; el turco es uno de los 16 idiomas de texto (página de Epic). Voces en chino, inglés, japonés, coreano"
     }
    ],
    "bolumler": [
@@ -1011,15 +1838,46 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Genshin Impact funciona en PC, PlayStation y móvil (iOS, Android). Tu cuenta puede usarse entre plataformas; sin embargo, compartir el progreso puede tener límites en algunas plataformas, así que consulta la explicación oficial antes de registrarte."
+       "metin": "Genshin Impact se juega en PC, PS5, Xbox Series X|S (desde el 20 de noviembre de 2024), iOS, Android y HarmonyOS NEXT (desde el 10 de septiembre de 2025). El soporte de PS4 terminó el 8 de abril de 2026; la versión de Nintendo Switch no ha salido. El juego es gratuito; sus ingresos vienen del sistema gacha (deseos basados en la suerte). Una cuenta funciona entre plataformas; comprueba los límites del progreso compartido en la declaración oficial antes de registrarte."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Componente",
+        "Mínimo (PC, Epic)",
+        "Recomendado (PC, Epic)"
+       ],
+       "satirlar": [
+        [
+         "Sistema",
+         "Windows 10 de 64 bits",
+         "Windows 10 de 64 bits"
+        ],
+        [
+         "Procesador",
+         "Intel Core i5 de 6.ª generación o AMD Ryzen",
+         "Intel Core i7 de 7.ª generación o AMD Ryzen serie 5000"
+        ],
+        [
+         "Memoria (RAM)",
+         "8 GB",
+         "16 GB"
+        ],
+        [
+         "Tarjeta gráfica",
+         "NVIDIA GeForce GTX 1050, DirectX 11",
+         "NVIDIA GeForce GTX 1060 (6 GB)"
+        ],
+        [
+         "Almacenamiento",
+         "110 GB",
+         "150 GB"
+        ]
+       ]
       },
       {
        "tip": "p",
-       "metin": "**Los requisitos del sistema** han crecido con las versiones. Fuentes antiguas indican para PC como mínimo Windows 10, un i5 de 6.ª generación, 8 GB de RAM, una GT 1030 y 30 GB de espacio; fuentes más recientes mencionan 100-150 GB y una tarjeta de clase GTX 1060. Por este conflicto, comprueba las cifras exactas en la página oficial de descarga. Como el espacio en disco crece con cada versión, un SSD y mucho espacio libre ayudan."
-      },
-      {
-       "tip": "p",
-       "metin": "**Idioma:** el juego admite muchos idiomas, pero no pude verificar el soporte de texto en turco; la lista oficial de 2020 tenía 13 idiomas y el turco no estaba entre ellos. Revisa la lista de idiomas en el menú de ajustes del juego antes de instalar."
+       "metin": "**Idioma:** según la página de la tienda de Epic, se admite el texto en turco (16 idiomas de texto); las voces son en chino, inglés, japonés y coreano. El espacio en disco crece con cada versión nueva, así que ayudan un SSD y mucho espacio libre; los valores de arriba vienen de la página de Epic y pueden cambiar con las versiones."
       },
       {
        "tip": "uyari",
@@ -1193,6 +2051,248 @@
      ]
     },
     {
+     "id": "tepkimeler-ve-takim",
+     "baslik": "Reacciones elementales y roles de equipo",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La idea central de Genshin es combinar elementos. Aplicar elementos distintos al mismo objetivo crea una reacción elemental. La tabla de abajo resume las reacciones principales (acorde con el tutorial del juego y la wiki oficial): Para provocar una reacción primero aplicas un elemento al objetivo y luego lo golpeas con un segundo elemento. Fíjate en el icono de elemento que aparece sobre el enemigo: si está, es el momento justo para una reacción. Aplicar el mismo elemento una y otra vez no da reacción, así que hay que cambiar de personaje con frecuencia."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Reacción",
+        "Elementos",
+        "Efecto aproximado"
+       ],
+       "satirlar": [
+        [
+         "Vaporizar (Vaporize)",
+         "Hydro + Pyro",
+         "Multiplicador de daño"
+        ],
+        [
+         "Derretir (Melt)",
+         "Cryo + Pyro",
+         "Multiplicador de daño"
+        ],
+        [
+         "Sobrecarga (Overloaded)",
+         "Electro + Pyro",
+         "Explosión y empuje"
+        ],
+        [
+         "Superconductor",
+         "Cryo + Electro",
+         "Reduce a la mitad (50 %) la resistencia física"
+        ],
+        [
+         "Electrocarga (Electro-Charged)",
+         "Hydro + Electro",
+         "Daño continuo"
+        ],
+        [
+         "Congelado (Frozen)",
+         "Hydro + Cryo",
+         "Congela al objetivo"
+        ],
+        [
+         "Remolino (Swirl)",
+         "Anemo + otro elemento",
+         "Extiende el elemento a enemigos cercanos"
+        ],
+        [
+         "Cristalizar",
+         "Geo + otro elemento",
+         "Deja un cristal escudo"
+        ],
+        [
+         "Quemadura (Burning)",
+         "Dendro + Pyro",
+         "Daño de área y quemadura"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Las reacciones que llegan con Dendro, como Floración (Bloom), Hiperfloración, Brote (Burgeon), Aceleración, Agravar y Propagación, son más avanzadas; el Destrozar (Shatter) también ocurre al golpear a un objetivo congelado con un arma pesada. En los primeros días solo necesitas conocer Vaporizar, Derretir y Remolino. Una regla práctica para principiantes: un personaje aplica el elemento y otro golpea al mismo objetivo con un elemento distinto; no hace falta montar cadenas largas y complicadas. En lugar de memorizar los nombres de las reacciones, verlas una vez cada una en la breve zona de práctica del tutorial del juego enseña más rápido."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rol",
+        "Tarea",
+        "Lógica de ejemplo"
+       ],
+       "satirlar": [
+        [
+         "Daño principal",
+         "Hace el mayor daño en el campo",
+         "El personaje que se queda en pantalla"
+        ],
+        [
+         "Daño secundario",
+         "Aplica el elemento y prepara la reacción",
+         "Aplica el elemento en poco tiempo"
+        ],
+        [
+         "Apoyo",
+         "Potencia o cura",
+         "Sube la resistencia y el daño del equipo"
+        ],
+        [
+         "Defensor",
+         "Protege con escudo",
+         "Te mantiene vivo en un jefe difícil"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "En un equipo de cuatro personajes bastan dos elementos distintos; tres no son obligatorios. Primero monta una reacción que funcione con dos personajes y familiarízate con el tutorial y el mapa."
+      }
+     ]
+    },
+    {
+     "id": "recine-ve-rutin",
+     "baslik": "Presupuesto de resina y rutina diaria",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La resina original (Original Resin) se gasta para conseguir recompensas en dominios y jefes. Su tope es 200 y se regenera una cada 8 minutos, así que de vacía a llena tarda unas 27 horas. La resina frágil (Fragile Resin) es un recurso extra que vale 60 de resina, y la resina condensada (Condensed Resin) sirve para aumentar la recompensa de un dominio en una próxima partida (mira la descripción del juego para los detalles). La resina solo se gasta en ciertos lugares de recompensa (dominios, jefes); cosas como explorar, abrir cofres y las comisiones no piden resina. Así que no pienses que el juego se acaba cuando se agota la resina: cuando se gasta, puedes volver a explorar el mapa, la historia o los eventos. Lo importante es no dejar la resina llena parada mucho tiempo."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Haz las comisiones diarias",
+         "metin": "Termina las tareas de comisión cada día; llevan poco tiempo y dan recompensas extra."
+        },
+        {
+         "baslik": "Gasta tu resina",
+         "metin": "Sin esperar a que se llene, entra en el dominio del material que más necesites; no dejes que pase el tope de 200."
+        },
+        {
+         "baslik": "No te saltes los jefes semanales",
+         "metin": "Los jefes semanales piden resina con descuento en las primeras partidas (la cifra puede cambiar con las versiones)."
+        },
+        {
+         "baslik": "Revisa códigos y eventos",
+         "metin": "Las recompensas de evento tienen tiempo limitado; apúntalas en el calendario."
+        },
+        {
+         "baslik": "Explora el mapa",
+         "metin": "Los cofres y misterios dan recursos sin gastar resina."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Haz un presupuesto de resina: no alternes un día vacío y un día lleno. El gasto pequeño y regular es más eficiente que las sesiones largas."
+      }
+     ]
+    },
+    {
+     "id": "kod-ve-parasiz-oyun",
+     "baslik": "Canjear códigos y plan sin gastar dinero",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Los códigos oficiales (redeem codes) dan recompensas dentro del juego. **Condición para canjear:** normalmente se necesita Rango de Aventura 10; algunos códigos de evento pueden pedir otras condiciones. Puedes canjear códigos en la página oficial de regalos de HoYoverse (genshin.hoyoverse.com/en/gift) o en el juego; las recompensas llegan al buzón del juego y se guardan unos 30 días. La caducidad de un código vigente ahora es el 16 de noviembre de 2026 a las 00:00 (UTC+8). Estén escritos en minúsculas o en mayúsculas, los códigos deben introducirse con los caracteres correctos; un código caducado o ya usado da error. No puedes usar el mismo código una segunda vez en la misma cuenta. Recibes las recompensas del código en el primer uso, así que recógelas enseguida sin dejar que se pierdan los códigos vigentes."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Ve a la página oficial",
+         "metin": "Los códigos solo se introducen en la página oficial de códigos o en el juego."
+        },
+        {
+         "baslik": "Introdúcelo en el juego",
+         "metin": "Sigue Menú de Paimon > Ajustes > Cuenta > Canjear código."
+        },
+        {
+         "baslik": "Revisa el correo",
+         "metin": "La recompensa llega por correo; recógela antes de que caduque."
+        }
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Prioridad sin gastar dinero",
+        "¿Por qué?"
+       ],
+       "satirlar": [
+        [
+         "Historia y exploración",
+         "Da materiales de deseos y personajes gratis"
+        ],
+        [
+         "Códigos y eventos",
+         "Aportan recompensas gratuitas regulares"
+        ],
+        [
+         "Un equipo, pocos personajes",
+         "Fortalece sin dispersar recursos"
+        ],
+        [
+         "Ahorrar deseos",
+         "Te acerca a la garantía del personaje que quieres"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Toma los códigos solo de fuentes oficiales. Los sitios de códigos gratis que piden contraseña, código de verificación o inicio de sesión son estafas."
+      }
+     ]
+    },
+    {
+     "id": "rutbe-kilometre-taslari",
+     "baslik": "Hitos del Rango de Aventura",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "El Rango de Aventura máximo es 60 y el nivel del mundo sube como mucho a 9. La tabla de abajo resume los desbloqueos principales del juego; el Rango de Aventura 10 y los límites superiores figuran en fuentes oficiales; los demás umbrales son aproximados y pueden cambiar con las versiones."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rango",
+        "Qué desbloquea",
+        "Nota"
+       ],
+       "satirlar": [
+        [
+         "10",
+         "Canjear códigos",
+         "Fuente oficial"
+        ],
+        [
+         "16 (aprox.)",
+         "Modo cooperativo",
+         "Puede cambiar según las versiones"
+        ],
+        [
+         "20 (aprox.)",
+         "Contenido difícil como el Abismo Espiral",
+         "Puede cambiar según las versiones"
+        ],
+        [
+         "60",
+         "El rango máximo",
+         "Página oficial"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Llegar a un rango alto no merece la prisa; a medida que sube tu rango, los enemigos se refuerzan. Si tus personajes no están listos, quedarte en un nivel de mundo bajo está bien. En lugar de acelerar el rango, hacer las misiones de historia y la exploración a su ritmo natural mantiene en equilibrio el crecimiento de los personajes y la recolección de recursos. Si te atascas en una zona, revisar el nivel de los personajes, el arma y los artefactos suele ser más eficaz que subir el rango; refuerza primero tu plantilla."
+      }
+     ]
+    },
+    {
      "id": "sik-hatalar",
      "baslik": "Errores comunes de los principiantes",
      "bloklar": [
@@ -1249,7 +2349,7 @@
         },
         {
          "s": "¿El juego está en turco?",
-         "c": "No pude verificar el soporte de texto en turco. Revisa el menú de idiomas dentro del juego."
+         "c": "Sí, se admite el texto en turco (16 idiomas de texto según la página de Epic); las voces son en chino, inglés, japonés y coreano."
         },
         {
          "s": "¿En qué dispositivos funciona?",

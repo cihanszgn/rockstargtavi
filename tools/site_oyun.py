@@ -354,10 +354,12 @@ def _iz(dil: str, parcalar: list[tuple[str, str | None]]) -> tuple[str, str]:
 def _kahraman(o: dict, iz: str, ust: str, ana: str, vurgu: str, ozet: str, ek: str) -> str:
     t = o["tema"]
     v = f'<span class="o-h1-vurgu">{S.e(vurgu)}</span>' if vurgu else ""
+    # tek kelimesi uzun başlık (ör. ES "principiantes", "BATTLEGROUNDS") dar ekranda kutusundan taşmasın: CSS yazıyı küçültür
+    uzun = " o-h1-uzun" if max((len(p) for p in re.split(r"[\s\-–/]+", ana)), default=0) >= 12 else ""
     return ('<header class="o-kahraman"><div class="o-motif" aria-hidden="true"></div>'
             f'<span class="o-dev" aria-hidden="true">{S.e(o["kisa"])}</span>\n'
             f'<div class="wrap o-k-ic">{iz}<div class="o-k-metin"><p class="o-ust-et">{ust}</p>'
-            f'<h1 class="o-h1"><span class="o-h1-ana">{S.e(ana)}</span>{v}</h1>'
+            f'<h1 class="o-h1{uzun}"><span class="o-h1-ana">{S.e(ana)}</span>{v}</h1>'
             f'<p class="o-ozet">{S.e(ozet)}</p>{ek}</div>\n'
             f'<div class="o-amblem" aria-hidden="true">{ot.amblem(t)}</div></div></header>\n')
 

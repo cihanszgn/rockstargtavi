@@ -4,10 +4,6 @@
  "surum": "Midnight (11. genişleme), yama 12.1.5, Sezon 2 (14 Kasım 2026)",
  "kaynaklar": [
   {
-   "url": "https://en.wikipedia.org/wiki/World_of_Warcraft:_Midnight",
-   "ad": "Wikipedia: World of Warcraft: Midnight"
-  },
-  {
    "url": "https://news.blizzard.com/en-us/article/24229031/midnight-expansion-information-wrapped-up",
    "ad": "Blizzard News: Midnight expansion information"
   },
@@ -28,7 +24,15 @@
    "ad": "Blizzard Watch: patch 12.1.7 release date"
   },
   {
-   "url": "https://us.forums.blizzard.com/en/wow/t/about-midnight-system-requirements-ssd-space/2192039",
+   "url": "https://www.wowhead.com/blue-tracker/topic/eu/price-update-to-subscription-options-game-time-and-more-for-world-of-warcraft-553845",
+   "ad": "Wowhead Blue Tracker: Türkiye pricing announcement"
+  },
+  {
+   "url": "https://eu.shop.battle.net/tr-tr/product/world-of-warcraft-subscription",
+   "ad": "Battle.net Shop: World of Warcraft Subscription"
+  },
+  {
+   "url": "https://eu.forums.blizzard.com/en/wow/t/recommended-system-requirements-are-pretty-hefty-for-midnight/585183",
    "ad": "Blizzard Forums: Midnight system requirements"
   }
  ],
@@ -47,7 +51,7 @@
     },
     {
      "ad": "Fiyat modeli",
-     "deger": "Abonelik veya Game Time; seviye 20'ye kadar ücretsiz deneme"
+     "deger": "Abonelik veya Game Time; seviye 20'ye kadar ücretsiz deneme. Türkiye'de 1 aylık abonelik 399,99 TL (Blizzard duyurusu, 17 Ocak 2025'ten geçerli)"
     },
     {
      "ad": "Güncel sürüm",
@@ -55,7 +59,7 @@
     },
     {
      "ad": "Türkçe desteği",
-     "deger": "Türkçe istemci dili olup olmadığını Battle.net dil listesinden kontrol edin; yoksa İngilizce oynanır"
+     "deger": "Oyun istemcisinin Türkçe dil seçeneği resmî kaynakta yayımlanmamış; Türkçe mağaza ve fiyat sayfaları var"
     }
    ],
    "bolumler": [
@@ -83,40 +87,99 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Oyun için ücretsiz bir **Battle.net** hesabı gerekir. Yeni hesaplar **ücretsiz deneme** alır: seviye 20'ye kadar, bu seviyedeki zindanlar dahil. Ücretsiz hesapta lonca (guild), sınırsız sohbet ve Açık Artırma (Auction House) kapalıdır."
+       "metin": "Oyun için ücretsiz bir **Battle.net** hesabı ve Battle.net masaüstü uygulaması gerekir. Yeni hesaplar **ücretsiz deneme** alır: seviye 20'ye kadar, bu seviyedeki zindanlar dahil. Ücretsiz hesapta lonca (guild), sınırsız sohbet ve Açık Artırma (Auction House) kapalıdır."
       },
       {
        "tip": "p",
-       "metin": "Seviye 20'nin ötesi için **abonelik** ya da **Game Time** (süre kodu) gerekir; Blizzard'a göre bunlar seviye 80'e kadar tüm içeriği açar. Midnight hikâyesine devam etmek ve 80'in üstüne çıkmak için **Midnight genişlemesine** de sahip olmanız gerekir. Aylık abonelik ve genişleme fiyatları bölgeye göre değişir; güncel TL tutarını Battle.net mağazasında kendi hesabınızdan görün. Rehberde rakam yazmıyorum, çünkü doğrulayamadım."
+       "metin": "Seviye 20'nin ötesi için **abonelik** ya da **Game Time** (süre kodu) gerekir. Battle.net mağazası, aboneliğin World of Warcraft'ta seviye 1-80, WoW: Forever'da 1-60, Classic'te 1-60 ve Mists of Pandaria Classic'te 1-90 arasını kapsadığını yazıyor. Midnight genişlemesi ayrıca satılır; 80'in üstüne çıkmak ve Midnight içeriği için ona sahip olmanız gerekir. Aboneliği iptal etmek hesap yönetiminden yapılır; yenileme otomatiktir."
+      },
+      {
+       "tip": "p",
+       "metin": "**Türkiye fiyatları (Kasım 2026 itibarıyla en son resmî duyuru):** Blizzard, Türkiye için yeni fiyatları 17 Ocak 2025'ten itibaren uyguladı. Sonrasında yeni bir Türkiye duyurusuna rastlanmadı; mağazada gördüğünüz tutar değişmiş olabilir, ödemeden önce sepette kontrol edin."
       },
       {
        "tip": "tablo",
        "basliklar": [
-        "Konu",
-        "Bilinen değer"
+        "Ürün (Türkiye)",
+        "Fiyat (Ocak 2025 duyurusu)"
+       ],
+       "satirlar": [
+        [
+         "1 aylık abonelik",
+         "399,99 TL"
+        ],
+        [
+         "3 aylık abonelik",
+         "1.049,99 TL"
+        ],
+        [
+         "6 aylık abonelik",
+         "1.799,99 TL"
+        ],
+        [
+         "12 aylık abonelik",
+         "3.599,98 TL"
+        ],
+        [
+         "60 günlük Game Time",
+         "799,98 TL"
+        ],
+        [
+         "The War Within Base Edition (önceki genişleme)",
+         "1.399,99 TL"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Midnight genişlemesinin Türkiye fiyatı yukarıdaki duyuruda belirtilmiyor ve Battle.net ABD mağazasındaki Midnight sayfası net bir fiyat vermiyor; bu yüzden **Midnight için TL tutarı resmî olarak açıklanmadı**. ABD mağazasında Midnight için Heroic ve Epic sürümleri de listeleniyor: Heroic sürümü ek binek ve görünüm paketi, Epic sürümü ise 30 gün oyun süresi, iki yoldaş (pet), iki binek ve oyun içi ev paketi ekliyor."
+      },
+      {
+       "tip": "p",
+       "metin": "**Sistem gereksinimleri (Midnight, Blizzard destek sayfasındaki liste):** en düşük ayarda Windows 10 64 bit (Mayıs 2019 güncellemesi veya yenisi), 6 çekirdekli ve 4,0 GHz'e kadar yükselen işlemci (Intel Coffee Lake veya AMD Zen 2 ve üstü), 4 GB'lık DirectX 12 uyumlu ekran kartı (GeForce GTX 10 serisi, Radeon RDNA 1 veya Intel Iris Xe2), 8 GB RAM, 128 GB boş SSD alanı ve geniş bant internet gerekiyor. Önerilen ayar Windows 11, 8 performans çekirdekli ve 5,2 GHz'e kadar çıkan işlemci (Core Ultra Series 2 veya Ryzen Zen 5), 8 GB ekran kartı (RTX 40 serisi, RDNA 3 veya Arc B serisi) ve 16 GB RAM istiyor. Klavye ve fare zorunludur."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Gereksinim",
+        "En düşük",
+        "Önerilen"
        ],
        "satirlar": [
         [
          "İşletim sistemi",
-         "Midnight için en az Windows 10 (64 bit)"
+         "Windows 10 64 bit",
+         "Windows 11"
+        ],
+        [
+         "İşlemci",
+         "6 çekirdek, 4,0 GHz",
+         "8 performans çekirdeği, 5,2 GHz"
+        ],
+        [
+         "Ekran kartı",
+         "4 GB, DirectX 12",
+         "8 GB, DirectX 12"
+        ],
+        [
+         "RAM",
+         "8 GB",
+         "16 GB"
         ],
         [
          "Depolama",
-         "Resmî öneri: SSD üzerinde yaklaşık 128 GB boş yer; yamalar için ek alan bırakın"
-        ],
-        [
-         "İşlemci ve ekran kartı",
-         "Midnight çok eski işlemcileri ve eski ekran kartı mimarilerini kabul etmiyor; kesin liste için Blizzard destek sayfasındaki sistem gereksinimlerine bakın"
-        ],
-        [
-         "Bağlantı",
-         "Geniş bant internet"
+         "128 GB SSD",
+         "128 GB SSD"
         ]
        ]
       },
       {
        "tip": "uyari",
-       "metin": "Eski bir bilgisayarda oynamayı düşünüyorsanız satın almadan önce Blizzard'ın güncel Midnight sistem gereksinimlerini okuyun. Bazı eski donanımlar artık desteklenmiyor."
+       "metin": "Önerilen liste topluluk tarafından sert bulundu; Blizzard'ın kendi sayfası bu listenin ana kaynağıdır. Eski bir bilgisayarda satın almadan önce destek sayfasındaki güncel listeyi okuyun."
+      },
+      {
+       "tip": "p",
+       "metin": "**Sunucu (realm) ve seviye sınırı:** Midnight ile en yüksek seviye 90'dır. Türkiye hesapları için ayrı bir sunucu listesi resmî kaynakta yayımlanmamış; fiyat duyuruları EU forumlarında yapılıyor, yani Türkiye oyuncuları Avrupa bölgesinin duyurularını izler. Realm seçimi karakter oluştururken oyun içinde görünür."
       }
      ]
     },
@@ -170,36 +233,99 @@
       {
        "tip": "tablo",
        "basliklar": [
-        "Rol",
-        "Örnek sınıflar",
+        "Sınıf",
+        "Uzmanlıklar (roller)",
+        "Öğrenme eğrisi (yaklaşık)",
         "Kime uygun?"
        ],
        "satirlar": [
         [
-         "Hasar, yakın dövüş",
-         "Warrior, Rogue, Demon Hunter, Death Knight",
-         "Hareketli ve hızlı oynamak isteyenler"
+         "Warrior",
+         "Arms, Fury (hasar); Protection (tank)",
+         "Orta",
+         "Yakın dövüşü ve sağlam duruşu sevenler"
         ],
         [
-         "Hasar, uzak",
-         "Mage, Warlock, Hunter, Evoker",
-         "Mesafeden vurmayı sevenler"
+         "Paladin",
+         "Holy (şifacı); Protection (tank); Retribution (hasar)",
+         "Kolay-orta",
+         "Her role girebilen, esnek oyuncular"
         ],
         [
-         "Tank",
-         "Warrior, Paladin, Death Knight, Druid, Monk",
-         "Grubu önden taşımak isteyenler"
+         "Hunter",
+         "Beast Mastery, Marksmanship, Survival (hasar)",
+         "Kolay",
+         "Evcil hayvanla uzaktan vurmak isteyenler"
         ],
         [
-         "Şifacı",
-         "Priest, Paladin, Druid, Shaman, Monk, Evoker",
-         "Takımı ayakta tutmak isteyenler"
+         "Rogue",
+         "Assassination, Outlaw, Subtlety (hasar)",
+         "Orta",
+         "Hızlı, sessiz ve hareketli oynayanlar"
+        ],
+        [
+         "Priest",
+         "Discipline, Holy (şifacı); Shadow (hasar)",
+         "Orta",
+         "Şifacılığı ya da gölge büyüsünü sevenler"
+        ],
+        [
+         "Death Knight",
+         "Blood (tank); Frost, Unholy (hasar)",
+         "Orta",
+         "Dayanıklı ve güçlü karakter isteyenler"
+        ],
+        [
+         "Shaman",
+         "Elemental, Enhancement (hasar); Restoration (şifacı)",
+         "Orta",
+         "Totem ve elementlerle çok yönlü oynayanlar"
+        ],
+        [
+         "Mage",
+         "Arcane, Fire, Frost (hasar)",
+         "Kolay-orta",
+         "Büyüyle uzaktan hasar vermek isteyenler"
+        ],
+        [
+         "Warlock",
+         "Affliction, Demonology, Destruction (hasar)",
+         "Orta",
+         "Yaratık çağırıp lanetlerle oynayanlar"
+        ],
+        [
+         "Monk",
+         "Brewmaster (tank); Mistweaver (şifacı); Windwalker (hasar)",
+         "Orta-zor",
+         "Vuruş serileri ve hareketi sevenler"
+        ],
+        [
+         "Druid",
+         "Balance, Feral (hasar); Guardian (tank); Restoration (şifacı)",
+         "Orta-zor",
+         "Dört role de girmek isteyenler"
+        ],
+        [
+         "Demon Hunter",
+         "Havoc (hasar); Vengeance (tank); Devourer (yeni, Midnight)",
+         "Orta",
+         "Çevik ve saldırgan oynayanlar"
+        ],
+        [
+         "Evoker",
+         "Devastation, Augmentation (hasar); Preservation (şifacı)",
+         "Orta-zor",
+         "Ejderha formu ve yakın-uzak karışık oyun isteyenler"
         ]
        ]
       },
       {
        "tip": "p",
        "metin": "**Haranir** Midnight'ın yeni ırkı, **Devourer** ise Demon Hunter'ın yeni uzmanlığı. Merak ediyorsanız denemeye değer ama ilk karakterde şart değil. İlk karakterde hasar rolünde kalıp oyunun temel sistemlerini öğrenmek en az stres verendir."
+      },
+      {
+       "tip": "p",
+       "metin": "Öğrenme eğrisi sütunu kesin bir ölçü değil, genel bir değerlendirmedir. Sınıf sayısı 13 olup tabloda Evoker ve Demon Hunter dahil hepsi yer alır; tablodaki sıralama güç sıralaması değildir."
       },
       {
        "tip": "ipucu",
@@ -234,6 +360,143 @@
       {
        "tip": "ipucu",
        "metin": "Geri dönüyorsanız yetenek ağacınız (talent) ve sınıf mekanikleriniz değişmiş olabilir. Karakterinizi açınca yetenekleri gözden geçirin."
+      }
+     ]
+    },
+    {
+     "id": "meslekler",
+     "baslik": "Meslekler: ne işe yarar, hangisi seçilir?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Her karakter **iki ana meslek** seçer; ayrıca yemek, balıkçılık ve arkeoloji gibi ikincil meslekleri serbestçe öğrenir. Meslekler iki gruba ayrılır: **toplama** meslekleri hammadde verir, **üretim** meslekleri o hammaddeyi eşyaya çevirir. Seviye atarken zaten hammadde toplayacağınız için bir toplama mesleği ile bir üretim mesleğini eşlemek en verimli başlangıçtır."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Grup",
+        "Meslekler",
+        "Ne verir?"
+       ],
+       "satirlar": [
+        [
+         "Toplama",
+         "Herbalism (bitki), Mining (maden), Skinning (deri)",
+         "Ham madde; Açık Artırma'da satılabilir"
+        ],
+        [
+         "Üretim",
+         "Alchemy, Blacksmithing, Enchanting, Engineering, Inscription, Jewelcrafting, Leatherworking, Tailoring",
+         "İksir, zırh, silah, büyü, mühendislik aletleri"
+        ],
+        [
+         "İkincil",
+         "Cooking (yemek), Fishing (balık), Archaeology (arkeoloji)",
+         "Beslenme bonusu, yemek ve kozmetik ödüller"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Herbalism ile Alchemy ve Mining ile Blacksmithing ya da Jewelcrafting doğal çiftlerdir.",
+        "Skinning ile Leatherworking aynı hammaddeyi paylaşır; hammaddeyi satıp ya da kendinize üretebilirsiniz.",
+        "Enchanting eşyaları parçalayıp büyü malzemesi çıkarır; hasar ya da şifa için büyü basmak ona bağlıdır."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Bir mesleği ilk günden seçmek zorunda değilsiniz; ücretsiz denemede mesleğin ilk kademelerini deneyebilirsiniz. Meslek seçimini sonradan değiştirmek mümkündür ama biriken bilgi sıfırlanır, bu yüzden küçük bir deneme yapıp karar verin. Gerçek ekonomik değer genişlemeye göre değiştiği için güncel meslek rehberlerini oyun içi ve Blizzard haber sayfasından izleyin."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Toplama mesleğini seçtiyseniz görev yaparken yoldaki bitki ve damarları toplamayı alışkanlık edinin; sonradan ayrı çiftçilik yapmanıza gerek kalmaz."
+      }
+     ]
+    },
+    {
+     "id": "icerik",
+     "baslik": "İçerik basamakları: Delves, zindan, raid, Mythic+",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Oyun, seviye 90'a ulaştıktan sonra zorluk basamaklarıyla ilerler. En kolay giriş **Delves**: tek kişilik ya da küçük grup için yeraltı görevleri. Ardından **zindanlar** (5 kişilik), **raid'ler** (20 kişiye kadar büyük grup içeriği) ve en zoru **Mythic+** gelir."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "İçerik",
+        "Oyuncu sayısı",
+        "Zorluk basamakları",
+        "Ne için?"
+       ],
+       "satirlar": [
+        [
+         "Delves",
+         "1-5 (genelde yoldaşla tek)",
+         "Tier basamakları",
+         "Kısa, hızlı ve rahat ödül"
+        ],
+        [
+         "Zindan",
+         "5",
+         "Normal, Heroic, Mythic",
+         "Takım oyununu öğrenme"
+        ],
+        [
+         "Mythic+",
+         "5",
+         "Anahtar seviyesi (+2, +3...)",
+         "Zorlayıcı, haftalık ödül"
+        ],
+        [
+         "Raid",
+         "Büyük grup",
+         "LFR, Normal, Heroic, Mythic",
+         "Hikâyenin zirvesi ve güçlü eşya"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**LFR** (Looking for Raid) kuyruktan girilen en kolay raid zorluğudur. Takım oyununa alışmak için zindanda Normal'den başlayıp Heroic ve Mythic'e doğru ilerleyin. Mythic+ ise Mythic zindanını anahtar seviyesiyle zorlaştırıp süreye bağlar; hazır olmadan girmek hem sizi hem takımı yorar."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Delves ilk karakter için güvenli bir antrenman alanıdır: grup beklemezsiniz, öğrenirken kimseye engel olmazsınız."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Kuyruktaki zindanda yanlışlıkla takımı bozarsanız ceza yemezsiniz ama tekrar tekrar ayrılırsanız grup bulucu sizi kısa süre kısıtlayabilir. Zorluğu kendi hızınızda artırın."
+      }
+     ]
+    },
+    {
+     "id": "haftalik",
+     "baslik": "Haftalık yapılacaklar listesi",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Seviye 90'da oyun haftalık bir ritme oturur. Sıfırlanma günü bölgeye göre değişir; Avrupa'da genellikle çarşamba sabahıdır; yamaya göre değişebilir. Aşağıdaki liste sıfırlanmadan sonra bir haftalık işi toplar:"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Haftalık ana görev ve dünya görevlerini kontrol edin; ödüllü olanları seçin.",
+        "Delves'te birkaç tur yapın; haftalık kasa ödülü için sayılır.",
+        "Mythic+ anahtarınızı ya da zindan tamamlamalarınızı yapın; yine kasaya sayılır.",
+        "Raid kuyruğundan (LFR veya Normal) en az bir patron deneyin.",
+        "Haftalık kasadan (Great Vault) ödülünüzü seçip alın.",
+        "Mesleğin haftalık görevlerini ve özel sipariş (craft order) fırsatlarını kontrol edin."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Great Vault** (Büyük Kasa), haftalık yaptığınız zindan, raid ve Delves sayısına göre üç ödül yuvası açar. Her yuvadan yalnız birini seçersiniz. Üç içerik türünün de birkaç etkinliğini yaparsanız kasayı en dolu şekilde alırsınız. Bu yapı Blizzard'ın Midnight bilgilendirmesinde tanıtılan haftalık düzene dayanır (Blizzard News: Midnight expansion information)."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Listeyi bir kağıda ya da telefona yazıp her hafta işaretleyin. Birkaç hafta sonra alışkanlık olur; çoğu oyuncu bunu yalnızca 1-2 saatte bitirir."
       }
      ]
     },
@@ -316,6 +579,62 @@
      ]
     },
     {
+     "id": "eklentiler",
+     "baslik": "Arayüz eklentileri ve Classic ile Retail farkı",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**Eklenti (addon)**, oyunun arayüzünü değiştiren küçük programlardır. Blizzard yalnızca arayüz ve bilgi gösteren eklentilere izin verir; oyunu sizin yerinize oynayan, tuşları otomatik basan ya da botlaşan eklentiler yasaktır ve hesabın kapatılmasına yol açar. Sadece eklentinin resmî sayfasından indirin; tanımadığınız siteden gelen dosya hesap çalabilir."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Boss uyarı eklentileri (örneğin BigWigs veya Deadly Boss Mods) raid mekaniğini zamanında gösterir.",
+        "Çanta, harita ve hasar sayacı eklentileri başlangıç için isteğe bağlıdır; oyunu öğrenmeden eklentiye yüklenmeyin.",
+        "Büyük yamadan sonra eklentileri güncelleyin; eski sürüm oyunu hata verdirebilir."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Retail, Classic ve Forever farkı:** Retail, bugün anlatılan Midnight sürümüdür. Classic, oyunun eski hâllerini sunar: Classic Era, Classic Progression, Anniversary Edition ve Season of Discovery sunucuları. WoW: Forever ise orijinal Azeroth'u yeni bölgeler, yenilenmiş sınıf tasarımı, 1000'den fazla yeni görev ve yeni zindan ve raid'lerle yeniden anlatan ayrı bir sürümdür; Skyborne adlı yeni bir ırk sunar. Aynı abonelik üçüne de erişim verir, ama Midnight genişlemesi yalnız Retail içindir."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Sürüm",
+        "Seviye aralığı (abonelik)",
+        "Karakter"
+       ],
+       "satirlar": [
+        [
+         "Retail (Midnight)",
+         "1-80 (abonelik), 90'a kadar Midnight ile",
+         "Modern oynanış"
+        ],
+        [
+         "WoW: Forever",
+         "1-60",
+         "Yenilenmiş orijinal dünya"
+        ],
+        [
+         "Classic Era ve Progression",
+         "1-60",
+         "Eski oynanış"
+        ],
+        [
+         "Mists of Pandaria Classic",
+         "1-90",
+         "Eski genişleme"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Hangisini seçeceğinizi bilmiyorsanız Retail'de ücretsiz deneme ile başlayın; kolay erişimli ve aktif nüfusludur."
+      }
+     ]
+    },
+    {
      "id": "hatalar-guvenlik",
      "baslik": "Sık yapılan hatalar ve güvenlik",
      "bloklar": [
@@ -388,7 +707,7 @@
     },
     {
      "ad": "Pricing model",
-     "deger": "Subscription or Game Time; free trial up to level 20"
+     "deger": "Subscription or Game Time; free trial up to level 20. In Turkey the 1-month subscription is 399.99 TRY (Blizzard notice, effective 17 January 2025)"
     },
     {
      "ad": "Current version",
@@ -396,7 +715,7 @@
     },
     {
      "ad": "Turkish support",
-     "deger": "Check the Battle.net language list for a Turkish client; otherwise play in English"
+     "deger": "A Turkish game-client language is not published in an official source; Turkish store and price pages exist"
     }
    ],
    "bolumler": [
@@ -424,40 +743,99 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "You need a free **Battle.net** account. New accounts get a **free trial** up to level 20, dungeons at that level included. On a free account, guilds, unrestricted chat and the Auction House are locked."
+       "metin": "You need a free **Battle.net** account and the Battle.net desktop app. New accounts get a **free trial**: up to level 20, including the dungeons at those levels. The free account has no guild, unlimited chat or Auction House."
       },
       {
        "tip": "p",
-       "metin": "Beyond level 20 you need a **subscription** or **Game Time** (a time code); according to Blizzard these unlock all content up to level 80. To continue the Midnight story and go past 80 you also need to own the **Midnight expansion**. Monthly and expansion prices vary by region, so check the current price in the Battle.net shop on your own account. I give no figure here because I could not verify one."
+       "metin": "Beyond level 20 you need a **subscription** or **Game Time**. The Battle.net shop says the subscription covers levels 1-80 in World of Warcraft, 1-60 in WoW: Forever, 1-60 in Classic and 1-90 in Mists of Pandaria Classic. The Midnight expansion is sold separately; you need it to go past 80 and to play Midnight content. Cancelling is done in account management; renewal is automatic."
+      },
+      {
+       "tip": "p",
+       "metin": "**Turkey prices (latest official notice as of November 2026):** Blizzard applied new prices for Turkey from 17 January 2025. No newer Turkey notice was found; the amount in the shop may have changed, so check the basket before paying."
       },
       {
        "tip": "tablo",
        "basliklar": [
-        "Topic",
-        "Known value"
+        "Product (Turkey)",
+        "Price (January 2025 notice)"
+       ],
+       "satirlar": [
+        [
+         "1-month subscription",
+         "399.99 TRY"
+        ],
+        [
+         "3-month subscription",
+         "1,049.99 TRY"
+        ],
+        [
+         "6-month subscription",
+         "1,799.99 TRY"
+        ],
+        [
+         "12-month subscription",
+         "3,599.98 TRY"
+        ],
+        [
+         "60 days of Game Time",
+         "799.98 TRY"
+        ],
+        [
+         "The War Within Base Edition (previous expansion)",
+         "1,399.99 TRY"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "The Turkey price of the Midnight expansion is not in that notice and the Midnight page readable on the US Battle.net shop did not give a clear price; so **the TRY amount for Midnight has not been officially announced**. The US shop also lists Heroic and Epic editions for Midnight: Heroic adds an extra mount and appearance pack, Epic adds 30 days of game time, two pets, two mounts and a housing pack."
+      },
+      {
+       "tip": "p",
+       "metin": "**System requirements (Midnight, list on the Blizzard support page):** the minimum is Windows 10 64-bit (May 2019 Update or newer), a 6-core processor with up to 4.0 GHz boost (Intel Coffee Lake or AMD Zen 2 and newer), a 4 GB DirectX 12 graphics card (GeForce GTX 10 series, Radeon RDNA 1 or Intel Iris Xe2), 8 GB RAM, 128 GB free SSD space and broadband internet. The recommended setup asks for Windows 11, an 8 performance-core processor with up to 5.2 GHz (Core Ultra Series 2 or Ryzen Zen 5), an 8 GB graphics card (RTX 40 series, RDNA 3 or Arc B series) and 16 GB RAM. A keyboard and mouse are required."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Requirement",
+        "Minimum",
+        "Recommended"
        ],
        "satirlar": [
         [
          "Operating system",
-         "Windows 10 (64-bit) at minimum for Midnight"
+         "Windows 10 64-bit",
+         "Windows 11"
+        ],
+        [
+         "Processor",
+         "6 cores, 4.0 GHz",
+         "8 performance cores, 5.2 GHz"
+        ],
+        [
+         "Graphics card",
+         "4 GB, DirectX 12",
+         "8 GB, DirectX 12"
+        ],
+        [
+         "RAM",
+         "8 GB",
+         "16 GB"
         ],
         [
          "Storage",
-         "Official advice: about 128 GB free on an SSD; leave extra room for patches"
-        ],
-        [
-         "CPU and graphics card",
-         "Midnight rejects very old CPUs and older graphics architectures; check Blizzard's support page for the exact list"
-        ],
-        [
-         "Connection",
-         "Broadband internet"
+         "128 GB SSD",
+         "128 GB SSD"
         ]
        ]
       },
       {
        "tip": "uyari",
-       "metin": "If you plan to play on an older computer, read Blizzard's current Midnight system requirements before buying. Some older hardware is no longer supported."
+       "metin": "The community found the recommended list harsh; the Blizzard page is the main source of this list. On an older computer, read the current list on the support page before buying."
+      },
+      {
+       "tip": "p",
+       "metin": "**Realm and level cap:** the maximum level with Midnight is 90. A separate realm list for Turkish accounts is not published in an official source; price notices are made on the EU forums, so players from Turkey follow the European region's announcements. You pick the realm in the game when you create a character."
       }
      ]
     },
@@ -511,36 +889,99 @@
       {
        "tip": "tablo",
        "basliklar": [
-        "Role",
-        "Example classes",
-        "Who it suits"
+        "Class",
+        "Specializations (roles)",
+        "Learning curve (approximate)",
+        "Suits"
        ],
        "satirlar": [
         [
-         "Damage, melee",
-         "Warrior, Rogue, Demon Hunter, Death Knight",
-         "Players who like fast, mobile fights"
+         "Warrior",
+         "Arms, Fury (damage); Protection (tank)",
+         "Medium",
+         "Those who like melee and a sturdy stance"
         ],
         [
-         "Damage, ranged",
-         "Mage, Warlock, Hunter, Evoker",
-         "Players who like hitting from a distance"
+         "Paladin",
+         "Holy (healer); Protection (tank); Retribution (damage)",
+         "Easy-medium",
+         "Flexible players who can fill any role"
         ],
         [
-         "Tank",
-         "Warrior, Paladin, Death Knight, Druid, Monk",
-         "Players who like leading the group"
+         "Hunter",
+         "Beast Mastery, Marksmanship, Survival (damage)",
+         "Easy",
+         "Ranged damage with a pet"
         ],
         [
-         "Healer",
-         "Priest, Paladin, Druid, Shaman, Monk, Evoker",
-         "Players who like keeping the team alive"
+         "Rogue",
+         "Assassination, Outlaw, Subtlety (damage)",
+         "Medium",
+         "Fast, stealthy, mobile play"
+        ],
+        [
+         "Priest",
+         "Discipline, Holy (healer); Shadow (damage)",
+         "Medium",
+         "Those who like healing or shadow magic"
+        ],
+        [
+         "Death Knight",
+         "Blood (tank); Frost, Unholy (damage)",
+         "Medium",
+         "Those who want a tough, strong character"
+        ],
+        [
+         "Shaman",
+         "Elemental, Enhancement (damage); Restoration (healer)",
+         "Medium",
+         "Versatile play with totems and elements"
+        ],
+        [
+         "Mage",
+         "Arcane, Fire, Frost (damage)",
+         "Easy-medium",
+         "Ranged spell damage"
+        ],
+        [
+         "Warlock",
+         "Affliction, Demonology, Destruction (damage)",
+         "Medium",
+         "Summoning creatures and curses"
+        ],
+        [
+         "Monk",
+         "Brewmaster (tank); Mistweaver (healer); Windwalker (damage)",
+         "Medium-hard",
+         "Strike combos and movement"
+        ],
+        [
+         "Druid",
+         "Balance, Feral (damage); Guardian (tank); Restoration (healer)",
+         "Medium-hard",
+         "Those who want all four roles"
+        ],
+        [
+         "Demon Hunter",
+         "Havoc (damage); Vengeance (tank); Devourer (new, Midnight)",
+         "Medium",
+         "Agile, aggressive play"
+        ],
+        [
+         "Evoker",
+         "Devastation, Augmentation (damage); Preservation (healer)",
+         "Medium-hard",
+         "Dragon form and mixed close-and-ranged play"
         ]
        ]
       },
       {
        "tip": "p",
        "metin": "**Haranir** is Midnight's new race and **Devourer** is the new Demon Hunter specialization. They are worth trying out of curiosity but are not required for a first character. Staying in the damage role and learning the core systems is the least stressful start."
+      },
+      {
+       "tip": "p",
+       "metin": "The learning curve column is not an exact measure, only a general assessment. There are 13 classes and all of them, Evoker and Demon Hunter included, are in the table; the order is not a power ranking."
       },
       {
        "tip": "ipucu",
@@ -575,6 +1016,143 @@
       {
        "tip": "ipucu",
        "metin": "If you are returning, your talent tree and class mechanics may have changed. Review your talents when you load in."
+      }
+     ]
+    },
+    {
+     "id": "meslekler",
+     "baslik": "Professions: what they do and which to pick",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Each character picks **two primary professions**; you can also learn secondary ones such as cooking, fishing and archaeology freely. Professions fall into two groups: **gathering** professions give raw materials and **crafting** professions turn them into items. Since you gather materials while levelling anyway, pairing one gathering and one crafting profession is the most efficient start."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Group",
+        "Professions",
+        "What it gives"
+       ],
+       "satirlar": [
+        [
+         "Gathering",
+         "Herbalism, Mining, Skinning",
+         "Raw materials; can be sold on the Auction House"
+        ],
+        [
+         "Crafting",
+         "Alchemy, Blacksmithing, Enchanting, Engineering, Inscription, Jewelcrafting, Leatherworking, Tailoring",
+         "Potions, armor, weapons, enchants, engineering gadgets"
+        ],
+        [
+         "Secondary",
+         "Cooking, Fishing, Archaeology",
+         "Food bonuses and cosmetic rewards"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Herbalism with Alchemy, and Mining with Blacksmithing or Jewelcrafting, are natural pairs.",
+        "Skinning and Leatherworking share the same material; you can sell it or craft for yourself.",
+        "Enchanting disenchants items into enchanting materials; putting enchants on gear depends on it."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "You do not have to choose a profession on day one; in the free trial you can try the first ranks. You can change profession later but the progress is reset, so make a small trial before deciding. The real economic value changes with each expansion, so follow current profession guides in the game and on the Blizzard news page."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "If you chose a gathering profession, make it a habit to pick plants and veins on the way during quests; you will not need separate farming later."
+      }
+     ]
+    },
+    {
+     "id": "icerik",
+     "baslik": "Content tiers: Delves, dungeons, raids, Mythic+",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "After level 90 the game progresses by difficulty tiers. The easiest entry is **Delves**: underground scenarios for one player or a small group. Then come **dungeons** (5 players), **raids** (large-group content, up to 20 players) and the hardest, **Mythic+**."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Content",
+        "Players",
+        "Difficulty tiers",
+        "What for"
+       ],
+       "satirlar": [
+        [
+         "Delves",
+         "1-5 (usually solo with a companion)",
+         "Tier steps",
+         "Short, quick and comfortable rewards"
+        ],
+        [
+         "Dungeon",
+         "5",
+         "Normal, Heroic, Mythic",
+         "Learning team play"
+        ],
+        [
+         "Mythic+",
+         "5",
+         "Keystone level (+2, +3...)",
+         "Challenging, weekly reward"
+        ],
+        [
+         "Raid",
+         "Large group",
+         "LFR, Normal, Heroic, Mythic",
+         "Story peak and powerful gear"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**LFR** (Looking for Raid) is the easiest raid difficulty, entered from a queue. To get used to team play, start in dungeons on Normal and progress towards Heroic and Mythic. Mythic+ makes the Mythic dungeon harder with a keystone level and ties it to a timer; entering unprepared tires both you and your team."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Delves are a safe training ground for a first character: you do not wait for a group and you do not hold anyone back while learning."
+      },
+      {
+       "tip": "uyari",
+       "metin": "If you accidentally ruin a queued dungeon you are not punished, but if you leave again and again the group finder may restrict you for a while. Raise the difficulty at your own pace."
+      }
+     ]
+    },
+    {
+     "id": "haftalik",
+     "baslik": "Weekly to-do list",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "At level 90 the game settles into a weekly rhythm. The reset day varies by region; in Europe it is usually Wednesday morning; this may change with patches. The list below gathers one week of work after reset:"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Check the weekly main quest and world quests; pick the ones with rewards.",
+        "Do a few rounds of Delves; they count for the weekly vault reward.",
+        "Do your Mythic+ keystone or dungeon completions; they also count for the vault.",
+        "Try at least one boss from the raid queue (LFR or Normal).",
+        "Choose and collect your reward from the Great Vault.",
+        "Check the profession weekly quests and craft order opportunities."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "The **Great Vault** opens three reward slots depending on how many dungeons, raids and Delves you did that week. You choose only one from each slot. If you do a few activities of all three content types, you collect the vault at its fullest. This structure rests on the weekly pattern introduced in Blizzard's Midnight briefing (Blizzard News: Midnight expansion information)."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Write the list on paper or on your phone and tick it each week. It becomes a habit after a few weeks; most players finish it in only 1-2 hours."
       }
      ]
     },
@@ -657,6 +1235,62 @@
      ]
     },
     {
+     "id": "eklentiler",
+     "baslik": "UI addons and the Classic versus Retail difference",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**Addons** are small programs that change the game's interface. Blizzard allows only addons that change the interface and display information; addons that play for you, press keys automatically or act as bots are banned and lead to account closure. Download only from the addon's official page; a file from an unknown site can steal your account."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Boss warning addons (for example BigWigs or Deadly Boss Mods) show raid mechanics on time.",
+        "Bag, map and damage meter addons are optional for beginners; do not load yourself with addons before learning the game.",
+        "Update addons after a big patch; an old version can cause errors in the game."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Retail, Classic and Forever:** Retail is the Midnight version described today. Classic offers older states of the game: Classic Era, Classic Progression, Anniversary Edition and Season of Discovery realms. WoW: Forever is a separate version that retells the original Azeroth with new zones, redesigned classes, over 1000 new quests and new dungeons and raids; it offers a new race called Skyborne. The same subscription gives access to all three, but the Midnight expansion is for Retail only."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Version",
+        "Level range (subscription)",
+        "Character"
+       ],
+       "satirlar": [
+        [
+         "Retail (Midnight)",
+         "1-80 (subscription), up to 90 with Midnight",
+         "Modern gameplay"
+        ],
+        [
+         "WoW: Forever",
+         "1-60",
+         "Renewed original world"
+        ],
+        [
+         "Classic Era and Progression",
+         "1-60",
+         "Old gameplay"
+        ],
+        [
+         "Mists of Pandaria Classic",
+         "1-90",
+         "Old expansion"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "If you do not know which to pick, start with the free trial on Retail; it is easy to access and has an active population."
+      }
+     ]
+    },
+    {
      "id": "hatalar-guvenlik",
      "baslik": "Common mistakes and safety",
      "bloklar": [
@@ -729,7 +1363,7 @@
     },
     {
      "ad": "Modèle tarifaire",
-     "deger": "Abonnement ou Game Time ; essai gratuit jusqu'au niveau 20"
+     "deger": "Abonnement ou Game Time ; essai gratuit jusqu'au niveau 20. En Turquie, l'abonnement d'un mois coûte 399,99 TRY (annonce Blizzard, valable depuis le 17 janvier 2025)"
     },
     {
      "ad": "Version actuelle",
@@ -737,7 +1371,7 @@
     },
     {
      "ad": "Support du turc",
-     "deger": "Vérifiez dans la liste des langues Battle.net si le turc existe ; sinon jeu en anglais"
+     "deger": "Aucune langue turque du client n'est publiée dans une source officielle ; des pages boutique et prix en turc existent"
     }
    ],
    "bolumler": [
@@ -765,40 +1399,99 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Il faut un compte **Battle.net** gratuit. Les nouveaux comptes ont un **essai gratuit** jusqu'au niveau 20, donjons de ce niveau compris. Sur un compte gratuit, les guildes, le chat illimité et l'Hôtel des ventes sont verrouillés."
+       "metin": "Il faut un compte **Battle.net** gratuit et l'application de bureau Battle.net. Les nouveaux comptes ont un **essai gratuit** : jusqu'au niveau 20, donjons de ces niveaux inclus. Le compte gratuit n'a ni guilde, ni chat illimité, ni hôtel des ventes."
       },
       {
        "tip": "p",
-       "metin": "Au-delà du niveau 20, il faut un **abonnement** ou du **Game Time** (code de temps de jeu) ; selon Blizzard, cela débloque tout le contenu jusqu'au niveau 80. Pour poursuivre l'histoire de Midnight et dépasser le niveau 80, il faut aussi posséder l'**extension Midnight**. Les prix de l'abonnement et de l'extension varient selon la région : consultez le prix actuel dans la boutique Battle.net depuis votre compte. Je n'indique pas de montant, faute de pouvoir le vérifier."
+       "metin": "Au-delà du niveau 20, il faut un **abonnement** ou du **Game Time**. La boutique Battle.net indique que l'abonnement couvre les niveaux 1 à 80 dans World of Warcraft, 1 à 60 dans WoW: Forever, 1 à 60 dans Classic et 1 à 90 dans Mists of Pandaria Classic. L'extension Midnight est vendue à part ; il la faut pour dépasser le niveau 80 et jouer le contenu de Midnight. La résiliation se fait dans la gestion du compte ; le renouvellement est automatique."
+      },
+      {
+       "tip": "p",
+       "metin": "**Prix en Turquie (dernière annonce officielle en novembre 2026) :** Blizzard a appliqué de nouveaux prix pour la Turquie à partir du 17 janvier 2025. Aucune annonce plus récente n'a été trouvée ; le montant en boutique peut avoir changé, vérifiez le panier avant de payer."
       },
       {
        "tip": "tablo",
        "basliklar": [
-        "Sujet",
-        "Valeur connue"
+        "Produit (Turquie)",
+        "Prix (annonce de janvier 2025)"
+       ],
+       "satirlar": [
+        [
+         "Abonnement 1 mois",
+         "399,99 TRY"
+        ],
+        [
+         "Abonnement 3 mois",
+         "1 049,99 TRY"
+        ],
+        [
+         "Abonnement 6 mois",
+         "1 799,99 TRY"
+        ],
+        [
+         "Abonnement 12 mois",
+         "3 599,98 TRY"
+        ],
+        [
+         "60 jours de Game Time",
+         "799,98 TRY"
+        ],
+        [
+         "The War Within Base Edition (extension précédente)",
+         "1 399,99 TRY"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Le prix turc de l'extension Midnight ne figure pas dans cette annonce et la page Midnight lisible sur la boutique américaine de Battle.net n'a pas donné de prix net ; **le montant en TRY de Midnight n'a donc pas pu être vérifié officiellement**. La boutique américaine liste aussi des éditions Heroic et Epic de Midnight : Heroic ajoute une monture et un pack d'apparence, Epic ajoute 30 jours de jeu, deux mascottes, deux montures et un pack d'habitation."
+      },
+      {
+       "tip": "p",
+       "metin": "**Configuration requise (Midnight, liste de la page d'assistance Blizzard) :** le minimum est Windows 10 64 bits (mise à jour de mai 2019 ou plus récente), un processeur à 6 cœurs montant à 4,0 GHz (Intel Coffee Lake ou AMD Zen 2 et plus), une carte graphique DirectX 12 de 4 Go (GeForce GTX série 10, Radeon RDNA 1 ou Intel Iris Xe2), 8 Go de RAM, 128 Go d'espace SSD libre et une connexion haut débit. La configuration recommandée demande Windows 11, un processeur à 8 cœurs de performance montant à 5,2 GHz (Core Ultra série 2 ou Ryzen Zen 5), une carte graphique de 8 Go (RTX série 40, RDNA 3 ou Arc série B) et 16 Go de RAM. Clavier et souris sont obligatoires."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Exigence",
+        "Minimum",
+        "Recommandé"
        ],
        "satirlar": [
         [
          "Système",
-         "Windows 10 (64 bits) au minimum pour Midnight"
+         "Windows 10 64 bits",
+         "Windows 11"
+        ],
+        [
+         "Processeur",
+         "6 cœurs, 4,0 GHz",
+         "8 cœurs de performance, 5,2 GHz"
+        ],
+        [
+         "Carte graphique",
+         "4 Go, DirectX 12",
+         "8 Go, DirectX 12"
+        ],
+        [
+         "RAM",
+         "8 Go",
+         "16 Go"
         ],
         [
          "Stockage",
-         "Conseil officiel : environ 128 Go libres sur un SSD ; prévoyez de la place pour les patchs"
-        ],
-        [
-         "Processeur et carte graphique",
-         "Midnight refuse les processeurs très anciens et les anciennes architectures graphiques ; la liste exacte est sur la page d'assistance de Blizzard"
-        ],
-        [
-         "Connexion",
-         "Internet haut débit"
+         "128 Go SSD",
+         "128 Go SSD"
         ]
        ]
       },
       {
        "tip": "uyari",
-       "metin": "Si vous comptez jouer sur un ordinateur ancien, lisez la configuration requise actuelle de Midnight sur le site de Blizzard avant d'acheter. Certains matériels anciens ne sont plus pris en charge."
+       "metin": "La communauté a trouvé la liste recommandée sévère ; la page Blizzard est la source principale de cette liste. Sur un ordinateur ancien, lisez la liste actuelle de la page d'assistance avant d'acheter."
+      },
+      {
+       "tip": "p",
+       "metin": "**Royaume et niveau maximal :** le niveau maximal avec Midnight est 90. Une liste de royaumes distincte pour les comptes turcs n'est pas publiée dans une source officielle ; les annonces de prix se font sur les forums EU, donc les joueurs de Turquie suivent les annonces de la région européenne. Le royaume se choisit en jeu à la création du personnage."
       }
      ]
     },
@@ -852,36 +1545,99 @@
       {
        "tip": "tablo",
        "basliklar": [
-        "Rôle",
-        "Classes en exemple",
-        "Pour qui ?"
+        "Classe",
+        "Spécialisations (rôles)",
+        "Courbe d'apprentissage (approximative)",
+        "Convient à"
        ],
        "satirlar": [
         [
-         "Dégâts, mêlée",
-         "Warrior, Rogue, Demon Hunter, Death Knight",
-         "Ceux qui aiment les combats rapides et mobiles"
+         "Guerrier",
+         "Armes, Fureur (dégâts) ; Protection (tank)",
+         "Moyenne",
+         "Ceux qui aiment la mêlée et une posture solide"
         ],
         [
-         "Dégâts, distance",
-         "Mage, Warlock, Hunter, Evoker",
-         "Ceux qui aiment frapper de loin"
+         "Paladin",
+         "Sacré (soigneur) ; Protection (tank) ; Vindicte (dégâts)",
+         "Facile à moyenne",
+         "Joueurs flexibles pouvant tenir tous les rôles"
         ],
         [
-         "Tank",
-         "Warrior, Paladin, Death Knight, Druid, Monk",
-         "Ceux qui aiment mener le groupe"
+         "Chasseur",
+         "Maîtrise des bêtes, Précision, Survie (dégâts)",
+         "Facile",
+         "Dégâts à distance avec un familier"
         ],
         [
-         "Soigneur",
-         "Priest, Paladin, Druid, Shaman, Monk, Evoker",
-         "Ceux qui aiment garder l'équipe en vie"
+         "Voleur",
+         "Assassinat, Hors-la-loi, Finesse (dégâts)",
+         "Moyenne",
+         "Jeu rapide, discret et mobile"
+        ],
+        [
+         "Prêtre",
+         "Discipline, Sacré (soigneur) ; Ombre (dégâts)",
+         "Moyenne",
+         "Ceux qui aiment soigner ou la magie des ombres"
+        ],
+        [
+         "Chevalier de la mort",
+         "Sang (tank) ; Givre, Impie (dégâts)",
+         "Moyenne",
+         "Ceux qui veulent un personnage robuste et fort"
+        ],
+        [
+         "Chaman",
+         "Élémentaire, Amélioration (dégâts) ; Restauration (soigneur)",
+         "Moyenne",
+         "Jeu polyvalent avec totems et éléments"
+        ],
+        [
+         "Mage",
+         "Arcane, Feu, Givre (dégâts)",
+         "Facile à moyenne",
+         "Dégâts de sorts à distance"
+        ],
+        [
+         "Démoniste",
+         "Affliction, Démonologie, Destruction (dégâts)",
+         "Moyenne",
+         "Invocation de créatures et malédictions"
+        ],
+        [
+         "Moine",
+         "Maître brasseur (tank) ; Tisse-brume (soigneur) ; Marche-vent (dégâts)",
+         "Moyenne à difficile",
+         "Enchaînements de coups et mouvement"
+        ],
+        [
+         "Druide",
+         "Équilibre, Farouche (dégâts) ; Gardien (tank) ; Restauration (soigneur)",
+         "Moyenne à difficile",
+         "Ceux qui veulent les quatre rôles"
+        ],
+        [
+         "Chasseur de démons",
+         "Dévastation (dégâts) ; Vengeance (tank) ; Devourer (nouveau, Midnight)",
+         "Moyenne",
+         "Jeu agile et agressif"
+        ],
+        [
+         "Évocateur",
+         "Dévastation, Augmentation (dégâts) ; Préservation (soigneur)",
+         "Moyenne à difficile",
+         "Forme de dragon et jeu mixte proche et distant"
         ]
        ]
       },
       {
        "tip": "p",
        "metin": "Les **Haranir** sont la nouvelle race de Midnight et **Devourer** la nouvelle spécialisation du Chasseur de démons. Ils valent le détour par curiosité, mais ne sont pas indispensables pour un premier personnage. Rester dans le rôle de dégâts et apprendre les systèmes de base est le départ le moins stressant."
+      },
+      {
+       "tip": "p",
+       "metin": "La colonne de courbe d'apprentissage n'est pas une mesure exacte, c'est une évaluation générale. Il y a 13 classes et toutes figurent dans le tableau, Évocateur et Chasseur de démons compris ; l'ordre n'est pas un classement de puissance."
       },
       {
        "tip": "ipucu",
@@ -916,6 +1672,143 @@
       {
        "tip": "ipucu",
        "metin": "Si vous revenez, votre arbre de talents et les mécaniques de votre classe ont peut-être changé. Revoyez vos talents à la connexion."
+      }
+     ]
+    },
+    {
+     "id": "meslekler",
+     "baslik": "Métiers : à quoi ils servent et lequel choisir",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Chaque personnage choisit **deux métiers principaux** ; on apprend aussi librement des métiers secondaires comme la cuisine, la pêche et l'archéologie. Les métiers forment deux groupes : les métiers de **récolte** donnent des matières premières et les métiers de **fabrication** les transforment en objets. Comme vous récoltez des matériaux en montant de niveau, associer un métier de récolte et un métier de fabrication est le départ le plus efficace."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Groupe",
+        "Métiers",
+        "Ce qu'ils donnent"
+       ],
+       "satirlar": [
+        [
+         "Récolte",
+         "Herboristerie, Minage, Dépeçage",
+         "Matières premières ; vendables à l'hôtel des ventes"
+        ],
+        [
+         "Fabrication",
+         "Alchimie, Forge, Enchantement, Ingénierie, Calligraphie, Joaillerie, Travail du cuir, Couture",
+         "Potions, armures, armes, enchantements, gadgets d'ingénierie"
+        ],
+        [
+         "Secondaire",
+         "Cuisine, Pêche, Archéologie",
+         "Bonus de nourriture et récompenses cosmétiques"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "L'herboristerie avec l'alchimie, et le minage avec la forge ou la joaillerie, forment des paires naturelles.",
+        "Le dépeçage et le travail du cuir partagent la même matière ; vous pouvez la vendre ou fabriquer pour vous.",
+        "L'enchantement désenchante les objets en matériaux ; mettre des enchantements sur l'équipement en dépend."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Vous n'avez pas à choisir un métier dès le premier jour ; pendant l'essai gratuit, vous pouvez essayer les premiers rangs. Vous pouvez changer de métier plus tard mais la progression est réinitialisée, faites donc un petit essai avant de décider. La vraie valeur économique change à chaque extension, suivez donc les guides de métiers actuels en jeu et sur la page d'actualités de Blizzard."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si vous avez choisi un métier de récolte, prenez l'habitude de ramasser plantes et filons en chemin pendant les quêtes ; vous n'aurez pas besoin de farmer à part ensuite."
+      }
+     ]
+    },
+    {
+     "id": "icerik",
+     "baslik": "Paliers de contenu : Delves, donjons, raids, Mythic+",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Après le niveau 90, le jeu progresse par paliers de difficulté. L'entrée la plus facile est **Delves** : des scénarios souterrains pour un joueur ou un petit groupe. Viennent ensuite les **donjons** (5 joueurs), les **raids** (contenu de grand groupe, jusqu'à 20 joueurs) et le plus difficile, **Mythic+**."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Contenu",
+        "Joueurs",
+        "Paliers de difficulté",
+        "Pour quoi faire"
+       ],
+       "satirlar": [
+        [
+         "Delves",
+         "1-5 (souvent seul avec un compagnon)",
+         "Paliers (tiers)",
+         "Récompenses courtes, rapides et confortables"
+        ],
+        [
+         "Donjon",
+         "5",
+         "Normal, Héroïque, Mythique",
+         "Apprendre le jeu en équipe"
+        ],
+        [
+         "Mythic+",
+         "5",
+         "Niveau de clé (+2, +3...)",
+         "Exigeant, récompense hebdomadaire"
+        ],
+        [
+         "Raid",
+         "Grand groupe",
+         "LFR, Normal, Héroïque, Mythique",
+         "Sommet de l'histoire et équipement puissant"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Le **LFR** (Looking for Raid) est la difficulté de raid la plus facile, accessible depuis une file d'attente. Pour vous habituer au jeu en équipe, commencez en donjon en Normal et progressez vers Héroïque et Mythique. Le Mythic+ durcit le donjon Mythique avec un niveau de clé et le lie à un chronomètre ; y entrer sans préparation fatigue vous et votre équipe."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Delves est un terrain d'entraînement sûr pour un premier personnage : vous n'attendez pas de groupe et vous ne retardez personne en apprenant."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Si vous gâchez par erreur un donjon en file d'attente, vous n'êtes pas puni, mais si vous partez sans cesse, l'outil de recherche de groupe peut vous restreindre un moment. Augmentez la difficulté à votre rythme."
+      }
+     ]
+    },
+    {
+     "id": "haftalik",
+     "baslik": "Liste hebdomadaire des choses à faire",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Au niveau 90, le jeu s'installe dans un rythme hebdomadaire. Le jour de réinitialisation varie selon la région ; en Europe, c'est généralement le mercredi matin ; cela peut changer avec les mises à jour. La liste suivante rassemble une semaine de travail après la réinitialisation :"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Vérifiez la quête principale hebdomadaire et les quêtes mondiales ; choisissez celles qui ont des récompenses.",
+        "Faites quelques tours de Delves ; ils comptent pour la récompense du coffre hebdomadaire.",
+        "Faites votre clé Mythic+ ou vos donjons terminés ; ils comptent aussi pour le coffre.",
+        "Essayez au moins un boss de la file de raid (LFR ou Normal).",
+        "Choisissez et récupérez votre récompense dans le Grand Coffre (Great Vault).",
+        "Vérifiez les quêtes hebdomadaires de métier et les occasions de commandes d'artisanat."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Le **Great Vault** (Grand Coffre) ouvre trois emplacements de récompense selon le nombre de donjons, de raids et de Delves faits dans la semaine. Vous n'en choisissez qu'une par emplacement. Si vous faites quelques activités des trois types de contenu, vous récupérez le coffre au maximum. Cette structure s'appuie sur l'organisation hebdomadaire présentée dans le dossier de Blizzard sur Midnight (Blizzard News : Midnight expansion information)."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Écrivez la liste sur papier ou sur votre téléphone et cochez-la chaque semaine. Cela devient une habitude en quelques semaines ; la plupart des joueurs la terminent en 1 à 2 heures seulement."
       }
      ]
     },
@@ -998,6 +1891,62 @@
      ]
     },
     {
+     "id": "eklentiler",
+     "baslik": "Addons d'interface et différence entre Classic et Retail",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Les **addons** sont de petits programmes qui modifient l'interface du jeu. Blizzard n'autorise que les addons qui modifient l'interface et affichent des informations ; les addons qui jouent à votre place, appuient automatiquement sur des touches ou agissent comme des bots sont interdits et entraînent la fermeture du compte. Téléchargez uniquement depuis la page officielle de l'addon ; un fichier d'un site inconnu peut voler votre compte."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Les addons d'alerte de boss (par exemple BigWigs ou Deadly Boss Mods) montrent les mécaniques de raid à temps.",
+        "Les addons de sacs, de carte et de compteur de dégâts sont facultatifs pour un débutant ; ne vous surchargez pas d'addons avant d'apprendre le jeu.",
+        "Mettez à jour les addons après un gros patch ; une ancienne version peut provoquer des erreurs dans le jeu."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Retail, Classic et Forever :** Retail est la version Midnight décrite aujourd'hui. Classic propose d'anciens états du jeu : royaumes Classic Era, Classic Progression, Anniversary Edition et Season of Discovery. WoW: Forever est une version distincte qui raconte à nouveau l'Azeroth d'origine avec de nouvelles zones, des classes redessinées, plus de 1000 nouvelles quêtes et de nouveaux donjons et raids ; elle propose une nouvelle race appelée Skyborne. Le même abonnement donne accès aux trois, mais l'extension Midnight ne concerne que Retail."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Version",
+        "Niveaux (abonnement)",
+        "Caractère"
+       ],
+       "satirlar": [
+        [
+         "Retail (Midnight)",
+         "1-80 (abonnement), jusqu'à 90 avec Midnight",
+         "Jeu moderne"
+        ],
+        [
+         "WoW: Forever",
+         "1-60",
+         "Monde d'origine renouvelé"
+        ],
+        [
+         "Classic Era et Progression",
+         "1-60",
+         "Ancien jeu"
+        ],
+        [
+         "Mists of Pandaria Classic",
+         "1-90",
+         "Ancienne extension"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si vous ne savez pas lequel choisir, commencez par l'essai gratuit sur Retail ; il est facile d'accès et la population y est active."
+      }
+     ]
+    },
+    {
      "id": "hatalar-guvenlik",
      "baslik": "Erreurs courantes et sécurité",
      "bloklar": [
@@ -1070,7 +2019,7 @@
     },
     {
      "ad": "Modelo de precio",
-     "deger": "Suscripción o Game Time; prueba gratuita hasta el nivel 20"
+     "deger": "Suscripción o Game Time; prueba gratuita hasta el nivel 20. En Turquía la suscripción de 1 mes cuesta 399,99 TRY (anuncio de Blizzard, vigente desde el 17 de enero de 2025)"
     },
     {
      "ad": "Versión actual",
@@ -1078,7 +2027,7 @@
     },
     {
      "ad": "Soporte en turco",
-     "deger": "Comprueba en la lista de idiomas de Battle.net si existe el turco; si no, se juega en inglés"
+     "deger": "Un idioma turco del cliente no figura en una fuente oficial; existen páginas de tienda y precios en turco"
     }
    ],
    "bolumler": [
@@ -1106,40 +2055,99 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Necesitas una cuenta **Battle.net** gratuita. Las cuentas nuevas reciben una **prueba gratuita** hasta el nivel 20, con las mazmorras de ese nivel incluidas. En una cuenta gratuita, las hermandades, el chat sin restricciones y la Casa de Subastas están bloqueados."
+       "metin": "Necesitas una cuenta **Battle.net** gratuita y la aplicación de escritorio de Battle.net. Las cuentas nuevas reciben una **prueba gratuita**: hasta el nivel 20, incluidas las mazmorras de esos niveles. La cuenta gratuita no tiene hermandad, chat ilimitado ni casa de subastas."
       },
       {
        "tip": "p",
-       "metin": "Más allá del nivel 20 hace falta una **suscripción** o **Game Time** (código de tiempo de juego); según Blizzard, esto desbloquea todo el contenido hasta el nivel 80. Para seguir la historia de Midnight y pasar del nivel 80 también necesitas la **expansión Midnight**. Los precios de la suscripción y de la expansión varían por región: consulta el precio actual en la tienda de Battle.net desde tu cuenta. No pongo cifras porque no pude verificarlas."
+       "metin": "Más allá del nivel 20 hace falta una **suscripción** o **Game Time**. La tienda de Battle.net indica que la suscripción cubre los niveles 1-80 en World of Warcraft, 1-60 en WoW: Forever, 1-60 en Classic y 1-90 en Mists of Pandaria Classic. La expansión Midnight se vende aparte; la necesitas para pasar del nivel 80 y jugar el contenido de Midnight. La cancelación se hace en la gestión de la cuenta; la renovación es automática."
+      },
+      {
+       "tip": "p",
+       "metin": "**Precios en Turquía (último anuncio oficial a noviembre de 2026):** Blizzard aplicó nuevos precios para Turquía desde el 17 de enero de 2025. No se encontró un anuncio más reciente; el importe en la tienda puede haber cambiado, comprueba la cesta antes de pagar."
       },
       {
        "tip": "tablo",
        "basliklar": [
-        "Tema",
-        "Valor conocido"
+        "Producto (Turquía)",
+        "Precio (anuncio de enero de 2025)"
+       ],
+       "satirlar": [
+        [
+         "Suscripción de 1 mes",
+         "399,99 TRY"
+        ],
+        [
+         "Suscripción de 3 meses",
+         "1.049,99 TRY"
+        ],
+        [
+         "Suscripción de 6 meses",
+         "1.799,99 TRY"
+        ],
+        [
+         "Suscripción de 12 meses",
+         "3.599,98 TRY"
+        ],
+        [
+         "60 días de Game Time",
+         "799,98 TRY"
+        ],
+        [
+         "The War Within Base Edition (expansión anterior)",
+         "1.399,99 TRY"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "El precio turco de la expansión Midnight no figura en ese anuncio y la página de Midnight legible en la tienda estadounidense de Battle.net no dio un precio claro; por eso **el importe en TRY de Midnight no pudo verificarse oficialmente**. La tienda estadounidense también lista ediciones Heroic y Epic de Midnight: Heroic añade una montura y un paquete de apariencia, Epic añade 30 días de juego, dos mascotas, dos monturas y un paquete de vivienda."
+      },
+      {
+       "tip": "p",
+       "metin": "**Requisitos del sistema (Midnight, lista de la página de soporte de Blizzard):** el mínimo es Windows 10 de 64 bits (actualización de mayo de 2019 o posterior), un procesador de 6 núcleos con hasta 4,0 GHz (Intel Coffee Lake o AMD Zen 2 y posteriores), una tarjeta gráfica DirectX 12 de 4 GB (GeForce GTX serie 10, Radeon RDNA 1 o Intel Iris Xe2), 8 GB de RAM, 128 GB de espacio libre en SSD y conexión de banda ancha. La configuración recomendada pide Windows 11, un procesador de 8 núcleos de rendimiento con hasta 5,2 GHz (Core Ultra serie 2 o Ryzen Zen 5), una tarjeta gráfica de 8 GB (RTX serie 40, RDNA 3 o Arc serie B) y 16 GB de RAM. Teclado y ratón son obligatorios."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Requisito",
+        "Mínimo",
+        "Recomendado"
        ],
        "satirlar": [
         [
          "Sistema operativo",
-         "Como mínimo Windows 10 (64 bits) para Midnight"
+         "Windows 10 de 64 bits",
+         "Windows 11"
+        ],
+        [
+         "Procesador",
+         "6 núcleos, 4,0 GHz",
+         "8 núcleos de rendimiento, 5,2 GHz"
+        ],
+        [
+         "Tarjeta gráfica",
+         "4 GB, DirectX 12",
+         "8 GB, DirectX 12"
+        ],
+        [
+         "RAM",
+         "8 GB",
+         "16 GB"
         ],
         [
          "Almacenamiento",
-         "Recomendación oficial: unos 128 GB libres en un SSD; deja espacio extra para los parches"
-        ],
-        [
-         "Procesador y tarjeta gráfica",
-         "Midnight rechaza procesadores muy antiguos y arquitecturas gráficas viejas; la lista exacta está en la página de soporte de Blizzard"
-        ],
-        [
-         "Conexión",
-         "Internet de banda ancha"
+         "128 GB SSD",
+         "128 GB SSD"
         ]
        ]
       },
       {
        "tip": "uyari",
-       "metin": "Si piensas jugar en un ordenador antiguo, lee los requisitos de sistema actuales de Midnight en Blizzard antes de comprar. Algunos equipos viejos ya no se admiten."
+       "metin": "La comunidad encontró dura la lista recomendada; la página de Blizzard es la fuente principal de esta lista. En un ordenador antiguo, lee la lista actual de la página de soporte antes de comprar."
+      },
+      {
+       "tip": "p",
+       "metin": "**Reino y nivel máximo:** el nivel máximo con Midnight es 90. Una lista de reinos distinta para cuentas turcas no figura en una fuente oficial; los anuncios de precios se hacen en los foros EU, así que los jugadores de Turquía siguen los anuncios de la región europea. El reino se elige en el juego al crear el personaje."
       }
      ]
     },
@@ -1193,36 +2201,99 @@
       {
        "tip": "tablo",
        "basliklar": [
-        "Rol",
-        "Clases de ejemplo",
-        "Para quién"
+        "Clase",
+        "Especializaciones (roles)",
+        "Curva de aprendizaje (aproximada)",
+        "Conviene a"
        ],
        "satirlar": [
         [
-         "Daño, cuerpo a cuerpo",
-         "Warrior, Rogue, Demon Hunter, Death Knight",
-         "A quien le gustan los combates rápidos y móviles"
+         "Guerrero",
+         "Armas, Furia (daño); Protección (tanque)",
+         "Media",
+         "Quienes disfrutan del cuerpo a cuerpo y una postura sólida"
         ],
         [
-         "Daño, a distancia",
-         "Mage, Warlock, Hunter, Evoker",
-         "A quien le gusta golpear desde lejos"
+         "Paladín",
+         "Sagrado (sanador); Protección (tanque); Reprensión (daño)",
+         "Fácil a media",
+         "Jugadores flexibles que cubren cualquier rol"
         ],
         [
-         "Tanque",
-         "Warrior, Paladin, Death Knight, Druid, Monk",
-         "A quien le gusta liderar el grupo"
+         "Cazador",
+         "Bestias, Puntería, Supervivencia (daño)",
+         "Fácil",
+         "Daño a distancia con mascota"
         ],
         [
-         "Sanador",
-         "Priest, Paladin, Druid, Shaman, Monk, Evoker",
-         "A quien le gusta mantener vivo al equipo"
+         "Pícaro",
+         "Asesinato, Forajido, Sutileza (daño)",
+         "Media",
+         "Juego rápido, sigiloso y móvil"
+        ],
+        [
+         "Sacerdote",
+         "Disciplina, Sagrado (sanador); Sombra (daño)",
+         "Media",
+         "Quienes gustan de sanar o de la magia de sombra"
+        ],
+        [
+         "Caballero de la Muerte",
+         "Sangre (tanque); Escarcha, Profano (daño)",
+         "Media",
+         "Quienes quieren un personaje duro y fuerte"
+        ],
+        [
+         "Chamán",
+         "Elemental, Mejora (daño); Restauración (sanador)",
+         "Media",
+         "Juego versátil con tótems y elementos"
+        ],
+        [
+         "Mago",
+         "Arcano, Fuego, Escarcha (daño)",
+         "Fácil a media",
+         "Daño de hechizos a distancia"
+        ],
+        [
+         "Brujo",
+         "Aflicción, Demonología, Destrucción (daño)",
+         "Media",
+         "Invocar criaturas y usar maldiciones"
+        ],
+        [
+         "Monje",
+         "Maestro cervecero (tanque); Tejedor de niebla (sanador); Caminante del viento (daño)",
+         "Media a difícil",
+         "Combos de golpes y movimiento"
+        ],
+        [
+         "Druida",
+         "Equilibrio, Feral (daño); Guardián (tanque); Restauración (sanador)",
+         "Media a difícil",
+         "Quienes quieren los cuatro roles"
+        ],
+        [
+         "Cazador de demonios",
+         "Devastación (daño); Venganza (tanque); Devourer (nuevo, Midnight)",
+         "Media",
+         "Juego ágil y agresivo"
+        ],
+        [
+         "Evocador",
+         "Devastación, Aumento (daño); Preservación (sanador)",
+         "Media a difícil",
+         "Forma de dragón y juego mixto cercano y a distancia"
         ]
        ]
       },
       {
        "tip": "p",
        "metin": "Los **Haranir** son la raza nueva de Midnight y **Devourer** la nueva especialización del Cazador de demonios. Merece la pena probarlos por curiosidad, pero no son imprescindibles para un primer personaje. Quedarte en el rol de daño y aprender los sistemas básicos es el comienzo menos estresante."
+      },
+      {
+       "tip": "p",
+       "metin": "La columna de curva de aprendizaje no es una medida exacta, es una valoración general. Hay 13 clases y todas están en la tabla, Evocador y Cazador de demonios incluidos; el orden no es una clasificación de poder."
       },
       {
        "tip": "ipucu",
@@ -1257,6 +2328,143 @@
       {
        "tip": "ipucu",
        "metin": "Si vuelves, tu árbol de talentos y las mecánicas de tu clase pueden haber cambiado. Revisa tus talentos al entrar."
+      }
+     ]
+    },
+    {
+     "id": "meslekler",
+     "baslik": "Profesiones: para qué sirven y cuál elegir",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Cada personaje elige **dos profesiones principales**; también puedes aprender libremente profesiones secundarias como cocina, pesca y arqueología. Las profesiones forman dos grupos: las de **recolección** dan materias primas y las de **fabricación** las convierten en objetos. Como recolectas materiales mientras subes de nivel, combinar una profesión de recolección y una de fabricación es el inicio más eficiente."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Grupo",
+        "Profesiones",
+        "Qué aportan"
+       ],
+       "satirlar": [
+        [
+         "Recolección",
+         "Herboristería, Minería, Desuello",
+         "Materias primas; se pueden vender en la casa de subastas"
+        ],
+        [
+         "Fabricación",
+         "Alquimia, Herrería, Encantamiento, Ingeniería, Inscripción, Joyería, Peletería, Sastrería",
+         "Pociones, armaduras, armas, encantamientos, artilugios de ingeniería"
+        ],
+        [
+         "Secundarias",
+         "Cocina, Pesca, Arqueología",
+         "Bonificaciones de comida y recompensas cosméticas"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Herboristería con Alquimia, y Minería con Herrería o Joyería, son parejas naturales.",
+        "Desuello y Peletería comparten el mismo material; puedes venderlo o fabricar para ti.",
+        "Encantamiento desencanta objetos en materiales; poner encantamientos al equipo depende de ella."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "No tienes que elegir profesión el primer día; en la prueba gratuita puedes probar los primeros rangos. Puedes cambiar de profesión más tarde pero el progreso se reinicia, así que haz una pequeña prueba antes de decidir. El valor económico real cambia con cada expansión, por lo que conviene seguir las guías de profesiones actuales en el juego y en la página de noticias de Blizzard."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si elegiste una profesión de recolección, acostúmbrate a recoger plantas y vetas por el camino durante las misiones; luego no necesitarás farmeo aparte."
+      }
+     ]
+    },
+    {
+     "id": "icerik",
+     "baslik": "Niveles de contenido: Delves, mazmorras, bandas, Mythic+",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Tras el nivel 90 el juego avanza por niveles de dificultad. La entrada más fácil son las **Delves**: escenarios subterráneos para un jugador o un grupo pequeño. Después vienen las **mazmorras** (5 jugadores), las **bandas** (contenido de grupo grande, hasta 20 jugadores) y lo más difícil, **Mythic+**."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Contenido",
+        "Jugadores",
+        "Niveles de dificultad",
+        "Para qué"
+       ],
+       "satirlar": [
+        [
+         "Delves",
+         "1-5 (normalmente solo con un compañero)",
+         "Escalones (tiers)",
+         "Recompensas cortas, rápidas y cómodas"
+        ],
+        [
+         "Mazmorra",
+         "5",
+         "Normal, Heroico, Mítico",
+         "Aprender el juego en equipo"
+        ],
+        [
+         "Mythic+",
+         "5",
+         "Nivel de piedra angular (+2, +3...)",
+         "Exigente, recompensa semanal"
+        ],
+        [
+         "Banda",
+         "Grupo grande",
+         "LFR, Normal, Heroico, Mítico",
+         "Cima de la historia y equipo poderoso"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**LFR** (Looking for Raid) es la dificultad de banda más fácil, a la que se entra desde una cola. Para acostumbrarte al juego en equipo, empieza en mazmorras en Normal y avanza hacia Heroico y Mítico. Mythic+ endurece la mazmorra Mítica con un nivel de piedra angular y la ata a un temporizador; entrar sin preparación cansa a ti y a tu equipo."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Las Delves son un campo de entrenamiento seguro para un primer personaje: no esperas a un grupo y no retrasas a nadie mientras aprendes."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Si arruinas por error una mazmorra en cola no te castigan, pero si abandonas una y otra vez el buscador de grupos puede restringirte un tiempo. Sube la dificultad a tu ritmo."
+      }
+     ]
+    },
+    {
+     "id": "haftalik",
+     "baslik": "Lista semanal de tareas",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "En el nivel 90 el juego entra en un ritmo semanal. El día de reinicio varía según la región; en Europa suele ser el miércoles por la mañana; puede cambiar con las actualizaciones. La lista siguiente reúne el trabajo de una semana tras el reinicio:"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Revisa la misión principal semanal y las misiones del mundo; elige las que dan recompensas.",
+        "Haz varias rondas de Delves; cuentan para la recompensa del cofre semanal.",
+        "Haz tu piedra angular Mythic+ o tus mazmorras completadas; también cuentan para el cofre.",
+        "Prueba al menos un jefe de la cola de banda (LFR o Normal).",
+        "Elige y recoge tu recompensa del Gran Cofre (Great Vault).",
+        "Revisa las misiones semanales de profesión y las oportunidades de encargos de fabricación."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "El **Great Vault** (Gran Cofre) abre tres ranuras de recompensa según cuántas mazmorras, bandas y Delves hiciste esa semana. De cada ranura eliges solo una. Si haces unas cuantas actividades de los tres tipos de contenido, recoges el cofre al máximo. Esta estructura se apoya en el esquema semanal presentado en el resumen de Blizzard sobre Midnight (Blizzard News: Midnight expansion information)."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Escribe la lista en papel o en el móvil y márcala cada semana. Se vuelve hábito en unas semanas; la mayoría de los jugadores la termina en solo 1-2 horas."
       }
      ]
     },
@@ -1335,6 +2543,62 @@
       {
        "tip": "ipucu",
        "metin": "Sigue tu nivel de objeto; el juego te indica qué mazmorra te conviene."
+      }
+     ]
+    },
+    {
+     "id": "eklentiler",
+     "baslik": "Addons de interfaz y diferencia entre Classic y Retail",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Los **addons** son pequeños programas que cambian la interfaz del juego. Blizzard solo permite addons que cambian la interfaz y muestran información; los addons que juegan por ti, pulsan teclas automáticamente o actúan como bots están prohibidos y llevan al cierre de la cuenta. Descarga solo desde la página oficial del addon; un archivo de un sitio desconocido puede robarte la cuenta."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Los addons de avisos de jefe (por ejemplo BigWigs o Deadly Boss Mods) muestran a tiempo las mecánicas de banda.",
+        "Los addons de bolsas, mapa y medidor de daño son opcionales para un principiante; no te cargues de addons antes de aprender el juego.",
+        "Actualiza los addons tras un parche grande; una versión antigua puede dar errores en el juego."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Retail, Classic y Forever:** Retail es la versión Midnight descrita hoy. Classic ofrece estados antiguos del juego: reinos Classic Era, Classic Progression, Anniversary Edition y Season of Discovery. WoW: Forever es una versión aparte que cuenta de nuevo el Azeroth original con zonas nuevas, clases rediseñadas, más de 1000 misiones nuevas y nuevas mazmorras y bandas; ofrece una raza nueva llamada Skyborne. La misma suscripción da acceso a las tres, pero la expansión Midnight es solo para Retail."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Versión",
+        "Niveles (suscripción)",
+        "Carácter"
+       ],
+       "satirlar": [
+        [
+         "Retail (Midnight)",
+         "1-80 (suscripción), hasta 90 con Midnight",
+         "Juego moderno"
+        ],
+        [
+         "WoW: Forever",
+         "1-60",
+         "Mundo original renovado"
+        ],
+        [
+         "Classic Era y Progression",
+         "1-60",
+         "Juego antiguo"
+        ],
+        [
+         "Mists of Pandaria Classic",
+         "1-90",
+         "Expansión antigua"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si no sabes cuál elegir, empieza con la prueba gratuita en Retail; es fácil de acceder y tiene población activa."
       }
      ]
     },

@@ -1,6 +1,6 @@
 {
  "oyun": "valorant",
- "guncelleme": "2026-11-14",
+ "guncelleme": "2026-11-15",
  "surum": "V26 Act 6 / Yama 13.10",
  "kaynaklar": [
   {
@@ -12,20 +12,28 @@
    "ad": "VALORANT Patch Notes 13.08"
   },
   {
-   "url": "https://playvalorant.com/en-us/news/announcements/beginners-guide",
-   "ad": "VALORANT Beginner's Guide"
+   "url": "https://playvalorant.com/tr-tr/specs/",
+   "ad": "Riot Support: VALORANT system requirements"
   },
   {
    "url": "https://support-valorant.riotgames.com/hc/en-us/articles/360047937633-VALORANT-Competitive-Mode-FAQ",
    "ad": "VALORANT Competitive Mode FAQ"
   },
   {
-   "url": "https://support.riotgames.com/en-us/valorant/support-tools/server-select",
-   "ad": "VALORANT Server Select"
+   "url": "https://support-valorant.riotgames.com/hc/en-us/articles/22291331362067-Vanguard-Restrictions",
+   "ad": "Vanguard Security Requirements (Riot)"
   },
   {
-   "url": "https://clip.dor.gg/en/blog/valorant-system-requirements",
-   "ad": "VALORANT system requirements (secondary)"
+   "url": "https://support-valorant.riotgames.com/riot/client/tpm-20-guide",
+   "ad": "Riot Support: TPM 2.0"
+  },
+  {
+   "url": "https://support-valorant.riotgames.com/riot/client/secure-boot-guide",
+   "ad": "Riot Support: Secure Boot"
+  },
+  {
+   "url": "https://dignitas.gg/articles/a-detailed-valorant-economy-guide",
+   "ad": "Dignitas: VALORANT economy guide"
   }
  ],
  "diller": {
@@ -51,7 +59,7 @@
     },
     {
      "ad": "Türkçe desteği",
-     "deger": "Arayüz dili seçeneklerini ayarlardan doğrula; sunucu listesinde Türkiye'ye yakın İstanbul var"
+     "deger": "Resmî site Türkçe; İstanbul sunucusu var. Oyun içi metin dili Ayarlar > Genel'den seçilir; tam dil listesi resmî olarak açıklanmamış"
     }
    ],
    "bolumler": [
@@ -65,15 +73,15 @@
       },
       {
        "tip": "p",
-       "metin": "Oyun Act adı verilen dönemlerle ilerler. Kasım 2026'da geçerli dönem **V26 Act 6**'dır (13 Ekim 2026 - 5 Ocak 2027). En son yama notu **13.10**'dur. Haritalar ve dereceli havuz sık değişir; bu yüzden rehberde tek tek harita listesi vermiyoruz, oyunun harita ekranına bak."
+       "metin": "Oyun Act adı verilen dönemlerle ilerler. Kasım 2026'da geçerli dönem **V26 Act 6**'dır (13 Ekim 2026 - 5 Ocak 2027); en son yama notu **13.10**'dur. 13.08 yama notlarına göre Act 6 harita havuzu Abyss, Bind, Corrode, Haven, Lotus, Summit ve Sunset'tir; Split ile Ascent havuzdan çıkmıştır. Havuz her Act'te değişebilir; bu liste 15 Kasım 2026 tarihlidir."
       },
       {
        "tip": "ipucu",
-       "metin": "Rehberdeki sayılar Kasım 2026 itibarıyladır. Yamalarla küçük değişiklikler olabilir; kesin kural için resmi Riot destek sayfalarına bak."
+       "metin": "Rehberdeki sayılar Kasım 2026 itibarıyladır. Yamalarla küçük değişiklikler olabilir; kesin kural için resmi Riot destek sayfalarına bakın."
       },
       {
        "tip": "p",
-       "metin": "Kısacası: oyun, iyi nişan almaktan çok iyi karar vermeyi ödüllendirir. Bir raundu kazanmak için çoğu zaman kimin nerede olduğunu bilmek, yeteneklerini takım arkadaşlarınla birlikte kullanmak ve bombanın zamanını iyi yönetmek gerekir. Bu yüzden yeni başlayan bir oyuncu, ilk günlerde nişandan çok harita bilgisine ve iletişime yatırım yapmalıdır."
+       "metin": "Kısacası: oyun, iyi nişan almaktan çok iyi karar vermeyi ödüllendirir. Bir raundu kazanmak için çoğu zaman kimin nerede olduğunu bilmek, yeteneklerini takım arkadaşlarınızla birlikte kullanmak ve bombanın zamanını iyi yönetmek gerekir. Bu yüzden yeni başlayan bir oyuncu, ilk günlerde nişandan çok harita bilgisine ve iletişime yatırım yapmalıdır."
       }
      ]
     },
@@ -83,20 +91,88 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Oyunu Riot Games hesabıyla oynarsın; hesap ve indirme ücretsizdir. Sistem gereksinimi düşüktür. Dışarıdan bir kaynağa göre en düşük ayar için Intel Core i3-540 veya AMD Athlon 200GE, Intel HD 4000 veya Radeon R5 220 ve 4 GB RAM yeterlidir; akıcı oynamak için daha güçlü bir ekran kartı iyi olur."
+       "metin": "Riot'un resmî sistem gereksinimi sayfasına göre oyun 64 bit Windows 10 (Build 19041 ve üstü) veya Windows 11 ister; işlemcide SSE 4.2 veya AVX desteği, 4 GB RAM ve 1 GB video belleği gerekir. Üç performans seviyesi vardır ve aşağıdaki tabloda toplandı. Sayfanın Türkçe sürümü bulunur ve sunucu listesinde İstanbul yer alır (Frankfurt, Paris, Stockholm, Londra, Varşova, Madrid ve Bahreyn ile birlikte)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Seviye",
+        "İşlemci",
+        "Ekran kartı"
+       ],
+       "satirlar": [
+        [
+         "Asgari (30 FPS)",
+         "Intel Core i3-540 veya AMD Athlon 200GE",
+         "Intel HD 4000 veya Radeon R5 220"
+        ],
+        [
+         "Önerilen (60 FPS)",
+         "Intel Core i3-4150 veya AMD Ryzen 3 1200",
+         "GeForce GT 730 veya Radeon R7 240"
+        ],
+        [
+         "Yüksek (144+ FPS)",
+         "Intel Core i5-9400F veya AMD Ryzen 5 2600X",
+         "GeForce GTX 1050 Ti, Radeon R7 370 veya Intel Arc A310"
+        ]
+       ]
       },
       {
        "tip": "liste",
        "ogeler": [
         "Windows 10 veya 11 gerekir; Windows 11'de TPM 2.0 ve Güvenli Önyükleme (Secure Boot) açık olmalıdır.",
         "Oyunla birlikte **Vanguard** adlı anti-hile yazılımı kurulur. Bilgisayarı açtığında çalışır; bu normaldir.",
-        "Vanguard bazen TPM 2.0, Secure Boot, Bellek Bütünlüğü (HVCI) veya IOMMU ayarlarını isteyebilir. BIOS'tan açman gerekebilir.",
-        "Sunucu seçimi için oyunun sunucu listesine bak; resmi listede İstanbul sunucusu yer alır. Sana en düşük gecikmeyi (ping) veren sunucuyu seç."
+        "Vanguard bazen TPM 2.0, Secure Boot, Bellek Bütünlüğü (HVCI) veya IOMMU ayarlarını isteyebilir. BIOS'tan açmanız gerekebilir.",
+        "Sunucu seçimi için oyunun sunucu listesine bakın; resmi listede İstanbul sunucusu yer alır. Sana en düşük gecikmeyi (ping) veren sunucuyu seçin."
        ]
       },
       {
        "tip": "uyari",
-       "metin": "Vanguard çekirdek düzeyinde çalışır. Yalnızca oyunun kendi yükleyicisinden indir; başka sitelerdeki sahte yükleyiciler tehlikelidir."
+       "metin": "Vanguard çekirdek düzeyinde çalışır. Yalnızca oyunun kendi yükleyicisinden indirin; başka sitelerdeki sahte yükleyiciler tehlikelidir."
+      }
+     ]
+    },
+    {
+     "id": "vanguard-kurulum",
+     "baslik": "Vanguard için TPM 2.0 ve Secure Boot kurulumu",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Riot'un Vanguard şartları makalesine göre Vanguard; TPM 2.0, Secure Boot, Bellek Bütünlüğü (HVCI/VBS) ve IOMMU gibi ayarları isteyebilir. Windows 11'de TPM 2.0 ve UEFI Secure Boot zaten gereklidir. Eksik olan ayar, görev çubuğundaki Vanguard simgesinde (VGTray) hata olarak görünür. Aşağıdaki sıra Riot'un TPM ve Secure Boot rehberlerine dayanır."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Durumu kontrol edin",
+         "metin": "Windows'ta Win+R ile msinfo32 yazın; 'Güvenli Önyükleme Durumu' ve 'BIOS Modu' satırlarına bakın. TPM için Win+R ile tpm.msc çalıştırın. Riot'a göre TPM 1.2 desteklenmez; sürüm 2.0 olmalıdır."
+        },
+        {
+         "baslik": "TPM'i BIOS'ta açın",
+         "metin": "Bilgisayarı açarken Del, F2 veya F10 ile BIOS'a gir (Windows'ta Ayarlar > Kurtarma > Gelişmiş başlangıç > Sorun Gider > Gelişmiş seçenekler > UEFI Üretici Yazılımı Ayarları yolu da çalışır). Intel'de PTT, AMD'de fTPM seçeneğini Enabled yapın."
+        },
+        {
+         "baslik": "Diski GPT'ye çevir (gerekirse)",
+         "metin": "BIOS modu 'Legacy' görünüyorsa Secure Boot açılmaz. Yönetici komut isteminde önce mbr2gpt /validate /allowFullOS, sorun çıkmazsa mbr2gpt /convert /allowFullOS çalıştırın. Önce önemli dosyalarınızı yedekleyin."
+        },
+        {
+         "baslik": "UEFI ve Secure Boot'u açın",
+         "metin": "BIOS'ta CSM'i kapatın, önyükleme modunu UEFI yapın, Boot sekmesinde Secure Boot'u Enabled yapın. Anahtarlar boşsa 'Restore Factory Keys' seçeneğini kullanın."
+        },
+        {
+         "baslik": "Yeniden başlatın ve doğrulayın",
+         "metin": "Windows'a girince msinfo32'de Secure Boot'un Açık, tpm.msc'de sürümün 2.0 olduğunu görün; sonra Riot Client'ı açıp oyunu başlatın."
+        }
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "BitLocker (disk şifreleme) açıksa BIOS ayarını değiştirmeden önce korumayı duraklat veya kurtarma anahtarını elinizde bulundurun; yoksa Windows bir sonraki açılışta anahtar isteyebilir. Eski bir kartta bu seçenekler yoksa BIOS güncellemesi gerekebilir; emin değilseniz anakart üreticisinin sayfasına bakın."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Yalnızca Riot'un kendi yönergesini ve üreticinin BIOS yardımını izleyin. 'Vanguard'ı atlatan' yazılımlar hesabınızı kapattırır."
       }
      ]
     },
@@ -108,24 +184,24 @@
        "tip": "adimlar",
        "ogeler": [
         {
-         "baslik": "Oyunu kur ve hesabı aç",
-         "metin": "Riot hesabını oluştur, istemciyi indir, Vanguard kurulumunu bitir ve bilgisayarı yeniden başlat."
+         "baslik": "Oyunu kurun ve hesabı açın",
+         "metin": "Riot hesabınızı oluşturun, istemciyi indirin, Vanguard kurulumunu bitirin ve bilgisayarı yeniden başlatın."
         },
         {
-         "baslik": "Eğitimi ve Atış Alanını dene",
-         "metin": "Eğitim bölümünde hareket ve silahı öğren. Atış Alanı'nda (Range) botlara nişan alarak yeni ayarlarını denersin."
+         "baslik": "Eğitimi ve Atış Alanını deneyin",
+         "metin": "Eğitim bölümünde hareket ve silahı öğrenin. Atış Alanı'nda (Range) botlara nişan alarak yeni ayarlarınızı denersiniz."
         },
         {
-         "baslik": "Öğrenmek için Derecesiz (Unrated) oyna",
-         "metin": "Bu mod puan kaybettirmez. Haritaları ve ajanları burada öğren."
+         "baslik": "Öğrenmek için Derecesiz (Unrated) oynayın",
+         "metin": "Bu mod puan kaybettirmez. Haritaları ve ajanları burada öğrenin."
         },
         {
-         "baslik": "Hızlı mod Swiftplay'i dene",
+         "baslik": "Hızlı mod Swiftplay'i deneyin",
          "metin": "Daha kısa maçlar demektir; ısınmak veya deneme yapmak için güzeldir."
         },
         {
-         "baslik": "20. hesap seviyesine ulaş",
-         "metin": "Dereceli (Competitive) için hesap seviyesi 20 gerekir. Ondan önce derecesiz oynayarak seviye yaparsın."
+         "baslik": "20. hesap seviyesine ulaşın",
+         "metin": "Dereceli (Competitive) için hesap seviyesi 20 gerekir. Ondan önce derecesiz oynayarak seviye yaparsınız."
         }
        ]
       }
@@ -137,7 +213,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "VALORANT'ta dört rol vardır: Düellocu, Gözcü, Kontrol Uzmanı ve Başlatıcı. Ajan sayısı sürekli arttığı için sayı vermiyoruz. Yeni hesapta ücretsiz gelen başlangıç ajanları: **Brimstone, Jett, Phoenix, Sage ve Sova**. Diğer ajanlar Kingdom Kredisi (KC), VP veya etkinliklerle açılır."
+       "metin": "VALORANT'ta dört rol vardır: Düellocu, Gözcü, Kontrol Uzmanı ve Başlatıcı. Ajan sayısı sürekli arttığı için güncel sayı oyundaki ajan listesinde görülür. Yeni hesapta ücretsiz gelen başlangıç ajanları: **Brimstone, Jett, Phoenix, Sage ve Sova**. Diğer ajanlar Kingdom Kredisi (KC), VP veya etkinliklerle açılır."
       },
       {
        "tip": "tablo",
@@ -165,7 +241,7 @@
         [
          "Sova",
          "Başlatıcı",
-         "Keşif oku düşman yerini gösterir; bilgi toplamayı öğretir"
+         "Keşif okuyun düşman yerini gösterir; bilgi toplamayı öğretir"
         ],
         [
          "Brimstone",
@@ -176,7 +252,46 @@
       },
       {
        "tip": "ipucu",
-       "metin": "KC ile yeni ajan açmak uzun sürer: kazanılan her raundda 4, oynanan her raundda 2 KC gelir ve ajan fiyatı 8.000 KC'dir. Önce başlangıç ajanlarından birini iyi öğren."
+       "metin": "KC ile yeni ajan açmak uzun sürer: kazanılan her raundda 4, oynanan her raundda 2 KC gelir ve ajan fiyatı 8.000 KC'dir. Önce başlangıç ajanlarından birini iyi öğrenin."
+      },
+      {
+       "tip": "p",
+       "metin": "Rolleri anlamak, tek tek ajan ezberlemekten daha değerlidir. Aşağıdaki tablo Riot'un resmî ajan sayfalarındaki rol bilgisine dayanır. Yeni eklenen ajanların (ör. Hush, Miks, Tejo, Veto) rolleri tabloda yer almaz; güncel liste resmî ajan sayfasındadır."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rol",
+        "İşi",
+        "Resmî sayfadan örnekler",
+        "Yeni başlayan için"
+       ],
+       "satirlar": [
+        [
+         "Düellocu",
+         "İlk girişi yapar, düello açar",
+         "Jett, Reyna",
+         "Phoenix veya Jett"
+        ],
+        [
+         "Başlatıcı",
+         "Bilgi toplar, düşmanı zayıflatıp giriş açar",
+         "Sova, Skye",
+         "Sova"
+        ],
+        [
+         "Gözcü",
+         "Bir bölgeyi kilitler, arkayı korur",
+         "Sage, Killjoy",
+         "Sage"
+        ],
+        [
+         "Kontrol Uzmanı",
+         "Duman ve engelle görüşü keser, alan açar",
+         "Omen, Brimstone",
+         "Brimstone"
+        ]
+       ]
       }
      ]
     },
@@ -186,19 +301,19 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Her raundun başında bir **alım aşaması** vardır: kredi ile silah, zırh ve yetenek alırsın. 12 raunddan sonra taraflar değişir; 13 raundu kazanan maçı alır (kendi bilgim). Kredi kazanmak için raundu kazanmak yetmez; ekonomi yönetimi de gerekir."
+       "metin": "Her raundun başında bir **alım aşaması** vardır: kredi ile silah, zırh ve yetenek alırsınız. 12 raunddan sonra taraflar değişir; 13 raundu kazanan maçı alır. Spike Rush gibi hızlı modlarda kural farklıdır: Riot'un destek sayfasına göre 7 raunttur, 3 raunddan sonra taraf değişir ve bütün saldırganlar Spike taşır."
       },
       {
        "tip": "liste",
        "ogeler": [
         "**Bomba:** Saldıranlar bombayı kurarsa savunanlar süre dolmadan etkisiz hale getirmelidir.",
-        "**Ekonomi:** Raundu kaybetsen de kredi gelir. Takımca ucuz silah alıp bir sonraki raunda güçlü başlamak sık kullanılan bir yöntemdir.",
-        "**Bilgi:** Mini haritaya bak, ses çıkarma, takım arkadaşlarının çağrılarını dinle."
+        "**Ekonomi:** Raundu kaybetseniz de kredi gelir. Takımca ucuz silah alıp bir sonraki raunda güçlü başlamak sık kullanılan bir yöntemdir.",
+        "**Bilgi:** Mini haritaya bakın, ses çıkarmayın, takım arkadaşlarınızın çağrılarını dinleyin."
        ]
       },
       {
        "tip": "p",
-       "metin": "Yeni oyuncular için en kalıcı ilke şudur: **tek başına dalmak yerine takım arkadaşının yanında dur**. Takas (trade) dediğimiz şey, ölen arkadaşının katilini hemen vurmaktır; bu, tek başına yapılan gösterişli bir hamleden daha değerlidir."
+       "metin": "Yeni oyuncular için en kalıcı ilke şudur: **tek başına dalmak yerine takım arkadaşınızın yanında durun**. Takas (trade), ölen arkadaşınızın katilini hemen vurmaktır; bu, tek başına yapılan gösterişli bir hamleden daha değerlidir."
       },
       {
        "tip": "tablo",
@@ -213,11 +328,11 @@
         ],
         [
          "Force buy",
-         "Kredin az olsa da eldekiyle en iyi alımı yapmak"
+         "Krediniz az olsa da eldekiyle en iyi alımı yapmak"
         ],
         [
          "Trade",
-         "Ölen takım arkadaşının katilini hemen öldürmek"
+         "Ölen takım arkadaşınızın katilini hemen öldürmek"
         ],
         [
          "Flank",
@@ -229,7 +344,7 @@
         ],
         [
          "Clutch",
-         "Takım arkadaşların ölmüşken tek başına raundu almak"
+         "Takım arkadaşlarınız ölmüşken tek başına raundu almak"
         ],
         [
          "Rotate",
@@ -240,12 +355,96 @@
      ]
     },
     {
+     "id": "ekonomi",
+     "baslik": "Ekonomi: eco, force buy ve tam alım",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Kredi tutarları Riot'un destek sayfalarında tablo olarak yayımlanmıyor; bu bölümdeki rakamlar birbirini doğrulayan topluluk rehberlerinden derlenmiştir ve yamalarla değişebilir. Oyun içi alım menüsündeki fiyatlar her zaman doğrusudur."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Durum",
+        "Kredi"
+       ],
+       "satirlar": [
+        [
+         "Her yarının başı",
+         "800"
+        ],
+        [
+         "Raunt galibiyeti",
+         "3000"
+        ],
+        [
+         "Raunt kaybı (üst üste 1. / 2. / 3. ve sonrası)",
+         "1900 / 2400 / 2900"
+        ],
+        [
+         "Öldürme (bazı yetenek ve pompalı silahlarda daha az)",
+         "200"
+        ],
+        [
+         "Spike kurma",
+         "300"
+        ],
+        [
+         "Kredi üst sınırı",
+         "9000"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Kayıp serisi sayacı galibiyetle sıfırlanır. Bu yüzden iki raunt kaybettikten sonra bile bir sonraki raunt için kredi birikmiş olur; ekonomi kararı raunttan önce takımca verilir."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Alım türü",
+        "Ne demek",
+        "Ne zaman"
+       ],
+       "satirlar": [
+        [
+         "Eco",
+         "Neredeyse hiç harcamazsınız; Classic ile oynar, krediyi saklarsınız",
+         "Sonraki raunt için tam alım biriktirirken"
+        ],
+        [
+         "Force buy",
+         "Elindeki krediyle zırh ve ucuz silah alırsınız",
+         "Kaybederseniz oyun bitecekse veya rakip eco'dayken"
+        ],
+        [
+         "Tam alım",
+         "Tüfek, zırh ve yeteneklerin tamamı",
+         "Krediniz yetiyorsa; takımca aynı anda"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Takımca aynı kararı verin:** biri tam alım, dördü eco yaparsa tam alan tek kalır.",
+        "**Sırada ne var bakın:** kayıp serisi 1900-2400-2900 kredi getirdiğinden bir raunt eco yapmak çoğu zaman sonraki raundu güçlendirir.",
+        "**Silahını kurtarın:** raundu kaybedeceğini anlarsanız silahınızı koruyun; bir sonraki raunta taşırsanız alım maliyetinizi sıfırlarsınız."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Takım sohbetinde alım kararını tek kelimeyle söyleyin: 'eco', 'force' veya 'full'."
+      }
+     ]
+    },
+    {
      "id": "ayarlar",
      "baslik": "Ayarlar: başlangıç değerleri",
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Aşağıdakiler resmi değer değil, genel olarak önerilen başlangıç noktalarıdır. Atış Alanı'nda dene, rahat gelmezse değiştir."
+       "metin": "Aşağıdakiler resmi değer değil, genel olarak önerilen başlangıç noktalarıdır. Atış Alanı'nda deneyin, rahat gelmezse değiştirin."
       },
       {
        "tip": "tablo",
@@ -260,7 +459,7 @@
         ],
         [
          "Oyun içi hassasiyet",
-         "DPI ile çarpıp düşük tut; 800 DPI'da yaklaşık 0,3-0,5 ile başla"
+         "DPI ile çarpıp düşük tutun; 800 DPI'da yaklaşık 0,3-0,5 ile başlayın"
         ],
         [
          "Nişangah rengi",
@@ -272,17 +471,83 @@
         ],
         [
          "Mini harita",
-         "Dönmeyen (sabit) veya dönen; ikisini dene, sana uygun olanı seç"
+         "Dönmeyen (sabit) veya dönen; ikisini deneyin, size uygun olanı seçin"
         ],
         [
          "Ses",
-         "Kulaklık tak; ayak sesleri önemlidir"
+         "Kulaklık takın; ayak sesleri önemlidir"
         ]
        ]
       },
       {
        "tip": "ipucu",
-       "metin": "Hassasiyeti sık sık değiştirme. Bir değer seç, bir hafta oyna, sonra karar ver."
+       "metin": "Hassasiyeti sık sık değiştirmeyin. Bir değer seçin, bir hafta oynayın, sonra karar verin."
+      }
+     ]
+    },
+    {
+     "id": "silah-nisan",
+     "baslik": "Silah sınıfları, nişangah ve hassasiyet (eDPI)",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Silah fiyatları topluluk kaynaklarına göre aşağıdadır ve yamalarla değişebilir; kesin fiyatı oyun içi alım menüsünde görün. Yeni başlayan için mantık basit: yakında hızlı silah, uzakta isabetli silah."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Sınıf",
+        "Örnekler (kredi)",
+        "Kullanım"
+       ],
+       "satirlar": [
+        [
+         "Tabanca",
+         "Classic (ücretsiz), Ghost (500), Sheriff (800)",
+         "Eco raundları; Ghost ilk silah olarak güvenlidir"
+        ],
+        [
+         "Hafif makineli",
+         "Stinger (1100), Spectre (1600)",
+         "Yarım alım; yakın ve orta mesafe"
+        ],
+        [
+         "Pompalı",
+         "Bucky (850), Judge (1850)",
+         "Dar köşe ve yakın mesafe"
+        ],
+        [
+         "Tüfek",
+         "Bulldog (2050), Guardian (2250), Phantom (2900), Vandal (2900)",
+         "Ana silah; Phantom sessizdir, Vandal tek atışta daha çok hasar verir"
+        ],
+        [
+         "Keskin nişancı",
+         "Marshal (950), Outlaw (2400), Operator (4700)",
+         "Uzun açılar; Operator pahalıdır, önce Marshal ile deneyin"
+        ],
+        [
+         "Ağır",
+         "Ares (1600), Odin (3200)",
+         "Baskı ateşi; yeni oyuncuya önerilmez"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Nişangah:** oyun içi Ayarlar > Nişangah'tan kendi görünümünüzü yapın. Rengi zeminden ayrışan seçin (camgöbeği veya yeşil), boyutu küçük tutun, kenarlığı açın. Nişangahı başka birinin kodundan almak serbesttir; ama bir hafta aynı kalsın."
+      },
+      {
+       "tip": "p",
+       "metin": "**Hassasiyet mantığı:** gerçek hassasiyetiniz fare DPI'ı ile oyun içi hassasiyetin çarpımıdır; buna eDPI denir. Örnek: 800 DPI ve 0,4 hassasiyet 320 eDPI eder. Aynı eDPI'yi başka bir fareyle de verebilirsiniz (ör. 1600 DPI ve 0,2). Düşük eDPI nişan hassasiyeti, yüksek eDPI hızlı dönüş sağlar; ikisinin dengesi size kalmıştır."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Fare ped alanınız yeterliyse düşük eDPI deneyin; ekran ucuna kadar dönmeyi kolay bulacaksanız biraz artırın.",
+        "Tek atış denemesi: Atış Alanı'nda bir botun başına 20 kez nişan alın; çoğu isabet ediyorsa ayar iyidir.",
+        "Her değişiklikten sonra en az bir hafta oynayın."
+       ]
       }
      ]
     },
@@ -292,7 +557,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Dereceli modda **9 rank** vardır; Radiant hariç hepsi 3 kademelidir. İlk 5 yerleştirme maçından sonra rankını alırsın; başlangıç rankı en fazla Ascendant 1 olabilir. Rank puanı (RR) kazanıp kaybedersin: Ascendant'a kadar her rank için 100 RR gerekir. Immortal ve Radiant'ta 100 RR sınırı yoktur."
+       "metin": "Dereceli modda **9 rank** vardır; Radiant hariç hepsi 3 kademelidir. İlk 5 yerleştirme maçından sonra rankınızı alırsınız; başlangıç rankı en fazla Ascendant 1 olabilir. Rank puanı (RR) kazanıp kaybedersiniz: Ascendant'a kadar her rank için 100 RR gerekir. Immortal ve Radiant'ta 100 RR sınırı yoktur."
       },
       {
        "tip": "tablo",
@@ -333,12 +598,12 @@
       {
        "tip": "liste",
        "ogeler": [
-        "Dereceliye hazır olmadan girmek; önce derecesiz oynayıp haritaları öğren.",
+        "Dereceliye hazır olmadan girmek; önce derecesiz oynayıp haritaları öğrenin.",
         "Her raundu en pahalı silahla oynamaya çalışmak ve ekonomiyi göz ardı etmek.",
         "Yeteneklerin ne zaman kullanılacağını öğrenmeden ajanı sık sık değiştirmek.",
         "Tek başına, takımdan kopuk ilerlemek.",
         "Ölünce konuşmayı bırakmak; kısa ve net bilgi vermek en değerlisidir.",
-        "Kötü bir maçtan sonra hemen yeni maça girmek; kısa ara ver."
+        "Kötü bir maçtan sonra hemen yeni maça girmek; kısa ara verin."
        ]
       },
       {
@@ -346,19 +611,19 @@
        "ogeler": [
         {
          "baslik": "Haftada üç gün",
-         "metin": "Her gün 15 dakika Atış Alanı'nda nişan ısınması yap."
+         "metin": "Her gün 15 dakika Atış Alanı'nda nişan ısınması yapın."
         },
         {
          "baslik": "Her maçtan sonra",
-         "metin": "Tek bir hatanı not et ve bir sonraki maçta yalnızca onu düzelt."
+         "metin": "Tek bir hatanızı not edin ve bir sonraki maçta yalnızca onu düzeltin."
         },
         {
          "baslik": "Her hafta",
-         "metin": "Bir harita seç ve o haritada yalnız bir ajanla oyna."
+         "metin": "Bir harita seçin ve o haritada yalnız bir ajanla oynayın."
         },
         {
          "baslik": "Her ay",
-         "metin": "Ayarlarını gözden geçir; ancak fazla değiştirme."
+         "metin": "Ayarlarını gözden geçirin; ancak fazla değiştirme."
         }
        ]
       }
@@ -370,19 +635,19 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Hesabını korumak, rankından daha önemlidir. İki aşamalı doğrulamayı aç ve şifreni başka sitelerle paylaşma."
+       "metin": "Hesabınızı korumak, rankınızdan daha önemlidir. İki aşamalı doğrulamayı açın ve şifrenizi başka sitelerle paylaşmayın."
       },
       {
        "tip": "uyari",
-       "metin": "Hile yazılımı, nişan botu, duvar hilesi, script, rank boost hizmeti, hesap satın alma veya satma ve kumar benzeri skin bahis siteleri hesabın kalıcı olarak kapanmasına yol açabilir. Bunlara yaklaşma."
+       "metin": "Hile yazılımı, nişan botu, duvar hilesi, script, rank boost hizmeti, hesap satın alma veya satma ve kumar benzeri skin bahis siteleri hesabınızın kalıcı olarak kapanmasına yol açabilir. Bunlara yaklaşmayın."
       },
       {
        "tip": "liste",
        "ogeler": [
-        "Resmi olmayan 'ücretsiz VP' veya 'ücretsiz skin' sitelerine giriş bilgisi verme.",
+        "Resmi olmayan 'ücretsiz VP' veya 'ücretsiz skin' sitelerine giriş bilgisi vermeyin.",
         "Yayın izleyip rakibin yerini öğrenmek (stream sniping), seçim aracı kullanmak ve rank manipülasyonu yaptırım doğurur.",
-        "Takım arkadaşlarına saygılı ol; toksik sohbeti raporla ve sustur.",
-        "Düşük ranklı oyunculara karşı ikinci bir hesapla oynamak (smurf) adil değildir; yapma."
+        "Takım arkadaşlarınıza saygılı olun; toksik sohbeti raporla ve susturun.",
+        "Düşük ranklı oyunculara karşı ikinci bir hesapla oynamak (smurf) adil değildir; yapmayın."
        ]
       }
      ]
@@ -400,15 +665,15 @@
         },
         {
          "s": "Dereceliye ne zaman girebilirim?",
-         "c": "Hesap seviyen 20 olunca."
+         "c": "Hesap seviyeniz 20 olunca."
         },
         {
          "s": "Rankım düşer mi?",
-         "c": "Rank decay yok; ama kaybedince RR kaybedersin."
+         "c": "Rank decay yok; ama kaybedince RR kaybedersiniz."
         },
         {
          "s": "Hangi ajanla başlayayım?",
-         "c": "Başlangıç ajanlarından birini seç; Sage veya Sova takıma kolayca fayda sağlar."
+         "c": "Başlangıç ajanlarından birini seçin; Sage veya Sova takıma kolayca fayda sağlar."
         },
         {
          "s": "Bilgisayarım yetmezse ne olur?",
@@ -450,7 +715,7 @@
     },
     {
      "ad": "Turkish support",
-     "deger": "Check the language options in settings; the server list includes Istanbul, close to Turkey"
+     "deger": "Official site has a Turkish version; an Istanbul server exists. Text language is set in Settings > General; the full language list is not officially published"
     }
    ],
    "bolumler": [
@@ -464,7 +729,7 @@
       },
       {
        "tip": "p",
-       "metin": "The game runs in periods called Acts. In November 2026 the current period is **V26 Act 6** (13 October 2026 to 5 January 2027). The latest patch notes are **13.10**. Maps and the ranked pool rotate often, so this guide does not list them; check the in-game map screen."
+       "metin": "The game moves in periods called Acts. In November 2026 the current period is **V26 Act 6** (13 October 2026 to 5 January 2027); the latest patch notes are **13.10**. According to the 13.08 patch notes, the Act 6 map pool is Abyss, Bind, Corrode, Haven, Lotus, Summit and Sunset; Split and Ascent left the pool. The pool can change every Act; this list is dated 15 November 2026."
       },
       {
        "tip": "ipucu",
@@ -482,7 +747,32 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "You play with a Riot Games account; the account and the download are free. System requirements are low. According to an outside source, the minimum is an Intel Core i3-540 or AMD Athlon 200GE, Intel HD 4000 or Radeon R5 220 and 4 GB of RAM; a stronger graphics card helps for smooth play."
+       "metin": "According to Riot's official system requirements page, the game needs 64-bit Windows 10 (build 19041 or later) or Windows 11, a CPU with SSE 4.2 or AVX support, 4 GB of RAM and 1 GB of video memory. There are three performance levels, collected in the table below. The page has a Turkish version and the server list includes Istanbul (alongside Frankfurt, Paris, Stockholm, London, Warsaw, Madrid and Bahrain)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Level",
+        "CPU",
+        "Graphics card"
+       ],
+       "satirlar": [
+        [
+         "Minimum (30 FPS)",
+         "Intel Core i3-540 or AMD Athlon 200GE",
+         "Intel HD 4000 or Radeon R5 220"
+        ],
+        [
+         "Recommended (60 FPS)",
+         "Intel Core i3-4150 or AMD Ryzen 3 1200",
+         "GeForce GT 730 or Radeon R7 240"
+        ],
+        [
+         "High (144+ FPS)",
+         "Intel Core i5-9400F or AMD Ryzen 5 2600X",
+         "GeForce GTX 1050 Ti, Radeon R7 370 or Intel Arc A310"
+        ]
+       ]
       },
       {
        "tip": "liste",
@@ -496,6 +786,49 @@
       {
        "tip": "uyari",
        "metin": "Vanguard runs at kernel level. Download it only from the game's own installer; fake installers on other sites are dangerous."
+      }
+     ]
+    },
+    {
+     "id": "vanguard-kurulum",
+     "baslik": "Setting up TPM 2.0 and Secure Boot for Vanguard",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "According to Riot's Vanguard requirements article, Vanguard may ask for TPM 2.0, Secure Boot, Memory Integrity (HVCI/VBS) and IOMMU. On Windows 11, TPM 2.0 and UEFI Secure Boot are required anyway. A missing setting shows up as an error on the Vanguard tray icon (VGTray). The order below follows Riot's TPM and Secure Boot guides."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Check the status",
+         "metin": "In Windows press Win+R and type msinfo32; look at the 'Secure Boot State' and 'BIOS Mode' lines. For TPM run tpm.msc from Win+R. Per Riot, TPM 1.2 is not supported; it must be version 2.0."
+        },
+        {
+         "baslik": "Turn TPM on in the BIOS",
+         "metin": "Enter the BIOS with Del, F2 or F10 at startup (the Windows route Settings > Recovery > Advanced startup > Troubleshoot > Advanced options > UEFI Firmware Settings also works). Set PTT on Intel or fTPM on AMD to Enabled."
+        },
+        {
+         "baslik": "Convert the disk to GPT (if needed)",
+         "metin": "If BIOS Mode says 'Legacy', Secure Boot cannot be enabled. In an administrator command prompt run mbr2gpt /validate /allowFullOS first and, if it passes, mbr2gpt /convert /allowFullOS. Back up important files first."
+        },
+        {
+         "baslik": "Enable UEFI and Secure Boot",
+         "metin": "In the BIOS turn CSM off, set boot mode to UEFI and set Secure Boot to Enabled on the Boot tab. If the keys are empty, use 'Restore Factory Keys'."
+        },
+        {
+         "baslik": "Restart and verify",
+         "metin": "Back in Windows, confirm Secure Boot is On in msinfo32 and TPM is version 2.0 in tpm.msc; then open the Riot Client and start the game."
+        }
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "If BitLocker (disk encryption) is on, suspend protection or keep your recovery key at hand before changing BIOS settings; otherwise Windows may ask for the key at the next boot. If an older board lacks these options a BIOS update may be needed; if unsure, check the motherboard maker's page."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Follow only Riot's own guidance and the manufacturer's BIOS help. Software that claims to bypass Vanguard gets accounts banned."
       }
      ]
     },
@@ -536,7 +869,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "There are four roles in VALORANT: Duelist, Sentinel, Controller and Initiator. The agent count keeps growing, so we give no number. The free starter agents on a new account are **Brimstone, Jett, Phoenix, Sage and Sova**. Other agents unlock with Kingdom Credits (KC), VP or events."
+       "metin": "There are four roles in VALORANT: Duelist, Sentinel, Controller and Initiator. The agent count keeps growing, so the current number is shown in the in-game agent list. The free starter agents on a new account are **Brimstone, Jett, Phoenix, Sage and Sova**. Other agents unlock with Kingdom Credits (KC), VP or events."
       },
       {
        "tip": "tablo",
@@ -576,6 +909,45 @@
       {
        "tip": "ipucu",
        "metin": "Unlocking agents with KC takes a long time: 4 KC per round won and 2 per round played, and an agent costs 8,000 KC. Learn one starter agent well first."
+      },
+      {
+       "tip": "p",
+       "metin": "Understanding roles is worth more than memorizing agents one by one. The table below is based on the role information on Riot's official agent pages. The roles of newly added agents (for example Hush, Miks, Tejo, Veto) are not in the table; the current list is on the official agent page."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Role",
+        "Job",
+        "Examples from the official pages",
+        "For beginners"
+       ],
+       "satirlar": [
+        [
+         "Duelist",
+         "Takes first contact, creates duels",
+         "Jett, Reyna",
+         "Phoenix or Jett"
+        ],
+        [
+         "Initiator",
+         "Gathers information, weakens enemies to open entry",
+         "Sova, Skye",
+         "Sova"
+        ],
+        [
+         "Sentinel",
+         "Locks down an area, guards the back",
+         "Sage, Killjoy",
+         "Sage"
+        ],
+        [
+         "Controller",
+         "Cuts vision with smokes and blockers, opens space",
+         "Omen, Brimstone",
+         "Brimstone"
+        ]
+       ]
       }
      ]
     },
@@ -585,7 +957,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "At the start of each round there is a **buy phase**: you spend credits on weapons, armor and abilities. Sides switch after 12 rounds; the first team to win 13 rounds takes the match (my own knowledge). Winning rounds is not enough to gain credits; economy management matters too."
+       "metin": "Each round starts with a **buy phase**: you spend credits on weapons, armor and abilities. Sides swap after 12 rounds; the first team to win 13 takes the match. Quick modes such as Spike Rush use different rules: per Riot's support page it is a best of 7, sides swap after 3 rounds and every attacker carries a Spike."
       },
       {
        "tip": "liste",
@@ -639,6 +1011,90 @@
      ]
     },
     {
+     "id": "ekonomi",
+     "baslik": "Economy: eco, force buy and full buy",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Riot's support pages do not publish the credit amounts as a table; the figures in this section are compiled from community guides that agree with each other and may change with patches. The prices in the in-game buy menu are always correct."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Situation",
+        "Credits"
+       ],
+       "satirlar": [
+        [
+         "Start of each half",
+         "800"
+        ],
+        [
+         "Round win",
+         "3000"
+        ],
+        [
+         "Round loss (1st / 2nd / 3rd and later in a row)",
+         "1900 / 2400 / 2900"
+        ],
+        [
+         "Kill (less for some abilities and shotguns)",
+         "200"
+        ],
+        [
+         "Planting the Spike",
+         "300"
+        ],
+        [
+         "Credit cap",
+         "9000"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "The loss streak counter resets with a win. So even after losing two rounds you have credits saved for the next one; the economy decision is made by the team before the round."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Buy type",
+        "What it means",
+        "When"
+       ],
+       "satirlar": [
+        [
+         "Eco",
+         "You spend almost nothing; play with the Classic and save credits",
+         "While saving for a full buy next round"
+        ],
+        [
+         "Force buy",
+         "You buy armor and a cheap weapon with what you have",
+         "When losing would end the half or the enemy is on eco"
+        ],
+        [
+         "Full buy",
+         "Rifle, armor and all abilities",
+         "When you can afford it, as a team at the same time"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Make the same call as a team:** if one person full-buys and four eco, the one who bought is alone.",
+        "**Look ahead:** since the loss streak pays 1900-2400-2900, one eco round often strengthens the next.",
+        "**Save your weapon:** if you know the round is lost, keep your gun; carrying it over zeroes your buy cost."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Announce the buy call in one word in team chat: 'eco', 'force' or 'full'."
+      }
+     ]
+    },
+    {
      "id": "ayarlar",
      "baslik": "Settings: starting values",
      "bloklar": [
@@ -682,6 +1138,72 @@
       {
        "tip": "ipucu",
        "metin": "Do not change sensitivity often. Pick a value, play for a week, then decide."
+      }
+     ]
+    },
+    {
+     "id": "silah-nisan",
+     "baslik": "Weapon classes, crosshair and sensitivity (eDPI)",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Weapon prices below come from community sources and may change with patches; check the exact price in the in-game buy menu. The beginner logic is simple: fast weapons up close, accurate weapons at range."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Class",
+        "Examples (credits)",
+        "Use"
+       ],
+       "satirlar": [
+        [
+         "Pistol",
+         "Classic (free), Ghost (500), Sheriff (800)",
+         "Eco rounds; the Ghost is a safe first buy"
+        ],
+        [
+         "SMG",
+         "Stinger (1100), Spectre (1600)",
+         "Half buy; close and mid range"
+        ],
+        [
+         "Shotgun",
+         "Bucky (850), Judge (1850)",
+         "Tight corners and close range"
+        ],
+        [
+         "Rifle",
+         "Bulldog (2050), Guardian (2250), Phantom (2900), Vandal (2900)",
+         "Main weapon; the Phantom is quieter, the Vandal deals more damage per shot"
+        ],
+        [
+         "Sniper",
+         "Marshal (950), Outlaw (2400), Operator (4700)",
+         "Long angles; the Operator is expensive, try the Marshal first"
+        ],
+        [
+         "Heavy",
+         "Ares (1600), Odin (3200)",
+         "Suppressive fire; not recommended for new players"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Crosshair:** build your own look in Settings > Crosshair. Pick a color that stands out from the floor (cyan or green), keep it small and turn the outline on. Copying someone else's crosshair code is fine, but keep it unchanged for a week."
+      },
+      {
+       "tip": "p",
+       "metin": "**Sensitivity logic:** your real sensitivity is the mouse DPI multiplied by the in-game sensitivity; this is called eDPI. Example: 800 DPI and 0.4 sensitivity give 320 eDPI. You can reach the same eDPI on another mouse (for example 1600 DPI and 0.2). Low eDPI favors precise aim, high eDPI favors fast turning; the balance is up to you."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "If you have enough mousepad space try a low eDPI; raise it a bit if you want an easy turn to the screen edge.",
+        "Simple test: in the Range, aim at a bot's head 20 times; if most land, the setting is good.",
+        "Play at least a week after every change."
+       ]
       }
      ]
     },
@@ -849,7 +1371,7 @@
     },
     {
      "ad": "Prise en charge du turc",
-     "deger": "Vérifie les langues dans les paramètres ; la liste des serveurs inclut Istanbul, proche de la Turquie"
+     "deger": "Le site officiel existe en turc ; un serveur à Istanbul existe. La langue du texte se règle dans Paramètres > Général ; la liste complète des langues n'est pas publiée officiellement"
     }
    ],
    "bolumler": [
@@ -863,7 +1385,7 @@
       },
       {
        "tip": "p",
-       "metin": "Le jeu avance par périodes appelées Actes. En novembre 2026, la période en cours est **V26 Acte 6** (du 13 octobre 2026 au 5 janvier 2027). Les dernières notes de mise à jour sont la **13.10**. Les cartes et le pool classé changent souvent ; ce guide ne les liste donc pas, regarde l'écran des cartes en jeu."
+       "metin": "Le jeu avance par périodes appelées Actes. En novembre 2026, la période en cours est **V26 Acte 6** (du 13 octobre 2026 au 5 janvier 2027) ; les dernières notes de patch sont la **13.10**. D'après les notes de la 13.08, le pool de cartes de l'Acte 6 est Abyss, Bind, Corrode, Haven, Lotus, Summit et Sunset ; Split et Ascent ont quitté le pool. Il peut changer à chaque Acte ; cette liste date du 15 novembre 2026."
       },
       {
        "tip": "ipucu",
@@ -881,7 +1403,32 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Tu joues avec un compte Riot Games ; le compte et le téléchargement sont gratuits. La configuration requise est modeste. Selon une source externe, le minimum est un Intel Core i3-540 ou AMD Athlon 200GE, une Intel HD 4000 ou Radeon R5 220 et 4 Go de RAM ; une carte graphique plus puissante aide à jouer en fluidité."
+       "metin": "Selon la page officielle des configurations de Riot, le jeu demande Windows 10 64 bits (build 19041 ou plus) ou Windows 11, un processeur compatible SSE 4.2 ou AVX, 4 Go de RAM et 1 Go de mémoire vidéo. Il y a trois niveaux de performance, réunis dans le tableau ci-dessous. La page existe en turc et la liste des serveurs comprend Istanbul (avec Francfort, Paris, Stockholm, Londres, Varsovie, Madrid et Bahreïn)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Niveau",
+        "Processeur",
+        "Carte graphique"
+       ],
+       "satirlar": [
+        [
+         "Minimum (30 FPS)",
+         "Intel Core i3-540 ou AMD Athlon 200GE",
+         "Intel HD 4000 ou Radeon R5 220"
+        ],
+        [
+         "Recommandé (60 FPS)",
+         "Intel Core i3-4150 ou AMD Ryzen 3 1200",
+         "GeForce GT 730 ou Radeon R7 240"
+        ],
+        [
+         "Élevé (144+ FPS)",
+         "Intel Core i5-9400F ou AMD Ryzen 5 2600X",
+         "GeForce GTX 1050 Ti, Radeon R7 370 ou Intel Arc A310"
+        ]
+       ]
       },
       {
        "tip": "liste",
@@ -895,6 +1442,49 @@
       {
        "tip": "uyari",
        "metin": "Vanguard fonctionne au niveau du noyau. Télécharge-le uniquement depuis l'installateur du jeu ; les faux installateurs d'autres sites sont dangereux."
+      }
+     ]
+    },
+    {
+     "id": "vanguard-kurulum",
+     "baslik": "Activer TPM 2.0 et Secure Boot pour Vanguard",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "D'après l'article de Riot sur les exigences de Vanguard, celui-ci peut demander TPM 2.0, Secure Boot, l'intégrité de la mémoire (HVCI/VBS) et l'IOMMU. Sous Windows 11, TPM 2.0 et Secure Boot UEFI sont de toute façon requis. Un réglage manquant s'affiche comme une erreur sur l'icône Vanguard de la barre des tâches (VGTray). L'ordre ci-dessous suit les guides TPM et Secure Boot de Riot."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Vérifie l'état",
+         "metin": "Dans Windows, tape Win+R puis msinfo32 ; regarde les lignes « État du démarrage sécurisé » et « Mode BIOS ». Pour le TPM, lance tpm.msc. Selon Riot, TPM 1.2 n'est pas pris en charge ; il faut la version 2.0."
+        },
+        {
+         "baslik": "Active le TPM dans le BIOS",
+         "metin": "Entre dans le BIOS avec Suppr, F2 ou F10 au démarrage (le chemin Windows Paramètres > Récupération > Démarrage avancé > Dépannage > Options avancées > Paramètres du microprogramme UEFI marche aussi). Mets PTT (Intel) ou fTPM (AMD) sur Enabled."
+        },
+        {
+         "baslik": "Convertis le disque en GPT (si besoin)",
+         "metin": "Si le mode BIOS indique « Legacy », Secure Boot ne s'active pas. Dans une invite de commandes administrateur, lance d'abord mbr2gpt /validate /allowFullOS puis, si tout va bien, mbr2gpt /convert /allowFullOS. Sauvegarde d'abord tes fichiers importants."
+        },
+        {
+         "baslik": "Active UEFI et Secure Boot",
+         "metin": "Dans le BIOS, désactive le CSM, choisis le mode UEFI et mets Secure Boot sur Enabled dans l'onglet Boot. Si les clés sont vides, utilise « Restore Factory Keys »."
+        },
+        {
+         "baslik": "Redémarre et vérifie",
+         "metin": "Dans Windows, confirme que Secure Boot est activé dans msinfo32 et que le TPM est en version 2.0 dans tpm.msc ; puis ouvre le Riot Client et lance le jeu."
+        }
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Si BitLocker (chiffrement du disque) est actif, suspends la protection ou garde ta clé de récupération avant de toucher au BIOS ; sinon Windows peut la demander au prochain démarrage. Si une carte mère ancienne n'a pas ces options, une mise à jour du BIOS peut être nécessaire ; en cas de doute, consulte la page du fabricant."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Suis uniquement les consignes de Riot et l'aide BIOS du fabricant. Les logiciels qui prétendent contourner Vanguard font bannir les comptes."
       }
      ]
     },
@@ -935,7 +1525,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "VALORANT compte quatre rôles : Duelliste, Sentinelle, Contrôleur et Initiateur. Le nombre d'agents augmente sans cesse, donc nous n'en donnons pas. Les agents de départ gratuits sont **Brimstone, Jett, Phoenix, Sage et Sova**. Les autres se débloquent avec des Crédits Kingdom (KC), des VP ou des événements."
+       "metin": "VALORANT compte quatre rôles : Duelliste, Sentinelle, Contrôleur et Initiateur. Le nombre d'agents augmente sans cesse, donc le nombre à jour se voit dans la liste des agents en jeu. Les agents de départ gratuits sont **Brimstone, Jett, Phoenix, Sage et Sova**. Les autres se débloquent avec des Crédits Kingdom (KC), des VP ou des événements."
       },
       {
        "tip": "tablo",
@@ -975,6 +1565,45 @@
       {
        "tip": "ipucu",
        "metin": "Débloquer des agents avec des KC est long : 4 KC par round gagné et 2 par round joué, pour un agent à 8 000 KC. Apprends d'abord bien un agent de départ."
+      },
+      {
+       "tip": "p",
+       "metin": "Comprendre les rôles vaut mieux que mémoriser les agents un par un. Le tableau ci-dessous s'appuie sur les informations de rôle des pages officielles des agents de Riot. Le rôle des agents récemment ajoutés (par exemple Hush, Miks, Tejo, Veto) ne figure pas dans le tableau ; la liste à jour est sur la page officielle."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rôle",
+        "Mission",
+        "Exemples des pages officielles",
+        "Pour débuter"
+       ],
+       "satirlar": [
+        [
+         "Duelliste",
+         "Prend le premier contact, crée les duels",
+         "Jett, Reyna",
+         "Phoenix ou Jett"
+        ],
+        [
+         "Initiateur",
+         "Récolte des infos, affaiblit pour ouvrir l'entrée",
+         "Sova, Skye",
+         "Sova"
+        ],
+        [
+         "Sentinelle",
+         "Verrouille une zone, garde l'arrière",
+         "Sage, Killjoy",
+         "Sage"
+        ],
+        [
+         "Contrôleur",
+         "Coupe la vision avec fumées et écrans, ouvre l'espace",
+         "Omen, Brimstone",
+         "Brimstone"
+        ]
+       ]
       }
      ]
     },
@@ -984,7 +1613,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Au début de chaque round, il y a une **phase d'achat** : tu dépenses des crédits en armes, armure et capacités. Les camps changent après 12 rounds ; la première équipe à 13 rounds gagne le match (connaissance personnelle). Gagner des rounds ne suffit pas pour gagner des crédits ; la gestion de l'économie compte aussi."
+       "metin": "Chaque round commence par une **phase d'achat** : tu dépenses des crédits en armes, armure et capacités. Les camps changent après 12 rounds ; la première équipe à gagner 13 rounds remporte le match. Les modes rapides comme Spike Rush ont d'autres règles : d'après la page de support de Riot, c'est un meilleur des 7, les camps changent après 3 rounds et tous les attaquants portent un Spike."
       },
       {
        "tip": "liste",
@@ -1038,6 +1667,90 @@
      ]
     },
     {
+     "id": "ekonomi",
+     "baslik": "Économie : eco, force buy et full buy",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Les pages de support de Riot ne publient pas les montants de crédits sous forme de tableau ; les chiffres de cette section viennent de guides communautaires qui concordent et peuvent changer avec les patchs. Les prix du menu d'achat en jeu sont toujours les bons."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Situation",
+        "Crédits"
+       ],
+       "satirlar": [
+        [
+         "Début de chaque mi-temps",
+         "800"
+        ],
+        [
+         "Round gagné",
+         "3000"
+        ],
+        [
+         "Round perdu (1er / 2e / 3e et suivants d'affilée)",
+         "1900 / 2400 / 2900"
+        ],
+        [
+         "Élimination (moins pour certaines capacités et fusils à pompe)",
+         "200"
+        ],
+        [
+         "Pose du Spike",
+         "300"
+        ],
+        [
+         "Plafond de crédits",
+         "9000"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Le compteur de défaites d'affilée repart à zéro après une victoire. Même après deux rounds perdus, tu as donc des crédits d'avance pour le suivant ; la décision d'économie se prend en équipe avant le round."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Type d'achat",
+        "Signification",
+        "Quand"
+       ],
+       "satirlar": [
+        [
+         "Eco",
+         "Tu ne dépenses presque rien ; tu joues au Classic et tu économises",
+         "Pour préparer un full buy au round suivant"
+        ],
+        [
+         "Force buy",
+         "Tu achètes armure et arme pas chère avec ce que tu as",
+         "Si perdre finirait la mi-temps ou si l'ennemi est en eco"
+        ],
+        [
+         "Full buy",
+         "Fusil, armure et toutes les capacités",
+         "Quand tu en as les moyens, en équipe et en même temps"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Prenez la même décision en équipe :** si un joueur full-buy et que quatre font eco, celui qui a acheté est seul.",
+        "**Regarde la suite :** comme la série de défaites rapporte 1900-2400-2900, un round d'eco renforce souvent le suivant.",
+        "**Sauve ton arme :** si tu sens le round perdu, garde ton arme ; la reporter annule son coût d'achat."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Annonce la décision d'achat en un mot dans le chat d'équipe : « eco », « force » ou « full »."
+      }
+     ]
+    },
+    {
      "id": "ayarlar",
      "baslik": "Réglages : valeurs de départ",
      "bloklar": [
@@ -1081,6 +1794,72 @@
       {
        "tip": "ipucu",
        "metin": "Ne change pas la sensibilité trop souvent. Choisis une valeur, joue une semaine, puis décide."
+      }
+     ]
+    },
+    {
+     "id": "silah-nisan",
+     "baslik": "Classes d'armes, viseur et sensibilité (eDPI)",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Les prix ci-dessous viennent de sources communautaires et peuvent changer avec les patchs ; vérifie le prix exact dans le menu d'achat en jeu. La logique du débutant est simple : armes rapides de près, armes précises de loin."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Classe",
+        "Exemples (crédits)",
+        "Usage"
+       ],
+       "satirlar": [
+        [
+         "Pistolet",
+         "Classic (gratuit), Ghost (500), Sheriff (800)",
+         "Rounds eco ; le Ghost est un premier achat sûr"
+        ],
+        [
+         "Mitraillette",
+         "Stinger (1100), Spectre (1600)",
+         "Demi-achat ; courte et moyenne distance"
+        ],
+        [
+         "Fusil à pompe",
+         "Bucky (850), Judge (1850)",
+         "Coins serrés et courte distance"
+        ],
+        [
+         "Fusil",
+         "Bulldog (2050), Guardian (2250), Phantom (2900), Vandal (2900)",
+         "Arme principale ; le Phantom est plus discret, le Vandal fait plus de dégâts par tir"
+        ],
+        [
+         "Sniper",
+         "Marshal (950), Outlaw (2400), Operator (4700)",
+         "Longs angles ; l'Operator est cher, essaie d'abord le Marshal"
+        ],
+        [
+         "Lourde",
+         "Ares (1600), Odin (3200)",
+         "Tir de suppression ; déconseillée aux nouveaux"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Viseur :** crée ton style dans Paramètres > Viseur. Choisis une couleur qui ressort du sol (cyan ou vert), garde-le petit et active le contour. Copier le code de viseur de quelqu'un est permis, mais garde-le inchangé une semaine."
+      },
+      {
+       "tip": "p",
+       "metin": "**Logique de sensibilité :** ta vraie sensibilité est le DPI de la souris multiplié par la sensibilité en jeu ; on l'appelle eDPI. Exemple : 800 DPI et 0,4 donnent 320 eDPI. Tu peux obtenir le même eDPI avec une autre souris (par exemple 1600 DPI et 0,2). Un eDPI bas favorise la précision, un eDPI haut les demi-tours rapides ; l'équilibre t'appartient."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Si tu as assez de place sur ton tapis, essaie un eDPI bas ; augmente-le un peu si tu veux tourner facilement jusqu'au bord de l'écran.",
+        "Test simple : dans le Range, vise 20 fois la tête d'un bot ; si la plupart touchent, le réglage est bon.",
+        "Joue au moins une semaine après chaque changement."
+       ]
       }
      ]
     },
@@ -1248,7 +2027,7 @@
     },
     {
      "ad": "Compatibilidad con turco",
-     "deger": "Revisa los idiomas en los ajustes; la lista de servidores incluye Estambul, cerca de Turquía"
+     "deger": "El sitio oficial tiene versión en turco; existe un servidor en Estambul. El idioma del texto se elige en Ajustes > General; la lista completa de idiomas no está publicada oficialmente"
     }
    ],
    "bolumler": [
@@ -1262,7 +2041,7 @@
       },
       {
        "tip": "p",
-       "metin": "El juego avanza por periodos llamados Actos. En noviembre de 2026 el periodo actual es **V26 Acto 6** (del 13 de octubre de 2026 al 5 de enero de 2027). Las últimas notas de parche son la **13.10**. Los mapas y el grupo competitivo rotan a menudo, así que esta guía no los lista; mira la pantalla de mapas del juego."
+       "metin": "El juego avanza por periodos llamados Actos. En noviembre de 2026 el periodo actual es **V26 Acto 6** (del 13 de octubre de 2026 al 5 de enero de 2027); las últimas notas de parche son la **13.10**. Según las notas de la 13.08, el grupo de mapas del Acto 6 es Abyss, Bind, Corrode, Haven, Lotus, Summit y Sunset; Split y Ascent salieron del grupo. Puede cambiar en cada Acto; esta lista es del 15 de noviembre de 2026."
       },
       {
        "tip": "ipucu",
@@ -1280,7 +2059,32 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Juegas con una cuenta de Riot Games; la cuenta y la descarga son gratuitas. Los requisitos son bajos. Según una fuente externa, el mínimo es un Intel Core i3-540 o AMD Athlon 200GE, una Intel HD 4000 o Radeon R5 220 y 4 GB de RAM; una tarjeta gráfica más potente ayuda a jugar con fluidez."
+       "metin": "Según la página oficial de requisitos de Riot, el juego necesita Windows 10 de 64 bits (compilación 19041 o posterior) o Windows 11, una CPU con SSE 4.2 o AVX, 4 GB de RAM y 1 GB de memoria de vídeo. Hay tres niveles de rendimiento, reunidos en la tabla de abajo. La página tiene versión en turco y la lista de servidores incluye Estambul (junto a Fráncfort, París, Estocolmo, Londres, Varsovia, Madrid y Baréin)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Nivel",
+        "Procesador",
+        "Tarjeta gráfica"
+       ],
+       "satirlar": [
+        [
+         "Mínimo (30 FPS)",
+         "Intel Core i3-540 o AMD Athlon 200GE",
+         "Intel HD 4000 o Radeon R5 220"
+        ],
+        [
+         "Recomendado (60 FPS)",
+         "Intel Core i3-4150 o AMD Ryzen 3 1200",
+         "GeForce GT 730 o Radeon R7 240"
+        ],
+        [
+         "Alto (144+ FPS)",
+         "Intel Core i5-9400F o AMD Ryzen 5 2600X",
+         "GeForce GTX 1050 Ti, Radeon R7 370 o Intel Arc A310"
+        ]
+       ]
       },
       {
        "tip": "liste",
@@ -1294,6 +2098,49 @@
       {
        "tip": "uyari",
        "metin": "Vanguard funciona a nivel de kernel. Descárgalo solo desde el instalador del propio juego; los instaladores falsos de otros sitios son peligrosos."
+      }
+     ]
+    },
+    {
+     "id": "vanguard-kurulum",
+     "baslik": "Configurar TPM 2.0 y Secure Boot para Vanguard",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Según el artículo de Riot sobre los requisitos de Vanguard, este puede pedir TPM 2.0, Secure Boot, Integridad de memoria (HVCI/VBS) e IOMMU. En Windows 11, TPM 2.0 y Secure Boot UEFI ya son obligatorios. Un ajuste que falta aparece como error en el icono de Vanguard de la barra de tareas (VGTray). El orden de abajo sigue las guías de TPM y Secure Boot de Riot."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Comprueba el estado",
+         "metin": "En Windows pulsa Win+R y escribe msinfo32; mira las líneas «Estado de arranque seguro» y «Modo de BIOS». Para el TPM ejecuta tpm.msc. Según Riot, TPM 1.2 no es compatible; debe ser la versión 2.0."
+        },
+        {
+         "baslik": "Activa el TPM en la BIOS",
+         "metin": "Entra en la BIOS con Supr, F2 o F10 al arrancar (también sirve la ruta de Windows Configuración > Recuperación > Inicio avanzado > Solucionar problemas > Opciones avanzadas > Configuración de firmware UEFI). Pon PTT en Intel o fTPM en AMD como Enabled."
+        },
+        {
+         "baslik": "Convierte el disco a GPT (si hace falta)",
+         "metin": "Si el modo de BIOS dice «Legacy», no se puede activar Secure Boot. En un símbolo del sistema de administrador ejecuta primero mbr2gpt /validate /allowFullOS y, si pasa, mbr2gpt /convert /allowFullOS. Haz antes una copia de tus archivos importantes."
+        },
+        {
+         "baslik": "Activa UEFI y Secure Boot",
+         "metin": "En la BIOS desactiva el CSM, elige el modo UEFI y pon Secure Boot en Enabled en la pestaña Boot. Si las claves están vacías, usa «Restore Factory Keys»."
+        },
+        {
+         "baslik": "Reinicia y verifica",
+         "metin": "Ya en Windows, confirma que Secure Boot está activado en msinfo32 y que el TPM es versión 2.0 en tpm.msc; luego abre el cliente de Riot e inicia el juego."
+        }
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Si BitLocker (cifrado del disco) está activo, suspende la protección o ten a mano tu clave de recuperación antes de tocar la BIOS; si no, Windows puede pedirla en el siguiente arranque. Si una placa antigua no tiene estas opciones, puede hacer falta actualizar la BIOS; ante la duda, consulta la página del fabricante."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Sigue solo las indicaciones de Riot y la ayuda de BIOS del fabricante. El software que dice saltarse Vanguard hace que baneen la cuenta."
       }
      ]
     },
@@ -1334,7 +2181,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "VALORANT tiene cuatro roles: Duelista, Centinela, Controlador e Iniciador. El número de agentes crece sin parar, por eso no damos cifra. Los agentes iniciales gratuitos son **Brimstone, Jett, Phoenix, Sage y Sova**. Los demás se desbloquean con Créditos Kingdom (KC), VP o eventos."
+       "metin": "VALORANT tiene cuatro roles: Duelista, Centinela, Controlador e Iniciador. El número de agentes crece sin parar, por eso el número actual se ve en la lista de agentes del juego. Los agentes iniciales gratuitos son **Brimstone, Jett, Phoenix, Sage y Sova**. Los demás se desbloquean con Créditos Kingdom (KC), VP o eventos."
       },
       {
        "tip": "tablo",
@@ -1374,6 +2221,45 @@
       {
        "tip": "ipucu",
        "metin": "Desbloquear agentes con KC lleva mucho tiempo: 4 KC por ronda ganada y 2 por ronda jugada, y un agente cuesta 8.000 KC. Primero aprende bien un agente inicial."
+      },
+      {
+       "tip": "p",
+       "metin": "Entender los roles vale más que memorizar agentes uno a uno. La tabla de abajo se basa en la información de rol de las páginas oficiales de agentes de Riot. El rol de los agentes recién añadidos (por ejemplo Hush, Miks, Tejo, Veto) no figura en la tabla; la lista actual está en la página oficial."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rol",
+        "Función",
+        "Ejemplos de las páginas oficiales",
+        "Para empezar"
+       ],
+       "satirlar": [
+        [
+         "Duelista",
+         "Toma el primer contacto, crea duelos",
+         "Jett, Reyna",
+         "Phoenix o Jett"
+        ],
+        [
+         "Iniciador",
+         "Reúne información, debilita para abrir la entrada",
+         "Sova, Skye",
+         "Sova"
+        ],
+        [
+         "Centinela",
+         "Bloquea una zona, cuida la retaguardia",
+         "Sage, Killjoy",
+         "Sage"
+        ],
+        [
+         "Controlador",
+         "Corta la visión con humos y barreras, abre espacio",
+         "Omen, Brimstone",
+         "Brimstone"
+        ]
+       ]
       }
      ]
     },
@@ -1383,7 +2269,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Al inicio de cada ronda hay una **fase de compra**: gastas créditos en armas, armadura y habilidades. Los bandos cambian tras 12 rondas; el primer equipo en ganar 13 rondas se lleva la partida (conocimiento propio). Ganar rondas no basta para tener créditos; también importa gestionar la economía."
+       "metin": "Cada ronda empieza con una **fase de compra**: gastas créditos en armas, armadura y habilidades. Los bandos cambian tras 12 rondas; el primer equipo en ganar 13 se lleva la partida. Los modos rápidos como Spike Rush tienen otras reglas: según la página de soporte de Riot es un mejor de 7, se cambia de bando tras 3 rondas y todos los atacantes llevan un Spike."
       },
       {
        "tip": "liste",
@@ -1437,6 +2323,90 @@
      ]
     },
     {
+     "id": "ekonomi",
+     "baslik": "Economía: eco, force buy y compra completa",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Las páginas de soporte de Riot no publican los importes de créditos en una tabla; las cifras de esta sección salen de guías de la comunidad que coinciden entre sí y pueden cambiar con los parches. Los precios del menú de compra del juego siempre son los correctos."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Situación",
+        "Créditos"
+       ],
+       "satirlar": [
+        [
+         "Inicio de cada mitad",
+         "800"
+        ],
+        [
+         "Ronda ganada",
+         "3000"
+        ],
+        [
+         "Ronda perdida (1.ª / 2.ª / 3.ª y siguientes seguidas)",
+         "1900 / 2400 / 2900"
+        ],
+        [
+         "Baja (menos con algunas habilidades y escopetas)",
+         "200"
+        ],
+        [
+         "Plantar el Spike",
+         "300"
+        ],
+        [
+         "Tope de créditos",
+         "9000"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "El contador de derrotas seguidas se reinicia con una victoria. Así, incluso tras perder dos rondas tienes créditos acumulados para la siguiente; la decisión de economía la toma el equipo antes de la ronda."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Tipo de compra",
+        "Qué significa",
+        "Cuándo"
+       ],
+       "satirlar": [
+        [
+         "Eco",
+         "Casi no gastas; juegas con la Classic y ahorras",
+         "Mientras ahorras para una compra completa en la siguiente ronda"
+        ],
+        [
+         "Force buy",
+         "Compras armadura y un arma barata con lo que tienes",
+         "Si perder acabaría la mitad o el rival está en eco"
+        ],
+        [
+         "Compra completa",
+         "Rifle, armadura y todas las habilidades",
+         "Cuando te llega, todo el equipo a la vez"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Tomad la misma decisión en equipo:** si uno compra todo y cuatro hacen eco, el que compró se queda solo.",
+        "**Mira lo que viene:** como la racha de derrotas da 1900-2400-2900, una ronda de eco suele reforzar la siguiente.",
+        "**Salva tu arma:** si ves la ronda perdida, conserva el arma; llevarla a la siguiente ronda anula su coste de compra."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Anuncia la decisión de compra en una palabra en el chat de equipo: «eco», «force» o «full»."
+      }
+     ]
+    },
+    {
      "id": "ayarlar",
      "baslik": "Ajustes: valores iniciales",
      "bloklar": [
@@ -1480,6 +2450,72 @@
       {
        "tip": "ipucu",
        "metin": "No cambies la sensibilidad a menudo. Elige un valor, juega una semana y luego decide."
+      }
+     ]
+    },
+    {
+     "id": "silah-nisan",
+     "baslik": "Clases de armas, mira y sensibilidad (eDPI)",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Los precios de abajo vienen de fuentes de la comunidad y pueden cambiar con los parches; mira el precio exacto en el menú de compra del juego. La lógica del principiante es simple: armas rápidas de cerca, armas precisas de lejos."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Clase",
+        "Ejemplos (créditos)",
+        "Uso"
+       ],
+       "satirlar": [
+        [
+         "Pistola",
+         "Classic (gratis), Ghost (500), Sheriff (800)",
+         "Rondas de eco; la Ghost es una primera compra segura"
+        ],
+        [
+         "Subfusil",
+         "Stinger (1100), Spectre (1600)",
+         "Media compra; corta y media distancia"
+        ],
+        [
+         "Escopeta",
+         "Bucky (850), Judge (1850)",
+         "Esquinas cerradas y corta distancia"
+        ],
+        [
+         "Rifle",
+         "Bulldog (2050), Guardian (2250), Phantom (2900), Vandal (2900)",
+         "Arma principal; la Phantom es más silenciosa, la Vandal hace más daño por disparo"
+        ],
+        [
+         "Francotirador",
+         "Marshal (950), Outlaw (2400), Operator (4700)",
+         "Ángulos largos; la Operator es cara, prueba primero la Marshal"
+        ],
+        [
+         "Pesada",
+         "Ares (1600), Odin (3200)",
+         "Fuego de supresión; no recomendada para nuevos"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Mira:** crea tu estilo en Ajustes > Mira. Elige un color que destaque del suelo (cian o verde), mantenla pequeña y activa el contorno. Copiar el código de mira de otra persona está permitido, pero déjala sin cambios una semana."
+      },
+      {
+       "tip": "p",
+       "metin": "**Lógica de sensibilidad:** tu sensibilidad real es el DPI del ratón multiplicado por la sensibilidad del juego; se llama eDPI. Ejemplo: 800 DPI y 0,4 dan 320 eDPI. Puedes lograr el mismo eDPI con otro ratón (por ejemplo 1600 DPI y 0,2). Un eDPI bajo favorece la precisión, uno alto los giros rápidos; el equilibrio es cosa tuya."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Si tienes espacio en la alfombrilla, prueba un eDPI bajo; súbelo un poco si quieres girar fácil hasta el borde de la pantalla.",
+        "Prueba simple: en el Range, apunta 20 veces a la cabeza de un bot; si aciertas casi siempre, el ajuste es bueno.",
+        "Juega al menos una semana tras cada cambio."
+       ]
       }
      ]
     },

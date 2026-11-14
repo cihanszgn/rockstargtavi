@@ -5,11 +5,11 @@
  "kaynaklar": [
   {
    "url": "https://www.riseonlineworld.com",
-   "ad": "Rise Online World resmî site (indirme, kayıt)"
+   "ad": "Rise Online World: official site"
   },
   {
    "url": "https://riserehberi.com/rise-online/rehberler/yeni-baslayanlar-icin-rise-online-rehberi",
-   "ad": "Rise Rehberi: yeni başlayanlar için rehber (TR)"
+   "ad": "Rise Rehberi: beginner's guide (TR)"
   },
   {
    "url": "https://riserehberi.com/en/rise-online/guides/beginners-guide-rise-online-world",
@@ -17,15 +17,15 @@
   },
   {
    "url": "https://riserehberi.com/en/rise-online",
-   "ad": "Rise Rehberi: oyun bilgileri, yamalar, sistem gereksinimleri"
+   "ad": "Rise Rehberi: patches and system requirements"
   },
   {
    "url": "https://riserehberi.com/rise-online/exp-tablosu",
-   "ad": "Rise Rehberi: EXP tablosu"
+   "ad": "Rise Rehberi: EXP table"
   },
   {
    "url": "https://riserehberi.com/en/rise-online-mobile/rise-online-mobile-cash-premium-prices-announced",
-   "ad": "Rise Rehberi: mobil Cash ve Premium fiyat duyurusu"
+   "ad": "Rise Rehberi: mobile Cash and Premium prices"
   }
  ],
  "diller": {
@@ -43,7 +43,7 @@
     },
     {
      "ad": "Fiyat modeli",
-     "deger": "Oyunu indirmek ücretsiz; Premium ve Cash isteğe bağlı satın alma (tam model için oyuna bakın)"
+     "deger": "Oyunu indirmek ücretsiz; Premium ve Cash isteğe bağlı. Mobil fiyatları TL ile ilan edildi (ör. 500 Cash 93 TL); PC fiyatları resmî olarak açıklanmadı"
     },
     {
      "ad": "Güncel sürüm",
@@ -51,7 +51,7 @@
     },
     {
      "ad": "Türkçe desteği",
-     "deger": "Türk oyuncu topluluğu var; oyun içi Türkçe dil desteğini oyunda kontrol edin"
+     "deger": "Resmî site ve duyurular İngilizce; oyun içi Türkçe dil seçeneği resmî olarak açıklanmadı. Türkçe hayran rehberleri ve TL fiyatları var"
     }
    ],
    "bolumler": [
@@ -69,11 +69,11 @@
       },
       {
        "tip": "p",
-       "metin": "Rise Online World, klasik Kore tarzı bir MMORPG olarak bilinir: ağırlık av, seviye, ekipman ve toplu savaştadır. Bu rehberdeki bilgilerin çoğu Türkçe bir hayran rehber sitesine ve resmî siteye dayanır. Oyun sık yama aldığı için ayrıntıları oyun içinde ve resmî duyurularda tekrar kontrol edin."
+       "metin": "Rise Online World, klasik Kore tarzı bir MMORPG olarak bilinir: ağırlık av, seviye, ekipman ve toplu savaştadır. Buradaki bilgilerin çoğu Türkçe bir hayran rehber sitesine ve resmî siteye dayanır. Oyun sık yama aldığı için güncel yama notlarını resmî sitedeki 'patch notes' sayfasından izleyin."
       },
       {
        "tip": "ipucu",
-       "metin": "Seviye sınırı ve satın alma modelinin ayrıntıları sık değişir; bunları bu rehberde sabit rakamla yazmıyorum. Oyun içinde ve resmî sitede kontrol edin."
+       "metin": "Seviye sınırı 85'tir (bölge aralıklarının en yükseği ve yeni rehber sayfaları buna işaret ediyor). Oyun indirmek ücretsizdir; kazanç modeli Premium ve Cash satın alımlarıdır."
       }
      ]
     },
@@ -83,20 +83,30 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Oyunu resmî siteden indirirsiniz. Hesabınızı orada açar, e-postanızı doğrularsınız. Aşağıdaki tablo, Rise Rehberi sitesinde yayımlanan sistem gereksinimlerini gösterir; Unreal Engine 5.8'e geçişten sonra değişmiş olabileceği için resmî sitedeki güncel değerlere de bakın."
+       "metin": "Oyunu resmî siteden indirirsiniz. Hesabınızı orada açar, e-postanızı doğrularsınız. Aşağıdaki tablo Rise Rehberi'nin yayımladığı sistem gereksinimleridir; sayfa 15 Ağustos 2026'da güncellenmiş, yani 3 Kasım'daki Unreal Engine 5.8 geçişinden önceye aittir. Resmî sitede bu geçişten sonra yeni bir liste yayımlanmadı, bu yüzden değerler güncel olmayabilir."
       },
       {
        "tip": "tablo",
        "basliklar": [
-        "Bileşen",
-        "Asgari",
+        "Gereksinim",
+        "Minimum",
         "Önerilen"
        ],
        "satirlar": [
         [
+         "İşletim sistemi",
+         "64 bit Windows 7 / 8.1 / 10",
+         "64 bit Windows 7 / 8.1 / 10"
+        ],
+        [
          "İşlemci",
-         "Intel i5-8500 veya Ryzen 5 3500",
+         "Intel Core i5-8500 veya Ryzen 5 3500",
          "Intel i7-10700 veya Ryzen 7 3700X"
+        ],
+        [
+         "Bellek (RAM)",
+         "16 GB",
+         "16 GB"
         ],
         [
          "Ekran kartı",
@@ -104,19 +114,14 @@
          "GTX 1070 veya RX 580"
         ],
         [
-         "Bellek (RAM)",
-         "16 GB",
-         "Resmî sayfaya bakın"
+         "DirectX",
+         "11/12",
+         "11/12"
         ],
         [
-         "Disk",
+         "Depolama",
          "50 GB boş alan",
-         "SSD önerilir"
-        ],
-        [
-         "İşletim sistemi",
-         "Windows 64 bit",
-         "Windows 64 bit"
+         "50 GB boş alan (SSD)"
         ]
        ]
       },
@@ -126,7 +131,7 @@
       },
       {
        "tip": "uyari",
-       "metin": "Tablo üçüncü taraf bir rehber sitesinden alınmıştır. Satın alma veya kurulum kararından önce resmî sitedeki gereksinimleri kontrol edin."
+       "metin": "Tablo üçüncü taraf bir rehber sitesinden alınmıştır ve eski bir Windows listesi içerir. Bugünün Windows 10 veya 11'inde sorun beklenmez; yine de kurulumdan önce depolama alanını ve ekran kartı sürücüsünü kontrol edin."
       }
      ]
     },
@@ -225,7 +230,64 @@
       },
       {
        "tip": "ipucu",
-       "metin": "İlk karakter için en kolay seçimi bulmak istiyorsanız Warrior ile başlamak makul bir tercihtir, ama bu benim yorumumdur; sevdiğiniz oynanışı seçin."
+       "metin": "İlk karakter için en kolay seçimi bulmak istiyorsanız Warrior ile başlamak makul bir tercihtir, ama bu genel bir yorumdur; sevdiğiniz oynanışı seçin."
+      }
+     ]
+    },
+    {
+     "id": "irk-sinif",
+     "baslik": "Irk, sınıf ve statü dağılımı: ayrıntılı tablo",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Rise Online'da dört sınıf ve her sınıfın alt türü vardır; iki ırk (Lunaskar ve Protean) oynanışı değiştirmez, ayrım görünüş içindir (Death Valley ve PvP etkinliklerindeki denge sorunları saymazsak). Aşağıdaki tablo sınıf, alt tür ve hasar için kullanılan ana statıyı birleştirir."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Sınıf",
+        "Alt türler",
+        "Ana stat (hasar / mana)",
+        "Ortak stat"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Attacker, Defensive",
+         "Strength",
+         "Health"
+        ],
+        [
+         "Rogue",
+         "Archer (okçu), Assassin (suikastçı)",
+         "Dexterity",
+         "Health"
+        ],
+        [
+         "Priest",
+         "Healer, Buffer, Debuffer; Battle Priest, INT Priest rolleri",
+         "Battle Priest: Strength; INT Priest: Intelligence",
+         "Health"
+        ],
+        [
+         "Mage",
+         "Fire, Ice, Lightning",
+         "Magic (büyü saldırısı), Intelligence (mana)",
+         "Health"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Beş stat:** Strength, Health, Dexterity, Intelligence ve Magic. Strength, Warrior ve Battle Priest'te saldırı gücünü, tüm sınıflarda taşıma ağırlığını artırır; Health tüm sınıflarda maksimum canı yükseltir; Dexterity Rogue'un, Magic Mage'in saldırısını, Intelligence ise Priest ve Mage'in manasını artırır. Seviye 1 ile 60 arasında her seviyede **3**, 61'den itibaren **5** puan kazanılır."
+      },
+      {
+       "tip": "p",
+       "metin": "**Bonus tuzağı:** eşyalarda 'HP Bonus' doğrudan maksimum canı, 'Health Bonus' ise Health statını yükseltir; benzer biçimde 'MP Bonus' doğrudan manayı, 'Magic Bonus' Magic statını yükseltir. İki bonusu karıştırmayın, çünkü etkileri aynı değildir. Ayrıca her sınıfın **6 element direnci** (ateş, buz, yıldırım, zehir, lanet, kutsal) ve **silah direnci** vardır; direnç yükseldikçe o türden gelen hasar azalır."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Statü puanlarını dağıtmadan önce sınıfınızın ana statını ve Health'i yazıya geçirin; ilk 60 seviyeyi 3'er puan vererek bitireceğiniz için yanlış dağılım pahalı olur."
       }
      ]
     },
@@ -235,7 +297,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Seviye, canavar avı ve görevlerle ilerler. Rise Rehberi sitesinde seviye başına gereken deneyimi gösteren bir EXP tablosu bulunur; rakamlar güncellemelerle değişebileceği için buraya yazmıyorum."
+       "metin": "Seviye, canavar avı ve görevlerle ilerler. Rise Rehberi'nde seviye başına gereken EXP'yi gösteren bir tablo var; rakamlar yamaya göre değişebilir; sınır 85'tir ve 61. seviyeden itibaren her seviyede 5 stat puanı kazanılır. Seviye atlamak için görevleri ve canavar avını dengeli yürütün; yalnız avla ilerlemek yavaş, yalnız görevle ilerlemek ise ekipmansız kalmanıza yol açabilir."
       },
       {
        "tip": "liste",
@@ -256,6 +318,98 @@
      ]
     },
     {
+     "id": "bolgeler",
+     "baslik": "Seviye bölgeleri: hangi harita kaç seviyeye uygun?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Rise Rehberi'nin İngilizce sayfasındaki bölge listesi seviye aralıklarını verir. Haritaların en yüksek aralığı 85'tir; bu yüzden seviye sınırının 85 olduğu anlaşılıyor. Aşağıdaki tabloda köşeli parantezdeki sayılar kaynaktaki seviye aralığıdır."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Seviye aralığı",
+        "Bölge",
+        "Not"
+       ],
+       "satirlar": [
+        [
+         "1-25",
+         "Dorion",
+         "Başlangıç haritası"
+        ],
+        [
+         "25-60",
+         "Lunaskar Kingdom / Protean Kingdom",
+         "Irkınıza göre krallık"
+        ],
+        [
+         "59-85",
+         "Haddar Highlands / Hagard Castle",
+         "Son seviye avı"
+        ],
+        [
+         "50-85",
+         "Death Valley",
+         "Irklar arası savaş alanı"
+        ],
+        [
+         "30-85",
+         "Narun Tower",
+         "Kule içeriği"
+        ],
+        [
+         "1-85",
+         "Narungard",
+         "Tüm seviyelere açık harita"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Görevler EXP kasmanın ana yoludur ve haritalarda seviyeye uygun görevler bulunur. Harita adlarının yazımı kaynakta 'Haddar Lighlands' diye geçiyor; bu bir yazım hatası görünüyor ve burada Highlands diye yazıldı. Her harita için ayrıntılı canavar seviyesi listesi resmî olarak açıklanmadı; bölgeye girince canavar seviyesine bakıp karar verin."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Seviyeniz haritanın alt sınırına yakınsa görev zincirini bitirmeden üst haritaya geçmeyin; görev ödülü hem EXP hem Coin verir."
+      }
+     ]
+    },
+    {
+     "id": "meslekler",
+     "baslik": "Meslekler: toplayıcılık ve üretim",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Rise Online'da iki meslek grubu vardır ve toplayıcı mesleklerle elde edilen materyal üretim mesleklerinde kullanılır. Rise Rehberi'ne göre toplayıcı meslekler şunlardır: Archaeology, Fishing, Harvesting, Herbalism, Mining, Quarrying, Skinning ve Woodcutting. Üretim meslekleri ise Alchemy, Armor Smithing, Blacksmithing, Carpentry, Cooking, Jewel Crafting, Leatherworking ve Stonemasonry olarak sıralanıyor."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Grup",
+        "Meslekler",
+        "Ne işe yarar?"
+       ],
+       "satirlar": [
+        [
+         "Toplayıcı",
+         "Archaeology, Fishing, Harvesting, Herbalism, Mining, Quarrying, Skinning, Woodcutting",
+         "Üretimde kullanılan ham materyal"
+        ],
+        [
+         "Üretim",
+         "Alchemy, Armor Smithing, Blacksmithing, Carpentry, Cooking, Jewel Crafting, Leatherworking, Stonemasonry",
+         "Ham materyali ilaç, silah, zırh ve takıya çevirir"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Mesleklerin her birinin seviye eşiği ve tarifleri resmî olarak açıklanmadı; bunları oyun içi meslek penceresinden öğrenin. Pratik bir başlangıç: seviye atarken karakterinizin kullanacağı ilaç ya da ekipman türüne uygun bir üretim mesleği ve ona hammadde sağlayan bir toplayıcı meslek seçmek, ticarette de size ek gelir sağlar."
+      }
+     ]
+    },
+    {
      "id": "ekonomi",
      "baslik": "Premium ve satın alma: bilinmesi gerekenler",
      "bloklar": [
@@ -265,7 +419,51 @@
       },
       {
        "tip": "p",
-       "metin": "Mobil sürümün Cash ve Premium fiyatları ayrı bir duyuruyla açıklandı; PC ile mobilin fiyatı ve kampanyaları aynı olmayabilir. Satın almadan önce fiyatı ve ne verdiğini resmî sitede okuyun."
+       "metin": "Premium türleri ölüm sonrası EXP kaybını azaltır: Craft yüzde 0,4, EXP yüzde 0,8, Farm, Battle ve Elite yüzde 2 seviyesine indirir (Premium yokken kayıp yüzde 4). PC Premium fiyatları resmî olarak açıklanmadı. Mobil sürümün fiyatları ise Rise Rehberi'nin duyuru sayfasında TL olarak verilmiş ve aşağıdaki tabloda yer alıyor; fiyatlar zamanla değişebilir."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Mobil Premium türü",
+        "Fiyat (TL)",
+        "Ölüm sonrası EXP kaybı"
+       ],
+       "satirlar": [
+        [
+         "Elite Premium",
+         "155",
+         "Yüzde 2"
+        ],
+        [
+         "Farm Premium",
+         "680",
+         "Yüzde 2"
+        ],
+        [
+         "XP Premium",
+         "740",
+         "Yüzde 0,8"
+        ],
+        [
+         "Battle Premium",
+         "805",
+         "Yüzde 2"
+        ],
+        [
+         "Craft Premium",
+         "840",
+         "Yüzde 0,4"
+        ],
+        [
+         "Complete Premium",
+         "1.050",
+         "Resmî olarak açıklanmadı"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Cash için örnek: 500 Cash 93 TL, 1.000 + 20 Cash 187 TL, 5.000 + 200 Cash 938 TL, 10.000 + 500 Cash 1.876 TL. Bu tablo mobil sürüme aittir; PC ile aynı fiyat olduğuna dair bilgi yok."
       },
       {
        "tip": "p",
@@ -274,6 +472,10 @@
       {
        "tip": "uyari",
        "metin": "Oyun içi eşya, altın veya hesabı gerçek parayla başka oyunculardan satın almak ya da satmak (RMT) yasaktır ve hesabın kapanmasına neden olur. Yalnız resmî satın alma yollarını kullanın."
+      },
+      {
+       "tip": "p",
+       "metin": "**Premium almalı mıyım?** Premium yokken ölümde yüzde 4 EXP kaybı yaşarsınız; yüksek seviyede her ölüm bir seviyenin önemli bir kısmına mal olabilir. Bu yüzden Death Valley ve Inferno Temple gibi sık ölünen savaş etkinliklerine girecekseniz bir Premium türü mantıklıdır; sakin görev ve meslek ağırlıklı oynayacaksanız ilk haftalarda Premium'suz başlayıp ölüm sayınızı gözleyin. Karar vermeden önce resmî sitedeki güncel fiyatı kontrol edin; mobil fiyatlar PC için geçerli olmayabilir. Hesabınızı, karakterinizi veya Cash'inizi üçüncü kişilerle gerçek parayla alıp satmayın; bu hem kural ihlalidir hem de dolandırıcılık riskidir. Ayrıca ölüm cezasını azaltmanın ücretsiz yolu da var: seviyenize uygun haritada kalmak, ekipmanınızı güncel tutmak ve kalabalık savaşlarda arka safta durmak, ölüm sayınızı düşürür ve Premium ihtiyacını azaltır."
       }
      ]
     },
@@ -283,7 +485,36 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Rise Online World'ün ağırlık merkezi toplu savaş etkinlikleridir. Bilinen etkinlikler: **Inferno Temple**, **Crystal Fortress War**, **Blood Valley**, **Death Valley** ve **Sevenfold**. 1.16.0 yaması **Surrender** (teslim olma) sistemini getirdi. Etkinlik saatlerini ve kurallarını oyun içi takvimden ya da resmî duyurulardan takip edin."
+       "metin": "Rise Online World'ün ağırlık merkezi toplu savaş etkinlikleridir. Bilinen etkinlikler: **Inferno Temple**, **Crystal Fortress War**, **Blood Valley**, **Death Valley** ve **Sevenfold**; bir de topluluk sitesinde **Mount Race** listeleniyor. Resmî yama notlarına göre Sevenfold saatleri oyun içi Event Calendar'a eklendi, yani **etkinlik saatlerinin resmî kaynağı oyun içi takvimdir**; sabit bir saat listesi resmî olarak açıklanmadı."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Etkinlik",
+        "Bilinen ayrıntı (resmî yama notları)"
+       ],
+       "satirlar": [
+        [
+         "Inferno Temple",
+         "Yama notunda en düşük giriş seviyesi 84; takımlar iki ırktan karışık kuruluyor; Gear Score'a göre ek kristal veriliyor"
+        ],
+        [
+         "Crystal Fortress War",
+         "Teslim olma (Surrender) sistemi var: ekip üyelerinin yarısından fazlası onaylayınca etkinlik kendiliğinden biter"
+        ],
+        [
+         "Blood Valley",
+         "Yama notunda kazanan ve kaybeden için ayrı ödül puanı (kazanan 100, kaybeden 25) listeleniyor"
+        ],
+        [
+         "Death Valley",
+         "50-85 seviye haritası; ırklar arası savaş, denge tartışmaları var"
+        ],
+        [
+         "Sevenfold",
+         "Saatleri oyun içi Event Calendar'da"
+        ]
+       ]
       },
       {
        "tip": "p",
@@ -330,7 +561,7 @@
        "ogeler": [
         {
          "s": "Rise Online World ücretsiz mi?",
-         "c": "Oyunu indirmek ücretsizdir; Premium ve Cash isteğe bağlı satın alınır. Tam modeli oyun içinde ve resmî sitede kontrol edin."
+         "c": "Oyunu indirmek ücretsizdir; kazanç Premium ve Cash satın alımlarından gelir. Mobil fiyatları TL olarak ilan edildi; PC fiyatları resmî olarak açıklanmadı."
         },
         {
          "s": "Hangi sunucuyu seçmeliyim?",
@@ -351,6 +582,10 @@
         {
          "s": "Güncel yama hangisi?",
          "c": "PC'de 16.0.3 (6 Kasım 2026)."
+        },
+        {
+         "s": "Seviye sınırı kaç?",
+         "c": "Haritaların en yüksek aralığı 85 olduğundan sınır 85 görünüyor; resmî sitede açık bir sınır belirtilmiyor."
         }
        ]
       }
@@ -372,7 +607,7 @@
     },
     {
      "ad": "Pricing model",
-     "deger": "Free to download; Premium and Cash are optional purchases (see the game for the full model)"
+     "deger": "Free to download; Premium and Cash are optional. Mobile prices are announced in TL (e.g. 500 Cash for 93 TL); PC prices are not officially stated"
     },
     {
      "ad": "Current version",
@@ -380,7 +615,7 @@
     },
     {
      "ad": "Turkish support",
-     "deger": "There is a Turkish player community; check in-game Turkish language support in the game"
+     "deger": "The official site and announcements are in English; an in-game Turkish language option is not written in the official sources (not stated). Turkish fan guides and TL prices exist"
     }
    ],
    "bolumler": [
@@ -398,11 +633,11 @@
       },
       {
        "tip": "p",
-       "metin": "Rise Online World is known as a classic Korean-style MMORPG: the weight is on hunting, levels, equipment and mass battles. Most of the information in this guide rests on a Turkish fan guide site and the official site. Because the game gets patches often, re-check details in the game and in official announcements."
+       "metin": "Rise Online World is known as a classic Korean-style MMORPG: the focus is hunting, levels, gear and mass battles. Most of the information here rests on a Turkish fan guide site and the official site. Because the game gets patches often, follow current patch notes on the official 'patch notes' page."
       },
       {
        "tip": "ipucu",
-       "metin": "Details of the level cap and the purchase model change often; I do not write them as fixed figures in this guide. Check them in the game and on the official site."
+       "metin": "The level cap is 85 (the highest zone range and the guide pages point to it). The game is free to download; the revenue model is Premium and Cash purchases."
       }
      ]
     },
@@ -412,20 +647,30 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "You download the game from the official site. You create your account there and confirm your e-mail. The table below shows the system requirements published on the Rise Rehberi site; since they may have changed after the move to Unreal Engine 5.8, also check the current values on the official site."
+       "metin": "You download the game from the official site. You open your account there and verify your e-mail. The table below is the system requirements published by Rise Rehberi; the page was updated on 15 August 2026, so it predates the Unreal Engine 5.8 switch of 3 November. No new list was published on the official site after that switch, so the values may be out of date."
       },
       {
        "tip": "tablo",
        "basliklar": [
-        "Component",
+        "Requirement",
         "Minimum",
         "Recommended"
        ],
        "satirlar": [
         [
+         "Operating system",
+         "64-bit Windows 7 / 8.1 / 10",
+         "64-bit Windows 7 / 8.1 / 10"
+        ],
+        [
          "Processor",
-         "Intel i5-8500 or Ryzen 5 3500",
+         "Intel Core i5-8500 or Ryzen 5 3500",
          "Intel i7-10700 or Ryzen 7 3700X"
+        ],
+        [
+         "Memory (RAM)",
+         "16 GB",
+         "16 GB"
         ],
         [
          "Graphics card",
@@ -433,19 +678,14 @@
          "GTX 1070 or RX 580"
         ],
         [
-         "Memory (RAM)",
-         "16 GB",
-         "See the official page"
+         "DirectX",
+         "11/12",
+         "11/12"
         ],
         [
-         "Disk",
+         "Storage",
          "50 GB free space",
-         "SSD recommended"
-        ],
-        [
-         "Operating system",
-         "Windows 64-bit",
-         "Windows 64-bit"
+         "50 GB free space (SSD)"
         ]
        ]
       },
@@ -455,7 +695,7 @@
       },
       {
        "tip": "uyari",
-       "metin": "The table is taken from a third-party guide site. Check the requirements on the official site before buying or installing."
+       "metin": "The table comes from a third-party guide site and contains an old Windows list. No problem is expected on today's Windows 10 or 11; still, check storage space and your graphics driver before installing."
       }
      ]
     },
@@ -554,7 +794,64 @@
       },
       {
        "tip": "ipucu",
-       "metin": "If you want the easiest first choice, starting with Warrior is a reasonable pick, but that is my reading; choose the playstyle you like."
+       "metin": "If you want the easiest first choice, starting with Warrior is a reasonable pick, but that is a general view; choose the playstyle you like."
+      }
+     ]
+    },
+    {
+     "id": "irk-sinif",
+     "baslik": "Race, class and stat distribution: detailed table",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Rise Online has four classes and each class has sub-types; the two races (Lunaskar and Protean) do not change gameplay, the difference is only in looks (apart from balance issues in Death Valley and PvP events). The table below combines class, sub-type and the main stat used for damage."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Class",
+        "Sub-types",
+        "Main stat (damage / mana)",
+        "Shared stat"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Attacker, Defensive",
+         "Strength",
+         "Health"
+        ],
+        [
+         "Rogue",
+         "Archer, Assassin",
+         "Dexterity",
+         "Health"
+        ],
+        [
+         "Priest",
+         "Healer, Buffer, Debuffer; Battle Priest and INT Priest roles",
+         "Battle Priest: Strength; INT Priest: Intelligence",
+         "Health"
+        ],
+        [
+         "Mage",
+         "Fire, Ice, Lightning",
+         "Magic (spell attack), Intelligence (mana)",
+         "Health"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Five stats:** Strength, Health, Dexterity, Intelligence and Magic. Strength raises attack power for Warrior and Battle Priest and carrying weight for all classes; Health raises maximum HP for all classes; Dexterity raises the Rogue's attack, Magic the Mage's attack, and Intelligence the mana of Priest and Mage. From level 1 to 60 you gain **3** points per level, from 61 you gain **5**."
+      },
+      {
+       "tip": "p",
+       "metin": "**Bonus trap:** on items, 'HP Bonus' raises maximum HP directly, while 'Health Bonus' raises the Health stat; likewise 'MP Bonus' raises mana directly and 'Magic Bonus' raises the Magic stat. Do not mix the two bonuses, their effects are not the same. Each class also has **6 elemental resistances** (fire, ice, lightning, poison, curse, holy) and **weapon resistances**; as resistance rises, damage of that type is reduced."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Before spending stat points write down your class's main stat and Health; since you will finish the first 60 levels at 3 points each, a wrong distribution is costly."
       }
      ]
     },
@@ -564,7 +861,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "You level through monster hunting and quests. The Rise Rehberi site has an EXP table showing the experience needed per level; I do not write the figures here because they may change with updates."
+       "metin": "Level rises through monster hunting and quests. Rise Rehberi has a table of the EXP needed per level; the figures change with patches, but the cap is 85 and from level 61 you gain 5 stat points per level. To level up, balance quests and monster hunting; progressing by hunting alone is slow, and questing alone can leave you short on gear."
       },
       {
        "tip": "liste",
@@ -585,6 +882,98 @@
      ]
     },
     {
+     "id": "bolgeler",
+     "baslik": "Level zones: which map suits which level?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The zone list on Rise Rehberi's English page gives level ranges. The highest map range is 85, so the level cap appears to be 85. In the table below the numbers are the level ranges in the source."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Level range",
+        "Zone",
+        "Note"
+       ],
+       "satirlar": [
+        [
+         "1-25",
+         "Dorion",
+         "Starter map"
+        ],
+        [
+         "25-60",
+         "Lunaskar Kingdom / Protean Kingdom",
+         "Kingdom by your race"
+        ],
+        [
+         "59-85",
+         "Haddar Highlands / Hagard Castle",
+         "End-level hunting"
+        ],
+        [
+         "50-85",
+         "Death Valley",
+         "Battlefield between races"
+        ],
+        [
+         "30-85",
+         "Narun Tower",
+         "Tower content"
+        ],
+        [
+         "1-85",
+         "Narungard",
+         "Map open to all levels"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Quests are the main way to grind EXP and every map has quests suited to your level. The source spells the map name 'Haddar Lighlands'; this looks like a typo and it is written Highlands here. A detailed monster-level list for each map is not officially stated; when you enter a zone, look at the monster level and decide."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "If your level is close to a map's lower limit, do not move to the next map before finishing the quest chain; quest rewards give both EXP and Coin."
+      }
+     ]
+    },
+    {
+     "id": "meslekler",
+     "baslik": "Professions: gathering and crafting",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Rise Online has two profession groups and the materials from gathering professions are used in crafting professions. According to Rise Rehberi the gathering professions are Archaeology, Fishing, Harvesting, Herbalism, Mining, Quarrying, Skinning and Woodcutting. The crafting professions are listed as Alchemy, Armor Smithing, Blacksmithing, Carpentry, Cooking, Jewel Crafting, Leatherworking and Stonemasonry."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Group",
+        "Professions",
+        "What it is for"
+       ],
+       "satirlar": [
+        [
+         "Gathering",
+         "Archaeology, Fishing, Harvesting, Herbalism, Mining, Quarrying, Skinning, Woodcutting",
+         "Raw material used in crafting"
+        ],
+        [
+         "Crafting",
+         "Alchemy, Armor Smithing, Blacksmithing, Carpentry, Cooking, Jewel Crafting, Leatherworking, Stonemasonry",
+         "Turns raw material into potions, weapons, armor and accessories"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Each profession's level thresholds and recipes are not officially stated; learn them from the in-game profession window. A practical start: while leveling, pick a crafting profession matching the potion or gear type your character will use and a gathering profession that supplies it; it also brings extra income in trade."
+      }
+     ]
+    },
+    {
      "id": "ekonomi",
      "baslik": "Premium and purchases: what to know",
      "bloklar": [
@@ -594,7 +983,51 @@
       },
       {
        "tip": "p",
-       "metin": "The mobile version's Cash and Premium prices were announced separately; PC and mobile prices and campaigns may not be the same. Before buying, read the price and what it gives on the official site."
+       "metin": "Premium types reduce the EXP loss after death: Craft lowers it to 0.4%, EXP to 0.8%, Farm, Battle and Elite to 2% (without Premium the loss is 4%). PC Premium prices are not officially stated. The mobile version's prices are given in TL on Rise Rehberi's announcement page and appear in the table below; prices can change over time."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Mobile Premium type",
+        "Price (TL)",
+        "EXP loss after death"
+       ],
+       "satirlar": [
+        [
+         "Elite Premium",
+         "155",
+         "2%"
+        ],
+        [
+         "Farm Premium",
+         "680",
+         "2%"
+        ],
+        [
+         "XP Premium",
+         "740",
+         "0.8%"
+        ],
+        [
+         "Battle Premium",
+         "805",
+         "2%"
+        ],
+        [
+         "Craft Premium",
+         "840",
+         "0.4%"
+        ],
+        [
+         "Complete Premium",
+         "1,050",
+         "Not officially stated"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Cash examples: 500 Cash for 93 TL, 1,000 + 20 Cash for 187 TL, 5,000 + 200 Cash for 938 TL, 10,000 + 500 Cash for 1,876 TL. This table belongs to the mobile version; there is no information that PC prices are the same."
       },
       {
        "tip": "p",
@@ -603,6 +1036,10 @@
       {
        "tip": "uyari",
        "metin": "Buying or selling in-game items, gold or accounts for real money with other players (RMT) is forbidden and gets the account closed. Use only the official purchase routes."
+      },
+      {
+       "tip": "p",
+       "metin": "**Should I buy Premium?** Without Premium you lose 4% EXP on death; at high level each death can cost a significant part of a level. So if you will join battle events where you die often, such as Death Valley and Inferno Temple, a Premium type makes sense; if you will play calmly with quests and professions, start without Premium for the first weeks and watch your death count. Check the current price on the official site before deciding; mobile prices may not apply to PC. Do not buy or sell your account, character or Cash with third parties for real money; this both breaks the rules and carries a scam risk."
       }
      ]
     },
@@ -612,7 +1049,36 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "The center of gravity of Rise Online World is mass-battle events. Known events: **Inferno Temple**, **Crystal Fortress War**, **Blood Valley**, **Death Valley** and **Sevenfold**. The 1.16.0 patch brought the **Surrender** system. Follow event times and rules from the in-game calendar or official announcements."
+       "metin": "Rise Online World's center of gravity is mass battle events. Known events: **Inferno Temple**, **Crystal Fortress War**, **Blood Valley**, **Death Valley** and **Sevenfold**; a community site also lists **Mount Race**. According to the official patch notes Sevenfold times were added to the in-game Event Calendar, so **the official source of event times is the in-game calendar**; there is no fixed time list readable from outside (not officially stated)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Event",
+        "Known detail (official patch notes)"
+       ],
+       "satirlar": [
+        [
+         "Inferno Temple",
+         "Patch note gives minimum entry level 84; teams are mixed from two races; extra crystals by Gear Score"
+        ],
+        [
+         "Crystal Fortress War",
+         "Has a Surrender system: the event ends by itself when more than half the team confirms"
+        ],
+        [
+         "Blood Valley",
+         "Patch note lists separate reward points for winner and loser (winner 100, loser 25)"
+        ],
+        [
+         "Death Valley",
+         "Level 50-85 map; war between races, balance debates exist"
+        ],
+        [
+         "Sevenfold",
+         "Times are in the in-game Event Calendar"
+        ]
+       ]
       },
       {
        "tip": "p",
@@ -659,7 +1125,7 @@
        "ogeler": [
         {
          "s": "Is Rise Online World free?",
-         "c": "Downloading the game is free; Premium and Cash are optional purchases. Check the full model in the game and on the official site."
+         "c": "It is free to download; revenue comes from Premium and Cash purchases. Mobile prices are announced in TL; PC prices are not officially stated."
         },
         {
          "s": "Which server should I pick?",
@@ -680,6 +1146,10 @@
         {
          "s": "What is the current patch?",
          "c": "On PC, 16.0.3 (6 November 2026)."
+        },
+        {
+         "s": "What is the level cap?",
+         "c": "The highest map range is 85 so the cap appears to be 85; The official site states no explicit cap."
         }
        ]
       }
@@ -701,7 +1171,7 @@
     },
     {
      "ad": "Modèle tarifaire",
-     "deger": "Téléchargement gratuit ; Premium et Cash en achat facultatif (voir le jeu pour le modèle complet)"
+     "deger": "Téléchargement gratuit ; Premium et Cash sont facultatifs. Les prix mobiles sont annoncés en TL (ex. 500 Cash pour 93 TL) ; les prix PC ne sont pas précisés officiellement"
     },
     {
      "ad": "Version actuelle",
@@ -709,7 +1179,7 @@
     },
     {
      "ad": "Support du turc",
-     "deger": "Il existe une communauté de joueurs turcs ; vérifiez dans le jeu la prise en charge du turc"
+     "deger": "Le site officiel et les annonces sont en anglais ; une option de langue turque en jeu n'est pas précisée officiellement. Il existe des guides de fans en turc et des prix en TL"
     }
    ],
    "bolumler": [
@@ -727,11 +1197,11 @@
       },
       {
        "tip": "p",
-       "metin": "Rise Online World est connu comme un MMORPG classique de style coréen : l'accent est mis sur la chasse, les niveaux, l'équipement et les batailles de masse. La plupart des informations de ce guide reposent sur un site de guide de fans turc et sur le site officiel. Comme le jeu reçoit souvent des patchs, revérifiez les détails dans le jeu et dans les annonces officielles."
+       "metin": "Rise Online World est connu comme un MMORPG classique de style coréen : l'accent est mis sur la chasse, les niveaux, l'équipement et les batailles de masse. La plupart des informations reposent sur un site de guide de fans turc et sur le site officiel. Le jeu recevant souvent des correctifs, suivez les notes de patch actuelles sur la page officielle 'patch notes'."
       },
       {
        "tip": "ipucu",
-       "metin": "Les détails du niveau maximal et du modèle d'achat changent souvent ; je ne les écris pas comme des chiffres fixes dans ce guide. Vérifiez-les dans le jeu et sur le site officiel."
+       "metin": "Le niveau maximal est 85 (la plus haute tranche de zone et les pages du guide l'indiquent). Le jeu est gratuit à télécharger ; le modèle de revenus repose sur les achats Premium et Cash."
       }
      ]
     },
@@ -741,20 +1211,30 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Vous téléchargez le jeu sur le site officiel. Vous y créez votre compte et confirmez votre e-mail. Le tableau ci-dessous montre la configuration requise publiée sur le site Rise Rehberi ; comme elle a pu changer après le passage à Unreal Engine 5.8, consultez aussi les valeurs actuelles sur le site officiel."
+       "metin": "Vous téléchargez le jeu depuis le site officiel. Vous y créez votre compte et vérifiez votre e-mail. Le tableau ci-dessous reprend la configuration publiée par Rise Rehberi ; la page a été mise à jour le 15 août 2026, donc avant le passage à Unreal Engine 5.8 du 3 novembre. Aucune nouvelle liste n'a été publiée sur le site officiel après ce passage, les valeurs peuvent donc être dépassées."
       },
       {
        "tip": "tablo",
        "basliklar": [
-        "Composant",
+        "Exigence",
         "Minimum",
         "Recommandé"
        ],
        "satirlar": [
         [
+         "Système",
+         "Windows 7 / 8.1 / 10 64 bits",
+         "Windows 7 / 8.1 / 10 64 bits"
+        ],
+        [
          "Processeur",
-         "Intel i5-8500 ou Ryzen 5 3500",
+         "Intel Core i5-8500 ou Ryzen 5 3500",
          "Intel i7-10700 ou Ryzen 7 3700X"
+        ],
+        [
+         "Mémoire (RAM)",
+         "16 Go",
+         "16 Go"
         ],
         [
          "Carte graphique",
@@ -762,19 +1242,14 @@
          "GTX 1070 ou RX 580"
         ],
         [
-         "Mémoire (RAM)",
-         "16 Go",
-         "Voir la page officielle"
+         "DirectX",
+         "11/12",
+         "11/12"
         ],
         [
-         "Disque",
+         "Stockage",
          "50 Go d'espace libre",
-         "SSD recommandé"
-        ],
-        [
-         "Système",
-         "Windows 64 bits",
-         "Windows 64 bits"
+         "50 Go d'espace libre (SSD)"
         ]
        ]
       },
@@ -784,7 +1259,7 @@
       },
       {
        "tip": "uyari",
-       "metin": "Le tableau provient d'un site de guides tiers. Vérifiez la configuration sur le site officiel avant d'acheter ou d'installer."
+       "metin": "Le tableau vient d'un site de guide tiers et contient une ancienne liste Windows. Aucun problème n'est attendu sous Windows 10 ou 11 actuels ; vérifiez quand même l'espace disque et le pilote graphique avant l'installation."
       }
      ]
     },
@@ -883,7 +1358,64 @@
       },
       {
        "tip": "ipucu",
-       "metin": "Si vous voulez le choix le plus simple pour un premier personnage, commencer en Warrior est raisonnable, mais c'est mon interprétation ; choisissez le style de jeu que vous aimez."
+       "metin": "Si vous voulez le choix le plus simple pour un premier personnage, commencer en Warrior est raisonnable, mais c'est une appréciation générale ; choisissez le style de jeu que vous aimez."
+      }
+     ]
+    },
+    {
+     "id": "irk-sinif",
+     "baslik": "Race, classe et répartition des stats : tableau détaillé",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Rise Online compte quatre classes et chaque classe a des sous-types ; les deux races (Lunaskar et Protean) ne changent pas le jeu, la différence n'est que visuelle (hors problèmes d'équilibre à Death Valley et dans les événements PvP). Le tableau ci-dessous réunit classe, sous-type et stat principale utilisée pour les dégâts."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Classe",
+        "Sous-types",
+        "Stat principale (dégâts / mana)",
+        "Stat commune"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Attacker, Defensive",
+         "Strength",
+         "Health"
+        ],
+        [
+         "Rogue",
+         "Archer, Assassin",
+         "Dexterity",
+         "Health"
+        ],
+        [
+         "Priest",
+         "Healer, Buffer, Debuffer ; rôles Battle Priest et INT Priest",
+         "Battle Priest : Strength ; INT Priest : Intelligence",
+         "Health"
+        ],
+        [
+         "Mage",
+         "Fire, Ice, Lightning",
+         "Magic (attaque de sort), Intelligence (mana)",
+         "Health"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Cinq stats :** Strength, Health, Dexterity, Intelligence et Magic. Strength augmente la puissance d'attaque du Warrior et du Battle Priest et la charge portée pour toutes les classes ; Health augmente les PV maximum de toutes les classes ; Dexterity l'attaque du Rogue, Magic celle du Mage, et Intelligence le mana du Priest et du Mage. Du niveau 1 à 60 on gagne **3** points par niveau, à partir de 61 on en gagne **5**."
+      },
+      {
+       "tip": "p",
+       "metin": "**Piège des bonus :** sur les objets, 'HP Bonus' augmente directement les PV maximum, alors que 'Health Bonus' augmente la stat Health ; de même 'MP Bonus' augmente directement le mana et 'Magic Bonus' la stat Magic. Ne confondez pas les deux bonus, leurs effets ne sont pas identiques. Chaque classe a aussi **6 résistances élémentaires** (feu, glace, foudre, poison, malédiction, sacré) et des **résistances d'arme** ; plus la résistance monte, plus les dégâts de ce type diminuent."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Avant de dépenser vos points de stat, notez la stat principale de votre classe et Health ; comme vous finirez les 60 premiers niveaux à 3 points chacun, une mauvaise répartition coûte cher."
       }
      ]
     },
@@ -893,7 +1425,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "On monte en chassant des monstres et en faisant des quêtes. Le site Rise Rehberi a un tableau d'EXP indiquant l'expérience nécessaire par niveau ; je n'écris pas les chiffres ici car ils peuvent changer avec les mises à jour."
+       "metin": "Le niveau monte par la chasse aux monstres et les quêtes. Rise Rehberi a un tableau de l'EXP nécessaire par niveau ; les chiffres changent avec les mises à jour, mais le plafond est 85 et dès le niveau 61 on gagne 5 points de stat par niveau. Pour monter de niveau, équilibrez quêtes et chasse aux monstres ; progresser par la seule chasse est lent, et les seules quêtes peuvent vous laisser sans équipement."
       },
       {
        "tip": "liste",
@@ -914,6 +1446,98 @@
      ]
     },
     {
+     "id": "bolgeler",
+     "baslik": "Zones de niveau : quelle carte pour quel niveau ?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La liste des zones de la page anglaise de Rise Rehberi donne des tranches de niveau. La plus haute tranche de carte est 85, le niveau maximal semble donc être 85. Dans le tableau ci-dessous, les nombres sont les tranches de niveau de la source."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Tranche de niveau",
+        "Zone",
+        "Remarque"
+       ],
+       "satirlar": [
+        [
+         "1-25",
+         "Dorion",
+         "Carte de départ"
+        ],
+        [
+         "25-60",
+         "Lunaskar Kingdom / Protean Kingdom",
+         "Royaume selon votre race"
+        ],
+        [
+         "59-85",
+         "Haddar Highlands / Hagard Castle",
+         "Chasse de fin de niveau"
+        ],
+        [
+         "50-85",
+         "Death Valley",
+         "Champ de bataille entre races"
+        ],
+        [
+         "30-85",
+         "Narun Tower",
+         "Contenu de tour"
+        ],
+        [
+         "1-85",
+         "Narungard",
+         "Carte ouverte à tous les niveaux"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Les quêtes sont le principal moyen de gagner de l'EXP et chaque carte propose des quêtes adaptées à votre niveau. La source écrit le nom de la carte 'Haddar Lighlands' ; cela ressemble à une faute de frappe et il est écrit Highlands ici. Une liste détaillée des niveaux de monstres pour chaque carte n'est pas précisée officiellement ; en entrant dans une zone, regardez le niveau des monstres et décidez."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si votre niveau est proche de la limite basse d'une carte, ne passez pas à la suivante avant d'avoir fini la chaîne de quêtes ; les récompenses donnent de l'EXP et des Coin."
+      }
+     ]
+    },
+    {
+     "id": "meslekler",
+     "baslik": "Métiers : récolte et fabrication",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Rise Online a deux groupes de métiers et les matériaux des métiers de récolte servent aux métiers de fabrication. Selon Rise Rehberi, les métiers de récolte sont Archaeology, Fishing, Harvesting, Herbalism, Mining, Quarrying, Skinning et Woodcutting. Les métiers de fabrication sont listés ainsi : Alchemy, Armor Smithing, Blacksmithing, Carpentry, Cooking, Jewel Crafting, Leatherworking et Stonemasonry."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Groupe",
+        "Métiers",
+        "À quoi servent-ils ?"
+       ],
+       "satirlar": [
+        [
+         "Récolte",
+         "Archaeology, Fishing, Harvesting, Herbalism, Mining, Quarrying, Skinning, Woodcutting",
+         "Matière première utilisée en fabrication"
+        ],
+        [
+         "Fabrication",
+         "Alchemy, Armor Smithing, Blacksmithing, Carpentry, Cooking, Jewel Crafting, Leatherworking, Stonemasonry",
+         "Transforme la matière première en potions, armes, armures et accessoires"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Les seuils de niveau et les recettes de chaque métier ne sont pas précisés officiellement ; apprenez-les dans la fenêtre de métiers du jeu. Un départ pratique : en montant de niveau, choisissez un métier de fabrication adapté aux potions ou à l'équipement que votre personnage utilisera et un métier de récolte qui l'approvisionne ; cela apporte aussi un revenu supplémentaire en commerce."
+      }
+     ]
+    },
+    {
      "id": "ekonomi",
      "baslik": "Premium et achats : ce qu'il faut savoir",
      "bloklar": [
@@ -923,7 +1547,51 @@
       },
       {
        "tip": "p",
-       "metin": "Les prix Cash et Premium de la version mobile ont été annoncés séparément ; les prix et promotions du PC et du mobile peuvent différer. Avant d'acheter, lisez le prix et ce qu'il donne sur le site officiel."
+       "metin": "Les types de Premium réduisent la perte d'EXP après la mort : Craft la ramène à 0,4 %, EXP à 0,8 %, Farm, Battle et Elite à 2 % (sans Premium la perte est de 4 %). Les prix Premium PC ne sont pas précisés officiellement. Les prix de la version mobile sont donnés en TL sur la page d'annonce de Rise Rehberi et figurent dans le tableau ci-dessous ; les prix peuvent changer avec le temps."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Type de Premium mobile",
+        "Prix (TL)",
+        "Perte d'EXP après la mort"
+       ],
+       "satirlar": [
+        [
+         "Elite Premium",
+         "155",
+         "2 %"
+        ],
+        [
+         "Farm Premium",
+         "680",
+         "2 %"
+        ],
+        [
+         "XP Premium",
+         "740",
+         "0,8 %"
+        ],
+        [
+         "Battle Premium",
+         "805",
+         "2 %"
+        ],
+        [
+         "Craft Premium",
+         "840",
+         "0,4 %"
+        ],
+        [
+         "Complete Premium",
+         "1 050",
+         "Non précisé officiellement"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Exemples de Cash : 500 Cash pour 93 TL, 1 000 + 20 Cash pour 187 TL, 5 000 + 200 Cash pour 938 TL, 10 000 + 500 Cash pour 1 876 TL. Ce tableau concerne la version mobile ; rien n'indique que les prix PC soient identiques."
       },
       {
        "tip": "p",
@@ -932,6 +1600,10 @@
       {
        "tip": "uyari",
        "metin": "Acheter ou vendre des objets, de l'or ou des comptes contre de l'argent réel avec d'autres joueurs (RMT) est interdit et fait fermer le compte. Utilisez uniquement les voies d'achat officielles."
+      },
+      {
+       "tip": "p",
+       "metin": "**Dois-je acheter Premium ?** Sans Premium, vous perdez 4 % d'EXP à la mort ; à haut niveau, chaque mort peut coûter une part importante d'un niveau. Si vous participez à des événements de bataille où l'on meurt souvent, comme Death Valley et Inferno Temple, un type de Premium a donc du sens ; si vous jouez tranquillement avec quêtes et métiers, commencez sans Premium les premières semaines et surveillez votre nombre de morts. Vérifiez le prix actuel sur le site officiel avant de décider ; les prix mobiles peuvent ne pas valoir pour le PC. N'achetez ni ne vendez votre compte, personnage ou Cash à des tiers contre de l'argent réel ; c'est contraire aux règles et risqué (arnaque)."
       }
      ]
     },
@@ -941,7 +1613,36 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Le centre de gravité de Rise Online World, ce sont les événements de bataille de masse. Événements connus : **Inferno Temple**, **Crystal Fortress War**, **Blood Valley**, **Death Valley** et **Sevenfold**. Le patch 1.16.0 a apporté le système de **Surrender** (reddition). Suivez horaires et règles des événements dans le calendrier du jeu ou les annonces officielles."
+       "metin": "Le centre de gravité de Rise Online World, ce sont les événements de bataille de masse. Événements connus : **Inferno Temple**, **Crystal Fortress War**, **Blood Valley**, **Death Valley** et **Sevenfold** ; un site communautaire liste aussi **Mount Race**. D'après les notes de patch officielles, les horaires de Sevenfold ont été ajoutés au calendrier d'événements du jeu, donc **la source officielle des horaires est le calendrier en jeu** ; il n'existe pas de liste d'horaires fixe lisible de l'extérieur (non précisé officiellement)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Événement",
+        "Détail connu (notes de patch officielles)"
+       ],
+       "satirlar": [
+        [
+         "Inferno Temple",
+         "La note de patch donne un niveau d'entrée minimal de 84 ; les équipes mélangent deux races ; cristaux supplémentaires selon le Gear Score"
+        ],
+        [
+         "Crystal Fortress War",
+         "Possède un système de reddition (Surrender) : l'événement se termine seul quand plus de la moitié de l'équipe confirme"
+        ],
+        [
+         "Blood Valley",
+         "La note de patch liste des points de récompense séparés pour le gagnant et le perdant (gagnant 100, perdant 25)"
+        ],
+        [
+         "Death Valley",
+         "Carte de niveau 50-85 ; guerre entre races, débats d'équilibre"
+        ],
+        [
+         "Sevenfold",
+         "Horaires dans le calendrier d'événements du jeu"
+        ]
+       ]
       },
       {
        "tip": "p",
@@ -988,7 +1689,7 @@
        "ogeler": [
         {
          "s": "Rise Online World est-il gratuit ?",
-         "c": "Le téléchargement est gratuit ; Premium et Cash sont des achats facultatifs. Vérifiez le modèle complet dans le jeu et sur le site officiel."
+         "c": "Il est gratuit à télécharger ; les revenus viennent des achats Premium et Cash. Les prix mobiles sont annoncés en TL ; les prix PC ne sont pas précisés officiellement."
         },
         {
          "s": "Quel serveur choisir ?",
@@ -1009,6 +1710,10 @@
         {
          "s": "Quel est le patch actuel ?",
          "c": "Sur PC, le 16.0.3 (6 novembre 2026)."
+        },
+        {
+         "s": "Quel est le niveau maximal ?",
+         "c": "La plus haute tranche de carte est 85, donc le plafond semble être 85 ; le site officiel ne donne pas de plafond explicite."
         }
        ]
       }
@@ -1030,7 +1735,7 @@
     },
     {
      "ad": "Modelo de precio",
-     "deger": "Descarga gratuita; Premium y Cash son compras opcionales (mira el juego para el modelo completo)"
+     "deger": "Descarga gratuita; Premium y Cash son opcionales. Los precios móviles se anuncian en TL (p. ej. 500 Cash por 93 TL); los precios de PC no están indicados oficialmente"
     },
     {
      "ad": "Versión actual",
@@ -1038,7 +1743,7 @@
     },
     {
      "ad": "Soporte en turco",
-     "deger": "Hay una comunidad de jugadores turcos; comprueba en el juego el soporte de turco"
+     "deger": "El sitio oficial y los anuncios están en inglés; una opción de idioma turco en el juego no está indicada oficialmente. Existen guías de fans en turco y precios en TL"
     }
    ],
    "bolumler": [
@@ -1056,11 +1761,11 @@
       },
       {
        "tip": "p",
-       "metin": "Rise Online World es conocido como un MMORPG clásico de estilo coreano: el peso está en la caza, los niveles, el equipo y las batallas masivas. Gran parte de la información de esta guía se apoya en un sitio de guías de fans turco y en el sitio oficial. Como el juego recibe parches a menudo, vuelve a comprobar los detalles en el juego y en los anuncios oficiales."
+       "metin": "Rise Online World se conoce como un MMORPG clásico de estilo coreano: el peso está en la caza, los niveles, el equipo y las batallas masivas. La mayor parte de la información se apoya en un sitio de guías de fans turco y en el sitio oficial. Como el juego recibe parches con frecuencia, sigue las notas de parche actuales en la página oficial 'patch notes'."
       },
       {
        "tip": "ipucu",
-       "metin": "Los detalles del nivel máximo y del modelo de compra cambian a menudo; no los escribo como cifras fijas en esta guía. Compruébalos en el juego y en el sitio oficial."
+       "metin": "El nivel máximo es 85 (el rango de zona más alto y las páginas de la guía lo indican). El juego se descarga gratis; el modelo de ingresos son las compras de Premium y Cash."
       }
      ]
     },
@@ -1070,20 +1775,30 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Descargas el juego desde el sitio oficial. Allí creas la cuenta y confirmas el correo. La tabla siguiente muestra los requisitos de sistema publicados en el sitio Rise Rehberi; como pueden haber cambiado tras el paso a Unreal Engine 5.8, mira también los valores actuales en el sitio oficial."
+       "metin": "Descargas el juego desde el sitio oficial. Allí abres tu cuenta y verificas tu correo. La tabla de abajo son los requisitos publicados por Rise Rehberi; la página se actualizó el 15 de agosto de 2026, es decir, es anterior al cambio a Unreal Engine 5.8 del 3 de noviembre. No se ha publicado una lista nueva en el sitio oficial tras ese cambio, así que los valores pueden estar desactualizados."
       },
       {
        "tip": "tablo",
        "basliklar": [
-        "Componente",
+        "Requisito",
         "Mínimo",
         "Recomendado"
        ],
        "satirlar": [
         [
+         "Sistema operativo",
+         "Windows 7 / 8.1 / 10 de 64 bits",
+         "Windows 7 / 8.1 / 10 de 64 bits"
+        ],
+        [
          "Procesador",
-         "Intel i5-8500 o Ryzen 5 3500",
+         "Intel Core i5-8500 o Ryzen 5 3500",
          "Intel i7-10700 o Ryzen 7 3700X"
+        ],
+        [
+         "Memoria (RAM)",
+         "16 GB",
+         "16 GB"
         ],
         [
          "Tarjeta gráfica",
@@ -1091,19 +1806,14 @@
          "GTX 1070 o RX 580"
         ],
         [
-         "Memoria (RAM)",
-         "16 GB",
-         "Mira la página oficial"
+         "DirectX",
+         "11/12",
+         "11/12"
         ],
         [
-         "Disco",
+         "Almacenamiento",
          "50 GB libres",
-         "Se recomienda SSD"
-        ],
-        [
-         "Sistema operativo",
-         "Windows 64 bits",
-         "Windows 64 bits"
+         "50 GB libres (SSD)"
         ]
        ]
       },
@@ -1113,7 +1823,7 @@
       },
       {
        "tip": "uyari",
-       "metin": "La tabla procede de un sitio de guías de terceros. Comprueba los requisitos en el sitio oficial antes de comprar o instalar."
+       "metin": "La tabla viene de un sitio de guías de terceros y contiene una lista antigua de Windows. No se esperan problemas en el Windows 10 u 11 actual; aun así, revisa el espacio en disco y el controlador gráfico antes de instalar."
       }
      ]
     },
@@ -1212,7 +1922,64 @@
       },
       {
        "tip": "ipucu",
-       "metin": "Si quieres la opción más fácil para un primer personaje, empezar con Warrior es razonable, pero es mi interpretación; elige el estilo de juego que te guste."
+       "metin": "Si quieres la opción más fácil para un primer personaje, empezar con Warrior es razonable, pero es una apreciación general; elige el estilo de juego que te guste."
+      }
+     ]
+    },
+    {
+     "id": "irk-sinif",
+     "baslik": "Raza, clase y reparto de estadísticas: tabla detallada",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Rise Online tiene cuatro clases y cada clase tiene subtipos; las dos razas (Lunaskar y Protean) no cambian el juego, la diferencia es solo visual (salvo problemas de equilibrio en Death Valley y en eventos PvP). La tabla de abajo reúne clase, subtipo y la estadística principal usada para el daño."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Clase",
+        "Subtipos",
+        "Estadística principal (daño / maná)",
+        "Estadística común"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Attacker, Defensive",
+         "Strength",
+         "Health"
+        ],
+        [
+         "Rogue",
+         "Archer, Assassin",
+         "Dexterity",
+         "Health"
+        ],
+        [
+         "Priest",
+         "Healer, Buffer, Debuffer; roles Battle Priest e INT Priest",
+         "Battle Priest: Strength; INT Priest: Intelligence",
+         "Health"
+        ],
+        [
+         "Mage",
+         "Fire, Ice, Lightning",
+         "Magic (ataque de hechizo), Intelligence (maná)",
+         "Health"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Cinco estadísticas:** Strength, Health, Dexterity, Intelligence y Magic. Strength sube el poder de ataque del Warrior y del Battle Priest y el peso de carga de todas las clases; Health sube la vida máxima de todas las clases; Dexterity el ataque del Rogue, Magic el del Mage e Intelligence el maná del Priest y del Mage. Del nivel 1 al 60 se ganan **3** puntos por nivel; desde el 61 se ganan **5**."
+      },
+      {
+       "tip": "p",
+       "metin": "**Trampa de los bonus:** en los objetos, 'HP Bonus' sube directamente la vida máxima, mientras que 'Health Bonus' sube la estadística Health; igualmente 'MP Bonus' sube el maná directamente y 'Magic Bonus' la estadística Magic. No confundas los dos bonus, sus efectos no son iguales. Cada clase tiene además **6 resistencias elementales** (fuego, hielo, rayo, veneno, maldición, sagrado) y **resistencias de arma**; cuanto más suben, menos daño de ese tipo recibes."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Antes de gastar puntos de estadística, anota la estadística principal de tu clase y Health; como terminarás los primeros 60 niveles con 3 puntos cada uno, un mal reparto sale caro."
       }
      ]
     },
@@ -1222,7 +1989,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Subes de nivel cazando monstruos y haciendo misiones. El sitio Rise Rehberi tiene una tabla de EXP con la experiencia necesaria por nivel; no escribo aquí las cifras porque pueden cambiar con las actualizaciones."
+       "metin": "El nivel sube con la caza de monstruos y las misiones. Rise Rehberi tiene una tabla del EXP necesario por nivel; las cifras cambian con las actualizaciones, pero el tope es 85 y desde el nivel 61 se ganan 5 puntos de estadística por nivel. Para subir de nivel, equilibra misiones y caza de monstruos; avanzar solo cazando es lento y hacer solo misiones puede dejarte sin equipo."
       },
       {
        "tip": "liste",
@@ -1243,6 +2010,98 @@
      ]
     },
     {
+     "id": "bolgeler",
+     "baslik": "Zonas de nivel: ¿qué mapa para qué nivel?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La lista de zonas de la página en inglés de Rise Rehberi da rangos de nivel. El rango de mapa más alto es 85, por lo que el nivel máximo parece ser 85. En la tabla de abajo, los números son los rangos de nivel de la fuente."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rango de nivel",
+        "Zona",
+        "Nota"
+       ],
+       "satirlar": [
+        [
+         "1-25",
+         "Dorion",
+         "Mapa inicial"
+        ],
+        [
+         "25-60",
+         "Lunaskar Kingdom / Protean Kingdom",
+         "Reino según tu raza"
+        ],
+        [
+         "59-85",
+         "Haddar Highlands / Hagard Castle",
+         "Caza de nivel final"
+        ],
+        [
+         "50-85",
+         "Death Valley",
+         "Campo de batalla entre razas"
+        ],
+        [
+         "30-85",
+         "Narun Tower",
+         "Contenido de torre"
+        ],
+        [
+         "1-85",
+         "Narungard",
+         "Mapa abierto a todos los niveles"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Las misiones son la forma principal de ganar EXP y cada mapa tiene misiones adecuadas a tu nivel. La fuente escribe el nombre del mapa 'Haddar Lighlands'; parece una errata y aquí se escribe Highlands. Una lista detallada de niveles de monstruos para cada mapa no está indicada oficialmente; al entrar en una zona, mira el nivel de los monstruos y decide."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si tu nivel está cerca del límite inferior de un mapa, no pases al siguiente sin acabar la cadena de misiones; las recompensas dan EXP y Coin."
+      }
+     ]
+    },
+    {
+     "id": "meslekler",
+     "baslik": "Profesiones: recolección y fabricación",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Rise Online tiene dos grupos de profesiones y los materiales de las profesiones de recolección se usan en las de fabricación. Según Rise Rehberi, las profesiones de recolección son Archaeology, Fishing, Harvesting, Herbalism, Mining, Quarrying, Skinning y Woodcutting. Las de fabricación se listan como Alchemy, Armor Smithing, Blacksmithing, Carpentry, Cooking, Jewel Crafting, Leatherworking y Stonemasonry."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Grupo",
+        "Profesiones",
+        "Para qué sirve"
+       ],
+       "satirlar": [
+        [
+         "Recolección",
+         "Archaeology, Fishing, Harvesting, Herbalism, Mining, Quarrying, Skinning, Woodcutting",
+         "Materia prima usada en la fabricación"
+        ],
+        [
+         "Fabricación",
+         "Alchemy, Armor Smithing, Blacksmithing, Carpentry, Cooking, Jewel Crafting, Leatherworking, Stonemasonry",
+         "Convierte la materia prima en pociones, armas, armaduras y accesorios"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Los umbrales de nivel y las recetas de cada profesión no están indicados oficialmente; apréndelos en la ventana de profesiones del juego. Un comienzo práctico: al subir de nivel, elige una profesión de fabricación acorde con las pociones o el equipo que usará tu personaje y una de recolección que la abastezca; también aporta ingresos extra en el comercio."
+      }
+     ]
+    },
+    {
      "id": "ekonomi",
      "baslik": "Premium y compras: lo que debes saber",
      "bloklar": [
@@ -1252,7 +2111,51 @@
       },
       {
        "tip": "p",
-       "metin": "Los precios de Cash y Premium de la versión móvil se anunciaron aparte; los precios y promociones de PC y móvil pueden no coincidir. Antes de comprar, lee en el sitio oficial el precio y lo que da."
+       "metin": "Los tipos de Premium reducen la pérdida de EXP tras la muerte: Craft la baja a 0,4 %, EXP a 0,8 %, Farm, Battle y Elite a 2 % (sin Premium la pérdida es del 4 %). Los precios Premium de PC no están indicados oficialmente. Los precios de la versión móvil se dan en TL en la página de anuncio de Rise Rehberi y aparecen en la tabla de abajo; los precios pueden cambiar con el tiempo."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Tipo de Premium móvil",
+        "Precio (TL)",
+        "Pérdida de EXP tras la muerte"
+       ],
+       "satirlar": [
+        [
+         "Elite Premium",
+         "155",
+         "2 %"
+        ],
+        [
+         "Farm Premium",
+         "680",
+         "2 %"
+        ],
+        [
+         "XP Premium",
+         "740",
+         "0,8 %"
+        ],
+        [
+         "Battle Premium",
+         "805",
+         "2 %"
+        ],
+        [
+         "Craft Premium",
+         "840",
+         "0,4 %"
+        ],
+        [
+         "Complete Premium",
+         "1.050",
+         "No indicado oficialmente"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Ejemplos de Cash: 500 Cash por 93 TL, 1.000 + 20 Cash por 187 TL, 5.000 + 200 Cash por 938 TL, 10.000 + 500 Cash por 1.876 TL. Esta tabla corresponde a la versión móvil; no hay información de que los precios de PC sean iguales."
       },
       {
        "tip": "p",
@@ -1261,6 +2164,10 @@
       {
        "tip": "uyari",
        "metin": "Comprar o vender objetos, oro o cuentas por dinero real con otros jugadores (RMT) está prohibido y hace que cierren la cuenta. Usa solo las vías de compra oficiales."
+      },
+      {
+       "tip": "p",
+       "metin": "**¿Debo comprar Premium?** Sin Premium pierdes un 4 % de EXP al morir; a nivel alto cada muerte puede costar una parte importante de un nivel. Por eso, si vas a participar en eventos de batalla donde se muere mucho, como Death Valley e Inferno Temple, un tipo de Premium tiene sentido; si juegas con calma con misiones y profesiones, empieza sin Premium las primeras semanas y observa cuántas veces mueres. Comprueba el precio actual en el sitio oficial antes de decidir; los precios móviles pueden no valer para PC. No compres ni vendas tu cuenta, personaje o Cash a terceros por dinero real; infringe las reglas y supone riesgo de estafa."
       }
      ]
     },
@@ -1270,7 +2177,36 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "El centro de gravedad de Rise Online World son los eventos de batalla masiva. Eventos conocidos: **Inferno Temple**, **Crystal Fortress War**, **Blood Valley**, **Death Valley** y **Sevenfold**. El parche 1.16.0 trajo el sistema de **Surrender** (rendición). Sigue horarios y reglas de los eventos en el calendario del juego o en los anuncios oficiales."
+       "metin": "El centro de gravedad de Rise Online World son los eventos de batalla masiva. Eventos conocidos: **Inferno Temple**, **Crystal Fortress War**, **Blood Valley**, **Death Valley** y **Sevenfold**; un sitio comunitario lista además **Mount Race**. Según las notas de parche oficiales, los horarios de Sevenfold se añadieron al calendario de eventos del juego, así que **la fuente oficial de los horarios es el calendario del juego**; no hay una lista fija de horarios legible desde fuera (no indicado oficialmente)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Evento",
+        "Detalle conocido (notas de parche oficiales)"
+       ],
+       "satirlar": [
+        [
+         "Inferno Temple",
+         "La nota de parche da un nivel mínimo de entrada de 84; los equipos mezclan dos razas; cristales extra según el Gear Score"
+        ],
+        [
+         "Crystal Fortress War",
+         "Tiene un sistema de rendición (Surrender): el evento termina solo cuando más de la mitad del equipo confirma"
+        ],
+        [
+         "Blood Valley",
+         "La nota de parche lista puntos de recompensa distintos para ganador y perdedor (ganador 100, perdedor 25)"
+        ],
+        [
+         "Death Valley",
+         "Mapa de nivel 50-85; guerra entre razas, hay debates de equilibrio"
+        ],
+        [
+         "Sevenfold",
+         "Horarios en el calendario de eventos del juego"
+        ]
+       ]
       },
       {
        "tip": "p",
@@ -1316,8 +2252,8 @@
        "tip": "sss",
        "ogeler": [
         {
-         "s": "¿Rise Online World es gratis?",
-         "c": "Descargar el juego es gratis; Premium y Cash son compras opcionales. Comprueba el modelo completo en el juego y en el sitio oficial."
+         "s": "¿Es gratis Rise Online World?",
+         "c": "Se descarga gratis; los ingresos vienen de compras de Premium y Cash. Los precios móviles se anuncian en TL; los precios de PC no están indicados oficialmente."
         },
         {
          "s": "¿Qué servidor elijo?",
@@ -1338,6 +2274,10 @@
         {
          "s": "¿Cuál es el parche actual?",
          "c": "En PC, el 16.0.3 (6 de noviembre de 2026)."
+        },
+        {
+         "s": "¿Cuál es el nivel máximo?",
+         "c": "El rango de mapa más alto es 85, así que el tope parece ser 85; el sitio oficial no indica un tope explícito."
         }
        ]
       }

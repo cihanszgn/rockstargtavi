@@ -1,6 +1,6 @@
 {
  "oyun": "fortnite",
- "guncelleme": "2026-11-14",
+ "guncelleme": "2026-11-15",
  "surum": "Bölüm 7 - Treasure Hunters mini sezonu (v43.00)",
  "kaynaklar": [
   {
@@ -9,19 +9,27 @@
   },
   {
    "url": "https://communities.epicgames.com/thread/set-sail-for-fortnite-treasure-hunters-the-greatest-adventure-of-all-time/Pmud",
-   "ad": "Epic Games Community: Treasure Hunters"
+   "ad": "Epic Games Community: Treasure Hunters v43.00 notes"
   },
   {
    "url": "https://epicgames.com/help/c-202300000001636/c-202300000001719/what-are-the-system-requirements-for-fortnite-on-pc-a202300000012731",
    "ad": "Epic Games help: Fortnite PC system requirements"
   },
   {
-   "url": "https://www.epicgames.com/help/en-US/account-c-202300000001645/account-security-c-202300000001755/what-rewards-do-i-get-for-enabling-two-factor-authentication-2fa-on-my-epic-games-account-a202300000010272",
-   "ad": "Epic Games help: 2FA rewards"
+   "url": "https://store.epicgames.com/p/fortnite",
+   "ad": "Epic Games Store: Fortnite"
   },
   {
-   "url": "https://www.fortnite.com/@epic/ranked-reload-zero-build",
-   "ad": "Fortnite: Ranked Reload Zero Build"
+   "url": "https://safety.epicgames.com/parental-controls",
+   "ad": "Epic Games Safety: Parental Controls"
+  },
+  {
+   "url": "https://dev.epicgames.com/documentation/fortnite/fortnite-weapons-primer",
+   "ad": "Epic Developer Community: Fortnite Weapons Primer"
+  },
+  {
+   "url": "https://store.epicgames.com/news/cross-platform-and-crossplay-gaming-bridging-the-pc-console-divide?lang=en-US",
+   "ad": "Epic Games Store: Cross-platform and crossplay"
   },
   {
    "url": "https://markets.businessinsider.com/news/stocks/epic-games-raises-prices-for-fortnite-v-bucks-1035921150",
@@ -39,11 +47,11 @@
     },
     {
      "ad": "Platform",
-     "deger": "Epic Games hesabıyla birçok platform; ayrıntı için resmi sayfaya bak"
+     "deger": "PC, PlayStation, Xbox, Nintendo Switch ve mobil; çapraz oyun var (Epic)"
     },
     {
      "ad": "Fiyat modeli",
-     "deger": "Ücretsiz; isteğe bağlı V-Bucks satın alımları"
+     "deger": "Ücretsiz; isteğe bağlı V-Bucks (Kasım 2026, Epic mağaza sayfası)"
     },
     {
      "ad": "Güncel sürüm",
@@ -51,7 +59,7 @@
     },
     {
      "ad": "Türkçe desteği",
-     "deger": "Oyun içi dil ayarından kontrol et (doğrulanmadı)"
+     "deger": "Var: metin dili Türkçe (Epic mağaza sayfası); sesli dil yok"
     }
    ],
    "bolumler": [
@@ -79,48 +87,51 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Oynamak için ücretsiz bir Epic Games hesabı gerekir. Bilgisayarda oynayacaksan Epic'in resmi yardım sayfası şu donanımı veriyor."
+       "metin": "Oynamak için ücretsiz bir Epic Games hesabı gerekir. Bilgisayarda oynayacaksanız Epic'in resmi yardım sayfası şu donanımı veriyor."
       },
       {
        "tip": "liste",
        "ogeler": [
         "**Minimum:** Intel HD 4000 veya Radeon Vega 8 ekran birimi, Core i3-3225 işlemci, 64 bit Windows 10 22H2.",
         "**Önerilen:** GeForce GTX 960 veya Radeon R9 280 sınıfı DirectX 11 ekran kartı (2 GB video belleği), Core i5-7300U veya Ryzen 3 3300U, 16 GB RAM, NVMe SSD, 64 bit Windows 10 veya 11.",
-        "**Epic ön ayarı için:** RTX 3070 veya RX 6700 XT sınıfı kart (8 GB video belleği) ve Core i7-8700 veya Ryzen 7 3700X."
+        "**Epic ön ayarı için:** RTX 3070 veya RX 6700 XT sınıfı kart (8 GB video belleği) ve Core i7-8700 veya Ryzen 7 3700X.",
+        "**Kurulum boyutu:** Epic'in gereksinim sayfası ve mağaza sayfası disk boyutu vermiyor; resmî olarak açıklanmamış. Fortnite'ı yüklemeden önce başlatıcıda görünen boyuta bakın.",
+        "**Türkçe:** Epic mağaza sayfası metin dilleri arasında Türkçeyi listeliyor; sesli anlatım dili yok (N/A).",
+        "**Çapraz oyun:** Epic, Fortnite'ı PC, PlayStation (PS4, PS5), Xbox (Series S ve X), Nintendo (Switch ve Switch 2) ve mobil platformlar arasında çapraz oyun destekleyen oyun olarak sayıyor. Çapraz ilerleme için aynı Epic hesabıyla giriş yapmanız yeterli; hesap bağlama ayrıntısı resmî olarak açıklanmadı."
        ]
       },
       {
        "tip": "ipucu",
-       "metin": "Hesabını daha ilk gün iki adımlı doğrulamaya (2FA) bağla. Epic bunu bir \"Boogie Down\" dansıyla ödüllendiriyor, ama asıl kazanç hesabını kaptırmamak."
+       "metin": "Hesabınızı daha ilk gün iki adımlı doğrulamaya (2FA) bağlayın; asıl kazanç hesabınızı kaptırmamak."
       }
      ]
     },
     {
      "id": "ilk-maclar",
-     "baslik": "İlk maçların: adım adım",
+     "baslik": "İlk maçlarınız: adım adım",
      "bloklar": [
       {
        "tip": "adimlar",
        "ogeler": [
         {
-         "baslik": "Yapı kurmayan modla başla",
+         "baslik": "Yapı kurmayan modla başlayın",
          "metin": "Zero Build'de duvar ve rampa kurmak gerekmez. Nişan almayı, hareketi ve çemberi öğrenmek için en yumuşak giriş burası."
         },
         {
-         "baslik": "İnişini seç",
-         "metin": "Savaş otobüsünden atlarken kalabalık yerlerden uzak bir nokta seç. İlk amaç ölmeden eşya toplamak."
+         "baslik": "İnişinizi seçin",
+         "metin": "Savaş otobüsünden atlarken kalabalık yerlerden uzak bir nokta seçin. İlk amaç ölmeden eşya toplamak."
         },
         {
-         "baslik": "Silah, kalkan ve iyileşme topla",
-         "metin": "En az iki silah ve bir iyileştirici edin. Daha nadir renkteki eşyalar genellikle daha güçlüdür; elindeki ile çatışmaya girebilmek yeter."
+         "baslik": "Silah, kalkan ve iyileşme toplayın",
+         "metin": "En az iki silah ve bir iyileştirici edinin. Daha nadir renkteki eşyalar genellikle daha güçlüdür; elinizdekiyle çatışmaya girebilmek yeter."
         },
         {
-         "baslik": "Fırtınanın önünde kal",
-         "metin": "Haritayı sık kontrol et ve çemberin yönüne erken hareket et. Fırtına içinde kalmak hasar verir ve seni açığa çıkarır."
+         "baslik": "Fırtınanın önünde kalın",
+         "metin": "Haritayı sık kontrol edin ve çemberin yönüne erken hareket edin. Fırtına içinde kalmak hasar verir ve sizi açığa çıkarır."
         },
         {
-         "baslik": "Maçtan sonra bir ders çıkar",
-         "metin": "Öldüğünde tek soru sor: Bu çatışmayı almak zorunda mıydım? Her maçtan bir şey düzeltmek yeterli."
+         "baslik": "Maçtan sonra bir ders çıkarın",
+         "metin": "Öldüğünüzde tek soru sorun: Bu çatışmayı almak zorunda mıydım? Her maçtan bir şey düzeltmek yeterli."
         }
        ]
       },
@@ -136,7 +147,7 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Epic'in resmi sayfalarında görülen başlıca modlar aşağıda. Bir modun ne zaman açık olduğu sezona göre değişebilir; oyun içi menü her zaman doğru liste."
+       "metin": "Epic'in resmi sayfalarında görülen başlıca modlar aşağıda (Kasım 2026). Bir modun ne zaman açık olduğu sezona göre değişebilir; oyun içi menü her zaman doğru liste."
       },
       {
        "tip": "tablo",
@@ -154,12 +165,12 @@
          "Yapısız sürüm; yeni oyuncular için en iyi başlangıç."
         ],
         [
-         "Ranked Battle Royale / Ranked Reload Zero Build",
-         "Sıralamalı sürümler; temel becerileri oturttuktan sonra."
+         "Ranked Battle Royale",
+         "Sıralamalı sürüm; temel becerileri oturttuktan sonra. Sezon başında ödüller ve rütbe simgeleri yenilenir."
         ],
         [
          "Reload",
-         "Resmi sayfada Ranked Reload Zero Build ile birlikte geçen mod; ayrıntı için oyun içi açıklamaya bak."
+         "Epic'in mağaza sayfasına göre 40 oyunculu, klasik silahlı ve daha sıkışık haritalı Battle Royale modu; daha kısa maç isteyenlere uygun."
         ],
         [
          "LEGO Fortnite",
@@ -168,12 +179,16 @@
         [
          "Fortnite Festival",
          "Müzik temelli ayrı bir deneyim; ritim oyunu sevenlere."
+        ],
+        [
+         "Creative / UEFN",
+         "Kendi adanı veya oyununu tasarlamak isteyenlere; ebeveyn ayarlarında ayrıca kısıtlanabilir."
         ]
        ]
       },
       {
        "tip": "ipucu",
-       "metin": "Yeni başlıyorsan Zero Build ile üç dört gün oyna, sonra yapı kurma modunu dene. İkisi de aynı Battle Pass'e puan yazar mı, oyun içi bilgi ekranından kontrol et."
+       "metin": "Yeni başlıyorsanız Zero Build ile üç dört gün oynayın, sonra yapı kurma modunu deneyin. İkisi de aynı Battle Pass'e puan yazar: Epic'e göre Zero Build ile Battle Royale aynı XP ilerlemesini paylaşır."
       }
      ]
     },
@@ -197,7 +212,134 @@
       },
       {
        "tip": "ipucu",
-       "metin": "Her çatışmadan sonra yağma yapmak ve iyileşmek için güvenli bir yer bul. Eşya topladığın sırada seni bekleyen üçüncü bir oyuncu olabilir."
+       "metin": "Her çatışmadan sonra yağma yapmak ve iyileşmek için güvenli bir yer bulun. Eşya toplarken sizi bekleyen üçüncü bir oyuncu olabilir."
+      }
+     ]
+    },
+    {
+     "id": "insa-ve-duzenleme",
+     "baslik": "İnşa ve düzenleme temelleri",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "İnşa yalnız yapı kurma modlarında var (Zero Build'de yok). Mantığı basit: dört parça türü var ve hepsi malzeme harcar. Parça türleri ve malzemeler sezona göre değişebilir; oyun içi eğitim ve Yaratıcı adalar bunları denemek için en sakin yerdir."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Parça",
+        "Ne için kullanılır?"
+       ],
+       "satirlar": [
+        [
+         "Duvar",
+         "Ateşten korunmak, çatışma anında hızlı siper almak."
+        ],
+        [
+         "Zemin",
+         "Ayağınızın altını kapatmak, yukarıdan gelen hasarı kesmek."
+        ],
+        [
+         "Rampa",
+         "Yükseklik kazanmak; yüksek zemin avantaj demektir."
+        ],
+        [
+         "Çatı",
+         "Üstünü kapatmak, kapalı bir oda oluşturmak."
+        ]
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Önce tek parça yerleştirin",
+         "metin": "Boş bir alanda duvar, zemin ve rampayı sırayla koyun. Hızı değil, parçanın nereye oturduğunu görün."
+        },
+        {
+         "baslik": "Rampa ve duvarı birleştirin",
+         "metin": "Rampa koyup önüne duvar eklemek, hem yükseklik hem siper verir. Çatışmada ilk yeterli yapı budur."
+        },
+        {
+         "baslik": "Düzenlemeyi (edit) öğrenin",
+         "metin": "Düzenleme, bir parçanın içinde kapı veya pencere açmanızı sağlar. Yapıyı baştan kurmadan geçiş alanı yaratmak için kullanılır. Önce yavaş yapın, sonra hızlanın."
+        },
+        {
+         "baslik": "Malzemeyi koruyun",
+         "metin": "Her parça malzeme harcar. Gereksiz kule yapmak, çatışma sırasında malzemesiz kalmanıza yol açar."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Eğitim için aceleye gerek yok: günde on dakika yapı çalışmak, saatlerce çatışmada denemekten daha öğretici."
+      }
+     ]
+    },
+    {
+     "id": "nadirlik-ve-silahlar",
+     "baslik": "Silah nadirliği ve eşya seçimi",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Epic'in geliştirici belgesine göre silahlar nadirliğe göre sıralanır ve nadirlik, hasarı, şarjör kapasitesini, dağılmayı (spread) ve geri tepmeyi (recoil) etkiler. Nadirlik etikette ve yıldız sayısıyla gösterilir."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Nadirlik",
+        "Yıldız (Epic belgesi)",
+        "Genel renk"
+       ],
+       "satirlar": [
+        [
+         "Common",
+         "1",
+         "Gri"
+        ],
+        [
+         "Uncommon",
+         "2",
+         "Yeşil"
+        ],
+        [
+         "Rare",
+         "3",
+         "Mavi"
+        ],
+        [
+         "Epic",
+         "4",
+         "Mor"
+        ],
+        [
+         "Legendary",
+         "5",
+         "Altın/turuncu"
+        ],
+        [
+         "Mythic",
+         "6",
+         "Altın sarısı"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Yıldız sayısı ve sıra Epic'in belgesinden alınmıştır; renk sütunu genel oyun bilgisidir. Renk tonu sezon arayüzüne göre değişebilir, bu yüzden güvenilir olan yıldız ve etiket."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Nadirlik sihir değil:** aynı sınıftaki daha nadir silah genelde daha güçlüdür; ama elinizdekiyle iyi vurabiliyorsanız, nadirlik yüzünden güvenli yeri bırakıp risk almayın.",
+        "**Menzil çeşitliliği:** bir yakın, bir orta-uzun menzilli silah taşımak, en güvenilir kombinasyondur.",
+        "**Cephane önemlidir:** her silah kendi mermi türünü kullanır; çatışmaya girmeden önce yedek merminiz olduğundan emin olun.",
+        "**Sezon listesi değişir:** Epic her sezon bazı silahları geri getirir veya kaldırır (v43.00'da bazı silahlar \"unvaulted\" olarak geri döndü). Güncel havuz için sezon yama notlarına bakın."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Silah adlarını ezberlemek yerine her yeni silahı önce Yaratıcı veya ısınma alanında deneyin; hasarı ve geri tepmeyi hissetmek, listeyi bilmekten değerli."
       }
      ]
     },
@@ -207,21 +349,21 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Başlangıç için güvenli değerler. Hepsi sana göre ince ayar ister; bir seferde yalnız birini değiştir."
+       "metin": "Başlangıç için güvenli değerler. Hepsi size göre ince ayar ister; bir seferde yalnız birini değiştirin."
       },
       {
        "tip": "liste",
        "ogeler": [
         "**Kare sınırı:** monitör yenileme hızı kadar. Daha düşük hızda istikrarlı bir oyun, dalgalanan yüksek hızdan iyidir.",
-        "**Grafik:** düşük veya orta ön ayarla başla. Gölgeleri ve efektleri kıs, görüş mesafesini ve doku kalitesini bellek durumuna göre ayarla.",
-        "**Hassasiyet:** orta bir değerden başla, küçük adımlarla ayarla. Nişan alırken kontrol, hızdan önemli.",
-        "**Kontrol ölü bölgeleri (gamepad):** analog çubuklarda gereksiz titremeyi azaltacak kadar yükselt, ama fark edilir bir gecikme olmasın.",
-        "**Erişilebilirlik:** renk körlüğü seçenekleri ve görsel ses göstergesi oyun içi ayarlarda bulunur; ihtiyacın varsa ilk gün aç."
+        "**Grafik:** düşük veya orta ön ayarla başlayın. Gölgeleri ve efektleri kısın, görüş mesafesini ve doku kalitesini bellek durumuna göre ayarlayın.",
+        "**Hassasiyet:** orta bir değerden başlayın, küçük adımlarla ayarlayın. Nişan alırken kontrol, hızdan önemli.",
+        "**Kontrol ölü bölgeleri (gamepad):** analog çubuklarda gereksiz titremeyi azaltacak kadar yükseltin, ama fark edilir bir gecikme olmasın.",
+        "**Erişilebilirlik:** renk körlüğü seçenekleri ve görsel ses göstergesi oyun içi ayarlarda bulunur; ihtiyacınız varsa ilk gün açın."
        ]
       },
       {
        "tip": "ipucu",
-       "metin": "Ayarlarını değiştirdikten sonra yeni bir maçta değil, yapı kurma veya hedef alanı gibi sakin bir yerde dene. Böylece çatışmadan bağımsız karar verirsin."
+       "metin": "Ayarlarınızı değiştirdikten sonra yeni bir maçta değil, yapı kurma veya hedef alanı gibi sakin bir yerde deneyin. Böylece çatışmadan bağımsız karar verirsiniz."
       }
      ]
     },
@@ -231,23 +373,95 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Sezon boyunca oynadıkça deneyim puanı kazanır ve Battle Pass'te ödül açarsın. Battle Pass 800 V-Bucks ve Mart 2026'daki fiyat değişikliğinden bu yana 800 V-Bucks geri veriyor; bölgendeki güncel fiyat için oyun içi Geçişler sekmesine bak."
+       "metin": "Sezon boyunca oynadıkça deneyim puanı kazanır ve Battle Pass'te ödül açarsınız. Battle Pass 800 V-Bucks ve Mart 2026'daki fiyat değişikliğinden bu yana 800 V-Bucks geri veriyor; bölgenizdeki güncel fiyat için oyun içi Geçişler sekmesine bakın."
       },
       {
        "tip": "p",
-       "metin": "Treasure Hunters döneminde Epic, Kaptan Günleri (1, 8, 12, 15 ve 22 Kasım), Pazartesi Ustalık günleri ve Cumartesi Hazine Saatleri gibi düzenli etkinlikler duyurdu. Fortnite OG ayrı bir sezon yürütüyor; hangisinin sana uyduğunu birkaç maç sonunda anlarsın."
+       "metin": "Treasure Hunters döneminde Epic, Kaptan Günleri (1, 8, 12, 15 ve 22 Kasım), Pazartesi Ustalık günleri ve Cumartesi Hazine Saatleri gibi düzenli etkinlikler duyurdu. Fortnite OG ayrı bir sezon yürütüyor; hangisinin size uyduğunu birkaç maç sonunda anlarsınız."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Kalem",
+        "Resmî bilgi"
+       ],
+       "satirlar": [
+        [
+         "Oynamak",
+         "Ücretsiz; mağaza sayfasında \"Free\", uygulama içi satın alma var (Kasım 2026)."
+        ],
+        [
+         "Battle Pass",
+         "800 V-Bucks; tamamlanınca 800 V-Bucks verir (Mart 2026 fiyat değişikliğinden beri)."
+        ],
+        [
+         "V-Bucks paketleri",
+         "En küçük paket 800 V-Bucks / 8,99 dolar; en büyük 12.500 V-Bucks / 89,99 dolar (ABD fiyatı)."
+        ],
+        [
+         "Fortnite Crew",
+         "Mağaza sayfasında aylık 11,99 dolar; sayfa 5 Aralık 2026 sonrası için değişiklik notu içeriyor, satın almadan önce güncel koşulu okuyun."
+        ],
+        [
+         "Epic Rewards",
+         "Epic ödemeleriyle yapılan alımlarda %20 geri ödül (Markets Insider haberi)."
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Görevler ve XP: Epic'in mağaza sayfasına göre Zero Build, Battle Royale ile aynı XP ilerlemesini ve görevleri paylaşır. Yani hangi modu oynarsanız oynayın Battle Pass'iniz dolar. Sprite Mastery gibi sezona özel hedefler ise Hazine sekmesinde haftalık açılır (Epic yama notu). Sıralamalı sezonun ödül basamakları Gold, Platinum, Diamond, Elite ve Unreal olarak listelenmiş; alt kademelerin ve puan eşiklerinin tam tablosu resmî olarak açıklanmadı."
       },
       {
        "tip": "liste",
        "ogeler": [
-        "Önce sezonun hedeflerine bak ve ilerlemesi kolay olanlarla başla.",
-        "Her şeyi bir haftada bitirmeye çalışma; sezon uzun, ve etkinlikler zamana yayılıyor.",
-        "Ödülün gerçekten istediğin bir şey olduğundan emin olmadan Battle Pass satın alma; sezon bitince ilerleme kapanır."
+        "Önce sezonun hedeflerine bakın ve ilerlemesi kolay olanlarla başlayın.",
+        "Her şeyi bir haftada bitirmeye çalışmayın; sezon uzun, ve etkinlikler zamana yayılıyor.",
+        "Ödülün gerçekten istediğiniz bir şey olduğundan emin olmadan Battle Pass satın almayın; sezon bitince ilerleme kapanır."
        ]
       },
       {
        "tip": "ipucu",
-       "metin": "Bölüm 7 final etkinliği 5 Aralık'ta; satın alma kararını ona göre ver, ve sonrasında gelecek yeni bölümün ayrıntılarını resmi duyurudan öğren."
+       "metin": "Bölüm 7 final etkinliği 5 Aralık'ta; satın alma kararınızı ona göre verin ve sonrasında gelecek yeni bölümün ayrıntılarını resmi duyurudan öğrenin."
+      }
+     ]
+    },
+    {
+     "id": "ebeveyn-denetimleri",
+     "baslik": "Ebeveyn denetimleri: adım adım",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Epic'in güvenlik sayfası ebeveyn denetimlerinin ne yaptığını açıklıyor. Aşağıdaki sıra o sayfadaki ayarlara göre hazırlandı; menü adları sürümle değişebilir, bu yüzden ekranda gördüğünüzle karşılaştırın."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Çocuğunuzun Epic hesabını açın",
+         "metin": "Epic hesabının ayarlarında Ebeveyn Denetimleri bölümüne girin ve bir PIN belirleyin. Bu PIN'i çocuğa vermeyin."
+        },
+        {
+         "baslik": "Ödeme izinlerini ayarlayın",
+         "metin": "Epic ödemeleri için PIN isteyin ve ücretli rastgele eşyalara (paid random items) V-Bucks harcanıp harcanamayacağını seçin. Bu seçenek bazı bölgelerde yoktur."
+        },
+        {
+         "baslik": "Yaş derecelendirmesini seçin",
+         "metin": "Fortnite'taki her deneyimin kendi derecelendirmesi var. Belirlediğiniz dereceden yüksek deneyimler PIN olmadan açılmaz."
+        },
+        {
+         "baslik": "Yaratıcı araçlara izin verin veya vermeyin",
+         "metin": "Creative modu ve Unreal Editor for Fortnite'a (UEFN) erişimi ayrı olarak kısıtlanabilir."
+        },
+        {
+         "baslik": "Oynama süresini düzenleyin",
+         "metin": "Epic'in sayfasına göre Fortnite ve UEFN için günlük saat aralıkları seçilip bu aralıkta süre sınırı konabilir."
+        }
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Konsolda yapılan ödemeler PlayStation, Xbox, Nintendo ve Steam gibi platformların kendi ebeveyn ayarlarına bağlıdır; Epic'in ödeme PIN'i yalnız Epic ödemelerini kapsar. Çocuğunuzun oynadığı platformun kendi ayarını da kontrol edin."
       }
      ]
     },
@@ -260,15 +474,15 @@
        "ogeler": [
         "**Doğrudan zorlu alana inmek.** Kalabalık bir yere atlamak, eşya bulmadan elenmek demek.",
         "**Fırtınaya yetişememek.** Eşya toplarken çemberi unutmak aceleye ve hasara yol açar.",
-        "**Açıkta eşya aramak.** Sandık ve yer eşyası ararken çevreyi kontrol et.",
+        "**Açıkta eşya aramak.** Sandık ve yer eşyası ararken çevreyi kontrol edin.",
         "**Rakibi küçümsemek ve karşılıksız çatışmak.** Bazen kaçmak, kazanmaktan daha akıllıcadır.",
-        "**Her şeyi satın almak istemek.** Kozmetik eşyalar seni daha güçlü yapmaz; bütçeni önceden belirle.",
+        "**Her şeyi satın almak istemek.** Kozmetik eşyalar sizi daha güçlü yapmaz; bütçenizi önceden belirleyin.",
         "**Gece geç oynayıp dikkati kaybetmek.** Yorgunken hata artar; kısa oturumlar daha öğreticidir."
        ]
       },
       {
        "tip": "ipucu",
-       "metin": "Her gün yalnız tek bir hedef koy: bugün çember zamanlamasını, yarın eşya yönetimini çalış. Çok hedef, hiçbirini öğrenmemek demek."
+       "metin": "Her gün yalnız tek bir hedef koyun: bugün çember zamanlamasını, yarın eşya yönetimini çalışın. Çok hedef, hiçbirini öğrenmemek demek."
       }
      ]
     },
@@ -278,20 +492,20 @@
      "bloklar": [
       {
        "tip": "p",
-       "metin": "Fortnite ücretsizdir ama V-Bucks ile kozmetik ve Battle Pass satın alınır. Bunu gerçek parayla alırsın; bu yüzden harcamayı bir eğlence bütçesi olarak ele al ve önceden sınırla."
+       "metin": "Fortnite ücretsizdir ama V-Bucks ile kozmetik ve Battle Pass satın alınır. Bunlar gerçek parayla alınır; bu yüzden harcamayı bir eğlence bütçesi olarak ele alın ve önceden sınırlayın."
       },
       {
        "tip": "liste",
        "ogeler": [
-        "Epic hesabında iki adımlı doğrulamayı aç ve şifreni yalnızca Epic'in resmi giriş sayfasına yaz.",
-        "Çocuklar için ebeveyn denetimi kur. Epic, ebeveyn kurulumu yapılmamış çocuklar için kısıtlı (Cabined) hesap sistemi sunuyor; sohbet ve harcama izinlerini kontrol et.",
-        "Ücretsiz V-Bucks vaat eden bağlantılara ve oyun hilesi gibi görünen dosyalara tıklama; bunlar hesap çalmak için kullanılır.",
-        "Harcama yapmadan önce fiyatın yerel para biriminde göründüğünü ve neye karşılık geldiğini kontrol et."
+        "Epic hesabında iki adımlı doğrulamayı açın ve şifrenizi yalnızca Epic'in resmi giriş sayfasına yazın.",
+        "Çocuklar için ebeveyn denetimi kurun (ayrı bölüme bakın); ödeme PIN'i, yaş derecelendirmesi ve oynama süresi ayarlanabilir.",
+        "Ücretsiz V-Bucks vaat eden bağlantılara ve oyun hilesi gibi görünen dosyalara tıklamayın; bunlar hesap çalmak için kullanılır.",
+        "Harcama yapmadan önce fiyatın yerel para biriminde göründüğünü ve neye karşılık geldiğini kontrol edin."
        ]
       },
       {
        "tip": "uyari",
-       "metin": "Hile yazılımı, nişan botu, makro veya özel tuş eşleştirme aygıtlarından, hesap, V-Bucks veya eşya alıp satmaktan ve başkasına rütbe kastırmaktan (boost) uzak dur. Bunlar hesabın kalıcı kapatılmasına yol açar ve çoğunlukla dolandırıcılıktır."
+       "metin": "Hile yazılımı, nişan botu, makro veya özel tuş eşleştirme aygıtlarından, hesap, V-Bucks veya eşya alıp satmaktan ve başkasına rütbe kastırmaktan (boost) uzak durun. Bunlar hesabınızın kalıcı kapatılmasına yol açar ve çoğunlukla dolandırıcılıktır."
       }
      ]
     },
@@ -308,23 +522,23 @@
         },
         {
          "s": "Yapı kurmayı öğrenmek zorunda mıyım?",
-         "c": "Hayır. Zero Build modunda yapı kurma yok; istersen sonradan öğrenirsin."
+         "c": "Hayır. Zero Build modunda yapı kurma yok; isterseniz sonradan öğrenirsiniz."
         },
         {
          "s": "Battle Pass'e ne kadar harcamalıyım?",
-         "c": "Zorunlu değil. Pass 800 V-Bucks ve Mart 2026'dan beri 800 V-Bucks geri veriyor; sezonda yeterince oynayacaksan değerlendir."
+         "c": "Zorunlu değil. Pass 800 V-Bucks ve Mart 2026'dan beri 800 V-Bucks geri veriyor; sezonda yeterince oynayacaksanız değerlendirin."
         },
         {
          "s": "Bölüm 7 ne zaman bitiyor?",
-         "c": "Epic final etkinliğinin 5 Aralık 2026 Cumartesi günü olacağını duyurdu. Sonrasındaki içerik için resmi duyuruları bekle."
+         "c": "Epic final etkinliğinin 5 Aralık 2026 Cumartesi günü olacağını duyurdu. Sonrasındaki içerik için resmi duyuruları bekleyin."
         },
         {
          "s": "Ücretsiz V-Bucks veren siteler güvenli mi?",
-         "c": "Hayır. Bunlar çoğunlukla hesap çalma veya dolandırıcılık girişimidir. V-Bucks'ı yalnız resmi mağazadan al."
+         "c": "Hayır. Bunlar çoğunlukla hesap çalma veya dolandırıcılık girişimidir. V-Bucks'ı yalnız resmi mağazadan alın."
         },
         {
          "s": "Çocuğum için nasıl güvenli ayarlarım?",
-         "c": "Epic hesabında ebeveyn denetimlerini aç, sohbeti ve harcamayı onaya bağla ve ödeme yöntemini kayıtlı bırakma."
+         "c": "Epic hesabında ebeveyn denetimlerini açın, sohbeti ve harcamayı onaya bağlayın ve ödeme yöntemini kayıtlı bırakmayın."
         }
        ]
       }
@@ -342,11 +556,11 @@
     },
     {
      "ad": "Platform",
-     "deger": "Many platforms with an Epic Games account; see the official page for details"
+     "deger": "PC, PlayStation, Xbox, Nintendo Switch and mobile; crossplay supported (Epic)"
     },
     {
      "ad": "Pricing model",
-     "deger": "Free to play; optional V-Bucks purchases"
+     "deger": "Free to play; optional V-Bucks (November 2026, Epic store page)"
     },
     {
      "ad": "Current version",
@@ -354,7 +568,7 @@
     },
     {
      "ad": "Turkish support",
-     "deger": "Check the in-game language setting (not verified)"
+     "deger": "Yes: Turkish text (Epic store page); no audio language"
     }
    ],
    "bolumler": [
@@ -389,12 +603,15 @@
        "ogeler": [
         "**Minimum:** Intel HD 4000 or Radeon Vega 8 graphics, Core i3-3225 processor, 64-bit Windows 10 22H2.",
         "**Recommended:** a GeForce GTX 960 or Radeon R9 280 class DirectX 11 graphics card (2 GB video memory), Core i5-7300U or Ryzen 3 3300U, 16 GB RAM, NVMe SSD, 64-bit Windows 10 or 11.",
-        "**For the Epic preset:** an RTX 3070 or RX 6700 XT class card (8 GB video memory) and a Core i7-8700 or Ryzen 7 3700X."
+        "**For the Epic preset:** an RTX 3070 or RX 6700 XT class card (8 GB video memory) and a Core i7-8700 or Ryzen 7 3700X.",
+        "**Install size:** Epic's requirements page and store page do not give a disk size; it is not officially stated. Check the size shown in the launcher before installing.",
+        "**Turkish:** Epic's store page lists Turkish among text languages; there is no audio language (N/A).",
+        "**Crossplay:** Epic counts Fortnite as a game that supports crossplay across PC, PlayStation (PS4, PS5), Xbox (Series S and X), Nintendo (Switch and Switch 2) and mobile. For cross-progression, logging in with the same Epic account is the basis; account-linking details are not officially announced."
        ]
       },
       {
        "tip": "ipucu",
-       "metin": "Turn on two-factor authentication (2FA) on day one. Epic rewards it with the Boogie Down emote, but the real gain is not losing your account."
+       "metin": "Turn on two-factor authentication (2FA) on day one; the real gain is not losing your account."
       }
      ]
     },
@@ -457,12 +674,12 @@
          "The build-free version; the best start for new players."
         ],
         [
-         "Ranked Battle Royale / Ranked Reload Zero Build",
-         "Ranked versions; once the basics are solid."
+         "Ranked Battle Royale",
+         "The ranked version; once the basics are solid. Rewards and rank icons are refreshed at the start of a season."
         ],
         [
          "Reload",
-         "A mode that appears on the official page alongside Ranked Reload Zero Build; see the in-game description for details."
+         "According to Epic's store page, a 40-player Battle Royale mode with classic weapons and a tighter map; suits those who want shorter matches."
         ],
         [
          "LEGO Fortnite",
@@ -471,12 +688,16 @@
         [
          "Fortnite Festival",
          "A separate music-based experience for rhythm fans."
+        ],
+        [
+         "Creative / UEFN",
+         "For those who want to design their own island or game; it can be restricted separately in parental settings."
         ]
        ]
       },
       {
        "tip": "ipucu",
-       "metin": "If you are just starting, play Zero Build for three or four days, then try the building mode. Check the in-game info screen to see whether both count toward the same Battle Pass."
+       "metin": "If you are just starting, play Zero Build for three or four days, then try the building mode. Both count toward the same Battle Pass: according to Epic, Zero Build and Battle Royale share XP progression."
       }
      ]
     },
@@ -501,6 +722,133 @@
       {
        "tip": "ipucu",
        "metin": "After every fight find a safe spot to loot and heal. A third player may be waiting while you collect items."
+      }
+     ]
+    },
+    {
+     "id": "insa-ve-duzenleme",
+     "baslik": "Building and editing basics",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Building exists only in the modes that allow it (not in Zero Build). The logic is simple: there are four piece types and all of them spend materials. The piece and material names in this section can change by season, and a quiet practice island is the calmest place to try them."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Piece",
+        "What it is for"
+       ],
+       "satirlar": [
+        [
+         "Wall",
+         "Cover from fire, quick shelter during a fight."
+        ],
+        [
+         "Floor",
+         "Covering the ground under you and blocking damage from above."
+        ],
+        [
+         "Ramp",
+         "Gaining height; high ground is an advantage."
+        ],
+        [
+         "Roof",
+         "Closing the top and forming an enclosed room."
+        ]
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Place a single piece first",
+         "metin": "In an open area place a wall, a floor and a ramp in turn. Look at where each piece lands, not at speed."
+        },
+        {
+         "baslik": "Combine ramp and wall",
+         "metin": "A ramp with a wall in front gives both height and cover. In a fight it is the first useful structure."
+        },
+        {
+         "baslik": "Learn editing",
+         "metin": "Editing lets you open a door or a window in a piece. It creates passages without rebuilding the structure. Do it slowly first, then speed up."
+        },
+        {
+         "baslik": "Protect your materials",
+         "metin": "Every piece spends materials. Building pointless towers leaves you with none in the middle of a fight."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "There is no rush: ten minutes of building practice a day teaches more than hours of trying it in fights."
+      }
+     ]
+    },
+    {
+     "id": "nadirlik-ve-silahlar",
+     "baslik": "Weapon rarity and item choice",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "According to Epic's developer documentation, weapons are ranked by rarity, and rarity affects damage, magazine size, spread and recoil. Rarity is shown by the label and by the number of stars."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rarity",
+        "Stars (Epic docs)",
+        "Usual color"
+       ],
+       "satirlar": [
+        [
+         "Common",
+         "1",
+         "Gray"
+        ],
+        [
+         "Uncommon",
+         "2",
+         "Green"
+        ],
+        [
+         "Rare",
+         "3",
+         "Blue"
+        ],
+        [
+         "Epic",
+         "4",
+         "Purple"
+        ],
+        [
+         "Legendary",
+         "5",
+         "Gold/orange"
+        ],
+        [
+         "Mythic",
+         "6",
+         "Golden yellow"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "The star count and order come from Epic's document; the color column is general game knowledge. Shades can vary with the season's interface, so the stars and the label are what you can rely on."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Rarity is not magic:** a rarer weapon of the same class is generally stronger; but if you hit well with what you hold, do not leave a safe place to chase rarity.",
+        "**Range variety:** carrying one close-range and one mid-to-long range weapon is the most dependable combination.",
+        "**Ammo matters:** each weapon uses its own ammo type; make sure you have spare ammo before entering a fight.",
+        "**The list changes each season:** Epic brings back or removes weapons each season (in v43.00 some weapons were unvaulted). Check the season's patch notes for the current pool."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Instead of memorizing weapon names, try each new weapon first in a practice area; feeling its damage and recoil is worth more than knowing the list."
       }
      ]
     },
@@ -541,6 +889,39 @@
        "metin": "During Treasure Hunters, Epic announced regular events such as Captain's Days (1, 8, 12, 15 and 22 November), Mastery Mondays and Treasure Hours on Saturdays. Fortnite OG runs its own separate season; you will find out which one suits you after a few matches."
       },
       {
+       "tip": "tablo",
+       "basliklar": [
+        "Item",
+        "Official information"
+       ],
+       "satirlar": [
+        [
+         "Playing",
+         "Free; \"Free\" on the store page with in-app purchases (November 2026)."
+        ],
+        [
+         "Battle Pass",
+         "800 V-Bucks; gives back 800 V-Bucks when completed (since the March 2026 price change)."
+        ],
+        [
+         "V-Bucks packs",
+         "Smallest pack 800 V-Bucks / $8.99; largest 12,500 V-Bucks / $89.99 (US prices)."
+        ],
+        [
+         "Fortnite Crew",
+         "$11.99 per month on the store page; the page carries a change note for after 5 December 2026, so read the current terms before buying."
+        ],
+        [
+         "Epic Rewards",
+         "20% back on purchases made through Epic payment (Markets Insider report)."
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Quests and XP: according to Epic's store page, Zero Build shares XP progression and Quests with Battle Royale. So whichever mode you play, your Battle Pass fills. Season-specific goals such as Sprite Mastery unlock weekly under the Treasure tab (Epic patch notes). The ranked season's reward steps are listed as Gold, Platinum, Diamond, Elite and Unreal; the full table of lower tiers and point thresholds is not officially announced."
+      },
+      {
        "tip": "liste",
        "ogeler": [
         "First look at the season's goals and start with the ones that are easy to progress.",
@@ -551,6 +932,45 @@
       {
        "tip": "ipucu",
        "metin": "The Chapter 7 end event is on 5 December; time any purchase decision around it, and read the details of what follows in the official announcement."
+      }
+     ]
+    },
+    {
+     "id": "ebeveyn-denetimleri",
+     "baslik": "Parental controls, step by step",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Epic's safety page explains what parental controls do. The order below follows the settings on that page; menu names can change with versions, so compare with what you see on screen."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Open the child's Epic account",
+         "metin": "In the Epic account settings open the Parental Controls section and set a PIN. Do not give this PIN to the child."
+        },
+        {
+         "baslik": "Set payment permissions",
+         "metin": "Require the PIN for Epic payments and choose whether V-Bucks can be spent on paid random items. This option does not exist in some regions."
+        },
+        {
+         "baslik": "Pick the age rating",
+         "metin": "Every experience in Fortnite has its own rating. Experiences above the rating you set do not open without the PIN."
+        },
+        {
+         "baslik": "Allow or block creative tools",
+         "metin": "Access to Creative mode and Unreal Editor for Fortnite (UEFN) can be restricted separately."
+        },
+        {
+         "baslik": "Set the play time",
+         "metin": "According to Epic's page you can pick daily time windows for Fortnite and UEFN and set a time limit inside that window."
+        }
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Payments made on a console depend on the console platform's own parental settings (PlayStation, Xbox, Nintendo, Steam); the Epic payment PIN covers only Epic payments. Also check the settings of the platform your child plays on."
       }
      ]
     },
@@ -587,7 +1007,7 @@
        "tip": "liste",
        "ogeler": [
         "Turn on two-factor authentication in your Epic account and enter your password only on Epic's official login page.",
-        "Set up parental controls for children. Epic offers Cabined Accounts for children without parental setup; check chat and spending permissions.",
+        "Set up parental controls for children (see the separate section); a payment PIN, age rating and play time can be set.",
         "Do not click links promising free V-Bucks or files that look like game hacks; they are used to steal accounts.",
         "Before spending, check that the price is shown in your local currency and what exactly it buys."
        ]
@@ -645,11 +1065,11 @@
     },
     {
      "ad": "Plateforme",
-     "deger": "Nombreuses plateformes avec un compte Epic Games ; voir la page officielle pour le détail"
+     "deger": "PC, PlayStation, Xbox, Nintendo Switch et mobile ; jeu croisé pris en charge (Epic)"
     },
     {
      "ad": "Modèle économique",
-     "deger": "Gratuit ; achats facultatifs de V-Bucks"
+     "deger": "Gratuit ; V-Bucks facultatifs (novembre 2026, page boutique Epic)"
     },
     {
      "ad": "Version actuelle",
@@ -657,7 +1077,7 @@
     },
     {
      "ad": "Prise en charge du turc",
-     "deger": "À vérifier dans les réglages de langue du jeu (non vérifié)"
+     "deger": "Oui : texte en turc (page boutique Epic) ; pas de langue audio"
     }
    ],
    "bolumler": [
@@ -692,12 +1112,15 @@
        "ogeler": [
         "**Minimum :** graphismes Intel HD 4000 ou Radeon Vega 8, processeur Core i3-3225, Windows 10 22H2 64 bits.",
         "**Recommandé :** carte graphique DirectX 11 de classe GeForce GTX 960 ou Radeon R9 280 (2 Go de mémoire vidéo), Core i5-7300U ou Ryzen 3 3300U, 16 Go de RAM, SSD NVMe, Windows 10 ou 11 64 bits.",
-        "**Pour le préréglage Épique :** une carte de classe RTX 3070 ou RX 6700 XT (8 Go de mémoire vidéo) et un Core i7-8700 ou Ryzen 7 3700X."
+        "**Pour le préréglage Épique :** une carte de classe RTX 3070 ou RX 6700 XT (8 Go de mémoire vidéo) et un Core i7-8700 ou Ryzen 7 3700X.",
+        "**Taille d'installation :** la page des configurations et la page boutique d'Epic ne donnent pas de taille de disque ; elle n'est pas annoncée officiellement. Regarde la taille affichée dans le lanceur avant d'installer.",
+        "**Turc :** la page boutique d'Epic liste le turc parmi les langues de texte ; il n'y a pas de langue audio (N/A).",
+        "**Jeu croisé :** Epic classe Fortnite parmi les jeux qui prennent en charge le jeu croisé entre PC, PlayStation (PS4, PS5), Xbox (Series S et X), Nintendo (Switch et Switch 2) et mobile. Pour la progression croisée, la base est de se connecter avec le même compte Epic ; le détail du lien de comptes n'est pas annoncé officiellement."
        ]
       },
       {
        "tip": "ipucu",
-       "metin": "Active la vérification en deux étapes (2FA) dès le premier jour. Epic la récompense avec l'emote Boogie Down, mais le vrai gain est de ne pas perdre ton compte."
+       "metin": "Active la vérification en deux étapes (2FA) dès le premier jour ; le vrai gain est de ne pas perdre ton compte."
       }
      ]
     },
@@ -760,12 +1183,12 @@
          "La version sans construction ; le meilleur départ pour les nouveaux joueurs."
         ],
         [
-         "Ranked Battle Royale / Ranked Reload Zero Build",
-         "Versions classées ; une fois les bases acquises."
+         "Ranked Battle Royale",
+         "La version classée ; une fois les bases acquises. Les récompenses et icônes de rang sont renouvelées en début de saison."
         ],
         [
          "Reload",
-         "Un mode cité sur la page officielle avec Ranked Reload Zero Build ; consulte la description en jeu pour les détails."
+         "D'après la page boutique d'Epic, un mode Battle Royale à 40 joueurs avec armes classiques et carte plus serrée ; convient à ceux qui veulent des parties plus courtes."
         ],
         [
          "LEGO Fortnite",
@@ -774,12 +1197,16 @@
         [
          "Fortnite Festival",
          "Une expérience musicale distincte, pour les fans de jeux de rythme."
+        ],
+        [
+         "Creative / UEFN",
+         "Pour ceux qui veulent concevoir leur propre île ou jeu ; peut être restreint séparément dans les réglages parentaux."
         ]
        ]
       },
       {
        "tip": "ipucu",
-       "metin": "Si tu débutes, joue en Zero Build pendant trois ou quatre jours, puis essaie le mode avec construction. Vérifie dans l'écran d'infos du jeu si les deux comptent pour le même Passe de combat."
+       "metin": "Si tu débutes, joue en Zero Build pendant trois ou quatre jours, puis essaie le mode avec construction. Les deux comptent pour le même Passe de combat : selon Epic, le Zero Build et le Battle Royale partagent la progression d'XP."
       }
      ]
     },
@@ -804,6 +1231,133 @@
       {
        "tip": "ipucu",
        "metin": "Après chaque combat, trouve un endroit sûr pour piller et te soigner. Un troisième joueur peut t'attendre pendant que tu ramasses les objets."
+      }
+     ]
+    },
+    {
+     "id": "insa-ve-duzenleme",
+     "baslik": "Bases de la construction et de l'édition",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La construction n'existe que dans les modes qui l'autorisent (pas en Zero Build). La logique est simple : il y a quatre types de pièces et toutes consomment des matériaux. Les noms de pièces et de matériaux de cette section relèvent de la connaissance générale du jeu ; les détails peuvent changer selon la saison, et une île d'entraînement calme est l'endroit idéal pour essayer."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Pièce",
+        "À quoi elle sert"
+       ],
+       "satirlar": [
+        [
+         "Mur",
+         "Se protéger du feu, s'abriter vite pendant un combat."
+        ],
+        [
+         "Sol",
+         "Couvrir le sol sous toi et bloquer les dégâts venant d'en haut."
+        ],
+        [
+         "Rampe",
+         "Prendre de la hauteur ; le terrain élevé est un avantage."
+        ],
+        [
+         "Toit",
+         "Fermer le dessus et former une pièce close."
+        ]
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Pose d'abord une seule pièce",
+         "metin": "Dans une zone dégagée, pose successivement un mur, un sol et une rampe. Observe où chaque pièce se place, pas la vitesse."
+        },
+        {
+         "baslik": "Combine rampe et mur",
+         "metin": "Une rampe avec un mur devant donne à la fois de la hauteur et un abri. En combat, c'est la première structure utile."
+        },
+        {
+         "baslik": "Apprends l'édition",
+         "metin": "L'édition permet d'ouvrir une porte ou une fenêtre dans une pièce. Elle crée des passages sans reconstruire la structure. Fais-le d'abord lentement, puis accélère."
+        },
+        {
+         "baslik": "Protège tes matériaux",
+         "metin": "Chaque pièce consomme des matériaux. Construire des tours inutiles te laisse sans matériaux en plein combat."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Inutile de se presser : dix minutes de construction par jour apprennent plus que des heures d'essais en combat."
+      }
+     ]
+    },
+    {
+     "id": "nadirlik-ve-silahlar",
+     "baslik": "Rareté des armes et choix d'objets",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Selon la documentation développeur d'Epic, les armes sont classées par rareté, et la rareté influe sur les dégâts, la capacité du chargeur, la dispersion (spread) et le recul. La rareté est indiquée par l'étiquette et par le nombre d'étoiles."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rareté",
+        "Étoiles (doc Epic)",
+        "Couleur usuelle"
+       ],
+       "satirlar": [
+        [
+         "Common",
+         "1",
+         "Gris"
+        ],
+        [
+         "Uncommon",
+         "2",
+         "Vert"
+        ],
+        [
+         "Rare",
+         "3",
+         "Bleu"
+        ],
+        [
+         "Epic",
+         "4",
+         "Violet"
+        ],
+        [
+         "Legendary",
+         "5",
+         "Or/orange"
+        ],
+        [
+         "Mythic",
+         "6",
+         "Jaune doré"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Le nombre d'étoiles et l'ordre viennent du document d'Epic ; la colonne des couleurs relève de la connaissance générale du jeu. Les teintes peuvent varier selon l'interface de la saison : l'étiquette et les étoiles sont donc fiables."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**La rareté n'est pas magique :** une arme plus rare de la même classe est en général plus forte ; mais si tu touches bien avec ce que tu tiens, ne quitte pas un endroit sûr pour la rareté.",
+        "**Variété de portée :** porter une arme de courte portée et une de moyenne à longue portée est la combinaison la plus fiable.",
+        "**Les munitions comptent :** chaque arme utilise son propre type de munitions ; assure-toi d'avoir des munitions de rechange avant d'engager un combat.",
+        "**La liste change chaque saison :** Epic remet ou retire des armes à chaque saison (en v43.00 certaines armes ont été désarchivées). Consulte les notes de mise à jour de la saison pour la liste actuelle."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Plutôt que de mémoriser des noms d'armes, essaie chaque nouvelle arme d'abord dans une zone d'entraînement ; ressentir les dégâts et le recul vaut mieux que connaître la liste."
       }
      ]
     },
@@ -844,6 +1398,39 @@
        "metin": "Pendant Treasure Hunters, Epic a annoncé des événements réguliers comme les Jours du Capitaine (1, 8, 12, 15 et 22 novembre), les lundis de la maîtrise et les Heures du trésor le samedi. Fortnite OG suit sa propre saison ; tu sauras laquelle te convient après quelques parties."
       },
       {
+       "tip": "tablo",
+       "basliklar": [
+        "Élément",
+        "Information officielle"
+       ],
+       "satirlar": [
+        [
+         "Jouer",
+         "Gratuit ; \"Free\" sur la page de la boutique avec achats intégrés (novembre 2026)."
+        ],
+        [
+         "Passe de combat",
+         "800 V-Bucks ; rend 800 V-Bucks une fois terminé (depuis le changement de prix de mars 2026)."
+        ],
+        [
+         "Packs de V-Bucks",
+         "Plus petit pack 800 V-Bucks / 8,99 $ ; plus grand 12 500 V-Bucks / 89,99 $ (prix américains)."
+        ],
+        [
+         "Fortnite Crew",
+         "11,99 $ par mois sur la page de la boutique ; la page contient une note de changement pour après le 5 décembre 2026, lis donc les conditions actuelles avant d'acheter."
+        ],
+        [
+         "Epic Rewards",
+         "20 % de récompense sur les achats faits via le paiement Epic (article Markets Insider)."
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Quêtes et XP : d'après la page boutique d'Epic, le Zero Build partage la progression d'XP et les quêtes avec le Battle Royale. Quel que soit le mode joué, ton Passe de combat se remplit. Les objectifs propres à la saison, comme la Maîtrise des Sprites, se débloquent chaque semaine dans l'onglet Trésor (notes de mise à jour d'Epic). Les paliers de récompense de la saison classée sont listés comme Or, Platine, Diamant, Élite et Unreal ; le tableau complet des rangs inférieurs et des seuils de points n'est pas annoncé officiellement."
+      },
+      {
        "tip": "liste",
        "ogeler": [
         "Regarde d'abord les objectifs de la saison et commence par ceux qui progressent facilement.",
@@ -854,6 +1441,45 @@
       {
        "tip": "ipucu",
        "metin": "L'événement de fin du chapitre 7 a lieu le 5 décembre ; cale tes achats en conséquence et lis les détails de la suite dans l'annonce officielle."
+      }
+     ]
+    },
+    {
+     "id": "ebeveyn-denetimleri",
+     "baslik": "Contrôle parental, pas à pas",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La page de sécurité d'Epic explique ce que font les contrôles parentaux. L'ordre ci-dessous suit les réglages de cette page ; les noms de menus peuvent varier selon les versions, compare donc avec ce que tu vois à l'écran."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Ouvre le compte Epic de l'enfant",
+         "metin": "Dans les paramètres du compte Epic, ouvre la section Contrôle parental et définis un code PIN. Ne donne pas ce PIN à l'enfant."
+        },
+        {
+         "baslik": "Règle les autorisations de paiement",
+         "metin": "Exige le PIN pour les paiements Epic et choisis si les V-Bucks peuvent être dépensés dans des objets aléatoires payants. Cette option n'existe pas dans certaines régions."
+        },
+        {
+         "baslik": "Choisis la classification d'âge",
+         "metin": "Chaque expérience de Fortnite a sa propre classification. Les expériences au-dessus de la classification choisie ne s'ouvrent pas sans le PIN."
+        },
+        {
+         "baslik": "Autorise ou bloque les outils de création",
+         "metin": "L'accès au mode Créatif et à Unreal Editor for Fortnite (UEFN) peut être restreint séparément."
+        },
+        {
+         "baslik": "Règle le temps de jeu",
+         "metin": "D'après la page d'Epic, tu peux choisir des plages horaires quotidiennes pour Fortnite et UEFN et fixer une limite de durée dans cette plage."
+        }
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Les paiements faits sur console dépendent des réglages parentaux de la plateforme (PlayStation, Xbox, Nintendo, Steam) ; le PIN de paiement Epic ne couvre que les paiements Epic. Vérifie aussi les réglages de la plateforme sur laquelle ton enfant joue."
       }
      ]
     },
@@ -890,7 +1516,7 @@
        "tip": "liste",
        "ogeler": [
         "Active la vérification en deux étapes sur ton compte Epic et saisis ton mot de passe uniquement sur la page de connexion officielle d'Epic.",
-        "Configure le contrôle parental pour les enfants. Epic propose des comptes restreints (Cabined) pour les enfants sans configuration parentale ; vérifie les autorisations de discussion et de dépense.",
+        "Configure le contrôle parental pour les enfants (voir la section dédiée) ; un PIN de paiement, une classification d'âge et un temps de jeu peuvent être définis.",
         "Ne clique pas sur des liens promettant des V-Bucks gratuits ni sur des fichiers présentés comme des cheats ; ils servent à voler des comptes.",
         "Avant de dépenser, vérifie que le prix s'affiche dans ta monnaie locale et ce qu'il achète exactement."
        ]
@@ -948,11 +1574,11 @@
     },
     {
      "ad": "Plataforma",
-     "deger": "Muchas plataformas con una cuenta de Epic Games; consulta la página oficial para más detalles"
+     "deger": "PC, PlayStation, Xbox, Nintendo Switch y móvil; juego cruzado (Epic)"
     },
     {
      "ad": "Modelo de precio",
-     "deger": "Gratuito; compras opcionales de V-Bucks"
+     "deger": "Gratuito; V-Bucks opcionales (noviembre de 2026, página de la tienda de Epic)"
     },
     {
      "ad": "Versión actual",
@@ -960,7 +1586,7 @@
     },
     {
      "ad": "Compatibilidad con turco",
-     "deger": "Compruébalo en el ajuste de idioma del juego (no verificado)"
+     "deger": "Sí: texto en turco (página de la tienda de Epic); sin idioma de audio"
     }
    ],
    "bolumler": [
@@ -995,12 +1621,15 @@
        "ogeler": [
         "**Mínimo:** gráficos Intel HD 4000 o Radeon Vega 8, procesador Core i3-3225, Windows 10 22H2 de 64 bits.",
         "**Recomendado:** tarjeta gráfica DirectX 11 de clase GeForce GTX 960 o Radeon R9 280 (2 GB de memoria de vídeo), Core i5-7300U o Ryzen 3 3300U, 16 GB de RAM, SSD NVMe, Windows 10 u 11 de 64 bits.",
-        "**Para el ajuste Épico:** una tarjeta de clase RTX 3070 o RX 6700 XT (8 GB de memoria de vídeo) y un Core i7-8700 o Ryzen 7 3700X."
+        "**Para el ajuste Épico:** una tarjeta de clase RTX 3070 o RX 6700 XT (8 GB de memoria de vídeo) y un Core i7-8700 o Ryzen 7 3700X.",
+        "**Tamaño de instalación:** la página de requisitos y la de la tienda de Epic no indican un tamaño de disco; no consta oficialmente. Mira el tamaño que muestra el lanzador antes de instalar.",
+        "**Turco:** la página de la tienda de Epic incluye el turco entre los idiomas de texto; no hay idioma de audio (N/A).",
+        "**Juego cruzado:** Epic cuenta Fortnite entre los juegos con juego cruzado entre PC, PlayStation (PS4, PS5), Xbox (Series S y X), Nintendo (Switch y Switch 2) y móvil. Para la progresión cruzada la base es iniciar sesión con la misma cuenta de Epic; los detalles de vinculación de cuentas no se han anunciado oficialmente."
        ]
       },
       {
        "tip": "ipucu",
-       "metin": "Activa la verificación en dos pasos (2FA) desde el primer día. Epic lo recompensa con el emote Boogie Down, pero la ganancia real es no perder tu cuenta."
+       "metin": "Activa la verificación en dos pasos (2FA) desde el primer día; la ganancia real es no perder tu cuenta."
       }
      ]
     },
@@ -1063,12 +1692,12 @@
          "La versión sin construcción; el mejor comienzo para jugadores nuevos."
         ],
         [
-         "Ranked Battle Royale / Ranked Reload Zero Build",
-         "Versiones clasificatorias; cuando las bases estén sólidas."
+         "Ranked Battle Royale",
+         "La versión clasificatoria; cuando las bases estén sólidas. Las recompensas e iconos de rango se renuevan al inicio de cada temporada."
         ],
         [
          "Reload",
-         "Un modo que aparece en la página oficial junto con Ranked Reload Zero Build; consulta la descripción del juego para más detalles."
+         "Según la página de la tienda de Epic, un modo Battle Royale de 40 jugadores con armas clásicas y mapa más reducido; para quienes quieren partidas más cortas."
         ],
         [
          "LEGO Fortnite",
@@ -1077,12 +1706,16 @@
         [
          "Fortnite Festival",
          "Una experiencia musical aparte, para los aficionados a los juegos de ritmo."
+        ],
+        [
+         "Creative / UEFN",
+         "Para quienes quieren diseñar su propia isla o juego; se puede restringir por separado en los ajustes parentales."
         ]
        ]
       },
       {
        "tip": "ipucu",
-       "metin": "Si estás empezando, juega Zero Build tres o cuatro días y luego prueba el modo con construcción. Comprueba en la pantalla de información del juego si ambos suman para el mismo Pase de batalla."
+       "metin": "Si estás empezando, juega Zero Build tres o cuatro días y luego prueba el modo con construcción. Ambos suman para el mismo Pase de batalla: según Epic, Zero Build y Battle Royale comparten la progresión de XP."
       }
      ]
     },
@@ -1107,6 +1740,133 @@
       {
        "tip": "ipucu",
        "metin": "Tras cada combate busca un lugar seguro para saquear y curarte. Puede que un tercer jugador te esté esperando mientras recoges objetos."
+      }
+     ]
+    },
+    {
+     "id": "insa-ve-duzenleme",
+     "baslik": "Fundamentos de construcción y edición",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La construcción solo existe en los modos que la permiten (no en Zero Build). La lógica es sencilla: hay cuatro tipos de pieza y todas gastan materiales. Los nombres de piezas y materiales de esta sección son conocimiento general del juego; los detalles pueden cambiar por temporada, y una isla de práctica tranquila es el mejor sitio para probarlos."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Pieza",
+        "Para qué sirve"
+       ],
+       "satirlar": [
+        [
+         "Pared",
+         "Cubrirse del fuego, refugio rápido durante un combate."
+        ],
+        [
+         "Suelo",
+         "Cubrir el suelo bajo ti y bloquear el daño desde arriba."
+        ],
+        [
+         "Rampa",
+         "Ganar altura; el terreno alto es una ventaja."
+        ],
+        [
+         "Techo",
+         "Cerrar la parte superior y formar una sala cerrada."
+        ]
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Coloca primero una sola pieza",
+         "metin": "En una zona abierta coloca una pared, un suelo y una rampa por turnos. Fíjate en dónde encaja cada pieza, no en la velocidad."
+        },
+        {
+         "baslik": "Combina rampa y pared",
+         "metin": "Una rampa con una pared delante da altura y cobertura a la vez. En un combate es la primera estructura útil."
+        },
+        {
+         "baslik": "Aprende la edición",
+         "metin": "La edición te permite abrir una puerta o una ventana en una pieza. Crea pasos sin reconstruir la estructura. Hazlo primero despacio y luego acelera."
+        },
+        {
+         "baslik": "Cuida tus materiales",
+         "metin": "Cada pieza gasta materiales. Levantar torres inútiles te deja sin ellos en mitad de un combate."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "No hay prisa: diez minutos de práctica de construcción al día enseñan más que horas probándola en combates."
+      }
+     ]
+    },
+    {
+     "id": "nadirlik-ve-silahlar",
+     "baslik": "Rareza de las armas y elección de objetos",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Según la documentación para desarrolladores de Epic, las armas se ordenan por rareza, y la rareza afecta al daño, la capacidad del cargador, la dispersión (spread) y el retroceso (recoil). La rareza se indica con la etiqueta y con el número de estrellas."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rareza",
+        "Estrellas (doc Epic)",
+        "Color habitual"
+       ],
+       "satirlar": [
+        [
+         "Common",
+         "1",
+         "Gris"
+        ],
+        [
+         "Uncommon",
+         "2",
+         "Verde"
+        ],
+        [
+         "Rare",
+         "3",
+         "Azul"
+        ],
+        [
+         "Epic",
+         "4",
+         "Morado"
+        ],
+        [
+         "Legendary",
+         "5",
+         "Dorado/naranja"
+        ],
+        [
+         "Mythic",
+         "6",
+         "Amarillo dorado"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "El número de estrellas y el orden vienen del documento de Epic; la columna de colores es conocimiento general del juego. Los tonos pueden variar con la interfaz de la temporada, así que lo fiable son las estrellas y la etiqueta."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**La rareza no es magia:** un arma más rara de la misma clase suele ser más fuerte; pero si aciertas bien con la que llevas, no abandones un sitio seguro por perseguir rareza.",
+        "**Variedad de alcance:** llevar un arma de corto alcance y otra de medio a largo es la combinación más fiable.",
+        "**La munición importa:** cada arma usa su propio tipo de munición; asegúrate de tener munición de repuesto antes de entrar en un combate.",
+        "**La lista cambia cada temporada:** Epic recupera o retira armas en cada temporada (en la v43.00 algunas armas volvieron al botín). Consulta las notas del parche de la temporada para ver el grupo actual."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "En lugar de memorizar nombres de armas, prueba cada arma nueva primero en una zona de práctica; sentir su daño y su retroceso vale más que conocer la lista."
       }
      ]
     },
@@ -1147,6 +1907,39 @@
        "metin": "Durante Treasure Hunters, Epic anunció eventos regulares como los Días del Capitán (1, 8, 12, 15 y 22 de noviembre), los lunes de maestría y las Horas del tesoro los sábados. Fortnite OG tiene su propia temporada; sabrás cuál te conviene tras unas partidas."
       },
       {
+       "tip": "tablo",
+       "basliklar": [
+        "Concepto",
+        "Información oficial"
+       ],
+       "satirlar": [
+        [
+         "Jugar",
+         "Gratis; \"Free\" en la página de la tienda con compras dentro de la aplicación (noviembre de 2026)."
+        ],
+        [
+         "Pase de batalla",
+         "800 V-Bucks; devuelve 800 V-Bucks al completarse (desde el cambio de precio de marzo de 2026)."
+        ],
+        [
+         "Paquetes de V-Bucks",
+         "Paquete más pequeño 800 V-Bucks / 8,99 USD; el mayor 12.500 V-Bucks / 89,99 USD (precios de EE. UU.)."
+        ],
+        [
+         "Fortnite Crew",
+         "11,99 USD al mes en la página de la tienda; la página incluye una nota de cambios para después del 5 de diciembre de 2026, así que lee las condiciones actuales antes de comprar."
+        ],
+        [
+         "Epic Rewards",
+         "20 % de recompensa en las compras hechas con el pago de Epic (noticia de Markets Insider)."
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Misiones y XP: según la página de la tienda de Epic, Zero Build comparte la progresión de XP y las misiones con Battle Royale. Así que juegues el modo que juegues, tu Pase de batalla se llena. Los objetivos propios de la temporada, como la Maestría de Sprites, se desbloquean cada semana en la pestaña Tesoro (notas del parche de Epic). Los escalones de recompensa de la temporada clasificatoria figuran como Gold, Platinum, Diamond, Elite y Unreal; la tabla completa de rangos inferiores y los umbrales de puntos no se han anunciado oficialmente."
+      },
+      {
        "tip": "liste",
        "ogeler": [
         "Mira primero los objetivos de la temporada y empieza por los que avanzan con facilidad.",
@@ -1157,6 +1950,45 @@
       {
        "tip": "ipucu",
        "metin": "El evento final del Capítulo 7 es el 5 de diciembre; decide tus compras en función de él y lee los detalles de lo que venga después en el anuncio oficial."
+      }
+     ]
+    },
+    {
+     "id": "ebeveyn-denetimleri",
+     "baslik": "Control parental, paso a paso",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La página de seguridad de Epic explica qué hacen los controles parentales. El orden siguiente sigue los ajustes de esa página; los nombres de los menús pueden variar con las versiones, así que compáralos con lo que ves en pantalla."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Abre la cuenta Epic del niño",
+         "metin": "En los ajustes de la cuenta de Epic abre la sección de Controles parentales y establece un PIN. No le des este PIN al niño."
+        },
+        {
+         "baslik": "Configura los permisos de pago",
+         "metin": "Exige el PIN para los pagos de Epic y elige si se pueden gastar V-Bucks en objetos aleatorios de pago. Esta opción no existe en algunas regiones."
+        },
+        {
+         "baslik": "Elige la clasificación por edad",
+         "metin": "Cada experiencia de Fortnite tiene su propia clasificación. Las experiencias por encima de la que elijas no se abren sin el PIN."
+        },
+        {
+         "baslik": "Permite o bloquea las herramientas creativas",
+         "metin": "El acceso al modo Creativo y a Unreal Editor for Fortnite (UEFN) se puede restringir por separado."
+        },
+        {
+         "baslik": "Ajusta el tiempo de juego",
+         "metin": "Según la página de Epic puedes elegir franjas horarias diarias para Fortnite y UEFN y fijar un límite de tiempo dentro de esa franja."
+        }
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Los pagos hechos en consola dependen de los ajustes parentales de la propia plataforma (PlayStation, Xbox, Nintendo, Steam); el PIN de pago de Epic solo cubre los pagos de Epic. Revisa también los ajustes de la plataforma en la que juega tu hijo."
       }
      ]
     },
@@ -1193,7 +2025,7 @@
        "tip": "liste",
        "ogeler": [
         "Activa la verificación en dos pasos en tu cuenta de Epic y escribe la contraseña solo en la página oficial de inicio de sesión de Epic.",
-        "Configura el control parental para los niños. Epic ofrece cuentas restringidas (Cabined) para niños sin configuración parental; revisa los permisos de chat y de gasto.",
+        "Configura el control parental para los niños (consulta la sección aparte); se pueden fijar un PIN de pago, una clasificación por edad y un tiempo de juego.",
         "No pulses enlaces que prometan V-Bucks gratis ni archivos que parezcan trucos del juego; se usan para robar cuentas.",
         "Antes de gastar, comprueba que el precio aparezca en tu moneda local y qué compras exactamente."
        ]

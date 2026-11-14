@@ -1,15 +1,11 @@
 {
  "oyun": "minecraft",
- "guncelleme": "2026-11-14",
+ "guncelleme": "2026-11-15",
  "surum": "Java Edition 26.3 / Bedrock Edition 26.50 (Wilderness Bound)",
  "kaynaklar": [
   {
    "url": "https://minecraft.wiki/w/Java_Edition_26.3",
    "ad": "Minecraft Wiki: Java Edition 26.3"
-  },
-  {
-   "url": "https://minecraft.wiki/w/Java_Edition",
-   "ad": "Minecraft Wiki: Java Edition"
   },
   {
    "url": "https://minecraft.wiki/w/Bedrock_Edition",
@@ -18,6 +14,26 @@
   {
    "url": "https://minecraft.wiki/w/Wilderness_Bound",
    "ad": "Minecraft Wiki: Wilderness Bound"
+  },
+  {
+   "url": "https://minecraft.wiki/w/Daylight_cycle",
+   "ad": "Minecraft Wiki: Daylight cycle"
+  },
+  {
+   "url": "https://minecraft.wiki/w/Nether_portal",
+   "ad": "Minecraft Wiki: Nether portal"
+  },
+  {
+   "url": "https://minecraft.wiki/w/Diamond_Ore",
+   "ad": "Minecraft Wiki: Diamond Ore"
+  },
+  {
+   "url": "https://minecraft.wiki/w/Realms",
+   "ad": "Minecraft Wiki: Realms"
+  },
+  {
+   "url": "https://www.minecraft.net/en-us/realms",
+   "ad": "Minecraft.net: Realms and Realms Plus"
   }
  ],
  "diller": {
@@ -109,7 +125,7 @@
       },
       {
        "tip": "p",
-       "metin": "**Fiyat (minecraft.wiki'deki ABD doları listesi):** Bedrock mobilde 6,99 dolar, Xbox ve PlayStation'da 19,99 dolar, Windows ve Switch'te 29,99 dolar. Türkiye fiyatı mağazada lira olarak gösterilir; satın almadan önce orada bakın, ben lira fiyatını doğrulayamadım. **Java sistem gereksinimi:** Windows 10 64 bit veya üstü, en az 4 çekirdekli işlemci (Core i3-10100 veya Ryzen 3 3100 düzeyi) ve Vulkan 1.3 destekleyen, en az 2 GB belleği olan bir ekran kartı (GTX 950 veya RX 460 düzeyi). Rahat oynamak için Core i5-12400 ve RTX 2060 düzeyi önerilir. Mod ekledikçe ihtiyaç artar."
+       "metin": "**Fiyat (minecraft.wiki'deki ABD doları listesi):** Bedrock mobilde 6,99 dolar, Xbox ve PlayStation'da 19,99 dolar, Windows ve Switch'te 29,99 dolar. Türkiye fiyatı mağazada lira olarak gösterilir; satın almadan önce orada bakın. **Java sistem gereksinimi:** Windows 10 64 bit veya üstü, en az 4 çekirdekli işlemci (Core i3-10100 veya Ryzen 3 3100 düzeyi) ve Vulkan 1.3 destekleyen, en az 2 GB belleği olan bir ekran kartı (GTX 950 veya RX 460 düzeyi). Rahat oynamak için Core i5-12400 ve RTX 2060 düzeyi önerilir. Mod ekledikçe ihtiyaç artar."
       },
       {
        "tip": "uyari",
@@ -250,6 +266,267 @@
       {
        "tip": "p",
        "metin": "Kural basit: bir şeyi ihtiyaç duyduğunuz yerde bulamıyorsanız deponuz dağınık demektir. Düzenli depo, ilerleme hızınızı bir iki kat artırır."
+      }
+     ]
+    },
+    {
+     "id": "alet-ve-maden",
+     "baslik": "Alet, zırh ve maden katmanları",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Minecraft'ta güç, malzeme basamaklarıyla artar. Her basamak bir öncekinin kazabildiği madenin ötesini açar: taş kazma demiri, demir kazma elması, elmas kazma ise obsidyeni kazar. Aşağıdaki tablo aynı sırayı dayanıklılıkla birlikte gösterir (kazma dayanıklılığı)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Malzeme",
+        "Kazma dayanıklılığı",
+        "Tam zırh puanı",
+        "Ne zaman?"
+       ],
+       "satirlar": [
+        [
+         "Ahşap",
+         "59",
+         "Yok",
+         "Yalnızca ilk dakikalar"
+        ],
+        [
+         "Taş",
+         "131",
+         "Yok",
+         "Demiri kazmak için"
+        ],
+        [
+         "Demir",
+         "250",
+         "15",
+         "İlk gerçek zırh ve kova"
+        ],
+        [
+         "Elmas",
+         "1561",
+         "20",
+         "Obsidyen ve büyü masası"
+        ],
+        [
+         "Netherite",
+         "2031",
+         "20 (+ ek sertlik)",
+         "Elmas eşyayı Nether'dan gelen külçeyle yükseltirsiniz"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Madenler dünyanın farklı yüksekliklerinde (Y koordinatı) sıklaşır. **Elmas** Y 16 ile Y -63 arasında oluşur ve en sık Y -58 ile -59 civarındadır (minecraft.wiki). Diğerleri için yaklaşık değerler aşağıdadır; sürümler arasında küçük kaymalar olabilir."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Maden",
+        "En bol yükseklik (yaklaşık)",
+        "Kullanımı"
+       ],
+       "satirlar": [
+        [
+         "Kömür",
+         "Y 96 çevresi",
+         "Yakıt ve meşale"
+        ],
+        [
+         "Demir",
+         "Y 16 çevresi ve dağlarda",
+         "Alet, zırh, kova"
+        ],
+        [
+         "Altın",
+         "Y -16 çevresi",
+         "Piglinlerle takas ve güç rayı"
+        ],
+        [
+         "Kızıltaş",
+         "Y -59 çevresi",
+         "Mekanizma ve devreler"
+        ],
+        [
+         "Elmas",
+         "Y -58 ve -59",
+         "En iyi alet ve zırh"
+        ],
+        [
+         "Eski enkaz (Nether)",
+         "Y 15 çevresi",
+         "Netherite külçesi"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Maden kazarken F3 ekranından (Java) veya koordinat ayarından (Bedrock) yüksekliğinizi izleyin. Elmas için Y -58'e inip yatay bir tünel açmak, rastgele dolaşmaktan çok daha verimlidir."
+      }
+     ]
+    },
+    {
+     "id": "nether-ve-end",
+     "baslik": "Nether ve End yolculuğu",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Nether yeraltı ateş dünyasıdır; oradaki bir adım dış dünyada yaklaşık sekiz adıma denk gelir, bu yüzden portal kurmak uzak yerlere gitmenin kısa yoludur. Nether portalı dikey bir obsidyen çerçevedir; en küçüğü 4x5 ölçüsündedir, köşe blokları gerekmez, yani en az 10 obsidyen yeter. En büyük portal 23x23 olabilir (minecraft.wiki)."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Obsidyen toplayın",
+         "metin": "Su kovasını lavın üzerine boşaltarak obsidyen oluşturun ve elmas kazmayla kırın; 10 parça toplayın."
+        },
+        {
+         "baslik": "Portalı kurup yakın",
+         "metin": "4 geniş, 5 yüksek çerçeveyi dikin ve çakmak taşı ile çakmakla içini yakın."
+        },
+        {
+         "baslik": "Nether'a hazırlıklı girin",
+         "metin": "Demir zırh, kılıç, ok, yanıcı olmayan bloklar, su kovası ve bol yiyecek alın. Altın zırh parçası giyerseniz piglinler size saldırmaz."
+        },
+        {
+         "baslik": "Kaleyi bulun",
+         "metin": "Nether kalesinde Blaze avlayıp Blaze çubuğu toplayın; çubuktan Blaze tozu yapılır."
+        },
+        {
+         "baslik": "Ender incisi toplayın",
+         "metin": "Enderman avlayın. Ender incisi ile Blaze tozu birleşip Ender Gözü olur."
+        },
+        {
+         "baslik": "Kaleyi bulup End'e geçin",
+         "metin": "Ender Gözünü fırlatın; uçtuğu yönde yeraltı kalesine ulaşırsınız. Portal çerçevesine gözleri yerleştirip End'e atlayın."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "End'de Ender Ejderhası ve onu iyileştiren kristaller sizi bekler. Kristalleri oklarla yok edin, sonra ejderhaya yakın dövüşle saldırın. Ejderhayı yenince çıkış portalı açılır ve ek bir geçit sizi dış End adalarına götürür; orada End şehirleri, Elytra ve Shulker sandıkları bulunur."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Nether'da yatakta uyumayın: yatak orada patlar. End'e girerken yanınızda bol blok (köprü ve korunma için) ve yavaş düşüş bulundurun; boşluğa düşmek eşyalarınızı kaybettirir."
+      }
+     ]
+    },
+    {
+     "id": "buyu-ve-ticaret",
+     "baslik": "Büyü, köylü ticareti ve çiftlik temelleri",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Büyü masası, eşyalara kalıcı güç ekler. Kitaplıklarla çevrelenmiş bir masada (etrafında 15 kitaplık, aralarında bir blok boşlukla) en yüksek seviyeye ulaşılır. Büyü için deneyim seviyesi ile lacivert taşı (lapis lazuli) gerekir."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Deneyim ve lapis toplayın",
+         "metin": "Maden, fırın ve yaratıklardan XP, madende ise lapis toplayın."
+        },
+        {
+         "baslik": "Kitaplıkları dizin",
+         "metin": "Kitaplıkları masanın etrafına halka şeklinde koyun; her biri büyü seçeneklerini güçlendirir."
+        },
+        {
+         "baslik": "Eşyayı seçip büyütün",
+         "metin": "Silah, zırh veya kazmayı masaya koyun, lapisi ekleyin ve seçeneği tıklayın."
+        },
+        {
+         "baslik": "Köylü ticaretini açın",
+         "metin": "Bir iş istasyonu bloğu (örneğin kitaplık için kütüphaneci) köylüye meslek verir. Meslekli köylüyle zümrüt karşılığı eşya takas edersiniz."
+        },
+        {
+         "baslik": "İyi alışverişleri kilitleyin",
+         "metin": "Bir ticaret yaptıkça köylü seviye atlar ve yeni takaslar açar. Zombi köylüyü iyileştirirseniz fiyatlar düşer."
+        }
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Buğday:** tohumla ekilir, suyun yanında hızlı büyür; ekmek ve hayvan yemi olur.",
+        "**Hayvan çiftliği:** inek, koyun ve tavuk, uygun yiyecekle çoğaltılır; sürekli et, yün ve süt sağlar.",
+        "**Köylü ticareti:** zümrüt, Mending gibi güçlü büyüler taşıyan kitapları satın almanın en güvenli yoludur."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Büyülü bir eşyayı örs ile birleştirip kitapla güçlendirebilirsiniz; Mending büyüsü deneyimle eşyanızı tamir eder. Büyüyü bilgisiz harcamak yerine önce kazmanızı büyüleyin."
+      }
+     ]
+    },
+    {
+     "id": "cok-oyunculu-ve-mod",
+     "baslik": "Çok oyunculu, Realms ve güvenli mod kurulumu",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Arkadaşlarla oynamanın üç yolu vardır: kendi sunucunuzu açmak, bir halka açık sunucuya girmek veya Mojang'ın barındırdığı **Realms** abonelik sunucusunu kullanmak. Aşağıdaki fiyatlar resmî Minecraft sayfasındaki ABD doları listesidir; Türkiye fiyatı sayfada ayrıca gösterilir."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Plan",
+        "Aylık fiyat",
+        "Aynı anda oyuncu"
+       ],
+       "satirlar": [
+        [
+         "Realms (Bedrock)",
+         "3,99 dolar",
+         "Siz ve 2 oyuncu"
+        ],
+        [
+         "Realms Plus (Bedrock)",
+         "7,99 dolar",
+         "Siz ve 10 oyuncu"
+        ],
+        [
+         "Realms (Java)",
+         "7,99 dolar",
+         "Siz ve 10 oyuncu"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "İlk Realms hesabı için 30 günlük ücretsiz deneme sunulur. Java Realms yalnızca Java oyuncularına, Bedrock Realms ise tüm Bedrock cihazlarına açıktır. Java'da ek olarak **mod** kullanabilirsiniz; modlar oyunu değiştiren dosyalardır ve yalnızca güvenilir kaynaktan alınmalıdır."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Resmî başlatıcıyı kurun",
+         "metin": "Minecraft Launcher ile Java'yı bir kez çalıştırıp oyunun açıldığını doğrulayın."
+        },
+        {
+         "baslik": "Mod yükleyiciyi seçin",
+         "metin": "Fabric, NeoForge ve Quilt bilinen açık kaynak yükleyicilerdir. Modun hangi yükleyiciyi ve hangi sürümü istediğini mod sayfasından okuyun."
+        },
+        {
+         "baslik": "Modu güvenilir yerden indirin",
+         "metin": "Yalnızca Modrinth veya CurseForge gibi tanınmış mod depolarını kullanın. Dosya mod için .jar uzantılı olmalı; .exe ise silin."
+        },
+        {
+         "baslik": "Mod klasörüne koyun",
+         "metin": "Dosyayı oyunun mods klasörüne atın, başlatıcıdan yüklü yükleyici profilini seçin ve oyunu açın."
+        },
+        {
+         "baslik": "Önce yedek alın",
+         "metin": "Modlu dünyada hata çıkarsa eski dünyanızı yedekten geri yükleyebilirsiniz."
+        }
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Mod diye gelen .exe dosyalarına, ücretsiz Minecoin vaat eden sitelere ve oyun hesabınızın şifresini isteyen bağlantılara asla güvenmeyin. Bunlar hesap ve bilgisayar çalma girişimleridir."
       }
      ]
     },
@@ -421,7 +698,7 @@
       },
       {
        "tip": "p",
-       "metin": "**Price (USD list on minecraft.wiki):** Bedrock is 6.99 dollars on mobile, 19.99 on Xbox and PlayStation, and 29.99 on Windows and Switch. Your local price is shown in the store, so check there; I could not verify local prices. **Java system requirements:** Windows 10 64-bit or newer, at least a 4-core processor (Core i3-10100 or Ryzen 3 3100 class) and a Vulkan 1.3 graphics card with at least 2 GB of memory (GTX 950 or RX 460 class). For comfortable play, a Core i5-12400 and RTX 2060 class machine is recommended. Mods raise the needs."
+       "metin": "**Price (USD list on minecraft.wiki):** Bedrock is 6.99 dollars on mobile, 19.99 on Xbox and PlayStation, and 29.99 on Windows and Switch. Your local price is shown in the store, so check there. **Java system requirements:** Windows 10 64-bit or newer, at least a 4-core processor (Core i3-10100 or Ryzen 3 3100 class) and a Vulkan 1.3 graphics card with at least 2 GB of memory (GTX 950 or RX 460 class). For comfortable play, a Core i5-12400 and RTX 2060 class machine is recommended. Mods raise the needs."
       },
       {
        "tip": "uyari",
@@ -562,6 +839,267 @@
       {
        "tip": "p",
        "metin": "The rule is simple: if you cannot find something where you need it, your storage is messy. Tidy storage can easily double your pace."
+      }
+     ]
+    },
+    {
+     "id": "alet-ve-maden",
+     "baslik": "Tools, armor and ore layers",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Power in Minecraft grows in material tiers. Each tier opens the next ore: a stone pickaxe mines iron, an iron pickaxe mines diamond, and a diamond pickaxe mines obsidian. The table shows the same order with durability (pickaxe durability)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Material",
+        "Pickaxe durability",
+        "Full armor points",
+        "When?"
+       ],
+       "satirlar": [
+        [
+         "Wood",
+         "59",
+         "None",
+         "First minutes only"
+        ],
+        [
+         "Stone",
+         "131",
+         "None",
+         "To mine iron"
+        ],
+        [
+         "Iron",
+         "250",
+         "15",
+         "First real armor and the bucket"
+        ],
+        [
+         "Diamond",
+         "1561",
+         "20",
+         "Obsidian and the enchanting table"
+        ],
+        [
+         "Netherite",
+         "2031",
+         "20 (+ extra toughness)",
+         "Upgrade diamond gear with an ingot from the Nether"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Ores concentrate at different heights (Y coordinate). **Diamond** generates between Y 16 and Y -63 and is most common around Y -58 and -59 (minecraft.wiki). Other values below are approximate and may shift slightly between versions."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Ore",
+        "Most common height (approx.)",
+        "Use"
+       ],
+       "satirlar": [
+        [
+         "Coal",
+         "Around Y 96",
+         "Fuel and torches"
+        ],
+        [
+         "Iron",
+         "Around Y 16 and in mountains",
+         "Tools, armor, bucket"
+        ],
+        [
+         "Gold",
+         "Around Y -16",
+         "Piglin trading and powered rails"
+        ],
+        [
+         "Redstone",
+         "Around Y -59",
+         "Machines and circuits"
+        ],
+        [
+         "Diamond",
+         "Y -58 and -59",
+         "Best tools and armor"
+        ],
+        [
+         "Ancient debris (Nether)",
+         "Around Y 15",
+         "Netherite ingots"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "While mining, watch your height on the F3 screen (Java) or the coordinates setting (Bedrock). Going down to Y -58 and digging a horizontal tunnel for diamond is far more efficient than wandering randomly."
+      }
+     ]
+    },
+    {
+     "id": "nether-ve-end",
+     "baslik": "The Nether and End journey",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The Nether is a fiery underworld where one step equals about eight steps in the overworld, so portals are a shortcut to faraway places. A Nether portal is a vertical obsidian frame; the smallest is 4x5, corners are not required, so 10 obsidian is the minimum. The largest portal can be 23x23 (minecraft.wiki)."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Collect obsidian",
+         "metin": "Pour water onto lava to make obsidian and break it with a diamond pickaxe; collect 10 pieces."
+        },
+        {
+         "baslik": "Build and light the portal",
+         "metin": "Stand a frame 4 wide and 5 tall, then light the inside with flint and steel."
+        },
+        {
+         "baslik": "Enter the Nether prepared",
+         "metin": "Bring iron armor, a sword, arrows, non-flammable blocks, a water bucket and plenty of food. A piece of gold armor keeps piglins from attacking you."
+        },
+        {
+         "baslik": "Find the fortress",
+         "metin": "Hunt Blazes in a Nether fortress for Blaze rods; rods make Blaze powder."
+        },
+        {
+         "baslik": "Collect Ender pearls",
+         "metin": "Hunt Endermen. An Ender pearl plus Blaze powder makes an Eye of Ender."
+        },
+        {
+         "baslik": "Find the stronghold and enter the End",
+         "metin": "Throw an Eye of Ender; follow the direction it flies to reach the underground stronghold. Place the eyes in the portal frame and jump into the End."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "In the End, the Ender Dragon and the crystals that heal it wait for you. Destroy the crystals with arrows, then fight the dragon in melee. After the dragon falls, the exit portal opens and a gateway takes you to the outer End islands, where End cities, the Elytra and shulker boxes are found."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Do not sleep in a bed in the Nether: it explodes there. When entering the End, bring plenty of blocks (for bridges and cover) and slow falling; falling into the void loses your items."
+      }
+     ]
+    },
+    {
+     "id": "buyu-ve-ticaret",
+     "baslik": "Enchanting, villager trading and farming basics",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The enchanting table adds permanent power to items. At a table surrounded by bookshelves (15 bookshelves around it with a one-block gap) you reach the highest level. Enchanting needs experience levels and lapis lazuli."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Collect XP and lapis",
+         "metin": "Gain XP from mining, smelting and mobs, and mine lapis underground."
+        },
+        {
+         "baslik": "Arrange bookshelves",
+         "metin": "Place bookshelves in a ring around the table; each one improves the enchanting options."
+        },
+        {
+         "baslik": "Choose the item and enchant",
+         "metin": "Put a weapon, armor or pickaxe in the table, add the lapis and click an option."
+        },
+        {
+         "baslik": "Open villager trading",
+         "metin": "A workstation block (for example a lectern for a librarian) gives a villager a profession. A villager with a profession trades items for emeralds."
+        },
+        {
+         "baslik": "Lock in good trades",
+         "metin": "As you trade, the villager levels up and opens new trades. If you cure a zombie villager, prices drop."
+        }
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Wheat:** planted with seeds, grows fast next to water; makes bread and animal feed.",
+        "**Animal farm:** cows, sheep and chickens breed with the right food; they give steady meat, wool and milk.",
+        "**Villager trading:** emeralds are the safest way to buy books with strong enchantments such as Mending."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "You can combine an enchanted item with a book at an anvil; Mending repairs your item with experience. Enchant your pickaxe first instead of spending enchants without a plan."
+      }
+     ]
+    },
+    {
+     "id": "cok-oyunculu-ve-mod",
+     "baslik": "Multiplayer, Realms and safe mod setup",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "There are three ways to play with friends: run your own server, join a public server, or use **Realms**, the subscription server hosted by Mojang. The prices below are the US dollar list on the official Minecraft page; the Turkish price is shown separately on the page."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Plan",
+        "Monthly price",
+        "Players at once"
+       ],
+       "satirlar": [
+        [
+         "Realms (Bedrock)",
+         "US$3.99",
+         "You and 2 players"
+        ],
+        [
+         "Realms Plus (Bedrock)",
+         "US$7.99",
+         "You and 10 players"
+        ],
+        [
+         "Realms (Java)",
+         "US$7.99",
+         "You and 10 players"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "The first Realms account gets a 30-day free trial. Java Realms is open only to Java players, while Bedrock Realms is open to all Bedrock devices. On Java you can also use **mods**; mods are files that change the game and should only come from trusted sources."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Install the official launcher",
+         "metin": "Run Java once with the Minecraft Launcher and confirm the game opens."
+        },
+        {
+         "baslik": "Pick a mod loader",
+         "metin": "Fabric, NeoForge and Quilt are well-known open-source loaders. Read on the mod page which loader and which version the mod needs."
+        },
+        {
+         "baslik": "Download the mod from a trusted place",
+         "metin": "Use only well-known mod repositories such as Modrinth or CurseForge. A mod file should end in .jar; delete it if it is an .exe."
+        },
+        {
+         "baslik": "Drop it in the mods folder",
+         "metin": "Put the file in the game's mods folder, choose the loader profile in the launcher and start the game."
+        },
+        {
+         "baslik": "Back up first",
+         "metin": "If a modded world breaks, you can restore the old world from the backup."
+        }
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Never trust .exe files sold as mods, sites promising free Minecoins, or links asking for your game account password. These are attempts to steal your account and computer."
       }
      ]
     },
@@ -733,7 +1271,7 @@
       },
       {
        "tip": "p",
-       "metin": "**Prix (liste en dollars américains de minecraft.wiki) :** Bedrock coûte 6,99 dollars sur mobile, 19,99 sur Xbox et PlayStation, et 29,99 sur Windows et Switch. Le prix local s'affiche dans la boutique, vérifiez-le là ; je n'ai pas pu confirmer les prix locaux. **Configuration requise pour Java :** Windows 10 64 bits ou plus récent, un processeur à au moins 4 cœurs (de la classe Core i3-10100 ou Ryzen 3 3100) et une carte graphique compatible Vulkan 1.3 avec au moins 2 Go de mémoire (classe GTX 950 ou RX 460). Pour jouer confortablement, une machine de la classe Core i5-12400 et RTX 2060 est conseillée. Les mods augmentent les besoins."
+       "metin": "**Prix (liste en dollars américains de minecraft.wiki) :** Bedrock coûte 6,99 dollars sur mobile, 19,99 sur Xbox et PlayStation, et 29,99 sur Windows et Switch. Le prix local s'affiche dans la boutique, vérifiez-le là. **Configuration requise pour Java :** Windows 10 64 bits ou plus récent, un processeur à au moins 4 cœurs (de la classe Core i3-10100 ou Ryzen 3 3100) et une carte graphique compatible Vulkan 1.3 avec au moins 2 Go de mémoire (classe GTX 950 ou RX 460). Pour jouer confortablement, une machine de la classe Core i5-12400 et RTX 2060 est conseillée. Les mods augmentent les besoins."
       },
       {
        "tip": "uyari",
@@ -874,6 +1412,267 @@
       {
        "tip": "p",
        "metin": "La règle est simple : si vous ne trouvez pas quelque chose là où il le faut, votre stockage est en désordre. Un stockage rangé peut facilement doubler votre rythme."
+      }
+     ]
+    },
+    {
+     "id": "alet-ve-maden",
+     "baslik": "Outils, armures et couches de minerais",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La puissance dans Minecraft progresse par paliers de matériaux. Chaque palier ouvre le minerai suivant : la pioche en pierre mine le fer, la pioche en fer mine le diamant et la pioche en diamant mine l'obsidienne. Le tableau montre le même ordre avec la durabilité (durabilité de la pioche, connaissance personnelle)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Matériau",
+        "Durabilité de la pioche",
+        "Points d'armure complète",
+        "Quand ?"
+       ],
+       "satirlar": [
+        [
+         "Bois",
+         "59",
+         "Aucun",
+         "Seulement les premières minutes"
+        ],
+        [
+         "Pierre",
+         "131",
+         "Aucun",
+         "Pour miner le fer"
+        ],
+        [
+         "Fer",
+         "250",
+         "15",
+         "Première vraie armure et le seau"
+        ],
+        [
+         "Diamant",
+         "1561",
+         "20",
+         "Obsidienne et table d'enchantement"
+        ],
+        [
+         "Netherite",
+         "2031",
+         "20 (+ robustesse en plus)",
+         "On améliore l'équipement en diamant avec un lingot du Nether"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Les minerais se concentrent à différentes hauteurs (coordonnée Y). Le **diamant** apparaît entre Y 16 et Y -63 et il est le plus fréquent autour de Y -58 et -59 (minecraft.wiki). Les autres valeurs sont approximatives et peuvent légèrement varier selon la version."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Minerai",
+        "Hauteur la plus riche (approx.)",
+        "Usage"
+       ],
+       "satirlar": [
+        [
+         "Charbon",
+         "Autour de Y 96",
+         "Combustible et torches"
+        ],
+        [
+         "Fer",
+         "Autour de Y 16 et en montagne",
+         "Outils, armure, seau"
+        ],
+        [
+         "Or",
+         "Autour de Y -16",
+         "Troc avec les piglins et rails propulsés"
+        ],
+        [
+         "Redstone",
+         "Autour de Y -59",
+         "Mécanismes et circuits"
+        ],
+        [
+         "Diamant",
+         "Y -58 et -59",
+         "Meilleurs outils et armures"
+        ],
+        [
+         "Débris antiques (Nether)",
+         "Autour de Y 15",
+         "Lingots de netherite"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "En minant, surveillez votre hauteur sur l'écran F3 (Java) ou dans le réglage des coordonnées (Bedrock). Descendre à Y -58 et creuser un tunnel horizontal pour le diamant est bien plus efficace que d'errer au hasard."
+      }
+     ]
+    },
+    {
+     "id": "nether-ve-end",
+     "baslik": "Voyage vers le Nether et l'End",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Le Nether est un monde souterrain en feu où un pas équivaut à environ huit pas dans le monde normal ; les portails sont donc un raccourci vers des lieux lointains. Un portail du Nether est un cadre vertical en obsidienne ; le plus petit mesure 4x5, les coins ne sont pas nécessaires, donc 10 obsidiennes suffisent. Le plus grand peut atteindre 23x23 (minecraft.wiki)."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Récoltez de l'obsidienne",
+         "metin": "Versez de l'eau sur de la lave pour faire de l'obsidienne et cassez-la à la pioche en diamant ; récoltez-en 10."
+        },
+        {
+         "baslik": "Construisez et allumez le portail",
+         "metin": "Dressez un cadre de 4 de large et 5 de haut, puis allumez l'intérieur avec un briquet."
+        },
+        {
+         "baslik": "Entrez préparé dans le Nether",
+         "metin": "Emportez une armure en fer, une épée, des flèches, des blocs ininflammables, un seau d'eau et beaucoup de nourriture. Une pièce d'armure en or évite l'attaque des piglins."
+        },
+        {
+         "baslik": "Trouvez la forteresse",
+         "metin": "Chassez les Blazes dans une forteresse du Nether pour obtenir des bâtons de Blaze ; les bâtons donnent de la poudre de Blaze."
+        },
+        {
+         "baslik": "Récoltez des perles d'Ender",
+         "metin": "Chassez les Endermen. Une perle d'Ender et de la poudre de Blaze forment un œil d'Ender."
+        },
+        {
+         "baslik": "Trouvez la forteresse souterraine et entrez dans l'End",
+         "metin": "Lancez un œil d'Ender ; suivez sa direction jusqu'à la forteresse souterraine. Placez les yeux dans le cadre du portail et sautez dans l'End."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Dans l'End, l'Ender Dragon et les cristaux qui le soignent vous attendent. Détruisez les cristaux avec des flèches, puis combattez le dragon au corps à corps. Une fois le dragon vaincu, le portail de sortie s'ouvre et un passage mène aux îles extérieures de l'End, où se trouvent les villes de l'End, l'Elytra et les boîtes de Shulker."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Ne dormez pas dans un lit au Nether : il y explose. En entrant dans l'End, emportez beaucoup de blocs (pour les ponts et l'abri) et de la chute lente ; tomber dans le vide fait perdre vos objets."
+      }
+     ]
+    },
+    {
+     "id": "buyu-ve-ticaret",
+     "baslik": "Enchantement, commerce avec les villageois et bases de l'agriculture",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La table d'enchantement ajoute une puissance permanente aux objets. Avec une table entourée d'étagères (15 étagères autour, avec un bloc de vide) on atteint le niveau maximal. L'enchantement demande des niveaux d'expérience et du lapis-lazuli."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Récoltez XP et lapis",
+         "metin": "Gagnez de l'XP en minant, en fondant et en tuant des créatures, et minez du lapis sous terre."
+        },
+        {
+         "baslik": "Disposez les étagères",
+         "metin": "Placez les étagères en anneau autour de la table ; chacune améliore les choix d'enchantement."
+        },
+        {
+         "baslik": "Choisissez l'objet et enchantez",
+         "metin": "Mettez une arme, une armure ou une pioche dans la table, ajoutez le lapis et cliquez sur une option."
+        },
+        {
+         "baslik": "Ouvrez le commerce avec les villageois",
+         "metin": "Un bloc de métier (par exemple un lutrin pour un bibliothécaire) donne une profession au villageois. Un villageois avec un métier échange des objets contre des émeraudes."
+        },
+        {
+         "baslik": "Verrouillez les bonnes affaires",
+         "metin": "En commerçant, le villageois monte de niveau et débloque de nouveaux échanges. Si vous guérissez un villageois zombie, les prix baissent."
+        }
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Blé :** se plante avec des graines, pousse vite près de l'eau ; donne du pain et de la nourriture pour animaux.",
+        "**Ferme d'animaux :** vaches, moutons et poules se reproduisent avec la bonne nourriture ; ils fournissent viande, laine et lait.",
+        "**Commerce avec les villageois :** les émeraudes sont le moyen le plus sûr d'acheter des livres aux enchantements puissants comme Raccommodage."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Vous pouvez combiner un objet enchanté avec un livre à l'enclume ; Raccommodage répare votre objet avec l'expérience. Enchantez d'abord votre pioche au lieu de dépenser les enchantements sans plan."
+      }
+     ]
+    },
+    {
+     "id": "cok-oyunculu-ve-mod",
+     "baslik": "Multijoueur, Realms et installation sûre de mods",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Il y a trois façons de jouer avec des amis : ouvrir votre propre serveur, rejoindre un serveur public ou utiliser **Realms**, le serveur par abonnement hébergé par Mojang. Les prix ci-dessous sont la liste en dollars américains de la page officielle de Minecraft ; le prix en euros s'affiche séparément sur la page."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Formule",
+        "Prix mensuel",
+        "Joueurs en même temps"
+       ],
+       "satirlar": [
+        [
+         "Realms (Bedrock)",
+         "3,99 dollars",
+         "Vous et 2 joueurs"
+        ],
+        [
+         "Realms Plus (Bedrock)",
+         "7,99 dollars",
+         "Vous et 10 joueurs"
+        ],
+        [
+         "Realms (Java)",
+         "7,99 dollars",
+         "Vous et 10 joueurs"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Le premier compte Realms bénéficie d'un essai gratuit de 30 jours. Java Realms n'est ouvert qu'aux joueurs Java, alors que Bedrock Realms l'est à tous les appareils Bedrock. Sur Java, vous pouvez aussi utiliser des **mods** ; ce sont des fichiers qui modifient le jeu et ils ne doivent venir que de sources de confiance."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Installez le lanceur officiel",
+         "metin": "Lancez Java une fois avec le Minecraft Launcher et vérifiez que le jeu s'ouvre."
+        },
+        {
+         "baslik": "Choisissez un chargeur de mods",
+         "metin": "Fabric, NeoForge et Quilt sont des chargeurs open source connus. Lisez sur la page du mod quel chargeur et quelle version il demande."
+        },
+        {
+         "baslik": "Téléchargez le mod au bon endroit",
+         "metin": "N'utilisez que des dépôts de mods connus comme Modrinth ou CurseForge. Un mod doit finir en .jar ; supprimez-le si c'est un .exe."
+        },
+        {
+         "baslik": "Mettez-le dans le dossier mods",
+         "metin": "Placez le fichier dans le dossier mods du jeu, choisissez le profil du chargeur dans le lanceur et lancez le jeu."
+        },
+        {
+         "baslik": "Sauvegardez d'abord",
+         "metin": "Si un monde moddé plante, vous pouvez restaurer l'ancien monde depuis la sauvegarde."
+        }
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Ne faites jamais confiance aux fichiers .exe vendus comme mods, aux sites promettant des Minecoins gratuits ou aux liens demandant le mot de passe de votre compte de jeu. Ce sont des tentatives de vol de compte et d'ordinateur."
       }
      ]
     },
@@ -1045,7 +1844,7 @@
       },
       {
        "tip": "p",
-       "metin": "**Precio (lista en dólares de minecraft.wiki):** Bedrock cuesta 6,99 dólares en móvil, 19,99 en Xbox y PlayStation, y 29,99 en Windows y Switch. El precio local aparece en la tienda, compruébalo allí; no pude verificar los precios locales. **Requisitos de Java:** Windows 10 de 64 bits o superior, un procesador de al menos 4 núcleos (clase Core i3-10100 o Ryzen 3 3100) y una tarjeta gráfica compatible con Vulkan 1.3 con al menos 2 GB de memoria (clase GTX 950 o RX 460). Para jugar con comodidad se recomienda un equipo de clase Core i5-12400 y RTX 2060. Los mods aumentan las necesidades."
+       "metin": "**Precio (lista en dólares de minecraft.wiki):** Bedrock cuesta 6,99 dólares en móvil, 19,99 en Xbox y PlayStation, y 29,99 en Windows y Switch. El precio local aparece en la tienda, compruébalo allí. **Requisitos de Java:** Windows 10 de 64 bits o superior, un procesador de al menos 4 núcleos (clase Core i3-10100 o Ryzen 3 3100) y una tarjeta gráfica compatible con Vulkan 1.3 con al menos 2 GB de memoria (clase GTX 950 o RX 460). Para jugar con comodidad se recomienda un equipo de clase Core i5-12400 y RTX 2060. Los mods aumentan las necesidades."
       },
       {
        "tip": "uyari",
@@ -1186,6 +1985,267 @@
       {
        "tip": "p",
        "metin": "La regla es sencilla: si no encuentras algo donde lo necesitas, tu almacén está desordenado. Un almacén ordenado puede duplicar fácilmente tu ritmo."
+      }
+     ]
+    },
+    {
+     "id": "alet-ve-maden",
+     "baslik": "Herramientas, armadura y capas de minerales",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "El poder en Minecraft crece por niveles de material. Cada nivel abre el siguiente mineral: el pico de piedra mina hierro, el de hierro mina diamante y el de diamante mina obsidiana. La tabla muestra el mismo orden con la durabilidad (durabilidad del pico)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Material",
+        "Durabilidad del pico",
+        "Puntos de armadura completa",
+        "¿Cuándo?"
+       ],
+       "satirlar": [
+        [
+         "Madera",
+         "59",
+         "Ninguno",
+         "Solo los primeros minutos"
+        ],
+        [
+         "Piedra",
+         "131",
+         "Ninguno",
+         "Para minar hierro"
+        ],
+        [
+         "Hierro",
+         "250",
+         "15",
+         "Primera armadura de verdad y el cubo"
+        ],
+        [
+         "Diamante",
+         "1561",
+         "20",
+         "Obsidiana y mesa de encantamientos"
+        ],
+        [
+         "Netherita",
+         "2031",
+         "20 (+ dureza extra)",
+         "Mejoras el equipo de diamante con un lingote del Nether"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Los minerales se concentran a distintas alturas (coordenada Y). El **diamante** se genera entre Y 16 e Y -63 y es más común hacia Y -58 y -59 (minecraft.wiki). Los demás valores son aproximados y pueden variar un poco entre versiones."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Mineral",
+        "Altura más abundante (aprox.)",
+        "Uso"
+       ],
+       "satirlar": [
+        [
+         "Carbón",
+         "Alrededor de Y 96",
+         "Combustible y antorchas"
+        ],
+        [
+         "Hierro",
+         "Alrededor de Y 16 y en montañas",
+         "Herramientas, armadura, cubo"
+        ],
+        [
+         "Oro",
+         "Alrededor de Y -16",
+         "Trueque con piglins y raíles propulsados"
+        ],
+        [
+         "Redstone",
+         "Alrededor de Y -59",
+         "Mecanismos y circuitos"
+        ],
+        [
+         "Diamante",
+         "Y -58 y -59",
+         "Mejores herramientas y armadura"
+        ],
+        [
+         "Escombros antiguos (Nether)",
+         "Alrededor de Y 15",
+         "Lingotes de netherita"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Al minar, vigila tu altura en la pantalla F3 (Java) o en el ajuste de coordenadas (Bedrock). Bajar a Y -58 y cavar un túnel horizontal para el diamante es mucho más eficaz que vagar al azar."
+      }
+     ]
+    },
+    {
+     "id": "nether-ve-end",
+     "baslik": "Viaje al Nether y al End",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "El Nether es un inframundo de fuego donde un paso equivale a unos ocho pasos del mundo normal, así que los portales son un atajo a lugares lejanos. Un portal del Nether es un marco vertical de obsidiana; el más pequeño mide 4x5, las esquinas no hacen falta, por lo que bastan 10 de obsidiana. El mayor puede medir 23x23 (minecraft.wiki)."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Consigue obsidiana",
+         "metin": "Vierte agua sobre lava para hacer obsidiana y rómpela con un pico de diamante; reúne 10 bloques."
+        },
+        {
+         "baslik": "Construye y enciende el portal",
+         "metin": "Levanta un marco de 4 de ancho y 5 de alto y enciende el interior con un mechero."
+        },
+        {
+         "baslik": "Entra preparado al Nether",
+         "metin": "Lleva armadura de hierro, espada, flechas, bloques no inflamables, un cubo de agua y mucha comida. Una pieza de armadura de oro evita que los piglins te ataquen."
+        },
+        {
+         "baslik": "Encuentra la fortaleza",
+         "metin": "Caza Blazes en una fortaleza del Nether para conseguir varas de Blaze; las varas dan polvo de Blaze."
+        },
+        {
+         "baslik": "Reúne perlas de Ender",
+         "metin": "Caza Endermen. Una perla de Ender más polvo de Blaze forman un ojo de Ender."
+        },
+        {
+         "baslik": "Encuentra la fortaleza subterránea y entra al End",
+         "metin": "Lanza un ojo de Ender; sigue la dirección en que vuela hasta la fortaleza subterránea. Coloca los ojos en el marco del portal y salta al End."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "En el End te esperan el Dragón del End y los cristales que lo curan. Destruye los cristales con flechas y luego combate al dragón cuerpo a cuerpo. Al caer el dragón se abre el portal de salida y una puerta lleva a las islas exteriores del End, donde hay ciudades del End, la Elytra y cajas de Shulker."
+      },
+      {
+       "tip": "uyari",
+       "metin": "No duermas en una cama en el Nether: allí explota. Al entrar al End lleva muchos bloques (para puentes y cobertura) y caída lenta; caer al vacío te hace perder los objetos."
+      }
+     ]
+    },
+    {
+     "id": "buyu-ve-ticaret",
+     "baslik": "Encantamientos, comercio con aldeanos y bases de la granja",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La mesa de encantamientos añade poder permanente a los objetos. En una mesa rodeada de estanterías (15 estanterías alrededor, con un bloque de hueco) se alcanza el nivel más alto. Encantar necesita niveles de experiencia y lapislázuli."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Consigue XP y lapislázuli",
+         "metin": "Gana XP minando, fundiendo y con criaturas, y mina lapislázuli bajo tierra."
+        },
+        {
+         "baslik": "Coloca las estanterías",
+         "metin": "Pon estanterías en anillo alrededor de la mesa; cada una mejora las opciones de encantamiento."
+        },
+        {
+         "baslik": "Elige el objeto y encanta",
+         "metin": "Pon un arma, armadura o pico en la mesa, añade el lapislázuli y pulsa una opción."
+        },
+        {
+         "baslik": "Abre el comercio con aldeanos",
+         "metin": "Un bloque de trabajo (por ejemplo un atril para un bibliotecario) da profesión al aldeano. Un aldeano con profesión cambia objetos por esmeraldas."
+        },
+        {
+         "baslik": "Fija los buenos tratos",
+         "metin": "Al comerciar, el aldeano sube de nivel y abre nuevos intercambios. Si curas a un aldeano zombi, bajan los precios."
+        }
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Trigo:** se planta con semillas, crece rápido junto al agua; da pan y comida para animales.",
+        "**Granja de animales:** vacas, ovejas y gallinas se crían con la comida adecuada; dan carne, lana y leche constantes.",
+        "**Comercio con aldeanos:** las esmeraldas son la forma más segura de comprar libros con encantamientos fuertes como Reparación."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Puedes combinar un objeto encantado con un libro en un yunque; Reparación arregla tu objeto con experiencia. Encanta primero tu pico en lugar de gastar encantamientos sin plan."
+      }
+     ]
+    },
+    {
+     "id": "cok-oyunculu-ve-mod",
+     "baslik": "Multijugador, Realms e instalación segura de mods",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Hay tres formas de jugar con amigos: abrir tu propio servidor, entrar a uno público o usar **Realms**, el servidor por suscripción alojado por Mojang. Los precios de abajo son la lista en dólares de la página oficial de Minecraft; el precio en euros aparece aparte en la página."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Plan",
+        "Precio mensual",
+        "Jugadores a la vez"
+       ],
+       "satirlar": [
+        [
+         "Realms (Bedrock)",
+         "3,99 dólares",
+         "Tú y 2 jugadores"
+        ],
+        [
+         "Realms Plus (Bedrock)",
+         "7,99 dólares",
+         "Tú y 10 jugadores"
+        ],
+        [
+         "Realms (Java)",
+         "7,99 dólares",
+         "Tú y 10 jugadores"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "La primera cuenta de Realms tiene una prueba gratuita de 30 días. Java Realms es solo para jugadores de Java, mientras que Bedrock Realms está abierto a todos los dispositivos Bedrock. En Java también puedes usar **mods**; son archivos que cambian el juego y solo deben venir de fuentes de confianza."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Instala el lanzador oficial",
+         "metin": "Ejecuta Java una vez con el Minecraft Launcher y confirma que el juego abre."
+        },
+        {
+         "baslik": "Elige un cargador de mods",
+         "metin": "Fabric, NeoForge y Quilt son cargadores de código abierto conocidos. Lee en la página del mod qué cargador y qué versión necesita."
+        },
+        {
+         "baslik": "Descarga el mod de un sitio fiable",
+         "metin": "Usa solo repositorios conocidos como Modrinth o CurseForge. Un mod debe terminar en .jar; bórralo si es un .exe."
+        },
+        {
+         "baslik": "Ponlo en la carpeta mods",
+         "metin": "Mete el archivo en la carpeta mods del juego, elige el perfil del cargador en el lanzador e inicia el juego."
+        },
+        {
+         "baslik": "Haz una copia antes",
+         "metin": "Si un mundo con mods falla, puedes restaurar el mundo anterior desde la copia."
+        }
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Nunca confíes en archivos .exe vendidos como mods, en sitios que prometen Minecoins gratis ni en enlaces que piden la contraseña de tu cuenta de juego. Son intentos de robar tu cuenta y tu ordenador."
       }
      ]
     },
