@@ -246,3 +246,13 @@ footer p a[href^="https"]{display:inline;min-height:0}
   *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
   .card:has(a):hover,.btn:hover{transform:none}
 }
+
+/* Oyun haberleri (tools/sosyal_derle.py) */
+.oh-tur{display:block;margin:0 0 var(--s-1);font-size:var(--fs-xs);font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--accent-2)}
+.tl strong a{color:var(--text);text-decoration:none}
+.tl strong a:hover{color:var(--link-hover);text-decoration:underline;text-underline-offset:.2em}
+.oh-haber{max-width:calc(var(--measure) + 2*var(--s-5))}
+.oh-yol{font-size:var(--fs-sm);color:var(--text-muted);margin-bottom:var(--s-3)}
+.oh-kart{display:block;width:100%;max-width:var(--measure);height:auto;margin:0 0 var(--s-5);border-radius:var(--r-lg);border:1px solid var(--border)}
+.oh-giris{font-size:var(--fs-lg);color:var(--text)}
+.oh-etiket{font-size:var(--fs-sm);color:var(--text-muted)}

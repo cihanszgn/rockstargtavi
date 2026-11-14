@@ -1,0 +1,56 @@
+# Yeni oyun haberlerini X, Reddit ve Instagram hesaplarına paylaşır.
+# Şifreler: Settings → Secrets and variables → Actions (tools/sosyal_kurulum.py ekler).
+# Şifresi girilmemiş hesap atlanır; hiç hesap yoksa iş boşta biter.
+name: Sosyal paylasim
+
+on:
+  push:
+    branches: [main]
+    paths: [data/icerik.json]
+  schedule:
+    - cron: "17 7,10,13,16,19 * * *"   # Türkiye saatiyle 10:17, 13:17, 16:17, 19:17, 22:17
+  workflow_dispatch:
+    inputs:
+      deneme:
+        description: "Yalnız dene (hiçbir şey gönderme)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sosyal-paylasim
+  cancel-in-progress: false
+
+jobs:
+  paylas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Site yayına çıksın diye bekle
+        if: github.event_name == 'push'
+        run: sleep 120
+
+      - name: Paylaş
+        env:
+          SOSYAL_SIRLAR: ${{ toJSON(secrets) }}
+          DENEME: ${{ inputs.deneme && '--dry-run' || '' }}
+        run: python tools/sosyal_yayinla.py $DENEME
+
+      - name: Gönderi kaydını depoya yaz
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sosyal/gonderilenler.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "sosyal: gönderi kaydı"
+            for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
+          fi

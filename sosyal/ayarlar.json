@@ -1,0 +1,15 @@
+{
+ "_aciklama": "Sosyal paylaşım ayarları. Bir platformu kapatmak için false yap. Şifreler burada DEĞİL, GitHub Secrets'ta durur (tools/sosyal_kurulum.py ekler).",
+ "en_eski_gun": 3,
+ "calisma_basina_en_fazla": 1,
+ "gunluk_en_fazla": {"x": 2, "reddit": 2, "instagram": 2},
+ "x_baglanti": "gonderide",
+ "instagram_api_surumu": "v27.0",
+ "hesaplar": {
+  "tr": {"x": true, "reddit": true, "instagram": true},
+  "en": {"x": true, "reddit": true, "instagram": true},
+  "fr": {"x": false, "reddit": false, "instagram": false},
+  "es": {"x": false, "reddit": false, "instagram": false}
+ },
+ "reddit_topluluk": {}
+}

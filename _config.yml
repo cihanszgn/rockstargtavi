@@ -1,0 +1,6 @@
+# GitHub Pages (Jekyll): sitenin parçası olmayan klasörleri yayına koyma.
+exclude:
+  - tools
+  - data
+  - sosyal
+  - README.md
