@@ -1,0 +1,1313 @@
+{
+ "oyun": "diablo-4",
+ "guncelleme": "2026-11-14",
+ "surum": "Sezon 15 Hell's Legacy (yama 3.2.1), Lord of Hatred genişlemesi (28 Nisan 2026)",
+ "kaynaklar": [
+  {
+   "url": "https://diablo4.blizzard.com/en-us/lord-of-hatred",
+   "ad": "Blizzard: Diablo IV Lord of Hatred"
+  },
+  {
+   "url": "https://www.polygon.com/diablo-4-amazon-class-season-hell-legacy-blizzcon-2026/",
+   "ad": "Polygon: Diablo 4 Amazon class and Season Hell's Legacy"
+  },
+  {
+   "url": "https://www.icy-veins.com/d4/news/diablo-4-lord-of-hatred-overview/",
+   "ad": "Icy Veins: Lord of Hatred overview"
+  },
+  {
+   "url": "https://www.mobalytics.gg/diablo-4/guides/everything-lord-of-hatred",
+   "ad": "Mobalytics: Everything about Lord of Hatred"
+  },
+  {
+   "url": "https://maxroll.gg/d4",
+   "ad": "Maxroll: Diablo 4"
+  },
+  {
+   "url": "https://www.xbox.com/en-US/games/diablo-iv",
+   "ad": "Xbox: Diablo IV"
+  },
+  {
+   "url": "https://us.shop.battle.net/en-us/product/diablo-iv-lord-of-hatred",
+   "ad": "Battle.net Shop: Diablo IV Lord of Hatred"
+  }
+ ],
+ "diller": {
+  "tr": {
+   "baslik": "Diablo 4 Başlangıç Rehberi: Lord of Hatred Sonrası (2026)",
+   "ozet": "Diablo 4'e bugün başlayanlar için hangi sürümü alacağınızı, sınıf seçimini, ilk saatleri ve 70. seviye sonrası oyun sonunu anlatan rehber. Güncel sezon: 15 (Hell's Legacy).",
+   "kunye": [
+    {
+     "ad": "Tür",
+     "deger": "Aksiyon rol yapma oyunu (ARPG, loot odaklı)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "PC (Battle.net, Steam), Xbox, PlayStation"
+    },
+    {
+     "ad": "Fiyat modeli",
+     "deger": "Ücretli oyun ve genişlemeler; Platinum ile kozmetik mağazası isteğe bağlı"
+    },
+    {
+     "ad": "Güncel sürüm",
+     "deger": "Sezon 15 Hell's Legacy (yama 3.2.1); Lord of Hatred genişlemesi 28 Nisan 2026"
+    },
+    {
+     "ad": "Türkçe desteği",
+     "deger": "Metin ve altyazı desteği var gibi görünüyor, resmî dil listesi doğrulanmadı"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "Diablo 4 2026'da nerede?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4, karanlık bir dünyada canavar kesip eşya topladığınız, loot odaklı bir aksiyon rol yapma oyunudur. Hikâye Sanctuary diyarında geçer; asıl eğlence karakterinizi güçlendiren eşya ve beceri kombinasyonlarını bulmaktır."
+      },
+      {
+       "tip": "p",
+       "metin": "Oyun sezonlarla ilerler. **Sezon 15, Hell's Legacy** 15 Eylül 2026'da başladı (yama 3.2.1, serinin 30. yıl kutlamasıyla ve Witcher çapraz içeriğiyle). Büyük değişiklik **Lord of Hatred** genişlemesiydi (28 Nisan 2026): iki yeni sınıf, tüm sınıflar için yenilenen beceri ağaçları, yeni Loot Filter (eşya süzgeci), geri dönen Horadric Cube, War Plans (yapılandırılmış endgame rotası), seviye sınırının 60'tan 70'e çıkması ve Torment 1-12 zorluk basamakları. Sezon 16 için deneme sunucusu (PTR) Ekim sonunda çalıştı ama çıkış tarihi henüz açıklanmadı; tarih uydurmayın."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Sezon değişince karakterler sıfırlanır ve herkes aynı çizgiden başlar; bu yeni oyuncu için en iyi giriş zamanıdır. Sezon karakterleriniz sezon sonunda kalıcı (Eternal) tarafa aktarılır."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Başlamadan önce: hangi sürümü alacaksınız?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4 için Battle.net hesabı ve sürekli internet bağlantısı gerekir; oyun çevrimiçidir, tek başına oynasanız bile. PC'de Battle.net veya Steam'den, konsolda Xbox ve PlayStation mağazalarından alınır. Xbox sayfasında Game Pass'ten de söz ediliyor; kapsam değişebildiği için mağazada kontrol edin."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Durum",
+        "Alacağınız şey",
+        "Not"
+       ],
+       "satirlar": [
+        [
+         "Hiç oyun yok",
+         "Age of Hatred Collection",
+         "Temel oyun, Vessel of Hatred ve Lord of Hatred bir arada"
+        ],
+        [
+         "Temel oyun var",
+         "Lord of Hatred",
+         "Vessel of Hatred'ı da içerir"
+        ],
+        [
+         "Daha fazla kozmetik istiyorsanız",
+         "Deluxe veya Ultimate sürüm",
+         "Platinum ve kozmetik ekler; oynanışı hızlandırmaz"
+        ],
+        [
+         "Birden çok platform",
+         "Her platform için ayrı satın alma",
+         "Alım platforma bağlıdır"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Genişlemeleri sonradan almak yerine paketi baştan almak genelde daha ucuzdur. Fiyatlar bölgeye ve kampanyaya göre değişir; kesin tutarı mağazada görün (ben lira fiyatını doğrulayamadım). Sistem gereksinimi için resmî Blizzard sayfasına bakın; bu sayfa değişebilir, o yüzden rakam yazmıyorum."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Oyunu yalnızca Blizzard'ın Battle.net mağazası, Steam, Xbox ve PlayStation mağazalarından alın. Ucuz anahtar satan bilinmeyen siteler çoğunlukla çalıntı kartla alınmış kodlar satar ve hesabınızın askıya alınmasına yol açabilir."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "İlk saatler: adım adım",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Yeni oyuncunun ilk hedefi kampanyayı bitirip 70. seviyeye ve Torment zorluklarının kapısına ulaşmaktır. Kampanya sizi kabaca 40-50. seviyeye getirir; kalanı oyun sonu etkinlikleriyle dolar."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Sınıfınızı seçin",
+         "metin": "Aşağıdaki sınıf bölümüne bakıp zevkinize uyanı seçin. Karakter isminiz sonradan değişmez, ama sınıf başka karakterle denenebilir."
+        },
+        {
+         "baslik": "Kampanyayı oynayın",
+         "metin": "Ana görevleri izleyin; yan görevler ve keşif size seviye, eşya ve altın verir. Bölgeleri açtıkça hızlı seyahat noktaları da açılır."
+        },
+        {
+         "baslik": "Yeni eşyaları karşılaştırın",
+         "metin": "Yeni bir parça, mevcut parçadan daha yüksek ana özelliğe (örneğin silah hasarı veya zırh) ve işinize yarayan ek özelliklere sahipse giyin. Gereksiz eşyaları satın veya parçalayın."
+        },
+        {
+         "baslik": "Becerileri puanlayın",
+         "metin": "Beceri ağacına puan harcayın; her sınıfın başlangıçta güçlü bir ana saldırısı vardır. Beğenmediğiniz puanları altın karşılığı geri alabilirsiniz."
+        },
+        {
+         "baslik": "Hızlı güçlenin",
+         "metin": "Seviye atladıkça yeni becerilerin kilidi açılır; küçük bir yapı (build) oluşturun: bir ana saldırı, bir hareket becerisi, bir savunma."
+        },
+        {
+         "baslik": "Kampanya sonrası rotaya geçin",
+         "metin": "Seviye 70'e ulaşınca War Plans ve Pit gibi oyun sonu etkinliklerine yönelin."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Loot Filter'ı ilk günden açın. Sizin sınıfınıza ve seviyenize uygun olmayan eşyaları gizler; hem ekranı hem zamanınızı kurtarır."
+      }
+     ]
+    },
+    {
+     "id": "sinif-secimi",
+     "baslik": "Sınıf seçimi: 8 sınıfın özeti",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Sınıflar oynanış tarzı bakımından çok farklıdır. Bir sınıfı beğenmezseniz bir sonraki sezonda başka bir sınıfı denemek sorun değildir. Kısa özet:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Sınıf",
+        "Tarz",
+        "Kime uygun"
+       ],
+       "satirlar": [
+        [
+         "Barbarian",
+         "Yakın dövüş, ağır silahlar, dayanıklı",
+         "Sade ve sağlam savaş isteyenler"
+        ],
+        [
+         "Druid",
+         "Şekil değiştirme ve doğa büyüleri",
+         "Hem yakın hem büyü sevenler"
+        ],
+        [
+         "Necromancer",
+         "Ölü askerler, kemik ve kan büyüleri",
+         "Yardımcıyla oynamayı sevenler"
+        ],
+        [
+         "Rogue",
+         "Çevik, hızlı, zehir ve gölge",
+         "Hareketli oynayanlar"
+        ],
+        [
+         "Sorcerer",
+         "Ateş, buz ve şimşek büyüleri",
+         "Uzaktan hasar sevenler"
+        ],
+        [
+         "Spiritborn",
+         "Ruh hayvanı güçleri, hızlı",
+         "Vessel of Hatred ile gelen çevik sınıf"
+        ],
+        [
+         "Paladin",
+         "Lord of Hatred ile geldi; kutsal yakın dövüş",
+         "Zırhlı savaşçı arayanlar"
+        ],
+        [
+         "Warlock",
+         "Lord of Hatred ile geldi; karanlık büyü",
+         "Büyü ağırlıklı oynayanlar"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Hangi sınıfın en güçlü olduğu sezondan sezona değişir. Kalıcı ilke: oynarken eğleniyorsanız doğru sınıftasınızdır; meta listelerini ilk karakterden sonra incelemek yeterlidir."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme-yolu",
+     "baslik": "70. seviyeye kadar ve sonrası: ilerleme yolu",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Kampanya:** hikâyeyi bitirin; kabaca 40-50. seviyeye gelirsiniz.",
+        "**Seviye 70'e kadar:** oyun sonu etkinliklerini ve zindanları oynayarak seviye kasın; yeni beceri ağacı puanlarını gözden geçirin.",
+        "**Pit:** 70. seviyede açılan zindan; Torment 1 Pit 10'da açılır, her 5 Pit seviyesinde bir sonraki Torment'a (T5'e kadar) geçersiniz, sonra her 10 seviyede T12'ye kadar.",
+        "**War Plans:** beş oyun sonu etkinliğinden oluşan yapılandırılmış yol; hangi etkinliği ne zaman yapacağınızı bilmeyen oyuncu için iyi bir rehberdir.",
+        "**Horadric Cube:** eşya dönüştürmek ve geliştirmek için kullanılır."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Her aşamada hedefiniz bir üst zorluğa geçecek kadar hasar ve dayanıklılık biriktirmektir. Çok yavaş ilerliyorsanız bir alt zorlukta eşya toplayıp geri dönün; hızlı ilerliyorsanız bir üst zorluğu deneyin."
+      }
+     ]
+    },
+    {
+     "id": "esya-ve-kaynak",
+     "baslik": "Eşya, altın ve kaynak yönetimi",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Eşya nadirliği:** nadir (sarı) ve efsanevi (turuncu) eşyalar genelde en güçlü olanlardır; mavi ve beyaz eşya erken oyunda geçici işe yarar.",
+        "**Dayanıklılık:** zırh ve direnç, yüksek zorluklarda hasar kadar önemlidir; sadece vuruş gücüne odaklanmak size ölüm getirir.",
+        "**Altın:** beceri puanı sıfırlama, eşya geliştirme ve ustalara harcanır; ilk saatlerde bol altın harcamaktan çekinmeyin.",
+        "**Depo:** envanteriniz doluysa hazine kasasını ve karakter paylaşılan sandığı kullanın.",
+        "**Hesap bazlı ilerleme:** bazı ilerlemeler hesaba bağlıdır; yeni karakterde tekrar baştan başlamak zorunda değilsiniz."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Basit kural: bir eşya sizi daha güçlü yapmıyorsa, taşımayın. Ancak efsanevi bir parçanın gücü bazen belli bir yapıya özeldir; emin olmadığınız eşyayı atmadan önce parçalamayı veya depoya koymayı düşünün."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Yeni başlayanların sık hataları",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Eşyaları karşılaştırmadan giyinmek veya tam tersi hiç değiştirmemek.",
+        "Savunmayı unutmak: yalnız hasar odaklı yapı yüksek zorlukta hızla ölür.",
+        "Altınları biriktirip hiç harcamamak.",
+        "Her sezon başında en güçlü sınıf listesini kovalayıp oynamayı sevmediği sınıfta kalmak.",
+        "Gerçek parayla Platinum almak için acele etmek. Platinum yalnızca kozmetik içindir, oyunu hızlandırmaz."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Platinum satın almak oyundaki gücünüzü artırmaz; yalnızca görünüm eşyaları içindir. Ücretli bir şeye ihtiyacınız olduğunu düşündüğünüzde bir kez durup düşünün."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Hesap güvenliği ve harcama uyarısı",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Blizzard hesabınız birçok oyunu bağladığı için değerlidir. Hesap bilgilerinizi ve güvenlik kodlarınızı kimseyle paylaşmayın."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Battle.net hesabında iki adımlı doğrulamayı açın.",
+        "Hile, bot, otomatik oynayan yazılım ve gerçek parayla eşya ya da hesap alım satımı (RMT) oyun kurallarına aykırıdır ve hesap kapatılmasına yol açar.",
+        "Ücretsiz Platinum veya eşya vaat eden bağlantılar, sahte Battle.net giriş sayfalarıdır; hesabınızı çalarlar.",
+        "Hesabı satın aldığınız veya sattığınız kişilerle çalışmayın; bu yasak ve dolandırıcılık riski taşır."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Ücretsiz Platinum, altın veya eşya veren siteler dolandırıcıdır. Gerçek bir hediye sizden parola veya güvenlik kodu istemez."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Sık sorulan sorular",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Diablo 4 ücretsiz mi?",
+         "c": "Hayır, ücretli bir oyundur. Yeni oyuncu en uygun yol olan Age of Hatred Collection ile başlar."
+        },
+        {
+         "s": "Tek başıma oynayabilir miyim?",
+         "c": "Evet, ama oyun çevrimiçidir; tek kişilik oynasanız bile internet bağlantısı ve Battle.net hesabı gerekir."
+        },
+        {
+         "s": "Lord of Hatred'ı almak zorunda mıyım?",
+         "c": "Yeni oyuncu olarak Age of Hatred Collection'ı almanız önerilir; seviye 70, yeni sınıflar ve oyun sonu içeriği genişlemeyle gelir."
+        },
+        {
+         "s": "Sezon 16 ne zaman?",
+         "c": "Henüz açıklanmadı. Deneme sunucusu Ekim sonunda çalıştı; tarih için Blizzard'ın duyurularını izleyin."
+        },
+        {
+         "s": "Hangi sınıfla başlamalıyım?",
+         "c": "Bir sınıfın anlatımı sizi heyecanlandırıyorsa onu seçin. Sınıf listesi sezondan sezona değişir, eğlence kalıcıdır."
+        },
+        {
+         "s": "Gerçek parayla güçlenebilir miyim?",
+         "c": "Hayır; Platinum yalnızca görünüm eşyaları içindir."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "en": {
+   "baslik": "Diablo 4 Beginner Guide: After Lord of Hatred (2026)",
+   "ozet": "A guide for players starting Diablo 4 today covering which edition to buy, class choice, the first hours and the level-70 endgame. Current season: 15 (Hell's Legacy).",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Action role-playing game (ARPG, loot-driven)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "PC (Battle.net, Steam), Xbox, PlayStation"
+    },
+    {
+     "ad": "Pricing model",
+     "deger": "Paid game and expansions; Platinum cosmetic shop is optional"
+    },
+    {
+     "ad": "Current version",
+     "deger": "Season 15 Hell's Legacy (patch 3.2.1); Lord of Hatred expansion on 28 April 2026"
+    },
+    {
+     "ad": "Turkish support",
+     "deger": "Text and subtitles appear to be supported; the official language list was not verified"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "Where Diablo 4 stands in 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4 is a loot-driven action role-playing game in which you slay monsters and collect gear in a dark world. The story takes place in the land of Sanctuary; the real fun is finding the combinations of gear and skills that make your character stronger."
+      },
+      {
+       "tip": "p",
+       "metin": "The game runs in seasons. **Season 15, Hell's Legacy** began on 15 September 2026 (patch 3.2.1, with the series' 30th anniversary and a Witcher crossover). The big change was the **Lord of Hatred** expansion (28 April 2026): two new classes, reworked skill trees for all classes, a new Loot Filter, the return of the Horadric Cube, War Plans (a structured endgame route), the level cap rising from 60 to 70 and Torment 1-12 difficulty tiers. A test realm (PTR) for Season 16 ran at the end of October, but its release date has not been announced; do not make dates up."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "When a season changes, characters reset and everyone starts from the same line, which makes it the best entry point for a new player. Your season characters move to the permanent (Eternal) side at season's end."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Before you start: which edition to buy",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4 needs a Battle.net account and a constant internet connection; the game is online even when you play alone. On PC you buy it from Battle.net or Steam, on consoles from the Xbox and PlayStation stores. The Xbox page also mentions Game Pass; coverage can change, so check in the store."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Situation",
+        "What to buy",
+        "Note"
+       ],
+       "satirlar": [
+        [
+         "You own nothing",
+         "Age of Hatred Collection",
+         "Base game, Vessel of Hatred and Lord of Hatred together"
+        ],
+        [
+         "You own the base game",
+         "Lord of Hatred",
+         "Includes Vessel of Hatred too"
+        ],
+        [
+         "You want more cosmetics",
+         "Deluxe or Ultimate edition",
+         "Adds Platinum and cosmetics; does not speed up gameplay"
+        ],
+        [
+         "Multiple platforms",
+         "A separate purchase per platform",
+         "Purchases are tied to the platform"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Buying the bundle up front is usually cheaper than buying expansions later. Prices vary by region and sale; see the exact amount in the store (I could not verify local prices). For system requirements see Blizzard's official page; it can change, so I do not give numbers here."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Buy the game only from Blizzard's Battle.net store, Steam, and the Xbox and PlayStation stores. Unknown sites selling cheap keys mostly sell codes bought with stolen cards, which can get your account suspended."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "The first hours: step by step",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "A new player's first goal is to finish the campaign and reach level 70 and the door to the Torment difficulties. The campaign takes you to roughly level 40-50; endgame activities fill in the rest."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Pick your class",
+         "metin": "Look at the class section below and pick what suits your taste. Your character name cannot be changed later, but you can try another class on another character."
+        },
+        {
+         "baslik": "Play the campaign",
+         "metin": "Follow the main quests; side quests and exploring give you levels, items and gold. As you open regions, fast-travel points open too."
+        },
+        {
+         "baslik": "Compare new items",
+         "metin": "Wear a new piece if it has a higher main stat (for example weapon damage or armor) and extra properties that help you than your current piece. Sell or salvage useless items."
+        },
+        {
+         "baslik": "Spend skill points",
+         "metin": "Spend points in the skill tree; every class starts with a strong main attack. You can refund points you dislike for gold."
+        },
+        {
+         "baslik": "Get stronger quickly",
+         "metin": "As you level up, new skills unlock; build a small setup: one main attack, one movement skill, one defense."
+        },
+        {
+         "baslik": "Move to the post-campaign route",
+         "metin": "Once you reach level 70, turn to endgame activities such as War Plans and the Pit."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Turn on the Loot Filter from day one. It hides items that do not fit your class and level, saving both screen clutter and time."
+      }
+     ]
+    },
+    {
+     "id": "sinif-secimi",
+     "baslik": "Class choice: a summary of the 8 classes",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The classes differ a lot in play style. If you do not like one class, it is fine to try another in the next season. Short summary:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Class",
+        "Style",
+        "Best for"
+       ],
+       "satirlar": [
+        [
+         "Barbarian",
+         "Melee, heavy weapons, durable",
+         "Those who want simple and sturdy combat"
+        ],
+        [
+         "Druid",
+         "Shapeshifting and nature magic",
+         "Those who like both melee and spells"
+        ],
+        [
+         "Necromancer",
+         "Raised minions, bone and blood spells",
+         "Those who like playing with helpers"
+        ],
+        [
+         "Rogue",
+         "Agile, fast, poison and shadow",
+         "Players who like to keep moving"
+        ],
+        [
+         "Sorcerer",
+         "Fire, ice and lightning spells",
+         "Those who like ranged damage"
+        ],
+        [
+         "Spiritborn",
+         "Spirit animal powers, fast",
+         "The agile class that came with Vessel of Hatred"
+        ],
+        [
+         "Paladin",
+         "Came with Lord of Hatred; holy melee",
+         "Those looking for an armored warrior"
+        ],
+        [
+         "Warlock",
+         "Came with Lord of Hatred; dark magic",
+         "Those who play spell-focused"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Which class is strongest changes from season to season. The lasting principle: if you are having fun you are on the right class; looking at meta lists after your first character is enough."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme-yolu",
+     "baslik": "Up to level 70 and beyond: the progression path",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Campaign:** finish the story; you reach roughly level 40-50.",
+        "**Until level 70:** gain levels by playing endgame activities and dungeons; review your new skill tree points.",
+        "**Pit:** the dungeon that unlocks at level 70; Torment 1 opens at Pit 10, you move to the next Torment every 5 Pit levels (up to T5), then every 10 levels up to T12.",
+        "**War Plans:** a structured path of five endgame activities; a good guide for a player who does not know which activity to do when.",
+        "**Horadric Cube:** used to transform and upgrade items."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "At every stage your goal is to build enough damage and toughness to move to a higher difficulty. If you are progressing too slowly, gather gear on a lower difficulty and come back; if you are progressing fast, try a higher one."
+      }
+     ]
+    },
+    {
+     "id": "esya-ve-kaynak",
+     "baslik": "Items, gold and resource management",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Item rarity:** rare (yellow) and legendary (orange) items are usually the strongest; blue and white items serve temporarily in the early game.",
+        "**Toughness:** armor and resistances matter as much as damage on high difficulties; focusing only on hit power gets you killed.",
+        "**Gold:** it is spent on skill respecs, item upgrades and craftsmen; do not be afraid to spend plenty in the early hours.",
+        "**Storage:** if your inventory is full, use the stash and the shared chest.",
+        "**Account-wide progress:** some progress is tied to the account; you do not have to start from scratch on a new character."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Simple rule: if an item does not make you stronger, do not carry it. But a legendary piece's power is sometimes specific to a build; before throwing away an item you are unsure of, consider salvaging it or putting it in storage."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Common beginner mistakes",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Wearing items without comparing them, or the opposite, never changing them.",
+        "Forgetting defense: a damage-only build dies fast on high difficulty.",
+        "Hoarding gold and never spending it.",
+        "Chasing the strongest-class list every season and staying on a class you do not enjoy.",
+        "Rushing to buy Platinum with real money. Platinum is for cosmetics only and does not speed up the game."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Buying Platinum does not raise your power in the game; it is only for appearance items. When you think you need to pay for something, stop and think once."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Account security and spending warning",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Your Blizzard account is valuable because it connects many games. Do not share your account details or security codes with anyone."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Turn on two-step verification on your Battle.net account.",
+        "Cheats, bots, auto-play software and buying or selling items or accounts for real money (RMT) break the game rules and can get your account closed.",
+        "Links promising free Platinum or items are fake Battle.net login pages; they steal your account.",
+        "Do not deal with people who buy or sell accounts; it is forbidden and carries a scam risk."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Sites giving free Platinum, gold or items are scams. A real gift never asks you for a password or security code."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Frequently asked questions",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is Diablo 4 free?",
+         "c": "No, it is a paid game. A new player starts with the Age of Hatred Collection, the best-value route."
+        },
+        {
+         "s": "Can I play alone?",
+         "c": "Yes, but the game is online; even solo play needs an internet connection and a Battle.net account."
+        },
+        {
+         "s": "Do I have to buy Lord of Hatred?",
+         "c": "As a new player, buying the Age of Hatred Collection is recommended; level 70, the new classes and the endgame content come with the expansion."
+        },
+        {
+         "s": "When is Season 16?",
+         "c": "Not announced yet. The test realm ran at the end of October; follow Blizzard's announcements for a date."
+        },
+        {
+         "s": "Which class should I start with?",
+         "c": "If a class description excites you, pick it. The class list changes from season to season; fun is lasting."
+        },
+        {
+         "s": "Can I get stronger with real money?",
+         "c": "No; Platinum is only for appearance items."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "fr": {
+   "baslik": "Guide du débutant Diablo 4 : après Lord of Hatred (2026)",
+   "ozet": "Un guide pour ceux qui débutent Diablo 4 aujourd'hui : quelle édition acheter, choix de classe, premières heures et endgame au niveau 70. Saison actuelle : 15 (Hell's Legacy).",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Jeu de rôle d'action (ARPG, axé sur le butin)"
+    },
+    {
+     "ad": "Plateforme",
+     "deger": "PC (Battle.net, Steam), Xbox, PlayStation"
+    },
+    {
+     "ad": "Modèle économique",
+     "deger": "Jeu et extensions payants ; boutique cosmétique Platinum facultative"
+    },
+    {
+     "ad": "Version actuelle",
+     "deger": "Saison 15 Hell's Legacy (patch 3.2.1) ; extension Lord of Hatred le 28 avril 2026"
+    },
+    {
+     "ad": "Prise en charge du turc",
+     "deger": "Texte et sous-titres semblent pris en charge ; la liste officielle des langues n'a pas été vérifiée"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "Où en est Diablo 4 en 2026 ?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4 est un jeu de rôle d'action axé sur le butin, où l'on tue des monstres et collecte de l'équipement dans un monde sombre. L'histoire se déroule dans le royaume de Sanctuaire ; le vrai plaisir est de trouver les combinaisons d'équipement et de compétences qui renforcent votre personnage."
+      },
+      {
+       "tip": "p",
+       "metin": "Le jeu fonctionne par saisons. **La saison 15, Hell's Legacy**, a commencé le 15 septembre 2026 (patch 3.2.1, avec les 30 ans de la série et un croisement avec The Witcher). Le grand changement a été l'extension **Lord of Hatred** (28 avril 2026) : deux nouvelles classes, des arbres de compétences refaits pour toutes les classes, un nouveau Loot Filter (filtre de butin), le retour du Cube d'Horadrim, War Plans (un parcours d'endgame structuré), un niveau maximum passé de 60 à 70 et des paliers de difficulté Torment 1 à 12. Un royaume de test (PTR) pour la saison 16 a tourné fin octobre, mais sa date de sortie n'a pas été annoncée ; n'inventez pas de dates."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Quand une saison change, les personnages sont réinitialisés et tout le monde repart de la même ligne, ce qui en fait le meilleur moment pour un nouveau joueur. Vos personnages de saison passent du côté permanent (Eternal) à la fin de la saison."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Avant de commencer : quelle édition acheter ?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4 demande un compte Battle.net et une connexion internet constante ; le jeu est en ligne même quand vous jouez seul. Sur PC, on l'achète sur Battle.net ou Steam, sur console dans les boutiques Xbox et PlayStation. La page Xbox mentionne aussi le Game Pass ; la couverture peut changer, vérifiez en boutique."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Situation",
+        "Ce qu'il faut acheter",
+        "Remarque"
+       ],
+       "satirlar": [
+        [
+         "Vous n'avez rien",
+         "Age of Hatred Collection",
+         "Jeu de base, Vessel of Hatred et Lord of Hatred ensemble"
+        ],
+        [
+         "Vous avez le jeu de base",
+         "Lord of Hatred",
+         "Inclut aussi Vessel of Hatred"
+        ],
+        [
+         "Vous voulez plus de cosmétiques",
+         "Édition Deluxe ou Ultimate",
+         "Ajoute des Platinum et des cosmétiques ; n'accélère pas le jeu"
+        ],
+        [
+         "Plusieurs plateformes",
+         "Un achat séparé par plateforme",
+         "Les achats sont liés à la plateforme"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Acheter le pack dès le départ coûte généralement moins cher que de prendre les extensions plus tard. Les prix varient selon la région et les promotions ; voyez le montant exact en boutique (je n'ai pas pu confirmer les prix locaux). Pour la configuration requise, consultez la page officielle de Blizzard ; elle peut changer, donc je ne donne pas de chiffres ici."
+      },
+      {
+       "tip": "uyari",
+       "metin": "N'achetez le jeu que sur la boutique Battle.net de Blizzard, Steam, et les boutiques Xbox et PlayStation. Les sites inconnus qui vendent des clés bon marché vendent surtout des codes achetés avec des cartes volées, ce qui peut faire suspendre votre compte."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "Les premières heures : pas à pas",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Le premier but d'un nouveau joueur est de finir la campagne et d'atteindre le niveau 70 et la porte des difficultés Torment. La campagne vous mène vers le niveau 40-50 environ ; l'endgame comble le reste."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Choisissez votre classe",
+         "metin": "Regardez la section sur les classes ci-dessous et choisissez ce qui vous plaît. Le nom du personnage ne peut pas être changé plus tard, mais vous pouvez essayer une autre classe sur un autre personnage."
+        },
+        {
+         "baslik": "Jouez la campagne",
+         "metin": "Suivez les quêtes principales ; les quêtes secondaires et l'exploration donnent des niveaux, des objets et de l'or. En ouvrant les régions, des points de voyage rapide s'ouvrent aussi."
+        },
+        {
+         "baslik": "Comparez les nouveaux objets",
+         "metin": "Portez une nouvelle pièce si elle a une statistique principale plus élevée (par exemple les dégâts de l'arme ou l'armure) et des propriétés utiles supérieures à votre pièce actuelle. Vendez ou recyclez les objets inutiles."
+        },
+        {
+         "baslik": "Dépensez les points de compétence",
+         "metin": "Dépensez des points dans l'arbre de compétences ; chaque classe commence avec une bonne attaque principale. Vous pouvez récupérer les points que vous n'aimez pas contre de l'or."
+        },
+        {
+         "baslik": "Progressez vite",
+         "metin": "En montant de niveau, de nouvelles compétences se débloquent ; montez un petit ensemble : une attaque principale, une compétence de déplacement, une défense."
+        },
+        {
+         "baslik": "Passez au parcours après la campagne",
+         "metin": "Une fois au niveau 70, tournez-vous vers les activités d'endgame comme War Plans et la Fosse (Pit)."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Activez le Loot Filter dès le premier jour. Il masque les objets qui ne conviennent pas à votre classe et à votre niveau, ce qui épargne l'écran et du temps."
+      }
+     ]
+    },
+    {
+     "id": "sinif-secimi",
+     "baslik": "Choix de classe : résumé des 8 classes",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Les classes diffèrent beaucoup par leur style de jeu. Si vous n'aimez pas une classe, essayez-en une autre à la saison suivante. Résumé rapide :"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Classe",
+        "Style",
+        "Pour qui"
+       ],
+       "satirlar": [
+        [
+         "Barbarian",
+         "Mêlée, armes lourdes, robuste",
+         "Ceux qui veulent un combat simple et solide"
+        ],
+        [
+         "Druid",
+         "Métamorphose et magie de la nature",
+         "Ceux qui aiment à la fois la mêlée et les sorts"
+        ],
+        [
+         "Necromancer",
+         "Serviteurs ressuscités, sorts d'os et de sang",
+         "Ceux qui aiment jouer avec des aides"
+        ],
+        [
+         "Rogue",
+         "Agile, rapide, poison et ombre",
+         "Les joueurs qui aiment bouger"
+        ],
+        [
+         "Sorcerer",
+         "Sorts de feu, de glace et de foudre",
+         "Ceux qui aiment les dégâts à distance"
+        ],
+        [
+         "Spiritborn",
+         "Pouvoirs d'animaux spirituels, rapide",
+         "La classe agile arrivée avec Vessel of Hatred"
+        ],
+        [
+         "Paladin",
+         "Arrivé avec Lord of Hatred ; mêlée sacrée",
+         "Ceux qui cherchent un guerrier en armure"
+        ],
+        [
+         "Warlock",
+         "Arrivé avec Lord of Hatred ; magie sombre",
+         "Ceux qui jouent centré sur les sorts"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "La classe la plus forte change d'une saison à l'autre. Principe durable : si vous vous amusez, vous êtes dans la bonne classe ; regarder les listes de méta après votre premier personnage suffit."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme-yolu",
+     "baslik": "Jusqu'au niveau 70 et après : le parcours de progression",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Campagne :** terminez l'histoire ; vous atteignez environ le niveau 40-50.",
+        "**Jusqu'au niveau 70 :** gagnez des niveaux en jouant les activités d'endgame et les donjons ; revoyez les points de votre nouvel arbre de compétences.",
+        "**Fosse (Pit) :** le donjon qui se débloque au niveau 70 ; Torment 1 s'ouvre à la Fosse 10, vous passez au Torment suivant tous les 5 niveaux de Fosse (jusqu'à T5), puis tous les 10 niveaux jusqu'à T12.",
+        "**War Plans :** un parcours structuré de cinq activités d'endgame ; un bon guide pour le joueur qui ne sait pas quelle activité faire et quand.",
+        "**Cube d'Horadrim :** sert à transformer et améliorer les objets."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "À chaque étape, votre but est d'accumuler assez de dégâts et de robustesse pour passer à une difficulté supérieure. Si vous progressez trop lentement, ramassez de l'équipement à une difficulté inférieure et revenez ; si vous progressez vite, essayez la suivante."
+      }
+     ]
+    },
+    {
+     "id": "esya-ve-kaynak",
+     "baslik": "Objets, or et gestion des ressources",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Rareté des objets :** les objets rares (jaunes) et légendaires (orange) sont généralement les plus forts ; les objets bleus et blancs servent temporairement en début de jeu.",
+        "**Robustesse :** l'armure et les résistances comptent autant que les dégâts aux difficultés élevées ; se concentrer uniquement sur la puissance de frappe vous fait mourir.",
+        "**Or :** il se dépense en réinitialisation de compétences, améliorations d'objets et artisans ; n'ayez pas peur d'en dépenser beaucoup dans les premières heures.",
+        "**Stockage :** si votre inventaire est plein, utilisez le coffre et le coffre partagé.",
+        "**Progression liée au compte :** une partie de la progression est liée au compte ; vous n'avez pas à tout recommencer avec un nouveau personnage."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Règle simple : si un objet ne vous rend pas plus fort, ne le gardez pas. Mais la puissance d'une pièce légendaire est parfois propre à un build ; avant de jeter un objet dont vous n'êtes pas sûr, pensez à le recycler ou à le ranger."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Erreurs fréquentes des débutants",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Porter des objets sans les comparer, ou à l'inverse ne jamais en changer.",
+        "Oublier la défense : un build uniquement offensif meurt vite en haute difficulté.",
+        "Accumuler l'or sans jamais le dépenser.",
+        "Courir après la liste de la classe la plus forte à chaque saison et rester dans une classe qu'on n'aime pas.",
+        "Se précipiter pour acheter des Platinum avec de l'argent réel. Les Platinum ne servent qu'aux cosmétiques et n'accélèrent pas le jeu."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Acheter des Platinum n'augmente pas votre puissance dans le jeu ; c'est uniquement pour des objets d'apparence. Quand vous pensez devoir payer pour quelque chose, arrêtez-vous et réfléchissez une fois."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Sécurité du compte et avertissement sur les dépenses",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Votre compte Blizzard a de la valeur parce qu'il relie de nombreux jeux. Ne partagez vos informations de compte ni vos codes de sécurité avec personne."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Activez la validation en deux étapes sur votre compte Battle.net.",
+        "Les triches, bots, logiciels de jeu automatique et l'achat ou la vente d'objets ou de comptes contre de l'argent réel (RMT) enfreignent les règles du jeu et peuvent faire fermer votre compte.",
+        "Les liens qui promettent des Platinum ou des objets gratuits sont de fausses pages de connexion Battle.net ; ils volent votre compte.",
+        "Ne traitez pas avec des gens qui achètent ou vendent des comptes ; c'est interdit et risqué côté arnaque."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Les sites qui donnent des Platinum, de l'or ou des objets gratuits sont des arnaques. Un vrai cadeau ne vous demande jamais de mot de passe ni de code de sécurité."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Questions fréquentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Diablo 4 est-il gratuit ?",
+         "c": "Non, c'est un jeu payant. Un nouveau joueur commence avec l'Age of Hatred Collection, la voie au meilleur rapport."
+        },
+        {
+         "s": "Puis-je jouer seul ?",
+         "c": "Oui, mais le jeu est en ligne ; même en solo, il faut une connexion internet et un compte Battle.net."
+        },
+        {
+         "s": "Dois-je acheter Lord of Hatred ?",
+         "c": "Comme nouveau joueur, l'Age of Hatred Collection est conseillée ; le niveau 70, les nouvelles classes et le contenu d'endgame viennent avec l'extension."
+        },
+        {
+         "s": "Quand sort la saison 16 ?",
+         "c": "Pas encore annoncé. Le royaume de test a tourné fin octobre ; suivez les annonces de Blizzard pour une date."
+        },
+        {
+         "s": "Avec quelle classe commencer ?",
+         "c": "Si la description d'une classe vous enthousiasme, prenez-la. La liste des classes change d'une saison à l'autre ; le plaisir est durable."
+        },
+        {
+         "s": "Puis-je devenir plus fort avec de l'argent réel ?",
+         "c": "Non ; les Platinum ne servent qu'aux objets d'apparence."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "es": {
+   "baslik": "Guía para principiantes de Diablo 4: tras Lord of Hatred (2026)",
+   "ozet": "Una guía para quien empieza Diablo 4 hoy: qué edición comprar, elección de clase, las primeras horas y el endgame del nivel 70. Temporada actual: 15 (Hell's Legacy).",
+   "kunye": [
+    {
+     "ad": "Género",
+     "deger": "Juego de rol de acción (ARPG, centrado en el botín)"
+    },
+    {
+     "ad": "Plataforma",
+     "deger": "PC (Battle.net, Steam), Xbox, PlayStation"
+    },
+    {
+     "ad": "Modelo de precio",
+     "deger": "Juego y expansiones de pago; tienda cosmética Platinum opcional"
+    },
+    {
+     "ad": "Versión actual",
+     "deger": "Temporada 15 Hell's Legacy (parche 3.2.1); expansión Lord of Hatred el 28 de abril de 2026"
+    },
+    {
+     "ad": "Soporte en turco",
+     "deger": "Parece haber texto y subtítulos; la lista oficial de idiomas no se verificó"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "¿Dónde está Diablo 4 en 2026?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4 es un juego de rol de acción centrado en el botín, en el que matas monstruos y recoges equipo en un mundo oscuro. La historia transcurre en el reino de Santuario; la verdadera diversión está en encontrar las combinaciones de equipo y habilidades que hacen más fuerte a tu personaje."
+      },
+      {
+       "tip": "p",
+       "metin": "El juego funciona por temporadas. **La temporada 15, Hell's Legacy**, empezó el 15 de septiembre de 2026 (parche 3.2.1, con el 30 aniversario de la serie y un cruce con The Witcher). El gran cambio fue la expansión **Lord of Hatred** (28 de abril de 2026): dos clases nuevas, árboles de habilidades rehechos para todas las clases, un nuevo Loot Filter (filtro de botín), el regreso del Cubo de Horadrim, War Plans (una ruta de endgame estructurada), el nivel máximo subiendo de 60 a 70 y niveles de dificultad Torment 1 a 12. Un reino de pruebas (PTR) de la temporada 16 funcionó a finales de octubre, pero su fecha de salida no se ha anunciado; no te inventes fechas."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Cuando cambia una temporada, los personajes se reinician y todos parten de la misma línea, lo que la convierte en el mejor momento de entrada para un jugador nuevo. Tus personajes de temporada pasan al lado permanente (Eternal) al terminar la temporada."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Antes de empezar: qué edición comprar",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4 necesita una cuenta de Battle.net y conexión a internet constante; el juego es en línea aunque juegues solo. En PC se compra en Battle.net o Steam, en consolas en las tiendas de Xbox y PlayStation. La página de Xbox también menciona Game Pass; la cobertura puede cambiar, así que compruébalo en la tienda."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Situación",
+        "Qué comprar",
+        "Nota"
+       ],
+       "satirlar": [
+        [
+         "No tienes nada",
+         "Age of Hatred Collection",
+         "Juego base, Vessel of Hatred y Lord of Hatred juntos"
+        ],
+        [
+         "Tienes el juego base",
+         "Lord of Hatred",
+         "Incluye también Vessel of Hatred"
+        ],
+        [
+         "Quieres más cosméticos",
+         "Edición Deluxe o Ultimate",
+         "Añade Platinum y cosméticos; no acelera el juego"
+        ],
+        [
+         "Varias plataformas",
+         "Una compra aparte por plataforma",
+         "Las compras están ligadas a la plataforma"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Comprar el paquete desde el principio suele salir más barato que comprar las expansiones después. Los precios varían según la región y las ofertas; mira la cantidad exacta en la tienda (no pude verificar los precios locales). Para los requisitos del sistema consulta la página oficial de Blizzard; puede cambiar, así que no doy cifras aquí."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Compra el juego solo en la tienda Battle.net de Blizzard, Steam y las tiendas de Xbox y PlayStation. Los sitios desconocidos que venden claves baratas suelen vender códigos comprados con tarjetas robadas, lo que puede hacer que suspendan tu cuenta."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "Las primeras horas: paso a paso",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "El primer objetivo de un jugador nuevo es terminar la campaña y llegar al nivel 70 y a la puerta de las dificultades Torment. La campaña te lleva más o menos al nivel 40-50; el endgame rellena el resto."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Elige tu clase",
+         "metin": "Mira la sección de clases de abajo y elige la que se ajuste a tu gusto. El nombre del personaje no se puede cambiar después, pero puedes probar otra clase con otro personaje."
+        },
+        {
+         "baslik": "Juega la campaña",
+         "metin": "Sigue las misiones principales; las secundarias y la exploración te dan niveles, objetos y oro. Al abrir regiones también se abren puntos de viaje rápido."
+        },
+        {
+         "baslik": "Compara los objetos nuevos",
+         "metin": "Ponte una pieza nueva si tiene un atributo principal más alto (por ejemplo daño de arma o armadura) y propiedades extra útiles mejores que tu pieza actual. Vende o desmonta los objetos inútiles."
+        },
+        {
+         "baslik": "Gasta los puntos de habilidad",
+         "metin": "Gasta puntos en el árbol de habilidades; cada clase empieza con un buen ataque principal. Puedes recuperar los puntos que no te gusten a cambio de oro."
+        },
+        {
+         "baslik": "Hazte fuerte rápido",
+         "metin": "Al subir de nivel se desbloquean habilidades nuevas; monta una configuración pequeña: un ataque principal, una habilidad de movimiento, una defensa."
+        },
+        {
+         "baslik": "Pasa a la ruta posterior a la campaña",
+         "metin": "Cuando llegues al nivel 70, vuélcate en actividades de endgame como War Plans y el Foso (Pit)."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Activa el Loot Filter desde el primer día. Oculta los objetos que no encajan con tu clase y tu nivel, y ahorra tanto pantalla llena como tiempo."
+      }
+     ]
+    },
+    {
+     "id": "sinif-secimi",
+     "baslik": "Elección de clase: resumen de las 8 clases",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Las clases se diferencian mucho en estilo de juego. Si una clase no te gusta, puedes probar otra en la temporada siguiente. Resumen corto:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Clase",
+        "Estilo",
+        "Para quién"
+       ],
+       "satirlar": [
+        [
+         "Barbarian",
+         "Cuerpo a cuerpo, armas pesadas, resistente",
+         "Quien quiere un combate sencillo y sólido"
+        ],
+        [
+         "Druid",
+         "Cambio de forma y magia de la naturaleza",
+         "Quien disfruta tanto del cuerpo a cuerpo como de los hechizos"
+        ],
+        [
+         "Necromancer",
+         "Esbirros levantados, hechizos de hueso y sangre",
+         "Quien disfruta jugando con ayudantes"
+        ],
+        [
+         "Rogue",
+         "Ágil, rápida, veneno y sombra",
+         "Jugadores que gustan de moverse"
+        ],
+        [
+         "Sorcerer",
+         "Hechizos de fuego, hielo y rayo",
+         "Quien prefiere el daño a distancia"
+        ],
+        [
+         "Spiritborn",
+         "Poderes de animales espirituales, rápido",
+         "La clase ágil que llegó con Vessel of Hatred"
+        ],
+        [
+         "Paladin",
+         "Llegó con Lord of Hatred; cuerpo a cuerpo sagrado",
+         "Quien busca un guerrero con armadura"
+        ],
+        [
+         "Warlock",
+         "Llegó con Lord of Hatred; magia oscura",
+         "Quien juega centrado en los hechizos"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Qué clase es la más fuerte cambia de temporada en temporada. Principio duradero: si te diviertes, estás en la clase correcta; basta con mirar las listas de meta tras tu primer personaje."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme-yolu",
+     "baslik": "Hasta el nivel 70 y después: la ruta de progreso",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Campaña:** termina la historia; llegas más o menos al nivel 40-50.",
+        "**Hasta el nivel 70:** gana niveles jugando actividades de endgame y mazmorras; revisa los puntos de tu nuevo árbol de habilidades.",
+        "**Foso (Pit):** la mazmorra que se desbloquea en el nivel 70; Torment 1 se abre en el Foso 10, pasas al siguiente Torment cada 5 niveles de Foso (hasta T5) y luego cada 10 niveles hasta T12.",
+        "**War Plans:** una ruta estructurada de cinco actividades de endgame; una buena guía para el jugador que no sabe qué actividad hacer y cuándo.",
+        "**Cubo de Horadrim:** sirve para transformar y mejorar objetos."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "En cada etapa tu objetivo es acumular suficiente daño y resistencia para pasar a una dificultad superior. Si avanzas demasiado despacio, reúne equipo en una dificultad inferior y vuelve; si avanzas rápido, prueba la siguiente."
+      }
+     ]
+    },
+    {
+     "id": "esya-ve-kaynak",
+     "baslik": "Objetos, oro y gestión de recursos",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Rareza de los objetos:** los objetos raros (amarillos) y legendarios (naranjas) suelen ser los más fuertes; los azules y blancos sirven temporalmente al principio.",
+        "**Resistencia:** la armadura y las resistencias importan tanto como el daño en dificultades altas; centrarte solo en la fuerza de golpe te hace morir.",
+        "**Oro:** se gasta en reasignar habilidades, mejorar objetos y artesanos; no tengas miedo de gastar bastante en las primeras horas.",
+        "**Almacenamiento:** si tu inventario está lleno, usa el alijo y el cofre compartido.",
+        "**Progreso ligado a la cuenta:** parte del progreso está ligado a la cuenta; no tienes que empezar de cero con un personaje nuevo."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Regla simple: si un objeto no te hace más fuerte, no lo cargues. Pero el poder de una pieza legendaria a veces es propio de una configuración; antes de tirar un objeto del que no estés seguro, piensa en desmontarlo o guardarlo."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Errores comunes de los principiantes",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Ponerse objetos sin compararlos, o al revés, no cambiarlos nunca.",
+        "Olvidar la defensa: una configuración solo de daño muere rápido en dificultad alta.",
+        "Acumular oro y no gastarlo nunca.",
+        "Perseguir la lista de la clase más fuerte cada temporada y quedarse en una clase que no se disfruta.",
+        "Precipitarse a comprar Platinum con dinero real. El Platinum es solo para cosméticos y no acelera el juego."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Comprar Platinum no aumenta tu poder en el juego; es solo para objetos de apariencia. Cuando pienses que necesitas pagar por algo, para y piénsalo una vez."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Seguridad de la cuenta y aviso sobre gastos",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Tu cuenta de Blizzard tiene valor porque conecta muchos juegos. No compartas los datos de tu cuenta ni tus códigos de seguridad con nadie."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Activa la verificación en dos pasos en tu cuenta de Battle.net.",
+        "Los trucos, bots, programas de juego automático y la compra o venta de objetos o cuentas por dinero real (RMT) incumplen las normas del juego y pueden hacer que cierren tu cuenta.",
+        "Los enlaces que prometen Platinum u objetos gratis son páginas falsas de inicio de sesión de Battle.net; roban tu cuenta.",
+        "No trates con gente que compra o vende cuentas; está prohibido y conlleva riesgo de estafa."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Los sitios que dan Platinum, oro u objetos gratis son estafas. Un regalo de verdad nunca te pide una contraseña ni un código de seguridad."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Preguntas frecuentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "¿Diablo 4 es gratis?",
+         "c": "No, es un juego de pago. Un jugador nuevo empieza con la Age of Hatred Collection, la ruta con mejor relación calidad-precio."
+        },
+        {
+         "s": "¿Puedo jugar solo?",
+         "c": "Sí, pero el juego es en línea; incluso en solitario necesitas conexión a internet y una cuenta de Battle.net."
+        },
+        {
+         "s": "¿Tengo que comprar Lord of Hatred?",
+         "c": "Como jugador nuevo se recomienda comprar la Age of Hatred Collection; el nivel 70, las clases nuevas y el contenido de endgame llegan con la expansión."
+        },
+        {
+         "s": "¿Cuándo es la temporada 16?",
+         "c": "Aún no se ha anunciado. El reino de pruebas funcionó a finales de octubre; sigue los anuncios de Blizzard para saber la fecha."
+        },
+        {
+         "s": "¿Con qué clase debería empezar?",
+         "c": "Si la descripción de una clase te entusiasma, elígela. La lista de clases cambia de temporada en temporada; la diversión es duradera."
+        },
+        {
+         "s": "¿Puedo hacerme más fuerte con dinero real?",
+         "c": "No; el Platinum es solo para objetos de apariencia."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,1217 @@
+{
+ "oyun": "call-of-duty",
+ "guncelleme": "2026-11-14",
+ "surum": "Modern Warfare 4 ve Warzone - Sezon 1 (6 Kasım 2026)",
+ "kaynaklar": [
+  {
+   "url": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-warzone-season-1-announcement",
+   "ad": "Call of Duty blog: Modern Warfare 4 and Warzone Season 1 announcement"
+  },
+  {
+   "url": "https://www.callofduty.com/modernwarfare4/pc",
+   "ad": "Call of Duty: Modern Warfare 4 on PC"
+  },
+  {
+   "url": "https://www.callofduty.com/blog/2026/09/call-of-duty-modern-warfare-4-pc-trailer-tech-specs-features",
+   "ad": "Call of Duty blog: Modern Warfare 4 PC tech specs and features"
+  },
+  {
+   "url": "https://www.callofduty.com/blog/2026/11/call-of-duty-modern-warfare-4-warzone-season-1",
+   "ad": "Call of Duty blog: Warzone Season 1"
+  },
+  {
+   "url": "https://support.activision.com/tpm",
+   "ad": "Activision Support: TPM 2.0 and Secure Boot"
+  }
+ ],
+ "diller": {
+  "tr": {
+   "baslik": "Call of Duty Rehberi - MW4 ve Warzone Başlangıç 2026",
+   "ozet": "Modern Warfare 4 ve ücretsiz Warzone'a başlayanlar için platformlar, PC şartları, modlar, ayarlar, Battle Pass ve güvenli harcama.",
+   "kunye": [
+    {
+     "ad": "Tür",
+     "deger": "Birinci şahıs nişancı (kampanya, çok oyunculu, DMZ, battle royale)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "PS5, Xbox Series X|S, PC (Battle.net, Steam, Xbox on PC), Nintendo Switch 2; PS4 ve Xbox One yok"
+    },
+    {
+     "ad": "Fiyat modeli",
+     "deger": "Ana oyun ücretli; Warzone ücretsiz"
+    },
+    {
+     "ad": "Güncel sürüm",
+     "deger": "Modern Warfare 4, Sezon 1 (6 Kasım 2026)"
+    },
+    {
+     "ad": "Türkçe desteği",
+     "deger": "Oyun içi dil ayarından kontrol et (doğrulanmadı)"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "oyun-nedir",
+     "baslik": "Call of Duty 2026: Modern Warfare 4 ve Warzone",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Call of Duty, yılda bir ana oyun çıkan bir birinci şahıs nişancı serisi. Güncel ana oyun, Infinity Ward'ın yaptığı **Call of Duty: Modern Warfare 4**. Resmi duyurulara göre 23 Ekim 2026'da PlayStation 5, Xbox Series X|S, PC (Battle.net, Steam ve Xbox on PC) ve Nintendo Switch 2 için çıktı; PS4 ve Xbox One yok. İçinde kampanya, çok oyunculu (Multiplayer) ve geri dönen DMZ modu bulunuyor."
+      },
+      {
+       "tip": "p",
+       "metin": "**Warzone** ise ücretsiz oynanan battle royale (son kalan kazanır) tarafı. 6 Kasım 2026'da başlayan Sezon 1 ile Warzone, Modern Warfare 4 ile tamamen bütünleşti. Yeni Battle Royale haritası Hajin ve yeni Resurgence haritası Zodiac geldi; Rebirth Island dönüyor, Verdansk ise Sezon 1'in ilerleyen döneminde geri dönecek."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Bu rehber ana oyunun ve Warzone'un kalıcı temellerini anlatır. Hangi silahın en iyi olduğu sezondan sezona değişir; güncel liste için resmi yama notlarına bak."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Başlamadan önce: platform, kurulum, güvenlik şartları",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Ana oyunu mağaza sayfasından satın alırsın; mağaza Standart ve Vault sürümlerini sunuyor, Vault listesinde BlackCell (1 sezon) ve ek paketler görünüyor. Warzone ise ayrıca ücretsiz. PC'de Modern Warfare 4 resmî olarak şunları istiyor."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Minimum:** 64 bit Windows 10, Ryzen 5 1400 veya Core i5-6600, 8 GB RAM, Radeon RX 470, GeForce GTX 970 veya GTX 1060, ya da Arc A580; **115 GB SSD** alanı.",
+        "**Önerilen (çok oyunculuda yüksek ayarda 90 kare):** Windows 11, Ryzen 5 3600 veya Core i7-8700K, 16 GB RAM, Radeon RX 6600 XT, GeForce RTX 3060 Ti veya Arc B580, 8 GB video belleği.",
+        "**Güvenlik şartı:** PC'de TPM 2.0 ve Güvenli Önyükleme (Secure Boot) gerekli. Activision'a göre bu genelde Intel 8. nesil veya daha yenisi ya da Ryzen 2000 ve üstü, UEFI önyükleme, GPT disk ve açık Secure Boot anlamına geliyor."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "TPM 2.0 ve Secure Boot yoksa PC'de oyun açılmaz. BIOS ayarlarını değiştirmeden önce Activision'ın destek sayfasındaki adımları oku; yanlış ayar bilgisayarın açılmasını engelleyebilir."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Kurulum 115 GB SSD alanı ister. İndirmeye başlamadan önce boş alanı kontrol et; Warzone'u önce denemek istiyorsan ana oyunu sonradan alabilirsin."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "İlk maçların: adım adım",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Warzone ile veya Multiplayer'ın temel modlarıyla başla",
+         "metin": "Warzone ücretsiz; çok oyunculu ise daha kısa maçlarda silahı ve haritayı öğretir. İkisini de dene, hangisini sevdiğini seç."
+        },
+        {
+         "baslik": "Bir sınıf (loadout) kur",
+         "metin": "Bir ana silah, bir yan silah, ekipman ve yetenekler (Perk) seç. Başta hazır sınıflardan biriyle başla, sonra tek tek değiştir."
+        },
+        {
+         "baslik": "Haritanın akışını öğren",
+         "metin": "Her haritada oyuncuların sık geçtiği yollar vardır. Ölürken nereden vurulduğuna bak, aynı yerden geçme."
+        },
+        {
+         "baslik": "Warzone'da güvenli iniş yap",
+         "metin": "Yoğun bölgelere atlamak yerine kenar bir noktaya in, silah ve zırh bul, çemberin yönünü takip et."
+        },
+        {
+         "baslik": "Her maçtan sonra tek bir şeyi düzelt",
+         "metin": "Öldürülme nedenini bul: açıkta mıydın, yenilenmedin mi, tek mi kaldın? Bir sonraki maçta onu düzelt."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Çok oyunculuda ilk haftada K/D oranına bakma. Hedefin tutarlı oynamak: ölmeden önce çatışmadan çekilmeyi ve konumunu değiştirmeyi öğren."
+      }
+     ]
+    },
+    {
+     "id": "modlar",
+     "baslik": "Modlar: nereden başlamalı?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Resmi duyuruya göre Sezon 1'de aşağıdaki başlıca modlar var. Güncel liste oyun içi menüde yer alır ve sezon boyunca eklemeler olacak."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Mod",
+        "Ne için?"
+       ],
+       "satirlar": [
+        [
+         "Multiplayer",
+         "Kısa takım maçları; silahı ve haritaları öğrenmek için en iyi yer."
+        ],
+        [
+         "Kill Block: Crash",
+         "Modern Warfare 4 ile gelen yeni bir mod; resmi duyuruda Sezon 1 modları arasında geçiyor."
+        ],
+        [
+         "DMZ",
+         "Görev ve çıkış temelli, takım hâlinde oynanan hayatta kalma modu; Sezon 1'de X01 Black Site, yeni düşmanlar ve görevler eklendi."
+        ],
+        [
+         "Warzone Battle Royale",
+         "Büyük haritada son kalan olmaya çalış; yeni harita Hajin, Verdansk ise Sezon 1'in ilerleyen döneminde."
+        ],
+        [
+         "Warzone Resurgence",
+         "Ölünce geri dönebildiğin hızlı sürüm; Zodiac ve Rebirth Island'da."
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "İlk gün için en yumuşak yol: Warzone'da Resurgence ile başla (ölünce geri dönebilirsin) veya çok oyunculuda kısa modlarla hareket ve nişan alma tekrarını yap."
+      }
+     ]
+    },
+    {
+     "id": "temel-mekanikler",
+     "baslik": "Temel mekanikler: sınıf, yetenekler, konum",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Silahlar sezondan sezona değişir, ama bu dört alışkanlık değişmez."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Yetenekler (Perk):** Warzone'da toplam 18 yetenek var. İlk on beşi maçtan önce üç yuvaya seçilir; kalan üçü ise **Elite Perk** olarak maç sırasında bulunur ve aynı anda yalnız biri takılabilir. Resmî duyuruya göre Elite Perk'ler dördüncü yuvayı ekler ve satın alma istasyonlarında ya da Supply Run görevleriyle bulunur.",
+        "**Konum:** köşe ve kapı çevresi yakın dövüşte avantaj verir; açık alanda hareket halinde kalmak bir rakibe zaman bırakmaz.",
+        "**Zırh ve iyileşme:** Warzone'da zırh plakalarını çatışma öncesi tak; \"Tempered\" yeteneği plaka yenilemeyi üçten ikiye indiriyor (Sezon 1 duyurusu).",
+        "**Takım ve iletişim:** ping ve kısa bilgi, uzun konuşmadan iyidir. Resurgence'ta takım arkadaşını geri çağırma maliyeti ve \"Wingman\" yeteneği gibi ayrıntılar sezona göre değişir."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Bir sınıfa fazla yetenek yığmak yerine, o sınıfın amacını tek cümleyle yaz: yakın dövüş mü, orta mesafe mi? Yetenekleri o amaca göre seç."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Ayarlar: sağlam başlangıç değerleri",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Aşağıdakiler başlangıç önerisidir (kendi bilgim); donanımına ve alışkanlığına göre değişir. Bir seferde yalnız bir ayar değiştir."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Görüş alanı (FOV):** 100 civarında başla. Çok yüksek değer hedefleri küçültür, çok düşük değer çevreyi görmeni engeller.",
+        "**Kare sınırı:** monitörün yenileme hızına eşitle ve Dikey Senkronizasyon'u kapalı tut; istikrarlı hız ani yüksek sıçramalardan iyidir.",
+        "**Hassasiyet:** orta bir değerle başla ve nişan alırken kullandığın hassasiyeti ayrıca ayarla; ikisini tek tek değiştir.",
+        "**Ses:** kulaklıkla oyna ve ayak seslerini öne çıkaran bir ses profili seç.",
+        "**Kontrolcü (gamepad):** ölü bölgeleri titremeyi bastıracak kadar yükselt ve nişan yardımını kapatma; ayrıntılar için oyun içi ayar açıklamalarına bak."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Her ayar değişikliğinden sonra bir maçta test et; sonuçlar iyi çıkmazsa eski değere dön. Her şeyi bir akşamda değiştirmek neyin işe yaradığını gizler."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme",
+     "baslik": "İlerleme: Battle Pass ve sezon",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Sezon 1 Battle Pass'i, resmi duyuruya göre 100'ün üzerinde ödül sunuyor ve 100 kademeden oluşuyor. Geriden gelen oyuncular için bir yetişme sistemi var: sezon ilerledikçe, katılmakta geç kalsan bile ödüller sana otomatik olarak yetiştiriliyor. BlackCell ise ek avantajlar veren premium kademe."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Pass'i satın almadan önce ücretsiz ödül sırasını gözden geçir; premium ödül istediğine değip değmediğini önceden gör.",
+        "Sezon ortasında yeni etkinlik modları gelir (örneğin Rockets and Snipers ve Extreme Resurgence duyuruldu); ilerlemeyi bunlara göre planla.",
+        "Ana oyunu ve Warzone'u aynı hesapta kullanabilirsin; Warzone Sezon 1 ile ana oyunla bütünleşti."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Pass kapanmadan önce hesapla: sezon bitmeden bitiremeyeceğini düşünüyorsan satın alma. Yetişme sistemi yardım ediyor ama sınırsız değil."
+      }
+     ]
+    },
+    {
+     "id": "baslangic-hatalari",
+     "baslik": "Yeni başlayanların sık hataları",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Aynı yoldan tekrar tekrar geçmek.** Rakip kamp yapıyorsa farklı bir rota seç.",
+        "**Zırhsız çatışmaya girmek.** Warzone'da plakasız bir çatışma çoğu zaman kaybedilmiş çatışmadır.",
+        "**Ekipmansız sınıf.** Elinde yalnız silah varsa tehlikede kalırsın; ekipman ve taktik yeteneklerini de ihmal etme.",
+        "**Tek başına kalabalığa girmek.** Takım arkadaşı olmadan alana girmek seni kolay hedef yapar.",
+        "**Güvenlik şartlarını sonradan görmek.** PC'de TPM 2.0 ve Secure Boot'u satın almadan önce kontrol et.",
+        "**Sürekli yeni silah aramak.** Bir silahı birkaç gün kullanmadan değerlendirme; hissetmek zaman ister."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Aynı silahla yirmi maç oyna ve sonra karar ver. Sürekli silah değiştirmek hangi hatanın silahtan, hangisinin senden kaynaklandığını gizler."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik-ve-harcama",
+     "baslik": "Hesap güvenliği ve harcama uyarısı",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Ana oyun ücretli, Warzone ücretsiz; ikisinde de Battle Pass, paketler ve COD Points ile ek satın alım yapılabilir. Satın almadan önce neyin kalıcı, neyin sezonluk olduğunu oku ve aylık bir sınır koy."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Hesabına iki adımlı doğrulama ekle ve şifreni başka sitelerde kullanma.",
+        "Çocuklar için platformunun (PlayStation, Xbox, Nintendo, Steam veya Battle.net) ebeveyn denetimlerini aç ve harcamayı onaya bağla.",
+        "Ücretsiz COD Points veya gizli silah vaat eden bağlantılardan ve dosyalardan uzak dur; hesap çalmak için kullanılırlar."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Hile yazılımı, nişan botu, makro veya özel tuş eşleştirme aygıtlarından, hesap veya eşya alıp satmaktan ve başkasına rütbe kastırmaktan (boost) uzak dur. PC'de güvenlik şartları bu yüzden sıkıdır; yasaklanan hesap kalıcı kaybolabilir ve bunlar çoğunlukla dolandırıcılıktır."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Sık sorulan sorular",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Warzone ücretsiz mi?",
+         "c": "Evet, Warzone ücretsiz oynanır. Ana oyun (Modern Warfare 4) ise ayrıca satın alınır."
+        },
+        {
+         "s": "PS4 veya Xbox One'da oynayabilir miyim?",
+         "c": "Modern Warfare 4 PS4 ve Xbox One için çıkmadı; PS5, Xbox Series X|S, PC ve Nintendo Switch 2 için çıktı."
+        },
+        {
+         "s": "PC'de neden oyun açılmıyor?",
+         "c": "En sık neden TPM 2.0 veya Secure Boot'un kapalı olması. Activision'ın destek sayfasındaki adımları izle."
+        },
+        {
+         "s": "Ana oyunu almadan önce Warzone'u denesem olur mu?",
+         "c": "Evet, Warzone ücretsiz. Sevmezsen hiçbir şey kaybetmezsin."
+        },
+        {
+         "s": "Battle Pass almam şart mı?",
+         "c": "Hayır. Ücretsiz ödül sırası vardır; premium kısım isteğe bağlı."
+        },
+        {
+         "s": "Yeni sezonda silahlarım gidiyor mu?",
+         "c": "Resmî sezon duyurularını ve oyun içi ilerleme sayfasını kontrol et; bu rehberde bu ayrıntıyı doğrulamadım."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "en": {
+   "baslik": "Call of Duty Guide - MW4 and Warzone Beginner's Handbook 2026",
+   "ozet": "A beginner's guide to Modern Warfare 4 and the free Warzone: platforms, PC requirements, modes, settings, the Battle Pass and safe spending.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "First-person shooter (campaign, multiplayer, DMZ, battle royale)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "PS5, Xbox Series X|S, PC (Battle.net, Steam, Xbox on PC), Nintendo Switch 2; no PS4 or Xbox One"
+    },
+    {
+     "ad": "Pricing model",
+     "deger": "Main game is paid; Warzone is free"
+    },
+    {
+     "ad": "Current version",
+     "deger": "Modern Warfare 4, Season 1 (6 November 2026)"
+    },
+    {
+     "ad": "Turkish support",
+     "deger": "Check the in-game language setting (not verified)"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "oyun-nedir",
+     "baslik": "Call of Duty in 2026: Modern Warfare 4 and Warzone",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Call of Duty is a first-person shooter series with a new main game roughly every year. The current main game is **Call of Duty: Modern Warfare 4**, made by Infinity Ward. According to official announcements it launched on 23 October 2026 for PlayStation 5, Xbox Series X|S, PC (Battle.net, Steam and Xbox on PC) and Nintendo Switch 2; there is no PS4 or Xbox One version. It contains a campaign, Multiplayer and the returning DMZ mode."
+      },
+      {
+       "tip": "p",
+       "metin": "**Warzone** is the free-to-play battle royale (last one standing wins) side. With Season 1, which began on 6 November 2026, Warzone became fully integrated with Modern Warfare 4. The new Battle Royale map Hajin and the new Resurgence map Zodiac arrived; Rebirth Island returns, and Verdansk comes back later in Season 1."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "This guide covers the lasting basics of the main game and Warzone. Which weapon is best changes from season to season; check the official patch notes for the current picture."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Before you start: platform, install, security requirements",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "You buy the main game from the store page; the store offers Standard and Vault editions, and the Vault list shows BlackCell (1 season) and extra packs. Warzone, on the other hand, is free separately. On PC, Modern Warfare 4 officially asks for the following."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Minimum:** 64-bit Windows 10, Ryzen 5 1400 or Core i5-6600, 8 GB RAM, Radeon RX 470, GeForce GTX 970 or GTX 1060, or Arc A580; **115 GB of SSD** space.",
+        "**Recommended (90 frames at High in Multiplayer):** Windows 11, Ryzen 5 3600 or Core i7-8700K, 16 GB RAM, Radeon RX 6600 XT, GeForce RTX 3060 Ti or Arc B580, 8 GB of video memory.",
+        "**Security requirement:** PC needs TPM 2.0 and Secure Boot. According to Activision this generally means Intel 8th generation or newer or Ryzen 2000 and up, UEFI boot, a GPT disk and Secure Boot enabled."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Without TPM 2.0 and Secure Boot the game will not launch on PC. Before changing BIOS settings, read the steps on Activision's support page; a wrong setting can stop your computer from starting."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "The install needs 115 GB of SSD space. Check your free space before downloading; if you want to try Warzone first, you can buy the main game later."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Your first matches, step by step",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Start with Warzone or core Multiplayer modes",
+         "metin": "Warzone is free; Multiplayer teaches weapons and maps in shorter matches. Try both and see which you like."
+        },
+        {
+         "baslik": "Build a loadout",
+         "metin": "Pick a main weapon, a sidearm, equipment and Perks. At first start with a ready-made class, then change things one by one."
+        },
+        {
+         "baslik": "Learn the map's flow",
+         "metin": "Every map has paths players use often. When you die, note where you were hit from and do not take that route again."
+        },
+        {
+         "baslik": "Land safely in Warzone",
+         "metin": "Instead of jumping into busy areas, land at an edge point, find a weapon and armor, and follow the direction of the circle."
+        },
+        {
+         "baslik": "Fix one thing after every match",
+         "metin": "Find out why you died: were you exposed, did you not recover, were you alone? Fix that in the next match."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "In your first week of Multiplayer, ignore your K/D ratio. Aim to play consistently: learn to disengage and reposition before you die."
+      }
+     ]
+    },
+    {
+     "id": "modlar",
+     "baslik": "Modes: where to start",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "According to the official announcement, these are the main modes in Season 1. The current list is in the in-game menu and more will be added during the season."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Mode",
+        "What it is for"
+       ],
+       "satirlar": [
+        [
+         "Multiplayer",
+         "Short team matches; the best place to learn weapons and maps."
+        ],
+        [
+         "Kill Block: Crash",
+         "A new mode arriving with Modern Warfare 4; listed among Season 1 content in the official announcement."
+        ],
+        [
+         "DMZ",
+         "A team-based, mission and extraction survival mode; Season 1 added X01 Black Site, new enemies and orders."
+        ],
+        [
+         "Warzone Battle Royale",
+         "Try to be the last one standing on a large map; the new map is Hajin, with Verdansk coming later in Season 1."
+        ],
+        [
+         "Warzone Resurgence",
+         "A faster version where you can return after dying; on Zodiac and Rebirth Island."
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "The gentlest path for day one: start with Resurgence in Warzone (you can come back after dying) or use short Multiplayer modes to practice movement and aiming."
+      }
+     ]
+    },
+    {
+     "id": "temel-mekanikler",
+     "baslik": "Core mechanics: loadouts, Perks, position",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Weapons change from season to season, but these four habits do not."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Perks:** Warzone has 18 Perks in total. The first fifteen are chosen into three slots before a match; the remaining three are **Elite Perks** found during a match, and only one can be equipped at a time. According to the official post, Elite Perks add a fourth slot and are found at Buy Stations or through Supply Run Contracts.",
+        "**Position:** corners and door frames help in close fights; staying in motion in open areas gives an opponent little time.",
+        "**Armor and healing:** in Warzone, put on armor plates before a fight; the Tempered Perk cuts plate refills from three plates to two (Season 1 post).",
+        "**Teamwork and comms:** pings and short callouts beat long talk. Details like buy-back cost and the Wingman Perk in Resurgence change with the season."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Instead of piling Perks onto a class, write the class's purpose in one sentence: close quarters or mid-range? Choose Perks to match that purpose."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Settings: solid starting values",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The following are starting suggestions (my own experience); they vary with your hardware and habits. Change only one setting at a time."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Field of view (FOV):** start around 100. Too high shrinks targets, too low hides your surroundings.",
+        "**Frame limit:** match your monitor's refresh rate and keep VSync off; a steady rate beats sudden spikes.",
+        "**Sensitivity:** start at a middle value and tune your aim-down-sights sensitivity separately; change them one at a time.",
+        "**Audio:** play with headphones and choose a sound profile that emphasizes footsteps.",
+        "**Controller:** raise dead zones just enough to stop drift, and do not turn off aim assist; see the in-game setting descriptions for details."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Test each change in a match; if results are not better, go back to the old value. Changing everything in one evening hides what actually works."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme",
+     "baslik": "Progression: the Battle Pass and the season",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "According to the official announcement, the Season 1 Battle Pass offers over 100 rewards across 100 tiers. There is a catch-up system for players who arrive late: as the season goes on, rewards are brought forward automatically for you even if you joined late. BlackCell is the premium tier with extra perks."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Before buying the pass, review the free reward track; see in advance whether the premium rewards are worth it for you.",
+        "New event modes arrive mid-season (for example Rockets and Snipers and Extreme Resurgence were announced); plan your progress around them.",
+        "You can use the main game and Warzone on the same account; Warzone became integrated with the main game in Season 1."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Do the math before buying: if you think you cannot finish before the season ends, do not buy. The catch-up system helps, but it is not unlimited."
+      }
+     ]
+    },
+    {
+     "id": "baslangic-hatalari",
+     "baslik": "Common beginner mistakes",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Taking the same route again and again.** If an opponent camps, pick a different route.",
+        "**Fighting without armor.** In Warzone a fight without plates is often a lost fight.",
+        "**A class with no equipment.** With only a weapon you are in danger; do not neglect equipment and tactical gear.",
+        "**Entering a crowd alone.** Going into an area without teammates makes you an easy target.",
+        "**Finding out about security requirements afterward.** On PC, check TPM 2.0 and Secure Boot before you buy.",
+        "**Constantly chasing new weapons.** Do not judge a weapon before using it for a few days; feel takes time."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Play twenty matches with the same weapon, then decide. Constantly switching hides which mistakes come from the weapon and which from you."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik-ve-harcama",
+     "baslik": "Account security and spending warning",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The main game is paid and Warzone is free; both allow extra purchases through Battle Passes, bundles and COD Points. Before buying, read what is permanent and what is seasonal, and set a monthly limit."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Add two-step verification to your account and do not reuse your password on other sites.",
+        "For children, turn on your platform's parental controls (PlayStation, Xbox, Nintendo, Steam or Battle.net) and require approval for spending.",
+        "Stay away from links and files promising free COD Points or secret weapons; they are used to steal accounts."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Stay away from cheat software, aimbots, macros or special input devices, buying or selling accounts or items, and having someone boost your rank. The PC security requirements are strict for this reason; a banned account may be lost permanently, and these offers are often scams."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Frequently asked questions",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is Warzone free?",
+         "c": "Yes, Warzone is free to play. The main game (Modern Warfare 4) is bought separately."
+        },
+        {
+         "s": "Can I play on PS4 or Xbox One?",
+         "c": "Modern Warfare 4 did not launch for PS4 or Xbox One; it launched for PS5, Xbox Series X|S, PC and Nintendo Switch 2."
+        },
+        {
+         "s": "Why won't the game start on PC?",
+         "c": "The most common cause is TPM 2.0 or Secure Boot being off. Follow the steps on Activision's support page."
+        },
+        {
+         "s": "Can I try Warzone before buying the main game?",
+         "c": "Yes, Warzone is free. If you do not like it, you lose nothing."
+        },
+        {
+         "s": "Do I have to buy the Battle Pass?",
+         "c": "No. There is a free reward track; the premium part is optional."
+        },
+        {
+         "s": "Do my weapons disappear in a new season?",
+         "c": "Check the official season announcements and the in-game progression page; I did not verify this detail for this guide."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "fr": {
+   "baslik": "Guide Call of Duty - Débuter dans MW4 et Warzone en 2026",
+   "ozet": "Un guide pour débuter dans Modern Warfare 4 et le Warzone gratuit : plateformes, exigences PC, modes, réglages, Passe de combat et dépenses prudentes.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Jeu de tir à la première personne (campagne, multijoueur, DMZ, battle royale)"
+    },
+    {
+     "ad": "Plateforme",
+     "deger": "PS5, Xbox Series X|S, PC (Battle.net, Steam, Xbox on PC), Nintendo Switch 2 ; pas de PS4 ni Xbox One"
+    },
+    {
+     "ad": "Modèle économique",
+     "deger": "Jeu principal payant ; Warzone gratuit"
+    },
+    {
+     "ad": "Version actuelle",
+     "deger": "Modern Warfare 4, saison 1 (6 novembre 2026)"
+    },
+    {
+     "ad": "Prise en charge du turc",
+     "deger": "À vérifier dans les réglages de langue du jeu (non vérifié)"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "oyun-nedir",
+     "baslik": "Call of Duty en 2026 : Modern Warfare 4 et Warzone",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Call of Duty est une série de tirs à la première personne avec un nouveau jeu principal à peu près chaque année. Le jeu principal actuel est **Call of Duty: Modern Warfare 4**, développé par Infinity Ward. D'après les annonces officielles, il est sorti le 23 octobre 2026 sur PlayStation 5, Xbox Series X|S, PC (Battle.net, Steam et Xbox on PC) et Nintendo Switch 2 ; il n'existe pas de version PS4 ni Xbox One. Il comprend une campagne, le Multijoueur et le mode DMZ qui fait son retour."
+      },
+      {
+       "tip": "p",
+       "metin": "**Warzone** est le versant battle royale (le dernier survivant gagne) gratuit. Avec la saison 1, lancée le 6 novembre 2026, Warzone est devenu pleinement intégré à Modern Warfare 4. La nouvelle carte Battle Royale Hajin et la nouvelle carte Resurgence Zodiac sont arrivées ; Rebirth Island revient, et Verdansk reviendra plus tard dans la saison 1."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Ce guide présente les bases durables du jeu principal et de Warzone. La meilleure arme change d'une saison à l'autre ; consulte les notes de patch officielles pour la situation actuelle."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Avant de commencer : plateforme, installation, exigences de sécurité",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Tu achètes le jeu principal sur la page de la boutique ; elle propose les éditions Standard et Vault, et la liste Vault affiche BlackCell (1 saison) et des packs supplémentaires. Warzone, lui, est gratuit à part. Sur PC, Modern Warfare 4 demande officiellement ce qui suit."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Minimum :** Windows 10 64 bits, Ryzen 5 1400 ou Core i5-6600, 8 Go de RAM, Radeon RX 470, GeForce GTX 970 ou GTX 1060, ou Arc A580 ; **115 Go d'espace SSD**.",
+        "**Recommandé (90 images par seconde en Élevé en Multijoueur) :** Windows 11, Ryzen 5 3600 ou Core i7-8700K, 16 Go de RAM, Radeon RX 6600 XT, GeForce RTX 3060 Ti ou Arc B580, 8 Go de mémoire vidéo.",
+        "**Exigence de sécurité :** le PC doit disposer du TPM 2.0 et du démarrage sécurisé (Secure Boot). Selon Activision, cela suppose en général un Intel de 8e génération ou plus récent, ou un Ryzen 2000 et plus, un démarrage UEFI, un disque GPT et Secure Boot activé."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Sans TPM 2.0 ni Secure Boot, le jeu ne se lance pas sur PC. Avant de modifier le BIOS, lis les étapes de la page de support d'Activision ; un mauvais réglage peut empêcher ton ordinateur de démarrer."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "L'installation demande 115 Go d'espace SSD. Vérifie ton espace libre avant de télécharger ; si tu veux essayer Warzone d'abord, tu peux acheter le jeu principal plus tard."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Tes premières parties, pas à pas",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Commence avec Warzone ou les modes de base du Multijoueur",
+         "metin": "Warzone est gratuit ; le Multijoueur enseigne armes et cartes en parties plus courtes. Essaie les deux et vois lequel te plaît."
+        },
+        {
+         "baslik": "Crée une classe (loadout)",
+         "metin": "Choisis une arme principale, une arme secondaire, de l'équipement et des atouts (Perks). Au début, pars d'une classe toute prête, puis modifie les éléments un par un."
+        },
+        {
+         "baslik": "Apprends le déroulement de la carte",
+         "metin": "Chaque carte a des chemins très empruntés. Quand tu meurs, note d'où on t'a touché et ne repasse pas par là."
+        },
+        {
+         "baslik": "Atterris prudemment dans Warzone",
+         "metin": "Au lieu de sauter dans les zones très fréquentées, atterris sur un point en bordure, trouve une arme et de l'armure, et suis la direction du cercle."
+        },
+        {
+         "baslik": "Corrige une seule chose après chaque partie",
+         "metin": "Trouve pourquoi tu es mort : étais-tu à découvert, ne t'es-tu pas régénéré, étais-tu seul ? Corrige cela à la partie suivante."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Pendant ta première semaine en Multijoueur, ignore ton ratio K/D. Vise la régularité : apprends à rompre le combat et à te replacer avant de mourir."
+      }
+     ]
+    },
+    {
+     "id": "modlar",
+     "baslik": "Modes : par où commencer",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Selon l'annonce officielle, voici les principaux modes de la saison 1. La liste actuelle figure dans le menu du jeu et d'autres s'ajouteront au fil de la saison."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Mode",
+        "À quoi il sert"
+       ],
+       "satirlar": [
+        [
+         "Multiplayer",
+         "Parties d'équipe courtes ; le meilleur endroit pour apprendre armes et cartes."
+        ],
+        [
+         "Kill Block: Crash",
+         "Un nouveau mode arrivé avec Modern Warfare 4 ; cité dans les contenus de la saison 1 de l'annonce officielle."
+        ],
+        [
+         "DMZ",
+         "Un mode de survie en équipe axé sur les missions et l'extraction ; la saison 1 ajoute X01 Black Site, de nouveaux ennemis et ordres."
+        ],
+        [
+         "Warzone Battle Royale",
+         "Tente d'être le dernier survivant sur une grande carte ; la nouvelle carte est Hajin, Verdansk revenant plus tard dans la saison 1."
+        ],
+        [
+         "Warzone Resurgence",
+         "Une version plus rapide où l'on peut revenir après la mort ; sur Zodiac et Rebirth Island."
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Le chemin le plus doux pour le premier jour : commence par Resurgence dans Warzone (tu peux revenir après la mort) ou utilise les modes courts du Multijoueur pour t'entraîner au déplacement et à la visée."
+      }
+     ]
+    },
+    {
+     "id": "temel-mekanikler",
+     "baslik": "Mécaniques de base : classes, atouts, position",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Les armes changent d'une saison à l'autre, mais ces quatre habitudes ne changent pas."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Atouts (Perks) :** Warzone compte 18 atouts au total. Les quinze premiers se choisissent dans trois emplacements avant la partie ; les trois autres sont des **atouts d'élite** trouvés pendant la partie, un seul pouvant être équipé à la fois. D'après l'article officiel, les atouts d'élite ajoutent un quatrième emplacement et se trouvent aux stations d'achat ou via les contrats Supply Run.",
+        "**Position :** les angles et les encadrements de porte aident en combat rapproché ; rester en mouvement à découvert laisse peu de temps à l'adversaire.",
+        "**Armure et soins :** dans Warzone, mets tes plaques d'armure avant le combat ; l'atout Tempered réduit le remplissage d'armure de trois plaques à deux (article de la saison 1).",
+        "**Équipe et communication :** les pings et les infos courtes valent mieux que de longs discours. Des détails comme le coût de rachat et l'atout Wingman en Resurgence varient selon la saison."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Plutôt que d'empiler les atouts sur une classe, écris son but en une phrase : combat rapproché ou moyenne distance ? Choisis les atouts en fonction."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Réglages : de bonnes valeurs de départ",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Voici des suggestions de départ (mon expérience) ; elles varient selon ton matériel et tes habitudes. Ne change qu'un seul réglage à la fois."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Champ de vision (FOV) :** commence autour de 100. Trop élevé, il rapetisse les cibles ; trop bas, il cache ton environnement.",
+        "**Limite d'images :** aligne-la sur la fréquence de ton écran et désactive la synchronisation verticale ; un rythme stable vaut mieux que des pics soudains.",
+        "**Sensibilité :** commence à une valeur moyenne et règle séparément la sensibilité en visée ; change-les l'une après l'autre.",
+        "**Audio :** joue au casque et choisis un profil sonore qui met les pas en avant.",
+        "**Manette :** relève les zones mortes juste assez pour supprimer la dérive, et ne désactive pas l'assistance à la visée ; voir les descriptions des réglages en jeu pour les détails."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Teste chaque modification en partie ; si les résultats ne sont pas meilleurs, reviens à l'ancienne valeur. Tout changer en une soirée cache ce qui fonctionne vraiment."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme",
+     "baslik": "Progression : le Passe de combat et la saison",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "D'après l'annonce officielle, le Passe de combat de la saison 1 propose plus de 100 récompenses sur 100 paliers. Un système de rattrapage existe pour ceux qui arrivent tard : au fil de la saison, les récompenses te sont rattrapées automatiquement même si tu as rejoint tardivement. BlackCell est le palier premium avec des avantages supplémentaires."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Avant d'acheter le passe, passe en revue la piste de récompenses gratuites ; vois à l'avance si les récompenses premium valent le coup pour toi.",
+        "De nouveaux modes événementiels arrivent à mi-saison (par exemple Rockets and Snipers et Extreme Resurgence ont été annoncés) ; planifie ta progression en conséquence.",
+        "Tu peux utiliser le jeu principal et Warzone avec le même compte ; Warzone s'est intégré au jeu principal avec la saison 1."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Fais le calcul avant d'acheter : si tu penses ne pas pouvoir finir avant la fin de la saison, n'achète pas. Le système de rattrapage aide, mais il n'est pas illimité."
+      }
+     ]
+    },
+    {
+     "id": "baslangic-hatalari",
+     "baslik": "Erreurs fréquentes des débutants",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Reprendre toujours le même chemin.** Si un adversaire campe, choisis une autre route.",
+        "**Combattre sans armure.** Dans Warzone, un combat sans plaques est souvent un combat perdu.",
+        "**Une classe sans équipement.** Avec seulement une arme, tu es en danger ; ne néglige pas l'équipement et le matériel tactique.",
+        "**Entrer seul dans la foule.** Aller dans une zone sans coéquipiers fait de toi une cible facile.",
+        "**Découvrir les exigences de sécurité après coup.** Sur PC, vérifie TPM 2.0 et Secure Boot avant d'acheter.",
+        "**Courir sans cesse après de nouvelles armes.** Ne juge pas une arme avant de l'avoir utilisée quelques jours ; la prise en main demande du temps."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Joue vingt parties avec la même arme, puis décide. Changer sans cesse cache quelles erreurs viennent de l'arme et lesquelles viennent de toi."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik-ve-harcama",
+     "baslik": "Sécurité du compte et avertissement sur les dépenses",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Le jeu principal est payant et Warzone gratuit ; les deux permettent des achats supplémentaires via Passes de combat, packs et COD Points. Avant d'acheter, lis ce qui est permanent et ce qui est saisonnier, et fixe une limite mensuelle."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Ajoute la vérification en deux étapes à ton compte et ne réutilise pas ton mot de passe ailleurs.",
+        "Pour les enfants, active le contrôle parental de ta plateforme (PlayStation, Xbox, Nintendo, Steam ou Battle.net) et exige une validation pour les achats.",
+        "Reste à l'écart des liens et fichiers promettant des COD Points gratuits ou des armes secrètes ; ils servent à voler des comptes."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Tiens-toi à l'écart des logiciels de triche, des aimbots, des macros ou des dispositifs de saisie spéciaux, de l'achat ou de la vente de comptes ou d'objets, et du boost de rang par un tiers. Les exigences de sécurité sur PC sont strictes pour cette raison ; un compte banni peut être perdu définitivement, et ces offres sont souvent des arnaques."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Questions fréquentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Warzone est-il gratuit ?",
+         "c": "Oui, Warzone est gratuit. Le jeu principal (Modern Warfare 4) s'achète séparément."
+        },
+        {
+         "s": "Puis-je jouer sur PS4 ou Xbox One ?",
+         "c": "Modern Warfare 4 n'est pas sorti sur PS4 ni Xbox One ; il est sorti sur PS5, Xbox Series X|S, PC et Nintendo Switch 2."
+        },
+        {
+         "s": "Pourquoi le jeu ne se lance-t-il pas sur PC ?",
+         "c": "La cause la plus fréquente est que TPM 2.0 ou Secure Boot soit désactivé. Suis les étapes de la page de support d'Activision."
+        },
+        {
+         "s": "Puis-je essayer Warzone avant d'acheter le jeu principal ?",
+         "c": "Oui, Warzone est gratuit. Si tu n'aimes pas, tu ne perds rien."
+        },
+        {
+         "s": "Dois-je acheter le Passe de combat ?",
+         "c": "Non. Il existe une piste de récompenses gratuites ; la partie premium est facultative."
+        },
+        {
+         "s": "Mes armes disparaissent-elles en nouvelle saison ?",
+         "c": "Consulte les annonces officielles de saison et la page de progression en jeu ; je n'ai pas vérifié ce détail pour ce guide."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "es": {
+   "baslik": "Guía de Call of Duty - Primeros pasos en MW4 y Warzone en 2026",
+   "ozet": "Guía para empezar en Modern Warfare 4 y el Warzone gratuito: plataformas, requisitos de PC, modos, ajustes, Pase de batalla y gasto prudente.",
+   "kunye": [
+    {
+     "ad": "Género",
+     "deger": "Disparos en primera persona (campaña, multijugador, DMZ, battle royale)"
+    },
+    {
+     "ad": "Plataforma",
+     "deger": "PS5, Xbox Series X|S, PC (Battle.net, Steam, Xbox on PC), Nintendo Switch 2; sin PS4 ni Xbox One"
+    },
+    {
+     "ad": "Modelo de precio",
+     "deger": "El juego principal es de pago; Warzone es gratuito"
+    },
+    {
+     "ad": "Versión actual",
+     "deger": "Modern Warfare 4, Temporada 1 (6 de noviembre de 2026)"
+    },
+    {
+     "ad": "Compatibilidad con turco",
+     "deger": "Compruébalo en el ajuste de idioma del juego (no verificado)"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "oyun-nedir",
+     "baslik": "Call of Duty en 2026: Modern Warfare 4 y Warzone",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Call of Duty es una serie de disparos en primera persona con un juego principal nuevo casi cada año. El juego principal actual es **Call of Duty: Modern Warfare 4**, de Infinity Ward. Según los anuncios oficiales salió el 23 de octubre de 2026 para PlayStation 5, Xbox Series X|S, PC (Battle.net, Steam y Xbox on PC) y Nintendo Switch 2; no hay versión de PS4 ni de Xbox One. Incluye campaña, Multijugador y el regreso del modo DMZ."
+      },
+      {
+       "tip": "p",
+       "metin": "**Warzone** es la parte de battle royale (gana el último en pie) y es gratuita. Con la Temporada 1, que empezó el 6 de noviembre de 2026, Warzone quedó totalmente integrado con Modern Warfare 4. Llegaron el nuevo mapa de Battle Royale Hajin y el nuevo mapa de Resurgence Zodiac; regresa Rebirth Island y Verdansk volverá más adelante en la Temporada 1."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Esta guía cubre las bases duraderas del juego principal y de Warzone. Qué arma es la mejor cambia de una temporada a otra; consulta las notas de parche oficiales para ver la situación actual."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Antes de empezar: plataforma, instalación, requisitos de seguridad",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Compras el juego principal en la página de la tienda; esta ofrece las ediciones Estándar y Vault, y la lista de Vault muestra BlackCell (1 temporada) y paquetes extra. Warzone, en cambio, es gratuito por separado. En PC, Modern Warfare 4 pide oficialmente lo siguiente."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Mínimo:** Windows 10 de 64 bits, Ryzen 5 1400 o Core i5-6600, 8 GB de RAM, Radeon RX 470, GeForce GTX 970 o GTX 1060, o Arc A580; **115 GB de espacio en SSD**.",
+        "**Recomendado (90 fotogramas en Alto en Multijugador):** Windows 11, Ryzen 5 3600 o Core i7-8700K, 16 GB de RAM, Radeon RX 6600 XT, GeForce RTX 3060 Ti o Arc B580, 8 GB de memoria de vídeo.",
+        "**Requisito de seguridad:** el PC necesita TPM 2.0 y Arranque seguro (Secure Boot). Según Activision, esto suele significar un Intel de 8.ª generación o posterior o un Ryzen 2000 o superior, arranque UEFI, disco GPT y Secure Boot activado."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Sin TPM 2.0 y Secure Boot el juego no se abre en PC. Antes de cambiar la BIOS, lee los pasos de la página de soporte de Activision; un ajuste incorrecto puede impedir que el ordenador arranque."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "La instalación necesita 115 GB de espacio en SSD. Comprueba tu espacio libre antes de descargar; si quieres probar Warzone primero, puedes comprar el juego principal más tarde."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Tus primeras partidas, paso a paso",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Empieza con Warzone o los modos básicos de Multijugador",
+         "metin": "Warzone es gratuito; Multijugador enseña armas y mapas en partidas más cortas. Prueba ambos y mira cuál te gusta."
+        },
+        {
+         "baslik": "Crea una clase (loadout)",
+         "metin": "Elige un arma principal, una secundaria, equipo y ventajas (Perks). Al principio empieza con una clase ya hecha y luego cambia las cosas una a una."
+        },
+        {
+         "baslik": "Aprende el flujo del mapa",
+         "metin": "Cada mapa tiene rutas que los jugadores usan mucho. Cuando mueras, fíjate desde dónde te dieron y no vuelvas a pasar por ahí."
+        },
+        {
+         "baslik": "Aterriza con seguridad en Warzone",
+         "metin": "En vez de saltar a zonas concurridas, aterriza en un punto del borde, busca arma y armadura y sigue la dirección del círculo."
+        },
+        {
+         "baslik": "Corrige una sola cosa tras cada partida",
+         "metin": "Descubre por qué moriste: ¿estabas expuesto, no te recuperaste, estabas solo? Corrígelo en la siguiente partida."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "En tu primera semana de Multijugador, ignora tu ratio K/D. Busca jugar con constancia: aprende a retirarte y reposicionarte antes de morir."
+      }
+     ]
+    },
+    {
+     "id": "modlar",
+     "baslik": "Modos: por dónde empezar",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Según el anuncio oficial, estos son los modos principales de la Temporada 1. La lista actual está en el menú del juego y se añadirán más durante la temporada."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Modo",
+        "Para qué sirve"
+       ],
+       "satirlar": [
+        [
+         "Multiplayer",
+         "Partidas de equipo cortas; el mejor sitio para aprender armas y mapas."
+        ],
+        [
+         "Kill Block: Crash",
+         "Un modo nuevo que llega con Modern Warfare 4; figura entre el contenido de la Temporada 1 en el anuncio oficial."
+        ],
+        [
+         "DMZ",
+         "Un modo de supervivencia por equipos basado en misiones y extracción; la Temporada 1 añadió X01 Black Site, nuevos enemigos y órdenes."
+        ],
+        [
+         "Warzone Battle Royale",
+         "Intenta ser el último en pie en un mapa grande; el nuevo mapa es Hajin y Verdansk llegará más adelante en la Temporada 1."
+        ],
+        [
+         "Warzone Resurgence",
+         "Una versión más rápida en la que puedes volver tras morir; en Zodiac y Rebirth Island."
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "El camino más suave para el primer día: empieza con Resurgence en Warzone (puedes volver tras morir) o usa los modos cortos de Multijugador para practicar movimiento y puntería."
+      }
+     ]
+    },
+    {
+     "id": "temel-mekanikler",
+     "baslik": "Mecánicas básicas: clases, ventajas, posición",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Las armas cambian de una temporada a otra, pero estos cuatro hábitos no."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Ventajas (Perks):** Warzone tiene 18 ventajas en total. Las quince primeras se eligen en tres ranuras antes de la partida; las tres restantes son **Ventajas de élite** que se encuentran durante la partida, y solo una puede equiparse a la vez. Según la publicación oficial, las ventajas de élite añaden una cuarta ranura y se encuentran en estaciones de compra o mediante contratos Supply Run.",
+        "**Posición:** las esquinas y los marcos de puerta ayudan en el cuerpo a cuerpo; mantenerte en movimiento en campo abierto da poco tiempo al rival.",
+        "**Armadura y curación:** en Warzone, ponte las placas de armadura antes del combate; la ventaja Tempered reduce de tres a dos las placas para rellenar la armadura (publicación de la Temporada 1).",
+        "**Equipo y comunicación:** los pings y la información breve valen más que hablar largo. Detalles como el coste de recuperar a un compañero y la ventaja Wingman en Resurgence cambian con la temporada."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "En vez de apilar ventajas en una clase, escribe su objetivo en una frase: ¿cuerpo a cuerpo o media distancia? Elige las ventajas según ese objetivo."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Ajustes: valores iniciales sólidos",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Lo siguiente son sugerencias iniciales (experiencia propia); varían según tu equipo y tus hábitos. Cambia un solo ajuste cada vez."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Campo de visión (FOV):** empieza alrededor de 100. Demasiado alto hace pequeños a los objetivos; demasiado bajo oculta tu entorno.",
+        "**Límite de fotogramas:** iguálalo a la frecuencia de tu monitor y deja desactivada la sincronización vertical; una tasa estable es mejor que picos repentinos.",
+        "**Sensibilidad:** empieza en un valor medio y ajusta por separado la sensibilidad al apuntar; cámbialas una a una.",
+        "**Audio:** juega con auriculares y elige un perfil de sonido que resalte los pasos.",
+        "**Mando:** sube las zonas muertas lo justo para frenar la deriva y no desactives la ayuda de puntería; consulta las descripciones de los ajustes del juego para más detalles."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Prueba cada cambio en una partida; si los resultados no mejoran, vuelve al valor anterior. Cambiarlo todo en una tarde oculta qué funciona de verdad."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme",
+     "baslik": "Progresión: el Pase de batalla y la temporada",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Según el anuncio oficial, el Pase de batalla de la Temporada 1 ofrece más de 100 recompensas en 100 niveles. Hay un sistema de puesta al día para quien llega tarde: a medida que avanza la temporada, las recompensas se te adelantan automáticamente aunque te hayas unido tarde. BlackCell es el nivel premium con ventajas adicionales."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Antes de comprar el pase, revisa la pista de recompensas gratuitas; comprueba de antemano si las recompensas premium te compensan.",
+        "A mitad de temporada llegan nuevos modos de evento (por ejemplo, se anunciaron Rockets and Snipers y Extreme Resurgence); planifica tu progreso en función de ellos.",
+        "Puedes usar el juego principal y Warzone con la misma cuenta; Warzone quedó integrado con el juego principal en la Temporada 1."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Haz las cuentas antes de comprar: si crees que no podrás terminarlo antes de que acabe la temporada, no lo compres. El sistema de puesta al día ayuda, pero no es ilimitado."
+      }
+     ]
+    },
+    {
+     "id": "baslangic-hatalari",
+     "baslik": "Errores habituales de los principiantes",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Pasar siempre por la misma ruta.** Si un rival acampa, elige otra ruta.",
+        "**Pelear sin armadura.** En Warzone una pelea sin placas suele ser una pelea perdida.",
+        "**Una clase sin equipo.** Con solo un arma estás en peligro; no descuides el equipo y el material táctico.",
+        "**Entrar solo en una multitud.** Ir a una zona sin compañeros te convierte en un blanco fácil.",
+        "**Enterarte de los requisitos de seguridad después.** En PC, comprueba TPM 2.0 y Secure Boot antes de comprar.",
+        "**Perseguir siempre armas nuevas.** No juzgues un arma sin usarla unos días; cogerle el tacto lleva tiempo."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Juega veinte partidas con la misma arma y luego decide. Cambiar constantemente oculta qué errores vienen del arma y cuáles de ti."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik-ve-harcama",
+     "baslik": "Seguridad de la cuenta y aviso sobre el gasto",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "El juego principal es de pago y Warzone es gratuito; ambos permiten compras adicionales mediante Pases de batalla, paquetes y COD Points. Antes de comprar, lee qué es permanente y qué es de temporada, y fija un límite mensual."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Añade verificación en dos pasos a tu cuenta y no reutilices tu contraseña en otros sitios.",
+        "Para niños, activa el control parental de tu plataforma (PlayStation, Xbox, Nintendo, Steam o Battle.net) y exige aprobación para gastar.",
+        "Aléjate de enlaces y archivos que prometan COD Points gratis o armas secretas; se usan para robar cuentas."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Aléjate del software de trampas, los aimbots, las macros o los dispositivos de entrada especiales, de la compraventa de cuentas u objetos y de que otra persona te suba de rango (boost). Los requisitos de seguridad en PC son estrictos por este motivo; una cuenta sancionada puede perderse para siempre y estas ofertas suelen ser estafas."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Preguntas frecuentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "¿Warzone es gratuito?",
+         "c": "Sí, Warzone es gratuito. El juego principal (Modern Warfare 4) se compra aparte."
+        },
+        {
+         "s": "¿Puedo jugar en PS4 o Xbox One?",
+         "c": "Modern Warfare 4 no salió para PS4 ni Xbox One; salió para PS5, Xbox Series X|S, PC y Nintendo Switch 2."
+        },
+        {
+         "s": "¿Por qué no se abre el juego en PC?",
+         "c": "La causa más común es que TPM 2.0 o Secure Boot estén desactivados. Sigue los pasos de la página de soporte de Activision."
+        },
+        {
+         "s": "¿Puedo probar Warzone antes de comprar el juego principal?",
+         "c": "Sí, Warzone es gratuito. Si no te gusta, no pierdes nada."
+        },
+        {
+         "s": "¿Tengo que comprar el Pase de batalla?",
+         "c": "No. Hay una pista de recompensas gratuitas; la parte premium es opcional."
+        },
+        {
+         "s": "¿Mis armas desaparecen en una temporada nueva?",
+         "c": "Consulta los anuncios oficiales de temporada y la página de progresión del juego; no he verificado este detalle para esta guía."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

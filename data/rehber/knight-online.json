@@ -1,0 +1,1385 @@
+{
+ "oyun": "knight-online",
+ "guncelleme": "2026-11-14",
+ "surum": "Yeni sunucu dönemi, açılış 12 Kasım 2026 (14 Kasım 2026)",
+ "kaynaklar": [
+  {
+   "url": "https://nttgame.nttgame.org.tr/knightonline.html",
+   "ad": "NTTGame: Knight Online"
+  },
+  {
+   "url": "https://www.nttgame.com/tr/register",
+   "ad": "NTTGame: hesap kaydı"
+  },
+  {
+   "url": "https://korehberi.com/haberler/knight-online-yeni-server-ne-zaman-acilacak-2026",
+   "ad": "KO Rehberi: yeni server ne zaman açılacak"
+  },
+  {
+   "url": "https://korehberi.com/genel/knight-online-yeni-server-isimleri-belli-oldu-2026",
+   "ad": "KO Rehberi: yeni server isimleri"
+  },
+  {
+   "url": "https://knightpin.com/blog/knight-online-yeni-server",
+   "ad": "Knightpin: yeni server ve sunucu listesi"
+  },
+  {
+   "url": "https://knightpin.com/blog/knight-online-sistem-gereksinimleri",
+   "ad": "Knightpin: sistem gereksinimleri 2026"
+  },
+  {
+   "url": "https://korehberi.com/knight-online/baslangic-rehberi",
+   "ad": "KO Rehberi: başlangıç rehberi"
+  },
+  {
+   "url": "https://store.steampowered.com/app/389430/Knight_Online",
+   "ad": "Steam: Knight Online (SteamKO)"
+  }
+ ],
+ "diller": {
+  "tr": {
+   "baslik": "Knight Online Başlangıç Rehberi: Resmî Sunucular 2026",
+   "ozet": "NTTGame'in resmî Knight Online sunucularına başlayan ya da dönen oyuncu için hesap, yeni sunucu açılışı, ırk ve sınıf seçimi, seviye atlama, ekonomi ve güvenlik.",
+   "kunye": [
+    {
+     "ad": "Tür",
+     "deger": "MMORPG (çevrimiçi rol yapma oyunu)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Windows (USKO istemcisi; Steam sürümü SteamKO ayrı)"
+    },
+    {
+     "ad": "Fiyat modeli",
+     "deger": "Oynaması ücretsiz; premium ve oyun içi satın alımlar var"
+    },
+    {
+     "ad": "Güncel sürüm",
+     "deger": "Yeni sunucu dönemi: 12 Kasım 2026 açılışı"
+    },
+    {
+     "ad": "Türkçe desteği",
+     "deger": "Oyun Türkçe yayımlanıyor (NTTGame Türkiye)"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "Oyun 2026'da nerede duruyor?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Knight Online, Türkiye'de **NTTGame** tarafından yayımlanan, uzun yıllardır süren bir çevrimiçi rol yapma oyunudur. Oyunun merkezinde iki ulus arasındaki savaş var: **El Morad** ve **Karus**. İki ulus arasında güç farkı yoktur; seçim görünüm ve arkadaş tercihine kalmıştır."
+      },
+      {
+       "tip": "p",
+       "metin": "Bu yıl önemli bir tarih var: NTTGame 1 Ekim 2026'da duyurduğu yeni sunucuları **12 Kasım 2026 Perşembe, Türkiye saatiyle 16.00'da** açtı. Haberlere göre yeni sunucular Atlas, Oracle, Luna ve Carnac adını taşıyor. Yeni sunucularda Ardream ve Ronark Land Base haritaları yok; savaşlar Ronark Land'de yapılıyor. Bazı sunucuların ilerleyen dönemde birleştirileceği de duyurulmuştu."
+      },
+      {
+       "tip": "p",
+       "metin": "Mevcut USKO sunucuları Zero, Pandora, Agartha, Felis, Minark, Dryads, Oreads ve Destan olarak listeleniyor. Steam üzerinden oynanan SteamKO ayrı bir istemcidir ve ayrı sunucusu (Zion) vardır."
+      },
+      {
+       "tip": "p",
+       "metin": "Eski ve yeni sunucular arasındaki fark ağırlıklı olarak kalabalık ve ekonomidir. Yeni sunucuda herkes sıfırdan başlar; eşya fiyatları ve rekabet daha dengelidir. Eski sunucularda ise yıllardır birikmiş eşya ve güçlü klanlar vardır. Hangisinin size uyduğuna oyun tarzınıza göre karar verin."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Sunucu listesi ve birleşme planları değişir. Hangi sunucuda oynayacağınıza karar vermeden önce NTTGame'in güncel duyurusuna bakın."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Başlamadan önce: hesap, istemci, güvenlik",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Oyun **ücretsizdir**. NTTGame hesabını resmî sitede açarsınız, istemciyi de aynı sitenin indirme sayfasından alırsınız. Steam sürümü (SteamKO) ayrıdır; Steam'de ilk girişte telefon doğrulaması istenir ve içinde oyun içi satın alımlar vardır. Hangisinde oynayacağınıza baştan karar verin, çünkü hesaplar ve sunucular iki tarafta ayrıdır."
+      },
+      {
+       "tip": "p",
+       "metin": "Yeni sunucuların açılışı **ön kayıtla** yapıldı: 15-29 Ekim birinci, 29 Ekim-12 Kasım ikinci dönem (sunucu seçimi), 10-11 Kasım karakter oluşturma. Ön kayıt yaptırmayan hesaplar yeni sunuculara giremedi. Telefon doğrulaması ve OTP+ (tek kullanımlık şifre uygulaması) zorunluydu; OTP+ 15 Ekim'de AnyOTP'nin yerini aldı. Şu an yeni sunucuya girip giremeyeceğinizi NTTGame'in duyurusundan kontrol edin."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Konu",
+        "Bilinen değer"
+       ],
+       "satirlar": [
+        [
+         "Fiyat",
+         "Oynaması ücretsiz; premium ve kozmetik ürünler NPoints ile alınıyor, güncel fiyatlar resmî PUS sayfasında"
+        ],
+        [
+         "İşletim sistemi",
+         "Yalnızca Windows; Windows 10 veya 11 önerilir. Mac ve telefon sürümü yok"
+        ],
+        [
+         "Ekran kartı",
+         "Ayrı ekran kartı şart değil; güncel sürücüsü olan tümleşik grafik yeterli"
+        ],
+        [
+         "Güvenlik",
+         "Telefon doğrulaması ve OTP+ yeni sunucular için istendi"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Resmî sistem gereksinimi sayfası çok eski Windows sürümlerini yazıyor. Bugünkü gerçek ihtiyaç çok düşüktür; sayfadaki eski değerlere bakıp oyundan vazgeçmeyin."
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "İlk saatler: adım adım",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Hesabı aç",
+         "metin": "NTTGame sitesinde hesap oluşturun, e-postayı ve telefonu doğrulayın, OTP+ uygulamasını bağlayın."
+        },
+        {
+         "baslik": "İstemciyi indir",
+         "metin": "Resmî indirme sayfasından istemciyi yükleyin. Üçüncü taraf siteden indirdiğiniz kurulum dosyasını çalıştırmayın."
+        },
+        {
+         "baslik": "Sunucu ve karakter seç",
+         "metin": "Sunucuyu arkadaşlarınızla aynı seçin; sunucu değiştirmek kolay değildir. Ulusunuzu (El Morad veya Karus) ve sınıfınızı seçin."
+        },
+        {
+         "baslik": "Moradon'da tanış",
+         "metin": "Oyunun merkez şehri Moradon'dur. Görev veren NPC'lere (oyuncu olmayan karakter) uğrayın, becerileri K tuşuyla açtığınız pencereden öğrenin."
+        },
+        {
+         "baslik": "Evcil hayvanı al",
+         "metin": "10. seviyede Moradon'daki Familiar Trainer Kate'ten evcil hayvan (pet) alınır."
+        },
+        {
+         "baslik": "Parti kur",
+         "metin": "Parti (grup) içinde seviye farkı en fazla 8 olabilir. Arkadaşlarınızla aynı seviye aralığında ilerleyin."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Başlangıçta yalnız oynamak mümkündür ama parti kurmak seviye atlamayı belirgin biçimde hızlandırır."
+      },
+      {
+       "tip": "p",
+       "metin": "İlk saatlerde amaç hızlıca seviye atmak değil, arayüzü ve komutları öğrenmektir. Sohbet, parti ve pazar pencerelerini bir kez açıp denemek sonraki saatleri kısaltır. Takıldığınızda klan veya sunucu sohbetinde soru sorabilirsiniz; ama sizden para ya da şifre isteyenlere cevap vermeyin."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Karakter oluştururken statü (stat) puanlarını bilmiyorsanız rastgele vermeyin; önce sınıfın önerilen dağılımını okuyun. Her seviyede 3 puan kazanırsınız."
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "Ulus ve sınıf seçimi",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "İki ulus var: El Morad ve Karus. Ulusun gücü farklı değildir; sınıf seçeneği ise ulusa göre bir miktar değişir. Dört ortak sınıf (Warrior, Rogue, Mage, Priest) iki tarafta da vardır; **Portu** El Morad'a, **Kurian** ise Karus'a özgüdür."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Sınıf",
+        "Rol",
+        "Kime uygun?"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Yakın dövüş, dayanıklı",
+         "Basit ve sağlam başlamak isteyenler"
+        ],
+        [
+         "Rogue",
+         "Çevik, hızlı hasar",
+         "Hız ve hareket sevenler"
+        ],
+        [
+         "Mage",
+         "Büyü ile hasar",
+         "Uzaktan vurmak isteyenler"
+        ],
+        [
+         "Priest",
+         "Şifa ve destek",
+         "Takımı ayakta tutmak isteyenler"
+        ],
+        [
+         "Portu / Kurian",
+         "Ulusa özel sınıf",
+         "Farklı bir oynanış isteyenler"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Statüler STR, DEX, HP, INT ve MP'dir; sınıfınıza uygun dağıtın. Statüleri sıfırlamak maliyetli olabilir, bu yüzden ilk dağılım önemlidir."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "İlk karakter için Warrior en basit seçimdir. Takımda ihtiyaç duyulan sınıfı seçmek de parti bulmayı kolaylaştırır."
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "Seviye atlama: nasıl hızlı ve verimli?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Seviye atlama temelde bölgedeki canavarları kesmek, görevleri yapmak ve parti kurmaktır. **Seviye sınırı 83'tür**; sınıra gelen oyuncu 83. seviyede %100 EXP topladığında yeniden doğuş (rebirth) yapabilir. Rebirth için Fortune Reader Mackin'in üç görevi, 1 Gold Bar ve 10.000 katkı puanı gerekir; her rebirth seviyesinde 2 ek statü puanı kazanılır. Koşullar güncellemeyle değişebilir, oyun içi NPC ekranından teyit edin."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Görev NPC'lerini ilk 20 seviyede mutlaka bitirin; deneyim ve ekipman verirler.",
+        "Bir bölgede seviyeniz yetmiyorsa daha düşük seviyeli canavar bölgesine dönmekten çekinmeyin.",
+        "Başarımlar (achievement) /Achieve komutuyla açılır ve düzenli ödül verir."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Parti içinde seviye farkı 8'i geçerse birlikte oynayamazsınız. Bu yüzden arkadaşlarınızla aynı hızda seviye atmaya özen gösterin."
+      },
+      {
+       "tip": "p",
+       "metin": "Rebirth'e yaklaşırken acele etmeyin: gereken görevleri, 1 Gold Bar'ı ve 10.000 katkı puanını önceden hazırlamak, 83. seviyeye gelince zaman kaybetmenizi önler. Hazırlığı sunucu açıldıktan sonraki ilk günlerde yapmak yerine seviye atarken yavaş yavaş tamamlayın; güncel koşulları oyun içinde ve resmî duyurularda tekrar doğrulayın."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Ölünce EXP kaybedersiniz. Pahalı sihirli eşyayı ve gücünüzü aşan bölgeyi birlikte riske atmayın."
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "Para ve ekonomi: yalnız oyun içi yollar",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Oyun içi para birimi **Noah**'tır. Gelir kaynakları canavar avı, görev ödülü ve eşya ticaretidir. **Pazar** (merchant) komutuyla kendi dükkanınızı açıp eşya satabilirsiniz. NPC'ye satış ve oyuncular arası takas da mümkündür. Depo sunucu içinde hesaba bağlıdır."
+      },
+      {
+       "tip": "p",
+       "metin": "Eşya yükseltme için Moradon'da Charon'un yanındaki Magic Anvil kullanılır. Yükseltme **başarısız olabilir ve eşya yok olabilir**; bu yüzden değerli eşyayı deneme amaçlı kullanmayın ve yalnız kaybetmeyi göze aldığınız eşyayla başlayın. Başarı oranları oyun içinde ve resmî duyurularda yazar."
+      },
+      {
+       "tip": "p",
+       "metin": "Gelir için basit bir sıra izleyin: önce görev ödülleri, sonra avdan düşen eşyalar, en son pazar. Pazarda eşyanın ortalama fiyatına bakmadan satmayın; aynı eşya sunucudan sunucuya farklı fiyata satılabilir. Fiyatlar sürekli değiştiği için buradaki hiçbir rakamı sabit saymayın."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Oyun parasını, eşyayı veya hesabı gerçek parayla başka oyunculara satmak (RMT) ve bunun için üçüncü taraf siteleri kullanmak oyun kurallarına aykırıdır ve hesabınızın kapanmasına yol açar. Resmî PUS dışında alışveriş yapmayın."
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "Seviye 83 sonrası: savaş ve ilerleme",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "83'e gelince oyun savaş ve ekipman etrafında şekillenir. Yeni sunucularda tüm PvP (oyuncuya karşı oyuncu) Ronark Land'de yapılıyor, çünkü Ardream ve Ronark Land Base haritaları yok. Klanlar ve ulus savaşları ileri aşamanın merkezindedir."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Rebirth ile statü puanı kazanın.",
+        "Başarımları düzenli takip edin.",
+        "Bir klana katılıp birlikte etkinliklere girin."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Premium ürünler (örneğin Switching Premium, War Premium) bazı avantajlar sağlıyor ve NPoints ile alınıyor. Ne verdiğini satın almadan önce resmî sayfadan okuyun."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "İlk haftalarda yeni sunuculara akın olur; kalabalıkta seviye atlamak yavaşlayabilir. Bölge değiştirerek sıradan kaçının."
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "Sık yapılan hatalar ve güvenlik",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Resmî olmayan sitelerden istemci indirmek.",
+        "Aynı şifreyi başka sitelerde de kullanmak.",
+        "OTP+ ve telefon doğrulamasını açmadan oynamak."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Hile, bot, makro, exploit, özel (private) sunucu, hesap ve oyun içi para satışı (RMT) ve korsan istemciden uzak durun. Bunlar hesabın kapanmasına ve verinizin çalınmasına yol açar. Özel sunucular resmî değildir ve hesabınızı riske atar."
+      },
+      {
+       "tip": "p",
+       "metin": "Kayıtlı e-posta adresinizi ve telefonunuzu güncel tutun; hesabı kurtarmak gerektiğinde bunlara ihtiyaç duyarsınız. Oyun içinde tanımadığınız biri 'eşyanı ikiye katlarım' ya da 'kodu paylaş' derse bu dolandırıcılıktır."
+      },
+      {
+       "tip": "p",
+       "metin": "NTTGame sizden şifrenizi ya da OTP kodunuzu sormaz. Yalnız resmî sitelerde giriş yapın; adresi daima kontrol edin."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Sık sorulan sorular",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Knight Online ücretsiz mi?",
+         "c": "Evet, oynaması ücretsizdir. Premium ve kozmetik ürünler isteğe bağlıdır."
+        },
+        {
+         "s": "Yeni sunuculara hâlâ girilebilir mi?",
+         "c": "Açılış ön kayıtla yapıldı. Şu an giriş koşullarını NTTGame'in duyurusundan kontrol edin."
+        },
+        {
+         "s": "Hangi ulusu seçmeliyim?",
+         "c": "İkisi de eşit güçtedir. Arkadaşlarınız hangisindeyse onu seçin."
+        },
+        {
+         "s": "Seviye sınırı kaç?",
+         "c": "83; ardından rebirth sistemi var. Koşulları oyun içinden teyit edin."
+        },
+        {
+         "s": "Telefonda oynanır mı?",
+         "c": "Hayır. Oyun yalnız Windows'ta çalışır."
+        },
+        {
+         "s": "Steam sürümü ile resmî istemci aynı mı?",
+         "c": "Hayır, SteamKO ayrı bir istemci ve ayrı sunucudur. Hesaplar paylaşılmaz."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "en": {
+   "baslik": "Knight Online Beginner Guide: Official Servers 2026",
+   "ozet": "For players starting or returning on NTTGame's official Knight Online servers: account, the new server launch, race and class choice, leveling, economy and safety.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "MMORPG"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Windows (USKO client; the Steam version SteamKO is separate)"
+    },
+    {
+     "ad": "Pricing model",
+     "deger": "Free to play; premium and in-game purchases exist"
+    },
+    {
+     "ad": "Current version",
+     "deger": "New server era: launch on 12 November 2026"
+    },
+    {
+     "ad": "Turkish support",
+     "deger": "The game is published in Turkish (NTTGame Turkey)"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "Where the game stands in 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Knight Online is a long-running online role-playing game published in Turkey by **NTTGame**. The core of the game is the war between two nations: **El Morad** and **Karus**. The nations have no difference in strength; the choice comes down to looks and where your friends are."
+      },
+      {
+       "tip": "p",
+       "metin": "This year has an important date: NTTGame opened the new servers it announced on 1 October 2026 on **Thursday 12 November 2026 at 16:00 Turkey time**. According to news reports the new servers are named Atlas, Oracle, Luna and Carnac. The new servers have no Ardream or Ronark Land Base maps; the fighting happens in Ronark Land. It was also announced that some servers will be merged later."
+      },
+      {
+       "tip": "p",
+       "metin": "The existing USKO servers are listed as Zero, Pandora, Agartha, Felis, Minark, Dryads, Oreads and Destan. SteamKO, played through Steam, is a separate client with its own server (Zion)."
+      },
+      {
+       "tip": "p",
+       "metin": "The difference between old and new servers is mostly crowding and the economy. On a new server everyone starts from zero; item prices and competition are more balanced. Old servers have years of accumulated items and strong clans. Decide which suits you by your playstyle."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "The server list and merger plans change. Before choosing a server, check NTTGame's current announcement."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Before you start: account, client, security",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The game is **free**. You open an NTTGame account on the official site and take the client from the same site's download page. The Steam version (SteamKO) is separate; Steam asks for phone verification on the first login and it has in-app purchases. Decide up front which one you will play, because accounts and servers are separate on each side."
+      },
+      {
+       "tip": "p",
+       "metin": "The new servers opened through **pre-registration**: 15-29 October was the first window, 29 October-12 November the second (server choice), and 10-11 November was character creation. Accounts that did not pre-register could not enter the new servers. Phone verification and OTP+ (a one-time-password app) were mandatory; OTP+ replaced AnyOTP on 15 October. Check NTTGame's announcement for whether you can enter a new server right now."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Topic",
+        "Known value"
+       ],
+       "satirlar": [
+        [
+         "Price",
+         "Free to play; premium and cosmetic items are bought with NPoints, current prices are on the official PUS page"
+        ],
+        [
+         "Operating system",
+         "Windows only; Windows 10 or 11 recommended. No Mac or phone version"
+        ],
+        [
+         "Graphics card",
+         "A separate card is not required; integrated graphics with current drivers is enough"
+        ],
+        [
+         "Security",
+         "Phone verification and OTP+ were required for the new servers"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "The official system requirements page lists very old Windows versions. The real need today is very low; do not give up on the game because of the old values on that page."
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "The first hours, step by step",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Open the account",
+         "metin": "Create an account on the NTTGame site, verify your e-mail and phone, and link the OTP+ app."
+        },
+        {
+         "baslik": "Download the client",
+         "metin": "Install the client from the official download page. Do not run an installer you got from a third-party site."
+        },
+        {
+         "baslik": "Choose a server and character",
+         "metin": "Pick the same server as your friends; changing servers is not easy. Choose your nation (El Morad or Karus) and class."
+        },
+        {
+         "baslik": "Meet the town",
+         "metin": "The game's hub is Moradon. Visit the quest NPCs (non-player characters) and learn skills from the window you open with the K key."
+        },
+        {
+         "baslik": "Get a pet",
+         "metin": "At level 10 you get a pet from Familiar Trainer Kate in Moradon."
+        },
+        {
+         "baslik": "Form a party",
+         "metin": "The level gap within a party can be at most 8. Progress in the same level range as your friends."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Playing alone at the start is possible, but forming a party speeds up leveling noticeably."
+      },
+      {
+       "tip": "p",
+       "metin": "In the first hours the goal is not fast leveling but learning the interface and commands. Opening the chat, party and merchant windows once and trying them shortens the later hours. When you get stuck you can ask in the clan or server chat, but do not answer anyone who asks you for money or a password."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "If you do not know the stat points when creating a character, do not assign them at random; read the class's recommended spread first. You gain 3 points per level."
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "Choosing a nation and class",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "There are two nations: El Morad and Karus. The nations are equal in strength; class options differ a little by nation. Four shared classes (Warrior, Rogue, Mage, Priest) exist on both sides; **Portu** is specific to El Morad and **Kurian** to Karus."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Class",
+        "Role",
+        "Who it suits"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Melee, sturdy",
+         "Players who want a simple, solid start"
+        ],
+        [
+         "Rogue",
+         "Agile, fast damage",
+         "Players who like speed and movement"
+        ],
+        [
+         "Mage",
+         "Spell damage",
+         "Players who want to hit from range"
+        ],
+        [
+         "Priest",
+         "Healing and support",
+         "Players who want to keep the team alive"
+        ],
+        [
+         "Portu / Kurian",
+         "Nation-specific class",
+         "Players who want a different playstyle"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "The stats are STR, DEX, HP, INT and MP; spread them to suit your class. Resetting stats can be costly, so the first spread matters."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Warrior is the simplest first character. Choosing a class the team needs also makes finding a party easier."
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "Leveling: a fast and efficient route",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Leveling is basically killing monsters in the zone, doing quests and forming parties. **The level cap is 83**; a player at the cap who collects 100% EXP at level 83 can do a rebirth. A rebirth needs three quests from Fortune Reader Mackin, 1 Gold Bar and 10,000 contribution points; each rebirth level gives 2 extra stat points. Conditions can change with updates, so confirm on the in-game NPC screen."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Be sure to finish the quest NPCs in the first 20 levels; they give experience and gear.",
+        "If your level is not enough for a zone, do not hesitate to go back to a lower-level monster zone.",
+        "Achievements open with the /Achieve command and give regular rewards."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "If the level gap within a party exceeds 8 you cannot play together. So make an effort to level at the same pace as your friends."
+      },
+      {
+       "tip": "p",
+       "metin": "As you approach rebirth, do not rush: preparing the required quests, the 1 Gold Bar and the 10,000 contribution points in advance saves you time once you reach level 83. Instead of doing the preparation in the first days after the server opens, complete it little by little while leveling; verify the current conditions again in the game and in official announcements."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "You lose EXP when you die. Do not risk expensive magic gear and a zone beyond your strength at the same time."
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "Money and economy: in-game routes only",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The in-game currency is **Noah**. Income comes from monster hunting, quest rewards and item trade. With the **merchant** command you can open your own shop and sell items. Selling to NPCs and trading between players is also possible. The warehouse is tied to the account within a server."
+      },
+      {
+       "tip": "p",
+       "metin": "Item upgrading uses the Magic Anvil next to Charon in Moradon. An upgrade **can fail and the item can be destroyed**; so do not use valuable items for experiments and start only with items you can afford to lose. Success rates are written in the game and in official announcements."
+      },
+      {
+       "tip": "p",
+       "metin": "Follow a simple order for income: quest rewards first, then drops from hunting, and the merchant last. Do not sell at the merchant without checking an item's average price; the same item can sell at different prices from server to server. Prices keep changing, so never treat any figure here as fixed."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Selling in-game currency, items or accounts to other players for real money (RMT) and using third-party sites for it breaks the game rules and gets your account closed. Do not trade outside the official PUS."
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "After level 83: war and progression",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "At 83 the game is shaped around war and equipment. On the new servers all PvP (player versus player) happens in Ronark Land, since the Ardream and Ronark Land Base maps are absent. Clans and nation wars are at the center of the late game."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Gain stat points through rebirth.",
+        "Follow achievements regularly.",
+        "Join a clan and take part in events together."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Premium products (for example Switching Premium and War Premium) give some advantages and are bought with NPoints. Read what a product gives on the official page before buying."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "In the first weeks new servers are flooded with players; leveling in a crowd can slow down. Avoid the queue by changing zones."
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "Common mistakes and safety",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Downloading the client from unofficial sites.",
+        "Using the same password on other sites.",
+        "Playing without OTP+ and phone verification."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Stay away from cheats, bots, macros, exploits, private servers, account and in-game currency selling (RMT) and pirated clients. They lead to account closure and theft of your data. Private servers are unofficial and put your account at risk."
+      },
+      {
+       "tip": "p",
+       "metin": "Keep your registered e-mail address and phone up to date; you need them when you have to recover the account. If someone you do not know says 'I will double your items' or 'share the code' in the game, it is a scam."
+      },
+      {
+       "tip": "p",
+       "metin": "NTTGame will not ask for your password or OTP code. Log in only on official sites and always check the address."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Frequently asked questions",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is Knight Online free?",
+         "c": "Yes, it is free to play. Premium and cosmetic products are optional."
+        },
+        {
+         "s": "Can I still enter the new servers?",
+         "c": "The launch went through pre-registration. Check NTTGame's announcement for the entry conditions right now."
+        },
+        {
+         "s": "Which nation should I choose?",
+         "c": "Both are equal in strength. Pick the one your friends are in."
+        },
+        {
+         "s": "What is the level cap?",
+         "c": "83, followed by the rebirth system. Confirm the conditions in the game."
+        },
+        {
+         "s": "Can I play on a phone?",
+         "c": "No. The game runs only on Windows."
+        },
+        {
+         "s": "Is the Steam version the same as the official client?",
+         "c": "No, SteamKO is a separate client with a separate server. Accounts are not shared."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "fr": {
+   "baslik": "Knight Online : guide du débutant, serveurs officiels 2026",
+   "ozet": "Pour débuter ou revenir sur les serveurs officiels de Knight Online (NTTGame) : compte, ouverture des nouveaux serveurs, choix de nation et de classe, niveaux, économie et sécurité.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "MMORPG"
+    },
+    {
+     "ad": "Plateforme",
+     "deger": "Windows (client USKO ; la version Steam SteamKO est distincte)"
+    },
+    {
+     "ad": "Modèle tarifaire",
+     "deger": "Gratuit ; premium et achats en jeu disponibles"
+    },
+    {
+     "ad": "Version actuelle",
+     "deger": "Ère des nouveaux serveurs : ouverture le 12 novembre 2026"
+    },
+    {
+     "ad": "Support du turc",
+     "deger": "Le jeu est publié en turc (NTTGame Turquie)"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "Où en est le jeu en 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Knight Online est un jeu de rôle en ligne de longue date, publié en Turquie par **NTTGame**. Au cœur du jeu : la guerre entre deux nations, **El Morad** et **Karus**. Les nations n'ont pas de différence de force ; le choix tient à l'apparence et à l'endroit où jouent vos amis."
+      },
+      {
+       "tip": "p",
+       "metin": "Cette année a une date importante : NTTGame a ouvert les nouveaux serveurs annoncés le 1er octobre 2026 le **jeudi 12 novembre 2026 à 16 h, heure de Turquie**. D'après la presse spécialisée, les nouveaux serveurs s'appellent Atlas, Oracle, Luna et Carnac. Ils n'ont pas les cartes Ardream et Ronark Land Base ; les combats se déroulent à Ronark Land. Il a aussi été annoncé que certains serveurs seront fusionnés plus tard."
+      },
+      {
+       "tip": "p",
+       "metin": "Les serveurs USKO existants sont listés ainsi : Zero, Pandora, Agartha, Felis, Minark, Dryads, Oreads et Destan. SteamKO, joué via Steam, est un client séparé avec son propre serveur (Zion)."
+      },
+      {
+       "tip": "p",
+       "metin": "La différence entre anciens et nouveaux serveurs tient surtout à l'affluence et à l'économie. Sur un nouveau serveur, tout le monde repart de zéro ; les prix des objets et la concurrence sont plus équilibrés. Les anciens serveurs ont des années d'objets accumulés et des clans puissants. Décidez selon votre style de jeu."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "La liste des serveurs et les plans de fusion changent. Avant de choisir un serveur, consultez l'annonce actuelle de NTTGame."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Avant de commencer : compte, client, sécurité",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Le jeu est **gratuit**. Vous créez un compte NTTGame sur le site officiel et prenez le client sur la page de téléchargement du même site. La version Steam (SteamKO) est distincte ; Steam demande une vérification par téléphone à la première connexion et propose des achats intégrés. Décidez dès le départ sur laquelle vous jouerez, car comptes et serveurs sont séparés."
+      },
+      {
+       "tip": "p",
+       "metin": "Les nouveaux serveurs ont ouvert via une **préinscription** : du 15 au 29 octobre la première période, du 29 octobre au 12 novembre la seconde (choix du serveur), et les 10-11 novembre la création de personnage. Les comptes non préinscrits n'ont pas pu entrer. La vérification par téléphone et OTP+ (application de mot de passe à usage unique) étaient obligatoires ; OTP+ a remplacé AnyOTP le 15 octobre. Vérifiez dans l'annonce de NTTGame si l'entrée est possible aujourd'hui."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Sujet",
+        "Valeur connue"
+       ],
+       "satirlar": [
+        [
+         "Prix",
+         "Gratuit ; premium et objets cosmétiques s'achètent avec des NPoints, prix actuels sur la page PUS officielle"
+        ],
+        [
+         "Système",
+         "Windows uniquement ; Windows 10 ou 11 conseillé. Pas de version Mac ni mobile"
+        ],
+        [
+         "Carte graphique",
+         "Une carte dédiée n'est pas nécessaire ; un graphique intégré avec pilotes à jour suffit"
+        ],
+        [
+         "Sécurité",
+         "Vérification par téléphone et OTP+ exigés pour les nouveaux serveurs"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "La page officielle de configuration requise liste de très vieilles versions de Windows. Le besoin réel est très faible aujourd'hui ; ne renoncez pas au jeu à cause de ces anciennes valeurs."
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "Les premières heures, pas à pas",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Ouvrir le compte",
+         "metin": "Créez un compte sur le site NTTGame, vérifiez e-mail et téléphone, puis liez l'application OTP+."
+        },
+        {
+         "baslik": "Télécharger le client",
+         "metin": "Installez le client depuis la page officielle. N'exécutez pas un installateur obtenu sur un site tiers."
+        },
+        {
+         "baslik": "Choisir serveur et personnage",
+         "metin": "Prenez le même serveur que vos amis ; changer de serveur n'est pas simple. Choisissez votre nation (El Morad ou Karus) et votre classe."
+        },
+        {
+         "baslik": "Découvrir la ville",
+         "metin": "Le centre du jeu est Moradon. Rendez-vous chez les PNJ (personnages non joueurs) de quêtes et apprenez les compétences dans la fenêtre ouverte avec la touche K."
+        },
+        {
+         "baslik": "Obtenir un familier",
+         "metin": "Au niveau 10, un familier (pet) s'obtient auprès de Familiar Trainer Kate à Moradon."
+        },
+        {
+         "baslik": "Former un groupe",
+         "metin": "L'écart de niveau dans un groupe ne peut dépasser 8. Avancez dans la même tranche de niveau que vos amis."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Jouer seul au début est possible, mais former un groupe accélère nettement la montée de niveau."
+      },
+      {
+       "tip": "p",
+       "metin": "Dans les premières heures, le but n'est pas de monter vite mais d'apprendre l'interface et les commandes. Ouvrir une fois les fenêtres de chat, de groupe et de marchand et les essayer raccourcit les heures suivantes. Si vous êtes bloqué, vous pouvez poser une question dans le chat du clan ou du serveur, mais ne répondez à personne qui vous demande de l'argent ou un mot de passe."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si vous ne connaissez pas les points de statut à la création, ne les répartissez pas au hasard ; lisez d'abord la répartition conseillée de la classe. Vous gagnez 3 points par niveau."
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "Choisir une nation et une classe",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Il y a deux nations : El Morad et Karus. Elles sont de force égale ; les classes varient un peu selon la nation. Quatre classes communes (Warrior, Rogue, Mage, Priest) existent des deux côtés ; **Portu** est propre à El Morad et **Kurian** à Karus."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Classe",
+        "Rôle",
+        "Pour qui ?"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Mêlée, robuste",
+         "Ceux qui veulent un départ simple et solide"
+        ],
+        [
+         "Rogue",
+         "Agile, dégâts rapides",
+         "Ceux qui aiment vitesse et mobilité"
+        ],
+        [
+         "Mage",
+         "Dégâts de sorts",
+         "Ceux qui veulent frapper de loin"
+        ],
+        [
+         "Priest",
+         "Soins et soutien",
+         "Ceux qui veulent garder l'équipe en vie"
+        ],
+        [
+         "Portu / Kurian",
+         "Classe propre à la nation",
+         "Ceux qui veulent un autre style de jeu"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Les statistiques sont STR, DEX, HP, INT et MP ; répartissez-les selon votre classe. Réinitialiser les statistiques peut coûter cher : la première répartition compte."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Warrior est le premier personnage le plus simple. Choisir une classe dont l'équipe a besoin facilite aussi la recherche de groupe."
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "Monter en niveau : une voie rapide et efficace",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Monter en niveau consiste surtout à tuer des monstres de la zone, faire des quêtes et former des groupes. **Le niveau maximum est 83** ; un joueur au plafond qui atteint 100 % d'EXP au niveau 83 peut faire une renaissance (rebirth). Une renaissance exige trois quêtes de Fortune Reader Mackin, 1 Gold Bar et 10 000 points de contribution ; chaque niveau de renaissance donne 2 points de statut en plus. Les conditions peuvent changer avec les mises à jour : confirmez sur l'écran du PNJ en jeu."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Terminez absolument les PNJ de quêtes dans les 20 premiers niveaux ; ils donnent expérience et équipement.",
+        "Si votre niveau ne suffit pas pour une zone, n'hésitez pas à revenir vers une zone de monstres de niveau inférieur.",
+        "Les succès (achievements) s'ouvrent avec la commande /Achieve et donnent des récompenses régulières."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Si l'écart de niveau dans un groupe dépasse 8, vous ne pouvez plus jouer ensemble. Montez donc au même rythme que vos amis."
+      },
+      {
+       "tip": "p",
+       "metin": "À l'approche du rebirth, ne vous précipitez pas : préparer à l'avance les quêtes requises, la barre d'or et les 10 000 points de contribution vous fait gagner du temps une fois le niveau 83 atteint. Plutôt que de le faire dans les premiers jours après l'ouverture du serveur, complétez la préparation peu à peu en montant ; revérifiez les conditions actuelles dans le jeu et les annonces officielles."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Vous perdez de l'EXP en mourant. Ne risquez pas en même temps un équipement magique coûteux et une zone au-dessus de votre force."
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "Argent et économie : uniquement en jeu",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La monnaie du jeu est le **Noah**. Les revenus viennent de la chasse, des récompenses de quêtes et du commerce d'objets. Avec la commande **merchant** vous ouvrez votre propre boutique. Vendre aux PNJ et échanger entre joueurs est aussi possible. L'entrepôt est lié au compte au sein d'un serveur."
+      },
+      {
+       "tip": "p",
+       "metin": "L'amélioration d'objets utilise l'enclume magique (Magic Anvil) à côté de Charon à Moradon. Une amélioration **peut échouer et l'objet peut être détruit** ; n'utilisez donc pas d'objets précieux pour tester et commencez seulement avec des objets que vous pouvez perdre. Les taux de réussite sont indiqués en jeu et dans les annonces officielles."
+      },
+      {
+       "tip": "p",
+       "metin": "Suivez un ordre simple pour vos revenus : d'abord les récompenses de quêtes, puis le butin de chasse, et enfin le marchand. Ne vendez pas chez le marchand sans vérifier le prix moyen d'un objet ; le même objet peut se vendre à des prix différents d'un serveur à l'autre. Les prix changent sans cesse : ne tenez aucun chiffre ici pour fixe."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Vendre de la monnaie, des objets ou des comptes à d'autres joueurs contre de l'argent réel (RMT) et passer par des sites tiers enfreint les règles et fait fermer votre compte. Ne commercez pas en dehors du PUS officiel."
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "Après le niveau 83 : guerre et progression",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "À 83, le jeu s'organise autour de la guerre et de l'équipement. Sur les nouveaux serveurs tout le JcJ (joueur contre joueur) se déroule à Ronark Land, faute des cartes Ardream et Ronark Land Base. Clans et guerres de nations sont au centre de la fin de jeu."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Gagnez des points de statut grâce à la renaissance.",
+        "Suivez régulièrement les succès.",
+        "Rejoignez un clan et participez ensemble aux événements."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Les produits premium (par exemple Switching Premium et War Premium) donnent certains avantages et s'achètent avec des NPoints. Lisez ce qu'un produit apporte sur la page officielle avant d'acheter."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Les premières semaines, les nouveaux serveurs sont envahis ; monter en niveau dans la foule peut ralentir. Évitez la file en changeant de zone."
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "Erreurs courantes et sécurité",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Télécharger le client sur des sites non officiels.",
+        "Utiliser le même mot de passe sur d'autres sites.",
+        "Jouer sans OTP+ ni vérification par téléphone."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Restez loin des triches, bots, macros, exploits, serveurs privés, de la vente de comptes et de monnaie de jeu (RMT) et des clients piratés. Ils mènent à la fermeture du compte et au vol de vos données. Les serveurs privés ne sont pas officiels et mettent votre compte en danger."
+      },
+      {
+       "tip": "p",
+       "metin": "Gardez votre adresse e-mail et votre téléphone enregistrés à jour ; vous en aurez besoin pour récupérer le compte. Si quelqu'un d'inconnu dit en jeu « je double tes objets » ou « donne le code », c'est une arnaque."
+      },
+      {
+       "tip": "p",
+       "metin": "NTTGame ne vous demandera pas votre mot de passe ni votre code OTP. Connectez-vous uniquement sur les sites officiels et vérifiez toujours l'adresse."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Questions fréquentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Knight Online est-il gratuit ?",
+         "c": "Oui, il est gratuit. Les produits premium et cosmétiques sont facultatifs."
+        },
+        {
+         "s": "Peut-on encore entrer sur les nouveaux serveurs ?",
+         "c": "L'ouverture s'est faite par préinscription. Consultez l'annonce de NTTGame pour les conditions d'entrée actuelles."
+        },
+        {
+         "s": "Quelle nation choisir ?",
+         "c": "Les deux sont de force égale. Prenez celle de vos amis."
+        },
+        {
+         "s": "Quel est le niveau maximum ?",
+         "c": "83, suivi du système de renaissance. Confirmez les conditions en jeu."
+        },
+        {
+         "s": "Peut-on jouer sur téléphone ?",
+         "c": "Non. Le jeu ne tourne que sous Windows."
+        },
+        {
+         "s": "La version Steam est-elle identique au client officiel ?",
+         "c": "Non, SteamKO est un client distinct avec un serveur distinct. Les comptes ne sont pas partagés."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "es": {
+   "baslik": "Knight Online: guía para empezar, servidores oficiales 2026",
+   "ozet": "Para empezar o volver en los servidores oficiales de Knight Online (NTTGame): cuenta, apertura de los nuevos servidores, elección de nación y clase, niveles, economía y seguridad.",
+   "kunye": [
+    {
+     "ad": "Género",
+     "deger": "MMORPG"
+    },
+    {
+     "ad": "Plataforma",
+     "deger": "Windows (cliente USKO; la versión de Steam, SteamKO, es aparte)"
+    },
+    {
+     "ad": "Modelo de precio",
+     "deger": "Gratis; hay premium y compras dentro del juego"
+    },
+    {
+     "ad": "Versión actual",
+     "deger": "Era de los nuevos servidores: apertura el 12 de noviembre de 2026"
+    },
+    {
+     "ad": "Soporte en turco",
+     "deger": "El juego se publica en turco (NTTGame Turquía)"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "Cómo está el juego en 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Knight Online es un juego de rol en línea de larga trayectoria, publicado en Turquía por **NTTGame**. El núcleo del juego es la guerra entre dos naciones: **El Morad** y **Karus**. Las naciones no difieren en fuerza; la elección depende del aspecto y de dónde jueguen tus amigos."
+      },
+      {
+       "tip": "p",
+       "metin": "Este año hay una fecha importante: NTTGame abrió los nuevos servidores anunciados el 1 de octubre de 2026 el **jueves 12 de noviembre de 2026 a las 16:00, hora de Turquía**. Según la prensa especializada, los nuevos servidores se llaman Atlas, Oracle, Luna y Carnac. No tienen los mapas Ardream ni Ronark Land Base; el combate ocurre en Ronark Land. También se anunció que algunos servidores se fusionarán más adelante."
+      },
+      {
+       "tip": "p",
+       "metin": "Los servidores USKO existentes aparecen como Zero, Pandora, Agartha, Felis, Minark, Dryads, Oreads y Destan. SteamKO, que se juega por Steam, es un cliente aparte con su propio servidor (Zion)."
+      },
+      {
+       "tip": "p",
+       "metin": "La diferencia entre servidores viejos y nuevos es sobre todo la afluencia y la economía. En un servidor nuevo todos empiezan de cero; los precios de los objetos y la competencia están más equilibrados. Los servidores viejos tienen años de objetos acumulados y clanes fuertes. Decide según tu estilo de juego."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "La lista de servidores y los planes de fusión cambian. Antes de elegir servidor, consulta el anuncio actual de NTTGame."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Antes de empezar: cuenta, cliente, seguridad",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "El juego es **gratuito**. Abres una cuenta NTTGame en el sitio oficial y tomas el cliente de la página de descargas del mismo sitio. La versión de Steam (SteamKO) es aparte; Steam pide verificación por teléfono en el primer inicio de sesión y tiene compras integradas. Decide de antemano en cuál vas a jugar, porque cuentas y servidores están separados."
+      },
+      {
+       "tip": "p",
+       "metin": "Los nuevos servidores abrieron con **preinscripción**: del 15 al 29 de octubre la primera ventana, del 29 de octubre al 12 de noviembre la segunda (elección de servidor) y el 10 y 11 de noviembre la creación de personaje. Las cuentas sin preinscripción no pudieron entrar. La verificación por teléfono y OTP+ (aplicación de contraseña de un solo uso) eran obligatorias; OTP+ sustituyó a AnyOTP el 15 de octubre. Comprueba en el anuncio de NTTGame si hoy se puede entrar."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Tema",
+        "Valor conocido"
+       ],
+       "satirlar": [
+        [
+         "Precio",
+         "Gratis; premium y objetos cosméticos se compran con NPoints, precios actuales en la página PUS oficial"
+        ],
+        [
+         "Sistema operativo",
+         "Solo Windows; se recomienda Windows 10 u 11. Sin versión para Mac ni móvil"
+        ],
+        [
+         "Tarjeta gráfica",
+         "No hace falta una dedicada; basta con gráficos integrados con controladores actualizados"
+        ],
+        [
+         "Seguridad",
+         "Se exigieron verificación por teléfono y OTP+ para los nuevos servidores"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "La página oficial de requisitos lista versiones de Windows muy antiguas. La necesidad real hoy es muy baja; no renuncies al juego por esos valores antiguos."
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "Las primeras horas, paso a paso",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Abre la cuenta",
+         "metin": "Crea una cuenta en el sitio de NTTGame, verifica el correo y el teléfono y vincula la aplicación OTP+."
+        },
+        {
+         "baslik": "Descarga el cliente",
+         "metin": "Instala el cliente desde la página oficial. No ejecutes un instalador obtenido en un sitio de terceros."
+        },
+        {
+         "baslik": "Elige servidor y personaje",
+         "metin": "Escoge el mismo servidor que tus amigos; cambiar de servidor no es fácil. Elige tu nación (El Morad o Karus) y tu clase."
+        },
+        {
+         "baslik": "Conoce la ciudad",
+         "metin": "El centro del juego es Moradon. Visita a los PNJ (personajes no jugadores) de misiones y aprende habilidades en la ventana que se abre con la tecla K."
+        },
+        {
+         "baslik": "Consigue una mascota",
+         "metin": "En el nivel 10 se obtiene una mascota (pet) de Familiar Trainer Kate en Moradon."
+        },
+        {
+         "baslik": "Forma un grupo",
+         "metin": "La diferencia de nivel dentro de un grupo puede ser de 8 como máximo. Avanza en el mismo rango de nivel que tus amigos."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Jugar solo al principio es posible, pero formar grupo acelera notablemente la subida de nivel."
+      },
+      {
+       "tip": "p",
+       "metin": "En las primeras horas el objetivo no es subir rápido sino aprender la interfaz y los comandos. Abrir una vez las ventanas de chat, grupo y comerciante y probarlas acorta las horas siguientes. Si te atascas puedes preguntar en el chat del clan o del servidor, pero no respondas a nadie que te pida dinero o una contraseña."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si no conoces los puntos de estadística al crear el personaje, no los repartas al azar; lee primero el reparto recomendado de la clase. Ganas 3 puntos por nivel."
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "Elegir nación y clase",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Hay dos naciones: El Morad y Karus. Tienen la misma fuerza; las clases varían un poco según la nación. Cuatro clases comunes (Warrior, Rogue, Mage, Priest) existen en ambos lados; **Portu** es propia de El Morad y **Kurian** de Karus."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Clase",
+        "Rol",
+        "Para quién"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Cuerpo a cuerpo, resistente",
+         "Quien quiere un inicio simple y sólido"
+        ],
+        [
+         "Rogue",
+         "Ágil, daño rápido",
+         "Quien disfruta velocidad y movimiento"
+        ],
+        [
+         "Mage",
+         "Daño de hechizos",
+         "Quien quiere golpear a distancia"
+        ],
+        [
+         "Priest",
+         "Curación y apoyo",
+         "Quien quiere mantener vivo al equipo"
+        ],
+        [
+         "Portu / Kurian",
+         "Clase propia de la nación",
+         "Quien quiere otro estilo de juego"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Las estadísticas son STR, DEX, HP, INT y MP; repártelas según tu clase. Reiniciar estadísticas puede salir caro, así que el primer reparto importa."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Warrior es el primer personaje más sencillo. Elegir una clase que el equipo necesita también facilita encontrar grupo."
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "Subir de nivel: una ruta rápida y eficiente",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Subir de nivel consiste básicamente en matar monstruos de la zona, hacer misiones y formar grupos. **El nivel máximo es 83**; un jugador en el tope que reúne el 100 % de EXP en el nivel 83 puede hacer un renacimiento (rebirth). Un renacimiento exige tres misiones de Fortune Reader Mackin, 1 Gold Bar y 10 000 puntos de contribución; cada nivel de renacimiento da 2 puntos de estadística extra. Las condiciones pueden cambiar con las actualizaciones; confirma en la pantalla del PNJ dentro del juego."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Termina sin falta los PNJ de misiones en los primeros 20 niveles; dan experiencia y equipo.",
+        "Si tu nivel no alcanza para una zona, no dudes en volver a una zona de monstruos de menor nivel.",
+        "Los logros (achievements) se abren con el comando /Achieve y dan recompensas regulares."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Si la diferencia de nivel en un grupo supera 8, no podéis jugar juntos. Por eso procura subir al mismo ritmo que tus amigos."
+      },
+      {
+       "tip": "p",
+       "metin": "Al acercarte al rebirth, no tengas prisa: preparar de antemano las misiones requeridas, la barra de oro y los 10.000 puntos de contribución te ahorra tiempo cuando llegues al nivel 83. En lugar de hacerlo en los primeros días tras abrir el servidor, completa la preparación poco a poco mientras subes; vuelve a verificar las condiciones actuales en el juego y en los anuncios oficiales."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Pierdes EXP al morir. No arriesgues a la vez equipo mágico caro y una zona por encima de tu fuerza."
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "Dinero y economía: solo dentro del juego",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La moneda del juego es el **Noah**. Los ingresos vienen de cazar monstruos, recompensas de misiones y comercio de objetos. Con el comando **merchant** abres tu propia tienda. Vender a PNJ e intercambiar entre jugadores también es posible. El almacén está ligado a la cuenta dentro de un servidor."
+      },
+      {
+       "tip": "p",
+       "metin": "Para mejorar objetos se usa el yunque mágico (Magic Anvil) junto a Charon en Moradon. Una mejora **puede fallar y el objeto puede destruirse**; por eso no uses objetos valiosos para probar y empieza solo con objetos que puedas permitirte perder. Las tasas de éxito se indican en el juego y en los anuncios oficiales."
+      },
+      {
+       "tip": "p",
+       "metin": "Sigue un orden sencillo para ingresar: primero las recompensas de misiones, luego el botín de caza y por último el comerciante. No vendas en el comerciante sin mirar el precio medio de un objeto; el mismo objeto puede venderse a precios distintos según el servidor. Los precios cambian sin parar: no des por fija ninguna cifra de aquí."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Vender moneda del juego, objetos o cuentas a otros jugadores por dinero real (RMT) y usar sitios de terceros para ello infringe las normas y hace que cierren tu cuenta. No comercies fuera del PUS oficial."
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "Tras el nivel 83: guerra y progresión",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "En el 83 el juego gira en torno a la guerra y el equipo. En los nuevos servidores todo el JcJ (jugador contra jugador) ocurre en Ronark Land, pues faltan los mapas Ardream y Ronark Land Base. Los clanes y las guerras entre naciones están en el centro del final del juego."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Gana puntos de estadística con el renacimiento.",
+        "Sigue los logros con regularidad.",
+        "Únete a un clan y participa en eventos en conjunto."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Los productos premium (por ejemplo Switching Premium y War Premium) dan algunas ventajas y se compran con NPoints. Lee en la página oficial qué da un producto antes de comprarlo."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Las primeras semanas los servidores nuevos se llenan; subir de nivel entre multitudes puede ir más lento. Evita la cola cambiando de zona."
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "Errores comunes y seguridad",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Descargar el cliente desde sitios no oficiales.",
+        "Usar la misma contraseña en otros sitios.",
+        "Jugar sin OTP+ ni verificación por teléfono."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Mantente lejos de trampas, bots, macros, exploits, servidores privados, la venta de cuentas y moneda del juego (RMT) y los clientes pirata. Llevan al cierre de la cuenta y al robo de tus datos. Los servidores privados no son oficiales y ponen en riesgo tu cuenta."
+      },
+      {
+       "tip": "p",
+       "metin": "Mantén actualizados el correo y el teléfono registrados; los necesitas cuando tengas que recuperar la cuenta. Si alguien desconocido dice en el juego «te duplico los objetos» o «comparte el código», es una estafa."
+      },
+      {
+       "tip": "p",
+       "metin": "NTTGame no te pedirá la contraseña ni el código OTP. Inicia sesión solo en sitios oficiales y comprueba siempre la dirección."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Preguntas frecuentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "¿Knight Online es gratis?",
+         "c": "Sí, es gratis. Los productos premium y cosméticos son opcionales."
+        },
+        {
+         "s": "¿Todavía se puede entrar en los nuevos servidores?",
+         "c": "La apertura fue con preinscripción. Consulta el anuncio de NTTGame para las condiciones de entrada actuales."
+        },
+        {
+         "s": "¿Qué nación elijo?",
+         "c": "Ambas tienen la misma fuerza. Escoge la de tus amigos."
+        },
+        {
+         "s": "¿Cuál es el nivel máximo?",
+         "c": "83, seguido del sistema de renacimiento. Confirma las condiciones en el juego."
+        },
+        {
+         "s": "¿Se puede jugar en el móvil?",
+         "c": "No. El juego solo funciona en Windows."
+        },
+        {
+         "s": "¿La versión de Steam es igual al cliente oficial?",
+         "c": "No, SteamKO es un cliente aparte con un servidor aparte. Las cuentas no se comparten."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

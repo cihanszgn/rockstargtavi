@@ -522,6 +522,143 @@ EK = {
 for _d, _m in EK.items():
     T[_d].update(_m)
 
+# Oyun merkezleri, rehberler, sinematik arayüz ve düzeltmeler (2. tur).
+SAYFA["oyunlar"] = {"tr": "oyun/index.html", "en": "en/game/index.html", "fr": "fr/jeu/index.html", "es": "es/juego/index.html"}
+SAYFA["rehberler"] = {"tr": "rehberler.html", "en": "en/guides.html", "fr": "fr/guides.html", "es": "es/guias.html"}
+OYUN_KLASOR = {"tr": "oyun", "en": "en/game", "fr": "fr/jeu", "es": "es/juego"}
+REHBER_KLASOR = {"tr": "rehber", "en": "en/guide", "fr": "fr/guide", "es": "es/guia"}
+PL_AD = {"Mobil": {"tr": "Mobil", "en": "Mobile", "fr": "Mobile", "es": "Móvil"}}
+for _d, _c in {"tr": ("rehber", "rehber"), "en": ("guide", "guides"), "fr": ("guide", "guides"), "es": ("guía", "guías")}.items():
+    COGUL[_d]["rehber"] = _c
+EK2 = {
+    "tr": {
+        "nav": {"oyunlar": "Oyunlar", "rehberler": "Rehberler"}, "nav_firsat": "Fırsatlar",
+        "tur_ara": {"oyun": "Oyun", "rehber": "Rehber", "bolum": "Rehber bölümü"},
+        "oyunlar_title": "Oyunlar: haber, söylenti ve takvim tek sayfada", "oyunlar_h1": "Oyunlar",
+        "oyunlar_desc": "Takip ettiğimiz oyunların sayfaları: her oyunun haberleri, söylentileri, çıkış tarihleri ve rehberi bir arada.",
+        "oyunlar_giris": "Her oyunun kendi sayfası var: son haberler, söylentiler, çıkış ve güncelleme tarihleri, varsa rehberi.",
+        "o_hub_desc": "{oyun}: son haberler, söylentiler, çıkış ve güncelleme tarihleri, resmî kaynaklar.",
+        "o_resmi": "Resmî site", "o_rehber": "Rehberi oku", "o_gta": "GTA VI dosyasına git", "o_tum": "Tüm oyunlar",
+        "o_haberler": "Haberler", "o_soylentiler": "Söylentiler", "o_takvim": "Çıkış ve güncelleme tarihleri",
+        "o_bos": "Bu bölümde şimdilik kayıt yok.", "o_gelistirici": "Geliştirici", "o_platform": "Platform", "o_tur": "Tür",
+        "o_kayit": "{h} haber · {s} söylenti · {c} tarih", "o_yazi_bas": "Oyun sayfası",
+        "rehberler_title": "Oyun rehberleri: başlangıçtan ileri seviyeye", "rehberler_h1": "Rehberler",
+        "rehberler_desc": "Sitede yazılmış özgün oyun rehberleri: ilk adımlar, ayarlar, ilerleme, sık yapılan hatalar ve güvenlik.",
+        "rehberler_giris": "Her rehber kendi oyununa göre tasarlandı. Kaynaklar sayfanın sonunda; güncelleme tarihi ve sürüm her rehberin başında.",
+        "r_oku": "Rehberi oku", "r_gta_ad": "GTA VI dosyası", "r_gta_tanim": "Hazırlık rehberi: sürümler, ön yükleme, açılış saati ve sık sorulanlar.",
+        "r_icindekiler": "İçindekiler", "r_okuma": "{n} dk okuma", "r_guncel": "Güncellendi", "r_surum": "Sürüm",
+        "r_kunye": "Künye", "r_kaynaklar": "Kaynaklar", "r_kaynak_not": "Bu rehber aşağıdaki kaynaklar incelenerek sitede özgün olarak yazıldı.",
+        "r_ucretsiz": "Daha fazlası için ücretsiz kaynaklar", "r_ucretsiz_not": "Dış siteler; içerikleri kendi sahiplerine aittir.",
+        "r_onceki": "Önceki rehber", "r_sonraki": "Sonraki rehber", "r_hub": "Oyun sayfası", "r_tum": "Tüm rehberler",
+        "r_capa": "Bu bölümün bağlantısını kopyala", "r_yukari": "Başa dön", "r_acik": "Açık lisans", "r_dil": "Dil",
+        "r_kategori": {"resmi": "Resmî", "wiki": "Wiki", "arac": "Araç", "ileri": "İleri düzey", "baslangic": "Başlangıç"},
+        "r_desc": "{oyun} rehberi: {ozet}", "r_ipucu": "İpucu", "r_uyari": "Dikkat", "r_adim": "Adım",
+        "populer": "Popüler oyunlar", "populer_not": "Oyun sayfasında haberler, söylentiler ve takvim bir arada.",
+        "gundem": "Gündem", "gundem_dur": "Akışı durdur", "gundem_bas": "Akışı başlat",
+        "epic_tr_normal": "Normal fiyatı (Epic Türkiye mağazası)",
+        "usd_not": "Bu listedeki fiyatlar CheapShark'tan ABD doları (USD) olarak gelir; mağazada kendi para biriminle farklı görünebilir.",
+        "f_ac": "Filtreler", "tus_oyun": "oyun", "tus_rehber": "rehber",
+    },
+    "en": {
+        "nav": {"oyunlar": "Games", "rehberler": "Guides"}, "nav_firsat": "Deals & freebies",
+        "tur_ara": {"oyun": "Game", "rehber": "Guide", "bolum": "Guide section"},
+        "oyunlar_title": "Games: news, rumors and dates on one page", "oyunlar_h1": "Games",
+        "oyunlar_desc": "Pages for the games we follow: each game's news, rumors, release dates and guide in one place.",
+        "oyunlar_giris": "Every game has its own page: latest news, rumors, release and update dates, and its guide when there is one.",
+        "o_hub_desc": "{oyun}: latest news, rumors, release and update dates, official sources.",
+        "o_resmi": "Official site", "o_rehber": "Read the guide", "o_gta": "Go to the GTA VI file", "o_tum": "All games",
+        "o_haberler": "News", "o_soylentiler": "Rumors", "o_takvim": "Release and update dates",
+        "o_bos": "Nothing in this section yet.", "o_gelistirici": "Developer", "o_platform": "Platform", "o_tur": "Genre",
+        "o_kayit": "{h} news · {s} rumors · {c} dates", "o_yazi_bas": "Game page",
+        "rehberler_title": "Game guides: from first steps to advanced play", "rehberler_h1": "Guides",
+        "rehberler_desc": "Original game guides written on this site: first steps, settings, progression, common mistakes and safety.",
+        "rehberler_giris": "Each guide is designed around its own game. Sources sit at the end; the update date and version open every guide.",
+        "r_oku": "Read the guide", "r_gta_ad": "GTA VI file", "r_gta_tanim": "Launch guide: editions, pre-load, unlock time and common questions.",
+        "r_icindekiler": "Contents", "r_okuma": "{n} min read", "r_guncel": "Updated", "r_surum": "Version",
+        "r_kunye": "At a glance", "r_kaynaklar": "Sources", "r_kaynak_not": "This guide was written for this site after reviewing the sources below.",
+        "r_ucretsiz": "Free resources for more", "r_ucretsiz_not": "External sites; their content belongs to their owners.",
+        "r_onceki": "Previous guide", "r_sonraki": "Next guide", "r_hub": "Game page", "r_tum": "All guides",
+        "r_capa": "Copy a link to this section", "r_yukari": "Back to top", "r_acik": "Open licence", "r_dil": "Language",
+        "r_kategori": {"resmi": "Official", "wiki": "Wiki", "arac": "Tool", "ileri": "Advanced", "baslangic": "Beginner"},
+        "r_desc": "{oyun} guide: {ozet}", "r_ipucu": "Tip", "r_uyari": "Watch out", "r_adim": "Step",
+        "populer": "Popular games", "populer_not": "Each game page gathers news, rumors and dates.",
+        "gundem": "Headlines", "gundem_dur": "Pause headlines", "gundem_bas": "Play headlines",
+        "epic_tr_normal": "Regular price",
+        "usd_not": "Prices in this list come from CheapShark in US dollars (USD); the store may show a different amount in your currency.",
+        "f_ac": "Filters", "tus_oyun": "games", "tus_rehber": "guides",
+    },
+    "fr": {
+        "nav": {"oyunlar": "Jeux", "rehberler": "Guides"}, "nav_firsat": "Bons plans",
+        "tur_ara": {"oyun": "Jeu", "rehber": "Guide", "bolum": "Section de guide"},
+        "oyunlar_title": "Jeux : actus, rumeurs et dates sur une page", "oyunlar_h1": "Jeux",
+        "oyunlar_desc": "Les pages des jeux que nous suivons : actus, rumeurs, dates de sortie et guide de chaque jeu au même endroit.",
+        "oyunlar_giris": "Chaque jeu a sa page : dernières actus, rumeurs, dates de sortie et de mise à jour, et son guide s’il existe.",
+        "o_hub_desc": "{oyun} : dernières actus, rumeurs, dates de sortie et de mise à jour, sources officielles.",
+        "o_resmi": "Site officiel", "o_rehber": "Lire le guide", "o_gta": "Voir le dossier GTA VI", "o_tum": "Tous les jeux",
+        "o_haberler": "Actus", "o_soylentiler": "Rumeurs", "o_takvim": "Dates de sortie et de mise à jour",
+        "o_bos": "Rien dans cette rubrique pour l’instant.", "o_gelistirici": "Développeur", "o_platform": "Plateforme", "o_tur": "Genre",
+        "o_kayit": "{h} actus · {s} rumeurs · {c} dates", "o_yazi_bas": "Page du jeu",
+        "rehberler_title": "Guides de jeux : des premiers pas au niveau avancé", "rehberler_h1": "Guides",
+        "rehberler_desc": "Des guides de jeux originaux écrits sur ce site : premiers pas, réglages, progression, erreurs fréquentes et sécurité.",
+        "rehberler_giris": "Chaque guide est conçu autour de son jeu. Les sources sont à la fin ; la date de mise à jour et la version ouvrent chaque guide.",
+        "r_oku": "Lire le guide", "r_gta_ad": "Dossier GTA VI", "r_gta_tanim": "Guide de sortie : éditions, préchargement, heure de déblocage et questions fréquentes.",
+        "r_icindekiler": "Sommaire", "r_okuma": "{n} min de lecture", "r_guncel": "Mis à jour", "r_surum": "Version",
+        "r_kunye": "En bref", "r_kaynaklar": "Sources", "r_kaynak_not": "Ce guide a été rédigé pour ce site à partir des sources ci-dessous.",
+        "r_ucretsiz": "Ressources gratuites pour aller plus loin", "r_ucretsiz_not": "Sites externes ; leur contenu appartient à leurs auteurs.",
+        "r_onceki": "Guide précédent", "r_sonraki": "Guide suivant", "r_hub": "Page du jeu", "r_tum": "Tous les guides",
+        "r_capa": "Copier le lien de cette section", "r_yukari": "Haut de page", "r_acik": "Licence ouverte", "r_dil": "Langue",
+        "r_kategori": {"resmi": "Officiel", "wiki": "Wiki", "arac": "Outil", "ileri": "Avancé", "baslangic": "Débutant"},
+        "r_desc": "Guide {oyun} : {ozet}", "r_ipucu": "Astuce", "r_uyari": "Attention", "r_adim": "Étape",
+        "populer": "Jeux populaires", "populer_not": "Chaque page de jeu réunit actus, rumeurs et dates.",
+        "gundem": "À la une", "gundem_dur": "Mettre en pause", "gundem_bas": "Relancer le défilement",
+        "epic_tr_normal": "Prix normal",
+        "usd_not": "Les prix de cette liste viennent de CheapShark en dollars américains (USD) ; la boutique peut afficher un autre montant dans votre devise.",
+        "f_ac": "Filtres", "tus_oyun": "jeux", "tus_rehber": "guides",
+    },
+    "es": {
+        "nav": {"oyunlar": "Juegos", "rehberler": "Guías"}, "nav_firsat": "Ofertas y gratis",
+        "tur_ara": {"oyun": "Juego", "rehber": "Guía", "bolum": "Sección de guía"},
+        "oyunlar_title": "Juegos: noticias, rumores y fechas en una página", "oyunlar_h1": "Juegos",
+        "oyunlar_desc": "Las páginas de los juegos que seguimos: noticias, rumores, fechas de lanzamiento y guía de cada juego en un solo lugar.",
+        "oyunlar_giris": "Cada juego tiene su página: últimas noticias, rumores, fechas de lanzamiento y actualización, y su guía si la hay.",
+        "o_hub_desc": "{oyun}: últimas noticias, rumores, fechas de lanzamiento y actualización, fuentes oficiales.",
+        "o_resmi": "Sitio oficial", "o_rehber": "Leer la guía", "o_gta": "Ir al dosier de GTA VI", "o_tum": "Todos los juegos",
+        "o_haberler": "Noticias", "o_soylentiler": "Rumores", "o_takvim": "Fechas de lanzamiento y actualización",
+        "o_bos": "Todavía no hay nada en esta sección.", "o_gelistirici": "Desarrollador", "o_platform": "Plataforma", "o_tur": "Género",
+        "o_kayit": "{h} noticias · {s} rumores · {c} fechas", "o_yazi_bas": "Página del juego",
+        "rehberler_title": "Guías de juegos: de los primeros pasos al nivel avanzado", "rehberler_h1": "Guías",
+        "rehberler_desc": "Guías de juegos originales escritas en este sitio: primeros pasos, ajustes, progreso, errores comunes y seguridad.",
+        "rehberler_giris": "Cada guía está diseñada en torno a su juego. Las fuentes están al final; la fecha de actualización y la versión abren cada guía.",
+        "r_oku": "Leer la guía", "r_gta_ad": "Dosier de GTA VI", "r_gta_tanim": "Guía de lanzamiento: ediciones, precarga, hora de desbloqueo y preguntas frecuentes.",
+        "r_icindekiler": "Índice", "r_okuma": "{n} min de lectura", "r_guncel": "Actualizado", "r_surum": "Versión",
+        "r_kunye": "Ficha", "r_kaynaklar": "Fuentes", "r_kaynak_not": "Esta guía se escribió para este sitio tras revisar las fuentes de abajo.",
+        "r_ucretsiz": "Recursos gratuitos para saber más", "r_ucretsiz_not": "Sitios externos; su contenido pertenece a sus autores.",
+        "r_onceki": "Guía anterior", "r_sonraki": "Guía siguiente", "r_hub": "Página del juego", "r_tum": "Todas las guías",
+        "r_capa": "Copiar el enlace de esta sección", "r_yukari": "Volver arriba", "r_acik": "Licencia abierta", "r_dil": "Idioma",
+        "r_kategori": {"resmi": "Oficial", "wiki": "Wiki", "arac": "Herramienta", "ileri": "Avanzado", "baslangic": "Principiante"},
+        "r_desc": "Guía de {oyun}: {ozet}", "r_ipucu": "Consejo", "r_uyari": "Atención", "r_adim": "Paso",
+        "populer": "Juegos populares", "populer_not": "Cada página de juego reúne noticias, rumores y fechas.",
+        "gundem": "Titulares", "gundem_dur": "Pausar titulares", "gundem_bas": "Reanudar titulares",
+        "epic_tr_normal": "Precio normal",
+        "usd_not": "Los precios de esta lista vienen de CheapShark en dólares estadounidenses (USD); la tienda puede mostrar otro importe en tu moneda.",
+        "f_ac": "Filtros", "tus_oyun": "juegos", "tus_rehber": "guías",
+    },
+}
+for _d, _m in EK2.items():
+    for _k, _v in _m.items():
+        if isinstance(_v, dict) and isinstance(T[_d].get(_k), dict):
+            T[_d][_k].update(_v)
+        else:
+            T[_d][_k] = _v
+# Oyun dizini tür süzgeci (site_oyun.TUR_GRUP anahtarları) ve gezinti izi.
+for _d, _iz, _g in (
+        ("tr", "Bulunduğunuz yer", ("Battle royale", "MOBA", "MMORPG", "Aksiyon RYO", "Spor", "Açık dünya", "Sandbox ve platform", "Nişancı", "Diğer")),
+        ("en", "Breadcrumb", ("Battle royale", "MOBA", "MMORPG", "Action RPG", "Sports", "Open world", "Sandbox & platforms", "Shooter", "Other")),
+        ("fr", "Fil d’Ariane", ("Battle royale", "MOBA", "MMORPG", "RPG d’action", "Sport", "Monde ouvert", "Bac à sable et plateformes", "Tir", "Autres")),
+        ("es", "Ruta de navegación", ("Battle royale", "MOBA", "MMORPG", "RPG de acción", "Deportes", "Mundo abierto", "Sandbox y plataformas", "Disparos", "Otros"))):
+    T[_d]["o_iz"] = _iz
+    T[_d]["o_grup"] = dict(zip(("br", "moba", "mmorpg", "ryo", "spor", "acik", "sandbox", "nisanci", "diger"), _g))
+
 # GTA VI dosyasının üst bölümü (çıkıştan önce ve sonra).
 GTA_UST = {
     "tr": {

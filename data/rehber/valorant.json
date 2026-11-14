@@ -1,0 +1,1629 @@
+{
+ "oyun": "valorant",
+ "guncelleme": "2026-11-14",
+ "surum": "V26 Act 6 / Yama 13.10",
+ "kaynaklar": [
+  {
+   "url": "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-13-10/",
+   "ad": "VALORANT Patch Notes 13.10"
+  },
+  {
+   "url": "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-13-08/",
+   "ad": "VALORANT Patch Notes 13.08"
+  },
+  {
+   "url": "https://playvalorant.com/en-us/news/announcements/beginners-guide",
+   "ad": "VALORANT Beginner's Guide"
+  },
+  {
+   "url": "https://support-valorant.riotgames.com/hc/en-us/articles/360047937633-VALORANT-Competitive-Mode-FAQ",
+   "ad": "VALORANT Competitive Mode FAQ"
+  },
+  {
+   "url": "https://support.riotgames.com/en-us/valorant/support-tools/server-select",
+   "ad": "VALORANT Server Select"
+  },
+  {
+   "url": "https://clip.dor.gg/en/blog/valorant-system-requirements",
+   "ad": "VALORANT system requirements (secondary)"
+  }
+ ],
+ "diller": {
+  "tr": {
+   "baslik": "VALORANT Başlangıç Rehberi: İlk Maç, Ajan, Ayar ve Rank",
+   "ozet": "VALORANT, Riot Games'in ücretsiz 5'e 5 taktik nişancı oyunudur. Bu rehber yeni başlayanlar ve uzun aradan dönenler için hesabı açmaktan ilk rank maçına kadar sırayla gider.",
+   "kunye": [
+    {
+     "ad": "Tür",
+     "deger": "5'e 5 taktik nişancı (FPS)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Windows PC"
+    },
+    {
+     "ad": "Fiyat modeli",
+     "deger": "Ücretsiz oynanır; kozmetik ve bazı ajanlar için isteğe bağlı satın alma"
+    },
+    {
+     "ad": "Güncel sürüm",
+     "deger": "V26 Act 6, Yama 13.10 (Kasım 2026)"
+    },
+    {
+     "ad": "Türkçe desteği",
+     "deger": "Arayüz dili seçeneklerini ayarlardan doğrula; sunucu listesinde Türkiye'ye yakın İstanbul var"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "nedir",
+     "baslik": "VALORANT nedir ve 2026'da durum ne",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "VALORANT'ta iki takım beş kişiyle karşılaşır. Saldıran takım bir bomba (Spike) yerleştirmeye, savunan takım bunu engellemeye çalışır. Her oyuncu, kendine özgü yetenekleri olan bir **ajan** seçer. Nişan almak kadar yetenekleri doğru zamanda kullanmak da önemlidir."
+      },
+      {
+       "tip": "p",
+       "metin": "Oyun Act adı verilen dönemlerle ilerler. Kasım 2026'da geçerli dönem **V26 Act 6**'dır (13 Ekim 2026 - 5 Ocak 2027). En son yama notu **13.10**'dur. Haritalar ve dereceli havuz sık değişir; bu yüzden rehberde tek tek harita listesi vermiyoruz, oyunun harita ekranına bak."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Rehberdeki sayılar Kasım 2026 itibarıyladır. Yamalarla küçük değişiklikler olabilir; kesin kural için resmi Riot destek sayfalarına bak."
+      },
+      {
+       "tip": "p",
+       "metin": "Kısacası: oyun, iyi nişan almaktan çok iyi karar vermeyi ödüllendirir. Bir raundu kazanmak için çoğu zaman kimin nerede olduğunu bilmek, yeteneklerini takım arkadaşlarınla birlikte kullanmak ve bombanın zamanını iyi yönetmek gerekir. Bu yüzden yeni başlayan bir oyuncu, ilk günlerde nişandan çok harita bilgisine ve iletişime yatırım yapmalıdır."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Başlamadan önce: hesap, kurulum, anti-hile",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Oyunu Riot Games hesabıyla oynarsın; hesap ve indirme ücretsizdir. Sistem gereksinimi düşüktür. Dışarıdan bir kaynağa göre en düşük ayar için Intel Core i3-540 veya AMD Athlon 200GE, Intel HD 4000 veya Radeon R5 220 ve 4 GB RAM yeterlidir; akıcı oynamak için daha güçlü bir ekran kartı iyi olur."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Windows 10 veya 11 gerekir; Windows 11'de TPM 2.0 ve Güvenli Önyükleme (Secure Boot) açık olmalıdır.",
+        "Oyunla birlikte **Vanguard** adlı anti-hile yazılımı kurulur. Bilgisayarı açtığında çalışır; bu normaldir.",
+        "Vanguard bazen TPM 2.0, Secure Boot, Bellek Bütünlüğü (HVCI) veya IOMMU ayarlarını isteyebilir. BIOS'tan açman gerekebilir.",
+        "Sunucu seçimi için oyunun sunucu listesine bak; resmi listede İstanbul sunucusu yer alır. Sana en düşük gecikmeyi (ping) veren sunucuyu seç."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Vanguard çekirdek düzeyinde çalışır. Yalnızca oyunun kendi yükleyicisinden indir; başka sitelerdeki sahte yükleyiciler tehlikelidir."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "İlk maçlar adım adım",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Oyunu kur ve hesabı aç",
+         "metin": "Riot hesabını oluştur, istemciyi indir, Vanguard kurulumunu bitir ve bilgisayarı yeniden başlat."
+        },
+        {
+         "baslik": "Eğitimi ve Atış Alanını dene",
+         "metin": "Eğitim bölümünde hareket ve silahı öğren. Atış Alanı'nda (Range) botlara nişan alarak yeni ayarlarını denersin."
+        },
+        {
+         "baslik": "Öğrenmek için Derecesiz (Unrated) oyna",
+         "metin": "Bu mod puan kaybettirmez. Haritaları ve ajanları burada öğren."
+        },
+        {
+         "baslik": "Hızlı mod Swiftplay'i dene",
+         "metin": "Daha kısa maçlar demektir; ısınmak veya deneme yapmak için güzeldir."
+        },
+        {
+         "baslik": "20. hesap seviyesine ulaş",
+         "metin": "Dereceli (Competitive) için hesap seviyesi 20 gerekir. Ondan önce derecesiz oynayarak seviye yaparsın."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ajanlar",
+     "baslik": "Ajan seçimi: ilk haftalar için tablo",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "VALORANT'ta dört rol vardır: Düellocu, Gözcü, Kontrol Uzmanı ve Başlatıcı. Ajan sayısı sürekli arttığı için sayı vermiyoruz. Yeni hesapta ücretsiz gelen başlangıç ajanları: **Brimstone, Jett, Phoenix, Sage ve Sova**. Diğer ajanlar Kingdom Kredisi (KC), VP veya etkinliklerle açılır."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Ajan",
+        "Rol",
+        "Neden kolay"
+       ],
+       "satirlar": [
+        [
+         "Phoenix",
+         "Düellocu",
+         "Kendini iyileştirebilir, ışık körlüğü yeteneği kendi işine yarar"
+        ],
+        [
+         "Jett",
+         "Düellocu",
+         "Hareketli; savaştan kaçmak kolay, ama nişan gerektirir"
+        ],
+        [
+         "Sage",
+         "Gözcü",
+         "İyileştirir, duvarla yol kapatır; takıma hemen fayda sağlar"
+        ],
+        [
+         "Sova",
+         "Başlatıcı",
+         "Keşif oku düşman yerini gösterir; bilgi toplamayı öğretir"
+        ],
+        [
+         "Brimstone",
+         "Kontrol Uzmanı",
+         "Duman atışı basittir; takım oyununu öğretir"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "KC ile yeni ajan açmak uzun sürer: kazanılan her raundda 4, oynanan her raundda 2 KC gelir ve ajan fiyatı 8.000 KC'dir. Önce başlangıç ajanlarından birini iyi öğren."
+      }
+     ]
+    },
+    {
+     "id": "mekanikler",
+     "baslik": "Temel mekanikler: raunt, ekonomi, bilgi",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Her raundun başında bir **alım aşaması** vardır: kredi ile silah, zırh ve yetenek alırsın. 12 raunddan sonra taraflar değişir; 13 raundu kazanan maçı alır (kendi bilgim). Kredi kazanmak için raundu kazanmak yetmez; ekonomi yönetimi de gerekir."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Bomba:** Saldıranlar bombayı kurarsa savunanlar süre dolmadan etkisiz hale getirmelidir.",
+        "**Ekonomi:** Raundu kaybetsen de kredi gelir. Takımca ucuz silah alıp bir sonraki raunda güçlü başlamak sık kullanılan bir yöntemdir.",
+        "**Bilgi:** Mini haritaya bak, ses çıkarma, takım arkadaşlarının çağrılarını dinle."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Yeni oyuncular için en kalıcı ilke şudur: **tek başına dalmak yerine takım arkadaşının yanında dur**. Takas (trade) dediğimiz şey, ölen arkadaşının katilini hemen vurmaktır; bu, tek başına yapılan gösterişli bir hamleden daha değerlidir."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Terim",
+        "Anlamı"
+       ],
+       "satirlar": [
+        [
+         "Eco",
+         "Kredi biriktirmek için bilerek ucuz silahla veya silahsız oynanan raunt"
+        ],
+        [
+         "Force buy",
+         "Kredin az olsa da eldekiyle en iyi alımı yapmak"
+        ],
+        [
+         "Trade",
+         "Ölen takım arkadaşının katilini hemen öldürmek"
+        ],
+        [
+         "Flank",
+         "Rakibin arkasına dolaşmak"
+        ],
+        [
+         "Peek",
+         "Köşeden kısa süre çıkıp bilgi almak veya atış yapmak"
+        ],
+        [
+         "Clutch",
+         "Takım arkadaşların ölmüşken tek başına raundu almak"
+        ],
+        [
+         "Rotate",
+         "Takımın bir bölgeden diğerine yer değiştirmesi"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Ayarlar: başlangıç değerleri",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Aşağıdakiler resmi değer değil, genel olarak önerilen başlangıç noktalarıdır. Atış Alanı'nda dene, rahat gelmezse değiştir."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Ayar",
+        "Başlangıç önerisi"
+       ],
+       "satirlar": [
+        [
+         "Fare DPI",
+         "400-800"
+        ],
+        [
+         "Oyun içi hassasiyet",
+         "DPI ile çarpıp düşük tut; 800 DPI'da yaklaşık 0,3-0,5 ile başla"
+        ],
+        [
+         "Nişangah rengi",
+         "Zemin ve duvarlardan ayrışan bir renk (camgöbeği veya yeşil)"
+        ],
+        [
+         "Nişangah boyutu",
+         "Küçük, kenarlıklı; ortadaki nokta kapalı veya çok küçük"
+        ],
+        [
+         "Mini harita",
+         "Dönmeyen (sabit) veya dönen; ikisini dene, sana uygun olanı seç"
+        ],
+        [
+         "Ses",
+         "Kulaklık tak; ayak sesleri önemlidir"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Hassasiyeti sık sık değiştirme. Bir değer seç, bir hafta oyna, sonra karar ver."
+      }
+     ]
+    },
+    {
+     "id": "rank",
+     "baslik": "Dereceli sistem ve rank tablosu",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Dereceli modda **9 rank** vardır; Radiant hariç hepsi 3 kademelidir. İlk 5 yerleştirme maçından sonra rankını alırsın; başlangıç rankı en fazla Ascendant 1 olabilir. Rank puanı (RR) kazanıp kaybedersin: Ascendant'a kadar her rank için 100 RR gerekir. Immortal ve Radiant'ta 100 RR sınırı yoktur."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Grup",
+        "Ranklar"
+       ],
+       "satirlar": [
+        [
+         "Başlangıç",
+         "Iron, Bronze, Silver"
+        ],
+        [
+         "Orta",
+         "Gold, Platinum, Diamond"
+        ],
+        [
+         "Üst",
+         "Ascendant, Immortal, Radiant"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Rank düşmez (rank decay yoktur).",
+        "Takım kurma sınırı: Iron-Bronze oyuncuları en fazla Silver ile, Silver en fazla Gold ile, Gold en fazla Platinum ile eşleşir; Platinum ve üstü en fazla 1 kademe farkla.",
+        "Act Rank, o Act'teki en iyi dereceli galibiyetine göre belirlenir.",
+        "Dereceli yama notlarında 'Map Rating' (harita notu) adı verilen bir sistem eklenmiştir; yaklaşık olarak hangi haritada daha iyi olduğunu gösterir."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hatalar",
+     "baslik": "Yeni oyuncuların sık yaptığı hatalar",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Dereceliye hazır olmadan girmek; önce derecesiz oynayıp haritaları öğren.",
+        "Her raundu en pahalı silahla oynamaya çalışmak ve ekonomiyi göz ardı etmek.",
+        "Yeteneklerin ne zaman kullanılacağını öğrenmeden ajanı sık sık değiştirmek.",
+        "Tek başına, takımdan kopuk ilerlemek.",
+        "Ölünce konuşmayı bırakmak; kısa ve net bilgi vermek en değerlisidir.",
+        "Kötü bir maçtan sonra hemen yeni maça girmek; kısa ara ver."
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Haftada üç gün",
+         "metin": "Her gün 15 dakika Atış Alanı'nda nişan ısınması yap."
+        },
+        {
+         "baslik": "Her maçtan sonra",
+         "metin": "Tek bir hatanı not et ve bir sonraki maçta yalnızca onu düzelt."
+        },
+        {
+         "baslik": "Her hafta",
+         "metin": "Bir harita seç ve o haritada yalnız bir ajanla oyna."
+        },
+        {
+         "baslik": "Her ay",
+         "metin": "Ayarlarını gözden geçir; ancak fazla değiştirme."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Hesap güvenliği ve davranış kuralları",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Hesabını korumak, rankından daha önemlidir. İki aşamalı doğrulamayı aç ve şifreni başka sitelerle paylaşma."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Hile yazılımı, nişan botu, duvar hilesi, script, rank boost hizmeti, hesap satın alma veya satma ve kumar benzeri skin bahis siteleri hesabın kalıcı olarak kapanmasına yol açabilir. Bunlara yaklaşma."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Resmi olmayan 'ücretsiz VP' veya 'ücretsiz skin' sitelerine giriş bilgisi verme.",
+        "Yayın izleyip rakibin yerini öğrenmek (stream sniping), seçim aracı kullanmak ve rank manipülasyonu yaptırım doğurur.",
+        "Takım arkadaşlarına saygılı ol; toksik sohbeti raporla ve sustur.",
+        "Düşük ranklı oyunculara karşı ikinci bir hesapla oynamak (smurf) adil değildir; yapma."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Sık sorulan sorular",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "VALORANT ücretsiz mi?",
+         "c": "Evet. Oyun ücretsizdir; satın almalar kozmetik veya ajan hızlandırma içindir."
+        },
+        {
+         "s": "Dereceliye ne zaman girebilirim?",
+         "c": "Hesap seviyen 20 olunca."
+        },
+        {
+         "s": "Rankım düşer mi?",
+         "c": "Rank decay yok; ama kaybedince RR kaybedersin."
+        },
+        {
+         "s": "Hangi ajanla başlayayım?",
+         "c": "Başlangıç ajanlarından birini seç; Sage veya Sova takıma kolayca fayda sağlar."
+        },
+        {
+         "s": "Bilgisayarım yetmezse ne olur?",
+         "c": "Düşük ayarda 4 GB RAM ile oynanabilir; ama TPM ve Secure Boot istenirse BIOS ayarı gerekir."
+        },
+        {
+         "s": "Telefonda oynanır mı?",
+         "c": "Hayır; bu rehber Windows PC içindir."
+        },
+        {
+         "s": "Derecesiz ile Swiftplay arasında fark ne?",
+         "c": "İkisi de puan kaybettirmez. Derecesiz tam uzunlukta bir maçtır; Swiftplay daha kısa ve hızlıdır. Haritaları öğrenmek için Derecesiz, kısa bir ısınma için Swiftplay uygundur."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "en": {
+   "baslik": "VALORANT Beginner Guide: First Match, Agents, Settings and Rank",
+   "ozet": "VALORANT is Riot Games' free 5v5 tactical shooter. This guide walks new and returning players from creating an account to their first ranked match.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "5v5 tactical shooter (FPS)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Windows PC"
+    },
+    {
+     "ad": "Price model",
+     "deger": "Free to play; optional purchases for cosmetics and some agents"
+    },
+    {
+     "ad": "Current version",
+     "deger": "V26 Act 6, Patch 13.10 (November 2026)"
+    },
+    {
+     "ad": "Turkish support",
+     "deger": "Check the language options in settings; the server list includes Istanbul, close to Turkey"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "nedir",
+     "baslik": "What VALORANT is and where it stands in 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Two teams of five face off. The attackers try to plant a bomb (the Spike) and the defenders try to stop them. Every player picks an **agent** with unique abilities. Using abilities at the right moment matters as much as aim."
+      },
+      {
+       "tip": "p",
+       "metin": "The game runs in periods called Acts. In November 2026 the current period is **V26 Act 6** (13 October 2026 to 5 January 2027). The latest patch notes are **13.10**. Maps and the ranked pool rotate often, so this guide does not list them; check the in-game map screen."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Numbers in this guide are accurate as of November 2026. Patches can change small details; check the official Riot support pages for exact rules."
+      },
+      {
+       "tip": "p",
+       "metin": "In short, the game rewards good decisions more than pure aim. To win a round you usually need to know who is where, use abilities together with teammates and manage the bomb timer well. So in the first days a new player should invest in map knowledge and communication more than in aim."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Before you start: account, install, anti-cheat",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "You play with a Riot Games account; the account and the download are free. System requirements are low. According to an outside source, the minimum is an Intel Core i3-540 or AMD Athlon 200GE, Intel HD 4000 or Radeon R5 220 and 4 GB of RAM; a stronger graphics card helps for smooth play."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Windows 10 or 11 is required; on Windows 11, TPM 2.0 and Secure Boot must be on.",
+        "The anti-cheat software **Vanguard** installs with the game. It starts with your PC; this is normal.",
+        "Vanguard may ask for TPM 2.0, Secure Boot, Memory Integrity (HVCI) or IOMMU. You may need to enable these in the BIOS.",
+        "For server choice, check the in-game server list; the official list includes Istanbul. Pick the server with the lowest ping."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Vanguard runs at kernel level. Download it only from the game's own installer; fake installers on other sites are dangerous."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Your first matches step by step",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Install the game and create the account",
+         "metin": "Create your Riot account, download the client, finish the Vanguard install and restart your PC."
+        },
+        {
+         "baslik": "Try the tutorial and the Range",
+         "metin": "Learn movement and the weapon in the tutorial. In the Range you test your settings on bots."
+        },
+        {
+         "baslik": "Play Unrated to learn",
+         "metin": "This mode does not cost you rank. Learn maps and agents here."
+        },
+        {
+         "baslik": "Try the quick mode Swiftplay",
+         "metin": "Shorter matches, good for warming up or experimenting."
+        },
+        {
+         "baslik": "Reach account level 20",
+         "metin": "Competitive needs account level 20. Until then, level up in unrated modes."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ajanlar",
+     "baslik": "Choosing an agent: a table for the first weeks",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "There are four roles in VALORANT: Duelist, Sentinel, Controller and Initiator. The agent count keeps growing, so we give no number. The free starter agents on a new account are **Brimstone, Jett, Phoenix, Sage and Sova**. Other agents unlock with Kingdom Credits (KC), VP or events."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Agent",
+        "Role",
+        "Why it is easy"
+       ],
+       "satirlar": [
+        [
+         "Phoenix",
+         "Duelist",
+         "Can heal himself, and his flash helps his own plays"
+        ],
+        [
+         "Jett",
+         "Duelist",
+         "Mobile; easy to escape fights, but demands aim"
+        ],
+        [
+         "Sage",
+         "Sentinel",
+         "Heals and blocks paths with a wall; helps the team right away"
+        ],
+        [
+         "Sova",
+         "Initiator",
+         "His recon dart shows enemy positions; teaches info gathering"
+        ],
+        [
+         "Brimstone",
+         "Controller",
+         "Smokes are simple to place; teaches team play"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Unlocking agents with KC takes a long time: 4 KC per round won and 2 per round played, and an agent costs 8,000 KC. Learn one starter agent well first."
+      }
+     ]
+    },
+    {
+     "id": "mekanikler",
+     "baslik": "Core mechanics: rounds, economy, information",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "At the start of each round there is a **buy phase**: you spend credits on weapons, armor and abilities. Sides switch after 12 rounds; the first team to win 13 rounds takes the match (my own knowledge). Winning rounds is not enough to gain credits; economy management matters too."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**The bomb:** If attackers plant it, defenders must defuse it before time runs out.",
+        "**Economy:** You earn credits even when you lose rounds. Buying cheap weapons together as a team to start the next round strong is a common method.",
+        "**Information:** Watch the minimap, avoid making noise, listen to teammates' calls."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "The most lasting principle for new players is this: **stay near your teammates instead of diving alone**. A trade kill, killing the enemy who just killed your teammate, is worth more than a hero play."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Term",
+        "Meaning"
+       ],
+       "satirlar": [
+        [
+         "Eco",
+         "A round played with cheap weapons or none to save credits"
+        ],
+        [
+         "Force buy",
+         "Buying the best you can afford even when credits are low"
+        ],
+        [
+         "Trade",
+         "Killing the enemy who just killed your teammate"
+        ],
+        [
+         "Flank",
+         "Circling around to the enemy's back"
+        ],
+        [
+         "Peek",
+         "Stepping out of cover briefly to get info or shoot"
+        ],
+        [
+         "Clutch",
+         "Winning a round alone after your teammates have died"
+        ],
+        [
+         "Rotate",
+         "The team moving from one area to another"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Settings: starting values",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The values below are not official; they are commonly suggested starting points. Try them in the Range and change them if they feel off."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Setting",
+        "Starting suggestion"
+       ],
+       "satirlar": [
+        [
+         "Mouse DPI",
+         "400-800"
+        ],
+        [
+         "In-game sensitivity",
+         "Keep it low; at 800 DPI start around 0.3-0.5"
+        ],
+        [
+         "Crosshair color",
+         "A color that stands out from floors and walls (cyan or green)"
+        ],
+        [
+         "Crosshair size",
+         "Small, with an outline; the center dot off or very small"
+        ],
+        [
+         "Minimap",
+         "Fixed or rotating; try both and keep what suits you"
+        ],
+        [
+         "Audio",
+         "Wear headphones; footsteps matter"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Do not change sensitivity often. Pick a value, play for a week, then decide."
+      }
+     ]
+    },
+    {
+     "id": "rank",
+     "baslik": "Ranked system and rank table",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Competitive has **9 ranks**; all but Radiant have 3 tiers. You get your rank after 5 placement matches, and the starting rank can be at most Ascendant 1. You gain and lose Rank Rating (RR): 100 RR per rank up to Ascendant. Immortal and Radiant have no 100 RR cap."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Group",
+        "Ranks"
+       ],
+       "satirlar": [
+        [
+         "Starting",
+         "Iron, Bronze, Silver"
+        ],
+        [
+         "Middle",
+         "Gold, Platinum, Diamond"
+        ],
+        [
+         "Top",
+         "Ascendant, Immortal, Radiant"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Rank does not decay (there is no rank decay).",
+        "Party limits: Iron and Bronze players can queue with up to Silver, Silver with up to Gold, Gold with up to Platinum; Platinum and above with at most 1 tier of difference.",
+        "Act Rank is set by your best ranked win in that Act.",
+        "A system called Map Rating has been added in the ranked patch notes; it roughly shows which map you perform better on."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hatalar",
+     "baslik": "Common beginner mistakes",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Jumping into ranked unprepared; play unrated first and learn the maps.",
+        "Trying to buy the most expensive weapon every round and ignoring the economy.",
+        "Switching agents often without knowing when to use their abilities.",
+        "Pushing alone, cut off from the team.",
+        "Going silent after dying; short, clear info is the most valuable thing.",
+        "Queuing straight after a bad match; take a short break."
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Three days a week",
+         "metin": "Do a 15-minute aim warm-up in the Range."
+        },
+        {
+         "baslik": "After every match",
+         "metin": "Note one mistake and fix only that in your next match."
+        },
+        {
+         "baslik": "Every week",
+         "metin": "Pick one map and play it with a single agent."
+        },
+        {
+         "baslik": "Every month",
+         "metin": "Review your settings, but do not change too much."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Account safety and behavior rules",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Protecting your account matters more than your rank. Turn on two-step verification and do not share your password with other sites."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Cheat software, aimbots, wallhacks, scripts, rank boosting services, buying or selling accounts and skin gambling or betting sites can lead to a permanent ban. Stay away from them."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Do not give login details to unofficial 'free VP' or 'free skin' sites.",
+        "Watching a stream to learn enemy positions (stream sniping), using instalock tools and rank manipulation bring penalties.",
+        "Be respectful to teammates; report and mute toxic chat.",
+        "Playing on another account against lower-ranked players (smurfing) is unfair; do not do it."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Frequently asked questions",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is VALORANT free?",
+         "c": "Yes. The game is free; purchases are for cosmetics or faster agent unlocks."
+        },
+        {
+         "s": "When can I play ranked?",
+         "c": "Once your account level reaches 20."
+        },
+        {
+         "s": "Can my rank decay?",
+         "c": "There is no rank decay, but you lose RR when you lose."
+        },
+        {
+         "s": "Which agent should I start with?",
+         "c": "Pick one of the starter agents; Sage or Sova help the team easily."
+        },
+        {
+         "s": "What if my PC is weak?",
+         "c": "It runs on low settings with 4 GB of RAM, but if TPM and Secure Boot are requested you need a BIOS change."
+        },
+        {
+         "s": "Can I play on a phone?",
+         "c": "No; this guide is for Windows PC."
+        },
+        {
+         "s": "What is the difference between Unrated and Swiftplay?",
+         "c": "Neither costs you rank. Unrated is a full-length match; Swiftplay is shorter and faster. Unrated suits learning maps, Swiftplay suits a quick warm-up."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "fr": {
+   "baslik": "Guide du débutant VALORANT : premier match, agents, réglages et rang",
+   "ozet": "VALORANT est le jeu de tir tactique 5 contre 5 gratuit de Riot Games. Ce guide accompagne les nouveaux joueurs et ceux qui reviennent, de la création du compte au premier match classé.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Jeu de tir tactique 5 contre 5 (FPS)"
+    },
+    {
+     "ad": "Plateforme",
+     "deger": "PC Windows"
+    },
+    {
+     "ad": "Modèle de prix",
+     "deger": "Gratuit ; achats facultatifs pour les cosmétiques et certains agents"
+    },
+    {
+     "ad": "Version actuelle",
+     "deger": "V26 Acte 6, Patch 13.10 (novembre 2026)"
+    },
+    {
+     "ad": "Prise en charge du turc",
+     "deger": "Vérifie les langues dans les paramètres ; la liste des serveurs inclut Istanbul, proche de la Turquie"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "nedir",
+     "baslik": "Qu'est-ce que VALORANT et où en est-on en 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Deux équipes de cinq s'affrontent. Les attaquants essaient de poser une bombe (le Spike) et les défenseurs de les en empêcher. Chaque joueur choisit un **agent** aux capacités uniques. Utiliser ses capacités au bon moment compte autant que la visée."
+      },
+      {
+       "tip": "p",
+       "metin": "Le jeu avance par périodes appelées Actes. En novembre 2026, la période en cours est **V26 Acte 6** (du 13 octobre 2026 au 5 janvier 2027). Les dernières notes de mise à jour sont la **13.10**. Les cartes et le pool classé changent souvent ; ce guide ne les liste donc pas, regarde l'écran des cartes en jeu."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Les chiffres de ce guide sont valables en novembre 2026. Les patchs peuvent modifier des détails ; consulte les pages d'aide officielles de Riot pour les règles exactes."
+      },
+      {
+       "tip": "p",
+       "metin": "En bref, le jeu récompense les bonnes décisions plus que la seule visée. Pour gagner un round, il faut souvent savoir qui est où, utiliser les capacités avec ses coéquipiers et bien gérer le temps de la bombe. Un nouveau joueur doit donc investir au début dans la connaissance des cartes et la communication plus que dans la visée."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Avant de commencer : compte, installation, anti-triche",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Tu joues avec un compte Riot Games ; le compte et le téléchargement sont gratuits. La configuration requise est modeste. Selon une source externe, le minimum est un Intel Core i3-540 ou AMD Athlon 200GE, une Intel HD 4000 ou Radeon R5 220 et 4 Go de RAM ; une carte graphique plus puissante aide à jouer en fluidité."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Windows 10 ou 11 est requis ; sous Windows 11, le TPM 2.0 et le démarrage sécurisé (Secure Boot) doivent être activés.",
+        "L'anti-triche **Vanguard** s'installe avec le jeu. Il se lance au démarrage du PC ; c'est normal.",
+        "Vanguard peut demander le TPM 2.0, Secure Boot, l'intégrité de la mémoire (HVCI) ou l'IOMMU. Il faudra parfois les activer dans le BIOS.",
+        "Pour le choix du serveur, consulte la liste en jeu ; la liste officielle inclut Istanbul. Choisis celui qui a le ping le plus bas."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Vanguard fonctionne au niveau du noyau. Télécharge-le uniquement depuis l'installateur du jeu ; les faux installateurs d'autres sites sont dangereux."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Tes premiers matchs pas à pas",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Installe le jeu et crée le compte",
+         "metin": "Crée ton compte Riot, télécharge le client, termine l'installation de Vanguard et redémarre le PC."
+        },
+        {
+         "baslik": "Essaie le tutoriel et le Stand de tir",
+         "metin": "Apprends les déplacements et l'arme dans le tutoriel. Au stand de tir (Range), tu testes tes réglages sur des bots."
+        },
+        {
+         "baslik": "Joue en non classé pour apprendre",
+         "metin": "Ce mode ne te fait pas perdre de rang. Apprends-y les cartes et les agents."
+        },
+        {
+         "baslik": "Essaie le mode rapide Swiftplay",
+         "metin": "Des matchs plus courts, idéaux pour s'échauffer ou tester."
+        },
+        {
+         "baslik": "Atteins le niveau de compte 20",
+         "metin": "Le mode compétitif demande le niveau 20. D'ici là, monte de niveau en non classé."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ajanlar",
+     "baslik": "Choisir un agent : tableau pour les premières semaines",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "VALORANT compte quatre rôles : Duelliste, Sentinelle, Contrôleur et Initiateur. Le nombre d'agents augmente sans cesse, donc nous n'en donnons pas. Les agents de départ gratuits sont **Brimstone, Jett, Phoenix, Sage et Sova**. Les autres se débloquent avec des Crédits Kingdom (KC), des VP ou des événements."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Agent",
+        "Rôle",
+        "Pourquoi c'est facile"
+       ],
+       "satirlar": [
+        [
+         "Phoenix",
+         "Duelliste",
+         "Peut se soigner, et son flash sert ses propres actions"
+        ],
+        [
+         "Jett",
+         "Duelliste",
+         "Mobile ; facile de fuir un combat, mais demande de la visée"
+        ],
+        [
+         "Sage",
+         "Sentinelle",
+         "Soigne et bloque les passages avec un mur ; aide l'équipe tout de suite"
+        ],
+        [
+         "Sova",
+         "Initiateur",
+         "Sa fléchette de reconnaissance montre les ennemis ; apprend à récolter l'info"
+        ],
+        [
+         "Brimstone",
+         "Contrôleur",
+         "Les fumigènes sont simples à placer ; apprend le jeu d'équipe"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Débloquer des agents avec des KC est long : 4 KC par round gagné et 2 par round joué, pour un agent à 8 000 KC. Apprends d'abord bien un agent de départ."
+      }
+     ]
+    },
+    {
+     "id": "mekanikler",
+     "baslik": "Mécaniques de base : rounds, économie, information",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Au début de chaque round, il y a une **phase d'achat** : tu dépenses des crédits en armes, armure et capacités. Les camps changent après 12 rounds ; la première équipe à 13 rounds gagne le match (connaissance personnelle). Gagner des rounds ne suffit pas pour gagner des crédits ; la gestion de l'économie compte aussi."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**La bombe :** si les attaquants la posent, les défenseurs doivent la désamorcer avant la fin du temps.",
+        "**Économie :** tu gagnes des crédits même en perdant des rounds. Acheter des armes bon marché en équipe pour bien démarrer le round suivant est une méthode courante.",
+        "**Information :** regarde la minicarte, évite de faire du bruit, écoute les annonces de tes coéquipiers."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Le principe le plus durable pour un débutant : **reste près de tes coéquipiers au lieu de plonger seul**. Un trade (tuer l'ennemi qui vient de tuer ton coéquipier) vaut plus qu'un coup d'éclat."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Terme",
+        "Signification"
+       ],
+       "satirlar": [
+        [
+         "Eco",
+         "Round joué avec des armes bon marché ou sans arme pour économiser"
+        ],
+        [
+         "Force buy",
+         "Acheter le meilleur possible même avec peu de crédits"
+        ],
+        [
+         "Trade",
+         "Tuer l'ennemi qui vient de tuer ton coéquipier"
+        ],
+        [
+         "Flank",
+         "Contourner pour attaquer l'ennemi par derrière"
+        ],
+        [
+         "Peek",
+         "Sortir brièvement d'un couvert pour voir ou tirer"
+        ],
+        [
+         "Clutch",
+         "Gagner un round seul après la mort de ses coéquipiers"
+        ],
+        [
+         "Rotate",
+         "Changement de zone de l'équipe"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Réglages : valeurs de départ",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Les valeurs ci-dessous ne sont pas officielles ; ce sont des points de départ couramment conseillés. Essaie-les au stand de tir et change-les si elles ne te conviennent pas."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Réglage",
+        "Suggestion de départ"
+       ],
+       "satirlar": [
+        [
+         "DPI de la souris",
+         "400-800"
+        ],
+        [
+         "Sensibilité en jeu",
+         "Garde-la basse ; à 800 DPI, commence vers 0,3-0,5"
+        ],
+        [
+         "Couleur du viseur",
+         "Une couleur qui ressort du sol et des murs (cyan ou vert)"
+        ],
+        [
+         "Taille du viseur",
+         "Petit, avec contour ; point central désactivé ou très petit"
+        ],
+        [
+         "Minicarte",
+         "Fixe ou rotative ; essaie les deux et garde ce qui te convient"
+        ],
+        [
+         "Son",
+         "Mets un casque ; les bruits de pas comptent"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Ne change pas la sensibilité trop souvent. Choisis une valeur, joue une semaine, puis décide."
+      }
+     ]
+    },
+    {
+     "id": "rank",
+     "baslik": "Système classé et tableau des rangs",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Le mode compétitif compte **9 rangs** ; tous, sauf Radiant, ont 3 paliers. Tu obtiens ton rang après 5 matchs de placement, et le rang de départ peut être Ascendant 1 au maximum. Tu gagnes et perds des points de rang (RR) : 100 RR par rang jusqu'à Ascendant. Immortal et Radiant n'ont pas de plafond de 100 RR."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Groupe",
+        "Rangs"
+       ],
+       "satirlar": [
+        [
+         "Départ",
+         "Iron, Bronze, Silver"
+        ],
+        [
+         "Milieu",
+         "Gold, Platinum, Diamond"
+        ],
+        [
+         "Sommet",
+         "Ascendant, Immortal, Radiant"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Le rang ne se dégrade pas (pas de decay).",
+        "Limites de groupe : Iron et Bronze jusqu'à Silver, Silver jusqu'à Gold, Gold jusqu'à Platinum ; Platinum et plus avec au plus 1 palier d'écart.",
+        "Le rang d'Acte dépend de ta meilleure victoire classée de cet Acte.",
+        "Un système nommé Map Rating a été ajouté dans les notes de patch classées ; il indique à peu près sur quelle carte tu es meilleur."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hatalar",
+     "baslik": "Erreurs fréquentes des débutants",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Se lancer en classé sans préparation ; joue d'abord en non classé et apprends les cartes.",
+        "Vouloir acheter l'arme la plus chère à chaque round en ignorant l'économie.",
+        "Changer souvent d'agent sans savoir quand utiliser ses capacités.",
+        "Avancer seul, coupé de l'équipe.",
+        "Se taire après sa mort ; une info courte et claire est précieuse.",
+        "Relancer une partie juste après un mauvais match ; fais une courte pause."
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Trois jours par semaine",
+         "metin": "Fais 15 minutes d'échauffement de visée au stand de tir."
+        },
+        {
+         "baslik": "Après chaque match",
+         "metin": "Note une seule erreur et corrige-la au match suivant."
+        },
+        {
+         "baslik": "Chaque semaine",
+         "metin": "Choisis une carte et joue-la avec un seul agent."
+        },
+        {
+         "baslik": "Chaque mois",
+         "metin": "Revois tes réglages, sans trop en changer."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Sécurité du compte et règles de comportement",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Protéger ton compte compte plus que ton rang. Active la double authentification et ne partage pas ton mot de passe avec d'autres sites."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Les logiciels de triche, les aimbots, les wallhacks, les scripts, les services de boost de rang, l'achat ou la vente de comptes et les sites de paris ou de jeux d'argent avec des skins peuvent entraîner un bannissement définitif. Reste à l'écart."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Ne donne pas tes identifiants à des sites non officiels de 'VP gratuits' ou de 'skins gratuits'.",
+        "Regarder un stream pour connaître la position des ennemis (stream sniping), utiliser des outils d'instalock et manipuler le rang sont sanctionnés.",
+        "Respecte tes coéquipiers ; signale et rends muet le chat toxique.",
+        "Jouer sur un autre compte contre des joueurs de rang inférieur (smurf) est injuste ; ne le fais pas."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Questions fréquentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "VALORANT est-il gratuit ?",
+         "c": "Oui. Le jeu est gratuit ; les achats servent aux cosmétiques ou à débloquer plus vite des agents."
+        },
+        {
+         "s": "Quand puis-je jouer en classé ?",
+         "c": "Quand ton niveau de compte atteint 20."
+        },
+        {
+         "s": "Mon rang peut-il se dégrader ?",
+         "c": "Il n'y a pas de decay, mais tu perds des RR en cas de défaite."
+        },
+        {
+         "s": "Avec quel agent commencer ?",
+         "c": "Choisis un agent de départ ; Sage ou Sova aident facilement l'équipe."
+        },
+        {
+         "s": "Que faire si mon PC est faible ?",
+         "c": "Il tourne en basses options avec 4 Go de RAM, mais si le TPM et Secure Boot sont demandés, il faut modifier le BIOS."
+        },
+        {
+         "s": "Peut-on jouer sur téléphone ?",
+         "c": "Non ; ce guide concerne le PC Windows."
+        },
+        {
+         "s": "Quelle différence entre Non classé et Swiftplay ?",
+         "c": "Aucun ne te fait perdre de rang. Le non classé est un match complet ; Swiftplay est plus court et plus rapide. Le non classé sert à apprendre les cartes, Swiftplay à s'échauffer vite."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "es": {
+   "baslik": "Guía de VALORANT para principiantes: partidas, agentes, ajustes, rango",
+   "ozet": "VALORANT es el shooter táctico 5 contra 5 gratuito de Riot Games. Esta guía acompaña a jugadores nuevos y a quienes regresan, desde crear la cuenta hasta la primera partida clasificatoria.",
+   "kunye": [
+    {
+     "ad": "Género",
+     "deger": "Shooter táctico 5 contra 5 (FPS)"
+    },
+    {
+     "ad": "Plataforma",
+     "deger": "PC con Windows"
+    },
+    {
+     "ad": "Modelo de precio",
+     "deger": "Gratis; compras opcionales para cosméticos y algunos agentes"
+    },
+    {
+     "ad": "Versión actual",
+     "deger": "V26 Acto 6, Parche 13.10 (noviembre de 2026)"
+    },
+    {
+     "ad": "Compatibilidad con turco",
+     "deger": "Revisa los idiomas en los ajustes; la lista de servidores incluye Estambul, cerca de Turquía"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "nedir",
+     "baslik": "Qué es VALORANT y cómo está en 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Dos equipos de cinco se enfrentan. Los atacantes intentan plantar una bomba (el Spike) y los defensores intentan impedirlo. Cada jugador elige un **agente** con habilidades únicas. Usar las habilidades en el momento correcto importa tanto como la puntería."
+      },
+      {
+       "tip": "p",
+       "metin": "El juego avanza por periodos llamados Actos. En noviembre de 2026 el periodo actual es **V26 Acto 6** (del 13 de octubre de 2026 al 5 de enero de 2027). Las últimas notas de parche son la **13.10**. Los mapas y el grupo competitivo rotan a menudo, así que esta guía no los lista; mira la pantalla de mapas del juego."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Los números de esta guía son válidos en noviembre de 2026. Los parches pueden cambiar detalles; consulta las páginas de soporte oficiales de Riot para las reglas exactas."
+      },
+      {
+       "tip": "p",
+       "metin": "En resumen, el juego premia las buenas decisiones más que la puntería pura. Para ganar una ronda suele hacer falta saber quién está dónde, usar las habilidades junto a los compañeros y gestionar bien el tiempo de la bomba. Por eso, al principio, un jugador nuevo debe invertir más en conocer los mapas y comunicarse que en la puntería."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Antes de empezar: cuenta, instalación, antitrampas",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Juegas con una cuenta de Riot Games; la cuenta y la descarga son gratuitas. Los requisitos son bajos. Según una fuente externa, el mínimo es un Intel Core i3-540 o AMD Athlon 200GE, una Intel HD 4000 o Radeon R5 220 y 4 GB de RAM; una tarjeta gráfica más potente ayuda a jugar con fluidez."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Se requiere Windows 10 u 11; en Windows 11, TPM 2.0 y el arranque seguro (Secure Boot) deben estar activados.",
+        "El antitrampas **Vanguard** se instala con el juego. Se inicia con el PC; es normal.",
+        "Vanguard puede pedir TPM 2.0, Secure Boot, Integridad de memoria (HVCI) o IOMMU. Quizá tengas que activarlos en la BIOS.",
+        "Para elegir servidor, mira la lista del juego; la lista oficial incluye Estambul. Elige el de menor ping."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Vanguard funciona a nivel de kernel. Descárgalo solo desde el instalador del propio juego; los instaladores falsos de otros sitios son peligrosos."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Tus primeras partidas paso a paso",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Instala el juego y crea la cuenta",
+         "metin": "Crea tu cuenta de Riot, descarga el cliente, termina la instalación de Vanguard y reinicia el PC."
+        },
+        {
+         "baslik": "Prueba el tutorial y el Campo de tiro",
+         "metin": "Aprende el movimiento y el arma en el tutorial. En el campo de tiro (Range) pruebas tus ajustes contra bots."
+        },
+        {
+         "baslik": "Juega sin clasificar para aprender",
+         "metin": "Este modo no te quita rango. Aprende aquí los mapas y los agentes."
+        },
+        {
+         "baslik": "Prueba el modo rápido Swiftplay",
+         "metin": "Partidas más cortas, buenas para calentar o experimentar."
+        },
+        {
+         "baslik": "Llega al nivel de cuenta 20",
+         "metin": "El modo competitivo requiere nivel 20. Hasta entonces, sube de nivel en modos sin clasificar."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ajanlar",
+     "baslik": "Elegir agente: tabla para las primeras semanas",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "VALORANT tiene cuatro roles: Duelista, Centinela, Controlador e Iniciador. El número de agentes crece sin parar, por eso no damos cifra. Los agentes iniciales gratuitos son **Brimstone, Jett, Phoenix, Sage y Sova**. Los demás se desbloquean con Créditos Kingdom (KC), VP o eventos."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Agente",
+        "Rol",
+        "Por qué es fácil"
+       ],
+       "satirlar": [
+        [
+         "Phoenix",
+         "Duelista",
+         "Puede curarse, y su destello sirve a sus propias jugadas"
+        ],
+        [
+         "Jett",
+         "Duelista",
+         "Móvil; es fácil escapar de un combate, pero exige puntería"
+        ],
+        [
+         "Sage",
+         "Centinela",
+         "Cura y bloquea caminos con un muro; ayuda al equipo enseguida"
+        ],
+        [
+         "Sova",
+         "Iniciador",
+         "Su dardo de reconocimiento muestra a los enemigos; enseña a reunir información"
+        ],
+        [
+         "Brimstone",
+         "Controlador",
+         "Los humos son sencillos de colocar; enseña juego en equipo"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Desbloquear agentes con KC lleva mucho tiempo: 4 KC por ronda ganada y 2 por ronda jugada, y un agente cuesta 8.000 KC. Primero aprende bien un agente inicial."
+      }
+     ]
+    },
+    {
+     "id": "mekanikler",
+     "baslik": "Mecánicas básicas: rondas, economía, información",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Al inicio de cada ronda hay una **fase de compra**: gastas créditos en armas, armadura y habilidades. Los bandos cambian tras 12 rondas; el primer equipo en ganar 13 rondas se lleva la partida (conocimiento propio). Ganar rondas no basta para tener créditos; también importa gestionar la economía."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**La bomba:** si los atacantes la plantan, los defensores deben desactivarla antes de que acabe el tiempo.",
+        "**Economía:** ganas créditos aunque pierdas rondas. Comprar armas baratas en equipo para empezar fuerte la siguiente ronda es un método común.",
+        "**Información:** mira el minimapa, evita hacer ruido y escucha las llamadas de tus compañeros."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "El principio más duradero para un principiante: **quédate cerca de tus compañeros en vez de entrar solo**. Un trade (matar al enemigo que acaba de matar a tu compañero) vale más que una jugada heroica."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Término",
+        "Significado"
+       ],
+       "satirlar": [
+        [
+         "Eco",
+         "Ronda jugada con armas baratas o sin ellas para ahorrar créditos"
+        ],
+        [
+         "Force buy",
+         "Comprar lo mejor posible aunque haya pocos créditos"
+        ],
+        [
+         "Trade",
+         "Matar al enemigo que acaba de matar a tu compañero"
+        ],
+        [
+         "Flank",
+         "Rodear para atacar al enemigo por la espalda"
+        ],
+        [
+         "Peek",
+         "Salir un instante de la cobertura para ver o disparar"
+        ],
+        [
+         "Clutch",
+         "Ganar una ronda en solitario tras caer tus compañeros"
+        ],
+        [
+         "Rotate",
+         "El equipo cambia de zona"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Ajustes: valores iniciales",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Los valores de abajo no son oficiales; son puntos de partida que se suelen recomendar. Pruébalos en el campo de tiro y cámbialos si no te resultan cómodos."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Ajuste",
+        "Sugerencia inicial"
+       ],
+       "satirlar": [
+        [
+         "DPI del ratón",
+         "400-800"
+        ],
+        [
+         "Sensibilidad en el juego",
+         "Mantenla baja; con 800 DPI empieza en torno a 0,3-0,5"
+        ],
+        [
+         "Color de la mira",
+         "Un color que destaque sobre suelos y paredes (cian o verde)"
+        ],
+        [
+         "Tamaño de la mira",
+         "Pequeña, con contorno; punto central desactivado o muy pequeño"
+        ],
+        [
+         "Minimapa",
+         "Fijo o giratorio; prueba ambos y quédate con el que te sirva"
+        ],
+        [
+         "Audio",
+         "Usa auriculares; los pasos importan"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "No cambies la sensibilidad a menudo. Elige un valor, juega una semana y luego decide."
+      }
+     ]
+    },
+    {
+     "id": "rank",
+     "baslik": "Sistema competitivo y tabla de rangos",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "El modo competitivo tiene **9 rangos**; todos menos Radiant tienen 3 niveles. Recibes tu rango tras 5 partidas de colocación, y el rango inicial puede ser como máximo Ascendant 1. Ganas y pierdes Puntos de Rango (RR): 100 RR por rango hasta Ascendant. Immortal y Radiant no tienen tope de 100 RR."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Grupo",
+        "Rangos"
+       ],
+       "satirlar": [
+        [
+         "Inicio",
+         "Iron, Bronze, Silver"
+        ],
+        [
+         "Medio",
+         "Gold, Platinum, Diamond"
+        ],
+        [
+         "Alto",
+         "Ascendant, Immortal, Radiant"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "El rango no decae (no hay rank decay).",
+        "Límites de grupo: Iron y Bronze hasta Silver, Silver hasta Gold, Gold hasta Platinum; Platinum y superiores con 1 nivel de diferencia como máximo.",
+        "El rango de Acto depende de tu mejor victoria clasificatoria de ese Acto.",
+        "En las notas de parche competitivas se añadió un sistema llamado Map Rating; indica aproximadamente en qué mapa rindes mejor."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hatalar",
+     "baslik": "Errores frecuentes de los principiantes",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Entrar en competitivo sin preparación; juega antes sin clasificar y aprende los mapas.",
+        "Intentar comprar el arma más cara cada ronda e ignorar la economía.",
+        "Cambiar de agente a menudo sin saber cuándo usar sus habilidades.",
+        "Avanzar solo, separado del equipo.",
+        "Quedarse callado al morir; una información corta y clara es muy valiosa.",
+        "Entrar a otra partida justo después de una mala; haz una pausa corta."
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Tres días a la semana",
+         "metin": "Haz 15 minutos de calentamiento de puntería en el campo de tiro."
+        },
+        {
+         "baslik": "Tras cada partida",
+         "metin": "Anota un solo error y corrígelo en la siguiente."
+        },
+        {
+         "baslik": "Cada semana",
+         "metin": "Elige un mapa y juégalo con un solo agente."
+        },
+        {
+         "baslik": "Cada mes",
+         "metin": "Revisa tus ajustes, sin cambiar demasiado."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Seguridad de la cuenta y normas de comportamiento",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Proteger tu cuenta importa más que tu rango. Activa la verificación en dos pasos y no compartas tu contraseña con otros sitios."
+      },
+      {
+       "tip": "uyari",
+       "metin": "El software de trampas, los aimbots, los wallhacks, los scripts, los servicios de boosting de rango, comprar o vender cuentas y los sitios de apuestas o juegos de azar con skins pueden causar un baneo permanente. Mantente lejos."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "No des tus datos de acceso a sitios no oficiales de 'VP gratis' o 'skins gratis'.",
+        "Ver un stream para saber dónde están los enemigos (stream sniping), usar herramientas de instalock y manipular el rango conllevan sanciones.",
+        "Respeta a tus compañeros; reporta y silencia el chat tóxico.",
+        "Jugar con otra cuenta contra jugadores de menor rango (smurfing) es injusto; no lo hagas."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Preguntas frecuentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "¿VALORANT es gratis?",
+         "c": "Sí. El juego es gratis; las compras son para cosméticos o para desbloquear agentes más rápido."
+        },
+        {
+         "s": "¿Cuándo puedo jugar competitivo?",
+         "c": "Cuando tu cuenta llegue al nivel 20."
+        },
+        {
+         "s": "¿Puede decaer mi rango?",
+         "c": "No hay rank decay, pero pierdes RR al perder."
+        },
+        {
+         "s": "¿Con qué agente empiezo?",
+         "c": "Elige uno de los iniciales; Sage o Sova ayudan fácilmente al equipo."
+        },
+        {
+         "s": "¿Y si mi PC es débil?",
+         "c": "Funciona con ajustes bajos y 4 GB de RAM, pero si piden TPM y Secure Boot hay que cambiar la BIOS."
+        },
+        {
+         "s": "¿Se puede jugar en el móvil?",
+         "c": "No; esta guía es para PC con Windows."
+        },
+        {
+         "s": "¿Qué diferencia hay entre Sin clasificar y Swiftplay?",
+         "c": "Ninguno te quita rango. Sin clasificar es una partida completa; Swiftplay es más corta y rápida. Sin clasificar sirve para aprender mapas y Swiftplay para calentar rápido."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

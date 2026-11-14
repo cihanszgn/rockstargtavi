@@ -1,0 +1,1401 @@
+{
+ "oyun": "world-of-warcraft",
+ "guncelleme": "2026-11-14",
+ "surum": "Midnight (11. genişleme), yama 12.1.5, Sezon 2 (14 Kasım 2026)",
+ "kaynaklar": [
+  {
+   "url": "https://en.wikipedia.org/wiki/World_of_Warcraft:_Midnight",
+   "ad": "Wikipedia: World of Warcraft: Midnight"
+  },
+  {
+   "url": "https://news.blizzard.com/en-us/article/24229031/midnight-expansion-information-wrapped-up",
+   "ad": "Blizzard News: Midnight expansion information"
+  },
+  {
+   "url": "https://news.blizzard.com/en-us/article/24266319/new-players-starter-guide-welcome-to-world-of-warcraft",
+   "ad": "Blizzard News: New Players Starter Guide"
+  },
+  {
+   "url": "https://www.icy-veins.com/wow/midnight-leveling-guide",
+   "ad": "Icy Veins: Midnight leveling guide"
+  },
+  {
+   "url": "https://www.wowhead.com/news/new-player-starter-guide-welcome-to-world-of-warcraft-380536",
+   "ad": "Wowhead: New Player Starter Guide"
+  },
+  {
+   "url": "https://blizzardwatch.com/2026/10/15/wow-midnight-patch-12-1-7-release-date",
+   "ad": "Blizzard Watch: patch 12.1.7 release date"
+  },
+  {
+   "url": "https://us.forums.blizzard.com/en/wow/t/about-midnight-system-requirements-ssd-space/2192039",
+   "ad": "Blizzard Forums: Midnight system requirements"
+  }
+ ],
+ "diller": {
+  "tr": {
+   "baslik": "World of Warcraft Başlangıç Rehberi: Midnight 2026",
+   "ozet": "Midnight döneminde World of Warcraft'a sıfırdan başlayan ya da geri dönen oyuncu için ücretsiz deneme, hesap, ilk adımlar, seviye atlama, altın ve güvenlik özeti.",
+   "kunye": [
+    {
+     "ad": "Tür",
+     "deger": "MMORPG (çevrimiçi rol yapma oyunu)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Windows (Battle.net uygulaması)"
+    },
+    {
+     "ad": "Fiyat modeli",
+     "deger": "Abonelik veya Game Time; seviye 20'ye kadar ücretsiz deneme"
+    },
+    {
+     "ad": "Güncel sürüm",
+     "deger": "Midnight (11. genişleme), yama 12.1.5, 2. sezon"
+    },
+    {
+     "ad": "Türkçe desteği",
+     "deger": "Türkçe istemci dili olup olmadığını Battle.net dil listesinden kontrol edin; yoksa İngilizce oynanır"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "Oyun 2026'da nerede duruyor?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "World of Warcraft, Blizzard'ın 2004'ten beri süren çevrimiçi rol yapma oyunudur. Bugün oynanan sürüm **Midnight**: 11. genişleme 2 Mart 2026'da çıktı ve seviye sınırını **90** yaptı. Yeni gelenler arasında **Haranir** ırkı, Demon Hunter için üçüncü uzmanlık **Devourer**, oyuncu evi (housing), Prey sistemi, Delves adlı kısa zindan görevleri ve yeni merkez şehir Silvermoon var."
+      },
+      {
+       "tip": "p",
+       "metin": "Canlı sunucularda **yama 12.1.5** 13-14 Ekim 2026'da yayına girdi ve Midnight'ın 2. sezonunun ara güncellemesi oldu; sezon Ağustos'ta başlamıştı. Sıradaki yama 12.1.7 test sunucusunda (PTR) deneniyor, çıkış tarihi Ekim ortasında açıklanmamıştı. Güncel tarihleri oyun içi haber ekranından ve Blizzard'ın haber sayfasından izleyin."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Yama numaraları ve sezon tarihleri sık değişir. Buradaki sürüm bilgisi 14 Kasım 2026 itibarıyladır."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Başlamadan önce: hesap, maliyet, bilgisayar",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Oyun için ücretsiz bir **Battle.net** hesabı gerekir. Yeni hesaplar **ücretsiz deneme** alır: seviye 20'ye kadar, bu seviyedeki zindanlar dahil. Ücretsiz hesapta lonca (guild), sınırsız sohbet ve Açık Artırma (Auction House) kapalıdır."
+      },
+      {
+       "tip": "p",
+       "metin": "Seviye 20'nin ötesi için **abonelik** ya da **Game Time** (süre kodu) gerekir; Blizzard'a göre bunlar seviye 80'e kadar tüm içeriği açar. Midnight hikâyesine devam etmek ve 80'in üstüne çıkmak için **Midnight genişlemesine** de sahip olmanız gerekir. Aylık abonelik ve genişleme fiyatları bölgeye göre değişir; güncel TL tutarını Battle.net mağazasında kendi hesabınızdan görün. Rehberde rakam yazmıyorum, çünkü doğrulayamadım."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Konu",
+        "Bilinen değer"
+       ],
+       "satirlar": [
+        [
+         "İşletim sistemi",
+         "Midnight için en az Windows 10 (64 bit)"
+        ],
+        [
+         "Depolama",
+         "Resmî öneri: SSD üzerinde yaklaşık 128 GB boş yer; yamalar için ek alan bırakın"
+        ],
+        [
+         "İşlemci ve ekran kartı",
+         "Midnight çok eski işlemcileri ve eski ekran kartı mimarilerini kabul etmiyor; kesin liste için Blizzard destek sayfasındaki sistem gereksinimlerine bakın"
+        ],
+        [
+         "Bağlantı",
+         "Geniş bant internet"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Eski bir bilgisayarda oynamayı düşünüyorsanız satın almadan önce Blizzard'ın güncel Midnight sistem gereksinimlerini okuyun. Bazı eski donanımlar artık desteklenmiyor."
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "İlk saatler: adım adım",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Hesabı aç ve güvene al",
+         "metin": "Battle.net'te hesap açıp e-postayı doğrulayın, ardından hesap ayarlarından iki adımlı doğrulamayı etkinleştirin."
+        },
+        {
+         "baslik": "Oyunu yükle",
+         "metin": "Battle.net uygulamasında World of Warcraft'ı seçin, ana oyun (Retail) sürümünü yükleyin. Dosya büyüktür; boş disk ve sağlam bağlantı hazırlayın."
+        },
+        {
+         "baslik": "Irk ve sınıf seç",
+         "metin": "Yeni oyuncular karakter oluştururken Exile's Reach adlı kısa başlangıç bölgesine yönlendirilir. Bu bölüm temel kontrolleri öğretir."
+        },
+        {
+         "baslik": "Yönlendirmeyi izle",
+         "metin": "Başlangıçtan sonra oyun sizi bir genişleme hikâyesine yönlendirir. Blizzard, yeni oyuncuların The War Within'in hızlandırılmış hikâyesiyle seviye 80'e taşındığını anlatıyor; bu yol size Midnight öncesi hikâyeyi de özetler."
+        },
+        {
+         "baslik": "Grup bulucuyu dene",
+         "metin": "Seviyenize uygun zindanlara Group Finder (grup bulucu) ile kuyruğa girin. Hem hızlı deneyim kazandırır hem oyunun ritmini öğretir."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "İlk gün acele etmeyin. Bir sınıfı bir-iki saat oynayıp beğenmezseniz başka karakter açmak serbesttir."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Çanta dolunca satıcıya gidin; gri eşyaları satabilirsiniz. Mavi ve mor eşyaları satmadan önce karakterinize uyup uymadığına bakın."
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "Irk ve sınıf seçimi",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Oyunda 13 sınıf var. Irk çoğunlukla görünümü ve küçük özellikleri belirler; asıl oynanışı sınıf ve uzmanlık (spec) belirler. Aşağıdaki tablo bir başlangıç noktasıdır. Kesin güç sıralaması yamayla değiştiği için ona bakıp karar vermeyin."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rol",
+        "Örnek sınıflar",
+        "Kime uygun?"
+       ],
+       "satirlar": [
+        [
+         "Hasar, yakın dövüş",
+         "Warrior, Rogue, Demon Hunter, Death Knight",
+         "Hareketli ve hızlı oynamak isteyenler"
+        ],
+        [
+         "Hasar, uzak",
+         "Mage, Warlock, Hunter, Evoker",
+         "Mesafeden vurmayı sevenler"
+        ],
+        [
+         "Tank",
+         "Warrior, Paladin, Death Knight, Druid, Monk",
+         "Grubu önden taşımak isteyenler"
+        ],
+        [
+         "Şifacı",
+         "Priest, Paladin, Druid, Shaman, Monk, Evoker",
+         "Takımı ayakta tutmak isteyenler"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Haranir** Midnight'ın yeni ırkı, **Devourer** ise Demon Hunter'ın yeni uzmanlığı. Merak ediyorsanız denemeye değer ama ilk karakterde şart değil. İlk karakterde hasar rolünde kalıp oyunun temel sistemlerini öğrenmek en az stres verendir."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Aynı hesapta farklı sınıflar denemek serbesttir. Çoğu oyuncu birkaç karakter açıp en rahat edeceğini seçer."
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "Seviye atlama: hızlı ve verimli yol",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Seviye 10 ile 70 arasında **Chromie Time** devreye girer: hangi genişlemenin bölgelerinde seviye atlayacağınızı seçersiniz. Yeni oyuncular varsayılan olarak Dragonflight'a yönlendirilir. Her genişleme ayrı bir hikâye anlatır; hepsini bitirmek zorunda değilsiniz."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Midnight'ta seviye atlama zindanları: Windrunner Spire, Murder Row, Den of Nalorakk, Maisara Caverns ve The Blinding Vale.",
+        "Skyriding (hızlı süzülerek uçuş) en baştan açıktır; gezmek ve toplama yapmak için çok işe yarar.",
+        "Midnight ana hikâyesini bitirmek, diğer karakterleriniz için Adventure Mode'u açar."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Verimli ilerlemek için bölgede görevleri toplu yapın, zindanlara kuyruktan girin ve bir genişlemenin hikâyesini yarım bırakmayın. Ücretsiz denemede seviye 20'de durursunuz; o noktada abonelik ya da Game Time almaya karar verebilirsiniz."
+      },
+      {
+       "tip": "p",
+       "metin": "Zindanlarda üç rol vardır: tank, şifacı ve hasarcı. Tank ve şifacı kuyruğu genellikle daha kısadır; bu rollerden birini oynayabiliyorsanız zindan bulmak hızlanır. Oyuna yeni başlıyorsanız bile kısa bir süre sonra bu rollerin neden aranır olduğunu anlarsınız. Karakterinizin ekipmanını da düzenli yenileyin: zindan ve görev ödülleri seviye atarken sizi taşır, eski eşyayı çantada tutmanın bir anlamı yok."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Geri dönüyorsanız yetenek ağacınız (talent) ve sınıf mekanikleriniz değişmiş olabilir. Karakterinizi açınca yetenekleri gözden geçirin."
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "Altın ve ekonomi: yalnız oyun içi yollar",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Altın kazanmanın doğru yolu oyunun kendi sistemleridir. **Açık Artırma** oyuncular arası ticareti sağlar ve aboneliğe bağlıdır. Toplama mesleklerinden (bitki, maden, deri) çıkan malzemeyi orada satmak yeni oyuncu için güvenli bir gelirdir."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Görev ödülü ve zindan eşyalarını satıcıya vermeden önce Açık Artırma fiyatına bakın.",
+        "Toplama mesleğini erken seçin; seviye atarken zaten malzeme toplarsınız.",
+        "Çok değerli görünen eşyayı satmadan önce fiyat geçmişine bakın, ilk fiyata atlamayın."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Meslekler iki gruba ayrılır: toplama (bitki, maden, deri) ve üretim (demircilik, simya, büyülü eşya yapımı gibi). Üretim mesleği ancak toplama malzemesiyle çalışır, bu yüzden ikisini eşleştirmek akıllıca olur. İlk günden gelir beklemeyin; altın birikimi birkaç haftaya yayılan bir iştir. Fiyatlar sunucudan sunucuya değişir, hiçbir fiyatı kalıcı sayma."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Oyun dışı sitelerden altın ya da karakter almak veya satmak hesabınızın kapatılmasına yol açar. Blizzard bunları yasaklar; bu sitelerin çoğu hesap çalmayla da bağlantılıdır."
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "Seviye 90 sonrası: neler var?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Seviye sınırına gelince oyun çok katmanlı bir içeriğe açılır. **Delves** tek başına ya da küçük grupla girilen kısa zindanlardır; raid'e girmeden önce iyi bir köprüdür. **Mythic+** (zamana karşı zindan) ve **raid**'ler en yüksek eşyaları verir. Önce Normal ve Heroic zorlukta deneyim kazanın."
+      },
+      {
+       "tip": "p",
+       "metin": "**Player housing** Midnight ile geldi: bir eviniz olur ve dekore edersiniz. **Prey** sistemi Midnight'a özgü bir mekanik. Kuralları yamalarla değişebildiği için ayrıntıyı oyun içi rehberden okuyun."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "İçerik",
+        "Ne için?",
+        "Ne zaman?"
+       ],
+       "satirlar": [
+        [
+         "Delves",
+         "Solo veya küçük grupla güvenli ilerleme",
+         "Seviye sınırına yaklaşırken"
+        ],
+        [
+         "Mythic+",
+         "Zamana karşı zindan, yüksek ödül",
+         "Normal ve Heroic'ten sonra"
+        ],
+        [
+         "Raid",
+         "Büyük grup içeriği, boss savaşları",
+         "Eşya seviyeniz yetince"
+        ],
+        [
+         "PvP",
+         "Oyuncuya karşı oyuncu savaşı",
+         "İsteğe bağlı"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Bir loncaya katılmak bu aşamada en büyük hızlandırıcıdır: zindan ve raid arkadaşı bulmak, soru sormak ve eşya takası kolaylaşır. Lonca için abonelik ya da Game Time gerekir. Kendinize uyan, saatlerinize uygun ve düzenli etkinlik yapan bir lonca arayın; ilk denediğiniz loncada kalmak zorunda değilsiniz."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Eşya seviyesini (item level) takip edin; oyun hangi zindanın size uygun olduğunu söyler."
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "Sık yapılan hatalar ve güvenlik",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Battle.net hesabını iki adımlı doğrulamasız bırakmak.",
+        "Seviyeyi acele atlayıp sınıfı öğrenmeden zindana girmek; grubu bekletmeyin, bilmiyorsanız yazın.",
+        "Aynı şifreyi birden çok sitede kullanmak."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Hile, bot, makro, exploit, özel (private) sunucu, hesap ve altın satışı (RMT) ile korsan yazılımlardan uzak durun. Bunlar hesabın kalıcı kapanmasına ve kişisel verinizin çalınmasına yol açabilir."
+      },
+      {
+       "tip": "p",
+       "metin": "Blizzard şifrenizi ya da doğrulama kodunuzu e-postayla istemez. Şüpheli bağlantıya tıklamadan önce adres çubuğunu kontrol edin; oyuncudan gelen 'ücretsiz altın' tekliflerini yok sayın."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Sık sorulan sorular",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Oyun ücretsiz mi?",
+         "c": "Seviye 20'ye kadar ücretsiz deneme var. Sonrası için abonelik ya da Game Time gerekir; 80'in üstü için Midnight'ı ayrıca almanız gerekir."
+        },
+        {
+         "s": "Midnight'ı almadan oynayabilir miyim?",
+         "c": "Evet, seviye 80'e kadar abonelikle. Midnight hikâyesi ve seviye 90 için genişleme gerekir."
+        },
+        {
+         "s": "Hangi sınıfla başlamalıyım?",
+         "c": "Hasar rolünde sade bir sınıfla. Sevmezseniz yeni karakter açmak serbest."
+        },
+        {
+         "s": "Eski bilgisayarla çalışır mı?",
+         "c": "Midnight en az Windows 10 ister ve bazı eski donanımları desteklemiyor; resmî sistem gereksinimlerine bakın."
+        },
+        {
+         "s": "Uzun süre sonra dönüyorum, nereden başlamalıyım?",
+         "c": "Aboneliği ya da Game Time'ı açın, Midnight'ı alın, karakterinizi seçip yetenekleri güncelleyin ve ana ekrandaki haberlere bakın."
+        },
+        {
+         "s": "Mobil ya da konsolda oynanır mı?",
+         "c": "Buradaki bilgi Windows içindir; başka platform için Blizzard'ın sayfasına bakın."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "en": {
+   "baslik": "World of Warcraft Beginner Guide: Midnight 2026",
+   "ozet": "A start-or-return guide for World of Warcraft in the Midnight era: free trial, account, first steps, leveling, gold and safety.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "MMORPG"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Windows (Battle.net app)"
+    },
+    {
+     "ad": "Pricing model",
+     "deger": "Subscription or Game Time; free trial up to level 20"
+    },
+    {
+     "ad": "Current version",
+     "deger": "Midnight (11th expansion), patch 12.1.5, Season 2"
+    },
+    {
+     "ad": "Turkish support",
+     "deger": "Check the Battle.net language list for a Turkish client; otherwise play in English"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "Where the game stands in 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "World of Warcraft is Blizzard's online role-playing game, running since 2004. The version live today is **Midnight**: the 11th expansion launched on 2 March 2026 and raised the level cap to **90**. New this time are the **Haranir** race, a third Demon Hunter specialization called **Devourer**, player housing, the Prey system, short dungeon-like Delves and the new hub city Silvermoon."
+      },
+      {
+       "tip": "p",
+       "metin": "On live servers **patch 12.1.5** arrived on 13-14 October 2026 as the mid-season update of Midnight Season 2, which started in August. The next patch, 12.1.7, is on the public test realm (PTR) and had no announced release date in mid-October. Follow the in-game news screen and Blizzard's news page for current dates."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Patch numbers and season dates change often. The version information here is as of 14 November 2026."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Before you start: account, cost, PC",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "You need a free **Battle.net** account. New accounts get a **free trial** up to level 20, dungeons at that level included. On a free account, guilds, unrestricted chat and the Auction House are locked."
+      },
+      {
+       "tip": "p",
+       "metin": "Beyond level 20 you need a **subscription** or **Game Time** (a time code); according to Blizzard these unlock all content up to level 80. To continue the Midnight story and go past 80 you also need to own the **Midnight expansion**. Monthly and expansion prices vary by region, so check the current price in the Battle.net shop on your own account. I give no figure here because I could not verify one."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Topic",
+        "Known value"
+       ],
+       "satirlar": [
+        [
+         "Operating system",
+         "Windows 10 (64-bit) at minimum for Midnight"
+        ],
+        [
+         "Storage",
+         "Official advice: about 128 GB free on an SSD; leave extra room for patches"
+        ],
+        [
+         "CPU and graphics card",
+         "Midnight rejects very old CPUs and older graphics architectures; check Blizzard's support page for the exact list"
+        ],
+        [
+         "Connection",
+         "Broadband internet"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "If you plan to play on an older computer, read Blizzard's current Midnight system requirements before buying. Some older hardware is no longer supported."
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "The first hours, step by step",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Create and secure the account",
+         "metin": "Create a Battle.net account, confirm your e-mail, then turn on two-step verification in the account settings."
+        },
+        {
+         "baslik": "Install the game",
+         "metin": "In the Battle.net app choose World of Warcraft and install the main game (Retail). The download is big, so prepare free disk space and a solid connection."
+        },
+        {
+         "baslik": "Pick a race and class",
+         "metin": "New players are sent to a short starting zone called Exile's Reach while creating a character. It teaches the basic controls."
+        },
+        {
+         "baslik": "Follow the guidance",
+         "metin": "After the start the game points you to an expansion story. Blizzard describes new players being carried to level 80 through an accelerated The War Within story, which also summarizes the story before Midnight."
+        },
+        {
+         "baslik": "Try the Group Finder",
+         "metin": "Queue for dungeons that suit your level through the Group Finder. It gives quick experience and teaches the rhythm of the game."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Do not rush on day one. If you dislike a class after an hour or two, creating another character is allowed."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "When your bags fill, visit a vendor; grey items can be sold. Before selling blue and purple items, check whether your character can use them."
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "Choosing a race and class",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The game has 13 classes. Race mostly decides looks and small traits; class and specialization (spec) decide how you play. The table below is only a starting point. Exact power rankings change with patches, so do not decide from them."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Role",
+        "Example classes",
+        "Who it suits"
+       ],
+       "satirlar": [
+        [
+         "Damage, melee",
+         "Warrior, Rogue, Demon Hunter, Death Knight",
+         "Players who like fast, mobile fights"
+        ],
+        [
+         "Damage, ranged",
+         "Mage, Warlock, Hunter, Evoker",
+         "Players who like hitting from a distance"
+        ],
+        [
+         "Tank",
+         "Warrior, Paladin, Death Knight, Druid, Monk",
+         "Players who like leading the group"
+        ],
+        [
+         "Healer",
+         "Priest, Paladin, Druid, Shaman, Monk, Evoker",
+         "Players who like keeping the team alive"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Haranir** is Midnight's new race and **Devourer** is the new Demon Hunter specialization. They are worth trying out of curiosity but are not required for a first character. Staying in the damage role and learning the core systems is the least stressful start."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Trying different classes on the same account is allowed. Most players create a few characters and keep the one they enjoy most."
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "Leveling: a fast and efficient route",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Between levels 10 and 70, **Chromie Time** lets you choose which expansion's zones you level in. New players are pointed to Dragonflight by default. Each expansion tells its own story and you do not have to finish them all."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Midnight leveling dungeons: Windrunner Spire, Murder Row, Den of Nalorakk, Maisara Caverns and The Blinding Vale.",
+        "Skyriding (fast gliding flight) is available from the start and helps a lot with travel and gathering.",
+        "Finishing the Midnight main story unlocks Adventure Mode for your other characters."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "To progress efficiently, do the quests of a zone together, queue for dungeons, and do not leave an expansion story half done. On the free trial you stop at level 20; that is the moment to decide on a subscription or Game Time."
+      },
+      {
+       "tip": "p",
+       "metin": "Dungeons have three roles: tank, healer and damage dealer. Tank and healer queues are usually shorter, so if you can play one of them, finding a dungeon gets faster. Even as a beginner you will soon see why these roles are in demand. Renew your gear regularly too: dungeon and quest rewards carry you while leveling, and there is no point keeping old items in your bags."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "If you are returning, your talent tree and class mechanics may have changed. Review your talents when you load in."
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "Gold and economy: in-game routes only",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The right way to earn gold is the game's own systems. The **Auction House** enables trade between players and depends on a subscription. Selling gathered materials (herbs, ore, leather) there is a safe income for a new player."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Before handing quest rewards and dungeon drops to a vendor, check the Auction House price.",
+        "Pick a gathering profession early; you gather materials while leveling anyway.",
+        "Before selling something that looks valuable, check its price history and do not jump at the first price."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Professions fall into two groups: gathering (herbs, ore, leather) and crafting (blacksmithing, alchemy, enchanting and the like). A crafting profession only works with gathered materials, so pairing the two is smart. Do not expect income on day one; building up gold takes a few weeks. Prices differ from realm to realm, so never treat any price as permanent."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Buying or selling gold or characters on outside sites gets your account closed. Blizzard forbids it, and many of those sites are tied to account theft as well."
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "After the level cap: what is there to do?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "At the level cap the game opens into layered content. **Delves** are short dungeons for one player or a small group, a good bridge before raiding. **Mythic+** (timed dungeons) and **raids** give the best gear. Gain experience on Normal and Heroic difficulty first."
+      },
+      {
+       "tip": "p",
+       "metin": "**Player housing** came with Midnight: you get a home and decorate it. The **Prey** system is a Midnight-specific mechanic. Its rules can change with patches, so read the details in the in-game guide."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Content",
+        "What for",
+        "When"
+       ],
+       "satirlar": [
+        [
+         "Delves",
+         "Safe progress alone or in a small group",
+         "As you near the level cap"
+        ],
+        [
+         "Mythic+",
+         "Timed dungeons, high rewards",
+         "After Normal and Heroic"
+        ],
+        [
+         "Raid",
+         "Large-group content, boss fights",
+         "When your item level is enough"
+        ],
+        [
+         "PvP",
+         "Player-versus-player combat",
+         "Optional"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Joining a guild is the biggest accelerator at this stage: finding dungeon and raid partners, asking questions and trading gear all get easier. A guild needs a subscription or Game Time. Look for one that fits your schedule and runs regular events; you do not have to stay in the first guild you try."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Track your item level; the game tells you which dungeon is suitable for you."
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "Common mistakes and safety",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Leaving the Battle.net account without two-step verification.",
+        "Rushing levels and entering dungeons before learning your class; do not stall the group, and say so if you are unsure.",
+        "Reusing the same password on several sites."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Stay away from cheats, bots, macros, exploits, private servers, account and gold selling (RMT) and pirated software. They can lead to a permanent ban and theft of your personal data."
+      },
+      {
+       "tip": "p",
+       "metin": "Blizzard will not ask for your password or verification code by e-mail. Check the address bar before clicking a suspicious link, and ignore players offering 'free gold'."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Frequently asked questions",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is the game free?",
+         "c": "There is a free trial up to level 20. After that you need a subscription or Game Time; for levels above 80 you must also buy Midnight."
+        },
+        {
+         "s": "Can I play without buying Midnight?",
+         "c": "Yes, up to level 80 with a subscription. The Midnight story and level 90 require the expansion."
+        },
+        {
+         "s": "Which class should I start with?",
+         "c": "A plain damage class. If you do not like it, creating another character is allowed."
+        },
+        {
+         "s": "Will it run on an old PC?",
+         "c": "Midnight asks for at least Windows 10 and does not support some older hardware; check the official system requirements."
+        },
+        {
+         "s": "I am coming back after a long time. Where do I start?",
+         "c": "Activate a subscription or Game Time, buy Midnight, pick your character, update your talents and read the news on the main screen."
+        },
+        {
+         "s": "Can I play on mobile or console?",
+         "c": "The information here is for Windows; for other platforms check Blizzard's pages."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "fr": {
+   "baslik": "World of Warcraft : guide du débutant, Midnight 2026",
+   "ozet": "Guide pour débuter ou revenir sur World of Warcraft à l'ère de Midnight : essai gratuit, compte, premiers pas, niveaux, or et sécurité.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "MMORPG"
+    },
+    {
+     "ad": "Plateforme",
+     "deger": "Windows (application Battle.net)"
+    },
+    {
+     "ad": "Modèle tarifaire",
+     "deger": "Abonnement ou Game Time ; essai gratuit jusqu'au niveau 20"
+    },
+    {
+     "ad": "Version actuelle",
+     "deger": "Midnight (11e extension), patch 12.1.5, saison 2"
+    },
+    {
+     "ad": "Support du turc",
+     "deger": "Vérifiez dans la liste des langues Battle.net si le turc existe ; sinon jeu en anglais"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "Où en est le jeu en 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "World of Warcraft est le jeu de rôle en ligne de Blizzard, actif depuis 2004. La version actuelle est **Midnight** : la 11e extension est sortie le 2 mars 2026 et a porté le niveau maximum à **90**. Au programme : la race **Haranir**, une troisième spécialisation de Chasseur de démons nommée **Devourer**, le logement des joueurs, le système Prey, les Delves (courtes aventures de type donjon) et la nouvelle ville Silvermoon."
+      },
+      {
+       "tip": "p",
+       "metin": "Sur les serveurs en ligne, le **patch 12.1.5** est arrivé les 13 et 14 octobre 2026, comme mise à jour de mi-saison de la saison 2 de Midnight, commencée en août. Le patch suivant, 12.1.7, est en test sur le royaume de test public (PTR) et n'avait pas de date annoncée à la mi-octobre. Suivez l'écran d'actualités du jeu et le site de Blizzard pour les dates à jour."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Les numéros de patch et les dates de saison changent souvent. Les informations de version datent du 14 novembre 2026."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Avant de commencer : compte, coût, PC",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Il faut un compte **Battle.net** gratuit. Les nouveaux comptes ont un **essai gratuit** jusqu'au niveau 20, donjons de ce niveau compris. Sur un compte gratuit, les guildes, le chat illimité et l'Hôtel des ventes sont verrouillés."
+      },
+      {
+       "tip": "p",
+       "metin": "Au-delà du niveau 20, il faut un **abonnement** ou du **Game Time** (code de temps de jeu) ; selon Blizzard, cela débloque tout le contenu jusqu'au niveau 80. Pour poursuivre l'histoire de Midnight et dépasser le niveau 80, il faut aussi posséder l'**extension Midnight**. Les prix de l'abonnement et de l'extension varient selon la région : consultez le prix actuel dans la boutique Battle.net depuis votre compte. Je n'indique pas de montant, faute de pouvoir le vérifier."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Sujet",
+        "Valeur connue"
+       ],
+       "satirlar": [
+        [
+         "Système",
+         "Windows 10 (64 bits) au minimum pour Midnight"
+        ],
+        [
+         "Stockage",
+         "Conseil officiel : environ 128 Go libres sur un SSD ; prévoyez de la place pour les patchs"
+        ],
+        [
+         "Processeur et carte graphique",
+         "Midnight refuse les processeurs très anciens et les anciennes architectures graphiques ; la liste exacte est sur la page d'assistance de Blizzard"
+        ],
+        [
+         "Connexion",
+         "Internet haut débit"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Si vous comptez jouer sur un ordinateur ancien, lisez la configuration requise actuelle de Midnight sur le site de Blizzard avant d'acheter. Certains matériels anciens ne sont plus pris en charge."
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "Les premières heures, pas à pas",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Créer et sécuriser le compte",
+         "metin": "Créez un compte Battle.net, confirmez l'e-mail, puis activez la validation en deux étapes dans les paramètres du compte."
+        },
+        {
+         "baslik": "Installer le jeu",
+         "metin": "Dans l'application Battle.net, choisissez World of Warcraft et installez le jeu principal (Retail). Le téléchargement est lourd : prévoyez de l'espace disque et une bonne connexion."
+        },
+        {
+         "baslik": "Choisir race et classe",
+         "metin": "Les nouveaux joueurs sont envoyés dans une courte zone de départ, Exile's Reach, lors de la création du personnage. Elle enseigne les commandes de base."
+        },
+        {
+         "baslik": "Suivre le guidage",
+         "metin": "Après le départ, le jeu vous oriente vers l'histoire d'une extension. Blizzard décrit un parcours accéléré de The War Within qui mène les nouveaux joueurs au niveau 80 et résume l'histoire avant Midnight."
+        },
+        {
+         "baslik": "Essayer le Group Finder",
+         "metin": "Inscrivez-vous aux donjons adaptés à votre niveau via le Group Finder (recherche de groupe). Cela donne de l'expérience rapidement et apprend le rythme du jeu."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Ne vous précipitez pas le premier jour. Si une classe ne vous plaît pas après une ou deux heures, vous pouvez créer un autre personnage."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Quand vos sacs sont pleins, passez chez un marchand ; les objets gris se vendent. Avant de vendre des objets bleus ou violets, vérifiez que votre personnage ne peut pas les utiliser."
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "Choisir sa race et sa classe",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Le jeu compte 13 classes. La race détermine surtout l'apparence et de petits traits ; ce sont la classe et la spécialisation (spec) qui définissent le style de jeu. Le tableau n'est qu'un point de départ. Les classements de puissance changent à chaque patch : ne décidez pas d'après eux."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rôle",
+        "Classes en exemple",
+        "Pour qui ?"
+       ],
+       "satirlar": [
+        [
+         "Dégâts, mêlée",
+         "Warrior, Rogue, Demon Hunter, Death Knight",
+         "Ceux qui aiment les combats rapides et mobiles"
+        ],
+        [
+         "Dégâts, distance",
+         "Mage, Warlock, Hunter, Evoker",
+         "Ceux qui aiment frapper de loin"
+        ],
+        [
+         "Tank",
+         "Warrior, Paladin, Death Knight, Druid, Monk",
+         "Ceux qui aiment mener le groupe"
+        ],
+        [
+         "Soigneur",
+         "Priest, Paladin, Druid, Shaman, Monk, Evoker",
+         "Ceux qui aiment garder l'équipe en vie"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Les **Haranir** sont la nouvelle race de Midnight et **Devourer** la nouvelle spécialisation du Chasseur de démons. Ils valent le détour par curiosité, mais ne sont pas indispensables pour un premier personnage. Rester dans le rôle de dégâts et apprendre les systèmes de base est le départ le moins stressant."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Essayer plusieurs classes sur le même compte est permis. La plupart des joueurs créent quelques personnages et gardent celui qu'ils préfèrent."
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "Monter en niveau : une voie rapide et efficace",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Entre les niveaux 10 et 70, **Chromie Time** vous laisse choisir les zones de quelle extension vous parcourez. Les nouveaux joueurs sont dirigés par défaut vers Dragonflight. Chaque extension raconte sa propre histoire et vous n'avez pas à toutes les finir."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Donjons de montée de niveau de Midnight : Windrunner Spire, Murder Row, Den of Nalorakk, Maisara Caverns et The Blinding Vale.",
+        "Le Skyriding (vol plané rapide) est disponible dès le départ et aide beaucoup pour voyager et récolter.",
+        "Terminer l'histoire principale de Midnight débloque le mode Aventure pour vos autres personnages."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Pour progresser efficacement, faites les quêtes d'une zone ensemble, inscrivez-vous aux donjons et ne laissez pas une histoire d'extension à moitié finie. Avec l'essai gratuit, vous vous arrêtez au niveau 20 ; c'est le moment de décider d'un abonnement ou de Game Time."
+      },
+      {
+       "tip": "p",
+       "metin": "Les donjons ont trois rôles : tank, soigneur et dégâts. Les files de tank et de soigneur sont généralement plus courtes ; si vous pouvez jouer l'un de ces rôles, trouver un donjon va plus vite. Même débutant, vous verrez vite pourquoi ces rôles sont recherchés. Renouvelez aussi régulièrement votre équipement : les récompenses de donjons et de quêtes vous portent pendant la montée de niveau, et garder de vieux objets dans les sacs ne sert à rien."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si vous revenez, votre arbre de talents et les mécaniques de votre classe ont peut-être changé. Revoyez vos talents à la connexion."
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "Or et économie : uniquement en jeu",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La bonne façon de gagner de l'or, ce sont les systèmes du jeu. L'**Hôtel des ventes** permet l'échange entre joueurs et dépend de l'abonnement. Y vendre les matériaux récoltés (herbes, minerai, cuir) est un revenu sûr pour un nouveau joueur."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Avant de céder récompenses de quêtes et butin de donjon à un marchand, regardez le prix à l'Hôtel des ventes.",
+        "Choisissez tôt un métier de récolte ; vous récoltez de toute façon en montant de niveau.",
+        "Avant de vendre un objet qui semble précieux, regardez l'historique de prix et ne sautez pas sur le premier prix."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Les métiers se divisent en deux groupes : la récolte (herbes, minerai, cuir) et la fabrication (forge, alchimie, enchantement, etc.). Un métier de fabrication ne fonctionne qu'avec des matériaux récoltés ; les associer est donc judicieux. N'attendez pas de revenus dès le premier jour ; accumuler de l'or prend quelques semaines. Les prix diffèrent d'un royaume à l'autre : ne tenez aucun prix pour définitif."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Acheter ou vendre de l'or ou des personnages sur des sites externes entraîne la fermeture de votre compte. Blizzard l'interdit, et beaucoup de ces sites sont liés au vol de comptes."
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "Après le niveau maximum : que faire ?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Au niveau maximum, le jeu s'ouvre à un contenu en couches. Les **Delves** sont de courts donjons en solo ou en petit groupe, un bon pont avant les raids. Les **Mythique+** (donjons chronométrés) et les **raids** donnent le meilleur équipement. Prenez d'abord de l'expérience en difficulté Normal et Héroïque."
+      },
+      {
+       "tip": "p",
+       "metin": "Le **logement des joueurs** est arrivé avec Midnight : vous avez une maison à décorer. Le système **Prey** est propre à Midnight. Ses règles peuvent changer avec les patchs ; lisez les détails dans le guide en jeu."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Contenu",
+        "Pour quoi ?",
+        "Quand ?"
+       ],
+       "satirlar": [
+        [
+         "Delves",
+         "Progression sûre en solo ou petit groupe",
+         "En approchant du niveau maximum"
+        ],
+        [
+         "Mythique+",
+         "Donjons chronométrés, grosses récompenses",
+         "Après Normal et Héroïque"
+        ],
+        [
+         "Raid",
+         "Contenu de grand groupe, combats de boss",
+         "Quand votre niveau d'objet suffit"
+        ],
+        [
+         "JcJ",
+         "Combat joueur contre joueur",
+         "Facultatif"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Rejoindre une guilde est le plus gros accélérateur à ce stade : trouver des partenaires de donjon et de raid, poser des questions et échanger de l'équipement devient plus facile. Une guilde demande un abonnement ou du Game Time. Cherchez-en une qui convient à vos horaires et organise des activités régulières ; vous n'êtes pas obligé de rester dans la première essayée."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Suivez votre niveau d'objet ; le jeu vous indique quel donjon vous convient."
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "Erreurs courantes et sécurité",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Laisser le compte Battle.net sans validation en deux étapes.",
+        "Monter vite et entrer en donjon sans connaître sa classe ; ne retardez pas le groupe, et dites-le si vous hésitez.",
+        "Réutiliser le même mot de passe sur plusieurs sites."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Restez loin des triches, bots, macros, exploits, serveurs privés, de la vente de comptes et d'or (RMT) et des logiciels piratés. Ils peuvent mener à un bannissement définitif et au vol de vos données personnelles."
+      },
+      {
+       "tip": "p",
+       "metin": "Blizzard ne vous demandera pas votre mot de passe ni votre code de validation par e-mail. Vérifiez la barre d'adresse avant de cliquer sur un lien suspect, et ignorez les joueurs qui proposent de l'« or gratuit »."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Questions fréquentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Le jeu est-il gratuit ?",
+         "c": "Il y a un essai gratuit jusqu'au niveau 20. Ensuite, il faut un abonnement ou du Game Time ; au-delà du niveau 80, il faut aussi acheter Midnight."
+        },
+        {
+         "s": "Puis-je jouer sans acheter Midnight ?",
+         "c": "Oui, jusqu'au niveau 80 avec un abonnement. L'histoire de Midnight et le niveau 90 demandent l'extension."
+        },
+        {
+         "s": "Avec quelle classe commencer ?",
+         "c": "Une classe de dégâts simple. Si elle ne vous plaît pas, créer un autre personnage est permis."
+        },
+        {
+         "s": "Cela tourne-t-il sur un vieux PC ?",
+         "c": "Midnight demande au moins Windows 10 et ne prend pas en charge certains matériels anciens ; consultez la configuration requise officielle."
+        },
+        {
+         "s": "Je reviens après longtemps. Par où commencer ?",
+         "c": "Activez un abonnement ou du Game Time, achetez Midnight, choisissez votre personnage, mettez à jour vos talents et lisez les actualités de l'écran principal."
+        },
+        {
+         "s": "Peut-on jouer sur mobile ou console ?",
+         "c": "Les informations ici valent pour Windows ; pour d'autres plateformes, consultez les pages de Blizzard."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "es": {
+   "baslik": "World of Warcraft: guía para empezar, Midnight 2026",
+   "ozet": "Guía para empezar o volver a World of Warcraft en la era de Midnight: prueba gratuita, cuenta, primeros pasos, niveles, oro y seguridad.",
+   "kunye": [
+    {
+     "ad": "Género",
+     "deger": "MMORPG"
+    },
+    {
+     "ad": "Plataforma",
+     "deger": "Windows (aplicación Battle.net)"
+    },
+    {
+     "ad": "Modelo de precio",
+     "deger": "Suscripción o Game Time; prueba gratuita hasta el nivel 20"
+    },
+    {
+     "ad": "Versión actual",
+     "deger": "Midnight (11.ª expansión), parche 12.1.5, temporada 2"
+    },
+    {
+     "ad": "Soporte en turco",
+     "deger": "Comprueba en la lista de idiomas de Battle.net si existe el turco; si no, se juega en inglés"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "Cómo está el juego en 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "World of Warcraft es el juego de rol en línea de Blizzard, activo desde 2004. La versión actual es **Midnight**: la 11.ª expansión salió el 2 de marzo de 2026 y subió el nivel máximo a **90**. Trae la raza **Haranir**, una tercera especialización de Cazador de demonios llamada **Devourer**, la vivienda de jugador, el sistema Prey, las Delves (aventuras cortas tipo mazmorra) y la nueva ciudad Silvermoon."
+      },
+      {
+       "tip": "p",
+       "metin": "En los servidores en vivo, el **parche 12.1.5** llegó el 13 y 14 de octubre de 2026 como actualización de mitad de la temporada 2 de Midnight, que empezó en agosto. El siguiente parche, 12.1.7, está en el reino de pruebas público (PTR) y a mediados de octubre no tenía fecha anunciada. Sigue la pantalla de noticias del juego y la web de Blizzard para ver las fechas actuales."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Los números de parche y las fechas de temporada cambian a menudo. La información de versión es del 14 de noviembre de 2026."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Antes de empezar: cuenta, coste, PC",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Necesitas una cuenta **Battle.net** gratuita. Las cuentas nuevas reciben una **prueba gratuita** hasta el nivel 20, con las mazmorras de ese nivel incluidas. En una cuenta gratuita, las hermandades, el chat sin restricciones y la Casa de Subastas están bloqueados."
+      },
+      {
+       "tip": "p",
+       "metin": "Más allá del nivel 20 hace falta una **suscripción** o **Game Time** (código de tiempo de juego); según Blizzard, esto desbloquea todo el contenido hasta el nivel 80. Para seguir la historia de Midnight y pasar del nivel 80 también necesitas la **expansión Midnight**. Los precios de la suscripción y de la expansión varían por región: consulta el precio actual en la tienda de Battle.net desde tu cuenta. No pongo cifras porque no pude verificarlas."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Tema",
+        "Valor conocido"
+       ],
+       "satirlar": [
+        [
+         "Sistema operativo",
+         "Como mínimo Windows 10 (64 bits) para Midnight"
+        ],
+        [
+         "Almacenamiento",
+         "Recomendación oficial: unos 128 GB libres en un SSD; deja espacio extra para los parches"
+        ],
+        [
+         "Procesador y tarjeta gráfica",
+         "Midnight rechaza procesadores muy antiguos y arquitecturas gráficas viejas; la lista exacta está en la página de soporte de Blizzard"
+        ],
+        [
+         "Conexión",
+         "Internet de banda ancha"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Si piensas jugar en un ordenador antiguo, lee los requisitos de sistema actuales de Midnight en Blizzard antes de comprar. Algunos equipos viejos ya no se admiten."
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "Las primeras horas, paso a paso",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Crea y protege la cuenta",
+         "metin": "Crea una cuenta Battle.net, confirma el correo y activa la verificación en dos pasos en los ajustes de la cuenta."
+        },
+        {
+         "baslik": "Instala el juego",
+         "metin": "En la aplicación Battle.net elige World of Warcraft e instala el juego principal (Retail). La descarga es grande: prepara espacio en disco y una buena conexión."
+        },
+        {
+         "baslik": "Elige raza y clase",
+         "metin": "Al crear el personaje, los jugadores nuevos van a una zona de inicio corta llamada Exile's Reach. Enseña los controles básicos."
+        },
+        {
+         "baslik": "Sigue la guía",
+         "metin": "Tras el inicio, el juego te dirige a la historia de una expansión. Blizzard describe un recorrido acelerado de The War Within que lleva a los jugadores nuevos al nivel 80 y resume la historia previa a Midnight."
+        },
+        {
+         "baslik": "Prueba el Group Finder",
+         "metin": "Apúntate a mazmorras de tu nivel con el Group Finder (buscador de grupo). Da experiencia rápida y enseña el ritmo del juego."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "No tengas prisa el primer día. Si una clase no te gusta tras una o dos horas, puedes crear otro personaje."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Cuando se llenen las bolsas, pasa por un vendedor; los objetos grises se pueden vender. Antes de vender objetos azules y morados, comprueba si tu personaje puede usarlos."
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "Elegir raza y clase",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "El juego tiene 13 clases. La raza decide sobre todo el aspecto y rasgos pequeños; la clase y la especialización (spec) deciden cómo se juega. La tabla es solo un punto de partida. Las clasificaciones de poder cambian con los parches, así que no decidas por ellas."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rol",
+        "Clases de ejemplo",
+        "Para quién"
+       ],
+       "satirlar": [
+        [
+         "Daño, cuerpo a cuerpo",
+         "Warrior, Rogue, Demon Hunter, Death Knight",
+         "A quien le gustan los combates rápidos y móviles"
+        ],
+        [
+         "Daño, a distancia",
+         "Mage, Warlock, Hunter, Evoker",
+         "A quien le gusta golpear desde lejos"
+        ],
+        [
+         "Tanque",
+         "Warrior, Paladin, Death Knight, Druid, Monk",
+         "A quien le gusta liderar el grupo"
+        ],
+        [
+         "Sanador",
+         "Priest, Paladin, Druid, Shaman, Monk, Evoker",
+         "A quien le gusta mantener vivo al equipo"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Los **Haranir** son la raza nueva de Midnight y **Devourer** la nueva especialización del Cazador de demonios. Merece la pena probarlos por curiosidad, pero no son imprescindibles para un primer personaje. Quedarte en el rol de daño y aprender los sistemas básicos es el comienzo menos estresante."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Probar distintas clases en la misma cuenta está permitido. La mayoría de los jugadores crea varios personajes y se queda con el que más disfruta."
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "Subir de nivel: una ruta rápida y eficiente",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Entre los niveles 10 y 70, **Chromie Time** te deja elegir en las zonas de qué expansión subes de nivel. Los jugadores nuevos van por defecto a Dragonflight. Cada expansión cuenta su propia historia y no hace falta terminarlas todas."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Mazmorras para subir de nivel en Midnight: Windrunner Spire, Murder Row, Den of Nalorakk, Maisara Caverns y The Blinding Vale.",
+        "El Skyriding (vuelo planeado rápido) está disponible desde el inicio y ayuda mucho para viajar y recolectar.",
+        "Terminar la historia principal de Midnight desbloquea el Modo Aventura para tus otros personajes."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Para avanzar con eficiencia, haz juntas las misiones de una zona, apúntate a mazmorras y no dejes a medias la historia de una expansión. En la prueba gratuita te detienes en el nivel 20; ese es el momento de decidir si tomas suscripción o Game Time."
+      },
+      {
+       "tip": "p",
+       "metin": "Las mazmorras tienen tres roles: tanque, sanador y daño. Las colas de tanque y sanador suelen ser más cortas, así que si puedes jugar uno de ellos, encontrar mazmorra es más rápido. Aunque seas principiante, pronto verás por qué se buscan esos roles. Renueva también tu equipo con regularidad: las recompensas de mazmorras y misiones te llevan durante la subida de nivel y no sirve de nada guardar objetos viejos en las bolsas."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si vuelves, tu árbol de talentos y las mecánicas de tu clase pueden haber cambiado. Revisa tus talentos al entrar."
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "Oro y economía: solo dentro del juego",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La forma correcta de ganar oro son los sistemas del propio juego. La **Casa de Subastas** permite el comercio entre jugadores y depende de la suscripción. Vender allí los materiales recolectados (hierbas, mineral, cuero) es un ingreso seguro para un jugador nuevo."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Antes de dar a un vendedor las recompensas de misiones y el botín de mazmorras, mira el precio en la Casa de Subastas.",
+        "Elige pronto una profesión de recolección; de todos modos recolectas al subir de nivel.",
+        "Antes de vender algo que parece valioso, mira su historial de precios y no te lances al primer precio."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Las profesiones se dividen en dos grupos: recolección (hierbas, mineral, cuero) y fabricación (herrería, alquimia, encantamiento y similares). Una profesión de fabricación solo funciona con materiales recolectados, así que conviene combinar ambas. No esperes ingresos el primer día; reunir oro lleva unas semanas. Los precios cambian de reino en reino: no des ningún precio por definitivo."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Comprar o vender oro o personajes en sitios externos provoca el cierre de tu cuenta. Blizzard lo prohíbe, y muchos de esos sitios están ligados al robo de cuentas."
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "Tras el nivel máximo: qué hacer",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "En el nivel máximo, el juego se abre a contenido por capas. Las **Delves** son mazmorras cortas en solitario o en grupo pequeño, un buen puente antes de las bandas. Las **Mítico+** (mazmorras cronometradas) y las **bandas** dan el mejor equipo. Gana experiencia antes en dificultad Normal y Heroica."
+      },
+      {
+       "tip": "p",
+       "metin": "La **vivienda de jugador** llegó con Midnight: tienes una casa que decorar. El sistema **Prey** es propio de Midnight. Sus reglas pueden cambiar con los parches; lee los detalles en la guía del juego."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Contenido",
+        "Para qué",
+        "Cuándo"
+       ],
+       "satirlar": [
+        [
+         "Delves",
+         "Avance seguro en solitario o grupo pequeño",
+         "Al acercarte al nivel máximo"
+        ],
+        [
+         "Mítico+",
+         "Mazmorras cronometradas, grandes recompensas",
+         "Tras Normal y Heroica"
+        ],
+        [
+         "Banda",
+         "Contenido de grupo grande, jefes",
+         "Cuando tu nivel de objeto alcance"
+        ],
+        [
+         "JcJ",
+         "Combate jugador contra jugador",
+         "Opcional"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Unirse a una hermandad es el mayor acelerador en esta etapa: encontrar compañeros de mazmorra y banda, hacer preguntas e intercambiar equipo resulta más fácil. Una hermandad requiere suscripción o Game Time. Busca una que encaje con tu horario y haga actividades regulares; no tienes que quedarte en la primera que pruebes."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Sigue tu nivel de objeto; el juego te indica qué mazmorra te conviene."
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "Errores comunes y seguridad",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Dejar la cuenta Battle.net sin verificación en dos pasos.",
+        "Subir de nivel con prisa y entrar en mazmorras sin conocer tu clase; no retrases al grupo y avisa si tienes dudas.",
+        "Reutilizar la misma contraseña en varios sitios."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Mantente lejos de trampas, bots, macros, exploits, servidores privados, la venta de cuentas y oro (RMT) y el software pirata. Pueden llevar a un baneo permanente y al robo de tus datos personales."
+      },
+      {
+       "tip": "p",
+       "metin": "Blizzard no te pedirá la contraseña ni el código de verificación por correo. Comprueba la barra de direcciones antes de pulsar un enlace sospechoso e ignora a los jugadores que ofrecen «oro gratis»."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Preguntas frecuentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "¿El juego es gratis?",
+         "c": "Hay una prueba gratuita hasta el nivel 20. Después hace falta suscripción o Game Time; para pasar del nivel 80 hay que comprar también Midnight."
+        },
+        {
+         "s": "¿Puedo jugar sin comprar Midnight?",
+         "c": "Sí, hasta el nivel 80 con suscripción. La historia de Midnight y el nivel 90 exigen la expansión."
+        },
+        {
+         "s": "¿Con qué clase empiezo?",
+         "c": "Con una clase de daño sencilla. Si no te gusta, crear otro personaje está permitido."
+        },
+        {
+         "s": "¿Funciona en un PC viejo?",
+         "c": "Midnight pide al menos Windows 10 y no admite cierto hardware antiguo; consulta los requisitos de sistema oficiales."
+        },
+        {
+         "s": "Vuelvo tras mucho tiempo. ¿Por dónde empiezo?",
+         "c": "Activa suscripción o Game Time, compra Midnight, elige tu personaje, actualiza los talentos y lee las noticias de la pantalla principal."
+        },
+        {
+         "s": "¿Se puede jugar en móvil o consola?",
+         "c": "La información de aquí es para Windows; para otras plataformas consulta las páginas de Blizzard."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

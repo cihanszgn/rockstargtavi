@@ -1,0 +1,1277 @@
+{
+ "oyun": "genshin-impact",
+ "guncelleme": "2026-11-14",
+ "surum": "7.2 Hour of Ruin (4 Kasım 2026)",
+ "kaynaklar": [
+  {
+   "url": "https://www.icy-veins.com/genshin-impact/patch-overview",
+   "ad": "Icy Veins: Genshin Impact patch overview"
+  },
+  {
+   "url": "https://genshin-impact.fandom.com/wiki/Version",
+   "ad": "Genshin Impact Wiki: Version"
+  },
+  {
+   "url": "https://genshin-impact.fandom.com/wiki/Adventure_Rank",
+   "ad": "Genshin Impact Wiki: Adventure Rank"
+  },
+  {
+   "url": "https://www.timesaver.gg/blog/genshin-pity-system-explained",
+   "ad": "TimeSaver: Genshin pity system explained"
+  },
+  {
+   "url": "https://www.hoyolab.com/article/29018",
+   "ad": "HoYoLAB: official article"
+  }
+ ],
+ "diller": {
+  "tr": {
+   "baslik": "Genshin Impact Başlangıç Rehberi: İlk Adımlar ve Dilek Sistemi (2026)",
+   "ozet": "Genshin Impact'e yeni başlayanlar için ilk adımlar, Macera Rütbesi, dilek (wish) sistemi, karakter ve kaynak yönetimi ile hesap güvenliği; güncel sürüm 7.2.",
+   "kunye": [
+    {
+     "ad": "Tür",
+     "deger": "Açık dünya aksiyon rol yapma oyunu (gacha ögeli)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "PC, PlayStation, iOS, Android (diğer platformlar için resmî siteye bakın)"
+    },
+    {
+     "ad": "Fiyat modeli",
+     "deger": "Ücretsiz oynanır; isteğe bağlı satın alımlar var"
+    },
+    {
+     "ad": "Güncel sürüm",
+     "deger": "7.2 Hour of Ruin (4 Kasım 2026)"
+    },
+    {
+     "ad": "Türkçe desteği",
+     "deger": "Doğrulanamadı; oyun içi dil listesini kontrol edin"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "Genshin Impact nedir, şu an nerede?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Genshin Impact, HoYoverse'ün yaptığı açık dünyalı bir aksiyon rol yapma oyunudur. Teyvat adlı bir dünyada kayıp kardeşinizi ararken keşfeder, bulmaca çözer, düşmanlarla savaşır ve elementleri birleştirirsiniz. Oyun ücretsiz indirilir ve oynanır; karakter ve silah elde etmenin ana yolu \"dilek\" (wish) adlı şans sistemidir."
+      },
+      {
+       "tip": "p",
+       "metin": "Güncel sürüm **7.2 \"Hour of Ruin\"**; 4 Kasım 2026'da çıktı ve dilek afişleri 24 Kasım'a kadar sürüyor. Bu sürümde yeni 5 yıldızlı karakterler Mitya (katalizör kullanır, silahı Starsealed Edict) ve Valeriy, bir de yeni 4 yıldızlı karakter geldi. Ayrıca Efsane Görev (Archon Quest) Perde V \"Hour of Ruin\" ve Perde VI, Snezhnaya'da yeni bölgeler Novokitezhgrad ve Wingspan Peak ile \"The Grand Defense\" etkinliği var. Yeni başlıyorsanız bunların hepsini hemen yetiştirmeniz gerekmez; oyun sizi kademeli ilerletir."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Sürüm bilgisi altı haftada bir yenilenir. Güncel afişleri ve etkinlikleri oyunun kendi haber ekranından veya resmî haber sayfasından takip edin."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Başlamadan önce: platform, boyut ve dil",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Genshin Impact PC, PlayStation ve mobil (iOS, Android) cihazlarda oynanır. Hesabınız platformlar arasında kullanılabilir; ancak bazı platformlarda ilerleme paylaşımının sınırları olabilir, kayıttan önce resmî açıklamaya bakın."
+      },
+      {
+       "tip": "p",
+       "metin": "**Sistem gereksinimleri** sürümle birlikte arttı. Eski kaynaklarda PC için en az Windows 10, 6. nesil i5, 8 GB RAM, GT 1030 ve 30 GB yer yazıyor; yeni kaynaklarda 100-150 GB ve GTX 1060 düzeyi geçiyor. Bu çelişki yüzünden kesin rakamı resmî indirme sayfasından kontrol edin. Disk yeri her yeni sürümle büyüdüğü için SSD ve bol boş yer yardımcı olur."
+      },
+      {
+       "tip": "p",
+       "metin": "**Dil:** oyun birçok dili destekler, ancak Türkçe metin desteğini doğrulayamadım; 2020'deki resmî listede 13 dil vardı ve Türkçe yoktu. Kurmadan önce oyun içi ayar menüsünden dil listesine bakın."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Oyunu yalnızca resmî siteden, mağaza uygulamalarından (App Store, Google Play, PlayStation Store) veya resmî başlatıcıdan indirin. Üçüncü taraf \"hazır hesap\" ve değiştirilmiş istemci dosyaları hesabınızı kapattırır."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "İlk saatler: adım adım",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Hikâyeye başlayın",
+         "metin": "Giriş görevlerini bitirin; oyun sistemleri birer birer açılır. Hızlı geçmek yerine ilk bölgeyi (Mondstadt) rahatça keşfedin."
+        },
+        {
+         "baslik": "Ücretsiz dilekleri kullanın",
+         "metin": "Yeni başlayanlar afişi 20 dilek verir ve ilk 5 yıldızlı Noelle'i garantiler. Başlangıç dileklerini oyunun gidişatına göre kullanın; acele etmeyin."
+        },
+        {
+         "baslik": "Sandık ve görev toplayın",
+         "metin": "Haritada gördüğünüz sandıklar ve keşif görevleri ilk günlerde dilek malzemesi ve karakter geliştirme kaynağı verir."
+        },
+        {
+         "baslik": "Günlük görevleri yapın",
+         "metin": "Komisyonlar (Daily Commissions) her gün küçük bir ödül verir; yalnızca kısa süre ayırın."
+        },
+        {
+         "baslik": "Karakteri geliştirin",
+         "metin": "Önce ana karakterinizi ve en sevdiğiniz bir ekip arkadaşını seviyeye çıkarın; her yeni karakteri dağınık geliştirmeyin."
+        },
+        {
+         "baslik": "Sırt çantanızı kontrol edin",
+         "metin": "Çantadaki malzemeleri satmadan önce neye yaradığını okuyun; çoğu ileride gerekir."
+        },
+        {
+         "baslik": "Sürekli kaydedin",
+         "metin": "Oyun otomatik kaydeder; ama etkinlik süreleri sınırlıdır, zamanı yaklaşan etkinlikleri not alın."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "İlk günlerde en büyük hata her şeyi aynı anda yapmaya çalışmaktır. Bir bölgeyi bitirip bir sonrakine geçmek, hem oyunu anlamanızı hem kaynaklarınızı korumanızı sağlar."
+      }
+     ]
+    },
+    {
+     "id": "macera-rutbesi",
+     "baslik": "Macera Rütbesi ve oyun ilerlemesi",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**Macera Rütbesi (Adventure Rank, AR)** hesabınızın genel seviyesidir. Keşif yaptıkça, sandık açtıkça ve görev bitirdikçe yükselir. Karakterlerinizi seviye 40'tan sonra \"yükseltmek\" (ascension) için belli rütbe gerekir; rütbe düşükse karakteriniz belli seviyede takılır."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Karakter seviye sınırı",
+        "Gereken Macera Rütbesi"
+       ],
+       "satirlar": [
+        [
+         "40",
+         "15"
+        ],
+        [
+         "50",
+         "25"
+        ],
+        [
+         "60",
+         "30"
+        ],
+        [
+         "70",
+         "35"
+        ],
+        [
+         "80",
+         "40"
+        ],
+        [
+         "90",
+         "50"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Rütbe 6'da seviye 90'a kadar eşya alınan alanlar (artifact domain) açılır; rütbe 8-9 civarında dünya seviyesi yükseltme görevleri başlar. Dünya seviyesi yükseldikçe düşmanlar güçlenir ama ödüller de iyileşir. Rütbeniz yetmiyorsa görev ve keşiften devam edin; dilekle rütbe yükselmez."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Dünya seviyesini yükseltmek zorunlu değildir. Zorlanıyorsanız düşük dünya seviyesinde kalıp önce karakterlerinizi ve eşyalarınızı güçlendirin."
+      }
+     ]
+    },
+    {
+     "id": "dilek-sistemi",
+     "baslik": "Dilek (wish) sistemi nasıl işler?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Dilekler, karakter ve silah elde etmenin şans temelli yoludur. Bazı kurallar oyunda yazıyor, bazıları topluluk ölçümüdür; hangisi hangisi olduğunu ayırın."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Konu",
+        "Bilgi"
+       ],
+       "satirlar": [
+        [
+         "Karakter afişi 5 yıldız oranı",
+         "Temel oran %0,6; en geç 90 dilekte 5 yıldız garantilidir"
+        ],
+        [
+         "Yumuşak garanti (soft pity)",
+         "Yaklaşık 74. dilekten sonra şans artar (resmî değil, topluluk ölçümü)"
+        ],
+        [
+         "50/50 kuralı",
+         "İlk 5 yıldız çoğunlukla %50'dir (Capturing Radiance ile yaklaşık %55); kaybederseniz sıradaki garantilidir"
+        ],
+        [
+         "Silah afişi garantisi",
+         "80 dilek"
+        ],
+        [
+         "4 yıldız",
+         "10 dilekte en az bir kez garantilidir"
+        ],
+        [
+         "Garanti aktarımı",
+         "Aynı afiş türü içinde aktarılır; farklı afiş türleri ayrı sayılır"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Dilek, parayla da alınabilir; ancak bu zorunlu değildir. Harcamadan önce bütçenizi belirleyin ve \"bir tane daha\" düşüncesiyle sınırı aşmayın. Çocukların kart bilgisiyle harcama yapmasına karşı ebeveyn denetimini açın."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Dilek hakkınızı biriktirip en çok istediğiniz karakter için kullanmak, rastgele harcamaktan daha iyi sonuç verir. Ama hiçbir afiş garanti sonucu vaat etmez; garanti sayıları yalnızca üst sınırdır."
+      }
+     ]
+    },
+    {
+     "id": "karakter-ve-kaynak",
+     "baslik": "Karakter, ekip ve kaynak yönetimi",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Ekip:** dört karakterlik takımda farklı elementleri bir arada kullanmak (örneğin su + ateş, buharlaşma) birleşik etki (elemental reaksiyon) kazandırır.",
+        "**Karakter rolü:** bir ana hasarcı, bir destek veya iyileştirici, bir de elementi bağlayan karakter ekip için iyi bir temeldir.",
+        "**Silah ve eşya:** karakterin silahı ve artefaktları (artifact) gücünün büyük kısmıdır; önce silahı ve ana eşyayı geliştirin.",
+        "**Reçine (Resin):** alanlardan ve patronlardan ödül almak için kullanılır ve zamanla dolar; boşa taşırmamaya çalışın.",
+        "**Ücretsiz karakterler:** oyun boyunca hikâye ve etkinliklerle verilen karakterler de iyi bir ekip kurmaya yeter; her karakteri aramak şart değildir."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Basit kural: oyun ücretsiz oynanabilir; paranız yoksa ilerleyişiniz yalnızca yavaşlar, durmaz."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Yeni başlayanların sık hataları",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Başlangıç dileklerini düşünmeden harcamak.",
+        "Her yeni karakteri aynı anda geliştirmeye çalışıp kaynağı dağıtmak.",
+        "Reçineyi taşırmak veya hiç kullanmamak.",
+        "Silahları ve artefaktları geliştirmeden zor bölgeye girip karakteri suçlamak.",
+        "Etkinlik sürelerini kaçırmak; ücretsiz ödüllü etkinlikleri takvime yazmak yeterli."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Dileği \"şans oyunu\" olarak görün. Aynı bütçeyi ilerleyen sürümde başka karakter için ayırma seçeneğinizi daima koruyun."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Hesap güvenliği ve harcama uyarısı",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Hesabınız saatlerce emeğinizi taşır. Parolanızı, doğrulama kodunuzu ve e-posta erişiminizi kimseyle paylaşmayın."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Ücretsiz primogem, ücretsiz dilek veya \"jeneratör\" vaat eden siteler ve uygulamalar dolandırıcılıktır;** hesabınızı ele geçirir veya kart bilginizi çalar. Oyunun gerçek ücretsiz kaynakları yalnızca oyun içi görevler, etkinlikler ve resmî kanallardan duyurulan kodlardır.",
+        "Hediye kodları (redeem code) genelde canlı yayınlardan ve resmî kanallardan çıkar; kodu yalnızca oyunun kendi kod ekranına veya resmî siteye yazın, başka bir yere parola girmeyin.",
+        "Hesap satın alma veya satma, yetkisiz yazılım ve bot kullanımı kurallara aykırıdır ve hesabın kapanmasına yol açar.",
+        "İki adımlı doğrulamayı açın; HoYoverse hesabınıza ayrı ve güçlü bir parola verin.",
+        "Çocuk hesaplarında harcama sınırı ve ebeveyn denetimi kullanın."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Kimse sizden oyun parolanızı \"dilek vermek için\" istemez. Şüpheli bir teklif gelirse reddedin ve parolanızı hemen değiştirin."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Sık sorulan sorular",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Genshin Impact ücretsiz mi?",
+         "c": "Evet, indirmek ve oynamak ücretsizdir. İsteğe bağlı satın alımlar vardır; ancak oyunun ana içeriği satın almadan oynanabilir."
+        },
+        {
+         "s": "Oyun Türkçe mi?",
+         "c": "Türkçe metin desteğini doğrulayamadım. Oyun içi dil menüsünden kontrol edin."
+        },
+        {
+         "s": "Hangi cihazlarda oynanır?",
+         "c": "PC, PlayStation, iOS ve Android'de; diğer platformlar için resmî siteye bakın."
+        },
+        {
+         "s": "İlk 5 yıldızlı karakteri nasıl alırım?",
+         "c": "Yeni başlayanlar afişi Noelle'i garantiler. Diğer 5 yıldızlı karakterler için dilek sistemi ve zaman gerekir."
+        },
+        {
+         "s": "Ücretsiz primogem sitelerine güvenebilir miyim?",
+         "c": "Hayır. Hepsi dolandırıcılıktır; hesabınızı çalmayı amaçlarlar."
+        },
+        {
+         "s": "Her yeni karakteri almalı mıyım?",
+         "c": "Hayır. Ücretsiz ve bir iki sevdiğiniz karakterle bütün içeriği oynayabilirsiniz."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "en": {
+   "baslik": "Genshin Impact Beginner Guide: First Steps and the Wish System (2026)",
+   "ozet": "A guide for new Genshin Impact players covering first steps, Adventure Rank, the wish system, character and resource management, and account security; the current version is 7.2.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Open-world action role-playing game (with gacha elements)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "PC, PlayStation, iOS, Android (check the official site for other platforms)"
+    },
+    {
+     "ad": "Pricing model",
+     "deger": "Free to play; optional purchases"
+    },
+    {
+     "ad": "Current version",
+     "deger": "7.2 Hour of Ruin (4 November 2026)"
+    },
+    {
+     "ad": "Turkish support",
+     "deger": "Could not be verified; check the in-game language list"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "What is Genshin Impact and where does it stand now?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Genshin Impact is an open-world action role-playing game by HoYoverse. In a world called Teyvat, while looking for your lost sibling, you explore, solve puzzles, fight enemies and combine elements. The game is free to download and play; the main way to obtain characters and weapons is a luck system called a \"wish\"."
+      },
+      {
+       "tip": "p",
+       "metin": "The current version is **7.2 \"Hour of Ruin\"**; it launched on 4 November 2026 and its wish banners run until 24 November. This version brings new 5-star characters Mitya (a catalyst user whose weapon is Starsealed Edict) and Valeriy, plus a new 4-star character. There is also Archon Quest Act V \"Hour of Ruin\" and Act VI, new Snezhnaya areas Novokitezhgrad and Wingspan Peak, and the event \"The Grand Defense\". If you are just starting, you do not need to catch up on all of this right away; the game moves you forward step by step."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Version information refreshes roughly every six weeks. Follow current banners and events through the game's own news screen or the official news page."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Before you start: platform, size and language",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Genshin Impact runs on PC, PlayStation and mobile (iOS, Android). Your account can be used across platforms; however, progress sharing may have limits on some platforms, so check the official explanation before you sign up."
+      },
+      {
+       "tip": "p",
+       "metin": "**System requirements** have grown with the versions. Older sources list for PC at least Windows 10, a 6th generation i5, 8 GB RAM, a GT 1030 and 30 GB of space; newer sources mention 100-150 GB and a GTX 1060 class card. Because of this conflict, check the exact figures on the official download page. As disk space grows with each new version, an SSD and plenty of free space help."
+      },
+      {
+       "tip": "p",
+       "metin": "**Language:** the game supports many languages, but I could not verify Turkish text support; the official list in 2020 had 13 languages and Turkish was not among them. Check the language list in the in-game settings menu before installing."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Download the game only from the official site, store apps (App Store, Google Play, PlayStation Store) or the official launcher. Third-party \"ready-made accounts\" and modified client files get your account banned."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "The first hours: step by step",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Start the story",
+         "metin": "Finish the introductory quests; game systems unlock one by one. Instead of rushing, explore the first region (Mondstadt) at ease."
+        },
+        {
+         "baslik": "Use the free wishes",
+         "metin": "The beginner banner gives 20 wishes and guarantees your first 5-star, Noelle. Use the starter wishes according to how the game goes; do not hurry."
+        },
+        {
+         "baslik": "Collect chests and quests",
+         "metin": "The chests and exploration quests you see on the map give wish materials and character growth resources in the first days."
+        },
+        {
+         "baslik": "Do the daily commissions",
+         "metin": "Daily Commissions give a small reward each day; spend only a short time on them."
+        },
+        {
+         "baslik": "Develop your characters",
+         "metin": "First level up your main character and one teammate you like; do not develop every new character in a scattered way."
+        },
+        {
+         "baslik": "Check your bag",
+         "metin": "Before selling materials in your bag, read what they are for; most will be needed later."
+        },
+        {
+         "baslik": "Keep track of time",
+         "metin": "The game saves automatically; but events are time-limited, so note the ones about to end."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "The biggest mistake in the first days is trying to do everything at once. Finishing one region before moving to the next helps you understand the game and protects your resources."
+      }
+     ]
+    },
+    {
+     "id": "macera-rutbesi",
+     "baslik": "Adventure Rank and game progression",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**Adventure Rank (AR)** is your account's overall level. It rises as you explore, open chests and finish quests. To \"ascend\" your characters past level 40 a certain rank is required; if your rank is low, your character gets stuck at a certain level."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Character level cap",
+        "Adventure Rank needed"
+       ],
+       "satirlar": [
+        [
+         "40",
+         "15"
+        ],
+        [
+         "50",
+         "25"
+        ],
+        [
+         "60",
+         "30"
+        ],
+        [
+         "70",
+         "35"
+        ],
+        [
+         "80",
+         "40"
+        ],
+        [
+         "90",
+         "50"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "At rank 6 the domains that give gear up to level 90 (artifact domains) unlock; around rank 8-9 the world level ascension quests begin. As the world level rises, enemies get stronger but rewards improve too. If your rank is not enough, continue with quests and exploration; wishes do not raise your rank."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Raising the world level is not mandatory. If you struggle, stay at a lower world level and strengthen your characters and gear first."
+      }
+     ]
+    },
+    {
+     "id": "dilek-sistemi",
+     "baslik": "How does the wish system work?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Wishes are the luck-based way to obtain characters and weapons. Some rules are written in the game and some are community measurements; keep the two apart."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Topic",
+        "Information"
+       ],
+       "satirlar": [
+        [
+         "Character banner 5-star rate",
+         "Base rate 0.6%; a 5-star is guaranteed within 90 wishes at the latest"
+        ],
+        [
+         "Soft pity",
+         "From about the 74th wish the chance rises (unofficial, community measurement)"
+        ],
+        [
+         "50/50 rule",
+         "The first 5-star is mostly 50% (about 55% with Capturing Radiance); if you lose, the next one is guaranteed"
+        ],
+        [
+         "Weapon banner guarantee",
+         "80 wishes"
+        ],
+        [
+         "4-star",
+         "Guaranteed at least once in 10 wishes"
+        ],
+        [
+         "Pity carryover",
+         "Carries over within the same banner type; different banner types count separately"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Wishes can also be bought with money; but this is not required. Set your budget before spending and do not go past the limit with a \"just one more\" thought. Turn on parental controls to stop children from spending with card details."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Saving your wishes and using them on the character you want most gives a better result than spending at random. But no banner promises an outcome; the guarantee numbers are only upper limits."
+      }
+     ]
+    },
+    {
+     "id": "karakter-ve-kaynak",
+     "baslik": "Characters, teams and resource management",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Team:** using different elements together in a four-character team (for example water + fire, vaporize) gives a combined effect (elemental reaction).",
+        "**Character role:** one main damage dealer, one support or healer, and one character that links the elements is a good base for a team.",
+        "**Weapon and gear:** a character's weapon and artifacts are most of its strength; develop the weapon and the main artifact first.",
+        "**Resin:** used to claim rewards from domains and bosses and refills over time; try not to let it overflow.",
+        "**Free characters:** characters given through the story and events are also enough to build a good team; chasing every character is not required."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Simple rule: the game can be played free; if you have no money your progress only slows down, it does not stop."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Common beginner mistakes",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Spending the starter wishes without thinking.",
+        "Trying to develop every new character at once and spreading resources thin.",
+        "Letting resin overflow or never using it.",
+        "Entering a hard area without developing weapons and artifacts, then blaming the character.",
+        "Missing event deadlines; writing free-reward events into a calendar is enough."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Treat wishes as a game of chance. Always keep the option of putting the same budget toward another character in a later version."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Account security and a spending warning",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Your account carries hours of your effort. Do not share your password, verification code or email access with anyone."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Sites and apps promising free primogems, free wishes or a \"generator\" are scams;** they take over your account or steal your card details. The game's real free sources are only in-game quests, events and codes announced through official channels.",
+        "Redeem codes usually come from livestreams and official channels; type a code only into the game's own code screen or the official site, and never enter your password anywhere else.",
+        "Buying or selling accounts, and using unauthorized software or bots, break the rules and get the account banned.",
+        "Turn on two-step verification; give your HoYoverse account a separate, strong password.",
+        "On children's accounts use a spending limit and parental controls."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "No one asks for your game password \"to give you wishes\". If a suspicious offer arrives, refuse it and change your password right away."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Frequently asked questions",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is Genshin Impact free?",
+         "c": "Yes, downloading and playing is free. There are optional purchases; but the main content can be played without buying."
+        },
+        {
+         "s": "Is the game in Turkish?",
+         "c": "I could not verify Turkish text support. Check the in-game language menu."
+        },
+        {
+         "s": "Which devices does it run on?",
+         "c": "PC, PlayStation, iOS and Android; for other platforms check the official site."
+        },
+        {
+         "s": "How do I get my first 5-star character?",
+         "c": "The beginner banner guarantees Noelle. Other 5-star characters need the wish system and time."
+        },
+        {
+         "s": "Can I trust free primogem sites?",
+         "c": "No. All of them are scams; their aim is to steal your account."
+        },
+        {
+         "s": "Should I get every new character?",
+         "c": "No. You can play all the content with the free ones and one or two you like."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "fr": {
+   "baslik": "Guide du débutant Genshin Impact : premiers pas et vœux (2026)",
+   "ozet": "Un guide pour les nouveaux joueurs de Genshin Impact : premiers pas, Rang d'aventure, système de vœux, gestion des personnages et des ressources, sécurité du compte ; la version actuelle est la 7.2.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Jeu de rôle d'action en monde ouvert (avec éléments de gacha)"
+    },
+    {
+     "ad": "Plateforme",
+     "deger": "PC, PlayStation, iOS, Android (voir le site officiel pour les autres plateformes)"
+    },
+    {
+     "ad": "Modèle économique",
+     "deger": "Gratuit ; achats facultatifs"
+    },
+    {
+     "ad": "Version actuelle",
+     "deger": "7.2 Hour of Ruin (4 novembre 2026)"
+    },
+    {
+     "ad": "Prise en charge du turc",
+     "deger": "Non vérifiée ; consultez la liste des langues dans le jeu"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "Qu'est-ce que Genshin Impact et où en est-il ?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Genshin Impact est un jeu de rôle d'action en monde ouvert de HoYoverse. Dans un monde appelé Teyvat, à la recherche de votre frère ou sœur disparu, vous explorez, résolvez des énigmes, combattez des ennemis et combinez les éléments. Le jeu se télécharge et se joue gratuitement ; le principal moyen d'obtenir des personnages et des armes est un système de hasard appelé « vœu » (wish)."
+      },
+      {
+       "tip": "p",
+       "metin": "La version actuelle est la **7.2 « Hour of Ruin »** ; elle est sortie le 4 novembre 2026 et ses bannières de vœux durent jusqu'au 24 novembre. Cette version apporte de nouveaux personnages 5 étoiles, Mitya (personnage à catalyseur dont l'arme est Starsealed Edict) et Valeriy, ainsi qu'un nouveau personnage 4 étoiles. Il y a aussi la Quête des Archontes acte V « Hour of Ruin » et acte VI, de nouvelles zones de Snezhnaya, Novokitezhgrad et Wingspan Peak, et l'événement « The Grand Defense ». Si vous débutez, inutile de tout rattraper tout de suite ; le jeu vous fait avancer pas à pas."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Les informations de version se renouvellent environ toutes les six semaines. Suivez les bannières et événements actuels via l'écran d'actualités du jeu ou la page d'actualités officielle."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Avant de commencer : plateforme, taille et langue",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Genshin Impact se joue sur PC, PlayStation et mobile (iOS, Android). Votre compte peut servir sur plusieurs plateformes ; toutefois, le partage de progression peut avoir des limites sur certaines plateformes, consultez l'explication officielle avant de vous inscrire."
+      },
+      {
+       "tip": "p",
+       "metin": "**La configuration requise** a augmenté avec les versions. Les anciennes sources indiquent pour PC au moins Windows 10, un i5 de 6e génération, 8 Go de RAM, une GT 1030 et 30 Go d'espace ; les sources récentes évoquent 100 à 150 Go et une carte de classe GTX 1060. À cause de ce conflit, vérifiez les chiffres exacts sur la page de téléchargement officielle. Comme l'espace disque grandit à chaque version, un SSD et beaucoup d'espace libre aident."
+      },
+      {
+       "tip": "p",
+       "metin": "**Langue :** le jeu prend en charge de nombreuses langues, mais je n'ai pas pu vérifier la prise en charge du texte en turc ; la liste officielle de 2020 comptait 13 langues et le turc n'y figurait pas. Consultez la liste des langues dans le menu des paramètres du jeu avant d'installer."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Téléchargez le jeu uniquement depuis le site officiel, les boutiques d'applications (App Store, Google Play, PlayStation Store) ou le lanceur officiel. Les « comptes tout faits » tiers et les fichiers client modifiés font bannir votre compte."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "Les premières heures : pas à pas",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Commencez l'histoire",
+         "metin": "Terminez les quêtes d'introduction ; les systèmes du jeu se débloquent un à un. Plutôt que de vous précipiter, explorez tranquillement la première région (Mondstadt)."
+        },
+        {
+         "baslik": "Utilisez les vœux gratuits",
+         "metin": "La bannière des débutants donne 20 vœux et garantit votre premier 5 étoiles, Noelle. Utilisez les vœux de départ selon le déroulement du jeu ; ne vous pressez pas."
+        },
+        {
+         "baslik": "Récoltez coffres et quêtes",
+         "metin": "Les coffres et quêtes d'exploration que vous voyez sur la carte donnent des matériaux de vœux et des ressources de progression de personnage dans les premiers jours."
+        },
+        {
+         "baslik": "Faites les commissions quotidiennes",
+         "metin": "Les commissions quotidiennes (Daily Commissions) donnent une petite récompense chaque jour ; n'y passez que peu de temps."
+        },
+        {
+         "baslik": "Développez vos personnages",
+         "metin": "Montez d'abord votre personnage principal et un équipier que vous aimez ; ne développez pas chaque nouveau personnage de façon dispersée."
+        },
+        {
+         "baslik": "Vérifiez votre sac",
+         "metin": "Avant de vendre les matériaux de votre sac, lisez à quoi ils servent ; la plupart seront utiles plus tard."
+        },
+        {
+         "baslik": "Gardez l'œil sur le temps",
+         "metin": "Le jeu sauvegarde automatiquement ; mais les événements sont limités dans le temps, notez ceux qui vont se terminer."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "La plus grosse erreur des premiers jours est de vouloir tout faire à la fois. Terminer une région avant de passer à la suivante vous aide à comprendre le jeu et protège vos ressources."
+      }
+     ]
+    },
+    {
+     "id": "macera-rutbesi",
+     "baslik": "Rang d'aventure et progression du jeu",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Le **Rang d'aventure (Adventure Rank, AR)** est le niveau global de votre compte. Il monte quand vous explorez, ouvrez des coffres et terminez des quêtes. Pour « ascensionner » vos personnages au-delà du niveau 40, un certain rang est requis ; si votre rang est bas, votre personnage reste bloqué à un certain niveau."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Niveau maximal du personnage",
+        "Rang d'aventure requis"
+       ],
+       "satirlar": [
+        [
+         "40",
+         "15"
+        ],
+        [
+         "50",
+         "25"
+        ],
+        [
+         "60",
+         "30"
+        ],
+        [
+         "70",
+         "35"
+        ],
+        [
+         "80",
+         "40"
+        ],
+        [
+         "90",
+         "50"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Au rang 6, les domaines qui donnent de l'équipement jusqu'au niveau 90 (domaines d'artéfacts) se débloquent ; vers les rangs 8-9, les quêtes d'ascension du niveau du monde commencent. À mesure que le niveau du monde monte, les ennemis deviennent plus forts mais les récompenses s'améliorent aussi. Si votre rang ne suffit pas, continuez avec les quêtes et l'exploration ; les vœux ne font pas monter le rang."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Monter le niveau du monde n'est pas obligatoire. Si vous peinez, restez à un niveau du monde plus bas et renforcez d'abord vos personnages et votre équipement."
+      }
+     ]
+    },
+    {
+     "id": "dilek-sistemi",
+     "baslik": "Comment fonctionne le système de vœux ?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Les vœux sont la voie du hasard pour obtenir personnages et armes. Certaines règles sont écrites dans le jeu et d'autres sont des mesures de la communauté ; distinguez les deux."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Sujet",
+        "Information"
+       ],
+       "satirlar": [
+        [
+         "Taux de 5 étoiles de la bannière de personnage",
+         "Taux de base de 0,6 % ; un 5 étoiles est garanti au plus tard en 90 vœux"
+        ],
+        [
+         "Garantie douce (soft pity)",
+         "À partir du 74e vœu environ, la chance augmente (non officiel, mesure de la communauté)"
+        ],
+        [
+         "Règle du 50/50",
+         "Le premier 5 étoiles est le plus souvent à 50 % (environ 55 % avec Capturing Radiance) ; si vous perdez, le suivant est garanti"
+        ],
+        [
+         "Garantie de la bannière d'arme",
+         "80 vœux"
+        ],
+        [
+         "4 étoiles",
+         "Garanti au moins une fois en 10 vœux"
+        ],
+        [
+         "Report de la garantie",
+         "Se reporte au sein du même type de bannière ; les différents types de bannières comptent séparément"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Les vœux peuvent aussi s'acheter avec de l'argent ; mais ce n'est pas obligatoire. Fixez votre budget avant de dépenser et ne dépassez pas la limite en pensant « juste un de plus ». Activez le contrôle parental pour empêcher les enfants de dépenser avec les données d'une carte."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Mettre vos vœux de côté et les utiliser pour le personnage que vous voulez le plus donne un meilleur résultat que dépenser au hasard. Mais aucune bannière ne promet un résultat ; les chiffres de garantie ne sont que des limites supérieures."
+      }
+     ]
+    },
+    {
+     "id": "karakter-ve-kaynak",
+     "baslik": "Personnages, équipes et gestion des ressources",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Équipe :** utiliser différents éléments ensemble dans une équipe de quatre personnages (par exemple eau + feu, vaporisation) donne un effet combiné (réaction élémentaire).",
+        "**Rôle du personnage :** un principal pourvoyeur de dégâts, un soutien ou soigneur, et un personnage qui relie les éléments forment une bonne base d'équipe.",
+        "**Arme et équipement :** l'arme et les artéfacts d'un personnage constituent l'essentiel de sa force ; développez d'abord l'arme et l'artéfact principal.",
+        "**Résine (Resin) :** sert à réclamer les récompenses des domaines et des boss et se recharge avec le temps ; essayez de ne pas la laisser déborder.",
+        "**Personnages gratuits :** les personnages offerts par l'histoire et les événements suffisent aussi pour bâtir une bonne équipe ; courir après chaque personnage n'est pas nécessaire."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Règle simple : le jeu se joue gratuitement ; sans argent, votre progression ralentit seulement, elle ne s'arrête pas."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Erreurs fréquentes des débutants",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Dépenser les vœux de départ sans réfléchir.",
+        "Vouloir développer chaque nouveau personnage en même temps et disperser les ressources.",
+        "Laisser la résine déborder ou ne jamais l'utiliser.",
+        "Entrer dans une zone difficile sans avoir développé armes et artéfacts, puis accuser le personnage.",
+        "Rater les dates limites des événements ; noter les événements à récompenses gratuites dans un calendrier suffit."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Considérez les vœux comme un jeu de hasard. Gardez toujours la possibilité de consacrer le même budget à un autre personnage dans une version ultérieure."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Sécurité du compte et avertissement sur les dépenses",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Votre compte porte des heures d'efforts. Ne partagez votre mot de passe, votre code de vérification ni l'accès à votre e-mail avec personne."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Les sites et applications qui promettent des primogems gratuites, des vœux gratuits ou un « générateur » sont des arnaques ;** ils prennent le contrôle de votre compte ou volent vos données de carte. Les vraies sources gratuites du jeu sont uniquement les quêtes en jeu, les événements et les codes annoncés par les canaux officiels.",
+        "Les codes cadeaux (redeem codes) viennent généralement des diffusions en direct et des canaux officiels ; saisissez un code uniquement dans l'écran de codes du jeu ou sur le site officiel, et ne saisissez jamais votre mot de passe ailleurs.",
+        "Acheter ou vendre des comptes, et utiliser des logiciels non autorisés ou des bots, enfreint les règles et fait bannir le compte.",
+        "Activez la validation en deux étapes ; donnez à votre compte HoYoverse un mot de passe distinct et robuste.",
+        "Sur les comptes d'enfants, utilisez une limite de dépenses et le contrôle parental."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Personne ne vous demande votre mot de passe de jeu « pour vous donner des vœux ». Si une offre suspecte arrive, refusez-la et changez immédiatement votre mot de passe."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Questions fréquentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Genshin Impact est-il gratuit ?",
+         "c": "Oui, le téléchargement et le jeu sont gratuits. Il y a des achats facultatifs ; mais le contenu principal se joue sans acheter."
+        },
+        {
+         "s": "Le jeu est-il en turc ?",
+         "c": "Je n'ai pas pu vérifier la prise en charge du texte en turc. Consultez le menu des langues dans le jeu."
+        },
+        {
+         "s": "Sur quels appareils fonctionne-t-il ?",
+         "c": "PC, PlayStation, iOS et Android ; pour les autres plateformes, voyez le site officiel."
+        },
+        {
+         "s": "Comment obtenir mon premier personnage 5 étoiles ?",
+         "c": "La bannière des débutants garantit Noelle. Les autres personnages 5 étoiles demandent le système de vœux et du temps."
+        },
+        {
+         "s": "Puis-je faire confiance aux sites de primogems gratuites ?",
+         "c": "Non. Ce sont tous des arnaques ; leur but est de voler votre compte."
+        },
+        {
+         "s": "Dois-je obtenir chaque nouveau personnage ?",
+         "c": "Non. Vous pouvez jouer tout le contenu avec les personnages gratuits et un ou deux que vous aimez."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "es": {
+   "baslik": "Genshin Impact: guía para principiantes y deseos (2026)",
+   "ozet": "Una guía para jugadores nuevos de Genshin Impact con primeros pasos, Rango de Aventura, sistema de deseos, gestión de personajes y recursos, y seguridad de la cuenta; la versión actual es la 7.2.",
+   "kunye": [
+    {
+     "ad": "Género",
+     "deger": "Juego de rol de acción de mundo abierto (con elementos gacha)"
+    },
+    {
+     "ad": "Plataforma",
+     "deger": "PC, PlayStation, iOS, Android (consulta el sitio oficial para otras plataformas)"
+    },
+    {
+     "ad": "Modelo de precio",
+     "deger": "Gratis; compras opcionales"
+    },
+    {
+     "ad": "Versión actual",
+     "deger": "7.2 Hour of Ruin (4 de noviembre de 2026)"
+    },
+    {
+     "ad": "Soporte en turco",
+     "deger": "No verificado; revisa la lista de idiomas dentro del juego"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "¿Qué es Genshin Impact y dónde está ahora?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Genshin Impact es un juego de rol de acción de mundo abierto de HoYoverse. En un mundo llamado Teyvat, mientras buscas a tu hermano o hermana perdido, exploras, resuelves puzles, combates enemigos y combinas elementos. El juego se descarga y se juega gratis; la principal forma de obtener personajes y armas es un sistema de azar llamado «deseo» (wish)."
+      },
+      {
+       "tip": "p",
+       "metin": "La versión actual es la **7.2 «Hour of Ruin»**; salió el 4 de noviembre de 2026 y sus banners de deseos duran hasta el 24 de noviembre. Esta versión trae nuevos personajes de 5 estrellas, Mitya (personaje de catalizador cuya arma es Starsealed Edict) y Valeriy, además de un nuevo personaje de 4 estrellas. También hay la Misión de Arconte acto V «Hour of Ruin» y acto VI, nuevas zonas de Snezhnaya, Novokitezhgrad y Wingspan Peak, y el evento «The Grand Defense». Si estás empezando, no necesitas ponerte al día con todo de inmediato; el juego te hace avanzar paso a paso."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "La información de versión se renueva más o menos cada seis semanas. Sigue los banners y eventos actuales en la pantalla de noticias del propio juego o en la página oficial de noticias."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Antes de empezar: plataforma, tamaño e idioma",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Genshin Impact funciona en PC, PlayStation y móvil (iOS, Android). Tu cuenta puede usarse entre plataformas; sin embargo, compartir el progreso puede tener límites en algunas plataformas, así que consulta la explicación oficial antes de registrarte."
+      },
+      {
+       "tip": "p",
+       "metin": "**Los requisitos del sistema** han crecido con las versiones. Fuentes antiguas indican para PC como mínimo Windows 10, un i5 de 6.ª generación, 8 GB de RAM, una GT 1030 y 30 GB de espacio; fuentes más recientes mencionan 100-150 GB y una tarjeta de clase GTX 1060. Por este conflicto, comprueba las cifras exactas en la página oficial de descarga. Como el espacio en disco crece con cada versión, un SSD y mucho espacio libre ayudan."
+      },
+      {
+       "tip": "p",
+       "metin": "**Idioma:** el juego admite muchos idiomas, pero no pude verificar el soporte de texto en turco; la lista oficial de 2020 tenía 13 idiomas y el turco no estaba entre ellos. Revisa la lista de idiomas en el menú de ajustes del juego antes de instalar."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Descarga el juego solo desde el sitio oficial, las tiendas de aplicaciones (App Store, Google Play, PlayStation Store) o el lanzador oficial. Las «cuentas ya hechas» de terceros y los archivos de cliente modificados hacen que te bloqueen la cuenta."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "Las primeras horas: paso a paso",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Empieza la historia",
+         "metin": "Termina las misiones de introducción; los sistemas del juego se desbloquean uno a uno. En lugar de correr, explora con calma la primera región (Mondstadt)."
+        },
+        {
+         "baslik": "Usa los deseos gratis",
+         "metin": "El banner de principiantes da 20 deseos y garantiza tu primer 5 estrellas, Noelle. Usa los deseos iniciales según cómo vaya el juego; no tengas prisa."
+        },
+        {
+         "baslik": "Recoge cofres y misiones",
+         "metin": "Los cofres y misiones de exploración que ves en el mapa dan materiales de deseo y recursos de crecimiento de personaje en los primeros días."
+        },
+        {
+         "baslik": "Haz los encargos diarios",
+         "metin": "Los encargos diarios (Daily Commissions) dan una pequeña recompensa cada día; dedícales solo poco tiempo."
+        },
+        {
+         "baslik": "Desarrolla tus personajes",
+         "metin": "Sube primero a tu personaje principal y a un compañero que te guste; no desarrolles cada personaje nuevo de forma dispersa."
+        },
+        {
+         "baslik": "Revisa tu mochila",
+         "metin": "Antes de vender los materiales de tu mochila, lee para qué sirven; la mayoría harán falta más adelante."
+        },
+        {
+         "baslik": "Controla el tiempo",
+         "metin": "El juego guarda automáticamente; pero los eventos tienen tiempo limitado, anota los que están por terminar."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "El mayor error de los primeros días es intentar hacerlo todo a la vez. Terminar una región antes de pasar a la siguiente te ayuda a entender el juego y protege tus recursos."
+      }
+     ]
+    },
+    {
+     "id": "macera-rutbesi",
+     "baslik": "Rango de Aventura y progresión del juego",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "El **Rango de Aventura (Adventure Rank, AR)** es el nivel general de tu cuenta. Sube a medida que exploras, abres cofres y terminas misiones. Para «ascender» a tus personajes más allá del nivel 40 se necesita cierto rango; si tu rango es bajo, tu personaje se queda atascado en cierto nivel."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Límite de nivel del personaje",
+        "Rango de Aventura necesario"
+       ],
+       "satirlar": [
+        [
+         "40",
+         "15"
+        ],
+        [
+         "50",
+         "25"
+        ],
+        [
+         "60",
+         "30"
+        ],
+        [
+         "70",
+         "35"
+        ],
+        [
+         "80",
+         "40"
+        ],
+        [
+         "90",
+         "50"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "En el rango 6 se desbloquean los dominios que dan equipo hasta el nivel 90 (dominios de artefactos); hacia los rangos 8-9 empiezan las misiones de ascenso de nivel del mundo. A medida que sube el nivel del mundo, los enemigos se hacen más fuertes pero las recompensas también mejoran. Si tu rango no alcanza, sigue con misiones y exploración; los deseos no suben el rango."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Subir el nivel del mundo no es obligatorio. Si te cuesta, quédate en un nivel del mundo más bajo y refuerza antes a tus personajes y tu equipo."
+      }
+     ]
+    },
+    {
+     "id": "dilek-sistemi",
+     "baslik": "¿Cómo funciona el sistema de deseos?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Los deseos son la vía de azar para conseguir personajes y armas. Algunas reglas están escritas en el juego y otras son mediciones de la comunidad; distingue unas de otras."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Tema",
+        "Información"
+       ],
+       "satirlar": [
+        [
+         "Probabilidad de 5 estrellas del banner de personaje",
+         "Probabilidad base del 0,6 %; un 5 estrellas está garantizado como máximo en 90 deseos"
+        ],
+        [
+         "Garantía suave (soft pity)",
+         "Desde el deseo 74 aproximadamente la probabilidad sube (no oficial, medición de la comunidad)"
+        ],
+        [
+         "Regla del 50/50",
+         "El primer 5 estrellas es casi siempre al 50 % (alrededor del 55 % con Capturing Radiance); si pierdes, el siguiente está garantizado"
+        ],
+        [
+         "Garantía del banner de armas",
+         "80 deseos"
+        ],
+        [
+         "4 estrellas",
+         "Garantizado al menos una vez cada 10 deseos"
+        ],
+        [
+         "Traspaso de la garantía",
+         "Se traspasa dentro del mismo tipo de banner; los distintos tipos de banner cuentan por separado"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Los deseos también se pueden comprar con dinero; pero no es obligatorio. Fija tu presupuesto antes de gastar y no pases el límite pensando «solo uno más». Activa el control parental para evitar que los niños gasten con los datos de una tarjeta."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Ahorrar tus deseos y usarlos en el personaje que más quieres da mejor resultado que gastar al azar. Pero ningún banner promete un resultado; los números de garantía son solo límites máximos."
+      }
+     ]
+    },
+    {
+     "id": "karakter-ve-kaynak",
+     "baslik": "Personajes, equipos y gestión de recursos",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Equipo:** usar distintos elementos juntos en un equipo de cuatro personajes (por ejemplo agua + fuego, vaporizar) da un efecto combinado (reacción elemental).",
+        "**Rol del personaje:** un principal causante de daño, un apoyo o sanador, y un personaje que enlace los elementos son una buena base de equipo.",
+        "**Arma y equipo:** el arma y los artefactos de un personaje son la mayor parte de su fuerza; desarrolla primero el arma y el artefacto principal.",
+        "**Resina (Resin):** sirve para reclamar recompensas de dominios y jefes y se recarga con el tiempo; intenta que no se desborde.",
+        "**Personajes gratis:** los personajes que se dan con la historia y los eventos también bastan para armar un buen equipo; perseguir a todos los personajes no es necesario."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Regla simple: el juego se puede jugar gratis; si no tienes dinero, tu progreso solo se ralentiza, no se detiene."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Errores comunes de los principiantes",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Gastar los deseos iniciales sin pensar.",
+        "Intentar desarrollar cada personaje nuevo a la vez y repartir los recursos demasiado.",
+        "Dejar que la resina se desborde o no usarla nunca.",
+        "Entrar en una zona difícil sin desarrollar armas y artefactos y luego culpar al personaje.",
+        "Perderse los plazos de los eventos; basta con anotar en un calendario los eventos con recompensas gratis."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Considera los deseos como un juego de azar. Conserva siempre la opción de destinar el mismo presupuesto a otro personaje en una versión posterior."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Seguridad de la cuenta y aviso sobre gastos",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Tu cuenta guarda horas de tu esfuerzo. No compartas tu contraseña, tu código de verificación ni el acceso a tu correo con nadie."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Los sitios y aplicaciones que prometen primogemas gratis, deseos gratis o un «generador» son estafas;** se apoderan de tu cuenta o roban los datos de tu tarjeta. Las verdaderas fuentes gratuitas del juego son solo las misiones dentro del juego, los eventos y los códigos anunciados por canales oficiales.",
+        "Los códigos de canje (redeem codes) suelen salir de las emisiones en directo y de los canales oficiales; escribe un código solo en la pantalla de códigos del propio juego o en el sitio oficial, y no introduzcas tu contraseña en ningún otro sitio.",
+        "Comprar o vender cuentas, y usar software no autorizado o bots, incumple las normas y hace que bloqueen la cuenta.",
+        "Activa la verificación en dos pasos; dale a tu cuenta de HoYoverse una contraseña distinta y robusta.",
+        "En las cuentas de niños usa un límite de gasto y el control parental."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Nadie te pide tu contraseña del juego «para darte deseos». Si llega una oferta sospechosa, recházala y cambia tu contraseña de inmediato."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Preguntas frecuentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "¿Genshin Impact es gratis?",
+         "c": "Sí, descargarlo y jugarlo es gratis. Hay compras opcionales; pero el contenido principal se juega sin comprar."
+        },
+        {
+         "s": "¿El juego está en turco?",
+         "c": "No pude verificar el soporte de texto en turco. Revisa el menú de idiomas dentro del juego."
+        },
+        {
+         "s": "¿En qué dispositivos funciona?",
+         "c": "PC, PlayStation, iOS y Android; para otras plataformas consulta el sitio oficial."
+        },
+        {
+         "s": "¿Cómo consigo mi primer personaje de 5 estrellas?",
+         "c": "El banner de principiantes garantiza a Noelle. Los demás personajes de 5 estrellas requieren el sistema de deseos y tiempo."
+        },
+        {
+         "s": "¿Puedo confiar en los sitios de primogemas gratis?",
+         "c": "No. Todos son estafas; su objetivo es robar tu cuenta."
+        },
+        {
+         "s": "¿Debo conseguir cada personaje nuevo?",
+         "c": "No. Puedes jugar todo el contenido con los gratuitos y uno o dos que te gusten."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

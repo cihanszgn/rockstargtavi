@@ -1,0 +1,1245 @@
+{
+ "oyun": "fortnite",
+ "guncelleme": "2026-11-14",
+ "surum": "Bölüm 7 - Treasure Hunters mini sezonu (v43.00)",
+ "kaynaklar": [
+  {
+   "url": "https://www.fortnite.com/news/fortnite-treasure-hunters-the-greatest-adventure-of-all-time",
+   "ad": "Fortnite Treasure Hunters announcement"
+  },
+  {
+   "url": "https://communities.epicgames.com/thread/set-sail-for-fortnite-treasure-hunters-the-greatest-adventure-of-all-time/Pmud",
+   "ad": "Epic Games Community: Treasure Hunters"
+  },
+  {
+   "url": "https://epicgames.com/help/c-202300000001636/c-202300000001719/what-are-the-system-requirements-for-fortnite-on-pc-a202300000012731",
+   "ad": "Epic Games help: Fortnite PC system requirements"
+  },
+  {
+   "url": "https://www.epicgames.com/help/en-US/account-c-202300000001645/account-security-c-202300000001755/what-rewards-do-i-get-for-enabling-two-factor-authentication-2fa-on-my-epic-games-account-a202300000010272",
+   "ad": "Epic Games help: 2FA rewards"
+  },
+  {
+   "url": "https://www.fortnite.com/@epic/ranked-reload-zero-build",
+   "ad": "Fortnite: Ranked Reload Zero Build"
+  },
+  {
+   "url": "https://markets.businessinsider.com/news/stocks/epic-games-raises-prices-for-fortnite-v-bucks-1035921150",
+   "ad": "Markets Insider: Epic Games raises prices for Fortnite V-Bucks"
+  }
+ ],
+ "diller": {
+  "tr": {
+   "baslik": "Fortnite Rehberi - Yeni Başlayanlar İçin 2026",
+   "ozet": "Fortnite'a yeni başlayanlar için hesap, kurulum, ilk maçlar, ayarlar, Battle Pass ve güvenli harcama; Bölüm 7 Treasure Hunters dönemine göre.",
+   "kunye": [
+    {
+     "ad": "Tür",
+     "deger": "Battle royale ve çok modlu platform"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Epic Games hesabıyla birçok platform; ayrıntı için resmi sayfaya bak"
+    },
+    {
+     "ad": "Fiyat modeli",
+     "deger": "Ücretsiz; isteğe bağlı V-Bucks satın alımları"
+    },
+    {
+     "ad": "Güncel sürüm",
+     "deger": "Bölüm 7, Treasure Hunters mini sezonu (v43.00, 1 Kasım 2026)"
+    },
+    {
+     "ad": "Türkçe desteği",
+     "deger": "Oyun içi dil ayarından kontrol et (doğrulanmadı)"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "oyun-nedir",
+     "baslik": "Fortnite nedir ve 2026'da hangi durumda?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Fortnite, Epic Games'in ücretsiz oyunu. Çıkış noktası battle royale (son kalan kazanır) olsa da bugün tek bir oyundan çok bir platform: farklı modlar, topluluğun yaptığı adalar ve müzik, yarış gibi ayrı deneyimler aynı hesap altında toplanıyor. Bu rehber en çok oynanan çekirdek deneyimi, yani Battle Royale'i anlatıyor."
+      },
+      {
+       "tip": "p",
+       "metin": "Kasım 2026'da oyun **Bölüm 7'nin \"Treasure Hunters\" mini sezonunda**. Epic'in duyurusuna göre sezon 1 Kasım'da v43.00 güncellemesiyle başladı: yeni Crossbones Isle bölgesi, One Piece ortak çalışması ve haftalık değişen kaptanlar var. Epic, Bölüm 7 final etkinliğinin 5 Aralık 2026 Cumartesi günü olacağını doğruladı; sonrasında ne geleceği bu rehberin yazıldığı gün resmen açıklanmamıştı."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Fortnite her sezon haritayı, eşyaları ve kuralları değiştirir. Örneğin v43.00'da altın külçeler ve otomatlar kaldırıldı. Bu yüzden bu rehber silah listesi değil, kalıcı alışkanlıklar öğretir."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Başlamadan önce: hesap, kurulum, gereksinimler",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Oynamak için ücretsiz bir Epic Games hesabı gerekir. Bilgisayarda oynayacaksan Epic'in resmi yardım sayfası şu donanımı veriyor."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Minimum:** Intel HD 4000 veya Radeon Vega 8 ekran birimi, Core i3-3225 işlemci, 64 bit Windows 10 22H2.",
+        "**Önerilen:** GeForce GTX 960 veya Radeon R9 280 sınıfı DirectX 11 ekran kartı (2 GB video belleği), Core i5-7300U veya Ryzen 3 3300U, 16 GB RAM, NVMe SSD, 64 bit Windows 10 veya 11.",
+        "**Epic ön ayarı için:** RTX 3070 veya RX 6700 XT sınıfı kart (8 GB video belleği) ve Core i7-8700 veya Ryzen 7 3700X."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Hesabını daha ilk gün iki adımlı doğrulamaya (2FA) bağla. Epic bunu bir \"Boogie Down\" dansıyla ödüllendiriyor, ama asıl kazanç hesabını kaptırmamak."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "İlk maçların: adım adım",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Yapı kurmayan modla başla",
+         "metin": "Zero Build'de duvar ve rampa kurmak gerekmez. Nişan almayı, hareketi ve çemberi öğrenmek için en yumuşak giriş burası."
+        },
+        {
+         "baslik": "İnişini seç",
+         "metin": "Savaş otobüsünden atlarken kalabalık yerlerden uzak bir nokta seç. İlk amaç ölmeden eşya toplamak."
+        },
+        {
+         "baslik": "Silah, kalkan ve iyileşme topla",
+         "metin": "En az iki silah ve bir iyileştirici edin. Daha nadir renkteki eşyalar genellikle daha güçlüdür; elindeki ile çatışmaya girebilmek yeter."
+        },
+        {
+         "baslik": "Fırtınanın önünde kal",
+         "metin": "Haritayı sık kontrol et ve çemberin yönüne erken hareket et. Fırtına içinde kalmak hasar verir ve seni açığa çıkarır."
+        },
+        {
+         "baslik": "Maçtan sonra bir ders çıkar",
+         "metin": "Öldüğünde tek soru sor: Bu çatışmayı almak zorunda mıydım? Her maçtan bir şey düzeltmek yeterli."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "İlk maçlarda amaç kazanmak değil. İlk on dakikada hayatta kalıp ilk üç sıraya yaklaşmak bile çoğu yeni oyuncuya göre iyi bir başlangıç."
+      }
+     ]
+    },
+    {
+     "id": "modlar",
+     "baslik": "Modlar ve nereden başlamalı?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Epic'in resmi sayfalarında görülen başlıca modlar aşağıda. Bir modun ne zaman açık olduğu sezona göre değişebilir; oyun içi menü her zaman doğru liste."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Mod",
+        "Kime uygun?"
+       ],
+       "satirlar": [
+        [
+         "Battle Royale",
+         "Klasik deneyim; yapı kurma dahil. İlerleyen aşamada öğrenilir."
+        ],
+        [
+         "Zero Build",
+         "Yapısız sürüm; yeni oyuncular için en iyi başlangıç."
+        ],
+        [
+         "Ranked Battle Royale / Ranked Reload Zero Build",
+         "Sıralamalı sürümler; temel becerileri oturttuktan sonra."
+        ],
+        [
+         "Reload",
+         "Resmi sayfada Ranked Reload Zero Build ile birlikte geçen mod; ayrıntı için oyun içi açıklamaya bak."
+        ],
+        [
+         "LEGO Fortnite",
+         "Savaşmaktan çok keşif, yapı ve hayatta kalma sevenlere."
+        ],
+        [
+         "Fortnite Festival",
+         "Müzik temelli ayrı bir deneyim; ritim oyunu sevenlere."
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Yeni başlıyorsan Zero Build ile üç dört gün oyna, sonra yapı kurma modunu dene. İkisi de aynı Battle Pass'e puan yazar mı, oyun içi bilgi ekranından kontrol et."
+      }
+     ]
+    },
+    {
+     "id": "temel-mekanikler",
+     "baslik": "Temel mekanikler",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Fortnite'ta üç şey sürekli işini görür: hareket, kaynak ve konum. Meta eşyalar değişse de bu üçlü sabit kalır."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Hareket:** koşmak, kaymak ve tırmanmak yalnız dolaşmak için değil, ateş altından çıkmak için de araç. Sürekli aynı hızda düz koşan oyuncu kolay hedeftir.",
+        "**Kaynak:** yapı kuran modda malzeme toplamak (ağaç, taş, metal) çatışmaya hazır olmanın parçasıdır. Zero Build'de bu iş yok, onun yerine iyileştirme ve kalkan öne çıkar.",
+        "**Konum:** yüksek zemin, örtü ve çembere yakın bir kenar avantaj verir. Açıkta kalan oyuncu çoğu zaman çevreden vurulur.",
+        "**Sağlık ve kalkan:** iki ayrı çubuk. Kalkanı çatışma öncesi doldurmak, çatışma ortasında iyileşmeye çalışmaktan iyidir.",
+        "**Ses:** ateş, ayak ve sandık sesleri bilgi verir. Kulaklıkla oynamak ve gerekiyorsa görsel ses göstergesini açmak yardım eder."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Her çatışmadan sonra yağma yapmak ve iyileşmek için güvenli bir yer bul. Eşya topladığın sırada seni bekleyen üçüncü bir oyuncu olabilir."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Ayarlar: sağlam başlangıç değerleri",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Başlangıç için güvenli değerler. Hepsi sana göre ince ayar ister; bir seferde yalnız birini değiştir."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Kare sınırı:** monitör yenileme hızı kadar. Daha düşük hızda istikrarlı bir oyun, dalgalanan yüksek hızdan iyidir.",
+        "**Grafik:** düşük veya orta ön ayarla başla. Gölgeleri ve efektleri kıs, görüş mesafesini ve doku kalitesini bellek durumuna göre ayarla.",
+        "**Hassasiyet:** orta bir değerden başla, küçük adımlarla ayarla. Nişan alırken kontrol, hızdan önemli.",
+        "**Kontrol ölü bölgeleri (gamepad):** analog çubuklarda gereksiz titremeyi azaltacak kadar yükselt, ama fark edilir bir gecikme olmasın.",
+        "**Erişilebilirlik:** renk körlüğü seçenekleri ve görsel ses göstergesi oyun içi ayarlarda bulunur; ihtiyacın varsa ilk gün aç."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Ayarlarını değiştirdikten sonra yeni bir maçta değil, yapı kurma veya hedef alanı gibi sakin bir yerde dene. Böylece çatışmadan bağımsız karar verirsin."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme",
+     "baslik": "İlerleme: Battle Pass ve sezon",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Sezon boyunca oynadıkça deneyim puanı kazanır ve Battle Pass'te ödül açarsın. Battle Pass 800 V-Bucks ve Mart 2026'daki fiyat değişikliğinden bu yana 800 V-Bucks geri veriyor; bölgendeki güncel fiyat için oyun içi Geçişler sekmesine bak."
+      },
+      {
+       "tip": "p",
+       "metin": "Treasure Hunters döneminde Epic, Kaptan Günleri (1, 8, 12, 15 ve 22 Kasım), Pazartesi Ustalık günleri ve Cumartesi Hazine Saatleri gibi düzenli etkinlikler duyurdu. Fortnite OG ayrı bir sezon yürütüyor; hangisinin sana uyduğunu birkaç maç sonunda anlarsın."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Önce sezonun hedeflerine bak ve ilerlemesi kolay olanlarla başla.",
+        "Her şeyi bir haftada bitirmeye çalışma; sezon uzun, ve etkinlikler zamana yayılıyor.",
+        "Ödülün gerçekten istediğin bir şey olduğundan emin olmadan Battle Pass satın alma; sezon bitince ilerleme kapanır."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Bölüm 7 final etkinliği 5 Aralık'ta; satın alma kararını ona göre ver, ve sonrasında gelecek yeni bölümün ayrıntılarını resmi duyurudan öğren."
+      }
+     ]
+    },
+    {
+     "id": "baslangic-hatalari",
+     "baslik": "Yeni başlayanların sık hataları",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Doğrudan zorlu alana inmek.** Kalabalık bir yere atlamak, eşya bulmadan elenmek demek.",
+        "**Fırtınaya yetişememek.** Eşya toplarken çemberi unutmak aceleye ve hasara yol açar.",
+        "**Açıkta eşya aramak.** Sandık ve yer eşyası ararken çevreyi kontrol et.",
+        "**Rakibi küçümsemek ve karşılıksız çatışmak.** Bazen kaçmak, kazanmaktan daha akıllıcadır.",
+        "**Her şeyi satın almak istemek.** Kozmetik eşyalar seni daha güçlü yapmaz; bütçeni önceden belirle.",
+        "**Gece geç oynayıp dikkati kaybetmek.** Yorgunken hata artar; kısa oturumlar daha öğreticidir."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Her gün yalnız tek bir hedef koy: bugün çember zamanlamasını, yarın eşya yönetimini çalış. Çok hedef, hiçbirini öğrenmemek demek."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik-ve-harcama",
+     "baslik": "Hesap güvenliği ve harcama uyarısı",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Fortnite ücretsizdir ama V-Bucks ile kozmetik ve Battle Pass satın alınır. Bunu gerçek parayla alırsın; bu yüzden harcamayı bir eğlence bütçesi olarak ele al ve önceden sınırla."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Epic hesabında iki adımlı doğrulamayı aç ve şifreni yalnızca Epic'in resmi giriş sayfasına yaz.",
+        "Çocuklar için ebeveyn denetimi kur. Epic, ebeveyn kurulumu yapılmamış çocuklar için kısıtlı (Cabined) hesap sistemi sunuyor; sohbet ve harcama izinlerini kontrol et.",
+        "Ücretsiz V-Bucks vaat eden bağlantılara ve oyun hilesi gibi görünen dosyalara tıklama; bunlar hesap çalmak için kullanılır.",
+        "Harcama yapmadan önce fiyatın yerel para biriminde göründüğünü ve neye karşılık geldiğini kontrol et."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Hile yazılımı, nişan botu, makro veya özel tuş eşleştirme aygıtlarından, hesap, V-Bucks veya eşya alıp satmaktan ve başkasına rütbe kastırmaktan (boost) uzak dur. Bunlar hesabın kalıcı kapatılmasına yol açar ve çoğunlukla dolandırıcılıktır."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Sık sorulan sorular",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Fortnite ücretsiz mi?",
+         "c": "Evet, oynamak ücretsiz. İsteğe bağlı satın alımlar kozmetik ve Battle Pass içindir."
+        },
+        {
+         "s": "Yapı kurmayı öğrenmek zorunda mıyım?",
+         "c": "Hayır. Zero Build modunda yapı kurma yok; istersen sonradan öğrenirsin."
+        },
+        {
+         "s": "Battle Pass'e ne kadar harcamalıyım?",
+         "c": "Zorunlu değil. Pass 800 V-Bucks ve Mart 2026'dan beri 800 V-Bucks geri veriyor; sezonda yeterince oynayacaksan değerlendir."
+        },
+        {
+         "s": "Bölüm 7 ne zaman bitiyor?",
+         "c": "Epic final etkinliğinin 5 Aralık 2026 Cumartesi günü olacağını duyurdu. Sonrasındaki içerik için resmi duyuruları bekle."
+        },
+        {
+         "s": "Ücretsiz V-Bucks veren siteler güvenli mi?",
+         "c": "Hayır. Bunlar çoğunlukla hesap çalma veya dolandırıcılık girişimidir. V-Bucks'ı yalnız resmi mağazadan al."
+        },
+        {
+         "s": "Çocuğum için nasıl güvenli ayarlarım?",
+         "c": "Epic hesabında ebeveyn denetimlerini aç, sohbeti ve harcamayı onaya bağla ve ödeme yöntemini kayıtlı bırakma."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "en": {
+   "baslik": "Fortnite Guide - Beginner's Handbook 2026",
+   "ozet": "A beginner's guide to Fortnite covering account, install, first matches, settings, the Battle Pass and safe spending, written for the Chapter 7 Treasure Hunters period.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Battle royale and multi-mode platform"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Many platforms with an Epic Games account; see the official page for details"
+    },
+    {
+     "ad": "Pricing model",
+     "deger": "Free to play; optional V-Bucks purchases"
+    },
+    {
+     "ad": "Current version",
+     "deger": "Chapter 7, Treasure Hunters mini-season (v43.00, 1 November 2026)"
+    },
+    {
+     "ad": "Turkish support",
+     "deger": "Check the in-game language setting (not verified)"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "oyun-nedir",
+     "baslik": "What Fortnite is and where it stands in 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Fortnite is Epic Games' free-to-play title. It started as a battle royale (last one standing wins), but today it is less a single game than a platform: different modes, community-made islands and separate experiences such as music and racing all sit under one account. This guide covers the most-played core experience, Battle Royale."
+      },
+      {
+       "tip": "p",
+       "metin": "In November 2026 the game is in the **Chapter 7 \"Treasure Hunters\" mini-season**. According to Epic's announcement it began on 1 November with update v43.00, bringing the new Crossbones Isle area, a One Piece collaboration and captains who change weekly. Epic confirmed the Chapter 7 end event for Saturday, 5 December 2026; what follows had not been officially announced on the day this guide was written."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Fortnite changes the map, items and rules every season. In v43.00, for example, gold bars and vending machines were removed. That is why this guide teaches lasting habits rather than weapon lists."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Before you start: account, install, requirements",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "You need a free Epic Games account to play. If you play on PC, Epic's official help page gives the following hardware."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Minimum:** Intel HD 4000 or Radeon Vega 8 graphics, Core i3-3225 processor, 64-bit Windows 10 22H2.",
+        "**Recommended:** a GeForce GTX 960 or Radeon R9 280 class DirectX 11 graphics card (2 GB video memory), Core i5-7300U or Ryzen 3 3300U, 16 GB RAM, NVMe SSD, 64-bit Windows 10 or 11.",
+        "**For the Epic preset:** an RTX 3070 or RX 6700 XT class card (8 GB video memory) and a Core i7-8700 or Ryzen 7 3700X."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Turn on two-factor authentication (2FA) on day one. Epic rewards it with the Boogie Down emote, but the real gain is not losing your account."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Your first matches, step by step",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Start with a no-building mode",
+         "metin": "In Zero Build you do not need to put up walls and ramps. It is the gentlest entry for learning aiming, movement and the storm."
+        },
+        {
+         "baslik": "Choose where to land",
+         "metin": "When jumping from the Battle Bus pick a spot away from the crowds. The first goal is to loot without dying."
+        },
+        {
+         "baslik": "Collect a weapon, shield and healing",
+         "metin": "Get at least two weapons and a healing item. Items of a rarer color are generally stronger; being able to fight with what you hold is enough."
+        },
+        {
+         "baslik": "Stay ahead of the storm",
+         "metin": "Check the map often and head toward the safe circle early. Staying in the storm deals damage and exposes you."
+        },
+        {
+         "baslik": "Take one lesson from each match",
+         "metin": "When you die ask one question: did I have to take that fight? Fixing one thing per match is enough."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Winning is not the goal in your first matches. Surviving the first ten minutes and getting close to the top three is already a good start for most newcomers."
+      }
+     ]
+    },
+    {
+     "id": "modlar",
+     "baslik": "Modes and where to start",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Below are the main modes seen on Epic's official pages. When a mode is available can vary by season; the in-game menu is always the right list."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Mode",
+        "Who it suits"
+       ],
+       "satirlar": [
+        [
+         "Battle Royale",
+         "The classic experience, building included. Best learned later on."
+        ],
+        [
+         "Zero Build",
+         "The build-free version; the best start for new players."
+        ],
+        [
+         "Ranked Battle Royale / Ranked Reload Zero Build",
+         "Ranked versions; once the basics are solid."
+        ],
+        [
+         "Reload",
+         "A mode that appears on the official page alongside Ranked Reload Zero Build; see the in-game description for details."
+        ],
+        [
+         "LEGO Fortnite",
+         "For those who prefer exploring, building and survival over fighting."
+        ],
+        [
+         "Fortnite Festival",
+         "A separate music-based experience for rhythm fans."
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "If you are just starting, play Zero Build for three or four days, then try the building mode. Check the in-game info screen to see whether both count toward the same Battle Pass."
+      }
+     ]
+    },
+    {
+     "id": "temel-mekanikler",
+     "baslik": "Core mechanics",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Three things always matter in Fortnite: movement, resources and position. Even when the meta items change, this trio stays constant."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Movement:** running, sliding and climbing are not only for getting around but for leaving enemy fire. A player running in a straight line at constant speed is an easy target.",
+        "**Resources:** in the building mode, gathering materials (wood, stone, metal) is part of being fight-ready. Zero Build drops this job; healing and shields take its place.",
+        "**Position:** high ground, cover and a spot near the edge of the circle give an advantage. A player left in the open is often shot from several sides.",
+        "**Health and shield:** two separate bars. Topping up your shield before a fight beats trying to heal in the middle of one.",
+        "**Sound:** gunfire, footsteps and chests give information. Playing with headphones, and enabling the visual sound indicator if you need it, helps."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "After every fight find a safe spot to loot and heal. A third player may be waiting while you collect items."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Settings: solid starting values",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Safe starting values. All of them need fine-tuning for you; change only one at a time."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Frame rate limit:** equal to your monitor's refresh rate. A steady lower rate beats a fluctuating high one.",
+        "**Graphics:** start with a low or medium preset. Lower shadows and effects, and set view distance and texture quality according to your memory.",
+        "**Sensitivity:** start at a middle value and adjust in small steps. Control matters more than speed when aiming.",
+        "**Controller dead zones (gamepad):** raise them just enough to cut stick drift without adding noticeable delay.",
+        "**Accessibility:** colorblind options and the visual sound indicator live in the in-game settings; turn them on from day one if you need them."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "After changing settings, test them somewhere calm, not in a fresh match. That way you judge them away from the pressure of a fight."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme",
+     "baslik": "Progression: the Battle Pass and the season",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Playing through the season earns you experience that unlocks Battle Pass rewards. The Battle Pass costs 800 V-Bucks and, since the March 2026 price change, gives 800 V-Bucks back; check the in-game Passes tab for the current price in your region."
+      },
+      {
+       "tip": "p",
+       "metin": "During Treasure Hunters, Epic announced regular events such as Captain's Days (1, 8, 12, 15 and 22 November), Mastery Mondays and Treasure Hours on Saturdays. Fortnite OG runs its own separate season; you will find out which one suits you after a few matches."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "First look at the season's goals and start with the ones that are easy to progress.",
+        "Do not try to finish everything in a week; the season is long and the events are spread over time.",
+        "Do not buy the Battle Pass unless you are sure the rewards are something you want; progress closes when the season ends."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "The Chapter 7 end event is on 5 December; time any purchase decision around it, and read the details of what follows in the official announcement."
+      }
+     ]
+    },
+    {
+     "id": "baslangic-hatalari",
+     "baslik": "Common beginner mistakes",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Dropping straight into a hot zone.** Jumping into a crowded spot means being eliminated before you find gear.",
+        "**Missing the storm.** Forgetting the circle while looting leads to rushing and damage.",
+        "**Looting in the open.** While searching chests and ground items, check your surroundings.",
+        "**Underestimating opponents and taking pointless fights.** Sometimes disengaging is smarter than winning.",
+        "**Wanting to buy everything.** Cosmetics do not make you stronger; set your budget in advance.",
+        "**Playing late and losing focus.** Mistakes rise when you are tired; short sessions teach more."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Set just one target per day: practice storm timing today, inventory management tomorrow. Too many goals means learning none of them."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik-ve-harcama",
+     "baslik": "Account security and spending warning",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Fortnite is free, but cosmetics and the Battle Pass are bought with V-Bucks, which cost real money. Treat spending as an entertainment budget and set a limit in advance."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Turn on two-factor authentication in your Epic account and enter your password only on Epic's official login page.",
+        "Set up parental controls for children. Epic offers Cabined Accounts for children without parental setup; check chat and spending permissions.",
+        "Do not click links promising free V-Bucks or files that look like game hacks; they are used to steal accounts.",
+        "Before spending, check that the price is shown in your local currency and what exactly it buys."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Stay away from cheat software, aimbots, macros or special input devices, buying or selling accounts, V-Bucks or items, and having someone boost your rank. These can get your account banned permanently and are often scams."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Frequently asked questions",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is Fortnite free?",
+         "c": "Yes, playing is free. Optional purchases cover cosmetics and the Battle Pass."
+        },
+        {
+         "s": "Do I have to learn building?",
+         "c": "No. Zero Build has no building; you can learn it later if you want."
+        },
+        {
+         "s": "How much should I spend on the Battle Pass?",
+         "c": "It is not required. The pass costs 800 V-Bucks and has given 800 V-Bucks back since March 2026; consider it only if you will play enough during the season."
+        },
+        {
+         "s": "When does Chapter 7 end?",
+         "c": "Epic announced the end event for Saturday, 5 December 2026. Wait for official announcements on what comes after."
+        },
+        {
+         "s": "Are free V-Bucks sites safe?",
+         "c": "No. They are mostly account-theft or scam attempts. Get V-Bucks only from the official store."
+        },
+        {
+         "s": "How do I make it safe for my child?",
+         "c": "Turn on parental controls in the Epic account, require approval for chat and spending, and do not leave a payment method saved."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "fr": {
+   "baslik": "Guide Fortnite - Débuter en 2026",
+   "ozet": "Un guide pour débuter dans Fortnite : compte, installation, premières parties, réglages, Passe de combat et dépenses prudentes, pour la période Treasure Hunters du chapitre 7.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Battle royale et plateforme multimodes"
+    },
+    {
+     "ad": "Plateforme",
+     "deger": "Nombreuses plateformes avec un compte Epic Games ; voir la page officielle pour le détail"
+    },
+    {
+     "ad": "Modèle économique",
+     "deger": "Gratuit ; achats facultatifs de V-Bucks"
+    },
+    {
+     "ad": "Version actuelle",
+     "deger": "Chapitre 7, mini-saison Treasure Hunters (v43.00, 1er novembre 2026)"
+    },
+    {
+     "ad": "Prise en charge du turc",
+     "deger": "À vérifier dans les réglages de langue du jeu (non vérifié)"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "oyun-nedir",
+     "baslik": "Fortnite et son état en 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Fortnite est le jeu gratuit d'Epic Games. Il est né comme battle royale (le dernier survivant gagne), mais c'est aujourd'hui plus une plateforme qu'un jeu : modes variés, îles créées par la communauté et expériences distinctes comme la musique ou la course sont réunis sous un même compte. Ce guide présente l'expérience centrale la plus jouée, le Battle Royale."
+      },
+      {
+       "tip": "p",
+       "metin": "En novembre 2026, le jeu est dans la **mini-saison \"Treasure Hunters\" du chapitre 7**. D'après l'annonce d'Epic, elle a commencé le 1er novembre avec la mise à jour v43.00 : nouvelle zone Crossbones Isle, collaboration One Piece et capitaines qui changent chaque semaine. Epic a confirmé l'événement de fin du chapitre 7 pour le samedi 5 décembre 2026 ; la suite n'avait pas été annoncée officiellement le jour de la rédaction de ce guide."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Fortnite change la carte, les objets et les règles à chaque saison. Avec la v43.00, par exemple, les lingots d'or et les distributeurs ont disparu. C'est pourquoi ce guide enseigne des habitudes durables plutôt que des listes d'armes."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Avant de commencer : compte, installation, configuration",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Il te faut un compte Epic Games gratuit pour jouer. Sur PC, la page d'aide officielle d'Epic indique le matériel suivant."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Minimum :** graphismes Intel HD 4000 ou Radeon Vega 8, processeur Core i3-3225, Windows 10 22H2 64 bits.",
+        "**Recommandé :** carte graphique DirectX 11 de classe GeForce GTX 960 ou Radeon R9 280 (2 Go de mémoire vidéo), Core i5-7300U ou Ryzen 3 3300U, 16 Go de RAM, SSD NVMe, Windows 10 ou 11 64 bits.",
+        "**Pour le préréglage Épique :** une carte de classe RTX 3070 ou RX 6700 XT (8 Go de mémoire vidéo) et un Core i7-8700 ou Ryzen 7 3700X."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Active la vérification en deux étapes (2FA) dès le premier jour. Epic la récompense avec l'emote Boogie Down, mais le vrai gain est de ne pas perdre ton compte."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Tes premières parties, pas à pas",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Commence par un mode sans construction",
+         "metin": "En Zero Build, inutile de poser murs et rampes. C'est l'entrée la plus douce pour apprendre à viser, à se déplacer et à gérer la tempête."
+        },
+        {
+         "baslik": "Choisis ton atterrissage",
+         "metin": "En sautant du Bus de combat, choisis un endroit loin de la foule. Le premier objectif est de ramasser du butin sans mourir."
+        },
+        {
+         "baslik": "Récupère une arme, du bouclier et des soins",
+         "metin": "Prends au moins deux armes et un objet de soin. Les objets d'une couleur plus rare sont en général plus puissants ; pouvoir se battre avec ce que tu tiens suffit."
+        },
+        {
+         "baslik": "Reste devant la tempête",
+         "metin": "Consulte la carte souvent et dirige-toi tôt vers le cercle sûr. Rester dans la tempête inflige des dégâts et t'expose."
+        },
+        {
+         "baslik": "Tire une leçon de chaque partie",
+         "metin": "Quand tu meurs, pose-toi une question : devais-je prendre ce combat ? Corriger une chose par partie suffit."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Gagner n'est pas le but des premières parties. Survivre aux dix premières minutes et approcher du top trois est déjà un bon début pour la plupart des nouveaux."
+      }
+     ]
+    },
+    {
+     "id": "modlar",
+     "baslik": "Modes et par où commencer",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Voici les principaux modes présentés sur les pages officielles d'Epic. La disponibilité d'un mode peut varier selon la saison ; le menu du jeu reste la liste de référence."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Mode",
+        "Pour qui"
+       ],
+       "satirlar": [
+        [
+         "Battle Royale",
+         "L'expérience classique, construction comprise. À apprendre plus tard."
+        ],
+        [
+         "Zero Build",
+         "La version sans construction ; le meilleur départ pour les nouveaux joueurs."
+        ],
+        [
+         "Ranked Battle Royale / Ranked Reload Zero Build",
+         "Versions classées ; une fois les bases acquises."
+        ],
+        [
+         "Reload",
+         "Un mode cité sur la page officielle avec Ranked Reload Zero Build ; consulte la description en jeu pour les détails."
+        ],
+        [
+         "LEGO Fortnite",
+         "Pour ceux qui préfèrent explorer, construire et survivre plutôt que se battre."
+        ],
+        [
+         "Fortnite Festival",
+         "Une expérience musicale distincte, pour les fans de jeux de rythme."
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si tu débutes, joue en Zero Build pendant trois ou quatre jours, puis essaie le mode avec construction. Vérifie dans l'écran d'infos du jeu si les deux comptent pour le même Passe de combat."
+      }
+     ]
+    },
+    {
+     "id": "temel-mekanikler",
+     "baslik": "Mécaniques de base",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Trois choses comptent toujours dans Fortnite : le mouvement, les ressources et la position. Même quand les objets à la mode changent, ce trio reste constant."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Mouvement :** courir, glisser et grimper servent non seulement à se déplacer mais aussi à sortir du feu ennemi. Un joueur qui court droit à vitesse constante est une cible facile.",
+        "**Ressources :** dans le mode avec construction, récolter des matériaux (bois, pierre, métal) fait partie de la préparation au combat. Le Zero Build supprime cette tâche ; soins et boucliers prennent le relais.",
+        "**Position :** un terrain élevé, un abri et une place près du bord du cercle donnent l'avantage. Un joueur à découvert se fait souvent tirer dessus de plusieurs côtés.",
+        "**Santé et bouclier :** deux barres distinctes. Remplir son bouclier avant un combat vaut mieux que de tenter de se soigner en plein affrontement.",
+        "**Son :** les tirs, les pas et les coffres donnent des informations. Jouer au casque et activer l'indicateur sonore visuel si besoin aide."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Après chaque combat, trouve un endroit sûr pour piller et te soigner. Un troisième joueur peut t'attendre pendant que tu ramasses les objets."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Réglages : de bonnes valeurs de départ",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Des valeurs de départ sûres. Toutes demandent un réglage fin selon toi ; ne change qu'une chose à la fois."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Limite d'images :** égale à la fréquence de rafraîchissement de ton écran. Un rythme plus bas et stable vaut mieux qu'un rythme élevé qui fluctue.",
+        "**Graphismes :** commence avec un préréglage bas ou moyen. Baisse les ombres et les effets, et règle la distance d'affichage et la qualité des textures selon ta mémoire.",
+        "**Sensibilité :** pars d'une valeur moyenne et ajuste par petits pas. Pour viser, le contrôle compte plus que la vitesse.",
+        "**Zones mortes de la manette :** monte-les juste assez pour supprimer la dérive des sticks sans ajouter de latence perceptible.",
+        "**Accessibilité :** les options pour daltoniens et l'indicateur sonore visuel se trouvent dans les réglages du jeu ; active-les dès le premier jour si besoin."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Après avoir modifié tes réglages, teste-les dans un endroit calme plutôt qu'en pleine partie. Tu les juges ainsi hors de la pression d'un combat."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme",
+     "baslik": "Progression : le Passe de combat et la saison",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "En jouant tout au long de la saison, tu gagnes de l'expérience qui débloque les récompenses du Passe de combat. Le Passe de combat coûte 800 V-Bucks et, depuis le changement de prix de mars 2026, rend 800 V-Bucks ; consulte l'onglet Passes du jeu pour le prix actuel dans ta région."
+      },
+      {
+       "tip": "p",
+       "metin": "Pendant Treasure Hunters, Epic a annoncé des événements réguliers comme les Jours du Capitaine (1, 8, 12, 15 et 22 novembre), les lundis de la maîtrise et les Heures du trésor le samedi. Fortnite OG suit sa propre saison ; tu sauras laquelle te convient après quelques parties."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Regarde d'abord les objectifs de la saison et commence par ceux qui progressent facilement.",
+        "N'essaie pas de tout finir en une semaine ; la saison est longue et les événements s'étalent dans le temps.",
+        "N'achète pas le Passe de combat sans être sûr que ses récompenses t'intéressent ; la progression se ferme à la fin de la saison."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "L'événement de fin du chapitre 7 a lieu le 5 décembre ; cale tes achats en conséquence et lis les détails de la suite dans l'annonce officielle."
+      }
+     ]
+    },
+    {
+     "id": "baslangic-hatalari",
+     "baslik": "Erreurs fréquentes des débutants",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Atterrir dans une zone chaude.** Sauter dans un endroit bondé, c'est être éliminé avant d'avoir trouvé du matériel.",
+        "**Se faire rattraper par la tempête.** Oublier le cercle en pillant mène à la précipitation et aux dégâts.",
+        "**Piller à découvert.** En fouillant coffres et objets au sol, surveille les alentours.",
+        "**Sous-estimer les adversaires et prendre des combats inutiles.** Parfois, se désengager est plus malin que gagner.",
+        "**Vouloir tout acheter.** Les cosmétiques ne te rendent pas plus fort ; fixe ton budget à l'avance.",
+        "**Jouer tard et perdre sa concentration.** Les erreurs augmentent avec la fatigue ; les sessions courtes enseignent davantage."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Fixe-toi un seul objectif par jour : le timing de la tempête aujourd'hui, la gestion de l'inventaire demain. Trop d'objectifs, c'est n'en apprendre aucun."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik-ve-harcama",
+     "baslik": "Sécurité du compte et avertissement sur les dépenses",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Fortnite est gratuit, mais les cosmétiques et le Passe de combat s'achètent avec des V-Bucks, qui coûtent de l'argent réel. Considère les dépenses comme un budget de loisirs et fixe une limite à l'avance."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Active la vérification en deux étapes sur ton compte Epic et saisis ton mot de passe uniquement sur la page de connexion officielle d'Epic.",
+        "Configure le contrôle parental pour les enfants. Epic propose des comptes restreints (Cabined) pour les enfants sans configuration parentale ; vérifie les autorisations de discussion et de dépense.",
+        "Ne clique pas sur des liens promettant des V-Bucks gratuits ni sur des fichiers présentés comme des cheats ; ils servent à voler des comptes.",
+        "Avant de dépenser, vérifie que le prix s'affiche dans ta monnaie locale et ce qu'il achète exactement."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Tiens-toi à l'écart des logiciels de triche, des aimbots, des macros ou des dispositifs de saisie spéciaux, de l'achat ou de la vente de comptes, de V-Bucks ou d'objets, et du boost de rang par un tiers. Cela peut entraîner un bannissement définitif et relève souvent de l'arnaque."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Questions fréquentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Fortnite est-il gratuit ?",
+         "c": "Oui, jouer est gratuit. Les achats facultatifs concernent les cosmétiques et le Passe de combat."
+        },
+        {
+         "s": "Dois-je apprendre à construire ?",
+         "c": "Non. Le Zero Build n'a pas de construction ; tu pourras l'apprendre plus tard si tu veux."
+        },
+        {
+         "s": "Combien dépenser pour le Passe de combat ?",
+         "c": "Ce n'est pas obligatoire. Le passe coûte 800 V-Bucks et rend 800 V-Bucks depuis mars 2026 ; envisage-le seulement si tu joueras assez pendant la saison."
+        },
+        {
+         "s": "Quand se termine le chapitre 7 ?",
+         "c": "Epic a annoncé l'événement de fin pour le samedi 5 décembre 2026. Attends les annonces officielles pour la suite."
+        },
+        {
+         "s": "Les sites de V-Bucks gratuits sont-ils sûrs ?",
+         "c": "Non. Ce sont le plus souvent des tentatives de vol de compte ou d'arnaque. N'achète les V-Bucks que dans la boutique officielle."
+        },
+        {
+         "s": "Comment sécuriser le jeu pour mon enfant ?",
+         "c": "Active le contrôle parental dans le compte Epic, exige une validation pour la discussion et les achats, et ne laisse pas de moyen de paiement enregistré."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "es": {
+   "baslik": "Guía de Fortnite - Primeros pasos en 2026",
+   "ozet": "Guía para empezar en Fortnite: cuenta, instalación, primeras partidas, ajustes, Pase de batalla y gasto prudente, escrita para el periodo Treasure Hunters del Capítulo 7.",
+   "kunye": [
+    {
+     "ad": "Género",
+     "deger": "Battle royale y plataforma multimodo"
+    },
+    {
+     "ad": "Plataforma",
+     "deger": "Muchas plataformas con una cuenta de Epic Games; consulta la página oficial para más detalles"
+    },
+    {
+     "ad": "Modelo de precio",
+     "deger": "Gratuito; compras opcionales de V-Bucks"
+    },
+    {
+     "ad": "Versión actual",
+     "deger": "Capítulo 7, minitemporada Treasure Hunters (v43.00, 1 de noviembre de 2026)"
+    },
+    {
+     "ad": "Compatibilidad con turco",
+     "deger": "Compruébalo en el ajuste de idioma del juego (no verificado)"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "oyun-nedir",
+     "baslik": "Qué es Fortnite y cómo está en 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Fortnite es el juego gratuito de Epic Games. Nació como battle royale (gana el último en pie), pero hoy es más una plataforma que un solo juego: distintos modos, islas creadas por la comunidad y experiencias aparte como la música o las carreras conviven bajo una misma cuenta. Esta guía cubre la experiencia central más jugada, el Battle Royale."
+      },
+      {
+       "tip": "p",
+       "metin": "En noviembre de 2026 el juego está en la **minitemporada \"Treasure Hunters\" del Capítulo 7**. Según el anuncio de Epic, empezó el 1 de noviembre con la actualización v43.00, que trae la nueva zona Crossbones Isle, una colaboración con One Piece y capitanes que cambian cada semana. Epic confirmó el evento final del Capítulo 7 para el sábado 5 de diciembre de 2026; lo que viene después no se había anunciado oficialmente el día en que se escribió esta guía."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Fortnite cambia el mapa, los objetos y las reglas en cada temporada. En la v43.00, por ejemplo, se retiraron los lingotes de oro y las máquinas expendedoras. Por eso esta guía enseña hábitos duraderos y no listas de armas."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Antes de empezar: cuenta, instalación, requisitos",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Necesitas una cuenta gratuita de Epic Games para jugar. Si juegas en PC, la página de ayuda oficial de Epic indica este hardware."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Mínimo:** gráficos Intel HD 4000 o Radeon Vega 8, procesador Core i3-3225, Windows 10 22H2 de 64 bits.",
+        "**Recomendado:** tarjeta gráfica DirectX 11 de clase GeForce GTX 960 o Radeon R9 280 (2 GB de memoria de vídeo), Core i5-7300U o Ryzen 3 3300U, 16 GB de RAM, SSD NVMe, Windows 10 u 11 de 64 bits.",
+        "**Para el ajuste Épico:** una tarjeta de clase RTX 3070 o RX 6700 XT (8 GB de memoria de vídeo) y un Core i7-8700 o Ryzen 7 3700X."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Activa la verificación en dos pasos (2FA) desde el primer día. Epic lo recompensa con el emote Boogie Down, pero la ganancia real es no perder tu cuenta."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Tus primeras partidas, paso a paso",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Empieza con un modo sin construcción",
+         "metin": "En Zero Build no hace falta levantar muros ni rampas. Es la entrada más suave para aprender a apuntar, moverte y manejar la tormenta."
+        },
+        {
+         "baslik": "Elige dónde aterrizar",
+         "metin": "Al saltar del Autobús de batalla elige un sitio alejado de las multitudes. El primer objetivo es saquear sin morir."
+        },
+        {
+         "baslik": "Recoge un arma, escudo y curación",
+         "metin": "Consigue al menos dos armas y un objeto curativo. Los objetos de un color más raro suelen ser más fuertes; basta con poder pelear con lo que llevas."
+        },
+        {
+         "baslik": "Mantente por delante de la tormenta",
+         "metin": "Mira el mapa a menudo y dirígete pronto al círculo seguro. Quedarte en la tormenta causa daño y te deja expuesto."
+        },
+        {
+         "baslik": "Saca una lección de cada partida",
+         "metin": "Cuando mueras hazte una pregunta: ¿tenía que aceptar ese combate? Corregir una cosa por partida es suficiente."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Ganar no es el objetivo de las primeras partidas. Sobrevivir los diez primeros minutos y acercarte al top tres ya es un buen comienzo para la mayoría de los novatos."
+      }
+     ]
+    },
+    {
+     "id": "modlar",
+     "baslik": "Modos y por dónde empezar",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Estos son los modos principales que aparecen en las páginas oficiales de Epic. Cuándo está disponible un modo puede variar según la temporada; el menú del juego es siempre la lista correcta."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Modo",
+        "Para quién"
+       ],
+       "satirlar": [
+        [
+         "Battle Royale",
+         "La experiencia clásica, con construcción. Mejor aprenderla más adelante."
+        ],
+        [
+         "Zero Build",
+         "La versión sin construcción; el mejor comienzo para jugadores nuevos."
+        ],
+        [
+         "Ranked Battle Royale / Ranked Reload Zero Build",
+         "Versiones clasificatorias; cuando las bases estén sólidas."
+        ],
+        [
+         "Reload",
+         "Un modo que aparece en la página oficial junto con Ranked Reload Zero Build; consulta la descripción del juego para más detalles."
+        ],
+        [
+         "LEGO Fortnite",
+         "Para quienes prefieren explorar, construir y sobrevivir antes que luchar."
+        ],
+        [
+         "Fortnite Festival",
+         "Una experiencia musical aparte, para los aficionados a los juegos de ritmo."
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si estás empezando, juega Zero Build tres o cuatro días y luego prueba el modo con construcción. Comprueba en la pantalla de información del juego si ambos suman para el mismo Pase de batalla."
+      }
+     ]
+    },
+    {
+     "id": "temel-mekanikler",
+     "baslik": "Mecánicas básicas",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Tres cosas importan siempre en Fortnite: el movimiento, los recursos y la posición. Aunque cambien los objetos de moda, este trío permanece."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Movimiento:** correr, deslizarte y trepar no son solo para desplazarte, sino también para salir del fuego enemigo. Un jugador que corre en línea recta a velocidad constante es un blanco fácil.",
+        "**Recursos:** en el modo con construcción, reunir materiales (madera, piedra, metal) forma parte de estar listo para pelear. En Zero Build no existe esa tarea; ganan protagonismo la curación y los escudos.",
+        "**Posición:** el terreno alto, la cobertura y un sitio cerca del borde del círculo dan ventaja. Un jugador al descubierto suele recibir disparos desde varios lados.",
+        "**Salud y escudo:** dos barras separadas. Rellenar el escudo antes de un combate es mejor que intentar curarte en pleno enfrentamiento.",
+        "**Sonido:** disparos, pasos y cofres dan información. Ayuda jugar con auriculares y activar el indicador visual de sonido si lo necesitas."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Tras cada combate busca un lugar seguro para saquear y curarte. Puede que un tercer jugador te esté esperando mientras recoges objetos."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Ajustes: valores iniciales sólidos",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Valores iniciales seguros. Todos necesitan un ajuste fino a tu gusto; cambia solo uno cada vez."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Límite de fotogramas:** igual a la frecuencia de refresco de tu monitor. Una tasa más baja y estable es mejor que una alta que fluctúa.",
+        "**Gráficos:** empieza con un preajuste bajo o medio. Baja las sombras y los efectos, y ajusta la distancia de visión y la calidad de texturas según tu memoria.",
+        "**Sensibilidad:** empieza en un valor medio y ajusta en pasos pequeños. Al apuntar, el control importa más que la velocidad.",
+        "**Zonas muertas del mando:** súbelas lo justo para eliminar la deriva de los sticks sin añadir un retraso apreciable.",
+        "**Accesibilidad:** las opciones para daltonismo y el indicador visual de sonido están en los ajustes del juego; actívalos desde el primer día si los necesitas."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Tras cambiar los ajustes, pruébalos en un sitio tranquilo y no en una partida nueva. Así los juzgas sin la presión de un combate."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme",
+     "baslik": "Progresión: el Pase de batalla y la temporada",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Jugar durante la temporada te da experiencia que desbloquea recompensas del Pase de batalla. El Pase de batalla cuesta 800 V-Bucks y, desde el cambio de precio de marzo de 2026, devuelve 800 V-Bucks; consulta la pestaña Pases del juego para ver el precio actual en tu región."
+      },
+      {
+       "tip": "p",
+       "metin": "Durante Treasure Hunters, Epic anunció eventos regulares como los Días del Capitán (1, 8, 12, 15 y 22 de noviembre), los lunes de maestría y las Horas del tesoro los sábados. Fortnite OG tiene su propia temporada; sabrás cuál te conviene tras unas partidas."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Mira primero los objetivos de la temporada y empieza por los que avanzan con facilidad.",
+        "No intentes terminarlo todo en una semana; la temporada es larga y los eventos están repartidos en el tiempo.",
+        "No compres el Pase de batalla sin estar seguro de que las recompensas te interesan; el progreso se cierra al acabar la temporada."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "El evento final del Capítulo 7 es el 5 de diciembre; decide tus compras en función de él y lee los detalles de lo que venga después en el anuncio oficial."
+      }
+     ]
+    },
+    {
+     "id": "baslangic-hatalari",
+     "baslik": "Errores habituales de los principiantes",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Aterrizar en una zona caliente.** Saltar en un sitio abarrotado significa caer antes de encontrar equipo.",
+        "**Quedar atrapado por la tormenta.** Olvidar el círculo mientras saqueas lleva a las prisas y al daño.",
+        "**Saquear al descubierto.** Mientras buscas en cofres y objetos del suelo, vigila el entorno.",
+        "**Subestimar a los rivales y aceptar peleas inútiles.** A veces retirarse es más inteligente que ganar.",
+        "**Querer comprarlo todo.** Los cosméticos no te hacen más fuerte; fija tu presupuesto de antemano.",
+        "**Jugar hasta tarde y perder la concentración.** Los errores aumentan con el cansancio; las sesiones cortas enseñan más."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Ponte un solo objetivo al día: hoy practica el momento de la tormenta, mañana la gestión del inventario. Demasiados objetivos significan no aprender ninguno."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik-ve-harcama",
+     "baslik": "Seguridad de la cuenta y aviso sobre el gasto",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Fortnite es gratuito, pero los cosméticos y el Pase de batalla se compran con V-Bucks, que cuestan dinero real. Trata el gasto como un presupuesto de ocio y fija un límite de antemano."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Activa la verificación en dos pasos en tu cuenta de Epic y escribe la contraseña solo en la página oficial de inicio de sesión de Epic.",
+        "Configura el control parental para los niños. Epic ofrece cuentas restringidas (Cabined) para niños sin configuración parental; revisa los permisos de chat y de gasto.",
+        "No pulses enlaces que prometan V-Bucks gratis ni archivos que parezcan trucos del juego; se usan para robar cuentas.",
+        "Antes de gastar, comprueba que el precio aparezca en tu moneda local y qué compras exactamente."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Aléjate del software de trampas, los aimbots, las macros o los dispositivos de entrada especiales, de la compraventa de cuentas, V-Bucks u objetos y de que otra persona te suba de rango (boost). Pueden acarrear una sanción permanente y suelen ser estafas."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Preguntas frecuentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "¿Fortnite es gratuito?",
+         "c": "Sí, jugar es gratis. Las compras opcionales son de cosméticos y del Pase de batalla."
+        },
+        {
+         "s": "¿Tengo que aprender a construir?",
+         "c": "No. En Zero Build no hay construcción; puedes aprenderla más tarde si quieres."
+        },
+        {
+         "s": "¿Cuánto debería gastar en el Pase de batalla?",
+         "c": "No es obligatorio. El pase cuesta 800 V-Bucks y devuelve 800 V-Bucks desde marzo de 2026; considéralo solo si vas a jugar lo suficiente durante la temporada."
+        },
+        {
+         "s": "¿Cuándo termina el Capítulo 7?",
+         "c": "Epic anunció el evento final para el sábado 5 de diciembre de 2026. Espera los anuncios oficiales sobre lo que venga después."
+        },
+        {
+         "s": "¿Son seguros los sitios de V-Bucks gratis?",
+         "c": "No. Suelen ser intentos de robo de cuentas o estafas. Compra los V-Bucks solo en la tienda oficial."
+        },
+        {
+         "s": "¿Cómo lo dejo seguro para mi hijo?",
+         "c": "Activa el control parental en la cuenta de Epic, exige aprobación para el chat y el gasto, y no dejes guardado un método de pago."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

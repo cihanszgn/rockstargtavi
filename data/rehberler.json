@@ -1,0 +1,1739 @@
+[
+ {
+  "id": "genel-pcgamingwiki",
+  "oyun": "Genel",
+  "hub": "genel",
+  "kaynak": "PCGamingWiki",
+  "url": "https://www.pcgamingwiki.com/wiki/Home",
+  "kategori": "wiki",
+  "dil": [
+   "en"
+  ],
+  "lisans": "CC BY-NC-SA",
+  "acik": true,
+  "diller": {
+   "tr": {
+    "baslik": "PCGamingWiki (wiki)",
+    "aciklama": "PC oyunları için düzeltmeler, ayarlar, ekran ve kontrol bilgileri ile uyumluluk notları. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "PCGamingWiki (wiki)",
+    "aciklama": "Fixes, settings, display and control details and compatibility notes for PC games. Language: English."
+   },
+   "fr": {
+    "baslik": "PCGamingWiki (wiki)",
+    "aciklama": "Correctifs, réglages, informations d'affichage et de contrôle et notes de compatibilité pour les jeux PC. Langue : anglais."
+   },
+   "es": {
+    "baslik": "PCGamingWiki (wiki)",
+    "aciklama": "Arreglos, ajustes, datos de pantalla y controles y notas de compatibilidad para juegos de PC. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "genel-howlongtobeat",
+  "oyun": "Genel",
+  "hub": "genel",
+  "kaynak": "HowLongToBeat",
+  "url": "https://howlongtobeat.com/",
+  "kategori": "arac",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Ücretsiz erişim",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "HowLongToBeat (araç)",
+    "aciklama": "Oyunların ortalama bitirme sürelerini oyuncu verilerine göre gösterir. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "HowLongToBeat (tool)",
+    "aciklama": "Shows the average time to finish games based on player-submitted data. Language: English."
+   },
+   "fr": {
+    "baslik": "HowLongToBeat (outil)",
+    "aciklama": "Indique la durée moyenne pour terminer les jeux à partir des données des joueurs. Langue : anglais."
+   },
+   "es": {
+    "baslik": "HowLongToBeat (herramienta)",
+    "aciklama": "Muestra el tiempo medio para terminar los juegos según los datos de los jugadores. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "genel-protondb",
+  "oyun": "Genel",
+  "hub": "genel",
+  "kaynak": "ProtonDB",
+  "url": "https://www.protondb.com/",
+  "kategori": "arac",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Ücretsiz erişim",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "ProtonDB (araç)",
+    "aciklama": "Windows oyunlarının Linux'ta (Proton ile) ne kadar iyi çalıştığını oyuncu raporlarıyla listeler. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "ProtonDB (tool)",
+    "aciklama": "Lists how well Windows games run on Linux (through Proton) using player reports. Language: English."
+   },
+   "fr": {
+    "baslik": "ProtonDB (outil)",
+    "aciklama": "Recense avec des rapports de joueurs le bon fonctionnement des jeux Windows sous Linux (via Proton). Langue : anglais."
+   },
+   "es": {
+    "baslik": "ProtonDB (herramienta)",
+    "aciklama": "Recoge con informes de jugadores lo bien que funcionan los juegos de Windows en Linux (con Proton). Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "genel-can-you-run-it",
+  "oyun": "Genel",
+  "hub": "genel",
+  "kaynak": "Can You RUN It",
+  "url": "https://www.systemrequirementslab.com/cyri",
+  "kategori": "arac",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Ücretsiz erişim",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Can You RUN It (araç)",
+    "aciklama": "Bilgisayarın bir oyunun sistem gereksinimlerini karşılayıp karşılamadığını kontrol eder. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Can You RUN It (tool)",
+    "aciklama": "Checks whether your PC meets a game's system requirements. Language: English."
+   },
+   "fr": {
+    "baslik": "Can You RUN It (outil)",
+    "aciklama": "Vérifie si votre PC répond à la configuration requise d'un jeu. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Can You RUN It (herramienta)",
+    "aciklama": "Comprueba si tu PC cumple los requisitos de sistema de un juego. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "genel-isthereanydeal",
+  "oyun": "Genel",
+  "hub": "genel",
+  "kaynak": "IsThereAnyDeal",
+  "url": "https://isthereanydeal.com/",
+  "kategori": "arac",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Ücretsiz erişim",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "IsThereAnyDeal (araç)",
+    "aciklama": "Birçok mağazadaki PC oyunu fiyatlarını ve geçmiş en düşük fiyatları karşılaştırır. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "IsThereAnyDeal (tool)",
+    "aciklama": "Compares PC game prices across many stores and shows historical lows. Language: English."
+   },
+   "fr": {
+    "baslik": "IsThereAnyDeal (outil)",
+    "aciklama": "Compare les prix des jeux PC dans de nombreuses boutiques et affiche les plus bas historiques. Langue : anglais."
+   },
+   "es": {
+    "baslik": "IsThereAnyDeal (herramienta)",
+    "aciklama": "Compara precios de juegos de PC en muchas tiendas y muestra los mínimos históricos. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "world-of-warcraft-warcraft-wiki",
+  "oyun": "World of Warcraft",
+  "hub": "world-of-warcraft",
+  "kaynak": "Warcraft Wiki",
+  "url": "https://warcraft.wiki.gg/wiki/Main_Page",
+  "kategori": "wiki",
+  "dil": [
+   "en"
+  ],
+  "lisans": "CC BY-SA 4.0",
+  "acik": true,
+  "diller": {
+   "tr": {
+    "baslik": "Warcraft Wiki — World of Warcraft (wiki)",
+    "aciklama": "World of Warcraft için topluluk wiki'si: öğeler, mekanikler ve ayrıntılı sayfalar. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Warcraft Wiki — World of Warcraft (wiki)",
+    "aciklama": "Community wiki for World of Warcraft: items, mechanics and detailed pages. Language: English."
+   },
+   "fr": {
+    "baslik": "Warcraft Wiki — World of Warcraft (wiki)",
+    "aciklama": "Wiki communautaire pour World of Warcraft : objets, mécaniques et pages détaillées. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Warcraft Wiki — World of Warcraft (wiki)",
+    "aciklama": "Wiki de la comunidad de World of Warcraft: objetos, mecánicas y páginas detalladas. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "world-of-warcraft-icy-veins",
+  "oyun": "World of Warcraft",
+  "hub": "world-of-warcraft",
+  "kaynak": "Icy Veins",
+  "url": "https://www.icy-veins.com/wow/class-guides",
+  "kategori": "ileri",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Ücretsiz erişim",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Icy Veins — World of Warcraft (ileri rehberler)",
+    "aciklama": "World of Warcraft için sınıf, build ve ileri düzey ücretsiz rehberler. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Icy Veins — World of Warcraft (advanced guides)",
+    "aciklama": "Free class, build and advanced guides for World of Warcraft. Language: English."
+   },
+   "fr": {
+    "baslik": "Icy Veins — World of Warcraft (guides avancés)",
+    "aciklama": "Guides gratuits de classes, builds et niveau avancé pour World of Warcraft. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Icy Veins — World of Warcraft (guías avanzadas)",
+    "aciklama": "Guías gratuitas de clases, builds y nivel avanzado para World of Warcraft. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "world-of-warcraft-maxroll",
+  "oyun": "World of Warcraft",
+  "hub": "world-of-warcraft",
+  "kaynak": "Maxroll",
+  "url": "https://maxroll.gg/wow",
+  "kategori": "ileri",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Ücretsiz erişim",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Maxroll — World of Warcraft (ileri rehberler)",
+    "aciklama": "World of Warcraft için sınıf, build ve ileri düzey ücretsiz rehberler. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Maxroll — World of Warcraft (advanced guides)",
+    "aciklama": "Free class, build and advanced guides for World of Warcraft. Language: English."
+   },
+   "fr": {
+    "baslik": "Maxroll — World of Warcraft (guides avancés)",
+    "aciklama": "Guides gratuits de classes, builds et niveau avancé pour World of Warcraft. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Maxroll — World of Warcraft (guías avanzadas)",
+    "aciklama": "Guías gratuitas de clases, builds y nivel avanzado para World of Warcraft. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "world-of-warcraft-wowhead-wow-forever-rehber-derlemesi",
+  "oyun": "World of Warcraft",
+  "hub": "world-of-warcraft",
+  "kaynak": "Wowhead: WoW Forever rehber derlemesi",
+  "url": "https://www.wowhead.com/forever/news/every-guide-youll-need-for-launch-the-wow-forever-guide-compendium-383727",
+  "kategori": "baslangic",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Ücretsiz erişim",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Wowhead: WoW Forever rehber derlemesi",
+    "aciklama": "WoW: Forever lansmanı için gereken rehberlerin Wowhead derlemesi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Wowhead: WoW Forever rehber derlemesi",
+    "aciklama": "Wowhead's compendium of the guides needed for the WoW: Forever launch. Language: English."
+   },
+   "fr": {
+    "baslik": "Wowhead: WoW Forever rehber derlemesi",
+    "aciklama": "Le recueil de Wowhead des guides nécessaires au lancement de WoW: Forever. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Wowhead: WoW Forever rehber derlemesi",
+    "aciklama": "La recopilación de Wowhead de las guías necesarias para el lanzamiento de WoW: Forever. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "knight-online-knight-online-resmî-site-nttgame",
+  "oyun": "Knight Online",
+  "hub": "knight-online",
+  "kaynak": "Knight Online resmî site (NTTGame)",
+  "url": "https://www.nttgame.com/knight/tr",
+  "kategori": "resmi",
+  "dil": [
+   "tr"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Knight Online resmî site (NTTGame) — Knight Online (resmî)",
+    "aciklama": "Knight Online için yayıncının resmî sayfası: destek, duyuru veya oyun bilgisi. Dil: Türkçe."
+   },
+   "en": {
+    "baslik": "Knight Online resmî site (NTTGame) — Knight Online (official)",
+    "aciklama": "Official publisher page for Knight Online: support, announcements or game information. Language: Turkish."
+   },
+   "fr": {
+    "baslik": "Knight Online resmî site (NTTGame) — Knight Online (officiel)",
+    "aciklama": "Page officielle de l'éditeur pour Knight Online : assistance, annonces ou informations sur le jeu. Langue : turc."
+   },
+   "es": {
+    "baslik": "Knight Online resmî site (NTTGame) — Knight Online (oficial)",
+    "aciklama": "Página oficial del editor de Knight Online: soporte, anuncios o información del juego. Idioma: turco."
+   }
+  }
+ },
+ {
+  "id": "knight-online-knight-online-wiki-fandom",
+  "oyun": "Knight Online",
+  "hub": "knight-online",
+  "kaynak": "Knight Online Wiki (Fandom)",
+  "url": "https://knight-online-world.fandom.com/wiki/Kurian_(Porutu)",
+  "kategori": "wiki",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Ücretsiz erişim",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Knight Online Wiki (Fandom) — Knight Online (wiki)",
+    "aciklama": "Knight Online için topluluk wiki'si: öğeler, mekanikler ve ayrıntılı sayfalar. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Knight Online Wiki (Fandom) — Knight Online (wiki)",
+    "aciklama": "Community wiki for Knight Online: items, mechanics and detailed pages. Language: English."
+   },
+   "fr": {
+    "baslik": "Knight Online Wiki (Fandom) — Knight Online (wiki)",
+    "aciklama": "Wiki communautaire pour Knight Online : objets, mécaniques et pages détaillées. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Knight Online Wiki (Fandom) — Knight Online (wiki)",
+    "aciklama": "Wiki de la comunidad de Knight Online: objetos, mecánicas y páginas detalladas. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "knight-online-nttgame-knight-online-güncelleme-duyurusu",
+  "oyun": "Knight Online",
+  "hub": "knight-online",
+  "kaynak": "NTTGame: Knight Online güncelleme duyurusu",
+  "url": "https://www.nttgame.com/knight/tr/news/views/2/4247",
+  "kategori": "resmi",
+  "dil": [
+   "tr"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "NTTGame: Knight Online güncelleme duyurusu — Knight Online (resmî)",
+    "aciklama": "Knight Online için yayıncının resmî sayfası: destek, duyuru veya oyun bilgisi. Dil: Türkçe."
+   },
+   "en": {
+    "baslik": "NTTGame: Knight Online güncelleme duyurusu — Knight Online (official)",
+    "aciklama": "Official publisher page for Knight Online: support, announcements or game information. Language: Turkish."
+   },
+   "fr": {
+    "baslik": "NTTGame: Knight Online güncelleme duyurusu — Knight Online (officiel)",
+    "aciklama": "Page officielle de l'éditeur pour Knight Online : assistance, annonces ou informations sur le jeu. Langue : turc."
+   },
+   "es": {
+    "baslik": "NTTGame: Knight Online güncelleme duyurusu — Knight Online (oficial)",
+    "aciklama": "Página oficial del editor de Knight Online: soporte, anuncios o información del juego. Idioma: turco."
+   }
+  }
+ },
+ {
+  "id": "knight-online-ko-rehberi-başlangıç-rehberi",
+  "oyun": "Knight Online",
+  "hub": "knight-online",
+  "kaynak": "KO Rehberi: başlangıç rehberi",
+  "url": "https://korehberi.com/knight-online/baslangic-rehberi",
+  "kategori": "baslangic",
+  "dil": [
+   "tr"
+  ],
+  "lisans": "Ücretsiz erişim",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "KO Rehberi: başlangıç rehberi — Knight Online (başlangıç rehberi)",
+    "aciklama": "Knight Online için yeni başlayanlara yönelik ücretsiz rehber. Dil: Türkçe."
+   },
+   "en": {
+    "baslik": "KO Rehberi: başlangıç rehberi — Knight Online (beginner guide)",
+    "aciklama": "Free guide for newcomers to Knight Online. Language: Turkish."
+   },
+   "fr": {
+    "baslik": "KO Rehberi: başlangıç rehberi — Knight Online (guide débutant)",
+    "aciklama": "Guide gratuit pour les nouveaux joueurs de Knight Online. Langue : turc."
+   },
+   "es": {
+    "baslik": "KO Rehberi: başlangıç rehberi — Knight Online (guía inicial)",
+    "aciklama": "Guía gratuita para quienes empiezan en Knight Online. Idioma: turco."
+   }
+  }
+ },
+ {
+  "id": "gta-6-rockstar-games-grand-theft-auto-vi",
+  "oyun": "GTA VI",
+  "hub": "gta-6",
+  "kaynak": "Rockstar Games: Grand Theft Auto VI",
+  "url": "https://www.rockstargames.com/VI",
+  "kategori": "resmi",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Rockstar Games: Grand Theft Auto VI — GTA VI (resmî)",
+    "aciklama": "GTA VI için yayıncının resmî sayfası: destek, duyuru veya oyun bilgisi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Rockstar Games: Grand Theft Auto VI — GTA VI (official)",
+    "aciklama": "Official publisher page for GTA VI: support, announcements or game information. Language: English."
+   },
+   "fr": {
+    "baslik": "Rockstar Games: Grand Theft Auto VI — GTA VI (officiel)",
+    "aciklama": "Page officielle de l'éditeur pour GTA VI : assistance, annonces ou informations sur le jeu. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Rockstar Games: Grand Theft Auto VI — GTA VI (oficial)",
+    "aciklama": "Página oficial del editor de GTA VI: soporte, anuncios o información del juego. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "gta-6-gta-wiki-fandom",
+  "oyun": "GTA VI",
+  "hub": "gta-6",
+  "kaynak": "GTA Wiki (Fandom)",
+  "url": "https://gta.fandom.com/wiki/Grand_Theft_Auto_VI",
+  "kategori": "wiki",
+  "dil": [
+   "en"
+  ],
+  "lisans": "CC BY-SA",
+  "acik": true,
+  "diller": {
+   "tr": {
+    "baslik": "GTA Wiki (Fandom) — GTA VI (wiki)",
+    "aciklama": "GTA VI için topluluk wiki'si: öğeler, mekanikler ve ayrıntılı sayfalar. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "GTA Wiki (Fandom) — GTA VI (wiki)",
+    "aciklama": "Community wiki for GTA VI: items, mechanics and detailed pages. Language: English."
+   },
+   "fr": {
+    "baslik": "GTA Wiki (Fandom) — GTA VI (wiki)",
+    "aciklama": "Wiki communautaire pour GTA VI : objets, mécaniques et pages détaillées. Langue : anglais."
+   },
+   "es": {
+    "baslik": "GTA Wiki (Fandom) — GTA VI (wiki)",
+    "aciklama": "Wiki de la comunidad de GTA VI: objetos, mecánicas y páginas detalladas. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "valorant-riot-games-destek-valorant",
+  "oyun": "VALORANT",
+  "hub": "valorant",
+  "kaynak": "Riot Games Destek: VALORANT",
+  "url": "https://support.riotgames.com/en-us/valorant/",
+  "kategori": "resmi",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Riot Games Destek: VALORANT — VALORANT (resmî)",
+    "aciklama": "VALORANT için yayıncının resmî sayfası: destek, duyuru veya oyun bilgisi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Riot Games Destek: VALORANT — VALORANT (official)",
+    "aciklama": "Official publisher page for VALORANT: support, announcements or game information. Language: English."
+   },
+   "fr": {
+    "baslik": "Riot Games Destek: VALORANT — VALORANT (officiel)",
+    "aciklama": "Page officielle de l'éditeur pour VALORANT : assistance, annonces ou informations sur le jeu. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Riot Games Destek: VALORANT — VALORANT (oficial)",
+    "aciklama": "Página oficial del editor de VALORANT: soporte, anuncios o información del juego. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "valorant-prosettings-net",
+  "oyun": "VALORANT",
+  "hub": "valorant",
+  "kaynak": "ProSettings.net",
+  "url": "https://prosettings.net/games/valorant/",
+  "kategori": "arac",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Ücretsiz erişim",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "ProSettings.net — VALORANT (araç)",
+    "aciklama": "VALORANT için ücretsiz yardımcı araç veya istatistik sitesi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "ProSettings.net — VALORANT (tool)",
+    "aciklama": "Free helper tool or stats site for VALORANT. Language: English."
+   },
+   "fr": {
+    "baslik": "ProSettings.net — VALORANT (outil)",
+    "aciklama": "Outil d'aide ou site de statistiques gratuit pour VALORANT. Langue : anglais."
+   },
+   "es": {
+    "baslik": "ProSettings.net — VALORANT (herramienta)",
+    "aciklama": "Herramienta de ayuda o sitio de estadísticas gratuito para VALORANT. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "league-of-legends-resmî-lol-wiki",
+  "oyun": "League of Legends",
+  "hub": "league-of-legends",
+  "kaynak": "Resmî LoL Wiki",
+  "url": "https://wiki.leagueoflegends.com/en-us/",
+  "kategori": "wiki",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Ücretsiz erişim",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Resmî LoL Wiki — League of Legends (wiki)",
+    "aciklama": "League of Legends için topluluk wiki'si: öğeler, mekanikler ve ayrıntılı sayfalar. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Resmî LoL Wiki — League of Legends (wiki)",
+    "aciklama": "Community wiki for League of Legends: items, mechanics and detailed pages. Language: English."
+   },
+   "fr": {
+    "baslik": "Resmî LoL Wiki — League of Legends (wiki)",
+    "aciklama": "Wiki communautaire pour League of Legends : objets, mécaniques et pages détaillées. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Resmî LoL Wiki — League of Legends (wiki)",
+    "aciklama": "Wiki de la comunidad de League of Legends: objetos, mecánicas y páginas detalladas. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "league-of-legends-riot-games-destek-league-of-legends",
+  "oyun": "League of Legends",
+  "hub": "league-of-legends",
+  "kaynak": "Riot Games Destek: League of Legends",
+  "url": "https://support.riotgames.com/en-us/league-of-legends/",
+  "kategori": "resmi",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Riot Games Destek: League of Legends — League of Legends (resmî)",
+    "aciklama": "League of Legends için yayıncının resmî sayfası: destek, duyuru veya oyun bilgisi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Riot Games Destek: League of Legends — League of Legends (official)",
+    "aciklama": "Official publisher page for League of Legends: support, announcements or game information. Language: English."
+   },
+   "fr": {
+    "baslik": "Riot Games Destek: League of Legends — League of Legends (officiel)",
+    "aciklama": "Page officielle de l'éditeur pour League of Legends : assistance, annonces ou informations sur le jeu. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Riot Games Destek: League of Legends — League of Legends (oficial)",
+    "aciklama": "Página oficial del editor de League of Legends: soporte, anuncios o información del juego. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "league-of-legends-op-gg",
+  "oyun": "League of Legends",
+  "hub": "league-of-legends",
+  "kaynak": "OP.GG",
+  "url": "https://op.gg/",
+  "kategori": "arac",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Ücretsiz erişim",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "OP.GG — League of Legends (araç)",
+    "aciklama": "League of Legends için ücretsiz yardımcı araç veya istatistik sitesi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "OP.GG — League of Legends (tool)",
+    "aciklama": "Free helper tool or stats site for League of Legends. Language: English."
+   },
+   "fr": {
+    "baslik": "OP.GG — League of Legends (outil)",
+    "aciklama": "Outil d'aide ou site de statistiques gratuit pour League of Legends. Langue : anglais."
+   },
+   "es": {
+    "baslik": "OP.GG — League of Legends (herramienta)",
+    "aciklama": "Herramienta de ayuda o sitio de estadísticas gratuito para League of Legends. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "counter-strike-2-pcgamingwiki-counter-strike-2",
+  "oyun": "Counter-Strike 2",
+  "hub": "counter-strike-2",
+  "kaynak": "PCGamingWiki: Counter-Strike 2",
+  "url": "https://www.pcgamingwiki.com/wiki/Counter-Strike_2",
+  "kategori": "wiki",
+  "dil": [
+   "en"
+  ],
+  "lisans": "CC BY-NC-SA",
+  "acik": true,
+  "diller": {
+   "tr": {
+    "baslik": "PCGamingWiki: Counter-Strike 2 — Counter-Strike 2 (wiki)",
+    "aciklama": "Counter-Strike 2 için topluluk wiki'si: öğeler, mekanikler ve ayrıntılı sayfalar. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "PCGamingWiki: Counter-Strike 2 — Counter-Strike 2 (wiki)",
+    "aciklama": "Community wiki for Counter-Strike 2: items, mechanics and detailed pages. Language: English."
+   },
+   "fr": {
+    "baslik": "PCGamingWiki: Counter-Strike 2 — Counter-Strike 2 (wiki)",
+    "aciklama": "Wiki communautaire pour Counter-Strike 2 : objets, mécaniques et pages détaillées. Langue : anglais."
+   },
+   "es": {
+    "baslik": "PCGamingWiki: Counter-Strike 2 — Counter-Strike 2 (wiki)",
+    "aciklama": "Wiki de la comunidad de Counter-Strike 2: objetos, mecánicas y páginas detalladas. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "counter-strike-2-prosettings-net",
+  "oyun": "Counter-Strike 2",
+  "hub": "counter-strike-2",
+  "kaynak": "ProSettings.net",
+  "url": "https://prosettings.net/games/cs2/",
+  "kategori": "arac",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Ücretsiz erişim",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "ProSettings.net — Counter-Strike 2 (araç)",
+    "aciklama": "Counter-Strike 2 için ücretsiz yardımcı araç veya istatistik sitesi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "ProSettings.net — Counter-Strike 2 (tool)",
+    "aciklama": "Free helper tool or stats site for Counter-Strike 2. Language: English."
+   },
+   "fr": {
+    "baslik": "ProSettings.net — Counter-Strike 2 (outil)",
+    "aciklama": "Outil d'aide ou site de statistiques gratuit pour Counter-Strike 2. Langue : anglais."
+   },
+   "es": {
+    "baslik": "ProSettings.net — Counter-Strike 2 (herramienta)",
+    "aciklama": "Herramienta de ayuda o sitio de estadísticas gratuito para Counter-Strike 2. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "pubg-pubg-wiki-wiki-gg",
+  "oyun": "PUBG: BATTLEGROUNDS",
+  "hub": "pubg",
+  "kaynak": "PUBG Wiki (wiki.gg)",
+  "url": "https://pubg.wiki.gg/",
+  "kategori": "wiki",
+  "dil": [
+   "en"
+  ],
+  "lisans": "CC BY-NC-SA 4.0",
+  "acik": true,
+  "diller": {
+   "tr": {
+    "baslik": "PUBG Wiki (wiki.gg) — PUBG: BATTLEGROUNDS (wiki)",
+    "aciklama": "PUBG: BATTLEGROUNDS için topluluk wiki'si: öğeler, mekanikler ve ayrıntılı sayfalar. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "PUBG Wiki (wiki.gg) — PUBG: BATTLEGROUNDS (wiki)",
+    "aciklama": "Community wiki for PUBG: BATTLEGROUNDS: items, mechanics and detailed pages. Language: English."
+   },
+   "fr": {
+    "baslik": "PUBG Wiki (wiki.gg) — PUBG: BATTLEGROUNDS (wiki)",
+    "aciklama": "Wiki communautaire pour PUBG: BATTLEGROUNDS : objets, mécaniques et pages détaillées. Langue : anglais."
+   },
+   "es": {
+    "baslik": "PUBG Wiki (wiki.gg) — PUBG: BATTLEGROUNDS (wiki)",
+    "aciklama": "Wiki de la comunidad de PUBG: BATTLEGROUNDS: objetos, mecánicas y páginas detalladas. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "pubg-krafton-destek",
+  "oyun": "PUBG: BATTLEGROUNDS",
+  "hub": "pubg",
+  "kaynak": "KRAFTON Destek",
+  "url": "https://support.krafton.com/hc/en-us",
+  "kategori": "resmi",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "KRAFTON Destek — PUBG: BATTLEGROUNDS (resmî)",
+    "aciklama": "PUBG: BATTLEGROUNDS için yayıncının resmî sayfası: destek, duyuru veya oyun bilgisi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "KRAFTON Destek — PUBG: BATTLEGROUNDS (official)",
+    "aciklama": "Official publisher page for PUBG: BATTLEGROUNDS: support, announcements or game information. Language: English."
+   },
+   "fr": {
+    "baslik": "KRAFTON Destek — PUBG: BATTLEGROUNDS (officiel)",
+    "aciklama": "Page officielle de l'éditeur pour PUBG: BATTLEGROUNDS : assistance, annonces ou informations sur le jeu. Langue : anglais."
+   },
+   "es": {
+    "baslik": "KRAFTON Destek — PUBG: BATTLEGROUNDS (oficial)",
+    "aciklama": "Página oficial del editor de PUBG: BATTLEGROUNDS: soporte, anuncios o información del juego. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "pubg-dak-gg",
+  "oyun": "PUBG: BATTLEGROUNDS",
+  "hub": "pubg",
+  "kaynak": "DAK.GG",
+  "url": "https://dak.gg/pubg",
+  "kategori": "arac",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Ücretsiz erişim",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "DAK.GG — PUBG: BATTLEGROUNDS (araç)",
+    "aciklama": "PUBG: BATTLEGROUNDS için ücretsiz yardımcı araç veya istatistik sitesi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "DAK.GG — PUBG: BATTLEGROUNDS (tool)",
+    "aciklama": "Free helper tool or stats site for PUBG: BATTLEGROUNDS. Language: English."
+   },
+   "fr": {
+    "baslik": "DAK.GG — PUBG: BATTLEGROUNDS (outil)",
+    "aciklama": "Outil d'aide ou site de statistiques gratuit pour PUBG: BATTLEGROUNDS. Langue : anglais."
+   },
+   "es": {
+    "baslik": "DAK.GG — PUBG: BATTLEGROUNDS (herramienta)",
+    "aciklama": "Herramienta de ayuda o sitio de estadísticas gratuito para PUBG: BATTLEGROUNDS. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "metin2-metin2-türkiye-wiki",
+  "oyun": "Metin2",
+  "hub": "metin2",
+  "kaynak": "Metin2 Türkiye Wiki",
+  "url": "https://tr-wiki.metin2.gameforge.com/",
+  "kategori": "wiki",
+  "dil": [
+   "tr"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Metin2 Türkiye Wiki — Metin2 (wiki)",
+    "aciklama": "Metin2 için topluluk wiki'si: öğeler, mekanikler ve ayrıntılı sayfalar. Dil: Türkçe."
+   },
+   "en": {
+    "baslik": "Metin2 Türkiye Wiki — Metin2 (wiki)",
+    "aciklama": "Community wiki for Metin2: items, mechanics and detailed pages. Language: Turkish."
+   },
+   "fr": {
+    "baslik": "Metin2 Türkiye Wiki — Metin2 (wiki)",
+    "aciklama": "Wiki communautaire pour Metin2 : objets, mécaniques et pages détaillées. Langue : turc."
+   },
+   "es": {
+    "baslik": "Metin2 Türkiye Wiki — Metin2 (wiki)",
+    "aciklama": "Wiki de la comunidad de Metin2: objetos, mecánicas y páginas detalladas. Idioma: turco."
+   }
+  }
+ },
+ {
+  "id": "metin2-metin2-türkiye-forum",
+  "oyun": "Metin2",
+  "hub": "metin2",
+  "kaynak": "Metin2 Türkiye Forum",
+  "url": "https://board.tr.metin2.gameforge.com/",
+  "kategori": "resmi",
+  "dil": [
+   "tr"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Metin2 Türkiye Forum — Metin2 (resmî)",
+    "aciklama": "Metin2 için yayıncının resmî sayfası: destek, duyuru veya oyun bilgisi. Dil: Türkçe."
+   },
+   "en": {
+    "baslik": "Metin2 Türkiye Forum — Metin2 (official)",
+    "aciklama": "Official publisher page for Metin2: support, announcements or game information. Language: Turkish."
+   },
+   "fr": {
+    "baslik": "Metin2 Türkiye Forum — Metin2 (officiel)",
+    "aciklama": "Page officielle de l'éditeur pour Metin2 : assistance, annonces ou informations sur le jeu. Langue : turc."
+   },
+   "es": {
+    "baslik": "Metin2 Türkiye Forum — Metin2 (oficial)",
+    "aciklama": "Página oficial del editor de Metin2: soporte, anuncios o información del juego. Idioma: turco."
+   }
+  }
+ },
+ {
+  "id": "metin2-gameforge-destek",
+  "oyun": "Metin2",
+  "hub": "metin2",
+  "kaynak": "Gameforge Destek",
+  "url": "https://support.gameforge.com/",
+  "kategori": "resmi",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Gameforge Destek — Metin2 (resmî)",
+    "aciklama": "Metin2 için yayıncının resmî sayfası: destek, duyuru veya oyun bilgisi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Gameforge Destek — Metin2 (official)",
+    "aciklama": "Official publisher page for Metin2: support, announcements or game information. Language: English."
+   },
+   "fr": {
+    "baslik": "Gameforge Destek — Metin2 (officiel)",
+    "aciklama": "Page officielle de l'éditeur pour Metin2 : assistance, annonces ou informations sur le jeu. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Gameforge Destek — Metin2 (oficial)",
+    "aciklama": "Página oficial del editor de Metin2: soporte, anuncios o información del juego. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "fortnite-fortnite-gg",
+  "oyun": "Fortnite",
+  "hub": "fortnite",
+  "kaynak": "Fortnite.GG",
+  "url": "https://fortnite.gg/",
+  "kategori": "arac",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Ücretsiz erişim",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Fortnite.GG — Fortnite (araç)",
+    "aciklama": "Fortnite için ücretsiz yardımcı araç veya istatistik sitesi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Fortnite.GG — Fortnite (tool)",
+    "aciklama": "Free helper tool or stats site for Fortnite. Language: English."
+   },
+   "fr": {
+    "baslik": "Fortnite.GG — Fortnite (outil)",
+    "aciklama": "Outil d'aide ou site de statistiques gratuit pour Fortnite. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Fortnite.GG — Fortnite (herramienta)",
+    "aciklama": "Herramienta de ayuda o sitio de estadísticas gratuito para Fortnite. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "fortnite-epic-developer-documentation-fortnite",
+  "oyun": "Fortnite",
+  "hub": "fortnite",
+  "kaynak": "Epic Developer Documentation: Fortnite",
+  "url": "https://dev.epicgames.com/documentation/fortnite",
+  "kategori": "resmi",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Epic Developer Documentation: Fortnite — Fortnite (resmî)",
+    "aciklama": "Fortnite için yayıncının resmî sayfası: destek, duyuru veya oyun bilgisi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Epic Developer Documentation: Fortnite — Fortnite (official)",
+    "aciklama": "Official publisher page for Fortnite: support, announcements or game information. Language: English."
+   },
+   "fr": {
+    "baslik": "Epic Developer Documentation: Fortnite — Fortnite (officiel)",
+    "aciklama": "Page officielle de l'éditeur pour Fortnite : assistance, annonces ou informations sur le jeu. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Epic Developer Documentation: Fortnite — Fortnite (oficial)",
+    "aciklama": "Página oficial del editor de Fortnite: soporte, anuncios o información del juego. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "minecraft-minecraft-wiki",
+  "oyun": "Minecraft",
+  "hub": "minecraft",
+  "kaynak": "Minecraft Wiki",
+  "url": "https://minecraft.wiki/",
+  "kategori": "wiki",
+  "dil": [
+   "en"
+  ],
+  "lisans": "CC BY-NC-SA 3.0",
+  "acik": true,
+  "diller": {
+   "tr": {
+    "baslik": "Minecraft Wiki — Minecraft (wiki)",
+    "aciklama": "Minecraft için topluluk wiki'si: öğeler, mekanikler ve ayrıntılı sayfalar. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Minecraft Wiki — Minecraft (wiki)",
+    "aciklama": "Community wiki for Minecraft: items, mechanics and detailed pages. Language: English."
+   },
+   "fr": {
+    "baslik": "Minecraft Wiki — Minecraft (wiki)",
+    "aciklama": "Wiki communautaire pour Minecraft : objets, mécaniques et pages détaillées. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Minecraft Wiki — Minecraft (wiki)",
+    "aciklama": "Wiki de la comunidad de Minecraft: objetos, mecánicas y páginas detalladas. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "minecraft-minecraft-wiki-tutorials",
+  "oyun": "Minecraft",
+  "hub": "minecraft",
+  "kaynak": "Minecraft Wiki: Tutorials",
+  "url": "https://minecraft.wiki/w/Tutorials",
+  "kategori": "baslangic",
+  "dil": [
+   "en"
+  ],
+  "lisans": "CC BY-NC-SA 3.0",
+  "acik": true,
+  "diller": {
+   "tr": {
+    "baslik": "Minecraft Wiki: Tutorials — Minecraft (başlangıç rehberi)",
+    "aciklama": "Minecraft için yeni başlayanlara yönelik ücretsiz rehber. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Minecraft Wiki: Tutorials — Minecraft (beginner guide)",
+    "aciklama": "Free guide for newcomers to Minecraft. Language: English."
+   },
+   "fr": {
+    "baslik": "Minecraft Wiki: Tutorials — Minecraft (guide débutant)",
+    "aciklama": "Guide gratuit pour les nouveaux joueurs de Minecraft. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Minecraft Wiki: Tutorials — Minecraft (guía inicial)",
+    "aciklama": "Guía gratuita para quienes empiezan en Minecraft. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "minecraft-minecraft-yardım-merkezi",
+  "oyun": "Minecraft",
+  "hub": "minecraft",
+  "kaynak": "Minecraft Yardım Merkezi",
+  "url": "https://help.minecraft.net/hc/en-us",
+  "kategori": "resmi",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Minecraft Yardım Merkezi — Minecraft (resmî)",
+    "aciklama": "Minecraft için yayıncının resmî sayfası: destek, duyuru veya oyun bilgisi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Minecraft Yardım Merkezi — Minecraft (official)",
+    "aciklama": "Official publisher page for Minecraft: support, announcements or game information. Language: English."
+   },
+   "fr": {
+    "baslik": "Minecraft Yardım Merkezi — Minecraft (officiel)",
+    "aciklama": "Page officielle de l'éditeur pour Minecraft : assistance, annonces ou informations sur le jeu. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Minecraft Yardım Merkezi — Minecraft (oficial)",
+    "aciklama": "Página oficial del editor de Minecraft: soporte, anuncios o información del juego. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "diablo-4-maxroll-diablo-iv",
+  "oyun": "Diablo",
+  "hub": "diablo-4",
+  "kaynak": "Maxroll: Diablo IV",
+  "url": "https://maxroll.gg/d4",
+  "kategori": "ileri",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Ücretsiz erişim",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Maxroll: Diablo IV — Diablo (ileri rehberler)",
+    "aciklama": "Diablo için sınıf, build ve ileri düzey ücretsiz rehberler. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Maxroll: Diablo IV — Diablo (advanced guides)",
+    "aciklama": "Free class, build and advanced guides for Diablo. Language: English."
+   },
+   "fr": {
+    "baslik": "Maxroll: Diablo IV — Diablo (guides avancés)",
+    "aciklama": "Guides gratuits de classes, builds et niveau avancé pour Diablo. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Maxroll: Diablo IV — Diablo (guías avanzadas)",
+    "aciklama": "Guías gratuitas de clases, builds y nivel avanzado para Diablo. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "diablo-4-icy-veins-diablo-iv",
+  "oyun": "Diablo",
+  "hub": "diablo-4",
+  "kaynak": "Icy Veins: Diablo IV",
+  "url": "https://www.icy-veins.com/d4/",
+  "kategori": "ileri",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Ücretsiz erişim",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Icy Veins: Diablo IV — Diablo (ileri rehberler)",
+    "aciklama": "Diablo için sınıf, build ve ileri düzey ücretsiz rehberler. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Icy Veins: Diablo IV — Diablo (advanced guides)",
+    "aciklama": "Free class, build and advanced guides for Diablo. Language: English."
+   },
+   "fr": {
+    "baslik": "Icy Veins: Diablo IV — Diablo (guides avancés)",
+    "aciklama": "Guides gratuits de classes, builds et niveau avancé pour Diablo. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Icy Veins: Diablo IV — Diablo (guías avanzadas)",
+    "aciklama": "Guías gratuitas de clases, builds y nivel avanzado para Diablo. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "diablo-4-maxroll-diablo-ii-resurrected",
+  "oyun": "Diablo",
+  "hub": "diablo-4",
+  "kaynak": "Maxroll: Diablo II Resurrected",
+  "url": "https://maxroll.gg/d2",
+  "kategori": "ileri",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Ücretsiz erişim",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Maxroll: Diablo II Resurrected — Diablo (ileri rehberler)",
+    "aciklama": "Diablo için sınıf, build ve ileri düzey ücretsiz rehberler. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Maxroll: Diablo II Resurrected — Diablo (advanced guides)",
+    "aciklama": "Free class, build and advanced guides for Diablo. Language: English."
+   },
+   "fr": {
+    "baslik": "Maxroll: Diablo II Resurrected — Diablo (guides avancés)",
+    "aciklama": "Guides gratuits de classes, builds et niveau avancé pour Diablo. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Maxroll: Diablo II Resurrected — Diablo (guías avanzadas)",
+    "aciklama": "Guías gratuitas de clases, builds y nivel avanzado para Diablo. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "path-of-exile-2-poe2db",
+  "oyun": "Path of Exile 2",
+  "hub": "path-of-exile-2",
+  "kaynak": "PoE2DB",
+  "url": "https://poe2db.tw/us/",
+  "kategori": "arac",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Ücretsiz erişim",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "PoE2DB — Path of Exile 2 (araç)",
+    "aciklama": "Path of Exile 2 için ücretsiz yardımcı araç veya istatistik sitesi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "PoE2DB — Path of Exile 2 (tool)",
+    "aciklama": "Free helper tool or stats site for Path of Exile 2. Language: English."
+   },
+   "fr": {
+    "baslik": "PoE2DB — Path of Exile 2 (outil)",
+    "aciklama": "Outil d'aide ou site de statistiques gratuit pour Path of Exile 2. Langue : anglais."
+   },
+   "es": {
+    "baslik": "PoE2DB — Path of Exile 2 (herramienta)",
+    "aciklama": "Herramienta de ayuda o sitio de estadísticas gratuito para Path of Exile 2. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "path-of-exile-2-maxroll-path-of-exile-2",
+  "oyun": "Path of Exile 2",
+  "hub": "path-of-exile-2",
+  "kaynak": "Maxroll: Path of Exile 2",
+  "url": "https://maxroll.gg/poe2",
+  "kategori": "ileri",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Ücretsiz erişim",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Maxroll: Path of Exile 2 — Path of Exile 2 (ileri rehberler)",
+    "aciklama": "Path of Exile 2 için sınıf, build ve ileri düzey ücretsiz rehberler. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Maxroll: Path of Exile 2 — Path of Exile 2 (advanced guides)",
+    "aciklama": "Free class, build and advanced guides for Path of Exile 2. Language: English."
+   },
+   "fr": {
+    "baslik": "Maxroll: Path of Exile 2 — Path of Exile 2 (guides avancés)",
+    "aciklama": "Guides gratuits de classes, builds et niveau avancé pour Path of Exile 2. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Maxroll: Path of Exile 2 — Path of Exile 2 (guías avanzadas)",
+    "aciklama": "Guías gratuitas de clases, builds y nivel avanzado para Path of Exile 2. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "overwatch-overwatch-kahramanlar-sayfası",
+  "oyun": "Overwatch",
+  "hub": "overwatch",
+  "kaynak": "Overwatch kahramanlar sayfası",
+  "url": "https://overwatch.blizzard.com/en-us/heroes/",
+  "kategori": "resmi",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Overwatch kahramanlar sayfası — Overwatch (resmî)",
+    "aciklama": "Overwatch için yayıncının resmî sayfası: destek, duyuru veya oyun bilgisi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Overwatch kahramanlar sayfası — Overwatch (official)",
+    "aciklama": "Official publisher page for Overwatch: support, announcements or game information. Language: English."
+   },
+   "fr": {
+    "baslik": "Overwatch kahramanlar sayfası — Overwatch (officiel)",
+    "aciklama": "Page officielle de l'éditeur pour Overwatch : assistance, annonces ou informations sur le jeu. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Overwatch kahramanlar sayfası — Overwatch (oficial)",
+    "aciklama": "Página oficial del editor de Overwatch: soporte, anuncios o información del juego. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "marathon-marathon-yardım-merkezi",
+  "oyun": "Marathon",
+  "hub": "marathon",
+  "kaynak": "Marathon Yardım Merkezi",
+  "url": "https://help.marathonthegame.com/hc/en-us",
+  "kategori": "resmi",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Marathon Yardım Merkezi — Marathon (resmî)",
+    "aciklama": "Marathon için yayıncının resmî sayfası: destek, duyuru veya oyun bilgisi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Marathon Yardım Merkezi — Marathon (official)",
+    "aciklama": "Official publisher page for Marathon: support, announcements or game information. Language: English."
+   },
+   "fr": {
+    "baslik": "Marathon Yardım Merkezi — Marathon (officiel)",
+    "aciklama": "Page officielle de l'éditeur pour Marathon : assistance, annonces ou informations sur le jeu. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Marathon Yardım Merkezi — Marathon (oficial)",
+    "aciklama": "Página oficial del editor de Marathon: soporte, anuncios o información del juego. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "marathon-marathon-depolama-ve-sistem-gereksinimleri",
+  "oyun": "Marathon",
+  "hub": "marathon",
+  "kaynak": "Marathon: depolama ve sistem gereksinimleri",
+  "url": "https://help.marathonthegame.com/hc/en-us/articles/39001521437332-Marathon-Storage-and-System-Requirements",
+  "kategori": "baslangic",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Marathon: depolama ve sistem gereksinimleri",
+    "aciklama": "Marathon için yeni başlayanlara yönelik ücretsiz rehber. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Marathon: depolama ve sistem gereksinimleri",
+    "aciklama": "Free guide for newcomers to Marathon. Language: English."
+   },
+   "fr": {
+    "baslik": "Marathon: depolama ve sistem gereksinimleri",
+    "aciklama": "Guide gratuit pour les nouveaux joueurs de Marathon. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Marathon: depolama ve sistem gereksinimleri — Marathon (guía inicial)",
+    "aciklama": "Guía gratuita para quienes empiezan en Marathon. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "football-manager-27-football-manager-resmî-site",
+  "oyun": "Football Manager 27",
+  "hub": "football-manager-27",
+  "kaynak": "Football Manager resmî site",
+  "url": "https://www.footballmanager.com/",
+  "kategori": "resmi",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Football Manager resmî site — Football Manager 27 (resmî)",
+    "aciklama": "Football Manager 27 için yayıncının resmî sayfası: destek, duyuru veya oyun bilgisi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Football Manager resmî site — Football Manager 27 (official)",
+    "aciklama": "Official publisher page for Football Manager 27: support, announcements or game information. Language: English."
+   },
+   "fr": {
+    "baslik": "Football Manager resmî site — Football Manager 27 (officiel)",
+    "aciklama": "Page officielle de l'éditeur pour Football Manager 27 : assistance, annonces ou informations sur le jeu. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Football Manager resmî site — Football Manager 27 (oficial)",
+    "aciklama": "Página oficial del editor de Football Manager 27: soporte, anuncios o información del juego. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "football-manager-27-xbox-wire-fm27-ve-game-pass",
+  "oyun": "Football Manager 27",
+  "hub": "football-manager-27",
+  "kaynak": "Xbox Wire: FM27 ve Game Pass",
+  "url": "https://news.xbox.com/en-us/2026/11/10/football-manager-27-game-pass-pc-console-xbox",
+  "kategori": "resmi",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Xbox Wire: FM27 ve Game Pass — Football Manager 27 (resmî)",
+    "aciklama": "Football Manager 27 için yayıncının resmî sayfası: destek, duyuru veya oyun bilgisi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Xbox Wire: FM27 ve Game Pass — Football Manager 27 (official)",
+    "aciklama": "Official publisher page for Football Manager 27: support, announcements or game information. Language: English."
+   },
+   "fr": {
+    "baslik": "Xbox Wire: FM27 ve Game Pass — Football Manager 27 (officiel)",
+    "aciklama": "Page officielle de l'éditeur pour Football Manager 27 : assistance, annonces ou informations sur le jeu. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Xbox Wire: FM27 ve Game Pass — Football Manager 27 (oficial)",
+    "aciklama": "Página oficial del editor de Football Manager 27: soporte, anuncios o información del juego. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "halo-campaign-evolved-halopedia",
+  "oyun": "Halo: Campaign Evolved",
+  "hub": "halo-campaign-evolved",
+  "kaynak": "Halopedia",
+  "url": "https://www.halopedia.org/",
+  "kategori": "wiki",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Ücretsiz erişim",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Halopedia — Halo: Campaign Evolved (wiki)",
+    "aciklama": "Halo: Campaign Evolved için topluluk wiki'si: öğeler, mekanikler ve ayrıntılı sayfalar. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Halopedia — Halo: Campaign Evolved (wiki)",
+    "aciklama": "Community wiki for Halo: Campaign Evolved: items, mechanics and detailed pages. Language: English."
+   },
+   "fr": {
+    "baslik": "Halopedia — Halo: Campaign Evolved (wiki)",
+    "aciklama": "Wiki communautaire pour Halo: Campaign Evolved : objets, mécaniques et pages détaillées. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Halopedia — Halo: Campaign Evolved (wiki)",
+    "aciklama": "Wiki de la comunidad de Halo: Campaign Evolved: objetos, mecánicas y páginas detalladas. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "halo-campaign-evolved-halo-waypoint-destek",
+  "oyun": "Halo: Campaign Evolved",
+  "hub": "halo-campaign-evolved",
+  "kaynak": "Halo Waypoint Destek",
+  "url": "https://support.halowaypoint.com/hc/en-us",
+  "kategori": "resmi",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Halo Waypoint Destek — Halo: Campaign Evolved (resmî)",
+    "aciklama": "Halo: Campaign Evolved için yayıncının resmî sayfası: destek, duyuru veya oyun bilgisi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Halo Waypoint Destek — Halo: Campaign Evolved (official)",
+    "aciklama": "Official publisher page for Halo: Campaign Evolved: support, announcements or game information. Language: English."
+   },
+   "fr": {
+    "baslik": "Halo Waypoint Destek — Halo: Campaign Evolved (officiel)",
+    "aciklama": "Page officielle de l'éditeur pour Halo: Campaign Evolved : assistance, annonces ou informations sur le jeu. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Halo Waypoint Destek — Halo: Campaign Evolved (oficial)",
+    "aciklama": "Página oficial del editor de Halo: Campaign Evolved: soporte, anuncios o información del juego. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "ea-sports-fc-ea-sports-fc-resmî-site",
+  "oyun": "EA SPORTS FC",
+  "hub": "ea-sports-fc",
+  "kaynak": "EA SPORTS FC resmî site",
+  "url": "https://www.ea.com/games/ea-sports-fc",
+  "kategori": "resmi",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "EA SPORTS FC resmî site — EA SPORTS FC (resmî)",
+    "aciklama": "EA SPORTS FC için yayıncının resmî sayfası: destek, duyuru veya oyun bilgisi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "EA SPORTS FC resmî site — EA SPORTS FC (official)",
+    "aciklama": "Official publisher page for EA SPORTS FC: support, announcements or game information. Language: English."
+   },
+   "fr": {
+    "baslik": "EA SPORTS FC resmî site — EA SPORTS FC (officiel)",
+    "aciklama": "Page officielle de l'éditeur pour EA SPORTS FC : assistance, annonces ou informations sur le jeu. Langue : anglais."
+   },
+   "es": {
+    "baslik": "EA SPORTS FC resmî site — EA SPORTS FC (oficial)",
+    "aciklama": "Página oficial del editor de EA SPORTS FC: soporte, anuncios o información del juego. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "ea-sports-fc-fut-gg",
+  "oyun": "EA SPORTS FC",
+  "hub": "ea-sports-fc",
+  "kaynak": "FUT.GG",
+  "url": "https://www.fut.gg/",
+  "kategori": "arac",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Ücretsiz erişim",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "FUT.GG — EA SPORTS FC (araç)",
+    "aciklama": "EA SPORTS FC için ücretsiz yardımcı araç veya istatistik sitesi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "FUT.GG — EA SPORTS FC (tool)",
+    "aciklama": "Free helper tool or stats site for EA SPORTS FC. Language: English."
+   },
+   "fr": {
+    "baslik": "FUT.GG — EA SPORTS FC (outil)",
+    "aciklama": "Outil d'aide ou site de statistiques gratuit pour EA SPORTS FC. Langue : anglais."
+   },
+   "es": {
+    "baslik": "FUT.GG — EA SPORTS FC (herramienta)",
+    "aciklama": "Herramienta de ayuda o sitio de estadísticas gratuito para EA SPORTS FC. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "ea-sports-fc-wikipedia-ea-sports-fc-27",
+  "oyun": "EA SPORTS FC",
+  "hub": "ea-sports-fc",
+  "kaynak": "Wikipedia: EA Sports FC 27",
+  "url": "https://en.wikipedia.org/wiki/EA_Sports_FC_27",
+  "kategori": "wiki",
+  "dil": [
+   "en"
+  ],
+  "lisans": "CC BY-SA 4.0",
+  "acik": true,
+  "diller": {
+   "tr": {
+    "baslik": "Wikipedia: EA Sports FC 27 — EA SPORTS FC (wiki)",
+    "aciklama": "EA SPORTS FC için topluluk wiki'si: öğeler, mekanikler ve ayrıntılı sayfalar. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Wikipedia: EA Sports FC 27 — EA SPORTS FC (wiki)",
+    "aciklama": "Community wiki for EA SPORTS FC: items, mechanics and detailed pages. Language: English."
+   },
+   "fr": {
+    "baslik": "Wikipedia: EA Sports FC 27 — EA SPORTS FC (wiki)",
+    "aciklama": "Wiki communautaire pour EA SPORTS FC : objets, mécaniques et pages détaillées. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Wikipedia: EA Sports FC 27 — EA SPORTS FC (wiki)",
+    "aciklama": "Wiki de la comunidad de EA SPORTS FC: objetos, mecánicas y páginas detalladas. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "roblox-roblox-destek",
+  "oyun": "Roblox",
+  "hub": "roblox",
+  "kaynak": "Roblox Destek",
+  "url": "https://en.help.roblox.com/hc/en-us",
+  "kategori": "resmi",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Roblox Destek — Roblox (resmî)",
+    "aciklama": "Roblox için yayıncının resmî sayfası: destek, duyuru veya oyun bilgisi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Roblox Destek — Roblox (official)",
+    "aciklama": "Official publisher page for Roblox: support, announcements or game information. Language: English."
+   },
+   "fr": {
+    "baslik": "Roblox Destek — Roblox (officiel)",
+    "aciklama": "Page officielle de l'éditeur pour Roblox : assistance, annonces ou informations sur le jeu. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Roblox Destek — Roblox (oficial)",
+    "aciklama": "Página oficial del editor de Roblox: soporte, anuncios o información del juego. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "roblox-roblox-creator-hub-dokümantasyonu",
+  "oyun": "Roblox",
+  "hub": "roblox",
+  "kaynak": "Roblox Creator Hub dokümantasyonu",
+  "url": "https://create.roblox.com/docs",
+  "kategori": "ileri",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Roblox Creator Hub dokümantasyonu — Roblox (ileri rehberler)",
+    "aciklama": "Roblox için sınıf, build ve ileri düzey ücretsiz rehberler. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Roblox Creator Hub dokümantasyonu — Roblox (advanced guides)",
+    "aciklama": "Free class, build and advanced guides for Roblox. Language: English."
+   },
+   "fr": {
+    "baslik": "Roblox Creator Hub dokümantasyonu — Roblox (guides avancés)",
+    "aciklama": "Guides gratuits de classes, builds et niveau avancé pour Roblox. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Roblox Creator Hub dokümantasyonu — Roblox (guías avanzadas)",
+    "aciklama": "Guías gratuitas de clases, builds y nivel avanzado para Roblox. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "call-of-duty-call-of-duty-rehberleri",
+  "oyun": "Call of Duty",
+  "hub": "call-of-duty",
+  "kaynak": "Call of Duty rehberleri",
+  "url": "https://www.callofduty.com/guides",
+  "kategori": "resmi",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Call of Duty rehberleri — Call of Duty (resmî)",
+    "aciklama": "Call of Duty için yayıncının resmî sayfası: destek, duyuru veya oyun bilgisi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Call of Duty rehberleri — Call of Duty (official)",
+    "aciklama": "Official publisher page for Call of Duty: support, announcements or game information. Language: English."
+   },
+   "fr": {
+    "baslik": "Call of Duty rehberleri — Call of Duty (officiel)",
+    "aciklama": "Page officielle de l'éditeur pour Call of Duty : assistance, annonces ou informations sur le jeu. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Call of Duty rehberleri — Call of Duty (oficial)",
+    "aciklama": "Página oficial del editor de Call of Duty: soporte, anuncios o información del juego. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "call-of-duty-call-of-duty-yama-notları",
+  "oyun": "Call of Duty",
+  "hub": "call-of-duty",
+  "kaynak": "Call of Duty yama notları",
+  "url": "https://www.callofduty.com/patchnotes",
+  "kategori": "resmi",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Call of Duty yama notları — Call of Duty (resmî)",
+    "aciklama": "Call of Duty için yayıncının resmî sayfası: destek, duyuru veya oyun bilgisi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Call of Duty yama notları — Call of Duty (official)",
+    "aciklama": "Official publisher page for Call of Duty: support, announcements or game information. Language: English."
+   },
+   "fr": {
+    "baslik": "Call of Duty yama notları — Call of Duty (officiel)",
+    "aciklama": "Page officielle de l'éditeur pour Call of Duty : assistance, annonces ou informations sur le jeu. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Call of Duty yama notları — Call of Duty (oficial)",
+    "aciklama": "Página oficial del editor de Call of Duty: soporte, anuncios o información del juego. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "genshin-impact-game8-genshin-impact",
+  "oyun": "Genshin Impact",
+  "hub": "genshin-impact",
+  "kaynak": "Game8: Genshin Impact",
+  "url": "https://game8.co/games/Genshin-Impact",
+  "kategori": "ileri",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Ücretsiz erişim",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Game8: Genshin Impact — Genshin Impact (ileri rehberler)",
+    "aciklama": "Genshin Impact için sınıf, build ve ileri düzey ücretsiz rehberler. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Game8: Genshin Impact — Genshin Impact (advanced guides)",
+    "aciklama": "Free class, build and advanced guides for Genshin Impact. Language: English."
+   },
+   "fr": {
+    "baslik": "Game8: Genshin Impact — Genshin Impact (guides avancés)",
+    "aciklama": "Guides gratuits de classes, builds et niveau avancé pour Genshin Impact. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Game8: Genshin Impact — Genshin Impact (guías avanzadas)",
+    "aciklama": "Guías gratuitas de clases, builds y nivel avanzado para Genshin Impact. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "genshin-impact-hoyolab",
+  "oyun": "Genshin Impact",
+  "hub": "genshin-impact",
+  "kaynak": "HoYoLAB",
+  "url": "https://www.hoyolab.com/",
+  "kategori": "resmi",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "HoYoLAB — Genshin Impact (resmî)",
+    "aciklama": "Genshin Impact için yayıncının resmî sayfası: destek, duyuru veya oyun bilgisi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "HoYoLAB — Genshin Impact (official)",
+    "aciklama": "Official publisher page for Genshin Impact: support, announcements or game information. Language: English."
+   },
+   "fr": {
+    "baslik": "HoYoLAB — Genshin Impact (officiel)",
+    "aciklama": "Page officielle de l'éditeur pour Genshin Impact : assistance, annonces ou informations sur le jeu. Langue : anglais."
+   },
+   "es": {
+    "baslik": "HoYoLAB — Genshin Impact (oficial)",
+    "aciklama": "Página oficial del editor de Genshin Impact: soporte, anuncios o información del juego. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "rise-online-rise-online-world-yama-notları",
+  "oyun": "Rise Online",
+  "hub": "rise-online",
+  "kaynak": "Rise Online World yama notları",
+  "url": "https://www.riseonlineworld.com/en/patch-notes/16-0-3-patch-notes",
+  "kategori": "resmi",
+  "dil": [
+   "en"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Rise Online World yama notları — Rise Online (resmî)",
+    "aciklama": "Rise Online için yayıncının resmî sayfası: destek, duyuru veya oyun bilgisi. Dil: İngilizce."
+   },
+   "en": {
+    "baslik": "Rise Online World yama notları — Rise Online (official)",
+    "aciklama": "Official publisher page for Rise Online: support, announcements or game information. Language: English."
+   },
+   "fr": {
+    "baslik": "Rise Online World yama notları — Rise Online (officiel)",
+    "aciklama": "Page officielle de l'éditeur pour Rise Online : assistance, annonces ou informations sur le jeu. Langue : anglais."
+   },
+   "es": {
+    "baslik": "Rise Online World yama notları — Rise Online (oficial)",
+    "aciklama": "Página oficial del editor de Rise Online: soporte, anuncios o información del juego. Idioma: inglés."
+   }
+  }
+ },
+ {
+  "id": "rise-online-rise-online-world-forum",
+  "oyun": "Rise Online",
+  "hub": "rise-online",
+  "kaynak": "Rise Online World forum",
+  "url": "https://forum.riseonlineworld.com/",
+  "kategori": "resmi",
+  "dil": [
+   "en",
+   "tr"
+  ],
+  "lisans": "Resmî",
+  "acik": false,
+  "diller": {
+   "tr": {
+    "baslik": "Rise Online World forum — Rise Online (resmî)",
+    "aciklama": "Rise Online için yayıncının resmî sayfası: destek, duyuru veya oyun bilgisi. Dil: İngilizce / Türkçe."
+   },
+   "en": {
+    "baslik": "Rise Online World forum — Rise Online (official)",
+    "aciklama": "Official publisher page for Rise Online: support, announcements or game information. Language: English / Turkish."
+   },
+   "fr": {
+    "baslik": "Rise Online World forum — Rise Online (officiel)",
+    "aciklama": "Page officielle de l'éditeur pour Rise Online : assistance, annonces ou informations sur le jeu. Langue : anglais / turc."
+   },
+   "es": {
+    "baslik": "Rise Online World forum — Rise Online (oficial)",
+    "aciklama": "Página oficial del editor de Rise Online: soporte, anuncios o información del juego. Idioma: inglés / turco."
+   }
+  }
+ }
+]

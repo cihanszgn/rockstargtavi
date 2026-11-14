@@ -1,0 +1,1625 @@
+{
+ "oyun": "mobile-legends",
+ "guncelleme": "2026-11-14",
+ "surum": "Sezon 42 (16 Eylül 2026)",
+ "kaynaklar": [
+  {
+   "url": "https://play.google.com/store/apps/details?id=com.mobile.legends",
+   "ad": "Mobile Legends: Bang Bang (Google Play)"
+  },
+  {
+   "url": "https://mlbbhub.com/patch-notes",
+   "ad": "MLBB Hub yama notları (ikincil kaynak)"
+  },
+  {
+   "url": "https://gameverse.app/blog/mobile-legends-ranks",
+   "ad": "Gameverse rank rehberi (ikincil kaynak)"
+  },
+  {
+   "url": "https://timesaver.gg/blog/mobile-legends-credit-score",
+   "ad": "Timesaver Kredi Puanı yazısı (ikincil kaynak)"
+  },
+  {
+   "url": "https://mobile-legends.fandom.com/wiki/Ranked",
+   "ad": "Mobile Legends Wiki: Ranked (topluluk wikisi)"
+  },
+  {
+   "url": "https://mobile-legends.fandom.com/wiki/Map",
+   "ad": "Mobile Legends Wiki: Map (topluluk wikisi)"
+  }
+ ],
+ "diller": {
+  "tr": {
+   "baslik": "Mobile Legends: Bang Bang Başlangıç Rehberi: Hero, Lane ve Rank",
+   "ozet": "Mobile Legends: Bang Bang, telefonda oynanan ücretsiz 5'e 5 MOBA oyunudur. Bu rehber yeni başlayanlar ve uzun aradan dönenler için kurulumdan dereceli sıralamaya kadar yol gösterir.",
+   "kunye": [
+    {
+     "ad": "Tür",
+     "deger": "Mobil MOBA (5'e 5)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Android ve iOS; PC için Google Play Games"
+    },
+    {
+     "ad": "Fiyat modeli",
+     "deger": "Ücretsiz oynanır; kozmetik için isteğe bağlı satın alma"
+    },
+    {
+     "ad": "Güncel sürüm",
+     "deger": "Sezon 42 (16 Eylül 2026'da başladı); yama numarası ikincil kaynakta 2.2.16a"
+    },
+    {
+     "ad": "Türkçe desteği",
+     "deger": "Türkçe dil seçeneği bu rehberde doğrulanmadı; oyun içi dil menüsüne bak"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "nedir",
+     "baslik": "Mobile Legends nedir ve 2026'da durum ne",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Mobile Legends: Bang Bang'de iki takım beş kişiyle karşılaşır. Her oyuncu bir **hero** seçer ve amaç, düşman üssündeki kristali yıkmaktır. Oyun dokunmatik ekran için tasarlanmıştır; maçlar kısa sürer ve telefonda rahat oynanır."
+      },
+      {
+       "tip": "p",
+       "metin": "Google Play sayfasına göre **Sezon 42**, 16 Eylül 2026'da sunucu saatiyle 00:00'da başlamıştır. Sezon kostümü Popol ve Kupa için 'Flamehide Thane', çerçeve ise 'Starward Decade'dir; ayrıca Masha ve Bruno için 10. yıl yenilemeleri yapılmıştır. Oyun kendini 'Play to Win, not Pay to Win' olarak tanıtır."
+      },
+      {
+       "tip": "p",
+       "metin": "En son yama ikincil bir kaynakta 2.2.16a (14 Ekim 2026) olarak geçer; Kasım ortasında yeni bir güncelleme olduğu bildirilmiş olsa da numarası doğrulanmadı. Sezon 43'ün Aralık ortasında başlaması beklenir; bu da kesinleşmedi."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Rehberdeki sayılar Kasım 2026 itibarıyladır. Bazı bilgiler ikincil kaynaktandır ve işaretlenmiştir; oyun içinde doğrula."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Başlamadan önce: kurulum, hesap, sistem",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Yeni hesapta önce eğitim ve ilk görevleri bitir; bunlar hem temel hareketleri öğretir hem de başlangıç ödülleri verir. Ödüllerle açtığın ilk hero'ları harcamadan önce hangi rolü sevdiğini anlamaya çalış."
+      },
+      {
+       "tip": "p",
+       "metin": "Oyunu Google Play veya App Store'dan indirirsin. Google Play sayfasına göre oyun 12+ yaş derecelidir ve uygulama içi satın alma içerir. Hesap için e-posta veya bağlı bir hesap kullanılır."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "PC'de oynamak için Google Play Games kullanılır. Gereksinimler: Windows 10 sürüm 2004, 10 GB boş SSD alanı, Intel UHD 630, 4 fiziksel çekirdek, 8 GB RAM ve açık sanallaştırma (virtualization).",
+        "Ağ bağlantın kararlı olsun; Wi-Fi veya iyi bir mobil veri kullan.",
+        "Sunucu saati Türkiye saatinden farklı olabilir; sezon başlangıç ve bitiş saatlerini oyun içinde kontrol et."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Oyunu yalnızca resmi mağazadan indir. 'Ücretsiz elmas' veya hesap vaat eden siteler ve uygulamalar hesabını çaldırabilir."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "İlk maçlar adım adım",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Eğitimi bitir",
+         "metin": "Hareket, saldırı ve yetenek düğmelerini öğren."
+        },
+        {
+         "baslik": "Botlara karşı oyna",
+         "metin": "Rahat hissedene kadar bot maçlarıyla hero ve haritayı dene."
+        },
+        {
+         "baslik": "Klasik (Classic) maçlara geç",
+         "metin": "Gerçek oyunculara karşı derecesiz oynayarak alış."
+        },
+        {
+         "baslik": "Rütbeli (Ranked) maça hazırlan",
+         "metin": "Dereceli moda girmek için oyun içi şartlar vardır; kaynaklar arasında farklı (örneğin belli sayıda normal maç veya seviye) bilgiler var, bu yüzden oyunun gösterdiği kilidi esas al."
+        },
+        {
+         "baslik": "Kısa oyun oturumları yap",
+         "metin": "Bir veya iki maçtan sonra mola vermek hata sayısını azaltır."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hero-rol",
+     "baslik": "Hero ve rol seçimi: ilk haftalar için",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Oyunda beş temel rol vardır: **Tank, Mage, Marksman, Assassin ve Support**. Ayrıca dövüşçü (Fighter) tipi hero'lar da vardır. Hero'lar ücretsiz rotasyondan veya mağazadan açılır. Aşağıdaki örnekler yıllardır basit kalmış tercihleri gösterir (kendi bilgim; dengede değişiklik olabilir)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rol",
+        "Basit hero örneği",
+        "Neden kolay"
+       ],
+       "satirlar": [
+        [
+         "Tank",
+         "Tigreal",
+         "Dayanıklı; takım arkadaşlarının önünde durur"
+        ],
+        [
+         "Mage",
+         "Eudora",
+         "Yetenekler basit; yüksek patlama hasarı"
+        ],
+        [
+         "Marksman",
+         "Layla",
+         "Uzaktan hasar; hedef alma kolay"
+        ],
+        [
+         "Dövüşçü",
+         "Zilong",
+         "Kısa menzilde sağlam; saldırı akıcı"
+        ],
+        [
+         "Support",
+         "Estes",
+         "İyileştirir; takımı hayatta tutar"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Bir hafta boyunca aynı iki hero ile oyna. Çok hero denemek yerine birini iyi öğrenmek daha çabuk ilerletir."
+      }
+     ]
+    },
+    {
+     "id": "mekanikler",
+     "baslik": "Temel mekanikler: lane, orman, hedefler",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Harita üç ana yoldan (lane) oluşur ve aralarda orman vardır. Lane'ler: **Gold Lane** (genellikle marksman), **EXP Lane** (genellikle dövüşçü), **Mid Lane** (genellikle mage), **Jungle** (orman) ve **Roam** (gezgin; genellikle tank veya support). İlk Turtle (kaplumbağa) EXP lane tarafında çıkar."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Kuleler:** Önce dış, sonra iç kuleler ve sonunda ana üsteki kristal yıkılır.",
+        "**Orman canavarları:** Altın ve seviye verir; Turtle ve Lord gibi hedefler takıma güç katar.",
+        "**Minyonlar:** Altın vermek için öldürülür; son vuruşu yaparak altın kazanırsın.",
+        "**Harita bilgisi:** Mini haritaya sık bak; rakibin lane'ini bırakması tehlike işaretidir."
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Terim",
+        "Anlamı"
+       ],
+       "satirlar": [
+        [
+         "Farm",
+         "Minyon ve canavar keserek altın toplamak"
+        ],
+        [
+         "Gank",
+         "Başka bir lane'e sürpriz yapıp rakibi öldürmek"
+        ],
+        [
+         "Rotate",
+         "Takımın lane'ler arasında yer değiştirmesi"
+        ],
+        [
+         "Push",
+         "Minyon dalgasını düşman kulesine doğru itmek"
+        ],
+        [
+         "Retreat",
+         "Tehlike anında geri çekilmek"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Yeni oyuncuların en kalıcı kazancı **mini haritaya bakmak ve takımla birlikte hareket etmektir**. Tek başına kovalamak çoğu zaman ölümle sonuçlanır."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Ayarlar: başlangıç değerleri",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Ayarlarda en çok işe yarayan şey düğme yerleşimidir. Başparmağın bir yeteneğe zor ulaşıyorsa o düğmeyi taşı; tek tek her maçta aynı hareketi yapabilmek, ince grafik ayarından daha değerlidir. Bunu kendi deneyim olarak öneriyorum (kendi bilgim)."
+      },
+      {
+       "tip": "p",
+       "metin": "Bunlar resmi değer değil; genel olarak önerilen başlangıç noktalarıdır. Bot maçında dene."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Ayar",
+        "Başlangıç önerisi"
+       ],
+       "satirlar": [
+        [
+         "Düğme yerleşimi",
+         "Başparmaklarını rahat ettirecek şekilde düğmeleri biraz büyüt veya yer değiştir"
+        ],
+        [
+         "Otomatik hedef",
+         "Saldırıda otomatik hedef seçimini açık bırak"
+        ],
+        [
+         "Grafik",
+         "Telefonuna uygun; akıcılık görüntüden önemlidir"
+        ],
+        [
+         "Ses",
+         "Kulaklık tak; yetenek sesi bilgi taşır"
+        ],
+        [
+         "Ağ",
+         "Wi-Fi veya iyi mobil veri; ping'i oyun içi göstergeden izle"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Ayar değiştirince birkaç maç aynı değerle oyna; fikrini hemen bozma."
+      }
+     ]
+    },
+    {
+     "id": "rank",
+     "baslik": "Dereceli sistem ve rank tablosu",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Rank tablosu sezona göre ayrıntı değiştirebilir; yıldız sayıları ve kademe adları güncellemelerle oynanabilir. Bu yüzden aşağıdaki değerleri kesin sayma, kendi ekranındaki sıralama sayfasıyla karşılaştır."
+      },
+      {
+       "tip": "p",
+       "metin": "Dereceli kademeler ikincil kaynaklara göre şöyledir: Warrior, Elite, Master, Grandmaster, Epic, Legend ve Mythic. Mythic içinde ek ünvanlar vardır: Mythical Honor, Mythical Glory ve Mythical Immortal. Mythic'ten sonra yıldız sayısı devam eder."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rütbe",
+        "Bölümler (ikincil kaynak)"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "III - I"
+        ],
+        [
+         "Elite",
+         "III - I"
+        ],
+        [
+         "Master",
+         "IV - I"
+        ],
+        [
+         "Grandmaster",
+         "V - I"
+        ],
+        [
+         "Epic",
+         "V - I"
+        ],
+        [
+         "Legend",
+         "V - I"
+        ],
+        [
+         "Mythic",
+         "Mythical Honor (25 yıldız), Glory (50 yıldız), Immortal (100+ yıldız)"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Draft Pick (seçim) ve yasaklama aşaması Epic'ten itibaren başlar (ikincil kaynak).",
+        "Warrior'da kayıp yıldız götürmez (ikincil kaynak).",
+        "Dereceli grup boyutu 1, 2, 3 veya 5 kişi olabilir (ikincil kaynak).",
+        "Kredi Puanı (Credit Score) 100'de başlar, en fazla 110 olur; 90'ın altında dereceli kilitlenebilir (ikincil kaynak)."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hatalar",
+     "baslik": "Yeni oyuncuların sık yaptığı hatalar",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Hataların çoğu bilgi eksikliğinden değil alışkanlıktan gelir. Her maçtan sonra tek bir şeyi not et: neden öldüm, hangi hedefi kaçırdım. Üç dört maçta aynı cevap çıkarsa asıl çalışman gereken şey odur."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Dereceliye hazır olmadan girmek; önce klasik maçlarla alış.",
+        "Takımı beklemeden tek başına kule dalmak.",
+        "Mini haritaya bakmamak.",
+        "Takım arkadaşlarını suçlamak; ölünce hatayı kendinde ara.",
+        "Her maçta farklı hero denemek.",
+        "Sinirliyken peş peşe maç oynamak; ara ver."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Hesap güvenliği ve davranış kuralları",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Çocuk veya genç oyuncular için: oyun içi satın alma ve sohbet ayarlarını bir yetişkinle birlikte kontrol et. Tanımadığın kişilerden gelen bağlantıya tıklama ve kişisel bilgini (adres, okul, telefon) sohbette paylaşma."
+      },
+      {
+       "tip": "p",
+       "metin": "Hesabın senin dijital kasan. Hesabını güvenli bir e-postayla bağla ve şifreni başka sitelerle paylaşma."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Hile yazılımı, üçüncü taraf mod uygulamaları, script, rank boost hizmeti, hesap satın alma veya satma, kumar benzeri skin bahis siteleri ve korsan veya sahte 'ücretsiz elmas' siteleri hesabının kalıcı yasaklanmasına yol açabilir. Bunlara yaklaşma."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Maçtan sürekli AFK olmak veya bilerek oyunu bozmak yaptırım getirir; bu Kredi Puanını düşürür.",
+        "Takım arkadaşlarına saygılı ol; toksik sohbeti raporla ve sustur.",
+        "Düşük ranklı oyunculara karşı ikinci bir hesapla oynamak (smurf) adil değildir; yapma.",
+        "Hesabını kimseyle paylaşma."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Sık sorulan sorular",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Mobile Legends ücretsiz mi?",
+         "c": "Evet. Oyun ücretsizdir; satın almalar kozmetik içindir."
+        },
+        {
+         "s": "PC'de oynanır mı?",
+         "c": "Evet, Google Play Games üzerinden; gereksinimler Windows 10 sürüm 2004, 10 GB SSD alanı ve açık sanallaştırmadır."
+        },
+        {
+         "s": "Dereceliye ne zaman girerim?",
+         "c": "Oyunun gösterdiği kilit açılınca; kaynaklarda farklı şartlar geçtiği için kesin sayı vermiyoruz."
+        },
+        {
+         "s": "Rankım düşer mi?",
+         "c": "Yıldız kaybedersin; Warrior'da kayıp yıldız götürmez (ikincil kaynak)."
+        },
+        {
+         "s": "Hangi hero ile başlayayım?",
+         "c": "Basit ve dayanıklı bir hero seç; bir hafta aynı iki hero ile oyna."
+        },
+        {
+         "s": "Türkçe dil var mı?",
+         "c": "Bu rehberde doğrulanmadı; oyun içi dil ayarlarına bak."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "en": {
+   "baslik": "Mobile Legends: Bang Bang Beginner Guide: Heroes, Lanes and Rank",
+   "ozet": "Mobile Legends: Bang Bang is a free 5v5 MOBA played on phones. This guide helps new and returning players from installation to the ranked ladder.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Mobile MOBA (5v5)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Android and iOS; Google Play Games for PC"
+    },
+    {
+     "ad": "Price model",
+     "deger": "Free to play; optional cosmetic purchases"
+    },
+    {
+     "ad": "Current version",
+     "deger": "Season 42 (started September 16, 2026); patch number 2.2.16a per a secondary source"
+    },
+    {
+     "ad": "Turkish support",
+     "deger": "Turkish language option was not verified in this guide; check the in-game language menu"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "nedir",
+     "baslik": "What Mobile Legends is and where it stands in 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "In Mobile Legends: Bang Bang two teams of five face off. Each player picks a **hero** and the goal is to destroy the crystal in the enemy base. The game is designed for touchscreens; matches are short and comfortable to play on a phone."
+      },
+      {
+       "tip": "p",
+       "metin": "According to the Google Play page, **Season 42** started on September 16, 2026 at 00:00 server time. The seasonal skin is 'Flamehide Thane' for Popol and Kupa and the border is 'Starward Decade'; there are also 10th Anniversary revamps for Masha and Bruno. The game presents itself as 'Play to Win, not Pay to Win'."
+      },
+      {
+       "tip": "p",
+       "metin": "The latest patch appears in a secondary source as 2.2.16a (October 14, 2026); a new update in mid-November was reported but its number was not verified. Season 43 is expected to start in mid-December, which is not confirmed."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Numbers in this guide are accurate as of November 2026. Some information is from secondary sources and is marked; verify it in the game."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Before you start: install, account, system",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "In a new account, first finish the tutorial and the first tasks; they teach the basic controls and also give starter rewards. Before spending what you earn on your first heroes, try to work out which role you like."
+      },
+      {
+       "tip": "p",
+       "metin": "You download the game from Google Play or the App Store. According to the Google Play page the game is rated 12+ and contains in-app purchases. You use an email or a linked account for your account."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "To play on PC you use Google Play Games. Requirements: Windows 10 version 2004, 10 GB of free SSD space, Intel UHD 630, 4 physical cores, 8 GB of RAM and virtualization turned on.",
+        "Keep your network stable; use Wi-Fi or good mobile data.",
+        "The server time may differ from your local time; check season start and end times in the game."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Download the game only from the official store. Sites and apps promising 'free diamonds' or accounts can get your account stolen."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Your first matches step by step",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Finish the tutorial",
+         "metin": "Learn the movement, attack and ability buttons."
+        },
+        {
+         "baslik": "Play against bots",
+         "metin": "Try heroes and the map in bot matches until you feel comfortable."
+        },
+        {
+         "baslik": "Move on to Classic matches",
+         "metin": "Get used to it by playing unranked against real players."
+        },
+        {
+         "baslik": "Prepare for Ranked",
+         "metin": "The game has in-game conditions for entering ranked; sources give different details (for example a number of normal matches or a level), so rely on the lock the game shows."
+        },
+        {
+         "baslik": "Keep play sessions short",
+         "metin": "Taking a break after one or two matches reduces mistakes."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hero-rol",
+     "baslik": "Choosing a hero and role for the first weeks",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The game has five core roles: **Tank, Mage, Marksman, Assassin and Support**. There are also Fighter-type heroes. Heroes unlock through the free rotation or the shop. The examples below show choices that have stayed simple for years (my own knowledge; balance can change)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Role",
+        "Simple hero example",
+        "Why it is easy"
+       ],
+       "satirlar": [
+        [
+         "Tank",
+         "Tigreal",
+         "Durable; stands in front of teammates"
+        ],
+        [
+         "Mage",
+         "Eudora",
+         "Simple abilities; high burst damage"
+        ],
+        [
+         "Marksman",
+         "Layla",
+         "Damage from range; easy to aim"
+        ],
+        [
+         "Fighter",
+         "Zilong",
+         "Solid at short range; fluid attacks"
+        ],
+        [
+         "Support",
+         "Estes",
+         "Heals; keeps the team alive"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "For a week, play with the same two heroes. Learning one well moves you forward faster than trying many."
+      }
+     ]
+    },
+    {
+     "id": "mekanikler",
+     "baslik": "Core mechanics: lanes, jungle, objectives",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The map consists of three main paths (lanes) with a jungle between them. The lanes: **Gold Lane** (usually a marksman), **EXP Lane** (usually a fighter), **Mid Lane** (usually a mage), **Jungle** and **Roam** (roaming; usually a tank or support). The first Turtle appears on the EXP lane side."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Turrets:** Outer turrets fall first, then inner ones, and finally the crystal in the main base.",
+        "**Jungle monsters:** They give gold and levels; objectives like the Turtle and the Lord add power to the team.",
+        "**Minions:** They are killed for gold; you earn gold with the last hit.",
+        "**Map awareness:** Look at the minimap often; an enemy leaving their lane is a danger sign."
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Term",
+        "Meaning"
+       ],
+       "satirlar": [
+        [
+         "Farm",
+         "Collecting gold by killing minions and monsters"
+        ],
+        [
+         "Gank",
+         "Surprising another lane to kill the opponent"
+        ],
+        [
+         "Rotate",
+         "The team moving between lanes"
+        ],
+        [
+         "Push",
+         "Moving the minion wave toward the enemy turret"
+        ],
+        [
+         "Retreat",
+         "Pulling back in a moment of danger"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "A new player's most lasting gain is **looking at the minimap and moving with the team**. Chasing alone often ends in death."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Settings: starting values",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The most useful setting is the button layout. If your thumb struggles to reach an ability, move that button; being able to make the same move in every match is worth more than fine graphics tuning. I suggest this from general experience (my own knowledge)."
+      },
+      {
+       "tip": "p",
+       "metin": "These are not official values; they are commonly suggested starting points. Try them in a bot match."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Setting",
+        "Starting suggestion"
+       ],
+       "satirlar": [
+        [
+         "Button layout",
+         "Enlarge or move the buttons a little so your thumbs are comfortable"
+        ],
+        [
+         "Auto target",
+         "Leave automatic target selection on for attacks"
+        ],
+        [
+         "Graphics",
+         "Match your phone; smoothness matters more than looks"
+        ],
+        [
+         "Audio",
+         "Wear headphones; ability sounds carry information"
+        ],
+        [
+         "Network",
+         "Wi-Fi or good mobile data; watch the ping on the in-game indicator"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "When you change a setting, play a few matches with the same value; do not change your mind right away."
+      }
+     ]
+    },
+    {
+     "id": "rank",
+     "baslik": "Ranked system and rank table",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The rank table can change in detail from season to season; star counts and tier names may be adjusted by updates. So do not treat the values below as final; compare them with the ranking page on your own screen."
+      },
+      {
+       "tip": "p",
+       "metin": "According to secondary sources the ranked tiers are: Warrior, Elite, Master, Grandmaster, Epic, Legend and Mythic. Mythic has extra titles: Mythical Honor, Mythical Glory and Mythical Immortal. After Mythic the star count keeps running."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Tier",
+        "Divisions (secondary source)"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "III - I"
+        ],
+        [
+         "Elite",
+         "III - I"
+        ],
+        [
+         "Master",
+         "IV - I"
+        ],
+        [
+         "Grandmaster",
+         "V - I"
+        ],
+        [
+         "Epic",
+         "V - I"
+        ],
+        [
+         "Legend",
+         "V - I"
+        ],
+        [
+         "Mythic",
+         "Mythical Honor (25 stars), Glory (50 stars), Immortal (100+ stars)"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "The Draft Pick and ban phase starts from Epic (secondary source).",
+        "Losses in Warrior cost no stars (secondary source).",
+        "A ranked party can be 1, 2, 3 or 5 players (secondary source).",
+        "The Credit Score starts at 100 and tops out at 110; ranked may lock below 90 (secondary source)."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hatalar",
+     "baslik": "Common beginner mistakes",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Most mistakes come from habit rather than missing knowledge. After every match note just one thing: why did I die, which objective did I miss. If the same answer comes up in three or four matches, that is what you actually need to work on."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Jumping into ranked unprepared; get used to it with Classic matches first.",
+        "Diving a turret alone without waiting for the team.",
+        "Not looking at the minimap.",
+        "Blaming teammates; when you die, look for the mistake in yourself.",
+        "Trying a different hero every match.",
+        "Playing back-to-back matches while angry; take a break."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Account safety and behavior rules",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "For younger players: check the in-app purchase and chat settings together with an adult. Do not click links from people you do not know and do not share personal information (address, school, phone) in chat."
+      },
+      {
+       "tip": "p",
+       "metin": "Your account is your digital vault. Link it to a secure email and do not share your password with other sites."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Cheat software, third-party mod apps, scripts, rank boosting services, buying or selling accounts, skin gambling or betting sites and pirate or fake 'free diamond' sites can lead to a permanent ban. Stay away from them."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Constantly going AFK or deliberately ruining a match brings penalties and lowers your Credit Score.",
+        "Be respectful to teammates; report and mute toxic chat.",
+        "Playing on a second account against lower-ranked players (smurfing) is unfair; do not do it.",
+        "Never share your account with anyone."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Frequently asked questions",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is Mobile Legends free?",
+         "c": "Yes. The game is free; purchases are for cosmetics."
+        },
+        {
+         "s": "Can I play on PC?",
+         "c": "Yes, through Google Play Games; the requirements are Windows 10 version 2004, 10 GB of SSD space and virtualization on."
+        },
+        {
+         "s": "When can I play ranked?",
+         "c": "When the lock the game shows opens; sources list different conditions, so we give no exact number."
+        },
+        {
+         "s": "Can my rank drop?",
+         "c": "You lose stars; losses in Warrior cost no stars (secondary source)."
+        },
+        {
+         "s": "Which hero should I start with?",
+         "c": "Pick a simple, durable hero; play the same two for a week."
+        },
+        {
+         "s": "Is there Turkish language?",
+         "c": "Not verified in this guide; check the in-game language settings."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "fr": {
+   "baslik": "Guide Mobile Legends: Bang Bang pour débutants : héros, voies, rang",
+   "ozet": "Mobile Legends: Bang Bang est un MOBA 5 contre 5 gratuit joué sur téléphone. Ce guide accompagne les nouveaux joueurs et ceux qui reviennent, de l'installation au classement.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "MOBA mobile (5 contre 5)"
+    },
+    {
+     "ad": "Plateforme",
+     "deger": "Android et iOS ; Google Play Games pour PC"
+    },
+    {
+     "ad": "Modèle de prix",
+     "deger": "Gratuit ; achats facultatifs de cosmétiques"
+    },
+    {
+     "ad": "Version actuelle",
+     "deger": "Saison 42 (commencée le 16 septembre 2026) ; numéro de patch 2.2.16a selon une source secondaire"
+    },
+    {
+     "ad": "Prise en charge du turc",
+     "deger": "L'option de langue turque n'a pas été vérifiée dans ce guide ; regarde le menu de langue du jeu"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "nedir",
+     "baslik": "Qu'est-ce que Mobile Legends et où en est-on en 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Dans Mobile Legends: Bang Bang, deux équipes de cinq s'affrontent. Chaque joueur choisit un **héros** et le but est de détruire le cristal de la base ennemie. Le jeu est conçu pour les écrans tactiles ; les parties sont courtes et agréables sur téléphone."
+      },
+      {
+       "tip": "p",
+       "metin": "D'après la page Google Play, la **Saison 42** a commencé le 16 septembre 2026 à 00:00 heure du serveur. Le skin de saison est « Flamehide Thane » pour Popol et Kupa et la bordure est « Starward Decade » ; il y a aussi des refontes du 10e anniversaire pour Masha et Bruno. Le jeu se présente comme « Play to Win, not Pay to Win »."
+      },
+      {
+       "tip": "p",
+       "metin": "Le dernier patch apparaît dans une source secondaire comme 2.2.16a (14 octobre 2026) ; une nouvelle mise à jour de la mi-novembre a été signalée, mais son numéro n'a pas été vérifié. La Saison 43 devrait commencer à la mi-décembre, ce qui n'est pas confirmé."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Les chiffres de ce guide sont valables en novembre 2026. Certaines informations viennent de sources secondaires et sont signalées ; vérifie-les en jeu."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Avant de commencer : installation, compte, configuration",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Sur un nouveau compte, termine d'abord le tutoriel et les premières tâches ; ils t'apprennent les commandes de base et donnent des récompenses de départ. Avant de dépenser ce que tu gagnes pour tes premiers héros, essaie de comprendre quel rôle te plaît."
+      },
+      {
+       "tip": "p",
+       "metin": "Tu télécharges le jeu depuis Google Play ou l'App Store. D'après la page Google Play, le jeu est classé 12+ et contient des achats intégrés. Tu utilises un e-mail ou un compte lié pour ton compte."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Pour jouer sur PC, on utilise Google Play Games. Configuration : Windows 10 version 2004, 10 Go d'espace SSD libre, Intel UHD 630, 4 cœurs physiques, 8 Go de RAM et virtualisation activée.",
+        "Garde un réseau stable ; utilise le Wi-Fi ou de bonnes données mobiles.",
+        "L'heure du serveur peut différer de ton heure locale ; vérifie les heures de début et de fin de saison en jeu."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Télécharge le jeu uniquement depuis la boutique officielle. Les sites et applications promettant des « diamants gratuits » ou des comptes peuvent te faire voler ton compte."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Tes premiers matchs pas à pas",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Termine le tutoriel",
+         "metin": "Apprends les boutons de déplacement, d'attaque et de capacités."
+        },
+        {
+         "baslik": "Joue contre des bots",
+         "metin": "Essaie les héros et la carte en parties contre bots jusqu'à ce que tu te sentes à l'aise."
+        },
+        {
+         "baslik": "Passe aux parties Classiques",
+         "metin": "Habitue-toi en jouant non classé contre de vrais joueurs."
+        },
+        {
+         "baslik": "Prépare le Classé",
+         "metin": "Le jeu pose des conditions pour entrer en classé ; les sources donnent des détails différents (par exemple un nombre de parties normales ou un niveau), donc fie-toi au verrou affiché par le jeu."
+        },
+        {
+         "baslik": "Fais de courtes sessions",
+         "metin": "Faire une pause après une ou deux parties réduit les erreurs."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hero-rol",
+     "baslik": "Choisir un héros et un rôle pour les premières semaines",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Le jeu compte cinq rôles de base : **Tank, Mage, Tireur (Marksman), Assassin et Soutien (Support)**. Il existe aussi des héros de type Combattant (Fighter). Les héros se débloquent via la rotation gratuite ou la boutique. Les exemples ci-dessous montrent des choix restés simples depuis des années (connaissance personnelle ; l'équilibre peut changer)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rôle",
+        "Exemple de héros simple",
+        "Pourquoi c'est facile"
+       ],
+       "satirlar": [
+        [
+         "Tank",
+         "Tigreal",
+         "Robuste ; se place devant les coéquipiers"
+        ],
+        [
+         "Mage",
+         "Eudora",
+         "Capacités simples ; gros dégâts en rafale"
+        ],
+        [
+         "Tireur",
+         "Layla",
+         "Dégâts à distance ; visée facile"
+        ],
+        [
+         "Combattant",
+         "Zilong",
+         "Solide à courte portée ; attaques fluides"
+        ],
+        [
+         "Soutien",
+         "Estes",
+         "Soigne ; garde l'équipe en vie"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Pendant une semaine, joue avec les deux mêmes héros. En apprendre un bien te fait avancer plus vite qu'en essayer beaucoup."
+      }
+     ]
+    },
+    {
+     "id": "mekanikler",
+     "baslik": "Mécaniques de base : voies, jungle, objectifs",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La carte est composée de trois voies principales (lanes) avec une jungle entre elles. Les voies : **Gold Lane** (en général un tireur), **EXP Lane** (en général un combattant), **Mid Lane** (en général un mage), **Jungle** et **Roam** (itinérant ; en général un tank ou un soutien). La première Tortue (Turtle) apparaît du côté de l'EXP lane."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Tourelles :** les tourelles extérieures tombent d'abord, puis les intérieures et enfin le cristal de la base principale.",
+        "**Monstres de la jungle :** ils donnent de l'or et des niveaux ; des objectifs comme la Tortue et le Seigneur (Lord) renforcent l'équipe.",
+        "**Sbires :** on les tue pour l'or ; tu gagnes de l'or avec le dernier coup.",
+        "**Conscience de la carte :** regarde souvent la minicarte ; un ennemi qui quitte sa voie est un signal de danger."
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Terme",
+        "Signification"
+       ],
+       "satirlar": [
+        [
+         "Farm",
+         "Récolter de l'or en tuant sbires et monstres"
+        ],
+        [
+         "Gank",
+         "Surprendre une autre voie pour tuer l'adversaire"
+        ],
+        [
+         "Rotate",
+         "L'équipe change de voie"
+        ],
+        [
+         "Push",
+         "Pousser la vague de sbires vers la tourelle ennemie"
+        ],
+        [
+         "Retreat",
+         "Se replier en cas de danger"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Le gain le plus durable d'un débutant est de **regarder la minicarte et de bouger avec l'équipe**. Poursuivre seul se termine souvent par la mort."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Réglages : valeurs de départ",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Le réglage le plus utile est la disposition des boutons. Si ton pouce a du mal à atteindre une capacité, déplace ce bouton ; pouvoir faire le même geste à chaque partie vaut plus qu'un réglage graphique fin. Je le conseille d'après l'expérience générale (connaissance personnelle)."
+      },
+      {
+       "tip": "p",
+       "metin": "Ce ne sont pas des valeurs officielles ; ce sont des points de départ couramment conseillés. Essaie-les contre des bots."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Réglage",
+        "Suggestion de départ"
+       ],
+       "satirlar": [
+        [
+         "Disposition des boutons",
+         "Agrandis ou déplace un peu les boutons pour que tes pouces soient à l'aise"
+        ],
+        [
+         "Cible automatique",
+         "Laisse la sélection automatique de cible activée pour les attaques"
+        ],
+        [
+         "Graphismes",
+         "Adaptés à ton téléphone ; la fluidité compte plus que l'image"
+        ],
+        [
+         "Son",
+         "Mets un casque ; le son des capacités donne des informations"
+        ],
+        [
+         "Réseau",
+         "Wi-Fi ou bonnes données mobiles ; surveille le ping sur l'indicateur en jeu"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Quand tu changes un réglage, joue quelques matchs avec la même valeur ; ne change pas d'avis tout de suite."
+      }
+     ]
+    },
+    {
+     "id": "rank",
+     "baslik": "Système classé et tableau des rangs",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Le tableau des rangs peut changer dans le détail d'une saison à l'autre ; les nombres d'étoiles et les noms de paliers peuvent être ajustés par des mises à jour. Ne prends donc pas les valeurs ci-dessous pour définitives ; compare-les avec la page de classement de ton écran."
+      },
+      {
+       "tip": "p",
+       "metin": "D'après des sources secondaires, les paliers classés sont : Warrior, Elite, Master, Grandmaster, Epic, Legend et Mythic. Mythic comprend des titres supplémentaires : Mythical Honor, Mythical Glory et Mythical Immortal. Après Mythic, le compte d'étoiles continue."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Palier",
+        "Divisions (source secondaire)"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "III - I"
+        ],
+        [
+         "Elite",
+         "III - I"
+        ],
+        [
+         "Master",
+         "IV - I"
+        ],
+        [
+         "Grandmaster",
+         "V - I"
+        ],
+        [
+         "Epic",
+         "V - I"
+        ],
+        [
+         "Legend",
+         "V - I"
+        ],
+        [
+         "Mythic",
+         "Mythical Honor (25 étoiles), Glory (50 étoiles), Immortal (100+ étoiles)"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "La phase de Draft Pick et de bannissement commence à partir d'Epic (source secondaire).",
+        "Les défaites en Warrior ne font pas perdre d'étoiles (source secondaire).",
+        "Un groupe classé peut compter 1, 2, 3 ou 5 joueurs (source secondaire).",
+        "Le Score de crédit commence à 100 et plafonne à 110 ; le classé peut se verrouiller sous 90 (source secondaire)."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hatalar",
+     "baslik": "Erreurs fréquentes des débutants",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La plupart des erreurs viennent de l'habitude plutôt que d'un manque de connaissances. Après chaque partie, note une seule chose : pourquoi suis-je mort, quel objectif ai-je raté. Si la même réponse revient en trois ou quatre parties, c'est ce que tu dois vraiment travailler."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Se lancer en classé sans préparation ; habitue-toi d'abord avec des parties Classiques.",
+        "Plonger seul sur une tourelle sans attendre l'équipe.",
+        "Ne pas regarder la minicarte.",
+        "Accuser ses coéquipiers ; quand tu meurs, cherche l'erreur en toi.",
+        "Essayer un héros différent à chaque match.",
+        "Enchaîner les parties en étant énervé ; fais une pause."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Sécurité du compte et règles de comportement",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Pour les jeunes joueurs : vérifie les réglages d'achats intégrés et de chat avec un adulte. Ne clique pas sur les liens de personnes inconnues et ne partage pas d'informations personnelles (adresse, école, téléphone) dans le chat."
+      },
+      {
+       "tip": "p",
+       "metin": "Ton compte est ton coffre numérique. Lie-le à un e-mail sécurisé et ne partage pas ton mot de passe avec d'autres sites."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Les logiciels de triche, les applications de mods tierces, les scripts, les services de boost de rang, l'achat ou la vente de comptes, les sites de paris ou de jeux d'argent avec des skins, ainsi que les sites pirates ou de faux « diamants gratuits » peuvent entraîner un bannissement définitif. Reste à l'écart."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Rester constamment AFK ou saboter volontairement une partie entraîne des sanctions et fait baisser le Score de crédit.",
+        "Respecte tes coéquipiers ; signale et rends muet le chat toxique.",
+        "Jouer sur un second compte contre des joueurs de rang inférieur (smurf) est injuste ; ne le fais pas.",
+        "Ne partage jamais ton compte."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Questions fréquentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Mobile Legends est-il gratuit ?",
+         "c": "Oui. Le jeu est gratuit ; les achats servent aux cosmétiques."
+        },
+        {
+         "s": "Peut-on jouer sur PC ?",
+         "c": "Oui, via Google Play Games ; la configuration est Windows 10 version 2004, 10 Go d'espace SSD et virtualisation activée."
+        },
+        {
+         "s": "Quand puis-je jouer en classé ?",
+         "c": "Quand le verrou affiché par le jeu s'ouvre ; les sources indiquent des conditions différentes, donc nous ne donnons pas de nombre exact."
+        },
+        {
+         "s": "Mon rang peut-il baisser ?",
+         "c": "Tu perds des étoiles ; les défaites en Warrior n'en font pas perdre (source secondaire)."
+        },
+        {
+         "s": "Avec quel héros commencer ?",
+         "c": "Choisis un héros simple et robuste ; joue les deux mêmes pendant une semaine."
+        },
+        {
+         "s": "Y a-t-il une langue turque ?",
+         "c": "Non vérifié dans ce guide ; regarde les réglages de langue du jeu."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "es": {
+   "baslik": "Mobile Legends: Bang Bang para principiantes: héroes, líneas y rango",
+   "ozet": "Mobile Legends: Bang Bang es un MOBA 5 contra 5 gratuito que se juega en el móvil. Esta guía acompaña a jugadores nuevos y a quienes regresan, desde la instalación hasta la clasificatoria.",
+   "kunye": [
+    {
+     "ad": "Género",
+     "deger": "MOBA móvil (5 contra 5)"
+    },
+    {
+     "ad": "Plataforma",
+     "deger": "Android e iOS; Google Play Games para PC"
+    },
+    {
+     "ad": "Modelo de precio",
+     "deger": "Gratis; compras opcionales de cosméticos"
+    },
+    {
+     "ad": "Versión actual",
+     "deger": "Temporada 42 (empezó el 16 de septiembre de 2026); número de parche 2.2.16a según una fuente secundaria"
+    },
+    {
+     "ad": "Compatibilidad con turco",
+     "deger": "La opción de idioma turco no se verificó en esta guía; mira el menú de idioma del juego"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "nedir",
+     "baslik": "Qué es Mobile Legends y cómo está en 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "En Mobile Legends: Bang Bang se enfrentan dos equipos de cinco. Cada jugador elige un **héroe** y el objetivo es destruir el cristal de la base enemiga. El juego está diseñado para pantallas táctiles; las partidas son cortas y cómodas en el móvil."
+      },
+      {
+       "tip": "p",
+       "metin": "Según la página de Google Play, la **Temporada 42** empezó el 16 de septiembre de 2026 a las 00:00 hora del servidor. La skin de temporada es «Flamehide Thane» para Popol y Kupa y el marco es «Starward Decade»; también hay renovaciones del 10.º aniversario para Masha y Bruno. El juego se presenta como «Play to Win, not Pay to Win»."
+      },
+      {
+       "tip": "p",
+       "metin": "El último parche aparece en una fuente secundaria como 2.2.16a (14 de octubre de 2026); se informó de una nueva actualización a mediados de noviembre, pero su número no se verificó. Se espera que la Temporada 43 empiece a mediados de diciembre, lo cual no está confirmado."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Los números de esta guía son válidos en noviembre de 2026. Algunos datos vienen de fuentes secundarias y están señalados; verifícalos en el juego."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Antes de empezar: instalación, cuenta, sistema",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "En una cuenta nueva, termina primero el tutorial y las primeras tareas; enseñan los controles básicos y dan recompensas iniciales. Antes de gastar lo que ganes en tus primeros héroes, intenta descubrir qué rol te gusta."
+      },
+      {
+       "tip": "p",
+       "metin": "Descargas el juego desde Google Play o la App Store. Según la página de Google Play, el juego tiene clasificación 12+ y contiene compras dentro de la aplicación. Para la cuenta usas un correo o una cuenta vinculada."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Para jugar en PC se usa Google Play Games. Requisitos: Windows 10 versión 2004, 10 GB de espacio SSD libre, Intel UHD 630, 4 núcleos físicos, 8 GB de RAM y virtualización activada.",
+        "Mantén una red estable; usa Wi-Fi o buenos datos móviles.",
+        "La hora del servidor puede diferir de tu hora local; revisa las horas de inicio y fin de temporada en el juego."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Descarga el juego solo desde la tienda oficial. Los sitios y aplicaciones que prometen «diamantes gratis» o cuentas pueden hacer que te roben la cuenta."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Tus primeras partidas paso a paso",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Termina el tutorial",
+         "metin": "Aprende los botones de movimiento, ataque y habilidades."
+        },
+        {
+         "baslik": "Juega contra bots",
+         "metin": "Prueba héroes y el mapa en partidas contra bots hasta que te sientas cómodo."
+        },
+        {
+         "baslik": "Pasa a las partidas Clásicas",
+         "metin": "Acostúmbrate jugando sin clasificar contra jugadores reales."
+        },
+        {
+         "baslik": "Prepárate para la Clasificatoria",
+         "metin": "El juego tiene condiciones para entrar en clasificatoria; las fuentes dan detalles distintos (por ejemplo un número de partidas normales o un nivel), así que guíate por el bloqueo que muestra el juego."
+        },
+        {
+         "baslik": "Haz sesiones cortas",
+         "metin": "Hacer una pausa tras una o dos partidas reduce los errores."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hero-rol",
+     "baslik": "Elegir héroe y rol para las primeras semanas",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "El juego tiene cinco roles básicos: **Tanque, Mago, Tirador (Marksman), Asesino y Apoyo (Support)**. También hay héroes de tipo Luchador (Fighter). Los héroes se desbloquean con la rotación gratuita o la tienda. Los ejemplos de abajo muestran opciones que llevan años siendo sencillas (conocimiento propio; el equilibrio puede cambiar)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rol",
+        "Ejemplo de héroe sencillo",
+        "Por qué es fácil"
+       ],
+       "satirlar": [
+        [
+         "Tanque",
+         "Tigreal",
+         "Resistente; se coloca delante de los compañeros"
+        ],
+        [
+         "Mago",
+         "Eudora",
+         "Habilidades simples; mucho daño en ráfaga"
+        ],
+        [
+         "Tirador",
+         "Layla",
+         "Daño a distancia; fácil de apuntar"
+        ],
+        [
+         "Luchador",
+         "Zilong",
+         "Sólido a corta distancia; ataques fluidos"
+        ],
+        [
+         "Apoyo",
+         "Estes",
+         "Cura; mantiene vivo al equipo"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Durante una semana, juega con los mismos dos héroes. Aprender bien uno te hace avanzar más rápido que probar muchos."
+      }
+     ]
+    },
+    {
+     "id": "mekanikler",
+     "baslik": "Mecánicas básicas: líneas, jungla, objetivos",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "El mapa consta de tres caminos principales (líneas) con una jungla entre ellos. Las líneas: **Gold Lane** (normalmente un tirador), **EXP Lane** (normalmente un luchador), **Mid Lane** (normalmente un mago), **Jungla** y **Roam** (itinerante; normalmente un tanque o apoyo). La primera Tortuga (Turtle) aparece del lado de la EXP lane."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Torres:** caen primero las exteriores, luego las interiores y por último el cristal de la base principal.",
+        "**Monstruos de la jungla:** dan oro y niveles; objetivos como la Tortuga y el Señor (Lord) dan poder al equipo.",
+        "**Súbditos:** se matan por el oro; ganas oro con el último golpe.",
+        "**Conciencia del mapa:** mira el minimapa a menudo; un enemigo que abandona su línea es señal de peligro."
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Término",
+        "Significado"
+       ],
+       "satirlar": [
+        [
+         "Farm",
+         "Reunir oro matando súbditos y monstruos"
+        ],
+        [
+         "Gank",
+         "Sorprender a otra línea para matar al rival"
+        ],
+        [
+         "Rotate",
+         "El equipo se mueve entre líneas"
+        ],
+        [
+         "Push",
+         "Empujar la oleada de súbditos hacia la torre enemiga"
+        ],
+        [
+         "Retreat",
+         "Retirarse en un momento de peligro"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "La ganancia más duradera de un principiante es **mirar el minimapa y moverse con el equipo**. Perseguir en solitario suele acabar en muerte."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Ajustes: valores iniciales",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "El ajuste más útil es la disposición de botones. Si tu pulgar llega mal a una habilidad, mueve ese botón; poder hacer el mismo movimiento en cada partida vale más que un ajuste gráfico fino. Lo sugiero por experiencia general (conocimiento propio)."
+      },
+      {
+       "tip": "p",
+       "metin": "No son valores oficiales; son puntos de partida que se suelen recomendar. Pruébalos en una partida contra bots."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Ajuste",
+        "Sugerencia inicial"
+       ],
+       "satirlar": [
+        [
+         "Disposición de botones",
+         "Agranda o mueve un poco los botones para que tus pulgares estén cómodos"
+        ],
+        [
+         "Objetivo automático",
+         "Deja activada la selección automática de objetivo en los ataques"
+        ],
+        [
+         "Gráficos",
+         "Acordes con tu móvil; la fluidez importa más que la imagen"
+        ],
+        [
+         "Audio",
+         "Usa auriculares; el sonido de las habilidades da información"
+        ],
+        [
+         "Red",
+         "Wi-Fi o buenos datos móviles; vigila el ping en el indicador del juego"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Cuando cambies un ajuste, juega unas partidas con el mismo valor; no cambies de opinión enseguida."
+      }
+     ]
+    },
+    {
+     "id": "rank",
+     "baslik": "Sistema competitivo y tabla de rangos",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La tabla de rangos puede cambiar en detalle de una temporada a otra; el número de estrellas y los nombres de nivel pueden ajustarse con actualizaciones. Por eso no tomes los valores de abajo como definitivos; compáralos con la página de clasificación de tu pantalla."
+      },
+      {
+       "tip": "p",
+       "metin": "Según fuentes secundarias, los niveles clasificatorios son: Warrior, Elite, Master, Grandmaster, Epic, Legend y Mythic. Mythic tiene títulos adicionales: Mythical Honor, Mythical Glory y Mythical Immortal. Tras Mythic, la cuenta de estrellas sigue corriendo."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Nivel",
+        "Divisiones (fuente secundaria)"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "III - I"
+        ],
+        [
+         "Elite",
+         "III - I"
+        ],
+        [
+         "Master",
+         "IV - I"
+        ],
+        [
+         "Grandmaster",
+         "V - I"
+        ],
+        [
+         "Epic",
+         "V - I"
+        ],
+        [
+         "Legend",
+         "V - I"
+        ],
+        [
+         "Mythic",
+         "Mythical Honor (25 estrellas), Glory (50 estrellas), Immortal (100+ estrellas)"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "La fase de Draft Pick y bloqueo empieza desde Epic (fuente secundaria).",
+        "Las derrotas en Warrior no restan estrellas (fuente secundaria).",
+        "Un grupo clasificatorio puede ser de 1, 2, 3 o 5 jugadores (fuente secundaria).",
+        "La Puntuación de crédito empieza en 100 y llega como máximo a 110; la clasificatoria puede bloquearse por debajo de 90 (fuente secundaria)."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hatalar",
+     "baslik": "Errores frecuentes de los principiantes",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La mayoría de los errores vienen del hábito y no de la falta de conocimiento. Después de cada partida anota una sola cosa: por qué morí, qué objetivo perdí. Si la misma respuesta aparece en tres o cuatro partidas, eso es lo que realmente debes trabajar."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Entrar en clasificatoria sin preparación; acostúmbrate antes con partidas Clásicas.",
+        "Entrar a una torre en solitario sin esperar al equipo.",
+        "No mirar el minimapa.",
+        "Culpar a los compañeros; cuando mueras, busca el error en ti.",
+        "Probar un héroe distinto en cada partida.",
+        "Jugar partidas seguidas estando enfadado; haz una pausa."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Seguridad de la cuenta y normas de comportamiento",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Para jugadores jóvenes: revisa con un adulto los ajustes de compras dentro de la aplicación y del chat. No hagas clic en enlaces de desconocidos ni compartas datos personales (dirección, colegio, teléfono) en el chat."
+      },
+      {
+       "tip": "p",
+       "metin": "Tu cuenta es tu caja fuerte digital. Vincúlala a un correo seguro y no compartas tu contraseña con otros sitios."
+      },
+      {
+       "tip": "uyari",
+       "metin": "El software de trampas, las aplicaciones de mods de terceros, los scripts, los servicios de boosting de rango, comprar o vender cuentas, los sitios de apuestas o juegos de azar con skins y los sitios pirata o de falsos «diamantes gratis» pueden causar un baneo permanente. Mantente lejos."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Quedarse constantemente AFK o arruinar a propósito una partida conlleva sanciones y baja la Puntuación de crédito.",
+        "Respeta a tus compañeros; reporta y silencia el chat tóxico.",
+        "Jugar con una segunda cuenta contra jugadores de menor rango (smurfing) es injusto; no lo hagas.",
+        "No compartas tu cuenta con nadie."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Preguntas frecuentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "¿Mobile Legends es gratis?",
+         "c": "Sí. El juego es gratis; las compras son para cosméticos."
+        },
+        {
+         "s": "¿Se puede jugar en PC?",
+         "c": "Sí, mediante Google Play Games; los requisitos son Windows 10 versión 2004, 10 GB de espacio SSD y virtualización activada."
+        },
+        {
+         "s": "¿Cuándo puedo jugar clasificatoria?",
+         "c": "Cuando se abra el bloqueo que muestra el juego; las fuentes dan condiciones distintas, por eso no damos un número exacto."
+        },
+        {
+         "s": "¿Puede bajar mi rango?",
+         "c": "Pierdes estrellas; las derrotas en Warrior no restan estrellas (fuente secundaria)."
+        },
+        {
+         "s": "¿Con qué héroe empiezo?",
+         "c": "Elige un héroe sencillo y resistente; juega los mismos dos durante una semana."
+        },
+        {
+         "s": "¿Hay idioma turco?",
+         "c": "No verificado en esta guía; mira los ajustes de idioma del juego."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

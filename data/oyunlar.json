@@ -1,0 +1,868 @@
+[
+ {
+  "id": "world-of-warcraft",
+  "ad": "World of Warcraft",
+  "kisa": "WoW",
+  "eslesme": [
+   "World of Warcraft",
+   "WoW",
+   "WoW: Forever",
+   "World of Warcraft: Forever"
+  ],
+  "tur": {
+   "tr": "MMORPG",
+   "en": "MMORPG",
+   "fr": "MMORPG",
+   "es": "MMORPG"
+  },
+  "platform": [
+   "PC"
+  ],
+  "gelistirici": "Blizzard Entertainment",
+  "resmi": {
+   "url": "https://worldofwarcraft.blizzard.com/",
+   "ad": "World of Warcraft (Blizzard)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Retail (Midnight), Classic sürümleri ve yeni WoW: Forever aynı çatı altında. WoW: Forever 6 Kasım 2026 haftalık duyurusunda yayında ilan edildi; hotfix notları Midnight, Mists of Pandaria Classic, Season of Discovery, The Burning Crusade Classic ile Classic Era ve Hardcore için ayrı yayımlanıyor."
+   },
+   "en": {
+    "tanim": "Retail (Midnight), the Classic versions and the new WoW: Forever live under one roof. WoW: Forever was announced as live in the November 6, 2026 weekly post; hotfix notes are published separately for Midnight, Mists of Pandaria Classic, Season of Discovery, The Burning Crusade Classic, and Classic Era and Hardcore."
+   },
+   "fr": {
+    "tanim": "Retail (Midnight), les versions Classic et le nouveau WoW: Forever cohabitent sous un même toit. WoW: Forever a été annoncé comme disponible dans le point hebdomadaire du 6 novembre 2026 ; les correctifs sont publiés séparément pour Midnight, Mists of Pandaria Classic, Season of Discovery, The Burning Crusade Classic, ainsi que Classic Era et Hardcore."
+   },
+   "es": {
+    "tanim": "Retail (Midnight), las versiones Classic y el nuevo WoW: Forever conviven bajo un mismo techo. WoW: Forever se anunció como disponible en el resumen semanal del 6 de noviembre de 2026; las notas de hotfixes se publican por separado para Midnight, Mists of Pandaria Classic, Season of Discovery, The Burning Crusade Classic y Classic Era y Hardcore."
+   }
+  }
+ },
+ {
+  "id": "knight-online",
+  "ad": "Knight Online",
+  "kisa": "KO",
+  "eslesme": [
+   "Knight Online",
+   "Knight Online World",
+   "KO"
+  ],
+  "tur": {
+   "tr": "MMORPG",
+   "en": "MMORPG",
+   "fr": "MMORPG",
+   "es": "MMORPG"
+  },
+  "platform": [
+   "PC"
+  ],
+  "gelistirici": "NTTGame (yayıncı)",
+  "resmi": {
+   "url": "https://www.nttgame.com/knight/tr",
+   "ad": "Knight Online (NTTGame)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "NTTGame'in resmi Knight Online sitesi: duyurular, güncelleme notları ve sunucu doluluk bilgisi burada. 12 Kasım 2026'da yeni sunucular açıldı; kanal, kamp ve etkinlik dağılımı resmi duyuruda tablo olarak yer alıyor."
+   },
+   "en": {
+    "tanim": "The official Knight Online site from NTTGame carries announcements, update notes and server fill rates. New servers opened on November 12, 2026; the channel, camp and event distribution is listed as a table in the official announcement."
+   },
+   "fr": {
+    "tanim": "Le site officiel de Knight Online par NTTGame regroupe annonces, notes de mise à jour et taux de remplissage des serveurs. De nouveaux serveurs ont ouvert le 12 novembre 2026 ; la répartition des canaux, camps et événements figure dans un tableau de l'annonce officielle."
+   },
+   "es": {
+    "tanim": "El sitio oficial de Knight Online de NTTGame reúne anuncios, notas de actualización y el nivel de ocupación de los servidores. Los nuevos servidores abrieron el 12 de noviembre de 2026; el reparto de canales, campamentos y eventos aparece en una tabla del anuncio oficial."
+   }
+  }
+ },
+ {
+  "id": "gta-6",
+  "ad": "GTA VI",
+  "kisa": "GTA VI",
+  "eslesme": [
+   "GTA VI",
+   "GTA 6",
+   "Grand Theft Auto VI",
+   "Grand Theft Auto VI (PC)"
+  ],
+  "tur": {
+   "tr": "Açık dünya aksiyon",
+   "en": "Open-world action",
+   "fr": "Action en monde ouvert",
+   "es": "Acción de mundo abierto"
+  },
+  "platform": [
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Rockstar Games",
+  "resmi": {
+   "url": "https://www.rockstargames.com/VI",
+   "ad": "Grand Theft Auto VI (Rockstar Games)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Rockstar'ın resmi sayfasına göre 19 Kasım 2026'da PlayStation 5 ve Xbox Series X|S için çıkıyor; ön yükleme 10 Kasım'da başladı. PC sürümü resmi olarak duyurulmadı, yalnız söylenti düzeyinde."
+   },
+   "en": {
+    "tanim": "According to Rockstar's official page, it launches on November 19, 2026 for PlayStation 5 and Xbox Series X|S; pre-load started on November 10. A PC version has not been officially announced and remains at rumor level only."
+   },
+   "fr": {
+    "tanim": "D'après la page officielle de Rockstar, le jeu sort le 19 novembre 2026 sur PlayStation 5 et Xbox Series X|S ; le préchargement a commencé le 10 novembre. Une version PC n'a pas été annoncée officiellement et reste au stade de rumeur."
+   },
+   "es": {
+    "tanim": "Según la página oficial de Rockstar, sale el 19 de noviembre de 2026 en PlayStation 5 y Xbox Series X|S; la precarga empezó el 10 de noviembre. Una versión para PC no se ha anunciado oficialmente y sigue siendo solo un rumor."
+   }
+  }
+ },
+ {
+  "id": "valorant",
+  "ad": "VALORANT",
+  "kisa": "VALORANT",
+  "eslesme": [
+   "VALORANT",
+   "Valorant"
+  ],
+  "tur": {
+   "tr": "Taktiksel FPS",
+   "en": "Tactical FPS",
+   "fr": "FPS tactique",
+   "es": "FPS táctico"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Riot Games",
+  "resmi": {
+   "url": "https://playvalorant.com/en-us/",
+   "ad": "VALORANT (Riot Games)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Ücretsiz 5v5 taktiksel nişancı. Patch 13.10 (10 Kasım 2026) tekrar izlemeye yer imi, yeni asist kuralları ve Gauntlet: Glitched güncellemeleri getirdi. Konsol oyuncuları PC oyuncularıyla eşleşmiyor."
+   },
+   "en": {
+    "tanim": "Free-to-play 5v5 tactical shooter. Patch 13.10 (November 10, 2026) brought replay bookmarking, new assist rules and Gauntlet: Glitched updates. Console players are not matched with PC players."
+   },
+   "fr": {
+    "tanim": "Jeu de tir tactique 5 contre 5 gratuit. Le patch 13.10 (10 novembre 2026) apporte les marque-pages de replay, de nouvelles règles d'assistance et des mises à jour de Gauntlet: Glitched. Les joueurs console ne jouent pas avec les joueurs PC."
+   },
+   "es": {
+    "tanim": "Shooter táctico 5 contra 5 gratuito. El parche 13.10 (10 de noviembre de 2026) trajo marcadores en las repeticiones, nuevas reglas de asistencias y cambios en Gauntlet: Glitched. Los jugadores de consola no se emparejan con los de PC."
+   }
+  }
+ },
+ {
+  "id": "league-of-legends",
+  "ad": "League of Legends",
+  "kisa": "LoL",
+  "eslesme": [
+   "League of Legends",
+   "LoL"
+  ],
+  "tur": {
+   "tr": "MOBA",
+   "en": "MOBA",
+   "fr": "MOBA",
+   "es": "MOBA"
+  },
+  "platform": [
+   "PC"
+  ],
+  "gelistirici": "Riot Games",
+  "resmi": {
+   "url": "https://www.leagueoflegends.com/en-us/",
+   "ad": "League of Legends (Riot Games)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Riot'un ücretsiz MOBA'sı; Windows ve macOS için. 26.22 yaması 4 Kasım 2026'da yayımlandı: K/DA kostümleri, Mel oynanış güncellemesi, ARAM Mayhem değişiklikleri ve Summoner's Rift dengelemeleri."
+   },
+   "en": {
+    "tanim": "Riot's free-to-play MOBA, available for Windows and macOS. Patch 26.22 went live on November 4, 2026 with K/DA skins, a Mel gameplay update, ARAM Mayhem changes and Summoner's Rift balance changes."
+   },
+   "fr": {
+    "tanim": "Le MOBA gratuit de Riot, disponible sur Windows et macOS. Le patch 26.22 est sorti le 4 novembre 2026 avec des skins K/DA, une mise à jour de Mel, des changements pour ARAM Mayhem et de l'équilibrage sur la Faille de l'invocateur."
+   },
+   "es": {
+    "tanim": "El MOBA gratuito de Riot, disponible para Windows y macOS. El parche 26.22 salió el 4 de noviembre de 2026 con aspectos K/DA, una actualización de Mel, cambios en ARAM Mayhem y ajustes de equilibrio en la Grieta del Invocador."
+   }
+  }
+ },
+ {
+  "id": "counter-strike-2",
+  "ad": "Counter-Strike 2",
+  "kisa": "CS2",
+  "eslesme": [
+   "Counter-Strike 2",
+   "CS2"
+  ],
+  "tur": {
+   "tr": "Taktiksel FPS",
+   "en": "Tactical FPS",
+   "fr": "FPS tactique",
+   "es": "FPS táctico"
+  },
+  "platform": [
+   "PC"
+  ],
+  "gelistirici": "Valve",
+  "resmi": {
+   "url": "https://www.counter-strike.net/cs2",
+   "ad": "Counter-Strike 2 (Valve)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Valve'in Steam üzerinden oynanan taktiksel nişancısı. Steam haber sayfasındaki son güncelleme 28 Ekim 2026 tarihli; 4-14 Kasım arasında yeni resmi duyuru görülmedi."
+   },
+   "en": {
+    "tanim": "Valve's tactical shooter, played through Steam. The latest update on its Steam news page is dated October 28, 2026; no new official announcement was seen between November 4 and 14."
+   },
+   "fr": {
+    "tanim": "Le jeu de tir tactique de Valve, accessible via Steam. La dernière mise à jour de sa page d'actualités Steam date du 28 octobre 2026 ; aucune nouvelle annonce officielle n'a été relevée entre le 4 et le 14 novembre."
+   },
+   "es": {
+    "tanim": "El shooter táctico de Valve, que se juega a través de Steam. La última actualización en su página de noticias de Steam es del 28 de octubre de 2026; entre el 4 y el 14 de noviembre no se vio ningún anuncio oficial nuevo."
+   }
+  }
+ },
+ {
+  "id": "pubg",
+  "ad": "PUBG: BATTLEGROUNDS",
+  "kisa": "PUBG",
+  "eslesme": [
+   "PUBG: BATTLEGROUNDS",
+   "PUBG",
+   "PUBG: Battlegrounds"
+  ],
+  "tur": {
+   "tr": "Battle royale",
+   "en": "Battle royale",
+   "fr": "Battle royale",
+   "es": "Battle royale"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "KRAFTON",
+  "resmi": {
+   "url": "https://www.pubg.com/en/",
+   "ad": "PUBG: BATTLEGROUNDS (KRAFTON)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Ücretsiz battle royale. Güncelleme 44.1 PUBG x IVE iş birliğini ve Rondo haritası değişikliklerini getirdi (PC 4 Kasım, konsol 12 Kasım). Konsolda 13 Kasım bakımından sonra yalnız PS5 ve Xbox Series X|S destekleniyor."
+   },
+   "en": {
+    "tanim": "Free-to-play battle royale. Update 44.1 brought the PUBG x IVE collaboration and Rondo map changes (PC on November 4, console on November 12). After the November 13 maintenance, console support is limited to PS5 and Xbox Series X|S."
+   },
+   "fr": {
+    "tanim": "Battle royale gratuit. La mise à jour 44.1 apporte la collaboration PUBG x IVE et des changements sur la carte Rondo (PC le 4 novembre, console le 12 novembre). Après la maintenance du 13 novembre, seules la PS5 et la Xbox Series X|S sont prises en charge sur console."
+   },
+   "es": {
+    "tanim": "Battle royale gratuito. La actualización 44.1 trajo la colaboración PUBG x IVE y cambios en el mapa Rondo (PC el 4 de noviembre, consola el 12 de noviembre). Tras el mantenimiento del 13 de noviembre, en consola solo se admiten PS5 y Xbox Series X|S."
+   }
+  }
+ },
+ {
+  "id": "metin2",
+  "ad": "Metin2",
+  "kisa": "Metin2",
+  "eslesme": [
+   "Metin2"
+  ],
+  "tur": {
+   "tr": "MMORPG",
+   "en": "MMORPG",
+   "fr": "MMORPG",
+   "es": "MMORPG"
+  },
+  "platform": [
+   "PC"
+  ],
+  "gelistirici": "Gameforge (yayıncı)",
+  "resmi": {
+   "url": "https://tr.metin2.gameforge.com/",
+   "ad": "Metin2 Türkiye (Gameforge)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Gameforge'un Türkiye servisi. Resmi forumda Yohara Güçlendirme Sunucuları'nın 13 Kasım 2026'da açılması ve 24 Şubat 2027'de kapanması duyuruldu; transfer kaydı 17 Şubat - 3 Mart 2027 arasında."
+   },
+   "en": {
+    "tanim": "Gameforge's Turkish service. The official forum announced that the Yohara Boost Servers open on November 13, 2026 and close on February 24, 2027, with transfer registration from February 17 to March 3, 2027."
+   },
+   "fr": {
+    "tanim": "Le service turc de Gameforge. Le forum officiel annonce que les serveurs Yohara Boost ouvrent le 13 novembre 2026 et ferment le 24 février 2027, avec une inscription au transfert du 17 février au 3 mars 2027."
+   },
+   "es": {
+    "tanim": "El servicio turco de Gameforge. El foro oficial anunció que los servidores Yohara Boost abren el 13 de noviembre de 2026 y cierran el 24 de febrero de 2027, con inscripción de transferencia del 17 de febrero al 3 de marzo de 2027."
+   }
+  }
+ },
+ {
+  "id": "fortnite",
+  "ad": "Fortnite",
+  "kisa": "Fortnite",
+  "eslesme": [
+   "Fortnite"
+  ],
+  "tur": {
+   "tr": "Battle royale",
+   "en": "Battle royale",
+   "fr": "Battle royale",
+   "es": "Battle royale"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox",
+   "Switch 2",
+   "Mobil"
+  ],
+  "gelistirici": "Epic Games",
+  "resmi": {
+   "url": "https://www.fortnite.com/news",
+   "ad": "Fortnite (Epic Games)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Ücretsiz, platformlar arası oynanabilen oyun. Treasure Hunters sezonunun v43.10 güncellemesi 12 Kasım 2026'da çıktı; 15 Kasım'da Miku ve Teto ile yeni haftalık Captain's Day geliyor."
+   },
+   "en": {
+    "tanim": "Free-to-play with crossplay across platforms. The v43.10 update of the Treasure Hunters season arrived on November 12, 2026; a new weekly Captain's Day with Miku and Teto follows on November 15."
+   },
+   "fr": {
+    "tanim": "Jeu gratuit avec jeu croisé entre plateformes. La mise à jour v43.10 de la saison Treasure Hunters est sortie le 12 novembre 2026 ; un nouveau Captain's Day hebdomadaire avec Miku et Teto arrive le 15 novembre."
+   },
+   "es": {
+    "tanim": "Juego gratuito con juego cruzado entre plataformas. La actualización v43.10 de la temporada Treasure Hunters salió el 12 de noviembre de 2026; el 15 de noviembre llega un nuevo Captain's Day semanal con Miku y Teto."
+   }
+  }
+ },
+ {
+  "id": "minecraft",
+  "ad": "Minecraft",
+  "kisa": "Minecraft",
+  "eslesme": [
+   "Minecraft",
+   "Minecraft: Java Edition",
+   "Minecraft: Bedrock Edition"
+  ],
+  "tur": {
+   "tr": "Sandbox / hayatta kalma",
+   "en": "Sandbox / survival",
+   "fr": "Bac à sable / survie",
+   "es": "Sandbox / supervivencia"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox",
+   "Switch 2",
+   "Mobil"
+  ],
+  "gelistirici": "Mojang Studios",
+  "resmi": {
+   "url": "https://www.minecraft.net/en-us",
+   "ad": "Minecraft (Mojang / Microsoft)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Java Edition Windows, Mac ve Linux'ta; Bedrock Edition Windows, Xbox, PlayStation, Switch ve mobilde çıkıyor. Resmi sitede 26.4 Snapshot 8 (10 Kasım 2026) yayımlandı: Ender Dragon uçuş düzeltmesi ve yeni dil desteği."
+   },
+   "en": {
+    "tanim": "Java Edition runs on Windows, Mac and Linux; Bedrock Edition on Windows, Xbox, PlayStation, Switch and mobile. The official site published 26.4 Snapshot 8 (November 10, 2026): an Ender Dragon flight fix and new language support."
+   },
+   "fr": {
+    "tanim": "L'édition Java fonctionne sur Windows, Mac et Linux ; l'édition Bedrock sur Windows, Xbox, PlayStation, Switch et mobile. Le site officiel a publié la snapshot 26.4 Snapshot 8 (10 novembre 2026) : correctif du vol de l'Ender Dragon et nouvelles langues."
+   },
+   "es": {
+    "tanim": "Java Edition funciona en Windows, Mac y Linux; Bedrock Edition en Windows, Xbox, PlayStation, Switch y móvil. El sitio oficial publicó 26.4 Snapshot 8 (10 de noviembre de 2026): corrección del vuelo del Ender Dragon y nuevos idiomas."
+   }
+  }
+ },
+ {
+  "id": "diablo-4",
+  "ad": "Diablo",
+  "kisa": "Diablo",
+  "eslesme": [
+   "Diablo",
+   "Diablo II: Resurrected",
+   "Diablo IV",
+   "Diablo 4"
+  ],
+  "tur": {
+   "tr": "Aksiyon RYO",
+   "en": "Action RPG",
+   "fr": "Hack'n'slash RPG",
+   "es": "RPG de acción"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Blizzard Entertainment",
+  "resmi": {
+   "url": "https://diablo4.blizzard.com/en-us/",
+   "ad": "Diablo IV (Blizzard)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Diablo serisinin 30. yıldönümü etkinliği Legacy of Terror, Diablo II: Resurrected'ta 13-19 Kasım 2026 arasında; Season 16 Ladder'ı başlatıyor. Diablo IV tarafında yalnız üçüncü taraf kaynaklar görüldüğü için burada ayrıntı verilmedi."
+   },
+   "en": {
+    "tanim": "The Diablo 30th anniversary event Legacy of Terror runs in Diablo II: Resurrected from November 13 to 19, 2026, launching the Season 16 Ladder. For Diablo IV only third-party sources were seen, so no details are given here."
+   },
+   "fr": {
+    "tanim": "L'événement du 30e anniversaire de Diablo, Legacy of Terror, se déroule dans Diablo II: Resurrected du 13 au 19 novembre 2026 et lance la Season 16 Ladder. Pour Diablo IV, seules des sources tierces ont été vues ; aucun détail n'est donné ici."
+   },
+   "es": {
+    "tanim": "El evento del 30.º aniversario de Diablo, Legacy of Terror, se celebra en Diablo II: Resurrected del 13 al 19 de noviembre de 2026 y estrena la Season 16 Ladder. Para Diablo IV solo se vieron fuentes de terceros, así que no se dan detalles aquí."
+   }
+  }
+ },
+ {
+  "id": "path-of-exile-2",
+  "ad": "Path of Exile 2",
+  "kisa": "PoE 2",
+  "eslesme": [
+   "Path of Exile 2",
+   "Path of Exile 2 (1.0)",
+   "PoE 2",
+   "PoE2"
+  ],
+  "tur": {
+   "tr": "Aksiyon RYO",
+   "en": "Action RPG",
+   "fr": "Hack'n'slash RPG",
+   "es": "RPG de acción"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Grinding Gear Games",
+  "resmi": {
+   "url": "https://pathofexile2.com/",
+   "ad": "Path of Exile 2 (Grinding Gear Games)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "GGG'nin ExileCon 2026 duyurusuna göre oyun 11 Aralık 2026'da (PST) ücretsiz oynanabilir hale geliyor; Act 5 ve 6, Shadow ve Duelist sınıfları ile Conquerors of Wraeclast challenge ligi aynı güncellemede."
+   },
+   "en": {
+    "tanim": "According to GGG's ExileCon 2026 announcement, the game becomes free-to-play on December 11, 2026 (PST); Acts 5 and 6, the Shadow and Duelist classes and the Conquerors of Wraeclast challenge league arrive in the same update."
+   },
+   "fr": {
+    "tanim": "Selon l'annonce d'ExileCon 2026 de GGG, le jeu devient gratuit le 11 décembre 2026 (PST) ; les actes 5 et 6, les classes Shadow et Duelist et la ligue de défi Conquerors of Wraeclast arrivent dans la même mise à jour."
+   },
+   "es": {
+    "tanim": "Según el anuncio de ExileCon 2026 de GGG, el juego pasa a ser gratuito el 11 de diciembre de 2026 (PST); los actos 5 y 6, las clases Shadow y Duelist y la liga de desafío Conquerors of Wraeclast llegan en la misma actualización."
+   }
+  }
+ },
+ {
+  "id": "overwatch",
+  "ad": "Overwatch",
+  "kisa": "Overwatch",
+  "eslesme": [
+   "Overwatch",
+   "Overwatch 2"
+  ],
+  "tur": {
+   "tr": "Takım tabanlı nişancı",
+   "en": "Team-based shooter",
+   "fr": "Jeu de tir en équipe",
+   "es": "Shooter por equipos"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Blizzard Entertainment",
+  "resmi": {
+   "url": "https://overwatch.blizzard.com/en-us/",
+   "ad": "Overwatch (Blizzard)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Ücretsiz 5v5 takım nişancısı. Resmi sitede Reign of Talon ve Season 5 öne çıkıyor; Overwatch x EVE Protocol iş birliği 3-16 Kasım 2026 arasında sürüyor."
+   },
+   "en": {
+    "tanim": "Free-to-play 5v5 team shooter. The official site highlights Reign of Talon and Season 5; the Overwatch x EVE Protocol collaboration runs from November 3 to 16, 2026."
+   },
+   "fr": {
+    "tanim": "Jeu de tir en équipe 5 contre 5 gratuit. Le site officiel met en avant Reign of Talon et la saison 5 ; la collaboration Overwatch x EVE Protocol dure du 3 au 16 novembre 2026."
+   },
+   "es": {
+    "tanim": "Shooter por equipos 5 contra 5 gratuito. El sitio oficial destaca Reign of Talon y la temporada 5; la colaboración Overwatch x EVE Protocol se mantiene del 3 al 16 de noviembre de 2026."
+   }
+  }
+ },
+ {
+  "id": "marathon",
+  "ad": "Marathon",
+  "kisa": "Marathon",
+  "eslesme": [
+   "Marathon"
+  ],
+  "tur": {
+   "tr": "Hayatta kalma / extraction nişancısı",
+   "en": "Survival extraction shooter",
+   "fr": "Shooter d'extraction",
+   "es": "Shooter de extracción"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Bungie",
+  "resmi": {
+   "url": "https://www.marathonthegame.com/",
+   "ad": "Marathon (Bungie)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Bungie'nin Tau Ceti IV'te geçen hayatta kalma ve çıkış (extraction) nişancısı; PS5, Steam ve Xbox Series X|S'te. Resmi sitenin haber akışı eski girdilerle duruyor, güncel durum için PlayStation Blog ve yardım merkezine bakın."
+   },
+   "en": {
+    "tanim": "Bungie's survival extraction shooter set on Tau Ceti IV, on PS5, Steam and Xbox Series X|S. The official site's news list is stale; for the current state see the PlayStation Blog and the help center."
+   },
+   "fr": {
+    "tanim": "Le shooter d'extraction de survie de Bungie, situé sur Tau Ceti IV, sur PS5, Steam et Xbox Series X|S. La liste d'actualités du site officiel est périmée ; pour l'état actuel, consultez le PlayStation Blog et le centre d'aide."
+   },
+   "es": {
+    "tanim": "El shooter de extracción y supervivencia de Bungie ambientado en Tau Ceti IV, en PS5, Steam y Xbox Series X|S. La lista de noticias del sitio oficial está desactualizada; para el estado actual consulta el PlayStation Blog y el centro de ayuda."
+   }
+  }
+ },
+ {
+  "id": "football-manager-27",
+  "ad": "Football Manager 27",
+  "kisa": "FM27",
+  "eslesme": [
+   "Football Manager 27",
+   "FM27"
+  ],
+  "tur": {
+   "tr": "Futbol menajerlik simülasyonu",
+   "en": "Football management sim",
+   "fr": "Simulation de management de football",
+   "es": "Simulador de gestión de fútbol"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Sports Interactive",
+  "resmi": {
+   "url": "https://www.footballmanager.com/",
+   "ad": "Football Manager (Sports Interactive)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "FM27 ve FM27 Console çıktı; Xbox'ta PC ve Xbox Series X|S için Game Pass ile de oynanabiliyor (Xbox Wire, 10 Kasım 2026). Resmi site Steam, Epic, Microsoft Store ve PlayStation sürümlerini listeliyor."
+   },
+   "en": {
+    "tanim": "FM27 and FM27 Console are out, also playable with Game Pass on Xbox for PC and Xbox Series X|S (Xbox Wire, November 10, 2026). The official site lists Steam, Epic, Microsoft Store and PlayStation versions."
+   },
+   "fr": {
+    "tanim": "FM27 et FM27 Console sont sortis, aussi jouables avec le Game Pass sur Xbox pour PC et Xbox Series X|S (Xbox Wire, 10 novembre 2026). Le site officiel liste les versions Steam, Epic, Microsoft Store et PlayStation."
+   },
+   "es": {
+    "tanim": "FM27 y FM27 Console ya están disponibles, también con Game Pass en Xbox para PC y Xbox Series X|S (Xbox Wire, 10 de noviembre de 2026). El sitio oficial lista las versiones de Steam, Epic, Microsoft Store y PlayStation."
+   }
+  }
+ },
+ {
+  "id": "halo-campaign-evolved",
+  "ad": "Halo: Campaign Evolved",
+  "kisa": "Halo CE",
+  "eslesme": [
+   "Halo: Campaign Evolved",
+   "Halo: Combat Evolved (remake)"
+  ],
+  "tur": {
+   "tr": "Aksiyon FPS",
+   "en": "FPS action",
+   "fr": "FPS d'action",
+   "es": "FPS de acción"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Halo Studios",
+  "resmi": {
+   "url": "https://www.halowaypoint.com/en",
+   "ad": "Halo Waypoint (Halo Studios)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Halo: Combat Evolved kampanyasının yeniden yapımı; Xbox Series X|S, PC/Steam ve PS5'te 28 Temmuz 2026'da çıktı. Xbox Wire'a göre (12 Kasım 2026) ücretsiz Firefight güncellemesi bu kış geliyor."
+   },
+   "en": {
+    "tanim": "A remake of the Halo: Combat Evolved campaign, released on July 28, 2026 on Xbox Series X|S, PC/Steam and PS5. According to Xbox Wire (November 12, 2026), a free Firefight update arrives this winter."
+   },
+   "fr": {
+    "tanim": "Un remake de la campagne de Halo: Combat Evolved, sorti le 28 juillet 2026 sur Xbox Series X|S, PC/Steam et PS5. Selon Xbox Wire (12 novembre 2026), une mise à jour Firefight gratuite arrive cet hiver."
+   },
+   "es": {
+    "tanim": "Un remake de la campaña de Halo: Combat Evolved, lanzado el 28 de julio de 2026 en Xbox Series X|S, PC/Steam y PS5. Según Xbox Wire (12 de noviembre de 2026), una actualización gratuita de Firefight llega este invierno."
+   }
+  }
+ },
+ {
+  "id": "ea-sports-fc",
+  "ad": "EA SPORTS FC",
+  "kisa": "FC 27",
+  "eslesme": [
+   "EA SPORTS FC",
+   "EA SPORTS FC 27",
+   "EA FC 27",
+   "FC 27",
+   "EA FC"
+  ],
+  "tur": {
+   "tr": "Futbol simülasyonu",
+   "en": "Football simulation",
+   "fr": "Simulation de football",
+   "es": "Simulación de fútbol"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox",
+   "Switch 2",
+   "Mobil"
+  ],
+  "gelistirici": "EA Vancouver ve EA Romania (EA SPORTS)",
+  "resmi": {
+   "url": "https://www.ea.com/games/ea-sports-fc",
+   "ad": "EA SPORTS FC (EA)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "EA SPORTS FC 27 25 Eylül 2026'da çıktı. Resmi sitedeki son haberler Title Update v1.0.4 (7 Ekim), Future Stars (9 Ekim) ve The Grounds Developer Archetypes güncellemesi (19 Ekim); 4-14 Kasım arasında yeni resmi duyuru görülmedi. Mobil sürüm EA SPORTS FC Mobile ayrı oyun olarak iOS ve Android'de."
+   },
+   "en": {
+    "tanim": "EA SPORTS FC 27 launched on September 25, 2026. The latest items on the official site are Title Update v1.0.4 (October 7), Future Stars (October 9) and The Grounds Developer Archetypes update (October 19); no new official announcement was seen between November 4 and 14. The mobile version, EA SPORTS FC Mobile, is a separate game on iOS and Android."
+   },
+   "fr": {
+    "tanim": "EA SPORTS FC 27 est sorti le 25 septembre 2026. Les dernières actualités du site officiel sont la Title Update v1.0.4 (7 octobre), Future Stars (9 octobre) et la mise à jour des archétypes de The Grounds (19 octobre) ; aucune nouvelle annonce officielle n'a été relevée entre le 4 et le 14 novembre. La version mobile, EA SPORTS FC Mobile, est un jeu distinct sur iOS et Android."
+   },
+   "es": {
+    "tanim": "EA SPORTS FC 27 salió el 25 de septiembre de 2026. Lo más reciente en el sitio oficial es la Title Update v1.0.4 (7 de octubre), Future Stars (9 de octubre) y la actualización de arquetipos de The Grounds (19 de octubre); entre el 4 y el 14 de noviembre no se vio ningún anuncio oficial nuevo. La versión móvil, EA SPORTS FC Mobile, es un juego aparte en iOS y Android."
+   }
+  }
+ },
+ {
+  "id": "roblox",
+  "ad": "Roblox",
+  "kisa": "Roblox",
+  "eslesme": [
+   "Roblox"
+  ],
+  "tur": {
+   "tr": "Oyun platformu",
+   "en": "Game platform",
+   "fr": "Plateforme de jeux",
+   "es": "Plataforma de juegos"
+  },
+  "platform": [
+   "PC",
+   "Mobil"
+  ],
+  "gelistirici": "Roblox Corporation",
+  "resmi": {
+   "url": "https://about.roblox.com/newsroom",
+   "ad": "Roblox Newsroom"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Kullanıcıların yaptığı oyunların oynandığı ücretsiz platform. Resmi haber odasında 13 Kasım 2026 tarihli yazı, yaratıcıların büyük bölümünün yapay zeka ile geliştirdiğini anlatıyor; Roblox ayrıca The Game Awards 2026 yayınının 10 Aralık'ta platformda izlenebileceği bildirildi (18 yaş ve üzeri)."
+   },
+   "en": {
+    "tanim": "A free platform for playing user-made games. A November 13, 2026 post in the official newsroom describes how creators of most top games now build with AI; it was also reported that The Game Awards 2026 stream will be viewable on the platform on December 10 (ages 18 and up)."
+   },
+   "fr": {
+    "tanim": "Une plateforme gratuite pour jouer à des jeux créés par les utilisateurs. Un article du 13 novembre 2026 de la salle de presse officielle explique que les créateurs de la plupart des jeux les plus populaires utilisent désormais l'IA ; il a aussi été rapporté que la diffusion des Game Awards 2026 sera visible sur la plateforme le 10 décembre (18 ans et plus)."
+   },
+   "es": {
+    "tanim": "Una plataforma gratuita para jugar a juegos creados por usuarios. Un artículo del 13 de noviembre de 2026 en la sala de prensa oficial explica que los creadores de la mayoría de los juegos más populares ya construyen con IA; también se informó de que la emisión de The Game Awards 2026 podrá verse en la plataforma el 10 de diciembre (mayores de 18 años)."
+   }
+  }
+ },
+ {
+  "id": "call-of-duty",
+  "ad": "Call of Duty",
+  "kisa": "CoD",
+  "eslesme": [
+   "Call of Duty",
+   "Call of Duty: Modern Warfare 4",
+   "Call of Duty: Warzone",
+   "Warzone",
+   "Modern Warfare 4",
+   "MW4"
+  ],
+  "tur": {
+   "tr": "Nişancı serisi",
+   "en": "Shooter franchise",
+   "fr": "Série de jeux de tir",
+   "es": "Saga de shooters"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox",
+   "Switch 2",
+   "Mobil"
+  ],
+  "gelistirici": "Activision",
+  "resmi": {
+   "url": "https://www.callofduty.com/",
+   "ad": "Call of Duty (Activision)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Resmi sitede Modern Warfare 4 ve Warzone Sezon 1 öne çıkıyor; Kasım 2026'da Sezon 1 Battle Pass ve BlackCell bilgileri yayımlandı. Seri Modern Warfare 4, Warzone, Black Ops 7 ve Call of Duty Mobile'ı kapsıyor."
+   },
+   "en": {
+    "tanim": "The official site features Modern Warfare 4 and Warzone Season 1; Season 1 Battle Pass and BlackCell details were published in November 2026. The franchise covers Modern Warfare 4, Warzone, Black Ops 7 and Call of Duty Mobile."
+   },
+   "fr": {
+    "tanim": "Le site officiel met en avant Modern Warfare 4 et la saison 1 de Warzone ; les détails du Passe de combat et de BlackCell de la saison 1 ont été publiés en novembre 2026. La série comprend Modern Warfare 4, Warzone, Black Ops 7 et Call of Duty Mobile."
+   },
+   "es": {
+    "tanim": "El sitio oficial destaca Modern Warfare 4 y la temporada 1 de Warzone; en noviembre de 2026 se publicaron los detalles del Pase de batalla y BlackCell de la temporada 1. La saga incluye Modern Warfare 4, Warzone, Black Ops 7 y Call of Duty Mobile."
+   }
+  }
+ },
+ {
+  "id": "genshin-impact",
+  "ad": "Genshin Impact",
+  "kisa": "Genshin",
+  "eslesme": [
+   "Genshin Impact",
+   "Genshin"
+  ],
+  "tur": {
+   "tr": "Aksiyon RYO",
+   "en": "Action RPG",
+   "fr": "RPG d'action",
+   "es": "RPG de acción"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox",
+   "Mobil"
+  ],
+  "gelistirici": "HoYoverse",
+  "resmi": {
+   "url": "https://genshin.hoyoverse.com/en/home",
+   "ad": "Genshin Impact (HoYoverse)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Ücretsiz açık dünya aksiyon RYO. Sürüm 7.2 \"Hour of Ruin\" 4 Kasım 2026'da çıktı; resmi sitede Mitya karakter fragmanı (3 Kasım), güncelleme ayrıntıları ve etkinlik duyuruları yer alıyor."
+   },
+   "en": {
+    "tanim": "Free-to-play open-world action RPG. Version 7.2 \"Hour of Ruin\" came out on November 4, 2026; the official site carries the Mitya character trailer (November 3), the update details and event announcements."
+   },
+   "fr": {
+    "tanim": "RPG d'action en monde ouvert gratuit. La version 7.2 \"Hour of Ruin\" est sortie le 4 novembre 2026 ; le site officiel présente la bande-annonce du personnage Mitya (3 novembre), le détail de la mise à jour et des annonces d'événements."
+   },
+   "es": {
+    "tanim": "RPG de acción de mundo abierto gratuito. La versión 7.2 \"Hour of Ruin\" salió el 4 de noviembre de 2026; el sitio oficial incluye el tráiler del personaje Mitya (3 de noviembre), los detalles de la actualización y anuncios de eventos."
+   }
+  }
+ },
+ {
+  "id": "mobile-legends",
+  "ad": "Mobile Legends: Bang Bang",
+  "kisa": "MLBB",
+  "eslesme": [
+   "Mobile Legends: Bang Bang",
+   "Mobile Legends",
+   "MLBB"
+  ],
+  "tur": {
+   "tr": "MOBA (mobil)",
+   "en": "MOBA (mobile)",
+   "fr": "MOBA (mobile)",
+   "es": "MOBA (móvil)"
+  },
+  "platform": [
+   "Mobil"
+  ],
+  "gelistirici": "Moonton",
+  "resmi": {
+   "url": "https://www.mobilelegends.com/",
+   "ad": "Mobile Legends: Bang Bang (Moonton)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Moonton'un mobil MOBA'sı. Resmi sitede kahramanlar ve oynanış bilgileri bulunur; bu turda sitenin haber akışı okunamadığı için güncel yama bilgisi verilmedi."
+   },
+   "en": {
+    "tanim": "Moonton's mobile MOBA. The official site has hero and gameplay information; the site's news feed could not be read in this pass, so no current patch information is given."
+   },
+   "fr": {
+    "tanim": "Le MOBA mobile de Moonton. Le site officiel propose des informations sur les héros et le gameplay ; le fil d'actualités n'a pas pu être lu lors de cette passe, donc aucune information de patch actuelle n'est donnée."
+   },
+   "es": {
+    "tanim": "El MOBA móvil de Moonton. El sitio oficial ofrece información de héroes y jugabilidad; el flujo de noticias del sitio no pudo leerse en esta pasada, así que no se da información de parche actual."
+   }
+  }
+ },
+ {
+  "id": "rise-online",
+  "ad": "Rise Online",
+  "kisa": "Rise",
+  "eslesme": [
+   "Rise Online",
+   "Rise Online World"
+  ],
+  "tur": {
+   "tr": "MMORPG",
+   "en": "MMORPG",
+   "fr": "MMORPG",
+   "es": "MMORPG"
+  },
+  "platform": [
+   "PC"
+  ],
+  "gelistirici": "Rise Online World (resmi site)",
+  "resmi": {
+   "url": "https://www.riseonlineworld.com/",
+   "ad": "Rise Online World"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Resmi sitede 16.0.0 yaması (3 Kasım 2026) oyun motorunu Unreal Engine 5.8'e yükseltti; 16.0.1 (3 Kasım), 16.0.2 (4 Kasım) ve 16.0.3 (6 Kasım) yamaları çökme düzeltmeleri, Rogue sınıfı ayarları ve sistem mesajı seçenekleri getirdi."
+   },
+   "en": {
+    "tanim": "On the official site, patch 16.0.0 (November 3, 2026) upgraded the game engine to Unreal Engine 5.8; patches 16.0.1 (November 3), 16.0.2 (November 4) and 16.0.3 (November 6) brought crash fixes, Rogue class tweaks and system message options."
+   },
+   "fr": {
+    "tanim": "Sur le site officiel, le patch 16.0.0 (3 novembre 2026) a fait passer le moteur du jeu à Unreal Engine 5.8 ; les patchs 16.0.1 (3 novembre), 16.0.2 (4 novembre) et 16.0.3 (6 novembre) apportent des correctifs de plantages, des ajustements de la classe Rogue et des options de messages système."
+   },
+   "es": {
+    "tanim": "En el sitio oficial, el parche 16.0.0 (3 de noviembre de 2026) actualizó el motor del juego a Unreal Engine 5.8; los parches 16.0.1 (3 de noviembre), 16.0.2 (4 de noviembre) y 16.0.3 (6 de noviembre) trajeron correcciones de cierres, ajustes de la clase Rogue y opciones de mensajes del sistema."
+   }
+  }
+ }
+]

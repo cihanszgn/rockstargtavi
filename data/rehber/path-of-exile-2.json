@@ -1,0 +1,1321 @@
+{
+ "oyun": "path-of-exile-2",
+ "guncelleme": "2026-11-14",
+ "surum": "0.5.5 Forbidden Rites (Erken Erişim); 1.0 ve ücretsiz oynanış 11 Aralık 2026",
+ "kaynaklar": [
+  {
+   "url": "https://www.pathofexile.com/forum/view-thread/4012710",
+   "ad": "Path of Exile forum: ExileCon announcements"
+  },
+  {
+   "url": "https://www.pathofexile.com/forum/view-thread/4000864",
+   "ad": "Path of Exile forum: 0.5.5 patch notes"
+  },
+  {
+   "url": "https://maxroll.gg/poe2/news/0-5-5-forbidden-rites-event-launch-date-and-endgame-changes",
+   "ad": "Maxroll: 0.5.5 Forbidden Rites launch and endgame changes"
+  },
+  {
+   "url": "https://maxroll.gg/poe2/resources/poe-2-class-overview",
+   "ad": "Maxroll: Path of Exile 2 class overview"
+  },
+  {
+   "url": "https://store.steampowered.com/app/2694490/Path_of_Exile_2/",
+   "ad": "Steam: Path of Exile 2"
+  }
+ ],
+ "diller": {
+  "tr": {
+   "baslik": "Path of Exile 2 Başlangıç Rehberi: Erken Erişim ve 1.0 Öncesi (2026)",
+   "ozet": "Path of Exile 2'ye yeni başlayanlar için sınıf seçimi, ilk saatler, direnç ve silah mantığı ile 11 Aralık 2026'daki 1.0 ve ücretsiz oynanış öncesi bilmeniz gerekenler.",
+   "kunye": [
+    {
+     "ad": "Tür",
+     "deger": "Aksiyon rol yapma oyunu (ARPG, derin build sistemi)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "PC (Steam, Epic, kendi başlatıcısı), PS5, Xbox Series X|S (1.0 ile)"
+    },
+    {
+     "ad": "Fiyat modeli",
+     "deger": "Şu an Erken Erişim anahtarı gerekir; 1.0'da (11 Aralık 2026) ücretsiz oynanış"
+    },
+    {
+     "ad": "Güncel sürüm",
+     "deger": "0.5.5 Forbidden Rites (Erken Erişim)"
+    },
+    {
+     "ad": "Türkçe desteği",
+     "deger": "Yok; Steam'de 9 dil listeleniyor, Türkçe yok"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "Path of Exile 2 şu an nerede?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Path of Exile 2, Grinding Gear Games'in yaptığı karanlık bir aksiyon rol yapma oyunudur. Hayatta kalmak için dikkatli oynamak gerekir: düşmanları öylesine kesmek yerine kaçışı, konumu ve beceri bağlantılarını planlarsınız. Oyun, ilk Path of Exile'dan ayrı bir yapım olarak kendi sınıflarına ve hikâyesine sahiptir."
+      },
+      {
+       "tip": "p",
+       "metin": "Oyun hâlâ **Erken Erişim** aşamasında. Şu anki yama **0.5.5 Forbidden Rites** etkinlik ligi (4 Eylül 2026'dan beri canlı). **1.0 tam sürüm ve ücretsiz oynanış 11 Aralık 2026'da** PC, PS5 ve Xbox Series X|S üzerinde başlıyor. 1.0 ile 5. ve 6. perdeler (kampanyanın tamamlanması), Duelist ve Shadow sınıfları, yeni bir oyun sonu hikâyesi, Conquerors of Wraeclast meydan okuma ligi ve büyük denge değişiklikleri geliyor. İkincil bir kaynağa göre Erken Erişim karakterleri kalıcı bir Erken Erişim ligine taşınıyor ve 1.0 ekonomisine aktarılmıyor; bunu 1.0'a yakın resmî duyurudan doğrulayın."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "11 Aralık'a kadar bekleyecekseniz bu rehberdeki temel mantık (direnç, bağlantılı beceriler, oyun sonu) 1.0'da da geçerli kalır. Hangi sınıfın ne kadar güçlü olduğu ise ligden lige değişir; ona bakmayın."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Başlamadan önce: erişim, platform ve gereksinimler",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "11 Aralık 2026'ya kadar oynamak için Erken Erişim anahtarı veya Destekçi Paketi gerekir; 1.0 çıkınca oyun ücretsiz olacak. PC'de Steam, Epic veya oyunun kendi bağımsız başlatıcısıyla oynanır; konsolda 1.0 ile PS5 ve Xbox Series X|S desteği geliyor. Oyun Steam Deck'te Doğrulanmış (Verified) olarak işaretlendi."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "",
+        "En düşük (ikincil kaynak)",
+        "Önerilen (ikincil kaynak)"
+       ],
+       "satirlar": [
+        [
+         "İşlemci",
+         "i7-7700 veya Ryzen 5 2500X",
+         "i5-10500 veya Ryzen 7 3700X"
+        ],
+        [
+         "Bellek (RAM)",
+         "8 GB",
+         "16 GB"
+        ],
+        [
+         "Ekran kartı",
+         "GTX 960 3 GB, RX 470 veya Arc A380",
+         "RTX 2060 düzeyi"
+        ],
+        [
+         "Depolama",
+         "100 GB",
+         "100 GB, SSD önerilir"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Bu gereksinimler resmî sayfadan değil ikincil bir siteden alındı; kesin değerler için Steam mağaza sayfasına bakın. **Dil:** Steam'de İngilizce, Fransızca, Almanca, İspanyolca (İspanya), Japonca, Korece, Brezilya Portekizcesi, Rusça ve Tayca listeleniyor; **Türkçe yok**, oyun İngilizce oynanır. Kendi başına İngilizce eşya ve beceri adlarını öğrenmek gerekecek."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Oyunu yalnızca Steam, Epic veya resmî Path of Exile sitesinden edinin. Anahtar satan bilinmeyen siteler çalıntı veya geçersiz kod satabilir."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "İlk saatler: adım adım",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Oyun yeni başlayana ilk bakışta ağır gelebilir. Aşağıdaki sıra, ilk gün için sade bir yoldur."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Sınıfı seçin",
+         "metin": "Sınıf bölümüne bakıp zevkinize uygun olanı seçin. Kısa bir tanıtım için oyunun ilk dakikalarını da deneyebilirsiniz; karakter silme ücretsizdir."
+        },
+        {
+         "baslik": "Kampanyayı oynayın",
+         "metin": "Hikâyeyi izleyip bölge bölge ilerleyin. Kampanya sizi tecrübe ve eşyayla beslerken oyun sonuna hazırlar."
+        },
+        {
+         "baslik": "Beceri taşlarını kuşanın",
+         "metin": "Beceri taşları (skill gem) silahınıza ve eşyalarınıza bağlanır. Her ana beceriye yardımcı (support) taşlar ekleyerek onu güçlendirirsiniz."
+        },
+        {
+         "baslik": "Kaçış hareketini kullanın",
+         "metin": "Oyunda bir yuvarlanma hareketi var; ölümcül saldırıları kaçmak, sadece vurmaktan daha önemlidir."
+        },
+        {
+         "baslik": "Dirençleri takip edin",
+         "metin": "Ateş, soğuk, yıldırım ve kaos dirençleri en önemli savunmanızdır; eşya değiştirirken direnci kontrol edin."
+        },
+        {
+         "baslik": "Yeni eşyayı karşılaştırın",
+         "metin": "Bir parçayı giymeden önce dirençler ve ana özellik açısından mevcut parçayla karşılaştırın."
+        },
+        {
+         "baslik": "Sürekli hazır olun",
+         "metin": "Sağlık ve ruh (Spirit) ile mana kaynağınızı izleyin; boşaldığında beceri kullanamazsınız."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Bir bölüm sizi sürekli öldürüyorsa üstüne gidene kadar zorlamayın. Eşya, direnç veya kaçış hareketinizde bir eksik vardır; durup bakın."
+      }
+     ]
+    },
+    {
+     "id": "sinif-secimi",
+     "baslik": "Sınıf seçimi: 8 sınıf (1.0 ile Duelist ve Shadow eklenecek)",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Şu anda sekiz sınıf var. Her sınıfın iki veya üç yükseltilmiş uzmanlık (ascendancy) dalı vardır; ilk hedef bir sınıfı sevmek, uzmanlığı sonra seçmektir."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Sınıf",
+        "Özellik",
+        "Uzmanlıklar"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Kuvvet, gürzler, yakın dövüş",
+         "Warbringer, Titan, Smith of Kitava"
+        ],
+        [
+         "Sorceress",
+         "Zekâ, asa ve büyüler",
+         "Stormweaver, Chronomancer, Disciple of Varashta"
+        ],
+        [
+         "Witch",
+         "Zekâ, yaratıklar ve okült büyüler",
+         "Infernalist, Blood Mage, Lich"
+        ],
+        [
+         "Ranger",
+         "Çeviklik, yay",
+         "Deadeye, Pathfinder"
+        ],
+        [
+         "Monk",
+         "Çeviklik ve zekâ, asa (quarterstaff)",
+         "Invoker, Acolyte of Chayula, Martial Artist"
+        ],
+        [
+         "Mercenary",
+         "Kuvvet ve çeviklik, tatar yayı (crossbow)",
+         "Witchhunter, Gemling Legionnaire, Tactician"
+        ],
+        [
+         "Huntress",
+         "Çeviklik, mızrak",
+         "Amazon, Ritualist, Spirit Walker"
+        ],
+        [
+         "Druid",
+         "Kuvvet ve zekâ, şekil değiştirme ve doğa",
+         "Oracle, Shaman"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Yeni oyuncu için pratik ilke: ilk karakterinizde karmaşık bir sınıf yerine rahat ettiğiniz silah türünü seçin. Yay veya mızrak gibi uzaktan çalışanlar çoğu zaman öğrenmesi daha kolaydır."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme-yolu",
+     "baslik": "İlerleme yolu: kampanyadan oyun sonuna",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Kampanya:** perde perde ilerleyin; her perdenin sonunda büyük bir patron vardır. 1.0'da 5. ve 6. perde eklenerek kampanya tamamlanacak.",
+        "**Uzmanlık denemeleri:** uzmanlık dalınızı denemeler (trial) çözerek açarsınız. Bu bölümler hataya affetmezdir; savunma taşlarınızı hazırlayın.",
+        "**Atlas ve oyun sonu:** kampanya bittikten sonra harita sistemine (Atlas) geçersiniz. Harita taşlarıyla (waystone) bölümlere girip daha zor düşmanları keser, daha iyi eşya toplarsınız.",
+        "**Ekonomi ve ticaret:** oyun içi para birimi sistemi, eşya takasının temelidir. Ticaret yalnızca oyunun kendi mekanizmasıyla yapılır.",
+        "**Lig sistemi:** yeni ligler çıkınca yeni karakterlerle baştan başlarsınız; ilk saatler hep aynı tazelikte olur."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Oyun sonunun ayrıntıları yamadan yamaya değişiyor (0.5.0'da oyun sonu baştan tasarlandı, Trial of Chaos yenilendi). Bu yüzden ezberlemek yerine güncel yama notlarını okumak daha doğrudur."
+      }
+     ]
+    },
+    {
+     "id": "esya-ve-ekonomi",
+     "baslik": "Eşya, beceri bağlantısı ve kaynak yönetimi",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Dirençler:** dört direnç türü (ateş, soğuk, yıldırım, kaos) vardır; bunları yeterli seviyeye çıkarmadan zor bölgeye girmeyin.",
+        "**Beceri taşı mantığı:** ana beceri taşı + yardımcı taşlar bir bağlantı oluşturur; yardımcı taşlar becerinin davranışını değiştirir.",
+        "**Ruh (Spirit):** sürekli açık kalan beceriler ve yaratıklar için ayrılan bir kaynaktır; fazla beceri açarsanız ruh biter.",
+        "**Silah bağlılığı:** her sınıfın seveceği silah türü farklıdır (gürz, asa, tatar yayı, yay, mızrak); silahınızı beceriye göre seçin.",
+        "**Para birimi:** eşyayı güçlendirmek için kullanılan küreler sınırlıdır; neye harcayacağınızı düşünerek kullanın."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Basit kural: bir şeyi anlamadan para birimi harcamayın. Yeni oyuncular eşyayı kaybettiren, geri alınmayan bir işlemi denemeden önce kendi bilgisiyle neyi değiştirdiğini anlamalıdır."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Yeni başlayanların sık hataları",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Dirençleri hiç bakmadan zor bölgeye girmek.",
+        "Yuvarlanma hareketini kullanmamak; her saldırıyı yiyerek geçmeye çalışmak.",
+        "Beceri taşlarını rastgele takmak; bağlantılı taşların birbirine uyduğunu kontrol etmemek.",
+        "Değerli para birimlerini ne işe yaradığını bilmeden harcamak.",
+        "Bir sınıf çok güçsüz görünüyor diye hemen bırakmak; çoğu zaman sorun yapı veya eşya eksikliğidir."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Oyunda bazı işlemler geri alınamaz (eşya bozma, kalıcı değişiklikler). Emin olmadığınız bir işlemi ana eşyanızda denemeyin."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Hesap güvenliği ve 1.0 sonrası ücretsiz oyun uyarısı",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Path of Exile hesabınız eşyalarınızı ve ilerlemenizi taşır. Parolanızı, hesap bilgilerinizi ve doğrulama kodlarınızı kimseyle paylaşmayın."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "İki adımlı doğrulamayı açın ve her hizmet için ayrı bir parola kullanın.",
+        "Bot, otomatik oynayan yazılım ve hile yazılımı oyun kurallarına aykırıdır ve hesabın kalıcı kapanmasına yol açar.",
+        "Gerçek parayla eşya veya para birimi alıp satmak (RMT) yasaktır; \"ucuz para birimi\" satan siteler hesap çalar.",
+        "Ticaret sırasında yabancılardan gelen bağlantılara tıklamayın; sahte ticaret siteleri parolanızı çalmak için kurulur."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Oyun ücretsiz olacağı için sahte \"ücretsiz anahtar\" ve \"ücretsiz para birimi\" siteleri artabilir. Hiçbir meşru kaynak sizden parola istemez; şüpheli bir teklifi reddedin."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Sık sorulan sorular",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Path of Exile 2 ücretsiz mi?",
+         "c": "Şu an Erken Erişim anahtarı gerekir. 11 Aralık 2026'da 1.0 ile ücretsiz oynanış başlıyor."
+        },
+        {
+         "s": "Oyun Türkçe mi?",
+         "c": "Hayır. Steam'de Türkçe listelenmiyor; oyun İngilizce oynanır."
+        },
+        {
+         "s": "Konsolda oynayabilir miyim?",
+         "c": "1.0 ile PS5 ve Xbox Series X|S'ye geliyor; şu anki Erken Erişim PC'de."
+        },
+        {
+         "s": "1.0'ı beklemeli miyim?",
+         "c": "Beklemek zorunda değilsiniz; ancak Erken Erişim karakterleri 1.0 ekonomisine taşınmıyor. Karar vermeden önce resmî duyuruyu okuyun."
+        },
+        {
+         "s": "Yeni sınıflar ne zaman?",
+         "c": "Duelist ve Shadow, 1.0 ile geliyor."
+        },
+        {
+         "s": "Steam Deck'te çalışır mı?",
+         "c": "Evet, oyun Steam Deck için Doğrulanmış (Verified) olarak işaretlendi."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "en": {
+   "baslik": "Path of Exile 2 Beginner Guide: Early Access Before 1.0 (2026)",
+   "ozet": "A guide for new Path of Exile 2 players covering class choice, the first hours, resistance and weapon logic, and what to know before 1.0 and free-to-play on 11 December 2026.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Action role-playing game (ARPG, deep build system)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "PC (Steam, Epic, standalone launcher), PS5, Xbox Series X|S (with 1.0)"
+    },
+    {
+     "ad": "Pricing model",
+     "deger": "An Early Access key is needed now; free to play at 1.0 (11 December 2026)"
+    },
+    {
+     "ad": "Current version",
+     "deger": "0.5.5 Forbidden Rites (Early Access)"
+    },
+    {
+     "ad": "Turkish support",
+     "deger": "No; Steam lists 9 languages, Turkish is not among them"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "Where Path of Exile 2 stands now",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Path of Exile 2 is a dark action role-playing game made by Grinding Gear Games. Surviving takes careful play: instead of just cutting enemies down, you plan around escapes, positioning and skill links. It is a separate game from the first Path of Exile, with its own classes and story."
+      },
+      {
+       "tip": "p",
+       "metin": "The game is still in **Early Access**. The current patch is the **0.5.5 Forbidden Rites** event league (live since 4 September 2026). **The 1.0 full release and free-to-play start on 11 December 2026** on PC, PS5 and Xbox Series X|S. 1.0 brings Acts 5 and 6 (completing the campaign), the Duelist and Shadow classes, a new endgame story, the Conquerors of Wraeclast challenge league and large balance changes. According to a secondary source, Early Access characters move to a permanent Early Access league and are not carried into the 1.0 economy; confirm that in the official announcement closer to 1.0."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "If you plan to wait until 11 December, the basic logic in this guide (resistances, linked skills, endgame) will still hold in 1.0. Which class is strongest changes from league to league; do not chase that."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Before you start: access, platform and requirements",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "To play until 11 December 2026 you need an Early Access key or a Supporter Pack; the game becomes free when 1.0 launches. On PC it runs through Steam, Epic or the game's own standalone launcher; console support for PS5 and Xbox Series X|S arrives with 1.0. The game is marked Verified on Steam Deck."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "",
+        "Minimum (secondary source)",
+        "Recommended (secondary source)"
+       ],
+       "satirlar": [
+        [
+         "Processor",
+         "i7-7700 or Ryzen 5 2500X",
+         "i5-10500 or Ryzen 7 3700X"
+        ],
+        [
+         "Memory (RAM)",
+         "8 GB",
+         "16 GB"
+        ],
+        [
+         "Graphics card",
+         "GTX 960 3 GB, RX 470 or Arc A380",
+         "RTX 2060 class"
+        ],
+        [
+         "Storage",
+         "100 GB",
+         "100 GB, SSD recommended"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "These requirements come from a secondary site rather than the official page; see the Steam store page for exact values. **Language:** Steam lists English, French, German, Spanish (Spain), Japanese, Korean, Brazilian Portuguese, Russian and Thai; **Turkish is not supported**, so the game is played in English. You will have to learn item and skill names in English on your own."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Get the game only from Steam, Epic or the official Path of Exile site. Unknown sites selling keys can sell stolen or invalid codes."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "The first hours: step by step",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "At first glance the game can feel heavy to a beginner. The order below is a plain path for the first day."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Pick a class",
+         "metin": "Look at the class section and choose what suits your taste. You can also try the first few minutes of the game for a short preview; deleting a character is free."
+        },
+        {
+         "baslik": "Play the campaign",
+         "metin": "Follow the story and move region by region. The campaign feeds you experience and items while preparing you for the endgame."
+        },
+        {
+         "baslik": "Socket your skill gems",
+         "metin": "Skill gems attach to your weapon and gear. You strengthen each main skill by adding support gems to it."
+        },
+        {
+         "baslik": "Use the dodge move",
+         "metin": "The game has a dodge roll; dodging deadly attacks matters more than just hitting."
+        },
+        {
+         "baslik": "Track your resistances",
+         "metin": "Fire, cold, lightning and chaos resistances are your most important defense; check resistances whenever you change gear."
+        },
+        {
+         "baslik": "Compare new gear",
+         "metin": "Before wearing a piece, compare it to your current piece for resistances and main stats."
+        },
+        {
+         "baslik": "Stay ready",
+         "metin": "Watch your health, Spirit and mana; when they run out you cannot use skills."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "If one area keeps killing you, do not keep pushing until it breaks. Something is missing from your gear, resistances or dodging; stop and look."
+      }
+     ]
+    },
+    {
+     "id": "sinif-secimi",
+     "baslik": "Class choice: 8 classes (Duelist and Shadow join with 1.0)",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "There are currently eight classes. Each class has two or three ascendancy branches; the first goal is to like a class, and to choose the ascendancy later."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Class",
+        "Trait",
+        "Ascendancies"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Strength, maces, melee",
+         "Warbringer, Titan, Smith of Kitava"
+        ],
+        [
+         "Sorceress",
+         "Intelligence, staves and spells",
+         "Stormweaver, Chronomancer, Disciple of Varashta"
+        ],
+        [
+         "Witch",
+         "Intelligence, minions and occult magic",
+         "Infernalist, Blood Mage, Lich"
+        ],
+        [
+         "Ranger",
+         "Dexterity, bow",
+         "Deadeye, Pathfinder"
+        ],
+        [
+         "Monk",
+         "Dexterity and intelligence, quarterstaff",
+         "Invoker, Acolyte of Chayula, Martial Artist"
+        ],
+        [
+         "Mercenary",
+         "Strength and dexterity, crossbow",
+         "Witchhunter, Gemling Legionnaire, Tactician"
+        ],
+        [
+         "Huntress",
+         "Dexterity, spear",
+         "Amazon, Ritualist, Spirit Walker"
+        ],
+        [
+         "Druid",
+         "Strength and intelligence, shapeshifting and nature",
+         "Oracle, Shaman"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "A practical principle for a new player: on your first character pick the weapon type you feel comfortable with rather than a complicated class. Ranged ones like bows or spears are often easier to learn."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme-yolu",
+     "baslik": "Progression path: from campaign to endgame",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Campaign:** advance act by act; each act ends with a big boss. In 1.0 Acts 5 and 6 will be added, completing the campaign.",
+        "**Ascendancy trials:** you unlock your ascendancy branch by completing trials. These sections are unforgiving; prepare your defenses.",
+        "**Atlas and endgame:** after the campaign you move to the map system (the Atlas). With waystones you enter areas, cut down tougher enemies and collect better gear.",
+        "**Economy and trade:** the in-game currency system is the basis of item trading. Trading is done only through the game's own mechanism.",
+        "**League system:** when new leagues arrive you start fresh with new characters; the first hours always feel as fresh."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Endgame details change from patch to patch (0.5.0 redesigned the endgame and overhauled Trial of Chaos). So instead of memorizing, it is more accurate to read the current patch notes."
+      }
+     ]
+    },
+    {
+     "id": "esya-ve-ekonomi",
+     "baslik": "Gear, skill links and resource management",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Resistances:** there are four resistance types (fire, cold, lightning, chaos); do not enter a hard area before getting them to a sufficient level.",
+        "**Skill gem logic:** a main skill gem plus support gems forms a link; support gems change how the skill behaves.",
+        "**Spirit:** a resource reserved for permanently active skills and minions; if you turn on too many, Spirit runs out.",
+        "**Weapon commitment:** each class favors a different weapon type (mace, staff, crossbow, bow, spear); choose your weapon to fit your skill.",
+        "**Currency:** the orbs used to strengthen gear are limited; think about what to spend them on."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Simple rule: do not spend currency on something you do not understand. Before trying an irreversible action that can lose an item, a new player should understand what it changes."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Common beginner mistakes",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Entering a hard area without looking at resistances.",
+        "Not using the dodge roll; trying to tank every attack.",
+        "Socketing skill gems at random; not checking that linked gems fit together.",
+        "Spending valuable currency without knowing what it does.",
+        "Dropping a class right away because it looks weak; the problem is often the build or missing gear."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Some actions in the game cannot be undone (item corruption, permanent changes). Do not try an action you are unsure of on your main item."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Account security and a free-to-play warning after 1.0",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Your Path of Exile account carries your items and progress. Do not share your password, account details or verification codes with anyone."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Turn on two-step verification and use a separate password for each service.",
+        "Bots, auto-play software and cheat software break the game rules and lead to a permanent account ban.",
+        "Buying or selling items or currency for real money (RMT) is forbidden; sites selling cheap currency steal accounts.",
+        "During trades do not click links from strangers; fake trade sites are set up to steal your password."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Because the game will be free, fake free-key and free-currency sites may grow in number. No legitimate source asks you for a password; refuse a suspicious offer."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Frequently asked questions",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is Path of Exile 2 free?",
+         "c": "Right now an Early Access key is needed. Free-to-play starts with 1.0 on 11 December 2026."
+        },
+        {
+         "s": "Is the game in Turkish?",
+         "c": "No. Turkish is not listed on Steam; the game is played in English."
+        },
+        {
+         "s": "Can I play on console?",
+         "c": "It comes to PS5 and Xbox Series X|S with 1.0; the current Early Access is on PC."
+        },
+        {
+         "s": "Should I wait for 1.0?",
+         "c": "You do not have to, but Early Access characters are not carried into the 1.0 economy. Read the official announcement before deciding."
+        },
+        {
+         "s": "When do the new classes arrive?",
+         "c": "Duelist and Shadow come with 1.0."
+        },
+        {
+         "s": "Does it run on Steam Deck?",
+         "c": "Yes, the game is marked Verified for Steam Deck."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "fr": {
+   "baslik": "Guide du débutant Path of Exile 2 : accès anticipé avant la 1.0 (2026)",
+   "ozet": "Un guide pour les nouveaux joueurs de Path of Exile 2 : choix de classe, premières heures, logique des résistances et des armes, et ce qu'il faut savoir avant la 1.0 et le free-to-play du 11 décembre 2026.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Jeu de rôle d'action (ARPG, système de builds profond)"
+    },
+    {
+     "ad": "Plateforme",
+     "deger": "PC (Steam, Epic, lanceur autonome), PS5, Xbox Series X|S (avec la 1.0)"
+    },
+    {
+     "ad": "Modèle économique",
+     "deger": "Une clé d'accès anticipé est requise pour l'instant ; free-to-play avec la 1.0 (11 décembre 2026)"
+    },
+    {
+     "ad": "Version actuelle",
+     "deger": "0.5.5 Forbidden Rites (accès anticipé)"
+    },
+    {
+     "ad": "Prise en charge du turc",
+     "deger": "Non ; Steam liste 9 langues, le turc n'en fait pas partie"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "Où en est Path of Exile 2 aujourd'hui ?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Path of Exile 2 est un jeu de rôle d'action sombre créé par Grinding Gear Games. Survivre demande de jouer avec soin : au lieu de simplement abattre les ennemis, on planifie les esquives, le placement et les liens de compétences. C'est un jeu distinct du premier Path of Exile, avec ses propres classes et son histoire."
+      },
+      {
+       "tip": "p",
+       "metin": "Le jeu est toujours en **accès anticipé**. Le patch actuel est la ligue événementielle **0.5.5 Forbidden Rites** (en ligne depuis le 4 septembre 2026). **La sortie complète 1.0 et le free-to-play commencent le 11 décembre 2026** sur PC, PS5 et Xbox Series X|S. La 1.0 apporte les actes 5 et 6 (qui terminent la campagne), les classes Duelist et Shadow, une nouvelle histoire d'endgame, la ligue de défi Conquerors of Wraeclast et de grands changements d'équilibrage. D'après une source secondaire, les personnages de l'accès anticipé passent dans une ligue d'accès anticipé permanente et ne sont pas repris dans l'économie de la 1.0 ; confirmez-le dans l'annonce officielle à l'approche de la 1.0."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si vous comptez attendre le 11 décembre, la logique de base de ce guide (résistances, compétences liées, endgame) restera valable en 1.0. La classe la plus forte change de ligue en ligue ; ne la poursuivez pas."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Avant de commencer : accès, plateforme et configuration",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Pour jouer jusqu'au 11 décembre 2026, il faut une clé d'accès anticipé ou un pack de soutien ; le jeu devient gratuit au lancement de la 1.0. Sur PC, on y joue via Steam, Epic ou le lanceur autonome du jeu ; la prise en charge de la PS5 et de la Xbox Series X|S arrive avec la 1.0. Le jeu est marqué Vérifié sur Steam Deck."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "",
+        "Minimum (source secondaire)",
+        "Recommandé (source secondaire)"
+       ],
+       "satirlar": [
+        [
+         "Processeur",
+         "i7-7700 ou Ryzen 5 2500X",
+         "i5-10500 ou Ryzen 7 3700X"
+        ],
+        [
+         "Mémoire (RAM)",
+         "8 Go",
+         "16 Go"
+        ],
+        [
+         "Carte graphique",
+         "GTX 960 3 Go, RX 470 ou Arc A380",
+         "Classe RTX 2060"
+        ],
+        [
+         "Stockage",
+         "100 Go",
+         "100 Go, SSD conseillé"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Cette configuration vient d'un site secondaire et non de la page officielle ; voyez la page Steam pour les valeurs exactes. **Langue :** Steam liste l'anglais, le français, l'allemand, l'espagnol (Espagne), le japonais, le coréen, le portugais brésilien, le russe et le thaï ; **le turc n'est pas pris en charge**, le jeu se joue donc en anglais. Il faudra apprendre seul les noms d'objets et de compétences en anglais."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Procurez-vous le jeu uniquement sur Steam, Epic ou le site officiel de Path of Exile. Les sites inconnus qui vendent des clés peuvent vendre des codes volés ou invalides."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "Les premières heures : pas à pas",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Au premier coup d'œil, le jeu peut sembler lourd pour un débutant. L'ordre ci-dessous est un chemin simple pour le premier jour."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Choisissez une classe",
+         "metin": "Regardez la section des classes et choisissez ce qui vous plaît. Vous pouvez aussi essayer les premières minutes du jeu pour un court aperçu ; supprimer un personnage est gratuit."
+        },
+        {
+         "baslik": "Jouez la campagne",
+         "metin": "Suivez l'histoire et avancez région par région. La campagne vous donne de l'expérience et des objets tout en vous préparant à l'endgame."
+        },
+        {
+         "baslik": "Sertissez vos gemmes de compétence",
+         "metin": "Les gemmes de compétence se fixent à votre arme et à votre équipement. Vous renforcez chaque compétence principale en y ajoutant des gemmes de soutien."
+        },
+        {
+         "baslik": "Utilisez l'esquive",
+         "metin": "Le jeu a une roulade d'esquive ; éviter les attaques mortelles compte plus que frapper."
+        },
+        {
+         "baslik": "Suivez vos résistances",
+         "metin": "Les résistances au feu, au froid, à la foudre et au chaos sont votre défense la plus importante ; vérifiez-les à chaque changement d'équipement."
+        },
+        {
+         "baslik": "Comparez le nouvel équipement",
+         "metin": "Avant de porter une pièce, comparez-la à la vôtre pour les résistances et les statistiques principales."
+        },
+        {
+         "baslik": "Restez prêt",
+         "metin": "Surveillez votre santé, votre Spirit et votre mana ; quand ils sont épuisés, vous ne pouvez plus utiliser de compétences."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si une zone vous tue sans cesse, ne forcez pas jusqu'à ce qu'elle cède. Il manque quelque chose à votre équipement, à vos résistances ou à votre esquive ; arrêtez-vous et regardez."
+      }
+     ]
+    },
+    {
+     "id": "sinif-secimi",
+     "baslik": "Choix de classe : 8 classes (Duelist et Shadow arrivent avec la 1.0)",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Il y a actuellement huit classes. Chaque classe a deux ou trois branches d'ascendance (ascendancy) ; le premier but est d'aimer une classe, puis de choisir l'ascendance plus tard."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Classe",
+        "Particularité",
+        "Ascendances"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Force, masses, mêlée",
+         "Warbringer, Titan, Smith of Kitava"
+        ],
+        [
+         "Sorceress",
+         "Intelligence, bâtons et sorts",
+         "Stormweaver, Chronomancer, Disciple of Varashta"
+        ],
+        [
+         "Witch",
+         "Intelligence, serviteurs et magie occulte",
+         "Infernalist, Blood Mage, Lich"
+        ],
+        [
+         "Ranger",
+         "Dextérité, arc",
+         "Deadeye, Pathfinder"
+        ],
+        [
+         "Monk",
+         "Dextérité et intelligence, bâton de combat (quarterstaff)",
+         "Invoker, Acolyte of Chayula, Martial Artist"
+        ],
+        [
+         "Mercenary",
+         "Force et dextérité, arbalète",
+         "Witchhunter, Gemling Legionnaire, Tactician"
+        ],
+        [
+         "Huntress",
+         "Dextérité, lance",
+         "Amazon, Ritualist, Spirit Walker"
+        ],
+        [
+         "Druid",
+         "Force et intelligence, métamorphose et nature",
+         "Oracle, Shaman"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Principe pratique pour un nouveau joueur : sur votre premier personnage, choisissez le type d'arme avec lequel vous êtes à l'aise plutôt qu'une classe compliquée. Les classes à distance comme l'arc ou la lance sont souvent plus faciles à apprendre."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme-yolu",
+     "baslik": "Parcours de progression : de la campagne à l'endgame",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Campagne :** avancez acte par acte ; chaque acte se termine par un gros boss. En 1.0, les actes 5 et 6 seront ajoutés, ce qui terminera la campagne.",
+        "**Épreuves d'ascendance :** vous débloquez votre branche d'ascendance en réussissant des épreuves. Ces passages sont impitoyables ; préparez vos défenses.",
+        "**Atlas et endgame :** après la campagne, vous passez au système de cartes (l'Atlas). Avec les waystones, vous entrez dans des zones, abattez des ennemis plus coriaces et récoltez un meilleur équipement.",
+        "**Économie et échange :** le système de monnaie en jeu est la base de l'échange d'objets. L'échange se fait uniquement par le mécanisme propre au jeu.",
+        "**Système de ligues :** à l'arrivée de nouvelles ligues, vous repartez de zéro avec de nouveaux personnages ; les premières heures ont toujours la même fraîcheur."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Les détails de l'endgame changent de patch en patch (la 0.5.0 a refondu l'endgame et remanié Trial of Chaos). Plutôt que de les mémoriser, mieux vaut lire les notes de patch actuelles."
+      }
+     ]
+    },
+    {
+     "id": "esya-ve-ekonomi",
+     "baslik": "Équipement, liens de compétences et gestion des ressources",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Résistances :** il existe quatre types de résistances (feu, froid, foudre, chaos) ; n'entrez pas dans une zone difficile avant de les avoir portées à un niveau suffisant.",
+        "**Logique des gemmes de compétence :** une gemme de compétence principale plus des gemmes de soutien forme un lien ; les gemmes de soutien changent le comportement de la compétence.",
+        "**Spirit :** une ressource réservée aux compétences actives en permanence et aux serviteurs ; si vous en activez trop, le Spirit s'épuise.",
+        "**Engagement d'arme :** chaque classe privilégie un type d'arme différent (masse, bâton, arbalète, arc, lance) ; choisissez votre arme en fonction de votre compétence.",
+        "**Monnaie :** les orbes qui servent à renforcer l'équipement sont limités ; réfléchissez à ce que vous en faites."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Règle simple : ne dépensez pas de monnaie pour quelque chose que vous ne comprenez pas. Avant d'essayer une action irréversible qui peut faire perdre un objet, un nouveau joueur doit comprendre ce qu'elle change."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Erreurs fréquentes des débutants",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Entrer dans une zone difficile sans regarder ses résistances.",
+        "Ne pas utiliser la roulade d'esquive ; essayer d'encaisser chaque attaque.",
+        "Sertir les gemmes de compétence au hasard ; ne pas vérifier que les gemmes liées vont bien ensemble.",
+        "Dépenser de la monnaie précieuse sans savoir à quoi elle sert.",
+        "Abandonner une classe tout de suite parce qu'elle paraît faible ; le problème vient souvent du build ou d'un équipement manquant."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Certaines actions du jeu sont irréversibles (corruption d'objets, changements permanents). N'essayez pas une action dont vous n'êtes pas sûr sur votre objet principal."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Sécurité du compte et avertissement free-to-play après la 1.0",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Votre compte Path of Exile porte vos objets et votre progression. Ne partagez votre mot de passe, vos informations de compte ni vos codes de vérification avec personne."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Activez la validation en deux étapes et utilisez un mot de passe distinct pour chaque service.",
+        "Les bots, logiciels de jeu automatique et logiciels de triche enfreignent les règles du jeu et entraînent un bannissement définitif du compte.",
+        "Acheter ou vendre des objets ou de la monnaie contre de l'argent réel (RMT) est interdit ; les sites qui vendent de la monnaie bon marché volent des comptes.",
+        "Pendant les échanges, ne cliquez pas sur les liens d'inconnus ; les faux sites d'échange sont montés pour voler votre mot de passe."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Le jeu devenant gratuit, les faux sites de clés gratuites et de monnaie gratuite pourraient se multiplier. Aucune source légitime ne vous demande de mot de passe ; refusez toute offre suspecte."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Questions fréquentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Path of Exile 2 est-il gratuit ?",
+         "c": "Pour l'instant, il faut une clé d'accès anticipé. Le free-to-play commence avec la 1.0 le 11 décembre 2026."
+        },
+        {
+         "s": "Le jeu est-il en turc ?",
+         "c": "Non. Le turc n'est pas listé sur Steam ; le jeu se joue en anglais."
+        },
+        {
+         "s": "Puis-je jouer sur console ?",
+         "c": "Il arrive sur PS5 et Xbox Series X|S avec la 1.0 ; l'accès anticipé actuel est sur PC."
+        },
+        {
+         "s": "Dois-je attendre la 1.0 ?",
+         "c": "Ce n'est pas obligatoire, mais les personnages de l'accès anticipé ne sont pas repris dans l'économie de la 1.0. Lisez l'annonce officielle avant de décider."
+        },
+        {
+         "s": "Quand arrivent les nouvelles classes ?",
+         "c": "Duelist et Shadow arrivent avec la 1.0."
+        },
+        {
+         "s": "Cela tourne-t-il sur Steam Deck ?",
+         "c": "Oui, le jeu est marqué Vérifié pour Steam Deck."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "es": {
+   "baslik": "Path of Exile 2: guía para principiantes antes de la 1.0 (2026)",
+   "ozet": "Una guía para jugadores nuevos de Path of Exile 2 con la elección de clase, las primeras horas, la lógica de resistencias y armas, y lo que debes saber antes de la 1.0 y el free-to-play del 11 de diciembre de 2026.",
+   "kunye": [
+    {
+     "ad": "Género",
+     "deger": "Juego de rol de acción (ARPG, sistema de builds profundo)"
+    },
+    {
+     "ad": "Plataforma",
+     "deger": "PC (Steam, Epic, lanzador independiente), PS5, Xbox Series X|S (con la 1.0)"
+    },
+    {
+     "ad": "Modelo de precio",
+     "deger": "Ahora hace falta una clave de acceso anticipado; free-to-play con la 1.0 (11 de diciembre de 2026)"
+    },
+    {
+     "ad": "Versión actual",
+     "deger": "0.5.5 Forbidden Rites (acceso anticipado)"
+    },
+    {
+     "ad": "Soporte en turco",
+     "deger": "No; Steam lista 9 idiomas y el turco no está entre ellos"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "¿Dónde está Path of Exile 2 ahora?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Path of Exile 2 es un juego de rol de acción oscuro creado por Grinding Gear Games. Sobrevivir exige jugar con cuidado: en lugar de limitarte a abatir enemigos, planificas esquivas, posición y enlaces de habilidades. Es un juego distinto del primer Path of Exile, con sus propias clases e historia."
+      },
+      {
+       "tip": "p",
+       "metin": "El juego sigue en **acceso anticipado**. El parche actual es la liga de evento **0.5.5 Forbidden Rites** (activa desde el 4 de septiembre de 2026). **El lanzamiento completo 1.0 y el free-to-play empiezan el 11 de diciembre de 2026** en PC, PS5 y Xbox Series X|S. La 1.0 trae los actos 5 y 6 (que completan la campaña), las clases Duelist y Shadow, una nueva historia de endgame, la liga de desafío Conquerors of Wraeclast y grandes cambios de equilibrio. Según una fuente secundaria, los personajes del acceso anticipado pasan a una liga de acceso anticipado permanente y no se trasladan a la economía de la 1.0; confírmalo en el anuncio oficial cuando se acerque la 1.0."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si piensas esperar al 11 de diciembre, la lógica básica de esta guía (resistencias, habilidades enlazadas, endgame) seguirá valiendo en la 1.0. Qué clase es la más fuerte cambia de liga en liga; no la persigas."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Antes de empezar: acceso, plataforma y requisitos",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Para jugar hasta el 11 de diciembre de 2026 necesitas una clave de acceso anticipado o un paquete de partidario; el juego será gratis al lanzarse la 1.0. En PC se juega con Steam, Epic o el lanzador independiente del propio juego; el soporte de PS5 y Xbox Series X|S llega con la 1.0. El juego está marcado como Verificado en Steam Deck."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "",
+        "Mínimo (fuente secundaria)",
+        "Recomendado (fuente secundaria)"
+       ],
+       "satirlar": [
+        [
+         "Procesador",
+         "i7-7700 o Ryzen 5 2500X",
+         "i5-10500 o Ryzen 7 3700X"
+        ],
+        [
+         "Memoria (RAM)",
+         "8 GB",
+         "16 GB"
+        ],
+        [
+         "Tarjeta gráfica",
+         "GTX 960 3 GB, RX 470 o Arc A380",
+         "Clase RTX 2060"
+        ],
+        [
+         "Almacenamiento",
+         "100 GB",
+         "100 GB, se recomienda SSD"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Estos requisitos vienen de un sitio secundario y no de la página oficial; consulta la página de Steam para los valores exactos. **Idioma:** Steam lista inglés, francés, alemán, español (España), japonés, coreano, portugués de Brasil, ruso y tailandés; **el turco no está soportado**, así que el juego se juega en inglés. Tendrás que aprender por tu cuenta los nombres de objetos y habilidades en inglés."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Consigue el juego solo en Steam, Epic o el sitio oficial de Path of Exile. Los sitios desconocidos que venden claves pueden vender códigos robados o inválidos."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "Las primeras horas: paso a paso",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "A primera vista el juego puede resultar pesado para un principiante. El orden siguiente es un camino sencillo para el primer día."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Elige una clase",
+         "metin": "Mira la sección de clases y elige la que se ajuste a tu gusto. También puedes probar los primeros minutos del juego para una vista previa corta; borrar un personaje es gratis."
+        },
+        {
+         "baslik": "Juega la campaña",
+         "metin": "Sigue la historia y avanza región por región. La campaña te da experiencia y objetos mientras te prepara para el endgame."
+        },
+        {
+         "baslik": "Engarza tus gemas de habilidad",
+         "metin": "Las gemas de habilidad se acoplan a tu arma y a tu equipo. Refuerzas cada habilidad principal añadiéndole gemas de apoyo."
+        },
+        {
+         "baslik": "Usa la esquiva",
+         "metin": "El juego tiene una voltereta de esquiva; evitar los ataques mortales importa más que golpear."
+        },
+        {
+         "baslik": "Controla tus resistencias",
+         "metin": "Las resistencias al fuego, al frío, al rayo y al caos son tu defensa más importante; revísalas cada vez que cambies de equipo."
+        },
+        {
+         "baslik": "Compara el equipo nuevo",
+         "metin": "Antes de ponerte una pieza, compárala con la actual en resistencias y atributos principales."
+        },
+        {
+         "baslik": "Mantente listo",
+         "metin": "Vigila tu salud, tu Spirit y tu maná; cuando se acaban no puedes usar habilidades."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si una zona te mata una y otra vez, no insistas hasta que ceda. Algo falta en tu equipo, tus resistencias o tu esquiva; para y míralo."
+      }
+     ]
+    },
+    {
+     "id": "sinif-secimi",
+     "baslik": "Elección de clase: 8 clases (Duelist y Shadow llegan con la 1.0)",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Ahora mismo hay ocho clases. Cada clase tiene dos o tres ramas de ascendencia (ascendancy); el primer objetivo es que te guste una clase, y elegir la ascendencia después."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Clase",
+        "Rasgo",
+        "Ascendencias"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Fuerza, mazas, cuerpo a cuerpo",
+         "Warbringer, Titan, Smith of Kitava"
+        ],
+        [
+         "Sorceress",
+         "Inteligencia, bastones y hechizos",
+         "Stormweaver, Chronomancer, Disciple of Varashta"
+        ],
+        [
+         "Witch",
+         "Inteligencia, esbirros y magia oculta",
+         "Infernalist, Blood Mage, Lich"
+        ],
+        [
+         "Ranger",
+         "Destreza, arco",
+         "Deadeye, Pathfinder"
+        ],
+        [
+         "Monk",
+         "Destreza e inteligencia, bastón de combate (quarterstaff)",
+         "Invoker, Acolyte of Chayula, Martial Artist"
+        ],
+        [
+         "Mercenary",
+         "Fuerza y destreza, ballesta",
+         "Witchhunter, Gemling Legionnaire, Tactician"
+        ],
+        [
+         "Huntress",
+         "Destreza, lanza",
+         "Amazon, Ritualist, Spirit Walker"
+        ],
+        [
+         "Druid",
+         "Fuerza e inteligencia, cambio de forma y naturaleza",
+         "Oracle, Shaman"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Un principio práctico para un jugador nuevo: en tu primer personaje elige el tipo de arma con el que te sientas cómodo en vez de una clase complicada. Las de distancia como el arco o la lanza suelen ser más fáciles de aprender."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme-yolu",
+     "baslik": "Ruta de progreso: de la campaña al endgame",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Campaña:** avanza acto por acto; cada acto termina con un gran jefe. En la 1.0 se añadirán los actos 5 y 6, completando la campaña.",
+        "**Pruebas de ascendencia:** desbloqueas tu rama de ascendencia superando pruebas. Estas secciones no perdonan; prepara tus defensas.",
+        "**Atlas y endgame:** tras la campaña pasas al sistema de mapas (el Atlas). Con las waystones entras en zonas, abates enemigos más duros y recoges mejor equipo.",
+        "**Economía y comercio:** el sistema de moneda del juego es la base del intercambio de objetos. El comercio se hace solo mediante el mecanismo propio del juego.",
+        "**Sistema de ligas:** cuando llegan ligas nuevas empiezas de cero con personajes nuevos; las primeras horas siempre se sienten igual de frescas."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Los detalles del endgame cambian de parche en parche (la 0.5.0 rediseñó el endgame y renovó Trial of Chaos). Así que, en lugar de memorizar, es más acertado leer las notas del parche actual."
+      }
+     ]
+    },
+    {
+     "id": "esya-ve-ekonomi",
+     "baslik": "Equipo, enlaces de habilidades y gestión de recursos",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Resistencias:** hay cuatro tipos de resistencia (fuego, frío, rayo, caos); no entres en una zona difícil sin llevarlas a un nivel suficiente.",
+        "**Lógica de las gemas de habilidad:** una gema de habilidad principal más gemas de apoyo forman un enlace; las gemas de apoyo cambian cómo se comporta la habilidad.",
+        "**Spirit:** un recurso reservado para habilidades activas de forma permanente y para esbirros; si activas demasiadas, el Spirit se acaba.",
+        "**Compromiso con el arma:** cada clase prefiere un tipo de arma distinto (maza, bastón, ballesta, arco, lanza); elige tu arma según tu habilidad.",
+        "**Moneda:** las orbes que se usan para reforzar el equipo son limitadas; piensa en qué las gastas."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Regla simple: no gastes moneda en algo que no entiendes. Antes de probar una acción irreversible que puede hacer perder un objeto, un jugador nuevo debe entender qué cambia."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Errores comunes de los principiantes",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Entrar en una zona difícil sin mirar las resistencias.",
+        "No usar la voltereta de esquiva; intentar aguantar todos los ataques.",
+        "Engarzar las gemas de habilidad al azar; no comprobar que las gemas enlazadas encajan entre sí.",
+        "Gastar moneda valiosa sin saber para qué sirve.",
+        "Abandonar una clase enseguida porque parece débil; el problema suele ser la build o el equipo que falta."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Algunas acciones del juego no se pueden deshacer (corrupción de objetos, cambios permanentes). No pruebes una acción de la que no estés seguro en tu objeto principal."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Seguridad de la cuenta y aviso de free-to-play tras la 1.0",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Tu cuenta de Path of Exile lleva tus objetos y tu progreso. No compartas tu contraseña, los datos de tu cuenta ni tus códigos de verificación con nadie."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Activa la verificación en dos pasos y usa una contraseña distinta para cada servicio.",
+        "Los bots, programas de juego automático y programas de trampas incumplen las normas del juego y llevan a un bloqueo permanente de la cuenta.",
+        "Comprar o vender objetos o moneda por dinero real (RMT) está prohibido; los sitios que venden moneda barata roban cuentas.",
+        "Durante los intercambios no hagas clic en enlaces de desconocidos; los sitios de comercio falsos se montan para robar tu contraseña."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Como el juego va a ser gratis, los sitios falsos de claves gratis y de moneda gratis pueden aumentar. Ninguna fuente legítima te pide una contraseña; rechaza cualquier oferta sospechosa."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Preguntas frecuentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "¿Path of Exile 2 es gratis?",
+         "c": "Ahora mismo hace falta una clave de acceso anticipado. El free-to-play empieza con la 1.0 el 11 de diciembre de 2026."
+        },
+        {
+         "s": "¿El juego está en turco?",
+         "c": "No. El turco no aparece en Steam; el juego se juega en inglés."
+        },
+        {
+         "s": "¿Puedo jugar en consola?",
+         "c": "Llega a PS5 y Xbox Series X|S con la 1.0; el acceso anticipado actual es en PC."
+        },
+        {
+         "s": "¿Debería esperar a la 1.0?",
+         "c": "No es obligatorio, pero los personajes del acceso anticipado no se trasladan a la economía de la 1.0. Lee el anuncio oficial antes de decidir."
+        },
+        {
+         "s": "¿Cuándo llegan las clases nuevas?",
+         "c": "Duelist y Shadow llegan con la 1.0."
+        },
+        {
+         "s": "¿Funciona en Steam Deck?",
+         "c": "Sí, el juego está marcado como Verificado para Steam Deck."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

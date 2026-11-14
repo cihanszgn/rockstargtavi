@@ -1,5 +1,680 @@
 [
  {
+  "id": "wow-hotfix-2026-11-13",
+  "tarih": "2026-11-13",
+  "oyun": "World of Warcraft",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "url": "https://worldofwarcraft.blizzard.com/news/24315281",
+    "ad": "World of Warcraft (Blizzard)",
+    "tarih": "2026-11-13"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "WoW: Forever hotfix'leri: Stranglethorn Balıkçılık Şöleni ve Action Bar düzeltmesi",
+    "ozet": "Blizzard 13 Kasım 2026 hotfix listesinde haftalık balıkçılık turnuvasını ve Action Bar hatasını ele aldı.",
+    "metin": "Blizzard'ın 13 Kasım 2026 tarihli WoW: Forever hotfix notlarına göre haftalık Stranglethorn Fishing Extravaganza turnuvasında her kural setinde çok daha fazla oyuncu kazanabilecek. Performans üzerindeki çalışmaların sürdüğü belirtildi. İkincil Yetenekler için Action Bar'ın sıfırlanması hatası da düzeltildi.",
+    "etiketler": [
+     "#WoW",
+     "#WoWForever",
+     "#Blizzard"
+    ]
+   },
+   "en": {
+    "baslik": "WoW: Forever hotfixes: Stranglethorn Fishing Extravaganza and an Action Bar fix",
+    "ozet": "Blizzard's November 13, 2026 hotfix list covers the weekly fishing tournament and an Action Bar bug.",
+    "metin": "According to Blizzard's November 13, 2026 WoW: Forever hotfix notes, many more players can now win in each ruleset of the weekly Stranglethorn Fishing Extravaganza tournament. The notes say work on performance continues. A bug that reset the Action Bar for Secondary Talents has also been fixed.",
+    "etiketler": [
+     "#WoW",
+     "#WoWForever",
+     "#Blizzard"
+    ]
+   },
+   "fr": {
+    "baslik": "Correctifs WoW: Forever : Extravaganza de pêche de Strangleronce et barre d'action",
+    "ozet": "La liste de correctifs de Blizzard du 13 novembre 2026 traite le tournoi de pêche hebdomadaire et un bug de barre d'action.",
+    "metin": "D'après les notes de correctifs de WoW: Forever de Blizzard du 13 novembre 2026, beaucoup plus de joueurs peuvent désormais gagner dans chaque ensemble de règles du tournoi hebdomadaire Stranglethorn Fishing Extravaganza. Le travail sur les performances se poursuit, indiquent les notes. Un bug qui réinitialisait la barre d'action pour les talents secondaires a aussi été corrigé.",
+    "etiketler": [
+     "#WoW",
+     "#WoWForever",
+     "#Blizzard"
+    ]
+   },
+   "es": {
+    "baslik": "Hotfixes de WoW: Forever: pesca en Stranglethorn y barra de acción",
+    "ozet": "La lista de hotfixes de Blizzard del 13 de noviembre de 2026 aborda el torneo semanal de pesca y un error de la barra de acción.",
+    "metin": "Según las notas de hotfixes de WoW: Forever de Blizzard del 13 de noviembre de 2026, muchos más jugadores podrán ganar en cada conjunto de reglas del torneo semanal Stranglethorn Fishing Extravaganza. Las notas indican que el trabajo en el rendimiento continúa. También se corrigió un error que reiniciaba la barra de acción de los talentos secundarios.",
+    "etiketler": [
+     "#WoW",
+     "#WoWForever",
+     "#Blizzard"
+    ]
+   }
+  }
+ },
+ {
+  "id": "wow-cost-of-honor",
+  "tarih": "2026-11-13",
+  "oyun": "World of Warcraft",
+  "tur": "haber",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "url": "https://worldofwarcraft.blizzard.com/news/24316096",
+    "ad": "World of Warcraft (Blizzard)",
+    "tarih": "2026-11-13"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Blizzard WoW: Forever kısa hikâyesi \"Cost of Honor\"u yayımladı",
+    "ozet": "Resmî WoW sitesinde \"Cost of Honor\" adlı WoW: Forever kısa hikâyesi izlemeye açıldı.",
+    "metin": "Blizzard, resmî World of Warcraft sitesinde WoW: Forever için \"Cost of Honor\" adlı kısa hikâyeyi izlemeye sundu. Yazı 13 Kasım 2026 tarihli. Hikâyenin ayrıntıları için resmî sayfaya bakılabilir.",
+    "etiketler": [
+     "#WoW",
+     "#WoWForever",
+     "#Blizzard"
+    ]
+   },
+   "en": {
+    "baslik": "Blizzard publishes the WoW: Forever short story \"Cost of Honor\"",
+    "ozet": "The official WoW site now lets you watch the WoW: Forever short story \"Cost of Honor\".",
+    "metin": "Blizzard has made the WoW: Forever short story \"Cost of Honor\" available to watch on the official World of Warcraft site. The post is dated November 13, 2026. The official page has the details of the story.",
+    "etiketler": [
+     "#WoW",
+     "#WoWForever",
+     "#Blizzard"
+    ]
+   },
+   "fr": {
+    "baslik": "Blizzard publie la nouvelle WoW: Forever \"Cost of Honor\"",
+    "ozet": "Le site officiel de WoW propose désormais de regarder la nouvelle WoW: Forever \"Cost of Honor\".",
+    "metin": "Blizzard a mis en ligne sur le site officiel de World of Warcraft la nouvelle de WoW: Forever \"Cost of Honor\". L'article date du 13 novembre 2026. La page officielle donne les détails du récit.",
+    "etiketler": [
+     "#WoW",
+     "#WoWForever",
+     "#Blizzard"
+    ]
+   },
+   "es": {
+    "baslik": "Blizzard publica el relato corto de WoW: Forever \"Cost of Honor\"",
+    "ozet": "El sitio oficial de WoW ya permite ver el relato corto de WoW: Forever \"Cost of Honor\".",
+    "metin": "Blizzard ha puesto a disposición en el sitio oficial de World of Warcraft el relato corto de WoW: Forever \"Cost of Honor\". La publicación es del 13 de noviembre de 2026. La página oficial ofrece los detalles de la historia.",
+    "etiketler": [
+     "#WoW",
+     "#WoWForever",
+     "#Blizzard"
+    ]
+   }
+  }
+ },
+ {
+  "id": "d2r-legacy-of-terror",
+  "tarih": "2026-11-13",
+  "oyun": "Diablo II: Resurrected",
+  "tur": "guncelleme",
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "kaynaklar": [
+   {
+    "url": "https://news.blizzard.com/article/24315743/celebrate-diablos-30th-anniversary-with-legacy-of-terror",
+    "ad": "Blizzard News",
+    "tarih": "2026-11-13"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Diablo II: Resurrected'ta 30. yıl etkinliği Legacy of Terror başladı",
+    "ozet": "Etkinlik 13-19 Kasım 2026 arasında sürüyor ve Season 16 Ladder'ı başlatıyor.",
+    "metin": "Blizzard'a göre Diablo'nun 30. yıldönümü etkinliği Legacy of Terror, 13 Kasım 17:00 PST ile 19 Kasım 17:00 PST arasında Diablo II: Resurrected'ta sürüyor. Season 16 Ladder bu dönemde başlıyor. Etkinlikte Hell zorluğunda her 6 saatte bir garantili Diablo Clone ve Baal sonrasındaki her bölgede Terrorized Zones yer alıyor.",
+    "etiketler": [
+     "#Diablo",
+     "#D2R",
+     "#Blizzard"
+    ]
+   },
+   "en": {
+    "baslik": "Diablo 30th anniversary event Legacy of Terror starts in Diablo II: Resurrected",
+    "ozet": "The event runs from November 13 to 19, 2026 and launches the Season 16 Ladder.",
+    "metin": "According to Blizzard, the Diablo 30th anniversary event Legacy of Terror runs in Diablo II: Resurrected from November 13, 5:00 PM PST to November 19, 5:00 PM PST. The Season 16 Ladder launches during this window. The event brings a guaranteed Diablo Clone every 6 hours in Hell difficulty and Terrorized Zones in every zone after Baal.",
+    "etiketler": [
+     "#Diablo",
+     "#D2R",
+     "#Blizzard"
+    ]
+   },
+   "fr": {
+    "baslik": "Diablo II: Resurrected : l'événement Legacy of Terror démarre",
+    "ozet": "L'événement dure du 13 au 19 novembre 2026 et lance la Season 16 Ladder.",
+    "metin": "Selon Blizzard, l'événement du 30e anniversaire de Diablo, Legacy of Terror, se déroule dans Diablo II: Resurrected du 13 novembre à 17 h PST au 19 novembre à 17 h PST. La Season 16 Ladder démarre pendant cette période. L'événement apporte un Diablo Clone garanti toutes les 6 heures en difficulté Enfer et des Terrorized Zones dans chaque zone après Baal.",
+    "etiketler": [
+     "#Diablo",
+     "#D2R",
+     "#Blizzard"
+    ]
+   },
+   "es": {
+    "baslik": "Diablo II: Resurrected: empieza el evento Legacy of Terror",
+    "ozet": "El evento dura del 13 al 19 de noviembre de 2026 y estrena la Season 16 Ladder.",
+    "metin": "Según Blizzard, el evento del 30.º aniversario de Diablo, Legacy of Terror, se celebra en Diablo II: Resurrected desde el 13 de noviembre a las 17:00 PST hasta el 19 de noviembre a las 17:00 PST. La Season 16 Ladder arranca en ese periodo. El evento incluye un Diablo Clone garantizado cada 6 horas en dificultad Infierno y Terrorized Zones en todas las zonas posteriores a Baal.",
+    "etiketler": [
+     "#Diablo",
+     "#D2R",
+     "#Blizzard"
+    ]
+   }
+  }
+ },
+ {
+  "id": "ko-yeni-sunucu-2026-11-12",
+  "tarih": "2026-11-12",
+  "oyun": "Knight Online",
+  "tur": "haber",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "url": "https://www.nttgame.com/knight/tr/news/views/1/4249",
+    "ad": "Knight Online (NTTGame)",
+    "tarih": "2026-11-12"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Knight Online'da yeni sunucular 12 Kasım'da açıldı",
+    "ozet": "NTTGame, yeni sunucuların 12 Kasım 2026 saat 16:00'da açıldığını duyurdu.",
+    "metin": "NTTGame'in resmî Knight Online duyurusuna göre yeni sunucular 12 Kasım 2026 saat 16:00'da açıldı. Duyuruda kanal, kamp ve etkinlik dağılımı bir tablo olarak veriliyor; tabloda Chaos, Border Defense War, Forgotten Temple, Lunar War ve Ronark Land etkinlikleri yer alıyor.",
+    "etiketler": [
+     "#KnightOnline",
+     "#NTTGame"
+    ]
+   },
+   "en": {
+    "baslik": "New Knight Online servers opened on November 12",
+    "ozet": "NTTGame announced that new servers opened on November 12, 2026 at 16:00.",
+    "metin": "According to NTTGame's official Knight Online announcement, new servers opened on November 12, 2026 at 16:00. The announcement gives the channel, camp and event distribution as a table, which lists the Chaos, Border Defense War, Forgotten Temple, Lunar War and Ronark Land events.",
+    "etiketler": [
+     "#KnightOnline",
+     "#NTTGame"
+    ]
+   },
+   "fr": {
+    "baslik": "De nouveaux serveurs Knight Online ont ouvert le 12 novembre",
+    "ozet": "NTTGame a annoncé l'ouverture de nouveaux serveurs le 12 novembre 2026 à 16 h 00.",
+    "metin": "Selon l'annonce officielle de NTTGame pour Knight Online, de nouveaux serveurs ont ouvert le 12 novembre 2026 à 16 h 00. L'annonce présente la répartition des canaux, camps et événements sous forme de tableau, qui mentionne les événements Chaos, Border Defense War, Forgotten Temple, Lunar War et Ronark Land.",
+    "etiketler": [
+     "#KnightOnline",
+     "#NTTGame"
+    ]
+   },
+   "es": {
+    "baslik": "Nuevos servidores de Knight Online abrieron el 12 de noviembre",
+    "ozet": "NTTGame anunció que los nuevos servidores abrieron el 12 de noviembre de 2026 a las 16:00.",
+    "metin": "Según el anuncio oficial de NTTGame para Knight Online, los nuevos servidores abrieron el 12 de noviembre de 2026 a las 16:00. El anuncio ofrece el reparto de canales, campamentos y eventos en una tabla, que menciona los eventos Chaos, Border Defense War, Forgotten Temple, Lunar War y Ronark Land.",
+    "etiketler": [
+     "#KnightOnline",
+     "#NTTGame"
+    ]
+   }
+  }
+ },
+ {
+  "id": "ko-guncelleme-2026-11-12",
+  "tarih": "2026-11-12",
+  "oyun": "Knight Online",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "url": "https://www.nttgame.com/knight/tr/news/views/2/4247",
+    "ad": "Knight Online (NTTGame)",
+    "tarih": "2026-11-12"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Knight Online güncellemesi: Event Manager NPC ürünleri ve sona eren etkinlikler",
+    "ozet": "12 Kasım 2026 güncelleme duyurusu Event Manager NPC'sini ve sona eren etkinlikleri kapsıyor.",
+    "metin": "NTTGame'in 12 Kasım 2026 tarihli Knight Online güncelleme duyurusu Event Manager NPC'sindeki ürünleri ele alıyor. Duyuruya göre Knight Marble, Manes' Arena, Pathos Gloves varlık satışı etkinliği ve Cadılar Bayramı etkinliği sona erdi.",
+    "etiketler": [
+     "#KnightOnline",
+     "#NTTGame"
+    ]
+   },
+   "en": {
+    "baslik": "Knight Online update: Event Manager NPC items and ended events",
+    "ozet": "The November 12, 2026 update notice covers the Event Manager NPC and events that have ended.",
+    "metin": "NTTGame's November 12, 2026 Knight Online update notice covers the items on the Event Manager NPC. According to the notice, the Knight Marble, Manes' Arena, the Pathos Gloves asset sale event and the Halloween event have ended.",
+    "etiketler": [
+     "#KnightOnline",
+     "#NTTGame"
+    ]
+   },
+   "fr": {
+    "baslik": "Mise à jour de Knight Online : objets du PNJ Event Manager et événements terminés",
+    "ozet": "L'avis de mise à jour du 12 novembre 2026 concerne le PNJ Event Manager et les événements terminés.",
+    "metin": "L'avis de mise à jour de Knight Online de NTTGame du 12 novembre 2026 traite des objets du PNJ Event Manager. Selon l'avis, le Knight Marble, la Manes' Arena, l'événement de vente d'objets Pathos Gloves et l'événement d'Halloween sont terminés.",
+    "etiketler": [
+     "#KnightOnline",
+     "#NTTGame"
+    ]
+   },
+   "es": {
+    "baslik": "Actualización de Knight Online: objetos del PNJ Event Manager y eventos terminados",
+    "ozet": "El aviso de actualización del 12 de noviembre de 2026 abarca el PNJ Event Manager y los eventos finalizados.",
+    "metin": "El aviso de actualización de Knight Online de NTTGame del 12 de noviembre de 2026 trata los objetos del PNJ Event Manager. Según el aviso, el Knight Marble, la Manes' Arena, el evento de venta de objetos Pathos Gloves y el evento de Halloween han terminado.",
+    "etiketler": [
+     "#KnightOnline",
+     "#NTTGame"
+    ]
+   }
+  }
+ },
+ {
+  "id": "fortnite-v43-10-2026-11-12",
+  "tarih": "2026-11-12",
+  "oyun": "Fortnite",
+  "tur": "guncelleme",
+  "kaynaklar": [
+   {
+    "url": "https://communities.epicgames.com/thread/v43-10-fortnite-treasure-hunters-update-notes/CoOG",
+    "ad": "Epic Games Communities",
+    "tarih": "2026-11-12"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Fortnite v43.10 Treasure Hunters güncellemesi çıktı",
+    "ozet": "Güncelleme Dolap ızgara yoğunluğu düğmesi, PC için Yüksek Kaliteli Varlıklar seçeneği ve yeni Sprite'lar getiriyor.",
+    "metin": "Epic Games'in v43.10 Treasure Hunters güncelleme notlarına göre Dolap ızgarası için yoğunluk düğmesi eklendi ve Epic başlatıcısında PC için Yüksek Kaliteli Varlıklar seçeneği geldi. Yeni Sprite'lar ve Buggy Captain's Day 12 Kasım'da, Mini Miku ile Squiplash 15 Kasım'da, Captain's Day Miku ve Teto da 15 Kasım'da geliyor. Cursed Sprite'lar 14 Kasım'da güçlendirilecek.",
+    "etiketler": [
+     "#Fortnite",
+     "#EpicGames"
+    ]
+   },
+   "en": {
+    "baslik": "Fortnite v43.10 Treasure Hunters update is out",
+    "ozet": "The update adds a Locker grid density button, a High Quality Assets option for PC and new Sprites.",
+    "metin": "According to Epic Games' v43.10 Treasure Hunters update notes, a density button for the Locker grid was added, along with a High Quality Assets option for PC in the Epic launcher. New Sprites and the Buggy Captain's Day arrive on November 12, Mini Miku and Squiplash on November 15, and Captain's Day Miku and Teto also on November 15. Cursed Sprites are boosted on November 14.",
+    "etiketler": [
+     "#Fortnite",
+     "#EpicGames"
+    ]
+   },
+   "fr": {
+    "baslik": "La mise à jour Fortnite v43.10 Treasure Hunters est disponible",
+    "ozet": "Elle ajoute un bouton de densité de la grille du Casier, une option Ressources haute qualité sur PC et de nouveaux Sprites.",
+    "metin": "Selon les notes de la mise à jour v43.10 Treasure Hunters d'Epic Games, un bouton de densité pour la grille du Casier a été ajouté, ainsi qu'une option Ressources haute qualité sur PC dans le lanceur Epic. De nouveaux Sprites et le Buggy Captain's Day arrivent le 12 novembre, Mini Miku et Squiplash le 15 novembre, et Captain's Day Miku et Teto également le 15 novembre. Les Cursed Sprites sont renforcés le 14 novembre.",
+    "etiketler": [
+     "#Fortnite",
+     "#EpicGames"
+    ]
+   },
+   "es": {
+    "baslik": "Ya está disponible la actualización v43.10 Treasure Hunters de Fortnite",
+    "ozet": "Añade un botón de densidad de la cuadrícula del Casillero, una opción de Recursos de alta calidad para PC y nuevos Sprites.",
+    "metin": "Según las notas de la actualización v43.10 Treasure Hunters de Epic Games, se añadió un botón de densidad para la cuadrícula del Casillero y una opción de Recursos de alta calidad para PC en el lanzador de Epic. Los nuevos Sprites y el Buggy Captain's Day llegan el 12 de noviembre, Mini Miku y Squiplash el 15 de noviembre, y Captain's Day Miku y Teto también el 15 de noviembre. Los Cursed Sprites se refuerzan el 14 de noviembre.",
+    "etiketler": [
+     "#Fortnite",
+     "#EpicGames"
+    ]
+   }
+  }
+ },
+ {
+  "id": "valorant-patch-13-10",
+  "tarih": "2026-11-10",
+  "oyun": "VALORANT",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "url": "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-13-10/",
+    "ad": "VALORANT (Riot Games)",
+    "tarih": "2026-11-10"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "VALORANT Patch 13.10: tekrar izlemede yer imi, yeni asist kuralları, Gauntlet: Glitched",
+    "ozet": "Yama 13.10 tekrar izlemeye yer imi, asist kurallarında değişiklik ve Gauntlet: Glitched güncellemeleri getiriyor.",
+    "metin": "Riot Games'in 13.10 yama notlarına göre tekrar izlemelerde yer imi eklenebiliyor. Hasar asisti, takım arkadaşının öldürmesinden önceki 3 saniyede 10'dan fazla hasar vermeyi gerektiriyor; iyileştirme asisti ise yalnızca iyileştirilen oyuncu 10 saniye içinde öldürme yaparsa sayılıyor. Gauntlet: Glitched modunda Cypher, Skye ve Hush güncellemeleri var.",
+    "etiketler": [
+     "#VALORANT",
+     "#RiotGames"
+    ]
+   },
+   "en": {
+    "baslik": "VALORANT Patch 13.10: replay bookmarks, new assist rules, Gauntlet: Glitched",
+    "ozet": "Patch 13.10 brings replay bookmarking, changes to assist rules and Gauntlet: Glitched updates.",
+    "metin": "According to Riot Games' 13.10 patch notes, replays can now be bookmarked. A damage assist requires dealing more than 10 damage within 3 seconds of a teammate's kill, while a healing assist only counts if the healed player gets a kill within 10 seconds. Gauntlet: Glitched gets updates for Cypher, Skye and Hush.",
+    "etiketler": [
+     "#VALORANT",
+     "#RiotGames"
+    ]
+   },
+   "fr": {
+    "baslik": "VALORANT 13.10 : marque-pages de replay, assistances, Gauntlet: Glitched",
+    "ozet": "Le patch 13.10 apporte les marque-pages de replay, des changements aux règles d'assistance et des mises à jour de Gauntlet: Glitched.",
+    "metin": "Selon les notes du patch 13.10 de Riot Games, il est désormais possible de placer des marque-pages dans les replays. Une assistance de dégâts exige d'infliger plus de 10 dégâts dans les 3 secondes précédant l'élimination d'un coéquipier, tandis qu'une assistance de soin ne compte que si le joueur soigné réalise une élimination dans les 10 secondes. Gauntlet: Glitched reçoit des mises à jour pour Cypher, Skye et Hush.",
+    "etiketler": [
+     "#VALORANT",
+     "#RiotGames"
+    ]
+   },
+   "es": {
+    "baslik": "VALORANT 13.10: marcadores en repeticiones, asistencias y Gauntlet: Glitched",
+    "ozet": "El parche 13.10 trae marcadores en las repeticiones, cambios en las reglas de asistencias y novedades de Gauntlet: Glitched.",
+    "metin": "Según las notas del parche 13.10 de Riot Games, ahora se pueden poner marcadores en las repeticiones. Una asistencia de daño exige infligir más de 10 de daño en los 3 segundos previos a la baja de un compañero, mientras que una asistencia de curación solo cuenta si el jugador curado consigue una baja en 10 segundos. Gauntlet: Glitched recibe cambios para Cypher, Skye y Hush.",
+    "etiketler": [
+     "#VALORANT",
+     "#RiotGames"
+    ]
+   }
+  }
+ },
+ {
+  "id": "minecraft-26-4-snapshot-8",
+  "tarih": "2026-11-10",
+  "oyun": "Minecraft",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "url": "https://www.minecraft.net/en-us/article/minecraft-26-4-snapshot-8",
+    "ad": "Minecraft.net",
+    "tarih": "2026-11-10"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Minecraft 26.4 Snapshot 8: Ender Dragon uçuş düzeltmesi ve yeni diller",
+    "ozet": "Snapshot 8 Ender Dragon uçuşunu düzeltiyor, Cava dili ve Chavacano desteği ile kar ayarları ekliyor.",
+    "metin": "Minecraft.net'te yayımlanan 26.4 Snapshot 8, Ender Dragon'un uçuşuyla ilgili bir hatayı düzeltiyor. Javanese (Cava dili) ve Chavacano dil desteği ile kar üzerinde bazı ayarlamalar da geliyor. Ölümsüz yaratıklar artık Donma etkisine bağışık.",
+    "etiketler": [
+     "#Minecraft",
+     "#Mojang"
+    ]
+   },
+   "en": {
+    "baslik": "Minecraft 26.4 Snapshot 8: Ender Dragon flight fix and new languages",
+    "ozet": "Snapshot 8 fixes Ender Dragon flight and adds Javanese and Chavacano support plus snow tweaks.",
+    "metin": "Minecraft 26.4 Snapshot 8, published on Minecraft.net, fixes a bug with Ender Dragon flight. It also adds Javanese and Chavacano language support and some tweaks to snow. Undead mobs are now immune to Freezing.",
+    "etiketler": [
+     "#Minecraft",
+     "#Mojang"
+    ]
+   },
+   "fr": {
+    "baslik": "Minecraft 26.4 Snapshot 8 : correctif du vol de l'Ender Dragon et nouvelles langues",
+    "ozet": "La Snapshot 8 corrige le vol de l'Ender Dragon et ajoute le javanais, le chavacano et des ajustements de neige.",
+    "metin": "La Snapshot 26.4 Snapshot 8 de Minecraft, publiée sur Minecraft.net, corrige un bug lié au vol de l'Ender Dragon. Elle ajoute aussi la prise en charge du javanais et du chavacano ainsi que quelques ajustements de la neige. Les monstres morts-vivants sont désormais immunisés contre le gel.",
+    "etiketler": [
+     "#Minecraft",
+     "#Mojang"
+    ]
+   },
+   "es": {
+    "baslik": "Minecraft 26.4 Snapshot 8: arreglo del vuelo del Ender Dragon y nuevos idiomas",
+    "ozet": "La Snapshot 8 corrige el vuelo del Ender Dragon y añade javanés, chavacano y ajustes de la nieve.",
+    "metin": "La Minecraft 26.4 Snapshot 8, publicada en Minecraft.net, corrige un error del vuelo del Ender Dragon. También añade compatibilidad con los idiomas javanés y chavacano y algunos ajustes de la nieve. Los mobs no-muertos ahora son inmunes a la congelación.",
+    "etiketler": [
+     "#Minecraft",
+     "#Mojang"
+    ]
+   }
+  }
+ },
+ {
+  "id": "wow-forever-weekly-2026-11-06",
+  "tarih": "2026-11-06",
+  "oyun": "World of Warcraft",
+  "tur": "haber",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "url": "https://worldofwarcraft.blizzard.com/news/24316097",
+    "ad": "World of Warcraft (Blizzard)",
+    "tarih": "2026-11-06"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "WoW: Forever yayında: Discord, oyun kolu desteği ve Taldramir önizlemesi",
+    "ozet": "Blizzard'ın 6 Kasım 2026 haftalık yazısı WoW: Forever'ın yayında olduğunu duyurdu.",
+    "metin": "Blizzard'ın 6 Kasım 2026 tarihli haftalık yazısı WoW: Forever'ın artık yayında olduğunu duyuruyor. Yazıda Discord ile bağlantıda kalma, oyun kolu desteği ve Taldramir önizlemesi öne çıkıyor. Ayrıntılar resmî World of Warcraft sitesinde.",
+    "etiketler": [
+     "#WoW",
+     "#WoWForever",
+     "#Blizzard"
+    ]
+   },
+   "en": {
+    "baslik": "WoW: Forever is live: Discord, gamepad support and a Taldramir preview",
+    "ozet": "Blizzard's November 6, 2026 weekly post announces that WoW: Forever is now live.",
+    "metin": "Blizzard's weekly post of November 6, 2026 announces that WoW: Forever is now live. The post highlights staying connected with Discord, gamepad support and a Taldramir preview. Details are on the official World of Warcraft site.",
+    "etiketler": [
+     "#WoW",
+     "#WoWForever",
+     "#Blizzard"
+    ]
+   },
+   "fr": {
+    "baslik": "WoW: Forever est disponible : Discord, manette et aperçu de Taldramir",
+    "ozet": "Le point hebdomadaire de Blizzard du 6 novembre 2026 annonce que WoW: Forever est désormais disponible.",
+    "metin": "Le point hebdomadaire de Blizzard du 6 novembre 2026 annonce que WoW: Forever est désormais disponible. L'article met en avant la connexion avec Discord, la prise en charge de la manette et un aperçu de Taldramir. Les détails figurent sur le site officiel de World of Warcraft.",
+    "etiketler": [
+     "#WoW",
+     "#WoWForever",
+     "#Blizzard"
+    ]
+   },
+   "es": {
+    "baslik": "WoW: Forever ya está disponible: Discord, mando y un adelanto de Taldramir",
+    "ozet": "El resumen semanal de Blizzard del 6 de noviembre de 2026 anuncia que WoW: Forever ya está disponible.",
+    "metin": "El resumen semanal de Blizzard del 6 de noviembre de 2026 anuncia que WoW: Forever ya está disponible. La publicación destaca la conexión con Discord, la compatibilidad con mandos y un adelanto de Taldramir. Los detalles están en el sitio oficial de World of Warcraft.",
+    "etiketler": [
+     "#WoW",
+     "#WoWForever",
+     "#Blizzard"
+    ]
+   }
+  }
+ },
+ {
+  "id": "poe2-exilecon-2026-11-06",
+  "tarih": "2026-11-06",
+  "oyun": "Path of Exile 2",
+  "tur": "haber",
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "kaynaklar": [
+   {
+    "url": "https://www.pathofexile.com/forum/view-thread/4012710",
+    "ad": "Path of Exile Forum (GGG)",
+    "tarih": "2026-11-06"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Path of Exile 2 11 Aralık'ta ücretsiz oynanabilir oluyor",
+    "ozet": "ExileCon 2026 duyurusuna göre Act 5 ve 6, Shadow ve Duelist sınıfları ile yeni lig de geliyor.",
+    "metin": "Grinding Gear Games'in ExileCon 2026 duyurularına göre Path of Exile 2, 11 Aralık'ta (PST) ücretsiz oynanabilir hale geliyor. Aynı güncellemede Act 5 ve 6, Shadow ve Duelist sınıfları ile \"Conquerors of Wraeclast\" ligi yer alıyor.",
+    "etiketler": [
+     "#PathOfExile2",
+     "#PoE2",
+     "#ExileCon"
+    ]
+   },
+   "en": {
+    "baslik": "Path of Exile 2 becomes free-to-play on December 11",
+    "ozet": "According to the ExileCon 2026 announcements, Acts 5 and 6, the Shadow and Duelist classes and a new league arrive too.",
+    "metin": "According to Grinding Gear Games' ExileCon 2026 announcements, Path of Exile 2 becomes free-to-play on December 11 (PST). The same update brings Acts 5 and 6, the Shadow and Duelist classes and the \"Conquerors of Wraeclast\" league.",
+    "etiketler": [
+     "#PathOfExile2",
+     "#PoE2",
+     "#ExileCon"
+    ]
+   },
+   "fr": {
+    "baslik": "Path of Exile 2 devient gratuit le 11 décembre",
+    "ozet": "Selon les annonces d'ExileCon 2026, les actes 5 et 6, les classes Shadow et Duelist et une nouvelle ligue arrivent aussi.",
+    "metin": "D'après les annonces d'ExileCon 2026 de Grinding Gear Games, Path of Exile 2 devient gratuit le 11 décembre (PST). La même mise à jour apporte les actes 5 et 6, les classes Shadow et Duelist et la ligue \"Conquerors of Wraeclast\".",
+    "etiketler": [
+     "#PathOfExile2",
+     "#PoE2",
+     "#ExileCon"
+    ]
+   },
+   "es": {
+    "baslik": "Path of Exile 2 será gratuito el 11 de diciembre",
+    "ozet": "Según los anuncios de ExileCon 2026, también llegan los actos 5 y 6, las clases Shadow y Duelist y una nueva liga.",
+    "metin": "Según los anuncios de ExileCon 2026 de Grinding Gear Games, Path of Exile 2 pasa a ser gratuito el 11 de diciembre (PST). La misma actualización trae los actos 5 y 6, las clases Shadow y Duelist y la liga \"Conquerors of Wraeclast\".",
+    "etiketler": [
+     "#PathOfExile2",
+     "#PoE2",
+     "#ExileCon"
+    ]
+   }
+  }
+ },
+ {
+  "id": "lol-patch-26-22",
+  "tarih": "2026-11-04",
+  "oyun": "League of Legends",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "url": "https://www.leagueoflegends.com/en-us/news/game-updates/league-of-legends-patch-26-22-notes",
+    "ad": "League of Legends (Riot Games)",
+    "tarih": "2026-11-03"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "League of Legends 26.22: K/DA kostümleri, Mel güncellemesi ve dengeleme",
+    "ozet": "Yama 26.22 K/DA kostümleri, Mel'in oynanış güncellemesi ve ARAM Mayhem değişiklikleri getiriyor.",
+    "metin": "Riot Games'in 26.22 yama notlarına göre K/DA kostümleri ve Mel için bir oynanış güncellemesi geliyor; ARAM Mayhem'de de değişiklikler var. Summoner's Rift dengelemesinde Corki ve Rumble güçlendirilirken Locke ve Yasuo zayıflatılıyor; Doran's Bow ve Gluttonous Greaves da ayarlanıyor.",
+    "etiketler": [
+     "#LeagueOfLegends",
+     "#LoL",
+     "#RiotGames"
+    ]
+   },
+   "en": {
+    "baslik": "League of Legends 26.22: K/DA skins, a Mel update and balance changes",
+    "ozet": "Patch 26.22 brings K/DA skins, a Mel gameplay update and ARAM Mayhem changes.",
+    "metin": "According to Riot Games' 26.22 patch notes, K/DA skins and a gameplay update for Mel arrive, along with changes to ARAM Mayhem. In Summoner's Rift balance, Corki and Rumble are buffed while Locke and Yasuo are nerfed; Doran's Bow and Gluttonous Greaves are also adjusted.",
+    "etiketler": [
+     "#LeagueOfLegends",
+     "#LoL",
+     "#RiotGames"
+    ]
+   },
+   "fr": {
+    "baslik": "League of Legends 26.22 : skins K/DA, mise à jour de Mel et équilibrage",
+    "ozet": "Le patch 26.22 apporte des skins K/DA, une mise à jour de Mel et des changements pour ARAM Mayhem.",
+    "metin": "Selon les notes du patch 26.22 de Riot Games, des skins K/DA et une mise à jour de gameplay pour Mel arrivent, ainsi que des changements pour ARAM Mayhem. Côté équilibrage de la Faille de l'invocateur, Corki et Rumble sont renforcés tandis que Locke et Yasuo sont affaiblis ; l'Arc de Doran et les Jambières gloutonnes sont aussi ajustés.",
+    "etiketler": [
+     "#LeagueOfLegends",
+     "#LoL",
+     "#RiotGames"
+    ]
+   },
+   "es": {
+    "baslik": "League of Legends 26.22: aspectos K/DA, actualización de Mel y equilibrio",
+    "ozet": "El parche 26.22 trae aspectos K/DA, una actualización de Mel y cambios en ARAM Mayhem.",
+    "metin": "Según las notas del parche 26.22 de Riot Games, llegan aspectos K/DA y una actualización de jugabilidad de Mel, además de cambios en ARAM Mayhem. En el equilibrio de la Grieta del Invocador, Corki y Rumble reciben mejoras mientras que Locke y Yasuo reciben nerfeos; también se ajustan el Arco de Doran y las Grebas glotonas.",
+    "etiketler": [
+     "#LeagueOfLegends",
+     "#LoL",
+     "#RiotGames"
+    ]
+   }
+  }
+ },
+ {
+  "id": "pubg-update-44-1",
+  "tarih": "2026-11-04",
+  "oyun": "PUBG: BATTLEGROUNDS",
+  "tur": "guncelleme",
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "kaynaklar": [
+   {
+    "url": "https://www.pubg.com/en/news/11338",
+    "ad": "PUBG: BATTLEGROUNDS",
+    "tarih": "2026-11-03"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "PUBG 44.1 güncellemesi: PUBG x IVE iş birliği ve Rondo haritası değişiklikleri",
+    "ozet": "Güncelleme 44.1 PC'de 4 Kasım'da, konsolda 12 Kasım'da yayında; PUBG x IVE iş birliği geliyor.",
+    "metin": "PUBG: BATTLEGROUNDS 44.1 yama notlarına göre PC bakımı 4 Kasım'da 00:00-08:30 UTC, konsol bakımı 12 Kasım'da 01:00-09:00 UTC arasında. Güncelleme Rondo'da PUBG x IVE iş birliğini, Xeno Point: Hell'i ve \"HLB: Dawnbreakers of Rondo\"yu getiriyor. Araç dayanıklılığında ayarlamalar ve PGC 2026 harita temaları da yer alıyor.",
+    "etiketler": [
+     "#PUBG",
+     "#KRAFTON"
+    ]
+   },
+   "en": {
+    "baslik": "PUBG update 44.1: PUBG x IVE collaboration and Rondo map changes",
+    "ozet": "Update 44.1 goes live on PC on November 4 and on console on November 12, with the PUBG x IVE collaboration.",
+    "metin": "According to the PUBG: BATTLEGROUNDS 44.1 patch notes, PC maintenance runs on November 4 from 00:00 to 08:30 UTC and console maintenance on November 12 from 01:00 to 09:00 UTC. The update brings the PUBG x IVE collaboration on Rondo, Xeno Point: Hell and \"HLB: Dawnbreakers of Rondo\". Vehicle durability adjustments and PGC 2026 map themes are also included.",
+    "etiketler": [
+     "#PUBG",
+     "#KRAFTON"
+    ]
+   },
+   "fr": {
+    "baslik": "Mise à jour PUBG 44.1 : collaboration PUBG x IVE et changements sur la carte Rondo",
+    "ozet": "La mise à jour 44.1 est disponible sur PC le 4 novembre et sur console le 12 novembre, avec la collaboration PUBG x IVE.",
+    "metin": "D'après les notes du patch 44.1 de PUBG: BATTLEGROUNDS, la maintenance PC a lieu le 4 novembre de 00 h 00 à 08 h 30 UTC et la maintenance console le 12 novembre de 01 h 00 à 09 h 00 UTC. La mise à jour apporte la collaboration PUBG x IVE sur Rondo, Xeno Point: Hell et \"HLB: Dawnbreakers of Rondo\". Des ajustements de la durabilité des véhicules et des thèmes de cartes PGC 2026 sont aussi inclus.",
+    "etiketler": [
+     "#PUBG",
+     "#KRAFTON"
+    ]
+   },
+   "es": {
+    "baslik": "Actualización 44.1 de PUBG: colaboración PUBG x IVE y cambios en el mapa Rondo",
+    "ozet": "La actualización 44.1 llega a PC el 4 de noviembre y a consola el 12 de noviembre, con la colaboración PUBG x IVE.",
+    "metin": "Según las notas del parche 44.1 de PUBG: BATTLEGROUNDS, el mantenimiento de PC es el 4 de noviembre de 00:00 a 08:30 UTC y el de consola el 12 de noviembre de 01:00 a 09:00 UTC. La actualización trae la colaboración PUBG x IVE en Rondo, Xeno Point: Hell y \"HLB: Dawnbreakers of Rondo\". También incluye ajustes de la durabilidad de los vehículos y temas de mapas de PGC 2026.",
+    "etiketler": [
+     "#PUBG",
+     "#KRAFTON"
+    ]
+   }
+  }
+ },
+ {
   "id": "gta6-xbox-bonus",
   "tarih": "2026-11-13",
   "oyun": "GTA VI",

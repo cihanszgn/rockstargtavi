@@ -1,0 +1,1469 @@
+{
+ "oyun": "metin2",
+ "guncelleme": "2026-11-14",
+ "surum": "Yohara Güçlendirme sunucusu 13 Kasım 2026 - 24 Şubat 2027; güncel yama için wiki",
+ "kaynaklar": [
+  {
+   "url": "https://board.tr.metin2.gameforge.com/",
+   "ad": "Metin2 TR resmî forum (Gameforge)"
+  },
+  {
+   "url": "https://tr-wiki.metin2.gameforge.com/index.php/Türkiye_Sunucuları",
+   "ad": "Metin2 TR Wiki: Türkiye sunucuları"
+  },
+  {
+   "url": "https://metin2.support.gameforge.com/",
+   "ad": "Gameforge Metin2 destek merkezi"
+  },
+  {
+   "url": "https://play.metin2.gameforge.com/",
+   "ad": "Metin2 oyna (Gameforge)"
+  }
+ ],
+ "diller": {
+  "tr": {
+   "baslik": "Metin2 Başlangıç Rehberi: Resmî Sunucular 2026",
+   "ozet": "Gameforge'un resmî Türkiye Metin2 sunucularına başlayan ya da dönen oyuncu için sunucu seçimi, Yohara Güçlendirme sunucusu, sınıflar, seviye atlama, Yang ekonomisi ve güvenlik.",
+   "kunye": [
+    {
+     "ad": "Tür",
+     "deger": "MMORPG (çevrimiçi rol yapma oyunu)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Windows (Gameforge istemcisi); tarayıcıdan başlatma sayfası var"
+    },
+    {
+     "ad": "Fiyat modeli",
+     "deger": "Çoğu sunucu ücretsiz; bazı sunucular ücretli kademeli, oyun içi mağaza var"
+    },
+    {
+     "ad": "Güncel sürüm",
+     "deger": "Son yama için resmî wiki ve foruma bakın; Yohara Güçlendirme sunucusu 13 Kasım 2026'da açıldı"
+    },
+    {
+     "ad": "Türkçe desteği",
+     "deger": "Oyunun Türkiye sürümü Türkçe yayımlanıyor"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "Oyun 2026'da nerede duruyor?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Metin2, Gameforge'un yayımladığı eski ve sevilen bir Kore işi çevrimiçi rol yapma oyunudur. Türkiye'de resmî forum, wiki ve destek (ticket) sistemi Gameforge'a aittir. Oyunda beş sınıf, üç krallık ve 120. seviyeden sonra **Şampiyon seviyeleri** bulunur."
+      },
+      {
+       "tip": "p",
+       "metin": "Şimdiki en büyük haber **Yohara Güçlendirme** sunucularıdır. Gameforge bu geçici sunucuları **13 Kasım 2026 saat 10.00 (CET)** ile **24 Şubat 2027 saat 10.00** arasında çalıştırıyor. Her küme için tek sunucu var; Türkiye için adı 'Apex'. Duyurulara göre ikinci bir Türkiye sunucusu da eklendi ve Apex yeni kayıt almayı bıraktı. Hangi sunucuya kayıt açık olduğunu resmî forum duyurusundan görün."
+      },
+      {
+       "tip": "p",
+       "metin": "Geri dönen oyuncular için pratik not: eski karakteriniz hangi sunucudaysa orada durur; yeni bir sunucuya taşınma kuralları değişebilir. Önce eski sunucunuzun açık olup olmadığına, sonra Yohara Güçlendirme sunucusunun size uygun olup olmadığına bakın. Kararı vermeden önce forumdaki son duyuruları okumak birkaç dakikanızı alır ama saatlerce emek kaybını önler."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Bu bölümdeki tarihler ve sunucu adları resmî duyuruya göredir. Duyuru değişirse onu esas alın."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Başlamadan önce: hesap, sunucu, maliyet",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Oynamak için ücretsiz bir **Gameforge hesabı** gerekir. Oyunu resmî oyna sayfasından ya da Gameforge istemcisinden başlatırsınız. Hesap açarken e-postanızı doğrulayın ve güvenlik ayarlarını kontrol edin."
+      },
+      {
+       "tip": "p",
+       "metin": "Türkiye sunucuları wiki'de listelenir. Ücretsiz olanlar arasında Marmara, Ezel, Barbaros, Dandanakan, Arkadaşlar ve Bagjanamu geçer; bazıları 'kapalı' işaretlidir ve yalnız mevcut karakteri olanlara açıktır. Ücretli kademeli sunucular da vardır: RUBY, EMERALD ve SAPPHIRE. Hangi sunucu yeni oyuncuya açık, wiki ve forumdan kontrol edin."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Konu",
+        "Bilgi"
+       ],
+       "satirlar": [
+        [
+         "Fiyat",
+         "Çoğu sunucu ücretsiz; bazıları ücretli kademeli. Oyun içi mağaza isteğe bağlı"
+        ],
+        [
+         "Sınıflar",
+         "Savaşçı, Ninja, Sura, Şaman, Lycan"
+        ],
+        [
+         "Krallıklar",
+         "Shinsoo, Chunjo, Jinno"
+        ],
+        [
+         "Seviye yapısı",
+         "120. seviyeye kadar normal seviye, sonrasında Şampiyon seviyeleri"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Sunucu seçerken üç şeye bakın: arkadaşlarınızın nerede oynadığı, sunucunun kalabalığı ve ücretli kademe olup olmadığı. Kalabalık bir sunucuda ticaret kolaydır ama rekabet sert olur; küçük sunucuda tersi geçerlidir. Ücretli kademelerde ne verildiğini satın almadan önce resmî sayfadan okuyun."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Gameforge'un sistem gereksinimlerini oyna sayfasından kontrol edin; burada rakam yazmıyorum çünkü sürüme göre değişir."
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "İlk saatler: adım adım",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Hesabı aç",
+         "metin": "Gameforge hesabı oluşturun, e-postayı doğrulayın ve güvenlik ayarlarını gözden geçirin."
+        },
+        {
+         "baslik": "Sunucu seç",
+         "metin": "Yeni oyuncuysanız ve kısa sürede ilerlemek istiyorsanız Yohara Güçlendirme sunucusunu düşünün; kalıcı karakter istiyorsanız normal bir sunucu seçin. Arkadaşlarınızla aynı sunucuyu seçin."
+        },
+        {
+         "baslik": "Krallık ve sınıf seç",
+         "metin": "Krallık (Shinsoo, Chunjo veya Jinno) ve sınıfı seçin. Sınıf seçimi tabloda anlatıldı."
+        },
+        {
+         "baslik": "İlk görevleri yap",
+         "metin": "Başlangıç görevleri oyunun temel sistemlerini öğretir ve ödül verir. 10, 30, 60, 90 ve 110. seviyelerde dönüm noktası görevleri ödül sunar (Yohara sunucusunda)."
+        },
+        {
+         "baslik": "At sistemi",
+         "metin": "Oyunda at sistemi bulunur; nasıl açıldığını oyun içi görev günlüğünden ve wiki'den kontrol edin."
+        },
+        {
+         "baslik": "Beceri seç",
+         "metin": "Becerileri rastgele dağıtmayın; önce tek bir ana yol seçin."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "İlk saatlerde amaç seviye atlamak kadar oyunun sistemlerini öğrenmektir: potion kullanımı, eşya yükseltme, ticaret ve beceri geliştirme."
+      },
+      {
+       "tip": "p",
+       "metin": "Oyuna girer girmez envanterinizi, beceri penceresini ve görev günlüğünü açıp bir kez gezin. Hangi tuşun ne yaptığını bilmek ilk saatlerde en çok zaman kazandıran şeydir. Ayrıca oyun içi sohbette sizden bir şey isteyen yabancılara karşı temkinli olun."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Yohara Güçlendirme sunucusunda kanal 1-2 herkese, 3-4 güvenilir oyunculara, 5-6 Metin+ üyelerine açıktır. Yeni oyuncu olarak 1-2. kanallarla başlayın."
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "Sınıf ve krallık seçimi",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Beş sınıf vardır: Savaşçı, Ninja, Sura, Şaman ve Lycan. Krallıklar arasında da oynanış farkı küçüktür; asıl fark arkadaş ve sunucu tercihidir. İlk karakter için en basit sınıf genellikle Savaşçı sayılır, ama bu bir tercih meselesidir ve sunucunun durumuna göre değişir."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Sınıf",
+        "Oynanış",
+        "Kime uygun?"
+       ],
+       "satirlar": [
+        [
+         "Savaşçı",
+         "Yakın dövüş, dayanıklı, basit",
+         "İlk karakterde sağlam başlamak isteyenler"
+        ],
+        [
+         "Ninja",
+         "Hareketli, hızlı hasar",
+         "Hız ve hareket sevenler"
+        ],
+        [
+         "Sura",
+         "Büyülü silah, kendi güçlendirmeleri",
+         "Beceri planı yapmaktan çekinmeyenler"
+        ],
+        [
+         "Şaman",
+         "Destek ve büyü",
+         "Grup içinde oynamayı sevenler"
+        ],
+        [
+         "Lycan",
+         "Güçlü yakın saldırı",
+         "Farklı bir oynanış isteyenler"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Beceriler normal seviyelerden sonra Master, Grand Master ve Perfect Master aşamalarına ilerler. Bu yüzden becerileri erken dağıtırken tek bir ana yol seçmek daha sağlıklıdır."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Sınıf seçimini yalnızca PvP videolarına bakarak yapmayın; ilk karakterde farm (kasma) rahatlığı daha önemlidir."
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "Seviye atlama: hızlı ve verimli yol",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Metin2'de seviye atlamak canavar avı, görev ve Metin taşı kırmayla yapılır. Deneyim kazancı canavarla seviyeniz arasındaki farka bağlıdır; çok güçlü canavarla uğraşmak her zaman daha iyi değildir. Temiz ölüm vermeyen, ilaç harcatmayan bir bölgede istikrarlı kasmak çoğu zaman daha verimlidir."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Yohara Güçlendirme sunucusunda canavarların canı ve hasarı yüzde 40 azaltılmıştır, eşya düşme oranı ikiye katlanmıştır.",
+        "40. seviye ve üstünde Uriel ile 8 saat boyunca yüzde 50 ile 200 arası EXP artışı alınabilir.",
+        "Tiger Power PvE hasarını yüzde 40 artırır."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Güçlendirme sunucusunun hedefi **Şampiyon Seviye 1**'e ulaşmaktır. Süre bitince en fazla iki karakter normal sunuculara aktarılabilir; kayıt 17 Şubat-3 Mart 2027 arasında, aktarım 24 Şubat ve 3 Mart bakımlarında yapılır. DIAMOND ve Marmara'ya aktarım yapılamaz."
+      },
+      {
+       "tip": "p",
+       "metin": "Kasarken kendinize basit bir döngü kurun: bölgeye git, canavar kes, envanter dolunca dön, eşyaları değerlendir, ilaç tamamla. Aynı yerde uzun süre vurmak yerine seviyenize uygun bölgeye geçmek hem ilaç hem zaman tasarrufu sağlar. Bir bölgede çok sık ölüyorsanız orası size henüz erken demektir."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Aktarım kurallarını duyuru tarihleri yaklaşınca resmî forumdan tekrar okuyun. Tarihler ve koşullar değişebilir."
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "Yang ve ekonomi: yalnız oyun içi yollar",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Oyun içi para birimi **Yang**'dır. Yang ilaç, eşya yükseltme, at gelişimi ve ticaret için harcanır. Çıkan eşyaları NPC'ye satmadan önce oyuncular arasında değeri olup olmadığına bakın."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "İlacı ve yükseltmeyi dengeli harcayın; Yang'ın hepsini tek yükseltmeye yatırmayın.",
+        "Önce silahı, ilaç harcamanız çoksa zırhı yükseltin.",
+        "Bilinmeyen malzemeleri çabuk satmayın."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Oyun içi mağaza vardır ve isteğe bağlıdır. Mağaza ürünlerini almadan önce ne verdiğini oyun içinde okuyun."
+      },
+      {
+       "tip": "p",
+       "metin": "Ticarette sabırlı olun. Bir eşyayı satmadan önce birkaç oyuncunun pazar fiyatına bakın; acele satış çoğu zaman zarara yol açar. Güçlendirme sunucusundaki eşyaların normal sunucuya taşınıp taşınmadığını resmî duyurudan öğrenin; taşınmıyorsa orada biriktirdiklerinizi süre bitmeden değerlendirmeyi planlayın."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Yang, hesap veya eşyayı gerçek parayla satmak ya da satın almak (RMT) oyun kurallarına aykırıdır ve hesabı kapattırır. Yalnız oyun içi ticaret penceresini kullanın."
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "120 sonrası: Şampiyon seviyeleri ve Yohara",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "120. seviyeden sonra **Şampiyon seviyeleri** başlar ve Yohara içeriği Şampiyon Seviye 1 ve üstünde açılır. Güçlendirme sunucusunun hedefi de buraya ulaşmaktır. Zindanlar, boss'lar, evcil hayvan ve ekipman güçlendirme bu aşamada öne çıkar."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Aşama",
+        "Ne yapılır?",
+        "Not"
+       ],
+       "satirlar": [
+        [
+         "1-120",
+         "Seviye atlama, görevler, Metin kırma",
+         "Yohara sunucusu bu aşamayı hızlandırır"
+        ],
+        [
+         "Şampiyon 1+",
+         "Yohara içeriği, boss ve zindanlar",
+         "Güçlendirme sunucusunun hedefi"
+        ],
+        [
+         "Sonrası",
+         "Ekipman, evcil hayvan, ticaret",
+         "Sunucu ekonomisine bağlı"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Şampiyon seviyelerine geldiğinizde hedefinizi netleştirin: ekipman mı, zindan mı, ticaret mi? Her üçünü aynı anda yürütmeye çalışmak çoğu oyuncuyu yorar. Önce tek bir hedef seçip onu bitirmek, sonra diğerine geçmek daha sağlıklıdır. Yohara sunucusunda süre sınırlı olduğu için hedefi erkenden belirleyin."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Etkinlikleri ve ödül kampanyalarını resmî forum duyurularından takip edin; tarihler değişebilir."
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "Sık yapılan hatalar ve güvenlik",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Gücünün üstündeki canavarla uğraşıp ilacı bitirmek.",
+        "Her gördüğü eşyayı NPC'ye satmak.",
+        "Aynı şifreyi başka sitelerde kullanmak."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Hile, bot, makro, exploit, özel (private) sunucu, hesap ve Yang satışı (RMT) ve korsan istemciden uzak durun. Bunlar hesabın kapanmasına ve verinizin çalınmasına yol açar. Metin+ kanallarının bot azaltmak için olduğunu unutmayın."
+      },
+      {
+       "tip": "p",
+       "metin": "Hesap güvenliği için e-posta hesabınıza da güçlü bir şifre koyun ve mümkünse iki adımlı doğrulamayı açın; Gameforge hesabı ele geçirilirse genellikle önce e-posta zayıf halkadır. Şüpheli bir giriş ya da kayıp için resmî destek merkezine başvurun; başka yerden gelen 'hesabını kurtarırız' vaatlerine inanmayın."
+      },
+      {
+       "tip": "p",
+       "metin": "Gameforge sizden şifrenizi ya da güvenlik kodunuzu istemez. Yalnız resmî adreslerde giriş yapın; şüpheli bağlantıya tıklamayın."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Sık sorulan sorular",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Metin2 ücretsiz mi?",
+         "c": "Çoğu sunucu ücretsizdir; bazı sunucular ücretli kademelidir. Oyun içi mağaza isteğe bağlıdır."
+        },
+        {
+         "s": "Yohara Güçlendirme sunucusu nedir?",
+         "c": "13 Kasım 2026'dan 24 Şubat 2027'ye kadar çalışan, daha hızlı ilerleme sağlayan geçici sunucudur."
+        },
+        {
+         "s": "Hangi sınıfla başlamalıyım?",
+         "c": "Savaşçı genellikle en basit olanıdır; ama sevdiğiniz oynanışı seçin."
+        },
+        {
+         "s": "Karakterimi sonra normal sunucuya taşıyabilir miyim?",
+         "c": "Evet, en fazla iki karakter. Koşullar için resmî duyuruya bakın."
+        },
+        {
+         "s": "Kanallar ne işe yarıyor?",
+         "c": "1-2 herkese, 3-4 güvenilir oyunculara, 5-6 Metin+ üyelerine açıktır."
+        },
+        {
+         "s": "Oyun Türkçe mi?",
+         "c": "Türkiye sürümü Türkçe yayımlanıyor."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "en": {
+   "baslik": "Metin2 Beginner Guide: Official Servers 2026",
+   "ozet": "For players starting or returning on Gameforge's official Turkish Metin2 servers: server choice, the Yohara Boost server, classes, leveling, the Yang economy and safety.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "MMORPG"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Windows (Gameforge client); there is also a browser launch page"
+    },
+    {
+     "ad": "Pricing model",
+     "deger": "Most servers are free; some are paid tiers, with an in-game shop"
+    },
+    {
+     "ad": "Current version",
+     "deger": "See the official wiki and forum for the latest patch; the Yohara Boost server opened on 13 November 2026"
+    },
+    {
+     "ad": "Turkish support",
+     "deger": "The Turkish version of the game is published in Turkish"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "Where the game stands in 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Metin2 is an old, well-loved online role-playing game from Korea, published by Gameforge. In Turkey the official forum, wiki and support (ticket) system belong to Gameforge. The game has five classes, three kingdoms and, after level 120, **Champion levels**."
+      },
+      {
+       "tip": "p",
+       "metin": "The biggest news now is the **Yohara Boost** servers. Gameforge is running these temporary servers between **13 November 2026 at 10:00 (CET)** and **24 February 2027 at 10:00**. There is one server per cluster; for Turkey it is called 'Apex'. According to the announcements a second Turkish server was added and Apex stopped accepting new registrations. See which server is open for registration in the official forum announcement."
+      },
+      {
+       "tip": "p",
+       "metin": "A practical note for returning players: your old character stays on whichever server it was on; the rules for moving to a new server may change. First check whether your old server is open, then whether the Yohara Boost server suits you. Reading the latest forum announcements before deciding takes a few minutes but saves hours of lost effort."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "The dates and server names in this section follow the official announcement. If the announcement changes, go by it."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Before you start: account, server, cost",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "You need a free **Gameforge account** to play. You launch the game from the official play page or the Gameforge client. When registering, confirm your e-mail and check the security settings."
+      },
+      {
+       "tip": "p",
+       "metin": "The Turkish servers are listed on the wiki. Among the free ones are Marmara, Ezel, Barbaros, Dandanakan, Arkadaşlar and Bagjanamu; some are marked 'closed' and are open only to those with an existing character. There are also paid tier servers: RUBY, EMERALD and SAPPHIRE. Check the wiki and forum for which server is open to new players."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Topic",
+        "Information"
+       ],
+       "satirlar": [
+        [
+         "Price",
+         "Most servers are free; some are paid tiers. The in-game shop is optional"
+        ],
+        [
+         "Classes",
+         "Warrior, Ninja, Sura, Shaman, Lycan"
+        ],
+        [
+         "Kingdoms",
+         "Shinsoo, Chunjo, Jinno"
+        ],
+        [
+         "Level structure",
+         "Normal levels up to 120, then Champion levels"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "When picking a server look at three things: where your friends play, how crowded the server is and whether it is a paid tier. Trading is easy on a crowded server but competition is hard; on a small server the opposite holds. In paid tiers, read from the official page what is given before you buy."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Check Gameforge's system requirements on the play page; I give no figure here because it changes with the version."
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "The first hours, step by step",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Open the account",
+         "metin": "Create a Gameforge account, confirm the e-mail and review the security settings."
+        },
+        {
+         "baslik": "Pick a server",
+         "metin": "If you are new and want quick progress, consider the Yohara Boost server; if you want a permanent character, pick a normal server. Choose the same server as your friends."
+        },
+        {
+         "baslik": "Choose kingdom and class",
+         "metin": "Choose a kingdom (Shinsoo, Chunjo or Jinno) and a class. Class choice is explained in the table."
+        },
+        {
+         "baslik": "Do the first quests",
+         "metin": "The starter quests teach the basic systems and give rewards. Milestone quests at levels 10, 30, 60, 90 and 110 offer rewards (on the Yohara server)."
+        },
+        {
+         "baslik": "Horse system",
+         "metin": "The game has a horse system; check the in-game quest log and the wiki for how to unlock it."
+        },
+        {
+         "baslik": "Pick skills",
+         "metin": "Do not spread skills at random; choose a single main path first."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "In the first hours the aim is to learn the game's systems as much as to level: potion use, item upgrading, trade and skill growth."
+      },
+      {
+       "tip": "p",
+       "metin": "As soon as you enter the game, open your inventory, the skill window and the quest log and look around once. Knowing what each key does is the biggest time saver in the first hours. Also be careful with strangers in the in-game chat who ask you for something."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "On the Yohara Boost server, channels 1-2 are open to everyone, 3-4 to trusted players and 5-6 to Metin+ members. As a new player start on channels 1-2."
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "Choosing a class and kingdom",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "There are five classes: Warrior, Ninja, Sura, Shaman and Lycan. The playstyle difference between kingdoms is also small; the real difference is where your friends and server are. For a first character Warrior is generally considered the simplest, but this is a matter of preference and depends on the state of the server."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Class",
+        "Playstyle",
+        "Who it suits"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Melee, sturdy, simple",
+         "Players who want a solid start on a first character"
+        ],
+        [
+         "Ninja",
+         "Mobile, fast damage",
+         "Players who like speed and movement"
+        ],
+        [
+         "Sura",
+         "Magic weapon, self-buffs",
+         "Players who do not mind planning skills"
+        ],
+        [
+         "Shaman",
+         "Support and spells",
+         "Players who like playing in a group"
+        ],
+        [
+         "Lycan",
+         "Strong melee attacks",
+         "Players who want a different playstyle"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Skills advance past the normal levels into Master, Grand Master and Perfect Master stages. So when spreading skills early it is healthier to choose a single main path."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Do not choose a class only by watching PvP videos; for a first character, comfort in farming matters more."
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "Leveling: a fast and efficient route",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "In Metin2 you level by hunting monsters, doing quests and breaking Metin stones. Experience gain depends on the gap between you and the monster; fighting very strong monsters is not always better. Farming steadily in a zone where you do not die and do not burn potions is often more efficient."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "On the Yohara Boost server monsters have 40 percent less health and damage and the item drop rate is doubled.",
+        "At level 40 and above you can get a 50 to 200 percent EXP boost for 8 hours with Uriel.",
+        "Tiger Power raises PvE damage by 40 percent."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "The goal of the boost server is to reach **Champion Level 1**. When the period ends, up to two characters can be transferred to normal servers; registration runs 17 February-3 March 2027 and transfers happen at the 24 February and 3 March maintenance. Transfers to DIAMOND and Marmara are not possible."
+      },
+      {
+       "tip": "p",
+       "metin": "While farming, set yourself a simple loop: go to the zone, kill monsters, return when the inventory fills, handle the items, restock potions. Moving to a zone that fits your level instead of hitting the same place for long saves both potions and time. If you die too often in a zone, it is still too early for you."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Re-read the transfer rules in the official forum as the announced dates approach. Dates and conditions may change."
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "Yang and economy: in-game routes only",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The in-game currency is **Yang**. Yang is spent on potions, item upgrading, horse growth and trade. Before selling drops to an NPC, check whether they have value among players."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Spend on potions and upgrades in balance; do not put all your Yang into one upgrade.",
+        "Upgrade the weapon first, or the armor if you spend a lot on potions.",
+        "Do not sell unknown materials quickly."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "There is an in-game shop and it is optional. Before buying shop items, read what they give in the game."
+      },
+      {
+       "tip": "p",
+       "metin": "Be patient in trade. Before selling an item, look at the market price from several players; a hasty sale often leads to a loss. Learn from the official announcement whether items from the boost server carry over to a normal server; if they do not, plan to use what you gathered there before the period ends."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Selling or buying Yang, accounts or items for real money (RMT) breaks the rules and gets the account closed. Use only the in-game trade window."
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "After 120: Champion levels and Yohara",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "After level 120 the **Champion levels** begin, and Yohara content opens at Champion Level 1 and above. The goal of the boost server is to reach this point. Dungeons, bosses, pets and equipment upgrading come to the front at this stage."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Stage",
+        "What you do",
+        "Note"
+       ],
+       "satirlar": [
+        [
+         "1-120",
+         "Leveling, quests, breaking Metin stones",
+         "The Yohara server speeds up this stage"
+        ],
+        [
+         "Champion 1+",
+         "Yohara content, bosses and dungeons",
+         "The goal of the boost server"
+        ],
+        [
+         "Beyond",
+         "Equipment, pets, trade",
+         "Depends on the server economy"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "When you reach the Champion levels, make your goal clear: equipment, dungeons or trade? Trying to run all three at once tires most players. It is healthier to pick one goal and finish it, then move to the next. Because the Yohara server is time-limited, set your goal early."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Follow events and reward campaigns in the official forum announcements; dates may change."
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "Common mistakes and safety",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Fighting monsters above your strength and running out of potions.",
+        "Selling every item you see to an NPC.",
+        "Using the same password on other sites."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Stay away from cheats, bots, macros, exploits, private servers, account and Yang selling (RMT) and pirated clients. They lead to account closure and theft of your data. Remember that the Metin+ channels exist to reduce bots."
+      },
+      {
+       "tip": "p",
+       "metin": "For account safety, put a strong password on your e-mail account too and enable two-step verification if you can; when a Gameforge account is taken over, the e-mail is usually the weak link. For a suspicious login or a loss, contact the official support center; do not believe 'we will recover your account' promises from anywhere else."
+      },
+      {
+       "tip": "p",
+       "metin": "Gameforge will not ask for your password or security code. Log in only on official addresses and do not click suspicious links."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Frequently asked questions",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is Metin2 free?",
+         "c": "Most servers are free; some are paid tiers. The in-game shop is optional."
+        },
+        {
+         "s": "What is the Yohara Boost server?",
+         "c": "A temporary server running from 13 November 2026 to 24 February 2027 that speeds up progress."
+        },
+        {
+         "s": "Which class should I start with?",
+         "c": "Warrior is usually the simplest, but choose the playstyle you like."
+        },
+        {
+         "s": "Can I move my character to a normal server later?",
+         "c": "Yes, up to two characters. See the official announcement for conditions."
+        },
+        {
+         "s": "What are the channels for?",
+         "c": "1-2 are open to everyone, 3-4 to trusted players and 5-6 to Metin+ members."
+        },
+        {
+         "s": "Is the game in Turkish?",
+         "c": "The Turkish version is published in Turkish."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "fr": {
+   "baslik": "Metin2 : guide du débutant, serveurs officiels 2026",
+   "ozet": "Pour débuter ou revenir sur les serveurs turcs officiels de Metin2 (Gameforge) : choix du serveur, serveur Yohara Boost, classes, niveaux, économie en Yang et sécurité.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "MMORPG"
+    },
+    {
+     "ad": "Plateforme",
+     "deger": "Windows (client Gameforge) ; page de lancement dans le navigateur"
+    },
+    {
+     "ad": "Modèle tarifaire",
+     "deger": "La plupart des serveurs sont gratuits ; certains sont payants par paliers, avec une boutique en jeu"
+    },
+    {
+     "ad": "Version actuelle",
+     "deger": "Dernier patch sur le wiki et le forum officiels ; serveur Yohara Boost ouvert le 13 novembre 2026"
+    },
+    {
+     "ad": "Support du turc",
+     "deger": "La version turque du jeu est publiée en turc"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "Où en est le jeu en 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Metin2 est un vieux jeu de rôle en ligne coréen très apprécié, publié par Gameforge. En Turquie, le forum officiel, le wiki et le système d'assistance (ticket) appartiennent à Gameforge. Le jeu compte cinq classes, trois royaumes et, après le niveau 120, des **niveaux Champion**."
+      },
+      {
+       "tip": "p",
+       "metin": "La grande nouveauté, ce sont les serveurs **Yohara Boost**. Gameforge fait tourner ces serveurs temporaires du **13 novembre 2026 à 10 h (CET)** au **24 février 2027 à 10 h**. Il y a un serveur par cluster ; pour la Turquie, il s'appelle « Apex ». D'après les annonces, un second serveur turc a été ajouté et Apex n'accepte plus de nouvelles inscriptions. Consultez l'annonce du forum officiel pour savoir quel serveur est ouvert."
+      },
+      {
+       "tip": "p",
+       "metin": "Une note pratique pour les joueurs qui reviennent : votre ancien personnage reste sur le serveur où il était ; les règles pour passer à un nouveau serveur peuvent changer. Vérifiez d'abord si votre ancien serveur est ouvert, puis si le serveur Yohara Boost vous convient. Lire les dernières annonces du forum avant de décider prend quelques minutes mais évite des heures d'efforts perdus."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Les dates et noms de serveurs de cette section suivent l'annonce officielle. Si l'annonce change, fiez-vous à elle."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Avant de commencer : compte, serveur, coût",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Il faut un **compte Gameforge** gratuit pour jouer. Vous lancez le jeu depuis la page de jeu officielle ou le client Gameforge. À l'inscription, confirmez votre e-mail et vérifiez les paramètres de sécurité."
+      },
+      {
+       "tip": "p",
+       "metin": "Les serveurs turcs figurent sur le wiki. Parmi les gratuits : Marmara, Ezel, Barbaros, Dandanakan, Arkadaşlar et Bagjanamu ; certains sont marqués « fermé » et ne sont ouverts qu'à ceux qui ont déjà un personnage. Il y a aussi des serveurs payants par paliers : RUBY, EMERALD et SAPPHIRE. Vérifiez sur le wiki et le forum quel serveur accueille les nouveaux joueurs."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Sujet",
+        "Information"
+       ],
+       "satirlar": [
+        [
+         "Prix",
+         "La plupart des serveurs sont gratuits ; certains sont payants par paliers. La boutique en jeu est facultative"
+        ],
+        [
+         "Classes",
+         "Guerrier, Ninja, Sura, Chaman, Lycan"
+        ],
+        [
+         "Royaumes",
+         "Shinsoo, Chunjo, Jinno"
+        ],
+        [
+         "Structure des niveaux",
+         "Niveaux normaux jusqu'à 120, puis niveaux Champion"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "En choisissant un serveur, regardez trois choses : où jouent vos amis, l'affluence du serveur et s'il s'agit d'un palier payant. Le commerce est facile sur un serveur très fréquenté, mais la concurrence est rude ; sur un petit serveur, c'est l'inverse. Dans les paliers payants, lisez sur la page officielle ce qui est offert avant d'acheter."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Vérifiez la configuration requise de Gameforge sur la page de jeu ; je n'indique pas de chiffre ici car il change selon la version."
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "Les premières heures, pas à pas",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Ouvrir le compte",
+         "metin": "Créez un compte Gameforge, confirmez l'e-mail et revoyez les paramètres de sécurité."
+        },
+        {
+         "baslik": "Choisir un serveur",
+         "metin": "Si vous êtes nouveau et voulez progresser vite, pensez au serveur Yohara Boost ; pour un personnage durable, prenez un serveur normal. Choisissez le même serveur que vos amis."
+        },
+        {
+         "baslik": "Choisir royaume et classe",
+         "metin": "Choisissez un royaume (Shinsoo, Chunjo ou Jinno) et une classe. Le choix de classe est expliqué dans le tableau."
+        },
+        {
+         "baslik": "Faire les premières quêtes",
+         "metin": "Les quêtes de départ enseignent les systèmes de base et donnent des récompenses. Des quêtes d'étape aux niveaux 10, 30, 60, 90 et 110 offrent des récompenses (sur le serveur Yohara)."
+        },
+        {
+         "baslik": "Système de monture",
+         "metin": "Le jeu a un système de monture ; vérifiez dans le journal de quêtes et le wiki comment le débloquer."
+        },
+        {
+         "baslik": "Choisir ses compétences",
+         "metin": "Ne répartissez pas les compétences au hasard ; choisissez d'abord une seule voie principale."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Dans les premières heures, le but est d'apprendre les systèmes du jeu autant que de monter : potions, amélioration d'objets, commerce et progression des compétences."
+      },
+      {
+       "tip": "p",
+       "metin": "Dès l'entrée en jeu, ouvrez votre inventaire, la fenêtre de compétences et le journal de quêtes et faites un tour. Savoir ce que fait chaque touche est le plus grand gain de temps des premières heures. Méfiez-vous aussi des inconnus qui vous demandent quelque chose dans le chat du jeu."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Sur le serveur Yohara Boost, les canaux 1-2 sont ouverts à tous, 3-4 aux joueurs de confiance et 5-6 aux membres Metin+. En tant que nouveau, commencez sur les canaux 1-2."
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "Choisir classe et royaume",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Il y a cinq classes : Guerrier, Ninja, Sura, Chaman et Lycan. La différence de jeu entre royaumes est aussi faible ; la vraie différence tient à vos amis et au serveur. Pour un premier personnage, le Guerrier passe généralement pour le plus simple, mais c'est une question de préférence qui dépend de l'état du serveur."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Classe",
+        "Style de jeu",
+        "Pour qui ?"
+       ],
+       "satirlar": [
+        [
+         "Guerrier",
+         "Mêlée, robuste, simple",
+         "Ceux qui veulent un départ solide sur un premier personnage"
+        ],
+        [
+         "Ninja",
+         "Mobile, dégâts rapides",
+         "Ceux qui aiment vitesse et mouvement"
+        ],
+        [
+         "Sura",
+         "Arme magique, auto-renforcements",
+         "Ceux qui ne craignent pas de planifier leurs compétences"
+        ],
+        [
+         "Chaman",
+         "Soutien et sorts",
+         "Ceux qui aiment jouer en groupe"
+        ],
+        [
+         "Lycan",
+         "Fortes attaques de mêlée",
+         "Ceux qui veulent un autre style de jeu"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Les compétences progressent au-delà des niveaux normaux vers les stades Maître, Grand Maître et Maître Parfait. En répartissant tôt, il vaut mieux choisir une seule voie principale."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Ne choisissez pas la classe seulement d'après des vidéos de JcJ ; pour un premier personnage, le confort de farm compte davantage."
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "Monter en niveau : une voie rapide et efficace",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Dans Metin2, on monte en chassant des monstres, en faisant des quêtes et en brisant des pierres Metin. Le gain d'expérience dépend de l'écart entre vous et le monstre ; affronter des monstres très forts n'est pas toujours mieux. Farmer régulièrement dans une zone où l'on ne meurt pas et où l'on ne brûle pas de potions est souvent plus efficace."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Sur le serveur Yohara Boost, les monstres ont 40 pour cent de vie et de dégâts en moins et le taux de butin est doublé.",
+        "Au niveau 40 et plus, on peut obtenir avec Uriel un bonus d'EXP de 50 à 200 pour cent pendant 8 heures.",
+        "Tiger Power augmente les dégâts JcE de 40 pour cent ."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Le but du serveur boost est d'atteindre le **niveau Champion 1**. À la fin de la période, jusqu'à deux personnages peuvent être transférés vers les serveurs normaux ; l'inscription court du 17 février au 3 mars 2027 et les transferts ont lieu lors des maintenances des 24 février et 3 mars. Les transferts vers DIAMOND et Marmara sont impossibles ."
+      },
+      {
+       "tip": "p",
+       "metin": "En farmant, installez-vous une boucle simple : aller dans la zone, tuer des monstres, revenir quand l'inventaire est plein, gérer les objets, refaire le stock de potions. Passer à une zone adaptée à votre niveau plutôt que de frapper longtemps au même endroit économise potions et temps. Si vous mourez trop souvent dans une zone, il est encore trop tôt pour vous."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Relisez les règles de transfert sur le forum officiel à l'approche des dates annoncées. Dates et conditions peuvent changer."
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "Yang et économie : uniquement en jeu",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La monnaie du jeu est le **Yang** . Le Yang se dépense en potions, amélioration d'objets, progression du cheval et commerce. Avant de vendre le butin à un PNJ, vérifiez s'il a de la valeur entre joueurs."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Dépensez potions et améliorations de façon équilibrée ; ne mettez pas tout votre Yang dans une seule amélioration.",
+        "Améliorez d'abord l'arme, ou l'armure si vous dépensez beaucoup en potions.",
+        "Ne vendez pas vite les matériaux inconnus."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Il existe une boutique en jeu, facultative. Avant d'acheter, lisez en jeu ce que donnent les articles."
+      },
+      {
+       "tip": "p",
+       "metin": "Soyez patient dans le commerce. Avant de vendre un objet, regardez le prix du marché chez plusieurs joueurs ; une vente précipitée mène souvent à une perte. Renseignez-vous dans l'annonce officielle pour savoir si les objets du serveur boost passent sur un serveur normal ; sinon, prévoyez d'utiliser ce que vous y avez amassé avant la fin de la période."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Vendre ou acheter du Yang, des comptes ou des objets contre de l'argent réel (RMT) enfreint les règles et fait fermer le compte. Utilisez uniquement la fenêtre d'échange en jeu."
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "Après le 120 : niveaux Champion et Yohara",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Après le niveau 120 commencent les **niveaux Champion**, et le contenu Yohara s'ouvre au niveau Champion 1 et au-delà. Le but du serveur boost est d'atteindre ce stade. Donjons, boss, familiers et amélioration de l'équipement passent au premier plan."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Étape",
+        "Que faire",
+        "Remarque"
+       ],
+       "satirlar": [
+        [
+         "1-120",
+         "Montée de niveau, quêtes, pierres Metin",
+         "Le serveur Yohara accélère cette étape"
+        ],
+        [
+         "Champion 1+",
+         "Contenu Yohara, boss et donjons",
+         "Le but du serveur boost"
+        ],
+        [
+         "Ensuite",
+         "Équipement, familiers, commerce",
+         "Dépend de l'économie du serveur"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Arrivé aux niveaux Champion, précisez votre objectif : équipement, donjons ou commerce ? Vouloir mener les trois de front fatigue la plupart des joueurs. Mieux vaut choisir un objectif et le terminer, puis passer au suivant. Comme le serveur Yohara est limité dans le temps, fixez votre objectif tôt."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Suivez événements et campagnes de récompenses dans les annonces du forum officiel ; les dates peuvent changer."
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "Erreurs courantes et sécurité",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Affronter des monstres au-dessus de sa force et épuiser ses potions.",
+        "Vendre à un PNJ chaque objet que l'on voit.",
+        "Utiliser le même mot de passe sur d'autres sites."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Restez loin des triches, bots, macros, exploits, serveurs privés, de la vente de comptes et de Yang (RMT) et des clients piratés. Ils mènent à la fermeture du compte et au vol de vos données. Rappelez-vous que les canaux Metin+ servent à réduire les bots."
+      },
+      {
+       "tip": "p",
+       "metin": "Pour la sécurité du compte, mettez aussi un mot de passe solide sur votre e-mail et activez la double vérification si possible ; quand un compte Gameforge est piraté, l'e-mail est généralement le maillon faible. En cas de connexion suspecte ou de perte, contactez le centre d'assistance officiel ; ne croyez pas aux promesses « on récupère votre compte » venues d'ailleurs."
+      },
+      {
+       "tip": "p",
+       "metin": "Gameforge ne vous demandera pas votre mot de passe ni votre code de sécurité. Connectez-vous uniquement sur des adresses officielles et ne cliquez pas sur les liens suspects."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Questions fréquentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Metin2 est-il gratuit ?",
+         "c": "La plupart des serveurs sont gratuits ; certains sont payants par paliers. La boutique en jeu est facultative."
+        },
+        {
+         "s": "Qu'est-ce que le serveur Yohara Boost ?",
+         "c": "Un serveur temporaire, du 13 novembre 2026 au 24 février 2027, qui accélère la progression."
+        },
+        {
+         "s": "Avec quelle classe commencer ?",
+         "c": "Le Guerrier est généralement le plus simple, mais choisissez le style de jeu que vous aimez."
+        },
+        {
+         "s": "Puis-je transférer mon personnage plus tard vers un serveur normal ?",
+         "c": "Oui, jusqu'à deux personnages. Voyez l'annonce officielle pour les conditions."
+        },
+        {
+         "s": "À quoi servent les canaux ?",
+         "c": "1-2 sont ouverts à tous, 3-4 aux joueurs de confiance et 5-6 aux membres Metin+."
+        },
+        {
+         "s": "Le jeu est-il en turc ?",
+         "c": "La version turque est publiée en turc."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "es": {
+   "baslik": "Metin2: guía para empezar, servidores oficiales 2026",
+   "ozet": "Para empezar o volver en los servidores turcos oficiales de Metin2 (Gameforge): elección de servidor, servidor Yohara Boost, clases, niveles, economía de Yang y seguridad.",
+   "kunye": [
+    {
+     "ad": "Género",
+     "deger": "MMORPG"
+    },
+    {
+     "ad": "Plataforma",
+     "deger": "Windows (cliente de Gameforge); también hay una página de inicio en el navegador"
+    },
+    {
+     "ad": "Modelo de precio",
+     "deger": "La mayoría de los servidores son gratis; algunos son de pago por niveles, con tienda en el juego"
+    },
+    {
+     "ad": "Versión actual",
+     "deger": "Último parche en la wiki y el foro oficiales; el servidor Yohara Boost abrió el 13 de noviembre de 2026"
+    },
+    {
+     "ad": "Soporte en turco",
+     "deger": "La versión turca del juego se publica en turco"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "Cómo está el juego en 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Metin2 es un viejo y querido juego de rol en línea de origen coreano, publicado por Gameforge. En Turquía, el foro oficial, la wiki y el sistema de soporte (ticket) pertenecen a Gameforge. El juego tiene cinco clases, tres reinos y, tras el nivel 120, **niveles Campeón**."
+      },
+      {
+       "tip": "p",
+       "metin": "La mayor novedad son los servidores **Yohara Boost**. Gameforge mantiene estos servidores temporales entre el **13 de noviembre de 2026 a las 10:00 (CET)** y el **24 de febrero de 2027 a las 10:00**. Hay un servidor por clúster; para Turquía se llama «Apex». Según los anuncios se añadió un segundo servidor turco y Apex dejó de aceptar registros nuevos. Mira en el anuncio del foro oficial qué servidor está abierto."
+      },
+      {
+       "tip": "p",
+       "metin": "Una nota práctica para quien vuelve: tu personaje antiguo sigue en el servidor donde estaba; las reglas para pasar a un servidor nuevo pueden cambiar. Mira primero si tu servidor antiguo está abierto y luego si el servidor Yohara Boost te conviene. Leer los últimos anuncios del foro antes de decidir lleva unos minutos pero evita horas de esfuerzo perdido."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Las fechas y nombres de servidores de esta sección siguen el anuncio oficial. Si el anuncio cambia, guíate por él."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Antes de empezar: cuenta, servidor, coste",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Necesitas una **cuenta de Gameforge** gratuita para jugar. Lanzas el juego desde la página oficial de juego o el cliente de Gameforge. Al registrarte, confirma tu correo y revisa los ajustes de seguridad."
+      },
+      {
+       "tip": "p",
+       "metin": "Los servidores turcos están en la wiki. Entre los gratuitos figuran Marmara, Ezel, Barbaros, Dandanakan, Arkadaşlar y Bagjanamu; algunos aparecen como «cerrados» y solo se abren a quien ya tiene personaje. También hay servidores de pago por niveles: RUBY, EMERALD y SAPPHIRE. Comprueba en la wiki y el foro qué servidor admite jugadores nuevos."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Tema",
+        "Información"
+       ],
+       "satirlar": [
+        [
+         "Precio",
+         "La mayoría de los servidores son gratis; algunos son de pago por niveles. La tienda del juego es opcional"
+        ],
+        [
+         "Clases",
+         "Guerrero, Ninja, Sura, Chamán, Lycan"
+        ],
+        [
+         "Reinos",
+         "Shinsoo, Chunjo, Jinno"
+        ],
+        [
+         "Estructura de niveles",
+         "Niveles normales hasta el 120, luego niveles Campeón"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Al elegir servidor fíjate en tres cosas: dónde juegan tus amigos, lo concurrido que está el servidor y si es un nivel de pago. En un servidor concurrido comerciar es fácil pero la competencia es dura; en uno pequeño ocurre lo contrario. En los niveles de pago, lee en la página oficial qué se ofrece antes de comprar."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Comprueba los requisitos de sistema de Gameforge en la página de juego; no pongo cifras porque cambian con la versión."
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "Las primeras horas, paso a paso",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Abre la cuenta",
+         "metin": "Crea una cuenta de Gameforge, confirma el correo y revisa los ajustes de seguridad."
+        },
+        {
+         "baslik": "Elige servidor",
+         "metin": "Si eres nuevo y quieres avanzar rápido, considera el servidor Yohara Boost; si quieres un personaje permanente, elige un servidor normal. Escoge el mismo servidor que tus amigos."
+        },
+        {
+         "baslik": "Elige reino y clase",
+         "metin": "Elige un reino (Shinsoo, Chunjo o Jinno) y una clase. La elección de clase se explica en la tabla."
+        },
+        {
+         "baslik": "Haz las primeras misiones",
+         "metin": "Las misiones iniciales enseñan los sistemas básicos y dan recompensas. Las misiones hito de los niveles 10, 30, 60, 90 y 110 ofrecen recompensas (en el servidor Yohara)."
+        },
+        {
+         "baslik": "Sistema de caballo",
+         "metin": "El juego tiene un sistema de caballo; comprueba en el diario de misiones y en la wiki cómo desbloquearlo."
+        },
+        {
+         "baslik": "Elige habilidades",
+         "metin": "No repartas las habilidades al azar; elige primero un solo camino principal."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "En las primeras horas el objetivo es aprender los sistemas del juego tanto como subir: pociones, mejora de objetos, comercio y progreso de habilidades."
+      },
+      {
+       "tip": "p",
+       "metin": "Nada más entrar al juego, abre el inventario, la ventana de habilidades y el diario de misiones y échales un vistazo. Saber qué hace cada tecla es lo que más tiempo ahorra en las primeras horas. Ten también cuidado con los desconocidos del chat que te piden algo."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "En el servidor Yohara Boost, los canales 1-2 están abiertos a todos, 3-4 a jugadores de confianza y 5-6 a miembros Metin+. Como jugador nuevo empieza en los canales 1-2."
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "Elegir clase y reino",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Hay cinco clases: Guerrero, Ninja, Sura, Chamán y Lycan. La diferencia de juego entre reinos también es pequeña; la verdadera diferencia son tus amigos y el servidor. Para un primer personaje el Guerrero suele considerarse el más sencillo, pero es cuestión de preferencia y depende del estado del servidor."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Clase",
+        "Estilo de juego",
+        "Para quién"
+       ],
+       "satirlar": [
+        [
+         "Guerrero",
+         "Cuerpo a cuerpo, resistente, simple",
+         "Quien quiere un inicio sólido en un primer personaje"
+        ],
+        [
+         "Ninja",
+         "Móvil, daño rápido",
+         "Quien disfruta velocidad y movimiento"
+        ],
+        [
+         "Sura",
+         "Arma mágica, automejoras",
+         "Quien no teme planificar habilidades"
+        ],
+        [
+         "Chamán",
+         "Apoyo y hechizos",
+         "Quien disfruta jugar en grupo"
+        ],
+        [
+         "Lycan",
+         "Fuertes ataques cuerpo a cuerpo",
+         "Quien quiere otro estilo de juego"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Las habilidades avanzan más allá de los niveles normales hacia las etapas Maestro, Gran Maestro y Maestro Perfecto. Por eso, al repartir pronto, es más sano elegir un solo camino principal."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "No elijas la clase solo viendo vídeos de JcJ; en un primer personaje pesa más la comodidad para farmear."
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "Subir de nivel: una ruta rápida y eficiente",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "En Metin2 subes cazando monstruos, haciendo misiones y rompiendo piedras Metin. La experiencia depende de la diferencia entre tú y el monstruo; enfrentarte a monstruos muy fuertes no siempre es mejor. Farmear con regularidad en una zona donde no mueres ni gastas pociones suele ser más eficiente."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "En el servidor Yohara Boost los monstruos tienen un 40 por ciento menos de vida y daño y la tasa de botín se duplica.",
+        "En el nivel 40 o más se puede obtener con Uriel un aumento de EXP del 50 al 200 por ciento durante 8 horas.",
+        "Tiger Power sube el daño JcE un 40 por ciento."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "La meta del servidor boost es llegar al **nivel Campeón 1**. Al terminar el periodo, hasta dos personajes pueden transferirse a servidores normales; el registro va del 17 de febrero al 3 de marzo de 2027 y las transferencias se hacen en los mantenimientos del 24 de febrero y del 3 de marzo. No se puede transferir a DIAMOND ni a Marmara."
+      },
+      {
+       "tip": "p",
+       "metin": "Al farmear, monta un ciclo sencillo: ir a la zona, matar monstruos, volver cuando se llene el inventario, gestionar los objetos, reponer pociones. Pasar a una zona acorde a tu nivel en lugar de golpear mucho tiempo en el mismo sitio ahorra pociones y tiempo. Si mueres demasiado en una zona, aún es pronto para ti."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Vuelve a leer las reglas de transferencia en el foro oficial al acercarse las fechas anunciadas. Fechas y condiciones pueden cambiar."
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "Yang y economía: solo dentro del juego",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "La moneda del juego es el **Yang**. El Yang se gasta en pociones, mejora de objetos, progreso del caballo y comercio. Antes de vender el botín a un PNJ, comprueba si tiene valor entre jugadores."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Gasta en pociones y mejoras de forma equilibrada; no pongas todo tu Yang en una sola mejora.",
+        "Mejora primero el arma, o la armadura si gastas mucho en pociones.",
+        "No vendas deprisa los materiales desconocidos."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Hay una tienda en el juego y es opcional. Antes de comprar, lee en el juego qué dan los artículos."
+      },
+      {
+       "tip": "p",
+       "metin": "Ten paciencia en el comercio. Antes de vender un objeto, mira el precio de mercado de varios jugadores; una venta apresurada suele acabar en pérdida. Averigua en el anuncio oficial si los objetos del servidor boost pasan a un servidor normal; si no, planea aprovechar lo reunido allí antes de que acabe el periodo."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Vender o comprar Yang, cuentas u objetos por dinero real (RMT) infringe las normas y hace que cierren la cuenta. Usa solo la ventana de comercio del juego."
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "Tras el 120: niveles Campeón y Yohara",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Tras el nivel 120 empiezan los **niveles Campeón**, y el contenido de Yohara se abre en el nivel Campeón 1 y superiores. La meta del servidor boost es llegar a este punto. Mazmorras, jefes, mascotas y mejora de equipo pasan a primer plano."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Etapa",
+        "Qué se hace",
+        "Nota"
+       ],
+       "satirlar": [
+        [
+         "1-120",
+         "Subida de nivel, misiones, piedras Metin",
+         "El servidor Yohara acelera esta etapa"
+        ],
+        [
+         "Campeón 1+",
+         "Contenido de Yohara, jefes y mazmorras",
+         "La meta del servidor boost"
+        ],
+        [
+         "Después",
+         "Equipo, mascotas, comercio",
+         "Depende de la economía del servidor"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Al llegar a los niveles Campeón, aclara tu objetivo: ¿equipo, mazmorras o comercio? Llevar los tres a la vez cansa a la mayoría. Es más sano elegir un objetivo y terminarlo, y luego pasar al siguiente. Como el servidor Yohara tiene límite de tiempo, fija pronto tu objetivo."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Sigue eventos y campañas de recompensas en los anuncios del foro oficial; las fechas pueden cambiar."
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "Errores comunes y seguridad",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Enfrentarte a monstruos por encima de tu fuerza y quedarte sin pociones.",
+        "Vender a un PNJ cada objeto que ves.",
+        "Usar la misma contraseña en otros sitios."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Mantente lejos de trampas, bots, macros, exploits, servidores privados, la venta de cuentas y Yang (RMT) y los clientes pirata. Llevan al cierre de la cuenta y al robo de tus datos. Recuerda que los canales Metin+ existen para reducir los bots."
+      },
+      {
+       "tip": "p",
+       "metin": "Para la seguridad de la cuenta, pon también una contraseña fuerte a tu correo y activa la verificación en dos pasos si puedes; cuando se roba una cuenta de Gameforge, el correo suele ser el eslabón débil. Ante un acceso sospechoso o una pérdida, contacta con el centro de soporte oficial; no creas promesas de «recuperamos tu cuenta» de otro sitio."
+      },
+      {
+       "tip": "p",
+       "metin": "Gameforge no te pedirá la contraseña ni el código de seguridad. Inicia sesión solo en direcciones oficiales y no pulses enlaces sospechosos."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Preguntas frecuentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "¿Metin2 es gratis?",
+         "c": "La mayoría de los servidores son gratis; algunos son de pago por niveles. La tienda del juego es opcional."
+        },
+        {
+         "s": "¿Qué es el servidor Yohara Boost?",
+         "c": "Un servidor temporal, del 13 de noviembre de 2026 al 24 de febrero de 2027, que acelera el progreso."
+        },
+        {
+         "s": "¿Con qué clase empiezo?",
+         "c": "El Guerrero suele ser el más sencillo, pero elige el estilo de juego que te guste."
+        },
+        {
+         "s": "¿Puedo pasar mi personaje a un servidor normal después?",
+         "c": "Sí, hasta dos personajes. Consulta el anuncio oficial para las condiciones."
+        },
+        {
+         "s": "¿Para qué sirven los canales?",
+         "c": "1-2 están abiertos a todos, 3-4 a jugadores de confianza y 5-6 a miembros Metin+."
+        },
+        {
+         "s": "¿El juego está en turco?",
+         "c": "La versión turca se publica en turco."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

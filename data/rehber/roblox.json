@@ -1,0 +1,1181 @@
+{
+ "oyun": "roblox",
+ "guncelleme": "2026-11-14",
+ "surum": "Roblox platformu (sürekli güncellenir)",
+ "kaynaklar": [
+  {
+   "url": "https://about.roblox.com/parental-controls",
+   "ad": "Roblox: Parental Controls"
+  },
+  {
+   "url": "https://en.help.roblox.com/hc/en-us/articles/30428310121620-Parental-Controls-Overview",
+   "ad": "Roblox Help: Parental Controls Overview"
+  },
+  {
+   "url": "https://www.internetmatters.org/advice/apps-and-platforms/online-gaming/roblox/",
+   "ad": "Internet Matters: Roblox"
+  },
+  {
+   "url": "https://www.commonsensemedia.org/articles/parents-ultimate-guide-to-roblox",
+   "ad": "Common Sense Media: Parents' Ultimate Guide to Roblox"
+  }
+ ],
+ "diller": {
+  "tr": {
+   "baslik": "Roblox Başlangıç ve Ebeveyn Güvenliği Rehberi (2026)",
+   "ozet": "Roblox'a yeni başlayanlar ve ebeveynler için hesap türleri, ilk adımlar, Robux bütçesi ve ebeveyn kontrolleri rehberi. Yaş doğrulama 2026 başından beri zorunlu.",
+   "kunye": [
+    {
+     "ad": "Tür",
+     "deger": "Kullanıcıların yaptığı oyunlardan oluşan platform"
+    },
+    {
+     "ad": "Platform",
+     "deger": "PC, Mac, iOS, Android, Xbox, PlayStation"
+    },
+    {
+     "ad": "Fiyat modeli",
+     "deger": "Ücretsiz; Robux ve Premium üyelik isteğe bağlı"
+    },
+    {
+     "ad": "Güncel sürüm",
+     "deger": "Sürekli güncellenen platform; yaş denetimi 7 Ocak 2026'dan beri geçerli"
+    },
+    {
+     "ad": "Türkçe desteği",
+     "deger": "Var, ayarlardan dil seçilir (resmî liste doğrulanmadı)"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "Roblox nedir ve 2026'da ne değişti?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Roblox tek bir oyun değil; milyonlarca kullanıcının yaptığı küçük ve büyük oyunlara (Roblox'ta buna deneyim denir) girdiğiniz bir platformdur. Aynı hesapla bir gün hayatta kalma oyunu, ertesi gün yarış veya rol yapma oyunu oynayabilirsiniz."
+      },
+      {
+       "tip": "p",
+       "metin": "2026'daki en önemli değişiklik güvenlik tarafında oldu. **7 Ocak 2026'dan itibaren** dünya genelinde sohbet için yaş kontrolü gerekiyor: telefon kamerasıyla yüz yaşı tahmini yapılıyor, 13 yaş ve üstü için kimlikle doğrulama isteğe bağlı. Haziran 2026 başında ayrıca çocuklara özel **Roblox Kids** (5-8 yaş) ve **Roblox Select** (9-15 yaş) hesap türleri geldi."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Hesap yaşı doğru girilmezse sohbet ve içerik sınırları da yanlış uygulanır. Çocuğun hesabını açarken gerçek doğum yılını girin."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Başlamadan önce: hesap ve cihaz",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Roblox ücretsizdir; PC, Mac, iOS, Android, Xbox ve PlayStation'da oynanır. Hesap açarken yaş grubunuz belirlenir ve buna göre sohbet ve içerik ayarları gelir:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Yaş grubu",
+        "Hesap türü / durum",
+        "Önemli nokta"
+       ],
+       "satirlar": [
+        [
+         "5-8",
+         "Roblox Kids",
+         "Yalnızca orta veya daha düşük içerik derecesine sahip oyunlar"
+        ],
+        [
+         "9-12",
+         "Roblox Select",
+         "Kısıtlı içerik; ekran süresi ve harcama denetimi mümkün"
+        ],
+        [
+         "13-15",
+         "Roblox Select",
+         "Kısıtlı içerik olan oyunlar oynanamaz; ebeveyn ayarları geçerli"
+        ],
+        [
+         "16-17",
+         "Standart hesap",
+         "Daha az ebeveyn denetimi"
+        ],
+        [
+         "18 ve üstü",
+         "Yetişkin hesap",
+         "Tam erişim; kimlik doğrulamayla ek özellikler"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "9 yaşın altında sohbet varsayılan olarak kapalıdır ve ancak ebeveyn izin verirse açılır. Yaş grupları Roblox'ta U9, 9-12, 13-15, 16-17, 18-20 ve 21+ biçiminde sınıflandırılır. Sistem gereksinimi düşüktür; son yıllarda çıkan bir telefon veya orta düzey bir bilgisayar çoğu oyun için yeter, ağır oyunlarda ise ayarları düşürmek gerekebilir."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Roblox'u yalnızca resmî Roblox sitesinden veya uygulama mağazalarından indirin. Ücretsiz Robux veren sahte uygulamalar ve siteler hesap çalar."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "İlk saatler: adım adım",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Aşağıdaki sıra, hem çocuk hem yetişkin yeni oyuncu için güvenli ve verimli bir başlangıç sunar."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Hesabı doğru açın",
+         "metin": "Gerçek doğum yılını girin, güçlü ve benzersiz bir parola seçin, mümkünse iki adımlı doğrulamayı açın."
+        },
+        {
+         "baslik": "Yaş kontrolünü tamamlayın",
+         "metin": "Sohbet kullanacaksanız yüz yaşı tahminini bitirin. Bu adımı atlarsanız sohbet kapalı kalır, bu da çocuklar için çoğu zaman iyi bir varsayılandır."
+        },
+        {
+         "baslik": "Avatarı kurcalayın",
+         "metin": "Avatar sekmesinden görünüşü ve kıyafetleri ücretsiz seçeneklerle düzenleyin. Başlangıçta ücretli eşya almanıza gerek yok."
+        },
+        {
+         "baslik": "Popüler ve derecelendirilmiş bir oyun seçin",
+         "metin": "Keşfet sayfasından oyun açıklamasını, içerik derecesini ve oyuncu sayısını okuyun. Önce arkadaşların veya ailenin tanıdığı bir oyunla başlayın."
+        },
+        {
+         "baslik": "Kontrolleri ve sesi öğrenin",
+         "metin": "İlk dakikalarda kamera, hareket ve zıplama tuşlarını deneyin; her oyunun arayüzü biraz farklıdır."
+        },
+        {
+         "baslik": "Süreyi ayarlayın",
+         "metin": "Oyun saatlerini baştan belirleyin; ebeveyn ayarından ekran süresi sınırı konabilir."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "İlk günlerde çocukla birlikte oynayın. Hangi oyunları sevdiğini ve kimlerle konuştuğunu öğrenmenin en kolay yolu budur."
+      }
+     ]
+    },
+    {
+     "id": "oyun-secimi",
+     "baslik": "Oyun seçimi ve içerik dereceleri",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Roblox deneyimlerin içerik derecesi vardır; Kids hesapları orta (Moderate) veya daha düşük olanları oynayabilir, Select hesapları kısıtlı (Restricted) oyunlara giremez.",
+        "Beğeni oranı, oyuncu sayısı ve son güncelleme tarihine bakın; yıllardır güncellenmeyen oyunlarda hata ve boş sunucu sık görülür.",
+        "Oyun içinde başka bir siteye veya uygulamaya yönlendiren, kişisel bilgi isteyen oyunlardan uzak durun.",
+        "Sunucuya girince sohbet ve konuşma ayarını kontrol edin; yanlış kişilerle konuşmak çoğu zaman oyunun kendisinden daha büyük risktir.",
+        "Bir oyunu kendi yapmak isterseniz ücretsiz Roblox Studio programını deneyin; yapım dünyası ayrı ve öğretici bir keşiftir."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Derecesi veya yorumu belirsiz bir oyun varsa önce kendiniz birkaç dakika deneyin, sonra çocuğa açın."
+      }
+     ]
+    },
+    {
+     "id": "robux-ve-avatar",
+     "baslik": "Robux, Premium ve harcama düzeni",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**Robux**, Roblox'un oyun içi parasıdır. Kıyafet, oyun içi güç ve ek içerik için kullanılır. Robux gerçek parayla alınır; Roblox'un duyurusuna göre web sitesi, bilgisayar veya hediye kartıyla alım, mağaza uygulamasından aldığınızdan genelde daha fazla Robux verir (oran değişebilir, satın alırken ekranda görünen miktara bakın)."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Aylık bütçe belirleyin** ve Robux'u bir hedef (örneğin tek bir eşya) için alın; sürekli küçük alımlar toplamda şaşırtıcı olabilir.",
+        "**Hediye kartı** kullanmak, kayıtlı kart bilgisini hesaba bağlamaktan daha güvenlidir; bütçe kendiliğinden sınırlanır.",
+        "**Premium üyelik** aylık Robux ve indirim sunar, ama bu da bir abonelik harcamasıdır; ihtiyacınız yoksa almayın.",
+        "**Ücretsiz Robux** vaat eden her site, uygulama ve video dolandırıcılıktır; hiçbir yasal ücretsiz Robux kodu parolanızı istemez."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Ücretsiz Robux, ücretsiz kıyafet hilesi veya Robux çoğaltma vaat eden siteler hesap bilgilerini çalmak için vardır. Parolanızı, hesap bağlantınızı veya güvenlik kodunuzu kimseyle paylaşmayın."
+      }
+     ]
+    },
+    {
+     "id": "ebeveyn",
+     "baslik": "Ebeveyn kontrolleri: nereden, neyi ayarlarsınız?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Çocuğun hesabına ebeveyn hesabını bağladıktan sonra ayarlar şu başlıkta toplanır: Ayarlar içindeki ebeveyn kontrolleri bölümü. Menü adlarını Roblox değiştirebildiği için ekranı kendiniz kontrol edin."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**İçerik derecesi:** çocuğun hangi olgunluk düzeyindeki oyunları oynayacağını belirleyin.",
+        "**Sohbet:** açık veya kapalı olarak ayarlanabilir; 9 yaş altında varsayılan kapalıdır.",
+        "**Ekran süresi:** Kids ve 9-12 yaş Select hesaplarında günlük süre sınırı konabilir.",
+        "**Harcama:** aylık harcama limiti ve harcama bildirimi ayarlanabilir; hediye kartı bozdurma bu limite dahil değildir.",
+        "**Robux transferleri:** aktarım limitleri, onay ve geçmiş kayıtları vardır.",
+        "**Güvenilir arkadaşlar ve envanter görünürlüğü:** kimlerle konuşulabileceğini ve envanterin kime görüneceğini kısıtlayın.",
+        "**Ebeveyn modu:** 6 haneli PIN ile korunur; çocuk ayarları değiştiremez."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "13 yaşından itibaren çocuk kendi ekran süresini ve engellemelerini yönetebilir; 16 ve üstünde denetim daha da azalır. Büyüyen çocukla ayarları konuşarak, birlikte karar vererek güncelleyin."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Sık yapılan hatalar",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Kayıtlı kartı çocuğun hesabına bağlı bırakmak. Hediye kartı ve aylık limit çok daha güvenlidir.",
+        "Sohbeti tamamen açık bırakıp kimlerle konuşulduğunu hiç sormamak.",
+        "Yaşı yanlış girmek. Sınırlar yanlış yaş grubuna göre çalışır.",
+        "Tanınmayan kişilerin oyun dışı mesajlaşma uygulamasına geçme isteğini kabul etmek.",
+        "Bir oyunda aldığı eşyalar için gerçek para veya hesap alışverişine girmek. Roblox kuralları hesap ticaretini yasaklar."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Tanımadığı biri oyun dışı bir uygulamaya geçmeyi, fotoğraf veya kişisel bilgi paylaşmayı isterse çocuk konuşmayı bırakmalı ve bir yetişkine söylemelidir; ebeveynler kişiyi engelleyip raporlayabilir."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Hesap güvenliği ve harcama uyarısı",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Hesabınızı korumak, oyun içi güvenliğin yarısıdır. Hesabın e-postası ve telefon numarası güncel olsun; böylece sorun yaşarsanız geri alabilirsiniz."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Her hizmette farklı bir parola kullanın ve iki adımlı doğrulamayı açın.",
+        "Oyun içi bir kişi sizden \"ücretsiz eşya karşılığı\" parola, kod veya cookie isterse yanıt vermeyin; bu bir dolandırıcılıktır.",
+        "Hile, exploit, dışarıdan çalıştırılan hileli yazılım ve hesap satışı hem kurallara aykırıdır hem de hesabınızı kapattırır.",
+        "Harcama bildirimlerini açık tutun; beklenmedik bir alım görürseniz parolayı değiştirip Roblox destek ekibine bildirin."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Ücretsiz Robux veya ücretsiz üyelik veren siteler gerçekte hesap çalar ve parolanızı hedef alır. Roblox'un resmî yolu dışındaki her Robux teklifini reddedin."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Sık sorulan sorular",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Roblox ücretsiz mi?",
+         "c": "Evet, oyunlar ücretsiz oynanır. Robux ve Premium üyelik isteğe bağlıdır."
+        },
+        {
+         "s": "Çocuğum kaç yaşında başlamalı?",
+         "c": "5-8 yaş için Roblox Kids hesapları var; ebeveyn kontrolleriyle ve birlikte başlamak en doğrusu."
+        },
+        {
+         "s": "Sohbet için yaş kontrolü neden isteniyor?",
+         "c": "Roblox, 7 Ocak 2026'dan beri sohbette yaş grubuna göre sınırlama uyguluyor; böylece çocuklar yetişkinlerle serbestçe yazışamıyor."
+        },
+        {
+         "s": "Ücretsiz Robux alabilir miyim?",
+         "c": "Hayır. Ücretsiz Robux dağıtan siteler ve kodlar dolandırıcılıktır; yalnızca resmî mağazadan satın alın."
+        },
+        {
+         "s": "Harcamayı nasıl sınırlarım?",
+         "c": "Ebeveyn kontrollerinden aylık harcama limiti koyun ve mümkünse kayıtlı kart yerine hediye kartı kullanın."
+        },
+        {
+         "s": "Hesabım çalınırsa ne yapmalıyım?",
+         "c": "Parolayı değiştirin, iki adımlı doğrulamayı açın, e-postanızı kontrol edin ve Roblox destek sayfasından hesabı geri alma talebi açın."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "en": {
+   "baslik": "Roblox Beginner and Parental Safety Guide (2026)",
+   "ozet": "A guide for new Roblox players and parents covering account types, first steps, a Robux budget and parental controls. Age checks have been required since early 2026.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Platform of user-made games"
+    },
+    {
+     "ad": "Platform",
+     "deger": "PC, Mac, iOS, Android, Xbox, PlayStation"
+    },
+    {
+     "ad": "Pricing model",
+     "deger": "Free; Robux and Premium membership are optional"
+    },
+    {
+     "ad": "Current version",
+     "deger": "Continuously updated platform; age checks in effect since 7 January 2026"
+    },
+    {
+     "ad": "Turkish support",
+     "deger": "Yes, language is selected in settings (official list not verified)"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "What is Roblox and what changed in 2026?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Roblox is not a single game; it is a platform where you enter small and large games made by millions of users (Roblox calls them experiences). With the same account you can play a survival game one day and a racing or role-play game the next."
+      },
+      {
+       "tip": "p",
+       "metin": "The biggest 2026 change was on the safety side. **Since 7 January 2026** chat requires an age check worldwide: a facial age estimate through the phone camera, with ID verification optional for players 13 and over. In early June 2026 two child-focused account types also arrived: **Roblox Kids** (ages 5-8) and **Roblox Select** (ages 9-15)."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "If the age is entered wrongly, chat and content limits are applied wrongly too. When you create a child's account, enter their real birth year."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Before you start: account and device",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Roblox is free and runs on PC, Mac, iOS, Android, Xbox and PlayStation. When you sign up your age group is set, and chat and content settings follow from it:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Age group",
+        "Account type / status",
+        "Key point"
+       ],
+       "satirlar": [
+        [
+         "5-8",
+         "Roblox Kids",
+         "Only games rated Moderate or lower"
+        ],
+        [
+         "9-12",
+         "Roblox Select",
+         "Restricted content; screen time and spending controls available"
+        ],
+        [
+         "13-15",
+         "Roblox Select",
+         "Cannot play Restricted games; parental settings apply"
+        ],
+        [
+         "16-17",
+         "Standard account",
+         "Fewer parental controls"
+        ],
+        [
+         "18 and over",
+         "Adult account",
+         "Full access; extra features with ID verification"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Under 9, chat is off by default and only turns on if a parent consents. Roblox classes ages as U9, 9-12, 13-15, 16-17, 18-20 and 21+. System requirements are low; a recent phone or a mid-range computer runs most games, though heavy games may need lower settings."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Download Roblox only from the official Roblox site or the app stores. Fake apps and sites offering free Robux steal accounts."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "The first hours: step by step",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The order below gives a safe and efficient start for both child and adult new players."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Create the account correctly",
+         "metin": "Enter the real birth year, choose a strong unique password and turn on two-step verification if possible."
+        },
+        {
+         "baslik": "Finish the age check",
+         "metin": "If you want to use chat, finish the facial age estimate. If you skip it chat stays off, which for children is often a good default."
+        },
+        {
+         "baslik": "Play with the avatar",
+         "metin": "Edit the look and clothes in the Avatar tab using free options. You do not need to buy paid items at the start."
+        },
+        {
+         "baslik": "Pick a popular, rated game",
+         "metin": "On the Discover page read the game description, content rating and player count. Start with a game friends or family already know."
+        },
+        {
+         "baslik": "Learn the controls and sound",
+         "metin": "In the first minutes try the camera, movement and jump keys; every game's interface is a little different."
+        },
+        {
+         "baslik": "Set the time",
+         "metin": "Decide playing hours up front; parental controls can set a screen-time limit."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Play together for the first few days. It is the easiest way to learn which games your child likes and who they talk to."
+      }
+     ]
+    },
+    {
+     "id": "oyun-secimi",
+     "baslik": "Choosing games and content ratings",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Roblox experiences have a content rating; Kids accounts can play Moderate or lower, and Select accounts cannot enter Restricted games.",
+        "Look at the like ratio, player count and last update date; games not updated for years often have bugs and empty servers.",
+        "Avoid games that send you to another site or app or ask for personal information.",
+        "Once in a server, check the chat and voice settings; talking to the wrong people is often a bigger risk than the game itself.",
+        "If you want to make a game yourself, try the free Roblox Studio program; the building world is a separate and instructive discovery."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "If a game has an unclear rating or reviews, try it yourself for a few minutes before opening it to your child."
+      }
+     ]
+    },
+    {
+     "id": "robux-ve-avatar",
+     "baslik": "Robux, Premium and spending habits",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**Robux** is Roblox's in-game currency, used for clothes, in-game power and extra content. Robux is bought with real money; according to Roblox's announcement, buying through the website, a computer or a gift card usually gives more Robux than buying through a store app (the rate can change, so check the amount shown on screen when you buy)."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Set a monthly budget** and buy Robux for a goal (for example a single item); constant small purchases can add up to a surprise.",
+        "**Using a gift card** is safer than linking a saved card to the account; the budget limits itself.",
+        "**Premium membership** gives monthly Robux and discounts, but it is also a subscription cost; skip it if you do not need it.",
+        "**Free Robux** offered by any site, app or video is a scam; no legitimate free Robux code asks for your password."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Sites promising free Robux, free clothes tricks or Robux duplication exist to steal account details. Never share your password, account link or security code with anyone."
+      }
+     ]
+    },
+    {
+     "id": "ebeveyn",
+     "baslik": "Parental controls: where and what you can set",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "After linking the parent account to the child's account, the settings gather in the parental controls section inside Settings. Roblox can rename menus, so check the screen yourself."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Content maturity:** decide which maturity level of games the child may play.",
+        "**Chat:** can be set to on or off; it is off by default under 9.",
+        "**Screen time:** a daily limit can be set on Kids and age 9-12 Select accounts.",
+        "**Spending:** a monthly spending limit and spending notifications can be set; redeeming a gift card is not counted against this limit.",
+        "**Robux transfers:** there are transfer limits, approvals and history records.",
+        "**Trusted friends and inventory visibility:** restrict who they can talk to and who can see their inventory.",
+        "**Parent mode:** protected by a 6-digit PIN so the child cannot change settings."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "From age 13 the child can manage their own screen time and blocking, and from 16 up there is even less control. Update settings together with the growing child through conversation."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Common mistakes",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Leaving a saved card linked to a child's account. A gift card and a monthly limit are much safer.",
+        "Leaving chat fully open and never asking who the child talks to.",
+        "Entering the wrong age. Limits then work for the wrong age group.",
+        "Accepting a stranger's request to move to a messaging app outside the game.",
+        "Trading real money or accounts for items. Roblox rules forbid account trading."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "If someone they do not know asks them to move to an outside app or to share photos or personal details, the child should stop talking and tell an adult; parents can block and report the person."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Account security and spending warning",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Protecting your account is half of in-game safety. Keep the account's email and phone number up to date so you can recover it if there is a problem."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Use a different password for every service and turn on two-step verification.",
+        "If someone in a game asks for a password, code or cookie in exchange for free items, do not answer; it is a scam.",
+        "Cheats, exploits, third-party cheating software and account selling both break the rules and get your account banned.",
+        "Keep spending notifications on; if you see an unexpected purchase, change the password and tell Roblox support."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Sites giving free Robux or free membership actually steal accounts and aim at your password. Refuse every Robux offer outside Roblox's official way."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Frequently asked questions",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is Roblox free?",
+         "c": "Yes, games are free to play. Robux and Premium membership are optional."
+        },
+        {
+         "s": "What age should my child start?",
+         "c": "There are Roblox Kids accounts for ages 5-8; starting together with parental controls is best."
+        },
+        {
+         "s": "Why is an age check needed for chat?",
+         "c": "Since 7 January 2026 Roblox limits chat by age group, so children cannot freely write with adults."
+        },
+        {
+         "s": "Can I get free Robux?",
+         "c": "No. Sites and codes giving away free Robux are scams; buy only from the official store."
+        },
+        {
+         "s": "How do I limit spending?",
+         "c": "Set a monthly spending limit in parental controls and, if possible, use a gift card instead of a saved card."
+        },
+        {
+         "s": "What if my account is stolen?",
+         "c": "Change the password, turn on two-step verification, check your email and open an account recovery request through Roblox support."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "fr": {
+   "baslik": "Guide du débutant Roblox et sécurité parentale (2026)",
+   "ozet": "Un guide pour les nouveaux joueurs Roblox et leurs parents : types de comptes, premiers pas, budget Robux et contrôle parental. La vérification de l'âge est obligatoire depuis début 2026.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Plateforme de jeux créés par les utilisateurs"
+    },
+    {
+     "ad": "Plateforme",
+     "deger": "PC, Mac, iOS, Android, Xbox, PlayStation"
+    },
+    {
+     "ad": "Modèle économique",
+     "deger": "Gratuit ; Robux et abonnement Premium facultatifs"
+    },
+    {
+     "ad": "Version actuelle",
+     "deger": "Plateforme mise à jour en continu ; vérification d'âge en vigueur depuis le 7 janvier 2026"
+    },
+    {
+     "ad": "Prise en charge du turc",
+     "deger": "Oui, la langue se choisit dans les paramètres (liste officielle non vérifiée)"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "Qu'est-ce que Roblox et qu'est-ce qui a changé en 2026 ?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Roblox n'est pas un seul jeu ; c'est une plateforme où l'on entre dans de petits et grands jeux créés par des millions d'utilisateurs (Roblox les appelle des expériences). Avec le même compte, on peut jouer à un jeu de survie un jour et à une course ou un jeu de rôle le lendemain."
+      },
+      {
+       "tip": "p",
+       "metin": "Le plus grand changement de 2026 concerne la sécurité. **Depuis le 7 janvier 2026**, le chat exige une vérification de l'âge dans le monde entier : estimation faciale de l'âge via la caméra du téléphone, avec une vérification par pièce d'identité facultative dès 13 ans. Début juin 2026, deux types de comptes destinés aux enfants sont aussi arrivés : **Roblox Kids** (5-8 ans) et **Roblox Select** (9-15 ans)."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si l'âge est mal saisi, les limites de chat et de contenu sont mal appliquées aussi. En créant le compte d'un enfant, indiquez sa vraie année de naissance."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Avant de commencer : compte et appareil",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Roblox est gratuit et fonctionne sur PC, Mac, iOS, Android, Xbox et PlayStation. À l'inscription, votre tranche d'âge est définie, et les réglages de chat et de contenu en découlent :"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Tranche d'âge",
+        "Type de compte / statut",
+        "Point clé"
+       ],
+       "satirlar": [
+        [
+         "5-8",
+         "Roblox Kids",
+         "Uniquement les jeux de niveau Modéré ou inférieur"
+        ],
+        [
+         "9-12",
+         "Roblox Select",
+         "Contenu restreint ; contrôle du temps d'écran et des dépenses possible"
+        ],
+        [
+         "13-15",
+         "Roblox Select",
+         "Pas d'accès aux jeux Restreints ; réglages parentaux applicables"
+        ],
+        [
+         "16-17",
+         "Compte standard",
+         "Moins de contrôle parental"
+        ],
+        [
+         "18 et plus",
+         "Compte adulte",
+         "Accès complet ; fonctions en plus avec vérification d'identité"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Avant 9 ans, le chat est désactivé par défaut et ne s'active qu'avec le consentement d'un parent. Roblox classe les âges en U9, 9-12, 13-15, 16-17, 18-20 et 21+. La configuration requise est faible ; un téléphone récent ou un ordinateur de milieu de gamme fait tourner la plupart des jeux, même si les jeux lourds peuvent demander des réglages plus bas."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Téléchargez Roblox uniquement depuis le site officiel de Roblox ou les boutiques d'applications. Les fausses applications et sites qui offrent des Robux gratuits volent les comptes."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "Les premières heures : pas à pas",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "L'ordre ci-dessous offre un début sûr et efficace, pour un enfant comme pour un adulte débutant."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Créez le compte correctement",
+         "metin": "Saisissez la vraie année de naissance, choisissez un mot de passe fort et unique et activez la validation en deux étapes si possible."
+        },
+        {
+         "baslik": "Terminez la vérification de l'âge",
+         "metin": "Si vous voulez utiliser le chat, terminez l'estimation faciale de l'âge. Si vous l'ignorez, le chat reste désactivé, ce qui est souvent un bon réglage par défaut pour un enfant."
+        },
+        {
+         "baslik": "Personnalisez l'avatar",
+         "metin": "Modifiez l'apparence et les vêtements dans l'onglet Avatar avec des options gratuites. Inutile d'acheter des objets payants au début."
+        },
+        {
+         "baslik": "Choisissez un jeu populaire et classé",
+         "metin": "Sur la page Découvrir, lisez la description du jeu, sa classification de contenu et le nombre de joueurs. Commencez par un jeu que des amis ou la famille connaissent déjà."
+        },
+        {
+         "baslik": "Apprenez les commandes et le son",
+         "metin": "Dans les premières minutes, essayez la caméra, le déplacement et le saut ; l'interface de chaque jeu est un peu différente."
+        },
+        {
+         "baslik": "Fixez la durée",
+         "metin": "Décidez des heures de jeu dès le départ ; le contrôle parental permet de fixer une limite de temps d'écran."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Jouez ensemble les premiers jours. C'est le moyen le plus simple de savoir quels jeux plaisent à votre enfant et avec qui il discute."
+      }
+     ]
+    },
+    {
+     "id": "oyun-secimi",
+     "baslik": "Choisir ses jeux et les classifications de contenu",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Les expériences Roblox ont une classification de contenu ; les comptes Kids peuvent jouer au niveau Modéré ou inférieur, et les comptes Select ne peuvent pas entrer dans les jeux Restreints.",
+        "Regardez le taux de mentions j'aime, le nombre de joueurs et la date de dernière mise à jour ; les jeux non mis à jour depuis des années ont souvent des bugs et des serveurs vides.",
+        "Évitez les jeux qui vous renvoient vers un autre site ou une autre application ou qui demandent des informations personnelles.",
+        "Une fois sur un serveur, vérifiez les réglages de chat et de voix ; parler aux mauvaises personnes est souvent un risque plus grand que le jeu lui-même.",
+        "Si vous voulez créer un jeu vous-même, essayez le programme gratuit Roblox Studio ; l'univers de la création est une découverte à part et instructive."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si un jeu a une classification ou des avis peu clairs, essayez-le vous-même quelques minutes avant de l'ouvrir à votre enfant."
+      }
+     ]
+    },
+    {
+     "id": "robux-ve-avatar",
+     "baslik": "Robux, Premium et habitudes de dépense",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Le **Robux** est la monnaie du jeu de Roblox, utilisée pour les vêtements, les avantages en jeu et les contenus supplémentaires. Les Robux s'achètent avec de l'argent réel ; d'après l'annonce de Roblox, acheter via le site web, un ordinateur ou une carte cadeau donne généralement plus de Robux que via une application de boutique (le taux peut changer, vérifiez le montant affiché à l'écran lors de l'achat)."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Fixez un budget mensuel** et achetez des Robux pour un objectif (par exemple un seul objet) ; de petits achats constants peuvent faire une mauvaise surprise.",
+        "**Utiliser une carte cadeau** est plus sûr que de lier une carte enregistrée au compte ; le budget se limite de lui-même.",
+        "**L'abonnement Premium** donne des Robux mensuels et des réductions, mais c'est aussi un coût d'abonnement ; passez votre chemin si vous n'en avez pas besoin.",
+        "**Les Robux gratuits** proposés par un site, une application ou une vidéo sont une arnaque ; aucun code légitime de Robux gratuits ne demande votre mot de passe."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Les sites qui promettent des Robux gratuits, des astuces de vêtements gratuits ou la duplication de Robux existent pour voler les données de compte. Ne partagez jamais votre mot de passe, le lien de votre compte ou votre code de sécurité."
+      }
+     ]
+    },
+    {
+     "id": "ebeveyn",
+     "baslik": "Contrôle parental : où et que régler ?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Une fois le compte parent lié à celui de l'enfant, les réglages se regroupent dans la section contrôle parental des Paramètres. Roblox pouvant renommer les menus, vérifiez l'écran vous-même."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Maturité du contenu :** décidez du niveau de maturité des jeux auxquels l'enfant peut jouer.",
+        "**Chat :** activable ou désactivable ; désactivé par défaut avant 9 ans.",
+        "**Temps d'écran :** une limite quotidienne peut être fixée sur les comptes Kids et Select de 9 à 12 ans.",
+        "**Dépenses :** une limite de dépenses mensuelle et des notifications de dépenses peuvent être réglées ; l'échange d'une carte cadeau n'est pas compté dans cette limite.",
+        "**Transferts de Robux :** il existe des limites de transfert, des validations et un historique.",
+        "**Amis de confiance et visibilité de l'inventaire :** restreignez avec qui il peut parler et qui peut voir son inventaire.",
+        "**Mode parent :** protégé par un code PIN à 6 chiffres pour que l'enfant ne puisse pas modifier les réglages."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "À partir de 13 ans, l'enfant peut gérer son propre temps d'écran et ses blocages, et à partir de 16 ans le contrôle est encore plus réduit. Mettez les réglages à jour avec l'enfant qui grandit, en discutant."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Erreurs fréquentes",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Laisser une carte enregistrée liée au compte d'un enfant. Une carte cadeau et une limite mensuelle sont bien plus sûres.",
+        "Laisser le chat entièrement ouvert sans jamais demander avec qui l'enfant parle.",
+        "Saisir un mauvais âge. Les limites s'appliquent alors à la mauvaise tranche d'âge.",
+        "Accepter la demande d'un inconnu de passer sur une application de messagerie hors du jeu.",
+        "Échanger de l'argent réel ou des comptes contre des objets. Le règlement de Roblox interdit l'échange de comptes."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Si une personne inconnue lui demande de passer sur une application extérieure ou de partager des photos ou des informations personnelles, l'enfant doit cesser de parler et prévenir un adulte ; les parents peuvent bloquer et signaler la personne."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Sécurité du compte et avertissement sur les dépenses",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Protéger votre compte, c'est la moitié de la sécurité en jeu. Gardez l'e-mail et le numéro de téléphone du compte à jour pour pouvoir le récupérer en cas de problème."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Utilisez un mot de passe différent pour chaque service et activez la validation en deux étapes.",
+        "Si quelqu'un dans un jeu vous demande un mot de passe, un code ou un cookie en échange d'objets gratuits, ne répondez pas ; c'est une arnaque.",
+        "Les triches, exploits, logiciels de triche tiers et la vente de comptes enfreignent le règlement et font bannir votre compte.",
+        "Gardez les notifications de dépenses activées ; en cas d'achat inattendu, changez le mot de passe et prévenez le support Roblox."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Les sites qui offrent des Robux ou un abonnement gratuits volent en réalité les comptes et visent votre mot de passe. Refusez toute offre de Robux en dehors de la voie officielle de Roblox."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Questions fréquentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Roblox est-il gratuit ?",
+         "c": "Oui, les jeux sont gratuits. Les Robux et l'abonnement Premium sont facultatifs."
+        },
+        {
+         "s": "À quel âge mon enfant peut-il commencer ?",
+         "c": "Il existe des comptes Roblox Kids pour les 5-8 ans ; le mieux est de commencer ensemble, avec le contrôle parental."
+        },
+        {
+         "s": "Pourquoi une vérification de l'âge pour le chat ?",
+         "c": "Depuis le 7 janvier 2026, Roblox limite le chat par tranche d'âge, afin que les enfants ne puissent pas écrire librement avec des adultes."
+        },
+        {
+         "s": "Puis-je obtenir des Robux gratuits ?",
+         "c": "Non. Les sites et codes qui offrent des Robux gratuits sont des arnaques ; achetez uniquement dans la boutique officielle."
+        },
+        {
+         "s": "Comment limiter les dépenses ?",
+         "c": "Fixez une limite de dépenses mensuelle dans le contrôle parental et, si possible, utilisez une carte cadeau plutôt qu'une carte enregistrée."
+        },
+        {
+         "s": "Que faire si mon compte est volé ?",
+         "c": "Changez le mot de passe, activez la validation en deux étapes, vérifiez votre e-mail et ouvrez une demande de récupération de compte auprès du support Roblox."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "es": {
+   "baslik": "Guía para principiantes de Roblox y seguridad parental (2026)",
+   "ozet": "Una guía para jugadores nuevos de Roblox y sus padres con tipos de cuenta, primeros pasos, presupuesto de Robux y controles parentales. La verificación de edad es obligatoria desde principios de 2026.",
+   "kunye": [
+    {
+     "ad": "Género",
+     "deger": "Plataforma de juegos creados por usuarios"
+    },
+    {
+     "ad": "Plataforma",
+     "deger": "PC, Mac, iOS, Android, Xbox, PlayStation"
+    },
+    {
+     "ad": "Modelo de precio",
+     "deger": "Gratis; Robux y suscripción Premium opcionales"
+    },
+    {
+     "ad": "Versión actual",
+     "deger": "Plataforma actualizada de forma continua; verificación de edad vigente desde el 7 de enero de 2026"
+    },
+    {
+     "ad": "Soporte en turco",
+     "deger": "Sí, el idioma se elige en los ajustes (lista oficial sin verificar)"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "¿Qué es Roblox y qué cambió en 2026?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Roblox no es un solo juego; es una plataforma donde entras en juegos pequeños y grandes creados por millones de usuarios (Roblox los llama experiencias). Con la misma cuenta puedes jugar un día a un juego de supervivencia y al siguiente a uno de carreras o de rol."
+      },
+      {
+       "tip": "p",
+       "metin": "El mayor cambio de 2026 fue en la seguridad. **Desde el 7 de enero de 2026** el chat exige una verificación de edad en todo el mundo: una estimación facial de la edad con la cámara del móvil, y verificación con documento opcional a partir de los 13 años. A principios de junio de 2026 llegaron además dos tipos de cuenta para niños: **Roblox Kids** (5-8 años) y **Roblox Select** (9-15 años)."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si la edad se introduce mal, los límites de chat y de contenido también se aplican mal. Al crear la cuenta de un niño, pon su año de nacimiento real."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Antes de empezar: cuenta y dispositivo",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Roblox es gratis y funciona en PC, Mac, iOS, Android, Xbox y PlayStation. Al registrarte se define tu grupo de edad, y de ahí salen los ajustes de chat y contenido:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Grupo de edad",
+        "Tipo de cuenta / estado",
+        "Punto clave"
+       ],
+       "satirlar": [
+        [
+         "5-8",
+         "Roblox Kids",
+         "Solo juegos de clasificación Moderada o inferior"
+        ],
+        [
+         "9-12",
+         "Roblox Select",
+         "Contenido restringido; control de tiempo de pantalla y de gasto posible"
+        ],
+        [
+         "13-15",
+         "Roblox Select",
+         "No puede jugar a juegos Restringidos; se aplican los ajustes parentales"
+        ],
+        [
+         "16-17",
+         "Cuenta estándar",
+         "Menos control parental"
+        ],
+        [
+         "18 o más",
+         "Cuenta de adulto",
+         "Acceso completo; funciones extra con verificación de identidad"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Por debajo de los 9 años el chat está desactivado por defecto y solo se activa si un padre da su consentimiento. Roblox clasifica las edades en U9, 9-12, 13-15, 16-17, 18-20 y 21+. Los requisitos del sistema son bajos; un móvil reciente o un ordenador de gama media mueve la mayoría de los juegos, aunque los juegos pesados pueden pedir ajustes más bajos."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Descarga Roblox solo desde el sitio oficial de Roblox o las tiendas de aplicaciones. Las aplicaciones y sitios falsos que ofrecen Robux gratis roban cuentas."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "Las primeras horas: paso a paso",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "El orden siguiente ofrece un comienzo seguro y eficaz, tanto para un niño como para un adulto principiante."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Crea la cuenta correctamente",
+         "metin": "Introduce el año de nacimiento real, elige una contraseña fuerte y única y activa la verificación en dos pasos si puedes."
+        },
+        {
+         "baslik": "Termina la verificación de edad",
+         "metin": "Si quieres usar el chat, termina la estimación facial de la edad. Si la omites, el chat sigue desactivado, lo que para un niño suele ser un buen valor por defecto."
+        },
+        {
+         "baslik": "Personaliza el avatar",
+         "metin": "Edita el aspecto y la ropa en la pestaña Avatar con opciones gratuitas. No hace falta comprar objetos de pago al principio."
+        },
+        {
+         "baslik": "Elige un juego popular y clasificado",
+         "metin": "En la página Descubrir lee la descripción del juego, su clasificación de contenido y el número de jugadores. Empieza por un juego que amigos o familia ya conozcan."
+        },
+        {
+         "baslik": "Aprende los controles y el sonido",
+         "metin": "En los primeros minutos prueba la cámara, el movimiento y el salto; la interfaz de cada juego es un poco distinta."
+        },
+        {
+         "baslik": "Fija el tiempo",
+         "metin": "Decide las horas de juego desde el principio; el control parental permite poner un límite de tiempo de pantalla."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Jugad juntos los primeros días. Es la forma más fácil de saber qué juegos le gustan a tu hijo y con quién habla."
+      }
+     ]
+    },
+    {
+     "id": "oyun-secimi",
+     "baslik": "Elegir juegos y clasificaciones de contenido",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Las experiencias de Roblox tienen una clasificación de contenido; las cuentas Kids pueden jugar a Moderado o inferior, y las cuentas Select no pueden entrar en juegos Restringidos.",
+        "Mira la proporción de me gusta, el número de jugadores y la fecha de la última actualización; los juegos sin actualizar desde hace años suelen tener errores y servidores vacíos.",
+        "Evita los juegos que te mandan a otra web o aplicación o que piden datos personales.",
+        "Una vez en un servidor, revisa los ajustes de chat y de voz; hablar con las personas equivocadas suele ser un riesgo mayor que el propio juego.",
+        "Si quieres crear un juego tú mismo, prueba el programa gratuito Roblox Studio; el mundo de la creación es un descubrimiento aparte e instructivo."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Si un juego tiene una clasificación o unas reseñas poco claras, pruébalo tú mismo unos minutos antes de abrírselo a tu hijo."
+      }
+     ]
+    },
+    {
+     "id": "robux-ve-avatar",
+     "baslik": "Robux, Premium y hábitos de gasto",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "El **Robux** es la moneda del juego de Roblox, que se usa para ropa, ventajas en el juego y contenido extra. Los Robux se compran con dinero real; según el anuncio de Roblox, comprar a través de la web, un ordenador o una tarjeta regalo suele dar más Robux que comprar desde una aplicación de tienda (la proporción puede cambiar, así que mira la cantidad que aparece en pantalla al comprar)."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Fija un presupuesto mensual** y compra Robux para un objetivo (por ejemplo un solo objeto); las compras pequeñas constantes pueden dar una sorpresa.",
+        "**Usar una tarjeta regalo** es más seguro que vincular una tarjeta guardada a la cuenta; el presupuesto se limita solo.",
+        "**La suscripción Premium** da Robux mensuales y descuentos, pero también es un coste de suscripción; sáltatela si no la necesitas.",
+        "**Los Robux gratis** que ofrezca cualquier sitio, aplicación o vídeo son una estafa; ningún código legítimo de Robux gratis pide tu contraseña."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Los sitios que prometen Robux gratis, trucos de ropa gratis o duplicación de Robux existen para robar los datos de la cuenta. No compartas nunca tu contraseña, el enlace de tu cuenta ni tu código de seguridad con nadie."
+      }
+     ]
+    },
+    {
+     "id": "ebeveyn",
+     "baslik": "Controles parentales: dónde y qué se ajusta",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Tras vincular la cuenta de los padres a la del niño, los ajustes se reúnen en la sección de controles parentales dentro de Ajustes. Roblox puede cambiar el nombre de los menús, así que comprueba la pantalla tú mismo."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Madurez del contenido:** decide a qué nivel de madurez de juegos puede jugar el niño.",
+        "**Chat:** se puede poner activado o desactivado; por defecto está desactivado por debajo de los 9 años.",
+        "**Tiempo de pantalla:** se puede fijar un límite diario en cuentas Kids y Select de 9 a 12 años.",
+        "**Gasto:** se pueden fijar un límite de gasto mensual y avisos de gasto; canjear una tarjeta regalo no cuenta para este límite.",
+        "**Transferencias de Robux:** hay límites de transferencia, aprobaciones y registros de historial.",
+        "**Amigos de confianza y visibilidad del inventario:** restringe con quién puede hablar y quién puede ver su inventario.",
+        "**Modo padre:** protegido con un PIN de 6 dígitos para que el niño no pueda cambiar los ajustes."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "A partir de los 13 años el niño puede gestionar su propio tiempo de pantalla y sus bloqueos, y desde los 16 hay aún menos control. Actualiza los ajustes junto con el niño que crece, hablando con él."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Errores comunes",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Dejar una tarjeta guardada vinculada a la cuenta de un niño. Una tarjeta regalo y un límite mensual son mucho más seguros.",
+        "Dejar el chat totalmente abierto y no preguntar nunca con quién habla el niño.",
+        "Introducir una edad equivocada. Los límites funcionan entonces para el grupo de edad equivocado.",
+        "Aceptar la petición de un desconocido de pasarse a una aplicación de mensajería fuera del juego.",
+        "Intercambiar dinero real o cuentas por objetos. Las normas de Roblox prohíben el comercio de cuentas."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Si alguien que no conoce le pide pasarse a una aplicación externa o compartir fotos o datos personales, el niño debe dejar de hablar y avisar a un adulto; los padres pueden bloquear y denunciar a esa persona."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Seguridad de la cuenta y aviso sobre gastos",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Proteger tu cuenta es la mitad de la seguridad en el juego. Mantén al día el correo y el teléfono de la cuenta para poder recuperarla si hay un problema."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Usa una contraseña distinta para cada servicio y activa la verificación en dos pasos.",
+        "Si alguien en un juego te pide una contraseña, un código o una cookie a cambio de objetos gratis, no respondas; es una estafa.",
+        "Los trucos, exploits, programas de trampas de terceros y la venta de cuentas incumplen las normas y hacen que te bloqueen la cuenta.",
+        "Mantén activados los avisos de gasto; si ves una compra inesperada, cambia la contraseña y avisa al soporte de Roblox."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Los sitios que dan Robux o una suscripción gratis en realidad roban cuentas y van a por tu contraseña. Rechaza toda oferta de Robux que no sea la vía oficial de Roblox."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Preguntas frecuentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "¿Roblox es gratis?",
+         "c": "Sí, los juegos son gratis. Los Robux y la suscripción Premium son opcionales."
+        },
+        {
+         "s": "¿A qué edad debería empezar mi hijo?",
+         "c": "Hay cuentas Roblox Kids para 5-8 años; lo mejor es empezar juntos y con controles parentales."
+        },
+        {
+         "s": "¿Por qué se pide una verificación de edad para el chat?",
+         "c": "Desde el 7 de enero de 2026 Roblox limita el chat por grupo de edad, para que los niños no puedan escribir libremente con adultos."
+        },
+        {
+         "s": "¿Puedo conseguir Robux gratis?",
+         "c": "No. Los sitios y códigos que regalan Robux gratis son estafas; compra solo en la tienda oficial."
+        },
+        {
+         "s": "¿Cómo limito el gasto?",
+         "c": "Pon un límite de gasto mensual en los controles parentales y, si es posible, usa una tarjeta regalo en lugar de una tarjeta guardada."
+        },
+        {
+         "s": "¿Qué hago si me roban la cuenta?",
+         "c": "Cambia la contraseña, activa la verificación en dos pasos, revisa tu correo y abre una solicitud de recuperación de cuenta en el soporte de Roblox."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

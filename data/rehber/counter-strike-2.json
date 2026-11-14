@@ -1,0 +1,1697 @@
+{
+ "oyun": "counter-strike-2",
+ "guncelleme": "2026-11-14",
+ "surum": "Premier Sezon 5 / Güncelleme 22 Eylül 2026",
+ "kaynaklar": [
+  {
+   "url": "https://www.counter-strike.net/news/updates",
+   "ad": "Counter-Strike 2 Updates (Valve)"
+  },
+  {
+   "url": "https://www.counter-strike.net/news",
+   "ad": "Counter-Strike news (Valve)"
+  },
+  {
+   "url": "https://store.steampowered.com/app/730/CounterStrike_2",
+   "ad": "Counter-Strike 2 on Steam"
+  },
+  {
+   "url": "https://totalcsgo.com/guides/how-to-defuse-the-bomb",
+   "ad": "How to Defuse the Bomb in CS2 (Total CS)"
+  }
+ ],
+ "diller": {
+  "tr": {
+   "baslik": "Counter-Strike 2 Başlangıç Rehberi: Kurulum, Modlar, Ayar ve Rank",
+   "ozet": "Counter-Strike 2, Valve'in Steam'de ücretsiz sunduğu 5'e 5 taktik nişancı oyunudur. Bu rehber yeni başlayanlar ve uzun aradan dönenler için kurulumdan ilk Premier maçına kadar yol gösterir.",
+   "kunye": [
+    {
+     "ad": "Tür",
+     "deger": "5'e 5 taktik nişancı (FPS)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Windows PC (Steam)"
+    },
+    {
+     "ad": "Fiyat modeli",
+     "deger": "Ücretsiz oynanır; kozmetik ve eşya alımı isteğe bağlı"
+    },
+    {
+     "ad": "Güncel sürüm",
+     "deger": "Premier Sezon 5; 22 Eylül 2026 güncellemesi (Kasım 2026)"
+    },
+    {
+     "ad": "Türkçe desteği",
+     "deger": "Steam üzerinden arayüz dilini ayarlardan seçebilirsin; Türkçe seçeneği için oyun ayarlarına bak"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "nedir",
+     "baslik": "Counter-Strike 2 nedir ve 2026'da durum ne",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Counter-Strike 2'de iki takım beş kişiyle karşılaşır: Teröristler bomba kurmaya, Anti-Teröristler (CT) bunu engellemeye çalışır. Oyunda sınıf veya yetenek yoktur; fark yaratan nişan, bilgi, el bombaları ve takım koordinasyonudur."
+      },
+      {
+       "tip": "p",
+       "metin": "2026'da oyunun dereceli kolu **Premier**'dir ve **Sezon 5** 8 Temmuz 2026'da başlamıştır. Valve'in resmi duyurusuna göre Aktif Görev (Active Duty) havuzunda Ancient, Anubis, Cache, Dust 2, Inferno, Mirage ve Nuke vardır; Cache, Overpass'ın yerini almıştır. Sezonun bitiş tarihi açıklanmamıştır."
+      },
+      {
+       "tip": "p",
+       "metin": "22 Eylül 2026 güncellemesiyle Premier'de harita seçimi yeni bir sıraya bağlanmış, kuyrukla oynanan 3'e 3 'Rush' modu eklenmiş ve klan etiketleri geri gelmiştir. Havuz ve modlar zamanla değişir; kesin liste için oyunun kendi ekranına bak."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Rehberdeki sayılar Kasım 2026 itibarıyladır. Sonraki güncellemeler değişiklik getirebilir; güncel notlar için Valve'in resmi güncelleme sayfasına bak."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Başlamadan önce: Steam, sistem, hesap",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Oyunu Steam üzerinden ücretsiz indirirsin. Steam mağaza sayfasındaki en düşük gereksinimler: Windows 10, 4 donanım iş parçacığı (Intel i5 750 veya üstü), 8 GB RAM, 1 GB belleği olan DirectX 11 uyumlu ekran kartı (Shader Model 5.0) ve **85 GB** boş alan. Disk alanı genellikle yeni başlayanları şaşırtır; önceden yer aç."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Steam hesabın yoksa oluştur ve **Steam Guard** (iki aşamalı doğrulama) aç.",
+        "Anti-hile sistemi VAC'tir ve oyunla birlikte çalışır; ayrıca kurulum gerektirmez.",
+        "Dereceli Premier modu için Prime Status ve CS2 profil seviyesi 10 gerektiği Steam topluluk sorularında geçer (bu bilgi ikincil kaynaktandır; oyunda kilit açıldığını görerek doğrula).",
+        "Resmi Dereceli (Competitive) mod ücretsiz oynanabilir."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Steam dışındaki sitelerden 'oyun indirme' veya 'ücretsiz skin' bağlantıları tehlikelidir. Yalnızca Steam istemcisinden indir."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "İlk maçlar adım adım",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Oyunu kur ve ayarlara bak",
+         "metin": "Steam'den indir, ilk açılışta ses, görüntü ve fare ayarlarını gözden geçir."
+        },
+        {
+         "baslik": "Bot maçı ve Atış Alanı",
+         "metin": "Haritayı ve silahları botlara karşı dene. Bu, kurallara alışmak için en güvenli yoldur."
+        },
+        {
+         "baslik": "Wingman veya Rush gibi kısa modlar",
+         "metin": "Daha az oyuncu ve kısa maç, yeni başlayan için hızlı pratik sağlar."
+        },
+        {
+         "baslik": "Dereceli (Competitive) maça geç",
+         "metin": "Her harita için ayrı rütbe alırsın; ilk galibiyetlerle rütben görünür."
+        },
+        {
+         "baslik": "Premier'e hazırlan",
+         "metin": "Kilit açılınca 10 galibiyet sonunda ilk CS Reytingini alırsın."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Raundlar kısadır ve her raund yeni bir karardır. Bir raund iki dakikadan kısa sürebilir; bu yüzden ölünce maçı izleyip bilgi toplamak, bir sonraki raund için en değerli alışkanlıktır. Her yarı 12 raunttur ve 13 raundu kazanan takım maçı alır (kendi bilgim). Bomba kurulduktan sonra CT'lerin etkisizleştirmek için sınırlı süresi vardır; kit yoksa etkisizleştirme 10 saniye sürer."
+      }
+     ]
+    },
+    {
+     "id": "modlar",
+     "baslik": "Modlar ve harita havuzu",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Kısa özet: Premier ve Dereceli 5'e 5 oynanır ve bomba kurma/etkisizleştirme kuralıyla gider. Wingman 2'ye 2'dir. Rush ise yeni eklenen 3'e 3 kuyruklu moddur. Aktif Görev haritaları Kasım 2026'da şunlardır:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Harita",
+        "Not"
+       ],
+       "satirlar": [
+        [
+         "Ancient",
+         "Orman temalı; iki ana giriş yolu"
+        ],
+        [
+         "Anubis",
+         "Mısır temalı; su kanalı ve açık alanlar"
+        ],
+        [
+         "Cache",
+         "Overpass'ın yerine havuza girdi"
+        ],
+        [
+         "Dust 2",
+         "Klasik; yeni oyuncular için en öğretici harita"
+        ],
+        [
+         "Inferno",
+         "İtalyan köyü; dar sokaklar"
+        ],
+        [
+         "Mirage",
+         "Orta alan önemli; dengeli"
+        ],
+        [
+         "Nuke",
+         "İki katlı; yukarı ve aşağı bombalar"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "İlk haftalar için iki harita seç ve onlarda sürekli oyna: Dust 2 ve Mirage buna uygundur."
+      }
+     ]
+    },
+    {
+     "id": "silah-ekonomi",
+     "baslik": "Silahlar ve ekonomi: temel ilkeler",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Her raund başında alım süresi vardır. Para, kazandığın veya kaybettiğin raundlara ve öldürmelere göre gelir. Kesin tutarlar güncellemelerle değişebileceği için buraya rakam yazmıyoruz; oyunun 'ekonomi' ekranından takip et."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Pistol raundu:** Her yarının ilk raundunda herkesin parası sınırlıdır; pistol ve el bombaları öne çıkar.",
+        "**Eco:** Para biriktirmek için bilerek az alım yapılan raunt.",
+        "**Takım olarak alım:** Birlikte alırsan ve ekonomi uygunsa güçlü silahlar alırsın; tek başına pahalı almak ekonomini bozar.",
+        "**Defuse kit:** CT oyuncuları için bomba etkisizleştirme süresini 10 saniyeden 5 saniyeye indirir."
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Silah türü",
+        "Kimler için",
+        "Not"
+       ],
+       "satirlar": [
+        [
+         "Tabanca",
+         "Hepsi",
+         "Ucuzdur; ilk raundlarda kullanılır"
+        ],
+        [
+         "SMG",
+         "Eco ve ucuz alım",
+         "Hareket halinde etkilidir"
+        ],
+        [
+         "Tüfek",
+         "Ana alım",
+         "Menzil ve hasar için temel silah"
+        ],
+        [
+         "Keskin nişancı",
+         "Deneyimli oyuncu",
+         "Pahalı; kendi yerini bilmek gerekir"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Yeni oyuncuların en kalıcı kazancı **ekonomiyi takımla birlikte yönetmektir**: aynı raundda herkes ya alır ya da bekler."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Ayarlar: başlangıç değerleri",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Bunlar resmi değer değil; genel olarak önerilen başlangıç noktalarıdır. Bot maçında dene ve sana uymazsa değiştir."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Ayar",
+        "Başlangıç önerisi"
+       ],
+       "satirlar": [
+        [
+         "Fare DPI",
+         "400-800"
+        ],
+        [
+         "Oyun içi hassasiyet",
+         "DPI ile çarpımı 800-1200 aralığında başla; çok yüksek olmasın"
+        ],
+        [
+         "Nişangah",
+         "Küçük, açık renkli; ortada boşluk bırakmayan ve kenarlıklı"
+        ],
+        [
+         "Çözünürlük",
+         "Ekran kartına uygun; akıcılık görüntüden önemlidir"
+        ],
+        [
+         "FPS",
+         "Hedef: ekran yenileme hızının üzerinde sabit kare hızı"
+        ],
+        [
+         "Ses",
+         "Kulaklık tak; ayak sesi bilgi taşır"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Ayar değiştirince birkaç maç aynı değerle oyna; fikrini hemen bozma."
+      },
+      {
+       "tip": "p",
+       "metin": "Ağ ayarında da bir kural var: sana en yakın sunucu bölgesini seç ve oyun sırasında indirme yapan programları kapat. Gecikme (ping) yüksekse isabet ettiğini sandığın atışlar bile boşa gidebilir."
+      }
+     ]
+    },
+    {
+     "id": "rank",
+     "baslik": "Dereceli sistem ve rank tablosu",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "İki sistem vardır. **Premier**: 10 galibiyet sonunda ilk **CS Reytingini** alırsın; puan 5.000'lik renk aralıklarına bölünür. **Dereceli (Competitive)**: Her harita için ayrı bir rütbe tutulur; 18 kademe vardır (Silver I'den Global Elite'e) ve o haritada galibiyet kazandıkça görünür."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "CS Reytingi",
+        "Renk"
+       ],
+       "satirlar": [
+        [
+         "0 - 4.999",
+         "Gri"
+        ],
+        [
+         "5.000 - 9.999",
+         "Açık mavi"
+        ],
+        [
+         "10.000 - 14.999",
+         "Mavi"
+        ],
+        [
+         "15.000 - 19.999",
+         "Mor"
+        ],
+        [
+         "20.000 - 24.999",
+         "Pembe"
+        ],
+        [
+         "25.000 - 29.999",
+         "Kırmızı"
+        ],
+        [
+         "30.000 ve üstü",
+         "Altın / sarı"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Renk aralıkları ikincil bir kaynaktan alınmıştır; oyun içinde kontrol et.",
+        "2026 Hizmet Madalyası: Global General (Rank 40), Valve duyurusundan.",
+        "Premier'de de dereceli de bir sezona bağlıdır; sezon sonunda sıfırlama olabilir."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hatalar",
+     "baslik": "Yeni oyuncuların sık yaptığı hatalar",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Kısa bir ısınma yapmadan maça girmek; bot maçında beş dakika yeter.",
+        "Koşarken ateş etmek; durup nişan al, sonra ateş et.",
+        "Tek başına bomba noktasına dalmak.",
+        "El bombası kullanmamak; duman ve flaş çoğu raundu kazandırır.",
+        "Ekonomiyi takımla konuşmadan pahalı alım yapmak.",
+        "Kötü maçtan sonra öfkeyle yeni maça girmek; kısa bir ara ver."
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Her gün 10 dakika",
+         "metin": "Bot maçında veya Atış Alanında nişan ısınması yap."
+        },
+        {
+         "baslik": "Her maç sonrası",
+         "metin": "Tek bir hatayı not et ve sonraki maçta yalnız onu düzelt."
+        },
+        {
+         "baslik": "Her hafta",
+         "metin": "Bir el bombası atışı öğren (örneğin bir duman) ve haritada tekrar et."
+        },
+        {
+         "baslik": "Her ay",
+         "metin": "Ayarlarını gözden geçir; ama fazla değiştirme."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Hesap güvenliği ve davranış kuralları",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Steam hesabın aynı zamanda kozmetik envanterini taşır. İki aşamalı doğrulamayı aç ve bilmediğin ticaret tekliflerini reddet."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Hile yazılımı, nişan botu, duvar hilesi, script, rank boost hizmeti, hesap satın alma veya satma, kumar benzeri skin bahis siteleri ve korsan oyun veya sahte 'ücretsiz skin' siteleri hesabının kalıcı yasaklanmasına yol açabilir. Bunlara yaklaşma."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Resmi olmayan sitelerde Steam giriş bilgini yazma.",
+        "Kasıtlı olarak takım arkadaşını vurmak veya oyundan sürekli çıkmak ceza getirir.",
+        "Takım arkadaşlarına saygılı ol; toksik sohbeti raporla ve sustur.",
+        "Düşük ranklı oyunculara karşı ikinci bir hesapla oynamak (smurf) adil değildir; yapma."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Sık sorulan sorular",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Counter-Strike 2 ücretsiz mi?",
+         "c": "Evet, Steam'de ücretsizdir; satın almalar kozmetik veya eşyalar içindir."
+        },
+        {
+         "s": "Bilgisayarım yeterli mi?",
+         "c": "En az Windows 10, 4 iş parçacıklı işlemci, 8 GB RAM, DX11 ekran kartı ve 85 GB boş alan gerekir."
+        },
+        {
+         "s": "Premier'e ne zaman girerim?",
+         "c": "Prime Status ve profil seviyesi 10 gibi şartlar karşılanınca; oyun içinde kilidin açıldığını gör."
+        },
+        {
+         "s": "İlk reytingimi nasıl alırım?",
+         "c": "Premier'de 10 galibiyet sonunda."
+        },
+        {
+         "s": "Hangi haritayla başlayayım?",
+         "c": "Dust 2 ve Mirage yeni oyuncular için öğreticidir."
+        },
+        {
+         "s": "Telefonda oynanır mı?",
+         "c": "Hayır; bu rehber Windows PC içindir."
+        },
+        {
+         "s": "Wingman ve Rush neden denemeye değer?",
+         "c": "İki mod da daha az oyuncu ve kısa maç sunar. Atış, hareket ve iletişim alışkanlıklarını 5'e 5'e göre daha hızlı pratik edersin."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "en": {
+   "baslik": "Counter-Strike 2 Beginner Guide: Setup, Modes, Settings and Rank",
+   "ozet": "Counter-Strike 2 is Valve's free 5v5 tactical shooter on Steam. This guide helps new and returning players from installation to their first Premier match.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "5v5 tactical shooter (FPS)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Windows PC (Steam)"
+    },
+    {
+     "ad": "Price model",
+     "deger": "Free to play; optional cosmetic and item purchases"
+    },
+    {
+     "ad": "Current version",
+     "deger": "Premier Season 5; September 22, 2026 update (November 2026)"
+    },
+    {
+     "ad": "Turkish support",
+     "deger": "The interface language is set in Steam and the game settings; look in the game settings for a Turkish option"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "nedir",
+     "baslik": "What Counter-Strike 2 is and where it stands in 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "In Counter-Strike 2 two teams of five face off: Terrorists try to plant a bomb and Counter-Terrorists (CT) try to stop them. There are no classes or abilities; aim, information, grenades and team coordination make the difference."
+      },
+      {
+       "tip": "p",
+       "metin": "In 2026 the competitive side is **Premier**, and **Season 5** began on July 8, 2026. According to Valve's official announcement the Active Duty pool holds Ancient, Anubis, Cache, Dust 2, Inferno, Mirage and Nuke; Cache replaced Overpass. The season's end date has not been announced."
+      },
+      {
+       "tip": "p",
+       "metin": "The September 22, 2026 update changed how Premier maps are picked, added a queued 3v3 mode called 'Rush', and brought clan tags back. The pool and modes change over time; check the in-game screen for the exact list."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Numbers in this guide are accurate as of November 2026. Later updates may change things; see Valve's official update page for current notes."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Before you start: Steam, system, account",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "You download the game for free through Steam. The minimum requirements on the Steam store page: Windows 10, 4 hardware threads (Intel i5 750 or higher), 8 GB RAM, a DirectX 11 graphics card with 1 GB of memory (Shader Model 5.0) and **85 GB** of free space. Disk space often surprises new players; clear room beforehand."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "If you have no Steam account, create one and turn on **Steam Guard** (two-step verification).",
+        "The anti-cheat is VAC and runs with the game; no separate install is needed.",
+        "Steam community answers say Premier needs Prime Status and CS2 profile level 10 (this is from a secondary source; confirm by seeing it unlock in the game).",
+        "Official Competitive mode is free to play."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "'Game download' or 'free skin' links on sites outside Steam are dangerous. Download only from the Steam client."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Your first matches step by step",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Install the game and check settings",
+         "metin": "Download from Steam and review the audio, video and mouse settings on first launch."
+        },
+        {
+         "baslik": "Bot match and the Range",
+         "metin": "Try the map and weapons against bots. It is the safest way to get used to the rules."
+        },
+        {
+         "baslik": "Short modes like Wingman or Rush",
+         "metin": "Fewer players and short matches give a new player quick practice."
+        },
+        {
+         "baslik": "Move on to Competitive",
+         "metin": "You get a separate rank for each map; your rank appears after your first wins."
+        },
+        {
+         "baslik": "Prepare for Premier",
+         "metin": "Once unlocked, you get your first CS Rating after 10 wins."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Rounds are short and every round is a fresh decision. A round can last under two minutes, so watching after you die and collecting information is the most valuable habit for the next round. Each half is 12 rounds and the first team to win 13 takes the match (my own knowledge). After the bomb is planted the CTs have limited time to defuse; without a kit, defusing takes 10 seconds."
+      }
+     ]
+    },
+    {
+     "id": "modlar",
+     "baslik": "Modes and the map pool",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "In short: Premier and Competitive are played 5v5 and follow the plant/defuse rule. Wingman is 2v2. Rush is the newly added queued 3v3 mode. The Active Duty maps in November 2026 are:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Map",
+        "Note"
+       ],
+       "satirlar": [
+        [
+         "Ancient",
+         "Jungle themed; two main entry routes"
+        ],
+        [
+         "Anubis",
+         "Egyptian themed; water canal and open areas"
+        ],
+        [
+         "Cache",
+         "Entered the pool in place of Overpass"
+        ],
+        [
+         "Dust 2",
+         "The classic; the most instructive map for new players"
+        ],
+        [
+         "Inferno",
+         "Italian village; tight streets"
+        ],
+        [
+         "Mirage",
+         "The middle matters; well balanced"
+        ],
+        [
+         "Nuke",
+         "Two levels; bombsites stacked above and below"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "For the first weeks pick two maps and keep playing them: Dust 2 and Mirage suit this."
+      }
+     ]
+    },
+    {
+     "id": "silah-ekonomi",
+     "baslik": "Weapons and economy: basic principles",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "There is a buy time at the start of each round. Money comes based on rounds won or lost and on kills. Exact amounts can change with updates, so we give no figures; follow the in-game economy screen."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Pistol round:** In the first round of each half everyone's money is limited; pistols and grenades stand out.",
+        "**Eco:** A round where you deliberately buy little to save money.",
+        "**Buying as a team:** If everyone buys together and the economy allows, you get strong weapons; buying expensive alone breaks your economy.",
+        "**Defuse kit:** For CT players it cuts the defuse time from 10 seconds to 5 seconds."
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Weapon type",
+        "For whom",
+        "Note"
+       ],
+       "satirlar": [
+        [
+         "Pistol",
+         "Everyone",
+         "Cheap; used in early rounds"
+        ],
+        [
+         "SMG",
+         "Eco and cheap buys",
+         "Effective while moving"
+        ],
+        [
+         "Rifle",
+         "Main buy",
+         "The core weapon for range and damage"
+        ],
+        [
+         "Sniper",
+         "Experienced players",
+         "Expensive; you must know your position"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "A new player's most lasting gain is **managing the economy together with the team**: in a given round everyone either buys or waits."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Settings: starting values",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "These are not official values; they are commonly suggested starting points. Try them in a bot match and change them if they do not suit you."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Setting",
+        "Starting suggestion"
+       ],
+       "satirlar": [
+        [
+         "Mouse DPI",
+         "400-800"
+        ],
+        [
+         "In-game sensitivity",
+         "Start with DPI times sensitivity around 800-1200; do not go too high"
+        ],
+        [
+         "Crosshair",
+         "Small, bright, outlined; no center gap"
+        ],
+        [
+         "Resolution",
+         "Match your graphics card; smoothness matters more than looks"
+        ],
+        [
+         "FPS",
+         "Aim for a steady frame rate above your screen's refresh rate"
+        ],
+        [
+         "Audio",
+         "Wear headphones; footsteps carry information"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "When you change a setting, play a few matches with the same value; do not change your mind right away."
+      },
+      {
+       "tip": "p",
+       "metin": "There is a network rule too: pick the server region closest to you and close programs that download while you play. If latency (ping) is high, even shots you think hit can miss."
+      }
+     ]
+    },
+    {
+     "id": "rank",
+     "baslik": "Ranked system and rank table",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "There are two systems. **Premier**: you get your first **CS Rating** after 10 wins; the score is split into color bands of 5,000. **Competitive**: a separate rank is kept per map; there are 18 levels (Silver I to Global Elite) and it shows once you win on that map."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "CS Rating",
+        "Color"
+       ],
+       "satirlar": [
+        [
+         "0 - 4,999",
+         "Grey"
+        ],
+        [
+         "5,000 - 9,999",
+         "Light blue"
+        ],
+        [
+         "10,000 - 14,999",
+         "Blue"
+        ],
+        [
+         "15,000 - 19,999",
+         "Purple"
+        ],
+        [
+         "20,000 - 24,999",
+         "Pink"
+        ],
+        [
+         "25,000 - 29,999",
+         "Red"
+        ],
+        [
+         "30,000 and above",
+         "Gold / yellow"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "The color bands come from a secondary source; verify them in the game.",
+        "The 2026 Service Medal is Global General (Rank 40), from Valve's announcement.",
+        "Both Premier and Competitive are tied to a season; a reset can happen at season end."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hatalar",
+     "baslik": "Common beginner mistakes",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Joining a match without a short warm-up; five minutes in a bot match is enough.",
+        "Shooting while running; stop, aim, then shoot.",
+        "Diving into the bombsite alone.",
+        "Not using grenades; smokes and flashes win many rounds.",
+        "Making expensive buys without talking about the economy with the team.",
+        "Queuing angry after a bad match; take a short break."
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "10 minutes a day",
+         "metin": "Do an aim warm-up in a bot match or the Range."
+        },
+        {
+         "baslik": "After each match",
+         "metin": "Note one mistake and fix only that in the next match."
+        },
+        {
+         "baslik": "Every week",
+         "metin": "Learn one grenade throw (for example a smoke) and repeat it on the map."
+        },
+        {
+         "baslik": "Every month",
+         "metin": "Review your settings, but do not change too much."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Account safety and behavior rules",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Your Steam account also holds your cosmetic inventory. Turn on two-step verification and decline trade offers you do not recognize."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Cheat software, aimbots, wallhacks, scripts, rank boosting services, buying or selling accounts, skin gambling or betting sites and pirated game or fake 'free skin' sites can lead to a permanent ban. Stay away from them."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Never type your Steam login on unofficial sites.",
+        "Deliberately hurting teammates or leaving matches constantly brings penalties.",
+        "Be respectful to teammates; report and mute toxic chat.",
+        "Playing on a second account against lower-ranked players (smurfing) is unfair; do not do it."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Frequently asked questions",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is Counter-Strike 2 free?",
+         "c": "Yes, it is free on Steam; purchases are for cosmetics or items."
+        },
+        {
+         "s": "Is my PC good enough?",
+         "c": "You need at least Windows 10, a 4-thread processor, 8 GB RAM, a DX11 graphics card and 85 GB of free space."
+        },
+        {
+         "s": "When can I enter Premier?",
+         "c": "When conditions such as Prime Status and profile level 10 are met; see it unlock in the game."
+        },
+        {
+         "s": "How do I get my first rating?",
+         "c": "After 10 wins in Premier."
+        },
+        {
+         "s": "Which map should I start with?",
+         "c": "Dust 2 and Mirage are instructive for new players."
+        },
+        {
+         "s": "Can I play on a phone?",
+         "c": "No; this guide is for Windows PC."
+        },
+        {
+         "s": "Why are Wingman and Rush worth trying?",
+         "c": "Both modes offer fewer players and shorter matches. You practice aim, movement and communication habits faster than in 5v5."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "fr": {
+   "baslik": "Guide Counter-Strike 2 pour débutants : installation, modes, rang",
+   "ozet": "Counter-Strike 2 est le jeu de tir tactique 5 contre 5 gratuit de Valve sur Steam. Ce guide accompagne les nouveaux joueurs et ceux qui reviennent, de l'installation au premier match Premier.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Jeu de tir tactique 5 contre 5 (FPS)"
+    },
+    {
+     "ad": "Plateforme",
+     "deger": "PC Windows (Steam)"
+    },
+    {
+     "ad": "Modèle de prix",
+     "deger": "Gratuit ; achats facultatifs de cosmétiques et d'objets"
+    },
+    {
+     "ad": "Version actuelle",
+     "deger": "Premier Saison 5 ; mise à jour du 22 septembre 2026 (novembre 2026)"
+    },
+    {
+     "ad": "Prise en charge du turc",
+     "deger": "La langue de l'interface se règle dans Steam et dans le jeu ; cherche une option turque dans les paramètres du jeu"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "nedir",
+     "baslik": "Qu'est-ce que Counter-Strike 2 et où en est-on en 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Dans Counter-Strike 2, deux équipes de cinq s'affrontent : les Terroristes essaient de poser une bombe et les Antiterroristes (CT) de les en empêcher. Il n'y a ni classes ni capacités ; la visée, l'information, les grenades et la coordination d'équipe font la différence."
+      },
+      {
+       "tip": "p",
+       "metin": "En 2026, la branche compétitive est **Premier**, et la **Saison 5** a commencé le 8 juillet 2026. D'après l'annonce officielle de Valve, le pool Active Duty comprend Ancient, Anubis, Cache, Dust 2, Inferno, Mirage et Nuke ; Cache a remplacé Overpass. La date de fin de saison n'a pas été annoncée."
+      },
+      {
+       "tip": "p",
+       "metin": "La mise à jour du 22 septembre 2026 a changé la façon de choisir les cartes en Premier, ajouté un mode 3 contre 3 en file d'attente appelé « Rush » et ramené les tags de clan. Le pool et les modes évoluent ; consulte l'écran du jeu pour la liste exacte."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Les chiffres de ce guide sont valables en novembre 2026. Les mises à jour suivantes peuvent tout changer ; consulte la page de mises à jour officielle de Valve."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Avant de commencer : Steam, configuration, compte",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Tu télécharges le jeu gratuitement via Steam. Configuration minimale sur la page Steam : Windows 10, 4 threads matériels (Intel i5 750 ou mieux), 8 Go de RAM, une carte graphique DirectX 11 avec 1 Go de mémoire (Shader Model 5.0) et **85 Go** d'espace libre. L'espace disque surprend souvent les débutants ; libère de la place avant."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Si tu n'as pas de compte Steam, crée-en un et active **Steam Guard** (double authentification).",
+        "L'anti-triche est VAC et tourne avec le jeu ; aucune installation séparée n'est nécessaire.",
+        "Les réponses de la communauté Steam indiquent que Premier demande le statut Prime et le niveau de profil CS2 10 (source secondaire ; vérifie en voyant le déblocage en jeu).",
+        "Le mode Compétitif officiel est gratuit."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Les liens de « téléchargement du jeu » ou de « skins gratuits » sur des sites hors Steam sont dangereux. Télécharge uniquement depuis le client Steam."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Tes premiers matchs pas à pas",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Installe le jeu et vérifie les réglages",
+         "metin": "Télécharge depuis Steam et revois les réglages audio, vidéo et souris au premier lancement."
+        },
+        {
+         "baslik": "Match contre des bots et Stand de tir",
+         "metin": "Essaie la carte et les armes contre des bots. C'est le moyen le plus sûr de s'habituer aux règles."
+        },
+        {
+         "baslik": "Modes courts comme Wingman ou Rush",
+         "metin": "Moins de joueurs et des matchs courts offrent un entraînement rapide."
+        },
+        {
+         "baslik": "Passe au mode Compétitif",
+         "metin": "Tu reçois un rang distinct pour chaque carte ; il apparaît après tes premières victoires."
+        },
+        {
+         "baslik": "Prépare Premier",
+         "metin": "Une fois débloqué, tu obtiens ton premier CS Rating après 10 victoires."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Les rounds sont courts et chaque round est une nouvelle décision. Un round peut durer moins de deux minutes ; regarder après sa mort et recueillir de l'information est donc l'habitude la plus utile pour le round suivant. Chaque mi-temps compte 12 rounds et la première équipe à 13 gagne le match (connaissance personnelle). Une fois la bombe posée, les CT ont un temps limité pour désamorcer ; sans kit, le désamorçage dure 10 secondes."
+      }
+     ]
+    },
+    {
+     "id": "modlar",
+     "baslik": "Modes et pool de cartes",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "En bref : Premier et Compétitif se jouent à 5 contre 5 avec la règle poser/désamorcer. Wingman est du 2 contre 2. Rush est le nouveau mode 3 contre 3 en file d'attente. Les cartes Active Duty en novembre 2026 sont :"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Carte",
+        "Note"
+       ],
+       "satirlar": [
+        [
+         "Ancient",
+         "Thème jungle ; deux grandes voies d'entrée"
+        ],
+        [
+         "Anubis",
+         "Thème égyptien ; canal d'eau et zones ouvertes"
+        ],
+        [
+         "Cache",
+         "Entrée dans le pool à la place d'Overpass"
+        ],
+        [
+         "Dust 2",
+         "Le classique ; la carte la plus instructive pour les nouveaux"
+        ],
+        [
+         "Inferno",
+         "Village italien ; rues étroites"
+        ],
+        [
+         "Mirage",
+         "Le milieu compte ; bien équilibrée"
+        ],
+        [
+         "Nuke",
+         "Deux niveaux ; sites superposés"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Pour les premières semaines, choisis deux cartes et joue-les en boucle : Dust 2 et Mirage s'y prêtent."
+      }
+     ]
+    },
+    {
+     "id": "silah-ekonomi",
+     "baslik": "Armes et économie : principes de base",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Il y a un temps d'achat au début de chaque round. L'argent arrive selon les rounds gagnés ou perdus et les éliminations. Les montants exacts peuvent changer avec les mises à jour ; nous ne donnons donc pas de chiffres, suis l'écran d'économie du jeu."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Round de pistolet :** au premier round de chaque mi-temps, l'argent est limité ; pistolets et grenades dominent.",
+        "**Eco :** un round où l'on achète peu volontairement pour économiser.",
+        "**Acheter en équipe :** si tout le monde achète ensemble et que l'économie le permet, vous avez des armes fortes ; acheter cher seul casse l'économie.",
+        "**Kit de désamorçage :** pour les CT, il réduit le temps de désamorçage de 10 à 5 secondes."
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Type d'arme",
+        "Pour qui",
+        "Note"
+       ],
+       "satirlar": [
+        [
+         "Pistolet",
+         "Tout le monde",
+         "Bon marché ; utilisé dans les premiers rounds"
+        ],
+        [
+         "SMG",
+         "Eco et achats bon marché",
+         "Efficace en mouvement"
+        ],
+        [
+         "Fusil",
+         "Achat principal",
+         "L'arme de base pour la portée et les dégâts"
+        ],
+        [
+         "Sniper",
+         "Joueurs expérimentés",
+         "Cher ; il faut connaître sa position"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Le gain le plus durable d'un débutant est de **gérer l'économie avec l'équipe** : sur un round donné, tout le monde achète ou attend."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Réglages : valeurs de départ",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Ce ne sont pas des valeurs officielles ; ce sont des points de départ couramment conseillés. Essaie-les contre des bots et change-les si elles ne te conviennent pas."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Réglage",
+        "Suggestion de départ"
+       ],
+       "satirlar": [
+        [
+         "DPI de la souris",
+         "400-800"
+        ],
+        [
+         "Sensibilité en jeu",
+         "Commence avec un produit DPI par sensibilité d'environ 800-1200 ; pas trop haut"
+        ],
+        [
+         "Viseur",
+         "Petit, clair, avec contour ; sans espace au centre"
+        ],
+        [
+         "Résolution",
+         "Adaptée à ta carte graphique ; la fluidité compte plus que l'image"
+        ],
+        [
+         "FPS",
+         "Vise un taux d'images stable au-dessus de la fréquence de ton écran"
+        ],
+        [
+         "Son",
+         "Mets un casque ; les pas donnent des informations"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Quand tu changes un réglage, joue quelques matchs avec la même valeur ; ne change pas d'avis tout de suite."
+      },
+      {
+       "tip": "p",
+       "metin": "Il y a aussi une règle réseau : choisis la région de serveur la plus proche et ferme les programmes qui téléchargent pendant que tu joues. Si la latence (ping) est élevée, même des tirs que tu crois réussis peuvent rater."
+      }
+     ]
+    },
+    {
+     "id": "rank",
+     "baslik": "Système classé et tableau des rangs",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Il y a deux systèmes. **Premier** : tu obtiens ton premier **CS Rating** après 10 victoires ; le score est découpé en bandes de couleur de 5 000. **Compétitif** : un rang distinct est conservé par carte ; il y a 18 niveaux (de Silver I à Global Elite) et il s'affiche après une victoire sur cette carte."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "CS Rating",
+        "Couleur"
+       ],
+       "satirlar": [
+        [
+         "0 - 4 999",
+         "Gris"
+        ],
+        [
+         "5 000 - 9 999",
+         "Bleu clair"
+        ],
+        [
+         "10 000 - 14 999",
+         "Bleu"
+        ],
+        [
+         "15 000 - 19 999",
+         "Violet"
+        ],
+        [
+         "20 000 - 24 999",
+         "Rose"
+        ],
+        [
+         "25 000 - 29 999",
+         "Rouge"
+        ],
+        [
+         "30 000 et plus",
+         "Or / jaune"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Les bandes de couleur viennent d'une source secondaire ; vérifie-les en jeu.",
+        "La médaille de service 2026 est Global General (Rang 40), d'après l'annonce de Valve.",
+        "Premier comme Compétitif sont liés à une saison ; une réinitialisation peut avoir lieu en fin de saison."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hatalar",
+     "baslik": "Erreurs fréquentes des débutants",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Lancer un match sans court échauffement ; cinq minutes contre des bots suffisent.",
+        "Tirer en courant ; arrête-toi, vise, puis tire.",
+        "Plonger seul sur le site de bombe.",
+        "Ne pas utiliser les grenades ; fumigènes et flashs gagnent beaucoup de rounds.",
+        "Faire des achats chers sans parler de l'économie avec l'équipe.",
+        "Relancer en colère après un mauvais match ; fais une courte pause."
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "10 minutes par jour",
+         "metin": "Fais un échauffement de visée contre des bots ou au stand de tir."
+        },
+        {
+         "baslik": "Après chaque match",
+         "metin": "Note une seule erreur et corrige-la au match suivant."
+        },
+        {
+         "baslik": "Chaque semaine",
+         "metin": "Apprends un lancer de grenade (par exemple un fumigène) et répète-le sur la carte."
+        },
+        {
+         "baslik": "Chaque mois",
+         "metin": "Revois tes réglages, sans trop en changer."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Sécurité du compte et règles de comportement",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Ton compte Steam contient aussi ton inventaire cosmétique. Active la double authentification et refuse les offres d'échange que tu ne connais pas."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Les logiciels de triche, les aimbots, les wallhacks, les scripts, les services de boost de rang, l'achat ou la vente de comptes, les sites de paris ou de jeux d'argent avec des skins, ainsi que les sites de jeux piratés ou de faux « skins gratuits » peuvent entraîner un bannissement définitif. Reste à l'écart."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Ne saisis jamais tes identifiants Steam sur des sites non officiels.",
+        "Blesser volontairement ses coéquipiers ou quitter sans cesse les matchs entraîne des sanctions.",
+        "Respecte tes coéquipiers ; signale et rends muet le chat toxique.",
+        "Jouer sur un second compte contre des joueurs de rang inférieur (smurf) est injuste ; ne le fais pas."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Questions fréquentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Counter-Strike 2 est-il gratuit ?",
+         "c": "Oui, il est gratuit sur Steam ; les achats servent aux cosmétiques ou aux objets."
+        },
+        {
+         "s": "Mon PC suffit-il ?",
+         "c": "Il faut au moins Windows 10, un processeur à 4 threads, 8 Go de RAM, une carte DX11 et 85 Go d'espace libre."
+        },
+        {
+         "s": "Quand puis-je jouer en Premier ?",
+         "c": "Quand les conditions comme le statut Prime et le niveau de profil 10 sont remplies ; vois le déblocage en jeu."
+        },
+        {
+         "s": "Comment obtenir mon premier rating ?",
+         "c": "Après 10 victoires en Premier."
+        },
+        {
+         "s": "Avec quelle carte commencer ?",
+         "c": "Dust 2 et Mirage sont instructives pour les nouveaux."
+        },
+        {
+         "s": "Peut-on jouer sur téléphone ?",
+         "c": "Non ; ce guide concerne le PC Windows."
+        },
+        {
+         "s": "Pourquoi essayer Wingman et Rush ?",
+         "c": "Les deux modes offrent moins de joueurs et des matchs plus courts. Tu pratiques visée, déplacements et communication plus vite qu'en 5 contre 5."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "es": {
+   "baslik": "Guía de Counter-Strike 2 para principiantes: instalación, modos, rango",
+   "ozet": "Counter-Strike 2 es el shooter táctico 5 contra 5 gratuito de Valve en Steam. Esta guía acompaña a jugadores nuevos y a quienes regresan, desde la instalación hasta la primera partida Premier.",
+   "kunye": [
+    {
+     "ad": "Género",
+     "deger": "Shooter táctico 5 contra 5 (FPS)"
+    },
+    {
+     "ad": "Plataforma",
+     "deger": "PC con Windows (Steam)"
+    },
+    {
+     "ad": "Modelo de precio",
+     "deger": "Gratis; compras opcionales de cosméticos y objetos"
+    },
+    {
+     "ad": "Versión actual",
+     "deger": "Premier Temporada 5; actualización del 22 de septiembre de 2026 (noviembre de 2026)"
+    },
+    {
+     "ad": "Compatibilidad con turco",
+     "deger": "El idioma de la interfaz se elige en Steam y en el juego; busca una opción en turco en los ajustes del juego"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "nedir",
+     "baslik": "Qué es Counter-Strike 2 y cómo está en 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "En Counter-Strike 2 se enfrentan dos equipos de cinco: los Terroristas intentan plantar una bomba y los Antiterroristas (CT) intentan impedirlo. No hay clases ni habilidades; la puntería, la información, las granadas y la coordinación del equipo marcan la diferencia."
+      },
+      {
+       "tip": "p",
+       "metin": "En 2026 la parte competitiva es **Premier**, y la **Temporada 5** empezó el 8 de julio de 2026. Según el anuncio oficial de Valve, el grupo Active Duty incluye Ancient, Anubis, Cache, Dust 2, Inferno, Mirage y Nuke; Cache sustituyó a Overpass. La fecha de fin de temporada no se ha anunciado."
+      },
+      {
+       "tip": "p",
+       "metin": "La actualización del 22 de septiembre de 2026 cambió la forma de elegir mapas en Premier, añadió un modo 3 contra 3 en cola llamado «Rush» y devolvió las etiquetas de clan. El grupo y los modos cambian con el tiempo; mira la pantalla del juego para la lista exacta."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Los números de esta guía son válidos en noviembre de 2026. Las actualizaciones posteriores pueden cambiarlo; consulta la página oficial de actualizaciones de Valve."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Antes de empezar: Steam, sistema, cuenta",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Descargas el juego gratis desde Steam. Requisitos mínimos de la tienda de Steam: Windows 10, 4 hilos de hardware (Intel i5 750 o superior), 8 GB de RAM, una tarjeta gráfica DirectX 11 con 1 GB de memoria (Shader Model 5.0) y **85 GB** de espacio libre. El espacio en disco suele sorprender a los nuevos; haz sitio antes."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Si no tienes cuenta de Steam, crea una y activa **Steam Guard** (verificación en dos pasos).",
+        "El antitrampas es VAC y funciona con el juego; no hace falta instalar nada aparte.",
+        "Las respuestas de la comunidad de Steam dicen que Premier exige estado Prime y nivel de perfil CS2 10 (fuente secundaria; confírmalo viendo el desbloqueo en el juego).",
+        "El modo Competitivo oficial es gratuito."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Los enlaces de «descarga del juego» o «skins gratis» en sitios ajenos a Steam son peligrosos. Descarga solo desde el cliente de Steam."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Tus primeras partidas paso a paso",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Instala el juego y revisa los ajustes",
+         "metin": "Descarga desde Steam y revisa los ajustes de audio, vídeo y ratón en el primer inicio."
+        },
+        {
+         "baslik": "Partida contra bots y Campo de tiro",
+         "metin": "Prueba el mapa y las armas contra bots. Es la forma más segura de acostumbrarte a las reglas."
+        },
+        {
+         "baslik": "Modos cortos como Wingman o Rush",
+         "metin": "Menos jugadores y partidas cortas dan práctica rápida."
+        },
+        {
+         "baslik": "Pasa al modo Competitivo",
+         "metin": "Recibes un rango distinto por cada mapa; aparece tras tus primeras victorias."
+        },
+        {
+         "baslik": "Prepárate para Premier",
+         "metin": "Una vez desbloqueado, obtienes tu primer CS Rating tras 10 victorias."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Las rondas son cortas y cada ronda es una decisión nueva. Una ronda puede durar menos de dos minutos, así que mirar tras morir y recoger información es el hábito más valioso para la siguiente. Cada mitad tiene 12 rondas y el primer equipo en ganar 13 se lleva la partida (conocimiento propio). Tras plantar la bomba, los CT tienen un tiempo limitado para desactivarla; sin kit, desactivar tarda 10 segundos."
+      }
+     ]
+    },
+    {
+     "id": "modlar",
+     "baslik": "Modos y grupo de mapas",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "En resumen: Premier y Competitivo se juegan 5 contra 5 con la regla de plantar y desactivar. Wingman es 2 contra 2. Rush es el nuevo modo 3 contra 3 en cola. Los mapas Active Duty en noviembre de 2026 son:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Mapa",
+        "Nota"
+       ],
+       "satirlar": [
+        [
+         "Ancient",
+         "Temática de selva; dos vías de entrada principales"
+        ],
+        [
+         "Anubis",
+         "Temática egipcia; canal de agua y zonas abiertas"
+        ],
+        [
+         "Cache",
+         "Entró al grupo en lugar de Overpass"
+        ],
+        [
+         "Dust 2",
+         "El clásico; el mapa más instructivo para los nuevos"
+        ],
+        [
+         "Inferno",
+         "Pueblo italiano; calles estrechas"
+        ],
+        [
+         "Mirage",
+         "El centro importa; bien equilibrado"
+        ],
+        [
+         "Nuke",
+         "Dos niveles; sitios superpuestos"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Para las primeras semanas elige dos mapas y juégalos sin parar: Dust 2 y Mirage sirven."
+      }
+     ]
+    },
+    {
+     "id": "silah-ekonomi",
+     "baslik": "Armas y economía: principios básicos",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Al inicio de cada ronda hay un tiempo de compra. El dinero llega según las rondas ganadas o perdidas y las bajas. Las cantidades exactas pueden cambiar con las actualizaciones, por eso no damos cifras; sigue la pantalla de economía del juego."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Ronda de pistolas:** en la primera ronda de cada mitad el dinero es limitado; destacan las pistolas y las granadas.",
+        "**Eco:** una ronda en la que compras poco a propósito para ahorrar.",
+        "**Comprar en equipo:** si todos compran juntos y la economía lo permite, tendréis armas fuertes; comprar caro en solitario rompe la economía.",
+        "**Kit de desactivación:** para los CT reduce el tiempo de desactivación de 10 a 5 segundos."
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Tipo de arma",
+        "Para quién",
+        "Nota"
+       ],
+       "satirlar": [
+        [
+         "Pistola",
+         "Todos",
+         "Barata; se usa en las primeras rondas"
+        ],
+        [
+         "SMG",
+         "Eco y compras baratas",
+         "Eficaz en movimiento"
+        ],
+        [
+         "Rifle",
+         "Compra principal",
+         "El arma base para alcance y daño"
+        ],
+        [
+         "Francotirador",
+         "Jugadores con experiencia",
+         "Cara; hay que conocer tu posición"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "La ganancia más duradera de un principiante es **gestionar la economía junto al equipo**: en una ronda dada, todos compran o todos esperan."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Ajustes: valores iniciales",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "No son valores oficiales; son puntos de partida que se suelen recomendar. Pruébalos contra bots y cámbialos si no te convienen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Ajuste",
+        "Sugerencia inicial"
+       ],
+       "satirlar": [
+        [
+         "DPI del ratón",
+         "400-800"
+        ],
+        [
+         "Sensibilidad en el juego",
+         "Empieza con un producto DPI por sensibilidad en torno a 800-1200; sin pasarte"
+        ],
+        [
+         "Mira",
+         "Pequeña, clara, con contorno; sin hueco central"
+        ],
+        [
+         "Resolución",
+         "Acorde con tu tarjeta gráfica; la fluidez importa más que la imagen"
+        ],
+        [
+         "FPS",
+         "Busca una tasa de fotogramas estable por encima de la frecuencia de tu pantalla"
+        ],
+        [
+         "Audio",
+         "Usa auriculares; los pasos dan información"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Cuando cambies un ajuste, juega unas partidas con el mismo valor; no cambies de opinión enseguida."
+      },
+      {
+       "tip": "p",
+       "metin": "También hay una regla de red: elige la región de servidor más cercana y cierra los programas que descargan mientras juegas. Si la latencia (ping) es alta, incluso disparos que crees acertados pueden fallar."
+      }
+     ]
+    },
+    {
+     "id": "rank",
+     "baslik": "Sistema competitivo y tabla de rangos",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Hay dos sistemas. **Premier**: obtienes tu primer **CS Rating** tras 10 victorias; la puntuación se divide en franjas de color de 5.000. **Competitivo**: se guarda un rango distinto por mapa; hay 18 niveles (de Silver I a Global Elite) y aparece cuando ganas en ese mapa."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "CS Rating",
+        "Color"
+       ],
+       "satirlar": [
+        [
+         "0 - 4.999",
+         "Gris"
+        ],
+        [
+         "5.000 - 9.999",
+         "Azul claro"
+        ],
+        [
+         "10.000 - 14.999",
+         "Azul"
+        ],
+        [
+         "15.000 - 19.999",
+         "Morado"
+        ],
+        [
+         "20.000 - 24.999",
+         "Rosa"
+        ],
+        [
+         "25.000 - 29.999",
+         "Rojo"
+        ],
+        [
+         "30.000 o más",
+         "Oro / amarillo"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Las franjas de color vienen de una fuente secundaria; verifícalas en el juego.",
+        "La Medalla de Servicio de 2026 es Global General (Rango 40), según el anuncio de Valve.",
+        "Tanto Premier como Competitivo están ligados a una temporada; puede haber un reinicio al final."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hatalar",
+     "baslik": "Errores frecuentes de los principiantes",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Entrar en partida sin un breve calentamiento; cinco minutos contra bots bastan.",
+        "Disparar mientras corres; párate, apunta y luego dispara.",
+        "Entrar solo al sitio de la bomba.",
+        "No usar granadas; humos y flashes ganan muchas rondas.",
+        "Hacer compras caras sin hablar de la economía con el equipo.",
+        "Entrar enfadado tras una mala partida; haz una pausa corta."
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "10 minutos al día",
+         "metin": "Haz un calentamiento de puntería contra bots o en el campo de tiro."
+        },
+        {
+         "baslik": "Tras cada partida",
+         "metin": "Anota un solo error y corrígelo en la siguiente."
+        },
+        {
+         "baslik": "Cada semana",
+         "metin": "Aprende un lanzamiento de granada (por ejemplo un humo) y repítelo en el mapa."
+        },
+        {
+         "baslik": "Cada mes",
+         "metin": "Revisa tus ajustes, sin cambiar demasiado."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Seguridad de la cuenta y normas de comportamiento",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Tu cuenta de Steam también guarda tu inventario de cosméticos. Activa la verificación en dos pasos y rechaza ofertas de intercambio que no conozcas."
+      },
+      {
+       "tip": "uyari",
+       "metin": "El software de trampas, los aimbots, los wallhacks, los scripts, los servicios de boosting de rango, comprar o vender cuentas, los sitios de apuestas o juegos de azar con skins y los sitios de juegos pirata o de falsas «skins gratis» pueden causar un baneo permanente. Mantente lejos."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Nunca escribas tus datos de Steam en sitios no oficiales.",
+        "Dañar a propósito a los compañeros o abandonar partidas constantemente conlleva sanciones.",
+        "Respeta a tus compañeros; reporta y silencia el chat tóxico.",
+        "Jugar con una segunda cuenta contra jugadores de menor rango (smurfing) es injusto; no lo hagas."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Preguntas frecuentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "¿Counter-Strike 2 es gratis?",
+         "c": "Sí, es gratis en Steam; las compras son para cosméticos u objetos."
+        },
+        {
+         "s": "¿Mi PC es suficiente?",
+         "c": "Hace falta al menos Windows 10, procesador de 4 hilos, 8 GB de RAM, tarjeta DX11 y 85 GB libres."
+        },
+        {
+         "s": "¿Cuándo puedo entrar en Premier?",
+         "c": "Cuando se cumplan condiciones como el estado Prime y el nivel de perfil 10; mira el desbloqueo en el juego."
+        },
+        {
+         "s": "¿Cómo obtengo mi primer rating?",
+         "c": "Tras 10 victorias en Premier."
+        },
+        {
+         "s": "¿Con qué mapa empiezo?",
+         "c": "Dust 2 y Mirage son instructivos para los nuevos."
+        },
+        {
+         "s": "¿Se puede jugar en el móvil?",
+         "c": "No; esta guía es para PC con Windows."
+        },
+        {
+         "s": "¿Por qué merece la pena probar Wingman y Rush?",
+         "c": "Ambos modos ofrecen menos jugadores y partidas más cortas. Practicas puntería, movimiento y comunicación más rápido que en 5 contra 5."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

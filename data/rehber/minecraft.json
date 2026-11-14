@@ -1,0 +1,1273 @@
+{
+ "oyun": "minecraft",
+ "guncelleme": "2026-11-14",
+ "surum": "Java Edition 26.3 / Bedrock Edition 26.50 (Wilderness Bound)",
+ "kaynaklar": [
+  {
+   "url": "https://minecraft.wiki/w/Java_Edition_26.3",
+   "ad": "Minecraft Wiki: Java Edition 26.3"
+  },
+  {
+   "url": "https://minecraft.wiki/w/Java_Edition",
+   "ad": "Minecraft Wiki: Java Edition"
+  },
+  {
+   "url": "https://minecraft.wiki/w/Bedrock_Edition",
+   "ad": "Minecraft Wiki: Bedrock Edition"
+  },
+  {
+   "url": "https://minecraft.wiki/w/Wilderness_Bound",
+   "ad": "Minecraft Wiki: Wilderness Bound"
+  }
+ ],
+ "diller": {
+  "tr": {
+   "baslik": "Minecraft Başlangıç Rehberi: Java ve Bedrock (2026)",
+   "ozet": "Minecraft'a bugün başlayanlar için sürüm seçimi, ilk gece, ilerleme yolu ve güvenlik rehberi. Güncel sürüm: Java 26.3 ve Bedrock 26.50 (Wilderness Bound).",
+   "kunye": [
+    {
+     "ad": "Tür",
+     "deger": "Hayatta kalma ve inşa oyunu (sandbox)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "PC (Java ve Bedrock), Xbox, PlayStation, Nintendo Switch, Android, iOS"
+    },
+    {
+     "ad": "Fiyat modeli",
+     "deger": "Tek seferlik satın alma; Minecoin ve Marketplace içeriği isteğe bağlı"
+    },
+    {
+     "ad": "Güncel sürüm",
+     "deger": "Java 26.3 / Bedrock 26.50, Wilderness Bound (15 Eylül 2026)"
+    },
+    {
+     "ad": "Türkçe desteği",
+     "deger": "Var, oyun içi dil ayarından seçilir"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "Minecraft 2026'da nerede duruyor?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Minecraft, kare bloklardan oluşan sonsuz bir dünyada kaynak toplayıp inşa ettiğiniz bir oyundur. Size dayatılan tek bir hedef yok: isterseniz Ender Ejderhası'nı yenersiniz, isterseniz sadece rahat bir ev kurup çiftlik yönetirsiniz. Bu özgürlük yeni başlayanı ilk saatlerde şaşırtabilir; bu rehber size sağlam bir başlangıç sırası verir."
+      },
+      {
+       "tip": "p",
+       "metin": "2026'dan itibaren sürüm numaraları yıl esaslıdır, örneğin **26.3**. Son büyük güncelleme **Wilderness Bound** 15 Eylül 2026'da Java 26.3 ve Bedrock 26.50 olarak çıktı. Yeni noktalı orman biyomu, kavak ağacı, yün ve beton için merdiven ile basamaklar, minderler, hasır yataklar ve terk edilmiş kamp yapısı eklendi; haritalar da geliştirildi. Bir sonraki sürüm (26.4) şu an deneme aşamasında."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Sürüm numarasını ana menüde görürsünüz. Bir rehber veya mod hâlâ 1.21 gibi eski numaralar yazıyorsa bilgisi eskimiş olabilir; kurmadan önce sürümü kontrol edin."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Başlamadan önce: Java mı, Bedrock mı?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Windows'ta resmî mağazada Java ve Bedrock çoğunlukla birlikte satılır, yani tek ödemeyle ikisini de kurabilirsiniz. Konsol ve telefonda yalnızca Bedrock vardır. Fark şöyle:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "",
+        "Java Edition",
+        "Bedrock Edition"
+       ],
+       "satirlar": [
+        [
+         "Platform",
+         "Windows, macOS, Linux",
+         "Windows, Xbox, PlayStation, Switch, Android, iOS"
+        ],
+        [
+         "Mod desteği",
+         "Çok geniş mod ve gölgelendirici dünyası",
+         "Sınırlı; Marketplace içeriği ve eklenti paketleri"
+        ],
+        [
+         "Arkadaşla oynama",
+         "Java sunucuları ve kendi kurduğunuz sunucular",
+         "Bedrock cihazları arası ortak oyun, Realms"
+        ],
+        [
+         "Kime uygun",
+         "Mod ve özel sunucu isteyen PC oyuncusu",
+         "Telefon, konsol veya karışık cihazlı arkadaş grubu"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Kısa öneri:** Arkadaşlarınız telefon veya konsoldaysa Bedrock'ı seçin. PC'desiniz ve mod istiyorsanız Java'yı seçin. Java ve Bedrock oyuncuları normalde aynı sunucuda buluşamaz, bu yüzden arkadaşlarla baştan aynı sürümde anlaşın."
+      },
+      {
+       "tip": "p",
+       "metin": "**Fiyat (minecraft.wiki'deki ABD doları listesi):** Bedrock mobilde 6,99 dolar, Xbox ve PlayStation'da 19,99 dolar, Windows ve Switch'te 29,99 dolar. Türkiye fiyatı mağazada lira olarak gösterilir; satın almadan önce orada bakın, ben lira fiyatını doğrulayamadım. **Java sistem gereksinimi:** Windows 10 64 bit veya üstü, en az 4 çekirdekli işlemci (Core i3-10100 veya Ryzen 3 3100 düzeyi) ve Vulkan 1.3 destekleyen, en az 2 GB belleği olan bir ekran kartı (GTX 950 veya RX 460 düzeyi). Rahat oynamak için Core i5-12400 ve RTX 2060 düzeyi önerilir. Mod ekledikçe ihtiyaç artar."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Oyunu yalnızca resmî Minecraft sitesinden, Microsoft Store'dan veya konsol mağazasından alın. Çatlak başlatıcılar hem yasa dışıdır hem de hesabınız ve bilgisayarınız için risklidir."
+      }
+     ]
+    },
+    {
+     "id": "ilk-gece",
+     "baslik": "İlk gece: ilk 15 dakika adım adım",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Oyun gündüz başlar. Bir gün gece-gündüz dahil yaklaşık 20 gerçek dakika sürer; hava kararınca zombi, iskelet, örümcek ve creeper gibi düşman yaratıklar doğar. Hedefiniz karanlık basmadan basit bir sığınağa sahip olmak."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Odun toplayın",
+         "metin": "Ağaca yumrukla vurup en az 10-12 kütük alın ve kütükleri tahtaya çevirin."
+        },
+        {
+         "baslik": "Çalışma masası kurun",
+         "metin": "4 tahtadan çalışma masası yapın. Masada tahta kazma, balta ve kılıç üretin."
+        },
+        {
+         "baslik": "Taş ve kömür bulun",
+         "metin": "Tahta kazmayla yuvarlak taş kazın; taş kazma ve fırın için en az 8 parça alın. Kömürü hem yakıt hem meşale için kullanın."
+        },
+        {
+         "baslik": "Yiyecek bulun",
+         "metin": "İnek, domuz veya tavuk avlayın ve çiğ eti fırında pişirin. Koyundan yün alırsanız 3 yün ile 3 tahtadan yatak yapılır."
+        },
+        {
+         "baslik": "Sığınak yapın",
+         "metin": "Akşam yaklaşırken bir tepe yamacına küçük bir oda oyun ve girişi bloklarla kapatın. İçeri meşale koyun; ışıklı yerde düşman doğmaz."
+        },
+        {
+         "baslik": "Geceyi geçirin",
+         "metin": "Yatağınız varsa yatıp geceyi atlayın; doğma noktanız da yatağa taşınır. Yatak yoksa yeraltında kazı yapın: orada gece-gündüz fark etmez, yeter ki yanınızda meşale olsun."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Meşale bir çubukla bir kömürden yapılır. Yanınızda hep 20-30 meşale taşıyın; yeraltında yönünüzü bulmak ve düşman doğmasını engellemek için ilk aracınız budur."
+      }
+     ]
+    },
+    {
+     "id": "ilk-hafta",
+     "baslik": "İlk haftada yapılacaklar",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Kalıcı bir ev kurun; yanına sandıklar ve buğday veya havuç için küçük bir tarla açın.",
+        "Demir bulun: mağaralarda ve dağ yamaçlarında, taşın içinde açık renkli benekler olarak görünür. Fırında külçeye çevirip demir kazma, kılıç ve zırh yapın.",
+        "Bir kova yapın (3 demir külçe). Su taşımak ve lav tehlikesini söndürmek için hayat kurtarır.",
+        "Kalkan yapın; creeper patlaması ve ok hasarını azaltır.",
+        "Evinizin ve önemli yerlerin koordinatlarını bir yere not edin; mağarada kaybolmamanın en kolay yolu budur."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Elmas genelde dünyanın çok derin katmanlarında, yaklaşık Y -58 civarında en sık çıkar (koordinatlar F3 ekranından veya oyun ayarından görülür). Demir kazma ve yanınızda su kovasıyla inin."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Asla ayağınızın hemen altını dikey olarak kazmayın. Altınızda lav veya mağara olabilir. Merdiven gibi çapraz inin ve kazdığınız yolu geri dönebilecek şekilde bırakın."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme-yolu",
+     "baslik": "İlerleme yolu: hedeften hedefe",
+     "bloklar": [
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Aşama",
+        "Hedef",
+        "Not"
+       ],
+       "satirlar": [
+        [
+         "1. Hayatta kalma",
+         "Ev, yiyecek, demir takım",
+         "İlk 2-3 oyun günü"
+        ],
+        [
+         "2. Büyü masası",
+         "Elmas kazma, obsidyen, büyü masası",
+         "Obsidyen yalnızca elmas kazmayla kazılır"
+        ],
+        [
+         "3. Nether",
+         "Nether portalı, kale ve Blaze çubukları",
+         "Zırhlı ve bol yiyecekli gidin"
+        ],
+        [
+         "4. End hazırlığı",
+         "Ender incileri ve Ender Gözleri",
+         "Ender incisi ile Blaze tozu birleştirilir"
+        ],
+        [
+         "5. Ejderha",
+         "Kaleyi bulup End portalını açın, Ender Ejderhası",
+         "Ok, kılıç ve blok hazırlayın"
+        ],
+        [
+         "6. Oyun sonu",
+         "End şehirleri, Elytra, kendi büyük yapınız",
+         "Artık hedef sizin"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Nether portalı için en az 10 obsidyen gerekir; bunu bir kova su ve lav ile yapabilirsiniz. Ejderhayı yenmek zorunlu değildir; yine de Nether'e girmek sizi güçlendirir. Yeni başlayanın ilk büyük hedefi büyü masası olsun."
+      }
+     ]
+    },
+    {
+     "id": "kaynak-yonetimi",
+     "baslik": "Kaynak ve depo düzeni",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Yiyecek:** Buğday, havuç ve patates ekin; inek, koyun ve tavuk yetiştirin. Hayvanları uygun yiyecekle çoğaltabilirsiniz.",
+        "**Sandıklar:** Madenler, yiyecek, yapı malzemesi ve ekipman için ayrı sandıklar kullanın; tabelayla etiketleyin.",
+        "**Deneyim (XP):** Maden kazarken, fırında eritirken ve yaratık keserken XP kazanırsınız; büyü ve tamirde kullanın.",
+        "**Yedek:** Önemli dünyanızın kopyasını arada alın; sürüm güncellemesinden önce mutlaka alın."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Kural basit: bir şeyi ihtiyaç duyduğunuz yerde bulamıyorsanız deponuz dağınık demektir. Düzenli depo, ilerleme hızınızı bir iki kat artırır."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Yeni başlayanların sık hataları",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Meşalesiz mağarada dolaşmak. Hep meşale ve su kovası taşıyın.",
+        "Ölünce eşyalarını geride bırakmak. Eşyalar ölüm noktasına düşer ve bir süre sonra kaybolur; koordinatı not edip hemen dönün, değerli eşyayı sandıkta tutun.",
+        "Lav gölünün kenarında dikkatsiz kazmak. Yakınında su olsun.",
+        "Creeper'a yaklaşmak. Uzaktan vurun veya fısıltısını duyunca geri çekilin.",
+        "Dünyayı yedeksiz güncellemek veya hileyle bozmak."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Ölünce eşyalar yere düşer ve kısa süre sonra yok olur. Ölüm koordinatını hemen not edin ve en kısa yoldan dönün."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Hesap güvenliği ve ebeveyn denetimi",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Minecraft artık Microsoft hesabıyla oynanır. Çocuk hesabı için Microsoft'un aile ayarlarından sohbet, çok oyunculu ve satın alma sınırları belirlenebilir; menü adları değişebildiği için ayarı hesabın web sayfasında kendiniz kontrol edin."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Çocuklar için tanıdıkların olduğu kapalı sunucu veya Realms tercih edin; herkese açık sunucularda sohbet riski vardır.",
+        "Mod ve doku paketini yalnızca bilinen büyük sitelerden (CurseForge, Modrinth) indirin. .exe uzantılı bir mod dosyası kötü yazılım olabilir.",
+        "Ücretsiz Minecoin veya ücretsiz hesap vaat eden siteler dolandırıcılıktır; hesap bilginizi çalarlar.",
+        "Microsoft hesabınızda iki adımlı doğrulamayı açın."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Hesap, Minecoin veya eşya satan ve alan sitelere güvenmeyin. Hesabınızı kaybetmenin en yaygın nedeni sahte indirme ve hesap ticaretidir."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Sık sorulan sorular",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Java ve Bedrock'ı birlikte almam gerekir mi?",
+         "c": "PC'de çoğunlukla birlikte satılır ve ikisi de gelir. Telefon ve konsolda yalnızca Bedrock vardır."
+        },
+        {
+         "s": "Tek başıma oynayabilir miyim?",
+         "c": "Evet. Tek kişilik dünya internet gerektirmez; sunucu ve Realms için internet gerekir."
+        },
+        {
+         "s": "Hangi sürümü oynamalıyım?",
+         "c": "Normalde en son kararlı sürüm. Mod kullanacaksanız modun desteklediği sürümü kurun."
+        },
+        {
+         "s": "Mod nasıl kurulur?",
+         "c": "Java'da Fabric veya NeoForge gibi bir yükleyici kurup modları CurseForge veya Modrinth'ten indirirsiniz. Bedrock'ta Marketplace'ten eklenti paketleri alınır."
+        },
+        {
+         "s": "Ejderhayı yenmeden devam edebilir miyim?",
+         "c": "Evet; zorunlu değildir. Elytra gibi eşyalar End'dedir, ama bu bir tercihtir."
+        },
+        {
+         "s": "Dünyamı başka cihaza taşıyabilir miyim?",
+         "c": "Aynı sürüm türü içinde dışa ve içe aktarılabilir. Java ve Bedrock dünyaları birbirine doğrudan uyumlu değildir."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "en": {
+   "baslik": "Minecraft Beginner Guide: Java and Bedrock (2026)",
+   "ozet": "A guide for new players covering edition choice, your first night, a progression path and safety. Current version: Java 26.3 and Bedrock 26.50 (Wilderness Bound).",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Survival and building sandbox"
+    },
+    {
+     "ad": "Platform",
+     "deger": "PC (Java and Bedrock), Xbox, PlayStation, Nintendo Switch, Android, iOS"
+    },
+    {
+     "ad": "Pricing model",
+     "deger": "One-time purchase; Minecoins and Marketplace content are optional"
+    },
+    {
+     "ad": "Current version",
+     "deger": "Java 26.3 / Bedrock 26.50, Wilderness Bound (15 September 2026)"
+    },
+    {
+     "ad": "Turkish support",
+     "deger": "Yes, selectable in the in-game language settings"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "Where Minecraft stands in 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Minecraft is a game about gathering resources and building in an endless world made of cubes. Nothing forces a single goal on you: you can beat the Ender Dragon, or simply build a cozy house and run a farm. That freedom can be confusing in the first hours, so this guide gives you a solid order to follow."
+      },
+      {
+       "tip": "p",
+       "metin": "Since 2026 version numbers are year-based, for example **26.3**. The latest big update, **Wilderness Bound**, arrived on 15 September 2026 as Java 26.3 and Bedrock 26.50. It added the dappled forest biome, poplar wood, stairs and slabs for wool and concrete, cushions, straw beds and an abandoned camp structure, and it improved maps. The next version (26.4) is currently in snapshot testing."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "You can see the version number on the main menu. If a guide or mod still talks about numbers like 1.21, its information may be out of date, so check before you install."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Before you start: Java or Bedrock?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "On Windows the official store usually sells Java and Bedrock together, so one payment lets you install both. Consoles and phones only have Bedrock. The differences:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "",
+        "Java Edition",
+        "Bedrock Edition"
+       ],
+       "satirlar": [
+        [
+         "Platform",
+         "Windows, macOS, Linux",
+         "Windows, Xbox, PlayStation, Switch, Android, iOS"
+        ],
+        [
+         "Mod support",
+         "A huge world of mods and shaders",
+         "Limited; Marketplace content and add-on packs"
+        ],
+        [
+         "Playing with friends",
+         "Java servers and servers you host yourself",
+         "Cross-play between Bedrock devices, Realms"
+        ],
+        [
+         "Best for",
+         "PC players who want mods and custom servers",
+         "Phone, console or mixed-device friend groups"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Short advice:** if your friends are on phones or consoles, pick Bedrock. If you are on PC and want mods, pick Java. Java and Bedrock players normally cannot share a server, so agree on one edition with your friends first."
+      },
+      {
+       "tip": "p",
+       "metin": "**Price (USD list on minecraft.wiki):** Bedrock is 6.99 dollars on mobile, 19.99 on Xbox and PlayStation, and 29.99 on Windows and Switch. Your local price is shown in the store, so check there; I could not verify local prices. **Java system requirements:** Windows 10 64-bit or newer, at least a 4-core processor (Core i3-10100 or Ryzen 3 3100 class) and a Vulkan 1.3 graphics card with at least 2 GB of memory (GTX 950 or RX 460 class). For comfortable play, a Core i5-12400 and RTX 2060 class machine is recommended. Mods raise the needs."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Buy the game only from the official Minecraft website, the Microsoft Store or your console store. Cracked launchers are illegal and risky for your account and your computer."
+      }
+     ]
+    },
+    {
+     "id": "ilk-gece",
+     "baslik": "Your first night: the first 15 minutes, step by step",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "The game starts in daylight. A full day and night lasts about 20 real minutes, and when it gets dark hostile mobs such as zombies, skeletons, spiders and creepers spawn. Your goal is a simple shelter before darkness falls."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Collect wood",
+         "metin": "Punch a tree and collect at least 10-12 logs, then turn the logs into planks."
+        },
+        {
+         "baslik": "Build a crafting table",
+         "metin": "Make a crafting table from 4 planks. Use it to craft a wooden pickaxe, axe and sword."
+        },
+        {
+         "baslik": "Find stone and coal",
+         "metin": "Mine cobblestone with the wooden pickaxe; take at least 8 pieces for a stone pickaxe and a furnace. Use coal for both fuel and torches."
+        },
+        {
+         "baslik": "Find food",
+         "metin": "Hunt cows, pigs or chickens and cook the raw meat in the furnace. If you get wool from sheep, 3 wool and 3 planks make a bed."
+        },
+        {
+         "baslik": "Make a shelter",
+         "metin": "As evening comes, dig a small room into a hillside and seal the entrance with blocks. Put torches inside; mobs do not spawn in lit areas."
+        },
+        {
+         "baslik": "Get through the night",
+         "metin": "If you have a bed, sleep to skip the night, and your spawn point moves to the bed. Without a bed, dig underground: day and night make no difference there as long as you carry torches."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "A torch is made from one stick and one piece of coal. Always carry 20-30 torches; underground they are your first tool for finding your way and stopping mobs from spawning."
+      }
+     ]
+    },
+    {
+     "id": "ilk-hafta",
+     "baslik": "What to do in the first week",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Build a permanent home with chests beside it and a small plot for wheat or carrots.",
+        "Find iron: in caves and mountain sides it looks like light-colored specks inside stone. Smelt it into ingots and craft an iron pickaxe, sword and armor.",
+        "Make a bucket (3 iron ingots). It carries water and puts out lava dangers, so it can save your life.",
+        "Craft a shield; it reduces creeper blasts and arrow damage.",
+        "Write down the coordinates of your home and key places; it is the easiest way not to get lost in caves."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Diamonds are most common very deep in the world, around Y -58 (coordinates show on the F3 screen or in a game setting). Go down with an iron pickaxe and a water bucket."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Never dig straight down under your feet. There may be lava or a cave below. Descend diagonally like a staircase and leave a path you can climb back up."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme-yolu",
+     "baslik": "Progression path: goal by goal",
+     "bloklar": [
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Stage",
+        "Goal",
+        "Note"
+       ],
+       "satirlar": [
+        [
+         "1. Survive",
+         "Home, food, iron tools",
+         "First 2-3 game days"
+        ],
+        [
+         "2. Enchanting",
+         "Diamond pickaxe, obsidian, enchanting table",
+         "Obsidian can only be mined with a diamond pickaxe"
+        ],
+        [
+         "3. Nether",
+         "Nether portal, fortress and blaze rods",
+         "Go armored and with plenty of food"
+        ],
+        [
+         "4. End preparation",
+         "Ender pearls and Eyes of Ender",
+         "An ender pearl and blaze powder are combined"
+        ],
+        [
+         "5. The Dragon",
+         "Find the stronghold, open the End portal, Ender Dragon",
+         "Bring arrows, a sword and blocks"
+        ],
+        [
+         "6. Endgame",
+         "End cities, Elytra, your own big build",
+         "The goal is up to you"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "A Nether portal needs at least 10 obsidian, which you can make with a water bucket and lava. Beating the dragon is not mandatory, but entering the Nether makes you stronger. For a beginner, the first big goal should be an enchanting table."
+      }
+     ]
+    },
+    {
+     "id": "kaynak-yonetimi",
+     "baslik": "Resources and storage",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Food:** Plant wheat, carrots and potatoes; raise cows, sheep and chickens. You can breed animals with the right food.",
+        "**Chests:** Use separate chests for ores, food, building blocks and gear, and label them with signs.",
+        "**Experience (XP):** You gain XP by mining, smelting and killing mobs; spend it on enchanting and repairs.",
+        "**Backups:** Copy your important world now and then, and always before a version update."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "The rule is simple: if you cannot find something where you need it, your storage is messy. Tidy storage can easily double your pace."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Common beginner mistakes",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Wandering through a cave without torches. Always carry torches and a water bucket.",
+        "Leaving your items behind when you die. Items drop at the death spot and vanish after a while; note the coordinates and return quickly, and keep valuables in a chest.",
+        "Mining carelessly next to a lava lake. Keep water nearby.",
+        "Walking up to a creeper. Hit it from range or back away when you hear it hiss.",
+        "Updating a world without a backup, or ruining it with cheats."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "When you die your items drop and disappear after a short time. Write down the death coordinates immediately and take the shortest route back."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Account safety and parental controls",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Minecraft is now played with a Microsoft account. For a child account, Microsoft's family settings let you set limits on chat, multiplayer and purchases; menu names can change, so check the setting yourself on the account web page."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "For children prefer a closed server with people they know, or Realms; open public servers carry chat risks.",
+        "Download mods and texture packs only from well-known big sites (CurseForge, Modrinth). A mod file ending in .exe can be malware.",
+        "Sites promising free Minecoins or free accounts are scams that steal your account details.",
+        "Turn on two-step verification on your Microsoft account."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Do not trust sites that buy or sell accounts, Minecoins or items. The most common reason for losing an account is a fake download or account trading."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Frequently asked questions",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Do I need to buy Java and Bedrock together?",
+         "c": "On PC they are usually sold together and you get both. Phones and consoles only have Bedrock."
+        },
+        {
+         "s": "Can I play alone?",
+         "c": "Yes. A single-player world needs no internet; servers and Realms do."
+        },
+        {
+         "s": "Which version should I play?",
+         "c": "Normally the latest stable version. If you use mods, install the version the mod supports."
+        },
+        {
+         "s": "How do I install mods?",
+         "c": "On Java you install a loader such as Fabric or NeoForge, then download mods from CurseForge or Modrinth. On Bedrock you get add-on packs from the Marketplace."
+        },
+        {
+         "s": "Can I continue without beating the dragon?",
+         "c": "Yes, it is not mandatory. Items such as the Elytra are in the End, but that is a choice."
+        },
+        {
+         "s": "Can I move my world to another device?",
+         "c": "Within the same edition you can export and import it. Java and Bedrock worlds are not directly compatible with each other."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "fr": {
+   "baslik": "Guide du débutant Minecraft : Java et Bedrock (2026)",
+   "ozet": "Un guide pour les nouveaux joueurs : choix de l'édition, première nuit, progression et sécurité. Version actuelle : Java 26.3 et Bedrock 26.50 (Wilderness Bound).",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Bac à sable de survie et de construction"
+    },
+    {
+     "ad": "Plateforme",
+     "deger": "PC (Java et Bedrock), Xbox, PlayStation, Nintendo Switch, Android, iOS"
+    },
+    {
+     "ad": "Modèle économique",
+     "deger": "Achat unique ; Minecoins et contenus du Marketplace facultatifs"
+    },
+    {
+     "ad": "Version actuelle",
+     "deger": "Java 26.3 / Bedrock 26.50, Wilderness Bound (15 septembre 2026)"
+    },
+    {
+     "ad": "Prise en charge du turc",
+     "deger": "Oui, à choisir dans les réglages de langue du jeu"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "Où en est Minecraft en 2026 ?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Minecraft est un jeu où l'on récolte des ressources et construit dans un monde infini fait de cubes. Aucun objectif unique n'est imposé : vous pouvez vaincre l'Ender Dragon, ou simplement bâtir une maison confortable et gérer une ferme. Cette liberté peut dérouter pendant les premières heures ; ce guide vous donne donc un ordre solide à suivre."
+      },
+      {
+       "tip": "p",
+       "metin": "Depuis 2026, les numéros de version suivent l'année, par exemple **26.3**. La dernière grande mise à jour, **Wilderness Bound**, est sortie le 15 septembre 2026 en Java 26.3 et Bedrock 26.50. Elle ajoute le biome de forêt tachetée, le bois de peuplier, des escaliers et dalles en laine et en béton, des coussins, des lits de paille et un camp abandonné, et améliore les cartes. La prochaine version (26.4) est actuellement en test via des snapshots."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Le numéro de version s'affiche dans le menu principal. Si un guide ou un mod parle encore de numéros comme 1.21, ses informations sont peut-être périmées ; vérifiez avant d'installer."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Avant de commencer : Java ou Bedrock ?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Sous Windows, la boutique officielle vend en général Java et Bedrock ensemble : un seul paiement permet donc d'installer les deux. Sur consoles et téléphones, seul Bedrock existe. Les différences :"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "",
+        "Java Edition",
+        "Bedrock Edition"
+       ],
+       "satirlar": [
+        [
+         "Plateforme",
+         "Windows, macOS, Linux",
+         "Windows, Xbox, PlayStation, Switch, Android, iOS"
+        ],
+        [
+         "Mods",
+         "Un immense univers de mods et de shaders",
+         "Limité ; contenus du Marketplace et packs d'add-ons"
+        ],
+        [
+         "Jouer entre amis",
+         "Serveurs Java et serveurs que vous hébergez",
+         "Jeu croisé entre appareils Bedrock, Realms"
+        ],
+        [
+         "Pour qui",
+         "Joueurs PC qui veulent des mods et des serveurs personnalisés",
+         "Groupes d'amis sur téléphone, console ou appareils mixtes"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Conseil rapide :** si vos amis jouent sur téléphone ou console, choisissez Bedrock. Si vous êtes sur PC et voulez des mods, choisissez Java. Les joueurs Java et Bedrock ne peuvent normalement pas partager un serveur ; mettez-vous donc d'accord sur l'édition dès le départ."
+      },
+      {
+       "tip": "p",
+       "metin": "**Prix (liste en dollars américains de minecraft.wiki) :** Bedrock coûte 6,99 dollars sur mobile, 19,99 sur Xbox et PlayStation, et 29,99 sur Windows et Switch. Le prix local s'affiche dans la boutique, vérifiez-le là ; je n'ai pas pu confirmer les prix locaux. **Configuration requise pour Java :** Windows 10 64 bits ou plus récent, un processeur à au moins 4 cœurs (de la classe Core i3-10100 ou Ryzen 3 3100) et une carte graphique compatible Vulkan 1.3 avec au moins 2 Go de mémoire (classe GTX 950 ou RX 460). Pour jouer confortablement, une machine de la classe Core i5-12400 et RTX 2060 est conseillée. Les mods augmentent les besoins."
+      },
+      {
+       "tip": "uyari",
+       "metin": "N'achetez le jeu que sur le site officiel de Minecraft, le Microsoft Store ou la boutique de votre console. Les lanceurs piratés sont illégaux et dangereux pour votre compte et votre ordinateur."
+      }
+     ]
+    },
+    {
+     "id": "ilk-gece",
+     "baslik": "Votre première nuit : les 15 premières minutes, pas à pas",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Le jeu commence de jour. Un cycle complet jour-nuit dure environ 20 minutes réelles ; à la tombée de la nuit, des monstres hostiles comme les zombies, squelettes, araignées et creepers apparaissent. Votre but : avoir un abri simple avant l'obscurité."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Récoltez du bois",
+         "metin": "Frappez un arbre pour obtenir au moins 10 à 12 bûches, puis transformez-les en planches."
+        },
+        {
+         "baslik": "Fabriquez un établi",
+         "metin": "Un établi se fait avec 4 planches. Fabriquez-y une pioche, une hache et une épée en bois."
+        },
+        {
+         "baslik": "Trouvez pierre et charbon",
+         "metin": "Minez de la pierre taillée avec la pioche en bois ; prenez-en au moins 8 pour une pioche en pierre et un four. Utilisez le charbon comme combustible et pour les torches."
+        },
+        {
+         "baslik": "Trouvez de la nourriture",
+         "metin": "Chassez vaches, cochons ou poulets et faites cuire la viande crue au four. Avec de la laine de mouton, 3 laines et 3 planches donnent un lit."
+        },
+        {
+         "baslik": "Construisez un abri",
+         "metin": "À l'approche du soir, creusez une petite pièce dans une colline et fermez l'entrée avec des blocs. Placez des torches à l'intérieur ; les monstres n'apparaissent pas dans les zones éclairées."
+        },
+        {
+         "baslik": "Passez la nuit",
+         "metin": "Avec un lit, dormez pour passer la nuit ; votre point d'apparition se déplace au lit. Sans lit, creusez sous terre : jour et nuit n'y changent rien, tant que vous avez des torches."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Une torche se fabrique avec un bâton et un morceau de charbon. Gardez toujours 20 à 30 torches sur vous ; sous terre, c'est votre premier outil pour vous repérer et empêcher les monstres d'apparaître."
+      }
+     ]
+    },
+    {
+     "id": "ilk-hafta",
+     "baslik": "À faire durant la première semaine",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Construisez une maison durable avec des coffres à côté et un petit champ de blé ou de carottes.",
+        "Trouvez du fer : dans les grottes et sur les flancs de montagne, il apparaît comme des points clairs dans la pierre. Faites-le fondre en lingots et fabriquez pioche, épée et armure en fer.",
+        "Fabriquez un seau (3 lingots de fer). Il transporte l'eau et éteint les dangers de lave ; il peut vous sauver la vie.",
+        "Fabriquez un bouclier ; il réduit les explosions de creeper et les dégâts de flèches.",
+        "Notez les coordonnées de votre maison et des lieux importants ; c'est le moyen le plus simple de ne pas se perdre dans les grottes."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Les diamants sont les plus fréquents très profondément dans le monde, vers Y -58 (les coordonnées s'affichent avec l'écran F3 ou dans un réglage du jeu). Descendez avec une pioche en fer et un seau d'eau."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Ne creusez jamais tout droit sous vos pieds. Il peut y avoir de la lave ou une grotte en dessous. Descendez en diagonale comme un escalier et laissez un chemin pour remonter."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme-yolu",
+     "baslik": "Parcours de progression : objectif par objectif",
+     "bloklar": [
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Étape",
+        "Objectif",
+        "Remarque"
+       ],
+       "satirlar": [
+        [
+         "1. Survivre",
+         "Maison, nourriture, outils en fer",
+         "Les 2 à 3 premiers jours de jeu"
+        ],
+        [
+         "2. Enchantement",
+         "Pioche en diamant, obsidienne, table d'enchantement",
+         "L'obsidienne ne se mine qu'avec une pioche en diamant"
+        ],
+        [
+         "3. Nether",
+         "Portail du Nether, forteresse et bâtons de blaze",
+         "Partez en armure, avec beaucoup de nourriture"
+        ],
+        [
+         "4. Préparer l'End",
+         "Perles d'Ender et Yeux d'Ender",
+         "Une perle d'Ender et de la poudre de blaze s'assemblent"
+        ],
+        [
+         "5. Le Dragon",
+         "Trouvez la forteresse, ouvrez le portail de l'End, Ender Dragon",
+         "Prévoyez flèches, épée et blocs"
+        ],
+        [
+         "6. Fin de jeu",
+         "Villes de l'End, Elytra, votre grande construction",
+         "L'objectif vous appartient"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Un portail du Nether demande au moins 10 obsidiennes, que vous pouvez obtenir avec un seau d'eau et de la lave. Vaincre le dragon n'est pas obligatoire, mais entrer dans le Nether vous renforce. Pour un débutant, le premier grand objectif devrait être une table d'enchantement."
+      }
+     ]
+    },
+    {
+     "id": "kaynak-yonetimi",
+     "baslik": "Ressources et stockage",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Nourriture :** plantez du blé, des carottes et des pommes de terre ; élevez vaches, moutons et poules. Vous pouvez faire se reproduire les animaux avec la bonne nourriture.",
+        "**Coffres :** utilisez des coffres séparés pour les minerais, la nourriture, les blocs de construction et l'équipement, et étiquetez-les avec des panneaux.",
+        "**Expérience (XP) :** vous gagnez de l'XP en minant, en faisant fondre et en tuant des monstres ; dépensez-la en enchantements et réparations.",
+        "**Sauvegardes :** copiez de temps en temps votre monde important, et toujours avant une mise à jour de version."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "La règle est simple : si vous ne trouvez pas quelque chose là où il le faut, votre stockage est en désordre. Un stockage rangé peut facilement doubler votre rythme."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Erreurs fréquentes des débutants",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Se promener dans une grotte sans torches. Ayez toujours des torches et un seau d'eau.",
+        "Laisser ses objets derrière soi à sa mort. Les objets tombent sur place et disparaissent au bout d'un moment ; notez les coordonnées et revenez vite, et gardez les objets de valeur dans un coffre.",
+        "Miner sans précaution au bord d'un lac de lave. Gardez de l'eau à proximité.",
+        "S'approcher d'un creeper. Frappez-le à distance ou reculez quand vous l'entendez siffler.",
+        "Mettre à jour un monde sans sauvegarde, ou l'abîmer avec des triches."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "À votre mort, vos objets tombent et disparaissent après peu de temps. Notez tout de suite les coordonnées de la mort et revenez par le chemin le plus court."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Sécurité du compte et contrôle parental",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Minecraft se joue désormais avec un compte Microsoft. Pour un compte d'enfant, les paramètres familiaux de Microsoft permettent de fixer des limites sur le chat, le multijoueur et les achats ; les noms de menus pouvant changer, vérifiez le réglage vous-même sur la page web du compte."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Pour les enfants, préférez un serveur fermé avec des personnes connues, ou Realms ; les serveurs publics ouverts présentent des risques de chat.",
+        "Téléchargez mods et packs de textures uniquement sur de grands sites connus (CurseForge, Modrinth). Un fichier de mod en .exe peut être un logiciel malveillant.",
+        "Les sites qui promettent des Minecoins ou des comptes gratuits sont des arnaques qui volent vos informations de compte.",
+        "Activez la validation en deux étapes sur votre compte Microsoft."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Ne faites pas confiance aux sites qui achètent ou vendent des comptes, des Minecoins ou des objets. La cause la plus courante de perte de compte est un faux téléchargement ou un échange de comptes."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Questions fréquentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Dois-je acheter Java et Bedrock ensemble ?",
+         "c": "Sur PC, ils sont généralement vendus ensemble et vous avez les deux. Téléphones et consoles n'ont que Bedrock."
+        },
+        {
+         "s": "Puis-je jouer seul ?",
+         "c": "Oui. Un monde solo ne demande pas d'internet ; les serveurs et Realms oui."
+        },
+        {
+         "s": "Quelle version dois-je jouer ?",
+         "c": "Normalement la dernière version stable. Avec des mods, installez la version prise en charge par le mod."
+        },
+        {
+         "s": "Comment installer des mods ?",
+         "c": "Sur Java, installez un chargeur comme Fabric ou NeoForge, puis téléchargez les mods sur CurseForge ou Modrinth. Sur Bedrock, vous prenez des packs d'add-ons sur le Marketplace."
+        },
+        {
+         "s": "Puis-je continuer sans vaincre le dragon ?",
+         "c": "Oui, ce n'est pas obligatoire. Des objets comme l'Elytra se trouvent dans l'End, mais c'est un choix."
+        },
+        {
+         "s": "Puis-je déplacer mon monde vers un autre appareil ?",
+         "c": "Au sein de la même édition, vous pouvez l'exporter et l'importer. Les mondes Java et Bedrock ne sont pas directement compatibles entre eux."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "es": {
+   "baslik": "Guía para principiantes de Minecraft: Java y Bedrock (2026)",
+   "ozet": "Una guía para jugadores nuevos con la elección de edición, la primera noche, la ruta de progreso y la seguridad. Versión actual: Java 26.3 y Bedrock 26.50 (Wilderness Bound).",
+   "kunye": [
+    {
+     "ad": "Género",
+     "deger": "Sandbox de supervivencia y construcción"
+    },
+    {
+     "ad": "Plataforma",
+     "deger": "PC (Java y Bedrock), Xbox, PlayStation, Nintendo Switch, Android, iOS"
+    },
+    {
+     "ad": "Modelo de precio",
+     "deger": "Compra única; Minecoins y contenido del Marketplace opcionales"
+    },
+    {
+     "ad": "Versión actual",
+     "deger": "Java 26.3 / Bedrock 26.50, Wilderness Bound (15 de septiembre de 2026)"
+    },
+    {
+     "ad": "Soporte en turco",
+     "deger": "Sí, se elige en los ajustes de idioma del juego"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "¿Dónde está Minecraft en 2026?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Minecraft es un juego donde recoges recursos y construyes en un mundo infinito hecho de cubos. No te impone un único objetivo: puedes derrotar al Ender Dragon, o simplemente construir una casa acogedora y llevar una granja. Esa libertad puede confundir en las primeras horas, así que esta guía te da un orden sólido que seguir."
+      },
+      {
+       "tip": "p",
+       "metin": "Desde 2026 los números de versión se basan en el año, por ejemplo **26.3**. La última gran actualización, **Wilderness Bound**, llegó el 15 de septiembre de 2026 como Java 26.3 y Bedrock 26.50. Añadió el bioma de bosque moteado, la madera de álamo, escaleras y losas de lana y de hormigón, cojines, camas de paja y un campamento abandonado, y mejoró los mapas. La próxima versión (26.4) está ahora en pruebas mediante snapshots."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "El número de versión aparece en el menú principal. Si una guía o un mod aún habla de números como 1.21, su información puede estar desfasada; compruébalo antes de instalar."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Antes de empezar: ¿Java o Bedrock?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "En Windows la tienda oficial suele vender Java y Bedrock juntos, así que con un solo pago puedes instalar ambos. En consolas y móviles solo existe Bedrock. Las diferencias:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "",
+        "Java Edition",
+        "Bedrock Edition"
+       ],
+       "satirlar": [
+        [
+         "Plataforma",
+         "Windows, macOS, Linux",
+         "Windows, Xbox, PlayStation, Switch, Android, iOS"
+        ],
+        [
+         "Mods",
+         "Un enorme mundo de mods y shaders",
+         "Limitado; contenido del Marketplace y paquetes de add-ons"
+        ],
+        [
+         "Jugar con amigos",
+         "Servidores Java y servidores que tú alojes",
+         "Juego cruzado entre dispositivos Bedrock, Realms"
+        ],
+        [
+         "Para quién",
+         "Jugadores de PC que quieren mods y servidores personalizados",
+         "Grupos de amigos con móvil, consola o dispositivos mixtos"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Consejo rápido:** si tus amigos juegan en móvil o consola, elige Bedrock. Si estás en PC y quieres mods, elige Java. Los jugadores de Java y Bedrock normalmente no pueden compartir servidor, así que acordad la edición desde el principio."
+      },
+      {
+       "tip": "p",
+       "metin": "**Precio (lista en dólares de minecraft.wiki):** Bedrock cuesta 6,99 dólares en móvil, 19,99 en Xbox y PlayStation, y 29,99 en Windows y Switch. El precio local aparece en la tienda, compruébalo allí; no pude verificar los precios locales. **Requisitos de Java:** Windows 10 de 64 bits o superior, un procesador de al menos 4 núcleos (clase Core i3-10100 o Ryzen 3 3100) y una tarjeta gráfica compatible con Vulkan 1.3 con al menos 2 GB de memoria (clase GTX 950 o RX 460). Para jugar con comodidad se recomienda un equipo de clase Core i5-12400 y RTX 2060. Los mods aumentan las necesidades."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Compra el juego solo en la web oficial de Minecraft, la Microsoft Store o la tienda de tu consola. Los lanzadores piratas son ilegales y arriesgados para tu cuenta y tu ordenador."
+      }
+     ]
+    },
+    {
+     "id": "ilk-gece",
+     "baslik": "Tu primera noche: los primeros 15 minutos, paso a paso",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "El juego empieza de día. Un ciclo completo de día y noche dura unos 20 minutos reales; al oscurecer aparecen mobs hostiles como zombis, esqueletos, arañas y creepers. Tu objetivo es tener un refugio sencillo antes de que caiga la oscuridad."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Recoge madera",
+         "metin": "Golpea un árbol y consigue al menos 10 o 12 troncos; luego conviértelos en tablones."
+        },
+        {
+         "baslik": "Construye una mesa de trabajo",
+         "metin": "Una mesa de trabajo se hace con 4 tablones. Úsala para fabricar un pico, un hacha y una espada de madera."
+        },
+        {
+         "baslik": "Busca piedra y carbón",
+         "metin": "Pica piedra labrada con el pico de madera; coge al menos 8 piezas para un pico de piedra y un horno. Usa el carbón como combustible y para las antorchas."
+        },
+        {
+         "baslik": "Busca comida",
+         "metin": "Caza vacas, cerdos o gallinas y cocina la carne cruda en el horno. Si consigues lana de las ovejas, 3 lanas y 3 tablones hacen una cama."
+        },
+        {
+         "baslik": "Haz un refugio",
+         "metin": "Al caer la tarde, excava una pequeña sala en una ladera y tapa la entrada con bloques. Pon antorchas dentro; los mobs no aparecen en zonas iluminadas."
+        },
+        {
+         "baslik": "Pasa la noche",
+         "metin": "Si tienes cama, duerme para saltarte la noche; tu punto de reaparición se mueve a la cama. Sin cama, excava bajo tierra: allí el día y la noche dan igual mientras lleves antorchas."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Una antorcha se hace con un palo y un trozo de carbón. Lleva siempre 20 o 30 antorchas; bajo tierra son tu primera herramienta para orientarte y evitar que aparezcan mobs."
+      }
+     ]
+    },
+    {
+     "id": "ilk-hafta",
+     "baslik": "Qué hacer durante la primera semana",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Construye una casa permanente con cofres al lado y una pequeña parcela de trigo o zanahorias.",
+        "Busca hierro: en cuevas y laderas de montaña se ve como motas claras dentro de la piedra. Fúndelo en lingotes y fabrica pico, espada y armadura de hierro.",
+        "Fabrica un cubo (3 lingotes de hierro). Transporta agua y apaga peligros de lava, así que puede salvarte la vida.",
+        "Fabrica un escudo; reduce las explosiones de creeper y el daño de las flechas.",
+        "Apunta las coordenadas de tu casa y de los lugares clave; es la forma más fácil de no perderte en las cuevas."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Los diamantes son más comunes muy abajo en el mundo, hacia Y -58 (las coordenadas se ven con la pantalla F3 o en un ajuste del juego). Baja con un pico de hierro y un cubo de agua."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Nunca caves en vertical justo bajo tus pies. Puede haber lava o una cueva debajo. Baja en diagonal como una escalera y deja un camino para volver a subir."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme-yolu",
+     "baslik": "Ruta de progreso: objetivo a objetivo",
+     "bloklar": [
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Etapa",
+        "Objetivo",
+        "Nota"
+       ],
+       "satirlar": [
+        [
+         "1. Sobrevivir",
+         "Casa, comida, herramientas de hierro",
+         "Los primeros 2 o 3 días de juego"
+        ],
+        [
+         "2. Encantamiento",
+         "Pico de diamante, obsidiana, mesa de encantamientos",
+         "La obsidiana solo se pica con un pico de diamante"
+        ],
+        [
+         "3. Nether",
+         "Portal del Nether, fortaleza y varas de blaze",
+         "Ve con armadura y mucha comida"
+        ],
+        [
+         "4. Preparar el End",
+         "Perlas de Ender y Ojos de Ender",
+         "Una perla de Ender y polvo de blaze se combinan"
+        ],
+        [
+         "5. El Dragón",
+         "Encuentra la fortaleza, abre el portal del End, Ender Dragon",
+         "Lleva flechas, espada y bloques"
+        ],
+        [
+         "6. Final del juego",
+         "Ciudades del End, Elytra, tu gran construcción",
+         "El objetivo lo eliges tú"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Un portal del Nether necesita al menos 10 de obsidiana, que puedes conseguir con un cubo de agua y lava. Derrotar al dragón no es obligatorio, pero entrar en el Nether te hace más fuerte. Para un principiante, el primer gran objetivo debería ser una mesa de encantamientos."
+      }
+     ]
+    },
+    {
+     "id": "kaynak-yonetimi",
+     "baslik": "Recursos y almacenamiento",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Comida:** planta trigo, zanahorias y patatas; cría vacas, ovejas y gallinas. Puedes criar animales con la comida adecuada.",
+        "**Cofres:** usa cofres separados para minerales, comida, bloques de construcción y equipo, y etiquétalos con carteles.",
+        "**Experiencia (XP):** ganas XP al picar, fundir y matar mobs; gástala en encantamientos y reparaciones.",
+        "**Copias de seguridad:** copia de vez en cuando tu mundo importante, y siempre antes de actualizar de versión."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "La regla es sencilla: si no encuentras algo donde lo necesitas, tu almacén está desordenado. Un almacén ordenado puede duplicar fácilmente tu ritmo."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Errores comunes de los principiantes",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Pasear por una cueva sin antorchas. Lleva siempre antorchas y un cubo de agua.",
+        "Dejar tus objetos atrás al morir. Los objetos caen en el sitio y desaparecen al cabo de un rato; apunta las coordenadas y vuelve rápido, y guarda lo valioso en un cofre.",
+        "Picar sin cuidado junto a un lago de lava. Ten agua cerca.",
+        "Acercarte a un creeper. Golpéalo a distancia o retrocede cuando oigas su siseo.",
+        "Actualizar un mundo sin copia de seguridad, o estropearlo con trucos."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Al morir tus objetos caen y desaparecen tras poco tiempo. Apunta enseguida las coordenadas de la muerte y vuelve por el camino más corto."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Seguridad de la cuenta y control parental",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Minecraft ahora se juega con una cuenta de Microsoft. Para la cuenta de un niño, los ajustes familiares de Microsoft permiten fijar límites de chat, multijugador y compras; como los nombres de los menús pueden cambiar, comprueba el ajuste tú mismo en la página web de la cuenta."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Para niños, prefiere un servidor cerrado con gente conocida, o Realms; los servidores públicos abiertos tienen riesgos de chat.",
+        "Descarga mods y paquetes de texturas solo de sitios grandes y conocidos (CurseForge, Modrinth). Un archivo de mod con extensión .exe puede ser malware.",
+        "Los sitios que prometen Minecoins o cuentas gratis son estafas que roban los datos de tu cuenta.",
+        "Activa la verificación en dos pasos en tu cuenta de Microsoft."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "No confíes en sitios que compran o venden cuentas, Minecoins u objetos. La causa más común de perder una cuenta es una descarga falsa o el comercio de cuentas."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Preguntas frecuentes",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "¿Tengo que comprar Java y Bedrock juntos?",
+         "c": "En PC suelen venderse juntos y recibes ambos. Los móviles y las consolas solo tienen Bedrock."
+        },
+        {
+         "s": "¿Puedo jugar solo?",
+         "c": "Sí. Un mundo de un jugador no necesita internet; los servidores y Realms sí."
+        },
+        {
+         "s": "¿Qué versión debo jugar?",
+         "c": "Normalmente la última versión estable. Si usas mods, instala la versión que el mod admita."
+        },
+        {
+         "s": "¿Cómo se instalan los mods?",
+         "c": "En Java instalas un cargador como Fabric o NeoForge y luego descargas mods de CurseForge o Modrinth. En Bedrock consigues paquetes de add-ons en el Marketplace."
+        },
+        {
+         "s": "¿Puedo seguir sin derrotar al dragón?",
+         "c": "Sí, no es obligatorio. Objetos como la Elytra están en el End, pero es una elección."
+        },
+        {
+         "s": "¿Puedo mover mi mundo a otro dispositivo?",
+         "c": "Dentro de la misma edición puedes exportarlo e importarlo. Los mundos de Java y Bedrock no son directamente compatibles entre sí."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
