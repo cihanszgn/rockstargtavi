@@ -8,7 +8,9 @@ gönderi sitedeki haber sayfasına bağlanıyor. Sayfa, ziyaretçinin tarayıcı
 Senin yapacağın tek şey hesapları açıp anahtarları kurulum yardımcısına yapıştırmak.
 Yardımcı anahtarları dener, doğruysa GitHub'a gizli olarak kaydeder.
 
-**Önerilen başlangıç:** İngilizce (EN) ve Türkçe (TR) hesaplar. Fransızca ve İspanyolca
+> **Askıda (Cio'nun kararı, 2026-11-14):** şimdilik yalnız Instagram kullanılıyor. X ve Reddit bölümleri ileride açmak için duruyor; açarken Claude'a "X'i/Reddit'i aç" de (`sosyal/ayarlar.json`).
+
+**Önerilen başlangıç:** İngilizce (EN) ve Türkçe (TR) Instagram hesapları. Fransızca ve İspanyolca
 hesapları sonra aynı yolla eklersin.
 
 **E-posta ipucu:** her hesap ayrı e-posta ister. Gmail'de `adın+gtatr@gmail.com` gibi `+`
@@ -19,7 +21,7 @@ at, birlikte bakarız.
 
 ---
 
-## 1. X (Twitter): her dil için ayrı hesap
+## 1. X (Twitter): ASKIDA
 
 1. x.com'da hesabı aç (ad önerisi: "GTA VI Rehber" / "Game News Hub").
    - Profilde Ayarlar → Hesabın → **Otomatik hesap (Automated)** etiketini aç. X kuralı
@@ -42,7 +44,7 @@ at, birlikte bakarız.
      - Gönderinin tanesi ~0,015 $ olur.
      - Gönderide bağlantı yerine "ayrıntılar profildeki bağlantıda" yazar.
 
-## 2. Reddit: her dil için ayrı hesap
+## 2. Reddit: ASKIDA
 
 1. reddit.com'da hesap aç. **İki adımlı doğrulamayı (2FA) açma**, açarsan otomatik giriş
    çalışmaz.
@@ -66,10 +68,10 @@ at, birlikte bakarız.
 2. Ayarlar → Hesap türü → **Profesyonel hesaba geç**. Üretici (Creator) ya da İşletme
    (Business) seç.
 3. Profil bağlantısına haber sayfasını yaz:
-   - TR: `https://rockstargtavı.com/oyun-haberleri.html`
-   - EN: `https://rockstargtavı.com/en/game-news.html`
-   - FR: `https://rockstargtavı.com/fr/actus-jeux.html`
-   - ES: `https://rockstargtavı.com/es/noticias-juegos.html`
+   - TR: `https://ctrl-agame.com/oyun-haberleri.html`
+   - EN: `https://ctrl-agame.com/en/game-news.html`
+   - FR: `https://ctrl-agame.com/fr/actus-jeux.html`
+   - ES: `https://ctrl-agame.com/es/noticias-juegos.html`
 4. **developers.facebook.com** → My Apps → **Create app**. Tür: Business veya "Other",
    sonra Business.
 5. Uygulamaya **Instagram** ürününü ekle → **API setup with Instagram business login** →

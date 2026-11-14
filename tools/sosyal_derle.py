@@ -19,8 +19,8 @@ from email.utils import format_datetime
 from datetime import datetime, timezone
 
 KOK = pathlib.Path(__file__).resolve().parent.parent
-SITE = "https://xn--rockstargtav-d5b.com"
-GORUNEN = "rockstargtavı.com"
+SITE = "https://ctrl-agame.com"
+GORUNEN = "ctrl-agame.com"
 DILLER = ("tr", "en", "fr", "es")
 ONEK = {"tr": "/", "en": "/en/", "fr": "/fr/", "es": "/es/"}
 HUB = {"tr": "oyun-haberleri.html", "en": "en/game-news.html", "fr": "fr/actus-jeux.html", "es": "es/noticias-juegos.html"}
@@ -46,7 +46,7 @@ M = {
         "guncel": "Son güncelleme", "kaynak": "Kaynak", "devam": "Haberin tamamı →", "tum": "Tüm oyun haberleri →",
         "geri": "← Tüm oyun haberleri", "kutu": "Diğer oyunlardan haberler", "gta": "GTA VI haberleri →",
         "tur": {"haber": "Haber", "ucretsiz": "Ücretsiz", "cikis": "Çıkış", "indirim": "İndirim", "guncelleme": "Güncelleme"},
-        "locale": "tr_TR", "feed": "Oyun haberleri (rockstargtavı.com)",
+        "locale": "tr_TR", "feed": "Oyun haberleri (ctrl-agame.com)",
         "oneri": "Bu haber Türkçe de var:", "oneri_link": "Türkçe oku",
     },
     "en": {
@@ -57,7 +57,7 @@ M = {
         "guncel": "Last updated", "kaynak": "Source", "devam": "Read the full story →", "tum": "All game news →",
         "geri": "← All game news", "kutu": "News from other games", "gta": "GTA VI news →",
         "tur": {"haber": "News", "ucretsiz": "Free", "cikis": "Launch", "indirim": "Deal", "guncelleme": "Update"},
-        "locale": "en_US", "feed": "Game news (rockstargtavı.com)",
+        "locale": "en_US", "feed": "Game news (ctrl-agame.com)",
         "oneri": "This story is also available in English:", "oneri_link": "Read in English",
     },
     "fr": {
@@ -68,7 +68,7 @@ M = {
         "guncel": "Dernière mise à jour", "kaynak": "Source", "devam": "Lire l'article →", "tum": "Toutes les actus jeux →",
         "geri": "← Toutes les actus jeux", "kutu": "Actus des autres jeux", "gta": "Actus GTA VI →",
         "tur": {"haber": "Actu", "ucretsiz": "Gratuit", "cikis": "Sortie", "indirim": "Promo", "guncelleme": "Mise à jour"},
-        "locale": "fr_FR", "feed": "Actus jeux (rockstargtavı.com)",
+        "locale": "fr_FR", "feed": "Actus jeux (ctrl-agame.com)",
         "oneri": "Cet article existe aussi en français :", "oneri_link": "Lire en français",
     },
     "es": {
@@ -79,7 +79,7 @@ M = {
         "guncel": "Última actualización", "kaynak": "Fuente", "devam": "Leer la noticia →", "tum": "Todas las noticias de juegos →",
         "geri": "← Todas las noticias de juegos", "kutu": "Noticias de otros juegos", "gta": "Noticias de GTA VI →",
         "tur": {"haber": "Noticia", "ucretsiz": "Gratis", "cikis": "Lanzamiento", "indirim": "Oferta", "guncelleme": "Actualización"},
-        "locale": "es_ES", "feed": "Noticias de juegos (rockstargtavı.com)",
+        "locale": "es_ES", "feed": "Noticias de juegos (ctrl-agame.com)",
         "oneri": "Esta noticia también está en español:", "oneri_link": "Leer en español",
     },
 }
