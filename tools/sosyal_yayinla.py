@@ -2,7 +2,7 @@
 """Sosyal paylaşım: data/icerik.json'daki yeni haberleri X, Reddit ve Instagram'a gönderir.
 
 Her dil ayrı hesaptır (tr, en, fr, es). Bir hesabın şifreleri yoksa o hesap sessizce atlanır.
-Şifreler ortam değişkeninden okunur (GitHub Actions: SOSYAL_SIRLAR = toJSON(secrets)).
+Şifreler ortam değişkeninden okunur (GitHub Actions: her sır adıyla env olarak verilir).
 
   python tools/sosyal_yayinla.py --dry-run     # ne paylaşılacağını gösterir, hiçbir şey göndermez
   python tools/sosyal_yayinla.py               # gerçekten paylaşır, sosyal/gonderilenler.json'a yazar

@@ -40,8 +40,47 @@ jobs:
 
       - name: Paylaş
         env:
-          SOSYAL_SIRLAR: ${{ toJSON(secrets) }}
           DENEME: ${{ inputs.deneme && '--dry-run' || '' }}
+          X_TR_API_KEY: ${{ secrets.X_TR_API_KEY }}
+          X_TR_API_SECRET: ${{ secrets.X_TR_API_SECRET }}
+          X_TR_ACCESS_TOKEN: ${{ secrets.X_TR_ACCESS_TOKEN }}
+          X_TR_ACCESS_SECRET: ${{ secrets.X_TR_ACCESS_SECRET }}
+          REDDIT_TR_CLIENT_ID: ${{ secrets.REDDIT_TR_CLIENT_ID }}
+          REDDIT_TR_CLIENT_SECRET: ${{ secrets.REDDIT_TR_CLIENT_SECRET }}
+          REDDIT_TR_USERNAME: ${{ secrets.REDDIT_TR_USERNAME }}
+          REDDIT_TR_PASSWORD: ${{ secrets.REDDIT_TR_PASSWORD }}
+          IG_TR_USER_ID: ${{ secrets.IG_TR_USER_ID }}
+          IG_TR_TOKEN: ${{ secrets.IG_TR_TOKEN }}
+          X_EN_API_KEY: ${{ secrets.X_EN_API_KEY }}
+          X_EN_API_SECRET: ${{ secrets.X_EN_API_SECRET }}
+          X_EN_ACCESS_TOKEN: ${{ secrets.X_EN_ACCESS_TOKEN }}
+          X_EN_ACCESS_SECRET: ${{ secrets.X_EN_ACCESS_SECRET }}
+          REDDIT_EN_CLIENT_ID: ${{ secrets.REDDIT_EN_CLIENT_ID }}
+          REDDIT_EN_CLIENT_SECRET: ${{ secrets.REDDIT_EN_CLIENT_SECRET }}
+          REDDIT_EN_USERNAME: ${{ secrets.REDDIT_EN_USERNAME }}
+          REDDIT_EN_PASSWORD: ${{ secrets.REDDIT_EN_PASSWORD }}
+          IG_EN_USER_ID: ${{ secrets.IG_EN_USER_ID }}
+          IG_EN_TOKEN: ${{ secrets.IG_EN_TOKEN }}
+          X_FR_API_KEY: ${{ secrets.X_FR_API_KEY }}
+          X_FR_API_SECRET: ${{ secrets.X_FR_API_SECRET }}
+          X_FR_ACCESS_TOKEN: ${{ secrets.X_FR_ACCESS_TOKEN }}
+          X_FR_ACCESS_SECRET: ${{ secrets.X_FR_ACCESS_SECRET }}
+          REDDIT_FR_CLIENT_ID: ${{ secrets.REDDIT_FR_CLIENT_ID }}
+          REDDIT_FR_CLIENT_SECRET: ${{ secrets.REDDIT_FR_CLIENT_SECRET }}
+          REDDIT_FR_USERNAME: ${{ secrets.REDDIT_FR_USERNAME }}
+          REDDIT_FR_PASSWORD: ${{ secrets.REDDIT_FR_PASSWORD }}
+          IG_FR_USER_ID: ${{ secrets.IG_FR_USER_ID }}
+          IG_FR_TOKEN: ${{ secrets.IG_FR_TOKEN }}
+          X_ES_API_KEY: ${{ secrets.X_ES_API_KEY }}
+          X_ES_API_SECRET: ${{ secrets.X_ES_API_SECRET }}
+          X_ES_ACCESS_TOKEN: ${{ secrets.X_ES_ACCESS_TOKEN }}
+          X_ES_ACCESS_SECRET: ${{ secrets.X_ES_ACCESS_SECRET }}
+          REDDIT_ES_CLIENT_ID: ${{ secrets.REDDIT_ES_CLIENT_ID }}
+          REDDIT_ES_CLIENT_SECRET: ${{ secrets.REDDIT_ES_CLIENT_SECRET }}
+          REDDIT_ES_USERNAME: ${{ secrets.REDDIT_ES_USERNAME }}
+          REDDIT_ES_PASSWORD: ${{ secrets.REDDIT_ES_PASSWORD }}
+          IG_ES_USER_ID: ${{ secrets.IG_ES_USER_ID }}
+          IG_ES_TOKEN: ${{ secrets.IG_ES_TOKEN }}
         run: python tools/sosyal_yayinla.py $DENEME
 
       - name: Gönderi kaydını depoya yaz
