@@ -1,0 +1,104 @@
+{
+ "surum": 1,
+ "zaman_dilimi": "Europe/Istanbul",
+ "her_saat_dakika": 0,
+ "gunluk_bakim": "scheduled-task:504a0c45-8969-4a2f-bbf2-a76191f23e2c",
+ "saatlik": [
+  {
+   "hour": "00:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-00"
+  },
+  {
+   "hour": "01:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-01"
+  },
+  {
+   "hour": "02:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-02"
+  },
+  {
+   "hour": "03:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-03"
+  },
+  {
+   "hour": "04:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-04"
+  },
+  {
+   "hour": "05:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-05"
+  },
+  {
+   "hour": "06:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-06"
+  },
+  {
+   "hour": "07:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-07"
+  },
+  {
+   "hour": "08:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-08"
+  },
+  {
+   "hour": "09:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-09"
+  },
+  {
+   "hour": "10:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-10"
+  },
+  {
+   "hour": "11:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-11"
+  },
+  {
+   "hour": "12:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-12"
+  },
+  {
+   "hour": "13:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-13"
+  },
+  {
+   "hour": "14:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-14"
+  },
+  {
+   "hour": "15:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-15"
+  },
+  {
+   "hour": "16:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-16"
+  },
+  {
+   "hour": "17:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-17"
+  },
+  {
+   "hour": "18:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-18"
+  },
+  {
+   "hour": "19:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-19"
+  },
+  {
+   "hour": "20:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-20"
+  },
+  {
+   "hour": "21:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-21"
+  },
+  {
+   "hour": "22:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-22"
+  },
+  {
+   "hour": "23:00",
+   "id": "scheduled-task:command:mcp:13cdbfca-2f01-4ac4-b280-3b3d32a75b86:schedule-task:ctrl-agame-hourly-20261115-23"
+  }
+ ]
+}

@@ -500,13 +500,16 @@ def logo(dil: str) -> str:
 
 def kabuk(dil: str, yol: str, baslik: str, aciklama: str, govde: str, *, esler: dict | None = None, bolum: str | None = None,
           tip: str = "website", gorsel: str = "og.png", ek_bas: str = "", tam_baslik: bool = False, gta: bool = False,
-          sayfa_turu: str = "", hedefler: dict | None = None, dizinle: bool = True, ana_sinif: str = "") -> str:
+          sayfa_turu: str = "", hedefler: dict | None = None, dizinle: bool = True, ana_sinif: str = "",
+          gorsel_olcu: tuple[int, int] = (1200, 630)) -> str:
     t = T[dil]
     title = baslik if tam_baslik else f"{baslik} | {MARKA}"
+    gorsel_url = gorsel if https(gorsel) else f"{SITE}/{gorsel}"
     bas = [f'<!doctype html>\n<html lang="{dil}" class="no-js">\n<head>\n<meta charset="utf-8">\n'
            '<meta name="viewport" content="width=device-width,initial-scale=1">\n'
            f"<title>{e(title)}</title>\n<meta name=\"description\" content=\"{e(aciklama)}\">\n"]
     if dizinle:
+        bas.append('<meta name="robots" content="max-image-preview:large">\n')
         bas.append(f'<link rel="canonical" href="{tam(yol)}">\n')
         if esler and len(esler) > 1:
             bas += [f'<link rel="alternate" hreflang="{d}" href="{tam(esler[d])}">\n' for d in DILLER if d in esler]
@@ -516,11 +519,11 @@ def kabuk(dil: str, yol: str, baslik: str, aciklama: str, govde: str, *, esler: 
     bas.append(
         f'<meta property="og:title" content="{e(baslik if tam_baslik else title)}">\n'
         f'<meta property="og:description" content="{e(aciklama)}">\n<meta property="og:type" content="{tip}">\n'
-        f'<meta property="og:url" content="{tam(yol)}">\n<meta property="og:image" content="{SITE}/{gorsel}">\n'
-        '<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n'
+        f'<meta property="og:url" content="{tam(yol)}">\n<meta property="og:image" content="{e(gorsel_url)}">\n'
+        f'<meta property="og:image:width" content="{gorsel_olcu[0]}">\n<meta property="og:image:height" content="{gorsel_olcu[1]}">\n'
         f'<meta property="og:locale" content="{M[dil]["locale"]}">\n<meta property="og:site_name" content="{MARKA}">\n'
         f'<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="{e(title)}">\n'
-        f'<meta name="twitter:description" content="{e(aciklama)}">\n<meta name="twitter:image" content="{SITE}/{gorsel}">\n'
+        f'<meta name="twitter:description" content="{e(aciklama)}">\n<meta name="twitter:image" content="{e(gorsel_url)}">\n'
         f'<link rel="alternate" type="application/rss+xml" title="{e(M[dil]["feed"])}" href="{SITE}/{sd.FEED[dil]}">\n')
     if gta:
         bas.append(f'<link rel="alternate" type="application/rss+xml" title="{e(t["rss_gta"])} | {MARKA}" href="{SITE}{gta_feed(dil)}">\n')
@@ -1095,8 +1098,14 @@ def haber_sayfasi(dil: str, x: dict, veri: list) -> str:
     t, m, dl = T[dil], M[dil], x["diller"][dil]
     yollar = {d: f"{sd.KLASOR[d]}/{x['id']}.html" for d in DILLER}
     og = sd.kart_ad(x["id"], dil, "og")
+    gor = GORSEL.get(x['id']) or {}
+    buyuk_gorsel = gor if gor.get('en', 0) >= 1200 else {}
+    paylas_gorsel = buyuk_gorsel.get('url') or og
+    paylas_olcu = (buyuk_gorsel['en'], buyuk_gorsel['boy']) if buyuk_gorsel else (1200, 630)
     ld = {"@context": "https://schema.org", "@type": "NewsArticle", "headline": dl["baslik"], "description": dl["ozet"],
-          "datePublished": x["tarih"], "inLanguage": dil, "image": [f"{SITE}/{og}"], "mainEntityOfPage": tam(yollar[dil]),
+          "datePublished": x["tarih"], "inLanguage": dil,
+          "image": [paylas_gorsel if https(paylas_gorsel) else f"{SITE}/{paylas_gorsel}"], "mainEntityOfPage": tam(yollar[dil]),
+          "author": {"@type": "Organization", "name": MARKA, "url": tam(SAYFA['hakkinda'][dil])},
           "publisher": {"@type": "Organization", "name": MARKA, "url": f"{SITE}/"},
           "isBasedOn": [s["url"] for s in x["kaynaklar"]]}
     yon = sd.YONLENDIR % json.dumps({d: "/" + yollar[d] for d in DILLER})
@@ -1137,7 +1146,7 @@ def haber_sayfasi(dil: str, x: dict, veri: list) -> str:
              + (f'<section class="kutu"><h2>{e(t["etiketler"])}</h2><p class="etiketler">{etiket}</p></section>\n' if etiket else "")
              + '</aside>\n' + ilgili_html + '</div>\n</article>\n')
     return kabuk(dil, yollar[dil], f"{dl['baslik']} | {m['menu']}", dl["ozet"], govde, esler=yollar, bolum="haber", tip="article",
-                 gorsel=og, sayfa_turu="haber-detay",
+                 gorsel=paylas_gorsel, gorsel_olcu=paylas_olcu, sayfa_turu="haber-detay",
                  ek_bas=f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n' + yon + so.bas_ek())
 
 

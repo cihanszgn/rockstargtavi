@@ -1,0 +1,25 @@
+name: Haber otomasyonu testleri
+
+on:
+  push:
+    branches: [main]
+    paths: ['tools/haber_oto.py', 'tests/test_haber_oto.py', 'otomasyon/kaynaklar.json', '.github/workflows/haber-test.yml']
+  pull_request:
+    paths: ['tools/haber_oto.py', 'tests/test_haber_oto.py', 'otomasyon/kaynaklar.json', '.github/workflows/haber-test.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p test_haber_oto.py
+      - run: python tools/site_derle.py
+      - run: python tools/haber_oto.py kontrol

@@ -1,0 +1,26 @@
+{
+ "surum": 1,
+ "sinirlar": {"tur_basina": 3, "gunluk": 12, "son_saat": 48},
+ "kaynaklar": [
+  {"id":"ign","ad":"IGN","url":"https://www.ign.com/news","rss":"https://www.ign.com/rss/articles/feed","rol":"kesif"},
+  {"id":"gamespot","ad":"GameSpot","url":"https://www.gamespot.com/news/","rss":"https://www.gamespot.com/feeds/mashup/","rol":"kesif"},
+  {"id":"pcgamer","ad":"PC Gamer","url":"https://www.pcgamer.com/gaming-industry/","rss":"https://www.pcgamer.com/rss/","rol":"kesif"},
+  {"id":"eurogamer","ad":"Eurogamer","url":"https://www.eurogamer.net/","rss":"https://www.eurogamer.net/feed/news","rol":"kesif"},
+  {"id":"gamesradar","ad":"GamesRadar+","url":"https://www.gamesradar.com/games/","rss":"https://www.gamesradar.com/feeds.xml","rol":"kesif"},
+  {"id":"playstation","ad":"PlayStation Blog","url":"https://blog.playstation.com/","rss":"https://blog.playstation.com/feed/","rol":"resmi"},
+  {"id":"xbox","ad":"Xbox Wire","url":"https://news.xbox.com/en-us/","rss":"https://news.xbox.com/en-us/feed/","rol":"resmi"},
+  {"id":"nintendo","ad":"Nintendo","url":"https://www.nintendo.com/us/whatsnew/","yol":"/us/whatsnew/","rol":"resmi"},
+  {"id":"steam","ad":"Steam","url":"https://store.steampowered.com/news/","rss":"https://store.steampowered.com/feeds/news/","rol":"karma"},
+  {"id":"epic","ad":"Epic Games Store","url":"https://store.epicgames.com/en-US/news","api":"https://store-site-backend-static.ak.epicgames.com/freeGamesPromotions?locale=en-US&country=TR&allowCountries=TR","rol":"resmi"}
+ ],
+ "resmi_alanlar": [
+  "blog.playstation.com","playstation.com","news.xbox.com","xbox.com","nintendo.com",
+  "store.steampowered.com","steamcommunity.com","store.epicgames.com","epicgames.com",
+  "rockstargames.com","take2games.com","blizzard.com","worldofwarcraft.com","diablo4.blizzard.com",
+  "nttgame.com","knightonlineworld.com","metin2.gameforge.com","riseonlineworld.com",
+  "riotgames.com","playvalorant.com","leagueoflegends.com","mobilelegends.com","pubg.com",
+  "fortnite.com","callofduty.com","activision.com","ea.com","minecraft.net","roblox.com",
+  "pathofexile.com","hoyoverse.com","genshin.hoyoverse.com","ubisoft.com","square-enix-games.com",
+  "capcom-games.com","bandainamcoent.com","bethesda.net","newsroom.gamescom.global"
+ ]
+}

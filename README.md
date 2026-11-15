@@ -20,6 +20,10 @@ iki kez üst üste çalıştırınca ikincisi "0 dosya değişti" der (git diff 
 
 Gereken: Python 3.12, Pillow (yalnız kartlar için). Yerelde bakmak için: `py -m http.server 8765` → http://127.0.0.1:8765/
 
+## Saatlik haber otomasyonu
+
+15 Kasım 2026'dan beri saat başında 10 küresel haber/mağaza kaynağı taranır; resmî kaynakta teyit edilen yeni olaylar dört dilde hazırlanır ve testten sonra otomatik yayımlanır. Tur başına en fazla 3, Türkiye günü başına en fazla 12 haber; tekrarlar ve eksik teyitli kayıtlar elenir. Kaynak kaydı `otomasyon/kaynaklar.json`, çalışma/yayın sözleşmesi `otomasyon/SAATLIK-HABER.md`, zamanlayıcı istemi `otomasyon/saatlik-gorev.txt`; komutlar `tools/haber_oto.py` içindedir. Günlük 10:00 takvim görevi bakım için korunur; aynı haberleri yeniden üretmez. T3 Code çalışma ortamı ve model erişimi gerekir; bağımsız ücretli servis/API kurulmadı.
+
 ## Yapı
 | Yol | Ne |
 |---|---|
