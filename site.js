@@ -476,7 +476,7 @@
       var qs = p.toString();
       try { history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash); } catch (e) { /* file:// */ }
     }
-    var hazir = false;
+    var hazir = false, bosMetin = null;
     function uygula(yazma) {
       var q = norm(ara ? ara.value : ''), tok = q ? q.split(' ') : [], tk = takipAl(), n = 0;
       var tkVar = takipli && takipli.checked;
@@ -520,7 +520,17 @@
       }
       hazir = true;
       var aktif = !!(q || tkVar || Object.keys(secim).some(function (a) { return secim[a]; }));
-      if (bos) bos.hidden = n > 0 || !ogeler.length;
+      if (bos) {
+        bos.hidden = n > 0 || !ogeler.length;
+        // adedi 0 olan bir seçenek (ör. henüz yalanlanan söylenti yok) seçildiyse "şu an kayıt yok" açıklaması
+        var sifir = bos.getAttribute('data-sifir'), sifirSecili = !n && sifir && $$('button[data-adet="0"]', form).some(function (b) {
+          var a = b.getAttribute('data-alan');
+          return !!secim[a] && secim[a] === b.getAttribute('data-deger');
+        });
+        if (bosMetin === null) bosMetin = bos.textContent;
+        var yeni = sifirSecili ? sifir : bosMetin;
+        if (bos.textContent !== yeni) bos.textContent = yeni;
+      }
       if (temizle) temizle.hidden = !aktif;
       if (sonuc) sonuc.textContent = n === 1 ? sonuc.getAttribute('data-bir') : String(sonuc.getAttribute('data-cok') || '').replace('{n}', n);
       if (aktif) $$('details[data-grup]', kok).forEach(function (g) { if (!g.hidden) g.open = true; });
@@ -553,6 +563,24 @@
     d.addEventListener('cag-takip', function () { if (takipli && takipli.checked) uygula(true); });
     uygula(true);
   });
+
+  // ------------------------------------------------------------ haber listesi: ızgara / liste görünümü (tercih saklanır)
+  var gorDugmeler = $$('[data-gorunum]');
+  function gorBoya() {
+    var g = H.getAttribute('data-gor') === 'liste' ? 'liste' : 'izgara';
+    gorDugmeler.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-gorunum') === g ? 'true' : 'false'); });
+  }
+  if (gorDugmeler.length) {
+    gorBoya();
+    gorDugmeler.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var g = b.getAttribute('data-gorunum');
+        if (g === 'liste') H.setAttribute('data-gor', 'liste'); else H.removeAttribute('data-gor');
+        depo.koy('cag-gorunum', g);
+        gorBoya();
+      });
+    });
+  }
 
   // ------------------------------------------------------------ takvim dosyası (.ics)
   function icsKac(s) { return String(s).replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n'); }

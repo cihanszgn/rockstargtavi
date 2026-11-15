@@ -266,19 +266,58 @@ def _uygun(renk_h: float, s: float, l: float, zemin: str, hedef: float, yon: int
     return _hsl(renk_h, s, l)
 
 
-def varsayilan_tema(oyun_id: str, tur: str = "") -> dict:
-    hue = int(hashlib.sha1(oyun_id.encode()).hexdigest()[:6], 16) % 360
-    t = tur.lower().replace("ı", "i").replace("ş", "s").replace("ç", "c").replace("ğ", "g").replace("ö", "o").replace("ü", "u")
-    duzen = next((d for k, d in VARSAYILAN_DUZEN if k in t), "kart")
+def _sade(tur: str) -> str:
+    return tur.lower().replace("ı", "i").replace("ş", "s").replace("ç", "c").replace("ğ", "g").replace("ö", "o").replace("ü", "u")
+
+
+def _varsayilan_palet(hue: float) -> tuple[dict, dict]:
+    """Tek renk tonundan koyu ve açık palet (AA karşıtlığı _uygun ile tutturulur)."""
     z_k, y_k, c_k = _hsl(hue, .35, .07), _hsl(hue, .3, .11), _hsl(hue, .25, .24)
     z_a, y_a, c_a = _hsl(hue, .35, .95), "#FFFFFF", _hsl(hue, .25, .82)
     koyu = P(z_k, y_k, c_k, _hsl(hue, .2, .94), _uygun(hue, .15, .66, y_k, 4.6, 1), _uygun(hue, .75, .62, y_k, 4.6, 1),
              _uygun((hue + 150) % 360, .6, .66, y_k, 3.2, 1), _hsl(hue, .5, .08))
     acik = P(z_a, y_a, c_a, _hsl(hue, .3, .1), _uygun(hue, .15, .38, z_a, 4.8, -1), _uygun(hue, .75, .36, z_a, 4.8, -1),
              _uygun((hue + 150) % 360, .6, .34, z_a, 3.2, -1), "#FFFFFF")
+    return koyu, acik
+
+
+def varsayilan_tema(oyun_id: str, tur: str = "") -> dict:
+    hue = int(hashlib.sha1(oyun_id.encode()).hexdigest()[:6], 16) % 360
+    duzen = next((d for k, d in VARSAYILAN_DUZEN if k in _sade(tur)), "kart")
+    koyu, acik = _varsayilan_palet(hue)
     return dict(not_="Varsayılan tema (renk kimlikten türetildi).", yazi="archivo", buyuk=False, aralik="-.01em",
                 duzen=duzen, kutu="cerceve", adim="halka", tablo="sus", hareket="yavas", isaret='"\\25C6"',
                 koyu=koyu, acik=acik, ek="", varsayilan=True)
+
+
+# Merkezi olmayan oyunlar (takvim, söylenti, mağaza haberi) için kapak: renk 18 kovadan, düzen kimlikten.
+GENEL_KOVA = 18
+GENEL_DUZEN = ("orta", "serit", "bolge", "acili", "yildiz", "saha", "blok", "yayin", "kart")
+
+
+def genel_tema(kimlik: str, tur: str = "") -> dict:
+    """Sınıfları genel_css()'te hazır olan hafif tema: {'id', 'duzen', 'kova'} (amblem() için yeterli)."""
+    h = int(hashlib.sha1(kimlik.encode()).hexdigest()[:6], 16)
+    duzen = next((d for k, d in VARSAYILAN_DUZEN if k in _sade(tur)), "") if tur else ""
+    return {"id": kimlik, "duzen": duzen or GENEL_DUZEN[h % len(GENEL_DUZEN)], "kova": (h % 360) * GENEL_KOVA // 360}
+
+
+def genel_css() -> tuple[str, list[str]]:
+    """.tv-<kova> paletleri ve .tm-<düzen> motifleri; denetle() ile AA sınaması."""
+    parca, uyari = [], []
+    for k in range(GENEL_KOVA):
+        koyu, acik = _varsayilan_palet(k * 360 / GENEL_KOVA)
+        t = {"id": f"tv-{k}", "koyu": koyu, "acik": acik}
+        uyari += denetle(t)
+        kb, ab = _paletler(t)
+        s = f".tv-{k}"
+        parca.append(f"{s}{{{kb}--o-font:Archivo,sans-serif;--o-font-agirlik:800;--o-buyuk:uppercase;--o-aralik:0;color-scheme:dark}}"
+                     f'[data-tema="acik"] {s}{{{ab}color-scheme:light}}'
+                     f"@media (prefers-color-scheme:light){{:root:not([data-tema]) {s}{{{ab}color-scheme:light}}}}")
+    for d in GENEL_DUZEN:
+        url, w, h = motif_url(d)
+        parca.append(f".tm-{d}{{--o-motif:{url};--o-motif-boy:{w}px {h}px}}")
+    return "\n".join(parca), uyari
 
 
 def tema_al(oyun_id: str, tur: str = "") -> dict:
@@ -721,7 +760,9 @@ def css_uret(oyunlar: list[dict]) -> tuple[str, list[str]]:
             f"@media (prefers-color-scheme:light){{:root:not([data-tema]) {s}{{{a}color-scheme:light}}}}")
         if t.get("ek"):
             parca.append(t["ek"].replace("&", s))
-    return "\n".join(parca) + "\n", uyari
+    genel, g_uyari = genel_css()
+    parca.append(genel)
+    return "\n".join(parca) + "\n", uyari + g_uyari
 
 
 def kapak(t: dict, kisa: str, buyuk: bool = False, ek: str = "") -> str:

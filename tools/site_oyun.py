@@ -312,10 +312,12 @@ def rehber_var(oid: str, dil: str) -> bool:
 
 
 def cip(dil: str, ad: str) -> str:
+    """Oyun çipi oyunun tema renginde (t-<id> ya da genel renk kovası tv-<n>; renk oyun-tema.css'ten, yoksa site rengi)."""
     o = oyun_bul(ad) if dil else None
+    renk = S.kapak_tema(ad)[0].split()[0]
     if o and o["id"] != SIMDI_HUB:
-        return f'<a class="cip cip-oyun" href="{S.u(hub_yol(dil, o["id"]))}">{S.e(ad)}</a>'
-    return f'<span class="cip cip-oyun">{S.e(ad)}</span>'
+        return f'<a class="cip cip-oyun cip-tema {renk}" href="{S.u(hub_yol(dil, o["id"]))}">{S.e(ad)}</a>'
+    return f'<span class="cip cip-oyun cip-tema {renk}">{S.e(ad)}</span>'
 
 
 def oyun_adi_html(dil: str, ad: str) -> str:
@@ -599,9 +601,9 @@ def _merkez(dil: str, oid: str, veri: list, soy: list, tak: list) -> str:
                    f'<p><a class="dugme dugme-dolu" href="{S.u(ESLER[1][dil])}">{S.e(tt["r_oku"])}</a></p></div></section>\n')
     h_ic = ('<ul class="satirlar">\n' + "".join(S.haber_satir(dil, x) for x in haber[:8]) + "</ul>\n") if haber else S.bos_kutu(tt["o_bos"])
     ana.append(_panel(tt["o_haberler"], h_ic, (SAYFA["haber"][dil], tt["tum_haberler"])))
-    s_ic = ('<ul class="radar-liste">\n' + "".join(S.soylenti_kisa(dil, s) for s in soy_d[:6]) + "</ul>\n") if soy_d else S.bos_kutu(tt["o_bos"])
+    s_ic = ('<ul class="radar-liste">\n' + "".join(S.soylenti_kisa(dil, s, kapak=False) for s in soy_d[:6]) + "</ul>\n") if soy_d else S.bos_kutu(tt["o_bos"])
     ana.append(_panel(tt["o_soylentiler"], s_ic, (SAYFA["soylenti"][dil], tt["tum_soylenti"])))
-    c_ic = ('<ul class="takvim-liste">\n' + "".join(S.cikis_satir(dil, c, oge=False, arac=False) for c in tak_d[:8]) + "</ul>\n") if tak_d else S.bos_kutu(tt["o_bos"])
+    c_ic = ('<ul class="takvim-liste">\n' + "".join(S.cikis_satir(dil, c, oge=False, arac=False, kapak=False) for c in tak_d[:8]) + "</ul>\n") if tak_d else S.bos_kutu(tt["o_bos"])
     ana.append(_panel(tt["o_takvim"], c_ic, (SAYFA["takvim"][dil], tt["tum_takvim"])))
 
     bilgi = []

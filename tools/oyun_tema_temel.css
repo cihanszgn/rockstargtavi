@@ -472,8 +472,10 @@
 
 /* ---------- üretilmiş kapak ve dizin kartları */
 .o-kapak{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;isolation:isolate;background:
-  radial-gradient(80% 90% at 85% 50%,color-mix(in srgb,var(--o-vurgu) 16%,transparent),transparent 70%),var(--o-zemin)}
-.o-kapak-motif{position:absolute;inset:0;z-index:-1;background:var(--o-vurgu);opacity:.14;
+  radial-gradient(80% 90% at 85% 50%,color-mix(in srgb,var(--o-vurgu) 22%,transparent),transparent 70%),
+  radial-gradient(60% 75% at 6% 100%,color-mix(in srgb,var(--o-vurgu2,var(--o-vurgu)) 20%,transparent),transparent 72%),
+  linear-gradient(165deg,color-mix(in srgb,var(--o-vurgu) 7%,var(--o-zemin)),var(--o-zemin) 62%)}
+.o-kapak-motif{position:absolute;inset:0;z-index:-1;background:var(--o-vurgu);opacity:.18;
   -webkit-mask:var(--o-motif) repeat 0 0/var(--o-motif-boy);mask:var(--o-motif) repeat 0 0/var(--o-motif-boy)}
 .o-kapak-amblem{position:absolute;right:-4%;top:50%;width:52%;transform:translateY(-50%)}
 .o-kapak-amblem .o-amblem-svg{animation:none}

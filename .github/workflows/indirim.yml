@@ -31,6 +31,10 @@ jobs:
         # Bir kaynak hata verirse o dosyanın eski hâli kalır; site yine derlenir.
         run: python tools/indirim_cek.py || echo "Kaynaklardan biri yanıt vermedi; eski veri kullanılacak."
 
+      - name: Yeni haberlerin görsellerini bul
+        # Kaynak geçici olarak kapalıysa mevcut görseller ve temalı kapaklar korunur.
+        run: python tools/gorsel_cek.py
+
       - name: Siteyi derle
         run: python tools/site_derle.py
 
@@ -38,7 +42,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- data/indirimler.json data/ucretsiz.json data/sayfalar.json 'ara-*.json' sitemap.xml '*.html'
+          git add -- data/indirimler.json data/ucretsiz.json data/gorseller.json data/sayfalar.json 'ara-*.json' sitemap.xml '*.html'
           if ! git diff --cached --quiet; then
             git commit -m "indirim: günlük veri ve derleme"
             for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done

@@ -8,7 +8,7 @@
    "PC"
   ],
   "guven": "yuksek",
-  "durum": "dogrulanmadi",
+  "durum": "dogrulandi",
   "kaynaklar": [
    {
     "url": "https://www.videogameschronicle.com/news/playstation-reportedly-cancels-fairgames-after-recent-playtests",
@@ -19,32 +19,37 @@
     "url": "https://www.eurogamer.net/fairgames-playstation-heist-shooter-live-service-cancelled-haven",
     "ad": "Eurogamer",
     "tarih": "2026-11-10"
+   },
+   {
+    "url": "https://www.gamesindustry.biz/playstation-cancels-live-service-shooter-fairgames",
+    "ad": "GamesIndustry.biz",
+    "tarih": "2026-11-11"
    }
   ],
   "diller": {
    "tr": {
-    "baslik": "Fairgames'in iptal edildiği iddia ediliyor: Sony oyun testi sonrası projeyi bitirmiş",
-    "ozet": "Bloomberg'e göre PlayStation, canlı hizmet nişancı oyunu Fairgames'in geliştirmesini durdurdu.",
-    "metin": "Bloomberg'in aktardığına göre Sony yöneticileri çalışanlara gönderdikleri e-postada son oyun testinin geri bildirim ve oyuncu tutma sonuçlarının hedeflerin altında kaldığını yazdı. VGC'ye göre Haven Studios kapanmayacak ve işten çıkarma planlanmıyor. PlayStation iddiaya kamuya açık bir yorum yapmadı.",
-    "guven_nedeni": "Bloomberg dahili bir e-postadan alıntı yapıyor ve iki büyük yayın aktardı, ancak Sony kamuya açık bir doğrulama yapmadı."
+    "baslik": "Fairgames iptal söylentisi doğrulandı: PlayStation geliştirmeyi resmen durdurdu",
+    "ozet": "PlayStation, Bloomberg'e yaptığı açıklamayla canlı hizmet nişancı oyunu Fairgames'in iptal edildiğini doğruladı.",
+    "metin": "Ne iddia edildi: Bloomberg'in aktardığına göre Sony yöneticileri çalışanlara gönderdikleri e-postada son oyun testinin geri bildirim ve oyuncu tutma sonuçlarının hedeflerin altında kaldığını yazdı ve Fairgames'in geliştirmesi durduruldu. Ne zaman, kim doğruladı: PlayStation, Bloomberg'e verdiği açıklamada Haven Studios'un PlayStation Studios içindeki diğer ekiplerle çalışmaya ve yeni yaratıcı fırsatlar aramaya yöneleceğini söyledi; GamesIndustry.biz bunu 11 Kasım 2026'da \"PlayStation cancels live-service shooter Fairgames\" başlığıyla duyurdu. İptal nedeniyle işten çıkarma yapılmadı.",
+    "guven_nedeni": "Söylenti çıktığında Bloomberg dahili bir e-postaya dayanıyordu ve iki büyük yayın aktarmıştı; PlayStation sonradan Bloomberg'e verdiği açıklamayla iptali doğruladı."
    },
    "en": {
-    "baslik": "PlayStation reportedly cancels live-service shooter Fairgames after a failed playtest",
-    "ozet": "Bloomberg reports that PlayStation has ended development of the live-service shooter Fairgames.",
-    "metin": "According to Bloomberg, Sony executives told staff in an email that the latest playtest's feedback and retention results fell short of the goals set. VGC reports that Haven Studios will not close and no layoffs are planned. PlayStation has not publicly commented on the claim.",
-    "guven_nedeni": "Bloomberg quotes an internal email and two major outlets relayed it, but Sony has not confirmed it publicly."
+    "baslik": "Fairgames cancellation rumor confirmed: PlayStation officially ends development",
+    "ozet": "In a statement to Bloomberg, PlayStation confirmed that the live-service shooter Fairgames has been cancelled.",
+    "metin": "What was claimed: According to Bloomberg, Sony executives told staff in an email that the latest playtest's feedback and retention results fell short of the goals set, and that Fairgames development was being stopped. When and who confirmed: In a statement to Bloomberg, PlayStation said Haven Studios will shift focus to collaborating with other PlayStation Studios teams while exploring new creative opportunities; GamesIndustry.biz reported it on 11 November 2026 under the headline \"PlayStation cancels live-service shooter Fairgames\". No jobs were cut because of the cancellation.",
+    "guven_nedeni": "When the rumor appeared, Bloomberg was quoting an internal email and two major outlets relayed it; PlayStation later confirmed the cancellation in a statement to Bloomberg."
    },
    "fr": {
-    "baslik": "Selon une rumeur, PlayStation aurait annulé Fairgames après un test de jeu raté",
-    "ozet": "Selon Bloomberg, PlayStation aurait mis fin au développement du jeu de tir en service continu Fairgames.",
-    "metin": "D'après Bloomberg, des dirigeants de Sony auraient écrit aux équipes que les retours et la rétention du dernier test restaient en deçà des objectifs. Selon VGC, Haven Studios ne fermerait pas et aucun licenciement ne serait prévu. PlayStation n'a pas commenté publiquement l'information.",
-    "guven_nedeni": "Bloomberg cite un e-mail interne et deux grands médias l'ont relayé, mais Sony ne l'a pas confirmé publiquement."
+    "baslik": "Rumeur d'annulation de Fairgames confirmée : PlayStation arrête officiellement le développement",
+    "ozet": "Dans une déclaration à Bloomberg, PlayStation a confirmé l'annulation du jeu de tir en service continu Fairgames.",
+    "metin": "Ce qui était affirmé : selon Bloomberg, des dirigeants de Sony ont écrit aux équipes que les retours et la rétention du dernier test restaient en deçà des objectifs et que le développement de Fairgames était arrêté. Quand et qui a confirmé : dans une déclaration à Bloomberg, PlayStation a indiqué que Haven Studios allait se concentrer sur la collaboration avec d'autres équipes de PlayStation Studios tout en explorant de nouvelles opportunités créatives ; GamesIndustry.biz l'a relayé le 11 novembre 2026 sous le titre « PlayStation cancels live-service shooter Fairgames ». Aucun emploi n'a été supprimé à cause de l'annulation.",
+    "guven_nedeni": "Lorsque la rumeur est apparue, Bloomberg citait un e-mail interne et deux grands médias l'ont relayée ; PlayStation a ensuite confirmé l'annulation dans une déclaration à Bloomberg."
    },
    "es": {
-    "baslik": "Según un rumor, PlayStation canceló Fairgames tras una prueba de juego fallida",
-    "ozet": "Según Bloomberg, PlayStation habría puesto fin al desarrollo del shooter de servicio continuo Fairgames.",
-    "metin": "Según Bloomberg, directivos de Sony escribieron al personal que los resultados de comentarios y retención de la última prueba quedaron por debajo de los objetivos. VGC indica que Haven Studios no cerraría y no habría despidos. PlayStation no ha comentado públicamente la información.",
-    "guven_nedeni": "Bloomberg cita un correo interno y dos medios importantes lo recogieron, pero Sony no lo ha confirmado públicamente."
+    "baslik": "Rumor de cancelación de Fairgames confirmado: PlayStation detiene oficialmente el desarrollo",
+    "ozet": "En una declaración a Bloomberg, PlayStation confirmó la cancelación del shooter de servicio continuo Fairgames.",
+    "metin": "Lo que se afirmaba: según Bloomberg, directivos de Sony escribieron al personal que los resultados de comentarios y retención de la última prueba quedaron por debajo de los objetivos y que se detenía el desarrollo de Fairgames. Cuándo y quién lo confirmó: en una declaración a Bloomberg, PlayStation dijo que Haven Studios se centrará en colaborar con otros equipos de PlayStation Studios y en explorar nuevas oportunidades creativas; GamesIndustry.biz lo publicó el 11 de noviembre de 2026 con el titular \"PlayStation cancels live-service shooter Fairgames\". La cancelación no ha supuesto despidos.",
+    "guven_nedeni": "Cuando apareció el rumor, Bloomberg citaba un correo interno y dos medios importantes lo recogieron; PlayStation confirmó después la cancelación en una declaración a Bloomberg."
    }
   }
  },
@@ -270,6 +275,60 @@
   }
  },
  {
+  "id": "sentinel-ad-dogrulandi",
+  "tarih": "2026-10-29",
+  "oyun": "The Elder Scrolls VI",
+  "platform": [
+   "Xbox",
+   "PC"
+  ],
+  "guven": "yuksek",
+  "durum": "dogrulandi",
+  "kaynaklar": [
+   {
+    "url": "https://www.ign.com/articles/the-elder-scrolls-6-is-reportedly-subtitled-sentinel-new-story-details-revealed-ahead-of-rumored-announcement",
+    "ad": "IGN",
+    "tarih": "2026-10-29"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=uvcfI8RPZYc",
+    "ad": "Bethesda Softworks (resmî video)",
+    "tarih": "2026-11-03"
+   },
+   {
+    "url": "https://www.notebookcheck.net/Skyrim-s-long-awaited-successor-finally-gets-a-name-but-no-release-date.1441271.0.html",
+    "ad": "Notebookcheck",
+    "tarih": "2026-11-03"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "The Elder Scrolls 6 alt başlığı söylentisi doğrulandı: Bethesda \"Sentinel\" adını açıkladı",
+    "ozet": "The Verge'ün 29 Ekim'deki raporundaki \"Sentinel\" adı, Bethesda'nın 3 Kasım'daki videosuyla doğrulandı.",
+    "metin": "Ne iddia edildi: IGN'in aktardığına göre The Verge, The Elder Scrolls 6'nın adının The Elder Scrolls 6: Sentinel olduğunu, oyunun Hammerfell'de geçeceğini ve adın bir sonraki ay, Skyrim'in 15. ya da Xbox'ın 25. yıl dönümü civarında duyurulabileceğini yazdı. Ne zaman, kim doğruladı: Bethesda, 3 Kasım 2026'da stüdyonun 40. yıl videosunda oyunun adını açıkladı; Notebookcheck bunun The Verge'ün 29 Ekim raporunu doğruladığını yazdı. Hammerfell ve hikâye ayrıntıları Bethesda tarafından henüz doğrulanmadı; çıkış tarihi ve platformlar açıklanmadı.",
+    "guven_nedeni": "Rapor The Verge'ten geliyordu ve ad ile duyuru zamanı gibi somut iddialar içeriyordu; ancak kaynaklar adı verilmeyen kişilerdi ve Bethesda o sırada hiçbir şeyi doğrulamamıştı."
+   },
+   "en": {
+    "baslik": "The Elder Scrolls 6 subtitle rumor confirmed: Bethesda reveals the name \"Sentinel\"",
+    "ozet": "The \"Sentinel\" name from The Verge's 29 October report was confirmed by Bethesda's 3 November video.",
+    "metin": "What was claimed: IGN, relaying The Verge, reported that The Elder Scrolls 6 is titled The Elder Scrolls 6: Sentinel, that it is set in Hammerfell, and that the name could be announced the following month, around Skyrim's 15th or Xbox's 25th anniversary. When and who confirmed: Bethesda revealed the game's name in its 40th anniversary video on 3 November 2026; Notebookcheck wrote that this confirmed The Verge's 29 October report. The Hammerfell setting and story details are still unconfirmed by Bethesda; no release date or platforms were announced.",
+    "guven_nedeni": "The report came from The Verge and contained concrete claims such as the name and the announcement timing; its sources were unnamed and Bethesda had confirmed nothing at the time."
+   },
+   "fr": {
+    "baslik": "Rumeur sur le sous-titre d'Elder Scrolls 6 confirmée : Bethesda dévoile le nom « Sentinel »",
+    "ozet": "Le nom « Sentinel » cité par The Verge le 29 octobre a été confirmé par la vidéo de Bethesda du 3 novembre.",
+    "metin": "Ce qui était affirmé : IGN, relayant The Verge, rapportait que The Elder Scrolls 6 s'intitule The Elder Scrolls 6: Sentinel, qu'il se déroule à Hammerfell et que le nom pourrait être annoncé le mois suivant, autour du 15e anniversaire de Skyrim ou du 25e anniversaire de Xbox. Quand et qui a confirmé : Bethesda a révélé le nom du jeu dans sa vidéo des 40 ans le 3 novembre 2026 ; Notebookcheck écrit que cela confirme le rapport de The Verge du 29 octobre. Le cadre à Hammerfell et les détails de l'histoire ne sont pas confirmés par Bethesda ; ni date de sortie ni plateformes n'ont été annoncées.",
+    "guven_nedeni": "Le rapport venait de The Verge et contenait des affirmations précises (nom, moment de l'annonce) ; ses sources n'étaient pas nommées et Bethesda n'avait alors rien confirmé."
+   },
+   "es": {
+    "baslik": "Rumor sobre el subtítulo de Elder Scrolls 6 confirmado: Bethesda revela el nombre \"Sentinel\"",
+    "ozet": "El nombre \"Sentinel\" del informe de The Verge del 29 de octubre fue confirmado por el vídeo de Bethesda del 3 de noviembre.",
+    "metin": "Lo que se afirmaba: IGN, haciéndose eco de The Verge, informó de que The Elder Scrolls 6 se titula The Elder Scrolls 6: Sentinel, que transcurre en Hammerfell y que el nombre podría anunciarse el mes siguiente, en torno al 15.º aniversario de Skyrim o al 25.º de Xbox. Cuándo y quién lo confirmó: Bethesda reveló el nombre del juego en su vídeo del 40.º aniversario el 3 de noviembre de 2026; Notebookcheck escribió que esto confirma el informe de The Verge del 29 de octubre. El escenario de Hammerfell y los detalles de la historia siguen sin confirmar por Bethesda; no se anunciaron fecha de lanzamiento ni plataformas.",
+    "guven_nedeni": "El informe procedía de The Verge y contenía afirmaciones concretas (nombre y momento del anuncio); sus fuentes no estaban identificadas y Bethesda no había confirmado nada entonces."
+   }
+  }
+ },
+ {
   "id": "cyberpunk-2-coklu-oyuncu",
   "tarih": "2026-10-28",
   "oyun": "Cyberpunk 2",
@@ -446,6 +505,202 @@
     "ozet": "Basándose en cuatro fuentes anónimas, GamesBeat afirma que la versión de PC de GTA VI llegará en los tres primeros meses de 2027.",
     "metin": "Según el artículo, Rockstar planea lanzar la versión de PC en el primer trimestre de 2027, mientras que el juego sale en consolas el 19 de noviembre de 2026. La versión de PC tendrá que alcanzar el mismo nivel de calidad que la de consolas. Un representante de Rockstar no respondió a la solicitud de comentarios.",
     "guven_nedeni": "Procede de un solo medio con cuatro fuentes anónimas, y Rockstar no ha comentado."
+   }
+  }
+ },
+ {
+  "id": "metroid-ravenous-duyuru-dogrulandi",
+  "tarih": "2026-09-07",
+  "oyun": "Metroid Ravenous",
+  "platform": [
+   "Switch 2"
+  ],
+  "guven": "orta",
+  "durum": "dogrulandi",
+  "kaynaklar": [
+   {
+    "url": "https://screenrant.com/nintendo-direct-september-2026-major-leaks",
+    "ad": "ScreenRant",
+    "tarih": "2026-09-07"
+   },
+   {
+    "url": "https://www.nintendo.com/us/whatsnew/nintendo-direct-reveals-metroid-ravenous-kirby-and-the-world-beyond-and-more-games-for-nintendo-switch-2-and-nintendo-switch",
+    "ad": "Nintendo (resmî duyuru)",
+    "tarih": "2026-09-09"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Metroid Ravenous söylentisi doğrulandı: Nintendo yeni 2D Metroid'i Direct'te duyurdu",
+    "ozet": "Sızan EB Games afişindeki yeni 2D Metroid, 9 Eylül Nintendo Direct'inde resmen tanıtıldı.",
+    "metin": "Ne iddia edildi: ScreenRant'ın aktardığına göre Avustralya'daki EB Games'ten sızan bir afiş, Eylül Nintendo Direct'inde Metroid: Ravenous adlı yeni bir 2D Metroid oyununun duyurulacağını gösteriyordu. Ne zaman, kim doğruladı: Nintendo, 9 Eylül 2026'daki Direct'te Metroid Ravenous'u duyurdu ve resmî sitesinde oyunu \"yepyeni bir 2D macera\" olarak tanıttı. Afişteki çıkış tarihi ise tutmadı (ayrı kayıt: resmî tarih 28 Ocak 2027).",
+    "guven_nedeni": "Sızıntı tek bir perakendeci afişine dayanıyordu ve ScreenRant doğrulanmadığını belirtiyordu; ancak ScreenRant'a göre aynı ad Temmuz'da Brezilya yaş derecelendirme sitesinde de görülmüştü."
+   },
+   "en": {
+    "baslik": "Metroid Ravenous rumor confirmed: Nintendo announces the new 2D Metroid at the Direct",
+    "ozet": "The new 2D Metroid on the leaked EB Games poster was officially revealed at the 9 September Nintendo Direct.",
+    "metin": "What was claimed: According to ScreenRant, a leaked poster from Australian retailer EB Games showed that a new 2D Metroid called Metroid: Ravenous would be announced at the September Nintendo Direct. When and who confirmed: Nintendo announced Metroid Ravenous at the 9 September 2026 Direct and described it on its official site as an \"all-new 2D adventure\". The release date on the poster did not hold up (separate entry: the official date is 28 January 2027).",
+    "guven_nedeni": "The leak rested on a single retailer poster and ScreenRant said it was unconfirmed; however, ScreenRant noted the same name had appeared on a Brazilian age-rating site in July."
+   },
+   "fr": {
+    "baslik": "Rumeur Metroid Ravenous confirmée : Nintendo annonce le nouveau Metroid 2D lors du Direct",
+    "ozet": "Le nouveau Metroid 2D de l'affiche EB Games ayant fuité a été officiellement présenté au Nintendo Direct du 9 septembre.",
+    "metin": "Ce qui était affirmé : selon ScreenRant, une affiche d'EB Games (Australie) ayant fuité montrait qu'un nouveau Metroid 2D intitulé Metroid: Ravenous serait annoncé au Nintendo Direct de septembre. Quand et qui a confirmé : Nintendo a annoncé Metroid Ravenous lors du Direct du 9 septembre 2026 et l'a présenté sur son site officiel comme une « toute nouvelle aventure 2D ». La date de sortie de l'affiche ne s'est pas vérifiée (entrée distincte : la date officielle est le 28 janvier 2027).",
+    "guven_nedeni": "La fuite reposait sur une seule affiche de revendeur et ScreenRant la disait non confirmée ; toutefois, selon ScreenRant, le même nom était apparu en juillet sur un site brésilien de classification d'âge."
+   },
+   "es": {
+    "baslik": "Rumor de Metroid Ravenous confirmado: Nintendo anuncia el nuevo Metroid 2D en el Direct",
+    "ozet": "El nuevo Metroid 2D del cartel filtrado de EB Games se presentó oficialmente en el Nintendo Direct del 9 de septiembre.",
+    "metin": "Lo que se afirmaba: según ScreenRant, un cartel filtrado de EB Games (Australia) mostraba que en el Nintendo Direct de septiembre se anunciaría un nuevo Metroid 2D llamado Metroid: Ravenous. Cuándo y quién lo confirmó: Nintendo anunció Metroid Ravenous en el Direct del 9 de septiembre de 2026 y lo describió en su web oficial como una \"aventura 2D totalmente nueva\". La fecha de lanzamiento del cartel no se cumplió (entrada aparte: la fecha oficial es el 28 de enero de 2027).",
+    "guven_nedeni": "La filtración se basaba en un único cartel de una tienda y ScreenRant decía que no estaba confirmada; sin embargo, según ScreenRant, el mismo nombre ya había aparecido en julio en una web brasileña de clasificación por edades."
+   }
+  }
+ },
+ {
+  "id": "metroid-ravenous-tarih-yalanlandi",
+  "tarih": "2026-09-07",
+  "oyun": "Metroid Ravenous",
+  "platform": [
+   "Switch 2"
+  ],
+  "guven": "dusuk",
+  "durum": "yalanlandi",
+  "kaynaklar": [
+   {
+    "url": "https://screenrant.com/nintendo-direct-september-2026-major-leaks",
+    "ad": "ScreenRant",
+    "tarih": "2026-09-07"
+   },
+   {
+    "url": "https://www.nintendo.com/us/whatsnew/nintendo-direct-reveals-metroid-ravenous-kirby-and-the-world-beyond-and-more-games-for-nintendo-switch-2-and-nintendo-switch",
+    "ad": "Nintendo (resmî duyuru)",
+    "tarih": "2026-09-09"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Metroid Ravenous 10 Aralık söylentisi yalanlandı: resmî çıkış tarihi 28 Ocak 2027",
+    "ozet": "Sızan afişteki 10 Aralık 2026 çıkış tarihi, Nintendo'nun açıkladığı 28 Ocak 2027 tarihiyle çelişti.",
+    "metin": "Ne iddia edildi: ScreenRant'a göre sızan EB Games afişi Metroid Ravenous'un 10 Aralık 2026'da çıkacağını gösteriyordu. Ne zaman, kim yalanladı: Nintendo, 9 Eylül 2026'daki Direct sonrası resmî sitesinde oyunun ve Special Edition'ın 28 Ocak 2027'de çıkacağını açıkladı; afişteki tarih tutmadı.",
+    "guven_nedeni": "Tarih yalnızca tek bir afişte geçiyordu ve ScreenRant sızıntının doğrulanmadığını, tarihin şaşırtıcı olduğunu belirtiyordu."
+   },
+   "en": {
+    "baslik": "Metroid Ravenous 10 December rumor debunked: the official release date is 28 January 2027",
+    "ozet": "The 10 December 2026 release date on the leaked poster contradicted Nintendo's announced date of 28 January 2027.",
+    "metin": "What was claimed: According to ScreenRant, the leaked EB Games poster showed Metroid Ravenous releasing on 10 December 2026. When and who refuted it: After the 9 September 2026 Direct, Nintendo's official site announced that the game and its Special Edition launch on 28 January 2027; the date on the poster did not hold up.",
+    "guven_nedeni": "The date appeared only on a single poster, and ScreenRant noted the leak was unconfirmed and the date surprising."
+   },
+   "fr": {
+    "baslik": "Rumeur du 10 décembre pour Metroid Ravenous démentie : la date officielle est le 28 janvier 2027",
+    "ozet": "La date du 10 décembre 2026 de l'affiche ayant fuité contredisait la date annoncée par Nintendo, le 28 janvier 2027.",
+    "metin": "Ce qui était affirmé : selon ScreenRant, l'affiche d'EB Games ayant fuité donnait Metroid Ravenous pour le 10 décembre 2026. Quand et qui l'a démenti : après le Direct du 9 septembre 2026, le site officiel de Nintendo a annoncé que le jeu et son Special Edition sortiraient le 28 janvier 2027 ; la date de l'affiche ne s'est pas vérifiée.",
+    "guven_nedeni": "La date n'apparaissait que sur une seule affiche, et ScreenRant précisait que la fuite n'était pas confirmée et que la date était surprenante."
+   },
+   "es": {
+    "baslik": "Rumor del 10 de diciembre de Metroid Ravenous desmentido: la fecha oficial es el 28 de enero de 2027",
+    "ozet": "La fecha del 10 de diciembre de 2026 del cartel filtrado contradijo la fecha anunciada por Nintendo, el 28 de enero de 2027.",
+    "metin": "Lo que se afirmaba: según ScreenRant, el cartel filtrado de EB Games indicaba que Metroid Ravenous saldría el 10 de diciembre de 2026. Cuándo y quién lo desmintió: tras el Direct del 9 de septiembre de 2026, la web oficial de Nintendo anunció que el juego y su Special Edition saldrán el 28 de enero de 2027; la fecha del cartel no se cumplió.",
+    "guven_nedeni": "La fecha aparecía solo en un cartel y ScreenRant señalaba que la filtración no estaba confirmada y que la fecha resultaba sorprendente."
+   }
+  }
+ },
+ {
+  "id": "zelda-oot-remake-12-kasim-yalanlandi",
+  "tarih": "2026-09-07",
+  "oyun": "The Legend of Zelda: Ocarina of Time",
+  "platform": [
+   "Switch 2"
+  ],
+  "guven": "orta",
+  "durum": "yalanlandi",
+  "kaynaklar": [
+   {
+    "url": "https://screenrant.com/nintendo-direct-september-2026-major-leaks",
+    "ad": "ScreenRant",
+    "tarih": "2026-09-07"
+   },
+   {
+    "url": "https://www.nintendo.com/en-ca/store/products/the-legend-of-zelda-ocarina-of-time-125698",
+    "ad": "Nintendo (resmî mağaza sayfası)"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Ocarina of Time yeniden yapımı 12 Kasım söylentisi yalanlandı: resmî çıkış tarihi 5 Kasım 2026",
+    "ozet": "Sızan afiş ve bir perakende listesi 12 Kasım diyordu; Nintendo oyunu 5 Kasım 2026'da çıkardı.",
+    "metin": "Ne iddia edildi: ScreenRant'a göre sızan EB Games afişi Ocarina of Time yeniden yapımının çıkış tarihini 12 Kasım 2026 olarak gösteriyordu ve bunun İsveçli perakendeci Retrospelbutiken'deki bir listeyle örtüştüğü belirtiliyordu. Ne zaman, kim yalanladı: Nintendo'nun resmî mağaza sayfasında çıkış tarihi 5 Kasım 2026 olarak yazıyor; afiştaki ve perakende listesindeki tarih tutmadı.",
+    "guven_nedeni": "Tarih iki ayrı perakende kaynağında görünüyordu, ancak ScreenRant sızıntının doğrulanmadığını belirtiyordu."
+   },
+   "en": {
+    "baslik": "Ocarina of Time remake 12 November rumor debunked: the official release date is 5 November 2026",
+    "ozet": "A leaked poster and a retail listing said 12 November; Nintendo released the game on 5 November 2026.",
+    "metin": "What was claimed: According to ScreenRant, the leaked EB Games poster listed the Ocarina of Time remake for 12 November 2026, and the report said this matched a listing at Swedish retailer Retrospelbutiken. When and who refuted it: Nintendo's official store page gives the release date as 5 November 2026; the date on the poster and in the retail listing did not hold up.",
+    "guven_nedeni": "The date appeared in two separate retail sources, but ScreenRant noted the leak was unconfirmed."
+   },
+   "fr": {
+    "baslik": "Rumeur du 12 novembre pour le remake d'Ocarina of Time démentie : la date officielle est le 5 novembre 2026",
+    "ozet": "Une affiche ayant fuité et une fiche de revendeur indiquaient le 12 novembre ; Nintendo a sorti le jeu le 5 novembre 2026.",
+    "metin": "Ce qui était affirmé : selon ScreenRant, l'affiche d'EB Games ayant fuité donnait le remake d'Ocarina of Time pour le 12 novembre 2026, ce qui concordait, d'après l'article, avec une fiche du revendeur suédois Retrospelbutiken. Quand et qui l'a démenti : la page boutique officielle de Nintendo indique le 5 novembre 2026 comme date de sortie ; la date de l'affiche et de la fiche de revendeur ne s'est pas vérifiée.",
+    "guven_nedeni": "La date figurait chez deux sources de vente distinctes, mais ScreenRant précisait que la fuite n'était pas confirmée."
+   },
+   "es": {
+    "baslik": "Rumor del 12 de noviembre del remake de Ocarina of Time desmentido: la fecha oficial es el 5 de noviembre de 2026",
+    "ozet": "Un cartel filtrado y una ficha de tienda decían 12 de noviembre; Nintendo lanzó el juego el 5 de noviembre de 2026.",
+    "metin": "Lo que se afirmaba: según ScreenRant, el cartel filtrado de EB Games daba el remake de Ocarina of Time para el 12 de noviembre de 2026, y el artículo señalaba que coincidía con una ficha de la tienda sueca Retrospelbutiken. Cuándo y quién lo desmintió: la página de tienda oficial de Nintendo indica el 5 de noviembre de 2026 como fecha de lanzamiento; la fecha del cartel y de la ficha de tienda no se cumplió.",
+    "guven_nedeni": "La fecha aparecía en dos fuentes de venta distintas, pero ScreenRant señalaba que la filtración no estaba confirmada."
+   }
+  }
+ },
+ {
+  "id": "witcher3-switch2-60fps-yalanlandi",
+  "tarih": "2026-08-27",
+  "oyun": "The Witcher 3: Wild Hunt Remastered",
+  "platform": [
+   "Switch 2"
+  ],
+  "guven": "dusuk",
+  "durum": "yalanlandi",
+  "kaynaklar": [
+   {
+    "url": "https://www.notebookcheck.net/The-Witcher-3-Wild-Hunt-Remastered-Switch-2-port-may-run-at-60-fps-claims-Gamescom-leak.1379944.0.html",
+    "ad": "Notebookcheck",
+    "tarih": "2026-08-27"
+   },
+   {
+    "url": "https://www.nintendolife.com/news/2026/08/the-witcher-3-remastered-resolution-and-frame-rate-for-switch-2-revealed",
+    "ad": "Nintendo Life",
+    "tarih": "2026-08-28"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=pZe0EDoG0AA",
+    "ad": "CD Projekt Red (resmî yayın)",
+    "tarih": "2026-08-28"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Witcher 3 Remastered Switch 2 60 fps söylentisi yalanlandı: CD Projekt hedefi 30-40 fps olarak açıkladı",
+    "ozet": "Gamescom'da oyunu deneyen bir blog yazarı 60 fps dedi; CD Projekt Red'in 28 Ağustos'taki yayını 30-40 fps hedefini gösterdi.",
+    "metin": "Ne iddia edildi: Notebookcheck'in aktardığına göre Gamescom'da oyunu deneyen bir Polonyalı blog yazarı, The Witcher 3: Wild Hunt Remastered'ın Switch 2 sürümünün 60 fps çalıştığını yazdı. Ne zaman, kim yalanladı: CD Projekt Red, 28 Ağustos 2026'daki gamescom yayınında Switch 2 performansını açıkladı; Nintendo Life'ın aktardığına göre hedef TV modunda 1080p, taşınabilir modda 720p ve her iki modda 30-40 fps (VRR ile). Not: rakamlar Nintendo Life'ın yayına dayanan haberinden alındı; yayın sayfasında açıklama metninde rakam yer almıyor.",
+    "guven_nedeni": "İddia tek bir blog yazarının fuar izlenimine dayanıyordu ve CD Projekt Red o sırada performans ayrıntılarını açıklamamıştı; Notebookcheck'e göre bir Alman site de 30 fps'in üzerinde kare hızı gözlemlemişti."
+   },
+   "en": {
+    "baslik": "Witcher 3 Remastered Switch 2 60 fps rumor debunked: CD Projekt reveals a 30-40 fps target",
+    "ozet": "A blogger who tried the game at Gamescom claimed 60 fps; CD Projekt Red's 28 August stream showed a 30-40 fps target.",
+    "metin": "What was claimed: According to Notebookcheck, a Polish blogger who tried the game at Gamescom wrote that the Switch 2 version of The Witcher 3: Wild Hunt Remastered runs at 60 fps. When and who refuted it: CD Projekt Red revealed Switch 2 performance in its gamescom stream on 28 August 2026; per Nintendo Life, the target is 1080p docked and 720p handheld, with 30-40 fps in both modes (with VRR). Note: the figures come from Nintendo Life's report on the stream; the stream page's description text does not contain them.",
+    "guven_nedeni": "The claim rested on one blogger's show-floor impression, and CD Projekt Red had not published performance details at the time; per Notebookcheck, a German site had also observed frame rates above 30 fps."
+   },
+   "fr": {
+    "baslik": "Rumeur des 60 fps de Witcher 3 Remastered sur Switch 2 démentie : CD Projekt annonce un objectif de 30-40 fps",
+    "ozet": "Un blogueur ayant essayé le jeu à la Gamescom a parlé de 60 fps ; la diffusion de CD Projekt Red du 28 août a montré un objectif de 30-40 fps.",
+    "metin": "Ce qui était affirmé : selon Notebookcheck, un blogueur polonais ayant essayé le jeu à la Gamescom a écrit que la version Switch 2 de The Witcher 3: Wild Hunt Remastered tourne à 60 fps. Quand et qui l'a démenti : CD Projekt Red a dévoilé les performances sur Switch 2 lors de sa diffusion gamescom du 28 août 2026 ; d'après Nintendo Life, l'objectif est de 1080p en mode TV et 720p en mode portable, avec 30-40 fps dans les deux modes (avec VRR). Remarque : les chiffres viennent de l'article de Nintendo Life sur la diffusion ; le texte de description de la page de la diffusion ne les contient pas.",
+    "guven_nedeni": "L'affirmation reposait sur l'impression d'un seul blogueur sur le salon et CD Projekt Red n'avait pas publié de détails de performance ; selon Notebookcheck, un site allemand avait aussi observé plus de 30 fps."
+   },
+   "es": {
+    "baslik": "Rumor de 60 fps de Witcher 3 Remastered en Switch 2 desmentido: CD Projekt fija un objetivo de 30-40 fps",
+    "ozet": "Un bloguero que probó el juego en la Gamescom habló de 60 fps; la emisión de CD Projekt Red del 28 de agosto mostró un objetivo de 30-40 fps.",
+    "metin": "Lo que se afirmaba: según Notebookcheck, un bloguero polaco que probó el juego en la Gamescom escribió que la versión de Switch 2 de The Witcher 3: Wild Hunt Remastered funciona a 60 fps. Cuándo y quién lo desmintió: CD Projekt Red reveló el rendimiento en Switch 2 en su emisión de la gamescom del 28 de agosto de 2026; según Nintendo Life, el objetivo es 1080p en modo TV y 720p en modo portátil, con 30-40 fps en ambos modos (con VRR). Nota: las cifras proceden de la noticia de Nintendo Life sobre la emisión; el texto de descripción de la página de la emisión no las contiene.",
+    "guven_nedeni": "La afirmación se basaba en la impresión de un solo bloguero en la feria y CD Projekt Red no había publicado detalles de rendimiento; según Notebookcheck, un sitio alemán también observó más de 30 fps."
    }
   }
  }

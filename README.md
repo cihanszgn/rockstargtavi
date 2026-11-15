@@ -14,6 +14,7 @@ iki kez üst üste çalıştırınca ikincisi "0 dosya değişti" der (git diff 
 
 - Yalnız site (Pillow gerekmez, GitHub Actions bunu kullanır): `py tools/site_derle.py`
 - İndirim/ücretsiz anlık görüntüsünü yenile: `py tools/indirim_cek.py` (sonra derle)
+- Haber görsellerini çek: `py tools/gorsel_cek.py` (yalnız kaydı olmayan haberler; hepsini yeniden çekmek için `--yenile`, sonra derle)
 - Derleme tarihini elle vermek (geri sayım/"kaç gün kaldı" denemesi): `SITE_BUGUN=2026-11-20`
 - Deneme verisiyle derlemek: `SITE_DENEME_VERI=<klasör>` (klasörde `soylentiler.json` / `takvim.json` vb. varsa onlar okunur)
 
@@ -28,6 +29,7 @@ Gereken: Python 3.12, Pillow (yalnız kartlar için). Yerelde bakmak için: `py 
 | `tools/oyun_tema.py`, `tools/oyun_tema_temel.css` | Oyun başına tema (renk, yazı tipi, düzen, amblem, kutu/adım/tablo biçimi) → derlemede `oyun-tema.css`. Amblemler tamamen üretilmiş soyut SVG; oyun logosu/görseli/yazı tipi taklidi yok |
 | `tools/sosyal_derle.py` | Giriş noktası; `data/icerik.json` doğrulaması, kartlar (`kart/*.png|jpg`), kök `og.png`. `sosyal_yayinla.py` buradan `DILLER, GORUNEN, KLASOR, M, SITE, kart_ad` alır |
 | `tools/indirim_cek.py` | CheapShark + Epic ücretsiz oyun anlık görüntüsü (yalnız standart kütüphane) |
+| `tools/gorsel_cek.py` | Her haberin ilk resmî kaynağından `og:image` (yoksa `twitter:image`) adresini okur → `data/gorseller.json`. Yalnız https, kaynağın kendi alan adı ya da CDN'i, en az 600 px; boyut Pillow ile ölçülür, görsel depoya kaydedilmez |
 | `style.css`, `site.js` | Tek stil ve tek betik. Sürüm eki (`?v=`) derlemede içerikten hesaplanır |
 | `fonts/` | Archivo (OFL), siteyle birlikte sunulur. `fonts/oyun/`: tema yazı tipleri (16 adet, hepsi OFL, tek ağırlık, Latin + Türkçe/Fransızca/İspanyolca alt kümesi, 7–21 KB; lisanslar `fonts/oyun/lisans/`). Her rehber yalnız kendi temasının yazı tipini yükler |
 | `gta-6.html` ve eski sayfalar | Elle yazılmış rehber sayfaları. Derleyici yalnız kabuğu (üst menü, alt bilgi, `<head>`) yeniler; `<main>` içeriğine dokunmaz. `gta-6.html`deki işaretli bloklar (`gta-ust`, `gta-haber`, `gta-dizin`) otomatik dolar |
@@ -72,10 +74,14 @@ Sürüm rozeti: Türkçede `surum`, diğer dillerde o dilin `kunye` 4. satırı 
 **`indirimler.json`, `ucretsiz.json`** — `indirim_cek.py` yazar, elle düzenlenmez. Tarayıcı canlı fiyatı CheapShark'tan alır;
 bu dosyalar JavaScript kapalıyken ve CheapShark'a ulaşılamazken gösterilir. Yalnız resmî/yetkili mağazalar (`indirim_cek.py` içindeki izin listesi).
 
+**`gorseller.json` — haber görselleri** (`gorsel_cek.py` yazar): `{"<haber-id>": {"url": "https://…", "kaynak": "Xbox Wire", "en": 1200, "boy": 630}}`.
+Görsel kaynağın sunucusundan doğrudan gösterilir (`referrerpolicy="no-referrer"`, sabit en-boy oranı). Kaydı olmayan ya da tarayıcıda yüklenemeyen
+haberde oyunun temasından üretilmiş kapak (renk + amblem + oyun adı + tür rozeti) görünür; söylentiler her zaman üretilmiş kapak kullanır.
+
 **`sayfalar.json`** — derleyicinin yazdığı sayfa listesi (site haritası ve dil karşılıkları için). Elle düzenlenmez.
 
 ## İçerik ekleme
-1. Haber: `data/icerik.json`a yeni öğe (4 dil + kaynak) → `py tools/sosyal_derle.py`. Haber sayfası, merkez listesi, RSS, site haritası ve kartlar kendiliğinden oluşur.
+1. Haber: `data/icerik.json`a yeni öğe (4 dil + kaynak) → `py tools/gorsel_cek.py` → `py tools/sosyal_derle.py`. Haber sayfası, merkez listesi, RSS, site haritası ve kartlar kendiliğinden oluşur.
 2. Söylenti: `data/soylentiler.json`a öğe; güven ve durum alanı zorunlu. Söylenti yalnız Söylentiler bölümünde ve ana sayfadaki radarda görünür, haber olarak basılmaz.
 3. Çıkış: `data/takvim.json`a öğe; tarih kesinleşince `tarih` doldurulur, `pencere` boşaltılır.
 4. Yeni elle yazılmış sayfa: dosyayı oluştur (`<main>` içeriğiyle), `tools/site_metin.py`de dört dilliyse `ESLER`e, yalnız Türkçeyse `TEK_TR`ye ekle
@@ -98,7 +104,7 @@ gizli başlayan her stil `.js` sınıfına bağlı (JavaScript kapalıyken büt�
 ## Kurallar
 - Her haberin ve söylentinin kaynağı yazılır; söylenti yalnız kendi etiketli bölümünde durur.
 - Sızıntı/çalıntı içerik, korsan, hile/mod menüsü, hesap/anahtar satıcısı, bahis bağlantısı yok.
-- Firma logosu ve oyun görseli haberlerde kullanılmaz; indirim/ücretsiz listelerindeki küçük resimler mağaza API'sinden gelir.
+- Haberlerde resmî kaynağın görseli ve görünür kaynak notu kullanılır; görsel yüklenemezse özgün temalı kapak gösterilir. İndirim/ücretsiz listelerindeki küçük resimler mağaza API'sinden gelir.
 - Olmayan veri basılmaz (yer tutucu haber, sahte fiyat yok).
 - Reklam/istatistik değişirse `gizlilik.html` güncellenir.
 
