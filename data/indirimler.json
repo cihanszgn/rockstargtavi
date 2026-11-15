@@ -1,5 +1,5 @@
 {
- "guncel": "2026-11-14T13:41:52Z",
+ "guncel": "2026-11-15T12:04:47Z",
  "kaynak": "https://www.cheapshark.com",
  "magazalar": [
   {
@@ -130,7 +130,7 @@
    "savings": 27.01,
    "metacriticScore": 0,
    "steamRatingText": "Positive",
-   "steamRatingPercent": 91,
+   "steamRatingPercent": 92,
    "steamAppID": "4411720",
    "releaseDate": 1794441600,
    "dealRating": 10.0,
@@ -371,7 +371,7 @@
    "steamRatingPercent": 0,
    "steamAppID": null,
    "releaseDate": 0,
-   "dealRating": 9.9,
+   "dealRating": 9.8,
    "thumb": "https://store.ubisoft.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/en_US/dwa1ddf744/images/large/5afda8a96b54a4271407a857.jpg?sw=197&amp;sh=261&amp;sm=fit",
    "enDusuk": 12.0
   },
@@ -388,7 +388,7 @@
    "steamRatingPercent": 0,
    "steamAppID": null,
    "releaseDate": 0,
-   "dealRating": 9.9,
+   "dealRating": 9.8,
    "thumb": "https://sttc.gamersgate.com/images/product/borderlands-3-ultimate-edition-steam/cover-180-4b55a5.jpg",
    "enDusuk": 16.86
   },
@@ -405,7 +405,7 @@
    "steamRatingPercent": 0,
    "steamAppID": null,
    "releaseDate": 0,
-   "dealRating": 9.8,
+   "dealRating": 9.7,
    "thumb": "https://store.ubisoft.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/default/dw6d3a8167/images/large/5c9101796b54a4f66191600d.jpg?sw=197&amp;sh=261&amp;sm=fit",
    "enDusuk": 18.0
   },
@@ -422,7 +422,7 @@
    "steamRatingPercent": 0,
    "steamAppID": null,
    "releaseDate": 0,
-   "dealRating": 9.8,
+   "dealRating": 9.7,
    "thumb": "https://images.greenmangaming.com/1fc947d200d049e4ad63b7b72fe48c0e/fb360b675ee54fe0af3bdebc6ee7e2ee.jpg",
    "enDusuk": 18.0
   },
@@ -439,7 +439,7 @@
    "steamRatingPercent": 0,
    "steamAppID": null,
    "releaseDate": 0,
-   "dealRating": 9.7,
+   "dealRating": 9.6,
    "thumb": "https://sttc.gamersgate.com/images/product/red-dead-redemption-2-ultimate-edition/cover-180-c4aaeb.jpg",
    "enDusuk": 16.2
   },
@@ -456,7 +456,7 @@
    "steamRatingPercent": 0,
    "steamAppID": null,
    "releaseDate": 0,
-   "dealRating": 9.7,
+   "dealRating": 9.6,
    "thumb": "https://cdn.humblebundle.com/misc/files/hashed/5fa544ab5435535c247224d10fb6221a94809367.jpg",
    "enDusuk": 10.0
   },
@@ -473,7 +473,7 @@
    "steamRatingPercent": 0,
    "steamAppID": null,
    "releaseDate": 0,
-   "dealRating": 9.7,
+   "dealRating": 9.6,
    "thumb": "https://images.greenmangaming.com/b90ac73b7b48460c96483736a10677c3/18fd4b0d639042e782f74ed4c9641ab2.jpg",
    "enDusuk": 9.24
   },
@@ -490,7 +490,7 @@
    "steamRatingPercent": 0,
    "steamAppID": null,
    "releaseDate": 0,
-   "dealRating": 9.7,
+   "dealRating": 9.6,
    "thumb": "https://store.ubisoft.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/default/dwb17dd946/images/large/5823123488a7e36b398b4567.jpg?sw=197&amp;sh=261&amp;sm=fit",
    "enDusuk": 20.0
   },
@@ -507,7 +507,7 @@
    "steamRatingPercent": 0,
    "steamAppID": null,
    "releaseDate": 0,
-   "dealRating": 9.7,
+   "dealRating": 9.6,
    "thumb": "https://images.greenmangaming.com/b0279bf8df8a426987e1c4abaeffb03a/45ef97623d6246b8a367d7a3370d4a17.jpg",
    "enDusuk": 13.2
   },
@@ -524,7 +524,7 @@
    "steamRatingPercent": 92,
    "steamAppID": "1060600",
    "releaseDate": 1582243200,
-   "dealRating": 9.7,
+   "dealRating": 9.5,
    "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1060600/capsule_231x87.jpg?t=1769537301",
    "enDusuk": 1.99
   },
@@ -541,7 +541,7 @@
    "steamRatingPercent": 94,
    "steamAppID": "418240",
    "releaseDate": 1480982400,
-   "dealRating": 9.7,
+   "dealRating": 9.5,
    "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/418240/capsule_231x87.jpg?t=1789475696",
    "enDusuk": 0.0
   },
@@ -558,7 +558,7 @@
    "steamRatingPercent": 0,
    "steamAppID": null,
    "releaseDate": 0,
-   "dealRating": 9.7,
+   "dealRating": 9.5,
    "thumb": "https://store.ubisoft.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/default/dwecec4e01/images/large/5f6b4b7b0d253c2228fda45d.jpg?sw=197&amp;sh=261&amp;sm=fit",
    "enDusuk": 18.7
   },
@@ -575,7 +575,7 @@
    "steamRatingPercent": 0,
    "steamAppID": null,
    "releaseDate": 0,
-   "dealRating": 9.7,
+   "dealRating": 9.5,
    "thumb": "https://images.greenmangaming.com/87ec27edd9e34afe8bbfe26be708be9e/b3eff4e22c8e4f408b9bcf2f199619aa.jpg",
    "enDusuk": 22.0
   },
@@ -592,7 +592,7 @@
    "steamRatingPercent": 0,
    "steamAppID": null,
    "releaseDate": 0,
-   "dealRating": 9.6,
+   "dealRating": 9.5,
    "thumb": "https://sttc.gamersgate.com/images/product/tennis-world-tour-legends-edition/cover-180-641a7e.jpg",
    "enDusuk": 4.99
   },
@@ -609,7 +609,7 @@
    "steamRatingPercent": 79,
    "steamAppID": "8000",
    "releaseDate": 1181001600,
-   "dealRating": 9.6,
+   "dealRating": 9.4,
    "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/8000/capsule_231x87.jpg?t=1729009457",
    "enDusuk": 0.8
   },
@@ -626,7 +626,7 @@
    "steamRatingPercent": 0,
    "steamAppID": null,
    "releaseDate": 0,
-   "dealRating": 9.6,
+   "dealRating": 9.4,
    "thumb": "https://images.greenmangaming.com/3b8ce208d9694e248dd754e9f40013bc/856e4a50e2c4459fbde0146695c1f61e.jpg",
    "enDusuk": 10.99
   },
@@ -643,7 +643,7 @@
    "steamRatingPercent": 0,
    "steamAppID": null,
    "releaseDate": 0,
-   "dealRating": 9.6,
+   "dealRating": 9.4,
    "thumb": "https://images.greenmangaming.com/5586046eb67a48f186b1abaa86d276f1/85bcc60d3c074a518533c565b9e51058.jpg",
    "enDusuk": 15.84
   },
@@ -660,7 +660,7 @@
    "steamRatingPercent": 0,
    "steamAppID": null,
    "releaseDate": 0,
-   "dealRating": 9.5,
+   "dealRating": 9.4,
    "thumb": "https://sttc.gamersgate.com/images/product/egosoft-collection/cover-180-9675c7.jpg",
    "enDusuk": 17.84
   },
@@ -677,7 +677,7 @@
    "steamRatingPercent": 93,
    "steamAppID": "274350",
    "releaseDate": 1441843200,
-   "dealRating": 9.5,
+   "dealRating": 9.3,
    "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/274350/capsule_231x87.jpg?t=1725396094",
    "enDusuk": 0.99
   },
@@ -694,26 +694,9 @@
    "steamRatingPercent": 93,
    "steamAppID": "609320",
    "releaseDate": 1526515200,
-   "dealRating": 9.4,
+   "dealRating": 9.3,
    "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/609320/capsule_231x87.jpg?t=1769095038",
    "enDusuk": 1.49
-  },
-  {
-   "dealID": "o1Drls4ocCclDJ9i4HqAW78dXp0kAaza1pXjEY5RnNE%3D",
-   "gameID": "228789",
-   "title": "Lacuna  A Sci-Fi Noir Adventure",
-   "storeID": "2",
-   "salePrice": 1.6,
-   "normalPrice": 15.99,
-   "savings": 89.99,
-   "metacriticScore": 86,
-   "steamRatingText": "Very Positive",
-   "steamRatingPercent": 92,
-   "steamAppID": "1364100",
-   "releaseDate": 1621468800,
-   "dealRating": 9.4,
-   "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1364100/2f141b70398ce62fb98c1d849a56a05267f917a7/capsule_231x87.jpg?t=1794218067",
-   "enDusuk": 1.59
   },
   {
    "dealID": "%2BhIe51fqt40VxsF47rhvcnf%2BQh%2BP5CSA2lp39sEo3Mw%3D",
@@ -728,7 +711,7 @@
    "steamRatingPercent": 83,
    "steamAppID": "700160",
    "releaseDate": 1532390400,
-   "dealRating": 9.4,
+   "dealRating": 9.3,
    "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/700160/capsule_231x87.jpg?t=1680797529",
    "enDusuk": 0.74
   },
@@ -745,7 +728,7 @@
    "steamRatingPercent": 94,
    "steamAppID": "1517180",
    "releaseDate": 1731542400,
-   "dealRating": 9.4,
+   "dealRating": 9.2,
    "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1517180/capsule_231x87.jpg?t=1744981735",
    "enDusuk": 0.0
   },
@@ -762,7 +745,7 @@
    "steamRatingPercent": 83,
    "steamAppID": "13600",
    "releaseDate": 1070323200,
-   "dealRating": 9.4,
+   "dealRating": 9.2,
    "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/13600/capsule_231x87.jpg?t=1720535333",
    "enDusuk": 1.69
   },
@@ -779,26 +762,9 @@
    "steamRatingPercent": 74,
    "steamAppID": "8140",
    "releaseDate": 1226966400,
-   "dealRating": 9.4,
+   "dealRating": 9.2,
    "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/8140/capsule_231x87.jpg?t=1729009496",
    "enDusuk": 0.8
-  },
-  {
-   "dealID": "yWYF%2B7AvgfvHS6Cx4Py%2F%2BCSVlc%2B6ffU7WNyz5tVuqOo%3D",
-   "gameID": "265818",
-   "title": "RoboCop: Rogue City",
-   "storeID": "23",
-   "salePrice": 3.46,
-   "normalPrice": 39.99,
-   "savings": 91.35,
-   "metacriticScore": 76,
-   "steamRatingText": "Very Positive",
-   "steamRatingPercent": 86,
-   "steamAppID": "1681430",
-   "releaseDate": 1698883200,
-   "dealRating": 9.4,
-   "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1681430/capsule_231x87.jpg?t=1778174302",
-   "enDusuk": 3.15
   },
   {
    "dealID": "DQ13SUlD9m7GzWhNRVdxrDNdZ4OfY4c8er0TAuMk9P4%3D",
@@ -813,7 +779,7 @@
    "steamRatingPercent": 87,
    "steamAppID": "1309620",
    "releaseDate": 1711065600,
-   "dealRating": 9.3,
+   "dealRating": 9.2,
    "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1309620/capsule_231x87.jpg?t=1758953155",
    "enDusuk": 1.99
   },
@@ -830,7 +796,7 @@
    "steamRatingPercent": 95,
    "steamAppID": "571310",
    "releaseDate": 1506038400,
-   "dealRating": 9.3,
+   "dealRating": 9.2,
    "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/571310/capsule_231x87.jpg?t=1726132098",
    "enDusuk": 0.99
   },
@@ -847,7 +813,7 @@
    "steamRatingPercent": 92,
    "steamAppID": "1919470",
    "releaseDate": 1668124800,
-   "dealRating": 9.3,
+   "dealRating": 9.2,
    "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1919470/a3d0ce0907a9a09d0601b1536bcb054a1f833586/capsule_231x87.jpg?t=1781273808",
    "enDusuk": 3.89
   },
@@ -864,7 +830,7 @@
    "steamRatingPercent": 81,
    "steamAppID": "242110",
    "releaseDate": 1372032000,
-   "dealRating": 9.3,
+   "dealRating": 9.1,
    "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/242110/capsule_231x87.jpg?t=1727078711",
    "enDusuk": 1.09
   },
@@ -881,7 +847,7 @@
    "steamRatingPercent": 78,
    "steamAppID": "281610",
    "releaseDate": 1453248000,
-   "dealRating": 9.3,
+   "dealRating": 9.1,
    "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/281610/capsule_231x87.jpg?t=1781819254",
    "enDusuk": 0.0
   },
@@ -898,7 +864,7 @@
    "steamRatingPercent": 98,
    "steamAppID": "1163060",
    "releaseDate": 1693267200,
-   "dealRating": 9.3,
+   "dealRating": 9.1,
    "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1163060/capsule_231x87.jpg?t=1773073858",
    "enDusuk": 3.89
   },
@@ -915,9 +881,43 @@
    "steamRatingPercent": 86,
    "steamAppID": "7000",
    "releaseDate": 1144713600,
-   "dealRating": 9.3,
+   "dealRating": 9.1,
    "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/7000/capsule_231x87.jpg?t=1729009388",
    "enDusuk": 0.97
+  },
+  {
+   "dealID": "7rOdlJwzFcS11h4xUd%2B4T9KxnMmXpUb37FcyjdUpE3g%3D",
+   "gameID": "266385",
+   "title": "Assassins Creed Valhalla and Immortals Fenyx Rising Valhalla and Immortals Fenyx Rising Pack",
+   "storeID": "13",
+   "salePrice": 22.5,
+   "normalPrice": 89.99,
+   "savings": 75.0,
+   "metacriticScore": 0,
+   "steamRatingText": null,
+   "steamRatingPercent": 0,
+   "steamAppID": null,
+   "releaseDate": 0,
+   "dealRating": 9.1,
+   "thumb": "https://store.ubisoft.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/default/dwfb444dd5/images/large/600700460d253c1bcc287fad.jpg?sw=197&amp;sh=261&amp;sm=fit",
+   "enDusuk": 18.0
+  },
+  {
+   "dealID": "dqtVyRmFkQq2BkE8eXiBl%2FUFxpEfGyy%2F0FWyRgmRds4%3D",
+   "gameID": "203387",
+   "title": "Beyond: Two Souls",
+   "storeID": "27",
+   "salePrice": 1.82,
+   "normalPrice": 19.99,
+   "savings": 90.9,
+   "metacriticScore": 76,
+   "steamRatingText": "Very Positive",
+   "steamRatingPercent": 84,
+   "steamAppID": "960990",
+   "releaseDate": 1563753600,
+   "dealRating": 9.1,
+   "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/960990/capsule_231x87.jpg?t=1667468566",
+   "enDusuk": 0.99
   }
  ]
 }
