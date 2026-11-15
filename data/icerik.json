@@ -1,5 +1,67 @@
 [
  {
+  "id": "slay-the-spire-2-beta-0-113-1-turkce-duzeltme-2026-11-14",
+  "tarih": "2026-11-14",
+  "oyun": "Slay the Spire 2",
+  "tur": "guncelleme",
+  "kaynaklar": [
+   {
+    "url": "https://store.steampowered.com/news/app/2868840/view/708914425087656682",
+    "ad": "Mega Crit — Steam resmî yama notları",
+    "tarih": "2026-11-14"
+   }
+  ],
+  "otomasyon": {
+   "konu": "slay-the-spire-2-beta-hotfix-v0-113-1-2026-11-14",
+   "resmi_url": "https://store.steampowered.com/news/app/2868840/view/708914425087656682",
+   "teyit_zamani": "2026-11-15T07:03:35.518683+03:00",
+   "oyuncuya_fayda": "Türkçe oynayan beta kullanıcıları The Fool zaman çizelgesindeki takılma düzeltmesini öğrenip oyun sürümlerini kontrol edebilir.",
+   "eklenme": "2026-11-15T07:03:43.278948+03:00"
+  },
+  "diller": {
+   "tr": {
+    "baslik": "Slay the Spire 2 beta yaması Türkçe zaman çizelgesi takılmasını düzeltiyor",
+    "ozet": "v0.113.1, The Fool ilerlemesindeki Türkçe hatayı ve koşu geçmişindeki kayıt çoğalmasını gideriyor.",
+    "metin": "Mega Crit, Slay the Spire 2 için 14 Kasım tarihli v0.113.1 beta düzeltmesini yayımladı. Türkçe dilinde The Fool karakterinin bazı dönemlerini açarken zaman çizelgesinin takılması giderildi. Hasarlı bir koşunun geçmiş ekranında görüntülenmesi artık aynı kaydın kopyalarını oluşturmuyor. Yama ayrıca çeşitli dillerde çeviri ve biçim sorunlarını düzeltiyor, Dread güçlerine simgeler ekliyor. Bu duyuru beta sürümüne ait; ana sürümdeki oyuncular bunu kendilerine gelen bir içerik paketi olarak değerlendirmemeli. Beta kullananlara önerimiz, oyunun güncellendiğini kontrol ederek Türkçe ilerleme ekranını yeniden denemeleri ve sorun sürerse sürüm numarasıyla geri bildirim vermeleri.",
+    "etiketler": [
+     "#SlayTheSpire2",
+     "#Beta",
+     "#Guncelleme"
+    ]
+   },
+   "en": {
+    "baslik": "Slay the Spire 2 beta hotfix fixes a Turkish Timeline freeze",
+    "ozet": "Beta v0.113.1 addresses Turkish Fool progression and duplicate entries in Run History.",
+    "metin": "Mega Crit released Slay the Spire 2 beta hotfix v0.113.1 on November 14. It resolves a Timeline freeze when opening certain Fool epochs in Turkish. Viewing a damaged run in Run History also stops creating duplicate entries. Other changes include translation and formatting fixes across several languages and new icons for Dread powers. The announcement concerns the beta version, so players on the main branch should check which version they use before expecting these changes. Our recommendation for affected beta players is to update, retry the Turkish progression screen and include the version number if they report a remaining problem.",
+    "etiketler": [
+     "#SlayTheSpire2",
+     "#Beta",
+     "#Update"
+    ]
+   },
+   "fr": {
+    "baslik": "Slay the Spire 2 : le correctif bêta répare un blocage en turc",
+    "ozet": "La version bêta 0.113.1 corrige la chronologie du Fool en turc et les doublons dans l’historique.",
+    "metin": "Mega Crit a publié le 14 novembre le correctif bêta 0.113.1 de Slay the Spire 2. Il répare le blocage de la chronologie lors de l’ouverture de certaines époques du Fool en turc. Consulter une partie endommagée dans l’historique ne crée plus de copies supplémentaires. Des traductions et leur mise en forme sont également corrigées, tandis que des pouvoirs du mode Dread reçoivent des icônes. Cette annonce concerne la bêta : les utilisateurs de la branche principale doivent vérifier leur version avant d’attendre ces changements. Nous conseillons aux joueurs concernés de mettre le jeu à jour puis de réessayer l’écran de progression en turc.",
+    "etiketler": [
+     "#SlayTheSpire2",
+     "#Beta",
+     "#Correctif"
+    ]
+   },
+   "es": {
+    "baslik": "Slay the Spire 2 corrige un bloqueo en turco con su parche beta",
+    "ozet": "La beta 0.113.1 soluciona un fallo de progreso de The Fool y los registros duplicados del historial.",
+    "metin": "Mega Crit publicó el 14 de noviembre el parche beta 0.113.1 de Slay the Spire 2. La actualización corrige el bloqueo de la línea temporal al abrir algunas épocas de The Fool con el idioma turco. Consultar una partida dañada en el historial tampoco genera ya copias adicionales. Hay correcciones de traducción y formato en varios idiomas, además de nuevos iconos para poderes de Dread. El anuncio corresponde a la beta; quienes juegan en la rama principal deben comprobar su versión antes de esperar estos cambios. Recomendamos actualizar el juego y volver a probar la pantalla de progreso en turco si se había encontrado ese bloqueo.",
+    "etiketler": [
+     "#SlayTheSpire2",
+     "#Beta",
+     "#Parche"
+    ]
+   }
+  }
+ },
+ {
   "id": "delta-force-brakkesh-2-gelistirici-notlari-2026-11-15",
   "tarih": "2026-11-15",
   "oyun": "Delta Force",
