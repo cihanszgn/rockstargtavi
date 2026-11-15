@@ -1,5 +1,72 @@
 [
  {
+  "id": "poe-covens-of-umbra-cikti-2026-11-13",
+  "tarih": "2026-11-13",
+  "oyun": "Path of Exile",
+  "tur": "guncelleme",
+  "kaynaklar": [
+   {
+    "url": "https://www.pathofexile.com/forum/view-thread/4014263",
+    "ad": "Path of Exile — Covens of Umbra canlı güncellemeler (Grinding Gear Games)",
+    "tarih": "2026-11-13"
+   },
+   {
+    "url": "https://www.pathofexile.com/forum/view-thread/4014085",
+    "ad": "Path of Exile — Covens of Umbra çıkış saatleri (Grinding Gear Games)",
+    "tarih": "2026-11-13"
+   }
+  ],
+  "otomasyon": {
+   "konu": "path-of-exile-1-covens-of-umbra-launch-2026-11-13",
+   "resmi_url": "https://www.pathofexile.com/forum/view-thread/4014263",
+   "teyit_zamani": "2026-11-15T19:04:37.859881+03:00",
+   "oyuncuya_fayda": "Oyuncular Covens of Umbra'nın PC ve konsolda açıldığını, Rusça dil ayarındaki waypoint çökmesini ve geçici çözümünü öğrenir.",
+   "eklenme": "2026-11-15T19:04:43.532113+03:00"
+  },
+  "diller": {
+   "tr": {
+    "baslik": "Path of Exile: Covens of Umbra PC ve konsolda açıldı",
+    "ozet": "Grinding Gear Games'in yeni genişlemesi 13 Kasım'da yayına girdi; Rusça dil ayarında waypoint çökmesi için geçici çözüm var.",
+    "metin": "Path of Exile'ın ilk oyununa gelen Covens of Umbra genişlemesi 13 Kasım 2026'da Türkiye saatiyle 22.00'de PC ve konsolda aynı anda açıldı. Grinding Gear Games'in duyurusuna göre yeni ligin adı Coven League. Sunucular açılıştan iki saat önce bakıma alındı, yama dağıtımı da o sırada başladı.\n\nStüdyo çıkış gecesi tuttuğu canlı güncelleme başlığında ilk bilinen sorunu da paylaştı: oyun dili Rusça seçiliyken waypoint kullanmak istemciyi çökertebiliyor. Ekip düzeltme üzerinde çalıştığını, o zamana kadar oyun dilini başka bir dile almanın çökmeyi önlediğini belirtiyor. Başlık okunduğu sırada bu hata için dağıtılmış bir düzeltme listelenmiyordu.\n\nYeni lige başlayacak oyuncular için forumun sınıf bölümünde karakter kurulum önerileri bulunuyor. Resmî site kapalıysa stüdyo güncellemeleri X hesabından takip etmeyi öneriyor.",
+    "etiketler": [
+     "#PathOfExile",
+     "#CovensOfUmbra",
+     "#GrindingGearGames"
+    ]
+   },
+   "en": {
+    "baslik": "Path of Exile: Covens of Umbra is live on PC and console",
+    "ozet": "Grinding Gear Games' new expansion went live on November 13; there is a workaround for a waypoint crash on the Russian language setting.",
+    "metin": "Covens of Umbra, the new expansion for the first Path of Exile, went live on November 13, 2026 at 10 PM GMT+3 on PC and console at the same time. According to Grinding Gear Games, the new league is called the Coven League. The realms went down two hours before launch, and patching started during that window.\n\nIn the live updates thread it kept on launch night, the studio also shared the first known issue: using a waypoint while the game language is set to Russian can crash the client. The team says a fix is in the works and that switching to another language should prevent the crash in the meantime. When we read the thread, no deployed fix for this bug was listed.\n\nPlayers starting the new league can find build suggestions in the class section of the official forum. If the website is unavailable, the studio points players to its X account for updates.",
+    "etiketler": [
+     "#PathOfExile",
+     "#CovensOfUmbra",
+     "#GrindingGearGames"
+    ]
+   },
+   "fr": {
+    "baslik": "Path of Exile : Covens of Umbra est disponible sur PC et consoles",
+    "ozet": "La nouvelle extension de Grinding Gear Games est en ligne depuis le 13 novembre ; une solution provisoire existe pour un plantage en langue russe.",
+    "metin": "Covens of Umbra, la nouvelle extension du premier Path of Exile, a été lancée le 13 novembre 2026 à 22 h (GMT+3), simultanément sur PC et consoles. D'après Grinding Gear Games, la nouvelle ligue s'appelle Coven League. Les serveurs ont été fermés deux heures avant le lancement, et le déploiement du patch a commencé pendant cet intervalle.\n\nDans le fil de suivi tenu le soir du lancement, le studio a aussi signalé le premier problème connu : utiliser un waypoint lorsque le jeu est réglé en russe peut faire planter le client. L'équipe indique travailler sur un correctif et précise que choisir une autre langue devrait éviter le plantage en attendant. Au moment de notre lecture, aucun correctif déployé n'était listé pour ce bug.\n\nLes joueurs qui démarrent la nouvelle ligue trouveront des suggestions de builds dans la section des classes du forum officiel. Si le site est indisponible, le studio renvoie vers son compte X pour les mises à jour.",
+    "etiketler": [
+     "#PathOfExile",
+     "#CovensOfUmbra",
+     "#GrindingGearGames"
+    ]
+   },
+   "es": {
+    "baslik": "Path of Exile: Covens of Umbra ya está disponible en PC y consolas",
+    "ozet": "La nueva expansión de Grinding Gear Games se lanzó el 13 de noviembre; hay una solución temporal para un cierre inesperado con el idioma ruso.",
+    "metin": "Covens of Umbra, la nueva expansión del primer Path of Exile, se lanzó el 13 de noviembre de 2026 a las 22:00 (GMT+3) en PC y consolas al mismo tiempo. Según Grinding Gear Games, la nueva liga se llama Coven League. Los servidores se cerraron dos horas antes del lanzamiento y la distribución del parche comenzó en ese intervalo.\n\nEn el hilo de actualizaciones en directo de la noche del estreno, el estudio también comunicó el primer problema conocido: usar un waypoint con el juego configurado en ruso puede cerrar el cliente. El equipo afirma que trabaja en una corrección y que cambiar a otro idioma debería evitar el fallo mientras tanto. Cuando leímos el hilo, no figuraba ninguna corrección desplegada para este error.\n\nQuienes empiecen la nueva liga encontrarán sugerencias de builds en la sección de clases del foro oficial. Si la web no está disponible, el estudio remite a su cuenta de X para seguir las novedades.",
+    "etiketler": [
+     "#PathOfExile",
+     "#CovensOfUmbra",
+     "#GrindingGearGames"
+    ]
+   }
+  }
+ },
+ {
   "id": "selaco-chapter-2-machines-of-war-cikti-2026-11-13",
   "tarih": "2026-11-13",
   "oyun": "Selaco",
