@@ -1,5 +1,132 @@
 [
  {
+  "id": "delta-force-brakkesh-2-gelistirici-notlari-2026-11-15",
+  "tarih": "2026-11-15",
+  "oyun": "Delta Force",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "url": "https://store.steampowered.com/news/app/2507950/view/672885536621331368",
+    "ad": "Delta Force Team — Steam geliştirici duyurusu",
+    "tarih": "2026-11-15"
+   }
+  ],
+  "otomasyon": {
+   "konu": "delta-force-brakkesh-2-aurora-faction-map-devblog-2026-11-15",
+   "resmi_url": "https://store.steampowered.com/news/app/2507950/view/672885536621331368",
+   "teyit_zamani": "2026-11-15T06:01:25.035150+03:00",
+   "oyuncuya_fayda": "Brakkesh oyuncuları fraksiyon görevleri, yeni geçişler ve yaklaşık konum bildiren av sistemi için takım planını güncelleyebilir.",
+   "eklenme": "2026-11-15T06:03:56.577758+03:00"
+  },
+  "diller": {
+   "tr": {
+    "baslik": "Delta Force, Brakkesh 2.0 görevlerini ve yeni çatışma yollarını açıkladı",
+    "ozet": "Geliştirici yazısı fraksiyon ilerlemesini, kontrol odası geçişlerini ve rakip takım avlarını açıklıyor.",
+    "metin": "Delta Force ekibinin 15 Kasım tarihli Brakkesh 2.0 yazısı, Aurora sezonundaki fraksiyon görevlerinin işleyişini açıklıyor. Ahsarah görevinde kule geri alınırken HAAVK görevinde teslimat korunuyor; kişisel rozet ilerlemesi sonraki baskınlara taşınıyor. Kontrol odasında üst kata daha erken erişim ve kanatlar arasında kapalı geçit bulunuyor. Büyük fraksiyon görevlerinde uygun rakip ekipler av başlatabiliyor; avcıya anlık kesin konum yerine aralıklarla yenilenen yaklaşık alan veriliyor. Takımlara önerimiz, giriş rotasını yeniden belirlemek ve av bildirimi geldiğinde aynı noktada beklemek yerine hareket planını birlikte değerlendirmek.",
+    "etiketler": [
+     "#DeltaForce",
+     "#Brakkesh",
+     "#Aurora"
+    ]
+   },
+   "en": {
+    "baslik": "Delta Force explains Brakkesh 2.0 faction jobs and new combat routes",
+    "ozet": "The developer post details persistent badge progress, control-room routes and rival squad hunts.",
+    "metin": "Delta Force's November 15 developer post explains how Brakkesh 2.0 works in season Aurora. Ahsarah jobs involve reclaiming a tower, while HAAVK work protects a delivery; personal badge progress carries between runs. The control room offers earlier access upstairs and an enclosed passage between wings. Eligible opposing squads can hunt teams undertaking major faction missions, receiving a periodically refreshed search area rather than an exact live position. Our advice: review your squad's entry route and agree on a movement plan when a hunt notification arrives.",
+    "etiketler": [
+     "#DeltaForce",
+     "#Brakkesh",
+     "#Aurora"
+    ]
+   },
+   "fr": {
+    "baslik": "Delta Force détaille les missions de faction et les passages de Brakkesh 2.0",
+    "ozet": "Le billet des développeurs explique la progression du badge et les chasses entre escouades.",
+    "metin": "Le billet du 15 novembre de l'équipe Delta Force présente Brakkesh 2.0 dans la saison Aurora. Ahsarah demande de reprendre une tour, tandis que HAAVK fait protéger une livraison. La progression du badge personnel se conserve entre les sorties. La salle de contrôle propose un accès plus rapide à l'étage et un passage fermé entre ses ailes. Des escouades adverses remplissant les conditions peuvent traquer une équipe en mission majeure, avec une zone approximative actualisée périodiquement. Notre conseil : revoir votre itinéraire d'entrée et décider ensemble comment bouger lorsqu'une chasse est signalée.",
+    "etiketler": [
+     "#DeltaForce",
+     "#Brakkesh",
+     "#Aurora"
+    ]
+   },
+   "es": {
+    "baslik": "Delta Force explica las misiones de facción y las nuevas rutas de Brakkesh 2.0",
+    "ozet": "El equipo detalla el progreso de la insignia, los accesos y las cacerías entre escuadrones.",
+    "metin": "La publicación del equipo de Delta Force del 15 de noviembre explica Brakkesh 2.0 en la temporada Aurora. Ahsarah encarga recuperar una torre y HAAVK proteger una entrega; el progreso de la insignia personal se conserva entre incursiones. La sala de control permite subir antes y cuenta con un pasadizo cerrado entre alas. Los escuadrones rivales que cumplan los requisitos pueden cazar a equipos en misiones importantes, recibiendo una zona aproximada que se actualiza por intervalos. Recomendamos revisar la ruta de entrada y acordar cómo moverse cuando llegue el aviso de cacería.",
+    "etiketler": [
+     "#DeltaForce",
+     "#Brakkesh",
+     "#Aurora"
+    ]
+   }
+  }
+ },
+ {
+  "id": "fable-deepwood-oynanis-incelemesi-2026-11-13",
+  "tarih": "2026-11-13",
+  "oyun": "Fable",
+  "tur": "haber",
+  "kaynaklar": [
+   {
+    "url": "https://news.xbox.com/en-us/2026/11/13/fable-deep-dive-into-new-gameplay-with-playground-games-official-xbox-podcast/",
+    "ad": "Xbox Wire — Playground Games ile resmî podcast",
+    "tarih": "2026-11-13"
+   }
+  ],
+  "otomasyon": {
+   "konu": "fable-deepwood-playground-gameplay-podcast-2026-11-13",
+   "resmi_url": "https://news.xbox.com/en-us/2026/11/13/fable-deep-dive-into-new-gameplay-with-playground-games-official-xbox-podcast/",
+   "teyit_zamani": "2026-11-15T06:02:26.171261+03:00",
+   "oyuncuya_fayda": "Fable'ı bekleyen oyuncular Deepwood oynanışını izleyip büyü geliştirme tercihlerini ve hikâye ipuçlarını geliştirici açıklamasıyla değerlendirebilir.",
+   "eklenme": "2026-11-15T06:03:56.577758+03:00"
+  },
+  "diller": {
+   "tr": {
+    "baslik": "Fable'ın yeni Deepwood oynanışı büyü tercihlerini gösteriyor",
+    "ozet": "Playground Games, resmî Xbox podcast'inde yeni bölgeyi ve geliştirilmiş Dash büyüsünü anlattı.",
+    "metin": "13 Kasım tarihli resmî Xbox podcast'inde Playground Games'ten Ralph Fulton, Fable'ın Deepwood bölgesindeki yeni oynanışını değerlendirdi. Görüntülerdeki karakter birkaç büyüye yoğunlaşmış; Dash en üst seviyeye geliştirilmiş. Fulton, çok sayıda düşmana karşı güç, alan kontrolü ve hareketlilik seçeneklerinin birleştirilebildiğini açıklıyor. Videoda Arden ve hikâyeye ilişkin ipuçları da bulunuyor. Oyunu bekleyenlere önerimiz, kendi büyü tercihlerini değerlendirmek için geliştirici açıklamasını görüntülerle birlikte izlemek; hikâye ayrıntılarını önceden öğrenmek istemeyenler ise videonun bu içeriği barındırdığını dikkate alabilir.",
+    "etiketler": [
+     "#Fable",
+     "#PlaygroundGames",
+     "#Xbox"
+    ]
+   },
+   "en": {
+    "baslik": "Fable's new Deepwood gameplay shows how spell choices shape combat",
+    "ozet": "Playground Games discusses the new area and a fully upgraded Dash in the official Xbox podcast.",
+    "metin": "In the November 13 Official Xbox Podcast, Playground Games' Ralph Fulton breaks down new Fable gameplay set in Deepwood. The recorded character invests heavily in a few spells, including a fully upgraded Dash. Fulton explains how power, crowd control and mobility can be combined when facing groups of enemies. The footage also features Arden and story clues. We recommend watching the developer commentary alongside the clip to assess which spell combinations appeal to you; players avoiding advance story details should be aware that the presentation includes them.",
+    "etiketler": [
+     "#Fable",
+     "#PlaygroundGames",
+     "#Xbox"
+    ]
+   },
+   "fr": {
+    "baslik": "Fable : les nouvelles images de Deepwood illustrent les choix de sorts",
+    "ozet": "Playground Games présente cette région et un Dash amélioré au maximum dans le podcast Xbox.",
+    "metin": "Dans le podcast officiel Xbox du 13 novembre, Ralph Fulton de Playground Games commente une nouvelle séquence de Fable à Deepwood. Le personnage filmé concentre ses améliorations sur quelques sorts, dont Dash porté au maximum. Fulton explique comment associer puissance, contrôle de groupe et mobilité contre plusieurs ennemis. Arden et des indices sur l'intrigue apparaissent également. Notre conseil : regarder la séquence avec les explications du développeur pour réfléchir aux combinaisons qui vous intéressent. Les joueurs souhaitant découvrir l'histoire sans informations préalables peuvent tenir compte de la présence de ces indices.",
+    "etiketler": [
+     "#Fable",
+     "#PlaygroundGames",
+     "#Xbox"
+    ]
+   },
+   "es": {
+    "baslik": "Fable muestra en Deepwood cómo las mejoras de hechizos cambian el combate",
+    "ozet": "Playground Games analiza la nueva zona y un Dash mejorado al máximo en el podcast oficial de Xbox.",
+    "metin": "En el podcast oficial de Xbox del 13 de noviembre, Ralph Fulton, de Playground Games, comenta nuevas imágenes de Fable en Deepwood. El personaje de la grabación concentra sus mejoras en unos pocos hechizos, incluido Dash al máximo nivel. Fulton explica cómo combinar potencia, control de grupos y movilidad frente a varios enemigos. También aparecen Arden y pistas del argumento. Recomendamos ver la secuencia junto con los comentarios del desarrollador para valorar qué combinaciones interesan; quienes prefieran descubrir la historia sin adelantos deben tener presente que la presentación incluye esas pistas.",
+    "etiketler": [
+     "#Fable",
+     "#PlaygroundGames",
+     "#Xbox"
+    ]
+   }
+  }
+ },
+ {
   "id": "lol-new-dawn-2027-teaser",
   "tarih": "2026-11-14",
   "oyun": "League of Legends",
