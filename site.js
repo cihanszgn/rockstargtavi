@@ -1286,4 +1286,128 @@
     var kah = $('.o-kahraman', sayfa);
     if (kah) gozle(kah, function (v) { kah.classList.toggle('o-durgun', !v); });
   })();
+
+  // ------------------------------------------------------------ haber videosu (kart + haber sayfası)
+  // Adresler sunucuda data-* olarak yazılır; bayt, kart ekrana girip oynatılacağı an çekilir. Aynı anda tek video oynar.
+  (function () {
+    var ogeler = $$('.kg-videolu[data-video], .vp[data-video]');
+    if (!ogeler.length) return;
+    var BAG = navigator.connection || null;
+    var DUR = 'cag-video-dur';
+    var aktif = null, devam = null, liste = [];
+
+    // kendiliğinden oynatma izni: azaltılmış hareket, veri tasarrufu/2g ya da kullanıcı daha önce durdurduysa yok
+    function otoIzin() {
+      if (az() || depo.al(DUR) === '1') return false;
+      return !(BAG && (BAG.saveData || /2g$/.test(BAG.effectiveType || '')));
+    }
+    function etiket(o) {
+      var oyn = o.kap.classList.contains('oynuyor');
+      $$('[data-video-dugme]', o.kap).forEach(function (b) {
+        b.setAttribute('aria-label', b.getAttribute(oyn ? 'data-etiket-durdur' : 'data-etiket-oynat') || '');
+      });
+    }
+    function katman(o) {
+      if (o.v) return o.v;
+      var v = d.createElement('video');
+      v.className = 'kg-vid';
+      v.muted = true; v.loop = true; v.preload = 'none';
+      v.setAttribute('muted', ''); v.setAttribute('playsinline', ''); v.setAttribute('aria-hidden', 'true');
+      v.src = o.kap.getAttribute('data-video');
+      o.kap.insertBefore(v, $('.kg-vid-ui', o.kap));
+      o.v = v;
+      bagla(o, v);
+      return v;
+    }
+    function bagla(o, v) {
+      v.addEventListener('playing', function () { o.kap.classList.add('oynuyor'); etiket(o); });
+      v.addEventListener('pause', function () { o.kap.classList.remove('oynuyor'); etiket(o); });
+      v.addEventListener('error', function () {
+        if (v.error && v.error.code === 1) return; // MEDIA_ERR_ABORTED: biz durdurduk, kaynak bozuk değil
+        o.kap.classList.remove('oynuyor');
+        if (o.tur === 'kart' && v.parentNode) { v.parentNode.removeChild(v); o.v = null; }
+        if (aktif === o) aktif = null;
+      });
+    }
+    function oynat(o) {
+      if (aktif && aktif !== o) dur(aktif, false);
+      var v = katman(o);
+      aktif = o;
+      var p = v.play();
+      if (p && p.catch) p.catch(function () { if (aktif === o) aktif = null; });
+    }
+    function dur(o, elle) {
+      if (o.v) o.v.pause();
+      if (elle) { o.elle = true; depo.koy(DUR, '1'); }
+      if (aktif === o) aktif = null;
+    }
+    function acik(o) { return !!o.v && !o.v.paused && !o.v.ended; }
+
+    liste = ogeler.map(function (kap) {
+      var sayfa = kap.classList.contains('vp');
+      var o = { kap: kap, tur: sayfa ? 'sayfa' : 'kart', v: sayfa ? $('.vp-v', kap) : null, elle: false, oran: 0 };
+      if (sayfa && o.v) {
+        o.v.removeAttribute('controls'); // JS varken kendi düğmelerimiz çalışır; yoksa yerel denetimler kalır
+        bagla(o, o.v);
+      }
+      return o;
+    });
+    function bul(el) {
+      var k = el && el.closest ? el.closest('.kg-videolu, .vp') : null;
+      for (var i = 0; i < liste.length; i++) if (liste[i].kap === k) return liste[i];
+      return null;
+    }
+
+    if (IO) {
+      var gz = new IntersectionObserver(function (g) {
+        g.forEach(function (n) {
+          var o = bul(n.target);
+          if (!o) return;
+          // ekrandan yüksek öğede görünebilecek en fazla kadarına göre oran
+          var boy = Math.min(n.boundingClientRect.height || 1, innerHeight || 1);
+          o.oran = n.isIntersecting ? n.intersectionRect.height / boy : 0;
+          o.orta = n.isIntersecting ? n.intersectionRect.top + n.intersectionRect.height / 2 : 0;
+          if (o.oran < 0.35) { o.elle = false; if (aktif === o) dur(o, false); }
+        });
+        // aynı satırda birkaç kart birden görünebilir: ekranın ortasına en yakın tek kart oynar
+        if (aktif && aktif.oran >= 0.5) return;
+        var en = null, ort = (innerHeight || 1) / 2;
+        liste.forEach(function (o) {
+          if (o.oran < 0.65 || o.elle) return;
+          if (!en || Math.abs(o.orta - ort) < Math.abs(en.orta - ort)) en = o;
+        });
+        if (en && !acik(en) && otoIzin()) oynat(en);
+      }, { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.65, 0.8, 1] });
+      liste.forEach(function (o) { gz.observe(o.kap); });
+    }
+
+    d.addEventListener('visibilitychange', function () {
+      if (d.hidden) { if (aktif) { devam = aktif; dur(aktif, false); } }
+      else if (devam) { var o = devam; devam = null; if (!o.elle && o.oran >= 0.65 && otoIzin()) oynat(o); }
+    });
+
+    d.addEventListener('click', function (e) {
+      var t = e.target;
+      if (!t.closest) return;
+      var o = bul(t);
+      if (!o) return;
+      var ses = t.closest('[data-video-ses]');
+      var cc = t.closest('[data-video-cc]');
+      if (ses && o.v) {
+        o.v.muted = !o.v.muted;
+        ses.classList.toggle('sesli', !o.v.muted);
+        ses.setAttribute('aria-label', ses.getAttribute(o.v.muted ? 'data-etiket-ac' : 'data-etiket-kapat') || '');
+        return;
+      }
+      if (cc && o.v && o.v.textTracks && o.v.textTracks[0]) {
+        var iz = o.v.textTracks[0], goster = iz.mode !== 'showing';
+        iz.mode = goster ? 'showing' : 'hidden';
+        cc.setAttribute('aria-pressed', goster ? 'true' : 'false');
+        return;
+      }
+      if (t.closest('[data-video-dugme]') || t.closest('.kg-vid') || t.closest('.vp-v')) {
+        if (acik(o)) dur(o, true); else { o.elle = false; oynat(o); }
+      }
+    });
+  })();
 })();

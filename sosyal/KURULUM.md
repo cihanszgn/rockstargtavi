@@ -91,6 +91,65 @@ at, birlikte bakarız.
 5. **3) Deneme çalıştırması** gönderi atmadan neyin paylaşılacağını gösterir. Sonucu
    github.com/cihanszgn/rockstargtavi/actions sayfasında görürsün.
 
+## 5. Haber videoları: YouTube Shorts ve Instagram Reels
+
+Videolar kendiliğinden üretilir (`video.yml`) ve sitede haberin üstünde oynar. Aynı videoyu
+Instagram Reels'e ve YouTube Shorts'a yollamak için aşağıdakiler gerekir. Hesap kurulu
+değilse o adım sessizce atlanır, site videoları yine çalışır.
+
+**Instagram Reels için ekstra bir şey yok:** 3. bölümdeki Instagram hesabı yeter. Sonra Claude'a
+"Reels'i aç" de (`sosyal/ayarlar.json` içinde o dilin `instagram_reel` değeri `true` olur).
+
+### 5.1 YouTube kanalı ve Google Cloud projesi (bir kez)
+
+Menü adları zamanla değişir. Ekrandakiyle uyuşmayan adım olursa **ekran görüntüsü at,
+birlikte bakalım**.
+
+1. youtube.com'da kanalı aç (dil başına ayrı kanal ister, ilk adım için tek kanal yeter).
+   Kanalın bağlı olduğu Google hesabını not et.
+2. **console.cloud.google.com** adresine aynı hesapla gir. Üstteki proje seçiciden **Yeni proje**
+   aç (ad: "ctrl-agame video").
+3. Sol menüden **APIs & Services → Library** (Kitaplık) → **YouTube Data API v3** → **Enable**
+   (Etkinleştir).
+4. **APIs & Services → OAuth consent screen** (İzin ekranı):
+   - Kullanıcı türü **External** (Harici).
+   - Uygulama adı ve e-posta alanlarını doldur, kaydet.
+   - **ÇOK ÖNEMLİ: Publishing status (Yayın durumu) "In production" olmalı.** "Testing"
+     (Test) modunda kalırsa Google yenileme anahtarını **7 günde** öldürür ve paylaşım bir hafta
+     sonra sessizce durur. "Publish app" (Uygulamayı yayınla) düğmesine bas. Doğrulama
+     isteyen bir uyarı çıkabilir. Yalnız kendi hesabın kullanacağı için doğrulamayı
+     beklemeden devam edebilirsin; giriş sırasında "Google bu uygulamayı doğrulamadı"
+     uyarısı çıkar, **Advanced → Go to (unsafe)** de.
+5. **APIs & Services → Credentials → Create credentials → OAuth client ID**:
+   - Application type: **Desktop app**.
+   - Çıkan **Client ID** ve **Client secret** değerlerini bir yere kopyala (birazdan
+     yapıştıracaksın).
+6. Not: yeni kanalın kısa video yükleme kotası günlük sınırlıdır; sistem günde en çok 2
+   Short yükler (`gunluk_en_fazla.youtube`).
+
+### 5.2 Anahtarı yardımcıya ver
+
+1. `C:\Cihan.Ai\03-Web\rockstargtavi\sosyal\kurulum.bat` dosyasına çift tıkla.
+2. Menüden **YouTube kanalı bağla (Shorts)** → dil → Client ID ve Client secret'ı yapıştır
+   (ekranda görünmez, bu normal).
+3. Tarayıcı açılır: kanalın Google hesabıyla gir, **İzin ver**'e bas. Sekmeyi kapat.
+4. Yardımcı kanal adını gösterirse doğru demektir. Üç değeri (`YT_<DİL>_CLIENT_ID`,
+   `YT_<DİL>_CLIENT_SECRET`, `YT_<DİL>_REFRESH_TOKEN`) GitHub'a gizli yazar.
+5. Videolar önce **özel (private)** yüklenir. YouTube Studio'da bir video açıp bak. Memnunsan
+   Claude'a "YouTube gizliliğini public yap" de.
+6. Her dil için ayrı Google/YouTube hesabı kullanacaksan 2. ve 3. adımı dil başına tekrar et.
+
+### 5.3 Azure Speech anahtarı (video sesi için)
+
+1. portal.azure.com'da hesapla gir (ücretsiz katman yeter: ayda 500 bin karaktere kadar).
+2. **Create a resource → Speech** (Konuşma hizmeti) → bölge seç (ör. West Europe) → fiyat
+   katmanı **Free F0** → oluştur.
+3. Kaynağa gir → **Keys and Endpoint**: **KEY 1** ve **Location/Region** (örn. `westeurope`)
+   değerlerini al.
+4. `kurulum.bat` → **Azure Speech anahtarı ekle** → anahtarı ve bölgeyi yapıştır.
+   Yardımcı dener, doğruysa `AZURE_SPEECH_KEY` ve `AZURE_SPEECH_REGION` olarak GitHub'a yazar.
+5. Anahtar yoksa videolar üretilmez, site eskisi gibi çalışır.
+
 ## Nasıl çalışıyor (bilgi için)
 
 - Haberler: `data/icerik.json`. Claude her gün 10:00'da resmî kaynaktan teyit edip ekler.
@@ -102,3 +161,8 @@ at, birlikte bakarız.
   - Gönderilenler `sosyal/gonderilenler.json`'a yazılır, aynı haber iki kez gitmez.
 - Şifresi girilmemiş hesap atlanır. Bir hesap hata verirse GitHub sana "failed" e-postası
   atar; o e-postayı Claude'a göster.
+- Videolar: `.github/workflows/video.yml` yeni haberler için `tools/video_uret.py` ile video üretir ve
+  `data/videolar.json`'a yazar. Paylaşım yalnız video hazır olunca (`sosyal.yml`) Reels/Shorts olarak gider.
+  - Her paylaşımdan önce kayda "niyet" yazılır. Yanıtı kaybolan bir paylaşım kendiliğinden yeniden
+    DENENMEZ; platformdan sorgulanır, bulunamazsa `sosyal/gonderilenler.json`'da `elle_bak` olur.
+    Platformda gönderiye bak: varsa kaydı `tamam` yap, yoksa o kaydı sil, sistem yeniden dener.

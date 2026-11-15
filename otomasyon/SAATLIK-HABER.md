@@ -57,6 +57,31 @@ Paket JSON listesinde normal `data/icerik.json` şemasına şu alan eklenir:
 
 Bu bir alan örneğidir, yayınlanacak haber değildir. Resmî URL aynı haberin kaynaklar listesinde bulunmalı; izinli alan adı olmalı; son iki saatte gerçekten okunmuş olmalı. Haber tarihi kaynak tarihidir, ileri tarih veya iki günden eski haber reddedilir. Her dilin yeni metni 50–300 kelime ve başlık ≤100 karakterdir. Yapay bilgi/dolgu ile alt sınır tamamlanmaz; yeterli olgu yoksa yayın yapılmaz.
 
+## Video senaryosu
+
+Habere dikey video senaryosu aynı turda yazılabilir: `video/senaryo/<haber id>-tr.json`. Dosya varsa `hazirla` onu haberin kendi metniyle denetler; hatalı senaryo bütün paketi reddeder. Senaryo isteğe bağlıdır: yazılmazsa video sonra üretilir. Video üretimi saatlik turun işi değildir (render ve günlük kota ayrı yürür).
+
+```powershell
+py tools/video_uret.py dogrula --id HABER-ID --dil tr
+py tools/video_uret.py bekleyenler --gunluk
+py tools/video_uret.py uret --id HABER-ID --dil tr
+```
+
+Senaryo yalnız veridir: alanlar düz metindir, kod ya da komut olarak çalıştırılmaz; bilinmeyen alan hatadır. Doğrulayıcının zorladığı kurallar:
+
+- `id` haber kimliği, `dil` dosyanın dili; `fps` 30, `boyut` `[1080, 1920]`, `sablon_surumu` 1. `bas`, `bit`, `altyazi` yazılmaz: zamanlama sesten hesaplanır.
+- 3–9 sahne; ilk sahne `baslik`, son sahne `kapanis`. Tahmini süre 20–80 sn olmalı; anlatımın toplamı 60–110 kelime önerilir (dışında uyarı).
+- Ekranda görünen ya da söylenen her sayı haberin başlığında, özetinde, metninde, oyun adında veya haber tarihinde geçmelidir. `tarih` sahnesindeki gün ve ay ("1 Aralık", "13–16 Kasım") haber metninde aynen geçmelidir; yıl yalnız haberde yazıyorsa gösterilir. Haberde olmayan bilgi senaryoya eklenmez.
+- Şablon seçimi habere göre yapılır: `guncelleme` → `maddeler`, `yama_fark`, `platform` sayı kutuları; `cikis` → `tarih`, `platform`; `ucretsiz`/`indirim` → `fiyat`, `tarih`, `platform`; `haber` → `kaynak`, `maddeler`. Her senaryoda bir `kaynak` sahnesi önerilir (haberin `kaynaklar` sırası, 0'dan; alıntı ≤150 karakter, kaynağın sadık özeti).
+- Şablon sınırları: `baslik` başlık ≤90 karakter, `vurgu` başlıkta aynen geçen en çok 3 parça, `tuslar` 1–4 tuş (en çok 3 karakter); `maddeler` 2–4 madde (≤70); `yama_fark` 1–3 satır eski → yeni; `platform` haberin `platform` listesinden en çok 4 rozet ve/veya en çok 3 sayı kutusu; `fiyat` `durum` `ucretsiz` ya da `indirim`; `kapanis` çağrı ≤60, alt ≤70.
+- Her sahnenin `alt_kart`ı: simge + başlık (≤26) + alt satır (≤40). Etiketler, pencere başlıkları ve kart yazıları BÜYÜK HARFLE gösterilir (Türkçe i → İ kuralı otomatik); kaynakta normal yazılabilir.
+- Yazıların sığması piksel ölçüsüyle sınanır: alana sığmayan kelime ya da izinli satır sayısını aşan metin hatadır; kısaltılır.
+- Madde, satır ve sayı kutularındaki `tetik`, öğenin belirdiği anı seçer; o sahnenin anlatımında geçen bir kelime (ya da kelime başı) olmalıdır.
+- `anlatim` seslendirilen ve kelime kelime altyazıya dönen tam cümlelerdir. Türkçe ekler kesmeyle yazılır (`Doc'un`, `1 Aralık'ta`). Yabancı adlar `okunus` sözlüğüyle Türkçe okunuşa çevrilir; anahtar anlatımdaki kelime(ler)le tam eşleşir, kesmeden sonraki ek korunur (`"Rainbow Six Siege'in": "Reynbou Siks Siyc'in"`). Okunuştaki rakamlar da haberde geçmelidir; kısaltmalar harf harf yazılır (`"MBZ-19": "Em Be Ze on dokuz"`).
+- `maskot.hareket`: `zipla`, `bas`, `tara` (yalnız `kaynak`), `bekle`. Maskotun yeri şablondan gelir.
+
+Örnekler: `video/senaryo/r6-siege-operation-vital-signal-duyuruldu-2026-11-15-tr.json` (güncelleme) ve `video/senaryo/battlefield-6-ucretsiz-deneme-casino-heist-2026-11-13-tr.json` (ücretsiz deneme).
+
 ## Doğrulama ve hata yolu
 
 Bir kaynak başarısız olsa da diğerleri araştırılır; eksik kaynağın kontrolü başarılı gösterilmez. Uygulama önce bütün paketi doğrular; geçersiz paket içerik dosyasına yazılmaz. Build, iç bağlantı ve testler geçmeden push yok. Başarısız tur kendi başlangıç kopyasından yalnız kendi değişikliğini geri alır; force push, kör reset/clean ve başka kullanıcının değişikliklerini stage etmek yasaktır.

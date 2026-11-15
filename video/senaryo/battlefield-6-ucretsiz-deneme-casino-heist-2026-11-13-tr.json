@@ -1,0 +1,105 @@
+{
+ "id": "battlefield-6-ucretsiz-deneme-casino-heist-2026-11-13",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [1080, 1920],
+ "sablon_surumu": 1,
+ "okunus": {
+  "Battlefield": "Betılfiild",
+  "EA'nın": "İ Ey'nin",
+  "REDSEC'i": "Red Sek'i",
+  "EA app": "İ Ey ep",
+  "Steam": "Stiim",
+  "Epic": "Epik",
+  "PlayStation": "Pleysteyşın",
+  "Xbox": "Eksboks",
+  "PC": "Pi Si",
+  "Casual Breakthrough": "Kejuıl Breykturu",
+  "Casino Heist": "Kasino Hayst",
+  "Dough": "Dou",
+  "ctrl-agame.com'da": "kontrol ey geym nokta kom'da"
+ },
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Battlefield 6 dört günlüğüne ücretsiz: deneme 16 Kasım'a kadar sürüyor.",
+   "veri": {
+    "ust_etiket": "16 Kasım'a kadar",
+    "baslik": "Battlefield 6 ücretsiz denemede",
+    "vurgu": ["ücretsiz"],
+    "tuslar": ["B", "6"]
+   },
+   "alt_kart": {"simge": "ucretsiz", "baslik": "BATTLEFIELD 6", "alt": "DÖRT GÜN ÜCRETSİZ"},
+   "maskot": {"hareket": "bas"}
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "EA'nın resmî sayfasına göre deneme 13 ile 16 Kasım arasında açık.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Electronic Arts deneme sayfası",
+    "alinti": "Deneme 13–16 Kasım arasında sürüyor; sayfada bitiş saati veya saat dilimi yazmıyor."
+   },
+   "alt_kart": {"simge": "kaynak", "baslik": "RESMÎ KAYNAK", "alt": "ELECTRONIC ARTS"},
+   "maskot": {"hareket": "tara"}
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Bitiş saati yazmadığı için son güne bırakmamak iyi olur.",
+   "veri": {
+    "etiket": "Deneme tarihleri",
+    "tarih": "13–16 Kasım",
+    "not": "Bitiş saati ve saat dilimi açıklanmadı."
+   },
+   "alt_kart": {"simge": "takvim", "baslik": "13–16 KASIM", "alt": "BİTİŞ SAATİ AÇIKLANMADI"},
+   "maskot": {"hareket": "zipla"}
+  },
+  {
+   "sablon": "fiyat",
+   "anlatim": "Ücretsiz Battlefield REDSEC'i indirip denemeye geçiyorsunuz. EA app, Steam, Epic, PlayStation ve Xbox mağazalarında var.",
+   "veri": {
+    "durum": "ucretsiz",
+    "etiket": "Ücretsiz",
+    "bitis": "16 Kasım'a kadar",
+    "magazalar": ["EA app", "Steam", "Epic Games Store", "PlayStation Store", "Xbox Store"]
+   },
+   "alt_kart": {"simge": "fiyat", "baslik": "ÜCRETSİZ GİRİŞ", "alt": "BATTLEFIELD REDSEC İLE"},
+   "maskot": {"hareket": "zipla"}
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "PC, PlayStation ve Xbox'ta açtığınız içerikler deneme bitince de sizde kalıyor.",
+   "veri": {
+    "baslik": "Deneme platformları",
+    "not": "Denemede açtığınız içerikler deneme bitince de sizde kalıyor."
+   },
+   "alt_kart": {"simge": "platform", "baslik": "ÜÇ PLATFORM", "alt": "PC • PLAYSTATION • XBOX"},
+   "maskot": {"hareket": "zipla"}
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Yeni başlayanlar için Casual Breakthrough modu, atış poligonu ve başlangıç alanı var. Süreli Casino Heist etkinliğinde de Dough toplayıp kozmetik açıyorsunuz.",
+   "veri": {
+    "baslik": "Denemede neler var",
+    "maddeler": [
+     {"metin": "Casual Breakthrough modu", "tetik": "Casual"},
+     {"metin": "Atış poligonu", "tetik": "atış"},
+     {"metin": "Başlangıç alanı", "tetik": "başlangıç"},
+     {"metin": "Casino Heist: Dough topla", "tetik": "Casino"}
+    ]
+   },
+   "alt_kart": {"simge": "liste", "baslik": "YENİ BAŞLAYANLARA", "alt": "CASINO HEIST ETKİNLİĞİ"},
+   "maskot": {"hareket": "bas"}
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Denemeye giriş adımları ctrl-agame.com'da.",
+   "veri": {
+    "cagri": "Giriş adımları sitede",
+    "alt": "Mağaza bağlantıları ve ayrıntılar haberde."
+   },
+   "alt_kart": {"simge": "site", "baslik": "CTRL+A GAME", "alt": "CTRL-AGAME.COM"},
+   "maskot": {"hareket": "bas"}
+  }
+ ]
+}

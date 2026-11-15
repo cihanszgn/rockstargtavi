@@ -1,0 +1,97 @@
+"""Seslendirme yardımcısı: metni sese çevirir ve kelime sınırlarını yazar.
+
+tools/video_uret.py bunu `uv run --no-project --with <paket> python -I` ile çağırır; böylece edge-tts ya da Azure
+SDK'sı proje ortamına kurulmaz. Metin dosyadan okunur (kabuğa hiç girmez), çıktı iki dosyadır:
+    py video_ses_yardimci.py <edge|azure> girdi.json ses.mp3 olaylar.json
+girdi.json: {"metin", "konusmaci", "hiz", "dil"}; olaylar.json: {"olaylar": [{"metin", "bas", "sure"}]} (100 ns birim).
+"""
+import asyncio
+import json
+import os
+import sys
+from xml.sax.saxutils import escape
+
+TIK = 10_000_000  # saniyedeki 100 ns sayısı
+
+
+def _yaz(yol, deger):
+    with open(yol, "w", encoding="utf-8", newline="\n") as f:
+        json.dump(deger, f, ensure_ascii=False, indent=1)
+        f.write("\n")
+
+
+async def _edge(girdi, ses_yolu):
+    import edge_tts
+
+    iletisim = edge_tts.Communicate(girdi["metin"], girdi["konusmaci"], rate=girdi.get("hiz", "+0%"),
+                                    boundary="WordBoundary")
+    olaylar = []
+    with open(ses_yolu, "wb") as ses:
+        async for parca in iletisim.stream():
+            if parca["type"] == "audio":
+                ses.write(parca["data"])
+            elif parca["type"] == "WordBoundary":
+                olaylar.append({"metin": parca["text"], "bas": int(parca["offset"]), "sure": int(parca["duration"])})
+    return olaylar
+
+
+def edge(girdi, ses_yolu):
+    return asyncio.run(_edge(girdi, ses_yolu))
+
+
+def ssml(girdi):
+    dil = girdi.get("dil") or girdi["konusmaci"][:5]
+    return (f"<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='{escape(dil)}'>"
+            f"<voice name='{escape(girdi['konusmaci'])}'><prosody rate='{escape(girdi.get('hiz', '+0%'))}'>"
+            f"{escape(girdi['metin'])}</prosody></voice></speak>")
+
+
+def _tik(deger):
+    """SDK süreyi timedelta, konumu 100 ns tamsayı verir."""
+    if hasattr(deger, "total_seconds"):
+        return int(round(deger.total_seconds() * TIK))
+    return int(deger)
+
+
+def azure(girdi, ses_yolu, sdk=None):
+    if sdk is None:
+        import azure.cognitiveservices.speech as sdk
+    anahtar, bolge = os.environ.get("AZURE_SPEECH_KEY"), os.environ.get("AZURE_SPEECH_REGION")
+    if not anahtar or not bolge:
+        raise SystemExit("AZURE_SPEECH_KEY ve AZURE_SPEECH_REGION gerekli")
+    ayar = sdk.SpeechConfig(subscription=anahtar, region=bolge)
+    ayar.set_speech_synthesis_output_format(sdk.SpeechSynthesisOutputFormat.Audio24Khz96KBitRateMonoMp3)
+    sentez = sdk.SpeechSynthesizer(speech_config=ayar, audio_config=sdk.audio.AudioOutputConfig(filename=ses_yolu))
+    olaylar = []
+
+    def sinir(olay):
+        tur = str(getattr(olay, "boundary_type", "Word"))
+        if tur.endswith("Word") or tur == "Word":
+            olaylar.append({"metin": olay.text, "bas": _tik(olay.audio_offset), "sure": _tik(olay.duration)})
+
+    sentez.synthesis_word_boundary.connect(sinir)
+    sonuc = sentez.speak_ssml_async(ssml(girdi)).get()
+    if sonuc.reason != sdk.ResultReason.SynthesizingAudioCompleted:
+        ayrinti = getattr(sonuc, "cancellation_details", None)
+        neden = getattr(ayrinti, "error_details", "") or getattr(ayrinti, "reason", "") or sonuc.reason
+        raise SystemExit(f"Azure seslendirme başarısız: {neden}")
+    return olaylar
+
+
+SAGLAYICILAR = {"edge": edge, "azure": azure}
+
+
+def main(argv):
+    if len(argv) != 4 or argv[0] not in SAGLAYICILAR:
+        raise SystemExit("kullanım: video_ses_yardimci.py <edge|azure> girdi.json ses.mp3 olaylar.json")
+    saglayici, girdi_yolu, ses_yolu, olay_yolu = argv
+    with open(girdi_yolu, encoding="utf-8") as f:
+        girdi = json.load(f)
+    olaylar = SAGLAYICILAR[saglayici](girdi, ses_yolu)
+    if not olaylar:
+        raise SystemExit("kelime sınırı gelmedi")
+    _yaz(olay_yolu, {"saglayici": saglayici, "konusmaci": girdi["konusmaci"], "olaylar": olaylar})
+
+
+if __name__ == "__main__":
+    main(sys.argv[1:])

@@ -1,0 +1,126 @@
+{
+ "id": "r6-siege-operation-vital-signal-duyuruldu-2026-11-15",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [1080, 1920],
+ "sablon_surumu": 1,
+ "okunus": {
+  "Rainbow Six Siege'in": "Reynbou Siks Siyc'in",
+  "Operation Vital Signal": "Opıreyşın Vaytıl Signıl",
+  "Ubisoft'un": "Yubisoft'un",
+  "Steam": "Stiim",
+  "Doc": "Dok",
+  "Stim Pistol'ü": "Stim Pistıl'ü",
+  "E-Heal Monitor": "İ Hiil Monitır",
+  "Solo/Duo": "Solo Duo",
+  "Flex": "Fleks",
+  "MBZ-19": "Em Be Ze on dokuz",
+  "ACS12'nin": "A Se Se on iki'nin",
+  "TCSG12'nin": "Te Se Se Ge on iki'nin",
+  "Battle Pass": "Betıl Pas",
+  "ctrl-agame.com'da": "kontrol ey geym nokta kom'da"
+ },
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Rainbow Six Siege'in yeni sezonu Operation Vital Signal, 1 Aralık'ta geliyor.",
+   "veri": {
+    "ust_etiket": "11. YIL 4. SEZON",
+    "baslik": "Operation Vital Signal 1 Aralık'ta geliyor",
+    "vurgu": ["1 Aralık'ta"],
+    "tuslar": ["R", "S", "S"]
+   },
+   "alt_kart": {"simge": "guncelleme", "baslik": "RAINBOW SIX SIEGE", "alt": "OPERATION VITAL SIGNAL"},
+   "maskot": {"hareket": "bas"}
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Ubisoft'un Steam duyurusuna göre bu, 11. yılın dördüncü sezonu ve en büyük değişiklik Doc'ta.",
+   "veri": {
+    "kaynak": 1,
+    "ad": "Steam geliştirici duyurusu",
+    "alinti": "Sezon 1 Aralık'ta başlıyor ve öne çıkan değişiklik Doc'un baştan elden geçirilmesi."
+   },
+   "alt_kart": {"simge": "kaynak", "baslik": "RESMÎ KAYNAK", "alt": "UBISOFT • STEAM DUYURUSU"},
+   "maskot": {"hareket": "tara"}
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Doc'un Stim Pistol'ü kalkıyor, yerine E-Heal Monitor geliyor. Yama taktığı takım arkadaşını uzaktan iyileştirip yerden kaldırabiliyor.",
+   "veri": {
+    "baslik": "Doc yenileniyor",
+    "maddeler": [
+     {"metin": "Stim Pistol kalkıyor", "tetik": "Stim"},
+     {"metin": "Yerine E-Heal Monitor geliyor", "tetik": "yerine"},
+     {"metin": "Uzaktan iyileştirme ve kaldırma", "tetik": "uzaktan"}
+    ]
+   },
+   "alt_kart": {"simge": "liste", "baslik": "DOC YENİLENİYOR", "alt": "E-HEAL MONITOR GELİYOR"},
+   "maskot": {"hareket": "bas"}
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Dereceli, rütbesi ayrı tutulan iki listeye bölünüyor: Solo/Duo ve Flex. Giriş seviyesi de 50'den 30'a iniyor.",
+   "veri": {
+    "baslik": "Dereceli ikiye ayrılıyor",
+    "maddeler": [
+     {"metin": "Solo/Duo: tek başına veya iki kişi", "tetik": "Solo/Duo"},
+     {"metin": "Flex: 2, 3 veya 5 kişilik takımlar", "tetik": "Flex"},
+     {"metin": "Giriş seviyesi 50'den 30'a", "tetik": "giriş"}
+    ]
+   },
+   "alt_kart": {"simge": "liste", "baslik": "DERECELİ İKİYE AYRILIYOR", "alt": "SOLO/DUO VE FLEX"},
+   "maskot": {"hareket": "bas"}
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Yeni hafif makineli MBZ-19 dakikada 750 mermi atıyor, 64 mermilik şarjör taşıyor ve 33 hasar veriyor.",
+   "veri": {
+    "baslik": "Yeni silah: MBZ-19",
+    "platformlar": [],
+    "sayilar": [
+     {"deger": "750", "etiket": "MERMİ / DAKİKA", "tetik": "750"},
+     {"deger": "64", "etiket": "ŞARJÖR", "tetik": "64"},
+     {"deger": "33", "etiket": "HASAR", "tetik": "33"}
+    ],
+    "not": "Warden, Thunderbird ve Jäger kullanabilecek."
+   },
+   "alt_kart": {"simge": "guncelleme", "baslik": "MBZ-19", "alt": "WARDEN • THUNDERBIRD • JÄGER"},
+   "maskot": {"hareket": "zipla"}
+  },
+  {
+   "sablon": "yama_fark",
+   "anlatim": "Pompalılarda düşüş var: ACS12'nin hasarı 69'dan 45'e, TCSG12'nin hasarı 75'ten 50'ye çekiliyor.",
+   "veri": {
+    "baslik": "Pompalı dengesi",
+    "satirlar": [
+     {"ad": "ACS12 hasarı", "eski": "69", "yeni": "45", "tetik": "ACS12"},
+     {"ad": "TCSG12 hasarı", "eski": "75", "yeni": "50", "tetik": "TCSG12"}
+    ]
+   },
+   "alt_kart": {"simge": "yama", "baslik": "POMPALILARA DÜŞÜŞ", "alt": "ACS12 VE TCSG12"},
+   "maskot": {"hareket": "bas"}
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Mevcut Battle Pass sezonla kapanıyor, kalan ödülleri 1 Aralık'tan önce alın.",
+   "veri": {
+    "etiket": "Battle Pass kapanıyor",
+    "tarih": "1 Aralık",
+    "not": "Kalan ödülleri bu tarihten önce alın."
+   },
+   "alt_kart": {"simge": "takvim", "baslik": "BATTLE PASS", "alt": "1 ARALIK'TAN ÖNCE AL"},
+   "maskot": {"hareket": "zipla"}
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Harita ve silah değişikliklerinin tamamı ctrl-agame.com'da.",
+   "veri": {
+    "cagri": "Bütün değişiklikler sitede",
+    "alt": "Kaynaklar ve harita yenilikleri haberde."
+   },
+   "alt_kart": {"simge": "site", "baslik": "CTRL+A GAME", "alt": "CTRL-AGAME.COM"},
+   "maskot": {"hareket": "bas"}
+  }
+ ]
+}

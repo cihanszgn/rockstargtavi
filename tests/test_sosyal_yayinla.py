@@ -1,0 +1,391 @@
+import json
+import pathlib
+import sys
+import tempfile
+import unittest
+from datetime import date, datetime, timezone
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "tools"))
+import sosyal_yayinla as sy  # noqa: E402
+import video_site as vs  # noqa: E402
+
+SIMDI = datetime(2026, 11, 15, 12, 0, tzinfo=timezone.utc)
+BUGUN = date(2026, 11, 15)
+
+
+def haber(oid="oyun-yama-1", konu=None):
+    return {"id": oid, "tarih": "2026-11-15", "oyun": "Oyun",
+            "kaynaklar": [{"url": "https://example.com/a", "ad": "Kaynak"}],
+            "diller": {d: {"baslik": "Yeni oyun yaması", "ozet": "Yama yayımlandı.", "metin": "Bilgi " * 40,
+                           "etiketler": ["#Oyun", "#Yama"]} for d in sy.DILLER},
+            "otomasyon": {"konu": konu or oid}}
+
+
+def ayar(**hesap):
+    h = {"x": False, "reddit": False, "instagram": False, "instagram_reel": False, "youtube": False}
+    h.update(hesap)
+    return {"en_eski_gun": 3, "calisma_basina_en_fazla": 1,
+            "gunluk_en_fazla": {"x": 2, "reddit": 2, "instagram": 2, "instagram_reel": 2, "youtube": 2},
+            "x_baglanti": "gonderide", "instagram_api_surumu": "v27.0",
+            "hesaplar": {d: dict(h) for d in sy.DILLER}, "youtube": {"gizlilik": "private"}, "reddit_topluluk": {}}
+
+
+SIRLAR = {"IG_TR_USER_ID": "17841", "IG_TR_TOKEN": "tok",
+          "YT_TR_CLIENT_ID": "cid", "YT_TR_CLIENT_SECRET": "csec", "YT_TR_REFRESH_TOKEN": "rt",
+          "X_TR_API_KEY": "a", "X_TR_API_SECRET": "b", "X_TR_ACCESS_TOKEN": "c", "X_TR_ACCESS_SECRET": "d"}
+
+
+class SahteAg:
+    """Ağ yerine geçer: her çağrıyı kaydeder; `yanit` ile istenen çağrı için yanıt/hata verilir."""
+
+    def __init__(self, durumlar=None, mutasyon_hatasi=None):
+        self.cagrilar = []
+        self.durumlar = list(durumlar or ["FINISHED"])  # kapsayıcı durum dizisi
+        self.hata = mutasyon_hatasi or {}  # {"media_publish": PaylasimHatasi(...)}
+        self.yayinda = True
+        self.indirilen = 0
+
+    def _hata(self, url):
+        for k, h in self.hata.items():
+            if k in url:
+                raise h
+
+    def istek(self, method, url, *, veri=None, json_govde=None, basliklar=None, zaman=30):
+        self.cagrilar.append((method, url.split("?")[0]))
+        self._hata(url)
+        if url.endswith("/media") and method == "POST":
+            return 200, {"id": "KAP1"}
+        if "media_publish" in url:
+            return 200, {"id": "MED1"}
+        if "fields=status_code" in url:
+            d = self.durumlar.pop(0) if len(self.durumlar) > 1 else self.durumlar[0]
+            return 200, {"status_code": d}
+        if "fields=permalink" in url:
+            return 200, {"permalink": "https://www.instagram.com/reel/ABC/"}
+        if "oauth2.googleapis.com" in url:
+            return 200, {"access_token": "erisim"}
+        if "api.x.com" in url:
+            return 200, {"data": {"id": "TW1"}}
+        raise AssertionError(f"beklenmeyen istek {method} {url}")
+
+    def ham(self, method, url, *, govde=None, basliklar=None, zaman=300):
+        self.cagrilar.append((method, url.split("?")[0]))
+        self._hata(url)
+        if "uploadType=resumable" in url:
+            return 200, {"location": "https://upload.example/oturum1"}, ""
+        if url == "https://upload.example/oturum1":
+            if govde == b"":  # oturum sorgusu
+                return 308, {"range": "bytes=0-9"}, ""
+            return 200, {}, json.dumps({"id": "YT1"})
+        raise AssertionError(f"beklenmeyen ham {method} {url}")
+
+    def indir(self, url):
+        self.indirilen += 1
+        return b"0123456789ABCDEF"
+
+    def yayinda_mi(self, url):
+        return self.yayinda
+
+    def uyku(self, sn):
+        pass
+
+
+class YasakAg(SahteAg):
+    """Dry-run denemesi: herhangi bir ağ çağrısı testi düşürür."""
+
+    def istek(self, *a, **k):
+        raise AssertionError("dry-run ağ çağrısı yaptı (istek)")
+
+    def ham(self, *a, **k):
+        raise AssertionError("dry-run ağ çağrısı yaptı (ham)")
+
+    def indir(self, *a, **k):
+        raise AssertionError("dry-run ağ çağrısı yaptı (indir)")
+
+    def yayinda_mi(self, *a, **k):
+        raise AssertionError("dry-run ağ çağrısı yaptı (yayinda_mi)")
+
+
+class Temel(unittest.TestCase):
+    def setUp(self):
+        self.gecici = tempfile.TemporaryDirectory()
+        self.kok = pathlib.Path(self.gecici.name)
+        self.kayit = self.kok / "gonderilenler.json"
+        self.manifest = self.kok / "videolar.json"
+
+    def tearDown(self):
+        self.gecici.cleanup()
+
+    def manifest_yaz(self, hid="oyun-yama-1", dil="tr"):
+        self.manifest.write_text(json.dumps({"surum": 1, "taban": "https://medya.test/v/", "videolar": {hid: {dil: {
+            "anahtar": "k", "sure": 30.0, "mp4_1080": "a1080.mp4", "mp4_720": "a720.mp4", "mp4_540": "a540.mp4",
+            "kapak": "a.jpg", "vtt": "a.vtt", "uretildi": "2026-11-15T10:00:00+00:00", "ozel": "kalsin"}}}}), encoding="utf-8")
+
+    def calistir(self, ag, ayar_, veri=None, dry=False, tum=None, simdi=SIMDI):
+        return sy.calistir(ayar_, veri if veri is not None else [haber()], kayit_yolu=self.kayit, manifest_yolu=self.manifest,
+                           tum=SIRLAR if tum is None else tum, ag=ag, dry_run=dry, bugun=BUGUN, simdi=simdi, cikti=lambda *_: None)
+
+    def kayitlar(self):
+        return json.loads(self.kayit.read_text(encoding="utf-8")) if self.kayit.exists() else {}
+
+
+class AnahtarVeGoc(Temel):
+    def test_anahtar_konu_yoksa_id(self):
+        self.assertEqual(sy.anahtar(haber("a", "konu-1"), "tr", "instagram", "reel"), "konu-1|tr|instagram|reel")
+        x = haber("b")
+        del x["otomasyon"]
+        self.assertEqual(sy.anahtar(x, "en", "x", "gorsel"), "b|en|x|gorsel")
+
+    def test_eski_kayit_goc_eder_ve_tamam_olur(self):
+        yeni, goc = sy.kayit_goc({"oyun-yama-1|tr|instagram": {"zaman": "2026-11-14T10:00:00+00:00", "kimlik": "9", "url": "u"}},
+                                 [haber("oyun-yama-1", "konu-z")])
+        self.assertTrue(goc)
+        rec = yeni["konu-z|tr|instagram|gorsel"]
+        self.assertEqual((rec["durum"], rec["kimlik"], rec["bicim"]), ("tamam", "9", "gorsel"))
+        again, goc2 = sy.kayit_goc(yeni, [haber("oyun-yama-1", "konu-z")])
+        self.assertFalse(goc2)
+        self.assertEqual(again, yeni)
+
+    def test_eski_kayitli_haber_yeniden_paylasilmaz(self):
+        self.kayit.write_text(json.dumps({"oyun-yama-1|tr|instagram": {"zaman": "2026-11-14T10:00:00+00:00", "kimlik": "9"}}), encoding="utf-8")
+        ag = SahteAg()
+        g, hata, _ = self.calistir(ag, ayar(instagram=True))
+        self.assertEqual((g, hata), (0, []))
+        self.assertEqual(ag.cagrilar, [])
+        self.assertIn("oyun-yama-1|tr|instagram|gorsel", self.kayitlar())  # göç yazıldı
+
+    def test_konu_ayni_ama_id_farkliysa_cift_paylasim_yok(self):
+        ag = SahteAg()
+        self.calistir(ag, ayar(instagram=True), [haber("id-1", "ortak-konu")])
+        n = len(ag.cagrilar)
+        self.calistir(ag, ayar(instagram=True), [haber("id-2", "ortak-konu")])
+        self.assertEqual(len(ag.cagrilar), n)
+
+
+class Gorsel(Temel):
+    def test_niyet_tamam_ve_ikinci_calisma_cagri_yapmaz(self):
+        ag = SahteAg()
+        g, hata, _ = self.calistir(ag, ayar(instagram=True))
+        self.assertEqual((g, hata), (1, []))
+        rec = self.kayitlar()["oyun-yama-1|tr|instagram|gorsel"]
+        self.assertEqual((rec["durum"], rec["kimlik"], rec["kapsayici"]), ("tamam", "MED1", "KAP1"))
+        n = len(ag.cagrilar)
+        g2, _, _ = self.calistir(ag, ayar(instagram=True))
+        self.assertEqual(g2, 0)
+        self.assertEqual(len(ag.cagrilar), n)
+
+    def test_finished_olmadan_yayimlanmaz(self):
+        ag = SahteAg(durumlar=["IN_PROGRESS"])
+        g, hata, _ = self.calistir(ag, ayar(instagram=True))
+        self.assertEqual(g, 0)
+        self.assertFalse(any("media_publish" in u for _, u in ag.cagrilar))
+        self.assertEqual(len(hata), 1)
+        rec = self.kayitlar()["oyun-yama-1|tr|instagram|gorsel"]
+        self.assertEqual((rec["durum"], rec["kapsayici"]), ("niyet", "KAP1"))  # kapsayıcı kaydedildi, sonra devam edilir
+
+    def test_in_progress_sonra_finished_yayimlar(self):
+        ag = SahteAg(durumlar=["IN_PROGRESS", "IN_PROGRESS", "FINISHED"])
+        g, _, _ = self.calistir(ag, ayar(instagram=True))
+        self.assertEqual(g, 1)
+        yollar = [u for _, u in ag.cagrilar]
+        self.assertLess(max(i for i, u in enumerate(yollar) if "KAP1" in u), yollar.index([u for u in yollar if "media_publish" in u][0]))
+
+    def test_error_durumu_kesin_hata_ve_kayit_silinir(self):
+        ag = SahteAg(durumlar=["ERROR"])
+        g, hata, _ = self.calistir(ag, ayar(instagram=True))
+        self.assertEqual(g, 0)
+        self.assertEqual(len(hata), 1)
+        self.assertNotIn("oyun-yama-1|tr|instagram|gorsel", self.kayitlar())
+
+    def test_hesap_sirri_yoksa_atlanir(self):
+        ag = SahteAg()
+        g, hata, atlanan = self.calistir(ag, ayar(instagram=True), tum={})
+        self.assertEqual((g, hata), (0, []))
+        self.assertIn("instagram/tr", atlanan)
+        self.assertEqual(ag.cagrilar, [])
+
+    def test_gunluk_sinir(self):
+        a = ayar(instagram=True)
+        a["gunluk_en_fazla"]["instagram"] = 1
+        ag = SahteAg()
+        self.calistir(ag, a, [haber("a1"), haber("a2")])
+        n = len(ag.cagrilar)
+        g, _, _ = self.calistir(ag, a, [haber("a1"), haber("a2")])
+        self.assertEqual(g, 0)
+        self.assertEqual(len(ag.cagrilar), n)
+
+
+class KayipYanit(Temel):
+    def test_x_zaman_asimi_sonrasi_elle_bak_ve_tekrar_denenmez(self):
+        ag = SahteAg(mutasyon_hatasi={"api.x.com": sy.PaylasimHatasi("zaman aşımı")})
+        g, hata, _ = self.calistir(ag, ayar(x=True))
+        self.assertEqual(g, 0)
+        self.assertEqual(self.kayitlar()["oyun-yama-1|tr|x|gorsel"]["durum"], "niyet")
+        self.assertIn("belirsiz", hata[0])
+        ag2 = SahteAg()
+        g2, hata2, _ = self.calistir(ag2, ayar(x=True))
+        self.assertEqual(g2, 0)
+        self.assertEqual(self.kayitlar()["oyun-yama-1|tr|x|gorsel"]["durum"], "elle_bak")
+        self.assertTrue(any("ELLE BAK" in h for h in hata2))
+        self.assertEqual(ag2.cagrilar, [])  # X'e ikinci kez gönderi atılmadı
+        ag3 = SahteAg()
+        self.calistir(ag3, ayar(x=True))
+        self.assertEqual(ag3.cagrilar, [])
+
+    def test_instagram_yayimla_yaniti_kayboldu_sonra_published_tamamlar(self):
+        ag = SahteAg(mutasyon_hatasi={"media_publish": sy.PaylasimHatasi("zaman aşımı")})
+        self.calistir(ag, ayar(instagram=True))
+        self.assertEqual(self.kayitlar()["oyun-yama-1|tr|instagram|gorsel"]["durum"], "niyet")
+        ag2 = SahteAg(durumlar=["PUBLISHED"])
+        self.calistir(ag2, ayar(instagram=True))
+        self.assertEqual(self.kayitlar()["oyun-yama-1|tr|instagram|gorsel"]["durum"], "tamam")
+        self.assertFalse(any("media_publish" in u or u.endswith("/media") for _, u in ag2.cagrilar))
+
+    def test_instagram_kapsayici_finished_kalmissa_yayimlar_ama_yeni_kapsayici_acmaz(self):
+        ag = SahteAg(mutasyon_hatasi={"media_publish": sy.PaylasimHatasi("zaman aşımı")})
+        self.calistir(ag, ayar(instagram=True))
+        ag2 = SahteAg(durumlar=["FINISHED"])
+        self.calistir(ag2, ayar(instagram=True))
+        yollar = [u for _, u in ag2.cagrilar]
+        self.assertEqual(sum("media_publish" in u for u in yollar), 1)
+        self.assertFalse(any(u.endswith("/media") for u in yollar))
+        self.assertEqual(self.kayitlar()["oyun-yama-1|tr|instagram|gorsel"]["durum"], "tamam")
+
+    def test_instagram_expired_elle_bak(self):
+        ag = SahteAg(mutasyon_hatasi={"media_publish": sy.PaylasimHatasi("zaman aşımı")})
+        self.calistir(ag, ayar(instagram=True))
+        ag2 = SahteAg(durumlar=["EXPIRED"])
+        _, hata, _ = self.calistir(ag2, ayar(instagram=True))
+        self.assertEqual(self.kayitlar()["oyun-yama-1|tr|instagram|gorsel"]["durum"], "elle_bak")
+        self.assertTrue(any("ELLE BAK" in h for h in hata))
+
+    def test_kesin_4xx_reddinde_kayit_silinir_ve_sonra_denenir(self):
+        ag = SahteAg(mutasyon_hatasi={"api.x.com": sy.PaylasimHatasi("HTTP 403", kesin=True)})
+        self.calistir(ag, ayar(x=True))
+        self.assertNotIn("oyun-yama-1|tr|x|gorsel", self.kayitlar())
+        g, _, _ = self.calistir(SahteAg(), ayar(x=True))
+        self.assertEqual(g, 1)
+
+
+class Reel(Temel):
+    def test_reel_manifest_yoksa_atlanir(self):
+        ag = SahteAg()
+        g, _, _ = self.calistir(ag, ayar(instagram_reel=True))
+        self.assertEqual((g, ag.cagrilar), (0, []))
+
+    def test_reel_paylasilir_baglanti_manifeste_yazilir_diger_alanlar_korunur(self):
+        self.manifest_yaz()
+        ag = SahteAg()
+        g, hata, _ = self.calistir(ag, ayar(instagram_reel=True))
+        self.assertEqual((g, hata), (1, []))
+        self.assertIn("oyun-yama-1|tr|instagram|reel", self.kayitlar())
+        v = json.loads(self.manifest.read_text(encoding="utf-8"))["videolar"]["oyun-yama-1"]["tr"]
+        self.assertEqual(v["instagram"], "https://www.instagram.com/reel/ABC/")
+        self.assertEqual((v["ozel"], v["mp4_540"], v["sure"]), ("kalsin", "a540.mp4", 30.0))
+
+    def test_gorsel_ve_reel_ayri_anahtar_ayri_gonderi(self):
+        self.manifest_yaz()
+        ag = SahteAg()
+        a = ayar(instagram=True, instagram_reel=True)
+        self.calistir(ag, a)
+        self.calistir(ag, a)
+        self.assertEqual({"oyun-yama-1|tr|instagram|gorsel", "oyun-yama-1|tr|instagram|reel"}, set(self.kayitlar()))
+
+    def test_reel_finished_beklemeden_yayimlanmaz(self):
+        self.manifest_yaz()
+        ag = SahteAg(durumlar=["IN_PROGRESS"])
+        g, _, _ = self.calistir(ag, ayar(instagram_reel=True))
+        self.assertEqual(g, 0)
+        self.assertFalse(any("media_publish" in u for _, u in ag.cagrilar))
+
+
+class Short(Temel):
+    def test_short_yuklenir_oturum_ve_kimlik_kaydedilir(self):
+        self.manifest_yaz()
+        ag = SahteAg()
+        g, hata, _ = self.calistir(ag, ayar(youtube=True))
+        self.assertEqual((g, hata), (1, []))
+        rec = self.kayitlar()["oyun-yama-1|tr|youtube|short"]
+        self.assertEqual((rec["durum"], rec["kimlik"], rec["oturum"]), ("tamam", "YT1", "https://upload.example/oturum1"))
+        v = json.loads(self.manifest.read_text(encoding="utf-8"))["videolar"]["oyun-yama-1"]["tr"]
+        self.assertEqual(v["youtube"], "https://www.youtube.com/shorts/YT1")
+
+    def test_short_govdesi(self):
+        x = haber()
+        x["diller"]["tr"]["baslik"] = "A" * 150
+        g = sy.yt_govde("tr", x, "https://ctrl-agame.com/x", {})
+        self.assertLessEqual(len(g["snippet"]["title"]), 100)
+        self.assertEqual(g["status"], {"privacyStatus": "private", "selfDeclaredMadeForKids": False, "containsSyntheticMedia": True})
+        self.assertEqual(g["snippet"]["defaultLanguage"], "tr")
+        self.assertIn("https://ctrl-agame.com/x", g["snippet"]["description"])
+        self.assertEqual(sy.yt_govde("tr", x, "u", {"youtube": {"gizlilik": "public"}})["status"]["privacyStatus"], "public")
+        self.assertEqual(sy.yt_govde("tr", x, "u", {"youtube": {"gizlilik": "bozuk"}})["status"]["privacyStatus"], "private")
+
+    def test_yukleme_yaniti_kayboldu_oturum_sorgulanip_devam_eder(self):
+        self.manifest_yaz()
+        ag = SahteAg(mutasyon_hatasi={})
+
+        orijinal = ag.ham
+
+        def ham(method, url, *, govde=None, basliklar=None, zaman=300):
+            if url == "https://upload.example/oturum1" and govde not in (b"", None):
+                ag.cagrilar.append((method, url))
+                raise sy.PaylasimHatasi("zaman aşımı")
+            return orijinal(method, url, govde=govde, basliklar=basliklar, zaman=zaman)
+        ag.ham = ham
+        self.calistir(ag, ayar(youtube=True))
+        rec = self.kayitlar()["oyun-yama-1|tr|youtube|short"]
+        self.assertEqual((rec["durum"], rec["oturum"]), ("niyet", "https://upload.example/oturum1"))
+        ag2 = SahteAg()
+        self.calistir(ag2, ayar(youtube=True))
+        self.assertEqual(self.kayitlar()["oyun-yama-1|tr|youtube|short"]["durum"], "tamam")
+        self.assertFalse(any("uploadType=resumable" in u for _, u in ag2.cagrilar))  # yeni oturum açılmadı
+
+    def test_oturumsuz_niyet_elle_bak(self):
+        self.kayit.write_text(json.dumps({"oyun-yama-1|tr|youtube|short": {
+            "id": "oyun-yama-1", "dil": "tr", "platform": "youtube", "bicim": "short", "durum": "niyet",
+            "niyet_zamani": "2026-11-15T09:00:00+00:00"}}), encoding="utf-8")
+        self.manifest_yaz()
+        ag = SahteAg()
+        self.calistir(ag, ayar(youtube=True))
+        self.assertEqual(self.kayitlar()["oyun-yama-1|tr|youtube|short"]["durum"], "elle_bak")
+        self.assertEqual(ag.cagrilar, [])
+
+
+class DryRun(Temel):
+    def test_dry_run_hic_ag_cagrisi_ve_yazma_yapmaz(self):
+        self.manifest_yaz()
+        a = ayar(x=True, instagram=True, instagram_reel=True, youtube=True)
+        g, hata, _ = self.calistir(YasakAg(), a, dry=True, tum={})
+        self.assertEqual((g, hata), (0, []))
+        self.assertFalse(self.kayit.exists())
+        self.assertEqual(json.loads(self.manifest.read_text(encoding="utf-8"))["videolar"]["oyun-yama-1"]["tr"].get("youtube"), None)
+
+    def test_dry_run_eski_kaydi_dosyaya_gocurmez(self):
+        eski = {"oyun-yama-1|tr|instagram": {"zaman": "2026-11-14T10:00:00+00:00"}}
+        self.kayit.write_text(json.dumps(eski), encoding="utf-8")
+        self.calistir(YasakAg(), ayar(instagram=True), dry=True)
+        self.assertEqual(json.loads(self.kayit.read_text(encoding="utf-8")), eski)
+
+
+class Metin(unittest.TestCase):
+    def test_x_metni_sinirda(self):
+        x = haber()
+        x["diller"]["tr"]["baslik"] = "B" * 300
+        for mod in ("gonderide", "profilde"):
+            m = sy.x_metin("tr", x, "https://ctrl-agame.com/tr/a.html?utm_source=x", mod)
+            n = len(m) - (len("https://ctrl-agame.com/tr/a.html?utm_source=x") - 23 if mod == "gonderide" else 0)
+            self.assertLessEqual(n, 280)
+
+    def test_sayfa_bekle_hazirsa_uyumaz(self):
+        ag = SahteAg()
+        self.assertEqual(sy.sayfa_bekle(ag, [haber()]), 0)
+
+    def test_sayfa_bekle_sure_dolunca_yine_de_devam_eder(self):
+        ag = SahteAg()
+        ag.yayinda = False
+        self.assertEqual(sy.sayfa_bekle(ag, [haber()], deneme=3, aralik=0), 0)
+
+
+if __name__ == "__main__":
+    unittest.main()

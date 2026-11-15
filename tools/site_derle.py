@@ -29,6 +29,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import oyun_tema as ot  # noqa: E402
 import site_oyun as so  # noqa: E402
 import sosyal_derle as sd  # noqa: E402
+import video_site as vs  # noqa: E402
 from site_metin import (AY_KISA, DIL_AD, ESLER, GTA_ALT_SAYI, GTA_HEDEF, GTA_SAYFALAR, GTA_SERI,  # noqa: E402
                         GTA_TARIH, GTA_UST, MARKA, PLATFORMLAR, SAYFA, T, TEK_TR, say)
 
@@ -72,6 +73,7 @@ SIMDI = datetime.now(TRT)
 URETILEN: dict[str, dict] = {}
 GORSEL: dict[str, dict] = {}  # haber id -> {"url", "kaynak", "en", "boy"} (data/gorseller.json, tools/gorsel_cek.py yazar)
 MANIFEST: dict[str, list] = {}
+VIDEO: dict = {}  # data/videolar.json (tools/video_uret.py yazar); yoksa boş: site videosuz derlenir
 ESKI_HARITA: dict[str, str] = {}
 SURUM: dict[str, str] = {}
 
@@ -697,7 +699,7 @@ def kapak_tema(oyun: str) -> tuple[str, dict, str]:
 
 
 def kapak_html(dil: str, oyun: str, *, ek: str, alt: str = "", gorsel: dict | None = None, rozet: str = "",
-               sinif: str = "") -> str:
+               sinif: str = "", video: dict | None = None) -> str:
     """Kart görseli: altta üretilmiş kapak (her zaman), varsa üstünde kaynağın görseli.
     Görsel yüklenemezse onerror onu kaldırır ve kapak görünür; JS kapalıyken de ikisinden biri görünür."""
     ts, t, kisa = kapak_tema(oyun)
@@ -707,6 +709,9 @@ def kapak_html(dil: str, oyun: str, *, ek: str, alt: str = "", gorsel: dict | No
                'loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">'
                f'<span class="kg-not">{e(T[dil]["gorsel_not"])}: {e(gorsel["kaynak"])}</span>')
     kimlik = re.sub(r"[^a-z0-9-]", "", ek.lower())
+    if video:  # video yalnız veri olarak taşınır; site.js görünür olunca yükler
+        return (f'<div class="kg {ts}{sinif} kg-videolu"{vs.kart_nitelik(video)}>{ot.kapak(t, e(kisa), ek=kimlik)}{img}{rozet}'
+                f'{vs.kart_arac(dil, video)}</div>')
     return f'<div class="kg {ts}{sinif}">{ot.kapak(t, e(kisa), ek=kimlik)}{img}{rozet}</div>'
 
 
@@ -742,7 +747,7 @@ def haber_kart(dil: str, x: dict, *, h: str = "h3", oge: bool = False, one: bool
         attr = (f' id="{x["id"]}" data-oge data-tur="{x["tur"]}" data-platform="{pl_attr(pl)}" data-oyun="{oyun_anahtar(x["oyun"])}"'
                 f' data-ara="{e(norm(" ".join([t["baslik"], t["ozet"], x["oyun"], " ".join(pl)])))}"')
     kap = kapak_html(dil, x["oyun"], ek=f"{on_ek}h-{x['id']}", alt=t["baslik"], gorsel=GORSEL.get(x["id"]),
-                     rozet=tur_rozet(dil, x["tur"]), sinif=" kg-genis" if one else "")
+                     rozet=tur_rozet(dil, x["tur"]), sinif=" kg-genis" if one else "", video=vs.bul(VIDEO, x["id"], dil))
     return (f'<li class="hk tur-{x["tur"]}{" hk-one" if one else ""}"{attr}>{kap}<div class="hk-govde">'
             f'<p class="meta">{zaman_etiketi(dil, x["tarih"])}{yeni_rozet(dil, x["tarih"])}{cip_oyun(x["oyun"], dil)}{pl_metin(pl, dil)}</p>'
             f'<{h} class="hk-baslik"><a href="{haber_url(dil, x)}">{e(t["baslik"])}</a></{h}>'
@@ -1127,14 +1132,15 @@ def haber_sayfasi(dil: str, x: dict, veri: list) -> str:
                        '<ul class="haber-izgara hi-ilgili">\n' + "".join(haber_kart(dil, y, ozet=False, on_ek="i") for y in ilgili[:3])
                        + "</ul></section>\n")
     pl = x.get("platform") or []
+    vid = vs.bul(VIDEO, x["id"], dil)
     kapak = kapak_html(dil, x["oyun"], ek=f"d-{x['id']}", alt=dl["baslik"], gorsel=GORSEL.get(x["id"]),
                        rozet=tur_rozet(dil, x["tur"]), sinif=" kg-genis kg-hero")
     govde = (f'<article class="wrap haber-detay tur-{x["tur"]}">\n<p class="geri"><a href="{u(SAYFA["haber"][dil])}">{e(m["geri"])}</a></p>\n'
-             f'{kapak}\n<div class="hd-govde">\n'
+             f'{kapak}\n<div class="hd-govde{" hd-vid" if vid else ""}">\n'
              f'<header class="hd-bas"><p class="meta">{zaman_etiketi(dil, x["tarih"])}{yeni_rozet(dil, x["tarih"])}{cip_oyun(x["oyun"], dil)}'
              f'{cip_tur(dil, x["tur"])}{pl_metin(pl, dil)}</p>\n'
              f'<h1>{e(dl["baslik"])}</h1>\n<p class="giris">{e(dl["ozet"])}</p></header>\n'
-             f'<div class="metin">\n{paragraflar}</div>\n<aside class="hd-yan">\n'
+             f'<div class="metin">\n{paragraflar}</div>\n<aside class="hd-yan">\n{vs.sayfa_oynatici(dil, vid, dl["baslik"]) if vid else ""}'
              f'<section class="kutu kaynak-kutu"><h2>{e(t["kaynaklar_baslik"])}</h2><ul>{kaynaklar}</ul></section>\n'
              f'<section class="kutu"><h2>{e(t["paylas"])}</h2><div class="paylas">'
              f'<button type="button" class="dugme js-only" data-kopyala="{url}">{e(t["kopyala"])}</button>'
@@ -1147,7 +1153,9 @@ def haber_sayfasi(dil: str, x: dict, veri: list) -> str:
              + '</aside>\n' + ilgili_html + '</div>\n</article>\n')
     return kabuk(dil, yollar[dil], f"{dl['baslik']} | {m['menu']}", dl["ozet"], govde, esler=yollar, bolum="haber", tip="article",
                  gorsel=paylas_gorsel, gorsel_olcu=paylas_olcu, sayfa_turu="haber-detay",
-                 ek_bas=f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n' + yon + so.bas_ek())
+                 ek_bas=f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n'
+                 + (vs.ld_etiket(vs.video_ld(vid, ad=dl["baslik"], aciklama=dl["ozet"], tarih=x["tarih"], dil=dil)) if vid else "")
+                 + yon + so.bas_ek())
 
 
 def indirim_sayfasi(dil: str, ind: dict) -> str:
@@ -1313,7 +1321,7 @@ def ara_dizini(dil: str, veri: list, soy: list, tak: list, eskiler: list) -> lis
 
 
 # ---------------------------------------------------------------- yazma, manifest, site haritası
-def sayfa_yaz(yol: str, metin: str, *, esler: dict | None = None, lastmod: str | None = None, harita: bool = True) -> int:
+def sayfa_yaz(yol: str, metin: str, *, esler: dict | None = None, lastmod: str | None = None, harita: bool = True, video: str = "") -> int:
     if harita:
         if lastmod is None:
             m = re.search(r'<main id="main"[^>]*>(.*)</main>', metin, re.S)
@@ -1325,7 +1333,7 @@ def sayfa_yaz(yol: str, metin: str, *, esler: dict | None = None, lastmod: str |
                 lastmod = ESKI_HARITA.get(tam(yol), BUGUN.isoformat()) if (eski is None and ESKI_HARITA.get(tam(yol))) else BUGUN.isoformat()
                 MANIFEST[yol] = [h, lastmod]
             MANIFEST[yol] = [h, lastmod]
-        URETILEN[yol] = {"esler": esler, "lastmod": lastmod}
+        URETILEN[yol] = {"esler": esler, "lastmod": lastmod, "video": video}
     return int(sd.yaz(KOK / yol, metin))
 
 
@@ -1346,9 +1354,10 @@ def site_haritasi() -> int:
         if len(es) > 1:
             alt = "".join(f'<xhtml:link rel="alternate" hreflang="{d}" href="{tam(p)}"/>' for d, p in es.items())
             alt += f'<xhtml:link rel="alternate" hreflang="x-default" href="{tam(es.get("en") or es.get("tr") or next(iter(es.values())))}"/>'
-        satir.append(f"  <url><loc>{tam(yol)}</loc><lastmod>{b['lastmod']}</lastmod>{alt}</url>\n")
+        satir.append(f"  <url><loc>{tam(yol)}</loc><lastmod>{b['lastmod']}</lastmod>{alt}{b.get('video', '')}</url>\n")
+    vns = ' xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"' if any(b.get("video") for b in URETILEN.values()) else ""
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
-           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
+           f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"{vns}>\n'
            + "".join(satir) + "</urlset>\n")
     return int(sd.yaz(KOK / "sitemap.xml", xml))
 
@@ -1378,6 +1387,8 @@ def derle(veri: list) -> dict:
     soy, tak, ind, ucr = soylentiler_yukle(), takvim_yukle(), indirim_yukle(), ucretsiz_yukle()
     GORSEL.clear()
     GORSEL.update(gorseller_yukle())
+    VIDEO.clear()
+    VIDEO.update(vs.yukle())
     SURUM["css"], SURUM["js"] = surum_al("style.css"), surum_al("site.js")
 
     # elle yazılmış sayfalar
@@ -1408,7 +1419,9 @@ def derle(veri: list) -> dict:
         degisen += sayfa_yaz(SAYFA["haber"][d], hub_sayfasi(d, veri), esler=SAYFA["haber"])
         for x in veri:
             yollar = {dd: f"{sd.KLASOR[dd]}/{x['id']}.html" for dd in DILLER}
-            degisen += sayfa_yaz(yollar[d], haber_sayfasi(d, x, veri), esler=yollar, lastmod=x["tarih"])
+            vid = vs.bul(VIDEO, x["id"], d)
+            vh = vs.harita_girdisi(vid, ad=x["diller"][d]["baslik"], aciklama=x["diller"][d]["ozet"], tarih=x["tarih"]) if vid else ""
+            degisen += sayfa_yaz(yollar[d], haber_sayfasi(d, x, veri), esler=yollar, lastmod=x["tarih"], video=vh)
         degisen += sayfa_yaz(SAYFA["indirim"][d], indirim_sayfasi(d, ind), esler=SAYFA["indirim"])
         degisen += sayfa_yaz(SAYFA["ucretsiz"][d], ucretsiz_sayfasi(d, ucr, ind), esler=SAYFA["ucretsiz"])
         degisen += sayfa_yaz(SAYFA["soylenti"][d], soylenti_sayfasi(d, soy), esler=SAYFA["soylenti"])

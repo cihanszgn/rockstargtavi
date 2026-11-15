@@ -5,7 +5,9 @@
  "gunluk_en_fazla": {
   "x": 2,
   "reddit": 2,
-  "instagram": 2
+  "instagram": 2,
+  "instagram_reel": 2,
+  "youtube": 2
  },
  "x_baglanti": "gonderide",
  "instagram_api_surumu": "v27.0",
@@ -13,23 +15,40 @@
   "tr": {
    "x": false,
    "reddit": false,
-   "instagram": true
+   "instagram": true,
+   "instagram_reel": false,
+   "youtube": false
   },
   "en": {
    "x": false,
    "reddit": false,
-   "instagram": true
+   "instagram": true,
+   "instagram_reel": false,
+   "youtube": false
   },
   "fr": {
    "x": false,
    "reddit": false,
-   "instagram": false
+   "instagram": false,
+   "instagram_reel": false,
+   "youtube": false
   },
   "es": {
    "x": false,
    "reddit": false,
-   "instagram": false
+   "instagram": false,
+   "instagram_reel": false,
+   "youtube": false
   }
  },
- "reddit_topluluk": {}
+ "reddit_topluluk": {},
+ "youtube": {
+  "gizlilik": "private"
+ },
+ "video": {
+  "ses": "azure",
+  "konusmaci": "tr-TR-AhmetNeural",
+  "yukleme_hedefi": "",
+  "gunluk_en_fazla": 2
+ }
 }

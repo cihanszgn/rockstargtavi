@@ -1,0 +1,25 @@
+{
+  "name": "ctrl-agame-haber-video",
+  "private": true,
+  "version": "1.0.0",
+  "description": "CTRL+A GAME haberlerinden 1080x1920 dikey video (Remotion). Girdi: tools/video_uret.py'nin ürettiği zamanlı senaryo.",
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "denetle": "tsc --noEmit",
+    "render": "node render.mjs"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.539",
+    "@remotion/cli": "4.0.539",
+    "@remotion/fonts": "4.0.539",
+    "@remotion/renderer": "4.0.539",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.539"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,116 @@
+# Yeni haberler için dikey haber videosu üretir (Remotion + Azure Speech), sunucuya yükler,
+# data/videolar.json'a yazar. Hesap/anahtar yoksa iş temiz biçimde boşta biter.
+# Gerekli sırlar: AZURE_SPEECH_KEY, AZURE_SPEECH_REGION, MEDYA_SSH_KEY, MEDYA_SSH_BILINEN (known_hosts satırı).
+name: Haber videosu
+
+on:
+  push:
+    branches: [main]
+    paths: [data/icerik.json, 'video/senaryo/**']
+  workflow_dispatch:
+    inputs:
+      deneme:
+        description: "Yalnız dene (bekleyenleri listele, video üretme)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: video-uretim
+  cancel-in-progress: false
+
+env:
+  GUNLUK_EN_FAZLA: "2"   # günde en çok bu kadar video (üretim maliyeti ve "toplu içerik" riski için)
+
+jobs:
+  uret:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: video/package-lock.json
+
+      - name: Anahtarlar var mı
+        id: kontrol
+        env:
+          AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
+          AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
+          MEDYA_SSH_KEY: ${{ secrets.MEDYA_SSH_KEY }}
+        run: |
+          if [ -n "$AZURE_SPEECH_KEY" ] && [ -n "$AZURE_SPEECH_REGION" ] && [ -n "$MEDYA_SSH_KEY" ]; then
+            echo "hazir=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "hazir=false" >> "$GITHUB_OUTPUT"
+            echo "Azure Speech ya da sunucu anahtarı girilmemiş: video üretimi atlandı (hata değil)."
+          fi
+
+      - name: Bekleyenleri listele
+        id: bekleyen
+        run: |
+          python tools/video_uret.py bekleyenler | tee bekleyen.txt
+          echo "sayi=$(grep -cv -e '^\s*$' -e '^#' bekleyen.txt || true)" >> "$GITHUB_OUTPUT"
+
+      - name: Bağımlılıkları kur
+        if: steps.kontrol.outputs.hazir == 'true' && inputs.deneme != true
+        working-directory: video
+        run: npm ci
+
+      - name: SSH anahtarını hazırla
+        if: steps.kontrol.outputs.hazir == 'true' && inputs.deneme != true
+        env:
+          MEDYA_SSH_KEY: ${{ secrets.MEDYA_SSH_KEY }}
+          MEDYA_SSH_BILINEN: ${{ secrets.MEDYA_SSH_BILINEN }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$MEDYA_SSH_KEY" > ~/.ssh/medya_anahtar
+          chmod 600 ~/.ssh/medya_anahtar
+          printf '%s\n' "$MEDYA_SSH_BILINEN" > ~/.ssh/known_hosts
+
+      - name: Videoları üret ve yükle (günlük sınıra kadar)
+        if: steps.kontrol.outputs.hazir == 'true' && inputs.deneme != true
+        env:
+          AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
+          AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
+        run: |
+          # bekleyenler çıktısı: her satır "<haber id> <dil>"; # ile başlayan ve boş satırlar yok sayılır.
+          yapilan=$(python tools/video_site.py bugun)
+          while read -r id dil _; do
+            [ -z "$id" ] && continue
+            case "$id" in \#*) continue;; esac
+            if [ "$yapilan" -ge "$GUNLUK_EN_FAZLA" ]; then
+              echo "Günlük sınır doldu ($GUNLUK_EN_FAZLA)."; break
+            fi
+            dil="${dil:-tr}"   # bekleyenler yalnız id yazarsa dil Türkçe sayılır
+            echo "Üretiliyor: $id $dil"
+            if python tools/video_uret.py uret --id "$id" --dil "$dil" --ses azure --yukle; then
+              yapilan=$((yapilan + 1))
+            else
+              echo "::warning::Üretilemedi: $id $dil (sonrakine geçildi)"
+            fi
+          done < bekleyen.txt
+
+      - name: Siteyi yeniden üret ve manifesti depoya yaz
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/videolar.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            # manifest değiştiyse sayfalardaki oynatıcılar ve video site haritası da güncellenir
+            python tools/site_derle.py
+            python tools/sosyal_derle.py
+            git add -u
+            git commit -m "video: üretilen videolar ve siteye işlenmesi"
+            for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
+          fi

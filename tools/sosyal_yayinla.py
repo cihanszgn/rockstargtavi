@@ -1,17 +1,23 @@
 #!/usr/bin/env python3
-"""Sosyal paylaşım: data/icerik.json'daki yeni haberleri X, Reddit ve Instagram'a gönderir.
+"""Sosyal paylaşım: data/icerik.json'daki yeni haberleri X, Reddit, Instagram (görsel + Reels) ve YouTube Shorts'a gönderir.
 
 Her dil ayrı hesaptır (tr, en, fr, es). Bir hesabın şifreleri yoksa o hesap sessizce atlanır.
 Şifreler ortam değişkeninden okunur (GitHub Actions: her sır adıyla env olarak verilir).
 
-  python tools/sosyal_yayinla.py --dry-run     # ne paylaşılacağını gösterir, hiçbir şey göndermez
+  python tools/sosyal_yayinla.py --dry-run     # ne paylaşılacağını gösterir, hiçbir ağ çağrısı yapmaz, dosya yazmaz
   python tools/sosyal_yayinla.py               # gerçekten paylaşır, sosyal/gonderilenler.json'a yazar
-  python tools/sosyal_yayinla.py --selftest    # OAuth imzasını resmî örnekle sınar
+  python tools/sosyal_yayinla.py --selftest    # OAuth imzası, kayıt göçü, metin sınırları sınanır (ağ yok)
+
+Çift paylaşım koruması: kayıt anahtarı  <konu ya da id>|<dil>|<platform>|<biçim>  (biçim: gorsel | reel | short).
+Her paylaşımdan ÖNCE kayda "niyet" yazılır, kimlikler (Instagram kapsayıcı, YouTube yükleme oturumu) gelir gelmez
+kaydedilir, iş bitince "tamam" olur. Yanıtı kaybolan (zaman aşımı) paylaşım bir sonraki çalışmada platformdan
+sorgulanıp tamamlanır; sorgulanamıyorsa "elle_bak" işaretlenir ve ASLA kendiliğinden yeniden denenmez.
 
 Gerekli sırlar (DIL = TR, EN, FR, ES):
   X_DIL_API_KEY, X_DIL_API_SECRET, X_DIL_ACCESS_TOKEN, X_DIL_ACCESS_SECRET
   REDDIT_DIL_CLIENT_ID, REDDIT_DIL_CLIENT_SECRET, REDDIT_DIL_USERNAME, REDDIT_DIL_PASSWORD
-  IG_DIL_USER_ID, IG_DIL_TOKEN
+  IG_DIL_USER_ID, IG_DIL_TOKEN                      (görsel ve Reels için aynı hesap)
+  YT_DIL_CLIENT_ID, YT_DIL_CLIENT_SECRET, YT_DIL_REFRESH_TOKEN
 Yalnız Python standart kütüphanesi kullanılır.
 """
 from __future__ import annotations
@@ -23,20 +29,26 @@ import hmac
 import json
 import os
 import pathlib
+import re
 import secrets
 import sys
 import time
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 
 KOK = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(KOK / "tools"))
 from sosyal_derle import DILLER, GORUNEN, KLASOR, M, SITE, kart_ad  # noqa: E402
+import video_site as vs  # noqa: E402
 
 KAYIT = KOK / "sosyal" / "gonderilenler.json"
+AYAR = KOK / "sosyal" / "ayarlar.json"
+ICERIK = KOK / "data" / "icerik.json"
 UA = "rockstargtavi-sosyal/1.0"
+BICIMLER = ("gorsel", "reel", "short")
+MAX_VIDEO_BAYT = 256 * 1024 * 1024
 
 METIN = {
     "tr": {"devam": "Ayrıntılar ve kaynak:", "profil": "Ayrıntılar ve kaynak profildeki bağlantıda.", "ig_link": "Ayrıntılar ve resmî kaynak: profildeki bağlantı"},
@@ -47,38 +59,80 @@ METIN = {
 
 
 class PaylasimHatasi(Exception):
-    pass
+    """kesin=True: sunucu isteği açıkça reddetti (4xx), hiçbir şey yayımlanmadı, yeniden denenebilir.
+    kesin=False: sonuç bilinmiyor (zaman aşımı, bağlantı kopması, 5xx); paylaşım yapılmış olabilir."""
+
+    def __init__(self, mesaj: str, kesin: bool = False):
+        super().__init__(mesaj)
+        self.kesin = kesin
 
 
-# ---------------------------------------------------------------- HTTP
-def istek(method: str, url: str, *, veri=None, json_govde=None, basliklar=None, zaman=30):
-    basliklar = {"User-Agent": UA, **(basliklar or {})}
-    govde = None
-    if json_govde is not None:
-        govde = json.dumps(json_govde).encode()
-        basliklar["Content-Type"] = "application/json"
-    elif veri is not None:
-        govde = urllib.parse.urlencode(veri).encode()
-        basliklar["Content-Type"] = "application/x-www-form-urlencoded"
-    req = urllib.request.Request(url, data=govde, headers=basliklar, method=method)
-    try:
-        with urllib.request.urlopen(req, timeout=zaman) as r:
-            ham = r.read().decode("utf-8", "replace")
-            return r.status, (json.loads(ham) if ham.strip().startswith(("{", "[")) else ham)
-    except urllib.error.HTTPError as h:
-        ham = h.read().decode("utf-8", "replace")
-        raise PaylasimHatasi(f"{method} {url.split('?')[0]} → HTTP {h.code}: {ham[:400]}") from None
-    except urllib.error.URLError as u:
-        raise PaylasimHatasi(f"{method} {url.split('?')[0]} → bağlantı hatası: {u.reason}") from None
+# ---------------------------------------------------------------- HTTP (testte yerine sahte Ag konur)
+class Ag:
+    def istek(self, method: str, url: str, *, veri=None, json_govde=None, basliklar=None, zaman=30):
+        basliklar = {"User-Agent": UA, **(basliklar or {})}
+        govde = None
+        if json_govde is not None:
+            govde = json.dumps(json_govde).encode()
+            basliklar["Content-Type"] = "application/json"
+        elif veri is not None:
+            govde = urllib.parse.urlencode(veri).encode()
+            basliklar["Content-Type"] = "application/x-www-form-urlencoded"
+        req = urllib.request.Request(url, data=govde, headers=basliklar, method=method)
+        try:
+            with urllib.request.urlopen(req, timeout=zaman) as r:
+                ham = r.read().decode("utf-8", "replace")
+                return r.status, (json.loads(ham) if ham.strip().startswith(("{", "[")) else ham)
+        except urllib.error.HTTPError as h:
+            ham = h.read().decode("utf-8", "replace")
+            raise PaylasimHatasi(f"{method} {url.split('?')[0]} → HTTP {h.code}: {ham[:400]}", kesin=400 <= h.code < 500) from None
+        except (urllib.error.URLError, TimeoutError, OSError) as u:
+            raise PaylasimHatasi(f"{method} {url.split('?')[0]} → bağlantı hatası: {getattr(u, 'reason', u)}") from None
+
+    def ham(self, method: str, url: str, *, govde: bytes | None = None, basliklar=None, zaman=300):
+        """Başlıkları da döndürür; 308 (yükleme sürüyor) hata sayılmaz. -> (durum, {küçük harfli başlıklar}, metin)"""
+        req = urllib.request.Request(url, data=govde, headers={"User-Agent": UA, **(basliklar or {})}, method=method)
+        try:
+            with urllib.request.urlopen(req, timeout=zaman) as r:
+                return r.status, {k.lower(): v for k, v in r.headers.items()}, r.read().decode("utf-8", "replace")
+        except urllib.error.HTTPError as h:
+            metin = h.read().decode("utf-8", "replace")
+            if h.code == 308:
+                return 308, {k.lower(): v for k, v in h.headers.items()}, metin
+            raise PaylasimHatasi(f"{method} {url.split('?')[0]} → HTTP {h.code}: {metin[:400]}", kesin=400 <= h.code < 500 and h.code != 404) from None
+        except (urllib.error.URLError, TimeoutError, OSError) as u:
+            raise PaylasimHatasi(f"{method} {url.split('?')[0]} → bağlantı hatası: {getattr(u, 'reason', u)}") from None
+
+    def indir(self, url: str) -> bytes:
+        req = urllib.request.Request(url, headers={"User-Agent": UA})
+        try:
+            with urllib.request.urlopen(req, timeout=120) as r:
+                veri = r.read(MAX_VIDEO_BAYT + 1)
+        except (urllib.error.URLError, TimeoutError, OSError) as u:
+            raise PaylasimHatasi(f"video indirilemedi ({url}): {getattr(u, 'reason', u)}", kesin=True) from None
+        if len(veri) > MAX_VIDEO_BAYT:
+            raise PaylasimHatasi(f"video çok büyük: {url}", kesin=True)
+        return veri
+
+    def yayinda_mi(self, url: str) -> bool:
+        try:
+            req = urllib.request.Request(url, method="HEAD", headers={"User-Agent": UA})
+            with urllib.request.urlopen(req, timeout=20) as r:
+                return r.status == 200
+        except Exception:
+            return False
+
+    def uyku(self, sn: float) -> None:
+        time.sleep(sn)
+
+
+def istek(*a, **k):
+    """Eski çağıranlar (sosyal_kurulum.py) için."""
+    return Ag().istek(*a, **k)
 
 
 def yayinda_mi(url: str) -> bool:
-    try:
-        req = urllib.request.Request(url, method="HEAD", headers={"User-Agent": UA})
-        with urllib.request.urlopen(req, timeout=20) as r:
-            return r.status == 200
-    except Exception:
-        return False
+    return Ag().yayinda_mi(url)
 
 
 # ---------------------------------------------------------------- X (OAuth 1.0a)
@@ -124,10 +178,10 @@ def x_metin(dil, x, link, mod) -> str:
     return f"{t['baslik'][:kalan]}…\n\n{son}"
 
 
-def x_paylas(sir, dil, x, link, mod) -> dict:
+def x_paylas(ag, sir, dil, x, link, mod) -> dict:
     url = "https://api.x.com/2/tweets"
     bas = oauth1_baslik("POST", url, sir["API_KEY"], sir["API_SECRET"], sir["ACCESS_TOKEN"], sir["ACCESS_SECRET"])
-    _, cevap = istek("POST", url, json_govde={"text": x_metin(dil, x, link, mod)}, basliklar={"Authorization": bas})
+    _, cevap = ag.istek("POST", url, json_govde={"text": x_metin(dil, x, link, mod)}, basliklar={"Authorization": bas})
     pid = cevap.get("data", {}).get("id") if isinstance(cevap, dict) else None
     if not pid:
         raise PaylasimHatasi(f"X beklenmeyen yanıt: {str(cevap)[:300]}")
@@ -135,19 +189,19 @@ def x_paylas(sir, dil, x, link, mod) -> dict:
 
 
 # ---------------------------------------------------------------- Reddit
-def reddit_paylas(sir, dil, x, link, ayar) -> dict:
+def reddit_paylas(ag, sir, dil, x, link, ayar) -> dict:
     kullanici = sir["USERNAME"]
     ua = {"User-Agent": f"web:rockstargtavi-sosyal:1.0 (by /u/{kullanici})"}
     kimlik = base64.b64encode(f"{sir['CLIENT_ID']}:{sir['CLIENT_SECRET']}".encode()).decode()
-    _, tok = istek(
+    _, tok = ag.istek(
         "POST", "https://www.reddit.com/api/v1/access_token",
         veri={"grant_type": "password", "username": kullanici, "password": sir["PASSWORD"]},
         basliklar={**ua, "Authorization": f"Basic {kimlik}"},
     )
     if not isinstance(tok, dict) or "access_token" not in tok:
-        raise PaylasimHatasi(f"Reddit giriş başarısız: {str(tok)[:300]}")
+        raise PaylasimHatasi(f"Reddit giriş başarısız: {str(tok)[:300]}", kesin=True)
     topluluk = (ayar.get("reddit_topluluk") or {}).get(dil) or f"u_{kullanici}"
-    _, cevap = istek(
+    _, cevap = ag.istek(
         "POST", "https://oauth.reddit.com/api/submit",
         veri={"api_type": "json", "kind": "link", "sr": topluluk, "title": x["diller"][dil]["baslik"][:300],
               "url": link, "resubmit": "true", "sendreplies": "false"},
@@ -155,12 +209,12 @@ def reddit_paylas(sir, dil, x, link, ayar) -> dict:
     )
     j = (cevap or {}).get("json", {}) if isinstance(cevap, dict) else {}
     if j.get("errors"):
-        raise PaylasimHatasi(f"Reddit gönderim hatası: {j['errors']}")
+        raise PaylasimHatasi(f"Reddit gönderim hatası: {j['errors']}", kesin=True)
     d = j.get("data", {})
     return {"kimlik": d.get("name") or d.get("id"), "url": d.get("url")}
 
 
-# ---------------------------------------------------------------- Instagram
+# ---------------------------------------------------------------- Instagram (görsel + Reels)
 def ig_aciklama(dil, x) -> str:
     t = x["diller"][dil]
     kay = ", ".join(s["ad"] for s in x["kaynaklar"])
@@ -169,50 +223,243 @@ def ig_aciklama(dil, x) -> str:
     return metin[:2200]
 
 
-def ig_paylas(sir, dil, x, ayar) -> dict:
-    surum = ayar.get("instagram_api_surumu", "v27.0")
-    taban = f"https://graph.instagram.com/{surum}/{sir['USER_ID']}"
-    gorsel = f"{SITE}/{kart_ad(x['id'], dil, 'ig')}"
-    if not yayinda_mi(gorsel):
-        raise PaylasimHatasi(f"Instagram görseli yayında değil: {gorsel}")
-    _, kap = istek("POST", f"{taban}/media", veri={"image_url": gorsel, "caption": ig_aciklama(dil, x), "access_token": sir["TOKEN"]})
-    kid = kap.get("id") if isinstance(kap, dict) else None
-    if not kid:
-        raise PaylasimHatasi(f"Instagram kapsayıcı oluşmadı: {str(kap)[:300]}")
-    for _ in range(12):  # en çok ~1 dakika hazır olmasını bekle
-        _, durum = istek("GET", f"https://graph.instagram.com/{surum}/{kid}?" + urllib.parse.urlencode({"fields": "status_code", "access_token": sir["TOKEN"]}))
-        kod = durum.get("status_code") if isinstance(durum, dict) else None
-        if kod == "FINISHED":
-            break
+def ig_video_adresi(v: dict) -> str:
+    return v.get("mp4_1080") or v["mp4_720"]
+
+
+def ig_durum(ag, sir, surum, kid) -> str:
+    _, d = ag.istek("GET", f"https://graph.instagram.com/{surum}/{kid}?" + urllib.parse.urlencode({"fields": "status_code", "access_token": sir["TOKEN"]}))
+    kod = d.get("status_code") if isinstance(d, dict) else None
+    if not kod:
+        raise PaylasimHatasi(f"Instagram durum yanıtı anlaşılmadı: {str(d)[:200]}")
+    return kod
+
+
+def ig_bekle(ag, sir, surum, kid, deneme=12, aralik=5) -> str:
+    """Kapsayıcı FINISHED (ya da zaten PUBLISHED) olana dek bekler. Hazır olmadan yayımlamaya izin vermez."""
+    for i in range(deneme):
+        kod = ig_durum(ag, sir, surum, kid)
+        if kod in ("FINISHED", "PUBLISHED"):
+            return kod
         if kod in ("ERROR", "EXPIRED"):
-            raise PaylasimHatasi(f"Instagram görseli işleyemedi: {durum}")
-        time.sleep(5)
-    _, yay = istek("POST", f"{taban}/media_publish", veri={"creation_id": kid, "access_token": sir["TOKEN"]})
+            raise PaylasimHatasi(f"Instagram medyayı işleyemedi ({kod}): {kid}", kesin=True)
+        if i < deneme - 1:
+            ag.uyku(aralik)
+    raise PaylasimHatasi(f"Instagram kapsayıcı süre içinde hazır olmadı (FINISHED değil): {kid}")
+
+
+def ig_yayimla(ag, sir, surum, kid) -> dict:
+    taban = f"https://graph.instagram.com/{surum}/{sir['USER_ID']}"
+    _, yay = ag.istek("POST", f"{taban}/media_publish", veri={"creation_id": kid, "access_token": sir["TOKEN"]})
     mid = yay.get("id") if isinstance(yay, dict) else None
     if not mid:
         raise PaylasimHatasi(f"Instagram yayımlanamadı: {str(yay)[:300]}")
-    return {"kimlik": mid, "url": None}
+    return {"kimlik": mid, "url": ig_baglanti(ag, sir, surum, mid)}
 
 
-# ---------------------------------------------------------------- akış
+def ig_baglanti(ag, sir, surum, mid) -> str | None:
+    """Yayımlanan gönderinin kalıcı bağlantısı; alınamazsa None (paylaşım zaten yapıldı, hata sayılmaz)."""
+    try:
+        _, d = ag.istek("GET", f"https://graph.instagram.com/{surum}/{mid}?" + urllib.parse.urlencode({"fields": "permalink", "access_token": sir["TOKEN"]}))
+        p = d.get("permalink") if isinstance(d, dict) else None
+        return p if isinstance(p, str) and p.startswith("https://") else None
+    except PaylasimHatasi:
+        return None
+
+
+def ig_paylas(ag, sir, dil, x, ayar, ara, video=None) -> dict:
+    surum = ayar.get("instagram_api_surumu", "v27.0")
+    taban = f"https://graph.instagram.com/{surum}/{sir['USER_ID']}"
+    if video:
+        medya = ig_video_adresi(video)
+        veri = {"media_type": "REELS", "video_url": medya, "cover_url": video["kapak"], "share_to_feed": "true"}
+    else:
+        medya = f"{SITE}/{kart_ad(x['id'], dil, 'ig')}"
+        veri = {"image_url": medya}
+    if not ag.yayinda_mi(medya):
+        raise PaylasimHatasi(f"Instagram medyası yayında değil: {medya}", kesin=True)
+    veri.update({"caption": ig_aciklama(dil, x), "access_token": sir["TOKEN"]})
+    _, kap = ag.istek("POST", f"{taban}/media", veri=veri)
+    kid = kap.get("id") if isinstance(kap, dict) else None
+    if not kid:
+        raise PaylasimHatasi(f"Instagram kapsayıcı oluşmadı: {str(kap)[:300]}")
+    ara(kapsayici=kid)  # yayımlamadan önce kaydedilir; yanıt kaybolursa sonraki çalışma buradan devam eder
+    ig_bekle(ag, sir, surum, kid, deneme=24 if video else 12, aralik=10 if video else 5)
+    return ig_yayimla(ag, sir, surum, kid)
+
+
+# ---------------------------------------------------------------- YouTube Shorts
+YT_UST = "https://www.googleapis.com/upload/youtube/v3/videos"
+YT_GIZLILIK = ("private", "unlisted", "public")
+
+
+def yt_baslik(dil, x) -> str:
+    b = re.sub(r"[<>]", "", x["diller"][dil]["baslik"]).strip()
+    return b if len(b) <= 100 else b[:99].rstrip() + "…"
+
+
+def yt_aciklama(dil, x, link) -> str:
+    t = x["diller"][dil]
+    kay = ", ".join(s["ad"] for s in x["kaynaklar"])
+    etiket = " ".join(e for e in t.get("etiketler", []) if e.startswith("#"))
+    metin = f"{t['ozet']}\n\n{METIN[dil]['devam']} {link}\n{M[dil]['kaynak']}: {kay}\n\n{etiket} #Shorts".strip()
+    return re.sub(r"[<>]", "", metin)[:4900]
+
+
+def yt_etiketler(dil, x) -> list:
+    sonuc, toplam = [], 0
+    for e in x["diller"][dil].get("etiketler", []):
+        e = re.sub(r"[<>,#]", "", e).strip()
+        if e and toplam + len(e) + 1 <= 400:
+            sonuc.append(e)
+            toplam += len(e) + 1
+    return sonuc
+
+
+def yt_govde(dil, x, link, ayar) -> dict:
+    gizlilik = (ayar.get("youtube") or {}).get("gizlilik", "private")
+    if gizlilik not in YT_GIZLILIK:
+        gizlilik = "private"
+    return {
+        "snippet": {"title": yt_baslik(dil, x), "description": yt_aciklama(dil, x, link), "tags": yt_etiketler(dil, x),
+                    "categoryId": "20", "defaultLanguage": dil, "defaultAudioLanguage": dil},
+        "status": {"privacyStatus": gizlilik, "selfDeclaredMadeForKids": False, "containsSyntheticMedia": True},
+    }
+
+
+def yt_erisim(ag, sir) -> str:
+    _, c = ag.istek("POST", "https://oauth2.googleapis.com/token",
+                    veri={"client_id": sir["CLIENT_ID"], "client_secret": sir["CLIENT_SECRET"],
+                          "refresh_token": sir["REFRESH_TOKEN"], "grant_type": "refresh_token"})
+    tok = c.get("access_token") if isinstance(c, dict) else None
+    if not tok:
+        raise PaylasimHatasi(f"YouTube erişim anahtarı alınamadı: {str(c)[:200]}", kesin=True)
+    return tok
+
+
+def _yt_sonuc(durum, metin) -> dict:
+    try:
+        d = json.loads(metin)
+    except ValueError:
+        d = {}
+    vid = d.get("id") if isinstance(d, dict) else None
+    if durum in (200, 201) and vid:
+        return {"kimlik": vid, "url": f"https://www.youtube.com/shorts/{vid}"}
+    raise PaylasimHatasi(f"YouTube yükleme yanıtı anlaşılmadı (HTTP {durum}): {metin[:200]}")
+
+
+def yt_yukle(ag, oturum, bayt: bytes, baslangic: int = 0) -> dict:
+    toplam = len(bayt)
+    govde = bayt[baslangic:]
+    bas = {"Content-Type": "video/mp4", "Content-Length": str(len(govde))}
+    if baslangic:
+        bas["Content-Range"] = f"bytes {baslangic}-{toplam - 1}/{toplam}"
+    durum, _, metin = ag.ham("PUT", oturum, govde=govde, basliklar=bas)
+    return _yt_sonuc(durum, metin)
+
+
+def yt_oturum_sorgu(ag, oturum, toplam: int):
+    """Yükleme oturumuna nerede kaldığını sorar. -> ('bitti', sonuc) | ('surmekte', alinan_bayt)"""
+    durum, bas, metin = ag.ham("PUT", oturum, govde=b"", basliklar={"Content-Length": "0", "Content-Range": f"bytes */{toplam}"}, zaman=60)
+    if durum in (200, 201):
+        return "bitti", _yt_sonuc(durum, metin)
+    if durum == 308:
+        m = re.search(r"bytes=0-(\d+)", bas.get("range", ""))
+        return "surmekte", (int(m.group(1)) + 1 if m else 0)
+    raise PaylasimHatasi(f"YouTube oturum sorgusu anlaşılmadı (HTTP {durum})")
+
+
+def yt_paylas(ag, sir, dil, x, link, ayar, ara, video) -> dict:
+    medya = ig_video_adresi(video)
+    if not ag.yayinda_mi(medya):
+        raise PaylasimHatasi(f"YouTube videosu yayında değil: {medya}", kesin=True)
+    bayt = ag.indir(medya)
+    tok = yt_erisim(ag, sir)
+    durum, bas, metin = ag.ham(
+        "POST", f"{YT_UST}?uploadType=resumable&part=snippet,status",
+        govde=json.dumps(yt_govde(dil, x, link, ayar)).encode(),
+        basliklar={"Authorization": f"Bearer {tok}", "Content-Type": "application/json; charset=UTF-8",
+                   "X-Upload-Content-Type": "video/mp4", "X-Upload-Content-Length": str(len(bayt))}, zaman=60)
+    oturum = bas.get("location")
+    if not oturum or not oturum.startswith("https://"):
+        raise PaylasimHatasi(f"YouTube yükleme oturumu açılamadı (HTTP {durum}): {metin[:200]}", kesin=True)
+    ara(oturum=oturum, boyut=len(bayt))  # baytlar gitmeden önce kaydedilir
+    return yt_yukle(ag, oturum, bayt)
+
+
+# ---------------------------------------------------------------- kayıt modeli
 GEREKEN = {
     "x": ("API_KEY", "API_SECRET", "ACCESS_TOKEN", "ACCESS_SECRET"),
     "reddit": ("CLIENT_ID", "CLIENT_SECRET", "USERNAME", "PASSWORD"),
     "instagram": ("USER_ID", "TOKEN"),
+    "youtube": ("CLIENT_ID", "CLIENT_SECRET", "REFRESH_TOKEN"),
 }
-ONEK_SIR = {"x": "X", "reddit": "REDDIT", "instagram": "IG"}
+ONEK_SIR = {"x": "X", "reddit": "REDDIT", "instagram": "IG", "youtube": "YT"}
+# (platform, biçim, ayarlar.json'daki hesap anahtarı ve günlük sınır adı)
+HEDEFLER = (("x", "gorsel", "x"), ("reddit", "gorsel", "reddit"), ("instagram", "gorsel", "instagram"),
+            ("instagram", "reel", "instagram_reel"), ("youtube", "short", "youtube"))
+VARSAYILAN_SINIR = {"x": 2, "reddit": 2, "instagram": 2, "instagram_reel": 2, "youtube": 2}
 
 
-def sirlari_oku() -> dict:
+def konu_veya_id(x: dict) -> str:
+    return (x.get("otomasyon") or {}).get("konu") or x["id"]
+
+
+def anahtar(x: dict, dil: str, platform: str, bicim: str) -> str:
+    return f"{konu_veya_id(x)}|{dil}|{platform}|{bicim}"
+
+
+def kayit_goc(kayit: dict, veri: list) -> tuple[dict, bool]:
+    """Eski kayıt (id|dil|platform) → yeni (konu|dil|platform|gorsel, durum=tamam). Yeni anahtarlar olduğu gibi kalır."""
+    konu = {x["id"]: konu_veya_id(x) for x in veri}
+    yeni, degisti = {}, False
+    for k, v in kayit.items():
+        p = k.split("|")
+        if len(p) == 3:
+            degisti = True
+            rec = dict(v)
+            rec.setdefault("durum", "tamam")
+            rec.setdefault("id", p[0])
+            rec.setdefault("dil", p[1])
+            rec.setdefault("platform", p[2])
+            rec.setdefault("bicim", "gorsel")
+            yeni.setdefault(f"{konu.get(p[0], p[0])}|{p[1]}|{p[2]}|gorsel", rec)
+        else:
+            yeni[k] = v
+    return yeni, degisti
+
+
+def kayit_yaz(yol: pathlib.Path, kayit: dict) -> None:
+    yol.parent.mkdir(parents=True, exist_ok=True)
+    yol.write_text(json.dumps(kayit, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+
+
+def sinir_adi(k: str) -> str:
+    _, _, platform, bicim = k.split("|")
+    return {"reel": "instagram_reel", "short": "youtube"}.get(bicim, platform)
+
+
+def bugunku_sayi(kayit: dict, ad: str, dil: str, gun: str) -> int:
+    n = 0
+    for k, v in kayit.items():
+        p = k.split("|")
+        if len(p) == 4 and p[1] == dil and sinir_adi(k) == ad and v.get("durum") in ("tamam", "niyet", "elle_bak") \
+                and (v.get("niyet_zamani") or v.get("zaman") or "")[:10] == gun:
+            n += 1
+    return n
+
+
+def sirlari_oku(ortam=None) -> dict:
+    ortam = os.environ if ortam is None else ortam
     tum = {}
-    ham = os.environ.get("SOSYAL_SIRLAR")
+    ham = ortam.get("SOSYAL_SIRLAR")
     if ham:
         try:
             tum.update({k: v for k, v in json.loads(ham).items() if isinstance(v, str)})
         except json.JSONDecodeError:
             print("Uyarı: SOSYAL_SIRLAR okunamadı.")
-    for k, v in os.environ.items():
-        if k.startswith(("X_", "REDDIT_", "IG_")):
+    for k, v in ortam.items():
+        if k.startswith(("X_", "REDDIT_", "IG_", "YT_")):
             tum.setdefault(k, v)
     return tum
 
@@ -228,73 +475,206 @@ def paylasim_linki(dil, x, platform) -> str:
     return f"{SITE}/{KLASOR[dil]}/{x['id']}.html?{q}"
 
 
-def main() -> int:
-    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--dry-run", action="store_true", help="hiçbir şey göndermeden ne paylaşılacağını göster")
-    ap.add_argument("--selftest", action="store_true")
-    a = ap.parse_args()
-    if a.selftest:
-        return selftest()
+# ---------------------------------------------------------------- yarım kalan paylaşımları uzlaştır
+def _tamamla(rec: dict, sonuc: dict, simdi: datetime) -> None:
+    rec.update(durum="tamam", zaman=simdi.isoformat(timespec="seconds"), **sonuc)
 
-    ayar = json.loads((KOK / "sosyal" / "ayarlar.json").read_text(encoding="utf-8"))
-    veri = json.loads((KOK / "data" / "icerik.json").read_text(encoding="utf-8"))
-    veri.sort(key=lambda x: (x["tarih"], x["id"]), reverse=True)
-    kayit = json.loads(KAYIT.read_text(encoding="utf-8")) if KAYIT.exists() else {}
-    tum = sirlari_oku()
-    bugun = date.today()
-    bugun_s = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    hatalar, gonderilen, atlanan = [], 0, []
+
+def uzlastir(ag, kayit, tum, ayar, manifest_yolu, kaydet, simdi) -> list:
+    """Önceki çalışmadan kalan "niyet" kayıtlarını platformdan sorgulayıp tamamlar ya da elle_bak yapar.
+    Hiçbir koşulda yeniden paylaşım denemez (yalnız zaten yaratılmış kapsayıcı/oturum devam ettirilir)."""
+    mesajlar = []
+    for k, rec in list(kayit.items()):
+        if rec.get("durum") != "niyet":
+            continue
+        platform, bicim, dil = rec.get("platform"), rec.get("bicim"), rec.get("dil")
+        sir = hesap_sirri(tum, platform, dil) if platform in ONEK_SIR else None
+
+        def elle(neden):
+            rec.update(durum="elle_bak", **{"not": neden})
+            kaydet()
+            mesajlar.append(f"ELLE BAK {k}: {neden}")
+
+        if platform == "instagram" and rec.get("kapsayici"):
+            if not sir:
+                continue
+            surum = ayar.get("instagram_api_surumu", "v27.0")
+            try:
+                kod = ig_durum(ag, sir, surum, rec["kapsayici"])
+                if kod == "PUBLISHED":
+                    _tamamla(rec, {"kimlik": None, "url": None, "not": "kapsayıcı PUBLISHED çıktı; kimlik bilinmiyor"}, simdi)
+                elif kod == "FINISHED":
+                    _tamamla(rec, ig_yayimla(ag, sir, surum, rec["kapsayici"]), simdi)
+                elif kod in ("ERROR", "EXPIRED"):
+                    elle(f"Instagram kapsayıcı {kod}; yayımlanmadı, kontrol edip gerekirse kaydı silin")
+                    continue
+                else:
+                    ilk = datetime.fromisoformat(rec["niyet_zamani"])
+                    if simdi - ilk > timedelta(hours=24):
+                        elle("Instagram kapsayıcı 24 saatten uzun işleniyor")
+                    continue
+            except PaylasimHatasi as h:
+                mesajlar.append(f"Uzlaştırma bekliyor {k}: {h}")
+                continue
+            kaydet()
+            if bicim == "reel" and rec.get("url"):
+                vs.baglanti_yaz(manifest_yolu, rec["id"], dil, "instagram", rec["url"])
+        elif platform == "youtube" and rec.get("oturum") and rec.get("boyut"):
+            try:
+                video = vs.bul(vs.yukle(manifest_yolu), rec["id"], dil)
+                durum, s = yt_oturum_sorgu(ag, rec["oturum"], rec["boyut"])
+                if durum == "surmekte":
+                    if not video:
+                        elle("YouTube yüklemesi yarım ama video manifestte yok")
+                        continue
+                    bayt = ag.indir(ig_video_adresi(video))
+                    if len(bayt) != rec["boyut"]:
+                        elle("YouTube yüklemesi yarım ve video dosyası değişmiş")
+                        continue
+                    s = yt_yukle(ag, rec["oturum"], bayt, s)
+            except PaylasimHatasi as h:
+                if "HTTP 404" in str(h) or "HTTP 410" in str(h):
+                    elle("YouTube yükleme oturumu bulunamadı (süresi dolmuş olabilir); YouTube Studio'da kontrol edin")
+                else:
+                    mesajlar.append(f"Uzlaştırma bekliyor {k}: {h}")
+                continue
+            _tamamla(rec, s, simdi)
+            kaydet()
+            vs.baglanti_yaz(manifest_yolu, rec["id"], dil, "youtube", s["url"])
+        else:
+            elle("yanıt kaybolmuş olabilir ve platformdan doğrulanamıyor; platformda gönderiye bakın, yoksa kaydı silin")
+    return mesajlar
+
+
+# ---------------------------------------------------------------- akış
+def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu: pathlib.Path, tum: dict, ag, dry_run: bool,
+            bugun: date, simdi: datetime, cikti=print) -> tuple[int, list, list]:
+    veri = sorted(veri, key=lambda x: (x["tarih"], x["id"]), reverse=True)
+    ham = json.loads(kayit_yolu.read_text(encoding="utf-8")) if kayit_yolu.exists() else {}
+    kayit, goc = kayit_goc(ham, veri)
+    manifest = vs.yukle(manifest_yolu)
+    gun = simdi.strftime("%Y-%m-%d")
+    hatalar, atlanan, gonderilen = [], [], 0
+
+    def kaydet():
+        if not dry_run:
+            kayit_yaz(kayit_yolu, kayit)
+
+    if goc:
+        kaydet()
+    if not dry_run:
+        hatalar += uzlastir(ag, kayit, tum, ayar, manifest_yolu, kaydet, simdi)
+        manifest = vs.yukle(manifest_yolu)
 
     for dil in DILLER:
-        for platform in ("x", "reddit", "instagram"):
-            if not ayar["hesaplar"].get(dil, {}).get(platform):
+        for platform, bicim, ad in HEDEFLER:
+            if not ayar["hesaplar"].get(dil, {}).get(ad):
                 continue
             sir = hesap_sirri(tum, platform, dil)
-            if not sir and not a.dry_run:
-                atlanan.append(f"{platform}/{dil}")
+            if not sir and not dry_run:
+                atlanan.append(f"{ad}/{dil}")
                 continue
-            anahtar_on = f"|{dil}|{platform}"
-            bugunku = sum(1 for k, v in kayit.items() if k.endswith(anahtar_on) and v.get("zaman", "").startswith(bugun_s))
-            hak = min(ayar.get("calisma_basina_en_fazla", 1), ayar["gunluk_en_fazla"].get(platform, 2) - bugunku)
+            sinir = (ayar.get("gunluk_en_fazla") or {}).get(ad, VARSAYILAN_SINIR[ad])
+            hak = min(ayar.get("calisma_basina_en_fazla", 1), sinir - bugunku_sayi(kayit, ad, dil, gun))
             for x in veri:
                 if hak <= 0:
                     break
                 if (bugun - date.fromisoformat(x["tarih"])).days > ayar.get("en_eski_gun", 3):
                     break
-                k = f"{x['id']}{anahtar_on}"
+                k = anahtar(x, dil, platform, bicim)
                 if k in kayit:
                     continue
+                video = None
+                if bicim != "gorsel":
+                    video = vs.bul(manifest, x["id"], dil)
+                    if not video:
+                        continue  # bu haber/dil için video henüz yok
                 link = paylasim_linki(dil, x, platform)
                 sayfa = f"{SITE}/{KLASOR[dil]}/{x['id']}.html"
-                if a.dry_run:
-                    print(f"\n[DENEME] {platform}/{dil}  {x['id']}" + ("" if sir else "  (hesap şifresi yok, gerçekte atlanır)"))
+                if dry_run:
+                    cikti(f"\n[DENEME] {ad}/{dil}  {x['id']}" + ("" if sir else "  (hesap şifresi yok, gerçekte atlanır)"))
                     if platform == "x":
-                        print(x_metin(dil, x, link, ayar.get("x_baglanti", "gonderide")))
+                        cikti(x_metin(dil, x, link, ayar.get("x_baglanti", "gonderide")))
                     elif platform == "reddit":
-                        print(f"başlık: {x['diller'][dil]['baslik']}\nbağlantı: {link}")
+                        cikti(f"başlık: {x['diller'][dil]['baslik']}\nbağlantı: {link}")
+                    elif bicim == "reel":
+                        cikti(f"video: {ig_video_adresi(video)}\nkapak: {video['kapak']}\n{ig_aciklama(dil, x)}")
+                    elif bicim == "short":
+                        g = yt_govde(dil, x, link, ayar)
+                        cikti(f"video: {ig_video_adresi(video)}\nbaşlık: {g['snippet']['title']}\ngizlilik: {g['status']['privacyStatus']}\n{g['snippet']['description']}")
                     else:
-                        print(f"görsel: {SITE}/{kart_ad(x['id'], dil, 'ig')}\n{ig_aciklama(dil, x)}")
+                        cikti(f"görsel: {SITE}/{kart_ad(x['id'], dil, 'ig')}\n{ig_aciklama(dil, x)}")
                     hak -= 1
                     continue
-                if not yayinda_mi(sayfa):
-                    print(f"Bekliyor (sayfa henüz yayında değil): {sayfa}")
+                if not ag.yayinda_mi(sayfa):
+                    cikti(f"Bekliyor (sayfa henüz yayında değil): {sayfa}")
                     continue
+                rec = {"id": x["id"], "dil": dil, "platform": platform, "bicim": bicim, "durum": "niyet",
+                       "niyet_zamani": simdi.isoformat(timespec="seconds")}
+                kayit[k] = rec
+                kaydet()  # çağrıdan ÖNCE: çökse bile bir sonraki çalışma çift paylaşmaz
+
+                def ara(**alan):
+                    rec.update(alan)
+                    kaydet()
                 try:
                     if platform == "x":
-                        sonuc = x_paylas(sir, dil, x, link, ayar.get("x_baglanti", "gonderide"))
+                        sonuc = x_paylas(ag, sir, dil, x, link, ayar.get("x_baglanti", "gonderide"))
                     elif platform == "reddit":
-                        sonuc = reddit_paylas(sir, dil, x, link, ayar)
+                        sonuc = reddit_paylas(ag, sir, dil, x, link, ayar)
+                    elif platform == "instagram":
+                        sonuc = ig_paylas(ag, sir, dil, x, ayar, ara, video)
                     else:
-                        sonuc = ig_paylas(sir, dil, x, ayar)
+                        sonuc = yt_paylas(ag, sir, dil, x, link, ayar, ara, video)
                 except PaylasimHatasi as h:
-                    hatalar.append(f"{platform}/{dil} {x['id']}: {h}")
+                    if h.kesin:
+                        del kayit[k]  # sunucu açıkça reddetti, yayımlanmadı: sonra yeniden denenir
+                        kaydet()
+                    hatalar.append(f"{ad}/{dil} {x['id']}: {h}" + ("" if h.kesin else "  [sonuç belirsiz; sonraki çalışmada platformdan sorgulanır]"))
                     break  # bu hesapta sorun var; diğer hesaplara geç
-                kayit[k] = {"zaman": datetime.now(timezone.utc).isoformat(timespec="seconds"), **sonuc}
-                KAYIT.write_text(json.dumps(kayit, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
-                print(f"Paylaşıldı: {platform}/{dil} {x['id']} {sonuc.get('url') or sonuc.get('kimlik')}")
+                _tamamla(rec, sonuc, simdi)
+                kaydet()
+                if bicim in ("reel", "short") and sonuc.get("url"):
+                    vs.baglanti_yaz(manifest_yolu, x["id"], dil, "instagram" if bicim == "reel" else "youtube", sonuc["url"])
+                cikti(f"Paylaşıldı: {ad}/{dil} {x['id']} {sonuc.get('url') or sonuc.get('kimlik')}")
                 gonderilen += 1
                 hak -= 1
+    return gonderilen, hatalar, atlanan
 
+
+def sayfa_bekle(ag, veri=None, deneme=40, aralik=15) -> int:
+    """GitHub Pages dağıtımı bitince en yeni haberin sayfası 200 verir. Süre dolarsa da 0 döner:
+    asıl iş her haber için sayfayı yine kendisi sınar, hazır olmayanı sonraki çalışmaya bırakır."""
+    veri = veri if veri is not None else json.loads(ICERIK.read_text(encoding="utf-8"))
+    if not veri:
+        return 0
+    x = max(veri, key=lambda y: (y["tarih"], y["id"]))
+    url = f"{SITE}/{KLASOR[DILLER[0]]}/{x['id']}.html"
+    for i in range(deneme):
+        if ag.yayinda_mi(url):
+            print(f"Sayfa yayında: {url}")
+            return 0
+        if i < deneme - 1:
+            ag.uyku(aralik)
+    print(f"Uyarı: sayfa 10 dakikada açılmadı, devam ediliyor: {url}")
+    return 0
+
+
+def main(argv=None) -> int:
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--dry-run", action="store_true", help="ağ çağrısı ve dosya yazma olmadan ne paylaşılacağını göster")
+    ap.add_argument("--selftest", action="store_true")
+    ap.add_argument("--sayfa-bekle", action="store_true", help="en yeni haberin sayfası yayında olana dek bekle (en çok 10 dk); sabit uyku yerine")
+    a = ap.parse_args(argv)
+    if a.selftest:
+        return selftest()
+    if a.sayfa_bekle:
+        return sayfa_bekle(Ag())
+    ayar = json.loads(AYAR.read_text(encoding="utf-8"))
+    veri = json.loads(ICERIK.read_text(encoding="utf-8"))
+    simdi = datetime.now(timezone.utc)
+    gonderilen, hatalar, atlanan = calistir(ayar, veri, kayit_yolu=KAYIT, manifest_yolu=vs.MANIFEST_YOLU, tum=sirlari_oku(), ag=Ag(),
+                                            dry_run=a.dry_run, bugun=date.today(), simdi=simdi)
     if atlanan:
         print("Hesap şifresi girilmemiş, atlandı: " + ", ".join(atlanan))
     print(f"Bitti: {gonderilen} gönderi.")
@@ -316,7 +696,7 @@ def selftest() -> int:
     beklenen = 'oauth_signature="hCtSmYh%2BiHYCEqBWrE7C7hYmtUk%3D"'
     ok = beklenen in bas
     print("OAuth imza testi:", "GEÇTİ" if ok else f"KALDI\n{bas}")
-    veri = json.loads((KOK / "data" / "icerik.json").read_text(encoding="utf-8"))
+    veri = json.loads(ICERIK.read_text(encoding="utf-8"))
     uzun = 0
     for x in veri:
         for d in DILLER:
@@ -326,10 +706,19 @@ def selftest() -> int:
                 if n > 280:
                     uzun += 1
                     print("UZUN:", d, x["id"], n)
-            if len(ig_aciklama(d, x)) > 2200:
+            g = yt_govde(d, x, paylasim_linki(d, x, "youtube"), {})
+            if len(ig_aciklama(d, x)) > 2200 or len(g["snippet"]["title"]) > 100 or len(g["snippet"]["description"].encode()) > 5000:
                 uzun += 1
+                print("UZUN (IG/YT):", d, x["id"])
     print("Metin uzunluk testi:", "GEÇTİ" if not uzun else f"KALDI ({uzun})")
-    return 0 if ok and not uzun else 1
+    # kayıt göçü ve anahtar
+    ornek = [{"id": "a-1", "otomasyon": {"konu": "konu-a"}}, {"id": "b-2"}]
+    yeni, goc = kayit_goc({"a-1|tr|instagram": {"zaman": "2026-11-14T10:00:00+00:00", "kimlik": "1"},
+                           "b-2|en|x|gorsel": {"durum": "tamam"}}, ornek)
+    goc_ok = (goc and yeni["konu-a|tr|instagram|gorsel"]["durum"] == "tamam" and "b-2|en|x|gorsel" in yeni
+              and anahtar(ornek[0], "tr", "instagram", "reel") == "konu-a|tr|instagram|reel")
+    print("Kayıt göçü testi:", "GEÇTİ" if goc_ok else "KALDI")
+    return 0 if ok and not uzun and goc_ok else 1
 
 
 if __name__ == "__main__":

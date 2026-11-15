@@ -30,6 +30,7 @@ CONFIG = json.loads((ROOT / 'otomasyon/kaynaklar.json').read_text(encoding='utf-
 DILLER = ('tr', 'en', 'fr', 'es')
 TRT = timezone(timedelta(hours=3))
 UA = 'Mozilla/5.0 (compatible; CTRLAGAME-News/1.0; +https://ctrl-agame.com/hakkinda.html)'
+SENARYO = ROOT / 'video/senaryo'
 
 
 def simdi():
@@ -215,6 +216,21 @@ def kilit_birak(path, token):
         return db.execute('DELETE FROM lease WHERE id=1 AND token=?', (token,)).rowcount == 1
 
 
+def senaryo_denetle(haber, klasor=None):
+    """Haberle birlikte yazılmış video senaryosu varsa, yayından önce haber metniyle tutarlı mı diye sınar.
+
+    Senaryo isteğe bağlıdır; yoksa video sonra üretilir. Sayı ve tarihler yalnız haber metninden gelebilir.
+    """
+    errors = []
+    for lang in DILLER:
+        path = (klasor or SENARYO) / f"{haber['id']}-{lang}.json"
+        if path.exists():
+            # Video araçları yalnız senaryo varken yüklenir: haber akışı onlara bağımlı kalmaz.
+            import video_uret
+            errors += [f'{path.name}: {e}' for e in video_uret.senaryo_dosyasi_denetle(path, haber, lang)]
+    return errors
+
+
 def hazirla(existing, batch, now=None):
     now = now or simdi()
     if not isinstance(batch, list) or len(batch) > CONFIG['sinirlar']['tur_basina']:
@@ -270,6 +286,9 @@ def hazirla(existing, batch, now=None):
                 raise ValueError(f'{lang}: başlık en fazla 100 karakter, haber 50–300 kelime olmalı')
             if any(not isinstance(tag, str) or not re.fullmatch(r'#[A-Za-z0-9]+', tag) for tag in content.get('etiketler', [])):
                 raise ValueError(f'{lang}: geçersiz etiket')
+        errors = senaryo_denetle(x)
+        if errors:
+            raise ValueError('video senaryosu: ' + '; '.join(errors[:10]))
         new = json.loads(json.dumps(x, ensure_ascii=False))
         new['otomasyon']['eklenme'] = now.astimezone(TRT).isoformat()
         added.append(new)

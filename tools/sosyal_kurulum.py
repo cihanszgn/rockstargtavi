@@ -17,10 +17,15 @@ import getpass
 import json
 import os
 import pathlib
+import secrets
 import subprocess
 import sys
+import threading
 import urllib.parse
+import urllib.request
+import webbrowser
 from datetime import datetime
+from http.server import BaseHTTPRequestHandler, HTTPServer
 
 KOK = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(KOK / "tools"))
@@ -37,7 +42,9 @@ SORU = {
     "reddit": [("USERNAME", "Reddit kullanıcı adı (u/ olmadan)", False), ("PASSWORD", "Reddit şifresi", True),
                ("CLIENT_ID", "Uygulama kimliği (uygulama adının altındaki kısa yazı)", True), ("CLIENT_SECRET", "secret", True)],
     "instagram": [("TOKEN", "Instagram erişim anahtarı (Generate token ile alınan uzun yazı)", True)],
+    "youtube": [("CLIENT_ID", "Google OAuth istemci kimliği (Client ID)", True), ("CLIENT_SECRET", "Google OAuth istemci sırrı (Client secret)", True)],
 }
+YT_KAPSAM = "https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube.readonly"
 
 
 # ---------------------------------------------------------------- Windows DPAPI
@@ -101,6 +108,109 @@ def dene(platform: str, s: dict) -> str:
     return "@" + me.get("username", "?")
 
 
+def yt_izin_al(client_id: str, client_secret: str) -> str:
+    """Tarayıcıda Google izin ekranını açar, bu bilgisayardaki geçici adrese (127.0.0.1) dönen kodu yakalar,
+    yenileme anahtarını (refresh token) döndürür. Anahtar ekrana yazılmaz."""
+    durum_kodu = secrets.token_urlsafe(16)
+    sonuc: dict = {}
+
+    class Isleyici(BaseHTTPRequestHandler):
+        def do_GET(self):
+            q = urllib.parse.parse_qs(urllib.parse.urlparse(self.path).query)
+            if q.get("state", [""])[0] == durum_kodu and ("code" in q or "error" in q):
+                sonuc["code"] = q.get("code", [""])[0]
+                sonuc["error"] = q.get("error", [""])[0]
+            self.send_response(200)
+            self.send_header("Content-Type", "text/html; charset=utf-8")
+            self.end_headers()
+            self.wfile.write("<p>Tamam, bu sekmeyi kapatıp kurulum penceresine dönebilirsin.</p>".encode("utf-8"))
+
+        def log_message(self, *a):
+            pass
+
+    srv = HTTPServer(("127.0.0.1", 0), Isleyici)
+    port = srv.server_address[1]
+    yonlendir = f"http://127.0.0.1:{port}"
+    adres = "https://accounts.google.com/o/oauth2/v2/auth?" + urllib.parse.urlencode({
+        "client_id": client_id, "redirect_uri": yonlendir, "response_type": "code", "scope": YT_KAPSAM,
+        "access_type": "offline", "prompt": "consent", "state": durum_kodu})
+    threading.Thread(target=srv.serve_forever, daemon=True).start()
+    print("\nTarayıcı açılıyor. YouTube kanalının bağlı olduğu Google hesabıyla gir ve İzin ver'e bas.")
+    print("Açılmazsa şu adresi tarayıcıya yapıştır:\n" + adres)
+    webbrowser.open(adres)
+    for _ in range(300):  # en çok 5 dakika bekle
+        if sonuc:
+            break
+        threading.Event().wait(1)
+    srv.shutdown()
+    if not sonuc.get("code"):
+        raise PaylasimHatasi(f"İzin alınamadı ({sonuc.get('error') or 'zaman aşımı'})", kesin=True)
+    _, c = istek("POST", "https://oauth2.googleapis.com/token", veri={
+        "code": sonuc["code"], "client_id": client_id, "client_secret": client_secret,
+        "redirect_uri": yonlendir, "grant_type": "authorization_code"})
+    if not isinstance(c, dict) or not c.get("refresh_token"):
+        raise PaylasimHatasi("Google yenileme anahtarı vermedi. Hesap izinlerinden bu uygulamanın erişimini kaldırıp yeniden dene.", kesin=True)
+    return c["refresh_token"]
+
+
+def yt_dene(s: dict) -> str:
+    _, t = istek("POST", "https://oauth2.googleapis.com/token", veri={
+        "client_id": s["CLIENT_ID"], "client_secret": s["CLIENT_SECRET"], "refresh_token": s["REFRESH_TOKEN"], "grant_type": "refresh_token"})
+    _, k = istek("GET", "https://www.googleapis.com/youtube/v3/channels?part=snippet&mine=true", basliklar={"Authorization": "Bearer " + t["access_token"]})
+    ogeler = k.get("items") or []
+    if not ogeler:
+        raise PaylasimHatasi("Bu Google hesabında YouTube kanalı görünmüyor.", kesin=True)
+    return ogeler[0]["snippet"]["title"]
+
+
+def youtube_ekle() -> None:
+    dil = secim("Hangi dilin YouTube kanalı?", list(DIL_AD), lambda d: f"{d.upper()} — {DIL_AD[d]}")
+    print("\nGoogle Cloud'dan aldığın Client ID ve Client secret'ı yapıştır (ekranda görünmez, bu normal).")
+    s = {}
+    for anahtar, soru, _gizli in SORU["youtube"]:
+        deger = getpass.getpass(f"  {soru}: ").strip()
+        if not deger:
+            print("Boş bırakıldı, iptal.")
+            return
+        s[anahtar] = deger
+    try:
+        s["REFRESH_TOKEN"] = yt_izin_al(s["CLIENT_ID"], s["CLIENT_SECRET"])
+        print("İzin alındı, kanal deneniyor...")
+        ad = yt_dene(s)
+    except (PaylasimHatasi, KeyError) as h:
+        print(f"\nOLMADI: {h}\nBu ekranın görüntüsünü Claude'a at (şifreler görünmez).")
+        return
+    print(f'Doğru: kanal "{ad}"')
+    for a in GEREKEN["youtube"]:
+        sir_yaz(f"YT_{dil.upper()}_{a}", s[a])
+    ayar = json.loads(AYAR.read_text(encoding="utf-8"))
+    ayar["hesaplar"][dil]["youtube"] = True
+    ayar.setdefault("youtube", {}).setdefault("gizlilik", "private")
+    AYAR.write_text(json.dumps(ayar, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    print(f'\nTAMAM: YouTube / {dil.upper()} ("{ad}") kuruldu. Videolar önce ÖZEL (private) yüklenir; '
+          'Studio\'da bakıp memnunsan ayarlar.json\'da "gizlilik" değerini "public" yapmasını Claude\'dan iste.')
+
+
+def azure_ekle() -> None:
+    print("\nAzure Speech anahtarını ve bölgesini yapıştır (anahtar ekranda görünmez).")
+    anahtar = getpass.getpass("  Azure Speech KEY 1: ").strip()
+    bolge = input("  Bölge (örn. westeurope, northeurope): ").strip().lower()
+    if not anahtar or not bolge:
+        print("Boş bırakıldı, iptal.")
+        return
+    try:
+        req = urllib.request.Request(f"https://{bolge}.api.cognitive.microsoft.com/sts/v1.0/issueToken", data=b"",
+                                     headers={"Ocp-Apim-Subscription-Key": anahtar}, method="POST")
+        with urllib.request.urlopen(req, timeout=30):
+            pass
+    except Exception as h:  # hata metni anahtarı içerebilir; yalnız türü gösterilir
+        print(f"\nOLMADI: anahtar ya da bölge yanlış görünüyor ({type(h).__name__}). Ekran görüntüsünü Claude'a at.")
+        return
+    sir_yaz("AZURE_SPEECH_KEY", anahtar)
+    sir_yaz("AZURE_SPEECH_REGION", bolge)
+    print("\nTAMAM: Azure Speech anahtarı ve bölgesi GitHub'a yazıldı. Video üretimi bunu kullanır.")
+
+
 def hesap_ekle() -> None:
     dil = secim("Hangi dilin hesabı?", list(DIL_AD), lambda d: f"{d.upper()} — {DIL_AD[d]}")
     platform = secim("Hangi platform?", ["x", "reddit", "instagram"], lambda p: {"x": "X (Twitter)", "reddit": "Reddit", "instagram": "Instagram"}[p])
@@ -161,13 +271,14 @@ def durum() -> None:
     print("\nHesap durumu (✓ kurulu, · eksik, - kapalı):")
     for dil in DIL_AD:
         parca = []
-        for p in ("x", "reddit", "instagram"):
+        for p in ("x", "reddit", "instagram", "youtube"):
             if not ayar["hesaplar"][dil].get(p):
                 isaret = "-"
             else:
                 isaret = "✓" if all(f"{ONEK_SIR[p]}_{dil.upper()}_{a}" in var for a in GEREKEN[p]) else "·"
             parca.append(f"{p} {isaret}")
         print(f"  {dil.upper()}: " + "   ".join(parca))
+    print("  Azure Speech: " + ("✓ kurulu" if {"AZURE_SPEECH_KEY", "AZURE_SPEECH_REGION"} <= var else "· eksik"))
 
 
 def deneme() -> None:
@@ -192,11 +303,16 @@ def main() -> int:
         print("GitHub girişi yok. Önce PowerShell'de:  gh auth login")
         return 1
     while True:
-        is_ = secim("Ne yapalım?", ["ekle", "durum", "deneme", "ig", "cik"], lambda k: {
+        is_ = secim("Ne yapalım?", ["ekle", "durum", "deneme", "ig", "youtube", "azure", "cik"], lambda k: {
             "ekle": "Hesap ekle (X / Reddit / Instagram)", "durum": "Hangi hesaplar kurulu?",
-            "deneme": "Deneme çalıştırması (gönderi atmadan)", "ig": "Instagram anahtarını şimdi yenile", "cik": "Çık"}[k])
+            "deneme": "Deneme çalıştırması (gönderi atmadan)", "ig": "Instagram anahtarını şimdi yenile", "youtube": "YouTube kanalı bağla (Shorts)",
+            "azure": "Azure Speech anahtarı ekle (video sesi)", "cik": "Çık"}[k])
         if is_ == "ekle":
             hesap_ekle()
+        elif is_ == "youtube":
+            youtube_ekle()
+        elif is_ == "azure":
+            azure_ekle()
         elif is_ == "durum":
             durum()
         elif is_ == "deneme":

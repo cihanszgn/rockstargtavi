@@ -1,4 +1,4 @@
-# Yeni oyun haberlerini X, Reddit ve Instagram hesaplarına paylaşır.
+# Yeni oyun haberlerini X, Reddit, Instagram (görsel + Reels) ve YouTube Shorts hesaplarına paylaşır.
 # Şifreler: Settings → Secrets and variables → Actions (tools/sosyal_kurulum.py ekler).
 # Şifresi girilmemiş hesap atlanır; hiç hesap yoksa iş boşta biter.
 name: Sosyal paylasim
@@ -7,6 +7,11 @@ on:
   push:
     branches: [main]
     paths: [data/icerik.json]
+  workflow_run:
+    # GITHUB_TOKEN ile yapılan push başka iş akışını tetiklemez; video hazır olunca bu iş akışı böyle uyanır
+    workflows: ["Haber videosu"]
+    types: [completed]
+    branches: [main]
   schedule:
     - cron: "17 7,10,13,16,19 * * *"   # Türkiye saatiyle 10:17, 13:17, 16:17, 19:17, 22:17
   workflow_dispatch:
@@ -34,9 +39,9 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Site yayına çıksın diye bekle
-        if: github.event_name == 'push'
-        run: sleep 120
+      - name: Site yayına çıksın diye bekle (en yeni haber sayfası açılınca devam eder)
+        if: github.event_name == 'push' || github.event_name == 'workflow_run'
+        run: python tools/sosyal_yayinla.py --sayfa-bekle
 
       - name: Paylaş
         env:
@@ -81,6 +86,18 @@ jobs:
           REDDIT_ES_PASSWORD: ${{ secrets.REDDIT_ES_PASSWORD }}
           IG_ES_USER_ID: ${{ secrets.IG_ES_USER_ID }}
           IG_ES_TOKEN: ${{ secrets.IG_ES_TOKEN }}
+          YT_TR_CLIENT_ID: ${{ secrets.YT_TR_CLIENT_ID }}
+          YT_TR_CLIENT_SECRET: ${{ secrets.YT_TR_CLIENT_SECRET }}
+          YT_TR_REFRESH_TOKEN: ${{ secrets.YT_TR_REFRESH_TOKEN }}
+          YT_EN_CLIENT_ID: ${{ secrets.YT_EN_CLIENT_ID }}
+          YT_EN_CLIENT_SECRET: ${{ secrets.YT_EN_CLIENT_SECRET }}
+          YT_EN_REFRESH_TOKEN: ${{ secrets.YT_EN_REFRESH_TOKEN }}
+          YT_FR_CLIENT_ID: ${{ secrets.YT_FR_CLIENT_ID }}
+          YT_FR_CLIENT_SECRET: ${{ secrets.YT_FR_CLIENT_SECRET }}
+          YT_FR_REFRESH_TOKEN: ${{ secrets.YT_FR_REFRESH_TOKEN }}
+          YT_ES_CLIENT_ID: ${{ secrets.YT_ES_CLIENT_ID }}
+          YT_ES_CLIENT_SECRET: ${{ secrets.YT_ES_CLIENT_SECRET }}
+          YT_ES_REFRESH_TOKEN: ${{ secrets.YT_ES_REFRESH_TOKEN }}
         run: python tools/sosyal_yayinla.py $DENEME
 
       - name: Gönderi kaydını depoya yaz
@@ -89,6 +106,13 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add sosyal/gonderilenler.json 2>/dev/null || true
+          if ! git diff --quiet data/videolar.json 2>/dev/null; then
+            # Reels/Shorts bağlantıları manifeste yazıldı: sayfalardaki YouTube/Instagram bağlantıları için siteyi yeniden üret
+            git add data/videolar.json
+            python tools/site_derle.py
+            python tools/sosyal_derle.py
+            git add -u
+          fi
           if ! git diff --cached --quiet; then
             git commit -m "sosyal: gönderi kaydı"
             for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
