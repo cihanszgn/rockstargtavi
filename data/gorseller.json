@@ -23,11 +23,23 @@
   "en": 1920,
   "boy": 1080
  },
+ "guild-saga-ps5-mayis-2027": {
+  "url": "https://blog.playstation.com/tachyon/2026/11/b76ffd50c3d63cbe3bcbf54cd2965dceb1a4e8b5.png",
+  "kaynak": "PlayStation Blog — Ocelot Technologies",
+  "en": 1920,
+  "boy": 1080
+ },
  "halo-campaign-evolved-firefight": {
   "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/HCE_FF_XBFF-1-2273ec7fc27a458ce012.jpg",
   "kaynak": "Xbox Wire",
   "en": 1920,
   "boy": 1080
+ },
+ "lol-new-dawn-2027-teaser": {
+  "url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/d3b7bd9decb1e1672dcb80be4f8bc1aa05490dc1-110x70.svg?accountingTag=LoL?w=1200&h=630&fm=webp&fit=crop&crop=center",
+  "kaynak": "League of Legends — New Dawn",
+  "en": 990,
+  "boy": 630
  },
  "lol-patch-26-22": {
   "url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/718b573bd914c3a8a334a89f70ff405eee9a6748-1920x1080.jpg?accountingTag=LoL?w=1200&h=630&fm=webp&fit=crop&crop=center",
@@ -70,6 +82,12 @@
   "kaynak": "PlayStation Blog",
   "en": 1920,
   "boy": 1080
+ },
+ "ps5-qssr-oyun-guncellemeleri-2026-11-13": {
+  "url": "https://blog.playstation.com/tachyon/2026/11/84a6eb5f0831acb87ad7b548df366dcf10547aaf-scaled.jpg",
+  "kaynak": "PlayStation Blog",
+  "en": 2560,
+  "boy": 1440
  },
  "pubg-update-44-1": {
   "url": "https://wstatic-prod-boc.krafton.com/common/content/news/20261026/4fhxvgil.jpg",

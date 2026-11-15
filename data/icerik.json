@@ -1,5 +1,205 @@
 [
  {
+  "id": "lol-new-dawn-2027-teaser",
+  "tarih": "2026-11-14",
+  "oyun": "League of Legends",
+  "tur": "haber",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "url": "https://www.leagueoflegends.com/en-us/new-dawn/",
+    "ad": "League of Legends — New Dawn",
+    "tarih": "2026-11-14"
+   },
+   {
+    "url": "https://www.leagueoflegends.com/en-us/",
+    "ad": "League of Legends — resmî duyuru takvimi",
+    "tarih": "2026-11-14"
+   }
+  ],
+  "otomasyon": {
+   "konu": "league-of-legends-new-dawn-2027-ilk-duyuru",
+   "resmi_url": "https://www.leagueoflegends.com/en-us/new-dawn/",
+   "teyit_zamani": "2026-11-15T05:04:03.494138+03:00",
+   "oyuncuya_fayda": "Oyuncular ocaktaki ayrıntılı tanıtımla 2027 içindeki yayını ayırt edip resmî duyuruları takip edebilir.",
+   "eklenme": "2026-11-15T05:04:11.966984+03:00"
+  },
+  "diller": {
+   "tr": {
+    "baslik": "LoL New Dawn tanıtıldı: ayrıntılar ocakta, yayın 2027 içinde",
+    "ozet": "Riot ilk tanıtımı yayımladı; resmî takvim ocaktaki açıklamayla güncellemenin yayınını ayırıyor.",
+    "metin": "Riot, 14 Kasım duyurusuyla League of Legends: New Dawn için ilk tanıtımı paylaştı. Resmî LoL sayfası ayrıntılı tanıtımın ocakta, yayının ise 2027'nin ilerleyen döneminde olacağını belirtiyor. Oyuncular New Dawn sayfasından geliştirici güncellemesine ulaşabilir ve haberler için e-posta aboneliği seçebilir. Takvimi izleyenler için önerimiz, ocak ayını oyuna erişim tarihi olarak yorumlamamak: duyurulan iki aşama farklı. Oyun planınızı ayrıntılı resmî açıklama geldikten sonra güncelleyin.",
+    "etiketler": [
+     "#LeagueOfLegends",
+     "#NewDawn",
+     "#RiotGames"
+    ]
+   },
+   "en": {
+    "baslik": "LoL New Dawn gets a teaser: full reveal in January, release later in 2027",
+    "ozet": "Riot's official schedule separates the detailed presentation from the eventual release.",
+    "metin": "Riot shared its first League of Legends: New Dawn teaser on November 14. The official LoL page places the full reveal in January and the release later in 2027. Players can visit the New Dawn page for the developer update and choose email updates. Our advice for anyone planning around the announcement: treat January as the information milestone. Revisit your plans when Riot provides the detailed presentation.",
+    "etiketler": [
+     "#LeagueOfLegends",
+     "#NewDawn",
+     "#RiotGames"
+    ]
+   },
+   "fr": {
+    "baslik": "LoL New Dawn : présentation complète en janvier, sortie plus tard en 2027",
+    "ozet": "Le calendrier officiel de Riot distingue la présentation détaillée de la sortie.",
+    "metin": "Riot a publié un premier aperçu de League of Legends: New Dawn le 14 novembre. Le site officiel prévoit une présentation complète en janvier, puis une sortie plus tard en 2027. Les joueurs peuvent consulter la page New Dawn pour retrouver la vidéo des développeurs et choisir les informations par courriel. Notre conseil : retenez janvier comme rendez-vous d'information, puis ajustez vos projets après la présentation détaillée de Riot.",
+    "etiketler": [
+     "#LeagueOfLegends",
+     "#NewDawn",
+     "#RiotGames"
+    ]
+   },
+   "es": {
+    "baslik": "LoL New Dawn: presentación completa en enero y lanzamiento más adelante en 2027",
+    "ozet": "El calendario oficial de Riot distingue la presentación del lanzamiento posterior.",
+    "metin": "Riot publicó el primer adelanto de League of Legends: New Dawn el 14 de noviembre. La web oficial sitúa la presentación completa en enero y el lanzamiento más adelante en 2027. Los jugadores pueden visitar la página New Dawn para ver la actualización de los desarrolladores y suscribirse a las novedades por correo. Recomendamos tomar enero como una cita informativa y revisar los planes cuando Riot ofrezca la presentación detallada.",
+    "etiketler": [
+     "#LeagueOfLegends",
+     "#NewDawn",
+     "#RiotGames"
+    ]
+   }
+  }
+ },
+ {
+  "id": "ps5-qssr-oyun-guncellemeleri-2026-11-13",
+  "tarih": "2026-11-13",
+  "oyun": "PlayStation 5",
+  "tur": "guncelleme",
+  "platform": [
+   "PS5"
+  ],
+  "kaynaklar": [
+   {
+    "url": "https://blog.playstation.com/2026/11/13/qssr-arrives-in-marvels-spider-man-2-control-resonant-the-finals-arc-raiders-and-hell-let-loose-vietnam/",
+    "ad": "PlayStation Blog",
+    "tarih": "2026-11-13"
+   }
+  ],
+  "otomasyon": {
+   "konu": "ps5-qssr-spider-man-2-ve-diger-oyunlar-2026-11-13",
+   "resmi_url": "https://blog.playstation.com/2026/11/13/qssr-arrives-in-marvels-spider-man-2-control-resonant-the-finals-arc-raiders-and-hell-let-loose-vietnam/",
+   "teyit_zamani": "2026-11-15T05:04:03.494138+03:00",
+   "oyuncuya_fayda": "PS5 sahipleri Spider-Man 2 güncellemesinin hazır olduğunu, diğer oyunların desteğinin daha sonra geleceğini öğrenebilir.",
+   "eklenme": "2026-11-15T05:04:11.966984+03:00"
+  },
+  "diller": {
+   "tr": {
+    "baslik": "PS5'te QSSR: Spider-Man 2 güncellemesi hazır, diğer oyunlar sırada",
+    "ozet": "PlayStation Blog, QSSR desteğinin oyunlara farklı tarihlerde geleceğini açıkladı.",
+    "metin": "PlayStation'ın 13 Kasım açıklamasına göre Marvel's Spider-Man 2'nin PS5 QSSR güncellemesi yayımlandı. Control Resonant desteği aralıkta, No Man's Sky desteği önümüzdeki haftalarda bekleniyor. The Finals, Arc Raiders ve Hell Let Loose: Vietnam da yaklaşan güncellemeler arasında. PS5 oyuncuları için önerimiz, Spider-Man 2'yi güncelledikten sonra görüntüyü kendi ekranlarında değerlendirmek. Diğer oyunlarda aynı desteği arayanlar ise her oyunun güncelleme notlarını izlemeli; duyurunun takvimi oyunlara göre değişiyor.",
+    "etiketler": [
+     "#PS5",
+     "#QSSR",
+     "#SpiderMan2"
+    ]
+   },
+   "en": {
+    "baslik": "PS5 QSSR: Spider-Man 2 update is live, with more games to follow",
+    "ozet": "PlayStation confirms separate rollout windows for the next QSSR game updates.",
+    "metin": "PlayStation's November 13 announcement confirms that Marvel's Spider-Man 2 has its PS5 QSSR update. Control Resonant is scheduled for December, with No Man's Sky following in the coming weeks. The Finals, Arc Raiders and Hell Let Loose: Vietnam also have updates ahead. We recommend updating Spider-Man 2 and judging the image on your own display. For the other titles, follow their individual patch notes before expecting the same support.",
+    "etiketler": [
+     "#PS5",
+     "#QSSR",
+     "#SpiderMan2"
+    ]
+   },
+   "fr": {
+    "baslik": "QSSR sur PS5 : Spider-Man 2 est prêt, d'autres jeux suivront",
+    "ozet": "PlayStation précise que les prochaines mises à jour QSSR arriveront à des dates différentes.",
+    "metin": "Selon l'annonce PlayStation du 13 novembre, la mise à jour QSSR de Marvel's Spider-Man 2 sur PS5 est disponible. Control Resonant suivra en décembre et No Man's Sky dans les prochaines semaines. The Finals, Arc Raiders et Hell Let Loose: Vietnam sont également prévus. Nous conseillons de mettre Spider-Man 2 à jour puis d'évaluer l'image sur votre écran. Pour les autres titres, consultez leurs notes de mise à jour respectives.",
+    "etiketler": [
+     "#PS5",
+     "#QSSR",
+     "#SpiderMan2"
+    ]
+   },
+   "es": {
+    "baslik": "QSSR en PS5: Spider-Man 2 ya tiene actualización y otros juegos seguirán",
+    "ozet": "PlayStation detalla calendarios diferentes para las próximas actualizaciones con QSSR.",
+    "metin": "El anuncio de PlayStation del 13 de noviembre confirma que Marvel's Spider-Man 2 ya tiene su actualización QSSR en PS5. Control Resonant la recibirá en diciembre y No Man's Sky en las próximas semanas. The Finals, Arc Raiders y Hell Let Loose: Vietnam también tienen actualizaciones previstas. Recomendamos actualizar Spider-Man 2 y valorar la imagen en tu propia pantalla. Para los demás títulos, consulta sus notas de actualización antes de esperar ese soporte.",
+    "etiketler": [
+     "#PS5",
+     "#QSSR",
+     "#SpiderMan2"
+    ]
+   }
+  }
+ },
+ {
+  "id": "guild-saga-ps5-mayis-2027",
+  "tarih": "2026-11-13",
+  "oyun": "Guild Saga: Vanished Worlds",
+  "tur": "haber",
+  "platform": [
+   "PS5"
+  ],
+  "kaynaklar": [
+   {
+    "url": "https://blog.playstation.com/2026/11/13/guild-saga-vanished-worlds-brings-tactical-adventure-to-ps5-in-may-2027/",
+    "ad": "PlayStation Blog — Ocelot Technologies",
+    "tarih": "2026-11-13"
+   }
+  ],
+  "otomasyon": {
+   "konu": "guild-saga-vanished-worlds-ps5-mayis-2027-duyuru",
+   "resmi_url": "https://blog.playstation.com/2026/11/13/guild-saga-vanished-worlds-brings-tactical-adventure-to-ps5-in-may-2027/",
+   "teyit_zamani": "2026-11-15T05:04:03.494138+03:00",
+   "oyuncuya_fayda": "Taktik RPG arayan PS5 oyuncuları çıkış aralığını öğrenip yeni fragmanı izleyebilir ve oyunu istek listesine ekleyebilir.",
+   "eklenme": "2026-11-15T05:04:11.966984+03:00"
+  },
+  "diller": {
+   "tr": {
+    "baslik": "Guild Saga: Vanished Worlds, Mayıs 2027'de PS5'e geliyor",
+    "ozet": "Ocelot Technologies yeni fragmanla PS5 çıkış aralığını ve taktik savaş sistemini tanıttı.",
+    "metin": "Ocelot Technologies, 13 Kasım tarihli PlayStation Blog yazısında Guild Saga: Vanished Worlds'ün PS5 sürümünü Mayıs 2027 için duyurdu. Sıra tabanlı taktik RPG, on disiplinde yaklaşık 200 beceri sunuyor; hava ve zemin etkileşimleri savaşları etkiliyor. Taktik oyun arayan PS5 sahipleri yeni fragmanı izleyebilir ve oyunu PlayStation Store istek listesine ekleyebilir. Geliştirici kesin çıkış gününü daha sonra açıklayacak. Önerimiz, kadro ve beceri kombinasyonlarını fragmanda inceleyerek oyunun tarzınıza uyup uymadığını değerlendirmek.",
+    "etiketler": [
+     "#GuildSaga",
+     "#PS5",
+     "#RPG"
+    ]
+   },
+   "en": {
+    "baslik": "Guild Saga: Vanished Worlds heads to PS5 in May 2027",
+    "ozet": "Ocelot Technologies reveals the PS5 release window alongside a new trailer.",
+    "metin": "Ocelot Technologies announced Guild Saga: Vanished Worlds for PS5 in May 2027 in its November 13 PlayStation Blog post. The tactical RPG offers turn-based combat with about 200 skills across ten disciplines, including weather and surface interactions. Interested PS5 players can watch the new trailer and wishlist the game on PlayStation Store. An exact release day will follow. We suggest checking the party and skill combinations to judge whether the combat suits you.",
+    "etiketler": [
+     "#GuildSaga",
+     "#PS5",
+     "#RPG"
+    ]
+   },
+   "fr": {
+    "baslik": "Guild Saga: Vanished Worlds arrivera sur PS5 en mai 2027",
+    "ozet": "Ocelot Technologies dévoile une nouvelle bande-annonce et la fenêtre de sortie PS5.",
+    "metin": "Ocelot Technologies a annoncé le 13 novembre sur PlayStation Blog une sortie PS5 de Guild Saga: Vanished Worlds en mai 2027. Ce RPG tactique propose des combats au tour par tour et environ 200 compétences réparties entre dix disciplines, avec des interactions météorologiques et de terrain. Vous pouvez regarder la nouvelle bande-annonce et ajouter le jeu à votre liste de souhaits PlayStation Store. Le jour précis sera annoncé ultérieurement. Notre conseil : examinez les combinaisons d'équipe pour évaluer les combats.",
+    "etiketler": [
+     "#GuildSaga",
+     "#PS5",
+     "#RPG"
+    ]
+   },
+   "es": {
+    "baslik": "Guild Saga: Vanished Worlds llegará a PS5 en mayo de 2027",
+    "ozet": "Ocelot Technologies anuncia la ventana de lanzamiento de PS5 con un nuevo tráiler.",
+    "metin": "Ocelot Technologies anunció el 13 de noviembre en PlayStation Blog que Guild Saga: Vanished Worlds llegará a PS5 en mayo de 2027. El RPG táctico ofrece combates por turnos con unas 200 habilidades en diez disciplinas, con interacciones entre clima y superficies. Puedes ver el nuevo tráiler y añadirlo a tu lista de deseos de PlayStation Store. El día exacto se anunciará más adelante. Recomendamos revisar las combinaciones del grupo para valorar si te gusta su combate.",
+    "etiketler": [
+     "#GuildSaga",
+     "#PS5",
+     "#RPG"
+    ]
+   }
+  }
+ },
+ {
   "id": "wow-hotfix-2026-11-13",
   "tarih": "2026-11-13",
   "oyun": "World of Warcraft",
