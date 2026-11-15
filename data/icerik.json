@@ -1,5 +1,67 @@
 [
  {
+  "id": "selaco-chapter-2-machines-of-war-cikti-2026-11-13",
+  "tarih": "2026-11-13",
+  "oyun": "Selaco",
+  "tur": "guncelleme",
+  "kaynaklar": [
+   {
+    "url": "https://store.steampowered.com/news/app/1592280/view/684144008188920176",
+    "ad": "Selaco — Steam resmî duyurusu",
+    "tarih": "2026-11-13"
+   }
+  ],
+  "otomasyon": {
+   "konu": "selaco-chapter-2-the-machines-of-war-release-2026-11-13",
+   "resmi_url": "https://store.steampowered.com/news/app/1592280/view/684144008188920176",
+   "teyit_zamani": "2026-11-15T17:58:25.034087+03:00",
+   "oyuncuya_fayda": "Oyuncular eski kayıtların yeni sürümde çalışmadığını ve ilk bölümü bitirmek için Steam'de 'chapter1' dalına dönebileceklerini öğrenir.",
+   "eklenme": "2026-11-15T18:02:30.243839+03:00"
+  },
+  "diller": {
+   "tr": {
+    "baslik": "Selaco'nun ikinci bölümü The Machines of War yayında: 19 yeni harita",
+    "ozet": "Erken erişimdeki FPS'in en büyük güncellemesi 6–8 saatlik yeni kampanya getiriyor; eski kayıtlar uyumsuz.",
+    "metin": "Selaco'nun geliştiricisi, oyunun erken erişim sürecindeki en büyük güncellemesi olan Chapter 2: The Machines of War'ı 13 Kasım'da Steam'de yayımladı. Duyuruya göre paket 19 yeni harita ve yaklaşık 6–8 saatlik kampanya ekliyor; ilk bölümü bitirenler doğrudan yeni seviyelere geçebiliyor. Düşman yapay zekâsı yeniden yazıldı, taşınıp saklanamayan minigun ve roketatar gibi ağır silahlar, jetpack, yenilenen kayma ve atılma hareketleri ile Takip Et ve Bekle komutları verilebilen yoldaş sistemi geldi. Mutatörler artık kampanya sırasında güvenli odalarda değiştirilebiliyor ve 16 yeni Steam başarımı eklendi. Dikkat edilmesi gereken nokta: mevcut kayıt dosyaları bu sürümle uyumlu değil. İlk kampanyayı yarıda bırakanlar Steam'in Betalar sekmesinden 'chapter1' dalını seçerek eski sürümde oyunu bitirebilir. Geliştirici ayrıca iki hafta sürecek yüzde 33'lük bir Steam indirimi duyurdu ve 2027'nin ilk çeyreği için Special Campaign moduna odaklanan bir güncelleme planladığını belirtti. Önerimiz, yarım kalan kaydınız varsa güncellemeden önce hangi dalda oynayacağınıza karar vermeniz ve güncel fiyatı mağaza sayfasından kontrol etmeniz.",
+    "etiketler": [
+     "#Selaco",
+     "#FPS",
+     "#Guncelleme"
+    ]
+   },
+   "en": {
+    "baslik": "Selaco Chapter 2: The Machines of War is out with 19 new maps",
+    "ozet": "The Early Access shooter's biggest update adds a 6–8 hour campaign, but old saves will not carry over.",
+    "metin": "Selaco's developer released Chapter 2: The Machines of War on Steam on November 13, calling it the largest update of the game's Early Access period. According to the announcement, it adds 19 new maps and roughly 6–8 hours of campaign, and players who finished Chapter 1 can jump straight into the new levels. Enemy AI has been rebuilt, and the update introduces heavy weapons such as miniguns and rocket launchers that cannot be stowed, a jetpack, reworked slide and dash moves, and a companion system with Follow and Hold orders. Mutators can now be changed mid-campaign in Safe Rooms, and there are 16 new Steam achievements. The important catch is that existing saves are not compatible with this version. Anyone still partway through the original campaign can select the 'chapter1' branch in Steam's Betas tab to finish it on the old build. The developer also announced a 33% Steam discount lasting two weeks and plans a Special Campaign-focused update for the first quarter of 2027. Our advice: decide which branch you want before updating if you have an unfinished run, and check the store page for the current price.",
+    "etiketler": [
+     "#Selaco",
+     "#FPS",
+     "#Update"
+    ]
+   },
+   "fr": {
+    "baslik": "Selaco : le chapitre 2 The Machines of War est disponible avec 19 cartes",
+    "ozet": "La plus grosse mise à jour du FPS en accès anticipé ajoute 6 à 8 heures de campagne ; les anciennes sauvegardes sont incompatibles.",
+    "metin": "Le développeur de Selaco a publié le 13 novembre sur Steam le chapitre 2, The Machines of War, présenté comme la plus importante mise à jour de l'accès anticipé du jeu. D'après l'annonce, elle apporte 19 nouvelles cartes et environ 6 à 8 heures de campagne ; les joueurs ayant terminé le premier chapitre peuvent passer directement aux nouveaux niveaux. L'IA ennemie a été reconstruite, et l'on découvre des armes lourdes impossibles à ranger, comme les miniguns et les lance-roquettes, un jetpack, une glissade et une esquive retravaillées, ainsi qu'un système de compagnons acceptant les ordres Suivre et Tenir. Les mutateurs se modifient désormais en cours de campagne dans les salles sécurisées, et 16 succès Steam s'ajoutent. Point essentiel : les sauvegardes existantes ne fonctionnent pas avec cette version. Ceux qui n'ont pas fini la campagne d'origine peuvent choisir la branche « chapter1 » dans l'onglet Bêtas de Steam pour la terminer sur l'ancienne version. Le studio annonce aussi une réduction Steam de 33 % pendant deux semaines et prévoit, pour le premier trimestre 2027, une mise à jour centrée sur le mode Special Campaign. Notre conseil : choisissez votre branche avant de mettre à jour si une partie est en cours, et vérifiez le prix actuel sur la page du magasin.",
+    "etiketler": [
+     "#Selaco",
+     "#FPS",
+     "#MiseAJour"
+    ]
+   },
+   "es": {
+    "baslik": "Selaco estrena su capítulo 2, The Machines of War, con 19 mapas nuevos",
+    "ozet": "La mayor actualización del FPS en acceso anticipado suma de 6 a 8 horas de campaña; las partidas antiguas no son compatibles.",
+    "metin": "El desarrollador de Selaco publicó el 13 de noviembre en Steam el capítulo 2, The Machines of War, que describe como la actualización más grande del acceso anticipado del juego. Según el anuncio, añade 19 mapas nuevos y unas 6 a 8 horas de campaña, y quienes terminaron el primer capítulo pueden saltar directamente a los niveles nuevos. La IA enemiga se ha rehecho y llegan armas pesadas que no se pueden guardar, como miniguns y lanzacohetes, un jetpack, un deslizamiento y una embestida renovados, además de un sistema de compañeros con órdenes de Seguir y Mantener. Los mutadores ahora pueden cambiarse durante la campaña en las salas seguras, y se suman 16 logros de Steam. El detalle importante: las partidas guardadas existentes no son compatibles con esta versión. Quien tenga a medias la campaña original puede elegir la rama «chapter1» en la pestaña Betas de Steam para acabarla en la versión anterior. El estudio también anunció un descuento del 33 % en Steam durante dos semanas y prevé para el primer trimestre de 2027 una actualización centrada en el modo Special Campaign. Nuestro consejo: decide en qué rama jugar antes de actualizar si tienes una partida sin terminar y consulta el precio actual en la página de la tienda.",
+    "etiketler": [
+     "#Selaco",
+     "#FPS",
+     "#Actualizacion"
+    ]
+   }
+  }
+ },
+ {
   "id": "slay-the-spire-2-beta-0-113-1-turkce-duzeltme-2026-11-14",
   "tarih": "2026-11-14",
   "oyun": "Slay the Spire 2",
