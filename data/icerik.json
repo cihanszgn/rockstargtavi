@@ -1,5 +1,142 @@
 [
  {
+  "id": "r6-siege-operation-vital-signal-duyuruldu-2026-11-15",
+  "tarih": "2026-11-15",
+  "oyun": "Rainbow Six Siege",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "url": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/seasons/vitalsignal",
+    "ad": "Ubisoft — Operation Vital Signal sezon sayfası",
+    "tarih": "2026-11-15"
+   },
+   {
+    "url": "https://store.steampowered.com/news/app/359550/view/684144535690805611",
+    "ad": "Rainbow Six Siege — Steam geliştirici duyurusu (Operation Vital Signal Revealed)",
+    "tarih": "2026-11-15"
+   }
+  ],
+  "otomasyon": {
+   "konu": "rainbow-six-siege-y11s4-operation-vital-signal-reveal-2026-11-15",
+   "resmi_url": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/seasons/vitalsignal",
+   "teyit_zamani": "2026-11-15T20:01:00+03:00",
+   "oyuncuya_fayda": "Siege oyuncuları 1 Aralık'ta gelecek dereceli liste ayrımını, Doc'un yeni iyileştirme aracını ve silah dengesi değişikliklerini önceden öğrenip hazırlanabilir.",
+   "eklenme": "2026-11-15T20:03:55.293252+03:00"
+  },
+  "diller": {
+   "tr": {
+    "baslik": "Rainbow Six Siege: Operation Vital Signal 1 Aralık'ta geliyor, dereceli ikiye ayrılıyor",
+    "ozet": "Ubisoft, 11. yılın dördüncü sezonunu tanıttı: Doc yenileniyor, dereceli maçlar Solo/Duo ve Flex olarak bölünüyor, MBZ-19 ekleniyor.",
+    "metin": "Ubisoft, Rainbow Six Siege'in 11. yıl 4. sezonu Operation Vital Signal'ı tanıttı. Stüdyonun Steam duyurusuna göre sezon 1 Aralık'ta başlıyor ve öne çıkan değişiklik Doc'un baştan elden geçirilmesi.\n\nDoc'un Stim Pistol'ü kalkıyor, yerine E-Heal Monitor geliyor. Doc bu araçla, üzerine yama yerleştirdiği takım arkadaşını haritanın başka bir yerinden zamanla iyileştirebiliyor veya yere düşmüşse kaldırabiliyor. Aynı anda yalnız bir operatörde yama etkin olabiliyor.\n\nDereceli oyun iki listeye bölünüyor ve her birinin rütbesi ayrı tutuluyor. Solo/Duo tek başına veya iki kişi girenler için; Flex ise tek oyuncuları ve 2, 3 veya 5 kişilik takımları alıyor. Dereceliye giriş için gereken seviye 50'den 30'a iniyor.\n\nYeni hafif makineli MBZ-19 dakikada 750 mermi atıyor, 64 mermilik şarjör taşıyor ve mermi başına 33 hasar veriyor; Warden, Thunderbird ve Jäger kullanabilecek. Pompalılarda ise düşüş var: ACS12'nin hasarı 69'dan 45'e, TCSG12'nin hasarı 75'ten 50'ye çekiliyor.\n\nBank haritasında Alley Access doğuş noktasının yanına siper ekleniyor; Yacht, Favela ve Tower yeni ışıklandırma ve yıkılabilir öğelerle modernleştiriliyor. Mevcut Battle Pass sezonla birlikte kapanacağı için kalan ödülleri 1 Aralık'tan önce almak gerekiyor.",
+    "etiketler": [
+     "#RainbowSixSiege",
+     "#OperationVitalSignal",
+     "#Ubisoft"
+    ]
+   },
+   "en": {
+    "baslik": "Rainbow Six Siege: Operation Vital Signal lands December 1 and splits Ranked in two",
+    "ozet": "Ubisoft has revealed Year 11 Season 4: a Doc remaster, separate Solo/Duo and Flex ranked playlists, and the new MBZ-19 SMG.",
+    "metin": "Ubisoft has revealed Operation Vital Signal, the fourth season of Rainbow Six Siege's Year 11. According to the studio's Steam announcement the season arrives on December 1, and its headline change is a full remaster of Doc.\n\nDoc loses the Stim Pistol and gains the E-Heal Monitor. After placing a patch on a teammate, he can trigger it from elsewhere on the map to heal them over time or revive them if they are down. Only one operator can carry an active patch at a time.\n\nRanked is split into two playlists with separate ranks. Solo/Duo is for players queueing alone or as a pair, while Flex takes solo players and squads of two, three or five. The clearance level needed to enter Ranked drops from 50 to 30.\n\nThe new MBZ-19 submachine gun fires 750 rounds per minute, holds 64 rounds and deals 33 damage per bullet; Warden, Thunderbird and Jäger can equip it. Shotguns go the other way: the ACS12 falls from 69 to 45 damage and the TCSG12 from 75 to 50.\n\nBank gets extra cover next to the Alley Access spawn, and Yacht, Favela and Tower are modernized with new lighting and destructible elements. The current Battle Pass closes when the season starts, so any remaining rewards need to be claimed before December 1.",
+    "etiketler": [
+     "#RainbowSixSiege",
+     "#OperationVitalSignal",
+     "#Ubisoft"
+    ]
+   },
+   "fr": {
+    "baslik": "Rainbow Six Siege : Operation Vital Signal arrive le 1er décembre et scinde le classé",
+    "ozet": "Ubisoft dévoile la saison 4 de l'An 11 : refonte de Doc, files classées Solo/Duo et Flex séparées, et nouvelle mitraillette MBZ-19.",
+    "metin": "Ubisoft a présenté Operation Vital Signal, la quatrième saison de l'An 11 de Rainbow Six Siege. D'après l'annonce du studio sur Steam, elle débute le 1er décembre, avec pour changement phare une refonte complète de Doc.\n\nDoc abandonne son pistolet Stim au profit de l'E-Heal Monitor. Une fois un patch posé sur un coéquipier, il peut l'activer depuis un autre endroit de la carte pour le soigner progressivement ou le relever s'il est à terre. Un seul agent peut porter un patch actif à la fois.\n\nLe mode classé est divisé en deux files aux rangs distincts. Solo/Duo s'adresse aux joueurs seuls ou en binôme, tandis que Flex accueille les joueurs seuls et les escouades de deux, trois ou cinq. Le niveau requis pour accéder au classé passe de 50 à 30.\n\nLa nouvelle mitraillette MBZ-19 tire 750 coups par minute, embarque 64 balles et inflige 33 points de dégâts par balle ; Warden, Thunderbird et Jäger peuvent l'équiper. Les fusils à pompe sont revus à la baisse : l'ACS12 passe de 69 à 45 dégâts, le TCSG12 de 75 à 50.\n\nBank reçoit un abri supplémentaire près du point d'apparition Alley Access, et Yacht, Favela et Tower sont modernisées avec un nouvel éclairage et des éléments destructibles. Le Battle Pass actuel se termine au lancement de la saison : les récompenses restantes sont à récupérer avant le 1er décembre.",
+    "etiketler": [
+     "#RainbowSixSiege",
+     "#OperationVitalSignal",
+     "#Ubisoft"
+    ]
+   },
+   "es": {
+    "baslik": "Rainbow Six Siege: Operation Vital Signal llega el 1 de diciembre y divide las clasificatorias",
+    "ozet": "Ubisoft presenta la temporada 4 del Año 11: Doc renovado, listas clasificatorias Solo/Duo y Flex separadas y el nuevo subfusil MBZ-19.",
+    "metin": "Ubisoft ha presentado Operation Vital Signal, la cuarta temporada del Año 11 de Rainbow Six Siege. Según el anuncio del estudio en Steam, comienza el 1 de diciembre y su cambio principal es una renovación completa de Doc.\n\nDoc pierde la pistola Stim y recibe el E-Heal Monitor. Tras colocar un parche en un compañero, puede activarlo desde otro punto del mapa para curarlo poco a poco o levantarlo si ha caído. Solo un operador puede llevar un parche activo a la vez.\n\nEl modo clasificatorio se divide en dos listas con rangos independientes. Solo/Duo es para quienes entran solos o en pareja, mientras que Flex admite jugadores en solitario y escuadrones de dos, tres o cinco. El nivel necesario para entrar en clasificatorias baja de 50 a 30.\n\nEl nuevo subfusil MBZ-19 dispara 750 balas por minuto, lleva un cargador de 64 y hace 33 de daño por bala; pueden usarlo Warden, Thunderbird y Jäger. Las escopetas van en sentido contrario: la ACS12 baja de 69 a 45 de daño y la TCSG12 de 75 a 50.\n\nBank recibe una cobertura adicional junto al punto de aparición Alley Access, y Yacht, Favela y Tower se modernizan con nueva iluminación y elementos destructibles. El Battle Pass actual se cierra al empezar la temporada, así que conviene reclamar las recompensas pendientes antes del 1 de diciembre.",
+    "etiketler": [
+     "#RainbowSixSiege",
+     "#OperationVitalSignal",
+     "#Ubisoft"
+    ]
+   }
+  }
+ },
+ {
+  "id": "battlefield-6-ucretsiz-deneme-casino-heist-2026-11-13",
+  "tarih": "2026-11-13",
+  "oyun": "Battlefield 6",
+  "tur": "ucretsiz",
+  "platform": [
+   "PC",
+   "PlayStation",
+   "Xbox"
+  ],
+  "kaynaklar": [
+   {
+    "url": "https://www.ea.com/games/battlefield/redsec/event/battlefield-6-free-trial",
+    "ad": "Electronic Arts — Battlefield 6 ücretsiz deneme sayfası",
+    "tarih": "2026-11-13"
+   }
+  ],
+  "otomasyon": {
+   "konu": "battlefield-6-free-trial-casino-heist-2026-11-13-16",
+   "resmi_url": "https://www.ea.com/games/battlefield/redsec/event/battlefield-6-free-trial",
+   "teyit_zamani": "2026-11-15T20:01:30+03:00",
+   "oyuncuya_fayda": "Battlefield 6'yı satın almadan denemek isteyenler 16 Kasım'a kadar REDSEC üzerinden ücretsiz oynayabilir ve kazandıklarını saklar.",
+   "eklenme": "2026-11-15T20:03:55.293252+03:00"
+  },
+  "diller": {
+   "tr": {
+    "baslik": "Battlefield 6 16 Kasım'a kadar ücretsiz denenebiliyor",
+    "ozet": "EA'nın dört günlük ücretsiz denemesi 13 Kasım'da başladı; giriş için ücretsiz Battlefield REDSEC'i indirmek yetiyor.",
+    "metin": "Electronic Arts, Battlefield 6 için dört günlük ücretsiz deneme açtı. EA'nın resmî sayfasına göre deneme 13–16 Kasım arasında sürüyor; sayfada bitiş saati veya saat dilimi yazmıyor, bu yüzden denemek isteyenlerin son güne bırakmaması iyi olur.\n\nDenemeye girmek için oyunu satın almak gerekmiyor. Ücretsiz Battlefield REDSEC'i indirip oradan Battlefield 6 denemesine geçiliyor. İndirme seçenekleri arasında Windows için EA app, Steam, Epic Games Store, PlayStation Store ve Xbox Store yer alıyor.\n\nDeneme sırasında açtığınız içerikler deneme bittikten sonra da sizde kalıyor ve REDSEC'i ücretsiz oynamaya devam edebiliyorsunuz. Battlefield 6 sahibi bir arkadaşınızla oynarsanız iki taraf da deneyim puanı takviyesi alıyor.\n\nYeni başlayanlar için gerçek oyuncularla botların karıştığı Casual Breakthrough modu, atış poligonu ve modları, teçhizatı ve ilerlemeyi anlatan bir başlangıç alanı var.\n\nAynı günlerde süreli Casino Heist etkinliği de açık: Battlefield 6 ve REDSEC'te kontratları tamamlayıp Dough topluyor, bununla etkinliğe özel kozmetikleri açıyorsunuz. EA sayfasında deneme için bir indirim duyurulmuyor.",
+    "etiketler": [
+     "#Battlefield6",
+     "#REDSEC",
+     "#UcretsizDeneme"
+    ]
+   },
+   "en": {
+    "baslik": "Battlefield 6 is free to try until November 16",
+    "ozet": "EA's four-day free trial began on November 13; all you need is the free Battlefield REDSEC download.",
+    "metin": "Electronic Arts is running a four-day free trial of Battlefield 6. EA's official page lists it as November 13 to 16 but gives no end time or time zone, so anyone curious should not leave it to the last evening.\n\nYou do not need to buy the game to take part. You download the free Battlefield REDSEC and enter the Battlefield 6 trial from there. The download options listed are the EA app for Windows, Steam, the Epic Games Store, the PlayStation Store and the Xbox Store.\n\nAnything you unlock during the trial stays with you after it ends, and you can keep playing REDSEC for free. If you play alongside a friend who owns Battlefield 6, both of you receive an XP boost.\n\nFor newcomers there is Casual Breakthrough, a mode that mixes real players with bots, plus a firing range and an onboarding area that explains modes, loadouts and progression.\n\nThe limited-time Casino Heist event runs over the same days: you complete contracts across Battlefield 6 and REDSEC to earn Dough and spend it on event-themed cosmetics. EA's page does not announce a discount alongside the trial.",
+    "etiketler": [
+     "#Battlefield6",
+     "#REDSEC",
+     "#FreeTrial"
+    ]
+   },
+   "fr": {
+    "baslik": "Battlefield 6 est jouable gratuitement jusqu'au 16 novembre",
+    "ozet": "L'essai gratuit de quatre jours d'EA a commencé le 13 novembre ; il suffit de télécharger Battlefield REDSEC, gratuit.",
+    "metin": "Electronic Arts propose un essai gratuit de quatre jours pour Battlefield 6. La page officielle d'EA l'annonce du 13 au 16 novembre, sans préciser l'heure de fin ni le fuseau horaire : mieux vaut donc ne pas attendre le dernier soir.\n\nAucun achat n'est nécessaire. Il faut télécharger Battlefield REDSEC, qui est gratuit, puis accéder à l'essai de Battlefield 6 depuis ce jeu. Les options de téléchargement indiquées sont l'EA app pour Windows, Steam, l'Epic Games Store, le PlayStation Store et le Xbox Store.\n\nTout ce que vous débloquez pendant l'essai reste acquis une fois celui-ci terminé, et vous pouvez continuer à jouer gratuitement à REDSEC. Si vous jouez avec un ami qui possède Battlefield 6, vous recevez tous les deux un bonus d'expérience.\n\nPour les débutants, le mode Casual Breakthrough mêle vrais joueurs et bots ; un stand de tir et un espace d'initiation expliquent les modes, les équipements et la progression.\n\nL'événement temporaire Casino Heist se déroule sur les mêmes jours : il s'agit de remplir des contrats dans Battlefield 6 et REDSEC pour gagner du Dough, puis de débloquer des cosmétiques aux couleurs de l'événement. La page d'EA n'annonce aucune réduction liée à l'essai.",
+    "etiketler": [
+     "#Battlefield6",
+     "#REDSEC",
+     "#EssaiGratuit"
+    ]
+   },
+   "es": {
+    "baslik": "Battlefield 6 se puede probar gratis hasta el 16 de noviembre",
+    "ozet": "La prueba gratuita de cuatro días de EA empezó el 13 de noviembre; basta con descargar Battlefield REDSEC, que es gratuito.",
+    "metin": "Electronic Arts ha abierto una prueba gratuita de cuatro días de Battlefield 6. La página oficial de EA la sitúa del 13 al 16 de noviembre, pero no indica hora de cierre ni zona horaria, así que conviene no dejarlo para la última tarde.\n\nNo hace falta comprar el juego. Se descarga Battlefield REDSEC, que es gratuito, y desde ahí se entra en la prueba de Battlefield 6. Las opciones de descarga que aparecen son la EA app para Windows, Steam, Epic Games Store, PlayStation Store y Xbox Store.\n\nTodo lo que desbloquees durante la prueba se conserva cuando termine, y puedes seguir jugando a REDSEC sin pagar. Si juegas con un amigo que ya tiene Battlefield 6, ambos recibís un impulso de experiencia.\n\nPara quienes empiezan hay un modo Casual Breakthrough que mezcla jugadores reales con bots, además de un campo de tiro y una zona de iniciación que explica modos, equipamiento y progresión.\n\nEl evento temporal Casino Heist coincide con esos días: se completan contratos en Battlefield 6 y REDSEC para ganar Dough y desbloquear cosméticos del evento. La página de EA no anuncia ningún descuento junto a la prueba.",
+    "etiketler": [
+     "#Battlefield6",
+     "#REDSEC",
+     "#PruebaGratis"
+    ]
+   }
+  }
+ },
+ {
   "id": "poe-covens-of-umbra-cikti-2026-11-13",
   "tarih": "2026-11-13",
   "oyun": "Path of Exile",

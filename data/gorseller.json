@@ -1,4 +1,10 @@
 {
+ "battlefield-6-ucretsiz-deneme-casino-heist-2026-11-13": {
+  "url": "https://drop-assets.ea.com/images/535OGZKDeZV5PWmqp7AALC/674e56a9acf98667d05bd09f64728f88/BF6_S4B3_FreeTrialImage_LogoLockUp_NoLegal_16x9_1920x1080_en-US.png?im=AspectCrop=(16,9),xPosition=0.5,yPosition=0.5",
+  "kaynak": "Electronic Arts — Battlefield 6 ücretsiz deneme sayfası",
+  "en": 1920,
+  "boy": 1080
+ },
  "d2r-legacy-of-terror": {
   "url": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/4i/4IFTV1PGDTC61793910189717.png",
   "kaynak": "Blizzard News",
@@ -104,6 +110,12 @@
  "pubg-update-44-1": {
   "url": "https://wstatic-prod-boc.krafton.com/common/content/news/20261026/4fhxvgil.jpg",
   "kaynak": "PUBG: BATTLEGROUNDS",
+  "en": 1920,
+  "boy": 1080
+ },
+ "r6-siege-operation-vital-signal-duyuruldu-2026-11-15": {
+  "url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2OEc3pchsbPN8y4uhRawR4/daea94815ef21ad76a7d633f79a54458/r6s-y11s3-splitfire.jpg",
+  "kaynak": "Ubisoft — Operation Vital Signal sezon sayfası",
   "en": 1920,
   "boy": 1080
  },
