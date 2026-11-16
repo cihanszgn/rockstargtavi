@@ -133,7 +133,8 @@ jobs:
               echo "Günlük sınır doldu ($dil: $GUNLUK_EN_FAZLA)."; continue
             fi
             echo "Üretiliyor: $id $dil"
-            if python tools/video_uret.py uret --id "$id" --dil "$dil" --yukle; then
+            # </dev/null: üretim süreci döngünün okuduğu listeyi (stdin) yutmasın; yoksa sıradaki satır kaybolur.
+            if python tools/video_uret.py uret --id "$id" --dil "$dil" --yukle < /dev/null; then
               yapilan[$dil]=$(( ${yapilan[$dil]} + 1 ))
             else
               echo "::error::Üretilemedi: $id $dil (sonrakine geçildi)"
