@@ -227,8 +227,14 @@ def ig_video_adresi(v: dict) -> str:
     return v.get("mp4_1080") or v["mp4_720"]
 
 
+def ig_sunucu(token: str) -> str:
+    """Meta'nın yeni uygulamalardaki "Unified login" yolu EAA ile başlayan anahtar verir ve graph.facebook.com
+    üzerinden çalışır; eski Instagram girişi anahtarları (IG...) graph.instagram.com ister (denendi 2026-11-16)."""
+    return "graph.facebook.com" if str(token).startswith("EAA") else "graph.instagram.com"
+
+
 def ig_durum(ag, sir, surum, kid) -> str:
-    _, d = ag.istek("GET", f"https://graph.instagram.com/{surum}/{kid}?" + urllib.parse.urlencode({"fields": "status_code", "access_token": sir["TOKEN"]}))
+    _, d = ag.istek("GET", f"https://{ig_sunucu(sir['TOKEN'])}/{surum}/{kid}?" + urllib.parse.urlencode({"fields": "status_code", "access_token": sir["TOKEN"]}))
     kod = d.get("status_code") if isinstance(d, dict) else None
     if not kod:
         raise PaylasimHatasi(f"Instagram durum yanıtı anlaşılmadı: {str(d)[:200]}")
@@ -249,7 +255,7 @@ def ig_bekle(ag, sir, surum, kid, deneme=12, aralik=5) -> str:
 
 
 def ig_yayimla(ag, sir, surum, kid) -> dict:
-    taban = f"https://graph.instagram.com/{surum}/{sir['USER_ID']}"
+    taban = f"https://{ig_sunucu(sir['TOKEN'])}/{surum}/{sir['USER_ID']}"
     _, yay = ag.istek("POST", f"{taban}/media_publish", veri={"creation_id": kid, "access_token": sir["TOKEN"]})
     mid = yay.get("id") if isinstance(yay, dict) else None
     if not mid:
@@ -260,7 +266,7 @@ def ig_yayimla(ag, sir, surum, kid) -> dict:
 def ig_baglanti(ag, sir, surum, mid) -> str | None:
     """Yayımlanan gönderinin kalıcı bağlantısı; alınamazsa None (paylaşım zaten yapıldı, hata sayılmaz)."""
     try:
-        _, d = ag.istek("GET", f"https://graph.instagram.com/{surum}/{mid}?" + urllib.parse.urlencode({"fields": "permalink", "access_token": sir["TOKEN"]}))
+        _, d = ag.istek("GET", f"https://{ig_sunucu(sir['TOKEN'])}/{surum}/{mid}?" + urllib.parse.urlencode({"fields": "permalink", "access_token": sir["TOKEN"]}))
         p = d.get("permalink") if isinstance(d, dict) else None
         return p if isinstance(p, str) and p.startswith("https://") else None
     except PaylasimHatasi:
@@ -269,7 +275,7 @@ def ig_baglanti(ag, sir, surum, mid) -> str | None:
 
 def ig_paylas(ag, sir, dil, x, ayar, ara, video=None) -> dict:
     surum = ayar.get("instagram_api_surumu", "v27.0")
-    taban = f"https://graph.instagram.com/{surum}/{sir['USER_ID']}"
+    taban = f"https://{ig_sunucu(sir['TOKEN'])}/{surum}/{sir['USER_ID']}"
     if video:
         medya = ig_video_adresi(video)
         veri = {"media_type": "REELS", "video_url": medya, "cover_url": video["kapak"], "share_to_feed": "true"}

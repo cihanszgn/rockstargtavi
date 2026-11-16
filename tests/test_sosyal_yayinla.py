@@ -387,5 +387,11 @@ class Metin(unittest.TestCase):
         self.assertEqual(sy.sayfa_bekle(ag, [haber()], deneme=3, aralik=0), 0)
 
 
+class IgSunucuTests(unittest.TestCase):
+    def test_anahtar_turune_gore_sunucu(self):
+        self.assertEqual(sy.ig_sunucu("EAAYabc"), "graph.facebook.com")
+        self.assertEqual(sy.ig_sunucu("IGAAabc"), "graph.instagram.com")
+
+
 if __name__ == "__main__":
     unittest.main()
