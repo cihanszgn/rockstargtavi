@@ -1,5 +1,51 @@
 [
  {
+  "id": "just-volleyball-resmi-cikis-2026-11-16",
+  "oyun": "Just Volleyball",
+  "tarih": "2026-11-16",
+  "tur": "cikis",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam resmî duyurusu",
+    "url": "https://store.steampowered.com/news/app/5037200/view/676263236341859472"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Just Volleyball resmen çıktı, lansman indirimi var",
+    "ozet": "Yüzde 38 indirim yaklaşık 8 gün sürecek.",
+    "metin": "Just Volleyball resmi olarak yayımlandı. Geliştirici, Steam'deki resmi duyuruda oyuna yaklaşık 8 günlük lansman indirimi geldiğini ve oyunun yüzde 38 indirimle alınabileceğini bildirdi. Demolarda denenemeyen bazı özellikler artık ana oyunda. Kayıt verileri Steam Cloud ile buluta yedekleniyor, dolapta bulunan Fotoğraf Stüdyosu modu eklendi ve üç yeni harita geldi: Nationals Arena, Clouds ve Space. Haritalar çimen veya kumsal, akşam veya gece gibi görünüm seçenekleriyle de geliyor. Oyunda 60'tan fazla başarım ve ödül, günlük ile haftalık hedefler, açılabilecek 500'den fazla unvan ve Sweat, Player Collision, Ball Indicators ile CPU Fill gibi özel lobi ayarları var. Geliştirici sık hata düzeltmeleri, serbest oyun güncellemeleri, antrenman alıştırmaları, yeni harita ve modlar, mevsimlik kozmetik içerikler ve ek müzik parçaları da planladığını yazdı."
+   },
+   "en": {
+    "baslik": "Just Volleyball is out now with a launch discount",
+    "ozet": "38% off on Steam for about 8 days.",
+    "metin": "Just Volleyball has officially launched, according to the developer's Steam announcement. A 38% launch discount is running for about eight days, so players can buy the game at a reduced price during that window. Several features that were not available in the demos are now in the full game. Save data is stored through Steam Cloud, and a Photo Studio mode is available from the locker. Three more maps have been added: Nationals Arena, Clouds and Space. Maps also come in variations such as grass or beach settings, with evening or night lighting. The release includes more than 60 achievements and awards, daily and weekly goals, over 500 titles to unlock, and custom lobby modifiers such as Sweat, Player Collision, Ball Indicators and CPU Fill. The developer also plans frequent bug fixes, freeplay updates, practice drills, new maps and modes, seasonal cosmetic updates and additional music tracks."
+   },
+   "fr": {
+    "baslik": "Just Volleyball est sorti, avec une remise de lancement",
+    "ozet": "38 % de réduction sur Steam pendant environ 8 jours.",
+    "metin": "Just Volleyball est officiellement sorti, selon l'annonce du développeur sur Steam. Une remise de lancement de 38 % est proposée pendant environ huit jours, ce qui permet d'acheter le jeu à prix réduit pendant cette période. Plusieurs fonctions absentes des démos sont désormais dans le jeu complet. Les sauvegardes passent par Steam Cloud et un mode Studio Photo est accessible depuis le casier. Trois cartes supplémentaires arrivent : Nationals Arena, Clouds et Space. Les cartes existent aussi en variantes, comme une surface d'herbe ou de plage, avec un éclairage de soirée ou de nuit. La sortie comprend plus de 60 succès et récompenses, des objectifs quotidiens et hebdomadaires, plus de 500 titres à débloquer, ainsi que des modificateurs de salon personnalisables comme Sweat, Player Collision, Ball Indicators et CPU Fill. Le développeur prévoit aussi des corrections de bugs fréquentes, des mises à jour du mode libre, des exercices d'entraînement, de nouvelles cartes et modes, des contenus cosmétiques saisonniers et d'autres morceaux musicaux."
+   },
+   "es": {
+    "baslik": "Just Volleyball ya está disponible con descuento de lanzamiento",
+    "ozet": "38 % de descuento en Steam durante unos 8 días.",
+    "metin": "Just Volleyball ya se ha lanzado oficialmente, según el anuncio del desarrollador en Steam. Hay un descuento de lanzamiento del 38 % durante unos ocho días, así que se puede comprar el juego a precio reducido en ese periodo. Varias funciones que no estaban en las demos ya forman parte del juego completo. Los datos de guardado se almacenan con Steam Cloud y hay un modo Estudio de fotos accesible desde la taquilla. Se añaden tres mapas más: Nationals Arena, Clouds y Space. Los mapas también tienen variantes, como césped o playa, con iluminación de tarde o de noche. El lanzamiento incluye más de 60 logros y premios, objetivos diarios y semanales, más de 500 títulos por desbloquear y modificadores de sala personalizados como Sweat, Player Collision, Ball Indicators y CPU Fill. El desarrollador también prevé correcciones de errores frecuentes, actualizaciones del modo libre, ejercicios de práctica, nuevos mapas y modos, contenido cosmético de temporada y más pistas musicales."
+   }
+  },
+  "otomasyon": {
+   "konu": "just-volleyball-resmi-cikis-2026-11-16",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/5037200/view/676263236341859472",
+   "teyit_zamani": "2026-11-16T21:01:15+03:00",
+   "oyuncuya_fayda": "Oyuncular indirimli dönemde oyunu alıp yeni haritaları, başarımları ve lobi ayarlarını deneyebilir.",
+   "hype": 5,
+   "eklenme": "2026-11-16T21:03:13.610394+03:00"
+  }
+ },
+ {
   "id": "borderlands-the-hunt-rekor-2026-11-16",
   "oyun": "Borderlands",
   "tarih": "2026-11-16",
