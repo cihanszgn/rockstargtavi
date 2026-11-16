@@ -4,6 +4,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from datetime import datetime, timedelta, timezone
 from unittest.mock import MagicMock, patch
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / 'tools'))
@@ -186,6 +187,108 @@ class HatTests(unittest.TestCase):
         self.assertEqual(body['model'], 'qwen-test')
         self.assertEqual(body['options']['num_ctx'], 4096)
         self.assertEqual(body['format'], 'json')
+
+    # --- aday hafızası ---
+    def _oyunlar(self, games):
+        (self.root / 'data/oyunlar.json').write_text(json.dumps(games, ensure_ascii=False), encoding='utf-8')
+
+    def _aday(self, i, baslik, ad='IGN'):
+        return {'baslik': baslik, 'ad': ad, 'ozet': '', 'kaynak': 'ign', 'tarih': '',
+                'url': f'https://www.ign.com/haber/{i}'}
+
+    def _al(self, hype_of):
+        """Sahte eleme modeli: her aday 'al', puanı hype_of[aday_id]."""
+        def run(stage, models, prompt, validate, **kwargs):
+            items = json.loads(prompt.rsplit('ADAYLAR:', 1)[1])
+            return [{'aday_id': x['aday_id'], 'karar': 'al', 'hype': hype_of[x['aday_id']], 'neden': 'yeni'} for x in items]
+        return run
+
+    def test_second_turn_uses_memory_and_skips_eleme_model(self):
+        self._oyunlar([])
+        candidates = [self._aday(0, 'Yama notu A'), self._aday(1, 'Yama notu B')]
+        with patch.object(self.hat, 'zincir', side_effect=self._al({0: 5, 1: 6})) as first:
+            self.hat.ele(candidates)
+        self.assertEqual(first.call_count, 1)
+        with patch.object(self.hat, 'zincir') as second:
+            self.hat.ele(candidates)
+        second.assert_not_called()
+        self.assertEqual(self.hat.sonuc['hafizadan'], 2)
+
+    def test_writer_skip_is_remembered_and_not_selected_next_turn(self):
+        self._oyunlar([])
+        candidate = self._aday(0, 'Yama notu A')
+        candidate['on_puan'] = 6
+        with patch.object(self.hat, 'prompt', return_value='write'), \
+                patch.object(self.hat, 'zincir', return_value={'durum': 'atla', 'neden': 'güncel değil'}):
+            self.assertIsNone(self.hat.yaz(candidate))
+        with patch.object(self.hat, 'zincir') as run:
+            selected = self.hat.ele([candidate])
+        run.assert_not_called()
+        self.assertEqual(selected, [])
+        self.assertIn('önceki turda atlandı: güncel değil', self.hat.sonuc['atlanan'][-1]['neden'])
+
+    def test_old_records_are_dropped_and_corrupt_file_does_not_stop_run(self):
+        now = datetime.now(timezone.utc)
+        url_new = 'https://www.ign.com/haber/1'
+        path = self.hat.state / 'gorulen.json'
+        path.write_text(json.dumps({
+            'https://www.ign.com/haber/0': {'karar': 'ele', 'hype': 1, 'neden': 'eski',
+                                            'zaman': (now - timedelta(hours=73)).isoformat(), 'asama': 'eleme'},
+            url_new: {'karar': 'ele', 'hype': 1, 'neden': 'yeni', 'zaman': now.isoformat(), 'asama': 'eleme'}}),
+            encoding='utf-8')
+        loaded = h.Hat(self.root, deneme=True, config={'eleme': [], 'yazar': [], 'denetci': []})
+        self.assertEqual(set(loaded.gorulen), {url_new})
+        path.write_text('{bozuk', encoding='utf-8')
+        broken = h.Hat(self.root, deneme=True, config={'eleme': [], 'yazar': [], 'denetci': []})
+        self.assertEqual(broken.gorulen, {})
+
+    def test_same_game_allows_one_candidate_and_next_candidate_fills_slot(self):
+        self._oyunlar([{'ad': 'Takipli', 'eslesme': []}])
+        candidates = [self._aday(0, 'Takipli yama A'), self._aday(1, 'Takipli yama B'),
+                      self._aday(2, 'Diger haber C'), self._aday(3, 'Diger haber D')]
+        with patch.object(self.hat, 'zincir', side_effect=self._al({0: 10, 1: 9, 2: 8, 3: 7})):
+            result = self.hat.ele(candidates)
+        self.assertEqual([x['baslik'] for x in result], ['Takipli yama A', 'Diger haber C', 'Diger haber D'])
+        self.assertIn('aynı oyundan bu tur bir aday yeter', [x['neden'] for x in self.hat.sonuc['atlanan']])
+        self.assertNotIn('https://www.ign.com/haber/1', self.hat.gorulen)
+
+    def test_official_source_beats_higher_scored_press_candidate(self):
+        self._oyunlar([])
+        candidates = [self._aday(0, 'Basın haberi', ad='IGN'), self._aday(1, 'Resmi duyuru', ad='PlayStation Blog')]
+        with patch.object(self.hat, 'zincir', side_effect=self._al({0: 9, 1: 4})):
+            result = self.hat.ele(candidates)
+        self.assertEqual(result[0]['ad'], 'PlayStation Blog')
+
+    def test_dry_run_never_writes_memory(self):
+        self._oyunlar([])
+        with patch.object(self.hat, 'zincir', side_effect=self._al({0: 5})):
+            self.hat.ele([self._aday(0, 'Yama notu A')])
+        self.hat.bitir()
+        self.assertFalse((self.hat.state / 'gorulen.json').exists())
+
+    def test_real_run_saves_memory_for_next_turn(self):
+        self._oyunlar([])
+        config = {'eleme': [], 'yazar': [], 'denetci': []}
+        live = h.Hat(self.root, deneme=False, config=config)
+        with patch.object(live, 'zincir', side_effect=self._al({0: 5})):
+            live.ele([self._aday(0, 'Yama notu A')])
+        live.bitir()
+        again = h.Hat(self.root, deneme=False, config=config)
+        self.assertEqual(again.gorulen['https://www.ign.com/haber/0']['asama'], 'eleme')
+
+    def test_fallback_decision_when_models_fail_is_not_remembered(self):
+        self._oyunlar([])
+        with patch.object(self.hat, 'zincir', return_value=None):
+            self.hat.ele([self._aday(0, 'Yama notu A')])
+        self.assertEqual(self.hat.gorulen, {})
+
+    def test_audit_rejection_is_remembered_for_the_article_source(self):
+        self.hat.haber_adres['a'] = 'https://www.ign.com/haber/0'
+        self.hat.config['denetci'] = [{'ad': 'sonnet'}]
+        verdict = {'kararlar': [{'id': 'a', 'karar': 'ret', 'neden': 'kaynak yok', 'hype': 3}]}
+        with patch.object(self.hat, 'model', return_value=json.dumps(verdict)), patch.object(self.hat, 'prompt', return_value='audit'):
+            self.hat.denetle([{'id': 'a', 'otomasyon': {'hype': 3}}])
+        self.assertEqual(self.hat.gorulen['https://www.ign.com/haber/0']['asama'], 'denetci')
 
 
 if __name__ == '__main__':
