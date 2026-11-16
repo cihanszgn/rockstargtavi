@@ -71,7 +71,7 @@
   // ------------------------------------------------------------ tema
   function temaUygula(t) {
     H.setAttribute('data-tema', t);
-    $$('meta[name="theme-color"]').forEach(function (m) { m.setAttribute('content', t === 'acik' ? '#EDF1F7' : '#0B1322'); });
+    $$('meta[name="theme-color"]').forEach(function (m) { m.setAttribute('content', t === 'acik' ? '#F3F5F9' : '#0D1420'); });
     $$('[data-tema-dugme]').forEach(function (b) { b.setAttribute('aria-pressed', t === 'acik' ? 'true' : 'false'); });
   }
   function temaDegistir(e) {
@@ -674,9 +674,12 @@
     if (eski) {
       try { var o = JSON.parse(eski); if (Date.now() - o.z < 6e5) return Promise.resolve(o); } catch (e) { /* bozuk */ }
     }
-    return fetch(CS + yol, { referrerPolicy: 'no-referrer', credentials: 'omit' })
+    var denetim = new AbortController();
+    var zaman = setTimeout(function () { denetim.abort(); }, 10000);
+    return fetch(CS + yol, { referrerPolicy: 'no-referrer', credentials: 'omit', signal: denetim.signal })
       .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-      .then(function (v) { var o = { z: Date.now(), v: v }; depo.koy(anahtar, JSON.stringify(o), true); return o; });
+      .then(function (v) { var o = { z: Date.now(), v: v }; depo.koy(anahtar, JSON.stringify(o), true); return o; })
+      .finally(function () { clearTimeout(zaman); });
   }
   function sayi(x) { var n = parseFloat(x); return isNaN(n) ? 0 : n; }
   function sade(f) {
@@ -820,6 +823,7 @@
       if (!ekle) {
         durumYaz(M.yukleniyor);
         iskeletAt();
+        if (bos) bos.hidden = true;
         liste.setAttribute('aria-busy', 'true');
         if (!liste.children.length) liste.innerHTML = iskelet(mod === 'mini' ? Math.min(boyut, 5) : 6);
       } else {

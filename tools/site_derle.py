@@ -562,8 +562,8 @@ def kabuk(dil: str, yol: str, baslik: str, aciklama: str, govde: str, *, esler: 
     if gta:
         bas.append(f'<link rel="alternate" type="application/rss+xml" title="{e(t["rss_gta"])} | {MARKA}" href="{SITE}{gta_feed(dil)}">\n')
     bas.append(
-        '<meta name="theme-color" content="#0B1322" media="(prefers-color-scheme: dark)">\n'
-        '<meta name="theme-color" content="#EDF1F7" media="(prefers-color-scheme: light)">\n'
+        '<meta name="theme-color" content="#0D1420" media="(prefers-color-scheme: dark)">\n'
+        '<meta name="theme-color" content="#F3F5F9" media="(prefers-color-scheme: light)">\n'
         '<meta name="color-scheme" content="dark light">\n'
         '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n'
         '<link rel="preload" href="/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>\n'
