@@ -15,8 +15,8 @@
   "tr": {
    "x": false,
    "reddit": false,
-   "instagram": true,
-   "instagram_reel": true,
+   "instagram": false,
+   "instagram_reel": false,
    "youtube": true
   },
   "en": {
@@ -85,5 +85,6 @@
   "ucretsiz": true,
   "rehber": true,
   "arsiv": true
- }
+ },
+ "_instagram_notu": "2026-11-16: Meta 'API access blocked' (kod 200, alt kod 5258005) döndürüyor; engel kalkana kadar TR Instagram kapalı. Açmak için hesaplar.tr.instagram ve instagram_reel true."
 }
