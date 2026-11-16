@@ -74,6 +74,10 @@ def bul(manifest: dict, haber_id: str, dil: str) -> dict | None:
     v = ((manifest.get("videolar") or {}).get(haber_id) or {}).get(dil)
     if not isinstance(v, dict):
         return None
+    # İlk videolar Cio'nun onayıyla yayımlanır: onaylanmamış video üretilip sunucuda durur,
+    # ama sitede ve sosyal paylaşımda yok sayılır. Onay: `py tools/video_site.py onayla <haber id>`.
+    if manifest.get("onay_gerekli", True) and v.get("onay") is not True:
+        return None
     taban = manifest["taban"] if manifest["taban"].endswith("/") else manifest["taban"] + "/"
     ad = {a: _dosya(v, a) for a in ("mp4_540", "mp4_720", "mp4_1080", "kapak", "vtt")}
     sure = v.get("sure")
@@ -102,6 +106,28 @@ def baglanti_yaz(yol: pathlib.Path, haber_id: str, dil: str, alan: str, url: str
     v[alan] = url
     yol.write_text(json.dumps(ham, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     return True
+
+
+def onay_yaz(yol: pathlib.Path, haber_id: str, dil: str, onay: bool = True) -> bool:
+    """Videoyu yayına açar (ya da geri çeker); başka hiçbir alana dokunmaz. Kayıt yoksa False."""
+    try:
+        ham = json.loads(yol.read_text(encoding="utf-8"))
+        v = ham["videolar"][haber_id][dil]
+    except (OSError, ValueError, KeyError, TypeError):
+        return False
+    if v.get("onay") is not onay:
+        v["onay"] = onay
+        yol.write_text(json.dumps(ham, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    return True
+
+
+def onay_bekleyenler(manifest: dict) -> list[tuple[str, str, str]]:
+    """(haber id, dil, 540 sürümünün adresi): üretilmiş ama henüz onaylanmamış videolar."""
+    taban = (manifest.get("taban") or "").rstrip("/") + "/"
+    return [(hid, dil, taban + str(v.get("mp4_540") or ""))
+            for hid, diller in sorted((manifest.get("videolar") or {}).items())
+            for dil, v in sorted((diller or {}).items())
+            if isinstance(v, dict) and v.get("onay") is not True]
 
 
 # ---------------------------------------------------------------- HTML
@@ -186,3 +212,11 @@ if __name__ == "__main__":
     from datetime import datetime, timezone
     if sys.argv[1:2] == ["bugun"]:  # workflow: bugün kaç video üretildi
         print(bugun_uretilen(yukle(), datetime.now(timezone.utc).strftime("%Y-%m-%d")))
+    elif sys.argv[1:2] == ["onay-bekleyenler"]:
+        for hid, dil, adres in onay_bekleyenler(yukle()):
+            print(hid, dil, adres)
+    elif sys.argv[1:2] in (["onayla"], ["geri-cek"]) and len(sys.argv) >= 3:
+        dil = sys.argv[3] if len(sys.argv) > 3 else "tr"
+        tamam = onay_yaz(MANIFEST_YOLU, sys.argv[2], dil, sys.argv[1] == "onayla")
+        print("tamam" if tamam else "kayıt bulunamadı")
+        sys.exit(0 if tamam else 1)

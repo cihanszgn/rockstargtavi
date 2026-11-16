@@ -119,7 +119,7 @@ class Temel(unittest.TestCase):
     def manifest_yaz(self, hid="oyun-yama-1", dil="tr"):
         self.manifest.write_text(json.dumps({"surum": 1, "taban": "https://medya.test/v/", "videolar": {hid: {dil: {
             "anahtar": "k", "sure": 30.0, "mp4_1080": "a1080.mp4", "mp4_720": "a720.mp4", "mp4_540": "a540.mp4",
-            "kapak": "a.jpg", "vtt": "a.vtt", "uretildi": "2026-11-15T10:00:00+00:00", "ozel": "kalsin"}}}}), encoding="utf-8")
+            "kapak": "a.jpg", "vtt": "a.vtt", "uretildi": "2026-11-15T10:00:00+00:00", "ozel": "kalsin", "onay": True}}}}), encoding="utf-8")
 
     def calistir(self, ag, ayar_, veri=None, dry=False, tum=None, simdi=SIMDI):
         return sy.calistir(ayar_, veri if veri is not None else [haber()], kayit_yolu=self.kayit, manifest_yolu=self.manifest,

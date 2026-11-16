@@ -16,9 +16,38 @@ TABAN = "https://medya.test/v/"
 
 def girdi(**degisim):
     v = {"anahtar": "k", "sure": 31.4, "mp4_1080": "a1080.mp4", "mp4_720": "a720.mp4", "mp4_540": "a540.mp4",
-         "kapak": "a.jpg", "vtt": "a.vtt", "uretildi": "2026-11-15T10:00:00+00:00", "youtube": None, "instagram": None}
+         "kapak": "a.jpg", "vtt": "a.vtt", "uretildi": "2026-11-15T10:00:00+00:00", "youtube": None, "instagram": None,
+         "onay": True}
     v.update(degisim)
     return v
+
+
+class OnayTests(unittest.TestCase):
+    def test_onaysiz_video_yok_sayilir(self):
+        self.assertIsNone(vs.bul(manifest("h1", onay=False), "h1", "tr"))
+        eksik = manifest("h1")
+        del eksik["videolar"]["h1"]["tr"]["onay"]
+        self.assertIsNone(vs.bul(eksik, "h1", "tr"))
+        self.assertIsNotNone(vs.bul(manifest("h1"), "h1", "tr"))
+
+    def test_onay_gerekli_kapatilinca_onaysiz_da_gorunur(self):
+        m = manifest("h1", onay=False)
+        m["onay_gerekli"] = False
+        self.assertIsNotNone(vs.bul(m, "h1", "tr"))
+
+    def test_onay_yaz_ve_bekleyenler(self):
+        with tempfile.TemporaryDirectory() as d:
+            p = pathlib.Path(d) / "videolar.json"
+            p.write_text(json.dumps(manifest("h1", onay=False, ozel="kalsin")), encoding="utf-8")
+            self.assertEqual(vs.onay_bekleyenler(vs.yukle(p)), [("h1", "tr", TABAN + "a540.mp4")])
+            self.assertTrue(vs.onay_yaz(p, "h1", "tr"))
+            yeni = vs.yukle(p)
+            self.assertEqual(vs.onay_bekleyenler(yeni), [])
+            self.assertEqual(yeni["videolar"]["h1"]["tr"]["ozel"], "kalsin")
+            self.assertIsNotNone(vs.bul(yeni, "h1", "tr"))
+            self.assertTrue(vs.onay_yaz(p, "h1", "tr", False))
+            self.assertIsNone(vs.bul(vs.yukle(p), "h1", "tr"))
+            self.assertFalse(vs.onay_yaz(p, "yok", "tr"))
 
 
 def manifest(hid, dil="tr", **degisim):
