@@ -5,17 +5,41 @@
   "en": 1920,
   "boy": 1080
  },
+ "borderlands-the-hunt-rekor-2026-11-16": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1285190/library_hero.jpg",
+  "kaynak": "Steam",
+  "en": 1920,
+  "boy": 620
+ },
  "d2r-legacy-of-terror": {
   "url": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/4i/4IFTV1PGDTC61793910189717.png",
   "kaynak": "Blizzard News",
   "en": 1520,
   "boy": 540
  },
+ "delta-force-brakkesh-2-gelistirici-notlari-2026-11-15": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2507950/library_hero.jpg",
+  "kaynak": "Steam",
+  "en": 1920,
+  "boy": 620
+ },
+ "epic-free-knightica-nov-19": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3093400/library_hero.jpg",
+  "kaynak": "Steam",
+  "en": 1920,
+  "boy": 620
+ },
  "fable-deepwood-oynanis-incelemesi-2026-11-13": {
   "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Wire_EP290-b452df595ddb7f22b68e.jpg",
   "kaynak": "Xbox Wire — Playground Games ile resmî podcast",
   "en": 1920,
   "boy": 1080
+ },
+ "football-manager-27-27-1-0-guncelleme-2026-11-16": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4530370/58ff694d0b284789666cea9601d774acbcc415ea/page_bg_raw.jpg?t=1794483499",
+  "kaynak": "Steam",
+  "en": 1438,
+  "boy": 810
  },
  "football-manager-27-launch": {
   "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/FM27-Xbox-Key-Art-Request_Horizontal-1920x1080-1-7cfa15cafc015bcbca57.jpg",
@@ -35,6 +59,12 @@
   "en": 1920,
   "boy": 1080
  },
+ "gta6-youtube-yayin": {
+  "url": "https://www.rockstargames.com/VI/_next/static/media/meta.0t8ty~nlmxq2s.jpg?yvw8ZozOI7a7Kz1war9qe",
+  "kaynak": "Rockstar Games",
+  "en": 1200,
+  "boy": 630
+ },
  "guild-saga-ps5-mayis-2027": {
   "url": "https://blog.playstation.com/tachyon/2026/11/b76ffd50c3d63cbe3bcbf54cd2965dceb1a4e8b5.png",
   "kaynak": "PlayStation Blog — Ocelot Technologies",
@@ -46,6 +76,18 @@
   "kaynak": "Xbox Wire",
   "en": 1920,
   "boy": 1080
+ },
+ "ko-guncelleme-2026-11-12": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/389430/library_hero.jpg",
+  "kaynak": "Steam",
+  "en": 1920,
+  "boy": 620
+ },
+ "ko-yeni-sunucu-2026-11-12": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/389430/library_hero.jpg",
+  "kaynak": "Steam",
+  "en": 1920,
+  "boy": 620
  },
  "lol-new-dawn-2027-teaser": {
   "url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/d3b7bd9decb1e1672dcb80be4f8bc1aa05490dc1-110x70.svg?accountingTag=LoL?w=1200&h=630&fm=webp&fit=crop&crop=center",
@@ -95,6 +137,12 @@
   "en": 800,
   "boy": 800
  },
+ "pokopia-apples-to-applin-2026-11-16": {
+  "url": "https://assets.nintendo.com/image/upload/c_fill,w_1200,h_630/q_auto/f_auto/dpr_2.0/ncom/My%20Nintendo%20Store/EN-US/Nintendo%20Switch%202/Software/Pokemon%20Pokopia/121593-nintendo-pokemon-pokopia-2000x2000",
+  "kaynak": "Nintendo",
+  "en": 2400,
+  "boy": 1260
+ },
  "ps-plus-catalog-november-2026": {
   "url": "https://blog.playstation.com/tachyon/2026/11/6ae8af767f59801bb5a0ceabf7fe915f00eed004.jpg",
   "kaynak": "PlayStation Blog",
@@ -118,6 +166,18 @@
   "kaynak": "Ubisoft — Operation Vital Signal sezon sayfası",
   "en": 1920,
   "boy": 1080
+ },
+ "selaco-chapter-2-machines-of-war-cikti-2026-11-13": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1592280/library_hero.jpg",
+  "kaynak": "Steam",
+  "en": 1920,
+  "boy": 620
+ },
+ "slay-the-spire-2-beta-0-113-1-turkce-duzeltme-2026-11-14": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2868840/library_hero.jpg",
+  "kaynak": "Steam",
+  "en": 1920,
+  "boy": 620
  },
  "valorant-patch-13-10": {
   "url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/296cff0d10e916f8a529ec9b60da134f0c80a448-1920x1080.png?accountingTag=VAL?w=1200&h=630&fm=webp&fit=crop&crop=center",
