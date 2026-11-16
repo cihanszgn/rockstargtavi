@@ -13,7 +13,7 @@ on:
     types: [completed]
     branches: [main]
   schedule:
-    - cron: "17 7,10,13,16,19 * * *"   # Türkiye saatiyle 10:17, 13:17, 16:17, 19:17, 22:17
+    - cron: "17 * * * *"   # Türkiye saatiyle 10:17, 13:17, 16:17, 19:17, 22:17
   workflow_dispatch:
     inputs:
       deneme:
