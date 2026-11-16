@@ -20,11 +20,21 @@ Nintendo HTML listesinden aday alınır ve tarih haber sayfasında doğrulanır.
 
 ## Zamanlama ve çalışma
 
-T3 Code zamanlayıcısında Türkiye saatiyle 00:00–23:00 için 24 günlük tetik aynı `saatlik-gorev.txt` işini yürütür; zamanlayıcı tek kayıtta yalnız bir sabit saat desteklediği için böyle kuruldu. Bu, 24 bağımsız yayın işi değil aynı akışın saatlik tetikleridir. İşler yeni oturumla mevcut konuşmada çalışır. Zamanlama tam saat içindir; yürütme ortamının erişilebilirliği/sağlayıcı kotası fiilî başlama süresini etkileyebilir. Bilgisayar kapalıyken çalışacağı iddia edilmez; dışarıda yeni ücretli sunucu/API kurulmadı.
+Turu `py tools/haber_hatti.py` yönetir; pahalı bir yönetici model yoktur. Windows Görev Zamanlayıcı'daki `ctrl-agame saatlik haber` görevi her saat başında `conhost.exe --headless` üzerinden çalışır; çalışma klasörü proje köküdür. `otomasyon/zamanla.ps1` varsayılan olarak yalnız görev XML'ini önizler; yönetici incelemesi sonrası `-Kaydet` ile kaydedilir. Bu geçişte görev kaydedilmez/etkinleştirilmez. Eski T3 saatlik tetikleri artık kullanılmaz. Bilgisayarın ve kullanıcı oturumunun açık, CLI oturumlarının erişilebilir olması gerekir.
+
+Python önce 45 dakikalık ortak kilidi alır, temiz main ve uzak HEAD eşitliğini kontrol eder, `git pull --ff-only` yapar ve başlangıç kopyasını saklar. `haber_oto.py tara` 10 kaynaktan adayları çıkarır. Qwen3 8B (yedek Gemma3 4B) küçük parçalar halinde kapsam, anlam tekrarı ve hype ön puanı verir; kod takipli oyunları/yüksek puanı önceleyip en çok üç aday seçer. Yerel karar ön elemedir; gerçek teyit yazara ve denetçiye aittir.
+
+Yerel çağrı, mevcut `yerel_sor.py` içindeki model/adres kaydını yeniden kullanır; bu dosyayı değiştirmez. 6 GB VRAM için dört aday/parça, 4096 bağlam ve sınırlı JSON çıktısı kullanılır. Yerel zaman aşımı/erişim hatasında model o turun kalan parçalarında tekrar çağrılmaz; sıradaki yerel yedeğe geçilir. Model bulunamazsa adaylar teyitli kabul edilmez.
+
+Yazar sırası OpenCode `opencode/big-pickle` → Haiku → Sonnet'tir. Yazar resmî sayfayı okuyup dört dili ve gerekiyorsa video senaryosunu JSON olarak döndürür; Python yalnız belirlenmiş çalışma dosyalarına kaydeder. Her çıktı mevcut `hazirla` komutuyla kuru doğrulanır; biçim/şema hatasında aynı modele bir düzeltme, sonra sıradaki modele geçiş yapılır. Ajanlar sır içermeyen geçici klasörde, yalnız web ve kasa arama araçlarıyla çalışır. Ücretsiz OpenCode çağrısı kullanıcı ortamı, global yapılandırma ve anahtarları taşımaz. Çalışma ağacındaki izinsiz değişiklik geri alınır ve çıktı reddedilir.
+
+Sonnet paketteki her resmî sayfayı bağımsız okuyup onay/ret ve gerekirse düzeltilmiş hype verir; çağrı/JSON hatasında bir kez Opus denenir. Denetçi çalışmazsa yayın yoktur. Reddedilen haber çıkarılır; yükselen hype eşiği geçip senaryo yoksa haber bu tur atlanır. Python onaylı paketi yeniden `hazirla` ile doğrular; uygulama, görsel alma, derleme, bağlantı/test/diff kontrolleri geçerse yalnız izinli yayın dosyalarını commit/push eder. Push reddinde bir rebase ve yeniden kontrol yapılır; belirsizlikte ikinci push yoktur. Canlı yeni haber sayfası en çok beş dakika izlenir.
+
+`py tools/haber_hatti.py --deneme` gerçek tarama, yerel eleme, yazar ve denetimi çalıştırır; yayın aşamasını tamamen atlar. Onaylı/yazılmış paket, denetim, deneme senaryoları ve `sonuc.json` `.git/haber-oto/` içinde kalır; depo başlangıç durumuna döner. `hat.log` her tur için tek satır yazar. Aşama başına sıralı model komutları ve zaman aşımları `modeller.json`, görev metinleri `yazar-gorev.txt` ve `denetci-gorev.txt` içindedir. Toplam süre 43 dakika ile sınırlıdır; kilit her çıkışta bırakılır. Kaynak erişim eksikleri sonuçta açıkça kaydedilir; bütün kaynakların tam araştırıldığı varsayılmaz.
 
 Her tur 10 kaynak, son 48 saat; en fazla 3 haber/tur ve 12 haber/TR günü. Dört dil zorunlu. Aynı kaynak URL'si, normalize başlık, id veya olay kimliği yeniden eklenmez. `otomasyon.konu` aynı olayın farklı kaynaklarında da aynı kalmalıdır. Legacy kayıtlar için anlam denetimini ajan yapar. Kotalar `kaynaklar.json` içindedir. Haber doğrulamasını ajan yapar; Python içerik doğruluğunu veya özgünlüğünü kendi başına ispatlayamaz.
 
-Günlük 10:00 takvim görevi korunur, saatlik haber görevinden ayrı planlı bakım/CIO hatırlatmaları yapar; aynı yayın kilidini kullanır ve rutin haber taramasını tekrar yapmaz. Sosyal medya kotaları korunur.
+Günlük takvim/bakım akışı bu hattan ayrıdır; aynı yayın kilidini kullanmalıdır. Haber hattı sosyal paylaşım veya video üretim komutunu doğrudan çalıştırmaz; sosyal medya kotaları korunur.
 
 ## Komutlar
 
@@ -100,4 +110,4 @@ Bir kaynak başarısız olsa da diğerleri araştırılır; eksik kaynağın kon
 
 Testler: id/URL/başlık/olay tekrarları, HTTPS/sahte alt alan adı, dört dil, eski/gelecek tarih, resmî kaynak şartı, günlük/tur kotası, kilit sahibi/süresi, RSS ayrıştırma ve kırık bağlantı. Canlı tarama 2026-11-15'te 10 kaynak ve 83 aday döndürdü. `kontrol` 313 sayfada 22.119 bağlantı, sıfır kırık bağlantı buldu (yeni içerikle adetler artabilir).
 
-Otomasyonu durdurmak için `otomasyon/t3-gorevler.json` dosyasındaki saatlik görev kimliklerine `schedule_task(enabled=false)` uygulanır. Günlük bakım görevi ayrıca listelenmiştir; bağımsızdır. Kimlikler sır değildir; anahtarlar hiçbir dosyaya yazılmaz.
+Otomasyonu durdurmak için Windows'ta `Disable-ScheduledTask -TaskName 'ctrl-agame saatlik haber'` kullanılır. Görev henüz kurulmamışsa durdurulacak saatlik tetik yoktur. Günlük bakım bağımsızdır; anahtarlar hiçbir dosyaya yazılmaz.
