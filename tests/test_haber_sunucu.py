@@ -138,10 +138,13 @@ class SunucuTests(unittest.TestCase):
     def test_sync_failures_do_not_abort_real_turn_and_memory_is_saved(self):
         self._enable_sync()
         original = h.calistir
+        platform = sys.platform
         def dispatch(argv, *args, **kwargs):
             if argv[0] == 'ssh':
                 raise RuntimeError('ssh disconnected')
-            return original(argv, *args, **kwargs)
+            # Windows koşulunu sınarken Linux shutil.which içindeki _winapi yoluna girme.
+            with patch.object(sys, 'platform', platform):
+                return original(argv, *args, **kwargs)
         with patch.object(sys, 'platform', 'win32'), \
              patch.object(h, 'calistir', side_effect=dispatch), \
              patch.object(self.hat, 'hazirlik'), \
