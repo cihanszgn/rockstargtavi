@@ -48,10 +48,13 @@
  "video": {
   "ses": "azure",
   "konusmaci": {
-   "tr": "tr-TR-Aydin:MAI-Voice-2.1",
-   "en": "en-US-AndrewNeural",
-   "es": "es-ES-AlvaroNeural",
-   "fr": "fr-FR-HenriNeural"
+   "tr": ["tr-TR-Aydin:MAI-Voice-2.1", "tr-TR-EmelNeural", "tr-TR-AhmetNeural"],
+   "en": ["en-US-AndrewNeural", "en-US-AvaNeural", "en-US-BrianNeural"],
+   "es": ["es-ES-AlvaroNeural", "es-ES-ElviraNeural", "es-MX-JorgeNeural"],
+   "fr": ["fr-FR-HenriNeural", "fr-FR-DeniseNeural", "fr-FR-RemyMultilingualNeural"],
+   "de": ["de-DE-ChristophNeural", "de-DE-TanjaNeural", "de-AT-JonasNeural"],
+   "nl": ["nl-NL-MaartenNeural", "nl-NL-ColetteNeural", "nl-BE-ArnaudNeural"],
+   "zh": ["zh-CN-YunxiNeural", "zh-CN-XiaoxiaoNeural", "zh-CN-YunjianNeural"]
   },
   "yukleme_hedefi": "medyayukle@medya.ctrl-agame.com:/var/www/medya/v/",
   "gunluk_en_fazla": 2,

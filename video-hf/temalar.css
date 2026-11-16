@@ -1,0 +1,103 @@
+/* Tema paketleri. Her paket: yazı tipi çifti, doku, kart biçimi, geçiş (motor.js) ve süs (motor.js dekorKur).
+   Palet değişkenleri video_hf.py'den gelir: --bg --bg2 --ana --ana2 --vurgu --yazi --kagit --murekkep ve
+   *-yazi (üstüne konan okunur renk), --ana-acik, --ana-koyu, --vurgu-kagit, --ana-kagit (kontrast denetimli). */
+
+/* ---------------- 1) ESPORS: e-spor afişi, eğik bloklar, yarım ton ---------------- */
+.p-esports{--f-d:Anton,NotoSC,sans-serif;--f-d-w:400;--f-d-tt:uppercase;--f-d-ls:.01em;--f-d-lh:.98;
+  --f-b:BarlowC,NotoSC,sans-serif;--f-q:BarlowC,NotoSC,sans-serif;--f-q-w:800;
+  --f-c:BarlowC,NotoSC,sans-serif;--f-c-w:900;--f-c-tt:uppercase;
+  --zemin:var(--bg);--yz:var(--yazi);--chip2:var(--ana);--chip2-yazi:var(--ana-yazi);
+  --vurgu-bg:var(--vurgu);--vurgu-yazi2:var(--vurgu-yazi);--ilerleme:var(--vurgu);--ilerleme-bos:rgba(255,255,255,.22);
+  --logo-bg:var(--yazi);--logo-yazi:var(--bg);--logo-ad:var(--yazi);--alt-yazi:var(--yazi);--alt-golge:0 4px 0 rgba(0,0,0,.55)}
+.p-esports #zemin{background:linear-gradient(165deg,var(--bg2) 0%,var(--bg) 62%)}
+.p-esports #zemin::before{content:"";position:absolute;inset:0;background:radial-gradient(var(--ana) 24%,transparent 26%) 0 0/28px 28px;opacity:.2;-webkit-mask-image:linear-gradient(to bottom,transparent 40%,#000 100%);mask-image:linear-gradient(to bottom,transparent 40%,#000 100%)}
+.p-esports #zemin::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.045) 0 2px,transparent 2px 16px)}
+.p-esports .k1{background:var(--ana);color:var(--ana-yazi);transform:skewX(-6deg);box-shadow:10px 10px 0 rgba(0,0,0,.4)}
+.p-esports .k2{background:var(--yazi);color:var(--bg);transform:skewX(-6deg);box-shadow:10px 10px 0 var(--vurgu)}
+.p-esports .k3{background:var(--vurgu);color:var(--vurgu-yazi);transform:skewX(-6deg);box-shadow:10px 10px 0 rgba(0,0,0,.4)}
+.p-esports .chip{transform:skewX(-8deg)}
+.p-esports .bk-foto{border:6px solid var(--yazi);box-shadow:14px 14px 0 var(--ana)}
+.p-esports .bk-foto::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,var(--ana) 0%,transparent 38%);mix-blend-mode:multiply;opacity:.55}
+.p-esports .bk-tarih{background:var(--vurgu);color:var(--vurgu-yazi);transform:rotate(-3deg)}
+.p-esports .bk-tuslar kbd{background:var(--yazi);color:var(--bg);box-shadow:5px 5px 0 var(--vurgu);transform:skewX(-6deg)}
+.p-esports .bk-baslik{text-shadow:6px 6px 0 rgba(0,0,0,.45)}
+.p-esports #sub .w.on{background:var(--vurgu);color:var(--vurgu-yazi);transform:scale(1.1) skewX(-6deg);text-shadow:none}
+.p-esports #sub .pl{-webkit-text-stroke:2px rgba(0,0,0,.6);paint-order:stroke fill}
+
+/* ---------------- 2) GAZETE: gazete manşeti, kâğıt, mürekkep ---------------- */
+.p-gazete{--f-d:Playfair,NotoSC,serif;--f-d-w:900;--f-d-tt:none;--f-d-ls:-.01em;--f-d-lh:1;
+  --f-b:BarlowC,NotoSC,sans-serif;--f-q:Playfair,NotoSC,serif;--f-q-w:800;
+  --f-c:Playfair,NotoSC,serif;--f-c-w:900;--f-c-tt:none;
+  --zemin:var(--kagit);--yz:var(--murekkep);--chip2:var(--murekkep);--chip2-yazi:var(--kagit);
+  --vurgu-bg:var(--vurgu-kagit);--vurgu-yazi2:var(--kagit);--ilerleme:var(--murekkep);--ilerleme-bos:rgba(0,0,0,.18);
+  --logo-bg:var(--murekkep);--logo-yazi:var(--kagit);--logo-ad:var(--murekkep);--alt-yazi:var(--murekkep);--alt-golge:none}
+.p-gazete #zemin{background:var(--kagit)}
+.p-gazete #zemin::before{content:"";position:absolute;inset:0;background:repeating-radial-gradient(circle at 17% 32%,rgba(0,0,0,.05) 0 1px,transparent 1px 3px),repeating-radial-gradient(circle at 83% 71%,rgba(0,0,0,.04) 0 1px,transparent 1px 4px)}
+.p-gazete #zemin::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 0 25%,rgba(0,0,0,.14) 25% calc(25% + 2px),transparent calc(25% + 2px) 50%,rgba(0,0,0,.14) 50% calc(50% + 2px),transparent calc(50% + 2px) 75%,rgba(0,0,0,.14) 75% calc(75% + 2px),transparent calc(75% + 2px))}
+.p-gazete .d{text-transform:none}
+.p-gazete .b,.p-gazete .chip{text-transform:uppercase;letter-spacing:.06em}
+.p-gazete .k1{background:var(--murekkep);color:var(--kagit);box-shadow:none}
+.p-gazete .k2{background:var(--kagit);color:var(--murekkep);border:5px double var(--murekkep)}
+.p-gazete .k3{background:var(--vurgu-kagit);color:var(--kagit)}
+.p-gazete .bk-foto{border:5px solid var(--murekkep);outline:3px solid var(--murekkep);outline-offset:6px}
+.p-gazete .bk-foto img{filter:grayscale(1) contrast(1.15)}
+.p-gazete .bk-foto::after{content:"";position:absolute;inset:0;background:var(--ana);mix-blend-mode:multiply;opacity:.38}
+.p-gazete .bk-tarih{background:var(--kagit);color:var(--murekkep);border:4px solid var(--murekkep);transform:rotate(2deg)}
+.p-gazete .bk-tuslar kbd{background:var(--kagit);color:var(--murekkep);border:4px solid var(--murekkep);font-family:var(--f-d)}
+.p-gazete .bk-baslik{border-top:8px double var(--murekkep);border-bottom:8px double var(--murekkep);padding:14px 0;font-size:112px}
+.p-gazete .yf-eski,.p-gazete .fy-eski{text-decoration-color:var(--vurgu-kagit)}
+.p-gazete #sub .w.on{background:var(--murekkep);color:var(--kagit)}
+.p-gazete .tr-takvim span.on{background:var(--vurgu-kagit);color:var(--kagit)}
+
+/* ---------------- 3) NEON: sentetik dalga, ızgara, parıltı (teknik/yama) ---------------- */
+.p-neon{--f-d:Chakra,NotoSC,sans-serif;--f-d-w:700;--f-d-tt:uppercase;--f-d-ls:.02em;--f-d-lh:1;
+  --f-b:BarlowC,NotoSC,sans-serif;--f-q:Chakra,NotoSC,sans-serif;--f-q-w:700;
+  --f-c:Chakra,NotoSC,sans-serif;--f-c-w:700;--f-c-tt:uppercase;
+  --zemin:var(--bg);--yz:var(--yazi);--chip2:transparent;--chip2-yazi:var(--ana-acik);
+  --vurgu-bg:var(--vurgu);--vurgu-yazi2:var(--vurgu-yazi);--ilerleme:var(--vurgu);--ilerleme-bos:rgba(255,255,255,.18);
+  --logo-bg:transparent;--logo-yazi:var(--ana-acik);--logo-ad:var(--yazi);--alt-yazi:var(--yazi);--alt-golge:0 0 18px var(--ana)}
+.p-neon #zemin{background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 55%,var(--bg) 100%)}
+.p-neon #zemin::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.28) 0 2px,transparent 2px 5px);opacity:.5}
+.p-neon .k1{background:rgba(0,0,0,.5);color:var(--yazi);border:3px solid var(--ana-acik);box-shadow:0 0 26px var(--ana),inset 0 0 22px rgba(255,255,255,.05)}
+.p-neon .k2{background:rgba(0,0,0,.5);color:var(--yazi);border:3px solid var(--vurgu);box-shadow:0 0 26px var(--vurgu),inset 0 0 22px rgba(255,255,255,.05)}
+.p-neon .k3{background:var(--vurgu);color:var(--vurgu-yazi);box-shadow:0 0 34px var(--vurgu)}
+.p-neon .chip.c-alt{border:3px solid var(--ana-acik);box-shadow:0 0 18px var(--ana)}
+.p-neon .bk-foto{border:3px solid var(--ana-acik);box-shadow:0 0 36px var(--ana)}
+.p-neon .bk-foto img{filter:saturate(1.2) contrast(1.05) brightness(.9)}
+.p-neon .bk-foto::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.3) 0 2px,transparent 2px 5px)}
+.p-neon .bk-tarih{background:var(--vurgu);color:var(--vurgu-yazi)}
+.p-neon .bk-tuslar kbd{background:rgba(0,0,0,.5);color:var(--ana-acik);border:3px solid var(--ana-acik);box-shadow:0 0 18px var(--ana)}
+.p-neon .bk-baslik{text-shadow:0 0 28px var(--ana);font-size:100px}
+.p-neon .tr-buyuk,.p-neon .yf-yeni,.p-neon .fy-yeni,.p-neon .fy-etiket,.p-neon .pf-deger{text-shadow:0 0 30px var(--ana)}
+.p-neon #sub .w.on{color:var(--vurgu);text-shadow:0 0 22px var(--vurgu);transform:scale(1.1)}
+
+/* ---------------- 4) KOLAJ: pop yapıştırma, kalın çizgi, eğik etiketler ---------------- */
+.p-kolaj{--f-d:Lilita,NotoSC,sans-serif;--f-d-w:400;--f-d-tt:uppercase;--f-d-ls:.02em;--f-d-lh:1;
+  --f-b:BarlowC,NotoSC,sans-serif;--f-q:BarlowC,NotoSC,sans-serif;--f-q-w:900;
+  --f-c:Lilita,NotoSC,sans-serif;--f-c-w:400;--f-c-tt:uppercase;
+  --zemin:var(--ana-koyu);--yz:#fff;--chip2:#fff;--chip2-yazi:#111;
+  --vurgu-bg:var(--vurgu);--vurgu-yazi2:var(--vurgu-yazi);--ilerleme:var(--vurgu);--ilerleme-bos:rgba(255,255,255,.3);
+  --logo-bg:#fff;--logo-yazi:#111;--logo-ad:#fff;--alt-yazi:#fff;--alt-golge:0 5px 0 #111}
+.p-kolaj #zemin{background:var(--ana-koyu)}
+.p-kolaj #zemin::before{content:"";position:absolute;inset:0;background:radial-gradient(rgba(255,255,255,.2) 22%,transparent 24%) 0 0/34px 34px;-webkit-mask-image:linear-gradient(135deg,#000 0%,transparent 60%);mask-image:linear-gradient(135deg,#000 0%,transparent 60%)}
+.p-kolaj .k1,.p-kolaj .k2,.p-kolaj .k3{border:6px solid #111;box-shadow:9px 9px 0 #111;border-radius:22px}
+.p-kolaj .k1{background:var(--ana2);color:var(--ana2-yazi)}
+.p-kolaj .k2{background:#fff;color:#111}
+.p-kolaj .k3{background:var(--vurgu);color:var(--vurgu-yazi)}
+.p-kolaj .chip{border:5px solid #111;border-radius:999px;box-shadow:5px 5px 0 #111}
+.p-kolaj .c-alt{background:#fff;color:#111}
+.p-kolaj .bk-foto{border:7px solid #111;border-radius:26px;box-shadow:12px 12px 0 #111;transform:rotate(-1.5deg)}
+.p-kolaj .bk-foto img{filter:saturate(1.3) contrast(1.1)}
+.p-kolaj .bk-tarih{background:var(--vurgu);color:var(--vurgu-yazi);border:5px solid #111;border-radius:14px;box-shadow:5px 5px 0 #111;transform:rotate(4deg)}
+.p-kolaj .bk-tuslar kbd{background:#fff;color:#111;border:5px solid #111;border-radius:16px;box-shadow:5px 5px 0 #111}
+.p-kolaj .bk-baslik{text-shadow:0 7px 0 #111;font-size:118px}
+.p-kolaj .bk-baslik mark{border-radius:10px;box-shadow:0 5px 0 #111}
+.p-kolaj #sub .w.on{background:var(--vurgu);color:var(--vurgu-yazi);border-radius:12px;transform:scale(1.1) rotate(-2deg);text-shadow:none}
+.p-kolaj .tr-takvim span{border-radius:10px}
+.p-kolaj #sub .pl{-webkit-text-stroke:2px #111;paint-order:stroke fill}
+
+/* ortak: takvim işaretli günler, yama çubukları, platform renkleri */
+.tr-takvim span.on{background:var(--vurgu);color:var(--vurgu-yazi);font-weight:900}
+.yf-bar i{background:currentColor}
+.yf-bar i.e{opacity:.45}
+.pf-rozet.ps{background:#0d3a9e;color:#fff}.pf-rozet.xbox{background:#107c10;color:#fff}.pf-rozet.pc{background:#1b2838;color:#fff}.pf-rozet.switch{background:#e60012;color:#fff}.pf-rozet.mobil{background:#6a1fd0;color:#fff}.pf-rozet.diger{background:#444;color:#fff}

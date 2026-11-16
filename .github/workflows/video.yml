@@ -1,5 +1,5 @@
-# Yeni haberler için dikey haber videosu üretir (Remotion + Azure Speech), sunucuya yükler,
-# data/videolar.json'a yazar. Hesap/anahtar yoksa iş temiz biçimde boşta biter.
+# Yeni haberler için dikey haber videosu üretir (Hyperframes + Azure Speech; habere özel tema), sunucuya yükler,
+# data/videolar.json'a yazar. Eski Remotion yolu yalnız yerelde `--motor remotion` ile kalır (burada kurulmaz). Hesap/anahtar yoksa iş temiz biçimde boşta biter.
 # Dört dil (tr en es fr) sırayla işlenir; günlük kota dil başınadır. Bir dilin hatası diğerlerini durdurmaz,
 # iş sonunda hata olarak raporlanır (manifest ve site yine de yazılır).
 # Gerekli sırlar: AZURE_SPEECH_KEY, AZURE_SPEECH_REGION, MEDYA_SSH_KEY, MEDYA_SSH_BILINEN (known_hosts satırı).
@@ -26,6 +26,9 @@ concurrency:
 env:
   GUNLUK_EN_FAZLA: "2"   # günde en çok bu kadar video, HER DİL İÇİN ayrı (üretim maliyeti ve "toplu içerik" riski için)
   DILLER: "tr en es fr"
+  HF_SURUMU: "0.9.56"   # tools/video_hf.py HF_SURUMU ile aynı; sürüm değişince ikisi birlikte güncellenir
+  HYPERFRAMES_NO_TELEMETRY: "1"
+  DO_NOT_TRACK: "1"
 
 jobs:
   uret:
@@ -44,8 +47,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "24"
-          cache: npm
-          cache-dependency-path: video/package-lock.json
 
       - name: Anahtarlar var mı
         id: kontrol
@@ -91,10 +92,18 @@ jobs:
           echo "sayi=$(grep -cv -e '^\s*$' -e '^#' bekleyen.txt || true)" >> "$GITHUB_OUTPUT"
           [ "$hata" = 0 ] || echo "liste_hatasi=1" >> "$GITHUB_OUTPUT"
 
-      - name: Bağımlılıkları kur
+      - name: Hyperframes, Chrome ve ffmpeg kur
         if: steps.kontrol.outputs.hazir == 'true' && inputs.deneme != true
-        working-directory: video
-        run: npm ci
+        run: |
+          # Yalnız yerel çizim komutları kullanılır (render, snapshot, browser); publish/share/cloud/auth/templates/billing
+          # HeyGen'e içerik gönderir, çağrılmaz. Yazı tipleri depoda (video-hf/assets/fonts), sistem fontu gerekmez.
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg libnss3 libgbm1 libatk1.0-0 libatk-bridge2.0-0 libcups2 libxkbcommon0 \
+            libxcomposite1 libxdamage1 libxrandr2 libpango-1.0-0 libasound2t64
+          npm install -g "hyperframes@${HF_SURUMU}"
+          hyperframes --version
+          hyperframes browser ensure
+          ffmpeg -version | head -1
 
       - name: SSH anahtarını hazırla
         if: steps.kontrol.outputs.hazir == 'true' && inputs.deneme != true

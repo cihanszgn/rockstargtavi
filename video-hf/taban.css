@@ -1,0 +1,119 @@
+/* Ortak yapı: sahne yerleşimleri. Renkler paletten (--bg, --ana, --vurgu ...), kalıp paketten (temalar.css) gelir.
+   Güvenli alan: okunur yazı üstten 220 px, alttan 420 px (y ≤ 1500) içinde; alt yarıda sağdan 150 px boş (x ≤ 930).
+   Bu yüzden içerik sütunu x 54–930, y 330–1240; altyazı 1262–1452; 1500 altı yalnız süs. */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#000}
+body{font-family:var(--f-b)}
+#root{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--zemin);color:var(--yz);font-family:var(--f-b);font-weight:800}
+#cam{position:absolute;inset:0}
+#zemin,#dekor,.sc{position:absolute;left:0;top:0;width:1080px;height:1920px}
+#zemin{overflow:hidden}
+#dekor{overflow:hidden;pointer-events:none}
+.sc{overflow:hidden}
+.ic{position:absolute;left:62px;top:330px;width:868px;height:910px;display:flex;flex-direction:column;gap:20px}
+.d{font-family:var(--f-d);font-weight:var(--f-d-w);text-transform:var(--f-d-tt);letter-spacing:var(--f-d-ls);line-height:var(--f-d-lh)}
+.b{font-family:var(--f-b);font-weight:900;text-transform:uppercase;letter-spacing:.02em;line-height:1.05}
+.fit{overflow:hidden;overflow-wrap:normal}
+html[lang=zh] .fit,html[lang=zh] .cap{word-break:break-all;line-break:strict}
+html[lang=zh] .d,html[lang=zh] .b{letter-spacing:0;text-transform:none}
+.dekor-yazi{position:absolute;white-space:nowrap;font-family:var(--f-d);font-weight:var(--f-d-w);text-transform:var(--f-d-tt);line-height:1;pointer-events:none}
+
+/* ortak ögeler */
+.chip{display:inline-flex;align-items:center;height:62px;padding:0 24px;font-family:var(--f-b);font-weight:900;font-size:36px;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;max-width:100%}
+.c-tur{background:var(--vurgu);color:var(--vurgu-yazi)}
+.c-alt{background:var(--chip2);color:var(--chip2-yazi)}
+.etiket-satir{display:flex;gap:14px;align-items:center;flex:none;height:64px;overflow:hidden}
+.baslik-pencere{flex:none;height:88px;display:flex;align-items:center;padding:0 28px;font-size:50px;overflow:hidden;white-space:nowrap}
+
+.yuva{position:relative;flex:1;min-height:0;min-width:0;border:3px dashed rgba(128,128,128,.32);border-radius:14px}
+.yuva>*{position:absolute;left:0;top:0;right:0;bottom:0;width:auto;height:auto}
+
+/* baslik */
+.bk-foto{position:relative;flex:none;height:390px;overflow:hidden}
+.bk-foto img{position:absolute;left:-4%;top:-6%;width:108%;height:112%;object-fit:cover}
+.bk-foto.yok{display:flex;align-items:center;justify-content:center;padding:20px}
+.bk-oyun{font-size:150px;text-align:center;width:100%;max-height:100%}
+.bk-tarih{position:absolute;right:18px;bottom:16px;padding:8px 20px;font-size:38px;white-space:nowrap}
+.bk-baslik{flex:1;min-height:0;font-size:124px}
+.bk-baslik mark{background:var(--vurgu-bg);color:var(--vurgu-yazi2);padding:0 .12em}
+.bk-tuslar{display:flex;gap:14px;flex:none;height:78px;align-items:center}
+.bk-tuslar kbd{display:inline-flex;align-items:center;justify-content:center;min-width:78px;height:78px;padding:0 14px;font-size:46px;font-family:var(--f-d);font-weight:var(--f-d-w)}
+
+/* kaynak */
+.kn-etiket{flex:none;align-self:flex-start;padding:10px 26px;font-size:44px}
+.kn-bar{flex:none;display:flex;align-items:center;gap:14px;height:84px;padding:0 24px;font-size:42px;overflow:hidden;white-space:nowrap}
+.kn-bar b{font-weight:900}
+.kn-bar s{text-decoration:none;opacity:.7;overflow:hidden;text-overflow:ellipsis}
+.kn-ad{flex:none;font-size:58px;max-height:150px}
+.kn-alinti{flex:1;min-height:0;font-size:68px;line-height:1.14;padding:26px 30px;font-family:var(--f-q);font-weight:var(--f-q-w);text-transform:none}
+.kn-tarih{flex:none;font-size:42px;height:56px}
+
+/* maddeler */
+.mp-liste{flex:1;min-height:0;display:flex;flex-direction:column;gap:18px}
+.mp-oge{flex:1;min-height:0;display:flex;align-items:center;gap:22px;padding:0 26px}
+.mp-no{flex:none;width:82px;height:82px;display:flex;align-items:center;justify-content:center;font-size:56px}
+.mp-metin{flex:1;min-width:0;font-size:58px;line-height:1.04;max-height:100%}
+
+/* yama_fark */
+.yf-liste{flex:1;min-height:0;display:flex;flex-direction:column;gap:22px}
+.yf-satir{flex:1;min-height:0;padding:22px 28px;display:flex;flex-direction:column;gap:10px}
+.yf-ad{flex:none;font-size:40px;height:46px;overflow:hidden;white-space:nowrap}
+.yf-degerler{flex:1;min-height:0;display:flex;align-items:center;gap:22px}
+.yf-eski{font-size:92px;text-decoration:line-through;text-decoration-thickness:8px;opacity:.7}
+.yf-ok{flex:none;width:96px;height:64px}
+.yf-yeni{font-size:150px;line-height:1}
+.yf-birim{font-size:40px;align-self:flex-end;margin-bottom:12px}
+.yf-bar{flex:none;position:relative;height:26px}
+.yf-bar i{position:absolute;left:0;height:12px}
+.yf-bar i:first-child{top:0}.yf-bar i:last-child{top:14px;height:12px}
+
+/* platform */
+.pf-rozetler{flex:none;display:flex;flex-wrap:wrap;gap:16px}
+.pf-rozet{height:92px;padding:0 34px;display:flex;align-items:center;font-size:56px}
+.pf-sayilar{flex:1;min-height:0;display:flex;gap:18px}
+.pf-kutu{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px 10px;gap:12px}
+.pf-deger{font-size:150px;line-height:1;white-space:nowrap}
+.pf-etk{font-size:38px;text-align:center;line-height:1.05;max-width:100%}
+.pf-not{flex:none;font-size:50px;line-height:1.1;padding:20px 26px;max-height:200px}
+
+/* tarih */
+.tr-ust{flex:none;display:flex;align-items:baseline;gap:22px}
+.tr-buyuk{font-size:230px;line-height:.9;white-space:nowrap}
+.tr-ay{font-size:80px;line-height:1}
+.tr-yil{font-size:44px}
+.tr-takvim{flex:none;padding:18px;display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.tr-takvim span{height:70px;display:flex;align-items:center;justify-content:center;font-size:44px}
+.tr-takvim .hf{height:48px;font-size:34px;opacity:.75}
+.tr-not{flex:none;font-size:46px;line-height:1.1;max-height:140px}
+
+/* fiyat */
+.fy-etiket{flex:none;font-size:230px;line-height:.95;white-space:nowrap}
+.fy-eski{flex:none;font-size:90px;text-decoration:line-through;text-decoration-thickness:8px;opacity:.75}
+.fy-yeni{flex:none;font-size:230px;line-height:.95;white-space:nowrap}
+.fy-rozet{position:absolute;right:0;top:0;width:210px;height:210px;display:flex;align-items:center;justify-content:center;font-size:76px;transform:rotate(10deg)}
+.fy-bitis{flex:none;align-self:flex-start;padding:10px 26px;font-size:50px}
+.fy-magaza{flex:1;min-height:0;display:flex;flex-wrap:wrap;gap:14px;align-content:flex-start}
+.fy-magaza span{height:76px;padding:0 24px;display:flex;align-items:center;font-size:42px}
+
+/* kapanis */
+.kp-cagri{flex:none;font-size:150px;line-height:.98;max-height:430px}
+.kp-alt{flex:none;font-size:56px;line-height:1.1;max-height:170px}
+.kp-adres{flex:none;height:96px;display:flex;align-items:center;padding:0 30px;font-size:60px;align-self:flex-start;max-width:100%}
+#mas{position:absolute;left:718px;top:1000px;width:192px;height:240px}
+
+/* HUD */
+#hud{position:absolute;left:0;top:0;width:1080px;height:1920px;pointer-events:none}
+#prog{position:absolute;left:54px;top:52px;width:972px;height:14px;display:flex;gap:6px}
+#prog i{flex:1;background:var(--ilerleme-bos);position:relative;overflow:hidden}
+#prog i b{position:absolute;left:0;top:0;bottom:0;width:100%;background:var(--ilerleme);transform:scaleX(0);transform-origin:0 50%}
+#logo{position:absolute;left:54px;top:234px;display:flex;gap:6px;align-items:center;height:60px;font-family:var(--f-d);font-weight:var(--f-d-w);font-size:40px;text-transform:uppercase}
+#logo kbd{display:inline-flex;align-items:center;justify-content:center;height:52px;min-width:52px;padding:0 12px;font-family:inherit;font-size:34px;background:var(--logo-bg);color:var(--logo-yazi)}
+#logo span{padding:0 10px;color:var(--logo-ad)}
+#sub{position:absolute;left:70px;top:1262px;width:860px;height:190px;display:flex;align-items:center;justify-content:center}
+#sub .part{position:absolute;left:0;top:0;width:860px;height:190px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;opacity:0}
+#sub .pl{white-space:nowrap;font-family:var(--f-c);font-weight:var(--f-c-w);text-transform:var(--f-c-tt);font-size:74px;line-height:1.12;color:var(--alt-yazi);text-shadow:var(--alt-golge)}
+html[lang=zh] #sub .pl{white-space:nowrap}
+#sub .w{display:inline-block;padding:0 .1em;margin:0 .02em;white-space:pre}
+#gecis{position:absolute;left:0;top:0;width:1080px;height:1920px;pointer-events:none;overflow:hidden}
+#gecis div{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.dk{position:absolute}
