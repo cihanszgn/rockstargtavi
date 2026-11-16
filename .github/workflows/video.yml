@@ -48,12 +48,21 @@ jobs:
           AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
           MEDYA_SSH_KEY: ${{ secrets.MEDYA_SSH_KEY }}
         run: |
-          if [ -n "$AZURE_SPEECH_KEY" ] && [ -n "$AZURE_SPEECH_REGION" ] && [ -n "$MEDYA_SSH_KEY" ]; then
-            echo "hazir=true" >> "$GITHUB_OUTPUT"
-          else
+          # Ses yolu sosyal/ayarlar.json içinden okunur: "edge" anahtar istemez, "azure" iki anahtar ister.
+          ses=$(python -c "import json;print((json.load(open('sosyal/ayarlar.json',encoding='utf-8')).get('video') or {}).get('ses') or 'azure')")
+          echo "Ses yolu: $ses"
+          if [ -z "$MEDYA_SSH_KEY" ]; then
             echo "hazir=false" >> "$GITHUB_OUTPUT"
-            echo "Azure Speech ya da sunucu anahtarı girilmemiş: video üretimi atlandı (hata değil)."
+            echo "Sunucu anahtarı girilmemiş: video üretimi atlandı (hata değil)."
+          elif [ "$ses" = "azure" ] && { [ -z "$AZURE_SPEECH_KEY" ] || [ -z "$AZURE_SPEECH_REGION" ]; }; then
+            echo "hazir=false" >> "$GITHUB_OUTPUT"
+            echo "Azure Speech anahtarı girilmemiş: video üretimi atlandı (hata değil)."
+          else
+            echo "hazir=true" >> "$GITHUB_OUTPUT"
           fi
+
+      - uses: astral-sh/setup-uv@v5
+        if: steps.kontrol.outputs.hazir == 'true' && inputs.deneme != true
 
       - name: Bekleyenleri listele
         id: bekleyen
@@ -96,7 +105,7 @@ jobs:
             fi
             dil="${dil:-tr}"   # bekleyenler yalnız id yazarsa dil Türkçe sayılır
             echo "Üretiliyor: $id $dil"
-            if python tools/video_uret.py uret --id "$id" --dil "$dil" --ses azure --yukle; then
+            if python tools/video_uret.py uret --id "$id" --dil "$dil" --yukle; then
               yapilan=$((yapilan + 1))
             else
               echo "::warning::Üretilemedi: $id $dil (sonrakine geçildi)"
