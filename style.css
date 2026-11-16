@@ -32,7 +32,7 @@
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:calc(var(--ust-h) + 16px)}
 *{scrollbar-color:var(--cizgi) var(--zemin);scrollbar-width:thin}
 @media (forced-colors:active){*{scrollbar-color:auto}}
-body{margin:0;background:var(--zemin);color:var(--yazi);font-family:Archivo,"Segoe UI",system-ui,-apple-system,sans-serif;
+body{margin:0;background:var(--zemin);color:var(--yazi);font-family:Archivo,"Segoe UI",system-ui,-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
   font-size:var(--text-base);line-height:var(--leading-body);font-stretch:100%;font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 img{max-width:100%;height:auto}
 a{color:var(--baglanti);text-underline-offset:.18em;text-decoration-thickness:1px}
@@ -991,3 +991,9 @@ button,input,select{font-family:inherit}
   .bekle{opacity:1!important;transform:none!important}
   .blok-bas h2::before,.panel-bas h2::before{box-shadow:none}
 }
+
+/* Dil önerisi: yönlendirme yapmadan, klavyeyle erişilebilen ince şerit. */
+.dil-oneri{display:flex;align-items:center;justify-content:center;gap:1rem;padding:.5rem 1rem;background:var(--yuzey,#1e2c47);color:var(--yazi,#e9eef8);font-size:.875rem;line-height:1.5}
+.dil-oneri a{color:inherit;text-decoration:underline;text-underline-offset:.2em}
+.dil-oneri button{border:0;background:transparent;color:inherit;cursor:pointer;font-size:1.5rem;min-width:44px;min-height:44px}
+.dil-oneri :focus-visible{outline:2px solid currentColor;outline-offset:3px}

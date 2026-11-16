@@ -27,6 +27,18 @@
    "es": {
     "baslik": "PCGamingWiki (wiki)",
     "aciklama": "Arreglos, ajustes, datos de pantalla y controles y notas de compatibilidad para juegos de PC. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "PCGamingWiki (Wiki)",
+    "aciklama": "Fehlerbehebungen, Einstellungen, Bild- und Steuerungsdetails sowie Kompatibilitätshinweise für PC-Spiele. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "PCGamingWiki (wiki)",
+    "aciklama": "Oplossingen, instellingen, beeld- en besturingsdetails en compatibiliteitsnotities voor pc-games. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "PCGamingWiki （Wiki）",
+    "aciklama": "PC 游戏修复、设置、显示与操作详情及兼容性说明。 语言：英语。"
    }
   }
  },
@@ -58,6 +70,18 @@
    "es": {
     "baslik": "HowLongToBeat (herramienta)",
     "aciklama": "Muestra el tiempo medio para terminar los juegos según los datos de los jugadores. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "HowLongToBeat (Werkzeug)",
+    "aciklama": "Zeigt durchschnittliche Spielzeiten anhand von Spielermeldungen. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "HowLongToBeat (hulpmiddel)",
+    "aciklama": "Toont gemiddelde speeltijden op basis van door spelers aangeleverde gegevens. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "HowLongToBeat （工具）",
+    "aciklama": "根据玩家提交的数据展示游戏平均通关时间。 语言：英语。"
    }
   }
  },
@@ -89,6 +113,18 @@
    "es": {
     "baslik": "ProtonDB (herramienta)",
     "aciklama": "Recoge con informes de jugadores lo bien que funcionan los juegos de Windows en Linux (con Proton). Idioma: inglés."
+   },
+   "de": {
+    "baslik": "ProtonDB (Werkzeug)",
+    "aciklama": "Zeigt anhand von Spielerberichten, wie gut Windows-Spiele unter Linux über Proton laufen. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "ProtonDB (hulpmiddel)",
+    "aciklama": "Toont via spelersrapporten hoe goed Windows-games op Linux via Proton werken. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "ProtonDB （工具）",
+    "aciklama": "根据玩家报告列出 Windows 游戏通过 Proton 在 Linux 上的运行情况。 语言：英语。"
    }
   }
  },
@@ -120,6 +156,18 @@
    "es": {
     "baslik": "Can You RUN It (herramienta)",
     "aciklama": "Comprueba si tu PC cumple los requisitos de sistema de un juego. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Can You RUN It (Werkzeug)",
+    "aciklama": "Prüft, ob dein PC die Systemanforderungen eines Spiels erfüllt. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Can You RUN It (hulpmiddel)",
+    "aciklama": "Controleert of je pc aan de systeemeisen van een game voldoet. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Can You RUN It （工具）",
+    "aciklama": "检查你的 PC 是否符合游戏系统要求。 语言：英语。"
    }
   }
  },
@@ -151,6 +199,18 @@
    "es": {
     "baslik": "IsThereAnyDeal (herramienta)",
     "aciklama": "Compara precios de juegos de PC en muchas tiendas y muestra los mínimos históricos. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "IsThereAnyDeal (Werkzeug)",
+    "aciklama": "Vergleicht PC-Spielpreise vieler Shops und zeigt historische Tiefstpreise. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "IsThereAnyDeal (hulpmiddel)",
+    "aciklama": "Vergelijkt pc-gameprijzen bij veel winkels en toont historische laagste prijzen. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "IsThereAnyDeal （工具）",
+    "aciklama": "比较多个商店的 PC 游戏价格并展示历史低价。 语言：英语。"
    }
   }
  },
@@ -182,6 +242,18 @@
    "es": {
     "baslik": "Warcraft Wiki — World of Warcraft (wiki)",
     "aciklama": "Wiki de la comunidad de World of Warcraft: objetos, mecánicas y páginas detalladas. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Warcraft Wiki — World of Warcraft (Wiki)",
+    "aciklama": "Community-Wiki für World of Warcraft: Gegenstände, Mechaniken und ausführliche Seiten. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Warcraft Wiki — World of Warcraft (wiki)",
+    "aciklama": "Communitywiki voor World of Warcraft: voorwerpen, spelmechanieken en uitgebreide pagina’s. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Warcraft Wiki — World of Warcraft （Wiki）",
+    "aciklama": "World of Warcraft 社区 Wiki：物品、机制与详细条目。 语言：英语。"
    }
   }
  },
@@ -213,6 +285,18 @@
    "es": {
     "baslik": "Icy Veins — World of Warcraft (guías avanzadas)",
     "aciklama": "Guías gratuitas de clases, builds y nivel avanzado para World of Warcraft. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Icy Veins — World of Warcraft (fortgeschrittene Ratgeber)",
+    "aciklama": "Kostenlose Klassen-, Build- und fortgeschrittene Ratgeber für World of Warcraft. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Icy Veins — World of Warcraft (gevorderde gidsen)",
+    "aciklama": "Gratis klasse-, build- en gevorderde gidsen voor World of Warcraft. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Icy Veins — World of Warcraft （进阶攻略）",
+    "aciklama": "World of Warcraft 免费职业、配装及进阶攻略。 语言：英语。"
    }
   }
  },
@@ -244,6 +328,18 @@
    "es": {
     "baslik": "Maxroll — World of Warcraft (guías avanzadas)",
     "aciklama": "Guías gratuitas de clases, builds y nivel avanzado para World of Warcraft. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Maxroll — World of Warcraft (fortgeschrittene Ratgeber)",
+    "aciklama": "Kostenlose Klassen-, Build- und fortgeschrittene Ratgeber für World of Warcraft. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Maxroll — World of Warcraft (gevorderde gidsen)",
+    "aciklama": "Gratis klasse-, build- en gevorderde gidsen voor World of Warcraft. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Maxroll — World of Warcraft （进阶攻略）",
+    "aciklama": "World of Warcraft 免费职业、配装及进阶攻略。 语言：英语。"
    }
   }
  },
@@ -275,6 +371,18 @@
    "es": {
     "baslik": "Wowhead: WoW Forever rehber derlemesi",
     "aciklama": "La recopilación de Wowhead de las guías necesarias para el lanzamiento de WoW: Forever. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Wowhead: WoW Forever Ratgebersammlung",
+    "aciklama": "Wowheads Sammlung der für den WoW: Forever-Start benötigten Ratgeber. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Wowhead: WoW Forever gidsenoverzicht",
+    "aciklama": "Wowheads verzameling gidsen voor de start van WoW: Forever. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Wowhead: WoW Forever 攻略汇总",
+    "aciklama": "Wowhead 汇总的 WoW: Forever 上线所需攻略。 语言：英语。"
    }
   }
  },
@@ -306,6 +414,18 @@
    "es": {
     "baslik": "Knight Online resmî site (NTTGame) — Knight Online (oficial)",
     "aciklama": "Página oficial del editor de Knight Online: soporte, anuncios o información del juego. Idioma: turco."
+   },
+   "de": {
+    "baslik": "Knight Online offizielle Website (NTTGame) — Knight Online (offiziell)",
+    "aciklama": "Offizielle Publisher-Seite für Knight Online: Hilfe, Ankündigungen oder Spielinformationen. Sprache: Türkisch."
+   },
+   "nl": {
+    "baslik": "Knight Online officiële website (NTTGame) — Knight Online (officieel)",
+    "aciklama": "Officiële uitgeverspagina voor Knight Online: ondersteuning, aankondigingen of game-informatie. Taal: Turks."
+   },
+   "zh": {
+    "baslik": "Knight Online 官方网站 (NTTGame) — Knight Online （官方）",
+    "aciklama": "Knight Online 发行商官方页面：支持、公告或游戏信息。 语言：土耳其语。"
    }
   }
  },
@@ -337,6 +457,18 @@
    "es": {
     "baslik": "Knight Online Wiki (Fandom) — Knight Online (wiki)",
     "aciklama": "Wiki de la comunidad de Knight Online: objetos, mecánicas y páginas detalladas. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Knight Online Wiki (Fandom) — Knight Online (Wiki)",
+    "aciklama": "Community-Wiki für Knight Online: Gegenstände, Mechaniken und ausführliche Seiten. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Knight Online Wiki (Fandom) — Knight Online (wiki)",
+    "aciklama": "Communitywiki voor Knight Online: voorwerpen, spelmechanieken en uitgebreide pagina’s. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Knight Online Wiki (Fandom) — Knight Online （Wiki）",
+    "aciklama": "Knight Online 社区 Wiki：物品、机制与详细条目。 语言：英语。"
    }
   }
  },
@@ -368,6 +500,18 @@
    "es": {
     "baslik": "NTTGame: Knight Online güncelleme duyurusu — Knight Online (oficial)",
     "aciklama": "Página oficial del editor de Knight Online: soporte, anuncios o información del juego. Idioma: turco."
+   },
+   "de": {
+    "baslik": "NTTGame: Knight Online Updateankündigung — Knight Online (offiziell)",
+    "aciklama": "Offizielle Publisher-Seite für Knight Online: Hilfe, Ankündigungen oder Spielinformationen. Sprache: Türkisch."
+   },
+   "nl": {
+    "baslik": "NTTGame: Knight Online updateaankondiging — Knight Online (officieel)",
+    "aciklama": "Officiële uitgeverspagina voor Knight Online: ondersteuning, aankondigingen of game-informatie. Taal: Turks."
+   },
+   "zh": {
+    "baslik": "NTTGame: Knight Online 更新公告 — Knight Online （官方）",
+    "aciklama": "Knight Online 发行商官方页面：支持、公告或游戏信息。 语言：土耳其语。"
    }
   }
  },
@@ -399,6 +543,18 @@
    "es": {
     "baslik": "KO Rehberi: başlangıç rehberi — Knight Online (guía inicial)",
     "aciklama": "Guía gratuita para quienes empiezan en Knight Online. Idioma: turco."
+   },
+   "de": {
+    "baslik": "KO Rehberi: Einsteigerratgeber — Knight Online (Einsteigerratgeber)",
+    "aciklama": "Kostenloser Einsteigerratgeber für Knight Online. Sprache: Türkisch."
+   },
+   "nl": {
+    "baslik": "KO Rehberi: beginnersgids — Knight Online (beginnersgids)",
+    "aciklama": "Gratis beginnersgids voor Knight Online. Taal: Turks."
+   },
+   "zh": {
+    "baslik": "KO Rehberi: 入门攻略 — Knight Online （入门攻略）",
+    "aciklama": "Knight Online 免费入门攻略。 语言：土耳其语。"
    }
   }
  },
@@ -430,6 +586,18 @@
    "es": {
     "baslik": "Rockstar Games: Grand Theft Auto VI — GTA VI (oficial)",
     "aciklama": "Página oficial del editor de GTA VI: soporte, anuncios o información del juego. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Rockstar Games: Grand Theft Auto VI — GTA VI (offiziell)",
+    "aciklama": "Offizielle Publisher-Seite für GTA VI: Hilfe, Ankündigungen oder Spielinformationen. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Rockstar Games: Grand Theft Auto VI — GTA VI (officieel)",
+    "aciklama": "Officiële uitgeverspagina voor GTA VI: ondersteuning, aankondigingen of game-informatie. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Rockstar Games: Grand Theft Auto VI — GTA VI （官方）",
+    "aciklama": "GTA VI 发行商官方页面：支持、公告或游戏信息。 语言：英语。"
    }
   }
  },
@@ -461,6 +629,18 @@
    "es": {
     "baslik": "GTA Wiki (Fandom) — GTA VI (wiki)",
     "aciklama": "Wiki de la comunidad de GTA VI: objetos, mecánicas y páginas detalladas. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "GTA Wiki (Fandom) — GTA VI (Wiki)",
+    "aciklama": "Community-Wiki für GTA VI: Gegenstände, Mechaniken und ausführliche Seiten. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "GTA Wiki (Fandom) — GTA VI (wiki)",
+    "aciklama": "Communitywiki voor GTA VI: voorwerpen, spelmechanieken en uitgebreide pagina’s. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "GTA Wiki (Fandom) — GTA VI （Wiki）",
+    "aciklama": "GTA VI 社区 Wiki：物品、机制与详细条目。 语言：英语。"
    }
   }
  },
@@ -492,6 +672,18 @@
    "es": {
     "baslik": "Riot Games Destek: VALORANT — VALORANT (oficial)",
     "aciklama": "Página oficial del editor de VALORANT: soporte, anuncios o información del juego. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Riot Games Support: VALORANT — VALORANT (offiziell)",
+    "aciklama": "Offizielle Publisher-Seite für VALORANT: Hilfe, Ankündigungen oder Spielinformationen. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Riot Games ondersteuning: VALORANT — VALORANT (officieel)",
+    "aciklama": "Officiële uitgeverspagina voor VALORANT: ondersteuning, aankondigingen of game-informatie. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Riot Games 支持: VALORANT — VALORANT （官方）",
+    "aciklama": "VALORANT 发行商官方页面：支持、公告或游戏信息。 语言：英语。"
    }
   }
  },
@@ -523,6 +715,18 @@
    "es": {
     "baslik": "ProSettings.net — VALORANT (herramienta)",
     "aciklama": "Herramienta de ayuda o sitio de estadísticas gratuito para VALORANT. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "ProSettings.net — VALORANT (Werkzeug)",
+    "aciklama": "Kostenloses Hilfswerkzeug oder Statistikseite für VALORANT. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "ProSettings.net — VALORANT (hulpmiddel)",
+    "aciklama": "Gratis hulpmiddel of statistiekensite voor VALORANT. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "ProSettings.net — VALORANT （工具）",
+    "aciklama": "VALORANT 免费辅助工具或数据网站。 语言：英语。"
    }
   }
  },
@@ -554,6 +758,18 @@
    "es": {
     "baslik": "Resmî LoL Wiki — League of Legends (wiki)",
     "aciklama": "Wiki de la comunidad de League of Legends: objetos, mecánicas y páginas detalladas. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Offiziell LoL Wiki — League of Legends (Wiki)",
+    "aciklama": "Community-Wiki für League of Legends: Gegenstände, Mechaniken und ausführliche Seiten. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Officieel LoL Wiki — League of Legends (wiki)",
+    "aciklama": "Communitywiki voor League of Legends: voorwerpen, spelmechanieken en uitgebreide pagina’s. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "官方 LoL Wiki — League of Legends （Wiki）",
+    "aciklama": "League of Legends 社区 Wiki：物品、机制与详细条目。 语言：英语。"
    }
   }
  },
@@ -585,6 +801,18 @@
    "es": {
     "baslik": "Riot Games Destek: League of Legends — League of Legends (oficial)",
     "aciklama": "Página oficial del editor de League of Legends: soporte, anuncios o información del juego. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Riot Games Support: League of Legends — League of Legends (offiziell)",
+    "aciklama": "Offizielle Publisher-Seite für League of Legends: Hilfe, Ankündigungen oder Spielinformationen. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Riot Games ondersteuning: League of Legends — League of Legends (officieel)",
+    "aciklama": "Officiële uitgeverspagina voor League of Legends: ondersteuning, aankondigingen of game-informatie. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Riot Games 支持: League of Legends — League of Legends （官方）",
+    "aciklama": "League of Legends 发行商官方页面：支持、公告或游戏信息。 语言：英语。"
    }
   }
  },
@@ -616,6 +844,18 @@
    "es": {
     "baslik": "OP.GG — League of Legends (herramienta)",
     "aciklama": "Herramienta de ayuda o sitio de estadísticas gratuito para League of Legends. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "OP.GG — League of Legends (Werkzeug)",
+    "aciklama": "Kostenloses Hilfswerkzeug oder Statistikseite für League of Legends. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "OP.GG — League of Legends (hulpmiddel)",
+    "aciklama": "Gratis hulpmiddel of statistiekensite voor League of Legends. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "OP.GG — League of Legends （工具）",
+    "aciklama": "League of Legends 免费辅助工具或数据网站。 语言：英语。"
    }
   }
  },
@@ -647,6 +887,18 @@
    "es": {
     "baslik": "PCGamingWiki: Counter-Strike 2 — Counter-Strike 2 (wiki)",
     "aciklama": "Wiki de la comunidad de Counter-Strike 2: objetos, mecánicas y páginas detalladas. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "PCGamingWiki: Counter-Strike 2 — Counter-Strike 2 (Wiki)",
+    "aciklama": "Community-Wiki für Counter-Strike 2: Gegenstände, Mechaniken und ausführliche Seiten. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "PCGamingWiki: Counter-Strike 2 — Counter-Strike 2 (wiki)",
+    "aciklama": "Communitywiki voor Counter-Strike 2: voorwerpen, spelmechanieken en uitgebreide pagina’s. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "PCGamingWiki: Counter-Strike 2 — Counter-Strike 2 （Wiki）",
+    "aciklama": "Counter-Strike 2 社区 Wiki：物品、机制与详细条目。 语言：英语。"
    }
   }
  },
@@ -678,6 +930,18 @@
    "es": {
     "baslik": "ProSettings.net — Counter-Strike 2 (herramienta)",
     "aciklama": "Herramienta de ayuda o sitio de estadísticas gratuito para Counter-Strike 2. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "ProSettings.net — Counter-Strike 2 (Werkzeug)",
+    "aciklama": "Kostenloses Hilfswerkzeug oder Statistikseite für Counter-Strike 2. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "ProSettings.net — Counter-Strike 2 (hulpmiddel)",
+    "aciklama": "Gratis hulpmiddel of statistiekensite voor Counter-Strike 2. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "ProSettings.net — Counter-Strike 2 （工具）",
+    "aciklama": "Counter-Strike 2 免费辅助工具或数据网站。 语言：英语。"
    }
   }
  },
@@ -709,6 +973,18 @@
    "es": {
     "baslik": "PUBG Wiki (wiki.gg) — PUBG: BATTLEGROUNDS (wiki)",
     "aciklama": "Wiki de la comunidad de PUBG: BATTLEGROUNDS: objetos, mecánicas y páginas detalladas. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "PUBG Wiki (wiki.gg) — PUBG: BATTLEGROUNDS (Wiki)",
+    "aciklama": "Community-Wiki für PUBG: BATTLEGROUNDS: Gegenstände, Mechaniken und ausführliche Seiten. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "PUBG Wiki (wiki.gg) — PUBG: BATTLEGROUNDS (wiki)",
+    "aciklama": "Communitywiki voor PUBG: BATTLEGROUNDS: voorwerpen, spelmechanieken en uitgebreide pagina’s. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "PUBG Wiki (wiki.gg) — PUBG: BATTLEGROUNDS （Wiki）",
+    "aciklama": "PUBG: BATTLEGROUNDS 社区 Wiki：物品、机制与详细条目。 语言：英语。"
    }
   }
  },
@@ -740,6 +1016,18 @@
    "es": {
     "baslik": "KRAFTON Destek — PUBG: BATTLEGROUNDS (oficial)",
     "aciklama": "Página oficial del editor de PUBG: BATTLEGROUNDS: soporte, anuncios o información del juego. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "KRAFTON Support — PUBG: BATTLEGROUNDS (offiziell)",
+    "aciklama": "Offizielle Publisher-Seite für PUBG: BATTLEGROUNDS: Hilfe, Ankündigungen oder Spielinformationen. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "KRAFTON ondersteuning — PUBG: BATTLEGROUNDS (officieel)",
+    "aciklama": "Officiële uitgeverspagina voor PUBG: BATTLEGROUNDS: ondersteuning, aankondigingen of game-informatie. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "KRAFTON 支持 — PUBG: BATTLEGROUNDS （官方）",
+    "aciklama": "PUBG: BATTLEGROUNDS 发行商官方页面：支持、公告或游戏信息。 语言：英语。"
    }
   }
  },
@@ -771,6 +1059,18 @@
    "es": {
     "baslik": "DAK.GG — PUBG: BATTLEGROUNDS (herramienta)",
     "aciklama": "Herramienta de ayuda o sitio de estadísticas gratuito para PUBG: BATTLEGROUNDS. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "DAK.GG — PUBG: BATTLEGROUNDS (Werkzeug)",
+    "aciklama": "Kostenloses Hilfswerkzeug oder Statistikseite für PUBG: BATTLEGROUNDS. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "DAK.GG — PUBG: BATTLEGROUNDS (hulpmiddel)",
+    "aciklama": "Gratis hulpmiddel of statistiekensite voor PUBG: BATTLEGROUNDS. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "DAK.GG — PUBG: BATTLEGROUNDS （工具）",
+    "aciklama": "PUBG: BATTLEGROUNDS 免费辅助工具或数据网站。 语言：英语。"
    }
   }
  },
@@ -802,6 +1102,18 @@
    "es": {
     "baslik": "Metin2 Türkiye Wiki — Metin2 (wiki)",
     "aciklama": "Wiki de la comunidad de Metin2: objetos, mecánicas y páginas detalladas. Idioma: turco."
+   },
+   "de": {
+    "baslik": "Metin2 Türkei Wiki — Metin2 (Wiki)",
+    "aciklama": "Community-Wiki für Metin2: Gegenstände, Mechaniken und ausführliche Seiten. Sprache: Türkisch."
+   },
+   "nl": {
+    "baslik": "Metin2 Turkije Wiki — Metin2 (wiki)",
+    "aciklama": "Communitywiki voor Metin2: voorwerpen, spelmechanieken en uitgebreide pagina’s. Taal: Turks."
+   },
+   "zh": {
+    "baslik": "Metin2 土耳其 Wiki — Metin2 （Wiki）",
+    "aciklama": "Metin2 社区 Wiki：物品、机制与详细条目。 语言：土耳其语。"
    }
   }
  },
@@ -833,6 +1145,18 @@
    "es": {
     "baslik": "Metin2 Türkiye Forum — Metin2 (oficial)",
     "aciklama": "Página oficial del editor de Metin2: soporte, anuncios o información del juego. Idioma: turco."
+   },
+   "de": {
+    "baslik": "Metin2 Türkei Forum — Metin2 (offiziell)",
+    "aciklama": "Offizielle Publisher-Seite für Metin2: Hilfe, Ankündigungen oder Spielinformationen. Sprache: Türkisch."
+   },
+   "nl": {
+    "baslik": "Metin2 Turkije forum — Metin2 (officieel)",
+    "aciklama": "Officiële uitgeverspagina voor Metin2: ondersteuning, aankondigingen of game-informatie. Taal: Turks."
+   },
+   "zh": {
+    "baslik": "Metin2 土耳其 论坛 — Metin2 （官方）",
+    "aciklama": "Metin2 发行商官方页面：支持、公告或游戏信息。 语言：土耳其语。"
    }
   }
  },
@@ -864,6 +1188,18 @@
    "es": {
     "baslik": "Gameforge Destek — Metin2 (oficial)",
     "aciklama": "Página oficial del editor de Metin2: soporte, anuncios o información del juego. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Gameforge Support — Metin2 (offiziell)",
+    "aciklama": "Offizielle Publisher-Seite für Metin2: Hilfe, Ankündigungen oder Spielinformationen. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Gameforge ondersteuning — Metin2 (officieel)",
+    "aciklama": "Officiële uitgeverspagina voor Metin2: ondersteuning, aankondigingen of game-informatie. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Gameforge 支持 — Metin2 （官方）",
+    "aciklama": "Metin2 发行商官方页面：支持、公告或游戏信息。 语言：英语。"
    }
   }
  },
@@ -895,6 +1231,18 @@
    "es": {
     "baslik": "Fortnite.GG — Fortnite (herramienta)",
     "aciklama": "Herramienta de ayuda o sitio de estadísticas gratuito para Fortnite. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Fortnite.GG — Fortnite (Werkzeug)",
+    "aciklama": "Kostenloses Hilfswerkzeug oder Statistikseite für Fortnite. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Fortnite.GG — Fortnite (hulpmiddel)",
+    "aciklama": "Gratis hulpmiddel of statistiekensite voor Fortnite. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Fortnite.GG — Fortnite （工具）",
+    "aciklama": "Fortnite 免费辅助工具或数据网站。 语言：英语。"
    }
   }
  },
@@ -926,6 +1274,18 @@
    "es": {
     "baslik": "Epic Developer Documentation: Fortnite — Fortnite (oficial)",
     "aciklama": "Página oficial del editor de Fortnite: soporte, anuncios o información del juego. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Epic Developer Documentation: Fortnite — Fortnite (offiziell)",
+    "aciklama": "Offizielle Publisher-Seite für Fortnite: Hilfe, Ankündigungen oder Spielinformationen. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Epic Developer Documentation: Fortnite — Fortnite (officieel)",
+    "aciklama": "Officiële uitgeverspagina voor Fortnite: ondersteuning, aankondigingen of game-informatie. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Epic Developer Documentation: Fortnite — Fortnite （官方）",
+    "aciklama": "Fortnite 发行商官方页面：支持、公告或游戏信息。 语言：英语。"
    }
   }
  },
@@ -957,6 +1317,18 @@
    "es": {
     "baslik": "Minecraft Wiki — Minecraft (wiki)",
     "aciklama": "Wiki de la comunidad de Minecraft: objetos, mecánicas y páginas detalladas. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Minecraft Wiki — Minecraft (Wiki)",
+    "aciklama": "Community-Wiki für Minecraft: Gegenstände, Mechaniken und ausführliche Seiten. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Minecraft Wiki — Minecraft (wiki)",
+    "aciklama": "Communitywiki voor Minecraft: voorwerpen, spelmechanieken en uitgebreide pagina’s. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Minecraft Wiki — Minecraft （Wiki）",
+    "aciklama": "Minecraft 社区 Wiki：物品、机制与详细条目。 语言：英语。"
    }
   }
  },
@@ -988,6 +1360,18 @@
    "es": {
     "baslik": "Minecraft Wiki: Tutorials — Minecraft (guía inicial)",
     "aciklama": "Guía gratuita para quienes empiezan en Minecraft. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Minecraft Wiki: Anleitungen — Minecraft (Einsteigerratgeber)",
+    "aciklama": "Kostenloser Einsteigerratgeber für Minecraft. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Minecraft Wiki: handleidingen — Minecraft (beginnersgids)",
+    "aciklama": "Gratis beginnersgids voor Minecraft. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Minecraft Wiki: 教程 — Minecraft （入门攻略）",
+    "aciklama": "Minecraft 免费入门攻略。 语言：英语。"
    }
   }
  },
@@ -1019,6 +1403,18 @@
    "es": {
     "baslik": "Minecraft Yardım Merkezi — Minecraft (oficial)",
     "aciklama": "Página oficial del editor de Minecraft: soporte, anuncios o información del juego. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Minecraft Hilfezentrum — Minecraft (offiziell)",
+    "aciklama": "Offizielle Publisher-Seite für Minecraft: Hilfe, Ankündigungen oder Spielinformationen. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Minecraft helpcentrum — Minecraft (officieel)",
+    "aciklama": "Officiële uitgeverspagina voor Minecraft: ondersteuning, aankondigingen of game-informatie. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Minecraft 帮助中心 — Minecraft （官方）",
+    "aciklama": "Minecraft 发行商官方页面：支持、公告或游戏信息。 语言：英语。"
    }
   }
  },
@@ -1050,6 +1446,18 @@
    "es": {
     "baslik": "Maxroll: Diablo IV — Diablo (guías avanzadas)",
     "aciklama": "Guías gratuitas de clases, builds y nivel avanzado para Diablo. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Maxroll: Diablo IV — Diablo (fortgeschrittene Ratgeber)",
+    "aciklama": "Kostenlose Klassen-, Build- und fortgeschrittene Ratgeber für Diablo. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Maxroll: Diablo IV — Diablo (gevorderde gidsen)",
+    "aciklama": "Gratis klasse-, build- en gevorderde gidsen voor Diablo. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Maxroll: Diablo IV — Diablo （进阶攻略）",
+    "aciklama": "Diablo 免费职业、配装及进阶攻略。 语言：英语。"
    }
   }
  },
@@ -1081,6 +1489,18 @@
    "es": {
     "baslik": "Icy Veins: Diablo IV — Diablo (guías avanzadas)",
     "aciklama": "Guías gratuitas de clases, builds y nivel avanzado para Diablo. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Icy Veins: Diablo IV — Diablo (fortgeschrittene Ratgeber)",
+    "aciklama": "Kostenlose Klassen-, Build- und fortgeschrittene Ratgeber für Diablo. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Icy Veins: Diablo IV — Diablo (gevorderde gidsen)",
+    "aciklama": "Gratis klasse-, build- en gevorderde gidsen voor Diablo. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Icy Veins: Diablo IV — Diablo （进阶攻略）",
+    "aciklama": "Diablo 免费职业、配装及进阶攻略。 语言：英语。"
    }
   }
  },
@@ -1112,6 +1532,18 @@
    "es": {
     "baslik": "Maxroll: Diablo II Resurrected — Diablo (guías avanzadas)",
     "aciklama": "Guías gratuitas de clases, builds y nivel avanzado para Diablo. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Maxroll: Diablo II Resurrected — Diablo (fortgeschrittene Ratgeber)",
+    "aciklama": "Kostenlose Klassen-, Build- und fortgeschrittene Ratgeber für Diablo. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Maxroll: Diablo II Resurrected — Diablo (gevorderde gidsen)",
+    "aciklama": "Gratis klasse-, build- en gevorderde gidsen voor Diablo. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Maxroll: Diablo II Resurrected — Diablo （进阶攻略）",
+    "aciklama": "Diablo 免费职业、配装及进阶攻略。 语言：英语。"
    }
   }
  },
@@ -1143,6 +1575,18 @@
    "es": {
     "baslik": "PoE2DB — Path of Exile 2 (herramienta)",
     "aciklama": "Herramienta de ayuda o sitio de estadísticas gratuito para Path of Exile 2. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "PoE2DB — Path of Exile 2 (Werkzeug)",
+    "aciklama": "Kostenloses Hilfswerkzeug oder Statistikseite für Path of Exile 2. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "PoE2DB — Path of Exile 2 (hulpmiddel)",
+    "aciklama": "Gratis hulpmiddel of statistiekensite voor Path of Exile 2. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "PoE2DB — Path of Exile 2 （工具）",
+    "aciklama": "Path of Exile 2 免费辅助工具或数据网站。 语言：英语。"
    }
   }
  },
@@ -1174,6 +1618,18 @@
    "es": {
     "baslik": "Maxroll: Path of Exile 2 — Path of Exile 2 (guías avanzadas)",
     "aciklama": "Guías gratuitas de clases, builds y nivel avanzado para Path of Exile 2. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Maxroll: Path of Exile 2 — Path of Exile 2 (fortgeschrittene Ratgeber)",
+    "aciklama": "Kostenlose Klassen-, Build- und fortgeschrittene Ratgeber für Path of Exile 2. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Maxroll: Path of Exile 2 — Path of Exile 2 (gevorderde gidsen)",
+    "aciklama": "Gratis klasse-, build- en gevorderde gidsen voor Path of Exile 2. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Maxroll: Path of Exile 2 — Path of Exile 2 （进阶攻略）",
+    "aciklama": "Path of Exile 2 免费职业、配装及进阶攻略。 语言：英语。"
    }
   }
  },
@@ -1205,6 +1661,18 @@
    "es": {
     "baslik": "Overwatch kahramanlar sayfası — Overwatch (oficial)",
     "aciklama": "Página oficial del editor de Overwatch: soporte, anuncios o información del juego. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Overwatch Heldenübersicht — Overwatch (offiziell)",
+    "aciklama": "Offizielle Publisher-Seite für Overwatch: Hilfe, Ankündigungen oder Spielinformationen. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Overwatch heldenpagina — Overwatch (officieel)",
+    "aciklama": "Officiële uitgeverspagina voor Overwatch: ondersteuning, aankondigingen of game-informatie. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Overwatch 英雄页面 — Overwatch （官方）",
+    "aciklama": "Overwatch 发行商官方页面：支持、公告或游戏信息。 语言：英语。"
    }
   }
  },
@@ -1236,6 +1704,18 @@
    "es": {
     "baslik": "Marathon Yardım Merkezi — Marathon (oficial)",
     "aciklama": "Página oficial del editor de Marathon: soporte, anuncios o información del juego. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Marathon Hilfezentrum — Marathon (offiziell)",
+    "aciklama": "Offizielle Publisher-Seite für Marathon: Hilfe, Ankündigungen oder Spielinformationen. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Marathon helpcentrum — Marathon (officieel)",
+    "aciklama": "Officiële uitgeverspagina voor Marathon: ondersteuning, aankondigingen of game-informatie. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Marathon 帮助中心 — Marathon （官方）",
+    "aciklama": "Marathon 发行商官方页面：支持、公告或游戏信息。 语言：英语。"
    }
   }
  },
@@ -1267,6 +1747,18 @@
    "es": {
     "baslik": "Marathon: depolama ve sistem gereksinimleri — Marathon (guía inicial)",
     "aciklama": "Guía gratuita para quienes empiezan en Marathon. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Marathon: Speicher und Systemanforderungen",
+    "aciklama": "Kostenloser Einsteigerratgeber für Marathon. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Marathon: opslag en systeemeisen",
+    "aciklama": "Gratis beginnersgids voor Marathon. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Marathon: 存储与系统要求",
+    "aciklama": "Marathon 免费入门攻略。 语言：英语。"
    }
   }
  },
@@ -1298,6 +1790,18 @@
    "es": {
     "baslik": "Football Manager resmî site — Football Manager 27 (oficial)",
     "aciklama": "Página oficial del editor de Football Manager 27: soporte, anuncios o información del juego. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Football Manager offizielle Website — Football Manager 27 (offiziell)",
+    "aciklama": "Offizielle Publisher-Seite für Football Manager 27: Hilfe, Ankündigungen oder Spielinformationen. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Football Manager officiële website — Football Manager 27 (officieel)",
+    "aciklama": "Officiële uitgeverspagina voor Football Manager 27: ondersteuning, aankondigingen of game-informatie. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Football Manager 官方网站 — Football Manager 27 （官方）",
+    "aciklama": "Football Manager 27 发行商官方页面：支持、公告或游戏信息。 语言：英语。"
    }
   }
  },
@@ -1329,6 +1833,18 @@
    "es": {
     "baslik": "Xbox Wire: FM27 ve Game Pass — Football Manager 27 (oficial)",
     "aciklama": "Página oficial del editor de Football Manager 27: soporte, anuncios o información del juego. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Xbox Wire: FM27 und Game Pass — Football Manager 27 (offiziell)",
+    "aciklama": "Offizielle Publisher-Seite für Football Manager 27: Hilfe, Ankündigungen oder Spielinformationen. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Xbox Wire: FM27 en Game Pass — Football Manager 27 (officieel)",
+    "aciklama": "Officiële uitgeverspagina voor Football Manager 27: ondersteuning, aankondigingen of game-informatie. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Xbox Wire: FM27 与 Game Pass — Football Manager 27 （官方）",
+    "aciklama": "Football Manager 27 发行商官方页面：支持、公告或游戏信息。 语言：英语。"
    }
   }
  },
@@ -1360,6 +1876,18 @@
    "es": {
     "baslik": "Halopedia — Halo: Campaign Evolved (wiki)",
     "aciklama": "Wiki de la comunidad de Halo: Campaign Evolved: objetos, mecánicas y páginas detalladas. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Halopedia — Halo: Campaign Evolved (Wiki)",
+    "aciklama": "Community-Wiki für Halo: Campaign Evolved: Gegenstände, Mechaniken und ausführliche Seiten. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Halopedia — Halo: Campaign Evolved (wiki)",
+    "aciklama": "Communitywiki voor Halo: Campaign Evolved: voorwerpen, spelmechanieken en uitgebreide pagina’s. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Halopedia — Halo: Campaign Evolved （Wiki）",
+    "aciklama": "Halo: Campaign Evolved 社区 Wiki：物品、机制与详细条目。 语言：英语。"
    }
   }
  },
@@ -1391,6 +1919,18 @@
    "es": {
     "baslik": "Halo Waypoint Destek — Halo: Campaign Evolved (oficial)",
     "aciklama": "Página oficial del editor de Halo: Campaign Evolved: soporte, anuncios o información del juego. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Halo Waypoint Support — Halo: Campaign Evolved (offiziell)",
+    "aciklama": "Offizielle Publisher-Seite für Halo: Campaign Evolved: Hilfe, Ankündigungen oder Spielinformationen. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Halo Waypoint ondersteuning — Halo: Campaign Evolved (officieel)",
+    "aciklama": "Officiële uitgeverspagina voor Halo: Campaign Evolved: ondersteuning, aankondigingen of game-informatie. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Halo Waypoint 支持 — Halo: Campaign Evolved （官方）",
+    "aciklama": "Halo: Campaign Evolved 发行商官方页面：支持、公告或游戏信息。 语言：英语。"
    }
   }
  },
@@ -1422,6 +1962,18 @@
    "es": {
     "baslik": "EA SPORTS FC resmî site — EA SPORTS FC (oficial)",
     "aciklama": "Página oficial del editor de EA SPORTS FC: soporte, anuncios o información del juego. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "EA SPORTS FC offizielle Website — EA SPORTS FC (offiziell)",
+    "aciklama": "Offizielle Publisher-Seite für EA SPORTS FC: Hilfe, Ankündigungen oder Spielinformationen. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "EA SPORTS FC officiële website — EA SPORTS FC (officieel)",
+    "aciklama": "Officiële uitgeverspagina voor EA SPORTS FC: ondersteuning, aankondigingen of game-informatie. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "EA SPORTS FC 官方网站 — EA SPORTS FC （官方）",
+    "aciklama": "EA SPORTS FC 发行商官方页面：支持、公告或游戏信息。 语言：英语。"
    }
   }
  },
@@ -1453,6 +2005,18 @@
    "es": {
     "baslik": "FUT.GG — EA SPORTS FC (herramienta)",
     "aciklama": "Herramienta de ayuda o sitio de estadísticas gratuito para EA SPORTS FC. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "FUT.GG — EA SPORTS FC (Werkzeug)",
+    "aciklama": "Kostenloses Hilfswerkzeug oder Statistikseite für EA SPORTS FC. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "FUT.GG — EA SPORTS FC (hulpmiddel)",
+    "aciklama": "Gratis hulpmiddel of statistiekensite voor EA SPORTS FC. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "FUT.GG — EA SPORTS FC （工具）",
+    "aciklama": "EA SPORTS FC 免费辅助工具或数据网站。 语言：英语。"
    }
   }
  },
@@ -1484,6 +2048,18 @@
    "es": {
     "baslik": "Wikipedia: EA Sports FC 27 — EA SPORTS FC (wiki)",
     "aciklama": "Wiki de la comunidad de EA SPORTS FC: objetos, mecánicas y páginas detalladas. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Wikipedia: EA Sports FC 27 — EA SPORTS FC (Wiki)",
+    "aciklama": "Community-Wiki für EA SPORTS FC: Gegenstände, Mechaniken und ausführliche Seiten. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Wikipedia: EA Sports FC 27 — EA SPORTS FC (wiki)",
+    "aciklama": "Communitywiki voor EA SPORTS FC: voorwerpen, spelmechanieken en uitgebreide pagina’s. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Wikipedia: EA Sports FC 27 — EA SPORTS FC （Wiki）",
+    "aciklama": "EA SPORTS FC 社区 Wiki：物品、机制与详细条目。 语言：英语。"
    }
   }
  },
@@ -1515,6 +2091,18 @@
    "es": {
     "baslik": "Roblox Destek — Roblox (oficial)",
     "aciklama": "Página oficial del editor de Roblox: soporte, anuncios o información del juego. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Roblox Support — Roblox (offiziell)",
+    "aciklama": "Offizielle Publisher-Seite für Roblox: Hilfe, Ankündigungen oder Spielinformationen. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Roblox ondersteuning — Roblox (officieel)",
+    "aciklama": "Officiële uitgeverspagina voor Roblox: ondersteuning, aankondigingen of game-informatie. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Roblox 支持 — Roblox （官方）",
+    "aciklama": "Roblox 发行商官方页面：支持、公告或游戏信息。 语言：英语。"
    }
   }
  },
@@ -1546,6 +2134,18 @@
    "es": {
     "baslik": "Roblox Creator Hub dokümantasyonu — Roblox (guías avanzadas)",
     "aciklama": "Guías gratuitas de clases, builds y nivel avanzado para Roblox. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Roblox Creator Hub Dokumentation — Roblox (fortgeschrittene Ratgeber)",
+    "aciklama": "Kostenlose Klassen-, Build- und fortgeschrittene Ratgeber für Roblox. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Roblox Creator Hub documentatie — Roblox (gevorderde gidsen)",
+    "aciklama": "Gratis klasse-, build- en gevorderde gidsen voor Roblox. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Roblox Creator Hub 文档 — Roblox （进阶攻略）",
+    "aciklama": "Roblox 免费职业、配装及进阶攻略。 语言：英语。"
    }
   }
  },
@@ -1577,6 +2177,18 @@
    "es": {
     "baslik": "Call of Duty rehberleri — Call of Duty (oficial)",
     "aciklama": "Página oficial del editor de Call of Duty: soporte, anuncios o información del juego. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Call of Duty Ratgeber — Call of Duty (offiziell)",
+    "aciklama": "Offizielle Publisher-Seite für Call of Duty: Hilfe, Ankündigungen oder Spielinformationen. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Call of Duty gidsen — Call of Duty (officieel)",
+    "aciklama": "Officiële uitgeverspagina voor Call of Duty: ondersteuning, aankondigingen of game-informatie. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Call of Duty 攻略 — Call of Duty （官方）",
+    "aciklama": "Call of Duty 发行商官方页面：支持、公告或游戏信息。 语言：英语。"
    }
   }
  },
@@ -1608,6 +2220,18 @@
    "es": {
     "baslik": "Call of Duty yama notları — Call of Duty (oficial)",
     "aciklama": "Página oficial del editor de Call of Duty: soporte, anuncios o información del juego. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Call of Duty Patchnotes — Call of Duty (offiziell)",
+    "aciklama": "Offizielle Publisher-Seite für Call of Duty: Hilfe, Ankündigungen oder Spielinformationen. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Call of Duty patchnotes — Call of Duty (officieel)",
+    "aciklama": "Officiële uitgeverspagina voor Call of Duty: ondersteuning, aankondigingen of game-informatie. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Call of Duty 补丁说明 — Call of Duty （官方）",
+    "aciklama": "Call of Duty 发行商官方页面：支持、公告或游戏信息。 语言：英语。"
    }
   }
  },
@@ -1639,6 +2263,18 @@
    "es": {
     "baslik": "Game8: Genshin Impact — Genshin Impact (guías avanzadas)",
     "aciklama": "Guías gratuitas de clases, builds y nivel avanzado para Genshin Impact. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Game8: Genshin Impact — Genshin Impact (fortgeschrittene Ratgeber)",
+    "aciklama": "Kostenlose Klassen-, Build- und fortgeschrittene Ratgeber für Genshin Impact. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Game8: Genshin Impact — Genshin Impact (gevorderde gidsen)",
+    "aciklama": "Gratis klasse-, build- en gevorderde gidsen voor Genshin Impact. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Game8: Genshin Impact — Genshin Impact （进阶攻略）",
+    "aciklama": "Genshin Impact 免费职业、配装及进阶攻略。 语言：英语。"
    }
   }
  },
@@ -1670,6 +2306,18 @@
    "es": {
     "baslik": "HoYoLAB — Genshin Impact (oficial)",
     "aciklama": "Página oficial del editor de Genshin Impact: soporte, anuncios o información del juego. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "HoYoLAB — Genshin Impact (offiziell)",
+    "aciklama": "Offizielle Publisher-Seite für Genshin Impact: Hilfe, Ankündigungen oder Spielinformationen. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "HoYoLAB — Genshin Impact (officieel)",
+    "aciklama": "Officiële uitgeverspagina voor Genshin Impact: ondersteuning, aankondigingen of game-informatie. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "HoYoLAB — Genshin Impact （官方）",
+    "aciklama": "Genshin Impact 发行商官方页面：支持、公告或游戏信息。 语言：英语。"
    }
   }
  },
@@ -1701,6 +2349,18 @@
    "es": {
     "baslik": "Rise Online World yama notları — Rise Online (oficial)",
     "aciklama": "Página oficial del editor de Rise Online: soporte, anuncios o información del juego. Idioma: inglés."
+   },
+   "de": {
+    "baslik": "Rise Online World Patchnotes — Rise Online (offiziell)",
+    "aciklama": "Offizielle Publisher-Seite für Rise Online: Hilfe, Ankündigungen oder Spielinformationen. Sprache: Englisch."
+   },
+   "nl": {
+    "baslik": "Rise Online World patchnotes — Rise Online (officieel)",
+    "aciklama": "Officiële uitgeverspagina voor Rise Online: ondersteuning, aankondigingen of game-informatie. Taal: Engels."
+   },
+   "zh": {
+    "baslik": "Rise Online World 补丁说明 — Rise Online （官方）",
+    "aciklama": "Rise Online 发行商官方页面：支持、公告或游戏信息。 语言：英语。"
    }
   }
  },
@@ -1733,6 +2393,18 @@
    "es": {
     "baslik": "Rise Online World forum — Rise Online (oficial)",
     "aciklama": "Página oficial del editor de Rise Online: soporte, anuncios o información del juego. Idioma: inglés / turco."
+   },
+   "de": {
+    "baslik": "Rise Online World Forum — Rise Online (offiziell)",
+    "aciklama": "Offizielle Publisher-Seite für Rise Online: Hilfe, Ankündigungen oder Spielinformationen. Sprache: Englisch / Türkisch."
+   },
+   "nl": {
+    "baslik": "Rise Online World forum — Rise Online (officieel)",
+    "aciklama": "Officiële uitgeverspagina voor Rise Online: ondersteuning, aankondigingen of game-informatie. Taal: Engels / Turks."
+   },
+   "zh": {
+    "baslik": "Rise Online World 论坛 — Rise Online （官方）",
+    "aciklama": "Rise Online 发行商官方页面：支持、公告或游戏信息。 语言：英语／土耳其语。"
    }
   }
  }

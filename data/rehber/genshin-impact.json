@@ -2372,6 +2372,1761 @@
      ]
     }
    ]
+  },
+  "de": {
+   "baslik": "Genshin Impact Einsteiger-Leitfaden: Erste Schritte und das Gebetssystem (2026)",
+   "ozet": "Ein Leitfaden für neue Spieler in Genshin Impact zu den ersten Schritten, der Abenteuerstufe, dem Gebetssystem (Gacha), Charakter- und Ressourcenmanagement sowie Kontosicherheit; aktuelle Version: 7.2.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Open-World-Action-Rollenspiel (mit Gacha-Elementen)"
+    },
+    {
+     "ad": "Plattform",
+     "deger": "PC, PS5, Xbox Series X|S, iOS, Android, HarmonyOS NEXT (PS4-Unterstützung endete am 8. April 2026; kein Switch-Release)"
+    },
+    {
+     "ad": "Preismodell",
+     "deger": "Kostenlos spielbar; optionale In-Game-Käufe"
+    },
+    {
+     "ad": "Aktuelle Version",
+     "deger": "7.2 Hour of Ruin (4. November 2026)"
+    },
+    {
+     "ad": "Türkisch-Unterstützung",
+     "deger": "Ja; Türkisch ist eine von 16 Textsprachen (Epic Games Store). Sprachausgabe auf Chinesisch, Englisch, Japanisch und Koreanisch"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "Was ist Genshin Impact und wo steht es aktuell?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Genshin Impact ist ein Open-World-Action-Rollenspiel von HoYoverse. In der Welt von Teyvat erkundest du auf der Suche nach deinem verlorenen Geschwisterteil Landschaften, löst Rätsel, bekämpfst Gegner und kombinierst Elemente. Das Spiel lässt sich kostenlos herunterladen und spielen; die Hauptmethode zum Erhalt von Figuren und Waffen ist ein glücksbasiertes System namens „Gebet“ (Wish)."
+      },
+      {
+       "tip": "p",
+       "metin": "Die aktuelle Version lautet **7.2 „Hour of Ruin“**; sie startete am 4. November 2026 und ihre Aktionsgebete laufen bis zum 24. November. Diese Version bringt die neuen 5-Sterne-Figuren Mitya (Katalysator-Nutzer mit der Waffe Starsealed Edict) und Valeriy sowie eine neue 4-Sterne-Figur. Hinzu kommen der Archontenauftrag Akt V „Hour of Ruin“ und Akt VI, neue Snezhnaya-Gebiete wie Novokitezhgrad und Wingspan Peak sowie das Event „The Grand Defense“. Wer neu einsteigt, muss dies nicht sofort aufholen; das Spiel führt Schritt für Schritt voran."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Versionsinhalte erneuern sich etwa alle sechs Wochen. Verfolge aktuelle Aktionsgebete und Events über die Ankündigungsseite im Spiel oder die offizielle Website."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Vor dem Start: Plattform, Speichergröße und Sprache",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Genshin Impact läuft auf PC, PS5, Xbox Series X|S (seit 20. November 2024), iOS, Android und HarmonyOS NEXT (seit 10. September 2025). Die Unterstützung für PS4 endete am 8. April 2026; die Nintendo Switch-Version ist nicht erschienen. Das Spiel ist kostenlos und finanziert sich über das Gacha-System (glücksbasierte Gebete). Ein Konto funktioniert plattformübergreifend; prüfe die Bedingungen der Fortschrittssynchronisation vor der Registrierung."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Komponente",
+        "Minimum (PC, Epic)",
+        "Empfohlen (PC, Epic)"
+       ],
+       "satirlar": [
+        [
+         "Betriebssystem",
+         "Windows 10 64-Bit",
+         "Windows 10 64-Bit"
+        ],
+        [
+         "Prozessor",
+         "Intel Core i5 der 6. Generation oder AMD Ryzen",
+         "Intel Core i7 der 7. Generation oder AMD Ryzen 5000 Serie"
+        ],
+        [
+         "Arbeitsspeicher (RAM)",
+         "8 GB",
+         "16 GB"
+        ],
+        [
+         "Grafikkarte",
+         "NVIDIA GeForce GTX 1050, DirectX 11",
+         "NVIDIA GeForce GTX 1060 (6 GB)"
+        ],
+        [
+         "Speicherplatz",
+         "110 GB",
+         "150 GB"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Sprache:** Laut Epic Games Store wird türkischer Text unterstützt (16 Textsprachen); die Vertonung erfolgt auf Chinesisch, Englisch, Japanisch und Koreanisch. Der Speicherbedarf wächst mit jeder Version, daher sind eine SSD und ausreichend freier Speicher ratsam; die obigen Werte stammen von der Epic-Seite und können sich anpassen."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Lade das Spiel ausschließlich über die offizielle Website, offizielle Store-Apps (App Store, Google Play, PlayStation Store) oder den offiziellen Launcher herunter. Drittanbieter mit „fertigen Accounts“ oder modifizierten Spieldateien führen zum dauerhaften Kontobann."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "Die ersten Stunden: Schritt für Schritt",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Die Handlung beginnen",
+         "metin": "Schließe die Einführungsquests ab; Spielsysteme schalten sich nach und nach frei. Statt zu eilen, erkunde die erste Region (Mondstadt) in aller Ruhe."
+        },
+        {
+         "baslik": "Kostenlose Gebete nutzen",
+         "metin": "Das Anfängergebet gewährt 20 Ziehungen und garantiert die erste feste Figur, Noelle. Nutze Startgebete mit Bedacht; überstürze nichts."
+        },
+        {
+         "baslik": "Truhen und Quests sammeln",
+         "metin": "Truhen und Erkundungsquests auf der Karte liefern in den ersten Tagen wertvolles Urgestein und Aufstiegsmaterialien."
+        },
+        {
+         "baslik": "Tägliche Missionen erledigen",
+         "metin": "Tägliche Missionen (Commissions) bringen jeden Tag verlässliche Belohnungen und erfordern nur wenig Zeit."
+        },
+        {
+         "baslik": "Figuren gezielt entwickeln",
+         "metin": "Verstärke zunächst deine Hauptfigur und einen bevorzugten Begleiter; verzettele dich nicht darin, jede neue Figur gleichzeitig hochzuziehen."
+        },
+        {
+         "baslik": "Das Inventar im Auge behalten",
+         "metin": "Lies die Beschreibungen von Materialien im Inventar, bevor du sie verkaufst oder wegwirfst; die meisten werden später dringend gebraucht."
+        },
+        {
+         "baslik": "Die Zeit im Blick behalten",
+         "metin": "Das Spiel speichert automatisch; Events sind jedoch zeitlich befristet, behalte ablaufende Aktionen im Auge."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Der größte Anfängerfehler ist der Versuch, alles auf einmal zu erledigen. Erst ein Gebiet abzuschließen, bevor man weiterzieht, schont Ressourcen und vertieft das Spielverständnis."
+      }
+     ]
+    },
+    {
+     "id": "macera-rutbesi",
+     "baslik": "Abenteuerstufe und Spielfortschritt",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Die **Abenteuerstufe (Adventure Rank / AR)** ist das Gesamtniveau deines Kontos. Sie steigt durch Erkundung, das Öffnen von Truhen und das Abschließen von Quests. Um Figuren über Stufe 40 hinaus aufsteigen zu lassen, ist eine bestimmte Abenteuerstufe zwingend erforderlich; ist deine Stufe zu niedrig, bleibt der Charakterfortschritt gedeckelt."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Charakterstufen-Limit",
+        "Erforderliche Abenteuerstufe"
+       ],
+       "satirlar": [
+        [
+         "40",
+         "15"
+        ],
+        [
+         "50",
+         "25"
+        ],
+        [
+         "60",
+         "30"
+        ],
+        [
+         "70",
+         "35"
+        ],
+        [
+         "80",
+         "40"
+        ],
+        [
+         "90",
+         "50"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Auf Stufe 6 schalten sich Sphären frei, die Ausrüstung bis Stufe 90 gewähren (Artefakt-Sphären); um Stufe 8–9 beginnen die Weltstufen-Aufstiegsquests. Mit steigender Weltstufe werden Gegner zäher, aber auch die Beute verbessert sich spürbar. Reicht deine Stufe nicht aus, folge Quests und Erkundung; Gebete steigern die Abenteuerstufe nicht."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Das Erhöhen der Weltstufe ist keine Pflicht. Wenn Kämpfe zu schwer fallen, bleibe auf einer niedrigeren Weltstufe und verstärke zuerst Figuren, Waffen und Artefakte."
+      }
+     ]
+    },
+    {
+     "id": "dilek-sistemi",
+     "baslik": "Wie funktioniert das Gebetssystem?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Gebete (Wishes) sind das gacha-basierte System zum Ziehen von Figuren und Waffen. Manche Regeln sind im Spiel dokumentiert, andere beruhen auf Community-Messungen; trenne beides sorgfältig."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Thema",
+        "Angabe"
+       ],
+       "satirlar": [
+        [
+         "Figuren-Aktionsgebet 5-Sterne-Rate",
+         "Basiswahrscheinlichkeit 0,6 %; ein 5-Sterne-Objekt ist spätestens nach 90 Gebeten garantiert"
+        ],
+        [
+         "Soft Pity",
+         "Ab etwa dem 74. Gebet steigt die Wahrscheinlichkeit spürbar an (inoffiziell, Community-Messung)"
+        ],
+        [
+         "50/50-Regel",
+         "Der erste 5-Sterne-Zugang ist meist zu 50 % (mit Capturing Radiance ca. 55 %) der Aktionscharakter; bei Niederlage ist der nächste garantiert"
+        ],
+        [
+         "Waffen-Aktionsgebet Garantie",
+         "80 Gebete"
+        ],
+        [
+         "4-Sterne-Garantie",
+         "Mindestens einmal alle 10 Gebete garantiert"
+        ],
+        [
+         "Pity-Übertrag",
+         "Wird innerhalb desselben Gebetstyps in die nächste Aktion übernommen; verschiedene Gebetstypen zählen separat"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Gebete können auch mit echtem Geld erworben werden; dies ist jedoch keineswegs erforderlich. Lege vorab ein Budget fest und überschreite dieses Limit niemals mit dem Gedanken „nur noch eine Ziehung“. Richte Jugendschutzeinstellungen ein, um unbefugte Kartenzahlungen durch Kinder zu verhindern."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Urgestein gezielt für deine Wunschfigur zu sparen führt zu besseren Ergebnissen als planloses Ziehen. Dennoch verspricht kein Gebet ein Wunschergebnis im ersten Versuch; Garantien bilden lediglich Obergrenzen."
+      }
+     ]
+    },
+    {
+     "id": "karakter-ve-kaynak",
+     "baslik": "Figuren, Teams und Ressourcenmanagement",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Team:** Verschiedene Elemente in einem vierköpfigen Team zu kombinieren (z. B. Hydro + Pyro für Verdampfen) löst mächtige Elementarreaktionen aus.",
+        "**Rollenverteilung:** Ein Haupt-Schadensverursacher (Main DPS), ein Unterstützer oder Heiler und ein Charakter zum Auslösen von Elementen bilden ein solides Grundgerüst.",
+        "**Waffe und Ausrüstung:** Waffe und Artefakte machen den Großteil der Kampfkraft einer Figur aus; verbessere Waffe und Hauptartefakt immer zuerst.",
+        "**Ursprüngliches Harz (Resin):** Dient dem Abholen von Beute aus Sphären und von Bossen und regeneriert sich über Zeit; lass es nicht ungenutzt überlaufen.",
+        "**Kostenlose Figuren:** Über Story und Events erspielbare Figuren reichen völlig aus, um ein starkes Team aufzubauen; man muss nicht jeder neuen Figur hinterherjagen."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Einfacher Grundsatz: Das Spiel lässt sich komplett kostenlos bestreiten; ohne Geldeinsatz verlangsamt sich lediglich der Fortschritt, er stoppt jedoch nie."
+      }
+     ]
+    },
+    {
+     "id": "tepkimeler-ve-takim",
+     "baslik": "Elementarreaktionen und Teamrollen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Das Herzstück von Genshin Impact ist das Zusammenspiel der Elemente. Das Treffen desselben Ziels mit unterschiedlichen Elementen löst eine Elementarreaktion aus. Die folgende Tabelle bietet eine Kurzübersicht der wichtigsten Reaktionen (im Einklang mit dem Tutorial und dem offiziellen Wiki): Um eine Reaktion auszulösen, belegst du das Ziel mit einem ersten Element und triffst es mit einem zweiten. Achte auf das Elementsymbol über dem Gegner: Erscheint es, ist der ideale Moment für die Folgereaktion. Wiederholt dasselbe Element anzuwenden löst nichts aus, weshalb regelmäßiger Figurenwechsel Pflicht ist."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Reaktion",
+        "Elemente",
+        "Effekt"
+       ],
+       "satirlar": [
+        [
+         "Verdampfen (Vaporize)",
+         "Hydro + Pyro",
+         "Schadensmultiplikator"
+        ],
+        [
+         "Schmelzen (Melt)",
+         "Cryo + Pyro",
+         "Schadensmultiplikator"
+        ],
+        [
+         "Überladen (Overloaded)",
+         "Electro + Pyro",
+         "Explosion und Rückstoß"
+        ],
+        [
+         "Supraleiter (Superconduct)",
+         "Cryo + Electro",
+         "Senkt physischen Widerstand um die Hälfte (50 %)"
+        ],
+        [
+         "Unter Strom (Electro-Charged)",
+         "Hydro + Electro",
+         "Kontinuierlicher Elektroschaden"
+        ],
+        [
+         "Gefroren (Frozen)",
+         "Hydro + Cryo",
+         "Friert das Ziel bewegungsunfähig ein"
+        ],
+        [
+         "Verwirbelung (Swirl)",
+         "Anemo + anderes Element",
+         "Verteilt das Element auf umstehende Feinde"
+        ],
+        [
+         "Kristallisation (Crystallize)",
+         "Geo + anderes Element",
+         "Hinterlässt einen Schutzschild-Kristall"
+        ],
+        [
+         "Brennen (Burning)",
+         "Dendro + Pyro",
+         "Flächenschaden und anhaltender Brand"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Reaktionen mit Dendro wie Sprießen (Bloom), Supersprießen (Hyperbloom), Flammensprießen (Burgeon), Urwuchs (Quicken), Steigerung (Aggravate) und Ausbreitung (Spread) sind komplexer; Zerschmettern (Shatter) tritt ein, wenn eingefrorene Ziele mit schweren Angriffen getroffen werden. In den ersten Tagen reichen Verdampfen, Schmelzen und Verwirbelung völlig aus. Praktische Einsteigerregel: Eine Figur trägt das Element auf, die nächste löst mit einem anderen Element aus. Statt Reaktionen auswendig zu lernen, probiere sie kurz im Tutorial-Areal aus."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rolle",
+        "Aufgabe",
+        "Logik"
+       ],
+       "satirlar": [
+        [
+         "Haupt-DPS (Main DPS)",
+         "Verursacht den Hauptschaden auf dem Feld",
+         "Die Figur, die die meiste aktive Zeit auf dem Bildschirm verbringt"
+        ],
+        [
+         "Sub-DPS",
+         "Trägt Elemente auf und bereitet Reaktionen vor",
+         "Wirkt Fähigkeiten in kurzen Intervallen"
+        ],
+        [
+         "Unterstützer (Support)",
+         "Verstärkt Attribute oder heilt",
+         "Erhöht Zähigkeit und Schadensoutput des gesamten Teams"
+        ],
+        [
+         "Verteidiger / Schild",
+         "Schützt das Team mit Schilden",
+         "Sichert das Überleben bei anspruchsvollen Bossen"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "In einem vierköpfigen Team genügen zwei verschiedene Elemente; drei sind anfangs nicht nötig. Baue zuerst eine funktionierende Zweier-Reaktion auf und gewöhne dich im Spiel daran."
+      }
+     ]
+    },
+    {
+     "id": "recine-ve-rutin",
+     "baslik": "Harz-Budget und tägliche Routine",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Ursprüngliches Harz (Original Resin) wird benötigt, um Belohnungen aus Sphären und von Bossen abzuholen. Das Limit liegt bei 200 Punkten; alle 8 Minuten regeneriert sich 1 Punkt, sodass eine vollständige Aufladung rund 27 Stunden dauert. Zerbrechliches Harz (Fragile Resin) stellt sofort 60 Harz wieder her, und Angereichertes Harz (Condensed Resin) verdoppelt Sphären-Belohnungen für spätere Läufe (Details siehe Spielmenü). Harz wird nur für bestimmte Beutestellen fällig; Quests, Truhen und Erkundung kosten kein Harz. Ist das Harz aufgebraucht, ist das Spiel nicht vorbei: Widme dich einfach der Handlung, der Erkundung oder aktuellen Events. Wichtig ist nur, volles Harz nicht lange ungenutzt verfallen zu lassen."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Tägliche Missionen erledigen",
+         "metin": "Schließe jeden Tag die vier Missionen ab; sie kosten wenig Zeit und gewähren solide Gratis-Belohnungen."
+        },
+        {
+         "baslik": "Harz verbrauchen",
+         "metin": "Bevor das Limit erreicht wird, besuche Sphären für benötigte Materialien; lass das Harz nicht die 200er-Grenze überschreiten."
+        },
+        {
+         "baslik": "Wöchentliche Bosse mitnehmen",
+         "metin": "Wöchentliche Bosse gewähren bei den ersten Durchläufen ermäßigte Harzkosten."
+        },
+        {
+         "baslik": "Codes und Events prüfen",
+         "metin": "Event-Prämien sind zeitlich begrenzt; trage sie in deinen Spielplan ein."
+        },
+        {
+         "baslik": "Die Spielwelt erkunden",
+         "metin": "Truhen, Rätsel und Erkundungen bringen Materialien völlig ohne Harzkosten ein."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Plane dein Harz strukturiert: Nicht an einem Tag alles leer räumen und am nächsten verfallen lassen. Regelmäßige, kurze Einsätze sind wesentlich effizienter als seltene Mammutsitzungen."
+      }
+     ]
+    },
+    {
+     "id": "kod-ve-parasiz-oyun",
+     "baslik": "Gutscheincodes einlösen und Free-to-Play-Strategie",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Offizielle Gutscheincodes (Redeem Codes) bringen Gratis-Belohnungen im Spiel. **Einlösebedingung:** Meist ist Abenteuerstufe 10 erforderlich; manche Aktionscodes stellen eigene Bedingungen. Du kannst Codes über HoYoverses offizielle Geschenke-Webseite (genshin.hoyoverse.com/en/gift) oder direkt im Spielmenü einlösen; Belohnungen landen im Postfach und bleiben dort etwa 30 Tage gespeichert. Die Gültigkeit eines aktuellen Codes endet am 16. November 2026 um 00:00 Uhr (UTC+8). Codes müssen zeichengenau eingegeben werden; abgelaufene oder bereits genutzte Codes geben einen Fehler aus. Derselbe Code lässt sich auf demselben Konto nicht zweimal einlösen. Hole Belohnungen zügig aus dem Postfach ab."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Die offizielle Seite aufrufen",
+         "metin": "Gib Codes ausschließlich auf der offiziellen Einlöseseite oder direkt im Spiel ein."
+        },
+        {
+         "baslik": "Im Spielmenü einlösen",
+         "metin": "Navigiere zu Paimon-Menü > Einstellungen > Konto > Gutscheincode einlösen."
+        },
+        {
+         "baslik": "Das Postfach leeren",
+         "metin": "Die Belohnungen treffen im spielinternen Postfach ein; hole sie vor Ablauf der Frist ab."
+        }
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "F2P-Priorität",
+        "Warum?"
+       ],
+       "satirlar": [
+        [
+         "Handlung und Erkundung",
+         "Liefert kostenlose Gebetsmaterialien, Urgestein und Figuren"
+        ],
+        [
+         "Codes und Events",
+         "Gewähren verlässliche, kostenlose Prämien"
+        ],
+        [
+         "Ein Team, wenige Figuren",
+         "Konzentriert Ressourcen statt sie zu verzetteln"
+        ],
+        [
+         "Gebete ansparen",
+         "Bringt dich sicher an die Garantie für deine absolute Wunschfigur"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Beziehe Gutscheincodes ausschließlich aus offiziellen Quellen. Websites für angebliche Gratis-Codes, die Passwörter, Verifizierungscodes oder Kontologins abfragen, sind Betrugsfallen."
+      }
+     ]
+    },
+    {
+     "id": "rutbe-kilometre-taslari",
+     "baslik": "Meilensteine der Abenteuerstufe",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Die höchste Abenteuerstufe ist Stufe 60 und die Weltstufe steigt maximal bis Stufe 9. Die folgende Tabelle fasst die wichtigsten Freischaltungen zusammen; Abenteuerstufe 10 und die Obergrenzen stammen aus offiziellen Quellen; übrige Schwellenwerte sind Richtwerte und können je nach Version leicht variieren."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Stufe",
+        "Was freigeschaltet wird",
+        "Hinweis"
+       ],
+       "satirlar": [
+        [
+         "10",
+         "Gutscheincodes einlösen",
+         "Offizielle Quelle"
+        ],
+        [
+         "16 (ca.)",
+         "Mehrspielermodus (Koop)",
+         "Kann je nach Version variieren"
+        ],
+        [
+         "20 (ca.)",
+         "Herausfordernde Inhalte wie der Gewundene Abgrund (Spiral Abyss)",
+         "Kann je nach Version variieren"
+        ],
+        [
+         "60",
+         "Höchste Abenteuerstufe",
+         "Offizielle Angabe"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Eine hohe Abenteuerstufe muss nicht überstürzt werden; mit steigender Stufe werden auch Gegner anspruchsvoller. Sind deine Figuren noch nicht stark genug, verweile ohne Bedenken auf einer niedrigeren Weltstufe. Quests und Erkundung im eigenen Tempo zu absolvieren hält Charakterwachstum und Ressourcensammlung im Gleichgewicht. Hängst du in einem Gebiet fest, hilft das Nachrüsten von Figurenstufe, Waffen und Artefakten meist mehr als ein Stufenaufstieg."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Typische Anfängerfehler",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Startgebete unüberlegt an beliebigen Bannern verprassen.",
+        "Jede neu gezogene Figur sofort leveln und dadurch wertvolle Materialien aufbrauchen.",
+        "Ursprüngliches Harz ungenutzt überlaufen lassen oder nie einsetzen.",
+        "Ohne aufgewertete Waffen und Artefakte in schwere Gebiete vorstoßen und die Figur dafür verantwortlich machen.",
+        "Fristen zeitlich befristeter Events verpassen; ein Blick in den Event-Kalender verhindert Verluste."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Betrachte Gebete als Glücksspiel. Halte dir stets die Option offen, dasselbe Urgestein-Budget für eine Wunschfigur in einer späteren Version aufzusparen."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Kontosicherheit und Ausgabenwarnung",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "In deinem Spielkonto stecken unzählige Stunden Spielzeit. Teile Passwörter, Verifizierungscodes oder den Zugriff auf deine hinterlegte E-Mail-Adresse unter keinen Umständen mit Dritten."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Websites und Apps, die kostenloses Urgestein, Gratis-Gebete oder „Generatoren“ versprechen, sind Betrug;** sie zielen darauf ab, dein Konto zu stehlen oder Zahlungsdaten abzugreifen. Echte kostenlose Ressourcen gibt es ausschließlich über Quests im Spiel, offizielle Events und verifizierte Aktionscodes.",
+        "Gutscheincodes stammen meist aus offiziellen Livestreams; gib Codes ausschließlich auf der offiziellen Website oder im Spiel ein und gib dein Passwort niemals auf Drittseiten ein.",
+        "Der Handel mit Spielkonten sowie die Nutzung nicht autorisierter Software oder Bots verstoßen gegen die Nutzungsregeln und führen zum permanenten Bann.",
+        "Aktiviere die Zwei-Schritt-Verifizierung und wähle für dein HoYoverse-Konto ein starkes, separates Passwort.",
+        "Richte auf Konten von Kindern Ausgabenlimits und Jugendschutzkontrollen ein."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Niemand benötigt dein Passwort, um dir „Gebete zu schenken“. Sollte ein solches verdächtiges Angebot eintreffen, lehne es sofort ab und ändere vorsorglich dein Passwort."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Häufig gestellte Fragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Ist Genshin Impact kostenlos?",
+         "c": "Ja, Download und Spiel sind kostenlos. Es gibt optionale Käufe; alle Hauptinhalte lassen sich jedoch ohne Geldeinsatz bestreiten."
+        },
+        {
+         "s": "Gibt es das Spiel auf Türkisch?",
+         "c": "Ja, türkischer Bildschirmtext wird unterstützt (16 Textsprachen laut Epic Games Store); die Vertonung erfolgt auf Chinesisch, Englisch, Japanisch und Koreanisch."
+        },
+        {
+         "s": "Auf welchen Geräten läuft das Spiel?",
+         "c": "PC, PlayStation, iOS und Android; prüfe die offizielle Website für weitere Details."
+        },
+        {
+         "s": "Wie erhalte ich meine erste 5-Sterne-Figur?",
+         "c": "Das Anfängergebet garantiert Noelle als feste Basisfigur. Andere 5-Sterne-Figuren erfordern den Einsatz von Gebeten und etwas Geduld."
+        },
+        {
+         "s": "Sind Websites für kostenloses Urgestein vertrauenswürdig?",
+         "c": "Nein. Sie sind ausnahmslos Betrugsversuche mit dem Ziel des Kontodiebstahls."
+        },
+        {
+         "s": "Muss man jede neue Spielfigur besitzen?",
+         "c": "Nein. Sämtliche Spielinhalte lassen sich mit den kostenlosen Figuren und ein bis zwei Lieblingscharakteren erfolgreich meistern."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "nl": {
+   "baslik": "Genshin Impact-gids voor beginners: eerste stappen en het wenssysteem (2026)",
+   "ozet": "Een gids voor nieuwe Genshin Impact-spelers over de eerste stappen, Adventure Rank, het wenssysteem (gacha), personage- en grondstoffenbeheer en accountbeveiliging; huidige versie is 7.2.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Open-world actierollenspel (met gacha-elementen)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Pc, PS5, Xbox Series X|S, iOS, Android, HarmonyOS NEXT (PS4-ondersteuning beëindigd op 8 april 2026; geen Switch-versie)"
+    },
+    {
+     "ad": "Verdienmodel",
+     "deger": "Gratis te spelen; optionele in-game aankopen"
+    },
+    {
+     "ad": "Huidige versie",
+     "deger": "7.2 Hour of Ruin (4 november 2026)"
+    },
+    {
+     "ad": "Turkse ondersteuning",
+     "deger": "Ja; Turks is een van de 16 teksttalen (Epic Games Store). Stemmen in Chinees, Engels, Japans en Koreaans"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "Wat is Genshin Impact en waar staat het nu?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Genshin Impact is een open-world actierollenspel van HoYoverse. In de wereld van Teyvat verken je landschappen, los je puzzels op, vecht je tegen vijanden en combineer je elementen terwijl je op zoek bent naar je verloren tweelinghelft. De game is gratis te downloaden en te spelen; personages en wapens worden voornamelijk verkregen via een op toeval gebaseerd wenssysteem (wishes)."
+      },
+      {
+       "tip": "p",
+       "metin": "De huidige versie is **7.2 „Hour of Ruin”**; deze lanceerde op 4 november 2026 en de bijbehorende banners lopen tot 24 november. Deze versie introduceert nieuwe 5-sterrenpersonages Mitya (katalysatorgebruiker met wapen Starsealed Edict) en Valeriy, plus een nieuw 4-sterrenpersonage. Ook bevat het Archon Quest Act V „Hour of Ruin” en Act VI, nieuwe Snezhnaya-gebieden Novokitezhgrad en Wingspan Peak, en het evenement „The Grand Defense”. Wie net begint, hoeft dit niet direct in te halen; de game leidt je stap voor stap vooruit."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Versie-inhoud vernieuwt grofweg elke zes weken. Volg actuele banners en evenementen via het nieuwsscherm in de game of de officiële website."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Voor je begint: platform, omvang en taal",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Genshin Impact is speelbaar op pc, PS5, Xbox Series X|S (sinds 20 november 2024), iOS, Android en HarmonyOS NEXT (sinds 10 september 2025). PS4-ondersteuning eindigde op 8 april 2026; de Nintendo Switch-versie is niet uitgebracht. Het spel is gratis en genereert inkomsten via het gacha-systeem (op kans gebaseerde wensen). Eén account werkt over alle platforms; controleer de voorwaarden voor voortgangsdeling voorafgaand aan registratie."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Onderdeel",
+        "Minimaal (pc, Epic)",
+        "Aanbevolen (pc, Epic)"
+       ],
+       "satirlar": [
+        [
+         "Besturingssysteem",
+         "Windows 10 64-bits",
+         "Windows 10 64-bits"
+        ],
+        [
+         "Processor",
+         "6e generatie Intel Core i5 of AMD Ryzen",
+         "7e generatie Intel Core i7 of AMD Ryzen 5000-serie"
+        ],
+        [
+         "Werkgeheugen (RAM)",
+         "8 GB",
+         "16 GB"
+        ],
+        [
+         "Videokaart",
+         "NVIDIA GeForce GTX 1050, DirectX 11",
+         "NVIDIA GeForce GTX 1060 (6 GB)"
+        ],
+        [
+         "Opslagruimte",
+         "110 GB",
+         "150 GB"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Taal:** volgens de winkelpagina van Epic wordt Turkse tekst ondersteund (16 teksttalen); stemmen zijn beschikbaar in het Chinees, Engels, Japans en Koreaans. Schijfgebruik groeit met elke nieuwe update; een ssd en voldoende vrije ruimte zijn noodzakelijk; bovenstaande specificaties zijn afkomstig van Epic en kunnen wijzigen."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Download het spel uitsluitend via de officiële website, officiële app-winkels (App Store, Google Play, PlayStation Store) of de officiële launcher. Kant-en-klare accounts van derden en aangepaste gamebestanden leiden tot een permanente accountban."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "De eerste speeluren: stap voor stap",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Start de verhaallijn",
+         "metin": "Voltooi de introductiequests; spelsystemen openen zich geleidelijk. Verken het eerste gebied (Mondstadt) op je gemak in plaats van te haasten."
+        },
+        {
+         "baslik": "Gebruik de gratis wensen",
+         "metin": "De beginnersbanner biedt 20 wensen en garandeert je eerste vaste personage, Noelle. Gebruik startwensen gedoseerd en overhaast niets."
+        },
+        {
+         "baslik": "Verzamel kisten en opdrachten",
+         "metin": "Kisten en verkenningstaken op de kaart leveren in de beginfase essentiële wensmaterialen (Primogems) en upgrade-items op."
+        },
+        {
+         "baslik": "Doe dagelijkse missies (Commissions)",
+         "metin": "Dagelijkse opdrachten bieden elke dag een vaste beloning en vragen weinig tijd."
+        },
+        {
+         "baslik": "Ontwikkel personages doelgericht",
+         "metin": "Versterk eerst je hoofdpersonage en één favoriete bondgenoot; verspreid je middelen niet over elk nieuw personage tegelijk."
+        },
+        {
+         "baslik": "Controleer je rugzak",
+         "metin": "Lees wat materialen doen voor je ze verkoopt of weggooit; de meeste grondstoffen blijken later onmisbaar."
+        },
+        {
+         "baslik": "Let op evenementsdata",
+         "metin": "Het spel slaat automatisch op, maar evenementen zijn tijdelijk; noteer evenementen die binnenkort aflopen."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "De grootste valkuil in de begindagen is alles tegelijk willen doen. Eerst één regio afronden voor je verder trekt beschermt je grondstoffen en zorgt voor overzicht."
+      }
+     ]
+    },
+    {
+     "id": "macera-rutbesi",
+     "baslik": "Adventure Rank en voortgang",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**Adventure Rank (AR)** is het algemene niveau van je account. Het stijgt door verkenning, het openen van kisten en het voltooien van opdrachten. Om personages voorbij niveau 40 te laten opstijgen (ascend) is een specifieke Adventure Rank vereist; is je rang te laag, dan stokt de groei van je personages."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Maximumniveau personage",
+        "Benodigde Adventure Rank"
+       ],
+       "satirlar": [
+        [
+         "40",
+         "15"
+        ],
+        [
+         "50",
+         "25"
+        ],
+        [
+         "60",
+         "30"
+        ],
+        [
+         "70",
+         "35"
+        ],
+        [
+         "80",
+         "40"
+        ],
+        [
+         "90",
+         "50"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Vanaf rang 6 ontgrendelen domains die uitrusting tot niveau 90 leveren (artefact-domains); rond rang 8–9 beginnen de opdrachten om je wereldniveau te verhogen. Met een hoger wereldniveau worden vijanden sterker, maar verbeteren ook de beloningen. Is je rang ontoereikend, focus dan op quests en verkenning; wensen verhogen je Adventure Rank niet."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Het verhogen van het wereldniveau is niet verplicht. Als gevechten te zwaar worden, blijf dan gerust op een lager niveau om eerst personages en uitrusting te versterken."
+      }
+     ]
+    },
+    {
+     "id": "dilek-sistemi",
+     "baslik": "Hoe werkt het wenssysteem?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Wensen (Wishes) zijn de gacha-methode om personages en wapens te verkrijgen. Sommige regels staan vermeld in het spel, andere zijn gebaseerd op spelersstatistieken; houd beide uit elkaar."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Onderdeel",
+        "Toelichting"
+       ],
+       "satirlar": [
+        [
+         "Personagebanner 5-sterrenkans",
+         "Basiskans 0,6%; een 5-sterrenitem is uiterlijk binnen 90 wensen gegarandeerd"
+        ],
+        [
+         "Soft pity",
+         "Vanaf circa de 74e wens neemt de kans merkbaar toe (onofficiële community-meting)"
+        ],
+        [
+         "50/50-regel",
+         "Het eerste 5-sterrenpersonage is voor 50% (circa 55% met Capturing Radiance) het banner-personage; verlies je, dan is de volgende gegarandeerd"
+        ],
+        [
+         "Wapenbanner-garantie",
+         "80 wensen"
+        ],
+        [
+         "4-sterrenitem",
+         "Minstens eenmaal per 10 wensen gegarandeerd"
+        ],
+        [
+         "Pity-overdracht",
+         "Telt door binnen hetzelfde bannertype; verschillende categorieën banners tellen apart"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Wensen kunnen ook met echt geld worden gekocht; dit is echter niet verplicht. Stel vooraf een budget vast en ga nooit over de schreef met de gedachte „nog eentje dan”. Schakel ouderlijk toezicht in om ongewenste betalingen door minderjarigen te blokkeren."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Wensen opsparen en gericht inzetten voor het personage dat je het liefste wilt, werkt beter dan willekeurig trekken. Toch garandeert geen enkele banner een snelle uitkomst; garanties zijn slechts bovengrenzen."
+      }
+     ]
+    },
+    {
+     "id": "karakter-ve-kaynak",
+     "baslik": "Personages, teams en grondstoffenbeheer",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Team:** Verschillende elementen combineren in een team van vier (bijvoorbeeld Hydro + Pyro voor Vaporize) activeert een krachtige elementreactie.",
+        "**Rolverdeling:** Eén hoofdaanvaller (Main DPS), één ondersteunende healer/buffer en één personage om elementen aan te brengen vormen een betrouwbare basis.",
+        "**Wapens en uitrusting:** Het wapen en de artefacten bepalen het leeuwendeel van de kracht van een personage; upgrade het wapen en het belangrijkste artefact altijd als eerste.",
+        "**Resin (hars):** Wordt gebruikt om beloningen te claimen bij domains en bazen en vult zich langzaam aan; laat het niet overstromen.",
+        "**Gratis personages:** Personages die je vrijspeelt via het verhaal en evenementen zijn sterk genoeg om alle uitdagingen te voltooien; elk nieuw personage willen bezitten is nergens voor nodig."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Eenvoudige regel: het spel kan volledig gratis worden gespeeld; zonder echt geld vertraagt je voortgang enkel, hij stopt nooit."
+      }
+     ]
+    },
+    {
+     "id": "tepkimeler-ve-takim",
+     "baslik": "Elementreacties en teamrollen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "De kern van Genshin Impact is de wisselwerking tussen elementen. Het treffen van hetzelfde doelwit met twee verschillende elementen ontketent een elementreactie. Onderstaande tabel vat de voornaamste reacties samen (in lijn met de tutorial en officiële wiki): om een reactie te triggeren breng je eerst het ene element aan en raak je het doelwit vervolgens met een ander. Let op het elementsymbool boven de vijand: als het symbool zichtbaar is, is het moment rijp voor de vervolgreactie. Herhaaldelijk hetzelfde element gebruiken levert geen reactie op, dus wissel regelmatig van personage."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Reactie",
+        "Elementen",
+        "Effect"
+       ],
+       "satirlar": [
+        [
+         "Vaporize",
+         "Hydro + Pyro",
+         "Schadevermenigvuldiger"
+        ],
+        [
+         "Melt",
+         "Cryo + Pyro",
+         "Schadevermenigvuldiger"
+        ],
+        [
+         "Overloaded",
+         "Electro + Pyro",
+         "Explosie en terugslag"
+        ],
+        [
+         "Superconduct",
+         "Cryo + Electro",
+         "Verlaagt fysieke weerstand met de helft (50%)"
+        ],
+        [
+         "Electro-Charged",
+         "Hydro + Electro",
+         "Aanhoudende schokschade"
+        ],
+        [
+         "Frozen",
+         "Hydro + Cryo",
+         "Bevriest het doelwit ter plekke"
+        ],
+        [
+         "Swirl",
+         "Anemo + ander element",
+         "Verspreidt het element naar omliggende vijanden"
+        ],
+        [
+         "Crystallize",
+         "Geo + ander element",
+         "Laat een beschermend schildkristal vallen"
+        ],
+        [
+         "Burning",
+         "Dendro + Pyro",
+         "Gebiedsschade en aanhoudende brand"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Reacties met Dendro zoals Bloom, Hyperbloom, Burgeon, Quicken, Aggravate en Spread zijn complexer; Shatter treedt op wanneer bevroren doelen met zware wapens worden geraakt. In het begin volstaan Vaporize, Melt en Swirl ruimschoots. Praktische vuistregel: het ene personage brengt een element aan, het volgende personage activeert met een ander element. Complexe ketens zijn nergens voor nodig; uitproberen in de korte oefenarena van de tutorial leert het snelst."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rol",
+        "Taak",
+        "Logica"
+       ],
+       "satirlar": [
+        [
+         "Hoofdaanvaller (Main DPS)",
+         "Deelt de meeste schade uit op het veld",
+         "Het personage dat het langst actief in beeld blijft"
+        ],
+        [
+         "Secundaire aanvaller (Sub DPS)",
+         "Brengt elementen aan en bereidt reacties voor",
+         "Activeert snelle vaardigheden en wisselt weer"
+        ],
+        [
+         "Ondersteuning (Support)",
+         "Versterkt statistieken of geneest",
+         "Verhoogt de overlevingskracht en schade van het hele team"
+        ],
+        [
+         "Verdediger / Schild",
+         "Biedt bescherming via schilden",
+         "Houdt je overeind bij zware eindbazen"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "In een team van vier zijn twee verschillende elementen al voldoende; drie is aanvankelijk niet nodig. Bouw eerst een stabiele tweeledige reactie op en wen eraan in de praktijk."
+      }
+     ]
+    },
+    {
+     "id": "recine-ve-rutin",
+     "baslik": "Resin-budget en dagelijkse routine",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Original Resin (oorspronkelijke hars) wordt besteed om beloningen te innen bij domains en bazen. De limiet is 200 en elke 8 minuten herstelt 1 punt, waardoor een leeg reservoir na circa 27 uur vol is. Fragile Resin levert direct 60 hars op, en Condensed Resin wordt gebruikt om opbrengsten uit domains bij een latere run te verdubbelen (zie de in-game beschrijving). Resin is uitsluitend nodig voor specifieke beloningsplekken; gewone verkenning, kisten en dagelijkse taken kosten geen hars. Is je resin op, dan stopt het spel niet: ga gewoon door met het verkennen van de kaart, verhaallijnen of evenementen. Zorg er vooral voor dat je resin niet langdurig tegen het maximum van 200 aan blijft zitten."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Voltooi de dagelijkse opdrachten (Commissions)",
+         "metin": "Rond de vier dagelijkse taken af; ze kosten weinig tijd en leveren gegarandeerde beloningen op."
+        },
+        {
+         "baslik": "Besteed je resin tijdig",
+         "metin": "Wacht niet tot de balk overstroomt, maar bezoek het domain van het materiaal dat je het hardst nodig hebt; blijf onder de 200."
+        },
+        {
+         "baslik": "Vergeet de wekelijkse bazen niet",
+         "metin": "Wekelijkse bazen vragen bij de eerste runs een gereduceerde hoeveelheid resin."
+        },
+        {
+         "baslik": "Check actuele codes en evenementen",
+         "metin": "Evenementsbeloningen zijn tijdelijk; neem ze op in je speelschema."
+        },
+        {
+         "baslik": "Verken de spelwereld",
+         "metin": "Kisten, puzzels en ontdekkingen leveren waardevolle grondstoffen op zonder dat het resin kost."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Hanteer een vaste resin-routine: niet de ene dag alles leegmaken en de volgende dag laten overlopen. Regelmatige, korte speelsessies werken efficiënter dan zeldzame marathonsessies."
+      }
+     ]
+    },
+    {
+     "id": "kod-ve-parasiz-oyun",
+     "baslik": "Promotiecodes verzilveren en F2P-strategie",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Officiële promotiecodes (redeem codes) bieden gratis in-game beloningen. **Voorwaarde voor verzilvering:** doorgaans is Adventure Rank 10 vereist; sommige actiecodes kunnen afwijkende eisen stellen. Je kunt codes invoeren via HoYoverse's officiële geschenkenpagina (genshin.hoyoverse.com/en/gift) of direct in de game; beloningen verschijnen in je in-game mailbox en blijven circa 30 dagen bewaard. Een momenteel geldige code verloopt op 16 november 2026 om 00:00 uur (UTC+8). Codes moeten exact worden ingevoerd; verlopen of reeds gebruikte codes geven een foutmelding. Een code kan per account slechts eenmaal worden verzilverd. Claim ontvangen beloningen direct uit je postbus."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Bezoek de officiële pagina",
+         "metin": "Voer codes uitsluitend in op de officiële verzilverpagina of direct in het spel."
+        },
+        {
+         "baslik": "Invoeren in de game",
+         "metin": "Ga naar Paimon-menu > Instellingen > Account > Promotiecode verzilveren."
+        },
+        {
+         "baslik": "Leeg je postvak",
+         "metin": "De beloning arriveert in je postbus; haal deze op voor de bewaartermijn verstrijkt."
+        }
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "F2P-prioriteit",
+        "Waarom?"
+       ],
+       "satirlar": [
+        [
+         "Verhaal en verkenning",
+         "Levert gratis wensmaterialen, Primogems en personages op"
+        ],
+        [
+         "Codes en evenementen",
+         "Bieden doorlopend gratis extra grondstoffen"
+        ],
+        [
+         "Eén team, weinig personages",
+         "Versterkt je selectie zonder grondstoffen te versnipperen"
+        ],
+        [
+         "Wensen opsparen",
+         "Brengt je gegarandeerd dichter bij je absolute droompersonage"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Haal codes uitsluitend uit officiële bronnen. Websites voor gratis codes die om wachtwoorden, verificatiecodes of inloggegevens vragen, zijn phishing-vallen."
+      }
+     ]
+    },
+    {
+     "id": "rutbe-kilometre-taslari",
+     "baslik": "Mijlpalen van de Adventure Rank",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "De maximale Adventure Rank is 60 en het wereldniveau stijgt tot ten hoogste niveau 9. Onderstaande tabel vat de belangrijkste ontgrendelingen samen; Adventure Rank 10 en de bovengrenzen zijn afkomstig uit officiële bronnen, de overige drempels zijn indicatief en kunnen per update licht wijzigen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rang",
+        "Wat ontgrendelt",
+        "Opmerking"
+       ],
+       "satirlar": [
+        [
+         "10",
+         "Promotiecodes verzilveren",
+         "Officiële bron"
+        ],
+        [
+         "16 (circa)",
+         "Co-op multiplayer",
+         "Kan variëren per versie"
+        ],
+        [
+         "20 (circa)",
+         "Uitdagende content zoals Spiral Abyss",
+         "Kan variëren per versie"
+        ],
+        [
+         "60",
+         "Maximale Adventure Rank",
+         "Officiële vermelding"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Het snel bereiken van een hoge rang heeft geen haast; naarmate je stijgt, worden vijanden aanzienlijk taaier. Zijn je personages nog niet klaar, blijf dan gerust op een lager wereldniveau. Het rustig voltooien van verhaallijnen en verkenning houdt de ontwikkeling van personages en grondstoffen mooi in evenwicht. Loop je vast, dan helpt het upgraden van wapens en artefacten vaak veel beter dan het overhaast opvoeren van je rang."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Veelgemaakte beginnersfouten",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Startwensen roekeloos verspillen aan willekeurige banners.",
+        "Elk nieuw verkregen personage tegelijk willen levelen en daardoor zonder materialen komen te zitten.",
+        "Original Resin laten vollopen tot de limiet of helemaal nooit verbruiken.",
+        "Zonder verbeterde wapens en artefacten zware gebieden betreden en het personage de schuld geven.",
+        "De einddatum van evenementen over het hoofd zien; noteer tijdelijke acties in je agenda."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Beschouw het wenssysteem als een kansspel. Houd altijd in gedachten dat je ditzelfde budget aan Primogems kunt bewaren voor een favoriet personage in een latere update."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Accountbeveiliging en uitgavenwaarschuwing",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "In je account zitten talloze uren speelplezier en toewijding. Deel je wachtwoord, verificatiecodes of toegang tot je gekoppelde e-mailadres nooit met anderen."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Websites en apps die gratis Primogems, gratis wensen of generators beloven zijn oplichterij;** ze kapen je account of stelen betaalgegevens. Echte gratis bronnen bestaan uitsluitend uit in-game quests, evenementen en officiële codes.",
+        "Promotiecodes worden meestal gedeeld tijdens officiële livestreams; voer codes alleen in via het spel of de officiële website en vul je wachtwoord nergens anders in.",
+        "Het verhandelen van accounts en het gebruik van ongeautoriseerde software of bots zijn strikt verboden en resulteren in een permanente ban.",
+        "Activeer tweestapsverificatie en kies voor je HoYoverse-account een uniek, sterk wachtwoord.",
+        "Stel op accounts van minderjarigen duidelijke uitgavenlimieten en ouderlijk toezicht in."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Niemand heeft je inloggegevens nodig om je „wensen cadeau te doen”. Mocht je een dergelijk dubieus voorstel ontvangen, weiger dit dan direct en verander voor de zekerheid je wachtwoord."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Veelgestelde vragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is Genshin Impact gratis?",
+         "c": "Ja, downloaden en spelen is geheel gratis. Er zijn optionele aankopen, maar alle hoofdcontent is zonder betaling toegankelijk."
+        },
+        {
+         "s": "Is de game in het Turks beschikbaar?",
+         "c": "Ja, Turkse schermtekst wordt ondersteund (16 teksttalen volgens Epic Games Store); gesproken stemmen zijn in het Chinees, Engels, Japans en Koreaans."
+        },
+        {
+         "s": "Op welke platforms draait het spel?",
+         "c": "Pc, PlayStation, iOS en Android; bekijk de officiële website voor overige platformdetails."
+        },
+        {
+         "s": "Hoe krijg ik mijn eerste 5-sterrenpersonage?",
+         "c": "De beginnersbanner garandeert Noelle als vast startpersonage. Voor overige 5-sterrenpersonages gebruik je het wenssysteem en enig geduld."
+        },
+        {
+         "s": "Zijn websites voor gratis Primogems betrouwbaar?",
+         "c": "Nee. Het betreft zonder uitzondering frauduleuze pogingen om accounts te stelen."
+        },
+        {
+         "s": "Moet ik elk nieuw personage proberen te bemachtigen?",
+         "c": "Nee. Alle speluitdagingen zijn uitstekend te voltooien met de gratis personages en een of twee favoriete helden."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "zh": {
+   "baslik": "原神新手指南：初探提瓦特与祈愿系统全解（2026）",
+   "ozet": "为《原神》（Genshin Impact）新旅行者定制的完整指南：初入提瓦特、冒险等阶、祈愿抽卡机制、角色与资源科学规划，以及账号安全防盗；当前版本为 7.2。",
+   "kunye": [
+    {
+     "ad": "类型",
+     "deger": "开放世界动作角色扮演游戏（含抽卡养成要素）"
+    },
+    {
+     "ad": "平台",
+     "deger": "PC、PS5、Xbox Series X|S、iOS、Android、HarmonyOS NEXT（PS4 支持已于 2026年4月8日终止；无 Switch 版本）"
+    },
+    {
+     "ad": "收费模式",
+     "deger": "免费游玩；含可选内购"
+    },
+    {
+     "ad": "当前版本",
+     "deger": "7.2“毁灭时刻”（Hour of Ruin，2026年11月4日）"
+    },
+    {
+     "ad": "土耳其语支持",
+     "deger": "支持：土耳其语为 16 种文本语言之一（Epic 商店页面）。配音提供中、英、日、韩四种语言"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "走近《原神》：当前全貌与核心玩法",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "《原神》（Genshin Impact）是由米哈游（HoYoverse）自主研发的开放世界动作角色扮演游戏。在名为“提瓦特”的幻想世界中，玩家将扮演旅行者踏上寻亲之旅，自由探索广袤天地、解开精妙谜题、迎击强敌并灵活驱动七种元素之力。游戏本体完全免费下载游玩；获取全新角色与神兵利器的核心途径是名为“祈愿”（Wish）的抽取机制。"
+      },
+      {
+       "tip": "p",
+       "metin": "当前最新版本为 **7.2“毁灭时刻”（Hour of Ruin）**；该版本于 2026 年 11 月 4 日正式上线，祈愿活动卡池持续至 11 月 24 日。本版本带来了全新 5 星角色米佳（Mitya，使用法器武器 Starsealed Edict）与瓦莱里（Valeriy），以及一名全新 4 星角色。主线魔神任务第五幕“毁灭时刻”与第六幕随之揭晓，开放了至冬国（Snezhnaya）全新区域 Novokitezhgrad 与 Wingspan Peak，并开启了大型活动“盛大防线”（The Grand Defense）。新手初入游戏无需急躁追赶全部高难内容；提瓦特会循序渐进引渡你成长。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "游戏版本周期大约每六周轮换一次。通过游戏内置的活动公告或米游社官方资讯页，可随时掌握最新的角色卡池与限时福利。"
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "开始之前：平台、存储体积与语言支持",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "《原神》支持 PC、PS5、Xbox Series X|S（自 2024 年 11 月 20 日起支持）、iOS、Android 以及鸿蒙 HarmonyOS NEXT（自 2025 年 9 月 10 日起支持）。老款 PS4 支持已于 2026 年 4 月 8 日正式画上句号；Nintendo Switch 版本尚未推出。本作本体免费，主要依靠抽卡祈愿内购运营。同一米哈游通行证支持跨端互通数据；注册前请参阅官方说明核对跨区跨端账号绑定细则。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "硬件配置",
+        "最低配置（PC 端，Epic 规格）",
+        "推荐配置（PC 端，Epic 规格）"
+       ],
+       "satirlar": [
+        [
+         "操作系统",
+         "Windows 10 64 位",
+         "Windows 10 64 位"
+        ],
+        [
+         "处理器",
+         "第 6 代 Intel Core i5 或 AMD Ryzen 同级",
+         "第 7 代 Intel Core i7 或 AMD Ryzen 5000 系列"
+        ],
+        [
+         "运行内存（RAM）",
+         "8 GB",
+         "16 GB"
+        ],
+        [
+         "独立显卡",
+         "NVIDIA GeForce GTX 1050，DirectX 11",
+         "NVIDIA GeForce GTX 1060（6 GB 显存）"
+        ],
+        [
+         "存储空间",
+         "110 GB 可用空间",
+         "150 GB 可用空间"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**语言支持：** 据 Epic 商店页面展示，游戏界面与字幕全面支持土耳其语（共支持 16 种文本语言）；语音提供中文、英语、日语和韩语四国全量配音。随着版本地图持续扩充，游戏体积不断增大，强烈建议安装在高速固态硬盘（SSD）并预留充裕空间；上述指标源自 Epic 官方标注，后续可能随版本小幅变动。"
+      },
+      {
+       "tip": "uyari",
+       "metin": "请务必通过米哈游官方网站、各大官方应用商店（App Store、Google Play、PlayStation Store）或官方启动器下载游戏。任何第三方所谓“成品初始号”或魔改客户端极易触发安全检测导致账号被永久封禁。"
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "开荒起步：循序渐进",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "跟随主线沉浸剧情",
+         "metin": "完成开局序章指引；各项核心系统会逐步解锁。不要盲目赶路，尽情在首个国度蒙德（Mondstadt）漫步探索。"
+        },
+        {
+         "baslik": "使用初始赠送的祈愿",
+         "metin": "初行者推荐祈愿（新手池）享八折优惠，十连必得大剑岩系角色诺艾尔（Noelle）。顺其自然利用系统赠送的相遇之缘，无需急躁。"
+        },
+        {
+         "baslik": "搜集大世界宝箱与见闻",
+         "metin": "地图沿途偶遇的各级宝箱与见闻探索任务，在开荒前期能够为你提供极其丰厚的原石、武器狗粮与角色突破素材。"
+        },
+        {
+         "baslik": "清空每日委托任务",
+         "metin": "每日委托（Commissions）耗时极短，但每天稳定供应原石与冒险阅历，是必须坚持的日常基石。"
+        },
+        {
+         "baslik": "集中资源精养主力",
+         "metin": "前期优先把资源全部倾斜给主角（旅行者）或第一位心仪的主力输出；切忌雨露均沾将有限资源分散给每一个新抽到的角色。"
+        },
+        {
+         "baslik": "定期核查整理背包",
+         "metin": "在向商人出售或丢弃材料前，先仔细看清物品用途描述；提瓦特绝大多数看似不起眼的野外素材在后期均是关键突破道具。"
+        },
+        {
+         "baslik": "关注活动结算周期",
+         "metin": "游戏支持云端实时自动保存；但限时运营活动通常有时限要求，及时将快结束的活动原石收入囊中。"
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "开荒期最致命的误区是妄图一天内扫平全图。踏踏实实清空一个区域的锚点与神瞳再跨入下一国度，不仅能保护资源链条，更能深入理解元素机制。"
+      }
+     ]
+    },
+    {
+     "id": "macera-rutbesi",
+     "baslik": "冒险等阶与世界等级递进",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**冒险等阶（Adventure Rank / AR）** 代表玩家账号的综合履历等级。通过开宝箱、解锁传送锚点以及完成任务积累冒险阅历提升。角色要突破 40 级以上的等级上限，必须达到对应的冒险等阶；等阶不足时，角色等级将被系统强制限制。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "角色等级上限",
+        "所需冒险等阶（AR）"
+       ],
+       "satirlar": [
+        [
+         "40 级",
+         "15 级"
+        ],
+        [
+         "50 级",
+         "25 级"
+        ],
+        [
+         "60 级",
+         "30 级"
+        ],
+        [
+         "70 级",
+         "35 级"
+        ],
+        [
+         "80 级",
+         "40 级"
+        ],
+        [
+         "90 级（满级）",
+         "50 级"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "在达到对应等阶后，圣遗物秘境将解锁最高掉落金色圣遗物的权限；达到特定等阶还会触发世界等级突破任务。世界等级提高后，全图怪物数值与攻击欲望大幅上升，但掉落物与金币经验收益亦同步显著增加。如果感觉升级卡顿，多清主线与大世界支线；祈愿抽卡并不会直接增加冒险阅历。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "提升世界等级绝非强制。若感觉大世界清怪吃力，可在派蒙菜单中手动降低一级世界等级，先沉淀强化角色面板与武器等级再调回。"
+      }
+     ]
+    },
+    {
+     "id": "dilek-sistemi",
+     "baslik": "祈愿抽卡保底机制深度剖析",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "祈愿（Wish）是抽取心仪角色与武器的核心途径。抽卡概率中一部分为官方公示明则，另一部分为社区大数据测算的规律；两者需清晰区分。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "祈愿机制项目",
+        "规则与数据"
+       ],
+       "satirlar": [
+        [
+         "角色活动祈愿 5 星基础概率",
+         "基础出率 0.6%；最多 90 抽内必定触发 5 星保底"
+        ],
+        [
+         "软保底区间（Soft pity）",
+         "大约从第 74 抽开始出金概率呈阶梯式暴增（非官方明示，社区大数据公认规律）"
+        ],
+        [
+         "小保底 50/50 机制",
+         "首次出金有 50%（触发 Capturing Radiance 捕获明光机制后约为 55%）概率为当期限定角色；若歪了常驻，下一次出金必为当期限定（大保底）"
+        ],
+        [
+         "神铸赋形（武器池）保底",
+         "最多 80 抽必定保底出 5 星武器"
+        ],
+        [
+         "4 星保底机制",
+         "最多每 10 抽必定至少获得一件 4 星或以上物品"
+        ],
+        [
+         "保底次数跨期继承",
+         "同类祈愿池（如角色限定池）的抽数进度完全跨版本跨期继承；不同卡池类型（角色/武器/常驻）之间相互独立结算"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "抽卡使用的创世结晶可通过充值获取；但绝非强制消费。充值前务必设定个人消费红线，切忌带着“下一发一定出”的赌徒心态超额透支。家长请务必开启密码防护，防止未成年人擅自绑定银行卡消费。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "日常将原石攒成纠缠之缘，集中倾泻给你真正深爱或强度质变的核心限定大 C，收益远胜于每个卡池随意抽几下。没有任何卡池承诺首抽即中；保底抽数应始终作为最坏打算的资金储备。"
+      }
+     ]
+    },
+    {
+     "id": "karakter-ve-kaynak",
+     "baslik": "角色阵容构筑与体力资源法则",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**四人成队：** 在四人队伍中编入不同元素属性的角色（例如水 + 火触发蒸发），能在交火时产生倍率级的元素反应伤害。",
+        "**角色职责：** 一名站场主输出（Main DPS）、一名挂元素/脱手副输出（Sub DPS），外加一名护盾或治疗奶妈，是稳如泰山的万能起手队形。",
+        "**武器与圣遗物：** 角色面板绝大部分数值由武器等级和圣遗物词条提供；优先拉满武器等级和主词条对路的羽毛/沙漏/杯子/头冠。",
+        "**原粹树脂（体力）：** 用于领取地脉花、周本 Boss 与秘境副本的高级产物；体力会随时间缓慢自回，切忌让其长期溢出浪费。",
+        "**赠送免费角色：** 剧情推进赠送的凯亚、丽莎、芭芭拉、香菱等免费角色完全能够通关大世界所有内容；切忌产生“没抽满全限定就玩不下去”的焦虑。"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "最纯粹的真理：零氪完全能够畅享《原神》的完整剧情与大世界探索；不花一分钱只是养成周期拉长，游戏乐趣丝毫不打折扣。"
+      }
+     ]
+    },
+    {
+     "id": "tepkimeler-ve-takim",
+     "baslik": "元素反应总览与队伍职能定位",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "《原神》战斗系统的灵魂在于七种元素的碰撞。向同一个敌人先后附着不同属性的元素，就会触发剧烈或增幅的元素反应。下方表格为核心基础反应精要（与游戏内教学及官方 Wiki 保持一致）：触发反应的核心逻辑是“先挂附着元素，后用触发元素打击”。注意观察敌人头顶闪烁的元素图标：只要图标存在，就是打出爆发反应的黄金窗口。连续用同一种元素输出不会产生任何反应，因此高频切换角色打技能是基本功。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "元素反应",
+        "触发元素组合",
+        "核心实战效果"
+       ],
+       "satirlar": [
+        [
+         "蒸发（Vaporize）",
+         "水（Hydro） + 火（Pyro）",
+         "直接成倍放大当次伤害倍率"
+        ],
+        [
+         "融化（Melt）",
+         "冰（Cryo） + 火（Pyro）",
+         "直接成倍放大当次伤害倍率"
+        ],
+        [
+         "超载（Overloaded）",
+         "雷（Electro） + 火（Pyro）",
+         "造成范围火伤并强力击飞打断敌人"
+        ],
+        [
+         "超导（Superconduct）",
+         "冰（Cryo） + 雷（Electro）",
+         "造成范围冰伤并在短时间内削减敌人 50% 物理抗性"
+        ],
+        [
+         "感电（Electro-Charged）",
+         "水（Hydro） + 雷（Electro）",
+         "雷水共存并持续跳出连环电击伤害"
+        ],
+        [
+         "冻结（Frozen）",
+         "水（Hydro） + 冰（Cryo）",
+         "强力冰冻目标，使其丧失行动能力"
+        ],
+        [
+         "扩散（Swirl）",
+         "风（Anemo） + 水/火/冰/雷",
+         "将附着元素扩散至周围大范围敌人并造成伤害"
+        ],
+        [
+         "结晶（Crystallize）",
+         "岩（Geo） + 水/火/冰/雷",
+         "掉落对应元素护盾晶片，拾取后获得减伤护盾"
+        ],
+        [
+         "燃烧（Burning）",
+         "草（Dendro） + 火（Pyro）",
+         "引燃目标造成持续性高频范围火伤"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "须弥引入的草系高阶反应（如绽放 Bloom、超绽放 Hyperbloom、烈绽放 Burgeon、原激化 Quicken、超激化 Aggravate 与蔓激化 Spread）偏向中后期深渊体系；此外重攻击砸击被冻结的目标还会触发碎冰（Shatter）。对于新手而言，初期只需熟练掌握“蒸发”、“融化”与“扩散”三大经典反应即可横扫大世界。新手口诀：一人负责挂元素，另一人切出来打反应；无需强行背诵冗长循环，在西风骑士团庙宇教学小试炼中亲手打两次便能自然悟透。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "队伍角色定位",
+        "实战核心使命",
+        "通俗通识逻辑"
+       ],
+       "satirlar": [
+        [
+         "主 C（Main DPS）",
+         "承担队伍大部分驻场站桩伤害输出",
+         "在场上开火时间最长的核心角色"
+        ],
+        [
+         "副 C（Sub DPS）",
+         "后台脱手输出、高频提供元素附着",
+         "丢出大招或元素战技后即可立刻退场换人"
+        ],
+        [
+         "增益辅助（Support）",
+         "提供攻击加成、充能回转或聚怪减抗",
+         "为全队创造无死角的高额爆发环境"
+        ],
+        [
+         "生存盾奶（Healer/Shielder）",
+         "释放护盾抵挡暴击或持续回复全队生命",
+         "在挑战高伤周本 Boss 时保住性命的定海神针"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "四人小队中编入两种联动元素便足以应对绝大部分战斗；无需贪多勉强塞入三种互不相干的属性。先打顺一套双人元素反应循环，熟悉了再作拓展。"
+      }
+     ]
+    },
+    {
+     "id": "recine-ve-rutin",
+     "baslik": "树脂体力规划与日常保姆级日程",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "原粹树脂（Original Resin，俗称体力）是领取秘境、地脉花与首领掉落所必需消耗的核心资源。体力上限为 200 点，每 8 分钟自然恢复 1 点，从完全空槽至 200 点满溢大约需要 27 小时。脆弱树脂（树脂药水）使用后直接恢复 60 点，浓缩树脂（Condensed Resin）可用于将秘境收益双倍打包（详见游戏内炼金合成描述）。体力仅在领取副本宝箱时消耗；大世界跑图开荒、找神瞳、开宝箱以及做日常任务均不消耗体力。因此切莫认为体力耗尽游戏就无事可做：体力清空后，正是静心推进主线、沉浸做支线或探索地图大好风光的最佳时刻。最关键的原则是：不要让 200 点体力长期处于溢出闲置状态。"
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "每日优先清空四项日常委托",
+         "metin": "每天上线先清完委托任务；耗时极短且提供极其稳定的原石收益与冒险阅历。"
+        },
+        {
+         "baslik": "消耗原粹树脂（清体力）",
+         "metin": "在体力达到 200 溢出前，按需刷取当前角色急需的天赋书、突破晶石或武器材料；避免体力溢出闲置。"
+        },
+        {
+         "baslik": "每周及时清理周本 Boss",
+         "metin": "每周前三次挑战周常征讨领域 Boss 享有体力减半优惠特权。"
+        },
+        {
+         "baslik": "查验最新兑换码与限时活动",
+         "metin": "运营活动的原石奖励具有时效性；牢记活动截止日期并及时清空任务要求。"
+        },
+        {
+         "baslik": "大世界自由漫游搜寻宝箱",
+         "metin": "开箱、解谜与供奉神瞳完全不耗费体力，是稳定积攒原石与材料的绿色通道。"
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "制定健康合理的体力收支计划：避免今天暴肝清零、明天彻底放置导致溢出。每天细水长流上线 20 分钟清掉体力，效率远胜于周末长时间疲劳连轴转。"
+      }
+     ]
+    },
+    {
+     "id": "kod-ve-parasiz-oyun",
+     "baslik": "前瞻兑换码使用与零氪养成法则",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "官方公布的兑换码（Redeem Codes）可在游戏内领取原石等珍贵物资。**兑换门槛：** 通常需要冒险等阶达到 10 级；个别联动兑换码可能有专属活动条件。你可以通过米哈游官方兑换页面（genshin.hoyoverse.com/en/gift）或直接在游戏内设置菜单中输入；物资将以邮件形式发放到游戏内邮箱并保存约 30 天。当前有一批有效兑换码的截止时间为 2026 年 11 月 16 日 00:00（UTC+8）。无论英文字母大小写，兑换码均需准确无误输入；失效或已被使用的兑换码会弹出错误提示。同一兑换码在同一个 UID 账号下不可重复领取。首次兑换成功后请立即在邮箱中点击领取，切勿错过有效兑换期。"
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "认准官方认证网页通道",
+         "metin": "兑换码仅可在米哈游官方兑换网页或游戏内指定位置输入。"
+        },
+        {
+         "baslik": "在游戏设置内直接兑换",
+         "metin": "点击左上角派蒙头像 > 设置 > 账户 > 兑换码，粘贴后点击兑换。"
+        },
+        {
+         "baslik": "前往邮箱领取附件道具",
+         "metin": "原石等奖励将即时下发至邮箱；请务必在 30 天过期日前点击领取。"
+        }
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "零氪（F2P）发展优先级",
+        "底层核心逻辑"
+       ],
+       "satirlar": [
+        [
+         "推进主线与大世界开荒",
+         "全图产出海量一次性原石、相遇之缘与基础角色"
+        ],
+        [
+         "跟进前瞻兑换码与版本活动",
+         "稳定白嫖每版本数千原石的核心源泉"
+        ],
+        [
+         "专注于单一四人国家队",
+         "把有限的摩拉和经验书集中喂养，避免资源分散崩盘"
+        ],
+        [
+         "死攒纠缠之缘静待大保底",
+         "确保面对心仪的真正 T0 级核心人权卡时拥有绝对必出把握"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "请务必只从官方前瞻直播及社区认证渠道获取兑换码。任何声称“输账号密码送 100 抽”的第三方外链均为盗号诈骗网站。"
+      }
+     ]
+    },
+    {
+     "id": "rutbe-kilometre-taslari",
+     "baslik": "冒险等阶成长里程碑一览",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "当前冒险等阶上限为 60 级，世界等级上限为 9 级。下表汇总了核心功能随等阶解锁的节奏；冒险等阶 10 级与满级上限为官方公示明则，其余区间为大致分段，具体可能随版本微调。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "冒险等阶（AR）",
+        "解锁核心玩法与权益",
+        "关键说明"
+       ],
+       "satirlar": [
+        [
+         "10 级",
+         "开启游戏内兑换码兑换功能",
+         "官方明文规则"
+        ],
+        [
+         "约 16 级",
+         "解锁多人联机大世界协作（Co-op）",
+         "可邀请高练度好友进世界帮忙带打"
+        ],
+        [
+         "约 20 级",
+         "解锁深境螺旋（Spiral Abyss）等进阶挑战",
+         "深渊前八层提供丰厚一次性原石奖励"
+        ],
+        [
+         "60 级",
+         "达到目前冒险等阶最高上限",
+         "官方明文上限，此后溢出阅历按比例转化为摩拉"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "冲刺高冒险等阶绝非越快越好；随着等阶提升，世界怪物的攻击力和防御力水涨船高。在主力阵容等级尚未跟上之前，在低世界等级沉淀完全是明智之选。顺应主线剧情的自然节奏推进，能够让角色练度与材料积累保持良好平衡。若在某一区域卡怪刮痧，回头补齐角色等级、武器与主词条圣遗物，往往比强行升级世界等阶有效得多。"
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "新手常见避坑指南",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "毫无规划地将开局赠送的宝贵原石随手丢入常驻祈愿池。",
+        "每抽到一个新角色就立即拉满升级，导致经验书与摩拉瞬间枯竭全员刮痧。",
+        "原粹树脂长期维持在 200 满溢状态或完全弃之不顾。",
+        "在武器和圣遗物等级全为 1 级的情况下硬闯高难区域，反怪角色面板太弱。",
+        "遗忘限时版本活动的截止日期，导致错失版本白送的四星武器与上千原石。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "务必将祈愿抽卡理性视作概率游戏。时刻保留充分余地：把同样的充值预算留给未来更心仪、更保值的版本强力角色。"
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "账号防盗与理性消费警示",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "你的《原神》账号凝结着成百上千小时的心血与记忆。切勿将登录密码、短信验证码或绑定的安全邮箱访问权透露给任何未经证实的人员。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**凡是宣称提供“免费刷原石”、“免费抽卡外挂”或“原石生成器”的网站与软件均为网络诈骗；** 其唯一目的就是盗取你的账号控制权或洗劫银行卡资金。游戏中真正合法的原石来源仅限游戏内任务、活动及官方渠道发放的兑换码。",
+        "官方兑换码通常在前瞻直播与官方认证社媒公布；输入兑换码请务必只认准游戏内设置菜单或官方域名，绝不在第三方钓鱼网页输入密码。",
+        "严禁私下买卖账号，严禁使用任何未经授权的挂机外挂脚本；此类违规行为一经查实将直接永久封禁。",
+        "务必开启米哈游通行证双重身份验证（2FA），并为游戏账号设置独一无二的高强度独立密码。",
+        "针对未成年人家中成员游玩的账号，务必开启充值密码保护与防沉迷家长监控限制。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "正规官方人员绝不会以“代充原石”、“赠送祈愿”为由索要你的账号密码。一旦遭遇此类可疑私聊，请果断拒绝举报并立即修改密码。"
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "常见问题解答",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "《原神》是免费游戏吗？",
+         "c": "是的，下载与日常游玩完全免费。游戏内包含可选充值项目；但无需花钱即可畅玩全部主线剧情与大世界内容。"
+        },
+        {
+         "s": "游戏支持土耳其语吗？",
+         "c": "支持，游戏界面与字幕全面支持土耳其语（据 Epic 商店页面共支持 16 种文本语言）；配音提供中文、英语、日语和韩语。"
+        },
+        {
+         "s": "游戏支持在哪些设备上运行？",
+         "c": "覆盖 PC、PlayStation、iOS、Android 以及鸿蒙 HarmonyOS NEXT；详情可查阅米哈游官方网站配置表。"
+        },
+        {
+         "s": "新手如何获取首个 5 星角色？",
+         "c": "初行者推荐祈愿保底必得岩系实用角色诺艾尔。其他 5 星角色需要依靠积攒纠缠之缘在限定池中抽取。"
+        },
+        {
+         "s": "网络上宣称免费送原石的网站可信吗？",
+         "c": "绝不可信。此类网站无一例外属于盗号钓鱼木马或电信诈骗陷阱。"
+        },
+        {
+         "s": "必须抽齐每一个新推出的角色吗？",
+         "c": "完全没有必要。依靠系统赠送的免费角色搭配一到两名心仪限定主 C，即可稳健通关提瓦特所有常规挑战。"
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  }
 }

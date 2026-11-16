@@ -39,6 +39,27 @@
    "instagram": true,
    "instagram_reel": true,
    "youtube": true
+  },
+  "de": {
+   "x": false,
+   "reddit": false,
+   "instagram": true,
+   "instagram_reel": true,
+   "youtube": true
+  },
+  "nl": {
+   "x": false,
+   "reddit": false,
+   "instagram": true,
+   "instagram_reel": true,
+   "youtube": true
+  },
+  "zh": {
+   "x": false,
+   "reddit": false,
+   "instagram": true,
+   "instagram_reel": true,
+   "youtube": true
   }
  },
  "reddit_topluluk": {},

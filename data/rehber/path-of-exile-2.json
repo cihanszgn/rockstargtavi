@@ -2144,6 +2144,1593 @@
      ]
     }
    ]
+  },
+  "de": {
+   "baslik": "Path of Exile 2 Einsteiger-Guide: Early Access vor 1.0 (2026)",
+   "ozet": "Ein Leitfaden für neue Path of Exile 2-Spieler zu Klassenwahl, den ersten Spielstunden, Resistenzen, Waffenlogik und Wissenswertem vor 1.0 und Free-to-Play am 11. Dezember 2026.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Action-Rollenspiel (ARPG, tiefgründiges Build-System)"
+    },
+    {
+     "ad": "Plattform",
+     "deger": "PC (Steam, Epic, Standalone-Launcher), PS5, Xbox Series X|S (ab 1.0)"
+    },
+    {
+     "ad": "Preismodell",
+     "deger": "Aktuell wird ein Early-Access-Key benötigt; ab 1.0 (11. Dezember 2026) kostenlos spielbar"
+    },
+    {
+     "ad": "Aktuelle Version",
+     "deger": "0.5.5 Forbidden Rites (Early Access)"
+    },
+    {
+     "ad": "Türkisch-Unterstützung",
+     "deger": "Nein; Steam führt 9 Sprachen auf, Türkisch gehört nicht dazu"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "Wo Path of Exile 2 aktuell steht",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Path of Exile 2 ist ein düsteres Action-Rollenspiel von Grinding Gear Games. Überleben erfordert überlegtes Spiel: Statt Gegner nur blind niederzumähen, planst du Ausweichmanöver, Positionierung und Fertigkeiten-Verknüpfungen genau. Es ist ein eigenständiges Spiel neben dem ersten Path of Exile, mit eigenen Klassen und eigener Geschichte. Das Spieltempo ist wuchtiger als im Original; jeder Kampf ist eine Kette von Entscheidungen, was für Kenner enorm tiefgründig und für Neulinge fordernd sein kann."
+      },
+      {
+       "tip": "p",
+       "metin": "Das Spiel befindet sich weiterhin im **Early Access** (seit 6. Dezember 2024). Der aktuelle Patch ist die Event-Liga **0.5.5 Forbidden Rites** (live seit 4. September 2026). **Der vollwertige 1.0-Release startet am 11. Dezember 2026** (PST) auf PC, PS5 und Xbox Series X|S und wird für alle kostenlos sein (Inven Global, offizielle Release-Seite). Version 1.0 bringt die Akte 5 und 6 (24 neue Gebiete, 18 einzigartige Bosse, über 20 benannte seltene Begegnungen), die Klassen Shadow und Duelist, die Herausforderungsliga Conquerors of Wraeclast sowie eine umfassende Endgame-Überarbeitung. **Wie Early-Access-Charaktere in 1.0 übernommen werden**, ist in den hier herangezogenen Quellen nicht abschließend geklärt; betrachte dies als offiziell noch offen und prüfe Ankündigungen kurz vor 1.0."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Wenn du bis zum 11. Dezember warten möchtest: Die grundlegende Logik dieses Guides (Resistenzen, verknüpfte Fertigkeiten, Endgame) behält auch in 1.0 ihre Gültigkeit. Welche Klasse am stärksten ist, schwankt von Liga zu Liga; jage dem nicht blind hinterher."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Vor dem Start: Zugang, Plattform und Anforderungen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Um bis zum 11. Dezember 2026 zu spielen, benötigst du einen Early-Access-Key oder ein Unterstützer-Paket; mit Release von 1.0 wird das Spiel Free-to-Play. Auf dem PC läuft es über Steam, Epic oder den Standalone-Launcher des Spiels; Konsolen-Support für PS5 und Xbox Series X|S folgt mit 1.0. Das Spiel ist für das Steam Deck verifiziert."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Komponente",
+        "Minimum (Steam)",
+        "Empfohlen (Steam)"
+       ],
+       "satirlar": [
+        [
+         "Prozessor",
+         "Intel i7-7700 oder AMD Ryzen 5 2500X",
+         "Intel i5-10500 oder AMD Ryzen 5 3700X"
+        ],
+        [
+         "Arbeitsspeicher (RAM)",
+         "8 GB",
+         "16 GB"
+        ],
+        [
+         "Grafikkarte",
+         "NVIDIA GTX 960 (3 GB), Intel Arc A380 oder AMD RX 470; mindestens 3 GB Videospeicher",
+         "NVIDIA RTX 2060, Intel Arc A770 oder AMD RX 5600 XT"
+        ],
+        [
+         "Betriebssystem und DirectX",
+         "Windows 10, DirectX 12",
+         "Windows 10, DirectX 12"
+        ],
+        [
+         "Speicherplatz",
+         "100 GB",
+         "100 GB, SSD empfohlen"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Diese Werte entsprechen den offiziellen Systemanforderungen der Steam-Shopseite. **Sprachen:** Steam führt 9 Sprachen auf (Oberfläche und Untertitel); die Sprachausgabe ist ausschließlich auf Englisch. **Türkisch wird nicht unterstützt**; das Spiel wird auf Englisch gespielt, weshalb du Gegenstands- und Fertigkeitennamen auf Englisch erlernen musst."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Beziehe das Spiel ausschließlich über Steam, Epic oder die offizielle Website von Path of Exile. Unseriöse Drittseiten können gestohlene oder ungültige Produktschlüssel vertreiben."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "Die ersten Stunden: Schritt für Schritt",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Auf den ersten Blick kann das Spiel Einsteiger überwältigen. Die folgende Reihenfolge bietet einen geradlinigen Leitfaden für den ersten Tag. Dein Ziel in den ersten Stunden ist kein Geschwindigkeitsrekord, sondern das Verinnerlichen der Mechaniken: Es genügt völlig, Ausweichrolle, Edelsteinfassungen und die Resistenzübersicht in jedem Gebiet einmal zu kontrollieren."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Wähle eine Klasse",
+         "metin": "Lies den Klassenabschnitt und wähle, was deinem Geschmack entspricht. Du kannst die ersten Minuten für einen kurzen Test anspielen; das Löschen eines Charakters ist jederzeit kostenlos."
+        },
+        {
+         "baslik": "Spiele die Kampagne",
+         "metin": "Folge der Handlung und bewege dich Gebiet für Gebiet vorwärts. Die Kampagne versorgt dich mit Erfahrung und Ausrüstung und bereitet dich aufs Endgame vor."
+        },
+        {
+         "baslik": "Setze Fertigkeitengemmen ein",
+         "metin": "Fertigkeitengemmen werden in Waffen und Rüstungsteile eingesetzt. Du verstärkst jede Hauptfertigkeit, indem du Unterstützergemmen damit verknüpfst."
+        },
+        {
+         "baslik": "Nutze die Ausweichrolle",
+         "metin": "Das Spiel verfügt über eine Ausweichrolle; tödlichen Angriffen aktiv auszuweichen, ist wichtiger als blindes Zuschlagen."
+        },
+        {
+         "baslik": "Behalte Resistenzen im Blick",
+         "metin": "Feuer-, Kälte-, Blitz- und Chaos-Resistenzen sind deine wichtigste Verteidigung; prüfe sie bei jedem Ausrüstungswechsel."
+        },
+        {
+         "baslik": "Vergleiche neue Beute",
+         "metin": "Vergleiche abgelegte Gegenstände vor dem Anlegen anhand von Resistenzen und Hauptattributen mit deiner aktuellen Rüstung."
+        },
+        {
+         "baslik": "Bleibe einsatzbereit",
+         "metin": "Achte auf Lebenspunkte, Spirit und Mana; sind diese aufgebraucht, kannst du keine Fertigkeiten einsetzen."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Wenn du in einem Gebiet wiederholt stirbst, renne nicht stur wieder hinein. Dir fehlen Resistenzen, Rüstungswerte oder das richtige Ausweichtiming; halte inne und überprüfe deine Ausrüstung."
+      }
+     ]
+    },
+    {
+     "id": "sinif-secimi",
+     "baslik": "Klassenwahl: 8 Klassen (Duelist und Shadow folgen mit 1.0)",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Aktuell stehen acht Klassen zur Verfügung. Jede Klasse besitzt zwei bis drei Aszendenz-Pfade (Ascendancies); das erste Ziel ist es, Gefallen an einer Klasse zu finden und die Aszendenz später zu wählen. Eine Aszendenz ist eine spezialisierte Machtausrichtung, die durch das Abschließen von Prüfungen freigeschaltet wird. Mit 1.0 werden Shadow (Dolche, Fallen, Tarnung) und Duelist hinzukommen; deren Aszendenzen sind noch nicht offiziell vorgestellt und fehlen daher in der Tabelle. Deine Klassenwahl bindet dich nicht für immer: Einen neuen Charakter mit anderer Klasse zu erstellen, ist kostenlos."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Klasse",
+        "Merkmale",
+        "Aszendenzen"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Stärke, Streitkolben, Nahkampf",
+         "Warbringer, Titan, Smith of Kitava"
+        ],
+        [
+         "Sorceress",
+         "Intelligenz, Stäbe und Zauber",
+         "Stormweaver, Chronomancer, Disciple of Varashta"
+        ],
+        [
+         "Witch",
+         "Intelligenz, Diener und okkulte Magie",
+         "Infernalist, Blood Mage, Lich"
+        ],
+        [
+         "Ranger",
+         "Geschicklichkeit, Bogen",
+         "Deadeye, Pathfinder"
+        ],
+        [
+         "Monk",
+         "Geschicklichkeit und Intelligenz, Kampfstab",
+         "Invoker, Acolyte of Chayula, Martial Artist"
+        ],
+        [
+         "Mercenary",
+         "Stärke und Geschicklichkeit, Armbrust",
+         "Witchhunter, Gemling Legionnaire, Tactician"
+        ],
+        [
+         "Huntress",
+         "Geschicklichkeit, Speer",
+         "Amazon, Ritualist, Spirit Walker"
+        ],
+        [
+         "Druid",
+         "Stärke und Intelligenz, Gestaltwandlung und Natur",
+         "Oracle, Shaman"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Praktischer Grundsatz für Neulinge: Wähle beim ersten Charakter den Waffentyp, der sich für dich intuitiv anfühlt, statt einer hochkomplizierten Klasse. Fernkämpfer mit Bogen oder Speer sind oft einfacher zu erlernen."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme-yolu",
+     "baslik": "Fortschrittspfad: Von der Kampagne bis ins Endgame",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Kampagne:** Schreite Akt für Akt voran; jeder Akt gipfelt in einem mächtigen Endboss. In 1.0 schließen die Akte 5 und 6 die Handlung ab.",
+        "**Aszendenz-Prüfungen:** Du schaltest deinen Aszendenz-Zweig durch das Meistern der Prüfungen frei. Diese Abschnitte verzeihen keine Fehler; rüste deine Verteidigung vorher auf.",
+        "**Atlas und Endgame:** Nach der Kampagne wechselst du in das Kartensystem (den Atlas). Mit Wegsteinen (Waystones) betrittst du Zonen, bezwingst härtere Widersacher und erbeutest bessere Ausrüstung.",
+        "**Wirtschaft und Handel:** Das interne Währungssystem bildet das Rückgrat des Gegenstandshandels. Gehandelt wird ausschließlich über offizielle Spielmechaniken.",
+        "**Ligensystem:** Zu neuen Ligen startest du mit frischen Charakteren; die ersten Spielstunden fühlen sich dadurch immer wieder spannend an."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Endgame-Details verändern sich mit jedem Patch (Patch 0.5.0 überarbeitete das Endgame und strukturierte die Trial of Chaos neu). Lies daher stets die aktuellen Patchnotizen, statt veraltete Leitfäden auswendig zu lernen. Wenn du auf 1.0 warten möchtest, lohnt es sich dennoch, die ersten vier Akte jetzt auszuprobieren, um deine Lieblingsklasse zu finden."
+      }
+     ]
+    },
+    {
+     "id": "esya-ve-ekonomi",
+     "baslik": "Ausrüstung, Fertigkeiten-Links und Ressourcenmanagement",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Resistenzen:** Es gibt vier Resistenzarten (Feuer, Kälte, Blitz, Chaos); betritt kein anspruchsvolles Gebiet ohne ausreichenden Schutz.",
+        "**Fertigkeitengemmen-Logik:** Eine Hauptgemme bildet zusammen mit Unterstützergemmen eine Verknüpfung; Unterstützer verändern das Verhalten der Fertigkeit grundlegend.",
+        "**Spirit:** Eine Ressource für dauerhaft aktive Auren und Diener; aktivierst du zu viele permanente Effekte, reicht dein Spirit nicht mehr aus.",
+        "**Waffenbindung:** Jede Klasse begünstigt bestimmte Waffengattungen (Keule, Stab, Armbrust, Bogen, Speer); passe deine Waffe deinen Fertigkeiten an.",
+        "**Währungssphären:** Die Sphären (Orbs) zur Veredelung von Beute sind wertvoll; überlege genau, wofür du sie einsetzt."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Einfache Grundregel: Verwende keine Währungssphäre für Vorgänge, deren Auswirkung du nicht vollständig verstehst. Bevor du irreversible Modifikationen wagst, solltest du genau wissen, was passiert. Die Stärke von Endgame-Ausrüstung beruht selten auf einem Einzelteil, sondern auf dem harmonischen Zusammenspiel von Resistenzen, Spirit und Schaden. Prüfe vor dem Verkauf wertvoller Gegenstände alle Warnhinweise."
+      }
+     ]
+    },
+    {
+     "id": "beceri-ve-destek-taslari",
+     "baslik": "Das System aus Fertigkeiten- und Unterstützergemmen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "In Path of Exile 2 stammen deine Fertigkeiten aus Gemmen, die in Waffen und Rüstungen eingesetzt werden. Eine **Fertigkeitengemme (Skill Gem)** verleiht einen Angriff oder Zauber; eine **Unterstützergemme (Support Gem)** verknüpft sich mit dieser Fertigkeit und modifiziert sie, etwa durch zusätzliche Projektile oder erhöhten Elementarschaden. Die Anzahl anknüpfbarer Unterstützer ist durch die Fassungen begrenzt (Werte variieren mit Patches). Achte bei der Wahl einer Fertigkeit daher nicht nur auf den Grundschaden, sondern vor allem auf harmonierende Synergien."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Fertigkeitengemme erhalten",
+         "metin": "Gemmen droppen als Beute und Questbelohnungen; wähle eine Hauptfertigkeit, die zu deiner Klasse passt."
+        },
+        {
+         "baslik": "In Fassung einsetzen",
+         "metin": "Setze die Gemme in eine freie Fassung deiner Ausrüstung ein; jede Fassung beherbergt eine Fertigkeit samt deren Unterstützern."
+        },
+        {
+         "baslik": "Unterstützergemmen anknüpfen",
+         "metin": "Füge verknüpfte Unterstützer hinzu; beachte, dass jeder Unterstützer auch Mana- oder Spirit-Kosten verändern kann."
+        },
+        {
+         "baslik": "Spirit-Budget überwachen",
+         "metin": "Dauerhafte Buffs und Diener reservieren Spirit; ist der Spirit-Pool erschöpft, können keine weiteren Auren aktiviert werden."
+        },
+        {
+         "baslik": "Fertigkeit im Kampf testen",
+         "metin": "Mache einen Probelauf in einem Gebiet; fühlt sich die Fertigkeit sperrig an, tausche die Unterstützergemmen aus."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Konzentriere dich nicht auf zu viele Fertigkeiten gleichzeitig. Starte mit einer Hauptfertigkeit und zwei Hilfszaubern; das System ist leicht verständlich, aber enorm tiefgründig."
+      }
+     ]
+    },
+    {
+     "id": "direnc-ve-savunma",
+     "baslik": "Resistenzen und Verteidigungsschichten",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Die meisten Tode resultieren aus lückenhafter Defensive. Du benötigst gestaffelte Abwehrschichten; die folgende Tabelle fasst die wichtigsten Säulen zusammen (Details unterliegen Patch-Anpassungen). Da Höchstgrenzen und Strafen für Gebietsstufen variieren können, lies die aktuellen Kennzahlen direkt im Charakterfenster ab."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Verteidigungsschicht",
+        "Wirkungsweise",
+        "Hinweis"
+       ],
+       "satirlar": [
+        [
+         "Resistenz (Feuer, Kälte, Blitz, Chaos)",
+         "Reduziert Schaden des jeweiligen Elements prozentual",
+         "Die wichtigste Schutzschicht; prüfe sie bei jedem Gegenstandswechsel"
+        ],
+        [
+         "Rüstung (Armor)",
+         "Dämpft erlittenen physischen Direktschaden",
+         "Typisch für schwere Rüstungen und Stärkeklassen"
+        ],
+        [
+         "Ausweichwert (Evasion)",
+         "Senkt die Wahrscheinlichkeit, von Treffern überhaupt erwischt zu werden",
+         "Typisch für Geschicklichkeitsklassen"
+        ],
+        [
+         "Energieschild (Energy Shield)",
+         "Puffert erlittenen Schaden vor den eigentlichen Lebenspunkten ab",
+         "Typisch für Intelligenzklassen"
+        ],
+        [
+         "Blocken (Block)",
+         "Fängt einen Teil feindlicher Schläge vollständig ab",
+         "Mithilfe von Schilden oder Spezialwaffen"
+        ],
+        [
+         "Ausweichrolle (Dodge Roll)",
+         "Manuelles seitliches Entkommen vor verheerenden Boss-Hieben",
+         "Auf jeder Klasse verfügbar; verlangt Timing"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Einen schwierigen Boss oder anspruchsvolle Karten mit niedrigen Resistenzen anzugehen, führt fast immer zu sofortigen One-Shots. Schließe stets zuerst deine Resistenzlücken, bevor du mehr Schaden anstrebst."
+      }
+     ]
+    },
+    {
+     "id": "para-birimi",
+     "baslik": "Tabelle der Währungssphären (Currencies)",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Sphären (Orbs) dienen gleichzeitig als Handelswährung und als Handwerksmaterial zur Veredelung von Ausrüstung. Die folgende Tabelle erläutert die gängigsten Sphären; da Einzelheiten durch Patches modifiziert werden können, beachte die jeweiligen Beschreibungen im Spiel."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Sphäre (Orb)",
+        "Grundlegende Funktion",
+        "Typischer Verwendungszeitpunkt"
+       ],
+       "satirlar": [
+        [
+         "Transmutation",
+         "Wandelt einen normalen Gegenstand in einen magischen um",
+         "Für Übergangsausrüstung zu Beginn der Kampagne"
+        ],
+        [
+         "Augmentation",
+         "Fügt einem magischen Gegenstand eine Eigenschaft hinzu",
+         "Kostengünstige Aufwertung während der Levelphase"
+        ],
+        [
+         "Regal",
+         "Wertet einen magischen Gegenstand zu einem seltenen (Rare) auf",
+         "Späte Kampagne und erste Atlas-Karten"
+        ],
+        [
+         "Exalted",
+         "Verleiht einem seltenen Gegenstand ein weiteres Attribut",
+         "Gezieltes High-End-Handwerk"
+        ],
+        [
+         "Chaos",
+         "Würfelt ein Attribut auf einem seltenen Gegenstand neu aus",
+         "Austausch unpassender Einzelwerte"
+        ],
+        [
+         "Divine",
+         "Würfelt die Zahlenwerte bestehender Attribute neu aus",
+         "Feinschliff wertvollster Endgame-Gegenstände"
+        ],
+        [
+         "Annulment",
+         "Entfernt eine zufällige Eigenschaft",
+         "Riskantes und teures Verfahren für Profis"
+        ],
+        [
+         "Vaal",
+         "Korrumpiert einen Gegenstand mit unberechenbaren Folgen",
+         "Nur anwenden, wenn ein Totalverlust verkraftbar ist"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Verschwende wertvolle Sphären nicht leichtfertig in der Kampagne; im Endgame sind sie ungleich mehr wert. Handel findet ausschließlich über offizielle Spielsysteme statt."
+      }
+     ]
+    },
+    {
+     "id": "kampanya-ve-harita",
+     "baslik": "Kampagnenakte und Endgame-Karten",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Die Kampagne umfasst aktuell die Akte 1 bis 4, von denen jeder mit einem markanten Endboss abschließt. Mit 1.0 vervollständigen die Akte 5 und 6 die Handlung (Inven Global). Nach der Kampagne öffnet sich das Atlas-Kartensystem:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Phase",
+        "Was geschieht",
+        "Nutzen"
+       ],
+       "satirlar": [
+        [
+         "Kampagnenakte",
+         "Du durchschreitest die Story Gebiet für Gebiet",
+         "Stufenaufstieg, Grundausrüstung und Fertigkeitenbasis"
+        ],
+        [
+         "Aszendenz-Prüfungen",
+         "Du schaltest deine Spezialisierungsklasse frei",
+         "Erschließt das wahre Machtpotenzial deiner Klasse"
+        ],
+        [
+         "Wegsteine (Waystones)",
+         "Eintrittskarten für Regionen auf dem Atlas",
+         "Forderndere Widersacher und mächtige Beute"
+        ],
+        [
+         "Bosse und Events",
+         "Spezielle Weltbosse und Atlas-Ereignisse",
+         "Wertvolle Endbelohnungen und florierende Wirtschaft"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Nach Abschluss der Kampagne kann das Spiel auf höheren Schwierigkeitsgraden wiederholt werden. Die neue Härte auf den Karten testet die Balance zwischen Schutz und Schaden; stürze dich nicht überhastet in hohe Kartenstufen. Wegstein-Ränge und Kartenereignisse werden mit 1.0 angepasst; detaillierte Zahlen zur Atlas-Überarbeitung sind noch nicht final publiziert. Warte auf die offiziellen 1.0-Patchnotizen."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Häufige Anfängerfehler",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Schwierige Zonen betreten, ohne die Elementarresistenzen zu kontrollieren.",
+        "Die Ausweichrolle ignorieren und jeden Hieb mit dem eigenen Körper abfangen wollen.",
+        "Fertigkeitengemmen wahllos einsetzen, ohne auf harmonierende Verknüpfungen zu achten.",
+        "Wertvolle Währungssphären verschleudern, ohne deren Wirkung genau zu verstehen.",
+        "Eine Klasse vorschnell aufgeben, weil sie sich schwach anfühlt; meist liegt es an unpassender Ausrüstung oder fehlenden Resistenzen."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Manche Aktionen im Spiel sind unumkehrbar (z. B. das Verderben von Gegenständen via Vaal-Sphäre). Probiere unsichere Schritte niemals an deiner primären Hauptausrüstung aus."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Kontosicherheit und Warnhinweise zum Free-to-Play-Start ab 1.0",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Dein Path of Exile-Konto beherbergt deine Ausrüstung und deinen gesamten Fortschritt. Teile dein Passwort, Kontodaten oder Authentifizierungscodes unter keinen Umständen mit Dritten. Mit dem Start des Free-to-Play-Modells strömen zahllose neue Spieler ins Spiel, was Betrugsversuche wie gefälschte Geschenke, dubiose Tauschangebote und Phishing-Versuche ansteigen lassen kann. Richte die Zwei-Faktor-Authentifizierung ein, verwende dein Passwort nirgendwo sonst und lehne Anfragen strikt ab, die dich auf externe Webseiten locken wollen. Der offizielle Support fragt niemals nach deinem Passwort."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Aktiviere die Zwei-Faktor-Authentifizierung und nutze für jeden Dienst ein individuelles Passwort.",
+        "Bots, Automatisierungssoftware und Cheats verstoßen gegen die Nutzungsbedingungen und führen zum permanenten Ausschluss.",
+        "Der Kauf oder Verkauf von Gegenständen und Währungen gegen Echtgeld (RMT) ist verboten; unseriöse Währungsverkäufer missbrauchen oft gestohlene Konten.",
+        "Klicke beim Handeln keine Links fremder Spieler an; gefälschte Handelsseiten dienen dem Diebstahl deiner Zugangsdaten."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Durch den kostenlosen Zugang wird die Zahl gefälschter Webseiten für angebliche Gratis-Keys oder Gratis-Währungen zunehmen. Keine legitime Quelle fragt nach deinem Passwort; weise verdächtige Angebote sofort zurück."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Häufig gestellte Fragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Ist Path of Exile 2 kostenlos?",
+         "c": "Aktuell wird ein Early-Access-Key benötigt. Ab Release von 1.0 am 11. Dezember 2026 ist das Spiel vollständig Free-to-Play."
+        },
+        {
+         "s": "Gibt es das Spiel auf Türkisch?",
+         "c": "Nein. Türkisch wird auf Steam nicht aufgeführt; das Spiel wird auf Englisch gespielt."
+        },
+        {
+         "s": "Kann ich auf Konsolen spielen?",
+         "c": "Version 1.0 erscheint für PS5 und Xbox Series X|S; der aktuelle Early Access findet auf dem PC statt."
+        },
+        {
+         "s": "Sollte ich bis Version 1.0 warten?",
+         "c": "Musst du nicht, allerdings werden Early-Access-Charaktere nicht in die 1.0-Wirtschaft übernommen. Prüfe vor einer Entscheidung die offiziellen Ankündigungen."
+        },
+        {
+         "s": "Wann erscheinen die neuen Klassen?",
+         "c": "Duelist und Shadow werden mit dem 1.0-Release eingeführt."
+        },
+        {
+         "s": "Läuft das Spiel auf dem Steam Deck?",
+         "c": "Ja, das Spiel ist offiziell für das Steam Deck verifiziert."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "nl": {
+   "baslik": "Path of Exile 2 Beginnersgids: Early Access voor 1.0 (2026)",
+   "ozet": "Een gids voor nieuwe Path of Exile 2-spelers over klassenkeuze, de eerste speeluren, resistenties, wapenmechanismen en essentiële informatie voor 1.0 en free-to-play op 11 december 2026.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Actierollenspel (ARPG, diepgaand build-systeem)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "PC (Steam, Epic, standalone launcher), PS5, Xbox Series X|S (vanaf 1.0)"
+    },
+    {
+     "ad": "Prijsmodel",
+     "deger": "Momenteel is een Early Access-sleutel vereist; free-to-play vanaf 1.0 (11 december 2026)"
+    },
+    {
+     "ad": "Huidige versie",
+     "deger": "0.5.5 Forbidden Rites (Early Access)"
+    },
+    {
+     "ad": "Turkse ondersteuning",
+     "deger": "Nee; Steam vermeldt 9 talen, Turks ontbreekt daarin"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "Waar Path of Exile 2 nu staat",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Path of Exile 2 is een duister actierollenspel ontwikkeld door Grinding Gear Games. Overleven vereist tactisch inzicht: in plaats van hersenloos vijanden neer te hakken, plan je ontwijkingen, positionering en vaardighedencombinaties nauwgezet. Het is een volwaardig losstaand spel naast de oorspronkelijke Path of Exile, met eigen klassen en verhaallijnen. Het tempo ligt zwaarder dan in het origineel; elk gevecht is een keten van beslissingen, wat voor liefhebbers enorm diepgaand is en voor nieuwkomers uitdagend kan zijn."
+      },
+      {
+       "tip": "p",
+       "metin": "Het spel bevindt zich nog in **Early Access** (sinds 6 december 2024). De huidige patch is de **0.5.5 Forbidden Rites** eventcompetitie (live sinds 4 september 2026). **De volledige release van 1.0 start op 11 december 2026** (PST) op PC, PS5 en Xbox Series X|S en is voor iedereen gratis toegankelijk (Inven Global, officiële releasepagina). Versie 1.0 brengt Act 5 en 6 (24 nieuwe gebieden, 18 unieke bazen, meer dan 20 benoemde zeldzame vijanden), de klassen Shadow en Duelist, de Conquerors of Wraeclast-competitie en een grondige herziening van het endgame. **Hoe Early Access-personages overgaan naar 1.0** is in de geraadpleegde bronnen niet definitief vastgelegd; beschouw dit als formeel nog open en raadpleeg officiële mededelingen kort voor 1.0."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Als je van plan bent te wachten tot 11 december: de basisprincipes uit deze gids (resistenties, gekoppelde vaardigheden, endgame) blijven ook in 1.0 onverminderd van kracht. Welke klasse het sterkst is verschilt per competitie; staar je daar niet blind op."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Voor je begint: toegang, platform en vereisten",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Om tot 11 december 2026 te spelen heb je een Early Access-sleutel of een Supporter Pack nodig; bij de lancering van 1.0 wordt het spel volledig gratis. Op de pc draait het via Steam, Epic of de standalone launcher; consoleondersteuning voor PS5 en Xbox Series X|S volgt met 1.0. Het spel is geverifieerd voor Steam Deck."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Onderdeel",
+        "Minimaal (Steam)",
+        "Aanbevolen (Steam)"
+       ],
+       "satirlar": [
+        [
+         "Processor",
+         "Intel i7-7700 of AMD Ryzen 5 2500X",
+         "Intel i5-10500 of AMD Ryzen 5 3700X"
+        ],
+        [
+         "Werkgeheugen (RAM)",
+         "8 GB",
+         "16 GB"
+        ],
+        [
+         "Videokaart",
+         "NVIDIA GTX 960 (3 GB), Intel Arc A380 of AMD RX 470; minimaal 3 GB videogeheugen",
+         "NVIDIA RTX 2060, Intel Arc A770 of AMD RX 5600 XT"
+        ],
+        [
+         "Besturingssysteem en DirectX",
+         "Windows 10, DirectX 12",
+         "Windows 10, DirectX 12"
+        ],
+        [
+         "Opslagruimte",
+         "100 GB",
+         "100 GB, SSD aanbevolen"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Deze waarden zijn overgenomen van de officiële systeemeisen op de Steam-winkelpagina. **Talen:** Steam vermeldt 9 talen (interface en ondertiteling); de stemmen zijn uitsluitend in het Engels. **Turks wordt niet ondersteund**; het spel wordt in het Engels gespeeld, dus je zult voorwerp- en vaardigheidsnamen in het Engels leren."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Schaf het spel uitsluitend aan via Steam, Epic of de officiële website van Path of Exile. Ondoorzichtige externe platforms kunnen ongeldige of gestolen sleutels verkopen."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "De eerste uren: stap voor stap",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Op het eerste gezicht kan het spel overweldigend aanvoelen voor beginners. Het onderstaande stappenplan biedt een heldere route voor de eerste dag. Je doel is niet om snel door de content te vliegen, maar om de systemen te doorgronden: ontwijkingsrollen, edelsteensockets en het weerstandenoverzicht in elk gebied even controleren is ruim voldoende."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Kies een klasse",
+         "metin": "Bestudeer het klassenhoofdstuk en kies wat aansluit bij jouw speelstijl. Je kunt de eerste minuten uitproberen; een personage verwijderen is kosteloos."
+        },
+        {
+         "baslik": "Doorloop de campagne",
+         "metin": "Volg de verhaallijn en trek van gebied naar gebied. De campagne levert ervaring en uitrusting op terwijl je wordt klaargestoomd voor het endgame."
+        },
+        {
+         "baslik": "Plaats vaardigheidsedelstenen",
+         "metin": "Vaardigheidsstenen (Skill Gems) worden in wapens en bepantsering geplaatst. Je versterkt elke hoofdvaardigheid door er ondersteunende edelstenen aan te koppelen."
+        },
+        {
+         "baslik": "Gebruik de ontwijkingsrol",
+         "metin": "Het spel beschikt over een ontwijkingsrol (dodge roll); dodelijke aanvallen actief ontwijken is belangrijker dan klappen incasseren."
+        },
+        {
+         "baslik": "Bewaak je resistenties",
+         "metin": "Vuur-, koude-, bliksem- en chaosresistenties vormen je belangrijkste verdediging; controleer ze telkens wanneer je van uitrusting wisselt."
+        },
+        {
+         "baslik": "Vergelijk nieuwe buit",
+         "metin": "Vergelijk gevonden uitrusting zorgvuldig met wat je draagt op basis van resistenties en kernattributen voordat je wisselt."
+        },
+        {
+         "baslik": "Blijf paraat",
+         "metin": "Let op levenspunten, Spirit en mana; als deze opraken kun je geen vaardigheden meer inzetten."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Als je in een bepaald gebied telkens sneuvelt, blijf dan niet halsstarrig doorrennen. Er ontbreekt iets aan je bepantsering, resistenties of ontwijking; stop even en analyseer je uitrusting."
+      }
+     ]
+    },
+    {
+     "id": "sinif-secimi",
+     "baslik": "Klassenkeuze: 8 klassen (Duelist en Shadow sluiten aan bij 1.0)",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Er zijn momenteel acht klassen beschikbaar. Elke klasse heeft twee of drie specialisatietakken (Ascendancies); het eerste doel is een klasse vinden die prettig aanvoelt, de Ascendancy kies je later. Een Ascendancy is een gespecialiseerd krachtpad dat wordt ontgrendeld via beproevingen. Met 1.0 worden Shadow (dolken, vallen en camouflage) en Duelist toegevoegd; de Ascendancies van deze twee klassen zijn nog niet formeel onthuld en ontbreken daarom in de tabel. Je zit niet vast aan je keuze; een nieuw personage starten met een andere klasse is altijd gratis."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Klasse",
+        "Kenmerk",
+        "Ascendancies"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Kracht, strijdknotsen, nabijgevecht",
+         "Warbringer, Titan, Smith of Kitava"
+        ],
+        [
+         "Sorceress",
+         "Intelligentie, staven en toverspreuken",
+         "Stormweaver, Chronomancer, Disciple of Varashta"
+        ],
+        [
+         "Witch",
+         "Intelligentie, handlangers en occulte magie",
+         "Infernalist, Blood Mage, Lich"
+        ],
+        [
+         "Ranger",
+         "Behendigheid, boog",
+         "Deadeye, Pathfinder"
+        ],
+        [
+         "Monk",
+         "Behendigheid en intelligentie, gevechtsstaf",
+         "Invoker, Acolyte of Chayula, Martial Artist"
+        ],
+        [
+         "Mercenary",
+         "Kracht en behendigheid, kruisboog",
+         "Witchhunter, Gemling Legionnaire, Tactician"
+        ],
+        [
+         "Huntress",
+         "Behendigheid, speer",
+         "Amazon, Ritualist, Spirit Walker"
+        ],
+        [
+         "Druid",
+         "Kracht en intelligentie, gedaanteverwisseling en natuur",
+         "Oracle, Shaman"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Praktische stelregel voor nieuwkomers: kies voor je eerste personage het wapentype dat je natuurlijk ligt in plaats van een ingewikkelde klasse. Afstandswapens zoals bogen of speren leren vaak vlotter."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme-yolu",
+     "baslik": "Voortgangspad: van campagne tot endgame",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Campagne:** vorder act na act; elke act culmineert in een kolossale eindbaas. In 1.0 voltooien Act 5 en 6 het verhaal.",
+        "**Ascendancy-beproevingen:** ontgrendel je specialisatietak door het volbrengen van beproevingen. Deze secties zijn meedogenloos; tref vooraf defensieve voorbereidingen.",
+        "**Atlas en endgame:** na de campagne stap je over op het kaartsysteem (de Atlas). Met wegstenen (Waystones) betreed je zones, versla je sterkere vijanden en vergaar je superieure buit.",
+        "**Economie en handel:** het interne valutasysteem vormt de basis van ruilhandel. Handelen verloopt uitsluitend via de officiële spelmechanismen.",
+        "**Ligasysteem:** bij nieuwe competities begin je opnieuw met verse personages; de beginfase blijft daardoor altijd fris aanvoelen."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Endgame-details veranderen met opeenvolgende patches (patch 0.5.0 herzag het endgame en vernieuwde Trial of Chaos). Het is daarom verstandiger om actuele patch notes door te nemen in plaats van verouderde gidsen uit het hoofd te leren. Als je wacht op 1.0 is het nu uitproberen van de eerste vier acts een uitstekende voorbereiding om je favoriete klasse te ontdekken."
+      }
+     ]
+    },
+    {
+     "id": "esya-ve-ekonomi",
+     "baslik": "Uitrusting, vaardigheidskoppelingen en middelenbeheer",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Resistenties:** er zijn vier weerstandstypen (vuur, kou, bliksem, chaos); betreed geen gevaarlijke zones zonder adequate dekking.",
+        "**Edelsteenkoppelingen:** een hoofdvaardigheidssteen gecombineerd met ondersteunende stenen vormt een keten; ondersteuningen veranderen de werking van de vaardigheid wezenlijk.",
+        "**Spirit:** een bron die gereserveerd wordt voor permanent actieve vaardigheden en volgelingen; activeer je er te veel, dan raakt je Spirit uitgeput.",
+        "**Wapenspecialisatie:** elke klasse heeft een voorkeur voor specifieke wapens (knots, staf, kruisboog, boog, speer); stem je wapen af op je gekozen vaardigheden.",
+        "**Valutasferen:** de sferen (orbs) om uitrusting te versterken zijn schaars; denk goed na over waar je ze aan spendeert."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Eenvoudige basisregel: besteed geen valutasferen aan zaken waarvan je de werking niet doorziet. Voordat je onomkeerbare aanpassingen waagt, dien je precies te begrijpen wat er verandert. De kracht van endgame-uitrusting schuilt zelden in één los item, maar in de samenhang tussen weerstanden, Spirit en schade. Lees voor verkoop alle waarschuwingen zorgvuldig."
+      }
+     ]
+    },
+    {
+     "id": "beceri-ve-destek-taslari",
+     "baslik": "Het systeem van vaardigheids- en ondersteuningsedelstenen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "In Path of Exile 2 ontleen je je vaardigheden aan edelstenen die in wapens en bepantsering worden geplaatst. Een **vaardigheidsedelsteen (Skill Gem)** verschaft een aanval of toverspreuk; een **ondersteuningsedelsteen (Support Gem)** koppelt zich daaraan en wijzigt het gedrag, bijvoorbeeld door projectielen te vermenigvuldigen of elementaire schade toe te voegen. Het aantal koppelbare ondersteuningen is gebonden aan sockets (aantallen variëren per patch). Let bij de keuze voor een vaardigheid dus niet enkel op basisschade, maar vooral op synergie met ondersteunende stenen."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Verkrijg een vaardigheidsedelsteen",
+         "metin": "Edelstenen vallen als buit en beloningen tijdens de campagne; kies een hoofdvaardigheid die past bij je klasse."
+        },
+        {
+         "baslik": "Plaats in een socket",
+         "metin": "Plaats de steen in een vrije socket op je uitrusting; elke socket herbergt een vaardigheid met gekoppelde ondersteuningen."
+        },
+        {
+         "baslik": "Koppel ondersteunende stenen",
+         "metin": "Voeg ondersteunende edelstenen toe; houd er rekening mee dat elke ondersteuning de Spirit- of manakosten kan beïnvloeden."
+        },
+        {
+         "baslik": "Bewaak je Spirit-budget",
+         "metin": "Permanente aanhangers en aura's reserveren Spirit; bij een tekort aan Spirit kun je geen extra permanente vaardigheden activeren."
+        },
+        {
+         "baslik": "Test je vaardigheid",
+         "metin": "Doe een proefgevecht in een gebied; voelt het stroef aan, wissel de ondersteuningsedelstenen dan om."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Bouw niet te veel vaardigheden tegelijk op. Begin met één hoofdvaardigheid en twee ondersteunende spreuken; het systeem is toegankelijk maar biedt enorme diepgang."
+      }
+     ]
+    },
+    {
+     "id": "direnc-ve-savunma",
+     "baslik": "Resistenties en verdedigingslagen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "De meeste sterfgevallen zijn te wijten aan gebrekkige defensie. Je hebt gelaagde verdediging nodig naast pure aanvalskracht; de onderstaande tabel vat de belangrijkste lagen samen (details wijzigen per update). Omdat resistentielimieten en gebiedsstraffen per patch kunnen variëren, lees je actuele cijfers af in het personagescherm."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Verdedigingslaag",
+        "Wat het doet",
+        "Opmerking"
+       ],
+       "satirlar": [
+        [
+         "Resistentie (vuur, kou, bliksem, chaos)",
+         "Vermindert schade van het betreffende element procentueel",
+         "De meest cruciale laag; controleer deze bij elke uitrustingswissel"
+        ],
+        [
+         "Bepantsering (Armor)",
+         "Dempt fysieke klappen",
+         "Geschikt voor zware bepantsering en krachtklassen"
+        ],
+        [
+         "Ontwijking (Evasion)",
+         "Verlaagt de kans dat een aanval raak treft",
+         "Geschikt voor behendigheidsklassen"
+        ],
+        [
+         "Energieschild (Energy Shield)",
+         "Een extra buffer vóór je levenspunten",
+         "Geschikt voor intelligentieklassen"
+        ],
+        [
+         "Blokkeren (Block)",
+         "Weert een deel van vijandelijke aanvallen volledig af",
+         "Met behulp van schilden of speciale wapens"
+        ],
+        [
+         "Ontwijkingsrol (Dodge Roll)",
+         "Handmatig wegduiken voor vernietigende slagen",
+         "Beschikbaar voor elke klasse; vergt behendigheid"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Een uitdagende baas of kaart betreden met lage resistenties leidt doorgaans tot een onmiddellijke one-shot. Dicht eerst je defensieve gaten voor je in extra schade investeert."
+      }
+     ]
+    },
+    {
+     "id": "para-birimi",
+     "baslik": "Tabel van valutasferen (Currencies)",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "De sferen (orbs) die worden gebruikt om voorwerpen te bewerken dienen tevens als handelsmiddel. De onderstaande tabel beschrijft de gangbare sferen; raadpleeg altijd de in-game beschrijvingen voor eventuele patch-aanpassingen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Sfeer (Orb)",
+        "Hoofdfunctie",
+        "Typisch gebruiksmoment"
+       ],
+       "satirlar": [
+        [
+         "Transmutation",
+         "Verandert een normaal voorwerp in een magisch item",
+         "Voor overgangsuitrusting bij de start van de campagne"
+        ],
+        [
+         "Augmentation",
+         "Voegt een eigenschap toe aan een magisch item",
+         "Goedkoop opwaarderen tijdens de levelfase"
+        ],
+        [
+         "Regal",
+         "Waardeert een magisch item op naar een zeldzaam (Rare) voorwerp",
+         "Late campagne en vroege Atlas-kaarten"
+        ],
+        [
+         "Exalted",
+         "Voegt een nieuw attribuut toe aan een zeldzaam item",
+         "Tijdens gericht vakmanschap van topartikelen"
+        ],
+        [
+         "Chaos",
+         "Hertovert een eigenschap op een zeldzaam item",
+         "Wisselen van een ongewenste eigenschap"
+        ],
+        [
+         "Divine",
+         "Hertovert de getalsmatige waarden van bestaande eigenschappen",
+         "De ultieme afwerking van zeer waardevolle spullen"
+        ],
+        [
+         "Annulment",
+         "Verwijdert een willekeurige eigenschap",
+         "Een riskante en kostbare ingreep"
+        ],
+        [
+         "Vaal",
+         "Corrumpeert een voorwerp met onvoorspelbare gevolgen",
+         "Enkel toepassen als je een permanent verlies kunt dragen"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Besteed geen waardevolle valutasferen tijdens de vroege campagne; in het endgame zijn ze vele malen meer waard. Handelen verloopt uitsluitend via de officiële spelmechanismen."
+      }
+     ]
+    },
+    {
+     "id": "kampanya-ve-harita",
+     "baslik": "Campagne-acts en endgame-kaarten",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "De campagne bestaat thans uit Act 1 tot en met 4 en elke act eindigt met een epische eindbaas. Met 1.0 worden Act 5 en 6 toegevoegd om het epos te voltooien (Inven Global). Na afloop van de campagne betreed je het Atlas-kaartsysteem:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Fase",
+        "Wat er gebeurt",
+        "Doel"
+       ],
+       "satirlar": [
+        [
+         "Campagne-acts",
+         "Je doorloopt het verhaal van gebied naar gebied",
+         "Niveau opbouwen, basisuitrusting en vaardighedenfundament"
+        ],
+        [
+         "Ascendancy-beproevingen",
+         "Je ontgrendelt je specialisatietak",
+         "Ontketent het ware vermogen van je klasse"
+        ],
+        [
+         "Wegstenen (Waystones)",
+         "Dienen om zones op de Atlas te openen",
+         "Uitdagendere tegenstanders en superieure beloningen"
+        ],
+        [
+         "Bazen en evenementen",
+         "Specifieke wereld- en Atlasbazen",
+         "Waardevolle endgame-buit en economische groei"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Zodra je de campagne voltooit, kan het spel worden herhaald op een hogere moeilijkheidsgraad. De toegenomen zwaarte op de kaarten stelt je balans tussen aanval en verdediging zwaar op de proef; ren niet overhaast naar hoge kaarten. Wegsteenniveaus en kaartevenementen ondergaan met 1.0 verdere verfijningen; officiële statistieken over het herontworpen Atlas-endgame worden nog vrijgegeven. Wacht op de 1.0 patch notes voor de meest recente details."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Veelvoorkomende beginnersfouten",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Moeilijke zones betreden zonder elementaire resistenties te controleren.",
+        "De ontwijkingsrol negeren en elke klap met je personage willen opvangen.",
+        "Vaardigheidsedelstenen lukraak plaatsen zonder op samenhangende koppelingen te letten.",
+        "Waardevolle valutasferen verkwisten zonder te weten wat ze bewerkstelligen.",
+        "Een klasse direct afschrijven omdat deze zwak lijkt; vaak ligt de oorzaak bij ontbrekende resistenties of ongeschikte uitrusting."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Bepaalde handelingen in de game zijn definitief onomkeerbaar (zoals corruptie via Vaal-sferen). Probeer twijfelachtige acties nooit uit op je primaire kernuitrusting."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Accountbeveiliging en waarschuwing rondom free-to-play na 1.0",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Je Path of Exile-account bevat al je verzamelde voorwerpen en voortgang. Deel je wachtwoord, accountgegevens of verificatiecodes onder geen enkel beding met anderen. Zodra het spel gratis toegankelijk wordt, zal de toevloed aan nieuwe spelers fors toenemen, waardoor pogingen tot phishing, nepcadeaus en frauduleuze ruilhandel kunnen pieken. Activeer tweestapsverificatie, hergebruik je wachtwoord nergens anders en weiger verzoeken om elders in te loggen. De officiële klantenservice vraagt nooit om je wachtwoord."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Schakel tweestapsverificatie in en gebruik een uniek wachtwoord voor elke afzonderlijke dienst.",
+        "Bots, macro's en cheatprogramma's schenden de gebruikersvoorwaarden en leiden tot een permanente accountban.",
+        "Handel in valuta of items voor echt geld (RMT) is strikt verboden; schimmige valutawinkels misbruiken gecompromitteerde accounts.",
+        "Klik tijdens het handelen nooit op links van vreemden; nagemaakte ruilsites zijn uitsluitend ontworpen om inloggegevens te stelen."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Doordat de game gratis wordt, kunnen malafide websites met 'gratis sleutels' of 'gratis valuta' toenemen. Geen enkele legitieme bron vraagt om je inloggegevens; sla verdachte voorstellen resoluut af."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Veelgestelde vragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is Path of Exile 2 gratis?",
+         "c": "Momenteel is een Early Access-sleutel vereist. Free-to-play start officieel met release 1.0 op 11 december 2026."
+        },
+        {
+         "s": "Is het spel beschikbaar in het Turks?",
+         "c": "Nee. Turks staat niet vermeld op Steam; het spel wordt in het Engels gespeeld."
+        },
+        {
+         "s": "Kan ik op consoles spelen?",
+         "c": "Het spel verschijnt bij 1.0 op PS5 en Xbox Series X|S; de huidige Early Access draait op de pc."
+        },
+        {
+         "s": "Is het verstandig om te wachten op 1.0?",
+         "c": "Dat hoeft niet, maar Early Access-personages worden niet meegenomen naar de economie van 1.0. Raadpleeg de officiële aankondiging voor je beslist."
+        },
+        {
+         "s": "Wanneer verschijnen de nieuwe klassen?",
+         "c": "Duelist en Shadow worden geïntroduceerd met de lancering van 1.0."
+        },
+        {
+         "s": "Draait het spel op Steam Deck?",
+         "c": "Ja, het spel is officieel geverifieerd voor Steam Deck."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "zh": {
+   "baslik": "流放之路 2（Path of Exile 2）新手指南：1.0 正式版前瞻与抢先体验（2026）",
+   "ozet": "专为《流放之路 2》新老玩家定制的全方位入门指南：职业体系、开荒前数小时、抗性与武器联动机制，以及在 2026 年 12 月 11 日迎来 1.0 正式版免费开玩前的核心必知要点。",
+   "kunye": [
+    {
+     "ad": "游戏类型",
+     "deger": "动作角色扮演游戏（ARPG，具备极其深度的天赋构筑体系）"
+    },
+    {
+     "ad": "平台",
+     "deger": "PC（Steam、Epic、独立启动器），PS5、Xbox Series X|S（1.0 同步上线）"
+    },
+    {
+     "ad": "收费模式",
+     "deger": "当前需抢先体验（EA）资格；2026 年 12 月 11 日 1.0 正式版上线后全面免费畅玩"
+    },
+    {
+     "ad": "当前版本",
+     "deger": "0.5.5 Forbidden Rites（抢先体验阶段）"
+    },
+    {
+     "ad": "土耳其语支持",
+     "deger": "无；Steam 商店列出 9 种支持语言，土耳其语不在其中"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "《流放之路 2》当前现状与核心特性",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "《流放之路 2》是由 Grinding Gear Games 倾力研发的暗黑硬核动作角色扮演游戏。生存极其依赖审慎的走位与战术抉择：玩家无法无脑站桩割草，而是必须严谨规划翻滚规避、拉扯空间以及技能辅助石的连锁搭配。作为独立于前作的新篇章，它拥有专属的全新职业群与史诗剧情。游戏战斗节奏相较于一代更为沉稳厚重；每一次遭遇战都是连贯的决策博弈，深度极高但也更为硬核考验手法。"
+      },
+      {
+       "tip": "p",
+       "metin": "游戏当前处于**抢先体验（Early Access）**阶段（始于 2024 年 12 月 6 日）。当前版本为 **0.5.5 Forbidden Rites** 活动赛季（2026 年 9 月 4 日上线）。**1.0 正式完整版本将于 2026 年 12 月 11 日**（太平洋时间）在 PC、PS5 和 Xbox Series X|S 同步推出，届时对所有玩家全面免费开放（据 Inven Global 及官方发布会）。1.0 版本将带来第 5 章和第 6 章剧情战役（包含 24 张全新地图、18 个独立机制 Boss 及 20 余处稀有精英遭遇）、新增暗影（Shadow）与决斗者（Duelist）两大全新职业、Conquerors of Wraeclast 挑战赛季以及终局异界玩法的全面重构。**抢先体验期角色如何结转至 1.0** 目前官方尚未最终拍板；请将其视作尚未正式确立的保留项，并留意临近 1.0 时的官方最终通告。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "若打算等待 12 月 11 日免费开玩：本指南梳理的底层硬核机制（元素抗性、技能链接、异界终局）在 1.0 中完全通用。各个版本的强势登顶职业各领风骚，切莫盲目跟风洗点。"
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "入坑之前：测试资格、平台支持与硬件配置",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "在 2026 年 12 月 11 日之前进入游戏需要获得 Early Access Key 或购买赞助者礼包；1.0 发布后将转为纯免费体验。PC 平台可通过 Steam、Epic 或官方独立登录器运行；PS5 和 Xbox Series X|S 次世代主机支持随 1.0 同步推出。游戏在 Steam Deck 掌机上已通过官方绿标验证（Verified）。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "硬件组件",
+        "最低配置（Steam 官方）",
+        "推荐配置（Steam 官方）"
+       ],
+       "satirlar": [
+        [
+         "处理器",
+         "Intel i7-7700 或 AMD Ryzen 5 2500X",
+         "Intel i5-10500 或 AMD Ryzen 5 3700X"
+        ],
+        [
+         "内存（RAM）",
+         "8 GB",
+         "16 GB"
+        ],
+        [
+         "显卡",
+         "NVIDIA GTX 960（3 GB）、Intel Arc A380 或 AMD RX 470；至少 3 GB 显存",
+         "NVIDIA RTX 2060、Intel Arc A770 或 AMD RX 5600 XT"
+        ],
+        [
+         "操作系统与 DirectX",
+         "Windows 10、DirectX 12",
+         "Windows 10、DirectX 12"
+        ],
+        [
+         "磁盘存储空间",
+         "100 GB",
+         "100 GB，强烈建议安装在 SSD 固态硬盘"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "上述指标取自 Steam 商店页面的官方硬件列表。**语言支持：** Steam 列出了 9 种界面与字幕语言；全流程配音仅限英语。**目前不包含土耳其语**；游戏需以英语或其他支持语言游玩，建议提前熟悉装备词缀与技能术语。"
+      },
+      {
+       "tip": "uyari",
+       "metin": "仅限通过 Steam、Epic 或 Path of Exile 官方商城获取激活码。来历不明的第三方代充代激活网站存在销售黑卡黑码导致账号被连带封禁的严重风险。"
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "初入世界：开荒前数小时循序指南",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "初次接触本作的新手往往会感到庞杂厚重。以下梳理的通关路线是第一天开荒最稳健的路径。初期的核心目标绝非盲目抢进度，而是建立起对系统的肌肉记忆：在每个新区域停下来检查翻滚手感、宝石插孔与抗性数值，便足以为后续开荒保驾护航。"
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "选定起始职业",
+         "metin": "查阅职业分析选择最符合个人审美的门类。不妨先在开局前几分钟实际挥舞体验手感；不满意随时可以免费删除角色重建。"
+        },
+        {
+         "baslik": "平稳推进主线剧情战役",
+         "metin": "跟随任务指引一步步清理各个区域。战役能稳定为你提供等级经验与基础过渡防具，为后期终局打下坚实地基。"
+        },
+        {
+         "baslik": "镶嵌技能宝石（Skill Gems）",
+         "metin": "技能宝石镶嵌在武器防具孔洞中。通过为主动技能石串联辅助宝石，可以实现成倍的威力飞跃。"
+        },
+        {
+         "baslik": "高频运用主动翻滚（Dodge Roll）",
+         "metin": "本作引入了战术翻滚机制；在 Boss 抬手致命打击的瞬间侧向闪避，远比站在原地硬吃伤害重要得多。"
+        },
+        {
+         "baslik": "严密监控四重抗性面板",
+         "metin": "火焰、冰霜、闪电与混沌抗性是你在瓦尔克拉斯大陆最根本的保命护盾；每次更换装备务必先看抗性。"
+        },
+        {
+         "baslik": "精细对比掉落装备",
+         "metin": "换上新装备前，务必综合对比抗性增减与核心基础属性，避免因贪图单项伤害导致防御溃败。"
+        },
+        {
+         "baslik": "监控三维资源消耗池",
+         "metin": "紧盯生命值、精魄（Spirit）与法力值（Mana）；资源枯竭时角色将瞬间陷入无法施法防御的绝境。"
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "如果在某个地图频繁暴毙，切勿头铁反复强冲。大概率是装备抗性穿透不足或闪避时机不对；停下脚步仔细检查面板。"
+      }
+     ]
+    },
+    {
+     "id": "sinif-secimi",
+     "baslik": "职业阵营：首发 8 大职业（1.0 增补 Duelist 与 Shadow）",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "抢先体验版现已开放八大职业。每个职业配备 2 至 3 个升华进阶（Ascendancy）；新手的首要目标是摸清基础职业手感，升华专精可在后续逐步抉择。升华是在特定节点通过升华试炼解锁的职业终极质变分支。随着 1.0 正式上线，暗影（Shadow，主打匕首、陷阱与潜行）和决斗者（Duelist）亦将加入战场；此二者的升华分支官方尚未完整解禁，因此暂未收录进下表。开局职业选择并非不可更改的一锤子买卖；免费新建不同职业角色体验毫无门槛。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "职业名称",
+        "核心属性与武器特质",
+        "专属升华进阶（Ascendancies）"
+       ],
+       "satirlar": [
+        [
+         "Warrior（战士）",
+         "力量属性，双手重锤，纯重装近战搏杀",
+         "Warbringer, Titan, Smith of Kitava"
+        ],
+        [
+         "Sorceress（女法师）",
+         "智慧属性，法杖与毁灭性元素法术",
+         "Stormweaver, Chronomancer, Disciple of Varashta"
+        ],
+        [
+         "Witch（女巫）",
+         "智慧属性，召唤物随从与秘术诅咒魔法",
+         "Infernalist, Blood Mage, Lich"
+        ],
+        [
+         "Ranger（游侠）",
+         "敏捷属性，弓箭远程狙杀",
+         "Deadeye, Pathfinder"
+        ],
+        [
+         "Monk（武僧）",
+         "敏捷与智慧兼备，武僧棍杖战技",
+         "Invoker, Acolyte of Chayula, Martial Artist"
+        ],
+        [
+         "Mercenary（雇佣兵）",
+         "力量与敏捷结合，战术重型弩箭",
+         "Witchhunter, Gemling Legionnaire, Tactician"
+        ],
+        [
+         "Huntress（女猎手）",
+         "敏捷特化，投掷长矛突刺",
+         "Amazon, Ritualist, Spirit Walker"
+        ],
+        [
+         "Druid（德鲁伊）",
+         "力量与智慧双修，野兽变形与自然风暴",
+         "Oracle, Shaman"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "新手的黄金实用原则：开荒首发角色优先选择自己操纵最顺手武器的职业，而非追求看似华丽却机制繁琐的冷门派系。弓箭或长矛等拉扯射程通常开荒容错率更高。"
+      }
+     ]
+    },
+    {
+     "id": "ilerleme-yolu",
+     "baslik": "成长脉络：从剧情战役到异界终局",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**主线剧情战役：** 逐章推进，每章结尾均以极具魄力的高难首领战收尾。1.0 版本将补齐 Act 5 与 Act 6，迎来战役大结局。",
+        "**升华试炼迷宫：** 唯有通关严苛的试炼方可激活升华专精。试炼关卡容错极低，务必堆砌扎实的防御再做挑战。",
+        "**Atlas 异界图鉴终局：** 战役结束后正式进驻异界地图系统。通过消耗路标石（Waystones）开启不同阶位地图，挑战高难劲敌并攫取极品神装。",
+        "**经济流通与以物易物：** 游戏内的通货货币体系是玩家以物易物贸易的基石。所有交易严格限定于游戏内官方机制。",
+        "**赛季天梯轮回：** 随着新挑战赛季（League）上线，全服玩家重回同一起跑线重新开荒起号；初入世界的兴奋感历久弥新。"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "终局玩法机制随版本迭代极快（0.5.0 版本大幅翻新了异界并重构了混沌试炼）。因此与其死记硬背旧攻略，不如以官方最新补丁公告为准。若打算静候 1.0，当下先行体验前四章战役以确立职业偏好是极为扎实的实战预备；届时 5、6 两章将完整闭环剧情。"
+      }
+     ]
+    },
+    {
+     "id": "esya-ve-ekonomi",
+     "baslik": "装备体系、技能链接与全局资源调度",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**元素与混沌抗性：** 四大抗性（火、冰、电、混沌）；在未将核心抗性堆叠及格前，切莫涉足高难图妄图越级杀怪。",
+        "**技能宝石嵌套逻辑：** 核心主动技能石搭配若干辅助石构成功能链条；辅助宝石能从质变维度重塑技能弹道与伤害形态。",
+        "**精魄（Spirit）预算控制：** 专为常驻被动光环及召唤物预留的核心储备资源；若无脑激活过多常驻 Buff，精魄将陷入透支封顶。",
+        "**专属武器相性契合：** 各职业对武器种类有极高的特化契合（如重锤、法杖、重弩、弓弩、长矛）；务必使手持武器类型完美契合技能词缀。",
+        "**通货通宝调配：** 赋予装备各色词缀的通货球极其珍贵；切忌在未明确收益前随意挥霍。"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "铁律一条：绝不在自己尚未吃透功用的机制上挥霍珍贵通货。在尝试任何不可逆的赌装锻造前，新手务必弄清具体词缀池。终局装备的强大往往在于多件防具之间在抗性、精魄与增伤层面的精妙平衡，而非单件神装的一枝独秀。脱手贵重道具前，仔细看清账号与仓库中的安全提示。"
+      }
+     ]
+    },
+    {
+     "id": "beceri-ve-destek-taslari",
+     "baslik": "技能宝石与辅助宝石联动系统",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "在《流放之路 2》中，角色的全部招式技能均来自于镶嵌在武器防具孔洞内的宝石。**主动技能石（Skill Gem）**赋予角色具体的近战攻击或法术技能；**辅助宝石（Support Gem）**则与其相连并全方位改造技能行为，例如增加投射物数量或赋予巨额附加元素增伤。单个技能可串联的辅助石数量受限于孔位规则（数值随版本微调）。因此在敲定技能时，切莫单纯只看面板基础伤害，更要考量其辅助石联动潜力；绝妙的词缀互补往往远胜单打独斗的独立高伤技能。"
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "获取主动技能石",
+         "metin": "技能宝石主要源于战役怪物掉落与任务奖励；挑选与所玩职业成长相符的开荒核心招式。"
+        },
+        {
+         "baslik": "镶嵌至装备孔位",
+         "metin": "将宝石嵌入防具或武器插孔中；每个孔位系统承载一组技能及其配套辅助链。"
+        },
+        {
+         "baslik": "串联辅助宝石",
+         "metin": "插入与该主动技能产生联动的辅助宝石；留心辅助石可能会改变该技能的法力或精魄消耗。"
+        },
+        {
+         "baslik": "权衡精魄（Spirit）占用上限",
+         "metin": "常驻光环与常备召唤物会长期占用精魄数值；一旦精魄耗尽，将无法开启新的常驻技能。"
+        },
+        {
+         "baslik": "实战调优测试手感",
+         "metin": "在安全图实测清怪手感；若输出拖沓或蓝耗捉襟见肘，及时调整更换辅助宝石搭配。"
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "切忌在前期铺设过多杂乱的主动技能。集中全力打造 1 个核心主攻技能配合 2 个功能辅助技能；该体系易学难精，越专精越顺滑。"
+      }
+     ]
+    },
+    {
+     "id": "direnc-ve-savunma",
+     "baslik": "元素抗性与多维度防御体系",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "绝大多数开荒惨剧均归咎于防御层面的严重脱节。角色既要有充足的输出，更需构建多层防御减伤；下表归纳了最核心的生存支柱（具体数值随版本调整）。由于抗性软上限及高阶惩罚随版本浮动，请以角色详细属性面板的当期数值为准。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "防御层级",
+        "减伤机制与功效",
+        "核心实战要点"
+       ],
+       "satirlar": [
+        [
+         "四重抗性（火焰、冰霜、闪电、混沌）",
+         "按百分比大幅缩减承受的对应元素伤害",
+         "最核心最底层的生死防线；每次更换装备首要检查项"
+        ],
+        [
+         "护甲（Armor）",
+         "抵御削减所受的直接物理打击伤害",
+         "重甲派系与纯力量职业的核心防线"
+        ],
+        [
+         "闪避（Evasion）",
+         "大幅压低敌人攻击命中自身的几率",
+         "轻灵敏捷系职业的传统规避屏障"
+        ],
+        [
+         "能量护盾（Energy Shield）",
+         "凌驾于生命值之上的额外独立缓冲层",
+         "智慧系法师与秘术职业的坚固壁垒"
+        ],
+        [
+         "格挡（Block）",
+         "按概率彻底阻挡化解迎面而来的打击",
+         "依赖持盾防御或特殊武器招架实现"
+        ],
+        [
+         "主动翻滚（Dodge Roll）",
+         "通过手动无敌帧走位滑步脱离致命范围",
+         "全职业标配通用神技；极考验走位反应"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "在抗性严重不及格的前提下强行挑战高阶首领或词缀高危地图，大概率会被瞬间一击秒杀（One-shot）。永远先将防御短板补齐，再去贪图伤害上限。"
+      }
+     ]
+    },
+    {
+     "id": "para-birimi",
+     "baslik": "核心通货球（Currency Orbs）机制一览表",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "用于锻造加工装备的各种宝珠（Orbs）在游戏中兼具交易通货与工匠材料的双重职能。下表简要梳理了最常见的通货宝珠；具体效果以游戏内当期描述为准。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "通货宝珠（Orb）",
+        "基础锻造功能",
+        "建议使用场景"
+       ],
+       "satirlar": [
+        [
+         "Transmutation（蜕变石）",
+         "将一件普通白色底子装备点化为魔法（蓝装）",
+         "战役前期快速打造开荒过渡防具"
+        ],
+        [
+         "Augmentation（增幅石）",
+         "为仅有单条词缀的魔法装备增添一条新属性",
+         "前期开荒廉价洗练词缀"
+        ],
+        [
+         "Regal（富豪石）",
+         "将魔法蓝装升阶为稀有黄装（Rare）",
+         "战役中后期与初入异界过渡期"
+        ],
+        [
+         "Exalted（崇高石）",
+         "为未满词缀的稀有黄装凭空附加一条顶级属性",
+         "高阶神装定制与深度定向打造"
+        ],
+        [
+         "Chaos（混沌石）",
+         "重置洗练稀有装备上的词缀属性",
+         "置换重洗极度不适用的垃圾词缀"
+        ],
+        [
+         "Divine（神圣石）",
+         "重置洗练现有词缀区间的内部数值上下限",
+         "毕业级极品装备的最终数值追求"
+        ],
+        [
+         "Annulment（剥离石）",
+         "随机强制剔除装备上的一条词缀",
+         "高风险、高代价的高阶博弈锻造"
+        ],
+        [
+         "Vaal（瓦尔宝珠）",
+         "赋予装备不可逆的腐化质变，可能带来神级提升亦可能直接毁坏",
+         "唯有在做好了承受彻底报废的心理准备后方可尝试"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "在剧情战役期间切勿挥霍中高级通货宝珠；它们在终局阶段的价值要高得多。所有装备贸易仅通过官方游戏内渠道完成。"
+      }
+     ]
+    },
+    {
+     "id": "kampanya-ve-harita",
+     "baslik": "剧情章节划分与异界 Atlas 终局蓝图",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "当前战役囊括第 1 至第 4 章，每章均以极具震撼力的标志性大 Boss 决战谢幕。1.0 正式版将全面补齐第 5 与第 6 章，迎来剧情高潮（据 Inven Global）。战役告捷后，即刻无缝迈进被称为 Atlas 的庞大异界图鉴系统："
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "成长阶段",
+        "主要游玩内容",
+        "核心战术目标"
+       ],
+       "satirlar": [
+        [
+         "战役主线章节",
+         "沿主线故事一路开荒探索",
+         "提升角色等级、搜集开荒底子与搭建技能框架"
+        ],
+        [
+         "升华试炼试炼场",
+         "通关致命试炼迷宫",
+         "解锁职业质变的专属进阶分支"
+        ],
+        [
+         "路标石（Waystones）",
+         "消耗以开启对应阶位的异界地图",
+         "挑战词缀危险的强力怪物并收割海量高阶暗金与通货"
+        ],
+        [
+         "终局首领与全局事件",
+         "挑战 Atlas 专属的世界级 Boss 及突发遭遇战",
+         "攫取最顶级的暗金专属掉落与繁荣商业积累"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "通关剧情后，游戏可在更高难度台阶下反复研磨体验。异界地图的严苛词缀将全方位无情拷问你的攻防平衡；切忌盲目莽撞冲入高阶红图。1.0 版本对路标石阶位与终局大地图的细节将迎来进一步精细化调整；官方完整数值尚未最终公开发布。建议静候 1.0 官方补丁说明以获取最新指引。"
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "新手常犯的典型误区",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "完全不看抗性面板，顶着负抗性盲目闯进高危火/电/冰伤区域。",
+        "忽视战术翻滚无敌帧，试图靠肉身硬吃 Boss 的全部蓄力大招。",
+        "随意盲目乱插宝石，完全不核对主动石与辅助石之间的词缀相容性。",
+        "在开荒期稀里糊涂地把珍贵的崇高石、神圣石挥霍在过渡破烂装备上。",
+        "因为前期打怪刮痧便草率认定某个职业是弱势下水道；问题往往出在配装与抗性穿透细节上。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "游戏内某些操作具有完全不可逆性（如瓦尔宝珠腐化导致装备永久锁死或降阶）。切勿在自己的核心核心装备上盲目尝试未经深思熟虑的豪赌。"
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "账号核心安全与 1.0 免费开玩防诈骗警示",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "你的 Path of Exile 账号承载着你投入的心血装备与全部进度。严禁向任何其他人透露你的登录密码、账号详细信息或两步验证动态口令。随着 1.0 免费开放，涌入的海量新手将使假冒赠送、虚假以物易物钓鱼以及盗号风险呈爆发式增长。请务必为账号开启双重身份验证（2FA），绝不在其他任何非官方站点复用相同密码，任何在游戏聊天中向你索要验证码、密码或诱导点击外链的行为均属欺诈。官方客服绝不会向你索要密码。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "务必开启两步验证，并为每个独立平台服务配置不同高强度密码。",
+        "外挂脚本、自动化挂机软件及作弊插件严重践踏游戏公平，必遭官方永久封禁。",
+        "严禁通过现实货币买卖装备或通货宝珠（RMT）；非官方黑产代充代售平台极易造成盗号封停。",
+        "交易过程中切勿点击陌生人私信发送的任何外链；高仿虚假交易网站的唯一目的就是套取你的登录密码。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "随着游戏向全员免费开放，宣称“免费领取特权 Key”或“免费刷通货”的钓鱼钓诈网站必将泛滥成灾。正规官方绝不会向你索要密码；遇到可疑行径请立即果断拒绝并举报。"
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "常见问题解答",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "《流放之路 2》是免费游戏吗？",
+         "c": "目前抢先体验阶段需要购买资格礼包或 Key。2026 年 12 月 11 日 1.0 正式版上线后将对所有玩家全面免费开放。"
+        },
+        {
+         "s": "游戏支持土耳其语吗？",
+         "c": "不支持。Steam 商店语言列表中未包含土耳其语；游戏采用英语及其他支持语言游玩。"
+        },
+        {
+         "s": "可以在主机平台游玩吗？",
+         "c": "1.0 正式版将同步登陆 PS5 与 Xbox Series X|S；目前的抢先体验仅限 PC 平台。"
+        },
+        {
+         "s": "需要专门等 1.0 正式版吗？",
+         "c": "不一定，但抢先体验期的角色通常不会带入 1.0 正式版的全新经济循环。做决定前先阅读官方最新通告。"
+        },
+        {
+         "s": "新增的职业何时正式登场？",
+         "c": "决斗者（Duelist）与暗影（Shadow）两大全新职业将随 1.0 正式版同步推出。"
+        },
+        {
+         "s": "可以在 Steam Deck 掌机上流畅游玩吗？",
+         "c": "可以，本作已获得 Steam Deck 官方绿标（Verified）完整兼容认证。"
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  }
 }

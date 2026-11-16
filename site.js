@@ -19,7 +19,7 @@
   }
   function norm(s) {
     return String(s || '').toLowerCase().replace(/ı/g, 'i').normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+      .replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9\u3400-\u9fff]+/g, ' ').trim();
   }
   function yaziyor(el) {
     if (!el || !el.tagName) return false;
@@ -106,6 +106,36 @@
   if (MAC) $$('[data-mod]').forEach(function (k) { k.textContent = '\u2318'; });
 
   // ------------------------------------------------------------ dil seçici
+  $$('img.kg-img').forEach(function (img) {
+    img.addEventListener('error', function () { img.remove(); });
+    if (img.complete && !img.naturalWidth) img.remove();
+  });
+  (function () {
+    var kayit = d.getElementById('cag-dil-onerileri'), diller;
+    if (!kayit || depo.al('cag-dil-oneri')) return;
+    try { diller = JSON.parse(kayit.textContent); } catch (e) { return; }
+    var tercih = navigator.languages || [navigator.language || ''];
+    for (var i = 0; i < tercih.length; i++) {
+      var kod = String(tercih[i]).toLowerCase().split('-')[0];
+      if (!diller[kod]) continue;
+      // En yüksek öncelikli desteklenen dil zaten görüntüleniyorsa önerme.
+      if (kod === DIL) return;
+      var t = diller[kod], bant = d.createElement('aside'), a = d.createElement('a'), kapat = d.createElement('button');
+      bant.className = 'dil-oneri';
+      bant.lang = t.lang;
+      a.href = t.url;
+      a.textContent = t.metin + ' → ' + t.ac;
+      a.addEventListener('click', function () { depo.koy('cag-dil-oneri', kod); });
+      kapat.type = 'button';
+      kapat.textContent = '×';
+      kapat.setAttribute('aria-label', t.kapat);
+      kapat.addEventListener('click', function () { depo.koy('cag-dil-oneri', 'kapali'); bant.remove(); });
+      bant.appendChild(a);
+      bant.appendChild(kapat);
+      B.insertBefore(bant, B.firstChild);
+      return;
+    }
+  })();
   $$('details.dil, details.nav-grup').forEach(function (el) {
     disariTikla(el, function () { el.open = false; });
     el.addEventListener('keydown', function (e) {

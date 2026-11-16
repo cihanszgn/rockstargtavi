@@ -2272,6 +2272,1683 @@
      ]
     }
    ]
+  },
+  "de": {
+   "baslik": "Knight Online Einsteiger-Leitfaden: Offizielle Server 2026",
+   "ozet": "Für Neu- und Wiedereinsteiger auf den offiziellen Knight Online-Servern von NTTGame: Konten, neuer Serverstart, Völker- und Klassenwahl, Stufenaufstieg, Wirtschaft und Kontosicherheit.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "MMORPG"
+    },
+    {
+     "ad": "Plattform",
+     "deger": "Windows (USKO-Client; die Steam-Version SteamKO ist separat)"
+    },
+    {
+     "ad": "Preismodell",
+     "deger": "Kostenlos spielbar (Steam führt 'Free To Play'); Premium- und Kosmetik-Items werden mit NPoints gekauft, Preise stehen im offiziellen PUS"
+    },
+    {
+     "ad": "Aktuelle Version",
+     "deger": "Neue Server-Ära: Start am 12. November 2026"
+    },
+    {
+     "ad": "Türkisch-Unterstützung",
+     "deger": "Ja: Das Spiel wird von NTTGame Turkey auf Türkisch veröffentlicht; die Steam-Seite führt ebenfalls türkische Benutzeroberfläche, Audio und Untertitel"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "Wo das Spiel im Jahr 2026 steht",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Knight Online ist ein traditionsreiches Online-Rollenspiel, das in der Türkei von **NTTGame** vertrieben wird. Das Herzstück des Spiels ist der ewige Krieg zwischen zwei Nationen: **El Morad** und **Karus**. Beide Völker sind spielerisch gleich stark; die Wahl entscheidet sich nach Vorliebe für das Aussehen und dem Server deiner Freunde."
+      },
+      {
+       "tip": "p",
+       "metin": "Dieses Jahr markiert einen wichtigen Meilenstein: NTTGame eröffnete die am 1. Oktober 2026 angekündigten neuen Server am **Donnerstag, 12. November 2026 um 16:00 Uhr türkischer Zeit**. Laut Berichten heißen die neuen Server Atlas, Oracle, Luna und Carnac. Auf den neuen Servern gibt es keine Ardream- oder Ronark Land Base-Karten; die Hauptgefechte finden in Ronark Land statt. Zudem wurde angekündigt, dass bestimmte ältere Server später fusioniert werden."
+      },
+      {
+       "tip": "p",
+       "metin": "Die bestehenden USKO-Server lauten Zero, Pandora, Agartha, Felis, Minark, Dryads, Oreads und Destan. SteamKO, das über Steam gespielt wird, nutzt einen separaten Client mit eigenem Server (Zion)."
+      },
+      {
+       "tip": "p",
+       "metin": "Der Unterschied zwischen alten und neuen Servern liegt vor allem in der Spielerfülle und der Wirtschaft. Auf einem neuen Server starten alle bei null; Gegenstandspreise und Wettbewerb sind ausgeglichener. Auf alten Servern existieren jahrelang angesammelte Top-Ausrüstungen und gewachsene Clans. Wähle den Server passend zu deinem Spielstil."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Serverlisten und Fusionspläne ändern sich. Prüfe vor der Serverwahl stets die aktuellen Ankündigungen von NTTGame."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Vor dem Start: Konto, Client, Sicherheit",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Das Spiel ist **kostenlos**. Du erstellst ein NTTGame-Konto auf der offiziellen Website und lädst den Client von der dortigen Download-Seite herunter. Die Steam-Version (SteamKO) ist getrennt; Steam verlangt beim ersten Login eine Telefonverifizierung und bietet In-App-Käufe an. Entscheide vorab, welche Version du spielst, da Konten und Server beider Seiten strikt getrennt sind."
+      },
+      {
+       "tip": "p",
+       "metin": "Die neuen Server starteten mit einer **Vorabregistrierung**: Erste Phase 15.–29. Oktober, zweite Phase 29. Oktober–12. November (Serverwahl), 10.–11. November Charaktererstellung. Telefonverifizierung und OTP+ (eine Einmalkennwort-App, die AnyOTP am 15. Oktober ablöste) waren zwingend erforderlich. Der Start erfolgte am 12. November 2026; ob eine Vorabregistrierung nach dem Launch weiterhin verlangt wird, wurde offiziell nicht abschließend geregelt."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Thema",
+        "Offizielle Angabe"
+       ],
+       "satirlar": [
+        [
+         "Preis",
+         "Kostenlos spielbar (Steam: Free To Play); Premium und Kosmetik werden mit NPoints erworben"
+        ],
+        [
+         "Betriebssystem",
+         "Ausschließlich Windows. Die Steam-Seite listet Windows 2000 bis 10 als Minimum; der Steam-Client unterstützt seit 1. Januar 2024 nur noch Windows 10 und neuer"
+        ],
+        [
+         "CPU / Arbeitsspeicher / Speicherplatz",
+         "Minimum laut Steam-Seite: Pentium 3 600 MHz, 512 MB RAM, 2 GB freier Speicherplatz"
+        ],
+        [
+         "Grafikkarte",
+         "3D-Beschleunigung genügt (Steam-Seite); dedizierte High-End-Grafikkarte nicht zwingend"
+        ],
+        [
+         "Sprache",
+         "Türkisch: Benutzeroberfläche, Audio und Untertitel (Steam-Seite)"
+        ],
+        [
+         "Sicherheit",
+         "Telefonverifizierung und OTP+ waren für die neuen Server Pflicht"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Die Systemanforderungen auf Steam spiegeln veraltete PCs wider. Die tatsächlichen Anforderungen moderner Spielzonen können höher liegen, moderne PCs haben jedoch keine Probleme; da keine aktualisierten Werte vorliegen, nennt die Tabelle nur Mindestwerte."
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "Die ersten Stunden Schritt für Schritt",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Konto anlegen",
+         "metin": "Erstelle ein Konto auf der NTTGame-Website, verifiziere E-Mail und Telefonnummer und verknüpfe die OTP+-App."
+        },
+        {
+         "baslik": "Client herunterladen",
+         "metin": "Installiere den Spielclient von der offiziellen Downloadseite. Führe niemals Installationsdateien von Drittseiten aus."
+        },
+        {
+         "baslik": "Server und Charakter wählen",
+         "metin": "Wähle denselben Server wie deine Freunde; ein Serverwechsel ist aufwendig. Bestimme dein Volk (El Morad oder Karus) und deine Klasse."
+        },
+        {
+         "baslik": "Die Hauptstadt erkunden",
+         "metin": "Der Hauptknotenpunkt des Spiels ist Moradon. Suche Quest-NPCs auf und erlerne Fertigkeiten über das mit der K-Taste geöffnete Fenster."
+        },
+        {
+         "baslik": "Ein Pet abholen",
+         "metin": "Auf Stufe 10 erhältst du ein Pet bei Familiar Trainer Kate in Moradon."
+        },
+        {
+         "baslik": "Eine Party bilden",
+         "metin": "Der Stufenunterschied innerhalb einer Gruppe darf maximal 8 Stufen betragen. Steige möglichst im gleichen Stufenbereich wie deine Freunde auf."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Zu Beginn ist Solospiel problemlos möglich, das Bilden einer Party (Gruppe) beschleunigt den Stufenaufstieg jedoch spürbar."
+      },
+      {
+       "tip": "p",
+       "metin": "In den ersten Spielstunden geht es nicht um Rekordtempo, sondern um das Vertrautmachen mit Menüs und Befehlen. Chat-, Gruppen- und Handelsfenster einmal auszuprobieren spart später Zeit. Bei Fragen hilft der Clan- oder Server-Chat; antworte jedoch niemandem, der nach Geld oder Zugangsdaten fragt."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Wenn du die Attributspunkte bei der Charaktererstellung nicht kennst, verteile sie nicht willkürlich; lies zuerst die empfohlene Klassenverteilung. Du erhältst 3 Punkte pro Stufe."
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "Wahl von Volk und Klasse",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Es gibt zwei Völker: El Morad und Karus. Beide sind von den Werten her gleich stark; die Klassenauswahl unterscheidet sich minimal. Vier Basisklassen (Warrior, Rogue, Mage, Priest) existieren auf beiden Seiten; **Portu** ist spezifisch für El Morad und **Kurian** für Karus."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Klasse",
+        "Rolle",
+        "Für wen geeignet"
+       ],
+       "satirlar": [
+        [
+         "Warrior (Krieger)",
+         "Nahkampf, widerstandsfähiger Tank",
+         "Spieler, die einen einfachen, robusten Einstieg suchen"
+        ],
+        [
+         "Rogue (Schurke)",
+         "Agil, hoher Einzelschaden (Assassine/Bogenschütze)",
+         "Wer Tempo, Mobilität und schnelle Reflexe schätzt"
+        ],
+        [
+         "Mage (Magier)",
+         "Flächenzauberschaden",
+         "Spieler, die aus sicherer Distanz Schaden austeilen wollen"
+        ],
+        [
+         "Priest (Priester)",
+         "Heilung und Gruppen-Buffs",
+         "Spieler, die ihr Team am Leben halten und unterstützen wollen"
+        ],
+        [
+         "Portu / Kurian",
+         "Volksspezifische Spezialklasse",
+         "Wer einen unkonventionellen, störenden Spielstil sucht"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Die Attribute lauten STR, DEX, HP, INT und MP; verteile sie passend zu deiner Klasse. Das Zurücksetzen von Attributen ist kostspielig, daher zählt die erste Verteilung."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Der Krieger (Warrior) ist der unkomplizierteste Erstcharakter. Wer eine Klasse wählt, die im Gruppenspiel dringend gesucht wird (wie Priest), findet zudem rasch Anschluss."
+      }
+     ]
+    },
+    {
+     "id": "irk-sinif",
+     "baslik": "Rassen, Meistertitel und Attributsverteilung",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Laut KO Rehberi umfasst jedes Volk mehrere Rassen. Bei **El Morad** sind dies Barbarian, El Morad Male, El Morad Female und Porutu; bei **Karus** Arch Tuarek, Tuarek, Wrinkle Tuarek, Pury Tuarek und Kurian. Bei den gemeinsamen Klassen ändert die Rasse eher das Aussehen als die Kampfkraft; sie bestimmt Optik und verfügbare Klassen (für Krieger etwa Barbarian, El Morad Male/Female oder Arch Tuarek)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Klasse",
+        "Fertigkeitszweige (KO Rehberi)",
+        "Meistertitel"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Attack, Defense, Passion / Berserking",
+         "Blade Master (El Morad), Berserker Hero (Karus)"
+        ],
+        [
+         "Rogue",
+         "Archery, Assassinate, Search / Explore",
+         "Kasar Hood (El Morad), Shadow Vain (Karus)"
+        ],
+        [
+         "Mage",
+         "Zauberzweige (Flamme, Eis, Blitz)",
+         "Offiziell nicht gesondert aufgeführt"
+        ],
+        [
+         "Priest",
+         "Heilungs- und Unterstützungszweige",
+         "Offiziell nicht gesondert aufgeführt"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Die Krieger-Übersicht hebt **STR** (Stärke) als Hauptattribut hervor und beschreibt die Klasse als Nahkampf-Tank; Krieger sind unverzichtbar, wenn starke Bosse bezwungen werden sollen. Der Schurke glänzt durch Tempo: Als Assassine teilt er rasch verheerenden Nahkampfschaden aus, als Bogenschütze verfügt er über die höchste Reichweite im Spiel."
+      },
+      {
+       "tip": "p",
+       "metin": "**Attributs- und Skillverteilung:** Du erhältst 3 Attributspunkte pro Stufe. Für den Krieger nennt KO Rehberi zwei Verteilungsvorschläge namens „Berserker“ und „Attacker“ und betont, dass dies Richtwerte sind. Allgemeine Faustregel: Schadensklassen steigern ihr Hauptattribut, HP erhöht die Zähigkeit, Zauberklassen investieren in INT und MP; im Zweifel halte HP und Hauptattribut zunächst in der Waage."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Kopiere Skillverteilungen nicht blind aus Videos. Lies die empfohlenen Werte auf den Klassenseiten in Ruhe durch, da Builds je nach Patch variieren."
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "Stufenaufstieg: Effiziente Routen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Das Aufleveln besteht im Wesentlichen aus Monsterjagd in Zonen, Questabschlüssen und Gruppenspiel. **Das Stufenlimit liegt bei Stufe 83**; wer auf Stufe 83 100 % Erfahrung ansammelt, kann ein Rebirth durchführen. Für ein Rebirth sind drei Quests bei Fortune Reader Mackin, 1 Gold Bar und 10.000 Beitragspunkte nötig; jede Rebirth-Stufe gewährt 2 zusätzliche Attributspunkte. Bedingungen können sich anpassen, prüfe sie direkt beim NPC."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Erledige in den ersten 20 Stufen unbedingt alle Quest-NPCs; sie liefern wichtige EXP und Startausrüstung.",
+        "Reicht deine Stufe für eine Zone nicht aus, wechsle ohne Zögern in ein niedrigere Monsterzone zurück.",
+        "Erfolge (Achievements) lassen sich mit dem Befehl /Achieve aufrufen und gewähren regelmäßige Boni."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Liegt der Stufenunterschied in einer Gruppe über 8 Stufen, erhält die Gruppe keine gemeinsame Erfahrung mehr. Halte daher Schritt mit deinen Gruppenmitgliedern."
+      },
+      {
+       "tip": "p",
+       "metin": "Näherst du dich Stufe 83, überstürze nichts: Bereite die Quests, den 1 Gold Bar und die 10.000 Beitragspunkte rechtzeitig vor. Statt alles sofort nach Serverstart zu erzwingen, sammle die Anforderungen schrittweise beim normalen Spielen."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Beim Sterben verlierst du Erfahrungspunkte (EXP). Riskiere wertvolle EXP nicht in Zonen, die deine aktuelle Stärke überfordern."
+      }
+     ]
+    },
+    {
+     "id": "bolgeler",
+     "baslik": "Zonen: Wo man was unternimmt",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "KO Rehberi teilt die Spielkarten in vier Gruppen ein. Die Übersicht nennt keine festen Stufenbereiche; diese variieren. Die Tabelle verzichtet auf starre Zahlen, da sie nicht offiziell fixiert sind; folge den Zonennamen und NPC-Hinweisen im Spiel."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Gruppe",
+        "Zonen"
+       ],
+       "satirlar": [
+        [
+         "Allgemein",
+         "Moradon, El Morad, Karus, Eslant, Delos (Abyss)"
+        ],
+        [
+         "PvP",
+         "Ardream, Ronark Land Base, Ronark Land, Kalluga Valley, Alseids Plain, Nereidth Island, Oreads, Nieds Triangle, Napies Gorge"
+        ],
+        [
+         "Events",
+         "Kellino Temple (Forgotten Temple), Juraid Mountain, Krowaz's Dominion, Bifrost, Under the Castle, Chaos Dungeon"
+        ],
+        [
+         "Sonstige",
+         "Caitharos Arena, Zipang"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Moradon** ist die gemeinsame Handelsstadt beider Völker; Markt, Banklager und der Magic Anvil befinden sich hier. Auf den neuen Servern existieren Ardream und Ronark Land Base nicht, daher konzentriert sich PvP auf Ronark Land. Faustregel beim Leveln: Besiegen dich Mobs zu schnell, wechsle eine Zone zurück; geht es zu leicht, rücke vor."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Wer beim Zonenwechsel stirbt, verliert EXP. Betrete unbekannte Gebiete beim ersten Mal am besten im Schutz einer Gruppe oder mit Freunden."
+      }
+     ]
+    },
+    {
+     "id": "etkinlik",
+     "baslik": "Event-Zeiten: Täglicher und wöchentlicher Kalender",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Die folgenden Zeiten stammen von der Eventseite von KO Rehberi (Ortszeit Türkei, Stand Januar 2026). Zeiten können sich ändern; verbindlich sind In-Game-Countdowns und offizielle Ankündigungen. USKO ist der offizielle NTTGame-Client, STKO die Steam-Version."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Event",
+        "USKO-Zeiten",
+        "STKO (Steam)-Zeiten"
+       ],
+       "satirlar": [
+        [
+         "Border Defense War (BDW)",
+         "02:00, 13:00, 19:00",
+         "01:00, 07:00, 12:00, 16:00, 20:00"
+        ],
+        [
+         "Chaos",
+         "00:00, 12:00",
+         "10:00, 14:00, 22:00"
+        ],
+        [
+         "Juraid Mountain (JR)",
+         "07:40, 22:40",
+         "02:40, 13:40"
+        ],
+        [
+         "Forgotten Temple (FT)",
+         "03:00, 22:00",
+         "08:00, 23:00"
+        ],
+        [
+         "Bifrost",
+         "02:00, 14:00, 21:00",
+         "00:00, 10:00, 17:00"
+        ],
+        [
+         "Krowaz",
+         "10:00, 21:00",
+         "06:00, 19:00"
+        ],
+        [
+         "Lunar War",
+         "14:00, 20:00 (Montag und Samstag)",
+         "04:00, 11:00, 21:00 (Dienstag und Sonntag)"
+        ],
+        [
+         "Castle Siege War (CSW)",
+         "20:30 (Sonntag)",
+         "21:00 (Samstag)"
+        ],
+        [
+         "Under the Castle (UTC)",
+         "21:00 (Freitag)",
+         "00:00 (Sonntag)"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Lunar War, CSW und UTC finden wöchentlich statt, die übrigen Events täglich. **Draki's Tower** steht permanent offen. Zeitweilige Events wie Twisted Moradon, Knight Royale, Puzzle oder Snowball War sind saisonal. Dark Lunar War wurde aus dem Spiel genommen."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Täglich",
+         "metin": "Plane Chaos-, BDW- und Juraid-Zeiten fest ein; die Belohnungen beschleunigen Levelaufstieg und Ausrüstungsfortschritt spürbar."
+        },
+        {
+         "baslik": "Wöchentlich",
+         "metin": "Stimme dich für Lunar War, CSW und UTC mit deinem Clan ab; diese Events verlangen feste Gruppenorganisation."
+        },
+        {
+         "baslik": "Jederzeit",
+         "metin": "Nutze Draki's Tower; da der Turm immer geöffnet ist, entstehen keine terminlichen Zwänge."
+        }
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Vertraue keinen Drittseiten, die Event-Belohnungen oder Zugänge gegen echtes Geld anbieten. Maßgeblich sind allein offizielle Spielankündigungen."
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "Wirtschaft und Finanzen: Nur über offizielle Spielwege",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Die Währung im Spiel heißt **Noah**. Einnahmen entstehen durch Monsterjagd, Quests und Handel. Mit dem Befehl **merchant** eröffnest du einen eigenen Verkaufsstand. Verkäufe an NPCs und direkter Spielerhandel sind ebenfalls möglich. Das Bankfach gilt kontoweit auf dem jeweiligen Server."
+      },
+      {
+       "tip": "p",
+       "metin": "Das Aufwerten von Gegenständen erfolgt am Magic Anvil bei Charon in Moradon. Ein Upgrade **kann fehlschlagen und den Gegenstand zerstören**; riskiere daher keine unersetzlichen Stücke und experimentiere nur mit Ausrüstung, deren Verlust du verschmerzen kannst. Erfolgsraten sind im Spiel ausgewiesen."
+      },
+      {
+       "tip": "p",
+       "metin": "Folge bei Einnahmen einer einfachen Rangfolge: Erst Quests, dann Jagdbeute, zuletzt der Marktstand. Verkaufe nichts, ohne zuvor Marktpreise zu prüfen; Preise schwanken von Server zu Server."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Der Handel mit Spielwährung, Gegenständen oder Konten gegen echtes Geld (RMT) über Drittseiten verstößt gegen die Spielregeln und führt zur dauerhaften Kontosperre. Handele ausschließlich über den offiziellen PUS."
+      }
+     ]
+    },
+    {
+     "id": "yukseltme-klan",
+     "baslik": "Upgrades, Clans und Burgbelagerungen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**Upgrade-Logik:** Gegenstände werden am Magic Anvil in Moradon veredelt. Jeder Versuch kann die Stufe erhöhen, unverändert lassen oder den Gegenstand zerstören. Das Fehlerrisiko steigt mit jeder Stufe drastisch; teste Upgrades stets zuerst an günstiger Ersatzausrüstung."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Lerne das Upgradesystem zunächst an günstigen Zweitgegenständen kennen.",
+        "Setze niemals dein gesamtes Erspartes auf einen einzigen Aufwertungsversuch.",
+        "Prüfe den Marktpreis der Aufwertungsschriftrollen vor dem Einkauf."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Clan und Belagerungskriege:** Der Clan ist der Dreh- und Angelpunkt für gemeinsame Events. **Castle Siege War (CSW)** ist das wöchentliche Großevent um die Vorherrschaft auf der Burg; auch **Under the Castle (UTC)** und **Lunar War** verlangen feste Clanstrukturen."
+      },
+      {
+       "tip": "p",
+       "metin": "**Premium-Typen:** Das Spiel bietet Mitgliedschaften wie Switching Premium oder War Premium gegen NPoints an. Laufzeiten, Preise und Boni sind im offiziellen PUS ausgewiesen; prüfe die Details vor dem Kauf im Shop."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Ein beim Upgrade zerstörter Gegenstand ist unwiederbringlich verloren. Der Support erstattet fehlgeschlagene Upgrades nicht; gehe das Risiko bewusst ein."
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "Nach Stufe 83: Krieg und Höchststufen-Fortschritt",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Ab Stufe 83 konzentriert sich das Geschehen auf Ausrüstungsoptimierung und Kriege. Auf den neuen Servern findet sämtliches PvP in Ronark Land statt, da Ardream und Ronark Land Base entfallen. Clankriege und Nationenschlachten bilden das Endgame."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Zusätzliche Attributspunkte über Rebirth freischalten.",
+        "Erfolge (Achievements) regelmäßig verfolgen.",
+        "Einem aktiven Clan beitreten und Events gemeinsam bestreiten."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Premium-Dienste (wie Switching Premium oder War Premium) gewähren Komfortvorteile und werden mit NPoints bezahlt. Informiere dich vorab im offiziellen Store über den Leistungsumfang."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "In den ersten Wochen sind neue Server stark überlaufen; das Leveln in dichten Pulks kann stocken. Weiche bei Überfüllung auf alternative Monsterzonen aus."
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "Häufige Fehler und Sicherheit",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Herunterladen des Spielclients von inoffiziellen Drittseiten.",
+        "Verwenden desselben Passworts auf externen Plattformen.",
+        "Spielen ohne aktivierten OTP+-Schutz und Telefonverifizierung."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Meide Cheats, Bots, Makros, Glitches, private P-Server, Echtgeldhandel (RMT) und Raubkopien. Sie führen zum sofortigen Kontoverlust und bergen Schadsoftware-Gefahren. Private Server sind illegal und unsicher."
+      },
+      {
+       "tip": "p",
+       "metin": "Halte E-Mail-Adresse und Telefonnummer im Konto stets aktuell; du benötigst sie bei Kontorückfragen. Angebote im Chat wie „Ich verdopple deine Items“ sind ausnahmslos Betrugsversuche."
+      },
+      {
+       "tip": "p",
+       "metin": "Mitarbeiter von NTTGame werden dich niemals nach deinem Passwort oder OTP-Code fragen. Logge dich nur auf verifizierten offiziellen Seiten ein."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Häufig gestellte Fragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Ist Knight Online kostenlos?",
+         "c": "Ja, das Spiel ist kostenlos spielbar. Premium-Dienste und kosmetische Gegenstände sind optional."
+        },
+        {
+         "s": "Kann man den neuen Servern noch beitreten?",
+         "c": "Der Start erfolgte am 12. November 2026. Ob eine Vorabregistrierung weiterhin nötig ist, hängt von den aktuellen NTTGame-Meldungen ab; probiere den Login direkt aus."
+        },
+        {
+         "s": "Welches Volk sollte man wählen?",
+         "c": "Beide Völker sind spielerisch völlig gleichwertig. Wähle die Seite, auf der deine Freunde spielen."
+        },
+        {
+         "s": "Was ist die Höchststufe?",
+         "c": "Stufe 83. Mit 100 % EXP auf Stufe 83 kann Rebirth durchgeführt werden; die Bedingungen stehen im Abschnitt 'Stufenaufstieg'."
+        },
+        {
+         "s": "Kann man auf dem Smartphone spielen?",
+         "c": "Nein. Das Spiel läuft ausschließlich unter Windows auf dem PC."
+        },
+        {
+         "s": "Ist die Steam-Version mit dem offiziellen Client identisch?",
+         "c": "Nein, SteamKO ist ein separater Client mit eigenen Servern. Konten und Charaktere sind nicht übertragbar."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "nl": {
+   "baslik": "Knight Online-gids voor beginners: officiële servers 2026",
+   "ozet": "Voor spelers die starten of terugkeren op de officiële Knight Online-servers van NTTGame: account, nieuwe serverlancering, volks- en klassenkeuze, levelen, economie en veiligheid.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "MMORPG"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Windows (USKO-client; de Steam-versie SteamKO staat los)"
+    },
+    {
+     "ad": "Verdienmodel",
+     "deger": "Gratis te spelen (Steam vermeldt 'Free To Play'); premium en cosmetische items worden gekocht met NPoints, prijzen staan op de officiële PUS-pagina"
+    },
+    {
+     "ad": "Huidige versie",
+     "deger": "Nieuw servertijdperk: lancering op 12 november 2026"
+    },
+    {
+     "ad": "Turkse ondersteuning",
+     "deger": "Ja: de game wordt in het Turks uitgegeven door NTTGame Turkey; de Steam-pagina vermeldt eveneens Turkse interface, audio en ondertitels"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "Waar de game staat in 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Knight Online is een klassieke online role-playing game die in Turkije wordt uitgegeven door **NTTGame**. De kern van het spel is de strijd tussen twee naties: **El Morad** en **Karus**. De volken verschillen onderling niet in gevechtskracht; de keuze hangt puur af van uiterlijke voorkeur en waar je vrienden spelen."
+      },
+      {
+       "tip": "p",
+       "metin": "Dit jaar kende een belangrijk moment: NTTGame opende de op 1 oktober 2026 aangekondigde nieuwe servers op **donderdag 12 november 2026 om 16:00 uur Turkse tijd**. Volgens nieuwsberichten heten de nieuwe werelden Atlas, Oracle, Luna en Carnac. De nieuwe servers kennen geen Ardream- of Ronark Land Base-maps; de open PvP-gevechten vinden plaats in Ronark Land. Tevens werd aangekondigd dat bepaalde oudere servers later worden samengevoegd."
+      },
+      {
+       "tip": "p",
+       "metin": "De bestaande USKO-servers zijn Zero, Pandora, Agartha, Felis, Minark, Dryads, Oreads en Destan. SteamKO, dat via Steam draait, vormt een aparte client met een eigen server (Zion)."
+      },
+      {
+       "tip": "p",
+       "metin": "Het verschil tussen oude en nieuwe servers zit vooral in de drukte en de markteconomie. Op een nieuwe server start iedereen vanaf nul; uitrustingsprijzen en competitie zijn evenwichtiger. Oude servers kennen jarenlange opgebouwde voorraden en gevestigde clans. Stem je keuze af op je persoonlijke speelstijl."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Serverlijsten en fusieplannen wijzigen geregeld. Controleer voor je begint altijd de actuele mededelingen van NTTGame."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Voor je begint: account, client, veiligheid",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Het spel is **gratis**. Je maakt een NTTGame-account aan op de officiële website en downloadt de game via de officiële downloadpagina. De Steam-versie (SteamKO) staat hier los van; Steam vraagt bij eerste inlog om telefonische verificatie en bevat in-app aankopen. Bepaal vooraf welke versie je kiest, want accounts en servers zijn strikt gescheiden."
+      },
+      {
+       "tip": "p",
+       "metin": "De nieuwe servers startten met een **voorregistratie**: 15–29 oktober eerste fase, 29 oktober–12 november tweede fase (serverkeuze), 10–11 november personagecreatie. Telefoonverificatie en OTP+ (een authenticatie-app die AnyOTP verving op 15 oktober) waren verplicht. De lancering vond plaats op 12 november 2026; of voorregistratie na de lancering nog steeds verplicht is, is officieel niet nader vastgelegd."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Onderwerp",
+        "Officiële stand"
+       ],
+       "satirlar": [
+        [
+         "Prijs",
+         "Gratis te spelen (Steam: Free To Play); premium en cosmetica worden aangeschaft met NPoints"
+        ],
+        [
+         "Besturingssysteem",
+         "Uitsluitend Windows. De Steam-pagina vermeldt Windows 2000 t/m 10 als minimum; de Steam-client ondersteunt sinds 1 januari 2024 alleen Windows 10 en nieuwer"
+        ],
+        [
+         "CPU / Geheugen / Opslag",
+         "Minimum volgens Steam: Pentium 3 600 MHz, 512 MB RAM, 2 GB vrije schijfruimte"
+        ],
+        [
+         "Videokaart",
+         "3D-versnelling volstaat (Steam-pagina); een zware videokaart is niet vereist"
+        ],
+        [
+         "Taal",
+         "Turks: interface, audio en ondertitels (Steam-pagina)"
+        ],
+        [
+         "Veiligheid",
+         "Telefoonverificatie en OTP+ waren verplicht voor de nieuwe servers"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "De Steam-specificaties omschrijven verouderde pc's. Werkelijke systeemeisen kunnen in drukke gebieden hoger liggen, maar een moderne pc ondervindt geen problemen; gedetailleerde actuele eisen ontbreken, waardoor deze tabel uitsluitend minimumwaarden toont."
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "De eerste uren, stap voor stap",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Maak een account aan",
+         "metin": "Maak een account aan op de NTTGame-site, verifieer je e-mail en telefoonnummer en koppel de OTP+-app."
+        },
+        {
+         "baslik": "Download de client",
+         "metin": "Installeer de client uitsluitend via de officiële downloadpagina. Start nooit installatiebestanden van externe websites."
+        },
+        {
+         "baslik": "Kies server en personage",
+         "metin": "Kies dezelfde server als je vrienden; wisselen van server is niet eenvoudig. Kies je volk (El Morad of Karus) en klasse."
+        },
+        {
+         "baslik": "Verken de stad",
+         "metin": "Het centrale knooppunt van de game is Moradon. Bezoek quest-NPC's en leer vaardigheden via het menu onder de K-toets."
+        },
+        {
+         "baslik": "Haal een pet op",
+         "metin": "Op niveau 10 ontvang je een pet bij Familiar Trainer Kate in Moradon."
+        },
+        {
+         "baslik": "Vorm een party (groep)",
+         "metin": "Het niveauverschil binnen een groep mag maximaal 8 niveaus bedragen. Level zoveel mogelijk gelijk op met je medespelers."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "In het begin solo spelen is prima mogelijk, maar het vormen van een party versnelt je voortgang aanzienlijk."
+      },
+      {
+       "tip": "p",
+       "metin": "Tijdens de eerste uren draait het niet om recordsnelheid, maar om het leren kennen van de interface en sneltoetsen. Chat-, groeps- en handelsvensters rustig testen bespaart later veel tijd. Vragen stellen in de clan of serverchat kan altijd; reageer echter nooit op mensen die om inloggegevens of geld vragen."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Als je niet zeker bent van de eigenschapspunten bij het aanmaken, verdeel ze dan niet willekeurig; raadpleeg eerst de geadviseerde verdeling voor je klasse. Je ontvangt 3 punten per niveau."
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "Keuze van natie en klasse",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Er zijn twee naties: El Morad en Karus. Beide zijn gelijkwaardig in kracht; de klassenopties verschillen minimaal per volk. Vier hoofdklassen (Warrior, Rogue, Mage, Priest) zijn aan weerszijden beschikbaar; **Portu** is specifiek voor El Morad en **Kurian** voor Karus."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Klasse",
+        "Rol",
+        "Geschikt voor"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Nabijgevecht, robuuste tank",
+         "Spelers die houden van een eenvoudige, stabiele start"
+        ],
+        [
+         "Rogue",
+         "Behendig, snelle schade (sluipmoordenaar/boogschutter)",
+         "Liefhebbers van snelheid, mobiliteit en reflexen"
+        ],
+        [
+         "Mage",
+         "Magische gebiedsschade",
+         "Wie graag van grote afstand forse schade toebrengt"
+        ],
+        [
+         "Priest",
+         "Genezing en ondersteuning",
+         "Spelers die het team in leven willen houden en buffen"
+        ],
+        [
+         "Portu / Kurian",
+         "Volksspecifieke klasse",
+         "Wie een afwijkende, ontregelende speelstijl zoekt"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "De basiseigenschappen zijn STR, DEX, HP, INT en MP; verdeel ze passend bij je klasse. Het herverdelen van punten kost veel geld, dus de eerste indeling telt."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Warrior is het meest toegankelijke eerste personage. Wie kiest voor een klasse die altijd gezocht wordt (zoals Priest), vindt bovendien razendsnel aansluiting bij groepen."
+      }
+     ]
+    },
+    {
+     "id": "irk-sinif",
+     "baslik": "Rassen, meestertitels en stat-verdeling",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Volgens KO Rehberi telt elk volk diverse rassen. Bij **El Morad** zijn dat Barbarian, El Morad Male, El Morad Female en Porutu; bij **Karus** Arch Tuarek, Tuarek, Wrinkle Tuarek, Pury Tuarek en Kurian. Bij de gedeelde klassen beïnvloedt het ras vooral het uiterlijk en welke klassen beschikbaar zijn (voor Warrior bijvoorbeeld Barbarian, El Morad Male/Female of Arch Tuarek)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Klasse",
+        "Vaardigheidstakken (KO Rehberi)",
+        "Meestertitel"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Attack, Defense, Passion / Berserking",
+         "Blade Master (El Morad), Berserker Hero (Karus)"
+        ],
+        [
+         "Rogue",
+         "Archery, Assassinate, Search / Explore",
+         "Kasar Hood (El Morad), Shadow Vain (Karus)"
+        ],
+        [
+         "Mage",
+         "Magietakken (vuur, ijs, bliksem)",
+         "Niet officieel vermeld"
+        ],
+        [
+         "Priest",
+         "Genezings- en ondersteuningstakken",
+         "Niet officieel vermeld"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "De Warrior-gids noemt **STR** (kracht) als voornaamste eigenschap en omschrijft de klasse als tank in het nabijgevecht; Warriors zijn onmisbaar bij zware bazen. De Rogue onderscheidt zich door snelheid: de Assassin brengt razendsnel schade toe, terwijl de Archer het grootste schietbereik in het spel heeft."
+      },
+      {
+       "tip": "p",
+       "metin": "**Verdeling van eigenschappen en vaardigheden:** je ontvangt 3 stat-punten per niveau. Voor Warrior adviseert KO Rehberi richtlijnen genaamd 'Berserker' en 'Attacker'. Algemene regel: fysieke aanvallers verhogen hun hoofdeigenschap, HP biedt overlevingskracht, magiërs investeren in INT en MP; twijfel je, houd HP en de hoofdeigenschap dan eerst in balans."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Kopieer stat-verdelingen niet klakkeloos uit willekeurige video's. Lees de officiële klassengidsen, aangezien builds per patch kunnen verschuiven."
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "Levelen: een snelle en efficiënte route",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Levelen draait in de kern om monsterjacht in open gebieden, questopvolging en groepsduels. **Het maximumniveau is 83**; wie op niveau 83 100% EXP behaalt kan een Rebirth uitvoeren. Een Rebirth vereist drie quests bij Fortune Reader Mackin, 1 Gold Bar en 10.000 bijdragepunten; elk Rebirth-niveau levert 2 extra stat-punten op. Controleer actuele eisen altijd bij de NPC."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Voltooi in de eerste 20 niveaus alle quest-NPC's; ze bieden vroege EXP en startuitrusting.",
+        "Als je niveau te laag is voor een zone, aarzel dan niet om tijdelijk terug te keren naar een lagere monsterzone.",
+        "Prestaties (Achievements) openen met het commando /Achieve en bieden vaste beloningen."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Als het niveauverschil binnen een groep groter is dan 8 niveaus, wordt er geen gezamenlijke EXP meer verdiend. Blijf daarom in hetzelfde tempo levelen als je groepsleden."
+      },
+      {
+       "tip": "p",
+       "metin": "Haast je niet wanneer je niveau 83 nadert: bereid de benodigde quests, 1 Gold Bar en 10.000 bijdragepunten tijdig voor. Verzamel deze vereisten rustig tijdens het reguliere levelen."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Bij overlijden verlies je EXP. Waag je niet aan risicovolle zones met kostbare uitrusting als je overlevingskansen gering zijn."
+      }
+     ]
+    },
+    {
+     "id": "bolgeler",
+     "baslik": "Gebieden: wat waar te doen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "KO Rehberi verdeelt de speelkaarten in vier categorieën. De tabel vermeldt geen harde niveaugrenzen omdat deze niet officieel vastgelegd zijn; oriënteer je op de in-game namen en NPC-aanwijzingen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Groep",
+        "Gebieden"
+       ],
+       "satirlar": [
+        [
+         "Algemeen",
+         "Moradon, El Morad, Karus, Eslant, Delos (Abyss)"
+        ],
+        [
+         "PvP",
+         "Ardream, Ronark Land Base, Ronark Land, Kalluga Valley, Alseids Plain, Nereidth Island, Oreads, Nieds Triangle, Napies Gorge"
+        ],
+        [
+         "Evenementen",
+         "Kellino Temple (Forgotten Temple), Juraid Mountain, Krowaz's Dominion, Bifrost, Under the Castle, Chaos Dungeon"
+        ],
+        [
+         "Overig",
+         "Caitharos Arena, Zipang"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Moradon** is de centrale ontmoetingsstad van beide volken; markt, bankopslag en de Magic Anvil bevinden zich hier. Op de nieuwe servers ontbreken Ardream en Ronark Land Base, waardoor alle open PvP plaatsvindt in Ronark Land. Vuistregel tijdens het levelen: doden monsters je te snel, ga een zone terug; gaat het te vlot, trek dan verder."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Sneuvelen bij een zoneovergang kost EXP. Verken nieuwe gebieden voor het eerst bij voorkeur in een groep of met een vriend."
+      }
+     ]
+    },
+    {
+     "id": "etkinlik",
+     "baslik": "Evenementtijden: dagelijkse en wekelijkse kalender",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Onderstaande tijden zijn afkomstig van de evenementenpagina van KO Rehberi (lokale tijd Turkije, stand januari 2026). Tijden kunnen wijzigen; doorslaggevend zijn in-game timers en officiële aankondigingen. USKO is de officiële NTTGame-client, STKO is de Steam-versie."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Evenement",
+        "USKO-tijden",
+        "STKO (Steam)-tijden"
+       ],
+       "satirlar": [
+        [
+         "Border Defense War (BDW)",
+         "02:00, 13:00, 19:00",
+         "01:00, 07:00, 12:00, 16:00, 20:00"
+        ],
+        [
+         "Chaos",
+         "00:00, 12:00",
+         "10:00, 14:00, 22:00"
+        ],
+        [
+         "Juraid Mountain (JR)",
+         "07:40, 22:40",
+         "02:40, 13:40"
+        ],
+        [
+         "Forgotten Temple (FT)",
+         "03:00, 22:00",
+         "08:00, 23:00"
+        ],
+        [
+         "Bifrost",
+         "02:00, 14:00, 21:00",
+         "00:00, 10:00, 17:00"
+        ],
+        [
+         "Krowaz",
+         "10:00, 21:00",
+         "06:00, 19:00"
+        ],
+        [
+         "Lunar War",
+         "14:00, 20:00 (maandag en zaterdag)",
+         "04:00, 11:00, 21:00 (dinsdag en zondag)"
+        ],
+        [
+         "Castle Siege War (CSW)",
+         "20:30 (zondag)",
+         "21:00 (zaterdag)"
+        ],
+        [
+         "Under the Castle (UTC)",
+         "21:00 (vrijdag)",
+         "00:00 (zondag)"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Lunar War, CSW en UTC zijn wekelijks, de overige evenementen dagelijks. **Draki's Tower** is permanent toegankelijk. Tijdelijke evenementen zoals Twisted Moradon, Knight Royale, Puzzle of Snowball War zijn seizoensgebonden. Dark Lunar War is uit het spel verwijderd."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Dagelijks",
+         "metin": "Neem Chaos-, BDW- en Juraid-tijden op in je planning; de beloningen versnellen je voortgang aanzienlijk."
+        },
+        {
+         "baslik": "Wekelijks",
+         "metin": "Stem met je clan af voor Lunar War, CSW en UTC; deze evenementen vereisen een hechte groep en organisatie."
+        },
+        {
+         "baslik": "Elke dag",
+         "metin": "Bezoek Draki's Tower; doordat deze altijd openstaat, zit je niet vast aan vaste uren."
+        }
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Vertrouw geen externe websites die evenementsbeloningen of toegang verkopen voor echt geld. Kijk uitsluitend naar officiële spelkanalen."
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "Geld en economie: uitsluitend officiële spelroutes",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "De in-game munteenheid heet **Noah**. Inkomsten ontstaan door monsterjacht, quests en onderlinge handel. Met het commando **merchant** open je een eigen marktkraam. Verkopen aan NPC's en directe spelershandel zijn eveneens mogelijk. Het pakhuis is accountgebonden op de betreffende server."
+      },
+      {
+       "tip": "p",
+       "metin": "Het upgraden van uitrusting gebeurt bij de Magic Anvil naast Charon in Moradon. Een opwaardering **kan mislukken waardoor het voorwerp wordt vernietigd**; waag dus geen onvervangbare items en begin met spullen die je kunt missen. Slagingspercentages staan in het spel vermeld."
+      },
+      {
+       "tip": "p",
+       "metin": "Volg een vaste route voor inkomsten: eerst quests, daarna jachtopbrengsten, en tenslotte marktverkoop. Verkoop niets zonder eerst de gangbare marktprijs te checken; prijzen verschillen per server."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Het verkopen van in-game geld, voorwerpen of accounts aan andere spelers voor echt geld (RMT) schendt de gebruikersvoorwaarden en leidt tot permanente sluiting van je account. Handel uitsluitend via de officiële PUS."
+      }
+     ]
+    },
+    {
+     "id": "yukseltme-klan",
+     "baslik": "Upgrades, clans en kasteeloorlog",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**Upgrade-mechanisme:** Uitrusting wordt opgewaardeerd bij de Magic Anvil in Moradon. Elke poging kan slagen, gelijk blijven of het voorwerp vernietigen. Het risico op mislukking neemt per niveau toe; probeer upgrades daarom eerst uit op goedkope reserve-items."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Oefen upgraden eerst met goedkope tweedehands spullen.",
+        "Zet nooit al je zuurverdiende Noah in op één enkel item.",
+        "Controleer de marktprijzen van upgrade-scrolls voor je inkoopt."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Clan en kasteeloorlog:** De clan is het centrum voor gezamenlijke toernooien en het delen van uitrusting. **Castle Siege War (CSW)** is het wekelijkse hoogtepunt waarin clans strijden om het kasteel; ook **Under the Castle (UTC)** en **Lunar War** vragen om clanorganisatie."
+      },
+      {
+       "tip": "p",
+       "metin": "**Premium-opties:** De game biedt abonnementen zoals Switching Premium en War Premium aan tegen NPoints. Looptijden, prijzen en voordelen staan op de officiële PUS-pagina; bekijk de details in de shop voor aankoop."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Een vernietigd voorwerp krijg je nooit terug. Klagen bij de helpdesk heeft geen zin; voer upgrades alleen uit als je het risico bewust aanvaardt."
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "Na niveau 83: oorlog en eindspel",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Vanaf niveau 83 verschuift het spel volledig naar PvP-oorlogsvoering en toonaangevende uitrusting. Op de nieuwe servers vindt alle PvP plaats in Ronark Land. Clanoorlogen en volkerenconflicten vormen het hart van het eindspel."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Verdien extra stat-punten via Rebirth.",
+        "Volg Achievements regelmatig op.",
+        "Sluit je aan bij een clan en vecht samen in evenementen."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Premium-services (zoals Switching Premium en War Premium) leveren voordelen op en worden aangeschaft met NPoints. Lees op de officiële pagina wat een product inhoudt voor je het koopt."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Tijdens de eerste weken stromen nieuwe servers vol; levelen in drukke gebieden kan vertragen. Wijk uit naar alternatieve jachtzones om wachtrijen te vermijden."
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "Veelgemaakte fouten en veiligheid",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "De client downloaden van onofficiële bronnen.",
+        "Hetzelfde wachtwoord elders op internet hergebruiken.",
+        "Spelen zonder actieve OTP+-beveiliging en telefoonverificatie."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Blijf ver weg van cheats, bots, macro's, exploits, privéservers (P-servers), accountverkoop (RMT) en gekraakte clients. Ze leiden tot permanente sluiting van je account en diefstal van gegevens. Privéservers zijn illegaal en onveilig."
+      },
+      {
+       "tip": "p",
+       "metin": "Houd je geregistreerde e-mailadres en telefoonnummer actueel; je hebt ze nodig bij accountherstel. Berichten in de chat die beweren 'ik verdubbel je items' zijn zonder uitzondering oplichting."
+      },
+      {
+       "tip": "p",
+       "metin": "Medewerkers van NTTGame vragen nooit om je wachtwoord of OTP-code. Log uitsluitend in op officiële websites en controleer altijd de URL."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Veelgestelde vragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is Knight Online gratis?",
+         "c": "Ja, het is gratis te spelen. Premium- en cosmetische artikelen zijn geheel optioneel."
+        },
+        {
+         "s": "Kan ik nog meedoen op de nieuwe servers?",
+         "c": "De lancering vond plaats op 12 november 2026. Of voorregistratie nog verplicht is hangt af van actuele NTTGame-berichten; probeer direct in te loggen met je account."
+        },
+        {
+         "s": "Welke natie moet ik kiezen?",
+         "c": "Beide zijn even sterk. Kies de kant waar je vrienden spelen."
+        },
+        {
+         "s": "Wat is het maximale niveau?",
+         "c": "83. Op niveau 83 met 100% EXP kun je een Rebirth uitvoeren; voorwaarden staan in het hoofdstuk 'Levelen'."
+        },
+        {
+         "s": "Kan ik op mijn smartphone spelen?",
+         "c": "Nee. Het spel draait uitsluitend op Windows op de pc."
+        },
+        {
+         "s": "Is de Steam-versie hetzelfde als de officiële client?",
+         "c": "Nee, SteamKO is een aparte client met eigen servers. Accounts en voortgang zijn niet uitwisselbaar."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "zh": {
+   "baslik": "骑士帝国新手指南：官方服务器 2026 进阶全解",
+   "ozet": "针对在 NTTGame 官方《骑士帝国》（Knight Online）服务器起步或回归的玩家：账号创建、新服起步、阵营与职业抉择、升级路线、游戏经济与账号安全。",
+   "kunye": [
+    {
+     "ad": "类型",
+     "deger": "MMORPG（大型多人在线角色扮演游戏）"
+    },
+    {
+     "ad": "平台",
+     "deger": "Windows（USKO 客户端；Steam 上的 SteamKO 版本相互独立）"
+    },
+    {
+     "ad": "收费模式",
+     "deger": "免费游玩（Steam 页面标为“Free To Play”）；会员卡及外观道具使用 NPoints 购买，定价详见官方 PUS 商城"
+    },
+    {
+     "ad": "当前版本",
+     "deger": "新服时代：2026 年 11 月 12 日盛大开服"
+    },
+    {
+     "ad": "土耳其语支持",
+     "deger": "支持：土耳其地区由 NTTGame Turkey 运营发行；Steam 页面亦列出土耳其语界面、音频与字幕"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "走近《骑士帝国》：2026 年游戏现状",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "《骑士帝国》（Knight Online）是一款历史悠久、风靡土耳其及欧洲的经典大型在线奇幻角色扮演游戏，土耳其地区由 **NTTGame** 代理运营。游戏最核心的灵魂在于两大对立阵营的宏大国战：人类阵营 **艾尔莫拉德（El Morad）** 与兽人阵营 **卡鲁斯（Karus）**。两大阵营在基础战力数值上完全均衡，玩家可纯粹依据角色外貌审美以及好友所在公会进行自由抉择。"
+      },
+      {
+       "tip": "p",
+       "metin": "今年迎来了重大历史节点：NTTGame 官方于 **2026 年 11 月 12 日星期四土耳其时间 16:00**，正式开放了此前于 10 月 1 日预告的一批全新服务器。据官方报道，新服定名为 Atlas、Oracle、Luna 与 Carnac。在新服中，取消了传统的 Ardream 与 Ronark Land Base 地图，核心野外阵营交火全面聚焦于中立战场 Ronark Land。此外，官方亦同步公布了部分老服务器后续的合并合服规划。"
+      },
+      {
+       "tip": "p",
+       "metin": "目前活跃的经典 USKO 服务器包括 Zero、Pandora、Agartha、Felis、Minark、Dryads、Oreads 与 Destan。而在 Steam 平台上运行的 SteamKO 则属于独立运营体系，拥有专属独立服务器（Zion）。"
+      },
+      {
+       "tip": "p",
+       "metin": "老区与新服最核心的差异在于玩家人口密度与游戏物价经济。新服中全员统一起跑线从零开荒，装备物价与竞技环境更为平稳健康；老区则沉淀了长达数年的顶级神装积累与高阶老牌公会。请根据自身偏好的游戏节奏进行抉择。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "服务器列表与合服动态常有调整。在定服建号之前，请务必参阅 NTTGame 官方发布的最新公告。"
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "开始之前：账号、客户端与安全准则",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "游戏本体 **完全免费**。玩家只需前往官网注册 NTTGame 账号，并从官方下载页面获取客户端。Steam 版本（SteamKO）独立运营，初次登录需要完成手机验证并支持 Steam 钱包内购。入坑前需明确游玩阵地，因为两边的账号与数据服务器互不相通。"
+      },
+      {
+       "tip": "p",
+       "metin": "本批新服启动了严格的 **预注册机制**：10月15–29日为第一阶段，10月29日–11月12日为第二阶段（选服），11月10–11日为角色预创建。入驻新服强制要求手机实名认证与 OTP+（一次性安全动态令牌应用，已于 10 月 15 日全面取代旧版 AnyOTP）。新服已于 2026 年 11 月 12 日正式开门迎客；开服后是否仍对后入玩家维持预注册限制，请以登录实测及官方公告为准。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "核心项目",
+        "官方公示数据"
+       ],
+       "satirlar": [
+        [
+         "游戏资费",
+         "免费游玩（Steam 标注 Free To Play）；VIP 会员与外观功能道具通过点券 NPoints 购买"
+        ],
+        [
+         "操作系统",
+         "仅支持 Windows。Steam 页面标注最低要求为 Windows 2000 至 10；但自 2024 年 1 月 1 日起 Steam 客户端已全面停止支持 Windows 10 以下系统"
+        ],
+        [
+         "处理器 / 内存 / 硬盘",
+         "Steam 页面最低要求：奔腾 3 600 MHz，512 MB 内存，2 GB 可用硬盘空间"
+        ],
+        [
+         "显示显卡",
+         "支持 3D 硬件加速即可（Steam 页面）；无需高端独立显卡"
+        ],
+        [
+         "语言支持",
+         "土耳其语：界面、配音与字幕全量支持（Steam 页面）"
+        ],
+        [
+         "账号安全",
+         "新服强制绑定手机号码与 OTP+ 动态口令令牌"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Steam 上记录的最低配置源于多年前的老旧标准。百人同屏国战时对现代 CPU 的单核性能有一定要求，主流现代电脑运行均能保持流畅；因官方未公布更新细则，表中仅列出官方最低记录。"
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "开荒起步：分步指引",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "注册与安全绑定",
+         "metin": "在 NTTGame 官网注册通行证，验证电子邮箱与手机号，并激活绑定 OTP+ 安全应用。"
+        },
+        {
+         "baslik": "下载正版客户端",
+         "metin": "仅从官方下载页面安装游戏。坚决不要运行来自第三方网盘的未经验证安装包。"
+        },
+        {
+         "baslik": "选定服务器与角色",
+         "metin": "与好友选定同一服务器；跨服转移十分繁琐。选定阵营（El Morad 或 Karus）与心仪职业。"
+        },
+        {
+         "baslik": "初探主城莫拉顿（Moradon）",
+         "metin": "游戏全阵营核心中立大主城为 Moradon。接取主线 NPC 任务，并通过 K 键面板学习初始战斗技能。"
+        },
+        {
+         "baslik": "领取新手跟宠",
+         "metin": "升至 10 级后，前往 Moradon 找宠物驯养师 Familiar Trainer Kate 免费领取跟宠。"
+        },
+        {
+         "baslik": "组建升级小队（Party）",
+         "metin": "组队打怪时队员之间的等级差不得超过 8 级。尽量与好友保持同一梯队升级。"
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "前期单人打怪虽然可以独立推进，但在中后期抱团组队能够让经验收益产生质的飞跃。"
+      },
+      {
+       "tip": "p",
+       "metin": "开荒初期的首要目标是熟练掌握聊天栏指令、组队功能与摆摊交易界面，而非盲目冲级。遇到困惑可在公会或大区聊天求助；严禁回复任何索要账号密码或借金币的可疑人员。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "建号初期若不清楚属性加点，切忌随意胡乱加点；先阅读对应职业的标准流派加点指引。角色每升一级获得 3 点可分配属性点。"
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "阵营与职业抉择指南",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "游戏内有人类阵营（El Morad）与兽人阵营（Karus）之分。双方综合战力绝对平衡；基础四大职业（Warrior 战士、Rogue 游侠/刺客、Mage 法师、Priest 牧师）双边共通；此外人类阵营专属职业为 **Portu**，兽人阵营专属职业为 **Kurian**。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "职业名称",
+        "团队定位",
+        "适合人群"
+       ],
+       "satirlar": [
+        [
+         "Warrior（战士）",
+         "重装近战、肉盾冲锋",
+         "追求扎实稳健、简单抗揍的开荒新手"
+        ],
+        [
+         "Rogue（游侠/刺客）",
+         "高敏机动、瞬时爆发（刺客/弓手）",
+         "热衷于高机动暗杀、极速拉扯与操作感的玩家"
+        ],
+        [
+         "Mage（法师）",
+         "大范围元素法术轰炸",
+         "钟情远距离群攻清怪与控场的玩家"
+        ],
+        [
+         "Priest（牧师）",
+         "生命治愈、强力团队增益与削弱",
+         "队伍最不可或缺的灵魂后勤守护者"
+        ],
+        [
+         "Portu / Kurian",
+         "阵营特色近战辅助/控制职业",
+         "喜欢破甲变异、强力打乱敌阵的个性玩家"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "五大核心基础属性分别为力量（STR）、敏捷（DEX）、体质（HP）、智力（INT）与精神（MP）；需紧密契合职业需求加点。洗点洗技能消耗昂贵，初期加点务必深思熟虑。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "战士（Warrior）是最不易暴毙的新手入门首选。而选择团队永远紧缺的牧师（Priest），在任何升级挂机队伍中都能轻松秒进组。"
+      }
+     ]
+    },
+    {
+     "id": "irk-sinif",
+     "baslik": "种族分支、转职称号与属性加点",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "据 KO Rehberi 资料记载，各阵营包含细分种族。**El Morad** 拥有野蛮人（Barbarian）、男性人类、女性人类以及 Porutu；**Karus** 拥有大图阿雷克（Arch Tuarek）、图阿雷克、褶皱图阿雷克、纯种图阿雷克以及 Kurian。通用职业的种族更多决定外观体型以及可选职业范围（如战士可在 Barbarian、人类男/女及 Arch Tuarek 中选择）。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "职业",
+        "核心技能分支（KO Rehberi）",
+        "进阶大师称号（Master Title）"
+       ],
+       "satirlar": [
+        [
+         "Warrior（战士）",
+         "Attack（攻击）、Defense（防御）、Passion / Berserking（狂暴）",
+         "Blade Master（人类方），Berserker Hero（兽人方）"
+        ],
+        [
+         "Rogue（游侠/刺客）",
+         "Archery（箭术）、Assassinate（暗杀）、Search / Explore（探索）",
+         "Kasar Hood（人类方），Shadow Vain（兽人方）"
+        ],
+        [
+         "Mage（法师）",
+         "火系（Flame）、冰系（Glacier）、雷系（Lightning）",
+         "官方未单独明示"
+        ],
+        [
+         "Priest（牧师）",
+         "治疗恢复（Healing）、神圣守护（Aura）、暗影诅咒（Debuff）",
+         "官方未单独明示"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "战士以 **力量（STR）** 为核心根基，是围攻顶级世界首领不可或缺的第一防线。刺客/游侠以极速突进而著称：暗杀刺客具备恐怖的单体近战秒杀力，而神射弓箭手则拥有全游戏最远的先手射程。"
+      },
+      {
+       "tip": "p",
+       "metin": "**加点核心逻辑：** 每升一级获得 3 点属性点。输出手主堆核心伤害属性，体质（HP）保障在国战中不被秒杀，施法职业主攻智力与精神；新手摸不准时可先保持主属性与体质均衡分配。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "切勿盲目抄录过时的视频加点攻略。请仔细研读官方职业加点文档，因为不同版本平衡调整对属性收益影响极大。"
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "经验升级：高效稳健路线",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "角色升级主要依托大世界据点清怪、跑环任务与固定队伍挂机。**当前等级上限为 83 级**；当角色达到 83 级且经验值达到 100% 后，可开启转生（Rebirth）。转生需要完成占卜师 Fortune Reader Mackin 的三连任务、消耗 1 块金砖（Gold Bar）以及 10,000 战勋贡献点；每次转生成功额外奖励 2 点可自由分配的属性点。具体要求请在游戏内对应 NPC 处复核确认。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "前 20 级务必清空沿途所有 NPC 任务，其提供的装备和经验能让你无缝过渡。",
+        "若当前刷怪区怪物强度过高导致频繁阵亡，果断退回低一阶怪物区刷怪。",
+        "通过聊天框输入 /Achieve 指令可打开成就面板，定期领取代币与称号属性奖励。"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "一旦队伍内部玩家等级差超过 8 级，经验获取将被系统惩罚中断。务必与固定队好友保持同一升级梯队。"
+      },
+      {
+       "tip": "p",
+       "metin": "临近 83 级转生时无需过度急躁：提前在升级过程中搜集好转生任务材料、金砖与贡献点储备，能在满级后立刻完成蜕变。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "角色阵亡会惩罚扣除当前百分比经验值。在自身战力未达标之前，切勿盲目带着极品装备硬闯高危战场。"
+      }
+     ]
+    },
+    {
+     "id": "bolgeler",
+     "baslik": "大世界地图：各区域核心玩法",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "KO Rehberi 将世界地图清晰划分为四大类型。等级梯度请以游戏内当前地图与 NPC 引导为准。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "地图类别",
+        "包含主要区域"
+       ],
+       "satirlar": [
+        [
+         "常规安全与主线区",
+         "Moradon（莫拉顿主城）、El Morad、Karus、Eslant、Delos（Abyss 深渊）"
+        ],
+        [
+         "PvP 国战交火区",
+         "Ardream、Ronark Land Base、Ronark Land、Kalluga Valley、Alseids Plain、Nereidth Island、Oreads、Nieds Triangle、Napies Gorge"
+        ],
+        [
+         "大型副本与活动区",
+         "Kellino Temple（Forgotten Temple）、Juraid Mountain、Krowaz's Dominion、Bifrost、Under the Castle、Chaos Dungeon"
+        ],
+        [
+         "其他竞技区",
+         "Caitharos Arena、Zipang"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Moradon** 是两大阵营共享的中立主城，摆摊集市、银行仓库与神圣强化铁砧（Magic Anvil）皆坐落于此。新服中 Ardream 与 Ronark Land Base 关闭，所有阵营交锋全部汇聚于 Ronark Land。刷怪进阶法则：如果一个区域的怪让你疲于奔命，果断后撤一级；如果刷起来轻而易举，立即推进至下一区域。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "穿越危险交界区域阵亡会掉落经验。初次探索未踏足的区域时，务必与公会好友或队伍结伴而行。"
+      }
+     ]
+    },
+    {
+     "id": "etkinlik",
+     "baslik": "日常与周常活动日程时刻表",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "以下日程汇总自 KO Rehberi 官方赛事页（基于土耳其本地时间，2026年1月更新校准）。活动时间可能随版本调整；以游戏内倒计时与官网通告为准。USKO 代表官方客户端，STKO 代表 Steam 版本。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "大型活动名称",
+        "USKO 开放时间（土耳其时间）",
+        "STKO（Steam）开放时间"
+       ],
+       "satirlar": [
+        [
+         "Border Defense War（BDW 边境防御战）",
+         "02:00, 13:00, 19:00",
+         "01:00, 07:00, 12:00, 16:00, 20:00"
+        ],
+        [
+         "Chaos（混沌角斗场）",
+         "00:00, 12:00",
+         "10:00, 14:00, 22:00"
+        ],
+        [
+         "Juraid Mountain（JR 侏罗纪山脉）",
+         "07:40, 22:40",
+         "02:40, 13:40"
+        ],
+        [
+         "Forgotten Temple（FT 遗忘神庙）",
+         "03:00, 22:00",
+         "08:00, 23:00"
+        ],
+        [
+         "Bifrost（彩虹桥之战）",
+         "02:00, 14:00, 21:00",
+         "00:00, 10:00, 17:00"
+        ],
+        [
+         "Krowaz（克罗瓦兹领地）",
+         "10:00, 21:00",
+         "06:00, 19:00"
+        ],
+        [
+         "Lunar War（月光国战）",
+         "14:00, 20:00（周一与周六）",
+         "04:00, 11:00, 21:00（周二与周日）"
+        ],
+        [
+         "Castle Siege War（CSW 攻城战）",
+         "20:30（周日）",
+         "21:00（周六）"
+        ],
+        [
+         "Under the Castle（UTC 城堡地下迷宫）",
+         "21:00（周五）",
+         "00:00（周日）"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Lunar War、CSW 攻城战与 UTC 属于周常周期性活动，其余多数为每日按时轮转。**Draki 塔（Draki's Tower）** 为全天候常驻开放爬塔。扭曲莫拉顿、骑士吃鸡、拼图与雪球大战等活动属于限时季节性活动。Dark Lunar War 已被移除。"
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "每日核心必做",
+         "metin": "在升级期将 Chaos、BDW 与 Juraid 的入场时间录入闹钟；产出的丰厚经验与装备材料能让战力飞速跃升。"
+        },
+        {
+         "baslik": "周常公会集结",
+         "metin": "与公会固定队协调锁定周常国战（Lunar War）、攻城战（CSW）与 UTC 时间；此类活动高度依赖小队纪律与语音配合。"
+        },
+        {
+         "baslik": "随时单刷挑战",
+         "metin": "闲暇时间随时通关 Draki 塔；由于全天候开放，完全不必担心时间冲突。"
+        }
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "切勿轻信声称线下出售活动奖励或代排门票的第三方黑产。所有奖励均只认准游戏内正规结算。"
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "金币与游戏经济：严守正规体系",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "游戏内通用基础货币为 **诺亚（Noah）**。金币主要依靠野外刷怪掉落、主支线赏金以及玩家之间摆摊流通。在聊天栏输入 **/merchant** 即可在主城原地开启个人摊位。将杂物出售给 NPC 商人或与其他玩家面对面交易均可。仓库金币在同服同账号下全角色共享。"
+      },
+      {
+       "tip": "p",
+       "metin": "装备强化升星通过 Moradon 主城 Charon 旁的神圣铁砧（Magic Anvil）进行。每次升级 **均存在概率失败并直接导致装备碎裂永久销毁**；切勿拿身上唯一的极品主力装备盲目试水，一定要从备用垫子装备练起。成功率公示请参阅游戏内说明。"
+      },
+      {
+       "tip": "p",
+       "metin": "理性的财富积累逻辑：主线任务奖励为主，怪物材料掉落为辅，最后才是摆摊交易。在摆摊前务必货比三家摸清市价，避免盲目贱卖或定价过高导致滞销。"
+      },
+      {
+       "tip": "uyari",
+       "metin": "严禁通过第三方线下网站买卖游戏金币、游戏账号或虚拟道具（RMT），此类违规操作严重破坏游戏经济，一经查实直接永久封停。请务必仅在游戏内置官方 PUS 商店进行正规充值消费。"
+      }
+     ]
+    },
+    {
+     "id": "yukseltme-klan",
+     "baslik": "装备强化、公会纽带与攻城战",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**装备强化法则：** 强化在 Moradon 主城铁砧处进行。每一次点击可能成功提升品阶、维持现状或彻底炸碎。强化等级越高，爆装碎裂风险呈指数级上升；务必使用备用装备逐步强化。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "先在廉价低阶装备或二手过渡装上摸透铁砧强化机制。",
+        "切忌头脑发热把全部家当梭哈在单次强化赌博上。",
+        "在采购强化卷轴前，先核算好材料市价与成品溢价空间。"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**公会与大型攻城：** 公会是参与团队副本与分配战利品的核心单元。**攻城战（CSW）** 是每周各大王牌公会争夺城堡税收与霸权的大型对抗；**Under the Castle（UTC）** 与 **月光国战（Lunar War）** 同样需要精密的小队协作。"
+      },
+      {
+       "tip": "p",
+       "metin": "**VIP 会员分类：** 游戏官方提供 Switching Premium、War Premium 等特权会员服务，使用点券 NPoints 购买。其持续天数、专属加成与赠品均明码标价陈列于 PUS 商城中；购买前细阅特权说明。"
+      },
+      {
+       "tip": "uyari",
+       "metin": "强化碎掉的装备绝对无法找回。向客服提交工单申诉碎装毫无意义；强化前务必做好心理承受准备。"
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "83 级满级之后：终极国战与进阶",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "达到 83 级后，游戏重心全面转向顶级装备打造与阵营国战。由于新服取消了 Ardream 等初级战场，全天候阵营交火全部浓缩在 Ronark Land 核心图。公会战与全服阵营大战构成了终局核心。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "通过 Rebirth 转生持续获取宝贵的额外属性点。",
+        "持之以恒推进成就系统以解锁强力属性称号。",
+        "加入活跃的王牌公会，参加固定时段的大型阵营攻防。"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "各类会员特权（如 War Premium 等）在满级后能提供丰厚的战场荣誉加成，可通过官方渠道购买 NPoints 兑换。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "新服开区前几周涌入海量玩家；在最热门区域扎堆抢怪会严重拖慢效率。适时转移至备选刷怪点可大幅提升效率。"
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "新手高频误区与终极安全守则",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "从非官方第三方论坛下载附带木马的客户端。",
+        "在非官方网站复用与游戏账号相同的登录密码。",
+        "未开启 OTP+ 动态令牌防护和手机号码绑定直接裸奔入服。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "坚决远离任何外挂脚本、连点宏、内存修改器、私服（P-Server）、线下黑金账号交易（RMT）或破解客户端。此类行径会导致账号被永久彻底封禁，并面临严重的个人信息泄露风险。私服毫无合法保障，极易卷款跑路。"
+      },
+      {
+       "tip": "p",
+       "metin": "务必保持绑定的密保邮箱和安全手机畅通可用；这是账号找回与密码重置的唯一合法凭证。凡是在游戏聊天中声称“帮你复制双倍神装”或“索要安全码”的全部是诈骗分子。"
+      },
+      {
+       "tip": "p",
+       "metin": "NTTGame 官方管理员绝不会向你索要账号密码或 OTP 动态验证码。登录请务必认准官方唯一域名。"
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "常见问题解答",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "《骑士帝国》（Knight Online）是免费游戏吗？",
+         "c": "是的，游戏本体完全免费游玩。会员特权与外观道具完全属于可选消费。"
+        },
+        {
+         "s": "现在还能进入新开的服务器吗？",
+         "c": "新服已于 2026 年 11 月 12 日正式开启。开服后具体是否需要补办预注册手续，请以客户端实际登录提示及 NTTGame 官方最新公告为准。"
+        },
+        {
+         "s": "新手该选择哪一个阵营？",
+         "c": "人类（El Morad）与兽人（Karus）两大阵营战力数值完全相同。直接选择朋友所在的一方即可。"
+        },
+        {
+         "s": "游戏满级是多少级？",
+         "c": "当前等级上限为 83 级。达到 83 级且经验值达到 100% 后可开启 Rebirth 转生，具体要求详见“升级路线”章节。"
+        },
+        {
+         "s": "手机或移动端能玩吗？",
+         "c": "不能。本作目前仅支持在 Windows PC 电脑端运行。"
+        },
+        {
+         "s": "Steam 版本与官网版本数据互通吗？",
+         "c": "不互通。SteamKO 属于独立客户端和独立服务器体系，账号数据完全互不共享。"
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  }
 }

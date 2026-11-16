@@ -2612,6 +2612,1938 @@
      ]
     }
    ]
+  },
+  "de": {
+   "baslik": "League of Legends Einsteiger-Guide: Setup, Champions, Lanes und Ränge",
+   "ozet": "League of Legends ist das kostenlose 5v5-MOBA von Riot Games. Dieser Guide hilft neuen und wiederkehrenden Spielern von der Installation bis zur Ranglistenleiter.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "MOBA (5v5 Strategie-Action)"
+    },
+    {
+     "ad": "Plattform",
+     "deger": "Windows PC (auf macOS nur Intel)"
+    },
+    {
+     "ad": "Preismodell",
+     "deger": "Free-to-Play; optionale kosmetische Käufe"
+    },
+    {
+     "ad": "Aktuelle Version",
+     "deger": "Patch 26.22 (November 2026); Ranked 2026 Season 3"
+    },
+    {
+     "ad": "Türkisch-Unterstützung",
+     "deger": "Riots Support-Seite führt einen regionalen Server für die Türkei; die Liste der Client-Sprachen einschließlich Türkisch ist nicht offiziell angegeben"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "nedir",
+     "baslik": "Was League of Legends ist und wo es 2026 steht",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "In League of Legends treffen zwei Fünferteams auf einer Karte namens Summoner's Rift aufeinander. Jeder Spieler wählt einen **Champion**. Ziel ist es, den Nexus in der gegnerischen Basis zu zerstören. Auf dem Weg dorthin gibt es Türme, Monster und Nebenziele."
+      },
+      {
+       "tip": "p",
+       "metin": "Das Spiel entwickelt sich in Patches. Im November 2026 lautet der aktuelle Patch **26.22** (Riots offizielle Patchnotizen). Er umfasst Themen wie Mels Midscope, das ARAM-Mayhem-Event und die Rückkehr einiger Champions in den Classic-Modus. Der nächste Patch wird als 26.23 angegeben (laut Community-Quellen)."
+      },
+      {
+       "tip": "p",
+       "metin": "Das Ranglistenjahr 2026 ist in drei Seasons unterteilt: Season 1 (8. Januar bis 28. April), Season 2 (29. April bis 28. Juli) und **Season 3** (gestartet am 29. Juli 2026). Der jährliche Reset wird für Anfang Januar erwartet; prüfe die offizielle Ankündigung für das genaue Datum."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Zahlen in diesem Guide sind mit Stand November 2026 zutreffend. Patches können kleine Details ändern; prüfe Riots Support-Seiten für exakte Regeln."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Vor dem Start: Konto, Installation, System",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "League of Legends ist kostenlos und wird mit einem Riot-Konto gespielt. Laut Riots offizieller Support-Seite sind die Mindestanforderungen ein Intel i3-530- oder AMD FX-4100-Prozessor, eine Grafikkarte der GeForce 400-Serie, Radeon HD 6570 oder Intel HD 4600 (1 GB Videospeicher), 2 GB RAM, 16 GB Festplattenspeicher und Windows 10 (Build 19041 oder höher) oder Windows 11. Windows 11 erfordert TPM 2.0. Empfohlen: Intel i5-8250 oder Ryzen 3 1200, GeForce 560, 4 GB RAM und eine SSD."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Unter macOS werden nur Macs mit Intel-Prozessoren unterstützt.",
+        "Unter Windows 11 muss TPM 2.0 aktiviert sein; eventuell musst du es im BIOS einschalten.",
+        "Nach der Installation lädt das Spiel Patches automatisch herunter; plane beim ersten Start etwas Zeit ein.",
+        "Wähle deine Region (Server) während der Installation sorgfältig aus; ein nachträglicher Wechsel ist aufwendig."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Lade das Spiel nur von Riots offizieller Website herunter. Links auf anderen Seiten, die 'kostenlose RP' oder Konten versprechen, können zum Diebstahl deines Kontos führen."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Deine ersten Matches Schritt für Schritt",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Probiere das Tutorial und Spiele gegen KI aus",
+         "metin": "Lerne Bewegung, Angriffe und Fähigkeiten im Tutorial und in Koop-gegen-KI-Matches kennen."
+        },
+        {
+         "baslik": "Swiftplay und ARAM auf Stufe 3",
+         "metin": "Auf Kontostufe 3 werden der Summoner's-Rift-Modus Swiftplay und ARAM freigeschaltet; gewöhne dich mit kurzen Matches daran."
+        },
+        {
+         "baslik": "Übungstool auf Stufe 9",
+         "metin": "Nutze das Practice Tool, um Champions und Gegenstände alleine auszuprobieren."
+        },
+        {
+         "baslik": "Normal Draft auf Stufe 10",
+         "metin": "Normal Draft ist ein 5v5-Match auf Summoner's Rift mit Pick- und Ban-Phase."
+        },
+        {
+         "baslik": "Ranked auf Stufe 30",
+         "metin": "Ranked (Solo/Duo und Flex) erfordert Kontostufe 30, mindestens 20 Champions und 10 Swiftplay- oder Normal-Draft-Spiele."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sampiyon",
+     "baslik": "Champion- und Rollenwahl für die ersten Wochen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Summoner's Rift hat fünf Rollen: Top, Jungle, Mid, Bot und Support. Klassische Champions werden über Classic Level, den Shop oder die wöchentliche kostenlose Rotation freigeschaltet. Die folgende Tabelle zeigt typische Auswahlen, die seit langer Zeit einfach geblieben sind; es handelt sich um gängige Anfängertipps, keine offizielle Riot-Empfehlung, und das Balancing kann sich mit Patches ändern."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rolle",
+        "Einfaches Champion-Beispiel",
+        "Warum es einfach ist"
+       ],
+       "satirlar": [
+        [
+         "Top",
+         "Garen",
+         "Widerstandsfähig; die Aufgaben sind klar"
+        ],
+        [
+         "Mid",
+         "Annie",
+         "Einfache Fähigkeiten; kann Kämpfe initiieren"
+        ],
+        [
+         "Bot",
+         "Ashe",
+         "Verursacht Schaden aus der Distanz; verfügt über Verlangsamung"
+        ],
+        [
+         "Support",
+         "Soraka",
+         "Heilt; hilft dem Team sofort"
+        ],
+        [
+         "Jungle",
+         "Amumu",
+         "Leitet Kämpfe leicht ein; robust"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Spiele eine Woche lang dieselbe Rolle mit denselben zwei Champions. Einen Champion gut zu lernen bringt dich schneller voran als viele auszuprobieren."
+      },
+      {
+       "tip": "p",
+       "metin": "Laut Riots offiziellem Entwicklerbeitrag wurden Runen und Meisterschaften im Classic-Modus vereinfacht und EP zurückgebracht, sodass du durch Spielen Währung sparen kannst, um Champions freizuschalten. Der Schlüsselpunkt für Anfänger ist es, in den ersten Tagen nicht in Runen- und Gegenstandsdetails zu ertrinken: Nutze die empfohlenen Voreinstellungen des Spiels und konzentriere dich zunächst darauf, auf der Lane zu überleben."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rolle",
+        "Hauptaufgabe",
+        "Dein erstes Ziel"
+       ],
+       "satirlar": [
+        [
+         "Top",
+         "Allein auf der Lane; Tankiness und Kämpfe",
+         "Vasallen per Last-Hit treffen, nicht sterben"
+        ],
+        [
+         "Jungle",
+         "Tötet Camps, hilft den Lanes",
+         "Lerne eine sichere Route, beobachte Drachen und Herold"
+        ],
+        [
+         "Mid",
+         "Die Mitte der Karte; nah an allen Seiten",
+         "Schaden austeilen, dem Jungler Informationen liefern"
+        ],
+        [
+         "Bot",
+         "Beständiger Fernkampfschaden",
+         "Gemeinsam mit dem Support farmen, ohne zu sterben"
+        ],
+        [
+         "Support",
+         "Sicht, Schutz und Teamunterstützung",
+         "Wards platzieren, Bot-Lane absichern"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Wenn du nicht weißt, was du wählen sollst, beginne mit Mid oder Support: Mid liegt in der Mitte der Karte, sodass du den Spielfluss siehst; Support bringt dem Team großen Nutzen, ohne übermäßig hohe mechanische Fertigkeiten zu verlangen. In der Championauswahl erhält meist der Spieler die Rolle, der sie zuerst ansagt; wenn du Letzter bist, musst du möglicherweise spielen, was übrig bleibt – lerne daher 2 Rollen und je 2 Champions."
+      }
+     ]
+    },
+    {
+     "id": "mekanikler",
+     "baslik": "Kernmechaniken: Lane, Vasallen, Ziele",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Der erste Teil eines Matches ist die **Lane-Phase**: Das Töten von Vasallen bringt Gold. Du verdienst Gold durch den letzten Treffer, daher ist das Last-Hitting von Vasallen eine grundlegende Gewohnheit."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Türme:** Äußere Türme fallen zuerst, dann innere Türme, schließlich der Nexus.",
+        "**Monster:** Ziele wie Drache, Baron und Rift Herald verleihen dem Team dauerhafte Macht.",
+        "**Kartenübersicht:** Prüfe die Minikarte alle paar Sekunden; ein Gegner, der seine Lane verlässt, ist ein Warnzeichen.",
+        "**Teamplay:** Verfolge Gegner nicht allein; ein verlorener Turm oder Drache kommt nicht zurück."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Das nachhaltigste Prinzip für Einsteiger lautet: **Nicht zu sterben bringt dir mehr Gold als zu sterben**. Jeder Tod kostet dich Zeit und Gold."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Begriff",
+        "Bedeutung"
+       ],
+       "satirlar": [
+        [
+         "CS (Creep Score)",
+         "Die Anzahl getöteter Vasallen; entscheidend für Gold und Stufen"
+        ],
+        [
+         "Last Hit",
+         "Den entscheidenden Todesstoß auf einen Vasallen landen, um dessen Gold zu erhalten"
+        ],
+        [
+         "Gank",
+         "Der Jungler oder eine andere Rolle überrascht eine Lane, um den Gegner zu eliminieren"
+        ],
+        [
+         "Ward",
+         "Ein Gegenstand, der Sicht auf der Karte gewährt"
+        ],
+        [
+         "Farm",
+         "Gold durch das Töten von Vasallen und Monstern sammeln"
+        ],
+        [
+         "Tilt",
+         "Nach einem schlechten Verlauf wütend werden und unüberlegte Entscheidungen treffen"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dalga-vizyon",
+     "baslik": "Vasallenwellen, Gold und Vision",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Vasallen spawnen in regelmäßigen Abständen in Wellen und laufen die Lane hinunter. Das Beherrschen der Welle verschafft dir Vorteile ohne direkten Kampf: Drückst du die Welle in den gegnerischen Turm, steht der Gegner ungünstig an seinem Turm; bewegt sie sich auf dich zu, kannst du sicher farmen und bist vor dem Jungler geschützt. Caster- und Kanonenvasallen bringen mehr Gold; versuche diese bevorzugt zu treffen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Thema",
+        "Was zu tun ist",
+        "Hinweis"
+       ],
+       "satirlar": [
+        [
+         "Last Hit (CS)",
+         "Triff den Vasallen bei niedrigen Lebenspunkten; behalte stets gleiches Tempo und Timing bei",
+         "Riot nennt kein offizielles CS-pro-Minute-Ziel; miss zuerst deinen eigenen Schnitt und steigere ihn wöchentlich schrittweise"
+        ],
+        [
+         "Gold",
+         "Kills, Türme und Ziele bringen ebenfalls Gold; bei jedem Tod verlierst du jedoch wertvolle Zeit und Gold",
+         "Bleibe nicht untätig: Der Rückruf zum Gegenstandskauf steigert deine Kampfkraft"
+        ],
+        [
+         "Recall",
+         "Gehe zurück zur Basis, wenn du dir einen neuen Gegenstand leisten kannst und die Lane sicher ist",
+         "Verlässt du die Lane, während die Welle nah an deinem Turm steht, verlierst du kaum Erfahrung oder Gold"
+        ],
+        [
+         "Gank",
+         "Schätze ab, auf welcher Seite sich der gegnerische Jungler aufhält",
+         "Ist der Aufenthaltsort des Junglers unbekannt, rücke nicht unüberlegt vor"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Sicht ist die halbe Miete im Kampf. Ein Stealth Ward (ein kostenloses, zeitlich begrenztes Schmuckstück) liefert dir Sicht auf der Karte; ein Control Ward wird gekauft und deckt unsichtbare Gegner sowie Fallen auf. Dauer und Preis von Wards können sich mit Patches ändern; lies die Shop-Texte. Das Platzieren von Wards um Ziele wie Drache, Baron und den Flusseingang verrät dir frühzeitig, wenn der Gegner herannaht."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Platziere bei jedem Rückruf einen Ward; ein leerer Ward-Platz ist eine verpasste Chance.",
+        "Ist die Position des gegnerischen Junglers unbekannt, jage keinen Zielen hinterher.",
+        "Wirf einen Blick auf die Minikarte, bevor du dunkle Bereiche wie Büsche oder Zugänge betrittst.",
+        "Kaufe auch dann einen Control Ward, wenn du kein Support bist; es ist eine der nützlichsten Anschaffungen für das Team (Preise im Spiel prüfen)."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Mache in deiner ersten Woche nicht die Anzahl der Kills zu deinem Ziel, sondern die Reduzierung deiner Tode gegenüber dem vorherigen Match."
+      }
+     ]
+    },
+    {
+     "id": "hedefler",
+     "baslik": "Kartenziele und Zeitpunkte",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Ziele verleihen dem Team dauerhafte Stärke und Gold. Die folgenden Zeiten basieren auf Community-Quellen (Stand November 2026); Riot kann sie mit Patches anpassen, prüfe daher stets die aktuellen Patchnotizen. Riot hat nicht offiziell angegeben, ob das Atakhan-Ziel 2026 noch auf der Karte vertreten ist, weshalb es nicht in der Tabelle aufgeführt ist."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Ziel",
+        "Erster Spawn (ca.)",
+        "Was es gewährt"
+       ],
+       "satirlar": [
+        [
+         "Rift Scuttler",
+         "2:55",
+         "Sicht und etwas Gold; im Fluss"
+        ],
+        [
+         "Elemental Drake",
+         "5:00; alle 5 Minuten nach einem Kill",
+         "Dauerhafter Teambonus; sechs Typen (Chemtech, Cloud, Hextech, Infernal, Mountain, Ocean)"
+        ],
+        [
+         "Void Grubs",
+         "8:00; verschwinden um 14:45; spawnen einmal",
+         "Kreaturen, die beim Einreißen von Türmen helfen"
+        ],
+        [
+         "Rift Herald",
+         "15:00; verschwindet um 19:45",
+         "Ein Helfer, der frontal gegen Türme stürmt"
+        ],
+        [
+         "Baron Nashor",
+         "20:00; 6 Minuten nach einem Kill",
+         "Starker Teambonus; verstärkt Vasallen erheblich"
+        ],
+        [
+         "Dragon Soul und Elder Dragon",
+         "Die Seele erhält das Team beim 4. Drachen; Elder spawnt 6 Minuten nach dem 4. Drachen",
+         "Die stärksten Boni, um eine Partie siegreich zu beenden"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Praktische Faustregel: 30 bis 60 Sekunden vor Erscheinen eines Ziels die Lane-Welle vordrücken, zurückrufen, Wards kaufen und gemeinsam mit dem Team annähern. Prüfe vor einem Kampf um ein Ziel, wo sich der gegnerische Jungler befindet und ob deine Teamkollegen am Leben sind."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Die oben genannten Zeiten ändern sich mit Patches. Die Angaben beruhen auf Community-Quellen; falls offizielle Patchnotizen von Riot abweichende Angaben enthalten, sind diese maßgeblich."
+      }
+     ]
+    },
+    {
+     "id": "rune-esya",
+     "baslik": "Runen- und Gegenstandslogik",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Runen sind dauerhafte Verstärkungen, die du vor Matchbeginn auswählst. Es gibt fünf Pfade: Precision, Domination, Sorcery, Resolve und Inspiration. Du wählst eine Schlüsselrune und die daran gekoppelten kleineren Runen. Verliere dich nicht im Detail: Das Spiel bietet fertige empfohlene Runenseiten für deinen Champion; nutze diese in den ersten Wochen ohne Veränderungen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Frage",
+        "Einfache Antwort"
+       ],
+       "satirlar": [
+        [
+         "Welchen Gegenstand soll ich kaufen?",
+         "Beginne im Shop im Reiter für empfohlene Gegenstände; er bietet einen vorgefertigten Pfad für deinen Champion"
+        ],
+        [
+         "Schaden oder Überlebensfähigkeit?",
+         "Fehlt deinem Team Schaden, kaufe Schaden; stirbst du ständig, kaufe Verteidigung"
+        ],
+        [
+         "Was tun gegen viele gegnerische Magier?",
+         "Wähle Gegenstände mit Magieresistenz; entscheide das bereits bei deinem ersten Rückruf"
+        ],
+        [
+         "Wann sollte ich einkaufen?",
+         "Kaufe bei jedem Rückruf den besten Gegenstand, den dein Gold erlaubt; gehe nicht mit unverbrauchtem Gold in Kämpfe"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Wechsle Runen und Gegenstände innerhalb eines Patches nicht ständig; spiele dasselbe Setup mindestens 5 Matches lang, um Unterschiede zu bemerken.",
+        "Lies nach, was deine Schlüsselrune bewirkt: Manche wirken beim ersten Treffer, manche in kurzen Schlagabtäuschen.",
+        "Statte Magier nicht unüberlegt mit Verteidigungsgegenständen oder Fähigkeits-Champions mit Angriffstempo aus; lies die Fähigkeitstexte deines eigenen Champions."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Zu verstehen, warum ein Gegenstand empfohlen wird, bringt dich schneller voran als das bloße Auswendiglernen von Listen."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Einstellungen: Ausgangswerte",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Dies sind keine offiziellen Vorgaben, sondern weit verbreitete Empfehlungen für Einsteiger. Probiere sie im Practice Tool aus."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Einstellung",
+        "Ausgangsempfehlung"
+       ],
+       "satirlar": [
+        [
+         "Mausempfindlichkeit",
+         "Mittel; ein Wert, mit dem du die Karte angenehm verschieben kannst"
+        ],
+        [
+         "Angriffsbewegung",
+         "Rechtsklick zum Bewegen und A zum Angreifen; beides ausprobieren"
+        ],
+        [
+         "Fähigkeitstasten",
+         "Quick Cast ausprobieren (Q, W, E, R lösen sofort aus, statt erst am Mauszeiger zu zielen)"
+        ],
+        [
+         "Minikarte",
+         "Unten rechts behalten; regelmäßig darauf blicken"
+        ],
+        [
+         "Audio",
+         "Effektlautstärke aktiv lassen, um gegnerische Fähigkeiten rechtzeitig zu hören"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Wenn du eine Einstellung änderst, spiele mehrere Matches mit demselben Wert; ändere deine Meinung nicht vorschnell."
+      },
+      {
+       "tip": "p",
+       "metin": "Prüfe im Launcher vor der Installation Sprach- und Regionsauswahl; Riot veröffentlicht die Liste der Regionen auf der Support-Seite und die Region Türkei ist dort aufgeführt. Lerne im Match Tastenkombinationen nacheinander: Zuerst Q, W, E, R für Fähigkeiten, anschließend Gegenstandstasten. Achte im Match auf drei Dinge: deine eigene Gesundheit, die Abklingzeit gegnerischer Fähigkeiten und die Minikarte. Deren Prüfung alle paar Sekunden zur Gewohnheit zu machen, ist die wertvollste Übung deiner ersten Woche."
+      }
+     ]
+    },
+    {
+     "id": "rank",
+     "baslik": "Ranglistensystem und Ränge-Tabelle",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Die Rangstufen lauten: **Iron, Bronze, Silver, Gold, Platinum, Emerald, Diamond, Master, Grandmaster, Challenger**. Von Iron bis Diamond unterteilt sich jede Stufe in die Divisionen IV bis I, in denen du mit LP (League Points) aufsteigst. Master und darüber bilden eine gemeinsame Bestenliste."
+      },
+      {
+       "tip": "p",
+       "metin": "In deinen ersten 5 Platzierungsmatches verlierst du keine LP; der höchste Einstiegsrang ist Diamond III. Für Neulinge zählt auch die MMR aus Swiftplay und Normal Draft. Das Verlassen eines Platzierungsspiels als AFK wird als Niederlage gewertet."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Dein Rang",
+        "Spieler, mit denen du in Solo/Duo in die Warteschlange kannst"
+       ],
+       "satirlar": [
+        [
+         "Iron",
+         "Iron - Silver"
+        ],
+        [
+         "Bronze",
+         "Iron - Silver"
+        ],
+        [
+         "Silver",
+         "Iron - Gold"
+        ],
+        [
+         "Gold",
+         "Silver - Platinum"
+        ],
+        [
+         "Platinum",
+         "Gold - Emerald"
+        ],
+        [
+         "Emerald",
+         "Platinum - Diamond III"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Ein Abstieg erfolgt bei 25, 50 oder 75 LP; Rangabfall (Rank Decay) existiert ebenfalls.",
+        "In Solo/Duo kannst du mit höchstens einem Freund gemeinsam in die Warteschlange gehen (Duo).",
+        "Die Tabelle stammt von Riots offizieller Support-Seite; Beschränkungen ab Diamond weichen davon ab."
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rangstufe",
+        "Divisionen",
+        "Hinweis"
+       ],
+       "satirlar": [
+        [
+         "Iron, Bronze, Silver, Gold, Platinum, Emerald, Diamond",
+         "IV - I (4 Divisionen)",
+         "Du steigst mit LP in den Divisionen auf"
+        ],
+        [
+         "Master, Grandmaster, Challenger",
+         "Keine Divisionen",
+         "Eine einzige Rangliste; die Schwellenwerte verschieben sich während der Saison (Riot Support)"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Die Regeln für Einstufung und Ranked stammen von Riots Support-Seiten. Dein anfänglicher Rang spiegelt nicht immer dein tatsächliches Niveau wider; in den ersten 20 bis 30 Matches kann sich dein Rang schnell verändern, fixiere dich also nicht darauf."
+      }
+     ]
+    },
+    {
+     "id": "hatalar",
+     "baslik": "Häufige Anfängerfehler",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Unvorbereitet in Ranglistenspiele stürzen; gewöhne dich zuerst in Normal Draft daran.",
+        "Vasallen nicht per Last-Hit treffen und ständig nach Kämpfen suchen.",
+        "Die Minikarte nicht im Auge behalten.",
+        "Teamkollegen die Schuld geben; suche nach einem Tod den Fehler bei dir selbst.",
+        "In jedem Match einen anderen Champion ausprobieren.",
+        "Nach Niederlagenserien im Zustand von Frustration (Tilt) weiterspielen; lege Pausen ein."
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Jeden Tag",
+         "metin": "Übe 10 Minuten lang Last-Hitting im Practice Tool."
+        },
+        {
+         "baslik": "Nach jedem Match",
+         "metin": "Finde die Ursache für einen deiner Tode und stelle sie im nächsten Spiel ab."
+        },
+        {
+         "baslik": "Jede Woche",
+         "metin": "Spiele mindestens fünf Matches mit denselben zwei Champions."
+        },
+        {
+         "baslik": "Jeden Monat",
+         "metin": "Überprüfe deine Einstellungen, verändere aber nicht zu viel auf einmal."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Wenn du einen Fehler machst, mach dich nicht selbst fertig; wähle einen Fehler aus, finde seine Ursache und korrigiere im nächsten Spiel gezielt nur diesen Punkt. Fortschritt entsteht durch kleine, beständige Anpassungen."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Kontosicherheit und Verhaltensregeln",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Dein Konto ist dein digitaler Tresor. Aktiviere die Zwei-Faktor-Authentifizierung und teile dein Passwort nicht auf Drittseiten."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Cheat-Software, Skripte, Automatisierungs-Bots, Rank-Boosting-Dienste, Kontokauf oder -verkauf, Skin-Glücksspiel- oder Wettseiten sowie gefälschte 'Kostenlose RP'-Websites führen zu permanenten Sperren. Halte dich davon fern."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "AFK zu gehen oder ein Match absichtlich zu ruinieren (Feeding) zieht Strafen nach sich.",
+        "Verhalte dich respektvoll gegenüber Teamkollegen; melde toxische Chats und schalte sie stumm.",
+        "Mit einem Zweitkonto gegen Spieler niedrigerer Ränge anzutreten (Smurfing), ist unfair; unterlasse dies.",
+        "Teile dein Konto niemals mit Dritten."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Häufig gestellte Fragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Ist League of Legends kostenlos?",
+         "c": "Ja. Das Spiel ist kostenlos; Käufe beschränken sich auf kosmetische Gegenstände."
+        },
+        {
+         "s": "Ab wann kann ich Ranglistenspiele spielen?",
+         "c": "Ab Kontostufe 30, mit mindestens 20 Champions und 10 absolvierten Spielen in Swiftplay oder Normal Draft."
+        },
+        {
+         "s": "Wie wird mein anfänglicher Rang bestimmt?",
+         "c": "Durch 5 Platzierungsspiele; der Höchsteinstieg liegt bei Diamond III."
+        },
+        {
+         "s": "Kann mein Rang absteigen?",
+         "c": "Ja, Abstieg und Rangabfall (Decay) sind Bestandteil des Systems."
+        },
+        {
+         "s": "Mit welchem Champion sollte ich beginnen?",
+         "c": "Wähle einen einfachen, widerstandsfähigen Champion; spiele dieselben zwei Champions eine Woche lang."
+        },
+        {
+         "s": "Kann ich auf dem Smartphone spielen?",
+         "c": "Nein; dieser Guide bezieht sich auf den Windows-PC."
+        },
+        {
+         "s": "Was ist der Unterschied zwischen Normal Draft und Swiftplay?",
+         "c": "Swiftplay ist kürzer, schneller und ab Stufe 3 verfügbar. Normal Draft öffnet auf Stufe 10, bietet eine Pick- und Ban-Phase und ähnelt eher dem Ranked-Erlebnis."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "nl": {
+   "baslik": "League of Legends Beginnersgids: Installatie, Champions, Lanes en Ranks",
+   "ozet": "League of Legends is de gratis 5v5 MOBA van Riot Games. Deze gids helpt nieuwe en terugkerende spelers vanaf de installatie tot de ranked ladder.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "MOBA (5v5 strategie-actie)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Windows PC (alleen Intel op macOS)"
+    },
+    {
+     "ad": "Prijsmodel",
+     "deger": "Free-to-play; optionele cosmetische aankopen"
+    },
+    {
+     "ad": "Huidige versie",
+     "deger": "Patch 26.22 (november 2026); Ranked 2026 Season 3"
+    },
+    {
+     "ad": "Turkse ondersteuning",
+     "deger": "Riots supportpagina vermeldt een regionale server voor Turkije; de lijst met client-talen inclusief Turks is niet officieel gespecificeerd"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "nedir",
+     "baslik": "Wat League of Legends is en waar het staat in 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "In League of Legends ontmoeten twee teams van vijf elkaar op een kaart genaamd Summoner's Rift. Elke speler kiest een **champion**. Het doel is om de Nexus in de vijandelijke basis te vernietigen. Onderweg zijn er turrets, monsters en nevendoelen."
+      },
+      {
+       "tip": "p",
+       "metin": "Het spel evolueert via patches. In november 2026 is de huidige patch **26.22** (Riots officiële patch notes). Deze bevat onderwerpen zoals Mels midscope, het ARAM Mayhem-evenement en enkele champions die terugkeren naar de Classic-modus. De volgende patch is gemeld als 26.23 (volgens communitybronnen)."
+      },
+      {
+       "tip": "p",
+       "metin": "Het ranked-jaar 2026 is opgedeeld in drie seizoenen: Season 1 (8 januari tot 28 april), Season 2 (29 april tot 28 juli) en **Season 3** (gestart op 29 juli 2026). De jaarlijkse reset wordt begin januari verwacht; raadpleeg de officiële aankondiging voor de exacte datum."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Cijfers in deze gids zijn actueel per november 2026. Patches kunnen kleine details wijzigen; raadpleeg Riots supportpagina's voor exacte regels."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Voor je begint: account, installatie, systeem",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "League of Legends is gratis en wordt gespeeld met een Riot-account. Volgens Riots officiële supportpagina zijn de minimale systeemvereisten een Intel i3-530 of AMD FX-4100 processor, een GeForce 400-serie, Radeon HD 6570 of Intel HD 4600 videokaart (1 GB videogeheugen), 2 GB RAM, 16 GB schijfruimte en Windows 10 (build 19041 of hoger) of Windows 11. Windows 11 vereist TPM 2.0. Aanbevolen: Intel i5-8250 of Ryzen 3 1200, GeForce 560, 4 GB RAM en een SSD."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Op macOS worden alleen Macs met Intel-processors ondersteund.",
+        "Op Windows 11 moet TPM 2.0 ingeschakeld zijn; mogelijk moet je dit aanzetten in het BIOS.",
+        "Na installatie downloadt het spel automatisch patches; houd rekening met extra tijd bij de eerste opstart.",
+        "Kies je regio (server) zorgvuldig tijdens de installatie; dit later wijzigen is omslachtig."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Download het spel uitsluitend van Riots officiële website. Links op andere sites die 'gratis RP' of accounts beloven, kunnen leiden tot diefstal van je account."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Je eerste wedstrijden stap voor stap",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Probeer de tutorial en wedstrijden tegen bots",
+         "metin": "Leer bewegen, aanvallen en vaardigheden in de tutorial en Co-op vs. AI-wedstrijden."
+        },
+        {
+         "baslik": "Swiftplay en ARAM op level 3",
+         "metin": "Op accountlevel 3 worden de Summoner's Rift Swiftplay-modus en ARAM ontgrendeld; wen aan het spel met kortere wedstrijden."
+        },
+        {
+         "baslik": "Practice Tool op level 9",
+         "metin": "Gebruik de Practice Tool om champions en voorwerpen in je eentje uit te proberen."
+        },
+        {
+         "baslik": "Normal Draft op level 10",
+         "metin": "Normal Draft is een 5v5 Summoner's Rift-wedstrijd met een pick- en banfase."
+        },
+        {
+         "baslik": "Ranked op level 30",
+         "metin": "Ranked (Solo/Duo en Flex) vereist accountlevel 30, minimaal 20 champions en 10 wedstrijden in Swiftplay of Normal Draft."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sampiyon",
+     "baslik": "Een champion en rol kiezen voor de eerste weken",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Summoner's Rift kent vijf rollen: Top, Jungle, Mid, Bot en Support. Klassieke champions worden ontgrendeld via Classic Level, de winkel of de wekelijkse gratis rotatie. De onderstaande tabel toont typische keuzes die al lange tijd eenvoudig zijn gebleven; dit zijn algemene beginnerstips, geen officiële Riot-aanbeveling, en de balans kan veranderen met patches."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rol",
+        "Eenvoudig champion-voorbeeld",
+        "Waarom het eenvoudig is"
+       ],
+       "satirlar": [
+        [
+         "Top",
+         "Garen",
+         "Duurzaam; wat je moet doen is volkomen helder"
+        ],
+        [
+         "Mid",
+         "Annie",
+         "Eenvoudige vaardigheden; kan gevechten initiëren"
+        ],
+        [
+         "Bot",
+         "Ashe",
+         "Deelt schade uit op afstand; beschikt over vertragingen"
+        ],
+        [
+         "Support",
+         "Soraka",
+         "Healt; helpt het team direct"
+        ],
+        [
+         "Jungle",
+         "Amumu",
+         "Start gevechten gemakkelijk; stevig"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Speel een week lang dezelfde rol met dezelfde twee champions. Eén champion goed onder de knie krijgen brengt je sneller vooruit dan talloze proberen."
+      },
+      {
+       "tip": "p",
+       "metin": "Volgens Riots officiële ontwikkelaarsbericht zijn runes en masteries in de Classic-modus vereenvoudigd en is IP teruggebracht, zodat je door te spelen valuta kunt sparen om champions vrij te spelen. Het belangrijkste punt voor beginners is om in de eerste dagen niet te verzuipen in details over runes en voorwerpen: gebruik de aanbevolen presets van het spel en focus eerst op overleven in de lane."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rol",
+        "Belangrijkste taak",
+        "Je eerste doel"
+       ],
+       "satirlar": [
+        [
+         "Top",
+         "Alleen op de lane; tankiness en vechten",
+         "Last-hit minions, voorkom dat je doodgaat"
+        ],
+        [
+         "Jungle",
+         "Verslaat kampen, helpt de lanes",
+         "Leer één veilige route, let op draak en Herald"
+        ],
+        [
+         "Mid",
+         "Het midden van de kaart; dichtbij alle kanten",
+         "Deel schade uit, voorzie de jungler van informatie"
+        ],
+        [
+         "Bot",
+         "Constante langeafstandsschade",
+         "Farm samen met je support zonder te sterven"
+        ],
+        [
+         "Support",
+         "Zicht, bescherming en teamhulp",
+         "Plaats wards, houd de bot lane veilig"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Als je niet weet wat te kiezen, begin dan met Mid of Support: Mid bevindt zich in het midden van de kaart waardoor je het verloop van het spel leert zien; Support levert veel waarde aan het team zonder buitensporige mechanische vaardigheden te vereisen. In champion select krijgt degene die een rol eerst noemt deze meestal; als je als laatste kiest moet je soms nemen wat overblijft, leer daarom 2 rollen en 2 champions per rol."
+      }
+     ]
+    },
+    {
+     "id": "mekanikler",
+     "baslik": "Kernmechanismen: lane, minions, doelstellingen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Het eerste deel van een wedstrijd is de **lane-fase**: minions verslaan levert goud op. Je verdient goud door de genadeslag uit te delen, dus het last-hitten van minions is een essentiële basisgewoonte."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Turrets:** Buitenste torens vallen eerst, daarna binnenste torens, en tot slot de Nexus.",
+        "**Monsters:** Doelstellingen zoals de Draak, Baron en Rift Herald geven het team blijvende kracht.",
+        "**Kaartoverzicht:** Kijk om de paar seconden op de minimap; een vijand die de lane verlaat is een waarschuwingsteken.",
+        "**Teamspel:** Jaag niet alleen achter vijanden aan; een verloren toren of draak komt niet terug."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Het meest blijvende principe voor nieuwe spelers: **niet sterven levert je meer goud op dan sterven**. Elke dood kost je kostbare tijd en goud."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Term",
+        "Betekenis"
+       ],
+       "satirlar": [
+        [
+         "CS (creep score)",
+         "Het aantal verslagen minions; bepalend voor goud en levels"
+        ],
+        [
+         "Last hit",
+         "De genadeslag toebrengen aan een minion om het goud op te strijken"
+        ],
+        [
+         "Gank",
+         "De jungler of een andere rol die onverwachts een lane binnenvalt om de tegenstander uit te schakelen"
+        ],
+        [
+         "Ward",
+         "Een voorwerp dat zicht op de kaart biedt"
+        ],
+        [
+         "Farm",
+         "Goud verzamelen door minions en monsters te doden"
+        ],
+        [
+         "Tilt",
+         "Gefrustreerd raken na een slechte reeks en impulsieve fouten maken"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dalga-vizyon",
+     "baslik": "Minion-golven, goud en zicht",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Minions spawnen met vaste tussenpozen in golven en marcheren de lane af. Goed beheer van de golf levert je voordeel op zonder direct te vechten: druk je de golf tegen de vijandelijke toren, dan staat de vijand kwetsbaar bij zijn toren; trekt de golf naar jou toe, dan farm je veilig en ben je beschermd tegen de jungler. Caster- en kanonminions leveren meer goud op; probeer die als eerste uit te schakelen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Onderwerp",
+        "Wat te doen",
+        "Opmerking"
+       ],
+       "satirlar": [
+        [
+         "Last hit (CS)",
+         "Raak de minion wanneer diens gezondheid laag is; hanteer telkens hetzelfde tempo en timing",
+         "Riot heeft geen officiële CS-per-minuut-doelstelling vastgelegd; meet eerst je eigen gemiddelde en verhoog het wekelijks stapsgewijs"
+        ],
+        [
+         "Goud",
+         "Kills, torens en nevendoelen leveren ook goud op; maar bij elke dood verlies je tijd en goud",
+         "Blijf niet doelloos rondhangen: een recall om een voorwerp te kopen vergroot direct je gevechtskracht"
+        ],
+        [
+         "Recall",
+         "Keer terug naar de basis zodra je een nieuw voorwerp kunt betalen en de lane veilig is",
+         "Vertrek je terwijl de golf zich dicht bij jouw toren bevindt, dan verlies je nauwelijks wat"
+        ],
+        [
+         "Gank",
+         "Schat in aan welke kant de vijandelijke jungler zich bevindt",
+         "Als de positie van de jungler onbekend is, stap dan niet roekeloos naar voren"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Zicht is het halve werk in gevechten. Een Stealth Ward (een gratis, tijdelijk trinket) biedt zicht op de kaart; een Control Ward wordt gekocht en onthult onzichtbare vijanden en vallen. De levensduur en prijs van wards kunnen per patch variëren; lees de winkelbeschrijving. Wards plaatsen rondom doelen zoals de draak, Baron en de rivieringang zorgt ervoor dat je vijanden tijdig ziet aankomen."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Plaats bij elke recall een ward; een leeg ward-slot is een gemiste kans.",
+        "Als de locatie van de vijandelijke jungler onbekend is, ga dan niet achter doelen aan.",
+        "Kijk naar de minimap voordat je donkere zones zoals bosjes en toegangen betreedt.",
+        "Koop ook een Control Ward als je geen Support bent; het is een van de meest nuttige investeringen voor het team (controleer de in-game prijs)."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Laat in je eerste week je doel niet een hoog aantal kills zijn, maar het verlagen van je sterfteaantal ten opzichte van de vorige wedstrijd."
+      }
+     ]
+    },
+    {
+     "id": "hedefler",
+     "baslik": "Kaartdoelen en timings",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Doelstellingen leveren het team blijvende kracht en goud op. De onderstaande tijden berusten op communitybronnen (november 2026); Riot kan ze via patches wijzigen, raadpleeg dus de actuele patch notes. Riot heeft niet officieel aangegeven of het Atakhan-doel in 2026 nog steeds aanwezig is, daarom ontbreekt dit in de tabel."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Doel",
+        "Eerste spawn (ong.)",
+        "Wat het oplevert"
+       ],
+       "satirlar": [
+        [
+         "Rift Scuttler",
+         "2:55",
+         "Zicht en een klein beetje goud; in de rivier"
+        ],
+        [
+         "Elemental Drake",
+         "5:00; elke 5 minuten na uitschakeling",
+         "Blijvende teambonus; zes typen (Chemtech, Cloud, Hextech, Infernal, Mountain, Ocean)"
+        ],
+        [
+         "Void Grubs",
+         "8:00; verdwijnen om 14:45; spawnen eenmalig",
+         "Creaturen die helpen torens neer te halen"
+        ],
+        [
+         "Rift Herald",
+         "15:00; verdwijnt om 19:45",
+         "Een hulptroep die tegen een toren aan stormt"
+        ],
+        [
+         "Baron Nashor",
+         "20:00; 6 minuten na uitschakeling",
+         "Krachtige teambonus; versterkt minions aanzienlijk"
+        ],
+        [
+         "Dragon Soul en Elder Dragon",
+         "De Soul gaat naar het team dat de 4e draak verslaat; Elder spawnt 6 minuten na de 4e draak",
+         "De sterkste bonussen om een wedstrijd te beslissen"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Praktische stelregel: 30-60 seconden voor een doel de golf in je lane naar voren drukken, terugroepen, een ward kopen en samen met je team naderen. Tel vóór een gevecht om een doel waar de vijandelijke jungler is en of je teamgenoten in leven zijn."
+      },
+      {
+       "tip": "uyari",
+       "metin": "De bovenstaande tijden wijzigen met updates. Deze getallen zijn ontleend aan communitybronnen; volg altijd de officiële patch notes van Riot indien deze afwijken."
+      }
+     ]
+    },
+    {
+     "id": "rune-esya",
+     "baslik": "Runes en voorwerpenlogica",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Runes zijn blijvende versterkingen die je kiest voor de wedstrijd begint. Er zijn vijf paden: Precision, Domination, Sorcery, Resolve en Inspiration. Je kiest één keystone en de bijbehorende kleinere runes. Verdrink niet in details: het spel biedt kant-en-klare aanbevolen runepagina's voor jouw champion; gebruik die de eerste weken en verander er niets aan."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Vraag",
+        "Eenvoudig antwoord"
+       ],
+       "satirlar": [
+        [
+         "Welk voorwerp moet ik kopen?",
+         "Begin bij het tabblad met aanbevolen voorwerpen in de winkel; dit biedt een passend pad voor jouw champion"
+        ],
+        [
+         "Schade of overlevingskracht?",
+         "Als je team schade tekortkomt koop schade; als je telkens sterft kies dan voor verdediging"
+        ],
+        [
+         "Wat als de vijand veel magiërs heeft?",
+         "Kijk naar voorwerpen met magieweerstand; bepaal dit al bij je eerste recall"
+        ],
+        [
+         "Wanneer moet ik kopen?",
+         "Koop bij elke recall het beste item dat je goud toelaat; ga een gevecht niet in met onuitgegeven goud"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Blijf binnen één patch niet continu van runes en items wisselen; speel dezelfde opzet minstens 5 wedstrijden om het verschil te ervaren.",
+        "Lees wat je keystone doet: sommige werken bij de eerste treffer, andere in langere gevechten.",
+        "Rust een magiër niet zomaar uit met verdedigingsitems of een vaardighedenchampion met aanvalssnelheid; bestudeer de vaardigheidsteksten van je eigen champion."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Begrijpen waarom een item wordt aanbevolen helpt je sneller vooruit dan het uit het hoofd leren van lijstjes."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Instellingen: startwaarden",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Dit zijn geen officiële waarden; het zijn veelgebruikte startpunten. Probeer ze uit in de Practice Tool."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Instelling",
+        "Startsuggestie"
+       ],
+       "satirlar": [
+        [
+         "Muisgevoeligheid",
+         "Gemiddeld; een waarde waarmee je de kaart comfortabel kunt verschuiven"
+        ],
+        [
+         "Aanvalsbeweging",
+         "Rechtermuisknop om te bewegen en A om aan te vallen; probeer beide"
+        ],
+        [
+         "Vaardigheidstoetsen",
+         "Probeer Quick Cast (Q, W, E, R worden direct afgevuurd in plaats van te mikken bij de cursor)"
+        ],
+        [
+         "Minimap",
+         "Houd deze rechtsonder; werp er regelmatig een blik op"
+        ],
+        [
+         "Geluid",
+         "Houd effectvolume actief om vijandelijke vaardigheden tijdig te horen"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Als je een instelling aanpast, speel dan meerdere wedstrijden met dezelfde instelling; verander niet impulsief opnieuw."
+      },
+      {
+       "tip": "p",
+       "metin": "Controleer in de launcher je taal- en regioselectie voor de installatie; Riot publiceert de regiolijst op de supportpagina en de regio Turkije staat daartussen. Leer sneltoetsen tijdens een wedstrijd stap voor stap: eerst Q, W, E, R voor vaardigheden, daarna items. Let op drie aspecten in een wedstrijd: je eigen gezondheid, de cooldowns van vijandelijke vaardigheden en de minimap. Hiervan om de paar seconden een gewoonte maken is de meest waardevolle oefening in je eerste week."
+      }
+     ]
+    },
+    {
+     "id": "rank",
+     "baslik": "Ranked-systeem en rangentabel",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "De rangen zijn: **Iron, Bronze, Silver, Gold, Platinum, Emerald, Diamond, Master, Grandmaster, Challenger**. Van Iron tot Diamond splitst elke rang in divisies IV tot I en klim je via LP (League Points). Master en hoger vormen één gezamenlijk klassement."
+      },
+      {
+       "tip": "p",
+       "metin": "In je eerste 5 plaatsingswedstrijden verlies je geen LP; de maximale startrang is Diamond III. Voor nieuwe spelers telt MMR uit Swiftplay en Normal Draft mee. Een plaatsingswedstrijd verlaten als AFK geldt als verlies."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Jouw rang",
+        "Spelers waarmee je in Solo/Duo in de wachtrij kunt"
+       ],
+       "satirlar": [
+        [
+         "Iron",
+         "Iron - Silver"
+        ],
+        [
+         "Bronze",
+         "Iron - Silver"
+        ],
+        [
+         "Silver",
+         "Iron - Gold"
+        ],
+        [
+         "Gold",
+         "Silver - Platinum"
+        ],
+        [
+         "Platinum",
+         "Gold - Emerald"
+        ],
+        [
+         "Emerald",
+         "Platinum - Diamond III"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Degradatie vindt plaats bij 25, 50 of 75 LP; rangverval (decay) bestaat eveneens.",
+        "In Solo/Duo kun je met maximaal één vriend samen in de wachtrij stappen (duo).",
+        "De tabel is afkomstig van Riots officiële supportpagina; limieten vanaf Diamond zijn anders geregeld."
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rang",
+        "Divisies",
+        "Opmerking"
+       ],
+       "satirlar": [
+        [
+         "Iron, Bronze, Silver, Gold, Platinum, Emerald, Diamond",
+         "IV - I (4 divisies)",
+         "Je stijgt in divisies via LP"
+        ],
+        [
+         "Master, Grandmaster, Challenger",
+         "Geen divisies",
+         "Eén enkele ranglijst; de drempelwaarden verschuiven gedurende het seizoen (Riot support)"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "De regels rondom plaatsing en Ranked zijn afkomstig van Riots supportpagina's. Je startrang weerspiegelt niet altijd direct je werkelijke speelkracht; gedurende je eerste 20-30 ranked-wedstrijden kan je rang snel verschuiven, fixeer je er dus niet blind op."
+      }
+     ]
+    },
+    {
+     "id": "hatalar",
+     "baslik": "Veelvoorkomende beginnersfouten",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Onvoorbereid in ranked duiken; wen eerst aan de opzet via Normal Draft.",
+        "Minions niet last-hitten en constant op zoek gaan naar gevechten.",
+        "Niet op de minimap letten.",
+        "Teamgenoten de schuld geven; zoek bij een uitschakeling de fout bij jezelf.",
+        "Elke wedstrijd een andere champion uitproberen.",
+        "Wedstrijden achter elkaar doorspelen terwijl je gefrustreerd (tilted) bent; neem pauzes."
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Elke dag",
+         "metin": "Oefen 10 minuten last-hitten in de Practice Tool."
+        },
+        {
+         "baslik": "Na elke wedstrijd",
+         "metin": "Achterhaal de oorzaak van één uitschakeling en verbeter dat in de volgende wedstrijd."
+        },
+        {
+         "baslik": "Elke week",
+         "metin": "Speel minstens vijf wedstrijden met dezelfde twee champions."
+        },
+        {
+         "baslik": "Elke maand",
+         "metin": "Herzie je instellingen, maar verander niet te veel tegelijk."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Als je een fout maakt, verwijt jezelf niets; kies één specifieke fout, vind de oorzaak en los uitsluitend dat op in de volgende match. Vooruitgang komt voort uit gestage, kleine correcties."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Accountveiligheid en gedragsregels",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Je account is je digitale kluis. Schakel tweestapsverificatie in en deel je wachtwoord nooit met externe websites."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Cheatsoftware, scripts, automatiseringsbots, rank-boostingdiensten, het kopen of verkopen van accounts, skin-gokwebsites en illegale 'gratis RP'-pagina's leiden tot een permanente ban. Blijf hier ver vandaan."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "AFK gaan of bewust een wedstrijd saboteren (feeding) levert sancties op.",
+        "Blijf respectvol naar teamgenoten; meld en demp giftige chatberichten.",
+        "Op een tweede account spelen tegen lager gerangschikte spelers (smurfing) is onsportief; doe dit niet.",
+        "Deel je account onder geen beding met anderen."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Veelgestelde vragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is League of Legends gratis?",
+         "c": "Ja. Het spel is gratis speelbaar; aankopen zijn uitsluitend voor cosmetische items."
+        },
+        {
+         "s": "Wanneer kan ik ranked spelen?",
+         "c": "Vanaf accountlevel 30, met minimaal 20 champions en 10 wedstrijden in Swiftplay of Normal Draft."
+        },
+        {
+         "s": "Hoe wordt mijn eerste rang bepaald?",
+         "c": "Via 5 plaatsingswedstrijden; de start is maximaal Diamond III."
+        },
+        {
+         "s": "Kan mijn rang dalen?",
+         "c": "Ja, degradatie en rangverval (decay) maken deel uit van het systeem."
+        },
+        {
+         "s": "Met welke champion moet ik beginnen?",
+         "c": "Kies een eenvoudige, duurzame champion; speel een week lang dezelfde twee champions."
+        },
+        {
+         "s": "Kan ik op een smartphone spelen?",
+         "c": "Nee; deze gids richt zich op de Windows PC."
+        },
+        {
+         "s": "Wat is het verschil tussen Normal Draft en Swiftplay?",
+         "c": "Swiftplay is korter en sneller en opent op accountlevel 3. Normal Draft opent op level 10 en kent een pick- en banfase; dit benadert de ranked-ervaring meer."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "zh": {
+   "baslik": "英雄联盟新手指南：安装、英雄、分路与排位",
+   "ozet": "英雄联盟是 Riot Games 旗下的免费 5v5 MOBA 游戏。本指南帮助新玩家和回归玩家从安装到排位阶梯稳步提升。",
+   "kunye": [
+    {
+     "ad": "游戏类型",
+     "deger": "MOBA（5v5 策略动作）"
+    },
+    {
+     "ad": "平台",
+     "deger": "Windows PC（macOS 仅支持 Intel）"
+    },
+    {
+     "ad": "收费模式",
+     "deger": "免费畅玩；可选外观内购"
+    },
+    {
+     "ad": "当前版本",
+     "deger": "Patch 26.22（2026年11月）；Ranked 2026 Season 3"
+    },
+    {
+     "ad": "土耳其语支持",
+     "deger": "Riot 客服页面列出了土耳其区域服务器；包含土耳其语在内的客户端语言列表未正式载明"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "nedir",
+     "baslik": "英雄联盟是什么以及 2026 年的发展现状",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "在英雄联盟中，两支五人队伍在名为召唤师峡谷（Summoner's Rift）的地图上交锋。每位玩家选择一名**英雄（champion）**。终极目标是摧毁敌方基地中的枢纽水晶（Nexus）。途中分布着防御塔、野怪和次要目标。"
+      },
+      {
+       "tip": "p",
+       "metin": "游戏通过补丁持续更新。截至 2026 年 11 月，当前版本为 **26.22**（Riot 官方更新公告）。内容涵盖梅尔（Mel）的中型重做、极地大乱斗大乱斗（ARAM Mayhem）活动以及部分英雄重回 Classic 模式。根据社区消息，下一个补丁预计为 26.23。"
+      },
+      {
+       "tip": "p",
+       "metin": "2026 排位年分为三个赛季：第 1 赛季（1 月 8 日至 4 月 28 日）、第 2 赛季（4 月 29 日至 7 月 28 日）和 **第 3 赛季**（2026 年 7 月 29 日开始）。年度重置预计在 1 月初进行；具体日期请查看官方公告。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "本指南中的数据截至 2026 年 11 月准确。补丁可能会调整细节；确切规则请参阅 Riot 客服页面。"
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "启程之前：账号、安装与配置要求",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "英雄联盟为免费游玩，需使用 Riot 账号登录。根据 Riot 官方支持页面，最低系统配置要求为 Intel i3-530 或 AMD FX-4100 处理器、GeForce 400 系列或 Radeon HD 6570 或 Intel HD 4600 显卡（1 GB 显存）、2 GB 内存、16 GB 硬盘空间以及 Windows 10（内部版本 19041 或更高）或 Windows 11。Windows 11 必须开启 TPM 2.0。推荐配置：Intel i5-8250 或 Ryzen 3 1200、GeForce 560、4 GB 内存及 SSD。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "macOS 仅支持配备 Intel 处理器的 Mac 机型。",
+        "在 Windows 11 上必须启用 TPM 2.0；你可能需要在 BIOS 中将其开启。",
+        "安装完成后客户端会自动下载更新补丁；初次启动请预留足够时间。",
+        "安装期间请慎重选择你的区域（服务器）；后续更换服务器非常麻烦。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "请务必仅从 Riot 官方网站下载游戏。其他声称提供“免费点券（RP）”或账号的第三方网站链接可能会导致账号被盗。"
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "逐步完成你的最初几场对局",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "体验新手教程与人机对战",
+         "metin": "在教程和人机协作（Co-op vs. AI）对局中熟悉移动、普攻与技能释放。"
+        },
+        {
+         "baslik": "3 级解锁极速模式（Swiftplay）与 ARAM",
+         "metin": "账号等级达到 3 级后解锁召唤师峡谷极速模式和 ARAM；通过快节奏短局适应节奏。"
+        },
+        {
+         "baslik": "9 级解锁训练模式（Practice Tool）",
+         "metin": "利用训练模式独自测试英雄技能与装备搭配。"
+        },
+        {
+         "baslik": "10 级解锁常规征召（Normal Draft）",
+         "metin": "常规征召是包含禁选（Pick/Ban）阶段的 5v5 召唤师峡谷正规对局。"
+        },
+        {
+         "baslik": "30 级解锁排位赛（Ranked）",
+         "metin": "排位赛（单排/双排与灵活排位）需要账号达到 30 级、拥有至少 20 名英雄并完成 10 场极速模式或常规征召。"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sampiyon",
+     "baslik": "初学几周的英雄与分路选择",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "召唤师峡谷包含五大位置分工：上路（Top）、打野（Jungle）、中路（Mid）、下路（Bot）与辅助（Support）。经典英雄可通过经典等级、商城或每周免费轮换解锁。下表列出了长期以来机制简单直观的典型代表；这些属于常见的新手推荐，并非 Riot 官方定论，版本平衡亦会随补丁变化。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "位置",
+        "简单英雄代表",
+        "上手简单的原因"
+       ],
+       "satirlar": [
+        [
+         "Top",
+         "Garen",
+         "身板硬朗；职责目标非常明确"
+        ],
+        [
+         "Mid",
+         "Annie",
+         "技能机制直观；具备强力开团能力"
+        ],
+        [
+         "Bot",
+         "Ashe",
+         "射程内提供持续伤害；自带减速控制"
+        ],
+        [
+         "Support",
+         "Soraka",
+         "提供直接治疗；能即刻为团队带来支援"
+        ],
+        [
+         "Jungle",
+         "Amumu",
+         "开团方式简单；身板耐打"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "在一周内固定玩同一个位置并专精相同的两名英雄。熟练掌握一名英雄远比频繁更换能更快提升水平。"
+      },
+      {
+       "tip": "p",
+       "metin": "根据 Riot 官方开发者博客，经典模式简化了符文和天赋并重新引入金币（IP），因此你可以通过对局积累货币解锁英雄。新手在初期的关键在于切勿深陷复杂的符文与出装细节：直接使用系统推荐预设，优先专注于在对线期生存下来。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "位置",
+        "核心职责",
+        "你的首要目标"
+       ],
+       "satirlar": [
+        [
+         "Top",
+         "单人对线；承担抗伤与开战",
+         "补好小兵最后一击，尽量不死"
+        ],
+        [
+         "Jungle",
+         "清理野怪营地，支援各条线",
+         "掌握一条安全刷野路线，注意控龙与峡谷先锋"
+        ],
+        [
+         "Mid",
+         "地图核心；辐射左右两侧",
+         "打出伤害，为打野提供河道视野与信息"
+        ],
+        [
+         "Bot",
+         "稳定的远程持续物理/魔法伤害",
+         "与辅助配合平稳发育补刀，避免阵亡"
+        ],
+        [
+         "Support",
+         "视野布控、保护核心与团队增益",
+         "插好侦查守卫，确保下路安全"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "若不知从何选起，建议从中路或辅助入门：中路居于地图中央，便于洞悉战局走势；辅助无需过多高难度微操即可为团队贡献巨大价值。在选人阶段先发位置报点的玩家通常优先选择；若处在末位可能需要补位，因此建议掌握 2 个位置且每个位置熟悉 2 名英雄。"
+      }
+     ]
+    },
+    {
+     "id": "mekanikler",
+     "baslik": "核心机制：兵线、小兵与地图目标",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "对局的前期阶段是对线期（**lane**）：击杀小兵提供金币。只有对小兵造成致命一击（补刀）才能获得金币，因此补刀（last-hit）是必须养成的基础功。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**防御塔（Turrets）：** 外塔最先告破，其次是内塔，最后推进至枢纽水晶。",
+        "**野怪与史诗生物：** 击杀巨龙、纳什男爵和峡谷先锋可赋予队伍持久的强力增益。",
+        "**小地图意识：** 每隔数秒扫视一次小地图；敌方英雄离开兵线往往是危险的信号。",
+        "**团队协作：** 切忌单枪匹马孤军深追；失去的防御塔或巨龙无法挽回。"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "新玩家最应牢记的铁律：**不死所保住的金币远比冒进击杀赚取的多**。每一次阵亡都会让你损失经验和金钱。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "术语",
+        "含义"
+       ],
+       "satirlar": [
+        [
+         "CS（补刀数）",
+         "你击杀的小兵数量；直接决定经济与等级成长"
+        ],
+        [
+         "Last hit（补刀/尾刀）",
+         "对小兵施加致命一击以获取金币"
+        ],
+        [
+         "Gank（抓人/游走）",
+         "打野或其他分路出其不意突袭某条线击杀敌人"
+        ],
+        [
+         "Ward（守卫/眼）",
+         "在地图特定区域提供持续视野的道具"
+        ],
+        [
+         "Farm（刷钱/发育）",
+         "通过击杀小兵和野怪稳定获取金币"
+        ],
+        [
+         "Tilt（心态失衡/上头）",
+         "在连续失利后情绪失控并做出不理智的冲动决策"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dalga-vizyon",
+     "baslik": "兵线运营、经济与视野布控",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "小兵以固定周期成波次刷新并沿分路推进。合理调控兵线能让你在无需交火的情况下建立优势：将兵线压入敌方塔下会使敌人陷入被动补刀的险境；若将兵线控在己方一侧，你便能安全补兵且不易遭到敌方打野突袭。远程兵与炮车兵的金币奖励更丰厚，应优先确保稳妥击杀。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "关键要素",
+        "行动策略",
+        "注意事项"
+       ],
+       "satirlar": [
+        [
+         "Last hit（补刀）",
+         "在小兵生命值即将见底时出击；保持稳定的攻击节奏与时间感",
+         "Riot 并未设定官方的每分钟补刀指标；建议先记录自己的平均值，每周稳步提升一个小台阶"
+        ],
+        [
+         "经济（Gold）",
+         "击杀、推塔和控图同样提供金币；但阵亡会大幅阻碍经济积累",
+         "避免无意义闲逛：回城购买关键装备能让战斗力产生质变"
+        ],
+        [
+         "回城（Recall）",
+         "在攒够关键装备资金且兵线安全时回城补给",
+         "若在兵线推至己方塔前附近时回城，漏掉的兵线损失最小"
+        ],
+        [
+         "防抓（Gank）",
+         "随时推测敌方打野所处的半区位置",
+         "在敌方打野动向不明时，切勿盲目压线过深"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "视野决定了战局的一半胜负。隐形守卫（Stealth Ward，免费限时饰品）提供基础区域视野；控制守卫（Control Ward，真眼）需商城购买，可侦测隐形单位并屏蔽敌方眼位。守卫持续时间与价格随版本微调，请留心商城说明。在巨龙、男爵及河道入口提前布控眼位，能及早探查敌方动向。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "每次回城出门都随手放置饰品眼；守卫充能溢出即等于白白浪费资源。",
+        "若敌方打野去向不明，切勿强行开打中立史诗生物。",
+        "在踏入草丛和盲区隘口前，务必先观察小地图动态。",
+        "即便不是辅助位也请主动购买控制守卫；这是全队回报率极高的关键投资（游戏内确认价格）。"
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "在新手入门的第一周，不要以斩杀人数为首要指标，而应力争让每一局的阵亡次数少于上一场。"
+      }
+     ]
+    },
+    {
+     "id": "hedefler",
+     "baslik": "地图公共资源与刷新时机",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "地图中立目标能为全队赋予持久的战略增益与丰厚金币。以下时间点参考 2026 年 11 月社区数据；Riot 会通过补丁微调，请以当期官方公告为准。Riot 未正式表明 2026 年 Atakhan 机制是否保留，因此未列入表中。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "目标生物",
+        "首次刷新（约计）",
+        "提供收益"
+       ],
+       "satirlar": [
+        [
+         "Rift Scuttler（峡谷迅捷蟹）",
+         "2:55",
+         "提供河道视野圈与加速，附带少量金币"
+        ],
+        [
+         "Elemental Drake（元素亚龙）",
+         "5:00；击杀后每隔 5 分钟刷新",
+         "提供永久全队属性加成；分为六种类型（炼金、云端、海克斯、炼狱、山脉、海洋）"
+        ],
+        [
+         "Void Grubs（虚空巢虫）",
+         "8:00；14:45 离场；仅刷新一次",
+         "提供对防御塔持续伤害的虚空虫群增益"
+        ],
+        [
+         "Rift Herald（峡谷先锋）",
+         "15:00；19:45 离场",
+         "召唤撞击敌方防御塔造成毁灭打击的强力助手"
+        ],
+        [
+         "Baron Nashor（纳什男爵）",
+         "20:00；击杀后 6 分钟刷新",
+         "强力全队推进增益；极大幅度强化周围小兵"
+        ],
+        [
+         "Dragon Soul 与 Elder Dragon（龙魂与远古巨龙）",
+         "拿到第 4 条亚龙的队伍获得龙魂；远古巨龙在龙魂诞生 6 分钟后刷新",
+         "终结对局的终极统治级斩杀增益"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "实战黄金法则：在重要公共资源刷新前 30 至 60 秒，迅速处理兵线推过河道，回城补给并购买守卫，随后与队友抱团占领河道视野。在开打前务必确认敌方打野位置以及己方人员是否齐整。"
+      },
+      {
+       "tip": "uyari",
+       "metin": "上述刷新时序会随版本调整。数值基于社区综合统计；若 Riot 官方更新公告另有变动，请以官方为准。"
+      }
+     ]
+    },
+    {
+     "id": "rune-esya",
+     "baslik": "符文配置与出装逻辑",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "符文是对局开始前配置的永久属性强化。共有五个系别：精密（Precision）、主宰（Domination）、巫术（Sorcery）、坚决（Resolve）与启迪（Inspiration）。你需要挑选一枚基石符文及若干次级符文。无需初期死记硬背：游戏客户端内置了针对每个英雄的官方推荐符文页，新手初期直接选用默认预设即可。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "新手疑问",
+        "直观解答"
+       ],
+       "satirlar": [
+        [
+         "我该买什么装备？",
+         "优先参考商店推荐装备标签；系统会针对你使用的英雄提供完整平滑的出装路线"
+        ],
+        [
+         "选伤害还是防御？",
+         "全队缺少输出时补充伤害装；若自身频繁被秒则转做护甲/魔抗生存装"
+        ],
+        [
+         "敌方多法师阵容如何应对？",
+         "选择附带魔法抗性的防御装；在第一次回城时就应规划好防御方向"
+        ],
+        [
+         "什么时候适合买装备？",
+         "每次回城时尽量花光金币购买当前能买的最优部件；切忌揣着大笔闲置金币进团"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "不要在一个版本内频繁盲目更改符文和装备；同一套搭配至少连续使用 5 场以体会手感差异。",
+        "阅读你的基石符文触发条件：有的依仗起手先攻，有的适用于持续换血互拼。",
+        "切勿盲目为法师堆叠纯肉装或为技能型英雄硬凑攻击速度；务必阅读自己英雄的技能说明。"
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "理解某件装备为何被推荐，远比机械死记装备列表更能带来实质性的水平跃升。"
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "游戏设置：推荐初始基准",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "这些并非强制官方标准，而是玩家社区广泛认可的理想起步设置。建议在训练模式中调整测试。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "设置项",
+        "起步推荐"
+       ],
+       "satirlar": [
+        [
+         "鼠标灵敏度",
+         "中等；以能自如平滑平移视野且不眩晕失控为准"
+        ],
+        [
+         "攻击移动",
+         "右键移动与按 A 键攻击移动结合练习"
+        ],
+        [
+         "技能快捷施法",
+         "建议尝试开启快捷施法（Q、W、E、R 键按下即按鼠标指针方向瞬发，无需二次点击确认）"
+        ],
+        [
+         "小地图",
+         "保持置于右下角；养成高频扫视的习惯"
+        ],
+        [
+         "音效",
+         "保持技能与环境音效开启，以便通过声音听声辩位预判敌方技能"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "一旦调整了某项键位或灵敏度，请坚持使用数局再做评估；切勿每盘都在慌乱中重设。"
+      },
+      {
+       "tip": "p",
+       "metin": "在启动器安装前核实语言和地区选择；Riot 在客服页面公开了服务器列表，土耳其服务器亦在其中。进入对局后逐步掌握快捷键：先熟练 Q、W、E、R 技能键，再配合数字道具栏。比赛中时刻盯紧三件事：自身血量、敌方核心技能冷却、小地图动向。每隔几秒扫视这三项是新玩家最宝贵的基本功。"
+      }
+     ]
+    },
+    {
+     "id": "rank",
+     "baslik": "排位体系与段位对应表",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "排位大段位依次为：**黑铁（Iron）、青铜（Bronze）、白银（Silver）、黄金（Gold）、铂金（Platinum）、翡翠（Emerald）、钻石（Diamond）、超凡大师（Master）、傲世宗师（Grandmaster）、最强王者（Challenger）**。从黑铁到钻石，每个段位下设 IV 到 I 四个小级，通过胜负积累胜点（LP）晋级。大师及以上段位采用全服统一天梯积分榜。"
+      },
+      {
+       "tip": "p",
+       "metin": "在最初的 5 场定级赛中失败不会扣除胜点；初始定级上限最高为钻石 III。对于新号而言，极速模式和常规匹配的隐藏分（MMR）也会影响定级起点。定级赛中途挂机退出将被直接判定为负场。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "当前段位",
+        "单排/双排可组队匹配范围"
+       ],
+       "satirlar": [
+        [
+         "Iron",
+         "Iron - Silver"
+        ],
+        [
+         "Bronze",
+         "Iron - Silver"
+        ],
+        [
+         "Silver",
+         "Iron - Gold"
+        ],
+        [
+         "Gold",
+         "Silver - Platinum"
+        ],
+        [
+         "Platinum",
+         "Gold - Emerald"
+        ],
+        [
+         "Emerald",
+         "Platinum - Diamond III"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "段位保护跌落通常发生在 25、50 或 75 LP；高段位存在衰减机制（Decay）。",
+        "在单排/双排中，你最多只能与一位好友组队双排（Duo）。",
+        "本表数据源自 Riot 官方客服文档；钻石及以上更高段位的组队限制更加严格。"
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "段位区间",
+        "下属级别",
+        "规则说明"
+       ],
+       "satirlar": [
+        [
+         "Iron, Bronze, Silver, Gold, Platinum, Emerald, Diamond",
+         "IV - I（4 个级别）",
+         "通过累计 LP 逐步晋升"
+        ],
+        [
+         "Master, Grandmaster, Challenger",
+         "无小级别区分",
+         "单一综合积分榜；晋级线门槛会随赛季动态变动（Riot 客服）"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "定级与排位细则均参照 Riot 官方客服中心公布准则。初始定级并不必然代表你的上限实力；在最初的 20-30 场排位赛中段位可能会剧烈起伏，切勿过分执着于眼前的段位浮动。"
+      }
+     ]
+    },
+    {
+     "id": "hatalar",
+     "baslik": "新手常犯的典型误区",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "毫无准备就贸然盲目进入排位；建议先在常规征召模式充分磨炼心态与手感。",
+        "忽视小兵最后一击，无休止地盲目寻找敌方对拼干架。",
+        "全程只顾眼前对线，完全不看小地图。",
+        "阵亡后习惯性甩锅推卸给队友；每次阵亡多反思自身走位和防范失误。",
+        "每局更换完全陌生的不同英雄。",
+        "在遭遇连败心态失衡（上头）时依然强行继续排队；及时停手休息调整心态。"
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "每日必练",
+         "metin": "在训练模式练习补刀 10 分钟。"
+        },
+        {
+         "baslik": "赛后复盘",
+         "metin": "找出自己上一局中某一次阵亡的具体根源，并在下一场对局中有意识避免。"
+        },
+        {
+         "baslik": "每周目标",
+         "metin": "固定使用相同两名英雄打满至少 5 局。"
+        },
+        {
+         "baslik": "每月审视",
+         "metin": "回顾评估自身的键位及灵敏度设置，避免频繁大改。"
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "犯错时切忌过分自责气馁；精准挑选出其中一项具体缺陷，查明诱因并在下一场中专门攻克它。扎实的进步来自于日积月累的微小修正。"
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "账号安全与社区行为规范",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "你的账号是宝贵的数字资产。请务必开启双重身份验证（2FA），切勿在非官方钓鱼网站输入账号密码。"
+      },
+      {
+       "tip": "uyari",
+       "metin": "外挂脚本、自动化挂机程序、代练代打、买卖租赁账号、饰品赌博以及宣称“免费领取点券”的假冒网站均会导致账号遭到永久封禁惩处。请务必敬而远之。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "对局挂机（AFK）或恶意送人头故意摆烂破坏对局将受到严厉惩罚。",
+        "保持对队友的尊重与良好沟通；积极举报并屏蔽不友善的辱骂言论。",
+        "使用小号在低分段虐菜（Smurfing）破坏对局平衡，违背竞技公平；请勿参与。",
+        "严禁与任何其他人共享你的游戏账号。"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "常见问题解答",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "英雄联盟是免费游戏吗？",
+         "c": "是的。游戏主体完全免费；商城内购仅限于英雄外观等个性化饰品。"
+        },
+        {
+         "s": "多大级别能打排位赛？",
+         "c": "需账号达到 30 级、拥有至少 20 名英雄并在极速模式或常规征召中完成 10 场对局。"
+        },
+        {
+         "s": "初始段位是如何评定的？",
+         "c": "通过 5 场定级赛决定；初始最高可定级至钻石 III。"
+        },
+        {
+         "s": "段位会下跌吗？",
+         "c": "会，存在降级以及高段位衰减（Decay）机制。"
+        },
+        {
+         "s": "新手推荐用哪个英雄入门？",
+         "c": "选择技能机制直观、身板耐打的简单英雄；建议专精同样的 2 名英雄练习一周。"
+        },
+        {
+         "s": "可以在手机上游玩吗？",
+         "c": "不行；本指南特指 Windows PC 端游。"
+        },
+        {
+         "s": "常规征召与极速模式有什么区别？",
+         "c": "极速模式节奏更快对局更短，3 级即可体验。常规征召在 10 级解锁，拥有正规的 Ban/Pick 禁选阶段，更贴近排位赛体验。"
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  }
 }

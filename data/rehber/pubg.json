@@ -2180,6 +2180,1614 @@
      ]
     }
    ]
+  },
+  "de": {
+   "baslik": "PUBG: Battlegrounds – Einsteigerhandbuch 2026",
+   "ozet": "Von der Installation zu den ersten Matches: Einstellungen, Ranked, Unterschiede zu PUBG Mobile sowie Kontosicherheit und Ausgabenwarnungen.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Battle Royale (Shooter, Überleben)"
+    },
+    {
+     "ad": "Plattform",
+     "deger": "PC, Konsole und separate mobile App (PUBG Mobile)"
+    },
+    {
+     "ad": "Preismodell",
+     "deger": "Kostenlos (Epic- und Steam-Seiten, November 2026); optionale Spielkäufe"
+    },
+    {
+     "ad": "Aktuelle Version",
+     "deger": "44.1 (November 2026)"
+    },
+    {
+     "ad": "Türkisch-Unterstützung",
+     "deger": "Ja: türkische Oberfläche auf Steam, Türkisch in der Sprachliste von Epic"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "oyun-nedir",
+     "baslik": "Das Spiel und sein Stand im Jahr 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "PUBG: Battlegrounds ist ein Battle Royale: Dutzende Spieler springen mit Fallschirmen auf eine große Karte, suchen Waffen, Rüstung und Vorräte und versuchen, **als Letzte zu überleben**. Die sichere Zone schrumpft im Match und drängt alle zusammen. Das Spiel ist kostenlos; die PC-Fassung ist im Epic Games Store erhältlich."
+      },
+      {
+       "tip": "p",
+       "metin": "Im November 2026 läuft **Update 44.1**. Laut offiziellen Patchnotes brachte es die IVE-Kooperation auf Rondo, einen neuen Eventmodus und Ranked-Belohnungen für Saison 44. PC-Wartung war am 4. November, das Konsolenupdate am 12. November."
+      },
+      {
+       "tip": "p",
+       "metin": "Die offizielle Übersicht nennt bis zu 100 Spieler pro Match und Solo, Duo sowie Squad. Abgeworfene Care Packages und Fahrzeuge gehören zum Kern des Spiels. Zum Ausprobieren von Waffen und Bewegung nennt die Übersicht das Trainingsgebiet Camp Jackal."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Dieser Leitfaden erklärt dauerhafte Grundlagen. Waffenbalance und Kartenrotation ändern sich; aktuelle Angaben stehen in den offiziellen Patchnotes."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Vor dem Start: Installation und Anforderungen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Unten stehen die offiziellen Systemanforderungen. Unterhalb des Minimums ruckelt das Spiel; für flüssiges Spielen die empfohlenen Werte anstreben."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Minimum:** Windows 10 64-Bit, Core i5-4430 oder FX-6300, 8 GB RAM, GeForce GTX 960 2 GB oder Radeon R7 370, DirectX 11, 40 GB freier Speicher.",
+        "**Empfohlen:** Core i5-6600K oder Ryzen 5 1600, 16 GB RAM, GeForce GTX 1060 3 GB oder Radeon RX 580 4 GB, 50 GB freier Speicher.",
+        "**Konto:** Auf PC erfolgt die Installation etwa über die Epic-Games-Store-Seite; das Spiel ist kostenlos.",
+        "**Wettbewerbskonfiguration:** Der offizielle Support nennt zusätzlich Core i9-9900K oder Ryzen 7 3800X, 32 GB RAM, GeForce RTX 2060 Super oder Radeon RX 5700.",
+        "**Crossplay:** Laut offiziellem Matchmaking-Brief spielen Steam- und Epic-Nutzer am PC zusammen, Xbox- und PlayStation-Nutzer auf Konsolen. Gemeinsame Matches von PC und Konsole sind offiziell nicht angekündigt.",
+        "**Konsole:** Seit 13. November 2025 unterstützt PUBG Console nur PlayStation 5 und Xbox Series X|S, laut offizieller Servicemitteilung.",
+        "**Türkisch:** Steam nennt eine türkische Oberfläche, Epic die Sprache Türkisch; auch PUBG Mobile führt Türkisch auf."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Updates brauchen Platz. Halte etwas mehr als den empfohlenen Speicher frei, sonst musst du bei jedem Patch Dateien löschen."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Die ersten Matches Schritt für Schritt",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Ohne Rangwertung anfangen",
+         "metin": "Meide Ranked zunächst. Fehler in normalen Matches kosten keinen Rang; lerne Karten und Waffengefühl."
+        },
+        {
+         "baslik": "Abseits der Menge landen",
+         "metin": "Wähle anhand der Flugroute einen Randbereich abseits großer Siedlungen. Viele springen zu denselben großen Gebäuden; nach Sekunden zu sterben lehrt wenig."
+        },
+        {
+         "baslik": "In den ersten zwei Minuten ausrüsten",
+         "metin": "Nimm Waffe, Munition, Rüstung, Helm und Heilung. Suche nicht die perfekte Waffe; wichtig ist, mit dem Vorhandenen kämpfen zu können."
+        },
+        {
+         "baslik": "Die sichere Zone beobachten",
+         "metin": "Öffne häufig die Karte und bewege dich früh zum nächsten Kreis. Außerhalb erleidest du Dauerschaden; wer zuletzt losrennt, wird gejagt."
+        },
+        {
+         "baslik": "Den eigenen Tod prüfen",
+         "metin": "Frage nach jedem Match: Woher kamen die Schüsse? Warum stand ich offen? War der Kampf vermeidbar? Selbst kurze Rückblicke verbessern das nächste Match."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "In den ersten zehn Matches zählt Überlebenszeit statt Abschusszahl. Mit längerer Lebensdauer kommen Abschüsse von selbst."
+      }
+     ]
+    },
+    {
+     "id": "modlar-ve-haritalar",
+     "baslik": "Modi und Karten",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Die offizielle Kartenseite führt neun Karten. Die Rotation unterscheidet sich nach Region; offizielle Kartenserviceberichte kündigen sie an."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Karte",
+        "Größe (offiziell)",
+        "Tempo",
+        "Geeignet für"
+       ],
+       "satirlar": [
+        [
+         "Erangel",
+         "8x8",
+         "Mittel bis langsam",
+         "Einsteiger; mit Erangel Ferry, UAZ und Secret Room"
+        ],
+        [
+         "Miramar",
+         "8x8",
+         "Mittel bis langsam",
+         "Spieler, die Routen und Fahrzeuge auf großen Karten planen wollen"
+        ],
+        [
+         "Taego",
+         "8x8",
+         "Mittel bis langsam",
+         "Spieler, die Routen und Fahrzeuge auf großen Karten planen wollen"
+        ],
+        [
+         "Deston",
+         "8x8",
+         "Mittel bis langsam",
+         "Spieler, die Routen und Fahrzeuge auf großen Karten planen wollen"
+        ],
+        [
+         "Rondo",
+         "8x8",
+         "Mittel bis langsam",
+         "Spieler, die Routen und Fahrzeuge auf großen Karten planen wollen"
+        ],
+        [
+         "Sanhok",
+         "4x4",
+         "Schnell",
+         "Einsteiger mit Interesse an häufigen Nahkämpfen"
+        ],
+        [
+         "Paramo",
+         "3x3",
+         "Schnell",
+         "Spieler mit Wunsch nach kurzen Matches"
+        ],
+        [
+         "Karakin",
+         "2x2",
+         "Sehr schnell",
+         "Kleinste Karte: kurze, intensive Matches"
+        ],
+        [
+         "Vikendi",
+         "Keine Größenangabe auf der offiziellen Kartenseite",
+         "Offiziell nicht angekündigt",
+         "Größe auf dem Kartenbildschirm im Spiel prüfen"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Die Größen stammen von der offiziellen Seite. Tempo und Zielgruppe sind allgemeine Ableitungen: Kleine Karten bedeuten schneller schließende Zonen und häufigere Feindkontakte."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Kleine Karten bringen schnellere Kämpfe, große mehr Reisen und Fahrzeuge. Nach einigen Matches kennst du deine Vorliebe; eine feste Reihenfolge gibt es nicht."
+      }
+     ]
+    },
+    {
+     "id": "inis-cember-araclar",
+     "baslik": "Landung, Zone und Fahrzeuge",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Drei Entscheidungen der ersten fünf Minuten prägen oft das Ergebnis: Landeort, Zonenverständnis und Fahrzeugnutzung. Diese dauerhaften Prinzipien stammen aus allgemeiner Spielerfahrung. Karten- und Fahrzeuglisten stehen auf den offiziellen Seiten."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Landeplatz wählen",
+         "metin": "Wähle am Routenrand einen mäßig bebauten Ort mit mindestens zwei Gebäuden und einem Fahrzeug in der Nähe. Leere Orte bergen Waffenmangel, volle Orte frühen Tod."
+        },
+        {
+         "baslik": "Ersten Kreis einschätzen",
+         "metin": "Vergleiche deinen Standort mit der ersten sicheren Zone. Nahe der Mitte kannst du warten; weit entfernt solltest du früh ein Fahrzeug suchen."
+        },
+        {
+         "baslik": "Am Zonenrand bleiben",
+         "metin": "Ein Lauf zur Mitte macht dich von allen Seiten angreifbar. Am Rand ist dein Rücken meist sicher und du beobachtest nur eine Richtung."
+        },
+        {
+         "baslik": "Fahrzeuge gezielt nutzen",
+         "metin": "Sie sind schnell, aber weithin hörbar und machen dich zum sichtbaren Ziel. Nutze sie für lange Wege, fahre nie direkt in einen Nahkampf. Erst anhalten und Deckung suchen."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Die offizielle Kartenseite nennt markante Fahrzeuge und Merkmale, etwa Erangel Ferry und UAZ auf Erangel. Welche Fahrzeuge wo vorkommen, zeigen diese Seite und die offizielle Fahrzeugseite."
+      }
+     ]
+    },
+    {
+     "id": "silahlar-ve-mermi",
+     "baslik": "Waffenklassen und Munition",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Offizielle Waffenseiten unterscheiden AR, DMR, SMG, SR, Schrotflinten, Pistolen, Nahkampfwaffen, Wurfwaffen und weitere. Die Tabelle folgt dieser Einteilung und allgemeinem Spielwissen. Da offizielle Seiten keine Munitionstabelle bieten, ist die Beschreibung im Spiel maßgeblich."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Klasse",
+        "Rolle",
+        "Munition (allgemeines Spielwissen)"
+       ],
+       "satirlar": [
+        [
+         "AR",
+         "Vielseitig auf mittlere Entfernung, ordentlicher Schaden und Feuerrate (offizielle Kurzbeschreibung)",
+         "5.56mm oder 7.62mm"
+        ],
+        [
+         "DMR",
+         "Einzelschüsse auf mittlere bis große Distanz",
+         "5.56mm oder 7.62mm"
+        ],
+        [
+         "SMG",
+         "Hohe Feuerrate im Nahkampf",
+         "9mm oder .45 ACP"
+        ],
+        [
+         "SR",
+         "Weite Distanz; Geduld und einzelne Treffer",
+         "7.62mm oder .300 Magnum"
+        ],
+        [
+         "Schrotflinte",
+         "Hoher Schaden auf sehr kurze Distanz",
+         "Kaliber 12"
+        ],
+        [
+         "Pistole",
+         "Reservewaffe für Notfälle",
+         "9mm oder .45 ACP"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Die Wahl ist einfach: SMG oder Schrotflinte nah, AR mittel, DMR oder SR weit. Eine Nah- und eine Mittel-/Fernkampfwaffe sind ein ausgewogener Einstieg. Jede Waffe braucht passende Munition; stimme den Rucksack darauf ab."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Waffenbalance ändert sich mit Updates. Lerne Rollen statt Bestenlisten und suche Kämpfe, die zu deinen Waffen passen."
+      }
+     ]
+    },
+    {
+     "id": "temel-mekanikler",
+     "baslik": "Kernmechaniken",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Einige wenige Grundlagen tragen das Spiel. Beherrschst du sie, bist du unabhängig von der gerade stärksten Waffe gut vorbereitet."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Position und Höhe:** Erhöhte Deckung ist vorteilhaft. Wer offen steht, ist das leichteste Ziel.",
+        "**Geräusche:** Schritte, Schüsse und Fahrzeuge verraten Gegner. Gute Kopfhörer sind die günstigste Verbesserung.",
+        "**Rüstung und Helm:** Höhere Stufen absorbieren mehr Schaden. Halte Heilung vor gefährlichen Kämpfen bereit.",
+        "**Zonenplanung:** Früh losgehen, Fahrzeuge sicher nutzen und am Rand Stellung beziehen ist besser als verspätetes, gehetztes Ankommen.",
+        "**Teamarbeit:** Kurze, klare Informationen mit Pings. Einen niedergeschlagenen Mitspieler zurückzulassen kostet oft beide das Leben."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Plane vor jedem Kampf den Rückzug: Wohin gehst du und wer deckt dich? Ohne Plan ist jeder Kampf ein Glücksspiel."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Einstellungen: verlässliche Ausgangswerte",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Passe die Ausgangswerte an Hardware und Gewohnheiten an. Immer nur eine Einstellung ändern, mehrere Matches testen und dann entscheiden."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Bildratenlimit:** Auf die Monitorfrequenz setzen. Ein höheres Limit erzeugt nur mehr Wärme.",
+        "**Grafik:** Mit Mittel beginnen. Schatten und Effekte reduzieren, Texturen nach Grafikspeicher wählen.",
+        "**Auflösung:** Native Monitorauflösung behalten; Unschärfe erschwert die Zielerkennung.",
+        "**Empfindlichkeit:** Mittig beginnen und in Schritten von fünf bis zehn Prozent anpassen. Tägliche Änderungen stören das Muskelgedächtnis.",
+        "**Ton:** Kopfhörer nutzen, Musik und Umgebung leiser stellen, Schritte hervorheben."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Bei niedriger Bildrate zuerst Schatten, dann Effekte und zuletzt Auflösung reduzieren. Das schont die Bildqualität am meisten."
+      }
+     ]
+    },
+    {
+     "id": "dereceli-kurallar",
+     "baslik": "Ranked: Stufen und Regeln",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Ranked ist der Wettbewerbsmodus. Laut offiziellen Saison-44-Notizen ist ein P90-Skin eine dauerhafte Rangbelohnung, die Rangliste wurde zurückgesetzt und die Mindestanforderungen ab Platin angehoben. Die Notizen trennen dauerhafte und saisonale Belohnungen. Prüfe im Belohnungsbildschirm, was bleibt und was zum Saisonende verschwindet."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Stufe",
+        "Hinweis"
+       ],
+       "satirlar": [
+        [
+         "Bronze",
+         "Einstiegsstufe"
+        ],
+        [
+         "Silber",
+         "In der offiziellen Rangliste"
+        ],
+        [
+         "Gold",
+         "In der offiziellen Rangliste"
+        ],
+        [
+         "Platin",
+         "Ab hier gelten Mindestleistungsanforderungen"
+        ],
+        [
+         "Kristall",
+         "In der offiziellen Rangliste"
+        ],
+        [
+         "Diamant",
+         "In der offiziellen Rangliste"
+        ],
+        [
+         "Meister",
+         "In der offiziellen Rangliste"
+        ],
+        [
+         "Überlebender",
+         "Höchste in den 41.1-Notizen genannte Stufe"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Unterteilungen und Punktschwellen sind nicht offiziell angekündigt und fehlen deshalb hier. Die Ranked-Supportseite war nicht erreichbar. Aktuelle Punkteregeln im Ranked-Bildschirm prüfen."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Starte Ranked erst, wenn Zone, Beutesuche und einfache Kämpfe in normalen Matches sicher sitzen. Überleben und Position zählen mehr als Abschüsse."
+      }
+     ]
+    },
+    {
+     "id": "pubg-mobile-farklari",
+     "baslik": "Unterschiede zu PUBG Mobile",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**PUBG Mobile** ist eine eigene App, laut offizieller Website gemeinsam entwickelt von LIGHTSPEED STUDIOS (Tencent Games) und KRAFTON und erschienen im März 2018. V4.7 „Arctic Chronicles“ wurde für den 12. November 2026 angekündigt, „Erangel Subzero“ für Dezember."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Thema",
+        "PUBG: Battlegrounds",
+        "PUBG Mobile"
+       ],
+       "satirlar": [
+        [
+         "Plattform",
+         "PC (Steam, Epic) und PS5 / Xbox Series X|S",
+         "Mobile App"
+        ],
+        [
+         "Steuerung",
+         "Tastatur und Maus oder Controller",
+         "Touchscreen"
+        ],
+        [
+         "Preis",
+         "Kostenlos; optionale Käufe",
+         "Kostenlos; In-App-Käufe"
+        ],
+        [
+         "Hervorgehobene Modi",
+         "Kartenrotation, Ranked",
+         "Classic, Metro Royale, WOW"
+        ],
+        [
+         "Türkisch",
+         "Auf Steam und Epic aufgeführt",
+         "In der Sprachliste"
+        ],
+        [
+         "Installationsgröße",
+         "Mindestens 40 GB, empfohlen 50 GB (PC)",
+         "Android-APK etwa 1,4 GB (Download auf offizieller Website)"
+        ],
+        [
+         "Kontoverknüpfung (PC – Mobilgerät)",
+         "Offiziell nicht angekündigt",
+         "Offiziell nicht angekündigt"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Beide Spiele haben eigene Versionsnummern, Events und Belohnungen. Übertrage Ankündigungen nicht auf das andere Spiel. Ein Konto- oder Fortschrittstransfer zwischen PC und Mobilgerät ist offiziell nicht angekündigt."
+      }
+     ]
+    },
+    {
+     "id": "baslangic-hatalari",
+     "baslik": "Häufige Anfängerfehler",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Jeden Kampf annehmen.** Wer jedem Schuss nachläuft, wird Ziel Dritter. Erst die eigene Position prüfen.",
+        "**Außerhalb der Zone trödeln.** Beutesuche statt Kreisbeachtung führt zu Schaden und Panik.",
+        "**Im Offenen heilen.** Dabei bist du verletzlich. Erst hinter Wand oder Baum gehen.",
+        "**Lärm ignorieren.** Rennen und Fahrzeuge verraten dich. Bei Annäherung langsamer werden.",
+        "**Ständig Einstellungen ändern.** Empfindlichkeit nach jedem Match zu wechseln bremst Fortschritt.",
+        "**Team zurücklassen.** Im Squad gemeinsam bewegen und Informationen teilen."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Stirbst du immer am selben Ort, ändere den Landeplatz. Für Einsteiger hilft ein anderer, ruhigerer Startort pro Match am schnellsten."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik-ve-harcama",
+     "baslik": "Kontosicherheit und Ausgaben",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Das Spiel ist kostenlos, Kosmetik, Eventpässe und Kisten können Geld kosten. Prüfe vorher im Kaufbildschirm, was zufällig und was fest enthalten ist."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Setze eine monatliche Ausgabengrenze, halte sie ein und speichere keine Zahlungsmethode.",
+        "Nutze Zwei-Schritt-Verifizierung und dasselbe Passwort nicht anderswo. Vertraue keinen externen Gratis-Skin- oder Gratis-UC-Angeboten. Melde dich nur auf offiziellen Spiel- und Shopseiten an und prüfe verdächtige Adressen vor dem Klicken.",
+        "Für Kinder die Kindersicherung von Shop oder Konsole aktivieren und Käufe genehmigungspflichtig machen.",
+        "Misstraue falschen Gratis-Skin-Links und Anmeldeseiten. Gib dein Passwort nur auf der offiziellen Loginseite ein."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Meide Cheats, Aimbots, Makros, Kontohandel und Boosting. Das offizielle Team meldet regelmäßig Sperren. Solche Angebote können dein Konto dauerhaft kosten und sind häufig Betrug."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Häufige Fragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Ist PUBG kostenlos?",
+         "c": "Ja. Du musst nichts ausgeben; Käufe sind überwiegend kosmetisch."
+        },
+        {
+         "s": "Reicht mein PC?",
+         "c": "Mindestens Windows 10 64-Bit, 8 GB RAM und eine GTX-960-ähnliche Grafikkarte. Für flüssiges Spielen die Empfehlungsliste anstreben."
+        },
+        {
+         "s": "Welche Karte zuerst?",
+         "c": "Es gibt keine Pflichtreihenfolge. Spiele die Rotation; Erangel ist der klassische Einstieg."
+        },
+        {
+         "s": "Wann Ranked anfangen?",
+         "c": "Sobald Zone, Beutesuche und grundlegende Kämpfe ohne Rangwertung sicher sitzen. Keine Eile."
+        },
+        {
+         "s": "Ist PUBG Mobile dasselbe Spiel?",
+         "c": "Eine separate App derselben Reihe: andere Steuerung, eigene Modi und eigener Updateplan."
+        },
+        {
+         "s": "Spielen PC und Konsole zusammen?",
+         "c": "Laut Matchmaking-Brief spielen Steam und Epic am PC zusammen, Xbox und PlayStation auf Konsolen. Gemeinsame PC-Konsolen-Matches sind offiziell nicht angekündigt."
+        },
+        {
+         "s": "Was tun gegen Cheater?",
+         "c": "Im Spiel melden und Beweise sichern. Nicht selbst vergelten; verbotene Software führt auch bei dir zur Sperre."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "nl": {
+   "baslik": "PUBG: Battlegrounds – beginnershandboek 2026",
+   "ozet": "Vanaf nul: installatie, eerste wedstrijden, instellingen, Ranked, verschillen met PUBG Mobile, accountveiligheid en waarschuwingen over uitgaven.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Battle royale (schieten, overleven)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Pc, console en aparte mobiele app (PUBG Mobile)"
+    },
+    {
+     "ad": "Verdienmodel",
+     "deger": "Gratis (Epic en Steam, november 2026); optionele aankopen in de game"
+    },
+    {
+     "ad": "Huidige versie",
+     "deger": "44.1 (november 2026)"
+    },
+    {
+     "ad": "Turkse ondersteuning",
+     "deger": "Ja: Turkse interface op Steam, Turks in de taallijst van Epic"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "oyun-nedir",
+     "baslik": "Wat de game is en de stand in 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "PUBG: Battlegrounds is een battle royale waarin tientallen spelers op een grote kaart parachuteren, wapens, harnassen en voorraden zoeken en **als laatste proberen te overleven**. De veilige zone krimpt en dwingt iedereen naar hetzelfde gebied. Spelen is gratis; de pc-versie is via de Epic Games Store te downloaden."
+      },
+      {
+       "tip": "p",
+       "metin": "In november 2026 draait **update 44.1**. Volgens de officiële patchnotes bracht die de IVE-samenwerking op Rondo, een nieuwe evenementmodus en Ranked-beloningen voor seizoen 44. Het pc-onderhoud was op 4 november, de console-update op 12 november."
+      },
+      {
+       "tip": "p",
+       "metin": "Het officiële overzicht noemt maximaal 100 spelers per wedstrijd, met Solo, Duo en Squad. Care Packages uit de lucht en voertuigen op de kaart zijn kernonderdelen. Voor het oefenen met wapens en bewegen noemt het overzicht trainingsgebied Camp Jackal."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Deze gids behandelt blijvende principes. Wapenbalans en kaartrotatie veranderen per update; raadpleeg de officiële patchnotes voor de actuele stand."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Voor je begint: installatie en eisen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Hieronder staan de officiële systeemeisen. Onder het minimum hapert de game; streef voor soepel spelen naar de aanbevolen configuratie."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Minimum:** 64-bits Windows 10, Core i5-4430 of FX-6300, 8 GB RAM, GeForce GTX 960 2 GB of Radeon R7 370, DirectX 11 en 40 GB vrije opslag.",
+        "**Aanbevolen:** Core i5-6600K of Ryzen 5 1600, 16 GB RAM, GeForce GTX 1060 3 GB of Radeon RX 580 4 GB en 50 GB vrije opslag.",
+        "**Account:** Op pc kun je via de Epic Games Store installeren; de game is gratis.",
+        "**Competitieve configuratie:** De officiële support noemt ook Core i9-9900K of Ryzen 7 3800X, 32 GB RAM, GeForce RTX 2060 Super of Radeon RX 5700.",
+        "**Crossplay:** Volgens de officiële matchmakingbrief spelen Steam en Epic samen op pc, en Xbox en PlayStation samen op console. Pc en console in dezelfde wedstrijd is officieel niet aangekondigd.",
+        "**Console:** Sinds 13 november 2025 ondersteunt PUBG Console alleen PlayStation 5 en Xbox Series X|S, volgens de officiële serviceaankondiging.",
+        "**Turks:** Steam noemt een Turkse interface, Epic noemt Turks als taal en ook PUBG Mobile vermeldt Turks."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Updates vragen ruimte. Houd iets meer vrij dan aanbevolen, anders moet je bij elke patch bestanden opruimen."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Je eerste wedstrijden stap voor stap",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Begin zonder rangschikking",
+         "metin": "Blijf eerst uit Ranked. Fouten in normale wedstrijden kosten geen rang; je leert de kaart en hoe wapens aanvoelen."
+        },
+        {
+         "baslik": "Land buiten de drukte",
+         "metin": "Bekijk de vliegroute en kies aan de rand een plek buiten grote nederzettingen. Iedereen springt op dezelfde grote gebouwen; binnen seconden sterven leert weinig."
+        },
+        {
+         "baslik": "Verzamel uitrusting in de eerste twee minuten",
+         "metin": "Pak een wapen, munitie, harnas, helm en genezing. Zoek niet naar het perfecte wapen; met je huidige spullen kunnen vechten telt."
+        },
+        {
+         "baslik": "Volg de veilige zone",
+         "metin": "Open regelmatig de kaart en beweeg vroeg naar de volgende cirkel. Buiten de zone loop je voortdurend schade op; op het laatste moment haasten maakt je opgejaagd."
+        },
+        {
+         "baslik": "Bekijk je dood",
+         "metin": "Vraag na elke wedstrijd: waar kwam het schot vandaan, waarom stond ik onbeschut, kon ik het gevecht vermijden? Zelfs een korte terugblik helpt de volgende wedstrijd."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Richt je eerste tien wedstrijden op overlevingstijd in plaats van kills. Hoe langer je leeft, hoe vanzelfsprekender kills komen."
+      }
+     ]
+    },
+    {
+     "id": "modlar-ve-haritalar",
+     "baslik": "Modi en kaarten",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "De officiële kaartenpagina noemt negen kaarten. Je kaart hangt af van een regionale rotatie, aangekondigd in officiële kaartservicerapporten."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Kaart",
+        "Grootte (officieel)",
+        "Tempo",
+        "Geschikt voor"
+       ],
+       "satirlar": [
+        [
+         "Erangel",
+         "8x8",
+         "Gemiddeld tot langzaam",
+         "Beginners; bevat Erangel Ferry, UAZ en Secret Room"
+        ],
+        [
+         "Miramar",
+         "8x8",
+         "Gemiddeld tot langzaam",
+         "Spelers die routes en voertuigen op een grote kaart plannen"
+        ],
+        [
+         "Taego",
+         "8x8",
+         "Gemiddeld tot langzaam",
+         "Spelers die routes en voertuigen op een grote kaart plannen"
+        ],
+        [
+         "Deston",
+         "8x8",
+         "Gemiddeld tot langzaam",
+         "Spelers die routes en voertuigen op een grote kaart plannen"
+        ],
+        [
+         "Rondo",
+         "8x8",
+         "Gemiddeld tot langzaam",
+         "Spelers die routes en voertuigen op een grote kaart plannen"
+        ],
+        [
+         "Sanhok",
+         "4x4",
+         "Snel",
+         "Beginners die vaak van dichtbij willen vechten"
+        ],
+        [
+         "Paramo",
+         "3x3",
+         "Snel",
+         "Spelers die een korte wedstrijd willen"
+        ],
+        [
+         "Karakin",
+         "2x2",
+         "Zeer snel",
+         "Kleinste kaart: korte, intense wedstrijden"
+        ],
+        [
+         "Vikendi",
+         "Grootte ontbreekt op de officiële kaartenpagina",
+         "Officieel niet aangekondigd",
+         "Bekijk de grootte op het kaartscherm in de game"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "De groottes komen van de officiële kaartenpagina. Tempo en doelgroep zijn algemene afleidingen: kleinere kaarten betekenen een sneller sluitende zone en vaker vijanden tegenkomen."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Kleine kaarten geven beginners snellere gevechten, grote kaarten meer reizen en voertuigen. Na enkele wedstrijden merk je je voorkeur; een verplichte volgorde bestaat niet."
+      }
+     ]
+    },
+    {
+     "id": "inis-cember-araclar",
+     "baslik": "Landen, zone en voertuigen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Drie keuzes in de eerste vijf minuten bepalen vaak de uitkomst: landingsplek, zone lezen en voertuiggebruik. De blijvende principes hieronder komen uit algemene spelervaring. Officiële kaarten- en voertuigpagina’s geven de lijsten."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Je landingsplek kiezen",
+         "metin": "Kies aan de rand van de route een middelmatig bebouwde plek met minstens twee gebouwen en een voertuig in de buurt. Een lege plek riskeert geen wapen, een drukke een vroege dood."
+        },
+        {
+         "baslik": "De eerste cirkel inschatten",
+         "metin": "Vergelijk je positie met de eerste veilige zone. Dicht bij het midden kun je wachten, ver weg zoek je vroeg een voertuig."
+        },
+        {
+         "baslik": "Bij de zonerand blijven",
+         "metin": "Naar het midden rennen stelt je aan alle kanten bloot. Aan de rand is je rug meestal veilig en let je op één richting."
+        },
+        {
+         "baslik": "Voertuigen bewust gebruiken",
+         "metin": "Een voertuig is snel, maar luid en maakt je zichtbaar. Gebruik het voor lange afstanden; rijd niet een gevecht van dichtbij in. Stop eerst en zoek dekking."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "De officiële kaartenpagina vermeldt bijzondere voertuigen en kenmerken, zoals Erangel Ferry en UAZ op Erangel. Bekijk die en de officiële voertuigpagina voor welke voertuigen waar voorkomen."
+      }
+     ]
+    },
+    {
+     "id": "silahlar-ve-mermi",
+     "baslik": "Wapenklassen en munitie",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Officiële wapenpagina’s onderscheiden AR, DMR, SMG, SR, jachtgeweren, handwapens, slagwapens, werpwapens en andere. De tabel volgt deze indeling en algemene spelkennis. Een officiële munitietabel ontbreekt; de beschrijving in de game is leidend."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Klasse",
+        "Rol",
+        "Munitie (algemene kennis)"
+       ],
+       "satirlar": [
+        [
+         "AR",
+         "Veelzijdig op middellange afstand met degelijke schade en vuursnelheid (officieel overzicht)",
+         "5.56mm of 7.62mm"
+        ],
+        [
+         "DMR",
+         "Enkelschots op middellange tot lange afstand",
+         "5.56mm of 7.62mm"
+        ],
+        [
+         "SMG",
+         "Hoge vuursnelheid van dichtbij",
+         "9mm of .45 ACP"
+        ],
+        [
+         "SR",
+         "Lange afstand; geduld en losse treffers",
+         "7.62mm of .300 Magnum"
+        ],
+        [
+         "Jachtgeweer",
+         "Veel schade op zeer korte afstand",
+         "Kaliber 12"
+        ],
+        [
+         "Pistool",
+         "Noodwapen als reserve",
+         "9mm of .45 ACP"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "De keuze is simpel: SMG of jachtgeweer dichtbij, AR op middellange afstand, DMR of SR ver weg. Een kort en een middellang tot lang wapen vormen een evenwichtige start. Neem passende munitie mee voor elk wapen."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Wapenbalans verandert per update. Leer de rol van een klasse in plaats van lijstjes met beste wapens, en kies passende gevechten."
+      }
+     ]
+    },
+    {
+     "id": "temel-mekanikler",
+     "baslik": "Kernmechanieken",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "De basis rust op een paar principes. Beheers je die, dan speel je goed ongeacht welk wapen nu sterk is."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Positie en hoogte:** Hoogte met dekking biedt voordeel. Open staan maakt je het makkelijkste doelwit.",
+        "**Geluid:** Stappen, schoten en voertuigen verraden vijanden. Een goede koptelefoon is de goedkoopste verbetering.",
+        "**Harnas en helm:** Hogere niveaus absorberen meer schade. Houd genezing klaar vóór een dodelijk gevecht.",
+        "**Zonebeheer:** Vroeg vertrekken, veilig met een voertuig oversteken en aan de rand staan is beter dan laat opgejaagd aankomen.",
+        "**Samenwerking:** Geef korte, duidelijke informatie met pings. Een neergehaalde teamgenoot achterlaten kost jullie vaak beiden het leven."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Maak vóór elk gevecht een vluchtplan: waarheen trek je terug en wie dekt je? Zonder plan is vechten gokken."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Instellingen: goede startwaarden",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Pas startwaarden aan je hardware en gewoonten aan. Verander één instelling tegelijk, test enkele wedstrijden en beslis dan."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Framelimiet:** Gelijk aan de vernieuwingsfrequentie van je monitor. Hoger levert alleen extra warmte.",
+        "**Grafische preset:** Begin op Medium. Verlaag schaduwen en effecten, kies texturen op basis van videogeheugen.",
+        "**Resolutie:** Blijf op de eigen monitorresolutie; onscherpte maakt doelen lastiger te zien.",
+        "**Gevoeligheid:** Begin rond het midden en pas met vijf tot tien procent tegelijk aan. Dagelijkse wijzigingen verstoren spiergeheugen.",
+        "**Geluid:** Speel met koptelefoon, zet muziek en omgevingsgeluid lager en laat stappen opvallen."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Bij lage beeldsnelheid verlaag je eerst schaduwen, dan effecten en pas als laatste resolutie. Dat kost de minste beeldkwaliteit."
+      }
+     ]
+    },
+    {
+     "id": "dereceli-kurallar",
+     "baslik": "Ranked: niveaus en regels",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Ranked is de competitieve modus. Volgens de officiële notities van seizoen 44 is een P90-skin een blijvende rangbeloning, is het klassement gereset en zijn de minimale prestaties vanaf Platinum verhoogd. De notities onderscheiden blijvende en seizoensbeloningen. Bekijk op het beloningsscherm wat blijft en wat na het seizoen verdwijnt."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Niveau",
+        "Opmerking"
+       ],
+       "satirlar": [
+        [
+         "Brons",
+         "Beginniveau"
+        ],
+        [
+         "Zilver",
+         "Op de officiële niveaulijst"
+        ],
+        [
+         "Goud",
+         "Op de officiële niveaulijst"
+        ],
+        [
+         "Platina",
+         "Vanaf hier gelden minimumprestaties"
+        ],
+        [
+         "Kristal",
+         "Op de officiële niveaulijst"
+        ],
+        [
+         "Diamant",
+         "Op de officiële niveaulijst"
+        ],
+        [
+         "Meester",
+         "Op de officiële niveaulijst"
+        ],
+        [
+         "Overlever",
+         "Hoogste niveau genoemd in de 41.1-notities"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Het aantal divisies en de puntengrenzen zijn officieel niet bekendgemaakt en ontbreken daarom. De Ranked-supportpagina opende niet; kijk voor actuele puntenregels in de game."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Begin Ranked zodra zone, buit verzamelen en basisgevechten in normale wedstrijden goed gaan. Overleven en positie tellen meer dan kills."
+      }
+     ]
+    },
+    {
+     "id": "pubg-mobile-farklari",
+     "baslik": "Verschillen met PUBG Mobile",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**PUBG Mobile** is een aparte app. De officiële site noemt gezamenlijke ontwikkeling door LIGHTSPEED STUDIOS (Tencent Games) en KRAFTON en een release in maart 2018. V4.7 ‘Arctic Chronicles’ was aangekondigd voor 12 november 2026, ‘Erangel Subzero’ voor december."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Onderwerp",
+        "PUBG: Battlegrounds",
+        "PUBG Mobile"
+       ],
+       "satirlar": [
+        [
+         "Platform",
+         "Pc (Steam, Epic) en PS5 / Xbox Series X|S",
+         "Mobiele app"
+        ],
+        [
+         "Besturing",
+         "Toetsenbord en muis, of controller",
+         "Aanraakscherm"
+        ],
+        [
+         "Prijs",
+         "Gratis; optionele aankopen",
+         "Gratis; in-appaankopen"
+        ],
+        [
+         "Uitgelichte modi",
+         "Kaartrotatie, Ranked",
+         "Classic, Metro Royale, WOW"
+        ],
+        [
+         "Turks",
+         "Genoemd op Steam en Epic",
+         "In de taallijst"
+        ],
+        [
+         "Installatiegrootte",
+         "Minstens 40 GB, 50 GB aanbevolen (pc)",
+         "Android-APK circa 1,4 GB (download op officiële site)"
+        ],
+        [
+         "Accountkoppeling (pc – mobiel)",
+         "Officieel niet aangekondigd",
+         "Officieel niet aangekondigd"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "De games hebben aparte versienummers, evenementen en beloningen. Pas een aankondiging niet toe op de andere game. Overdracht van account of voortgang tussen pc en mobiel is officieel niet aangekondigd."
+      }
+     ]
+    },
+    {
+     "id": "baslangic-hatalari",
+     "baslik": "Veelgemaakte beginnersfouten",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Elk gevecht aangaan.** Naar elk schot rennen maakt je doelwit voor een derde partij. Beoordeel eerst je positie.",
+        "**Buiten de zone blijven.** Buit zoeken terwijl je de cirkel mist geeft schade en paniek.",
+        "**Onbeschut genezen.** Je bent kwetsbaar; ga eerst achter een muur of boom.",
+        "**Geluid negeren.** Rennen en voertuigen verraden je. Vertraag bij het naderen.",
+        "**Voortdurend instellingen wijzigen.** Na elke wedstrijd de gevoeligheid veranderen remt vooruitgang.",
+        "**Het team achterlaten.** Beweeg als squad samen en deel informatie."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Sterf je steeds op dezelfde plek, verander je landingsplek. Beginners verbeteren snel door telkens rustiger en ergens anders te starten."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik-ve-harcama",
+     "baslik": "Accountveiligheid en uitgaven",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Ondanks gratis toegang kosten cosmetica, evenementpassen en kisten mogelijk geld. Lees vóór aankoop wat willekeurig is en wat vaststaat."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Stel een maandlimiet vast, houd je eraan en sla je betaalmiddel niet op.",
+        "Bescherm je account met tweestapsverificatie en hergebruik je wachtwoord niet. Vertrouw geen gratis skins of UC buiten de game. Log alleen in op officiële game- en winkelschermen en controleer verdachte adressen vóór klikken.",
+        "Activeer voor kinderen ouderlijk toezicht via winkel of console en vereis goedkeuring voor uitgaven.",
+        "Vertrouw geen nep-links voor gratis skins of sites die om inloggen vragen. Gebruik je wachtwoord alleen op de officiële inlogpagina."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Blijf weg van cheats, aimbots, macro’s, accounthandel en boosting. Het officiële team meldt geregeld bans. Deze routes kunnen je account permanent kosten en zijn vaak oplichting."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Veelgestelde vragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is PUBG gratis?",
+         "c": "Ja. Geld uitgeven hoeft niet; aankopen zijn meestal cosmetisch."
+        },
+        {
+         "s": "Is mijn pc goed genoeg?",
+         "c": "Minimaal 64-bits Windows 10, 8 GB RAM en een GTX 960-achtige kaart. Streef voor soepel spelen naar de aanbevolen lijst."
+        },
+        {
+         "s": "Welke kaart eerst?",
+         "c": "Een verplichte volgorde bestaat niet. Speel wat de rotatie geeft; Erangel is de klassieke startkaart."
+        },
+        {
+         "s": "Wanneer Ranked?",
+         "c": "Zodra zone, buit en basisgevechten in normale wedstrijden goed gaan. Haast is niet nodig."
+        },
+        {
+         "s": "Is PUBG Mobile dezelfde game?",
+         "c": "Een aparte app in dezelfde reeks, met andere besturing, eigen modi en een eigen updateplanning."
+        },
+        {
+         "s": "Spelen pc en console samen?",
+         "c": "Volgens de matchmakingbrief spelen Steam en Epic samen op pc, Xbox en PlayStation op console. Pc en console samen is officieel niet aangekondigd."
+        },
+        {
+         "s": "Wat als ik cheaters tegenkom?",
+         "c": "Gebruik de meldfunctie en bewaar bewijs. Neem geen eigen wraak; verboden software levert jou ook een ban op."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "zh": {
+   "baslik": "PUBG: Battlegrounds 指南：2026新手手册",
+   "ozet": "从零介绍安装、首批对局、设置、排位、与 PUBG Mobile 的区别，以及账号安全和消费提醒。",
+   "kunye": [
+    {
+     "ad": "类型",
+     "deger": "大逃杀（射击、生存）"
+    },
+    {
+     "ad": "平台",
+     "deger": "PC、主机及独立手机应用 PUBG Mobile"
+    },
+    {
+     "ad": "收费模式",
+     "deger": "免费（2026年11月 Epic 与 Steam 页面）；含可选内购"
+    },
+    {
+     "ad": "当前版本",
+     "deger": "44.1（2026年11月）"
+    },
+    {
+     "ad": "土耳其语支持",
+     "deger": "支持：Steam 列出土耳其语界面，Epic 列出土耳其语"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "oyun-nedir",
+     "baslik": "游戏内容与2026年现状",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "PUBG: Battlegrounds 是大逃杀游戏，数十名玩家跳伞进入大地图，搜集武器、盔甲和物资，争取成为**最后的生存者**。比赛中安全区不断缩小，将所有人推向同一区域。游戏免费，PC 版可从 Epic Games Store 页面下载。"
+      },
+      {
+       "tip": "p",
+       "metin": "截至2026年11月，游戏为 **44.1更新**。官方补丁说明称本版带来 Rondo 的 IVE 联动、新活动模式及第44赛季排位奖励。PC 维护时间为11月4日，主机更新为11月12日。"
+      },
+      {
+       "tip": "p",
+       "metin": "官方概览说明每局最多100人，提供 Solo、Duo 和 Squad。空投 Care Packages 与地图载具是核心要素。想先练武器与移动，可去概览提及的训练区 Camp Jackal。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "本指南介绍长期有效的原则。武器平衡和地图轮换随更新变化，请查看官方补丁说明了解现状。"
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "开始前：安装与配置",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "下列为官方配置要求。低于最低配置会卡顿；想流畅游玩，应尽量达到推荐配置。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**最低：**64位 Windows 10、Core i5-4430 或 FX-6300、8 GB RAM、GeForce GTX 960 2 GB 或 Radeon R7 370、DirectX 11、40 GB可用空间。",
+        "**推荐：**Core i5-6600K 或 Ryzen 5 1600、16 GB RAM、GeForce GTX 1060 3 GB 或 Radeon RX 580 4 GB、50 GB可用空间。",
+        "**账号：**PC 可通过 Epic Games Store 页面安装，游戏免费。",
+        "**竞技配置：**官方支持页另列 Core i9-9900K 或 Ryzen 7 3800X、32 GB RAM、GeForce RTX 2060 Super 或 Radeon RX 5700。",
+        "**跨平台：**官方匹配说明称 PC 的 Steam 与 Epic 玩家互通，主机的 Xbox 与 PlayStation 玩家互通。PC 与主机同局尚无官方公告。",
+        "**主机：**根据官方服务通知，自2025年11月13日起，PUBG Console 仅支持 PlayStation 5 和 Xbox Series X|S。",
+        "**土耳其语：**Steam 列出土耳其语界面，Epic 列出该语言，PUBG Mobile 语言表也包含土耳其语。"
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "更新需要额外空间。空闲容量应略高于推荐值，避免每次补丁都要清理文件。"
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "首批对局：分步开始",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "先玩非排位",
+         "metin": "起初避开 Ranked。普通对局失误不影响段位，可以熟悉地图与枪械手感。"
+        },
+        {
+         "baslik": "远离人群降落",
+         "metin": "查看航线，选择远离大型聚落、靠近航线边缘的位置。众人常跳同一片大楼，几秒就死学不到什么。"
+        },
+        {
+         "baslik": "最初两分钟配齐装备",
+         "metin": "拾取武器、弹药、盔甲、头盔与治疗物品。别执着找完美武器，能用现有装备战斗更重要。"
+        },
+        {
+         "baslik": "跟踪安全区",
+         "metin": "经常开地图，提早前往下个圈。圈外会持续掉血，最后时刻赶路容易被追击。"
+        },
+        {
+         "baslik": "复盘死亡",
+         "metin": "每局问三件事：枪从哪来、为何暴露、能否避战？简短复盘也能改善下局。"
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "前十局先追求存活时长，而不是击杀数。活得更久，击杀会自然增加。"
+      }
+     ]
+    },
+    {
+     "id": "modlar-ve-haritalar",
+     "baslik": "模式与地图",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "官方地图页列出九张地图。具体匹配取决于地区轮换，由官方地图服务报告公布。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "地图",
+        "尺寸（官方）",
+        "节奏",
+        "适合玩家"
+       ],
+       "satirlar": [
+        [
+         "Erangel",
+         "8x8",
+         "中慢速",
+         "入门地图；有 Erangel Ferry、UAZ 和 Secret Room"
+        ],
+        [
+         "Miramar",
+         "8x8",
+         "中慢速",
+         "喜欢大地图路线规划与载具的玩家"
+        ],
+        [
+         "Taego",
+         "8x8",
+         "中慢速",
+         "喜欢大地图路线规划与载具的玩家"
+        ],
+        [
+         "Deston",
+         "8x8",
+         "中慢速",
+         "喜欢大地图路线规划与载具的玩家"
+        ],
+        [
+         "Rondo",
+         "8x8",
+         "中慢速",
+         "喜欢大地图路线规划与载具的玩家"
+        ],
+        [
+         "Sanhok",
+         "4x4",
+         "快速",
+         "想经常近距离交火的新手"
+        ],
+        [
+         "Paramo",
+         "3x3",
+         "快速",
+         "希望短局的玩家"
+        ],
+        [
+         "Karakin",
+         "2x2",
+         "极快",
+         "最小地图；适合短而激烈的对局"
+        ],
+        [
+         "Vikendi",
+         "官方地图页未给尺寸",
+         "官方尚未公布",
+         "请在游戏地图界面查看尺寸"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "尺寸来自官方地图页；节奏和适合人群是按尺寸作的一般判断：地图越小，缩圈越快，遇敌越频繁。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "小图更快交火，大图更多赶路和载具。玩几局就能知道偏好，没有强制顺序。"
+      }
+     ]
+    },
+    {
+     "id": "inis-cember-araclar",
+     "baslik": "降落、安全区与载具",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "开局五分钟的三个决定常影响整局：降落位置、读圈方式和何时用车。以下长期原则来自一般游戏经验，地图和载具清单请查官方页面。"
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "选择落点",
+         "metin": "在航线边缘选密度适中、至少两栋建筑、附近有车的位置。太空旷可能没枪，太拥挤容易早死。"
+        },
+        {
+         "baslik": "判断首圈",
+         "metin": "安全区出现后对照自身位置。靠中心可等待，距离远则及早找车。"
+        },
+        {
+         "baslik": "贴近圈边",
+         "metin": "直冲中心会四面受敌。圈边通常背后较安全，只需重点观察一个方向。"
+        },
+        {
+         "baslik": "有目的地用车",
+         "metin": "载具移动快，但声音传得远，会让你成为显眼目标。用于长距离赶路，别直接开进近战；先停车找掩体。"
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "官方地图页列出各图特色载具与设施，例如 Erangel 的 Erangel Ferry 和 UAZ。各图有哪些车型，请查地图页和官方载具页。"
+      }
+     ]
+    },
+    {
+     "id": "silahlar-ve-mermi",
+     "baslik": "武器类别与弹药",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "官方武器页按 AR、DMR、SMG、SR、霰弹枪、手枪、近战、投掷物等分类。下表按此分类并结合一般游戏知识。官方没有弹药表，选枪时以游戏内说明为准。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "类别",
+        "定位",
+        "弹药（一般知识）"
+       ],
+       "satirlar": [
+        [
+         "AR",
+         "中距离多用途，伤害和射速适中（官方概述）",
+         "5.56mm 或 7.62mm"
+        ],
+        [
+         "DMR",
+         "中远距离单发射击",
+         "5.56mm 或 7.62mm"
+        ],
+        [
+         "SMG",
+         "近距离高射速",
+         "9mm 或 .45 ACP"
+        ],
+        [
+         "SR",
+         "远距离；耐心等待单次命中",
+         "7.62mm 或 .300 Magnum"
+        ],
+        [
+         "霰弹枪",
+         "极近距离高伤害",
+         "12号口径"
+        ],
+        [
+         "手枪",
+         "紧急备用武器",
+         "9mm 或 .45 ACP"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "选类很简单：近处用 SMG 或霰弹枪，中距用 AR，远处用 DMR 或 SR。新手携带一把近战枪和一把中远程枪较均衡。每枪弹药不同，背包弹药要与枪匹配。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "武器平衡随更新变化。关注类别定位，而非最强武器榜，选择适合手中装备的战斗。"
+      }
+     ]
+    },
+    {
+     "id": "temel-mekanikler",
+     "baslik": "核心机制",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "游戏依赖少数原则。掌握后，不管当前哪把枪强，你都有良好基础。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**位置与高度：**高处掩体有优势，站在空地最容易被击中。",
+        "**声音：**脚步、枪声和车辆会暴露敌人位置。好耳机是成本最低的改善。",
+        "**盔甲与头盔：**等级越高，吸收伤害越多。危险交火前备好治疗物品。",
+        "**安全区管理：**早走、用车安全穿越、在圈边选位，胜过晚到被追赶。",
+        "**团队协作：**用标记给简短清楚的信息。抛弃倒地队友往往让两人都输。"
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "每次开战前规划退路：退到哪、谁掩护？没有计划的战斗就是赌博。"
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "设置：稳妥的起点",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "这些只是起点，应依硬件和习惯调整。每次只改一项，试几局再决定。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**帧率限制：**设为显示器刷新率，更高只会增加发热。",
+        "**画质预设：**先选中等，降低阴影与特效，按显存选择纹理质量。",
+        "**分辨率：**保持显示器原生分辨率，模糊会妨碍发现目标。",
+        "**灵敏度：**从中间值开始，每次调整百分之五至十。天天更改会破坏肌肉记忆。",
+        "**音频：**用耳机，调低音乐和环境音，让脚步更突出。"
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "帧率差时先降阴影，再降特效，最后降分辨率。这种顺序损失的画质最少。"
+      }
+     ]
+    },
+    {
+     "id": "dereceli-kurallar",
+     "baslik": "排位：段位与规则",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Ranked 是竞技对局模式。官方第44赛季说明列出永久 P90 武器皮肤段位奖励、排行榜重置，以及提高 Platinum 及以上的最低成绩标准。说明区分永久与仅限赛季奖励；查看奖励界面，确认哪些保留、哪些赛末消失。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "段位",
+        "说明"
+       ],
+       "satirlar": [
+        [
+         "青铜",
+         "起始段位"
+        ],
+        [
+         "白银",
+         "列于官方段位表"
+        ],
+        [
+         "黄金",
+         "列于官方段位表"
+        ],
+        [
+         "白金",
+         "从此开始适用最低成绩标准"
+        ],
+        [
+         "水晶",
+         "列于官方段位表"
+        ],
+        [
+         "钻石",
+         "列于官方段位表"
+        ],
+        [
+         "大师",
+         "列于官方段位表"
+        ],
+        [
+         "生存者",
+         "41.1说明提及的最高段位"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "各段小等级数量和分数门槛未正式公布，因此不列入表。官方支持网站的排位页未能打开，当前积分规则请看游戏内 Ranked 界面。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "能在普通局从容处理安全区、搜物和基本交火后再进排位。那里存活与位置比击杀数更重要。"
+      }
+     ]
+    },
+    {
+     "id": "pubg-mobile-farklari",
+     "baslik": "PUBG Mobile 的区别",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**PUBG Mobile** 是独立应用。官网称由 LIGHTSPEED STUDIOS（Tencent Games）与 KRAFTON 共同开发，2018年3月发布。V4.7“Arctic Chronicles”宣布于2026年11月12日更新，“Erangel Subzero”模式宣布于12月推出。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "项目",
+        "PUBG: Battlegrounds",
+        "PUBG Mobile"
+       ],
+       "satirlar": [
+        [
+         "平台",
+         "PC（Steam、Epic）及 PS5 / Xbox Series X|S",
+         "手机应用"
+        ],
+        [
+         "操作",
+         "键鼠或手柄",
+         "触屏"
+        ],
+        [
+         "价格",
+         "免费；可选购买",
+         "免费；应用内购买"
+        ],
+        [
+         "主要模式",
+         "地图轮换、Ranked",
+         "Classic, Metro Royale, WOW"
+        ],
+        [
+         "土耳其语",
+         "Steam 与 Epic 页面列出",
+         "语言表包含"
+        ],
+        [
+         "安装空间",
+         "PC 至少40 GB，推荐50 GB",
+         "Android APK 约1.4 GB（官网下载）"
+        ],
+        [
+         "账号关联（PC与手机）",
+         "官方尚未公布",
+         "官方尚未公布"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "两款游戏版本号、活动及奖励各自独立，不要把一方公告套用另一方。PC 与手机间账号或进度转移尚未正式公布。"
+      }
+     ]
+    },
+    {
+     "id": "baslangic-hatalari",
+     "baslik": "新手常见错误",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**逢战必接。**追着每声枪响跑，会成为第三方目标。先看位置。",
+        "**圈外拖延。**只搜物资不看圈，会掉血并陷入慌乱。",
+        "**空地治疗。**用药时易受攻击，先躲墙后或树后。",
+        "**忽视噪声。**跑步和车辆声会暴露自己，接近目标时慢下来。",
+        "**不断改设置。**每局都换灵敏度会妨碍进步。",
+        "**抛下队伍。**组队时一起移动、分享情报。"
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "总在同一位置死亡就换落点。新手每局从不同且安静的地方起步，往往进步最快。"
+      }
+     ]
+    },
+    {
+     "id": "guvenlik-ve-harcama",
+     "baslik": "账号安全与消费提醒",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "游戏虽免费，外观、活动通行证和箱子可付费购买。决定前看清购买界面，区分随机与固定内容。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "设定每月预算并遵守，不保存支付方式。",
+        "开启两步验证，不与其他网站共用密码。不要相信游戏外免费皮肤或免费 UC 承诺。只在官方游戏及商店界面输入账号，点击可疑链接前核对地址。",
+        "为儿童在商店或主机设置家长控制，消费需经批准。",
+        "不要相信假免费皮肤链接或索要登录的网站，密码只填官方登录页。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "远离作弊软件、自瞄、宏、账号买卖及代练。官方定期公布封禁，这些做法可能永久丢号，也常是骗局。"
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "常见问题",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "PUBG 免费吗？",
+         "c": "是的，无需消费；购买内容主要是外观。"
+        },
+        {
+         "s": "PC 配置够吗？",
+         "c": "最低为64位 Windows 10、8 GB RAM 及 GTX 960级显卡。要流畅游玩，应达到推荐配置。"
+        },
+        {
+         "s": "先玩哪张地图？",
+         "c": "没有强制顺序，先玩轮换分配的地图；Erangel 是经典入门图。"
+        },
+        {
+         "s": "何时进排位？",
+         "c": "普通局能从容处理安全区、物资和基本交火后再进，不必着急。"
+        },
+        {
+         "s": "PUBG Mobile 是同一款游戏吗？",
+         "c": "同系列的独立应用，操作、模式及更新时间表不同。"
+        },
+        {
+         "s": "PC 和主机玩家互通吗？",
+         "c": "官方匹配说明称 PC 的 Steam 与 Epic 互通，主机的 Xbox 与 PlayStation 互通。PC 与主机同局尚未正式公布。"
+        },
+        {
+         "s": "遇到作弊者怎么办？",
+         "c": "使用游戏内举报并保存证据，不要自行报复；你若使用禁用软件，同样会被封。"
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  }
 }

@@ -401,7 +401,7 @@ class AnahtarsizDil(Temel):
         g, hata, atlanan = self.calistir(ag, a)
         self.assertEqual((g, hata), (1, []))
         self.assertEqual(set(self.kayitlar()), {"oyun-yama-1|tr|instagram|gorsel"})
-        self.assertEqual(sorted(atlanan), ["instagram/en", "instagram/es", "instagram/fr"])
+        self.assertEqual(sorted(atlanan), [f"instagram/{d}" for d in sorted(sy.DILLER) if d != "tr"])
 
     def test_anahtar_eklenince_kod_degismeden_paylasilir(self):
         a = ayar(instagram=True)
@@ -411,7 +411,7 @@ class AnahtarsizDil(Temel):
         self.assertEqual(hata, [])
         self.assertEqual(g, 2)
         self.assertEqual(set(self.kayitlar()), {"oyun-yama-1|tr|instagram|gorsel", "oyun-yama-1|en|instagram|gorsel"})
-        self.assertEqual(sorted(atlanan), ["instagram/es", "instagram/fr"])
+        self.assertEqual(sorted(atlanan), [f"instagram/{d}" for d in sorted(sy.DILLER) if d not in ("tr", "en")])
 
     def test_dry_run_anahtarsiz_hesabi_atlandi_diye_yazar_tr_planlanir(self):
         self.manifest_yaz()
@@ -427,6 +427,9 @@ class AnahtarsizDil(Temel):
             self.assertIn(f"IG_{dil.upper()}_TOKEN", metin, "eksik değişkenin yalnız adı yazılır")
         self.assertNotIn("instagram/tr: anahtar yok", metin)
         self.assertIn("oyun-yama-1", metin, "tr planlanmış görünür")
+        self.assertIn('yerelleştirme gövdesi:', metin)
+        self.assertIn('"localizations":', metin)
+        self.assertIn('"defaultLanguage": "tr"', metin)
         self.assertNotIn("tok", metin.replace("TOKEN", ""), "değer yazılmaz")
 
     def test_anahtarsiz_goster_eski_onizlemeyi_korur(self):
@@ -443,7 +446,7 @@ class AnahtarsizDil(Temel):
         self.assertEqual(sy.paylasilacak_diller(a, dict(SIRLAR, IG_FR_USER_ID="1", IG_FR_TOKEN="t")), ["tr", "fr"])
         self.assertEqual(sy.paylasilacak_diller(a, {}), [])
         self.assertEqual(sy.paylasilacak_diller(ayar(), SIRLAR), [], "ayarda kapalıysa beklenmez")
-        self.assertEqual(sy.paylasilacak_diller(a), ["tr", "en", "fr", "es"], "anahtar verilmezse yalnız ayara bakılır")
+        self.assertEqual(sy.paylasilacak_diller(a), list(sy.DILLER), "anahtar verilmezse yalnız ayara bakılır")
 
 
 class DryRun(Temel):

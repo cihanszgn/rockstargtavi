@@ -17,7 +17,7 @@ def article(oid='oyun-yama-1'):
     return {'id': oid, 'tarih': '2026-11-15', 'oyun': 'Oyun', 'tur': 'guncelleme',
             'kaynaklar': [{'url': 'https://blog.playstation.com/2026/11/15/game-patch/', 'ad': 'PlayStation Blog'}],
             'diller': {d: {'baslik': 'Yeni oyun yaması', 'ozet': 'Yama yayımlandı.',
-                          'metin': ' '.join(['Bilgi'] * 60)} for d in h.DILLER},
+                          'metin': '游' * 120 if d == 'zh' else ' '.join(['Bilgi'] * 60)} for d in h.DILLER},
             'otomasyon': {'konu': oid, 'resmi_url': 'https://blog.playstation.com/2026/11/15/game-patch/',
                           'teyit_zamani': NOW.isoformat(), 'oyuncuya_fayda': 'Kaydetme hatası giderildi; oyuncu yamasını kurabilir.',
                           'hype': 3}}
@@ -299,8 +299,11 @@ class NewsTests(unittest.TestCase):
             root=pathlib.Path(temp)
             for directory in ('tools','otomasyon','data'):(root/directory).mkdir()
             shutil.copy2(h.ROOT/'tools/haber_oto.py',root/'tools/haber_oto.py')
+            shutil.copy2(h.ROOT/'tools/diller.py',root/'tools/diller.py')
+            shutil.copy2(h.ROOT/'data/diller.json',root/'data/diller.json')
             shutil.copy2(h.ROOT/'otomasyon/kaynaklar.json',root/'otomasyon/kaynaklar.json')
             (root/'data/icerik.json').write_text('[]\n',encoding='utf-8')
+            (root/'.gitignore').write_text('__pycache__/\n', encoding='utf-8')
             def run(*args):
                 return subprocess.run(args,cwd=root,capture_output=True,text=True,encoding='utf-8')
             self.assertEqual(run('git','init','--initial-branch=main').returncode,0)

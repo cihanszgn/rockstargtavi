@@ -618,15 +618,15 @@ class Hat:
                 hata('geçersiz haber id')
             scenarios = value.get('senaryolar') or {}
             if not isinstance(scenarios, dict) or set(scenarios) - set(oto.DILLER):
-                hata('senaryolar tr/en/es/fr nesnesi olmalı')
-            # Eski düşük hype çıktısı uyumluluğu; yüksek hype için dört dil yine zorunlu.
+                hata('senaryolar dil kaydındaki dillerden oluşan bir nesne olmalı')
+            # Eski düşük hype çıktısı uyumluluğu; yüksek hype için tr zorunlu; en/es/fr tek düzeltme sonrasında düşürülebilir.
             if value.get('senaryo') is not None and 'tr' not in scenarios:
                 scenarios['tr'] = value['senaryo']
             paths, pending = [], []
             try:
                 for lang in oto.DILLER:
                     scenario = scenarios.get(lang)
-                    if scenario is None and auto.get('hype', 0) < oto.hype_esigi():
+                    if scenario is None and (lang not in oto.SENARYO_DILLERI or auto.get('hype', 0) < oto.hype_esigi()):
                         continue
                     path = self.root / 'video/senaryo' / f'{oid}-{lang}.json'
                     if path.exists():
@@ -635,8 +635,7 @@ class Hat:
                     if isinstance(scenario, dict):
                         oto.json_yaz(path, scenario)
                         paths.append(path)
-                        import video_uret
-                        errors = video_uret.senaryo_dosyasi_denetle(path, article, lang)
+                        errors = oto.senaryo_dosyasi_denetle(path, article, lang)
                     if errors:
                         scenario_errors[lang] = scenario_errors.get(lang, 0) + 1
                         reason = '; '.join(errors[:6])
@@ -807,11 +806,7 @@ class Hat:
         changed = self.snapshot.dosyalar()
         names = {n for n in changed.keys() | self.snapshot.files.keys() if changed.get(n) != self.snapshot.files.get(n)}
         def allowed(n):
-            p = pathlib.PurePosixPath(n)
-            return (n in scenarios or n in ('data/icerik.json', 'data/gorseller.json', 'data/sayfalar.json', 'sitemap.xml', 'og.png', 'oyun-tema.css')
-                    or (p.suffix in ('.html', '.xml') and (len(p.parts) == 1 or p.parts[0] in ('oyun-haberleri', 'en', 'fr', 'es', 'oyun', 'rehber')))
-                    or re.fullmatch(r'ara-(tr|en|fr|es)\.json', n)
-                    or (p.parts[0] == 'kart' and p.suffix in ('.png', '.jpg')))
+            return yayin_dosyasi_izinli(n, scenarios)
         if not names or any(not allowed(n) for n in names):
             hata('yayın dosya izin listesi dışında değişiklik; yayın durduruldu')
         self.komut(['git', 'add', '--', *sorted(names)])
@@ -956,6 +951,21 @@ class Hat:
             log.write(json.dumps({'zaman': self.sonuc['zaman'], 'deneme': self.deneme, 'sure': self.sonuc['sure_saniye'],
                                   'eklenen': self.sonuc['eklenen'], 'onaylanan': self.sonuc.get('onaylanan', []),
                                   'hata': self.sonuc.get('hata')}, ensure_ascii=False) + '\n')
+
+
+def yayin_dosyasi_izinli(n, scenarios=()):
+    """Derleyici çıktıları tek dil kaydından; kaynak kodu ve rastgele video dosyası dahil değil."""
+    from diller import KAYIT
+    p = pathlib.PurePosixPath(n)
+    if p.is_absolute() or '..' in p.parts or not p.parts or '\\' in n:
+        return False
+    klasorler = {k['klasor'] for k in KAYIT.values() if k['klasor']}
+    klasorler.update(k[a].split('/')[0] for k in KAYIT.values()
+                     for a in ('haber_klasor', 'oyun_klasor', 'rehber_klasor'))
+    return (n in scenarios or n in ('data/icerik.json', 'data/gorseller.json', 'data/sayfalar.json', 'sitemap.xml', 'og.png', 'oyun-tema.css')
+            or (p.suffix in ('.html', '.xml') and (len(p.parts) == 1 or p.parts[0] in klasorler))
+            or n in {f'ara-{d}.json' for d in KAYIT}
+            or (p.parts[0] == 'kart' and p.suffix in ('.png', '.jpg')))
 
 
 def main():

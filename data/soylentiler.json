@@ -50,6 +50,24 @@
     "ozet": "En una declaración a Bloomberg, PlayStation confirmó la cancelación del shooter de servicio continuo Fairgames.",
     "metin": "Lo que se afirmaba: según Bloomberg, directivos de Sony escribieron al personal que los resultados de comentarios y retención de la última prueba quedaron por debajo de los objetivos y que se detenía el desarrollo de Fairgames. Cuándo y quién lo confirmó: en una declaración a Bloomberg, PlayStation dijo que Haven Studios se centrará en colaborar con otros equipos de PlayStation Studios y en explorar nuevas oportunidades creativas; GamesIndustry.biz lo publicó el 11 de noviembre de 2026 con el titular \"PlayStation cancels live-service shooter Fairgames\". La cancelación no ha supuesto despidos.",
     "guven_nedeni": "Cuando apareció el rumor, Bloomberg citaba un correo interno y dos medios importantes lo recogieron; PlayStation confirmó después la cancelación en una declaración a Bloomberg."
+   },
+   "de": {
+    "baslik": "Fairgames-Einstellung bestätigt: PlayStation beendet die Entwicklung",
+    "ozet": "PlayStation hat Bloomberg bestätigt, dass der Live-Service-Shooter Fairgames eingestellt wurde.",
+    "metin": "Die ursprüngliche Behauptung: Laut Bloomberg informierten Sony-Verantwortliche Mitarbeiter per E-Mail, dass Rückmeldungen und Spielerbindung des jüngsten Tests die Ziele verfehlt hätten und die Entwicklung ende. Die Bestätigung: PlayStation teilte Bloomberg mit, Haven Studios werde mit anderen PlayStation Studios-Teams zusammenarbeiten und neue kreative Möglichkeiten prüfen. GamesIndustry.biz berichtete darüber am 11. November 2026 unter „PlayStation cancels live-service shooter Fairgames“. Durch die Einstellung wurden keine Stellen gestrichen.",
+    "guven_nedeni": "Zunächst zitierte Bloomberg eine interne E-Mail, zwei große Medien berichteten darüber. Später bestätigte PlayStation die Einstellung gegenüber Bloomberg."
+   },
+   "nl": {
+    "baslik": "Fairgames-stop bevestigd: PlayStation beëindigt de ontwikkeling",
+    "ozet": "PlayStation bevestigde tegenover Bloomberg dat live-serviceshooter Fairgames is geschrapt.",
+    "metin": "De bewering: volgens Bloomberg mailden Sony-leidinggevenden medewerkers dat feedback en spelersbehoud bij de laatste test onder de doelen lagen en de ontwikkeling stopte. De bevestiging: PlayStation zei tegen Bloomberg dat Haven Studios met andere PlayStation Studios-teams gaat samenwerken en nieuwe creatieve kansen verkent. GamesIndustry.biz berichtte op 11 november 2026 onder ‘PlayStation cancels live-service shooter Fairgames’. Er gingen door de annulering geen banen verloren.",
+    "guven_nedeni": "Bloomberg citeerde eerst een interne e-mail, twee grote media namen dit over. Later bevestigde PlayStation de stop tegenover Bloomberg."
+   },
+   "zh": {
+    "baslik": "Fairgames 取消传闻获证实，PlayStation 停止开发",
+    "ozet": "PlayStation 向 Bloomberg 确认，在线服务射击游戏 Fairgames 已取消。",
+    "metin": "原说法：据 Bloomberg，Sony 管理层邮件告知员工，最新测试反馈与留存未达目标，因此停止开发。证实情况：PlayStation 向 Bloomberg 表示，Haven Studios 将转为与其他 PlayStation Studios 团队合作，并探索新创意机会。GamesIndustry.biz 于2026年11月11日以“PlayStation cancels live-service shooter Fairgames”为题报道。此次取消未造成裁员。",
+    "guven_nedeni": "最初 Bloomberg 引述内部邮件，两家大型媒体转述；随后 PlayStation 向 Bloomberg 确认取消。"
    }
   }
  },
@@ -95,6 +113,24 @@
     "ozet": "Según Insider Gaming, Ubisoft habría retrasado internamente Assassin's Creed Hexe un año más.",
     "metin": "El informe se basa en fuentes anónimas y apunta a 2028 como ventana de lanzamiento más probable. GamesRadar recuerda que el director creativo Clint Hocking dejó el proyecto este año y lo sustituyó Jean Guesdon. También menciona al youtuber j0nathan, que habla de otros dos proyectos de Assassin's Creed con nombre en clave, Mars y Pocket.",
     "guven_nedeni": "Se basa en fuentes anónimas y la cobertura no cita ninguna confirmación de Ubisoft."
+   },
+   "de": {
+    "baslik": "Assassin's Creed Hexe intern angeblich erneut verschoben – möglicherweise auf 2028",
+    "ozet": "Insider Gaming zufolge hat Ubisoft Assassin's Creed Hexe intern um ein weiteres Jahr verschoben.",
+    "metin": "Der Bericht stützt sich auf anonyme Quellen und bezeichnet 2028 als wahrscheinlicheren Zeitraum. GamesRadar weist darauf hin, dass Creative Director Clint Hocking das Projekt dieses Jahr verlassen und Jean Guesdon übernommen habe. Derselbe Bericht nennt YouTuber j0nathans Behauptung über zwei weitere Assassin's Creed-Projekte mit den Codenamen Mars und Pocket.",
+    "guven_nedeni": "Anonyme Quellen; eine Bestätigung von Ubisoft wird nicht angeführt."
+   },
+   "nl": {
+    "baslik": "Assassin's Creed Hexe intern mogelijk nog een jaar uitgesteld, naar 2028",
+    "ozet": "Volgens Insider Gaming heeft Ubisoft Assassin's Creed Hexe intern opnieuw een jaar uitgesteld.",
+    "metin": "Het bericht steunt op anonieme bronnen en noemt 2028 waarschijnlijker. GamesRadar schrijft dat creative director Clint Hocking eerder dit jaar vertrok en Jean Guesdon overnam. Dezelfde berichtgeving noemt YouTuber j0nathans bewering over twee andere Assassin's Creed-projecten, Mars en Pocket.",
+    "guven_nedeni": "Anonieme bronnen; geen bevestiging van Ubisoft in het bericht."
+   },
+   "zh": {
+    "baslik": "Assassin's Creed Hexe 据称再推迟一年，或至2028年",
+    "ozet": "Insider Gaming 称 Ubisoft 内部将 Assassin's Creed Hexe 再推迟一年。",
+    "metin": "报道依据匿名消息，称2028年是更可能的窗口。GamesRadar 指出创意总监 Clint Hocking 今年早些时候离职，由 Jean Guesdon 接任。同一报道还提到 YouTuber j0nathan 关于另外两个 Assassin's Creed 项目 Mars 与 Pocket 的说法。",
+    "guven_nedeni": "依赖匿名来源，未引述 Ubisoft 确认。"
    }
   }
  },
@@ -138,6 +174,24 @@
     "ozet": "Datamineros afirman que el remake de Zelda: Ocarina of Time para Switch 2 contiene código ligado a Master Quest.",
     "metin": "Nintendo Life informa de que el datamineo de MrCheeze encontró código de Master Quest en los archivos del juego. Al preguntarle IGN, el productor Eiji Aonuma dijo que no creía que fueran a anunciar nada concreto por ahora, una respuesta que los fans interpretan de formas distintas. No hay ningún anuncio oficial de Master Quest.",
     "guven_nedeni": "Se basa solo en datos residuales, que no prueban que haya un DLC previsto."
+   },
+   "de": {
+    "baslik": "Daten im Zelda: Ocarina of Time-Remake sollen auf Master Quest-DLC hindeuten",
+    "ozet": "Dataminer behaupten, im Switch 2-Remake Code zu Master Quest gefunden zu haben.",
+    "metin": "Nintendo Life berichtet, Dataminer MrCheeze habe Master Quest-Code in den Spieldateien entdeckt. Produzent Eiji Aonuma sagte IGN, er glaube nicht, dass man derzeit etwas Konkretes ankündigen werde. Fans deuten diese Antwort unterschiedlich. Eine offizielle Master Quest-Ankündigung gibt es nicht.",
+    "guven_nedeni": "Verbliebene Daten allein beweisen nicht, dass ein DLC geplant ist."
+   },
+   "nl": {
+    "baslik": "Data in Zelda: Ocarina of Time-remake zou wijzen op Master Quest-DLC",
+    "ozet": "Dataminers zeggen Master Quest-code te hebben gevonden in de Switch 2-remake.",
+    "metin": "Nintendo Life meldt dat dataminer MrCheeze Master Quest-code in de bestanden vond. Producent Eiji Aonuma zei tegen IGN niet te denken dat ze nu iets concreets zouden aankondigen. Fans lezen dat antwoord verschillend. Er is geen officiële Master Quest-aankondiging.",
+    "guven_nedeni": "Restdata alleen bewijzen niet dat DLC gepland is."
+   },
+   "zh": {
+    "baslik": "Zelda: Ocarina of Time 重制版数据据称暗示 DLC",
+    "ozet": "数据挖掘者称 Switch 2 版文件含 Master Quest 相关代码。",
+    "metin": "Nintendo Life 报道，MrCheeze 在文件发现 Master Quest 代码。制作人 Eiji Aonuma 对 IGN 表示，他不认为现在会宣布具体事项，粉丝对答复解读不一。尚无 Master Quest 官方公告。",
+    "guven_nedeni": "仅凭残留数据不能证明 DLC 已有计划。"
    }
   }
  },
@@ -183,6 +237,24 @@
     "ozet": "Según Bloomberg, al menos tres empresas han hecho ofertas por Arkane Lyon, el estudio de Marvel's Blade.",
     "metin": "Según el resumen de IGN, Ubisoft está entre los postores y no se conoce la identidad de los demás. Microsoft aún no ha aceptado ninguna oferta. Bloomberg indica que un acuerdo permitiría al estudio terminar Marvel's Blade, previsto para dentro de uno o dos años.",
     "guven_nedeni": "El informe de Bloomberg fue recogido por un medio importante, pero no se cita ninguna declaración oficial sobre una venta."
+   },
+   "de": {
+    "baslik": "Ubisoft angeblich unter den Bietern für Xbox-Studio Arkane Lyon",
+    "ozet": "Bloomberg zufolge haben mindestens drei Unternehmen für das Marvel's Blade-Studio Arkane Lyon geboten.",
+    "metin": "Laut IGNs Zusammenfassung des Berichts gehört Ubisoft zu den Bietern; die anderen Unternehmen werden nicht genannt. Microsoft habe noch kein Angebot angenommen. Bloomberg zufolge würde ein Geschäft die Fertigstellung von Marvel's Blade ermöglichen, das innerhalb der nächsten ein bis zwei Jahre erwartet werde.",
+    "guven_nedeni": "Bloombergs Bericht wurde von einem großen Medium aufgegriffen; eine offizielle Verkaufsmitteilung wird nicht zitiert."
+   },
+   "nl": {
+    "baslik": "Ubisoft zou meebieden op Xbox-studio Arkane Lyon",
+    "ozet": "Volgens Bloomberg hebben minstens drie bedrijven geboden op de Marvel's Blade-studio.",
+    "metin": "Volgens IGNs samenvatting is Ubisoft een van de bieders; de andere bedrijven zijn niet genoemd. Microsoft heeft nog geen bod geaccepteerd. Bloomberg schrijft dat een deal het voltooien van Marvel's Blade mogelijk maakt, dat binnen een tot twee jaar wordt verwacht.",
+    "guven_nedeni": "Een groot medium nam Bloombergs bericht over, maar er wordt geen officiële verkoopverklaring geciteerd."
+   },
+   "zh": {
+    "baslik": "Ubisoft 据称竞购 Xbox 旗下 Arkane Lyon",
+    "ozet": "Bloomberg 称至少三家公司竞购 Marvel's Blade 开发商 Arkane Lyon。",
+    "metin": "据 IGN 对报道的转述，Ubisoft 是竞购者之一，其他公司身份未披露，Microsoft 尚未接受任何报价。Bloomberg 称交易可让工作室完成 Marvel's Blade，该作预计在未来一至两年内推出。",
+    "guven_nedeni": "大型媒体转述 Bloomberg 报道，但未引述官方出售声明。"
    }
   }
  },
@@ -226,6 +298,24 @@
     "ozet": "Según fuentes anónimas de MP1st, el próximo juego del creador de Days Gone se presentará y lanzará en 2027.",
     "metin": "Según recoge VGC, el juego no sería una secuela de Days Gone, tendría vista en tercera persona y cooperativo, y no sería un juego de servicio continuo. Las fuentes afirman que el proyecto está mucho más avanzado de lo que se cree. No se cita ninguna declaración de Sony ni de Bend Studio.",
     "guven_nedeni": "Se basa solo en fuentes anónimas; otro medio lo recogió pero nada independiente lo confirma."
+   },
+   "de": {
+    "baslik": "Bend Studios nächstes Spiel soll 2027 vorgestellt werden und erscheinen",
+    "ozet": "Anonyme MP1st-Quellen behaupten, das nächste Spiel des Days Gone-Studios werde 2027 enthüllt und veröffentlicht.",
+    "metin": "Laut VGCs Wiedergabe soll es keine Days Gone-Fortsetzung sein. Genannt werden Third-Person-Spiel und Koop ohne Live-Service-Modell. Das Projekt sei laut Quellen viel weiter fortgeschritten als gedacht. Eine Stellungnahme von Sony oder Bend Studio wird nicht zitiert.",
+    "guven_nedeni": "Ausschließlich anonyme Quellen. Ein weiteres Medium griff den Bericht auf, unabhängig bestätigt wurde er nicht."
+   },
+   "nl": {
+    "baslik": "Volgende Bend Studio-game zou in 2027 onthuld worden en uitkomen",
+    "ozet": "Anonieme MP1st-bronnen claimen dat de nieuwe game van de Days Gone-maker in 2027 wordt onthuld en uitgebracht.",
+    "metin": "Volgens de weergave door VGC is het geen Days Gone-vervolg en heeft het third-person-gameplay en co-op zonder live-service-opzet. Bronnen zeggen dat het project verder is dan men denkt. Er wordt geen verklaring van Sony of Bend Studio geciteerd.",
+    "guven_nedeni": "Alleen anonieme bronnen. Een ander medium nam het over zonder onafhankelijke bevestiging."
+   },
+   "zh": {
+    "baslik": "Bend Studio 新作据称2027年公布并发售",
+    "ozet": "MP1st 匿名消息称 Days Gone 开发商新作将在2027年公开并推出。",
+    "metin": "据 VGC 转述，新作并非 Days Gone 续作，采用第三人称与合作玩法，但不是在线服务游戏。消息称项目进度比外界想象更靠前。报道未引述 Sony 或 Bend Studio 声明。",
+    "guven_nedeni": "仅有匿名来源，其他媒体转述不构成独立证实。"
    }
   }
  },
@@ -271,6 +361,24 @@
     "ozet": "Según Bloomberg, EA eligió Star Wars Battlefront 3 antes que Mass Effect: Universe, lo que llevó al cierre de BioWare.",
     "metin": "EA confirmó oficialmente el cierre del estudio y que no seguirá con el desarrollo inicial de Mass Effect, pero el motivo procede de las fuentes de Bloomberg. Kotaku informa de que la deuda tras la compra por capital privado habría llevado a EA a elegir uno de dos proyectos de ciencia ficción. Battlefront 3 aún no habría empezado a desarrollarse.",
     "guven_nedeni": "El cierre es oficial, pero el motivo se basa en fuentes de Bloomberg y el comunicado de EA no lo confirma."
+   },
+   "de": {
+    "baslik": "EA soll BioWare geschlossen haben, um Battlefront 3 statt Mass Effect zu priorisieren",
+    "ozet": "Bloomberg zufolge entschied sich EA gegen Mass Effect: Universe und für Star Wars Battlefront 3, was zur BioWare-Schließung führte.",
+    "metin": "EA hat die Studioschließung und das Ende der frühen Mass Effect-Entwicklung offiziell bestätigt. Die Begründung stammt jedoch von Bloomberg-Quellen. Kotaku berichtet, die Schulden nach der Private-Equity-Übernahme hätten EA zur Wahl zwischen zwei Science-Fiction-Projekten gezwungen. Die Entwicklung von Battlefront 3 soll noch nicht begonnen haben.",
+    "guven_nedeni": "Die Schließung ist offiziell, die Begründung beruht auf Bloomberg-Quellen und wird durch EAs Stellungnahme nicht bestätigt."
+   },
+   "nl": {
+    "baslik": "EA zou BioWare hebben gesloten om Battlefront 3 boven Mass Effect te kiezen",
+    "ozet": "Volgens Bloomberg koos EA Star Wars Battlefront 3 boven Mass Effect: Universe, met de sluiting van BioWare als gevolg.",
+    "metin": "EA bevestigde officieel de studiosluiting en het stopzetten van vroege Mass Effect-ontwikkeling. De reden komt echter van Bloombergs bronnen. Kotaku schrijft dat schulden na de private-equityovername EA dwongen te kiezen tussen twee sciencefictionprojecten. Battlefront 3 zou nog niet in ontwikkeling zijn.",
+    "guven_nedeni": "De sluiting is officieel; de reden steunt op Bloombergs bronnen en staat niet bevestigd in EA’s verklaring."
+   },
+   "zh": {
+    "baslik": "EA 据称为优先开发 Battlefront 3 而关闭 BioWare",
+    "ozet": "Bloomberg 称 EA 选择 Star Wars Battlefront 3 而非 Mass Effect: Universe，导致 BioWare 关闭。",
+    "metin": "EA 已正式确认关闭工作室并不再推进早期 Mass Effect 开发，但原因来自 Bloomberg 来源。Kotaku 报道，私募收购后的债务迫使 EA 在两个科幻项目间取舍。Battlefront 3 据称尚未开始开发。",
+    "guven_nedeni": "关闭已获官方确认，但原因仅来自 Bloomberg，EA 声明未证实。"
    }
   }
  },
@@ -325,6 +433,24 @@
     "ozet": "El nombre \"Sentinel\" del informe de The Verge del 29 de octubre fue confirmado por el vídeo de Bethesda del 3 de noviembre.",
     "metin": "Lo que se afirmaba: IGN, haciéndose eco de The Verge, informó de que The Elder Scrolls 6 se titula The Elder Scrolls 6: Sentinel, que transcurre en Hammerfell y que el nombre podría anunciarse el mes siguiente, en torno al 15.º aniversario de Skyrim o al 25.º de Xbox. Cuándo y quién lo confirmó: Bethesda reveló el nombre del juego en su vídeo del 40.º aniversario el 3 de noviembre de 2026; Notebookcheck escribió que esto confirma el informe de The Verge del 29 de octubre. El escenario de Hammerfell y los detalles de la historia siguen sin confirmar por Bethesda; no se anunciaron fecha de lanzamiento ni plataformas.",
     "guven_nedeni": "El informe procedía de The Verge y contenía afirmaciones concretas (nombre y momento del anuncio); sus fuentes no estaban identificadas y Bethesda no había confirmado nada entonces."
+   },
+   "de": {
+    "baslik": "The Elder Scrolls 6: Bethesda bestätigt den Namen „Sentinel“",
+    "ozet": "Der Name aus The Verges Bericht vom 29. Oktober wurde in Bethesdas Video vom 3. November bestätigt.",
+    "metin": "Die Behauptung: IGN berichtete unter Berufung auf The Verge, The Elder Scrolls 6 heiße The Elder Scrolls 6: Sentinel und spiele in Hammerfell. Der Name könne im Folgemonat zum 15. Skyrim- oder 25. Xbox-Jubiläum enthüllt werden. Die Bestätigung: Bethesda nannte den Namen im Video zum 40. Jubiläum am 3. November 2026. Notebookcheck schrieb, dies bestätige The Verges Bericht vom 29. Oktober. Hammerfell und Handlungsdetails sind weiter unbestätigt; Termin und Plattformen wurden nicht genannt.",
+    "guven_nedeni": "The Verge nannte konkrete Angaben zu Name und Zeitpunkt. Die Quellen waren anonym und Bethesda hatte damals nichts bestätigt."
+   },
+   "nl": {
+    "baslik": "The Elder Scrolls 6: Bethesda bevestigt de naam ‘Sentinel’",
+    "ozet": "De naam uit The Verges bericht van 29 oktober is bevestigd in Bethesda’s video van 3 november.",
+    "metin": "De bewering: IGN meldde op basis van The Verge dat The Elder Scrolls 6 de ondertitel Sentinel heeft, zich in Hammerfell afspeelt en dat de naam de volgende maand rond Skyrim’s 15-jarig of Xbox’ 25-jarig jubileum kon worden onthuld. De bevestiging: Bethesda onthulde de naam op 3 november 2026 in de video voor het 40-jarig bestaan. Notebookcheck schreef dat dit The Verges bericht van 29 oktober bevestigde. Hammerfell en verhaaldetails zijn niet bevestigd; datum en platforms ontbreken.",
+    "guven_nedeni": "The Verge noemde concrete details over naam en timing, maar had anonieme bronnen en toen nog geen Bethesda-bevestiging."
+   },
+   "zh": {
+    "baslik": "The Elder Scrolls 6 名称 Sentinel 获证实",
+    "ozet": "The Verge 10月29日披露的名称，在 Bethesda 11月3日视频中获确认。",
+    "metin": "原说法：IGN 转述 The Verge，称 The Elder Scrolls 6 名为 The Elder Scrolls 6: Sentinel，背景为 Hammerfell，名称可能下月在 Skyrim 15周年或 Xbox 25周年前后公布。证实情况：Bethesda 在2026年11月3日40周年视频中公开名称，Notebookcheck 称这证实 The Verge 10月29日报道。Hammerfell 背景与剧情仍未获 Bethesda 确认，未公布日期或平台。",
+    "guven_nedeni": "The Verge 给出名称和时间等具体说法，但来源匿名，当时 Bethesda 尚未确认。"
    }
   }
  },
@@ -370,6 +496,24 @@
     "ozet": "Una nueva oferta de empleo de CD Projekt Red ha alimentado la especulación sobre elementos multijugador en Cyberpunk 2.",
     "metin": "Eurogamer señala que la oferta busca a alguien con experiencia en «multiplayer network architecture». El artículo recuerda también que el CEO Adam Badowski dijo en 2024 que el equipo «consideraba» elementos multijugador para la secuela. La deducción se basa en una oferta de empleo y el estudio no ha confirmado ninguna función multijugador.",
     "guven_nedeni": "Es solo una deducción a partir de una oferta de empleo, que no nombra ningún juego ni función concreta."
+   },
+   "de": {
+    "baslik": "Cyberpunk 2: Stellenanzeige löst Spekulation über Mehrspielerquests aus",
+    "ozet": "Eine neue CD Projekt Red-Stellenanzeige weckt Vermutungen über Mehrspielerelemente in Cyberpunk 2.",
+    "metin": "Eurogamer zufolge sucht die Anzeige jemanden mit Erfahrung in „multiplayer network architecture“. Der Artikel erinnert daran, dass CEO Adam Badowski 2024 sagte, das Team „erwäge“ Mehrspielerelemente für die Fortsetzung. Die Schlussfolgerung beruht auf einer Stellenanzeige; das Studio hat keine Mehrspielerfunktion bestätigt.",
+    "guven_nedeni": "Nur eine Ableitung aus einer Stellenanzeige, die weder ein konkretes Spiel noch eine Funktion nennt."
+   },
+   "nl": {
+    "baslik": "Cyberpunk 2 mogelijk met multiplayerquests, op basis van vacature",
+    "ozet": "Een nieuwe CD Projekt Red-vacature leidt tot speculatie over multiplayer in Cyberpunk 2.",
+    "metin": "Eurogamer meldt dat de vacature ervaring met ‘multiplayer network architecture’ vraagt. Het artikel herinnert aan CEO Adam Badowski’s uitspraak uit 2024 dat het team multiplayer voor het vervolg ‘overwoog’. De conclusie steunt op een vacature; de studio bevestigde geen multiplayerfunctie.",
+    "guven_nedeni": "Alleen een gevolgtrekking uit een vacature die geen specifieke game of functie noemt."
+   },
+   "zh": {
+    "baslik": "Cyberpunk 2 招聘信息引发多人任务猜测",
+    "ozet": "CD Projekt Red 新职位引发 Cyberpunk 2 或含多人元素的猜测。",
+    "metin": "Eurogamer 称职位要求熟悉“multiplayer network architecture”。文章回顾 CEO Adam Badowski 在2024年称团队正“考虑”续作多人元素。推断依据招聘信息，工作室未确认任何多人功能。",
+    "guven_nedeni": "只是从招聘信息推断，职位未指明具体游戏或功能。"
    }
   }
  },
@@ -413,6 +557,24 @@
     "ozet": "Mike Morasky, de Valve, mencionó en una conferencia HLX, que durante mucho tiempo se ha creído que es el nombre en clave de Half-Life 3.",
     "metin": "Según IGN, Morasky dijo en una sesión de preguntas de la GameSoundCon que Deadlock y HLX usan cada uno su propio tipo de audio HDR. Desde hace años, los datamineros encuentran referencias a un proyecto llamado «HLX» y se cree ampliamente que es Half-Life 3. Valve no ha explicado qué es HLX.",
     "guven_nedeni": "Un empleado de Valve nombró HLX, pero nada confirma que sea Half-Life 3."
+   },
+   "de": {
+    "baslik": "Valve-Entwickler erwähnt „HLX“ und entfacht Half-Life 3-Gerüchte erneut",
+    "ozet": "Valves Mike Morasky nannte bei einer Konferenz HLX, das lange als möglicher Half-Life 3-Codename gilt.",
+    "metin": "IGN berichtet, Morasky habe bei einer GameSoundCon-Fragerunde gesagt, Deadlock und HLX nutzten jeweils ihre eigene Art von HDR-Audio. Dataminer finden seit Jahren Verweise auf „HLX“, das weithin für Half-Life 3 gehalten wird. Valve hat nicht erklärt, was HLX ist.",
+    "guven_nedeni": "Ein Valve-Mitarbeiter nannte HLX; dass es Half-Life 3 ist, ist nicht bestätigt."
+   },
+   "nl": {
+    "baslik": "Valve-ontwikkelaar noemt ‘HLX’ en wakkert Half-Life 3-geruchten aan",
+    "ozet": "Mike Morasky van Valve noemde op een conferentie HLX, dat vaak als Half-Life 3-codenaam wordt gezien.",
+    "metin": "IGN meldt dat Morasky tijdens een GameSoundCon-vragensessie zei dat Deadlock en HLX elk hun eigen soort HDR-audio gebruiken. Dataminers vinden al jaren verwijzingen naar ‘HLX’, waarvan breed wordt vermoed dat het Half-Life 3 is. Valve legde niet uit wat HLX is.",
+    "guven_nedeni": "Een Valve-medewerker noemde HLX, maar niets bevestigt dat dit Half-Life 3 is."
+   },
+   "zh": {
+    "baslik": "Valve 开发者提到 HLX，再引 Half-Life 3 猜测",
+    "ozet": "Mike Morasky 在会议提及长期被认为是 Half-Life 3 代号的 HLX。",
+    "metin": "IGN 报道，Morasky 在 GameSoundCon 问答中表示，Deadlock 与 HLX 各用自己的 HDR 音频类型。数据挖掘者多年来发现“HLX”项目线索，普遍被猜测为 Half-Life 3。Valve 尚未解释 HLX 是什么。",
+    "guven_nedeni": "Valve 员工确实提及 HLX，但没有证据确认它就是 Half-Life 3。"
    }
   }
  },
@@ -462,6 +624,24 @@
     "ozet": "Según Fortune, la estimación interna de Xbox para Project Helix se sitúa entre 1.200 y 1.800 dólares.",
     "metin": "Según el informe recogido por Eurogamer, Helix llegaría en dos dispositivos: primero una portátil con objetivo en las navidades de 2027 y después la consola de sobremesa en las navidades de 2028. El precio se describe como lo que Xbox espera cobrar a los jugadores si la consola no se subvenciona. Microsoft no ha anunciado esas cifras.",
     "guven_nedeni": "Se basa en el informe de Fortune y dos medios importantes lo recogieron, pero son estimaciones internas sin confirmación de Microsoft."
+   },
+   "de": {
+    "baslik": "Fortune: Nächste Xbox soll 1.200–1.800 US-Dollar kosten und 2028 erscheinen",
+    "ozet": "Fortune zufolge liegt Xbox' interne Schätzung für Project Helix zwischen 1.200 und 1.800 US-Dollar.",
+    "metin": "Laut dem von Eurogamer wiedergegebenen Bericht soll Helix aus zwei Geräten bestehen: zuerst ein Handheld zum Weihnachtsgeschäft 2027, dann die Hauptkonsole fürs TV zum Weihnachtsgeschäft 2028. Der Preis bezeichnet laut Bericht die erwarteten Verbraucherkosten ohne Subventionierung. Microsoft hat diese Zahlen nicht angekündigt.",
+    "guven_nedeni": "Fortunes Bericht wurde von zwei großen Medien aufgegriffen. Es sind unbestätigte interne Schätzungen ohne Microsoft-Bestätigung."
+   },
+   "nl": {
+    "baslik": "Fortune: volgende Xbox mogelijk $1.200–$1.800 en in 2028",
+    "ozet": "Fortune meldt dat Xbox intern voor Project Helix een prijs van $1.200 tot $1.800 inschat.",
+    "metin": "Volgens het door Eurogamer weergegeven bericht komt Helix als twee apparaten: eerst een handheld rond de feestdagen van 2027 en de hoofdconsole voor onder de tv rond de feestdagen van 2028. De prijs is omschreven als de verwachte consumentenprijs zonder subsidie. Microsoft kondigde deze cijfers niet aan.",
+    "guven_nedeni": "Fortunes bericht werd door twee grote media overgenomen, maar het zijn interne schattingen zonder Microsoft-bevestiging."
+   },
+   "zh": {
+    "baslik": "Fortune：下一代 Xbox 或售1200至1800美元",
+    "ozet": "Fortune 称 Xbox 内部估计 Project Helix 价格在1200至1800美元。",
+    "metin": "据 Eurogamer 转述，Helix 将分两个设备：掌机目标为2027年假日季，电视主机为2028年假日季。价格指不补贴情况下 Xbox 预期消费者支付金额。Microsoft 未公布这些数字。",
+    "guven_nedeni": "Fortune 报道被两家大型媒体转述，但只是内部估算，未获 Microsoft 确认。"
    }
   }
  },
@@ -505,6 +685,24 @@
     "ozet": "Basándose en cuatro fuentes anónimas, GamesBeat afirma que la versión de PC de GTA VI llegará en los tres primeros meses de 2027.",
     "metin": "Según el artículo, Rockstar planea lanzar la versión de PC en el primer trimestre de 2027, mientras que el juego sale en consolas el 19 de noviembre de 2026. La versión de PC tendrá que alcanzar el mismo nivel de calidad que la de consolas. Un representante de Rockstar no respondió a la solicitud de comentarios.",
     "guven_nedeni": "Procede de un solo medio con cuatro fuentes anónimas, y Rockstar no ha comentado."
+   },
+   "de": {
+    "baslik": "GTA VI-PC-Version angeblich für das erste Quartal 2027 geplant",
+    "ozet": "GamesBeat nennt vier anonyme Branchenquellen für einen PC-Start in den ersten drei Monaten 2027.",
+    "metin": "Laut Bericht plant Rockstar die PC-Version für das erste Quartal 2027, während das Spiel am 19. November 2026 auf Konsolen startet. Die PC-Version müsse dieselben Qualitätsanforderungen erfüllen. Ein Rockstar-Sprecher antwortete nicht auf die Bitte um Stellungnahme.",
+    "guven_nedeni": "Ein einzelnes Medium zitiert vier anonyme Quellen. Rockstar hat nicht kommentiert."
+   },
+   "nl": {
+    "baslik": "Pc-versie van GTA VI naar verluidt gepland voor eerste kwartaal 2027",
+    "ozet": "GamesBeat noemt vier anonieme industriebronnen voor een pc-release in de eerste drie maanden van 2027.",
+    "metin": "Volgens het bericht plant Rockstar de pc-versie voor het eerste kwartaal van 2027, terwijl de consolerelease op 19 november 2026 is. De pc-versie moet dezelfde kwaliteitslat halen. Een Rockstar-vertegenwoordiger reageerde niet op het verzoek om commentaar.",
+    "guven_nedeni": "Eén medium citeert vier anonieme bronnen. Rockstar gaf geen commentaar."
+   },
+   "zh": {
+    "baslik": "GTA VI PC 版据称计划2027年第一季度推出",
+    "ozet": "GamesBeat 引述四名匿名业内人士，称 PC 版将于2027年前三个月推出。",
+    "metin": "报道称 Rockstar 计划2027年第一季度发布 PC 版，主机版则于2026年11月19日发售。PC 版需达到与主机相同的质量标准。Rockstar 代表未回应置评请求。",
+    "guven_nedeni": "单一媒体引述四名匿名来源，Rockstar 未评论。"
    }
   }
  },
@@ -553,6 +751,24 @@
     "ozet": "El nuevo Metroid 2D del cartel filtrado de EB Games se presentó oficialmente en el Nintendo Direct del 9 de septiembre.",
     "metin": "Lo que se afirmaba: según ScreenRant, un cartel filtrado de EB Games (Australia) mostraba que en el Nintendo Direct de septiembre se anunciaría un nuevo Metroid 2D llamado Metroid: Ravenous. Cuándo y quién lo confirmó: Nintendo anunció Metroid Ravenous en el Direct del 9 de septiembre de 2026 y lo describió en su web oficial como una \"aventura 2D totalmente nueva\". La fecha de lanzamiento del cartel no se cumplió (entrada aparte: la fecha oficial es el 28 de enero de 2027).",
     "guven_nedeni": "La filtración se basaba en un único cartel de una tienda y ScreenRant decía que no estaba confirmada; sin embargo, según ScreenRant, el mismo nombre ya había aparecido en julio en una web brasileña de clasificación por edades."
+   },
+   "de": {
+    "baslik": "Metroid Ravenous bestätigt: Nintendo kündigt neues 2D-Metroid im Direct an",
+    "ozet": "Das neue 2D-Metroid vom geleakten EB Games-Plakat wurde im Nintendo Direct am 9. September vorgestellt.",
+    "metin": "Die Behauptung: Laut ScreenRant zeigte ein geleaktes Plakat des australischen Händlers EB Games, dass Metroid: Ravenous im September-Direct angekündigt werde. Die Bestätigung: Nintendo stellte Metroid Ravenous im Direct am 9. September 2026 vor und bezeichnete es auf seiner Website als völlig neues 2D-Abenteuer. Der Plakattermin bestätigte sich nicht: Der offizielle Termin ist der 28. Januar 2027, siehe separaten Eintrag.",
+    "guven_nedeni": "Nur ein Händlerplakat, laut ScreenRant unbestätigt. ScreenRant verwies aber auf denselben Namen auf einer brasilianischen Altersfreigabeseite im Juli."
+   },
+   "nl": {
+    "baslik": "Metroid Ravenous bevestigd: Nintendo onthult nieuwe 2D-Metroid in Direct",
+    "ozet": "De game op de gelekte EB Games-poster is officieel onthuld in de Direct van 9 september.",
+    "metin": "De bewering: volgens ScreenRant toonde een gelekte poster van de Australische winkel EB Games dat Metroid: Ravenous in de Nintendo Direct van september zou worden onthuld. De bevestiging: Nintendo kondigde Metroid Ravenous aan op 9 september 2026 en noemde het op de site een geheel nieuw 2D-avontuur. De posterdatum klopte niet: de officiële datum is 28 januari 2027, zie het aparte bericht.",
+    "guven_nedeni": "Slechts één winkelposter, volgens ScreenRant onbevestigd. Wel meldde ScreenRant dezelfde naam op een Braziliaanse leeftijdskeuringssite in juli."
+   },
+   "zh": {
+    "baslik": "Metroid Ravenous 传闻获证实",
+    "ozet": "泄露 EB Games 海报上的新2D Metroid，已在9月9日 Nintendo Direct 正式公布。",
+    "metin": "原说法：据 ScreenRant，澳大利亚零售商 EB Games 泄露海报显示，Metroid: Ravenous 将在9月 Nintendo Direct 公布。证实情况：Nintendo 在2026年9月9日 Direct 宣布 Metroid Ravenous，官网称其为全新2D冒险。海报日期未获印证：正式发售日为2027年1月28日，另见日期条目。",
+    "guven_nedeni": "仅一张零售海报，ScreenRant 称未证实，但指出同名曾于7月出现在巴西分级网站。"
    }
   }
  },
@@ -601,6 +817,24 @@
     "ozet": "La fecha del 10 de diciembre de 2026 del cartel filtrado contradijo la fecha anunciada por Nintendo, el 28 de enero de 2027.",
     "metin": "Lo que se afirmaba: según ScreenRant, el cartel filtrado de EB Games indicaba que Metroid Ravenous saldría el 10 de diciembre de 2026. Cuándo y quién lo desmintió: tras el Direct del 9 de septiembre de 2026, la web oficial de Nintendo anunció que el juego y su Special Edition saldrán el 28 de enero de 2027; la fecha del cartel no se cumplió.",
     "guven_nedeni": "La fecha aparecía solo en un cartel y ScreenRant señalaba que la filtración no estaba confirmada y que la fecha resultaba sorprendente."
+   },
+   "de": {
+    "baslik": "Metroid Ravenous: 10. Dezember widerlegt, offizieller Termin 28. Januar 2027",
+    "ozet": "Das Plakat nannte den 10. Dezember 2026, Nintendo hingegen den 28. Januar 2027.",
+    "metin": "Die Behauptung: ScreenRant zufolge zeigte das geleakte EB Games-Plakat den 10. Dezember 2026 als Metroid Ravenous-Termin. Die Widerlegung: Nach dem Direct vom 9. September 2026 kündigte Nintendos Website Spiel und Special Edition für den 28. Januar 2027 an. Das Plakatdatum bestätigte sich nicht.",
+    "guven_nedeni": "Der Termin stand nur auf einem Plakat. ScreenRant bezeichnete den Leak als unbestätigt und das Datum als überraschend."
+   },
+   "nl": {
+    "baslik": "Metroid Ravenous: 10 december ontkracht, officiële datum 28 januari 2027",
+    "ozet": "De poster noemde 10 december 2026, Nintendo kondigde 28 januari 2027 aan.",
+    "metin": "De bewering: volgens ScreenRant zette de gelekte EB Games-poster Metroid Ravenous op 10 december 2026. De weerlegging: na de Direct van 9 september 2026 kondigde Nintendo op de officiële site de game en Special Edition voor 28 januari 2027 aan. De posterdatum hield geen stand.",
+    "guven_nedeni": "De datum stond op één poster. ScreenRant noemde de lek onbevestigd en de datum verrassend."
+   },
+   "zh": {
+    "baslik": "Metroid Ravenous 的12月10日发售传闻被否定",
+    "ozet": "海报标注2026年12月10日，与 Nintendo 公布的2027年1月28日相矛盾。",
+    "metin": "原说法：ScreenRant 称泄露的 EB Games 海报标注 Metroid Ravenous 将于2026年12月10日推出。否定情况：2026年9月9日 Direct 后，Nintendo 官网宣布游戏及 Special Edition 于2027年1月28日推出，海报日期不成立。",
+    "guven_nedeni": "日期只来自一张海报，ScreenRant 指出泄露未证实且日期出人意料。"
    }
   }
  },
@@ -648,6 +882,24 @@
     "ozet": "Un cartel filtrado y una ficha de tienda decían 12 de noviembre; Nintendo lanzó el juego el 5 de noviembre de 2026.",
     "metin": "Lo que se afirmaba: según ScreenRant, el cartel filtrado de EB Games daba el remake de Ocarina of Time para el 12 de noviembre de 2026, y el artículo señalaba que coincidía con una ficha de la tienda sueca Retrospelbutiken. Cuándo y quién lo desmintió: la página de tienda oficial de Nintendo indica el 5 de noviembre de 2026 como fecha de lanzamiento; la fecha del cartel y de la ficha de tienda no se cumplió.",
     "guven_nedeni": "La fecha aparecía en dos fuentes de venta distintas, pero ScreenRant señalaba que la filtración no estaba confirmada."
+   },
+   "de": {
+    "baslik": "Ocarina of Time-Remake: 12. November widerlegt, Veröffentlichung war am 5. November 2026",
+    "ozet": "Ein geleaktes Plakat und ein Händlerlisteneintrag nannten den 12. November; Nintendo veröffentlichte am 5. November.",
+    "metin": "Die Behauptung: Laut ScreenRant nannte das geleakte EB Games-Plakat den 12. November 2026 für das Ocarina of Time-Remake. Dies passe zu einer Listung beim schwedischen Händler Retrospelbutiken. Die Widerlegung: Nintendos offizielle Shopseite nennt den 5. November 2026. Plakat und Händlerlistung lagen falsch.",
+    "guven_nedeni": "Zwei separate Händlerquellen nannten das Datum; ScreenRant wies auf den unbestätigten Leak hin."
+   },
+   "nl": {
+    "baslik": "Ocarina of Time-remake: 12 november ontkracht, officiële release 5 november 2026",
+    "ozet": "Een gelekte poster en winkelvermelding noemden 12 november, Nintendo bracht de game op 5 november uit.",
+    "metin": "De bewering: volgens ScreenRant noemde de gelekte EB Games-poster 12 november 2026 voor de remake, overeenkomstig een vermelding bij de Zweedse winkel Retrospelbutiken. De weerlegging: Nintendo’s officiële winkelpagina geeft 5 november 2026. Poster en winkelvermelding bleken onjuist.",
+    "guven_nedeni": "Twee afzonderlijke winkelbronnen noemden de datum, maar ScreenRant wees erop dat de lek onbevestigd was."
+   },
+   "zh": {
+    "baslik": "Ocarina of Time 重制版11月12日传闻被否定",
+    "ozet": "泄露海报与零售页面称11月12日，Nintendo 实际于2026年11月5日推出。",
+    "metin": "原说法：据 ScreenRant，EB Games 泄露海报标注重制版2026年11月12日推出，与瑞典零售商 Retrospelbutiken 页面一致。否定情况：Nintendo 官方商店列出2026年11月5日，海报与零售日期均不成立。",
+    "guven_nedeni": "虽有两个独立零售来源，ScreenRant 仍指出泄露未经证实。"
    }
   }
  },
@@ -701,6 +953,24 @@
     "ozet": "Un bloguero que probó el juego en la Gamescom habló de 60 fps; la emisión de CD Projekt Red del 28 de agosto mostró un objetivo de 30-40 fps.",
     "metin": "Lo que se afirmaba: según Notebookcheck, un bloguero polaco que probó el juego en la Gamescom escribió que la versión de Switch 2 de The Witcher 3: Wild Hunt Remastered funciona a 60 fps. Cuándo y quién lo desmintió: CD Projekt Red reveló el rendimiento en Switch 2 en su emisión de la gamescom del 28 de agosto de 2026; según Nintendo Life, el objetivo es 1080p en modo TV y 720p en modo portátil, con 30-40 fps en ambos modos (con VRR). Nota: las cifras proceden de la noticia de Nintendo Life sobre la emisión; el texto de descripción de la página de la emisión no las contiene.",
     "guven_nedeni": "La afirmación se basaba en la impresión de un solo bloguero en la feria y CD Projekt Red no había publicado detalles de rendimiento; según Notebookcheck, un sitio alemán también observó más de 30 fps."
+   },
+   "de": {
+    "baslik": "Witcher 3 Remastered auf Switch 2: 60 fps widerlegt, Ziel sind 30–40 fps",
+    "ozet": "Ein Gamescom-Blogger behauptete 60 fps; CD Projekts Stream vom 28. August zeigte ein Ziel von 30–40 fps.",
+    "metin": "Die Behauptung: Notebookcheck zufolge schrieb ein polnischer Blogger nach einem Gamescom-Test, The Witcher 3: Wild Hunt Remastered laufe auf Switch 2 mit 60 fps. Die Widerlegung: CD Projekt Red zeigte die Leistung im gamescom-Stream am 28. August 2026. Laut Nintendo Life sind 1080p im Dock und 720p mobil das Ziel, jeweils mit 30–40 fps und VRR. Hinweis: Die Zahlen stammen aus Nintendo Lifes Streambericht, nicht aus dem Beschreibungstext der Streamseite.",
+    "guven_nedeni": "Ein einzelner Messe-Eindruck, damals ohne offizielle Leistungsdetails. Laut Notebookcheck hatte auch eine deutsche Seite mehr als 30 fps beobachtet."
+   },
+   "nl": {
+    "baslik": "Witcher 3 Remastered op Switch 2: 60 fps ontkracht, doel is 30–40 fps",
+    "ozet": "Een Gamescom-blogger claimde 60 fps; CD Projekts stream van 28 augustus liet 30–40 fps als doel zien.",
+    "metin": "De bewering: volgens Notebookcheck schreef een Poolse blogger na een Gamescom-test dat The Witcher 3: Wild Hunt Remastered op Switch 2 met 60 fps draait. De weerlegging: CD Projekt Red toonde de prestaties op 28 augustus 2026 in de gamescom-stream. Volgens Nintendo Life is het doel 1080p in het dock en 720p handheld, beide met 30–40 fps en VRR. Let op: de cijfers komen uit Nintendo Lifes streamverslag, niet uit de beschrijving van de streampagina.",
+    "guven_nedeni": "Eén beursindruk, toen zonder gepubliceerde CD Projekt Red-prestatiedetails. Volgens Notebookcheck zag ook een Duitse site meer dan 30 fps."
+   },
+   "zh": {
+    "baslik": "Witcher 3 Remastered 的 Switch 2 60帧传闻被否定",
+    "ozet": "Gamescom 试玩博主称60 fps，CD Projekt 8月28日直播公布目标为30至40 fps。",
+    "metin": "原说法：据 Notebookcheck，一名波兰博主试玩后称 Switch 2 版 The Witcher 3: Wild Hunt Remastered 为60 fps。否定情况：CD Projekt Red 在2026年8月28日 gamescom 直播展示性能。据 Nintendo Life，目标为底座1080p、掌机720p，均为30至40 fps，支持 VRR。注意数字来自 Nintendo Life 对直播的报道，直播页描述不含这些数字。",
+    "guven_nedeni": "只是一名博主的展会印象，当时 CD Projekt Red 未公开性能详情。Notebookcheck 称一家德国网站也观察到超过30 fps。"
    }
   }
  }

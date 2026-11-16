@@ -2660,6 +2660,1974 @@
      ]
     }
    ]
+  },
+  "de": {
+   "baslik": "World of Warcraft Einsteiger-Guide: Midnight 2026",
+   "ozet": "Ein Leitfaden für Einsteiger und Rückkehrer zu World of Warcraft in der Midnight-Ära: kostenlose Testversion, Account, erste Schritte, Leveln, Gold und Sicherheit.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "MMORPG"
+    },
+    {
+     "ad": "Plattform",
+     "deger": "Windows (Battle.net App)"
+    },
+    {
+     "ad": "Preismodell",
+     "deger": "Abonnement oder Spielzeit; kostenlose Testversion bis Stufe 20. In der Türkei beträgt das 1-Monats-Abo 399,99 TRY (Blizzard-Mitteilung, gültig ab 17. Januar 2025)"
+    },
+    {
+     "ad": "Aktuelle Version",
+     "deger": "Midnight (11. Erweiterung), Patch 12.1.5, Saison 2"
+    },
+    {
+     "ad": "Türkische Sprachunterstützung",
+     "deger": "Ein türkischer Spielclient ist in offiziellen Quellen nicht veröffentlicht; türkische Shop- und Preisseiten existieren"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "Wo das Spiel im Jahr 2026 steht",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "World of Warcraft ist das Online-Rollenspiel von Blizzard, das seit 2004 läuft. Die heute aktive Version ist **Midnight**: Die 11. Erweiterung startete am 2. März 2026 und hob die Höchststufe auf **90** an. Neu hinzugekommen sind das Volk der **Haranir**, eine dritte Dämonenjäger-Spezialisierung namens **Devourer** (Verschlinger), Spielerbehausungen (Player Housing), das Beutesystem (Prey), kurze dungeonähnliche Tiefen (Delves) und die neue Hub-Stadt Silbermond."
+      },
+      {
+       "tip": "p",
+       "metin": "Auf den Live-Servern erschien **Patch 12.1.5** am 13.–14. Oktober 2026 als Mid-Season-Update der Midnight Saison 2, die im August begann. Der nächste Patch, 12.1.7, befindet sich auf dem öffentlichen Testrealm (PTR) und hatte Mitte Oktober noch kein angekündigtes Veröffentlichungsdatum. Verfolge den News-Bildschirm im Spiel und die News-Seite von Blizzard für aktuelle Termine."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Patchnummern und Saisondaten ändern sich häufig. Die hier aufgeführten Versionsinformationen entsprechen dem Stand vom 14. November 2026."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Vor dem Start: Account, Kosten, PC",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Du benötigst einen kostenlosen **Battle.net**-Account und die Battle.net-Desktop-App. Neue Accounts erhalten eine **kostenlose Testversion**: bis Stufe 20, einschließlich der Dungeons auf diesen Stufen. Mit dem kostenlosen Account gibt es keine Gilde, unbegrenzten Chat oder Auktionshaus."
+      },
+      {
+       "tip": "p",
+       "metin": "Ab Stufe 20 benötigst du ein **Abonnement** oder **Spielzeit** (Game Time). Laut Battle.net Shop deckt das Abonnement die Stufen 1–80 in World of Warcraft, 1–60 in WoW: Forever, 1–60 in Classic und 1–90 in Mists of Pandaria Classic ab. Die Midnight-Erweiterung wird separat verkauft; du benötigst sie, um über Stufe 80 hinauszugehen und Midnight-Inhalte zu spielen. Die Kündigung erfolgt in der Accountverwaltung; Verlängerungen erfolgen automatisch."
+      },
+      {
+       "tip": "p",
+       "metin": "**Preise in der Türkei (letzte offizielle Mitteilung Stand November 2026):** Blizzard führte ab dem 17. Januar 2025 neue Preise für die Türkei ein. Eine neuere Mitteilung für die Türkei lag nicht vor; der Betrag im Shop kann sich geändert haben, prüfe daher den Warenkorb vor dem Bezahlen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Produkt (Türkei)",
+        "Preis (Mitteilung Januar 2025)"
+       ],
+       "satirlar": [
+        [
+         "1-Monats-Abonnement",
+         "399.99 TRY"
+        ],
+        [
+         "3-Monats-Abonnement",
+         "1,049.99 TRY"
+        ],
+        [
+         "6-Monats-Abonnement",
+         "1,799.99 TRY"
+        ],
+        [
+         "12-Monats-Abonnement",
+         "3,599.98 TRY"
+        ],
+        [
+         "60 Tage Spielzeit",
+         "799.98 TRY"
+        ],
+        [
+         "The War Within Base Edition (vorherige Erweiterung)",
+         "1,399.99 TRY"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Der Türkei-Preis der Midnight-Erweiterung ist in dieser Mitteilung nicht enthalten, und die lesbare Midnight-Seite im US-Battle.net-Shop nannte keinen eindeutigen Preis; daher wurde **der TRY-Betrag für Midnight nicht offiziell angekündigt**. Der US-Shop listet auch Heroic- und Epic-Editionen für Midnight: Heroic fügt ein zusätzliches Reittier und Erscheinungspaket hinzu, Epic bietet 30 Tage Spielzeit, zwei Haustiere, zwei Reittiere und ein Housing-Paket."
+      },
+      {
+       "tip": "p",
+       "metin": "**Systemanforderungen (Midnight, Liste auf der Blizzard-Supportseite):** Das Minimum umfasst Windows 10 64-Bit (Update vom Mai 2019 oder neuer), einen 6-Kern-Prozessor mit bis zu 4,0 GHz Boost (Intel Coffee Lake oder AMD Zen 2 und neuer), eine 4 GB DirectX 12-Grafikkarte (GeForce GTX 10-Serie, Radeon RDNA 1 oder Intel Iris Xe2), 8 GB RAM, 128 GB freien SSD-Speicherplatz und Breitband-Internet. Das empfohlene Setup verlangt Windows 11, einen Prozessor mit 8 Performance-Kernen und bis zu 5,2 GHz (Core Ultra Serie 2 oder Ryzen Zen 5), eine 8 GB Grafikkarte (RTX 40-Serie, RDNA 3 oder Arc B-Serie) und 16 GB RAM. Tastatur und Maus sind erforderlich."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Anforderung",
+        "Minimum",
+        "Empfohlen"
+       ],
+       "satirlar": [
+        [
+         "Betriebssystem",
+         "Windows 10 64-bit",
+         "Windows 11"
+        ],
+        [
+         "Prozessor",
+         "6 Kerne, 4.0 GHz",
+         "8 Performance-Kerne, 5.2 GHz"
+        ],
+        [
+         "Grafikkarte",
+         "4 GB, DirectX 12",
+         "8 GB, DirectX 12"
+        ],
+        [
+         "RAM",
+         "8 GB",
+         "16 GB"
+        ],
+        [
+         "Speicherplatz",
+         "128 GB SSD",
+         "128 GB SSD"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Die Community empfand die Liste der empfohlenen Anforderungen als anspruchsvoll; die Blizzard-Seite ist die Hauptquelle für diese Aufstellung. Lies auf einem älteren Computer vor dem Kauf die aktuelle Liste auf der Support-Seite."
+      },
+      {
+       "tip": "p",
+       "metin": "**Realm und Höchststufe:** Die Maximalstufe mit Midnight beträgt 90. Eine separate Realmliste für türkische Konten ist in offiziellen Quellen nicht veröffentlicht; Preisankündigungen erfolgen in den EU-Foren, weshalb Spieler aus der Türkei den Ankündigungen der europäischen Region folgen. Den Realm wählst du bei der Charaktererstellung im Spiel aus."
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "Die ersten Stunden, Schritt für Schritt",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Account erstellen und sichern",
+         "metin": "Erstelle einen Battle.net-Account, bestätige deine E-Mail-Adresse und aktiviere anschließend die Zwei-Faktor-Authentifizierung in den Kontoeinstellungen."
+        },
+        {
+         "baslik": "Spiel installieren",
+         "metin": "Wähle in der Battle.net App World of Warcraft aus und installiere das Hauptspiel (Retail). Der Download ist umfangreich, sorge also für freien Festplattenspeicher und eine stabile Verbindung."
+        },
+        {
+         "baslik": "Volk und Klasse wählen",
+         "metin": "Neue Spieler werden bei der Charaktererstellung in ein kurzes Startgebiet namens Exile's Reach (Insel des Verbannten) geschickt. Es vermittelt die grundlegende Steuerung."
+        },
+        {
+         "baslik": "Der Führung folgen",
+         "metin": "Nach dem Start leitet dich das Spiel in eine Erweiterungs-Story. Blizzard führt neue Spieler über eine beschleunigte The War Within-Storyline bis Stufe 80, die zugleich die Vorgeschichte zu Midnight zusammenfasst."
+        },
+        {
+         "baslik": "Den Dungeonsucher ausprobieren",
+         "metin": "Reihe dich über den Dungeonsucher (Group Finder) in Dungeons ein, die zu deiner Stufe passen. Das liefert zügige Erfahrungspunkte und bringt dir den Spielrhythmus bei."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Überstürze am ersten Tag nichts. Wenn dir eine Klasse nach ein oder zwei Stunden nicht zusagt, kannst du jederzeit einen anderen Charakter erstellen."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Wenn deine Taschen voll sind, besuche einen Händler; graue Gegenstände können bedenkenlos verkauft werden. Prüfe vor dem Verkauf von blauen und violetten Gegenständen, ob dein Charakter sie verwenden kann."
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "Wahl von Volk und Klasse",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Das Spiel bietet 13 Klassen. Das Volk bestimmt hauptsächlich das Aussehen und kleinere Volksboni; Klasse und Spezialisierung (Spec) bestimmen deine Spielweise. Die nachfolgende Tabelle dient lediglich als Ausgangspunkt. Genaue Stärkeverhältnisse ändern sich mit Patches, triff deine Entscheidung daher nicht danach."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Klasse",
+        "Spezialisierungen (Rollen)",
+        "Lernkurve (ungefähr)",
+        "Geeignet für"
+       ],
+       "satirlar": [
+        [
+         "Krieger (Warrior)",
+         "Waffen, Furor (Schaden); Schutz (Tank)",
+         "Mittel",
+         "Spieler, die Nahkampf und eine robuste Haltung schätzen"
+        ],
+        [
+         "Paladin",
+         "Heilig (Heiler); Schutz (Tank); Vergeltung (Schaden)",
+         "Einfach–mittel",
+         "Flexible Spieler, die jede Rolle ausfüllen möchten"
+        ],
+        [
+         "Jäger (Hunter)",
+         "Tierherrschaft, Treffsicherheit, Überleben (Schaden)",
+         "Einfach",
+         "Fernkampfschaden mit einem Begleiter"
+        ],
+        [
+         "Schurke (Rogue)",
+         "Meucheln, Gesetzlosigkeit, Täuschung (Schaden)",
+         "Mittel",
+         "Schnelles, heimliches und mobiles Gameplay"
+        ],
+        [
+         "Priester (Priest)",
+         "Disziplin, Heilig (Heiler); Schatten (Schaden)",
+         "Mittel",
+         "Spieler, die gerne heilen oder Schattenmagie wirken"
+        ],
+        [
+         "Todesritter (Death Knight)",
+         "Blut (Tank); Frost, Unheilig (Schaden)",
+         "Mittel",
+         "Spieler, die einen zähen, widerstandsfähigen Charakter suchen"
+        ],
+        [
+         "Schamane (Shaman)",
+         "Elementar, Verstärkung (Schaden); Wiederherstellung (Heiler)",
+         "Mittel",
+         "Vielseitiges Spiel mit Totems und Elementarkräften"
+        ],
+        [
+         "Magier (Mage)",
+         "Arkan, Feuer, Frost (Schaden)",
+         "Einfach–mittel",
+         "Zauberschaden auf Distanz"
+        ],
+        [
+         "Hexenmeister (Warlock)",
+         "Gebrechen, Dämonologie, Zerstörung (Schaden)",
+         "Mittel",
+         "Dämonenbeschwörung und Flüche"
+        ],
+        [
+         "Mönch (Monk)",
+         "Braumeister (Tank); Nebelwirker (Heiler); Windläufer (Schaden)",
+         "Mittel–schwer",
+         "Angriffskombos und hohe Mobilität"
+        ],
+        [
+         "Druide (Druid)",
+         "Gleichgewicht, Wildheit (Schaden); Wächter (Tank); Wiederherstellung (Heiler)",
+         "Mittel–schwer",
+         "Spieler, die alle vier Rollen abdecken wollen"
+        ],
+        [
+         "Dämonenjäger (Demon Hunter)",
+         "Verwüstung (Schaden); Rachsucht (Tank); Devourer (neu, Midnight)",
+         "Mittel",
+         "Agiles, aggressives Gameplay"
+        ],
+        [
+         "Rufer (Evoker)",
+         "Verheerung, Verstärkung (Schaden); Bewahrung (Heiler)",
+         "Mittel–schwer",
+         "Drachengestalt und dynamischer Nah- bis Fernkampf"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Haranir** ist das neue Volk in Midnight und **Devourer** die neue Dämonenjäger-Spezialisierung. Sie sind aus Neugier einen Versuch wert, für den ersten Charakter jedoch keineswegs zwingend erforderlich. In der Schadensrolle zu bleiben und die Grundsysteme zu lernen, ist der stressfreieste Einstieg."
+      },
+      {
+       "tip": "p",
+       "metin": "Die Spalte zur Lernkurve stellt kein exaktes Maß dar, sondern lediglich eine allgemeine Orientierung. Es gibt 13 Klassen, und alle, einschließlich Rufer und Dämonenjäger, sind in der Tabelle enthalten; die Reihenfolge ist keine Rangliste."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Das Ausprobieren verschiedener Klassen auf demselben Account ist problemlos möglich. Die meisten Spieler erstellen mehrere Charaktere und behalten denjenigen, der ihnen am besten gefällt."
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "Leveln: eine schnelle und effiziente Route",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Zwischen Stufe 10 und 70 ermöglicht dir die **Chromie-Zeit** (Chromie Time), frei zu wählen, in den Gebieten welcher Erweiterung du leveln möchtest. Neue Spieler werden standardmäßig zu Dragonflight geleitet. Jede Erweiterung erzählt ihre eigene Handlung, und du musst keineswegs alle abschließen."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Midnight Level-Dungeons: Windrunner Spire, Murder Row, Den of Nalorakk, Maisara Caverns und The Blinding Vale.",
+        "Skyriding (dynamisches Fliegen) ist von Beginn an verfügbar und erleichtert Reisen und Ressourcensammeln erheblich.",
+        "Der Abschluss der Hauptkampagne von Midnight schaltet den Abenteuermodus für deine Zweitcharaktere frei."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Um effizient voranzukommen, erledige Quests eines Gebiets gebündelt, reihe dich in Dungeons ein und brich Erweiterungskampagnen nicht mittendrin ab. In der kostenlosen Testversion stoppst du bei Stufe 20; das ist der richtige Zeitpunkt, um über ein Abonnement oder Spielzeit zu entscheiden."
+      },
+      {
+       "tip": "p",
+       "metin": "Dungeons haben drei Rollen: Tank, Heiler und Schadensausteiler (DPS). Die Warteschlangen für Tanks und Heiler sind in der Regel deutlich kürzer; wenn du eine dieser Rollen beherrschst, findest du viel schneller Gruppen. Selbst als Anfänger wirst du schnell merken, warum diese Rollen so begehrt sind. Erneuere auch deine Ausrüstung regelmäßig: Belohnungen aus Dungeons und Quests tragen dich während der Levelphase, und alte Gegenstände in den Taschen aufzubewahren bringt keinen Vorteil."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Wenn du als Rückkehrer einsteigst, haben sich dein Talentbaum und Klassenmechaniken womöglich geändert. Überprüfe deine Talente direkt nach dem Einloggen."
+      }
+     ]
+    },
+    {
+     "id": "meslekler",
+     "baslik": "Berufe: was sie bewirken und welche man wählen sollte",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Jeder Charakter wählt **zwei Hauptberufe**; Sekundärberufe wie Kochen, Angeln und Archäologie kannst du zusätzlich frei erlernen. Berufe unterteilen sich in zwei Gruppen: **Sammelberufe** liefern Rohstoffe und **Herstellungsberufe** verarbeiten diese zu Gegenständen. Da du beim Leveln ohnehin Ressourcen sammelst, ist die Kombination aus einem Sammel- und einem Herstellungsberuf der effizienteste Einstieg."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Gruppe",
+        "Berufe",
+        "Was es einbringt"
+       ],
+       "satirlar": [
+        [
+         "Sammelberufe",
+         "Kräuterkunde, Bergbau, Kürschnerei",
+         "Rohstoffe; können im Auktionshaus verkauft werden"
+        ],
+        [
+         "Herstellungsberufe",
+         "Alchemie, Schmiedekunst, Verzauberkunst, Ingenieurskunst, Inschriftenkunde, Juwelenschleifen, Lederverarbeitung, Schneiderei",
+         "Tränke, Rüstungen, Waffen, Verzauberungen, Ingenieurs-Gadgets"
+        ],
+        [
+         "Sekundärberufe",
+         "Kochen, Angeln, Archäologie",
+         "Nahrungs-Buffs und kosmetische Belohnungen"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Kräuterkunde mit Alchemie sowie Bergbau mit Schmiedekunst oder Juwelenschleifen sind natürliche Kombinationen.",
+        "Kürschnerei und Lederverarbeitung teilen sich dasselbe Material; du kannst Leder verkaufen oder selbst Rüstung fertigen.",
+        "Verzauberkunst entzaubert Gegenstände in magische Essenzen; das Verzaubern von Ausrüstung hängt direkt davon ab."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Du musst dich nicht am ersten Tag für einen Beruf entscheiden; in der kostenlosen Testversion kannst du die ersten Fertigkeitsränge erproben. Du kannst Berufe später wechseln, doch der bisherige Fortschritt wird zurückgesetzt; teste daher kurz, bevor du dich festlegst. Der wirtschaftliche Wert verschiebt sich mit jeder Erweiterung, verfolge daher aktuelle Berufsleitfäden im Spiel und auf der Blizzard-News-Seite."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Wenn du einen Sammelberuf gewählt hast, gewöhne dir an, Kräuter und Erzadern während des Questens am Wegesrand mitzunehmen; so sparst du dir später separates Rohstoff-Farming."
+      }
+     ]
+    },
+    {
+     "id": "icerik",
+     "baslik": "Inhaltsstufen: Tiefen, Dungeons, Raids, Mythisch+",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Nach Stufe 90 fächert sich das Spiel in verschiedene Schwierigkeitsgrade auf. Der unkomplizierteste Einstieg sind die **Tiefen** (Delves): unterirdische Szenarien für Einzelspieler oder kleine Gruppen. Danach folgen **Dungeons** (5 Spieler), **Raids** (Großgruppen-Inhalte für bis zu 20+ Spieler) und das anspruchsvollste Format, **Mythisch+** (Mythic+)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Inhalt",
+        "Spieler",
+        "Schwierigkeitsstufen",
+        "Wozu gedacht"
+       ],
+       "satirlar": [
+        [
+         "Tiefen (Delves)",
+         "1–5 (meist solo mit Begleiter)",
+         "Stufen-Schritte (Tiers)",
+         "Kurze, zügige und bequeme Belohnungen"
+        ],
+        [
+         "Dungeon",
+         "5",
+         "Normal, Heroisch, Mythisch",
+         "Erlernen des Teamspiels"
+        ],
+        [
+         "Mythisch+ (Mythic+)",
+         "5",
+         "Schlüsselsteinstufe (+2, +3...)",
+         "Herausfordernd, wöchentliche Belohnungen"
+        ],
+        [
+         "Raid (Schlachtzug)",
+         "Große Gruppe",
+         "LFR, Normal, Heroisch, Mythisch",
+         "Höhepunkt der Story und mächtige Ausrüstung"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**LFR** (Looking for Raid / Schlachtzugsbrowser) ist der zugänglichste Raid-Schwierigkeitsgrad, dem man über eine Warteschlange beitritt. Um dich an das Gruppenspiel zu gewöhnen, starte in Dungeons auf Normal und arbeite dich über Heroisch zu Mythisch vor. Mythisch+ verschärft Mythisch-Dungeons durch Schlüsselsteinstufen und ein Zeitlimit; unvorbereitet einzusteigen strengt dich und deine Gruppe unnötig an."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Tiefen (Delves) sind ein sicheres Übungsfeld für den ersten Charakter: Du musst nicht auf Gruppen warten und hältst niemanden auf, während du lernst."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Wenn du versehentlich einen Dungeonlauf im Dungeonsucher abbrichst, wirst du nicht bestraft; verlässt du Gruppen jedoch wiederholt vorzeitig, sperrt dich der Gruppenfinder zeitweise. Steigere den Schwierigkeitsgrad in deinem eigenen Tempo."
+      }
+     ]
+    },
+    {
+     "id": "haftalik",
+     "baslik": "Wöchentliche To-Do-Liste",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Auf Stufe 90 pendelt sich das Spiel in einen wöchentlichen Rhythmus ein. Der Reset-Tag unterscheidet sich je nach Region; in Europa ist es üblicherweise Mittwochmorgen; dies kann sich mit Patches anpassen. Die folgende Übersicht fasst die wöchentlichen Aktivitäten nach dem Reset zusammen:"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Wöchentliche Hauptquest und Weltquests prüfen; lukrative Belohnungen gezielt mitnehmen.",
+        "Einige Runden Tiefen (Delves) absolvieren; sie zählen für die Belohnungen der Großen Schatzkammer.",
+        "Mythisch+-Schlüsselsteine oder Dungeon-Abschlüsse machen; auch sie zählen für die Schatzkammer.",
+        "Mindestens einen Boss über die Raid-Warteschlange (LFR oder Normal) versuchen.",
+        "Die Belohnung aus der Großen Schatzkammer (Great Vault) auswählen und abholen.",
+        "Wöchentliche Berufsquests und Handwerksaufträge prüfen."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Die **Große Schatzkammer** (Great Vault) schaltet bis zu drei Belohnungsplätze frei, je nachdem, wie viele Dungeons, Raids und Tiefen du in der Woche abgeschlossen hast. Du wählst aus jedem Slot nur eine Belohnung aus. Wenn du Aktivitäten aus allen drei Bereichen spielst, schöpfst du das Potenzial der Schatzkammer voll aus. Diese Struktur basiert auf dem wöchentlichen Ablauf aus Blizzards Midnight-Briefing (Blizzard News: Midnight-Erweiterungsinformationen)."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Notiere dir die Liste auf Papier oder im Smartphone und hake sie wöchentlich ab. Nach wenigen Wochen wird das zur Routine; geübte Spieler erledigen das meiste in 1–2 Stunden."
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "Gold und Wirtschaft: nur über spielinterne Wege",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Der richtige Weg zum Goldverdienst führt über die spielinternen Systeme. Das **Auktionshaus** ermöglicht den Handel zwischen Spielern und setzt ein aktives Abonnement voraus. Gesammelte Rohstoffe (Kräuter, Erze, Leder) dort anzubieten, ist eine verlässliche Einnahmequelle für Einsteiger."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Bevor du Questbelohnungen und Dungeon-Beute beim NPC-Händler verkaufst, prüfe den Auktionshauspreis.",
+        "Wähle frühzeitig einen Sammelberuf; Ressourcen sammelst du beim Leveln ohnehin mit.",
+        "Bevor du wertvoll erscheinende Gegenstände verkaufst, prüfe deren Preisverlauf und nimm nicht übereilt das erstbeste Angebot an."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Berufe gliedern sich in zwei Gruppen: Sammelberufe (Kräuter, Erze, Leder) und Herstellungsberufe (Schmiedekunst, Alchemie, Verzauberkunst und ähnliche). Ein Herstellungsberuf funktioniert nur mit Rohstoffen, daher ist die Kombination beider Sparten ideal. Erwarte am ersten Tag keine Reichtümer; ein solides Goldpolster aufzubauen dauert einige Wochen. Die Preise schwanken von Realm zu Realm, betrachte Preise daher nie als unveränderlich."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Der Kauf oder Verkauf von Gold oder Accounts auf Drittseiten führt zur Kontosperrung. Blizzard untersagt dies strikt, und viele dieser Plattformen stehen zudem mit Accountdiebstahl in Verbindung."
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "Nach der Höchststufe: Was gibt es zu tun?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Mit Erreichen der Höchststufe entfaltet das Spiel seine vielschichtigen Inhalte. **Tiefen** (Delves) sind kurze Dungeons für Einzelspieler oder kleine Gruppen und eine ideale Brücke vor dem Raiden. **Mythisch+** (Dungeons auf Zeit) und **Raids** liefern die beste Ausrüstung. Sammle zunächst auf Normal und Heroisch Erfahrung."
+      },
+      {
+       "tip": "p",
+       "metin": "**Spielerbehausungen** (Player Housing) wurden mit Midnight eingeführt: Du erhältst ein eigenes Heim und richtest es ein. Das **Beutesystem** (Prey) ist eine Midnight-spezifische Spielmechanik. Dessen Regeln können sich durch Patches anpassen, lies die Einzelheiten daher im Leitfaden im Spiel nach."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Inhalt",
+        "Wozu gedacht",
+        "Wann"
+       ],
+       "satirlar": [
+        [
+         "Tiefen (Delves)",
+         "Sicherer Fortschritt allein oder in kleiner Gruppe",
+         "Bei Annäherung an die Höchststufe"
+        ],
+        [
+         "Mythisch+ (Mythic+)",
+         "Dungeons auf Zeit, hochwertige Beute",
+         "Nach Normal und Heroisch"
+        ],
+        [
+         "Raid (Schlachtzug)",
+         "Großgruppen-Inhalte, Bosskämpfe",
+         "Sobald die Gegenstandsstufe ausreicht"
+        ],
+        [
+         "PvP",
+         "Kämpfe Spieler gegen Spieler",
+         "Optional"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Der Beitritt zu einer Gilde ist in dieser Phase der größte Beschleuniger: Dungeon- und Raidpartner zu finden, Fragen zu klären und Beute auszutauschen geht wesentlich leichter. Eine Gilde erfordert ein aktives Abonnement oder Spielzeit. Suche dir eine Gilde, die zu deinen Online-Zeiten passt und regelmäßige Events anbietet; du musst nicht in der ersten Gilde bleiben, der du beitrittst."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Behalte deine Gegenstandsstufe (Item Level) im Auge; das Spiel zeigt dir an, welche Dungeons für dich geeignet sind."
+      }
+     ]
+    },
+    {
+     "id": "eklentiler",
+     "baslik": "UI-Addons und der Unterschied zwischen Classic und Retail",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**Addons** sind kleine Zusatzprogramme, die die Benutzeroberfläche des Spiels anpassen. Blizzard gestattet ausschließlich Addons, die Interface-Elemente modifizieren und Informationen übersichtlich aufbereiten; Addons, die automatisch für dich spielen, Tastenfolgen automatisieren oder als Bots fungieren, sind streng verboten und führen zur Kontoschließung. Lade Addons nur von offiziellen Quellen herunter; Dateien aus unbekannten Quellen können dein Konto gefährden."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Boss-Warnungs-Addons (etwa BigWigs oder Deadly Boss Mods) zeigen Raid-Mechaniken rechtzeitig an.",
+        "Taschen-, Karten- und Schadensanzeige-Addons (Damage Meter) sind für Einsteiger optional; überfrachte dein Interface nicht, bevor du die Grundmechaniken beherrschst.",
+        "Aktualisiere Addons nach großen Patches regelmäßig; veraltete Versionen können Fehler im Spiel verursachen."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Retail, Classic und Forever:** Retail bezeichnet die heute aktuelle Midnight-Fassung. Classic bietet ältere Spielstände: Classic Era, Classic Progression, Anniversary Edition und Season of Discovery-Realms. WoW: Forever ist eine separate Fassung, die das ursprüngliche Azeroth mit neuen Zonen, überarbeiteten Klassen, mehr als 1.000 neuen Quests sowie neuen Dungeons und Raids neu erzählt und ein neues Volk namens Skyborne einführt. Dasselbe Abonnement gewährt Zugriff auf alle drei Varianten, die Midnight-Erweiterung gilt jedoch ausschließlich für Retail."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Version",
+        "Stufenbereich (Abonnement)",
+        "Charakteristik"
+       ],
+       "satirlar": [
+        [
+         "Retail (Midnight)",
+         "1–80 (Abo), bis zu 90 mit Midnight",
+         "Modernes Gameplay"
+        ],
+        [
+         "WoW: Forever",
+         "1–60",
+         "Erneuertes ursprüngliches Azeroth"
+        ],
+        [
+         "Classic Era und Progression",
+         "1–60",
+         "Nostalgisches Original-Gameplay"
+        ],
+        [
+         "Mists of Pandaria Classic",
+         "1–90",
+         "Frühere Erweiterung"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Wenn du unsicher bist, beginne mit der kostenlosen Testversion auf Retail; sie ist unkompliziert zugänglich und hat eine aktive Spielerschaft."
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "Häufige Fehler und Sicherheitsaspekte",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Den Battle.net-Account ohne Zwei-Faktor-Authentifizierung betreiben.",
+        "Beim Leveln durchhetzen und in Dungeons starten, ohne die eigene Klasse verstanden zu haben; bremse die Gruppe nicht aus und frage nach, wenn etwas unklar ist.",
+        "Dasselbe Passwort auf mehreren Webseiten wiederverwenden."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Halte dich fern von Cheats, Bots, Makro-Automatisierungen, Exploits, Privatservern, RMT (Echtgeldhandel mit Gold/Accounts) und raubkopierter Software. Solche Praktiken führen zu permanenten Banns und dem Risiko des Datendiebstahls."
+      },
+      {
+       "tip": "p",
+       "metin": "Blizzard wird dich niemals per E-Mail nach deinem Passwort oder Bestätigungscode fragen. Prüfe die Adresszeile vor dem Anklicken verdächtiger Links und ignoriere Spieler, die im Chat 'kostenloses Gold' versprechen."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Häufig gestellte Fragen (FAQ)",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Ist das Spiel kostenlos?",
+         "c": "Es gibt eine kostenlose Testversion bis Stufe 20. Danach benötigst du ein Abonnement oder Spielzeit; für Stufen über 80 musst du zusätzlich Midnight erwerben."
+        },
+        {
+         "s": "Kann ich spielen, ohne Midnight zu kaufen?",
+         "c": "Ja, mit einem Abonnement bis Stufe 80. Die Midnight-Handlung und Stufe 90 erfordern die Erweiterung."
+        },
+        {
+         "s": "Mit welcher Klasse sollte ich starten?",
+         "c": "Mit einer unkomplizierten Schadensklasse (DPS). Wenn sie dir nicht zusagt, kannst du jederzeit einen anderen Charakter erstellen."
+        },
+        {
+         "s": "Läuft das Spiel auf einem älteren PC?",
+         "c": "Midnight setzt mindestens Windows 10 voraus und unterstützt bestimmte ältere Hardware nicht mehr; prüfe die offiziellen Systemanforderungen."
+        },
+        {
+         "s": "Ich kehre nach langer Pause zurück. Wo fange ich an?",
+         "c": "Aktiviere ein Abonnement oder Spielzeit, kaufe Midnight, wähle deinen Charakter, aktualisiere deine Talente und lies die Neuigkeiten auf dem Startbildschirm."
+        },
+        {
+         "s": "Kann ich auf Mobilgeräten oder Konsolen spielen?",
+         "c": "Die Angaben hier beziehen sich auf Windows; Informationen zu anderen Plattformen findest du auf den Seiten von Blizzard."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "nl": {
+   "baslik": "World of Warcraft Beginnersgids: Midnight 2026",
+   "ozet": "Een gids voor nieuwe spelers en terugkeerders naar World of Warcraft in het Midnight-tijdperk: proefversie, account, eerste stappen, levelen, goud en veiligheid.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "MMORPG"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Windows (Battle.net-app)"
+    },
+    {
+     "ad": "Prijsmodel",
+     "deger": "Abonnement of Game Time; gratis proefversie tot level 20. In Turkije bedraagt een maandabonnement 399,99 TRY (Blizzard-aankondiging, van kracht sinds 17 januari 2025)"
+    },
+    {
+     "ad": "Huidige versie",
+     "deger": "Midnight (11e uitbreiding), patch 12.1.5, Season 2"
+    },
+    {
+     "ad": "Ondersteuning voor Turks",
+     "deger": "Een Turkse gameclient is niet vermeld in officiële bronnen; er zijn wel Turkse winkel- en prijzenpagina's"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "Waar de game staat in 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "World of Warcraft is de online roleplaying game van Blizzard die sinds 2004 actief is. De actuele live versie is **Midnight**: de 11e uitbreiding lanceerde op 2 maart 2026 en verhoogde de maximumlevel naar **90**. Nieuw zijn het ras de **Haranir**, een derde Demon Hunter-specialisatie genaamd **Devourer**, player housing, het Prey-systeem, korte kerkerachtige Delves en de nieuwe centrale stad Silvermoon."
+      },
+      {
+       "tip": "p",
+       "metin": "Op live servers arriveerde **patch 12.1.5** op 13-14 oktober 2026 als de mid-season update van Midnight Season 2, dat in augustus van start ging. De volgende patch, 12.1.7, staat op het publieke testrealm (PTR) en had medio oktober nog geen officiële releasedatum. Houd het in-game nieuwsscherm en de nieuwspagina van Blizzard in de gaten voor actuele data."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Patchnummers en seizoensdata wijzigen geregeld. De hier vermelde versie-informatie is de stand van zaken per 14 november 2026."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Voor je begint: account, kosten, pc",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Je hebt een gratis **Battle.net**-account en de Battle.net desktop-app nodig. Nieuwe accounts krijgen een **gratis proefversie**: speelbaar tot level 20, inclusief de dungeons op die levels. Met het gratis account heb je geen guild, geen onbeperkte chat en geen Auction House."
+      },
+      {
+       "tip": "p",
+       "metin": "Boven level 20 heb je een **abonnement** of **Game Time** nodig. Volgens de Battle.net Shop dekt het abonnement levels 1-80 in World of Warcraft, 1-60 in WoW: Forever, 1-60 in Classic en 1-90 in Mists of Pandaria Classic. De Midnight-uitbreiding wordt apart verkocht; je hebt deze nodig om voorbij level 80 te gaan en Midnight-content te spelen. Opzeggen kan via accountbeheer; verlenging gebeurt automatisch."
+      },
+      {
+       "tip": "p",
+       "metin": "**Prijzen in Turkije (laatste officiële berichtgeving per november 2026):** Blizzard voerde per 17 januari 2025 nieuwe prijzen door voor Turkije. Er is geen nieuwer bericht voor Turkije gevonden; het bedrag in de winkel kan afwijken, controleer daarom je winkelmandje voor het afrekenen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Product (Turkije)",
+        "Prijs (aankondiging januari 2025)"
+       ],
+       "satirlar": [
+        [
+         "1 maand abonnement",
+         "399.99 TRY"
+        ],
+        [
+         "3 maanden abonnement",
+         "1,049.99 TRY"
+        ],
+        [
+         "6 maanden abonnement",
+         "1,799.99 TRY"
+        ],
+        [
+         "12 maanden abonnement",
+         "3,599.98 TRY"
+        ],
+        [
+         "60 dagen Game Time",
+         "799.98 TRY"
+        ],
+        [
+         "The War Within Base Edition (vorige uitbreiding)",
+         "1,399.99 TRY"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "De Turkse prijs voor de Midnight-uitbreiding staat niet in die aankondiging en de Midnight-pagina in de Amerikaanse Battle.net-shop toonde geen duidelijke prijs; het **TRY-bedrag voor Midnight is officieel niet aangekondigd**. De Amerikaanse winkel biedt ook Heroic- en Epic-edities voor Midnight aan: Heroic bevat een extra mount en uiterlijkpakket, Epic voegt 30 dagen game time, twee pets, twee mounts en een housing-pakket toe."
+      },
+      {
+       "tip": "p",
+       "metin": "**Systeemeisen (Midnight, lijst op de Blizzard-supportpagina):** minimaal vereist is Windows 10 64-bit (mei 2019 update of nieuwer), een 6-core processor tot 4,0 GHz boost (Intel Coffee Lake of AMD Zen 2 en nieuwer), een 4 GB DirectX 12-videokaart (GeForce GTX 10-serie, Radeon RDNA 1 of Intel Iris Xe2), 8 GB RAM, 128 GB vrije SSD-ruimte en breedbandinternet. De aanbevolen configuratie vraagt om Windows 11, een 8-performance-core processor tot 5,2 GHz (Core Ultra Series 2 of Ryzen Zen 5), een 8 GB videokaart (RTX 40-serie, RDNA 3 of Arc B-serie) en 16 GB RAM. Toetsenbord en muis zijn vereist."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Onderdeel",
+        "Minimaal",
+        "Aanbevolen"
+       ],
+       "satirlar": [
+        [
+         "Besturingssysteem",
+         "Windows 10 64-bit",
+         "Windows 11"
+        ],
+        [
+         "Processor",
+         "6 cores, 4.0 GHz",
+         "8 performance-cores, 5.2 GHz"
+        ],
+        [
+         "Videokaart",
+         "4 GB, DirectX 12",
+         "8 GB, DirectX 12"
+        ],
+        [
+         "Werkgeheugen (RAM)",
+         "8 GB",
+         "16 GB"
+        ],
+        [
+         "Opslag",
+         "128 GB SSD",
+         "128 GB SSD"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "De community vond de aanbevolen lijst pittig; de Blizzard-pagina is de primaire bron voor dit overzicht. Controleer op een oudere pc de actuele lijst op de supportpagina alvorens aan te schaffen."
+      },
+      {
+       "tip": "p",
+       "metin": "**Realm en levelcap:** het maximale level in Midnight is 90. Een afzonderlijke realmlijst voor Turkse accounts bestaat niet in officiële bronnen; prijsaankondigingen worden gedaan op de EU-forums, dus spelers uit Turkije volgen de mededelingen van de Europese regio. Je kiest je realm in het spel tijdens het aanmaken van je personage."
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "De eerste uren, stap voor stap",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Account aanmaken en beveiligen",
+         "metin": "Maak een Battle.net-account aan, bevestig je e-mailadres en schakel tweestapsverificatie in via de accountinstellingen."
+        },
+        {
+         "baslik": "Installeer het spel",
+         "metin": "Kies in de Battle.net-app voor World of Warcraft en installeer het hoofdspel (Retail). De download is aanzienlijk, zorg dus voor voldoende vrije schijfruimte en een stabiele internetverbinding."
+        },
+        {
+         "baslik": "Kies een ras en klasse",
+         "metin": "Nieuwe spelers worden bij het aanmaken van een personage naar een kort startgebied gestuurd genaamd Exile's Reach. Dit leert je de basisbesturing."
+        },
+        {
+         "baslik": "Volg de verhaallijn",
+         "metin": "Na de start wijst het spel je door naar een uitbreidingsverhaal. Blizzard leidt nieuwe spelers via een versnelde The War Within-verhaallijn naar level 80, wat meteen het achtergrondverhaal voor Midnight samenvat."
+        },
+        {
+         "baslik": "Probeer de Group Finder",
+         "metin": "Sluit via de Group Finder aan in de wachtrij voor dungeons die bij je level passen. Dit levert snel ervaringspunten op en leert je het speelritme."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Haast je niet op je eerste dag. Mocht een klasse je na een uur of twee niet bevallen, dan staat het je volledig vrij een ander personage aan te maken."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Wanneer je tassen vol raken, bezoek dan een vendor; grijze voorwerpen kun je direct verkopen. Controleer voor je blauwe en paarse items verkoopt of je personage deze kan dragen."
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "Keuze van ras en klasse",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Het spel telt 13 klassen. Je ras bepaalt vooral je uiterlijk en enkele kleine eigenschappen; klasse en specialisatie (spec) bepalen hoe je daadwerkelijk speelt. Onderstaande tabel dient als uitgangspunt. De exacte balans en ranglijsten veranderen per patch, baseer je keuze daar dus niet op."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Klasse",
+        "Specialisaties (rollen)",
+        "Leercurve (bij benadering)",
+        "Geschikt voor"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Arms, Fury (damage); Protection (tank)",
+         "Gemiddeld",
+         "Spelers die houden van man-tegen-mangevechten en een robuuste speelstijl"
+        ],
+        [
+         "Paladin",
+         "Holy (healer); Protection (tank); Retribution (damage)",
+         "Eenvoudig-gemiddeld",
+         "Flexibele spelers die elke gewenste rol willen kunnen vervullen"
+        ],
+        [
+         "Hunter",
+         "Beast Mastery, Marksmanship, Survival (damage)",
+         "Eenvoudig",
+         "Afstandsschade met behulp van een trouw huisdier (pet)"
+        ],
+        [
+         "Rogue",
+         "Assassination, Outlaw, Subtlety (damage)",
+         "Gemiddeld",
+         "Snel, heimelijk en zeer mobiel spel"
+        ],
+        [
+         "Priest",
+         "Discipline, Holy (healer); Shadow (damage)",
+         "Gemiddeld",
+         "Spelers die graag genezen of schaduwmagie uitoefenen"
+        ],
+        [
+         "Death Knight",
+         "Blood (tank); Frost, Unholy (damage)",
+         "Gemiddeld",
+         "Spelers die een taai, weerbaar personage zoeken"
+        ],
+        [
+         "Shaman",
+         "Elemental, Enhancement (damage); Restoration (healer)",
+         "Gemiddeld",
+         "Veelzijdig spel met behulp van totems en elementen"
+        ],
+        [
+         "Mage",
+         "Arcane, Fire, Frost (damage)",
+         "Eenvoudig-gemiddeld",
+         "Spreukschade op afstand"
+        ],
+        [
+         "Warlock",
+         "Affliction, Demonology, Destruction (damage)",
+         "Gemiddeld",
+         "Demonen oproepen en vloeken uitspreken"
+        ],
+        [
+         "Monk",
+         "Brewmaster (tank); Mistweaver (healer); Windwalker (damage)",
+         "Gemiddeld-moeilijk",
+         "Snelle slagcombinaties en grote mobiliteit"
+        ],
+        [
+         "Druid",
+         "Balance, Feral (damage); Guardian (tank); Restoration (healer)",
+         "Gemiddeld-moeilijk",
+         "Spelers die toegang willen tot alle vier de rollen"
+        ],
+        [
+         "Demon Hunter",
+         "Havoc (damage); Vengeance (tank); Devourer (nieuw, Midnight)",
+         "Gemiddeld",
+         "Wendbaar en agressief aanvalsspel"
+        ],
+        [
+         "Evoker",
+         "Devastation, Augmentation (damage); Preservation (healer)",
+         "Gemiddeld-moeilijk",
+         "Draakgedaante en dynamisch spel op zowel korte als lange afstand"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Haranir** is het nieuwe ras in Midnight en **Devourer** is de nieuwe specialisatie voor Demon Hunter. Ze zijn leuk om uit te proberen, maar geenszins verplicht voor je eerste personage. Beginnen in de damagerol en de kernsystemen onder de knie krijgen levert de meest ontspannen start op."
+      },
+      {
+       "tip": "p",
+       "metin": "De kolom met de leercurve is geen exacte wetenschap, enkel een algemene indicatie. Er zijn 13 klassen en ze staan er allemaal in, inclusief Evoker en Demon Hunter; de volgorde is geen ranglijst qua kracht."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Verschillende klassen uitproberen op hetzelfde account is altijd mogelijk. De meeste spelers maken een paar personages aan en blijven spelen met degene die het meeste plezier biedt."
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "Levelen: een snelle en efficiënte route",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Tussen level 10 en 70 laat **Chromie Time** je zelf bepalen in welke uitbreidingswereld je wilt levelen. Nieuwe spelers worden standaard naar Dragonflight geleid. Elke uitbreiding heeft een eigen verhaallijn en je hoeft ze zeker niet allemaal te voltooien."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Midnight level-dungeons: Windrunner Spire, Murder Row, Den of Nalorakk, Maisara Caverns en The Blinding Vale.",
+        "Skyriding (dynamisch vliegen) is direct beschikbaar en helpt enorm bij reizen en grondstoffen verzamelen.",
+        "Het afronden van het hoofdverhaal in Midnight ontgrendelt Adventure Mode voor je andere personages."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Om efficiënt vooruitgang te boeken, doe je de quests in een gebied tegelijk, sluit je aan bij dungeons en laat je een verhaallijn niet halverwege liggen. In de gratis proefversie stop je bij level 20; dat is hét moment om te beslissen over een abonnement of Game Time."
+      },
+      {
+       "tip": "p",
+       "metin": "Dungeons kennen drie rollen: tank, healer en damage dealer (DPS). De wachttijden voor tanks en healers zijn meestal korter; als je een van deze rollen speelt, vind je sneller een groep. Zelfs als beginner merk je al snel waarom deze rollen zo gewild zijn. Vernieuw je uitrusting geregeld: buit uit dungeons en questbeloningen helpen je door de levelfase heen, en het heeft geen nut verouderde spullen in je tassen te bewaren."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Als je terugkeert naar de game, zijn talentenbomen en vaardigheden wellicht veranderd. Neem je talenten direct door zodra je inlogt."
+      }
+     ]
+    },
+    {
+     "id": "meslekler",
+     "baslik": "Beroepen: wat ze inhouden en welke je moet kiezen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Elk personage kiest **twee primaire beroepen**; daarnaast kun je secundaire beroepen zoals cooking, fishing en archaeology vrij leren. Beroepen vallen uiteen in twee categorieën: **gathering** (verzamelen van grondstoffen) en **crafting** (maken van uitrusting en voorwerpen). Omdat je tijdens het levelen sowieso grondstoffen tegenkomt, is het combineren van één gathering- en één craftingberoep de efficiëntste start."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Groep",
+        "Beroepen",
+        "Wat het oplevert"
+       ],
+       "satirlar": [
+        [
+         "Gathering (Verzamelen)",
+         "Herbalism, Mining, Skinning",
+         "Grondstoffen; verkoopbaar via het Auction House"
+        ],
+        [
+         "Crafting (Vervaardigen)",
+         "Alchemy, Blacksmithing, Enchanting, Engineering, Inscription, Jewelcrafting, Leatherworking, Tailoring",
+         "Drankjes, harnassen, wapens, betoveringen, technische snufjes"
+        ],
+        [
+         "Secundair",
+         "Cooking, Fishing, Archaeology",
+         "Voedselbuffs en cosmetische beloningen"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Herbalism gecombineerd met Alchemy, en Mining met Blacksmithing of Jewelcrafting, vormen natuurlijke combinaties.",
+        "Skinning en Leatherworking delen dezelfde materialen; je kunt het leer verkopen of zelf uitrusting maken.",
+        "Enchanting onttovert spullen tot magische essences; het betoveren van je uitrusting rust hier volledig op."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Je hoeft niet op dag één al een beroep te kiezen; in de proefversie kun je de eerste vaardigheidsrangen uitproberen. Je kunt later van beroep wisselen, maar je opgebouwde voortgang gaat verloren; experimenteer dus even voor je definitief kiest. De werkelijke economische waarde verandert per uitbreiding, raadpleeg daarom actuele guides in de game en op Blizzards nieuwspagina."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Als je een verzamelberoep hebt gekozen, maak er dan een gewoonte van kruiden en ertsen onderweg mee te nemen tijdens het questen; zo voorkom je dat je later apart moet farmen."
+      }
+     ]
+    },
+    {
+     "id": "icerik",
+     "baslik": "Soorten content: Delves, dungeons, raids, Mythic+",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Na level 90 opent het spel zich in oplopende moeilijkheidsgraden. De eenvoudigste instap zijn de **Delves**: ondergrondse scenario's voor solo-spelers of een kleine groep. Vervolgens komen **dungeons** (5 spelers), **raids** (grootschalige content voor groepen tot wel 20+ spelers) en de meest uitdagende vorm: **Mythic+**."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Content",
+        "Aantal spelers",
+        "Moeilijkheidsgraden",
+        "Waarvoor bedoeld"
+       ],
+       "satirlar": [
+        [
+         "Delves",
+         "1-5 (meestal solo met companion)",
+         "Tier-niveaus",
+         "Korte, snelle en comfortabele beloningen"
+        ],
+        [
+         "Dungeon",
+         "5",
+         "Normal, Heroic, Mythic",
+         "Leren samenspelen in een team"
+        ],
+        [
+         "Mythic+",
+         "5",
+         "Keystone-niveau (+2, +3...)",
+         "Uitdagend, wekelijkse topbeloningen"
+        ],
+        [
+         "Raid",
+         "Grote groep",
+         "LFR, Normal, Heroic, Mythic",
+         "Verhaallijnhoogtepunt en zeer krachtige uitrusting"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**LFR** (Looking for Raid) is de meest toegankelijke raid-moeilijkheidsgraad, waar je via een wachtrij in stapt. Om te wennen aan teamspel begin je in dungeons op Normal en groei je door naar Heroic en Mythic. Mythic+ verzwaart Mythic-dungeons met keystone-niveaus en koppelt dit aan een timer; onvoorbereid meedoen put zowel jou als je team onnodig uit."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Delves vormen een veilige oefenplek voor je eerste personage: je hoeft niet op een groep te wachten en je houdt niemand op terwijl je het spel leert."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Als een dungeon via de finder per ongeluk misgaat word je niet direct bestraft, maar wie herhaaldelijk groepen verlaat kan tijdelijk worden uitgesloten van de group finder. Verhoog de moeilijkheidsgraad in je eigen tempo."
+      }
+     ]
+    },
+    {
+     "id": "haftalik",
+     "baslik": "Wekelijkse takenlijst",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Op level 90 komt het spel in een wekelijks ritme. De wekelijkse resetdag verschilt per regio; in Europa is dit doorgaans op woensdagochtend; dit kan bij patches variëren. Onderstaand overzicht vat de wekelijkse activiteiten na de reset samen:"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Controleer de wekelijkse hoofdquest en world quests; kies de opdrachten met goede beloningen.",
+        "Voltooi een aantal rondes Delves; deze tellen mee voor de wekelijkse vault-beloningen.",
+        "Haal je Mythic+ keystone- of kerkerdoelen; ook deze tellen mee voor de kluis.",
+        "Versla minstens één baas via de raid-wachtrij (LFR of Normal).",
+        "Kies en verzamel je uitrusting uit the Great Vault.",
+        "Controleer de wekelijkse beroepsopdrachten en craft orders."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "De **Great Vault** opent maximaal drie beloningsslots afhankelijk van het aantal dungeons, raids en Delves dat je in die week hebt afgerond. Je kiest per categorie één beloning. Wie in alle drie de spelvormen actief is, haalt het maximale uit de kluis. Deze structuur rust op het wekelijkse patroon uit Blizzards Midnight-briefing (Blizzard News: Midnight expansion information)."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Schrijf de lijst op papier of in je telefoon en vink hem elke week af. Na een paar weken is het een vaste gewoonte; geoefende spelers ronden dit af in 1-2 uur."
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "Goud en economie: uitsluitend via in-game routes",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "De juiste manier om goud te verdienen is via de officiële in-game systemen. Het **Auction House** maakt handel tussen spelers mogelijk en vereist een actief abonnement. Het verkopen van verzamelde grondstoffen (kruiden, erts, leer) is een veilige bron van inkomsten voor nieuwe spelers."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Controleer de prijs op het Auction House voor je questbeloningen en buit zomaar aan een NPC verkoopt.",
+        "Kies vroeg een verzamelberoep; materialen verzamel je tijdens het levelen vanzelf mee.",
+        "Bekijk de prijshistorie van waardevolle spullen en ga niet halsoverkop akkoord met het laagste bod."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Beroepen bestaan uit twee categorieën: verzamelberoepen (kruiden, erts, leer) en ambachten (blacksmithing, alchemy, enchanting en dergelijke). Een ambacht kan alleen functioneren met verzamelde materialen, dus de combinatie is verstandig. Verwacht geen bergen goud op dag één; een vermogen opbouwen vergt enkele weken. Prijzen verschillen van realm tot realm, beschouw prijzen dus nooit als definitief."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Goud of accounts kopen of verkopen via externe websites leidt tot sluiting van je account. Blizzard verbiedt dit streng en veel van deze websites zijn bovendien gekoppeld aan accountdiefstal."
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "Na de levelcap: wat valt er te doen?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Op het maximale level opent het spel zich naar gelaagde content. **Delves** zijn korte kerkers voor één speler of een klein groepje, een uitstekende tussenstap voor je gaat raiden. **Mythic+** (kerkers op tijd) en **raids** leveren de beste uitrusting. Bouw eerst rustig ervaring op via Normal en Heroic."
+      },
+      {
+       "tip": "p",
+       "metin": "**Player housing** deed zijn intrede met Midnight: je krijgt een eigen woning en richt deze in. Het **Prey**-systeem is een uniek Midnight-mechanisme. De regels kunnen door patches veranderen, lees de details na in de in-game handleiding."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Content",
+        "Waarvoor bedoeld",
+        "Wanneer"
+       ],
+       "satirlar": [
+        [
+         "Delves",
+         "Veilige progressie solo of in een klein groepje",
+         "Zodra je de maximumlevel nadert"
+        ],
+        [
+         "Mythic+",
+         "Kerkers op tijd, hoogwaardige beloningen",
+         "Na Normal en Heroic"
+        ],
+        [
+         "Raid",
+         "Grootschalige content, baasgevechten",
+         "Zodra je item level toereikend is"
+        ],
+        [
+         "PvP",
+         "Gevechten speler-tegen-speler",
+         "Optioneel"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Lid worden van een guild is de grootste versneller in deze fase: het vinden van dungeon- en raidpartners, vragen stellen en spullen uitwisselen gaat veel soepeler. Een guild vereist een abonnement of Game Time. Zoek een guild die past bij jouw speelschema en regelmatig evenementen organiseert; je hoeft zeker niet bij de allereerste guild te blijven."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Houd je item level in de gaten; het spel geeft zelf aan welke dungeons aansluiten bij jouw niveau."
+      }
+     ]
+    },
+    {
+     "id": "eklentiler",
+     "baslik": "UI-addons en het verschil tussen Classic en Retail",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**Addons** zijn kleine programma's die de gebruikersinterface van het spel aanpassen. Blizzard staat uitsluitend addons toe die de interface visueel wijzigen en informatie overzichtelijk presenteren; addons die voor je spelen, toetscombinaties automatiseren of als bot functioneren zijn verboden en leiden tot accountsluiting. Download enkel via betrouwbare officiële addontools; bestanden van onbekende websites kunnen je account stelen."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Boss mod-addons (zoals BigWigs of Deadly Boss Mods) tonen raid-mechanieken tijdig op je scherm.",
+        "Tassen-, kaart- en schademeter-addons (damage meters) zijn optioneel voor beginners; overlaad je interface niet voor je het spel goed begrijpt.",
+        "Werk addons bij na een grote patch; verouderde versies kunnen foutmeldingen in het spel veroorzaken."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Retail, Classic en Forever:** Retail staat voor de actuele Midnight-versie van vandaag. Classic biedt eerdere spelversies aan: Classic Era, Classic Progression, Anniversary Edition en Season of Discovery-realms. WoW: Forever is een afzonderlijke versie die het oorspronkelijke Azeroth opnieuw vertelt met nieuwe zones, vernieuwde klassen, ruim 1000 nieuwe quests en nieuwe dungeons en raids; het bevat ook een nieuw ras genaamd Skyborne. Hetzelfde abonnement biedt toegang tot alle drie, maar de Midnight-uitbreiding is exclusief voor Retail."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Versie",
+        "Levelbereik (abonnement)",
+        "Karakter"
+       ],
+       "satirlar": [
+        [
+         "Retail (Midnight)",
+         "1-80 (abonnement), tot 90 met Midnight",
+         "Moderne gameplay"
+        ],
+        [
+         "WoW: Forever",
+         "1-60",
+         "Vernieuwde oorspronkelijke wereld"
+        ],
+        [
+         "Classic Era en Progression",
+         "1-60",
+         "Klassieke oorspronkelijke gameplay"
+        ],
+        [
+         "Mists of Pandaria Classic",
+         "1-90",
+         "Oudere uitbreiding"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Als je aarzelt, start dan met de gratis proefversie op Retail; deze is direct toegankelijk en heeft een grote, actieve spelersgroep."
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "Veelgemaakte fouten en veiligheid",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Je Battle.net-account achterlaten zonder tweestapsverificatie.",
+        "Te snel door de levels razen en kerkers ingaan zonder je klasse te beheersen; houd de groep niet op en geef het aan als je twijfelt.",
+        "Hetzelfde wachtwoord hergebruiken op meerdere websites."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Blijf weg van cheats, bots, macro's, exploits, private servers, handel in accounts of goud (RMT) en illegale software. Deze leiden tot permanente bans en diefstal van je persoonlijke gegevens."
+      },
+      {
+       "tip": "p",
+       "metin": "Blizzard zal je nooit per e-mail naar je wachtwoord of verificatiecode vragen. Controleer altijd de adresbalk voor je op een verdachte link klikt en negeer spelers die gratis goud beloven."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Veelgestelde vragen (FAQ)",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is het spel gratis?",
+         "c": "Er is een gratis proefversie tot level 20. Daarna heb je een abonnement of Game Time nodig; voor levels boven de 80 moet je ook Midnight aanschaffen."
+        },
+        {
+         "s": "Kan ik spelen zonder Midnight te kopen?",
+         "c": "Ja, met een abonnement kun je spelen tot level 80. De Midnight-verhaallijn en level 90 vereisen de uitbreiding."
+        },
+        {
+         "s": "Met welke klasse kan ik het beste beginnen?",
+         "c": "Een ongecompliceerde damage-klasse (DPS). Bevalt deze niet, dan kun je op elk moment een ander personage maken."
+        },
+        {
+         "s": "Draait het spel op een oudere pc?",
+         "c": "Midnight vereist minimaal Windows 10 en ondersteunt bepaalde oudere hardware niet meer; raadpleeg de officiële systeemeisen."
+        },
+        {
+         "s": "Ik keer na lange tijd terug. Waar begin ik?",
+         "c": "Activeer een abonnement of Game Time, koop Midnight, kies je personage, werk je talenten bij en lees de updates op het startscherm."
+        },
+        {
+         "s": "Kan ik op mobiel of console spelen?",
+         "c": "De informatie hier geldt voor Windows; raadpleeg Blizzards website voor eventuele andere platforms."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "zh": {
+   "baslik": "魔兽世界新手指南：至暗之夜 2026",
+   "ozet": "至暗之夜（Midnight）时代《魔兽世界》新手入坑与老玩家回归指南：免费试玩、账号设置、上手起步、升级路线、金币经济与账号安全。",
+   "kunye": [
+    {
+     "ad": "游戏类型",
+     "deger": "MMORPG（大型多人在线角色扮演游戏）"
+    },
+    {
+     "ad": "运行平台",
+     "deger": "Windows（战网 Battle.net 客户端）"
+    },
+    {
+     "ad": "付费模式",
+     "deger": "月卡订阅或游戏时间；最高可免费试玩至 20 级。土耳其地区 1 个月月卡订阅价格为 399.99 TRY（暴雪官方公告，2025 年 1 月 17 日起生效）"
+    },
+    {
+     "ad": "当前版本",
+     "deger": "至暗之夜 Midnight（第 11 部资料片），补丁 12.1.5，第 2 赛季"
+    },
+    {
+     "ad": "土耳其语支持",
+     "deger": "官方尚未发布土耳其语游戏客户端；存在土耳其语商城与价格结算页面"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "2026 年游戏现状概览",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "《魔兽世界》（World of Warcraft）是暴雪娱乐自 2004 年运营至今的经典在线角色扮演游戏。当前上线的正式版本为 **Midnight**（至暗之夜）：该第 11 部资料片于 2026 年 3 月 2 日正式推出，将最高等级上限提升至 **90 级**。本次更新带来了全新种族 **Haranir**（哈拉尼尔）、恶魔猎手的第三专精 **Devourer**（噬灭）、玩家住宅系统（Player Housing）、猎物玩法（Prey）、小型地下城地下堡（Delves）以及全新主城银月城（Silvermoon）。"
+      },
+      {
+       "tip": "p",
+       "metin": "在正式服中，**12.1.5 补丁**于 2026 年 10 月 13–14 日上线，作为 8 月开启的 Midnight 第 2 赛季的季中更新。下一个版本 12.1.7 目前已在公开测试服（PTR）进行测试，截至 10 月中旬尚未公布具体发布日期。最新日程请关注游戏内新闻界面与暴雪官方新闻公告。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "补丁版本号与赛季起止日期变动频繁。本指南中的版本数据统计截至 2026 年 11 月 14 日。"
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "入坑前准备：账号、资费与电脑配置",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "你需要拥有一个免费的**战网（Battle.net）**账号并下载战网桌面客户端。新账号享有**免费试玩**资格：角色最高可升至 20 级，包含对应等级区间的地下城副本。免费试玩账号无法加入公会、聊天功能受限且无法使用拍卖行。"
+      },
+      {
+       "tip": "p",
+       "metin": "超过 20 级后，你需要购买**月卡订阅**或**游戏时间**（Game Time）。战网商城显示，月卡订阅涵盖《魔兽世界》正式服 1–80 级、WoW: Forever 1–60 级、经典怀旧服 1–60 级以及潘达利亚之谜怀旧服 1–90 级。Midnight 资料片为单独发售；升至 80 级以上并体验 Midnight 专属内容必须购买该资料片。可在战网账号管理中随时取消订阅，默认自动续费。"
+      },
+      {
+       "tip": "p",
+       "metin": "**土耳其区价格（截至 2026 年 11 月最新官方公告）：**暴雪自 2025 年 1 月 17 日起对土耳其区实施了新资费。目前未见更新的调价公告；商城内的实际金额可能微调，付款前请确认购物车中的最终结算额。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "产品（土耳其区）",
+        "价格（2025 年 1 月公告）"
+       ],
+       "satirlar": [
+        [
+         "1 个月订阅",
+         "399.99 TRY"
+        ],
+        [
+         "3 个月订阅",
+         "1,049.99 TRY"
+        ],
+        [
+         "6 个月订阅",
+         "1,799.99 TRY"
+        ],
+        [
+         "12 个月订阅",
+         "3,599.98 TRY"
+        ],
+        [
+         "60 天游戏时间",
+         "799.98 TRY"
+        ],
+        [
+         "The War Within 地心之战基础版（上一部资料片）",
+         "1,399.99 TRY"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "土耳其区的 Midnight 资料片价格并未列入该公告，战网美服商城的 Midnight 页面亦未公布对应的土耳其里拉金额；因此 **Midnight 的 TRY 官方售价尚未正式公布**。美服商城同时上架了 Midnight 英雄礼包（Heroic）与史诗礼包（Epic）：英雄礼包附赠专属坐骑与幻化外观包，史诗礼包则额外包含 30 天游戏时间、两只宠物、两匹坐骑与住宅装饰礼包。"
+      },
+      {
+       "tip": "p",
+       "metin": "**系统配置要求（Midnight 资料片，源自暴雪官方技术支持页面）：**最低配置要求为 64 位 Windows 10（2019 年 5 月更新或更新版本）、睿频最高 4.0 GHz 的 6 核处理器（Intel Coffee Lake 或 AMD Zen 2 及更新架构）、4 GB 显存的 DirectX 12 显卡（GeForce GTX 10 系列、Radeon RDNA 1 或 Intel Iris Xe2）、8 GB 内存、128 GB 可用 SSD 固态硬盘空间与宽带互联网连接。推荐配置要求为 Windows 11、最高 5.2 GHz 的 8 性能核处理器（Core Ultra 第 2 代或 Ryzen Zen 5）、8 GB 显卡（RTX 40 系列、RDNA 3 或 Arc B 系列）及 16 GB 内存。需要键盘与鼠标。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "硬件项",
+        "最低要求",
+        "推荐配置"
+       ],
+       "satirlar": [
+        [
+         "操作系统",
+         "Windows 10 64-bit",
+         "Windows 11"
+        ],
+        [
+         "处理器",
+         "6 核, 4.0 GHz",
+         "8 性能核, 5.2 GHz"
+        ],
+        [
+         "显卡",
+         "4 GB, DirectX 12",
+         "8 GB, DirectX 12"
+        ],
+        [
+         "内存 (RAM)",
+         "8 GB",
+         "16 GB"
+        ],
+        [
+         "存储空间",
+         "128 GB SSD",
+         "128 GB SSD"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "玩家社区普遍认为官方推荐配置较为严苛；上述配置直接摘自暴雪官方支持页面。如果使用配置较老的电脑，购买前请务必在支持页面核对最新的硬件要求。"
+      },
+      {
+       "tip": "p",
+       "metin": "**服务器与等级上限：**Midnight 的最高等级为 90 级。官方尚未为土耳其设立专门的服务器列表；价格公告通常发布在欧洲（EU）官方论坛，土耳其玩家主要关注欧洲区公告。进入游戏创建角色时可自由选择服务器。"
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "入坑初体验：新手前几小时步骤指南",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "注册并保护账号安全",
+         "metin": "注册战网账号，验证绑定的电子邮箱，并在账号安全中心开启战网手机双重身份验证。"
+        },
+        {
+         "baslik": "下载与安装游戏",
+         "metin": "在战网客户端中选择《魔兽世界》并安装主游戏（正式服 Retail）。客户端体积庞大，请提前预留足够的固态硬盘空间并确保网络通畅。"
+        },
+        {
+         "baslik": "选择种族与职业",
+         "metin": "新手创建角色时将被引导至简短的新手引导区域——放逐之岛（Exile's Reach），该区域将循序渐进地传授基础移动与技能操作。"
+        },
+        {
+         "baslik": "跟随主线指引推进",
+         "metin": "完成新手岛后，游戏将引导你体验资料片主线。暴雪设计的新手升级路线会通过加速版《地心之战》（The War Within）主线将你带至 80 级，同时快速补齐 Midnight 前夕的核心剧情。"
+        },
+        {
+         "baslik": "体验地下城查找器",
+         "metin": "使用地下城查找器（Group Finder）匹配符合当前等级的地下城。通关不仅能获得大量经验值，还能让你熟悉多人团队副本的战斗节奏。"
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "第一天体验切勿急于求成。如果玩了一两小时后发现对当前职业风格不感冒，随时可以重新创建新角色尝试其他职业。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "背包满载时及时找到商人出售杂物；灰色品质物品为无用废品，可一键卖出。在出售蓝色或紫色装备前，请先核实自身角色是否可以穿戴替换。"
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "种族与职业选择推荐",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "游戏当前共有 13 大职业。种族主要决定外观与小幅被动特质；职业与专精（Specialization）则决定核心战斗机制与职责。下表仅供入坑参考，职业强弱平衡会随各版本补丁变动，切勿单纯根据当前登顶排行榜选择。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "职业",
+        "专精（职责）",
+        "上手难度（大致预估）",
+        "适合玩家类型"
+       ],
+       "satirlar": [
+        [
+         "战士 (Warrior)",
+         "武器、狂怒（输出）；防护（坦克）",
+         "中等",
+         "喜欢近战打击感与厚重冲锋风格的玩家"
+        ],
+        [
+         "圣骑士 (Paladin)",
+         "神圣（治疗）；防护（坦克）；惩戒（输出）",
+         "简单–中等",
+         "偏好全能定位、能兼顾所有职责的多面手玩家"
+        ],
+        [
+         "猎人 (Hunter)",
+         "野兽控制、射击、生存（输出）",
+         "简单",
+         "喜欢携带宠物、擅长远程物理输出的新手玩家"
+        ],
+        [
+         "潜行者 (Rogue)",
+         "奇袭、狂徒、敏锐（输出）",
+         "中等",
+         "钟情潜行伏击、高爆发与高机动玩法的玩家"
+        ],
+        [
+         "牧师 (Priest)",
+         "戒律、神圣（治疗）；暗影（输出）",
+         "中等",
+         "热爱团队治疗护盾或暗影心智法术的玩家"
+        ],
+        [
+         "死亡骑士 (Death Knight)",
+         "鲜血（坦克）；冰霜、邪恶（输出）",
+         "中等",
+         "喜爱坚韧生存、召唤亡者与冰霜近战力量的玩家"
+        ],
+        [
+         "萨满祭司 (Shaman)",
+         "元素、增强（输出）；恢复（治疗）",
+         "中等",
+         "喜欢图腾辅助与操纵风暴火焰元素的全面型玩家"
+        ],
+        [
+         "法师 (Mage)",
+         "奥术、火焰、冰霜（输出）",
+         "简单–中等",
+         "偏好纯粹远程法术爆发输出与控制的玩家"
+        ],
+        [
+         "术士 (Warlock)",
+         "痛苦、恶魔学识、毁灭（输出）",
+         "中等",
+         "擅长诅咒折磨、恶魔召唤与生命吸取的法系玩家"
+        ],
+        [
+         "武僧 (Monk)",
+         "酒仙（坦克）；织雾（治疗）；踏风（输出）",
+         "中等–偏难",
+         "热衷近战拳脚连招与极致走位灵活性的玩家"
+        ],
+        [
+         "德鲁伊 (Druid)",
+         "平衡、野性（输出）；守护（坦克）；恢复（治疗）",
+         "中等–偏难",
+         "希望一个角色体验变形四系全部职责的玩家"
+        ],
+        [
+         "恶魔猎手 (Demon Hunter)",
+         "浩劫（输出）；复仇（坦克）；Devourer 噬灭（Midnight 新增）",
+         "中等",
+         "追求超高机动、二段跳滑翔与狂暴恶魔变身的玩家"
+        ],
+        [
+         "唤魔师 (Evoker)",
+         "湮灭、增力（输出）；恩护（治疗）",
+         "中等–偏难",
+         "喜欢龙希尔形态与独特蓄能龙息法术的玩家"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Haranir**（哈拉尼尔）是 Midnight 资料片的新增种族，**Devourer**（噬灭）是恶魔猎手的全新专精。出于好奇可以尝试体验，但新手创建第一个角色时无需刻意强求。选择普通的输出专精入门熟悉基础系统，是压力最小的开荒方式。"
+      },
+      {
+       "tip": "p",
+       "metin": "上手难度仅为大致参考，并非绝对标准。游戏目前共 13 个职业，表格中已完整涵盖唤魔师与恶魔猎手；排列次序不代表实际战斗力排名。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "同一战网账号下可以自由创建多个不同职业的角色。绝大多数资深玩家都会创建几个角色试玩，最终常驻自己最喜欢的本命职业。"
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "升级路线：高效平稳的练级指南",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "在 10 级至 70 级之间，**克罗米时间**（Chromie Time）允许你自由选择体验往期任意资料片的任务地图。新玩家默认被导向巨龙时代（Dragonflight）地图。每个资料片都有独立故事线，你无需将所有扩展包任务全部做完。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Midnight 练级地下城：Windrunner Spire、Murder Row、Den of Nalorakk、Maisara Caverns 与 The Blinding Vale。",
+        "天空骑行（Skyriding / 动态飞行）开局即可解锁，极大便利地图跑图与采集资源。",
+        "完成 Midnight 主线任务战役将为账号下的副职业小号解锁冒险模式（Adventure Mode）。"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "想要高效练级，建议在一个地图内集中清完主线与支线，同时排队匹配地下城，切忌半途频繁换图。免费试玩版上限为 20 级；升到 20 级后正是评估是否购买月卡或游戏时间的最佳时机。"
+      },
+      {
+       "tip": "p",
+       "metin": "地下城分为三大职责：坦克、治疗与输出（DPS）。坦克与治疗的排队时间通常远短于输出；如果你能胜任其中之一，进本速度将大幅提升。作为新手，你很快就会体会到为什么坦克与治疗如此抢手。此外要定期更换装备：练级期间地下城与任务奖励足够支持你的属性，背包里留着过时的旧装备毫无意义。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "老玩家回归时，天赋树与核心技能机制可能经历了大幅改动。进入游戏后第一件事请务必打开天赋面板重新确认天赋加点。"
+      }
+     ]
+    },
+    {
+     "id": "meslekler",
+     "baslik": "专业技能详解：作用与选择建议",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "每个角色最多可以学习**两门主专业**；烹饪、钓鱼和考古等副专业则可以全数兼修。主专业分为两大类：**采集专业**负责提供基础原材料，**制造专业**将原材料打造成装备或消耗品。由于练级途中顺道采集极为方便，选择“一采集+一制造”是新手开荒最稳健高效的搭配。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "类别",
+        "专业技能",
+        "产出与作用"
+       ],
+       "satirlar": [
+        [
+         "采集专业",
+         "草药学、采矿、剥皮",
+         "基础原材料；可直接挂上拍卖行出售变现"
+        ],
+        [
+         "制造专业",
+         "炼金术、锻造、附魔、工程学、铭文、珠宝加工、制皮、裁缝",
+         "药水合剂、护甲装备、武器、附魔卷轴、工程实用道具"
+        ],
+        [
+         "辅助副业",
+         "烹饪、钓鱼、考古",
+         "属性食物增益与趣味外观玩具奖励"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "草药学搭配炼金术、采矿搭配锻造或珠宝加工，是经典顺手的组合。",
+        "剥皮与制皮共享皮革材料；既能自给自足做皮甲锁甲，也可卖皮赚钱。",
+        "附魔可分解无用装备获得附魔尘埃与精华；给武器装备附魔强力属性必须依赖附魔师。"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "无需在建号第一天就匆忙确定专业；免费试玩期可以先体验基础技能等级。专业虽可遗忘重选，但过往技能熟练度将被清空，因此选定前建议简单尝试。每个新版本的专业经济价值均有浮动，详情请多关注游戏内专业指引与暴雪官方蓝贴。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "如果选择了采集专业，养成在做任务跑图路上顺手采集草药和矿石的习惯，日后便无需耗费额外时间专门蹲点刷材料。"
+      }
+     ]
+    },
+    {
+     "id": "icerik",
+     "baslik": "满级核心玩法：地下堡、地下城、团队副本与大秘境",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "角色升至 90 级满级后，游戏将全面开启层级化的核心终局玩法。门槛最低且适合单人的是**地下堡**（Delves）：适合单人或小队探索的地下微型副本。随后是常规 **5 人地下城**（Dungeons）、大型多人团队副本 **Raids**（最多支持 20 人及以上）以及挑战最高的**史诗钥石大秘境**（Mythic+）。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "玩法内容",
+        "参与人数",
+        "难度分级",
+        "核心定位与奖励"
+       ],
+       "satirlar": [
+        [
+         "地下堡 (Delves)",
+         "1-5 人（常带 NPC 随从单刷）",
+         "阶梯层级 (Tiers)",
+         "耗时短、节奏快且舒适的装备获取途径"
+        ],
+        [
+         "地下城 (Dungeons)",
+         "5 人",
+         "普通、英雄、史诗",
+         "熟悉职业机制与小队配合"
+        ],
+        [
+         "史诗钥石 (Mythic+)",
+         "5 人",
+         "钥石层数 (+2, +3...)",
+         "高难度限时竞速、每周强力低保装备"
+        ],
+        [
+         "团队副本 (Raid)",
+         "大型团队",
+         "随机团 (LFR)、普通、英雄、史诗",
+         "剧情终章首领激战、毕业级套装武器"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**LFR**（随机团队副本）是门槛最低的团本难度，通过查找器排队即可加入。为了适应团队协作，建议从普通地下城开始，循序渐进打到英雄与史诗难度。史诗钥石（大秘境）在史诗地下城基础上引入层数词缀并加入计时倒计时；毫无准备就盲目跳进高层大秘境，会让自己和队友都倍感挫败。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "地下堡是新号绝佳的安全训练场：无需在集合石苦等组队，在熟悉职业手感的同时也不会影响他人节奏。"
+      },
+      {
+       "tip": "uyari",
+       "metin": "在随机地下城中失误灭团并不会受到系统惩罚，但若频繁中途恶意跳车退出，地下城查找器可能会暂时限制你的排队资格。请按照自己的节奏循序渐进挑战更高难度。"
+      }
+     ]
+    },
+    {
+     "id": "haftalik",
+     "baslik": "每周必做清单与低保机制",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "达到 90 级后，游戏将进入以周为单位的重置循环。每周重置日期因地区而异；欧洲服通常在周三上午重置；具体时间可能随补丁调整。以下整理了每周重置后的核心待办事项清单："
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "接取每周核心周常任务与世界任务，优先完成奖励丰厚的目标。",
+        "通关若干次地下堡（Delves），累积宏伟宝库的每周开箱低保进度。",
+        "完成史诗钥石大秘境或史诗地下城挑战，点亮宝库地下城格子。",
+        "通过团队查找器（LFR）或普通团本击败至少几个团本首领。",
+        "前往宏伟宝库（Great Vault）挑选并领取一件强力低保装备。",
+        "完成专业技能周常任务与工匠制造订单机会。"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**宏伟宝库**（Great Vault）会根据你当周完成的地下城、团本首领与地下堡数量解锁对应的装备格。你只能从每种玩法的格子候选装备中最终挑选一件带走。如果你在三种玩法中均有参与，宝库的选项将达到最大化。这一机制延续了暴雪在 Midnight 官方发布会中介绍的周常核心循环（暴雪新闻：Midnight 资料片官方说明）。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "可以将这份周常清单记在纸上或手机备忘录中，每周按项勾选。几周下来便会轻车熟路，熟练玩家通常只需 1–2 小时即可搞定核心周常。"
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "金币经济：坚持通过游戏内正规途径获取",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "赚取金币的唯一正途是利用游戏内置的合法经济系统。**拍卖行**（Auction House）是玩家间自由交易的核心市场，需要购买月卡订阅方可使用。将采集到的草药、矿石与皮革直接挂上拍卖行出售，是新手最稳妥的起步收入来源。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "在将任务奖励与副本掉落直接卖给 NPC 之前，先在拍卖行查阅其市场成交价。",
+        "及早学习采集专业；练级跑图途中顺手采集，积少成多是一笔可观的财富。",
+        "出售昂贵稀有物品前多查看历史成交价格走势，切忌急于按最低价草率贱卖。"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "专业分为采集（草药、采矿、剥皮）与制造（锻造、炼金、附魔等）。制造专业离不开原材料支持，因此双专业互补极为明智。不要指望第一天就能暴富，积累金币需要数周的沉淀。各服务器物价有所不同，切勿将某一服务器的价格当成永恒基准。"
+      },
+      {
+       "tip": "uyari",
+       "metin": "在第三方网站私下买卖金币或线下交易账号将直接导致账号被永久封禁。暴雪对此严厉打击，且绝大多数场外买金网站都与盗号、黑卡及个人信息泄露紧密关联。"
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "满级后的进阶玩法与长线追求",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "达到最高等级后，宏大的终局玩法才真正展开。**地下堡**（Delves）是单人或小队探索的小型副本，是进军大型团本前极佳的装备跳板。**史诗钥石大秘境**（限时挑战）与**团队副本**提供顶级强力装备。建议先在普通和英雄难度中积累实战经验。"
+      },
+      {
+       "tip": "p",
+       "metin": "**玩家住宅**（Player Housing）随 Midnight 资料片正式实装：你可以购置属于自己的住宅并自由布置装潢。**猎物系统**（Prey）是 Midnight 的专属战斗机制。其具体规则会随补丁迭代，详细指南可随时在游戏内手册中查阅。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "玩法内容",
+        "定位与目的",
+        "参与时机"
+       ],
+       "satirlar": [
+        [
+         "地下堡 (Delves)",
+         "单人或小队稳健平稳获取装备",
+         "临近或刚达到满级阶段"
+        ],
+        [
+         "史诗钥石 (Mythic+)",
+         "限时地下城竞速、顶级每周低保",
+         "通关普通与英雄地下城之后"
+        ],
+        [
+         "团队副本 (Raid)",
+         "大型团队攻坚、首领机制战",
+         "角色装备装等达标之后"
+        ],
+        [
+         "PvP 对战",
+         "竞技场与战场玩家间对抗",
+         "随时自由选配体验"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "加入一个活跃友善的公会是现阶段最强力的推进剂：寻找副本队友、请教职业配装技巧、公会互助交换装备都将变得轻而易举。公会功能需要有效月卡订阅或游戏时间。建议寻找活动时间契合、经常组织日常活动的公会；如果不适应，随时可以退出更换公会。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "时刻留意自身的物品等级（Item Level）；游戏系统会明确标注哪些难度地下城最适合你当前的装等。"
+      }
+     ]
+    },
+    {
+     "id": "eklentiler",
+     "baslik": "界面插件与正式服、怀旧服版本差异",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**插件**（Addons）是用于自定义与优化游戏界面的小型辅助工具。暴雪官方仅允许使用修改界面显示与梳理信息的插件；任何代打、自动按键挂机或具有脚本外挂特性的插件均被严厉禁止，并会导致账号被封禁。请仅从正规合法的插件平台下载；来自不明网站的插件文件极易被植入木马盗取账号。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "首领警报插件（如 BigWigs 或 Deadly Boss Mods / DBM）能够精准预警团本机制与倒计时。",
+        "背包整合、地图标记与伤害统计插件（Damage Meter）对新手属于可选工具；在尚未熟悉游戏基础前，不要盲目安装过多插件拖慢界面。",
+        "每逢重大版本补丁更新后，请务必及时更新插件；老旧过期的插件极易引起界面报错与帧率卡顿。"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**正式服、怀旧服与 Forever：**正式服（Retail）即本指南介绍的当季最新 Midnight 资料片。怀旧服（Classic）提供往昔经典版本：经典旧世服（Classic Era）、进度服（Classic Progression）、周年纪念版以及探索赛季（Season of Discovery）。WoW: Forever 是独立运营的全新分支版本，在重塑的艾泽拉斯大陆上呈现全新地图区域、重构的职业机制、超过 1000 个全新任务以及专属副本，并加入全新种族 Skyborne。同一月卡订阅可畅玩这三类所有版本，但 Midnight 资料片专属内容仅适用于正式服。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "版本分支",
+        "等级范围（月卡订阅）",
+        "版本核心特色"
+       ],
+       "satirlar": [
+        [
+         "正式服 Retail (Midnight)",
+         "1–80 级（月卡），购买 Midnight 后最高 90 级",
+         "现代化高速战斗与最新剧情"
+        ],
+        [
+         "WoW: Forever",
+         "1–60 级",
+         "重铸焕新的原版艾泽拉斯世界"
+        ],
+        [
+         "怀旧服 Era 与进度服",
+         "1–60 级",
+         "原汁原味的经典老式慢节奏玩法"
+        ],
+        [
+         "潘达利亚之谜怀旧服",
+         "1–90 级",
+         "经典往期资料片再现"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "如果你在版本间举棋不定，建议先在正式服（Retail）体验免费试玩；正式服上手引导完善且在线活跃玩家数量庞大。"
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "新手常见误区与账号安全防护",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "战网账号未开启手机双重身份验证保护。",
+        "一味盲目追求练级速度，在完全不了解自身职业机制的情况下贸然进本；切勿拖慢队伍进度，遇到不懂的机制主动在队伍中沟通。",
+        "在不同游戏与外部网站中长期混用同一个简单密码。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "严禁使用外挂、脚本、按键宏滥用、漏洞利用（Exploit）、私服、账号金币线下交易（RMT）及盗版软件。这些行为将导致永久封号以及严重的个人隐私泄漏风险。"
+      },
+      {
+       "tip": "p",
+       "metin": "暴雪官方绝不会通过电子邮件向你索取账号密码或安全验证码。点击可疑链接前请务必确认浏览器地址栏域名，并在游戏内直接屏蔽声称“免费领金币”的骗子欺诈信息。"
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "常见问题解答 (FAQ)",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "这款游戏是免费游玩的吗？",
+         "c": "游戏提供最高 20 级的免费试玩。20 级之后需要充值月卡订阅或游戏时间；升至 80 级以上则必须额外购买 Midnight 资料片。"
+        },
+        {
+         "s": "不购买 Midnight 资料片可以玩吗？",
+         "c": "可以，只要有月卡订阅最高可升至 80 级并体验过往内容。体验 Midnight 专属剧情与升至 90 级则必须拥有该资料片。"
+        },
+        {
+         "s": "新手推荐优先玩哪个职业？",
+         "c": "推荐先从操作直观的纯输出职业（如猎人、法师或惩戒骑）开始。若不合心意，随时可以新建其他职业角色。"
+        },
+        {
+         "s": "老旧配置的电脑能带动吗？",
+         "c": "Midnight 资料片最低要求 Windows 10 系统，部分老旧硬件已停止官方支持；购入前请对照官方公布的最新系统配置要求。"
+        },
+        {
+         "s": "多年老玩家重新回归，应该从何下手？",
+         "c": "激活月卡或充值游戏时间，购买 Midnight，选定角色，重新点好天赋树，并浏览战网及游戏开屏的最新资讯速递。"
+        },
+        {
+         "s": "手机或主机掌机上可以游玩吗？",
+         "c": "本指南针对 Windows 平台；若想了解其他平台支持情况，请密切关注暴雪官方网站的最新公告。"
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  }
 }

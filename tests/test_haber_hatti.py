@@ -440,7 +440,7 @@ class HatTests(unittest.TestCase):
         article.setdefault('otomasyon', {}).update(hype=8, konu=oid,
             resmi_url=next(s['url'] for s in article['kaynaklar'] if h.oto.resmi(s['url'])),
             teyit_zamani=now.isoformat(), oyuncuya_fayda='Oyuncular yeni sezonun değişikliklerini öğrenir.')
-        scenarios = {d: h.oku(h.ROOT / f'video/senaryo/{oid}-{d}.json') for d in h.oto.DILLER}
+        scenarios = {d: h.oku(h.ROOT / f'video/senaryo/{oid}-{d}.json') for d in h.oto.SENARYO_DILLERI}
         if failed_lang:
             scenarios[failed_lang] = {}
         if missing_lang:

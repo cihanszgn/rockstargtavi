@@ -2132,6 +2132,1578 @@
      ]
     }
    ]
+  },
+  "de": {
+   "baslik": "Call of Duty Leitfaden – MW4 und Warzone Handbuch für Einsteiger 2026",
+   "ozet": "Ein Einsteiger-Leitfaden für Modern Warfare 4 und das kostenlose Warzone: Plattformen, PC-Anforderungen, Modi, Einstellungen, der Battle Pass und sicheres Ausgeben.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Ego-Shooter (Kampagne, Mehrspieler, DMZ, Battle Royale)"
+    },
+    {
+     "ad": "Plattform",
+     "deger": "PS5, Xbox Series X|S, PC (Battle.net, Steam, Xbox auf PC), Nintendo Switch 2; keine PS4 oder Xbox One"
+    },
+    {
+     "ad": "Preismodell",
+     "deger": "Hauptspiel ist kostenpflichtig; Warzone ist kostenlos"
+    },
+    {
+     "ad": "Aktuelle Version",
+     "deger": "Modern Warfare 4, Saison 1 (6. November 2026)"
+    },
+    {
+     "ad": "Türkisch-Unterstützung",
+     "deger": "Keine türkische Sprachoption (Steam-Sprachtabelle, 15. November 2026)"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "oyun-nedir",
+     "baslik": "Call of Duty im Jahr 2026: Modern Warfare 4 und Warzone",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Call of Duty ist eine Ego-Shooter-Reihe, die fast jedes Jahr ein neues Hauptspiel veröffentlicht. Das aktuelle Hauptspiel ist **Call of Duty: Modern Warfare 4**, entwickelt von Infinity Ward. Laut offiziellen Ankündigungen erschien es am 23. Oktober 2026 für PlayStation 5, Xbox Series X|S, PC (Battle.net, Steam und Xbox auf PC) sowie Nintendo Switch 2; es gibt keine Version für PS4 oder Xbox One. Es enthält eine Kampagne, den Mehrspielermodus und den zurückkehrenden DMZ-Modus."
+      },
+      {
+       "tip": "p",
+       "metin": "**Warzone** ist der kostenlos spielbare Battle-Royale-Zweig (der letzte Überlebende gewinnt). Mit Saison 1, die am 6. November 2026 startete, wurde Warzone vollständig in Modern Warfare 4 integriert. Die neue Battle-Royale-Karte Hajin und die neue Resurgence-Karte Zodiac wurden eingeführt; Rebirth Island kehrt zurück und Verdansk folgt später in Saison 1."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Dieser Leitfaden behandelt die dauerhaften Grundlagen des Hauptspiels und von Warzone. Welche Waffe die beste ist, ändert sich von Saison zu Saison; die aktuellen Details stehen in den offiziellen Patch-Notes."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Vor dem Start: Plattform, Installation, Sicherheitsanforderungen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Das Hauptspiel wird über die Shop-Seite erworben; der Store bietet Standard- und Vault-Editionen an, wobei die Vault-Edition zusätzliche Operator-Pakete enthält (z. B. Hostile Alliance: Price, Valeria, Ghost, Blix). Warzone hingegen ist separat kostenlos. Auf dem PC verlangt Modern Warfare 4 offiziell folgende Ausstattung."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Minimum:** 64-Bit Windows 10, Ryzen 5 1400 oder Core i5-6600, 8 GB RAM, Radeon RX 470, GeForce GTX 970 oder GTX 1060, oder Arc A580; **115 GB SSD-Speicher**.",
+        "**Empfohlen:** Windows 11, Ryzen 5 3600 oder Core i7-8700K, 16 GB RAM, Radeon RX 6600 XT, GeForce RTX 3060 oder Arc B580; ebenfalls **115 GB SSD-Speicher** (Steam-Seite).",
+        "**Sicherheitsanforderung:** Der PC benötigt TPM 2.0 und Secure Boot. Laut Activision bedeutet dies in der Regel Intel ab der 8. Generation oder Ryzen 2000 aufwärts, UEFI-Boot, einen GPT-Datenträger und aktiviertes Secure Boot."
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Thema",
+        "Offizieller Stand (15. November 2026)"
+       ],
+       "satirlar": [
+        [
+         "Hauptspielpreis",
+         "Auf Steam zeigt die Standard-Edition R$ 299,00, die Vault-Edition R$ 463,90 und das Vault-Upgrade R$ 164,90 (Ansicht Region Brasilien); ein Preis in Türkischer Lira wird in dieser Ansicht nicht angezeigt; der Store zeigt ihn je nach Region an."
+        ],
+        [
+         "Türkisch",
+         "Türkisch ist in der Steam-Sprachtabelle nicht unter den Oberflächen-, Audio- und Untertitelsprachen aufgeführt."
+        ],
+        [
+         "Crossplay",
+         "Die Steam-Seite führt plattformübergreifenden Mehrspielermodus auf; Activisions Beta-Ankündigung erwähnt ebenfalls volles Crossplay über alle Plattformen."
+        ],
+        [
+         "Plattformübergreifender Fortschritt und Konto",
+         "Activisions Ankündigungen erwähnen die Mitnahme des Spielfortschritts über Plattformen hinweg; die Multiplayer-Beta erforderte ein Activision-Konto. Wie Konten im vollständigen Spiel verknüpft werden, ist noch nicht offiziell bekannt gegeben."
+        ],
+        [
+         "Installationsgröße",
+         "Zum Start sind 115 GB freier SSD-Speicherplatz erforderlich (Steam). Modulspezifische Größen sind offiziell nicht angekündigt."
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Ohne TPM 2.0 und Secure Boot startet das Spiel auf dem PC nicht. Lies vor dem Ändern von BIOS-Einstellungen die Schritte auf Activisions Support-Seite; falsche Einstellungen können den Start des Computers verhindern."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Die Installation benötigt 115 GB SSD-Speicherplatz. Prüfe den freien Speicher vor dem Download; wer Warzone zuerst testen möchte, kann das Hauptspiel später kaufen."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Die ersten Matches Schritt für Schritt",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Mit Warzone oder klassischen Mehrspielermodi starten",
+         "metin": "Warzone ist kostenlos; der Mehrspielermodus vermittelt Waffen und Karten in kürzeren Matches. Probiere beides aus, um die Vorlieben kennenzulernen."
+        },
+        {
+         "baslik": "Ein Loadout zusammenstellen",
+         "metin": "Wähle eine Hauptwaffe, eine Sekundärwaffe, Ausrüstung und Perks. Starte anfangs mit einer vorgefertigten Klasse und passe Details schrittweise an."
+        },
+        {
+         "baslik": "Den Spielfluss der Karten lernen",
+         "metin": "Jede Karte hat typische Laufwege. Notiere nach jedem Tod, aus welcher Richtung der Treffer kam, und meide diese Route."
+        },
+        {
+         "baslik": "In Warzone sicher landen",
+         "metin": "Statt in umkämpfte Zonen abzuspringen, lande an einem Randpunkt, beschaffe Waffe sowie Panzerung und bewege dich mit dem Kreis."
+        },
+        {
+         "baslik": "Nach jedem Match einen Fehler abstellen",
+         "metin": "Finde heraus, warum der Tod eintrat: ungeschützt gestanden, nicht geheilt oder vom Team getrennt gewesen? Stelle das im nächsten Match ab."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Ignoriere in der ersten Mehrspielerwoche die K/D-Quote. Konzentriere dich auf konstantes Spiel: lerne, Gefechte abzubrechen und die Position vor dem Ableben zu wechseln."
+      }
+     ]
+    },
+    {
+     "id": "modlar",
+     "baslik": "Modi: Wo man beginnt",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Laut offizieller Ankündigung sind dies die Hauptmodi in Saison 1. Die aktuelle Liste steht im Spielmenü und wird im Laufe der Saison erweitert."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Modus",
+        "Wofür er gedacht ist"
+       ],
+       "satirlar": [
+        [
+         "Multiplayer",
+         "Kurze Team-Matches; der ideale Ort, um Waffen und Karten kennenzulernen."
+        ],
+        [
+         "Kill Block: Crash",
+         "Ein neuer Modus, der mit Modern Warfare 4 eingeführt wurde; in der offiziellen Ankündigung für Saison 1 gelistet."
+        ],
+        [
+         "DMZ",
+         "Ein teambasierter Survival-Modus mit Missionen und Extraktion; Saison 1 brachte X01 Black Site sowie neue Gegner und Aufträge."
+        ],
+        [
+         "Warzone Battle Royale",
+         "Als letzter Überlebender auf einer großen Karte bestehen; neue Karte ist Hajin, Verdansk folgt später in Saison 1."
+        ],
+        [
+         "Warzone Resurgence",
+         "Eine schnellere Variante mit Wiedereinstieg nach dem Tod; gespielt auf Zodiac und Rebirth Island."
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Der sanfteste Einstieg für Tag eins: Starte mit Resurgence in Warzone (Wiedereinstieg nach dem Tod möglich) oder nutze kurze Mehrspielermatches, um Bewegung und Zielen zu trainieren."
+      }
+     ]
+    },
+    {
+     "id": "mod-farklari",
+     "baslik": "Multiplayer, Warzone und DMZ: die Unterschiede",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Die drei Modi gehören zum selben Spiel, folgen aber unterschiedlichen Regeln. Passe Klasse und Zielsetzung diesen Besonderheiten an."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Thema",
+        "Multiplayer",
+        "Warzone",
+        "DMZ"
+       ],
+       "satirlar": [
+        [
+         "Match-Ziel",
+         "Kurze Team-Matches, Zielpunktzahl je nach Modus",
+         "Als letzter Überlebender auf einer großen Karte bleiben; in Resurgence Wiedereinstieg nach dem Tod",
+         "Missionen abschließen und von der Karte extrahieren"
+        ],
+        [
+         "Herkunft der Waffen",
+         "In Create-a-Class erstellte Klasse; Primär- und Sekundärwaffe",
+         "Am Boden gefundene Waffen und der kostenlose Loadout Drop für den Squad",
+         "Einstieg mit zwei Primärwaffen, zwei Sekundärwaffen oder gemischt; mehr mit Waffen-Rucksack"
+        ],
+        [
+         "Kosten",
+         "Im Hauptspiel enthalten",
+         "Kostenlos",
+         "Teil von Modern Warfare 4 (beim Kauf des Hauptspiels)"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Zum Thema **Zombies**: In den offiziellen Ankündigungen zu Modern Warfare 4 (Launch, Saison 1 und Warzone) taucht kein Zombies-Modus auf. Er ist offiziell nicht angekündigt; falls er kommt, wird er im Call of Duty Blog vorgestellt."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Verwende nicht in jedem Modus dieselbe Klasse. Schnelligkeit und Nahkampf lohnen sich im Mehrspieler; Reichweite und Panzerung zählen in Warzone; in DMZ ist das Überleben beim Extrahieren genauso wichtig wie die Beute."
+      }
+     ]
+    },
+    {
+     "id": "silah-gunsmith",
+     "baslik": "Waffenklassen, Gunsmith und Klassenbau",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Create-a-Class wird auf Spielerstufe 4 freigeschaltet. Laut offiziellem Launch-Beitrag gibt es Primärwaffen in sechs Klassen; die folgenden Zahlen entsprechen dem Veröffentlichungsstand, die Rollen allgemeinem Spielwissen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Klasse",
+        "Anzahl",
+        "Allgemeine Rolle"
+       ],
+       "satirlar": [
+        [
+         "Sturmgewehr (Assault rifle)",
+         "8",
+         "Ausgewogen auf fast alle Distanzen; der einfachste Einstieg für Anfänger"
+        ],
+        [
+         "Maschinenpistole (SMG)",
+         "5",
+         "Nahkampf und mobiles Gameplay"
+        ],
+        [
+         "Schrotflinte (Shotgun)",
+         "2",
+         "Extremer Nahkampf; stark auf engem Raum"
+        ],
+        [
+         "Leichtes Maschinengewehr (LMG)",
+         "3",
+         "Großes Magazin; Dauerfeuer und Zonenabsicherung"
+        ],
+        [
+         "DMR / Präzisionsgewehr (Marksman rifle)",
+         "3",
+         "Mittlere bis weite Distanz; jeder Schuss zählt"
+        ],
+        [
+         "Scharfschützengewehr (Sniper rifle)",
+         "3",
+         "Höchste Reichweite; erfordert Geduld und gute Positionierung"
+        ],
+        [
+         "Sekundärwaffe",
+         "8",
+         "Schneller Wechsel, wenn das Magazin der Primärwaffe leer ist"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Aufsätze werden innerhalb einer Klasse geteilt.** Laut offizieller Ankündigung werden Aufsätze im Gunsmith nun waffenklassenweit geteilt, was Anpassung und Experimente erleichtert.",
+        "**Apex Attachments.** Dies sind spezielle Aufsätze, die durch das vollständige Leveln einer Waffe freigeschaltet werden; sie belegen keinen Aufsatz-Slot und können das Waffenverhalten spürbar verändern.",
+        "**Gunny.** Ein vorgefertigter Bau-Helfer für Neulinge: Er stellt aus den bereits freigeschalteten Aufsätzen vom Infinity-Ward-Waffenteam entworfene Nah-, Mittel- oder Fernkampf-Builds zusammen. Er ist optional und lässt sich manuell verfeinern."
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Create-a-Class öffnen",
+         "metin": "Erscheint ab Stufe 4 im Menü. Wähle zunächst eine Standardklasse und betrachte die Zusammensetzung."
+        },
+        {
+         "baslik": "Primärwaffe wählen",
+         "metin": "Wähle eine der Klassen aus der Tabelle und formuliere den Zweck der Klasse in einem Satz."
+        },
+        {
+         "baslik": "Mit Gunny beginnen und anpassen",
+         "metin": "Erzeuge Gunnys Vorschlag für Nah-, Mittel- oder Fernkampf; wechsle Aufsätze einzeln und teste den Unterschied im Match."
+        },
+        {
+         "baslik": "Sekundärwaffe oder Overkill wählen",
+         "metin": "Im Mehrspielermodus erlaubt das Overkill-Perk das Mitführen einer zweiten Primärwaffe statt einer Sekundärwaffe. Es befindet sich in der ersten Perk-Gruppe und wird auf Stufe 4 freigeschaltet."
+        },
+        {
+         "baslik": "Drei Perks auswählen",
+         "metin": "Im Mehrspielermodus sind 18 Perks auf drei Gruppen verteilt, aus denen jeweils einer gewählt wird (Pick 3). Wähle Perks passend zum Klassenzweck."
+        },
+        {
+         "baslik": "Ausrüstung komplettieren",
+         "metin": "Triff der Reihe nach deine Entscheidungen für Taktik, Primärgranate, Field Upgrade und Abschussserien (Killstreaks)."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Teste jeden Waffen-Build mindestens fünf Matches lang. Die Schwächen eines Setups zeigen sich meist erst nach mehreren Partien."
+      }
+     ]
+    },
+    {
+     "id": "temel-mekanikler",
+     "baslik": "Kernmechaniken: Loadouts, Perks, Positionierung",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Waffen ändern sich von Saison zu Saison, diese vier Gewohnheiten bleiben jedoch beständig."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Perks:** Warzone bietet insgesamt 18 Perks. Die ersten 15 werden vor einem Match auf drei Slots verteilt; die übrigen drei sind **Elite Perks**, die im Match gefunden werden können und von denen jeweils nur eines aktiv sein darf. Laut offiziellem Beitrag fügen Elite Perks einen vierten Slot hinzu und sind an Vorratsstationen oder über Supply Run Contracts erhältlich.",
+        "**Positionierung:** Ecken und Türrahmen verschaffen im Nahkampf Vorteile; ständige Bewegung im offenen Gelände lässt dem Gegner wenig Reaktionszeit.",
+        "**Panzerung und Heilung:** Lege in Warzone vor Gefechten Panzerplatten ein; das Perk Tempered reduziert das Nachfüllen von drei Platten auf zwei (Saison-1-Beitrag).",
+        "**Teamplay und Kommunikation:** Pings und kurze Ansagen schlagen langes Reden. Details wie Rückkaufkosten und das Wingman-Perk in Resurgence ändern sich mit der Saison."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Statt Klassen mit Perks zu überladen, bestimme den Einsatzzweck in einem Satz: Nahkampf oder mittlere Distanz? Wähle Perks passend dazu."
+      }
+     ]
+    },
+    {
+     "id": "warzone-gulag",
+     "baslik": "Warzone: Gulag, Wiedereinstieg und Drop Kits",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "In Warzone bedeutet der Tod nicht immer das Spielende. Laut den Patch-Notes zu Saison 1 bietet Hajin ein neues Gulag (die Duell-Arena nach dem Ableben), und Resurgence hat neue Verbrauchsgegenstände namens Drop Kits erhalten."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Drop Kit",
+        "Was es beim Wiedereinstieg gewährt"
+       ],
+       "satirlar": [
+        [
+         "Insured",
+         "Schnellerer Wiedereinstieg unter Beibehaltung des gesamten Bargelds (Cash)"
+        ],
+        [
+         "Armored",
+         "Landung mit voller Panzerung, zusätzlichen Panzerplatten und einem Selbstwiederbelebungs-Kit"
+        ],
+        [
+         "Loadout",
+         "Landung mit der aktuellen Ausrüstung (Loadout)"
+        ],
+        [
+         "Radar",
+         "Landung mit aktivem Radar-Ping, einer UAV und Supply Sweep"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Drop-Kit-Regeln:** Nur in Resurgence-Modi verfügbar; sie betreffen nur den ausrüstenden Operator, verbrauchen sich beim Wiedereinstieg und es kann nur eines getragen werden; das Aufheben eines anderen ersetzt das aktuelle.",
+        "**Das Gulag:** Das neue Gulag auf Hajin existiert in zwei Arena-Varianten; Hindernisse lassen sich überwinden, Zuschauer blicken aus bestimmten Bodenwinkeln zu und lokales Wetter beeinflusst die Umgebung.",
+        "**Wiedereinstieg im Battle Royale:** Zurückgekaufte Spieler steigen mit der Waffe ein, die an das Gulag-Loadout dieses Kreises gekoppelt ist.",
+        "**Verträge und Extra-Items:** In Kreis 3 fliegen Drohnen mit mobilen Vorratsstationen über die Karte; das Abschießen schaltet exklusive, mächtige Ausrüstung frei (Fly Buy). Zudem landet ein kostenloser Loadout Drop für den Squad. Im Resurgence-Event Bounty Contest erhält jeder Squad automatisch einen Kopfgeldauftrag."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Prüfe vor dem Ableben in Resurgence das getragene Drop Kit. Das Armored-Kit dient der schnellen Erholung, das Loadout-Kit dem Beibehalten der gewohnten Waffe; wähle je nach Ziel."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Einstellungen: Solide Startwerte",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Die folgenden Werte sind Einstiegsempfehlungen und hängen von Hardware und Gewohnheiten ab. Ändere immer nur eine Einstellung zur selben Zeit."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Sichtfeld (FOV):** Starte bei etwa 100. Zu hohe Werte verkleinern Ziele, zu niedrige verdecken das Umfeld.",
+        "**Bildratenlimit:** Passe es an die Bildwiederholrate des Monitors an und deaktiviere VSync; eine stabile Bildrate ist besser als plötzliche Spitzen.",
+        "**Empfindlichkeit:** Wähle einen mittleren Basiswert und passe die Zielvisier-Empfindlichkeit (ADS) separat an; verändere Werte schrittweise.",
+        "**Audio:** Spiele mit Kopfhörern und wähle ein Soundprofil, das Schritte hervorhebt.",
+        "**Tastatur und Maus:** Starte mit einer Maus-DPI zwischen 400 und 1600; finde eine Empfindlichkeit, mit der eine 180-Grad-Drehung bequem mit einem halben Wisch gelingt. Lege Lehnen, Rutschen und Springen auf leicht erreichbare Tasten.",
+        "**Nintendo Switch 2:** Laut Beta-Ankündigung werden Joy-Con 2 Maussteuerung, Gyro, der Switch 2 Pro Controller und Handheld-Modus unterstützt; Gyro-Zielen hilft bei Feinjustierungen.",
+        "**Controller:** Hebe Deadzones nur so weit an, bis Stick-Drift aufhört, und schalte Zielhilfe (Aim Assist) nicht ab; Details stehen in den Spieleinstellungen."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Teste jede Anpassung in einem Match; bringt sie keine Besserung, kehre zum vorherigen Wert zurück. Alles an einem Abend umzustellen verschleiert, was wirklich hilft."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme",
+     "baslik": "Fortschritt: Der Battle Pass und die Saison",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Laut offizieller Ankündigung bietet der Battle Pass von Saison 1 über 100 Belohnungen auf 100 Stufen. Es gibt ein Aufholsystem für Späteinsteiger: Im Laufe der Saison werden Belohnungen automatisch vorverlegt, selbst bei späterem Einstieg. Preislich nennt der Warzone-Beitrag 1.100 COD Points für den Battle Pass und 2.400 COD Points für das Battle Pass Bundle; was COD Points in realer Währung kosten, variiert nach Plattform, und der offizielle Beitrag nennt keinen Einheitspreis in Türkischer Lira."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Prüfe vor dem Kauf die kostenlose Belohnungsleiste; entscheide im Vorfeld, ob sich die Premium-Belohnungen lohnen.",
+        "Neue Event-Modi erscheinen zur Saisonmitte (etwa Rockets and Snipers und Extreme Resurgence); plane deinen Fortschritt danach.",
+        "**Prestige:** Auf maximalem Soldatenrang wählt man zwischen zwei Pfaden. Classic Prestige sperrt Inhalte von Create-a-Class erneut, gewährt aber schnellere XP und exklusive Belohnungen; Regular Prestige beginnt auf Stufe 1 neu, ohne Ausrüstungen erneut zu sperren.",
+        "Hauptspiel und Warzone nutzen dasselbe Konto; Warzone wurde in Saison 1 mit dem Hauptspiel zusammengeführt."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Vor dem Kauf kalkulieren: Reicht die Spielzeit vor Saisonende vermutlich nicht aus, verzichte auf den Kauf. Das Aufholsystem hilft, gleicht aber nicht alles aus."
+      }
+     ]
+    },
+    {
+     "id": "baslangic-hatalari",
+     "baslik": "Typische Anfängerfehler",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Wiederholt dieselbe Route wählen.** Campiert ein Gegner, nimm einen alternativen Weg.",
+        "**Gefechte ohne Panzerung führen.** In Warzone ist ein Kampf ohne Platten meist verloren.",
+        "**Eine Klasse ohne Ausrüstung spielen.** Nur mit einer Waffe gerät man schnell ins Hintertreffen; Taktik- und Primärausrüstung nicht vernachlässigen.",
+        "**Allein in Gefahrenzonen vorrücken.** Ohne Squad-Mitglieder wird man zur leichten Beute.",
+        "**Sicherheitsanforderungen erst im Nachhinein bemerken.** Prüfe auf dem PC TPM 2.0 und Secure Boot vor dem Kauf.",
+        "**Ständig neuen Waffen hinterherjagen.** Beurteile eine Waffe erst nach ein paar Tagen; das Spielgefühl braucht Eingewöhnung."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Spiele zwanzig Matches mit derselben Waffe, bevor du entscheidest. Häufiges Wechseln verdeckt, ob Fehler von der Waffe oder vom eigenen Spiel stammen."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik-ve-harcama",
+     "baslik": "Kontosicherheit und Ausgabenwarnung",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Das Hauptspiel ist kostenpflichtig und Warzone kostenlos; beide bieten Zusatzkäufe über Battle Passes, Bundles und COD Points. Prüfe vor dem Kauf, was dauerhaft und was saisonal ist, und lege ein monatliches Limit fest."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Richte die Zwei-Faktor-Authentifizierung für dein Konto ein und verwende das Passwort nicht auf anderen Websites.",
+        "Aktiviere für Kinder die Jugendschutzeinstellungen der Plattform (PlayStation, Xbox, Nintendo, Steam oder Battle.net) und verlange eine Genehmigung für Ausgaben.",
+        "Meide Links und Dateien, die kostenlose COD Points oder geheime Waffen versprechen; sie dienen dem Kontodiebstahl."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Halte Abstand von Cheat-Software, Aimbots, Makros oder speziellen Eingabegeräten, dem Kauf oder Verkauf von Konten oder Gegenständen sowie bezahltem Rang-Boosting. Die PC-Sicherheitsanforderungen sind genau aus diesem Grund streng; ein gesperrtes Konto ist oft dauerhaft verloren, und solche Angebote sind meist Betrug."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Häufig gestellte Fragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Ist Warzone kostenlos?",
+         "c": "Ja, Warzone ist kostenlos spielbar. Das Hauptspiel (Modern Warfare 4) wird separat erworben."
+        },
+        {
+         "s": "Kann man auf PS4 oder Xbox One spielen?",
+         "c": "Modern Warfare 4 erschien nicht für PS4 oder Xbox One; es erschien für PS5, Xbox Series X|S, PC und Nintendo Switch 2."
+        },
+        {
+         "s": "Warum startet das Spiel auf dem PC nicht?",
+         "c": "Die häufigste Ursache ist deaktiviertes TPM 2.0 oder Secure Boot. Folge den Schritten auf Activisions Support-Seite."
+        },
+        {
+         "s": "Kann man Warzone vor dem Kauf des Hauptspiels testen?",
+         "c": "Ja, Warzone ist kostenlos. Gefällt es nicht, entsteht kein finanzieller Verlust."
+        },
+        {
+         "s": "Muss man den Battle Pass kaufen?",
+         "c": "Nein. Es gibt einen kostenlosen Belohnungspfad; der Premium-Teil ist optional."
+        },
+        {
+         "s": "Teilen sich Warzone und Modern Warfare 4 den Fortschritt?",
+         "c": "Laut offizieller Ankündigung integriert Warzone ab Saison 1 die Inhalte und den saisonalen Fortschritt von Modern Warfare 4."
+        },
+        {
+         "s": "Gibt es das Spiel auf Türkisch?",
+         "c": "Türkisch ist in der Steam-Sprachtabelle nicht aufgeführt; es erscheint weder bei der Benutzeroberfläche noch bei Audio oder Untertiteln."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "nl": {
+   "baslik": "Call of Duty-gids – MW4 en Warzone handboek voor beginners 2026",
+   "ozet": "Een beginnersgids voor Modern Warfare 4 en het gratis Warzone: platforms, pc-systeemvereisten, spelmodi, instellingen, de Battle Pass en veilig uitgeven.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "First-person shooter (campagne, multiplayer, DMZ, battle royale)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "PS5, Xbox Series X|S, pc (Battle.net, Steam, Xbox op pc), Nintendo Switch 2; geen PS4 of Xbox One"
+    },
+    {
+     "ad": "Verdienmodel",
+     "deger": "Hoofdgame is betaald; Warzone is gratis"
+    },
+    {
+     "ad": "Huidige versie",
+     "deger": "Modern Warfare 4, seizoen 1 (6 november 2026)"
+    },
+    {
+     "ad": "Turkse ondersteuning",
+     "deger": "Geen Turkse taaloptie (Steam-taallijst, 15 november 2026)"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "oyun-nedir",
+     "baslik": "Call of Duty in 2026: Modern Warfare 4 en Warzone",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Call of Duty is een first-person shooter-reeks met vrijwel elk jaar een nieuwe hoofdgame. De huidige hoofdgame is **Call of Duty: Modern Warfare 4**, ontwikkeld door Infinity Ward. Volgens officiële aankondigingen is de game op 23 oktober 2026 verschenen voor PlayStation 5, Xbox Series X|S, pc (Battle.net, Steam en Xbox op pc) en Nintendo Switch 2; er is geen versie voor PS4 of Xbox One. De game bevat een campagne, Multiplayer en de terugkerende DMZ-modus."
+      },
+      {
+       "tip": "p",
+       "metin": "**Warzone** is het gratis te spelen battle-royale-onderdeel (de laatste overlevende wint). Met Seizoen 1, dat begon op 6 november 2026, werd Warzone volledig geïntegreerd met Modern Warfare 4. De nieuwe Battle Royale-map Hajin en de nieuwe Resurgence-map Zodiac zijn toegevoegd; Rebirth Island keert terug en Verdansk volgt later in Seizoen 1."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Deze gids behandelt de blijvende basisprincipes van de hoofdgame en Warzone. Welk wapen het beste is, verandert per seizoen; raadpleeg de officiële patch notes voor de actuele stand van zaken."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Voor je begint: platform, installatie, beveiligingsvereisten",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Je koopt de hoofdgame via de winkelpagina; de winkel biedt Standard- en Vault-edities aan, waarbij Vault extra operator-pakketten toevoegt (bijvoorbeeld Hostile Alliance: Price, Valeria, Ghost, Blix). Warzone is daarentegen afzonderlijk gratis. Op de pc vraagt Modern Warfare 4 officieel om het volgende."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Minimaal:** 64-bits Windows 10, Ryzen 5 1400 of Core i5-6600, 8 GB RAM, Radeon RX 470, GeForce GTX 970 of GTX 1060, of Arc A580; **115 GB ssd-opslagruimte**.",
+        "**Aanbevolen:** Windows 11, Ryzen 5 3600 of Core i7-8700K, 16 GB RAM, Radeon RX 6600 XT, GeForce RTX 3060 of Arc B580; opnieuw **115 GB ssd-opslagruimte** (Steam-pagina).",
+        "**Beveiligingsvereiste:** Pc vereist TPM 2.0 en Secure Boot. Volgens Activision betekent dit over het algemeen Intel 8e generatie of nieuwer of Ryzen 2000 en hoger, UEFI-boot, een GPT-schijf en ingeschakelde Secure Boot."
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Onderwerp",
+        "Officiële status (15 november 2026)"
+       ],
+       "satirlar": [
+        [
+         "Prijs hoofdgame",
+         "Op Steam toont de Standard-editie R$ 299,00, de Vault-editie R$ 463,90 en de Vault-upgrade R$ 164,90 (weergave Brazilië-regio); in deze weergave staat geen prijs in Turkse lira; de winkel toont prijzen op basis van je regio."
+        ],
+        [
+         "Turks",
+         "Turks staat niet vermeld bij de interface-, audio- en ondertiteltalen in de Steam-taallijst."
+        ],
+        [
+         "Crossplay",
+         "De Steam-pagina vermeldt cross-platform multiplayer; Activisions Beta-aankondiging noemt eveneens volledige crossplay tussen platforms."
+        ],
+        [
+         "Cross-progressie en account",
+         "Activisions aankondigingen vermelden het behoud van voortgang over platforms heen; de Beta Multiplayer vereiste een Activision-account. Hoe accounts in de volledige game worden gekoppeld, is nog niet officieel bekendgemaakt."
+        ],
+        [
+         "Installatiegrootte",
+         "Bij lancering is 115 GB vrije ssd-ruimte vereist (Steam). Groottes per afzonderlijke module zijn officieel niet bekendgemaakt."
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Zonder TPM 2.0 en Secure Boot start de game niet op pc. Lees voor het wijzigen van BIOS-instellingen de stappen op Activisions ondersteuningspagina; een verkeerde instelling kan ervoor zorgen dat de computer niet meer opstart."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "De installatie vereist 115 GB ssd-ruimte. Controleer je vrije schijfruimte voor het downloaden; wie Warzone eerst wil uitproberen, kan de hoofdgame altijd later aanschaffen."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Je eerste matches, stap voor stap",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Begin met Warzone of standaard Multiplayer-modi",
+         "metin": "Warzone is gratis; Multiplayer leert je wapens en maps kennen in kortere matches. Probeer beide uit en ontdek wat je bevalt."
+        },
+        {
+         "baslik": "Stel een loadout samen",
+         "metin": "Kies een hoofdwapen, een secundair wapen, uitrusting en Perks. Begin eerst met een kant-en-klare klasse en pas onderdelen stap voor stap aan."
+        },
+        {
+         "baslik": "Leer de looplijnen van de maps",
+         "metin": "Elke map heeft vaste routes die spelers vaak gebruiken. Let bij elk overlijden op waar het schot vandaan kwam en vermijd die route voortaan."
+        },
+        {
+         "baslik": "Land veilig in Warzone",
+         "metin": "In plaats van in drukke hotspots te landen, spring je aan de rand van de cirkel af, verzamel je een wapen en bepantsering, en volg je de cirkel."
+        },
+        {
+         "baslik": "Verbeter één ding na elk potje",
+         "metin": "Onderzoek waarom je bent gesneuveld: stond je ongedekt, herstelde je niet op tijd, of stond je er alleen voor? Voorkom die fout in de volgende match."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Negeer in je eerste week Multiplayer je K/D-ratio. Richt je op stabiel spelen: leer duels af te breken en van positie te wisselen voordat je sneuvelt."
+      }
+     ]
+    },
+    {
+     "id": "modlar",
+     "baslik": "Spelmodi: waar te beginnen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Volgens de officiële aankondiging zijn dit de belangrijkste spelmodi in Seizoen 1. Het actuele overzicht vind je in het in-game menu en er worden gedurende het seizoen meer modi toegevoegd."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Modus",
+        "Waar het voor dient"
+       ],
+       "satirlar": [
+        [
+         "Multiplayer",
+         "Korte teammatches; de beste plek om wapens en maps onder de knie te krijgen."
+        ],
+        [
+         "Kill Block: Crash",
+         "Een nieuwe modus die verschijnt met Modern Warfare 4; opgenomen in de inhoud van Seizoen 1 volgens de officiële aankondiging."
+        ],
+        [
+         "DMZ",
+         "Een teamgebaseerde overlevingsmodus gericht op missies en extractie; Seizoen 1 voegde X01 Black Site, nieuwe vijanden en opdrachten toe."
+        ],
+        [
+         "Warzone Battle Royale",
+         "Probeer als laatste overeind te blijven op een grote map; de nieuwe map is Hajin, met Verdansk later in Seizoen 1."
+        ],
+        [
+         "Warzone Resurgence",
+         "Een snellere variant waarbij je na de dood terugkeert; gespeeld op Zodiac en Rebirth Island."
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "De meest toegankelijke route voor dag één: begin met Resurgence in Warzone (waarin je opnieuw spawnt na uitschakeling) of gebruik korte Multiplayer-matches om beweging en richten te trainen."
+      }
+     ]
+    },
+    {
+     "id": "mod-farklari",
+     "baslik": "Multiplayer, Warzone en DMZ: de verschillen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "De drie modi maken deel uit van dezelfde game, maar hun regels verschillen. Stem je klasse en doel af op deze verschillen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Onderwerp",
+        "Multiplayer",
+        "Warzone",
+        "DMZ"
+       ],
+       "satirlar": [
+        [
+         "Matchdoel",
+         "Korte teammatches, een doelscore afhankelijk van de modus",
+         "Als laatste overblijven op een grote map; in Resurgence terugkeren na de dood",
+         "Missies voltooien en veilig van de map ontsnappen (extractie)"
+        ],
+        [
+         "Oorsprong van wapens",
+         "De klasse die je bouwt in Create-a-Class; een primair en secundair wapen",
+         "Wapens die je vindt op de grond en de gratis Loadout Drop voor je squad",
+         "Starten met twee primaire wapens, twee secundaire wapens of een mix; meer via een Weapon Backpack"
+        ],
+        [
+         "Kosten",
+         "Inbegrepen bij de hoofdgame",
+         "Gratis",
+         "Onderdeel van Modern Warfare 4 (bij aankoop hoofdgame)"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Over **Zombies**: in de officiële Modern Warfare 4-aankondigingen (lancering, Seizoen 1 en Warzone) wordt geen Zombies-modus genoemd. Deze is officieel niet aangekondigd; mocht dat veranderen, dan lees je dat op het Call of Duty-blog."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Gebruik niet dezelfde klasse in elke modus. Snelheid en nabijheidsgevechten lonen in Multiplayer; bereik en bepantsering tellen in Warzone; in DMZ is levend ontsnappen minstens zo belangrijk als je buit."
+      }
+     ]
+    },
+    {
+     "id": "silah-gunsmith",
+     "baslik": "Wapenklassen, Gunsmith en een klasse bouwen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Create-a-Class ontgrendelt op spelersniveau 4. Volgens het officiële lanceringsbericht zijn primaire wapens verdeeld over zes klassen; onderstaande aantallen gelden bij de lancering, terwijl de rollen algemene spelkennis weerspiegelen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Klasse",
+        "Aantal",
+        "Algemene rol"
+       ],
+       "satirlar": [
+        [
+         "Aanvalsgeweer (Assault rifle)",
+         "8",
+         "Gebalanceerd op de meeste afstanden; de meest toegankelijke start voor beginners"
+        ],
+        [
+         "Machinepistool (SMG)",
+         "5",
+         "Korte afstand en mobiele speelstijl"
+        ],
+        [
+         "Shotgun",
+         "2",
+         "Zeer korte afstand; ijzersterk in krappe ruimtes"
+        ],
+        [
+         "Licht machinegeweer (LMG)",
+         "3",
+         "Groot magazijn; aanhoudend dekkingsvuur en gebiedscontrole"
+        ],
+        [
+         "Scherpschuttersgeweer (Marksman rifle)",
+         "3",
+         "Middellange tot lange afstand; elk schot telt"
+        ],
+        [
+         "Snipergeweer (Sniper rifle)",
+         "3",
+         "Grootste bereik; vereist geduld en goede positionering"
+        ],
+        [
+         "Secundair wapen",
+         "8",
+         "Snelle wissel wanneer je primaire wapen leeggeschoten is"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Hulpstukken worden gedeeld binnen een wapenklasse.** Volgens de officiële aankondiging worden hulpstukken in Gunsmith nu gedeeld per wapenklasse, wat samenstellen en experimenteren vereenvoudigt.",
+        "**Apex Attachments.** Dit zijn afzonderlijke hulpstukken die worden ontgrendeld door een wapen maximaal te levelen; ze nemen geen attachment-slot in en kunnen de eigenschappen van het wapen voelbaar wijzigen.",
+        "**Gunny.** Een handige configuratiehulp voor nieuwkomers: het stelt voorstellen samen voor gevechten op korte, middellange of lange afstand, ontworpen door het wapenteam van Infinity Ward op basis van je ontgrendelde hulpstukken. Dit is optioneel en kan handmatig worden aangepast."
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Open Create-a-Class",
+         "metin": "Verschijnt in het menu op niveau 4. Kies eerst een kant-en-klare klasse en bekijk de opbouw."
+        },
+        {
+         "baslik": "Kies het primaire wapen",
+         "metin": "Selecteer een van de klassen uit de tabel en vat het doel van de klasse in één zin samen."
+        },
+        {
+         "baslik": "Begin met Gunny en pas aan",
+         "metin": "Genereer Gunny's suggestie voor kort, middellang of lang bereik; wissel hulpstukken één voor één en merk het verschil in een match."
+        },
+        {
+         "baslik": "Kies een secundair wapen of Overkill",
+         "metin": "In Multiplayer stelt het Overkill-perk je in staat om een tweede primair wapen mee te nemen in plaats van een secundair wapen. Dit bevindt zich in de eerste Perk-groep en ontgrendelt op niveau 4."
+        },
+        {
+         "baslik": "Kies drie Perks",
+         "metin": "In Multiplayer zijn 18 Perks verdeeld over drie groepen waaruit je er telkens één kiest (Pick 3). Stem Perks af op het doel van de klasse."
+        },
+        {
+         "baslik": "Rond af met uitrusting",
+         "metin": "Kies achtereenvolgens je tactische uitrusting, dodelijke uitrusting, Field Upgrade en Killstreaks."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Test elke wapenconfiguratie minstens vijf wedstrijden lang. De zwakke punten van een samenstelling blijken doorgaans pas na meerdere matches."
+      }
+     ]
+    },
+    {
+     "id": "temel-mekanikler",
+     "baslik": "Kernmechanieken: loadouts, Perks, positionering",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Wapens veranderen per seizoen, maar deze vier gewoontes blijven altijd waardevol."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Perks:** Warzone telt in totaal 18 Perks. De eerste vijftien verdeel je voorafgaand aan een match over drie slots; de overige drie zijn **Elite Perks** die je tijdens een match vindt en waarvan er maximaal één tegelijk actief kan zijn. Volgens het officiële bericht voegen Elite Perks een vierde slot toe en zijn ze verkrijgbaar bij Buy Stations of via Supply Run Contracts.",
+        "**Positionering:** Hoeken en deuropeningen geven voordeel in nabije gevechten; in open terrein in beweging blijven geeft de tegenstander minimale richt-tijd.",
+        "**Bepantsering en herstel:** Breng in Warzone vóór een duel pantserplaten aan; het Tempered-perk verlaagt het aantal benodigde platen van drie naar twee (bericht Seizoen 1).",
+        "**Teamwork en communicatie:** Pings en korte callouts werken beter dan lange verhalen. Details zoals herkoopkosten en het Wingman-perk in Resurgence wijzigen per seizoen."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "In plaats van willekeurige Perks te stapelen, omschrijf je de functie van de klasse in één zin: korte afstand of middellange afstand? Stem de Perks daarop af."
+      }
+     ]
+    },
+    {
+     "id": "warzone-gulag",
+     "baslik": "Warzone: de Gulag, terugkeer en Drop Kits",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "In Warzone betekent sneuvelen niet direct het einde van het spel. Volgens de patch notes van Seizoen 1 heeft Hajin een nieuwe Gulag (de duelleer-arena na uitschakeling) en kreeg Resurgence nieuwe verbruiksartikelen genaamd Drop Kits."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Drop Kit",
+        "Wat het oplevert bij terugkeer"
+       ],
+       "satirlar": [
+        [
+         "Insured",
+         "Je respawnt sneller en behoudt al je contant geld (Cash)"
+        ],
+        [
+         "Armored",
+         "Je landt met volle bepantsering, extra pantserplaten en een Self-Revive Kit"
+        ],
+        [
+         "Loadout",
+         "Je landt met je actuele Loadout"
+        ],
+        [
+         "Radar",
+         "Je landt met een actieve Radar Ping, een UAV en een Supply Sweep"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Drop Kit-regels:** Alleen te vinden in Resurgence-modi, ze werken uitsluitend voor de Operator die ze draagt, worden verbruikt bij terugkeer en je kunt er maar één tegelijk dragen; een nieuwe oprapen vervangt de huidige.",
+        "**De Gulag:** De nieuwe Gulag op Hajin kent twee arena-varianten; obstakels kunnen worden beklommen, toeschouwers kijken mee vanuit lage gezichtspunten en lokaal weer beïnvloedt de omgeving.",
+        "**Terugkeer in Battle Royale:** Spelers die worden teruggekocht, spawnen met het wapen dat hoort bij de Gulag-loadout van die specifieke cirkel.",
+        "**Contracten en extra voorwerpen:** In cirkel 3 vliegen drones met mobiele Buy Stations de map binnen; wie ze neerhaalt krijgt toegang tot unieke, sterke uitrusting (Fly Buy). Er landt tevens een gratis Loadout Drop voor je squad. In het Resurgence-evenement Bounty Contest krijgt elk team automatisch een Bounty Contract toegewezen."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Controleer voor je sneuvelt in Resurgence welke Drop Kit je bij je hebt. De Armored-kit dient voor snel herstel, de Loadout-kit voor het behouden van je vertrouwde wapens; kies afhankelijk van je situatie."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Instellingen: degelijke beginwaarden",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Onderstaande waarden zijn richttips voor beginners en hangen af van je hardware en gewoonten. Pas nooit meer dan één instelling tegelijk aan."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Gezichtsveld (FOV):** Begin rond 100. Te hoog maakt doelen te klein, te laag beperkt het overzicht over je omgeving.",
+        "**Framerate-limiet:** Stem dit af op de verversingssnelheid van je monitor en schakel VSync uit; een stabiele framerate werkt beter dan plotselinge pieken en dalen.",
+        "**Gevoeligheid:** Begin op een gemiddelde waarde en stel de richtgevoeligheid (ADS) afzonderlijk in; pas instellingen stapsgewijs aan.",
+        "**Geluid:** Speel met een headset en kies een geluidsprofiel dat voetstappen hoorbaar benadrukt.",
+        "**Toetsenbord en muis:** Start met een muis-DPI tussen 400 en 1600; zoek een gevoeligheid waarbij je vlot 180 graden draait met een halve handbeweging. Wijs leunen, sliden en springen toe aan vlot bereikbare toetsen.",
+        "**Nintendo Switch 2:** Volgens de Beta-aankondiging worden Joy-Con 2-muisbediening, gyro, de Switch 2 Pro Controller en handheld-modus ondersteund; gyro-richten is handig voor subtiele correcties.",
+        "**Controller:** Verhoog deadzones net genoeg om stickdrift tegen te gaan en schakel aim assist niet uit; raadpleeg de uitleg in het instellingenmenu voor details."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Test elke aanpassing gedurende een hele match; levert het geen verbetering op, keer dan terug naar de oude stand. Alles op één avond wijzigen verhult wat daadwerkelijk effect heeft."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme",
+     "baslik": "Voortgang: de Battle Pass en het seizoen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Volgens de officiële aankondiging bevat de Battle Pass van Seizoen 1 meer dan 100 beloningen verdeeld over 100 niveaus. Er is een inhaalsysteem voor late instappers: naarmate het seizoen vordert, worden beloningen automatisch naar voren geschoven, zelfs als je later begon. Qua kosten noemt het Warzone-bericht 1.100 COD Points voor de Battle Pass en 2.400 COD Points voor de Battle Pass Bundle; wat COD Points in echt geld kosten verschilt per platform, en het officiële bericht noemt geen vaste prijs in Turkse lira."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Bekijk voorafgaand aan de aankoop het gratis beloningstraject; beoordeel vooraf of de premiumbeloningen de aankoop waard zijn.",
+        "Halverwege het seizoen verschijnen nieuwe evenementmodi (zoals Rockets and Snipers en Extreme Resurgence); stem je voortgang daarop af.",
+        "**Prestige:** Op het maximale soldatenniveau kies je tussen twee paden. Classic Prestige vergrendelt Create-a-Class opnieuw, maar levert snellere XP en exclusieve beloningen op; Regular Prestige herstart op niveau 1 zonder je loadouts opnieuw te vergrendelen.",
+        "De hoofdgame en Warzone delen hetzelfde account; Warzone is in Seizoen 1 samengevoegd met de hoofdgame."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Reken het vooraf uit: verwacht je de pass voor het seizoenseinde niet te voltooien, koop hem dan niet. Het inhaalsysteem helpt, maar compenseert niet onbeperkt."
+      }
+     ]
+    },
+    {
+     "id": "baslangic-hatalari",
+     "baslik": "Veelgemaakte beginnersfouten",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Steeds dezelfde route kiezen.** Als een tegenstander de hoek bewaakt (campt), kies dan een alternatieve route.",
+        "**Vechten zonder bepantsering.** In Warzone is een vuurgevecht zonder platen vrijwel altijd kansloos.",
+        "**Spelen met een klasse zonder uitrusting.** Alleen met een wapen ben je kwetsbaar; negeer tactische en dodelijke uitrusting niet.",
+        "**Alleen in een menigte rennen.** Zonder teamgenoten een drukke zone betreden maakt je een eenvoudig doelwit.",
+        "**Systeemvereisten pas achteraf opmerken.** Controleer op pc vóór aanschaf of TPM 2.0 en Secure Boot ingeschakeld zijn.",
+        "**Voortdurend wisselen naar nieuwe wapens.** Beoordeel een wapen pas na meerdere speeldagen; gewenning vraagt tijd."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Speel twintig wedstrijden met hetzelfde wapen voordat je een eindoordeel velt. Voortdurend wisselen maakt onduidelijk of fouten aan het wapen liggen of aan je eigen keuzes."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik-ve-harcama",
+     "baslik": "Accountbeveiliging en uitgavenwaarschuwing",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "De hoofdgame is betaald en Warzone is gratis; beide bieden optionele aankopen via Battle Passes, bundels en COD Points. Controleer voor aankoop wat permanent en wat seizoensgebonden is, en stel een maandelijks limiet in."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Activeer tweestapsverificatie op je account en gebruik het wachtwoord nergens anders.",
+        "Schakel voor kinderen het ouderlijk toezicht van je platform in (PlayStation, Xbox, Nintendo, Steam of Battle.net) en vereis toestemming voor betalingen.",
+        "Blijf uit de buurt van links of bestanden die gratis COD Points of geheime wapens beloven; ze zijn bedoeld om accounts te stelen."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Blijf ver weg van cheatsoftware, aimbots, macro's of gemodificeerde invoerapparaten, het kopen of verkopen van accounts of voorwerpen, en het laten boosten van je rang. De pc-beveiligingsvereisten zijn om deze reden streng; een geband account is vaak permanent verloren en dergelijke aanbiedingen zijn meestal oplichterij."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Veelgestelde vragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is Warzone gratis?",
+         "c": "Ja, Warzone is gratis te spelen. De hoofdgame (Modern Warfare 4) koop je afzonderlijk."
+        },
+        {
+         "s": "Kan ik spelen op PS4 of Xbox One?",
+         "c": "Modern Warfare 4 is niet uitgebracht voor PS4 of Xbox One; de game is verschenen voor PS5, Xbox Series X|S, pc en Nintendo Switch 2."
+        },
+        {
+         "s": "Waarom start de game niet op pc?",
+         "c": "De meest voorkomende oorzaak is dat TPM 2.0 of Secure Boot niet aanstaat. Volg de stappen op Activisions ondersteuningspagina."
+        },
+        {
+         "s": "Kan ik Warzone proberen voordat ik de hoofdgame koop?",
+         "c": "Ja, Warzone is gratis. Bevalt het niet, dan kost het je niets."
+        },
+        {
+         "s": "Moet ik de Battle Pass kopen?",
+         "c": "Nee. Er is een gratis beloningspad; het premiumgedeelte is optioneel."
+        },
+        {
+         "s": "Delen Warzone en Modern Warfare 4 dezelfde voortgang?",
+         "c": "Volgens de officiële aankondiging integreert Warzone vanaf Seizoen 1 de inhoud en seizoensvoortgang van Modern Warfare 4."
+        },
+        {
+         "s": "Kan ik de game in het Turks spelen?",
+         "c": "Turks staat niet in de Steam-taallijst; het ontbreekt bij de talen voor interface, audio en ondertitels."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "zh": {
+   "baslik": "使命召唤指南 - MW4 与 Warzone 新手手册 2026",
+   "ozet": "《现代战争 4》与免费《战区》新手指南：平台、PC 配置要求、模式、设置、战斗通行证与理性消费。",
+   "kunye": [
+    {
+     "ad": "类型",
+     "deger": "第一人称射击（战役、多人模式、DMZ、大逃杀）"
+    },
+    {
+     "ad": "平台",
+     "deger": "PS5、Xbox Series X|S、PC（Battle.net、Steam、PC 版 Xbox）、Nintendo Switch 2；不包含 PS4 与 Xbox One"
+    },
+    {
+     "ad": "收费模式",
+     "deger": "本体付费；Warzone 免费"
+    },
+    {
+     "ad": "当前版本",
+     "deger": "Modern Warfare 4，第 1 赛季（2026年11月6日）"
+    },
+    {
+     "ad": "土耳其语支持",
+     "deger": "无土耳其语选项（Steam 语言表，2026年11月15日）"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "oyun-nedir",
+     "baslik": "2026 年的使命召唤：Modern Warfare 4 与 Warzone",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "《使命召唤》（Call of Duty）是经典第一人称射击游戏系列，通常每年推出一部主要作品。当前主力作品是由 Infinity Ward 开发的 **Call of Duty: Modern Warfare 4**。根据官方公告，该作于 2026 年 10 月 23 日登陆 PlayStation 5、Xbox Series X|S、PC（Battle.net、Steam 与 PC 版 Xbox）以及 Nintendo Switch 2，没有 PS4 与 Xbox One 版本。本作包含战役模式、多人模式（Multiplayer）以及回归的 DMZ 模式。"
+      },
+      {
+       "tip": "p",
+       "metin": "**Warzone**（战区）则是免费游玩的大逃杀（胜者为王）模式。随着 2026 年 11 月 6 日开启的第 1 赛季，Warzone 与 Modern Warfare 4 实现了全面整合。全新大逃杀地图 Hajin 与全新复活地图 Zodiac 正式上线；Rebirth Island 回归，而经典地图 Verdansk 也将在第 1 赛季后半段回归。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "本指南介绍本体与 Warzone 的通用长效基础知识。哪把枪最强会随赛季平衡调整而变化；最新武器平衡请查阅官方补丁说明。"
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "开始之前：平台、安装与安全要求",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "主游戏可通过对应商店页面购买，提供标准版（Standard）与特藏版（Vault Edition），Vault 版附赠额外特战包（例如 Hostile Alliance：Price、Valeria、Ghost、Blix）。Warzone 则可免费独立下载。在 PC 端，Modern Warfare 4 的官方系统配置要求如下："
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**最低配置：** 64 位 Windows 10，Ryzen 5 1400 或 Core i5-6600，8 GB 内存，Radeon RX 470、GeForce GTX 970 或 GTX 1060，或 Arc A580；**115 GB 固态硬盘（SSD）** 空间。",
+        "**推荐配置：** Windows 11，Ryzen 5 3600 或 Core i7-8700K，16 GB 内存，Radeon RX 6600 XT、GeForce RTX 3060 或 Arc B580；同样需要 **115 GB 固态硬盘（SSD）** 空间（参考 Steam 页面）。",
+        "**安全要求：** PC 端必须支持 TPM 2.0 与安全启动（Secure Boot）。根据 Activision 说明，通常需要 Intel 第 8 代或更高、Ryzen 2000 系列及以上处理器，UEFI 引导模式、GPT 分区表并开启安全启动。"
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "项目",
+        "官方状态（2026年11月15日）"
+       ],
+       "satirlar": [
+        [
+         "本体价格",
+         "在 Steam 巴西区视图中，标准版售价 R$ 299.00，Vault 版 R$ 463.90，Vault 升级包 R$ 164.90；此视图未显示土耳其里拉价格；商店会根据你所在的地区定价显示。"
+        ],
+        [
+         "土耳其语",
+         "Steam 语言表中，界面、配音和字幕均未列出土耳其语。"
+        ],
+        [
+         "跨平台游玩（Crossplay）",
+         "Steam 页面列有多平台联机功能；Activision 测试版公告亦确认支持各平台之间的完整跨平台联机。"
+        ],
+        [
+         "跨平台进度与账号",
+         "Activision 公告提到可在各平台间同步进度；多人 Beta 测试时需要 Activision 账号。完整版中的具体绑定机制官方暂未详细公布。"
+        ],
+        [
+         "安装大小",
+         "首发安装需要 115 GB 可用 SSD 空间（Steam）。各独立模块的具体占用尚未单独公布。"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "若未开启 TPM 2.0 与安全启动，PC 端将无法启动游戏。在调整 BIOS 设置之前，请仔细阅读 Activision 支持页面的步骤；错误的 BIOS 设置可能导致电脑无法开机。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "游戏安装需要 115 GB 的 SSD 空间。下载前请确认硬盘余量；如果想先体验 Warzone，也可以之后再购买本体。"
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "入门初战：循序渐进",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "从 Warzone 或核心多人模式起步",
+         "metin": "Warzone 免费游玩；多人模式节奏更快，适合在短时间内熟悉枪械手感与地图构造。两边都尝试以找到适合自己的节奏。"
+        },
+        {
+         "baslik": "配置一套作战配置（Loadout）",
+         "metin": "选择一把主武器、一把副武器、投掷物与特长（Perks）。初期可先使用系统预设背包，随后逐项针对性微调。"
+        },
+        {
+         "baslik": "熟悉地图走位动线",
+         "metin": "每张地图都有玩家常走的交火路线。阵亡时多观察击杀回放来自哪个方位，下次避免盲目走同一条通道。"
+        },
+        {
+         "baslik": "在 Warzone 中安全跳伞",
+         "metin": "避免开局直扎人多的高收益热门城区；落在外围安全点，搜集枪械与护甲板，跟随毒圈收缩推进。"
+        },
+        {
+         "baslik": "每局总结纠正一个失误",
+         "metin": "复盘自己为何阵亡：是暴露在无掩体空地、未打满状态，还是与队友脱节？下一局重点纠正这一项。"
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "第一周体验多人模式时无需过分在意 K/D 战绩。重在保持稳定节奏：学会适时脱战撤退并重新寻找掩体，而不是盲目对枪。"
+      }
+     ]
+    },
+    {
+     "id": "modlar",
+     "baslik": "模式介绍：从哪里开始",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "根据官方公告，以下为第 1 赛季的主要游戏模式。游戏内菜单可查看完整列表，赛季期间还将陆续追加新玩法。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "模式",
+        "定位与玩法"
+       ],
+       "satirlar": [
+        [
+         "Multiplayer（多人模式）",
+         "快节奏团队交火对抗；熟悉枪械弹道与地图路线的最佳场所。"
+        ],
+        [
+         "Kill Block: Crash",
+         "随 Modern Warfare 4 登场的全新模式；在官方第 1 赛季公告中明确列出。"
+        ],
+        [
+         "DMZ",
+         "基于小队合作的任务撤离生存模式；第 1 赛季新增 X01 Black Site 设施、新敌军与新合约。"
+        ],
+        [
+         "Warzone Battle Royale（大逃杀）",
+         "在大地图上争取活到最后；全新地图为 Hajin，第 1 赛季后续将回归经典 Verdansk。"
+        ],
+        [
+         "Warzone Resurgence（福登/复活模式）",
+         "只要队友存活就能无限复活的快节奏大逃杀；在 Zodiac 与 Rebirth Island 地图上展开。"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "初入游戏的最稳妥路线：先从 Warzone 的 Resurgence 模式练起（阵亡后可复活重返），或者利用短平快的多人模式练习身法与枪法。"
+      }
+     ]
+    },
+    {
+     "id": "mod-farklari",
+     "baslik": "Multiplayer、Warzone 与 DMZ：三大模式差异",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "这三种模式虽然同属一个游戏体系，但规则截然不同。应根据各模式特点有针对性地搭配兵种配置与战术目标。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "对比项",
+        "Multiplayer（多人模式）",
+        "Warzone（战区）",
+        "DMZ（非军事区）"
+       ],
+       "satirlar": [
+        [
+         "对局目标",
+         "快节奏团队对抗，根据具体模式达成目标击杀分或占点分",
+         "在大地图生存至最后；Resurgence 模式中只要队友存活即可重返战场",
+         "完成指定任务并携物资成功从撤离点撤离"
+        ],
+        [
+         "武器获取",
+         "在 Create-a-Class 中自定义的配装；包含一把主武器与一把副武器",
+         "在地面拾取战利品武器，或等待小队专属的免费空投补给箱（Loadout Drop）",
+         "可携带双主武器、双副武器或常规搭配入场；装备武器背包后可携带更多武器"
+        ],
+        [
+         "费用机制",
+         "包含在付费本体游戏中",
+         "免费游玩",
+         "内置于 Modern Warfare 4 中（随本体购买获得）"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "关于 **丧尸模式（Zombies）**：在 Modern Warfare 4 的官方公告（发售、第 1 赛季及 Warzone 专题）中均未提及丧尸模式。官方目前未公布该模式；未来如有相关消息，将通过 Call of Duty 官方博客发布。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "切勿在所有模式中通用同一套配置。多人模式看重机动性与近距爆发；Warzone 讲求有效射程与护甲破坏能力；而在 DMZ 中，安全撤离比起盲目搜刮更为关键。"
+      }
+     ]
+    },
+    {
+     "id": "silah-gunsmith",
+     "baslik": "武器分类、枪匠系统与配装思路",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "玩家达到 4 级后解锁自定义配装（Create-a-Class）。根据官方首发公告，主武器分为六大类别；下方数据为发售初始数量，作战定位为通用游戏常识。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "类别",
+        "数量",
+        "通用定位"
+       ],
+       "satirlar": [
+        [
+         "突击步枪（Assault rifle）",
+         "8",
+         "各射程性能均衡；新手最稳妥的起步选择"
+        ],
+        [
+         "冲锋枪（SMG）",
+         "5",
+         "适合近距离高机动游走交火"
+        ],
+        [
+         "霰弹枪（Shotgun）",
+         "2",
+         "极近距离爆发极强；狭窄室内绝对霸权"
+        ],
+        [
+         "轻机枪（LMG）",
+         "3",
+         "超大弹容量；适合持续火力压制与卡点防守"
+        ],
+        [
+         "射手步枪（Marksman rifle）",
+         "3",
+         "中远距离半自动精准点射；注重每发命中率"
+        ],
+        [
+         "狙击步枪（Sniper rifle）",
+         "3",
+         "超远射程一击必杀；要求耐心卡点与精准预判"
+        ],
+        [
+         "副武器（Secondary weapon）",
+         "8",
+         "主武器子弹耗尽时的迅速补枪切换"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**同类武器共享配件。** 根据官方公告，枪匠系统（Gunsmith）中的配件现已按武器类别通用共享，大幅降低了练枪与配枪的门槛。",
+        "**巅峰配件（Apex Attachments）。** 将某把武器升至满级后解锁的专属配件；它们不占用常规配件槽位，能显著改变武器的性能曲线。",
+        "**Gunny 智能装配助手。** 为新手打造的快速配装辅助工具：它根据 Infinity Ward 枪械团队的官方配置预设，结合玩家当前已解锁的配件，一键生成近、中、远距离配装方案。该功能完全可选，且生成后可自由手动微调。"
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "进入自定义配装菜单（Create-a-Class）",
+         "metin": "达到 4 级后在主菜单解锁。初期先浏览默认预设背包，观察配件与特长组合。"
+        },
+        {
+         "baslik": "挑选一把核心主武器",
+         "metin": "从上表分类中挑选一把武器，并用一句话明确这套配置的作战意图（如中距离架枪或近战突脸）。"
+        },
+        {
+         "baslik": "借助 Gunny 快速搭建基础雏形",
+         "metin": "选择 Gunny 生成近距、中距或远距离配置；在此基础上逐个替换配件，进实战感受手感变化。"
+        },
+        {
+         "baslik": "挑选副武器或配置 Overkill 特长",
+         "metin": "在多人模式中，装备 Overkill（双主武器）特长可用第二把主武器替代副手手枪。该特长位于第一组特长中，4 级解锁。"
+        },
+        {
+         "baslik": "选定三项特长（Pick 3）",
+         "metin": "多人模式中 18 个特长分为三组，每组各选一项。特长选择必须紧密配合该套配置的核心打法。"
+        },
+        {
+         "baslik": "完善战术与连杀装备",
+         "metin": "依次挑选战术装备、致命装备、战地升级（Field Upgrade）以及连杀奖励（Killstreaks）。"
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "每套新配装至少在实战中连续使用五局。单局胜负受运气影响，多局实战才能真实暴露出枪械配置的短板。"
+      }
+     ]
+    },
+    {
+     "id": "temel-mekanikler",
+     "baslik": "核心机制：配装、特长与站位意识",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "武器强度会随赛季更迭，但这四大对战习惯永远决定胜负。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**特长搭配（Perks）：** Warzone 中共有 18 种特长。前 15 种可在入场前装配进三个槽位；其余 3 种为对局内拾取的 **精英特长（Elite Perks）**，同一时间只能激活一种。官方日志指出，精英特长占用第四个槽位，可通过购买站（Buy Stations）或补给合约（Supply Run Contracts）获取。",
+        "**站位走位：** 拐角与门框能为你提供极大的近战掩体优势；身处开阔地形时必须时刻保持移动，缩短敌方瞄准窗口。",
+        "**护甲与状态恢复：** 在 Warzone 中，接敌前务必塞满护甲板；装备强化特长（Tempered Perk）可将插满护甲所需板数从三块减少到两块（第 1 赛季更新日志）。",
+        "**团队协作与报点：** 快捷标记（Ping）与简明方向报点远胜过多废话。复活队友赎金及 Resurgence 模式下的 Wingman 特长机制会随赛季平衡调整。"
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "切勿盲目堆砌特长，先用一句话定义该背包的核心定位：贴脸冲锋还是架枪卡线？围绕这一定位筛选最具增益的特长。"
+      }
+     ]
+    },
+    {
+     "id": "warzone-gulag",
+     "baslik": "Warzone：古拉格死斗、重返战场与空降套件",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "在 Warzone 中，阵亡并不意味着游戏结束。根据第 1 赛季更新说明，Hajin 地图迎来了全新古拉格（阵亡后的 1v1 单挑赎身擂台），Resurgence 模式中则新增了名为 Drop Kits（空降套件）的一次性道具。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "空降套件（Drop Kit）",
+        "重返战场时获得的补给效果"
+       ],
+       "satirlar": [
+        [
+         "Insured（保险套件）",
+         "大幅缩短复活重返时间，并保留身上全部金钱（Cash）"
+        ],
+        [
+         "Armored（重装套件）",
+         "落地即附带满额护甲、额外备用护甲板以及一套自救针（Self-Revive Kit）"
+        ],
+        [
+         "Loadout（配装套件）",
+         "落地时直接携带当前背包的完整自定义配装"
+        ],
+        [
+         "Radar（雷达套件）",
+         "落地时附带主动雷达扫描、一架 UAV 无人机与补给箱扫描效果（Supply Sweep）"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Drop Kit 规则：** 仅在 Resurgence 模式中刷新出现；仅对携带该套件的特战兵生效，跳伞重返地面即被消耗；同一时间只能携带一个，捡起新套件将自动替换旧套件。",
+        "**古拉格死斗机制：** Hajin 的新古拉格拥有两种擂台布局变化；场景掩体支持翻越攀爬，观战者可从地面低角度观战，局部天气亦会影响视线环境。",
+        "**常规大逃杀跳伞重返：** 被队友购回重返战场的玩家，将携带该毒圈阶段对应古拉格配置的武器落地。",
+        "**合约与特殊物资：** 进入第 3 圈时，挂载移动购买站的无人机会进入地图；将其击落可访问专属强力装备（Fly Buy）。同时小队专属免费空投也会落向安全区。在 Resurgence 限时事件 Bounty Contest 中，所有小队都会被系统自动分派悬赏合约。"
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "在 Resurgence 模式阵亡前，确认身上所带的 Drop Kit 类型。Armored 套件适合快速找回作战状态，Loadout 套件则能保留核心主力枪械；根据战场局势灵活选择。"
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "系统设置：扎实的基准推荐",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "以下为新手初始调谐建议；实际手感因硬件与个人习惯而异。每次调整建议只更改单一参数以观察成效。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**视野范围（FOV）：** 推荐从 100 左右起步。过高会导致远距离目标缩得过小，过低则容易丧失两侧周围视野视野。",
+        "**帧率上限：** 帧率上限设为与显示器刷新率相符，关闭垂直同步（VSync）；稳定的帧率体验远优于忽高忽低的掉帧波动。",
+        "**灵敏度：** 先选用中等基础灵敏度，随后单独微调开镜瞄准（ADS）灵敏度倍率；每次只小幅调整一处数值。",
+        "**音频设置：** 务必佩戴耳机游玩，并在游戏内选用凸显脚步声的均衡音效预设（如 Boost High 或 Headphone）。",
+        "**键鼠设置：** 鼠标 DPI 建议设在 400 至 1600 之间；调整游戏内灵敏度，使鼠标在鼠标垫上滑动半幅距离刚好能平稳完成 180 度转身。将侧身、滑铲和跳跃绑定在手指最顺手的键位上。",
+        "**Nintendo Switch 2：** 根据 Beta 测试公告，游戏支持 Joy-Con 2 鼠标操控、体感陀螺仪瞄准、Switch 2 Pro 手柄以及掌机模式；陀螺仪微调对于手柄辅助跟枪非常有帮助。",
+        "**手柄设置：** 摇杆死区调高至刚好消除漂移即可，切勿关闭瞄准辅助（Aim Assist）；详情可参阅游戏内设置的各项中文说明。"
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "每修改一项设置，都在一整局比赛中进行检验；如果未见成效，果断还原。切忌在一个晚上同时更改多项参数，否则无法找出真正有益的设置。"
+      }
+     ]
+    },
+    {
+     "id": "ilerleme",
+     "baslik": "成长升级：战斗通行证与赛季机制",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "根据官方公告，第 1 赛季战斗通行证（Battle Pass）包含 100 个等级和超过 100 项奖励。游戏设有后入玩家追赶机制：即使较晚加入，随着赛季推进，部分奖励也会自动提前解锁。价格方面，Warzone 第 1 赛季日志标注通行证为 1,100 COD 点数，通行证组合包为 2,400 COD 点数；COD 点数的实际充值法币价格因平台而异，官方公告未提供统一的土耳其里拉定价。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "购买通行证前，先浏览免费奖励通道；预先评估高级付费奖励对自己是否有足够吸引力。",
+        "赛季中期将加入全新限时活动模式（如已公布的 Rockets and Snipers 及 Extreme Resurgence）；合理规划通行证经验获取节奏。",
+        "**转生机制（Prestige）：** 士兵等级升满后可在两条路线中抉择。经典转生（Classic Prestige）会重新锁定自定义配装内容，但提供更高经验加成与专属转生奖励；常规转生（Regular Prestige）重置至 1 级但保留全部配装解锁状态。",
+        "本体与 Warzone 共用同一账号；Warzone 自第 1 赛季起与本体内容全面互通打通。"
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "购买前务必权衡游戏时间：如果自估在赛季结束前无法打满，不要冲动购买。追赶机制虽有补益，但无法完全替代游戏时长。"
+      }
+     ]
+    },
+    {
+     "id": "baslangic-hatalari",
+     "baslik": "新手常见误区",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**反复走同一条路线送命。** 如果某条通道被敌人卡点架枪，立即变换绕后进攻路线。",
+        "**残血无甲盲目对枪。** 在 Warzone 中，护甲未打满就盲目出掩体交火几乎必败无疑。",
+        "**忽略战术道具的使用。** 单凭枪法极易受挫；切勿忽视闪光弹、烟雾弹和投掷雷等战术道具的压制效果。",
+        "**落单单挑敌方多人小队。** 缺乏队友配合盲目冲入交火区只会变成活靶子。",
+        "**购入游戏后才发现配置安全限制。** PC 端在购买前务必提前确认主板 TPM 2.0 与安全启动支持情况。",
+        "**盲目跟风频繁更换武器。** 评价一把新枪至少需要使用数天建立肌肉记忆；枪感需要持续磨合。"
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "同一把枪至少连续打满二十局再作优劣判断。频繁换枪只会掩盖自身走位与身法上的根本问题。"
+      }
+     ]
+    },
+    {
+     "id": "guvenlik-ve-harcama",
+     "baslik": "账号安全与消费警示",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "主游戏为买断制付费，Warzone 为免费游玩；两者均包含通行证、外观捆绑包及 COD 点数等内购项目。购买前务必分清永久资产与赛季时效道具，并设定合理的月度消费预算。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "为游戏账号开启双重验证（2FA），切勿在其他第三方网站复用相同密码。",
+        "若有未成年人游玩，请在主机或平台端（PlayStation、Xbox、Nintendo、Steam 或 Battle.net）开启家长控制，并对每笔支付启用密码验证。",
+        "远离声称提供免费 COD 点数或隐藏武器的钓鱼链接及外挂文件；这类信息均为账号窃取木马。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "坚决远离任何作弊外挂、自瞄透视、连点宏或特殊键鼠转换硬件，严禁买卖账号/道具或找人代练代打。PC 端的严格安全检测正是为此而设；账号一旦被封通常为永久封禁无法申诉，且此类违规交易多为诈骗。"
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "常见问题解答",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Warzone 是免费的吗？",
+         "c": "是的，Warzone 为免费游玩。主游戏（Modern Warfare 4）需要单独付费购买。"
+        },
+        {
+         "s": "可以在 PS4 或 Xbox One 上玩吗？",
+         "c": "Modern Warfare 4 没有推出 PS4 或 Xbox One 版本；游戏仅登陆 PS5、Xbox Series X|S、PC 以及 Nintendo Switch 2。"
+        },
+        {
+         "s": "为什么游戏在 PC 上无法启动？",
+         "c": "最常见的原因是未开启主板 TPM 2.0 或安全启动（Secure Boot）。请参照 Activision 官方支持页面的指引进行配置。"
+        },
+        {
+         "s": "在买本体之前可以先试玩 Warzone 吗？",
+         "c": "完全可以，Warzone 属于免费游戏。如果觉得不适合自己，没有任何经济损失。"
+        },
+        {
+         "s": "必须购买战斗通行证吗？",
+         "c": "不需要。通行证包含免费奖励通道；高级付费部分完全属于自愿消费。"
+        },
+        {
+         "s": "Warzone 与 Modern Warfare 4 数据共通吗？",
+         "c": "根据官方公告，自第 1 赛季起，Warzone 全面打通 Modern Warfare 4 的武器内容及赛季成长进度。"
+        },
+        {
+         "s": "游戏支持土耳其语吗？",
+         "c": "Steam 语言表中未收录土耳其语；在界面、配音和字幕支持列表中均未出现土耳其语。"
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  }
 }

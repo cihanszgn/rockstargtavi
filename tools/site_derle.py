@@ -39,8 +39,8 @@ NBSP = " "
 BOLUM_NO = {"ana": 0, "haber": 1, "oyunlar": 2, "indirim": 3, "ucretsiz": 4, "soylenti": 5, "takvim": 6, "rehberler": 7, "gta": 8}
 NAV = ("haber", "oyunlar", "indirim", "ucretsiz", "soylenti", "takvim", "rehberler", "gta")
 NAV_GRUP = ("indirim", "ucretsiz")  # üst menüde "Fırsatlar" altında
-TEKIL = {"tr": ("gün", "saat", "dakika", "saniye"), "en": ("day", "hour", "minute", "second"),
-         "fr": ("jour", "heure", "minute", "seconde"), "es": ("día", "hora", "minuto", "segundo")}
+from diller import HREFLANG, HTML_LANG, KAYIT, alan
+TEKIL = alan('tekil')
 SEMBOL = {"USD": "$", "TRY": "₺", "EUR": "€", "GBP": "£"}
 GUVEN = ("dusuk", "orta", "yuksek")
 DURUM = ("dogrulanmadi", "dogrulandi", "yalanlandi")
@@ -77,6 +77,7 @@ MANIFEST: dict[str, list] = {}
 VIDEO: dict = {}  # data/videolar.json (tools/video_uret.py yazar); yoksa boş: site videosuz derlenir
 ESKI_HARITA: dict[str, str] = {}
 SURUM: dict[str, str] = {}
+SABIT: dict[str, dict] = {}
 
 
 def uyar(metin: str) -> None:
@@ -101,7 +102,7 @@ def norm(s: str) -> str:
     s = str(s).lower().replace("ı", "i")
     s = unicodedata.normalize("NFD", s)
     s = "".join(c for c in s if not unicodedata.combining(c))
-    return re.sub(r"[^a-z0-9]+", " ", s).strip()
+    return re.sub(r"[^a-z0-9\u3400-\u9fff]+", " ", s).strip()
 
 
 def slug(s: str) -> str:
@@ -165,7 +166,7 @@ def fiyat(dil: str, n: float, para: str = "USD") -> str:
     s = SEMBOL.get(para, para)
     tam_, kes = f"{float(n):.2f}".split(".")
     t = int(tam_)
-    if dil == "en":
+    if dil in ("en", "zh"):
         return f"{s}{t:,}.{kes}"
     if dil == "tr":
         g = f"{t:,}".replace(",", ".")
@@ -180,7 +181,7 @@ def yuzde(dil: str, n: float) -> str:
     n = int(math.floor(float(n) + 0.5))
     if dil == "tr":
         return f"−%{n}"
-    if dil == "en":
+    if dil in ("en", "zh", "nl"):
         return f"−{n}%"
     return f"−{n}{NBSP}%"
 
@@ -414,6 +415,10 @@ SONEK = re.compile(r"\s*\|\s*(?:GTA VI (?:Türkçe )?Rehber|GTA VI Guide|Guía d
 
 
 def eski_oku(yol: str) -> dict | None:
+    if yol in SABIT:
+        b = SABIT[yol]
+        return {'yol': yol, 'baslik': b['baslik'], 'aciklama': b['aciklama'],
+                'tip': 'website', 'ld': '', 'main': b['main']}
     p = KOK / yol
     if not p.exists():
         uyar(f"{yol} bulunamadı; atlandı.")
@@ -519,7 +524,7 @@ def js_metin(dil: str) -> dict:
 
 def dil_menusu(dil: str, hedefler: dict[str, str]) -> str:
     ogeler = "".join(
-        f'<li><a href="{u(hedefler[d])}" hreflang="{d}" lang="{d}"{" aria-current=\"true\"" if d == dil else ""}>'
+        f'<li><a href="{u(hedefler[d])}" hreflang="{HREFLANG[d]}" lang="{HTML_LANG[d]}"{" aria-current=\"true\"" if d == dil else ""}>'
         f'<span class="dil-kod" aria-hidden="true">{d.upper()}</span>{DIL_AD[d]}</a></li>'
         for d in DILLER)
     return (f'<details class="dil"><summary>{IK_DIL}<span class="gizli">{e(T[dil]["dil_aria"])}: {DIL_AD[dil]}</span>'
@@ -539,14 +544,14 @@ def kabuk(dil: str, yol: str, baslik: str, aciklama: str, govde: str, *, esler: 
     t = T[dil]
     title = baslik if tam_baslik else f"{baslik} | {MARKA}"
     gorsel_url = gorsel if https(gorsel) else f"{SITE}/{gorsel}"
-    bas = [f'<!doctype html>\n<html lang="{dil}" class="no-js">\n<head>\n<meta charset="utf-8">\n'
+    bas = [f'<!doctype html>\n<html lang="{HTML_LANG[dil]}" class="no-js">\n<head>\n<meta charset="utf-8">\n'
            '<meta name="viewport" content="width=device-width,initial-scale=1">\n'
            f"<title>{e(title)}</title>\n<meta name=\"description\" content=\"{e(aciklama)}\">\n"]
     if dizinle:
         bas.append('<meta name="robots" content="max-image-preview:large">\n')
         bas.append(f'<link rel="canonical" href="{tam(yol)}">\n')
         if esler and len(esler) > 1:
-            bas += [f'<link rel="alternate" hreflang="{d}" href="{tam(esler[d])}">\n' for d in DILLER if d in esler]
+            bas += [f'<link rel="alternate" hreflang="{HREFLANG[d]}" href="{tam(esler[d])}">\n' for d in DILLER if d in esler]
             bas.append(f'<link rel="alternate" hreflang="x-default" href="{tam(esler.get("en") or esler.get("tr") or esler[dil])}">\n')
     else:
         bas.append('<meta name="robots" content="noindex">\n')
@@ -608,12 +613,16 @@ def kabuk(dil: str, yol: str, baslik: str, aciklama: str, govde: str, *, esler: 
     sinif = " ".join(s for s in ("metin-sayfa" if sayfa_turu == "eski" else "", ana_sinif) if s)
     sinif = f' class="{sinif}"' if sinif else ""
     ana = f'<main id="main" tabindex="-1"{sinif}>\n{govde}</main>\n'
+    oneriler = {d: {'url': u(esler[d]), 'lang': HTML_LANG[d], 'metin': KAYIT[d]['oneri'],
+                    'ac': KAYIT[d]['oneri_link'], 'kapat': T[d]['kapat']}
+                for d in DILLER if esler and d in esler}
+    ust += f'<script type="application/json" id="cag-dil-onerileri">{gom(oneriler)}</script>\n'
 
     bolumler = "".join(f'<li><a href="{u(SAYFA[b][dil])}">{e(t["nav"][b])}</a></li>' for b in ("ana",) + NAV)
     gta_l = "".join(f'<li><a href="{u(p)}">{e(ad)}</a></li>' for p, ad, _ in GTA_SAYFALAR[dil])
     site_l = (f'<li><a href="{u(SAYFA["hakkinda"][dil])}">{e(t["hakkinda"])}</a></li>'
               f'<li><a href="{u(SAYFA["gizlilik"][dil])}">{e(t["gizlilik"])}</a></li>'
-              + "".join(f'<li><a href="{u(SAYFA["ana"][d])}" hreflang="{d}" lang="{d}">{DIL_AD[d]}</a></li>' for d in DILLER if d != dil))
+              + "".join(f'<li><a href="{u(SAYFA["ana"][d])}" hreflang="{HREFLANG[d]}" lang="{HTML_LANG[d]}">{DIL_AD[d]}</a></li>' for d in DILLER if d != dil))
     rss_l = (f'<li><a href="/{sd.FEED[dil]}">{e(t["rss_haber"])}</a></li>'
              f'<li><a href="{gta_feed(dil)}">{e(t["rss_gta"])}</a></li>')
     alt = (f'<footer class="alt" id="site-haritasi"><div class="wrap">\n<div class="alt-ic">\n'
@@ -733,12 +742,12 @@ def kapak_tema(oyun: str) -> tuple[str, dict, str]:
 def kapak_html(dil: str, oyun: str, *, ek: str, alt: str = "", gorsel: dict | None = None, rozet: str = "",
                sinif: str = "", video: dict | None = None) -> str:
     """Kart görseli: altta üretilmiş kapak (her zaman), varsa üstünde kaynağın görseli.
-    Görsel yüklenemezse onerror onu kaldırır ve kapak görünür; JS kapalıyken de ikisinden biri görünür."""
+    Görsel yüklenemezse site.js onu kaldırır ve kapak görünür."""
     ts, t, kisa = kapak_tema(oyun)
     img = ""
     if gorsel:
         img = (f'<img class="kg-img" src="{e(gorsel["url"])}" alt="{e(alt)}" width="{gorsel["en"]}" height="{gorsel["boy"]}" '
-               'loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">'
+               'loading="lazy" decoding="async" referrerpolicy="no-referrer">'
                f'<span class="kg-not">{e(T[dil]["gorsel_not"])}: {e(gorsel["kaynak"])}</span>')
     kimlik = re.sub(r"[^a-z0-9-]", "", ek.lower())
     if video:  # video yalnız veri olarak taşınır; site.js görünür olunca yükler
@@ -1314,7 +1323,7 @@ def takvim_sayfasi(dil: str, tak: list) -> str:
 
 def yok_sayfasi(veri: list | None = None) -> str:
     t = T["tr"]
-    diger = "".join(f'<p lang="{d}">{e(T[d]["yok_h1"])} <a href="{u(SAYFA["ana"][d])}">{e(T[d]["yok_ana"])}</a></p>\n'
+    diger = "".join(f'<p lang="{HTML_LANG[d]}">{e(T[d]["yok_h1"])} <a href="{u(SAYFA["ana"][d])}">{e(T[d]["yok_ana"])}</a></p>\n'
                     for d in DILLER if d != "tr")
     bolumler = "".join(f'<li><a href="{u(SAYFA[b]["tr"])}"><kbd class="tus">{BOLUM_NO[b]}</kbd>{e(t["nav"][b])}</a></li>' for b in NAV)
     # kaybolan ziyaretçiye son haberler: sayfanın altı boş kalmaz
@@ -1411,7 +1420,7 @@ def site_haritasi() -> int:
         alt = ""
         es = {d: b["esler"][d] for d in DILLER if (b["esler"] or {}).get(d)}
         if len(es) > 1:
-            alt = "".join(f'<xhtml:link rel="alternate" hreflang="{d}" href="{tam(p)}"/>' for d, p in es.items())
+            alt = "".join(f'<xhtml:link rel="alternate" hreflang="{HREFLANG[d]}" href="{tam(p)}"/>' for d, p in es.items())
             alt += f'<xhtml:link rel="alternate" hreflang="x-default" href="{tam(es.get("en") or es.get("tr") or next(iter(es.values())))}"/>'
         satir.append(f"  <url><loc>{tam(yol)}</loc><lastmod>{b['lastmod']}</lastmod>{alt}{b.get('video', '')}</url>\n")
     vns = ' xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"' if any(b.get("video") for b in URETILEN.values()) else ""
@@ -1435,6 +1444,8 @@ def derle(veri: list) -> dict:
     UYARILAR.clear()
     URETILEN.clear()
     MANIFEST.clear()
+    SABIT.clear()
+    SABIT.update(_json('sabit_sayfalar.json', False) or {})
     mp = KOK / "data" / "sayfalar.json"
     if mp.exists():
         try:
@@ -1488,6 +1499,9 @@ def derle(veri: list) -> dict:
         degisen += sayfa_yaz(SAYFA["soylenti"][d], soylenti_sayfasi(d, soy), esler=SAYFA["soylenti"])
         degisen += sayfa_yaz(SAYFA["takvim"][d], takvim_sayfasi(d, tak), esler=SAYFA["takvim"])
         degisen += int(sd.yaz(KOK / sd.FEED[d], sd.rss(d, veri)))
+        if d not in ('tr', 'en', 'es', 'fr'):
+            degisen += int(sd.yaz(KOK / gta_feed(d).lstrip('/'),
+                                 sd.rss(d, [x for x in veri if oyun_anahtar(x['oyun']) == 'gta-6'])))
         degisen += so.sayfalari_yaz(d, veri, soy, tak)
     for d, b, esler, gta in eski_gruplar:
         degisen += sayfa_yaz(b["yol"], eski_sayfa(d, b, esler, gta), esler=esler)

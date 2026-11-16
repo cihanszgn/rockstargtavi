@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""CTRL+A GAME derleyicisi: tek komutla bütün site (4 dil) ve paylaşım kartları.
+"""CTRL+A GAME derleyicisi: tek komutla bütün site (dil kaydı) ve paylaşım kartları.
 
 data/icerik.json (+ data/soylentiler.json, takvim.json, indirimler.json, ucretsiz.json)
   →  ana sayfa, haber merkezi ve haber sayfaları, indirimler, ücretsiz oyunlar, söylentiler,
@@ -24,79 +24,43 @@ KOK = pathlib.Path(__file__).resolve().parent.parent
 SITE = "https://ctrl-agame.com"
 GORUNEN = "ctrl-agame.com"
 MARKA = "CTRL+A GAME"
-DILLER = ("tr", "en", "fr", "es")
-ONEK = {"tr": "/", "en": "/en/", "fr": "/fr/", "es": "/es/"}
-HUB = {"tr": "oyun-haberleri.html", "en": "en/game-news.html", "fr": "fr/actus-jeux.html", "es": "es/noticias-juegos.html"}
-KLASOR = {"tr": "oyun-haberleri", "en": "en/game-news", "fr": "fr/actus-jeux", "es": "es/noticias-juegos"}
-FEED = {"tr": "oyun-haberleri.xml", "en": "en/game-news.xml", "fr": "fr/actus-jeux.xml", "es": "es/noticias-juegos.xml"}
-GTA_HABER = {"tr": "haberler.html", "en": "en/news.html", "fr": "fr/news.html", "es": "es/news.html"}
+from diller import DILLER, KAYIT, alan, tarih_yaz
+ONEK = {d: '/' + (k['klasor'] + '/' if k['klasor'] else '') for d, k in KAYIT.items()}
+HUB = {d: k['sayfa']['haber'] for d, k in KAYIT.items()}
+KLASOR, FEED = alan('haber_klasor'), alan('feed')
+GTA_HABER = {d: k['eski'][3] for d, k in KAYIT.items()}
 KART_KLASOR = "kart"
 TUR = ("haber", "ucretsiz", "cikis", "indirim", "guncelleme")
 
-AY = {
-    "tr": ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"],
-    "en": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-    "fr": ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],
-    "es": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
-}
-
-M = {
-    "tr": {
-        "menu": "Oyun haberleri", "hub_baslik": "Oyun haberleri: PlayStation, Xbox, Nintendo ve PC",
-        "hub_h1": "Oyun haberleri",
-        "hub_aciklama": "Tüm platformlardan teyitli oyun haberleri: çıkışlar, ücretsiz oyunlar, indirimler ve güncellemeler. Her haberin resmî kaynağı belirtilir.",
-        "hub_not": "Haberler yalnız resmî duyurulara (PlayStation Blog, Xbox Wire, Nintendo, Epic Games Store, yayıncı siteleri) dayanır. Doğrulanmamış iddialar ayrı ve etiketli Söylentiler bölümündedir; sızıntı yazılmaz.",
-        "guncel": "Son güncelleme", "kaynak": "Kaynak", "devam": "Haberin tamamı", "tum": "Tüm oyun haberleri",
-        "geri": "Tüm oyun haberleri", "kutu": "Diğer oyunlardan haberler", "gta": "GTA VI haberleri",
-        "tur": {"haber": "Haber", "ucretsiz": "Ücretsiz", "cikis": "Çıkış", "indirim": "İndirim", "guncelleme": "Güncelleme"},
-        "locale": "tr_TR", "feed": f"Oyun haberleri | {MARKA}",
-        "oneri": "Bu haber Türkçe de var:", "oneri_link": "Türkçe oku",
-    },
-    "en": {
-        "menu": "Game news", "hub_baslik": "Game news: PlayStation, Xbox, Nintendo and PC",
-        "hub_h1": "Game news",
-        "hub_aciklama": "Verified gaming news from every platform: launches, free games, deals and updates. Every story links to its official source.",
-        "hub_not": "News is based only on official announcements (PlayStation Blog, Xbox Wire, Nintendo, Epic Games Store, publisher sites). Unconfirmed claims live in the separate, clearly labeled Rumors section. No leaks.",
-        "guncel": "Last updated", "kaynak": "Source", "devam": "Read the full story", "tum": "All game news",
-        "geri": "All game news", "kutu": "News from other games", "gta": "GTA VI news",
-        "tur": {"haber": "News", "ucretsiz": "Free", "cikis": "Launch", "indirim": "Deal", "guncelleme": "Update"},
-        "locale": "en_US", "feed": f"Game news | {MARKA}",
-        "oneri": "This story is also available in English:", "oneri_link": "Read in English",
-    },
-    "fr": {
-        "menu": "Actus jeux", "hub_baslik": "Actus jeux vidéo : PlayStation, Xbox, Nintendo et PC",
-        "hub_h1": "Actus jeux vidéo",
-        "hub_aciklama": "Des actus jeux vidéo vérifiées sur toutes les plateformes : sorties, jeux gratuits, promos et mises à jour. Chaque info cite sa source officielle.",
-        "hub_not": "Les actus reposent uniquement sur des annonces officielles (PlayStation Blog, Xbox Wire, Nintendo, Epic Games Store, sites des éditeurs). Les infos non confirmées sont dans la rubrique Rumeurs, à part et clairement signalée. Pas de fuites.",
-        "guncel": "Dernière mise à jour", "kaynak": "Source", "devam": "Lire l'article", "tum": "Toutes les actus jeux",
-        "geri": "Toutes les actus jeux", "kutu": "Actus des autres jeux", "gta": "Actus GTA VI",
-        "tur": {"haber": "Actu", "ucretsiz": "Gratuit", "cikis": "Sortie", "indirim": "Promo", "guncelleme": "Mise à jour"},
-        "locale": "fr_FR", "feed": f"Actus jeux | {MARKA}",
-        "oneri": "Cet article existe aussi en français :", "oneri_link": "Lire en français",
-    },
-    "es": {
-        "menu": "Noticias de juegos", "hub_baslik": "Noticias de videojuegos: PlayStation, Xbox, Nintendo y PC",
-        "hub_h1": "Noticias de videojuegos",
-        "hub_aciklama": "Noticias de videojuegos verificadas de todas las plataformas: lanzamientos, juegos gratis, ofertas y actualizaciones. Cada noticia cita su fuente oficial.",
-        "hub_not": "Las noticias se basan solo en anuncios oficiales (PlayStation Blog, Xbox Wire, Nintendo, Epic Games Store, webs de las editoras). Lo no confirmado está en la sección Rumores, aparte y bien señalada. Sin filtraciones.",
-        "guncel": "Última actualización", "kaynak": "Fuente", "devam": "Leer la noticia", "tum": "Todas las noticias de juegos",
-        "geri": "Todas las noticias de juegos", "kutu": "Noticias de otros juegos", "gta": "Noticias de GTA VI",
-        "tur": {"haber": "Noticia", "ucretsiz": "Gratis", "cikis": "Lanzamiento", "indirim": "Oferta", "guncelleme": "Actualización"},
-        "locale": "es_ES", "feed": f"Noticias de juegos | {MARKA}",
-        "oneri": "Esta noticia también está en español:", "oneri_link": "Leer en español",
-    },
-}
+AY, M = alan('ay'), alan('sosyal')
 
 e = lambda s: html.escape(str(s), quote=True)  # noqa: E731
 
 
-def tarih_yaz(dil: str, iso: str) -> str:
-    y, a, g = (int(x) for x in iso.split("-"))
-    if dil == "en":
-        return f"{AY['en'][a - 1]} {g}, {y}"
-    if dil == "es":
-        return f"{g} de {AY['es'][a - 1]} de {y}"
-    return f"{g} {AY[dil][a - 1]} {y}"
+def metni_sar(c, metin, f, gen):
+    """CJK metnini karakterlerden, Latin sözcükleri bölmeden satırlara ayırır."""
+    if not re.search(r'[\u3400-\u9fff]', metin):
+        parcalar = [k + ' ' for k in metin.split()]
+    else:
+        parcalar = re.findall(r"[A-Za-z0-9]+(?:[-.:’'][A-Za-z0-9]+)*|\s+|.", metin)
+    satir, satirlar = '', []
+    for k in parcalar:
+        if c.textlength((satir + k).rstrip(), font=f) <= gen:
+            satir += k
+        elif satir.strip():
+            # Noktalama işareti tek başına yeni satıra düşmesin.
+            if k in '，。！？：；、）》】' and len(satir.rstrip()) > 1:
+                onceki = satir.rstrip()
+                satirlar.append(onceki[:-1].rstrip())
+                satir = onceki[-1] + k
+            else:
+                satirlar.append(satir.rstrip())
+                satir = k.lstrip()
+        else:
+            satir = k.lstrip()
+    if satir.strip():
+        satirlar.append(satir.rstrip())
+    return satirlar
 
 
 # ---------------------------------------------------------------- doğrulama
@@ -212,31 +176,25 @@ def kartlar(veri: list[dict]) -> tuple[int, int]:
     from PIL import Image, ImageDraw, ImageFont
 
     onbellek: dict = {}
+    kart_dili = 'tr'
 
     def font(tur: str, boy: int):
-        if (tur, boy) not in onbellek:
+        anahtar = (kart_dili, tur, boy)
+        if anahtar not in onbellek:
             adaylar = [str(KOK / "tools" / "yazi" / YAZI_DOSYA[tur])] + YEDEK_YAZI[tur]
+            if kart_dili == 'zh':
+                ad = 'NotoSansSC-Regular.otf' if tur == 'duz' else 'NotoSansSC-Bold.otf'
+                adaylar = [str(pathlib.Path(__file__).resolve().parent / 'yazi' / ad)]
             for a in adaylar:
                 if pathlib.Path(a).exists():
-                    onbellek[(tur, boy)] = ImageFont.truetype(a, boy)
+                    onbellek[anahtar] = ImageFont.truetype(a, boy)
                     break
             else:
                 raise SystemExit("Yazı tipi bulunamadı (tools/yazi/Archivo-*.ttf, Segoe UI veya DejaVu Sans gerekli).")
-        return onbellek[(tur, boy)]
+        return onbellek[anahtar]
 
     def sar(c, metin, f, gen):
-        satir, satirlar = "", []
-        for k in metin.split():
-            dene = (satir + " " + k).strip()
-            if c.textlength(dene, font=f) <= gen:
-                satir = dene
-            else:
-                if satir:
-                    satirlar.append(satir)
-                satir = k
-        if satir:
-            satirlar.append(satir)
-        return satirlar
+        return metni_sar(c, metin, f, gen)
 
     def sigdir(c, metin, tur, buyuk, kucuk, gen, en_cok):
         for boy in range(buyuk, kucuk - 1, -2):
@@ -294,6 +252,8 @@ def kartlar(veri: list[dict]) -> tuple[int, int]:
         return len(satirlar) * adim
 
     def kart(x, dil, W, H, ozetli):
+        nonlocal kart_dili
+        kart_dili = dil
         t, m = x["diller"][dil], M[dil]
         img = Image.new("RGB", (W, H), ZEMIN)
         c = ImageDraw.Draw(img)

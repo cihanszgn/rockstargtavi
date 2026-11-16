@@ -38,7 +38,7 @@ components:
 
 ## Overview
 
-Türkçe, İngilizce, Fransızca ve İspanyolca oyun portalı. 16 Kasım 2026 yönü: mağaza vitrini kadar görselli, oyun dergisi kadar okunabilir; geniş boşluklar, görselin altında tam oyun adı ve sade yüzeyler. İmza Ctrl+A seçim vurgusu ve fiziksel klavye tuşlarıdır. Neon çerçeveler ve görsel üzerine bindirilmiş haber başlıkları kullanılmaz. Merkez ve rehberler oyunun temasını korur; dizin kartlarında ortak Archivo hiyerarşisi kullanılır.
+Türkçe, İngilizce, Fransızca, İspanyolca, Almanca, Felemenkçe ve Basitleştirilmiş Çince oyun portalı. 16 Kasım 2026 yönü: mağaza vitrini kadar görselli, oyun dergisi kadar okunabilir; geniş boşluklar, görselin altında tam oyun adı ve sade yüzeyler. İmza Ctrl+A seçim vurgusu ve fiziksel klavye tuşlarıdır. Neon çerçeveler ve görsel üzerine bindirilmiş haber başlıkları kullanılmaz. Merkez ve rehberler oyunun temasını korur; dizin kartlarında ortak Archivo hiyerarşisi kullanılır.
 
 Token sahibi mevcut çalışma kodudur (Model B). Bu belge değerleri açıklar; CSS üretmez. `style.css :root` temel renk, boşluk ve ölçülerin; `[data-tema="acik"]` açık temanın sahibidir. Haber türü renkleri `--tc-*`, platform renkleri `--pl-*` üzerinden ortak kartlara aktarılır. Oyuna özel değerler `tools/oyun_tema.py` → `oyun-tema.css` → oyun/rehber/kapak bileşenleri yolunu izler; üretilen CSS elle düzenlenmez.
 
@@ -79,3 +79,7 @@ Her söylentinin kaynak ve doğrulama durumu görünür kalmalı. Kaynak görsel
 ## 2026-11-16 tasarım uzlaştırması
 
 Önceki 1200px genişlik, renkli kart çerçeveleri, haber üstü başlıklar ve küçük takvim satırları Cio'nun yeniden tasarım isteğiyle değiştirildi. Yeni ölçülerin sahibi `style.css :root`; oyun başlığı/kapak düzeninin sahibi `tools/oyun_tema_temel.css` → `tools/oyun_tema.py` → üretilen `oyun-tema.css`. Yeni kütüphane, CDN veya yazı tipi eklenmedi. İçerik verisi değiştirilmedi.
+
+## Dil önerisi
+
+`data/diller.json` dil adı, URL, arayüz metni ve tarih biçimlerinin sahibidir. Dil önerisi mevcut `--yuzey` ve `--yazi` renklerini kullanır; sayfa üstünde ince bir şerittir. Tarayıcının ilk desteklenen dili mevcut sayfadan farklıysa yalnız o sayfanın gerçek karşılığı önerilir. Otomatik yönlendirme ve ülke/IP sorgusu yoktur. Açma veya kapatma tercihi localStorage içinde hatırlanır; klavyeyle erişilen bağlantı ve en az 44px kapatma düğmesi kullanılır. Çince için PingFang SC, Microsoft YaHei ve Noto Sans CJK SC sistem yedekleri vardır; web fontu indirilmez.

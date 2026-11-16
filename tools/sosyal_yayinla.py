@@ -55,12 +55,8 @@ UA = "rockstargtavi-sosyal/1.0"
 BICIMLER = ("gorsel", "reel", "short")
 MAX_VIDEO_BAYT = 256 * 1024 * 1024
 
-METIN = {
-    "tr": {"devam": "Ayrıntılar ve kaynak:", "profil": "Ayrıntılar ve kaynak profildeki bağlantıda.", "ig_link": "Ayrıntılar ve resmî kaynak: profildeki bağlantı"},
-    "en": {"devam": "Details and source:", "profil": "Details and source: link in bio.", "ig_link": "Details and official source: link in bio"},
-    "fr": {"devam": "Détails et source :", "profil": "Détails et source : lien dans la bio.", "ig_link": "Détails et source officielle : lien dans la bio"},
-    "es": {"devam": "Detalles y fuente:", "profil": "Detalles y fuente: enlace en la bio.", "ig_link": "Detalles y fuente oficial: enlace en la bio"},
-}
+from diller import alan, HREFLANG
+METIN = alan('paylasim')
 
 
 class PaylasimHatasi(Exception):
@@ -333,7 +329,9 @@ def yt_govde(dil, x, link, ayar) -> dict:
         gizlilik = "private"
     return {
         "snippet": {"title": yt_baslik(dil, x), "description": yt_aciklama(dil, x, link), "tags": yt_etiketler(dil, x),
-                    "categoryId": "20", "defaultLanguage": dil, "defaultAudioLanguage": dil},
+                    "categoryId": "20", "defaultLanguage": HREFLANG[dil], "defaultAudioLanguage": HREFLANG[dil]},
+        "localizations": {HREFLANG[d]: {"title": yt_baslik(d, x), "description": yt_aciklama(d, x, paylasim_linki(d, x, "youtube"))}
+                          for d in DILLER if d != dil and x.get("diller", {}).get(d, {}).get("baslik") and x["diller"][d].get("ozet")},
         "status": {"privacyStatus": gizlilik, "selfDeclaredMadeForKids": False, "containsSyntheticMedia": True},
     }
 
@@ -387,7 +385,7 @@ def yt_paylas(ag, sir, dil, x, link, ayar, ara, video) -> dict:
     bayt = ag.indir(medya)
     tok = yt_erisim(ag, sir)
     durum, bas, metin = ag.ham(
-        "POST", f"{YT_UST}?uploadType=resumable&part=snippet,status",
+        "POST", f"{YT_UST}?uploadType=resumable&part=snippet,status,localizations",
         govde=json.dumps(yt_govde(dil, x, link, ayar)).encode(),
         basliklar={"Authorization": f"Bearer {tok}", "Content-Type": "application/json; charset=UTF-8",
                    "X-Upload-Content-Type": "video/mp4", "X-Upload-Content-Length": str(len(bayt))}, zaman=60)
@@ -631,6 +629,7 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                         cikti(f"video: {ig_video_adresi(video)}\nkapak: {video['kapak']}\n{ig_aciklama(dil, x)}")
                     elif bicim == "short":
                         g = yt_govde(dil, x, link, ayar)
+                        cikti('yerelleştirme gövdesi: ' + json.dumps(g, ensure_ascii=False, sort_keys=True))
                         cikti(f"video: {ig_video_adresi(video)}\nbaşlık: {g['snippet']['title']}\ngizlilik: {g['status']['privacyStatus']}\n{g['snippet']['description']}")
                     else:
                         cikti(f"görsel: {SITE}/{kart_ad(x['id'], dil, 'ig')}\n{ig_aciklama(dil, x)}")

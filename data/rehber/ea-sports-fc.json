@@ -1656,6 +1656,1221 @@
      ]
     }
    ]
+  },
+  "de": {
+   "baslik": "EA SPORTS FC 27 Leitfaden – Einsteiger-Handbuch 2026",
+   "ozet": "Ein Leitfaden für Einsteiger in EA SPORTS FC 27: Editionen, Plattformen, kostenloser Einstieg in Ultimate Team, Karriere, Einstellungen und Ausgabenwarnungen.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Fußballsimulation"
+    },
+    {
+     "ad": "Plattform",
+     "deger": "EA App, Steam, Epic Games Store, PS4, PS5, Xbox One, Xbox Series X|S, Switch, Switch 2"
+    },
+    {
+     "ad": "Preismodell",
+     "deger": "Kostenpflichtiges Hauptspiel; kostenlose, eingeschränkte Version FC 27 Lite; optionale FC Points"
+    },
+    {
+     "ad": "Aktuelle Version",
+     "deger": "FC 27 (25. September 2026)"
+    },
+    {
+     "ad": "Türkisch-Unterstützung",
+     "deger": "Ja, in der Sprachliste auf EAs Kaufseite aufgeführt"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "oyun-nedir",
+     "baslik": "Was EA SPORTS FC 27 ist und wo es 2026 steht",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "EA SPORTS FC ist eine jährlich erscheinende Fußballsimulationsreihe. Die aktuelle Ausgabe ist **EA SPORTS FC 27**, erschienen am 25. September 2026. Käufer der Ultimate und Ultimate Plus Editionen erhielten bis zu sieben Tage Vorabzugang. Das Spiel umfasst Ultimate Team zum Aufbau des eigenen Traumkaders, die Karriere zur Vereinsführung oder Spielerentwicklung, den neuen sozialen Modus The Grounds sowie klassische Freundschaftsspiele."
+      },
+      {
+       "tip": "p",
+       "metin": "Das Hauptspiel ist kostenpflichtig, EA bietet jedoch auch eine kostenlose, abgespeckte Version namens **FC 27 Lite** an. Sie enthält Anstoß (Kick-Off), Learn to Play, Online-Freundschaftsspiele und Online-Saisons; Ultimate Team, die Managerkarriere oder The Grounds sind nicht enthalten, und es ist eine dauerhafte Internetverbindung erforderlich. Eine gute Möglichkeit, das Spielgefühl vor dem Kauf zu testen."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Dieser Leitfaden erklärt zeitlose Prinzipien; Spielerwerte, SBCs und Live-Events ändern sich wöchentlich. Die aktuellen Details findest du auf EAs offiziellen Ankündigungsseiten."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Vor dem Start: Plattform, Edition und Systemanforderungen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "FC 27 erschien offiziell für die EA App, Steam, den Epic Games Store, PS4, PS5, Xbox One, Xbox Series X|S, Nintendo Switch und Nintendo Switch 2. The Grounds (inklusive Clubs) gibt es nur auf PS5, Xbox Series X|S, PC und Switch 2. Türkisch ist auf EAs Shopseite ebenfalls in der Sprachliste verzeichnet."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**PC Minimum:** 64-Bit Windows 10 oder 11, Ryzen 5 1600 oder Core i5 6600K, 8 GB Dual-Channel DDR4 RAM, Radeon RX 570 oder GeForce GTX 1050 Ti, DirectX 12, 100 GB freier Speicherplatz.",
+        "**PC Empfohlen:** Ryzen 7 2700X oder Core i7 6700, 12 GB RAM, Radeon RX 5600 XT oder GeForce GTX 1660, 100 GB SSD-Speicherplatz.",
+        "**Konto:** Ultimate Team und Onlinemodi setzen ein EA-Konto und eine Internetverbindung voraus.",
+        "**Crossplay:** Laut EA Hilfe zwischen PC, PlayStation und Xbox verfügbar und beim ersten Start standardmäßig aktiv; Spieler werden nach Generationen gruppiert: PS5, Xbox Series X|S und PC zusammen, PS4 und Xbox One separat. Switch und Switch 2 bieten kein Crossplay.",
+        "**Plattformübergreifender Fortschritt:** Laut EA Hilfe nur in Ultimate Team und innerhalb derselben Plattformfamilie möglich: von PS4 auf PS5 oder von Xbox One auf Xbox Series X|S, nicht jedoch von PlayStation auf Xbox.",
+        "**Preis:** Der EA Store zeigt Preise je nach Region an; ein einheitlicher Preis in Türkischer Lira ist nicht offiziell ausgewiesen. Prüfe den aktuellen Preis auf der Seite deines Stores."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Teste zuerst das kostenlose FC 27 Lite; gefällt dir das grundlegende Spielgefühl, kaufe die Vollversion. Suchst du Karriere oder Ultimate Team, reicht Lite nicht aus."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Die ersten Schritte: Einstieg in Ultimate Team",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Ultimate Team beginnt kostenlos: Du baust eine Mannschaft aus Startspielern auf und verdienst dir durchs Spielen Packs, Münzen und neue Spieler. EAs Einsteigerseite empfiehlt folgende Reihenfolge."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Starter-Pack wählen",
+         "metin": "Zerbrich dir nicht den Kopf; wähle deine Lieblingsliga, falls vorhanden. Das Starter-Pack ist lediglich der erste Schritt."
+        },
+        {
+         "baslik": "Grundlagen-Ziele (Foundations) abschließen",
+         "metin": "Die Zielkette umfasst: The Journey Begins, First Team Dreams, Rising Through the Ranks, Market Madness, Chasing Greatness und Total Football. Sie vermittelt die Spielmechaniken und belohnt mit Spielern, Packs und FUT Coins."
+        },
+        {
+         "baslik": "Gegen die KI spielen",
+         "metin": "Beginne mit KI-Modi wie Moments und Squad Battles. EA empfiehlt für die ersten Tage Squad Battles auf der Stufe Amateur oder Halbprofi mit dem Starterteam."
+        },
+        {
+         "baslik": "Transfermarkt freischalten",
+         "metin": "Für neue Spieler werden die Zielgruppen The Journey Begins, First Team Dreams und Rising Through the Ranks nacheinander abgeschlossen; letztere schaltet den Zugang zum Transfermarkt und zu Champions frei."
+        },
+        {
+         "baslik": "Belohnungen nach jedem Match abholen",
+         "metin": "Lass erspielte Packs, Münzen und Season-Pass-XP nicht liegen; kleine Gewinne bringen das Team stetig voran."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Jeden Tag ein wenig Fortschritt genügt. EA selbst beschreibt den Anfang als lernintensiv, der mit kontinuierlichem Spiel und Können zunehmend leichter fällt."
+      }
+     ]
+    },
+    {
+     "id": "modlar-ve-kariyer",
+     "baslik": "Modi und Einführung in die Karriere",
+     "bloklar": [
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Modus",
+        "Wofür gedacht / Hinweise"
+       ],
+       "satirlar": [
+        [
+         "Ultimate Team",
+         "Für alle, die ihren Traumkader aufbauen und entwickeln wollen; startet kostenlos mit erspielbaren Packs und Münzen. Heimat von Rivals, Champions, Squad Battles, SBCs und Objectives."
+        ],
+        [
+         "Karriere",
+         "Zwei Pfade: Manager (Vereinsführung, Transfers, Kader) und Spieler (Weg eines einzelnen Profis; Rivalries in FC 27). Managerkarriere ist in der Lite-Version nicht enthalten."
+        ],
+        [
+         "Clubs",
+         "Kooperativer Onlinewettbewerb im Team mit Freunden; Teil von The Grounds, nur auf PS5, Xbox Series X|S, PC und Switch 2."
+        ],
+        [
+         "Rush",
+         "Kurze Kleinfeld-Matches (1v1, 2v2, 3v3); laut EA drei Minuten lang, mit manuellem Schießen und voll unterstütztem Passspiel. Die Lite-Version bietet Rush 3v3 im Anstoß-Modus."
+        ],
+        [
+         "Saisons",
+         "Klassische 1v1-Onlinematches mit Aufstiegskampf durch die Ligen; Online-Saisons sind auch in der Lite-Version spielbar. Genaue Ligagrenzen sind nicht offiziell ausgewiesen."
+        ],
+        [
+         "The Grounds, Kickabout, 1v1",
+         "Ein sozialer Fußball-Treffpunkt zwischen Straßenfußball und Stadion für bis zu 100 Spieler; Kickabouts, 1v1s und Clubs; Virtual-Pro-Archetypen für Sturm, Mittelfeld, Abwehr und Torwart."
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Im Karrieremodus heben die offiziellen Patch-Notes einen überarbeiteten Transfermarkt mit TransferRoom-Integration hervor, aktive Vereinsgebote, Verhandlungen mit Leistungs- und Rückkaufklauseln, Dynamic OVR zur Abbildung von Form, Moral und Fitness sowie Manager Live Creator Challenges zum Erstellen und Teilen von Szenarien über ein Webportal."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Setze dir beim Karrierestart ein überschaubares Ziel: Fördere Jugendspieler oder forme einen ausgewogenen Kader für eine Saison. Versuche nicht, alles auf einmal umzukrempeln."
+      }
+     ]
+    },
+    {
+     "id": "temel-mekanikler",
+     "baslik": "Grundlagen in Verteidigung und Angriff",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Die taktische Meta ändert sich, grundlegende Fußballlogik bleibt. Diese Prinzipien gelten in jedem Teil der Reihe."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Verteidigung – Abstand:** Nicht unüberlegt auf den Ball stürzen. Bleibe am Gegenspieler, verzögere seinen Lauf und stelle Passwege zu; jeder verfehlte Tackling-Versuch reißt Lücken.",
+        "**Verteidigung – Spielerwahl:** Wähle den ballnächsten Verteidiger manuell an; ziehe herausgerückte Abwehrspieler zurück in die Kette. Gehe nie mit zwei Spielern gleichzeitig auf denselben Ballführenden.",
+        "**Angriff – Geduld:** Nicht jede Halbchance sofort überhastet abschließen. Räume schaffen, querlegen und aus vorbereiteter Position abziehen.",
+        "**Angriff – Bewegung:** Auch Spieler ohne Ball gestalten das Spiel. Läufe aus dem Mittelfeld hinter die Abwehrkette drängen den Gegner zurück und öffnen Passwinkel.",
+        "**Torschuss:** Kurzes Antippen steuert die Schusskraft; ein überpowerter Schuss fliegt fast immer drüber. Ein platzierter Flachschuss aus kurzer Distanz sitzt verlässlicher als ein Distanzkracher.",
+        "**Umschaltmoment nach Ballverlust:** In den ersten drei Sekunden entweder sofort nachsetzen (Gegenpressing) oder geschlossen zurückfallen; wer unentschlossen dazwischen steht, kassiert die meisten Gegentore."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Konzentriere dich pro Match auf eine einzige Verbesserung: in einer Partie nur auf den Verteidigungsabstand, in der nächsten auf die Schussdosierung. Wer an fünf Baustellen gleichzeitig arbeitet, festigt keine einzige."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Einstellungen und Controller-Setup",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Menübezeichnungen können sich leicht unterscheiden; folgende Empfehlungen gelten als solide Grundausrichtung."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Schwierigkeit:** Starte auf Amateur oder Halbprofi; EA empfiehlt dies für Neulinge. Fühlen sich Siege Routine an, gehe eine Stufe höher.",
+        "**Hilfen:** Belasse Pass- und Schusshilfen zunächst aktiviert. Mit wachsender Vertrautheit kannst du Hilfen reduzieren, um mehr Kontrolle über Flugbahnen zu gewinnen.",
+        "**Kamera:** Wähle eine Tele- oder Koop-Perspektive mit guter Spielfeldübersicht und behalte sie mindestens zehn Spiele bei; ständiges Wechseln stört die Eingewöhnung.",
+        "**Steuerung:** Teste die Tastenbelegung in Learn to Play oder Moments. Moments bringt dir die grundlegende Tastenbelegung spielerisch bei.",
+        "**Hilfen in Rush:** Laut EA nutzen Kleinfeldmodi standardmäßig manuelle Schüsse und voll unterstützte Pässe. Im Großfeldmatch wählst du dies selbst; manuelle Schüsse verlangen mehr Präzision.",
+        "**Controller-Gewohnheiten:** Halte die Sprinttaste nicht dauerhaft gedrückt; setze Sprints in kurzen Schüben am Ball ein. In der Abwehr sollten Zustellen (Jockey) und Tackling bequem erreichbar liegen (Tastenbezeichnungen variieren je nach Plattform, siehe Menü Steuerung).",
+        "**Stick-Drift:** Läuft ein Spieler von alleine los, liegt das meist am Analogstick; prüfe die Kalibrierung in den Systemeinstellungen der Plattform und reinige den Controller.",
+        "**Audio und Untertitel:** Türkisch ist auf der Kaufseite gelistet; die Kommentarsprache lässt sich in den Audioeinstellungen im Spiel wählen."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Teste neue Einstellungen stets in Learn to Play oder in einem Freundschaftsspiel. Mitten in einer Online-Ranglistenpartie an Reglern zu drehen, führt meist zu Frust."
+      }
+     ]
+    },
+    {
+     "id": "iki-hafta-plani",
+     "baslik": "Kostenloser Einstiegsplan: Die ersten zwei Wochen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Dieser Ablaufplan basiert auf EAs Einsteiger-Leitfaden und den Transfermarktregeln; die Zeiteinteilung ist ein Richtwert, um ohne den Einsatz von FC Points erfolgreich voranzukommen."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Tag 1: Die Grundlagen (Foundations)",
+         "metin": "Starte mit The Journey Begins und schließe die Folgeziele ab. In Moments lernst du die Steuerung; als Belohnung winken Spieler, Packs und FUT Coins."
+        },
+        {
+         "baslik": "Tag 2–3: Das Transfermarkt-Tor",
+         "metin": "Schließe First Team Dreams und danach Rising Through the Ranks ab. Laut EA schaltet letzteres den Transfermarkt und Champions frei; der volle Zugriff erfolgt innerhalb von 48 Stunden auf dem PC und 24 Stunden auf Konsolen. In der Wartezeit kannst du Spieler anbieten, aber weder suchen noch Sofortkauf nutzen."
+        },
+        {
+         "baslik": "Tag 3–5: Squad Battles",
+         "metin": "Tritt gegen KI-Teams auf Amateur oder Halbprofi an. Laut EA bringt jedes Match in FC 27 mehr FUT Coins und Saisonpunkte; Squad Battles belohnen nun zusätzlich mit Champions-Qualifikationspunkten."
+        },
+        {
+         "baslik": "Tag 5–7: Die ersten SBCs",
+         "metin": "Spieler- und Upgrade-SBCs sind übersichtlicher: Passende Vereinskarten werden direkt gelistet; der Gegenstandswert bemisst sich nach Gesamtwert (OVR), Seltenheit und Holografie-Status. Gib nur ungenutzte Karten ab, niemals aktive Stammspieler."
+        },
+        {
+         "baslik": "Tag 8–10: Erste Schritte in Rivals",
+         "metin": "Sobald die Startelf steht, wage dich in Division Rivals. Laut EA fallen die Belohnungsunterschiede zwischen den Ligen deutlicher aus, Bounties kehren häufiger zurück und alle Rivals-Packs sind zum Start handelbar."
+        },
+        {
+         "baslik": "Tag 11–14: Der Weg zu Champions",
+         "metin": "Für Champions sammelst du Champions-Qualifikationspunkte (CQP) über Rivals und Squad Battles. Die frühere Division-6-Pflicht entfällt in FC 27. Die Finals umfassen 15 Matches; beim Debüt geht es um Spielerfahrung und Spielrhythmus, nicht um Spitzenränge."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Wiederhole jede Woche denselben Ablauf: Objectives, Squad Battles, danach Rivals. Eine Stunde pro Tag reicht für solide Wochenbelohnungen; Konstanz schlägt gelegentliche Spielmarathons."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Nicht offiziell beziffert: die genauen Ligapunktschwellen in Rivals und die exakte CQP-Punktzahl für Champions; prüfe deinen aktuellen Punktestand im Champions-Reiter im Spiel."
+      }
+     ]
+    },
+    {
+     "id": "ultimate-team-ilerleme",
+     "baslik": "Ultimate Team: Rivals, Champions und Belohnungen",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Campaign Hub:** Belohnungspfade wie Objectives, SBCs, Evolutions und Live-Events sind zentral gebündelt; EA bezeichnet diesen Bereich als Campaign Hub.",
+        "**Division Rivals:** Laut EA wächst der Belohnungsabstand zwischen den Divisionen in FC 27; beispielsweise umfassen verbesserte Belohnungen in Division 1 95.000 FUT Coins, 84+- und 83+-Gold-Packs, ein Riesen-Gold-Pack und ein TOTW-Pack. Bounties erscheinen häufiger.",
+        "**Champions:** Das 15-Spiele-Finalformat bleibt bestehen. Champions-Qualifikationspunkte werden sowohl in Rivals als auch in Squad Battles erspielt; die Division-6-Voraussetzung entfällt. Höhere Ligen bringen schneller CQP, entscheiden aber nicht mehr allein über die Teilnahmeberechtigung.",
+        "**Web- und Companion-App:** Der Transfermarktzugang unterliegt dort separaten Kriterien; Details werden von EA nicht öffentlich beziffert, prüfe deinen Kontostatus direkt in der App.",
+        "**Packs:** Enthalten zufällige Spieler und Kosmetikobjekte. Durch Spielen verdiente Packs kosten kein echtes Geld; mit Echtgeld erworbene Packs unterliegen dem Zufallsprinzip."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Stürze dich nach Freischaltung des Transfermarkts nicht sofort ins Trading. Beobachte Marktpreise einige Tage, lerne Preisschwankungen kennen und starte mit kleinen Beträgen."
+      }
+     ]
+    },
+    {
+     "id": "kimya",
+     "baslik": "Das Chemiesystem: Wie Spieler harmonieren",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Die Chemie in Ultimate Team drückt aus, wie gut Spieler durch Verein, Liga und Nation miteinander harmonieren. Sie steigt, wenn Spieler desselben Klubs, derselben Liga oder Nation nebeneinander aufgestellt sind, und ein Spieler profitiert voll auf seiner Stammposition (genaue Werte können je nach Patch variieren, siehe Chemie-Übersicht im Spiel)."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Offizielle Änderung in FC 27:** ICONs erhalten auf ihrer Stammposition volle Chemie und geben jeder Liga einen Liga-Bonus von +1; ihr Nationsbeitrag sinkt von +2 auf +1.",
+        "**Heroes:** Erhalten auf ihrer Position weiterhin volle Chemie; ihr Ligabeitrag sinkt von +2 auf +1, der Nationsbeitrag bleibt bei +1. Hall of FUT-Objekte folgen denselben Regeln wie Heroes.",
+        "**Spezialkarten:** EA kündigte an, im Saisonverlauf zurückhaltender mit künstlichen Chemie-Boni für Kampagnenobjekte umzugehen; verlass dich nicht darauf, dass jede Spezialkarte Chemie-Lücken automatisch schließt.",
+        "**Praxistipp:** Baue zunächst einen festen Liga- oder Nationskern auf und fülle Lücken gezielt auf. Ein Team mit 82er-Wertung und voller Chemie spielt sich oft stabiler als ein bunt zusammengewürfelter 86er-Kader ohne Bindeglieder."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Wirf nach einem SBC-Abschluss oder Pack-Öffnen beim Umstellen des Kaders zuerst einen Blick auf die Chemieanzeige. Ein positionsfremder Spieler schwächt die Teamchemie und macht Wertungsvorteile zunichte."
+      }
+     ]
+    },
+    {
+     "id": "transfer-pazari",
+     "baslik": "Grundlagen des Transfermarkts",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Der Transfermarkt in Ultimate Team ist ein direkter Spielermarkt, auf dem Karten gegen FUT Coins gehandelt werden. Laut EA sind zum Verkaufsstart alle Pack-Belohnungen in Rivals handelbar, und ein größerer Anteil der Prämien wird direkt in Münzen und handelbaren Packs ausgeschüttet, sodass Erspieltes gezielt auf dem Markt eingesetzt werden kann."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Freischaltung:** Bei neuen Konten öffnet sich der Markt nach Abschluss der drei Foundations-Zielgruppen; voller Zugriff erfolgt binnen 48 Stunden auf dem PC und 24 Stunden auf Konsolen (EA Hilfe).",
+        "**Geduld:** Nicht der Eiligste macht das beste Geschäft, sondern wer den Markt beobachtet. Prüfe vor dem Kauf einer scheinbar günstigen Karte stets die Vergleichsangebote.",
+        "**Verkaufsgebühr:** Bei Verkäufen behält das Spiel eine Transaktionsgebühr ein; plane diese Marge bei Verkäufen mit ein.",
+        "**Preisbeobachtung:** Verfolge Wunschkarten über einige Tage. Erscheint ein neues Event oder eine beliebte SBC, geraten Marktpreise schnell in Bewegung.",
+        "**Ziel:** Stärkung des Kaders, nicht Spekulation. Spare Münzen gezielt für konkrete Schlüsselspieler; planloses Kaufen und Verkaufen verbrennt Zeit und Coins."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Nutze ausschließlich den offiziellen spielinternen Markt. Der Kauf oder Verkauf von Münzen über Drittanbieter, automatisierte Trading-Bots und Kontoverkäufe führen zur dauerhaften Kontosperre; halte davon strikt Abstand."
+      }
+     ]
+    },
+    {
+     "id": "baslangic-hatalari",
+     "baslik": "Typische Anfängerfehler",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Sofort gegen menschliche Gegner antreten.** EA rät, zunächst gegen die KI zu spielen; ohne gefestigte Steuerung in Onlinematches zu starten führt meist zu Frust.",
+        "**Foundations-Ziele auslassen.** Diese Ziele vermitteln Wissen und Belohnungen; wer sie ignoriert, verzögert auch die Transfermarktfreigabe.",
+        "**Erspielte Münzen aus den ersten Packs verprassen.** Setze Münzen und Spieler zielgerichtet ein; planlose Sofortkäufe schwächen den Kaderaufbau.",
+        "**Ausschließlich auf OVR-Gesamtwerte schauen.** Positionstreue und Chemie machen einen leicht schwächer bewerteten Spieler oft deutlich wertvoller.",
+        "**Nach Niederlagen frustriert die Einstellungen verstellen.** Gönne dir eine kurze Pause und analysiere das Spielgeschehen in Ruhe, um echte Schwachstellen zu erkennen."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Analysiere Niederlagen mit kühlem Kopf: Wie fiel das Gegentor, wo stand die Abwehr offen? Eine einzige konkrete Erkenntnis hilft im nächsten Match mehr als jede Wutreaktion."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik-ve-harcama",
+     "baslik": "Kontosicherheit und Ausgabenwarnung",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "EAs Verkaufsseite weist darauf hin, dass das Spiel optionale In-Game-Käufe virtueller Währung für zufällig zusammengestellte Objekte enthält; die Alterseinstufung der ESRB führt den Hinweis \"enthält Zufallsobjekte\". Was in mit FC Points gekauften Packs steckt, ist vorab nicht garantiert; setze dir daher ein klares Budget."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Lege ein monatliches Ausgabenlimit fest und halte dich strikt daran. Verlusten mit weiterem Geld hinterherzujagen ist der häufigste Fehler.",
+        "Aktiviere die Zwei-Schritt-Verifizierung für dein EA-Konto, verwende Passwörter nicht mehrfach und hinterlege Zahlungsdaten nicht dauerhaft ungesichert.",
+        "Aktiviere für Kinder die Jugendschutzeinstellungen der Konsole und fordere eine Freigabe für jeden FC-Points-Kauf an.",
+        "Websites und Links, die kostenlose FC Points oder Münzen versprechen, sind Phishing-Fallen zum Diebstahl deiner Kontodaten; gib Anmeldedaten nur auf offiziellen EA-Seiten ein."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Der Kauf oder Verkauf von Münzen über Drittseiten, der Handel mit Spielkonten, Trading-Bots, Cheats, bezahltes Rang-Boosting und Wetten auf Spielergebnisse sind streng verboten. Es droht der dauerhafte Entzug des Spielkontos; meide solche Angebote ausnahmslos."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Häufig gestellte Fragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Ist FC 27 kostenlos?",
+         "c": "Das Hauptspiel ist kostenpflichtig. Es gibt eine kostenlose, im Funktionsumfang reduzierte FC 27 Lite-Version; diese enthält weder Ultimate Team noch die Managerkarriere."
+        },
+        {
+         "s": "Gibt es eine türkische Sprachausgabe?",
+         "c": "Türkisch ist in der Sprachliste auf EAs Shopseite aufgeführt. Die Kommentarsprachen lassen sich in den Audioeinstellungen im Spiel prüfen."
+        },
+        {
+         "s": "Muss man in Ultimate Team Geld ausgeben?",
+         "c": "Nein. Packs, Münzen und Spieler lassen sich durch Matches und den Abschluss von Zielen erspielen; der Geldeinsatz ist völlig optional."
+        },
+        {
+         "s": "Wie schaltet man den Transfermarkt frei?",
+         "c": "Bei neuen Konten schließt man die Zielreihen The Journey Begins, First Team Dreams und Rising Through the Ranks ab. Der volle Zugriff öffnet sich binnen 48 Stunden auf PC und 24 Stunden auf Konsolen."
+        },
+        {
+         "s": "Gibt es Crossplay und plattformübergreifenden Fortschritt?",
+         "c": "Crossplay funktioniert zwischen PC, PlayStation und Xbox nach Konsolengenerationen getrennt; Switch ist ausgeschlossen. Cross-Progression existiert nur in Ultimate Team innerhalb derselben Konsolenfamilie."
+        },
+        {
+         "s": "Auf welchen Plattformen gibt es The Grounds?",
+         "c": "Auf PS5, Xbox Series X|S, PC und Switch 2. Auf PS4, Xbox One oder der ursprünglichen Switch ist The Grounds nicht verfügbar."
+        },
+        {
+         "s": "Was hat sich im Karrieremodus geändert?",
+         "c": "Ein überarbeiteter Transfermarkt mit TransferRoom, Dynamic OVR, neue Vertragsklauseln bei Verhandlungen und Manager Live Creator Challenges gehören zu den Neuerungen."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "nl": {
+   "baslik": "EA SPORTS FC 27-gids – Handboek voor beginners 2026",
+   "ozet": "Een beginnersgids voor EA SPORTS FC 27: edities, platforms, gratis instappen in Ultimate Team, Carrière, instellingen en uitgavenwaarschuwingen.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Voetbalsimulatie"
+    },
+    {
+     "ad": "Platform",
+     "deger": "EA app, Steam, Epic Games Store, PS4, PS5, Xbox One, Xbox Series X|S, Switch, Switch 2"
+    },
+    {
+     "ad": "Verdienmodel",
+     "deger": "Betaalde hoofdgame; gratis, beperkte FC 27 Lite; optionele FC Points"
+    },
+    {
+     "ad": "Huidige versie",
+     "deger": "FC 27 (25 september 2026)"
+    },
+    {
+     "ad": "Turkse ondersteuning",
+     "deger": "Ja, vermeld als taal op EA's aankooppagina"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "oyun-nedir",
+     "baslik": "Wat EA SPORTS FC 27 is en waar het staat in 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "EA SPORTS FC is een jaarlijkse voetbalsimulatiereeks. De huidige editie is **EA SPORTS FC 27**, uitgebracht op 25 september 2026. Kopers van de Ultimate en Ultimate Plus edities kregen tot zeven dagen vroegtijdige toegang. Het bevat Ultimate Team om je eigen selectie op te bouwen, Carrière om een club te leiden of één speler te ontwikkelen, de nieuwe sociale modus The Grounds en klassieke vriendschappelijke wedstrijden."
+      },
+      {
+       "tip": "p",
+       "metin": "De hoofdgame is betaald, maar EA biedt ook een gratis, afgeslankte **FC 27 Lite**-versie aan. Deze bevat Aftrap (Kick-Off), Learn to Play, Online Vriendschappelijk en Online Seizoenen; Ultimate Team, Managercarrière en The Grounds ontbreken, en een permanente internetverbinding is vereist. Een uitstekende manier om de gameplay te ervaren voor aanschaf."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Deze gids behandelt blijvende spelprincipes; spelersbeoordelingen, SBC's en live-evenementen wijzigen wekelijks. Raadpleeg voor de actuele stand van zaken EA's officiële kanalen."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Voor je begint: platform, editie en systeemvereisten",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "FC 27 is officieel uitgebracht op de EA app, Steam, Epic Games Store, PS4, PS5, Xbox One, Xbox Series X|S, Nintendo Switch en Nintendo Switch 2. The Grounds (inclusief Clubs) is uitsluitend beschikbaar op PS5, Xbox Series X|S, pc en Switch 2. Turks staat tevens vermeld in de talenlijst op de aankooppagina van EA."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Pc minimaal:** 64-bits Windows 10 of 11, Ryzen 5 1600 of Core i5 6600K, 8 GB dual-channel DDR4 RAM, Radeon RX 570 of GeForce GTX 1050 Ti, DirectX 12, 100 GB vrije schijfruimte.",
+        "**Pc aanbevolen:** Ryzen 7 2700X of Core i7 6700, 12 GB RAM, Radeon RX 5600 XT of GeForce GTX 1660, 100 GB ssd-opslagruimte.",
+        "**Account:** Ultimate Team en online spelmodi vereisen een EA-account en een actieve internetverbinding.",
+        "**Cross-play:** Volgens EA Help aanwezig tussen pc, PlayStation en Xbox en standaard actief bij eerste lancering; spelers worden ingedeeld per generatie: PS5, Xbox Series X|S en pc samen, PS4 en Xbox One afzonderlijk. Switch en Switch 2 hebben geen cross-play.",
+        "**Cross-progressie:** Volgens EA Help uitsluitend van toepassing op Ultimate Team en binnen dezelfde platformfamilie: van PS4 naar PS5 of Xbox One naar Xbox Series X|S, niet van PlayStation naar Xbox.",
+        "**Prijs:** De EA-winkel toont prijzen per regio; een officiële vaste prijs in Turkse lira is niet apart gepubliceerd. Bekijk het actuele bedrag op de pagina van jouw winkel."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Probeer eerst het gratis FC 27 Lite; bevalt de kern van het voetbalspel, koop dan de volledige game. Wie Carrière of Ultimate Team zoekt, heeft aan Lite niet voldoende."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Je eerste stappen: beginnen met Ultimate Team",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Ultimate Team start gratis: je stelt een team samen uit starterspelers en verdient pakketten, munten en betere spelers door wedstrijden te spelen. EA's beginnerspagina adviseert deze volgorde."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Kies je starterspakket",
+         "metin": "Denk hier niet te lang over na; kies bij voorkeur een competitie die je aanspreekt. Het starterspakket vormt slechts de eerste stap."
+        },
+        {
+         "baslik": "Voltooi de Foundations-doelstellingen",
+         "metin": "De doelstellingenreeks loopt als volgt: The Journey Begins, First Team Dreams, Rising Through the Ranks, Market Madness, Chasing Greatness en Total Football. Dit leert je de spelregels en beloont met spelers, pakketten en FUT Coins."
+        },
+        {
+         "baslik": "Speel tegen de computer (AI)",
+         "metin": "Begin met solomodi tegen de computer zoals Moments en Squad Battles. EA raadt beginners aan de eerste dagen Squad Battles op Amateur of Semi-Pro te spelen met het basisteam."
+        },
+        {
+         "baslik": "Ontgrendel de Transfermarkt",
+         "metin": "Nieuwe spelers voltooien achtereenvolgens The Journey Begins, First Team Dreams en Rising Through the Ranks; de laatste ontgrendelt toegang tot de Transfermarkt en Champions."
+        },
+        {
+         "baslik": "Claim na elke match je beloningen",
+         "metin": "Laat verdiende pakketten, munten en Season Pass-XP niet liggen; kleine stappen versterken je selectie gestaag."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Elke dag een beetje vooruitgang boeken is ruim voldoende. EA omschrijft de beginperiode zelf als een fase die aandacht vraagt, maar die door regelmatig spelen snel soepeler verloopt."
+      }
+     ]
+    },
+    {
+     "id": "modlar-ve-kariyer",
+     "baslik": "Spelmodi en een introductie in Carrière",
+     "bloklar": [
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Modus",
+        "Functie / Opmerkingen"
+       ],
+       "satirlar": [
+        [
+         "Ultimate Team",
+         "Voor liefhebbers van het samenstellen en uitbouwen van een droomelftal; gratis te starten met verdienbare packs en munten. Thuisbasis van Rivals, Champions, Squad Battles, SBC's en Objectives."
+        ],
+        [
+         "Carrière",
+         "Twee trajecten: Manager (clubbeleid, transfers, opstelling) en Speler (de loopbaan van één prof; Rivalries in FC 27). Managercarrière ontbreekt in de Lite-versie."
+        ],
+        [
+         "Clubs",
+         "Coöperatieve online competitie samen met vrienden; onderdeel van The Grounds, alleen op PS5, Xbox Series X|S, pc en Switch 2."
+        ],
+        [
+         "Rush",
+         "Dynamische partijtjes op klein veld (1v1, 2v2, 3v3); volgens EA drie minuten durend, met handmatig schieten en volledig geassisteerd passen. De Lite-versie bevat Rush 3v3 binnen Aftrap."
+        ],
+        [
+         "Seizoenen",
+         "Klassieke online 1v1-wedstrijden met promotiedruk door divisies; Online Seizoenen zit tevens in de Lite-versie. De exacte divisiegrenzen zijn niet officieel gepubliceerd."
+        ],
+        [
+         "The Grounds, Kickabout, 1v1",
+         "Een sociale ontmoetingsplek tussen straatvoetbal en stadion tot 100 spelers; Kickabouts, 1v1-duels en Clubs; Virtual Pro-archetypen voor aanval, middenveld, verdediging en doelman."
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Aan de Carrière-kant lichten de officiële toelichtingen een vernieuwde transfermarkt uit via TransferRoom, actieve clubbiedingen, onderhandelingen met prestatie- en terugkoopclausules, Dynamic OVR dat vorm, moraal en fitheid weerspiegelt, en Manager Live Creator Challenges om scenario's te bouwen en delen via een webportaal."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Begin je Carrière met een behapbaar doel: laat jeugdspelers doorbreken of formeer een evenwichtige selectie voor één seizoen. Probeer niet direct alles tegelijk te veranderen."
+      }
+     ]
+    },
+    {
+     "id": "temel-mekanikler",
+     "baslik": "Basisprincipes bij verdedigen en aanvallen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Tactische trends wisselen, maar gezonde voetballogica blijft hetzelfde. Onderstaande principes gelden in elke editie."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Verdedigen – afstand bewaren:** Duik niet blindelings op de bal. Blijf bij de tegenstander, vertraag zijn opmars en scherm de passlijn af; elke mislukte tackle levert direct gevaar op.",
+        "**Verdedigen – spelerkeuze:** Selecteer de speler die het dichtst bij de bal staat handmatig; trek verdedigers die uit positie lopen terug in de lijn. Ga nooit met twee man tegelijk op dezelfde baldrager af.",
+        "**Aanvallen – geduld:** Schiet niet bij de eerste de beste halve kans. Maak ruimte vrij, speel breed en rond af vanuit een goed voorbereide positie.",
+        "**Aanvallen – beweging:** Spelers zonder bal bepalen het spelverloop. Diepteloopacties vanuit het middenveld dringen de vijandelijke verdediging terug en creëren afspeelmogelijkheden.",
+        "**Afwerken:** Doseer de schietknop kort en beheerst; een overhaast volgeschoten bal vliegt vrijwel altijd over het doel. Een geplaatst schot van dichtbij levert meer doelpunten op dan een wilde afstandsknal.",
+        "**Omschakeling na balverlies:** Kies in de eerste drie seconden direct voor felle druk (counter-press) of sluit gedisciplineerd achterin aan; twijfel daartussen leidt tot de meeste tegengoals."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Verbeter in één wedstrijd slechts één aspect tegelijk: de ene wedstrijd alleen verdedigingsafstand, de volgende alleen schotkracht. Vijf dingen tegelijk proberen levert nergens resultaat op."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Instellingen en controllerconfiguratie",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Menunamen kunnen per versie enigszins verschillen; onderstaande suggesties bieden een betrouwbare basis."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Moeilijkheidsgraad:** Begin op Amateur of Semi-Pro; EA adviseert dit uitdrukkelijk voor beginners. Zodra zeges vlot vallen, schakel je een trede hoger.",
+        "**Hulpmiddelen:** Laat pass- en schothulp aanvankelijk ingeschakeld. Zodra je de besturing beheerst, kun je hulpmiddelen afbouwen voor meer persoonlijke precisie.",
+        "**Camera:** Kies een cameraperspectief (zoals Tele Broadcast of Co-op) dat goed overzicht biedt en houd dit minstens tien matches vast; constant wisselen verstoort je gewenning.",
+        "**Besturing:** Probeer de knoppenindeling uit in Learn to Play of Moments. Moments leert je stapsgewijs de basisbediening.",
+        "**Hulp in Rush:** Volgens EA gebruiken de kleine spelmodi standaard handmatig schieten en geassisteerd passen. In een standaardwedstrijd kies je dit zelf; handmatig richten vraagt meer oefening.",
+        "**Gewoontes met de controller:** Houd de sprintknop niet constant ingedrukt; sprint in korte versnellingen met de bal. Zorg dat meelopen (Jockey) en tackelen onder handbereik liggen (knoppen verschillen per platform, zie het Besturingsmenu).",
+        "**Stickdrift:** Dwaalt een speler uit zichzelf af, dan ligt de oorzaak meestal bij de analoge stick; controleer de kalibratie in de instellingen van je platform en maak de controller schoon.",
+        "**Geluid en ondertitels:** Turks staat in de talenlijst op de aankooppagina; de gewenste commentaartaal stel je in via de audio-instellingen in de game."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Test gewijzigde instellingen eerst in Learn to Play of in een oefenduel. Midden in een online competitiewedstrijd aan instellingen sleutelen werkt frustrerend."
+      }
+     ]
+    },
+    {
+     "id": "iki-hafta-plani",
+     "baslik": "Gratis startplan: de eerste twee weken",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Onderstaand schema volgt de volgorde van EA's beginnersgids en de transfermarktregels; de indeling in dagen is een richtlijn om vlot te groeien zonder ooit FC Points te besteden."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Dag 1: De basis (Foundations)",
+         "metin": "Begin met The Journey Begins en voltooi de vervolgdoelen. In Moments leer je de besturing; beloningen omvatten spelers, packs en FUT Coins."
+        },
+        {
+         "baslik": "Dag 2–3: De Transfermarkt-toegang",
+         "metin": "Voltooi First Team Dreams en daarna Rising Through the Ranks. Volgens EA ontgrendelt dit de Transfermarkt en Champions; volledige toegang volgt binnen 48 uur op pc en 24 uur op consoles. Tijdens de wachttijd kun je spelers aanbieden, maar niet zoeken of direct kopen."
+        },
+        {
+         "baslik": "Dag 3–5: Squad Battles",
+         "metin": "Neem het op tegen AI-selecties op Amateur of Semi-Pro. EA stelt dat elke match in FC 27 meer FUT Coins en Seizoenspunten oplevert; Squad Battles leveren nu tevens Champions-kwalificatiepunten op."
+        },
+        {
+         "baslik": "Dag 5–7: Je eerste SBC's",
+         "metin": "Spelers- en Upgrade-SBC's werken overzichtelijker: geschikte clubkaarten worden direct getoond; kaartwaarde hangt af van OVR, zeldzaamheid en Holographic-status. Lever uitsluitend reservespelers in, nooit je vaste basiselftal."
+        },
+        {
+         "baslik": "Dag 8–10: Eerste stappen in Rivals",
+         "metin": "Zodra je basisteam staat, stap je over naar Division Rivals. Volgens EA zijn beloningsverschillen tussen divisies groter, keren Bounties frequenter terug en zijn alle verdiende Rivals-pakketten bij lancering verhandelbaar."
+        },
+        {
+         "baslik": "Dag 11–14: De weg naar Champions",
+         "metin": "Voor Champions verzamel je Champions-kwalificatiepunten (CQP) via Rivals en Squad Battles. De eerdere Divisie 6-eis is in FC 27 vervallen. De Finals tellen 15 duels; richt je bij je debuut op ritme en ervaring, niet op topposities."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Herhaal wekelijks hetzelfde vaste stramien: Doelstellingen, Squad Battles en vervolgens Rivals. Eén uur per dag is voldoende voor stevige weekbeloningen; rustige regelmaat werkt beter dan af en toe een uitputtende speelsessie."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Niet officieel gepubliceerd: de exacte divisiegrenzen in Rivals en het benodigde aantal CQP-punten voor Champions; bekijk je actuele saldo in het Champions-menu in de game."
+      }
+     ]
+    },
+    {
+     "id": "ultimate-team-ilerleme",
+     "baslik": "Ultimate Team: Rivals, Champions en beloningen",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Campaign Hub:** Beloningstrajecten zoals Objectives, SBC's, Evolutions en live-events zijn overzichtelijk samengebracht; EA duidt deze centrale plek aan als de Campaign Hub.",
+        "**Division Rivals:** Volgens EA is het beloningsverschil tussen divisies toegenomen in FC 27; verbeterde beloningen in Divisie 1 bevatten bijvoorbeeld 95.000 FUT Coins, 84+- en 83+-goudpakketten, een Giant Gold Pack en een TOTW-pakket. Bounties verschijnen vaker.",
+        "**Champions:** Het format van 15 finalematches blijft van kracht. Champions-kwalificatiepunten worden verdiend in zowel Rivals als Squad Battles; de eis van Divisie 6 is geschrapt. Een hogere divisie levert sneller CQP op, maar bepaalt niet langer uitsluitend of je mag deelnemen.",
+        "**Web- en Companion-apps:** Toegang tot de Transfermarkt via de app volgt afzonderlijke criteria; details zijn niet officieel vrijgegeven, controleer je status rechtstreeks in de app.",
+        "**Pakketten:** Bevatten willekeurige spelers en cosmetische items. Pakketten die je vrijspeelt via gameplay zijn gratis te openen; pakketten die met echt geld worden gekocht zijn gebaseerd op toeval."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Begin na het ontgrendelen van de Transfermarkt niet direct roekeloos te handelen. Volg prijzen eerst enkele dagen, observeer schommelingen en start met bescheiden bedragen."
+      }
+     ]
+    },
+    {
+     "id": "kimya",
+     "baslik": "Het chemiesysteem: hoe spelers linken",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Chemie in Ultimate Team geeft aan hoe goed spelers binnen je selectie op elkaar aansluiten via club, competitie en land. Chemie stijgt wanneer spelers van dezelfde club, competitie of nationaliteit naast elkaar staan, mits een speler op zijn eigen vaste positie staat (precieze getallen kunnen per patch wijzigen, zie het chemieoverzicht in de game)."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Officiële verandering in FC 27:** ICONs krijgen op hun eigen positie volledige chemie en geven elke competitie een linkbonus van +1; hun bijdrage aan nationaliteit daalt van +2 naar +1.",
+        "**Heroes:** Behouden volledige chemie op positie; hun competitiebijdrage daalt van +2 naar +1, terwijl de nationale bijdrage +1 blijft. Hall of FUT-items volgen dezelfde regels als Heroes.",
+        "**Speciale kaarten:** EA heeft aangegeven selectiever te zijn met extra chemiebonussen op campagne- en themakaarten; ga er niet zomaar van uit dat elke speciale kaart chemieproblemen oplost.",
+        "**Praktische regel:** Kies eerst een vaste kern uit één competitie of land en vul de open plekken gericht in. Een selectie met een 82-beoordeling en maximale chemie speelt doorgaans evenwichtiger dan een onsamenhangend 86-elftal zonder chemie."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Bekijk na het afronden van een SBC of het openen van een pack altijd eerst het chemiescherm. Een speler buiten positie opstellen verlaagt de teamchemie en doet het voordeel van een hogere rating teniet."
+      }
+     ]
+    },
+    {
+     "id": "transfer-pazari",
+     "baslik": "Basisprincipes van de Transfermarkt",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "De Transfermarkt in Ultimate Team is een handelsplatform tussen spelers onderling waar kaarten worden verhandeld met FUT Coins. Volgens EA zijn alle pakketbeloningen in Rivals bij lancering verhandelbaar en wordt een groter deel van de prijzen rechtstreeks in munten en verhandelbare packs uitgekeerd, zodat je opbrengsten direct kunt inzetten op de markt."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Toegang:** Bij een nieuw account opent de markt na het voltooien van de drie Foundations-doelgroepen; volledige toegang volgt binnen 48 uur op pc en 24 uur op consoles (EA Help).",
+        "**Geduld:** De beste koper handelt niet haastig maar wacht op het juiste moment. Vergelijk voor aankoop van een ogenschijnlijk goedkope kaart altijd alternatieve aanbiedingen.",
+        "**Verkoopkosten:** Bij verkoop op de markt wordt een inhouding toegepast; calculeer deze marge vooraf in.",
+        "**Prijsmonitoring:** Volg gewenste kaarten over meerdere dagen. Bij een nieuw evenement of gewilde SBC kan de markt snel in beweging komen.",
+        "**Doel:** Je elftal versterken, niet speculeren. Spaar munten gericht voor concrete basisspelers; lukraak handelen kost tijd en munten."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Gebruik uitsluitend de officiële markt in de game. Het kopen of verkopen van munten via externe partijen, geautomatiseerde handelsbots en het verhandelen van accounts leidt tot permanente sluiting van je account; vermijd dit te allen tijde."
+      }
+     ]
+    },
+    {
+     "id": "baslangic-hatalari",
+     "baslik": "Veelgemaakte beginnersfouten",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Direct online tegen menselijke tegenstanders spelen.** EA raadt aan eerst tegen de computer te oefenen; zonder vaste grip op je team online duels spelen leidt tot frustratie.",
+        "**De Foundations-doelen overslaan.** Deze doelen leveren essentiële kennis en beloningen op; negeer je ze, dan stel je tevens toegang tot de Transfermarkt uit.",
+        "**Alle munten uit je eerste pakketten meteen opmaken.** Koppel uitgaven aan een helder teamdoel; lukrake aankopen verzwakken je opbouw.",
+        "**Uitsluitend naar algemene spelersratings kijken.** De juiste positie en sterke chemie maken een iets lager gewaardeerde speler vaak veel effectiever.",
+        "**Na een nederlaag gefrustreerd alle instellingen omgooien.** Neem even afstand en analyseer rustig één match om de echte oorzaak te achterhalen."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Analyseer een verloren wedstrijd met een heldere blik: hoe viel het tegendoelpunt, waar ontstond de opening? Eén concreet inzicht helpt je in de volgende match veel verder."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik-ve-harcama",
+     "baslik": "Accountbeveiliging en uitgavenwaarschuwing",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "EA's aankooppagina vermeldt dat de game optionele in-game aankopen van virtuele valuta bevat voor willekeurige voorwerpen; leeftijdsclassificatie ESRB vermeldt \"bevat willekeurige voorwerpen\". Wat je aantreft in met FC Points gekochte packs staat vooraf niet vast; stel daarom vooraf een budget vast."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Stel een maandelijks uitgavenlimiet in en houd je daar strikt aan. Extra geld inzetten om eerdere verliezen goed te maken is de meest voorkomende valkuil.",
+        "Activeer tweestapsverificatie op je EA-account, hergebruik je wachtwoord nergens anders en sla betaalmethoden niet onbeveiligd op.",
+        "Schakel voor minderjarigen het ouderlijk toezicht van je platform in en vereis goedkeuring voor uitgaven aan FC Points.",
+        "Websites of links die gratis FC Points of munten beloven zijn pogingen tot phishing om accounts te kapen; vul inloggegevens uitsluitend in op officiële EA-pagina's."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Het via externe kanalen kopen of verkopen van munten, het verhandelen van accounts, handelsbots, cheats, betaald rang-boosten en gokken op wedstrijdresultaten zijn ten strengste verboden en riskant. Je account kan permanent worden gesloten; blijf ver weg van al deze praktijken."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Veelgestelde vragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is FC 27 gratis?",
+         "c": "De hoofdgame is betaald. Er bestaat een gratis, functioneel beperkte FC 27 Lite-versie; deze bevat geen Ultimate Team of Managercarrière."
+        },
+        {
+         "s": "Is er Turkse ondersteuning?",
+         "c": "Turks staat in de talenlijst op de aankooppagina van EA. De beschikbare commentaartalen vind je in de in-game audio-instellingen."
+        },
+        {
+         "s": "Moet ik geld uitgeven in Ultimate Team?",
+         "c": "Nee. Je verdient pakketten, munten en spelers door matches te spelen en doelstellingen te voltooien; echt geld uitgeven is geheel optioneel."
+        },
+        {
+         "s": "Hoe krijg ik toegang tot de Transfermarkt?",
+         "c": "Voltooi op een nieuw account achtereenvolgens The Journey Begins, First Team Dreams en Rising Through the Ranks. Volledige toegang volgt binnen 48 uur op pc en 24 uur op consoles."
+        },
+        {
+         "s": "Zijn er cross-play en cross-progressie?",
+         "c": "Cross-play werkt tussen pc, PlayStation en Xbox per generatie; Switch valt hierbuiten. Cross-progressie geldt alleen in Ultimate Team binnen dezelfde platformfamilie."
+        },
+        {
+         "s": "Op welke platforms is The Grounds beschikbaar?",
+         "c": "Op PS5, Xbox Series X|S, pc en Switch 2. Het ontbreekt op PS4, Xbox One en de originele Switch."
+        },
+        {
+         "s": "Wat is er veranderd in de Carrièremodus?",
+         "c": "Onder meer een vernieuwde transfermarkt via TransferRoom, Dynamic OVR, nieuwe clausules in contractonderhandelingen en Manager Live Creator Challenges."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "zh": {
+   "baslik": "EA SPORTS FC 27 指南 - 新手手册 2026",
+   "ozet": "《EA SPORTS FC 27》新手指南：版本区别、对应平台、零氪开启 Ultimate Team、职业生涯模式、最佳设置与理性消费警示。",
+   "kunye": [
+    {
+     "ad": "类型",
+     "deger": "足球模拟游戏"
+    },
+    {
+     "ad": "平台",
+     "deger": "EA app、Steam、Epic Games Store、PS4、PS5、Xbox One、Xbox Series X|S、Switch、Switch 2"
+    },
+    {
+     "ad": "收费模式",
+     "deger": "本体买断制付费；提供免费精简版 FC 27 Lite；FC Points 绿点为可选消费"
+    },
+    {
+     "ad": "当前版本",
+     "deger": "FC 27（2026年9月25日）"
+    },
+    {
+     "ad": "土耳其语支持",
+     "deger": "支持，已列入 EA 官方购买页面的支持语言表中"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "oyun-nedir",
+     "baslik": "走近 EA SPORTS FC 27：2026 年最新全貌",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "EA SPORTS FC 是经典的年度足球模拟游戏系列。最新力作 **EA SPORTS FC 27** 于 2026 年 9 月 25 日正式发售。预购终极版（Ultimate）与终极加臻版（Ultimate Plus）的玩家享有最多提前 7 天抢先体验特权。本作包含供玩家打造梦幻阵容的 Ultimate Team、化身俱乐部主帅或单体球员成长的职业生涯模式（Career）、全新社交足球天地 The Grounds，以及经典开赛对决。"
+      },
+      {
+       "tip": "p",
+       "metin": "游戏本体虽为付费买断，但 EA 亦同步提供了免费精简版 **FC 27 Lite**。Lite 版包含经典开赛（Kick-Off）、新手教学（Learn to Play）、在线友谊赛与在线赛季（Online Seasons）；但不包含 Ultimate Team、经理生涯以及 The Grounds 模式，且需要全程联网。这是购买前体验真实手感与引擎特性的绝佳试玩窗口。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "本指南聚焦于经久通用的技战术准则；球员卡面数值、阵容组建挑战（SBC）与运营活动每周都在动态更新。最新一手动态请参阅 EA 官方公告页面。"
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "开始之前：平台、版本与硬件配置",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "FC 27 官方发售平台涵盖 EA app、Steam、Epic Games Store、PS4、PS5、Xbox One、Xbox Series X|S、Nintendo Switch 以及 Nintendo Switch 2。全新社交模式 The Grounds（含俱乐部模式 Clubs）仅登陆 PS5、Xbox Series X|S、PC 与 Switch 2。EA 购买页面的语言支持列表中亦包含土耳其语。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**PC 最低配置：** 64 位 Windows 10 或 11，Ryzen 5 1600 或 Core i5 6600K，8 GB 双通道 DDR4 内存，Radeon RX 570 或 GeForce GTX 1050 Ti，DirectX 12，100 GB 可用硬盘空间。",
+        "**PC 推荐配置：** Ryzen 7 2700X 或 Core i7 6700，12 GB 内存，Radeon RX 5600 XT 或 GeForce GTX 1660，100 GB 固态硬盘（SSD）空间。",
+        "**账号要求：** 游玩 Ultimate Team 及所有线上对战模式均需注册 EA 账号并保持网络连接。",
+        "**跨平台联机（Cross-play）：** 据 EA Help 官方说明，支持 PC、PlayStation 与 Xbox 之间的跨平台互联，并在首次启动时默认开启；联机按主机世代分组：PS5、Xbox Series X|S 与 PC 互通，PS4 与 Xbox One 互相匹配。Switch 与 Switch 2 均不支持跨平台联机。",
+        "**跨平台进度互通（Cross-progression）：** 据 EA Help 说明，进度互通仅限 Ultimate Team 模式且仅在同一主机生态内生效：例如 PS4 与 PS5 互通、Xbox One 与 Xbox Series X|S 互通，跨品牌主机（如 PlayStation 与 Xbox 之间）数据不互通。",
+        "**游戏售价：** EA 商店根据玩家所在区域结算展示价格；官方未统一定价土耳其里拉，请参阅本地商店页面的实时结算金额。"
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "建议先下载免费的 FC 27 Lite 试玩体验；如果你喜欢基础绿茵操控手感，再决定购入完整版。若一心想玩职业生涯或 Ultimate Team，则必须购买完整版。"
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "入门初战：零氪步入 Ultimate Team",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Ultimate Team 完全支持免费游玩：你将利用初始系统赠送的球员起步，通过日常踢球赢取卡包、金币与球员奖励。EA 新手指南推荐按照以下进阶顺序开展："
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "选定新手启动卡包",
+         "metin": "无需纠结初始国家与联赛，挑选你个人最熟悉或喜爱的联赛即可。初始包仅是建队的垫脚石。"
+        },
+        {
+         "baslik": "完成基础目标任务（Foundations）",
+         "metin": "任务线涵盖：The Journey Begins、First Team Dreams、Rising Through the Ranks、Market Madness、Chasing Greatness 与 Total Football。在熟悉操作机制的同时，可稳赚初始球员、卡包及 FUT 金币。"
+        },
+        {
+         "baslik": "先从人机对战打磨起步",
+         "metin": "先游玩针对电脑 AI 的 Moments 精英时刻与 Squad Battles（禁区争霸/全家桶模式）。EA 建议开荒前几天使用初始阵容在业余或半职业难度下进行 Squad Battles。"
+        },
+        {
+         "baslik": "解锁转会市场（Transfer Market）",
+         "metin": "新手需依序完成 The Journey Begins、First Team Dreams 与 Rising Through the Ranks 目标组；完成最后一组即可解锁转会市场及周赛 Champions 资格。"
+        },
+        {
+         "baslik": "每场赛后及时领取奖励",
+         "metin": "切勿遗忘已达成的卡包、金币与赛季通行证经验奖励；积少成多的资产积累能让阵容稳步提升。"
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "每天稳定积累一点点足矣。EA 官方指出，起步期需要更多专注磨合，但只要保持稳定对局与技术沉淀，后续养成会越来越顺畅。"
+      }
+     ]
+    },
+    {
+     "id": "modlar-ve-kariyer",
+     "baslik": "模式全貌与经理职业生涯导读",
+     "bloklar": [
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "游戏模式",
+        "定位与特色说明"
+       ],
+       "satirlar": [
+        [
+         "Ultimate Team（终极球队）",
+         "专为热衷于搜集并打造梦幻阵容的玩家设计；免费起步，对局赢取卡包与金币。Rivals、Champions、Squad Battles、SBC 及赛季目标均汇聚于此。"
+        ],
+        [
+         "职业生涯模式（Career）",
+         "两大路线：经理模式（管理俱乐部、转会引援、战术布置）与球员模式（聚焦单个球员历程；FC 27 新增宿敌系统 Rivalries）。Lite 版不包含经理生涯。"
+        ],
+        [
+         "俱乐部模式（Clubs）",
+         "与好友联机组队的多人协作绿茵对抗；归属于 The Grounds 体系，仅登陆 PS5、Xbox Series X|S、PC 与 Switch 2。"
+        ],
+        [
+         "Rush（快节奏小场足球）",
+         "小场地快节奏短局对抗（1v1、2v2、3v3）；EA 设定单局时长 3 分钟，采用手动射门与全辅助传球。Lite 版在 Kick-Off 中包含 Rush 3v3 玩法。"
+        ],
+        [
+         "在线赛季（Seasons）",
+         "传统的 1v1 真实豪门在线天梯升降级较量；Lite 版亦包含该模式。各级别具体积分升降级线以游戏内结算为准。"
+        ],
+        [
+         "The Grounds、街头踢球、1v1",
+         "融合街头足球与球场氛围的百人社交大厅；支持街头踢球、1v1 斗牛与 Clubs 俱乐部；提供前锋、中场、后卫与门将四大 Virtual Pro 模板。"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "在生涯模式方面，官方更新特别强化了集成 TransferRoom 的重构转会市场、俱乐部主动竞价机制、包含表现考核与回购条款的深度谈判、直观反映球员竞技状态/士气/体能的 Dynamic OVR 系统，以及可通过 Web 端设计并分享自创剧本的 Manager Live Creator Challenges。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "开启经理生涯时，先定一个务实的小目标：例如大力提拔青训梯队新星，或是用有限预算搭建一个单赛季攻守平衡的实用班底。切忌开局把精力铺得太散。"
+      }
+     ]
+    },
+    {
+     "id": "temel-mekanikler",
+     "baslik": "绿茵核心战术：攻防基础法则",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "版本强势打法会随补丁更替，但底层足球技战术逻辑始终如一。以下核心原则适用于任何一代 FC 作品。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**防守 - 保持身位距离：** 严禁无脑盲目扑抢上抢。贴住进攻球员并保持一个身位，延缓其推进节奏并封堵出球路线；每一次冒失的出脚抢断都可能导致防线失位崩盘。",
+        "**防守 - 切换防守球员：** 右摇杆精准手动切换至离球最近的防守队员；一旦有中卫被晃开脱节，立即手动拉回填补防线空档。切忌两名后卫同时扑向同一个持球者。",
+        "**进攻 - 耐心传导：** 面对半机会不要急躁起脚。耐心中路分边倒脚拉开防守宽度，在身位调整充分的空档完成高质量打门。",
+        "**进攻 - 无球跑位：** 无球队员的跑动决定进攻质量。中场球员坚决前插防线身后，不仅能压扁对方后防站位，更能拉扯出致命传球角度。",
+        "**射门时机：** 轻点射门键控制力量；蓄力过满的爆射往往打飞。禁区内推杆打远角或近角地滚球的得分率，远高于禁区外的盲目抽射。",
+        "**丢球就地转换：** 丢失球权的头 3 秒内，要么坚决就地反抢（高位逼抢），要么全队迅速回撤落位；最忌犹犹豫豫半路观望，这往往是丢球最多的致命真空期。"
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "每场比赛专注攻克一个技术细节：这局专心练好防守卡位身位，下局专心练好射门推杆力度。同时兼顾五六处细节反而一事无成。"
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "系统设置与手柄键位调谐",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "不同版本菜单翻译略有差异；以下建议为经过实战检验的核心通用准则。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**AI 对战难度：** 推荐从业余（Amateur）或半职业（Semi-Pro）起步；这是 EA 官方给新手的标准起点。当感觉对局轻而易举时，再提升一档难度。",
+        "**辅助传射设置：** 初期保持传球与射门辅助开启。随着手感熟练，可逐步微调为半辅助以掌握更自由精准的出球线路。",
+        "**比赛摄像机视角：** 选用能广阔俯瞰全场传跑动线的视角（如电视转播或合作视角），并保持至少连续使用十场以上；频繁更换视角会严重破坏空间距离感。",
+        "**基础操控：** 在 Learn to Play 或 Moments 中反复熟悉手柄键位。Moments 是快速形成手柄肌肉记忆的最佳场所。",
+        "**Rush 模式辅助机制：** EA 规定小场模式默认强制采用手动射门与全辅助传球。在常规全场模式中你可以自由定制这两项；手动射门对指尖微操要求更高。",
+        "**手柄操作习惯：** 切忌全程按死加速键（Sprint）；带球时仅在前方开阔时短途爆发冲刺。防守端将跟防卡位（Jockey）与拦截键放在手指最舒适的位置（按键因平台而异，请查阅游戏内手柄设置）。",
+        "**摇杆漂移排查：** 若手柄静止状态下球员出现不自主慢跑，通常为摇杆漂移导致；先在主机系统端微调死区并清洁手柄电位器。",
+        "**解说与语言：** 购买页面标明支持土耳其语；比赛实况解说语言可在游戏内音频设置菜单中具体查验切换。"
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "修改设置后，务必先在教学模式或离线友谊赛中检验手感。在紧张的线上排位赛中边踢边调设置极易引发心态崩溃。"
+      }
+     ]
+    },
+    {
+     "id": "iki-hafta-plani",
+     "baslik": "零氪开荒指南：前两周稳健进阶规划",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "本阶段计划基于 EA 新手指南推进路线与转会市场解锁逻辑制定；分天规划为参考节奏，旨在无需充值任何 FC Points 即可搭建强力阵容。"
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "第 1 天：扫清基础任务（Foundations）",
+         "metin": "从 The Journey Begins 起步并逐一清空后续目标。在 Moments 中掌握手柄基本功；奖励包含实用球员卡、金币包与 FUT Coins。"
+        },
+        {
+         "baslik": "第 2-3 天：冲刺转会市场准入门槛",
+         "metin": "依次打通 First Team Dreams 与 Rising Through the Ranks。据 EA 官方说明，完成此项即可解锁转会市场与周赛 Champions 入场资格；PC 端通常在 48 小时内、主机端在 24 小时内获得完全访问权限。等待期内可挂售球员但无法主动搜寻或一口价竞拍。"
+        },
+        {
+         "baslik": "第 3-5 天：深耕人机 Squad Battles",
+         "metin": "在业余或半职业难度下对战电脑阵容。EA 表示 FC 27 中每场对局均提供更丰厚的 FUT 金币与赛季通行证经验，且 Squad Battles 现已额外提供周赛资格点数（CQP）。"
+        },
+        {
+         "baslik": "第 5-7 天：尝试初级阵容组建挑战（SBC）",
+         "metin": "球员与升级 SBC 现已大幅简化：系统会自动筛选符合条件的俱乐部废卡供你挑选提交；卡牌估值取决于 OVR 评分、稀有度与全息（Holographic）状态。切记只提交不可交易的边缘废卡，严禁误交主力首发。"
+        },
+        {
+         "baslik": "第 8-10 天：试水在线天梯 Division Rivals",
+         "metin": "待首发阵容成型且默契度达标后，投身 Rivals 天梯较量。EA 指出本作各级别联赛的周奖励梯度差距拉大，悬赏机制回归更频繁，且首发阶段 Rivals 获得的所有卡包均为可交易属性。"
+        },
+        {
+         "baslik": "第 11-14 天：通往周末决赛 Champions 之路",
+         "metin": "入围 Champions 需积累周赛资格点数（CQP），该点数由 Rivals 与 Squad Battles 共同产出。FC 27 已彻底取消必须达到 Div 6 的硬性门槛。决赛（Finals）为 15 场对抗；首秀重在熟悉节奏磨合战术，切勿过分计较最终段位胜负。"
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "每周保持固定推进循环：日常目标 -> Squad Battles -> Rivals。每天保证 1 小时投入足以拿满核心周常奖励；细水长流远胜于单日暴肝后倦怠退坑。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "官方未具体明示：Rivals 各级别确切升降级积分线及进 Champions 所需的确切 CQP 总额；请直接在游戏内 Champions 界面查阅个人即时点数储备。"
+      }
+     ]
+    },
+    {
+     "id": "ultimate-team-ilerleme",
+     "baslik": "Ultimate Team：Rivals、Champions 与丰厚奖励",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Campaign Hub（活动集聚枢纽）：** 赛季目标、SBC、Evolutions 进化系统与限时活动集中陈列整合于此；EA 统称为 Campaign Hub。",
+        "**Division Rivals：** 据 EA 说明，FC 27 中各级别联赛奖励差距进一步拉开；例如 Div 1 升级奖励包含 95,000 FUT 金币、84+ 及 83+ 黄金包、巨型黄金包以及本周最佳（TOTW）卡包。赏金（Bounties）刷新频次更高。",
+        "**Champions（周赛）：** 延续 15 场决赛赛制。周赛资格点数（CQP）可通过 Rivals 与 Squad Battles 双轨获取；已废除 Div 6 段位限制。高段位虽然攒 CQP 速度更快，但不再是参赛的绝对前提。",
+        "**Web 端与 Companion 网页/手机配套应用：** 配套应用上的转会市场解锁遵循独立活跃度判定规则；官方未公开具体算法，请以 App 内实际显示的状态为准。",
+        "**球员卡包：** 开启卡包随机获取球员与外观饰品。通过踢球奖励获得的卡包无需任何额外开销；使用真实货币购买的卡包则完全属于概率获取性质。"
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "刚解锁转会市场时，切忌盲目跟风倒买倒卖。花几天时间持续盯盘，观察哪些热门球员身价在周末或活动日波动，随后再从小额卡牌尝试。"
+      }
+     ]
+    },
+    {
+     "id": "kimya",
+     "baslik": "化学反应系统：打造默契梦幻联结",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Ultimate Team 的化学反应（Chemistry）直观体现了阵中球员凭借相同俱乐部、联赛或国籍所产生的默契加成。当同队、同联赛或同国籍球员并肩首发且身处正确位置时，化学点数将拉满并提供可观的属性加成（具体加成算法请在游戏内阵容化学界面核对）。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**FC 27 官方重磅改动：** 传奇卡（ICONs）处于对应位置时享有满额化学，并为阵中所有联赛提供 +1 联赛化学联动点；其对同国籍的联动贡献由以往的 +2 下调为 +1。",
+        "**英雄卡（Heroes）：** 处于对应位置时享有满额化学；对所属联赛的贡献由 +2 下调为 +1，国籍贡献维持 +1。全新推出的 Hall of FUT 纪念卡遵循与英雄卡完全相同的化学规则。",
+        "**特殊活动卡：** EA 明确表示，在本赛季后续运营中对于盲目给予全化学的狂欢卡牌将更加克制；切勿想当然认为每张新出的活动卡都能自动解决阵容默契问题。",
+        "**实用组队法则：** 先确定一个核心联赛或单一国籍作为基本盘骨架，再逐步填补拼图。一套 82 总评但满默契化学的阵容，实战手感往往完胜一套 86 总评却零化学散乱拼凑的球队。"
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "在通过 SBC 或开包更替首发球员后，务必先检查阵容化学反应面板。将球员强行塞入非擅长位置会瞬间拉低全队化学，导致卡面评分优势荡然无存。"
+      }
+     ]
+    },
+    {
+     "id": "transfer-pazari",
+     "baslik": "转会市场交易基础常识",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Ultimate Team 转会市场是玩家之间使用游戏内 FUT 金币买卖卡牌的自由交易大厅。EA 指出本作首发阶段 Rivals 获得的所有卡包奖励均支持挂牌交易，且更丰厚比例的奖励将直接以 FUT 金币与可交易卡包形式发放，便于玩家将对局战果迅速转化为市场流动资金。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**解锁条件：** 新账号需完成前三组 Foundations 基础目标；PC 端在 48 小时内、主机端在 24 小时内获得全功能转会市场权限（EA Help）。",
+        "**戒骄戒躁：** 最精明的买家从不急功近利，而是耐心蹲盘。在竞拍看似远低于市价的卡牌前，务必多方比对同名卡牌的即时成交一口价。",
+        "**交易税率：** 转会市场每笔卖出交易均由系统扣除一定比例的交易手续费；倒买倒卖前务必算清税后净利润空间。",
+        "**价格走势跟踪：** 重点关注目标球员数日内的价格波动。每逢重磅活动或热门 SBC 推出，相关卡牌身价常常在几小时内剧烈震荡。",
+        "**核心定位：** 交易的终极目标是补强球队，而非沉迷虚拟炒卡。将积累的金币集中投向能够带来实质飞跃的关键主力；毫无章法的盲目倒腾只会白白耗费精力与手续费。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "请务必只使用游戏内置的正规转会市场。严禁通过第三方渠道买卖金币、使用未经授权的自动化脚本辅助倒卡或私下买卖账号；此类违规操作将招致永久封号处罚，切莫触碰红线。"
+      }
+     ]
+    },
+    {
+     "id": "baslangic-hatalari",
+     "baslik": "新手常见避坑误区",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**盲目直接投身真人联机对抗。** EA 强烈建议先打电脑 AI；在手柄微操和阵容默契度尚未成熟时强行进入真人排位，极易遭受挫败打击。",
+        "**跳过基础教学目标（Foundations）。** 这些任务兼具教学与丰厚奖励；跳过不仅错失初始资金，还会严重延误转会市场解锁进度。",
+        "**开局开包所得金币挥霍一空。** 每一枚金币的支出都应有明确的补强目标；盲目抽包开包只会导致阵容实力稀释。",
+        "**唯总评数值论（OVR）。** 球员的实际场上位置适应度与化学反应加成，往往能让一名面板略低但契合度极佳的球员在实战中发挥远超高分散卡的作用。",
+        "**连败后心态失衡盲目重改按键设置。** 连败时应立即停手休息片刻，平复心情复盘单场丢球回放，从中找出真正的战术失误根源。"
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "冷静分析失利复盘：究竟是对抗哪个位置被打穿？中场防守失位还是回追慢？找出一个明确症结并在下一局针对性改进，比带着情绪盲目改动设置有益得多。"
+      }
+     ]
+    },
+    {
+     "id": "guvenlik-ve-harcama",
+     "baslik": "账号安全与理性消费防沉迷警示",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "EA 官方购买页面明确标注：本作包含用于获取随机虚拟物品的虚拟货币内购选项；北美 ESRB 评级亦标明“包含随机物品（Includes Random Items）”。使用 FC 绿点购买的卡包内容纯属随机抽取，无法提前预知收益；游玩时务必树立理性预算观念。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "设定严格的月度游戏消费上限，一旦触达上限果断停手。试图通过追加充值“翻盘回本”是最典型的非理性消费陷阱。",
+        "务必为 EA 账号开启登录二次验证（2FA），切勿在其他网站复用相同密码，且避免在客户端内长期免密保存信用卡支付凭据。",
+        "针对未成年人游玩，请在主机系统端开启家长监控模式，并对任何 FC Points 的消费操作设置密码确认授权。",
+        "任何声称赠送免费绿点或无限金币的外链及网站均为网络钓鱼诈骗，意在窃取你的 EA 账号所有权；输入密码请务必认准 EA 官方域名。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "严禁通过第三方渠道买卖金币或游戏账号，严禁使用自动化扫货脚本、外挂辅助、代练打排位或对比赛结果进行任何形式的押注赌博。此类行径严重违反 EA 用户协议且风险极高，一经检测将直接导致游戏账号被永久停封注销；请坚决远离一切违规黑产。"
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "常见问题解答",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "《FC 27》是免费游戏吗？",
+         "c": "本体为付费买断制游戏。官方另提供功能受限的免费体验版 FC 27 Lite；该精简版不包含 Ultimate Team 与经理职业生涯模式。"
+        },
+        {
+         "s": "游戏支持土耳其语吗？",
+         "c": "EA 购买页面的支持语言表中已包含土耳其语。具体比赛实况解说语言可在游戏内音频设置中查验选择。"
+        },
+        {
+         "s": "游玩 Ultimate Team 必须充值花钱吗？",
+         "c": "完全不需要。日常踢球对战与完成赛季目标均可稳步获取卡包、金币与核心球员；充值纯属自愿可选。"
+        },
+        {
+         "s": "如何解锁转会市场交易功能？",
+         "c": "新账号需依序通关 The Journey Begins、First Team Dreams 与 Rising Through the Ranks 基础目标。完全权限在 PC 端 48 小时内、主机端 24 小时内正式下发。"
+        },
+        {
+         "s": "游戏支持跨平台联机与数据互通吗？",
+         "c": "跨平台联机支持 PC、PlayStation 与 Xbox 同代主机互联，Switch 排除在外。跨平台数据进度互通仅限 Ultimate Team 模式且仅在同品牌主机家族内部生效。"
+        },
+        {
+         "s": "哪些平台能够游玩 The Grounds 模式？",
+         "c": "PS5、Xbox Series X|S、PC 以及 Switch 2。老款 PS4、Xbox One 以及第一代原版 Switch 均不包含该模式。"
+        },
+        {
+         "s": "职业生涯模式迎来了哪些主要革新？",
+         "c": "包括基于 TransferRoom 重构的真实转会市场、Dynamic OVR 动态能力评估、谈判中新增表现挂钩与回购条款，以及通过 Web 网页端自创剧本挑战的 Manager Live Creator Challenges。"
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  }
 }

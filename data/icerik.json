@@ -30,6 +30,21 @@
     "baslik": "DREADMOOR publica la actualización 7 de acceso anticipado",
     "ozet": "Correcciones en la carga de partidas, las misiones, la pesca y el control del barco.",
     "metin": "La séptima actualización de acceso anticipado de DREADMOOR ya está disponible. Según el desarrollador, se centra en la fiabilidad de guardado y carga, el avance de las misiones, las interacciones con objetos y la pesca, además de corregir el barco, los tutoriales y la interfaz. Después de cargar una partida, algunas herramientas y objetos de misión podían quedar imposibles de recoger, la secuencia del derrumbe de la grúa podía repetirse y el barco podía seguir bloqueado tras cargar una partida guardada en la primera misión. Guardar también podía quedar bloqueado después de escenas, combates u otras situaciones. La misión Escape podía atascarse si se guardaba durante el paso del monstruo acuático, y un disparador de la secuencia del Hook Gun podía saltarse. Se corrigieron la orientación de la brújula del barco y la cámara del panel de control con mando. Se añadieron dos peces nuevos a los archivos del juego, pero aún no están en el mundo y no se pueden capturar. Los errores se pueden reportar en los debates de Steam o en el Discord oficial."
+   },
+   "de": {
+    "baslik": "DREADMOOR: Early-Access-Update 7 ist da und behebt Speicher- und Questfehler",
+    "ozet": "Korrekturen für das Laden von Spielständen, den Questfortschritt, das Angeln und die Bootssteuerung.",
+    "metin": "Das siebte Early-Access-Update für DREADMOOR ist jetzt verfügbar. Laut dem Entwickler liegt der Schwerpunkt auf zuverlässigem Speichern und Laden, dem Questfortschritt, den Interaktionen des Spielers und dem Angeln; dazu kommen Korrekturen an der Bootssteuerung, den Tutorials und der Benutzeroberfläche. Wer einen Spielstand lud, konnte Werkzeuge und Questgegenstände unter Umständen nicht mehr aufheben, die Sequenz mit dem einstürzenden Kran konnte sich wiederholen, und das Boot blieb mitunter gesperrt, wenn ein Spielstand aus der ersten Quest geladen wurde. Außerdem konnte das Speichern nach Zwischensequenzen, Kämpfen oder anderen Situationen blockiert bleiben; Anlegestellen in den Hubs behalten nun ihren Zustand. Die Quest „Escape“ konnte hängen bleiben, wenn während der Sequenz mit dem Wassermonster gespeichert wurde, und ein überspringbarer Auslöser in der Hook-Gun-Sequenz wurde korrigiert. Am Boot wurden die Ausrichtung des Kompasses und die Gamepad-Kamera am Steuerpult berichtigt. Zwei neue Fische wurden den Spieldateien hinzugefügt, sie sind aber noch nicht in der Spielwelt und können nicht gefangen werden. Fehlerberichte können über die Steam-Diskussionen oder den offiziellen Discord eingereicht werden."
+   },
+   "nl": {
+    "baslik": "DREADMOOR Early Access-update 7 is uit met fixes voor saves en quests",
+    "ozet": "Fixes voor het laden van saves, questvoortgang, vissen en de besturing van de boot.",
+    "metin": "De zevende Early Access-update van DREADMOOR is nu beschikbaar. Volgens de ontwikkelaar ligt de nadruk op betrouwbaar opslaan en laden, questvoortgang, interacties van de speler en vissen, met daarnaast fixes voor de besturing van de boot, de tutorials en de interface. Spelers die een save laadden, konden soms gereedschap en questvoorwerpen niet meer oppakken, de scène met de instortende kraan kon opnieuw worden afgespeeld en de boot kon vergrendeld blijven na het laden van een save uit de eerste quest. Opslaan kon ook geblokkeerd blijven na cutscenes, gevechten of andere situaties, en aanlegpunten in hubs behouden nu hun status. De quest Escape kon vastlopen als er werd opgeslagen tijdens de scène met het watermonster, en een trigger die kon worden overgeslagen in de Hook Gun-scène is hersteld. Op de boot zijn de richting van het kompas en de gamepadcamera bij het bedieningspaneel gecorrigeerd. Er zijn twee nieuwe vissen aan de spelbestanden toegevoegd, maar ze zitten nog niet in de wereld en kunnen niet worden gevangen. Bugmeldingen kunnen worden ingestuurd via Steam Discussions of de officiële Discord."
+   },
+   "zh": {
+    "baslik": "DREADMOOR 抢先体验第 7 次更新上线，修复存档与任务问题",
+    "ozet": "修复读取存档、任务进度、钓鱼和船只操控方面的问题。",
+    "metin": "DREADMOOR 的第七次抢先体验更新现已上线。开发者表示，本次更新重点改进存档与读档的稳定性、任务进度、玩家交互和钓鱼，并修复了船只操控、教程和界面方面的问题。此前，玩家读取存档后可能无法拾取工具和任务物品，起重机倒塌的桥段可能重复播放，从第一个任务读取存档后船只也可能一直处于锁定状态。在过场动画、战斗或其他情况之后，存档功能也可能持续被禁用；现在枢纽中的停靠点会保留其状态。若在水怪桥段中存档，Escape 任务可能卡住；Hook Gun 桥段中一个可被跳过的触发器也已修复。在船上，指南针的方向以及控制面板处的手柄镜头得到了修正。游戏文件中新增了两种鱼，但它们尚未出现在游戏世界中，暂时无法钓到。玩家可以通过 Steam 讨论区或官方 Discord 提交错误报告。"
    }
   },
   "otomasyon": {
@@ -73,6 +88,21 @@
     "baslik": "La comunidad de Borderlands 4 derrotó a 6,2 millones de jefes y desbloquea cuatro skins",
     "ozet": "Cuatro skins de arma desbloqueadas como recompensa comunitaria, canjeables con un código SHiFT hasta el 31 de diciembre de 2030.",
     "metin": "Los jugadores de Borderlands 4 derrotaron a 6.261.242 jefes en el Boss Blitz Community Challenge, y el anuncio oficial en Steam indica que la recompensa son cuatro nuevas skins de arma. Troubled Upbringing, Fresh Spray, Tally Them All y Merch Line se pueden aplicar a cualquier arma, así que todos los Vault Hunter pueden usarlas. Cada una se inspira en un Vault Hunter del juego base: Troubled Upbringing en Vex, Fresh Spray en Rafa, Tally Them All en Amon y Merch Line en Harlowe. La recompensa se canjea con un código SHiFT, en la web de SHiFT de Gearbox o en el menú SHiFT del juego. Cada código funciona una vez por cuenta SHiFT y debe canjearse antes del 31 de diciembre de 2030. Se necesita una copia de Borderlands 4 y una cuenta SHiFT. El anuncio también indica que las recompensas de desafíos comunitarios anteriores pueden reclamarse de la misma forma."
+   },
+   "de": {
+    "baslik": "Borderlands 4: Community besiegt 6,2 Millionen Bosse und schaltet vier Skins frei",
+    "ozet": "Vier Waffen-Skins sind als Community-Belohnung freigeschaltet und bis zum 31. Dezember 2030 per SHiFT-Code einlösbar.",
+    "metin": "Die Spieler von Borderlands 4 haben in der Boss Blitz Community Challenge 6.261.242 Bosse besiegt; laut der offiziellen Steam-Ankündigung besteht die Belohnung aus vier neuen Waffen-Skins. Troubled Upbringing, Fresh Spray, Tally Them All und Merch Line lassen sich auf jede Waffe anwenden, sodass jeder Vault Hunter sie nutzen kann. Jeder Skin ist von einem Vault Hunter des Hauptspiels inspiriert: Troubled Upbringing von Vex, Fresh Spray von Rafa, Tally Them All von Amon und Merch Line von Harlowe. Eingelöst wird die Belohnung mit einem SHiFT-Code, entweder auf der SHiFT-Website von Gearbox oder im SHiFT-Menü im Spiel. Jeder Code funktioniert einmal pro SHiFT-Konto und muss bis zum 31. Dezember 2030 eingelöst werden. Erforderlich sind eine Kopie von Borderlands 4 und ein SHiFT-Konto. In der Ankündigung heißt es außerdem, dass Belohnungen aus früheren Community Challenges weiterhin auf dieselbe Weise abgeholt werden können."
+   },
+   "nl": {
+    "baslik": "Borderlands 4-community verslaat 6,2 miljoen bazen en speelt vier skins vrij",
+    "ozet": "Vier wapenskins zijn vrijgespeeld als communitybeloning en tot 31 december 2030 te verzilveren met een SHiFT-code.",
+    "metin": "Spelers van Borderlands 4 hebben in de Boss Blitz Community Challenge 6.261.242 bazen verslagen, en volgens de officiële aankondiging op Steam bestaat de beloning uit vier nieuwe wapenskins. Troubled Upbringing, Fresh Spray, Tally Them All en Merch Line kunnen op elk wapen worden toegepast, zodat elke Vault Hunter ze kan gebruiken. Elke skin is geïnspireerd op een Vault Hunter uit de basisgame: Troubled Upbringing op Vex, Fresh Spray op Rafa, Tally Them All op Amon en Merch Line op Harlowe. Spelers verzilveren de beloning met een SHiFT-code, op de SHiFT-website van Gearbox of via het SHiFT-menu in de game. Elke code werkt één keer per SHiFT-account en moet uiterlijk 31 december 2030 worden verzilverd. Een exemplaar van Borderlands 4 en een SHiFT-account zijn vereist. In de aankondiging staat ook dat beloningen uit eerdere Community Challenges nog steeds op dezelfde manier kunnen worden opgehaald."
+   },
+   "zh": {
+    "baslik": "Borderlands 4 社区击败 620 万个 Boss，解锁四款皮肤",
+    "ozet": "四款武器皮肤作为社区奖励解锁，可在 2030 年 12 月 31 日前使用 SHiFT 代码兑换。",
+    "metin": "Borderlands 4 的玩家在 Boss Blitz 社区挑战中共击败了 6,261,242 个 Boss，官方 Steam 公告称奖励为四款全新武器皮肤。Troubled Upbringing、Fresh Spray、Tally Them All 和 Merch Line 可用于任何枪械，因此每位 Vault Hunter 都能使用。每款皮肤的灵感都来自本体中的一位 Vault Hunter：Troubled Upbringing 对应 Vex，Fresh Spray 对应 Rafa，Tally Them All 对应 Amon，Merch Line 对应 Harlowe。玩家需使用 SHiFT 代码兑换奖励，可在 Gearbox 的 SHiFT 网站或游戏内的 SHiFT 菜单中操作。每个代码在每个 SHiFT 账号上只能使用一次，且必须在 2030 年 12 月 31 日前兑换。兑换需要拥有 Borderlands 4 和一个 SHiFT 账号。公告还表示，此前社区挑战的奖励仍可通过同样的方式领取。"
    }
   },
   "otomasyon": {
@@ -119,6 +149,21 @@
     "baslik": "Just Volleyball ya está disponible con descuento de lanzamiento",
     "ozet": "38 % de descuento en Steam durante unos 8 días.",
     "metin": "Just Volleyball ya se ha lanzado oficialmente, según el anuncio del desarrollador en Steam. Hay un descuento de lanzamiento del 38 % durante unos ocho días, así que se puede comprar el juego a precio reducido en ese periodo. Varias funciones que no estaban en las demos ya forman parte del juego completo. Los datos de guardado se almacenan con Steam Cloud y hay un modo Estudio de fotos accesible desde la taquilla. Se añaden tres mapas más: Nationals Arena, Clouds y Space. Los mapas también tienen variantes, como césped o playa, con iluminación de tarde o de noche. El lanzamiento incluye más de 60 logros y premios, objetivos diarios y semanales, más de 500 títulos por desbloquear y modificadores de sala personalizados como Sweat, Player Collision, Ball Indicators y CPU Fill. El desarrollador también prevé correcciones de errores frecuentes, actualizaciones del modo libre, ejercicios de práctica, nuevos mapas y modos, contenido cosmético de temporada y más pistas musicales."
+   },
+   "de": {
+    "baslik": "Just Volleyball ist erschienen und bietet einen Startrabatt",
+    "ozet": "Auf Steam gibt es etwa 8 Tage lang 38 % Rabatt.",
+    "metin": "Just Volleyball ist laut Steam-Ankündigung des Entwicklers offiziell erschienen. Für ungefähr acht Tage gilt ein Startrabatt von 38 %, sodass Spieler das Spiel in diesem Zeitraum günstiger kaufen können. Mehrere Funktionen, die in den Demos fehlten, sind jetzt in der Vollversion enthalten. Spielstände werden über Steam Cloud gespeichert, und im Spind ist ein Photo Studio-Modus verfügbar. Drei weitere Karten sind hinzugekommen: Nationals Arena, Clouds und Space. Dazu gibt es Varianten mit Gras oder Strand sowie Abend- oder Nachtbeleuchtung. Die Veröffentlichung enthält mehr als 60 Erfolge und Auszeichnungen, tägliche und wöchentliche Ziele und über 500 freischaltbare Titel. Eigene Lobbys bieten Einstellungen wie Sweat, Player Collision, Ball Indicators und CPU Fill. Der Entwickler plant außerdem regelmäßige Fehlerkorrekturen, Freeplay-Updates, Trainingsübungen, neue Karten und Modi, saisonale kosmetische Inhalte und zusätzliche Musikstücke."
+   },
+   "nl": {
+    "baslik": "Just Volleyball is uit met een introductiekorting",
+    "ozet": "Ongeveer 8 dagen lang 38% korting op Steam.",
+    "metin": "Just Volleyball is officieel verschenen, meldt de ontwikkelaar op Steam. Gedurende ongeveer acht dagen geldt een introductiekorting van 38%, zodat spelers de game in die periode goedkoper kunnen kopen. Verschillende functies die in de demo’s ontbraken, zitten nu in de volledige game. Opslaggegevens worden via Steam Cloud bewaard en vanuit de kleedkamer is een Photo Studio-modus beschikbaar. Er zijn drie nieuwe kaarten: Nationals Arena, Clouds en Space. Kaarten hebben ook varianten met bijvoorbeeld gras of strand en avond- of nachtverlichting. De release bevat meer dan 60 prestaties en onderscheidingen, dagelijkse en wekelijkse doelen en ruim 500 vrij te spelen titels. Aangepaste lobby’s bieden instellingen zoals Sweat, Player Collision, Ball Indicators en CPU Fill. De ontwikkelaar plant daarnaast regelmatige bugfixes, freeplay-updates, trainingsoefeningen, nieuwe kaarten en modi, seizoensgebonden cosmetische updates en extra muziek."
+   },
+   "zh": {
+    "baslik": "Just Volleyball 正式发售，推出首发折扣",
+    "ozet": "Steam 首发优惠约持续8天，降价38%。",
+    "metin": "据开发者在 Steam 发布的公告，Just Volleyball 已正式发售。首发折扣为38%，约持续八天，玩家可在此期间以优惠价格购买游戏。此前未在演示版提供的多项功能现已加入完整版。存档通过 Steam Cloud 保存，玩家可从更衣柜进入 Photo Studio 模式。游戏新增 Nationals Arena、Clouds 和 Space 三张地图，并提供草地或沙滩、傍晚或夜间照明等变体。正式版包含超过60项成就与奖励、每日及每周目标，以及超过500个可解锁称号。自定义大厅设有 Sweat、Player Collision、Ball Indicators 和 CPU Fill 等选项。开发者还计划频繁修复错误，更新自由练习内容，加入训练项目、新地图和模式、季节性外观内容及更多音乐。"
    }
   },
   "otomasyon": {
@@ -163,6 +208,21 @@
     "baslik": "La comunidad de Borderlands bate el récord de donaciones de The Hunt",
     "ozet": "Se supera el récord anterior y la meta de igualación para St. Jude.",
     "metin": "Según el anuncio oficial en Steam, The Hunt, la búsqueda de botín legendario organizada por la comunidad en Borderlands 2, Borderlands 3 y Borderlands 4, ha establecido un nuevo récord histórico de donaciones para el St. Jude Children's Research Hospital. Los jugadores completaron sus recorridos en los tres juegos con fines benéficos. 2K Foundations y Gearbox se habían comprometido a igualar cada dólar donado hasta el récord anterior de 118.995,80 dólares estadounidenses. La comunidad superó ese récord y también la meta de igualación. Los participantes de The Hunt: All Aboard terminaron su búsqueda en los tres juegos. El anuncio no incluye un nuevo total. El estudio agradeció al equipo de recaudación de la comunidad de Borderlands y al equipo St. Jude PLAY LIVE."
+   },
+   "de": {
+    "baslik": "Borderlands-Community bricht Spendenrekord von The Hunt",
+    "ozet": "Die Aktion für St. Jude übertraf den bisherigen Rekord und das Verdopplungsziel.",
+    "metin": "Laut offizieller Steam-Ankündigung hat The Hunt, die von der Community organisierte Jagd nach legendärer Beute in Borderlands 2, Borderlands 3 und Borderlands 4, einen neuen Spendenrekord für das St. Jude Children's Research Hospital aufgestellt. Die Spieler absolvierten ihre Läufe in allen drei Spielen für den guten Zweck. 2K Foundations und Gearbox hatten zugesagt, jeden gespendeten Dollar bis zur bisherigen Rekordsumme von 118.995,80 US-Dollar zu verdoppeln. Die Community übertraf den Rekord und das Verdopplungsziel. Die Teilnehmer von The Hunt: All Aboard beendeten ihre Beutejagd in allen drei Spielen. Eine neue Gesamtsumme nennt die Ankündigung nicht. Das Studio dankte dem Borderlands Community Fundraising Team und dem St. Jude PLAY LIVE-Team."
+   },
+   "nl": {
+    "baslik": "Borderlands-community verbreekt donatierecord van The Hunt",
+    "ozet": "De actie voor St. Jude overtrof het vorige record en het doel voor de verdubbeling.",
+    "metin": "Volgens de officiële Steam-aankondiging heeft The Hunt, de door de community georganiseerde speurtocht naar legendarische buit in Borderlands 2, Borderlands 3 en Borderlands 4, een nieuw donatierecord voor St. Jude Children's Research Hospital gevestigd. Spelers voltooiden hun rondes in de drie games voor het goede doel. 2K Foundations en Gearbox hadden beloofd elke dollar te verdubbelen tot het vorige record van 118.995,80 Amerikaanse dollar. De community ging zowel over dat record als over het verdubbelingsdoel heen. De deelnemers aan The Hunt: All Aboard rondden hun buitjacht in alle drie de games af. De aankondiging noemt geen nieuw totaalbedrag. De studio bedankte het Borderlands Community Fundraising Team en het St. Jude PLAY LIVE-team."
+   },
+   "zh": {
+    "baslik": "Borderlands 社区打破 The Hunt 募捐纪录",
+    "ozet": "本次为 St. Jude 举办的募捐超过此前纪录及配捐目标。",
+    "metin": "据 Steam 官方公告，由社区举办的 The Hunt 传奇战利品寻宝活动在 Borderlands 2、Borderlands 3 和 Borderlands 4 中进行，为 St. Jude Children's Research Hospital 创下新的募捐纪录。玩家为慈善事业完成了三款游戏中的挑战。2K Foundations 与 Gearbox 此前承诺，对募集到的每一美元等额配捐，上限为此前纪录118,995.80美元。社区不仅突破了纪录，也超过了配捐目标。The Hunt: All Aboard 的参与者完成了三款游戏的战利品寻宝。公告未公布新总金额。工作室感谢了 Borderlands Community Fundraising Team 和 St. Jude PLAY LIVE 团队。"
    }
   },
   "otomasyon": {
@@ -219,6 +279,33 @@
     "baslik": "La actualización 27.1.0 de Football Manager 27 llega esta semana",
     "ozet": "La actualización trae correcciones de cierres inesperados, carga más rápida en equipos modestos y ajustes del motor de partido.",
     "metin": "El anuncio oficial de Football Manager 27 en Steam indica que la actualización 27.1.0 se publicará más adelante esta semana. Desde el lanzamiento del juego el 10 de noviembre, el equipo afirma que se centra en los comentarios de la comunidad y en los reportes registrados en su rastreador de errores. La actualización llegará a los jugadores de FM27, FM27 Console y FM27 Touch, y también se anuncia una actualización aparte para FM27 Mobile esta semana.\n\nEl cambio más directo para los jugadores es técnico. El anuncio menciona numerosas correcciones de cierres inesperados, tiempos de carga más cortos en equipos de gama baja al cargar bases de datos grandes y varias mejoras de rendimiento de la interfaz. La opción de Visualización de información ya puede elegirse con una resolución de pantalla de 1080p o superior. Además, un nuevo control deslizante permite hacer transparentes los bordes de los atributos.\n\nEn el campo, el motor de partido recibe ajustes en las decisiones de pase, regate y presión. El estudio indica que estos cambios requieren pruebas exhaustivas, así que conviene observar cómo afectan a tus propios partidos cuando el parche esté disponible.",
+    "etiketler": [
+     "#FootballManager27",
+     "#FM27"
+    ]
+   },
+   "de": {
+    "baslik": "Football Manager 27: Update 27.1.0 soll diese Woche erscheinen",
+    "ozet": "Das Update behebt Abstürze, verkürzt Ladezeiten auf schwächeren PCs und passt die Match Engine an.",
+    "metin": "Die offizielle Steam-Ankündigung zu Football Manager 27 stellt Update 27.1.0 für später in dieser Woche in Aussicht. Seit dem Start am 10. November konzentriert sich das Team nach eigenen Angaben auf Community-Feedback und Meldungen im Fehlertracker. Das Update kommt für FM27, FM27 Console und FM27 Touch. Ein separates Update für FM27 Mobile ist ebenfalls diese Woche geplant.\n\nDie unmittelbarsten Änderungen sind technisch: zahlreiche Absturzkorrekturen, kürzere Ladezeiten für größere Datenbanken auf schwächeren PCs und Leistungsverbesserungen an der Oberfläche. Information Display können nun alle mit mindestens 1080p Bildschirmauflösung wählen. Ein neuer Regler macht Attributränder transparent.\n\nAuf dem Platz ändert die Match Engine Entscheidungen beim Passen, Dribbeln und Pressing. Der Entwickler betont, dass diese Änderungen gründlich getestet werden müssen. Nach Erscheinen lohnt deshalb ein Blick auf ihre Wirkung in den eigenen Partien.",
+    "etiketler": [
+     "#FootballManager27",
+     "#FM27"
+    ]
+   },
+   "nl": {
+    "baslik": "Football Manager 27: update 27.1.0 verschijnt naar verwachting deze week",
+    "ozet": "De update verhelpt crashes, verkort laadtijden op minder krachtige pc’s en past de Match Engine aan.",
+    "metin": "De officiële Steam-aankondiging voor Football Manager 27 meldt dat update 27.1.0 later deze week wordt uitgerold. Sinds de release op 10 november zegt het team te werken aan communityfeedback en meldingen in de bugtracker. De update komt naar FM27, FM27 Console en FM27 Touch. Ook voor FM27 Mobile staat deze week een aparte update gepland.\n\nDe meest directe veranderingen zijn technisch: talrijke crashoplossingen, kortere laadtijden bij grotere databases op minder krachtige pc’s en betere interfaceprestaties. Iedereen met minstens 1080p schermresolutie kan nu Information Display kiezen. Een nieuwe schuifregelaar maakt attribuutranden transparant.\n\nOp het veld verandert de Match Engine beslissingen over passen, dribbelen en druk zetten. De ontwikkelaar benadrukt dat deze wijzigingen grondig moeten worden getest. Bekijk na de patch dus hoe ze je eigen wedstrijden beïnvloeden.",
+    "etiketler": [
+     "#FootballManager27",
+     "#FM27"
+    ]
+   },
+   "zh": {
+    "baslik": "Football Manager 27 的27.1.0更新预计本周推出",
+    "ozet": "更新将修复崩溃、缩短低配置 PC 加载时间，并调整比赛引擎。",
+    "metin": "Football Manager 27 的 Steam 官方公告表示，27.1.0更新将在本周晚些时候推出。游戏11月10日发售后，团队表示正专注处理社区反馈及缺陷追踪系统中的报告。此次更新面向 FM27、FM27 Console 和 FM27 Touch，FM27 Mobile 也计划本周获得独立更新。\n\n最直接的变化集中在技术层面：多项崩溃修复、低配置 PC 加载大型数据库时耗时缩减，以及多项界面性能改进。分辨率达到1080p及以上的玩家现在都能选择 Information Display 设置，新增滑块还可使属性边框透明。\n\n比赛方面，Match Engine 将调整传球、盘带与逼抢决策。开发商指出这些变化需要充分测试，因此补丁上线后，玩家可留意它们对自己比赛的影响。",
     "etiketler": [
      "#FootballManager27",
      "#FM27"
@@ -290,6 +377,36 @@
      "#Pokemon",
      "#NintendoSwitch2"
     ]
+   },
+   "de": {
+    "baslik": "Pokémon Pokopia: Apples to Applin läuft bis zum 1. Dezember",
+    "ozet": "Das Apfel-Event bringt Applin und seine Entwicklungen in die Städte von Pokémon Pokopia auf Switch 2.",
+    "metin": "Nintendo hat Apples to Applin für Pokémon Pokopia auf Nintendo Switch 2 angekündigt. Das Event beginnt am 16. November und läuft bis zum 1. Dezember. Zunächst sprechen Spieler Applin nahe einem Pokémon Center an und freunden sich mit ihm an. Dann sammeln sie Syrupy Apples an besonderen Apfelbäumen und tauschen sie im Pokémon Center gegen Gegenstände mit Apfelmotiv. Damit bauen sie Lebensräume, die Flapple, Appletun, Dipplin und Hydrapple anlocken. Zum Öffnen des Events muss die Systemsoftware auf Ver. 2.0.1 aktualisiert sein. Das Spiel sollte mit Internetverbindung starten; Datum und Uhrzeit der Switch 2 müssen der tatsächlichen Zeit entsprechen. Auf Cloud Islands und in Bubbly Basin findet das Event nicht statt. Mehrspielerpartien sollen in Palette Town stattfinden.",
+    "etiketler": [
+     "#Pokopia",
+     "#Pokemon",
+     "#NintendoSwitch2"
+    ]
+   },
+   "nl": {
+    "baslik": "Pokémon Pokopia: Apples to Applin loopt tot 1 december",
+    "ozet": "Het appelevenement brengt Applin en zijn evoluties naar de dorpen van Pokémon Pokopia op Switch 2.",
+    "metin": "Nintendo heeft Apples to Applin aangekondigd voor Pokémon Pokopia op Nintendo Switch 2. Het evenement begint op 16 november en loopt tot 1 december. Spelers spreken eerst Applin bij een Pokémon Center aan en sluiten vriendschap. Daarna verzamelen ze Syrupy Apples aan speciale appelbomen en ruilen die bij een Pokémon Center voor voorwerpen met een appelthema. Daarmee bouwen ze leefgebieden die Flapple, Appletun, Dipplin en Hydrapple aantrekken. Om het evenement te openen moet de systeemsoftware zijn bijgewerkt naar Ver. 2.0.1. Start met een internetverbinding en zorg dat datum en tijd van de Switch 2 overeenkomen met de echte tijd. Het evenement vindt niet plaats op Cloud Islands of in Bubbly Basin. Gebruik voor multiplayer Palette Town.",
+    "etiketler": [
+     "#Pokopia",
+     "#Pokemon",
+     "#NintendoSwitch2"
+    ]
+   },
+   "zh": {
+    "baslik": "Pokémon Pokopia 苹果主题活动持续至12月1日",
+    "ozet": "Apples to Applin 将 Applin 及其进化形态带到 Switch 2 版 Pokémon Pokopia 的城镇。",
+    "metin": "Nintendo 宣布，Nintendo Switch 2 版 Pokémon Pokopia 将于11月16日至12月1日举办 Apples to Applin 活动。玩家先在 Pokémon Center 附近与 Applin 交谈并成为朋友，然后从特殊苹果树采集 Syrupy Apples，在 Pokémon Center 换取苹果主题物品，用来建造栖息地，吸引 Flapple、Appletun、Dipplin 和 Hydrapple。参加前系统软件须更新至 Ver. 2.0.1，启动游戏时应连接互联网，Switch 2 的日期与时间须与现实一致。活动不会在 Cloud Islands 或 Bubbly Basin 举行，多人游玩应使用 Palette Town。",
+    "etiketler": [
+     "#Pokopia",
+     "#Pokemon",
+     "#NintendoSwitch2"
+    ]
    }
   },
   "otomasyon": {
@@ -346,6 +463,33 @@
     "baslik": "La revista del 25.º aniversario de Xbox ya es accesible para todos",
     "ozet": "La revista especial por el 25.º aniversario de Xbox ya se puede leer en Xbox Wire.",
     "metin": "Xbox ha publicado una revista especial por sus 25 años: «XBOX – The 25th Anniversary Magazine». No se limita a mirar atrás: repasa juegos, hardware y momentos clave, del pasado y del presente, contados por los equipos que los crean. Como ejemplo, la página 38 incluye un reportaje sobre Bowerstone, la ciudad capital de Fable. Xbox imprimió ejemplares y los repartió entre miembros de la comunidad en el XBOX FanFest de Seattle la semana pasada. Desde su publicación, cualquiera puede leer la revista directamente en la página de Xbox Wire. Las flechas de la esquina inferior derecha activan el modo de pantalla completa para leer con más comodidad.",
+    "etiketler": [
+     "#Xbox",
+     "#XboxMagazine"
+    ]
+   },
+   "de": {
+    "baslik": "Xbox-Magazin zum 25. Jubiläum ist für alle zugänglich",
+    "ozet": "Das Sondermagazin zum Xbox-Jubiläum ist auf Xbox Wire frei lesbar.",
+    "metin": "Xbox hat zum 25-jährigen Bestehen das Sondermagazin „XBOX – The 25th Anniversary Magazine“ veröffentlicht. Es blickt nicht nur zurück, sondern behandelt Spiele, Hardware und Schlüsselmomente aus Vergangenheit und Gegenwart aus Sicht der Teams dahinter. Seite 38 zeigt etwa Bowerstone, die Hauptstadt von Fable. Gedruckte Exemplare wurden in der Vorwoche beim XBOX FanFest in Seattle an Community-Mitglieder verteilt. Nun können alle das Magazin direkt auf Xbox Wire lesen. Über die Pfeile unten rechts im Betrachter lässt sich der Vollbildmodus öffnen.",
+    "etiketler": [
+     "#Xbox",
+     "#XboxMagazine"
+    ]
+   },
+   "nl": {
+    "baslik": "Xbox-magazine voor het 25-jarig bestaan is nu voor iedereen te lezen",
+    "ozet": "Het jubileummagazine staat op Xbox Wire en is vrij toegankelijk.",
+    "metin": "Xbox heeft ‘XBOX – The 25th Anniversary Magazine’ gepubliceerd voor het 25-jarig bestaan van het platform. Het kijkt niet alleen terug, maar behandelt games, hardware en belangrijke momenten uit heden en verleden via de teams die eraan werken. Pagina 38 toont bijvoorbeeld Bowerstone, de hoofdstad van Fable. Xbox deelde de week ervoor gedrukte exemplaren uit aan communityleden op XBOX FanFest in Seattle. Nu kan iedereen het magazine rechtstreeks op Xbox Wire lezen. Met de pijlen rechtsonder in de viewer schakel je naar volledig scherm.",
+    "etiketler": [
+     "#Xbox",
+     "#XboxMagazine"
+    ]
+   },
+   "zh": {
+    "baslik": "Xbox 25周年纪念杂志向所有人开放",
+    "ozet": "Xbox 25周年特别杂志已在 Xbox Wire 上线，任何人都可阅读。",
+    "metin": "Xbox 为平台25周年出版了《XBOX – The 25th Anniversary Magazine》。杂志不只回顾历史，还通过制作团队的视角介绍过去与现在的游戏、硬件和重要时刻。例如，第38页展示了 Fable 的首都 Bowerstone。Xbox 在前一周的西雅图 XBOX FanFest 上向社区成员发放了印刷版。发布后任何人都可直接在 Xbox Wire 页面阅读，通过阅读器右下角箭头切换到全屏模式。",
     "etiketler": [
      "#Xbox",
      "#XboxMagazine"
@@ -427,6 +571,36 @@
      "#OperationVitalSignal",
      "#Ubisoft"
     ]
+   },
+   "de": {
+    "baslik": "Rainbow Six Siege: Operation Vital Signal startet am 1. Dezember mit zwei Ranglisten",
+    "ozet": "Ubisoft zeigt Jahr 11, Saison 4: Doc-Überarbeitung, getrennte Solo/Duo- und Flex-Ränge und die MBZ-19.",
+    "metin": "Ubisoft hat Operation Vital Signal, die vierte Saison im elften Jahr von Rainbow Six Siege, vorgestellt. Laut Steam-Ankündigung startet sie am 1. Dezember. Im Mittelpunkt steht die vollständige Überarbeitung von Doc.\n\nDoc verliert die Stim Pistol und erhält den E-Heal Monitor. Bringt er ein Pflaster an einem Teammitglied an, kann er es von anderer Stelle auf der Karte aktivieren, um es über Zeit zu heilen oder am Boden wiederzubeleben. Nur ein Operator kann gleichzeitig ein aktives Pflaster tragen.\n\nRanked wird in zwei Spiellisten mit getrennten Rängen aufgeteilt. Solo/Duo ist für Einzelspieler und Zweierteams, Flex für Einzelspieler sowie Gruppen aus zwei, drei oder fünf Personen. Die nötige Freigabestufe sinkt von 50 auf 30.\n\nDie neue Maschinenpistole MBZ-19 feuert 750 Schuss pro Minute, fasst 64 Patronen und verursacht 33 Schaden pro Treffer. Warden, Thunderbird und Jäger können sie ausrüsten. Die ACS12 sinkt von 69 auf 45 Schaden, die TCSG12 von 75 auf 50.\n\nBank erhält zusätzliche Deckung beim Einstiegspunkt Alley Access. Yacht, Favela und Tower bekommen neue Beleuchtung und zerstörbare Elemente. Der aktuelle Battle Pass endet zum Saisonstart; verbleibende Belohnungen müssen vor dem 1. Dezember abgeholt werden.",
+    "etiketler": [
+     "#RainbowSixSiege",
+     "#OperationVitalSignal",
+     "#Ubisoft"
+    ]
+   },
+   "nl": {
+    "baslik": "Rainbow Six Siege: Operation Vital Signal komt 1 december met twee rankedlijsten",
+    "ozet": "Ubisoft onthult jaar 11, seizoen 4: Doc-remaster, aparte Solo/Duo- en Flex-rangen en de MBZ-19.",
+    "metin": "Ubisoft heeft Operation Vital Signal onthuld, het vierde seizoen van jaar 11 van Rainbow Six Siege. Volgens de Steam-aankondiging begint het seizoen op 1 december. De grootste wijziging is een volledige remaster van Doc.\n\nDoc verliest de Stim Pistol en krijgt de E-Heal Monitor. Na het aanbrengen van een pleister op een teamgenoot kan hij die elders op de kaart activeren om geleidelijk te genezen of een neergehaalde speler te reanimeren. Slechts één operator kan tegelijk een actieve pleister dragen.\n\nRanked krijgt twee lijsten met eigen rangen. Solo/Duo is voor solospelers en duo’s; Flex accepteert solospelers en teams van twee, drie of vijf. Het vereiste clearancelevel daalt van 50 naar 30.\n\nDe nieuwe MBZ-19 vuurt 750 kogels per minuut, heeft een magazijn van 64 en doet 33 schade per kogel. Warden, Thunderbird en Jäger kunnen het gebruiken. De ACS12 gaat van 69 naar 45 schade en de TCSG12 van 75 naar 50.\n\nBank krijgt extra dekking bij de Alley Access-spawn. Yacht, Favela en Tower worden gemoderniseerd met verlichting en vernietigbare onderdelen. De huidige Battle Pass sluit bij de seizoensstart. Haal resterende beloningen vóór 1 december op.",
+    "etiketler": [
+     "#RainbowSixSiege",
+     "#OperationVitalSignal",
+     "#Ubisoft"
+    ]
+   },
+   "zh": {
+    "baslik": "Rainbow Six Siege 新赛季12月1日上线，排位分两类",
+    "ozet": "Ubisoft 公布第11年第4赛季：Doc 重制、独立的 Solo/Duo 与 Flex 排位及 MBZ-19。",
+    "metin": "Ubisoft 公布了 Rainbow Six Siege 第11年第4赛季 Operation Vital Signal。据 Steam 公告，新赛季12月1日上线，核心变化是 Doc 的全面重制。\n\nDoc 将失去 Stim Pistol，改用 E-Heal Monitor。他给队友贴上贴片后，可在地图其他位置触发，持续治疗或救起倒地队友。同一时间仅一名干员能携带有效贴片。\n\n排位分为独立段位的两套列表：Solo/Duo 面向单排与双排；Flex 接受单人及两人、三人或五人队伍。准入等级从50降至30。\n\nMBZ-19 冲锋枪每分钟射速750发，弹匣64发，每发伤害33，Warden、Thunderbird 和 Jäger 可装备。ACS12 伤害从69降至45，TCSG12 从75降至50。\n\nBank 的 Alley Access 出生点旁新增掩体，Yacht、Favela 与 Tower 将更新照明和可破坏物件。当前 Battle Pass 随新赛季开始而结束，剩余奖励须在12月1日前领取。",
+    "etiketler": [
+     "#RainbowSixSiege",
+     "#OperationVitalSignal",
+     "#Ubisoft"
+    ]
    }
   }
  },
@@ -493,6 +667,36 @@
      "#Battlefield6",
      "#REDSEC",
      "#PruebaGratis"
+    ]
+   },
+   "de": {
+    "baslik": "Battlefield 6 lässt sich bis zum 16. November kostenlos testen",
+    "ozet": "EAs viertägiger Test begann am 13. November. Benötigt wird nur der kostenlose Download von Battlefield REDSEC.",
+    "metin": "Electronic Arts bietet einen viertägigen Gratistest von Battlefield 6 an. Die offizielle Seite nennt den Zeitraum 13. bis 16. November, aber keine Endzeit oder Zeitzone. Interessierte sollten nicht bis zum letzten Abend warten.\n\nEin Kauf ist nicht nötig: Battlefield REDSEC kostenlos herunterladen und darüber den Battlefield 6-Test öffnen. Genannte Downloadmöglichkeiten sind die EA app für Windows, Steam, Epic Games Store, PlayStation Store und Xbox Store.\n\nWährend des Tests freigeschaltete Inhalte bleiben erhalten, REDSEC lässt sich weiter kostenlos spielen. Wer mit einem Freund spielt, der Battlefield 6 besitzt, erhält gemeinsam mit ihm einen XP-Bonus.\n\nFür Einsteiger gibt es Casual Breakthrough mit echten Spielern und Bots, einen Schießstand und einen Einstiegsbereich für Modi, Ausrüstung und Fortschritt.\n\nCasino Heist läuft an denselben Tagen: Aufträge in Battlefield 6 und REDSEC bringen Dough für Event-Kosmetik. Einen Rabatt kündigt EA daneben nicht an.",
+    "etiketler": [
+     "#Battlefield6",
+     "#REDSEC",
+     "#FreeTrial"
+    ]
+   },
+   "nl": {
+    "baslik": "Battlefield 6 is tot 16 november gratis te proberen",
+    "ozet": "EA’s vierdaagse proefperiode begon op 13 november. Alleen de gratis download van Battlefield REDSEC is nodig.",
+    "metin": "Electronic Arts organiseert een vierdaagse gratis proefperiode voor Battlefield 6. De officiële EA-pagina noemt 13 tot en met 16 november, zonder eindtijd of tijdzone. Wacht liever niet tot de laatste avond.\n\nJe hoeft de game niet te kopen: download het gratis Battlefield REDSEC en open vandaar de Battlefield 6-proefperiode. Downloadopties zijn de EA app voor Windows, Steam, Epic Games Store, PlayStation Store en Xbox Store.\n\nAlles wat je tijdens de proefperiode vrijspeelt blijft behouden. REDSEC blijft gratis speelbaar. Speel je met een vriend die Battlefield 6 bezit, dan krijgen jullie allebei een XP-bonus.\n\nNieuwkomers hebben Casual Breakthrough met echte spelers en bots, een schietbaan en een introductiegebied over modi, uitrusting en voortgang.\n\nCasino Heist loopt op dezelfde dagen. Opdrachten in Battlefield 6 en REDSEC leveren Dough op voor evenementcosmetica. De EA-pagina kondigt geen korting naast de proefperiode aan.",
+    "etiketler": [
+     "#Battlefield6",
+     "#REDSEC",
+     "#FreeTrial"
+    ]
+   },
+   "zh": {
+    "baslik": "Battlefield 6 可免费试玩至11月16日",
+    "ozet": "EA 的四天试玩于11月13日开始，只需免费下载 Battlefield REDSEC。",
+    "metin": "Electronic Arts 正举办四天 Battlefield 6 免费试玩。EA 官方页面列出11月13日至16日，但没有结束时刻或时区，感兴趣的玩家不宜等到最后一晚。\n\n参加无需购买游戏。下载免费的 Battlefield REDSEC 后，从中进入 Battlefield 6 试玩。渠道包括 Windows 版 EA app、Steam、Epic Games Store、PlayStation Store 和 Xbox Store。\n\n试玩期间解锁的内容会保留，REDSEC 也可继续免费玩。与拥有 Battlefield 6 的朋友一起玩，两人都能获得 XP 加成。\n\n新玩家可体验混合真人与机器人的 Casual Breakthrough、靶场，以及讲解模式、配装和成长系统的入门区域。\n\nCasino Heist 同期举行，完成 Battlefield 6 与 REDSEC 合约可得 Dough，兑换主题外观。EA 页面未同时宣布折扣。",
+    "etiketler": [
+     "#Battlefield6",
+     "#REDSEC",
+     "#FreeTrial"
     ]
    }
   }
@@ -561,6 +765,36 @@
      "#CovensOfUmbra",
      "#GrindingGearGames"
     ]
+   },
+   "de": {
+    "baslik": "Path of Exile: Covens of Umbra ist auf PC und Konsole gestartet",
+    "ozet": "Die Erweiterung erschien am 13. November. Ein Sprachwechsel umgeht vorläufig einen Wegpunkt-Absturz auf Russisch.",
+    "metin": "Covens of Umbra, die neue Erweiterung des ersten Path of Exile, ging am 13. November 2026 um 22 Uhr GMT+3 gleichzeitig auf PC und Konsole live. Laut Grinding Gear Games heißt die neue Liga Coven League. Die Realms wurden zwei Stunden vorher abgeschaltet; währenddessen begann das Patchen.\n\nIm laufend aktualisierten Startbeitrag nannte das Studio ein erstes bekanntes Problem: Die Nutzung eines Wegpunkts mit russischer Spracheinstellung kann den Client abstürzen lassen. Eine Korrektur sei in Arbeit; bis dahin soll ein Sprachwechsel den Absturz verhindern. Als wir den Beitrag lasen, war noch keine veröffentlichte Korrektur aufgeführt.\n\nBuild-Vorschläge für die neue Liga stehen im Klassenbereich des offiziellen Forums. Bei Ausfall der Website verweist das Studio auf sein X-Konto.",
+    "etiketler": [
+     "#PathOfExile",
+     "#CovensOfUmbra",
+     "#GrindingGearGames"
+    ]
+   },
+   "nl": {
+    "baslik": "Path of Exile: Covens of Umbra is live op pc en console",
+    "ozet": "De uitbreiding verscheen op 13 november. Een taalwissel omzeilt voorlopig een waypointcrash met de Russische instelling.",
+    "metin": "Covens of Umbra, de nieuwe uitbreiding van de eerste Path of Exile, ging op 13 november 2026 om 22.00 uur GMT+3 tegelijk live op pc en console. Volgens Grinding Gear Games heet de nieuwe league Coven League. De realms gingen twee uur eerder offline; toen begon het patchen.\n\nIn het live bijgewerkte startbericht noemde de studio het eerste bekende probleem: een waypoint gebruiken met de gametaal op Russisch kan de client laten crashen. Het team werkt aan een oplossing. Tot die tijd zou een andere taal kiezen de crash voorkomen. Toen wij het bericht lazen, stond er nog geen uitgerolde oplossing bij.\n\nBuildsuggesties staan in het klassengedeelte van het officiële forum. Als de website onbereikbaar is, verwijst de studio voor updates naar het X-account.",
+    "etiketler": [
+     "#PathOfExile",
+     "#CovensOfUmbra",
+     "#GrindingGearGames"
+    ]
+   },
+   "zh": {
+    "baslik": "Path of Exile 的 Covens of Umbra 已上线",
+    "ozet": "扩展于11月13日登陆 PC 与主机，俄语下传送点崩溃可暂通过切换语言规避。",
+    "metin": "初代 Path of Exile 的扩展 Covens of Umbra 已于2026年11月13日 GMT+3 时间22点在 PC 和主机同步上线。Grinding Gear Games 称新赛季名为 Coven League。服务器在上线前两小时停机，期间开始补丁更新。\n\n工作室在上线当晚持续更新的帖子中公布首个已知问题：设为俄语时使用传送点可能导致客户端崩溃。团队正在修复，暂时切换其他语言应可避免。我们阅读帖子时，尚无该问题已部署修复的记录。\n\n新赛季玩家可在官方论坛职业板块寻找配装建议。网站无法访问时，工作室建议通过其 X 账号获取消息。",
+    "etiketler": [
+     "#PathOfExile",
+     "#CovensOfUmbra",
+     "#GrindingGearGames"
+    ]
    }
   }
  },
@@ -623,6 +857,36 @@
      "#FPS",
      "#Actualizacion"
     ]
+   },
+   "de": {
+    "baslik": "Selaco Chapter 2: The Machines of War ist da – mit 19 neuen Karten",
+    "ozet": "Das größte Early-Access-Update bringt 6–8 Stunden Kampagne. Alte Spielstände sind nicht kompatibel.",
+    "metin": "Selacos Entwickler veröffentlichte Chapter 2: The Machines of War am 13. November auf Steam und bezeichnet es als größtes Update der Early-Access-Phase. Laut Ankündigung ergänzt es 19 Karten und etwa 6–8 Stunden Kampagne. Wer Chapter 1 beendet hat, kann direkt einsteigen. Die Gegner-KI wurde neu aufgebaut. Dazu kommen nicht verstaubare schwere Waffen wie Miniguns und Raketenwerfer, ein Jetpack, überarbeitete Rutsch- und Ausweichbewegungen sowie Begleiter mit Follow- und Hold-Befehlen. Mutatoren lassen sich während der Kampagne in Safe Rooms ändern, hinzu kommen 16 Steam-Erfolge. Bestehende Spielstände sind nicht kompatibel. Wer die ursprüngliche Kampagne noch spielt, kann im Steam-Reiter Betas den Zweig „chapter1“ auswählen und sie in der alten Version beenden. Angekündigt sind außerdem zwei Wochen lang 33 % Steam-Rabatt und ein auf die Special Campaign konzentriertes Update im ersten Quartal 2027. Unser Rat: Bei offenem Durchlauf vor dem Aktualisieren den Zweig wählen und den aktuellen Shoppreis prüfen.",
+    "etiketler": [
+     "#Selaco",
+     "#FPS",
+     "#Update"
+    ]
+   },
+   "nl": {
+    "baslik": "Selaco Chapter 2: The Machines of War is uit met 19 nieuwe maps",
+    "ozet": "De grootste Early Access-update voegt 6–8 uur campagne toe, maar bestaande saves werken niet.",
+    "metin": "De ontwikkelaar van Selaco bracht Chapter 2: The Machines of War op 13 november uit op Steam en noemt dit de grootste Early Access-update. Volgens de aankondiging zijn er 19 nieuwe maps en ongeveer 6–8 uur campagne. Wie Chapter 1 afrondde kan direct naar de nieuwe levels. De vijandelijke AI is opnieuw opgebouwd. Er zijn zware wapens zoals miniguns en raketwerpers die je niet kunt opbergen, een jetpack, vernieuwd glijden en dashen en metgezellen met Follow- en Hold-opdrachten. Mutators zijn tijdens de campagne aan te passen in Safe Rooms; er zijn 16 nieuwe Steam-achievements. Bestaande saves zijn niet compatibel. Wie nog in de oorspronkelijke campagne zit kan in het Steam-tabblad Betas de tak ‘chapter1’ kiezen en op de oude versie verdergaan. Ook aangekondigd: twee weken 33% Steam-korting en een update rond de Special Campaign in het eerste kwartaal van 2027. Ons advies: kies vóór het bijwerken je tak als je nog bezig bent en controleer de actuele winkelprijs.",
+    "etiketler": [
+     "#Selaco",
+     "#FPS",
+     "#Update"
+    ]
+   },
+   "zh": {
+    "baslik": "Selaco 第二章上线，新增19张地图",
+    "ozet": "The Machines of War 是抢先体验以来最大更新，增加6至8小时战役，但旧存档不兼容。",
+    "metin": "Selaco 开发商11月13日在 Steam 发布 Chapter 2: The Machines of War，称其为抢先体验以来最大更新。新增19张地图与约6至8小时战役，完成 Chapter 1 的玩家可直接进入。敌人 AI 已重做，新增无法收起的转轮机枪、火箭发射器等重型武器、喷气背包、重制滑行与冲刺，以及带 Follow 和 Hold 指令的同伴系统。玩家可在战役中的 Safe Rooms 修改 Mutators，另新增16项 Steam 成就。旧存档不兼容此版本；尚未完成原战役的玩家可在 Steam 的 Betas 标签选择“chapter1”分支，以旧版继续。开发商还宣布 Steam 连续两周优惠33%，并计划2027年第一季度推出以 Special Campaign 为重点的更新。建议未完成流程者先决定分支再更新，并在商店确认现价。",
+    "etiketler": [
+     "#Selaco",
+     "#FPS",
+     "#Update"
+    ]
    }
   }
  },
@@ -684,6 +948,36 @@
      "#SlayTheSpire2",
      "#Beta",
      "#Parche"
+    ]
+   },
+   "de": {
+    "baslik": "Slay the Spire 2: Beta-Hotfix behebt Einfrieren der türkischen Timeline",
+    "ozet": "Beta v0.113.1 korrigiert türkischen Fool-Fortschritt und doppelte Run History-Einträge.",
+    "metin": "Mega Crit veröffentlichte am 14. November den Beta-Hotfix v0.113.1 für Slay the Spire 2. Er behebt das Einfrieren der Timeline beim Öffnen bestimmter Fool-Epochen auf Türkisch. Die Ansicht eines beschädigten Durchlaufs im Run History erzeugt keine doppelten Einträge mehr. Dazu kommen Übersetzungs- und Formatkorrekturen in mehreren Sprachen und neue Symbole für Dread-Kräfte. Die Ankündigung betrifft die Beta; Nutzer des Hauptzweigs sollten zuerst ihre Version prüfen. Betroffenen Beta-Spielern empfehlen wir, zu aktualisieren, den türkischen Fortschrittsbildschirm erneut zu testen und bei verbleibenden Problemen die Versionsnummer mitzumelden.",
+    "etiketler": [
+     "#SlayTheSpire2",
+     "#Beta",
+     "#Update"
+    ]
+   },
+   "nl": {
+    "baslik": "Slay the Spire 2: beta-hotfix verhelpt vastlopen van Turkse Timeline",
+    "ozet": "Beta v0.113.1 corrigeert Turkse Fool-voortgang en dubbele vermeldingen in Run History.",
+    "metin": "Mega Crit bracht op 14 november beta-hotfix v0.113.1 voor Slay the Spire 2 uit. Die verhelpt het vastlopen van de Timeline bij het openen van bepaalde Fool-tijdperken in het Turks. Een beschadigde run bekijken in Run History maakt geen dubbele vermeldingen meer. Verder zijn vertalingen en opmaak in meerdere talen gecorrigeerd en zijn er nieuwe Dread-iconen. Het betreft de beta; spelers op de hoofdversie moeten eerst hun versie controleren. Getroffen betaspelers raden we aan bij te werken, het Turkse voortgangsscherm opnieuw te proberen en resterende problemen met versienummer te melden.",
+    "etiketler": [
+     "#SlayTheSpire2",
+     "#Beta",
+     "#Update"
+    ]
+   },
+   "zh": {
+    "baslik": "Slay the Spire 2 测试补丁修复土耳其语进度冻结",
+    "ozet": "Beta v0.113.1 修复土耳其语 Fool 进度问题及 Run History 重复条目。",
+    "metin": "Mega Crit 于11月14日发布 Slay the Spire 2 测试版热修复 v0.113.1，解决土耳其语下开启部分 Fool 时期时 Timeline 冻结的问题。查看损坏的 Run History 记录也不再产生重复条目。其他变化包括多种语言的翻译及格式修正，以及 Dread 能力的新图标。公告针对测试版，主分支玩家应先确认版本。建议受影响玩家更新后重试土耳其语进度界面，若仍有问题，报告时附版本号。",
+    "etiketler": [
+     "#SlayTheSpire2",
+     "#Beta",
+     "#Update"
     ]
    }
   }
@@ -750,6 +1044,36 @@
      "#Brakkesh",
      "#Aurora"
     ]
+   },
+   "de": {
+    "baslik": "Delta Force erklärt Fraktionsaufträge und neue Wege in Brakkesh 2.0",
+    "ozet": "Der Entwicklerbeitrag beschreibt bleibenden Abzeichenfortschritt, Kontrollraumwege und Jagden auf gegnerische Trupps.",
+    "metin": "Delta Forces Entwicklerbeitrag vom 15. November erläutert Brakkesh 2.0 in Saison Aurora. Ahsarah-Aufträge verlangen die Rückeroberung eines Turms, HAAVK-Aufträge den Schutz einer Lieferung. Persönlicher Abzeichenfortschritt bleibt zwischen Durchläufen erhalten. Der Kontrollraum bietet früheren Zugang nach oben und einen geschlossenen Übergang zwischen den Flügeln. Berechtigte gegnerische Trupps können Teams bei großen Fraktionsmissionen jagen. Sie erhalten ein regelmäßig aktualisiertes Suchgebiet statt einer genauen Liveposition. Unser Rat: Prüft den Einstiegsweg und vereinbart bei einer Jagdbenachrichtigung einen Bewegungsplan.",
+    "etiketler": [
+     "#DeltaForce",
+     "#Brakkesh",
+     "#Aurora"
+    ]
+   },
+   "nl": {
+    "baslik": "Delta Force licht factieopdrachten en routes van Brakkesh 2.0 toe",
+    "ozet": "Het ontwikkelaarsbericht bespreekt blijvende badgevoortgang, controlekamerroutes en jacht op andere teams.",
+    "metin": "Delta Forces ontwikkelaarsbericht van 15 november legt Brakkesh 2.0 in seizoen Aurora uit. Ahsarah-opdrachten gaan over een toren heroveren, HAAVK-opdrachten over een levering beschermen. Persoonlijke badgevoortgang blijft tussen rondes behouden. De controlekamer biedt eerder toegang tot boven en een afgesloten doorgang tussen de vleugels. In aanmerking komende vijandelijke teams kunnen jagen op groepen die grote factiemissies uitvoeren. Ze krijgen periodiek een bijgewerkt zoekgebied in plaats van een exacte livepositie. Ons advies: bespreek de toegangsroute en spreek bij een jachtmelding een verplaatsingsplan af.",
+    "etiketler": [
+     "#DeltaForce",
+     "#Brakkesh",
+     "#Aurora"
+    ]
+   },
+   "zh": {
+    "baslik": "Delta Force 详解 Brakkesh 2.0 阵营任务及路线",
+    "ozet": "开发者介绍跨局保留的徽章进度、控制室路线与敌对小队追猎。",
+    "metin": "Delta Force 于11月15日发布文章，说明 Aurora 赛季的 Brakkesh 2.0。Ahsarah 任务涉及夺回一座塔，HAAVK 任务保护运送，个人徽章进度跨局保留。控制室让玩家更早上楼，并提供连接两翼的封闭通道。符合条件的敌方小队可追猎执行大型阵营任务的队伍，但收到的是定期刷新的搜索区域，并非实时精确位置。建议队伍事先检查进入路线，并在追猎通知出现后商定移动计划。",
+    "etiketler": [
+     "#DeltaForce",
+     "#Brakkesh",
+     "#Aurora"
+    ]
    }
   }
  },
@@ -807,6 +1131,36 @@
     "baslik": "Fable muestra en Deepwood cómo las mejoras de hechizos cambian el combate",
     "ozet": "Playground Games analiza la nueva zona y un Dash mejorado al máximo en el podcast oficial de Xbox.",
     "metin": "En el podcast oficial de Xbox del 13 de noviembre, Ralph Fulton, de Playground Games, comenta nuevas imágenes de Fable en Deepwood. El personaje de la grabación concentra sus mejoras en unos pocos hechizos, incluido Dash al máximo nivel. Fulton explica cómo combinar potencia, control de grupos y movilidad frente a varios enemigos. También aparecen Arden y pistas del argumento. Recomendamos ver la secuencia junto con los comentarios del desarrollador para valorar qué combinaciones interesan; quienes prefieran descubrir la historia sin adelantos deben tener presente que la presentación incluye esas pistas.",
+    "etiketler": [
+     "#Fable",
+     "#PlaygroundGames",
+     "#Xbox"
+    ]
+   },
+   "de": {
+    "baslik": "Fable: Deepwood-Gameplay zeigt den Einfluss der Zauberwahl auf Kämpfe",
+    "ozet": "Playground Games spricht im offiziellen Xbox-Podcast über das Gebiet und einen vollständig ausgebauten Dash.",
+    "metin": "Im Official Xbox Podcast vom 13. November erläutert Ralph Fulton von Playground Games neues Fable-Gameplay aus Deepwood. Die gezeigte Figur investiert stark in wenige Zauber, darunter einen vollständig ausgebauten Dash. Fulton erklärt, wie sich Stärke, Gruppenkontrolle und Mobilität gegen Gegnergruppen kombinieren lassen. Zu sehen sind auch Arden und Handlungshinweise. Wir empfehlen den Clip mit Entwicklerkommentar, um passende Zauberkombinationen einzuschätzen. Wer Handlungsdetails vorab vermeiden möchte, sollte wissen, dass die Präsentation solche enthält.",
+    "etiketler": [
+     "#Fable",
+     "#PlaygroundGames",
+     "#Xbox"
+    ]
+   },
+   "nl": {
+    "baslik": "Nieuw Fable-gameplay uit Deepwood toont het effect van spreukenkeuzes",
+    "ozet": "Playground Games bespreekt het nieuwe gebied en een volledig verbeterde Dash in de officiële Xbox-podcast.",
+    "metin": "In de Official Xbox Podcast van 13 november bespreekt Ralph Fulton van Playground Games nieuwe Fable-gameplay in Deepwood. Het personage investeert zwaar in enkele spreuken, waaronder een volledig verbeterde Dash. Fulton legt uit hoe kracht, groepscontrole en mobiliteit samengaan tegen groepen vijanden. Ook Arden en verhaalhints komen in beeld. Bekijk de beelden met ontwikkelaarscommentaar om te bepalen welke spreukencombinaties je aanspreken. Wie verhaaldetails vooraf wil vermijden, moet weten dat die in de presentatie zitten.",
+    "etiketler": [
+     "#Fable",
+     "#PlaygroundGames",
+     "#Xbox"
+    ]
+   },
+   "zh": {
+    "baslik": "Fable 新实机演示展示法术选择如何影响战斗",
+    "ozet": "Playground Games 在官方 Xbox 播客介绍 Deepwood 与完全升级的 Dash。",
+    "metin": "在11月13日的 Official Xbox Podcast 中，Playground Games 的 Ralph Fulton 解析了 Deepwood 区域的 Fable 新实机演示。录像角色重点投入少数法术，包括完全升级的 Dash。Fulton 解释了面对敌群时，如何结合威力、群体控制与机动性。演示还出现 Arden 和剧情线索。建议结合开发者解说观看，判断偏好的法术组合；希望避免提前了解剧情的玩家须注意其中包含相关内容。",
     "etiketler": [
      "#Fable",
      "#PlaygroundGames",
@@ -882,6 +1236,36 @@
      "#NewDawn",
      "#RiotGames"
     ]
+   },
+   "de": {
+    "baslik": "LoL New Dawn: Vorstellung im Januar, Veröffentlichung später 2027",
+    "ozet": "Riots offizieller Zeitplan trennt die ausführliche Präsentation von der späteren Veröffentlichung.",
+    "metin": "Riot veröffentlichte am 14. November den ersten Teaser zu League of Legends: New Dawn. Die offizielle LoL-Seite nennt Januar für die volle Vorstellung und einen späteren Zeitpunkt 2027 für die Veröffentlichung. Auf der New Dawn-Seite finden Spieler das Entwicklerupdate und können E-Mail-Neuigkeiten wählen. Wer danach plant, sollte Januar als Informationstermin verstehen und seine Pläne nach Riots ausführlicher Präsentation erneut prüfen.",
+    "etiketler": [
+     "#LeagueOfLegends",
+     "#NewDawn",
+     "#RiotGames"
+    ]
+   },
+   "nl": {
+    "baslik": "LoL New Dawn: onthulling in januari, release later in 2027",
+    "ozet": "Riots officiële planning scheidt de uitgebreide presentatie van de uiteindelijke release.",
+    "metin": "Riot deelde op 14 november de eerste teaser van League of Legends: New Dawn. De officiële LoL-pagina noemt januari voor de volledige onthulling en later in 2027 voor de release. Spelers kunnen op de New Dawn-pagina de ontwikkelaarsupdate bekijken en e-mailupdates aanvragen. Ons advies: zie januari als informatiemoment en bekijk je plannen opnieuw wanneer Riot de uitgebreide presentatie geeft.",
+    "etiketler": [
+     "#LeagueOfLegends",
+     "#NewDawn",
+     "#RiotGames"
+    ]
+   },
+   "zh": {
+    "baslik": "LoL New Dawn 预告：1月全面公开，2027年稍后推出",
+    "ozet": "Riot 官方日程将详细介绍与正式推出分为两个阶段。",
+    "metin": "Riot 于11月14日分享 League of Legends: New Dawn 首支预告。LoL 官方页面将全面公开安排在1月，推出则为2027年稍后。玩家可访问 New Dawn 页面查看开发者更新，并选择接收邮件。若据此安排计划，建议将1月视为信息发布节点，待 Riot 详细介绍后重新评估。",
+    "etiketler": [
+     "#LeagueOfLegends",
+     "#NewDawn",
+     "#RiotGames"
+    ]
    }
   }
  },
@@ -942,6 +1326,36 @@
     "baslik": "QSSR en PS5: Spider-Man 2 ya tiene actualización y otros juegos seguirán",
     "ozet": "PlayStation detalla calendarios diferentes para las próximas actualizaciones con QSSR.",
     "metin": "El anuncio de PlayStation del 13 de noviembre confirma que Marvel's Spider-Man 2 ya tiene su actualización QSSR en PS5. Control Resonant la recibirá en diciembre y No Man's Sky en las próximas semanas. The Finals, Arc Raiders y Hell Let Loose: Vietnam también tienen actualizaciones previstas. Recomendamos actualizar Spider-Man 2 y valorar la imagen en tu propia pantalla. Para los demás títulos, consulta sus notas de actualización antes de esperar ese soporte.",
+    "etiketler": [
+     "#PS5",
+     "#QSSR",
+     "#SpiderMan2"
+    ]
+   },
+   "de": {
+    "baslik": "PS5 QSSR: Spider-Man 2-Update ist da, weitere Spiele folgen",
+    "ozet": "PlayStation bestätigt unterschiedliche Zeitfenster für kommende QSSR-Spielupdates.",
+    "metin": "PlayStations Ankündigung vom 13. November bestätigt das PS5-QSSR-Update für Marvel's Spider-Man 2. Control Resonant soll im Dezember folgen, No Man's Sky in den kommenden Wochen. Für The Finals, Arc Raiders und Hell Let Loose: Vietnam stehen ebenfalls Updates an. Wir empfehlen, Spider-Man 2 zu aktualisieren und das Bild am eigenen Bildschirm zu beurteilen. Bei den anderen Spielen sollten Nutzer die jeweiligen Patchnotes verfolgen, bevor sie dieselbe Unterstützung erwarten.",
+    "etiketler": [
+     "#PS5",
+     "#QSSR",
+     "#SpiderMan2"
+    ]
+   },
+   "nl": {
+    "baslik": "PS5 QSSR: Spider-Man 2-update is live, meer games volgen",
+    "ozet": "PlayStation bevestigt verschillende periodes voor volgende QSSR-gameupdates.",
+    "metin": "PlayStations aankondiging van 13 november bevestigt de PS5 QSSR-update voor Marvel's Spider-Man 2. Control Resonant staat voor december gepland, No Man's Sky volgt in de komende weken. Ook The Finals, Arc Raiders en Hell Let Loose: Vietnam krijgen updates. Werk Spider-Man 2 bij en beoordeel het beeld op je eigen scherm. Volg voor andere games hun eigen patchnotes voordat je dezelfde ondersteuning verwacht.",
+    "etiketler": [
+     "#PS5",
+     "#QSSR",
+     "#SpiderMan2"
+    ]
+   },
+   "zh": {
+    "baslik": "PS5 QSSR：Spider-Man 2 更新已上线",
+    "ozet": "PlayStation 确认其他游戏的 QSSR 更新将按不同时间推出。",
+    "metin": "PlayStation 于11月13日宣布 Marvel's Spider-Man 2 已获得 PS5 QSSR 更新。Control Resonant 计划12月更新，No Man's Sky 在未来几周跟进。The Finals、Arc Raiders 和 Hell Let Loose: Vietnam 也将更新。建议更新 Spider-Man 2 后，在自己的屏幕判断效果；其他游戏请关注各自补丁说明，再期待相同支持。",
     "etiketler": [
      "#PS5",
      "#QSSR",
@@ -1012,6 +1426,36 @@
      "#PS5",
      "#RPG"
     ]
+   },
+   "de": {
+    "baslik": "Guild Saga: Vanished Worlds erscheint im Mai 2027 für PS5",
+    "ozet": "Ocelot Technologies nennt das PS5-Veröffentlichungsfenster und zeigt einen neuen Trailer.",
+    "metin": "Ocelot Technologies kündigte Guild Saga: Vanished Worlds im PlayStation Blog vom 13. November für Mai 2027 auf PS5 an. Das taktische Rollenspiel bietet rundenbasierte Kämpfe mit etwa 200 Fertigkeiten aus zehn Disziplinen, einschließlich Wechselwirkungen mit Wetter und Oberflächen. Interessierte können den neuen Trailer ansehen und das Spiel im PlayStation Store auf die Wunschliste setzen. Der genaue Erscheinungstag folgt. Wir empfehlen, Gruppen- und Fertigkeitskombinationen anzusehen, um die Eignung des Kampfsystems einzuschätzen.",
+    "etiketler": [
+     "#GuildSaga",
+     "#PS5",
+     "#RPG"
+    ]
+   },
+   "nl": {
+    "baslik": "Guild Saga: Vanished Worlds komt in mei 2027 naar PS5",
+    "ozet": "Ocelot Technologies onthult de PS5-releaseperiode met een nieuwe trailer.",
+    "metin": "Ocelot Technologies kondigde Guild Saga: Vanished Worlds in het PlayStation Blog-bericht van 13 november aan voor mei 2027 op PS5. De tactische RPG heeft beurtgebaseerde gevechten met ongeveer 200 vaardigheden in tien disciplines, inclusief weer- en oppervlakte-interacties. Geïnteresseerden kunnen de trailer bekijken en de game op hun PlayStation Store-verlanglijst zetten. Een exacte releasedag volgt. Bekijk de groeps- en vaardigheidscombinaties om te beoordelen of de gevechten je liggen.",
+    "etiketler": [
+     "#GuildSaga",
+     "#PS5",
+     "#RPG"
+    ]
+   },
+   "zh": {
+    "baslik": "Guild Saga: Vanished Worlds 将于2027年5月登陆 PS5",
+    "ozet": "Ocelot Technologies 公布 PS5 发售窗口并带来新预告。",
+    "metin": "Ocelot Technologies 在11月13日 PlayStation Blog 文章中宣布，Guild Saga: Vanished Worlds 将于2027年5月登陆 PS5。这款战术 RPG 采用回合制战斗，十个学科约有200种技能，包括天气与地表互动。PS5 玩家可观看新预告并在 PlayStation Store 加入愿望单。具体发售日稍后公布。建议查看队伍与技能组合，判断战斗是否适合自己。",
+    "etiketler": [
+     "#GuildSaga",
+     "#PS5",
+     "#RPG"
+    ]
    }
   }
  },
@@ -1070,6 +1514,36 @@
      "#WoWForever",
      "#Blizzard"
     ]
+   },
+   "de": {
+    "baslik": "WoW: Forever-Hotfixes: Angelwettbewerb und Aktionsleistenkorrektur",
+    "ozet": "Blizzards Hotfixliste vom 13. November 2026 behandelt den wöchentlichen Angelwettbewerb und einen Aktionsleistenfehler.",
+    "metin": "Laut Blizzards WoW: Forever-Hotfixnotes vom 13. November 2026 können deutlich mehr Spieler in jedem Regelwerk des wöchentlichen Stranglethorn Fishing Extravaganza-Wettbewerbs gewinnen. Die Arbeit an der Leistung geht laut Notizen weiter. Ein Fehler, der die Aktionsleiste für Secondary Talents zurücksetzte, wurde behoben.",
+    "etiketler": [
+     "#WoW",
+     "#WoWForever",
+     "#Blizzard"
+    ]
+   },
+   "nl": {
+    "baslik": "WoW: Forever-hotfixes: viswedstrijd en Action Bar-oplossing",
+    "ozet": "Blizzards hotfixlijst van 13 november 2026 behandelt het wekelijkse vistoernooi en een Action Bar-fout.",
+    "metin": "Volgens Blizzards WoW: Forever-hotfixnotes van 13 november 2026 kunnen veel meer spelers winnen in elke regelvariant van het wekelijkse Stranglethorn Fishing Extravaganza-toernooi. Het werk aan prestaties gaat volgens de notities door. Ook is een fout opgelost die de Action Bar voor Secondary Talents terugzette.",
+    "etiketler": [
+     "#WoW",
+     "#WoWForever",
+     "#Blizzard"
+    ]
+   },
+   "zh": {
+    "baslik": "WoW: Forever 热修复调整钓鱼赛并修复动作条",
+    "ozet": "Blizzard 2026年11月13日热修复涉及每周钓鱼赛与动作条问题。",
+    "metin": "据 Blizzard 于2026年11月13日发布的 WoW: Forever 热修复说明，每周 Stranglethorn Fishing Extravaganza 钓鱼赛各规则下可获胜的玩家大幅增加。说明称性能改进仍继续。此外，Secondary Talents 的 Action Bar 被重置的问题已修复。",
+    "etiketler": [
+     "#WoW",
+     "#WoWForever",
+     "#Blizzard"
+    ]
    }
   }
  },
@@ -1123,6 +1597,36 @@
     "baslik": "Blizzard publica el relato corto de WoW: Forever \"Cost of Honor\"",
     "ozet": "El sitio oficial de WoW ya permite ver el relato corto de WoW: Forever \"Cost of Honor\".",
     "metin": "Blizzard ha puesto a disposición en el sitio oficial de World of Warcraft el relato corto de WoW: Forever \"Cost of Honor\". La publicación es del 13 de noviembre de 2026. La página oficial ofrece los detalles de la historia.",
+    "etiketler": [
+     "#WoW",
+     "#WoWForever",
+     "#Blizzard"
+    ]
+   },
+   "de": {
+    "baslik": "Blizzard veröffentlicht die WoW: Forever-Kurzgeschichte „Cost of Honor“",
+    "ozet": "„Cost of Honor“ lässt sich jetzt auf der offiziellen WoW-Website ansehen.",
+    "metin": "Blizzard hat die WoW: Forever-Kurzgeschichte „Cost of Honor“ auf der offiziellen World of Warcraft-Website zum Ansehen bereitgestellt. Der Beitrag ist auf den 13. November 2026 datiert. Die offizielle Seite enthält die Einzelheiten zur Geschichte.",
+    "etiketler": [
+     "#WoW",
+     "#WoWForever",
+     "#Blizzard"
+    ]
+   },
+   "nl": {
+    "baslik": "Blizzard publiceert WoW: Forever-kortverhaal ‘Cost of Honor’",
+    "ozet": "‘Cost of Honor’ is nu te bekijken op de officiële WoW-site.",
+    "metin": "Blizzard heeft het WoW: Forever-kortverhaal ‘Cost of Honor’ beschikbaar gemaakt op de officiële World of Warcraft-site. Het bericht is gedateerd op 13 november 2026. De officiële pagina bevat de details van het verhaal.",
+    "etiketler": [
+     "#WoW",
+     "#WoWForever",
+     "#Blizzard"
+    ]
+   },
+   "zh": {
+    "baslik": "Blizzard 发布 WoW: Forever 短篇《Cost of Honor》",
+    "ozet": "WoW 官网已提供 WoW: Forever 短篇《Cost of Honor》供观看。",
+    "metin": "Blizzard 在 World of Warcraft 官方网站提供 WoW: Forever 短篇《Cost of Honor》供观看。文章日期为2026年11月13日。故事详情可在官方页面查看。",
     "etiketler": [
      "#WoW",
      "#WoWForever",
@@ -1188,6 +1692,36 @@
      "#D2R",
      "#Blizzard"
     ]
+   },
+   "de": {
+    "baslik": "Diablo-Jubiläumsevent Legacy of Terror startet in Diablo II: Resurrected",
+    "ozet": "Das Event läuft vom 13. bis 19. November 2026 und läutet die Ladder von Saison 16 ein.",
+    "metin": "Laut Blizzard läuft Legacy of Terror zum 30. Diablo-Jubiläum in Diablo II: Resurrected vom 13. November, 17:00 Uhr PST, bis zum 19. November, 17:00 Uhr PST. In diesem Zeitraum startet die Ladder von Saison 16. Das Event bringt alle 6 Stunden einen garantierten Diablo Clone auf Hell-Schwierigkeit und Terrorized Zones in allen Gebieten nach Baal.",
+    "etiketler": [
+     "#Diablo",
+     "#D2R",
+     "#Blizzard"
+    ]
+   },
+   "nl": {
+    "baslik": "Diablo-jubileumevenement Legacy of Terror start in Diablo II: Resurrected",
+    "ozet": "Het evenement loopt van 13 tot 19 november 2026 en start de Ladder van seizoen 16.",
+    "metin": "Volgens Blizzard loopt Legacy of Terror voor Diablo’s 30-jarig bestaan in Diablo II: Resurrected van 13 november om 17.00 uur PST tot 19 november om 17.00 uur PST. De Ladder van seizoen 16 begint in die periode. Het evenement geeft elke 6 uur een gegarandeerde Diablo Clone op Hell-moeilijkheid en Terrorized Zones in elke zone na Baal.",
+    "etiketler": [
+     "#Diablo",
+     "#D2R",
+     "#Blizzard"
+    ]
+   },
+   "zh": {
+    "baslik": "Diablo II: Resurrected 开启30周年活动",
+    "ozet": "Legacy of Terror 于2026年11月13日至19日举行，并迎来第16赛季天梯。",
+    "metin": "据 Blizzard，Diablo 30周年活动 Legacy of Terror 在 Diablo II: Resurrected 中从11月13日 PST 时间17点持续至11月19日 PST 时间17点。第16赛季天梯期间开启。Hell 难度每6小时保证出现一次 Diablo Clone，击败 Baal 后各区域均有 Terrorized Zones。",
+    "etiketler": [
+     "#Diablo",
+     "#D2R",
+     "#Blizzard"
+    ]
    }
   }
  },
@@ -1238,6 +1772,33 @@
     "baslik": "Nuevos servidores de Knight Online abrieron el 12 de noviembre",
     "ozet": "NTTGame anunció que los nuevos servidores abrieron el 12 de noviembre de 2026 a las 16:00.",
     "metin": "Según el anuncio oficial de NTTGame para Knight Online, los nuevos servidores abrieron el 12 de noviembre de 2026 a las 16:00. El anuncio ofrece el reparto de canales, campamentos y eventos en una tabla, que menciona los eventos Chaos, Border Defense War, Forgotten Temple, Lunar War y Ronark Land.",
+    "etiketler": [
+     "#KnightOnline",
+     "#NTTGame"
+    ]
+   },
+   "de": {
+    "baslik": "Neue Knight Online-Server wurden am 12. November geöffnet",
+    "ozet": "NTTGame meldete die Eröffnung am 12. November 2026 um 16:00 Uhr.",
+    "metin": "Laut offizieller Knight Online-Ankündigung von NTTGame wurden am 12. November 2026 um 16:00 Uhr neue Server geöffnet. Eine Tabelle zeigt die Verteilung von Kanälen, Lagern und Events, darunter Chaos, Border Defense War, Forgotten Temple, Lunar War und Ronark Land.",
+    "etiketler": [
+     "#KnightOnline",
+     "#NTTGame"
+    ]
+   },
+   "nl": {
+    "baslik": "Nieuwe Knight Online-servers geopend op 12 november",
+    "ozet": "NTTGame kondigde de opening aan voor 12 november 2026 om 16.00 uur.",
+    "metin": "Volgens de officiële Knight Online-aankondiging van NTTGame gingen op 12 november 2026 om 16.00 uur nieuwe servers open. Een tabel toont kanalen, kampen en evenementen, waaronder Chaos, Border Defense War, Forgotten Temple, Lunar War en Ronark Land.",
+    "etiketler": [
+     "#KnightOnline",
+     "#NTTGame"
+    ]
+   },
+   "zh": {
+    "baslik": "Knight Online 新服务器已于11月12日开放",
+    "ozet": "NTTGame 宣布新服务器于2026年11月12日16点开放。",
+    "metin": "据 NTTGame 的 Knight Online 官方公告，新服务器于2026年11月12日16点开放。公告以表格列出频道、营地与活动分布，包括 Chaos、Border Defense War、Forgotten Temple、Lunar War 和 Ronark Land。",
     "etiketler": [
      "#KnightOnline",
      "#NTTGame"
@@ -1296,6 +1857,33 @@
      "#KnightOnline",
      "#NTTGame"
     ]
+   },
+   "de": {
+    "baslik": "Knight Online-Update: Event Manager-NPC-Gegenstände und beendete Events",
+    "ozet": "Die Updatemeldung vom 12. November 2026 behandelt den Event Manager-NPC und ausgelaufene Events.",
+    "metin": "NTTGames Knight Online-Updatemeldung vom 12. November 2026 behandelt die Gegenstände beim Event Manager-NPC. Laut Mitteilung sind Knight Marble, Manes' Arena, die Pathos Gloves-Verkaufsaktion und das Halloween-Event beendet.",
+    "etiketler": [
+     "#KnightOnline",
+     "#NTTGame"
+    ]
+   },
+   "nl": {
+    "baslik": "Knight Online-update: Event Manager NPC-voorwerpen en afgelopen evenementen",
+    "ozet": "De updateaankondiging van 12 november 2026 gaat over de Event Manager NPC en beëindigde evenementen.",
+    "metin": "NTTGames Knight Online-updateaankondiging van 12 november 2026 behandelt de voorwerpen bij de Event Manager NPC. Volgens het bericht zijn Knight Marble, Manes' Arena, de Pathos Gloves-verkoopactie en het Halloween-evenement afgelopen.",
+    "etiketler": [
+     "#KnightOnline",
+     "#NTTGame"
+    ]
+   },
+   "zh": {
+    "baslik": "Knight Online 更新：活动 NPC 物品及结束的活动",
+    "ozet": "2026年11月12日公告涉及 Event Manager NPC 与已结束活动。",
+    "metin": "NTTGame 于2026年11月12日发布的 Knight Online 更新公告介绍 Event Manager NPC 的物品。公告称 Knight Marble、Manes' Arena、Pathos Gloves 物品销售活动及 Halloween 活动已结束。",
+    "etiketler": [
+     "#KnightOnline",
+     "#NTTGame"
+    ]
    }
   }
  },
@@ -1343,6 +1931,33 @@
     "baslik": "Ya está disponible la actualización v43.10 Treasure Hunters de Fortnite",
     "ozet": "Añade un botón de densidad de la cuadrícula del Casillero, una opción de Recursos de alta calidad para PC y nuevos Sprites.",
     "metin": "Según las notas de la actualización v43.10 Treasure Hunters de Epic Games, se añadió un botón de densidad para la cuadrícula del Casillero y una opción de Recursos de alta calidad para PC en el lanzador de Epic. Los nuevos Sprites y el Buggy Captain's Day llegan el 12 de noviembre, Mini Miku y Squiplash el 15 de noviembre, y Captain's Day Miku y Teto también el 15 de noviembre. Los Cursed Sprites se refuerzan el 14 de noviembre.",
+    "etiketler": [
+     "#Fortnite",
+     "#EpicGames"
+    ]
+   },
+   "de": {
+    "baslik": "Fortnite v43.10: Treasure Hunters-Update ist verfügbar",
+    "ozet": "Neu sind eine Dichte-Schaltfläche im Locker, High Quality Assets für PC und Sprites.",
+    "metin": "Laut Epic Games' Patchnotes zu v43.10 Treasure Hunters wurde eine Schaltfläche für die Rasterdichte im Locker ergänzt, außerdem High Quality Assets für PC im Epic-Launcher. Neue Sprites und Buggy Captain's Day kommen am 12. November, Mini Miku und Squiplash am 15. November sowie Captain's Day Miku und Teto ebenfalls am 15. November. Cursed Sprites werden am 14. November verstärkt.",
+    "etiketler": [
+     "#Fortnite",
+     "#EpicGames"
+    ]
+   },
+   "nl": {
+    "baslik": "Fortnite v43.10 Treasure Hunters-update is uit",
+    "ozet": "De update voegt Locker-rasterdichtheid, High Quality Assets voor pc en nieuwe Sprites toe.",
+    "metin": "Volgens de v43.10 Treasure Hunters-patchnotes van Epic Games is er een knop voor de rasterdichtheid van de Locker toegevoegd, plus High Quality Assets voor pc in de Epic-launcher. Nieuwe Sprites en Buggy Captain's Day komen op 12 november, Mini Miku en Squiplash op 15 november en Captain's Day Miku en Teto ook op 15 november. Cursed Sprites worden op 14 november versterkt.",
+    "etiketler": [
+     "#Fortnite",
+     "#EpicGames"
+    ]
+   },
+   "zh": {
+    "baslik": "Fortnite v43.10 Treasure Hunters 更新上线",
+    "ozet": "新增 Locker 网格密度按钮、PC 高质量资源选项与 Sprites。",
+    "metin": "据 Epic Games 的 v43.10 Treasure Hunters 更新说明，Locker 新增网格密度按钮，Epic 启动器的 PC 版新增 High Quality Assets 选项。新 Sprites 与 Buggy Captain's Day 于11月12日到来；Mini Miku、Squiplash、Captain's Day Miku 和 Teto 均于11月15日到来。Cursed Sprites 将于11月14日强化。",
     "etiketler": [
      "#Fortnite",
      "#EpicGames"
@@ -1401,6 +2016,33 @@
      "#VALORANT",
      "#RiotGames"
     ]
+   },
+   "de": {
+    "baslik": "VALORANT 13.10: Replay-Lesezeichen und neue Assist-Regeln",
+    "ozet": "Patch 13.10 bringt Replay-Lesezeichen, geänderte Assist-Regeln und Gauntlet: Glitched-Updates.",
+    "metin": "Laut Riot Games' Patchnotes zu 13.10 lassen sich Replays mit Lesezeichen versehen. Ein Schadensassist erfordert mehr als 10 Schaden innerhalb von 3 Sekunden vor dem Kill eines Teammitglieds. Ein Heilungsassist zählt nur, wenn der geheilte Spieler innerhalb von 10 Sekunden einen Kill erzielt. Gauntlet: Glitched erhält Änderungen für Cypher, Skye und Hush.",
+    "etiketler": [
+     "#VALORANT",
+     "#RiotGames"
+    ]
+   },
+   "nl": {
+    "baslik": "VALORANT 13.10: replaybladwijzers en nieuwe assistregels",
+    "ozet": "Patch 13.10 brengt replaybladwijzers, gewijzigde assistregels en Gauntlet: Glitched-updates.",
+    "metin": "Volgens Riot Games’ 13.10-patchnotes kun je replays nu van bladwijzers voorzien. Een schade-assist vereist meer dan 10 schade binnen 3 seconden vóór een kill van een teamgenoot. Een genezingsassist telt alleen als de genezen speler binnen 10 seconden een kill maakt. Gauntlet: Glitched krijgt updates voor Cypher, Skye en Hush.",
+    "etiketler": [
+     "#VALORANT",
+     "#RiotGames"
+    ]
+   },
+   "zh": {
+    "baslik": "VALORANT 13.10：回放书签与新助攻规则",
+    "ozet": "13.10补丁带来回放书签、助攻规则调整与 Gauntlet: Glitched 更新。",
+    "metin": "据 Riot Games 的13.10补丁说明，玩家现可为回放添加书签。伤害助攻要求在队友击杀前3秒内造成超过10点伤害；治疗助攻仅在被治疗玩家于10秒内击杀时计算。Gauntlet: Glitched 也为 Cypher、Skye 和 Hush 带来更新。",
+    "etiketler": [
+     "#VALORANT",
+     "#RiotGames"
+    ]
    }
   }
  },
@@ -1451,6 +2093,33 @@
     "baslik": "Minecraft 26.4 Snapshot 8: arreglo del vuelo del Ender Dragon y nuevos idiomas",
     "ozet": "La Snapshot 8 corrige el vuelo del Ender Dragon y añade javanés, chavacano y ajustes de la nieve.",
     "metin": "La Minecraft 26.4 Snapshot 8, publicada en Minecraft.net, corrige un error del vuelo del Ender Dragon. También añade compatibilidad con los idiomas javanés y chavacano y algunos ajustes de la nieve. Los mobs no-muertos ahora son inmunes a la congelación.",
+    "etiketler": [
+     "#Minecraft",
+     "#Mojang"
+    ]
+   },
+   "de": {
+    "baslik": "Minecraft 26.4 Snapshot 8: Drachenflug korrigiert, neue Sprachen",
+    "ozet": "Snapshot 8 korrigiert den Flug des Ender Dragon und ergänzt Javanisch, Chavacano und Schneeanpassungen.",
+    "metin": "Minecraft 26.4 Snapshot 8 auf Minecraft.net behebt einen Fehler beim Flug des Ender Dragon. Hinzu kommen Unterstützung für Javanisch und Chavacano sowie Änderungen am Schnee. Untote Kreaturen sind nun gegen Freezing immun.",
+    "etiketler": [
+     "#Minecraft",
+     "#Mojang"
+    ]
+   },
+   "nl": {
+    "baslik": "Minecraft 26.4 Snapshot 8: drakenvlucht hersteld en nieuwe talen",
+    "ozet": "Snapshot 8 verhelpt een Ender Dragon-vliegfout en voegt Javaans, Chavacano en sneeuwcorrecties toe.",
+    "metin": "Minecraft 26.4 Snapshot 8 op Minecraft.net verhelpt een fout met de vlucht van de Ender Dragon. Ook zijn Javaans en Chavacano en enkele sneeuwaanpassingen toegevoegd. Ondode mobs zijn nu immuun voor Freezing.",
+    "etiketler": [
+     "#Minecraft",
+     "#Mojang"
+    ]
+   },
+   "zh": {
+    "baslik": "Minecraft 26.4 Snapshot 8 修复飞行并增添语言",
+    "ozet": "Snapshot 8 修复 Ender Dragon 飞行，新增爪哇语、Chavacano 及雪的调整。",
+    "metin": "Minecraft.net 发布的 Minecraft 26.4 Snapshot 8 修复 Ender Dragon 飞行错误，新增爪哇语、Chavacano 支持，并对雪作一些调整。亡灵生物现免疫 Freezing。",
     "etiketler": [
      "#Minecraft",
      "#Mojang"
@@ -1508,6 +2177,36 @@
     "baslik": "WoW: Forever ya está disponible: Discord, mando y un adelanto de Taldramir",
     "ozet": "El resumen semanal de Blizzard del 6 de noviembre de 2026 anuncia que WoW: Forever ya está disponible.",
     "metin": "El resumen semanal de Blizzard del 6 de noviembre de 2026 anuncia que WoW: Forever ya está disponible. La publicación destaca la conexión con Discord, la compatibilidad con mandos y un adelanto de Taldramir. Los detalles están en el sitio oficial de World of Warcraft.",
+    "etiketler": [
+     "#WoW",
+     "#WoWForever",
+     "#Blizzard"
+    ]
+   },
+   "de": {
+    "baslik": "WoW: Forever ist da: Discord, Gamepads und Taldramir-Vorschau",
+    "ozet": "Blizzards Wochenbeitrag vom 6. November 2026 meldet den Start von WoW: Forever.",
+    "metin": "Blizzards Wochenbeitrag vom 6. November 2026 kündigt den Start von WoW: Forever an. Er hebt die Verbindung über Discord, Gamepad-Unterstützung und eine Vorschau auf Taldramir hervor. Einzelheiten stehen auf der offiziellen World of Warcraft-Website.",
+    "etiketler": [
+     "#WoW",
+     "#WoWForever",
+     "#Blizzard"
+    ]
+   },
+   "nl": {
+    "baslik": "WoW: Forever is live: Discord, gamepads en Taldramir-preview",
+    "ozet": "Blizzards weekbericht van 6 november 2026 meldt de start van WoW: Forever.",
+    "metin": "Blizzards weekbericht van 6 november 2026 kondigt aan dat WoW: Forever live is. Het belicht contact houden via Discord, gamepadondersteuning en een Taldramir-preview. Details staan op de officiële World of Warcraft-site.",
+    "etiketler": [
+     "#WoW",
+     "#WoWForever",
+     "#Blizzard"
+    ]
+   },
+   "zh": {
+    "baslik": "WoW: Forever 上线，介绍 Discord 与手柄支持",
+    "ozet": "Blizzard 2026年11月6日每周文章宣布 WoW: Forever 上线。",
+    "metin": "Blizzard 于2026年11月6日的每周文章宣布 WoW: Forever 已上线，重点介绍通过 Discord 保持联系、手柄支持及 Taldramir 预览。详情见 World of Warcraft 官方网站。",
     "etiketler": [
      "#WoW",
      "#WoWForever",
@@ -1573,6 +2272,36 @@
      "#PoE2",
      "#ExileCon"
     ]
+   },
+   "de": {
+    "baslik": "Path of Exile 2 wird am 11. Dezember Free-to-play",
+    "ozet": "Laut ExileCon 2026 kommen auch Akt 5 und 6, Shadow, Duelist und eine neue Liga.",
+    "metin": "Laut Grinding Gear Games' Ankündigungen auf der ExileCon 2026 wird Path of Exile 2 am 11. Dezember (PST) Free-to-play. Dasselbe Update bringt Akt 5 und 6, die Klassen Shadow und Duelist sowie die Liga „Conquerors of Wraeclast“.",
+    "etiketler": [
+     "#PathOfExile2",
+     "#PoE2",
+     "#ExileCon"
+    ]
+   },
+   "nl": {
+    "baslik": "Path of Exile 2 wordt op 11 december free-to-play",
+    "ozet": "Volgens ExileCon 2026 komen Acts 5 en 6, Shadow, Duelist en een nieuwe league.",
+    "metin": "Volgens Grinding Gear Games’ ExileCon 2026-aankondigingen wordt Path of Exile 2 op 11 december (PST) free-to-play. Dezelfde update brengt Acts 5 en 6, de klassen Shadow en Duelist en de league ‘Conquerors of Wraeclast’.",
+    "etiketler": [
+     "#PathOfExile2",
+     "#PoE2",
+     "#ExileCon"
+    ]
+   },
+   "zh": {
+    "baslik": "Path of Exile 2 将于12月11日免费游玩",
+    "ozet": "据 ExileCon 2026，第5与第6幕、Shadow、Duelist 及新赛季同期到来。",
+    "metin": "据 Grinding Gear Games 在 ExileCon 2026 的公告，Path of Exile 2 将于12月11日（PST）免费游玩。同次更新带来第5与第6幕、Shadow 和 Duelist 职业，以及“Conquerors of Wraeclast”赛季。",
+    "etiketler": [
+     "#PathOfExile2",
+     "#PoE2",
+     "#ExileCon"
+    ]
    }
   }
  },
@@ -1626,6 +2355,36 @@
     "baslik": "League of Legends 26.22: aspectos K/DA, actualización de Mel y equilibrio",
     "ozet": "El parche 26.22 trae aspectos K/DA, una actualización de Mel y cambios en ARAM Mayhem.",
     "metin": "Según las notas del parche 26.22 de Riot Games, llegan aspectos K/DA y una actualización de jugabilidad de Mel, además de cambios en ARAM Mayhem. En el equilibrio de la Grieta del Invocador, Corki y Rumble reciben mejoras mientras que Locke y Yasuo reciben nerfeos; también se ajustan el Arco de Doran y las Grebas glotonas.",
+    "etiketler": [
+     "#LeagueOfLegends",
+     "#LoL",
+     "#RiotGames"
+    ]
+   },
+   "de": {
+    "baslik": "League of Legends 26.22: K/DA-Skins, Mel-Update und Balanceänderungen",
+    "ozet": "Patch 26.22 bringt K/DA-Skins, ein Gameplay-Update für Mel und ARAM Mayhem-Änderungen.",
+    "metin": "Laut Riot Games' Patchnotes zu 26.22 kommen K/DA-Skins, ein Gameplay-Update für Mel und Änderungen an ARAM Mayhem. Auf Summoner's Rift werden Corki und Rumble verstärkt, Locke und Yasuo abgeschwächt. Doran's Bow und Gluttonous Greaves werden ebenfalls angepasst.",
+    "etiketler": [
+     "#LeagueOfLegends",
+     "#LoL",
+     "#RiotGames"
+    ]
+   },
+   "nl": {
+    "baslik": "League of Legends 26.22: K/DA-skins, Mel-update en balanswijzigingen",
+    "ozet": "Patch 26.22 brengt K/DA-skins, een Mel-gameplay-update en ARAM Mayhem-wijzigingen.",
+    "metin": "Volgens Riot Games’ 26.22-patchnotes komen K/DA-skins, een gameplay-update voor Mel en wijzigingen aan ARAM Mayhem. In Summoner's Rift worden Corki en Rumble sterker, Locke en Yasuo zwakker. Doran's Bow en Gluttonous Greaves worden ook aangepast.",
+    "etiketler": [
+     "#LeagueOfLegends",
+     "#LoL",
+     "#RiotGames"
+    ]
+   },
+   "zh": {
+    "baslik": "League of Legends 26.22：K/DA 与 Mel 更新",
+    "ozet": "26.22补丁带来 K/DA 皮肤、Mel 玩法更新及 ARAM Mayhem 调整。",
+    "metin": "据 Riot Games 的26.22补丁说明，K/DA 皮肤、Mel 玩法更新与 ARAM Mayhem 调整将上线。Summoner's Rift 中 Corki、Rumble 加强，Locke、Yasuo 削弱，Doran's Bow 与 Gluttonous Greaves 也将调整。",
     "etiketler": [
      "#LeagueOfLegends",
      "#LoL",
@@ -1687,6 +2446,33 @@
      "#PUBG",
      "#KRAFTON"
     ]
+   },
+   "de": {
+    "baslik": "PUBG 44.1: PUBG x IVE und Änderungen an Rondo",
+    "ozet": "Update 44.1 startet auf PC am 4. November und auf Konsole am 12. November mit der PUBG x IVE-Kooperation.",
+    "metin": "Laut PUBG: BATTLEGROUNDS 44.1-Patchnotes läuft die PC-Wartung am 4. November von 00:00 bis 08:30 Uhr UTC und die Konsolenwartung am 12. November von 01:00 bis 09:00 Uhr UTC. Neu sind PUBG x IVE auf Rondo, Xeno Point: Hell und „HLB: Dawnbreakers of Rondo“. Dazu kommen Änderungen an der Fahrzeughaltbarkeit und PGC 2026-Kartenthemen.",
+    "etiketler": [
+     "#PUBG",
+     "#KRAFTON"
+    ]
+   },
+   "nl": {
+    "baslik": "PUBG 44.1: PUBG x IVE en wijzigingen aan Rondo",
+    "ozet": "Update 44.1 verschijnt op 4 november op pc en 12 november op console, met PUBG x IVE.",
+    "metin": "Volgens de PUBG: BATTLEGROUNDS 44.1-patchnotes is het pc-onderhoud op 4 november van 00.00 tot 08.30 uur UTC en consoleonderhoud op 12 november van 01.00 tot 09.00 uur UTC. De update brengt PUBG x IVE op Rondo, Xeno Point: Hell en ‘HLB: Dawnbreakers of Rondo’. Ook zijn voertuighoudbaarheid en PGC 2026-mapthema’s aangepast.",
+    "etiketler": [
+     "#PUBG",
+     "#KRAFTON"
+    ]
+   },
+   "zh": {
+    "baslik": "PUBG 44.1 带来 PUBG x IVE 联动与 Rondo 调整",
+    "ozet": "44.1更新于11月4日登陆 PC、11月12日登陆主机，加入 PUBG x IVE 联动。",
+    "metin": "据 PUBG: BATTLEGROUNDS 44.1补丁说明，PC 维护为11月4日 UTC 时间00:00至08:30，主机维护为11月12日 UTC 时间01:00至09:00。更新将在 Rondo 带来 PUBG x IVE 联动，另有 Xeno Point: Hell 和“HLB: Dawnbreakers of Rondo”，调整载具耐久度并加入 PGC 2026 地图主题。",
+    "etiketler": [
+     "#PUBG",
+     "#KRAFTON"
+    ]
    }
   }
  },
@@ -1740,6 +2526,36 @@
     "baslik": "Xbox Wire: compra antes del 19 de noviembre y recibe el Vintage Vice City Pack y un mes de GTA+",
     "ozet": "Para compras antes de las 23:59 del 19 de noviembre; preinstalación abierta en Xbox.",
     "metin": "Según la lista de la semana de lanzamiento de Xbox Wire, quien compre el juego antes de las 23:59:59 del 19 de noviembre de 2026 recibe el Vintage Vice City Pack y un mes de GTA+. La preinstalación está abierta en Xbox Series X|S y el streaming en Xbox Cloud Gaming empieza el 19 de noviembre a la 1:00 ET.",
+    "etiketler": [
+     "#GTA6",
+     "#GTAVI",
+     "#Xbox"
+    ]
+   },
+   "de": {
+    "baslik": "Xbox Wire: Kauf bis 19. November bringt Vice City Pack und einen Monat GTA+",
+    "ozet": "Für Käufe vor 23:59 Uhr am 19. November; der Xbox-Vorabdownload ist offen.",
+    "metin": "Laut Xbox Wires Startwochenliste sind bei Kauf vor dem 19. November 2026, 23:59:59 Uhr, das Vintage Vice City Pack und ein Monat GTA+ enthalten. Der Vorabdownload auf Xbox Series X|S ist geöffnet. Xbox Cloud Gaming-Streaming beginnt am 19. November um 1 Uhr ET.",
+    "etiketler": [
+     "#GTA6",
+     "#GTAVI",
+     "#Xbox"
+    ]
+   },
+   "nl": {
+    "baslik": "Xbox Wire: koop vóór 19 november voor Vice City Pack en een maand GTA+",
+    "ozet": "Voor aankopen vóór 23.59 uur op 19 november; vooraf installeren op Xbox is mogelijk.",
+    "metin": "Volgens Xbox Wire’s releaseweekoverzicht krijg je bij aankoop vóór 19 november 2026 om 23.59.59 uur het Vintage Vice City Pack en een maand GTA+. Vooraf installeren op Xbox Series X|S is mogelijk. Xbox Cloud Gaming-streaming begint op 19 november om 1.00 uur ET.",
+    "etiketler": [
+     "#GTA6",
+     "#GTAVI",
+     "#Xbox"
+    ]
+   },
+   "zh": {
+    "baslik": "Xbox Wire：限时购买赠 Vintage Vice City Pack",
+    "ozet": "11月19日23:59前购买可获礼包与一个月 GTA+，Xbox 已开放预安装。",
+    "metin": "据 Xbox Wire 发售周列表，2026年11月19日23:59:59前购买游戏可得 Vintage Vice City Pack 与一个月 GTA+。Xbox Series X|S 已开放预安装，Xbox Cloud Gaming 串流11月19日美东时间凌晨1点开始。",
     "etiketler": [
      "#GTA6",
      "#GTAVI",
@@ -1804,6 +2620,36 @@
      "#GTAVI",
      "#YouTube"
     ]
+   },
+   "de": {
+    "baslik": "YouTube veranstaltet 24-stündigen Livestream zum Start",
+    "ozet": "Die Vorschau beginnt am 18. November um 23 Uhr ET, der Abschluss ist live aus Miami.",
+    "metin": "Laut YouTube Blog läuft auf youtube.com/youtube am Erscheinungstag ein 24-stündiger Stream mit Live-Gameplay, Creator-Podcasts und eigenen Beiträgen. Die Vorschau beginnt am 18. November um 23 Uhr ET, der Hauptstream am 19. November um 0 Uhr ET. Den Abschluss bildet eine Liveübertragung aus Miami.",
+    "etiketler": [
+     "#GTA6",
+     "#GTAVI",
+     "#YouTube"
+    ]
+   },
+   "nl": {
+    "baslik": "YouTube organiseert een 24 uur durende releasestream",
+    "ozet": "De voorbeschouwing begint op 18 november om 23.00 uur ET, de afsluiting is live vanuit Miami.",
+    "metin": "Volgens YouTube Blog zendt youtube.com/youtube op de releasedag 24 uur uit met livegameplay, creator-podcasts en eigen onderdelen. De voorbeschouwing begint op 18 november om 23.00 uur ET, de hoofdstream op 19 november om 00.00 uur ET. De uitzending sluit live af vanuit Miami.",
+    "etiketler": [
+     "#GTA6",
+     "#GTAVI",
+     "#YouTube"
+    ]
+   },
+   "zh": {
+    "baslik": "YouTube 将举办24小时发售直播",
+    "ozet": "预热于11月18日美东时间23点开始，最终在 Miami 现场收尾。",
+    "metin": "据 YouTube Blog，youtube.com/youtube 在发售日将直播24小时，包含实机游玩、创作者播客及原创环节。预热11月18日美东时间23点开始，主直播11月19日美东时间零点开始，以 Miami 现场报道结束。",
+    "etiketler": [
+     "#GTA6",
+     "#GTAVI",
+     "#YouTube"
+    ]
    }
   }
  },
@@ -1857,6 +2703,36 @@
     "baslik": "PS Plus Game Catalog de noviembre: Death Stranding 2 y Like a Dragon",
     "ozet": "El PlayStation Blog presenta el Game Catalog de noviembre, con Death Stranding 2, Like a Dragon: Pirate Yakuza in Hawaii y Atomfall.",
     "metin": "El PlayStation Blog ha anunciado la selección de noviembre del Game Catalog de PlayStation Plus. Destacan Death Stranding 2: On the Beach, Like a Dragon: Pirate Yakuza in Hawaii, Atomfall y Dragon Quest III HD-2D Remake. Hell Let Loose llega el 11 de noviembre en EE. UU. y Reino Unido (el 12 en Japón), y Like a Dragon: Pirate Yakuza in Hawaii, Trepang2 y MotoGP 26 se suman el 24 de noviembre. Algunas fechas son escalonadas según la región.",
+    "etiketler": [
+     "#PSPlus",
+     "#PS5",
+     "#PlayStation"
+    ]
+   },
+   "de": {
+    "baslik": "PS Plus-Katalog im November: Death Stranding 2 und Like a Dragon kommen hinzu",
+    "ozet": "PlayStation Blog nennt Death Stranding 2, Like a Dragon: Pirate Yakuza in Hawaii und Atomfall als Highlights.",
+    "metin": "PlayStation Blog hat die November-Auswahl des PlayStation Plus-Spielekatalogs vorgestellt. Highlights sind Death Stranding 2: On the Beach, Like a Dragon: Pirate Yakuza in Hawaii, Atomfall und Dragon Quest III HD-2D Remake. Hell Let Loose kommt am 11. November in den USA und Großbritannien, am 12. November in Japan. Like a Dragon: Pirate Yakuza in Hawaii, Trepang2 und MotoGP 26 folgen am 24. November in den USA und Großbritannien. Manche Titel werden je nach Region an unterschiedlichen Tagen ergänzt.",
+    "etiketler": [
+     "#PSPlus",
+     "#PS5",
+     "#PlayStation"
+    ]
+   },
+   "nl": {
+    "baslik": "PS Plus Game Catalog november: Death Stranding 2 en Like a Dragon erbij",
+    "ozet": "PlayStation Blog onthult de catalogus met Death Stranding 2, Like a Dragon: Pirate Yakuza in Hawaii en Atomfall.",
+    "metin": "PlayStation Blog heeft de novemberselectie van de PlayStation Plus Game Catalog aangekondigd. Hoogtepunten zijn Death Stranding 2: On the Beach, Like a Dragon: Pirate Yakuza in Hawaii, Atomfall en Dragon Quest III HD-2D Remake. Hell Let Loose komt op 11 november in de VS en het VK en op 12 november in Japan. Like a Dragon: Pirate Yakuza in Hawaii, Trepang2 en MotoGP 26 volgen op 24 november in de VS en het VK. Sommige games worden per regio op verschillende dagen toegevoegd.",
+    "etiketler": [
+     "#PSPlus",
+     "#PS5",
+     "#PlayStation"
+    ]
+   },
+   "zh": {
+    "baslik": "PS Plus 11月游戏目录公布",
+    "ozet": "PlayStation Blog 公布 Death Stranding 2、Like a Dragon: Pirate Yakuza in Hawaii 与 Atomfall 等游戏。",
+    "metin": "PlayStation Blog 已公布11月 PlayStation Plus Game Catalog 阵容，重点包括 Death Stranding 2: On the Beach、Like a Dragon: Pirate Yakuza in Hawaii、Atomfall 和 Dragon Quest III HD-2D Remake。Hell Let Loose 于11月11日在美国和英国加入，日本为11月12日。Like a Dragon: Pirate Yakuza in Hawaii、Trepang2 与 MotoGP 26 将于11月24日在美国和英国加入。部分游戏因地区而分批上线。",
     "etiketler": [
      "#PSPlus",
      "#PS5",
@@ -1920,6 +2796,36 @@
      "#PC",
      "#JuegoGratis"
     ]
+   },
+   "de": {
+    "baslik": "Knightica ist im Epic Games Store bis zum 19. November kostenlos",
+    "ozet": "Bis zum 19. November gibt es Knightica, danach Alien: Isolation und Mark of the Deep.",
+    "metin": "Knightica ist aktuell das kostenlose Spiel im Epic Games Store und lässt sich bis zum 19. November abholen. Danach folgen Alien: Isolation und Mark of the Deep, beide vom 19. bis zum 26. November kostenlos. Epic verschenkt jeden Donnerstag neue Spiele.",
+    "etiketler": [
+     "#EpicGames",
+     "#PC",
+     "#FreeGames"
+    ]
+   },
+   "nl": {
+    "baslik": "Knightica is tot 19 november gratis in de Epic Games Store",
+    "ozet": "Tot 19 november geeft Epic Knightica weg; daarna Alien: Isolation en Mark of the Deep.",
+    "metin": "Knightica is de huidige gratis game in de Epic Games Store en kan tot 19 november worden geclaimd. Daarna zijn Alien: Isolation en Mark of the Deep allebei gratis van 19 tot 26 november. Epic geeft elke donderdag nieuwe games weg.",
+    "etiketler": [
+     "#EpicGames",
+     "#PC",
+     "#FreeGames"
+    ]
+   },
+   "zh": {
+    "baslik": "Knightica 在 Epic 免费领取至11月19日",
+    "ozet": "本周赠送 Knightica，11月19日由 Alien: Isolation 和 Mark of the Deep 接棒。",
+    "metin": "Epic Games Store 当前免费游戏为 Knightica，可领取至11月19日。随后 Alien: Isolation 和 Mark of the Deep 将在11月19日至26日免费。Epic 每周四赠送新的游戏。",
+    "etiketler": [
+     "#EpicGames",
+     "#PC",
+     "#FreeGames"
+    ]
    }
   }
  },
@@ -1978,6 +2884,36 @@
      "#Switch2",
      "#eShop"
     ]
+   },
+   "de": {
+    "baslik": "Nintendo eShop ermöglicht digitale Spielegeschenke in Familiengruppen",
+    "ozet": "Ab 16. November können Gruppenmitglieder auf Switch und Switch 2 einander Spiele schenken.",
+    "metin": "Nintendo hat für den 16. November eine Geschenkfunktion im eShop angekündigt. Mitglieder einer Familiengruppe können digitale Käufe auf Nintendo Switch und Switch 2 verschenken: berechtigte Spiele, DLCs und Upgrade-Pakete. Erforderlich ist die am 9. November veröffentlichte Systemversion 23.5.0 oder neuer. Manche Produkte sind möglicherweise ausgeschlossen. Beaufsichtigte Konten können keine Geschenke senden; die Zahl der Geschenkkäufe pro Zeitraum ist begrenzt.",
+    "etiketler": [
+     "#Nintendo",
+     "#Switch2",
+     "#eShop"
+    ]
+   },
+   "nl": {
+    "baslik": "Nintendo eShop voegt digitale gamecadeaus voor familiegroepen toe",
+    "ozet": "Vanaf 16 november kunnen groepsleden op Switch en Switch 2 elkaar digitale games geven.",
+    "metin": "Nintendo heeft een eShop-cadeaufunctie voor 16 november aangekondigd. Leden van een familiegroep kunnen digitale aankopen op Nintendo Switch en Switch 2 aan elkaar geven, waaronder geschikte games, DLC en upgradepakketten. Systeemversie 23.5.0 of nieuwer, uitgebracht op 9 november, is vereist. Sommige producten komen mogelijk niet in aanmerking. Accounts onder toezicht kunnen niet geven en het aantal cadeauaankopen per periode is beperkt.",
+    "etiketler": [
+     "#Nintendo",
+     "#Switch2",
+     "#eShop"
+    ]
+   },
+   "zh": {
+    "baslik": "Nintendo eShop 新增家庭组数字游戏赠送",
+    "ozet": "11月16日起，Switch 与 Switch 2 家庭组成员可互赠数字游戏。",
+    "metin": "Nintendo 宣布 eShop 11月16日加入赠礼功能，家庭组成员可互赠 Nintendo Switch 与 Switch 2 数字购买内容，包括符合条件的游戏、DLC 与升级包。要求11月9日发布的系统版本23.5.0或更新版本。部分商品可能不适用，受监督账号不能发送礼物，特定期间赠礼购买次数有限制。",
+    "etiketler": [
+     "#Nintendo",
+     "#Switch2",
+     "#eShop"
+    ]
    }
   }
  },
@@ -2031,6 +2967,36 @@
     "baslik": "Black Friday de Nintendo: pack Switch 2 + Mario Kart World a 499,99 $",
     "ozet": "Ofertas digitales desde el 19 de noviembre; pack Mario Kart World y juegos físicos desde el 22 (EE. UU.).",
     "metin": "Nintendo presentó sus ofertas de Black Friday para EE. UU. Una promoción de juegos digitales seleccionados va del 19 de noviembre al 2 de diciembre a las 11:59 p. m. PT. Del 22 de noviembre al 5 de diciembre, el pack Nintendo Switch 2 + Mario Kart World, con 3 meses de Switch Online Individual, cuesta 499,99 $, un ahorro de 50 $. Del 22 al 29 de noviembre, juegos como Donkey Kong Bananza tienen 20 $ de descuento. Hasta agotar existencias.",
+    "etiketler": [
+     "#Nintendo",
+     "#Switch2",
+     "#BlackFriday"
+    ]
+   },
+   "de": {
+    "baslik": "Nintendo Black Friday: Switch 2 mit Mario Kart World für 499,99 US-Dollar",
+    "ozet": "Digitale Angebote beginnen am 19. November, Bundle und physische Angebote am 22. November in den USA.",
+    "metin": "Nintendo hat seine US-Angebote zum Black Friday vorgestellt. Ausgewählte digitale Spiele sind vom 19. November bis zum 2. Dezember um 23:59 Uhr PT reduziert. Vom 22. November bis zum 5. Dezember kostet das Nintendo Switch 2 + Mario Kart World Bundle mit drei Monaten Switch Online-Einzelmitgliedschaft 499,99 US-Dollar, eine Ersparnis von 50 US-Dollar. Vom 22. bis zum 29. November sind ausgewählte Spiele wie Donkey Kong Bananza um 20 US-Dollar reduziert. Die Angebote gelten, solange der Vorrat reicht.",
+    "etiketler": [
+     "#Nintendo",
+     "#Switch2",
+     "#BlackFriday"
+    ]
+   },
+   "nl": {
+    "baslik": "Nintendo Black Friday: Switch 2 met Mario Kart World voor $499,99",
+    "ozet": "Digitale aanbiedingen starten 19 november, de bundel en fysieke aanbiedingen op 22 november in de VS.",
+    "metin": "Nintendo heeft de Amerikaanse Black Friday-aanbiedingen onthuld. Geselecteerde digitale games zijn van 19 november tot 2 december om 23.59 uur PT afgeprijsd. Van 22 november tot 5 december kost de Nintendo Switch 2 + Mario Kart World Bundle met drie maanden Switch Online Individual $499,99, een besparing van $50. Van 22 tot 29 november zijn geselecteerde games zoals Donkey Kong Bananza $20 goedkoper. Aanbiedingen gelden zolang de voorraad strekt.",
+    "etiketler": [
+     "#Nintendo",
+     "#Switch2",
+     "#BlackFriday"
+    ]
+   },
+   "zh": {
+    "baslik": "Nintendo 黑五：Switch 2 套装499.99美元",
+    "ozet": "美国数字优惠11月19日开始，Mario Kart World 套装及实体优惠11月22日开始。",
+    "metin": "Nintendo 公布美国 Black Friday 优惠。部分数字游戏促销从11月19日至12月2日太平洋时间23:59。11月22日至12月5日，Nintendo Switch 2 + Mario Kart World Bundle 连同三个月 Switch Online Individual 会员售价499.99美元，节省50美元。11月22日至29日，Donkey Kong Bananza 等部分游戏优惠20美元。优惠售完即止。",
     "etiketler": [
      "#Nintendo",
      "#Switch2",
@@ -2095,6 +3061,36 @@
      "#GamePass",
      "#Xbox"
     ]
+   },
+   "de": {
+    "baslik": "Football Manager 27 ist erschienen – auch im Game Pass",
+    "ozet": "FM27 für Xbox on PC und FM27 Console für Xbox Series X|S sind beide im Game Pass.",
+    "metin": "Sports Interactive bestätigte den Start von Football Manager 27 am 10. November. FM27 ist für Xbox on PC und FM27 Console für Xbox Series X|S erhältlich, beide mit Game Pass. Das Spiel verspricht mehr Kontrolle über die eigene taktische Vorstellung und eine tiefere Fußballwelt. Der Xbox Wire-Beitrag stellt fünf Neuerungen heraus.",
+    "etiketler": [
+     "#FM27",
+     "#GamePass",
+     "#Xbox"
+    ]
+   },
+   "nl": {
+    "baslik": "Football Manager 27 is nu uit, ook met Game Pass",
+    "ozet": "FM27 voor Xbox on PC en FM27 Console voor Xbox Series X|S zijn beide beschikbaar met Game Pass.",
+    "metin": "Sports Interactive bevestigde de release van Football Manager 27 op 10 november. FM27 is uit voor Xbox on PC en FM27 Console voor Xbox Series X|S, beide met Game Pass. De game belooft meer controle over je tactische visie en een diepere voetbalwereld. Xbox Wire belicht ook vijf nieuwe toevoegingen.",
+    "etiketler": [
+     "#FM27",
+     "#GamePass",
+     "#Xbox"
+    ]
+   },
+   "zh": {
+    "baslik": "Football Manager 27 已发售并加入 Game Pass",
+    "ozet": "Xbox on PC 的 FM27 与 Xbox Series X|S 的 FM27 Console 均可通过 Game Pass 游玩。",
+    "metin": "Sports Interactive 确认 Football Manager 27 于11月10日发售。FM27 登陆 Xbox on PC，FM27 Console 登陆 Xbox Series X|S，两者均可通过 Game Pass 游玩。游戏承诺更多战术控制和更深入的足球世界，Xbox Wire 还重点介绍五项新增内容。",
+    "etiketler": [
+     "#FM27",
+     "#GamePass",
+     "#Xbox"
+    ]
    }
   }
  },
@@ -2148,6 +3144,36 @@
     "baslik": "Marathon: la actualización Symbiosis llega el 8 de diciembre",
     "ozet": "Bungie fija Symbiosis para el 8 de diciembre, con nuevos modos PvE y PvP, armas y un nuevo shell.",
     "metin": "Según el PlayStation Blog, la actualización Symbiosis de Marathon llegará el 8 de diciembre para todos los jugadores. Añade nuevos modos PvE y PvP y armas nuevas, y la publicación detalla la zona Perimeter renovada y el nuevo shell Bishop Runner. Marathon está disponible en PS5 con cross-play y cross-save completos. Se requiere conexión a internet y suscripción de pago en consola.",
+    "etiketler": [
+     "#Marathon",
+     "#Bungie",
+     "#PS5"
+    ]
+   },
+   "de": {
+    "baslik": "Marathon: Symbiosis bringt am 8. Dezember neue PvE- und PvP-Modi",
+    "ozet": "Bungie setzt Symbiosis für den 8. Dezember an: neue Modi, Waffen und eine Runner-Hülle.",
+    "metin": "Laut PlayStation Blog erscheint Marathons Symbiosis-Update am 8. Dezember für alle Spieler. Es ergänzt PvE- und PvP-Modi sowie Waffen. Der Beitrag liefert erste Details zur überarbeiteten Zone Perimeter und zur neuen Bishop Runner-Hülle. Marathon ist auf PS5 mit vollständigem Crossplay und Crosssave erhältlich. Zum Spielen sind Internetzugang und ein kostenpflichtiges Konsolenabonnement erforderlich.",
+    "etiketler": [
+     "#Marathon",
+     "#Bungie",
+     "#PS5"
+    ]
+   },
+   "nl": {
+    "baslik": "Marathon: Symbiosis komt 8 december met nieuwe PvE- en PvP-modi",
+    "ozet": "Bungie plant Symbiosis op 8 december met nieuwe modi, wapens en een Runner-shell.",
+    "metin": "Volgens PlayStation Blog komt Marathons Symbiosis-update op 8 december voor alle spelers. Er komen nieuwe PvE- en PvP-modi en wapens. Het bericht geeft eerste details over de vernieuwde Perimeter-zone en de nieuwe Bishop Runner-shell. Marathon is verkrijgbaar op PS5 met volledige crossplay en crosssave. Spelen vereist internet en een betaald consoleabonnement.",
+    "etiketler": [
+     "#Marathon",
+     "#Bungie",
+     "#PS5"
+    ]
+   },
+   "zh": {
+    "baslik": "Marathon 的 Symbiosis 更新12月8日上线",
+    "ozet": "Bungie 确定更新日期，加入新模式、武器与 Runner 外壳。",
+    "metin": "据 PlayStation Blog，Marathon 的 Symbiosis 更新12月8日向所有玩家推出，新增 PvE 与 PvP 模式及武器。文章首次介绍更新后的 Perimeter 区域与 Bishop Runner 外壳。Marathon 已登陆 PS5，完整支持跨平台联机与存档。游玩需要互联网和付费主机订阅。",
     "etiketler": [
      "#Marathon",
      "#Bungie",
@@ -2213,6 +3239,36 @@
      "#Xbox",
      "#MachineGames"
     ]
+   },
+   "de": {
+    "baslik": "Wolfenstein 3 offiziell angekündigt: Produktion bei MachineGames",
+    "ozet": "Beim 25. Xbox-Jubiläum wurde die Entwicklung von Wolfenstein 3 bei MachineGames bestätigt.",
+    "metin": "Xbox kündigte bei seiner Feier zum 25. Jubiläum an, dass Wolfenstein 3 bei MachineGames in Produktion ist. Die Ankündigung machte Xbox-CEO Asha Sharma. Das Studio bestätigte die Rückkehr von Brian Bloom und Debra Wilson als BJ Blazkowicz und Grace Walker. Termin und Plattformen wurden nicht genannt.",
+    "etiketler": [
+     "#Wolfenstein3",
+     "#Xbox",
+     "#MachineGames"
+    ]
+   },
+   "nl": {
+    "baslik": "Wolfenstein 3 officieel aangekondigd, in productie bij MachineGames",
+    "ozet": "Op Xbox’ 25-jarig jubileum werd de ontwikkeling bij MachineGames bevestigd.",
+    "metin": "Xbox kondigde tijdens het 25-jarig jubileum aan dat Wolfenstein 3 in productie is bij MachineGames. Xbox-CEO Asha Sharma deed de aankondiging. De studio bevestigde dat Brian Bloom en Debra Wilson terugkeren als BJ Blazkowicz en Grace Walker. Er werden geen releasedatum of platforms genoemd.",
+    "etiketler": [
+     "#Wolfenstein3",
+     "#Xbox",
+     "#MachineGames"
+    ]
+   },
+   "zh": {
+    "baslik": "Wolfenstein 3 正式公布，由 MachineGames 制作",
+    "ozet": "Xbox 25周年庆确认 Wolfenstein 3 正在开发。",
+    "metin": "Xbox 在25周年庆宣布 Wolfenstein 3 已在 MachineGames 进入制作。消息由 Xbox CEO Asha Sharma 公布，工作室确认 Brian Bloom 和 Debra Wilson 回归饰演 BJ Blazkowicz 与 Grace Walker。公告未透露日期或平台。",
+    "etiketler": [
+     "#Wolfenstein3",
+     "#Xbox",
+     "#MachineGames"
+    ]
    }
   }
  },
@@ -2268,6 +3324,36 @@
     "baslik": "Halo: Campaign Evolved recibirá Firefight en una actualización gratuita",
     "ozet": "El modo cooperativo PvE para cuatro jugadores Firefight llegará este invierno sin coste.",
     "metin": "Halo Studios anunció que Firefight, el modo cooperativo PvE para cuatro jugadores, llegará a Halo: Campaign Evolved este invierno mediante una actualización gratuita. Consiste en resistir oleadas de enemigos junto a tu equipo. Los asistentes al FanFest de Xbox en Seattle fueron los primeros en probarlo la noche del 12 de noviembre, con nuevos mapas y muchas armas. Más detalles se compartirán en el Halo Fest, el 12 y 13 de diciembre en Seattle.",
+    "etiketler": [
+     "#Halo",
+     "#Xbox",
+     "#Firefight"
+    ]
+   },
+   "de": {
+    "baslik": "Halo: Campaign Evolved bekommt Firefight als kostenloses Update",
+    "ozet": "Der kooperative PvE-Modus für vier Spieler kommt diesen Winter kostenlos.",
+    "metin": "Halo Studios kündigte an, dass der kooperative PvE-Überlebensmodus Firefight für vier Spieler diesen Winter als kostenloses Update zu Halo: Campaign Evolved kommt. Gemeinsam halten Spieler aufeinanderfolgenden Gegnerwellen stand. Besucher des Xbox FanFest in Seattle konnten ihn am Abend des 12. November als Erste ausprobieren, mit neuen Karten und zahlreichen Waffen. Weitere Details sollen beim Halo Fest am 12. und 13. Dezember in Seattle folgen.",
+    "etiketler": [
+     "#Halo",
+     "#Xbox",
+     "#Firefight"
+    ]
+   },
+   "nl": {
+    "baslik": "Halo: Campaign Evolved krijgt Firefight als gratis update",
+    "ozet": "De coöperatieve PvE-modus voor vier spelers komt deze winter gratis.",
+    "metin": "Halo Studios kondigde aan dat de coöperatieve PvE-overlevingsmodus Firefight voor vier spelers deze winter als gratis update naar Halo: Campaign Evolved komt. Spelers houden samen stand tegen vijandelijke golven. Bezoekers van Xbox FanFest in Seattle probeerden het op de avond van 12 november als eersten, met nieuwe maps en veel wapens. Details volgen op Halo Fest op 12 en 13 december in Seattle.",
+    "etiketler": [
+     "#Halo",
+     "#Xbox",
+     "#Firefight"
+    ]
+   },
+   "zh": {
+    "baslik": "Halo: Campaign Evolved 冬季免费加入 Firefight",
+    "ozet": "四人合作 PvE 生存模式将在今年冬季作为免费更新推出。",
+    "metin": "Halo Studios 宣布，四人合作 PvE 生存模式 Firefight 今年冬季将以免费更新加入 Halo: Campaign Evolved，玩家组队抵挡连续敌人波次。西雅图 Xbox FanFest 参与者11月12日晚率先体验，包含新地图与大量武器。更多详情将在12月12日至13日西雅图 Halo Fest 分享。",
     "etiketler": [
      "#Halo",
      "#Xbox",

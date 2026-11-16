@@ -2660,6 +2660,1974 @@
      ]
     }
    ]
+  },
+  "de": {
+   "baslik": "Mobile Legends: Bang Bang Einsteiger-Guide: Helden, Lanes und Ränge",
+   "ozet": "Mobile Legends: Bang Bang ist ein kostenloses 5v5-MOBA für Smartphones. Dieser Guide hilft neuen und wiederkehrenden Spielern von der Installation bis zur Ranglistenleiter.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Mobile MOBA (5v5)"
+    },
+    {
+     "ad": "Plattform",
+     "deger": "Android und iOS; Google Play Spiele für PC"
+    },
+    {
+     "ad": "Preismodell",
+     "deger": "Free-to-Play; optionale kosmetische Käufe"
+    },
+    {
+     "ad": "Aktuelle Version",
+     "deger": "Season 42 (gestartet am 16. September 2026); Patch-Nummer 2.2.16a laut Community-Quellen"
+    },
+    {
+     "ad": "Türkisch-Unterstützung",
+     "deger": "Türkisch-Unterstützung ist nicht offiziell angegeben; prüfe das Sprachmenü im Spiel"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "nedir",
+     "baslik": "Was Mobile Legends ist und wo es 2026 steht",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "In Mobile Legends: Bang Bang treten zwei Fünferteams gegeneinander an. Jeder Spieler wählt einen **Helden** und das Ziel ist es, den Kristall in der gegnerischen Basis zu zerstören. Das Spiel ist für Touchscreens optimiert; Matches sind kurz und bequem auf dem Smartphone zu spielen."
+      },
+      {
+       "tip": "p",
+       "metin": "Laut der Google-Play-Seite startete **Season 42** am 16. September 2026 um 00:00 Uhr Serverzeit. Der saisonale Skin ist 'Flamehide Thane' für Popol und Kupa und der Rahmen heißt 'Starward Decade'; zudem gibt es Überarbeitungen zum 10. Jubiläum für Masha und Bruno. Das Spiel präsentiert sich als 'Play to Win, not Pay to Win'."
+      },
+      {
+       "tip": "p",
+       "metin": "Die neueste Patch-Nummer ist nicht offiziell angegeben; Community-Quellen nennen 2.2.16a (14. Oktober 2026). Season 43 wird für Mitte Dezember erwartet; das Datum ist nicht endgültig bestätigt. Die jährliche Kartenänderung 2026 ging am 28. September 2026 live (laut Community-Quellen), mit Neuerungen wie der Healing Turtle, dem Golden Turret und Revealing Wisps."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Zahlen in diesem Guide sind mit Stand November 2026 zutreffend. Einige Angaben stammen aus Community-Quellen und sind im Text gekennzeichnet; überprüfe sie im Spiel."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Vor dem Start: Installation, Konto, System",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Schließe mit einem neuen Konto zunächst das Tutorial und die Einstiegsaufgaben ab; sie vermitteln die grundlegende Steuerung und belohnen dich mit Startressourcen. Bevor du deine ersten Einnahmen für Helden ausgibst, finde heraus, welche Rolle dir am meisten zusagt."
+      },
+      {
+       "tip": "p",
+       "metin": "Du lädst das Spiel über Google Play oder den App Store herunter. Laut Google Play ist das Spiel ab 12 Jahren freigegeben und enthält In-App-Käufe. Du nutzt eine E-Mail-Adresse oder ein verknüpftes Konto für deinen Account."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Um auf dem PC zu spielen, nutzt du Google Play Spiele. Anforderungen: Windows 10 Version 2004, 10 GB freier SSD-Speicher, Intel UHD 630, 4 physische Kerne, 8 GB RAM und aktivierte Virtualisierung.",
+        "Achte auf eine stabile Internetverbindung; nutze stabiles WLAN oder gute mobile Daten.",
+        "Die Serverzeit kann von deiner lokalen Zeit abweichen; prüfe Start- und Endzeiten von Saisons im Spiel."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Lade das Spiel nur aus dem offiziellen Store herunter. Websites und Apps, die 'kostenlose Diamanten' oder Konten versprechen, können zum Kontodiebstahl führen."
+      },
+      {
+       "tip": "p",
+       "metin": "Das Wichtigste für dein Smartphone ist eine zuverlässige Verbindung. Nutze WLAN oder stabiles Mobilfunknetz; ein Verbindungsabbruch während eines Matches bestraft dich und dein Team gleichermaßen. Akku und Wärme spielen ebenfalls eine Rolle: Bei langen Spielsitzungen das Ladekabel anzuschließen und die Schutzhülle zu entfernen, reduziert die Hitzeentwicklung. Mit Kopfhörern hörst du Schritte und Fähigkeitenklänge deutlich besser."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Deine ersten Matches Schritt für Schritt",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Schließe das Tutorial ab",
+         "metin": "Mache dich mit den Schaltflächen für Bewegung, Angriffe und Fähigkeiten vertraut."
+        },
+        {
+         "baslik": "Spiele gegen Bots",
+         "metin": "Teste Helden und die Karte in Bot-Matches, bis du dich sicher fühlst."
+        },
+        {
+         "baslik": "Gehe zu Classic-Matches über",
+         "metin": "Gewöhne dich an echte Spieler in ungewerteten Partien."
+        },
+        {
+         "baslik": "Bereite dich auf Ranked vor",
+         "metin": "Laut Community-Quellen erfordert Ranked Kontostufe 8 und genügend Helden; Moonton hat dies nicht auf der eigenen Seite beziffert, maßgeblich ist die In-Game-Sperranzeige."
+        },
+        {
+         "baslik": "Halte Spielsitzungen kurz",
+         "metin": "Nach ein oder zwei Partien eine Pause einzulegen, verringert Leichtsinnsfehler."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "In den ersten Tagen geht es nicht primär ums Gewinnen, sondern darum, Karte und Helden kennenzulernen. Achte im Match auf zwei Dinge: Auf welcher Lane du dich befindest und wann das nächste Ziel (Turm, Schildkröte, Lord) erscheint. Wirf nach dem Match einen Blick auf die Statistiken, finde deinen häufigsten Fehler und versuche im nächsten Spiel gezielt nur diesen abzustellen. Diese Methode bringt dich schneller voran als viele unüberlegte Runden."
+      }
+     ]
+    },
+    {
+     "id": "hero-rol",
+     "baslik": "Helden- und Rollenwahl für die ersten Wochen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Das Spiel hat fünf Kernrollen: **Tank, Magier, Schütze, Assassine und Support**. Zudem gibt es Kämpfer-Helden. Helden werden über die kostenlose Rotation oder den Shop freigeschaltet. Die folgenden Beispiele sind bewährte Einsteiger-Picks, die seit langem unkompliziert sind; es handelt sich um Community-Tipps, keine offizielle Moonton-Vorgabe, und das Balancing kann sich mit Patches ändern."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rolle",
+        "Einfaches Heldenbeispiel",
+        "Warum es einfach ist"
+       ],
+       "satirlar": [
+        [
+         "Tank",
+         "Tigreal",
+         "Widerstandsfähig; steht schützend vor Teamkollegen"
+        ],
+        [
+         "Mage",
+         "Eudora",
+         "Einfache Fähigkeiten; hoher Burst-Schaden"
+        ],
+        [
+         "Marksman",
+         "Layla",
+         "Schaden aus der Distanz; leichtes Zielen"
+        ],
+        [
+         "Fighter",
+         "Zilong",
+         "Stark auf kurze Distanz; flüssige Angriffe"
+        ],
+        [
+         "Support",
+         "Estes",
+         "Heilt; hält das Team verlässlich am Leben"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Spiele eine Woche lang dieselben zwei Helden. Einen Helden wirklich zu beherrschen bringt dich schneller voran als ständige Wechsel."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Lane / Position",
+        "Wer sie spielt",
+        "Aufgabe"
+       ],
+       "satirlar": [
+        [
+         "Gold Lane",
+         "Marksman",
+         "Sicher farmen, Türme einreißen"
+        ],
+        [
+         "EXP Lane",
+         "Fighter",
+         "Allein auf der Lane; zäher Schaden in Teamkämpfen"
+        ],
+        [
+         "Mid Lane",
+         "Mage",
+         "Wellen beseitigen, Dschungel und Außen-Lanes unterstützen"
+        ],
+        [
+         "Jungle",
+         "Assassin oder Fighter",
+         "Dschungellager leeren, Schildkröte und Lord sichern"
+        ],
+        [
+         "Roam",
+         "Tank oder Support",
+         "Team schützen, Sicht gewähren und Kämpfe einleiten"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Wenn du unsicher bist, starte mit einem Tank auf der Roam-Position: Vor deinen Teamkollegen zu stehen, ohne zu sterben, erfordert keine extreme Mechanik und schult deine Kartenübersicht. Eine zweite gute Wahl ist der Schütze; du farmst sicher auf der Gold Lane und behältst die Minikarte im Auge."
+      }
+     ]
+    },
+    {
+     "id": "amblem-buyu",
+     "baslik": "Emblem- und Kampfzauber-Auswahl",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Vor jedem Match triffst du zwei Entscheidungen: ein Emblem-Set und einen Kampfzauber. Beides hängt von der Rolle des Helden ab, und für die ersten Wochen ist die empfohlene Voreinstellung des Spiels die sicherste Wahl."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Auswahl",
+        "Was es bewirkt",
+        "Für wen geeignet"
+       ],
+       "satirlar": [
+        [
+         "Emblem",
+         "Jeder Typ (Tank, Assassine, Magier, Schütze, Support, Kämpfer) verleiht feste rollenspezifische Werte und lässt dich drei Talente wählen",
+         "Nutze das in der Heldenbeschreibung empfohlene Emblem"
+        ],
+        [
+         "Retribution",
+         "Fügt Dschungelmonstern, Schildkröte und Lord großen Schaden zu",
+         "Nur für Jungler; ohne diesen Zauber kannst du den Dschungel nicht spielen"
+        ],
+        [
+         "Flicker",
+         "Kurzstrecken-Teleportation",
+         "Die meisten Helden, die entkommen oder Angriffe einleiten wollen"
+        ],
+        [
+         "Purify",
+         "Befreit von Betäubungen und Verlangsamungen",
+         "Helden, die häufig von Kontrolleffekten getroffen werden"
+        ],
+        [
+         "Execute",
+         "Fügt geschwächten Gegnern Vollstreckungsschaden zu",
+         "Helden, die Kills gezielt abschließen wollen"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Anzahl und Effekte von Zaubern und Emblemen können sich mit Saisons ändern; folge den aktuellen Beschreibungen im Shop oder auf der Heldenseite. Bleibe nach der Wahl eines Zaubers eine Woche lang bei derselben Option: Die Abklingzeit genau zu verinnerlichen, erleichtert jedes Match."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Hebe dir als Jungler die Retribution für Schildkröte und Lord auf; verschwende sie nicht leichtfertig an kleine Lager."
+      }
+     ]
+    },
+    {
+     "id": "mekanikler",
+     "baslik": "Kernmechaniken: Lanes, Dschungel, Ziele",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Die Karte besteht aus drei Hauptpfaden (Lanes) und dem dazwischenliegenden Dschungel. Die Lanes lauten: **Gold Lane** (meist Schütze), **EXP Lane** (meist Kämpfer), **Mid Lane** (meist Magier), **Jungle** und **Roam** (herumstreifend; meist Tank oder Support). Die erste Schildkröte erscheint auf der Seite der EXP Lane."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Türme:** Äußere Türme fallen zuerst, dann innere, schließlich der Kristall in der Hauptbasis.",
+        "**Dschungelmonster:** Sie liefern Gold und Stufen; Ziele wie Schildkröte und Lord verleihen dem Team enorme Stärke.",
+        "**Vasallen (Minions):** Werden für Gold getötet; den vollen Ertrag bringt der letzte Treffer (Last Hit).",
+        "**Kartenübersicht:** Wirf häufig Blicke auf die Minikarte; verlässt ein Gegner seine Lane, ist das ein Warnzeichen."
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Begriff",
+        "Bedeutung"
+       ],
+       "satirlar": [
+        [
+         "Farm",
+         "Gold durch das Töten von Vasallen und Monstern sammeln"
+        ],
+        [
+         "Gank",
+         "Überraschender Angriff auf eine andere Lane, um Gegner zu eliminieren"
+        ],
+        [
+         "Rotate",
+         "Die koordinierte Verschiebung des Teams zwischen den Lanes"
+        ],
+        [
+         "Push",
+         "Die Vasallenwelle gezielt in Richtung gegnerischer Türme drücken"
+        ],
+        [
+         "Retreat",
+         "Geordneter Rückzug bei drohender Gefahr"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Der nachhaltigste Lerneffekt für Neulinge ist es, **auf die Minikarte zu achten und sich mit dem Team zu bewegen**. Alleingänge enden meist tödlich."
+      }
+     ]
+    },
+    {
+     "id": "turtle-lord",
+     "baslik": "Schildkröten- und Lord-Zeitpunkte",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Schildkröte (Turtle) und Lord sind die zentralen neutralen Ziele, die dem Team Gold, Erfahrung und Kampfstärke verschaffen. Laut Community-Quellen erscheint die erste Schildkröte um ca. 2:00 und spawnt etwa alle 2 Minuten neu; nach dem Karten-Update 2026 wurde ihr Verhalten (z. B. Healing Turtle) angepasst. Die exakte Spawn-Minute des Lords variiert in den Quellen und ist von Moonton nicht offiziell beziffert; achte daher stets auf den Timer im Spiel."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Ziel",
+        "Wann",
+        "Was es gewährt"
+       ],
+       "satirlar": [
+        [
+         "Turtle",
+         "Erster Spawn um ca. 2:00; Respawn nach etwa 2 Minuten",
+         "Gold, Erfahrung und Schild fürs Team; der Held mit dem letzten Treffer erhält Sofortheilung und einen Extraschild"
+        ],
+        [
+         "Lord",
+         "Erscheint im Midgame; exakte Minute nicht offiziell angegeben",
+         "Starker Helfer, der Lanes vorantreibt und das Einreißen von Türmen beschleunigt"
+        ]
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "20-25 Sekunden vor dem Spawn vorbereiten",
+         "metin": "Verschaffe dir Sicht und prüfe die Zugangsgebüsche; wer zu spät kommt, verliert den ersten Kampf."
+        },
+        {
+         "baslik": "Retribution dem Jungler überlassen",
+         "metin": "Schlagt nicht alle unkoordiniert zu; haltet Schaden im kritischen Retribution-Bereich bereit."
+        },
+        {
+         "baslik": "Zuerst die Welle vordrücken",
+         "metin": "Mid und Roam gemeinsam zum Ziel hinzuziehen."
+        },
+        {
+         "baslik": "Bei Unsicherheit nicht erzwingen",
+         "metin": "Kontrolliert der Gegner die Büsche, weiche auf ein anderes Ziel aus oder greife einen Turm an."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Prüfe vor dem Kampf um ein Ziel stets die Position des gegnerischen Junglers und ob deine Teamkollegen einsatzbereit sind."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Einstellungen: Ausgangswerte",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Die nützlichste Anpassung betrifft das Tastenlayout. Erreicht dein Daumen eine Fähigkeit nur mühsam, verschiebe die Schaltfläche; konsistente Handgriffe in jedem Match sind wertvoller als feine Grafikdetails."
+      },
+      {
+       "tip": "p",
+       "metin": "Dies sind keine offiziellen Werte, sondern weit verbreitete Empfehlungen für Einsteiger. Probiere sie in einem Bot-Match aus."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Einstellung",
+        "Ausgangsempfehlung"
+       ],
+       "satirlar": [
+        [
+         "Tastenlayout",
+         "Schaltflächen vergrößern oder leicht verschieben, damit deine Daumen entspannt aufliegen"
+        ],
+        [
+         "Automatisches Ziel",
+         "Automatische Zielerfassung für Angriffe aktiv lassen"
+        ],
+        [
+         "Grafik",
+         "Passe sie an dein Smartphone an; Flüssigkeit geht vor Optik"
+        ],
+        [
+         "Audio",
+         "Kopfhörer tragen; Fähigkeitssounds liefern wertvolle Informationen"
+        ],
+        [
+         "Netzwerk",
+         "WLAN oder stabiles Mobilfunknetz; behalte den Ping auf der Anzeige im Blick"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Wenn du eine Einstellung änderst, spiele mehrere Matches mit demselben Wert; ändere deine Meinung nicht vorschnell."
+      }
+     ]
+    },
+    {
+     "id": "elmas-butce",
+     "baslik": "Diamanten und Ausgabenbudget",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Mobile Legends ist kostenlos spielbar; die Google-Play-Seite präsentiert das Spiel als 'Play to Win, not Pay to Win' und weist auf In-App-Käufe hin. Diamanten kosten echtes Geld; die Preise variieren regional, prüfe daher den aktuellen Betrag im In-Game-Shop. Kampfpunkte (BP) werden durch Spielen verdient und zum Freischalten von Helden genutzt."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Priorität",
+        "Was zu tun ist",
+        "Warum"
+       ],
+       "satirlar": [
+        [
+         "1. Helden",
+         "Helden mit BP freischalten; keine Diamanten ausgeben",
+         "Deine Stärke bestimmt der Held, nicht ein Skin"
+        ],
+        [
+         "2. Monatspass (Starlight etc.)",
+         "Nur in Erwägung ziehen, wenn du wirklich aktiv spielst",
+         "Kosmetika und kleine Belohnungen; genaue Inhalte und Preise stehen im Shop"
+        ],
+        [
+         "3. Skins",
+         "Ganz hinten anstellen",
+         "Rein kosmetisch; verleihen keinen spielerischen Vorteil"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Setze dir ein monatliches Limit und besprich Ausgaben je nach Alter mit einem Erwachsenen.",
+        "Meide Drittanbieter-Websites für 'billige Diamanten' und Aufladedienste, die nach deinen Zugangsdaten fragen.",
+        "Bereust du einen Kauf, lege eine zweiwöchige Ausgabensperre für dich fest."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Seiten, die 'günstige Diamanten' oder 'kostenlose Diamanten' versprechen, können zum Verlust deines Kontos führen; nutze ausschließlich den offiziellen Shop im Spiel."
+      }
+     ]
+    },
+    {
+     "id": "rank",
+     "baslik": "Ranglistensystem und Ränge-Tabelle",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Die Rangtabelle kann sich je nach Saison im Detail verändern; die folgenden Sternanforderungen basieren auf Community-Quellen und sind von Moonton nicht als feste Tabelle veröffentlicht. Exakte Werte findest du auf der Ranglistenseite in deinem Spiel."
+      },
+      {
+       "tip": "p",
+       "metin": "Laut Community-Quellen lauten die Rangstufen: Warrior, Elite, Master, Grandmaster, Epic, Legend und Mythic. Mythic umfasst weitere Titel: Mythical Honor, Mythical Glory und Mythical Immortal. Ab Mythic steigen die Sterne fortlaufend an."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rangstufe",
+        "Divisionen"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "III - I"
+        ],
+        [
+         "Elite",
+         "III - I"
+        ],
+        [
+         "Master",
+         "IV - I"
+        ],
+        [
+         "Grandmaster",
+         "V - I"
+        ],
+        [
+         "Epic",
+         "V - I"
+        ],
+        [
+         "Legend",
+         "V - I"
+        ],
+        [
+         "Mythic",
+         "Mythical Honor (25 Sterne), Glory (50 Sterne), Immortal (100+ Sterne)"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Die Draft-Pick- und Ban-Phase beginnt ab Epic (laut Community-Quellen).",
+        "Niederlagen in Warrior kosten keine Sterne (laut Community-Quellen).",
+        "Eine Ranglisten-Gruppe kann aus 1, 2, 3 oder 5 Spielern bestehen (laut Community-Quellen).",
+        "Der Kredit-Score startet bei 100 und reicht bis 110; unter 90 kann Ranked gesperrt sein (laut Community-Quellen)."
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rang",
+        "Divisionen",
+        "Sterne pro Division"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "III - I",
+         "3"
+        ],
+        [
+         "Elite",
+         "III - I",
+         "4"
+        ],
+        [
+         "Master",
+         "IV - I",
+         "4"
+        ],
+        [
+         "Grandmaster",
+         "V - I",
+         "5"
+        ],
+        [
+         "Epic",
+         "V - I",
+         "5"
+        ],
+        [
+         "Legend",
+         "V - I",
+         "5"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Mythic hat keine Divisionen; die Sternanzahl wächst kontinuierlich: Mythic 0-24, Mythical Honor 25, Mythical Glory 50, Mythical Immortal 100 und mehr (laut Community-Quellen). Season 42 endet voraussichtlich Mitte Dezember; das genaue Datum steht noch aus."
+      }
+     ]
+    },
+    {
+     "id": "hatalar",
+     "baslik": "Häufige Anfängerfehler",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Die meisten Fehler entstehen aus Gewohnheit, nicht aus mangelndem Wissen. Notiere dir nach jedem Match nur einen Punkt: Warum bin ich gestorben, welches Ziel habe ich verpasst. Taucht dieselbe Ursache in mehreren Spielen auf, ist genau das dein Ansatzpunkt."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Unvorbereitet in Ranked-Matches starten; gewöhne dich zuerst in Classic-Partien daran.",
+        "Türme alleine stürmen, ohne auf das Team zu warten.",
+        "Die Minikarte nicht beachten.",
+        "Mitspielern die Schuld geben; suche nach einem Tod den Fehler bei dir selbst.",
+        "In jedem Match einen anderen Helden ausprobieren.",
+        "Nach Niederlagen verärgert weiterspielen; lege Pausen ein."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Ein häufiger Fehler ist das Einmischen in jeden Kampf. Mobile Legends läuft in schnellen Matches ab, und ein einzelner Tod kostet durch die Wiederbelebungszeit oft Türme und Ziele. Ziehe dich bei niedrigen Lebenspunkten zurück; verschwindet ein Gegner von der Karte, achte auf die Büsche. Der zweite Fehler ist das Ignorieren der Minikarte: Regelmäßige Blicke alle ein bis zwei Sekunden verraten herannahende Angreifer rechtzeitig."
+      },
+      {
+       "tip": "p",
+       "metin": "Der dritte Fehler ist der ausschließliche Fokus auf Kills. Spiele werden durch das Zerstören von Türmen und das Erobern von Schildkröte und Lord gewonnen; Kills sind nur dann wertvoll, wenn sie Raum dafür schaffen. Teamkollegen im Chat zu beschimpfen verliert Spiele: Ein höflicher Ping ist weitaus wirksamer als eine wütende Nachricht. Lege bei Frustration eine Pause ein."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Kontosicherheit und Verhaltensregeln",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Für jüngere Spieler: Prüfe In-App-Kauf- und Chateinstellungen gemeinsam mit einem Erwachsenen. Klicke keine Links von Unbekannten an und teile keine persönlichen Daten (Adresse, Schule, Telefonnummer) im Chat."
+      },
+      {
+       "tip": "p",
+       "metin": "Dein Konto ist dein digitaler Tresor. Verknüpfe es mit einer sicheren E-Mail-Adresse und teile dein Passwort nicht auf Drittseiten."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Cheat-Software, Mod-Apps, Skripte, Rang-Boosting, Kontoverkauf, Skin-Wettseiten und gefälschte 'Kostenlose Diamanten'-Seiten führen zum permanenten Ausschluss. Halte dich davon fern."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Wiederholtes AFK-Gehen oder Spielmanipulation zieht Strafen nach sich und senkt deinen Kredit-Score.",
+        "Behandle Teamkollegen respektvoll; melde und stummschalte beleidigende Chats.",
+        "Mit einem Zweitkonto schwächere Spieler abzufangen (Smurfing), ist unfair; unterlasse dies.",
+        "Teile dein Konto niemals mit Dritten."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Nutze zum Schutz deines Kontos ein starkes, exklusives Passwort, aktiviere nach Möglichkeit die Zwei-Faktor-Authentifizierung und gib deine Daten an niemanden weiter. Selbst der offizielle Support fragt niemals nach deinem Passwort. Rang-Boosting, Kontohandel und unzulässige Hilfsprogramme verstoßen gegen die Regeln und führen zur Sperrung. Dein eigener Fortschritt ist weitaus befriedigender und erhält den Spielspaß."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Häufig gestellte Fragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Ist Mobile Legends kostenlos?",
+         "c": "Ja. Das Spiel ist kostenlos spielbar; Käufe beschränken sich auf kosmetische Gegenstände."
+        },
+        {
+         "s": "Kann ich auf dem PC spielen?",
+         "c": "Ja, über Google Play Spiele; Voraussetzungen sind Windows 10 Version 2004, 10 GB SSD-Speicher und aktivierte Virtualisierung."
+        },
+        {
+         "s": "Ab wann kann ich Ranglistenspiele spielen?",
+         "c": "Laut Community-Quellen ab Kontostufe 8 mit genügend Helden; Moonton hat dies nicht offiziell beziffert, maßgeblich ist die Anzeige im Spiel."
+        },
+        {
+         "s": "Kann mein Rang absteigen?",
+         "c": "Du verlierst Sterne; in Warrior kosten Niederlagen jedoch keine Sterne (laut Community-Quellen)."
+        },
+        {
+         "s": "Mit welchem Helden sollte ich starten?",
+         "c": "Wähle einen einfachen, widerstandsfähigen Helden; spiele dieselben zwei Helden eine Woche lang."
+        },
+        {
+         "s": "Gibt es türkische Sprachunterstützung?",
+         "c": "Nicht offiziell angegeben; prüfe die Spracheinstellungen im Spiel."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "nl": {
+   "baslik": "Mobile Legends: Bang Bang Beginnersgids: Heroes, Lanes en Ranks",
+   "ozet": "Mobile Legends: Bang Bang is een gratis 5v5 MOBA voor smartphones. Deze gids helpt nieuwe en terugkerende spelers vanaf de installatie tot de ranked ladder.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Mobiele MOBA (5v5)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Android en iOS; Google Play Games voor pc"
+    },
+    {
+     "ad": "Prijsmodel",
+     "deger": "Free-to-play; optionele cosmetische aankopen"
+    },
+    {
+     "ad": "Huidige versie",
+     "deger": "Season 42 (gestart op 16 september 2026); patchnummer 2.2.16a volgens communitybronnen"
+    },
+    {
+     "ad": "Turkse ondersteuning",
+     "deger": "Turkse ondersteuning is niet officieel gespecificeerd; controleer het taalmenu in het spel"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "nedir",
+     "baslik": "Wat Mobile Legends is en waar het staat in 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "In Mobile Legends: Bang Bang nemen twee teams van vijf spelers het tegen elkaar op. Elke speler kiest een **hero** en het doel is om het kristal in de vijandelijke basis te vernietigen. Het spel is ontworpen voor touchscreens; wedstrijden zijn kort en comfortabel te spelen op een smartphone."
+      },
+      {
+       "tip": "p",
+       "metin": "Volgens de Google Play-pagina begon **Season 42** op 16 september 2026 om 00:00 uur servertijd. De seizoensskin is 'Flamehide Thane' voor Popol en Kupa en het kader heet 'Starward Decade'; tevens zijn er vernieuwingen ter ere van het 10-jarig jubileum voor Masha en Bruno. Het spel profileert zich als 'Play to Win, not Pay to Win'."
+      },
+      {
+       "tip": "p",
+       "metin": "Het nieuwste patchnummer is niet officieel bekendgemaakt; communitybronnen noemen 2.2.16a (14 oktober 2026). Season 43 wordt medio december verwacht; de exacte datum is nog onbevestigd. De jaarlijkse kaartupdate van 2026 ging live op 28 september 2026 (volgens communitybronnen), met toevoegingen zoals de Healing Turtle, Golden Turret en Revealing Wisps."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Cijfers in deze gids zijn actueel per november 2026. Bepaalde informatie is afkomstig van communitybronnen en gemarkeerd in de tekst; verifieer dit in de game."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Voor je begint: installatie, account, systeem",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Voltooi bij een nieuw account eerst de tutorial en de beginnersopdrachten; deze leren je de basisbesturing en leveren startbeloningen op. Probeer te ontdekken welke rol je aanspreekt voordat je je verdiende middelen aan heroes besteedt."
+      },
+      {
+       "tip": "p",
+       "metin": "Je downloadt het spel via Google Play of de App Store. Volgens Google Play heeft het spel een leeftijdsclassificatie van 12+ en bevat het in-app aankopen. Je gebruikt een e-mailadres of een gekoppeld account om in te loggen."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Om op pc te spelen gebruik je Google Play Games. Vereisten: Windows 10 versie 2004, 10 GB vrije SSD-ruimte, Intel UHD 630, 4 fysieke kernen, 8 GB RAM en ingeschakelde virtualisatie.",
+        "Zorg voor een stabiele internetverbinding via wifi of betrouwbare mobiele data.",
+        "De servertijd kan afwijken van je lokale tijd; controleer begin- en eindtijden van seizoenen in de game."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Download de game uitsluitend via de officiële app store. Websites en applicaties die 'gratis diamanten' of accounts beloven, kunnen leiden tot diefstal van je gegevens."
+      },
+      {
+       "tip": "p",
+       "metin": "Het allerbelangrijkste voor je smartphone is een betrouwbare verbinding. Gebruik wifi of stabiele mobiele data; een verbroken verbinding dupeert zowel jezelf als je teamgenoten. Ook batterij en warmteontwikkeling zijn belangrijk: tijdens langere sessies de oplader aansluiten en het hoesje verwijderen voorkomt oververhitting. Met een hoofdtelefoon hoor je voetstappen en vaardigheidsgeluiden veel scherper."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Je eerste wedstrijden stap voor stap",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Voltooi de tutorial",
+         "metin": "Leer de knoppen voor beweging, aanvallen en vaardigheden kennen."
+        },
+        {
+         "baslik": "Speel tegen bots",
+         "metin": "Oefen met heroes en de kaart in botwedstrijden totdat je je vertrouwd voelt."
+        },
+        {
+         "baslik": "Stap over naar Classic-wedstrijden",
+         "metin": "Wen aan echte tegenstanders in ongewaardeerde potjes."
+        },
+        {
+         "baslik": "Bereid je voor op Ranked",
+         "metin": "Volgens communitybronnen vereist Ranked accountlevel 8 en voldoende heroes; Moonton heeft dit niet officieel vastgelegd, het vergrendelingsscherm in-game is bepalend."
+        },
+        {
+         "baslik": "Houd sessies beknopt",
+         "metin": "Een korte pauze na een of twee wedstrijden voorkomt concentratiefouten."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "In de eerste dagen draait het niet om winnen, maar om het leren kennen van de kaart en je hero. Let in een wedstrijd op twee zaken: op welke lane je staat en wanneer het volgende doel (toren, Turtle, Lord) verschijnt. Bekijk na afloop de statistieken, spoor je meest gemaakte fout op en probeer uitsluitend dat te verbeteren in de volgende wedstrijd. Dit zorgt voor snellere vooruitgang dan lukraak spelen."
+      }
+     ]
+    },
+    {
+     "id": "hero-rol",
+     "baslik": "Een hero en rol kiezen voor de eerste weken",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Het spel telt vijf hoofdrollen: **Tank, Mage, Marksman, Assassin en Support**. Daarnaast zijn er Fighter-heroes. Heroes speel je vrij via de gratis rotatie of de winkel. De onderstaande keuzes zijn gevestigde beginnersopties die langdurig eenvoudig zijn gebleven; dit zijn algemene tips, geen officieel Moonton-voorschrift, en de balans kan per patch variëren."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rol",
+        "Eenvoudig hero-voorbeeld",
+        "Waarom het eenvoudig is"
+       ],
+       "satirlar": [
+        [
+         "Tank",
+         "Tigreal",
+         "Duurzaam; vangt klappen op voor teamgenoten"
+        ],
+        [
+         "Mage",
+         "Eudora",
+         "Eenvoudige vaardigheden; hoge plotselinge schade (burst)"
+        ],
+        [
+         "Marksman",
+         "Layla",
+         "Schade op afstand; gemakkelijk te richten"
+        ],
+        [
+         "Fighter",
+         "Zilong",
+         "Solide op korte afstand; vloeiende aanvallen"
+        ],
+        [
+         "Support",
+         "Estes",
+         "Geneest; houdt het team betrouwbaar overeind"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Speel een week lang met dezelfde twee heroes. Eén hero grondig beheersen brengt je sneller verder dan talloze personages uitproberen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Lane / Positie",
+        "Wie er speelt",
+        "Taak"
+       ],
+       "satirlar": [
+        [
+         "Gold Lane",
+         "Marksman",
+         "Veilig farmen, torens neerhalen"
+        ],
+        [
+         "EXP Lane",
+         "Fighter",
+         "Alleen op de lane; taaie schadeleverancier in teamgevechten"
+        ],
+        [
+         "Mid Lane",
+         "Mage",
+         "Golven ruimen, jungle en zijlanes bijstaan"
+        ],
+        [
+         "Jungle",
+         "Assassin of Fighter",
+         "Junglekampen ruimen, Turtle en Lord veiligstellen"
+        ],
+        [
+         "Roam",
+         "Tank of Support",
+         "Team beschermen, zicht bieden en gevechten openen"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Weet je niet wat te kiezen, begin dan met een Tank in de Roam-positie: voor je teamgenoten gaan staan zonder dood te gaan vraagt weinig mechanische precisie en leert je het speelveld lezen. Een tweede goede optie is de Marksman; je farmt veilig op de Gold Lane en volgt de minimap."
+      }
+     ]
+    },
+    {
+     "id": "amblem-buyu",
+     "baslik": "Emblemen en gevechtsspreuken kiezen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Voor elke wedstrijd maak je twee keuzes: een emblem-set en een gevechtsspreuk (battle spell). Beide zijn afgestemd op de rol van je hero, en voor beginners is de aanbevolen voorinstelling van het spel de veiligste optie."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Keuze",
+        "Wat het doet",
+        "Voor wie geschikt"
+       ],
+       "satirlar": [
+        [
+         "Emblem",
+         "Elk type (Tank, Assassin, Mage, Marksman, Support, Fighter) geeft vaste rolgebonden statistieken en biedt keuze uit drie talenten",
+         "Gebruik het embleem dat in de heldenbeschrijving wordt aanbevolen"
+        ],
+        [
+         "Retribution",
+         "Brengt grote schade toe aan junglemonsters, Turtle en Lord",
+         "Alleen voor junglers; zonder deze spreuk kun je niet junglen"
+        ],
+        [
+         "Flicker",
+         "Korte teleportering",
+         "De meeste helden die willen ontsnappen of een gevecht willen openen"
+        ],
+        [
+         "Purify",
+         "Verwijdert verdovingen en vertragingen",
+         "Heroes die vaak geraakt worden door crowd control"
+        ],
+        [
+         "Execute",
+         "Deelt schade uit aan verzwakte tegenstanders",
+         "Helden die gericht kills willen afronden"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Aantallen en werking van spreuken en emblemen kunnen per seizoen wijzigen; volg de actuele beschrijvingen in de winkel of op de heldenpagina. Blijf na je keuze een week lang dezelfde spreuk hanteren: het automatiseren van de cooldown maakt elk potje overzichtelijker."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Spaar als jungler Retribution op voor de Turtle en Lord; verspil de spreuk niet aan kleine kampen."
+      }
+     ]
+    },
+    {
+     "id": "mekanikler",
+     "baslik": "Kernmechanismen: lanes, jungle, doelstellingen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "De kaart bestaat uit drie hoofdroutes (lanes) met daartussen de jungle. De lanes zijn: **Gold Lane** (meestal marksman), **EXP Lane** (meestal fighter), **Mid Lane** (meestal mage), **Jungle** en **Roam** (rondzwervend; meestal tank of support). De eerste Turtle verschijnt aan de kant van de EXP Lane."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Torens (Turrets):** Buitenste torens vallen eerst, daarna binnenste, en uiteindelijk het kristal in de hoofdbasis.",
+        "**Junglemonsters:** Leveren goud en levels op; doelen zoals de Turtle en de Lord schenken het team aanzienlijke kracht.",
+        "**Minions:** Versla ze voor goud; de genadeslag (last hit) levert de maximale beloning op.",
+        "**Kaartoverzicht:** Werp regelmatig een blik op de minimap; een vijand die de lane verlaat vormt een direct gevaar."
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Term",
+        "Betekenis"
+       ],
+       "satirlar": [
+        [
+         "Farm",
+         "Goud verzamelen door minions en monsters te verslaan"
+        ],
+        [
+         "Gank",
+         "Onverwacht opduiken in een andere lane om tegenstanders uit te schakelen"
+        ],
+        [
+         "Rotate",
+         "Het gecoördineerd verplaatsen van het team tussen verschillende lanes"
+        ],
+        [
+         "Push",
+         "De minion-golf actief naar de vijandelijke toren opdringen"
+        ],
+        [
+         "Retreat",
+         "Geordend terugtrekken bij direct gevaar"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "De meest waardevolle vaardigheid voor beginners is **op de minimap letten en meebewegen met het team**. Alleen op jacht gaan loopt meestal slecht af."
+      }
+     ]
+    },
+    {
+     "id": "turtle-lord",
+     "baslik": "Timings van Turtle en Lord",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Turtle en Lord zijn de belangrijkste neutrale doelen die het team goud, ervaring en strijdkracht bezorgen. Volgens communitybronnen verschijnt de eerste Turtle rond 2:00 en herleeft deze circa elke 2 minuten; na de kaartupdate van 2026 is diens gedrag (zoals de Healing Turtle) herzien. De exacte minuut waarin de Lord verschijnt varieert per bron en is niet officieel door Moonton vastgelegd; volg daarom altijd de afteltimer in het spel."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Doel",
+        "Wanneer",
+        "Wat het oplevert"
+       ],
+       "satirlar": [
+        [
+         "Turtle",
+         "Eerste spawn rond 2:00; respawn na ongeveer 2 minuten",
+         "Goud, ervaring en een schild voor het team; degene met de last hit ontvangt directe genezing en een extra schild"
+        ],
+        [
+         "Lord",
+         "Verschijnt halverwege het spel; exacte minuut niet officieel vastgelegd",
+         "Krachtige bondgenoot die zijlanes opstuwt en het neerhalen van torens versnelt"
+        ]
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "20-25 seconden voor de spawn voorbereiden",
+         "metin": "Zorg voor zicht en controleer de toegangsstruiken; wie te laat arriveert verliest de eerste schermutseling."
+        },
+        {
+         "baslik": "Laat Retribution over aan de jungler",
+         "metin": "Sla niet allemaal chaotisch toe; bewaar gerichte schade voor het Retribution-bereik."
+        },
+        {
+         "baslik": "Druk eerst de golf op",
+         "metin": "Trek samen met Mid en Roam op naar het doel."
+        },
+        {
+         "baslik": "Niet forceren bij onzekerheid",
+         "metin": "Als de tegenstander de bosjes controleert, wijk dan uit naar een ander doel of neem een toren onder vuur."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Controleer voor een gevecht om een doel altijd waar de vijandelijke jungler is en of je eigen teamgenoten in leven zijn."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Instellingen: aanbevolen uitgangswaarden",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "De handigste aanpassing betreft de knoppenindeling. Als je duim lastig bij een vaardigheid komt, verplaats de knop dan; elke wedstrijd moeiteloos dezelfde handeling kunnen uitvoeren levert meer op dan fijne grafische instellingen."
+      },
+      {
+       "tip": "p",
+       "metin": "Dit zijn geen officiële waarden, maar breed gedragen suggesties voor beginners. Probeer ze uit in een botwedstrijd."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Instelling",
+        "Startsuggestie"
+       ],
+       "satirlar": [
+        [
+         "Knoppenindeling",
+         "Vergroot of verplaats knoppen lichtjes zodat je duimen ontspannen rusten"
+        ],
+        [
+         "Automatisch doel",
+         "Automatische doelselectie actief laten voor basisaanvallen"
+        ],
+        [
+         "Grafische weergave",
+         "Afstemmen op je smartphone; soepele beelden zijn belangrijker dan effecten"
+        ],
+        [
+         "Geluid",
+         "Draag een hoofdtelefoon; vaardigheidsgeluiden bieden cruciale informatie"
+        ],
+        [
+         "Netwerk",
+         "Wifi of betrouwbare mobiele data; houd de pingmeter in het spel in de gaten"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Speel na het wijzigen van een instelling eerst een paar wedstrijden voor je opnieuw oordeelt; pas niet telkens alles halsoverkop aan."
+      }
+     ]
+    },
+    {
+     "id": "elmas-butce",
+     "baslik": "Diamanten en uitgavenbudget",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Mobile Legends is gratis speelbaar; de Google Play-pagina omschrijft het spel als 'Play to Win, not Pay to Win' en meldt in-app aankopen. Diamanten vertegenwoordigen echt geld; prijzen verschillen per regio, bekijk het actuele bedrag in de in-game winkel. Battle Points (BP) verdien je door te spelen en gebruik je om heroes te ontgrendelen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Prioriteit",
+        "Wat te doen",
+        "Waarom"
+       ],
+       "satirlar": [
+        [
+         "1. Heroes",
+         "Heroes vrijspelen met BP; geef geen diamanten uit",
+         "Je slagkracht wordt bepaald door de hero, niet door een skin"
+        ],
+        [
+         "2. Maandpas (Starlight etc.)",
+         "Alleen overwegen als je daadwerkelijk zeer actief speelt",
+         "Cosmetica en kleine extra's; exacte prijzen en inhoud staan in de winkel"
+        ],
+        [
+         "3. Skins",
+         "Als laatste prioriteit behandelen",
+         "Puur cosmetisch; levert geen gameplay-voordeel op"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Stel een maandelijks limiet in en overleg afhankelijk van je leeftijd over uitgaven met een volwassene.",
+        "Blijf weg van externe 'goedkope diamanten'-sites en opwaardeerdiensten die om inloggegevens vragen.",
+        "Als je spijt hebt van een aankoop, stel jezelf dan een aankoopstop van twee weken op."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Websites die 'goedkope diamanten' of 'gratis diamanten' beloven leiden vaak tot accountdiefstal; maak uitsluitend gebruik van de officiële in-game winkel."
+      }
+     ]
+    },
+    {
+     "id": "rank",
+     "baslik": "Ranked-systeem en rangentabel",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "De ranglijst kan per seizoen in detail wijzigen; de onderstaande steraantallen zijn gebaseerd op communitybronnen en zijn niet door Moonton als officiële tabel gepubliceerd. Bekijk de actuele ranglijstpagina in de game voor exacte waarden."
+      },
+      {
+       "tip": "p",
+       "metin": "Volgens communitybronnen zijn de rangen: Warrior, Elite, Master, Grandmaster, Epic, Legend en Mythic. Mythic kent extra titels: Mythical Honor, Mythical Glory en Mythical Immortal. Vanaf Mythic blijft het steraantal oplopen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rang",
+        "Divisies"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "III - I"
+        ],
+        [
+         "Elite",
+         "III - I"
+        ],
+        [
+         "Master",
+         "IV - I"
+        ],
+        [
+         "Grandmaster",
+         "V - I"
+        ],
+        [
+         "Epic",
+         "V - I"
+        ],
+        [
+         "Legend",
+         "V - I"
+        ],
+        [
+         "Mythic",
+         "Mythical Honor (25 sterren), Glory (50 sterren), Immortal (100+ sterren)"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "De Draft Pick- en banfase start vanaf Epic (volgens communitybronnen).",
+        "Nederlagen in Warrior kosten geen sterren (volgens communitybronnen).",
+        "Een ranked-groep kan bestaan uit 1, 2, 3 of 5 spelers (volgens communitybronnen).",
+        "De Credit Score start op 100 en kan stijgen tot 110; onder 90 kan Ranked worden geblokkeerd (volgens communitybronnen)."
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Rang",
+        "Divisies",
+        "Sterren per divisie"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "III - I",
+         "3"
+        ],
+        [
+         "Elite",
+         "III - I",
+         "4"
+        ],
+        [
+         "Master",
+         "IV - I",
+         "4"
+        ],
+        [
+         "Grandmaster",
+         "V - I",
+         "5"
+        ],
+        [
+         "Epic",
+         "V - I",
+         "5"
+        ],
+        [
+         "Legend",
+         "V - I",
+         "5"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Mythic kent geen afzonderlijke divisies; het aantal sterren loopt continu op: Mythic 0-24, Mythical Honor 25, Mythical Glory 50, Mythical Immortal 100 en hoger (volgens communitybronnen). Season 42 eindigt naar verwachting medio december; de definitieve datum is nog niet aangekondigd."
+      }
+     ]
+    },
+    {
+     "id": "hatalar",
+     "baslik": "Veelvoorkomende beginnersfouten",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "De meeste missers vloeien voort uit ingesleten gewoontes in plaats van kennistekort. Noteer na elke wedstrijd één observatie: waarom ging ik neer, welk nevendoel liet ik liggen. Als hetzelfde antwoord in meerdere potjes terugkomt, is dat precies waar je aan moet werken."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Onvoorbereid aan ranked beginnen; wen eerst aan het tempo via Classic-wedstrijden.",
+        "Alleen onder een toren duiken zonder op teamgenoten te wachten.",
+        "De minimap negeren.",
+        "Teamgenoten verwijten maken; zoek na een nederlaag de oorzaak bij jezelf.",
+        "Elke wedstrijd een andere hero proberen.",
+        "Gefrustreerd doorspelen na opeenvolgende verliezen; las een pauze in."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Een klassieke vergissing is het willen deelnemen aan elk opvlammend gevecht. Mobile Legends kent korte matches en een uitschakeling kost torens en doelstellingen door de herlevingstijd. Trek je bij weinig gezondheid terug; zie je een tegenstander verdwijnen, wees dan bedacht op bosjes. De tweede misser is nooit naar de minimap kijken: elke paar seconden even spieken laat zien of er vijanden op komst zijn."
+      },
+      {
+       "tip": "p",
+       "metin": "De derde fout is blind staren op kills. Wedstrijden worden beslist door het neerhalen van torens en het opeisen van Turtle en Lord; een kill is pas nuttig als deze ruimte creëert voor zulke doelen. Schelden in de chat leidt vrijwel altijd tot verlies: een korte, duidelijke ping werkt honderd keer beter dan een boze opmerking. Neem even afstand als je merkt dat je gefrustreerd raakt."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Accountveiligheid en gedragsregels",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Voor jongere spelers: controleer instellingen rond in-app aankopen en chat samen met een ouder of voogd. Klik niet op links van onbekenden en deel geen privégegevens (adres, school, telefoon) in de chat."
+      },
+      {
+       "tip": "p",
+       "metin": "Je account is je digitale kluis. Koppel het aan een veilige e-mail en deel je wachtwoord onder geen beding op externe sites."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Cheatsoftware, mod-apps, scripts, rank-boosting, handel in accounts, skin-goksites en misleidende pagina's met 'gratis diamanten' leiden tot een permanente verbanning. Blijf hier te allen tijde vandaan."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Herhaaldelijk AFK gaan of opzettelijk potjes verpesten leidt tot sancties en verlaagt je Credit Score.",
+        "Blijf hoffelijk naar medespelers; rapporteer en demp beledigende taal.",
+        "Met een secundair account lager gerangschikte spelers domineren (smurfing) is onsportief; vermijd dit.",
+        "Deel je inloggegevens nooit met anderen."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Gebruik ter beveiliging van je account een krachtig, uniek wachtwoord, activeer waar mogelijk tweestapsverificatie en deel je gegevens met niemand. Zelfs officiële helpdesks vragen nooit om je wachtwoord. Rank-boosting, accounthandel en verboden hulpsoftware schenden de spelregels en kunnen tot accountsluiting leiden. Je eigen verdiende progressie geeft veel meer voldoening en houdt het spel plezierig."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Veelgestelde vragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is Mobile Legends gratis?",
+         "c": "Ja. Het spel is gratis speelbaar; aankopen zijn uitsluitend bestemd voor cosmetische items."
+        },
+        {
+         "s": "Kan ik op pc spelen?",
+         "c": "Ja, via Google Play Games; vereisten zijn Windows 10 versie 2004, 10 GB SSD-ruimte en actieve virtualisatie."
+        },
+        {
+         "s": "Vanaf wanneer kan ik ranked spelen?",
+         "c": "Volgens communitybronnen vanaf accountlevel 8 met voldoende heroes; Moonton heeft dit niet formeel gepubliceerd, het scherm in-game is leidend."
+        },
+        {
+         "s": "Kan mijn rang dalen?",
+         "c": "Je verliest sterren; in de Warrior-rang kost verlies echter geen sterren (volgens communitybronnen)."
+        },
+        {
+         "s": "Met welke hero begin ik het beste?",
+         "c": "Kies een eenvoudige, duurzame hero; speel een week lang dezelfde twee personages."
+        },
+        {
+         "s": "Is er ondersteuning voor de Turkse taal?",
+         "c": "Niet officieel gespecificeerd; controleer de taalinstellingen in het spel zelf."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "zh": {
+   "baslik": "决胜时刻（Mobile Legends: Bang Bang）新手指南：英雄、分路与排位",
+   "ozet": "Mobile Legends: Bang Bang 是一款广受欢迎的手游端免费 5v5 MOBA。本指南助力新玩家与回归玩家从安装入门到排位上分步步为营。",
+   "kunye": [
+    {
+     "ad": "游戏类型",
+     "deger": "移动端 MOBA（5v5）"
+    },
+    {
+     "ad": "平台",
+     "deger": "Android 与 iOS；PC 端通过 Google Play Games 游玩"
+    },
+    {
+     "ad": "收费模式",
+     "deger": "免费畅玩；可选外观饰品内购"
+    },
+    {
+     "ad": "当前版本",
+     "deger": "Season 42（2026年9月16日开启）；社区统计补丁版本号为 2.2.16a"
+    },
+    {
+     "ad": "土耳其语支持",
+     "deger": "土耳其语支持未正式载明；请在游戏内语言设置菜单中查验"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "nedir",
+     "baslik": "游戏定位与 2026 年最新发展态势",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "在 Mobile Legends: Bang Bang 中，两支五人队伍展开正面对决。每位玩家选择一名**英雄（hero）**，终极目标是摧毁敌方基地深处的防御水晶。游戏专为触摸屏量身优化；对局节奏紧凑，在手机上操作轻便舒适。"
+      },
+      {
+       "tip": "p",
+       "metin": "根据 Google Play 官方页面，**第 42 赛季（Season 42）**于服务器时间 2026 年 9 月 16 日 00:00 准时打响。赛季专属皮肤为波波尔和库帕（Popol and Kupa）的“Flamehide Thane”，赛季头像框为“Starward Decade”；同时推出了玛莎（Masha）与布鲁诺（Bruno）的 10 周年重做。游戏主打“Play to Win，not Pay to Win（凭实力取胜而非氪金致胜）”。"
+      },
+      {
+       "tip": "p",
+       "metin": "最新官方版本号未在对外页面正式列明；社区消息标明为 2.2.16a（2026 年 10 月 14 日）。第 43 赛季预计于 12 月中旬开启；具体日期尚未最终官宣。2026 年度地图革新于 2026 年 9 月 28 日正式上线（据社区消息），新增了治疗神龟（Healing Turtle）、黄金防御塔（Golden Turret）以及侦测幽魂（Revealing Wisps）等全新机制。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "本指南中的数据指标截至 2026 年 11 月准确。部分衍生自社区统计的信息已在文中标明；请以游戏内实际显示为准。"
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "启程之前：下载安装、账号与设备要求",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "对于新建账号，首先通关基础教学关卡与新手开荒指引；它们不仅指导基础轮盘操作，还会赠送丰厚的新手启动奖励。在把金币花费在第一批英雄之前，先摸索出自己最钟爱的分路位置。"
+      },
+      {
+       "tip": "p",
+       "metin": "你可以从 Google Play 或苹果 App Store 下载游戏。根据 Google Play 页面显示，游戏分级为 12+ 并包含应用内购买选项。你可以使用电子邮箱或第三方关联账号进行登录认证。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "在 PC 上游玩需通过 Google Play Games。最低要求：Windows 10（版本 2004）、10 GB 空闲 SSD 空间、Intel UHD 630 显卡、4 个物理核心、8 GB 内存并开启硬件虚拟化（VT）。",
+        "确保网络环境稳定流畅；建议使用稳定 Wi-Fi 或优质 5G/4G 移动蜂窝网络。",
+        "游戏服务器时间可能与你的本地时区存在时差；请在游戏内核对赛季结算的具体时点。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "请仅从官方正规应用商店下载安装。任何宣称“免费领取钻石”或账号代送的钓鱼第三方应用都会导致账号被盗。"
+      },
+      {
+       "tip": "p",
+       "metin": "手机游玩最重要的基本盘是稳定的网络连接。优先选择高速 Wi-Fi 或良好移动网络；比赛中途掉线会严重惩罚个人信誉并葬送队友努力。电池续航与散热同样不容忽视：长时间鏖战时连上充电线并摘掉手机保护壳能有效降温防掉帧。佩戴耳机能清晰辨别敌方脚步与技能前摇音效。"
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "新手最初几场对局的循序进阶",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "通关基础新手教程",
+         "metin": "熟练掌握虚拟摇杆移动、普攻锁定与技能指向拖动施法。"
+        },
+        {
+         "baslik": "进行人机对战模式练习",
+         "metin": "在人机（AI）对局中测试不同英雄手感与地图视野，直至操作纯熟自如。"
+        },
+        {
+         "baslik": "切入经典匹配对局（Classic）",
+         "metin": "在不影响段位的正规匹配中适应与真实玩家的攻防节奏。"
+        },
+        {
+         "baslik": "做好排位赛备战准备",
+         "metin": "据社区统计开启排位赛通常需账号达到 8 级并拥有规定数量英雄；Moonton 未在官网详列，以游戏内排位入口的锁止提示为准。"
+        },
+        {
+         "baslik": "合理控制单次游玩时长",
+         "metin": "每打完一到两场后稍作闭目休息，能显著降低烦躁与操作走形。"
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "在前几天不要过分执念于输赢，重点是把地图地形与常用英雄的技能摸透。比赛中全程盯紧两件事：自己所在分路的小兵线，以及下一个战略中立目标（防御塔、神龟、领主）的刷新倒计时。赛后看一眼结算面板，找出自己最致命的失误诱因，在下一盘有针对性地规避它。这种复盘法远比盲目无脑连打更能快速上分。"
+      }
+     ]
+    },
+    {
+     "id": "hero-rol",
+     "baslik": "前几周的英雄与职业定位抉择",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "游戏拥有五大基准定位：**坦克（Tank）、法师（Mage）、射手（Marksman）、刺客（Assassin）以及辅助（Support）**。此外还涵盖战士（Fighter）体系。英雄可通过每周免费轮换或商城解锁。下表推荐的是长期以来机制直观简单的新手热门人选，属于通用上手指南，非 Moonton 官方强制指定，版本强度亦会随补丁微调。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "职业定位",
+        "简单上手英雄代表",
+        "推荐入门的理由"
+       ],
+       "satirlar": [
+        [
+         "Tank",
+         "Tigreal（泰格瑞尔）",
+         "身板硬朗抗揍；能稳稳顶在队友身前提供强力团控"
+        ],
+        [
+         "Mage",
+         "Eudora（尤朵拉）",
+         "技能机制直截了当；瞬间爆发法术伤害极高"
+        ],
+        [
+         "Marksman",
+         "Layla（蕾拉）",
+         "超远射程安全点射输出；普攻弹道简单易瞄准"
+        ],
+        [
+         "Fighter",
+         "Zilong（子龙）",
+         "近身突进肉搏迅猛；切入与收割动作流畅利落"
+        ],
+        [
+         "Support",
+         "Estes（埃斯特斯）",
+         "源源不断的团队治疗；全方位保障队伍生存续航"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "在一整周内固定只练习同 2 名英雄。彻底吃透一名核心英雄的机制与伤害边界，远比频繁走马观花更能带来实力飞跃。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "分路 / 战术站位",
+        "常驻担当英雄",
+        "主要战术职责"
+       ],
+       "satirlar": [
+        [
+         "Gold Lane（金币路）",
+         "Marksman",
+         "安全稳健补刀吃线发育，适时推进拔除外塔"
+        ],
+        [
+         "EXP Lane（经验路）",
+         "Fighter",
+         "单人抗压对线；在团战中充当半肉搅局与切入"
+        ],
+        [
+         "Mid Lane（中路）",
+         "Mage",
+         "快速清完兵线，及时辐射游走支援野区与双边路"
+        ],
+        [
+         "Jungle（打野位）",
+         "Assassin 或 Fighter",
+         "刷净野怪经济，掌控神龟（Turtle）与领主（Lord）"
+        ],
+        [
+         "Roam（游走位）",
+         "Tank 或 Support",
+         "保护核心脆皮，占领草丛视野并组织团战先手开团"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "若初入门不知如何选择，建议从游走位的坦克（Tank）练起：只要顶在队友身前承受伤害并不轻易暴毙，既不考验苛刻微操，又能快速培养大局地图观。另一理想备选是射手；在金币路安分吃兵发育，时刻警惕小地图敌方动向即可。"
+      }
+     ]
+    },
+    {
+     "id": "amblem-buyu",
+     "baslik": "徽章系统与战场技能配置",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "每场对局开打前你都要做出两项核心预设：徽章（Emblem）搭配与战斗技能（Battle Spell）。两者均与英雄定位紧密挂钩，新手前几周直接选用系统推荐的成熟预设最为稳健。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "备战选项",
+        "核心作用",
+        "适配英雄定位"
+       ],
+       "satirlar": [
+        [
+         "Emblem（徽章）",
+         "各系别（坦克、刺客、法师、射手、辅助、战士）提供固定属性并可自由搭配三个天赋点",
+         "优先直接套用英雄界面推荐的官方默认徽章搭配"
+        ],
+        [
+         "Retribution（惩戒）",
+         "对中立野怪、神龟以及领主造成巨额真实斩杀伤害",
+         "打野位专属必备；未携带惩戒无法有效承担控野职责"
+        ],
+        [
+         "Flicker（闪现）",
+         "瞬移一小段指定距离",
+         "绝大多数缺乏位移、需要极限逃生或瞬间先手的英雄"
+        ],
+        [
+         "Purify（净化）",
+         "瞬间解除一切控制效果并提供短暂移速加成",
+         "身板脆弱且极其惧怕敌方连环强控的英雄"
+        ],
+        [
+         "Execute（终结/斩杀）",
+         "对敌方残血英雄造成巨额真实伤害",
+         "希望精准补齐临门一脚伤害以稳收人头的刺客或战士"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "技能与徽章的具体数值与机制会随赛季更新迭代；请以游戏内备战界面的最新实时描述为准。选定某项战斗技能后，建议连续使用一周：把该技能的冷却时间形成条件反射肌肉记忆，实战会从容得多。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "作为打野位，请把惩戒（Retribution）严格留给神龟和领主斩杀抢夺；切勿随手挥霍在无关痛痒的小野怪身上。"
+      }
+     ]
+    },
+    {
+     "id": "mekanikler",
+     "baslik": "核心机制：分路、野区与战略公共资源",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "战场地图由三条主干路线（lanes）及贯穿其中的野区构成。具体分路包括：**金币路（Gold Lane）**（通常为射手）、**经验路（EXP Lane）**（通常为战士）、**中路（Mid Lane）**（通常为法师）、**打野（Jungle）**与**游走（Roam）**（通常为坦克或辅助）。首只神龟固定在靠近经验路的一侧刷新。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**防御塔（Turrets）：** 外塔首当其冲，其次破内塔与高地塔，最终直捣基地水晶枢纽。",
+        "**野区中立野怪：** 提供稳定金币与经验；神龟（Turtle）与领主（Lord）等史诗级中立生物能为全队赋予统治级战力。",
+        "**兵线（Minions）：** 击杀小兵获取经济；补刀（造成最后一击）能拿到更丰厚的全额金币。",
+        "**小地图大局观：** 时刻用余光扫视小地图；一旦敌方英雄从小地图线上视野消失，立刻收缩防线防抓。"
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "战术术语",
+        "对应战术含义"
+       ],
+       "satirlar": [
+        [
+         "Farm（发育刷钱）",
+         "通过稳妥清线和清理野怪稳步积累金币与经验"
+        ],
+        [
+         "Gank（抓人突袭）",
+         "趁虚而入出其不意突袭敌方某一路以形成人多打少"
+        ],
+        [
+         "Rotate（支援转线）",
+         "全队成员按战术意图在不同分路之间快速联动转场"
+        ],
+        [
+         "Push（推进压塔）",
+         "快速清理并调动己方兵线压迫敌方防御塔"
+        ],
+        [
+         "Retreat（战术撤退）",
+         "遭遇伏击或局势不利时果断后撤止损"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "新手最受用终身的黄金准则是：**多看小地图，紧跟大部队抱团推进**。独狼式单打独斗追击残血往往是断送好局的根源。"
+      }
+     ]
+    },
+    {
+     "id": "turtle-lord",
+     "baslik": "神龟与领主关键刷新时序",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "神龟（Turtle）与领主（Lord）是决定战局走势的顶级核心战略资源，赋予队伍巨大的金币、经验与推进光环。据社区综合统计，第一只神龟约在 2:00 准时降临，击杀后每隔约 2 分钟复活刷新；2026 年度地图重塑后神龟新增了治疗神龟等机制。领主的确切登场分钟各版本有所微调且官方未在静态页固定载明，请务必关注战场上方的倒计时提示。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "史诗级目标",
+        "降临时间点",
+        "提供战略增益"
+       ],
+       "satirlar": [
+        [
+         "Turtle（神龟）",
+         "首次刷新约 2:00；击杀后间隔约 2 分钟复活",
+         "为全队提供大量金币、经验与护盾；抢下最后一击的英雄还可额外获得瞬间治疗回血与专属护盾"
+        ],
+        [
+         "Lord（领主）",
+         "于对局中后期隆重登场；确切刷新节点由游戏内计时为准",
+         "化身所向披靡的强大助战巨兽向敌方分路狂推，大幅加速粉碎高地防御塔"
+        ]
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "在刷新前 20 至 25 秒提前集结落位",
+         "metin": "布控草丛视野并排查盲区；姗姗来迟的队伍往往在遭遇战中直接溃败。"
+        },
+        {
+         "baslik": "将斩杀惩戒大权交给打野掌控",
+         "metin": "避免杂乱无章乱放技能；将高爆发技能集中留到惩戒斩杀血线。"
+        },
+        {
+         "baslik": "开打前先料理好两翼兵线",
+         "metin": "调动中路与游走位抱团压迫龙坑外围。"
+        },
+        {
+         "baslik": "局势凶险时切勿强求",
+         "metin": "若敌方死守草丛卡位，果断转去换推外塔或收割野区止损。"
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "在围绕核心生物开战前，务必查验敌方打野所处方位以及己方成员是否满编健康。"
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "系统设置：新手实用基准参数",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "最具实战价值的个性化调整是界面键位布局。若大拇指按某些技能键感到别扭吃力，可适度调整其大小或挪动间距；每场对局都能顺手盲操，远比细抠画质滤镜更有实战意义。"
+      },
+      {
+       "tip": "p",
+       "metin": "以下并非强制官方标准，而是社区高手普遍推崇的实用起步参数。建议在人机对战中反复微调。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "设置项目",
+        "起步推荐配置"
+       ],
+       "satirlar": [
+        [
+         "按键布局",
+         "略微放大技能轮盘或微调位置，使双手大拇指能自然舒适地触碰"
+        ],
+        [
+         "目标锁定模式",
+         "开启高级锁定或基础智能自动锁定"
+        ],
+        [
+         "画质帧率",
+         "根据自身机型量力而行；高帧率与丝滑操作永远优先于极致特效"
+        ],
+        [
+         "游戏音频",
+         "建议佩戴立体声耳机；技能施法与草丛隐秘音效包含关键情报"
+        ],
+        [
+         "网络优化",
+         "保持优质 Wi-Fi 或蜂窝数据连接；时刻关注游戏界面的 Ping 值延迟跳动"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "一旦更改了某项设置，请坚持使用数局以形成手感；切忌频繁在慌乱中来回调整。"
+      }
+     ]
+    },
+    {
+     "id": "elmas-butce",
+     "baslik": "钻石与消费预算合理规划",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Mobile Legends 实行免费畅玩机制；Google Play 官方定位游戏为“Play to Win，not Pay to Win”，并提示包含应用内购买。钻石对应真实货币充值；各区域定价有所差异，请在游戏内商城查看本地货币价格。战场点数（Battle Points，简称 BP）完全可以通过日常对局赚取并用于解锁全部常规英雄。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "消费优先级",
+        "行动策略",
+        "核心逻辑依据"
+       ],
+       "satirlar": [
+        [
+         "1. 英雄阵容扩充",
+         "全部使用 BP 金币解锁；绝不将钻石挥霍在买英雄上",
+         "决定对局胜负的是英雄机制与个人操作，绝非皮肤"
+        ],
+        [
+         "2. 月卡特权（如星光 Starlight 等）",
+         "仅在自身出勤率极高且确实高频游玩时才考虑",
+         "主要提供外观及日常零碎小奖励；具体商城明码标价"
+        ],
+        [
+         "3. 纯外观皮肤",
+         "优先级排在最末位",
+         "皮肤纯属个性化装扮；对局中不提供任何实质性数值加成"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "设定每月严格的娱乐开支上限，未成年玩家请务必与家长监护人沟通确认消费。",
+        "坚决远离非官方第三方“廉价打折钻石”网站以及索要账号密码的代充黑产平台。",
+        "若出现非理性冲动消费，强制设立两周“不买任何游戏道具”的冷静反思期。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "任何鼓吹“低价折扣钻石”或“免费刷钻代充”的钓鱼网站均会直接导致账号被盗被封；请严格仅使用官方应用内商店通道。"
+      }
+     ]
+    },
+    {
+     "id": "rank",
+     "baslik": "排位竞技体系与段位层级表",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "排位段位细则可能随赛季略有演进；以下星数层级参考社区综合统计，Moonton 官方未在静态主页公开发布完整矩阵表。确切段位晋级规则请在游戏内排位专属面板中查阅。"
+      },
+      {
+       "tip": "p",
+       "metin": "根据社区通行标准，排位大段位依次为：勇者（Warrior）、精英（Elite）、大师（Master）、宗师（Grandmaster）、史诗（Epic）、传奇（Legend）以及神话（Mythic）。神话段位更进一步细分为：荣耀神话（Mythical Honor）、至高神话（Mythical Glory）与永恒神话（Mythical Immortal）。跨入神话后胜星将保持无上限累加。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "排位大段位",
+        "所辖分级"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "III - I"
+        ],
+        [
+         "Elite",
+         "III - I"
+        ],
+        [
+         "Master",
+         "IV - I"
+        ],
+        [
+         "Grandmaster",
+         "V - I"
+        ],
+        [
+         "Epic",
+         "V - I"
+        ],
+        [
+         "Legend",
+         "V - I"
+        ],
+        [
+         "Mythic",
+         "Mythical Honor（25星）、Glory（50星）、Immortal（100星以上）"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "正规征召（Draft Pick）禁选英雄阶段自史诗（Epic）段位起全面启用（据社区数据）。",
+        "在勇者（Warrior）段位即使战败亦不会扣除星数（据社区数据）。",
+        "排位开黑组队支持单排、双排、三排或五人满编车队（据社区数据）。",
+        "信誉分（Credit Score）初始为 100 分上限 110 分；跌落至 90 分以下将被禁止进入排位赛（据社区数据）。"
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "段位区间",
+        "下设分段",
+        "每小段所需星数"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "III - I",
+         "3"
+        ],
+        [
+         "Elite",
+         "III - I",
+         "4"
+        ],
+        [
+         "Master",
+         "IV - I",
+         "4"
+        ],
+        [
+         "Grandmaster",
+         "V - I",
+         "5"
+        ],
+        [
+         "Epic",
+         "V - I",
+         "5"
+        ],
+        [
+         "Legend",
+         "V - I",
+         "5"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "神话（Mythic）不再划分小段位；星数将持续递增：神话 0-24 星、荣耀神话 25 星、至高神话 50 星、永恒神话 100 星及以上（依据社区标准）。第 42 赛季预计于 12 月中旬收官；确切闭幕日期请留意官方倒计时。"
+      }
+     ]
+    },
+    {
+     "id": "hatalar",
+     "baslik": "新手常犯的典型误区",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "绝大多数对局失误都源于坏习惯而非知识匮乏。每次打完后记录反思一件事：我为什么死掉？我错过了哪个战略目标？如果连续几局都是同一个死因，那便是你最需攻克的核心短板。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "毫无准备便贸然闯进排位赛；先在经典匹配中把英雄手感磨合纯熟。",
+        "脱离队伍保护独自强行越塔强杀。",
+        "全程只顾低头走位，彻底无视小地图。",
+        "习惯性指责队友；每次阵亡多反思自身的走位瑕疵。",
+        "每一盘都选用完全陌生未曾练过的英雄。",
+        "在心态失衡（上头）时依然强行继续排队；及时停手深呼吸。"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "最普遍的错误是盲目参与每一场突发乱战。Mobile Legends 对局紧凑，后期一次阵亡导致的复活读秒就足以让敌方推平基地防御塔。残血时坚决后撤回城补给；发现小地图上敌方突然集体消失，务必警惕周围草丛。第二大忌是绝不看小地图：每隔一到两秒扫视一眼，就能提前察觉敌方打野的包抄动向。"
+      },
+      {
+       "tip": "p",
+       "metin": "第三个误区是单纯沉迷击杀人头数。推平防御塔与拿下神龟、领主才是赢下比赛的唯一基石；击杀人头的唯一意义在于为推塔拿龙创造空间。在文字聊天栏疯狂辱骂队友只会加速对局溃败：一个简短友善的地图快捷信号远比一篇泄愤文字有效得多。一旦心态失衡，立刻退出游戏休息。"
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "账号核心安全与社区规范",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "针对未成年玩家：请在家长监护人陪同下设定游戏内充值与聊天权限。切勿点击陌生人私信发送的外链，绝不在公屏透露真实姓名、住址、学校或手机号码等敏感隐私。"
+      },
+      {
+       "tip": "p",
+       "metin": "你的账号是宝贵的数字资产。请将其绑定至高安全性邮箱，绝不在非官方钓鱼网站输入密码。"
+      },
+      {
+       "tip": "uyari",
+       "metin": "外挂脚本、第三方破解客户端、代打代练、买卖租赁账号、饰品赌博以及宣称“免费领取钻石”的假冒平台均会导致账号遭到永久封禁。请务必敬而远之。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "频繁对局挂机（AFK）或恶意送人头摆烂会招致严厉制裁并大幅扣除信誉分。",
+        "对局中尊重队友；主动屏蔽并积极举报恶意侮辱言论。",
+        "开小号在低分段虐菜（Smurfing）违背公平竞技初衷；请勿参与。",
+        "严禁与任何其他人共享你的游戏账号。"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "为确保账号绝对安全，请设置专属高强度密码，尽可能开启双重身份验证（2FA），切勿将个人信息泄露给任何人。即便是官方客服人员也绝不会向你索要登录密码。找人代练、账号买卖和违规辅助软件严重违规且随时可能导致封号。依靠自己双手打出来的真实段位才更有成就感，也能长久享受竞技乐趣。"
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "常见问题解答",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Mobile Legends 是免费游戏吗？",
+         "c": "是的。游戏主体完全免费畅玩；商城消费纯属可选的外观个性化道具。"
+        },
+        {
+         "s": "可以在电脑 PC 端游玩吗？",
+         "c": "可以，通过官方 Google Play Games 模拟器游玩；系统要求为 Windows 10（2004 版本）、10 GB SSD 硬盘空间并开启 CPU 虚拟化。"
+        },
+        {
+         "s": "什么时候可以打排位赛？",
+         "c": "根据社区数据需账号达到 8 级并拥有规定数量英雄；Moonton 未在官网详列，以游戏内入口解锁提示为准。"
+        },
+        {
+         "s": "排位段位会下跌掉星吗？",
+         "c": "会掉星；但据社区统计在勇者（Warrior）段位战败不会扣除胜星。"
+        },
+        {
+         "s": "新手推荐首发什么英雄？",
+         "c": "选择技能机制直观、身板耐打扎实的简单英雄；建议专精同样的 2 名英雄练习一周。"
+        },
+        {
+         "s": "游戏支持土耳其语吗？",
+         "c": "官方未在主页明确列明；可在游戏内语言设置菜单中进行确认。"
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  }
 }

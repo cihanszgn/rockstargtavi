@@ -2208,6 +2208,1635 @@
      ]
     }
    ]
+  },
+  "de": {
+   "baslik": "Roblox Einsteiger- und Eltern-Sicherheitsleitfaden (2026)",
+   "ozet": "Ein Leitfaden für neue Roblox-Spieler und Eltern zu Kontotypen, ersten Schritten, einem Robux-Budget und Kindersicherung. Altersprüfungen sind seit Anfang 2026 verpflichtend.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Plattform für nutzererstellte Spiele"
+    },
+    {
+     "ad": "Plattform",
+     "deger": "PC, Mac, iOS, Android, Xbox, PlayStation"
+    },
+    {
+     "ad": "Preismodell",
+     "deger": "Kostenlos; Robux, Premium und Roblox Plus (4,99 US-Dollar monatlich) sind optional"
+    },
+    {
+     "ad": "Aktuelle Version",
+     "deger": "Laufend aktualisierte Plattform; Altersprüfungen in Kraft seit 7. Januar 2026"
+    },
+    {
+     "ad": "Türkisch-Unterstützung",
+     "deger": "Ja; Oberfläche, Roblox Studio und In-Game-Chat-Übersetzung unterstützen Türkisch. Siehe Übersicht für den Zugriff aus der Türkei"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "Was ist Roblox und was hat sich 2026 geändert?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Roblox ist kein einzelnes Spiel, sondern eine Plattform, auf der du unzählige von Millionen Nutzern erstellte Welten betrittst (Roblox nennt sie Erlebnisse). Mit demselben Konto kannst du heute ein Survival-Abenteuer spielen und morgen ein Renn- oder Rollenspiel ausprobieren."
+      },
+      {
+       "tip": "p",
+       "metin": "Die größte Änderung im Jahr 2026 betraf die Sicherheit. **Seit dem 7. Januar 2026** verlangt der Chat weltweit eine Altersprüfung: Eine Gesichtsaltersschätzung über die Smartphone-Kamera, wobei eine Ausweisprüfung für Spieler ab 13 Jahren optional ist. Anfang Juni 2026 kamen zudem zwei kindgerechte Kontotypen hinzu: **Roblox Kids** (Alter 5-8) und **Roblox Select** (Alter 9-15). **Hinweis für die Türkei:** Der Zugang zu Roblox aus der Türkei wurde am 7. August 2024 eingeschränkt. Im Juni 2026 gab es Berichte über eine Aufhebung, andere Quellen meldeten jedoch fortbestehende BTK-Einschränkungen; prüfe den aktuellen Status in offiziellen Mitteilungen. Die Nutzung eines VPN zur Umgehung wird nicht empfohlen."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Wird das Alter falsch angegeben, greifen Chat- und Inhaltsgrenzen fehlerhaft. Gib beim Anlegen eines Kinderkontos stets das echte Geburtsjahr an."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Vor dem Start: Konto und Gerät",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Roblox ist kostenlos und läuft auf PC, Mac, iOS, Android, Xbox und PlayStation. Bei der Registrierung wird deine Altersgruppe festgelegt, woraus sich Chat- und Inhaltseinstellungen ableiten:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Altersgruppe",
+        "Kontotyp / Status",
+        "Kernpunkt"
+       ],
+       "satirlar": [
+        [
+         "5-8",
+         "Roblox Kids",
+         "Nur Spiele mit der Einstufung Moderate oder niedriger"
+        ],
+        [
+         "9-12",
+         "Roblox Select",
+         "Eingeschränkte Inhalte; Bildschirmzeit- und Ausgabenkontrollen verfügbar"
+        ],
+        [
+         "13-15",
+         "Roblox Select",
+         "Kein Zugriff auf Restricted-Spiele; elterliche Einstellungen greifen"
+        ],
+        [
+         "16-17",
+         "Standard-Konto",
+         "Weniger elterliche Kontrollfunktionen"
+        ],
+        [
+         "18 and over",
+         "Erwachsenen-Konto",
+         "Vollständiger Zugriff; Zusatzfunktionen bei Identitätsprüfung"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Unter 9 Jahren ist der Chat standardmäßig deaktiviert und schaltet sich nur mit elterlicher Zustimmung ein. Roblox unterteilt Altersgruppen in U9, 9-12, 13-15, 16-17, 18-20 und 21+. Die Hardwareanforderungen sind gering; moderne Smartphones oder Standard-PCs genügen für die meisten Erlebnisse, wenngleich anspruchsvolle Welten reduzierte Grafikeinstellungen erfordern können."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Lade Roblox ausschließlich von der offiziellen Website oder den App Stores herunter. Gefälschte Apps und Websites, die kostenlose Robux versprechen, stehlen Konten."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "Die ersten Stunden: Schritt für Schritt",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Die folgende Reihenfolge ermöglicht Kindern wie erwachsenen Neueinsteigern einen sicheren und strukturierten Einstieg."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Konto korrekt einrichten",
+         "metin": "Gib das reale Geburtsjahr an, wähle ein starkes, exklusives Passwort und aktiviere nach Möglichkeit die Zwei-Faktor-Authentifizierung."
+        },
+        {
+         "baslik": "Altersprüfung abschließen",
+         "metin": "Wenn du den Chat nutzen möchtest, schließe die Gesichtsaltersschätzung ab. Überspringst du sie, bleibt der Chat aus, was für jüngere Kinder oft der beste Standard ist."
+        },
+        {
+         "baslik": "Avatar anpassen",
+         "metin": "Passe Aussehen und Kleidung im Reiter Avatar mit kostenlosen Optionen an. Kostenpflichtige Käufe sind zu Beginn nicht nötig."
+        },
+        {
+         "baslik": "Beliebtes, geprüftes Spiel wählen",
+         "metin": "Lies auf der Entdecken-Seite Beschreibung, Alterseinstufung und Spielerzahlen. Starte mit einem Erlebnis, das Freunde oder Familie bereits kennen."
+        },
+        {
+         "baslik": "Steuerung und Audio kennenlernen",
+         "metin": "Erprobe in den ersten Minuten Kamera, Lauf- und Sprungtasten; jedes Erlebnis hat eine leicht abweichende Benutzeroberfläche."
+        },
+        {
+         "baslik": "Zeitrahmen vereinbaren",
+         "metin": "Lege Spielzeiten vorab fest; über die Kindersicherung lässt sich ein tägliches Bildschirmzeitlimit einrichten."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Spielt in den ersten Tagen gemeinsam. Das ist der einfachste Weg herauszufinden, welche Spiele dein Kind mag und mit wem es interagiert."
+      }
+     ]
+    },
+    {
+     "id": "oyun-secimi",
+     "baslik": "Spielauswahl und Inhaltseinstufungen",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Roblox-Erlebnisse besitzen Inhaltseinstufungen; Kids-Konten spielen Moderate oder darunter, Select-Konten haben keinen Zugriff auf Restricted-Titel.",
+        "Achte auf Zustimmungsrate, Spieleranzahl und das Datum der letzten Aktualisierung; verwaiste Spiele weisen oft Fehler auf.",
+        "Meide Spiele, die dich auf externe Websites oder Apps weiterleiten oder nach persönlichen Daten fragen.",
+        "Prüfe nach dem Betreten eines Servers Chat- und Audioeinstellungen; unerwünschte Kontakte sind oft ein größeres Risiko als das Spiel selbst.",
+        "Möchtest du selbst Spiele kreieren, probiere das kostenlose Programm Roblox Studio aus; das Erschaffen eigener Welten ist eine lehrreiche Entdeckung."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Besitzt ein Spiel unklare Bewertungen oder Einstufungen, probiere es selbst kurz aus, bevor du es deinem Kind freigibst."
+      }
+     ]
+    },
+    {
+     "id": "robux-ve-avatar",
+     "baslik": "Robux, Premium und Ausgabengewohnheiten",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**Robux** ist die In-Game-Währung von Roblox für Kleidung, spielerische Vorteile und Zusatzinhalte. Robux werden mit echtem Geld erworben; laut Roblox erhält man über Website, PC oder Gutscheinkarten meist mehr Robux als über mobile App-Stores (Wechselkurse können variieren, beachte die Anzeige beim Kauf)."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Monatsbudget festlegen** und Robux gezielt für ein bestimmtes Ziel kaufen; kleine wiederholte Käufe summieren sich überraschend schnell.",
+        "**Gutscheinkarten nutzen** ist sicherer als das Hinterlegen einer Kreditkarte; das Budget limitiert sich von selbst.",
+        "**Premium** gewährt monatlich Robux; **Roblox Plus** bietet Rabatte und Extravorteile. Beides sind Abonnements; verzichte darauf, wenn du sie nicht aktiv benötigst.",
+        "**Kostenlose Robux**, die von externen Seiten oder Videos versprochen werden, sind ausnahmslos Betrug; kein legitimer Code verlangt dein Passwort."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Websites, die Gratis-Robux oder Vervielfältigungstricks versprechen, dienen dem Diebstahl deiner Zugangsdaten. Teile dein Passwort oder Sicherheitscodes niemals mit Dritten."
+      }
+     ]
+    },
+    {
+     "id": "ebeveyn",
+     "baslik": "Kindersicherung: Wo und was eingestellt werden kann",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Nach Verknüpfung des Elternkontos mit dem Kinderkonto finden sich alle Optionen im Bereich Kindersicherung in den Einstellungen. Menübezeichnungen können sich ändern, prüfe die Benutzeroberfläche selbst."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Inhaltsreife:** Bestimme, welche Reifegrade von Spielen das Kind betreten darf.",
+        "**Chat:** Kann ein- oder ausgeschaltet werden; unter 9 Jahren ist er standardmäßig deaktiviert.",
+        "**Bildschirmzeit:** Für Kids- und 9-12-Select-Konten kann ein tägliches Zeitlimit gesetzt werden.",
+        "**Ausgaben:** Ein monatliches Ausgabenlimit samt Benachrichtigungen lässt sich festlegen; das Einlösen von Gutscheinkarten zählt nicht dagegen.",
+        "**Robux-Transfers:** Es gibt Transferlimits, elterliche Genehmigungen und detaillierte Verlaufsprotokolle.",
+        "**Freundes- und Inventarsichtbarkeit:** Schränke ein, wer mit dem Kind kommunizieren und dessen Gegenstände einsehen darf.",
+        "**Eltern-Modus:** Geschützt durch eine 6-stellige PIN, damit das Kind die Konfiguration nicht eigenmächtig ändert."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Ab 13 Jahren kann das Kind Bildschirmzeit und Blockierungen teilweise selbst verwalten, ab 16 greifen noch weniger Einschränkungen. Passe die Regeln im Gespräch mit dem heranwachsenden Kind fortlaufend an."
+      }
+     ]
+    },
+    {
+     "id": "ebeveyn-adimlari",
+     "baslik": "Elternkonto verknüpfen: Schritt für Schritt",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Die Kindersicherung wird über ein mit dem Kinderkonto verknüpftes Elternkonto gesteuert. Um ein verknüpftes Elternkonto anzulegen, muss der Elternteil über eine Altersprüfung nachweisen, dass er 18 Jahre oder älter ist (Roblox-Hilfe, Seite zur Kindersicherung). Roblox hat die Altersprüfung für Chats weltweit verpflichtend gemacht (Januar 2026); unbestätigte Konten können nur eingeschränkte Spiele nutzen und nicht kommunizieren. Zudem gibt es neue Kontotypen: Roblox Kids für 5-8 Jahre und Roblox Select für 9-15 Jahre. Ein Kind wechselt mit 9 von Kids zu Select und mit 16 zu einem Standardkonto (Roblox Newsroom, April 2026). Prüfe stets den Kontotyp und die altersgerechten Freigaben."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Kind meldet sich an",
+         "metin": "Das Kind loggt sich in sein Konto ein und ruft die Einstellungen auf."
+        },
+        {
+         "baslik": "Elternteil hinzufügen",
+         "metin": "Öffne die Kindersicherung in den Einstellungen, tippe auf Elternteil hinzufügen und gib die E-Mail-Adresse des Elternteils ein."
+        },
+        {
+         "baslik": "E-Mail öffnen",
+         "metin": "Der Elternteil öffnet die Nachricht im Postfach und meldet sich mit seinem bestehenden Konto an."
+        },
+        {
+         "baslik": "Alter bestätigen",
+         "metin": "Weise nach, dass du 18 oder älter bist – per Ausweisdokument, Kreditkarte oder in manchen Regionen per Gesichtsschätzung."
+        },
+        {
+         "baslik": "Verknüpfung bestätigen",
+         "metin": "Bestätige die Verknüpfung; alle Einstellungen werden fortan zentral über das Elternkonto verwaltet."
+        }
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Einstellung",
+        "Was es bewirkt",
+        "Altersprüfung erforderlich?"
+       ],
+       "satirlar": [
+        [
+         "Communication",
+         "Bestimmt, mit wem das Kind chatten darf",
+         "Ja für viele Optionen"
+        ],
+        [
+         "Studio collaboration",
+         "Legt fest, mit wem in Studio gebaut werden darf: Alle Altersgruppen, Ähnliche Altersgruppen oder vertrauenswürdige Freunde, Ähnliche Altersgruppen, Niemand",
+         "Ja für alle außer Niemand"
+        ],
+        [
+         "Gameplay coordination",
+         "Koordination mit Spielern aller Altersstufen über kurze vorgefertigte Phrasen (Quick Words)",
+         "Nein"
+        ],
+        [
+         "Sending and getting Robux",
+         "Jüngere Nutzer benötigen für jeden Transfer eine elterliche Genehmigung",
+         "Nutzer ab 18 können ohne Genehmigung transferieren"
+        ],
+        [
+         "Facial and ID verification",
+         "Du bestimmst, ob eine Ausweisprüfung für das Kind zulässig ist",
+         "Wird von dir verwaltet"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Geht die Einstellungen nach der Verknüpfung gemeinsam mit eurem Kind durch. Das Erklären der Hintergründe erleichtert die Akzeptanz vereinbarter Regeln."
+      }
+     ]
+    },
+    {
+     "id": "plus-ve-robux",
+     "baslik": "Roblox Plus, Premium und Robux: Die Unterschiede",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Roblox Plus startete weltweit am **30. April 2026** für 4,99 US-Dollar pro Monat. Es umfasst ausschließlich Komfortvorteile und beinhaltet keine monatlichen Robux. Premium ist das traditionelle Abonnement, das monatlich Robux ausschüttet. Optionale Bundles mit 500, 1000 oder 2000 Robux können zu Plus hinzugebucht werden (Plus 500, Plus 1000, Plus 2000). Offizielle Premium-Preise variieren regional; prüfe die genauen Beträge im Kaufmenü."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Funktion",
+        "Roblox Plus",
+        "Premium"
+       ],
+       "satirlar": [
+        [
+         "Monatliche Robux",
+         "Keine (über optionale Bundles erhältlich)",
+         "Ja"
+        ],
+        [
+         "Rabatt auf In-Game- und Avatar-Artikel",
+         "10-20%",
+         "Keine"
+        ],
+        [
+         "Kostenlose, unbegrenzte Privater Server",
+         "Ja",
+         "Nein"
+        ],
+        [
+         "Kostenloser Robux-Versand",
+         "Ja",
+         "Nein"
+        ],
+        [
+         "Handel und Wiederverkauf",
+         "Ja",
+         "Ja"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Da es sich um wiederkehrende Abonnements handelt, verlängern sie sich monatlich automatisch. Bei Kinderkonten sollten Eltern Verlängerungsdatum und Kündigungsweg genau kennen. Weichen Beträge auf dem Kaufbildschirm von Tabellen auf Hilfeseiten ab, sind die Angaben im Kaufmenü maßgeblich."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Abonnements verlängern sich selbstständig. Überprüfe bei unerwarteten Abbuchungen den Abonnementbereich deines App-Stores; eine Kündigung im Roblox-Konto beendet Store-Abos nicht immer automatisch."
+      }
+     ]
+    },
+    {
+     "id": "turler-ve-dolandiricilik",
+     "baslik": "Beliebte Spielgenres und Betrugsmaschen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Roblox umfasst verschiedenste Genres, und die gewählte Kategorie prägt auch die Risiken im Spiel. Die folgende Übersicht zeigt dauerhaft beliebte Genres; prüfe dennoch stets die jeweilige Inhaltseinstufung. Beurteile Spielerzahlen, Beliebtheitsgrad und Freigaben gemeinsam; eine hohe Spielerzahl garantiert keine Sicherheit, da auch das Risiko von Kontakten mit Fremden steigt."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Genre",
+        "Beispiel",
+        "Was zu erwarten ist"
+       ],
+       "satirlar": [
+        [
+         "Rollenspiel (Role-play)",
+         "Brookhaven RP",
+         "Stark sozial geprägt; lebhafter Chat"
+        ],
+        [
+         "Haustiere und Handel",
+         "Adopt Me!",
+         "Anfällig für Tauschbetrug"
+        ],
+        [
+         "Hindernislauf (Obby)",
+         "Tower of Hell",
+         "Fordernd und ruhig; kaum Chat-Aktivität"
+        ],
+        [
+         "Abenteuer und Kampf",
+         "Blox Fruits",
+         "Lange Progression; möglicher Ausgabendruck"
+        ],
+        [
+         "Räuber und Gendarm",
+         "Jailbreak",
+         "Schnelllebig; kompetitiv"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Auch Betrugsmuster treten in vielfältiger Form auf. Diese Maschen mit dem Kind offen durchzusprechen, schützt nachhaltiger als reine Verbote:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Betrugsart",
+        "Vorgehensweise",
+        "Gegenmaßnahme"
+       ],
+       "satirlar": [
+        [
+         "Gratis-Robux-Websites",
+         "Verleiten zum Login und stehlen Zugangsdaten",
+         "Seite sofort schließen, Passwort ändern"
+        ],
+        [
+         "Tauschfallen (Trade Trap)",
+         "Erschleichen wertvoller Gegenstände durch Täuschung",
+         "Nur das offizielle Tauschfenster im Spiel nutzen"
+        ],
+        [
+         "Gefälschte Moderatoren",
+         "Geben sich als Mitarbeiter aus und verlangen Codes",
+         "Niemals Sicherheitscodes teilen"
+        ],
+        [
+         "Cookie-Diebstahl",
+         "Bringt Nutzer dazu, Skripte auszuführen, und übernimmt Sitzungen",
+         "Keinen unbekannten Code kopieren oder ausführen"
+        ],
+        [
+         "Abwandern auf Dritt-Apps",
+         "Aufforderung zum Wechsel auf externe Messenger",
+         "Streng ablehnen und einem Erwachsenen melden"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Gib deinem Kind diesen Leitsatz mit: Niemand von Roblox wird dich jemals auf externen Apps nach Passwörtern, Codes oder deiner Adresse fragen."
+      }
+     ]
+    },
+    {
+     "id": "studio",
+     "baslik": "Einführung in Roblox Studio",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Roblox Studio ist die kostenlose Entwicklungsumgebung für eigene Erlebnisse; sie läuft auf Windows und Mac. Laut Ankündigung von Roblox unterstützt die Studio-Oberfläche Türkisch (Roblox Developer Forum). Alle Kreationen können lokal kostenlos getestet werden; erst beim Veröffentlichen für andere müssen Inhaltsrichtlinien beachtet werden. Das Verdienen von echtem Geld unterliegt gesonderten Voraussetzungen und Altersgrenzen; Einzelheiten regelt der Roblox Creator Hub."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Studio installieren",
+         "metin": "Lade Roblox Studio von der offiziellen Seite herunter und melde dich mit deinem Konto an."
+        },
+        {
+         "baslik": "Vorlage wählen",
+         "metin": "Öffne eine Startvorlage; eine vorgefertigte Umgebung erleichtert den Einstieg gegenüber einer leeren Fläche."
+        },
+        {
+         "baslik": "Objekte platzieren",
+         "metin": "Füge Bauteile in die Szene ein und passe Größe und Farben im Eigenschaftenfenster an."
+        },
+        {
+         "baslik": "Erstes Skript schreiben",
+         "metin": "Schreibe in Luau, der Lua-basierten Skriptsprache, einen kurzen Code, der bei Berührung die Farbe ändert."
+        },
+        {
+         "baslik": "Testen und veröffentlichen",
+         "metin": "Überprüfe das Spiel über die Schaltfläche Play, veröffentliche es anschließend und lade Freunde ein."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Ob ein Kind in Studio gemeinsam mit Freunden bauen darf, hängt von der Option Studio-Kollaboration in der Kindersicherung ab. Zu Beginn kann sie deaktiviert bleiben, um eigenständiges Lernen zu fördern."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Häufige Fehler",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Hinterlegte Kreditkarten auf dem Kinderkonto belassen. Gutscheinkarten und Monatslimits sind wesentlich sicherer.",
+        "Den Chat uneingeschränkt geöffnet lassen, ohne zu wissen, mit wem das Kind kommuniziert.",
+        "Ein falsches Geburtsjahr angeben. Schutzfilter greifen dann für falsche Altersgruppen.",
+        "Der Aufforderung Fremder nachkommen, auf externe Messenger-Apps zu wechseln.",
+        "Gegenstände gegen Echtgeld oder fremde Konten tauschen. Kontohandel ist strengstens untersagt."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Fordert ein Unbekannter zum Wechsel auf externe Apps oder zur Weitergabe von Fotos oder persönlichen Daten auf, muss das Kind den Kontakt sofort abbrechen und Eltern informieren; Eltern können den Nutzer sperren und melden."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Kontosicherheit und Ausgabenwarnung",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Der Schutz des Kontos ist das Fundament aller Sicherheit. Halte hinterlegte E-Mail-Adressen und Telefonnummern aktuell, um das Konto im Ernstfall wiederherstellen zu können."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Verwende für jeden Dienst ein individuelles Passwort und aktiviere die Zwei-Faktor-Authentifizierung.",
+        "Fragt jemand im Spiel nach Passwörtern, Codes oder Cookies im Tausch gegen Gegenstände, reagiere nicht; es handelt sich um Betrug.",
+        "Cheats, Exploits, unerlaubte Drittsoftware und Kontoverkauf verstoßen gegen Richtlinien und führen zu permanenten Sperren.",
+        "Lasse Kaufbenachrichtigungen aktiv; ändere bei verdächtigen Abbuchungen sofort dein Passwort und kontaktiere den Roblox-Support."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Seiten, die Gratis-Robux oder kostenlose Mitgliedschaften anpreisen, zielen auf den Diebstahl deiner Zugangsdaten ab. Weise jedes Robux-Angebot außerhalb offizieller Wege ab."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Häufig gestellte Fragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Ist Roblox kostenlos?",
+         "c": "Ja, Erlebnisse können kostenlos gespielt werden. Robux und Premium-Mitgliedschaften sind optional."
+        },
+        {
+         "s": "Ab welchem Alter sollte mein Kind starten?",
+         "c": "Es gibt Roblox-Kids-Konten für 5 bis 8 Jahre; der Einstieg unter elterlicher Begleitung ist ideal."
+        },
+        {
+         "s": "Warum ist eine Altersprüfung für den Chat nötig?",
+         "c": "Seit dem 7. Januar 2026 beschränkt Roblox den Chat nach Altersgruppen, damit Kinder nicht ungefiltert mit Erwachsenen schreiben."
+        },
+        {
+         "s": "Gibt es kostenlose Robux?",
+         "c": "Nein. Seiten und Codes, die Gratis-Robux versprechen, sind Betrug; kaufe ausschließlich im offiziellen Store."
+        },
+        {
+         "s": "Wie kann ich Ausgaben begrenzen?",
+         "c": "Richte in der Kindersicherung ein monatliches Limit ein und nutze bevorzugt Guthabenkarten statt hinterlegter Bankkarten."
+        },
+        {
+         "s": "Was tun, wenn das Konto gestohlen wurde?",
+         "c": "Ändere sofort dein Passwort, aktiviere die Zwei-Faktor-Authentifizierung, prüfe deine E-Mails und reiche über den Roblox-Support eine Wiederherstellungsanfrage ein."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "nl": {
+   "baslik": "Roblox Beginners- en Ouderhandleiding voor Veiligheid (2026)",
+   "ozet": "Een gids voor nieuwe Roblox-spelers en ouders over accounttypen, eerste stappen, een Robux-budget en ouderlijk toezicht. Leeftijdscontroles zijn sinds begin 2026 verplicht.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Platform voor door gebruikers gemaakte spellen"
+    },
+    {
+     "ad": "Platform",
+     "deger": "PC, Mac, iOS, Android, Xbox, PlayStation"
+    },
+    {
+     "ad": "Prijsmodel",
+     "deger": "Gratis; Robux, Premium en Roblox Plus (US$ 4,99 per maand) zijn optioneel"
+    },
+    {
+     "ad": "Huidige versie",
+     "deger": "Continu bijgewerkt platform; leeftijdscontroles van kracht sinds 7 januari 2026"
+    },
+    {
+     "ad": "Turkse ondersteuning",
+     "deger": "Ja; de interface, Roblox Studio en in-game chatvertaling ondersteunen Turks. Zie het overzicht voor toegang vanuit Turkije"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "Wat is Roblox en wat veranderde er in 2026?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Roblox is geen opzichzelfstaand spel, maar een platform waarop je toegang krijgt tot talloze werelden gemaakt door miljoenen gebruikers (Roblox noemt ze ervaringen). Met hetzelfde account kun je vandaag een survivalspel spelen en morgen een race- of rollenspel ontdekken."
+      },
+      {
+       "tip": "p",
+       "metin": "De meest ingrijpende verandering in 2026 betrof veiligheid. **Sinds 7 januari 2026** vereist de chat wereldwijd een leeftijdscontrole: een gezichtsleeftijdsschatting via de smartphonecamera, waarbij identiteitsverificatie voor spelers vanaf 13 jaar optioneel is. Begin juni 2026 werden tevens twee kindgerichte accounttypen geïntroduceerd: **Roblox Kids** (leeftijd 5-8) en **Roblox Select** (leeftijd 9-15). **Opmerking voor Turkije:** toegang tot Roblox vanuit Turkije werd op 7 augustus 2024 beperkt. In juni 2026 verschenen berichten over opheffing, maar andere media meldden dat BTK-blokkades van kracht bleven; controleer de status via officiële kanalen. Het gebruik van een VPN om blokkades te omzeilen wordt afgeraden."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Als de leeftijd verkeerd wordt ingevoerd, functioneren chat- en inhoudsbeperkingen gebrekkig. Vul bij het aanmaken van een kinderaccount altijd het werkelijke geboortejaar in."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Voor je begint: account en apparaat",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Roblox is gratis en draait op pc, Mac, iOS, Android, Xbox en PlayStation. Bij registratie wordt je leeftijdsgroep vastgelegd, wat de basis vormt voor chat- en inhoudsinstellingen:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Leeftijdsgroep",
+        "Accounttype / Status",
+        "Kernpunt"
+       ],
+       "satirlar": [
+        [
+         "5-8",
+         "Roblox Kids",
+         "Uitsluitend spellen met classificatie Moderate of lager"
+        ],
+        [
+         "9-12",
+         "Roblox Select",
+         "Beperkte inhoud; schermtijd- en uitgavenlimieten beschikbaar"
+        ],
+        [
+         "13-15",
+         "Roblox Select",
+         "Geen toegang tot Restricted-ervaringen; ouderlijke restricties van kracht"
+        ],
+        [
+         "16-17",
+         "Standaardaccount",
+         "Minder ouderlijke controlebeperkingen"
+        ],
+        [
+         "18 and over",
+         "Volwassenenaccount",
+         "Volledige toegang; extra mogelijkheden bij identiteitsverificatie"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Onder de 9 jaar staat de chat standaard uit en wordt deze pas geactiveerd na ouderlijke toestemming. Roblox hanteert leeftijdsgroepen U9, 9-12, 13-15, 16-17, 18-20 en 21+. De systeemeisen zijn bescheiden; een recente smartphone of doorsnee computer volstaat voor de meeste werelden, al vereisen zware ervaringen soms lagere grafische instellingen."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Download Roblox uitsluitend via de officiële website of erkende app stores. Valse applicaties en websites die gratis Robux beloven, stelen accountgegevens."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "De eerste uren: stap voor stap",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Het onderstaande stappenplan waarborgt een veilige en soepele kennismaking voor zowel kinderen als volwassen beginners."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Account correct aanmaken",
+         "metin": "Vul het werkelijke geboortejaar in, kies een sterk, uniek wachtwoord en schakel waar mogelijk tweestapsverificatie in."
+        },
+        {
+         "baslik": "Leeftijdscontrole voltooien",
+         "metin": "Wil je de chat gebruiken, rond dan de gezichtsschatting af. Sla je dit over, dan blijft de chat uitgeschakeld, wat voor kinderen vaak de veiligste optie is."
+        },
+        {
+         "baslik": "Avatar verkennen",
+         "metin": "Pas kleding en uiterlijk aan in het tabblad Avatar met behulp van gratis opties. Betaalde items zijn nergens voor nodig bij de start."
+        },
+        {
+         "baslik": "Populair en gekeurd spel kiezen",
+         "metin": "Bekijk op de Ontdek-pagina de beschrijving, inhoudsbeoordeling en spelersaantallen. Begin met een ervaring die vrienden of familie al kennen."
+        },
+        {
+         "baslik": "Besturing en geluid leren kennen",
+         "metin": "Probeer in de eerste minuten camera-, loop- en springknoppen uit; elke spelervaring heeft een eigen interface."
+        },
+        {
+         "baslik": "Speeltijd afstemmen",
+         "metin": "Bepaal speeltijden vooraf; via het ouderlijk toezicht kan een dagelijkse schermtijdlimiet worden ingesteld."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Speel de eerste dagen gezellig samen. Dat is de snelste manier om te zien welke spellen je kind leuk vindt en met wie er contact is."
+      }
+     ]
+    },
+    {
+     "id": "oyun-secimi",
+     "baslik": "Spelkeuze en inhoudsclassificaties",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Roblox-ervaringen beschikken over een inhoudsbeoordeling; Kids-accounts spelen Moderate of lager, en Select-accounts hebben geen toegang tot Restricted-titels.",
+        "Let op waarderingspercentages, spelersaantallen en de datum van de laatste update; verouderde spellen bevatten vaak fouten.",
+        "Vermijd spellen die je doorverwijzen naar externe websites of om privégegevens vragen.",
+        "Controleer na binnenkomst direct de chat- en spraakinstellingen; ongewenst contact vormt vaak een groter risico dan het spel zelf.",
+        "Wil je zelf werelden bouwen, verken dan het gratis programma Roblox Studio; het bouwen is een leerzame en creatieve ontdekkingstocht."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Heeft een spel onduidelijke beoordelingen, speel het dan eerst zelf een paar minuten voordat je kind mag inloggen."
+      }
+     ]
+    },
+    {
+     "id": "robux-ve-avatar",
+     "baslik": "Robux, Premium en uitgavenpatronen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**Robux** is de munteenheid binnen Roblox voor kleding, in-game voordelen en extra content. Robux worden gekocht met echt geld; volgens Roblox ontvang je via de website, pc of cadeaukaarten doorgaans meer Robux dan via mobiele app-winkels (tarieven variëren, let op het schermbedrag bij aankoop)."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Stel een maandelijks budget vast** en koop Robux voor een concreet doel; kleine tussentijdse aankopen lopen ongemerkt snel op.",
+        "**Cadeaukaarten gebruiken** is veiliger dan een betaalkaart koppelen aan het account; het budget begrenst zichzelf.",
+        "**Premium** keert maandelijks Robux uit; **Roblox Plus** biedt kortingen en extra privileges. Beide zijn doorlopende abonnementen; sla ze over als je ze niet nodig hebt.",
+        "**Gratis Robux** op externe websites of video's is altijd oplichting; geen enkele legitieme code vraagt om je wachtwoord."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Websites die gratis Robux of trucjes voor kleding beloven, zijn ontworpen om inloggegevens te stelen. Deel nooit je wachtwoord of beveiligingscodes."
+      }
+     ]
+    },
+    {
+     "id": "ebeveyn",
+     "baslik": "Ouderlijk toezicht: waar en wat je kunt instellen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Zodra het ouderaccount is gekoppeld aan het kinderaccount, bevinden alle opties zich in het menu Ouderlijk toezicht binnen Instellingen. Menunamen kunnen veranderen, inspecteer daarom altijd zelf het scherm."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Inhoudsrijpheid:** Bepaal welke rijpheidsklasse spellen het kind mag betreden.",
+        "**Chat:** Kan volledig worden in- of uitgeschakeld; onder de 9 jaar staat deze standaard uit.",
+        "**Schermtijd:** Voor Kids- en 9-12-Select-accounts kan een dagelijkse tijdslimiet worden vastgelegd.",
+        "**Uitgaven:** Een maandelijks bestedingslimiet met notificaties instellen; het inwisselen van cadeaukaarten telt hier niet tegenin.",
+        "**Robux-transfers:** Transferlimieten, ouderlijke goedkeuringen en transactiegeschiedenis beheren.",
+        "**Zichtbaarheid van vrienden en inventaris:** Beperk wie contact mag opnemen en wie spullen kan bekijken.",
+        "**Oudermodus:** Beveiligd met een 6-cijferige pincode zodat het kind instellingen niet kan aanpassen."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Vanaf 13 jaar kan het kind schermtijd en blokkades deels zelfstandig regelen, en vanaf 16 gelden nog minder beperkingen. Pas instellingen in samenspraak met het opgroeiende kind aan."
+      }
+     ]
+    },
+    {
+     "id": "ebeveyn-adimlari",
+     "baslik": "Ouderaccount koppelen: stap voor stap",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Ouderlijk toezicht wordt beheerd via een ouderaccount dat is gekoppeld aan het kinderaccount. Om dit te activeren moet de ouder aantonen 18 jaar of ouder te zijn via een leeftijdscontrole (Roblox Help, pagina ouderlijk toezicht). Roblox stelde de leeftijdscontrole voor chatten wereldwijd verplicht (januari 2026); ongecontroleerde accounts kunnen slechts beperkte ervaringen spelen en niet communiceren. Daarnaast zijn er nieuwe accounttypen: Roblox Kids voor 5-8 jaar en Roblox Select voor 9-15 jaar. Een kind stroomt met 9 jaar door naar Select en met 16 naar een standaardaccount (Roblox newsroom, april 2026). Controleer altijd het type en de bijbehorende rechten."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Kind meldt zich aan",
+         "metin": "Het kind logt in op het eigen account en navigeert naar Instellingen."
+        },
+        {
+         "baslik": "Ouder toevoegen",
+         "metin": "Open Ouderlijk toezicht in Instellingen, klik op Ouder toevoegen en vul het e-mailadres van de ouder in."
+        },
+        {
+         "baslik": "E-mail openen",
+         "metin": "De ouder opent de e-mail en kiest ervoor in te loggen met het eigen account."
+        },
+        {
+         "baslik": "Leeftijd verifiëren",
+         "metin": "Toon aan 18 jaar of ouder te zijn met een identiteitsbewijs, creditcard of in bepaalde regio's via gezichtsschatting."
+        },
+        {
+         "baslik": "Koppeling voltooien",
+         "metin": "Bevestig de koppeling; alle restricties worden voortaan centraal vanuit het ouderaccount beheerd."
+        }
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Instelling",
+        "Wat het doet",
+        "Leeftijdscontrole vereist?"
+       ],
+       "satirlar": [
+        [
+         "Communication",
+         "Bepaalt met wie het kind mag chatten",
+         "Ja voor veel opties"
+        ],
+        [
+         "Studio collaboration",
+         "Bepaalt met wie in Studio kan worden samengewerkt: Alle leeftijdsgroepen, Vergelijkbare leeftijden of vertrouwde vrienden, Vergelijkbare leeftijden, Niemand",
+         "Ja voor alles behalve Niemand"
+        ],
+        [
+         "Gameplay coordination",
+         "Coördinatie met spelers van alle leeftijden via korte standaardzinnen (Quick Words)",
+         "Nee"
+        ],
+        [
+         "Sending and getting Robux",
+         "Jongere gebruikers hebben voor elke transfer ouderlijke toestemming nodig",
+         "Gebruikers van 18+ kunnen zonder goedkeuring overboeken"
+        ],
+        [
+         "Facial and ID verification",
+         "Je bepaalt of identiteitscontrole voor het kind is toegestaan",
+         "Wordt door jou beheerd"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Doorloop na het instellen alle opties samen met je kind. Uitleggen waarom een regel bestaat zorgt voor veel meer begrip."
+      }
+     ]
+    },
+    {
+     "id": "plus-ve-robux",
+     "baslik": "Roblox Plus, Premium en Robux: de verschillen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Roblox Plus werd wereldwijd gelanceerd op **30 april 2026** voor US$ 4,99 per maand. Het biedt uitsluitend privileges en bevat geen maandelijkse Robux. Premium is het traditionele abonnement dat maandelijks Robux toekent. Optionele bundels met 500, 1000 of 2000 Robux kunnen aan Plus worden toegevoegd (Plus 500, Plus 1000, Plus 2000). Officiële Premium-tarieven verschillen per regio; bekijk het aankoopscherm voor de exacte prijs."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Functie",
+        "Roblox Plus",
+        "Premium"
+       ],
+       "satirlar": [
+        [
+         "Maandelijkse Robux",
+         "Geen (verkrijgbaar via optionele bundels)",
+         "Ja"
+        ],
+        [
+         "Korting op in-game en avatar-artikelen",
+         "10-20%",
+         "Geen"
+        ],
+        [
+         "Gratis en onbeperkte privésurvers",
+         "Ja",
+         "Nee"
+        ],
+        [
+         "Gratis Robux overmaken",
+         "Ja",
+         "Nee"
+        ],
+        [
+         "Ruilen en doorverkopen",
+         "Ja",
+         "Ja"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Dit zijn doorlopende abonnementen die maandelijks automatisch vernieuwen. Bij een kinderaccount dienen ouders de verlengingsdatum en opzeggingsprocedure helder voor ogen te hebben. Wijkt het bedrag op het aankoopscherm af van overzichten op hulppagina's, dan is de informatie op het aankoopscherm leidend."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Abonnementen verlengen automatisch. Controleer bij onverwachte incasso's het abonnementsgedeelte van je app store; opzeggen in Roblox annuleert externe store-abonnementen niet altijd."
+      }
+     ]
+    },
+    {
+     "id": "turler-ve-dolandiricilik",
+     "baslik": "Populaire spelgenres en oplichtingstypen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Roblox omvat talloze genres en het gekozen type beïnvloedt ook de risico's in het spel. Hieronder staan alom bekende genres; controleer desalniettemin altijd de inhoudsclassificatie. Beoordeel spelersaantallen, waarderingscijfers en beoordelingen in samenhang; een drukke wereld is niet per se veiliger, aangezien de kans op onbekenden eveneens toeneemt."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Genre",
+        "Voorbeeld",
+        "Wat te verwachten"
+       ],
+       "satirlar": [
+        [
+         "Rollenspel (Role-play)",
+         "Brookhaven RP",
+         "Sociaal gericht; drukke chat"
+        ],
+        [
+         "Huisdieren en ruilhandel",
+         "Adopt Me!",
+         "Gevoelig voor ruiltrucs"
+        ],
+        [
+         "Hindernisbaan (Obby)",
+         "Tower of Hell",
+         "Uitdagend en rustig; weinig chat"
+        ],
+        [
+         "Avontuur en gevechten",
+         "Blox Fruits",
+         "Lange progressie; mogelijke uitgavendruk"
+        ],
+        [
+         "Politie en boeven",
+         "Jailbreak",
+         "Snel tempo; competitief"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Ook oplichting neemt verschillende gedaanten aan. Deze patronen openlijk met je kind bespreken werkt effectiever dan louter verbieden:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Oplichtingstype",
+        "Hoe het werkt",
+        "Wat te doen"
+       ],
+       "satirlar": [
+        [
+         "Gratis Robux-sites",
+         "Verleidt tot inloggen en steelt account of wachtwoord",
+         "Sluit de site, wijzig direct het wachtwoord"
+        ],
+        [
+         "Ruilvalkuil (Trade Trap)",
+         "Ontfutselt waardevolle voorwerpen via misleiding",
+         "Gebruik uitsluitend het officiële in-game ruilscherm"
+        ],
+        [
+         "Valse moderators",
+         "Doet zich voor als beheerder en vraagt om codes",
+         "Deel nooit verificatiecodes"
+        ],
+        [
+         "Cookie-diefstal",
+         "Laat opdrachten uitvoeren en kaapt actieve sessies",
+         "Voer nooit onbekende computercode uit"
+        ],
+        [
+         "Contact buiten platform",
+         "Vraagt om over te stappen naar externe apps",
+         "Wijs dit af en licht een volwassene in"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Geef je kind deze stelregel mee: niemand van Roblox zal ooit via externe apps om je wachtwoord, verificatiecode of adres vragen."
+      }
+     ]
+    },
+    {
+     "id": "studio",
+     "baslik": "Kennismaking met Roblox Studio",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Roblox Studio is de gratis ontwikkelomgeving waarmee je eigen werelden bouwt; het programma werkt op Windows en Mac. Volgens Roblox ondersteunt de Studio-interface tevens Turks (Roblox Developer Forum). Alles wat je in Studio bouwt kan lokaal gratis worden getest; pas wanneer je publiceert voor anderen dien je aan de inhoudsrichtlijnen te voldoen. Geld verdienen (verkopen voor Robux) kent eigen regels en leeftijdseisen; raadpleeg de Roblox Creator Hub."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Studio installeren",
+         "metin": "Download Roblox Studio via de officiële pagina en log in met je account."
+        },
+        {
+         "baslik": "Sjabloon kiezen",
+         "metin": "Open een startersjabloon; een kant-en-klaar landschap is makkelijker dan een leeg veld."
+        },
+        {
+         "baslik": "Objecten plaatsen",
+         "metin": "Plaats onderdelen in de scène en pas afmetingen en kleuren aan via het eigenschappenvenster."
+        },
+        {
+         "baslik": "Eerste script schrijven",
+         "metin": "Schrijf in Luau, de op Lua gebaseerde taal, een eenvoudig script dat bij aanraking van kleur verandert."
+        },
+        {
+         "baslik": "Testen en publiceren",
+         "metin": "Probeer het uit via de knop Play, publiceer de ervaring en nodig vrienden uit."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Of een kind samen met vrienden in Studio mag bouwen hangt af van de optie Studio-samenwerking in het ouderlijk toezicht. Je kunt dit aanvankelijk uitzetten zodat ze zelfstandig oefenen."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Veelvoorkomende fouten",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Een opgeslagen betaalkaart gekoppeld laten aan een kinderaccount. Cadeaukaarten en maandlimieten zijn aanzienlijk veiliger.",
+        "De chat volledig open laten staan zonder te weten met wie het kind praat.",
+        "Een onjuiste leeftijd invullen. Beveiligingsfilters werken dan voor de verkeerde doelgroep.",
+        "Ingaan op verzoeken van onbekenden om over te stappen naar externe chatapps.",
+        "Items verhandelen voor echt geld of externe accounts. Accounthandel is ten strengste verboden."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Als een onbekende vraagt om over te stappen naar externe apps of om foto's of privégegevens te delen, dient het kind het contact direct te staken en een ouder in te lichten; ouders kunnen de gebruiker blokkeren en rapporteren."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Accountbeveiliging en uitgavenwaarschuwing",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Het beveiligen van je account is de basis van veilig speelplezier. Houd het geregistreerde e-mailadres en telefoonnummer actueel zodat herstel bij incidenten mogelijk blijft."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Gebruik voor elke dienst een uniek wachtwoord en activeer tweestapsverificatie.",
+        "Als iemand in een spel vraagt om wachtwoorden, codes of cookies in ruil voor items, reageer dan niet; het is oplichting.",
+        "Cheats, exploits, externe manipulatiesoftware en accounthandel schenden de regels en leiden tot een permanente ban.",
+        "Houd aankoopmeldingen actief; wijzig bij onverklaarbare afschrijvingen direct je wachtwoord en informeer Roblox support."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Websites die gratis Robux of gratis lidmaatschappen beloven stelen accounts en azen op je wachtwoord. Wijs elk Robux-aanbod buiten officiële kanalen resoluut af."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Veelgestelde vragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is Roblox gratis?",
+         "c": "Ja, spellen zijn gratis te spelen. Robux en Premium-lidmaatschappen zijn optioneel."
+        },
+        {
+         "s": "Vanaf welke leeftijd kan mijn kind beginnen?",
+         "c": "Er zijn Roblox Kids-accounts voor 5 tot 8 jaar; beginnen onder ouderlijk toezicht is het meest verstandig."
+        },
+        {
+         "s": "Waarom is er een leeftijdscontrole voor de chat?",
+         "c": "Sinds 7 januari 2026 scheidt Roblox chat per leeftijdsgroep zodat kinderen niet zomaar met volwassenen kunnen communiceren."
+        },
+        {
+         "s": "Kan ik gratis Robux krijgen?",
+         "c": "Nee. Sites en codes die gratis Robux beloven zijn oplichting; koop uitsluitend via de officiële winkel."
+        },
+        {
+         "s": "Hoe beperk ik de uitgaven?",
+         "c": "Stel een maandelijks limiet in via het ouderlijk toezicht en gebruik bij voorkeur cadeaukaarten in plaats van gekoppelde bankpassen."
+        },
+        {
+         "s": "Wat moet ik doen als mijn account gestolen is?",
+         "c": "Wijzig je wachtwoord, schakel tweestapsverificatie in, controleer je e-mail en dien een accountherstelverzoek in bij Roblox support."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "zh": {
+   "baslik": "Roblox（罗布乐思）新手与家长安全护航全攻略（2026）",
+   "ozet": "专为 Roblox 新手玩家与家长量身打造的指引：账号分类、开荒第一步、Robux 预算规划与多维度家长监控体系。自 2026 年初起全面实行强制年龄验证。",
+   "kunye": [
+    {
+     "ad": "游戏类型",
+     "deger": "用户原创内容（UGC）游戏创作与互动平台"
+    },
+    {
+     "ad": "平台",
+     "deger": "PC、Mac、iOS、Android、Xbox、PlayStation"
+    },
+    {
+     "ad": "收费模式",
+     "deger": "免费畅玩；Robux、Premium 会员与 Roblox Plus（每月 4.99 美元）均为可选增值服务"
+    },
+    {
+     "ad": "当前版本",
+     "deger": "持续动态更新的生态平台；强制年龄验证机制自 2026 年 1 月 7 日起生效"
+    },
+    {
+     "ad": "土耳其语支持",
+     "deger": "支持；界面、Roblox Studio 及游戏内聊天实时翻译均支持土耳其语。土耳其地区网络访问状态详见总览"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "Roblox 平台定位与 2026 年重大变革",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Roblox 并非单一游戏，而是一个汇聚了全球数以百万计创作者所搭建体验（Roblox 称之为 Experiences）的互动创作平台。使用同一个账号，你今天可以体验末日荒野求生，明天就能畅玩极速赛车或沉浸式角色扮演。"
+      },
+      {
+       "tip": "p",
+       "metin": "2026 年最重大的变动集中在安全监管维度。**自 2026 年 1 月 7 日起**，全球范围内的聊天功能必须通过年龄验证：依托手机摄像头进行面部年龄预估，13 岁及以上用户还可选用官方证件核验。2026 年 6 月初，官方还进一步推出了两大儿童专属分级账号：**Roblox Kids**（5-8 岁）与 **Roblox Select**（9-15 岁）。**关于土耳其地区的特别提示：** 2024 年 8 月 7 日土耳其对 Roblox 实施了访问限制。尽管 2026 年 6 月曾有解除封禁的媒体报道，但后续另有报道指出监管机构（BTK）记录仍显示受限；请以官方权威公报为准。不建议使用 VPN 强行绕过合规监管。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "若出生年份输入不实，平台的分级内容与聊天保护将发生错乱。为孩子创建账号时，请务必如实填写真实出生年月。"
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "入坑之前：账号体系与设备环境",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Roblox 完全免费，支持在 PC、Mac、iOS、Android、Xbox 与 PlayStation 等多终端跨平台运行。注册时确立的年龄段将直接决定后续的聊天权限与内容开放尺度："
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "年龄划分区间",
+        "账号所属分类 / 状态",
+        "核心权限要点"
+       ],
+       "satirlar": [
+        [
+         "5-8 岁",
+         "Roblox Kids",
+         "仅限游玩适度（Moderate）及以下低风险体验"
+        ],
+        [
+         "9-12 岁",
+         "Roblox Select",
+         "受限内容过滤；开放屏幕时间管理与消费限额"
+        ],
+        [
+         "13-15 岁",
+         "Roblox Select",
+         "严禁进入限制级（Restricted）内容；家长管控依然生效"
+        ],
+        [
+         "16-17 岁",
+         "标准青少年账号",
+         "逐步放宽部分家长权限限制"
+        ],
+        [
+         "18 岁及以上",
+         "成人完全体账号",
+         "拥有全部完整访问权限；完成证件核验后解锁专属高阶功能"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "对于 9 岁以下儿童，聊天功能默认彻底关闭，唯有在家长授权后方可开启。Roblox 将年龄分级细分为 U9、9-12、13-15、16-17、18-20 与 21+。硬件配置要求极低；主流智能手机或普通配置 PC 即可流畅运行绝大多数体验，部分画面复杂的大型地图可通过降低图形质量保障流畅。"
+      },
+      {
+       "tip": "uyari",
+       "metin": "请仅从 Roblox 官方网站或正规应用商店下载客户端。任何宣称“免费赠送 Robux”的第三方假冒山寨 App 都会直接窃取你的个人账号。"
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "新手最初几小时循序进阶指南",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "以下推荐的入门步骤旨在为儿童玩家与成年新手提供一条安全、高效的起步道路。"
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "准确合规建立账号",
+         "metin": "如实输入真实出生年份，设置高强度专属密码并尽可能开启双重身份验证（2FA）。"
+        },
+        {
+         "baslik": "完成年龄核验流程",
+         "metin": "若需使用聊天功能，请完成面部年龄预估。若暂不核验，聊天将保持禁用状态，这通常是保护儿童的最佳默认设置。"
+        },
+        {
+         "baslik": "个性化定制虚拟形象（Avatar）",
+         "metin": "在“虚拟形象”标签页免费随心挑选服饰与外观组件。初学者完全无需在前期购买付费装扮。"
+        },
+        {
+         "baslik": "挑选高口碑合规热门体验",
+         "metin": "在“发现”大厅仔细查看游戏描述、分级标签与实时在线人数。优先从亲朋好友熟知的正向体验起步。"
+        },
+        {
+         "baslik": "熟悉基础移动与镜头视角",
+         "metin": "在开局前几分钟测试镜头旋转、移动方向与跳跃键；每个体验的具体按键界面略有差异。"
+        },
+        {
+         "baslik": "协商设立防沉迷健康时长",
+         "metin": "提前约定好每日游玩时段；可通过家长控制后台直接设定单日屏幕使用时间上限。"
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "在入坑最初几天，建议家长陪同孩子共同游玩。这是洞察孩子喜好以及了解其社交圈最温暖且有效的方式。"
+      }
+     ]
+    },
+    {
+     "id": "oyun-secimi",
+     "baslik": "内容分级与优质游戏甄别",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Roblox 官方体验均贴有严格的内容成熟度分级标签；Kids 账号仅可体验 Moderate 及以下，Select 账号严禁进入 Restricted 内容。",
+        "留心游戏的好评率、实时在线人数以及最近一次更新日期；多年未曾维护的老图极易充斥恶性 Bug 且服务器荒凉。",
+        "坚决避开那些试图诱导你跳转外部第三方网站、应用，或在界面中索要个人敏感信息的违规小游戏。",
+        "进入服务器后第一步先核验聊天与麦克风语音权限；不怀好意的陌生人往往比游戏内容本身更具潜在风险。",
+        "若渴望亲自开发游戏，可尝试完全免费的 Roblox Studio 创作引擎；动手搭建属于自己的世界将是一场极富启发性的数字探索。"
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "如果某个体验的分级或评论含糊不清，建议家长在开放给孩子之前，先亲自进入体验几分钟予以把关。"
+      }
+     ]
+    },
+    {
+     "id": "robux-ve-avatar",
+     "baslik": "Robux 平台币、订阅特权与理性消费",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "**Robux** 是 Roblox 平台的核心虚拟货币，用于购买装扮饰品、游戏内能力通行证以及额外增值内容。Robux 需充值购买；根据官方说明，通过官网网页端、电脑端或官方实体礼品卡充值，通常比在移动端应用商店内购能折算获得更多 Robux（汇率随时变动，以支付结算界面显示为准）。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**设定每月严格消费限额**，并带着明确的目标采购 Robux（如专门为了某件服饰）；频繁小额冲动消费往往会惊人累加。",
+        "**使用预付费礼品卡充值**远比在账号中绑定信用卡更安全；余额用完即止，天然形成预算防火墙。",
+        "**Premium 会员**每月发放固定 Robux；**Roblox Plus** 则提供专属商城折扣与便捷特权。两者均为周期订阅；若无长期刚需可随时停订。",
+        "任何网站、应用或自媒体视频宣称的**免费刷 Robux** 都是百分之百的钓鱼诈骗；正规礼品码绝不会向你索要账号密码。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "任何吹嘘“免费白嫖 Robux”、“复制双倍余额”或免费绝版皮肤的第三方网页，其唯一目的就是钓鱼盗号。绝不在任何外部页面透露账号密码与验证码。"
+      }
+     ]
+    },
+    {
+     "id": "ebeveyn",
+     "baslik": "家长守护中心：可管控维度与设置路径",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "将家长账号与孩子账号成功关联后，所有管控选项均汇聚在“设置”中的家长控制（Parental Controls）专属面板。官方界面名称偶尔微调，请以实际屏幕为准。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**内容成熟度分级过滤：** 严格限定孩子可进入游玩的体验分级上限。",
+        "**文字聊天权限：** 可设为完全开启或禁用；9 岁以下儿童默认全封闭。",
+        "**单日屏幕时长：** 可为 Kids 账号与 9-12 岁 Select 账号设定每日游玩小时上限。",
+        "**消费额度风控：** 设定每月最高充值限额并开启消费邮件提醒；兑换礼品卡不计入该限额。",
+        "**Robux 转账监管：** 支持转账额度限制、每笔家长二次授权以及详尽流水账单核查。",
+        "**受信任好友与背包隐私：** 精准限制能与孩子互动沟通的人员名单，以及谁能查阅孩子的背包资产。",
+        "**家长专属保护 PIN 码：** 设立专属 6 位数字安全 PIN 码，杜绝孩子在后台擅自篡改既定规则。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "年满 13 周岁后，孩子可自主管理部分屏幕时间与黑名单拉黑；年满 16 岁后限制将进一步放宽。请伴随孩子的成长，在平等沟通中动态调整规则。"
+      }
+     ]
+    },
+    {
+     "id": "ebeveyn-adimlari",
+     "baslik": "家长与子女账号绑定联动实操步骤",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "家长守护功能是通过将家长个人账号与子女账号进行官方绑定来实现的。创建绑定的家长账号时，家长必须通过年龄验证证明自己年满 18 周岁（参考 Roblox 官方帮助中心关于家长控制的文档）。Roblox 于 2026 年 1 月在全球范围内将聊天年龄核验列为强制项；未经验证的账号只能访问极少数体验且严禁发言。官方新规更细分了 5-8 岁的 Roblox Kids 与 9-15 岁的 Roblox Select。孩子年满 9 岁自动升入 Select，年满 16 岁转为标准账号（参考官方 2026 年 4 月新闻稿）。务必定期查验账号分级与对应特权。"
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "子女端账号登录",
+         "metin": "由孩子在其常用设备上登录自己的 Roblox 账号，进入“设置”菜单。"
+        },
+        {
+         "baslik": "发起添加家长绑定",
+         "metin": "在设置中找到“家长控制”，点击“添加家长（Add parent）”，输入家长的常用电子邮箱地址。"
+        },
+        {
+         "baslik": "家长查收邀请邮件",
+         "metin": "家长在个人邮箱查收验证链接，点击并登录自己的专属 Roblox 家长账号。"
+        },
+        {
+         "baslik": "完成家长成人认证",
+         "metin": "通过上传身份证件、绑定信用卡或在特定地区借助面部年龄算法证明自己已满 18 周岁。"
+        },
+        {
+         "baslik": "确认并接管权限",
+         "metin": "同意账号绑定授权；自此子女账号的所有安全开关均统一由家长端远程掌控。"
+        }
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "管控设置维度",
+        "具体功能效益",
+        "是否强制要求年龄认证？"
+       ],
+       "satirlar": [
+        [
+         "Communication（社交沟通）",
+         "决定孩子能与哪些人群发起文字聊天",
+         "大部分细分选项需要核验"
+        ],
+        [
+         "Studio collaboration（Studio 创作协力）",
+         "设定能与谁在 Studio 中联机协作开发：所有年龄段、相近年龄段或受信任好友、相近年龄段、禁止任何人",
+         "除“禁止任何人”外均需验证"
+        ],
+        [
+         "Gameplay coordination（局内快速沟通）",
+         "仅通过预置的简短常用词汇（Quick Words）与全年龄段玩家进行基础战术配合",
+         "不需要"
+        ],
+        [
+         "Sending and getting Robux（Robux 资产流转）",
+         "低龄未成年人每一笔货币转账均需家长手动批准",
+         "18 岁以上成年用户可免审批自由转账"
+        ],
+        [
+         "Facial and ID verification（生物与证件认证）",
+         "由家长全权决定是否允许孩子端进行官方证件实名认证",
+         "由家长后台自主管理"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "绑定完成后，建议耐心地与孩子逐项浏览这些安全开关。向孩子讲清限制背后的关爱逻辑，孩子才会发自内心地接纳规则。"
+      }
+     ]
+    },
+    {
+     "id": "plus-ve-robux",
+     "baslik": "Roblox Plus、Premium 与 Robux 核心权益对比",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Roblox Plus 于 **2026 年 4 月 30 日**面向全球推出，定价为每月 4.99 美元。该服务主打纯特权增益，基础包不附送每月固定 Robux。而传统的 Premium 订阅则会每月按期发放固定额度的 Robux。Plus 亦支持搭配选购 500、1000 或 2000 额度的 Robux 组合包（Plus 500、Plus 1000、Plus 2000）。官方 Premium 定价因地区汇率而异，请以游戏内商城结算面板显示的本地价格为准。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "特权项目",
+        "Roblox Plus 订阅",
+        "传统 Premium 订阅"
+       ],
+       "satirlar": [
+        [
+         "每月固定赠送 Robux",
+         "无（可通过可选组合包按需加购）",
+         "有"
+        ],
+        [
+         "游戏内与商城饰品专享折扣",
+         "享受 10-20% 折扣",
+         "无"
+        ],
+        [
+         "免费且无上限的专属私人服务器（Private Servers）",
+         "支持",
+         "不支持"
+        ],
+        [
+         "免手续费向好友赠送 Robux",
+         "支持",
+         "不支持"
+        ],
+        [
+         "玩家道具交易与二手转售",
+         "支持",
+         "支持"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "上述两类服务均为按月自动续费的周期性订阅。若为孩子开通了相关特权，家长务必牢记每月的扣费节点与取消订阅路径。若实际扣费数额与官方早期帮助页产生出入，请以当前结账面板的实时数据为准。"
+      },
+      {
+       "tip": "uyari",
+       "metin": "订阅均默认为自动续费扣款。若发现意外账单，请优先在苹果 App Store 或 Google Play 订阅管理中核查；仅在 Roblox 应用内退订往往无法完全拦截渠道商的自动续费。"
+      }
+     ]
+    },
+    {
+     "id": "turler-ve-dolandiricilik",
+     "baslik": "主流热门玩法品类与高发诈骗套路",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Roblox 涵盖千姿百态的玩法门类，不同类别潜藏的安全风险亦截然不同。下表梳理了长期高居榜首的经典品类；请务必协同核验内容分级。将在线人气、好评率与内容分级综合考量；高人气的喧嚣大图并不天然等同于绝对安全，因其鱼龙混杂的社交风险同样成倍增加。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "玩法品类",
+        "代表性经典体验",
+        "核心特征与风险点"
+       ],
+       "satirlar": [
+        [
+         "角色扮演（Role-play）",
+         "Brookhaven RP",
+         "高社交属性；公屏文字互动极其频繁"
+        ],
+        [
+         "宠物养成与以物易物",
+         "Adopt Me!",
+         "极易滋生虚假交换道具的欺诈骗术"
+        ],
+        [
+         "障碍跳跃跑酷（Obby）",
+         "Tower of Hell",
+         "硬核耐玩安静；基本无杂乱聊天"
+        ],
+        [
+         "大世界冒险与格斗",
+         "Blox Fruits",
+         "长线数值成长；容易产生氪金逼氪诱惑"
+        ],
+        [
+         "警察与劫匪对战",
+         "Jailbreak",
+         "快节奏强竞技对抗"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "诈骗套路同样花样翻新。与孩子面对面剖析以下常见诈骗伎俩，远比生硬的绝对禁令更能形成长久免疫力："
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "典型诈骗手段",
+        "运作套路揭秘",
+        "正确应对措施"
+       ],
+       "satirlar": [
+        [
+         "钓鱼送 Robux 网站",
+         "诱导输入账号密码登录从而直接窃取凭据",
+         "立即关闭网页并火速修改密码"
+        ],
+        [
+         "交易圈套（Trade Trap）",
+         "利用虚假承诺或阴阳合同诱骗稀有极品道具",
+         "严格仅使用官方内置的交易确认窗口"
+        ],
+        [
+         "冒充官方巡查员",
+         "假扮游戏管理员以违规为由索要验证码",
+         "坚决绝不透露任何短信或动态验证码"
+        ],
+        [
+         "Cookie 窃取脚本",
+         "诱导在控制台或浏览器运行神秘代码盗取会话",
+         "绝不在设备上复制粘贴执行任何来路不明的代码"
+        ],
+        [
+         "脱离平台的私信诱导",
+         "千方百计诱导离开游戏前往第三方社交软件",
+         "果断拒绝并第一时间告诉家长或老师"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "请让孩子牢牢记住这一铁律：绝没有任何真正的 Roblox 官方人员会在外部聊天软件里向你索要密码、动态验证码或真实家庭住址。"
+      }
+     ]
+    },
+    {
+     "id": "studio",
+     "baslik": "Roblox Studio 创作启蒙入门",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Roblox Studio 是完全免费的专业级体验开发引擎工具；支持在 Windows 与 Mac 系统上独立运行。据官方开发者论坛公告，Studio 界面全面支持土耳其语在内的多国语言。在 Studio 中创造的所有内容均可在本地免费调试运行；唯有在将其实装公开发布给全网玩家时，才需要接受官方内容规范审核。商业化创收（出售道具赚取 Robux）拥有独立规则及年龄门槛，详情可查阅 Roblox Creator Hub 创作者中心。"
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "安装启动 Studio",
+         "metin": "从 Roblox 官方网站免费下载 Studio 并登录自己的账号。"
+        },
+        {
+         "baslik": "挑选预置新手模板",
+         "metin": "新建一个现成的地形模板；比起白纸一张的空地图，带有预置场景的模板上手更平滑。"
+        },
+        {
+         "baslik": "摆放与编辑零件（Parts）",
+         "metin": "在场景中拖入基础几何零件，并在属性面板随意调节其尺寸比例、材质与色彩。"
+        },
+        {
+         "baslik": "编写第一段交互脚本",
+         "metin": "使用基于 Lua 的官方脚本语言 Luau，编写一段当角色触碰零件时变色的简单代码，迈出编程第一步。"
+        },
+        {
+         "baslik": "本地测试与一键发布",
+         "metin": "点击 Play 按钮亲自实测操纵手感，满意后点击发布体验，将专属链接分享给好友试玩。"
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "孩子能否在 Studio 中与好友联机共同搭积木编程，完全取决于家长控制中的“Studio 协作”权限。前期可以保持受限状态，让孩子先独立摸索。"
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "玩家与家长常犯的典型误区",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "在孩子绑定的账号中常驻保存银行信用卡信息。使用礼品卡或设置严格的月度限额要安全得多。",
+        "任由聊天功能对全网完全敞开，从未过问孩子在游戏中与谁私聊。",
+        "建号时随手胡乱填写出生年份。这会导致平台原本的安全防护机制彻底错配失效。",
+        "轻信陌生人哄骗，答应转移至外部匿名聊天软件进行沟通。",
+        "私下参与现实货币买卖账号或稀有道具。Roblox 官方严禁任何形式的账号线下黑市交易。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "一旦遇到陌生人诱导转入外部聊天工具、索要生活照片或真实个人隐私，孩子必须立刻果断终止交流并如实告知家长；家长应即刻在后台执行拉黑与举报。"
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "账号核心安全与非理性消费预警",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "守护好个人账号是享受健康游戏生活的生命线。时刻保持绑定的家长邮箱与手机号码有效畅通，以便在发生意外时能快速申诉找回。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "在不同网络服务间使用差异化独立高强度密码，并务必开启双重身份验证（2FA）。",
+        "游戏中任何以“赠送绝版神装”为由索要密码、安全码或 Cookie 会话的，一概不予理睬；皆为恶意盗号欺诈。",
+        "外挂作弊软件、内存修改器、辅助脚本及账号买卖严重违背平台用户协议，一经查实即刻永久封禁。",
+        "开启消费即时短信/邮件提醒；一旦察觉未授权异常扣费，立刻修改密码并联系官方客服申诉拦截。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "宣称赠送免费 Robux 或免费会员的钓鱼网站均旨在盗取密码与会话凭据。坚决果断拒绝任何非官方通道的所谓“福利”引诱。"
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "常见问题解答",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Roblox 是免费平台吗？",
+         "c": "是的，海量游戏体验均可完全免费游玩。充值 Robux 购买外观与订阅 Premium 会员纯属自愿可选。"
+        },
+        {
+         "s": "孩子几岁适合开始接触？",
+         "c": "官方推出了适配 5-8 岁低龄儿童的 Roblox Kids 专属账号；在家长控制防护网的陪同下开启体验最为稳妥。"
+        },
+        {
+         "s": "为什么聊天功能强制要求年龄验证？",
+         "c": "自 2026 年 1 月 7 日起，Roblox 按年龄段实施分级隔离保护，以彻底防止未成年儿童在公屏与陌生成年人无序私聊。"
+        },
+        {
+         "s": "真有途径可以免费领取 Robux 吗？",
+         "c": "绝对没有。所有宣称白送免费 Robux 的网站与兑换码均为钓鱼盗号诈骗；请仅在官方正规商城获取。"
+        },
+        {
+         "s": "家长该如何有效约束孩子的游戏消费？",
+         "c": "在家长控制面板设置严格的每月充值上限，并尽可能使用定额礼品卡充值，避免在设备端保存信用卡。"
+        },
+        {
+         "s": "如果账号不幸被盗该如何应急处理？",
+         "c": "立即尝试修改密码，激活双重身份验证，核查绑定邮箱安全，并通过 Roblox 官方客服页面发起紧急账号申诉找回流程。"
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  }
 }

@@ -191,3 +191,17 @@ Dil başına kod, ayar veya iş akışı değişikliği gerekmez; yalnız hesab�
   - Her paylaşımdan önce kayda "niyet" yazılır. Yanıtı kaybolan bir paylaşım kendiliğinden yeniden
     DENENMEZ; platformdan sorgulanır, bulunamazsa `sosyal/gonderilenler.json`'da `elle_bak` olur.
     Platformda gönderiye bak: varsa kaydı `tamam` yap, yoksa o kaydı sil, sistem yeniden dener.
+
+## Yedi dil ve YouTube yerelleştirmesi
+
+Dil kaydı `data/diller.json`: tr, en, es, fr, de, nl, zh. Yeni de/nl/zh hesaplarında Instagram, Reels ve YouTube açık; X ve Reddit kapalıdır. Anahtarı olmayan hesap atlanır. Mevcut kanal ve hesap düzeni korunur.
+
+Her yeni dil için GitHub Secrets adları: `IG_DE_USER_ID`, `IG_DE_TOKEN`, `YT_DE_CLIENT_ID`, `YT_DE_CLIENT_SECRET`, `YT_DE_REFRESH_TOKEN`; aynı adlarda DE yerine NL ve ZH kullanılır. `.github/workflows/sosyal.yml` yalnız sır referanslarını taşır; değerler depoya yazılmaz.
+
+Shorts yükleme gövdesi `snippet.defaultLanguage` ile asıl başlık/açıklama dilini, `localizations` ile haberde bulunan diğer dillerin başlık ve açıklamalarını içerir. Basitleştirilmiş Çince kodu `zh-Hans`tır. Her açıklama o dildeki haber bağlantısını kullanır. Bu metadata yerelleştirmesidir; ses parçasını değiştirmez, ülke veya IP sorgulamaz.
+
+Ağsız inceleme: `py tools/sosyal_yayinla.py --dry-run --anahtarsiz-goster`. YouTube için uygun manifest videosu varsa gönderilecek JSON gövdesi, yerelleştirmeler dahil yazdırılır; gerçek yükleme yapılmaz. Birim testi gövdeyi video veya anahtar olmadan da sınar.
+
+Kaynak: 16 Kasım 2026 tarihinde okunan resmî YouTube belgeleri: https://developers.google.com/youtube/v3/docs/videos (`localizations.(key).title`, `localizations.(key).description`, `snippet.defaultLanguage`) ve https://developers.google.com/youtube/v3/docs/videos/insert (`part=snippet,status,localizations`).
+
+Çince kartlar `tools/yazi/NotoSansSC-Regular.otf` ve `NotoSansSC-Bold.otf` kullanır; SIL OFL 1.1 lisansı yanlarındadır. Kaynak: https://github.com/notofonts/noto-cjk/tree/main/Sans/SubsetOTF/SC . Bu fontlar web sayfalarına indirilmez; sayfalar sistem CJK fontlarını kullanır.
