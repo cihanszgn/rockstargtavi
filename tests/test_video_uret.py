@@ -196,6 +196,12 @@ class GecerlilikTests(unittest.TestCase):
         s = senaryo()
         s['sahneler'][0]['maskot']['hareket'] = 'uc'
         self.assertTrue(any(e.startswith('sahneler[0].maskot.hareket') for e in hatalar(s)))
+        s = senaryo()
+        s['sablon_surumu'] = v.SABLON_SURUMU + 1
+        self.assertTrue(any(e.startswith('sablon_surumu: şunlardan biri olmalı') for e in hatalar(s)))
+        for surum in v.OKUNAN_SURUMLER:
+            s['sablon_surumu'] = surum
+            v.senaryo_hazirla(s, haber(), 'tr')
 
     def test_tasma_ve_uzunluk_sinirlari(self):
         s = senaryo()
@@ -298,6 +304,33 @@ class ZamanlamaTests(unittest.TestCase):
         self.assertTrue(vtt.startswith('WEBVTT\n\n'))
         self.assertEqual(vtt.count(' --> '), len(z['parcalar']))
 
+    def test_altyazi_kirma_cezasi(self):
+        self.assertEqual(v.kirma_cezasi('750', 'mermi'), v.KIRILMAZ, 'sayı birimden ayrılmaz')
+        self.assertEqual(v.kirma_cezasi('11.', 'yılın'), v.KIRILMAZ, 'sıra sayısı kelimesinden ayrılmaz')
+        self.assertEqual(v.kirma_cezasi('atıyor,', 'şarjör'), 0.0, 'noktalamada kırmak bedava')
+        self.assertEqual(v.kirma_cezasi('yeni', 'silah'), 0.8)
+        self.assertGreater(v.kirma_cezasi('ve', 'Jäger'), v.kirma_cezasi('Thunderbird', 've'), 'bağlaçta bitmek pahalı')
+        self.assertGreater(v.kirma_cezasi('sunucular', 'de'), v.kirma_cezasi('sunucular', 'kapalı'), 'ekle başlamak pahalı')
+        self.assertLess(v.kirma_cezasi('2,', '3'), v.KIRILMAZ, 'sayı dizisi gerekirse kırılabilir')
+
+    def test_altyazi_parcalari_ortalama_ve_sinirlar(self):
+        metin = ('Yeni hafif makineli MBZ-19 dakikada 750 mermi atıyor, 64 mermilik şarjör taşıyor ve 33 hasar veriyor. '
+                 'Warden, Thunderbird ve Jäger kullanabilecek.')
+        kel = [{'k': k, 'b': round(i * 0.35, 3), 's': round(i * 0.35 + 0.3, 3), 'sahne': 0} for i, k in enumerate(metin.split())]
+        parcalar = v.parcalara_bol(kel)
+        A = v.duzen()['altyazi']
+        boylar = []
+        for p in parcalar:
+            idx = [i for s in p['satirlar'] for i in s]
+            self.assertLessEqual(len(p['satirlar']), A['en_cok_satir'])
+            self.assertLessEqual(len(idx), A['en_cok_kelime'])
+            boylar.append(len(idx))
+        self.assertTrue(3 <= sum(boylar) / len(boylar) <= 5, boylar)
+        sonlar = [kel[p['satirlar'][-1][-1]]['k'] for p in parcalar]
+        self.assertIn('veriyor.', sonlar, 'cümle sonu parçayı bitirir')
+        for a, b in zip(parcalar, parcalar[1:]):
+            self.assertLess(v.kirma_cezasi(kel[a['satirlar'][-1][-1]]['k'], kel[b['satirlar'][0][0]]['k']), v.KIRILMAZ)
+
     def test_vtt_html_kacisi(self):
         kel = [{'k': '<b>', 'b': 0.0, 's': 0.5}, {'k': 'A&B', 'b': 0.5, 's': 1.0}]
         vtt = v.vtt_yaz(kel, [{'b': 0.0, 's': 1.0, 'bitis': 1.2, 'satirlar': [[0, 1]]}])
@@ -323,8 +356,77 @@ class ZamanlamaTests(unittest.TestCase):
         self.assertEqual(v.olaylari_kelimeye(ham), [{'k': 'a', 'b': 1.0, 's': 1.5}, {'k': 'b', 'b': 2.0, 's': 2.5}])
 
 
+def baslik_sahnesi(son_soz=4.632, bit=5.733):
+    """R6 haberinin başlık sahnesi zamanları (edge sesi): son söz `son_soz`ta biter, sahne `bit`te kayar."""
+    kel = [('Rainbow', 0.296, 0.733), ('Six', 0.733, 0.92), ("Siege'in", 0.92, 1.357), ('yeni', 1.357, 1.62),
+           ('sezonu', 1.62, 2.02), ('Operation', 2.02, 2.65), ('Vital', 2.65, 3.0), ('Signal,', 3.0, 3.42),
+           ('1', 3.595, 3.664), ("Aralık'ta", 3.664, 4.22), ('geliyor.', 4.22, 4.632)]
+    olcek = son_soz / 4.632
+    return {'sablon': 'baslik', 'bas': 0.0, 'bit': bit,
+            'veri': {'baslik': "Operation Vital Signal 1 Aralık'ta geliyor", 'tuslar': ['R', 'S', 'S'],
+                     'vurgu': [{'metin': "1 Aralık'ta", 'goster': round(3.595 * olcek, 3)}]},
+            'altyazi': [{'k': k, 'b': round(b * olcek, 3), 's': round(s * olcek, 3)} for k, b, s in kel]}
+
+
+class KapakTests(unittest.TestCase):
+    # Şablonlardaki giriş süreleri (video/src): kapak bunların hepsinden sonra, pencere kaymadan önce alınmalı.
+    SABIT_GIRIS = max(0.3,                     # ilk pencere belirir (kamera.ts sahneKaymasi)
+                      0.4,                     # marka şeridi (UstSerit)
+                      0.3,                     # alt bilgi kartı (AltKart)
+                      0.15 + 0.08 * 5 + 0.3,   # en çok 6 çip, yaylı belirme ~0.3 sn'de oturur (Baslik)
+                      0.1 + 0.06 * 3 + 0.3,    # tuşların belirmesi
+                      0.2 + 0.3)               # kehribar şerit
+
+    def kontrol(self, sahne, fps=30):
+        kare = v.kapak_karesi(sahne, fps)
+        an = kare / fps
+        self.assertIsInstance(kare, int)
+        self.assertGreater(kare, 0, 'ilk kare boş zemindir')
+        self.assertLess(an, sahne['bit'] - 0.05, 'pencere kaymaya başlamadan önce')
+        return an
+
+    def test_kapak_karesi_baslik_girisinden_sonra(self):
+        s = baslik_sahnesi()
+        an = self.kontrol(s)
+        self.assertGreaterEqual(an, self.SABIT_GIRIS)
+        self.assertGreaterEqual(an, s['altyazi'][-1]['s'] + 0.25, 'son başlık kelimesi yerine oturmuş')
+        vurgu = s['veri']['vurgu'][0]
+        self.assertGreaterEqual(an, vurgu['goster'] + 0.07 + 0.16, 'vurgu kutusu dolmuş')
+        self.assertGreaterEqual(an, s['bit'] - 0.6, 'kamera bütün başlığı gösteriyor (baslikKamera)')
+        self.assertEqual(v.kapak_karesi(s, 30), v.kapak_karesi(copy.deepcopy(s), 30), 'kararlı')
+
+    def test_kapak_karesi_kisa_ve_sona_dayanan_baslik(self):
+        # Anlatım sahne sonuna dayanırsa kare yine pencere kaymadan öncedir (şablon kapakta başlığı tam çizer).
+        dayanan = baslik_sahnesi(son_soz=5.6, bit=5.733)
+        self.assertLessEqual(self.kontrol(dayanan), dayanan['bit'] - 0.1 + 1e-9)
+        # Sabit girişlerden kısa sahne olmaz (sonraki sahne en az 0.8 sn sonra başlar) ama olursa da sahne içinde kalır.
+        kisa = baslik_sahnesi(son_soz=0.6, bit=0.9)
+        self.assertLessEqual(self.kontrol(kisa), 0.8 + 1e-9)
+
+    def test_props_kapak_karesini_tasir(self):
+        hazir = v.senaryo_hazirla(senaryo(), haber(), 'tr')
+        sinirlar = sahte_sinirlar(hazir['tts'])
+        z = v.zamanla(hazir, sinirlar, sinirlar[-1]['s'] + 0.5)
+        props = v.props_kur(haber(), 'tr', hazir, z)
+        s = z['sahneler'][0]
+        an = props['kapak_kare'] / props['fps']
+        self.assertGreaterEqual(an, self.SABIT_GIRIS)
+        self.assertGreaterEqual(an, s['altyazi'][-1]['s'] + 0.25)
+        self.assertGreaterEqual(an, s['bit'] - 0.6)
+        self.assertLess(an, s['bit'])
+
+    def test_kapak_ayri_still_kompozisyonundan_cizilir(self):
+        # renderStill bileşene seçilen kompozisyonun props'unu verir: `kapak` alanı ancak ayrı kompozisyonla ulaşır.
+        kok = (v.VIDEO / 'src' / 'Kok.tsx').read_text(encoding='utf-8')
+        render = (v.VIDEO / 'render.mjs').read_text(encoding='utf-8')
+        self.assertIn('<Still', kok)
+        self.assertIn('id="HaberKapak"', kok)
+        self.assertIn("id: 'HaberKapak'", render)
+        self.assertNotIn('kapak: true', render)
+
+
 class AnahtarManifestTests(unittest.TestCase):
-    AYAR = {'saglayici': 'edge', 'konusmaci': 'tr-TR-AhmetNeural', 'hiz': '+0%', 'paket': 'edge-tts==7.3.1'}
+    AYAR ={'saglayici': 'edge', 'konusmaci': 'tr-TR-AhmetNeural', 'hiz': '+0%', 'paket': 'edge-tts==7.3.1'}
 
     def test_anahtar_kararli_ve_degisikliğe_duyarli(self):
         h, s = haber(), senaryo()
@@ -339,7 +441,7 @@ class AnahtarManifestTests(unittest.TestCase):
         s2 = senaryo()
         s2['sahneler'][1]['anlatim'] += ' Ek.'
         self.assertNotEqual(v.anahtar(h, 'tr', s2, self.AYAR), k)
-        with patch.object(v, 'SABLON_SURUMU', 2):
+        with patch.object(v, 'SABLON_SURUMU', v.SABLON_SURUMU + 1):
             self.assertNotEqual(v.anahtar(h, 'tr', s, self.AYAR), k)
 
     def test_manifest_youtube_instagram_ve_bilinmeyen_alanlari_korur(self):

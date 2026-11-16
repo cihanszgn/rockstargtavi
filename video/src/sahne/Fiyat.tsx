@@ -1,10 +1,40 @@
 import React from 'react';
+import {Pencere} from '../bilesen/Pencere';
 import {Simge} from '../bilesen/Simge';
-import {mutlak, R} from '../tema';
+import {Tus} from '../bilesen/Tus';
+import {SAHNE_YARI, type Tuval} from '../kamera';
 import {yaziGenisligi} from '../olcu';
+import {D, R} from '../tema';
 import type {Engel, Haber, Nokta, Sahne, SahneProps} from '../tipler';
-import {basma, cikis, ilerle} from '../zaman';
-import {Cip, IC, an, belir, engel, kay, veri, zemin} from './ortak';
+import {basma, cikis, ilerle, sinirla} from '../zaman';
+import {
+  type Bakis,
+  Cip,
+  DAR,
+  IC,
+  IzleyenYazi,
+  type Kenar,
+  PANEL_ARA,
+  an,
+  araKelime,
+  bakis,
+  belir,
+  engel,
+  etkinlik,
+  genel,
+  izOrani,
+  kelimeIzi,
+  kenarDuraklari,
+  kenardan,
+  panelBaslikEngeli,
+  panelGiris,
+  sahneYolu,
+  siganPunto,
+  soylenme,
+  veri,
+  yaziEngeli,
+  yaziSec,
+} from './ortak';
 
 type FiyatVeri = {
   durum: string;
@@ -17,158 +47,291 @@ type FiyatVeri = {
   goster: number;
 };
 
-// Damganın üstüne konan maskot pencere adını örtmesin diye damga 176'da; mağazalar sığmazsa 130'a kadar çıkar.
-const DAMGA_Y = 176;
-const DAMGA_Y_EN_AZ = 130;
-const CIP_W = 368;
-const CIP_H = 76;
+// Damga döndürülünce köşeleri ~20 piksel taşar; altındaki kutu o kadar aşağıda başlar.
+const DAMGA_Y = IC.ust + 12;
+const DAMGA_ARA = 44;
+// Fiyat ve bitiş tam genişlik kutularda: kutuların üst kenarı maskotun basamağıdır.
+const KUTU_SOL = 28;
+const ARA = 22;
+const KUTU_ARA = 24;
+// Mağazalar ikinci panelde iki sütun.
+const MAGAZA_H = 88;
+const MAGAZA_ARA = 16;
+const MAGAZA_W = (DAR - MAGAZA_ARA) / 2;
+// Mağaza paneli yoksa damga ve kutular büyür: ana pencere sahnenin bu kadarını doldurur.
+const HEDEF_H = 620;
 
-const yerlesim = (s: Sahne) => {
-  const v = veri<FiyatVeri>(s);
-  const fiyatVar = Boolean(v.eski_fiyat || v.yeni_fiyat);
-  const satir = Math.ceil(v.magazalar.length / 2);
-  const altKenar = (d: number) => {
-    const bitisY = fiyatVar ? d + 270 : d + 182;
-    const y0 = (v.bitis ? bitisY + 88 : bitisY) + 10;
-    return {bitisY, y0, son: satir ? y0 + (satir - 1) * (CIP_H + 16) + CIP_H : y0};
+const cipEni = (metin: string, p: number) => 40 + yaziGenisligi(metin, p, 800, 0.04) * D.altyazi.pay;
+
+// Fiyat satırı (eski fiyat, ok, yeni fiyat, indirim çipi) kutuya sığan en büyük puntoda.
+const fiyatSatiri = (v: FiyatVeri, enCok: number, ok: number) => {
+  const en = (p: number) => {
+    const parca = [
+      v.eski_fiyat ? yaziGenisligi(v.eski_fiyat, p, 800) * D.altyazi.pay : 0,
+      v.eski_fiyat && v.yeni_fiyat ? ok : 0,
+      v.yeni_fiyat ? yaziGenisligi(v.yeni_fiyat, p, 800) * D.altyazi.pay : 0,
+      v.indirim ? cipEni(v.indirim, Math.round(p * 0.55)) : 0,
+    ].filter((w) => w > 0);
+    return parca.reduce((a, b) => a + b, 0) + ARA * Math.max(0, parca.length - 1);
   };
-  const damgaY = Math.max(DAMGA_Y_EN_AZ, DAMGA_Y - Math.max(0, altKenar(DAMGA_Y).son - IC.alt));
-  const {bitisY, y0} = altKenar(damgaY);
-  const adim = Math.min(CIP_H + 16, (IC.alt - y0) / Math.max(1, satir));
-  const damgaW = Math.ceil(yaziGenisligi(v.etiket, 60, 800) * 1.03) + 56 + 10;
-  return {
-    damga: an(s, v.goster),
-    damgaY,
-    damgaW,
-    fiyatVar,
-    fiyatY: damgaY + 170,
-    bitisY,
-    magazalar: v.magazalar.map((m, k) => ({ad: m.ad, goster: an(s, m.goster), x: IC.sol + (k % 2) * (CIP_W + 20), y: y0 + Math.floor(k / 2) * adim})),
-  };
+  let p = enCok;
+  while (p > 40 && en(p) > DAR - KUTU_SOL - 12) p -= 2;
+  return {punto: p, en: en(p)};
 };
 
-// Fiyat satırındaki öğelerin toplam genişliği (eski fiyat, ok, yeni fiyat, indirim çipi; aralar 22).
-const fiyatEni = (v: FiyatVeri) => {
-  const parcalar = [
-    v.eski_fiyat ? yaziGenisligi(v.eski_fiyat, 56, 800) : 0,
-    v.eski_fiyat && v.yeni_fiyat ? 48 : 0,
-    v.yeni_fiyat ? yaziGenisligi(v.yeni_fiyat, 56, 800) : 0,
-    v.indirim ? 36 + yaziGenisligi(v.indirim, 30, 800, 0.08) : 0,
-  ].filter((w) => w > 0);
-  return parcalar.reduce((a, b) => a + b, 0) * 1.03 + 22 * Math.max(0, parcalar.length - 1);
-};
+const olculer = (o: number) => ({
+  damgaH: Math.round(124 * o),
+  damgaIdeal: Math.round(64 * o),
+  kutuH: Math.round(148 * o),
+  fiyatIdeal: Math.round(72 * o),
+  ok: Math.round(52 * o),
+  bitisH: Math.round(128 * o),
+  bitisIdeal: Math.round(46 * o),
+  saat: Math.round(92 * o),
+});
 
-export const Fiyat: React.FC<SahneProps> = ({s, t}) => {
+const duzen = (s: Sahne, haber: Haber) => {
   const v = veri<FiyatVeri>(s);
-  const y = yerlesim(s);
   const renk = v.durum === 'indirim' ? R.pembe : R.nane;
-  const d = ilerle(t, y.damga, 0.2);
-  const damgaOlcek = t < y.damga ? 0 : 1 + 1.1 * (1 - cikis(d));
-  const sarsinti = t >= y.damga && t < y.damga + 0.3 ? Math.sin((t - y.damga) * 60) * 5 * (1 - (t - y.damga) / 0.3) : 0;
-  const fiyat = kay(t, y.damga + 0.35, 24);
-  const bitis = kay(t, y.damga + 0.55, 24);
+  const fiyatVar = Boolean(v.eski_fiyat || v.yeni_fiyat || v.indirim);
+  const yerlesim = (m: ReturnType<typeof olculer>) => {
+    const kutuY = DAMGA_Y + m.damgaH + DAMGA_ARA;
+    const bitisY = fiyatVar ? kutuY + m.kutuH + KUTU_ARA : kutuY;
+    const H1 = (v.bitis ? bitisY + m.bitisH : fiyatVar ? kutuY + m.kutuH : DAMGA_Y + m.damgaH + 20) + 40;
+    return {kutuY, bitisY, H1};
+  };
+  const o = v.magazalar.length ? 1 : sinirla(HEDEF_H / yerlesim(olculer(1)).H1, 1, 1.5);
+  const m = olculer(o);
+  const {kutuY, bitisY, H1} = yerlesim(m);
+  const damgaPunto = siganPunto(v.etiket, m.damgaIdeal, 800, DAR - 80, 1, 40);
+  const damgaW = Math.min(DAR - 20, Math.ceil(yaziGenisligi(v.etiket, damgaPunto, 800) * D.altyazi.pay) + 64);
+  const fs = fiyatSatiri(v, m.fiyatIdeal, m.ok);
+  const bitis = v.bitis ? yaziSec(v.bitis, m.bitisIdeal, 800, 2, 30, 600, DAR - m.saat - 56) : undefined;
+  const yB = H1 + PANEL_ARA;
+  const g = an(s, v.goster);
+  // Eski fiyat söylenince satır yanar, yeni fiyat söylenince eskisinin üstü çizilir ve yenisi çıkar.
+  const ilk = (metin: string) => metin.split(/\s+/)[0] ?? '';
+  const tEski = Math.max(g + 0.3, (v.eski_fiyat ? soylenme(s, ilk(v.eski_fiyat), g) : undefined) ?? g + 0.5);
+  const yeniSoz = v.yeni_fiyat ? soylenme(s, ilk(v.yeni_fiyat), tEski + 0.05) : v.indirim ? soylenme(s, v.indirim, tEski - 0.25) : undefined;
+  const tYeni = Math.min(s.bit - 0.5, Math.max(tEski + 0.4, yeniSoz ?? tEski + 0.8));
+  const sonraki = fiyatVar ? tYeni + 0.6 : g + 0.4;
+  const tBitis = bitis ? Math.min(s.bit - 0.5, Math.max(sonraki, soylenme(s, ilk(v.bitis), sonraki - 0.3) ?? araKelime(s, sonraki, s.bit, 0.3) ?? sonraki + 0.4)) : undefined;
+  const magazalar = v.magazalar.map((mg, k) => ({
+    ad: mg.ad,
+    goster: Math.max(an(s, mg.goster), (tBitis ?? sonraki) + 0.3),
+    x: IC.sol + (k % 2) * (MAGAZA_W + MAGAZA_ARA),
+    y: yB + IC.ust + Math.floor(k / 2) * (MAGAZA_H + MAGAZA_ARA),
+  }));
+  const tB = magazalar.length ? Math.min(...magazalar.map((mg) => mg.goster)) : undefined;
+  const H2 = magazalar.length ? IC.ust + Math.ceil(magazalar.length / 2) * (MAGAZA_H + MAGAZA_ARA) - MAGAZA_ARA + 40 : 0;
+  const tuval: Tuval = {ust: -2, alt: magazalar.length ? yB + H2 - 2 : H1 - 2};
+  return {v, m, renk, damgaPunto, damgaW, fiyatVar, fs, kutuY, bitisY, bitis, H1, yB, g, tEski, tYeni, tBitis, magazalar, tB, H2, oyun: haber.oyun.toLocaleUpperCase('tr'), tuval};
+};
+
+export const Fiyat: React.FC<SahneProps> = ({s, t, haber}) => {
+  const d = duzen(s, haber);
+  const {v, m, renk, fs} = d;
+  const yol = sahneYolu(s, fiyatKamera(s, haber), d.tuval);
+  const dg = ilerle(t, d.g, 0.2);
+  const damgaOlcek = t < d.g ? 0 : 1 + 0.9 * (1 - cikis(dg));
+  const sarsinti = t >= d.g && t < d.g + 0.25 ? Math.sin((t - d.g) * 60) * 4 * (1 - (t - d.g) / 0.25) : 0;
+  const kutu = cikis(ilerle(t, d.tEski - 0.25, 0.25));
+  const eskiYandi = t >= d.tEski;
+  const cizik = cikis(ilerle(t, d.tYeni - 0.1, 0.2));
+  const yeni = belir(t, d.tYeni);
+  const indirim = belir(t, d.tYeni + 0.15);
+  // Kutu hiç boş görünmez: eski fiyat baştan soluk durur; eski fiyat yoksa yeni fiyat ve çip soluk bekler.
+  const bekleyen = v.eski_fiyat ? 0 : 0.35;
+  const bitisGir = d.tBitis !== undefined ? belir(t, d.tBitis) : undefined;
+  const saatBoy = Math.round(m.saat * 0.56);
 
   return (
     <>
-      <div
-        style={{
-          position: 'absolute',
-          left: IC.sol,
-          top: y.damgaY,
-          width: y.damgaW,
-          height: 130,
-          boxSizing: 'border-box',
-          border: `6px solid ${renk}`,
-          borderRadius: 20,
-          background: `${renk}1F`,
-          color: renk,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          fontSize: 60,
-          fontWeight: 800,
-          whiteSpace: 'nowrap',
-          transform: `rotate(-6deg) scale(${damgaOlcek}) translateX(${sarsinti}px)`,
-          opacity: t < y.damga ? 0 : cikis(d * 2),
-          boxShadow: `0 8px 0 ${R.tusAlt}`,
-        }}
-      >
-        {v.etiket}
-      </div>
-      {y.fiyatVar ? (
-        <div style={{position: 'absolute', left: IC.sol, top: y.fiyatY, height: 76, display: 'flex', alignItems: 'center', gap: 22, opacity: fiyat.saydam, transform: `translateY(${fiyat.dy}px)`}}>
-          {v.eski_fiyat ? (
-            <span style={{fontSize: 56, fontWeight: 800, color: R.soluk, textDecoration: 'line-through', textDecorationColor: R.kirmizi, textDecorationThickness: 5}}>{v.eski_fiyat}</span>
-          ) : null}
-          {v.eski_fiyat && v.yeni_fiyat ? <Simge ad="ok" boyut={48} renk={renk} kalinlik={3} /> : null}
-          {v.yeni_fiyat ? <span style={{fontSize: 56, fontWeight: 800, color: R.kehribar}}>{v.yeni_fiyat}</span> : null}
-          {v.indirim ? (
-            <Cip renk={R.pembe} dolu style={{height: 56, fontSize: 30}}>
-              {v.indirim}
-            </Cip>
-          ) : null}
+      <Pencere baslik={s.veri.pencere ?? ''} h={d.H1} etkin={etkinlik(yol, 0, t)}>
+        <div
+          style={{
+            position: 'absolute',
+            left: IC.sol,
+            top: DAMGA_Y,
+            width: d.damgaW,
+            height: m.damgaH,
+            boxSizing: 'border-box',
+            border: `6px solid ${renk}`,
+            borderRadius: 20,
+            background: `${renk}24`,
+            color: renk,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontSize: d.damgaPunto,
+            fontWeight: 800,
+            whiteSpace: 'nowrap',
+            transform: `rotate(-5deg) scale(${damgaOlcek}) translateX(${sarsinti}px)`,
+            opacity: t < d.g ? 0 : cikis(dg * 2),
+            boxShadow: `0 8px 0 ${R.tusAlt}`,
+          }}
+        >
+          {v.etiket}
         </div>
-      ) : null}
-      {v.bitis ? (
-        <div style={{position: 'absolute', left: IC.sol, top: y.bitisY, opacity: bitis.saydam, transform: `translateY(${bitis.dy}px)`}}>
-          <Cip renk={R.kehribar} style={{height: 64, fontSize: 30, letterSpacing: '0.04em', gap: 14}}>
-            <Simge ad="saat" boyut={32} renk={R.kehribar} kalinlik={2.6} />
-            {v.bitis}
-          </Cip>
-        </div>
-      ) : null}
-      {y.magazalar.map((m, k) => {
-        const b = belir(t, m.goster);
-        const bas = basma(t - m.goster - 0.02);
-        return (
+        {d.fiyatVar ? (
           <div
-            key={k}
             style={{
               position: 'absolute',
-              left: m.x,
-              top: m.y,
-              width: CIP_W,
-              height: CIP_H,
+              left: IC.sol,
+              top: d.kutuY,
+              width: IC.en,
+              height: m.kutuH,
               boxSizing: 'border-box',
-              borderRadius: 18,
+              borderRadius: 22,
               background: R.tusUst,
-              border: `2px solid ${R.cizgi}`,
-              boxShadow: `0 ${6 * (1 - bas)}px 0 ${R.tusAlt}`,
-              display: 'flex',
-              alignItems: 'center',
-              gap: 14,
-              paddingLeft: 22,
-              overflow: 'hidden',
-              opacity: b.saydam,
-              transform: `translateY(${6 * bas}px) scale(${b.olcek})`,
+              border: `3px solid ${t >= d.tYeni ? renk : R.cizgi}`,
+              boxShadow: `0 6px 0 ${R.tusAlt}`,
+              opacity: 0.35 + 0.65 * kutu,
             }}
           >
-            <div style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 8, background: renk}} />
-            <Simge ad="magaza" boyut={32} renk={renk} kalinlik={2.4} />
-            <span style={{fontSize: 28, fontWeight: 700, color: R.yazi, whiteSpace: 'nowrap'}}>{m.ad}</span>
+            <div style={{position: 'absolute', left: KUTU_SOL, top: 0, height: m.kutuH - 6, display: 'flex', alignItems: 'center', gap: ARA}}>
+              {v.eski_fiyat ? (
+                <span style={{position: 'relative', fontSize: fs.punto, fontWeight: 800, color: eskiYandi && t < d.tYeni ? R.yazi : R.soluk, whiteSpace: 'nowrap'}}>
+                  {v.eski_fiyat}
+                  <span style={{position: 'absolute', left: -4, top: '52%', height: Math.round(7 * m.ok / 52), width: `calc(${cizik * 100}% + 8px)`, borderRadius: 4, background: R.kirmizi, transform: 'rotate(-6deg)'}} />
+                </span>
+              ) : null}
+              {v.eski_fiyat && v.yeni_fiyat ? (
+                <span style={{opacity: yeni.saydam, display: 'flex'}}>
+                  <Simge ad="ok" boyut={m.ok} renk={renk} kalinlik={3} />
+                </span>
+              ) : null}
+              {v.yeni_fiyat ? (
+                <span
+                  style={{
+                    fontSize: fs.punto,
+                    fontWeight: 800,
+                    color: t >= d.tYeni ? R.kehribar : R.soluk,
+                    opacity: Math.max(bekleyen, yeni.saydam),
+                    transform: `scale(${bekleyen && t < d.tYeni ? 1 : yeni.olcek})`,
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  {v.yeni_fiyat}
+                </span>
+              ) : null}
+              {v.indirim ? (
+                <Cip
+                  renk={R.pembe}
+                  dolu
+                  style={{
+                    height: Math.round(fs.punto * 0.95),
+                    fontSize: Math.round(fs.punto * 0.55),
+                    opacity: Math.max(bekleyen, indirim.saydam),
+                    transform: `scale(${bekleyen && t < d.tYeni + 0.15 ? 1 : indirim.olcek})`,
+                  }}
+                >
+                  {v.indirim}
+                </Cip>
+              ) : null}
+            </div>
           </div>
-        );
-      })}
+        ) : null}
+        {d.bitis && d.tBitis !== undefined && bitisGir ? (
+          <div
+            style={{
+              position: 'absolute',
+              left: IC.sol,
+              top: d.bitisY,
+              width: IC.en,
+              height: m.bitisH,
+              boxSizing: 'border-box',
+              borderRadius: 22,
+              background: R.yuzey2,
+              border: `2px solid ${t >= d.tBitis ? R.kehribar : R.cizgi}`,
+              opacity: 0.35 + 0.65 * bitisGir.saydam,
+            }}
+          >
+            <Tus x={18} y={(m.bitisH - 4 - m.saat - 8) / 2} w={m.saat} h={m.saat} derinlik={8} basili={basma(t - d.tBitis)} renk={R.kehribar} kenar="#C98A1B" yaricap={20} olcek={bitisGir.olcek}>
+              <Simge ad="saat" boyut={saatBoy} renk={R.koyuYazi} kalinlik={2.8} />
+            </Tus>
+            <IzleyenYazi
+              satirlar={d.bitis.satirlar}
+              oran={izOrani(kelimeIzi(s, v.bitis, d.tBitis - 0.05, s.bit), t)}
+              style={{position: 'absolute', left: m.saat + 38, top: (m.bitisH - 4 - d.bitis.satirlar.length * d.bitis.lh) / 2, fontSize: d.bitis.punto, lineHeight: `${d.bitis.lh}px`, fontWeight: 800, color: R.yazi}}
+            />
+          </div>
+        ) : null}
+      </Pencere>
+      {d.tB !== undefined ? (
+        <Pencere baslik={d.oyun} y={d.yB} h={d.H2} kaydir={panelGiris(t, d.tB)} etkin={etkinlik(yol, 1, t)}>
+          {d.magazalar.map((mg, k) => {
+            const b = belir(t, mg.goster);
+            const yandi = t >= mg.goster;
+            return (
+              <Tus
+                key={k}
+                x={mg.x}
+                y={mg.y - d.yB}
+                w={MAGAZA_W}
+                h={MAGAZA_H}
+                derinlik={8}
+                basili={basma(t - mg.goster)}
+                kenar={yandi ? renk : R.cizgi}
+                olcek={yandi ? b.olcek : 1}
+                saydam={yandi ? 1 : 0.5}
+                yaricap={18}
+                style={{justifyContent: 'flex-start', gap: 14, paddingLeft: 22}}
+              >
+                <Simge ad="magaza" boyut={34} renk={yandi ? renk : R.soluk} kalinlik={2.4} />
+                <span style={{fontSize: 28, fontWeight: 700, color: R.yazi, whiteSpace: 'nowrap'}}>{mg.ad}</span>
+              </Tus>
+            );
+          })}
+        </Pencere>
+      ) : null}
     </>
   );
 };
 
-export const fiyatNoktalar = (s: Sahne, _haber: Haber): Nokta[] => {
-  const y = yerlesim(s);
+// Kamera: damgaya yakın, eski fiyat söylenince fiyat kutusuna, bitiş söylenince saate, ilk mağazada mağaza paneli, sonra bütün.
+export const fiyatKamera = (s: Sahne, haber: Haber): Bakis[] => {
+  const d = duzen(s, haber);
+  const {m} = d;
+  const out: Bakis[] = [bakis(s.bas, DAMGA_Y + m.damgaH / 2 + 80, 1.1, 0, 0)];
+  if (d.fiyatVar) out.push(bakis(d.tEski, d.kutuY + m.kutuH / 2, 1.1, d.kutuY, 0));
+  if (d.tBitis !== undefined) out.push(bakis(d.tBitis, d.bitisY + m.bitisH / 2 - 30, 1.05, d.bitisY, 0));
+  if (d.tB !== undefined) {
+    // Tuval sığmayınca kamera alta dayanır ve üst kenar damgayı ortadan keser: biraz yaklaşıp damgayı tümüyle dışarıda bırakır.
+    const ustKenar = d.tuval.alt + 30 - 2 * SAHNE_YARI;
+    const yakin = (2 * SAHNE_YARI) / (d.tuval.alt + 30 - (d.kutuY - 30));
+    const satirVar = d.fiyatVar || Boolean(d.v.bitis);
+    out.push(kenardan(d.tB, d.yB, satirVar && ustKenar > DAMGA_Y - 12 && yakin <= 1.1 ? Math.max(1, yakin) : 1, 1));
+  }
+  const son = Math.max(...d.magazalar.map((mg) => mg.goster), d.tBitis ?? d.tYeni);
+  const tGenel = Math.max(son + 0.9, araKelime(s, son + 0.3, s.bit, 0.5) ?? son + 0.9);
+  if (tGenel < s.bit - 0.6) out.push(genel(tGenel, d.tuval));
+  return out;
+};
+
+export const fiyatTuval = (s: Sahne, haber: Haber): Tuval => duzen(s, haber).tuval;
+
+// Damga (döndürülünce köşeleri taşar), fiyat satırı, saat tuşu ve bitiş yazısı, mağaza adları.
+export const fiyatEngeller = (s: Sahne, haber: Haber): Engel[] => {
+  const d = duzen(s, haber);
+  const {v, m} = d;
   return [
-    {t: y.damga, x: mutlak(IC.sol + y.damgaW / 2, 0).x, y: y.damgaY - 6, eylem: 'bas' as const, zemin: zemin(IC.sol, y.damgaW)},
-    ...y.magazalar.map((m) => ({t: m.goster, x: mutlak(m.x + CIP_W / 2, 0).x, y: m.y, eylem: 'bas' as const, zemin: zemin(m.x, CIP_W)})),
+    engel(IC.sol - 6, DAMGA_Y - 22, d.damgaW + 12, m.damgaH + 44),
+    ...(d.fiyatVar ? [engel(IC.sol + KUTU_SOL, d.kutuY, d.fs.en, m.kutuH)] : []),
+    ...(d.bitis
+      ? [
+          engel(IC.sol + 18, d.bitisY + 8, m.saat, m.saat + 8),
+          ...yaziEngeli(v.bitis, d.bitis.punto, 800, d.bitis.en, IC.sol + m.saat + 38, d.bitisY + (m.bitisH - 4 - d.bitis.satirlar.length * d.bitis.lh) / 2, d.bitis.lh),
+        ]
+      : []),
+    ...(d.magazalar.length ? [panelBaslikEngeli(0, d.yB, d.oyun)] : []),
+    ...d.magazalar.map((mg) => engel(mg.x, mg.y, Math.min(MAGAZA_W, 80 + yaziGenisligi(mg.ad, 28, 700) * D.altyazi.pay), MAGAZA_H + 8)),
   ];
 };
 
-// Damga (döndürülünce altı ~18 piksel taşar; üstü maskotun zemini), fiyat satırı, bitiş çipi ve mağaza adları.
-export const fiyatEngeller = (s: Sahne, _haber: Haber): Engel[] => {
-  const v = veri<FiyatVeri>(s);
-  const y = yerlesim(s);
-  return [
-    engel(IC.sol, y.damgaY - 4, y.damgaW, 130 + 22 + 8),
-    ...(y.fiyatVar ? [engel(IC.sol, y.fiyatY, fiyatEni(v), 76)] : []),
-    ...(v.bitis ? [engel(IC.sol, y.bitisY, 82 + yaziGenisligi(v.bitis, 30, 800, 0.04) * 1.03, 64)] : []),
-    ...y.magazalar.map((m) => engel(m.x + 22, m.y, 46 + yaziGenisligi(m.ad, 28, 700) * 1.03, CIP_H + 6)),
-  ];
+// Maskot sağ sütunda: pencere kenarı, fiyat ve bitiş kutuları ve mağaza paneli arasında kameranın baktığı yere konar.
+export const fiyatNoktalar = (s: Sahne, haber: Haber): Nokta[] => {
+  const d = duzen(s, haber);
+  const kenarlar: Kenar[] = [0, ...(d.fiyatVar ? [d.kutuY] : []), ...(d.bitis ? [d.bitisY] : []), ...(d.tB !== undefined ? [{y: d.yB, bas: d.tB + 0.3}] : [])];
+  return kenarDuraklari(sahneYolu(s, fiyatKamera(s, haber), d.tuval), kenarlar, fiyatEngeller(s, haber), 'dur');
 };

@@ -1,6 +1,6 @@
 import React from 'react';
-import {Composition, type CalculateMetadataFunction} from 'remotion';
-import {HaberVideo} from './HaberVideo';
+import {Composition, Still, type CalculateMetadataFunction} from 'remotion';
+import {HaberKapak, HaberVideo} from './HaberVideo';
 import {ORNEK} from './ornek';
 import type {VideoProps} from './tipler';
 
@@ -12,14 +12,18 @@ const olc: CalculateMetadataFunction<VideoProps> = ({props}) => ({
 });
 
 export const Kok: React.FC = () => (
-  <Composition
-    id="HaberVideo"
-    component={HaberVideo}
-    width={1080}
-    height={1920}
-    fps={FPS}
-    durationInFrames={Math.ceil(ORNEK.sure * FPS)}
-    defaultProps={ORNEK}
-    calculateMetadata={olc}
-  />
+  <>
+    <Composition
+      id="HaberVideo"
+      component={HaberVideo}
+      width={1080}
+      height={1920}
+      fps={FPS}
+      durationInFrames={Math.ceil(ORNEK.sure * FPS)}
+      defaultProps={ORNEK}
+      calculateMetadata={olc}
+    />
+    {/* Kapak resmi: başlık sahnesi girişleri bitmiş hâliyle, altyazısız (render.mjs --kapak). */}
+    <Still id="HaberKapak" component={HaberKapak} width={1080} height={1920} defaultProps={ORNEK} />
+  </>
 );

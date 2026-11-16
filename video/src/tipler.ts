@@ -42,6 +42,9 @@ export type VideoProps = {
   sahneler: Sahne[];
   kelimeler: Kelime[];
   parcalar: Parca[];
+  // Kapak resminin karesi (tools/video_uret.py kapak_karesi): başlık sahnesinin girişleri bitmiş, kamera bütün başlıkta.
+  kapak_kare?: number;
+  // Yalnız HaberKapak kompozisyonu verir: altyazısız, sessiz, tek kare.
   kapak?: boolean;
 };
 
@@ -53,3 +56,6 @@ export type Nokta = {t: number; x: number; y: number; eylem: 'bas' | 'dur' | 'ta
 
 // Maskot gövdesinin örtmemesi gereken alan (yazı, tuş): x mutlak, y pencere iç üst kenarına göre.
 export type Engel = {x0: number; x1: number; y0: number; y1: number};
+
+// Kameranın `t` anında yöneldiği yer: odak (x mutlak, y pencere iç üst kenarına göre) sahne ortasına gelir, k yakınlık.
+export type KameraAnahtari = {t: number; x: number; y: number; k: number};

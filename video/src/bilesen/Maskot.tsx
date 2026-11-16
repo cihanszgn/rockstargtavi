@@ -1,10 +1,12 @@
 import React from 'react';
+import type {Ekran} from '../kamera';
 import {type Durak, durum} from '../maskot';
 import {D} from '../tema';
 import {basma, yay} from '../zaman';
 
-// Özgün piksel maskot: sitenin logosundaki mavi "A" tuşu, gözleri ve bacakları olan küçük bir tuş.
-// 16x18 hücre, hücre 6 px → 96x108. Harfler: o kontur, t üst ışık, f yüz, s yan (tuşun kenarı), w beyaz.
+// Özgün piksel maskot: sitenin logosundaki mavi "A" tuşu, gözleri, bacakları ve beyaz ayakkabıları olan küçük bir tuş.
+// 16x20 hücre, hücre 6 px → 96x120; görünen gövde 84 px eninde, ayakkabılarla 114 px boyunda.
+// Harfler: o kontur, t üst ışık, f yüz (bacaklar da), s yan (tuşun kenarı), w beyaz, g ayakkabı tabanı.
 const GOVDE = [
   '..oooooooooooo..',
   '.otttttttttttto.',
@@ -24,13 +26,13 @@ const GOVDE = [
 ];
 
 const BACAK = {
-  dur: ['....oo....oo....', '....oo....oo....', '...ooo....ooo...'],
-  adimA: ['....oo....oo....', '...ooo....oo....', '..........ooo...'],
-  adimB: ['....oo....oo....', '....oo....ooo...', '...ooo..........'],
-  havada: ['....oo....oo....', '...ooo....ooo...', '................'],
+  dur: ['...offo..offo...', '...offo..offo...', '...offo..offo...', '.owwwwo..owwwwo.', '.oggggo..oggggo.'],
+  adimA: ['...offo..offo...', '..offo...offo...', 'owwwwo...offo...', 'oggggo...owwwwo.', '.........oggggo.'],
+  adimB: ['...offo..offo...', '...offo...offo..', '...offo...owwwwo', '.owwwwo...oggggo', '.oggggo.........'],
+  havada: ['...offo..offo...', '...offo..offo...', '..owwwo..owwwo..', '..oggo....oggo..', '................'],
 };
 
-const RENK: Record<string, string> = {o: '#0A1430', t: '#6E93FF', f: '#3B6CF6', s: '#2447B8', w: '#FFFFFF'};
+const RENK: Record<string, string> = {o: '#0A1430', t: '#6E93FF', f: '#3B6CF6', s: '#2447B8', w: '#FFFFFF', g: '#9AA8C3'};
 const H = 6;
 const M = D.maskot;
 
@@ -75,21 +77,23 @@ const Pikseller: React.FC<{rows: string[]}> = ({rows}) => (
   </>
 );
 
-export const Maskot: React.FC<{plan: Durak[]; t: number}> = ({plan, t}) => {
-  const st = durum(plan, t);
+// sabit: kapak resmi için dik duran yalın poz (nefes, göz kırpma, sekme, basma ve iniş esnemesi yok).
+export const Maskot: React.FC<{plan: Durak[]; t: number; ekran: Ekran; sabit?: boolean}> = ({plan, t, ekran, sabit = false}) => {
+  const st = durum(plan, t, ekran);
   let dy = 0;
   let sx = 1;
   let sy = 1;
   let bacak = BACAK.dur;
   let yukari = false;
-  const pop = t < plan[0].var ? yay(t - 0.05, 0.45, 12) : 1;
+  // Her sahnenin ilk durağında yaylı belirme (önceki pencereyle birlikte gitmişti).
+  const pop = sabit ? 1 : yay(st.belirme, 0.5, 16);
 
   if (st.havada > 0) {
     sy *= 1 + 0.1 * st.havada;
     sx *= 1 - 0.07 * st.havada;
     bacak = BACAK.havada;
     yukari = true;
-  } else {
+  } else if (!sabit) {
     sy *= 1 + 0.02 * Math.sin((2 * Math.PI * t) / 1.4);
     if (st.konus >= 0 && st.konus < 0.6) {
       const q = 0.22 * Math.exp(-8 * st.konus) * Math.cos(18 * st.konus);
@@ -117,21 +121,23 @@ export const Maskot: React.FC<{plan: Durak[]; t: number}> = ({plan, t}) => {
       }
     }
   }
-  const kapali = st.havada === 0 && t % 2.7 < 0.12;
+  const kapali = !sabit && st.havada === 0 && t % 2.7 < 0.12;
+  const k = st.k;
+  dy *= k;
   const yerdenYukseklik = Math.max(0, st.golgeY - (st.y + dy));
-  const golge = 1 - Math.min(1, yerdenYukseklik / 160) * 0.5;
+  const golge = (1 - Math.min(1, yerdenYukseklik / 160) * 0.5) * k;
 
   return (
-    <div style={{position: 'absolute', left: 0, top: 0, width: 1080, height: 1920, opacity: st.gorunur, pointerEvents: 'none'}}>
+    <div style={{position: 'absolute', left: 0, top: 0, width: 1080, height: 1920, opacity: st.saydam, pointerEvents: 'none'}}>
       <div
         style={{
           position: 'absolute',
           left: st.x - 34 * golge,
-          top: st.golgeY - 7,
+          top: st.golgeY - 7 * k,
           width: 68 * golge,
-          height: 14,
+          height: 14 * k,
           borderRadius: '50%',
-          background: `rgba(0,0,0,${0.38 * golge * pop})`,
+          background: `rgba(0,0,0,${0.38 * Math.min(1, pop)})`,
         }}
       />
       <div
@@ -141,11 +147,11 @@ export const Maskot: React.FC<{plan: Durak[]; t: number}> = ({plan, t}) => {
           top: st.y - M.yukseklik + dy,
           width: M.genislik,
           height: M.yukseklik,
-          transform: `scale(${sx * pop}, ${sy * pop})`,
+          transform: `scale(${sx * pop * k}, ${sy * pop * k})`,
           transformOrigin: '50% 100%',
         }}
       >
-        <svg width={M.genislik} height={M.yukseklik} viewBox={`0 0 ${16 * H} ${18 * H}`} shapeRendering="crispEdges" style={{display: 'block', overflow: 'visible'}}>
+        <svg width={M.genislik} height={M.yukseklik} viewBox={`0 0 ${16 * H} ${20 * H}`} shapeRendering="crispEdges" style={{display: 'block', overflow: 'visible'}}>
           <Pikseller rows={satirlar({kapali, bakX: st.yon, yukari}, bacak)} />
           <rect x={2 * H} y={5 * H} width={H} height={H} fill="#FF6BB5" opacity={0.6} />
           <rect x={13 * H} y={5 * H} width={H} height={H} fill="#FF6BB5" opacity={0.6} />

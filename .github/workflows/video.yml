@@ -76,6 +76,9 @@ jobs:
           printf '%s\n' "$MEDYA_SSH_KEY" > ~/.ssh/medya_anahtar
           chmod 600 ~/.ssh/medya_anahtar
           printf '%s\n' "$MEDYA_SSH_BILINEN" > ~/.ssh/known_hosts
+          # scp anahtarı kendisi bulsun: yalnız medya sunucusu için bu anahtar kullanılır
+          printf 'Host medya.ctrl-agame.com\n  IdentityFile ~/.ssh/medya_anahtar\n  IdentitiesOnly yes\n' > ~/.ssh/config
+          chmod 600 ~/.ssh/config
 
       - name: Videoları üret ve yükle (günlük sınıra kadar)
         if: steps.kontrol.outputs.hazir == 'true' && inputs.deneme != true

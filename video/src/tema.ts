@@ -56,8 +56,9 @@ export const YAZI = "Archivo, 'Arial Narrow', sans-serif";
 
 export const D = duzen;
 
-// Sahne değişiminde eski pencerenin yukarı kayıp yenisinin alttan geldiği süre (sn).
-export const GECIS = 0.55;
+// Sahne değişiminde eski pencerenin yukarı kayıp yenisinin alttan geldiği süre (sn). Örnek videodaki
+// geçişler 300 ms'yi aşmıyor.
+export const GECIS = 0.3;
 
 const S = duzen.sahne;
 export const PENCERE = {

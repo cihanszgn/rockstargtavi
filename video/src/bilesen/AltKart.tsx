@@ -5,7 +5,8 @@ import {basma, cikis, ilerle} from '../zaman';
 import {Simge} from './Simge';
 
 const K = D.kart;
-const DEGISIM = 0.35;
+// Geçişler 0.3 sn'yi aşmaz (referansla aynı).
+const DEGISIM = 0.3;
 
 const Yazilar: React.FC<{kart: AltKartVeri; dy: number; saydam: number}> = ({kart, dy, saydam}) => {
   const en = K.genislik - K.yazi_sol - K.yazi_sag;
@@ -44,7 +45,7 @@ export const AltKart: React.FC<{sahneler: Sahne[]; t: number}> = ({sahneler, t})
   const yeni = sahneler[i];
   const eski = i > 0 ? sahneler[i - 1] : null;
   const e = eski ? ilerle(t, yeni.bas, DEGISIM) : 1;
-  const giris = cikis(ilerle(t, 0, 0.45));
+  const giris = cikis(ilerle(t, 0, DEGISIM));
   const ikinciYari = e >= 0.5;
   const simgeKart = !eski || ikinciYari ? yeni.alt_kart : eski.alt_kart;
   const renk = simgeKart.simge === 'site' ? R.secim : SIMGE_RENK[simgeKart.simge] ?? R.baglanti;

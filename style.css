@@ -1147,6 +1147,20 @@ a.cip-tema:hover{border-color:var(--gc);background:color-mix(in srgb,var(--gc) 2
   .hd-vid>.ilgili{order:4}
   .hd-vid>.hd-yan>.kutu:not(.hd-video):first-of-type{margin-top:28px}
 }
+/* öne çıkan kart videolu: video kartın sağ kenarında kendi 9:16 sütununda; başlık bloğu soldaki sütunda kalır, üst üste binmez.
+   Sütun video başlamadan da ayrılı olduğu için oynatma başlayınca kart boyu değişmez. */
+@media (min-width:641px){
+  :is(:root:not([data-gor="liste"]) .hi-hub,.hi-panel)>.hk-one:has(>.kg-videolu){
+    --hv:clamp(320px,33vw,470px);--vw:calc(var(--hv)*9/16);grid-template-columns:minmax(0,1fr) var(--vw)}
+  .hi-panel>.hk-one:has(>.kg-videolu){--hv:clamp(280px,25vw,360px)}
+  :is(:root:not([data-gor="liste"]) .hi-hub,.hi-panel)>.hk-one>.kg-videolu{grid-column:1/-1}
+  :is(:root:not([data-gor="liste"]) .hi-hub,.hi-panel)>.hk-one:has(>.kg-videolu)>.hk-govde{grid-column:1}
+  :is(:root:not([data-gor="liste"]) .hi-hub,.hi-panel)>.hk-one>.kg-videolu .kg-vid{inset:0 0 0 auto;width:var(--vw)}
+  :is(:root:not([data-gor="liste"]) .hi-hub,.hi-panel)>.hk-one>.kg-videolu .kg-not{left:16px;right:auto;top:46px;bottom:auto;max-width:calc(100% - var(--vw) - 32px)}
+  :is(:root:not([data-gor="liste"]) .hi-hub,.hi-panel)>.hk-one>.kg-videolu .kg-damga{right:calc(var(--vw) + 12px)}
+}
+/* kaynak notu süre rozeti ve durdurma tuşunun altında kalmasın: videolu kartta sola alınır */
+.kg.kg-videolu.kg-videolu .kg-not{left:8px;right:auto;max-width:calc(100% - 124px)}
 @media print{.kg-vid,.kg-vid-ui,.hd-video{display:none!important}}
 @media (prefers-reduced-motion:reduce){
   .hk,.kg-img,.kg>.o-kapak,.o-kapak-motif,.o-amblem-svg{translate:none!important;scale:none!important}

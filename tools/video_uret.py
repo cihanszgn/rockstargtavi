@@ -41,13 +41,24 @@ GENISLIK_YOLU = VIDEO / "src" / "olcu" / "genislik.json"
 YARDIMCI = Path(__file__).with_name("video_ses_yardimci.py")
 REMOTION_CLI = VIDEO / "node_modules" / "@remotion" / "cli" / "remotion-cli.js"
 
-SABLON_SURUMU = 1
+SABLON_SURUMU = 3
+# 2. sürümde şablonların görünüşü, 3. sürümde kapak resmi değişti; senaryo verisi aynı kaldı: eski sürümle yazılmış
+# senaryolar da okunur.
+OKUNAN_SURUMLER = (1, 2, 3)
 TABAN = "https://medya.ctrl-agame.com/v/"
 TZ = timezone(timedelta(hours=3))
 EN_KISA, EN_UZUN = 20.0, 80.0
 KELIME_ALT, KELIME_UST = 60, 110
 ONDEN = 0.25      # sahne görüntüsü sesten biraz önce gelir
 KUYRUK = 1.4      # son sözden sonra kapanış için kalan süre
+# Kapak resmi (site oynatıcısının posteri, Reels kapağı, YouTube küçük resmi) başlık sahnesinin bir karesidir. Süreler
+# video/src ile aynı: sabit girişler (pencere, marka şeridi, çipler, tuşlar, kehribar şerit, alt kart) en geç 1 sn'de
+# biter; başlık kelimesi söylendikten 0.25 sn sonra yerine oturur, eşleşmeyen son kelimeler son sözden en çok 0.3 sn
+# sonraya yayılır; vurgu kutusu kelime başına 0.07 sn gecikmeyle 0.16 sn'de dolar; kamera sahne sonundan önceki
+# 0.6 sn'de bütün başlığı gösterir; pencere sahne sonunda kaymaya başlar, kapak ondan en az 0.1 sn önce alınır.
+KAPAK_GIRIS, KAPAK_SOZ, KAPAK_IZ = 1.0, 0.25, 0.3
+KAPAK_VURGU, KAPAK_VURGU_ARA = 0.16, 0.07
+KAPAK_KAMERA, KAPAK_PAY = 0.6, 0.1
 HIZ = "+0%"
 DURAK_DB, DURAK_SN = -40, 0.15  # konuşma arası sayılan sessizlik: bu düzeyin altında, en az bu kadar süren
 SES_PAKETLERI = {"edge": "edge-tts==7.3.1", "azure": "azure-cognitiveservices-speech==1.53.1"}
@@ -80,6 +91,12 @@ SAYI = re.compile(r"\d+(?:[.,]\d+)*")
 NOKTALAMA = "\"'“”‘’()[]{}.,;:!?…«»"
 KESMELER = ("'", "’")
 CUMLE_SONU = ".!?…:;"
+# Altyazı parçası bu kelimelerle bitmez (sonraki kelimeye bağlılar) ve bu eklerle başlamaz (öncekine bağlılar).
+BAGLI_SON = frozenset("ve veya ile ya ama fakat ancak hem en bu şu o bir her çok daha "
+                      "the a an and or of to in on for with at by "
+                      "le la les un une des et ou du au el los las y del con".split())
+BAGLI_BAS = frozenset("de da ki mi mı mu mü".split())
+KIRILMAZ = 100.0
 KIMLIK = re.compile(r"^[a-z0-9][a-z0-9-]{2,150}$")
 DIL = re.compile(r"^[a-z]{2}$")
 KONUSMACI = re.compile(r"^[a-z]{2,3}-[A-Z]{2}-[A-Za-z]+Neural$")
@@ -634,8 +651,8 @@ def senaryo_hazirla(senaryo, haber: dict, dil: str) -> dict:
         D.hata("fps", "30 olmalı")
     if senaryo.get("boyut", [1080, 1920]) != [1080, 1920]:
         D.hata("boyut", "[1080, 1920] olmalı")
-    if senaryo.get("sablon_surumu", SABLON_SURUMU) != SABLON_SURUMU:
-        D.hata("sablon_surumu", f"{SABLON_SURUMU} olmalı")
+    if senaryo.get("sablon_surumu", SABLON_SURUMU) not in OKUNAN_SURUMLER:
+        D.hata("sablon_surumu", f"şunlardan biri olmalı: {', '.join(map(str, OKUNAN_SURUMLER))}")
     okunus = senaryo.get("okunus", {})
     if not isinstance(okunus, dict) or not all(
             isinstance(k, str) and isinstance(v, str) and k.strip() and v.strip() and len(k) <= 60 and len(v) <= 80
@@ -831,8 +848,28 @@ def satir_dagit(kelimeler: list[str]) -> tuple[list[list[int]], float] | None:
     return [list(range(k)), list(range(k, len(w)))], 1.0
 
 
+def kirma_cezasi(onceki: str, sonraki: str) -> float:
+    """İki kelime arasında altyazıyı kırmanın bedeli. Sayı, ardındaki birimden ya da sıra sayısının
+    ait olduğu kelimeden ayrılmaz ("11. / yılın", "750 / mermi"); bağlaçta bitmek, ekle başlamak pahalı."""
+    _, govde, arka = _parcala(onceki)
+    sg = _parcala(sonraki)[1].casefold()
+    if govde.isdigit() and arka in ("", "."):
+        return KIRILMAZ
+    ceza = 0.0 if arka else 0.8  # noktalamada kırmak daha doğal
+    if govde.isdigit():
+        ceza += 4  # "2, 3 veya 5 kişilik" gibi sayı dizileri
+    if not arka and govde.casefold() in BAGLI_SON:
+        ceza += 4
+    if sg in BAGLI_BAS:
+        ceza += 4
+    if govde[:1].isdigit() and sg[:1].isdigit():
+        ceza += 3  # "50'den 30'a" aralığı
+    return ceza
+
+
 def parcalara_bol(kelimeler: list[dict]) -> list[dict]:
-    """Altyazı parçaları: sahne ve cümle sonları kesin kırılır; parça 4–6 kelime ve en çok iki satır."""
+    """Altyazı parçaları: sahne ve cümle sonları kesin kırılır; parça 3–5 kelime (çoğu 4), en çok iki satır,
+    tek satır yeğlenir. Ölçüler örnek videodan: parça başına ortalama 3,6 kelime, parçaların ~%28'i iki satır."""
     A = duzen()["altyazi"]
     bolumler, simdiki = [], []
     for i, w in enumerate(kelimeler):
@@ -860,11 +897,13 @@ def parcalara_bol(kelimeler: list[dict]) -> list[dict]:
                 if dagilim is None:
                     continue
                 boy = j - i
-                ceza = 1.0
+                ceza = 1.0 + abs(boy - A["hedef_kelime"]) * A["boy_ceza"]
                 if boy < A["en_az_kelime"] and n >= A["en_az_kelime"]:
                     ceza += (A["en_az_kelime"] - boy) * 3
-                if j < n and not _parcala(kelimeler[bolum[j - 1]]["k"])[2]:
-                    ceza += 0.8  # virgülde kırmak daha doğal
+                if len(dagilim[0]) > 1:
+                    ceza += A["iki_satir_ceza"]
+                if j < n:
+                    ceza += kirma_cezasi(kelimeler[bolum[j - 1]]["k"], kelimeler[bolum[j]]["k"])
                 sure = kelimeler[bolum[j - 1]]["s"] - kelimeler[bolum[i]]["b"]
                 ceza += max(0.0, sure - 3.0) * 4
                 if dagilim[1] < 1:
@@ -937,6 +976,18 @@ def zamanla(hazir: dict, sinirlar: list[dict], ses_suresi: float) -> dict:
     parcalar = parcalara_bol(sade)
     return {"sahneler": sahneler, "kelimeler": [{"k": w["k"], "b": w["b"], "s": w["s"]} for w in sade],
             "parcalar": parcalar, "sure": round(toplam, 3)}
+
+
+def kapak_karesi(sahne: dict, fps: int) -> int:
+    """Kapak karesi: başlık sahnesinin bütün girişleri bitmiş, kamera bütün başlıkta, pencere henüz kaymıyor."""
+    bas, bit = sahne["bas"], sahne["bit"]
+    son_soz = max((w["s"] for w in sahne.get("altyazi") or []), default=bas)
+    vurgular = [x["goster"] + KAPAK_VURGU_ARA * (len(str(x.get("metin", "")).split()) - 1) + KAPAK_VURGU
+                for x in sahne["veri"].get("vurgu") or []
+                if isinstance(x, dict) and isinstance(x.get("goster"), (int, float))]
+    an = max(bas + KAPAK_GIRIS, max(bas + 0.4, son_soz) + KAPAK_IZ + KAPAK_SOZ, bit - KAPAK_KAMERA, *vurgular)
+    # Anlatım sahne sonuna dayanırsa kare pencere kaymadan önceye çekilir; şablon kapakta başlığı yine tam çizer.
+    return max(0, min(math.ceil(an * fps - 1e-6), math.floor((bit - KAPAK_PAY) * fps)))
 
 
 def vtt_yaz(kelimeler: list[dict], parcalar: list[dict]) -> str:
@@ -1141,8 +1192,9 @@ def medya_bilgisi(yol: Path) -> dict:
 
 
 def props_kur(haber: dict, dil: str, hazir: dict, zaman: dict) -> dict:
-    return {"surum": 1, "id": haber["id"], "dil": dil, "fps": 30, "boyut": [1080, 1920], "ses": "ses.mp3",
-            "sure": zaman["sure"],
+    fps = 30
+    return {"surum": 1, "id": haber["id"], "dil": dil, "fps": fps, "boyut": [1080, 1920], "ses": "ses.mp3",
+            "sure": zaman["sure"], "kapak_kare": kapak_karesi(zaman["sahneler"][0], fps),
             "haber": {"oyun": haber.get("oyun", ""), "tur": haber.get("tur") if haber.get("tur") in TURLER else "haber",
                       "tur_etiket": TUR_ETIKET.get(dil, TUR_ETIKET["en"]).get(haber.get("tur"), ""),
                       "platformlar": [{"ad": p.upper(), "renk": platform_anahtari(p)}

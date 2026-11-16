@@ -1,5 +1,6 @@
 // Haber videosunu Remotion ile çizer. tools/video_uret.py çağırır; elle de çalışır:
 //   node render.mjs --girdi zamanli.json --ses ses.mp3 --video ham.mp4 --kapak kapak.jpg
+//   node render.mjs --girdi zamanli.json --kapak kapak.jpg                (yalnız kapak resmi)
 //   node render.mjs --girdi zamanli.json --kareler klasor --kare 0,30,90   (yalnız tek kareler, inceleme için)
 import {bundle} from '@remotion/bundler';
 import {ensureBrowser, renderMedia, renderStill, selectComposition} from '@remotion/renderer';
@@ -54,33 +55,37 @@ const main = async () => {
       return;
     }
 
-    if (!a.video) throw new Error('--video gerekli');
-    let son = -1;
-    const cizim = Date.now();
-    await renderMedia({
-      composition: kompozisyon,
-      serveUrl: paket,
-      inputProps: props,
-      codec: 'h264',
-      crf: 18,
-      x264Preset: 'medium',
-      pixelFormat: 'yuv420p',
-      // Varsayılan tam aralık (yuvj420p, bt470bg) bazı oynatıcılarda renkleri kaydırır; yayın standardı bt709 dar aralık.
-      colorSpace: 'bt709',
-      audioBitrate: '160k',
-      outputLocation: a.video,
-      onProgress: ({progress}) => {
-        const yuzde = Math.floor(progress * 10) * 10;
-        if (yuzde !== son) {
-          son = yuzde;
-          console.log(`çizim %${yuzde}`);
-        }
-      },
-    });
-    console.log(`video yazıldı: ${a.video} (çizim ${sure(cizim)})`);
+    if (!a.video && !a.kapak) throw new Error('--video ya da --kapak gerekli');
+    if (a.video) {
+      let son = -1;
+      const cizim = Date.now();
+      await renderMedia({
+        composition: kompozisyon,
+        serveUrl: paket,
+        inputProps: props,
+        codec: 'h264',
+        crf: 18,
+        x264Preset: 'medium',
+        pixelFormat: 'yuv420p',
+        // Varsayılan tam aralık (yuvj420p, bt470bg) bazı oynatıcılarda renkleri kaydırır; yayın standardı bt709 dar aralık.
+        colorSpace: 'bt709',
+        audioBitrate: '160k',
+        outputLocation: a.video,
+        onProgress: ({progress}) => {
+          const yuzde = Math.floor(progress * 10) * 10;
+          if (yuzde !== son) {
+            son = yuzde;
+            console.log(`çizim %${yuzde}`);
+          }
+        },
+      });
+      console.log(`video yazıldı: ${a.video} (çizim ${sure(cizim)})`);
+    }
     if (a.kapak) {
-      await renderStill({composition: kompozisyon, serveUrl: paket, inputProps: {...props, kapak: true}, frame: 0, output: a.kapak, imageFormat: 'jpeg', jpegQuality: 90});
-      console.log(`kapak yazıldı: ${a.kapak}`);
+      // Kapak ayrı Still kompozisyonudur: renderStill bileşene seçilen kompozisyonun props'unu verir.
+      const kapak = await selectComposition({serveUrl: paket, id: 'HaberKapak', inputProps: props});
+      await renderStill({composition: kapak, serveUrl: paket, inputProps: props, frame: 0, output: a.kapak, imageFormat: 'jpeg', jpegQuality: 90});
+      console.log(`kapak yazıldı: ${a.kapak} (kare ${props.kapak_kare ?? 'yok'})`);
     }
     console.log(`toplam ${sure(basla)}`);
   } finally {

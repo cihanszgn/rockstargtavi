@@ -2,21 +2,34 @@ import React from 'react';
 import {PENCERE, R} from '../tema';
 
 // Uygulama penceresi taklidi: başlık çubuğu (üç tuş noktası + pencere adı) ve içerik alanı.
-// İçerik koordinatları çerçevenin iç kenarından ölçülür (tema.mutlak ile aynı).
-export const Pencere: React.FC<{baslik: string; children: React.ReactNode}> = ({baslik, children}) => (
+// x, y tuvalde dış sol üst köşe (ana pencere 0, 0); içerik koordinatları çerçevenin iç kenarından ölçülür
+// (tema.mutlak ile aynı), böylece ikinci bir panelin içi ana pencere içi + (x, y) olur.
+// etkin: anlatım bu pencereye geçince kenar mavi yanar.
+export const Pencere: React.FC<{
+  baslik: string;
+  x?: number;
+  y?: number;
+  w?: number;
+  h?: number;
+  kaydir?: {dx?: number; dy?: number; saydam?: number};
+  etkin?: number;
+  children: React.ReactNode;
+}> = ({baslik, x = 0, y = 0, w = PENCERE.w, h = PENCERE.h, kaydir, etkin = 0, children}) => (
   <div
     style={{
       position: 'absolute',
-      left: 0,
-      top: 0,
-      width: PENCERE.w,
-      height: PENCERE.h,
+      left: x,
+      top: y,
+      width: w,
+      height: h,
       boxSizing: 'border-box',
       background: R.yuzey,
-      border: `${PENCERE.cerceve}px solid ${R.cizgi}`,
+      border: `${PENCERE.cerceve}px solid ${etkin > 0.5 ? R.secim : R.cizgi}`,
       borderRadius: 28,
-      boxShadow: `0 10px 0 ${R.tusAlt}`,
+      boxShadow: `0 10px 0 ${R.tusAlt}${etkin > 0 ? `, 0 0 0 ${Math.round(4 * etkin)}px ${R.secim}55` : ''}`,
       overflow: 'hidden',
+      transform: kaydir ? `translate(${kaydir.dx ?? 0}px, ${kaydir.dy ?? 0}px)` : undefined,
+      opacity: kaydir?.saydam ?? 1,
     }}
   >
     <div
@@ -51,7 +64,7 @@ export const Pencere: React.FC<{baslik: string; children: React.ReactNode}> = ({
         style={{
           position: 'absolute',
           left: 150,
-          width: 520,
+          width: Math.min(520, w - 190),
           top: 0,
           height: PENCERE.cubuk,
           lineHeight: `${PENCERE.cubuk}px`,
