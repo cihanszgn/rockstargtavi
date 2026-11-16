@@ -1,0 +1,84 @@
+name: Anahtar kontrolu
+
+# Elle çalıştırılır. Instagram ve YouTube anahtarlarının iznini ve bitiş tarihini gösterir.
+# Anahtarın kendisi yazdırılmaz; yalnız izin adları ve tarihler görünür.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  kontrol:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Izinleri ve bitis tarihini goster
+        env:
+          IG_TOKEN: ${{ secrets.IG_TR_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_TR_USER_ID }}
+          YT_CLIENT_ID: ${{ secrets.YT_TR_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_TR_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_TR_REFRESH_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.error, urllib.parse, urllib.request
+          from datetime import datetime, timezone
+
+          def al(url, veri=None):
+              try:
+                  istek = urllib.request.Request(url, data=urllib.parse.urlencode(veri).encode() if veri else None)
+                  with urllib.request.urlopen(istek, timeout=30) as y:
+                      return json.load(y)
+              except urllib.error.HTTPError as h:
+                  govde = h.read().decode("utf-8", "replace")
+                  try:
+                      hata = json.loads(govde).get("error")
+                  except ValueError:
+                      hata = None
+                  if isinstance(hata, dict):
+                      hata = hata.get("message")
+                  return {"_hata": f"HTTP {h.code}: {hata or 'ayrinti yok'}"}
+
+          def gun(saniye):
+              if not saniye:
+                  return "suresiz"
+              t = datetime.fromtimestamp(int(saniye), timezone.utc)
+              return f"{t:%Y-%m-%d} ({(t - datetime.now(timezone.utc)).days} gun kaldi)"
+
+          ig = os.environ.get("IG_TOKEN", "")
+          print("== Instagram TR ==")
+          if not ig:
+              print("anahtar yok")
+          elif ig.startswith("EAA"):
+              print("tur: Facebook girisli (EAA)")
+              d = al("https://graph.facebook.com/debug_token?" + urllib.parse.urlencode({"input_token": ig, "access_token": ig}))
+              v = d.get("data") or {}
+              if "_hata" in d or not v:
+                  print("sorgulanamadi:", d.get("_hata") or "bos yanit")
+              else:
+                  print("gecerli:", v.get("is_valid"))
+                  print("anahtar turu:", v.get("type"))
+                  print("bitis:", gun(v.get("expires_at")))
+                  print("veri erisimi bitis:", gun(v.get("data_access_expires_at")))
+                  print("izinler:", ", ".join(sorted(v.get("scopes") or [])))
+          else:
+              print("tur: Instagram girisli (IGAA)")
+              d = al("https://graph.instagram.com/me?" + urllib.parse.urlencode({"fields": "user_id,username,account_type", "access_token": ig}))
+              print("sorgulanamadi: " + d["_hata"] if "_hata" in d else f"hesap: {d.get('username')} ({d.get('account_type')})")
+
+          print("== YouTube TR ==")
+          if not os.environ.get("YT_REFRESH_TOKEN"):
+              print("anahtar yok")
+          else:
+              t = al("https://oauth2.googleapis.com/token", {
+                  "client_id": os.environ["YT_CLIENT_ID"], "client_secret": os.environ["YT_CLIENT_SECRET"],
+                  "refresh_token": os.environ["YT_REFRESH_TOKEN"], "grant_type": "refresh_token"})
+              if "_hata" in t:
+                  print("yenilenemedi:", t["_hata"])
+              else:
+                  izinler = sorted(s.rsplit("/", 1)[-1] for s in t.get("scope", "").split())
+                  print("yenileme calisiyor: evet")
+                  print("izinler:", ", ".join(izinler))
+                  print("kanal yonetimi (force-ssl):", "var" if "youtube.force-ssl" in izinler else "yok")
+          PY

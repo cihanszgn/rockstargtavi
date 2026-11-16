@@ -44,7 +44,10 @@ SORU = {
     "instagram": [("TOKEN", "Instagram erişim anahtarı (Generate token ile alınan uzun yazı)", True)],
     "youtube": [("CLIENT_ID", "Google OAuth istemci kimliği (Client ID)", True), ("CLIENT_SECRET", "Google OAuth istemci sırrı (Client secret)", True)],
 }
-YT_KAPSAM = "https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube.readonly"
+# force-ssl: kanal açıklaması ve video bilgisi gibi ayarları değiştirmek için (tools/youtube_kanal.py kullanır).
+YT_YONETIM = "https://www.googleapis.com/auth/youtube.force-ssl"
+YT_KAPSAM = ("https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube.readonly "
+             + YT_YONETIM)
 
 
 # ---------------------------------------------------------------- Windows DPAPI
@@ -74,6 +77,18 @@ def ig_sakla(dil: str, token: str) -> None:
 def ig_oku(dil: str) -> str | None:
     p = SAKLA / f"ig_{dil}.bin"
     return _dpapi(p.read_bytes(), False).decode() if p.exists() else None
+
+
+def yt_sakla(dil: str, s: dict) -> None:
+    """YouTube anahtarlarını bu bilgisayarda da saklar; kanal ayarları (youtube_kanal.py) buradan okur."""
+    SAKLA.mkdir(parents=True, exist_ok=True)
+    veri = json.dumps({a: s[a] for a in GEREKEN["youtube"]}).encode()
+    (SAKLA / f"yt_{dil}.bin").write_bytes(_dpapi(veri, True))
+
+
+def yt_oku(dil: str) -> dict | None:
+    p = SAKLA / f"yt_{dil}.bin"
+    return json.loads(_dpapi(p.read_bytes(), False).decode()) if p.exists() else None
 
 
 # ---------------------------------------------------------------- GitHub
@@ -183,6 +198,7 @@ def youtube_ekle() -> None:
     print(f'Doğru: kanal "{ad}"')
     for a in GEREKEN["youtube"]:
         sir_yaz(f"YT_{dil.upper()}_{a}", s[a])
+    yt_sakla(dil, s)
     ayar = json.loads(AYAR.read_text(encoding="utf-8"))
     ayar["hesaplar"][dil]["youtube"] = True
     ayar.setdefault("youtube", {}).setdefault("gizlilik", "private")
