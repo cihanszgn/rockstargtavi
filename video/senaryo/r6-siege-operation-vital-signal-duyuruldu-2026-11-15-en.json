@@ -1,0 +1,111 @@
+{
+ "id": "r6-siege-operation-vital-signal-duyuruldu-2026-11-15",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [1080, 1920],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Rainbow Six Siege's new season, Operation Vital Signal, lands on December 1.",
+   "veri": {
+    "ust_etiket": "YEAR 11 SEASON 4",
+    "baslik": "Operation Vital Signal lands December 1",
+    "vurgu": ["December 1"],
+    "tuslar": ["R", "S", "S"]
+   },
+   "alt_kart": {"simge": "guncelleme", "baslik": "RAINBOW SIX SIEGE", "alt": "OPERATION VITAL SIGNAL"},
+   "maskot": {"hareket": "bas"}
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to Ubisoft's Steam announcement, this is the fourth season of Year 11, and the headline change is Doc.",
+   "veri": {
+    "kaynak": 1,
+    "ad": "Steam developer announcement",
+    "alinti": "The season arrives on December 1, and its headline change is a full remaster of Doc."
+   },
+   "alt_kart": {"simge": "kaynak", "baslik": "OFFICIAL SOURCE", "alt": "UBISOFT • STEAM ANNOUNCEMENT"},
+   "maskot": {"hareket": "tara"}
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Doc loses the Stim Pistol and gains the E-Heal Monitor. He can heal a patched teammate from across the map, or revive them if they are down.",
+   "veri": {
+    "baslik": "Doc gets remastered",
+    "maddeler": [
+     {"metin": "Stim Pistol is removed", "tetik": "Stim"},
+     {"metin": "E-Heal Monitor takes its place", "tetik": "E-Heal"},
+     {"metin": "Heal or revive from afar", "tetik": "revive"}
+    ]
+   },
+   "alt_kart": {"simge": "liste", "baslik": "DOC REMASTERED", "alt": "E-HEAL MONITOR"},
+   "maskot": {"hareket": "bas"}
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Ranked is split into two playlists with separate ranks: Solo/Duo and Flex. The clearance level to enter drops from 50 to 30.",
+   "veri": {
+    "baslik": "Ranked splits in two",
+    "maddeler": [
+     {"metin": "Solo/Duo: queue alone or as a pair", "tetik": "Solo/Duo"},
+     {"metin": "Flex: squads of two, three or five", "tetik": "Flex"},
+     {"metin": "Entry level drops from 50 to 30", "tetik": "drops"}
+    ]
+   },
+   "alt_kart": {"simge": "liste", "baslik": "RANKED SPLITS IN TWO", "alt": "SOLO/DUO AND FLEX"},
+   "maskot": {"hareket": "bas"}
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "The new MBZ-19 submachine gun fires 750 rounds per minute, holds 64 rounds and deals 33 damage per bullet.",
+   "veri": {
+    "baslik": "New weapon: MBZ-19",
+    "platformlar": [],
+    "sayilar": [
+     {"deger": "750", "etiket": "ROUNDS / MIN", "tetik": "750"},
+     {"deger": "64", "etiket": "MAGAZINE", "tetik": "64"},
+     {"deger": "33", "etiket": "DAMAGE", "tetik": "33"}
+    ],
+    "not": "Warden, Thunderbird and Jäger can equip it."
+   },
+   "alt_kart": {"simge": "guncelleme", "baslik": "MBZ-19", "alt": "WARDEN • THUNDERBIRD • JÄGER"},
+   "maskot": {"hareket": "zipla"}
+  },
+  {
+   "sablon": "yama_fark",
+   "anlatim": "Shotguns go the other way: the ACS12 falls from 69 to 45 damage, and the TCSG12 from 75 to 50.",
+   "veri": {
+    "baslik": "Shotgun nerfs",
+    "satirlar": [
+     {"ad": "ACS12 damage", "eski": "69", "yeni": "45", "tetik": "ACS12"},
+     {"ad": "TCSG12 damage", "eski": "75", "yeni": "50", "tetik": "TCSG12"}
+    ]
+   },
+   "alt_kart": {"simge": "yama", "baslik": "SHOTGUN NERFS", "alt": "ACS12 AND TCSG12"},
+   "maskot": {"hareket": "bas"}
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "The current Battle Pass closes when the season starts, so claim any remaining rewards before December 1.",
+   "veri": {
+    "etiket": "Battle Pass closes",
+    "tarih": "December 1",
+    "not": "Claim your remaining rewards before this date."
+   },
+   "alt_kart": {"simge": "takvim", "baslik": "BATTLE PASS", "alt": "CLAIM BEFORE DECEMBER 1"},
+   "maskot": {"hareket": "zipla"}
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "All the map and weapon changes are on our site, Control A Game.",
+   "veri": {
+    "cagri": "Every change on the site",
+    "alt": "Sources and map updates are in the article."
+   },
+   "alt_kart": {"simge": "site", "baslik": "CTRL+A GAME", "alt": "CTRL-AGAME.COM"},
+   "maskot": {"hareket": "bas"}
+  }
+ ]
+}

@@ -1,0 +1,111 @@
+{
+ "id": "r6-siege-operation-vital-signal-duyuruldu-2026-11-15",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [1080, 1920],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "La nouvelle saison de Rainbow Six Siege, Operation Vital Signal, arrive le 1er décembre.",
+   "veri": {
+    "ust_etiket": "AN 11 SAISON 4",
+    "baslik": "Operation Vital Signal arrive le 1er décembre",
+    "vurgu": ["1er décembre"],
+    "tuslar": ["R", "S", "S"]
+   },
+   "alt_kart": {"simge": "guncelleme", "baslik": "RAINBOW SIX SIEGE", "alt": "OPERATION VITAL SIGNAL"},
+   "maskot": {"hareket": "bas"}
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "D'après l'annonce d'Ubisoft sur Steam, c'est la quatrième saison de l'An 11, et le changement phare concerne Doc.",
+   "veri": {
+    "kaynak": 1,
+    "ad": "Annonce du studio sur Steam",
+    "alinti": "Elle débute le 1er décembre, avec pour changement phare une refonte complète de Doc."
+   },
+   "alt_kart": {"simge": "kaynak", "baslik": "SOURCE OFFICIELLE", "alt": "UBISOFT • ANNONCE STEAM"},
+   "maskot": {"hareket": "tara"}
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Doc abandonne son pistolet Stim au profit de l'E-Heal Monitor. Il peut soigner un coéquipier équipé d'un patch depuis un autre endroit de la carte, ou le relever s'il est à terre.",
+   "veri": {
+    "baslik": "Doc est repensé",
+    "maddeler": [
+     {"metin": "Le pistolet Stim disparaît", "tetik": "Stim"},
+     {"metin": "L'E-Heal Monitor arrive", "tetik": "Monitor"},
+     {"metin": "Soigner ou relever à distance", "tetik": "soigner"}
+    ]
+   },
+   "alt_kart": {"simge": "liste", "baslik": "DOC REPENSÉ", "alt": "E-HEAL MONITOR"},
+   "maskot": {"hareket": "bas"}
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Le mode classé est divisé en deux files aux rangs distincts : Solo/Duo et Flex. Le niveau requis passe de 50 à 30.",
+   "veri": {
+    "baslik": "Le classé se scinde en deux",
+    "maddeler": [
+     {"metin": "Solo/Duo : seul ou en binôme", "tetik": "Solo/Duo"},
+     {"metin": "Flex : escouades de deux, trois ou cinq", "tetik": "Flex"},
+     {"metin": "Niveau requis : de 50 à 30", "tetik": "niveau"}
+    ]
+   },
+   "alt_kart": {"simge": "liste", "baslik": "LE CLASSÉ SE SCINDE", "alt": "SOLO/DUO ET FLEX"},
+   "maskot": {"hareket": "bas"}
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "La nouvelle mitraillette MBZ-19 tire 750 coups par minute, embarque 64 balles et inflige 33 points de dégâts par balle.",
+   "veri": {
+    "baslik": "Nouvelle arme : MBZ-19",
+    "platformlar": [],
+    "sayilar": [
+     {"deger": "750", "etiket": "COUPS / MIN", "tetik": "750"},
+     {"deger": "64", "etiket": "CHARGEUR", "tetik": "64"},
+     {"deger": "33", "etiket": "DÉGÂTS", "tetik": "33"}
+    ],
+    "not": "Warden, Thunderbird et Jäger peuvent l'équiper."
+   },
+   "alt_kart": {"simge": "guncelleme", "baslik": "MBZ-19", "alt": "WARDEN • THUNDERBIRD • JÄGER"},
+   "maskot": {"hareket": "zipla"}
+  },
+  {
+   "sablon": "yama_fark",
+   "anlatim": "Les fusils à pompe sont revus à la baisse : le fusil ACS12 passe de 69 à 45 dégâts, le TCSG12 de 75 à 50.",
+   "veri": {
+    "baslik": "Fusils à pompe en baisse",
+    "satirlar": [
+     {"ad": "Dégâts de l'ACS12", "eski": "69", "yeni": "45", "tetik": "ACS12"},
+     {"ad": "Dégâts du TCSG12", "eski": "75", "yeni": "50", "tetik": "TCSG12"}
+    ]
+   },
+   "alt_kart": {"simge": "yama", "baslik": "POMPES EN BAISSE", "alt": "ACS12 ET TCSG12"},
+   "maskot": {"hareket": "bas"}
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Le Battle Pass actuel se termine au lancement de la saison : récupérez les récompenses restantes avant le 1er décembre.",
+   "veri": {
+    "etiket": "Fin du Battle Pass",
+    "tarih": "1er décembre",
+    "not": "Récupérez les récompenses restantes avant cette date."
+   },
+   "alt_kart": {"simge": "takvim", "baslik": "BATTLE PASS", "alt": "À RÉCUPÉRER AVANT LE 1ER DÉCEMBRE"},
+   "maskot": {"hareket": "zipla"}
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tous les changements de cartes et d'armes sont sur notre site, Control A Game.",
+   "veri": {
+    "cagri": "Tous les changements sur le site",
+    "alt": "Sources et nouveautés des cartes dans l'article."
+   },
+   "alt_kart": {"simge": "site", "baslik": "CTRL+A GAME", "alt": "CTRL-AGAME.COM"},
+   "maskot": {"hareket": "bas"}
+  }
+ ]
+}
