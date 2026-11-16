@@ -27,7 +27,7 @@ from html.parser import HTMLParser
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / 'otomasyon/kaynaklar.json').read_text(encoding='utf-8'))
-DILLER = ('tr', 'en', 'fr', 'es')
+from diller import DILLER, SENARYO_DILLERI, KAYIT
 TRT = timezone(timedelta(hours=3))
 UA = 'Mozilla/5.0 (compatible; CTRLAGAME-News/1.0; +https://ctrl-agame.com/hakkinda.html)'
 SENARYO = ROOT / 'video/senaryo'
@@ -464,8 +464,15 @@ def senaryo_denetle(haber, klasor=None):
         if path.exists():
             # Video araçları yalnız senaryo varken yüklenir: haber akışı onlara bağımlı kalmaz.
             import video_uret
-            errors += [f'{path.name}: {e}' for e in video_uret.senaryo_dosyasi_denetle(path, haber, lang)]
+            errors += [f'{path.name}: {e}' for e in senaryo_dosyasi_denetle(path, haber, lang)]
     return errors
+
+
+def senaryo_dosyasi_denetle(path, haber, lang):
+    import video_uret
+    from senaryo_dil import dogrulama_dili
+    with dogrulama_dili(video_uret, lang):
+        return video_uret.senaryo_dosyasi_denetle(path, haber, lang)
 
 
 def hype_esigi():
@@ -595,7 +602,7 @@ def hazirla(existing, batch, now=None, senaryo_klasoru=None):
             raise ValueError('otomasyon.hype eşiğe ulaştı: video senaryosu (video/senaryo/<id>-tr.json) gerekli')
         if hype >= hype_esigi():
             dropped = auto.get('senaryo_atlanan', {})
-            for lang in DILLER:
+            for lang in SENARYO_DILLERI:
                 if not ((senaryo_klasoru or SENARYO) / f"{x['id']}-{lang}.json").exists():
                     reason = dropped.get(lang) if isinstance(dropped, dict) else None
                     if lang == 'tr' or not isinstance(reason, str) or not reason.strip():
@@ -604,7 +611,11 @@ def hazirla(existing, batch, now=None, senaryo_klasoru=None):
             content = x.get('diller', {}).get(lang) or {}
             if not all(isinstance(content.get(k), str) and content[k].strip() for k in ('baslik', 'ozet', 'metin')):
                 raise ValueError(f'{lang}: başlık, özet veya metin eksik')
-            if len(content['baslik']) > 100 or not 50 <= len(content['metin'].split()) <= 300:
+            if not KAYIT[lang]['kelime']:
+                n = len(re.findall(r'[\u3400-\u4dbf\u4e00-\u9fff\U00020000-\U0002fa1f]', content['metin']))
+                if len(content['baslik']) > 50 or not 100 <= n <= 600:
+                    raise ValueError(f'{lang}: başlık en fazla 50 karakter, haber 100–600 Çince karakter olmalı')
+            elif len(content['baslik']) > 100 or not 50 <= len(content['metin'].split()) <= 300:
                 raise ValueError(f'{lang}: başlık en fazla 100 karakter, haber 50–300 kelime olmalı')
             if any(not isinstance(tag, str) or not re.fullmatch(r'#[A-Za-z0-9]+', tag) for tag in content.get('etiketler', [])):
                 raise ValueError(f'{lang}: geçersiz etiket')

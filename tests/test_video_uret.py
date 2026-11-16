@@ -1103,7 +1103,7 @@ def makale(oid='oyun-yama-1'):
     return {'id': oid, 'tarih': '2026-11-15', 'oyun': 'Oyun', 'tur': 'guncelleme',
             'kaynaklar': [{'url': 'https://blog.playstation.com/2026/11/15/game-patch/', 'ad': 'PlayStation Blog'}],
             'diller': {d: {'baslik': 'Yeni oyun yaması', 'ozet': 'Yama yayımlandı.',
-                           'metin': ' '.join(['Bilgi'] * 60)} for d in haber_oto.DILLER},
+                           'metin': '游' * 120 if d == 'zh' else ' '.join(['Bilgi'] * 60)} for d in haber_oto.DILLER},
             'otomasyon': {'konu': oid, 'resmi_url': 'https://blog.playstation.com/2026/11/15/game-patch/',
                           'teyit_zamani': '2026-11-15T08:00:00+00:00',
                           'oyuncuya_fayda': 'Kaydetme hatası giderildi; oyuncu yamasını kurabilir.',
@@ -1148,6 +1148,14 @@ GUVENLI_KOSUCU = ("import {pathToFileURL} from 'node:url';"
 class GuvenliAlanTests(unittest.TestCase):
     def setUp(self):
         self.g = v.duzen()['guvenli']
+        # Sentetik ölçüm deneyi Remotion çalıştırmaz; yalnız Node gerekir.
+        import shutil
+        node = shutil.which('node')
+        if not node:
+            self.skipTest('Node bulunamadı')
+        p = patch.object(v, '_node', return_value=node)
+        p.start()
+        self.addCleanup(p.stop)
 
     def denetle(self, olcumler):
         r = subprocess.run([v._node(), '--input-type=module', '-e', GUVENLI_KOSUCU, str(v.VIDEO / 'guvenli.mjs')],

@@ -35,7 +35,7 @@ components:
 
 ## Overview
 
-Türkçe, İngilizce, Fransızca ve İspanyolca oyun portalı. Kullanıcı oyun haberlerini, fırsatları, söylenti durumlarını ve kendi oyununun rehberini kolayca bulur. Cio'nun kabul ettiği yön: canlı oyuncu estetiği, gerçek haber görselleri ve her oyuna özel tema. İmza, Ctrl+A seçim vurgusu ve fiziksel klavye tuşlarıdır; uzun rehber metinleri sakin ve okunabilir kalır.
+Türkçe, İngilizce, Fransızca, İspanyolca, Almanca, Felemenkçe ve Basitleştirilmiş Çince oyun portalı. Kullanıcı oyun haberlerini, fırsatları, söylenti durumlarını ve kendi oyununun rehberini kolayca bulur. Cio'nun kabul ettiği yön: canlı oyuncu estetiği, gerçek haber görselleri ve her oyuna özel tema. İmza, Ctrl+A seçim vurgusu ve fiziksel klavye tuşlarıdır; uzun rehber metinleri sakin ve okunabilir kalır.
 
 Token sahibi mevcut çalışma kodudur (Model B). Bu belge değerleri açıklar; CSS üretmez. `style.css :root` temel renk, boşluk ve ölçülerin; `[data-tema="acik"]` açık temanın sahibidir. Haber türü renkleri `--tc-*`, platform renkleri `--pl-*` üzerinden ortak kartlara aktarılır. Oyuna özel değerler `tools/oyun_tema.py` → `oyun-tema.css` → oyun/rehber/kapak bileşenleri yolunu izler; üretilen CSS elle düzenlenmez.
 
@@ -68,3 +68,7 @@ Ctrl+K ve / aramayı açar, Escape kapatır. Tema ve görünüm tercihleri yerel
 ## Do's and Don'ts
 
 Her söylentinin kaynak ve doğrulama durumu görünür kalmalı. Kaynak görseli başarısız olduğunda kırık görsel simgesi bırakma. Neon renklerini gövde metninin arkasında okunurluğu azaltacak şekilde kullanma. Yeni oyun temalarını merkezi üreticide tanımla; dil veya sayfa başına bağımsız CSS kopyaları üretme.
+
+## Dil önerisi
+
+`data/diller.json` dil adı, URL, arayüz metni ve tarih biçimlerinin sahibidir. Dil önerisi mevcut `--yuzey` ve `--yazi` renklerini kullanır; sayfa üstünde ince bir şerittir. Tarayıcının ilk desteklenen dili mevcut sayfadan farklıysa yalnız o sayfanın gerçek karşılığı önerilir. Otomatik yönlendirme ve ülke/IP sorgusu yoktur. Açma veya kapatma tercihi localStorage içinde hatırlanır; klavyeyle erişilen bağlantı ve en az 44px kapatma düğmesi kullanılır. Çince için PingFang SC, Microsoft YaHei ve Noto Sans CJK SC sistem yedekleri vardır; web fontu indirilmez.

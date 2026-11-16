@@ -101,6 +101,21 @@ jobs:
           YT_ES_CLIENT_ID: ${{ secrets.YT_ES_CLIENT_ID }}
           YT_ES_CLIENT_SECRET: ${{ secrets.YT_ES_CLIENT_SECRET }}
           YT_ES_REFRESH_TOKEN: ${{ secrets.YT_ES_REFRESH_TOKEN }}
+          IG_DE_USER_ID: ${{ secrets.IG_DE_USER_ID }}
+          IG_DE_TOKEN: ${{ secrets.IG_DE_TOKEN }}
+          YT_DE_CLIENT_ID: ${{ secrets.YT_DE_CLIENT_ID }}
+          YT_DE_CLIENT_SECRET: ${{ secrets.YT_DE_CLIENT_SECRET }}
+          YT_DE_REFRESH_TOKEN: ${{ secrets.YT_DE_REFRESH_TOKEN }}
+          IG_NL_USER_ID: ${{ secrets.IG_NL_USER_ID }}
+          IG_NL_TOKEN: ${{ secrets.IG_NL_TOKEN }}
+          YT_NL_CLIENT_ID: ${{ secrets.YT_NL_CLIENT_ID }}
+          YT_NL_CLIENT_SECRET: ${{ secrets.YT_NL_CLIENT_SECRET }}
+          YT_NL_REFRESH_TOKEN: ${{ secrets.YT_NL_REFRESH_TOKEN }}
+          IG_ZH_USER_ID: ${{ secrets.IG_ZH_USER_ID }}
+          IG_ZH_TOKEN: ${{ secrets.IG_ZH_TOKEN }}
+          YT_ZH_CLIENT_ID: ${{ secrets.YT_ZH_CLIENT_ID }}
+          YT_ZH_CLIENT_SECRET: ${{ secrets.YT_ZH_CLIENT_SECRET }}
+          YT_ZH_REFRESH_TOKEN: ${{ secrets.YT_ZH_REFRESH_TOKEN }}
         run: python tools/sosyal_yayinla.py $DENEME
 
       - name: Gönderi kaydını depoya yaz

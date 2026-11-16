@@ -8,7 +8,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "PS5",
@@ -20,7 +23,10 @@
    "tr": "Aksiyon-macera",
    "en": "Action-adventure",
    "fr": "Action-aventure",
-   "es": "Acción y aventura"
+   "es": "Acción y aventura",
+   "de": "Action-Adventure",
+   "nl": "Actie-avontuur",
+   "zh": "动作冒险"
   },
   "kaynak": {
    "url": "https://www.rockstargames.com/newswire/article/ak3ak31a49a221/grand-theft-auto-vi-is-now-set-to-launch-november-19-2026",
@@ -36,7 +42,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "PC",
@@ -49,7 +58,10 @@
    "tr": "Kooperatif macera",
    "en": "Co-op adventure",
    "fr": "Aventure coopérative",
-   "es": "Aventura cooperativa"
+   "es": "Aventura cooperativa",
+   "de": "Koop-Abenteuer",
+   "nl": "Coöp-avontuur",
+   "zh": "合作冒险"
   },
   "kaynak": {
    "url": "https://store.steampowered.com/app/3161310/Hela_of_Mice_Magic",
@@ -65,7 +77,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "PC"
@@ -76,7 +91,10 @@
    "tr": "Gerçek zamanlı strateji",
    "en": "Real-time strategy",
    "fr": "Stratégie en temps réel",
-   "es": "Estrategia en tiempo real"
+   "es": "Estrategia en tiempo real",
+   "de": "Echtzeitstrategie",
+   "nl": "Realtime-strategie",
+   "zh": "即时战略"
   },
   "kaynak": {
    "url": "https://store.steampowered.com/app/2272360/Warhammer_40000_Dawn_of_War_IV",
@@ -92,7 +110,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "PS5",
@@ -106,7 +127,10 @@
    "tr": "Platform",
    "en": "Platformer",
    "fr": "Plateforme",
-   "es": "Plataformas"
+   "es": "Plataformas",
+   "de": "Plattformspiel",
+   "nl": "Platformgame",
+   "zh": "平台跳跃"
   },
   "kaynak": {
    "url": "https://www.ubisoft.com/en-us/games/rayman-legends-retold",
@@ -122,7 +146,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "Switch 2"
@@ -133,7 +160,10 @@
    "tr": "Rol yapma oyunu",
    "en": "RPG",
    "fr": "RPG",
-   "es": "RPG"
+   "es": "RPG",
+   "de": "RPG",
+   "nl": "RPG",
+   "zh": "RPG"
   },
   "kaynak": {
    "url": "https://www.nintendo.com/us/store/products/xenoblade-chronicles-3-nintendo-switch-2-edition-switch-2",
@@ -149,7 +179,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "PS5",
@@ -163,7 +196,10 @@
    "tr": "Rol yapma oyunu",
    "en": "RPG",
    "fr": "RPG",
-   "es": "RPG"
+   "es": "RPG",
+   "de": "RPG",
+   "nl": "RPG",
+   "zh": "RPG"
   },
   "kaynak": {
    "url": "https://www.square-enix.com/asia/newsportal/en/topics/dragonquest-monsters4/post03",
@@ -179,7 +215,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "PS5",
@@ -192,7 +231,10 @@
    "tr": "Bulmaca-macera",
    "en": "Puzzle adventure",
    "fr": "Aventure-puzzle",
-   "es": "Aventura de puzles"
+   "es": "Aventura de puzles",
+   "de": "Rätselabenteuer",
+   "nl": "Puzzelavontuur",
+   "zh": "解谜冒险"
   },
   "kaynak": {
    "url": "https://www.rpgfan.com/2026/09/11/professor-layton-new-world-dec-10th",
@@ -208,7 +250,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "PC",
@@ -221,7 +266,10 @@
    "tr": "Aksiyon RPG",
    "en": "Action RPG",
    "fr": "RPG d'action",
-   "es": "RPG de acción"
+   "es": "RPG de acción",
+   "de": "Action-Rollenspiel",
+   "nl": "Actie-RPG",
+   "zh": "动作角色扮演"
   },
   "kaynak": {
    "url": "https://www.pathofexile.com/forum/view-thread/3999366",
@@ -237,7 +285,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "PS5",
@@ -251,7 +302,10 @@
    "tr": "Çıkarım aksiyonu",
    "en": "Deductive action",
    "fr": "Action déductive",
-   "es": "Acción deductiva"
+   "es": "Acción deductiva",
+   "de": "Deduktions-Action",
+   "nl": "Deductieve actie",
+   "zh": "推理动作"
   },
   "kaynak": {
    "url": "https://www.spike-chunsoft.com/news/danganronpa-2x2-scheduled-for-release-in-north-america-and-europe",
@@ -267,7 +321,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "PS5",
@@ -280,7 +337,10 @@
    "tr": "Aksiyon-macera",
    "en": "Action-adventure",
    "fr": "Action-aventure",
-   "es": "Acción y aventura"
+   "es": "Acción y aventura",
+   "de": "Action-Adventure",
+   "nl": "Actie-avontuur",
+   "zh": "动作冒险"
   },
   "kaynak": {
    "url": "https://www.sega.co.jp/en/release/260608_3.html",
@@ -296,7 +356,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "PS5"
@@ -307,7 +370,10 @@
    "tr": "Yarış",
    "en": "Racing",
    "fr": "Course",
-   "es": "Carreras"
+   "es": "Carreras",
+   "de": "Rennspiel",
+   "nl": "Racegame",
+   "zh": "竞速"
   },
   "kaynak": {
    "url": "https://www.ign.com/videos/forza-horizon-6-official-ps5-release-date-trailer",
@@ -323,7 +389,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "PS5",
@@ -337,7 +406,10 @@
    "tr": "Yaşam simülasyonu RPG",
    "en": "Life-sim RPG",
    "fr": "RPG de simulation de vie",
-   "es": "RPG de simulación de vida"
+   "es": "RPG de simulación de vida",
+   "de": "Lebenssimulations-RPG",
+   "nl": "Levenssimulatie-RPG",
+   "zh": "生活模拟角色扮演"
   },
   "kaynak": {
    "url": "https://www.rpgfan.com/2026/11/01/witchbrook-january-2027-consoles-pc",
@@ -353,7 +425,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "Switch 2"
@@ -364,7 +439,10 @@
    "tr": "Aksiyon-macera",
    "en": "Action-adventure",
    "fr": "Action-aventure",
-   "es": "Acción y aventura"
+   "es": "Acción y aventura",
+   "de": "Action-Adventure",
+   "nl": "Actie-avontuur",
+   "zh": "动作冒险"
   },
   "kaynak": {
    "url": "https://www.nintendo.com/us/store/products/metroid-ravenous-switch-2",
@@ -380,7 +458,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "PS5"
@@ -391,7 +472,10 @@
    "tr": "Korku macerası",
    "en": "Horror adventure",
    "fr": "Aventure d'horreur",
-   "es": "Aventura de terror"
+   "es": "Aventura de terror",
+   "de": "Horror-Adventure",
+   "nl": "Horroravontuur",
+   "zh": "恐怖冒险"
   },
   "kaynak": {
    "url": "https://blog.playstation.com/2026/09/03/until-dawn-2-launches-january-28",
@@ -407,7 +491,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "PS5",
@@ -420,7 +507,10 @@
    "tr": "Birinci şahıs nişancı",
    "en": "First-person shooter",
    "fr": "Jeu de tir à la première personne",
-   "es": "Shooter en primera persona"
+   "es": "Shooter en primera persona",
+   "de": "Ego-Shooter",
+   "nl": "First-person-shooter",
+   "zh": "第一人称射击"
   },
   "kaynak": {
    "url": "https://www.deepsilver.com/games/metro2039",
@@ -436,7 +526,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "PS5",
@@ -449,7 +542,10 @@
    "tr": "Aksiyon-macera",
    "en": "Action-adventure",
    "fr": "Action-aventure",
-   "es": "Acción y aventura"
+   "es": "Acción y aventura",
+   "de": "Action-Adventure",
+   "nl": "Actie-avontuur",
+   "zh": "动作冒险"
   },
   "kaynak": {
    "url": "https://gameinformer.com/state-of-play/2026/06/02/tomb-raider-legacy-of-atlantis-gets-february-2027-release-date-in-new",
@@ -465,7 +561,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "PS5",
@@ -478,7 +577,10 @@
    "tr": "Rol yapma oyunu",
    "en": "RPG",
    "fr": "RPG",
-   "es": "RPG"
+   "es": "RPG",
+   "de": "RPG",
+   "nl": "RPG",
+   "zh": "RPG"
   },
   "kaynak": {
    "url": "https://sega.co.jp/en/release/260608_4.html",
@@ -494,7 +596,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "PS5",
@@ -507,7 +612,10 @@
    "tr": "Aksiyon RPG",
    "en": "Action RPG",
    "fr": "RPG d'action",
-   "es": "RPG de acción"
+   "es": "RPG de acción",
+   "de": "Action-Rollenspiel",
+   "nl": "Actie-RPG",
+   "zh": "动作角色扮演"
   },
   "kaynak": {
    "url": "https://www.xbox.com/en-US/games/fable",
@@ -523,7 +631,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "Switch 2"
@@ -534,7 +645,10 @@
    "tr": "Musou aksiyon",
    "en": "Musou action",
    "fr": "Action musou",
-   "es": "Acción musou"
+   "es": "Acción musou",
+   "de": "Musou-Action",
+   "nl": "Musou-actie",
+   "zh": "无双动作"
   },
   "kaynak": {
    "url": "https://www.nintendo.com/us/store/products/hyrule-warriors-age-of-calamity-definitive-edition-switch-2",
@@ -550,7 +664,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "PS5",
@@ -564,7 +681,10 @@
    "tr": "Aksiyon RPG",
    "en": "Action RPG",
    "fr": "RPG d'action",
-   "es": "RPG de acción"
+   "es": "RPG de acción",
+   "de": "Action-Rollenspiel",
+   "nl": "Actie-RPG",
+   "zh": "动作角色扮演"
   },
   "kaynak": {
    "url": "https://www.koeitecmoamerica.com/news/slash-through-a-demon-infested-three-kingdoms-in-wo-long-2-wings-of-ember-coming-march-4-2027",
@@ -580,7 +700,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "Switch 2"
@@ -591,7 +714,10 @@
    "tr": "Aksiyon-macera",
    "en": "Action-adventure",
    "fr": "Action-aventure",
-   "es": "Acción y aventura"
+   "es": "Acción y aventura",
+   "de": "Action-Adventure",
+   "nl": "Actie-avontuur",
+   "zh": "动作冒险"
   },
   "kaynak": {
    "url": "https://ioi.dk/007firstlightgame/news/2026/007-first-light-switch-2-date-confirmed",
@@ -607,7 +733,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "PS5",
@@ -620,7 +749,10 @@
    "tr": "Aksiyon RPG",
    "en": "Action RPG",
    "fr": "RPG d'action",
-   "es": "RPG de acción"
+   "es": "RPG de acción",
+   "de": "Action-Rollenspiel",
+   "nl": "Actie-RPG",
+   "zh": "动作角色扮演"
   },
   "kaynak": {
    "url": "https://www.exodusgame.com/en-US",
@@ -636,7 +768,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "PS5",
@@ -650,7 +785,10 @@
    "tr": "Aksiyon RPG",
    "en": "Action RPG",
    "fr": "RPG d'action",
-   "es": "RPG de acción"
+   "es": "RPG de acción",
+   "de": "Action-Rollenspiel",
+   "nl": "Actie-RPG",
+   "zh": "动作角色扮演"
   },
   "kaynak": {
    "url": "https://www.invenglobal.com/articles/25552/release-date-finally-revealed-final-fantasy-vii-revelation-launches-april-8-2027",
@@ -666,7 +804,10 @@
    "tr": "",
    "en": "",
    "fr": "",
-   "es": ""
+   "es": "",
+   "de": "",
+   "nl": "",
+   "zh": ""
   },
   "platform": [
    "PS5"
@@ -677,7 +818,10 @@
    "tr": "Aksiyon-macera",
    "en": "Action-adventure",
    "fr": "Action-aventure",
-   "es": "Acción y aventura"
+   "es": "Acción y aventura",
+   "de": "Action-Adventure",
+   "nl": "Actie-avontuur",
+   "zh": "动作冒险"
   },
   "kaynak": {
    "url": "https://hypebeast.com/2026/11/god-of-war-laufey-delayed-to-may-2027-launch",
@@ -693,7 +837,10 @@
    "tr": "2027 sonları",
    "en": "Late 2027",
    "fr": "Fin 2027",
-   "es": "Finales de 2027"
+   "es": "Finales de 2027",
+   "de": "Ende 2027",
+   "nl": "Eind 2027",
+   "zh": "2027年末"
   },
   "platform": [
    "PS5",
@@ -707,7 +854,10 @@
    "tr": "Aksiyon RPG",
    "en": "Action RPG",
    "fr": "RPG d'action",
-   "es": "RPG de acción"
+   "es": "RPG de acción",
+   "de": "Action-Rollenspiel",
+   "nl": "Actie-RPG",
+   "zh": "动作角色扮演"
   },
   "kaynak": {
    "url": "https://www.nintendolife.com/news/2026/08/kingdom-hearts-iv-is-launching-on-switch-2-in-late-2027-heres-a-brand-new-trailer",
