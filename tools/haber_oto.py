@@ -43,6 +43,10 @@ def norm(value):
     return re.sub(r'[^a-z0-9]+', ' ', unicodedata.normalize('NFD', value).encode('ascii', 'ignore').decode()).strip()
 
 
+def oyun_eslesir(baslik, anahtar):
+    return f' {anahtar} ' in f' {norm(baslik)} '
+
+
 def kanonik(url):
     p = urllib.parse.urlsplit(url)
     query = urllib.parse.urlencode(sorted((k, v) for k, v in urllib.parse.parse_qsl(p.query)
@@ -243,7 +247,12 @@ def _kaynak_tara(source, now):
 def kaynak_tara(source, now):
     status, items = _kaynak_tara(source, now)
     fresh = tarih_suz(items, now)
-    fresh.sort(key=lambda x: (bool(x['tarih']), x['tarih'] or ''), reverse=True)
+    # İlk kaynak sınırı da takipli oyun önceliğini korumalı; sonradan sıralama
+    # sınırda kaybolan somut yamayı geri getiremez.
+    games_path = ROOT / 'data/oyunlar.json'
+    games = json.loads(games_path.read_text(encoding='utf-8')) if games_path.exists() else []
+    aliases = [norm(s) for game in games for s in [game['ad'], *game.get('eslesme', [])] if len(s) > 2]
+    fresh.sort(key=lambda x: (bool(x['tarih']), any(oyun_eslesir(x['baslik'], key) for key in aliases), x['tarih'] or ''), reverse=True)
     kept = fresh[:source.get('aday_siniri', CONFIG['sinirlar'].get('kaynak_basina', 6))]
     limited = len(kept)
     if source.get('bicim') == 'steam':

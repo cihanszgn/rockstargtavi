@@ -214,6 +214,17 @@ class HatTests(unittest.TestCase):
         second.assert_not_called()
         self.assertEqual(self.hat.sonuc['hafizadan'], 2)
 
+    def test_cached_rejections_do_not_consume_new_candidate_budget(self):
+        self._oyunlar([])
+        candidates = [self._aday(0, 'Rejected old event'), self._aday(1, 'Fresh event')]
+        self.hat.hafiza_kaydet(h.adres(candidates[0]), 'al', 9, 'teyit yok', 'yazar')
+        with patch.dict(h.oto.CONFIG['sinirlar'], {'yerel_aday': 1}), \
+                patch.object(self.hat, 'zincir', side_effect=self._al({1: 5})) as run:
+            selected = self.hat.ele(candidates)
+        self.assertEqual([x['baslik'] for x in selected], ['Fresh event'])
+        self.assertEqual(self.hat.sonuc['yeni_aday'], 1)
+        self.assertEqual(run.call_count, 1)
+
     def test_writer_skip_is_remembered_and_not_selected_next_turn(self):
         self._oyunlar([])
         candidate = self._aday(0, 'Yama notu A')
@@ -370,6 +381,16 @@ class HatTests(unittest.TestCase):
         self._oyunlar([])
         with patch.object(self.hat, 'zincir', return_value=None):
             self.hat.ele([self._aday(0, 'Yama notu A')])
+        self.assertEqual(self.hat.gorulen, {})
+
+    def test_local_outage_prioritizes_concrete_patch_without_marking_it_verified(self):
+        self._oyunlar([{'ad': 'Takipli', 'eslesme': []}])
+        candidates = [self._aday(0, 'Takipli cultural moment'), self._aday(1, 'Takipli hotfix removes dungeon EXP')]
+        with patch.object(self.hat, 'zincir', return_value=None):
+            selected = self.hat.ele(candidates)
+        self.assertEqual(selected[0]['baslik'], candidates[1]['baslik'])
+        self.assertEqual([x['on_puan'] for x in selected], [5, 3])
+        self.assertTrue(all(not x.get('resmi') for x in selected))
         self.assertEqual(self.hat.gorulen, {})
 
     def test_audit_rejection_is_remembered_for_the_article_source(self):

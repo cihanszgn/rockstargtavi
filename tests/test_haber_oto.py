@@ -63,6 +63,11 @@ class HypeTests(unittest.TestCase):
             self.assertEqual(len(h.hazirla([], [self.haber(7)], NOW, self.klasor)[1]), 1)
 
 class NewsTests(unittest.TestCase):
+    def test_followed_game_matching_uses_word_boundaries(self):
+        self.assertFalse(h.oyun_eslesir('Trust keyboard sale', 'rust'))
+        self.assertTrue(h.oyun_eslesir('Rust update', 'rust'))
+        self.assertTrue(h.oyun_eslesir('New GTA 6 announcement', 'gta 6'))
+
     def test_date_prefilter_and_unknown(self):
         items = [{'baslik': '11/05/26 Old Nintendo', 'url': 'https://www.nintendo.com/us/whatsnew/old/'},
                  {'baslik': 'New', 'tarih': NOW.isoformat()}, {'baslik': 'Unknown'}]
@@ -132,6 +137,20 @@ class NewsTests(unittest.TestCase):
         self.assertEqual(status['tarih_elendi'], 10)
         self.assertEqual([x['baslik'] for x in kept], ['Fresh', 'Unknown'])
         with self.assertRaises(ValueError): h.rss_oku(b'<html><body>Not a feed</body></html>', source, NOW)
+
+    def test_source_cap_keeps_followed_news_before_newer_unrelated_items(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = pathlib.Path(temp); (root / 'data').mkdir()
+            (root / 'data/oyunlar.json').write_text('[{"ad":"Takipli","eslesme":[]}]', encoding='utf-8')
+            source = {'id': 'test', 'ad': 'Test', 'aday_siniri': 1}
+            unrelated = {'baslik': 'Other game', 'tarih': NOW.isoformat()}
+            followed = {'baslik': 'Takipli concrete patch', 'tarih': (NOW-timedelta(hours=5)).isoformat()}
+            with patch.object(h, 'ROOT', root), patch.object(h, '_kaynak_tara', return_value=({'id': 'test', 'durum': 'ok'}, [unrelated, followed])):
+                status, kept = h.kaynak_tara(source, NOW)
+                self.assertEqual(kept[0]['baslik'], followed['baslik'])
+                self.assertEqual(status['sinir_elendi'], 1)
+                followed['tarih'] = None
+                self.assertEqual(h.kaynak_tara(source, NOW)[1][0]['baslik'], unrelated['baslik'])
 
     def test_epic_api_is_official_confirmation(self):
         x = article()
