@@ -1,4 +1,41 @@
 {
+ "rainbow-six-siege-y11s4-operation-vital-signal-reveal-2026-11-15|tr|instagram|gorsel": {
+  "bicim": "gorsel",
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "r6-siege-operation-vital-signal-duyuruldu-2026-11-15",
+  "kapsayici": "17869120350694894",
+  "kimlik": "18148487944582871",
+  "niyet_zamani": "2026-11-16T06:45:01+00:00",
+  "platform": "instagram",
+  "url": "https://www.instagram.com/p/DfyvgiRF2lQ/",
+  "zaman": "2026-11-16T06:45:01+00:00"
+ },
+ "rainbow-six-siege-y11s4-operation-vital-signal-reveal-2026-11-15|tr|instagram|reel": {
+  "bicim": "reel",
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "r6-siege-operation-vital-signal-duyuruldu-2026-11-15",
+  "kapsayici": "17869120404694894",
+  "kimlik": "18129768472920019",
+  "niyet_zamani": "2026-11-16T06:45:01+00:00",
+  "platform": "instagram",
+  "url": "https://www.instagram.com/reel/Dfyvi8TOZSH/",
+  "zaman": "2026-11-16T06:45:01+00:00"
+ },
+ "rainbow-six-siege-y11s4-operation-vital-signal-reveal-2026-11-15|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 16201094,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "r6-siege-operation-vital-signal-duyuruldu-2026-11-15",
+  "kimlik": "ZimEqKloZZg",
+  "niyet_zamani": "2026-11-16T06:45:01+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status&upload_id=AFy3sg3vgbZcU88BEdFgcTT7M3B7CelNNBR4Qo1bvuRdBm6ssY1ShTAsLNk9VNm905elLxJB8AbPtyr30H-XvP3cxPTwGVBfwQQWpXt0jz-LEQ",
+  "platform": "youtube",
+  "url": "https://www.youtube.com/shorts/ZimEqKloZZg",
+  "zaman": "2026-11-16T06:45:01+00:00"
+ },
  "xbox-25-yil-dergisi-2026-11|tr|instagram|gorsel": {
   "bicim": "gorsel",
   "dil": "tr",
