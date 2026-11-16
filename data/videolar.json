@@ -1,6 +1,7 @@
 {
  "surum": 1,
  "taban": "https://medya.ctrl-agame.com/v/",
+ "onay_gerekli": false,
  "videolar": {
   "battlefield-6-ucretsiz-deneme-casino-heist-2026-11-13": {
    "tr": {
@@ -25,6 +26,7 @@
     "mp4_1080": "just-volleyball-resmi-cikis-2026-11-16-tr-7dd3f893e01c-1080.mp4",
     "mp4_540": "just-volleyball-resmi-cikis-2026-11-16-tr-7dd3f893e01c-540.mp4",
     "mp4_720": "just-volleyball-resmi-cikis-2026-11-16-tr-7dd3f893e01c-720.mp4",
+    "onay": true,
     "sure": 30.9,
     "uretildi": "2026-11-17T00:05:12+03:00",
     "vtt": "just-volleyball-resmi-cikis-2026-11-16-tr-7dd3f893e01c.vtt",
@@ -39,6 +41,7 @@
     "mp4_1080": "r6-siege-operation-vital-signal-duyuruldu-2026-11-15-en-686896692bf1-1080.mp4",
     "mp4_540": "r6-siege-operation-vital-signal-duyuruldu-2026-11-15-en-686896692bf1-540.mp4",
     "mp4_720": "r6-siege-operation-vital-signal-duyuruldu-2026-11-15-en-686896692bf1-720.mp4",
+    "onay": true,
     "sure": 61.3,
     "uretildi": "2026-11-17T00:10:38+03:00",
     "vtt": "r6-siege-operation-vital-signal-duyuruldu-2026-11-15-en-686896692bf1.vtt",
