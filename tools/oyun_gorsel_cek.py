@@ -135,6 +135,9 @@ def resmi_bul(url: str | None, ad: str) -> tuple[dict | None, str]:
     kayit, neden = gc.bul({"kaynaklar": [{"url": url, "ad": ad}]})
     if not kayit:
         return None, neden
+    # Kare logo/simge kart görseli olamaz (16:9 alanda kırpılınca tanınmaz).
+    if kayit["boy"] and kayit["en"] / kayit["boy"] < 1.3:
+        return None, f"yatay değil ({kayit['en']}x{kayit['boy']})"
     return {"url": kayit["url"], "kaynak": ad, "en": kayit["en"], "boy": kayit["boy"]}, "resmî sayfa"
 
 

@@ -42,6 +42,12 @@
    "en": 460,
    "boy": 215
   },
+  "gta-vi": {
+   "url": "https://www.rockstargames.com/VI/_next/static/media/meta.0t8ty~nlmxq2s.jpg?yvw8ZozOI7a7Kz1war9qe",
+   "kaynak": "Rockstar Games",
+   "en": 1200,
+   "boy": 630
+  },
   "hela-of-mice-and-magic": {
    "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3161310/868b1938e4540924707c8db978d494322757e28d/header.jpg",
    "kaynak": "Steam",
@@ -73,10 +79,10 @@
    "boy": 1350
   },
   "path-of-exile-2-1-0": {
-   "url": "https://web.poecdn.com/protected/image/favicon/ogimage.png?key=DDHQnVxwj0AxeMbsPiRoEQ",
-   "kaynak": "Grinding Gear Games",
-   "en": 800,
-   "boy": 800
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2694490/4de5b38ea6defe96eb537cc99c001075aefd94a3/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
   },
   "persona-4-revival": {
    "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2963950/e83b7da1c2e9ddbed1a27038bd86e9714b2aa893/header.jpg",
@@ -201,12 +207,6 @@
    "en": 460,
    "boy": 215
   },
-  "minecraft": {
-   "url": "https://www.minecraft.net/content/dam/minecraftnet/franchise/logos/minecraft-creeper-face.jpg",
-   "kaynak": "Mojang Studios",
-   "en": 1080,
-   "boy": 1080
-  },
   "overwatch": {
    "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/5c208b2699cd38ed6125d039be388fa744db54a4/header_alt_assets_23.jpg?t=1793732501",
    "kaynak": "Steam",
@@ -230,12 +230,6 @@
    "kaynak": "Roblox Corporation",
    "en": 1200,
    "boy": 627
-  },
-  "valorant": {
-   "url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/cbf4460132cdfeb2a97fad5f9dd25ba0bc058f76-128x128.png?accountingTag=VAL?w=1200&h=630&fm=webp&fit=crop&crop=center",
-   "kaynak": "Riot Games",
-   "en": 630,
-   "boy": 630
   },
   "world-of-warcraft": {
    "url": "https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/bltb5a24e5ab1e2cfb0/6a88e3589b942efdb6f74110/wow-thumbnail-homepage.jpg",
