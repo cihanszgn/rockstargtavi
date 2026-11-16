@@ -3076,6 +3076,2289 @@
      ]
     }
    ]
+  },
+  "de": {
+   "baslik": "Counter-Strike 2 für Einsteiger: Installation, Modi, Einstellungen und Rang",
+   "ozet": "Counter-Strike 2 ist Valves kostenloser taktischer 5v5-Shooter auf Steam. Dieser Leitfaden begleitet Neueinsteiger und Rückkehrer von der Installation bis zum ersten Premier-Match.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Taktischer 5v5-Shooter (FPS)"
+    },
+    {
+     "ad": "Plattform",
+     "deger": "Windows-PC (Steam)"
+    },
+    {
+     "ad": "Preismodell",
+     "deger": "Kostenlos spielbar; optionale Käufe von Kosmetik und Gegenständen"
+    },
+    {
+     "ad": "Aktuelle Version",
+     "deger": "Premier-Saison 5; Update vom 22. September 2026 (November 2026)"
+    },
+    {
+     "ad": "Türkisch-Unterstützung",
+     "deger": "Steam führt Türkisch als Oberflächensprache; Valve nennt keine türkische Sprachausgabe oder Untertitel"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "nedir",
+     "baslik": "Was Counter-Strike 2 ist und wo es 2026 steht",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "In Counter-Strike 2 treffen zwei Fünferteams aufeinander: Terroristen wollen eine Bombe legen, Counter-Terrorists (CT) verhindern dies. Es gibt keine Klassen oder Fähigkeiten. Zielen, Informationen, Granaten und Teamabstimmung entscheiden."
+      },
+      {
+       "tip": "p",
+       "metin": "2026 ist **Premier** der Wettbewerbsmodus; **Saison 5** begann am 8. Juli 2026. Laut Valve umfasst der Active-Duty-Pool Ancient, Anubis, Cache, Dust 2, Inferno, Mirage und Nuke. Cache ersetzte Overpass. Ein Saisonende ist nicht angekündigt."
+      },
+      {
+       "tip": "p",
+       "metin": "Das Update vom 22. September 2026 änderte die Premier-Kartenwahl, ergänzte den 3v3-Warteschlangenmodus Rush und brachte Clan-Tags zurück. Karten und Modi ändern sich; die genaue Liste steht im Spiel."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Zahlen dieses Leitfadens gelten für November 2026. Updates können sie ändern; aktuelle Hinweise stehen auf Valves offizieller Update-Seite."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Vor dem Start: Steam, System und Konto",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Der Download auf Steam ist kostenlos. Mindestanforderungen laut Shop: Windows 10, 4 Hardware-Threads (Intel i5 750 oder besser), 8 GB RAM, DirectX-11-Grafikkarte mit 1 GB Speicher und Shader Model 5.0 sowie **85 GB** freier Speicher. Räume vorher Platz frei; gerade der Speicherbedarf überrascht Einsteiger."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Erstelle bei Bedarf ein Steam-Konto und aktiviere **Steam Guard** mit Zwei-Schritt-Verifizierung.",
+        "Der Anti-Cheat VAC läuft mit dem Spiel; eine separate Installation ist nicht nötig.",
+        "Laut Community-Quellen verlangt Premier Prime-Status und CS2-Profilstufe 10. Die erste Wertung gibt es nach 10 Siegen. Valve hat diese Bedingungen nicht als Tabelle auf der eigenen Seite veröffentlicht.",
+        "Competitive und Wingman benötigen kein Prime; kostenlose Konten können teilnehmen."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Download- und Gratis-Skin-Links außerhalb von Steam sind gefährlich. Lade nur über den Steam-Client."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Deine ersten Matches Schritt für Schritt",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Spiel installieren und Einstellungen prüfen",
+         "metin": "Lade über Steam und prüfe beim ersten Start Ton, Grafik und Maus."
+        },
+        {
+         "baslik": "Bot-Match und Schießstand",
+         "metin": "Probiere Karten und Waffen gegen Bots. So lernst du die Regeln ohne Risiko."
+        },
+        {
+         "baslik": "Kurze Modi wie Wingman oder Rush",
+         "metin": "Weniger Spieler und kürzere Matches erlauben schnelle Übung."
+        },
+        {
+         "baslik": "Zu Competitive wechseln",
+         "metin": "Jede Karte erhält einen eigenen Rang, sichtbar nach den ersten Siegen."
+        },
+        {
+         "baslik": "Auf Premier vorbereiten",
+         "metin": "Nach der Freischaltung erhältst du dein erstes CS Rating mit 10 Siegen."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Runden sind kurz und verlangen neue Entscheidungen. Nach dem Tod zuzusehen und Informationen zu sammeln hilft in der nächsten Runde. In Competitive und Premier gewinnt laut Community-Quellen das erste Team mit 13 Rundensiegen. Angaben zur Verlängerung unterscheiden sich; prüfe die Match-Informationen im Spiel. Entschärfen dauert ohne Kit 10, mit Kit 5 Sekunden."
+      },
+      {
+       "tip": "p",
+       "metin": "Beschränke deine ersten 10 Matches auf Überleben und Informationsweitergabe. Melde nach dem Tod Anzahl, Waffen und Laufrichtung gesichteter Gegner; das kann wichtiger sein als ein Abschuss. Bleibe bei einem Mitspieler statt allein vorzustoßen: Fällt einer, kann der andere sofort antworten. Lerne die Kartenzonen. Ansagen wie „mid“, „A long“ oder „B entrance“ müssen kurz und allen verständlich sein."
+      },
+      {
+       "tip": "p",
+       "metin": "Nutze Kopfhörer und gegnerische Schritte zur Ortung. Rennen ist laut, Gehen mit Shift leise, aber langsamer. Auch Legen und Entschärfen sind hörbar; plane deine Zeit. Lege zu Rundenbeginn einen Plan fest: „Ich gehe B, Rauch von hier, Blendgranate von dort.“ Planlose Teams sterben oft nacheinander."
+      }
+     ]
+    },
+    {
+     "id": "modlar",
+     "baslik": "Modi und Kartenpool",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Premier und Competitive sind 5v5 mit Bombenlegen und Entschärfen. Wingman ist 2v2, Rush der neue 3v3-Warteschlangenmodus. Active-Duty-Karten im November 2026:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Karte",
+        "Hinweis"
+       ],
+       "satirlar": [
+        [
+         "Ancient",
+         "Dschungelthema; zwei Hauptzugänge"
+        ],
+        [
+         "Anubis",
+         "Ägyptisches Thema; Wasserkanal und offene Flächen"
+        ],
+        [
+         "Cache",
+         "Ersetzte Overpass im Pool"
+        ],
+        [
+         "Dust 2",
+         "Der Klassiker; besonders lehrreich für Anfänger"
+        ],
+        [
+         "Inferno",
+         "Italienisches Dorf; enge Straßen"
+        ],
+        [
+         "Mirage",
+         "Wichtige Mitte; ausgewogen"
+        ],
+        [
+         "Nuke",
+         "Zwei Etagen; Bombenplätze übereinander"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Wähle in den ersten Wochen zwei Karten und bleibe dabei. Dust 2 und Mirage eignen sich."
+      }
+     ]
+    },
+    {
+     "id": "mod-farki",
+     "baslik": "Premier, Competitive, Wingman und FACEIT im Vergleich",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Die vier Angebote ähneln sich, haben aber verschiedene Regeln. Dieser Vergleich beruht auf Community-Quellen; Valve hat nicht jedes Detail selbst tabellarisch veröffentlicht."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Modus",
+        "Spieler",
+        "Kartenwahl",
+        "Rangsystem",
+        "Voraussetzung"
+       ],
+       "satirlar": [
+        [
+         "Premier",
+         "5v5",
+         "Teams sperren Active-Duty-Karten und spielen die verbleibende",
+         "CS Rating (Elo-basiert, 0 bis über 30.000)",
+         "Prime und Profilstufe 10; erste Wertung nach 10 Siegen"
+        ],
+        [
+         "Competitive",
+         "5v5",
+         "Einzelauswahl von Karten, auch außerhalb von Active Duty",
+         "18 Ränge je Karte, Silver I bis Global Elite",
+         "Kein Prime nötig"
+        ],
+        [
+         "Wingman",
+         "2v2",
+         "Kurze Matches, kleine Karten",
+         "Rangstufen wie bei Competitive",
+         "Kein Prime nötig"
+        ],
+        [
+         "FACEIT",
+         "5v5",
+         "Karten und Serverregion per Veto",
+         "0 bis 2000 Elo, Stufen 1 bis 10",
+         "Drittanbieterplattform mit eigenem Konto"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "FACEIT gehört nicht Valve. Die Plattform nutzt einen eigenen Anti-Cheat-Client auf Kernel-Ebene und getrennte kostenlose und kostenpflichtige Warteschlangen. Für Einsteiger: mit Wingman oder Competitive Regeln lernen, dann Premier, bei Interesse später FACEIT."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Probiere nicht alles gleichzeitig. Spiele 20 Matches in einem Modus und entscheide danach."
+      }
+     ]
+    },
+    {
+     "id": "silah-ekonomi",
+     "baslik": "Waffen und Wirtschaft: Grundlagen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Jede Runde beginnt mit einer Kaufphase. Geld erhältst du für Siege, Niederlagen und Abschüsse. Valve veröffentlicht die Beträge nicht selbst als Tabelle. Die Zahlen unten stammen aus übereinstimmenden Community-Quellen, Stand April 2026, und können sich ändern. Maßgeblich ist das Kaufmenü im Spiel."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Pistolenrunde:** Zu Beginn jeder Hälfte ist das Geld knapp; Pistolen und Granaten sind besonders wichtig.",
+        "**Eco:** Bewusst wenig kaufen, um Geld zu sparen.",
+        "**Gemeinsam kaufen:** Wenn Wirtschaft und Team es erlauben, kauft ihr zusammen starke Waffen. Teure Alleinkäufe schaden der Wirtschaft.",
+        "**Entschärfungskit:** Verkürzt für CT das Entschärfen von 10 auf 5 Sekunden."
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Waffentyp",
+        "Für wen",
+        "Hinweis"
+       ],
+       "satirlar": [
+        [
+         "Pistole",
+         "Alle",
+         "Günstig; frühe Runden"
+        ],
+        [
+         "Maschinenpistole",
+         "Eco und günstige Käufe",
+         "In Bewegung wirksam"
+        ],
+        [
+         "Gewehr",
+         "Hauptrunde mit voller Ausrüstung",
+         "Zentrale Waffe für Reichweite und Schaden"
+        ],
+        [
+         "Scharfschützengewehr",
+         "Erfahrene Spieler",
+         "Teuer; Positionskenntnis nötig"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Der dauerhaft wichtigste Lernschritt ist **gemeinsames Wirtschaften im Team**: In derselben Runde kaufen entweder alle oder alle sparen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Situation",
+        "Einnahmen"
+       ],
+       "satirlar": [
+        [
+         "Rundensieg",
+         "3250"
+        ],
+        [
+         "Sieg durch Explosion oder Entschärfen",
+         "3500"
+        ],
+        [
+         "Rundenniederlage (1. bis 5. in Folge)",
+         "1400 / 1900 / 2400 / 2900 / 3400"
+        ],
+        [
+         "Verlorene Pistolenrunde",
+         "1900"
+        ],
+        [
+         "Abschuss: Pistole, Gewehr, Maschinengewehr, P90, Granate",
+         "300"
+        ],
+        [
+         "Abschuss: AWP",
+         "100"
+        ],
+        [
+         "Abschuss: Maschinenpistole außer P90 und XM1014",
+         "600"
+        ],
+        [
+         "Abschuss: andere Schrotflinten",
+         "900"
+        ],
+        [
+         "Abschuss: Messer",
+         "1500"
+        ],
+        [
+         "Bombe legen (legender Spieler)",
+         "300"
+        ],
+        [
+         "T legen Bombe, verlieren aber durch Eliminierung (je Spieler)",
+         "800; 600 bei Entschärfung der Bombe"
+        ]
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Waffe",
+        "Preis"
+       ],
+       "satirlar": [
+        [
+         "Glock-18 und USP-S",
+         "200"
+        ],
+        [
+         "P250",
+         "300"
+        ],
+        [
+         "Desert Eagle",
+         "700"
+        ],
+        [
+         "MAC-10",
+         "950"
+        ],
+        [
+         "MP9",
+         "1150"
+        ],
+        [
+         "FAMAS",
+         "2050"
+        ],
+        [
+         "AK-47",
+         "2700"
+        ],
+        [
+         "M4A1-S",
+         "2900"
+        ],
+        [
+         "SG 553",
+         "3000"
+        ],
+        [
+         "M4A4",
+         "3100"
+        ],
+        [
+         "AUG",
+         "3300"
+        ],
+        [
+         "SSG 08",
+         "1700"
+        ],
+        [
+         "AWP",
+         "4750"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Auch Verlieren bringt Geld; die Niederlagenserie steigert den Betrag von 1400 auf 3400. Ist eine Runde verloren, sparst du durch Behalten der Waffe den nächsten Kauf. Die AWP kostet viel (4750) und belohnt Abschüsse wenig (100). Für Anfänger sind Gewehr, Rauch- und Blendgranate die bessere Investition."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Kaufe oder spare in derselben Runde wie dein Team. Ein teurer Einzelkauf schadet der gemeinsamen Wirtschaft."
+      }
+     ]
+    },
+    {
+     "id": "yardimci",
+     "baslik": "Granaten und Hilfsmittel",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "CS2-Runden entscheidet oft eine gute Granate statt perfektes Zielen. Preise stehen im Kaufmenü; hier die Funktionen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Gegenstand",
+        "Wirkung",
+        "Grundregel"
+       ],
+       "satirlar": [
+        [
+         "Rauchgranate",
+         "Blockiert vorübergehend die Sicht",
+         "Schließe gegnerische oder eigene Laufwege ab, statt vor die eigenen Füße zu werfen"
+        ],
+        [
+         "Blendgranate",
+         "Blendet Spieler, die hinschauen",
+         "Erst Team informieren, dann werfen"
+        ],
+        [
+         "HE-Granate",
+         "Flächenschaden",
+         "Schwächt Gegner hinter einer Ecke"
+        ],
+        [
+         "Molotow (T) / Brandgranate (CT)",
+         "Sperrt vorübergehend ein Gebiet; etwa 400 / 600 Credits",
+         "Gegner oder Bombenplatz freiräumen"
+        ],
+        [
+         "Entschärfungskit (nur CT)",
+         "Verkürzt Entschärfen von 10 auf 5 Sekunden; etwa 400 Credits",
+         "In Hauptrunden kaufen, auch wenn das nicht jede Runde geht"
+        ]
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Zuerst Rauchgranaten",
+         "metin": "Lerne einen Rauchwurf auf deiner Karte und wiederhole ihn vom selben Punkt."
+        },
+        {
+         "baslik": "Dann Blendgranaten",
+         "metin": "Kurz vor dem Umrunden einer Ecke geworfen sind sie besonders nützlich. Warne dein Team."
+        },
+        {
+         "baslik": "Danach Molotow",
+         "metin": "Übe, einen Bombenplatz und einen engen Weg mit Molotow zu sperren."
+        },
+        {
+         "baslik": "Auf der Karte wiederholen",
+         "metin": "Wiederhole jeden Wurf 10-mal auf Dust 2 oder Mirage: gleicher Punkt, gleiche Taste."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Es geht nicht um die Anzahl guter Würfe, sondern um einen Granatenplan zu Rundenbeginn. Erst informieren, dann werfen."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Einstellungen: Startwerte",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Dies sind verbreitete Ausgangswerte, keine offiziellen Vorgaben. Teste sie gegen Bots und passe sie bei Bedarf an."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Einstellung",
+        "Startempfehlung"
+       ],
+       "satirlar": [
+        [
+         "Maus-DPI",
+         "400-800"
+        ],
+        [
+         "Empfindlichkeit im Spiel",
+         "DPI mal Empfindlichkeit zunächst etwa 800–1200; nicht zu hoch wählen"
+        ],
+        [
+         "Fadenkreuz",
+         "Klein, hell, umrandet; ohne Lücke in der Mitte"
+        ],
+        [
+         "Auflösung",
+         "An die Grafikkarte anpassen; flüssiges Spielen ist wichtiger als Optik"
+        ],
+        [
+         "FPS",
+         "Stabile Bildrate oberhalb der Monitorfrequenz anstreben"
+        ],
+        [
+         "Ton",
+         "Kopfhörer tragen; Schritte liefern Informationen"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Spiele nach einer Änderung mehrere Matches mit demselben Wert. Ändere ihn nicht sofort wieder."
+      },
+      {
+       "tip": "p",
+       "metin": "Netzwerkregel: Wähle die nächste Serverregion und beende parallele Downloads. Bei hohem Ping können scheinbar treffende Schüsse verfehlen."
+      }
+     ]
+    },
+    {
+     "id": "baslatma-antrenman",
+     "baslik": "Startoptionen und Trainingsroutine",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Startoptionen sind Befehle beim Spielstart. Laut cs2configs lädt eine Datei namens `autoexec.cfg` Einstellungen bei jedem Start automatisch. Sie liegt unter Counter-Strike Global Offensive, dann game, csgo, cfg."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Optionen in Steam öffnen",
+         "metin": "In der Bibliothek Rechtsklick auf Counter-Strike 2, dann Eigenschaften > Allgemein > Startoptionen."
+        },
+        {
+         "baslik": "Optionen eingeben",
+         "metin": "Trage ein: -novid +exec autoexec.cfg"
+        },
+        {
+         "baslik": "cfg-Datei erstellen",
+         "metin": "Erstelle im genannten cfg-Ordner eine leere Textdatei autoexec.cfg. Eine Einstellung pro Zeile; zunächst nur fps_max testen."
+        },
+        {
+         "baslik": "Messen und vergleichen",
+         "metin": "Prüfe gegen Bots die Bildrate. Behalte den Wert, wenn sie stabil über der Monitorfrequenz liegt."
+        }
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Modus",
+        "Bedeutung"
+       ],
+       "satirlar": [
+        [
+         "-novid",
+         "Überspringt das Einführungsvideo"
+        ],
+        [
+         "+exec autoexec.cfg",
+         "Liest autoexec.cfg beim Start"
+        ],
+        [
+         "+fps_max Zahl",
+         "Begrenzt die Bildrate; Zahl nach Monitorfrequenz wählen"
+        ]
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Wann",
+        "Aufgabe",
+        "Dauer"
+       ],
+       "satirlar": [
+        [
+         "Täglich",
+         "Zieltraining gegen Bots, dann 2 Granatenwürfe auf 1 Karte",
+         "15 Minuten"
+        ],
+        [
+         "Nach jedem Match",
+         "Einen Fehler notieren und im nächsten Match nur diesen korrigieren",
+         "2 Minuten"
+        ],
+        [
+         "Einmal pro Woche",
+         "Eine eigene Runde ansehen: Wirtschaft und Todesposition prüfen",
+         "20 Minuten"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Prüfe fertige Konfigurationspakete, bevor du sie in autoexec kopierst. Unklare Zeilen auskommentieren, indem du // davor setzt, statt sie zu löschen."
+      }
+     ]
+    },
+    {
+     "id": "rank",
+     "baslik": "Rangsystem und Wertungstabelle",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Es gibt zwei Systeme. **Premier:** erstes **CS Rating** nach 10 Siegen, Farbbänder in Schritten von 5.000. **Competitive:** eigener Rang pro Karte, 18 Stufen von Silver I bis Global Elite, sichtbar nach Siegen auf der Karte."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "CS Rating",
+        "Farbe"
+       ],
+       "satirlar": [
+        [
+         "0 - 4,999",
+         "Grau"
+        ],
+        [
+         "5,000 - 9,999",
+         "Hellblau"
+        ],
+        [
+         "10,000 - 14,999",
+         "Blau"
+        ],
+        [
+         "15,000 - 19,999",
+         "Lila"
+        ],
+        [
+         "20,000 - 24,999",
+         "Rosa"
+        ],
+        [
+         "25,000 - 29,999",
+         "Rot"
+        ],
+        [
+         "30.000 und höher",
+         "Gold / Gelb"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Valve hat keine eigene CS-Rating-Farbtabelle veröffentlicht. Die Bereiche beruhen auf übereinstimmenden Community-Quellen.",
+        "Competitive und Wingman haben 18 Ränge von Silver I bis Global Elite. Der Rang wird für jede Karte separat geführt.",
+        "Premier ist saisongebunden; danach kann ein Reset folgen. Das Saisonende ist nicht bekannt."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Kurzfristige Schwankungen sind normal. Betrachte die letzten 20 Matches statt eines einzelnen. Nach mehreren Niederlagen Pause machen: Ärger verschlechtert Entscheidungen und damit die Wertung."
+      }
+     ]
+    },
+    {
+     "id": "hatalar",
+     "baslik": "Häufige Anfängerfehler",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Ohne Aufwärmen starten; fünf Minuten gegen Bots reichen.",
+        "Im Laufen schießen. Erst stehen bleiben, zielen, schießen.",
+        "Allein auf einen Bombenplatz stürmen.",
+        "Granaten ignorieren; Rauch und Blendung entscheiden viele Runden.",
+        "Teuer kaufen, ohne die Wirtschaft mit dem Team abzusprechen.",
+        "Nach einem schlechten Match wütend weiterspielen. Mache kurz Pause."
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Täglich 10 Minuten",
+         "metin": "Zieltraining gegen Bots oder auf dem Schießstand."
+        },
+        {
+         "baslik": "Nach jedem Match",
+         "metin": "Einen Fehler notieren und im nächsten Match gezielt korrigieren."
+        },
+        {
+         "baslik": "Jede Woche",
+         "metin": "Einen Granatenwurf, etwa Rauch, lernen und auf der Karte wiederholen."
+        },
+        {
+         "baslik": "Jeden Monat",
+         "metin": "Einstellungen prüfen, aber nicht zu viel ändern."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Kontosicherheit und Verhaltensregeln",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Dein Steam-Konto enthält auch deine kosmetischen Gegenstände. Aktiviere Zwei-Schritt-Verifizierung und lehne unbekannte Handelsangebote ab."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Cheats, Aimbots, Wallhacks, Skripte, Rang-Boosting, Kontohandel, Skin-Glücksspiel, Wettseiten, Raubkopien und falsche Gratis-Skin-Seiten können dauerhafte Sperren verursachen. Meide sie."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Gib deine Steam-Anmeldedaten nie auf inoffiziellen Seiten ein.",
+        "Absichtliches Verletzen von Teammitgliedern und wiederholtes Verlassen von Matches werden bestraft.",
+        "Respektiere Mitspieler; melde und stummschalte toxischen Chat.",
+        "Mit Zweitkonto gegen niedriger eingestufte Spieler anzutreten, also Smurfing, ist unfair. Unterlasse es."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Häufige Fragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Ist Counter-Strike 2 kostenlos?",
+         "c": "Ja, auf Steam kostenlos; gekauft werden Kosmetik oder Gegenstände."
+        },
+        {
+         "s": "Reicht mein PC?",
+         "c": "Mindestens Windows 10, Prozessor mit 4 Threads, 8 GB RAM, DX11-Grafikkarte und 85 GB freier Speicher."
+        },
+        {
+         "s": "Wann kann ich Premier spielen?",
+         "c": "Wenn etwa Prime-Status und Profilstufe 10 erfüllt sind; prüfe die Freischaltung im Spiel."
+        },
+        {
+         "s": "Wie erhalte ich die erste Wertung?",
+         "c": "Nach 10 Premier-Siegen."
+        },
+        {
+         "s": "Mit welcher Karte anfangen?",
+         "c": "Dust 2 und Mirage eignen sich besonders für Anfänger."
+        },
+        {
+         "s": "Kann ich am Handy spielen?",
+         "c": "Nein; dieser Leitfaden behandelt Windows-PC."
+        },
+        {
+         "s": "Warum Wingman und Rush testen?",
+         "c": "Weniger Spieler und kürzere Matches erlauben schnelleres Üben von Zielen, Bewegung und Kommunikation als 5v5."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "nl": {
+   "baslik": "Counter-Strike 2 voor beginners: installatie, modi, instellingen en rang",
+   "ozet": "Counter-Strike 2 is Valves gratis tactische 5v5-schietgame op Steam. Deze gids helpt nieuwe en terugkerende spelers van installatie tot hun eerste Premier-wedstrijd.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Tactische 5v5-schietgame (FPS)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Windows-pc (Steam)"
+    },
+    {
+     "ad": "Verdienmodel",
+     "deger": "Gratis spelen; optionele cosmetische aankopen en voorwerpen"
+    },
+    {
+     "ad": "Huidige versie",
+     "deger": "Premier-seizoen 5; update van 22 september 2026 (november 2026)"
+    },
+    {
+     "ad": "Turkse ondersteuning",
+     "deger": "Steam vermeldt Turks als interfacetaal; Valve noemt geen Turkse audio of ondertiteling"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "nedir",
+     "baslik": "Wat Counter-Strike 2 is en de stand in 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Twee teams van vijf nemen het tegen elkaar op. Terrorists proberen een bom te plaatsen, Counter-Terrorists (CT) voorkomen dat. Klassen en vaardigheden ontbreken: richten, informatie, granaten en samenwerking maken het verschil."
+      },
+      {
+       "tip": "p",
+       "metin": "In 2026 is **Premier** de competitieve kant. **Seizoen 5** begon op 8 juli 2026. Volgens Valve bestaat de Active Duty-pool uit Ancient, Anubis, Cache, Dust 2, Inferno, Mirage en Nuke. Cache verving Overpass. De einddatum is niet aangekondigd."
+      },
+      {
+       "tip": "p",
+       "metin": "De update van 22 september 2026 veranderde de kaartkeuze in Premier, voegde de 3v3-wachtrijmodus Rush toe en bracht clantags terug. Kaarten en modi veranderen; kijk in de game voor de precieze lijst."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "De cijfers gelden voor november 2026. Latere updates kunnen ze veranderen; bekijk Valves officiële updatepagina voor actuele informatie."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Voor je begint: Steam, systeem en account",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Downloaden via Steam is gratis. De winkel vermeldt als minimum: Windows 10, 4 hardwarethreads (Intel i5 750 of hoger), 8 GB RAM, DirectX 11-videokaart met 1 GB geheugen en Shader Model 5.0, plus **85 GB** vrije opslag. Maak vooraf ruimte; vooral de schijfruimte verrast beginners."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Maak zo nodig een Steam-account en activeer **Steam Guard**, de tweestapsverificatie.",
+        "Anti-cheat VAC draait met de game; apart installeren hoeft niet.",
+        "Volgens communitybronnen vraagt Premier Prime Status en CS2-profielniveau 10. Na 10 overwinningen krijg je de eerste rating. Valve heeft deze eisen niet zelf in een tabel gepubliceerd.",
+        "Competitive en Wingman vragen geen Prime; een gratis account kan meedoen."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Download- en gratis-skinlinks buiten Steam zijn gevaarlijk. Download alleen via de Steam-client."
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "Je eerste wedstrijden stap voor stap",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Installeren en instellingen controleren",
+         "metin": "Download via Steam en controleer bij de eerste start geluid, beeld en muis."
+        },
+        {
+         "baslik": "Botwedstrijd en de schietbaan",
+         "metin": "Probeer kaarten en wapens tegen bots. Zo leer je de regels veilig."
+        },
+        {
+         "baslik": "Korte modi zoals Wingman of Rush",
+         "metin": "Minder spelers en korte wedstrijden geven beginners snelle oefening."
+        },
+        {
+         "baslik": "Doorgaan naar Competitive",
+         "metin": "Elke kaart heeft een aparte rang, zichtbaar na de eerste overwinningen."
+        },
+        {
+         "baslik": "Voorbereiden op Premier",
+         "metin": "Na ontgrendeling krijg je na 10 overwinningen je eerste CS Rating."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Rondes zijn kort en vragen telkens nieuwe keuzes. Kijk na je dood mee en verzamel informatie voor de volgende ronde. In Competitive en Premier wint volgens communitybronnen het eerste team met 13 gewonnen rondes. Bronnen verschillen over verlengingen; controleer de wedstrijdinformatie in de game. Ontmantelen duurt 10 seconden zonder kit, 5 met kit."
+      },
+      {
+       "tip": "p",
+       "metin": "Beperk je eerste 10 wedstrijden tot overleven en informatie geven. Meld na je dood hoeveel vijanden je zag, hun wapens en looprichting; dat wint vaker rondes dan één kill. Blijf bij een teamgenoot in plaats van alleen vooruit te gaan. Zo kan de ander direct reageren als één van jullie sterft. Leer gebiedsnamen: oproepen als ‘mid’, ‘A long’ en ‘B entrance’ moeten kort en duidelijk zijn."
+      },
+      {
+       "tip": "p",
+       "metin": "Gebruik geluid: met een koptelefoon hoor je vijandelijke stappen. Rennen maakt lawaai, lopen met Shift niet, maar is langzamer. Ook plaatsen en ontmantelen zijn hoorbaar; plan je tijd. Spreek aan het begin van elke ronde af: ‘Ik ga B, rook van hier, flash van daar’. Zonder plan sterft een team vaak één voor één."
+      }
+     ]
+    },
+    {
+     "id": "modlar",
+     "baslik": "Modi en kaartenpool",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Premier en Competitive zijn 5v5 met plaatsen en ontmantelen. Wingman is 2v2, Rush de nieuwe 3v3-wachtrijmodus. De Active Duty-kaarten in november 2026:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Kaart",
+        "Opmerking"
+       ],
+       "satirlar": [
+        [
+         "Ancient",
+         "Junglethema; twee hoofdingangen"
+        ],
+        [
+         "Anubis",
+         "Egyptisch thema; waterkanaal en open gebieden"
+        ],
+        [
+         "Cache",
+         "Vervangt Overpass in de pool"
+        ],
+        [
+         "Dust 2",
+         "De klassieker; zeer leerzaam voor beginners"
+        ],
+        [
+         "Inferno",
+         "Italiaans dorp; smalle straten"
+        ],
+        [
+         "Mirage",
+         "Het midden is belangrijk; evenwichtig"
+        ],
+        [
+         "Nuke",
+         "Twee verdiepingen; bomlocaties boven elkaar"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Kies de eerste weken twee kaarten en blijf die spelen. Dust 2 en Mirage zijn geschikt."
+      }
+     ]
+    },
+    {
+     "id": "mod-farki",
+     "baslik": "Premier, Competitive, Wingman en FACEIT vergeleken",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "De vier lijken op elkaar, maar hebben andere regels. Deze vergelijking berust op communitybronnen; Valve heeft niet alle details zelf als tabel gepubliceerd."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Optie",
+        "Spelers",
+        "Kaartkeuze",
+        "Rangschikking",
+        "Vereiste"
+       ],
+       "satirlar": [
+        [
+         "Premier",
+         "5v5",
+         "Teams verbieden Active Duty-kaarten en spelen de overgebleven kaart",
+         "CS Rating (op Elo gebaseerd, 0 tot boven 30.000)",
+         "Prime en profielniveau 10; eerste rating na 10 zeges"
+        ],
+        [
+         "Competitive",
+         "5v5",
+         "Kaarten afzonderlijk kiezen, ook buiten Active Duty",
+         "18 rangen per kaart, Silver I tot Global Elite",
+         "Geen Prime nodig"
+        ],
+        [
+         "Wingman",
+         "2v2",
+         "Korte wedstrijden, kleine kaarten",
+         "Rangniveaus zoals Competitive",
+         "Geen Prime nodig"
+        ],
+        [
+         "FACEIT",
+         "5v5",
+         "Kaarten en serverregio via veto",
+         "0 tot 2000 Elo, niveaus 1 tot 10",
+         "Platform van derden, apart account"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "FACEIT is een platform van een ander bedrijf, niet van Valve. Het heeft eigen anti-cheat op kernelniveau en aparte gratis en betaalde wachtrijen. Leer als beginner eerst de regels in Wingman of Competitive, ga daarna naar Premier en probeer eventueel later FACEIT."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Probeer niet alles tegelijk. Speel 20 wedstrijden in één modus en beslis dan."
+      }
+     ]
+    },
+    {
+     "id": "silah-ekonomi",
+     "baslik": "Wapens en economie: de basis",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Elke ronde begint met een koopfase. Je krijgt geld voor gewonnen en verloren rondes en kills. Valve publiceert de bedragen niet zelf als tabel. Onderstaande cijfers komen uit overeenstemmende communitybronnen, stand april 2026, en kunnen veranderen. Het koopmenu in de game is leidend."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Pistoolronde:** Aan het begin van elke helft is geld beperkt; pistolen en granaten zijn belangrijk.",
+        "**Eco:** Bewust weinig kopen om geld te sparen.",
+        "**Samen kopen:** Als iedereen samen koopt en het geld het toelaat, heb je sterke wapens. Dure soloaankopen schaden de economie.",
+        "**Ontmantelkit:** Verkort voor CT het ontmantelen van 10 naar 5 seconden."
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Wapentype",
+        "Voor wie",
+        "Opmerking"
+       ],
+       "satirlar": [
+        [
+         "Pistool",
+         "Iedereen",
+         "Goedkoop; vroege rondes"
+        ],
+        [
+         "Machinepistool",
+         "Eco en goedkope aankopen",
+         "Effectief tijdens bewegen"
+        ],
+        [
+         "Geweer",
+         "Volledige koopronde",
+         "Basiswapen voor bereik en schade"
+        ],
+        [
+         "Sluipschuttersgeweer",
+         "Ervaren spelers",
+         "Duur; goede positie nodig"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "De belangrijkste blijvende les is **samen de teameconomie beheren**: in dezelfde ronde koopt iedereen of spaart iedereen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Situatie",
+        "Inkomen"
+       ],
+       "satirlar": [
+        [
+         "Ronde winnen",
+         "3250"
+        ],
+        [
+         "Winst door ontploffen of ontmantelen",
+         "3500"
+        ],
+        [
+         "Ronde verliezen (1e tot 5e op rij)",
+         "1400 / 1900 / 2400 / 2900 / 3400"
+        ],
+        [
+         "Pistoolronde verliezen",
+         "1900"
+        ],
+        [
+         "Kill: pistool, geweer, machinegeweer, P90, granaat",
+         "300"
+        ],
+        [
+         "Kill: AWP",
+         "100"
+        ],
+        [
+         "Kill: machinepistool behalve P90, en XM1014",
+         "600"
+        ],
+        [
+         "Kill: andere jachtgeweren",
+         "900"
+        ],
+        [
+         "Kill: mes",
+         "1500"
+        ],
+        [
+         "Bom plaatsen (plaatser)",
+         "300"
+        ],
+        [
+         "Ts plaatsen maar verliezen door uitschakeling (per speler)",
+         "800; 600 als de bom wordt ontmanteld"
+        ]
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Wapen",
+        "Prijs"
+       ],
+       "satirlar": [
+        [
+         "Glock-18 en USP-S",
+         "200"
+        ],
+        [
+         "P250",
+         "300"
+        ],
+        [
+         "Desert Eagle",
+         "700"
+        ],
+        [
+         "MAC-10",
+         "950"
+        ],
+        [
+         "MP9",
+         "1150"
+        ],
+        [
+         "FAMAS",
+         "2050"
+        ],
+        [
+         "AK-47",
+         "2700"
+        ],
+        [
+         "M4A1-S",
+         "2900"
+        ],
+        [
+         "SG 553",
+         "3000"
+        ],
+        [
+         "M4A4",
+         "3100"
+        ],
+        [
+         "AUG",
+         "3300"
+        ],
+        [
+         "SSG 08",
+         "1700"
+        ],
+        [
+         "AWP",
+         "4750"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Ook verliezen levert geld op; de verliesreeks verhoogt het bedrag van 1400 naar 3400. Is de ronde verloren, dan bespaart een bewaard wapen de volgende aankoop. De AWP is duur (4750) en de killbeloning laag (100). Voor beginners zijn een geweer, rook en flash een betere investering."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Koop of spaar tegelijk met je team. Eén dure soloaankoop verstoort de economie."
+      }
+     ]
+    },
+    {
+     "id": "yardimci",
+     "baslik": "Granaten en hulpmiddelen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Een goed gegooide granaat beslist in CS2 vaak meer dan richten. Prijzen staan in het koopmenu; hieronder de functies."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Voorwerp",
+        "Werking",
+        "Eerste regel"
+       ],
+       "satirlar": [
+        [
+         "Rookgranaat",
+         "Blokkeert tijdelijk het zicht",
+         "Sluit een vijandelijke of eigen route af; gooi niet voor je eigen voeten"
+        ],
+        [
+         "Flashbang",
+         "Verblindt wie ernaar kijkt",
+         "Waarschuw je teamgenoot vóór het gooien"
+        ],
+        [
+         "HE-granaat",
+         "Gebiedsschade",
+         "Verzwak een vijand achter een hoek"
+        ],
+        [
+         "Molotov (T) / brandgranaat (CT)",
+         "Maakt een gebied tijdelijk onbruikbaar; circa 400 / 600 credits",
+         "Verdrijf een vijand of maak een bomlocatie vrij"
+        ],
+        [
+         "Ontmantelkit (alleen CT)",
+         "Verkort ontmantelen van 10 naar 5 seconden; circa 400 credits",
+         "Koop in volledige kooprondes, ook als het niet elke ronde lukt"
+        ]
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Eerst rook",
+         "metin": "Leer één rookworp op je kaart en herhaal vanaf dezelfde plek."
+        },
+        {
+         "baslik": "Daarna flash",
+         "metin": "Een flash vlak vóór je een hoek omgaat helpt het meest; waarschuw je team."
+        },
+        {
+         "baslik": "Dan de molotov",
+         "metin": "Oefen het afsluiten van een bomlocatie en een smal pad met een molotov."
+        },
+        {
+         "baslik": "Herhalen op de kaart",
+         "metin": "Herhaal elke worp 10 keer op Dust 2 of Mirage: dezelfde plek en knop."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Het doel is een granatenplan bij elke ronde, niet het tellen van geslaagde worpen. Eerst overleggen, dan gooien."
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "Instellingen: startwaarden",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Dit zijn gangbare beginpunten, geen officiële waarden. Probeer ze tegen bots en pas ze aan als ze niet passen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Instelling",
+        "Startadvies"
+       ],
+       "satirlar": [
+        [
+         "Muis-DPI",
+         "400-800"
+        ],
+        [
+         "Gevoeligheid in de game",
+         "Begin met DPI maal gevoeligheid rond 800–1200; ga niet te hoog"
+        ],
+        [
+         "Vizier",
+         "Klein, helder, omlijnd; geen opening in het midden"
+        ],
+        [
+         "Resolutie",
+         "Afstemmen op je videokaart; soepelheid gaat vóór uiterlijk"
+        ],
+        [
+         "FPS",
+         "Streef naar een stabiele beeldsnelheid boven de vernieuwingsfrequentie van je scherm"
+        ],
+        [
+         "Geluid",
+         "Gebruik een koptelefoon; voetstappen geven informatie"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Speel na een wijziging een paar wedstrijden met dezelfde waarde. Verander niet meteen weer van gedachten."
+      },
+      {
+       "tip": "p",
+       "metin": "Ook je netwerk telt: kies de dichtstbijzijnde serverregio en sluit downloadprogramma’s tijdens spelen. Bij hoge ping kunnen schoten missen die raak lijken."
+      }
+     ]
+    },
+    {
+     "id": "baslatma-antrenman",
+     "baslik": "Startopties en trainingsroutine",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Startopties zijn kleine opdrachten bij het opstarten. Volgens cs2configs laadt `autoexec.cfg` je instellingen bij elke start. De map is Counter-Strike Global Offensive, daarna game, csgo, cfg."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Opties openen in Steam",
+         "metin": "Rechtsklik in je bibliotheek op Counter-Strike 2, daarna Eigenschappen > Algemeen > Startopties."
+        },
+        {
+         "baslik": "Opties invoeren",
+         "metin": "Typ: -novid +exec autoexec.cfg"
+        },
+        {
+         "baslik": "Het cfg-bestand maken",
+         "metin": "Maak in de genoemde cfg-map een leeg tekstbestand autoexec.cfg. Eén instelling per regel; probeer eerst alleen fps_max."
+        },
+        {
+         "baslik": "Meten en vergelijken",
+         "metin": "Controleer de beeldsnelheid tegen bots. Behoud de waarde als die stabiel boven de monitorfrequentie ligt."
+        }
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Optie",
+        "Betekenis"
+       ],
+       "satirlar": [
+        [
+         "-novid",
+         "Slaat de introductievideo over"
+        ],
+        [
+         "+exec autoexec.cfg",
+         "Leest autoexec.cfg bij opstarten"
+        ],
+        [
+         "+fps_max getal",
+         "Beeldsnelheidslimiet; kies op basis van de monitorfrequentie"
+        ]
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Wanneer",
+        "Taak",
+        "Tijd"
+       ],
+       "satirlar": [
+        [
+         "Elke dag",
+         "Richttraining tegen bots, dan 2 granatenworpen op 1 kaart",
+         "15 minuten"
+        ],
+        [
+         "Na elke wedstrijd",
+         "Eén fout noteren en alleen die verbeteren in de volgende wedstrijd",
+         "2 minuten"
+        ],
+        [
+         "Eens per week",
+         "Bekijk één eigen ronde; let op de koopkeuze en je sterfplek",
+         "20 minuten"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Lees wat een instellingenpakket doet vóór je het naar autoexec kopieert. Zet onbekende regels in commentaar met // ervoor in plaats van ze te verwijderen."
+      }
+     ]
+    },
+    {
+     "id": "rank",
+     "baslik": "Rangensysteem en ratingtabel",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Er zijn twee systemen. **Premier:** je eerste **CS Rating** na 10 zeges; kleurenbanden per 5.000 punten. **Competitive:** aparte rang per kaart, 18 niveaus van Silver I tot Global Elite, zichtbaar na overwinningen op die kaart."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "CS Rating",
+        "Kleur"
+       ],
+       "satirlar": [
+        [
+         "0 - 4,999",
+         "Grijs"
+        ],
+        [
+         "5,000 - 9,999",
+         "Lichtblauw"
+        ],
+        [
+         "10,000 - 14,999",
+         "Blauw"
+        ],
+        [
+         "15,000 - 19,999",
+         "Paars"
+        ],
+        [
+         "20,000 - 24,999",
+         "Roze"
+        ],
+        [
+         "25,000 - 29,999",
+         "Rood"
+        ],
+        [
+         "30.000 en hoger",
+         "Goud / geel"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Valve publiceert geen eigen kleurentabel voor CS Rating. De bereiken hierboven komen uit overeenstemmende communitybronnen.",
+        "Competitive en Wingman hebben 18 rangen van Silver I tot Global Elite. De rang wordt per kaart bijgehouden.",
+        "Premier is seizoensgebonden; daarna kan een reset volgen. De einddatum is niet aangekondigd."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Korte schommelingen zijn normaal. Kijk naar je laatste 20 wedstrijden in plaats van één. Neem na meerdere nederlagen pauze: boos spelen verslechtert beslissingen en verlaagt je rating verder."
+      }
+     ]
+    },
+    {
+     "id": "hatalar",
+     "baslik": "Veelgemaakte beginnersfouten",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Zonder opwarming starten; vijf minuten tegen bots is genoeg.",
+        "Schieten tijdens rennen. Stop, richt en schiet.",
+        "Alleen een bomlocatie binnenstormen.",
+        "Geen granaten gebruiken; rook en flashes winnen veel rondes.",
+        "Duur kopen zonder de teameconomie te bespreken.",
+        "Boos opnieuw zoeken na een slechte wedstrijd; neem kort pauze."
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Dagelijks 10 minuten",
+         "metin": "Richttraining tegen bots of op de schietbaan."
+        },
+        {
+         "baslik": "Na elke wedstrijd",
+         "metin": "Noteer één fout en verbeter alleen die in de volgende wedstrijd."
+        },
+        {
+         "baslik": "Elke week",
+         "metin": "Leer één granaatworp, bijvoorbeeld rook, en herhaal op de kaart."
+        },
+        {
+         "baslik": "Elke maand",
+         "metin": "Controleer instellingen, maar verander niet te veel."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Accountveiligheid en gedragsregels",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Je Steam-account bevat ook je cosmetische inventaris. Activeer tweestapsverificatie en weiger onbekende ruilaanbiedingen."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Cheats, aimbots, wallhacks, scripts, rangboosting, accounthandel, skin-gokken, wedwebsites, piraterij en nepwebsites met gratis skins kunnen tot een permanente ban leiden. Blijf ervan weg."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Vul je Steam-inloggegevens nooit in op onofficiële sites.",
+        "Opzettelijk teamgenoten verwonden of steeds wedstrijden verlaten leidt tot straffen.",
+        "Wees respectvol; meld en demp giftige chat.",
+        "Met een tweede account tegen lagere rangen spelen, smurfen, is oneerlijk. Doe het niet."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Veelgestelde vragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is Counter-Strike 2 gratis?",
+         "c": "Ja, gratis op Steam; aankopen zijn cosmetica of voorwerpen."
+        },
+        {
+         "s": "Is mijn pc goed genoeg?",
+         "c": "Minimaal Windows 10, een processor met 4 threads, 8 GB RAM, DX11-videokaart en 85 GB vrije opslag."
+        },
+        {
+         "s": "Wanneer kan ik Premier spelen?",
+         "c": "Als onder meer Prime Status en profielniveau 10 zijn bereikt; controleer de ontgrendeling in de game."
+        },
+        {
+         "s": "Hoe krijg ik mijn eerste rating?",
+         "c": "Na 10 overwinningen in Premier."
+        },
+        {
+         "s": "Met welke kaart beginnen?",
+         "c": "Dust 2 en Mirage zijn leerzaam voor beginners."
+        },
+        {
+         "s": "Kan ik op een telefoon spelen?",
+         "c": "Nee; deze gids gaat over Windows-pc."
+        },
+        {
+         "s": "Waarom Wingman en Rush proberen?",
+         "c": "Minder spelers en kortere wedstrijden laten je richten, bewegen en communiceren sneller oefenen dan in 5v5."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "zh": {
+   "baslik": "Counter-Strike 2 新手指南：安装、模式、设置与段位",
+   "ozet": "Counter-Strike 2 是 Valve 在 Steam 提供的免费5v5战术射击游戏。本指南帮助新手和回归玩家，从安装走到首场 Premier 比赛。",
+   "kunye": [
+    {
+     "ad": "类型",
+     "deger": "5v5战术第一人称射击（FPS）"
+    },
+    {
+     "ad": "平台",
+     "deger": "Windows PC（Steam）"
+    },
+    {
+     "ad": "收费模式",
+     "deger": "免费游玩；外观及道具购买为可选消费"
+    },
+    {
+     "ad": "当前版本",
+     "deger": "Premier 第5赛季；2026年9月22日更新（2026年11月）"
+    },
+    {
+     "ad": "土耳其语支持",
+     "deger": "Steam 语言表列有土耳其语界面，Valve 未列土耳其语配音或字幕"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "nedir",
+     "baslik": "Counter-Strike 2 是什么，2026年现状如何",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "两队各五人对抗：Terrorists 尝试安放炸弹，Counter-Terrorists（CT）阻止对手。没有职业或技能系统，胜负依赖瞄准、情报、投掷物与团队协作。"
+      },
+      {
+       "tip": "p",
+       "metin": "2026年的竞技核心是 **Premier**，**第5赛季**于2026年7月8日开始。Valve 公告列出的 Active Duty 地图有 Ancient、Anubis、Cache、Dust 2、Inferno、Mirage 和 Nuke；Cache 替代 Overpass。赛季结束日期尚未公布。"
+      },
+      {
+       "tip": "p",
+       "metin": "2026年9月22日更新调整 Premier 选图方式，加入可排队的3v3模式 Rush，并恢复战队标签。地图和模式会变，请以游戏内列表为准。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "本指南数值截至2026年11月，后续更新可能改变。最新说明见 Valve 官方更新页面。"
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "开始前：Steam、配置与账号",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "通过 Steam 免费下载。商店最低要求为 Windows 10、4个硬件线程（Intel i5 750或更高）、8 GB RAM、支持 DirectX 11及 Shader Model 5.0的1 GB显卡，以及 **85 GB** 可用空间。新手常低估硬盘占用，请提前腾出空间。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "没有 Steam 账号就先注册，并开启 **Steam Guard** 两步验证。",
+        "反作弊系统 VAC 随游戏运行，无需另行安装。",
+        "社区来源称 Premier 需要 Prime Status 与 CS2 账号等级10，赢10场后取得初始评分。Valve 未在自家页面以表格公布这些要求。",
+        "Competitive 与 Wingman 不需要 Prime，免费账号也能玩。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Steam 以外的游戏下载或免费皮肤链接存在危险。只通过 Steam 客户端下载。"
+      }
+     ]
+    },
+    {
+     "id": "ilk-maclar",
+     "baslik": "首批比赛的行动步骤",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "安装并检查设置",
+         "metin": "从 Steam 下载，首次启动时检查声音、画面与鼠标设置。"
+        },
+        {
+         "baslik": "机器人对局与靶场",
+         "metin": "对机器人熟悉地图和武器，是安全学习规则的方式。"
+        },
+        {
+         "baslik": "Wingman 或 Rush 等短模式",
+         "metin": "人数较少、对局较短，适合新手快速练习。"
+        },
+        {
+         "baslik": "转入 Competitive",
+         "metin": "每张地图单独计算段位，取得最初几场胜利后显示。"
+        },
+        {
+         "baslik": "准备 Premier",
+         "metin": "解锁后赢10场，即可获得初始 CS Rating。"
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "回合短，每轮都需重新决策。死亡后观战收集情报，是帮助下一轮的好习惯。社区来源称 Competitive 和 Premier 先赢13轮的一方获胜；不同来源的加时规则说法有差异，请查看游戏内比赛信息。拆弹无工具包需10秒，有工具包需5秒。"
+      },
+      {
+       "tip": "p",
+       "metin": "最初10场只专注存活与报点。死亡后告诉队友看到多少敌人、带什么武器、往哪走，这类信息往往比一次击杀更有用。不要单独开路，靠近队友以便一人倒下后另一人立刻补枪。学习地图区域名称，“mid”“A long”“B entrance”等报点应简短且大家都懂。"
+      },
+      {
+       "tip": "p",
+       "metin": "善用声音：耳机中的脚步能指示敌人位置。跑步有声，按 Shift 步行无声但较慢。下包和拆包也会发声，要规划时间。每轮开始先定计划：“我去 B，这里封烟，那里闪光。”毫无计划常让队员逐个送掉。"
+      }
+     ]
+    },
+    {
+     "id": "modlar",
+     "baslik": "模式与地图池",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Premier 和 Competitive 为5v5下包拆包；Wingman 为2v2，Rush 是新增的3v3排队模式。2026年11月 Active Duty 地图如下："
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "地图",
+        "说明"
+       ],
+       "satirlar": [
+        [
+         "Ancient",
+         "丛林主题；两条主要进入路线"
+        ],
+        [
+         "Anubis",
+         "埃及主题；运河与开阔区域"
+        ],
+        [
+         "Cache",
+         "替代 Overpass 进入地图池"
+        ],
+        [
+         "Dust 2",
+         "经典地图，尤其适合新手学习"
+        ],
+        [
+         "Inferno",
+         "意大利村庄；狭窄街道"
+        ],
+        [
+         "Mirage",
+         "中路重要；较为均衡"
+        ],
+        [
+         "Nuke",
+         "双层布局；上下叠放的包点"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "前几周固定练两张地图即可，Dust 2 与 Mirage 很合适。"
+      }
+     ]
+    },
+    {
+     "id": "mod-farki",
+     "baslik": "Premier、Competitive、Wingman 与 FACEIT 对比",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "四者看似相近，规则却不同。下表基于社区来源，Valve 未亲自以表格公布全部细节。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "选项",
+        "玩家数",
+        "选图方式",
+        "排名系统",
+        "要求"
+       ],
+       "satirlar": [
+        [
+         "Premier",
+         "5v5",
+         "双方禁用 Active Duty 地图，游玩剩余一张",
+         "CS Rating（基于 Elo，0至30,000以上）",
+         "Prime 与账号等级10；赢10场后获得初始评分"
+        ],
+        [
+         "Competitive",
+         "5v5",
+         "逐张选择地图，也有 Active Duty 以外的地图",
+         "每张地图18个段位，从 Silver I 到 Global Elite",
+         "无需 Prime"
+        ],
+        [
+         "Wingman",
+         "2v2",
+         "短对局、小地图",
+         "类似 Competitive 的分级段位",
+         "无需 Prime"
+        ],
+        [
+         "FACEIT",
+         "5v5",
+         "通过否决选择地图及服务器区域",
+         "0至2000 Elo，等级1至10",
+         "第三方平台，需单独账号"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "FACEIT 属于第三方公司，并非 Valve。它有自有的内核级反作弊客户端，提供独立的免费与付费队列。新手宜先用 Wingman 或 Competitive 熟悉规则，再进 Premier，有兴趣以后再试 FACEIT。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "不要同时尝试全部模式。先在同一模式玩20场，再作决定。"
+      }
+     ]
+    },
+    {
+     "id": "silah-ekonomi",
+     "baslik": "武器与经济基础",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "每轮都有购买阶段，胜负和击杀都会带来收入。Valve 未在自家页面公布金额表。下列数值来自相互一致的社区资料，时间为2026年4月，可能随更新改变；游戏内购买菜单为准。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**手枪局：**每半场首轮资金有限，手枪与投掷物很重要。",
+        "**Eco：**故意少买，保存资金。",
+        "**团队起枪：**经济允许时全队一起购买强力武器；独自昂贵采购会破坏经济。",
+        "**拆弹工具包：**CT 拆弹时间从10秒缩短到5秒。"
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "武器类型",
+        "适用对象",
+        "说明"
+       ],
+       "satirlar": [
+        [
+         "手枪",
+         "所有人",
+         "便宜；用于初期回合"
+        ],
+        [
+         "冲锋枪",
+         "Eco 与低价采购",
+         "移动时有效"
+        ],
+        [
+         "步枪",
+         "主力起枪局",
+         "兼顾射程和伤害的核心武器"
+        ],
+        [
+         "狙击枪",
+         "有经验的玩家",
+         "昂贵；必须熟悉站位"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "新手最持久的收获是**与团队共同管理经济**：同一回合要么全队购买，要么一起等待。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "情况",
+        "收入"
+       ],
+       "satirlar": [
+        [
+         "回合获胜",
+         "3250"
+        ],
+        [
+         "通过炸弹爆炸或拆除获胜",
+         "3500"
+        ],
+        [
+         "连续输局（第1至第5轮）",
+         "1400 / 1900 / 2400 / 2900 / 3400"
+        ],
+        [
+         "手枪局失利",
+         "1900"
+        ],
+        [
+         "击杀：手枪、步枪、机枪、P90、手雷",
+         "300"
+        ],
+        [
+         "击杀：AWP",
+         "100"
+        ],
+        [
+         "击杀：P90以外的冲锋枪及 XM1014",
+         "600"
+        ],
+        [
+         "击杀：其他霰弹枪",
+         "900"
+        ],
+        [
+         "击杀：刀",
+         "1500"
+        ],
+        [
+         "安放炸弹（下包者）",
+         "300"
+        ],
+        [
+         "T 下包后因被全歼而输局（每位玩家）",
+         "800；炸弹被拆除时为600"
+        ]
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "武器",
+        "价格"
+       ],
+       "satirlar": [
+        [
+         "Glock-18 与 USP-S",
+         "200"
+        ],
+        [
+         "P250",
+         "300"
+        ],
+        [
+         "Desert Eagle",
+         "700"
+        ],
+        [
+         "MAC-10",
+         "950"
+        ],
+        [
+         "MP9",
+         "1150"
+        ],
+        [
+         "FAMAS",
+         "2050"
+        ],
+        [
+         "AK-47",
+         "2700"
+        ],
+        [
+         "M4A1-S",
+         "2900"
+        ],
+        [
+         "SG 553",
+         "3000"
+        ],
+        [
+         "M4A4",
+         "3100"
+        ],
+        [
+         "AUG",
+         "3300"
+        ],
+        [
+         "SSG 08",
+         "1700"
+        ],
+        [
+         "AWP",
+         "4750"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "输局也有钱，连败补偿从1400增加到3400。已知无法获胜时保住武器，可免去下轮购枪开支。AWP 昂贵（4750），击杀奖励却低（100）；新手投资步枪、烟雾与闪光更划算。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "与团队同轮购买或等待，一人独自昂贵采购会破坏经济。"
+      }
+     ]
+    },
+    {
+     "id": "yardimci",
+     "baslik": "投掷物与辅助装备",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "CS2 的回合常由好投掷而非枪法决定。价格看游戏菜单，这里说明各项用途。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "物品",
+        "效果",
+        "首要原则"
+       ],
+       "satirlar": [
+        [
+         "烟雾弹",
+         "暂时遮挡视野",
+         "封住敌方或己方要通过的路线，不要扔在自己脚下"
+        ],
+        [
+         "闪光弹",
+         "致盲看向它的玩家",
+         "先提醒队友再投掷"
+        ],
+        [
+         "高爆手雷",
+         "范围伤害",
+         "削弱在拐角等待的敌人"
+        ],
+        [
+         "燃烧瓶（T）/燃烧弹（CT）",
+         "暂时封锁区域；约400 / 600点资金",
+         "清走敌人或清理包点"
+        ],
+        [
+         "拆弹工具包（仅 CT）",
+         "拆弹从10秒降至5秒；约400点资金",
+         "即使无法每轮购买，也要在主力起枪局准备"
+        ]
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "先练烟雾",
+         "metin": "在固定地图学习一条烟雾投掷线路，从同一点反复练习。"
+        },
+        {
+         "baslik": "再练闪光",
+         "metin": "转角前一步投出的闪光最实用，记得提醒队友。"
+        },
+        {
+         "baslik": "再练燃烧瓶",
+         "metin": "尝试用燃烧瓶封锁一个包点和一条窄路。"
+        },
+        {
+         "baslik": "在地图上重复",
+         "metin": "在 Dust 2 或 Mirage 将每次投掷重复10遍，位置和按键保持一致。"
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "目标不是统计好投掷次数，而是每轮开始都有投掷计划。先告诉队友，再扔。"
+      }
+     ]
+    },
+    {
+     "id": "ayarlar",
+     "baslik": "设置：建议起点",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "这些不是官方数值，而是常见入门建议。先在机器人对局测试，不合适再改。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "设置",
+        "入门建议"
+       ],
+       "satirlar": [
+        [
+         "鼠标 DPI",
+         "400-800"
+        ],
+        [
+         "游戏内灵敏度",
+         "先让 DPI 与灵敏度乘积约为800–1200，不要过高"
+        ],
+        [
+         "准星",
+         "小、明亮、有描边；中心不留空隙"
+        ],
+        [
+         "分辨率",
+         "匹配显卡；流畅比画质重要"
+        ],
+        [
+         "FPS",
+         "目标是稳定高于屏幕刷新率的帧率"
+        ],
+        [
+         "音频",
+         "戴耳机，脚步声提供情报"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "每次改设置后，用同一数值玩几场，不要立刻反悔。"
+      },
+      {
+       "tip": "p",
+       "metin": "网络也有原则：选最近的服务器区域，游玩时关闭下载程序。延迟高时，看似命中的枪也可能落空。"
+      }
+     ]
+    },
+    {
+     "id": "baslatma-antrenman",
+     "baslik": "启动选项与训练流程",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "启动选项是在游戏开始时执行的小命令。据 cs2configs，`autoexec.cfg` 可让设置每次启动自动加载。文件路径为 Counter-Strike Global Offensive 文件夹下的 game、csgo、cfg。"
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "打开 Steam 选项",
+         "metin": "在库中右键 Counter-Strike 2，选择属性 > 通用 > 启动选项。"
+        },
+        {
+         "baslik": "填写选项",
+         "metin": "输入：-novid +exec autoexec.cfg"
+        },
+        {
+         "baslik": "创建 cfg 文件",
+         "metin": "在上述 cfg 目录创建空白文本文件 autoexec.cfg。每行一个设置，先只试 fps_max。"
+        },
+        {
+         "baslik": "测量对比",
+         "metin": "在机器人对局查看帧率，若稳定且高于屏幕刷新率则保留。"
+        }
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "选项",
+        "含义"
+       ],
+       "satirlar": [
+        [
+         "-novid",
+         "跳过开场视频"
+        ],
+        [
+         "+exec autoexec.cfg",
+         "启动时读取 autoexec.cfg"
+        ],
+        [
+         "+fps_max 数值",
+         "帧率上限；按屏幕刷新率选择数字"
+        ]
+       ]
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "何时",
+        "做什么",
+        "用时"
+       ],
+       "satirlar": [
+        [
+         "每天",
+         "机器人局热身瞄准，再在1张地图练2种投掷",
+         "15分钟"
+        ],
+        [
+         "每场之后",
+         "记一个错误，下场只纠正这一项",
+         "2分钟"
+        ],
+        [
+         "每周一次",
+         "看自己的一轮录像，检查经济决策及死亡位置",
+         "20分钟"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "将配置包复制进 autoexec 前先理解其作用。不懂的行先在前面加 // 注释，不要直接删除。"
+      }
+     ]
+    },
+    {
+     "id": "rank",
+     "baslik": "排位系统与评分表",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "有两种系统。**Premier：**赢10场取得初始 **CS Rating**，每5,000分划一颜色区间。**Competitive：**每张地图单独段位，共18级，从 Silver I 到 Global Elite，在该地图获胜后显示。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "CS Rating",
+        "颜色"
+       ],
+       "satirlar": [
+        [
+         "0 - 4,999",
+         "灰色"
+        ],
+        [
+         "5,000 - 9,999",
+         "浅蓝色"
+        ],
+        [
+         "10,000 - 14,999",
+         "蓝色"
+        ],
+        [
+         "15,000 - 19,999",
+         "紫色"
+        ],
+        [
+         "20,000 - 24,999",
+         "粉色"
+        ],
+        [
+         "25,000 - 29,999",
+         "红色"
+        ],
+        [
+         "30,000及以上",
+         "金色 / 黄色"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Valve 未在自家页面公布 CS Rating 颜色表，上述区间来自相互一致的社区来源。",
+        "Competitive 和 Wingman 有18个段位，从 Silver I 到 Global Elite，每张地图分别记录段位。",
+        "Premier 按赛季运行，赛末可能重置。赛季结束日期尚未公布。"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "短期评分涨跌很正常，应看最近20场的趋势而非一局。连败后先休息，愤怒会破坏回合决策，让评分进一步下滑。"
+      }
+     ]
+    },
+    {
+     "id": "hatalar",
+     "baslik": "新手常见错误",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "不热身就开赛；机器人局练五分钟即可。",
+        "跑动中开枪；先停下、瞄准，再开枪。",
+        "独自冲进包点。",
+        "不用投掷物；烟雾和闪光能赢下很多回合。",
+        "不和队友商量经济就买昂贵装备。",
+        "输一场后生气继续排队；先短暂休息。"
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "每天10分钟",
+         "metin": "在机器人对局或靶场热身瞄准。"
+        },
+        {
+         "baslik": "每场之后",
+         "metin": "记一个错误，下场只改这一项。"
+        },
+        {
+         "baslik": "每周",
+         "metin": "学一种投掷，例如烟雾，在地图反复练习。"
+        },
+        {
+         "baslik": "每月",
+         "metin": "检查设置，但不要大改。"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "账号安全与行为规则",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Steam 账号也保存外观库存。开启两步验证，拒绝不认识的交易提议。"
+      },
+      {
+       "tip": "uyari",
+       "metin": "作弊软件、自瞄、透视、脚本、代练、账号买卖、皮肤赌博、博彩网站、盗版及假冒免费皮肤网站，都可能造成永久封禁。请远离。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "绝不在非官方网站填写 Steam 登录信息。",
+        "故意伤害队友或反复退赛会受惩罚。",
+        "尊重队友，举报并屏蔽恶意聊天。",
+        "用小号打低段位玩家，即 smurfing，并不公平，请不要这样做。"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "常见问题",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Counter-Strike 2 免费吗？",
+         "c": "是的，Steam 上免费；购买内容为外观或道具。"
+        },
+        {
+         "s": "我的 PC 配置够吗？",
+         "c": "至少需要 Windows 10、4线程处理器、8 GB RAM、DX11 显卡及85 GB可用空间。"
+        },
+        {
+         "s": "何时能进 Premier？",
+         "c": "满足 Prime Status、账号等级10等条件后，查看游戏内解锁状态。"
+        },
+        {
+         "s": "怎样取得初始评分？",
+         "c": "在 Premier 赢10场。"
+        },
+        {
+         "s": "先玩哪张地图？",
+         "c": "Dust 2 与 Mirage 很适合新手学习。"
+        },
+        {
+         "s": "能在手机上玩吗？",
+         "c": "不能，本指南针对 Windows PC。"
+        },
+        {
+         "s": "为什么值得试 Wingman 和 Rush？",
+         "c": "两者人数更少、对局更短，相较5v5能更快练习瞄准、移动与交流习惯。"
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  }
 }

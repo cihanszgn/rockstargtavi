@@ -2328,6 +2328,1725 @@
      ]
     }
    ]
+  },
+  "de": {
+   "baslik": "Minecraft-Einsteigerleitfaden: Java und Bedrock (2026)",
+   "ozet": "Für neue Spieler: Editionswahl, erste Nacht, Fortschrittsweg und Sicherheit. Aktuell: Java 26.3 und Bedrock 26.50 (Wilderness Bound).",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Survival- und Bau-Sandbox"
+    },
+    {
+     "ad": "Plattform",
+     "deger": "PC (Java und Bedrock), Xbox, PlayStation, Nintendo Switch, Android, iOS"
+    },
+    {
+     "ad": "Preismodell",
+     "deger": "Einmaliger Kauf; Minecoins und Marketplace-Inhalte sind optional"
+    },
+    {
+     "ad": "Aktuelle Version",
+     "deger": "Java 26.3 / Bedrock 26.50, Wilderness Bound (15. September 2026)"
+    },
+    {
+     "ad": "Türkisch-Unterstützung",
+     "deger": "Ja, in den Spracheinstellungen des Spiels wählbar"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "Minecraft im Jahr 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "In Minecraft sammelst du Ressourcen und baust in einer endlosen Würfelwelt. Es gibt kein vorgeschriebenes Ziel: Besiege den Ender Dragon oder baue ein gemütliches Haus mit Bauernhof. Diese Freiheit kann anfangs verwirren; dieser Leitfaden gibt dir eine verlässliche Reihenfolge."
+      },
+      {
+       "tip": "p",
+       "metin": "Seit 2026 richten sich Versionsnummern nach dem Jahr, etwa **26.3**. Das große Update **Wilderness Bound** erschien am 15. September 2026 als Java 26.3 und Bedrock 26.50. Es brachte das gesprenkelte Waldbiom, Pappelholz, Woll- und Betontreppen und -stufen, Kissen, Strohbetten und verlassene Lager sowie verbesserte Karten. Version 26.4 wird derzeit als Snapshot getestet."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Die Versionsnummer steht im Hauptmenü. Nennt ein Leitfaden oder Mod noch Nummern wie 1.21, können die Angaben veraltet sein. Vor der Installation prüfen."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Vor dem Start: Java oder Bedrock?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Unter Windows verkauft der offizielle Shop Java und Bedrock meist zusammen; einmal bezahlen, beide installieren. Auf Konsolen und Handys gibt es nur Bedrock. Die Unterschiede:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "",
+        "Java Edition",
+        "Bedrock Edition"
+       ],
+       "satirlar": [
+        [
+         "Plattform",
+         "Windows, macOS, Linux",
+         "Windows, Xbox, PlayStation, Switch, Android, iOS"
+        ],
+        [
+         "Mod-Unterstützung",
+         "Riesige Auswahl an Mods und Shadern",
+         "Begrenzt; Marketplace-Inhalte und Add-on-Pakete"
+        ],
+        [
+         "Mit Freunden spielen",
+         "Java-Server und selbst gehostete Server",
+         "Crossplay zwischen Bedrock-Geräten, Realms"
+        ],
+        [
+         "Geeignet für",
+         "PC-Spieler mit Interesse an Mods und eigenen Servern",
+         "Freundesgruppen mit Handys, Konsolen oder gemischten Geräten"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Kurzempfehlung:** Spielen deine Freunde auf Handy oder Konsole, wähle Bedrock. Für PC-Mods wähle Java. Normalerweise können Java und Bedrock nicht denselben Server nutzen. Einigt euch vorher auf eine Edition."
+      },
+      {
+       "tip": "p",
+       "metin": "**Preis (USD-Liste auf minecraft.wiki):** Bedrock kostet auf Mobilgeräten 6,99 Dollar, auf Xbox und PlayStation 19,99 und auf Windows und Switch 29,99. Den lokalen Preis im Shop prüfen. **Java-Systemanforderungen:** Windows 10 64-Bit oder neuer, mindestens vier Prozessorkerne (etwa Core i3-10100 oder Ryzen 3 3100) und Vulkan-1.3-Grafikkarte mit mindestens 2 GB Speicher (etwa GTX 950 oder RX 460). Für komfortables Spielen werden Core i5-12400 und RTX 2060 oder vergleichbare Komponenten empfohlen. Mods erhöhen die Anforderungen."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Kaufe nur auf der offiziellen Minecraft-Website, im Microsoft Store oder im Konsolenshop. Gecrackte Launcher sind illegal und gefährden Konto und Computer."
+      }
+     ]
+    },
+    {
+     "id": "ilk-gece",
+     "baslik": "Die erste Nacht: die ersten 15 Minuten Schritt für Schritt",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Du startest bei Tageslicht. Ein kompletter Tag-Nacht-Zyklus dauert etwa 20 echte Minuten. Nachts erscheinen feindliche Kreaturen wie Zombies, Skelette, Spinnen und Creeper. Baue vor Einbruch der Dunkelheit einen einfachen Unterschlupf."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Holz sammeln",
+         "metin": "Schlage gegen einen Baum, sammle mindestens 10–12 Stämme und verarbeite sie zu Brettern."
+        },
+        {
+         "baslik": "Werkbank bauen",
+         "metin": "Baue aus 4 Brettern eine Werkbank und dort Holzspitzhacke, Axt und Schwert."
+        },
+        {
+         "baslik": "Stein und Kohle finden",
+         "metin": "Baue Bruchstein mit der Holzspitzhacke ab; nimm mindestens 8 Stück für Steinspitzhacke und Ofen. Kohle dient als Brennstoff und für Fackeln."
+        },
+        {
+         "baslik": "Nahrung finden",
+         "metin": "Jage Kühe, Schweine oder Hühner und gare rohes Fleisch im Ofen. Mit Schafwolle lassen sich aus 3 Wolle und 3 Brettern ein Bett bauen."
+        },
+        {
+         "baslik": "Unterschlupf bauen",
+         "metin": "Grabe bei Einbruch des Abends einen kleinen Raum in einen Hügel und verschließe den Eingang mit Blöcken. Stelle Fackeln hinein; an beleuchteten Stellen erscheinen keine Kreaturen."
+        },
+        {
+         "baslik": "Die Nacht überstehen",
+         "metin": "Schlafe im Bett, um die Nacht zu überspringen; dein Wiederbelebungspunkt wird dorthin verlegt. Ohne Bett kannst du unterirdisch graben: Mit Fackeln spielt der Tageswechsel dort keine Rolle."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Eine Fackel besteht aus einem Stock und einem Stück Kohle. Trage immer 20–30 Fackeln mit dir: Unter Tage helfen sie bei der Orientierung und verhindern das Erscheinen von Kreaturen."
+      }
+     ]
+    },
+    {
+     "id": "ilk-hafta",
+     "baslik": "Deine Aufgaben in der ersten Woche",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Baue ein dauerhaftes Zuhause mit Truhen und einem kleinen Weizen- oder Karottenfeld.",
+        "Suche Eisen: In Höhlen und Berghängen erkennst du helle Einschlüsse im Gestein. Schmelze Barren und fertige Eisenspitzhacke, Schwert und Rüstung.",
+        "Baue einen Eimer aus 3 Eisenbarren. Er transportiert Wasser und entschärft Lavagefahren; das kann dein Leben retten.",
+        "Baue einen Schild; er verringert Creeper-Explosions- und Pfeilschaden.",
+        "Notiere die Koordinaten deines Hauses und wichtiger Orte, damit du dich in Höhlen nicht verirrst."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Diamanten liegen besonders häufig tief unter Tage bei Y -58. Koordinaten stehen im F3-Bildschirm oder in einer Spieleinstellung. Nimm Eisenspitzhacke und Wassereimer mit."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Grabe niemals senkrecht unter deinen Füßen. Darunter könnten Lava oder Höhlen liegen. Grabe treppenförmig schräg abwärts und halte den Rückweg offen."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme-yolu",
+     "baslik": "Fortschrittsweg: ein Ziel nach dem anderen",
+     "bloklar": [
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Stufe",
+        "Ziel",
+        "Hinweis"
+       ],
+       "satirlar": [
+        [
+         "1. Überleben",
+         "Haus, Nahrung, Eisenwerkzeuge",
+         "Erste 2–3 Spieltage"
+        ],
+        [
+         "2. Verzaubern",
+         "Diamantspitzhacke, Obsidian, Zaubertisch",
+         "Obsidian lässt sich nur mit einer Diamantspitzhacke abbauen"
+        ],
+        [
+         "3. Nether",
+         "Netherportal, Festung und Lohenruten",
+         "Mit Rüstung und reichlich Nahrung aufbrechen"
+        ],
+        [
+         "4. Vorbereitung auf das End",
+         "Enderperlen und Enderaugen",
+         "Enderperle mit Lohenstaub kombinieren"
+        ],
+        [
+         "5. Der Drache",
+         "Festung finden, Endportal öffnen, Ender Dragon",
+         "Pfeile, Schwert und Blöcke mitnehmen"
+        ],
+        [
+         "6. Endspiel",
+         "Endsiedlungen, Elytra, eigenes Großbauprojekt",
+         "Das Ziel bestimmst du selbst"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Ein Netherportal braucht mindestens 10 Obsidianblöcke, die du mit Wassereimer und Lava herstellen kannst. Den Drachen zu besiegen ist freiwillig, aber der Nether macht dich stärker. Für Einsteiger ist der Zaubertisch das erste große Ziel."
+      }
+     ]
+    },
+    {
+     "id": "kaynak-yonetimi",
+     "baslik": "Ressourcen und Lagerung",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Nahrung:** Baue Weizen, Karotten und Kartoffeln an; halte Kühe, Schafe und Hühner. Mit passendem Futter lassen sich Tiere vermehren.",
+        "**Truhen:** Lagere Erze, Nahrung, Baublöcke und Ausrüstung getrennt und beschrifte die Truhen mit Schildern.",
+        "**Erfahrung (XP):** Abbau, Schmelzen und das Besiegen von Kreaturen bringen XP für Verzauberungen und Reparaturen.",
+        "**Sicherungen:** Kopiere wichtige Welten regelmäßig und immer vor einem Versionswechsel."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Die Regel ist einfach: Findest du Dinge am benötigten Ort nicht, ist dein Lager unordentlich. Ein aufgeräumtes Lager kann dein Tempo leicht verdoppeln."
+      }
+     ]
+    },
+    {
+     "id": "alet-ve-maden",
+     "baslik": "Werkzeuge, Rüstung und Erzschichten",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Minecrafts Materialstufen bauen aufeinander auf: Steinspitzhacke für Eisen, Eisenspitzhacke für Diamanten und Diamantspitzhacke für Obsidian. Die Tabelle zeigt diese Reihenfolge samt Spitzhackenhaltbarkeit."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Material",
+        "Spitzhackenhaltbarkeit",
+        "Rüstungspunkte des kompletten Satzes",
+        "Wann?"
+       ],
+       "satirlar": [
+        [
+         "Holz",
+         "59",
+         "Keine",
+         "Nur in den ersten Minuten"
+        ],
+        [
+         "Stein",
+         "131",
+         "Keine",
+         "Zum Eisenabbau"
+        ],
+        [
+         "Eisen",
+         "250",
+         "15",
+         "Erste richtige Rüstung und Eimer"
+        ],
+        [
+         "Diamant",
+         "1561",
+         "20",
+         "Obsidian und Zaubertisch"
+        ],
+        [
+         "Netherit",
+         "2031",
+         "20 (+ zusätzliche Widerstandskraft)",
+         "Diamantausrüstung mit einem Barren aus dem Nether aufwerten"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Erze häufen sich auf unterschiedlichen Höhen (Y-Koordinate). **Diamanten** entstehen zwischen Y 16 und Y -63, besonders häufig bei Y -58 und -59 (minecraft.wiki). Die übrigen Werte sind Näherungen und können sich zwischen Versionen leicht ändern."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Erz",
+        "Häufigste Höhe (ungefähr)",
+        "Verwendung"
+       ],
+       "satirlar": [
+        [
+         "Kohle",
+         "Um Y 96",
+         "Brennstoff und Fackeln"
+        ],
+        [
+         "Eisen",
+         "Um Y 16 und in Bergen",
+         "Werkzeuge, Rüstung, Eimer"
+        ],
+        [
+         "Gold",
+         "Um Y -16",
+         "Piglin-Handel und Antriebsschienen"
+        ],
+        [
+         "Redstone",
+         "Um Y -59",
+         "Maschinen und Schaltungen"
+        ],
+        [
+         "Diamant",
+         "Y -58 und -59",
+         "Beste Werkzeuge und Rüstung"
+        ],
+        [
+         "Antiker Schrott (Nether)",
+         "Um Y 15",
+         "Netheritbarren"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Kontrolliere beim Abbau deine Höhe über F3 (Java) oder die Koordinateneinstellung (Bedrock). Für Diamanten ist ein horizontaler Tunnel auf Y -58 deutlich effizienter als zielloses Umherwandern."
+      }
+     ]
+    },
+    {
+     "id": "nether-ve-end",
+     "baslik": "Reise durch Nether und End",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Der Nether ist eine feurige Unterwelt. Ein Schritt dort entspricht ungefähr acht Schritten in der Oberwelt; Portale verkürzen Fernreisen. Ein Netherportal ist ein senkrechter Obsidianrahmen, mindestens 4x5. Ohne Ecken reichen 10 Obsidianblöcke. Maximal sind 23x23 möglich (minecraft.wiki)."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Obsidian sammeln",
+         "metin": "Gieße Wasser auf Lava und baue den entstehenden Obsidian mit einer Diamantspitzhacke ab. Sammle 10 Stück."
+        },
+        {
+         "baslik": "Portal bauen und entzünden",
+         "metin": "Baue einen 4 Blöcke breiten, 5 Blöcke hohen Rahmen und entzünde das Innere mit einem Feuerzeug."
+        },
+        {
+         "baslik": "Vorbereitet in den Nether",
+         "metin": "Nimm Eisenrüstung, Schwert, Pfeile, nicht brennbare Blöcke, Wassereimer und reichlich Nahrung mit. Ein goldenes Rüstungsteil hält Piglins davon ab, dich anzugreifen."
+        },
+        {
+         "baslik": "Festung finden",
+         "metin": "Jage Lohen in einer Netherfestung. Ihre Lohenruten lassen sich zu Lohenstaub verarbeiten."
+        },
+        {
+         "baslik": "Enderperlen sammeln",
+         "metin": "Jage Endermen. Eine Enderperle und Lohenstaub ergeben ein Enderauge."
+        },
+        {
+         "baslik": "Festung finden und ins End gehen",
+         "metin": "Wirf ein Enderauge und folge seiner Flugrichtung zur unterirdischen Festung. Setze die Augen in den Portalrahmen und springe ins End."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Im End warten der Ender Dragon und heilende Kristalle. Zerstöre die Kristalle mit Pfeilen und kämpfe dann im Nahkampf gegen den Drachen. Danach öffnet sich das Ausgangsportal. Ein Übergang führt zu den äußeren Endinseln mit Endsiedlungen, Elytra und Shulkerkisten."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Schlafe im Nether nicht im Bett: Es explodiert. Nimm fürs End viele Blöcke für Brücken und Deckung sowie langsamen Fall mit; beim Sturz in die Leere verlierst du deine Gegenstände."
+      }
+     ]
+    },
+    {
+     "id": "buyu-ve-ticaret",
+     "baslik": "Verzaubern, Dorfbewohnerhandel und Landwirtschaft",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Der Zaubertisch verbessert Gegenstände dauerhaft. Für die höchste Stufe umgibst du ihn mit 15 Bücherregalen in einem Block Abstand. Verzaubern kostet Erfahrungsstufen und Lapislazuli."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "XP und Lapislazuli sammeln",
+         "metin": "Sammle XP durch Abbau, Schmelzen und Kreaturen; baue Lapislazuli unter Tage ab."
+        },
+        {
+         "baslik": "Bücherregale aufstellen",
+         "metin": "Stelle Bücherregale ringförmig um den Tisch. Jedes verbessert die verfügbaren Verzauberungen."
+        },
+        {
+         "baslik": "Gegenstand wählen und verzaubern",
+         "metin": "Lege Waffe, Rüstung oder Spitzhacke in den Tisch, füge Lapislazuli hinzu und wähle eine Option."
+        },
+        {
+         "baslik": "Dorfbewohnerhandel freischalten",
+         "metin": "Ein Arbeitsplatzblock, etwa ein Lesepult für Bibliothekare, gibt einem Dorfbewohner einen Beruf. Berufstätige Dorfbewohner tauschen Gegenstände gegen Smaragde."
+        },
+        {
+         "baslik": "Gute Angebote sichern",
+         "metin": "Durch Handel steigt der Dorfbewohner auf und schaltet neue Angebote frei. Heilst du einen Zombiedorfbewohner, sinken die Preise."
+        }
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Weizen:** Aus Samen, wächst neben Wasser schnell; für Brot und Tierfutter.",
+        "**Tierfarm:** Kühe, Schafe und Hühner vermehren sich mit geeignetem Futter und liefern zuverlässig Fleisch, Wolle und Milch.",
+        "**Dorfbewohnerhandel:** Mit Smaragden kaufst du am sichersten Bücher mit starken Verzauberungen wie Reparatur."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Am Amboss lassen sich verzauberte Gegenstände mit Büchern kombinieren; Reparatur heilt den Gegenstand mit Erfahrung. Verzaubere zuerst deine Spitzhacke, statt planlos Verzauberungen auszugeben."
+      }
+     ]
+    },
+    {
+     "id": "cok-oyunculu-ve-mod",
+     "baslik": "Mehrspieler, Realms und sichere Mod-Installation",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Mit Freunden spielst du auf einem eigenen Server, einem öffentlichen Server oder **Realms**, Mojangs Aboserver. Die Preise unten stammen von der offiziellen Minecraft-Seite und sind in US-Dollar angegeben. Türkische Preise stehen dort separat."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Tarif",
+        "Monatspreis",
+        "Gleichzeitige Spieler"
+       ],
+       "satirlar": [
+        [
+         "Realms (Bedrock)",
+         "US$3.99",
+         "Du und 2 Spieler"
+        ],
+        [
+         "Realms Plus (Bedrock)",
+         "US$7.99",
+         "Du und 10 Spieler"
+        ],
+        [
+         "Realms (Java)",
+         "US$7.99",
+         "Du und 10 Spieler"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Das erste Realms-Konto erhält 30 Tage kostenlos zum Testen. Java Realms ist nur für Java-Spieler, Bedrock Realms für alle Bedrock-Geräte. Java unterstützt außerdem **Mods**: Dateien, die das Spiel verändern und nur aus vertrauenswürdigen Quellen stammen sollten."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Offiziellen Launcher installieren",
+         "metin": "Starte Java einmal im Minecraft Launcher und prüfe, ob das Spiel funktioniert."
+        },
+        {
+         "baslik": "Mod-Loader wählen",
+         "metin": "Fabric, NeoForge und Quilt sind bekannte quelloffene Loader. Auf der Mod-Seite stehen der nötige Loader und die passende Version."
+        },
+        {
+         "baslik": "Mod aus vertrauenswürdiger Quelle laden",
+         "metin": "Nutze bekannte Mod-Verzeichnisse wie Modrinth oder CurseForge. Eine Mod-Datei sollte auf .jar enden; lösche sie, wenn es eine .exe ist."
+        },
+        {
+         "baslik": "In den mods-Ordner legen",
+         "metin": "Kopiere die Datei in den mods-Ordner des Spiels, wähle im Launcher das Loader-Profil und starte."
+        },
+        {
+         "baslik": "Vorher sichern",
+         "metin": "Geht eine Mod-Welt kaputt, kannst du die alte Welt aus der Sicherung wiederherstellen."
+        }
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Vertraue keinen als Mods angebotenen .exe-Dateien, kostenlosen Minecoins-Angeboten oder Links, die dein Spielpasswort verlangen. Sie sollen Konto und Computer übernehmen."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Häufige Anfängerfehler",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Ohne Fackeln durch Höhlen wandern. Trage immer Fackeln und Wassereimer mit dir.",
+        "Gegenstände nach dem Tod liegen lassen. Sie fallen am Todesort zu Boden und verschwinden nach einiger Zeit. Koordinaten notieren, schnell zurückkehren und Wertvolles in Truhen lagern.",
+        "Unvorsichtig neben einem Lavasee abbauen. Halte Wasser bereit.",
+        "Auf einen Creeper zugehen. Greife aus der Ferne an oder weiche zurück, sobald er zischt.",
+        "Welten ohne Sicherung aktualisieren oder mit Cheats ruinieren."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Beim Tod fallen deine Gegenstände zu Boden und verschwinden bald. Notiere sofort die Todeskoordinaten und kehre auf dem kürzesten Weg zurück."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Kontosicherheit und Kindersicherung",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Minecraft nutzt inzwischen ein Microsoft-Konto. Für Kinderkonten begrenzt du in den Microsoft-Familieneinstellungen Chat, Mehrspieler und Käufe. Menünamen können sich ändern; prüfe die Kontowebseite selbst."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Für Kinder eignen sich geschlossene Server mit Bekannten oder Realms. Öffentliche Server bergen Chatrisiken.",
+        "Lade Mods und Texturpakete nur von bekannten großen Seiten wie CurseForge oder Modrinth. Mod-Dateien mit .exe-Endung können Schadsoftware sein.",
+        "Angebote für kostenlose Minecoins oder Konten sind Betrugsversuche zum Diebstahl deiner Zugangsdaten.",
+        "Aktiviere die Zwei-Schritt-Verifizierung deines Microsoft-Kontos."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Vertraue keinen Seiten, die Konten, Minecoins oder Gegenstände handeln. Gefälschte Downloads und Kontohandel sind die häufigsten Ursachen für Kontoverlust."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Häufige Fragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Muss ich Java und Bedrock zusammen kaufen?",
+         "c": "Auf PC werden meist beide zusammen verkauft. Auf Handys und Konsolen gibt es nur Bedrock."
+        },
+        {
+         "s": "Kann ich allein spielen?",
+         "c": "Ja. Eine Einzelspielerwelt braucht kein Internet; Server und Realms schon."
+        },
+        {
+         "s": "Welche Version sollte ich spielen?",
+         "c": "Normalerweise die neueste stabile Version. Bei Mods installierst du die vom Mod unterstützte Version."
+        },
+        {
+         "s": "Wie installiere ich Mods?",
+         "c": "Für Java installierst du einen Loader wie Fabric oder NeoForge und lädst Mods von CurseForge oder Modrinth. Bedrock bietet Add-on-Pakete im Marketplace."
+        },
+        {
+         "s": "Kann ich ohne Drachensieg weiterspielen?",
+         "c": "Ja, der Sieg ist freiwillig. Gegenstände wie Elytra gibt es im End; ob du dorthin gehst, entscheidest du."
+        },
+        {
+         "s": "Kann ich meine Welt auf ein anderes Gerät übertragen?",
+         "c": "Innerhalb derselben Edition kannst du Welten exportieren und importieren. Java- und Bedrock-Welten sind nicht direkt kompatibel."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "nl": {
+   "baslik": "Minecraft-beginnersgids: Java en Bedrock (2026)",
+   "ozet": "Voor nieuwe spelers: editie kiezen, de eerste nacht, voortgang en veiligheid. Huidige versie: Java 26.3 en Bedrock 26.50 (Wilderness Bound).",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Sandbox om te overleven en te bouwen"
+    },
+    {
+     "ad": "Platform",
+     "deger": "PC (Java en Bedrock), Xbox, PlayStation, Nintendo Switch, Android, iOS"
+    },
+    {
+     "ad": "Verdienmodel",
+     "deger": "Eenmalige aankoop; Minecoins en Marketplace-inhoud zijn optioneel"
+    },
+    {
+     "ad": "Huidige versie",
+     "deger": "Java 26.3 / Bedrock 26.50, Wilderness Bound (15 september 2026)"
+    },
+    {
+     "ad": "Turkse ondersteuning",
+     "deger": "Ja, te kiezen in de taalinstellingen van de game"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "Minecraft in 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "In Minecraft verzamel je grondstoffen en bouw je in een eindeloze wereld van blokken. Er is geen verplicht doel: versla de Ender Dragon of bouw gewoon een gezellig huis met een boerderij. Die vrijheid kan de eerste uren verwarrend zijn; deze gids geeft je een duidelijke volgorde."
+      },
+      {
+       "tip": "p",
+       "metin": "Sinds 2026 zijn versienummers gebaseerd op het jaartal, zoals **26.3**. De grote update **Wilderness Bound** verscheen op 15 september 2026 als Java 26.3 en Bedrock 26.50. Die voegde het gevlekte bosbioom, populierenhout, trappen en platen van wol en beton, kussens, strobedden en verlaten kampen toe, en verbeterde kaarten. Versie 26.4 wordt momenteel als snapshot getest."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Het versienummer staat in het hoofdmenu. Noemt een gids of mod nog nummers als 1.21, dan kan de informatie verouderd zijn. Controleer dit vóór installatie."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Voordat je begint: Java of Bedrock?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Op Windows verkoopt de officiële winkel Java en Bedrock meestal samen. Je betaalt één keer en kunt beide installeren. Op consoles en telefoons bestaat alleen Bedrock. De verschillen:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "",
+        "Java Edition",
+        "Bedrock Edition"
+       ],
+       "satirlar": [
+        [
+         "Platform",
+         "Windows, macOS, Linux",
+         "Windows, Xbox, PlayStation, Switch, Android, iOS"
+        ],
+        [
+         "Modondersteuning",
+         "Een enorme keuze aan mods en shaders",
+         "Beperkt; Marketplace-inhoud en add-onpakketten"
+        ],
+        [
+         "Met vrienden spelen",
+         "Java-servers en zelf gehoste servers",
+         "Crossplay tussen Bedrock-apparaten, Realms"
+        ],
+        [
+         "Geschikt voor",
+         "Pc-spelers die mods en eigen servers willen",
+         "Vriendengroepen met telefoons, consoles of verschillende apparaten"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Kort advies:** spelen je vrienden op telefoon of console, kies Bedrock. Wil je op pc mods gebruiken, kies Java. Java- en Bedrock-spelers kunnen normaal niet op dezelfde server spelen. Spreek eerst samen één editie af."
+      },
+      {
+       "tip": "p",
+       "metin": "**Prijs (USD-lijst op minecraft.wiki):** Bedrock kost 6,99 dollar op mobiel, 19,99 op Xbox en PlayStation en 29,99 op Windows en Switch. Controleer de lokale prijs in de winkel. **Systeemeisen Java:** Windows 10 64-bits of nieuwer, minstens vier processorkernen (zoals Core i3-10100 of Ryzen 3 3100) en een Vulkan 1.3-videokaart met minstens 2 GB geheugen (zoals GTX 950 of RX 460). Voor prettig spelen worden Core i5-12400 en RTX 2060 of vergelijkbaar aanbevolen. Mods verhogen de eisen."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Koop uitsluitend via de officiële Minecraft-website, Microsoft Store of consolewinkel. Gekraakte launchers zijn illegaal en brengen je account en computer in gevaar."
+      }
+     ]
+    },
+    {
+     "id": "ilk-gece",
+     "baslik": "Je eerste nacht: de eerste 15 minuten stap voor stap",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Je begint bij daglicht. Een volledige dag en nacht duren ongeveer 20 echte minuten. In het donker verschijnen vijanden zoals zombies, skeletten, spinnen en creepers. Zorg vóór het donker voor een eenvoudige schuilplaats."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Hout verzamelen",
+         "metin": "Sla tegen een boom, verzamel minstens 10–12 stammen en maak er planken van."
+        },
+        {
+         "baslik": "Een werkbank maken",
+         "metin": "Maak een werkbank van 4 planken en gebruik die voor een houten houweel, bijl en zwaard."
+        },
+        {
+         "baslik": "Steen en steenkool zoeken",
+         "metin": "Hak keisteen met het houten houweel; neem minstens 8 stukken voor een stenen houweel en een oven. Gebruik steenkool als brandstof en voor fakkels."
+        },
+        {
+         "baslik": "Voedsel zoeken",
+         "metin": "Jaag op koeien, varkens of kippen en bak rauw vlees in de oven. Met schapenwol maak je van 3 wol en 3 planken een bed."
+        },
+        {
+         "baslik": "Een schuilplaats maken",
+         "metin": "Graaf tegen de avond een kamertje in een heuvel en sluit de ingang met blokken. Plaats fakkels: in verlichte gebieden verschijnen geen vijanden."
+        },
+        {
+         "baslik": "De nacht doorkomen",
+         "metin": "Slaap in een bed om de nacht over te slaan. Je respawnpunt verhuist naar het bed. Zonder bed kun je ondergronds graven; met fakkels maakt dag of nacht daar niets uit."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Een fakkel maak je van één stok en één stuk steenkool. Neem altijd 20–30 fakkels mee; ondergronds helpen ze je de weg te vinden en voorkomen ze dat vijanden verschijnen."
+      }
+     ]
+    },
+    {
+     "id": "ilk-hafta",
+     "baslik": "Wat je in de eerste week doet",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Bouw een vast huis met kisten en een klein veld voor tarwe of wortels.",
+        "Zoek ijzer: in grotten en berghellingen herken je lichte spikkels in steen. Smelt het tot staven en maak een ijzeren houweel, zwaard en harnas.",
+        "Maak een emmer van 3 ijzerstaven. Die vervoert water en helpt tegen lavagevaar, wat je leven kan redden.",
+        "Maak een schild om schade van creeperexplosies en pijlen te verminderen.",
+        "Noteer de coördinaten van je huis en belangrijke plekken; zo raak je in grotten minder snel verdwaald."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Diamanten komen vooral diep ondergronds voor, rond Y -58. Coördinaten staan op het F3-scherm of in een spelinstelling. Neem een ijzeren houweel en een wateremmer mee."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Graaf nooit recht onder je voeten. Daar kan lava of een grot zitten. Graaf schuin omlaag als een trap en houd een terugweg vrij."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme-yolu",
+     "baslik": "Voortgang: doel voor doel",
+     "bloklar": [
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Fase",
+        "Doel",
+        "Opmerking"
+       ],
+       "satirlar": [
+        [
+         "1. Overleven",
+         "Huis, voedsel, ijzeren gereedschap",
+         "Eerste 2–3 speldagen"
+        ],
+        [
+         "2. Betoveren",
+         "Diamanten houweel, obsidiaan, betoveringstafel",
+         "Obsidiaan kun je alleen met een diamanten houweel hakken"
+        ],
+        [
+         "3. Nether",
+         "Netherportaal, fort en Blaze-staven",
+         "Ga met harnas en ruim voldoende voedsel"
+        ],
+        [
+         "4. Voorbereiding op de End",
+         "Enderparels en Eyes of Ender",
+         "Combineer een enderparel met Blaze-poeder"
+        ],
+        [
+         "5. De draak",
+         "Vind het fort, open het End-portaal, Ender Dragon",
+         "Neem pijlen, een zwaard en blokken mee"
+        ],
+        [
+         "6. Eindspel",
+         "End-steden, Elytra, je eigen grote bouwwerk",
+         "Je kiest zelf het doel"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Voor een Netherportaal heb je minstens 10 obsidiaan nodig, te maken met een wateremmer en lava. De draak verslaan is niet verplicht, maar de Nether maakt je sterker. Voor beginners is een betoveringstafel het eerste grote doel."
+      }
+     ]
+    },
+    {
+     "id": "kaynak-yonetimi",
+     "baslik": "Grondstoffen en opslag",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Voedsel:** Verbouw tarwe, wortels en aardappelen; houd koeien, schapen en kippen. Met het juiste voer kun je dieren fokken.",
+        "**Kisten:** Bewaar ertsen, voedsel, bouwblokken en uitrusting apart en gebruik bordjes als labels.",
+        "**Ervaring (XP):** Mijnbouw, smelten en vijanden verslaan geven XP voor betoveringen en reparaties.",
+        "**Back-ups:** Kopieer belangrijke werelden af en toe en altijd vóór een versie-update."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "De regel is simpel: kun je iets niet vinden waar je het nodig hebt, dan is je opslag rommelig. Een nette opslag kan je tempo gemakkelijk verdubbelen."
+      }
+     ]
+    },
+    {
+     "id": "alet-ve-maden",
+     "baslik": "Gereedschap, harnassen en ertslagen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Materialen vormen in Minecraft opeenvolgende niveaus. Met een stenen houweel hak je ijzer, met een ijzeren houweel diamant en met een diamanten houweel obsidiaan. De tabel toont die volgorde met de duurzaamheid van het houweel."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Materiaal",
+        "Duurzaamheid houweel",
+        "Harnaspunten volledige set",
+        "Wanneer?"
+       ],
+       "satirlar": [
+        [
+         "Hout",
+         "59",
+         "Geen",
+         "Alleen de eerste minuten"
+        ],
+        [
+         "Steen",
+         "131",
+         "Geen",
+         "Om ijzer te hakken"
+        ],
+        [
+         "IJzer",
+         "250",
+         "15",
+         "Eerste echte harnas en de emmer"
+        ],
+        [
+         "Diamant",
+         "1561",
+         "20",
+         "Obsidiaan en de betoveringstafel"
+        ],
+        [
+         "Netherite",
+         "2031",
+         "20 (+ extra stevigheid)",
+         "Verbeter diamanten uitrusting met een staaf uit de Nether"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Ertsen concentreren zich op verschillende hoogten (Y-coördinaat). **Diamant** ontstaat tussen Y 16 en Y -63, vooral rond Y -58 en -59 (minecraft.wiki). De overige waarden hieronder zijn benaderingen en kunnen per versie iets verschuiven."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Erts",
+        "Meest voorkomende hoogte (ongeveer)",
+        "Gebruik"
+       ],
+       "satirlar": [
+        [
+         "Steenkool",
+         "Rond Y 96",
+         "Brandstof en fakkels"
+        ],
+        [
+         "IJzer",
+         "Rond Y 16 en in bergen",
+         "Gereedschap, harnas, emmer"
+        ],
+        [
+         "Goud",
+         "Rond Y -16",
+         "Handel met Piglins en aangedreven rails"
+        ],
+        [
+         "Redstone",
+         "Rond Y -59",
+         "Machines en schakelingen"
+        ],
+        [
+         "Diamant",
+         "Y -58 en -59",
+         "Beste gereedschap en harnas"
+        ],
+        [
+         "Ancient debris (Nether)",
+         "Rond Y 15",
+         "Netherite-staven"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Controleer tijdens het mijnen je hoogte via F3 (Java) of de coördinateninstelling (Bedrock). Voor diamanten is een horizontale tunnel op Y -58 veel efficiënter dan willekeurig rondlopen."
+      }
+     ]
+    },
+    {
+     "id": "nether-ve-end",
+     "baslik": "De reis naar de Nether en de End",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "De Nether is een vurige onderwereld. Eén stap daar is ongeveer acht stappen in de bovenwereld, waardoor portalen verre reizen verkorten. Een Netherportaal is een rechtopstaand obsidiaanframe: minimaal 4x5, zonder verplichte hoeken, dus minstens 10 obsidiaan. Het grootste portaal is 23x23 (minecraft.wiki)."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Obsidiaan verzamelen",
+         "metin": "Giet water op lava om obsidiaan te maken en hak het met een diamanten houweel. Verzamel 10 stukken."
+        },
+        {
+         "baslik": "Het portaal bouwen en aansteken",
+         "metin": "Maak een frame van 4 breed en 5 hoog en steek de binnenkant aan met vuursteen en staal."
+        },
+        {
+         "baslik": "Voorbereid de Nether in",
+         "metin": "Neem ijzeren harnas, een zwaard, pijlen, onbrandbare blokken, een wateremmer en veel voedsel mee. Eén gouden harnasdeel houdt Piglins ervan af je aan te vallen."
+        },
+        {
+         "baslik": "Het fort zoeken",
+         "metin": "Jaag in een Netherfort op Blazes voor Blaze-staven; daarvan maak je Blaze-poeder."
+        },
+        {
+         "baslik": "Enderparels verzamelen",
+         "metin": "Jaag op Endermen. Een enderparel plus Blaze-poeder maakt een Eye of Ender."
+        },
+        {
+         "baslik": "Het fort vinden en de End binnengaan",
+         "metin": "Gooi een Eye of Ender en volg de vliegrichting naar het ondergrondse fort. Plaats de ogen in het portaalframe en spring de End in."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "In de End wachten de Ender Dragon en de kristallen die hem genezen. Vernietig de kristallen met pijlen en vecht daarna van dichtbij met de draak. Na zijn dood opent het uitgangsportaal. Een doorgang brengt je naar de buitenste End-eilanden met End-steden, Elytra en shulkerkisten."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Slaap niet in een bed in de Nether: het ontploft daar. Neem naar de End veel blokken mee voor bruggen en dekking en een middel voor langzaam vallen; in de leegte verlies je je spullen."
+      }
+     ]
+    },
+    {
+     "id": "buyu-ve-ticaret",
+     "baslik": "Betoveren, handelen met dorpelingen en landbouw",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "De betoveringstafel maakt voorwerpen blijvend sterker. Met 15 boekenplanken op één blok afstand rond de tafel bereik je het hoogste niveau. Betoveren kost ervaringsniveaus en lapis lazuli."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "XP en lapis verzamelen",
+         "metin": "Verdien XP met mijnen, smelten en vijanden, en hak lapis ondergronds."
+        },
+        {
+         "baslik": "Boekenplanken plaatsen",
+         "metin": "Zet boekenplanken in een ring rond de tafel; elke plank verbetert de betoveringsopties."
+        },
+        {
+         "baslik": "Voorwerp kiezen en betoveren",
+         "metin": "Leg een wapen, harnasdeel of houweel op de tafel, voeg lapis toe en kies een optie."
+        },
+        {
+         "baslik": "Handel met dorpelingen openen",
+         "metin": "Een werkblok, zoals een lessenaar voor een bibliothecaris, geeft een dorpeling een beroep. Dorpelingen met een beroep ruilen voorwerpen tegen smaragden."
+        },
+        {
+         "baslik": "Goede handelsaanbiedingen vastleggen",
+         "metin": "Door handel stijgt de dorpeling in niveau en verschijnen nieuwe aanbiedingen. Genees je een zombiedorpeling, dan dalen de prijzen."
+        }
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Tarwe:** Uit zaden, groeit snel naast water; voor brood en dierenvoer.",
+        "**Veeboerderij:** Koeien, schapen en kippen fokken met passend voer; ze leveren vlees, wol en melk.",
+        "**Dorpelingenhandel:** Met smaragden koop je het veiligst boeken met sterke betoveringen zoals Mending."
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Bij een aambeeld kun je een betoverd voorwerp met een boek combineren. Mending repareert met ervaring. Betover eerst je houweel in plaats van zonder plan betoveringen uit te geven."
+      }
+     ]
+    },
+    {
+     "id": "cok-oyunculu-ve-mod",
+     "baslik": "Multiplayer, Realms en veilig mods installeren",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Samen spelen kan op je eigen server, een openbare server of **Realms**, de abonnementsserver van Mojang. De prijzen hieronder zijn de Amerikaanse dollarprijzen op de officiële Minecraft-pagina. De Turkse prijs staat daar apart."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Abonnement",
+        "Maandprijs",
+        "Gelijktijdige spelers"
+       ],
+       "satirlar": [
+        [
+         "Realms (Bedrock)",
+         "US$3.99",
+         "Jij en 2 spelers"
+        ],
+        [
+         "Realms Plus (Bedrock)",
+         "US$7.99",
+         "Jij en 10 spelers"
+        ],
+        [
+         "Realms (Java)",
+         "US$7.99",
+         "Jij en 10 spelers"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Het eerste Realms-account krijgt een gratis proefperiode van 30 dagen. Java Realms is alleen voor Java-spelers, Bedrock Realms voor alle Bedrock-apparaten. Java ondersteunt ook **mods**: bestanden die de game veranderen en alleen uit betrouwbare bronnen mogen komen."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Officiële launcher installeren",
+         "metin": "Start Java één keer met de Minecraft Launcher en controleer of de game opent."
+        },
+        {
+         "baslik": "Een modloader kiezen",
+         "metin": "Fabric, NeoForge en Quilt zijn bekende opensourceloaders. Lees op de modpagina welke loader en versie nodig zijn."
+        },
+        {
+         "baslik": "De mod betrouwbaar downloaden",
+         "metin": "Gebruik bekende modverzamelingen zoals Modrinth of CurseForge. Een modbestand hoort op .jar te eindigen; verwijder het als het een .exe is."
+        },
+        {
+         "baslik": "In de mods-map plaatsen",
+         "metin": "Plaats het bestand in de mods-map van de game, kies het loaderprofiel in de launcher en start."
+        },
+        {
+         "baslik": "Eerst een back-up maken",
+         "metin": "Raakt een gemodificeerde wereld beschadigd, dan kun je de oude wereld uit de back-up herstellen."
+        }
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Vertrouw geen .exe-bestanden die als mods worden aangeboden, gratis Minecoins-sites of links die je spelwachtwoord vragen. Ze proberen je account en computer over te nemen."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Veelgemaakte beginnersfouten",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Zonder fakkels door een grot lopen. Neem altijd fakkels en een wateremmer mee.",
+        "Na je dood spullen laten liggen. Ze vallen op de sterfplek en verdwijnen na enige tijd. Noteer de coördinaten, keer snel terug en bewaar waardevolle spullen in een kist.",
+        "Onvoorzichtig naast een lavameer hakken. Houd water bij de hand.",
+        "Naar een creeper toe lopen. Val van afstand aan of loop terug zodra je gesis hoort.",
+        "Een wereld zonder back-up updaten of met cheats verpesten."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Bij je dood vallen je spullen en verdwijnen ze na korte tijd. Noteer direct de coördinaten en neem de kortste route terug."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Accountveiligheid en ouderlijk toezicht",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Minecraft gebruikt nu een Microsoft-account. Met Microsofts gezinsinstellingen beperk je voor kinderaccounts chatten, multiplayer en aankopen. Menunamen kunnen wijzigen; controleer de instelling zelf op de accountwebsite."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Kies voor kinderen een besloten server met bekenden of Realms; openbare servers brengen chatrisico’s mee.",
+        "Download mods en textuurpakketten alleen van bekende grote sites zoals CurseForge en Modrinth. Een modbestand met .exe kan malware zijn.",
+        "Gratis Minecoins of gratis accounts zijn lokmiddelen om je accountgegevens te stelen.",
+        "Schakel tweestapsverificatie in voor je Microsoft-account."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Vertrouw geen sites die accounts, Minecoins of voorwerpen verhandelen. Nepdownloads en accounthandel zijn de meest voorkomende oorzaken van accountverlies."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Veelgestelde vragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Moet ik Java en Bedrock samen kopen?",
+         "c": "Op pc worden ze meestal samen verkocht en krijg je beide. Telefoons en consoles hebben alleen Bedrock."
+        },
+        {
+         "s": "Kan ik alleen spelen?",
+         "c": "Ja. Een wereld voor één speler heeft geen internet nodig; servers en Realms wel."
+        },
+        {
+         "s": "Welke versie moet ik spelen?",
+         "c": "Normaal de nieuwste stabiele versie. Gebruik je mods, installeer dan de versie die de mod ondersteunt."
+        },
+        {
+         "s": "Hoe installeer ik mods?",
+         "c": "Installeer op Java een loader zoals Fabric of NeoForge en download mods van CurseForge of Modrinth. Op Bedrock gebruik je add-onpakketten uit de Marketplace."
+        },
+        {
+         "s": "Kan ik doorgaan zonder de draak te verslaan?",
+         "c": "Ja, dat is niet verplicht. Voorwerpen zoals Elytra liggen in de End, maar daarheen gaan is jouw keuze."
+        },
+        {
+         "s": "Kan ik mijn wereld naar een ander apparaat verplaatsen?",
+         "c": "Binnen dezelfde editie kun je exporteren en importeren. Java- en Bedrock-werelden zijn niet rechtstreeks compatibel."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "zh": {
+   "baslik": "Minecraft 新手指南：Java 与 Bedrock（2026）",
+   "ozet": "面向新玩家，介绍版本选择、首夜生存、成长路线与安全。当前版本：Java 26.3 和 Bedrock 26.50（Wilderness Bound）。",
+   "kunye": [
+    {
+     "ad": "类型",
+     "deger": "生存与建造沙盒"
+    },
+    {
+     "ad": "平台",
+     "deger": "PC（Java 与 Bedrock）、Xbox、PlayStation、Nintendo Switch、Android、iOS"
+    },
+    {
+     "ad": "收费模式",
+     "deger": "一次购买；Minecoins 与 Marketplace 内容为可选消费"
+    },
+    {
+     "ad": "当前版本",
+     "deger": "Java 26.3 / Bedrock 26.50，Wilderness Bound（2026年9月15日）"
+    },
+    {
+     "ad": "土耳其语支持",
+     "deger": "支持，可在游戏语言设置中选择"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "2026年的 Minecraft",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Minecraft 让你在无尽的方块世界里收集资源、建造设施。游戏不强制单一目标：你可以击败 Ender Dragon，也可以只盖舒适的房屋、经营农场。这份自由可能让新手无从下手，本指南提供可靠的行动顺序。"
+      },
+      {
+       "tip": "p",
+       "metin": "从2026年开始，版本号按年份命名，例如 **26.3**。大型更新 **Wilderness Bound** 于2026年9月15日推出，对应 Java 26.3 和 Bedrock 26.50，加入斑驳森林生物群系、白杨木、羊毛与混凝土楼梯和台阶、坐垫、稻草床、废弃营地，并改进地图。下一版本26.4正在快照测试中。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "主菜单会显示版本号。指南或模组若仍提及1.21等编号，信息可能过时，安装前请核对。"
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "开始前：选 Java 还是 Bedrock？",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Windows 官方商店通常捆绑出售 Java 与 Bedrock，一次购买即可安装两者。主机和手机只有 Bedrock。区别如下："
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "",
+        "Java Edition",
+        "Bedrock Edition"
+       ],
+       "satirlar": [
+        [
+         "平台",
+         "Windows, macOS, Linux",
+         "Windows, Xbox, PlayStation, Switch, Android, iOS"
+        ],
+        [
+         "模组支持",
+         "丰富的模组与光影资源",
+         "较有限；主要是 Marketplace 内容和附加包"
+        ],
+        [
+         "与朋友联机",
+         "Java 服务器与自行架设的服务器",
+         "Bedrock 设备间跨平台联机、Realms"
+        ],
+        [
+         "适合人群",
+         "希望使用模组及自建服务器的 PC 玩家",
+         "使用手机、主机或混合设备的朋友群体"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**简要建议：**朋友用手机或主机就选 Bedrock；在 PC 上想用模组就选 Java。Java 与 Bedrock 玩家通常不能共用服务器，联机前请先统一版本。"
+      },
+      {
+       "tip": "p",
+       "metin": "**价格（minecraft.wiki 的美元列表）：**Bedrock 手机版6.99美元，Xbox 与 PlayStation 版19.99美元，Windows 与 Switch 版29.99美元。当地价格以商店为准。**Java 系统要求：**64位 Windows 10或更新系统，至少四核处理器（如 Core i3-10100 或 Ryzen 3 3100），支持 Vulkan 1.3 且至少2 GB显存的显卡（如 GTX 950 或 RX 460）。流畅游玩推荐 Core i5-12400 与 RTX 2060 同等级配置。模组会提高需求。"
+      },
+      {
+       "tip": "uyari",
+       "metin": "仅从 Minecraft 官网、Microsoft Store 或主机商店购买。破解启动器违法，也会危及账号和电脑。"
+      }
+     ]
+    },
+    {
+     "id": "ilk-gece",
+     "baslik": "第一夜：最初15分钟的行动步骤",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "游戏在白天开始。完整昼夜约20分钟现实时间。天黑后会生成僵尸、骷髅、蜘蛛和苦力怕等敌对生物。首要目标是在天黑前搭好简易庇护所。"
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "收集木材",
+         "metin": "徒手敲树，至少收集10–12块原木，再加工成木板。"
+        },
+        {
+         "baslik": "制作工作台",
+         "metin": "用4块木板合成工作台，再制作木镐、斧头和剑。"
+        },
+        {
+         "baslik": "寻找石头与煤",
+         "metin": "用木镐挖圆石，至少取8块，用于石镐和熔炉。煤既能作燃料，也能做火把。"
+        },
+        {
+         "baslik": "寻找食物",
+         "metin": "猎取牛、猪或鸡，用熔炉烹熟生肉。取得绵羊的羊毛后，用3块羊毛和3块木板制作床。"
+        },
+        {
+         "baslik": "搭建庇护所",
+         "metin": "傍晚在山坡挖一个小房间，用方块封住入口。内部放火把，亮处不会生成怪物。"
+        },
+        {
+         "baslik": "度过夜晚",
+         "metin": "有床就睡觉跳过黑夜，重生点也会移至床边。没床可在地下挖掘；只要带着火把，地下不受昼夜影响。"
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "一根木棍与一块煤可合成火把。随身带20–30支火把，便于地下辨路并阻止怪物生成。"
+      }
+     ]
+    },
+    {
+     "id": "ilk-hafta",
+     "baslik": "第一周的任务",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "建造长期住所，旁边放储物箱，开辟小块麦田或胡萝卜田。",
+        "寻找铁矿：洞穴和山坡石头里有浅色斑点。熔炼成铁锭，制作铁镐、剑和盔甲。",
+        "用3个铁锭做桶。桶能装水、化解熔岩危险，有时能救命。",
+        "制作盾牌，减少苦力怕爆炸与箭矢伤害。",
+        "记下家和重要地点的坐标，这是避免在洞穴迷路的简便方法。"
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "钻石常见于很深的地下，约 Y -58。坐标可通过 F3 界面或游戏设置查看。下矿时带铁镐与水桶。"
+      },
+      {
+       "tip": "uyari",
+       "metin": "不要垂直向脚下挖，下面可能是熔岩或洞穴。像楼梯一样斜着向下挖，并保留返回通路。"
+      }
+     ]
+    },
+    {
+     "id": "ilerleme-yolu",
+     "baslik": "成长路线：逐个完成目标",
+     "bloklar": [
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "阶段",
+        "目标",
+        "说明"
+       ],
+       "satirlar": [
+        [
+         "1. 生存",
+         "住所、食物、铁制工具",
+         "最初2–3个游戏日"
+        ],
+        [
+         "2. 附魔",
+         "钻石镐、黑曜石、附魔台",
+         "黑曜石只能用钻石镐开采"
+        ],
+        [
+         "3. Nether",
+         "Nether 传送门、堡垒、烈焰棒",
+         "穿盔甲并带足食物"
+        ],
+        [
+         "4. End 准备",
+         "末影珍珠与末影之眼",
+         "合成末影珍珠与烈焰粉"
+        ],
+        [
+         "5. 巨龙",
+         "寻找要塞、开启 End 传送门、Ender Dragon",
+         "带箭、剑与方块"
+        ],
+        [
+         "6. 后期",
+         "末地城、Elytra、自定大型建筑",
+         "目标由你决定"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Nether 传送门至少需要10块黑曜石，可用水桶与熔岩生成。击败巨龙并非必须，但探索 Nether 能让你更强。新手的首个大目标应是附魔台。"
+      }
+     ]
+    },
+    {
+     "id": "kaynak-yonetimi",
+     "baslik": "资源与仓储",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**食物：**种小麦、胡萝卜和土豆，养牛、羊和鸡；使用合适食物即可繁殖动物。",
+        "**箱子：**矿石、食物、建筑方块和装备分箱存放，并用告示牌标注。",
+        "**经验（XP）：**采矿、冶炼和击杀生物获得经验，用于附魔和修理。",
+        "**备份：**定期复制重要世界，每次版本更新前务必备份。"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "原则很简单：需要时找不到物品，说明仓储混乱。整理好储物区，效率很容易提高一倍。"
+      }
+     ]
+    },
+    {
+     "id": "alet-ve-maden",
+     "baslik": "工具、盔甲与矿层",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Minecraft 的材料按等级递进。石镐挖铁，铁镐挖钻石，钻石镐挖黑曜石。下表按此顺序列出镐的耐久度。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "材料",
+        "镐的耐久度",
+        "全套盔甲点数",
+        "何时使用？"
+       ],
+       "satirlar": [
+        [
+         "木头",
+         "59",
+         "无",
+         "仅最初几分钟"
+        ],
+        [
+         "石头",
+         "131",
+         "无",
+         "用于挖铁"
+        ],
+        [
+         "铁",
+         "250",
+         "15",
+         "第一套实用盔甲和桶"
+        ],
+        [
+         "钻石",
+         "1561",
+         "20",
+         "黑曜石与附魔台"
+        ],
+        [
+         "下界合金",
+         "2031",
+         "20（另有额外韧性）",
+         "用 Nether 来源的锭升级钻石装备"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "矿石集中在不同高度（Y 坐标）。**钻石**生成于 Y 16至 Y -63，最常见于 Y -58和-59附近（minecraft.wiki）。下列其他数值仅为近似，不同版本可能略有变化。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "矿石",
+        "最常见高度（约）",
+        "用途"
+       ],
+       "satirlar": [
+        [
+         "煤",
+         "约 Y 96",
+         "燃料与火把"
+        ],
+        [
+         "铁",
+         "约 Y 16以及山地",
+         "工具、盔甲、桶"
+        ],
+        [
+         "金",
+         "约 Y -16",
+         "与猪灵交易、动力铁轨"
+        ],
+        [
+         "红石",
+         "约 Y -59",
+         "机械与电路"
+        ],
+        [
+         "钻石",
+         "Y -58和-59",
+         "优质工具与盔甲"
+        ],
+        [
+         "远古残骸（Nether）",
+         "约 Y 15",
+         "下界合金锭"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "挖矿时通过 F3（Java）或坐标设置（Bedrock）留意高度。挖钻石时，在 Y -58水平开隧道比随机探索高效得多。"
+      }
+     ]
+    },
+    {
+     "id": "nether-ve-end",
+     "baslik": "Nether 与 End 之旅",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Nether 是炽热的地下世界，其中一步约相当于主世界八步，传送门可缩短远途。Nether 门是竖直黑曜石框，最小4x5，角落可省，因此最少10块黑曜石。最大可达23x23（minecraft.wiki）。"
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "收集黑曜石",
+         "metin": "向熔岩浇水生成黑曜石，用钻石镐采集10块。"
+        },
+        {
+         "baslik": "搭建并点燃传送门",
+         "metin": "搭4格宽、5格高的框架，用打火石点燃内部。"
+        },
+        {
+         "baslik": "备齐物品进入 Nether",
+         "metin": "带铁盔甲、剑、箭、不燃方块、水桶和充足食物。穿一件金盔甲能让猪灵不主动攻击你。"
+        },
+        {
+         "baslik": "寻找堡垒",
+         "metin": "在 Nether 堡垒猎杀烈焰人获取烈焰棒，再加工成烈焰粉。"
+        },
+        {
+         "baslik": "收集末影珍珠",
+         "metin": "猎杀末影人。末影珍珠加烈焰粉可合成末影之眼。"
+        },
+        {
+         "baslik": "找到要塞并进入 End",
+         "metin": "投掷末影之眼，沿其飞行方向寻找地下要塞。将眼睛放入传送门框，跳入 End。"
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "End 中有 Ender Dragon 及为它治疗的水晶。先用箭摧毁水晶，再近战巨龙。击败后出口传送门开启，折跃门通往外围岛屿，那里可找到末地城、Elytra 与潜影盒。"
+      },
+      {
+       "tip": "uyari",
+       "metin": "不要在 Nether 的床上睡觉，床会爆炸。进入 End 时带大量方块用于架桥和掩护，并准备缓降手段；坠入虚空会丢失物品。"
+      }
+     ]
+    },
+    {
+     "id": "buyu-ve-ticaret",
+     "baslik": "附魔、村民交易与农业基础",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "附魔台能永久增强物品。周围放15个书架，保持一格间隔，即可达到最高等级。附魔需要经验等级和青金石。"
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "收集经验与青金石",
+         "metin": "通过采矿、冶炼和击杀生物获取经验，在地下开采青金石。"
+        },
+        {
+         "baslik": "摆放书架",
+         "metin": "在附魔台周围环形摆书架，每个书架都会改善附魔选项。"
+        },
+        {
+         "baslik": "选择物品并附魔",
+         "metin": "放入武器、盔甲或镐，加入青金石，点击一个附魔选项。"
+        },
+        {
+         "baslik": "开启村民交易",
+         "metin": "工作站方块可赋予村民职业，例如讲台对应图书管理员。有职业的村民会用物品兑换绿宝石。"
+        },
+        {
+         "baslik": "锁定好交易",
+         "metin": "交易能提升村民等级并开启新交易。治愈僵尸村民可降低价格。"
+        }
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**小麦：**用种子种植，临水生长快，可做面包与饲料。",
+        "**畜牧场：**牛、羊和鸡使用合适饲料繁殖，稳定产出肉、羊毛和牛奶。",
+        "**村民交易：**使用绿宝石购买带有经验修补等强力附魔的书，是较安全的途径。"
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "可在铁砧将附魔物品与书合并；经验修补利用经验修复物品。优先给镐附魔，不要无计划消耗附魔资源。"
+      }
+     ]
+    },
+    {
+     "id": "cok-oyunculu-ve-mod",
+     "baslik": "多人模式、Realms 与安全安装模组",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "与朋友游玩有三种方式：自建服务器、加入公共服务器，或使用 Mojang 托管的订阅服务器 **Realms**。下表为 Minecraft 官方页面的美元标价，土耳其价格在页面另列。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "方案",
+        "月费",
+        "同时在线人数"
+       ],
+       "satirlar": [
+        [
+         "Realms (Bedrock)",
+         "US$3.99",
+         "你和2位玩家"
+        ],
+        [
+         "Realms Plus (Bedrock)",
+         "US$7.99",
+         "你和10位玩家"
+        ],
+        [
+         "Realms (Java)",
+         "US$7.99",
+         "你和10位玩家"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "首个 Realms 账号可免费试用30天。Java Realms 仅供 Java 玩家，Bedrock Realms 支持全部 Bedrock 设备。Java 还可使用**模组**：会改变游戏的文件，只应从可信来源下载。"
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "安装官方启动器",
+         "metin": "用 Minecraft Launcher 启动一次 Java，确认游戏能打开。"
+        },
+        {
+         "baslik": "选择模组加载器",
+         "metin": "Fabric、NeoForge 和 Quilt 是知名开源加载器。查看模组页面，确认所需加载器及版本。"
+        },
+        {
+         "baslik": "从可信渠道下载模组",
+         "metin": "仅使用 Modrinth、CurseForge 等知名模组站。模组文件应以 .jar 结尾；若是 .exe，请删除。"
+        },
+        {
+         "baslik": "放入 mods 文件夹",
+         "metin": "将文件放入游戏的 mods 目录，在启动器选择加载器配置后运行。"
+        },
+        {
+         "baslik": "先备份",
+         "metin": "模组世界若损坏，可用备份恢复原世界。"
+        }
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "不要相信冒充模组的 .exe、承诺免费 Minecoins 的网站，或索要游戏账号密码的链接。这些行为意在窃取账号和控制电脑。"
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "新手常见错误",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "不带火把进入洞穴。应始终携带火把和水桶。",
+        "死亡后不回收物品。物品掉在死亡地点，一段时间后消失。记下坐标，迅速返回，并把贵重物品存箱。",
+        "在熔岩湖旁贸然挖掘。水要放在手边。",
+        "直接靠近苦力怕。远程攻击，听到嘶嘶声就后退。",
+        "不备份便更新世界，或用作弊破坏世界。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "死亡后物品掉落，很快会消失。立即记下死亡坐标，沿最短路线返回。"
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "账号安全与家长控制",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Minecraft 现使用 Microsoft 账号。儿童账号可通过 Microsoft 家庭设置限制聊天、多人游戏和购买。菜单名称可能变化，请亲自在账号网页核对。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "儿童宜使用熟人组成的封闭服务器或 Realms；公开服务器存在聊天风险。",
+        "模组与材质包仅从 CurseForge、Modrinth 等知名大站下载。.exe 模组文件可能是恶意软件。",
+        "免费 Minecoins 或免费账号网站是窃取登录信息的骗局。",
+        "为 Microsoft 账号开启两步验证。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "不要信任买卖账号、Minecoins 或物品的网站。假下载与账号交易是账号丢失的常见原因。"
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "常见问题",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "必须把 Java 和 Bedrock 一起买吗？",
+         "c": "PC 上通常捆绑销售，两者都会获得；手机和主机只有 Bedrock。"
+        },
+        {
+         "s": "可以单人玩吗？",
+         "c": "可以。单人世界无需联网，服务器和 Realms 需要联网。"
+        },
+        {
+         "s": "应该玩哪个版本？",
+         "c": "通常选最新稳定版。若用模组，安装模组支持的版本。"
+        },
+        {
+         "s": "怎样安装模组？",
+         "c": "Java 先安装 Fabric 或 NeoForge 等加载器，再从 CurseForge 或 Modrinth 下载模组。Bedrock 使用 Marketplace 附加包。"
+        },
+        {
+         "s": "不击败巨龙也能继续吗？",
+         "c": "可以，这并非强制目标。Elytra 等物品位于 End，是否前往由你决定。"
+        },
+        {
+         "s": "世界能转移到其他设备吗？",
+         "c": "同一版本内可以导出、导入。Java 与 Bedrock 世界彼此不能直接兼容。"
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  }
 }
