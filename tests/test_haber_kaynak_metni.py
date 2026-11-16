@@ -68,6 +68,31 @@ class KaynakMetniTests(unittest.TestCase):
             oto.kaynak_tamamla(c, NOW)
         fetch.assert_not_called()
 
+    def test_empty_xbox_body_does_not_fall_back_to_recommendation_cards(self):
+        c = {'url': URL, 'kaynak_metni': 'The post Game appeared first on Xbox Wire.'}
+        raw = '<main><div>Editor November 16</div><article class="art-body"></article><section>Keep reading Games Other story</section></main>'
+        with patch.object(oto, 'getir', return_value=raw.encode()):
+            oto.kaynak_tamamla(c, NOW)
+        self.assertEqual(c['kaynak_metni_durumu'], 'govde_yok')
+        self.assertNotIn('Keep reading', c['kaynak_metni'])
+
+    def test_explicit_entry_content_wins_over_main_navigation(self):
+        text = oto.duz_metin('<main>Trending Stories<article><div class="entry-content"><p>Actual game patch</p></div>Comments</article>Other game</main>', True)
+        self.assertEqual(text, 'Actual game patch')
+        self.assertEqual(oto.duz_metin('<nav>Menu</nav><div>Other links</div>', True), '')
+        self.assertEqual(oto.duz_metin('<main><div class="navigation-menu">Home Games</div><section class="related">Other games</section></main>', True), '')
+
+    def test_encoded_body_preferred_even_if_description_is_longer(self):
+        raw = f'<rss xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><item><title>Game</title><link>{URL}</link><description>{"menu " * 100}</description><content:encoded><![CDATA[<p>Actual fact</p>]]></content:encoded></item></channel></rss>'.encode()
+        self.assertEqual(oto.rss_oku(raw, SOURCE, NOW)[0]['kaynak_metni'], 'Actual fact')
+
+    def test_steam_page_uses_requested_announcement_not_adjacent_story(self):
+        import html
+        events = [{'announcement_body': {'gid': 'other', 'body': 'Wrong story'}},
+                  {'announcement_body': {'gid': '123', 'body': '[p]Real update[/p]'}}]
+        raw = '<div data-partnereventstore="' + html.escape(json.dumps(events), quote=True) + '" data-partnereventadjacents="' + html.escape(json.dumps([{'announcementGID': '123'}]), quote=True) + '"></div>'
+        self.assertEqual(oto.duz_metin(raw, True), 'Real update')
+
     def test_attempt_ceiling_is_eight(self):
         self.assertEqual(oto.CONFIG['sinirlar']['yazim_deneme'], 8)
 

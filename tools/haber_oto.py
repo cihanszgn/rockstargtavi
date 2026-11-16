@@ -138,9 +138,33 @@ class MetinOku(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.ana_metin = ana_metin
         self.stack, self.parts = [], []
+        self.containers = []
+        self.blocked = []
 
     def handle_starttag(self, tag, attrs):
         tag = tag.rsplit(':', 1)[-1]
+        attrs = dict(attrs)
+        marker = attrs.get('class', '') + ' ' + attrs.get('id', '')
+        if re.search(r'(?:^|[\s_-])(?:menu|navigation|related|recommendations|trending|comments?|post-card)(?:[\s_-]|$)', marker):
+            self.blocked.append(len(self.stack) + 1)
+        rank = (3 if re.search(r'\b(entry-content|art-body|article-body|post-content|single__content|bodycontent|announcement_body)\b', marker)
+                else 2 if tag == 'article' else 1 if tag == 'main' else 0)
+        if self.ana_metin and rank and not self.blocked:
+            self.containers.append({'depth': len(self.stack) + 1, 'rank': rank, 'parts': [], 'closed': False})
+        # Steam sayfası sunucuda gövdeyi yapılandırılmış duyuru verisinde taşır.
+        if self.ana_metin and attrs.get('data-partnereventstore'):
+            try:
+                events = json.loads(attrs['data-partnereventstore'])
+                gid = (attrs.get('data-partnereventadjacents') or '')
+                adjacent = json.loads(gid) if gid else []
+                wanted = adjacent[0]['announcementGID'] if adjacent else None
+                for event in events:
+                    body = event.get('announcement_body', {})
+                    if wanted and str(body.get('gid')) == str(wanted):
+                        self.containers.append({'depth': 0, 'rank': 4, 'parts': [body.get('body', '')], 'closed': True})
+                        break
+            except (ValueError, TypeError, KeyError, IndexError):
+                pass
         if tag not in ('br', 'hr', 'img', 'meta', 'link', 'input', 'source', 'wbr', 'embed', 'area', 'base', 'col', 'param', 'track'):
             self.stack.append(tag)
 
@@ -148,19 +172,31 @@ class MetinOku(HTMLParser):
         tag = tag.rsplit(':', 1)[-1]
         if tag in self.stack:
             self.stack = self.stack[:len(self.stack) - 1 - self.stack[::-1].index(tag)]
+            self.blocked = [d for d in self.blocked if d <= len(self.stack)]
+            for c in self.containers:
+                if c['depth'] > len(self.stack):
+                    c['closed'] = True
 
     def handle_data(self, data):
-        if any(t in self.stack for t in ('script', 'style', 'noscript', 'svg', 'nav', 'footer', 'header', 'aside', 'form')):
+        if self.blocked or any(t in self.stack for t in ('script', 'style', 'noscript', 'svg', 'nav', 'footer', 'header', 'aside', 'form')):
             return
         if not self.ana_metin or any(t in self.stack for t in ('article', 'main')):
             self.parts.append(data)
+        for c in self.containers:
+            if not c['closed']:
+                c['parts'].append(data)
 
 
 def duz_metin(value, ana_metin=False):
     parser = MetinOku(ana_metin)
     parser.feed(str(value))
+    parts = parser.parts
+    if ana_metin:
+        # Özel gövde boşsa daha geniş main içindeki öneri/menü kartlarına dönme.
+        rank = max((c['rank'] for c in parser.containers), default=0)
+        parts = next((c['parts'] for c in parser.containers if c['rank'] == rank), [])
     # Steam JSON bazen HTML yerine BBCode taşır.
-    text = re.sub(r'\[/?(?:/?\w+)(?:=[^\]]*)?\]', ' ', ' '.join(parser.parts))
+    text = re.sub(r'\[/?(?:/?\w+)(?:=[^\]]*)?\]', ' ', ' '.join(parts))
     return re.sub(r'\s+', ' ', text).strip()[:6000]
 
 
@@ -179,7 +215,9 @@ def kaynak_tamamla(candidate, now=None):
     try:
         text = duz_metin(getir(candidate['url'], timeout=10).decode('utf-8', 'replace'), ana_metin=True)
         if not text:
-            raise ValueError('article/main gövdesi bulunamadı')
+            candidate['kaynak_metni_durumu'] = 'govde_yok'
+            candidate['kaynak_metni_hatasi'] = 'ana içerik gövdesi bulunamadı'
+            return
         candidate.update(kaynak_metni(text, 'sayfa:ana_metin', candidate['url'], now))
     except (OSError, ValueError) as exc:
         candidate.setdefault('kaynak_metni', '')
@@ -246,7 +284,8 @@ def rss_oku(raw, source, now):
                 element = fields[field]
                 raw_body = (element.text or '') + ''.join(ET.tostring(child, encoding='unicode') for child in element)
                 bodies.append((duz_metin(raw_body), 'content:encoded' if field == 'encoded' else field))
-        body, field = max(bodies, key=lambda x: len(x[0]), default=('', ''))
+        body, field = next((x for x in bodies if x[1] == 'content:encoded' and x[0]),
+                           max(bodies, key=lambda x: len(x[0]), default=('', '')))
         out.append({'kaynak': source['id'], 'ad': source['ad'], 'baslik': title,
                     'url': url, 'tarih': published.isoformat() if published else None,
                     'resmi_aday': resmi(url), **kaynak_metni(body, field, source.get('rss', ''), now)})
@@ -340,7 +379,8 @@ def kaynak_tara(source, now):
     games_path = ROOT / 'data/oyunlar.json'
     games = json.loads(games_path.read_text(encoding='utf-8')) if games_path.exists() else []
     aliases = [norm(s) for game in games for s in [game['ad'], *game.get('eslesme', [])] if len(s) > 2]
-    fresh.sort(key=lambda x: (bool(x['tarih']), any(oyun_eslesir(x['baslik'], key) for key in aliases), x['tarih'] or ''), reverse=True)
+    fresh.sort(key=lambda x: (bool(x['tarih']), resmi(x.get('resmi_url') or x['url']),
+               any(oyun_eslesir(x['baslik'], key) for key in aliases), x['tarih'] or ''), reverse=True)
     kept = fresh[:source.get('aday_siniri', CONFIG['sinirlar'].get('kaynak_basina', 6))]
     limited = len(kept)
     if source.get('bicim') == 'steam':

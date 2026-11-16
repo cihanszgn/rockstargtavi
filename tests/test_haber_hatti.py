@@ -90,7 +90,7 @@ class HatTests(unittest.TestCase):
     def test_failed_audit_blocks_live_publish_path(self):
         self.hat.deneme = False
         self.hat.config['denetci'] = [{'ad': 'sonnet'}, {'ad': 'opus'}]
-        scan = {'kaynaklar': [], 'adaylar': [{'baslik': 'test'}]}
+        scan = {'kaynaklar': [], 'adaylar': [{'baslik': 'test', 'url': 'https://news.xbox.com/en-us/test/'}]}
         with patch.object(self.hat, 'hazirlik'), patch.object(self.hat, 'tara', return_value=scan), \
                 patch.object(self.hat, 'ele', return_value=scan['adaylar']), \
                 patch.object(self.hat, 'yaz', return_value={'id': 'test'}), \
@@ -109,7 +109,7 @@ class HatTests(unittest.TestCase):
         h.oto.kilit_birak(self.hat.state / 'kilit.sqlite', token)
 
     def test_dry_run_restores_scenarios_and_never_calls_publish(self):
-        scan = {'kaynaklar': [], 'adaylar': [{'baslik': 'test'}]}
+        scan = {'kaynaklar': [], 'adaylar': [{'baslik': 'test', 'url': 'https://news.xbox.com/en-us/test/'}]}
         def write(_):
             path = self.root / 'video/senaryo/test-tr.json'
             path.parent.mkdir(parents=True)
@@ -183,17 +183,15 @@ class HatTests(unittest.TestCase):
         warmup.__enter__.return_value.read.return_value = b'{"done":true}'
         stdin = MagicMock()
         stdin.buffer.read.return_value = b'prompt'
-        with patch.object(h.sys, 'stdin', stdin), patch.object(h.urllib.request, 'urlopen', side_effect=[warmup, response]) as request, patch('builtins.print'):
+        with patch.object(h.sys, 'stdin', stdin), patch.object(h.urllib.request, 'urlopen', side_effect=[response]) as request, patch('builtins.print'):
             self.assertEqual(h.yerel_tek(helper, 'iyi', 4096), 0)
         body = json.loads(request.call_args.args[0].data)
         self.assertEqual(body['model'], 'qwen-test')
         self.assertEqual(body['options']['num_ctx'], 4096)
         self.assertEqual(body['format'], 'json')
-        self.assertEqual(request.call_args_list[0].kwargs['timeout'], 30)
-        health = json.loads(request.call_args_list[0].args[0].data)
-        self.assertTrue(health['prompt'])
-        self.assertEqual(health['options']['num_predict'], 1)
-        self.assertEqual(body['keep_alive'], '5m')
+        self.assertEqual(request.call_count, 1)
+        self.assertEqual(request.call_args.kwargs['timeout'], 60)
+        self.assertEqual(body['keep_alive'], '45m')
 
     def test_local_warmup_outage_is_explicit_and_never_starts_generation(self):
         helper = self.root / 'helper.py'
@@ -202,7 +200,7 @@ class HatTests(unittest.TestCase):
         stdin.buffer.read.return_value = b'prompt'
         with patch.object(h.sys, 'stdin', stdin), patch.object(h.urllib.request, 'urlopen', side_effect=TimeoutError('timed out')) as request:
             with self.assertRaisesRegex(RuntimeError, '30 sn'):
-                h.yerel_tek(helper, 'test-model', 4096)
+                h.yerel_tek(helper, 'test-model', 4096, saglik=True)
         self.assertEqual(request.call_count, 1)
 
     # --- aday hafızası ---
@@ -280,18 +278,23 @@ class HatTests(unittest.TestCase):
 
     def test_same_game_reserve_is_tried_after_rejection_but_skipped_after_approval(self):
         candidates = [dict(self._aday(i, f'Yama {i}'), oyun_eslesme='takipli') for i in range(3)]
+        for c in candidates:
+            c['url'] = 'https://news.xbox.com/en-us/2026/11/16/' + c['url'].rsplit('/', 1)[-1]
         with patch.object(self.hat, 'yaz', side_effect=[{'id': 'a'}, {'id': 'b'}]) as write, \
                 patch.object(self.hat, 'denetle', side_effect=[[], [{'id': 'b'}]]), \
                 patch.object(self.hat, 'paket_kontrol', side_effect=lambda xs: xs):
             self.assertEqual(self.hat.adaylari_isle(candidates), [{'id': 'b'}])
         self.assertEqual(write.call_count, 2)
 
-    def test_higher_score_beats_official_role(self):
+    def test_official_beats_higher_scored_followed_discovery(self):
         self._oyunlar([])
         candidates = [self._aday(0, 'Basın haberi', ad='IGN'), self._aday(1, 'Resmi duyuru', ad='PlayStation Blog')]
+        for c in candidates:
+            c['tarih'] = datetime.now(timezone.utc).isoformat()
+        candidates[1]['url'] = 'https://blog.playstation.com/2026/11/16/game/'
         with patch.object(self.hat, 'zincir', side_effect=self._al({0: 9, 1: 4})):
             result = self.hat.ele(candidates)
-        self.assertEqual(result[0]['ad'], 'IGN')
+        self.assertEqual(result[0]['ad'], 'PlayStation Blog')
 
     def test_known_old_dates_never_reach_local_model_and_unknown_goes_last(self):
         self._oyunlar([])
@@ -328,6 +331,8 @@ class HatTests(unittest.TestCase):
 
     def test_rejected_candidates_use_reserve_and_stop_at_three_approved(self):
         candidates = [self._aday(i, f'Haber {i}') for i in range(6)]
+        for c in candidates:
+            c['url'] = c['url'].replace('www.ign.com', 'news.xbox.com')
         articles = [{'id': str(i)} for i in range(6)]
         with patch.object(self.hat, 'yaz', side_effect=articles) as write, \
                 patch.object(self.hat, 'denetle', side_effect=[[], [], [articles[2]], [articles[3]], [articles[4]]]), \
@@ -352,6 +357,8 @@ class HatTests(unittest.TestCase):
     def test_configured_attempt_ceiling_and_time_budget(self):
         limit = h.oto.CONFIG['sinirlar']['yazim_deneme']
         candidates = [self._aday(i, f'Haber {i}') for i in range(limit + 3)]
+        for c in candidates:
+            c['url'] = c['url'].replace('www.ign.com', 'news.xbox.com')
         with patch.object(self.hat, 'yaz', return_value=None) as write:
             self.assertEqual(self.hat.adaylari_isle(candidates), [])
         self.assertEqual(write.call_count, limit)
@@ -368,13 +375,18 @@ class HatTests(unittest.TestCase):
             selected = self.hat.ele(candidates)
         self.assertEqual([x['baslik'] for x in selected], ['Takipli yeni sezon', 'Yeni oyun duyurusu'])
 
-    def test_freshness_then_official_only_break_score_ties(self):
+    def test_verifiability_then_followed_score_and_freshness(self):
         now = datetime.now(timezone.utc)
         def candidate(score, age, official=False, followed=False):
-            return {'on_puan': score, 'tarih': (now-timedelta(hours=age)).isoformat(), 'resmi': official, 'takipli': followed}
-        self.assertGreater(h.siralama(candidate(9, 20)), h.siralama(candidate(4, 1, True)))
-        self.assertGreater(h.siralama(candidate(7, 1)), h.siralama(candidate(7, 2, True)))
+            return {'on_puan': score, 'tarih': (now-timedelta(hours=age)).isoformat(), 'url': 'https://news.xbox.com/en-us/game/' if official else 'https://www.ign.com/news/game', 'takipli': followed}
+        self.assertGreater(h.siralama(candidate(4, 1, True)), h.siralama(candidate(9, 20, followed=True)))
+        self.assertGreater(h.siralama(candidate(7, 2, True)), h.siralama(candidate(7, 1)))
         self.assertGreater(h.siralama(candidate(7, 1, True)), h.siralama(candidate(7, 1)))
+        self.assertGreater(h.siralama(candidate(4, 2, True, True)), h.siralama(candidate(9, 1, True)))
+        self.assertGreater(h.siralama(candidate(8, 2, True)), h.siralama(candidate(7, 1, True)))
+        self.assertGreater(h.siralama(candidate(7, 1, True)), h.siralama(candidate(7, 2, True)))
+        undated = dict(candidate(10, 1, True), tarih=None)
+        self.assertGreater(h.siralama(candidate(1, 1)), h.siralama(undated))
 
     def test_quota_duration_from_response_or_twelve_hour_default(self):
         self.assertEqual(h.kota_suresi('FreeUsageLimitError {"retryAfterMs":7200000}'), 7200)
