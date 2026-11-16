@@ -1,5 +1,5 @@
 {
- "guncel": "2026-11-15T12:04:47Z",
+ "guncel": "2026-11-16T12:58:13Z",
  "epic": [
   {
    "baslik": "Knightica",
@@ -9,16 +9,6 @@
    "bitis": "2026-11-19T16:00:00.000Z",
    "durum": "simdi",
    "normal": 206.0,
-   "para": "TRY"
-  },
-  {
-   "baslik": "Alien: Isolation",
-   "slug": "alien-isolation",
-   "resim": "https://cdn1.epicgames.com/df37f065c3f14eadbf011177396e2966/offer/EGS_AlienIsolation_CreativeAssembly_S5-1920x1080-1cf3b9a86adcefeebf903451b1b3fb49.jpg",
-   "baslangic": "2026-11-19T16:00:00.000Z",
-   "bitis": "2026-11-26T16:00:00.000Z",
-   "durum": "yakinda",
-   "normal": 379.0,
    "para": "TRY"
   },
   {
@@ -46,7 +36,7 @@
    "steamRatingPercent": 74,
    "steamAppID": "3093400",
    "releaseDate": 1755734400,
-   "dealRating": 8.8,
+   "dealRating": 8.7,
    "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3093400/7b0ebe2cc1c7fd1fe219f4fce68edc5003b19a89/capsule_231x87.jpg?t=1794501426"
   }
  ]

@@ -16,11 +16,11 @@
 "2026-11-15"
 ],
 "en/deals.html": [
-"4f8a293e7617",
-"2026-11-15"
+"ef619ea327aa",
+"2026-11-16"
 ],
 "en/free-games.html": [
-"06e6fd98198b",
+"28745f7e7912",
 "2026-11-16"
 ],
 "en/game-news.html": [
@@ -200,7 +200,7 @@
 "2026-11-15"
 ],
 "en/index.html": [
-"3ad3cc409b8a",
+"5d2b1074a03d",
 "2026-11-16"
 ],
 "en/languages.html": [
@@ -316,7 +316,7 @@
 "2026-11-09"
 ],
 "es/index.html": [
-"236d5cfb664f",
+"04b7fb972b13",
 "2026-11-16"
 ],
 "es/juego/call-of-duty.html": [
@@ -412,7 +412,7 @@
 "2026-11-15"
 ],
 "es/juegos-gratis.html": [
-"65641bcfbc4d",
+"48cef7ea547a",
 "2026-11-16"
 ],
 "es/languages.html": [
@@ -428,8 +428,8 @@
 "2026-11-16"
 ],
 "es/ofertas.html": [
-"24ab479cd774",
-"2026-11-15"
+"0a31132205d2",
+"2026-11-16"
 ],
 "es/privacy.html": [
 "4f08edb03d1e",
@@ -536,7 +536,7 @@
 "2026-11-15"
 ],
 "fr/index.html": [
-"0895a563eae7",
+"61aff3e02231",
 "2026-11-16"
 ],
 "fr/jeu/call-of-duty.html": [
@@ -632,7 +632,7 @@
 "2026-11-15"
 ],
 "fr/jeux-gratuits.html": [
-"a1dc994e2f45",
+"2eb22d0b0ecb",
 "2026-11-16"
 ],
 "fr/languages.html": [
@@ -648,8 +648,8 @@
 "2026-11-15"
 ],
 "fr/promos.html": [
-"9a6d741c4890",
-"2026-11-15"
+"2384ebfdb1d1",
+"2026-11-16"
 ],
 "fr/rumeurs.html": [
 "c13821c78713",
@@ -696,12 +696,12 @@
 "2026-11-15"
 ],
 "index.html": [
-"8a3bc18fc365",
+"ef4e85f2e6f9",
 "2026-11-16"
 ],
 "indirimler.html": [
-"989c080bd9a2",
-"2026-11-15"
+"b9f6b9576bc1",
+"2026-11-16"
 ],
 "kaynaklar.html": [
 "cc0ce3566f46",
@@ -892,7 +892,7 @@
 "2026-11-09"
 ],
 "ucretsiz-oyunlar.html": [
-"d97087080d83",
+"5d298cd2bdb8",
 "2026-11-16"
 ]
 }
