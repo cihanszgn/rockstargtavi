@@ -41,6 +41,11 @@ class GeriDoldurTests(unittest.TestCase):
             self.assertEqual(self.doldur(kuru=True), [self.h['id']])
         self.assertEqual(once, {p: p.read_bytes() for p in self.kok.rglob('*.json')})
 
+    def test_uc_sahne_sablonu_mevcut_dogrulayicidan_gecer(self):
+        hazir = vu.senaryo_hazirla(gd.senaryo_ornegi(self.h, 'tr'), self.h, 'tr')
+        self.assertEqual(len(hazir['sahneler']), 3)
+        self.assertTrue(20 <= hazir['tahmini_sure'] <= 80)
+
     def test_mevcut_dogrulayici_gecerli_senaryoyu_yazar_ve_tekrarlamaz(self):
         cagrilar = []
         def uret(prompt):
