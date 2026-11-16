@@ -423,10 +423,11 @@ class HatTests(unittest.TestCase):
 
     def _scenario_writer(self, failed_lang=None, missing_lang=None):
         oid = 'r6-siege-operation-vital-signal-duyuruldu-2026-11-15'
+        now = datetime(2026, 11, 16, 14, tzinfo=timezone.utc)
         article = next(x for x in h.oku(h.ROOT / 'data/icerik.json') if x['id'] == oid)
         article.setdefault('otomasyon', {}).update(hype=8, konu=oid,
             resmi_url=next(s['url'] for s in article['kaynaklar'] if h.oto.resmi(s['url'])),
-            teyit_zamani=datetime.now(timezone.utc).isoformat(), oyuncuya_fayda='Oyuncular yeni sezonun değişikliklerini öğrenir.')
+            teyit_zamani=now.isoformat(), oyuncuya_fayda='Oyuncular yeni sezonun değişikliklerini öğrenir.')
         scenarios = {d: h.oku(h.ROOT / f'video/senaryo/{oid}-{d}.json') for d in h.oto.DILLER}
         if failed_lang:
             scenarios[failed_lang] = {}
@@ -435,7 +436,7 @@ class HatTests(unittest.TestCase):
         value = {'durum': 'yazildi', 'haber': article, 'senaryolar': scenarios}
         self.hat.config['yazar'] = [{'ad': 'writer'}]
         candidate = dict(self._aday(0, 'Sezon'), kaynak_metni='verified ' * 80)
-        validate = lambda xs: h.oto.hazirla([], xs, senaryo_klasoru=self.root / 'video/senaryo')[1]
+        validate = lambda xs: h.oto.hazirla([], xs, now=now, senaryo_klasoru=self.root / 'video/senaryo')[1]
         with patch.object(self.hat, 'prompt', return_value='write'), \
                 patch.object(self.hat, 'model', return_value=json.dumps(value)) as model, \
                 patch.object(self.hat, 'paket_kontrol', side_effect=validate):
