@@ -367,7 +367,7 @@ def _kahraman(dil: str, o: dict, iz: str, ust: str, ana: str, vurgu: str, ozet: 
                        f'width="{gor["en"]}" height="{gor["boy"]}" loading="lazy" decoding="async" '
                        'referrerpolicy="no-referrer" onerror="this.remove()">'
                        f'<span class="kg-not">{S.e(T[dil]["gorsel_not"])}: {S.e(gor["kaynak"])}</span></div>')
-    return ('<header class="o-kahraman"><div class="o-motif" aria-hidden="true"></div>'
+    return (f'<header class="o-kahraman{" o-kahraman-gorselli" if gor else ""}"><div class="o-motif" aria-hidden="true"></div>'
             f'<span class="o-dev" aria-hidden="true">{S.e(o["kisa"])}</span>\n'
             f'<div class="wrap o-k-ic">{iz}<div class="o-k-metin"><p class="o-ust-et">{ust}</p>'
             f'<h1 class="o-h1{uzun}"><span class="o-h1-ana">{S.e(ana)}</span>{v}</h1>'
@@ -566,7 +566,8 @@ def _kapak_kutu(dil: str, o: dict, *, buyuk: bool = False, ek: str = "") -> str:
         img = (f'<img class="kg-img" src="{S.e(src)}" alt="{S.e(o["ad"])}" width="{gor["en"]}" height="{gor["boy"]}" '
                'loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">'
                f'<span class="kg-not">{S.e(T[dil]["gorsel_not"])}: {S.e(gor["kaynak"])}</span>')
-    return f'<div class="kg o-kart-kg">{ot.kapak(t, S.e(o["kisa"]), buyuk=buyuk, ek=ek)}{img}</div>'
+    sinir = " kg-sinirli" if buyuk and gor and not gor.get("genis") else ""
+    return f'<div class="kg o-kart-kg{sinir}">{ot.kapak(t, S.e(o["kisa"]), buyuk=buyuk, ek=ek)}{img}</div>'
 
 
 def kayitlar(oid: str, dil: str, veri: list, soy: list, tak: list) -> tuple[list, list, list]:
