@@ -1,0 +1,10 @@
+[Unit]
+Description=CTRL+A GAME saatlik haber hattı (her saat :10)
+
+[Timer]
+OnCalendar=*-*-* *:10:00
+Persistent=false
+AccuracySec=1s
+
+[Install]
+WantedBy=timers.target

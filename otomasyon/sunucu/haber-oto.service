@@ -1,0 +1,15 @@
+[Unit]
+Description=CTRL+A GAME çok sağlayıcılı saatlik haber hattı
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=haberci
+WorkingDirectory=/home/haberci/rockstargtavi
+ExecStart=/home/haberci/haber-hatti.sh
+TimeoutStartSec=46min
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/home/haberci
+PrivateTmp=true

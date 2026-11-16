@@ -24,7 +24,7 @@ Epic API'nin oyun adı, kampanya başlangıç/bitiş tarihi, TR bölgesi ve mağ
 
 ## Zamanlama ve çalışma
 
-Turu `py tools/haber_hatti.py` yönetir; pahalı bir yönetici model yoktur. Windows Görev Zamanlayıcı'daki `ctrl-agame saatlik haber` görevi her saat başında `conhost.exe --headless` üzerinden çalışır; canlı çalışma kopyası `C:\Cihan.Ai\03-Web\rockstargtavi-hat` klasörüdür ve her saat `origin/main` çekilir. Geliştirme kopyası `C:\Cihan.Ai\03-Web\rockstargtavi` ayrıdır; canlı kopyanın durum dosyaları geliştirme sırasında salt okunur kanıttır. `otomasyon/zamanla.ps1` varsayılan olarak yalnız görev XML'ini önizler; yönetici incelemesi sonrası `-Kaydet` ile kaydedilir. Eski T3 saatlik tetikleri artık kullanılmaz. Bilgisayarın ve kullanıcı oturumunun açık, CLI oturumlarının erişilebilir olması gerekir.
+Turu `py tools/haber_hatti.py` yönetir; pahalı bir yönetici model yoktur. Windows Görev Zamanlayıcı'daki `ctrl-agame saatlik haber` görevi her saat başında `conhost.exe --headless` üzerinden çalışır; canlı çalışma kopyası `C:\Cihan.Ai\03-Web\rockstargtavi-hat` klasörüdür ve her saat `origin/main` çekilir. Geliştirme kopyası `C:\Cihan.Ai\03-Web\rockstargtavi` ayrıdır; canlı kopyanın durum dosyaları geliştirme sırasında salt okunur kanıttır. `otomasyon/zamanla.ps1` varsayılan olarak yalnız görev XML'ini önizler; yönetici incelemesi sonrası `-Kaydet` ile kaydedilir. Eski T3 saatlik tetikleri artık kullanılmaz. Bilgisayar açıkken Windows hattı, kapalıyken aşağıdaki uzak sunucu hattı çalışır.
 
 Python önce 45 dakikalık ortak kilidi alır, temiz main kontrolünden sonra `git pull --ff-only` yapar. Pull HEAD'i değiştirirse aynı kilit sahipliğini stdin üzerinden yeni Python sürecine devrederek bir kez yeniden başlar; eski süreç tarama/model çağrısı yapmaz ve çocuğun sonuç dosyasını ezmez. İkinci HEAD değişiminde döngü korumasıyla durur. 43 dakikalık tur bütçesi ve kilit süresi yeniden başlamaz; uzak HEAD eşitliği yeni süreçte de kontrol edilir.
 
@@ -44,7 +44,32 @@ Sonnet her adayın gerekli teyit kaynaklarını bağımsız inceleyip onay/ret v
 
 Her tur yapılandırılmış kaynaklar, son 48 saat; en fazla 3 haber/tur ve 12 haber/TR günü. Yedi dil zorunlu: tr, en, es, fr, de, nl, zh. Tek kayıt `data/diller.json` dosyasıdır. Aynı kaynak URL'si, normalize başlık, id veya olay kimliği yeniden eklenmez. `otomasyon.konu` aynı olayın farklı kaynaklarında da aynı kalmalıdır. Legacy kayıtlar için anlam denetimini ajan yapar. Kotalar `kaynaklar.json` içindedir. Haber doğrulamasını ajan yapar; Python içerik doğruluğunu veya özgünlüğünü kendi başına ispatlayamaz.
 
-Günlük takvim/bakım akışı bu hattan ayrıdır; aynı yayın kilidini kullanmalıdır. Haber hattı sosyal paylaşım veya video üretim komutunu doğrudan çalıştırmaz; sosyal medya kotaları korunur.
+Günlük takvim/bakım akışı bu hattan ayrıdır; sunucuda aynı calisma.kilit ve depo içindeki SQLite yayın kilidini kullanır. Haber hattı sosyal paylaşım veya video üretim komutunu doğrudan çalıştırmaz; sosyal medya kotaları korunur.
+
+
+## Uzak sunucu
+
+17 Kasım 2026 geçişi: saatlik yürütme `haberci` kullanıcısıyla `/home/haberci/rockstargtavi` deposunda, mevcut `~/venv` ve `~/bin/py` ile yapılır. Aynı depo ve `~/calisma.kilit` korunur: günlük bakımın `calistir.sh gunluk` akışıyla hem dosya kilidi hem `.git/haber-oto/kilit.sqlite` ortaktır. Ayrı depo kopyası kullanılmaz; iki bağımsız SQLite kilidi oluşması önlenir. Günlük servis/timer ve eski `calistir.sh` değiştirilmez.
+
+`haber-oto.service` → `/home/haberci/haber-hatti.sh` (depodaki `otomasyon/sunucu-haber.sh` kopyası) → `tools/haber_hatti.py --modeller otomasyon/modeller-sunucu.json`. Timer her saat **:10** çalışır. Sarmalayıcı ortamı `~/.haber.env` üzerinden yükler; `~/gunluk/YYYY-AA-GG.log`, tur günlüğü ve `son-durum-saatlik.txt` yazar. Hata durum değişimi ve yayın aynı `~/.bildirim-adresi` üzerinden Telegram'a gider. Sır dosyalarının içeriği günlüğe yazılmaz.
+
+Sunucu yazarı: OpenCode ücretsiz `opencode/big-pickle` → Codex `gpt-6-luna` (medium) → Claude Haiku → Codex `gpt-6.1-terra` (medium) → Claude Sonnet. Denetçi: Claude Sonnet → Codex `gpt-6.1-sol` (high) → Claude Opus. Yazar Claude ise farklı sağlayıcı olan Codex denetçi önce denenir; kalan sıra korunur. Denetçisiz yayın yapılmaz. Codex `exec --json`, salt okunur sandbox, canlı web ve kabuk araçları kapalı olarak ayrı geçici klasörde çalışır; kullanıcı yapılandırması yüklenmez. Oturumsuz sağlayıcı atlanır; kota/rate-limit hatası mevcut `model-kotalari.json` beklemesine yazılır. Sunucu Ollama kurmaz, eleme boşsa kodun mevcut yedek sıralaması kullanılır. Kasa MCP'si bulunmadığında görev onu atlayarak devam eder. Windows model zinciri değişmemiştir; dosya `--modeller` veya `HABER_MODELLER` ile seçilir ve pull sonrası yeniden başlatmada korunur.
+
+Windows hattı her gerçek turun başında `ssh -o ConnectTimeout=5 -o BatchMode=yes oracle` üzerinden `/home/haberci/pc-nabiz` bırakır; sonundaki `gorulen.json` atomik olarak `/home/haberci/pc-gorulen.json` dosyasına gönderilir. `otomasyon/nabiz.json` → `etkin:false` veya `HABER_NABIZ=0` ile kapatılır. Linux ve `--deneme` bu ekleri çalıştırmaz; ağ hatası sonucu bozmaz, `sonuc.json` içindeki `esleme` alanına kaydedilir. Sunucuda nabız **50 dakikadan yeniyse** tur atlanır; tam 50 dakika ve sonrası tur çalışır. İki hafızada URL başına en yeni karar korunur. Windows canlı kopyası kodu yalnız git pull ile alır.
+
+Deneme: `sudo -u haberci /home/haberci/haber-hatti.sh --deneme --nabiz-yoksay`. Bildirim fonksiyonunun ağsız denemesi: `sudo -u haberci /home/haberci/haber-hatti.sh --bildirim-deneme`. Yalnız saatliği durdurma: `sudo systemctl stop haber-oto.timer haber-oto.service`. Günlük bakım bundan bağımsızdır.
+
+Değiştirilen eski birimler `/home/haberci/yedek-2026-11-17/` altına alınır; eski `calistir.sh` yerinde kalır. Geri alma:
+
+```bash
+sudo systemctl stop haber-oto.timer haber-oto.service
+sudo cp -p /home/haberci/yedek-2026-11-17/haber-oto.service /etc/systemd/system/haber-oto.service
+sudo cp -p /home/haberci/yedek-2026-11-17/haber-oto.timer /etc/systemd/system/haber-oto.timer
+sudo systemctl daemon-reload
+sudo systemctl start haber-oto.timer
+```
+
+Yedek birimler eski `/home/haberci/calistir.sh saatlik` yoluna ve saat başı zamanına döndürür; günlük servise dokunulmaz.
 
 ## Komutlar
 
