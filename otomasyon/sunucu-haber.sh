@@ -21,8 +21,8 @@ done
 yaz() { echo "$(date '+%F %T') [saatlik-hat] $*" | tee -a "$LOG"; }
 bildir() {
   [ -s "$H/.bildirim-adresi" ] || return 1
-  if [ "$BILDIRIM_KURU" = 1 ]; then echo "BILDIRIM_KURU: adres tanımlı; JSON üretildi; POST yapılmadı"; return 0; fi
   printf '%s' "$1" | py -c 'import json,sys; print(json.dumps({"metin":sys.stdin.read()[:3500]}))' > "$H/calisma/hat-bildirim.json" || return 1
+  if [ "$BILDIRIM_KURU" = 1 ]; then echo "BILDIRIM_KURU: adres tanımlı; JSON üretildi; POST yapılmadı"; return 0; fi
   local http
   http=$(curl -s --max-time 20 -o /dev/null -w '%{http_code}' -X POST -H 'Content-Type: application/json' --data @"$H/calisma/hat-bildirim.json" "$(cat "$H/.bildirim-adresi")") || return 1
   [[ "$http" = 2* ]]
@@ -52,6 +52,7 @@ yaz "tur başladı deneme=$DENEME; bilgisayar nabzı eski veya denemede devre d�
 [ -s "$H/.haber.env" ] && { set -a; . "$H/.haber.env"; set +a; }
 git pull --ff-only origin main >> "$LOG" 2>&1 || bitir 3 'git pull başarısız; ağaç korundu'
 # PC hafızası atomik teslim edilir. Her URL için iki makinedeki en yeni kararı tut.
+if [ "$DENEME" = 0 ]; then
 py - <<'PY' >> "$LOG" 2>&1
 import json, pathlib
 from datetime import datetime
@@ -73,6 +74,7 @@ try:
 except (OSError, ValueError) as exc:
     print('PC hafızası aktarılmadı (tur devam ediyor):', type(exc).__name__)
 PY
+fi
 ARGS=(--modeller "${HABER_MODELLER:-otomasyon/modeller-sunucu.json}")
 [ "$DENEME" = 1 ] && ARGS+=(--deneme)
 RUN=$G/hat-$(date +%Y%m%d-%H%M%S)-$$.log
