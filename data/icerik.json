@@ -1,5 +1,91 @@
 [
  {
+  "id": "dreadmoor-early-access-update-7-2026-11-16",
+  "oyun": "DREADMOOR",
+  "tarih": "2026-11-16",
+  "tur": "guncelleme",
+  "kaynaklar": [
+   {
+    "ad": "Steam resmî duyurusu",
+    "url": "https://store.steampowered.com/news/app/3629430/view/688648135317127903"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "DREADMOOR Erken Erişim 7. güncellemesi yayında: kayıt ve görev düzeltmeleri",
+    "ozet": "Kayıt yükleme, görev takılmaları, balık tutma ve tekne kontrolleri için düzeltmeler.",
+    "metin": "DREADMOOR'un Erken Erişim 7. güncellemesi yayımlandı. Geliştirici, güncellemenin kayıt ve yükleme güvenilirliği, görev ilerlemesi, nesnelerle etkileşim ve balık tutmaya odaklandığını; tekne kontrolleri, eğitimler ve arayüzdeki sorunların da düzeltildiğini açıkladı. Bir kayıt yüklendikten sonra bazı araçların ve görev eşyalarının alınamaması, vinç çöküş sahnesinin yeniden oynanması ve ilk görevin kaydından sonra teknenin kilitli kalması düzeltildi. Ara sahnelerden, savaştan ya da başka durumlardan sonra kaydetmenin kilitli kalması da giderildi. Escape görevi, suda yüzen canavarın geçtiği sırada kaydedildiğinde takılabiliyordu; Kanca Silahı sırasındaki atlanabilir bir tetikleyici de düzeltildi. Tekne üzerindeki pusula yönü ve gamepad ile kontrol panelindeki kamera konumu iyileştirildi. Oyun dosyalarına iki yeni balık eklendi; ancak bu balıklar henüz oyun dünyasında değil ve yakalanamıyor."
+   },
+   "en": {
+    "baslik": "DREADMOOR Early Access Update 7 is live with save and quest fixes",
+    "ozet": "Fixes for save loading, quest progression, fishing and boat controls.",
+    "metin": "DREADMOOR's seventh Early Access update is now live. The developer says it focuses on save and load reliability, quest progression, player interactions and fishing, with fixes for boat controls, tutorials and the interface. Players who loaded a save could find tools and quest items impossible to pick up, the crane-collapse sequence could replay, and the boat could stay locked after loading a save from the first quest. Saving could also remain blocked after cutscenes, combat or other situations, and docking points in hubs now keep their state. The Escape quest could get stuck when saved during the water monster sequence, and a skippable trigger in the Hook Gun sequence has been fixed. On the boat, the compass orientation and the gamepad camera at the control panel were corrected. Two new fish were added to the game files, but they are not in the world yet and cannot be caught. Bug reports can be sent through Steam Discussions or the official Discord."
+   },
+   "fr": {
+    "baslik": "DREADMOOR : la mise à jour 7 en accès anticipé est disponible",
+    "ozet": "Corrections pour les chargements de sauvegarde, les quêtes, la pêche et le bateau.",
+    "metin": "La septième mise à jour en accès anticipé de DREADMOOR est désormais disponible. Selon le développeur, elle se concentre sur la fiabilité des sauvegardes et des chargements, la progression des quêtes, les interactions avec le monde et la pêche, avec aussi des corrections pour le bateau, les tutoriels et l'interface. Après le chargement d'une sauvegarde, certains outils et objets de quête pouvaient devenir impossibles à ramasser, la séquence de l'effondrement de la grue pouvait se rejouer, et le bateau pouvait rester bloqué après une sauvegarde faite pendant la première quête. La sauvegarde pouvait aussi rester bloquée après des cinématiques ou des combats. La quête Escape pouvait se bloquer si l'on sauvegardait pendant le passage du monstre aquatique, et un déclencheur de la séquence du Hook Gun pouvait être contourné. Le compas du bateau et la caméra du panneau de contrôle avec manette ont été corrigés. Deux nouveaux poissons ont été ajoutés aux fichiers du jeu, mais ils ne sont pas encore dans le monde et ne peuvent pas être pêchés. Les bugs peuvent être signalés sur les discussions Steam ou sur le Discord officiel."
+   },
+   "es": {
+    "baslik": "DREADMOOR publica la actualización 7 de acceso anticipado",
+    "ozet": "Correcciones en la carga de partidas, las misiones, la pesca y el control del barco.",
+    "metin": "La séptima actualización de acceso anticipado de DREADMOOR ya está disponible. Según el desarrollador, se centra en la fiabilidad de guardado y carga, el avance de las misiones, las interacciones con objetos y la pesca, además de corregir el barco, los tutoriales y la interfaz. Después de cargar una partida, algunas herramientas y objetos de misión podían quedar imposibles de recoger, la secuencia del derrumbe de la grúa podía repetirse y el barco podía seguir bloqueado tras cargar una partida guardada en la primera misión. Guardar también podía quedar bloqueado después de escenas, combates u otras situaciones. La misión Escape podía atascarse si se guardaba durante el paso del monstruo acuático, y un disparador de la secuencia del Hook Gun podía saltarse. Se corrigieron la orientación de la brújula del barco y la cámara del panel de control con mando. Se añadieron dos peces nuevos a los archivos del juego, pero aún no están en el mundo y no se pueden capturar. Los errores se pueden reportar en los debates de Steam o en el Discord oficial."
+   }
+  },
+  "otomasyon": {
+   "konu": "dreadmoor-early-access-7-2026-11-16",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/3629430/view/688648135317127903",
+   "teyit_zamani": "2026-11-16T19:02:00+00:00",
+   "oyuncuya_fayda": "Kayıt yükleme, görev ilerlemesi ve tekne kontrolündeki sorunların düzeltmelerini Erken Erişim oyuncuları güncellemeyle alır.",
+   "hype": 3,
+   "eklenme": "2026-11-16T22:03:07.942230+03:00"
+  }
+ },
+ {
+  "id": "borderlands-4-boss-blitz-skins-2026-11-16",
+  "oyun": "Borderlands 4",
+  "tarih": "2026-11-16",
+  "tur": "haber",
+  "kaynaklar": [
+   {
+    "ad": "Steam resmî duyurusu",
+    "url": "https://store.steampowered.com/news/app/1285190/view/693151734943450275"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Borderlands 4 topluluğu 6 milyondan fazla boss yendi, dört kaplama açıldı",
+    "ozet": "Topluluk ödülü olarak dört silah kaplaması, SHiFT kodu ile 31 Aralık 2030'a kadar alınabilir.",
+    "metin": "Borderlands 4 oyuncuları Boss Blitz Topluluk Mücadelesi'nde toplam 6.261.242 boss yendi. Steam'deki resmî duyuruya göre bu başarının ödülü dört yeni silah kaplaması: Troubled Upbringing, Fresh Spray, Tally Them All ve Merch Line. Kaplamalar herhangi bir silaha uygulanabildiği için tüm Vault Hunter'lar kullanabilir. Her biri oyunun bir Vault Hunter'ından ilham alıyor: Troubled Upbringing Vex'ten, Fresh Spray Rafa'dan, Tally Them All Amon'dan, Merch Line ise Harlowe'dan. Ödülü almak için kod, Gearbox SHiFT sitesinde ya da oyun içindeki SHiFT menüsünde kullanılır. Kod her SHiFT hesabında bir kez geçerli ve 31 Aralık 2030'a kadar kullanılmalı. Borderlands 4 kopyası ve SHiFT hesabı gerekiyor. Duyuruya göre önceki topluluk mücadelelerinin ödülleri de aynı sistemle alınabiliyor."
+   },
+   "en": {
+    "baslik": "Borderlands 4 community beats 6.2 million bosses, unlocks four skins",
+    "ozet": "Four weapon skins are unlocked as a community reward, redeemable with a SHiFT code until December 31, 2030.",
+    "metin": "Borderlands 4 players have defeated 6,261,242 bosses in the Boss Blitz Community Challenge, and the official Steam announcement says the reward is four new weapon skins. Troubled Upbringing, Fresh Spray, Tally Them All and Merch Line can be applied to any gun, so every Vault Hunter can use them. Each one is inspired by a base-game Vault Hunter: Troubled Upbringing by Vex, Fresh Spray by Rafa, Tally Them All by Amon and Merch Line by Harlowe. Players redeem the reward with a SHiFT code, either on the Gearbox SHiFT website or from the in-game SHiFT menu. Each code works once per SHiFT account and must be redeemed by December 31, 2030. A copy of Borderlands 4 and a SHiFT account are required. The announcement also says rewards from earlier Community Challenges can still be claimed the same way."
+   },
+   "fr": {
+    "baslik": "La communauté de Borderlands 4 a vaincu 6,2 millions de boss : quatre skins débloquées",
+    "ozet": "Quatre skins d'arme débloquées en récompense communautaire, à réclamer avec un code SHiFT jusqu'au 31 décembre 2030.",
+    "metin": "Les joueurs de Borderlands 4 ont vaincu 6 261 242 boss lors du Boss Blitz Community Challenge, et l'annonce officielle sur Steam indique que la récompense est constituée de quatre nouveaux skins d'arme. Troubled Upbringing, Fresh Spray, Tally Them All et Merch Line peuvent être appliqués à n'importe quelle arme, donc chaque Vault Hunter peut les utiliser. Chacun s'inspire d'un Vault Hunter du jeu de base : Troubled Upbringing rappelle Vex, Fresh Spray rappelle Rafa, Tally Them All rappelle Amon et Merch Line rappelle Harlowe. La récompense se réclame avec un code SHiFT, sur le site SHiFT de Gearbox ou dans le menu SHiFT du jeu. Chaque code ne fonctionne qu'une fois par compte SHiFT et doit être utilisé avant le 31 décembre 2030. Une copie de Borderlands 4 et un compte SHiFT sont nécessaires. L'annonce précise aussi que les récompenses des défis communautaires précédents peuvent être réclamées de la même façon."
+   },
+   "es": {
+    "baslik": "La comunidad de Borderlands 4 derrotó a 6,2 millones de jefes y desbloquea cuatro skins",
+    "ozet": "Cuatro skins de arma desbloqueadas como recompensa comunitaria, canjeables con un código SHiFT hasta el 31 de diciembre de 2030.",
+    "metin": "Los jugadores de Borderlands 4 derrotaron a 6.261.242 jefes en el Boss Blitz Community Challenge, y el anuncio oficial en Steam indica que la recompensa son cuatro nuevas skins de arma. Troubled Upbringing, Fresh Spray, Tally Them All y Merch Line se pueden aplicar a cualquier arma, así que todos los Vault Hunter pueden usarlas. Cada una se inspira en un Vault Hunter del juego base: Troubled Upbringing en Vex, Fresh Spray en Rafa, Tally Them All en Amon y Merch Line en Harlowe. La recompensa se canjea con un código SHiFT, en la web de SHiFT de Gearbox o en el menú SHiFT del juego. Cada código funciona una vez por cuenta SHiFT y debe canjearse antes del 31 de diciembre de 2030. Se necesita una copia de Borderlands 4 y una cuenta SHiFT. El anuncio también indica que las recompensas de desafíos comunitarios anteriores pueden reclamarse de la misma forma."
+   }
+  },
+  "otomasyon": {
+   "konu": "borderlands-4-boss-blitz-skinleri-2026-11-16",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/1285190/view/693151734943450275",
+   "teyit_zamani": "2026-11-16T19:02:00+00:00",
+   "oyuncuya_fayda": "Borderlands 4 kopyası ve SHiFT hesabı olan oyuncular dört kaplamayı kodla alabilir.",
+   "hype": 4,
+   "eklenme": "2026-11-16T22:03:07.942230+03:00"
+  }
+ },
+ {
   "id": "just-volleyball-resmi-cikis-2026-11-16",
   "oyun": "Just Volleyball",
   "tarih": "2026-11-16",
