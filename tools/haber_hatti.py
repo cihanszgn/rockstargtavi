@@ -103,8 +103,9 @@ def yerel_tek(helper, model, context):
     # Tags/ps yanıtı üretim sağlığını kanıtlamaz. Takılı Ollama kuyruğunda
     # her parçada 170 sn beklemek yerine tek, kısa yükleme denemesi yap.
     warmup = urllib.request.Request(module.ADRES, headers={'Content-Type': 'application/json'},
-        data=json.dumps({'model': selected, 'stream': False, 'keep_alive': '5m',
-                         'options': {'num_ctx': context}}).encode('utf-8'))
+        data=json.dumps({'model': selected, 'prompt': 'Return {}.', 'think': False,
+                         'stream': False, 'keep_alive': '5m',
+                         'options': {'num_ctx': context, 'num_predict': 1}}).encode('utf-8'))
     try:
         with urllib.request.urlopen(warmup, timeout=30) as response:
             loaded = json.load(response)

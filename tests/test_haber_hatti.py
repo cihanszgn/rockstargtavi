@@ -190,6 +190,9 @@ class HatTests(unittest.TestCase):
         self.assertEqual(body['options']['num_ctx'], 4096)
         self.assertEqual(body['format'], 'json')
         self.assertEqual(request.call_args_list[0].kwargs['timeout'], 30)
+        health = json.loads(request.call_args_list[0].args[0].data)
+        self.assertTrue(health['prompt'])
+        self.assertEqual(health['options']['num_predict'], 1)
         self.assertEqual(body['keep_alive'], '5m')
 
     def test_local_warmup_outage_is_explicit_and_never_starts_generation(self):

@@ -79,6 +79,15 @@ class HypeTests(unittest.TestCase):
                 h.hazirla([], [x], NOW, self.klasor)
 
 class NewsTests(unittest.TestCase):
+    def test_raw_source_bodies_remain_internal_and_existing_content_is_preserved(self):
+        new, old = article('new'), article('old')
+        new['otomasyon']['kaynak_metinleri'] = [{'kaynak_metni': 'raw article body'}]
+        old['otomasyon']['kaynak_metinleri'] = [{'kaynak_metni': 'already existing'}]
+        public = h.yayin_verisi([new, old], [new])
+        self.assertNotIn('kaynak_metinleri', public[0]['otomasyon'])
+        self.assertIs(public[1], old)
+        self.assertIn('kaynak_metinleri', new['otomasyon'])
+
     def test_python_source_timestamp_is_recent_read_evidence(self):
         x = article()
         x['otomasyon']['teyit_zamani'] = (NOW - timedelta(hours=3)).isoformat()

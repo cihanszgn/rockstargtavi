@@ -622,6 +622,18 @@ def json_yaz(path, value):
     path.write_text(json.dumps(value, ensure_ascii=False, indent=1) + '\n', encoding='utf-8', newline='\n')
 
 
+def yayin_verisi(merged, added):
+    """Ham kaynak gövdesi iç denetim kanıtında kalır; siteye kopyalanmaz."""
+    ids = {x['id'] for x in added}
+    public = []
+    for item in merged:
+        if item['id'] in ids:
+            item = json.loads(json.dumps(item, ensure_ascii=False))
+            item['otomasyon'].pop('kaynak_metinleri', None)
+        public.append(item)
+    return public
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('eylem', choices=['tara', 'kilit-al', 'kilit-kontrol', 'kilit-birak', 'hazirla', 'kontrol'])
@@ -663,7 +675,7 @@ def main():
                 raise ValueError('içerik eşzamanlı değişti; yeniden hazırla')
             # Geri alma dosyası yalnız bu çalıştırmanın kendi haber değişikliğini kapsar.
             (state / 'icerik-once.json').write_bytes(original)
-            json_yaz(ROOT / 'data/icerik.json', merged)
+            json_yaz(ROOT / 'data/icerik.json', yayin_verisi(merged, added))
         result = {'eklenen': [x['id'] for x in added], 'adet': len(added), 'uygulandi': bool(args.uygula and added),
                   'onizleme': str(state / 'onizleme.json')}
     print(json.dumps(result, ensure_ascii=False))
