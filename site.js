@@ -106,6 +106,10 @@
   if (MAC) $$('[data-mod]').forEach(function (k) { k.textContent = '\u2318'; });
 
   // ------------------------------------------------------------ dil seçici
+  $$('img.kg-img').forEach(function (img) {
+    img.addEventListener('error', function () { img.remove(); });
+    if (img.complete && !img.naturalWidth) img.remove();
+  });
   (function () {
     var kayit = d.getElementById('cag-dil-onerileri'), diller;
     if (!kayit || depo.al('cag-dil-oneri')) return;

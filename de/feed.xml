@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Spiele-News | CTRL+A GAME</title>
+  <link>https://ctrl-agame.com/de/spiele-news.html</link>
+  <description>Belegte Spiele-News für alle Plattformen: Veröffentlichungen, Gratisspiele, Angebote und Updates. Jede Meldung nennt ihre offizielle Quelle.</description>
+  <language>de</language>
+  <lastBuildDate>Sat, 14 Nov 2026 12:00:00 GMT</lastBuildDate>
+  <atom:link href="https://ctrl-agame.com/de/spiele-news.xml" rel="self" type="application/rss+xml"/>
+</channel>
+</rss>

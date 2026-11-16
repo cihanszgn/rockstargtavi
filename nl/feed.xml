@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Gamenieuws | CTRL+A GAME</title>
+  <link>https://ctrl-agame.com/nl/gamenieuws.html</link>
+  <description>Geverifieerd gamenieuws voor alle platforms: releases, gratis games, aanbiedingen en updates. Elk bericht verwijst naar de officiële bron.</description>
+  <language>nl</language>
+  <lastBuildDate>Sat, 14 Nov 2026 12:00:00 GMT</lastBuildDate>
+  <atom:link href="https://ctrl-agame.com/nl/gamenieuws.xml" rel="self" type="application/rss+xml"/>
+</channel>
+</rss>

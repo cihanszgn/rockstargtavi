@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>游戏新闻 | CTRL+A GAME</title>
+  <link>https://ctrl-agame.com/zh/youxi-xinwen.html</link>
+  <description>涵盖各平台的已核实游戏新闻：发售、免费游戏、优惠与更新。每篇报道均附官方来源。</description>
+  <language>zh</language>
+  <lastBuildDate>Sat, 14 Nov 2026 12:00:00 GMT</lastBuildDate>
+  <atom:link href="https://ctrl-agame.com/zh/youxi-xinwen.xml" rel="self" type="application/rss+xml"/>
+</channel>
+</rss>

@@ -710,12 +710,12 @@ def kapak_tema(oyun: str) -> tuple[str, dict, str]:
 def kapak_html(dil: str, oyun: str, *, ek: str, alt: str = "", gorsel: dict | None = None, rozet: str = "",
                sinif: str = "", video: dict | None = None) -> str:
     """Kart görseli: altta üretilmiş kapak (her zaman), varsa üstünde kaynağın görseli.
-    Görsel yüklenemezse onerror onu kaldırır ve kapak görünür; JS kapalıyken de ikisinden biri görünür."""
+    Görsel yüklenemezse site.js onu kaldırır ve kapak görünür."""
     ts, t, kisa = kapak_tema(oyun)
     img = ""
     if gorsel:
         img = (f'<img class="kg-img" src="{e(gorsel["url"])}" alt="{e(alt)}" width="{gorsel["en"]}" height="{gorsel["boy"]}" '
-               'loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">'
+               'loading="lazy" decoding="async" referrerpolicy="no-referrer">'
                f'<span class="kg-not">{e(T[dil]["gorsel_not"])}: {e(gorsel["kaynak"])}</span>')
     kimlik = re.sub(r"[^a-z0-9-]", "", ek.lower())
     if video:  # video yalnız veri olarak taşınır; site.js görünür olunca yükler
