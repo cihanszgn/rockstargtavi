@@ -71,13 +71,13 @@
   "konusmaci": {
    "tr": [
     "tr-TR-Aydin:MAI-Voice-2.1",
-    "tr-TR-EmelNeural",
-    "tr-TR-AhmetNeural"
+    "tr-TR-Elif:MAI-Voice-2.1",
+    "tr-TR-Grant:MAI-Voice-2.1"
    ],
    "en": [
-    "en-US-AndrewNeural",
-    "en-US-AvaNeural",
-    "en-US-BrianNeural"
+    "en-US-Ethan:MAI-Voice-2.1",
+    "en-US-Harper:MAI-Voice-2.1",
+    "en-US-Jasper:MAI-Voice-2.1"
    ],
    "es": [
     "es-ES-AlvaroNeural",
@@ -90,19 +90,19 @@
     "fr-FR-RemyMultilingualNeural"
    ],
    "de": [
-    "de-DE-ChristophNeural",
-    "de-DE-TanjaNeural",
-    "de-AT-JonasNeural"
+    "de-DE-Klaus:MAI-Voice-2.1",
+    "de-DE-Mia:MAI-Voice-2.1",
+    "de-DE-Grant:MAI-Voice-2.1"
    ],
    "nl": [
-    "nl-NL-MaartenNeural",
-    "nl-NL-ColetteNeural",
-    "nl-BE-ArnaudNeural"
+    "nl-NL-Sander:MAI-Voice-2.1",
+    "nl-NL-Harper:MAI-Voice-2.1",
+    "nl-NL-Grant:MAI-Voice-2.1"
    ],
    "zh": [
-    "zh-CN-YunxiNeural",
-    "zh-CN-XiaoxiaoNeural",
-    "zh-CN-YunjianNeural"
+    "zh-CN-Bo:MAI-Voice-2.1",
+    "zh-CN-Lan:MAI-Voice-2.1",
+    "zh-CN-Wei:MAI-Voice-2.1"
    ]
   },
   "yukleme_hedefi": "medyayukle@medya.ctrl-agame.com:/var/www/medya/v/",

@@ -185,8 +185,9 @@ class SesSecimiTests(unittest.TestCase):
 
     def test_ayardaki_her_dilde_uc_ses_ve_bir_kadin(self):
         ayarlar = json.loads((ROOT / 'sosyal' / 'ayarlar.json').read_text(encoding='utf-8'))['video']['konusmaci']
-        kadin = {'tr': 'Emel', 'en': 'Ava', 'es': 'Elvira', 'fr': 'Denise', 'de': 'Tanja', 'nl': 'Colette',
-                 'zh': 'Xiaoxiao'}
+        # Doğal ses ailesi (MAI-Voice-2.1); standart Neural sesler robotik bulundu (Cio, 2026-11-16).
+        kadin = {'tr': 'Elif', 'en': 'Harper', 'es': 'Elvira', 'fr': 'Denise', 'de': 'Mia', 'nl': 'Harper',
+                 'zh': 'Lan'}
         for dil, liste in ayarlar.items():
             self.assertEqual(len(liste), 3, dil)
             self.assertEqual(sum(any(k in s for k in kadin.values()) for s in liste), 1, f'{dil}: tam bir kadın sesi')
