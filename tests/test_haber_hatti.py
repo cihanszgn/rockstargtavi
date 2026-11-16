@@ -319,6 +319,19 @@ class HatTests(unittest.TestCase):
         self.assertEqual([x['id'] for x in result], ['2', '3', '4'])
         self.assertEqual(write.call_count, 5)
 
+    def test_publish_reads_approved_packet_instead_of_last_writer_draft(self):
+        approved = [{'id': 'approved'}]
+        h.oto.json_yaz(self.hat.state / 'onayli-paket.json', approved)
+        h.oto.json_yaz(self.hat.state / 'paket.json', [{'id': 'rejected-later-draft'}])
+        captured = []
+        def validate_only(*args, **kwargs):
+            captured.extend(h.oku(pathlib.Path(args[2])))
+            raise ValueError('stop before applying or publishing')
+        with patch.object(self.hat, 'oto', side_effect=validate_only), \
+                self.assertRaisesRegex(ValueError, 'stop before'):
+            self.hat.yayinla(approved, 'test-owner-token')
+        self.assertEqual(captured, approved)
+
     def test_configured_attempt_ceiling_and_time_budget(self):
         limit = h.oto.CONFIG['sinirlar']['yazim_deneme']
         candidates = [self._aday(i, f'Haber {i}') for i in range(limit + 3)]

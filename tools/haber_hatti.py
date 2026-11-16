@@ -650,7 +650,7 @@ class Hat:
         exclude.parent.mkdir(parents=True, exist_ok=True)
         try:
             exclude.write_bytes(original + b'\n' + '\n'.join('/' + n for n in scenarios).encode('utf-8') + b'\n')
-            self.oto('hazirla', '--batch', str(self.state / 'paket.json'), '--uygula', '--token', token)
+            self.oto('hazirla', '--batch', str(self.state / 'onayli-paket.json'), '--uygula', '--token', token)
         finally:
             exclude.write_bytes(original)
         for x in articles:
