@@ -1,7 +1,7 @@
 {
+ "onay_gerekli": false,
  "surum": 1,
  "taban": "https://medya.ctrl-agame.com/v/",
- "onay_gerekli": false,
  "videolar": {
   "battlefield-6-ucretsiz-deneme-casino-heist-2026-11-13": {
    "tr": {
@@ -30,7 +30,7 @@
     "sure": 30.9,
     "uretildi": "2026-11-17T00:05:12+03:00",
     "vtt": "just-volleyball-resmi-cikis-2026-11-16-tr-7dd3f893e01c.vtt",
-    "youtube": ""
+    "youtube": "https://www.youtube.com/shorts/DqHTK1EteVc"
    }
   },
   "r6-siege-operation-vital-signal-duyuruldu-2026-11-15": {
