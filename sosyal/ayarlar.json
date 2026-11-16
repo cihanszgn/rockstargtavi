@@ -16,8 +16,8 @@
    "x": false,
    "reddit": false,
    "instagram": true,
-   "instagram_reel": false,
-   "youtube": false
+   "instagram_reel": true,
+   "youtube": true
   },
   "en": {
    "x": false,
