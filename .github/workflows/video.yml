@@ -77,7 +77,7 @@ jobs:
           : > bekleyen.txt
           hata=0
           for dil in $DILLER; do
-            if ! python tools/video_uret.py bekleyenler --dil "$dil" > "bekleyen-$dil.txt"; then
+            if ! python tools/video_uret.py bekleyenler --dil "$dil" --arsiv > "bekleyen-$dil.txt"; then
               echo "::error::Bekleyenler listelenemedi: $dil"
               hata=1
             fi

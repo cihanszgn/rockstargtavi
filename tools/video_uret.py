@@ -1740,7 +1740,7 @@ def bugun_uretilen_dil(m: dict, dil: str, bugun: date) -> int:
                if d == dil and str(g.get("uretildi", ""))[:10] == bugun.isoformat())
 
 
-def bekleyenler(dil: str = "tr", gunluk: bool = False, bugun: date | None = None, cikti=print) -> list[str]:
+def bekleyenler(dil: str = "tr", gunluk: bool = False, bugun: date | None = None, cikti=print, arsiv: bool = False) -> list[str]:
     """Son günlerin (sosyal/ayarlar.json en_eski_gun, varsayılan 3) geçerli senaryolu ama hazır videosu olmayan haberleri.
     gunluk=True: günlük kota dil başınadır (video.gunluk_en_fazla her dil için ayrı sayılır)."""
     ayarlar = json_oku(AYARLAR) if AYARLAR.exists() else {}
@@ -1758,7 +1758,9 @@ def bekleyenler(dil: str = "tr", gunluk: bool = False, bugun: date | None = None
             gun = (bugun - date.fromisoformat(h.get("tarih", ""))).days
         except ValueError:
             continue
-        if not 0 <= gun <= ayarlar.get("en_eski_gun", 3) or not (SENARYO / f"{h['id']}-{dil}.json").exists():
+        from sosyal_kuyruk import arsive_uygun
+        yas_uygun = 0 <= gun <= ayarlar.get("en_eski_gun", 3) or (arsiv and gun > 0 and arsive_uygun(h))
+        if not yas_uygun or not (SENARYO / f"{h['id']}-{dil}.json").exists():
             continue
         if not hype_yeterli(h, ayar["hype_esigi"]):
             continue
@@ -1792,12 +1794,13 @@ def main(argv: list[str] | None = None) -> int:
     b = alt.add_parser("bekleyenler")
     b.add_argument("--dil", default="tr")
     b.add_argument("--gunluk", action="store_true", help="video.gunluk_en_fazla sınırını uygula")
+    b.add_argument("--arsiv", action="store_true", help="kalıcı türdeki eski haberlerin geçerli senaryolarını da listele")
     a = p.parse_args(argv)
     try:
         if a.komut == "dogrula":
             return dogrula(a.id, a.dil)
         if a.komut == "bekleyenler":
-            bekleyenler(a.dil, a.gunluk)
+            bekleyenler(a.dil, a.gunluk, arsiv=a.arsiv)
             return 0
         uret(a.id, a.dil, a.ses, a.yukle, a.zorla)
         return 0

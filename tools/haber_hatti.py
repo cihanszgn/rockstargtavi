@@ -114,7 +114,7 @@ def temiz_ortam():
     return env
 
 
-def yerel_tek(helper, model, context, saglik=False):
+def yerel_tek(helper, model, context, saglik=False, cikti_token=768):
     """Var olan yardımcının model/adres kaydını kullan; 6 GB VRAM için kısa bağlam."""
     spec = importlib.util.spec_from_file_location('yerel_sor', helper)
     module = importlib.util.module_from_spec(spec)
@@ -141,7 +141,7 @@ def yerel_tek(helper, model, context, saglik=False):
     request = urllib.request.Request(module.ADRES, headers={'Content-Type': 'application/json'},
                 data=json.dumps({'model': selected, 'prompt': prompt,
                                  'stream': True, 'think': False, 'format': 'json', 'keep_alive': '45m',
-                                 'options': {'num_ctx': context, 'num_predict': 768, 'temperature': 0.2}}).encode('utf-8'))
+                                 'options': {'num_ctx': context, 'num_predict': cikti_token, 'temperature': 0.2}}).encode('utf-8'))
     with urllib.request.urlopen(request, timeout=60) as response:
         parts = [json.loads(line.decode('utf-8')) for line in response if line.strip()]
     for part in parts:
@@ -965,11 +965,12 @@ def main():
     parser.add_argument('--yardimci', type=pathlib.Path, help=argparse.SUPPRESS)
     parser.add_argument('--model', help=argparse.SUPPRESS)
     parser.add_argument('--baglam', type=int, default=4096, help=argparse.SUPPRESS)
+    parser.add_argument('--cikti-token', type=int, default=768, help=argparse.SUPPRESS)
     parser.add_argument('--saglik', action='store_true', help=argparse.SUPPRESS)
     parser.add_argument('--yeniden-head', help=argparse.SUPPRESS)
     args = parser.parse_args()
     if args.yerel:
-        return yerel_tek(args.yardimci, args.model, args.baglam, args.saglik)
+        return yerel_tek(args.yardimci, args.model, args.baglam, args.saglik, args.cikti_token)
     devral = json.load(sys.stdin) if args.yeniden_head else None
     return Hat(deneme=args.deneme).calistir(devral, args.yeniden_head)
 
