@@ -1,6 +1,8 @@
 import copy
 import json
 import pathlib
+import os
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -167,6 +169,45 @@ class KuyrukTests(unittest.TestCase):
     def test_her_platform_bir_kez_buyuk_calisma_kotasi_bile(self):
         self.ayar["calisma_basina_en_fazla"] = 100
         self.assertEqual(len(self.sec([haber("a"), haber("b")], {})), 1)
+
+    def test_benzetim_24_saat_kaydi_ve_agi_degistirmez(self):
+        # Gerçek seçiciye 24 farklı haber ver; hiçbir ortam sırrı okunmamalı.
+        from unittest.mock import patch
+        once = {p: p.read_bytes() for p in self.kok.rglob('*.json')}
+        self.ayar['turler'] = {t: t == 'haber' for t in sk.TURLER}
+        veri = [haber(f'h-{i:02d}') for i in range(24)]
+        kayit = {}
+        with patch.object(sy, 'sirlari_oku', side_effect=AssertionError('Sır okundu')):
+            secimler = sy.benzet(self.ayar, veri, kayit, self.kok / 'manifest.json', SIMDI, 24,
+                                kok=self.kok, cikti=lambda *_: None)
+        self.assertEqual(len(secimler), 24)
+        self.assertEqual(len({r['saat'] for r in secimler}), 24)
+        self.assertEqual(len({r['anahtar'] for r in secimler}), 24)
+        self.assertEqual(kayit, {})
+        self.assertEqual(once, {p: p.read_bytes() for p in self.kok.rglob('*.json')})
+
+    def test_instagram_reel_ve_gorsel_ayni_calismada_yok(self):
+        self.ayar['hesaplar']['tr']['instagram_reel'] = True
+        self.ayar['video'] = {'hype_esigi': 5}
+        manifest = {'surum': 1, 'taban': 'https://example.com/', 'videolar': {'yeni': {'tr': {
+            'anahtar': 'k', 'sure': 30, 'mp4_1080': 'a.mp4', 'mp4_720': 'b.mp4', 'mp4_540': 'c.mp4',
+            'kapak': 'a.jpg', 'vtt': 'a.vtt', 'uretildi': SIMDI.isoformat(), 'onay': True}}}}
+        (self.kok / 'manifest.json').write_text(json.dumps(manifest), encoding='utf-8')
+        kayit = {}
+        secim = self.sec(self.adaylar(), kayit)
+        self.assertEqual(len(secim), 1)
+        self.assertEqual(secim[0]['bicim'], 'reel')
+
+    def test_utf8_cli_windows_konsol_ayarindan_bagimsiz(self):
+        env = os.environ.copy()
+        env.pop('PYTHONIOENCODING', None)
+        env.pop('PYTHONUTF8', None)
+        kok = pathlib.Path(__file__).resolve().parents[1]
+        for ad in ('sosyal_yayinla', 'sosyal_derle', 'video_geri_doldur', 'haber_oto'):
+            r = subprocess.run([sys.executable, str(kok / f'tools/{ad}.py'), '--help'],
+                               capture_output=True, env=env, timeout=15)
+            self.assertEqual(r.returncode, 0)
+            self.assertIn('usage:', r.stdout.decode('utf-8'))
 
 
 if __name__ == "__main__":

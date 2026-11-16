@@ -29,6 +29,8 @@ from __future__ import annotations
 
 import argparse
 import base64
+import copy
+from collections import Counter
 import hashlib
 import hmac
 import json
@@ -740,6 +742,40 @@ def sayfa_bekle(ag, veri=None, deneme=40, aralik=15, diller=None) -> int:
     return 0
 
 
+def benzet(ayar, veri, kayit, manifest_yolu, baslangic, saat, *, kok=KOK, cikti=print):
+    """TR hesap yeteneklerini taklit eder; sır okumaz, ağa çıkmaz, kayıt yazmaz.
+
+    Aynı yayın seçicisi ve gerçek kayıt/kota kullanılır. Videolar üretilmiş varsayılmaz.
+    """
+    bellek, _ = kayit_goc(copy.deepcopy(kayit), veri)
+    tum = {f'{on}_TR_{ad}': 'BENZETIM' for on, adlar in (('IG', GEREKEN['instagram']), ('YT', GEREKEN['youtube'])) for ad in adlar}
+    secimler = []
+    cikti("BENZETİM: yalnız TR Instagram/YouTube hesapları taklit edilir; ağ/model/yazma yok. Kota UTC gününe göre.")
+    cikti("Anahtar yok, atlandı: en, fr, es (benzetim hesap profili).")
+    for i in range(saat):
+        simdi = baslangic + timedelta(hours=i)
+        aday = sk.adaylar(veri, kok, ayar, simdi.date(), simdi)
+        secilen = []
+
+        def secildi(k, r):
+            secilen.append({**r, 'anahtar': k, 'saat': i})
+
+        calistir(ayar, veri, kayit_yolu=kok / 'sosyal/gonderilenler.json', manifest_yolu=manifest_yolu,
+                 tum=tum, ag=None, dry_run=True, bugun=simdi.date(), simdi=simdi,
+                 kuyruk=aday, bellek=bellek, secildi=secildi, cikti=lambda *_: None)
+        for r in secilen:
+            cikti(f"{simdi.isoformat(timespec='minutes')} dil={r['dil']} platform={r['platform']} "
+                  f"biçim={r['bicim']} tür={r['sosyal_tur']} id={r['id']}")
+        for p in ('instagram', 'youtube'):
+            if not any(r['platform'] == p for r in secilen):
+                cikti(f"{simdi.isoformat(timespec='minutes')} dil=tr platform={p} tür=BOŞ id=- (uygun içerik/video veya günlük hak yok)")
+        secimler.extend(secilen)
+    sayilar = Counter(r['sosyal_tur'] for r in secimler)
+    ig_saat = len({r['saat'] for r in secimler if r['platform'] == 'instagram'})
+    cikti(f"ÖZET: Instagram {ig_saat}/{saat} saat; türler=" + json.dumps(dict(sayilar), ensure_ascii=False, sort_keys=True))
+    return secimler
+
+
 def main(argv=None) -> int:
     for stream in (sys.stdout, sys.stderr):
         if hasattr(stream, "reconfigure"):
@@ -747,13 +783,27 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dry-run", "--kuru", action="store_true", help="ağ çağrısı ve dosya yazma olmadan ne paylaşılacağını göster")
     ap.add_argument("--selftest", action="store_true")
+    ap.add_argument("--saat-benzet", type=int, metavar="SAAT", help="--kuru ile ardışık saatleri bellekte taklit et (TR hesapları, sır okunmaz)")
+    ap.add_argument("--baslangic", help="benzetim başlangıcı ISO tarih-saat (varsayılan şimdiki UTC saat)")
     ap.add_argument("--anahtarsiz-goster", action="store_true",
                     help="--dry-run ile: anahtarı olmayan hesapların planını da göster (önizleme)")
     ap.add_argument("--sayfa-bekle", action="store_true", help="en yeni haberin sayfası yayında olana dek bekle (en çok 10 dk); sabit uyku yerine")
     a = ap.parse_args(argv)
     if a.selftest:
         return selftest()
+    if a.saat_benzet is not None and (not a.dry_run or not 1 <= a.saat_benzet <= 168):
+        ap.error('--saat-benzet için --kuru ve 1–168 saat gerekir')
+    if a.baslangic and a.saat_benzet is None:
+        ap.error('--baslangic yalnız --saat-benzet ile kullanılır')
     ayar = json.loads(AYAR.read_text(encoding="utf-8"))
+    if a.saat_benzet is not None:
+        veri = json.loads(ICERIK.read_text(encoding='utf-8'))
+        kayit = json.loads(KAYIT.read_text(encoding='utf-8')) if KAYIT.exists() else {}
+        simdi = sk.zaman(a.baslangic) if a.baslangic else datetime.now(timezone.utc).replace(minute=0, second=0, microsecond=0)
+        if simdi is None:
+            ap.error('geçersiz --baslangic')
+        secimler = benzet(ayar, veri, kayit, vs.MANIFEST_YOLU, simdi, a.saat_benzet)
+        return 0 if len({r['saat'] for r in secimler if r['platform'] == 'instagram'}) == a.saat_benzet else 1
     if a.sayfa_bekle:
         return sayfa_bekle(Ag(), diller=paylasilacak_diller(ayar))
     veri = json.loads(ICERIK.read_text(encoding="utf-8"))

@@ -678,6 +678,10 @@ def yayin_verisi(merged, added):
 
 
 def main():
+    # JSON çıktısını UTF-8 okuyan üst süreç Windows cp1254 baytlarında düşmesin.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, 'reconfigure'):
+            stream.reconfigure(encoding='utf-8')
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('eylem', choices=['tara', 'kilit-al', 'kilit-kontrol', 'kilit-birak', 'hazirla', 'kontrol'])
     parser.add_argument('--batch', type=pathlib.Path)
