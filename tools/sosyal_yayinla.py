@@ -167,7 +167,7 @@ def oauth1_baslik(method, url, ck, cs, tk, ts, params=None, nonce=None, zaman=No
 
 
 def x_metin(dil, x, link, mod) -> str:
-    t = x["diller"][dil]
+    t = {k: emojisiz(v) if isinstance(v, str) else v for k, v in x["diller"][dil].items()}
     etiket = " ".join(t.get("etiketler", [])[:3])
     son = (f"{METIN[dil]['devam']} {link}" if mod == "gonderide" else METIN[dil]["profil"])
     sabit = 23 if mod == "gonderide" else 0  # X her bağlantıyı 23 karakter sayar
@@ -211,7 +211,7 @@ def reddit_paylas(ag, sir, dil, x, link, ayar) -> dict:
     topluluk = (ayar.get("reddit_topluluk") or {}).get(dil) or f"u_{kullanici}"
     _, cevap = ag.istek(
         "POST", "https://oauth.reddit.com/api/submit",
-        veri={"api_type": "json", "kind": "link", "sr": topluluk, "title": x["diller"][dil]["baslik"][:300],
+        veri={"api_type": "json", "kind": "link", "sr": topluluk, "title": emojisiz(x["diller"][dil]["baslik"])[:300],
               "url": link, "resubmit": "true", "sendreplies": "false"},
         basliklar={**ua, "Authorization": f"bearer {tok['access_token']}"},
     )
@@ -223,6 +223,11 @@ def reddit_paylas(ag, sir, dil, x, link, ayar) -> dict:
 
 
 # ---------------------------------------------------------------- Instagram (görsel + Reels)
+def emojisiz(metin):
+    # Şablonlarda emoji yok; kaynak başlık/özetteki emojiler de aktarılmaz.
+    return re.sub(r'[\U0001F000-\U0001FAFF\u2600-\u27BF\uFE0F\u200D\u20E3]', '', metin)
+
+
 def ig_aciklama(dil, x) -> str:
     t = x["diller"][dil]
     kay = ", ".join(s["ad"] for s in x["kaynaklar"])
@@ -230,7 +235,7 @@ def ig_aciklama(dil, x) -> str:
     son = f"\n\n{M[dil]['kaynak']}: {kay[:240]}\n{paylasim_linki(dil, x, 'instagram')}\n\n{etiket}"
     bas = t['baslik'][:300]
     govde = t.get('ozet', '')[:max(0, 2200 - len(bas) - len(son) - 2)]
-    return f"{bas}\n\n{govde}{son}"
+    return emojisiz(f"{bas}\n\n{govde}{son}")
 
 
 def etiketler(dil, x):
@@ -321,7 +326,7 @@ YT_GIZLILIK = ("private", "unlisted", "public")
 
 
 def yt_baslik(dil, x) -> str:
-    b = re.sub(r"[<>]", "", x["diller"][dil]["baslik"]).strip()
+    b = emojisiz(re.sub(r"[<>]", "", x["diller"][dil]["baslik"])).strip()
     return b if len(b) <= 100 else b[:99].rstrip() + "…"
 
 
@@ -330,7 +335,7 @@ def yt_aciklama(dil, x, link) -> str:
     kay = ", ".join(s["ad"] for s in x["kaynaklar"])
     etiket = " ".join(etiketler(dil, x))
     metin = f"{t['ozet']}\n\n{METIN[dil]['devam']} {link}\n{M[dil]['kaynak']}: {kay}\n\n{etiket} #Shorts".strip()
-    return re.sub(r"[<>]", "", metin)[:4900]
+    return emojisiz(re.sub(r"[<>]", "", metin))[:4900]
 
 
 def yt_etiketler(dil, x) -> list:

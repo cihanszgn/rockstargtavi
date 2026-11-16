@@ -125,6 +125,22 @@ class KuyrukTests(unittest.TestCase):
         kayit = {"ortak-konu|tr|instagram|gorsel": {"durum": "tamam", "zaman": "2026-11-01"}}
         self.assertEqual(self.sec([aday], kayit), [])
 
+    def test_arsiv_platformda_baska_bicimde_paylasilmis_haberi_atlar(self):
+        x = self.tur('arsiv')
+        kayit = {sy.anahtar(x, 'tr', 'instagram', 'reel'): {'id': x['id'], 'durum': 'tamam',
+                                                          'zaman': '2026-11-01', 'sosyal_tur': 'haber'}}
+        self.assertEqual(self.sec([x], kayit), [])
+
+    def test_emojiler_ve_uzun_ozet_adres_ve_etiketleri_itmez(self):
+        x = haber()
+        x['diller']['tr'].update(baslik='🎮🚀 Haber', ozet='🎮🚀 ' * 2000)
+        ig = sy.ig_aciklama('tr', x)
+        self.assertNotIn('🎮', ig)
+        self.assertNotIn('🚀', ig)
+        self.assertLessEqual(len(ig), 2200)
+        self.assertIn(sy.sayfa_adresi('tr', x), ig)
+        self.assertIn('#Oyun', ig)
+
     def test_suresi_gecmis_ve_bayat_firsat_atlanir(self):
         f = self.firsat("expired", 99)
         f["bitis"] = "2026-11-15T12:00:00Z"

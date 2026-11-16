@@ -199,6 +199,12 @@ def uygun(x, dil, platform, kayit, simdi):
         return False
     if tur != "haber" and tur == son_tur(kayit, dil, platform):
         return False
+    if tur == "arsiv":
+        konu = x.get("otomasyon", {}).get("konu") or x["id"]
+        if any(k.split("|")[1:3] == [dil, platform] and
+               (k.split("|")[0] in (konu, x["id"]) or r.get("id") == x["id"])
+               for k, r in kayit.items()):
+            return False
     if tur == "rehber":
         for k, r in kayit.items():
             if k.split("|")[1:3] != [dil, platform] or r.get("id") != x["id"]:
