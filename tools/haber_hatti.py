@@ -709,6 +709,13 @@ class Hat:
                 self.hafiza_haber(x['id'], 'denetci', d['neden'], d['hype'])
                 continue
             x['otomasyon']['hype'] = d['hype']
+            en_az = oto.CONFIG['sinirlar'].get('en_az_hype', 3)
+            if d['hype'] < en_az:
+                # Bakım duyurusu gibi dar kitleli haber onaylansa da yayımlanmaz.
+                neden = f"hype {d['hype']} yayın alt sınırının ({en_az}) altında"
+                self.sonuc['atlanan'].append({'id': x['id'], 'neden': neden})
+                self.hafiza_haber(x['id'], 'denetci', neden, d['hype'])
+                continue
             if d['hype'] >= oto.hype_esigi() and not (self.root / 'video/senaryo' / f"{x['id']}-tr.json").exists():
                 self.sonuc['atlanan'].append({'id': x['id'], 'neden': 'denetçi hype eşiğini geçirdi; senaryo yok'})
                 continue

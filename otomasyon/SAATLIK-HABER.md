@@ -90,6 +90,7 @@ Haber tarihi gerçek kaynak tarihidir, ileri tarih veya 48 saatten eski haber re
 - 7–8: takipli oyunların yeni sezonu/büyük güncellemesi, bilinen bir oyunun çıkışı, büyük mağaza kampanyası ya da tanınmış ücretsiz oyun.
 - 5–6: orta boy güncelleme, küçük ya da orta oyunun çıkışı, sınırlı kampanya.
 - 1–4: küçük yama, geliştirici notu, dar kitleli haber.
+- Yayın alt sınırı `kaynaklar.json` → `sinirlar.en_az_hype` (şu an 3): denetçinin verdiği puan bunun altındaysa (ör. bakım duyurusu) haber onaylansa da yayımlanmaz.
 - Eşik `sosyal/ayarlar.json` → `video.hype_esigi` (şu an 7). Eşiğe ulaşan haberin video senaryosu aynı turda yazılmak zorundadır, yoksa `hazirla` paketi reddeder. Eşiğin altındaki haber için senaryo yazılmaz; o haber sitede ve Instagram'da yalnız görsel olarak paylaşılır. Puan şişirilmez: kararsız kalınan haber düşük puanı alır.
 
 ## Video senaryosu
