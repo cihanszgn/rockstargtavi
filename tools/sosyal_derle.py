@@ -276,8 +276,135 @@ def kartlar(veri: list[dict], sosyal=None, *, cikti=None) -> tuple[int, int]:
             c.text((x + pad, y + i * adim + round(f.size * 0.95)), s, font=f, fill=(255, 255, 255), anchor="ls")
         return len(satirlar) * adim
 
+    gorsel_veri: dict = {}
+
+    def haber_gorseli(x):
+        """Haberin kendi görseli (data/gorseller.json), yoksa oyununun resmî görseli."""
+        if not gorsel_veri:
+            def oku(ad, yedek):
+                try:
+                    return json.loads((KOK / "data" / ad).read_text(encoding="utf-8"))
+                except (OSError, ValueError):
+                    return yedek
+            gorsel_veri["haber"] = oku("gorseller.json", {})
+            og = oku("oyun_gorselleri.json", {})
+            gorsel_veri["oyun"] = og.get("oyun", {}) if isinstance(og, dict) else {}
+            adlar = {}
+            for o in oku("oyunlar.json", []):
+                for ad in [o.get("ad"), o.get("kisa"), *(o.get("eslesme") or [])]:
+                    if isinstance(ad, str) and ad.strip():
+                        adlar[ad.strip().casefold()] = o.get("id")
+            gorsel_veri["ad"] = adlar
+        g = gorsel_veri["haber"].get(x.get("id"))
+        if isinstance(g, dict) and g.get("url"):
+            return g
+        oid = gorsel_veri["ad"].get(str(x.get("oyun") or "").strip().casefold())
+        return gorsel_veri["oyun"].get(oid)
+
+    def vurgu_rengi(foto):
+        """Görselin en canlı baskın rengi; kartın vurgu rengi olur (her oyun kendi rengini taşır)."""
+        import colorsys
+        kucuk = foto.resize((64, 64)).quantize(8, method=Image.Quantize.FASTOCTREE)
+        pal = kucuk.getpalette()[:24]
+        en, sec = -1.0, SECIM
+        for adet, i in kucuk.getcolors() or []:
+            r, g, b = pal[i * 3:i * 3 + 3]
+            h, s, v = colorsys.rgb_to_hsv(r / 255, g / 255, b / 255)
+            puan = s * (0.35 + v) * (adet ** 0.5)
+            if s > 0.28 and v > 0.25 and puan > en:
+                en, sec = puan, (h, s, v)
+        if en < 0:
+            return SECIM
+        h, s, v = sec
+        r, g, b = colorsys.hsv_to_rgb(h, min(1.0, max(s, 0.62)), max(v, 0.9))
+        return (round(r * 255), round(g * 255), round(b * 255))
+
+    def dikey_kart(x, dil, W, H):
+        """Instagram kartı: oyunun görseli kartı taşır, renk görselden gelir, yazı altta."""
+        nonlocal kart_dili
+        from PIL import ImageFilter
+        kart_dili = dil
+        t, m = x["diller"][dil], M[dil]
+        P = 72
+        gen = W - 2 * P
+        GH = 770
+        sosyal_tur = x.get("sosyal_tur")
+        tur_ad = SABLON[dil][sosyal_tur] if sosyal_tur and sosyal_tur != "haber" else m["tur"][x["tur"]]
+        gkayit = x.get("gorsel") or haber_gorseli(x)
+        foto = resmi_gorsel(gkayit, resimler)
+        img = Image.new("RGB", (W, H), ZEMIN)
+        if foto is not None:
+            vurgu = vurgu_rengi(foto)
+            arka = ImageOps.fit(foto, (W // 8, H // 8)).filter(ImageFilter.GaussianBlur(6)).resize((W, H))
+            img.paste(Image.blend(arka, Image.new("RGB", (W, H), ZEMIN), 0.84))
+            zemin_alt = img.crop((0, GH - 460, W, GH))
+            img.paste(ImageOps.fit(foto, (W, GH), centering=(0.5, 0.3)), (0, 0))
+        else:
+            vurgu = TUR_RENK.get(x["tur"], SECIM)
+            vurgu = vurgu if isinstance(vurgu, tuple) else SECIM
+            ust = Image.new("RGB", (W, GH), tuple(round(v * 0.42 + z * 0.58) for v, z in zip(vurgu, ZEMIN)))
+            cu = ImageDraw.Draw(ust)
+            for i in range(-GH, W, 56):   # çapraz şeritler: boş kalan kapakta doku
+                cu.line((i, GH, i + GH, 0), fill=tuple(round(v * 0.5 + z * 0.5) for v, z in zip(vurgu, ZEMIN)), width=14)
+            img.paste(ust, (0, 0))
+            zemin_alt = Image.new("RGB", (W, 460), ZEMIN)
+        gecis = Image.linear_gradient("L")
+        # görsel, alttaki yazı zeminine dikişsiz erir
+        img.paste(zemin_alt, (0, GH - 460), gecis.resize((W, 460)).point(lambda v: min(255, round(v * 1.25))))
+        img.paste(Image.new("RGB", (W, 230), ZEMIN), (0, 0), ImageOps.flip(gecis).resize((W, 230)).point(lambda v: round(v * 0.8)))
+        c = ImageDraw.Draw(img)
+        logo(c, P, P - 10, 56)
+        if foto is None:
+            fg, sg = sigdir(c, x["oyun"], "genis", 104, 52, gen, 3)
+            adim = round(fg.size * 1.12)
+            y0 = 250 + (GH - 430 - len(sg) * adim) // 2
+            for i, s in enumerate(sg):
+                c.text((P, y0 + i * adim + fg.size), s, font=fg, fill=(255, 255, 255), anchor="ls")
+        elif isinstance(gkayit, dict) and gkayit.get("kaynak"):
+            fa = font("duz", 20)
+            atif = kisalt(c, f"{SABLON[dil]['gorsel']}: {gkayit['kaynak']}", fa, gen // 2)
+            c.text((W - P, P + 30), atif, font=fa, fill=(214, 222, 238), anchor="rs")
+        # alt bilgi
+        yb = H - P
+        c.line([(P, yb - 54), (W - P, yb - 54)], fill=tuple(round(v * 0.35 + z * 0.65) for v, z in zip(vurgu, ZEMIN)), width=2)
+        fs = font("yari", 32)
+        c.text((P, yb), GORUNEN, font=fs, fill=YAZI, anchor="ls")
+        fk = font("duz", 26)
+        iki_nokta = " : " if dil == "fr" else ": "
+        sag = kisalt(c, f"{tarih_yaz(dil, x['tarih'])}   {m['kaynak']}{iki_nokta}{x['kaynaklar'][0]['ad']}", fk,
+                     gen - round(c.textlength(GORUNEN, font=fs)) - 40)
+        c.text((W - P, yb), sag, font=fk, fill=SOLUK, anchor="rs")
+        # metin bloğu alttan hizalı: etiketler, başlık, özet
+        girinti = 30
+        fb, sb = sigdir(c, t["baslik"], "genis", 66, 40, gen - girinti, 4)
+        fo, so = sigdir(c, t["ozet"], "duz", 34, 27, gen, 3)
+        th = 52
+        ft = font("yari", 24)
+        badim, oadim = round(fb.size * 1.16), round(fo.size * 1.36)
+        toplam = th + 30 + len(sb) * badim + 26 + len(so) * oadim
+        y = yb - 54 - 34 - toplam
+        # etiketler: oyun adı koyu tuş, tür vurgu renginde dolu
+        pad = round(th * 0.36)
+        tw = round(c.textlength(tur_ad, font=ft)) + 2 * pad
+        oyun = kisalt(c, x["oyun"], ft, gen - tw - 14 - 2 * pad)
+        ow = tus(c, P, y, oyun, ft, th)
+        tx = P + ow + 14
+        c.rounded_rectangle((tx, y, tx + tw, y + th), radius=round(th * 0.2), fill=vurgu)
+        acik = (vurgu[0] * 299 + vurgu[1] * 587 + vurgu[2] * 114) / 1000 > 150
+        c.text((tx + tw / 2, y + (th + ft.size * 0.7) / 2), tur_ad, font=ft, fill=ZEMIN if acik else (255, 255, 255), anchor="ms")
+        y += th + 30
+        c.rounded_rectangle((P, y + 6, P + 8, y + len(sb) * badim - 6), radius=4, fill=vurgu)
+        for i, s in enumerate(sb):
+            c.text((P + girinti, y + i * badim + round(fb.size * 0.92)), s, font=fb, fill=(255, 255, 255), anchor="ls")
+        y += len(sb) * badim + 26
+        for i, s in enumerate(so):
+            c.text((P, y + i * oadim + round(fo.size * 0.95)), s, font=fo, fill=(196, 206, 226), anchor="ls")
+        return img
+
     def kart(x, dil, W, H, ozetli):
         nonlocal kart_dili
+        if ozetli:
+            return dikey_kart(x, dil, W, H)
         kart_dili = dil
         t, m = x["diller"][dil], M[dil]
         img = Image.new("RGB", (W, H), ZEMIN)
