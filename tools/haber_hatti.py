@@ -388,9 +388,19 @@ class Hat:
     def ele(self, candidates):
         fresh = oto.tarih_suz(candidates, oto.simdi())
         self.sonuc['tarih_elendi'] = len(candidates) - len(fresh)
-        candidates = olaylari_birlestir(fresh)
-        self.sonuc['olay_birlestirildi'] = len(fresh) - len(candidates)
         recent = oku(self.root / 'data/icerik.json')
+        published_urls = {oto.kanonik(s['url']) for x in recent for s in x.get('kaynaklar', []) if not oto.ortak_api(s['url'])}
+        published_titles = {oto.norm(d.get('baslik', '')) for x in recent for d in x.get('diller', {}).values()}
+        new = []
+        for c in fresh:
+            refs = [c.get('url', ''), *[s.get('url', '') for s in c.get('ilgili_kaynaklar', [])]]
+            if any(oto.kanonik(url) in published_urls for url in refs if url) or oto.norm(c['baslik']) in published_titles:
+                self.sonuc['atlanan'].append({'baslik': c['baslik'], 'neden': 'yayında: kaynak URL’si veya birebir başlık zaten mevcut'})
+            else:
+                new.append(c)
+        self.sonuc['yayinda_elendi'] = len(fresh) - len(new)
+        candidates = olaylari_birlestir(new)
+        self.sonuc['olay_birlestirildi'] = len(new) - len(candidates)
         titles = [{'baslik': x.get('diller', {}).get('tr', {}).get('baslik', ''),
                    'konu': x.get('otomasyon', {}).get('konu', '')} for x in recent[:100]]
         games = oku(self.root / 'data/oyunlar.json')
@@ -471,18 +481,8 @@ class Hat:
             else:
                 self.sonuc['atlanan'].append({'baslik': c['baslik'], 'neden': x['neden']})
         secilen.sort(key=siralama, reverse=True)
-        # Aynı takipli oyundan bu turda en çok bir aday; ikinci adayın hafıza kaydı silinir (şansı kalır).
-        bu_tur, goruldu = [], set()
-        for c in secilen:
-            if c['oyun_eslesme'] and c['oyun_eslesme'] in goruldu:
-                self.sonuc['atlanan'].append({'baslik': c['baslik'], 'neden': 'aynı oyundan bu tur bir aday yeter'})
-                if self.gorulen.get(adres(c), {}).get('asama') == 'eleme':
-                    del self.gorulen[adres(c)]
-                continue
-            if c['oyun_eslesme']:
-                goruldu.add(c['oyun_eslesme'])
-            bu_tur.append(c)
-        return bu_tur
+        # Aynı oyunun diğer olayları, önceki aday reddedilirse yedek olarak kalır.
+        return secilen
 
     def paket_kontrol(self, articles):
         path = self.state / 'paket.json'
@@ -595,14 +595,22 @@ class Hat:
     def adaylari_isle(self, selected):
         approved, written, audit = [], [], []
         limit = oto.CONFIG['sinirlar'].get('yazim_deneme', 6)
-        for candidate in selected[:limit]:
+        attempts, games = 0, set()
+        for candidate in selected:
             if len(approved) >= oto.CONFIG['sinirlar']['tur_basina']:
                 break
+            if attempts >= limit:
+                break
+            game = candidate.get('oyun_eslesme')
+            if game and game in games:
+                self.sonuc['atlanan'].append({'baslik': candidate['baslik'], 'neden': 'aynı oyundan bu tur bir haber onaylandı'})
+                continue
             # Yeni araştırma başlatırken denetim ve kapanış için süre bırak.
             if self.deadline - time.monotonic() < 120:
                 self.sonuc['atlanan'].append({'baslik': candidate['baslik'], 'neden': 'tur süre bütçesi: yedek başlatılmadı'})
                 break
             self.sonuc['yazim_deneme'] = self.sonuc.get('yazim_deneme', 0) + 1
+            attempts += 1
             article = self.yaz(candidate)
             if article:
                 written.append(article)
@@ -610,8 +618,11 @@ class Hat:
                 if (self.state / 'denetim.json').exists():
                     audit.append({'id': article['id'], 'kararlar': oku(self.state / 'denetim.json')})
                 if accepted:
+                    before = len(approved)
                     approved = self.paket_kontrol(approved + accepted)
                     self.tur_onayli = approved
+                    if len(approved) > before and game:
+                        games.add(game)
             oto.json_yaz(self.state / 'yazilan-paket.json', written)
             oto.json_yaz(self.state / 'denetimler.json', audit)
             oto.json_yaz(self.state / 'onayli-paket.json', approved)

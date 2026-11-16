@@ -242,15 +242,21 @@ class HatTests(unittest.TestCase):
         broken = h.Hat(self.root, deneme=True, config={'eleme': [], 'yazar': [], 'denetci': []})
         self.assertEqual(broken.gorulen, {})
 
-    def test_same_game_allows_one_candidate_and_next_candidate_fills_slot(self):
+    def test_same_game_other_events_remain_available_as_reserves(self):
         self._oyunlar([{'ad': 'Takipli', 'eslesme': []}])
         candidates = [self._aday(0, 'Takipli yama A'), self._aday(1, 'Takipli yama B'),
                       self._aday(2, 'Diger haber C'), self._aday(3, 'Diger haber D')]
         with patch.object(self.hat, 'zincir', side_effect=self._al({0: 10, 1: 9, 2: 8, 3: 7})):
             result = self.hat.ele(candidates)
-        self.assertEqual([x['baslik'] for x in result], ['Takipli yama A', 'Diger haber C', 'Diger haber D'])
-        self.assertIn('aynı oyundan bu tur bir aday yeter', [x['neden'] for x in self.hat.sonuc['atlanan']])
-        self.assertNotIn('https://www.ign.com/haber/1', self.hat.gorulen)
+        self.assertEqual([x['baslik'] for x in result], ['Takipli yama A', 'Takipli yama B', 'Diger haber C', 'Diger haber D'])
+
+    def test_same_game_reserve_is_tried_after_rejection_but_skipped_after_approval(self):
+        candidates = [dict(self._aday(i, f'Yama {i}'), oyun_eslesme='takipli') for i in range(3)]
+        with patch.object(self.hat, 'yaz', side_effect=[{'id': 'a'}, {'id': 'b'}]) as write, \
+                patch.object(self.hat, 'denetle', side_effect=[[], [{'id': 'b'}]]), \
+                patch.object(self.hat, 'paket_kontrol', side_effect=lambda xs: xs):
+            self.assertEqual(self.hat.adaylari_isle(candidates), [{'id': 'b'}])
+        self.assertEqual(write.call_count, 2)
 
     def test_higher_score_beats_official_role(self):
         self._oyunlar([])
@@ -267,6 +273,17 @@ class HatTests(unittest.TestCase):
             result = self.hat.ele(candidates)
         self.assertNotIn('Eski Nintendo', run.call_args.args[2])
         self.assertEqual([x['baslik'] for x in result], ['Taze', 'Bilinmeyen'])
+
+    def test_published_url_or_exact_locale_title_never_reaches_model(self):
+        self._oyunlar([])
+        existing = [{'kaynaklar': [{'url': 'https://www.ign.com/haber/0'}], 'diller': {'en': {'baslik': 'Already published'}}}]
+        (self.root / 'data/icerik.json').write_text(json.dumps(existing), encoding='utf-8')
+        candidates = [self._aday(0, 'Different headline'), self._aday(1, 'Already published'), self._aday(2, 'Fresh event')]
+        with patch.object(self.hat, 'zincir', side_effect=self._al({0: 5})) as run:
+            selected = self.hat.ele(candidates)
+        self.assertEqual([x['baslik'] for x in selected], ['Fresh event'])
+        self.assertEqual(self.hat.sonuc['yayinda_elendi'], 2)
+        self.assertNotIn('Different headline', run.call_args.args[2].split('ADAYLAR:')[1])
 
     def test_quota_cooldown_persists_and_skips_until_expiry(self):
         models = [{'ad': 'free'}, {'ad': 'backup'}]
