@@ -2540,6 +2540,1884 @@
      ]
     }
    ]
+  },
+  "de": {
+   "baslik": "Metin2 Einsteiger-Guide: Offizielle Server 2026",
+   "ozet": "Für Spieler, die auf Gameforges offiziellen türkischen Metin2-Servern neu starten oder zurückkehren: Serverauswahl, der Yohara-Boost-Server, Klassen, Leveln, die Yang-Wirtschaft und Sicherheit.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "MMORPG"
+    },
+    {
+     "ad": "Plattform",
+     "deger": "Windows (Gameforge-Client); es gibt auch eine Browser-Startseite"
+    },
+    {
+     "ad": "Preismodell",
+     "deger": "Free-to-Play; der In-Game-Shop ist optional. Shop-Preise sind nicht offiziell angegeben"
+    },
+    {
+     "ad": "Aktuelle Version",
+     "deger": "Update 26.2 (Wiki aktualisiert am 31. Oktober 2026); der Yohara-Boost-Server eröffnete am 13. November 2026"
+    },
+    {
+     "ad": "Türkisch-Unterstützung",
+     "deger": "Türkisch: Forum, Wiki und Support der türkischen Version sind auf Türkisch; die Sprachliste von PCGamingWiki führt ebenfalls Türkisch auf"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "Wo das Spiel im Jahr 2026 steht",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Metin2 ist ein klassisches und geschätztes koreanisches Online-RPG, entwickelt von Webzen und herausgegeben von Gameforge; es ist kostenlos spielbar und laut Gameforges Ankündigung vom Januar 2026 in über 16 Sprachen verfügbar (in jenem Monat feierte es sein 19-jähriges Jubiläum). In der Türkei gehören das offizielle Forum, Wiki und Ticketsystem zu Gameforge. Das Spiel bietet fünf Klassen, drei Reiche und **Champion-Level** nach Stufe 120."
+      },
+      {
+       "tip": "p",
+       "metin": "Die wichtigste Neuerung sind aktuell die **Yohara-Boost**-Server. Gameforge betreibt diese temporären Server zwischen dem **13. November 2026 um 10:00 Uhr (MEZ)** und dem **24. Februar 2027 um 10:00 Uhr**. Es gibt einen Server pro Cluster; für die Türkei heißt er 'Apex'. Laut offiziellen Ankündigungen wurde ein zweiter türkischer Server hinzugefügt und Apex schloss neue Registrierungen. Prüfe in der Forumsankündigung, welcher Server für Neuanmeldungen geöffnet ist."
+      },
+      {
+       "tip": "p",
+       "metin": "Ein praktischer Hinweis für Rückkehrer: Dein alter Charakter verbleibt auf seinem ursprünglichen Server; die Bedingungen für einen Transfer auf neue Server können sich ändern. Prüfe zunächst, ob dein alter Server erreichbar ist und ob der Yohara-Boost-Server zu dir passt. Die aktuellen Ankündigungen vorab zu lesen, dauert nur wenige Minuten, erspart dir jedoch viele Stunden verlorener Mühe."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Daten und Servernamen in diesem Abschnitt folgen der offiziellen Ankündigung. Falls sich diese ändert, gelten die dortigen Angaben."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Vor dem Start: Konto, Server, Kosten",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Zum Spielen benötigst du ein kostenloses **Gameforge-Konto**. Du startest das Spiel über die offizielle Webseite oder den Gameforge-Client. Bestätige bei der Registrierung deine E-Mail-Adresse und überprüfe die Sicherheitseinstellungen."
+      },
+      {
+       "tip": "p",
+       "metin": "Türkische Server sind auf der Wiki-Seite 'Türkiye Sunucuları' gelistet. Jeder Server verfügt über 6 Kanäle. Die neuesten Server sind SAPPHIRE[Star] und [Safir] (eröffnet am 08.08.2025); gefolgt von RUBY[Lucifer] (07.12.2023) und RUBY[Charon] (19.08.2022). Marmara, Ezel, Barbaros, Dandanakan, Arkadaşlar und Bagjanamu sind klassische Server; Marmara, Arkadaşlar, Dandanakan und Bagjanamu tragen das Symbol für geschlossene Server. Zu früheren Servern vermerkt das Wiki, dass Server nicht geschlossen, sondern fusioniert wurden (Fırtına, Lodos, Apex, Zephyr, Anadolu, ONYX Bazalt, EMERALD Alesta). Gebührenbedingungen für Server sind nicht offiziell angegeben."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Thema",
+        "Information"
+       ],
+       "satirlar": [
+        [
+         "Preis",
+         "Kostenlos spielbar; der In-Game-Shop ist optional. Shop-Preise sind nicht offiziell beziffert"
+        ],
+        [
+         "Plattform",
+         "Windows; über die Website des Publishers mit Gameforge-Konto (nicht auf Steam verfügbar)"
+        ],
+        [
+         "Klassen",
+         "Krieger, Ninja, Sura, Schamane, Lykaner"
+        ],
+        [
+         "Reiche",
+         "Shinsoo, Chunjo, Jinno"
+        ],
+        [
+         "Stufenstruktur",
+         "Reguläre Stufen bis 120, danach Champion-Level"
+        ],
+        [
+         "Mindestsystem",
+         "Windows 7, Pentium 3 1,0 GHz, 512 MB RAM, 32 MB Grafikspeicher, 2 GB Festplatte"
+        ],
+        [
+         "Empfohlenes System",
+         "Windows 8, Pentium 4 1,8 GHz, 1 GB RAM, 64 MB Grafikspeicher, 3 GB Festplatte"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Achte bei der Serverauswahl auf drei Dinge: Wo deine Freunde spielen, wie belebt der Server ist und ob er einen speziellen Event-Kalender hat (im Wiki mit einem 'Event-Server'-Icon markiert). Auf vollen Servern floriert der Handel bei härterem Wettbewerb; auf kleineren Servern verhält es sich umgekehrt."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Die Systemangaben stammen aus dem PCGamingWiki (Drittanbieter, ältere Versionsliste); Gameforge veröffentlicht keine aktuelle Übersicht. Die Werte sind niedrig, prüfe unter modernen Windows-Versionen dennoch Installation und Grafikkartentreiber."
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "Die ersten Stunden Schritt für Schritt",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Konto anlegen",
+         "metin": "Erstelle ein Gameforge-Konto, bestätige die E-Mail und prüfe die Sicherheitseinstellungen."
+        },
+        {
+         "baslik": "Server wählen",
+         "metin": "Suchst du als Neuling schnellen Fortschritt, ziehe den Yohara-Boost-Server in Betracht; für einen dauerhaften Charakter wähle einen normalen Server. Spiele auf demselben Server wie deine Freunde."
+        },
+        {
+         "baslik": "Reich und Klasse wählen",
+         "metin": "Wähle ein Reich (Shinsoo, Chunjo oder Jinno) und eine Klasse. Details zur Klassenwahl stehen in der Tabelle."
+        },
+        {
+         "baslik": "Erste Quests abschließen",
+         "metin": "Einstiegsquests vermitteln Basismechaniken und belohnen dich. Meilenstein-Quests auf Stufe 10, 30, 60, 90 und 110 bieten wertvolle Belohnungen (auf dem Yohara-Server)."
+        },
+        {
+         "baslik": "Pferdesystem",
+         "metin": "Das Spiel bietet ein Reittiersystem; schlage im Questlog und im Wiki nach, wie du dein Pferd freischaltest."
+        },
+        {
+         "baslik": "Fertigkeiten festlegen",
+         "metin": "Verteile Fertigkeitspunkte nicht wahllos; konzentriere dich zunächst auf einen Hauptpfad."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "In den ersten Spielstunden geht es ebenso sehr um das Erlernen der Spielmechaniken wie um das bloße Aufleveln: Tranknutzung, Gegenstandsaufwertung, Handel und Fertigkeitsentwicklung."
+      },
+      {
+       "tip": "p",
+       "metin": "Öffne gleich nach Spielbeginn dein Inventar, das Fertigkeitsfenster sowie das Questlog und verschaffe dir einen Überblick. Zu wissen, welche Taste was bewirkt, spart in den ersten Stunden die meiste Zeit. Sei zudem vorsichtig bei Fremden im In-Game-Chat, die ungewöhnliche Forderungen stellen."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Auf dem Yohara-Boost-Server sind die Kanäle 1-2 für alle zugänglich, 3-4 für verifizierte Spieler und 5-6 für Metin+-Mitglieder. Beginne als Neuling auf Kanal 1-2."
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "Wahl von Klasse und Reich",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Es gibt fünf Klassen: Krieger, Ninja, Sura, Schamane und Lykaner. Die spielerischen Unterschiede zwischen den Reichen sind gering; entscheidend ist, wo deine Freunde und deine Community spielen. Als Einsteigercharakter gilt der Krieger gemeinhin als am unkompliziertesten, dies bleibt jedoch Geschmackssache und abhängig von den Servergegebenheiten."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Klasse",
+        "Spielstil",
+        "Für wen geeignet"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Nahkampf, robust, geradlinig",
+         "Spieler, die einen stabilen und sicheren Einstieg suchen"
+        ],
+        [
+         "Ninja",
+         "Mobil, schneller Einzelschaden",
+         "Spieler, die Geschwindigkeit und Bewegung schätzen"
+        ],
+        [
+         "Sura",
+         "Magische Waffen, mächtige Selbst-Buffs",
+         "Spieler, die gerne taktisch Fähigkeiten planen"
+        ],
+        [
+         "Shaman",
+         "Unterstützung und Zaubersprüche",
+         "Spieler, die Gruppenunterstützung bevorzugen"
+        ],
+        [
+         "Lycan",
+         "Durchschlagende Nahkampfangriffe",
+         "Spieler, die einen unverbrauchten Spielstil suchen"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Fertigkeiten entwickeln sich über normale Stufen hinaus in Meister-, Großmeister- und Perfekter-Meister-Ränge. Beim frühen Skillen ist es daher weitaus effektiver, sich auf einen einzigen Hauptpfad zu fokussieren."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Wähle eine Klasse nicht nur anhand von PvP-Videos aus; für den ersten Charakter zählt vor allem angenehmes und effizientes Farmen."
+      }
+     ]
+    },
+    {
+     "id": "krallik-harita",
+     "baslik": "Reiche und Kartenstruktur",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Metin2 umfasst drei Reiche: **Chunjo** (gelbes Banner), **Jinno** (blaues Banner) und **Shinsoo** (rotes Banner). Die Weltkarte des offiziellen Wikis verzeichnet für jedes Reich vier Gebiete: zwei Standardkarten und zwei Gildenzonen. Die Wahl des Reichs verändert die Spielmechanik kaum; der wesentliche Faktor ist der Aufenthaltsort deiner Mitspieler."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Karte",
+        "Chunjo",
+        "Jinno",
+        "Shinsoo"
+       ],
+       "satirlar": [
+        [
+         "Karte 1",
+         "Joan",
+         "Pyungmoo",
+         "Yongan"
+        ],
+        [
+         "Karte 2",
+         "Bokjung",
+         "Bakra",
+         "Yayang"
+        ],
+        [
+         "Gildenzone",
+         "Waryong",
+         "Imha",
+         "Jungrang"
+        ],
+        [
+         "Gildenzone 2",
+         "Songpa",
+         "Daeyami",
+         "Miryang"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Neben den Reichsgebieten gibt es neutrale Karten ohne Reichszugehörigkeit. Die Wiki-Klassifizierung ist nachfolgend dargestellt; Dungeons und Event-Karten werden gesondert aufgeführt."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Kartengruppe",
+        "Im Wiki aufgeführt"
+       ],
+       "satirlar": [
+        [
+         "Neutrale Karten",
+         "Valley of Seungryong, Yongbi Desert, Mount Sohan, Fireland, Hwang Temple, Ghost Forest, Red Forest, Snakefield, Land of Giants"
+        ],
+        [
+         "Affendungeons",
+         "Hasun Dong (leicht), Jungsun Dong (normal), Sangsun Dong (schwer)"
+        ],
+        [
+         "Yohara-Region",
+         "Abandoned Fortress, Dong Gwang Plain, Seo Gwang Wastelands, Gnoll Caves, Nam Gwang Chasm, Yilad Pass, Northwind Canyon und weitere"
+        ],
+        [
+         "Dungeons",
+         "Demon Tower, Devil's Catacomb, Spider Queen's Nest, Dragon's Temple, Meley's Lair, Zodiac Temple, Red Dragon Fortress, Nemere's Watchtower, Serpent Temple, Sung Mahi Tower, Depths of Greed und weitere"
+        ],
+        [
+         "Event-Karten",
+         "Combat Zone, Isle of Mist, OX-Competition, Otherworld, Battle Royale, Sung Ma Invasion, Treasure Island"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Eine feste Stufenübersicht pro Karte gibt es im Wiki nicht in einer Gesamttabelle; prüfe die jeweilige Kartenseite. Eine verlässliche Orientierung bieten die Quest-Schritte fürs Pferd: Stufen 2-6 auf Karte 1 deines Reichs, 7-8 im Tal von Seungryong oder in der Yongbi-Wüste, 9-10 am Berg Sohan oder in Doyyumhwan (Feuerland)."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Halte vor Reisen die Weltkarte im Wiki geöffnet und prüfe die Monsterstufen auf der Gebietsseite; Tränke in Gebieten weit über deinem Level zu verbrauchen, ist ineffizient."
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "Leveln: Schnelle und effiziente Routen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "In Metin2 levelst du durch die Monsterjagd, Quests und das Zerstören von Metinsteinen. Der Erfahrungsgewinn richtet sich nach dem Stufenunterschied zwischen dir und dem Monster; extrem starke Gegner zu bekämpfen ist nicht immer rentabel. Beständiges Farmen in Zonen, in denen du nicht stirbst und kaum Tränke verbrauchst, erweist sich oft als deutlich ertragreicher."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Auf dem Yohara-Boost-Server besitzen Monster 40 Prozent weniger Gesundheit und Schaden, während die Drop-Rate verdoppelt ist.",
+        "Ab Stufe 40 erhältst du bei Uriel für 8 Stunden einen EXP-Schub von 50 bis 200 Prozent.",
+        "Tiger Power steigert den PvE-Schaden um 40 Prozent."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Das Hauptziel des Boost-Servers ist das Erreichen von **Champion-Level 1**. Nach Ende des Zeitraums können bis zu zwei Charaktere auf normale Server transferiert werden; die Anmeldung läuft vom 17. Februar bis 3. März 2027, die Transfers erfolgen zu den Wartungen am 24. Februar und 3. März. Transfers nach DIAMOND und Marmara sind ausgeschlossen."
+      },
+      {
+       "tip": "p",
+       "metin": "Etabliere beim Farmen eine klare Schleife: Ins Gebiet aufbrechen, Monster bekämpfen, bei vollem Inventar zurückkehren, Gegenstände sortieren und Tränke auffüllen. Regelmäßig in passende Stufengebiete weiterzuziehen, spart Zeit und Ressourcen. Stirbst du in einer Zone zu häufig, bist du schlicht noch zu schwach dafür."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Lies dir die Transferregeln im offiziellen Forum vor den genannten Terminen erneut aufmerksam durch. Fristen und Bedingungen können angepasst werden."
+      }
+     ]
+    },
+    {
+     "id": "at-sistemi",
+     "baslik": "Pferdesystem: Erstes Reittier und Aufwertungen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Das Pferd dient sowohl der Fortbewegung als auch dem Kampf. Laut Wiki gibt es vier Typen: Anfängerpferd (Beginner), Kampfpferd (War), Militärpferd (Military) und Mächtiges Kriegspferd (Mighty War). Jeder Typ besitzt sein eigenes Siegel, Futter und Wiederbelebungskraut: Für das Anfängerpferd das Pferdebild und Heu, fürs Kampfpferd das Waffenpferdbuch und Karotten, fürs Militärpferd das Militärpferdbuch und roter Ginseng, fürs mächtige Kriegspferd das Goldene Pferdebuch und Premium-roter-Ginseng."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Typ",
+        "Pferdestufe (laut Wiki-Tabelle)",
+        "Fortschrittsablauf"
+       ],
+       "satirlar": [
+        [
+         "Beginner horse",
+         "2-10",
+         "Questschritte: 2-6 auf Karte 1, 7-8 im Valley of Seungryong oder in der Yongbi Desert, 9-10 am Mount Sohan oder in Doyyumhwan; jeder Schritt erfordert 1 bis 5 Kontrollpunkte"
+        ],
+        [
+         "War horse",
+         "12-20",
+         "Monsterjagd: 12 erfordert Bo x5, 13 Chuong x5, 14 Elite Orc General x10, 15 Black Orc x10, 16 Dark Tormentor x10, 17 Claw Poison Spider x10, 18 Desert Outlaw x20, 19 Ice Golem x10, 20 Fighting Tiger x20"
+        ],
+        [
+         "Military horse",
+         "21-40",
+         "EXP, Yang und Futter: Stufe 21 verlangt 12.500 EXP, 500.000 Yang, 50 Futter; Yang steigt pro Schritt um 500.000, ab Stufe 30 sind es 5.000.000 Yang und 50 Futter; Maximum liegt bei 40"
+        ],
+        [
+         "Mighty war horse",
+         "Über dem Militärpferd",
+         "Nutzt das Goldene Pferdebuch und Premium-roten-Ginseng; Details sind nicht offiziell angegeben"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Beschwörung und Attribute:** Die Erfolgschance beim Rufen des Pferdes beträgt 10% auf Stufe 0, 15% auf 1, 20% auf 2 und 30% auf 3; ab Stufe 4 steigt sie um 10 Punkte pro Stufe bis auf 100% bei Stufe 10. Die Werte des Pferdes wachsen mit seiner Stufe: Bei Stufe 1 VIT 18, INT 9, STR 26, DEX 35; bei Stufe 10 23, 12, 35, 46; bei Stufe 20 32, 16, 48, 64."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Aufwertungsstufen des Militärpferds sind kostspielig: Ab Stufe 30 kostet jeder Schritt 5.000.000 Yang und 50 Einheiten Futter. Teile dein Yang-Budget vor Beginn sinnvoll zwischen Ausrüstungs- und Pferdestufen auf."
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "Yang und Wirtschaft: Rein spielinterne Wege",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Die Währung im Spiel heißt **Yang**. Yang wird für Tränke, Gegenstandsaufwertungen, Pferdezucht und Spielerhandel ausgegeben. Prüfe vor dem Verkauf von Beute an NSCs stets, ob Mitspieler dafür einen höheren Preis zahlen."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Halte Ausgaben für Tränke und Aufwertungen im Gleichgewicht; stecke nicht dein gesamtes Yang in eine einzige Aufwertung.",
+        "Verstärke zuerst deine Waffe oder bei hohem Trankverbrauch die Rüstung.",
+        "Verkaufe unbekannte Aufwertungsmaterialien nicht voreilig."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Es gibt einen optionalen In-Game-Shop. Lies vor dem Kauf genau nach, welche Vorteile die Gegenstände im Spiel bieten."
+      },
+      {
+       "tip": "p",
+       "metin": "Handele mit Geduld. Vergleiche vor dem Verkauf die Marktpreise bei mehreren Händlern; überstürzte Verkäufe bedeuten oft Verlust. Erkundige dich in den offiziellen Beiträgen, welche Gegenstände vom Boost-Server auf Standardserver übertragbar sind, und verbrauche nicht übertragbare Güter rechtzeitig."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Der Kauf oder Verkauf von Yang, Konten oder Gegenständen gegen Echtgeld (RMT) verstößt gegen die Nutzungsbedingungen und führt zur Sperrung. Nutze ausschließlich das offizielle In-Game-Handelsfenster."
+      }
+     ]
+    },
+    {
+     "id": "yukseltme",
+     "baslik": "Gegenstandsaufwertung: Schmiede und Optionen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Gegenstandsaufwertungen erfolgen bei Schmieden, wobei jeder Schmied eigenen Regeln folgt. Laut der Wiki-Seite 'Upgrade Items' gibt es folgende Möglichkeiten:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Schmied",
+        "Was aufgewertet wird",
+        "Besonderheit"
+       ],
+       "satirlar": [
+        [
+         "Blacksmith",
+         "Jeder Gegenstand unabhängig von der Stufe; die meisten epischen Aufwertungen",
+         "Gewährt die Basis-Erfolgsrate; epische Aufwertungen gelingen stets zu 100%"
+        ],
+        [
+         "Seon-Pyeong",
+         "Jeder Gegenstand und alle epischen Aufwertungen",
+         "Keine Stufenbegrenzung"
+        ],
+        [
+         "Guild blacksmith",
+         "Nicht-epische Gegenstände",
+         "Kostet 10% mehr Yang; die Gilde wählt genau einen Typ (Rüstung, Waffe oder Schmuck)"
+        ],
+        [
+         "Serpent Temple smith",
+         "Ausschließlich Handschuhe",
+         "Keine Aufwertungsmaterialien nötig; bei Fehlschlag wird der Handschuh nicht zerstört, sondern fällt um 1 Stufe zurück"
+        ],
+        [
+         "Demon Tower blacksmith",
+         "Nicht-epische Gegenstände bis Stufe 90",
+         "Keine Aufwertungsmaterialien nötig; 10% höhere Erfolgschance im Vergleich zum Dorfschmied und Seon-Pyeong"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Exakte Zahlenlisten zu benötigten Aufwertungsmaterialien und Erfolgsquoten sind nicht offiziell beziffert. Dass im Schlangentempel Handschuhe bei Fehlschlägen ausdrücklich nicht zerstört werden, deutet darauf hin, dass bei anderen Schmieden bei Misserfolg der Gegenstand zerstört werden kann (dies ist eine Schlussfolgerung)."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Teste Aufwertungen vor teuren Gegenständen zunächst an einfachen Objekten, um ein Gespür für die Quote zu entwickeln; plane das Verlustrisiko fest in dein Yang-Budget ein und nutze nur In-Game-Schmiede."
+      }
+     ]
+    },
+    {
+     "id": "ejderha-tasi",
+     "baslik": "Drachensteinalchemie und Biologenquests",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Drachensteinalchemie (DSA) ist das System zur Veredelung von Drachensteinen. Laut Wiki erschien sie erstmals mit Version 13.3, die Mythische Klasse kam in 19.0 hinzu und der Amethyststein in 23.2. Steine werden veredelt, indem du den Alchemisten-NSC aufsuchst und 'Drachenstein-Veredelung' wählst."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Aufwertung",
+        "Benötigte Steine",
+        "Bei Fehlschlag"
+       ],
+       "satirlar": [
+        [
+         "Klasse: Matt, Klar, Lupe, Antik, Legendär, Mythisch",
+         "2 Steine derselben Klasse pro Veredelungsschritt",
+         "Ein Stein derselben Klasse bleibt erhalten"
+        ],
+        [
+         "Reinheit",
+         "2 Steine derselben Reinheitsstufe pro Schritt",
+         "Ein Stein derselben Reinheit bleibt erhalten"
+        ],
+        [
+         "Stufe",
+         "Details nicht veröffentlicht",
+         "Nicht offiziell angegeben"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Die Wiki-Seite behandelt zudem Steinaktivierung, Zeitverlängerung und das Entfernen von Steinen; informiere dich beim Alchemisten oder im Wiki über die Einzelheiten. Für Biologenquests verlinkt die Hauptseite gesonderte Guides; Belohnungen und Stufen variieren mit Patches, ziehe daher die aktuellen Wiki-Seiten heran."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Jeder Aufwertungsversuch erfordert zwei Steine und bei Fehlschlag bleibt nur einer übrig; sammle daher stets Paare gleicher Klasse oder Reinheit, bevor du beginnst."
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "Nach Stufe 120: Champion-Level und Yohara",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Ab Stufe 120 beginnen die **Champion-Level**, und ab Champion-Stufe 1 stehen dir die Yohara-Inhalte offen. Das Ziel des Boost-Servers ist es, diesen Meilenstein zu erreichen. In dieser Phase rücken Dungeons, Weltbosse, Begleiter und Ausrüstungsoptimierungen in den Mittelpunkt."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Phase",
+        "Deine Aktivitäten",
+        "Hinweis"
+       ],
+       "satirlar": [
+        [
+         "1-120",
+         "Leveln, Quests, Metinsteine zerschlagen",
+         "Der Yohara-Server beschleunigt diese Phase deutlich"
+        ],
+        [
+         "Champion 1+",
+         "Yohara-Inhalte, Bosse und anspruchsvolle Dungeons",
+         "Das Hauptziel des Boost-Servers"
+        ],
+        [
+         "Darüber hinaus",
+         "Ausrüstung perfektionieren, Begleiter, High-End-Handel",
+         "Abhängig von der Serverökonomie"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Set-Boni und Set-Effekte",
+        "Energiesystem und Pet-System",
+        "Kostümsystem, Aura-Gewand-System und Schulterband-System",
+        "Reliktsystem, Seelengebundenes System und Gürtelsystem",
+        "Gaya-System und Monsterkartensystem",
+        "Privater Laden und Auto-Jagd"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Jedes der genannten Systeme besitzt eigene Erklärungsseiten im offiziellen Wiki; versuche nicht, alles auf einmal zu erfassen. Verknüpfe Systeme gezielt mit deinen Prioritäten (z. B. Boni für Ausrüstung, Pferd für Mobilität)."
+      },
+      {
+       "tip": "p",
+       "metin": "Formuliere bei Erreichen der Champion-Level ein klares Ziel: Ausrüstung, Dungeons oder Handel? Alle Bereiche parallel zu maximieren, überfordert viele Spieler. Setze dir Etappenziele und bedenke bei Yohara-Servern stets das zeitliche Limit."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Verfolge Events und Bonusaktionen in den offiziellen Forumsankündigungen; Termine können kurzfristig angepasst werden."
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "Häufige Fehler und Accountsicherheit",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Gegen übermächtige Monster antreten und teure Tränke verschwenden.",
+        "Jeden erbeuteten Gegenstand unbesehen an NSCs verscherbeln.",
+        "Dasselbe Passwort auf externen Websites wiederverwenden."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Meide Cheats, Bots, Makros, Exploits, P-Server, Echtgeldhandel (RMT) und illegale Clients. Sie führen zum dauerhaften Ausschluss und gefährden deine Daten. Die Metin+-Kanäle dienen unter anderem dazu, Bot-Aktivitäten einzudämmen."
+      },
+      {
+       "tip": "p",
+       "metin": "Sichere auch dein verknüpftes E-Mail-Konto mit einem starken Passwort und Zwei-Faktor-Authentifizierung; bei Kontodiebstählen ist oft das Postfach das schwächste Glied. Kontaktiere bei Verdachtsfällen oder Verlusten ausschließlich das offizielle Support-Portal und vertraue keinen Drittanbietern."
+      },
+      {
+       "tip": "p",
+       "metin": "Gameforge wird dich niemals nach deinem Passwort oder Sicherheitscode fragen. Melde dich nur über offizielle Adressen an und klicke keine zweifelhaften Links an."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Häufig gestellte Fragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Ist Metin2 kostenlos?",
+         "c": "Ja, es ist Free-to-Play. Der In-Game-Shop ist optional; Shop-Preise sind nicht offiziell beziffert."
+        },
+        {
+         "s": "Was ist der Yohara-Boost-Server?",
+         "c": "Ein temporärer Server vom 13. November 2026 bis 24. Februar 2027, der den Fortschritt stark beschleunigt."
+        },
+        {
+         "s": "Mit welcher Klasse sollte ich starten?",
+         "c": "Der Krieger ist meist am unkompliziertesten, wähle aber vor allem den Spielstil, der dir gefällt."
+        },
+        {
+         "s": "Kann ich meinen Charakter später auf einen normalen Server übertragen?",
+         "c": "Ja, bis zu zwei Charaktere. Beachte die Bedingungen in der offiziellen Ankündigung."
+        },
+        {
+         "s": "Wofür stehen die verschiedenen Kanäle?",
+         "c": "1-2 stehen allen offen, 3-4 verifizierten Spielern und 5-6 Mitgliedern von Metin+."
+        },
+        {
+         "s": "Gibt es das Spiel auf Türkisch?",
+         "c": "Forum, Wiki und Support der türkischen Version sind auf Türkisch; PCGamingWiki führt Türkisch ebenfalls auf. Prüfe die Sprache der Benutzeroberfläche auf der offiziellen Seite."
+        },
+        {
+         "s": "Wie lauten die Systemanforderungen?",
+         "c": "Laut PCGamingWiki beträgt das Minimum Windows 7, Pentium 3 1,0 GHz, 512 MB RAM, 32 MB Grafikspeicher und 2 GB Festplatte; empfohlen Windows 8, Pentium 4 1,8 GHz, 1 GB RAM, 64 MB Grafikspeicher und 3 GB Festplatte. Gameforge gibt keine aktuelle Liste heraus."
+        },
+        {
+         "s": "Wie erhalte ich ein Reitpferd?",
+         "c": "Das Anfängerpferd wird durch Questschritte aufgewertet (Stufen 2-10), das Kampfpferd über Monsterjagd (12-20), das Militärpferd mit EXP, Yang und Futter (21-40)."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "nl": {
+   "baslik": "Metin2 Beginnersgids: Officiële Servers 2026",
+   "ozet": "Voor spelers die starten of terugkeren op de officiële Turkse Metin2-servers van Gameforge: serverkeuze, de Yohara Boost-server, klassen, levelen, de Yang-economie en veiligheid.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "MMORPG"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Windows (Gameforge-client); er is tevens een browserstartpagina"
+    },
+    {
+     "ad": "Prijsmodel",
+     "deger": "Free-to-play; de in-game winkel is optioneel. Winkelprijzen zijn niet officieel gespecificeerd"
+    },
+    {
+     "ad": "Huidige versie",
+     "deger": "Update 26.2 (wiki bijgewerkt op 31 oktober 2026); de Yohara Boost-server opende op 13 november 2026"
+    },
+    {
+     "ad": "Turkse ondersteuning",
+     "deger": "Turks: het forum, de wiki en support van de Turkse versie zijn in het Turks; de talenlijst van PCGamingWiki bevat eveneens Turks"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "Waar de game staat in 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Metin2 is een klassieke en geliefde Koreaanse online RPG, ontwikkeld door Webzen en uitgegeven door Gameforge; het is gratis te spelen en volgens Gameforges aankondiging van januari 2026 beschikbaar in meer dan 16 talen (die maand vierde het spel zijn 19e verjaardag). In Turkije vallen het officiële forum, de wiki en het ticketsysteem onder Gameforge. Het spel telt vijf klassen, drie koninkrijken en **Champion-levels** na level 120."
+      },
+      {
+       "tip": "p",
+       "metin": "Het grootste nieuws momenteel zijn de **Yohara Boost**-servers. Gameforge organiseert deze tijdelijke servers tussen **13 november 2026 om 10:00 uur (MET)** en **24 februari 2027 om 10:00 uur**. Er is één server per cluster; voor Turkije heet deze 'Apex'. Volgens aankondigingen werd een tweede Turkse server toegevoegd en sloot Apex voor nieuwe registraties. Raadpleeg de officiële forumaankondiging om te zien welke server openstaat voor nieuwe spelers."
+      },
+      {
+       "tip": "p",
+       "metin": "Een praktische opmerking voor terugkerende spelers: je oude personage blijft op de oorspronkelijke server; de regels voor verhuizen naar een nieuwe server kunnen veranderen. Controleer eerst of je oude server bereikbaar is en vervolgens of de Yohara Boost-server bij je past. Het vooraf lezen van de laatste forumberichten kost slechts enkele minuten maar bespaart uren verspilde moeite."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "De data en servernamen in dit hoofdstuk volgen de officiële aankondiging. Als deze wijzigt, is de aankondiging leidend."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Voor je begint: account, server, kosten",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Je hebt een gratis **Gameforge-account** nodig om te spelen. Je start het spel via de officiële speelpagina of de Gameforge-client. Bevestig bij registratie je e-mailadres en controleer de beveiligingsinstellingen."
+      },
+      {
+       "tip": "p",
+       "metin": "Turkse servers staan vermeld op de wikipagina 'Türkiye Sunucuları'. Elke server heeft 6 kanalen. De nieuwste servers zijn SAPPHIRE[Star] en [Safir] (geopend op 08.08.2025); gevolgd door RUBY[Lucifer] (07.12.2023) en RUBY[Charon] (19.08.2022). Marmara, Ezel, Barbaros, Dandanakan, Arkadaşlar en Bagjanamu zijn klassieke servers; Marmara, Arkadaşlar, Dandanakan en Bagjanamu tonen het symbool voor gesloten servers. Over eerdere servers vermeldt de wiki dat servers niet zijn gesloten maar samengevoegd (Fırtına, Lodos, Apex, Zephyr, Anadolu, ONYX Bazalt, EMERALD Alesta). Tariefvoorwaarden voor servers zijn niet officieel vastgelegd."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Onderwerp",
+        "Informatie"
+       ],
+       "satirlar": [
+        [
+         "Prijs",
+         "Gratis speelbaar; de in-game winkel is optioneel. Winkelprijzen zijn niet officieel gepubliceerd"
+        ],
+        [
+         "Platform",
+         "Windows; via de website van de uitgever met een Gameforge-account (niet op Steam)"
+        ],
+        [
+         "Klassen",
+         "Warrior, Ninja, Sura, Shaman, Lycan"
+        ],
+        [
+         "Koninkrijken",
+         "Shinsoo, Chunjo, Jinno"
+        ],
+        [
+         "Levelstructuur",
+         "Normale levels tot 120, daarna Champion-levels"
+        ],
+        [
+         "Minimale systeemeisen",
+         "Windows 7, Pentium 3 1,0 GHz, 512 MB RAM, 32 MB videogeheugen, 2 GB schijf"
+        ],
+        [
+         "Aanbevolen systeemeisen",
+         "Windows 8, Pentium 4 1,8 GHz, 1 GB RAM, 64 MB videogeheugen, 3 GB schijf"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Let bij het kiezen van een server op drie zaken: waar je vrienden spelen, hoe druk de server is en of er een speciale evenementenkalender geldt (in de wiki gemarkeerd met een 'event server'-icoon). Op een drukke server floreert de handel maar is de concurrentie hevig; op een rustige server is dat precies omgekeerd."
+      },
+      {
+       "tip": "uyari",
+       "metin": "De systeemvereisten zijn afkomstig van PCGamingWiki (externe partij, oudere lijst); Gameforge publiceert zelf geen actuele lijst. De getallen zijn laag, maar controleer onder modern Windows toch je installatie en videodriver."
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "De eerste uren stap voor stap",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Account aanmaken",
+         "metin": "Maak een Gameforge-account aan, bevestig je e-mailadres en controleer de beveiligingsopties."
+        },
+        {
+         "baslik": "Server kiezen",
+         "metin": "Als je nieuw bent en snelle progressie zoekt, overweeg dan de Yohara Boost-server; wil je een blijvend personage, kies dan een reguliere server. Speel op dezelfde server als je vrienden."
+        },
+        {
+         "baslik": "Koninkrijk en klasse kiezen",
+         "metin": "Kies een koninkrijk (Shinsoo, Chunjo of Jinno) en een klasse. De klassenkeuze wordt toegelicht in de tabel."
+        },
+        {
+         "baslik": "Eerste quests voltooien",
+         "metin": "Beginnersquests leren je basissystemen en bieden beloningen. Mijlpaalquests op level 10, 30, 60, 90 en 110 geven waardevolle beloningen (op de Yohara-server)."
+        },
+        {
+         "baslik": "Paardensysteem",
+         "metin": "Het spel beschikt over een rijdierenstelsel; controleer het questlog en de wiki om te zien hoe je je paard ontgrendelt."
+        },
+        {
+         "baslik": "Vaardigheden toewijzen",
+         "metin": "Verdeel vaardigheidspunten niet willekeurig; kies eerst voor één gericht hoofdpad."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "In de eerste uren is het doorgronden van de spelmechanismen net zo belangrijk als levelen: drankjes gebruiken, spullen upgraden, handelen en vaardigheden uitbouwen."
+      },
+      {
+       "tip": "p",
+       "metin": "Open direct na het inloggen je inventaris, het vaardighedenvenster en het questlog om overzicht te krijgen. Weten welke sneltoets wat doet, bespaart in het begin de meeste tijd. Wees daarnaast op je hoede voor vreemden in de chat die om bezittingen vragen."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Op de Yohara Boost-server zijn kanalen 1-2 open voor iedereen, 3-4 voor geverifieerde spelers en 5-6 voor Metin+-leden. Begin als nieuwkomer op kanaal 1-2."
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "Een klasse en koninkrijk kiezen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Er zijn vijf klassen: Warrior, Ninja, Sura, Shaman en Lycan. Het verschil in speelstijl tussen koninkrijken is miniem; het voornaamste verschil is waar je vrienden en servercommunity zich bevinden. Voor een eerste personage wordt Warrior algemeen als het eenvoudigst beschouwd, al blijft dit een kwestie van voorkeur en serverdynamiek."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Klasse",
+        "Speelstijl",
+        "Voor wie geschikt"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Melee, stevig, ongecompliceerd",
+         "Spelers die een stabiele, zorgeloze start wensen op hun eerste personage"
+        ],
+        [
+         "Ninja",
+         "Mobiel, snelle doelgerichte schade",
+         "Spelers die houden van snelheid en behendigheid"
+        ],
+        [
+         "Sura",
+         "Magische wapens, sterke zelf-buffs",
+         "Spelers die graag vaardigheden tactisch plannen"
+        ],
+        [
+         "Shaman",
+         "Ondersteuning en toverspreuken",
+         "Spelers die graag in groepsverband opereren"
+        ],
+        [
+         "Lycan",
+         "Krachtige melee-aanvallen",
+         "Spelers die een afwijkende speelstijl zoeken"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Vaardigheden groeien voorbij normale levels door naar Master, Grand Master en Perfect Master fases. Bij het vroege toewijzen van punten is het daarom veel effectiever om je op één hoofdpad te concentreren."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Kies een klasse niet uitsluitend op basis van PvP-video's; voor een eerste personage is comfortabel en vlot farmen veel belangrijker."
+      }
+     ]
+    },
+    {
+     "id": "krallik-harita",
+     "baslik": "Koninkrijken en kaartstructuur",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Metin2 kent drie koninkrijken: **Chunjo** (gele vlag), **Jinno** (blauwe vlag) en **Shinsoo** (rode vlag). De wereldkaart op de officiële wiki vermeldt vier kaarten per koninkrijk: twee reguliere gebieden en twee gildezones. De koninkrijkskeuze beïnvloedt de gameplay nauwelijks; het belangrijkste is waar je vrienden spelen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Kaart",
+        "Chunjo",
+        "Jinno",
+        "Shinsoo"
+       ],
+       "satirlar": [
+        [
+         "Kaart 1",
+         "Joan",
+         "Pyungmoo",
+         "Yongan"
+        ],
+        [
+         "Kaart 2",
+         "Bokjung",
+         "Bakra",
+         "Yayang"
+        ],
+        [
+         "Gildezone",
+         "Waryong",
+         "Imha",
+         "Jungrang"
+        ],
+        [
+         "Gildezone 2",
+         "Songpa",
+         "Daeyami",
+         "Miryang"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Buiten de koninkrijkskaarten zijn er neutrale gebieden die niet aan één koninkrijk toebehoren. De wiki groepeert deze als volgt; kerkers en evenementenkaarten staan apart vermeld."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Kaartgroep",
+        "Vermeld op de wiki"
+       ],
+       "satirlar": [
+        [
+         "Neutrale kaarten",
+         "Valley of Seungryong, Yongbi Desert, Mount Sohan, Fireland, Hwang Temple, Ghost Forest, Red Forest, Snakefield, Land of Giants"
+        ],
+        [
+         "Apendungeons",
+         "Hasun Dong (makkelijk), Jungsun Dong (normaal), Sangsun Dong (moeilijk)"
+        ],
+        [
+         "Yohara-regio",
+         "Abandoned Fortress, Dong Gwang Plain, Seo Gwang Wastelands, Gnoll Caves, Nam Gwang Chasm, Yilad Pass, Northwind Canyon en overige"
+        ],
+        [
+         "Dungeons",
+         "Demon Tower, Devil's Catacomb, Spider Queen's Nest, Dragon's Temple, Meley's Lair, Zodiac Temple, Red Dragon Fortress, Nemere's Watchtower, Serpent Temple, Sung Mahi Tower, Depths of Greed en overige"
+        ],
+        [
+         "Evenementenkaarten",
+         "Combat Zone, Isle of Mist, OX-Competition, Otherworld, Battle Royale, Sung Ma Invasion, Treasure Island"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Een vast levelbereik per zone staat niet in één overzichtstabel op de wiki; raadpleeg daarvoor de afzonderlijke kaartpagina's. Een heldere richtlijn vormen de paardenquest-stappen: levels 2-6 op Kaart 1 van je koninkrijk, 7-8 in de Valley of Seungryong of Yongbi Desert, 9-10 op Mount Sohan of in Doyyumhwan (Fireland)."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Houd de wereldkaartpagina op de wiki geopend voor je reist en check de monsterlevels op de gebiedspagina; drankjes verspillen op een kaart ver boven je niveau is inefficiënt."
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "Levelen: een snelle en efficiënte route",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "In Metin2 stijg je in level door monsters te verslaan, quests te voltooien en Metin-stenen te breken. Ervaringswinst hangt af van het niveauverschil tussen jou en het monster; vechten tegen extreem sterke monsters is lang niet altijd voordelig. Rustig en continu farmen in een zone waar je niet sterft en nauwelijks drankjes verbruikt, levert per saldo meer op."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Op de Yohara Boost-server hebben monsters 40 procent minder levenspunten en schade, terwijl de drop rate is verdubbeld.",
+        "Vanaf level 40 kun je bij Uriel voor 8 uur een EXP-boost van 50 tot 200 procent activeren.",
+        "Tiger Power verhoogt je PvE-schade met 40 procent."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Het voornaamste doel van de boostserver is het bereiken van **Champion Level 1**. Zodra de periode afloopt, kunnen maximaal twee personages worden overgezet naar normale servers; registratie loopt van 17 februari tot 3 maart 2027 en transfers vinden plaats tijdens het onderhoud op 24 februari en 3 maart. Transfers naar DIAMOND en Marmara zijn uitgesloten."
+      },
+      {
+       "tip": "p",
+       "metin": "Hanteer tijdens het farmen een vaste routine: vertrek naar de zone, versla monsters, keer terug zodra je inventaris vol zit, sorteer je buit en vul drankjes aan. Doorschuiven naar een zone die bij je level past, bespaart zowel tijd als voorraden. Ga je te vaak neer in een gebied, dan ben je er nog niet aan toe."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Lees de transfervoorwaarden op het officiële forum nogmaals goed door naarmate de data naderen. Termijnen en condities kunnen tussentijds worden aangepast."
+      }
+     ]
+    },
+    {
+     "id": "at-sistemi",
+     "baslik": "Paardensysteem: eerste rijdier en upgrades",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Het paard dient zowel voor snelle verplaatsing als voor gevechten. Volgens de wiki zijn er vier typen: beginnerspaard (Beginner), strijdpaard (War), militair paard (Military) en machtig oorlogspaard (Mighty War). Elk type heeft een eigen zegel, voer en herleefkruid: voor het beginnerspaard de Horse Picture en hooi, voor het strijdpaard het Armed Horse Book en wortel, voor het militair paard het Military Horse Book en rode ginseng, voor het machtige oorlogspaard het Golden Horse Book en Premium rode ginseng."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Type",
+        "Paardlevel (volgens wiki-tabel)",
+        "Hoe het vordert"
+       ],
+       "satirlar": [
+        [
+         "Beginner horse",
+         "2-10",
+         "Queststappen: 2-6 op Kaart 1, 7-8 in de Valley of Seungryong of Yongbi Desert, 9-10 op Mount Sohan of in Doyyumhwan; elke stap vereist 1 tot 5 checkpoints"
+        ],
+        [
+         "War horse",
+         "12-20",
+         "Monsterjacht: 12 vereist Bo x5, 13 Chuong x5, 14 Elite Orc General x10, 15 Black Orc x10, 16 Dark Tormentor x10, 17 Claw Poison Spider x10, 18 Desert Outlaw x20, 19 Ice Golem x10, 20 Fighting Tiger x20"
+        ],
+        [
+         "Military horse",
+         "21-40",
+         "EXP, Yang en voer: level 21 vergt 12.500 EXP, 500.000 Yang, 50 voer; Yang stijgt met 500.000 per stap, vanaf level 30 is het 5.000.000 Yang en 50 voer; 40 is het maximum"
+        ],
+        [
+         "Mighty war horse",
+         "Boven het militair paard",
+         "Gebruikt het Golden Horse Book en Premium rode ginseng; details zijn niet officieel bekendgemaakt"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Oproepen en statistieken:** De kans op succesvol oproepen is 10% op level 0, 15% op 1, 20% op 2 en 30% op 3; vanaf level 4 stijgt dit met 10 punten per level tot 100% op level 10. De stats van het paard nemen toe met het level: op level 1 VIT 18, INT 9, STR 26, DEX 35; op level 10 23, 12, 35, 46; op level 20 32, 16, 48, 64."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Upgradestappen voor het militair paard zijn prijzig: na level 30 kost elke stap 5.000.000 Yang en 50 stuks voer. Verdeel je Yang-budget vooraf evenwichtig tussen uitrusting en paardenupgrades."
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "Yang en economie: uitsluitend in-game methoden",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "De valuta in het spel is **Yang**. Yang wordt gebruikt voor drankjes, item-upgrades, paardenfokkerij en handel tussen spelers. Controleer voordat je buit aan een NPC verkoopt altijd of medespelers er meer voor over hebben."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Houd uitgaven aan drankjes en upgrades in balans; investeer niet al je Yang in één enkele upgrade.",
+        "Verbeter eerst je wapen, of je harnas als je extreem veel uitgeeft aan drankjes.",
+        "Verkoop onbekende materialen niet overhaast aan handelaren."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Er is een optionele in-game winkel. Lees voor aankoop goed door wat de items in de game precies opleveren."
+      },
+      {
+       "tip": "p",
+       "metin": "Wees geduldig in de handel. Vergelijk marktprijzen bij meerdere spelers voor je een item van de hand doet; gehaaste verkopen leiden vaak tot verlies. Lees in officiële mededelingen na welke voorwerpen meegaan van de boostserver naar gewone servers, en verbruik niet-overdraagbare zaken tijdig."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Het kopen of verkopen van Yang, accounts of items voor echt geld (RMT) is verboden en leidt tot sluiting van je account. Gebruik uitsluitend het officiële in-game handelsvenster."
+      }
+     ]
+    },
+    {
+     "id": "yukseltme",
+     "baslik": "Item-upgrades: smeden en mogelijkheden",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Het verbeteren van voorwerpen gebeurt bij smeden en elke smid hanteert afwijkende regels. Volgens de wikipagina 'Upgrade Items' zijn dit de opties:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Smid",
+        "Wat het upgrade",
+        "Kenmerk"
+       ],
+       "satirlar": [
+        [
+         "Blacksmith",
+         "Elk voorwerp ongeacht level; de meeste epische upgrades",
+         "Biedt het standaard slagingspercentage; een epische upgrade slaagt altijd voor 100%"
+        ],
+        [
+         "Seon-Pyeong",
+         "Elk item en alle epische upgrades",
+         "Geen levellimiet"
+        ],
+        [
+         "Guild blacksmith",
+         "Niet-epische items",
+         "Kost 10% meer Yang; de gilde kiest exact één type (pantser, wapen of sieraden)"
+        ],
+        [
+         "Serpent Temple smith",
+         "Uitsluitend handschoenen",
+         "Geen upgradematerialen vereist; bij mislukking breekt de handschoen niet, maar daalt deze 1 graad"
+        ],
+        [
+         "Demon Tower blacksmith",
+         "Niet-epische items tot level 90",
+         "Geen upgradematerialen vereist; 10% extra slagingskans ten opzichte van de dorpssmid en Seon-Pyeong"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Exacte lijsten met slagingspercentages en benodigde materialen zijn niet officieel bekendgemaakt. Het feit dat bij de Serpent Temple handschoenen bij mislukking uitdrukkelijk niet breken, wijst erop dat bij reguliere smeden het voorwerp bij een mislukte poging verloren kan gaan (dit is een gevolgtrekking)."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Probeer upgrades van waardevolle spullen eerst uit op goedkope items om gevoel te krijgen voor de kansen; calculeer het risico op verlies in binnen je Yang-budget en gebruik alleen in-game smeden."
+      }
+     ]
+    },
+    {
+     "id": "ejderha-tasi",
+     "baslik": "Drakensteenalchemie en biologenquests",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Dragon Stone Alchemy (DSA) is het systeem voor het verfijnen van drakenstenen. Volgens de wiki verscheen dit in versie 13.3, werd de Mythic-klasse toegevoegd in 19.0 en de Amethyst-steen in 23.2. Stenen worden veredeld via de Alchemist-NPC met de optie 'Dragon Stone Refinement'."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Upgrade",
+        "Benodigde stenen",
+        "Bij mislukking"
+       ],
+       "satirlar": [
+        [
+         "Klasse: Rough, Cut, Rare, Antique, Legendary, Mythic",
+         "2 stenen van dezelfde klasse per stap",
+         "Eén steen van dezelfde klasse blijft over"
+        ],
+        [
+         "Helderheid (Clarity)",
+         "2 stenen van dezelfde helderheid per stap",
+         "Eén steen van dezelfde helderheid blijft over"
+        ],
+        [
+         "Level",
+         "Details niet gepubliceerd",
+         "Niet officieel vermeld"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "De wikipagina beschrijft tevens steenactivatie, tijdsverlenging en steenverwijdering; informeer bij de Alchemist of op de wiki voor meer bijzonderheden. Voor biologenquests biedt de hoofdpagina een aparte link; beloningen en niveaus variëren met updates, bekijk die pagina voor actuele getallen."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Elke upgradepoging kost twee stenen en bij een mislukking blijft er slechts één over; spaar daarom paren van gelijke klasse of helderheid voor je begint."
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "Na level 120: Champion-levels en Yohara",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Vanaf level 120 beginnen de **Champion-levels**, en vanaf Champion Level 1 opent de Yohara-content. Het behalen van deze mijlpaal is het hoofddoel van de boostserver. Dungeons, eindbazen, pets en uitrustingsoptimalisatie komen in deze fase volop naar voren."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Fase",
+        "Wat je doet",
+        "Opmerking"
+       ],
+       "satirlar": [
+        [
+         "1-120",
+         "Levelen, quests, Metin-stenen breken",
+         "De Yohara-server versnelt deze fase aanzienlijk"
+        ],
+        [
+         "Champion 1+",
+         "Yohara-content, bazen en uitdagende dungeons",
+         "Het kerndoel van de boostserver"
+        ],
+        [
+         "Verderop",
+         "Uitrusting optimaliseren, pets, high-end handel",
+         "Afhankelijk van de servereconomie"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Set Bonus en Set Effect (setbonussen)",
+        "Energy System en Pet System",
+        "Costume System, Aura Outfit System en Shoulder Sash System",
+        "Relic System, Binding System en Belt System",
+        "Gaya System en Monster Card System",
+        "Private Shop en Auto-Hunt"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Elk van de bovenstaande systemen heeft een eigen pagina op de officiële wiki; probeer ze niet allemaal tegelijk te doorgronden. Koppel het systeem dat je nodig hebt aan een concreet doel (zoals upgrades en setbonussen voor bepantsering, het paard voor mobiliteit)."
+      },
+      {
+       "tip": "p",
+       "metin": "Stel bij het bereiken van Champion-levels een helder doel vast: uitrusting, kerkers of handel? Alles tegelijk proberen put de meeste spelers uit. Eén doel afronden voor je aan het volgende begint is effectiever. Bepaal je focus tijdig met het oog op de tijdelijke Yohara-server."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Blijf evenementen en bonuscampagnes volgen in de officiële forumberichten; data kunnen tussentijds wijzigen."
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "Veelvoorkomende fouten en veiligheid",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Monsters bevechten die ver boven je kracht liggen en dure drankjes verspillen.",
+        "Elk gevonden item klakkeloos dumpen bij een NPC-handelaar.",
+        "Hetzelfde wachtwoord hergebruiken op andere websites."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Blijf weg van cheats, bots, macro's, exploits, privéservers, handel in Yang of accounts voor echt geld (RMT) en illegale clients. Ze leiden tot permanente sluiting van je account en diefstal van gegevens. De Metin+-kanalen zijn mede ontworpen om botoverlast te beperken."
+      },
+      {
+       "tip": "p",
+       "metin": "Beveilig je e-mailaccount met een sterk wachtwoord en tweestapsverificatie; bij gecompromitteerde accounts is het e-mailadres vaak de zwakke schakel. Neem bij verdachte activiteiten uitsluitend contact op met het officiële Gameforge-supportcenter; ga niet in op claims van derden."
+      },
+      {
+       "tip": "p",
+       "metin": "Gameforge zal nooit om je wachtwoord of beveiligingscode vragen. Log uitsluitend in via officiële adressen en klik nooit op twijfelachtige links."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Veelgestelde vragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is Metin2 gratis?",
+         "c": "Ja, het is free-to-play. De in-game winkel is optioneel; winkelprijzen zijn niet officieel gepubliceerd."
+        },
+        {
+         "s": "Wat is de Yohara Boost-server?",
+         "c": "Een tijdelijke server die loopt van 13 november 2026 tot 24 februari 2027 en progressie sterk versnelt."
+        },
+        {
+         "s": "Met welke klasse kan ik het beste starten?",
+         "c": "Warrior is doorgaans het meest rechttoe rechtaan, maar kies vooral de speelstijl die je aanspreekt."
+        },
+        {
+         "s": "Kan ik mijn personage later verhuizen naar een normale server?",
+         "c": "Ja, maximaal twee personages. Raadpleeg de officiële aankondiging voor de exacte voorwaarden."
+        },
+        {
+         "s": "Waar dienen de kanalen voor?",
+         "c": "1-2 zijn open voor iedereen, 3-4 voor vertrouwde spelers en 5-6 voor Metin+-abonnees."
+        },
+        {
+         "s": "Is het spel beschikbaar in het Turks?",
+         "c": "Het forum, de wiki en support van de Turkse versie zijn in het Turks; PCGamingWiki vermeldt tevens Turks. Controleer de taal van de in-game interface via de officiële pagina."
+        },
+        {
+         "s": "Wat zijn de systeemeisen?",
+         "c": "Volgens PCGamingWiki is het minimum Windows 7, Pentium 3 1,0 GHz, 512 MB RAM, 32 MB videogeheugen en 2 GB schijf; aanbevolen Windows 8, Pentium 4 1,8 GHz, 1 GB RAM, 64 MB videogeheugen en 3 GB schijf. Gameforge publiceert zelf geen actuele lijst."
+        },
+        {
+         "s": "Hoe kom ik aan een paard?",
+         "c": "Het beginnerspaard wordt geüpgraded via queststappen (levels 2-10), het strijdpaard via monsterjachten (12-20), het militair paard met EXP, Yang en voer (21-40)."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "zh": {
+   "baslik": "Metin2 新手指南：2026 官方服务器全解析",
+   "ozet": "专为在 Gameforge 官方土耳其 Metin2 服务器开启征程或重返战场的玩家量身打造：服务器选择、Yohara 快速升级服、职业分析、练级路线、Yang 经济体系与账号安全。",
+   "kunye": [
+    {
+     "ad": "游戏类型",
+     "deger": "MMORPG"
+    },
+    {
+     "ad": "平台",
+     "deger": "Windows（Gameforge 客户端）；同时配备网页启动入口"
+    },
+    {
+     "ad": "收费模式",
+     "deger": "免费畅玩；商城道具为可选项。商城价格未正式公布"
+    },
+    {
+     "ad": "当前版本",
+     "deger": "Update 26.2（Wiki 于 2026 年 10 月 31 日更新）；Yohara Boost 服务器于 2026 年 11 月 13 日开启"
+    },
+    {
+     "ad": "土耳其语支持",
+     "deger": "土耳其语：土耳其版本的论坛、Wiki 和客服工单均为土耳其语；PCGamingWiki 语言列表中同样包含土耳其语"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "2026 年游戏现状与环境概览",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Metin2 是一款由 Webzen 开发、Gameforge 发行的经典韩国网络奇幻 RPG；游戏实行免费畅玩，且根据 Gameforge 2026 年 1 月的公告显示，游戏支持超过 16 种语言（当月迎来了 19 周年庆典）。在土耳其，官方论坛、Wiki 和客服工单系统均由 Gameforge 负责运营。游戏拥有五大职业、三大王国，并在 120 级之后解锁**巅峰等级（Champion levels）**。"
+      },
+      {
+       "tip": "p",
+       "metin": "当前最引人注目的核心内容是 **Yohara Boost** 特别冲级服。Gameforge 于 **2026 年 11 月 13 日 10:00（CET）**至 **2027 年 2 月 24 日 10:00** 期间开放这些限时专属服务器。每个区域集群设有一个服务器，土耳其集群定名为“Apex”。根据最新官方通告，目前已增设第二台土耳其服务器，Apex 停止接纳新号注册。具体开放注册状态请以论坛实时公告为准。"
+      },
+      {
+       "tip": "p",
+       "metin": "给老玩家的实用建议：你的历史角色依然保留在原有服务器中；迁移至新服务器的规则随时可能变动。请先核实原服务器是否正常运转，再评估 Yohara Boost 服是否符合你的预期。做决定前花几分钟查阅官方论坛公告，能避免后续数百小时的无谓精力消耗。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "本章节中的日期与服务器名称严格遵循官方公告。若官方计划发生变动，请以最新通告为准。"
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "入坑之前：账号、选服与游玩成本",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "进入游戏需要注册一个免费的 **Gameforge 账号**。你可以通过官方主页或 Gameforge 桌面客户端启动游戏。注册时请务必完成邮箱验证并检查安全绑定。"
+      },
+      {
+       "tip": "p",
+       "metin": "土耳其服务器完整列表收录在官方 Wiki 的“Türkiye Sunucuları”页面。每个服务器均设有 6 个分流频道（Channels）。最新开放的服务器为 SAPPHIRE[Star] 与 [Safir]（2025年8月8日开启）；其次为 RUBY[Lucifer]（2023年12月7日）和 RUBY[Charon]（2022年8月19日）。Marmara、Ezel、Barbaros、Dandanakan、Arkadaşlar 与 Bagjanamu 为经典老服；其中 Marmara、Arkadaşlar、Dandanakan 和 Bagjanamu 带有“关闭注册/饱和”标识。关于“历史服务器”，Wiki 明确指出服务器并未关闭而是进行了合服合并（Fırtına、Lodos、Apex、Zephyr、Anadolu、ONYX Bazalt、EMERALD Alesta）。各服的收费准入条件未在官方正式列明。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "关键项目",
+        "详细信息"
+       ],
+       "satirlar": [
+        [
+         "价格",
+         "免费畅玩；游戏内商城完全可选。商城道具价格未正式明码标价"
+        ],
+        [
+         "平台",
+         "Windows；通过发行商官网配合 Gameforge 账号启动（未上线 Steam）"
+        ],
+        [
+         "职业",
+         "Warrior（战士）、Ninja（刺客）、Sura（修罗）、Shaman（萨满）、Lycan（狼人）"
+        ],
+        [
+         "王国阵营",
+         "Shinsoo（红国）、Chunjo（黄国）、Jinno（蓝国）"
+        ],
+        [
+         "等级架构",
+         "常规等级上限 120 级，其后开启 Champion 巅峰等级"
+        ],
+        [
+         "最低配置",
+         "Windows 7、Pentium 3 1.0 GHz、512 MB 内存、32 MB 显存、2 GB 硬盘空间"
+        ],
+        [
+         "推荐配置",
+         "Windows 8、Pentium 4 1.8 GHz、1 GB 内存、64 MB 显存、3 GB 硬盘空间"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "选择服务器时需重点权衡三要素：好友所在阵营、服务器活跃人口密度，以及是否享有专门的活动日历（Wiki 上注有活动服标识）。人口大服贸易活跃但资源竞争激烈；人少服务器则竞争较小但流通较慢。"
+      },
+      {
+       "tip": "uyari",
+       "metin": "系统硬件需求指标来自第三方 PCGamingWiki（基于早期老版本统计）；Gameforge 官方未发布最新硬件标准。虽然门槛极低，但在现代 Windows 11 环境下仍建议注意驱动兼容性与安装完整性。"
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "最初数小时新手入门指南",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "注册账号",
+         "metin": "注册 Gameforge 账号，完成邮箱验证并开启安全保护选项。"
+        },
+        {
+         "baslik": "挑选服务器",
+         "metin": "若追求快速起号升级，建议首选 Yohara Boost 服；若注重长期稳定积累，可选择常规服务器。务必与好友确认在同一个服。"
+        },
+        {
+         "baslik": "确定王国与职业",
+         "metin": "选择所属阵营王国（Shinsoo、Chunjo 或 Jinno）与首发职业。各职业特色详见对应对照表。"
+        },
+        {
+         "baslik": "推进起始主线任务",
+         "metin": "新手任务会系统介绍核心机制并提供丰厚启动物资。在 Yohara 服中，10、30、60、90 和 110 级阶段任务还会有丰厚的额外里程碑奖励。"
+        },
+        {
+         "baslik": "解锁坐骑马匹",
+         "metin": "游戏拥有完整的坐骑养成系统；查阅任务日志及 Wiki 了解马匹考核与解锁步骤。"
+        },
+        {
+         "baslik": "配置核心技能",
+         "metin": "前期切忌分散乱点技能点；务必集中全部资源专精一条核心技能支线。"
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "在进入游戏的前几个小时，深入熟悉各项运作机制与冲级同样重要：药水补给节奏、装备精炼强化、摆摊贸易以及技能升级路线。"
+      },
+      {
+       "tip": "p",
+       "metin": "刚进游戏时，先逐一打开背包、技能栏与任务日志熟悉界面按键。熟练掌握常用快捷键能极大提升前期效率。同时，警惕聊天频道中任何主动索要账号或装备的陌生人。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "在 Yohara Boost 服务器中，频道 1-2 向所有人开放，3-4 开放给信任认证玩家，5-6 为 Metin+ 会员专线。新手建议从 1-2 频道起步。"
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "职业与王国选择指南",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "游戏共设五大职业：战士（Warrior）、刺客（Ninja）、修罗（Sura）、萨满（Shaman）以及狼人（Lycan）。三大王国在玩法机制上几乎没有硬性差别，核心考量在于好友与公会的聚集地。对于首发开荒角色，战士通常被公认为上手最简单扎实，但这取决于个人风格与服务器环境。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "职业",
+        "战斗风格",
+        "适合玩家人群"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "近战搏杀、身板坚挺、机制直观",
+         "希望首发角色稳定平滑开荒、不易暴毙的玩家"
+        ],
+        [
+         "Ninja",
+         "高机动性、极速高爆发点杀",
+         "喜欢敏捷走位与刺杀快感的玩家"
+        ],
+        [
+         "Sura",
+         "魔法兵刃、强大的自我增益强化",
+         "热衷于深度技能规划与续航的玩家"
+        ],
+        [
+         "Shaman",
+         "团队支援、增益护盾与法术轰炸",
+         "喜欢组队副本与辅助团队的玩家"
+        ],
+        [
+         "Lycan",
+         "迅猛狂暴的强力肉搏近战",
+         "追求独特新颖战斗体验的玩家"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "技能在越过常规等级后，会依次进阶至大师（Master）、宗师（Grand Master）与完美大师（Perfect Master）。因此前期集中点满一条技能树是最合理的选择。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "不要仅仅因为被高燃 PvP 集锦吸引而草率选定职业；对于首发开荒角色而言，日常刷怪打钱的舒适度才是第一位的。"
+      }
+     ]
+    },
+    {
+     "id": "krallik-harita",
+     "baslik": "三大王国与世界地图架构",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Metin2 世界分为三个王国：**Chunjo**（黄旗国）、**Jinno**（蓝旗国）以及 **Shinsoo**（红旗国）。根据官方 Wiki 的世界地图标注，每个王国各辖四块专属区域：两张常规大陆图与两张公会属地。王国选择对具体战斗机制影响极小，关键看好友和社交圈分布。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "地图类型",
+        "Chunjo",
+        "Jinno",
+        "Shinsoo"
+       ],
+       "satirlar": [
+        [
+         "1号地图（主城）",
+         "Joan",
+         "Pyungmoo",
+         "Yongan"
+        ],
+        [
+         "2号地图（副城）",
+         "Bokjung",
+         "Bakra",
+         "Yayang"
+        ],
+        [
+         "公会领地1",
+         "Waryong",
+         "Imha",
+         "Jungrang"
+        ],
+        [
+         "公会领地2",
+         "Songpa",
+         "Daeyami",
+         "Miryang"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "除王国领土外，世界还分布着中立野外区域。官方 Wiki 对这部分区域进行了如下归纳；副本与活动专属地图独立列出。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "区域大类",
+        "Wiki 收录地图"
+       ],
+       "satirlar": [
+        [
+         "中立常规地图",
+         "Valley of Seungryong, Yongbi Desert, Mount Sohan, Fireland, Hwang Temple, Ghost Forest, Red Forest, Snakefield, Land of Giants"
+        ],
+        [
+         "猿猴地牢",
+         "Hasun Dong（简单）, Jungsun Dong（普通）, Sangsun Dong（困难）"
+        ],
+        [
+         "Yohara 大陆大区",
+         "Abandoned Fortress, Dong Gwang Plain, Seo Gwang Wastelands, Gnoll Caves, Nam Gwang Chasm, Yilad Pass, Northwind Canyon 等"
+        ],
+        [
+         "地牢副本群",
+         "Demon Tower, Devil's Catacomb, Spider Queen's Nest, Dragon's Temple, Meley's Lair, Zodiac Temple, Red Dragon Fortress, Nemere's Watchtower, Serpent Temple, Sung Mahi Tower, Depths of Greed 等"
+        ],
+        [
+         "活动专属地图",
+         "Combat Zone, Isle of Mist, OX-Competition, Otherworld, Battle Royale, Sung Ma Invasion, Treasure Island"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Wiki 并未在单张综合表格中汇总每张地图的推荐练级等级；请查阅各区域单独页面。最清晰的阶段指引是马匹进阶任务：2-6 级任务在所属王国 1 号地图进行，7-8 级在 Valley of Seungryong 或 Yongbi Desert，9-10 级在 Mount Sohan 或 Doyyumhwan（Fireland）。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "长途跋涉前保持打开 Wiki 地图页面并查验怪物的等级分布；在远超自身承载极限的高危地图挥霍药水是极其低效的行为。"
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "等级提升：高效顺畅的升级路线",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "在 Metin2 中，升级主要依靠刷野怪、完成任务以及击碎 Metin 陨石。经验收益与角色和怪物的等级差密切相关；挑战过于强大的高级怪未必最划算。在不易暴毙且极少耗费药水的合适区域进行平稳持久的拉怪输出往往效率更高。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "在 Yohara Boost 服务器中，怪物的生命值与伤害下调 40%，且物品掉落率翻倍。",
+        "40 级及以上可在 Uriel 处领取持续 8 小时的 50% 至 200% 经验强化 Buff。",
+        "Tiger Power 增益可提升 40% 的 PvE 伤害输出。"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "冲级服的核心终极目标是达到 **Champion Level 1（巅峰 1 级）**。活动结束后，最多可将两个角色迁移转移至常规常驻服务器；资格登记期为 2027 年 2 月 17 日至 3 月 3 日，迁移操作在 2 月 24 日与 3 月 3 日停机维护时执行。转入 DIAMOND 和 Marmara 服务器受限禁止。"
+      },
+      {
+       "tip": "p",
+       "metin": "刷怪时请建立标准循环：奔赴目标点、清怪聚怪、背包满载后回城清理寄售、补充药水。根据自身等级适时转移阵地能兼顾药水与效率。若在某一区域频繁阵亡，说明挑战时机尚未成熟。"
+      },
+      {
+       "tip": "uyari",
+       "metin": "临近预定日期前，请务必再次仔细阅读论坛公布的最新角色迁移细则。日期与迁移规则可能随最新维护而微调。"
+      }
+     ]
+    },
+    {
+     "id": "at-sistemi",
+     "baslik": "马匹坐骑系统：首只坐骑与养成进阶",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "马匹既是高效赶路的交通工具，也是核心战斗助力。根据 Wiki 记载共分四个等级：初级马（Beginner）、战马（War）、军马（Military）与雄壮战马（Mighty War）。每个层级拥有专属印章、饲料和复活草药：初级马使用马匹画像（Horse Picture）与干草，战马使用战马手册（Armed Horse Book）与胡萝卜，军马使用军马手册（Military Horse Book）与红参，雄壮战马使用黄金马手册（Golden Horse Book）与特级红参。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "马匹类型",
+        "马匹等级（参考 Wiki）",
+        "进阶考核方式"
+       ],
+       "satirlar": [
+        [
+         "Beginner horse",
+         "2-10",
+         "跑点任务：2-6 级在王国 1 号图，7-8 级在 Valley of Seungryong 或 Yongbi Desert，9-10 级在 Mount Sohan 或 Doyyumhwan；每个阶段需打卡 1 至 5 个检查点"
+        ],
+        [
+         "War horse",
+         "12-20",
+         "怪物狩猎：12 级需击杀 Bo x5，13 级 Chuong x5，14 级 Elite Orc General x10，15 级 Black Orc x10，16 级 Dark Tormentor x10，17 级 Claw Poison Spider x10，18 级 Desert Outlaw x20，19 级 Ice Golem x10，20 级 Fighting Tiger x20"
+        ],
+        [
+         "Military horse",
+         "21-40",
+         "消耗经验、Yang 与草料：21 级需 12,500 经验、500,000 Yang、50 饲料；每次金币递增 500,000，30 级起每次固定需 5,000,000 Yang 与 50 饲料；上限为 40 级"
+        ],
+        [
+         "Mighty war horse",
+         "军马之上",
+         "消耗 Golden Horse Book 与特级红参；具体细节未官方完整公布"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**召唤几率与马匹属性：** 召唤马匹的成功率在 0 级时为 10%，1 级 15%，2 级 20%，3 级 30%；4 级后每级提升 10 个百分点，10 级时达到 100%。马匹属性随等级显著攀升：1 级时 VIT 18、INT 9、STR 26、DEX 35；10 级时为 23、12、35、46；20 级达到 32、16、48、64。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "军马培养耗资不菲：30 级后每次升级固定需要 5,000,000 Yang 与 50 份饲料。着手升级前，请合理统筹分配装备与养马的资金池。"
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "Yang 货币与经济：官方纯游戏内获利途径",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "游戏内的通用流通货币是 **Yang**。Yang 主要消耗在采购药水、装备精炼、养马以及玩家之间的交易流通。在把战利品甩卖给 NPC 前，先确认其在玩家交易市场中是否具备更高流通价值。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "平衡分配药水与强化开支；切忌将全部启动流动资金一股脑压在一次高风险精炼上。",
+        "首选强化武器，若日常药水消耗巨大则优先强化防具防御。",
+        "不要盲目轻信未知材料无用而低价仓促脱手。"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "游戏内存在可选付费商城。在购买商城道具前，务必查清其具体在游戏内的实际效用与持续期。"
+      },
+      {
+       "tip": "p",
+       "metin": "交易时切记戒骄戒躁。在出手贵重装备前多对比参考几家市价；仓促贱卖往往追悔莫及。留意官方公告中关于冲级服哪些道具能够继承到正式服的细则，及时在限期前消耗掉不可结转的资产。"
+      },
+      {
+       "tip": "uyari",
+       "metin": "通过现实货币买卖 Yang、账号或虚拟道具（RMT）属于严重违规行为，一经查实立即永久封号。请务必严格通过游戏内官方交易栏合法流通。"
+      }
+     ]
+    },
+    {
+     "id": "yukseltme",
+     "baslik": "装备强化精炼：铁匠选择与强化机制",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "装备升星强化需前往铁匠 NPC 处进行，不同铁匠遵循不同的规则机制。根据 Wiki 上的“Upgrade Items”专页归纳，主要强化途径如下："
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "铁匠类型",
+        "可强化的物品",
+        "核心规则特性"
+       ],
+       "satirlar": [
+        [
+         "Blacksmith（普通铁匠）",
+         "无视装备等级的各类道具；大部分史诗级晋升",
+         "提供基准成功率；史诗级升级恒定 100% 成功"
+        ],
+        [
+         "Seon-Pyeong",
+         "任何装备道具及所有史诗级升级",
+         "无角色等级限制"
+        ],
+        [
+         "Guild blacksmith（公会铁匠）",
+         "非史诗类常规装备",
+         "多收 10% Yang 手续费；公会只能选定一种专精类别（护甲、武器或首饰）"
+        ],
+        [
+         "Serpent Temple smith（蛇殿铁匠）",
+         "仅限手套类装备",
+         "无需强化材料；强化失败手套不会碎裂消失，仅等级跌落 1 级"
+        ],
+        [
+         "Demon Tower blacksmith（魔塔铁匠）",
+         "90 级以下的非史诗装备",
+         "完全不需要强化辅助材料；成功率比村庄铁匠和 Seon-Pyeong 额外高出 10%"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "强化所需材料数量与确切成功率公式未在官方完全透明公开。蛇殿铁匠页面特意强调手套失败不碎裂，反向印证了普通铁匠处强化失败大概率会导致装备损毁碎裂（此为合理推论）。"
+      },
+      {
+       "tip": "uyari",
+       "metin": "在砸高价值顶级核心装备前，先拿几件廉价白装尝试手感测试垫刀；在 Yang 资金储备中做好爆装退步的最坏预算，且严禁使用非官方渠道。"
+      }
+     ]
+    },
+    {
+     "id": "ejderha-tasi",
+     "baslik": "龙石炼金术与生物学家研究任务",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "龙石炼金系统（Dragon Stone Alchemy，简称 DSA）是提升高级宝石属性的核心机制。据 Wiki 记述，该机制最早引入于 13.3 版本，19.0 新增了神话（Mythic）品阶，23.2 版本加入了紫晶石（Amethyst）。玩家可找到炼金术师 NPC 选择“龙石精炼”进行升阶。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "精炼类型",
+        "所需龙石",
+        "精炼失败后果"
+       ],
+       "satirlar": [
+        [
+         "阶位：Rough, Cut, Rare, Antique, Legendary, Mythic",
+         "每阶段消耗 2 颗相同品阶龙石",
+         "保留其中 1 颗相同品阶的龙石"
+        ],
+        [
+         "纯度（Clarity）",
+         "每阶段消耗 2 颗相同纯度的龙石",
+         "保留其中 1 颗相同纯度的龙石"
+        ],
+        [
+         "等级（Level）",
+         "未公开具体消耗数值",
+         "未正式载明官方规则"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Wiki 页面还囊括了龙石激活、时效延长与无损摘除宝石等章节；具体规则可在游戏内向炼金术师咨询或查阅专页。针对生物学家任务，Wiki 设有专属导航专页；因任务奖励与等级门槛经常随补丁变动，请以最新专页载明为准。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "每次精炼消耗两颗宝石且失败时仅退回一颗；因此务必凑齐同一品质纯度成对后再做尝试。"
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "120 级之后：巅峰等级与 Yohara 新篇章",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "突破 120 级门槛后便进入**巅峰等级（Champion levels）**，达到 Champion 1 级即全面开放 Yohara 终局大陆。这也正是 Yohara 冲级服的终极终点线。在该阶段，高阶地牢、世界 Boss、战宠与神装打造将成为游戏核心驱动力。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "成长阶段",
+        "主要游玩内容",
+        "核心要点"
+       ],
+       "satirlar": [
+        [
+         "1-120 级",
+         "常规跑图打怪、主线任务、砸 Metin 陨石",
+         "Yohara 快速服极大加速该过渡阶段"
+        ],
+        [
+         "Champion 1 级以上",
+         "Yohara 大陆探索、高难世界首领与团队副本",
+         "冲级服的终极目标"
+        ],
+        [
+         "巅峰深造",
+         "毕业装备锻造、极品宠物培养、高额贸易",
+         "高度取决于服务器整体市场经济"
+        ]
+       ]
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "套装加成与套装共鸣效果（Set Bonus / Set Effect）",
+        "能量系统与战宠系统（Energy System / Pet System）",
+        "时装外观、光环装扮与肩带系统（Costume / Aura / Shoulder Sash）",
+        "圣物系统、装备绑定与腰带系统（Relic / Binding / Belt）",
+        "Gaya 货币系统与怪物卡片收集系统（Gaya / Monster Card）",
+        "离线个人商店与自动挂机打怪（Private Shop / Auto-Hunt）"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "上述每套进阶机制在官方 Wiki 上均配有独立详尽的页面；新手切忌试图在一夕之间全盘通晓。围绕当下的明确目标有的放矢（如优先为装备激活套装加成，为跑图搞定高阶战马）。"
+      },
+      {
+       "tip": "p",
+       "metin": "达到巅峰等级后，务必明确核心重心：死磕神装、专精打本还是投身商业倒买倒卖？试图三线并进容易身心俱疲。逐个攻克才更稳健。由于 Yohara 冲级服具备严格时效性，务必尽早规划。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "密切关注官方论坛公告中的限时活动与福利发放；活动节点可能临时更新。"
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "避坑指南与账号核心安全",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "盲目越级挑战高难怪兽，导致药水耗尽入不敷出。",
+        "将所有捡到的材料和掉落不假思索地廉价甩卖给 NPC 杂货商。",
+        "在非官方第三方网站使用完全相同的登录密码。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "严禁使用外挂、挂机脚本、宏按键、私服客户端、漏洞滥用以及参与账号或 Yang 的线下真钱交易（RMT）。上述违规行为将招致永久封号并导致个人信息被盗。请谨记 Metin+ 专线的设立初衷即是为了大幅净化挂机脚本环境。"
+      },
+      {
+       "tip": "p",
+       "metin": "为保障账号资产绝对安全，请为绑定的电子邮箱设置高强度独立密码并尽可能开启双重身份验证（2FA）；绝大多数 Gameforge 账号被盗事件根源都在于邮箱被黑。如遇异常登录或损失，请第一时间通过官方客服提交工单；切莫轻信任何宣称“代找回”的第三方骗子。"
+      },
+      {
+       "tip": "p",
+       "metin": "Gameforge 官方人员绝不会以任何理由向你索要密码或安全验证码。请务必仅在官方认证域名下登录，绝不点击来历不明的可疑链接。"
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "常见问题解答",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Metin2 是免费游戏吗？",
+         "c": "是的，游戏完全免费畅玩。游戏内商城道具纯属可选；商城价格未在官方页面公开透明标示。"
+        },
+        {
+         "s": "什么是 Yohara Boost 快速冲级服？",
+         "c": "于 2026 年 11 月 13 日至 2027 年 2 月 24 日限时开放的专属活动服，大幅下调怪物难度并翻倍掉率以加速升级。"
+        },
+        {
+         "s": "新手建议首发什么职业？",
+         "c": "战士（Warrior）通常机制最简单身板最扎实，但请根据自身喜好的战斗风格决定。"
+        },
+        {
+         "s": "后续能将冲级服角色迁回常规服务器吗？",
+         "c": "可以，最多支持迁移 2 名角色。具体合规资格请查阅论坛官方公告。"
+        },
+        {
+         "s": "不同分流频道有何区别？",
+         "c": "1-2 频道对所有玩家开放，3-4 频道仅供信任认证用户登录，5-6 为 Metin+ 会员专属频道。"
+        },
+        {
+         "s": "游戏支持土耳其语吗？",
+         "c": "土耳其版本的论坛、Wiki 和客服体系均为土耳其语；PCGamingWiki 同样列出了土耳其语。可在官网确认客户端界面语言。"
+        },
+        {
+         "s": "电脑硬件配置要求高吗？",
+         "c": "据 PCGamingWiki 记载，最低只需 Windows 7、Pentium 3 1.0 GHz、512 MB 内存、32 MB 显存及 2 GB 硬盘；推荐配置也仅为 Pentium 4 与 1 GB 内存。Gameforge 未公布最新标准。"
+        },
+        {
+         "s": "如何解锁并培养自己的坐骑马匹？",
+         "c": "初级马通过跑点任务（2-10 级）升级，战马通过击杀指定怪物考核（12-20 级），军马通过消耗经验、Yang 与饲料进阶（21-40 级）。"
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  }
 }

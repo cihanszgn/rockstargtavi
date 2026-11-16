@@ -2284,6 +2284,1698 @@
      ]
     }
    ]
+  },
+  "de": {
+   "baslik": "Rise Online World Einsteiger-Guide 2026",
+   "ozet": "Für Spieler, die in Rise Online World neu starten oder zurückkehren: Systemanforderungen, Serverwahl, Volk und Klasse, Attributverteilung, das Premium-System, Events und Sicherheit.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "MMORPG (entwickelt auf Unreal Engine 5)"
+    },
+    {
+     "ad": "Plattform",
+     "deger": "Windows PC; die mobile Version startete am 10. April 2026"
+    },
+    {
+     "ad": "Preismodell",
+     "deger": "Kostenloser Download; Premium und Cash sind optional. Mobile Preise sind in TL angegeben (z. B. 500 Cash für 93 TL); PC-Preise sind nicht offiziell beziffert"
+    },
+    {
+     "ad": "Aktuelle Version",
+     "deger": "PC-Patch 16.0.3 (6. November 2026); 16.0.0 migrierte das Spiel auf Unreal Engine 5.8"
+    },
+    {
+     "ad": "Türkisch-Unterstützung",
+     "deger": "Die offizielle Website und Ankündigungen sind auf Englisch; eine türkische Sprachoption im Spiel ist in offiziellen Quellen nicht schriftlich fixiert (nicht angegeben). Türkische Community-Guides und TL-Preise existieren"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "Wo das Spiel im Jahr 2026 steht",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Rise Online World ist ein auf der Unreal Engine 5 basierendes Online-Rollenspiel, entwickelt von Rokosoft (Rokogame Studios) und veröffentlicht am 15. April 2022. Download und Registrierung erfolgen über die offizielle Website. Die mobile Version erschien am 10. April 2026."
+      },
+      {
+       "tip": "p",
+       "metin": "Der aktuelle PC-Patch lautet **16.0.3** (6. November 2026). Der Patch **16.0.0** vom 3. November portierte das Spiel auf die Unreal Engine 5.8. Es gibt zwei aktive Server: **Aarvad** und **Galantis**. Galantis entstand am 16. Juli 2026 durch die Zusammenlegung der Server Galia und Mantis."
+      },
+      {
+       "tip": "p",
+       "metin": "Rise Online World gilt als klassisches MMORPG koreanischer Prägung: Der Schwerpunkt liegt auf Monsterjagd, Levelaufstieg, Ausrüstung und Massenschlachten. Ein Großteil der Informationen hier stützt sich auf eine türkische Fan-Guide-Seite und die offizielle Website. Da das Spiel regelmäßig Patches erhält, verfolge aktuelle Patchnotizen auf der offiziellen Seite."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Die Stufenobergrenze liegt bei 85 (worauf die höchsten Zonenstufen und Guide-Seiten hinweisen). Das Spiel kann kostenlos heruntergeladen werden; das Erlösmodell basiert auf optionalen Premium- und Cash-Käufen."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Vor dem Start: Computer, Konto, Download",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Du lädst das Spiel über die offizielle Website herunter. Dort erstellst du dein Konto und bestätigst deine E-Mail-Adresse. Die folgende Tabelle enthält die von Rise Rehberi veröffentlichten Systemanforderungen; die Seite wurde am 15. August 2026 aktualisiert und stammt somit aus der Zeit vor dem Wechsel auf Unreal Engine 5.8 am 3. November. Nach dem Wechsel erschien auf der offiziellen Seite keine neue Übersicht, daher können Werte abweichen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Anforderung",
+        "Minimum",
+        "Empfohlen"
+       ],
+       "satirlar": [
+        [
+         "Betriebssystem",
+         "64-Bit Windows 7 / 8.1 / 10",
+         "64-Bit Windows 7 / 8.1 / 10"
+        ],
+        [
+         "Prozessor",
+         "Intel Core i5-8500 oder Ryzen 5 3500",
+         "Intel i7-10700 oder Ryzen 7 3700X"
+        ],
+        [
+         "Arbeitsspeicher (RAM)",
+         "16 GB",
+         "16 GB"
+        ],
+        [
+         "Grafikkarte",
+         "GTX 960 oder RX 460",
+         "GTX 1070 oder RX 580"
+        ],
+        [
+         "DirectX",
+         "11/12",
+         "11/12"
+        ],
+        [
+         "Speicherplatz",
+         "50 GB freier Speicherplatz",
+         "50 GB freier Speicherplatz (SSD)"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Halte vor der Installation genügend Festplattenspeicher frei und aktualisiere deinen Grafikkartentreiber. Der Unreal Engine 5.8-Build kompiliert beim ersten Start möglicherweise Shader- und Beleuchtungsdaten; dauert der erste Start länger, friert der Computer nicht ein. Auf schwächerer Hardware verbessert das Absenken der Grafikeinstellungen im Spiel die Bildrate spürbar."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Die Tabelle stammt von einer externen Ratgeberseite und führt ältere Windows-Versionen auf. Unter aktuellem Windows 10 oder 11 sind keine Probleme zu erwarten; prüfe vor der Installation dennoch Speicherplatz und Grafikkartentreiber."
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "Die ersten Stunden Schritt für Schritt",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Konto anlegen",
+         "metin": "Registriere dich auf der offiziellen Website, bestätige die E-Mail und wähle ein starkes, exklusives Passwort."
+        },
+        {
+         "baslik": "Spiel herunterladen",
+         "metin": "Lade den Client nur von der offiziellen Website herunter und installiere ihn. Nutze keine Drittquellen."
+        },
+        {
+         "baslik": "Server wählen",
+         "metin": "Wähle zwischen Aarvad und Galantis. Wenn du Freunde hast, schließe dich deren Server an; Spielerzahl und Marktwirtschaft variieren je nach Server."
+        },
+        {
+         "baslik": "Volk und Klasse wählen",
+         "metin": "Das Volk dient der Optik. Wähle die Klasse anhand der Erläuterungen im nächsten Abschnitt."
+        },
+        {
+         "baslik": "Attribute verteilen",
+         "metin": "Mit jedem Levelaufstieg erhältst du Attributpunkte; verteile sie passend zu deiner Klasse. Lies im Statusfenster genau nach, was jeder Wert bewirkt."
+        },
+        {
+         "baslik": "Quests und Monsterjagd starten",
+         "metin": "Schließe Einstiegsquests ab, jage in für deine Stufe passenden Zonen und vermeide Tode; jeder Tod kostet Erfahrungspunkte."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Das Ziel der ersten Stunden ist nicht überhastetes Aufleveln, sondern das Kennenlernen der Kernsysteme: Benutzeroberfläche, Chat, Gruppenbildung und Marktplatz. Wirf nach Spielstart einen Blick auf Ton-, Grafik- und Tastenbelegungen in den Einstellungen."
+      },
+      {
+       "tip": "p",
+       "metin": "Ein praktischer Hinweis für Rückkehrer: Wenn du länger pausiert hast, lies zuerst die Patchnotizen. Da Patch 16.0.0 die Engine gewechselt hat, können sich Oberfläche, Optionen und Performance verändert haben. Prüfe im Spiel, auf welchem Server dein Charakter verblieben ist und ob Serverfusionen deinen Namen oder Clanstatus beeinflusst haben."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Bevor du alle Attributpunkte zu Beginn auf einmal verteilst, lies die Beschreibung im Spiel; orientiere dich an bewährten Klassen-Guides, um Fehlskillungen zu vermeiden."
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "Wahl von Volk und Klasse",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Es gibt zwei Völker: **Lunaskar** und **Protean**. Laut Ratgeberseiten ist der Unterschied rein optisch und beeinflusst das Gameplay nicht. Die entscheidende Wahl ist die Klasse."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Klasse",
+        "Untertypen",
+        "Kurzbeschreibung"
+       ],
+       "satirlar": [
+        [
+         "Rogue",
+         "Archer, Assassin",
+         "Schnell und mobil; Schaden auf Distanz oder im blitzschnellen Nahkampf"
+        ],
+        [
+         "Warrior",
+         "Attacker, Defensive",
+         "Nahkämpfer; wahlweise auf massiven Angriff oder standfeste Verteidigung fokussiert"
+        ],
+        [
+         "Priest",
+         "Healer, Buffer, Debuffer, Battle Priest, INT Priest",
+         "Unterstützung und Heilung; spezialisierte Varianten teilen auch beachtlich aus"
+        ],
+        [
+         "Mage",
+         "Fire, Ice, Lightning",
+         "Magischer Flächen- und Einzelschaden; unterschiedliche Spielstile je nach Element"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Die Attribute lauten Stärke (Strength), Gesundheit (Health), Geschicklichkeit (Dexterity), Intelligenz (Intelligence) und Magie (Magic). Du erhältst **3** Attributpunkte pro Stufe von Level 1 bis 60 und **5** Punkte ab Stufe 61."
+      },
+      {
+       "tip": "p",
+       "metin": "Bedenke bei der Klassenwahl auch deinen zeitlichen Rahmen. Unterstützerklassen entfalten ihre Stärke vor allem in Gruppen; wer überwiegend solo unterwegs ist, fährt mit reinen Schadensklassen oft komfortabler. Dies sind allgemeine Tendenzen; Balance-Verschiebungen treten mit Updates auf, prüfe daher aktuelle Diskussionen im offiziellen Discord."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Suchst du den unkompliziertesten Einstieg, ist der Krieger (Warrior) eine solide Empfehlung; wähle jedoch vor allem den Spielstil, der dir persönlich zusagt."
+      }
+     ]
+    },
+    {
+     "id": "irk-sinif",
+     "baslik": "Volk, Klasse und Attributverteilung: Detaillierte Übersicht",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Rise Online bietet vier Klassen mit jeweils spezialisierten Untertypen; die beiden Völker (Lunaskar und Protean) verändern die Spielmechanik nicht, der Unterschied ist kosmetischer Natur (abgesehen von Fraktionskonflikten in Death Valley und PvP-Events). Die folgende Tabelle führt Klasse, Spezialisierung und das maßgebliche Hauptattribut für Schaden zusammen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Klasse",
+        "Untertypen",
+        "Hauptattribut (Schaden / Mana)",
+        "Gemeinsames Attribut"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Attacker, Defensive",
+         "Strength",
+         "Health"
+        ],
+        [
+         "Rogue",
+         "Archer, Assassin",
+         "Dexterity",
+         "Health"
+        ],
+        [
+         "Priest",
+         "Healer, Buffer, Debuffer; Rollen als Battle Priest und INT Priest",
+         "Battle Priest: Strength; INT Priest: Intelligence",
+         "Health"
+        ],
+        [
+         "Mage",
+         "Fire, Ice, Lightning",
+         "Magic (Zauberangriff), Intelligence (Mana)",
+         "Health"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Fünf Attribute:** Stärke, Gesundheit, Geschicklichkeit, Intelligenz und Magie. Stärke erhöht die Angriffskraft für Warrior und Battle Priest sowie die Tragekapazität aller Klassen; Gesundheit steigert die maximalen Lebenspunkte aller Klassen; Geschicklichkeit erhöht den Schaden des Schurken, Magie den Zauberschaden des Magiers und Intelligenz das Mana von Priester und Magier. Von Stufe 1 bis 60 erhältst du **3** Punkte pro Level, ab 61 sind es **5**."
+      },
+      {
+       "tip": "p",
+       "metin": "**Bonus-Falle:** Auf Ausrüstungsteilen erhöht 'HP Bonus' direkt die maximalen Trefferpunkte, während 'Health Bonus' das Basisattribut Gesundheit steigert; analog erhöht 'MP Bonus' direkt das Mana und 'Magic Bonus' das Attribut Magie. Verwechsle beide Zusätze nicht, ihre Wirkungen unterscheiden sich. Jede Klasse verfügt zudem über **6 Elementarresistenzen** (Feuer, Eis, Blitz, Gift, Fluch, Heilig) sowie **Waffenresistenzen**; mit steigender Resistenz verringert sich erlittener Schaden der jeweiligen Kategorie."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Notiere dir vor dem Verteilen von Punkten das primäre Hauptattribut und Gesundheit für deine Klasse; da du die ersten 60 Stufen mit je 3 Punkten absolvierst, wiegen Fehlverteilungen schwer."
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "Leveln und die Todesstrafe",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Deine Stufe steigt durch Monsterjagd und Quests. Rise Rehberi führt eine Tabelle der benötigten Erfahrungspunkte pro Stufe; die Zahlen ändern sich mit Patches, doch das Maximum liegt bei 85 und ab Stufe 61 erhältst du 5 Statuspunkte pro Level. Kombiniere Quests und Monsterjagd ausgewogen; reines Grinden ist mühsam und wer nur Quests macht, gerät oft bei der Ausrüstung ins Hintertreffen."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Das Sterben kostet etwa **4 Prozent** der aktuellen Erfahrungspunkte.",
+        "Ein aktiver Premium-Status verringert diesen Verlust: Craft auf 0,4 Prozent, EXP auf 0,8 Prozent, Farm, Battle und Elite auf 2 Prozent.",
+        "Kontinuierliches Farmen in Zonen, die deiner Stufe entsprechen, bringt dich oft zügiger voran als riskante Kämpfe gegen übermächtige Bosse."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Kämpfe in den Anfangsstufen nach richtiger Punkteverteilung gegen leichte Monster, um Trankkosten und Sterberisiken gering zu halten. Lässt die Tötungsgeschwindigkeit in einem Gebiet spürbar nach, ziehe in die nächste Zone weiter; häufen sich die Tode, weiche wieder zurück."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Die Prozentsätze der Todesstrafe stammen von einer Ratgeberseite und können durch Updates angepasst werden. Maßgeblich sind die Angaben im Spiel."
+      }
+     ]
+    },
+    {
+     "id": "bolgeler",
+     "baslik": "Stufenzonen: Welche Karte passt zu welchem Level?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Die Zonenübersicht auf der englischen Seite von Rise Rehberi nennt Stufenbereiche. Die höchste Zone reicht bis Stufe 85, woraus sich die Obergrenze 85 ableitet. Die folgende Tabelle spiegelt die Angaben der Quelle wider."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Stufenbereich",
+        "Zone",
+        "Hinweis"
+       ],
+       "satirlar": [
+        [
+         "1-25",
+         "Dorion",
+         "Startgebiet"
+        ],
+        [
+         "25-60",
+         "Lunaskar Kingdom / Protean Kingdom",
+         "Heimatkönigreich je nach Volk"
+        ],
+        [
+         "59-85",
+         "Haddar Highlands / Hagard Castle",
+         "Jagdgebiete für Fortgeschrittene"
+        ],
+        [
+         "50-85",
+         "Death Valley",
+         "Umkämpftes Schlachtfeld beider Fraktionen"
+        ],
+        [
+         "30-85",
+         "Narun Tower",
+         "Turm-Herausforderungen"
+        ],
+        [
+         "1-85",
+         "Narungard",
+         "Für alle Stufen offene Karte"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Quests bilden das Rückgrat des Erfahrungsgewinns und jedes Gebiet bietet passende Aufgaben. In manchen Quellen taucht der Tippfehler 'Haddar Lighlands' auf; hier wird die korrekte Schreibweise Highlands verwendet. Eine offizielle Gesamtliste der Monsterlevel pro Karte existiert nicht; prüfe beim Betreten einer Zone stets die Monsteranzeige."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Liegt deine Stufe nahe der Untergrenze einer Karte, wechsle nicht voreilig, bevor du bestehende Questreihen abgeschlossen hast; Belohnungen liefern sowohl EXP als auch Goldmünzen."
+      }
+     ]
+    },
+    {
+     "id": "meslekler",
+     "baslik": "Berufe: Sammeln und Handwerk",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Rise Online gliedert Berufe in zwei Hauptgruppen, wobei Rohstoffe der Sammelberufe direkt in Handwerksberufen verarbeitet werden. Laut Rise Rehberi umfassen die Sammelberufe Archäologie (Archaeology), Fischen (Fishing), Ernten (Harvesting), Kräuterkunde (Herbalism), Bergbau (Mining), Steinbruch (Quarrying), Kürschnerei (Skinning) und Holzfällen (Woodcutting). Als Handwerksberufe sind Alchemie (Alchemy), Rüstungsschmied (Armor Smithing), Waffenschmied (Blacksmithing), Schreinerei (Carpentry), Kochen (Cooking), Juwelenschleifen (Jewel Crafting), Lederverarbeitung (Leatherworking) und Steinmetz (Stonemasonry) gelistet."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Gruppe",
+        "Berufe",
+        "Zweck"
+       ],
+       "satirlar": [
+        [
+         "Sammeln",
+         "Archaeology, Fishing, Harvesting, Herbalism, Mining, Quarrying, Skinning, Woodcutting",
+         "Liefert Rohmaterialien für das Handwerk"
+        ],
+        [
+         "Handwerk",
+         "Alchemy, Armor Smithing, Blacksmithing, Carpentry, Cooking, Jewel Crafting, Leatherworking, Stonemasonry",
+         "Verarbeitet Rohstoffe zu Tränken, Waffen, Rüstungen und Schmuck"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Stufenschwellen und Rezepte einzelner Berufe sind nicht offiziell in Tabellenform veröffentlicht; prüfe das berufsbezogene Menü im Spiel. Praktischer Tipp: Wähle beim Hochleveln ein Handwerk, das Tränke oder Ausrüstung für deine eigene Klasse herstellt, und kombiniere es mit dem passenden Sammelberuf; Überschüsse bringen willkommene Einnahmen im Handel."
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "Premium und Käufe: Was man wissen muss",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Das Spiel bietet verschiedene **Premium**-Stufen: Craft, Farm, XP, Battle, Elite und Complete. Jede Variante gewährt spezifische Vorteile; so dämpfen sie unter anderem die Todesstrafe bei Verlust von Erfahrungspunkten. Käufe erfolgen über autorisierte Zahlungsanbieter."
+      },
+      {
+       "tip": "p",
+       "metin": "Premium-Modelle senken den Erfahrungsverlust beim Ableben deutlich: Craft auf 0,4%, EXP auf 0,8%, Farm, Battle und Elite auf 2% (ohne Premium liegt der Verlust bei 4%). PC-Preise sind nicht offiziell beziffert. Die Preise der mobilen Version werden auf Rise Rehberi in Türkischen Lira (TL) angegeben und sind in der folgenden Tabelle dargestellt; Preise können sich mit der Zeit ändern."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Mobiles Premium-Modell",
+        "Preis (TL)",
+        "EXP-Verlust nach Tod"
+       ],
+       "satirlar": [
+        [
+         "Elite Premium",
+         "155",
+         "2%"
+        ],
+        [
+         "Farm Premium",
+         "680",
+         "2%"
+        ],
+        [
+         "XP Premium",
+         "740",
+         "0.8%"
+        ],
+        [
+         "Battle Premium",
+         "805",
+         "2%"
+        ],
+        [
+         "Craft Premium",
+         "840",
+         "0.4%"
+        ],
+        [
+         "Complete Premium",
+         "1,050",
+         "Nicht offiziell beziffert"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Cash-Paketbeispiele: 500 Cash für 93 TL, 1.000 + 20 Cash für 187 TL, 5.000 + 200 Cash für 938 TL, 10.000 + 500 Cash für 1.876 TL. Diese Tabelle gilt für die mobile Fassung; es gibt keinen Beleg dafür, dass die PC-Preise identisch sind."
+      },
+      {
+       "tip": "p",
+       "metin": "Folge bei Kaufüberlegungen einem einfachen Grundsatz: Spiele das Spiel zunächst einige Zeit ohne Premium, stelle fest, an welchen Stellen du Unterstützung benötigst, und wähle erst dann das passende Paket. Aktionen und Rabatte wechseln regelmäßig; Eile ist nicht geboten. Zahle ausschließlich über autorisierte Kanäle auf der offiziellen Seite und bewahre Belege auf."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Der Kauf oder Verkauf von Spielgegenständen, Gold oder Konten gegen Echtgeld unter Spielern (RMT) ist streng verboten und führt zum Ausschluss. Nutze nur offizielle Zahlungswege."
+      },
+      {
+       "tip": "p",
+       "metin": "**Sollte ich Premium kaufen?** Ohne Premium verlierst du bei jedem Tod 4% Erfahrungspunkte; auf hohen Stufen wirft dich das um viele Spielstunden zurück. Nimmst du an intensiven Schlacht-Events wie Death Valley oder Inferno Temple teil, lohnt sich ein Premium-Paket spürbar; spielst du geruhsam Quests und Berufe, kannst du in den ersten Wochen getrost ohne Premium auskommen. Prüfe Preise vorab auf der offiziellen Seite. Handele niemals mit Konten oder Cash über Drittanbieter; dies verstößt gegen die Regeln und birgt Betrugsrisiken."
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "Events und Clans",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Der spielerische Schwerpunkt von Rise Online World liegt auf großangelegten Massenschlachten. Bekannte Events sind: **Inferno Temple**, **Crystal Fortress War**, **Blood Valley**, **Death Valley** und **Sevenfold**; Community-Seiten listen zudem **Mount Race**. Laut offiziellen Patchnotizen wurden die Sevenfold-Zeiten in den In-Game-Eventkalender integriert, womit **der In-Game-Kalender die maßgebliche Quelle für Eventzeiten ist**; ein statischer Zeitplan von extern existiert nicht (nicht offiziell angegeben)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Event",
+        "Bekanntes Detail (offizielle Patchnotizen)"
+       ],
+       "satirlar": [
+        [
+         "Inferno Temple",
+         "Patchnotizen nennen Mindeststufe 84; gemischte Teams aus beiden Völkern; Extrakristalle nach Gear Score"
+        ],
+        [
+         "Crystal Fortress War",
+         "Besitzt ein Aufgabesystem (Surrender): Das Event endet automatisch, wenn mehr als die Hälfte des Teams zustimmt"
+        ],
+        [
+         "Blood Valley",
+         "Patchnotiz führt getrennte Belohnungspunkte für Sieger und Verlierer auf (Sieger 100, Verlierer 25)"
+        ],
+        [
+         "Death Valley",
+         "Karte für Stufe 50-85; offener Fraktionskrieg mit regelmäßigen Balance-Anpassungen"
+        ],
+        [
+         "Sevenfold",
+         "Genaue Termine sind im Eventkalender im Spiel hinterlegt"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Bei diesen Events steht der Clan im Mittelpunkt. Als Einsteiger erleichtert der Beitritt zu einem aktiven und eingespielten Clan sowohl das Lernen als auch die Teilnahme an Schlachten ungemein. Mache dich vor dem Beitritt mit den Regeln und Erwartungen des Clans vertraut."
+      },
+      {
+       "tip": "p",
+       "metin": "Bereite dich vor PvP-Events gemeinsam mit deinem Clan vor: Sprecht Treffpunkte ab, teilt Rollen ein und überprüft Tränke und Ausrüstung. Da sich Belohnungen und Regeln mit Patches ändern können, beachte stets offizielle Ankündigungen."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Sei für Events stets vorbereitet: Überprüfe deinen Vorrat an Tränken, deine Ausrüstung und die genauen Startzeiten im Vorfeld."
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "Häufige Fehler und Sicherheit",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Attributpunkte ohne vorherige Recherche unbedacht verteilen.",
+        "In Zonen jagen, die weit über der eigenen Stufe liegen, und wertvolle Erfahrungspunkte verlieren.",
+        "Dasselbe Passwort auf externen Webseiten wiederverwenden."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Meide Cheats, Bots, Makros, Exploits, P-Server, Echtgeldhandel (RMT) und modifizierte Clients. Sie führen zur dauerhaften Sperrung deines Kontos und gefährden deine Daten. Lade das Spiel ausschließlich von der offiziellen Website herunter."
+      },
+      {
+       "tip": "p",
+       "metin": "Offizielle Spielmitarbeiter werden dich niemals nach deinem Passwort fragen. Klicke keine zweifelhaften Links an, die dir im Spielchat oder per Nachricht geschickt werden. Bei Fragen kannst du dich an offizielle Support- oder Community-Kanäle wenden, aber gib niemals Passwörter oder Zahlungsdaten an Dritte weiter."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Häufig gestellte Fragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Ist Rise Online World kostenlos?",
+         "c": "Der Download ist kostenlos; Einnahmen stammen aus optionalen Premium- und Cash-Käufen. Mobile Preise werden in TL angegeben; PC-Preise sind nicht offiziell beziffert."
+        },
+        {
+         "s": "Welchen Server sollte ich wählen?",
+         "c": "Aarvad und Galantis sind die aktiven Server. Am einfachsten ist es, den Server zu wählen, auf dem deine Freunde spielen."
+        },
+        {
+         "s": "Verändert das Volk das Gameplay?",
+         "c": "Laut Guide-Seiten ist der Unterschied zwischen Lunaskar und Protean rein kosmetischer Natur."
+        },
+        {
+         "s": "Was verliere ich beim Sterben?",
+         "c": "Rund 4 Prozent deiner aktuellen Erfahrungspunkte; Premium-Pakete verringern diese Quote. Maßgeblich ist die Anzeige im Spiel."
+        },
+        {
+         "s": "Kann ich auf dem Smartphone spielen?",
+         "c": "Ja, die mobile Version wurde am 10. April 2026 veröffentlicht."
+        },
+        {
+         "s": "Wie lautet der aktuelle Patch?",
+         "c": "Auf dem PC gilt Version 16.0.3 (6. November 2026)."
+        },
+        {
+         "s": "Wo liegt die Stufenobergrenze?",
+         "c": "Die höchste Zoneneinstufung reicht bis 85, womit 85 als Obergrenze gilt; die offizielle Seite nennt keine explizite Zahl."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "nl": {
+   "baslik": "Rise Online World Beginnersgids 2026",
+   "ozet": "Voor spelers die starten of terugkeren naar Rise Online World: systeemeisen, serverkeuze, ras en klasse, stat-toewijzing, het premiumsysteem, evenementen en veiligheid.",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "MMORPG (gebouwd op Unreal Engine 5)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Windows PC; de mobiele versie werd gelanceerd op 10 april 2026"
+    },
+    {
+     "ad": "Prijsmodel",
+     "deger": "Gratis te downloaden; Premium en Cash zijn optioneel. Mobiele prijzen zijn aangekondigd in TL (bijv. 500 Cash voor 93 TL); pc-prijzen zijn niet officieel vastgelegd"
+    },
+    {
+     "ad": "Huidige versie",
+     "deger": "PC-patch 16.0.3 (6 november 2026); 16.0.0 migreerde de game naar Unreal Engine 5.8"
+    },
+    {
+     "ad": "Turkse ondersteuning",
+     "deger": "De officiële site en aankondigingen zijn in het Engels; een Turkse taaloptie in-game staat niet in officiële bronnen (niet vermeld). Turkse communitygidsen en TL-prijzen bestaan"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "Waar de game staat in 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Rise Online World is een op Unreal Engine 5 gebaseerde online RPG ontwikkeld door Rokosoft (Rokogame Studios), uitgebracht op 15 april 2022. Downloaden en registreren doe je via de officiële website. De mobiele versie verscheen tevens op 10 april 2026."
+      },
+      {
+       "tip": "p",
+       "metin": "De huidige pc-patch is **16.0.3** (6 november 2026). De patch **16.0.0** op 3 november zette het spel over naar Unreal Engine 5.8. Er zijn twee actieve servers: **Aarvad** en **Galantis**. Galantis ontstond op 16 juli 2026 door een fusie van de servers Galia en Mantis."
+      },
+      {
+       "tip": "p",
+       "metin": "Rise Online World staat bekend als een klassieke Koreaanse MMORPG: de nadruk ligt op jagen, levels stijgen, uitrusting verzamelen en grootschalige gevechten. Het merendeel van de informatie hier is ontleend aan een Turkse fangidssite en de officiële website. Omdat het spel frequent patches ontvangt, volg je actuele patch notes via de officiële pagina."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Het maximumlevel is 85 (het hoogste zonebereik en gidspagina's wijzen hiernaar). Het spel is gratis te downloaden; het verdienmodel rust op optionele Premium- en Cash-aankopen."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "Voor je begint: computer, account, download",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Je downloadt het spel via de officiële website. Daar maak je een account aan en verifieer je je e-mailadres. De onderstaande tabel toont de systeemeisen zoals gepubliceerd door Rise Rehberi; de pagina werd bijgewerkt op 15 augustus 2026 en dateert dus van voor de overstap naar Unreal Engine 5.8 op 3 november. Na die overstap verscheen geen nieuw overzicht op de officiële website, waardoor specificaties kunnen afwijken."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Vereiste",
+        "Minimaal",
+        "Aanbevolen"
+       ],
+       "satirlar": [
+        [
+         "Besturingssysteem",
+         "64-bit Windows 7 / 8.1 / 10",
+         "64-bit Windows 7 / 8.1 / 10"
+        ],
+        [
+         "Processor",
+         "Intel Core i5-8500 of Ryzen 5 3500",
+         "Intel i7-10700 of Ryzen 7 3700X"
+        ],
+        [
+         "Werkgeheugen (RAM)",
+         "16 GB",
+         "16 GB"
+        ],
+        [
+         "Videokaart",
+         "GTX 960 of RX 460",
+         "GTX 1070 of RX 580"
+        ],
+        [
+         "DirectX",
+         "11/12",
+         "11/12"
+        ],
+        [
+         "Opslagruimte",
+         "50 GB vrije ruimte",
+         "50 GB vrije ruimte (SSD)"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Zorg voor voldoende schijfruimte en werk je grafische stuurprogramma bij voor je installeert. De Unreal Engine 5.8-versie kan bij de eerste opstart shaders en belichtingsdata compileren; als de eerste start lang duurt, wil dat niet zeggen dat de computer vastloopt. Op bescheiden hardware verbetert het verlagen van grafische instellingen in het spel de speelervaring aanzienlijk."
+      },
+      {
+       "tip": "uyari",
+       "metin": "De tabel is afkomstig van een externe gidssite en toont een oudere Windows-lijst. Onder modern Windows 10 of 11 worden geen problemen verwacht; controleer desondanks je opslagruimte en videodriver voor installatie."
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "De eerste uren stap voor stap",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Account aanmaken",
+         "metin": "Registreer je op de officiële website, bevestig je e-mail en kies een krachtig, uniek wachtwoord."
+        },
+        {
+         "baslik": "Het spel downloaden",
+         "metin": "Download en installeer de client uitsluitend via de officiële website. Vermijd externe downloadbronnen."
+        },
+        {
+         "baslik": "Server kiezen",
+         "metin": "Kies tussen Aarvad en Galantis. Als je vrienden hebt, sluit je dan bij hen aan; drukte en de markteconomie verschillen per server."
+        },
+        {
+         "baslik": "Ras en klasse kiezen",
+         "metin": "Raskeuze is puur cosmetisch. Kies je klasse op basis van de toelichting in het volgende hoofdstuk."
+        },
+        {
+         "baslik": "Stats toewijzen",
+         "metin": "Bij elk level ontvang je stat-punten; verdeel ze passend bij je klasse. Lees in het statusscherm goed na wat elk attribuut doet."
+        },
+        {
+         "baslik": "Quests en monsterjacht starten",
+         "metin": "Voltooi de beginnersquests, jaag in een zone die aansluit bij je level en zorg dat je niet sneuvelt; elke dood kost ervaringspunten."
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Het doel van de eerste speeluren is niet snel levelen, maar vertrouwd raken met de kernsystemen: interface, chat, groepen vormen en de markt. Bekijk direct na het inloggen de instellingen voor audio, beeld en toetsenbordbediening."
+      },
+      {
+       "tip": "p",
+       "metin": "Een praktische opmerking voor terugkerende spelers: als je een lange pauze hebt ingelast, neem dan eerst de patch notes door. Doordat patch 16.0.0 van game engine wisselde, kunnen bediening, instellingen en prestaties afwijken van vroeger. Controleer in het spel op welke server je personage staat en of serverfusies invloed hebben gehad op je naam of clanstatus."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Lees de in-game toelichting voor je alle stat-punten toewijst; het raadplegen van klassengidsen verkleint de kans op kostbare vergissingen."
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "Een ras en klasse kiezen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Er zijn twee rassen: **Lunaskar** en **Protean**. Volgens gidssites is het verschil cosmetisch en beïnvloedt het de gameplay niet. De daadwerkelijke keuze ligt bij de klasse."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Klasse",
+        "Subtypen",
+        "Korte samenvatting"
+       ],
+       "satirlar": [
+        [
+         "Rogue",
+         "Archer, Assassin",
+         "Snel en wendbaar; schade op afstand of in dodelijke nabijheid"
+        ],
+        [
+         "Warrior",
+         "Attacker, Defensive",
+         "Melee; gericht op pure aanvalskracht of onwankelbare verdediging"
+        ],
+        [
+         "Priest",
+         "Healer, Buffer, Debuffer, Battle Priest, INT Priest",
+         "Ondersteuning en genezing; bepaalde varianten richten ook zware schade aan"
+        ],
+        [
+         "Mage",
+         "Fire, Ice, Lightning",
+         "Magische schade; afwijkende speelstijlen per element"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "De attributen zijn Strength, Health, Dexterity, Intelligence en Magic. Je verdient **3** stat-punten per level van level 1 tot 60 en **5** punten vanaf level 61."
+      },
+      {
+       "tip": "p",
+       "metin": "Houd bij je klassenkeuze ook rekening met je beschikbare speeltijd. Ondersteunende klassen renderen vooral in groepsverband; wie graag alleen op pad gaat, voelt zich wellicht prettiger bij een gerichte schadeklasse. Dit zijn algemene richtlijnen; balanswijzigingen vinden plaats via updates, raadpleeg daarom actuele discussies in het officiële Discord-kanaal."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Zoek je de meest toegankelijke start, dan is Warrior een verstandige optie; kies echter vooral de speelstijl die je zelf het leukst vindt."
+      }
+     ]
+    },
+    {
+     "id": "irk-sinif",
+     "baslik": "Ras, klasse en stat-verdeling: gedetailleerd overzicht",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Rise Online telt vier klassen met elk gespecialiseerde subtypen; de twee rassen (Lunaskar en Protean) veranderen niets aan de spelregels, het verschil is uitsluitend visueel (afgezien van factiestrijd in Death Valley en PvP-evenementen). De onderstaande tabel brengt klasse, specialisatie en de primaire schadestat bij elkaar."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Klasse",
+        "Subtypen",
+        "Hoofdstat (schade / mana)",
+        "Gedeelde stat"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Attacker, Defensive",
+         "Strength",
+         "Health"
+        ],
+        [
+         "Rogue",
+         "Archer, Assassin",
+         "Dexterity",
+         "Health"
+        ],
+        [
+         "Priest",
+         "Healer, Buffer, Debuffer; Battle Priest en INT Priest rollen",
+         "Battle Priest: Strength; INT Priest: Intelligence",
+         "Health"
+        ],
+        [
+         "Mage",
+         "Fire, Ice, Lightning",
+         "Magic (spreukaanval), Intelligence (mana)",
+         "Health"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**Vijf attributen:** Strength, Health, Dexterity, Intelligence en Magic. Strength verhoogt de aanvalskracht voor Warrior en Battle Priest en de draagcapaciteit voor alle klassen; Health vergroot de maximale HP van alle klassen; Dexterity verhoogt de aanval van de Rogue, Magic de toverkracht van de Mage en Intelligence de mana van Priest en Mage. Van level 1 tot 60 krijg je **3** punten per level, vanaf 61 zijn dat er **5**."
+      },
+      {
+       "tip": "p",
+       "metin": "**Bonus-valkuil:** Op uitrustingsstukken verhoogt 'HP Bonus' direct de maximale levenspunten, terwijl 'Health Bonus' het attribuut Health verhoogt; evenzo verhoogt 'MP Bonus' direct je mana en 'Magic Bonus' het attribuut Magic. Haal deze toevoegingen niet door elkaar, hun effecten verschillen. Elke klasse bezit tevens **6 elementaire resistenties** (vuur, ijs, bliksem, vergif, vloek, heilig) en **wapenresistenties**; hoe hoger de resistentie, des te minder schade je incasseert."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Bepaal voor het verdelen van punten de hoofdstat en Health voor jouw klasse; aangezien je de eerste 60 levels met 3 punten per stap afrondt, is een verkeerde toewijzing kostbaar."
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "Levelen en de doodstraf",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Je level stijgt via monsterjacht en quests. Rise Rehberi toont een tabel met benodigde EXP per level; getallen veranderen met patches, maar het maximum is 85 en vanaf level 61 ontvang je 5 stat-punten per level. Zoek een gezonde balans tussen opdrachten en monsterjacht; alleen jagen verloopt traag en uitsluitend quests doen kan tot een uitrustingstekort leiden."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Sterven kost ongeveer **4 procent** van je actuele ervaringspunten.",
+        "Een Premium-status verzacht dit verlies: Craft naar 0,4 procent, EXP naar 0,8 procent, Farm, Battle en Elite naar 2 procent.",
+        "Gestadig farmen in een zone die bij je niveau past, is doorgaans efficiënter dan roekeloos zware monsters bevechten."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Wanneer je attributen goed zijn verdeeld, jaag dan in de vroege levels op overzichtelijke monsters om drankjes- en sterftekosten laag te houden. Als je tempo in een gebied stagneert, schuif dan door naar de volgende zone; nemen de sterfgevallen toe, doe dan een stapje terug."
+      },
+      {
+       "tip": "uyari",
+       "metin": "De percentages van de ervaringsstraf zijn gebaseerd op een externe gidssite en kunnen via updates wijzigen. De weergave in de game zelf is doorslaggevend."
+      }
+     ]
+    },
+    {
+     "id": "bolgeler",
+     "baslik": "Levelzones: welke kaart past bij welk level?",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "De zone-indeling op de Engelstalige pagina van Rise Rehberi vermeldt levelbereiken. Het hoogste zonebereik reikt tot 85, waaruit een maximumlevel van 85 volgt. De onderstaande tabel geeft de bereiken uit de bron weer."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Levelbereik",
+        "Zone",
+        "Opmerking"
+       ],
+       "satirlar": [
+        [
+         "1-25",
+         "Dorion",
+         "Startgebied"
+        ],
+        [
+         "25-60",
+         "Lunaskar Kingdom / Protean Kingdom",
+         "Koninkrijk behorend bij je ras"
+        ],
+        [
+         "59-85",
+         "Haddar Highlands / Hagard Castle",
+         "Jachtzones voor gevorderden"
+        ],
+        [
+         "50-85",
+         "Death Valley",
+         "Slagveld tussen beide facties"
+        ],
+        [
+         "30-85",
+         "Narun Tower",
+         "Toren-uitdagingen"
+        ],
+        [
+         "1-85",
+         "Narungard",
+         "Kaart toegankelijk voor alle niveaus"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Quests vormen de ruggengraat van ervaringswinst en elke kaart biedt passende opdrachten. In sommige bronnen staat de typfout 'Haddar Lighlands'; hier wordt Highlands aangehouden. Een officiële lijst met monsterlevels per kaart ontbreekt; controleer bij aankomst in een zone altijd zelf het niveau van de monsters."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Als je level dicht bij de ondergrens van een kaart ligt, vertrek dan niet voor je de lopende opdrachtenketen hebt afgerond; beloningen leveren zowel EXP als goudstukken op."
+      }
+     ]
+    },
+    {
+     "id": "meslekler",
+     "baslik": "Beroepen: verzamelen en vervaardigen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Rise Online onderscheidt twee beroepsgroepen, waarbij grondstoffen uit verzamelberoepen direct worden verwerkt in ambachten. Volgens Rise Rehberi bestaan de verzamelberoepen uit Archeologie (Archaeology), Vissen (Fishing), Oogsten (Harvesting), Kruidenkunde (Herbalism), Mijnbouw (Mining), Steengroeve (Quarrying), Villen (Skinning) en Houthakken (Woodcutting). Als ambachten worden Alchemie (Alchemy), Bepantsering (Armor Smithing), Smeden (Blacksmithing), Houtbewerking (Carpentry), Koken (Cooking), Juwelenslijpen (Jewel Crafting), Leerbewerking (Leatherworking) en Steenhouwen (Stonemasonry) genoemd."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Groep",
+        "Beroepen",
+        "Doel"
+       ],
+       "satirlar": [
+        [
+         "Verzamelen",
+         "Archaeology, Fishing, Harvesting, Herbalism, Mining, Quarrying, Skinning, Woodcutting",
+         "Grondstoffen voor ambachtelijke beroepen"
+        ],
+        [
+         "Ambacht",
+         "Alchemy, Armor Smithing, Blacksmithing, Carpentry, Cooking, Jewel Crafting, Leatherworking, Stonemasonry",
+         "Verwerkt grondstoffen tot drankjes, wapens, harnassen en accessoires"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Leveldrempels en recepten per beroep zijn niet officieel in tabelvorm gepubliceerd; bekijk hiervoor het beroepenvenster in de game. Een praktische start: kies tijdens het levelen een ambacht dat drankjes of uitrusting levert voor je eigen klasse, gekoppeld aan het bijbehorende verzamelberoep; overtollige voorraden leveren extra inkomsten op de markt op."
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "Premium en aankopen: wat je moet weten",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Het spel biedt verschillende **Premium**-varianten: Craft, Farm, XP, Battle, Elite en Complete. Elk type voorziet in specifieke voordelen; zo verminderen ze onder andere het ervaringsverlies na een dood. Aankopen lopen via geautoriseerde betaalproviders."
+      },
+      {
+       "tip": "p",
+       "metin": "Premium-vormen verlagen het EXP-verlies bij overlijden: Craft naar 0,4%, EXP naar 0,8%, Farm, Battle en Elite naar 2% (zonder Premium bedraagt het verlies 4%). Pc-prijzen zijn niet officieel gepubliceerd. De mobiele prijzen staan in TL op de aankondigingspagina van Rise Rehberi en worden in de onderstaande tabel getoond; prijzen kunnen in de loop der tijd wijzigen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Mobiel Premium-type",
+        "Prijs (TL)",
+        "EXP-verlies na overlijden"
+       ],
+       "satirlar": [
+        [
+         "Elite Premium",
+         "155",
+         "2%"
+        ],
+        [
+         "Farm Premium",
+         "680",
+         "2%"
+        ],
+        [
+         "XP Premium",
+         "740",
+         "0.8%"
+        ],
+        [
+         "Battle Premium",
+         "805",
+         "2%"
+        ],
+        [
+         "Craft Premium",
+         "840",
+         "0.4%"
+        ],
+        [
+         "Complete Premium",
+         "1,050",
+         "Niet officieel vastgelegd"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Cash-voorbeelden: 500 Cash voor 93 TL, 1.000 + 20 Cash voor 187 TL, 5.000 + 200 Cash voor 938 TL, 10.000 + 500 Cash voor 1.876 TL. Deze tabel betreft de mobiele versie; er is geen indicatie dat pc-tarieven gelijk zijn."
+      },
+      {
+       "tip": "p",
+       "metin": "Hanteer een eenvoudige stelregel bij uitgaven: ervaar het spel eerst een tijdje zonder premium, kijk waar je tegen knelpunten aanloopt en overweeg pas dan een passend pakket. Aanbiedingen en acties wisselen geregeld; overhaast niets. Betaal uitsluitend via geautoriseerde providers op de officiële website en bewaar aankoopbewijzen."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Onderling handelen in in-game spullen, goud of accounts voor echt geld (RMT) is streng verboden en leidt tot accountsluiting. Maak uitsluitend gebruik van officiële aankoopkanalen."
+      },
+      {
+       "tip": "p",
+       "metin": "**Moet ik Premium aanschaffen?** Zonder Premium kost elke dood 4% ervaringspunten; op hoog niveau kost dat enorm veel speeltijd. Doe je intensief mee aan gevechten in Death Valley of Inferno Temple, dan is Premium het overwegen waard; speel je rustig quests en beroepen, start dan gerust zonder Premium en observeer je sterftecijfers. Controleer actuele prijzen via de officiële site. Verkoop of koop nooit accounts of Cash via derden; dit schendt de regels en brengt grote risico's op oplichting met zich mee."
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "Evenementen en clans",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Het zwaartepunt van Rise Online World ligt bij massale veldslagen. Bekende evenementen zijn: **Inferno Temple**, **Crystal Fortress War**, **Blood Valley**, **Death Valley** en **Sevenfold**; communitysites noemen tevens **Mount Race**. Volgens officiële patch notes zijn Sevenfold-tijden opgenomen in de in-game Event Calendar, waarmee **de in-game kalender de officiële bron is voor aanvangstijden**; een externe vaste dienstregeling ontbreekt (niet officieel vermeld)."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Evenement",
+        "Bekend detail (officiële patch notes)"
+       ],
+       "satirlar": [
+        [
+         "Inferno Temple",
+         "Patch notes noemen minimaal toegangsniveau 84; gemengde teams uit beide facties; extra kristallen op basis van Gear Score"
+        ],
+        [
+         "Crystal Fortress War",
+         "Beschikt over een overgavesysteem (Surrender): het evenement stopt automatisch als meer dan de helft van het team toestemt"
+        ],
+        [
+         "Blood Valley",
+         "Patch note hanteert gescheiden beloningspunten voor winnaar en verliezer (winnaar 100, verliezer 25)"
+        ],
+        [
+         "Death Valley",
+         "Kaart voor level 50-85; grootschalige oorlog tussen facties met frequente balansdiscussies"
+        ],
+        [
+         "Sevenfold",
+         "Tijden zijn vastgelegd in de in-game Event Calendar"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "De clan vormt het kloppend hart van deze evenementen. Voor beginners maakt aansluiting bij een actieve, gestructureerde clan zowel het leerproces als deelname aan grote veldslagen veel eenvoudiger. Vraag voor toetreding naar de verwachtingen en huisregels van de clan."
+      },
+      {
+       "tip": "p",
+       "metin": "Tref voor grote gevechten gezamenlijk voorbereidingen met je clan: spreek tijden af, verdeel rollen en controleer uitrusting en voorraden. Omdat beloningen en regels per patch kunnen fluctueren, volg je de officiële aankondigingen voor het laatste nieuws."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Wees voorbereid op gevechtsevenementen: controleer vooraf je drankjes, je uitrusting en de exacte starttijd."
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "Veelvoorkomende fouten en veiligheid",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Attributen toewijzen zonder voorafgaand onderzoek.",
+        "Jagen in zones die ver boven je niveau liggen en onnodig veel ervaring verliezen.",
+        "Hetzelfde wachtwoord hergebruiken op andere websites."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Blijf ver weg van cheats, bots, macro's, exploits, privéservers, handel in items voor echt geld (RMT) en gekraakte clients. Ze leiden tot permanente sluiting van je account en datadiefstal. Download het spel uitsluitend via de officiële website."
+      },
+      {
+       "tip": "p",
+       "metin": "Spelleiding en moderators vragen nooit om je wachtwoord. Klik niet op links die via in-game chat of privéberichten worden gedeeld. Bij vragen kun je terecht in officiële of communitykanalen, maar geef nooit inloggegevens, codes of geld af aan derden."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Veelgestelde vragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is Rise Online World gratis?",
+         "c": "De game is gratis te downloaden; inkomsten komen uit optionele Premium- en Cash-aankopen. Mobiele prijzen staan in TL; pc-prijzen zijn niet officieel gepubliceerd."
+        },
+        {
+         "s": "Welke server kan ik het beste kiezen?",
+         "c": "Aarvad en Galantis zijn de actieve servers. De server kiezen waar je vrienden spelen is het eenvoudigst."
+        },
+        {
+         "s": "Beïnvloedt het ras de gameplay?",
+         "c": "Volgens gidssites is het verschil tussen Lunaskar en Protean louter cosmetisch."
+        },
+        {
+         "s": "Wat verlies ik als ik sterf?",
+         "c": "Ongeveer 4 procent van je ervaringspunten; Premium-pakketten verlagen dit percentage. Raadpleeg de in-game weergave."
+        },
+        {
+         "s": "Kan ik op mijn smartphone spelen?",
+         "c": "Ja, de mobiele versie is uitgebracht op 10 april 2026."
+        },
+        {
+         "s": "Wat is de huidige patch?",
+         "c": "Op pc geldt versie 16.0.3 (6 november 2026)."
+        },
+        {
+         "s": "Wat is het maximumlevel?",
+         "c": "Het hoogste zonebereik loopt tot 85, waarmee 85 als maximum geldt; de officiële site noemt geen expliciet getal."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "zh": {
+   "baslik": "Rise Online World 新手指南（2026 全面解析）",
+   "ozet": "专为在 Rise Online World 开启征途或重返大陆的玩家打造：硬件配置需求、选服策略、种族与职业分析、属性点分配、尊享特权（Premium）体系、大型阵营活动与核心安全守则。",
+   "kunye": [
+    {
+     "ad": "游戏类型",
+     "deger": "MMORPG（基于虚幻引擎 5 开发）"
+    },
+    {
+     "ad": "平台",
+     "deger": "Windows PC；手游移动端于 2026 年 4 月 10 日上线"
+    },
+    {
+     "ad": "收费模式",
+     "deger": "免费下载畅玩；Premium 与 Cash 均为可选项。移动端明码标价土耳其里拉 TL（如 500 Cash 售 93 TL）；PC 端价格未正式公布"
+    },
+    {
+     "ad": "当前版本",
+     "deger": "PC 端补丁 16.0.3（2026年11月6日）；16.0.0 正式迁移至虚幻引擎 5.8"
+    },
+    {
+     "ad": "土耳其语支持",
+     "deger": "官方网站与公告采用英语；官方资料中未在文档中书面载明游戏内土耳其语选项（未列明）。存在民间土耳其语社区攻略及本地货币定价"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "durum",
+     "baslik": "2026 年游戏现状与环境概览",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Rise Online World 是一款由 Rokosoft（Rokogame Studios）基于虚幻引擎 5（UE5）自研倾力打造的奇幻网络角色扮演游戏，于 2022 年 4 月 15 日正式公测。客户端下载与账号注册均在官网完成。手游端亦于 2026 年 4 月 10 日正式上线运营。"
+      },
+      {
+       "tip": "p",
+       "metin": "PC 端当前稳定版本号为 **16.0.3**（2026 年 11 月 6 日）。11 月 3 日上线的 **16.0.0** 划时代补丁将底层架构全面迁移至虚幻引擎 5.8。目前共有两大活跃服务器：**Aarvad** 与 **Galantis**。其中 Galantis 是在 2026 年 7 月 16 日由原先的 Galia 和 Mantis 双服成功合并而成。"
+      },
+      {
+       "tip": "p",
+       "metin": "Rise Online World 以纯正硬核经典韩式 MMORPG 机制著称：核心玩法围绕刷怪打宝、等级冲级、装备打造以及大规模百人阵营阵地战展开。本文大多数指标基于土耳其权威玩家社区攻略站与游戏官网。由于游戏版本更新极快，请以官方补丁专页的实时说明为准。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "等级上限为 85 级（最高阶地图区域范围及主流攻略均以此为准）。游戏主体免费下载；盈利模式主要依赖 Premium 特权卡与 Cash 商城币。"
+      }
+     ]
+    },
+    {
+     "id": "baslamadan",
+     "baslik": "入坑之前：电脑配置、账号注册与下载安装",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "你可以在官网下载客户端并注册专属账号，务必在注册时完成邮箱验证。下表整理自 Rise Rehberi 社区发布的硬件配置清单；该页面更新于 2026 年 8 月 15 日，早于 11 月 3 日虚幻引擎 5.8 升级节点。官方在此次重大引擎重构后尚未发布全新配置单，因此指标可能稍有滞后。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "硬件指标",
+        "最低配置",
+        "推荐配置"
+       ],
+       "satirlar": [
+        [
+         "操作系统",
+         "64 位 Windows 7 / 8.1 / 10",
+         "64 位 Windows 7 / 8.1 / 10"
+        ],
+        [
+         "处理器（CPU）",
+         "Intel Core i5-8500 或 Ryzen 5 3500",
+         "Intel i7-10700 或 Ryzen 7 3700X"
+        ],
+        [
+         "内存（RAM）",
+         "16 GB",
+         "16 GB"
+        ],
+        [
+         "显卡（GPU）",
+         "GTX 960 或 RX 460",
+         "GTX 1070 或 RX 580"
+        ],
+        [
+         "DirectX 版本",
+         "11/12",
+         "11/12"
+        ],
+        [
+         "硬盘空间",
+         "50 GB 可用空间",
+         "50 GB 可用空间（强烈推荐安装在 SSD）"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "安装前请预留充裕的固态硬盘空间，并及时更新显卡驱动。虚幻引擎 5.8 架构在首次启动时可能会花费较长时间预编译着色器与全局光照缓存；若初次进游戏加载缓慢，切莫误判为死机强退。在入门级显卡上适度调低阴影特效能显著拔高团战帧率。"
+      },
+      {
+       "tip": "uyari",
+       "metin": "该表引自第三方玩家百科，列出了较早期的 Windows 系统支持。在现代 Windows 10/11 环境下运行良好，但安装前仍建议务必核对硬盘空间与显卡驱动完整性。"
+      }
+     ]
+    },
+    {
+     "id": "ilk-adimlar",
+     "baslik": "开荒前几小时新手循序进阶指南",
+     "bloklar": [
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "注册官方账号",
+         "metin": "在官网注册账号，完成邮箱绑定并配置高强度独立专属密码。"
+        },
+        {
+         "baslik": "下载游戏客户端",
+         "metin": "从官方主页下载并安装正版启动器。绝不使用任何未知第三方分流安装包。"
+        },
+        {
+         "baslik": "挑选服务器",
+         "metin": "在 Aarvad 与 Galantis 之间进行抉择。若有熟人好友，优先跟好友同服；两服在活跃人口与贸易物价上各有特色。"
+        },
+        {
+         "baslik": "确定种族与职业",
+         "metin": "种族主要影响角色外观。依据下文细则确定最合心意的战斗职业。"
+        },
+        {
+         "baslik": "加点分配属性",
+         "metin": "升级会获得宝贵的属性点；根据职业核心伤害词缀针对性加点。在角色面板仔细研读每项属性的提升效益。"
+        },
+        {
+         "baslik": "推进开荒任务与刷怪",
+         "metin": "完成新手主线指引任务，在与自身等级相匹配的平缓地图打怪，时刻注意血线避免暴毙；阵亡会扣除可观的经验值。"
+        }
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "开荒初期的首要目的不是盲目飙等级，而是彻底吃透各项核心交互系统：UI 界面、聊天频道、组队协作机制以及拍卖行集市。进游戏后先在设置界面调好适合自己的音画特效与快捷键。"
+      },
+      {
+       "tip": "p",
+       "metin": "给老玩家的实用提醒：久别重逢重返游戏，先花几分钟看一眼更新日志。由于 16.0.0 补丁更换了新引擎，操作手感、界面选项和图形设置可能与以往有所差异。进游戏后核实角色所在服务器，并确认合服是否导致角色名或公会标识发生变更。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "在前期切莫盲目一次性砸光所有点数，先在游戏内看一眼技能描述；参考职业流派攻略的推荐点法能大幅降低洗点成本。"
+      }
+     ]
+    },
+    {
+     "id": "secim",
+     "baslik": "阵营种族与四大职业体系抉择",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "世界分为两大阵营种族：**Lunaskar** 与 **Protean**。根据主流攻略站指出，种族之间的差异主要在于外貌装扮与主城风格，并不影响底层战斗数值平衡。核心抉择在于职业本身。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "核心职业",
+        "专精分支",
+        "战斗定位简述"
+       ],
+       "satirlar": [
+        [
+         "Rogue（刺客/游侠）",
+         "Archer（弓手）、Assassin（刺客）",
+         "高爆发与强机动；既能超远狙杀亦能贴身割喉"
+        ],
+        [
+         "Warrior（战士）",
+         "Attacker（狂暴输出）、Defensive（重装肉盾）",
+         "近战绞肉机；兼具巨额打击与铜墙铁壁般的承伤防御"
+        ],
+        [
+         "Priest（祭司）",
+         "Healer（治疗）、Buffer（增益）、Debuffer（诅咒）、Battle Priest（战祭）、INT Priest（智祭）",
+         "团队核心保障；既能加血加抗，战祭亦具备强大的近身肉搏敲击能力"
+        ],
+        [
+         "Mage（法师）",
+         "Fire（火）、Ice（冰）、Lightning（雷）",
+         "强力法术轰炸；三大元素赋予减速、眩晕与超大范围爆发"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "角色五大基础属性为力量（Strength）、体力（Health）、敏捷（Dexterity）、智力（Intelligence）与魔力（Magic）。从 1 级到 60 级每级奖励 **3** 点属性点，61 级之后每级提升为 **5** 点。"
+      },
+      {
+       "tip": "p",
+       "metin": "选择职业时也请结合自己的出勤时间。纯奶妈辅助职业极其依赖固定队伍与公会支持；若平时主要独来独往，选择战士或游侠输出位会更加自由洒脱。这些均为通用建议；版本平衡随补丁变动，建议常去官方 Discord 交流心得。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "若初入门希望选一个最省心耐打的职业，首发战士（Warrior）是最不易犯错的扎实选择；但请跟随内心选择最心动的战斗风格。"
+      }
+     ]
+    },
+    {
+     "id": "irk-sinif",
+     "baslik": "种族、职业与属性配点：深度对照表",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Rise Online 设有四大职业且各自分化出深度进阶子职业；两大陆上阵营（Lunaskar 与 Protean）并无硬性技能数值差异，区别主要体现在外观模型与势力归属上（死亡之谷等阵营战除外）。下表梳理了职业、细分流派与其赖以增伤的主修核心属性。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "职业",
+        "细分流派分支",
+        "核心增伤属性（伤害 / 法力）",
+        "全职业通用生存属性"
+       ],
+       "satirlar": [
+        [
+         "Warrior",
+         "Attacker, Defensive",
+         "Strength（力量）",
+         "Health（体力）"
+        ],
+        [
+         "Rogue",
+         "Archer, Assassin",
+         "Dexterity（敏捷）",
+         "Health（体力）"
+        ],
+        [
+         "Priest",
+         "Healer, Buffer, Debuffer；Battle Priest 与 INT Priest 派系",
+         "战祭主修 Strength；智祭主修 Intelligence",
+         "Health（体力）"
+        ],
+        [
+         "Mage",
+         "Fire, Ice, Lightning",
+         "Magic（法术攻击力）、Intelligence（最大法力值）",
+         "Health（体力）"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "**五大属性深度剖析：** 力量提高战士与战祭的物理输出，并提升全职业负重上限；体力按百分比提升全职业基础血量上限；敏捷决定盗贼的物攻与命中闪避，魔力直接放大法师法术攻击，智力决定祭司与法师的魔法储量上限。1-60 级每级获得 **3** 点，61 级起每级获得 **5** 点。"
+      },
+      {
+       "tip": "p",
+       "metin": "**词缀陷阱警示：** 装备词缀中的“HP Bonus”是直接增加固定总血量数值，而“Health Bonus”则是为基础体力属性加点；同样，“MP Bonus”直接加法力池，而“Magic Bonus”则是加魔力属性。两者实战收益算法迥异，切勿混为一谈。此外每个角色拥有**六大元素抗性**（火、冰、雷、毒、诅咒、神圣）及**武器抗性**；抗性堆砌越高，所受相应类型伤害越低。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "每次升级加点前，务必确定自身流派的主增伤属性与体力的配比；鉴于前 60 级每级仅有 3 点，加错点会严重拖累前期开荒效率。"
+      }
+     ]
+    },
+    {
+     "id": "seviye",
+     "baslik": "练级冲级与死亡惩罚机制",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "角色等级主要通过刷野怪与清理支线任务提升。Rise Rehberi 汇总了每级所需的经验峰值；虽随版本微调，但满级确立为 85 级，且 61 级之后加点点数跃升为 5 点。冲级时务必将清任务与定点刷怪紧密结合；单靠刷怪效率偏慢，而单纯做任务很容易遭遇装备断档的窘境。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "普通状态下角色阵亡将直接损失约 **4%** 的当前等级经验值。",
+        "激活各种类型的 Premium 特权卡能大幅减轻死亡损失：Craft 降至 0.4%，EXP 降至 0.8%，Farm、Battle 与 Elite 降至 2%。",
+        "在与自身装备实力相称的合适区域稳扎稳打清怪，综合效率远胜于贸然挑战高难红名怪物。"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "按职业规划分配好属性点后，前期优先挑选难度平缓的怪物循序渐进，把药水开支与掉经验风险降至最低。当在某张地图的清怪速度明显放缓时，再稳步过渡至下一张地图；若死亡频率陡增，立刻退回上一张图稳固基础。"
+      },
+      {
+       "tip": "uyari",
+       "metin": "死亡掉经验的具体惩罚比例源自第三方攻略整理，可能会随版本补丁平衡性调整。请以游戏内角色面板的实时说明为准。"
+      }
+     ]
+    },
+    {
+     "id": "bolgeler",
+     "baslik": "练级地图分布：各等级适合奔赴何方？",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Rise Rehberi 英文页面详细收录了各大区域的最佳练级区间。终极地图适配上限为 85 级，印证了满级为 85 级的设定。下表汇总了各核心地图的推荐等级范围。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "推荐等级区间",
+        "核心地图区域",
+        "区域定位与特征"
+       ],
+       "satirlar": [
+        [
+         "1-25 级",
+         "Dorion",
+         "新手起步大陆"
+        ],
+        [
+         "25-60 级",
+         "Lunaskar Kingdom / Protean Kingdom",
+         "所属阵营王国主城及周边区域"
+        ],
+        [
+         "59-85 级",
+         "Haddar Highlands / Hagard Castle",
+         "中后期高阶野外打宝练级核心区"
+        ],
+        [
+         "50-85 级",
+         "Death Valley（死亡之谷）",
+         "两大阵营无休止交锋的争夺战核心地带"
+        ],
+        [
+         "30-85 级",
+         "Narun Tower",
+         "爬塔挑战副本机制图"
+        ],
+        [
+         "1-85 级",
+         "Narungard",
+         "全等级门槛开放的综合性地图"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "任务是获取前期大量经验的生命线，各张地图都设有丰富契合该等级的主支线。部分早期外网资料曾将地图误拼为“Haddar Lighlands”，在此纠正为官方规范的 Highlands。官方未对外打包发布怪物等级大全；进入新图后点击怪物查验血条等级即可直观评估。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "若你的等级刚好踩在下一张图的最低门槛边缘，切莫过早搬迁，先将当前地图的任务线清理干净；任务结算奖励兼具海量经验与金币。"
+      }
+     ]
+    },
+    {
+     "id": "meslekler",
+     "baslik": "生活副职业系统：采集与锻造",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Rise Online 拥有成熟的生活职业架构，采集类副职业采集的原矿原料直接为制造类副职业供给原材料。据 Rise Rehberi 记载，采集系八大门类包括：考古（Archaeology）、钓鱼（Fishing）、农收（Harvesting）、草药（Herbalism）、采矿（Mining）、采石（Quarrying）、剥皮（Skinning）与伐木（Woodcutting）。制造系八大门类包括：炼金（Alchemy）、重甲铸造（Armor Smithing）、锻造（Blacksmithing）、木工（Carpentry）、烹饪（Cooking）、珠宝首饰（Jewel Crafting）、制皮（Leatherworking）与石雕（Stonemasonry）。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "副业大类",
+        "包含职业类别",
+        "在游戏中的战略功用"
+       ],
+       "satirlar": [
+        [
+         "采集系（Gathering）",
+         "Archaeology, Fishing, Harvesting, Herbalism, Mining, Quarrying, Skinning, Woodcutting",
+         "搜集大自然各色原木、矿石与草药等制造材料"
+        ],
+        [
+         "制造系（Crafting）",
+         "Alchemy, Armor Smithing, Blacksmithing, Carpentry, Cooking, Jewel Crafting, Leatherworking, Stonemasonry",
+         "将初级原材料精炼打造成强力药剂、神兵利刃、重甲与首饰"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "各个副职业的具体等级解锁门槛与配方公式官方未在静态网页公布，可在游戏内生活技能面板实时翻阅。新手开荒建议：挑选一个能为自身职业制造核心药水或防具的制造副业，并搭配对应的采集副业自给自足；富余物资还能摆摊出售换取丰厚外快。"
+      }
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "baslik": "Premium 特权与商城消费：核心常识",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "游戏内设置了多档 **Premium** 特权卡：Craft、Farm、XP、Battle、Elite 与 Complete。每种特权满足不同的游戏侧重需求，例如大幅减少意外阵亡的经验损失。充值购买均通过官方正规授权渠道进行。"
+      },
+      {
+       "tip": "p",
+       "metin": "Premium 会员可显著削减阵亡经验掉落：Craft 降至 0.4%，EXP 降至 0.8%，Farm、Battle 与 Elite 降至 2%（无特权普通死亡扣 4%）。PC 端价格官方未统一标明。移动端在 Rise Rehberi 上列出了里拉 TL 定价，如下表所示；价格会随时间周期调整。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "移动端 Premium 种类",
+        "标价（TL 里拉）",
+        "死亡经验惩罚"
+       ],
+       "satirlar": [
+        [
+         "Elite Premium",
+         "155",
+         "2%"
+        ],
+        [
+         "Farm Premium",
+         "680",
+         "2%"
+        ],
+        [
+         "XP Premium",
+         "740",
+         "0.8%"
+        ],
+        [
+         "Battle Premium",
+         "805",
+         "2%"
+        ],
+        [
+         "Craft Premium",
+         "840",
+         "0.4%"
+        ],
+        [
+         "Complete Premium",
+         "1,050",
+         "官方未正式列明"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "商城点券 Cash 价格参考范例：500 Cash 售 93 TL、1,000 + 20 Cash 售 187 TL、5,000 + 200 Cash 售 938 TL、10,000 + 500 Cash 售 1,876 TL。此表属于移动端商城参考价；没有官方信息证明 PC 端价格与此完全相同。"
+      },
+      {
+       "tip": "p",
+       "metin": "充值消费请遵循务实准则：新手初期完全可以不买任何特权畅玩体验，在摸清自身痛点后，再按需选择对应的卡种。官方时常有折扣优惠，切勿盲目从众冲动消费。请仅在官网指定的授权渠道支付并保留电子回执。"
+      },
+      {
+       "tip": "uyari",
+       "metin": "通过非官方第三方平台进行真实货币金币道具交易（RMT）属于严重违规行为，一经检测立即永久封号。请务必仅走官方渠道。"
+      },
+      {
+       "tip": "p",
+       "metin": "**我该买 Premium 吗？** 若无特权每次死亡掉 4% 经验，在高等级时一次阵亡可能倒退数小时练级成果。因此若频繁参加 Death Valley、Inferno Temple 等高烈度 PvP 大乱斗，特权卡物有所值；若前期佛系刷怪做任务，前几周完全可以零氪体验，视死亡频率再做决断。做决定前先在官网确认 PC 端最新定价。严禁私下与陌生人买卖账号或代充 Cash，既违规又极易遭遇诈骗失财。"
+      }
+     ]
+    },
+    {
+     "id": "ileri",
+     "baslik": "阵营大型活动与公会战争",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Rise Online World 的核心灵魂在于百人对抗的大型阵营战争。核心活动包括：**Inferno Temple**（炼狱神殿）、**Crystal Fortress War**（水晶要塞战）、**Blood Valley**（鲜血之谷）、**Death Valley**（死亡之谷）以及 **Sevenfold**（七重试炼）；社区亦列有 **Mount Race**（坐骑竞速）。根据官方补丁说明，Sevenfold 的开启时间已整合收录至游戏内活动日历（Event Calendar），即**活动具体开放时间的唯一权威官方来源为游戏内置日历**；官方未在外部发布固定死板的时刻表（未正式列明）。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "大型活动名称",
+        "官方补丁载明的核心机制"
+       ],
+       "satirlar": [
+        [
+         "Inferno Temple",
+         "补丁载明最低进入门槛 84 级；两大阵营随机混合编队；根据装等（Gear Score）结算额外水晶奖励"
+        ],
+        [
+         "Crystal Fortress War",
+         "配备投降（Surrender）机制：当队伍半数以上成员确认投降时，对局自动提前结算"
+        ],
+        [
+         "Blood Valley",
+         "补丁对胜败双方分别赋予独立积分结算（胜者 100 分，败者 25 分）"
+        ],
+        [
+         "Death Valley",
+         "50-85 级高危地图；全天候阵营交火争夺，官方持续微调平衡性"
+        ],
+        [
+         "Sevenfold",
+         "开启时间点由游戏内活动日程日历精确倒计时"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "公会（Clan）是上述所有大型玩法的组织纽带。对于新玩家而言，加入一个稳定活跃、执行力强的公会能极大降低摸索成本并轻松获取团战席位。申请加入前，先明确公会的开麦出勤要求与规章制度。"
+      },
+      {
+       "tip": "p",
+       "metin": "在大型阵营战打响前，与公会成员统一步调：提前在语音频道集结、分配职业站位并备足高阶药剂与卷轴。由于活动奖励机制随补丁动态调整，请密切追踪官方最新公告。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "参与团战活动前务必未雨绸缪：提前备齐充足药水、检修装备耐久并核准活动进场时间点。"
+      }
+     ]
+    },
+    {
+     "id": "hatalar-guvenlik",
+     "baslik": "避坑指南与账号核心安全",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "毫无规划盲目加点导致角色攻防全废。",
+        "在远超自身承载极限的高危地图冒险挂机，导致经验掉光等级倒退。",
+        "在第三方非官方论坛使用相同的账户密码。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "严禁使用外挂、挂机脚本、宏按键、私服客户端以及参与线下真金账号道具交易（RMT）。上述违规行为将导致账号被永久封禁并造成个人信息泄露。请仅从官方渠道下载正版客户端。"
+      },
+      {
+       "tip": "p",
+       "metin": "官方运营管理人员绝不会以任何理由索要你的密码。切勿点击游戏内公屏或陌生人私信发送的可疑外链。若遇到难题可通过官方工单或社区向玩家求助，但凡索要密码、安全码或转账要求的均为诈骗分子。"
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "常见问题解答",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Rise Online World 是免费游戏吗？",
+         "c": "客户端可完全免费下载畅玩；盈利模式基于可选的 Premium 特权与商城 Cash。移动端定价以 TL 显示；PC 端价格未对外统一列明。"
+        },
+        {
+         "s": "新手该如何挑选服务器？",
+         "c": "Aarvad 与 Galantis 为当前两大活跃服。优先选择好友所在的服务器最为省心。"
+        },
+        {
+         "s": "阵营种族对游戏机制有实质影响吗？",
+         "c": "据主流攻略站考证，Lunaskar 与 Protean 之间的差别纯属外观与主城建筑风格。"
+        },
+        {
+         "s": "角色阵亡会受到什么惩罚？",
+         "c": "扣除当前等级约 4% 的经验值；拥有 Premium 特权卡能大幅减轻该惩罚。具体以游戏内数值为准。"
+        },
+        {
+         "s": "可以在手机上游玩吗？",
+         "c": "可以，官方移动手游端已于 2026 年 4 月 10 日正式上线。"
+        },
+        {
+         "s": "当前游戏最新版本号是多少？",
+         "c": "PC 端当前补丁为 16.0.3（2026 年 11 月 6 日）。"
+        },
+        {
+         "s": "角色最高等级上限是多少级？",
+         "c": "最高阶地图的推荐等级上限为 85 级，故满级确立为 85 级；官方主页未在对外说明中写出明确上限。"
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  }
 }
