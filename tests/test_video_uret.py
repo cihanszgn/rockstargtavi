@@ -474,7 +474,8 @@ class AnahtarManifestTests(unittest.TestCase):
         for kimlik, diller in m['videolar'].items():
             for dil, g in diller.items():
                 with self.subTest(f'{kimlik}-{dil}'):
-                    self.assertEqual(set(g), alanlar)
+                    # 'onay' isteğe bağlıdır: Cio onaylayınca tools/video_site.py yazar
+                    self.assertEqual(set(g) - {'onay'}, alanlar)
                     k = g['anahtar']
                     self.assertEqual(g['mp4_1080'], f'{kimlik}-{dil}-{k}-1080.mp4')
                     self.assertEqual(g['vtt'], f'{kimlik}-{dil}-{k}.vtt')
