@@ -47,6 +47,7 @@ KOK = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(KOK / "tools"))
 from sosyal_derle import DILLER, GORUNEN, KLASOR, M, SITE, kart_ad  # noqa: E402
 import video_site as vs  # noqa: E402
+import sosyal_kuyruk as sk  # noqa: E402
 
 KAYIT = KOK / "sosyal" / "gonderilenler.json"
 AYAR = KOK / "sosyal" / "ayarlar.json"
@@ -223,9 +224,22 @@ def reddit_paylas(ag, sir, dil, x, link, ayar) -> dict:
 def ig_aciklama(dil, x) -> str:
     t = x["diller"][dil]
     kay = ", ".join(s["ad"] for s in x["kaynaklar"])
-    etiket = " ".join(t.get("etiketler", []) + ["#" + ("OyunHaberleri" if dil == "tr" else "GamingNews" if dil == "en" else "ActuJeuxVideo" if dil == "fr" else "NoticiasVideojuegos")])
-    metin = f"{t['baslik']}\n\n{t['metin']}\n\n{M[dil]['kaynak']}: {kay}\n{METIN[dil]['ig_link']} ({GORUNEN})\n\n{etiket}"
-    return metin[:2200]
+    etiket = " ".join(etiketler(dil, x))
+    son = f"\n\n{M[dil]['kaynak']}: {kay[:240]}\n{paylasim_linki(dil, x, 'instagram')}\n\n{etiket}"
+    bas = t['baslik'][:300]
+    govde = t.get('ozet', '')[:max(0, 2200 - len(bas) - len(son) - 2)]
+    return f"{bas}\n\n{govde}{son}"
+
+
+def etiketler(dil, x):
+    tags = list(dict.fromkeys(t for t in x['diller'][dil].get('etiketler', [])
+                              if re.fullmatch(r'#[\w]+', t)))[:5]
+    for t in sk.SABLON[dil]['etiket'].split():
+        if len(tags) >= 3:
+            break
+        if t not in tags:
+            tags.append(t)
+    return tags
 
 
 def ig_video_adresi(v: dict) -> str:
@@ -312,7 +326,7 @@ def yt_baslik(dil, x) -> str:
 def yt_aciklama(dil, x, link) -> str:
     t = x["diller"][dil]
     kay = ", ".join(s["ad"] for s in x["kaynaklar"])
-    etiket = " ".join(e for e in t.get("etiketler", []) if e.startswith("#"))
+    etiket = " ".join(etiketler(dil, x))
     metin = f"{t['ozet']}\n\n{METIN[dil]['devam']} {link}\n{M[dil]['kaynak']}: {kay}\n\n{etiket} #Shorts".strip()
     return re.sub(r"[<>]", "", metin)[:4900]
 
@@ -407,13 +421,13 @@ GEREKEN = {
 }
 ONEK_SIR = {"x": "X", "reddit": "REDDIT", "instagram": "IG", "youtube": "YT"}
 # (platform, biçim, ayarlar.json'daki hesap anahtarı ve günlük sınır adı)
-HEDEFLER = (("x", "gorsel", "x"), ("reddit", "gorsel", "reddit"), ("instagram", "gorsel", "instagram"),
-            ("instagram", "reel", "instagram_reel"), ("youtube", "short", "youtube"))
+HEDEFLER = (("x", "gorsel", "x"), ("reddit", "gorsel", "reddit"), ("instagram", "reel", "instagram_reel"),
+            ("instagram", "gorsel", "instagram"), ("youtube", "short", "youtube"))
 VARSAYILAN_SINIR = {"x": 2, "reddit": 2, "instagram": 2, "instagram_reel": 2, "youtube": 2}
 
 
 def konu_veya_id(x: dict) -> str:
-    return (x.get("otomasyon") or {}).get("konu") or x["id"]
+    return x.get("sosyal_anahtar") or (x.get("otomasyon") or {}).get("konu") or x["id"]
 
 
 def anahtar(x: dict, dil: str, platform: str, bicim: str) -> str:
@@ -498,7 +512,11 @@ def video_hakki(x: dict, ayar: dict) -> bool:
 
 def paylasim_linki(dil, x, platform) -> str:
     q = urllib.parse.urlencode({"utm_source": platform, "utm_medium": "social", "utm_campaign": "oyun-haberleri"})
-    return f"{SITE}/{KLASOR[dil]}/{x['id']}.html?{q}"
+    return sayfa_adresi(dil, x) + f"?{q}"
+
+
+def sayfa_adresi(dil, x):
+    return f"{SITE}/" + x.get("sayfalar", {}).get(dil, f"{KLASOR[dil]}/{x['id']}.html")
 
 
 # ---------------------------------------------------------------- yarım kalan paylaşımları uzlaştır
@@ -574,10 +592,13 @@ def uzlastir(ag, kayit, tum, ayar, manifest_yolu, kaydet, simdi) -> list:
 
 # ---------------------------------------------------------------- akış
 def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu: pathlib.Path, tum: dict, ag, dry_run: bool,
-            bugun: date, simdi: datetime, cikti=print, anahtarsiz_goster: bool = False) -> tuple[int, list, list]:
-    veri = sorted(veri, key=lambda x: (x["tarih"], x["id"]), reverse=True)
+            bugun: date, simdi: datetime, cikti=print, anahtarsiz_goster: bool = False,
+            kuyruk=None, bellek=None, secildi=None) -> tuple[int, list, list]:
     ham = json.loads(kayit_yolu.read_text(encoding="utf-8")) if kayit_yolu.exists() else {}
-    kayit, goc = kayit_goc(ham, veri)
+    kayit, goc = kayit_goc(ham, veri) if bellek is None else (bellek, False)
+    # Kütüphane çağıran eski istemciler yalnız verdikleri haberleri işler.
+    # CLI ve derleyici ortak kuyruk üreticisini açıkça kullanır.
+    kuyruk = kuyruk if kuyruk is not None else sk.adaylar(veri, kayit_yolu.parent.parent, ayar, bugun, simdi)
     manifest = vs.yukle(manifest_yolu)
     gun = simdi.strftime("%Y-%m-%d")
     hatalar, atlanan, gonderilen = [], [], 0
@@ -589,8 +610,12 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
     if goc:
         kaydet()
     if not dry_run:
+        onceki = {k for k, r in kayit.items() if r.get('durum') == 'niyet'}
         hatalar += uzlastir(ag, kayit, tum, ayar, manifest_yolu, kaydet, simdi)
         manifest = vs.yukle(manifest_yolu)
+    else:
+        onceki = set()
+    kullanilan = {(k.split('|')[1], k.split('|')[2]) for k in onceki if kayit[k].get('durum') == 'tamam'}
 
     for dil in DILLER:
         for platform, bicim, ad in HEDEFLER:
@@ -602,13 +627,15 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                 if dry_run:
                     cikti(f"[DENEME] {ad}/{dil}: anahtar yok, atlandı ({', '.join(eksik_sirlar(tum, platform, dil))})")
                 continue
+            if (dil, platform) in kullanilan:
+                continue
             sinir = (ayar.get("gunluk_en_fazla") or {}).get(ad, VARSAYILAN_SINIR[ad])
-            hak = min(ayar.get("calisma_basina_en_fazla", 1), sinir - bugunku_sayi(kayit, ad, dil, gun))
-            for x in veri:
+            hak = min(1, ayar.get("calisma_basina_en_fazla", 1), sinir - bugunku_sayi(kayit, ad, dil, gun))
+            for x in kuyruk:
                 if hak <= 0:
                     break
-                if (bugun - date.fromisoformat(x["tarih"])).days > ayar.get("en_eski_gun", 3):
-                    break
+                if not sk.uygun(x, dil, platform, kayit, simdi):
+                    continue
                 k = anahtar(x, dil, platform, bicim)
                 if k in kayit:
                     continue
@@ -620,7 +647,7 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                     if not video:
                         continue  # bu haber/dil için video henüz yok
                 link = paylasim_linki(dil, x, platform)
-                sayfa = f"{SITE}/{KLASOR[dil]}/{x['id']}.html"
+                sayfa = sayfa_adresi(dil, x)
                 if dry_run:
                     cikti(f"\n[DENEME] {ad}/{dil}  {x['id']}" + ("" if sir else "  (hesap şifresi yok, gerçekte atlanır)"))
                     if platform == "x":
@@ -634,14 +661,22 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                         cikti(f"video: {ig_video_adresi(video)}\nbaşlık: {g['snippet']['title']}\ngizlilik: {g['status']['privacyStatus']}\n{g['snippet']['description']}")
                     else:
                         cikti(f"görsel: {SITE}/{kart_ad(x['id'], dil, 'ig')}\n{ig_aciklama(dil, x)}")
+                    rec = {"id": x['id'], "sosyal_tur": x.get('sosyal_tur', 'haber'), "dil": dil,
+                           "platform": platform, "bicim": bicim, "durum": "tamam", "zaman": simdi.isoformat()}
+                    kayit[k] = rec
+                    kullanilan.add((dil, platform))
+                    if secildi:
+                        secildi(k, rec)
                     hak -= 1
                     continue
                 if not ag.yayinda_mi(sayfa):
                     cikti(f"Bekliyor (sayfa henüz yayında değil): {sayfa}")
                     continue
                 rec = {"id": x["id"], "dil": dil, "platform": platform, "bicim": bicim, "durum": "niyet",
+                       "sosyal_tur": x.get('sosyal_tur', 'haber'),
                        "niyet_zamani": simdi.isoformat(timespec="seconds")}
                 kayit[k] = rec
+                kullanilan.add((dil, platform))
                 kaydet()  # çağrıdan ÖNCE: çökse bile bir sonraki çalışma çift paylaşmaz
 
                 def ara(**alan):
@@ -668,6 +703,7 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                     vs.baglanti_yaz(manifest_yolu, x["id"], dil, "instagram" if bicim == "reel" else "youtube", sonuc["url"])
                 cikti(f"Paylaşıldı: {ad}/{dil} {x['id']} {sonuc.get('url') or sonuc.get('kimlik')}")
                 gonderilen += 1
+                kullanilan.add((dil, platform))
                 hak -= 1
     return gonderilen, hatalar, atlanan
 
@@ -705,8 +741,11 @@ def sayfa_bekle(ag, veri=None, deneme=40, aralik=15, diller=None) -> int:
 
 
 def main(argv=None) -> int:
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--dry-run", action="store_true", help="ağ çağrısı ve dosya yazma olmadan ne paylaşılacağını göster")
+    ap.add_argument("--dry-run", "--kuru", action="store_true", help="ağ çağrısı ve dosya yazma olmadan ne paylaşılacağını göster")
     ap.add_argument("--selftest", action="store_true")
     ap.add_argument("--anahtarsiz-goster", action="store_true",
                     help="--dry-run ile: anahtarı olmayan hesapların planını da göster (önizleme)")
@@ -719,9 +758,10 @@ def main(argv=None) -> int:
         return sayfa_bekle(Ag(), diller=paylasilacak_diller(ayar))
     veri = json.loads(ICERIK.read_text(encoding="utf-8"))
     simdi = datetime.now(timezone.utc)
+    kuyruk = sk.adaylar(veri, KOK, ayar, simdi.date(), simdi)
     gonderilen, hatalar, atlanan = calistir(ayar, veri, kayit_yolu=KAYIT, manifest_yolu=vs.MANIFEST_YOLU, tum=sirlari_oku(), ag=Ag(),
-                                            dry_run=a.dry_run, bugun=date.today(), simdi=simdi,
-                                            anahtarsiz_goster=a.anahtarsiz_goster)
+                                            dry_run=a.dry_run, bugun=simdi.date(), simdi=simdi,
+                                            anahtarsiz_goster=a.anahtarsiz_goster, kuyruk=kuyruk)
     if atlanan and not a.dry_run:
         print("Anahtar yok, atlandı: " + ", ".join(atlanan))
     print(f"Bitti: {gonderilen} gönderi.")

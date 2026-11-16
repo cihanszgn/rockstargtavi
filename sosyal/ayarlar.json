@@ -56,5 +56,13 @@
   "yukleme_hedefi": "medyayukle@medya.ctrl-agame.com:/var/www/medya/v/",
   "gunluk_en_fazla": 4,
   "hype_esigi": 5
+ },
+ "turler": {
+  "haber": true,
+  "takvim": true,
+  "firsat": true,
+  "ucretsiz": true,
+  "rehber": true,
+  "arsiv": true
  }
 }

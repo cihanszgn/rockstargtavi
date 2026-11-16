@@ -24,7 +24,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  GUNLUK_EN_FAZLA: "2"   # günde en çok bu kadar video, HER DİL İÇİN ayrı (üretim maliyeti ve "toplu içerik" riski için)
+  GUNLUK_EN_FAZLA: "4"   # günde en çok bu kadar video, HER DİL İÇİN ayrı (üretim maliyeti ve "toplu içerik" riski için)
   DILLER: "tr en es fr"
 
 jobs:
