@@ -117,17 +117,97 @@ def tarih_suz(items, now):
     return kept
 
 
-def getir(url):
+def getir(url, timeout=25):
     if not https(url):
         raise ValueError('yalnız HTTPS kaynak okunur')
     req = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept': 'application/xml,text/html,application/json'})
-    with urllib.request.urlopen(req, timeout=25) as response:
+    with urllib.request.urlopen(req, timeout=timeout) as response:
         if not https(response.geturl()):
             raise ValueError('HTTPS dışı yönlendirme')
+        if timeout == 10 and urllib.parse.urlsplit(response.geturl()).hostname != urllib.parse.urlsplit(url).hostname:
+            raise ValueError('sayfa yedeği başka alan adına yönlendirildi')
         raw = response.read(2_500_001)
         if len(raw) > 2_500_000:
             raise ValueError('kaynak 2.5 MB sınırını aşıyor')
         return raw
+
+
+class MetinOku(HTMLParser):
+    """Etiket/script yerine metin; sayfa yedeğinde yalnız article/main gövdesi."""
+    def __init__(self, ana_metin=False):
+        super().__init__(convert_charrefs=True)
+        self.ana_metin = ana_metin
+        self.stack, self.parts = [], []
+
+    def handle_starttag(self, tag, attrs):
+        tag = tag.rsplit(':', 1)[-1]
+        if tag not in ('br', 'hr', 'img', 'meta', 'link', 'input', 'source', 'wbr', 'embed', 'area', 'base', 'col', 'param', 'track'):
+            self.stack.append(tag)
+
+    def handle_endtag(self, tag):
+        tag = tag.rsplit(':', 1)[-1]
+        if tag in self.stack:
+            self.stack = self.stack[:len(self.stack) - 1 - self.stack[::-1].index(tag)]
+
+    def handle_data(self, data):
+        if any(t in self.stack for t in ('script', 'style', 'noscript', 'svg', 'nav', 'footer', 'header', 'aside', 'form')):
+            return
+        if not self.ana_metin or any(t in self.stack for t in ('article', 'main')):
+            self.parts.append(data)
+
+
+def duz_metin(value, ana_metin=False):
+    parser = MetinOku(ana_metin)
+    parser.feed(str(value))
+    # Steam JSON bazen HTML yerine BBCode taşır.
+    text = re.sub(r'\[/?(?:/?\w+)(?:=[^\]]*)?\]', ' ', ' '.join(parser.parts))
+    return re.sub(r'\s+', ' ', text).strip()[:6000]
+
+
+def kaynak_metni(value, alan, url, now):
+    text = duz_metin(value)
+    return {'kaynak_metni': text, 'kaynak_metni_alani': alan if text else '',
+            'kaynak_metni_url': url, 'kaynak_metni_zamani': now.isoformat() if text else None,
+            'kaynak_metni_durumu': 'ok' if len(text) >= 400 else 'kisa' if text else 'yok'}
+
+
+def kaynak_tamamla(candidate, now=None):
+    """Yalnız yazıma gelen adaya kısa sayfa yedeği; bütçeyi çağıran hat tutar."""
+    if len(candidate.get('kaynak_metni', '')) >= 400:
+        return
+    now = now or simdi()
+    try:
+        text = duz_metin(getir(candidate['url'], timeout=10).decode('utf-8', 'replace'), ana_metin=True)
+        if not text:
+            raise ValueError('article/main gövdesi bulunamadı')
+        candidate.update(kaynak_metni(text, 'sayfa:ana_metin', candidate['url'], now))
+    except (OSError, ValueError) as exc:
+        candidate.setdefault('kaynak_metni', '')
+        candidate['kaynak_metni_durumu'] = 'indirilemedi'
+        candidate['kaynak_metni_hatasi'] = str(exc)[:250]
+
+
+def kaynak_okunmus(auto, incoming, now):
+    """Teyit yolundaki bütün URL'ler için bu tur taşınmış güncel metin kanıtı."""
+    required = (auto.get('capraz_kaynaklar', []) if auto.get('teyit_turu') == 'birincil'
+                else [auto.get('resmi_url', '')])
+    valid = set()
+    for item in auto.get('kaynak_metinleri', []):
+        if not isinstance(item, dict):
+            continue
+        fetched = tarih(item.get('kaynak_metni_zamani'))
+        url = item.get('url', '')
+        origin = item.get('kaynak_metni_url', '')
+        # Bir akış başka bir alan adına ait haber için resmî kanıt üretemez.
+        source = next((s for s in CONFIG['kaynaklar'] if origin in (s.get('rss'), s.get('api'))), None)
+        allowed_origin = kanonik(origin) == kanonik(url) or (source and
+            (urllib.parse.urlsplit(source['url']).hostname.removeprefix('www.') ==
+             (urllib.parse.urlsplit(url).hostname or '').removeprefix('www.') or
+             source.get('bicim') == 'steam' and urllib.parse.urlsplit(url).hostname == 'steamcommunity.com' and resmi(url)))
+        if (https(url) and https(origin) and allowed_origin and kanonik(url) in incoming and item.get('kaynak_metni')
+                and item.get('kaynak_metni_alani') and fetched and timedelta(0) <= now - fetched <= timedelta(hours=2)):
+            valid.add(kanonik(url))
+    return bool(required) and all(kanonik(url) in valid for url in required)
 
 
 def steam_adresi(gid):
@@ -160,9 +240,16 @@ def rss_oku(raw, source, now):
         published = tarih(val('pubDate') or val('published') or val('date') or val('updated'))
         if not title or not https(url):
             continue
+        bodies = []
+        for field in ('encoded', 'content', 'description', 'summary'):
+            if field in fields:
+                element = fields[field]
+                raw_body = (element.text or '') + ''.join(ET.tostring(child, encoding='unicode') for child in element)
+                bodies.append((duz_metin(raw_body), 'content:encoded' if field == 'encoded' else field))
+        body, field = max(bodies, key=lambda x: len(x[0]), default=('', ''))
         out.append({'kaynak': source['id'], 'ad': source['ad'], 'baslik': title,
                     'url': url, 'tarih': published.isoformat() if published else None,
-                    'resmi_aday': resmi(url)})
+                    'resmi_aday': resmi(url), **kaynak_metni(body, field, source.get('rss', ''), now)})
     return out
 
 
@@ -202,7 +289,8 @@ def _kaynak_tara(source, now):
                         continue
                     items.append({'kaynak': source['id'], 'ad': source['ad'], 'baslik': item['title'],
                                   'url': f'https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/{gid}', 'steam_gid': gid,
-                                  'tarih': datetime.fromtimestamp(item['date'], timezone.utc).isoformat(), 'resmi_aday': True})
+                                  'tarih': datetime.fromtimestamp(item['date'], timezone.utc).isoformat(), 'resmi_aday': True,
+                                  **kaynak_metni(item.get('contents', ''), 'contents', source['api'], now)})
                 return {'id': source['id'], 'durum': 'ok', 'web_gerekli': False}, items
             for item in data['data']['Catalog']['searchStore']['elements']:
                 promotions = item.get('promotions') or {}
@@ -268,6 +356,12 @@ def kaynak_tara(source, now):
             status.update(durum='kismi', web_gerekli=True, teyit_hatalari=errors)
     status.update(adet=len(kept), bulunan=len(items), tarih_elendi=len(items) - len(fresh),
                   sinir_elendi=len(fresh) - limited, tarihsiz=sum(not x['tarih'] for x in kept))
+    for item in kept:
+        if 'kaynak_metni' not in item:
+            item.update(kaynak_metni('', '', source.get('api') or source.get('url', ''), now))
+    status.update(metin_var=sum(bool(x['kaynak_metni']) for x in kept),
+                  metin_yok=sum(not x['kaynak_metni'] for x in kept),
+                  metin_yeterli=sum(len(x['kaynak_metni']) >= 400 for x in kept))
     return status, kept
 
 
@@ -446,7 +540,8 @@ def hazirla(existing, batch, now=None, senaryo_klasoru=None):
         if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', str(auto.get('konu', ''))):
             raise ValueError('otomasyon.konu: olayın tekrarını önleyecek değişmez kimlik gerekli')
         checked = tarih(auto.get('teyit_zamani'))
-        if (not checked or not timedelta(0) <= now - checked <= timedelta(hours=2) or len(str(auto.get('oyuncuya_fayda', ''))) < 30):
+        if (not (checked and timedelta(0) <= now - checked <= timedelta(hours=2)) and not kaynak_okunmus(auto, incoming, now)
+                or len(str(auto.get('oyuncuya_fayda', ''))) < 30):
             raise ValueError('son 2 saatte okunmuş kaynak ve oyuncuya somut fayda açıklaması gerekli')
         teyit_denetle(auto, incoming, x.get('diller', {}))
         epic_kanit_denetle(auto, incoming, now)
@@ -455,6 +550,13 @@ def hazirla(existing, batch, now=None, senaryo_klasoru=None):
             raise ValueError('otomasyon.hype: 1–10 arası tam sayı gerekli')
         if hype >= hype_esigi() and not ((senaryo_klasoru or SENARYO) / f"{x['id']}-tr.json").exists():
             raise ValueError('otomasyon.hype eşiğe ulaştı: video senaryosu (video/senaryo/<id>-tr.json) gerekli')
+        if hype >= hype_esigi():
+            dropped = auto.get('senaryo_atlanan', {})
+            for lang in DILLER:
+                if not ((senaryo_klasoru or SENARYO) / f"{x['id']}-{lang}.json").exists():
+                    reason = dropped.get(lang) if isinstance(dropped, dict) else None
+                    if lang == 'tr' or not isinstance(reason, str) or not reason.strip():
+                        raise ValueError(f'{lang}: video senaryosu veya tek düzeltme sonrası düşürme gerekçesi gerekli')
         for lang in DILLER:
             content = x.get('diller', {}).get(lang) or {}
             if not all(isinstance(content.get(k), str) and content[k].strip() for k in ('baslik', 'ozet', 'metin')):

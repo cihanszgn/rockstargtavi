@@ -1,6 +1,6 @@
 {
  "surum": 2,
- "sinirlar": {"tur_basina": 3, "gunluk": 12, "son_saat": 48, "kaynak_basina": 6, "yazim_deneme": 12},
+ "sinirlar": {"tur_basina": 3, "gunluk": 12, "son_saat": 48, "kaynak_basina": 6, "yazim_deneme": 8},
  "kaynaklar": [
   {"id":"ign","ad":"IGN","url":"https://www.ign.com/news","rss":"https://www.ign.com/rss/articles/feed","rol":"kesif","yayin_grubu":"ign-entertainment"},
   {"id":"gamespot","ad":"GameSpot","url":"https://www.gamespot.com/news/","rss":"https://www.gamespot.com/feeds/mashup/","rol":"kesif"},

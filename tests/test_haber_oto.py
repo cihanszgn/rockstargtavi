@@ -58,11 +58,38 @@ class HypeTests(unittest.TestCase):
         self.assertIn('otomasyon.hype eşiğe ulaştı', str(c.exception))
 
     def test_esige_ulasan_hype_gecerli_senaryoyla_kabul_edilir(self):
-        (self.klasor / 'hype-test-tr.json').write_text('{}', encoding='utf-8')
+        for lang in h.DILLER:
+            (self.klasor / f'hype-test-{lang}.json').write_text('{}', encoding='utf-8')
         with patch.object(h, 'senaryo_denetle', return_value=[]):
             self.assertEqual(len(h.hazirla([], [self.haber(7)], NOW, self.klasor)[1]), 1)
 
+    def test_missing_locale_requires_explicit_drop_but_turkish_cannot_drop(self):
+        x = self.haber(7)
+        for lang in h.DILLER:
+            (self.klasor / f'hype-test-{lang}.json').write_text('{}', encoding='utf-8')
+        with patch.object(h, 'senaryo_denetle', return_value=[]):
+            (self.klasor / 'hype-test-fr.json').unlink()
+            with self.assertRaisesRegex(ValueError, 'fr:'):
+                h.hazirla([], [x], NOW, self.klasor)
+            x['otomasyon']['senaryo_atlanan'] = {'fr': 'Tek düzeltme sonrası: geçersiz tarih'}
+            self.assertEqual(len(h.hazirla([], [x], NOW, self.klasor)[1]), 1)
+            (self.klasor / 'hype-test-tr.json').unlink()
+            x['otomasyon']['senaryo_atlanan']['tr'] = 'hata'
+            with self.assertRaises(ValueError):
+                h.hazirla([], [x], NOW, self.klasor)
+
 class NewsTests(unittest.TestCase):
+    def test_python_source_timestamp_is_recent_read_evidence(self):
+        x = article()
+        x['otomasyon']['teyit_zamani'] = (NOW - timedelta(hours=3)).isoformat()
+        url = x['otomasyon']['resmi_url']
+        x['otomasyon']['kaynak_metinleri'] = [dict(url=url, kaynak_metni='Gerçek kaynak metni',
+            kaynak_metni_url='https://blog.playstation.com/feed/', kaynak_metni_alani='content:encoded',
+            kaynak_metni_zamani=NOW.isoformat())]
+        self.assertEqual(len(h.hazirla([], [x], NOW)[1]), 1)
+        x['otomasyon']['kaynak_metinleri'][0]['kaynak_metni_zamani'] = (NOW-timedelta(hours=3)).isoformat()
+        with self.assertRaises(ValueError):
+            h.hazirla([], [x], NOW)
     def test_followed_game_matching_uses_word_boundaries(self):
         self.assertFalse(h.oyun_eslesir('Trust keyboard sale', 'rust'))
         self.assertTrue(h.oyun_eslesir('Rust update', 'rust'))
