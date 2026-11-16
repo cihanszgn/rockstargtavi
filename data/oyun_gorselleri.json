@@ -152,14 +152,105 @@
   }
  },
  "oyun": {
+  "albion-online": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/761890/ff6acbb6e6a1d9c3a64a297dc3f772bc5481835d/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "among-us": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/945360/d611f3f87743b5121532023b1d3ee2dd0e96e772/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "apex-legends": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/dc5c390e9a273a7248f75c1b2d59987f6179323c/header_alt_assets_7.jpg?t=1794339458",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "arc-raiders": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1808500/41ee6c5c81a5797132879892586465b917acc563/header_alt_assets_9.jpg?t=1794215815",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "baldurs-gate-3": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "battlefield-6": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2807960/c12d12ce3c7d217398d3fcad77427bfc9d57c570/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "black-desert": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5119640/4db39a6799b424b97fb6288d3b1817d2b0167689/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "borderlands-4": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1285190/986a88d1b0e1420b00183def2a7034508353afa3/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "brawl-stars": {
+   "url": "https://supercell.com/_next/static/media/games_thumbnail_brawlstars.59dcf516.jpg",
+   "kaynak": "Supercell",
+   "en": 1500,
+   "boy": 1130
+  },
   "call-of-duty": {
    "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1938090/23af6cf41e2d09620caa07700a4cb3288dbcbaa8/header.jpg",
    "kaynak": "Steam",
    "en": 460,
    "boy": 215
   },
+  "clash-of-clans": {
+   "url": "https://supercell.com/images/4c0ab0c1fb2958e72103f81632fee096/og_clashofclans.f3149338.jpg",
+   "kaynak": "Supercell",
+   "en": 1600,
+   "boy": 840
+  },
+  "clash-royale": {
+   "url": "https://supercell.com/images/8654bffbaa77efb91243d3706b739c25/og_clashroyale.d235f90b.jpg",
+   "kaynak": "Supercell",
+   "en": 1600,
+   "boy": 840
+  },
   "counter-strike-2": {
    "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/162664aa5da85f418105350c5d67ca565f6c3713/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "cyberpunk-2077": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/48a93d6445a67520ea49833c93dae8f2e68fc540/header_alt_assets_9.jpg?t=1794474878",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "dead-by-daylight": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/381210/capsule_616x353.jpg",
+   "genis": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/381210/library_hero.jpg",
+   "kaynak": "Steam",
+   "en": 616,
+   "boy": 353
+  },
+  "delta-force": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2507950/6e37c04b841256f63c02760f2dd80ed22ddbd936/header_alt_assets_16.jpg?t=1794276014",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "destiny-2": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1085660/0ccf0dc0a8c4ec078db7ab99ddc820b2fa884441/header.jpg",
    "kaynak": "Steam",
    "en": 460,
    "boy": 215
@@ -170,11 +261,49 @@
    "en": 460,
    "boy": 215
   },
+  "dota-2": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/capsule_616x353.jpg",
+   "genis": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/library_hero.jpg",
+   "kaynak": "Steam",
+   "en": 616,
+   "boy": 353
+  },
   "ea-sports-fc": {
    "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4080220/ff6a3779f1ca83aae8ad3878454f6c11008ea24d/header.jpg",
    "kaynak": "Steam",
    "en": 460,
    "boy": 215
+  },
+  "efootball": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1665460/86619d0fb7126b3d5276004175f9a62181223c0f/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "elden-ring": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/capsule_616x353.jpg",
+   "genis": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/library_hero.jpg",
+   "kaynak": "Steam",
+   "en": 616,
+   "boy": 353
+  },
+  "escape-from-tarkov": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3932890/4dd12ea3b00a4f8b67bfd629f3b9abbf8d5cab05/header_alt_assets_2.jpg?t=1794590253",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "euro-truck-simulator-2": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/227300/9a81dc3126c56637297b654f9dcac057cfd79b77/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "final-fantasy-xiv": {
+   "url": "https://lds-img.finalfantasyxiv.com/promo/h/W/IJiRfHALRP9Au7blzPTH7mxpac.jpg",
+   "kaynak": "Square Enix",
+   "en": 1200,
+   "boy": 630
   },
   "football-manager-27": {
    "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4530370/32b41d18ffaac3d2e1dc1a9c3915538db0ba3fca/header.jpg",
@@ -188,6 +317,13 @@
    "en": 2400,
    "boy": 1350
   },
+  "forza-horizon-5": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1551360/capsule_616x353.jpg",
+   "genis": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1551360/library_hero.jpg",
+   "kaynak": "Steam",
+   "en": 616,
+   "boy": 353
+  },
   "genshin-impact": {
    "url": "https://upload-static.hoyoverse.com/hk4e/upload/fb/common.jpg",
    "kaynak": "HoYoverse",
@@ -200,11 +336,35 @@
    "en": 1200,
    "boy": 630
   },
+  "hades-ii": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145350/91ac334a2c137d08968ccc0bc474a02579602100/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
   "halo-campaign-evolved": {
    "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2806050/30d8542d35d7919b34e5f5dbe955d04c3f99e6da/header.jpg",
    "kaynak": "Steam",
    "en": 460,
    "boy": 215
+  },
+  "helldivers-2": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/553850/850e2f9e5bb15c5706bb9a1edc832f4f782e8be5/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "hollow-knight-silksong": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1030300/7983574d464e6559ac7e24275727f73a8bcca1f3/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "honkai-star-rail": {
+   "url": "https://fastcdn.hoyoverse.com/mi18n/hkrpg_global/m20261014hy1hr30em8/upload/2ec5d303c81b22595b93ec5be47deec6_303728547429006971.png",
+   "kaynak": "HoYoverse",
+   "en": 1920,
+   "boy": 1080
   },
   "knight-online": {
    "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/389430/capsule_616x353.jpg",
@@ -221,6 +381,12 @@
   },
   "marathon": {
    "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3065800/c3093fec19fed6eb0750a87261c53743a5757827/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "marvel-rivals": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2767030/37b29210fdb3f998ea137a5c0fa8547bf08fd04c/header.jpg",
    "kaynak": "Steam",
    "en": 460,
    "boy": 215
@@ -244,8 +410,46 @@
    "en": 600,
    "boy": 315
   },
+  "monster-hunter-wilds": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2246340/capsule_616x353.jpg",
+   "genis": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2246340/library_hero.jpg",
+   "kaynak": "Steam",
+   "en": 616,
+   "boy": 353
+  },
+  "nba-2k26": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3472040/f7e126add75c3b09779b44cd349be93d31b0a80b/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "no-mans-sky": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/275850/9f1ca9e3b7d1dccb7b5af404a6739ddc1118ef32/header_alt_assets_26.jpg?t=1793196605",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "old-school-runescape": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1343370/capsule_616x353.jpg",
+   "genis": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1343370/library_hero.jpg",
+   "kaynak": "Steam",
+   "en": 616,
+   "boy": 353
+  },
   "overwatch": {
    "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/5c208b2699cd38ed6125d039be388fa744db54a4/header_alt_assets_23.jpg?t=1793732501",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "palworld": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/6912f19c43a95ff5fe514eedd35e68bf12335459/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "path-of-exile": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238960/19a8acaddb5659ef3c1c91e5d6beb89abf10718d/header.jpg",
    "kaynak": "Steam",
    "en": 460,
    "boy": 215
@@ -262,6 +466,13 @@
    "en": 460,
    "boy": 215
   },
+  "red-dead-redemption-2": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/capsule_616x353.jpg",
+   "genis": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/library_hero.jpg",
+   "kaynak": "Steam",
+   "en": 616,
+   "boy": 353
+  },
   "rise-online": {
    "url": "https://i.ytimg.com/vi/GIlprNuPF3o/maxresdefault.jpg",
    "kaynak": "Rise Online World",
@@ -274,17 +485,119 @@
    "en": 1200,
    "boy": 627
   },
+  "rust": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252490/capsule_616x353.jpg",
+   "genis": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252490/library_hero.jpg",
+   "kaynak": "Steam",
+   "en": 616,
+   "boy": 353
+  },
+  "sid-meiers-civilization-vii": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1295660/capsule_616x353.jpg",
+   "genis": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1295660/library_hero.jpg",
+   "kaynak": "Steam",
+   "en": 616,
+   "boy": 353
+  },
+  "slay-the-spire-2": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2868840/b0958d387dc366211e0f353443710cfcf9fdb020/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "stardew-valley": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413150/capsule_616x353.jpg",
+   "genis": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413150/library_hero.jpg",
+   "kaynak": "Steam",
+   "en": 616,
+   "boy": 353
+  },
+  "starfield": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1716740/capsule_616x353.jpg",
+   "genis": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1716740/library_hero.jpg",
+   "kaynak": "Steam",
+   "en": 616,
+   "boy": 353
+  },
+  "street-fighter-6": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1364780/capsule_616x353.jpg",
+   "genis": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1364780/library_hero.jpg",
+   "kaynak": "Steam",
+   "en": 616,
+   "boy": 353
+  },
+  "teamfight-tactics": {
+   "url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/d63adacd93e313c1e61bbeb2eb37d8c4ca85848d-1920x1080.jpg?accountingTag=TFT?w=1200&h=630&fm=webp&fit=crop&crop=center",
+   "kaynak": "Riot Games",
+   "en": 1120,
+   "boy": 630
+  },
+  "tekken-8": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1778820/bb40124a525d6146a7c1ee4848bf3a14aa716224/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "terraria": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/capsule_616x353.jpg",
+   "genis": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/library_hero.jpg",
+   "kaynak": "Steam",
+   "en": 616,
+   "boy": 353
+  },
+  "the-finals": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2073850/4b0efa1275c8cedc030209eb174af726a5ca1776/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "tom-clancys-rainbow-six-siege": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/1c7b1ea3405a69c54429e2aa3dc31f3cbbeaa456/header_alt_assets_28.jpg?t=1792001976",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
   "valorant": {
    "url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/296cff0d10e916f8a529ec9b60da134f0c80a448-1920x1080.png",
    "kaynak": "VALORANT (Riot Games)",
    "en": 1920,
    "boy": 1080
   },
+  "war-thunder": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/236390/09150b32d79fc827c2d24bc7ee200748a3c1e43e/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "warframe": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/230410/1a3e7c2a05ce4e5cad5ac4c7e858cf5b0934704e/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "world-of-tanks": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1407200/819fc92f7ddb96ef10792a6d72382c5b814d671a/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
   "world-of-warcraft": {
    "url": "https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/bltb5a24e5ab1e2cfb0/6a88e3589b942efdb6f74110/wow-thumbnail-homepage.jpg",
    "kaynak": "Blizzard Entertainment",
    "en": 1600,
    "boy": 900
+  },
+  "wuthering-waves": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3513350/e8eba9795ee09675873ba60232a7ddcc4f222ad9/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
+  },
+  "zenless-zone-zero": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4162040/22b56d833834d90674b30498f78e0839e48792db/header_alt_assets_2.jpg?t=1792533213",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215
   }
  }
 }

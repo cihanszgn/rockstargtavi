@@ -1128,5 +1128,2311 @@
     "tanim": "据官网，2026年11月3日16.0.0补丁将引擎升级至 Unreal Engine 5.8。16.0.1（11月3日）、16.0.2（11月4日）、16.0.3（11月6日）修复崩溃、调整 Rogue 职业并加入系统消息选项。"
    }
   }
+ },
+ {
+  "id": "dota-2",
+  "ad": "Dota 2",
+  "kisa": "Dota 2",
+  "eslesme": [
+   "Dota 2",
+   "DOTA 2"
+  ],
+  "tur": {
+   "tr": "MOBA",
+   "en": "MOBA",
+   "fr": "MOBA",
+   "es": "MOBA"
+  },
+  "platform": [
+   "PC"
+  ],
+  "gelistirici": "Valve",
+  "resmi": {
+   "url": "https://www.dota2.com/",
+   "ad": "Dota 2 (Valve)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Valve'in ücretsiz 5'e 5 MOBA oyunu; iki takım kadim üslerini koruyarak rakip Ancient'ı yıkmaya çalışır. Resmi sitede güncel yamalar, kahraman bilgileri ve turnuva duyuruları yayımlanır."
+   },
+   "en": {
+    "tanim": "Valve's free-to-play 5v5 MOBA where two teams defend their Ancient while trying to destroy the enemy's. The official site publishes current patches, hero information and tournament announcements."
+   },
+   "fr": {
+    "tanim": "Le MOBA 5 contre 5 gratuit de Valve, où deux équipes défendent leur Ancient tout en cherchant à détruire celui de l'adversaire. Le site officiel publie les correctifs actuels, les informations sur les héros et les annonces de tournois."
+   },
+   "es": {
+    "tanim": "El MOBA 5 contra 5 gratuito de Valve, donde dos equipos defienden su Ancestro mientras intentan destruir el del rival. El sitio oficial publica los parches actuales, la información de los héroes y los anuncios de torneos."
+   }
+  }
+ },
+ {
+  "id": "apex-legends",
+  "ad": "Apex Legends",
+  "kisa": "Apex",
+  "eslesme": [
+   "Apex Legends"
+  ],
+  "tur": {
+   "tr": "Battle royale kahraman nişancı",
+   "en": "Hero battle royale shooter",
+   "fr": "Battle royale de tir à héros",
+   "es": "Shooter battle royale de héroes"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox",
+   "Switch 2"
+  ],
+  "gelistirici": "Respawn Entertainment",
+  "resmi": {
+   "url": "https://www.ea.com/games/apex-legends/apex-legends",
+   "ad": "Apex Legends (EA)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Respawn Entertainment tarafından geliştirilen ve EA tarafından yayımlanan ücretsiz kahraman tabanlı battle royale nişancısı. Takım halinde oynanan maçlarda her efsanenin kendine özgü yetenekleri bulunur."
+   },
+   "en": {
+    "tanim": "A free-to-play hero-based battle royale shooter developed by Respawn Entertainment and published by EA. In squad-based matches, each Legend brings unique abilities."
+   },
+   "fr": {
+    "tanim": "Un battle royale de tir à héros gratuit développé par Respawn Entertainment et édité par EA. Dans des parties en équipe, chaque Légende dispose de capacités uniques."
+   },
+   "es": {
+    "tanim": "Un shooter battle royale de héroes gratuito desarrollado por Respawn Entertainment y publicado por EA. En partidas por escuadrones, cada Leyenda aporta habilidades únicas."
+   }
+  }
+ },
+ {
+  "id": "rust",
+  "ad": "Rust",
+  "kisa": "Rust",
+  "eslesme": [
+   "Rust"
+  ],
+  "tur": {
+   "tr": "Hayatta kalma",
+   "en": "Survival",
+   "fr": "Survie",
+   "es": "Supervivencia"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Facepunch Studios",
+  "resmi": {
+   "url": "https://rust.facepunch.com/",
+   "ad": "Rust (Facepunch Studios)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Facepunch Studios'un çok oyunculu hayatta kalma oyunu; oyuncular kaynak toplayıp üs kurar, diğer oyuncularla iş birliği yapar veya çatışır. Resmi sitede güncellemeler ve sunucu bilgileri paylaşılır."
+   },
+   "en": {
+    "tanim": "Facepunch Studios' multiplayer survival game where players gather resources, build bases and cooperate or clash with others. Updates and server information are shared on the official site."
+   },
+   "fr": {
+    "tanim": "Le jeu de survie multijoueur de Facepunch Studios, où les joueurs récoltent des ressources, construisent des bases et coopèrent ou s'affrontent. Les mises à jour et les informations sur les serveurs sont publiées sur le site officiel."
+   },
+   "es": {
+    "tanim": "El juego de supervivencia multijugador de Facepunch Studios, donde los jugadores reúnen recursos, construyen bases y cooperan o se enfrentan entre sí. Las actualizaciones y la información de los servidores se comparten en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "stardew-valley",
+  "ad": "Stardew Valley",
+  "kisa": "Stardew",
+  "eslesme": [
+   "Stardew Valley"
+  ],
+  "tur": {
+   "tr": "Çiftlik simülasyonu / RPG",
+   "en": "Farming simulation / RPG",
+   "fr": "Simulation de ferme / RPG",
+   "es": "Simulación de granja / RPG"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox",
+   "Switch 2",
+   "Mobil"
+  ],
+  "gelistirici": "ConcernedApe",
+  "resmi": {
+   "url": "https://www.stardewvalley.net/",
+   "ad": "Stardew Valley (ConcernedApe)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "ConcernedApe tarafından geliştirilen çiftlik yaşamı simülasyonu ve RPG; oyuncular çiftlik kurar, kasaba halkıyla ilişkiler geliştirir ve madenleri keşfeder. Resmi sitede sürüm notları ve duyurular yer alır."
+   },
+   "en": {
+    "tanim": "A farming life simulation and RPG developed by ConcernedApe, where players build a farm, form relationships with townsfolk and explore mines. The official site hosts patch notes and announcements."
+   },
+   "fr": {
+    "tanim": "Une simulation de vie à la ferme et un RPG développés par ConcernedApe, où les joueurs cultivent leur ferme, tissent des liens avec les habitants et explorent les mines. Le site officiel publie les notes de version et les annonces."
+   },
+   "es": {
+    "tanim": "Una simulación de vida en la granja y RPG desarrollado por ConcernedApe, donde los jugadores construyen una granja, crean vínculos con los habitantes y exploran minas. El sitio oficial recoge notas de versión y anuncios."
+   }
+  }
+ },
+ {
+  "id": "terraria",
+  "ad": "Terraria",
+  "kisa": "Terraria",
+  "eslesme": [
+   "Terraria"
+  ],
+  "tur": {
+   "tr": "Sandbox / macera",
+   "en": "Sandbox / adventure",
+   "fr": "Bac à sable / aventure",
+   "es": "Sandbox / aventura"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox",
+   "Switch 2",
+   "Mobil"
+  ],
+  "gelistirici": "Re-Logic",
+  "resmi": {
+   "url": "https://terraria.org/",
+   "ad": "Terraria (Re-Logic)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Re-Logic tarafından geliştirilen 2D sandbox macera oyunu; kazma, inşa etme, keşif ve boss savaşları içerir. Resmi sitede güncellemeler ve topluluk haberleri paylaşılır."
+   },
+   "en": {
+    "tanim": "A 2D sandbox adventure game developed by Re-Logic, featuring digging, building, exploration and boss battles. Updates and community news are shared on the official site."
+   },
+   "fr": {
+    "tanim": "Un jeu d'aventure bac à sable en 2D développé par Re-Logic, mêlant creusement, construction, exploration et combats de boss. Les mises à jour et les actualités de la communauté sont publiées sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un juego de aventuras sandbox en 2D desarrollado por Re-Logic, con excavación, construcción, exploración y combates contra jefes. Las actualizaciones y las noticias de la comunidad se comparten en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "grand-theft-auto-v",
+  "ad": "Grand Theft Auto V",
+  "kisa": "GTA V",
+  "eslesme": [
+   "Grand Theft Auto V",
+   "GTA V",
+   "GTA 5"
+  ],
+  "tur": {
+   "tr": "A??k d?nya aksiyon",
+   "en": "Open-world action",
+   "fr": "Action en monde ouvert",
+   "es": "Acci?n de mundo abierto"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Rockstar Games",
+  "resmi": {
+   "url": "https://www.rockstargames.com/gta-v",
+   "ad": "Grand Theft Auto V (Rockstar Games)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Rockstar Games'in Los Santos ve Blaine County'de ge?en a??k d?nya aksiyon oyunu; tek oyunculu hik?ye modu ve GTA Online ?ok oyunculu modunu i?erir. Resmi sayfada s?r?m ve platform bilgileri yer al?r."
+   },
+   "en": {
+    "tanim": "Rockstar Games' open-world action game set in Los Santos and Blaine County, featuring a single-player story mode and the GTA Online multiplayer mode. The official page lists edition and platform information."
+   },
+   "fr": {
+    "tanim": "Le jeu d'action en monde ouvert de Rockstar Games situ? ? Los Santos et dans le Blaine County, avec un mode histoire solo et le mode multijoueur GTA Online. La page officielle pr?sente les ?ditions et les informations de plateforme."
+   },
+   "es": {
+    "tanim": "El juego de acci?n de mundo abierto de Rockstar Games ambientado en Los Santos y el condado de Blaine, con un modo historia para un jugador y el modo multijugador GTA Online. La p?gina oficial recoge informaci?n de ediciones y plataformas."
+   }
+  }
+ },
+ {
+  "id": "red-dead-redemption-2",
+  "ad": "Red Dead Redemption 2",
+  "kisa": "RDR2",
+  "eslesme": [
+   "Red Dead Redemption 2",
+   "RDR2"
+  ],
+  "tur": {
+   "tr": "A??k d?nya aksiyon-macera",
+   "en": "Open-world action-adventure",
+   "fr": "Action-aventure en monde ouvert",
+   "es": "Acci?n y aventura de mundo abierto"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Rockstar Games",
+  "resmi": {
+   "url": "https://www.rockstargames.com/reddeadredemption2",
+   "ad": "Red Dead Redemption 2 (Rockstar Games)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Rockstar Games'in Amerikan s?n?r b?lgesinde ge?en a??k d?nya aksiyon-macera oyunu; Arthur Morgan'?n hik?yesini ve Red Dead Online modunu i?erir. Resmi sayfada s?r?m ve platform bilgileri bulunur."
+   },
+   "en": {
+    "tanim": "Rockstar Games' open-world action-adventure set on the American frontier, following Arthur Morgan's story and including Red Dead Online. The official page provides edition and platform information."
+   },
+   "fr": {
+    "tanim": "Le jeu d'action-aventure en monde ouvert de Rockstar Games se d?roulant ? la fronti?re am?ricaine, suivant l'histoire d'Arthur Morgan et incluant Red Dead Online. La page officielle fournit les informations sur les ?ditions et les plateformes."
+   },
+   "es": {
+    "tanim": "El juego de acci?n y aventura de mundo abierto de Rockstar Games ambientado en la frontera estadounidense, que sigue la historia de Arthur Morgan e incluye Red Dead Online. La p?gina oficial ofrece informaci?n de ediciones y plataformas."
+   }
+  }
+ },
+ {
+  "id": "elden-ring",
+  "ad": "Elden Ring",
+  "kisa": "Elden Ring",
+  "eslesme": [
+   "Elden Ring"
+  ],
+  "tur": {
+   "tr": "Aksiyon RPG",
+   "en": "Action RPG",
+   "fr": "RPG d'action",
+   "es": "RPG de acci?n"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "FromSoftware",
+  "resmi": {
+   "url": "https://en.bandainamcoent.eu/elden-ring/elden-ring",
+   "ad": "Elden Ring (Bandai Namco)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "FromSoftware taraf?ndan geli?tirilen ve Bandai Namco taraf?ndan yay?mlanan a??k d?nya aksiyon RPG'si. Lands Between'de ge?en oyunda ke?if, zorlu sava?lar ve karakter geli?tirme ?ne ??kar."
+   },
+   "en": {
+    "tanim": "An open-world action RPG developed by FromSoftware and published by Bandai Namco. Set in the Lands Between, it emphasizes exploration, challenging combat and character progression."
+   },
+   "fr": {
+    "tanim": "Un RPG d'action en monde ouvert d?velopp? par FromSoftware et ?dit? par Bandai Namco. Se d?roulant dans l'Entre-terre, il met l'accent sur l'exploration, des combats exigeants et la progression du personnage."
+   },
+   "es": {
+    "tanim": "Un RPG de acci?n de mundo abierto desarrollado por FromSoftware y publicado por Bandai Namco. Ambientado en las Tierras Intermedias, destaca por la exploraci?n, los combates exigentes y la progresi?n del personaje."
+   }
+  }
+ },
+ {
+  "id": "baldurs-gate-3",
+  "ad": "Baldur's Gate 3",
+  "kisa": "BG3",
+  "eslesme": [
+   "Baldur's Gate 3",
+   "Baldurs Gate 3",
+   "BG3"
+  ],
+  "tur": {
+   "tr": "Rol yapma oyunu",
+   "en": "Role-playing game",
+   "fr": "Jeu de r?le",
+   "es": "Juego de rol"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Larian Studios",
+  "resmi": {
+   "url": "https://baldursgate3.game/",
+   "ad": "Baldur's Gate 3 (Larian Studios)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Larian Studios taraf?ndan geli?tirilen, Dungeons & Dragons evreninde ge?en grup tabanl? rol yapma oyunu. Hik?ye se?imleri, s?ra tabanl? sava?lar ve ?ok oyunculu mod sunar."
+   },
+   "en": {
+    "tanim": "A party-based role-playing game developed by Larian Studios set in the Dungeons & Dragons universe. It features story choices, turn-based combat and multiplayer modes."
+   },
+   "fr": {
+    "tanim": "Un jeu de r?le en groupe d?velopp? par Larian Studios dans l'univers de Dungeons & Dragons. Il propose des choix narratifs, des combats au tour par tour et des modes multijoueurs."
+   },
+   "es": {
+    "tanim": "Un juego de rol por grupos desarrollado por Larian Studios ambientado en el universo de Dungeons & Dragons. Ofrece decisiones narrativas, combate por turnos y modos multijugador."
+   }
+  }
+ },
+ {
+  "id": "cyberpunk-2077",
+  "ad": "Cyberpunk 2077",
+  "kisa": "Cyberpunk 2077",
+  "eslesme": [
+   "Cyberpunk 2077"
+  ],
+  "tur": {
+   "tr": "A??k d?nya aksiyon RPG",
+   "en": "Open-world action RPG",
+   "fr": "RPG d'action en monde ouvert",
+   "es": "RPG de acci?n de mundo abierto"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "CD PROJEKT RED",
+  "resmi": {
+   "url": "https://www.cyberpunk.net/us/en/",
+   "ad": "Cyberpunk 2077 (CD PROJEKT RED)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "CD PROJEKT RED taraf?ndan geli?tirilen, Night City'de ge?en a??k d?nya aksiyon RPG'si. V'nin hik?yesini konu alan oyunda karakter ?zelle?tirme ve farkl? oynan?? stilleri bulunur."
+   },
+   "en": {
+    "tanim": "An open-world action RPG developed by CD PROJEKT RED set in Night City. Following V's story, it offers character customization and varied playstyles."
+   },
+   "fr": {
+    "tanim": "Un RPG d'action en monde ouvert d?velopp? par CD PROJEKT RED et se d?roulant ? Night City. Racontant l'histoire de V, il propose la personnalisation du personnage et des styles de jeu vari?s."
+   },
+   "es": {
+    "tanim": "Un RPG de acci?n de mundo abierto desarrollado por CD PROJEKT RED ambientado en Night City. Siguiendo la historia de V, ofrece personalizaci?n del personaje y estilos de juego variados."
+   }
+  }
+ },
+ {
+  "id": "the-witcher-3-wild-hunt",
+  "ad": "The Witcher 3: Wild Hunt",
+  "kisa": "Witcher 3",
+  "eslesme": [
+   "The Witcher 3: Wild Hunt",
+   "The Witcher 3",
+   "Witcher 3"
+  ],
+  "tur": {
+   "tr": "A??k d?nya aksiyon RPG",
+   "en": "Open-world action RPG",
+   "fr": "RPG d'action en monde ouvert",
+   "es": "RPG de acci?n de mundo abierto"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox",
+   "Switch 2"
+  ],
+  "gelistirici": "CD PROJEKT RED",
+  "resmi": {
+   "url": "https://www.thewitcher.com/us/en/witcher3",
+   "ad": "The Witcher 3: Wild Hunt (CD PROJEKT RED)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "CD PROJEKT RED taraf?ndan geli?tirilen a??k d?nya aksiyon RPG'si; canavar avc?s? Geralt of Rivia'n?n hik?yesini anlat?r. Geni? bir d?nya, yan g?revler ve iki geni?leme paketi i?erir."
+   },
+   "en": {
+    "tanim": "An open-world action RPG developed by CD PROJEKT RED, telling the story of monster hunter Geralt of Rivia. It features a vast world, side quests and two expansions."
+   },
+   "fr": {
+    "tanim": "Un RPG d'action en monde ouvert d?velopp? par CD PROJEKT RED, racontant l'histoire du sorceleur Geralt de Riv. Il propose un vaste monde, des qu?tes secondaires et deux extensions."
+   },
+   "es": {
+    "tanim": "Un RPG de acci?n de mundo abierto desarrollado por CD PROJEKT RED que narra la historia del brujo Geralt de Rivia. Incluye un mundo amplio, misiones secundarias y dos expansiones."
+   }
+  }
+ },
+ {
+  "id": "helldivers-2",
+  "ad": "Helldivers 2",
+  "kisa": "Helldivers 2",
+  "eslesme": [
+   "Helldivers 2",
+   "HELLDIVERS 2"
+  ],
+  "tur": {
+   "tr": "E?li ni?anc?",
+   "en": "Co-op shooter",
+   "fr": "Jeu de tir coop?ratif",
+   "es": "Shooter cooperativo"
+  },
+  "platform": [
+   "PC",
+   "PS5"
+  ],
+  "gelistirici": "Arrowhead Game Studios",
+  "resmi": {
+   "url": "https://www.playstation.com/en-us/games/helldivers-2/",
+   "ad": "Helldivers 2 (PlayStation)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Arrowhead Game Studios taraf?ndan geli?tirilen ve PlayStation Publishing taraf?ndan yay?mlanan e?li ???nc? ?ah?s ni?anc?. Oyuncular tak?m halinde g?rev yaparak S?per D?nya'y? savunur."
+   },
+   "en": {
+    "tanim": "A cooperative third-person shooter developed by Arrowhead Game Studios and published by PlayStation Publishing. Players team up on missions to defend Super Earth."
+   },
+   "fr": {
+    "tanim": "Un jeu de tir coop?ratif ? la troisi?me personne d?velopp? par Arrowhead Game Studios et ?dit? par PlayStation Publishing. Les joueurs font ?quipe en mission pour d?fendre la Super-Terre."
+   },
+   "es": {
+    "tanim": "Un shooter cooperativo en tercera persona desarrollado por Arrowhead Game Studios y publicado por PlayStation Publishing. Los jugadores forman equipo en misiones para defender la Supertierra."
+   }
+  }
+ },
+ {
+  "id": "destiny-2",
+  "ad": "Destiny 2",
+  "kisa": "Destiny 2",
+  "eslesme": [
+   "Destiny 2"
+  ],
+  "tur": {
+   "tr": "?evrimi?i ni?anc? / aksiyon",
+   "en": "Online shooter / action",
+   "fr": "Jeu de tir en ligne / action",
+   "es": "Shooter en l?nea / acci?n"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Bungie",
+  "resmi": {
+   "url": "https://www.bungie.net/7/en/Destiny/NewLight",
+   "ad": "Destiny 2 (Bungie)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Bungie taraf?ndan geli?tirilen ?evrimi?i ?ok oyunculu ni?anc?; PvE ve PvP etkinlikleri, bask?nlar ve sezonluk i?erikler sunar. Destiny 2: New Light ?cretsiz ba?lang?? s?r?m?d?r."
+   },
+   "en": {
+    "tanim": "An online multiplayer shooter developed by Bungie, offering PvE and PvP activities, raids and seasonal content. Destiny 2: New Light is the free-to-play entry point."
+   },
+   "fr": {
+    "tanim": "Un jeu de tir multijoueur en ligne d?velopp? par Bungie, proposant des activit?s JcE et JcJ, des raids et du contenu saisonnier. Destiny 2 : Nouvelle Lumi?re est la version d'acc?s gratuite."
+   },
+   "es": {
+    "tanim": "Un shooter multijugador en l?nea desarrollado por Bungie que ofrece actividades JcE y JcJ, incursiones y contenido de temporada. Destiny 2: Nueva Luz es la versi?n de acceso gratuito."
+   }
+  }
+ },
+ {
+  "id": "warframe",
+  "ad": "Warframe",
+  "kisa": "Warframe",
+  "eslesme": [
+   "Warframe"
+  ],
+  "tur": {
+   "tr": "?evrimi?i aksiyon",
+   "en": "Online action",
+   "fr": "Action en ligne",
+   "es": "Acci?n en l?nea"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox",
+   "Switch 2"
+  ],
+  "gelistirici": "Digital Extremes",
+  "resmi": {
+   "url": "https://www.warframe.com/",
+   "ad": "Warframe (Digital Extremes)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Digital Extremes taraf?ndan geli?tirilen ?cretsiz ?evrimi?i aksiyon oyunu; oyuncular Tenno sava???lar? olarak h?zl? hareket ve g?rev tabanl? oynan??la m?cadele eder. Resmi sitede g?ncellemeler ve etkinlikler duyurulur."
+   },
+   "en": {
+    "tanim": "A free-to-play online action game developed by Digital Extremes where players fight as Tenno warriors with fast movement and mission-based gameplay. Updates and events are announced on the official site."
+   },
+   "fr": {
+    "tanim": "Un jeu d'action en ligne gratuit d?velopp? par Digital Extremes o? les joueurs incarnent des guerriers Tennos dans un gameplay rapide ax? sur les missions. Les mises ? jour et ?v?nements sont annonc?s sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un juego de acci?n en l?nea gratuito desarrollado por Digital Extremes en el que los jugadores luchan como guerreros Tenno con movimiento r?pido y jugabilidad basada en misiones. Las actualizaciones y eventos se anuncian en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "tom-clancys-rainbow-six-siege",
+  "ad": "Tom Clancy's Rainbow Six Siege",
+  "kisa": "R6 Siege",
+  "eslesme": [
+   "Tom Clancy's Rainbow Six Siege",
+   "Rainbow Six Siege",
+   "R6 Siege"
+  ],
+  "tur": {
+   "tr": "Taktiksel FPS",
+   "en": "Tactical FPS",
+   "fr": "FPS tactique",
+   "es": "FPS t?ctico"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Ubisoft",
+  "resmi": {
+   "url": "https://www.ubisoft.com/en-us/game/rainbow-six/siege",
+   "ad": "Rainbow Six Siege (Ubisoft)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Ubisoft taraf?ndan geli?tirilen taktiksel tak?m tabanl? ni?anc?; operat?r se?imi, ?evre y?k?m? ve planlama odakl? 5'e 5 ma?lar sunar. Resmi sayfada sezon ve yama bilgileri yer al?r."
+   },
+   "en": {
+    "tanim": "A tactical team-based shooter developed by Ubisoft, featuring operator selection, environmental destruction and planning-focused 5v5 matches. The official page carries season and patch information."
+   },
+   "fr": {
+    "tanim": "Un jeu de tir tactique en ?quipe d?velopp? par Ubisoft, mettant en avant la s?lection d'agents, la destruction de l'environnement et des matchs 5 contre 5 ax?s sur la planification. La page officielle pr?sente les saisons et les correctifs."
+   },
+   "es": {
+    "tanim": "Un shooter t?ctico por equipos desarrollado por Ubisoft, con selecci?n de operadores, destrucci?n del entorno y partidas 5 contra 5 centradas en la planificaci?n. La p?gina oficial incluye informaci?n de temporadas y parches."
+   }
+  }
+ },
+ {
+  "id": "rocket-league",
+  "ad": "Rocket League",
+  "kisa": "Rocket League",
+  "eslesme": [
+   "Rocket League"
+  ],
+  "tur": {
+   "tr": "Ara? futbolu",
+   "en": "Vehicular soccer",
+   "fr": "Football motoris?",
+   "es": "F?tbol con veh?culos"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox",
+   "Switch 2"
+  ],
+  "gelistirici": "Psyonix",
+  "resmi": {
+   "url": "https://www.rocketleague.com/",
+   "ad": "Rocket League (Psyonix)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Psyonix taraf?ndan geli?tirilen ve Epic Games taraf?ndan yay?mlanan, roketle ?al??an ara?larla futbol oynanan rekabet?i oyun. Resmi sitede sezonlar ve etkinlikler duyurulur."
+   },
+   "en": {
+    "tanim": "A competitive game developed by Psyonix and published by Epic Games where rocket-powered cars play soccer. Seasons and events are announced on the official site."
+   },
+   "fr": {
+    "tanim": "Un jeu comp?titif d?velopp? par Psyonix et ?dit? par Epic Games o? des voitures propuls?es par fus?e jouent au football. Les saisons et ?v?nements sont annonc?s sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un juego competitivo desarrollado por Psyonix y publicado por Epic Games en el que coches propulsados por cohetes juegan al f?tbol. Las temporadas y eventos se anuncian en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "dead-by-daylight",
+  "ad": "Dead by Daylight",
+  "kisa": "DbD",
+  "eslesme": [
+   "Dead by Daylight"
+  ],
+  "tur": {
+   "tr": "Asimetrik korku",
+   "en": "Asymmetrical horror",
+   "fr": "Horreur asym?trique",
+   "es": "Terror asim?trico"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox",
+   "Switch 2"
+  ],
+  "gelistirici": "Behaviour Interactive",
+  "resmi": {
+   "url": "https://deadbydaylight.com/",
+   "ad": "Dead by Daylight (Behaviour Interactive)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Behaviour Interactive taraf?ndan geli?tirilen asimetrik ?ok oyunculu korku oyunu; bir oyuncu katil, di?erleri hayatta kalanlar olarak oynar. Resmi sitede b?l?mler ve g?ncellemeler duyurulur."
+   },
+   "en": {
+    "tanim": "An asymmetrical multiplayer horror game developed by Behaviour Interactive where one player takes the role of Killer and others play as Survivors. Chapters and updates are announced on the official site."
+   },
+   "fr": {
+    "tanim": "Un jeu d'horreur multijoueur asym?trique d?velopp? par Behaviour Interactive o? un joueur incarne le tueur et les autres les survivants. Les chapitres et mises ? jour sont annonc?s sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un juego de terror multijugador asim?trico desarrollado por Behaviour Interactive en el que un jugador asume el papel de asesino y los dem?s de supervivientes. Los cap?tulos y actualizaciones se anuncian en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "escape-from-tarkov",
+  "ad": "Escape from Tarkov",
+  "kisa": "Tarkov",
+  "eslesme": [
+   "Escape from Tarkov",
+   "EFT"
+  ],
+  "tur": {
+   "tr": "Extraction ni?anc? / RPG",
+   "en": "Extraction shooter / RPG",
+   "fr": "Shooter d'extraction / RPG",
+   "es": "Shooter de extracci?n / RPG"
+  },
+  "platform": [
+   "PC"
+  ],
+  "gelistirici": "Battlestate Games",
+  "resmi": {
+   "url": "https://www.escapefromtarkov.com/",
+   "ad": "Escape from Tarkov (Battlestate Games)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Battlestate Games taraf?ndan geli?tirilen ger?ek?i birinci ?ah?s extraction ni?anc?s? ve RPG ??eleri i?eren ?evrimi?i oyun. Bask?nlara girip ganimet toplayarak ??k?? yapmay? hedefler."
+   },
+   "en": {
+    "tanim": "A realistic first-person extraction shooter with RPG elements developed by Battlestate Games. Players enter raids to gather loot and extract."
+   },
+   "fr": {
+    "tanim": "Un jeu de tir d'extraction ? la premi?re personne r?aliste avec des ?l?ments de RPG d?velopp? par Battlestate Games. Les joueurs participent ? des raids pour r?cup?rer du butin et s'extraire."
+   },
+   "es": {
+    "tanim": "Un shooter de extracci?n en primera persona realista con elementos de RPG desarrollado por Battlestate Games. Los jugadores entran en incursiones para reunir bot?n y extraer."
+   }
+  }
+ },
+ {
+  "id": "war-thunder",
+  "ad": "War Thunder",
+  "kisa": "War Thunder",
+  "eslesme": [
+   "War Thunder"
+  ],
+  "tur": {
+   "tr": "Ara? sava? sim?lasyonu",
+   "en": "Vehicle combat simulation",
+   "fr": "Simulation de combat v?hiculaire",
+   "es": "Simulaci?n de combate vehicular"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Gaijin Entertainment",
+  "resmi": {
+   "url": "https://warthunder.com/",
+   "ad": "War Thunder (Gaijin Entertainment)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Gaijin Entertainment taraf?ndan geli?tirilen ?cretsiz ?ok oyunculu ara? sava? oyunu; hava, kara ve deniz ara?lar?yla tarihsel ve modern ?at??malar sunar. Resmi sitede g?ncellemeler yay?mlan?r."
+   },
+   "en": {
+    "tanim": "A free-to-play multiplayer vehicle combat game developed by Gaijin Entertainment, featuring air, land and naval battles across historical and modern settings. Updates are published on the official site."
+   },
+   "fr": {
+    "tanim": "Un jeu de combat v?hiculaire multijoueur gratuit d?velopp? par Gaijin Entertainment, proposant des batailles a?riennes, terrestres et navales dans des contextes historiques et modernes. Les mises ? jour sont publi?es sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un juego de combate vehicular multijugador gratuito desarrollado por Gaijin Entertainment, con batallas a?reas, terrestres y navales en contextos hist?ricos y modernos. Las actualizaciones se publican en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "world-of-tanks",
+  "ad": "World of Tanks",
+  "kisa": "WoT",
+  "eslesme": [
+   "World of Tanks"
+  ],
+  "tur": {
+   "tr": "Tank sava? oyunu",
+   "en": "Tank combat game",
+   "fr": "Jeu de combat de chars",
+   "es": "Juego de combate de tanques"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Wargaming",
+  "resmi": {
+   "url": "https://worldoftanks.com/",
+   "ad": "World of Tanks (Wargaming)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Wargaming taraf?ndan geli?tirilen ?cretsiz tak?m tabanl? tank sava? oyunu; farkl? d?nemlerden z?rhl? ara?larla ?evrimi?i ma?lar sunar. Resmi sitede g?ncellemeler ve etkinlikler yer al?r."
+   },
+   "en": {
+    "tanim": "A free-to-play team-based tank combat game developed by Wargaming, offering online battles with armored vehicles from different eras. Updates and events are listed on the official site."
+   },
+   "fr": {
+    "tanim": "Un jeu de combat de chars en ?quipe gratuit d?velopp? par Wargaming, proposant des batailles en ligne avec des v?hicules blind?s de diff?rentes ?poques. Les mises ? jour et ?v?nements sont list?s sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un juego de combate de tanques por equipos gratuito desarrollado por Wargaming, que ofrece batallas en l?nea con veh?culos blindados de distintas ?pocas. Las actualizaciones y eventos se recogen en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "final-fantasy-xiv",
+  "ad": "Final Fantasy XIV",
+  "kisa": "FFXIV",
+  "eslesme": [
+   "Final Fantasy XIV",
+   "FFXIV",
+   "Final Fantasy 14"
+  ],
+  "tur": {
+   "tr": "MMORPG",
+   "en": "MMORPG",
+   "fr": "MMORPG",
+   "es": "MMORPG"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Square Enix",
+  "resmi": {
+   "url": "https://na.finalfantasyxiv.com/",
+   "ad": "Final Fantasy XIV (Square Enix)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Square Enix taraf?ndan geli?tirilen MMORPG; Eorzea ve ?evresinde hik?ye odakl? g?revler, bask?nlar ve topluluk etkinlikleri sunar. Resmi Lodestone sitesinde yamalar ve duyurular yay?mlan?r."
+   },
+   "en": {
+    "tanim": "An MMORPG developed by Square Enix, offering story-driven quests, raids and community events in and around Eorzea. Patches and announcements are published on the official Lodestone site."
+   },
+   "fr": {
+    "tanim": "Un MMORPG d?velopp? par Square Enix, proposant des qu?tes narratives, des raids et des ?v?nements communautaires en ?orz?a et au-del?. Les correctifs et annonces sont publi?s sur le site officiel Lodestone."
+   },
+   "es": {
+    "tanim": "Un MMORPG desarrollado por Square Enix que ofrece misiones centradas en la historia, incursiones y eventos comunitarios en Eorzea y sus alrededores. Los parches y anuncios se publican en el sitio oficial Lodestone."
+   }
+  }
+ },
+ {
+  "id": "lost-ark",
+  "ad": "Lost Ark",
+  "kisa": "Lost Ark",
+  "eslesme": [
+   "Lost Ark"
+  ],
+  "tur": {
+   "tr": "MMORPG / aksiyon RPG",
+   "en": "MMORPG / action RPG",
+   "fr": "MMORPG / RPG d'action",
+   "es": "MMORPG / RPG de acci?n"
+  },
+  "platform": [
+   "PC"
+  ],
+  "gelistirici": "Smilegate RPG",
+  "resmi": {
+   "url": "https://www.playlostark.com/en-us",
+   "ad": "Lost Ark (Amazon Games)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Smilegate RPG taraf?ndan geli?tirilen ve Bat?'da Amazon Games taraf?ndan yay?mlanan izometrik aksiyon MMORPG. Geni? PvE i?erikleri, bask?nlar ve s?n?f ?e?itlili?i sunar."
+   },
+   "en": {
+    "tanim": "An isometric action MMORPG developed by Smilegate RPG and published in the West by Amazon Games. It offers extensive PvE content, raids and a variety of classes."
+   },
+   "fr": {
+    "tanim": "Un MMORPG d'action en vue isom?trique d?velopp? par Smilegate RPG et publi? en Occident par Amazon Games. Il propose un vaste contenu JcE, des raids et une vari?t? de classes."
+   },
+   "es": {
+    "tanim": "Un MMORPG de acci?n isom?trico desarrollado por Smilegate RPG y publicado en Occidente por Amazon Games. Ofrece amplio contenido JcE, incursiones y variedad de clases."
+   }
+  }
+ },
+ {
+  "id": "black-desert",
+  "ad": "Black Desert",
+  "kisa": "BDO",
+  "eslesme": [
+   "Black Desert",
+   "Black Desert Online",
+   "BDO"
+  ],
+  "tur": {
+   "tr": "MMORPG",
+   "en": "MMORPG",
+   "fr": "MMORPG",
+   "es": "MMORPG"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox",
+   "Mobil"
+  ],
+  "gelistirici": "Pearl Abyss",
+  "resmi": {
+   "url": "https://www.naeu.playblackdesert.com/en-US/Main/Index",
+   "ad": "Black Desert (Pearl Abyss)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Pearl Abyss taraf?ndan geli?tirilen a??k d?nya MMORPG; aksiyon odakl? sava? sistemi, ya?am becerileri ve geni? bir d?nya sunar. Resmi sitede g?ncellemeler ve etkinlikler duyurulur."
+   },
+   "en": {
+    "tanim": "An open-world MMORPG developed by Pearl Abyss, featuring action-based combat, life skills and a vast world. Updates and events are announced on the official site."
+   },
+   "fr": {
+    "tanim": "Un MMORPG en monde ouvert d?velopp? par Pearl Abyss, proposant un syst?me de combat orient? action, des m?tiers et un vaste monde. Les mises ? jour et ?v?nements sont annonc?s sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un MMORPG de mundo abierto desarrollado por Pearl Abyss, con un sistema de combate orientado a la acci?n, profesiones y un mundo amplio. Las actualizaciones y eventos se anuncian en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "albion-online",
+  "ad": "Albion Online",
+  "kisa": "Albion",
+  "eslesme": [
+   "Albion Online"
+  ],
+  "tur": {
+   "tr": "Sandbox MMORPG",
+   "en": "Sandbox MMORPG",
+   "fr": "MMORPG sandbox",
+   "es": "MMORPG sandbox"
+  },
+  "platform": [
+   "PC",
+   "Mobil"
+  ],
+  "gelistirici": "Sandbox Interactive",
+  "resmi": {
+   "url": "https://albiononline.com/",
+   "ad": "Albion Online (Sandbox Interactive)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Sandbox Interactive taraf?ndan geli?tirilen oyuncu odakl? ekonomi ve s?n?fs?z karakter sistemine sahip sandbox MMORPG. PC ve mobil platformlarda ?apraz oynan?? sunar."
+   },
+   "en": {
+    "tanim": "A sandbox MMORPG developed by Sandbox Interactive with a player-driven economy and classless character system. It offers cross-play between PC and mobile platforms."
+   },
+   "fr": {
+    "tanim": "Un MMORPG sandbox d?velopp? par Sandbox Interactive avec une ?conomie dirig?e par les joueurs et un syst?me de personnages sans classe. Il propose le jeu multiplateforme entre PC et mobile."
+   },
+   "es": {
+    "tanim": "Un MMORPG sandbox desarrollado por Sandbox Interactive con una econom?a dirigida por los jugadores y un sistema de personajes sin clases. Ofrece juego cruzado entre PC y m?vil."
+   }
+  }
+ },
+ {
+  "id": "old-school-runescape",
+  "ad": "Old School RuneScape",
+  "kisa": "OSRS",
+  "eslesme": [
+   "Old School RuneScape",
+   "OSRS"
+  ],
+  "tur": {
+   "tr": "MMORPG",
+   "en": "MMORPG",
+   "fr": "MMORPG",
+   "es": "MMORPG"
+  },
+  "platform": [
+   "PC",
+   "Mobil"
+  ],
+  "gelistirici": "Jagex",
+  "resmi": {
+   "url": "https://oldschool.runescape.com/",
+   "ad": "Old School RuneScape (Jagex)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Jagex taraf?ndan geli?tirilen ve 2007 d?nemi RuneScape temel al?narak sunulan MMORPG. Oyuncu oylamalar?yla g?ncellenen i?erikler, beceriler ve g?revler i?erir."
+   },
+   "en": {
+    "tanim": "An MMORPG developed by Jagex based on the 2007 era of RuneScape. It features skills, quests and content updates shaped by player polls."
+   },
+   "fr": {
+    "tanim": "Un MMORPG d?velopp? par Jagex bas? sur l'?re 2007 de RuneScape. Il propose des comp?tences, des qu?tes et des mises ? jour de contenu d?cid?es par les votes des joueurs."
+   },
+   "es": {
+    "tanim": "Un MMORPG desarrollado por Jagex basado en la era de 2007 de RuneScape. Incluye habilidades, misiones y actualizaciones de contenido decididas por votaciones de los jugadores."
+   }
+  }
+ },
+ {
+  "id": "honkai-star-rail",
+  "ad": "Honkai: Star Rail",
+  "kisa": "HSR",
+  "eslesme": [
+   "Honkai: Star Rail",
+   "Honkai Star Rail",
+   "HSR"
+  ],
+  "tur": {
+   "tr": "S?ra tabanl? RPG",
+   "en": "Turn-based RPG",
+   "fr": "RPG au tour par tour",
+   "es": "RPG por turnos"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Mobil"
+  ],
+  "gelistirici": "HoYoverse",
+  "resmi": {
+   "url": "https://hsr.hoyoverse.com/en-us/",
+   "ad": "Honkai: Star Rail (HoYoverse)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "HoYoverse taraf?ndan geli?tirilen ?cretsiz s?ra tabanl? RPG; Astral Express ile farkl? d?nyalara yolculuk eden bir ekibin hik?yesini anlat?r. Resmi sitede s?r?mler ve etkinlikler duyurulur."
+   },
+   "en": {
+    "tanim": "A free-to-play turn-based RPG developed by HoYoverse, following a crew traveling across worlds aboard the Astral Express. Versions and events are announced on the official site."
+   },
+   "fr": {
+    "tanim": "Un RPG au tour par tour gratuit d?velopp? par HoYoverse, suivant l'?quipage de l'Astral Express ? travers diff?rents mondes. Les versions et ?v?nements sont annonc?s sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un RPG por turnos gratuito desarrollado por HoYoverse que sigue a la tripulaci?n del Expreso Astral en su viaje por distintos mundos. Las versiones y eventos se anuncian en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "zenless-zone-zero",
+  "ad": "Zenless Zone Zero",
+  "kisa": "ZZZ",
+  "eslesme": [
+   "Zenless Zone Zero",
+   "ZZZ"
+  ],
+  "tur": {
+   "tr": "Aksiyon RPG",
+   "en": "Action RPG",
+   "fr": "RPG d'action",
+   "es": "RPG de acci?n"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox",
+   "Mobil"
+  ],
+  "gelistirici": "HoYoverse",
+  "resmi": {
+   "url": "https://zenless.hoyoverse.com/en-us/",
+   "ad": "Zenless Zone Zero (HoYoverse)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "HoYoverse taraf?ndan geli?tirilen kentsel fantastik aksiyon RPG; New Eridu ?ehrinde ge?en hik?ye ve tak?m tabanl? d?v??ler sunar. Resmi sitede s?r?m ve etkinlik bilgileri yer al?r."
+   },
+   "en": {
+    "tanim": "An urban fantasy action RPG developed by HoYoverse, set in New Eridu with story-driven content and squad-based combat. Version and event information is available on the official site."
+   },
+   "fr": {
+    "tanim": "Un RPG d'action de fantasy urbaine d?velopp? par HoYoverse, se d?roulant ? New Eridu avec une narration et des combats en ?quipe. Les informations de version et d'?v?nements sont disponibles sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un RPG de acci?n de fantas?a urbana desarrollado por HoYoverse, ambientado en Nueva Erid? con contenido narrativo y combate por equipos. La informaci?n de versiones y eventos est? disponible en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "wuthering-waves",
+  "ad": "Wuthering Waves",
+  "kisa": "WuWa",
+  "eslesme": [
+   "Wuthering Waves",
+   "WuWa"
+  ],
+  "tur": {
+   "tr": "A??k d?nya aksiyon RPG",
+   "en": "Open-world action RPG",
+   "fr": "RPG d'action en monde ouvert",
+   "es": "RPG de acci?n de mundo abierto"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Mobil"
+  ],
+  "gelistirici": "Kuro Games",
+  "resmi": {
+   "url": "https://wutheringwaves.kurogames.com/en/",
+   "ad": "Wuthering Waves (Kuro Games)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Kuro Games taraf?ndan geli?tirilen ?cretsiz a??k d?nya aksiyon RPG'si; h?zl? d?v?? sistemi ve ke?if odakl? oynan?? sunar. Resmi sitede s?r?m ve etkinlik duyurular? yay?mlan?r."
+   },
+   "en": {
+    "tanim": "A free-to-play open-world action RPG developed by Kuro Games, featuring fast-paced combat and exploration-focused gameplay. Version and event announcements are published on the official site."
+   },
+   "fr": {
+    "tanim": "Un RPG d'action en monde ouvert gratuit d?velopp? par Kuro Games, proposant des combats rapides et un gameplay ax? sur l'exploration. Les annonces de versions et d'?v?nements sont publi?es sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un RPG de acci?n de mundo abierto gratuito desarrollado por Kuro Games, con combates r?pidos y una jugabilidad centrada en la exploraci?n. Los anuncios de versiones y eventos se publican en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "brawl-stars",
+  "ad": "Brawl Stars",
+  "kisa": "Brawl Stars",
+  "eslesme": [
+   "Brawl Stars"
+  ],
+  "tur": {
+   "tr": "?evrimi?i aksiyon / MOBA",
+   "en": "Online action / MOBA",
+   "fr": "Action en ligne / MOBA",
+   "es": "Acci?n en l?nea / MOBA"
+  },
+  "platform": [
+   "Mobil"
+  ],
+  "gelistirici": "Supercell",
+  "resmi": {
+   "url": "https://supercell.com/en/games/brawlstars/",
+   "ad": "Brawl Stars (Supercell)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Supercell taraf?ndan geli?tirilen h?zl? tempolu ?ok oyunculu mobil oyun; farkl? karakterler ve k?sa ma? modlar? sunar. Resmi sayfada g?ncellemeler ve etkinlikler payla??l?r."
+   },
+   "en": {
+    "tanim": "A fast-paced multiplayer mobile game developed by Supercell, offering various characters and short match modes. Updates and events are shared on the official page."
+   },
+   "fr": {
+    "tanim": "Un jeu mobile multijoueur au rythme rapide d?velopp? par Supercell, proposant divers personnages et des modes de parties courtes. Les mises ? jour et ?v?nements sont partag?s sur la page officielle."
+   },
+   "es": {
+    "tanim": "Un juego m?vil multijugador de ritmo r?pido desarrollado por Supercell, con diversos personajes y modos de partida cortos. Las actualizaciones y eventos se comparten en la p?gina oficial."
+   }
+  }
+ },
+ {
+  "id": "clash-royale",
+  "ad": "Clash Royale",
+  "kisa": "Clash Royale",
+  "eslesme": [
+   "Clash Royale"
+  ],
+  "tur": {
+   "tr": "Kart stratejisi",
+   "en": "Card strategy",
+   "fr": "Strat?gie de cartes",
+   "es": "Estrategia de cartas"
+  },
+  "platform": [
+   "Mobil"
+  ],
+  "gelistirici": "Supercell",
+  "resmi": {
+   "url": "https://supercell.com/en/games/clashroyale/",
+   "ad": "Clash Royale (Supercell)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Supercell taraf?ndan geli?tirilen ger?ek zamanl? kart stratejisi oyunu; oyuncular destelerini kullanarak kuleleri y?kmaya ?al???r. Resmi sayfada g?ncellemeler ve denge de?i?iklikleri payla??l?r."
+   },
+   "en": {
+    "tanim": "A real-time card strategy game developed by Supercell where players use decks to destroy towers. Updates and balance changes are shared on the official page."
+   },
+   "fr": {
+    "tanim": "Un jeu de strat?gie de cartes en temps r?el d?velopp? par Supercell o? les joueurs utilisent des decks pour d?truire des tours. Les mises ? jour et changements d'?quilibrage sont partag?s sur la page officielle."
+   },
+   "es": {
+    "tanim": "Un juego de estrategia de cartas en tiempo real desarrollado por Supercell en el que los jugadores usan mazos para destruir torres. Las actualizaciones y cambios de equilibrio se comparten en la p?gina oficial."
+   }
+  }
+ },
+ {
+  "id": "clash-of-clans",
+  "ad": "Clash of Clans",
+  "kisa": "CoC",
+  "eslesme": [
+   "Clash of Clans"
+  ],
+  "tur": {
+   "tr": "Strateji",
+   "en": "Strategy",
+   "fr": "Strat?gie",
+   "es": "Estrategia"
+  },
+  "platform": [
+   "Mobil"
+  ],
+  "gelistirici": "Supercell",
+  "resmi": {
+   "url": "https://supercell.com/en/games/clashofclans/",
+   "ad": "Clash of Clans (Supercell)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Supercell taraf?ndan geli?tirilen mobil strateji oyunu; oyuncular k?ylerini in?a eder, birlik yeti?tirir ve klan sava?lar?na kat?l?r. Resmi sayfada g?ncellemeler duyurulur."
+   },
+   "en": {
+    "tanim": "A mobile strategy game developed by Supercell where players build villages, train troops and take part in clan wars. Updates are announced on the official page."
+   },
+   "fr": {
+    "tanim": "Un jeu de strat?gie mobile d?velopp? par Supercell o? les joueurs construisent des villages, entra?nent des troupes et participent ? des guerres de clans. Les mises ? jour sont annonc?es sur la page officielle."
+   },
+   "es": {
+    "tanim": "Un juego de estrategia m?vil desarrollado por Supercell en el que los jugadores construyen aldeas, entrenan tropas y participan en guerras de clanes. Las actualizaciones se anuncian en la p?gina oficial."
+   }
+  }
+ },
+ {
+  "id": "pubg-mobile",
+  "ad": "PUBG Mobile",
+  "kisa": "PUBG Mobile",
+  "eslesme": [
+   "PUBG Mobile",
+   "PUBG MOBILE"
+  ],
+  "tur": {
+   "tr": "Battle royale (mobil)",
+   "en": "Battle royale (mobile)",
+   "fr": "Battle royale (mobile)",
+   "es": "Battle royale (m?vil)"
+  },
+  "platform": [
+   "Mobil"
+  ],
+  "gelistirici": "Lightspeed Studios",
+  "resmi": {
+   "url": "https://www.pubgmobile.com/en-US/home.shtml",
+   "ad": "PUBG Mobile"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "PUBG: BATTLEGROUNDS'un mobil s?r?m?; ?ok oyunculu battle royale ma?lar? ve farkl? haritalar sunar. Resmi sitede sezon ve etkinlik duyurular? yay?mlan?r."
+   },
+   "en": {
+    "tanim": "The mobile version of PUBG: BATTLEGROUNDS, offering multiplayer battle royale matches and various maps. Season and event announcements are published on the official site."
+   },
+   "fr": {
+    "tanim": "La version mobile de PUBG: BATTLEGROUNDS, proposant des parties battle royale multijoueurs et diverses cartes. Les annonces de saisons et d'?v?nements sont publi?es sur le site officiel."
+   },
+   "es": {
+    "tanim": "La versi?n m?vil de PUBG: BATTLEGROUNDS, que ofrece partidas battle royale multijugador y varios mapas. Los anuncios de temporadas y eventos se publican en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "free-fire",
+  "ad": "Free Fire",
+  "kisa": "Free Fire",
+  "eslesme": [
+   "Free Fire",
+   "Garena Free Fire"
+  ],
+  "tur": {
+   "tr": "Battle royale (mobil)",
+   "en": "Battle royale (mobile)",
+   "fr": "Battle royale (mobile)",
+   "es": "Battle royale (m?vil)"
+  },
+  "platform": [
+   "Mobil"
+  ],
+  "gelistirici": "Garena",
+  "resmi": {
+   "url": "https://ff.garena.com/en/",
+   "ad": "Free Fire (Garena)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Garena taraf?ndan yay?mlanan mobil battle royale oyunu; k?sa s?reli ma?lar ve karakter yetenekleri i?erir. Resmi sitede g?ncellemeler ve etkinlikler duyurulur."
+   },
+   "en": {
+    "tanim": "A mobile battle royale game published by Garena, featuring quick matches and character abilities. Updates and events are announced on the official site."
+   },
+   "fr": {
+    "tanim": "Un jeu battle royale mobile publi? par Garena, proposant des parties rapides et des capacit?s de personnages. Les mises ? jour et ?v?nements sont annonc?s sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un juego battle royale m?vil publicado por Garena, con partidas r?pidas y habilidades de personajes. Las actualizaciones y eventos se anuncian en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "pokemon-go",
+  "ad": "Pok?mon GO",
+  "kisa": "Pok?mon GO",
+  "eslesme": [
+   "Pok?mon GO",
+   "Pokemon GO"
+  ],
+  "tur": {
+   "tr": "Art?r?lm?? ger?eklik",
+   "en": "Augmented reality",
+   "fr": "R?alit? augment?e",
+   "es": "Realidad aumentada"
+  },
+  "platform": [
+   "Mobil"
+  ],
+  "gelistirici": "Niantic",
+  "resmi": {
+   "url": "https://pokemongolive.com/",
+   "ad": "Pok?mon GO (Niantic)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Niantic taraf?ndan geli?tirilen art?r?lm?? ger?eklik mobil oyunu; oyuncular ger?ek d?nyada dola?arak Pok?mon yakalar ve etkinliklere kat?l?r. Resmi sitede etkinlik ve g?ncelleme duyurular? yer al?r."
+   },
+   "en": {
+    "tanim": "An augmented reality mobile game developed by Niantic where players explore the real world to catch Pok?mon and join events. Event and update announcements are posted on the official site."
+   },
+   "fr": {
+    "tanim": "Un jeu mobile en r?alit? augment?e d?velopp? par Niantic o? les joueurs explorent le monde r?el pour capturer des Pok?mon et participer ? des ?v?nements. Les annonces d'?v?nements et de mises ? jour sont publi?es sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un juego m?vil de realidad aumentada desarrollado por Niantic en el que los jugadores exploran el mundo real para capturar Pok?mon y participar en eventos. Los anuncios de eventos y actualizaciones se publican en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "monster-hunter-wilds",
+  "ad": "Monster Hunter Wilds",
+  "kisa": "MH Wilds",
+  "eslesme": [
+   "Monster Hunter Wilds",
+   "MH Wilds"
+  ],
+  "tur": {
+   "tr": "Aksiyon RPG",
+   "en": "Action RPG",
+   "fr": "RPG d'action",
+   "es": "RPG de acci?n"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Capcom",
+  "resmi": {
+   "url": "https://www.monsterhunter.com/wilds/en-us/",
+   "ad": "Monster Hunter Wilds (Capcom)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Capcom taraf?ndan geli?tirilen aksiyon RPG; oyuncular de?i?ken ekosistemlerde devasa canavarlar? avlar. Resmi sitede g?ncelleme ve etkinlik bilgileri payla??l?r."
+   },
+   "en": {
+    "tanim": "An action RPG developed by Capcom where players hunt massive monsters in dynamic ecosystems. Update and event information is shared on the official site."
+   },
+   "fr": {
+    "tanim": "Un RPG d'action d?velopp? par Capcom o? les joueurs chassent d'immenses monstres dans des ?cosyst?mes dynamiques. Les informations de mises ? jour et d'?v?nements sont partag?es sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un RPG de acci?n desarrollado por Capcom en el que los jugadores cazan monstruos gigantes en ecosistemas din?micos. La informaci?n de actualizaciones y eventos se comparte en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "street-fighter-6",
+  "ad": "Street Fighter 6",
+  "kisa": "SF6",
+  "eslesme": [
+   "Street Fighter 6",
+   "SF6"
+  ],
+  "tur": {
+   "tr": "D?v?? oyunu",
+   "en": "Fighting game",
+   "fr": "Jeu de combat",
+   "es": "Juego de lucha"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox",
+   "Switch 2"
+  ],
+  "gelistirici": "Capcom",
+  "resmi": {
+   "url": "https://www.streetfighter.com/6/en-us",
+   "ad": "Street Fighter 6 (Capcom)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Capcom taraf?ndan geli?tirilen d?v?? oyunu; ?e?itli karakterler, ?evrimi?i ma?lar ve tek oyunculu modlar sunar. Resmi sitede g?ncellemeler ve karakter duyurular? yay?mlan?r."
+   },
+   "en": {
+    "tanim": "A fighting game developed by Capcom, offering a diverse roster, online matches and single-player modes. Updates and character announcements are published on the official site."
+   },
+   "fr": {
+    "tanim": "Un jeu de combat d?velopp? par Capcom, proposant un large ?ventail de personnages, des matchs en ligne et des modes solo. Les mises ? jour et annonces de personnages sont publi?es sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un juego de lucha desarrollado por Capcom que ofrece un plantel variado, partidas en l?nea y modos para un jugador. Las actualizaciones y anuncios de personajes se publican en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "tekken-8",
+  "ad": "Tekken 8",
+  "kisa": "Tekken 8",
+  "eslesme": [
+   "Tekken 8"
+  ],
+  "tur": {
+   "tr": "D?v?? oyunu",
+   "en": "Fighting game",
+   "fr": "Jeu de combat",
+   "es": "Juego de lucha"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Bandai Namco Studios",
+  "resmi": {
+   "url": "https://tekken.com/",
+   "ad": "Tekken 8 (Bandai Namco)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Bandai Namco Studios taraf?ndan geli?tirilen d?v?? oyunu; seri karakterleri ve yeni mekanikleriyle rekabet?i ma?lar sunar. Resmi sitede g?ncellemeler ve karakter bilgileri yer al?r."
+   },
+   "en": {
+    "tanim": "A fighting game developed by Bandai Namco Studios, offering competitive matches with series characters and new mechanics. Updates and character information are available on the official site."
+   },
+   "fr": {
+    "tanim": "Un jeu de combat d?velopp? par Bandai Namco Studios, proposant des matchs comp?titifs avec les personnages de la s?rie et de nouvelles m?caniques. Les mises ? jour et informations sur les personnages sont disponibles sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un juego de lucha desarrollado por Bandai Namco Studios que ofrece combates competitivos con personajes de la saga y nuevas mec?nicas. Las actualizaciones y la informaci?n de personajes est?n disponibles en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "palworld",
+  "ad": "Palworld",
+  "kisa": "Palworld",
+  "eslesme": [
+   "Palworld"
+  ],
+  "tur": {
+   "tr": "Hayatta kalma / a??k d?nya",
+   "en": "Survival / open world",
+   "fr": "Survie / monde ouvert",
+   "es": "Supervivencia / mundo abierto"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Pocketpair",
+  "resmi": {
+   "url": "https://www.pocketpair.jp/palworld",
+   "ad": "Palworld (Pocketpair)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Pocketpair taraf?ndan geli?tirilen a??k d?nya hayatta kalma oyunu; Pal ad? verilen yarat?klar? yakalama, ?s kurma ve ke?if ??eleri i?erir. Resmi sayfada g?ncellemeler payla??l?r."
+   },
+   "en": {
+    "tanim": "An open-world survival game developed by Pocketpair, featuring creature collecting with Pals, base building and exploration. Updates are shared on the official page."
+   },
+   "fr": {
+    "tanim": "Un jeu de survie en monde ouvert d?velopp? par Pocketpair, m?lant collecte de cr?atures appel?es Pals, construction de bases et exploration. Les mises ? jour sont partag?es sur la page officielle."
+   },
+   "es": {
+    "tanim": "Un juego de supervivencia de mundo abierto desarrollado por Pocketpair que combina la captura de criaturas llamadas Pals, la construcci?n de bases y la exploraci?n. Las actualizaciones se comparten en la p?gina oficial."
+   }
+  }
+ },
+ {
+  "id": "delta-force",
+  "ad": "Delta Force",
+  "kisa": "Delta Force",
+  "eslesme": [
+   "Delta Force"
+  ],
+  "tur": {
+   "tr": "Taktiksel ni?anc?",
+   "en": "Tactical shooter",
+   "fr": "Jeu de tir tactique",
+   "es": "Shooter t?ctico"
+  },
+  "platform": [
+   "PC",
+   "Mobil"
+  ],
+  "gelistirici": "Team Jade",
+  "resmi": {
+   "url": "https://www.playdeltaforce.com/en/home.html",
+   "ad": "Delta Force (Team Jade)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Team Jade taraf?ndan geli?tirilen ?cretsiz taktiksel ni?anc?; geni? ?l?ekli ?at??malar ve ??karma odakl? modlar sunar. Resmi sitede sezon ve g?ncelleme bilgileri yay?mlan?r."
+   },
+   "en": {
+    "tanim": "A free-to-play tactical shooter developed by Team Jade, offering large-scale combat and extraction-focused modes. Season and update information is published on the official site."
+   },
+   "fr": {
+    "tanim": "Un jeu de tir tactique gratuit d?velopp? par Team Jade, proposant des combats ? grande ?chelle et des modes ax?s sur l'extraction. Les informations de saisons et de mises ? jour sont publi?es sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un shooter t?ctico gratuito desarrollado por Team Jade que ofrece combates a gran escala y modos centrados en la extracci?n. La informaci?n de temporadas y actualizaciones se publica en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "battlefield-6",
+  "ad": "Battlefield 6",
+  "kisa": "BF6",
+  "eslesme": [
+   "Battlefield 6",
+   "BF6"
+  ],
+  "tur": {
+   "tr": "Birinci ?ah?s ni?anc?",
+   "en": "First-person shooter",
+   "fr": "Jeu de tir ? la premi?re personne",
+   "es": "Shooter en primera persona"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Battlefield Studios",
+  "resmi": {
+   "url": "https://www.ea.com/games/battlefield/battlefield-6",
+   "ad": "Battlefield 6 (EA)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Battlefield Studios taraf?ndan geli?tirilen ve EA taraf?ndan yay?mlanan birinci ?ah?s ni?anc?; geni? ?l?ekli ?ok oyunculu sava?lar ve tak?m odakl? oynan?? sunar. Resmi sayfada g?ncellemeler ve sezon bilgileri yer al?r."
+   },
+   "en": {
+    "tanim": "A first-person shooter developed by Battlefield Studios and published by EA, offering large-scale multiplayer warfare and team-focused gameplay. Updates and season information are available on the official page."
+   },
+   "fr": {
+    "tanim": "Un jeu de tir ? la premi?re personne d?velopp? par Battlefield Studios et ?dit? par EA, proposant des guerres multijoueurs ? grande ?chelle et un gameplay ax? sur l'?quipe. Les mises ? jour et informations de saison sont disponibles sur la page officielle."
+   },
+   "es": {
+    "tanim": "Un shooter en primera persona desarrollado por Battlefield Studios y publicado por EA que ofrece guerras multijugador a gran escala y jugabilidad centrada en el equipo. Las actualizaciones y la informaci?n de temporadas est?n disponibles en la p?gina oficial."
+   }
+  }
+ },
+ {
+  "id": "marvel-rivals",
+  "ad": "Marvel Rivals",
+  "kisa": "Marvel Rivals",
+  "eslesme": [
+   "Marvel Rivals"
+  ],
+  "tur": {
+   "tr": "Kahraman ni?anc?",
+   "en": "Hero shooter",
+   "fr": "Hero shooter",
+   "es": "Hero shooter"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "NetEase Games",
+  "resmi": {
+   "url": "https://www.marvelrivals.com/",
+   "ad": "Marvel Rivals (NetEase Games)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "NetEase Games taraf?ndan geli?tirilen ?cretsiz tak?m tabanl? kahraman ni?anc?s?; Marvel evreninden karakterlerle 6'ya 6 ma?lar sunar. Resmi sitede sezon ve g?ncelleme duyurular? yay?mlan?r."
+   },
+   "en": {
+    "tanim": "A free-to-play team-based hero shooter developed by NetEase Games, featuring 6v6 matches with characters from the Marvel universe. Season and update announcements are published on the official site."
+   },
+   "fr": {
+    "tanim": "Un hero shooter en ?quipe gratuit d?velopp? par NetEase Games, proposant des matchs 6 contre 6 avec des personnages de l'univers Marvel. Les annonces de saisons et de mises ? jour sont publi?es sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un hero shooter por equipos gratuito desarrollado por NetEase Games que ofrece partidas 6 contra 6 con personajes del universo Marvel. Los anuncios de temporadas y actualizaciones se publican en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "the-finals",
+  "ad": "The Finals",
+  "kisa": "The Finals",
+  "eslesme": [
+   "The Finals",
+   "THE FINALS"
+  ],
+  "tur": {
+   "tr": "Birinci ?ah?s ni?anc?",
+   "en": "First-person shooter",
+   "fr": "Jeu de tir ? la premi?re personne",
+   "es": "Shooter en primera persona"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Embark Studios",
+  "resmi": {
+   "url": "https://www.reachthefinals.com/",
+   "ad": "The Finals (Embark Studios)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Embark Studios taraf?ndan geli?tirilen ?cretsiz tak?m tabanl? birinci ?ah?s ni?anc?; y?k?labilir arenalar ve hedef odakl? ma? modlar? sunar. Resmi sitede sezon ve g?ncelleme bilgileri yer al?r."
+   },
+   "en": {
+    "tanim": "A free-to-play team-based first-person shooter developed by Embark Studios, featuring destructible arenas and objective-based modes. Season and update information is available on the official site."
+   },
+   "fr": {
+    "tanim": "Un jeu de tir ? la premi?re personne en ?quipe gratuit d?velopp? par Embark Studios, proposant des ar?nes destructibles et des modes bas?s sur des objectifs. Les informations de saisons et de mises ? jour sont disponibles sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un shooter en primera persona por equipos gratuito desarrollado por Embark Studios, con arenas destructibles y modos basados en objetivos. La informaci?n de temporadas y actualizaciones est? disponible en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "hearthstone",
+  "ad": "Hearthstone",
+  "kisa": "Hearthstone",
+  "eslesme": [
+   "Hearthstone"
+  ],
+  "tur": {
+   "tr": "Dijital kart oyunu",
+   "en": "Digital card game",
+   "fr": "Jeu de cartes num?rique",
+   "es": "Juego de cartas digital"
+  },
+  "platform": [
+   "PC",
+   "Mobil"
+  ],
+  "gelistirici": "Blizzard Entertainment",
+  "resmi": {
+   "url": "https://hearthstone.blizzard.com/en-us",
+   "ad": "Hearthstone (Blizzard)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Blizzard Entertainment taraf?ndan geli?tirilen ?cretsiz dijital kart oyunu; Warcraft evreninde ge?en deste kurma ve s?ra tabanl? ma?lar sunar. Resmi sitede geni?leme ve g?ncelleme duyurular? yer al?r."
+   },
+   "en": {
+    "tanim": "A free-to-play digital card game developed by Blizzard Entertainment, featuring deck building and turn-based matches set in the Warcraft universe. Expansion and update announcements are posted on the official site."
+   },
+   "fr": {
+    "tanim": "Un jeu de cartes num?rique gratuit d?velopp? par Blizzard Entertainment, proposant la cr?ation de decks et des matchs au tour par tour dans l'univers de Warcraft. Les annonces d'extensions et de mises ? jour sont publi?es sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un juego de cartas digital gratuito desarrollado por Blizzard Entertainment, con construcci?n de mazos y partidas por turnos ambientadas en el universo de Warcraft. Los anuncios de expansiones y actualizaciones se publican en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "teamfight-tactics",
+  "ad": "Teamfight Tactics",
+  "kisa": "TFT",
+  "eslesme": [
+   "Teamfight Tactics",
+   "TFT"
+  ],
+  "tur": {
+   "tr": "Otomatik sava? stratejisi",
+   "en": "Auto battler strategy",
+   "fr": "Strat?gie auto-battler",
+   "es": "Estrategia auto battler"
+  },
+  "platform": [
+   "PC",
+   "Mobil"
+  ],
+  "gelistirici": "Riot Games",
+  "resmi": {
+   "url": "https://teamfighttactics.leagueoflegends.com/en-us/",
+   "ad": "Teamfight Tactics (Riot Games)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Riot Games taraf?ndan geli?tirilen ?cretsiz otomatik sava? strateji oyunu; League of Legends evreninden birimleri yerle?tirerek rakiplere kar?? m?cadele edilir. Resmi sitede set ve yama bilgileri payla??l?r."
+   },
+   "en": {
+    "tanim": "A free-to-play auto battler strategy game developed by Riot Games where players place units from the League of Legends universe to compete against opponents. Set and patch information is shared on the official site."
+   },
+   "fr": {
+    "tanim": "Un jeu de strat?gie auto-battler gratuit d?velopp? par Riot Games o? les joueurs placent des unit?s de l'univers de League of Legends pour affronter des adversaires. Les informations sur les sets et les correctifs sont partag?es sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un juego de estrategia auto battler gratuito desarrollado por Riot Games en el que los jugadores colocan unidades del universo de League of Legends para enfrentarse a oponentes. La informaci?n de sets y parches se comparte en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "efootball",
+  "ad": "eFootball",
+  "kisa": "eFootball",
+  "eslesme": [
+   "eFootball"
+  ],
+  "tur": {
+   "tr": "Futbol sim?lasyonu",
+   "en": "Football simulation",
+   "fr": "Simulation de football",
+   "es": "Simulaci?n de f?tbol"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox",
+   "Mobil"
+  ],
+  "gelistirici": "Konami",
+  "resmi": {
+   "url": "https://www.konami.com/efootball/en/",
+   "ad": "eFootball (Konami)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Konami taraf?ndan geli?tirilen futbol sim?lasyonu oyunu; ?evrimi?i ma?lar ve tak?m y?netimi ?zellikleri sunar. Resmi sitede sezon g?ncellemeleri ve etkinlikler duyurulur."
+   },
+   "en": {
+    "tanim": "A football simulation game developed by Konami, offering online matches and team management features. Season updates and events are announced on the official site."
+   },
+   "fr": {
+    "tanim": "Un jeu de simulation de football d?velopp? par Konami, proposant des matchs en ligne et des fonctionnalit?s de gestion d'?quipe. Les mises ? jour de saison et les ?v?nements sont annonc?s sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un juego de simulaci?n de f?tbol desarrollado por Konami que ofrece partidos en l?nea y funciones de gesti?n de equipos. Las actualizaciones de temporada y los eventos se anuncian en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "nba-2k26",
+  "ad": "NBA 2K26",
+  "kisa": "NBA 2K26",
+  "eslesme": [
+   "NBA 2K26"
+  ],
+  "tur": {
+   "tr": "Basketbol sim?lasyonu",
+   "en": "Basketball simulation",
+   "fr": "Simulation de basket-ball",
+   "es": "Simulaci?n de baloncesto"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox",
+   "Switch 2"
+  ],
+  "gelistirici": "Visual Concepts",
+  "resmi": {
+   "url": "https://nba.2k.com/2k26/",
+   "ad": "NBA 2K26 (2K)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Visual Concepts taraf?ndan geli?tirilen ve 2K taraf?ndan yay?mlanan basketbol sim?lasyonu; MyCAREER, MyTEAM ve ?evrimi?i modlar sunar. Resmi sitede sezon ve g?ncelleme bilgileri yer al?r."
+   },
+   "en": {
+    "tanim": "A basketball simulation developed by Visual Concepts and published by 2K, featuring MyCAREER, MyTEAM and online modes. Season and update information is available on the official site."
+   },
+   "fr": {
+    "tanim": "Une simulation de basket-ball d?velopp?e par Visual Concepts et ?dit?e par 2K, proposant MyCAREER, MyTEAM et des modes en ligne. Les informations de saisons et de mises ? jour sont disponibles sur le site officiel."
+   },
+   "es": {
+    "tanim": "Una simulaci?n de baloncesto desarrollada por Visual Concepts y publicada por 2K que ofrece MyCAREER, MyTEAM y modos en l?nea. La informaci?n de temporadas y actualizaciones est? disponible en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "borderlands-4",
+  "ad": "Borderlands 4",
+  "kisa": "Borderlands 4",
+  "eslesme": [
+   "Borderlands 4"
+  ],
+  "tur": {
+   "tr": "Aksiyon ni?anc? / RPG",
+   "en": "Action shooter / RPG",
+   "fr": "Jeu de tir d'action / RPG",
+   "es": "Shooter de acci?n / RPG"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Gearbox Software",
+  "resmi": {
+   "url": "https://borderlands.2k.com/borderlands-4/",
+   "ad": "Borderlands 4 (2K)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Gearbox Software taraf?ndan geli?tirilen ve 2K taraf?ndan yay?mlanan loot odakl? aksiyon ni?anc? RPG; e?li oynan?? ve yeni bir d?nyada macera sunar. Resmi sitede g?ncelleme ve i?erik bilgileri payla??l?r."
+   },
+   "en": {
+    "tanim": "A loot-driven action shooter RPG developed by Gearbox Software and published by 2K, offering co-op play and adventure in a new world. Update and content information is shared on the official site."
+   },
+   "fr": {
+    "tanim": "Un RPG de tir d'action ax? sur le butin d?velopp? par Gearbox Software et ?dit? par 2K, proposant du jeu coop?ratif et une aventure dans un nouveau monde. Les informations de mises ? jour et de contenu sont partag?es sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un RPG de disparos de acci?n centrado en el bot?n desarrollado por Gearbox Software y publicado por 2K, que ofrece juego cooperativo y aventura en un nuevo mundo. La informaci?n de actualizaciones y contenido se comparte en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "slay-the-spire-2",
+  "ad": "Slay the Spire 2",
+  "kisa": "StS 2",
+  "eslesme": [
+   "Slay the Spire 2",
+   "Slay the Spire II"
+  ],
+  "tur": {
+   "tr": "Roguelike deste kurma",
+   "en": "Roguelike deckbuilder",
+   "fr": "Deckbuilder roguelike",
+   "es": "Constructor de mazos roguelike"
+  },
+  "platform": [
+   "PC"
+  ],
+  "gelistirici": "Mega Crit",
+  "resmi": {
+   "url": "https://www.megacrit.com/",
+   "ad": "Slay the Spire 2 (Mega Crit)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Mega Crit taraf?ndan geli?tirilen roguelike deste kurma oyununun devam?; kart tabanl? sava?lar ve her ko?uda de?i?en zorluklar sunar. Resmi sitede duyurular ve geli?tirme bilgileri yer al?r."
+   },
+   "en": {
+    "tanim": "The sequel to the roguelike deckbuilder developed by Mega Crit, featuring card-based battles and challenges that change with each run. Announcements and development information are available on the official site."
+   },
+   "fr": {
+    "tanim": "La suite du deckbuilder roguelike d?velopp? par Mega Crit, proposant des combats de cartes et des d?fis qui changent ? chaque partie. Les annonces et informations de d?veloppement sont disponibles sur le site officiel."
+   },
+   "es": {
+    "tanim": "La secuela del constructor de mazos roguelike desarrollado por Mega Crit, con batallas de cartas y desaf?os que cambian en cada partida. Los anuncios y la informaci?n de desarrollo est?n disponibles en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "hades-ii",
+  "ad": "Hades II",
+  "kisa": "Hades II",
+  "eslesme": [
+   "Hades II",
+   "Hades 2"
+  ],
+  "tur": {
+   "tr": "Roguelike aksiyon",
+   "en": "Roguelike action",
+   "fr": "Action roguelike",
+   "es": "Acci?n roguelike"
+  },
+  "platform": [
+   "PC",
+   "Switch 2"
+  ],
+  "gelistirici": "Supergiant Games",
+  "resmi": {
+   "url": "https://www.supergiantgames.com/games/hades-ii/",
+   "ad": "Hades II (Supergiant Games)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Supergiant Games taraf?ndan geli?tirilen roguelike aksiyon oyunu; yeralt? d?nyas?nda ge?en h?zl? tempolu ?at??malar ve hik?ye ilerlemesi sunar. Resmi sayfada g?ncelleme bilgileri payla??l?r."
+   },
+   "en": {
+    "tanim": "A roguelike action game developed by Supergiant Games, offering fast-paced combat in the underworld and story progression. Update information is shared on the official page."
+   },
+   "fr": {
+    "tanim": "Un jeu d'action roguelike d?velopp? par Supergiant Games, proposant des combats rapides dans le monde souterrain et une progression narrative. Les informations de mise ? jour sont partag?es sur la page officielle."
+   },
+   "es": {
+    "tanim": "Un juego de acci?n roguelike desarrollado por Supergiant Games que ofrece combates r?pidos en el inframundo y progresi?n narrativa. La informaci?n de actualizaciones se comparte en la p?gina oficial."
+   }
+  }
+ },
+ {
+  "id": "hollow-knight-silksong",
+  "ad": "Hollow Knight: Silksong",
+  "kisa": "Silksong",
+  "eslesme": [
+   "Hollow Knight: Silksong",
+   "Silksong"
+  ],
+  "tur": {
+   "tr": "Metroidvania / aksiyon",
+   "en": "Metroidvania / action",
+   "fr": "Metroidvania / action",
+   "es": "Metroidvania / acci?n"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox",
+   "Switch 2"
+  ],
+  "gelistirici": "Team Cherry",
+  "resmi": {
+   "url": "https://hollowknightsilksong.com/",
+   "ad": "Hollow Knight: Silksong (Team Cherry)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Team Cherry taraf?ndan geli?tirilen Hollow Knight evreninde ge?en aksiyon macera oyunu; Hornet'in yolculu?unu, ke?fi ve zorlu ?at??malar? konu al?r. Resmi sitede duyurular yer al?r."
+   },
+   "en": {
+    "tanim": "An action-adventure game developed by Team Cherry set in the Hollow Knight universe, following Hornet's journey with exploration and challenging combat. Announcements are posted on the official site."
+   },
+   "fr": {
+    "tanim": "Un jeu d'action-aventure d?velopp? par Team Cherry dans l'univers de Hollow Knight, suivant le voyage de Hornet avec exploration et combats exigeants. Les annonces sont publi?es sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un juego de acci?n y aventura desarrollado por Team Cherry ambientado en el universo de Hollow Knight, que sigue el viaje de Hornet con exploraci?n y combates desafiantes. Los anuncios se publican en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "arc-raiders",
+  "ad": "ARC Raiders",
+  "kisa": "ARC Raiders",
+  "eslesme": [
+   "ARC Raiders"
+  ],
+  "tur": {
+   "tr": "Extraction ni?anc?",
+   "en": "Extraction shooter",
+   "fr": "Shooter d'extraction",
+   "es": "Shooter de extracci?n"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Embark Studios",
+  "resmi": {
+   "url": "https://www.arcraiders.com/",
+   "ad": "ARC Raiders (Embark Studios)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Embark Studios taraf?ndan geli?tirilen ?ok oyunculu extraction ni?anc?s?; oyuncular tehlikeli bir d?nyada ganimet toplay?p hayatta kalmaya ?al???r. Resmi sitede g?ncelleme ve etkinlik bilgileri payla??l?r."
+   },
+   "en": {
+    "tanim": "A multiplayer extraction shooter developed by Embark Studios where players scavenge and try to survive in a dangerous world. Update and event information is shared on the official site."
+   },
+   "fr": {
+    "tanim": "Un shooter d'extraction multijoueur d?velopp? par Embark Studios o? les joueurs r?cup?rent des ressources et tentent de survivre dans un monde dangereux. Les informations de mises ? jour et d'?v?nements sont partag?es sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un shooter de extracci?n multijugador desarrollado por Embark Studios en el que los jugadores buscan recursos e intentan sobrevivir en un mundo peligroso. La informaci?n de actualizaciones y eventos se comparte en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "path-of-exile",
+  "ad": "Path of Exile",
+  "kisa": "PoE",
+  "eslesme": [
+   "Path of Exile"
+  ],
+  "tur": {
+   "tr": "Aksiyon RPG",
+   "en": "Action RPG",
+   "fr": "Hack'n'slash RPG",
+   "es": "RPG de acci?n"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Grinding Gear Games",
+  "resmi": {
+   "url": "https://www.pathofexile.com/",
+   "ad": "Path of Exile (Grinding Gear Games)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Grinding Gear Games taraf?ndan geli?tirilen ?cretsiz aksiyon RPG; derin karakter ?zelle?tirmesi, sezonluk ligler ve zorlu son oyun i?erikleri sunar. Resmi sitede yama ve lig duyurular? yay?mlan?r."
+   },
+   "en": {
+    "tanim": "A free-to-play action RPG developed by Grinding Gear Games, offering deep character customization, seasonal leagues and challenging endgame content. Patch and league announcements are published on the official site."
+   },
+   "fr": {
+    "tanim": "Un RPG d'action gratuit d?velopp? par Grinding Gear Games, proposant une personnalisation pouss?e des personnages, des ligues saisonni?res et un contenu de fin de jeu exigeant. Les annonces de correctifs et de ligues sont publi?es sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un RPG de acci?n gratuito desarrollado por Grinding Gear Games que ofrece una profunda personalizaci?n de personajes, ligas de temporada y contenido final desafiante. Los anuncios de parches y ligas se publican en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "sid-meiers-civilization-vii",
+  "ad": "Sid Meier's Civilization VII",
+  "kisa": "Civ VII",
+  "eslesme": [
+   "Sid Meier's Civilization VII",
+   "Civilization VII",
+   "Civ VII",
+   "Civ 7"
+  ],
+  "tur": {
+   "tr": "S?ra tabanl? strateji",
+   "en": "Turn-based strategy",
+   "fr": "Strat?gie au tour par tour",
+   "es": "Estrategia por turnos"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox",
+   "Switch 2"
+  ],
+  "gelistirici": "Firaxis Games",
+  "resmi": {
+   "url": "https://civilization.2k.com/civ-vii/",
+   "ad": "Sid Meier's Civilization VII (2K)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Firaxis Games taraf?ndan geli?tirilen ve 2K taraf?ndan yay?mlanan s?ra tabanl? strateji oyunu; uygarl?k kurma, ke?if ve diplomasi odakl? oynan?? sunar. Resmi sitede g?ncelleme ve i?erik bilgileri yer al?r."
+   },
+   "en": {
+    "tanim": "A turn-based strategy game developed by Firaxis Games and published by 2K, offering empire building, exploration and diplomacy-focused gameplay. Update and content information is available on the official site."
+   },
+   "fr": {
+    "tanim": "Un jeu de strat?gie au tour par tour d?velopp? par Firaxis Games et ?dit? par 2K, proposant la construction d'empires, l'exploration et un gameplay ax? sur la diplomatie. Les informations de mises ? jour et de contenu sont disponibles sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un juego de estrategia por turnos desarrollado por Firaxis Games y publicado por 2K que ofrece construcci?n de imperios, exploraci?n y jugabilidad centrada en la diplomacia. La informaci?n de actualizaciones y contenido est? disponible en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "euro-truck-simulator-2",
+  "ad": "Euro Truck Simulator 2",
+  "kisa": "ETS2",
+  "eslesme": [
+   "Euro Truck Simulator 2",
+   "ETS2"
+  ],
+  "tur": {
+   "tr": "Ara? sim?lasyonu",
+   "en": "Vehicle simulation",
+   "fr": "Simulation de conduite",
+   "es": "Simulaci?n de veh?culos"
+  },
+  "platform": [
+   "PC"
+  ],
+  "gelistirici": "SCS Software",
+  "resmi": {
+   "url": "https://eurotrucksimulator2.com/",
+   "ad": "Euro Truck Simulator 2 (SCS Software)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "SCS Software taraf?ndan geli?tirilen kamyon s?r?? sim?lasyonu; Avrupa genelinde y?k ta??may? ve lojistik y?netimini konu al?r. Resmi sitede g?ncelleme ve geni?leme duyurular? yay?mlan?r."
+   },
+   "en": {
+    "tanim": "A truck driving simulation developed by SCS Software, focusing on hauling cargo across Europe and managing logistics. Update and expansion announcements are published on the official site."
+   },
+   "fr": {
+    "tanim": "Une simulation de conduite de camions d?velopp?e par SCS Software, centr?e sur le transport de marchandises ? travers l'Europe et la gestion logistique. Les annonces de mises ? jour et d'extensions sont publi?es sur le site officiel."
+   },
+   "es": {
+    "tanim": "Una simulaci?n de conducci?n de camiones desarrollada por SCS Software, centrada en el transporte de carga por Europa y la gesti?n log?stica. Los anuncios de actualizaciones y expansiones se publican en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "among-us",
+  "ad": "Among Us",
+  "kisa": "Among Us",
+  "eslesme": [
+   "Among Us"
+  ],
+  "tur": {
+   "tr": "Sosyal ??kar?m",
+   "en": "Social deduction",
+   "fr": "D?duction sociale",
+   "es": "Deducci?n social"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox",
+   "Switch 2",
+   "Mobil"
+  ],
+  "gelistirici": "Innersloth",
+  "resmi": {
+   "url": "https://www.innersloth.com/games/among-us/",
+   "ad": "Among Us (Innersloth)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Innersloth taraf?ndan geli?tirilen ?ok oyunculu sosyal ??kar?m oyunu; m?rettebat g?revleri tamamlamaya ?al???rken sahtek?rlar? bulmay? hedefler. Resmi sitede g?ncellemeler ve duyurular yer al?r."
+   },
+   "en": {
+    "tanim": "A multiplayer social deduction game developed by Innersloth where crewmates complete tasks while trying to identify impostors. Updates and announcements are posted on the official site."
+   },
+   "fr": {
+    "tanim": "Un jeu de d?duction sociale multijoueur d?velopp? par Innersloth o? l'?quipage accomplit des t?ches tout en cherchant ? identifier les imposteurs. Les mises ? jour et annonces sont publi?es sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un juego multijugador de deducci?n social desarrollado por Innersloth en el que la tripulaci?n completa tareas mientras intenta identificar a los impostores. Las actualizaciones y anuncios se publican en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "fall-guys",
+  "ad": "Fall Guys",
+  "kisa": "Fall Guys",
+  "eslesme": [
+   "Fall Guys"
+  ],
+  "tur": {
+   "tr": "Grup parti oyunu",
+   "en": "Party platformer",
+   "fr": "Jeu de f?te / plateformes",
+   "es": "Juego de fiesta / plataformas"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox",
+   "Switch 2"
+  ],
+  "gelistirici": "Mediatonic",
+  "resmi": {
+   "url": "https://www.fallguys.com/en-US",
+   "ad": "Fall Guys (Epic Games)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Mediatonic taraf?ndan geli?tirilen ?ok oyunculu parti oyunu; oyuncular engelli parkurlarda yar??arak turlar? ge?meye ?al???r. Resmi sitede sezon ve etkinlik bilgileri yer al?r."
+   },
+   "en": {
+    "tanim": "A multiplayer party game developed by Mediatonic where players race through obstacle courses to advance through rounds. Season and event information is available on the official site."
+   },
+   "fr": {
+    "tanim": "Un jeu de f?te multijoueur d?velopp? par Mediatonic o? les joueurs s'affrontent sur des parcours d'obstacles pour passer les manches. Les informations de saisons et d'?v?nements sont disponibles sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un juego de fiesta multijugador desarrollado por Mediatonic en el que los jugadores compiten en circuitos de obst?culos para avanzar de ronda. La informaci?n de temporadas y eventos est? disponible en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "sea-of-thieves",
+  "ad": "Sea of Thieves",
+  "kisa": "Sea of Thieves",
+  "eslesme": [
+   "Sea of Thieves"
+  ],
+  "tur": {
+   "tr": "A??k d?nya macera",
+   "en": "Open-world adventure",
+   "fr": "Aventure en monde ouvert",
+   "es": "Aventura de mundo abierto"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox"
+  ],
+  "gelistirici": "Rare",
+  "resmi": {
+   "url": "https://www.seaofthieves.com/",
+   "ad": "Sea of Thieves (Rare)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Rare taraf?ndan geli?tirilen ?ok oyunculu korsan macera oyunu; ke?if, deniz sava?lar? ve i? birli?i odakl? oynan?? sunar. Resmi sitede sezon ve g?ncelleme bilgileri payla??l?r."
+   },
+   "en": {
+    "tanim": "A multiplayer pirate adventure game developed by Rare, offering exploration, naval combat and cooperative gameplay. Season and update information is shared on the official site."
+   },
+   "fr": {
+    "tanim": "Un jeu d'aventure pirate multijoueur d?velopp? par Rare, proposant exploration, combats navals et gameplay coop?ratif. Les informations de saisons et de mises ? jour sont partag?es sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un juego de aventuras piratas multijugador desarrollado por Rare que ofrece exploraci?n, combates navales y jugabilidad cooperativa. La informaci?n de temporadas y actualizaciones se comparte en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "no-mans-sky",
+  "ad": "No Man's Sky",
+  "kisa": "No Man's Sky",
+  "eslesme": [
+   "No Man's Sky"
+  ],
+  "tur": {
+   "tr": "Ke?if / hayatta kalma",
+   "en": "Exploration / survival",
+   "fr": "Exploration / survie",
+   "es": "Exploraci?n / supervivencia"
+  },
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox",
+   "Switch 2"
+  ],
+  "gelistirici": "Hello Games",
+  "resmi": {
+   "url": "https://www.nomanssky.com/",
+   "ad": "No Man's Sky (Hello Games)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Hello Games taraf?ndan geli?tirilen prosed?rel evrende ge?en ke?if ve hayatta kalma oyunu; gezegen ke?fi, ?s kurma ve ?ok oyunculu ?zellikler sunar. Resmi sitede g?ncellemeler duyurulur."
+   },
+   "en": {
+    "tanim": "An exploration and survival game developed by Hello Games set in a procedurally generated universe, featuring planetary exploration, base building and multiplayer features. Updates are announced on the official site."
+   },
+   "fr": {
+    "tanim": "Un jeu d'exploration et de survie d?velopp? par Hello Games dans un univers g?n?r? proc?duralement, proposant l'exploration de plan?tes, la construction de bases et des fonctionnalit?s multijoueurs. Les mises ? jour sont annonc?es sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un juego de exploraci?n y supervivencia desarrollado por Hello Games ambientado en un universo generado proceduralmente, con exploraci?n planetaria, construcci?n de bases y funciones multijugador. Las actualizaciones se anuncian en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "forza-horizon-5",
+  "ad": "Forza Horizon 5",
+  "kisa": "FH5",
+  "eslesme": [
+   "Forza Horizon 5",
+   "FH5"
+  ],
+  "tur": {
+   "tr": "Yar??",
+   "en": "Racing",
+   "fr": "Course",
+   "es": "Carreras"
+  },
+  "platform": [
+   "PC",
+   "Xbox"
+  ],
+  "gelistirici": "Playground Games",
+  "resmi": {
+   "url": "https://forza.net/horizon",
+   "ad": "Forza Horizon 5 (Xbox)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Playground Games taraf?ndan geli?tirilen a??k d?nya yar?? oyunu; Meksika'da ge?en festival ortam?nda ?e?itli ara?lar ve etkinlikler sunar. Resmi sitede g?ncelleme ve sezon bilgileri yer al?r."
+   },
+   "en": {
+    "tanim": "An open-world racing game developed by Playground Games, set in Mexico with a wide range of cars and events. Update and season information is available on the official site."
+   },
+   "fr": {
+    "tanim": "Un jeu de course en monde ouvert d?velopp? par Playground Games, se d?roulant au Mexique avec un large choix de voitures et d'?v?nements. Les informations de mises ? jour et de saisons sont disponibles sur le site officiel."
+   },
+   "es": {
+    "tanim": "Un juego de carreras de mundo abierto desarrollado por Playground Games, ambientado en M?xico con una amplia variedad de coches y eventos. La informaci?n de actualizaciones y temporadas est? disponible en el sitio oficial."
+   }
+  }
+ },
+ {
+  "id": "starfield",
+  "ad": "Starfield",
+  "kisa": "Starfield",
+  "eslesme": [
+   "Starfield"
+  ],
+  "tur": {
+   "tr": "Aksiyon RPG",
+   "en": "Action RPG",
+   "fr": "RPG d'action",
+   "es": "RPG de acci?n"
+  },
+  "platform": [
+   "PC",
+   "Xbox"
+  ],
+  "gelistirici": "Bethesda Game Studios",
+  "resmi": {
+   "url": "https://bethesda.net/en/game/starfield",
+   "ad": "Starfield (Bethesda)"
+  },
+  "diller": {
+   "tr": {
+    "tanim": "Bethesda Game Studios taraf?ndan geli?tirilen uzay temal? aksiyon RPG; ke?if, g?revler ve karakter ?zelle?tirme sunar. Resmi sayfada g?ncelleme ve i?erik bilgileri yer al?r."
+   },
+   "en": {
+    "tanim": "A space-themed action RPG developed by Bethesda Game Studios, offering exploration, quests and character customization. Update and content information is available on the official page."
+   },
+   "fr": {
+    "tanim": "Un RPG d'action sur le th?me de l'espace d?velopp? par Bethesda Game Studios, proposant exploration, qu?tes et personnalisation du personnage. Les informations de mises ? jour et de contenu sont disponibles sur la page officielle."
+   },
+   "es": {
+    "tanim": "Un RPG de acci?n de tem?tica espacial desarrollado por Bethesda Game Studios que ofrece exploraci?n, misiones y personalizaci?n del personaje. La informaci?n de actualizaciones y contenido est? disponible en la p?gina oficial."
+   }
+  }
  }
 ]

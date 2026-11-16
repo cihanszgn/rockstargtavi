@@ -28,7 +28,7 @@
 "2026-11-16"
 ],
 "de/index.html": [
-"955887566f56",
+"7dfc7f0fe724",
 "2026-11-16"
 ],
 "de/kostenlose-spiele.html": [
@@ -116,23 +116,111 @@
 "2026-11-16"
 ],
 "de/spiele-news.html": [
-"5613b2acac43",
+"187dede8a2a1",
+"2026-11-16"
+],
+"de/spiele/albion-online.html": [
+"2930e57ace8c",
+"2026-11-16"
+],
+"de/spiele/among-us.html": [
+"723965f91289",
+"2026-11-16"
+],
+"de/spiele/apex-legends.html": [
+"1299f61362ea",
+"2026-11-16"
+],
+"de/spiele/arc-raiders.html": [
+"ff71cac3c815",
+"2026-11-16"
+],
+"de/spiele/baldurs-gate-3.html": [
+"2967b385cb49",
+"2026-11-16"
+],
+"de/spiele/battlefield-6.html": [
+"a754522f56b6",
+"2026-11-16"
+],
+"de/spiele/black-desert.html": [
+"827f63e4a25c",
+"2026-11-16"
+],
+"de/spiele/borderlands-4.html": [
+"865147b19f39",
+"2026-11-16"
+],
+"de/spiele/brawl-stars.html": [
+"19d37afe06e0",
 "2026-11-16"
 ],
 "de/spiele/call-of-duty.html": [
 "969be902b8f6",
 "2026-11-16"
 ],
+"de/spiele/clash-of-clans.html": [
+"493c244b3392",
+"2026-11-16"
+],
+"de/spiele/clash-royale.html": [
+"d047081bd469",
+"2026-11-16"
+],
 "de/spiele/counter-strike-2.html": [
 "9a2b769c89b3",
+"2026-11-16"
+],
+"de/spiele/cyberpunk-2077.html": [
+"b7a14f34d9ec",
+"2026-11-16"
+],
+"de/spiele/dead-by-daylight.html": [
+"a8193d660a45",
+"2026-11-16"
+],
+"de/spiele/delta-force.html": [
+"ae73665382d5",
+"2026-11-16"
+],
+"de/spiele/destiny-2.html": [
+"0db2dc9cca6e",
 "2026-11-16"
 ],
 "de/spiele/diablo-4.html": [
 "eeb2af092866",
 "2026-11-16"
 ],
+"de/spiele/dota-2.html": [
+"134969408ce2",
+"2026-11-16"
+],
 "de/spiele/ea-sports-fc.html": [
 "313734d977e8",
+"2026-11-16"
+],
+"de/spiele/efootball.html": [
+"626add0f3f77",
+"2026-11-16"
+],
+"de/spiele/elden-ring.html": [
+"16a066559d64",
+"2026-11-16"
+],
+"de/spiele/escape-from-tarkov.html": [
+"d7d4d5cfcaed",
+"2026-11-16"
+],
+"de/spiele/euro-truck-simulator-2.html": [
+"03295ec19be9",
+"2026-11-16"
+],
+"de/spiele/fall-guys.html": [
+"dabe57f0380b",
+"2026-11-16"
+],
+"de/spiele/final-fantasy-xiv.html": [
+"8c1f0ac4bcba",
 "2026-11-16"
 ],
 "de/spiele/football-manager-27.html": [
@@ -143,20 +231,52 @@
 "56eb018b230a",
 "2026-11-16"
 ],
+"de/spiele/forza-horizon-5.html": [
+"7ff8fed43a17",
+"2026-11-16"
+],
+"de/spiele/free-fire.html": [
+"a49179856c4f",
+"2026-11-16"
+],
 "de/spiele/genshin-impact.html": [
 "f5ad69168c6c",
+"2026-11-16"
+],
+"de/spiele/grand-theft-auto-v.html": [
+"576f4a89e0b6",
 "2026-11-16"
 ],
 "de/spiele/gta-6.html": [
 "db476d93d90a",
 "2026-11-16"
 ],
+"de/spiele/hades-ii.html": [
+"b1d2cb143f9c",
+"2026-11-16"
+],
 "de/spiele/halo-campaign-evolved.html": [
 "ff6b0763dbf6",
 "2026-11-16"
 ],
+"de/spiele/hearthstone.html": [
+"fccae35bdafe",
+"2026-11-16"
+],
+"de/spiele/helldivers-2.html": [
+"901c3dd0f402",
+"2026-11-16"
+],
+"de/spiele/hollow-knight-silksong.html": [
+"d0b6e7bc039a",
+"2026-11-16"
+],
+"de/spiele/honkai-star-rail.html": [
+"9b3a49b383ce",
+"2026-11-16"
+],
 "de/spiele/index.html": [
-"80d1afc7f8ac",
+"58c359cdf61e",
 "2026-11-16"
 ],
 "de/spiele/knight-online.html": [
@@ -167,8 +287,16 @@
 "89842e15d6e7",
 "2026-11-16"
 ],
+"de/spiele/lost-ark.html": [
+"86eaa310ca5a",
+"2026-11-16"
+],
 "de/spiele/marathon.html": [
 "4d91c244d664",
+"2026-11-16"
+],
+"de/spiele/marvel-rivals.html": [
+"f28215d81ea5",
 "2026-11-16"
 ],
 "de/spiele/metin2.html": [
@@ -183,16 +311,52 @@
 "5f434363591e",
 "2026-11-16"
 ],
+"de/spiele/monster-hunter-wilds.html": [
+"2256c7617d2c",
+"2026-11-16"
+],
+"de/spiele/nba-2k26.html": [
+"6597161a6db8",
+"2026-11-16"
+],
+"de/spiele/no-mans-sky.html": [
+"5b77ced9370d",
+"2026-11-16"
+],
+"de/spiele/old-school-runescape.html": [
+"874ae0a76f17",
+"2026-11-16"
+],
 "de/spiele/overwatch.html": [
 "e86bb5d9c09f",
+"2026-11-16"
+],
+"de/spiele/palworld.html": [
+"fc0195a50fe9",
 "2026-11-16"
 ],
 "de/spiele/path-of-exile-2.html": [
 "d2c42d2707a1",
 "2026-11-16"
 ],
+"de/spiele/path-of-exile.html": [
+"882fd3a41636",
+"2026-11-16"
+],
+"de/spiele/pokemon-go.html": [
+"455254a9b096",
+"2026-11-16"
+],
+"de/spiele/pubg-mobile.html": [
+"9f30ec2a20de",
+"2026-11-16"
+],
 "de/spiele/pubg.html": [
 "2b3f2146595c",
+"2026-11-16"
+],
+"de/spiele/red-dead-redemption-2.html": [
+"80d0a4216997",
 "2026-11-16"
 ],
 "de/spiele/rise-online.html": [
@@ -203,12 +367,88 @@
 "06b31358878b",
 "2026-11-16"
 ],
+"de/spiele/rocket-league.html": [
+"407964b5739b",
+"2026-11-16"
+],
+"de/spiele/rust.html": [
+"2bc044516e78",
+"2026-11-16"
+],
+"de/spiele/sea-of-thieves.html": [
+"fc08fb69c1a1",
+"2026-11-16"
+],
+"de/spiele/sid-meiers-civilization-vii.html": [
+"658637b6677c",
+"2026-11-16"
+],
+"de/spiele/slay-the-spire-2.html": [
+"381b025448a9",
+"2026-11-16"
+],
+"de/spiele/stardew-valley.html": [
+"54a7df902cc7",
+"2026-11-16"
+],
+"de/spiele/starfield.html": [
+"edc89033ddc2",
+"2026-11-16"
+],
+"de/spiele/street-fighter-6.html": [
+"7dbc870746fc",
+"2026-11-16"
+],
+"de/spiele/teamfight-tactics.html": [
+"eb642fa63e6b",
+"2026-11-16"
+],
+"de/spiele/tekken-8.html": [
+"b4f63b9860d5",
+"2026-11-16"
+],
+"de/spiele/terraria.html": [
+"43c807f60af9",
+"2026-11-16"
+],
+"de/spiele/the-finals.html": [
+"46be5ff7c06e",
+"2026-11-16"
+],
+"de/spiele/the-witcher-3-wild-hunt.html": [
+"1c4661f904b5",
+"2026-11-16"
+],
+"de/spiele/tom-clancys-rainbow-six-siege.html": [
+"a223bd02613a",
+"2026-11-16"
+],
 "de/spiele/valorant.html": [
 "6157817b1606",
 "2026-11-16"
 ],
+"de/spiele/war-thunder.html": [
+"ec291819cb4a",
+"2026-11-16"
+],
+"de/spiele/warframe.html": [
+"1bd5b3ee6ca1",
+"2026-11-16"
+],
+"de/spiele/world-of-tanks.html": [
+"c57847505b6c",
+"2026-11-16"
+],
 "de/spiele/world-of-warcraft.html": [
 "7c3502b0ceb2",
+"2026-11-16"
+],
+"de/spiele/wuthering-waves.html": [
+"56197601fa3b",
+"2026-11-16"
+],
+"de/spiele/zenless-zone-zero.html": [
+"4e831fe28809",
 "2026-11-16"
 ],
 "de/sprachen.html": [
@@ -240,23 +480,111 @@
 "2026-11-16"
 ],
 "en/game-news.html": [
-"3a9a16a31f64",
+"a2a94b166d7d",
+"2026-11-16"
+],
+"en/game/albion-online.html": [
+"cedd9eab0e59",
+"2026-11-16"
+],
+"en/game/among-us.html": [
+"e0ce4dc234ad",
+"2026-11-16"
+],
+"en/game/apex-legends.html": [
+"9fb190b13b68",
+"2026-11-16"
+],
+"en/game/arc-raiders.html": [
+"13e042959295",
+"2026-11-16"
+],
+"en/game/baldurs-gate-3.html": [
+"cc8d9dede2ee",
+"2026-11-16"
+],
+"en/game/battlefield-6.html": [
+"51862778743b",
+"2026-11-16"
+],
+"en/game/black-desert.html": [
+"0d6504cfe812",
+"2026-11-16"
+],
+"en/game/borderlands-4.html": [
+"e39a6351b6f4",
+"2026-11-16"
+],
+"en/game/brawl-stars.html": [
+"60ee0551a498",
 "2026-11-16"
 ],
 "en/game/call-of-duty.html": [
 "9ffc5cc2d068",
 "2026-11-16"
 ],
+"en/game/clash-of-clans.html": [
+"0c17870c8c66",
+"2026-11-16"
+],
+"en/game/clash-royale.html": [
+"c3924f1b4af3",
+"2026-11-16"
+],
 "en/game/counter-strike-2.html": [
 "fe0c53b54440",
+"2026-11-16"
+],
+"en/game/cyberpunk-2077.html": [
+"79faea985e3b",
+"2026-11-16"
+],
+"en/game/dead-by-daylight.html": [
+"02fa1b6915fb",
+"2026-11-16"
+],
+"en/game/delta-force.html": [
+"5c4e701c051b",
+"2026-11-16"
+],
+"en/game/destiny-2.html": [
+"ab8fbba4eca4",
 "2026-11-16"
 ],
 "en/game/diablo-4.html": [
 "ae8f2470e907",
 "2026-11-16"
 ],
+"en/game/dota-2.html": [
+"182a70268d97",
+"2026-11-16"
+],
 "en/game/ea-sports-fc.html": [
 "fa7d07b18e02",
+"2026-11-16"
+],
+"en/game/efootball.html": [
+"eab87c41cf79",
+"2026-11-16"
+],
+"en/game/elden-ring.html": [
+"220347009c63",
+"2026-11-16"
+],
+"en/game/escape-from-tarkov.html": [
+"77f4affc6d26",
+"2026-11-16"
+],
+"en/game/euro-truck-simulator-2.html": [
+"6b170bd36d50",
+"2026-11-16"
+],
+"en/game/fall-guys.html": [
+"5a4ffa6c0c58",
+"2026-11-16"
+],
+"en/game/final-fantasy-xiv.html": [
+"b954d108f209",
 "2026-11-16"
 ],
 "en/game/football-manager-27.html": [
@@ -267,20 +595,52 @@
 "fa6334295aaa",
 "2026-11-16"
 ],
+"en/game/forza-horizon-5.html": [
+"7c57cf3ce489",
+"2026-11-16"
+],
+"en/game/free-fire.html": [
+"26dd5db329d7",
+"2026-11-16"
+],
 "en/game/genshin-impact.html": [
 "0e1cd59c0527",
+"2026-11-16"
+],
+"en/game/grand-theft-auto-v.html": [
+"4e4c733809dc",
 "2026-11-16"
 ],
 "en/game/gta-6.html": [
 "5267bf8b6305",
 "2026-11-16"
 ],
+"en/game/hades-ii.html": [
+"b58c3c7e5098",
+"2026-11-16"
+],
 "en/game/halo-campaign-evolved.html": [
 "e76688b3dd58",
 "2026-11-16"
 ],
+"en/game/hearthstone.html": [
+"0808a7a97389",
+"2026-11-16"
+],
+"en/game/helldivers-2.html": [
+"c4f45c2d8752",
+"2026-11-16"
+],
+"en/game/hollow-knight-silksong.html": [
+"5abf4bb738c3",
+"2026-11-16"
+],
+"en/game/honkai-star-rail.html": [
+"a2267461741d",
+"2026-11-16"
+],
 "en/game/index.html": [
-"84eeb89379eb",
+"6e3fed490655",
 "2026-11-16"
 ],
 "en/game/knight-online.html": [
@@ -291,8 +651,16 @@
 "27e0cf69ea8a",
 "2026-11-16"
 ],
+"en/game/lost-ark.html": [
+"bdc9ea4baf60",
+"2026-11-16"
+],
 "en/game/marathon.html": [
 "dbafb4c56f16",
+"2026-11-16"
+],
+"en/game/marvel-rivals.html": [
+"c0143851545c",
 "2026-11-16"
 ],
 "en/game/metin2.html": [
@@ -307,16 +675,52 @@
 "1f90fd622391",
 "2026-11-16"
 ],
+"en/game/monster-hunter-wilds.html": [
+"70cc61b87338",
+"2026-11-16"
+],
+"en/game/nba-2k26.html": [
+"f80586768994",
+"2026-11-16"
+],
+"en/game/no-mans-sky.html": [
+"d891fb500b1f",
+"2026-11-16"
+],
+"en/game/old-school-runescape.html": [
+"8c084db4eba2",
+"2026-11-16"
+],
 "en/game/overwatch.html": [
 "daf68340070f",
+"2026-11-16"
+],
+"en/game/palworld.html": [
+"ca4c544c049f",
 "2026-11-16"
 ],
 "en/game/path-of-exile-2.html": [
 "08d0c3bbfeb5",
 "2026-11-16"
 ],
+"en/game/path-of-exile.html": [
+"e158ccba289a",
+"2026-11-16"
+],
+"en/game/pokemon-go.html": [
+"2a432cd6c5d3",
+"2026-11-16"
+],
+"en/game/pubg-mobile.html": [
+"5c9ecabb5c49",
+"2026-11-16"
+],
 "en/game/pubg.html": [
 "81f4cf13eb7d",
+"2026-11-16"
+],
+"en/game/red-dead-redemption-2.html": [
+"5de063bd9ac2",
 "2026-11-16"
 ],
 "en/game/rise-online.html": [
@@ -327,12 +731,88 @@
 "e061792d28c1",
 "2026-11-16"
 ],
+"en/game/rocket-league.html": [
+"4de0447310ac",
+"2026-11-16"
+],
+"en/game/rust.html": [
+"328a902d1eeb",
+"2026-11-16"
+],
+"en/game/sea-of-thieves.html": [
+"d6bcd6d25252",
+"2026-11-16"
+],
+"en/game/sid-meiers-civilization-vii.html": [
+"3a3e5aaa9c64",
+"2026-11-16"
+],
+"en/game/slay-the-spire-2.html": [
+"aa0058d1213d",
+"2026-11-16"
+],
+"en/game/stardew-valley.html": [
+"63f5d7daefe9",
+"2026-11-16"
+],
+"en/game/starfield.html": [
+"f4cadd5f3c32",
+"2026-11-16"
+],
+"en/game/street-fighter-6.html": [
+"01a41128d4d5",
+"2026-11-16"
+],
+"en/game/teamfight-tactics.html": [
+"913468bd7799",
+"2026-11-16"
+],
+"en/game/tekken-8.html": [
+"2ce5c208d7dc",
+"2026-11-16"
+],
+"en/game/terraria.html": [
+"398eadaa0aa6",
+"2026-11-16"
+],
+"en/game/the-finals.html": [
+"e6b264b079ff",
+"2026-11-16"
+],
+"en/game/the-witcher-3-wild-hunt.html": [
+"e03632f1d94e",
+"2026-11-16"
+],
+"en/game/tom-clancys-rainbow-six-siege.html": [
+"e9e53948d23a",
+"2026-11-16"
+],
 "en/game/valorant.html": [
 "b6f04c033b0f",
 "2026-11-16"
 ],
+"en/game/war-thunder.html": [
+"f9fb7d2a856b",
+"2026-11-16"
+],
+"en/game/warframe.html": [
+"b36e1c43face",
+"2026-11-16"
+],
+"en/game/world-of-tanks.html": [
+"7bc950d2e063",
+"2026-11-16"
+],
 "en/game/world-of-warcraft.html": [
 "9672d47412ed",
+"2026-11-16"
+],
+"en/game/wuthering-waves.html": [
+"661c46157812",
+"2026-11-16"
+],
+"en/game/zenless-zone-zero.html": [
+"eeb52485bdb4",
 "2026-11-16"
 ],
 "en/gta-6.html": [
@@ -416,7 +896,7 @@
 "2026-11-16"
 ],
 "en/index.html": [
-"a64b10570293",
+"48eabafbb188",
 "2026-11-16"
 ],
 "en/languages.html": [
@@ -532,23 +1012,111 @@
 "2026-11-09"
 ],
 "es/index.html": [
-"819cc3e71d7a",
+"a77ad4d637d8",
+"2026-11-16"
+],
+"es/juego/albion-online.html": [
+"faa510852055",
+"2026-11-16"
+],
+"es/juego/among-us.html": [
+"58948bb9fd2c",
+"2026-11-16"
+],
+"es/juego/apex-legends.html": [
+"c2332b8fd980",
+"2026-11-16"
+],
+"es/juego/arc-raiders.html": [
+"5690ce2cc0fa",
+"2026-11-16"
+],
+"es/juego/baldurs-gate-3.html": [
+"273eea37105d",
+"2026-11-16"
+],
+"es/juego/battlefield-6.html": [
+"f09249f8416b",
+"2026-11-16"
+],
+"es/juego/black-desert.html": [
+"e682e89aba72",
+"2026-11-16"
+],
+"es/juego/borderlands-4.html": [
+"22cdcb5842e9",
+"2026-11-16"
+],
+"es/juego/brawl-stars.html": [
+"7255aeada90f",
 "2026-11-16"
 ],
 "es/juego/call-of-duty.html": [
 "b48c736ae01c",
 "2026-11-16"
 ],
+"es/juego/clash-of-clans.html": [
+"c0f0e6e35074",
+"2026-11-16"
+],
+"es/juego/clash-royale.html": [
+"d315e61542d0",
+"2026-11-16"
+],
 "es/juego/counter-strike-2.html": [
 "1f050c23c701",
+"2026-11-16"
+],
+"es/juego/cyberpunk-2077.html": [
+"2edeca85732b",
+"2026-11-16"
+],
+"es/juego/dead-by-daylight.html": [
+"433f2169d3a5",
+"2026-11-16"
+],
+"es/juego/delta-force.html": [
+"572e9706b0f8",
+"2026-11-16"
+],
+"es/juego/destiny-2.html": [
+"02f807078e52",
 "2026-11-16"
 ],
 "es/juego/diablo-4.html": [
 "9ad160641afa",
 "2026-11-16"
 ],
+"es/juego/dota-2.html": [
+"4a92424fe46a",
+"2026-11-16"
+],
 "es/juego/ea-sports-fc.html": [
 "ab0c8d69871c",
+"2026-11-16"
+],
+"es/juego/efootball.html": [
+"f8ab4d208af9",
+"2026-11-16"
+],
+"es/juego/elden-ring.html": [
+"6e3bc290fc5c",
+"2026-11-16"
+],
+"es/juego/escape-from-tarkov.html": [
+"5976e0b58dc3",
+"2026-11-16"
+],
+"es/juego/euro-truck-simulator-2.html": [
+"42357f8a0015",
+"2026-11-16"
+],
+"es/juego/fall-guys.html": [
+"d7d642ac77fc",
+"2026-11-16"
+],
+"es/juego/final-fantasy-xiv.html": [
+"04e00d4b375c",
 "2026-11-16"
 ],
 "es/juego/football-manager-27.html": [
@@ -559,20 +1127,52 @@
 "4b01ebeed8b6",
 "2026-11-16"
 ],
+"es/juego/forza-horizon-5.html": [
+"913b1c8d5cf3",
+"2026-11-16"
+],
+"es/juego/free-fire.html": [
+"63ed5cd5be6c",
+"2026-11-16"
+],
 "es/juego/genshin-impact.html": [
 "83b71d8e6a15",
+"2026-11-16"
+],
+"es/juego/grand-theft-auto-v.html": [
+"fc00dab4a79d",
 "2026-11-16"
 ],
 "es/juego/gta-6.html": [
 "bb8e04e5cf0d",
 "2026-11-16"
 ],
+"es/juego/hades-ii.html": [
+"adfc44bb8639",
+"2026-11-16"
+],
 "es/juego/halo-campaign-evolved.html": [
 "bd754c71d475",
 "2026-11-16"
 ],
+"es/juego/hearthstone.html": [
+"b970ca30cf68",
+"2026-11-16"
+],
+"es/juego/helldivers-2.html": [
+"2d9fa2322538",
+"2026-11-16"
+],
+"es/juego/hollow-knight-silksong.html": [
+"494730b82148",
+"2026-11-16"
+],
+"es/juego/honkai-star-rail.html": [
+"dd42725f9e64",
+"2026-11-16"
+],
 "es/juego/index.html": [
-"4c37f99aa787",
+"575b070e14d5",
 "2026-11-16"
 ],
 "es/juego/knight-online.html": [
@@ -583,8 +1183,16 @@
 "112b9a570123",
 "2026-11-16"
 ],
+"es/juego/lost-ark.html": [
+"0e9b04e5fe11",
+"2026-11-16"
+],
 "es/juego/marathon.html": [
 "0cc2d38f8472",
+"2026-11-16"
+],
+"es/juego/marvel-rivals.html": [
+"a3466dc3cc83",
 "2026-11-16"
 ],
 "es/juego/metin2.html": [
@@ -599,16 +1207,52 @@
 "e22b61a859bf",
 "2026-11-16"
 ],
+"es/juego/monster-hunter-wilds.html": [
+"29b5b4a25829",
+"2026-11-16"
+],
+"es/juego/nba-2k26.html": [
+"735ca90ab366",
+"2026-11-16"
+],
+"es/juego/no-mans-sky.html": [
+"eb0da5a6d0d4",
+"2026-11-16"
+],
+"es/juego/old-school-runescape.html": [
+"c7e3fd6b15ef",
+"2026-11-16"
+],
 "es/juego/overwatch.html": [
 "22cde5825e73",
+"2026-11-16"
+],
+"es/juego/palworld.html": [
+"eb11fb3456da",
 "2026-11-16"
 ],
 "es/juego/path-of-exile-2.html": [
 "679cb36df78b",
 "2026-11-16"
 ],
+"es/juego/path-of-exile.html": [
+"28aa092065bb",
+"2026-11-16"
+],
+"es/juego/pokemon-go.html": [
+"3031d403668c",
+"2026-11-16"
+],
+"es/juego/pubg-mobile.html": [
+"53f7f9d58f4a",
+"2026-11-16"
+],
 "es/juego/pubg.html": [
 "16322fd7d71f",
+"2026-11-16"
+],
+"es/juego/red-dead-redemption-2.html": [
+"60d82f3c5846",
 "2026-11-16"
 ],
 "es/juego/rise-online.html": [
@@ -619,12 +1263,88 @@
 "c2c1b74c7498",
 "2026-11-16"
 ],
+"es/juego/rocket-league.html": [
+"82e8268d5d68",
+"2026-11-16"
+],
+"es/juego/rust.html": [
+"d30df8a3cc7e",
+"2026-11-16"
+],
+"es/juego/sea-of-thieves.html": [
+"f7cb5258bf9b",
+"2026-11-16"
+],
+"es/juego/sid-meiers-civilization-vii.html": [
+"7b36680dc318",
+"2026-11-16"
+],
+"es/juego/slay-the-spire-2.html": [
+"585528442ed5",
+"2026-11-16"
+],
+"es/juego/stardew-valley.html": [
+"1abe32466c8b",
+"2026-11-16"
+],
+"es/juego/starfield.html": [
+"4d090ded2f69",
+"2026-11-16"
+],
+"es/juego/street-fighter-6.html": [
+"68943c25b672",
+"2026-11-16"
+],
+"es/juego/teamfight-tactics.html": [
+"fa170f22e5e6",
+"2026-11-16"
+],
+"es/juego/tekken-8.html": [
+"d9bba9da91bd",
+"2026-11-16"
+],
+"es/juego/terraria.html": [
+"830194de32df",
+"2026-11-16"
+],
+"es/juego/the-finals.html": [
+"848e0f73b3da",
+"2026-11-16"
+],
+"es/juego/the-witcher-3-wild-hunt.html": [
+"8eaeb26f3930",
+"2026-11-16"
+],
+"es/juego/tom-clancys-rainbow-six-siege.html": [
+"1fcfec4d5d00",
+"2026-11-16"
+],
 "es/juego/valorant.html": [
 "dd857e03748b",
 "2026-11-16"
 ],
+"es/juego/war-thunder.html": [
+"63a98fc93260",
+"2026-11-16"
+],
+"es/juego/warframe.html": [
+"f6a51f7accef",
+"2026-11-16"
+],
+"es/juego/world-of-tanks.html": [
+"e394b9ec167a",
+"2026-11-16"
+],
 "es/juego/world-of-warcraft.html": [
 "9998ccc16cb2",
+"2026-11-16"
+],
+"es/juego/wuthering-waves.html": [
+"8778850b0f5d",
+"2026-11-16"
+],
+"es/juego/zenless-zone-zero.html": [
+"385ecc2b0c93",
 "2026-11-16"
 ],
 "es/juegos-gratis.html": [
@@ -640,7 +1360,7 @@
 "2026-11-14"
 ],
 "es/noticias-juegos.html": [
-"665e149969f4",
+"133656f00136",
 "2026-11-16"
 ],
 "es/ofertas.html": [
@@ -664,7 +1384,7 @@
 "2026-11-15"
 ],
 "fr/actus-jeux.html": [
-"d8d6c98c6e41",
+"8084ce4bb0a8",
 "2026-11-16"
 ],
 "fr/calendrier-sorties.html": [
@@ -752,23 +1472,111 @@
 "2026-11-16"
 ],
 "fr/index.html": [
-"a57ce8de6170",
+"781822ee5064",
+"2026-11-16"
+],
+"fr/jeu/albion-online.html": [
+"4315448214c3",
+"2026-11-16"
+],
+"fr/jeu/among-us.html": [
+"6be9b13d8517",
+"2026-11-16"
+],
+"fr/jeu/apex-legends.html": [
+"f338407a454d",
+"2026-11-16"
+],
+"fr/jeu/arc-raiders.html": [
+"eb6957592530",
+"2026-11-16"
+],
+"fr/jeu/baldurs-gate-3.html": [
+"e545e287f5b8",
+"2026-11-16"
+],
+"fr/jeu/battlefield-6.html": [
+"88b2ee0faf44",
+"2026-11-16"
+],
+"fr/jeu/black-desert.html": [
+"26c7b4bd917a",
+"2026-11-16"
+],
+"fr/jeu/borderlands-4.html": [
+"618fc48c24e2",
+"2026-11-16"
+],
+"fr/jeu/brawl-stars.html": [
+"1d478a4e2a75",
 "2026-11-16"
 ],
 "fr/jeu/call-of-duty.html": [
 "ae81822fd46c",
 "2026-11-16"
 ],
+"fr/jeu/clash-of-clans.html": [
+"0cac1c2e9f08",
+"2026-11-16"
+],
+"fr/jeu/clash-royale.html": [
+"4d43592030ae",
+"2026-11-16"
+],
 "fr/jeu/counter-strike-2.html": [
 "3d4faf7de35e",
+"2026-11-16"
+],
+"fr/jeu/cyberpunk-2077.html": [
+"48bd57f0e213",
+"2026-11-16"
+],
+"fr/jeu/dead-by-daylight.html": [
+"8a576c277870",
+"2026-11-16"
+],
+"fr/jeu/delta-force.html": [
+"11f9751ddba1",
+"2026-11-16"
+],
+"fr/jeu/destiny-2.html": [
+"82b950a5307a",
 "2026-11-16"
 ],
 "fr/jeu/diablo-4.html": [
 "807746632e9d",
 "2026-11-16"
 ],
+"fr/jeu/dota-2.html": [
+"1b8faf0a5758",
+"2026-11-16"
+],
 "fr/jeu/ea-sports-fc.html": [
 "67d7ae12f1ba",
+"2026-11-16"
+],
+"fr/jeu/efootball.html": [
+"af482adc183c",
+"2026-11-16"
+],
+"fr/jeu/elden-ring.html": [
+"7d78715c45d5",
+"2026-11-16"
+],
+"fr/jeu/escape-from-tarkov.html": [
+"e0d960533db9",
+"2026-11-16"
+],
+"fr/jeu/euro-truck-simulator-2.html": [
+"c8a7f1152c6a",
+"2026-11-16"
+],
+"fr/jeu/fall-guys.html": [
+"68f36b13ca96",
+"2026-11-16"
+],
+"fr/jeu/final-fantasy-xiv.html": [
+"c2d28f0f49fa",
 "2026-11-16"
 ],
 "fr/jeu/football-manager-27.html": [
@@ -779,20 +1587,52 @@
 "173d0cb8a569",
 "2026-11-16"
 ],
+"fr/jeu/forza-horizon-5.html": [
+"aba450e9900e",
+"2026-11-16"
+],
+"fr/jeu/free-fire.html": [
+"00e30232bd5c",
+"2026-11-16"
+],
 "fr/jeu/genshin-impact.html": [
 "d78b8be84079",
+"2026-11-16"
+],
+"fr/jeu/grand-theft-auto-v.html": [
+"a250ad406067",
 "2026-11-16"
 ],
 "fr/jeu/gta-6.html": [
 "f2df57254b45",
 "2026-11-16"
 ],
+"fr/jeu/hades-ii.html": [
+"faaeaa7facd1",
+"2026-11-16"
+],
 "fr/jeu/halo-campaign-evolved.html": [
 "1827540b956b",
 "2026-11-16"
 ],
+"fr/jeu/hearthstone.html": [
+"525a824d17c0",
+"2026-11-16"
+],
+"fr/jeu/helldivers-2.html": [
+"763865d5ca6c",
+"2026-11-16"
+],
+"fr/jeu/hollow-knight-silksong.html": [
+"7ffed0e90137",
+"2026-11-16"
+],
+"fr/jeu/honkai-star-rail.html": [
+"815ebdc9b6d3",
+"2026-11-16"
+],
 "fr/jeu/index.html": [
-"3946845a41de",
+"751597edfa49",
 "2026-11-16"
 ],
 "fr/jeu/knight-online.html": [
@@ -803,8 +1643,16 @@
 "481cfb7134b2",
 "2026-11-16"
 ],
+"fr/jeu/lost-ark.html": [
+"8779ab4ac300",
+"2026-11-16"
+],
 "fr/jeu/marathon.html": [
 "da2707c4430d",
+"2026-11-16"
+],
+"fr/jeu/marvel-rivals.html": [
+"05eac775551b",
 "2026-11-16"
 ],
 "fr/jeu/metin2.html": [
@@ -819,16 +1667,52 @@
 "7a2aaf8fb9dd",
 "2026-11-16"
 ],
+"fr/jeu/monster-hunter-wilds.html": [
+"7e6bb410e0cf",
+"2026-11-16"
+],
+"fr/jeu/nba-2k26.html": [
+"c0725ba243f1",
+"2026-11-16"
+],
+"fr/jeu/no-mans-sky.html": [
+"94ef6412584f",
+"2026-11-16"
+],
+"fr/jeu/old-school-runescape.html": [
+"b0367689c67f",
+"2026-11-16"
+],
 "fr/jeu/overwatch.html": [
 "93ba8ed260b1",
+"2026-11-16"
+],
+"fr/jeu/palworld.html": [
+"e20d808a3cfd",
 "2026-11-16"
 ],
 "fr/jeu/path-of-exile-2.html": [
 "8809ca9d593f",
 "2026-11-16"
 ],
+"fr/jeu/path-of-exile.html": [
+"b34573fac850",
+"2026-11-16"
+],
+"fr/jeu/pokemon-go.html": [
+"eba0d050bee0",
+"2026-11-16"
+],
+"fr/jeu/pubg-mobile.html": [
+"7a2600813e02",
+"2026-11-16"
+],
 "fr/jeu/pubg.html": [
 "41b54d18b5d7",
+"2026-11-16"
+],
+"fr/jeu/red-dead-redemption-2.html": [
+"ea17a371f744",
 "2026-11-16"
 ],
 "fr/jeu/rise-online.html": [
@@ -839,12 +1723,88 @@
 "683820669ccb",
 "2026-11-16"
 ],
+"fr/jeu/rocket-league.html": [
+"4b0e0eb094cc",
+"2026-11-16"
+],
+"fr/jeu/rust.html": [
+"cb74f1f441bb",
+"2026-11-16"
+],
+"fr/jeu/sea-of-thieves.html": [
+"7d4f556b8479",
+"2026-11-16"
+],
+"fr/jeu/sid-meiers-civilization-vii.html": [
+"3aa534a3b8a3",
+"2026-11-16"
+],
+"fr/jeu/slay-the-spire-2.html": [
+"8ea1953257e0",
+"2026-11-16"
+],
+"fr/jeu/stardew-valley.html": [
+"5249b6b440ad",
+"2026-11-16"
+],
+"fr/jeu/starfield.html": [
+"575eb8636a19",
+"2026-11-16"
+],
+"fr/jeu/street-fighter-6.html": [
+"b813b22c947a",
+"2026-11-16"
+],
+"fr/jeu/teamfight-tactics.html": [
+"b5201a0ab5e5",
+"2026-11-16"
+],
+"fr/jeu/tekken-8.html": [
+"f0249f3e63d3",
+"2026-11-16"
+],
+"fr/jeu/terraria.html": [
+"400bba36f43b",
+"2026-11-16"
+],
+"fr/jeu/the-finals.html": [
+"111847a880b2",
+"2026-11-16"
+],
+"fr/jeu/the-witcher-3-wild-hunt.html": [
+"13de761c3fab",
+"2026-11-16"
+],
+"fr/jeu/tom-clancys-rainbow-six-siege.html": [
+"61b9701e5a75",
+"2026-11-16"
+],
 "fr/jeu/valorant.html": [
 "7b36e33cb16d",
 "2026-11-16"
 ],
+"fr/jeu/war-thunder.html": [
+"7b5737c45773",
+"2026-11-16"
+],
+"fr/jeu/warframe.html": [
+"14f894a15839",
+"2026-11-16"
+],
+"fr/jeu/world-of-tanks.html": [
+"df6877691ef0",
+"2026-11-16"
+],
 "fr/jeu/world-of-warcraft.html": [
 "63fd8e8fb8cc",
+"2026-11-16"
+],
+"fr/jeu/wuthering-waves.html": [
+"cc0d707181b7",
+"2026-11-16"
+],
+"fr/jeu/zenless-zone-zero.html": [
+"868f2cb706e6",
 "2026-11-16"
 ],
 "fr/jeux-gratuits.html": [
@@ -912,7 +1872,7 @@
 "2026-11-15"
 ],
 "index.html": [
-"060eaba2e8ce",
+"3f59ed4a8f77",
 "2026-11-16"
 ],
 "indirimler.html": [
@@ -932,23 +1892,111 @@
 "2026-11-16"
 ],
 "nl/gamenieuws.html": [
-"02313e098e10",
+"da3e971ab6a8",
+"2026-11-16"
+],
+"nl/games/albion-online.html": [
+"3b08042bb91b",
+"2026-11-16"
+],
+"nl/games/among-us.html": [
+"5e2e216ecb19",
+"2026-11-16"
+],
+"nl/games/apex-legends.html": [
+"ddc81b83dbb3",
+"2026-11-16"
+],
+"nl/games/arc-raiders.html": [
+"a9e3a9a78912",
+"2026-11-16"
+],
+"nl/games/baldurs-gate-3.html": [
+"4f410b85047a",
+"2026-11-16"
+],
+"nl/games/battlefield-6.html": [
+"153a22d5ab84",
+"2026-11-16"
+],
+"nl/games/black-desert.html": [
+"1db7bc60aa12",
+"2026-11-16"
+],
+"nl/games/borderlands-4.html": [
+"51597cf5e948",
+"2026-11-16"
+],
+"nl/games/brawl-stars.html": [
+"22f2303f860a",
 "2026-11-16"
 ],
 "nl/games/call-of-duty.html": [
 "c21dcd89ec20",
 "2026-11-16"
 ],
+"nl/games/clash-of-clans.html": [
+"7430e8379d40",
+"2026-11-16"
+],
+"nl/games/clash-royale.html": [
+"14831237afdc",
+"2026-11-16"
+],
 "nl/games/counter-strike-2.html": [
 "2b18d115ddc8",
+"2026-11-16"
+],
+"nl/games/cyberpunk-2077.html": [
+"fe999c2ede05",
+"2026-11-16"
+],
+"nl/games/dead-by-daylight.html": [
+"97eec05ba4c9",
+"2026-11-16"
+],
+"nl/games/delta-force.html": [
+"55f11723636d",
+"2026-11-16"
+],
+"nl/games/destiny-2.html": [
+"c1ab37d028f8",
 "2026-11-16"
 ],
 "nl/games/diablo-4.html": [
 "ffab7571a117",
 "2026-11-16"
 ],
+"nl/games/dota-2.html": [
+"f9e519b47ecb",
+"2026-11-16"
+],
 "nl/games/ea-sports-fc.html": [
 "b1621a9a51a2",
+"2026-11-16"
+],
+"nl/games/efootball.html": [
+"141536c9e698",
+"2026-11-16"
+],
+"nl/games/elden-ring.html": [
+"e94da79d2160",
+"2026-11-16"
+],
+"nl/games/escape-from-tarkov.html": [
+"db6471c9cb32",
+"2026-11-16"
+],
+"nl/games/euro-truck-simulator-2.html": [
+"a843af75105a",
+"2026-11-16"
+],
+"nl/games/fall-guys.html": [
+"1995c171eda2",
+"2026-11-16"
+],
+"nl/games/final-fantasy-xiv.html": [
+"f83ef2812fab",
 "2026-11-16"
 ],
 "nl/games/football-manager-27.html": [
@@ -959,20 +2007,52 @@
 "7886648970ec",
 "2026-11-16"
 ],
+"nl/games/forza-horizon-5.html": [
+"afc05a0c5ec0",
+"2026-11-16"
+],
+"nl/games/free-fire.html": [
+"27a578f7e864",
+"2026-11-16"
+],
 "nl/games/genshin-impact.html": [
 "224b12802e17",
+"2026-11-16"
+],
+"nl/games/grand-theft-auto-v.html": [
+"8c749759a0fe",
 "2026-11-16"
 ],
 "nl/games/gta-6.html": [
 "b1e077a14617",
 "2026-11-16"
 ],
+"nl/games/hades-ii.html": [
+"79a157871642",
+"2026-11-16"
+],
 "nl/games/halo-campaign-evolved.html": [
 "7e095e0436cc",
 "2026-11-16"
 ],
+"nl/games/hearthstone.html": [
+"5ac77b4e13d7",
+"2026-11-16"
+],
+"nl/games/helldivers-2.html": [
+"c7ec494e7626",
+"2026-11-16"
+],
+"nl/games/hollow-knight-silksong.html": [
+"6e8ed3020492",
+"2026-11-16"
+],
+"nl/games/honkai-star-rail.html": [
+"670555af8779",
+"2026-11-16"
+],
 "nl/games/index.html": [
-"9e6d086dd4b2",
+"61f9796089f5",
 "2026-11-16"
 ],
 "nl/games/knight-online.html": [
@@ -983,8 +2063,16 @@
 "e130aba5ac28",
 "2026-11-16"
 ],
+"nl/games/lost-ark.html": [
+"9cba3ac056e9",
+"2026-11-16"
+],
 "nl/games/marathon.html": [
 "458843957255",
+"2026-11-16"
+],
+"nl/games/marvel-rivals.html": [
+"d81b77c5ae10",
 "2026-11-16"
 ],
 "nl/games/metin2.html": [
@@ -999,16 +2087,52 @@
 "21091ebc9591",
 "2026-11-16"
 ],
+"nl/games/monster-hunter-wilds.html": [
+"420097adc359",
+"2026-11-16"
+],
+"nl/games/nba-2k26.html": [
+"188726483e81",
+"2026-11-16"
+],
+"nl/games/no-mans-sky.html": [
+"36dde91ae5de",
+"2026-11-16"
+],
+"nl/games/old-school-runescape.html": [
+"3c9bd6212b50",
+"2026-11-16"
+],
 "nl/games/overwatch.html": [
 "2e20b674cb72",
+"2026-11-16"
+],
+"nl/games/palworld.html": [
+"1da8a14310d9",
 "2026-11-16"
 ],
 "nl/games/path-of-exile-2.html": [
 "c7854f36c5c5",
 "2026-11-16"
 ],
+"nl/games/path-of-exile.html": [
+"f8454e74f1b2",
+"2026-11-16"
+],
+"nl/games/pokemon-go.html": [
+"3e924f406018",
+"2026-11-16"
+],
+"nl/games/pubg-mobile.html": [
+"fe07ac0ea6e7",
+"2026-11-16"
+],
 "nl/games/pubg.html": [
 "1e14509d468b",
+"2026-11-16"
+],
+"nl/games/red-dead-redemption-2.html": [
+"82578f896a77",
 "2026-11-16"
 ],
 "nl/games/rise-online.html": [
@@ -1019,12 +2143,88 @@
 "be5aa82c9413",
 "2026-11-16"
 ],
+"nl/games/rocket-league.html": [
+"b84b01c5bcef",
+"2026-11-16"
+],
+"nl/games/rust.html": [
+"c0248b0c9d1b",
+"2026-11-16"
+],
+"nl/games/sea-of-thieves.html": [
+"28369d4ac064",
+"2026-11-16"
+],
+"nl/games/sid-meiers-civilization-vii.html": [
+"434f2b07f9d3",
+"2026-11-16"
+],
+"nl/games/slay-the-spire-2.html": [
+"2202abb738aa",
+"2026-11-16"
+],
+"nl/games/stardew-valley.html": [
+"5685d37546ad",
+"2026-11-16"
+],
+"nl/games/starfield.html": [
+"65c2c022ab10",
+"2026-11-16"
+],
+"nl/games/street-fighter-6.html": [
+"07732a4ee69e",
+"2026-11-16"
+],
+"nl/games/teamfight-tactics.html": [
+"fe215ccab65f",
+"2026-11-16"
+],
+"nl/games/tekken-8.html": [
+"6f608f2a5f23",
+"2026-11-16"
+],
+"nl/games/terraria.html": [
+"8f2e293702a7",
+"2026-11-16"
+],
+"nl/games/the-finals.html": [
+"0d68c6332fca",
+"2026-11-16"
+],
+"nl/games/the-witcher-3-wild-hunt.html": [
+"0c4da1ce9841",
+"2026-11-16"
+],
+"nl/games/tom-clancys-rainbow-six-siege.html": [
+"27ef113a559f",
+"2026-11-16"
+],
 "nl/games/valorant.html": [
 "931a5341daaa",
 "2026-11-16"
 ],
+"nl/games/war-thunder.html": [
+"17cb1c02a95a",
+"2026-11-16"
+],
+"nl/games/warframe.html": [
+"9413e104f91a",
+"2026-11-16"
+],
+"nl/games/world-of-tanks.html": [
+"a2edeeefa61a",
+"2026-11-16"
+],
 "nl/games/world-of-warcraft.html": [
 "a083a45c0fd5",
+"2026-11-16"
+],
+"nl/games/wuthering-waves.html": [
+"84588e989e10",
+"2026-11-16"
+],
+"nl/games/zenless-zone-zero.html": [
+"3b8a569c49b3",
 "2026-11-16"
 ],
 "nl/geruchten.html": [
@@ -1112,7 +2312,7 @@
 "2026-11-16"
 ],
 "nl/index.html": [
-"95c5326f968a",
+"614034a96801",
 "2026-11-16"
 ],
 "nl/nieuws.html": [
@@ -1140,23 +2340,111 @@
 "2026-11-16"
 ],
 "oyun-haberleri.html": [
-"2f320ff8c193",
+"e37c407bdfd6",
+"2026-11-16"
+],
+"oyun/albion-online.html": [
+"7b936bf99ac7",
+"2026-11-16"
+],
+"oyun/among-us.html": [
+"3862f3fe82a7",
+"2026-11-16"
+],
+"oyun/apex-legends.html": [
+"e2525b9c1e0f",
+"2026-11-16"
+],
+"oyun/arc-raiders.html": [
+"1f5831de85a9",
+"2026-11-16"
+],
+"oyun/baldurs-gate-3.html": [
+"4221fc3ec783",
+"2026-11-16"
+],
+"oyun/battlefield-6.html": [
+"6576228dc116",
+"2026-11-16"
+],
+"oyun/black-desert.html": [
+"7a485af3818d",
+"2026-11-16"
+],
+"oyun/borderlands-4.html": [
+"95175b5b89ba",
+"2026-11-16"
+],
+"oyun/brawl-stars.html": [
+"704b70139e6b",
 "2026-11-16"
 ],
 "oyun/call-of-duty.html": [
 "a77ca39eb27a",
 "2026-11-16"
 ],
+"oyun/clash-of-clans.html": [
+"df32a9dad202",
+"2026-11-16"
+],
+"oyun/clash-royale.html": [
+"a33923f00546",
+"2026-11-16"
+],
 "oyun/counter-strike-2.html": [
 "cac4ed916ef0",
+"2026-11-16"
+],
+"oyun/cyberpunk-2077.html": [
+"13ac523fbe52",
+"2026-11-16"
+],
+"oyun/dead-by-daylight.html": [
+"ad6d29dd6045",
+"2026-11-16"
+],
+"oyun/delta-force.html": [
+"abb413c59a9b",
+"2026-11-16"
+],
+"oyun/destiny-2.html": [
+"e3cf29f77e65",
 "2026-11-16"
 ],
 "oyun/diablo-4.html": [
 "51534595e65d",
 "2026-11-16"
 ],
+"oyun/dota-2.html": [
+"bd8f89b8adfb",
+"2026-11-16"
+],
 "oyun/ea-sports-fc.html": [
 "5803eed2215b",
+"2026-11-16"
+],
+"oyun/efootball.html": [
+"c701336f2799",
+"2026-11-16"
+],
+"oyun/elden-ring.html": [
+"d614452bef7b",
+"2026-11-16"
+],
+"oyun/escape-from-tarkov.html": [
+"2c36f3af2574",
+"2026-11-16"
+],
+"oyun/euro-truck-simulator-2.html": [
+"36900f1b67e6",
+"2026-11-16"
+],
+"oyun/fall-guys.html": [
+"2f79ebd0cb71",
+"2026-11-16"
+],
+"oyun/final-fantasy-xiv.html": [
+"7711bbda3b7f",
 "2026-11-16"
 ],
 "oyun/football-manager-27.html": [
@@ -1167,20 +2455,52 @@
 "5d51f1ea404a",
 "2026-11-16"
 ],
+"oyun/forza-horizon-5.html": [
+"6aefc64e9ea4",
+"2026-11-16"
+],
+"oyun/free-fire.html": [
+"53e7fd0746a8",
+"2026-11-16"
+],
 "oyun/genshin-impact.html": [
 "8b8684c1d03e",
+"2026-11-16"
+],
+"oyun/grand-theft-auto-v.html": [
+"fe988ce595a6",
 "2026-11-16"
 ],
 "oyun/gta-6.html": [
 "4e6ccd84064d",
 "2026-11-16"
 ],
+"oyun/hades-ii.html": [
+"80fb74742fa5",
+"2026-11-16"
+],
 "oyun/halo-campaign-evolved.html": [
 "0ea61809a45b",
 "2026-11-16"
 ],
+"oyun/hearthstone.html": [
+"5606b7ed4ab3",
+"2026-11-16"
+],
+"oyun/helldivers-2.html": [
+"81b753cb738e",
+"2026-11-16"
+],
+"oyun/hollow-knight-silksong.html": [
+"781cc012d78f",
+"2026-11-16"
+],
+"oyun/honkai-star-rail.html": [
+"57d400dff497",
+"2026-11-16"
+],
 "oyun/index.html": [
-"70f0c61eb52f",
+"70ed7afeea93",
 "2026-11-16"
 ],
 "oyun/knight-online.html": [
@@ -1191,8 +2511,16 @@
 "63e2f822c6e3",
 "2026-11-16"
 ],
+"oyun/lost-ark.html": [
+"3071250ff6b4",
+"2026-11-16"
+],
 "oyun/marathon.html": [
 "418261969517",
+"2026-11-16"
+],
+"oyun/marvel-rivals.html": [
+"fde0fc0965e4",
 "2026-11-16"
 ],
 "oyun/metin2.html": [
@@ -1207,16 +2535,52 @@
 "0141d965cf3a",
 "2026-11-16"
 ],
+"oyun/monster-hunter-wilds.html": [
+"e8ddf984ee15",
+"2026-11-16"
+],
+"oyun/nba-2k26.html": [
+"0ec8e388b82d",
+"2026-11-16"
+],
+"oyun/no-mans-sky.html": [
+"4d76e5868c06",
+"2026-11-16"
+],
+"oyun/old-school-runescape.html": [
+"9583c191a13a",
+"2026-11-16"
+],
 "oyun/overwatch.html": [
 "4c60b197fcc4",
+"2026-11-16"
+],
+"oyun/palworld.html": [
+"8e2724af96d1",
 "2026-11-16"
 ],
 "oyun/path-of-exile-2.html": [
 "3768729205a0",
 "2026-11-16"
 ],
+"oyun/path-of-exile.html": [
+"0953b351a4b9",
+"2026-11-16"
+],
+"oyun/pokemon-go.html": [
+"96b1d4dbac98",
+"2026-11-16"
+],
+"oyun/pubg-mobile.html": [
+"0bc316c7df54",
+"2026-11-16"
+],
 "oyun/pubg.html": [
 "bafc1b21b9a8",
+"2026-11-16"
+],
+"oyun/red-dead-redemption-2.html": [
+"e8eca989065c",
 "2026-11-16"
 ],
 "oyun/rise-online.html": [
@@ -1227,12 +2591,88 @@
 "ac8664c94d91",
 "2026-11-16"
 ],
+"oyun/rocket-league.html": [
+"5bb77620e0cd",
+"2026-11-16"
+],
+"oyun/rust.html": [
+"4345b764cd93",
+"2026-11-16"
+],
+"oyun/sea-of-thieves.html": [
+"af1c35b21a92",
+"2026-11-16"
+],
+"oyun/sid-meiers-civilization-vii.html": [
+"ce2cc4a618fc",
+"2026-11-16"
+],
+"oyun/slay-the-spire-2.html": [
+"bac0189e08c1",
+"2026-11-16"
+],
+"oyun/stardew-valley.html": [
+"48e1c98c4a02",
+"2026-11-16"
+],
+"oyun/starfield.html": [
+"30b3b02b37d6",
+"2026-11-16"
+],
+"oyun/street-fighter-6.html": [
+"c60583a092f9",
+"2026-11-16"
+],
+"oyun/teamfight-tactics.html": [
+"cb0538922622",
+"2026-11-16"
+],
+"oyun/tekken-8.html": [
+"fc43eaae5a27",
+"2026-11-16"
+],
+"oyun/terraria.html": [
+"02cfa2e0544c",
+"2026-11-16"
+],
+"oyun/the-finals.html": [
+"36b33a654e35",
+"2026-11-16"
+],
+"oyun/the-witcher-3-wild-hunt.html": [
+"af2c2a2c805b",
+"2026-11-16"
+],
+"oyun/tom-clancys-rainbow-six-siege.html": [
+"5c95d811e363",
+"2026-11-16"
+],
 "oyun/valorant.html": [
 "18e48736db1c",
 "2026-11-16"
 ],
+"oyun/war-thunder.html": [
+"df0b50761588",
+"2026-11-16"
+],
+"oyun/warframe.html": [
+"812ca4bf178c",
+"2026-11-16"
+],
+"oyun/world-of-tanks.html": [
+"b9fa97ce229a",
+"2026-11-16"
+],
 "oyun/world-of-warcraft.html": [
 "995702209f6b",
+"2026-11-16"
+],
+"oyun/wuthering-waves.html": [
+"ee1014d1d44d",
+"2026-11-16"
+],
+"oyun/zenless-zone-zero.html": [
+"6976baf15f81",
 "2026-11-16"
 ],
 "oyunlar.html": [
@@ -1420,7 +2860,7 @@
 "2026-11-16"
 ],
 "zh/index.html": [
-"0cd111479d51",
+"24bf97a99c68",
 "2026-11-16"
 ],
 "zh/laiyuan.html": [
@@ -1444,23 +2884,111 @@
 "2026-11-16"
 ],
 "zh/youxi-xinwen.html": [
-"6385f39564f6",
+"50ce5b437d5c",
+"2026-11-16"
+],
+"zh/youxi/albion-online.html": [
+"79cd651f3cfa",
+"2026-11-16"
+],
+"zh/youxi/among-us.html": [
+"ffafe3766f3f",
+"2026-11-16"
+],
+"zh/youxi/apex-legends.html": [
+"220625f002fe",
+"2026-11-16"
+],
+"zh/youxi/arc-raiders.html": [
+"80ea8ff8fee7",
+"2026-11-16"
+],
+"zh/youxi/baldurs-gate-3.html": [
+"d70f0fe1b044",
+"2026-11-16"
+],
+"zh/youxi/battlefield-6.html": [
+"dccf6738979e",
+"2026-11-16"
+],
+"zh/youxi/black-desert.html": [
+"0ac2abaca783",
+"2026-11-16"
+],
+"zh/youxi/borderlands-4.html": [
+"275363dadcb8",
+"2026-11-16"
+],
+"zh/youxi/brawl-stars.html": [
+"f482760ad647",
 "2026-11-16"
 ],
 "zh/youxi/call-of-duty.html": [
 "dd0b9f979525",
 "2026-11-16"
 ],
+"zh/youxi/clash-of-clans.html": [
+"662122fed7e4",
+"2026-11-16"
+],
+"zh/youxi/clash-royale.html": [
+"5be391ec8eb1",
+"2026-11-16"
+],
 "zh/youxi/counter-strike-2.html": [
 "5c4bf9bdcb0e",
+"2026-11-16"
+],
+"zh/youxi/cyberpunk-2077.html": [
+"4fc2aed71454",
+"2026-11-16"
+],
+"zh/youxi/dead-by-daylight.html": [
+"4db4d998499e",
+"2026-11-16"
+],
+"zh/youxi/delta-force.html": [
+"dd4136921bf8",
+"2026-11-16"
+],
+"zh/youxi/destiny-2.html": [
+"3d5234173f0a",
 "2026-11-16"
 ],
 "zh/youxi/diablo-4.html": [
 "f106a6f967b5",
 "2026-11-16"
 ],
+"zh/youxi/dota-2.html": [
+"37fd7ca561e1",
+"2026-11-16"
+],
 "zh/youxi/ea-sports-fc.html": [
 "1c6c9c60ebb0",
+"2026-11-16"
+],
+"zh/youxi/efootball.html": [
+"f13faebbc68d",
+"2026-11-16"
+],
+"zh/youxi/elden-ring.html": [
+"8e5b85055c21",
+"2026-11-16"
+],
+"zh/youxi/escape-from-tarkov.html": [
+"dd5b81d22255",
+"2026-11-16"
+],
+"zh/youxi/euro-truck-simulator-2.html": [
+"22996448724d",
+"2026-11-16"
+],
+"zh/youxi/fall-guys.html": [
+"80371da3e26c",
+"2026-11-16"
+],
+"zh/youxi/final-fantasy-xiv.html": [
+"c81cfff39c9a",
 "2026-11-16"
 ],
 "zh/youxi/football-manager-27.html": [
@@ -1471,20 +2999,52 @@
 "85495bafee3e",
 "2026-11-16"
 ],
+"zh/youxi/forza-horizon-5.html": [
+"fd7cedc3330b",
+"2026-11-16"
+],
+"zh/youxi/free-fire.html": [
+"dd03e2fa6eb7",
+"2026-11-16"
+],
 "zh/youxi/genshin-impact.html": [
 "2024f050acb4",
+"2026-11-16"
+],
+"zh/youxi/grand-theft-auto-v.html": [
+"c1455ece3fcb",
 "2026-11-16"
 ],
 "zh/youxi/gta-6.html": [
 "8ebb9310876d",
 "2026-11-16"
 ],
+"zh/youxi/hades-ii.html": [
+"14879988b3bf",
+"2026-11-16"
+],
 "zh/youxi/halo-campaign-evolved.html": [
 "afe09e3607c9",
 "2026-11-16"
 ],
+"zh/youxi/hearthstone.html": [
+"84f8cc4f4416",
+"2026-11-16"
+],
+"zh/youxi/helldivers-2.html": [
+"482592bf0f9d",
+"2026-11-16"
+],
+"zh/youxi/hollow-knight-silksong.html": [
+"1712c3852794",
+"2026-11-16"
+],
+"zh/youxi/honkai-star-rail.html": [
+"7d07a077dc3e",
+"2026-11-16"
+],
 "zh/youxi/index.html": [
-"d32c453170b9",
+"5a0a4e6a95a0",
 "2026-11-16"
 ],
 "zh/youxi/knight-online.html": [
@@ -1495,8 +3055,16 @@
 "4f0d2eaa732f",
 "2026-11-16"
 ],
+"zh/youxi/lost-ark.html": [
+"70a6bbd724c7",
+"2026-11-16"
+],
 "zh/youxi/marathon.html": [
 "613212df1413",
+"2026-11-16"
+],
+"zh/youxi/marvel-rivals.html": [
+"7834d3d613f3",
 "2026-11-16"
 ],
 "zh/youxi/metin2.html": [
@@ -1511,16 +3079,52 @@
 "e3edb4384601",
 "2026-11-16"
 ],
+"zh/youxi/monster-hunter-wilds.html": [
+"d06254c664c6",
+"2026-11-16"
+],
+"zh/youxi/nba-2k26.html": [
+"9677213c8214",
+"2026-11-16"
+],
+"zh/youxi/no-mans-sky.html": [
+"5d641cc15b55",
+"2026-11-16"
+],
+"zh/youxi/old-school-runescape.html": [
+"f76cf1dbcc3a",
+"2026-11-16"
+],
 "zh/youxi/overwatch.html": [
 "f77c2a684378",
+"2026-11-16"
+],
+"zh/youxi/palworld.html": [
+"51ce7814de4e",
 "2026-11-16"
 ],
 "zh/youxi/path-of-exile-2.html": [
 "ceead1ac87ad",
 "2026-11-16"
 ],
+"zh/youxi/path-of-exile.html": [
+"f631e15ba530",
+"2026-11-16"
+],
+"zh/youxi/pokemon-go.html": [
+"1caa77d228b7",
+"2026-11-16"
+],
+"zh/youxi/pubg-mobile.html": [
+"37ed3b93db9d",
+"2026-11-16"
+],
 "zh/youxi/pubg.html": [
 "cfe601f421a7",
+"2026-11-16"
+],
+"zh/youxi/red-dead-redemption-2.html": [
+"9d038a53abfb",
 "2026-11-16"
 ],
 "zh/youxi/rise-online.html": [
@@ -1531,12 +3135,88 @@
 "4d77d7d53c2d",
 "2026-11-16"
 ],
+"zh/youxi/rocket-league.html": [
+"b3fe06d5eb2b",
+"2026-11-16"
+],
+"zh/youxi/rust.html": [
+"af8d27866e43",
+"2026-11-16"
+],
+"zh/youxi/sea-of-thieves.html": [
+"d6fb40352a50",
+"2026-11-16"
+],
+"zh/youxi/sid-meiers-civilization-vii.html": [
+"93659d9c0b88",
+"2026-11-16"
+],
+"zh/youxi/slay-the-spire-2.html": [
+"57488111c2ea",
+"2026-11-16"
+],
+"zh/youxi/stardew-valley.html": [
+"996dedbc8f65",
+"2026-11-16"
+],
+"zh/youxi/starfield.html": [
+"cbb323d6ef77",
+"2026-11-16"
+],
+"zh/youxi/street-fighter-6.html": [
+"83db4ec39ea4",
+"2026-11-16"
+],
+"zh/youxi/teamfight-tactics.html": [
+"43177d164475",
+"2026-11-16"
+],
+"zh/youxi/tekken-8.html": [
+"b136c3ae28c1",
+"2026-11-16"
+],
+"zh/youxi/terraria.html": [
+"1609dbbf369d",
+"2026-11-16"
+],
+"zh/youxi/the-finals.html": [
+"c4a55efa4939",
+"2026-11-16"
+],
+"zh/youxi/the-witcher-3-wild-hunt.html": [
+"9a29f37809bd",
+"2026-11-16"
+],
+"zh/youxi/tom-clancys-rainbow-six-siege.html": [
+"44943a1ee75a",
+"2026-11-16"
+],
 "zh/youxi/valorant.html": [
 "908ae3cbcf75",
 "2026-11-16"
 ],
+"zh/youxi/war-thunder.html": [
+"8858aae46ab8",
+"2026-11-16"
+],
+"zh/youxi/warframe.html": [
+"79bb70734a4b",
+"2026-11-16"
+],
+"zh/youxi/world-of-tanks.html": [
+"ccc7ca78f179",
+"2026-11-16"
+],
 "zh/youxi/world-of-warcraft.html": [
 "c2d647e4434b",
+"2026-11-16"
+],
+"zh/youxi/wuthering-waves.html": [
+"5ab98c42461a",
+"2026-11-16"
+],
+"zh/youxi/zenless-zone-zero.html": [
+"d8aa752daee2",
 "2026-11-16"
 ],
 "zh/yuyan.html": [
