@@ -102,7 +102,7 @@ const duzen = (s: Sahne, haber: Haber) => {
 
 export const Baslik: React.FC<SahneProps> = ({s, t, haber}) => {
   const d = duzen(s, haber);
-  const yol = sahneYolu(s, baslikKamera(s, haber), d.tuval);
+  const yol = sahneYolu(s, baslikKamera(s, haber), d.tuval, baslikEngeller(s, haber));
   const vurgular = vurguSiralari(d.v.baslik.split(/\s+/).filter(Boolean), d.v.vurgu);
   const serit = cikis(ilerle(t, s.bas + 0.2, 0.3));
   let j = 0;
@@ -231,5 +231,5 @@ export const baslikEngeller = (s: Sahne, haber: Haber): Engel[] => {
 // Maskot pencerenin üst kenarından kehribar şeridin sağ ucuna iner (ikisi de yazıların sağındaki sütunda).
 export const baslikNoktalar = (s: Sahne, haber: Haber): Nokta[] => {
   const d = duzen(s, haber);
-  return kenarDuraklari(sahneYolu(s, baslikKamera(s, haber), d.tuval), [0, SERIT_Y], baslikEngeller(s, haber));
+  return kenarDuraklari(sahneYolu(s, baslikKamera(s, haber), d.tuval, baslikEngeller(s, haber)), [0, SERIT_Y], baslikEngeller(s, haber));
 };

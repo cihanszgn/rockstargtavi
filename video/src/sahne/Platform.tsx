@@ -136,7 +136,7 @@ const simdiki = (d: ReturnType<typeof duzen>, t: number) => {
 export const Platform: React.FC<SahneProps> = ({s, t, haber}) => {
   const d = duzen(s, haber);
   const {v} = d;
-  const yol = sahneYolu(s, platformKamera(s, haber), d.tuval);
+  const yol = sahneYolu(s, platformKamera(s, haber), d.tuval, platformEngeller(s, haber));
   const ilk = Math.min(d.tB ?? s.bit, d.tuslar[0]?.goster ?? s.bit, d.tC ?? s.bit);
   const baslikOran = izOrani(kelimeIzi(s, v.baslik, s.bas, ilk), t) * (1 - cikis(ilerle(t, ilk, 0.3)));
   const cur = simdiki(d, t);
@@ -349,5 +349,5 @@ export const platformNoktalar = (s: Sahne, haber: Haber): Nokta[] => {
   const d = duzen(s, haber);
   const ilkPanel = Math.min(d.tB ?? Infinity, d.tC ?? Infinity);
   const kenarlar = [0, ...(d.tepsi ? [d.tepsiY] : []), ...(Number.isFinite(ilkPanel) ? [{y: d.yB, bas: ilkPanel + 0.3}] : [])];
-  return kenarDuraklari(sahneYolu(s, platformKamera(s, haber), d.tuval), kenarlar, platformEngeller(s, haber), 'dur');
+  return kenarDuraklari(sahneYolu(s, platformKamera(s, haber), d.tuval, platformEngeller(s, haber)), kenarlar, platformEngeller(s, haber), 'dur');
 };

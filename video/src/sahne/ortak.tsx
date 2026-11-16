@@ -42,9 +42,8 @@ export const yaziBoyu = (y: Yazi) => y.satirlar.length * y.lh;
 // Kameranın bir duruşu. kenar: maskotun bu duruşta konmak istediği pencere üst kenarı (ana pencere içi y);
 // pano: kameranın baktığı pencere (0 ana, 1, 2 ikinci paneller), o pencerenin kenarı mavi yanar.
 export type Bakis = KameraAnahtari & {kenar?: number; pano?: number};
-// Yaklaşınca odak sağa kayar: sütundaki maskot (gövde sağı kare x 894) sağdaki uygulama düğmelerine (x 900) girmez.
-const odakX = (k: number) => Math.max(ORTA.x, MASKOT_X + GOVDE_YARI + 2 - (900 - ORTA.x) / k);
-export const bakis = (t: number, yIc: number, k: number, kenar?: number, pano?: number): Bakis => ({t, x: odakX(k), y: yIc, k, kenar, pano});
+// Odak yatayda ortadadır; kameraYolu onu yazılar güvenli alanda kalacak yere kaydırır.
+export const bakis = (t: number, yIc: number, k: number, kenar?: number, pano?: number): Bakis => ({t, x: ORTA.x, y: yIc, k, kenar, pano});
 
 // Panelin üst kenarı, üstünde maskot sığacak kadar aşağıda görünür.
 export const kenardan = (t: number, kenarY: number, k: number, pano?: number): Bakis =>
@@ -53,8 +52,8 @@ export const kenardan = (t: number, kenarY: number, k: number, pano?: number): B
 // Bütün tuvale uzaktan bakış.
 export const genel = (t: number, tuval: Tuval, kenar?: number): Bakis => bakis(t, (tuval.ust + tuval.alt) / 2, 0.9, kenar);
 
-// Sahnenin kamera yolu (HaberVideo ile aynı hesap): pencerelerin etkinliği ve maskot durakları buna bakar.
-export const sahneYolu = (s: Sahne, anahtarlar: Bakis[], tuval: Tuval) => kameraYolu(anahtarlar, tuval, s.bas) as Bakis[];
+// Sahnenin kamera yolu (HaberVideo ile aynı hesap, aynı engellerle): pencerelerin etkinliği ve maskot durakları buna bakar.
+export const sahneYolu = (s: Sahne, anahtarlar: Bakis[], tuval: Tuval, engeller: Engel[]) => kameraYolu(anahtarlar, tuval, s, engeller) as Bakis[];
 
 // Kamera bir pencereye geçince o pencerenin kenarı 0.2 sn'de yanar, başka yere geçince söner.
 export const etkinlik = (yol: Bakis[], pano: number, t: number) => {
@@ -90,14 +89,16 @@ export const ANA_Y = ORTA.y - mutlak(0, 0).y;
 export type Kenar = number | {y: number; bas: number};
 export const kenarDuraklari = (yol: Bakis[], tumKenarlar: Kenar[], engeller: Engel[], eylem: 'bas' | 'dur' = 'bas'): Nokta[] => {
   const ekranY = (a: KameraAnahtari, y: number) => (y - a.y) * a.k + ORTA.y;
+  // Maskot sahnede görünür, üstteki uygulama simgelerinin altında ve sağdaki düğme sırasının dışında kalır.
   const uygun = (a: KameraAnahtari, y: number) => {
     const ex = (MASKOT_X - a.x) * a.k + ORTA.x;
-    const tavan = ex - GOVDE_YARI * a.k > 640 ? 190 : D.sahne.ust + 6;
+    const tavan = ex - GOVDE_YARI * a.k > 640 ? D.guvenli.ust : D.sahne.ust + 6;
     const ey = ekranY(a, y);
-    return ey - D.maskot.yukseklik * a.k >= tavan + 6 && ey <= D.sahne.alt - 40;
+    const rayda = ey > D.guvenli.ray_y && ex + GOVDE_YARI * a.k > D.guvenli.ray_olculen_x;
+    return ey - D.maskot.yukseklik * a.k >= tavan + 6 && ey <= D.sahne.alt - 40 && !rayda;
   };
   const acik = (p: number, q: number) =>
-    !engeller.some((e) => e.x1 > SUTUN_X + 0.5 && e.x0 < MASKOT_X + GOVDE_YARI && e.y1 > Math.min(p, q) - D.maskot.yukseklik - 10 && e.y0 < Math.max(p, q));
+    !engeller.some((e) => !e.kamera && e.x1 > SUTUN_X + 0.5 && e.x0 < MASKOT_X + GOVDE_YARI && e.y1 > Math.min(p, q) - D.maskot.yukseklik - 10 && e.y0 < Math.max(p, q));
   const out: Nokta[] = [];
   let onceki: number | undefined;
   for (const a of yol) {
@@ -289,6 +290,7 @@ export const Cip: React.FC<{renk: string; children: React.ReactNode; style?: Rea
   dolu,
 }) => (
   <div
+    data-kutu="cip"
     style={{
       display: 'inline-flex',
       alignItems: 'center',

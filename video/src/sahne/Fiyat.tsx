@@ -131,10 +131,13 @@ const duzen = (s: Sahne, haber: Haber) => {
 export const Fiyat: React.FC<SahneProps> = ({s, t, haber}) => {
   const d = duzen(s, haber);
   const {v, m, renk, fs} = d;
-  const yol = sahneYolu(s, fiyatKamera(s, haber), d.tuval);
+  const yol = sahneYolu(s, fiyatKamera(s, haber), d.tuval, fiyatEngeller(s, haber));
   const dg = ilerle(t, d.g, 0.2);
-  const damgaOlcek = t < d.g ? 0 : 1 + 0.9 * (1 - cikis(dg));
-  const sarsinti = t >= d.g && t < d.g + 0.25 ? Math.sin((t - d.g) * 60) * 4 * (1 - (t - d.g) / 0.25) : 0;
+  // Damga sol kenarına basılır ve içerik alanının sağ ucunu geçecek kadar büyümez; sarsıntı yalnız sağa: yazı her
+  // karede güvenli alanda kalır (kamera içerik alanını güvenli alanda tutar).
+  const damgaPay = sinirla((IC.en - 16 - d.damgaW) / d.damgaW, 0, 0.9);
+  const damgaOlcek = t < d.g ? 0 : 1 + damgaPay * (1 - cikis(dg));
+  const sarsinti = t >= d.g && t < d.g + 0.25 ? Math.abs(Math.sin((t - d.g) * 60)) * 4 * (1 - (t - d.g) / 0.25) : 0;
   const kutu = cikis(ilerle(t, d.tEski - 0.25, 0.25));
   const eskiYandi = t >= d.tEski;
   const cizik = cikis(ilerle(t, d.tYeni - 0.1, 0.2));
@@ -166,6 +169,7 @@ export const Fiyat: React.FC<SahneProps> = ({s, t, haber}) => {
             fontSize: d.damgaPunto,
             fontWeight: 800,
             whiteSpace: 'nowrap',
+            transformOrigin: '0 50%',
             transform: `rotate(-5deg) scale(${damgaOlcek}) translateX(${sarsinti}px)`,
             opacity: t < d.g ? 0 : cikis(dg * 2),
             boxShadow: `0 8px 0 ${R.tusAlt}`,
@@ -333,5 +337,5 @@ export const fiyatEngeller = (s: Sahne, haber: Haber): Engel[] => {
 export const fiyatNoktalar = (s: Sahne, haber: Haber): Nokta[] => {
   const d = duzen(s, haber);
   const kenarlar: Kenar[] = [0, ...(d.fiyatVar ? [d.kutuY] : []), ...(d.bitis ? [d.bitisY] : []), ...(d.tB !== undefined ? [{y: d.yB, bas: d.tB + 0.3}] : [])];
-  return kenarDuraklari(sahneYolu(s, fiyatKamera(s, haber), d.tuval), kenarlar, fiyatEngeller(s, haber), 'dur');
+  return kenarDuraklari(sahneYolu(s, fiyatKamera(s, haber), d.tuval, fiyatEngeller(s, haber)), kenarlar, fiyatEngeller(s, haber), 'dur');
 };

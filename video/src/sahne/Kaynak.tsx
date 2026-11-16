@@ -71,7 +71,7 @@ const duzen = (s: Sahne, haber: Haber) => {
 export const Kaynak: React.FC<SahneProps> = ({s, t, haber}) => {
   const d = duzen(s, haber);
   const {v} = d;
-  const yol = sahneYolu(s, kaynakKamera(s, haber), d.tuval);
+  const yol = sahneYolu(s, kaynakKamera(s, haber), d.tuval, kaynakEngeller(s, haber));
   const adres = `${v.alan}${v.yol}`;
   const yazilan = Math.floor(sinirla((t - s.bas - 0.2) * 40, 0, adres.length));
   // Kaynağın adı söylendikçe işaretlenir, alıntıya geçince işaret çekilir.
@@ -145,6 +145,7 @@ export const Kaynak: React.FC<SahneProps> = ({s, t, haber}) => {
         >
           <div style={{position: 'absolute', left: 20, top: (KUTU_H - 6 - DAMGA_H) / 2, display: 'flex', alignItems: 'center', gap: 24}}>
             <div
+              data-kutu="damga"
               style={{
                 width: damgaEni(v),
                 boxSizing: 'border-box',
@@ -160,6 +161,8 @@ export const Kaynak: React.FC<SahneProps> = ({s, t, haber}) => {
                 fontWeight: 800,
                 letterSpacing: '0.06em',
                 whiteSpace: 'nowrap',
+                // Sol kenarına basılır: ortasından büyüse sol ucu karenin dışına taşardı.
+                transformOrigin: '0 50%',
                 transform: `rotate(-4deg) scale(${damgaOlcek}) translateX(${sarsinti}px)`,
                 opacity: t < d.damga ? 0 : cikis(dg * 2),
               }}
@@ -235,5 +238,5 @@ export const kaynakEngeller = (s: Sahne, haber: Haber): Engel[] => {
 // Maskot sağ sütunda: pencere kenarı, damga kutusu ve alıntı paneli arasında kameranın baktığı yere konar.
 export const kaynakNoktalar = (s: Sahne, haber: Haber): Nokta[] => {
   const d = duzen(s, haber);
-  return kenarDuraklari(sahneYolu(s, kaynakKamera(s, haber), d.tuval), [0, d.kutuY, {y: d.yB, bas: d.tAlinti + 0.3}], kaynakEngeller(s, haber));
+  return kenarDuraklari(sahneYolu(s, kaynakKamera(s, haber), d.tuval, kaynakEngeller(s, haber)), [0, d.kutuY, {y: d.yB, bas: d.tAlinti + 0.3}], kaynakEngeller(s, haber));
 };

@@ -34,6 +34,7 @@ export const Tus: React.FC<TusProps> = ({
   children,
 }) => (
   <div
+    data-kutu="tuş"
     style={{
       position: 'absolute',
       left: x,

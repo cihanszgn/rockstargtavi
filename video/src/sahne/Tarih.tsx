@@ -92,7 +92,7 @@ const hucre = (d: ReturnType<typeof duzen>, gun: number) => {
 export const Tarih: React.FC<SahneProps> = ({s, t, haber}) => {
   const d = duzen(s);
   const {v} = d;
-  const yol = sahneYolu(s, tarihKamera(s, haber), d.tuval);
+  const yol = sahneYolu(s, tarihKamera(s, haber), d.tuval, tarihEngeller(s, haber));
   const ilkPanel = d.tNot ?? s.bit;
   const baslikOran = izOrani(kelimeIzi(s, v.etiket, s.bas, ilkPanel), t) * (1 - cikis(ilerle(t, ilkPanel, 0.3)));
   const kb = belir(t, d.kart - 0.25);
@@ -228,5 +228,5 @@ export const tarihEngeller = (s: Sahne, _haber: Haber): Engel[] => {
 export const tarihNoktalar = (s: Sahne, haber: Haber): Nokta[] => {
   const d = duzen(s);
   const kenarlar = [0, d.tepsiY, ...(d.tNot !== undefined ? [{y: d.yB, bas: d.tNot + 0.3}] : [])];
-  return kenarDuraklari(sahneYolu(s, tarihKamera(s, haber), d.tuval), kenarlar, tarihEngeller(s, haber), 'dur');
+  return kenarDuraklari(sahneYolu(s, tarihKamera(s, haber), d.tuval, tarihEngeller(s, haber)), kenarlar, tarihEngeller(s, haber), 'dur');
 };

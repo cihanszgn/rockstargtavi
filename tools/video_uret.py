@@ -42,10 +42,10 @@ GENISLIK_YOLU = VIDEO / "src" / "olcu" / "genislik.json"
 YARDIMCI = Path(__file__).with_name("video_ses_yardimci.py")
 REMOTION_CLI = VIDEO / "node_modules" / "@remotion" / "cli" / "remotion-cli.js"
 
-SABLON_SURUMU = 3
-# 2. sürümde şablonların görünüşü, 3. sürümde kapak resmi değişti; senaryo verisi aynı kaldı: eski sürümle yazılmış
-# senaryolar da okunur.
-OKUNAN_SURUMLER = (1, 2, 3)
+SABLON_SURUMU = 4
+# 2. sürümde şablonların görünüşü, 3. sürümde kapak resmi, 4. sürümde güvenli alanlar (platform arayüzünün altında
+# yazı kalmaz) değişti; senaryo verisi aynı kaldı: eski sürümle yazılmış senaryolar da okunur.
+OKUNAN_SURUMLER = (1, 2, 3, 4)
 TABAN = "https://medya.ctrl-agame.com/v/"
 TZ = timezone(timedelta(hours=3))
 EN_KISA, EN_UZUN = 20.0, 80.0
@@ -1308,6 +1308,23 @@ def medya_bilgisi(yol: Path) -> dict:
             "ses_var": any(s.get("codec_type") == "audio" for s in ham.get("streams", []))}
 
 
+def guvenli_denetle(is_klasoru: Path, cikti=print) -> dict:
+    """Her kareyi ve kapağı ölçer (render.mjs --denetle): bir yazı ya da çip karenin güvenli alanından çıkar ya da
+    platform düğmelerinin altına girerse üretim durur. Sınırlar video/src/olcu/duzen.json "guvenli" alanında."""
+    rapor = is_klasoru / "denetim.json"
+    komut = [_node(), str(VIDEO / "render.mjs"), "--girdi", str(is_klasoru / "zamanli.json"), "--denetle", str(rapor)]
+    r = _calistir(komut, capture_output=True, text=True, encoding="utf-8", errors="replace", cwd=VIDEO, timeout=1800)
+    if r.returncode not in (0, 3) or not rapor.exists():
+        raise UretimHatasi(f"güvenli alan denetimi başarısız: {(r.stderr or r.stdout or '').strip()[-1500:]}")
+    sonuc = json_oku(rapor)
+    if sonuc["ihlal_sayisi"]:
+        ilk = "; ".join(f"{i['metin']!r} {i['yon']} {i['kare_sayisi']} kare, en çok {i['en_cok']} px"
+                        for i in sonuc["ihlaller"][:5])
+        raise UretimHatasi(f"güvenli alan denetimi: {sonuc['ihlal_sayisi']} ihlal ({ilk}); rapor: {rapor}")
+    cikti(f"güvenli alan denetimi: {sonuc['kare_sayisi']} ölçüm, {sonuc['oge_sayisi']} öğe, ihlal yok")
+    return sonuc
+
+
 def props_kur(haber: dict, dil: str, hazir: dict, zaman: dict) -> dict:
     fps = 30
     return {"surum": 1, "id": haber["id"], "dil": dil, "fps": fps, "boyut": [1080, 1920], "ses": "ses.mp3",
@@ -1361,6 +1378,8 @@ def uret(haber_id: str, dil: str, ses: str | None = None, yukle: bool = False, z
     is_klasoru.mkdir(parents=True, exist_ok=True)
     props = props_kur(haber, dil, hazir, zaman)
     json_yaz(is_klasoru / "zamanli.json", props)
+    # Çizimden önce: denetim çizimin küçük bir kısmı kadar sürer, bozuk video hiç çizilmez.
+    guvenli_denetle(is_klasoru, cikti)
     dosya = {"mp4_1080": f"{taban}-1080.mp4", "mp4_720": f"{taban}-720.mp4", "mp4_540": f"{taban}-540.mp4",
              "kapak": f"{taban}-kapak.jpg", "vtt": f"{taban}.vtt"}
     ham_video = is_klasoru / "ham-1080.mp4"

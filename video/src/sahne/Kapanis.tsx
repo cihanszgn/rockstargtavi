@@ -97,7 +97,7 @@ const Secim: React.FC<{satirlar: string[]; punto: number; agirlik: number; lh: n
 export const Kapanis: React.FC<SahneProps> = ({s, t, haber}) => {
   const d = duzen(s);
   const {v} = d;
-  const yol = sahneYolu(s, kapanisKamera(s, haber), d.tuval);
+  const yol = sahneYolu(s, kapanisKamera(s, haber), d.tuval, kapanisEngeller(s, haber));
   const sec = cikis(ilerle(t, d.tSec, 0.3));
   const cagriOran = izOrani(d.izler.slice(0, d.nCagri), t) * (1 - sec);
   const altOran = izOrani(d.izler.slice(d.nCagri), t) * (1 - sec);
@@ -198,10 +198,12 @@ export const kapanisEngeller = (s: Sahne, _haber: Haber): Engel[] => {
     ...(d.alt ? yaziEngeli(v.alt, d.alt.punto, 700, d.alt.en, IC.sol, d.altY, d.alt.lh) : []),
     engel(TUS_X, d.tepsiY + TEPSI_IC, CTRL_W + ARTI_W + A_W, TUS_H + 14),
     engel(IC.sol, d.adresY, ADRES_SOL + yaziGenisligi(v.adres, d.adresPunto, 800) * D.altyazi.pay + 12, ADRES_H),
+    // Adres tuşunun tamamı düğme rayının altına girmez; boş ucu maskotun basamağı olarak kalır.
+    {...engel(IC.sol, d.adresY, IC.en, ADRES_H), kamera: true},
   ];
 };
 
 export const kapanisNoktalar = (s: Sahne, haber: Haber): Nokta[] => {
   const d = duzen(s);
-  return kenarDuraklari(sahneYolu(s, kapanisKamera(s, haber), d.tuval), [0, d.tepsiY, d.adresY], kapanisEngeller(s, haber));
+  return kenarDuraklari(sahneYolu(s, kapanisKamera(s, haber), d.tuval, kapanisEngeller(s, haber)), [0, d.tepsiY, d.adresY], kapanisEngeller(s, haber));
 };

@@ -5,6 +5,7 @@ import {Altyazi} from './bilesen/Altyazi';
 import {Maskot} from './bilesen/Maskot';
 import {UstSerit} from './bilesen/UstSerit';
 import {Zemin} from './bilesen/Zemin';
+import {Denetim} from './denetim';
 import {type Ekran, kameraAn, kameraYolu, ORTA, sahneKaymasi} from './kamera';
 import {type Durak, durum, planla} from './maskot';
 import {SABLON} from './sahne';
@@ -68,7 +69,11 @@ export const HaberVideo: React.FC<VideoProps> = (props) => {
   const {sahneler, haber} = props;
   const kapak = !!props.kapak;
   const yollar = useMemo<KameraAnahtari[][]>(
-    () => sahneler.map((s) => (SABLON[s.sablon] ? kameraYolu(SABLON[s.sablon].kamera(s, haber), SABLON[s.sablon].tuval(s, haber), s.bas) : kameraYolu([], {ust: -2, alt: 778}, s.bas))),
+    () =>
+      sahneler.map((s) => {
+        const sb = SABLON[s.sablon];
+        return sb ? kameraYolu(sb.kamera(s, haber), sb.tuval(s, haber), s, sb.engeller(s, haber)) : kameraYolu([], {ust: -2, alt: 778}, s, []);
+      }),
     [sahneler, haber],
   );
   const ekran = useMemo<Ekran>(() => (i, an) => ({...kameraAn(yollar[i], an), dy: sahneKaymasi(sahneler, i, an).dy}), [yollar, sahneler]);
@@ -76,7 +81,7 @@ export const HaberVideo: React.FC<VideoProps> = (props) => {
   const t = kapak ? kapakAni(props, plan, ekran) : frame / fps;
 
   return (
-    <AbsoluteFill style={{fontFamily: YAZI, color: R.yazi, fontKerning: 'normal'}}>
+    <AbsoluteFill data-denetim-kok style={{fontFamily: YAZI, color: R.yazi, fontKerning: 'normal'}}>
       <Zemin t={t} />
       <div
         style={{
@@ -101,6 +106,7 @@ export const HaberVideo: React.FC<VideoProps> = (props) => {
       {kapak ? null : <Altyazi parcalar={props.parcalar} kelimeler={props.kelimeler} t={t} />}
       <AltKart sahneler={sahneler} t={t} />
       {props.ses && !kapak ? <Html5Audio src={staticFile(props.ses)} /> : null}
+      {props.denetim ? <Denetim kare={frame} kapak={kapak} /> : null}
     </AbsoluteFill>
   );
 };

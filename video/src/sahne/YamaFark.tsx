@@ -117,7 +117,7 @@ const Cubuklar: React.FC<{r: ReturnType<typeof duzen>['satirlar'][number]; t: nu
 
 export const YamaFark: React.FC<SahneProps> = ({s, t, haber}) => {
   const d = duzen(s);
-  const yol = sahneYolu(s, yamaFarkKamera(s, haber), d.tuval);
+  const yol = sahneYolu(s, yamaFarkKamera(s, haber), d.tuval, yamaFarkEngeller(s, haber));
   const cur = simdiki(d, t);
 
   return (
@@ -148,7 +148,8 @@ export const YamaFark: React.FC<SahneProps> = ({s, t, haber}) => {
                 border: `3px solid ${k === cur ? R.kehribar : R.cizgi}`,
                 boxShadow: acik ? `0 6px 0 ${R.tusAlt}` : 'none',
                 opacity: acik ? 1 : 0.5,
-                transform: `translateX(${acik ? (u - 1) * 40 : 0}px)`,
+                // Kısa kayış: kamera sol kenara yaslıyken satırın yazısı güvenli alandan çıkmaz.
+                transform: `translateX(${acik ? (u - 1) * 20 : 0}px)`,
               }}
             >
               <div style={{position: 'absolute', left: SOL - IC.sol - 3, top: 14, width: DAR - 40, lineHeight: '44px', fontSize: 34, fontWeight: 800, letterSpacing: '0.03em', color: acik ? R.yazi : R.soluk, whiteSpace: 'nowrap', overflow: 'hidden'}}>
@@ -257,5 +258,5 @@ export const yamaFarkEngeller = (s: Sahne, _haber: Haber): Engel[] => {
 // Maskot sağ sütunda: pencere, satır kutuları ve çubuk paneli kenarlarında kameranın baktığı yere konar.
 export const yamaFarkNoktalar = (s: Sahne, haber: Haber): Nokta[] => {
   const d = duzen(s);
-  return kenarDuraklari(sahneYolu(s, yamaFarkKamera(s, haber), d.tuval), [0, ...d.satirlar.map((r) => r.y), {y: d.yB, bas: d.tB + 0.3}], yamaFarkEngeller(s, haber));
+  return kenarDuraklari(sahneYolu(s, yamaFarkKamera(s, haber), d.tuval, yamaFarkEngeller(s, haber)), [0, ...d.satirlar.map((r) => r.y), {y: d.yB, bas: d.tB + 0.3}], yamaFarkEngeller(s, haber));
 };

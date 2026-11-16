@@ -1,7 +1,6 @@
-import {type Ekran, ekranda, IC_UST_Y} from './kamera';
-import {yaziGenisligi} from './olcu';
+import {baslikEngeli, type Ekran, ekranda, IC_UST_Y} from './kamera';
 import {SABLON} from './sahne';
-import {D, GECIS, mutlak} from './tema';
+import {D, GECIS} from './tema';
 import type {Engel, Haber, Nokta, Sahne} from './tipler';
 import {ilerle} from './zaman';
 
@@ -28,9 +27,10 @@ const ATLAMA = 0.42; // sahne içi sıçrama süresi
 const TUNEK_X = 820; // pencerenin sağ üst kenarı: dayanak noktası yoksa buraya konar
 const GOVDE_YARI = 42; // görünen gövdenin yarı genişliği (çerçeve pikselleri hariç)
 export const TAVAN = D.sahne.ust - 10; // uçarken bile sahnenin üstündeki marka şeridine çıkmaz
-// Marka şeridinin yazısı x 600 civarında biter; sağı boştur, maskot orada pencerenin üst kenarına oturabilir.
+// Marka şeridinin yazısı x 600 civarında biter; sağı boştur, maskot orada şeride çıkabilir ama uygulamanın üstteki
+// arama/menü simgelerinin (güvenli alanın üstü) altında kalır.
 const SERIT_BOS_X = 640;
-const tavan = (xSol: number) => (xSol > SERIT_BOS_X ? 190 : TAVAN);
+const tavan = (xSol: number) => (xSol > SERIT_BOS_X ? D.guvenli.ust : TAVAN);
 const ORNEK = 24; // bir sıçrama yayında denetlenen nokta sayısı
 
 const ayak = (yRel: number) => IC_UST_Y + yRel;
@@ -44,7 +44,7 @@ const eylemCevir = (n: Nokta, hareket: string, sablon: string): Nokta => {
 
 // Gövde bir engelle kesişiyor mu? Ayak hizasındaki zemin öğesi engel sayılmaz.
 const carpar = (xa: number, xb: number, ayakY: number, engeller: Engel[], k = 1) =>
-  engeller.some((e) => xb + GOVDE_YARI * k > e.x0 && xa - GOVDE_YARI * k < e.x1 && ayakY - M.yukseklik * k - 2 < e.y1 && ayakY > e.y0 + 2);
+  engeller.some((e) => !e.kamera && xb + GOVDE_YARI * k > e.x0 && xa - GOVDE_YARI * k < e.x1 && ayakY - M.yukseklik * k - 2 < e.y1 && ayakY > e.y0 + 2);
 
 // Maskot hiçbir yazıyı örtmez: nokta yazıya biniyorsa zemini üstünde en yakın boş yere kayar, yer yoksa atlanır.
 const yerlestir = (n: Nokta, engeller: Engel[]): Nokta | null => {
@@ -61,13 +61,6 @@ const yerlestir = (n: Nokta, engeller: Engel[]): Nokta | null => {
     }
   }
   return null;
-};
-
-// Her pencerenin başlık çubuğu: üç tuş noktası (iç x 30..120) ve pencere adı (iç x 150'den).
-const baslikEngeli = (s: Sahne): Engel => {
-  const metin = (s.veri.pencere as string) ?? '';
-  const w = metin ? Math.min(520, yaziGenisligi(metin, 26, 700, 0.08) * D.altyazi.pay) : 0;
-  return {x0: mutlak(24, 0).x, x1: mutlak(150 + w, 0).x, y0: 20, y1: 54};
 };
 
 const kolay = (u: number) => 0.5 * (u + (u < 0.5 ? 2 * u * u : 1 - Math.pow(-2 * u + 2, 2) / 2));
@@ -143,7 +136,10 @@ export const planla = (sahneler: Sahne[], haber: Haber, ekran: Ekran): Durak[] =
         const p = ekranda(e, x, d.y - IC_UST_Y);
         const sol = p.x - GOVDE_YARI * e.k;
         const ustSinir = sol > SERIT_BOS_X ? tavan(sol) : D.sahne.ust + 6;
-        if (p.y > D.sahne.alt - 6 || p.y < D.sahne.ust + 20 || p.y - M.yukseklik * e.k < ustSinir || sol < 8 || p.x + GOVDE_YARI * e.k > 1072) return false;
+        const sag = p.x + GOVDE_YARI * e.k;
+        if (p.y > D.sahne.alt - 6 || p.y < D.sahne.ust + 20 || p.y - M.yukseklik * e.k < ustSinir || sol < 8 || sag > 1072) return false;
+        // Sağdaki uygulama düğmelerinin altına girmez.
+        if (p.y > D.guvenli.ray_y && sag > D.guvenli.ray_olculen_x) return false;
       }
     }
     return true;

@@ -13,7 +13,9 @@ export const UstSerit: React.FC<{haber: Haber; sahneler: Sahne[]; t: number}> = 
   const giris = cikis(ilerle(t, 0, 0.4));
   const turRenk = TUR_RENK[haber.tur] ?? R.baglanti;
   return (
-    <div style={{position: 'absolute', left: D.sahne.sol, top: M.ust, height: M.yukseklik, width: 840, opacity: giris, transform: `translateY(${(1 - giris) * -30}px)`}}>
+    // Şerit güvenli alanın sol kenarında başlar ve yerinde belirir: yukarıdan inse bir an uygulamanın geri/arama
+    // simgelerinin altında kalırdı.
+    <div style={{position: 'absolute', left: D.guvenli.sol, top: M.ust, height: M.yukseklik, width: 840, opacity: giris, transform: `translateY(${(1 - giris) * 12}px)`}}>
       <Tus x={0} y={0} w={104} h={KAPAK} derinlik={6} basili={basmalar(t, anlar)} yaricap={12}>
         <span style={{fontSize: 28, fontWeight: 800, color: R.yazi}}>Ctrl</span>
       </Tus>
@@ -38,6 +40,7 @@ export const UstSerit: React.FC<{haber: Haber; sahneler: Sahne[]; t: number}> = 
         GAME
       </div>
       <div
+        data-kutu="tür çipi"
         style={{
           position: 'absolute',
           left: 364,

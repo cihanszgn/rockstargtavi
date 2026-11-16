@@ -1029,5 +1029,76 @@ class HaberOtoTests(unittest.TestCase):
         self.assertIn('3–9 sahnelik', str(c.exception))
 
 
+
+# guvenli.mjs kuralını sentetik ölçümlerle çalıştırır: ölçüm JSON'u stdin'den gelir, modülün yolu argümandır.
+GUVENLI_KOSUCU = ("import {pathToFileURL} from 'node:url';"
+                  "const {denetle} = await import(pathToFileURL(process.argv[1]).href);"
+                  "let girdi = ''; for await (const p of process.stdin) girdi += p;"
+                  "const {olcumler, guvenli} = JSON.parse(girdi);"
+                  "process.stdout.write(JSON.stringify(denetle(olcumler, guvenli)));")
+
+
+class GuvenliAlanTests(unittest.TestCase):
+    def setUp(self):
+        self.g = v.duzen()['guvenli']
+
+    def denetle(self, olcumler):
+        r = subprocess.run([v._node(), '--input-type=module', '-e', GUVENLI_KOSUCU, str(v.VIDEO / 'guvenli.mjs')],
+                           input=json.dumps({'olcumler': olcumler, 'guvenli': self.g}), capture_output=True,
+                           text=True, encoding='utf-8', timeout=60)
+        self.assertEqual(r.returncode, 0, r.stderr)
+        return json.loads(r.stdout)
+
+    def test_kural_karenin_disini_ve_dugme_rayini_yakalar(self):
+        g = self.g
+        oge = lambda metin, x0, y0, x1, y1: {'tur': 'yazi', 'metin': metin, 'x0': x0, 'y0': y0, 'x1': x1, 'y1': y1}
+        olcumler = [
+            {'kare': 0, 'ogeler': [oge('içeride', g['sol'], g['ust'], g['sag'], g['ust'] + 40),
+                                   oge('raydan önce', 600, 1200, g['ray_x'], 1260),
+                                   oge('rayın üstünde', 700, 800, 950, g['ray_y'])]},
+            {'kare': 1, 'ogeler': [oge('solda', g['sol'] - 3, 500, 300, 540)]},
+            {'kare': 2, 'ogeler': [oge('rayda', 700, 1100, g['ray_x'] + 12, 1160)]},
+            {'kapak': True, 'ogeler': [oge('altta', 100, 1450, 400, g['alt'] + 6), oge('solda', g['sol'] - 9, 500, 300, 540)]},
+        ]
+        r = self.denetle(olcumler)
+        self.assertEqual((r['kare_sayisi'], r['oge_sayisi'], r['ihlalli_kare'], r['ihlal_sayisi']), (4, 7, 3, 4))
+        bulunan = {(i['metin'], i['yon']): (i['kareler'], i['en_cok']) for i in r['ihlaller']}
+        self.assertEqual(bulunan, {('solda', 'sol'): ([1, 'kapak'], 9), ('rayda', 'ray'): ([2], 12),
+                                   ('altta', 'alt'): (['kapak'], 6)})
+
+    def test_alt_kart_ve_altyazi_platform_arayuzunden_uzak(self):
+        # YouTube uygulamasında ölçülen kanal adı/başlık bandı (y >= 1534) ve sağ düğme rayı (x >= 906, y >= 1046)
+        # güvenli sınırların dışında kalır; kart ve altyazı kutusu bu sınırların içindedir.
+        d = v.duzen()
+        g, kart, a = d['guvenli'], d['kart'], d['altyazi']
+        self.assertLessEqual(g['alt'], 1534)
+        self.assertLessEqual(g['ray_x'], 906)
+        self.assertLessEqual(g['ray_y'], 1046)
+        self.assertGreaterEqual(kart['sol'], g['sol'])
+        self.assertLessEqual(kart['sol'] + kart['genislik'], g['ray_x'])
+        self.assertLessEqual(kart['ust'] + kart['yukseklik'], g['alt'])
+        self.assertGreaterEqual(a['merkez_x'] - a['en_genis_kutu'] / 2, g['sol'])
+        self.assertLessEqual(a['merkez_x'] + a['en_genis_kutu'] / 2, g['ray_x'])
+        self.assertLessEqual(d['sahne']['alt'], kart['ust'])
+
+    def test_ihlal_uretimi_durdurur(self):
+        rapor = {'kare_sayisi': 3, 'oge_sayisi': 9, 'ihlalli_kare': 1, 'ihlal_sayisi': 2,
+                 'ihlaller': [{'tur': 'yazi', 'metin': 'Steam', 'yon': 'sol', 'kareler': [4, 5], 'kare_sayisi': 2,
+                               'en_cok': 7.5, 'ornek': None}]}
+
+        def kos(komut, **kw):
+            pathlib.Path(komut[komut.index('--denetle') + 1]).write_text(json.dumps(rapor), encoding='utf-8')
+            return subprocess.CompletedProcess(komut, 3, '', '')
+
+        with tempfile.TemporaryDirectory() as t, patch.object(v, '_calistir', kos):
+            with self.assertRaises(v.UretimHatasi) as c:
+                v.guvenli_denetle(pathlib.Path(t), cikti=lambda m: None)
+            self.assertIn("2 ihlal ('Steam' sol 2 kare, en çok 7.5 px)", str(c.exception))
+            rapor.update(ihlal_sayisi=0, ihlalli_kare=0, ihlaller=[])
+            mesaj = []
+            v.guvenli_denetle(pathlib.Path(t), cikti=mesaj.append)
+        self.assertEqual(mesaj, ['güvenli alan denetimi: 3 ölçüm, 9 öğe, ihlal yok'])
+
+
 if __name__ == '__main__':
     unittest.main()

@@ -54,6 +54,7 @@ export const AltKart: React.FC<{sahneler: Sahne[]; t: number}> = ({sahneler, t})
 
   return (
     <div
+      data-kutu="bilgi kartı"
       style={{
         position: 'absolute',
         left: K.sol,
@@ -66,7 +67,8 @@ export const AltKart: React.FC<{sahneler: Sahne[]; t: number}> = ({sahneler, t})
         borderRadius: 28,
         boxShadow: `0 10px 0 ${R.tusAlt}`,
         overflow: 'hidden',
-        transform: `translateY(${(1 - giris) * 280}px)`,
+        // Yerinde büyüyerek belirir: alttan kayarak gelse yazısı bir an platform düğmelerinin altında kalırdı.
+        transform: `scale(${0.9 + 0.1 * giris})`,
         opacity: giris,
       }}
     >
@@ -86,7 +88,7 @@ export const AltKart: React.FC<{sahneler: Sahne[]; t: number}> = ({sahneler, t})
           justifyContent: 'center',
         }}
       >
-        <Simge ad={simgeKart.simge} boyut={54} renk={cizgi} kalinlik={2.4} />
+        <Simge ad={simgeKart.simge} boyut={Math.round(K.simge * 0.56)} renk={cizgi} kalinlik={2.4} />
       </div>
       {eski && e < 1 ? <Yazilar kart={eski.alt_kart} dy={-24 * cikis(e)} saydam={1 - cikis(Math.min(1, e * 2))} /> : null}
       <Yazilar

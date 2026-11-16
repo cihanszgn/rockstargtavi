@@ -97,7 +97,7 @@ const simdiki = (d: ReturnType<typeof duzen>, t: number) => {
 
 export const Maddeler: React.FC<SahneProps> = ({s, t, haber}) => {
   const d = duzen(s, haber);
-  const yol = sahneYolu(s, maddelerKamera(s, haber), d.tuval);
+  const yol = sahneYolu(s, maddelerKamera(s, haber), d.tuval, maddelerEngeller(s, haber));
   const g0 = d.satirlar[0]?.goster ?? s.bit;
   // Başlık anlatılırken kelime kelime işaretlenir, ilk maddede işaret geri çekilir.
   const baslikOran = izOrani(kelimeIzi(s, d.v.baslik, s.bas, g0), t) * (1 - cikis(ilerle(t, g0, 0.3)));
@@ -265,5 +265,5 @@ export const maddelerEngeller = (s: Sahne, haber: Haber): Engel[] => {
 export const maddelerNoktalar = (s: Sahne, haber: Haber): Nokta[] => {
   const d = duzen(s, haber);
   const g0 = d.satirlar[0]?.goster ?? s.bit;
-  return kenarDuraklari(sahneYolu(s, maddelerKamera(s, haber), d.tuval), [0, ...d.satirlar.map((r) => r.y), {y: d.yB, bas: g0 + 0.3}], maddelerEngeller(s, haber));
+  return kenarDuraklari(sahneYolu(s, maddelerKamera(s, haber), d.tuval, maddelerEngeller(s, haber)), [0, ...d.satirlar.map((r) => r.y), {y: d.yB, bas: g0 + 0.3}], maddelerEngeller(s, haber));
 };

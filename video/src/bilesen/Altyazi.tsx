@@ -38,6 +38,7 @@ export const Altyazi: React.FC<{parcalar: Parca[]; kelimeler: Kelime[]; t: numbe
       }}
     >
       <div
+        data-kutu="altyazı"
         style={{
           boxSizing: 'border-box',
           maxWidth: A.en_genis_kutu,

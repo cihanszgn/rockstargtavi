@@ -46,6 +46,8 @@ export type VideoProps = {
   kapak_kare?: number;
   // Yalnız HaberKapak kompozisyonu verir: altyazısız, sessiz, tek kare.
   kapak?: boolean;
+  // Yalnız render.mjs --denetle verir: her karede yazıların ve çiplerin yeri konsola yazılır (src/denetim.tsx).
+  denetim?: boolean;
 };
 
 export type SahneProps = {s: Sahne; t: number; haber: Haber};
@@ -55,7 +57,8 @@ export type SahneProps = {s: Sahne; t: number; haber: Haber};
 export type Nokta = {t: number; x: number; y: number; eylem: 'bas' | 'dur' | 'tara'; x2?: number; sure?: number; zemin?: [number, number]};
 
 // Maskot gövdesinin örtmemesi gereken alan (yazı, tuş): x mutlak, y pencere iç üst kenarına göre.
-export type Engel = {x0: number; x1: number; y0: number; y1: number};
+// kamera: yalnız kameranın kaçındığı kutu (geniş bir tuşun boş ucu gibi); maskot üstüne basabilir.
+export type Engel = {x0: number; x1: number; y0: number; y1: number; kamera?: boolean};
 
 // Kameranın `t` anında yöneldiği yer: odak (x mutlak, y pencere iç üst kenarına göre) sahne ortasına gelir, k yakınlık.
 export type KameraAnahtari = {t: number; x: number; y: number; k: number};
