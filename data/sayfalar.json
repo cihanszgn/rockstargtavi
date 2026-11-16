@@ -28,7 +28,7 @@
 "2026-11-16"
 ],
 "de/index.html": [
-"892f8d3e4670",
+"f8595603ddc5",
 "2026-11-16"
 ],
 "de/kostenlose-spiele.html": [
@@ -44,19 +44,75 @@
 "2026-11-16"
 ],
 "de/ratgeber.html": [
-"6b833c6be2ca",
+"e479acf937f7",
+"2026-11-16"
+],
+"de/ratgeber/call-of-duty.html": [
+"3aab5195876a",
 "2026-11-16"
 ],
 "de/ratgeber/counter-strike-2.html": [
-"e7d9d2c6542a",
+"0d3b23982e67",
+"2026-11-16"
+],
+"de/ratgeber/diablo-4.html": [
+"223ec3bc5f2e",
+"2026-11-16"
+],
+"de/ratgeber/ea-sports-fc.html": [
+"1266a63eb76c",
+"2026-11-16"
+],
+"de/ratgeber/fortnite.html": [
+"95f027f47f1d",
+"2026-11-16"
+],
+"de/ratgeber/genshin-impact.html": [
+"4fb6f5159bb0",
+"2026-11-16"
+],
+"de/ratgeber/knight-online.html": [
+"cfd7b382c50e",
+"2026-11-16"
+],
+"de/ratgeber/league-of-legends.html": [
+"2724157c08d9",
+"2026-11-16"
+],
+"de/ratgeber/metin2.html": [
+"c872c2b8bf4e",
 "2026-11-16"
 ],
 "de/ratgeber/minecraft.html": [
-"96d153435e1b",
+"19d70ab174d9",
+"2026-11-16"
+],
+"de/ratgeber/mobile-legends.html": [
+"5152e0ae8f9a",
+"2026-11-16"
+],
+"de/ratgeber/path-of-exile-2.html": [
+"f8421c852ea2",
 "2026-11-16"
 ],
 "de/ratgeber/pubg.html": [
-"6f63f535963a",
+"4343c4e8c9a5",
+"2026-11-16"
+],
+"de/ratgeber/rise-online.html": [
+"6c804d46e3f7",
+"2026-11-16"
+],
+"de/ratgeber/roblox.html": [
+"aebd8877978a",
+"2026-11-16"
+],
+"de/ratgeber/valorant.html": [
+"7e6b87d29d75",
+"2026-11-16"
+],
+"de/ratgeber/world-of-warcraft.html": [
+"33ceb6ba1ba1",
 "2026-11-16"
 ],
 "de/spiele-news.html": [
@@ -64,7 +120,7 @@
 "2026-11-16"
 ],
 "de/spiele/call-of-duty.html": [
-"c9298425e7b0",
+"5884cacaafa8",
 "2026-11-16"
 ],
 "de/spiele/counter-strike-2.html": [
@@ -72,11 +128,11 @@
 "2026-11-16"
 ],
 "de/spiele/diablo-4.html": [
-"a46b4fa942aa",
+"97bae1321bbb",
 "2026-11-16"
 ],
 "de/spiele/ea-sports-fc.html": [
-"f84e2b2e39ac",
+"a62320ce976d",
 "2026-11-16"
 ],
 "de/spiele/football-manager-27.html": [
@@ -84,11 +140,11 @@
 "2026-11-16"
 ],
 "de/spiele/fortnite.html": [
-"b1a7c468766e",
+"0cb0c86c0eb4",
 "2026-11-16"
 ],
 "de/spiele/genshin-impact.html": [
-"ba3628f10c1e",
+"f78dc9aca9ac",
 "2026-11-16"
 ],
 "de/spiele/gta-6.html": [
@@ -100,15 +156,15 @@
 "2026-11-16"
 ],
 "de/spiele/index.html": [
-"861fe748a691",
+"791515235a59",
 "2026-11-16"
 ],
 "de/spiele/knight-online.html": [
-"5d43106e1b01",
+"ddbf6356742a",
 "2026-11-16"
 ],
 "de/spiele/league-of-legends.html": [
-"3087f46ee9f4",
+"04181f98ec22",
 "2026-11-16"
 ],
 "de/spiele/marathon.html": [
@@ -116,7 +172,7 @@
 "2026-11-16"
 ],
 "de/spiele/metin2.html": [
-"8bf1f257e69c",
+"14aa5ed6a5b4",
 "2026-11-16"
 ],
 "de/spiele/minecraft.html": [
@@ -124,7 +180,7 @@
 "2026-11-16"
 ],
 "de/spiele/mobile-legends.html": [
-"ec1c41d9b12d",
+"5a0e2e49c6d5",
 "2026-11-16"
 ],
 "de/spiele/overwatch.html": [
@@ -132,7 +188,7 @@
 "2026-11-16"
 ],
 "de/spiele/path-of-exile-2.html": [
-"76f1fa6552cf",
+"34cc7a5e4608",
 "2026-11-16"
 ],
 "de/spiele/pubg.html": [
@@ -140,19 +196,19 @@
 "2026-11-16"
 ],
 "de/spiele/rise-online.html": [
-"73ffd7b17390",
+"fdb911be4a77",
 "2026-11-16"
 ],
 "de/spiele/roblox.html": [
-"d762cf4d5aae",
+"ade500b35422",
 "2026-11-16"
 ],
 "de/spiele/valorant.html": [
-"c98da41a24d9",
+"b96fdfa91321",
 "2026-11-16"
 ],
 "de/spiele/world-of-warcraft.html": [
-"fc6bf760717b",
+"579c51962517",
 "2026-11-16"
 ],
 "de/sprachen.html": [
@@ -880,7 +936,7 @@
 "2026-11-16"
 ],
 "nl/games/call-of-duty.html": [
-"4746f51de4cc",
+"48aa94c71001",
 "2026-11-16"
 ],
 "nl/games/counter-strike-2.html": [
@@ -888,11 +944,11 @@
 "2026-11-16"
 ],
 "nl/games/diablo-4.html": [
-"49bdeaf069ac",
+"4bdbcf6316b4",
 "2026-11-16"
 ],
 "nl/games/ea-sports-fc.html": [
-"9f54278992e9",
+"e2ba824c7058",
 "2026-11-16"
 ],
 "nl/games/football-manager-27.html": [
@@ -900,11 +956,11 @@
 "2026-11-16"
 ],
 "nl/games/fortnite.html": [
-"9740ce1e82cb",
+"ea3d556aae53",
 "2026-11-16"
 ],
 "nl/games/genshin-impact.html": [
-"57ddf3b532a4",
+"becf1021de90",
 "2026-11-16"
 ],
 "nl/games/gta-6.html": [
@@ -916,15 +972,15 @@
 "2026-11-16"
 ],
 "nl/games/index.html": [
-"16d7ff3e9e54",
+"fb45c3eb336d",
 "2026-11-16"
 ],
 "nl/games/knight-online.html": [
-"02ab5037af19",
+"993178bb139f",
 "2026-11-16"
 ],
 "nl/games/league-of-legends.html": [
-"2a5cdcbdf10a",
+"2ce7a832bc8f",
 "2026-11-16"
 ],
 "nl/games/marathon.html": [
@@ -932,7 +988,7 @@
 "2026-11-16"
 ],
 "nl/games/metin2.html": [
-"6445b2b90697",
+"3d35b55ff656",
 "2026-11-16"
 ],
 "nl/games/minecraft.html": [
@@ -940,7 +996,7 @@
 "2026-11-16"
 ],
 "nl/games/mobile-legends.html": [
-"82e995d22331",
+"db760c5415d8",
 "2026-11-16"
 ],
 "nl/games/overwatch.html": [
@@ -948,7 +1004,7 @@
 "2026-11-16"
 ],
 "nl/games/path-of-exile-2.html": [
-"baef13b86a53",
+"234315720b15",
 "2026-11-16"
 ],
 "nl/games/pubg.html": [
@@ -956,39 +1012,95 @@
 "2026-11-16"
 ],
 "nl/games/rise-online.html": [
-"212d37856531",
+"7c2d2ca03988",
 "2026-11-16"
 ],
 "nl/games/roblox.html": [
-"4f8dffc5bed6",
+"92174619fcba",
 "2026-11-16"
 ],
 "nl/games/valorant.html": [
-"6631cd0b7f43",
+"f87cd70c6098",
 "2026-11-16"
 ],
 "nl/games/world-of-warcraft.html": [
-"b1d20b043b89",
+"2e5930fd9c10",
 "2026-11-16"
 ],
 "nl/geruchten.html": [
 "4148f5d38ebe",
 "2026-11-16"
 ],
+"nl/gids/call-of-duty.html": [
+"f2ca8de1d7b5",
+"2026-11-16"
+],
 "nl/gids/counter-strike-2.html": [
-"caf0c4c6140f",
+"f87f4a8f5c69",
+"2026-11-16"
+],
+"nl/gids/diablo-4.html": [
+"29eddadf871f",
+"2026-11-16"
+],
+"nl/gids/ea-sports-fc.html": [
+"d9cc0c298218",
+"2026-11-16"
+],
+"nl/gids/fortnite.html": [
+"c4f34d724fa3",
+"2026-11-16"
+],
+"nl/gids/genshin-impact.html": [
+"fcefc775704a",
+"2026-11-16"
+],
+"nl/gids/knight-online.html": [
+"20445978c78e",
+"2026-11-16"
+],
+"nl/gids/league-of-legends.html": [
+"f931a8f21556",
+"2026-11-16"
+],
+"nl/gids/metin2.html": [
+"c494bd5a41fe",
 "2026-11-16"
 ],
 "nl/gids/minecraft.html": [
-"1a235b2a60c3",
+"a21e3eb143ac",
+"2026-11-16"
+],
+"nl/gids/mobile-legends.html": [
+"241c1499f294",
+"2026-11-16"
+],
+"nl/gids/path-of-exile-2.html": [
+"653cddcb7eb8",
 "2026-11-16"
 ],
 "nl/gids/pubg.html": [
-"66fc41301565",
+"dbbdd69635fc",
+"2026-11-16"
+],
+"nl/gids/rise-online.html": [
+"55b3d96f9be8",
+"2026-11-16"
+],
+"nl/gids/roblox.html": [
+"3b9a9d9b3b77",
+"2026-11-16"
+],
+"nl/gids/valorant.html": [
+"4e93ccfec5fb",
+"2026-11-16"
+],
+"nl/gids/world-of-warcraft.html": [
+"f0edab2d375d",
 "2026-11-16"
 ],
 "nl/gidsen.html": [
-"80d15742c4eb",
+"007794c77bf5",
 "2026-11-16"
 ],
 "nl/gratis-games.html": [
@@ -1000,7 +1112,7 @@
 "2026-11-16"
 ],
 "nl/index.html": [
-"ab37e2f92670",
+"0208efd1901b",
 "2026-11-16"
 ],
 "nl/nieuws.html": [
@@ -1228,19 +1340,75 @@
 "2026-11-16"
 ],
 "zh/gonglue.html": [
-"83aa2a41384e",
+"23205eabd5b8",
+"2026-11-16"
+],
+"zh/gonglue/call-of-duty.html": [
+"7041cfba1739",
 "2026-11-16"
 ],
 "zh/gonglue/counter-strike-2.html": [
-"4760108f1ec8",
+"c3439453b42b",
+"2026-11-16"
+],
+"zh/gonglue/diablo-4.html": [
+"5bd2fa03ae78",
+"2026-11-16"
+],
+"zh/gonglue/ea-sports-fc.html": [
+"97992ea9f5cb",
+"2026-11-16"
+],
+"zh/gonglue/fortnite.html": [
+"fd5f2629ebb5",
+"2026-11-16"
+],
+"zh/gonglue/genshin-impact.html": [
+"7567ecacb12e",
+"2026-11-16"
+],
+"zh/gonglue/knight-online.html": [
+"ebb8016c893d",
+"2026-11-16"
+],
+"zh/gonglue/league-of-legends.html": [
+"f458b8ead7be",
+"2026-11-16"
+],
+"zh/gonglue/metin2.html": [
+"ee0316b8028f",
 "2026-11-16"
 ],
 "zh/gonglue/minecraft.html": [
-"098a9754d9b7",
+"d26ba0267111",
+"2026-11-16"
+],
+"zh/gonglue/mobile-legends.html": [
+"f7a6c232761f",
+"2026-11-16"
+],
+"zh/gonglue/path-of-exile-2.html": [
+"c73f6565fe1b",
 "2026-11-16"
 ],
 "zh/gonglue/pubg.html": [
-"6860cf548088",
+"a2f68022bd58",
+"2026-11-16"
+],
+"zh/gonglue/rise-online.html": [
+"665512042c9b",
+"2026-11-16"
+],
+"zh/gonglue/roblox.html": [
+"eaf242ccdba4",
+"2026-11-16"
+],
+"zh/gonglue/valorant.html": [
+"ecdf6783f98c",
+"2026-11-16"
+],
+"zh/gonglue/world-of-warcraft.html": [
+"c89ce7b91799",
 "2026-11-16"
 ],
 "zh/gta-6.html": [
@@ -1252,7 +1420,7 @@
 "2026-11-16"
 ],
 "zh/index.html": [
-"1ea76aada96a",
+"a08174590e51",
 "2026-11-16"
 ],
 "zh/laiyuan.html": [
@@ -1280,7 +1448,7 @@
 "2026-11-16"
 ],
 "zh/youxi/call-of-duty.html": [
-"8c4bcf52eb2b",
+"be3d1bc8f039",
 "2026-11-16"
 ],
 "zh/youxi/counter-strike-2.html": [
@@ -1288,11 +1456,11 @@
 "2026-11-16"
 ],
 "zh/youxi/diablo-4.html": [
-"e953ef5dde1e",
+"30d4a96cf7df",
 "2026-11-16"
 ],
 "zh/youxi/ea-sports-fc.html": [
-"d78ccbaba71d",
+"f7fea5f9fc29",
 "2026-11-16"
 ],
 "zh/youxi/football-manager-27.html": [
@@ -1300,11 +1468,11 @@
 "2026-11-16"
 ],
 "zh/youxi/fortnite.html": [
-"557836b13883",
+"74d4b1306f14",
 "2026-11-16"
 ],
 "zh/youxi/genshin-impact.html": [
-"ac2dd40496a2",
+"cd6dd2d1d875",
 "2026-11-16"
 ],
 "zh/youxi/gta-6.html": [
@@ -1316,15 +1484,15 @@
 "2026-11-16"
 ],
 "zh/youxi/index.html": [
-"c814b3c3f9b9",
+"3b56abf90eda",
 "2026-11-16"
 ],
 "zh/youxi/knight-online.html": [
-"64c589589323",
+"5892f480dcdb",
 "2026-11-16"
 ],
 "zh/youxi/league-of-legends.html": [
-"ff8776669297",
+"db7402bca802",
 "2026-11-16"
 ],
 "zh/youxi/marathon.html": [
@@ -1332,7 +1500,7 @@
 "2026-11-16"
 ],
 "zh/youxi/metin2.html": [
-"cb34cd92d3aa",
+"f2f3dfe13034",
 "2026-11-16"
 ],
 "zh/youxi/minecraft.html": [
@@ -1340,7 +1508,7 @@
 "2026-11-16"
 ],
 "zh/youxi/mobile-legends.html": [
-"7e748222e2e6",
+"7ca8e2076c7b",
 "2026-11-16"
 ],
 "zh/youxi/overwatch.html": [
@@ -1348,7 +1516,7 @@
 "2026-11-16"
 ],
 "zh/youxi/path-of-exile-2.html": [
-"1e72f7f85130",
+"463187c8d2a2",
 "2026-11-16"
 ],
 "zh/youxi/pubg.html": [
@@ -1356,19 +1524,19 @@
 "2026-11-16"
 ],
 "zh/youxi/rise-online.html": [
-"726d678c8673",
+"e21356a58e88",
 "2026-11-16"
 ],
 "zh/youxi/roblox.html": [
-"93ad9861c2fe",
+"24635d071af9",
 "2026-11-16"
 ],
 "zh/youxi/valorant.html": [
-"fef4034cf536",
+"976ede366259",
 "2026-11-16"
 ],
 "zh/youxi/world-of-warcraft.html": [
-"6342fe297e86",
+"37ea1475fbd1",
 "2026-11-16"
 ],
 "zh/yuyan.html": [
