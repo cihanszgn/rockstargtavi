@@ -1,0 +1,67 @@
+{
+ "id": "just-volleyball-resmi-cikis-2026-11-16",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 4,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Just Volleyball resmen çıktı. Lansman indirimi başladı ve yaklaşık 8 gün boyunca yüzde 38 indirim geçerli. Oyunun yeni özellikleri de resmî duyuruda açıklandı.",
+   "veri": {
+    "ust_etiket": "CTRL+A GAME",
+    "baslik": "Just Volleyball…",
+    "vurgu": [],
+    "tuslar": [
+     "C",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "CTRL+A GAME",
+    "alt": "ctrl-agame.com"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Just Volleyball, Steam'de resmî olarak yayımlandı. Lansmanda yüzde 38 indirim uygulanıyor. Yeni haritalar, fotoğraf stüdyosu modu ve bulut yedekleme gibi özellikler mevcut. Ayrıntılar Steam'deki duyuruda yer alıyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam resmî duyurusu",
+    "alinti": "Yüzde 38 indirim yaklaşık 8 gün…"
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "CTRL+A GAME",
+    "alt": "ctrl-agame.com"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Just Volleyball haberinin ayrıntıları ve resmî kaynakları Control A Game'de.",
+   "veri": {
+    "cagri": "CTRL+A GAME",
+    "alt": "ctrl-agame.com"
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "CTRL+A GAME",
+    "alt": "ctrl-agame.com"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
