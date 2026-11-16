@@ -257,9 +257,10 @@ def hesap_ekle() -> None:
     print(f"\nTAMAM: {platform} / {dil.upper()} hesabı ({ad}) kuruldu. Yeni haberler otomatik paylaşılacak.")
 
 
-def yt_yeniden_izin(dil: str = "tr") -> int:
+def yt_yeniden_izin(dil: str = "tr", kanal: str | None = None) -> int:
     """Bu bilgisayarda saklı Client ID/secret ile izin ekranını yeniden açar (yeni izin kapsamı için).
-    Soru sormaz; tarayıcıda yalnız hesabı seçip izin vermek gerekir."""
+    Soru sormaz; tarayıcıda yalnız hesabı seçip izin vermek gerekir.
+    kanal verilirse izin başka bir kanalın hesabıyla alındığında hiçbir şey kaydedilmez."""
     s = yt_oku(dil)
     if not s:
         print(f"Bu bilgisayarda {dil.upper()} YouTube anahtarı yok; önce menüden 'YouTube kanalı bağla'.")
@@ -269,6 +270,9 @@ def yt_yeniden_izin(dil: str = "tr") -> int:
         ad = yt_dene(s)
     except (PaylasimHatasi, KeyError) as h:
         print(f"OLMADI: {h}")
+        return 1
+    if kanal and ad != kanal:
+        print(f'OLMADI: izin "{ad}" kanalının hesabıyla verildi, beklenen "{kanal}". Hiçbir şey kaydedilmedi.')
         return 1
     sir_yaz(f"YT_{dil.upper()}_REFRESH_TOKEN", s["REFRESH_TOKEN"])
     yt_sakla(dil, s)
@@ -335,7 +339,8 @@ def main() -> int:
     if "--ig-yenile" in sys.argv:
         return ig_yenile(sessiz="--sessiz" in sys.argv)
     if "--yt-yeniden-izin" in sys.argv:
-        return yt_yeniden_izin()
+        i = sys.argv.index("--kanal") if "--kanal" in sys.argv else -1
+        return yt_yeniden_izin(kanal=sys.argv[i + 1] if 0 <= i < len(sys.argv) - 1 else None)
     if gh("auth", "status").returncode != 0:
         print("GitHub girişi yok. Önce PowerShell'de:  gh auth login")
         return 1
