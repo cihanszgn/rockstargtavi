@@ -61,10 +61,13 @@ jobs:
                   kim = os.environ.get("IG_USER_ID", "")
                   def dene(ad, yol, **alan):
                       y = al(kok + yol + "?" + urllib.parse.urlencode({**alan, "access_token": ig}))
+                      if not isinstance(y, dict):
+                          y = {"data": y}
                       print(f"{ad}:", "yok -> " + y["_hata"] if "_hata" in y else "var")
                       return y
                   ben = dene("anahtar gecerli", "me", fields="id", metadata="1")
-                  print("anahtar sahibi turu:", (ben.get("metadata") or {}).get("type", "bilinmiyor"))
+                  ust = ben.get("metadata")
+                  print("anahtar sahibi turu:", ust.get("type", "bilinmiyor") if isinstance(ust, dict) else "bilinmiyor")
                   dene("hesap bilgisi okuma", kim, fields="username,followers_count,media_count")
                   m = dene("gonderileri okuma", kim + "/media", fields="id,comments_count", limit="1")
                   ilk = ((m.get("data") or [{}])[0]).get("id")
