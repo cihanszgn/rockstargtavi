@@ -72,6 +72,7 @@ BUGUN = date.today()
 SIMDI = datetime.now(TRT)
 URETILEN: dict[str, dict] = {}
 GORSEL: dict[str, dict] = {}  # haber id -> {"url", "kaynak", "en", "boy"} (data/gorseller.json, tools/gorsel_cek.py yazar)
+OYUN_GORSEL: dict[str, dict[str, dict]] = {"takvim": {}, "oyun": {}}  # data/oyun_gorselleri.json
 MANIFEST: dict[str, list] = {}
 VIDEO: dict = {}  # data/videolar.json (tools/video_uret.py yazar); yoksa boş: site videosuz derlenir
 ESKI_HARITA: dict[str, str] = {}
@@ -256,6 +257,37 @@ def gorseller_yukle() -> dict[str, dict]:
             sonuc[k] = g
         else:
             uyar(f"gorseller.json {k}: eksik/geçersiz kayıt; kapak kullanılacak.")
+    return sonuc
+
+
+def oyun_gorselleri_yukle() -> dict[str, dict[str, dict]]:
+    """Takvim ve oyun kartı/merkezi görselleri (data/oyun_gorselleri.json); yoksa boş sözlük döner."""
+    sonuc: dict[str, dict[str, dict]] = {"takvim": {}, "oyun": {}}
+    v = _json("oyun_gorselleri.json", False)
+    if v is None:
+        return sonuc
+    if not isinstance(v, dict):
+        uyar("oyun_gorselleri.json: nesne değil; oyun görselleri kullanılmadı.")
+        return sonuc
+    for bolum in ("takvim", "oyun"):
+        alt = v.get(bolum)
+        if alt is None:
+            continue
+        if not isinstance(alt, dict):
+            uyar(f"oyun_gorselleri.json.{bolum}: nesne değil; atlandı.")
+            continue
+        for k, g in alt.items():
+            if not isinstance(g, dict):
+                continue
+            url = g.get("url")
+            kaynak = str(g.get("kaynak") or "").strip()
+            en = g.get("en") if isinstance(g.get("en"), int) and g.get("en", 0) > 0 else 616
+            boy = g.get("boy") if isinstance(g.get("boy"), int) and g.get("boy", 0) > 0 else 353
+            genis = g.get("genis") if https(g.get("genis")) else ""
+            if https(url) and kaynak:
+                sonuc[bolum][str(k)] = {"url": url, "genis": genis, "kaynak": kaynak, "en": en, "boy": boy}
+            else:
+                uyar(f"oyun_gorselleri.json {bolum}.{k}: eksik/geçersiz kayıt; kapak kullanılacak.")
     return sonuc
 
 
@@ -888,7 +920,28 @@ def takvim_url(dil: str, c: dict) -> str:
     return f'{u(SAYFA["takvim"][dil])}#{c["id"]}'
 
 
-def cikis_satir(dil: str, c: dict, *, oge: bool = True, h: str = "h3", arac: bool = True, kapak: bool = True) -> str:
+def oyun_gorsel(ad_veya_id: str) -> dict | None:
+    """Oyunun data/oyun_gorselleri.json içindeki kaydı (oyun id ya da oyun adı üzerinden)."""
+    if not ad_veya_id:
+        return None
+    og = OYUN_GORSEL.get("oyun") or {}
+    if ad_veya_id in og:
+        return og[ad_veya_id]
+    oid = so.oyun_id(ad_veya_id)
+    if oid and oid in og:
+        return og[oid]
+    return None
+
+
+def takvim_gorsel(c: dict) -> dict | None:
+    """Takvim öğesinin görseli: önce takvim.<id>, yoksa eşleşen oyun.<id>."""
+    tg = OYUN_GORSEL.get("takvim") or {}
+    if c.get("id") in tg:
+        return tg[c["id"]]
+    return oyun_gorsel(c.get("oyun") or "")
+
+
+def cikis_satir(dil: str, c: dict, *, oge: bool = True, h: str = "h3", arac: bool = True, kapak: bool = True, one: bool = False) -> str:
     t, pl = T[dil], c.get("platform") or []
     tur = str((c.get("tur") or {}).get(dil) or "")
     if c.get("tarih"):
@@ -915,8 +968,10 @@ def cikis_satir(dil: str, c: dict, *, oge: bool = True, h: str = "h3", arac: boo
         ics = (f'<button type="button" class="metin-dugme js-only" data-ics data-id="{c["id"]}" data-ad="{e(c["oyun"])}" '
                f'data-tarih="{c["tarih"]}" data-url="{tam(SAYFA["takvim"][dil])}#{c["id"]}">{e(t["ics"])}</button>' if c.get("tarih") else "")
         araclar = f'<div class="c-arac">{takip_dugme(dil, c["oyun"])}{ics}</div>'
-    kg = kapak_html(dil, c["oyun"], ek=f"c-{c['id']}", sinif=" kg-kucuk") if kapak else ""
-    return (f'<li class="cikis{" cikis-kg" if kapak else ""}"{attr}>{tus}{kg}<div class="c-govde">'
+    gor = takvim_gorsel(c) if kapak else None
+    kg = kapak_html(dil, c["oyun"], ek=f"c-{c['id']}", alt=c["oyun"], gorsel=gor, sinif=" kg-kucuk") if kapak else ""
+    ek_sinif = (" cikis-kg" if kapak else "") + (" cikis-one" if one else "")
+    return (f'<li class="cikis{ek_sinif}"{attr}>{tus}{kg}<div class="c-govde">'
             f'<{h} class="c-ad">{so.oyun_adi_html(dil, c["oyun"])}</{h}><p class="c-cip">{cipler}</p>'
             f'<p class="c-kim">{"".join(kim)}</p></div><div class="c-sag">{kalan}{araclar}</div></li>\n')
 
@@ -1004,7 +1059,8 @@ def ana_sayfa(dil: str, veri: list, ind: dict, ucr: dict, soy: list, tak: list) 
              f'<a class="panel-link" href="{u(SAYFA["soylenti"][dil])}">{e(t["tum_soylenti"])}</a></div>\n{r_ic}</div></section>\n')
 
     if yakin:
-        y_ic = '<ul class="takvim-liste ikili">\n' + "".join(cikis_satir(dil, c, oge=False) for c in yakin[:6]) + "</ul>\n"
+        y_ic = ('<ul class="takvim-liste ikili takvim-izgara">\n'
+                + "".join(cikis_satir(dil, c, oge=False, one=(i == 0)) for i, c in enumerate(yakin[:6])) + "</ul>\n")
     else:
         y_ic = bos_kutu(t["bos_takvim"])
     yaklasan = (f'<section class="blok" id="yaklasan" aria-labelledby="b-yaklasan"><div class="wrap">\n'
@@ -1235,13 +1291,13 @@ def takvim_sayfasi(dil: str, tak: list) -> str:
             gruplar[a] = []
             sira.append(a)
         gruplar[a].append(c)
-    bolumler = [f'<section class="ay-grup" data-grup><h2>{ay_baslik(dil, a + "-01")}</h2>\n<ul class="takvim-liste panel">\n'
+    bolumler = [f'<section class="ay-grup" data-grup><h2>{ay_baslik(dil, a + "-01")}</h2>\n<ul class="takvim-liste takvim-izgara panel">\n'
                 + "".join(cikis_satir(dil, c) for c in gruplar[a]) + "</ul></section>\n" for a in sira]
     if belirsiz:
-        bolumler.append(f'<section class="ay-grup" data-grup><h2>{e(t["kesin_degil"])}</h2>\n<ul class="takvim-liste panel">\n'
+        bolumler.append(f'<section class="ay-grup" data-grup><h2>{e(t["kesin_degil"])}</h2>\n<ul class="takvim-liste takvim-izgara panel">\n'
                         + "".join(cikis_satir(dil, c) for c in belirsiz) + "</ul></section>\n")
     if gecmis:
-        bolumler.append(f'<details class="ay-grup gecmis" data-grup><summary>{e(t["gecmis"])}</summary>\n<ul class="takvim-liste panel">\n'
+        bolumler.append(f'<details class="ay-grup gecmis" data-grup><summary>{e(t["gecmis"])}</summary>\n<ul class="takvim-liste takvim-izgara panel">\n'
                         + "".join(cikis_satir(dil, c) for c in reversed(gecmis)) + "</ul></details>\n")
     ics = f'<button type="button" class="dugme" data-ics-takip>{e(t["ics_takip"])}</button><p class="sz-not" data-ics-durum aria-live="polite"></p>'
     govde = (sayfa_bas(dil, "takvim", t["takvim_h1"], e(t["takvim_giris"]))
@@ -1387,6 +1443,8 @@ def derle(veri: list) -> dict:
     soy, tak, ind, ucr = soylentiler_yukle(), takvim_yukle(), indirim_yukle(), ucretsiz_yukle()
     GORSEL.clear()
     GORSEL.update(gorseller_yukle())
+    OYUN_GORSEL.clear()
+    OYUN_GORSEL.update(oyun_gorselleri_yukle())
     VIDEO.clear()
     VIDEO.update(vs.yukle())
     SURUM["css"], SURUM["js"] = surum_al("style.css"), surum_al("site.js")

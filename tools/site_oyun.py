@@ -353,17 +353,26 @@ def _iz(dil: str, parcalar: list[tuple[str, str | None]]) -> tuple[str, str]:
     return f'<nav class="o-iz" aria-label="{S.e(T[dil]["o_iz"])}"><ol>{li}</ol></nav>', _ld(ld)
 
 
-def _kahraman(o: dict, iz: str, ust: str, ana: str, vurgu: str, ozet: str, ek: str) -> str:
+def _kahraman(dil: str, o: dict, iz: str, ust: str, ana: str, vurgu: str, ozet: str, ek: str) -> str:
     t = o["tema"]
     v = f'<span class="o-h1-vurgu">{S.e(vurgu)}</span>' if vurgu else ""
     # tek kelimesi uzun başlık (ör. ES "principiantes", "BATTLEGROUNDS") dar ekranda kutusundan taşmasın: CSS yazıyı küçültür
     uzun = " o-h1-uzun" if max((len(p) for p in re.split(r"[\s\-–/]+", ana)), default=0) >= 12 else ""
+    gor = S.oyun_gorsel(o["id"]) if hasattr(S, "oyun_gorsel") else None
+    gorsel_kutu = f'<div class="o-amblem" aria-hidden="true">{ot.amblem(t)}</div>'
+    if gor:
+        src = gor.get("genis") or gor["url"]
+        gorsel_kutu = (f'<div class="o-amblem o-amblem-gorsel">{ot.amblem(t)}'
+                       f'<img class="kg-img o-kahraman-img" src="{S.e(src)}" alt="{S.e(o["ad"])}" '
+                       f'width="{gor["en"]}" height="{gor["boy"]}" loading="lazy" decoding="async" '
+                       'referrerpolicy="no-referrer" onerror="this.remove()">'
+                       f'<span class="kg-not">{S.e(T[dil]["gorsel_not"])}: {S.e(gor["kaynak"])}</span></div>')
     return ('<header class="o-kahraman"><div class="o-motif" aria-hidden="true"></div>'
             f'<span class="o-dev" aria-hidden="true">{S.e(o["kisa"])}</span>\n'
             f'<div class="wrap o-k-ic">{iz}<div class="o-k-metin"><p class="o-ust-et">{ust}</p>'
             f'<h1 class="o-h1{uzun}"><span class="o-h1-ana">{S.e(ana)}</span>{v}</h1>'
             f'<p class="o-ozet">{S.e(ozet)}</p>{ek}</div>\n'
-            f'<div class="o-amblem" aria-hidden="true">{ot.amblem(t)}</div></div></header>\n')
+            f'{gorsel_kutu}</div></header>\n')
 
 
 def _rozet(deger: str, baslik: str = "", sinif: str = "", title: str = "") -> str:
@@ -469,7 +478,7 @@ def rehber_sayfasi(dil: str, oid: str) -> str:
             f'<a class="dugme" href="{S.u(hub_yol(dil, oid))}">{S.e(tt["r_hub"])}</a></div>')
     ana, vurgu = baslik_bol(rd["baslik"])
     ust = f'{S.e(tt["tur_ara"]["rehber"])} · {S.e(o["ad"])}'
-    hero = _kahraman(o, iz, ust, ana, vurgu, rd["ozet"], f'<ul class="o-rozetler">{"".join(rozet)}</ul>{arac}')
+    hero = _kahraman(dil, o, iz, ust, ana, vurgu, rd["ozet"], f'<ul class="o-rozetler">{"".join(rozet)}</ul>{arac}')
 
     sss: list = []
     bolumler = []
@@ -548,6 +557,18 @@ def _panel(baslik: str, ic: str, link: tuple[str, str] | None = None) -> str:
     return f'<section class="panel blok-panel"><div class="panel-bas"><h2>{S.e(baslik)}</h2>{a}</div>\n{ic}</section>\n'
 
 
+def _kapak_kutu(dil: str, o: dict, *, buyuk: bool = False, ek: str = "") -> str:
+    t = o["tema"]
+    gor = S.oyun_gorsel(o["id"]) if hasattr(S, "oyun_gorsel") else None
+    img = ""
+    if gor:
+        src = (gor.get("genis") or gor["url"]) if buyuk else gor["url"]
+        img = (f'<img class="kg-img" src="{S.e(src)}" alt="{S.e(o["ad"])}" width="{gor["en"]}" height="{gor["boy"]}" '
+               'loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">'
+               f'<span class="kg-not">{S.e(T[dil]["gorsel_not"])}: {S.e(gor["kaynak"])}</span>')
+    return f'<div class="kg o-kart-kg">{ot.kapak(t, S.e(o["kisa"]), buyuk=buyuk, ek=ek)}{img}</div>'
+
+
 def kayitlar(oid: str, dil: str, veri: list, soy: list, tak: list) -> tuple[list, list, list]:
     return ([x for x in veri if oyun_id(x["oyun"]) == oid],
             [s for s in soy if dil in s["diller"] and oyun_id(s["oyun"]) == oid],
@@ -587,16 +608,16 @@ def _merkez(dil: str, oid: str, veri: list, soy: list, tak: list) -> str:
           + f'<div class="o-k-arac">{"".join(dugmeler)}</div>')
     ust = S.e(tt["o_yazi_bas"]) + (f' · {S.e(o["tur"][dil])}' if o["tur"][dil] else "")
     ozet = o["tanim"][dil] or tt["o_hub_desc"].format(oyun=o["ad"])
-    hero = _kahraman(o, iz, ust, o["ad"], "", ozet, ek)
+    hero = _kahraman(dil, o, iz, ust, o["ad"], "", ozet, ek)
 
     ana = []
     if rehber_var(oid, dil):
         rd = REHBER[oid]["diller"][dil]
-        ana.append(f'<section class="o-tanitim">{ot.kapak(t, S.e(o["kisa"]), buyuk=True, ek="t")}<div class="o-tanitim-metin">'
+        ana.append(f'<section class="o-tanitim">{_kapak_kutu(dil, o, buyuk=True, ek="t")}<div class="o-tanitim-metin">'
                    f'<h2>{S.e(rd["baslik"])}</h2><p>{S.e(rd["ozet"])}</p>'
                    f'<p><a class="dugme dugme-dolu" href="{S.u(rehber_yol(dil, oid))}">{S.e(tt["r_oku"])}</a></p></div></section>\n')
     elif oid == "gta-6":
-        ana.append(f'<section class="o-tanitim">{ot.kapak(t, S.e(o["kisa"]), buyuk=True, ek="t")}<div class="o-tanitim-metin">'
+        ana.append(f'<section class="o-tanitim">{_kapak_kutu(dil, o, buyuk=True, ek="t")}<div class="o-tanitim-metin">'
                    f'<h2>{S.e(tt["r_gta_ad"])}</h2><p>{S.e(tt["r_gta_tanim"])}</p>'
                    f'<p><a class="dugme dugme-dolu" href="{S.u(ESLER[1][dil])}">{S.e(tt["r_oku"])}</a></p></div></section>\n')
     h_ic = ('<ul class="satirlar">\n' + "".join(S.haber_satir(dil, x) for x in haber[:8]) + "</ul>\n") if haber else S.bos_kutu(tt["o_bos"])
@@ -657,7 +678,7 @@ def _gruplar(dil: str, ogeler: list[dict]) -> list:
     return [("tur", tt["o_tur"], turler if len(turler) > 1 else []), ("platform", tt["o_platform"], pl if len(pl) > 1 else [])]
 
 
-def _kart(o: dict, href: str, ad: str, alt_baslik: str, ozet: str, alt: str, cta: str, ara: str, ek_sinif: str = "",
+def _kart(dil: str, o: dict, href: str, ad: str, alt_baslik: str, ozet: str, alt: str, cta: str, ara: str, ek_sinif: str = "",
           kapak_ek: str = "", buyuk: bool = False, h: str = "h2", oge: bool = True) -> str:
     t = o["tema"]
     attr = ""
@@ -665,7 +686,7 @@ def _kart(o: dict, href: str, ad: str, alt_baslik: str, ozet: str, alt: str, cta
         attr = (f' data-oge data-tur="{o["grup"]}" data-platform="{" ".join(S.slug(p) for p in o["platform"])}"'
                 f' data-oyun="{takip_anahtar(o["ad"])}" data-ara="{S.e(S.norm(ara))}"')
     return (f'<li class="o-kart{ek_sinif} t-{o["id"]} d-{t["duzen"]}"{attr}><a href="{S.u(href)}">'
-            f'{ot.kapak(t, S.e(o["kisa"]), buyuk=buyuk, ek=kapak_ek)}<div class="o-kart-metin">'
+            f'{_kapak_kutu(dil, o, buyuk=buyuk, ek=kapak_ek)}<div class="o-kart-metin">'
             f'<{h} class="o-kart-ad">{S.e(ad)}</{h}>' + (f'<p class="o-kart-tur">{S.e(alt_baslik)}</p>' if alt_baslik else "")
             + (f'<p class="o-kart-ozet">{S.e(ozet)}</p>' if ozet else "")
             + f'<p class="o-kart-alt">{alt}<span class="o-kart-cta">{S.e(cta)}</span></p></div></a></li>\n')
@@ -691,7 +712,7 @@ def oyunlar_dizini(dil: str, veri: list, soy: list, tak: list) -> str:
         if rehber_var(o["id"], dil):
             alt += f'<span class="cip cip-rehber">{S.e(tt["tur_ara"]["rehber"])}</span>'
         ara = " ".join([o["ad"], o["kisa"], *o["eslesme"], o["tur"][dil], o["gelistirici"], *o["platform"]])
-        kartlar.append(_kart(o, hub_yol(dil, o["id"]), o["ad"], o["tur"][dil], kisalt(o["tanim"][dil], 130), alt,
+        kartlar.append(_kart(dil, o, hub_yol(dil, o["id"]), o["ad"], o["tur"][dil], kisalt(o["tanim"][dil], 130), alt,
                              tt["r_hub"], ara, kapak_ek="k" + o["id"]))
     govde = _dizin_govde(dil, "oyunlar", tt["oyunlar_h1"], tt["oyunlar_giris"], "".join(kartlar), sira, "oyun")
     return S.kabuk(dil, SAYFA["oyunlar"][dil], tt["oyunlar_title"], tt["oyunlar_desc"], govde, esler=SAYFA["oyunlar"],
@@ -703,7 +724,7 @@ def rehberler_dizini(dil: str) -> str:
     kartlar, ogeler = [], []
     g = OYUN.get("gta-6")
     if g:
-        kartlar.append(_kart(g, ESLER[1][dil], tt["r_gta_ad"], g["tur"][dil], tt["r_gta_tanim"], "", tt["r_oku"],
+        kartlar.append(_kart(dil, g, ESLER[1][dil], tt["r_gta_ad"], g["tur"][dil], tt["r_gta_tanim"], "", tt["r_oku"],
                              " ".join([g["ad"], g["kisa"], *g["eslesme"], tt["r_gta_ad"], tt["r_gta_tanim"]]),
                              ek_sinif=" o-kart-gta", kapak_ek="kgta", buyuk=True))
         ogeler.append(g)
@@ -714,7 +735,7 @@ def rehberler_dizini(dil: str) -> str:
         if r["guncelleme"]:
             alt += f'<span class="cip">{S.zaman_etiketi(dil, r["guncelleme"])}</span>'
         ara = " ".join([o["ad"], o["kisa"], *o["eslesme"], rd["baslik"], rd["ozet"], o["tur"][dil], *(b["baslik"] for b in rd["bolumler"])])
-        kartlar.append(_kart(o, rehber_yol(dil, oid), o["ad"], baslik_bol(rd["baslik"])[1] or rd["baslik"], kisalt(rd["ozet"], 150),
+        kartlar.append(_kart(dil, o, rehber_yol(dil, oid), o["ad"], baslik_bol(rd["baslik"])[1] or rd["baslik"], kisalt(rd["ozet"], 150),
                              alt, tt["r_oku"], ara, kapak_ek="r" + oid))
         ogeler.append(o)
     govde = _dizin_govde(dil, "rehberler", tt["rehberler_h1"], tt["rehberler_giris"], "".join(kartlar), ogeler, "rehber")
@@ -729,7 +750,7 @@ def populer_serit(dil: str, veri: list, soy: list, tak: list) -> str:
     tt = T[dil]
     skor = skorlar(dil, veri, soy, tak)
     sec = sorted(OYUNLAR, key=lambda o: (-skor.get(o["id"], 0), S.norm(o["ad"])))[:8]
-    kartlar = "".join(_kart(o, hub_yol(dil, o["id"]), o["ad"], o["tur"][dil], "", "", tt["r_hub"], "", kapak_ek="p" + o["id"],
+    kartlar = "".join(_kart(dil, o, hub_yol(dil, o["id"]), o["ad"], o["tur"][dil], "", "", tt["r_hub"], "", kapak_ek="p" + o["id"],
                             h="h3", oge=False) for o in sec)
     return (f'<section class="blok populer" id="populer" aria-labelledby="b-populer"><div class="wrap">\n'
             f'<div class="blok-bas"><h2 id="b-populer">{S.e(tt["populer"])}</h2><p>{S.e(tt["populer_not"])}</p>'
