@@ -639,7 +639,8 @@ class AnahtarManifestTests(unittest.TestCase):
         if not v.MANIFEST.exists():
             self.skipTest('data/videolar.json yok')
         m = v.json_oku(v.MANIFEST)
-        self.assertEqual(set(m), {'surum', 'taban', 'videolar'})
+        # 'onay_gerekli' isteğe bağlıdır: false ise videolar onay beklemeden yayımlanır (Cio'nun kararı, 2026-11-17)
+        self.assertEqual(set(m) - {'onay_gerekli'}, {'surum', 'taban', 'videolar'})
         self.assertEqual((m['surum'], m['taban']), (1, 'https://medya.ctrl-agame.com/v/'))
         alanlar = {'anahtar', 'sure', 'mp4_1080', 'mp4_720', 'mp4_540', 'kapak', 'vtt', 'uretildi', 'youtube', 'instagram'}
         for kimlik, diller in m['videolar'].items():
