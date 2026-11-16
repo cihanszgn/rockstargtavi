@@ -55,7 +55,24 @@ jobs:
               d = al("https://graph.facebook.com/debug_token?" + urllib.parse.urlencode({"input_token": ig, "access_token": ig}))
               v = d.get("data") or {}
               if "_hata" in d or not v:
-                  print("sorgulanamadi:", d.get("_hata") or "bos yanit")
+                  # Bitiş tarihi bu anahtarla sorulamıyor; neye yettiğini doğrudan deneyerek göster.
+                  print("bitis tarihi sorulamadi:", d.get("_hata") or "bos yanit")
+                  kok = "https://graph.facebook.com/v27.0/"
+                  kim = os.environ.get("IG_USER_ID", "")
+                  def dene(ad, yol, **alan):
+                      y = al(kok + yol + "?" + urllib.parse.urlencode({**alan, "access_token": ig}))
+                      print(f"{ad}:", "yok -> " + y["_hata"] if "_hata" in y else "var")
+                      return y
+                  ben = dene("anahtar gecerli", "me", fields="id", metadata="1")
+                  print("anahtar sahibi turu:", (ben.get("metadata") or {}).get("type", "bilinmiyor"))
+                  dene("hesap bilgisi okuma", kim, fields="username,followers_count,media_count")
+                  m = dene("gonderileri okuma", kim + "/media", fields="id,comments_count", limit="1")
+                  ilk = ((m.get("data") or [{}])[0]).get("id")
+                  if ilk:
+                      dene("yorumlari okuma", ilk + "/comments", fields="id", limit="1")
+                      dene("gonderi istatistigi", ilk + "/insights", metric="reach")
+                  dene("hesap istatistigi", kim + "/insights", metric="reach", period="day")
+                  dene("gunluk yayin hakki", kim + "/content_publishing_limit", fields="quota_usage,config")
               else:
                   print("gecerli:", v.get("is_valid"))
                   print("anahtar turu:", v.get("type"))
