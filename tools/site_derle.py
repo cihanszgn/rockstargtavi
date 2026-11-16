@@ -969,11 +969,14 @@ def cikis_satir(dil: str, c: dict, *, oge: bool = True, h: str = "h3", arac: boo
                f'data-tarih="{c["tarih"]}" data-url="{tam(SAYFA["takvim"][dil])}#{c["id"]}">{e(t["ics"])}</button>' if c.get("tarih") else "")
         araclar = f'<div class="c-arac">{takip_dugme(dil, c["oyun"])}{ics}</div>'
     gor = takvim_gorsel(c) if kapak else None
-    kg = kapak_html(dil, c["oyun"], ek=f"c-{c['id']}", alt=c["oyun"], gorsel=gor, sinif=" kg-kucuk") if kapak else ""
+    kg = kapak_html(dil, c["oyun"], ek=f"c-{c['id']}", alt=c["oyun"], gorsel=gor) if kapak else ""
     ek_sinif = (" cikis-kg" if kapak else "") + (" cikis-one" if one else "")
-    return (f'<li class="cikis{ek_sinif}"{attr}>{tus}{kg}<div class="c-govde">'
-            f'<{h} class="c-ad">{so.oyun_adi_html(dil, c["oyun"])}</{h}><p class="c-cip">{cipler}</p>'
-            f'<p class="c-kim">{"".join(kim)}</p></div><div class="c-sag">{kalan}{araclar}</div></li>\n')
+    gorsel = f'<div class="c-gorsel">{kg}{tus}</div>' if kapak else tus
+    return (f'<li class="cikis{ek_sinif}"{attr}>{gorsel}<div class="c-govde">'
+            f'<{h} class="cikis-adi">{so.oyun_adi_html(dil, c["oyun"])}</{h}>'
+            f'<p class="c-zaman">{kalan}</p><p class="c-cip">{cipler}</p>'
+            f'<p class="c-kim">{"".join(kim)}</p></div>'
+            + (f'<div class="c-sag">{araclar}</div>' if araclar else "") + '</li>\n')
 
 
 # ---------------------------------------------------------------- sayfalar
@@ -1060,7 +1063,7 @@ def ana_sayfa(dil: str, veri: list, ind: dict, ucr: dict, soy: list, tak: list) 
 
     if yakin:
         y_ic = ('<ul class="takvim-liste ikili takvim-izgara">\n'
-                + "".join(cikis_satir(dil, c, oge=False, one=(i == 0)) for i, c in enumerate(yakin[:6])) + "</ul>\n")
+                + "".join(cikis_satir(dil, c, oge=False, one=(i == 0)) for i, c in enumerate(yakin[:8])) + "</ul>\n")
     else:
         y_ic = bos_kutu(t["bos_takvim"])
     yaklasan = (f'<section class="blok" id="yaklasan" aria-labelledby="b-yaklasan"><div class="wrap">\n'
