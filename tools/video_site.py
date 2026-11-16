@@ -197,11 +197,14 @@ def harita_girdisi(v: dict, *, ad: str, aciklama: str, tarih: str) -> str:
             "</video:video>")
 
 
-def bugun_uretilen(manifest: dict, gun: str) -> int:
-    """Manifestte `uretildi` tarihi verilen güne (YYYY-MM-DD) ait video sayısı; günlük üretim sınırı için."""
+def bugun_uretilen(manifest: dict, gun: str, dil: str | None = None) -> int:
+    """Manifestte `uretildi` tarihi verilen güne (YYYY-MM-DD) ait video sayısı; günlük üretim sınırı için.
+    `dil` verilirse yalnız o dilin videoları sayılır (günlük kota dil başınadır)."""
     n = 0
     for diller in (manifest.get("videolar") or {}).values():
-        for v in (diller or {}).values():
+        for d, v in (diller or {}).items():
+            if dil and d != dil:
+                continue
             if isinstance(v, dict) and str(v.get("uretildi") or "")[:10] == gun:
                 n += 1
     return n
@@ -210,8 +213,9 @@ def bugun_uretilen(manifest: dict, gun: str) -> int:
 if __name__ == "__main__":
     import sys
     from datetime import datetime, timezone
-    if sys.argv[1:2] == ["bugun"]:  # workflow: bugün kaç video üretildi
-        print(bugun_uretilen(yukle(), datetime.now(timezone.utc).strftime("%Y-%m-%d")))
+    if sys.argv[1:2] == ["bugun"]:  # workflow: bugün kaç video üretildi (isteğe bağlı üçüncü argüman: dil)
+        print(bugun_uretilen(yukle(), datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+                             sys.argv[2] if len(sys.argv) > 2 else None))
     elif sys.argv[1:2] == ["onay-bekleyenler"]:
         for hid, dil, adres in onay_bekleyenler(yukle()):
             print(hid, dil, adres)

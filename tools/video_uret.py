@@ -49,7 +49,9 @@ OKUNAN_SURUMLER = (1, 2, 3, 4)
 TABAN = "https://medya.ctrl-agame.com/v/"
 TZ = timezone(timedelta(hours=3))
 EN_KISA, EN_UZUN = 20.0, 80.0
-KELIME_ALT, KELIME_UST = 60, 110
+KELIME_ALT, KELIME_UST = 60, 110  # Türkçe (sondan eklemeli: az kelime, çok harf)
+# en/es/fr aynı sürede ~1,5 kat kelime söyler; uyarı eşiği dile göre
+KELIME_ARALIGI = {"tr": (60, 110), "en": (90, 175), "es": (90, 175), "fr": (90, 175)}
 ONDEN = 0.25      # sahne görüntüsü sesten biraz önce gelir
 KUYRUK = 1.4      # son sözden sonra kapanış için kalan süre
 # Kapak resmi (site oynatıcısının posteri, Reels kapağı, YouTube küçük resmi) başlık sahnesinin bir karesidir. Süreler
@@ -92,11 +94,61 @@ SAYI = re.compile(r"\d+(?:[.,]\d+)*")
 NOKTALAMA = "\"'“”‘’()[]{}.,;:!?…«»"
 KESMELER = ("'", "’")
 CUMLE_SONU = ".!?…:;"
-# Altyazı parçası bu kelimelerle bitmez (sonraki kelimeye bağlılar) ve bu eklerle başlamaz (öncekine bağlılar).
-BAGLI_SON = frozenset("ve veya ile ya ama fakat ancak hem en bu şu o bir her çok daha "
-                      "the a an and or of to in on for with at by "
-                      "le la les un une des et ou du au el los las y del con".split())
-BAGLI_BAS = frozenset("de da ki mi mı mu mü".split())
+# Dile özel metin kuralları tek yerde. Altyazı parçası "bagli_son" kelimeleriyle bitmez (sonraki kelimeye bağlılar),
+# "bagli_bas" eklerle başlamaz (öncekine bağlılar). "elision": kelime başına yapışan kesmeli ön ekler (Fransızca l'opération).
+# "kapanis": son sahnenin kapanış cümlesi şablonu; site adı her dilde söylenir, web adresi seslendirilmez.
+# Türkçe kümesi eskiden dilden bağımsız birleşim olarak kullanıldı (oyun adlarındaki "The", "of" dahil); aynen korunur.
+SITE_ADI = "Control A Game"
+DIL_KURALI = {
+    "tr": {
+        "bagli_son": frozenset("ve veya ile ya ama fakat ancak hem en bu şu o bir her çok daha "
+                               "the a an and or of to in on for with at by "
+                               "le la les un une des et ou du au el los las y del con".split()),
+        "bagli_bas": frozenset("de da ki mi mı mu mü".split()),
+        "elision": (),
+        "kapanis": "Tamamı sitemizde, Control A Game'de.",
+    },
+    "en": {
+        "bagli_son": frozenset("the a an and or but nor of to in on for with at by from as into than that this these "
+                               "those its their our your his her my is are was were will be".split()),
+        "bagli_bas": frozenset(),
+        "elision": (),
+        "kapanis": "Read the full story on our site, Control A Game.",
+    },
+    "es": {
+        "bagli_son": frozenset("el la los las un una unos unas y e o u de del al a en con por para sin que se su sus "
+                               "lo les mi sobre entre hasta desde como".split()),
+        "bagli_bas": frozenset(),
+        "elision": (),
+        "kapanis": "Todos los detalles en nuestra web, Control A Game.",
+    },
+    "fr": {
+        "bagli_son": frozenset("le la les un une des et ou du de au aux en à sur dans pour par avec sans que qui ce "
+                               "cet cette ces son sa ses leur leurs mon ma mes ne se sous chez entre vers".split()),
+        "bagli_bas": frozenset(),
+        # d', l', qu' ... kelime başına yapışır ve ayrı okunmaz: "l'opération" tek sözlü birimdir.
+        "elision": ("qu", "jusqu", "lorsqu", "puisqu", "d", "l", "j", "n", "s", "c", "m", "t"),
+        "kapanis": "Tout est sur notre site, Control A Game.",
+    },
+}
+BAGLI_SON = DIL_KURALI["tr"]["bagli_son"]
+BAGLI_BAS = DIL_KURALI["tr"]["bagli_bas"]
+
+
+def dil_kurali(dil: str | None) -> dict:
+    """Dilin kural tablosu; dil yoksa/tanınmıyorsa Türkçe satırı (eski davranış: dilden bağımsız birleşim)."""
+    return DIL_KURALI.get(dil or "", DIL_KURALI["tr"])
+
+
+def kapanis_cumlesi(dil: str) -> str:
+    """Kapanış sahnesi için örnek cümle (site adı söylenir, web adresi yok); senaryo yazarken şablon."""
+    return dil_kurali(dil)["kapanis"]
+
+
+def site_adi_var(metin: str) -> bool:
+    return _norm(SITE_ADI) in _norm(metin)
+
+
 KIRILMAZ = 100.0
 KIMLIK = re.compile(r"^[a-z0-9][a-z0-9-]{2,150}$")
 DIL = re.compile(r"^[a-z]{2}$")
@@ -336,19 +388,38 @@ def _ay_bul(ad: str, dil: str) -> int | None:
     return None
 
 
+class _EnTarih:
+    """İngilizce "Month D" eşleşmesini gün-önce eşleşmesiyle aynı alanlara (1. ve 2. gün) çevirir."""
+
+    def __init__(self, bas: str, bit: str | None):
+        self._g = {1: bas, 2: bit}
+
+    def group(self, i: int):
+        return self._g.get(i)
+
+
 def tarih_coz(metin: str, haber_tarihi: str, dil: str) -> dict | None:
     """"1 Aralık", "13–16 Kasım", "1 de diciembre 2026" → gün aralığı, ay, yıl (yıl yoksa haber tarihinden)."""
-    m = re.fullmatch(r"(\d{1,2})(?:\s*[–-]\s*(\d{1,2}))?\s+(?:de\s+)?([^\W\d_]+)(?:\s+(?:de\s+)?(\d{4}))?",
-                     metin.strip(), re.IGNORECASE)
-    if not m:
-        return None
-    ay = _ay_bul(m.group(3), dil)
+    metin = metin.strip()
+    m = re.fullmatch(r"(\d{1,2})(?:er)?(?:\s*[–-]\s*(\d{1,2}))?\s+(?:de\s+)?([^\W\d_]+)(?:\s+(?:de\s+)?(\d{4}))?",
+                     metin, re.IGNORECASE)
+    if m:
+        ay_adi, yil_metni = m.group(3), m.group(4)
+    else:
+        # İngilizce sıra: "December 1", "November 13–16", "December 1, 2026"
+        m = re.fullmatch(r"([^\W\d_]+)\s+(\d{1,2})(?:st|nd|rd|th)?(?:\s*[–-]\s*(\d{1,2})(?:st|nd|rd|th)?)?(?:,?\s+(\d{4}))?",
+                         metin, re.IGNORECASE)
+        if not m:
+            return None
+        ay_adi, yil_metni = m.group(1), m.group(4)
+        m = _EnTarih(m.group(2), m.group(3))
+    ay = _ay_bul(ay_adi, dil)
     if not ay:
         return None
     gun_bas = int(m.group(1))
     gun_bit = int(m.group(2) or m.group(1))
     h = date.fromisoformat(haber_tarihi)
-    yil = int(m.group(4)) if m.group(4) else (h.year + 1 if ay < h.month else h.year)
+    yil = int(yil_metni) if yil_metni else (h.year + 1 if ay < h.month else h.year)
     try:
         ilk = date(yil, ay, 1)
         date(yil, ay, gun_bit)
@@ -604,9 +675,21 @@ def _alt_kart(D: Denetci, a, y: str) -> dict:
     return cikti
 
 
-def okunus_uygula(kelimeler: list[str], okunus: dict, kullanilan: set | None = None) -> list[tuple[list[int], str]]:
+def _elision_ayir(govde: str, dil: str | None) -> tuple[str, str]:
+    """Fransızca kelime başı kesmeyi ayırır: "l'Operation" → ("l'", "Operation"). Kesme yoksa ("", govde)."""
+    for ek in dil_kurali(dil)["elision"]:
+        for ks in KESMELER:
+            if govde.casefold().startswith(ek + ks) and len(govde) > len(ek) + 1:
+                return govde[:len(ek) + 1], govde[len(ek) + 1:]
+    return "", govde
+
+
+def okunus_uygula(kelimeler: list[str], okunus: dict, kullanilan: set | None = None,
+                  dil: str | None = None) -> list[tuple[list[int], str]]:
     """Gösterilen kelimeleri sözlü birimlere çevirir: [(kelime sıraları, söylenecek metin)].
-    Anahtar tam kelime(ler)le, büyük/küçük harf duyarlı eşleşir; kesmeden sonraki ek korunur (Siege'in → Siyc'in)."""
+    Anahtar tam kelime(ler)le, büyük/küçük harf duyarlı eşleşir; kesmeden sonraki ek korunur (Siege'in → Siyc'in).
+    Fransızcada (dil="fr") kelime başındaki kesme ön eki ayrı sayılır: anahtar "Operation" ise "l'Operation" da
+    eşleşir ve ön ek korunur ("l'" + okunuş)."""
     anahtarlar = sorted(((k.split(), k, v) for k, v in okunus.items()), key=lambda x: -len(x[0]))
     birimler, i = [], 0
     while i < len(kelimeler):
@@ -615,6 +698,11 @@ def okunus_uygula(kelimeler: list[str], okunus: dict, kullanilan: set | None = N
             if not parca or i + n > len(kelimeler):
                 continue
             govde = [_parcala(kelimeler[i + m])[1] for m in range(n)]
+            on_ek = ""
+            if govde[0] != parca[0]:
+                on_ek, ayri = _elision_ayir(govde[0], dil)
+                if on_ek:
+                    govde[0] = ayri
             if govde[:-1] != parca[:-1]:
                 continue
             ek = "" if govde[-1] == parca[-1] else next(
@@ -622,7 +710,7 @@ def okunus_uygula(kelimeler: list[str], okunus: dict, kullanilan: set | None = N
             if ek is None:
                 continue
             birimler.append((list(range(i, i + n)),
-                             _parcala(kelimeler[i])[0] + deger + ek + _parcala(kelimeler[i + n - 1])[2]))
+                             _parcala(kelimeler[i])[0] + on_ek + deger + ek + _parcala(kelimeler[i + n - 1])[2]))
             if kullanilan is not None:
                 kullanilan.add(ham)
             i += n
@@ -633,12 +721,15 @@ def okunus_uygula(kelimeler: list[str], okunus: dict, kullanilan: set | None = N
     return birimler
 
 
-def tahmini_sure(sozlu: str) -> float:
+HARF_HIZI = {"tr": 13.0, "en": 14.5, "es": 15.0, "fr": 14.5}  # neural ses harf/sn (kaba; gerçek süreyi uret ölçer)
+
+
+def tahmini_sure(sozlu: str, dil: str = "tr") -> float:
     """Kaba süre tahmini (doğrulama için; gerçek süreyi uret ölçer). Türkçe neural ses ~13 harf/sn, rakamlar uzun okunur."""
     harf = sum(1 for c in sozlu if c.isalpha())
     rakam = sum(1 for c in sozlu if c.isdigit())
     cumle = sum(1 for c in sozlu if c in ".!?:;")
-    return harf / 13.0 + rakam * 0.32 + cumle * 0.3 + KUYRUK
+    return harf / HARF_HIZI.get(dil, 13.0) + rakam * 0.32 + cumle * 0.3 + KUYRUK
 
 
 def senaryo_hazirla(senaryo, haber: dict, dil: str) -> dict:
@@ -696,7 +787,7 @@ def senaryo_hazirla(senaryo, haber: dict, dil: str) -> dict:
                 D.hata(f"{y}.maskot.hareket", f"şunlardan biri olmalı: {', '.join(HAREKETLER)}")
             if "konum" in maskot:
                 D.uyarilar.append(f"{y}.maskot.konum: maskotun yeri şablondan gelir, yok sayıldı")
-        birimler = okunus_uygula(kel, okunus, kullanilan)
+        birimler = okunus_uygula(kel, okunus, kullanilan, dil)
         sozlu.append(" ".join(b[1] for b in birimler))
         if WEB_ADRESI.search(anlatim) or WEB_ADRESI.search(sozlu[-1]):
             D.hata(f"{y}.anlatim", "web adresi seslendirilmez; sitenin adını yazın "
@@ -706,13 +797,17 @@ def senaryo_hazirla(senaryo, haber: dict, dil: str) -> dict:
                       "maskot": {"hareket": hareket or ""}})
     if hazir and (hazir[0]["sablon"] != "baslik" or hazir[-1]["sablon"] != "kapanis"):
         D.hata("sahneler", "ilk sahne baslik, son sahne kapanis olmalı")
+    if hazir and hazir[-1]["sablon"] == "kapanis" and not site_adi_var(hazir[-1]["anlatim"]):
+        D.hata(f"sahneler[{len(hazir) - 1}].anlatim",
+               f'kapanış anlatımı sitenin adını söylemeli ("{SITE_ADI}"); örnek: "{kapanis_cumlesi(dil)}"')
     for k in sorted(set(okunus) - kullanilan):
         D.uyarilar.append(f'okunus.{k}: anlatımda geçmiyor')
     kelime_sayisi = sum(len(h["kelimeler"]) for h in hazir)
-    if not KELIME_ALT <= kelime_sayisi <= KELIME_UST:
-        D.uyarilar.append(f"anlatım {kelime_sayisi} kelime; önerilen {KELIME_ALT}–{KELIME_UST}")
+    alt, ust = KELIME_ARALIGI.get(dil, (KELIME_ALT, KELIME_UST))
+    if not alt <= kelime_sayisi <= ust:
+        D.uyarilar.append(f"anlatım {kelime_sayisi} kelime; önerilen {alt}–{ust}")
     tts = "\n".join(_cumle_bitir(x) for x in sozlu)
-    tahmin = tahmini_sure(tts)
+    tahmin = tahmini_sure(tts, dil)
     if not EN_KISA <= tahmin <= EN_UZUN:
         D.hata("sahneler", f"tahmini süre {tahmin:.1f} sn; {EN_KISA:.0f}–{EN_UZUN:.0f} sn olmalı")
     if D.hatalar:
@@ -775,13 +870,173 @@ def sayi_oku_tr(n: int) -> str:
     return " ".join(parca)
 
 
+_EN_BIR = ("", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve",
+           "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen")
+_EN_ON = ("", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety")
+_EN_SIRA = {"one": "first", "two": "second", "three": "third", "five": "fifth", "eight": "eighth", "nine": "ninth",
+            "twelve": "twelfth"}
+_ES_BIR = ("", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve", "diez", "once", "doce", "trece",
+           "catorce", "quince", "dieciséis", "diecisiete", "dieciocho", "diecinueve", "veinte", "veintiuno", "veintidós",
+           "veintitrés", "veinticuatro", "veinticinco", "veintiséis", "veintisiete", "veintiocho", "veintinueve")
+_ES_ON = ("", "", "", "treinta", "cuarenta", "cincuenta", "sesenta", "setenta", "ochenta", "noventa")
+_ES_YUZ = ("", "ciento", "doscientos", "trescientos", "cuatrocientos", "quinientos", "seiscientos", "setecientos",
+           "ochocientos", "novecientos")
+_FR_BIR = ("", "un", "deux", "trois", "quatre", "cinq", "six", "sept", "huit", "neuf", "dix", "onze", "douze", "treize",
+           "quatorze", "quinze", "seize")
+_FR_ON = ("", "", "vingt", "trente", "quarante", "cinquante", "soixante")
+
+
+def sayi_oku_en(n: int) -> str:
+    """İngilizce okunuş: 750 → "seven hundred fifty", 1000 → "one thousand", 2026 → "two thousand twenty-six"."""
+    if n == 0:
+        return "zero"
+    parca = []
+    for deger, ad in ((10 ** 12, "trillion"), (10 ** 9, "billion"), (10 ** 6, "million"), (1000, "thousand")):
+        if n >= deger:
+            kat, n = divmod(n, deger)
+            parca += [sayi_oku_en(kat), ad]
+    yuz, n = divmod(n, 100)
+    if yuz:
+        parca += [_EN_BIR[yuz], "hundred"]
+    if n:
+        parca.append(_EN_BIR[n] if n < 20 else _EN_ON[n // 10] + ("-" + _EN_BIR[n % 10] if n % 10 else ""))
+    return " ".join(parca)
+
+
+def yil_oku_en(n: int) -> str:
+    """Yıl okunuşu: 2026 → "twenty twenty-six", 1999 → "nineteen ninety-nine"; 2000–2009 ve yüzlükler tam sayı gibi."""
+    if 1100 <= n <= 2099 and n % 100 and not 2000 <= n <= 2009:
+        ust, alt = divmod(n, 100)
+        return f"{sayi_oku_en(ust)} {'oh-' + _EN_BIR[alt] if alt < 10 else sayi_oku_en(alt)}"
+    return sayi_oku_en(n)
+
+
+def sira_oku_en(n: int) -> str:
+    """11 → "eleventh", 21 → "twenty-first", 40 → "fortieth"."""
+    soz = sayi_oku_en(n)
+    kesim = max(soz.rfind(" "), soz.rfind("-"))
+    bas, son = soz[:kesim + 1], soz[kesim + 1:]
+    if son in _EN_SIRA:
+        son = _EN_SIRA[son]
+    elif son.endswith("y"):
+        son = son[:-1] + "ieth"
+    else:
+        son += "th"
+    return bas + son
+
+
+def sayi_oku_es(n: int) -> str:
+    """İspanyolca okunuş: 750 → "setecientos cincuenta", 1000 → "mil", 2026 → "dos mil veintiséis"."""
+    if n == 0:
+        return "cero"
+    parca = []
+    if n >= 10 ** 6:
+        kat, n = divmod(n, 10 ** 6)
+        parca += ["un millón"] if kat == 1 else [sayi_oku_es(kat), "millones"]
+    if n >= 1000:
+        kat, n = divmod(n, 1000)
+        parca += ["mil"] if kat == 1 else [sayi_oku_es(kat), "mil"]
+    yuz, n = divmod(n, 100)
+    if yuz == 1 and n == 0:
+        parca.append("cien")
+    elif yuz:
+        parca.append(_ES_YUZ[yuz])
+    if n and n < 30:
+        parca.append(_ES_BIR[n])
+    elif n:
+        parca.append(_ES_ON[n // 10] + (" y " + _ES_BIR[n % 10] if n % 10 else ""))
+    return " ".join(parca)
+
+
+def _fr_yuz_alti(n: int) -> str:
+    if n < 17:
+        return _FR_BIR[n]
+    if n < 20:
+        return "dix-" + _FR_BIR[n - 10]
+    if n < 70:
+        on, bir = divmod(n, 10)
+        return _FR_ON[on] + ("-et-un" if bir == 1 else "-" + _FR_BIR[bir] if bir else "")
+    if n < 80:
+        return "soixante-et-onze" if n == 71 else "soixante-" + _fr_yuz_alti(n - 60)
+    return "quatre-vingts" if n == 80 else "quatre-vingt-" + _fr_yuz_alti(n - 80)
+
+
+def sayi_oku_fr(n: int, son: bool = True) -> str:
+    """Fransızca okunuş: 750 → "sept cent cinquante", 80 → "quatre-vingts", 2026 → "deux mille vingt-six".
+    Çarpanlı "cent" ve "vingt" yalnız sayının sonunda çoğul olur (`son`)."""
+    if n == 0:
+        return "zéro"
+    parca = []
+    if n >= 10 ** 6:
+        kat, n = divmod(n, 10 ** 6)
+        parca += [sayi_oku_fr(kat, False), "millions" if kat > 1 else "million"]
+    if n >= 1000:
+        kat, n = divmod(n, 1000)
+        parca += ["mille"] if kat == 1 else [sayi_oku_fr(kat, False), "mille"]
+    yuz, n = divmod(n, 100)
+    if yuz:
+        parca.append("cent" if yuz == 1 else _FR_BIR[yuz] + (" cents" if n == 0 and son else " cent"))
+    if n:
+        soz = _fr_yuz_alti(n)
+        parca.append(soz[:-1] if soz == "quatre-vingts" and not son else soz)
+    return " ".join(parca)
+
+
+def _tam(metin: str, ayrac: str) -> int:
+    return int("".join(c for c in metin if c not in ayrac))
+
+
+def _sayi_tr(t: str) -> str:
+    return sayi_oku_tr(int(t.replace(".", "")))
+
+
+def _sayi_en(t: str) -> str:
+    sira = re.fullmatch(r"(\d+)(?:st|nd|rd|th)", t)
+    if sira:
+        return sira_oku_en(int(sira.group(1)))
+    tam, _, ondalik = t.partition(".")
+    n = _tam(tam, ",")
+    soz = yil_oku_en(n) if "," not in tam and len(tam) == 4 and not ondalik else sayi_oku_en(n)
+    return soz + (" point " + " ".join(_EN_BIR[int(c)] or "zero" for c in ondalik) if ondalik else "")
+
+
+def _ondalik_oku(ondalik: str, oku) -> str:
+    return " ".join(oku(int(c)) for c in ondalik)
+
+
+def _sayi_es(t: str) -> str:
+    tam, _, ondalik = t.partition(",")
+    return sayi_oku_es(_tam(tam, ".")) + (" coma " + _ondalik_oku(ondalik, sayi_oku_es) if ondalik else "")
+
+
+def _sayi_fr(t: str) -> str:
+    tam, _, ondalik = t.partition(",")
+    return (sayi_oku_fr(_tam(tam, ".   "))
+            + (" virgule " + _ondalik_oku(ondalik, sayi_oku_fr) if ondalik else ""))
+
+
+# Dil başına sayı kuralı: (rakam dizisi kalıbı, okuyucu). Konuşma tanıma "750"yi sözcükle verir; iki taraf da aynı çevrilir.
+SAYI_KURALI = {
+    "tr": (re.compile(r"\d{1,3}(?:\.\d{3})+(?!\d)|\d+"), _sayi_tr),
+    "en": (re.compile(r"\d{1,3}(?:,\d{3})+(?:\.\d+)?(?!\d)|\d+(?:st|nd|rd|th)\b|\d+(?:\.\d+)?"), _sayi_en),
+    "es": (re.compile(r"\d{1,3}(?:\.\d{3})+(?:,\d+)?(?![\d,])|\d+(?:,\d+)?"), _sayi_es),
+    "fr": (re.compile(r"\d{1,3}(?:[.   ]\d{3})+(?:,\d+)?(?![\d,])|\d+(?:,\d+)?"), _sayi_fr),
+}
+
+
+def sayilari_oku(metin: str, dil: str | None) -> str:
+    """Rakamları dilin okunuşuna çevirir ("750 mermi" → "yedi yüz elli mermi"); dil tanınmıyorsa metne dokunmaz."""
+    kural = SAYI_KURALI.get(dil or "")
+    if not kural:
+        return metin
+    kalip, oku = kural
+    return kalip.sub(lambda m: f" {oku(m.group())} ", metin)
+
+
 def _soz_norm(metin: str, dil: str | None) -> str:
-    """Eşleme için sözlü biçim: Türkçede rakamlar okunduğu gibi yazılır (konuşma tanıma "750"yi "yedi yüz elli" verir).
+    """Eşleme için sözlü biçim: rakamlar okunduğu gibi yazılır (konuşma tanıma "750"yi "yedi yüz elli" verir).
     Seslendirici sınırları rakamı rakam olarak verse de iki taraf aynı çevrildiği için eşleşme bozulmaz."""
-    if dil == "tr":
-        metin = re.sub(r"\d{1,3}(?:\.\d{3})+(?!\d)|\d+",
-                       lambda m: f" {sayi_oku_tr(int(m.group().replace('.', '')))} ", metin)
-    return _norm(metin)
+    return _norm(sayilari_oku(metin, dil))
 
 
 def hizala(sozlu_birimler: list[str], sinirlar: list[dict], dil: str | None = None) -> list[tuple[float, float] | None]:
@@ -918,9 +1173,11 @@ def satir_dagit(kelimeler: list[str]) -> tuple[list[list[int]], float] | None:
     return [list(range(k)), list(range(k, len(w)))], 1.0
 
 
-def kirma_cezasi(onceki: str, sonraki: str) -> float:
+def kirma_cezasi(onceki: str, sonraki: str, dil: str | None = None) -> float:
     """İki kelime arasında altyazıyı kırmanın bedeli. Sayı, ardındaki birimden ya da sıra sayısının
-    ait olduğu kelimeden ayrılmaz ("11. / yılın", "750 / mermi"); bağlaçta bitmek, ekle başlamak pahalı."""
+    ait olduğu kelimeden ayrılmaz ("11. / yılın", "750 / mermi"); bağlaçta bitmek, ekle başlamak pahalı.
+    Bağlaç ve ek kümesi dile özeldir (DIL_KURALI); dil verilmezse Türkçe satırı (eski davranış)."""
+    kural = dil_kurali(dil)
     _, govde, arka = _parcala(onceki)
     sg = _parcala(sonraki)[1].casefold()
     if govde.isdigit() and arka in ("", "."):
@@ -928,16 +1185,16 @@ def kirma_cezasi(onceki: str, sonraki: str) -> float:
     ceza = 0.0 if arka else 0.8  # noktalamada kırmak daha doğal
     if govde.isdigit():
         ceza += 4  # "2, 3 veya 5 kişilik" gibi sayı dizileri
-    if not arka and govde.casefold() in BAGLI_SON:
+    if not arka and govde.casefold() in kural["bagli_son"]:
         ceza += 4
-    if sg in BAGLI_BAS:
+    if sg in kural["bagli_bas"]:
         ceza += 4
     if govde[:1].isdigit() and sg[:1].isdigit():
         ceza += 3  # "50'den 30'a" aralığı
     return ceza
 
 
-def parcalara_bol(kelimeler: list[dict]) -> list[dict]:
+def parcalara_bol(kelimeler: list[dict], dil: str | None = None) -> list[dict]:
     """Altyazı parçaları: sahne ve cümle sonları kesin kırılır; parça 3–5 kelime (çoğu 4), en çok iki satır,
     tek satır yeğlenir. Ölçüler örnek videodan: parça başına ortalama 3,6 kelime, parçaların ~%28'i iki satır."""
     A = duzen()["altyazi"]
@@ -973,7 +1230,7 @@ def parcalara_bol(kelimeler: list[dict]) -> list[dict]:
                 if len(dagilim[0]) > 1:
                     ceza += A["iki_satir_ceza"]
                 if j < n:
-                    ceza += kirma_cezasi(kelimeler[bolum[j - 1]]["k"], kelimeler[bolum[j]]["k"])
+                    ceza += kirma_cezasi(kelimeler[bolum[j - 1]]["k"], kelimeler[bolum[j]]["k"], dil)
                 sure = kelimeler[bolum[j - 1]]["s"] - kelimeler[bolum[i]]["b"]
                 ceza += max(0.0, sure - 3.0) * 4
                 if dagilim[1] < 1:
@@ -1045,7 +1302,7 @@ def zamanla(hazir: dict, sinirlar: list[dict], ses_suresi: float, duraklar=()) -
         sahneler.append({"sablon": s["sablon"], "bas": bas, "bit": bit, "veri": veri, "alt_kart": s["alt_kart"],
                          "maskot": s["maskot"], "altyazi": zaman})
     sade = [{"k": w["k"], "b": w["b"], "s": w["s"], "sahne": w["sahne"]} for w in kelimeler]
-    parcalar = parcalara_bol(sade)
+    parcalar = parcalara_bol(sade, dil)
     return {"sahneler": sahneler, "kelimeler": [{"k": w["k"], "b": w["b"], "s": w["s"]} for w in sade],
             "parcalar": parcalar, "sure": round(toplam, 3)}
 
@@ -1123,7 +1380,10 @@ def manifest_yaz(m: dict, yol: Path | None = None) -> None:
 def video_ayari(yol: Path | None = None) -> dict:
     yol = yol or AYARLAR
     ayar = (json_oku(yol) if Path(yol).exists() else {}).get("video") or {}
-    return {"ses": ayar.get("ses") or "azure", "konusmaci": ayar.get("konusmaci") or "",
+    harita = ayar.get("konusmaci") or {}
+    if not isinstance(harita, dict):  # eski tek değerli biçim: yalnız kendi dilinin konuşmacısı olarak okunur
+        harita = {str(harita)[:2].lower(): str(harita)} if harita else {}
+    return {"ses": ayar.get("ses") or "azure", "konusmaci": {str(d): str(k) for d, k in harita.items() if k},
             "yukleme_hedefi": ayar.get("yukleme_hedefi") or "", "gunluk_en_fazla": int(ayar.get("gunluk_en_fazla", 2)),
             "hype_esigi": int(ayar.get("hype_esigi", 7))}
 
@@ -1215,9 +1475,12 @@ def tanima_sonlarini_kirp(kelimeler: list[dict], duraklar: list[tuple[float, flo
 SESLENDIRICILER = {"edge": EdgeSes, "azure": AzureSes}
 
 
-def seslendirici(ad: str, konusmaci: str, dil: str) -> Seslendirici:
+def seslendirici(ad: str, konusmaci: "str | dict", dil: str) -> Seslendirici:
+    """`konusmaci` dil → ses haritası (sosyal/ayarlar.json video.konusmaci) ya da tek ses adıdır."""
     if ad not in SESLENDIRICILER:
         raise UretimHatasi(f"bilinmeyen ses sağlayıcı: {ad!r} (edge veya azure)")
+    if isinstance(konusmaci, dict):
+        konusmaci = konusmaci.get(dil) or ""
     # Ayardaki konuşmacı yalnız kendi dilinde kullanılır: tr-TR sesi İngilizce metni okumasın.
     if not konusmaci or konusmaci.split("-")[0].lower() != dil:
         konusmaci = VARSAYILAN_KONUSMACI.get(dil, "")
@@ -1471,17 +1734,22 @@ def dogrula(haber_id: str, dil: str, cikti=print) -> int:
     return 0
 
 
+def bugun_uretilen_dil(m: dict, dil: str, bugun: date) -> int:
+    """Bugün bu dilde üretilmiş video sayısı (günlük kota dil başınadır)."""
+    return sum(1 for v in m["videolar"].values() for d, g in v.items()
+               if d == dil and str(g.get("uretildi", ""))[:10] == bugun.isoformat())
+
+
 def bekleyenler(dil: str = "tr", gunluk: bool = False, bugun: date | None = None, cikti=print) -> list[str]:
-    """Son günlerin (sosyal/ayarlar.json en_eski_gun, varsayılan 3) geçerli senaryolu ama hazır videosu olmayan haberleri."""
+    """Son günlerin (sosyal/ayarlar.json en_eski_gun, varsayılan 3) geçerli senaryolu ama hazır videosu olmayan haberleri.
+    gunluk=True: günlük kota dil başınadır (video.gunluk_en_fazla her dil için ayrı sayılır)."""
     ayarlar = json_oku(AYARLAR) if AYARLAR.exists() else {}
     ayar = video_ayari()
     bugun = bugun or datetime.now(TZ).date()
     m = manifest_oku()
     kalan = math.inf
     if gunluk:
-        bugunku = sum(1 for v in m["videolar"].values() for g in v.values()
-                      if str(g.get("uretildi", ""))[:10] == bugun.isoformat())
-        kalan = max(0, ayar["gunluk_en_fazla"] - bugunku)
+        kalan = max(0, ayar["gunluk_en_fazla"] - bugun_uretilen_dil(m, dil, bugun))
     sonuc = []
     for h in sorted(haberler(), key=lambda x: (x.get("tarih", ""), x.get("id", "")), reverse=True):
         if len(sonuc) >= kalan:

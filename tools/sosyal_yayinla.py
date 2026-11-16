@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
 """Sosyal paylaşım: data/icerik.json'daki yeni haberleri X, Reddit, Instagram (görsel + Reels) ve YouTube Shorts'a gönderir.
 
-Her dil ayrı hesaptır (tr, en, fr, es). Bir hesabın şifreleri yoksa o hesap sessizce atlanır.
-Şifreler ortam değişkeninden okunur (GitHub Actions: her sır adıyla env olarak verilir).
+Her dil ayrı hesaptır (tr, en, fr, es). Bir hesabın anahtarları yoksa o hesap atlanır ("anahtar yok, atlandı" diye
+çıktıda görünür); anahtarlar eklenince paylaşım kod değişmeden başlar.
+Anahtarlar ortam değişkeninden okunur (GitHub Actions: her sır adıyla env olarak verilir).
+Görsel gönderi her haberde, Reels ve Shorts yalnız hype puanı sosyal/ayarlar.json video.hype_esigi ve üstündeki
+haberde gider (puanı olmayan eski haberde: manifestte video varsa gider).
 
-  python tools/sosyal_yayinla.py --dry-run     # ne paylaşılacağını gösterir, hiçbir ağ çağrısı yapmaz, dosya yazmaz
+  python tools/sosyal_yayinla.py --dry-run     # ne paylaşılacağını gösterir, hiçbir ağ çağrısı yapmaz, dosya yazmaz;
+                                               # anahtarı olmayan hesap "anahtar yok, atlandı" diye listelenir
+  python tools/sosyal_yayinla.py --dry-run --anahtarsiz-goster   # anahtarı olmayan hesapların planını da göster
   python tools/sosyal_yayinla.py               # gerçekten paylaşır, sosyal/gonderilenler.json'a yazar
   python tools/sosyal_yayinla.py --selftest    # OAuth imzası, kayıt göçü, metin sınırları sınanır (ağ yok)
 
@@ -476,6 +481,21 @@ def hesap_sirri(tum, platform, dil):
     return sir if all(sir.values()) else None
 
 
+def eksik_sirlar(tum, platform, dil) -> list[str]:
+    """Hesabın eksik ortam değişkeni adları (yalnız ad; değer yok)."""
+    on = f"{ONEK_SIR[platform]}_{dil.upper()}_"
+    return [on + a for a in GEREKEN[platform] if not (tum.get(on + a) or "").strip()]
+
+
+def video_hakki(x: dict, ayar: dict) -> bool:
+    """Reels/Shorts yalnız hype puanı eşiğe ulaşan haberde; puanı olmayan eski haberde manifestte video yeter."""
+    hype = (x.get("otomasyon") or {}).get("hype")
+    if hype is None:
+        return True
+    esik = int((ayar.get("video") or {}).get("hype_esigi", 7))
+    return type(hype) is int and hype >= esik
+
+
 def paylasim_linki(dil, x, platform) -> str:
     q = urllib.parse.urlencode({"utm_source": platform, "utm_medium": "social", "utm_campaign": "oyun-haberleri"})
     return f"{SITE}/{KLASOR[dil]}/{x['id']}.html?{q}"
@@ -554,7 +574,7 @@ def uzlastir(ag, kayit, tum, ayar, manifest_yolu, kaydet, simdi) -> list:
 
 # ---------------------------------------------------------------- akış
 def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu: pathlib.Path, tum: dict, ag, dry_run: bool,
-            bugun: date, simdi: datetime, cikti=print) -> tuple[int, list, list]:
+            bugun: date, simdi: datetime, cikti=print, anahtarsiz_goster: bool = False) -> tuple[int, list, list]:
     veri = sorted(veri, key=lambda x: (x["tarih"], x["id"]), reverse=True)
     ham = json.loads(kayit_yolu.read_text(encoding="utf-8")) if kayit_yolu.exists() else {}
     kayit, goc = kayit_goc(ham, veri)
@@ -577,8 +597,10 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
             if not ayar["hesaplar"].get(dil, {}).get(ad):
                 continue
             sir = hesap_sirri(tum, platform, dil)
-            if not sir and not dry_run:
+            if not sir and not (dry_run and anahtarsiz_goster):
                 atlanan.append(f"{ad}/{dil}")
+                if dry_run:
+                    cikti(f"[DENEME] {ad}/{dil}: anahtar yok, atlandı ({', '.join(eksik_sirlar(tum, platform, dil))})")
                 continue
             sinir = (ayar.get("gunluk_en_fazla") or {}).get(ad, VARSAYILAN_SINIR[ad])
             hak = min(ayar.get("calisma_basina_en_fazla", 1), sinir - bugunku_sayi(kayit, ad, dil, gun))
@@ -592,6 +614,8 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                     continue
                 video = None
                 if bicim != "gorsel":
+                    if not video_hakki(x, ayar):
+                        continue  # hype puanı eşiğin altında: bu haber yalnız görsel gönderi alır
                     video = vs.bul(manifest, x["id"], dil)
                     if not video:
                         continue  # bu haber/dil için video henüz yok
@@ -648,21 +672,35 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
     return gonderilen, hatalar, atlanan
 
 
-def sayfa_bekle(ag, veri=None, deneme=40, aralik=15) -> int:
-    """GitHub Pages dağıtımı bitince en yeni haberin sayfası 200 verir. Süre dolarsa da 0 döner:
+def paylasilacak_diller(ayar: dict, tum: dict | None = None) -> list[str]:
+    """En az bir hesabı ayarda açık olan diller. `tum` verilirse yalnız anahtarı da tam olanlar kalır.
+    --sayfa-bekle adımı sır görmez (env'de anahtar yok), bu yüzden orada yalnız ayara bakılır:
+    anahtar sonradan eklenince bekleme de kod değişmeden o dili kapsar."""
+    return [d for d in DILLER
+            if any(ayar["hesaplar"].get(d, {}).get(ad) and (tum is None or hesap_sirri(tum, platform, d))
+                   for platform, _, ad in HEDEFLER)]
+
+
+def sayfa_bekle(ag, veri=None, deneme=40, aralik=15, diller=None) -> int:
+    """GitHub Pages dağıtımı bitince en yeni haberin sayfası 200 verir; paylaşılacak her dilin sayfası beklenir
+    (diller verilmezse hepsi, boş liste verilirse beklenecek bir şey yoktur). Süre dolarsa da 0 döner:
     asıl iş her haber için sayfayı yine kendisi sınar, hazır olmayanı sonraki çalışmaya bırakır."""
     veri = veri if veri is not None else json.loads(ICERIK.read_text(encoding="utf-8"))
-    if not veri:
+    diller = list(DILLER if diller is None else diller)
+    if not veri or not diller:
         return 0
     x = max(veri, key=lambda y: (y["tarih"], y["id"]))
-    url = f"{SITE}/{KLASOR[DILLER[0]]}/{x['id']}.html"
+    bekleyen = {d: f"{SITE}/{KLASOR[d]}/{x['id']}.html" for d in diller}
     for i in range(deneme):
-        if ag.yayinda_mi(url):
-            print(f"Sayfa yayında: {url}")
+        for d, url in list(bekleyen.items()):
+            if ag.yayinda_mi(url):
+                print(f"Sayfa yayında: {url}")
+                del bekleyen[d]
+        if not bekleyen:
             return 0
         if i < deneme - 1:
             ag.uyku(aralik)
-    print(f"Uyarı: sayfa 10 dakikada açılmadı, devam ediliyor: {url}")
+    print("Uyarı: sayfa 10 dakikada açılmadı, devam ediliyor: " + ", ".join(bekleyen.values()))
     return 0
 
 
@@ -670,19 +708,22 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dry-run", action="store_true", help="ağ çağrısı ve dosya yazma olmadan ne paylaşılacağını göster")
     ap.add_argument("--selftest", action="store_true")
+    ap.add_argument("--anahtarsiz-goster", action="store_true",
+                    help="--dry-run ile: anahtarı olmayan hesapların planını da göster (önizleme)")
     ap.add_argument("--sayfa-bekle", action="store_true", help="en yeni haberin sayfası yayında olana dek bekle (en çok 10 dk); sabit uyku yerine")
     a = ap.parse_args(argv)
     if a.selftest:
         return selftest()
-    if a.sayfa_bekle:
-        return sayfa_bekle(Ag())
     ayar = json.loads(AYAR.read_text(encoding="utf-8"))
+    if a.sayfa_bekle:
+        return sayfa_bekle(Ag(), diller=paylasilacak_diller(ayar))
     veri = json.loads(ICERIK.read_text(encoding="utf-8"))
     simdi = datetime.now(timezone.utc)
     gonderilen, hatalar, atlanan = calistir(ayar, veri, kayit_yolu=KAYIT, manifest_yolu=vs.MANIFEST_YOLU, tum=sirlari_oku(), ag=Ag(),
-                                            dry_run=a.dry_run, bugun=date.today(), simdi=simdi)
-    if atlanan:
-        print("Hesap şifresi girilmemiş, atlandı: " + ", ".join(atlanan))
+                                            dry_run=a.dry_run, bugun=date.today(), simdi=simdi,
+                                            anahtarsiz_goster=a.anahtarsiz_goster)
+    if atlanan and not a.dry_run:
+        print("Anahtar yok, atlandı: " + ", ".join(atlanan))
     print(f"Bitti: {gonderilen} gönderi.")
     if hatalar:
         print("HATALAR:\n  " + "\n  ".join(hatalar))

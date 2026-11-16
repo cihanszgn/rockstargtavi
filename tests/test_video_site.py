@@ -93,6 +93,11 @@ class ManifestTests(unittest.TestCase):
         m["videolar"]["h2"] = {"en": girdi(uretildi="2026-11-14T10:00:00+00:00")}
         self.assertEqual(vs.bugun_uretilen(m, "2026-11-15"), 1)
         self.assertEqual(vs.bugun_uretilen({}, "2026-11-15"), 0)
+        m["videolar"]["h1"]["en"] = girdi(uretildi="2026-11-15T11:00:00+00:00")
+        self.assertEqual(vs.bugun_uretilen(m, "2026-11-15"), 2)
+        self.assertEqual(vs.bugun_uretilen(m, "2026-11-15", "tr"), 1, "kota dil başına sayılır")
+        self.assertEqual(vs.bugun_uretilen(m, "2026-11-15", "en"), 1)
+        self.assertEqual(vs.bugun_uretilen(m, "2026-11-15", "fr"), 0)
 
 
 class SiteHtmlTests(unittest.TestCase):

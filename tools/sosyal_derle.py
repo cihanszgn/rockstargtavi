@@ -395,7 +395,6 @@ def kartlar(veri: list[dict]) -> tuple[int, int]:
 
     from datetime import date
     bugun = date.today()
-    ig_diller = [d for d in DILLER if ayarlar()["hesaplar"].get(d, {}).get("instagram")]
     (KOK / KART_KLASOR).mkdir(exist_ok=True)
     gerekli, yeni = set(), 0
     yeni += kaydet(marka_karti(), KOK / "og.png", "og")
@@ -405,7 +404,7 @@ def kartlar(veri: list[dict]) -> tuple[int, int]:
             yol = KOK / kart_ad(x["id"], dil, "og")
             gerekli.add(yol.name)
             yeni += kaydet(kart(x, dil, 1200, 630, False), yol, "og")
-            if dil in ig_diller and yas <= IG_SAKLA:
+            if yas <= IG_SAKLA:  # IG kartı her dilde üretilir; hesap anahtarı sonradan eklense de hazır olsun
                 yol = KOK / kart_ad(x["id"], dil, "ig")
                 gerekli.add(yol.name)
                 if yas <= IG_GUN or yol.exists():

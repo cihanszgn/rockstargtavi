@@ -151,7 +151,7 @@ export const Maddeler: React.FC<SahneProps> = ({s, t, haber}) => {
                 </div>
               </div>
               <Tus
-                x={IC.sol + 12}
+                x={IC.sol + 16}
                 y={r.y + (r.h - TUS) / 2}
                 w={TUS}
                 h={TUS}

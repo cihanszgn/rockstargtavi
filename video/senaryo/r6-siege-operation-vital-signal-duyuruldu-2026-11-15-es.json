@@ -1,0 +1,111 @@
+{
+ "id": "r6-siege-operation-vital-signal-duyuruldu-2026-11-15",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [1080, 1920],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "La nueva temporada de Rainbow Six Siege, Operation Vital Signal, llega el 1 de diciembre.",
+   "veri": {
+    "ust_etiket": "AÑO 11 TEMPORADA 4",
+    "baslik": "Operation Vital Signal: 1 de diciembre",
+    "vurgu": ["1 de diciembre"],
+    "tuslar": ["R", "S", "S"]
+   },
+   "alt_kart": {"simge": "guncelleme", "baslik": "RAINBOW SIX SIEGE", "alt": "OPERATION VITAL SIGNAL"},
+   "maskot": {"hareket": "bas"}
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según el anuncio de Ubisoft en Steam, es la cuarta temporada del Año 11 y el cambio principal está en Doc.",
+   "veri": {
+    "kaynak": 1,
+    "ad": "Anuncio del estudio en Steam",
+    "alinti": "Comienza el 1 de diciembre y su cambio principal es una renovación completa de Doc."
+   },
+   "alt_kart": {"simge": "kaynak", "baslik": "FUENTE OFICIAL", "alt": "UBISOFT • ANUNCIO EN STEAM"},
+   "maskot": {"hareket": "tara"}
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Doc pierde la pistola Stim y recibe el E-Heal Monitor. Puede curar a un compañero con parche desde otro punto del mapa, o levantarlo si ha caído.",
+   "veri": {
+    "baslik": "Doc se renueva",
+    "maddeler": [
+     {"metin": "Desaparece la pistola Stim", "tetik": "Stim"},
+     {"metin": "Llega el E-Heal Monitor", "tetik": "E-Heal"},
+     {"metin": "Curar o levantar a distancia", "tetik": "curar"}
+    ]
+   },
+   "alt_kart": {"simge": "liste", "baslik": "DOC SE RENUEVA", "alt": "E-HEAL MONITOR"},
+   "maskot": {"hareket": "bas"}
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "El modo clasificatorio se divide en dos listas con rangos independientes: Solo/Duo y Flex. El nivel para entrar baja de 50 a 30.",
+   "veri": {
+    "baslik": "Clasificatorias en dos",
+    "maddeler": [
+     {"metin": "Solo/Duo: solo o en pareja", "tetik": "Solo/Duo"},
+     {"metin": "Flex: escuadrones de dos, tres o cinco", "tetik": "Flex"},
+     {"metin": "Nivel de entrada: de 50 a 30", "tetik": "nivel"}
+    ]
+   },
+   "alt_kart": {"simge": "liste", "baslik": "CLASIFICATORIAS DIVIDIDAS", "alt": "SOLO/DUO Y FLEX"},
+   "maskot": {"hareket": "bas"}
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "El nuevo subfusil MBZ-19 dispara 750 balas por minuto, lleva un cargador de 64 y hace 33 de daño por bala.",
+   "veri": {
+    "baslik": "Arma nueva: MBZ-19",
+    "platformlar": [],
+    "sayilar": [
+     {"deger": "750", "etiket": "BALAS / MIN", "tetik": "750"},
+     {"deger": "64", "etiket": "CARGADOR", "tetik": "64"},
+     {"deger": "33", "etiket": "DAÑO", "tetik": "33"}
+    ],
+    "not": "Pueden usarlo Warden, Thunderbird y Jäger."
+   },
+   "alt_kart": {"simge": "guncelleme", "baslik": "MBZ-19", "alt": "WARDEN • THUNDERBIRD • JÄGER"},
+   "maskot": {"hareket": "zipla"}
+  },
+  {
+   "sablon": "yama_fark",
+   "anlatim": "Las escopetas van en sentido contrario: la ACS12 baja de 69 a 45 de daño y la TCSG12 de 75 a 50.",
+   "veri": {
+    "baslik": "Recorte a las escopetas",
+    "satirlar": [
+     {"ad": "Daño de la ACS12", "eski": "69", "yeni": "45", "tetik": "ACS12"},
+     {"ad": "Daño de la TCSG12", "eski": "75", "yeni": "50", "tetik": "TCSG12"}
+    ]
+   },
+   "alt_kart": {"simge": "yama", "baslik": "RECORTE A ESCOPETAS", "alt": "ACS12 Y TCSG12"},
+   "maskot": {"hareket": "bas"}
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "El Battle Pass actual se cierra al empezar la temporada, así que reclama las recompensas pendientes antes del 1 de diciembre.",
+   "veri": {
+    "etiket": "Se cierra el Battle Pass",
+    "tarih": "1 de diciembre",
+    "not": "Reclama las recompensas pendientes antes de esta fecha."
+   },
+   "alt_kart": {"simge": "takvim", "baslik": "BATTLE PASS", "alt": "RECLAMA ANTES DEL 1 DE DICIEMBRE"},
+   "maskot": {"hareket": "zipla"}
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los cambios de mapas y armas están en nuestra web, Control A Game.",
+   "veri": {
+    "cagri": "Todos los cambios en la web",
+    "alt": "Fuentes y novedades de mapas en la noticia."
+   },
+   "alt_kart": {"simge": "site", "baslik": "CTRL+A GAME", "alt": "CTRL-AGAME.COM"},
+   "maskot": {"hareket": "bas"}
+  }
+ ]
+}

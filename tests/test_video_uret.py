@@ -277,6 +277,11 @@ class MetinTests(unittest.TestCase):
         self.assertEqual(v.okunus_uygula(['Steam,'], {'Steam': 'Stiim'}), [([0], 'Stiim,')])
         self.assertEqual(v.okunus_uygula(['steam', 'Steamy'], {'Steam': 'Stiim'}), [([0], 'steam'), ([1], 'Steamy')])
 
+    def test_kapanis_site_adini_soylemeli(self):
+        s = senaryo()
+        s['sahneler'][-1]['anlatim'] = 'Bütün yama notları ve ayrıntılar sitemizde yayında.'
+        self.assertTrue(any('sitenin adını' in str(h) for h in hatalar(s)))
+
     def test_pencere_basligi(self):
         D = v.Denetci(haber(), 'tr')
         self.assertEqual(v._pencere(D, 'platform', {'baslik': 'PLATFORMLAR'}), 'ORNEK OYUN')
@@ -394,7 +399,55 @@ class ZamanlamaTests(unittest.TestCase):
         self.assertEqual(v._soz_norm('1.500', 'tr'), 'binbeşyüz', 'binlik ayırıcılı sayı tek sayıdır')
         self.assertEqual(v._soz_norm("11.", 'tr'), 'onbir')
         self.assertEqual(v._soz_norm("750'ye", 'tr'), 'yediyüzelliye')
-        self.assertEqual(v._soz_norm('750', 'en'), '750', 'yalnız Türkçede çevrilir')
+        self.assertEqual(v._soz_norm('750', None), '750', 'dili tanınmayan metne dokunulmaz')
+
+    def test_sayi_okunusu_en_es_fr(self):
+        for n, en, es, fr in ((750, 'seven hundred fifty', 'setecientos cincuenta', 'sept cent cinquante'),
+                              (2026, 'two thousand twenty-six', 'dos mil veintiséis', 'deux mille vingt-six'),
+                              (80, 'eighty', 'ochenta', 'quatre-vingts'),
+                              (200, 'two hundred', 'doscientos', 'deux cents'),
+                              (64, 'sixty-four', 'sesenta y cuatro', 'soixante-quatre'),
+                              (100, 'one hundred', 'cien', 'cent')):
+            self.assertEqual(v.sayi_oku_en(n), en)
+            self.assertEqual(v.sayi_oku_es(n), es)
+            self.assertEqual(v.sayi_oku_fr(n), fr)
+        self.assertEqual(v.yil_oku_en(2026), 'twenty twenty-six')
+        self.assertEqual(v.sira_oku_en(21), 'twenty-first')
+        self.assertEqual(v._soz_norm('750 rounds', 'en'), 'sevenhundredfiftyrounds')
+        self.assertEqual(v._soz_norm('1,500', 'en'), 'onethousandfivehundred')
+        self.assertEqual(v._soz_norm('1.500', 'es'), 'milquinientos')
+        self.assertEqual(v._soz_norm('1.500', 'fr'), 'millecinqcents')
+        self.assertEqual(v._soz_norm('3,5', 'fr'), 'troisvirgulecinq')
+        self.assertEqual(v._soz_norm('750', 'tr'), 'yediyüzelli', 'Türkçe davranış değişmedi')
+
+    def test_dil_kurali_tablosu_ve_kapanis(self):
+        self.assertEqual(v.dil_kurali('tr'), v.dil_kurali(None))
+        self.assertEqual(v.dil_kurali('xx'), v.dil_kurali('tr'), 'bilinmeyen dil Türkçe kuralına düşer')
+        self.assertEqual(v.BAGLI_SON, v.DIL_KURALI['tr']['bagli_son'])
+        for dil in ('tr', 'en', 'es', 'fr'):
+            c = v.kapanis_cumlesi(dil)
+            self.assertIn(v.SITE_ADI, c, f'{dil}: kapanışta site adı söylenir')
+            self.assertNotIn('.com', c)
+            self.assertNotIn('ctrl-agame', c.lower(), f'{dil}: web adresi seslendirilmez')
+            self.assertTrue(v.site_adi_var(c))
+        self.assertFalse(v.site_adi_var('Bütün ayrıntılar sitede.'))
+
+    def test_dil_kuralina_gore_bagli_kelime(self):
+        self.assertGreater(v.kirma_cezasi('the', 'rifle', 'en'), v.kirma_cezasi('rifle', 'the', 'en'),
+                           'İngilizcede "the" satır sonunda kalmaz')
+        self.assertGreater(v.kirma_cezasi('de', 'armas', 'es'), v.kirma_cezasi('armas', 'de', 'es'),
+                           'İspanyolcada "de" satır sonunda kalmaz')
+        self.assertGreater(v.kirma_cezasi('le', 'fusil', 'fr'), v.kirma_cezasi('fusil', 'le', 'fr'),
+                           'Fransızcada "le" satır sonunda kalmaz')
+        self.assertEqual(v.kirma_cezasi('yeni', 'silah', 'tr'), 0.8)
+
+    def test_fransizca_kesme_okunusu(self):
+        okunus = {'Operation': 'Opereyşın'}
+        self.assertEqual(v.okunus_uygula(["l'Operation"], okunus, dil='fr'), [([0], "l'Opereyşın")])
+        self.assertEqual(v.okunus_uygula(["d'Operation,"], okunus, dil='fr'), [([0], "d'Opereyşın,")])
+        self.assertEqual(v.okunus_uygula(["Operation"], okunus, dil='fr'), [([0], 'Opereyşın')])
+        self.assertEqual(v.okunus_uygula(["l'Operation"], okunus, dil='tr'), [([0], "l'Operation")],
+                         'kesme ayırma yalnız Fransızcada')
 
     def test_hizala_tanimadaki_sozlu_sayilari_esler(self):
         # Konuşma tanıma rakamı sözle yazar; iki taraf aynı çevrildiği için "750" üç tanıma kelimesine oturur.
@@ -601,7 +654,7 @@ class AnahtarManifestTests(unittest.TestCase):
     def test_video_ayari_varsayilanlari(self):
         with tempfile.TemporaryDirectory() as t:
             self.assertEqual(v.video_ayari(pathlib.Path(t) / 'yok.json'),
-                             {'ses': 'azure', 'konusmaci': '', 'yukleme_hedefi': '', 'gunluk_en_fazla': 2, 'hype_esigi': 7})
+                             {'ses': 'azure', 'konusmaci': {}, 'yukleme_hedefi': '', 'gunluk_en_fazla': 2, 'hype_esigi': 7})
 
     def test_video_ayari_hype_esigi_dosyadan_okunur(self):
         with tempfile.TemporaryDirectory() as t:
@@ -711,6 +764,17 @@ class UretTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as t, Ortam(t, manifest=hazir):
             self.assertEqual(v.bekleyenler('tr', bugun=bugun, cikti=lambda m: None), [])
 
+    def test_kota_dil_basina_sayilir(self):
+        # Türkçede kota dolu; İngilizce kendi kotasını bağımsız kullanır.
+        bugun = date(2026, 11, 16)
+        dolu = {'surum': 1, 'taban': v.TABAN, 'videolar': {'a': {'tr': kayit('a' * 12, '2026-11-16')},
+                                                          'b': {'tr': kayit('b' * 12, '2026-11-16')}}}
+        with tempfile.TemporaryDirectory() as t, Ortam(t, ayar={'ses': 'edge', 'gunluk_en_fazla': 2}, manifest=dolu):
+            self.assertEqual(v.bugun_uretilen_dil(v.manifest_oku(), 'tr', bugun), 2)
+            self.assertEqual(v.bugun_uretilen_dil(v.manifest_oku(), 'en', bugun), 0)
+            self.assertEqual(v.bekleyenler('tr', gunluk=True, bugun=bugun, cikti=lambda m: None), [])
+            self.assertEqual(v.bekleyenler('tr', gunluk=False, bugun=bugun, cikti=lambda m: None), [KIMLIK])
+
     def test_dogrula_cikis_kodu(self):
         with tempfile.TemporaryDirectory() as t, Ortam(t):
             mesaj = []
@@ -769,9 +833,23 @@ class SeslendirmeTests(unittest.TestCase):
         if not v.AYARLAR.exists():
             self.skipTest('sosyal/ayarlar.json yok')
         ayar = v.video_ayari()
-        if ayar['konusmaci']:
-            self.assertEqual(v.seslendirici(ayar['ses'], ayar['konusmaci'], 'tr').konusmaci, ayar['konusmaci'],
-                             'ayardaki ses varsayılana düşmeden kullanılır')
+        self.assertEqual(set(ayar['konusmaci']), {'tr', 'en', 'es', 'fr'}, 'her dilin kendi konuşmacısı var')
+        for dil, ad in ayar['konusmaci'].items():
+            self.assertEqual(v.seslendirici(ayar['ses'], ayar['konusmaci'], dil).konusmaci, ad,
+                             f'{dil}: ayardaki ses varsayılana düşmeden kullanılır')
+        self.assertTrue(ayar['konusmaci']['tr'].startswith('tr-TR-Aydin:'), 'Türkçe ses değişmedi')
+
+    def test_konusmaci_dil_basina_secilir(self):
+        harita = {'tr': 'tr-TR-Aydin:MAI-Voice-2.1', 'en': 'en-US-GuyNeural', 'es': 'es-ES-AlvaroNeural'}
+        for dil, ad in harita.items():
+            self.assertEqual(v.seslendirici('azure', harita, dil).konusmaci, ad)
+        self.assertEqual(v.seslendirici('azure', harita, 'fr').konusmaci, v.VARSAYILAN_KONUSMACI['fr'],
+                         'haritada olmayan dil varsayılana düşer')
+        with tempfile.TemporaryDirectory() as t:
+            yol = pathlib.Path(t) / 'a.json'
+            yol.write_text(json.dumps({'video': {'konusmaci': 'tr-TR-Aydin:MAI-Voice-2.1'}}), encoding='utf-8')
+            self.assertEqual(v.video_ayari(yol)['konusmaci'], {'tr': 'tr-TR-Aydin:MAI-Voice-2.1'},
+                             'eski tek değerli biçim kendi dilinin sesi olarak okunur')
 
     def test_azure_sinirsiz_ses_zamanlari_tanimadan_alir(self):
         # MAI sesi kelime sınırı göndermez: mp3 WAV'a açılır, aynı yardımcı `tani` kipinde çalışır, durak önündeki

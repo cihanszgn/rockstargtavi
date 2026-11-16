@@ -1,5 +1,7 @@
 # Yeni haberler için dikey haber videosu üretir (Remotion + Azure Speech), sunucuya yükler,
 # data/videolar.json'a yazar. Hesap/anahtar yoksa iş temiz biçimde boşta biter.
+# Dört dil (tr en es fr) sırayla işlenir; günlük kota dil başınadır. Bir dilin hatası diğerlerini durdurmaz,
+# iş sonunda hata olarak raporlanır (manifest ve site yine de yazılır).
 # Gerekli sırlar: AZURE_SPEECH_KEY, AZURE_SPEECH_REGION, MEDYA_SSH_KEY, MEDYA_SSH_BILINEN (known_hosts satırı).
 name: Haber videosu
 
@@ -22,7 +24,8 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  GUNLUK_EN_FAZLA: "2"   # günde en çok bu kadar video (üretim maliyeti ve "toplu içerik" riski için)
+  GUNLUK_EN_FAZLA: "2"   # günde en çok bu kadar video, HER DİL İÇİN ayrı (üretim maliyeti ve "toplu içerik" riski için)
+  DILLER: "tr en es fr"
 
 jobs:
   uret:
@@ -67,11 +70,26 @@ jobs:
       - uses: astral-sh/setup-uv@v5
         if: steps.kontrol.outputs.hazir == 'true' && inputs.deneme != true
 
-      - name: Bekleyenleri listele
+      - name: Bekleyenleri listele (dil dil)
         id: bekleyen
         run: |
-          python tools/video_uret.py bekleyenler | tee bekleyen.txt
+          # Her satır "<haber id> <dil>". Bir dilin listelenememesi diğerlerini durdurmaz; hata iş sonunda raporlanır.
+          : > bekleyen.txt
+          hata=0
+          for dil in $DILLER; do
+            if ! python tools/video_uret.py bekleyenler --dil "$dil" > "bekleyen-$dil.txt"; then
+              echo "::error::Bekleyenler listelenemedi: $dil"
+              hata=1
+            fi
+            while read -r id _; do
+              [ -z "$id" ] && continue
+              case "$id" in \#*) continue;; esac
+              echo "$id $dil" >> bekleyen.txt
+            done < "bekleyen-$dil.txt"
+          done
+          cat bekleyen.txt
           echo "sayi=$(grep -cv -e '^\s*$' -e '^#' bekleyen.txt || true)" >> "$GITHUB_OUTPUT"
+          [ "$hata" = 0 ] || echo "liste_hatasi=1" >> "$GITHUB_OUTPUT"
 
       - name: Bağımlılıkları kur
         if: steps.kontrol.outputs.hazir == 'true' && inputs.deneme != true
@@ -92,28 +110,41 @@ jobs:
           printf 'Host medya.ctrl-agame.com\n  IdentityFile ~/.ssh/medya_anahtar\n  IdentitiesOnly yes\n' > ~/.ssh/config
           chmod 600 ~/.ssh/config
 
-      - name: Videoları üret ve yükle (günlük sınıra kadar)
+      - name: Videoları üret ve yükle (dil başına günlük sınıra kadar)
         if: steps.kontrol.outputs.hazir == 'true' && inputs.deneme != true
         env:
           AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
           AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
+          LISTE_HATASI: ${{ steps.bekleyen.outputs.liste_hatasi }}
         run: |
-          # bekleyenler çıktısı: her satır "<haber id> <dil>"; # ile başlayan ve boş satırlar yok sayılır.
-          yapilan=$(python tools/video_site.py bugun)
+          # bekleyen.txt: her satır "<haber id> <dil>"; # ile başlayan ve boş satırlar yok sayılır.
+          # Günlük kota her dil için ayrı sayılır; bir videonun hatası kaydedilir, sonraki işe geçilir, sonda iş hata verir.
+          declare -A yapilan
+          hatalar=()
+          [ "$LISTE_HATASI" = 1 ] && hatalar+=("bekleyenler listelenemedi")
           while read -r id dil _; do
             [ -z "$id" ] && continue
             case "$id" in \#*) continue;; esac
-            if [ "$yapilan" -ge "$GUNLUK_EN_FAZLA" ]; then
-              echo "Günlük sınır doldu ($GUNLUK_EN_FAZLA)."; break
+            dil="${dil:-tr}"   # dil verilmezse Türkçe sayılır
+            if [ -z "${yapilan[$dil]+x}" ]; then
+              yapilan[$dil]=$(python tools/video_site.py bugun "$dil")
             fi
-            dil="${dil:-tr}"   # bekleyenler yalnız id yazarsa dil Türkçe sayılır
+            if [ "${yapilan[$dil]}" -ge "$GUNLUK_EN_FAZLA" ]; then
+              echo "Günlük sınır doldu ($dil: $GUNLUK_EN_FAZLA)."; continue
+            fi
             echo "Üretiliyor: $id $dil"
             if python tools/video_uret.py uret --id "$id" --dil "$dil" --yukle; then
-              yapilan=$((yapilan + 1))
+              yapilan[$dil]=$(( ${yapilan[$dil]} + 1 ))
             else
-              echo "::warning::Üretilemedi: $id $dil (sonrakine geçildi)"
+              echo "::error::Üretilemedi: $id $dil (sonrakine geçildi)"
+              hatalar+=("$id $dil")
             fi
           done < bekleyen.txt
+          if [ "${#hatalar[@]}" -gt 0 ]; then
+            printf '%s\n' "${hatalar[@]}" > video-hatalari.txt
+            echo "HATA: ${#hatalar[@]} iş başarısız: ${hatalar[*]}"
+            exit 1
+          fi
 
       - name: Siteyi yeniden üret ve manifesti depoya yaz
         if: always()
