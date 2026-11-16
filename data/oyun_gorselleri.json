@@ -42,6 +42,12 @@
    "en": 460,
    "boy": 215
   },
+  "forza-horizon-6-ps5": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2483190/library_hero.jpg",
+   "kaynak": "Steam",
+   "en": 1920,
+   "boy": 620
+  },
   "gta-vi": {
    "url": "https://www.rockstargames.com/VI/_next/static/media/meta.0t8ty~nlmxq2s.jpg?yvw8ZozOI7a7Kz1war9qe",
    "kaynak": "Rockstar Games",
@@ -207,6 +213,18 @@
    "en": 460,
    "boy": 215
   },
+  "minecraft": {
+   "url": "https://www.minecraft.net/content/dam/minecraftnet/article-asset/2026/minecraft-26-4-snapshot-8/new-article-hero-image.jpg",
+   "kaynak": "Minecraft.net",
+   "en": 1170,
+   "boy": 500
+  },
+  "mobile-legends": {
+   "url": "https://akmweb.youngjoygame.com/web/gms/image/c3d1596795b86dc26e5f1ef2d48c3dfd.jpg",
+   "kaynak": "Mobile Legends (resmî site)",
+   "en": 600,
+   "boy": 315
+  },
   "overwatch": {
    "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/5c208b2699cd38ed6125d039be388fa744db54a4/header_alt_assets_23.jpg?t=1793732501",
    "kaynak": "Steam",
@@ -230,6 +248,12 @@
    "kaynak": "Roblox Corporation",
    "en": 1200,
    "boy": 627
+  },
+  "valorant": {
+   "url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/296cff0d10e916f8a529ec9b60da134f0c80a448-1920x1080.png",
+   "kaynak": "VALORANT (Riot Games)",
+   "en": 1920,
+   "boy": 1080
   },
   "world-of-warcraft": {
    "url": "https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/bltb5a24e5ab1e2cfb0/6a88e3589b942efdb6f74110/wow-thumbnail-homepage.jpg",
