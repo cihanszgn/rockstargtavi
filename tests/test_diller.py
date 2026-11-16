@@ -15,6 +15,41 @@ from test_haber_oto import article, NOW
 
 
 class DilTests(unittest.TestCase):
+    def test_cince_tarih_ve_kart_satirlari(self):
+        from PIL import Image, ImageDraw, ImageFont
+        from diller import tarih_yaz
+        from sosyal_derle import metni_sar
+        self.assertEqual(tarih_yaz('zh', '2026-11-16'), '2026年11月16日')
+        f = ImageFont.truetype(str(ROOT / 'tools/yazi/NotoSansSC-Regular.otf'), 40)
+        c = ImageDraw.Draw(Image.new('RGB', (1080, 1350)))
+        text = 'Borderlands 社区打破 The Hunt 募捐纪录。'
+        lines = metni_sar(c, text, f, 500)
+        self.assertTrue(any('Borderlands' in x for x in lines))
+        self.assertTrue(any('Hunt' in x for x in lines))
+        self.assertFalse(any(x[0] in '，。！？' for x in lines))
+        self.assertEqual(''.join(''.join(lines).split()), ''.join(text.split()))
+        self.assertTrue(all(c.textlength(x, font=f) <= 500 for x in lines))
+
+    def test_yeni_dil_senaryolari_dogrulanir(self):
+        import tempfile
+        from test_video_uret import senaryo, haber
+        import video_uret
+        original = dict(video_uret.AYLAR)
+        for lang, date in [('de', '1. Dezember'), ('nl', '1 december'), ('zh', '12月1日')]:
+            x, s = haber(), senaryo()
+            x['diller'][lang] = copy.deepcopy(x['diller']['tr'])
+            x['diller'][lang]['metin'] = x['diller'][lang]['metin'].replace('1 Aralık', date)
+            s['dil'] = lang
+            for scene in s['sahneler']:
+                scene['anlatim'] = scene['anlatim'].replace('1 Aralık', date)
+                if scene['sablon'] == 'tarih':
+                    scene['veri']['tarih'] = date
+            with self.subTest(lang=lang), tempfile.TemporaryDirectory() as tmp:
+                path = pathlib.Path(tmp) / f"{x['id']}-{lang}.json"
+                path.write_text(json.dumps(s, ensure_ascii=False), encoding='utf-8')
+                self.assertEqual(oto.senaryo_dosyasi_denetle(path, x, lang), [])
+                self.assertEqual(video_uret.AYLAR, original)
+
     def test_dil_onerisi_dom(self):
         node = shutil.which('node')
         self.assertIsNotNone(node, 'DOM testi için Node gerekli')

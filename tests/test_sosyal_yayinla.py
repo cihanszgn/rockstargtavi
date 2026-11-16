@@ -427,6 +427,9 @@ class AnahtarsizDil(Temel):
             self.assertIn(f"IG_{dil.upper()}_TOKEN", metin, "eksik değişkenin yalnız adı yazılır")
         self.assertNotIn("instagram/tr: anahtar yok", metin)
         self.assertIn("oyun-yama-1", metin, "tr planlanmış görünür")
+        self.assertIn('yerelleştirme gövdesi:', metin)
+        self.assertIn('"localizations":', metin)
+        self.assertIn('"defaultLanguage": "tr"', metin)
         self.assertNotIn("tok", metin.replace("TOKEN", ""), "değer yazılmaz")
 
     def test_anahtarsiz_goster_eski_onizlemeyi_korur(self):

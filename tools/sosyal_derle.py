@@ -37,6 +37,32 @@ AY, M = alan('ay'), alan('sosyal')
 e = lambda s: html.escape(str(s), quote=True)  # noqa: E731
 
 
+def metni_sar(c, metin, f, gen):
+    """CJK metnini karakterlerden, Latin sözcükleri bölmeden satırlara ayırır."""
+    if not re.search(r'[\u3400-\u9fff]', metin):
+        parcalar = [k + ' ' for k in metin.split()]
+    else:
+        parcalar = re.findall(r"[A-Za-z0-9]+(?:[-.:’'][A-Za-z0-9]+)*|\s+|.", metin)
+    satir, satirlar = '', []
+    for k in parcalar:
+        if c.textlength((satir + k).rstrip(), font=f) <= gen:
+            satir += k
+        elif satir.strip():
+            # Noktalama işareti tek başına yeni satıra düşmesin.
+            if k in '，。！？：；、）》】' and len(satir.rstrip()) > 1:
+                onceki = satir.rstrip()
+                satirlar.append(onceki[:-1].rstrip())
+                satir = onceki[-1] + k
+            else:
+                satirlar.append(satir.rstrip())
+                satir = k.lstrip()
+        else:
+            satir = k.lstrip()
+    if satir.strip():
+        satirlar.append(satir.rstrip())
+    return satirlar
+
+
 # ---------------------------------------------------------------- doğrulama
 def yukle() -> list[dict]:
     yol = KOK / "data" / "icerik.json"
@@ -168,19 +194,7 @@ def kartlar(veri: list[dict]) -> tuple[int, int]:
         return onbellek[anahtar]
 
     def sar(c, metin, f, gen):
-        satir, satirlar = "", []
-        cjk = bool(re.search(r'[\u3400-\u9fff]', metin))
-        for k in (metin if cjk else metin.split()):
-            dene = (satir + ('' if cjk else ' ') + k).strip()
-            if c.textlength(dene, font=f) <= gen:
-                satir = dene
-            else:
-                if satir:
-                    satirlar.append(satir)
-                satir = k
-        if satir:
-            satirlar.append(satir)
-        return satirlar
+        return metni_sar(c, metin, f, gen)
 
     def sigdir(c, metin, tur, buyuk, kucuk, gen, en_cok):
         for boy in range(buyuk, kucuk - 1, -2):
