@@ -16,6 +16,10 @@ URL = 'https://news.xbox.com/en-us/2026/11/16/game/'
 
 
 class KaynakMetniTests(unittest.TestCase):
+    def test_steam_press_groups_are_not_official_confirmation(self):
+        self.assertFalse(oto.resmi('https://store.steampowered.com/news/group/38509069/view/692025835039753452'))
+        self.assertTrue(oto.resmi('https://store.steampowered.com/news/app/394360/view/684144008188920528'))
+
     def test_rss_content_encoded_wins_over_description(self):
         raw = f'<rss xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><item><title>Game</title><link>{URL}</link><description>short</description><content:encoded><![CDATA[<p>{"olgu " * 140}</p>]]></content:encoded></item></channel></rss>'.encode()
         c = oto.rss_oku(raw, SOURCE, NOW)[0]

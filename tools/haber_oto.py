@@ -69,7 +69,7 @@ def resmi(url):
     if p.path.rstrip('/') in ('', '/news', '/en-US/news', '/feed', '/en-us', '/us/whatsnew'):
         return False
     # Steam'in haricî basın akışı, kullanıcı incelemeleri ve forum yazıları resmî duyuru sayılmaz.
-    if '/externalpost/' in p.path or '/discussions/' in p.path or '/appreviews/' in p.path:
+    if '/externalpost/' in p.path or '/discussions/' in p.path or '/appreviews/' in p.path or '/news/group/' in p.path:
         return False
     if p.hostname == 'steamcommunity.com' and not re.match(r'^/(?:games|ogg)/[^/]+/announcements/detail/', p.path):
         return False
