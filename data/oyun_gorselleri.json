@@ -48,6 +48,12 @@
    "en": 1920,
    "boy": 620
   },
+  "god-of-war-laufey": {
+   "url": "https://image.api.playstation.com/vulcan/ap/rnd/202609/1800/e1e187126032636435888915f17e26c3645661746a38362d.png",
+   "kaynak": "PlayStation",
+   "en": 1024,
+   "boy": 1024
+  },
   "gta-vi": {
    "url": "https://www.rockstargames.com/VI/_next/static/media/meta.0t8ty~nlmxq2s.jpg?yvw8ZozOI7a7Kz1war9qe",
    "kaynak": "Rockstar Games",
@@ -176,6 +182,12 @@
    "en": 460,
    "boy": 215
   },
+  "fortnite": {
+   "url": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto/f_auto/dpr_2.0/store/software/switch/70010000010192/6ae837a472a4f1ddc5ea70307dabe3c51a1cd649b505a00de15d3ae744cd828d",
+   "kaynak": "Nintendo",
+   "en": 2400,
+   "boy": 1350
+  },
   "genshin-impact": {
    "url": "https://upload-static.hoyoverse.com/hk4e/upload/fb/common.jpg",
    "kaynak": "HoYoverse",
@@ -213,6 +225,13 @@
    "en": 460,
    "boy": 215
   },
+  "metin2": {
+   "url": "https://secure-asset-delivery.gameforge.com/partnersite_live_product/201c6866-2220-4737-ac89-0815fca6fb91/e76c04f0-f1d7-4191-ac54-8d8ca9c3431b2021-11-30_M2_22-0_Update_TNT_Assets_Carousel_Slider_1200x628.jpg",
+   "genis": "https://secure-asset-delivery.gameforge.com/partnersite_live_product/201c6866-2220-4737-ac89-0815fca6fb91/75f63689-d440-4649-b049-3c6df2e0d4412020-03-30_M2_New_Library_Title_Banners_1920x620_dont_modify.png",
+   "kaynak": "Gameforge",
+   "en": 1200,
+   "boy": 628
+  },
   "minecraft": {
    "url": "https://www.minecraft.net/content/dam/minecraftnet/article-asset/2026/minecraft-26-4-snapshot-8/new-article-hero-image.jpg",
    "kaynak": "Minecraft.net",
@@ -242,6 +261,12 @@
    "kaynak": "Steam",
    "en": 460,
    "boy": 215
+  },
+  "rise-online": {
+   "url": "https://i.ytimg.com/vi/GIlprNuPF3o/maxresdefault.jpg",
+   "kaynak": "Rise Online World",
+   "en": 1280,
+   "boy": 720
   },
   "roblox": {
    "url": "https://cms-media.roblox.com/assets/f179a9c3-60fb-b827-6b6d-c0c6073dba2f.webp",
