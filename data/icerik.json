@@ -1,5 +1,49 @@
 [
  {
+  "id": "borderlands-the-hunt-rekor-2026-11-16",
+  "oyun": "Borderlands",
+  "tarih": "2026-11-16",
+  "tur": "haber",
+  "platform": [],
+  "kaynaklar": [
+   {
+    "ad": "Steam resmi duyuru",
+    "url": "https://store.steampowered.com/news/app/1285190/view/705536268691308769"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Borderlands topluluğu The Hunt bağış rekorunu kırdı",
+    "ozet": "St. Jude için toplanan bağış önceki rekoru geride bıraktı.",
+    "metin": "Steam'deki resmî duyuruya göre Borderlands topluluğunun düzenlediği The Hunt etkinliği yeni bir bağış rekoru kırdı. Etkinlikte oyuncular Borderlands 2, Borderlands 3 ve Borderlands 4'te efsanevi ganimet avına çıktı ve çocuk hastalıklarının tedavisi için çalışan St. Jude Children's Research Hospital'a bağış topladı. 2K Foundations ve Gearbox, önceki rekor olan 118.995,80 ABD dolarına kadar gelen her bağışı eşleştirmeyi taahhüt etmişti. Topluluk hem bu rekoru hem eşleştirme hedefini aştı. The Hunt: All Aboard katılımcıları üç oyunda ganimet avını tamamladı. Açıklamada yeni toplam tutar paylaşılmadı. Geliştirici, topluluk bağış ekibine ve St. Jude PLAY LIVE ekibine teşekkür etti."
+   },
+   "en": {
+    "baslik": "Borderlands community breaks The Hunt donation record",
+    "ozet": "The fundraiser passed the previous record and the matching goal for St. Jude.",
+    "metin": "According to the official Steam announcement, The Hunt, the community-organized Legendary loot scavenger hunt across Borderlands 2, Borderlands 3 and Borderlands 4, has set a new all-time donation record for St. Jude Children's Research Hospital. Players completed their runs across the three games for the charity. 2K Foundations and Gearbox had pledged to match every dollar donated up to the previous record of $118,995.80. The community surpassed that record as well as the matching goal. The participants of The Hunt: All Aboard finished their loot hunts in all three games. The announcement does not give a new total. The studio thanked the Borderlands Community Fundraising Team and the St. Jude PLAY LIVE team for their support."
+   },
+   "fr": {
+    "baslik": "La communauté Borderlands bat le record de dons de The Hunt",
+    "ozet": "Le record précédent et l'objectif de contrepartie pour St. Jude sont dépassés.",
+    "metin": "Selon l'annonce officielle sur Steam, The Hunt, la chasse au butin légendaire organisée par la communauté dans Borderlands 2, Borderlands 3 et Borderlands 4, a établi un nouveau record de dons pour le St. Jude Children's Research Hospital. Les joueurs ont mené leurs parcours dans les trois jeux au profit de cette association caritative. 2K Foundations et Gearbox s'étaient engagés à égaler chaque dollar donné jusqu'au record précédent de 118 995,80 dollars US. La communauté a dépassé ce record ainsi que l'objectif de contrepartie. Les participants de The Hunt: All Aboard ont terminé leur chasse dans les trois jeux. L'annonce ne précise pas le nouveau total. Le studio a remercié l'équipe de collecte de fonds de la communauté Borderlands et l'équipe St. Jude PLAY LIVE."
+   },
+   "es": {
+    "baslik": "La comunidad de Borderlands bate el récord de donaciones de The Hunt",
+    "ozet": "Se supera el récord anterior y la meta de igualación para St. Jude.",
+    "metin": "Según el anuncio oficial en Steam, The Hunt, la búsqueda de botín legendario organizada por la comunidad en Borderlands 2, Borderlands 3 y Borderlands 4, ha establecido un nuevo récord histórico de donaciones para el St. Jude Children's Research Hospital. Los jugadores completaron sus recorridos en los tres juegos con fines benéficos. 2K Foundations y Gearbox se habían comprometido a igualar cada dólar donado hasta el récord anterior de 118.995,80 dólares estadounidenses. La comunidad superó ese récord y también la meta de igualación. Los participantes de The Hunt: All Aboard terminaron su búsqueda en los tres juegos. El anuncio no incluye un nuevo total. El estudio agradeció al equipo de recaudación de la comunidad de Borderlands y al equipo St. Jude PLAY LIVE."
+   }
+  },
+  "otomasyon": {
+   "konu": "borderlands-the-hunt-rekor-bagis-2026-11-16",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/1285190/view/705536268691308769",
+   "teyit_zamani": "2026-11-16T20:11:01+03:00",
+   "oyuncuya_fayda": "Borderlands oyuncuları, bağışlarının St. Jude'a giden rekor kampanyaya katkı olduğunu öğrenir.",
+   "hype": 3,
+   "eklenme": "2026-11-16T20:13:05.455337+03:00"
+  }
+ },
+ {
   "id": "football-manager-27-27-1-0-guncelleme-2026-11-16",
   "tarih": "2026-11-16",
   "oyun": "Football Manager 27",
