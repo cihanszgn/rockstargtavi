@@ -1,38 +1,42 @@
 # CTRL+A GAME saatlik haber ve trafik düzeni
 
-Cio'nun 15 Kasım 2026 isteği: küresel 10 oyun haber/mağaza kaynağını her saat başında araştır, doğrulanmış yeni içeriği otomatik siteye gönder. Kaynaklar erişim ve kapsama göre seçildi; ölçülmüş bir dünya ilk 10 trafik sıralaması iddia edilmiyor.
+Cio'nun 15 Kasım 2026 isteği: küresel oyun haber/mağaza kaynaklarını her saat başında araştır, doğrulanmış yeni içeriği otomatik siteye gönder. Kaynaklar erişim ve kapsama göre seçildi; ölçülmüş bir trafik sıralaması iddia edilmiyor.
 
 ## Araştırma sonucu
 
 Haber otomasyonu tazelik sağlar; kalıcı trafik için oyuncunun sorusunu çözen güncel rehberler, yamaların oyuncuya etkisi ve doğrulanmış ücretsiz oyun/mağaza bilgisi daha faydalı bir içerik düzenidir (uygulama önerim). Haber → ilgili oyun merkezi → mevcut rehber yolu zaten derleyicide var; oyun adını kayıtla eşleştirmek bu bağı kurar. Öncelik WoW, Knight Online ve sitedeki diğer oyunların oynanış/güncelleme ihtiyaçlarıdır.
 
-Google, kullanıcıya değer katmayan toplu üretim/yeniden yazımı spam kapsamında değerlendirebilir. Bu nedenle kota doldurulmaz, kaynak metni kopyalanmaz, resmî teyit ve somut oyuncu faydası şarttır. Kaynak: [Google'ın yapay zekâ içerik rehberi](https://developers.google.com/search/docs/fundamentals/using-gen-ai-content), erişim 2026-11-15.
+Google, kullanıcıya değer katmayan toplu üretim/yeniden yazımı spam kapsamında değerlendirebilir. Bu nedenle kota doldurulmaz, kaynak metni kopyalanmaz, kaynaklı teyit ve somut oyuncu faydası şarttır. Kaynak: [Google'ın yapay zekâ içerik rehberi](https://developers.google.com/search/docs/fundamentals/using-gen-ai-content), erişim 2026-11-15.
 
 Görsel tıklanabilirliği için büyük, konuyla ilgili resim, açık başlık ve iyi sayfa deneyimi öneriliyor; görünürlük garantisi yok. NewsArticle içindeki gerçek yayıncı kimliği ve görsel bilgisi arama motorunun içeriği anlamasına yardım eder. Kaynak: [Discover](https://developers.google.com/search/docs/appearance/google-discover), [Article işaretlemesi](https://developers.google.com/search/docs/appearance/structured-data/article), erişim 2026-11-15.
 
 Trafiğin artıp artmadığı Analytics/Search Console ölçümü olmadan söylenmez. Sonraki değerlendirmede organik tıklama, gösterim, tıklama oranı ve haberden rehbere geçiş karşılaştırılmalı; yeni servis/hesap kurulmadı. Search Console erişimi bu oturumda yoktur.
 
-## İzlenen 10 kaynak
+## İzlenen 22 kaynak
 
-`kaynaklar.json` tek kaynak kaydıdır: IGN, GameSpot, PC Gamer, Eurogamer ve GamesRadar+ haber keşfi; PlayStation Blog, Xbox Wire, Nintendo, Steam ve Epic Games Store platform/mağaza duyuruları. PC Gamer ve GamesRadar'ın küresel oyun yayınları olduğu yayıncılarının [marka sayfasından](https://futureplc.com/our-brands/) kontrol edildi (2026-11-15). RSS/API erişimleri gerçek komutla denendi.
+`kaynaklar.json` tek kaynak kaydıdır. Keşif: IGN, GameSpot, PC Gamer, Eurogamer, GamesRadar+, VGC, Rock Paper Shotgun, Gematsu, Jeuxvideo.com (FR), 3DJuegos (ES), GAME Watch (JP). Resmî/mağaza: PlayStation Blog, Xbox Wire, Nintendo, Epic Games Store, Final Fantasy XIV Lodestone ve Valve CS2/Dota 2, EA Apex Legends, Capcom Street Fighter 6, Bethesda Skyrim resmî Steam duyuruları. Genel Steam RSS'i karma keşiftir; üçüncü taraf basın yazıları resmî teyit değildir.
 
-Nintendo HTML listesinden aday alınır ve tarih haber sayfasında doğrulanır. Epic haber sayfası Python'da 403 verebilir: ücretsiz oyun API'si yardımcıdır; ajan haber sayfasını web aracıyla ayrıca okur. Steam'in genel haber RSS'i üçüncü taraf basınını da içerir; Steam adresi görünmesi tek başına resmî teyit değildir. Erişilemeyen kaynak dürüstçe eksik olarak raporlanır.
+Eklenen 12 RSS/Atom/RDF/JSON akışı 2026-11-16'da gerçek HTTPS isteği ve ayrıştırmayla denendi. Rockstar, Blizzard, Riot, Ubisoft, EA, Bethesda, Capcom ve Bandai Namco için denenip hata/HTML dönen doğrudan RSS adresleri eklenmedi. Çalışan Square Enix akışı FFXIV Lodestone Atom'dur. Steam JSON yalnız `steam_community_announcements` kayıtlarını alır ve resmî duyuru detay adresini üretir; forum/haricî basın kabul edilmez.
+
+RSS pubDate, Atom published/updated, RDF dc:date, Steam zaman damgası ve Nintendo başlığındaki AA/GG/YY tarihleri kodda çözülür. Son 48 saat dışı veya gelecekteki bilinen tarihler yerel modelden önce elenir. Kaynak başına en çok altı aday kalır; tarihsiz aday atılmaz, sıralamada en sona gider. Tarama her kaynak için bulunan/tarih nedeniyle elenen/sınır nedeniyle elenen/kalan/tarihsiz adetlerini kaydeder.
+
+Epic API'nin oyun adı, kampanya başlangıç/bitiş tarihi, TR bölgesi ve mağaza adresi `resmi_veri` olarak yazara ve denetçiye taşınır; epicgames.com API yanıtı resmî teyittir. Mağaza sayfasının 403 dönmesi tek başına ret nedeni değildir. Eski kampanya yeni haber sayılmaz; gelecekteki kampanyanın duyuru tarihi ayrıca teyit edilir.
 
 ## Zamanlama ve çalışma
 
 Turu `py tools/haber_hatti.py` yönetir; pahalı bir yönetici model yoktur. Windows Görev Zamanlayıcı'daki `ctrl-agame saatlik haber` görevi her saat başında `conhost.exe --headless` üzerinden çalışır; çalışma klasörü proje köküdür. `otomasyon/zamanla.ps1` varsayılan olarak yalnız görev XML'ini önizler; yönetici incelemesi sonrası `-Kaydet` ile kaydedilir. Bu geçişte görev kaydedilmez/etkinleştirilmez. Eski T3 saatlik tetikleri artık kullanılmaz. Bilgisayarın ve kullanıcı oturumunun açık, CLI oturumlarının erişilebilir olması gerekir.
 
-Python önce 45 dakikalık ortak kilidi alır, temiz main ve uzak HEAD eşitliğini kontrol eder, `git pull --ff-only` yapar ve başlangıç kopyasını saklar. `haber_oto.py tara` 10 kaynaktan adayları çıkarır. Qwen3 8B (yedek Gemma3 4B) küçük parçalar halinde kapsam, anlam tekrarı ve hype ön puanı verir; kod takipli oyunları/yüksek puanı önceleyip en çok üç aday seçer. Yerel karar ön elemedir; gerçek teyit yazara ve denetçiye aittir.
+Python önce 45 dakikalık ortak kilidi alır, temiz main ve uzak HEAD eşitliğini kontrol eder, `git pull --ff-only` yapar ve başlangıç kopyasını saklar. `haber_oto.py tara` yapılandırılmış 22 kaynaktan adayları çıkarır. Qwen3 8B (yedek Gemma3 4B) küçük parçalar halinde kapsam, anlam tekrarı ve hype ön puanı verir; kod önce tarihli adayları, ardından takipli oyunu, hype ön puanını ve tazeliği sıralar; resmî rol yalnız son eşitlik bozucudur. Aynı olayın yakın başlıkları birleştirilir, resmî URL ve diğer yayınlar adayda korunur. Yerel modele en çok 72 aday gider. Yerel ret gerekçesi takipli, yüksek puanlı veya resmî adayı tek başına engellemez; açık sızıntı/söylenti başlıkları kodda da elenir. Gerçek teyit yazara ve denetçiye aittir.
 
-Yerel çağrı, mevcut `yerel_sor.py` içindeki model/adres kaydını yeniden kullanır; bu dosyayı değiştirmez. 6 GB VRAM için dört aday/parça, 4096 bağlam ve sınırlı JSON çıktısı kullanılır. Yerel zaman aşımı/erişim hatasında model o turun kalan parçalarında tekrar çağrılmaz; sıradaki yerel yedeğe geçilir. Model bulunamazsa adaylar teyitli kabul edilmez.
+Yerel çağrı, mevcut `yerel_sor.py` içindeki model/adres kaydını yeniden kullanır; bu dosyayı değiştirmez. 6 GB VRAM için dört aday/parça, 4096 bağlam ve sınırlı JSON çıktısı kullanılır. Yerel zaman aşımı/erişim hatasında model o turun kalan parçalarında tekrar çağrılmaz; sıradaki yerel yedeğe geçilir. Model bulunamazsa adaylar düşük ön puanla yazara araştırma için gider; teyitli kabul edilmez.
 
-Yazar sırası OpenCode `opencode/big-pickle` → Haiku → Sonnet'tir. Yazar resmî sayfayı okuyup dört dili ve gerekiyorsa video senaryosunu JSON olarak döndürür; Python yalnız belirlenmiş çalışma dosyalarına kaydeder. Her çıktı mevcut `hazirla` komutuyla kuru doğrulanır; biçim/şema hatasında aynı modele bir düzeltme, sonra sıradaki modele geçiş yapılır. Ajanlar sır içermeyen geçici klasörde, yalnız web ve kasa arama araçlarıyla çalışır. Ücretsiz OpenCode çağrısı kullanıcı ortamı, global yapılandırma ve anahtarları taşımaz. Çalışma ağacındaki izinsiz değişiklik geri alınır ve çıktı reddedilir.
+Yazar sırası OpenCode `opencode/big-pickle` → Haiku → Sonnet'tir. 429/FreeUsageLimitError/kota yanıtında model `retryAfterMs` süresince, süre yoksa 12 saat atlanır; bekleme `.git/haber-oto/model-kotalari.json` içinde turlar arasında korunur. Yazar tercih edilen resmî teyit veya aşağıdaki birincil teyit yoluyla dört dili ve gerekiyorsa video senaryosunu JSON olarak döndürür; Python yalnız belirlenmiş çalışma dosyalarına kaydeder. Her çıktı mevcut `hazirla` komutuyla kuru doğrulanır; biçim/şema hatasında aynı modele bir düzeltme, sonra sıradaki modele geçiş yapılır. Ajanlar sır içermeyen geçici klasörde, yalnız web ve kasa arama araçlarıyla çalışır. Ücretsiz OpenCode çağrısı kullanıcı ortamı, global yapılandırma ve anahtarları taşımaz. Çalışma ağacındaki izinsiz değişiklik geri alınır ve çıktı reddedilir.
 
-Sonnet paketteki her resmî sayfayı bağımsız okuyup onay/ret ve gerekirse düzeltilmiş hype verir; çağrı/JSON hatasında bir kez Opus denenir. Denetçi çalışmazsa yayın yoktur. Reddedilen haber çıkarılır; yükselen hype eşiği geçip senaryo yoksa haber bu tur atlanır. Python onaylı paketi yeniden `hazirla` ile doğrular; uygulama, görsel alma, derleme, bağlantı/test/diff kontrolleri geçerse yalnız izinli yayın dosyalarını commit/push eder. Push reddinde bir rebase ve yeniden kontrol yapılır; belirsizlikte ikinci push yoktur. Canlı yeni haber sayfası en çok beş dakika izlenir.
+Sonnet her adayın gerekli teyit kaynaklarını bağımsız inceleyip onay/ret ve gerekirse düzeltilmiş hype verir; çağrı/JSON hatasında bir kez Opus denenir. Denetçi çalışmazsa yayın yoktur. Her aday yazımından sonra denetlenir; ret/atlamada sıralı yedeğe geçilir. Üç onaya ulaşılınca veya altı yazım denemesi/süre bütçesi dolunca durulur. Reddedilen haber çıkarılır; yükselen hype eşiği geçip senaryo yoksa haber bu tur atlanır. Python onaylı paketi yeniden `hazirla` ile doğrular; uygulama, görsel alma, derleme, bağlantı/test/diff kontrolleri geçerse yalnız izinli yayın dosyalarını commit/push eder. Push reddinde bir rebase ve yeniden kontrol yapılır; belirsizlikte ikinci push yoktur. Canlı yeni haber sayfası en çok beş dakika izlenir.
 
 `py tools/haber_hatti.py --deneme` gerçek tarama, yerel eleme, yazar ve denetimi çalıştırır; yayın aşamasını tamamen atlar. Onaylı/yazılmış paket, denetim, deneme senaryoları ve `sonuc.json` `.git/haber-oto/` içinde kalır; depo başlangıç durumuna döner. `hat.log` her tur için tek satır yazar. Aşama başına sıralı model komutları ve zaman aşımları `modeller.json`, görev metinleri `yazar-gorev.txt` ve `denetci-gorev.txt` içindedir. Toplam süre 43 dakika ile sınırlıdır; kilit her çıkışta bırakılır. Kaynak erişim eksikleri sonuçta açıkça kaydedilir; bütün kaynakların tam araştırıldığı varsayılmaz.
 
-Her tur 10 kaynak, son 48 saat; en fazla 3 haber/tur ve 12 haber/TR günü. Dört dil zorunlu. Aynı kaynak URL'si, normalize başlık, id veya olay kimliği yeniden eklenmez. `otomasyon.konu` aynı olayın farklı kaynaklarında da aynı kalmalıdır. Legacy kayıtlar için anlam denetimini ajan yapar. Kotalar `kaynaklar.json` içindedir. Haber doğrulamasını ajan yapar; Python içerik doğruluğunu veya özgünlüğünü kendi başına ispatlayamaz.
+Her tur yapılandırılmış kaynaklar, son 48 saat; en fazla 3 haber/tur ve 12 haber/TR günü. Dört dil zorunlu. Aynı kaynak URL'si, normalize başlık, id veya olay kimliği yeniden eklenmez. `otomasyon.konu` aynı olayın farklı kaynaklarında da aynı kalmalıdır. Legacy kayıtlar için anlam denetimini ajan yapar. Kotalar `kaynaklar.json` içindedir. Haber doğrulamasını ajan yapar; Python içerik doğruluğunu veya özgünlüğünü kendi başına ispatlayamaz.
 
 Günlük takvim/bakım akışı bu hattan ayrıdır; aynı yayın kilidini kullanmalıdır. Haber hattı sosyal paylaşım veya video üretim komutunu doğrudan çalıştırmaz; sosyal medya kotaları korunur.
 
@@ -59,6 +63,7 @@ Paket JSON listesinde normal `data/icerik.json` şemasına şu alan eklenir:
 ```json
 "otomasyon": {
  "konu": "oyun-surum-olay-kimligi",
+ "teyit_turu": "resmi",
  "resmi_url": "https://blog.playstation.com/2026/11/13/ilgili-duyuru/",
  "teyit_zamani": "2026-11-15T04:05:00+03:00",
  "oyuncuya_fayda": "Yamanın hangi oyuncuları etkilediği ve ne yapabilecekleri.",
@@ -66,7 +71,11 @@ Paket JSON listesinde normal `data/icerik.json` şemasına şu alan eklenir:
 }
 ```
 
-Bu bir alan örneğidir, yayınlanacak haber değildir. Resmî URL aynı haberin kaynaklar listesinde bulunmalı; izinli alan adı olmalı; son iki saatte gerçekten okunmuş olmalı. Haber tarihi kaynak tarihidir, ileri tarih veya iki günden eski haber reddedilir. Her dilin yeni metni 50–300 kelime ve başlık ≤100 karakterdir. Yapay bilgi/dolgu ile alt sınır tamamlanmaz; yeterli olgu yoksa yayın yapılmaz.
+Bu bir alan örneğidir, yayınlanacak haber değildir. `teyit_turu` resmi veya birincil olabilir; eski paketlerde eksikse resmi kabul edilir. Resmî yolda izinli `resmi_url` kaynaklar içinde yer alır. Epic için bu adres resmî API olabilir; API olguları `resmi_veri` ile taşınır. Teyit son iki saat içinde yapılmalı, oyuncuya fayda en az 30 karakterle açıklanmalıdır.
+
+Resmî haber sayfası yoksa birincil yol yalnız adı/görevi/kurumu belli geliştirici veya yayıncı yetkilisinin doğrudan açıklaması, röportajı, resmî sosyal medya/YouTube paylaşımındaki aynı olgu için kullanılabilir. `otomasyon.birincil_kaynak`: `kisi`, `gorev`, `kurum`, `tur` (`aciklama`, `roportaj`, `resmi_sosyal`, `resmi_youtube`), `olgu`. `otomasyon.capraz_kaynaklar` en az iki bağımsız izinli keşif yayınının gerçekten okunan haber URL'sini içerir; ikisi `kaynaklar` listesinde de olmalıdır. Aynı yayın grubu bağımsız sayılmaz. Her dilde kaynak açıkça anılır (ör. “IGN'in aktardığına göre…”). Resmî yol tercih edilir. Söylenti/sızıntı, isimsiz kaynak, reportedly türü iddia veya aynı söylentiyi tekrarlayan iki yayın bu yoldan geçemez; içerik ve bağımsızlık denetçi tarafından ayrıca doğrulanır.
+
+Haber tarihi gerçek kaynak tarihidir, ileri tarih veya 48 saatten eski haber reddedilir. Her dilin yeni metni 50–300 kelime ve başlık ≤100 karakterdir. Yapay bilgi/dolgu ile alt sınır tamamlanmaz; yeterli olgu yoksa yayın yapılmaz.
 
 ## Hype puanı
 
@@ -108,6 +117,6 @@ Senaryo yalnız veridir: alanlar düz metindir, kod ya da komut olarak çalışt
 
 Bir kaynak başarısız olsa da diğerleri araştırılır; eksik kaynağın kontrolü başarılı gösterilmez. Uygulama önce bütün paketi doğrular; geçersiz paket içerik dosyasına yazılmaz. Build, iç bağlantı ve testler geçmeden push yok. Başarısız tur kendi başlangıç kopyasından yalnız kendi değişikliğini geri alır; force push, kör reset/clean ve başka kullanıcının değişikliklerini stage etmek yasaktır.
 
-Testler: id/URL/başlık/olay tekrarları, HTTPS/sahte alt alan adı, dört dil, eski/gelecek tarih, resmî kaynak şartı, günlük/tur kotası, kilit sahibi/süresi, RSS ayrıştırma ve kırık bağlantı. Canlı tarama 2026-11-15'te 10 kaynak ve 83 aday döndürdü. `kontrol` 313 sayfada 22.119 bağlantı, sıfır kırık bağlantı buldu (yeni içerikle adetler artabilir).
+Testler: id/URL/başlık/olay tekrarları, HTTPS/sahte alt alan adı, dört dil, eski/gelecek tarih, resmî kaynak şartı, günlük/tur kotası, kilit sahibi/süresi, RSS ayrıştırma ve kırık bağlantı. Canlı tarama 2026-11-16'da 22 kaynakta 71 aday döndürdü; 598 kaydın 423'ü tarih penceresinde elendi, 104'ü kaynak başına sınırda elendi. `kontrol` 313 sayfada 22.119 bağlantı, sıfır kırık bağlantı buldu (yeni içerikle adetler artabilir).
 
 Otomasyonu durdurmak için Windows'ta `Disable-ScheduledTask -TaskName 'ctrl-agame saatlik haber'` kullanılır. Görev henüz kurulmamışsa durdurulacak saatlik tetik yoktur. Günlük bakım bağımsızdır; anahtarlar hiçbir dosyaya yazılmaz.

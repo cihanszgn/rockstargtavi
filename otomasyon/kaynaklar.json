@@ -1,26 +1,229 @@
 {
- "surum": 1,
- "sinirlar": {"tur_basina": 3, "gunluk": 12, "son_saat": 48},
+ "surum": 2,
+ "sinirlar": {
+  "tur_basina": 3,
+  "gunluk": 12,
+  "son_saat": 48,
+  "kaynak_basina": 6,
+  "yazim_deneme": 6
+ },
  "kaynaklar": [
-  {"id":"ign","ad":"IGN","url":"https://www.ign.com/news","rss":"https://www.ign.com/rss/articles/feed","rol":"kesif"},
-  {"id":"gamespot","ad":"GameSpot","url":"https://www.gamespot.com/news/","rss":"https://www.gamespot.com/feeds/mashup/","rol":"kesif"},
-  {"id":"pcgamer","ad":"PC Gamer","url":"https://www.pcgamer.com/gaming-industry/","rss":"https://www.pcgamer.com/rss/","rol":"kesif"},
-  {"id":"eurogamer","ad":"Eurogamer","url":"https://www.eurogamer.net/","rss":"https://www.eurogamer.net/feed/news","rol":"kesif"},
-  {"id":"gamesradar","ad":"GamesRadar+","url":"https://www.gamesradar.com/games/","rss":"https://www.gamesradar.com/feeds.xml","rol":"kesif"},
-  {"id":"playstation","ad":"PlayStation Blog","url":"https://blog.playstation.com/","rss":"https://blog.playstation.com/feed/","rol":"resmi"},
-  {"id":"xbox","ad":"Xbox Wire","url":"https://news.xbox.com/en-us/","rss":"https://news.xbox.com/en-us/feed/","rol":"resmi"},
-  {"id":"nintendo","ad":"Nintendo","url":"https://www.nintendo.com/us/whatsnew/","yol":"/us/whatsnew/","rol":"resmi"},
-  {"id":"steam","ad":"Steam","url":"https://store.steampowered.com/news/","rss":"https://store.steampowered.com/feeds/news/","rol":"karma"},
-  {"id":"epic","ad":"Epic Games Store","url":"https://store.epicgames.com/en-US/news","api":"https://store-site-backend-static.ak.epicgames.com/freeGamesPromotions?locale=en-US&country=TR&allowCountries=TR","rol":"resmi"}
+  {
+   "id": "ign",
+   "ad": "IGN",
+   "url": "https://www.ign.com/news",
+   "rss": "https://www.ign.com/rss/articles/feed",
+   "rol": "kesif",
+   "yayin_grubu": "ign-entertainment"
+  },
+  {
+   "id": "gamespot",
+   "ad": "GameSpot",
+   "url": "https://www.gamespot.com/news/",
+   "rss": "https://www.gamespot.com/feeds/mashup/",
+   "rol": "kesif"
+  },
+  {
+   "id": "pcgamer",
+   "ad": "PC Gamer",
+   "url": "https://www.pcgamer.com/gaming-industry/",
+   "rss": "https://www.pcgamer.com/rss/",
+   "rol": "kesif",
+   "yayin_grubu": "future"
+  },
+  {
+   "id": "eurogamer",
+   "ad": "Eurogamer",
+   "url": "https://www.eurogamer.net/",
+   "rss": "https://www.eurogamer.net/feed/news",
+   "rol": "kesif",
+   "yayin_grubu": "ign-entertainment"
+  },
+  {
+   "id": "gamesradar",
+   "ad": "GamesRadar+",
+   "url": "https://www.gamesradar.com/games/",
+   "rss": "https://www.gamesradar.com/feeds.xml",
+   "rol": "kesif",
+   "yayin_grubu": "future"
+  },
+  {
+   "id": "playstation",
+   "ad": "PlayStation Blog",
+   "url": "https://blog.playstation.com/",
+   "rss": "https://blog.playstation.com/feed/",
+   "rol": "resmi"
+  },
+  {
+   "id": "xbox",
+   "ad": "Xbox Wire",
+   "url": "https://news.xbox.com/en-us/",
+   "rss": "https://news.xbox.com/en-us/feed/",
+   "rol": "resmi"
+  },
+  {
+   "id": "nintendo",
+   "ad": "Nintendo",
+   "url": "https://www.nintendo.com/us/whatsnew/",
+   "yol": "/us/whatsnew/",
+   "rol": "resmi"
+  },
+  {
+   "id": "steam",
+   "ad": "Steam",
+   "url": "https://store.steampowered.com/news/",
+   "rss": "https://store.steampowered.com/feeds/news/",
+   "rol": "karma"
+  },
+  {
+   "id": "epic",
+   "ad": "Epic Games Store",
+   "url": "https://store.epicgames.com/en-US/news",
+   "api": "https://store-site-backend-static.ak.epicgames.com/freeGamesPromotions?locale=en-US&country=TR&allowCountries=TR",
+   "rol": "resmi"
+  },
+  {
+   "id": "vgc",
+   "ad": "VGC",
+   "url": "https://www.videogameschronicle.com/feed/",
+   "rss": "https://www.videogameschronicle.com/feed/",
+   "rol": "kesif"
+  },
+  {
+   "id": "rps",
+   "ad": "Rock Paper Shotgun",
+   "url": "https://www.rockpapershotgun.com/feed",
+   "rss": "https://www.rockpapershotgun.com/feed",
+   "rol": "kesif",
+   "yayin_grubu": "ign-entertainment"
+  },
+  {
+   "id": "gematsu",
+   "ad": "Gematsu",
+   "url": "https://www.gematsu.com/feed",
+   "rss": "https://www.gematsu.com/feed",
+   "rol": "kesif"
+  },
+  {
+   "id": "jeuxvideo",
+   "ad": "Jeuxvideo.com",
+   "url": "https://www.jeuxvideo.com/rss/rss-news.xml",
+   "rss": "https://www.jeuxvideo.com/rss/rss-news.xml",
+   "rol": "kesif",
+   "yayin_grubu": "webedia"
+  },
+  {
+   "id": "gamewatch",
+   "ad": "GAME Watch",
+   "url": "https://game.watch.impress.co.jp/data/rss/1.0/gmw/feed.rdf",
+   "rss": "https://game.watch.impress.co.jp/data/rss/1.0/gmw/feed.rdf",
+   "rol": "kesif"
+  },
+  {
+   "id": "3djuegos",
+   "ad": "3DJuegos",
+   "url": "https://www.3djuegos.com/index.xml",
+   "rss": "https://www.3djuegos.com/index.xml",
+   "rol": "kesif",
+   "yayin_grubu": "webedia"
+  },
+  {
+   "id": "ffxiv",
+   "ad": "Final Fantasy XIV Lodestone",
+   "url": "https://na.finalfantasyxiv.com/lodestone/news/news.xml",
+   "rss": "https://na.finalfantasyxiv.com/lodestone/news/news.xml",
+   "rol": "resmi"
+  },
+  {
+   "id": "steam-valve",
+   "ad": "Valve Counter-Strike 2",
+   "url": "https://store.steampowered.com/news/app/730",
+   "api": "https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=730&count=15&feeds=steam_community_announcements",
+   "bicim": "steam",
+   "appid": 730,
+   "rol": "resmi"
+  },
+  {
+   "id": "steam-dota",
+   "ad": "Valve Dota 2",
+   "url": "https://store.steampowered.com/news/app/570",
+   "api": "https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=570&count=15&feeds=steam_community_announcements",
+   "bicim": "steam",
+   "appid": 570,
+   "rol": "resmi"
+  },
+  {
+   "id": "steam-ea",
+   "ad": "EA Apex Legends",
+   "url": "https://store.steampowered.com/news/app/1172470",
+   "api": "https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=1172470&count=15&feeds=steam_community_announcements",
+   "bicim": "steam",
+   "appid": 1172470,
+   "rol": "resmi"
+  },
+  {
+   "id": "steam-capcom",
+   "ad": "Capcom Street Fighter 6",
+   "url": "https://store.steampowered.com/news/app/1364780",
+   "api": "https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=1364780&count=15&feeds=steam_community_announcements",
+   "bicim": "steam",
+   "appid": 1364780,
+   "rol": "resmi"
+  },
+  {
+   "id": "steam-bethesda",
+   "ad": "Bethesda Skyrim",
+   "url": "https://store.steampowered.com/news/app/489830",
+   "api": "https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=489830&count=15&feeds=steam_community_announcements",
+   "bicim": "steam",
+   "appid": 489830,
+   "rol": "resmi"
+  }
  ],
  "resmi_alanlar": [
-  "blog.playstation.com","playstation.com","news.xbox.com","xbox.com","nintendo.com",
-  "store.steampowered.com","steamcommunity.com","store.epicgames.com","epicgames.com",
-  "rockstargames.com","take2games.com","blizzard.com","worldofwarcraft.com","diablo4.blizzard.com",
-  "nttgame.com","knightonlineworld.com","metin2.gameforge.com","riseonlineworld.com",
-  "riotgames.com","playvalorant.com","leagueoflegends.com","mobilelegends.com","pubg.com",
-  "fortnite.com","callofduty.com","activision.com","ea.com","minecraft.net","roblox.com",
-  "pathofexile.com","hoyoverse.com","genshin.hoyoverse.com","ubisoft.com","square-enix-games.com",
-  "capcom-games.com","bandainamcoent.com","bethesda.net","newsroom.gamescom.global"
+  "blog.playstation.com",
+  "playstation.com",
+  "news.xbox.com",
+  "xbox.com",
+  "nintendo.com",
+  "store.steampowered.com",
+  "steamcommunity.com",
+  "store.epicgames.com",
+  "epicgames.com",
+  "rockstargames.com",
+  "take2games.com",
+  "blizzard.com",
+  "worldofwarcraft.com",
+  "diablo4.blizzard.com",
+  "nttgame.com",
+  "knightonlineworld.com",
+  "metin2.gameforge.com",
+  "riseonlineworld.com",
+  "riotgames.com",
+  "playvalorant.com",
+  "leagueoflegends.com",
+  "mobilelegends.com",
+  "pubg.com",
+  "fortnite.com",
+  "callofduty.com",
+  "activision.com",
+  "ea.com",
+  "minecraft.net",
+  "roblox.com",
+  "pathofexile.com",
+  "hoyoverse.com",
+  "genshin.hoyoverse.com",
+  "ubisoft.com",
+  "square-enix-games.com",
+  "capcom-games.com",
+  "bandainamcoent.com",
+  "bethesda.net",
+  "newsroom.gamescom.global",
+  "finalfantasyxiv.com",
+  "square-enix.com",
+  "capcom.com",
+  "capcomusa.com",
+  "bandainamcoent.eu",
+  "api.steampowered.com"
  ]
 }

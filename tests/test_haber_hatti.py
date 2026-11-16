@@ -145,9 +145,9 @@ class HatTests(unittest.TestCase):
         decisions = [{'aday_id': i, 'karar': 'al', 'hype': 4 if i == 0 else 9, 'neden': 'yeni'} for i in range(5)]
         with patch.object(self.hat, 'zincir', side_effect=[decisions[:4], decisions[4:]]):
             result = self.hat.ele(candidates)
-        self.assertEqual(len(result), 3)
+        self.assertEqual(len(result), 5)
         self.assertEqual(result[0]['baslik'], 'Takipli yama')
-        self.assertEqual(len(self.hat.sonuc['atlanan']), 2)
+        self.assertEqual(len(self.hat.sonuc['atlanan']), 0)
 
     def test_secret_environment_is_allowlisted(self):
         with patch.dict('os.environ', {'API_KEY': 'secret', 'SOMETHING_TOKEN': 'secret', 'PATH': 'ok'}):
@@ -252,12 +252,53 @@ class HatTests(unittest.TestCase):
         self.assertIn('aynı oyundan bu tur bir aday yeter', [x['neden'] for x in self.hat.sonuc['atlanan']])
         self.assertNotIn('https://www.ign.com/haber/1', self.hat.gorulen)
 
-    def test_official_source_beats_higher_scored_press_candidate(self):
+    def test_higher_score_beats_official_role(self):
         self._oyunlar([])
         candidates = [self._aday(0, 'Basın haberi', ad='IGN'), self._aday(1, 'Resmi duyuru', ad='PlayStation Blog')]
         with patch.object(self.hat, 'zincir', side_effect=self._al({0: 9, 1: 4})):
             result = self.hat.ele(candidates)
-        self.assertEqual(result[0]['ad'], 'PlayStation Blog')
+        self.assertEqual(result[0]['ad'], 'IGN')
+
+    def test_known_old_dates_never_reach_local_model_and_unknown_goes_last(self):
+        self._oyunlar([])
+        candidates = [self._aday(0, '11/05/26 Eski Nintendo'), self._aday(1, 'Bilinmeyen'), self._aday(2, 'Taze')]
+        candidates[2]['tarih'] = datetime.now(timezone.utc).isoformat()
+        with patch.object(self.hat, 'zincir', side_effect=self._al({0: 10, 1: 4})) as run:
+            result = self.hat.ele(candidates)
+        self.assertNotIn('Eski Nintendo', run.call_args.args[2])
+        self.assertEqual([x['baslik'] for x in result], ['Taze', 'Bilinmeyen'])
+
+    def test_quota_cooldown_persists_and_skips_until_expiry(self):
+        models = [{'ad': 'free'}, {'ad': 'backup'}]
+        with patch.object(self.hat, 'model', side_effect=[ValueError('FreeUsageLimitError retryAfterMs: 7200000'), '{"ok":true}']):
+            self.assertTrue(self.hat.zincir('yazar', models, 'prompt', lambda x: x)['ok'])
+        again = h.Hat(self.root, config={'eleme': [], 'yazar': [], 'denetci': []})
+        with patch.object(again, 'model', return_value='{}') as run:
+            again.zincir('yazar', models, 'prompt', lambda x: x)
+        self.assertEqual([x.args[0]['ad'] for x in run.call_args_list], ['backup'])
+        again.kotalar['free']['bitis'] = (datetime.now(timezone.utc) - timedelta(seconds=1)).isoformat()
+        with patch.object(again, 'model', return_value='{}') as run:
+            again.zincir('yazar', models, 'prompt', lambda x: x)
+        self.assertEqual(run.call_args.args[0]['ad'], 'free')
+
+    def test_rejected_candidates_use_reserve_and_stop_at_three_approved(self):
+        candidates = [self._aday(i, f'Haber {i}') for i in range(6)]
+        articles = [{'id': str(i)} for i in range(6)]
+        with patch.object(self.hat, 'yaz', side_effect=articles) as write, \
+                patch.object(self.hat, 'denetle', side_effect=[[], [], [articles[2]], [articles[3]], [articles[4]]]), \
+                patch.object(self.hat, 'paket_kontrol', side_effect=lambda xs: xs):
+            result = self.hat.adaylari_isle(candidates)
+        self.assertEqual([x['id'] for x in result], ['2', '3', '4'])
+        self.assertEqual(write.call_count, 5)
+
+    def test_same_event_keeps_official_url_and_independent_reports(self):
+        candidates = [self._aday(0, 'New Game patch released'), self._aday(1, 'New Game patch released', ad='PlayStation Blog')]
+        candidates[1]['url'] = 'https://blog.playstation.com/2026/11/16/new-game/'
+        candidates[1]['resmi_aday'] = True
+        merged = h.olaylari_birlestir(candidates)
+        self.assertEqual(len(merged), 1)
+        self.assertEqual(merged[0]['resmi_url'], candidates[1]['url'])
+        self.assertEqual(len(merged[0]['ilgili_kaynaklar']), 2)
 
     def test_dry_run_never_writes_memory(self):
         self._oyunlar([])

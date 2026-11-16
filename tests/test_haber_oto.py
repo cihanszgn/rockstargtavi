@@ -63,6 +63,71 @@ class HypeTests(unittest.TestCase):
             self.assertEqual(len(h.hazirla([], [self.haber(7)], NOW, self.klasor)[1]), 1)
 
 class NewsTests(unittest.TestCase):
+    def test_date_prefilter_and_unknown(self):
+        items = [{'baslik': '11/05/26 Old Nintendo', 'url': 'https://www.nintendo.com/us/whatsnew/old/'},
+                 {'baslik': 'New', 'tarih': NOW.isoformat()}, {'baslik': 'Unknown'}]
+        self.assertEqual([x['baslik'] for x in h.tarih_suz(items, NOW)], ['New', 'Unknown'])
+
+    def test_atom_rdf_and_steam_official_parsers(self):
+        atom = b'<feed xmlns="http://www.w3.org/2005/Atom"><entry><title>FFXIV patch</title><link href="https://na.finalfantasyxiv.com/lodestone/news/detail/a"/><published>2026-11-15T06:00:00Z</published></entry></feed>'
+        source = {'id': 'ffxiv', 'ad': 'FFXIV', 'rss': 'https://example.org/feed'}
+        with patch.object(h, 'getir', return_value=atom):
+            status, items = h.kaynak_tara(source, NOW)
+        self.assertEqual(status['adet'], 1)
+        self.assertTrue(items[0]['resmi_aday'])
+        rdf = b'<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/"><item><title>JP patch</title><link>https://game.watch.impress.co.jp/docs/a.html</link></item></rdf:RDF>'
+        self.assertEqual(h.rss_oku(rdf, source, NOW)[0]['baslik'], 'JP patch')
+        source = {'id': 'valve', 'ad': 'Valve', 'api': 'https://api.steampowered.com/a', 'bicim': 'steam', 'appid': 730}
+        raw = {'appnews': {'newsitems': [{'title': 'Patch', 'gid': '123', 'date': int(NOW.timestamp()), 'feedname': 'steam_community_announcements'}, {'title': 'Press', 'feedname': 'pcgamer'}]}}
+        with patch.object(h, 'getir', return_value=json.dumps(raw).encode()):
+            status, items = h.kaynak_tara(source, NOW)
+        self.assertEqual(len(items), 1)
+        self.assertTrue(h.resmi(items[0]['url']))
+
+    def test_primary_confirmation_requires_two_independent_named_reports(self):
+        x = article()
+        x['kaynaklar'] = [{'ad': 'IGN', 'url': 'https://www.ign.com/articles/interview'}, {'ad': 'VGC', 'url': 'https://www.videogameschronicle.com/news/interview/'}]
+        x['otomasyon'].update(teyit_turu='birincil', resmi_url='', birincil_kaynak={'kisi': 'Jane Smith', 'gorev': 'Director', 'kurum': 'Studio', 'tur': 'roportaj', 'olgu': 'Yeni yamanın oyunculara sunulduğunu açıkladı.'}, capraz_kaynaklar=[s['url'] for s in x['kaynaklar']])
+        for content in x['diller'].values():
+            content['metin'] += ' IGN VGC'
+        self.assertEqual(len(h.hazirla([], [x], NOW)[1]), 1)
+        x['otomasyon']['birincil_kaynak']['tur'] = 'sizinti'
+        with self.assertRaises(ValueError): h.hazirla([], [x], NOW)
+        x['otomasyon']['birincil_kaynak']['tur'] = 'roportaj'
+        x['kaynaklar'][1]['url'] = 'https://www.ign.com/articles/another'
+        x['otomasyon']['capraz_kaynaklar'] = [s['url'] for s in x['kaynaklar']]
+        with self.assertRaises(ValueError): h.hazirla([], [x], NOW)
+
+    def test_epic_api_is_official_confirmation(self):
+        x = article()
+        url = next(s['api'] for s in h.CONFIG['kaynaklar'] if s['id'] == 'epic')
+        store = 'https://store.epicgames.com/en-US/p/game'
+        x['kaynaklar'] = [{'ad': 'Epic API', 'url': url}, {'ad': 'Store', 'url': store}]
+        x['otomasyon'].update(teyit_turu='resmi', resmi_url=url, resmi_veri={
+            'api_url': url, 'oyun': 'Game', 'alinma_zamani': NOW.isoformat(), 'ulke': 'TR',
+            'magaza_url': store, 'baslangic': (NOW - timedelta(hours=1)).isoformat(), 'bitis': (NOW + timedelta(days=6)).isoformat()})
+        self.assertEqual(len(h.hazirla([], [x], NOW)[1]), 1)
+        other = json.loads(json.dumps(x))
+        other['id'] = other['otomasyon']['konu'] = 'other-game'
+        for content in other['diller'].values(): content['baslik'] = 'Other game'
+        other['kaynaklar'][1]['url'] += '-other'
+        other['otomasyon']['resmi_veri']['magaza_url'] += '-other'
+        self.assertEqual(len(h.hazirla([x], [other], NOW)[1]), 1)
+        x['otomasyon']['resmi_veri']['api_url'] = 'https://evil.example/api'
+        with self.assertRaises(ValueError): h.hazirla([], [x], NOW)
+
+    def test_epic_scanner_preserves_only_free_unexpired_campaign_facts(self):
+        source = next(s for s in h.CONFIG['kaynaklar'] if s['id'] == 'epic')
+        offer = {'startDate': (NOW - timedelta(hours=1)).isoformat(), 'endDate': (NOW + timedelta(days=6)).isoformat(), 'discountSetting': {'discountPercentage': 0}}
+        game = {'title': 'Game', 'productSlug': 'game/home', 'promotions': {'promotionalOffers': [{'promotionalOffers': [offer]}]}}
+        raw = {'data': {'Catalog': {'searchStore': {'elements': [game]}}}}
+        with patch.object(h, 'getir', return_value=json.dumps(raw).encode()):
+            status, items = h.kaynak_tara(source, NOW)
+        self.assertEqual(status['durum'], 'ok')
+        self.assertEqual(items[0]['resmi_veri']['oyun'], 'Game')
+        self.assertEqual(items[0]['url'], 'https://store.epicgames.com/en-US/p/game')
+        self.assertEqual(items[0]['resmi_veri']['api_url'], source['api'])
+
     def test_duplicate_url_title_and_topic_are_not_published_again(self):
         existing = article()
         for alter in ('url', 'title', 'topic'):

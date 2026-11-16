@@ -83,6 +83,36 @@ def tarih(value):
     return dt.replace(tzinfo=timezone.utc) if dt.tzinfo is None else dt.astimezone(timezone.utc)
 
 
+def aday_tarihi(item):
+    published = tarih(item.get('tarih'))
+    if published:
+        return published
+    match = re.match(r'^(\d{2})/(\d{2})/(\d{2})\b', item.get('baslik', ''))
+    if match:
+        try:
+            month, day, year = map(int, match.groups())
+            return datetime(2000 + year, month, day, tzinfo=timezone.utc)
+        except ValueError:
+            pass
+    match = re.search(r'/(20\d{2})/(\d{2})/(\d{2})/', item.get('url', ''))
+    if match:
+        try:
+            return datetime(*map(int, match.groups()), tzinfo=timezone.utc)
+        except ValueError:
+            pass
+    return None
+
+
+def tarih_suz(items, now):
+    kept = []
+    for item in items:
+        dt = aday_tarihi(item)
+        if dt and not now - timedelta(hours=CONFIG['sinirlar']['son_saat']) <= dt <= now + timedelta(minutes=5):
+            continue
+        kept.append(dict(item, tarih=dt.isoformat() if dt else None))
+    return kept
+
+
 def getir(url):
     if not https(url):
         raise ValueError('yalnız HTTPS kaynak okunur')
@@ -100,19 +130,25 @@ def rss_oku(raw, source, now):
     if b'<!ENTITY' in raw or b'<!DOCTYPE' in raw:
         raise ValueError('DTD/entity içeren akış kabul edilmez')
     root = ET.fromstring(raw)
+    if root.tag.split('}')[-1] not in ('rss', 'feed', 'RDF'):
+        raise ValueError('RSS/Atom/RDF yerine başka içerik döndü')
     out = []
-    for item in root.findall('.//item'):
-        title = html.unescape(item.findtext('title') or '').strip()
-        url = (item.findtext('link') or '').strip()
-        published = tarih(item.findtext('pubDate') or item.findtext('{http://purl.org/dc/elements/1.1/}date'))
-        if not title or not https(url):
+    for item in root.iter():
+        if item.tag.split('}')[-1] not in ('item', 'entry'):
             continue
-        if published and not now - timedelta(hours=48) <= published <= now + timedelta(minutes=5):
+        fields = {x.tag.split('}')[-1]: x for x in item}
+        def val(key):
+            return fields[key].text or '' if key in fields else ''
+        title = html.unescape(val('title')).strip()
+        links = [x for x in item if x.tag.split('}')[-1] == 'link']
+        url = next((x.get('href') or x.text or '' for x in links if x.get('rel', 'alternate') == 'alternate'), '').strip()
+        published = tarih(val('pubDate') or val('published') or val('date') or val('updated'))
+        if not title or not https(url):
             continue
         out.append({'kaynak': source['id'], 'ad': source['ad'], 'baslik': title,
                     'url': url, 'tarih': published.isoformat() if published else None,
                     'resmi_aday': resmi(url)})
-    return out[:10]
+    return out
 
 
 class LinkOku(HTMLParser):
@@ -134,7 +170,7 @@ class LinkOku(HTMLParser):
             self.current = None
 
 
-def kaynak_tara(source, now):
+def _kaynak_tara(source, now):
     try:
         if source.get('rss'):
             items = rss_oku(getir(source['rss']), source, now)
@@ -142,17 +178,38 @@ def kaynak_tara(source, now):
         if source.get('api'):
             data = json.loads(getir(source['api']))
             items = []
+            if source.get('bicim') == 'steam':
+                for item in data['appnews']['newsitems']:
+                    if item.get('feedname') != 'steam_community_announcements':
+                        continue
+                    gid = str(item['gid'])
+                    if not gid.isdigit():
+                        continue
+                    items.append({'kaynak': source['id'], 'ad': source['ad'], 'baslik': item['title'],
+                                  'url': f"https://steamcommunity.com/games/{source['appid']}/announcements/detail/{gid}",
+                                  'tarih': datetime.fromtimestamp(item['date'], timezone.utc).isoformat(), 'resmi_aday': True})
+                return {'id': source['id'], 'durum': 'ok', 'web_gerekli': False}, items
             for item in data['data']['Catalog']['searchStore']['elements']:
                 promotions = item.get('promotions') or {}
                 if not (promotions.get('promotionalOffers') or promotions.get('upcomingPromotionalOffers')):
                     continue
-                slug = item.get('productSlug') or item.get('urlSlug')
-                if slug:
+                slug = next((x.get('pageSlug') for x in item.get('catalogNs', {}).get('mappings', []) if x.get('pageSlug')), None) or item.get('productSlug') or item.get('urlSlug')
+                offers = [o for group in ('promotionalOffers', 'upcomingPromotionalOffers')
+                          for bundle in promotions.get(group, []) for o in bundle.get('promotionalOffers', [])]
+                for offer in offers:
+                    start, end = tarih(offer.get('startDate')), tarih(offer.get('endDate'))
+                    if not start or not end or end <= now or offer.get('discountSetting', {}).get('discountPercentage') != 0:
+                        continue
+                    if not slug:
+                        continue
+                    store = 'https://store.epicgames.com/en-US/p/' + slug.removesuffix('/home')
                     items.append({'kaynak': source['id'], 'ad': source['ad'], 'baslik': item['title'],
-                                  'url': 'https://store.epicgames.com/en-US/p/' + slug,
-                                  'tarih': None, 'resmi_aday': True})
-            return {'id': source['id'], 'durum': 'kismi', 'adet': len(items), 'web_gerekli': True,
-                    'not': 'API ücretsiz oyunları verir; haber sayfasını ayrıca web ile tara.'}, items[:10]
+                                  'url': store, 'tarih': start.isoformat() if start <= now else None, 'resmi_aday': True,
+                                  'resmi_veri': {'api_url': source['api'], 'alinma_zamani': now.isoformat(),
+                                                'oyun': item['title'], 'baslangic': start.isoformat(),
+                                                'bitis': end.isoformat(), 'magaza_url': store, 'ulke': 'TR'}})
+            return {'id': source['id'], 'durum': 'ok', 'web_gerekli': False,
+                    'not': 'Epic API kampanya olguları resmî teyittir; mağaza 403 olsa da geçerlidir.'}, items
         parser = LinkOku()
         parser.feed(getir(source['url']).decode('utf-8', errors='replace'))
         out, seen = [], set()
@@ -166,10 +223,20 @@ def kaynak_tara(source, now):
             out.append({'kaynak': source['id'], 'ad': source['ad'], 'baslik': title.strip()[:220],
                         'url': url, 'tarih': None, 'resmi_aday': resmi(url)})
         return {'id': source['id'], 'durum': 'ok' if out else 'kismi', 'adet': min(len(out), 10),
-                'web_gerekli': True, 'not': 'Tarih ve gerçek haber metni kaynak sayfasında okunmalı.'}, out[:10]
+                'web_gerekli': True, 'not': 'Gerçek haber metni kaynak sayfasında okunmalı.'}, out
     except (OSError, ValueError, ET.ParseError, KeyError) as error:
         return {'id': source['id'], 'durum': 'hata', 'adet': 0, 'web_gerekli': True,
                 'hata': str(error)[:250]}, []
+
+
+def kaynak_tara(source, now):
+    status, items = _kaynak_tara(source, now)
+    fresh = tarih_suz(items, now)
+    fresh.sort(key=lambda x: (bool(x['tarih']), x['tarih'] or ''), reverse=True)
+    kept = fresh[:source.get('aday_siniri', CONFIG['sinirlar'].get('kaynak_basina', 6))]
+    status.update(adet=len(kept), bulunan=len(items), tarih_elendi=len(items) - len(fresh),
+                  sinir_elendi=len(fresh) - len(kept), tarihsiz=sum(not x['tarih'] for x in kept))
+    return status, kept
 
 
 def tara(now=None):
@@ -239,6 +306,71 @@ def hype_esigi():
     return int((json.loads(AYARLAR.read_text(encoding='utf-8')).get('video') or {}).get('hype_esigi', 7))
 
 
+def kesif_kaynagi(url):
+    if not https(url):
+        return None
+    host = urllib.parse.urlsplit(url).hostname
+    for source in CONFIG['kaynaklar']:
+        domain = urllib.parse.urlsplit(source['url']).hostname.removeprefix('www.')
+        if source['rol'] == 'kesif' and (host == domain or host.endswith('.' + domain)):
+            return source
+    return None
+
+
+def ortak_api(url):
+    return kanonik(url) in {kanonik(s['api']) for s in CONFIG['kaynaklar'] if s.get('api')}
+
+
+def epic_kanit_denetle(auto, incoming, now):
+    url = auto.get('resmi_url', '')
+    epic = next(s for s in CONFIG['kaynaklar'] if s['id'] == 'epic')
+    if kanonik(url) != kanonik(epic['api']):
+        return
+    data = auto.get('resmi_veri')
+    if not isinstance(data, dict):
+        raise ValueError('Epic API teyidi için taranan kampanya olguları gerekli')
+    fetched, start, end = (tarih(data.get(k)) for k in ('alinma_zamani', 'baslangic', 'bitis'))
+    store = data.get('magaza_url', '')
+    if (data.get('api_url') != epic['api'] or not isinstance(data.get('oyun'), str) or not data['oyun'].strip()
+            or data.get('ulke') != 'TR' or not fetched or not timedelta(0) <= now - fetched <= timedelta(hours=2)
+            or not start or not end or start >= end or end <= now or not https(store)
+            or urllib.parse.urlsplit(store).hostname != 'store.epicgames.com'
+            or not urllib.parse.urlsplit(store).path.startswith('/en-US/p/') or kanonik(store) not in incoming):
+        raise ValueError('Epic kampanya kanıtı tarih/mağaza/bölge ile tutarlı ve güncel olmalı')
+
+
+def teyit_denetle(auto, incoming, texts):
+    kind = auto.get('teyit_turu', 'resmi')
+    official = auto.get('resmi_url', '')
+    if kind == 'resmi':
+        if not resmi(official) or kanonik(official) not in incoming:
+            raise ValueError('kaynaklar içinde izinli resmî kaynak gerekli')
+        return
+    if kind != 'birincil':
+        raise ValueError('otomasyon.teyit_turu: resmi veya birincil olmalı')
+    primary = auto.get('birincil_kaynak')
+    reports = auto.get('capraz_kaynaklar')
+    if (not isinstance(primary, dict) or primary.get('tur') not in ('aciklama', 'roportaj', 'resmi_sosyal', 'resmi_youtube')
+            or any(not isinstance(primary.get(k), str) or len(primary[k].strip()) < 3 for k in ('kisi', 'gorev', 'kurum', 'olgu'))):
+        raise ValueError('adı ve görevi verilen yetkiliye ait birincil açıklama gerekli; sızıntı/söylenti kabul edilmez')
+    claim = primary['olgu'] + ' ' + ' '.join(x.get('baslik', '') for x in texts.values())
+    if re.search(r'\b(leak(?:ed|s)?|rumou?rs?|reportedly|anonymous|unnamed|sizinti|soylenti|isimsiz)\b', norm(claim)):
+        raise ValueError('sızıntı, söylenti veya isimsiz kaynak birincil teyit sayılmaz')
+    if not isinstance(reports, list) or len(reports) < 2:
+        raise ValueError('birincil teyit için en az iki bağımsız keşif yayını gerekli')
+    groups, names = set(), []
+    for url in reports:
+        source = kesif_kaynagi(url)
+        if not source or kanonik(url) not in incoming:
+            raise ValueError('çapraz kaynaklar izinli keşif yayınları ve kaynaklar içinde olmalı')
+        groups.add(source.get('yayin_grubu', source['id']))
+        names.append(source['ad'])
+    if len(groups) < 2:
+        raise ValueError('aynı yayın grubundaki iki sayfa bağımsız teyit sayılmaz')
+    if any(not any(norm(name) in norm(text.get('metin', '')) for name in names) for text in texts.values()):
+        raise ValueError('birincil teyitte her dilin metninde kaynak yayının adı açıkça anılmalı')
+
+
 def hazirla(existing, batch, now=None, senaryo_klasoru=None):
     now = now or simdi()
     if not isinstance(batch, list) or len(batch) > CONFIG['sinirlar']['tur_basina']:
@@ -246,7 +378,7 @@ def hazirla(existing, batch, now=None, senaryo_klasoru=None):
     today = now.astimezone(TRT).date()
     used = sum(1 for x in existing if x.get('otomasyon') and
                str(x['otomasyon'].get('eklenme') or x.get('tarih', ''))[:10] == today.isoformat())
-    urls = {kanonik(s['url']) for x in existing for s in x.get('kaynaklar', [])}
+    urls = {kanonik(s['url']) for x in existing for s in x.get('kaynaklar', []) if not ortak_api(s['url'])}
     ids = {x['id'] for x in existing}
     titles = {norm(x.get('diller', {}).get('tr', {}).get('baslik', '')) for x in existing}
     topics = {x.get('otomasyon', {}).get('konu') for x in existing}
@@ -259,7 +391,7 @@ def hazirla(existing, batch, now=None, senaryo_klasoru=None):
         sources = x.get('kaynaklar') or []
         incoming = {kanonik(s.get('url', '')) for s in sources}
         if (x.get('id') in ids or norm(tr.get('baslik', '')) in titles or
-                (auto.get('konu') and auto['konu'] in topics) or incoming & urls):
+                (auto.get('konu') and auto['konu'] in topics) or {u for u in incoming if not ortak_api(u)} & urls):
             continue
         if used + len(added) >= CONFIG['sinirlar']['gunluk']:
             break
@@ -283,9 +415,10 @@ def hazirla(existing, batch, now=None, senaryo_klasoru=None):
             raise ValueError('otomasyon.konu: olayın tekrarını önleyecek değişmez kimlik gerekli')
         official = auto.get('resmi_url', '')
         checked = tarih(auto.get('teyit_zamani'))
-        if (not resmi(official) or kanonik(official) not in incoming or not checked or
-                not timedelta(0) <= now - checked <= timedelta(hours=2) or len(str(auto.get('oyuncuya_fayda', ''))) < 30):
-            raise ValueError('son 2 saatte okunmuş resmî kaynak ve oyuncuya somut fayda açıklaması gerekli')
+        if (not checked or not timedelta(0) <= now - checked <= timedelta(hours=2) or len(str(auto.get('oyuncuya_fayda', ''))) < 30):
+            raise ValueError('son 2 saatte okunmuş kaynak ve oyuncuya somut fayda açıklaması gerekli')
+        teyit_denetle(auto, incoming, x.get('diller', {}))
+        epic_kanit_denetle(auto, incoming, now)
         hype = auto.get('hype')
         if type(hype) is not int or not 1 <= hype <= 10:
             raise ValueError('otomasyon.hype: 1–10 arası tam sayı gerekli')
@@ -305,7 +438,7 @@ def hazirla(existing, batch, now=None, senaryo_klasoru=None):
         new = json.loads(json.dumps(x, ensure_ascii=False))
         new['otomasyon']['eklenme'] = now.astimezone(TRT).isoformat()
         added.append(new)
-        ids.add(x['id']); titles.add(norm(tr['baslik'])); topics.add(auto['konu']); urls.update(incoming)
+        ids.add(x['id']); titles.add(norm(tr['baslik'])); topics.add(auto['konu']); urls.update(u for u in incoming if not ortak_api(u))
     return added + existing, added
 
 
