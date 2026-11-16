@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Sosyal paylaşım: data/icerik.json'daki yeni haberleri X, Reddit, Instagram (görsel + Reels) ve YouTube Shorts'a gönderir.
 
-Her dil ayrı hesaptır (tr, en, fr, es). Bir hesabın anahtarları yoksa o hesap atlanır ("anahtar yok, atlandı" diye
+Hesap dili anahtarları ve kayıtları belirler; Instagram içerik dili ayardan değiştirilebilir.
+Bir hesabın anahtarları yoksa o hesap atlanır ("anahtar yok, atlandı" diye
 çıktıda görünür); anahtarlar eklenince paylaşım kod değişmeden başlar.
 Anahtarlar ortam değişkeninden okunur (GitHub Actions: her sır adıyla env olarak verilir).
 Görsel gönderi her haberde, Reels ve Shorts yalnız hype puanı sosyal/ayarlar.json video.hype_esigi ve üstündeki
@@ -224,7 +225,65 @@ def emojisiz(metin):
     return re.sub(r'[\U0001F000-\U0001FAFF\u2600-\u27BF\uFE0F\u200D\u20E3]', '', metin)
 
 
-def ig_aciklama(dil, x) -> str:
+def ig_icerik_dilleri(dil, ayar):
+    secim = (ayar or {}).get('hesaplar', {}).get(dil, {}).get('instagram_icerik') or {}
+    ana = secim.get('ana') or dil
+    ikinci = secim.get('ikinci')
+    return ana, ikinci if ikinci != ana else None
+
+
+def cumle_kisalt(metin, sinir):
+    """Sığan son tam cümlede durur; sığan cümle yoksa gövdeyi kaldırır."""
+    metin = metin.strip()
+    if len(metin) <= sinir:
+        return metin
+    bitisler = [m.end() for m in re.finditer(r'[.!?](?=\s|$)|[。！？]', metin)
+                if m.end() <= sinir]
+    return metin[:bitisler[-1]] if bitisler else ''
+
+
+def ig_aciklama(dil, x, ayar=None) -> str:
+    if (ayar or {}).get('hesaplar', {}).get(dil, {}).get('instagram_icerik'):
+        ana, ikinci = ig_icerik_dilleri(dil, ayar)
+        diller = [d for d in (ana, ikinci) if d and d in x['diller']]
+        basliklar = [emojisiz(x['diller'][d]['baslik']) for d in diller]
+        govdeler = [emojisiz(x['diller'][d].get('ozet') or x['diller'][d].get('metin') or '').strip()
+                    for d in diller]
+        # İkinci dil kısa özet olarak kalır; ana dil gerektiğinde tam metni kullanabilir.
+        if len(govdeler) == 2:
+            govdeler[1] = cumle_kisalt(govdeler[1], 500)
+        tags, gorulen = [], set()
+        for d in diller:
+            for tag in x['diller'][d].get('etiketler', []):
+                if re.fullmatch(r'#[\w]+', tag) and tag.casefold() not in gorulen:
+                    tags.append(tag)
+                    gorulen.add(tag.casefold())
+        for tag in sk.SABLON[ana]['etiket'].split():
+            if len(tags) >= 3:
+                break
+            if tag.casefold() not in gorulen:
+                tags.append(tag)
+                gorulen.add(tag.casefold())
+        tags = tags[:15]
+        kay = emojisiz(', '.join(s['ad'] for s in x['kaynaklar']))[:240]
+        cagri = f"{METIN[ana]['devam']} {paylasim_linki(ana, x, 'instagram')}"
+
+        def birlestir():
+            bolumler = [b + (f'\n\n{g}' if g else '') for b, g in zip(basliklar, govdeler)]
+            return ('\n\n---\n\n'.join(bolumler) + f"\n\n{M[ana]['kaynak']}: {kay}\n{cagri}"
+                    + ('\n\n' + ' '.join(tags) if tags else ''))
+
+        for i in reversed(range(len(govdeler))):
+            fazla = len(birlestir()) - 2200
+            if fazla <= 0:
+                break
+            govdeler[i] = cumle_kisalt(govdeler[i], max(0, len(govdeler[i]) - fazla))
+        while len(birlestir()) > 2200 and tags:
+            tags.pop()
+        if len(birlestir()) > 2200:
+            raise PaylasimHatasi('Instagram başlıkları ve bağlantı çağrısı 2200 karaktere sığmıyor', kesin=True)
+        return birlestir()
+    # İçerik ayarı olmayan hesaplarda eski açıklama aynen korunur.
     t = x["diller"][dil]
     kay = ", ".join(s["ad"] for s in x["kaynaklar"])
     etiket = " ".join(etiketler(dil, x))
@@ -302,11 +361,11 @@ def ig_paylas(ag, sir, dil, x, ayar, ara, video=None) -> dict:
         medya = ig_video_adresi(video)
         veri = {"media_type": "REELS", "video_url": medya, "cover_url": video["kapak"], "share_to_feed": "true"}
     else:
-        medya = f"{SITE}/{kart_ad(x['id'], dil, 'ig')}"
+        medya = f"{SITE}/{kart_ad(x['id'], ig_icerik_dilleri(dil, ayar)[0], 'ig')}"
         veri = {"image_url": medya}
     if not ag.yayinda_mi(medya):
         raise PaylasimHatasi(f"Instagram medyası yayında değil: {medya}", kesin=True)
-    veri.update({"caption": ig_aciklama(dil, x), "access_token": sir["TOKEN"]})
+    veri.update({"caption": ig_aciklama(dil, x, ayar), "access_token": sir["TOKEN"]})
     _, kap = ag.istek("POST", f"{taban}/media", veri=veri)
     kid = kap.get("id") if isinstance(kap, dict) else None
     if not kid:
@@ -567,7 +626,7 @@ def uzlastir(ag, kayit, tum, ayar, manifest_yolu, kaydet, simdi) -> list:
                 continue
             kaydet()
             if bicim == "reel" and rec.get("url"):
-                vs.baglanti_yaz(manifest_yolu, rec["id"], dil, "instagram", rec["url"])
+                vs.baglanti_yaz(manifest_yolu, rec["id"], rec.get('icerik_dili', dil), "instagram", rec["url"])
         elif platform == "youtube" and rec.get("oturum") and rec.get("boyut"):
             try:
                 video = vs.bul(vs.yukle(manifest_yolu), rec["id"], dil)
@@ -634,6 +693,8 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                 continue
             if (dil, platform) in kullanilan:
                 continue
+            icerik_dili = ig_icerik_dilleri(dil, ayar)[0] if platform == 'instagram' else dil
+            global_ig = platform == 'instagram' and bool(ayar['hesaplar'][dil].get('instagram_icerik'))
             sinir = (ayar.get("gunluk_en_fazla") or {}).get(ad, VARSAYILAN_SINIR[ad])
             hak = min(1, ayar.get("calisma_basina_en_fazla", 1), sinir - bugunku_sayi(kayit, ad, dil, gun))
             for x in kuyruk:
@@ -641,18 +702,26 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                     break
                 if not sk.uygun(x, dil, platform, kayit, simdi):
                     continue
+                if icerik_dili not in x.get('diller', {}):
+                    continue  # Ana içerik dilinden hesap diline düşülmez.
                 k = anahtar(x, dil, platform, bicim)
                 if k in kayit:
                     continue
+                if global_ig and any(p.split('|')[1:3] == [dil, platform] and
+                                     (p.split('|')[0] == konu_veya_id(x) or
+                                      (x.get('sosyal_tur', 'haber') in ('haber', 'arsiv') and
+                                       (p.split('|')[0] == x['id'] or r.get('id') == x['id'])))
+                                     for p, r in kayit.items()):
+                    continue  # Eski TR gönderisi başka dil/biçimle yeniden paylaşılmaz.
                 video = None
                 if bicim != "gorsel":
                     if not video_hakki(x, ayar):
                         continue  # hype puanı eşiğin altında: bu haber yalnız görsel gönderi alır
-                    video = vs.bul(manifest, x["id"], dil)
+                    video = vs.bul(manifest, x["id"], icerik_dili)
                     if not video:
                         continue  # bu haber/dil için video henüz yok
-                link = paylasim_linki(dil, x, platform)
-                sayfa = sayfa_adresi(dil, x)
+                link = paylasim_linki(icerik_dili, x, platform)
+                sayfa = sayfa_adresi(icerik_dili, x)
                 if dry_run:
                     cikti(f"\n[DENEME] {ad}/{dil}  {x['id']}" + ("" if sir else "  (hesap şifresi yok, gerçekte atlanır)"))
                     if platform == "x":
@@ -660,15 +729,17 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                     elif platform == "reddit":
                         cikti(f"başlık: {x['diller'][dil]['baslik']}\nbağlantı: {link}")
                     elif bicim == "reel":
-                        cikti(f"video: {ig_video_adresi(video)}\nkapak: {video['kapak']}\n{ig_aciklama(dil, x)}")
+                        cikti(f"video: {ig_video_adresi(video)}\nkapak: {video['kapak']}\n{ig_aciklama(dil, x, ayar)}")
                     elif bicim == "short":
                         g = yt_govde(dil, x, link, ayar)
                         cikti('yerelleştirme gövdesi: ' + json.dumps(g, ensure_ascii=False, sort_keys=True))
                         cikti(f"video: {ig_video_adresi(video)}\nbaşlık: {g['snippet']['title']}\ngizlilik: {g['status']['privacyStatus']}\n{g['snippet']['description']}")
                     else:
-                        cikti(f"görsel: {SITE}/{kart_ad(x['id'], dil, 'ig')}\n{ig_aciklama(dil, x)}")
+                        cikti(f"görsel: {SITE}/{kart_ad(x['id'], icerik_dili, 'ig')}\n{ig_aciklama(dil, x, ayar)}")
                     rec = {"id": x['id'], "sosyal_tur": x.get('sosyal_tur', 'haber'), "dil": dil,
                            "platform": platform, "bicim": bicim, "durum": "tamam", "zaman": simdi.isoformat()}
+                    if platform == 'instagram':
+                        rec['icerik_dili'] = icerik_dili
                     kayit[k] = rec
                     kullanilan.add((dil, platform))
                     if secildi:
@@ -681,6 +752,8 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                 rec = {"id": x["id"], "dil": dil, "platform": platform, "bicim": bicim, "durum": "niyet",
                        "sosyal_tur": x.get('sosyal_tur', 'haber'),
                        "niyet_zamani": simdi.isoformat(timespec="seconds")}
+                if platform == 'instagram':
+                    rec['icerik_dili'] = icerik_dili
                 kayit[k] = rec
                 kullanilan.add((dil, platform))
                 kaydet()  # çağrıdan ÖNCE: çökse bile bir sonraki çalışma çift paylaşmaz
@@ -706,7 +779,7 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                 _tamamla(rec, sonuc, simdi)
                 kaydet()
                 if bicim in ("reel", "short") and sonuc.get("url"):
-                    vs.baglanti_yaz(manifest_yolu, x["id"], dil, "instagram" if bicim == "reel" else "youtube", sonuc["url"])
+                    vs.baglanti_yaz(manifest_yolu, x["id"], icerik_dili, "instagram" if bicim == "reel" else "youtube", sonuc["url"])
                 cikti(f"Paylaşıldı: {ad}/{dil} {x['id']} {sonuc.get('url') or sonuc.get('kimlik')}")
                 gonderilen += 1
                 kullanilan.add((dil, platform))
@@ -715,12 +788,13 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
 
 
 def paylasilacak_diller(ayar: dict, tum: dict | None = None) -> list[str]:
-    """En az bir hesabı ayarda açık olan diller. `tum` verilirse yalnız anahtarı da tam olanlar kalır.
+    """Ayarda açık hesapların içerik dilleri. `tum` verilirse yalnız anahtarı da tam olanlar kalır.
     --sayfa-bekle adımı sır görmez (env'de anahtar yok), bu yüzden orada yalnız ayara bakılır:
     anahtar sonradan eklenince bekleme de kod değişmeden o dili kapsar."""
-    return [d for d in DILLER
-            if any(ayar["hesaplar"].get(d, {}).get(ad) and (tum is None or hesap_sirri(tum, platform, d))
-                   for platform, _, ad in HEDEFLER)]
+    diller = {ig_icerik_dilleri(d, ayar)[0] if platform == 'instagram' else d
+              for d in DILLER for platform, _, ad in HEDEFLER
+              if ayar['hesaplar'].get(d, {}).get(ad) and (tum is None or hesap_sirri(tum, platform, d))}
+    return [d for d in DILLER if d in diller]
 
 
 def sayfa_bekle(ag, veri=None, deneme=40, aralik=15, diller=None) -> int:

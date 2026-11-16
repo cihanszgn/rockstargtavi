@@ -13,6 +13,7 @@
  "instagram_api_surumu": "v27.0",
  "hesaplar": {
   "tr": {
+   "instagram_icerik": {"ana": "en", "ikinci": "tr"},
    "x": false,
    "reddit": false,
    "instagram": true,

@@ -1,18 +1,19 @@
 # Sosyal hesap kurulumu: Cio'nun yapacakları
 
-Sistem kurulu. Haber hattı teyitli oyun haberlerini siteye ekliyor; GitHub her saatin 17. dakikasında
-paylaşım kuyruğunu işler (`17 * * * *`, UTC). GitHub zamanlı işleri gecikebilir; bu bir dakika garantisi değildir.
+Sistem kurulu. Haber hattı teyitli oyun haberlerini siteye ekliyor; GitHub iki saatte bir 17. dakikada
+paylaşım kuyruğunu işler (`17 */2 * * *`, UTC). GitHub zamanlı işleri gecikebilir; bu bir dakika garantisi değildir.
 Her gönderi sitedeki ilgili sayfaya bağlanır. Haber sayfası, ziyaretçinin tarayıcı diline
 (TR, EN, FR veya ES) kendiliğinden geçiyor.
 
 Senin yapacağın tek şey hesapları açıp anahtarları kurulum yardımcısına yapıştırmak.
 Yardımcı anahtarları dener, doğruysa GitHub'a gizli olarak kaydeder.
 
-> **Askıda (Cio'nun kararı, 2026-11-14):** şimdilik yalnız Instagram kullanılıyor. X ve Reddit bölümleri ileride açmak için duruyor; açarken Claude'a "X'i/Reddit'i aç" de (`sosyal/ayarlar.json`).
+> **Askıda:** X ve Reddit bölümleri ileride açmak için duruyor; Instagram ve YouTube açık (`sosyal/ayarlar.json`).
 
-**Durum:** Haberler dört dilde (TR, EN, ES, FR) yayınlanır. Kartlar, açıklamalar ve videolar dört dil için de
-şimdiden üretilir. Şu an yalnız TR hesabının anahtarları kurulu; EN, ES ve FR hesapları açılıp anahtarları
-eklenince paylaşım kod değişmeden o dilde de başlar (bkz. 6. bölüm).
+**Durum:** Site yedi dilde (TR, EN, ES, FR, DE, NL, ZH) yayınlanır. Mevcut tek Instagram hesabı globaldir:
+İngilizce kart/video, üstte İngilizce ve altta Türkçe açıklama paylaşır. Anahtarları `IG_TR_*` olarak kalır.
+YouTube Türkçe kanal, Türkçe video ve mevcut başlık/açıklama yerelleştirmeleriyle devam eder.
+Diğer hesaplar anahtarları eklenince devreye girer (bkz. 6. bölüm).
 
 **E-posta ipucu:** her hesap ayrı e-posta ister. Gmail'de `adın+gtatr@gmail.com` gibi `+`
 eklenmiş adresler aynı kutuya gelir; çoğu site bunu kabul eder.
@@ -63,7 +64,7 @@ at, birlikte bakarız.
 5. Gönderiler hesabın **kendi profiline** gider, başka topluluklara değil (reklam kuralı
    sorunu olmasın diye).
 
-## 3. Instagram: her dil için ayrı hesap
+## 3. Instagram hesabı kurulumu
 
 1. Instagram hesabını aç.
 2. Ayarlar → Hesap türü → **Profesyonel hesaba geç**. Üretici (Creator) ya da İşletme
@@ -81,6 +82,35 @@ at, birlikte bakarız.
    - Yardımcı onu bu bilgisayarda şifreli saklar ve her pazartesi kendiliğinden uzatır.
    - Bilgisayar 60 gün hiç açılmazsa anahtarı yeniden üretip yardımcıya girmen gerekir.
 
+### Global Instagram hesabı
+
+Mevcut hesap aynı hesaptır; yeni Instagram hesabı veya yeni GitHub Secret açılmaz.
+`sosyal/ayarlar.json` içindeki `hesaplar.tr.instagram_icerik` içerik dilini belirler:
+
+```json
+"instagram_icerik": {"ana": "en", "ikinci": "tr"}
+```
+
+Görsel gönderide İngilizce `kart/<id>-en-ig.jpg`, Reels'te haberin hazır/onaylı İngilizce videosu kullanılır.
+İngilizce video yoksa Türkçe videoya düşülmez; görsel gönderi seçilebilir. Reels için mevcut hype eşiği korunur.
+Her iki biçimde açıklama İngilizce başlık ve özet/metin, ayırıcı, Türkçe başlık ve kısa özet sırasındadır.
+Sonda İngilizce bağlantı çağrısı, İngilizce haber sayfasına mevcut UTM'li adres ve iki dilin tekrarsız etiketleri vardır.
+En çok 15 etiket kullanılır; açıklama 2200 karakteri aşarsa önce ikinci dilin, sonra ana dilin metni tam cümlelerden
+kısaltılır. Başlıklar ve bağlantı çağrısı korunur. İkinci dil özeti en çok 500 karakterlik tam cümlelerle sınırlıdır.
+
+Hesap dili `tr` kalır: sırlar `IG_TR_USER_ID` / `IG_TR_TOKEN`, kayıt anahtarı `konu|tr|instagram|bicim`, günlük
+kotalar ve çalışma başına sınır değişmez. İçerik dili kayıtta ayrıca `icerik_dili` olarak tutulur. Geçmiş Türkçe
+kayıtlar silinmez veya İngilizceye taşınmaz; aynı haber global hesapta başka dilde/biçimde yeniden paylaşılmaz.
+Reel önceliği korunur; aynı haber ayrı İngilizce ve Türkçe gönderiler olarak paylaşılmaz.
+Bekleme adımı ve paylaşım öncesi sayfa kontrolü ana içerik dilini kullanır. YouTube için Türkçe sayfa beklenir.
+
+Başka bir hesap için aynı içerik ayarı kullanılabilir; tanım yoksa içerik dili hesabın dili olur ve eski davranış sürer.
+Profil biyografi önerisi `sosyal/profil/global-instagram-biyografi.txt` dosyasındadır (150 karakterin altında).
+Biyografiyi yönetici elle uygular; API üzerinden profil değişikliği yapılmaz. Profil bağlantısı İngilizce haber
+listesi olabilir: `https://ctrl-agame.com/en/game-news.html`.
+
+Kaynak: Cio'nun 17 Kasım 2026 tarihli global Instagram kararı ve depodaki paylaşım/test kodu.
+
 ## 4. Anahtarları gir (her hesap için bir kez)
 
 1. Dosya Gezgini'nde `C:\Cihan.Ai\03-Web\rockstargtavi\sosyal\kurulum.bat` dosyasına çift
@@ -94,7 +124,7 @@ at, birlikte bakarız.
 
 ## 5. Haber videoları: YouTube Shorts ve Instagram Reels
 
-Videolar kendiliğinden üretilir (`video.yml`) ve sitede haberin üstünde oynar. Dört dilde de üretilir; günlük
+Videolar kendiliğinden üretilir (`video.yml`) ve sitede haberin üstünde oynar. Yedi dil için üretilir; günlük
 kota dil başınadır (her dil için en çok 4 video). Aynı videoyu Instagram Reels'e ve YouTube Shorts'a yollamak için
 aşağıdakiler gerekir. Hesabın anahtarı yoksa o hesap atlanır (paylaşım çıktısında "anahtar yok, atlandı" yazar),
 site videoları yine çalışır.
@@ -165,7 +195,8 @@ birlikte bakalım**.
 
 ## 6. Yeni dil hesabı nasıl eklenir
 
-Dil başına kod, ayar veya iş akışı değişikliği gerekmez; yalnız hesabı açıp anahtarı girersin.
+Varsayılan dil hesabında kod veya iş akışı değişikliği gerekmez; yalnız hesabı açıp anahtarı girersin.
+Farklı içerik dili veya iki dilli Instagram açıklaması istersen o hesabın `instagram_icerik` ayarını tanımla.
 
 1. O dilin Instagram hesabını (3. bölüm) ve YouTube kanalını (5.1) aç. EN, ES, FR için `sosyal/ayarlar.json`
    içinde `instagram`, `instagram_reel` ve `youtube` zaten `true`; X ve Reddit askıda olduğu için `false`.
@@ -185,8 +216,8 @@ Dil başına kod, ayar veya iş akışı değişikliği gerekmez; yalnız hesab�
   `tools/sosyal_derle.py` sayfaları, paylaşım görsellerini, RSS'i ve site haritasını üretir.
 - Paylaşım: `.github/workflows/sosyal.yml` → `tools/sosyal_yayinla.py`.
   - Son 3 günün paylaşılmamış haberleri önceliklidir; boşluklar aşağıdaki kuyruktan doldurulur.
-  - Her dil/platform için her çalışmada en çok 1 gönderi; günlük görsel Instagram 24, Reels 4, Shorts 4
-    (`sosyal/ayarlar.json`; sınır dil ve biçim başınadır, sosyal yayın günleri UTC'dir).
+  - Her hesap/platform için her çalışmada en çok 1 gönderi; günlük görsel Instagram 12, Reels 4, Shorts 4
+    (`sosyal/ayarlar.json`; sınır hesap dili ve biçim başınadır, sosyal yayın günleri UTC'dir).
   - Instagram'da hazır/onaylı Reel önceliklidir, aksi halde görsel seçilir. Reels ve Shorts hype eşiğini korur.
   - Gönderilenler `sosyal/gonderilenler.json`'a yazılır, aynı haber iki kez gitmez.
 - Anahtarı girilmemiş hesap atlanır ("anahtar yok, atlandı"). Bir hesap hata verirse GitHub sana "failed" e-postası
@@ -226,7 +257,7 @@ Fırsat ve tarihsiz ücretsiz fiyat verisi `indirimler.json` / `ucretsiz.json` i
 önbellekten alınır; varsa bitiş tarihi de denetlenir. CheapShark'ın anlık verisi bitiş tarihi sağlamaz;
 metin mağazada fiyat kontrolü ister. Epic kampanyasının başlangıç/bitişi ayrıca uygulanır.
 Takvim/rehber/oyun kartları `oyun_gorselleri.json` kaydındaki resmî görseli ve küçük kaynak atfını kullanır;
-kayıt yoksa veya indirme başarısızsa kapak üretilir. Kartlar 1080×1350 JPEG'dir. Dört dilde şablon metni,
+kayıt yoksa veya indirme başarısızsa kapak üretilir. Kartlar 1080×1350 JPEG'dir. Yedi dilde şablon metni,
 tam sayfa adresi ve 3–6 etiket kullanılır; sosyal metin üretimi model çağırmaz.
 
 ```powershell
