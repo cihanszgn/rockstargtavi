@@ -43,7 +43,7 @@
  },
  "reddit_topluluk": {},
  "youtube": {
-  "gizlilik": "private"
+  "gizlilik": "public"
  },
  "video": {
   "ses": "azure",
