@@ -13,7 +13,7 @@ on:
     types: [completed]
     branches: [main]
   schedule:
-    - cron: "17 * * * *"   # Her saat, UTC 17. dakika
+    - cron: "17 */2 * * *"   # İki saatte bir, UTC 17. dakika (Meta engelinden sonra temkinli tempo)
   workflow_dispatch:
     inputs:
       deneme:
