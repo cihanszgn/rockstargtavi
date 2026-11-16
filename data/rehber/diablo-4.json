@@ -2252,6 +2252,1668 @@
      ]
     }
    ]
+  },
+  "de": {
+   "baslik": "Diablo 4 Leitfaden für Einsteiger: Nach Lord of Hatred (2026)",
+   "ozet": "Ein Leitfaden für alle, die heute mit Diablo 4 beginnen: Editionen, Klassenwahl, die ersten Spielstunden und das Endgame ab Stufe 70. Aktuelle Saison: 15 (Hell's Legacy).",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Action-Rollenspiel (ARPG, beutebasiert)"
+    },
+    {
+     "ad": "Plattform",
+     "deger": "PC (Battle.net, Steam), Xbox, PlayStation"
+    },
+    {
+     "ad": "Preismodell",
+     "deger": "Kostenpflichtiges Basisspiel und Erweiterungen; kosmetischer Platin-Shop ist optional"
+    },
+    {
+     "ad": "Aktuelle Version",
+     "deger": "Saison 15 Hell's Legacy (Patch 3.2.1); Lord of Hatred-Erweiterung am 28. April 2026"
+    },
+    {
+     "ad": "Türkisch-Unterstützung",
+     "deger": "Türkische Benutzeroberfläche und Untertitel ja, keine türkische Sprachausgabe (Steam-Shopseite; 14 Sprachen)"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "Diablo 4 im Jahr 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4 ist ein beuteorientiertes Action-Rollenspiel, in dem du in einer finsteren Welt Monster bezwingst und Beute sammelst. Die Handlung spielt in der Welt von Sanktuario; der wahre Spielreiz liegt darin, die Ausrüstungs- und Fertigkeitenkombinationen zu finden, die deinen Charakter stetig mächtiger machen."
+      },
+      {
+       "tip": "p",
+       "metin": "Das Spiel läuft in Saisons ab. **Saison 15, Hell's Legacy** startete am 15. September 2026 (Patch 3.2.1, zeitgleich mit dem 30-jährigen Jubiläum der Serie und einem Witcher-Crossover). Der größte Meilenstein war die Erweiterung **Lord of Hatred** (28. April 2026): zwei neue Klassen, überarbeitete Fertigkeitsbäume für alle Klassen, ein neuer Beutefilter (Loot Filter), die Rückkehr des Horadrimwürfels (Horadric Cube), War Plans (eine strukturierte Endgame-Route), die Anhebung der Höchststufe von 60 auf 70 und die Schwierigkeitsstufen Torment 1–12. Ein Testserver (PTR) für Saison 16 lief Ende Oktober, das offizielle Veröffentlichungsdatum wurde jedoch noch nicht bekannt gegeben; keine Daten erfinden."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Beim Wechsel einer Saison werden Charaktere zurückgesetzt und alle starten auf derselben Stufe – der ideale Einstiegspunkt für neue Spieler. Deine Saison-Charaktere wechseln am Saisonende automatisch in das permanente Ewige Reich (Eternal realm)."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Vor dem Start: Welche Edition man kaufen sollte",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4 setzt ein Battle.net-Konto und eine dauerhafte Internetverbindung voraus; das Spiel läuft auch im Einzelspielermodus online. Auf dem PC kaufst du es über Battle.net oder Steam, auf Konsolen über die Stores von Xbox und PlayStation. Die Xbox-Seite führt zudem Game Pass auf; die Verfügbarkeit kann variieren, daher im Store prüfen. Für die Battle.net-Version auf dem PC wird die Battle.net Desktop-App benötigt. Plattformübergreifender Fortschritt ist an das Konto gebunden, der Kauf erfolgt jedoch pro Plattform separat; entscheide daher vorab, auf welcher Plattform du spielst."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Situation",
+        "Was zu kaufen ist",
+        "Hinweis"
+       ],
+       "satirlar": [
+        [
+         "Du besitzt noch nichts",
+         "Age of Hatred Collection",
+         "Basisspiel, Vessel of Hatred und Lord of Hatred im Paket"
+        ],
+        [
+         "Du besitzt das Basisspiel",
+         "Lord of Hatred",
+         "Enthält auch Vessel of Hatred"
+        ],
+        [
+         "Du möchtest mehr Kosmetik",
+         "Deluxe oder Ultimate Edition",
+         "Bringt Platin und kosmetische Gegenstände; beschleunigt nicht das Gameplay"
+        ],
+        [
+         "Mehrere Plattformen",
+         "Separater Kauf pro Plattform",
+         "Lizenzen sind an die jeweilige Plattform gebunden"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Der direkte Kauf des Bundles ist meist günstiger als der spätere Einzelkauf von Erweiterungen. Lord of Hatred kostet 49,99 US-Dollar (Game Informer); der Preis in Türkischer Lira wurde noch nicht offiziell festgelegt, prüfe daher den genauen Betrag in deinem Store. Lord of Hatred setzt das Basisspiel voraus. Die Systemanforderungen folgen im nächsten Abschnitt."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Kaufe das Spiel ausschließlich im Battle.net-Shop von Blizzard, auf Steam sowie in den Xbox- und PlayStation-Stores. Unbekannte Drittanbieter mit verdächtig günstigen Schlüsseln verkaufen meist Codes aus gestohlenen Kreditkartendaten, was zur Kontosperrung führen kann."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "Die ersten Stunden: Schritt für Schritt",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Das erste Ziel jedes neuen Spielers ist das Abschließen der Kampagne, das Erreichen von Stufe 70 und das Freischalten der Torment-Schwierigkeitsgrade. Die Kampagne führt dich etwa bis Stufe 40–50; die verbleibenden Stufen füllen Endgame-Aktivitäten."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Klasse wählen",
+         "metin": "Sieh dir die Klassenübersicht unten an und wähle nach deinem Geschmack. Der Charaktername lässt sich später nicht ändern, du kannst aber jederzeit eine andere Klasse mit einem neuen Charakter ausprobieren."
+        },
+        {
+         "baslik": "Die Kampagne spielen",
+         "metin": "Folge den Hauptquests; Nebenquests und Erkundung gewähren Stufenaufstiege, Gegenstände und Gold. Mit dem Erschließen neuer Regionen schaltest du Wegpunkte zur Schnellreise frei."
+        },
+        {
+         "baslik": "Neue Gegenstände vergleichen",
+         "metin": "Rüste ein neues Teil aus, wenn es höhere Primärwerte (wie Waffenschaden oder Rüstung) und nützliche Zusatzeigenschaften im Vergleich zum aktuellen Gegenstand besitzt. Unnützes verkaufen oder beim Schmied verwerten."
+        },
+        {
+         "baslik": "Fertigkeitspunkte verteilen",
+         "metin": "Verteile Punkte im Fertigkeitsbaum; jede Klasse startet mit einem schlagkräftigen Hauptangriff. Nicht passende Punkte lassen sich gegen Gold zurücksetzen."
+        },
+        {
+         "baslik": "Zügig stärker werden",
+         "metin": "Mit steigender Stufe schalten sich neue Fähigkeiten frei; baue ein stimmiges Basisset: ein Hauptangriff, eine Bewegungsfähigkeit und ein Schutz- bzw. Defensivzauber."
+        },
+        {
+         "baslik": "Ins Endgame übergehen",
+         "metin": "Sobald du Stufe 70 erreichst, wende dich Endgame-Aktivitäten wie War Plans und der Grube (The Pit) zu."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Aktiviere den Beutefilter (Loot Filter) ab Tag eins. Er blendet Gegenstände aus, die nicht zu deiner Klasse und Stufe passen, was Bildschirmübersicht und Zeit spart."
+      }
+     ]
+    },
+    {
+     "id": "sinif-secimi",
+     "baslik": "Klassenwahl: Übersicht über alle 8 Klassen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Die Klassen unterscheiden sich im Spielgefühl grundlegend. Gefällt dir eine Klasse nicht, probiere in der nächsten Saison einfach eine andere aus. Kurzzusammenfassung: Für Neulinge sind Klassen mit Distanzschaden oder beschworenen Helfern meist fehlerverzeihender. Der Geistgeborene (Spiritborn) erschien am 8. Oktober 2024 mit Vessel of Hatred; Paladin und Hexenmeister (Warlock) folgten am 28. April 2026 mit Lord of Hatred. Der Paladin nutzt vier Schwüre und die Schiedsrichterform (Arbiter Form); der Hexenmeister setzt auf Höllenfeuer, beschworene Dämonen und uralte Zauber. Für die Erweiterungsklassen muss die jeweilige Erweiterung erworben sein."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Klasse",
+        "Spielstil",
+        "Ideal für"
+       ],
+       "satirlar": [
+        [
+         "Barbar (Barbarian)",
+         "Nahkampf, schwere Waffen, widerstandsfähig",
+         "Spieler, die geradlinige, robuste Kämpfe bevorzugen"
+        ],
+        [
+         "Druide (Druid)",
+         "Gestaltwandlung und Naturmagie",
+         "Wer sowohl Nahkampf als auch Zauber schätzt"
+        ],
+        [
+         "Totenbeschwörer (Necromancer)",
+         "Skelettdiener, Knochen- und Blutmagie",
+         "Wer gerne mit beschworenen Helfern kämpft"
+        ],
+        [
+         "Jäger (Rogue)",
+         "Agil, schnell, Gift- und Schattenangriffe",
+         "Spieler mit mobilem, reaktionsschnellem Spielstil"
+        ],
+        [
+         "Zauberer (Sorcerer)",
+         "Feuer-, Eis- und Blitzzauber",
+         "Wer mächtigen Fernkampfschaden austeilen will"
+        ],
+        [
+         "Geistgeborener (Spiritborn)",
+         "Geistertiere, rasante Angriffe",
+         "Die wendige Klasse aus Vessel of Hatred"
+        ],
+        [
+         "Paladin",
+         "Erschien mit Lord of Hatred; heiliger Nahkampf",
+         "Wer einen schwer gepanzerten Krieger sucht"
+        ],
+        [
+         "Hexenmeister (Warlock)",
+         "Erschien mit Lord of Hatred; dunkle Magie",
+         "Wer auf fokussierte Zauberkraft setzt"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Welche Klasse am stärksten ist, ändert sich mit jeder Saison. Der wichtigste Grundsatz: Wenn du Spaß hast, spielst du die richtige Klasse; Meta-Listen nach dem ersten Charakter anzusehen reicht völlig aus."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme-yolu",
+     "baslik": "Bis Stufe 70 und darüber hinaus: Der Fortschrittsweg",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Kampagne:** Schließe die Story ab; du erreichst etwa Stufe 40–50.",
+        "**Bis Stufe 70:** Steigere deine Stufe durch Dungeons und Endgame-Aktivitäten; verteile neue Punkte im Fertigkeitsbaum.",
+        "**Die Grube (Pit):** Der Dungeon, der mit Stufe 70 freigeschaltet wird; Torment 1 öffnet sich auf Grubenstufe 10, und du erreichst alle 5 Grubenstufen (bis T5) bzw. alle 10 Stufen bis T12 den nächsten Schwierigkeitsgrad.",
+        "**War Plans:** Ein strukturierter Pfad aus fünf Endgame-Aktivitäten; ein hervorragender Leitfaden, wenn man unschlüssig ist, was als Nächstes ansteht.",
+        "**Horadrimwürfel (Horadric Cube):** Dient dem Umwandeln und Aufwerten von Gegenständen."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "In jeder Phase besteht dein Ziel darin, ausreichend Schaden und Zähigkeit aufzubauen, um in die nächste Schwierigkeitsstufe aufzusteigen. Kommst du nur mühsam voran, sammle Beute auf einer niedrigeren Stufe und kehre zurück; geht es zu leicht, versuche eine höhere Stufe. Ab Stufe 70 gibt es keine starre Obergrenze für die Charakterstärke; Fortschritt misst sich an Gegenstandsqualität und Grubenstufe. Setze dir als wöchentliches Ziel, in jeder Spielsitzung eine Grubenstufe aufzusteigen. Bleibst du dreimal in Folge an derselben Hürde hängen, prüfe Widerstände und Rüstungswerte deiner Ausrüstung, bevor du den gesamten Build umstellst."
+      }
+     ]
+    },
+    {
+     "id": "esya-ve-kaynak",
+     "baslik": "Gegenstände, Gold und Ressourcenmanagement",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Gegenstandsseltenheit:** Seltene (gelbe) und legendäre (orangefarbene) Gegenstände sind meist die stärksten; blaue und weiße Teile dienen nur am Anfang als Übergang.",
+        "**Zähigkeit:** Rüstung und Widerstände zählen auf hohen Stufen genauso viel wie Schaden; wer nur auf Angriffskraft setzt, segnet schnell das Zeitliche.",
+        "**Gold:** Wird für das Zurücksetzen von Fertigkeiten, Gegenstandsaufwertungen und Handwerker benötigt; scheue dich nicht, in den ersten Stunden großzügig auszugeben.",
+        "**Lagerung:** Wenn das Inventar voll ist, nutze Beutetruhe und das geteilte Fach in der Stadt.",
+        "**Kontoweiter Fortschritt:** Bestimmte Errungenschaften gelten für das gesamte Konto; mit einem neuen Charakter fängst du nicht völlig bei null an."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Einfache Faustregel: Macht dich ein Gegenstand nicht stärker, behalte ihn nicht. Die Stärke eines legendären Gegenstands hängt jedoch oft vom spezifischen Build ab; bevor du ein unklares Teil wegwirfst, zerlege es beim Schmied oder lagere es ein. Sperre wertvolle Teile in der Inventarliste vor dem Zerlegen; versehentlich zerlegte Beute ist verloren. Da Gold stetig fließt, befolge eine klare Budgetregel: Lebenswichtige Widerstände und Rüstung zuerst, dann Schadenseigenschaften. Miste die Beutetruhe regelmäßig aus, damit für neue legendäre Gegenstände stets Platz bleibt."
+      }
+     ]
+    },
+    {
+     "id": "gereksinim-ve-platform",
+     "baslik": "Systemanforderungen und Plattformen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4 wird auf dem PC über die Battle.net-App oder Steam gespielt, auf Konsolen über Xbox und PlayStation. Die folgenden Angaben stammen von der Steam-Shopseite; sie beziehen sich auf das Basisspiel und können mit Erweiterungen steigen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Komponente",
+        "Minimum (1080p, 30 fps, niedrig)",
+        "Empfohlen"
+       ],
+       "satirlar": [
+        [
+         "Prozessor",
+         "Intel Core i5-2500K oder AMD FX-8350",
+         "Intel Core i5-4670K oder AMD Ryzen 3 1300X"
+        ],
+        [
+         "Arbeitsspeicher",
+         "8 GB RAM",
+         "16 GB RAM"
+        ],
+        [
+         "Grafikkarte",
+         "NVIDIA GTX 660, Intel Arc A380 oder AMD Radeon R9 280",
+         "NVIDIA GTX 970, Intel Arc A750 oder AMD Radeon RX 470 (4 GB)"
+        ],
+        [
+         "Speicherplatz",
+         "90 GB, SSD erforderlich",
+         "90 GB SSD"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Manche Quellen nennen den FX 8100 als Minimalprozessor; kleinere Abweichungen variieren je nach Seite, prüfe daher die Store-Seite deiner Version. Das Spiel setzt eine SSD anstelle einer Festplatte voraus; auf herkömmlichen Festplatten verlängern sich die Ladezeiten drastisch."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Alle Klassen und Erweiterungen folgen derselben Kaufkette: Zuerst das Basisspiel, dann Vessel of Hatred und Lord of Hatred. Die Age of Hatred Collection vereint alle drei in einem Paket."
+      }
+     ]
+    },
+    {
+     "id": "torment-basamaklari",
+     "baslik": "Torment-Stufen: Wie Schwierigkeitsgrade freigeschaltet werden",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Ab Stufe 70 wird die Auswahl der Schwierigkeitsgrade über den Dungeon namens Die Grube (The Pit) geregelt. Torment 1 schaltet sich auf Grubenstufe 10 frei; höhere Stufen öffnen sich beim Meistern bestimmter Gruben-Tiefen. Die folgenden Stufen beruhen auf Community-Werten und können sich saisonal anpassen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Stufe",
+        "Freischaltende Grubenstufe",
+        "Hinweis"
+       ],
+       "satirlar": [
+        [
+         "Torment 1",
+         "Pit 10",
+         "Erste Stufe; Abzüge auf deine Verteidigungswerte setzen ein"
+        ],
+        [
+         "Torment 2",
+         "Pit 15",
+         "Rüstungs- und Widerstandsstrafen steigen mit jeder Stufe"
+        ],
+        [
+         "Torment 3",
+         "Pit 20",
+         "Eine zusätzliche Belohnungsschwelle laut Community-Berichten"
+        ],
+        [
+         "Torment 5",
+         "Pit 30",
+         "Danach wächst der Abstand auf 10 Grubenstufen"
+        ],
+        [
+         "Torment 6",
+         "Pit 40",
+         "Große Belohnungssperren öffnen sich hier"
+        ],
+        [
+         "Torment 10",
+         "Pit 80",
+         "Praktisches Ziel für gezielte Beutejagd"
+        ],
+        [
+         "Torment 12",
+         "Offiziell nicht bekannt gegeben",
+         "Dem Muster nach um Pit 100 herum; nicht offiziell"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Mit jedem Stufenaufstieg werden Monster widerstandsfähiger und deine Rüstung sowie Widerstände erleiden spürbare Abzüge. Häufen sich Tode, kehre auf eine niedrigere Stufe zurück und stärke deine Verteidigungswerte; Beute erhält nur, wer überlebt."
+      }
+     ]
+    },
+    {
+     "id": "sezon-ve-alemler",
+     "baslik": "Saisons, Saisonales und Ewiges Reich",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4 erneuert sich durch Saisons. Die Saisonreise (Season Journey) ist eine Kette von Meilensteinen und Belohnungen über die gesamte Saison hinweg, begleitet vom Battle Pass. Das Spiel umfasst zwei Reiche: Das Saisonale Reich bietet die saisonalen Inhalte, die Reise und den Battle Pass und erfordert einen neuen oder wiedergeborenen Charakter. Das Ewige Reich (Eternal realm) hat keine Saisoninhalte und wird nie zurückgesetzt."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Merkmal",
+        "Saisonales Reich",
+        "Ewiges Reich"
+       ],
+       "satirlar": [
+        [
+         "Saisoninhalte und Saisonreise",
+         "Ja",
+         "Nein"
+        ],
+        [
+         "Battle Pass",
+         "Ja",
+         "Nein"
+        ],
+        [
+         "Charaktere",
+         "Neu oder via Wiedergeburt (Rebirth)",
+         "Permanente Charaktere"
+        ],
+        [
+         "Zurücksetzung",
+         "Gegenstände wandern am Saisonende in die Ewige Beutetruhe",
+         "Wird nie zurückgesetzt"
+        ]
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Auf den Saisonstart warten",
+         "metin": "Erstelle zu Beginn einer neuen Saison einen saisonalen Charakter; alle starten auf dem gleichen Stand."
+        },
+        {
+         "baslik": "Die Saisonreise aufschlagen",
+         "metin": "Sieh dir die Saisonziele im Spielmenü an; mit jedem Abschluss schaltest du Belohnungen frei."
+        },
+        {
+         "baslik": "Wiedergeburt (Rebirth) nutzen",
+         "metin": "Die in Saison 15 eingeführte Wiedergeburt wandelt einen ewigen Charakter auf Stufe 1 in einen saisonalen um. Klasse, Name, Aussehen, Hardcore-Status, Kosmetik, Reittiere, Haustiere und Spielzeit bleiben erhalten; Ausrüstung und Kampffortschritt werden zurückgesetzt."
+        },
+        {
+         "baslik": "Beute am Saisonende übertragen",
+         "metin": "Saisonale Beutestücke können bis zum Ende der Folgesaison in die Beutetruhe des Ewigen Reiches verschoben werden."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Wer zwischen Saisonal und Ewig unentschlossen ist, sollte stets saisonal beginnen; so lernst du die neue Saisonmechanik gemeinsam mit allen anderen Spielern kennen."
+      }
+     ]
+    },
+    {
+     "id": "oyun-sonu-ve-gelistirme",
+     "baslik": "Endgame-Aktivitäten und Gegenstandsaufwertung",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "War Plans ist ein Pfad, der bis zu fünf Aktivitäten wie eine Playlist aneinanderreiht. Die folgenden Aktivitäten können Teil dieser Route sein:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Aktivität",
+        "Was getan wird",
+        "Wofür geeignet"
+       ],
+       "satirlar": [
+        [
+         "Höllenfluten (Helltides)",
+         "Monsterschwärme und Beutetruhen in der offenen Welt",
+         "Schnelle Beute und Handwerksmaterialien"
+        ],
+        [
+         "Totengeflüster (Whispers)",
+         "Kurze Aufgaben in der Spielwelt",
+         "Kürzere Spielsitzungen"
+        ],
+        [
+         "Unterschlupf-Bosse (Lair Bosses)",
+         "Jagd auf besonders mächtige Bosse",
+         "Gezielte Jagd nach Spitzenbelohnungen"
+        ],
+        [
+         "Alptraumdungeons (Nightmare Dungeons)",
+         "Erhöhte Dungeonschwierigkeit mit Siegeln",
+         "Fester Kernbestandteil aller Saisons"
+        ],
+        [
+         "Höllenhorden (Infernal Hordes)",
+         "Welle auf Welle intensiver Gefechte",
+         "Fans von pausenlosem Kampfdruck"
+        ],
+        [
+         "Die Grube (Pit of Artificers)",
+         "Zeitbasierte Dungeonläufe",
+         "Freischalten von Torment-Stufen"
+        ],
+        [
+         "Unterstadt von Kurast (Kurast Undercity)",
+         "Schnelles Säubern großer Monsterhorden",
+         "Zügige Stufenaufstiege und Gold"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Für das spätere Veredeln von Gegenständen gibt es zwei Systeme: **Härtung (Tempering)** und **Vollendung (Masterworking)**. Härtung fügt einem Gegenstand eine begrenzte Anzahl neuer Eigenschaften hinzu; Vollendung stärkt bestehende Attribute schrittweise. Details (Stufenanzahl, Kosten, Eigenschaftspools) passen sich den Saisons an; aktuelle Tabellen bieten Maxroll oder die offiziellen Patch-Notes. Der Horadrimwürfel unterstützt das Umwandeln von Materialien in dieser Handwerkskette."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Stelle vor dem Aufwerten sicher, dass du den Gegenstand wirklich langfristig nutzt; Härtung und Vollendung verbrauchen wertvolle Ressourcen, und Fehlentscheidungen lassen sich oft nicht rückgängig machen."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Typische Anfängerfehler",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Gegenstände anlegen, ohne Werte zu vergleichen, oder umgekehrt Ausrüstung nie auszutauschen.",
+        "Die Verteidigung vernachlässigen: Reine Schadens-Builds scheitern auf hohen Schwierigkeitsgraden schnell.",
+        "Gold horten und aus falscher Sparsamkeit nie ausgeben.",
+        "Jede Saison stur der Tier-Liste der stärksten Klasse hinterherlaufen und eine Klasse spielen, die keinen Spaß macht.",
+        "Übereilt Platin mit echtem Geld kaufen. Platin dient rein kosmetischen Zwecken und beschleunigt das Gameplay in keiner Weise."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Der Kauf von Platin erhöht nicht deine Kampfkraft im Spiel; es dient ausschließlich optischen Gegenständen. Wenn du glaubst, für Spielfortschritt zahlen zu müssen, halte kurz inne und prüfe die Fakten."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Kontosicherheit und Ausgabenwarnung",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Dein Blizzard-Konto ist wertvoll, da es mehrere Spiele miteinander verbindet. Teile Kontodaten und Sicherheitscodes niemals mit Dritten."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Aktiviere die Zwei-Faktor-Authentifizierung (Blizzard Authenticator) für dein Battle.net-Konto.",
+        "Cheats, Bots, Makros sowie der Kauf oder Verkauf von Gegenständen und Konten gegen Echtgeld (RMT) verstoßen gegen die Spielregeln und führen zur Kontoschließung.",
+        "Links, die kostenloses Platin oder seltene Beute versprechen, sind gefälschte Anmeldeseiten zum Diebstahl deines Kontos.",
+        "Lass dich nicht auf Angebote zum Kontokauf oder -verkauf ein; dies ist untersagt und birgt enormes Betrugsrisiko."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Websites, die kostenloses Platin, Gold oder mythische Gegenstände versprechen, sind Betrug. Bei echten Geschenken oder Aktionen werden niemals Passwörter oder Authentifizierungscodes abgefragt."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Häufig gestellte Fragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Ist Diablo 4 kostenlos?",
+         "c": "Nein, es ist ein kostenpflichtiges Spiel. Für Neulinge bietet die Age of Hatred Collection das beste Preis-Leistungs-Verhältnis."
+        },
+        {
+         "s": "Kann man alleine spielen?",
+         "c": "Ja, aber das Spiel setzt eine Online-Verbindung voraus; auch im Solospiel werden ein Internetzugang und ein Battle.net-Konto benötigt."
+        },
+        {
+         "s": "Muss man Lord of Hatred kaufen?",
+         "c": "Für neue Spieler wird der Einstieg über die Age of Hatred Collection empfohlen; Stufe 70, die neuen Klassen und aktuelle Endgame-Inhalte setzen die Erweiterung voraus."
+        },
+        {
+         "s": "Wann erscheint Saison 16?",
+         "c": "Noch nicht offiziell angekündigt. Der Testserver lief Ende Oktober; verfolge Blizzards offizielle Ankündigungen für einen konkreten Termin."
+        },
+        {
+         "s": "Mit welcher Klasse sollte man beginnen?",
+         "c": "Wähle die Klasse, deren Beschreibung dich am meisten anspricht. Die Ranglisten wechseln mit jeder Saison; der Spielspaß bleibt."
+        },
+        {
+         "s": "Kann man sich mit echtem Geld Spielvorteile erkaufen?",
+         "c": "Nein; die Premiumwährung Platin dient ausschließlich dem Erwerb kosmetischer Gegenstände."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "nl": {
+   "baslik": "Diablo 4-gids voor beginners: na Lord of Hatred (2026)",
+   "ozet": "Een gids voor spelers die vandaag met Diablo 4 beginnen: edities, klassenkeuze, de eerste speeluren en het endgame vanaf niveau 70. Huidig seizoen: 15 (Hell's Legacy).",
+   "kunye": [
+    {
+     "ad": "Genre",
+     "deger": "Actierollenspel (ARPG, buitgedreven)"
+    },
+    {
+     "ad": "Platform",
+     "deger": "Pc (Battle.net, Steam), Xbox, PlayStation"
+    },
+    {
+     "ad": "Verdienmodel",
+     "deger": "Betaalde basisgame en uitbreidingen; optionele cosmetische Platinum-winkel"
+    },
+    {
+     "ad": "Huidige versie",
+     "deger": "Seizoen 15 Hell's Legacy (patch 3.2.1); Lord of Hatred-uitbreiding op 28 april 2026"
+    },
+    {
+     "ad": "Turkse ondersteuning",
+     "deger": "Turkse interface en ondertitels aanwezig, geen Turkse stemmen (Steam-winkelpagina; 14 talen)"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "De stand van Diablo 4 in 2026",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4 is een buitgedreven actierollenspel waarin je monsters verslaat en uitrusting verzamelt in een duistere wereld. Het verhaal speelt zich af in Sanctuary; het echte plezier zit in het ontdekken van combinaties van vaardigheden en uitrusting die je personage steeds sterker maken."
+      },
+      {
+       "tip": "p",
+       "metin": "De game werkt met seizoenen. **Seizoen 15, Hell's Legacy** begon op 15 september 2026 (patch 3.2.1, ter gelegenheid van het 30-jarig jubileum van de franchise en een Witcher-crossover). De grootste verschuiving was de uitbreiding **Lord of Hatred** (28 april 2026): twee nieuwe klassen, vernieuwde vaardigheidsbomen voor alle klassen, een nieuwe Loot Filter, de terugkeer van de Horadric Cube, War Plans (een gestructureerde endgame-route), het verhogen van het maximale niveau van 60 naar 70 en Torment-moeilijkheidsgraden van 1 tot 12. Eind oktober draaide een testserver (PTR) voor Seizoen 16, maar de officiële releasedatum is nog niet aangekondigd; verzin geen datums."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Bij de start van een nieuw seizoen resetten seizoenspersonages en begint iedereen op hetzelfde punt, wat het de ideale instap maakt voor nieuwkomers. Na afloop van het seizoen verhuist je personage automatisch naar het permanente Eeuwige rijk (Eternal realm)."
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "Voor je begint: welke editie te kiezen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4 vereist een Battle.net-account en een permanente internetverbinding; de game is altijd online, ook wanneer je solo speelt. Op pc koop je de game via Battle.net of Steam, op consoles via de Xbox- en PlayStation-winkels. De Xbox-pagina vermeldt tevens Game Pass; het aanbod kan wisselen, dus controleer dit in de store. Voor de Battle.net-versie op pc heb je de Battle.net Desktop App nodig. Voortgang tussen platforms is gekoppeld aan je account, maar de aankoop zelf staat per platform los; bepaal daarom vooraf op welk platform je wilt spelen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Situatie",
+        "Wat aan te schaffen",
+        "Opmerking"
+       ],
+       "satirlar": [
+        [
+         "Je bezit nog niets",
+         "Age of Hatred Collection",
+         "Basisgame, Vessel of Hatred en Lord of Hatred in één bundel"
+        ],
+        [
+         "Je bezit de basisgame",
+         "Lord of Hatred",
+         "Bevat tevens Vessel of Hatred"
+        ],
+        [
+         "Je wilt extra cosmetica",
+         "Deluxe of Ultimate Edition",
+         "Voegt Platinum en cosmetische items toe; versnelt gameplay niet"
+        ],
+        [
+         "Meerdere platforms",
+         "Aparte aankoop per platform",
+         "Aankopen zijn gekoppeld aan het specifieke platform"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Direct een complete bundel kopen is doorgaans voordeliger dan uitbreidingen achteraf los aanschaffen. Lord of Hatred kost 49,99 dollar (Game Informer); de prijs in Turkse lira is nog niet officieel vastgesteld, raadpleeg daarom het exacte bedrag in je eigen store. Voor Lord of Hatred is de basisgame vereist. De tabel met systeemvereisten volgt in het volgende onderdeel."
+      },
+      {
+       "tip": "uyari",
+       "metin": "Koop de game uitsluitend via Blizzards Battle.net-winkel, Steam of de officiële Xbox- en PlayStation-stores. Vage sleutelverkopers met extreem lage prijzen verkopen veelal codes die zijn verkregen met gestolen betaalgegevens, wat kan leiden tot schorsing van je account."
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "De eerste uren: stap voor stap",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Het voornaamste doel voor een nieuwe speler is het afronden van de campagne, het bereiken van niveau 70 en de toegang tot de Torment-moeilijkheidsgraden. De verhaallijn brengt je globaal naar niveau 40 tot 50; endgame-activiteiten verzorgen de rest van de voortgang."
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Kies je klasse",
+         "metin": "Bekijk het overzicht hieronder en kies wat aansluit bij jouw speelstijl. Je personagenaam kan achteraf niet worden gewijzigd, maar je kunt altijd een andere klasse uitproberen met een nieuw personage."
+        },
+        {
+         "baslik": "Doorloop de campagne",
+         "metin": "Volg de hoofdquests; zijmissies en verkenning leveren ervaringspunten, uitrusting en goud op. Door nieuwe gebieden te ontdekken ontgrendel je tevens snelle reispunten (Waypoints)."
+        },
+        {
+         "baslik": "Vergelijk nieuwe uitrusting",
+         "metin": "Trek een nieuw voorwerp aan wanneer het een hogere basiswaarde (zoals wapenschade of bepantsering) en nuttige secundaire eigenschappen heeft. Verkoop overbodige spullen of recycleer ze bij de smid."
+        },
+        {
+         "baslik": "Wijs vaardigheidspunten toe",
+         "metin": "Besteed punten in de vaardighedenboom; elke klasse start met een krachtige basisaanval. Onbevallen keuzes kun je tegen betaling van goud altijd opnieuw toewijzen."
+        },
+        {
+         "baslik": "Word doelgericht sterker",
+         "metin": "Met elk niveau ontgrendel je nieuwe vaardigheden; bouw een evenwichtige combinatie van een hoofdaanval, een mobiliteitsvaardigheid en een defensieve vaardigheid."
+        },
+        {
+         "baslik": "Schakel door naar het endgame",
+         "metin": "Zodra je niveau 70 aantikt, richt je je op endgame-activiteiten zoals War Plans en de Pit."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Schakel vanaf dag één de Loot Filter in. Hiermee verberg je voorwerpen die niet passen bij jouw klasse en niveau, wat schermruimte en uitzoektijd bespaart."
+      }
+     ]
+    },
+    {
+     "id": "sinif-secimi",
+     "baslik": "Klassenkeuze: overzicht van de 8 klassen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "De klassen verschillen sterk qua dynamiek. Bevalt een klasse niet, dan kun je in het volgende seizoen moeiteloos wisselen. Korte samenvatting: voor nieuwkomers zijn klassen die van afstand aanvallen of volgelingen oproepen over het algemeen vergevingsgezinder. De Spiritborn verscheen op 8 oktober 2024 met Vessel of Hatred; Paladin en Warlock volgden op 28 april 2026 met Lord of Hatred. De Paladin vecht met vier eden en de Arbiter Form; de Warlock hanteert hellevuur, opgeroepen demonen en duistere magie. Om uitbreidingsklassen te spelen moet je over de bijbehorende uitbreiding beschikken."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Klasse",
+        "Speelstijl",
+        "Ideaal voor"
+       ],
+       "satirlar": [
+        [
+         "Barbarian",
+         "Nabijgevecht, zware wapens, zeer taai",
+         "Wie houdt van rechttoe-rechtaan fysieke kracht"
+        ],
+        [
+         "Druid",
+         "Gedaanteverwisseling en natuurmagie",
+         "Wie zowel fysieke klappen als toverspreuken waardeert"
+        ],
+        [
+         "Necromancer",
+         "Opgestane skeletten, bot- en bloedmagie",
+         "Spelers die graag met volgelingen het veld domineren"
+        ],
+        [
+         "Rogue",
+         "Behendig, snel, gif- en schaduwaanvallen",
+         "Wie graag voortdurend in beweging blijft"
+        ],
+        [
+         "Sorcerer",
+         "Vuur-, ijs- en bliksemspreuken",
+         "Wie graag forse magische afstandsschade uitdeelt"
+        ],
+        [
+         "Spiritborn",
+         "Geestdierkrachten, zeer snel",
+         "De wendbare klasse geïntroduceerd in Vessel of Hatred"
+        ],
+        [
+         "Paladin",
+         "Verschenen met Lord of Hatred; heilig nabijgevecht",
+         "Wie zoekt naar een zwaarbepantserde krijger"
+        ],
+        [
+         "Warlock",
+         "Verschenen met Lord of Hatred; duistere magie",
+         "Spelers die gefocust zijn op duistere spreuken"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Welke klasse als sterkste geldt, verschuift elk seizoen. Het belangrijkste principe: als je plezier beleeft, speel je de juiste klasse; pas na je eerste personage kijken naar meta-overzichten is ruim voldoende."
+      }
+     ]
+    },
+    {
+     "id": "ilerleme-yolu",
+     "baslik": "Tot niveau 70 en verder: het groeipad",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Campagne:** Rond het hoofdverhaal af; je bereikt hiermee circa niveau 40 tot 50.",
+        "**Tot niveau 70:** Stijg in niveau via kerkers en endgame-activiteiten; verdeel nieuwe punten in de vaardighedenboom.",
+        "**Pit:** De kerker die ontgrendelt op niveau 70; Torment 1 opent bij Pit 10, waarna je elke 5 niveaus (tot T5) en vervolgens elke 10 niveaus tot T12 doorgroeit naar de volgende Torment-trap.",
+        "**War Plans:** Een gestructureerd traject van vijf opeenvolgende endgame-activiteiten; een uitstekende leidraad als je twijfelt wat te ondernemen.",
+        "**Horadric Cube:** Gebruikt om voorwerpen en grondstoffen om te zetten en te verbeteren."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "In elke fase is je doel om voldoende schade en overlevingskracht op te bouwen om door te stoten naar een hogere moeilijkheidsgraad. Stagneert je voortgang, verzamel dan eerst betere uitrusting op een lagere graad; vlieg je erdoorheen, probeer dan direct een stap hoger. Vanaf niveau 70 is er geen vast getal voor je absolute kracht; voortgang wordt afgemeten aan uitrustingskwaliteit en Pit-niveau. Stel als wekelijks doel om elke sessie één Pit-niveau te stijgen. Loop je drie keer vast op dezelfde drempel, controleer dan je bepantsering en weerstandswaarden voordat je je hele build omgooit."
+      }
+     ]
+    },
+    {
+     "id": "esya-ve-kaynak",
+     "baslik": "Uitrusting, goud en beheer van grondstoffen",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**Zeldzaamheid:** Zeldzame (gele) en legendarische (oranje) voorwerpen zijn doorgaans het krachtigst; witte en blauwe spullen dienen enkel als vroege opstap.",
+        "**Weerbaarheid:** Bepantsering en weerstanden zijn op hoge niveaus net zo cruciaal als schade; wie alleen op aanvalskracht inzet, sneuvelt razendsnel.",
+        "**Goud:** Wordt gebruikt voor het herverdelen van vaardigheden, smeden en opwaarderen; wees in de beginfase niet bang om vlot goud uit te geven.",
+        "**Opslag:** Is je inventaris vol, maak dan gebruik van de kist in de stad en het gedeelde kistvak.",
+        "**Accountbrede voortgang:** Bepaalde prestaties gelden voor je gehele account; met een volgend personage begin je niet helemaal vanaf nul."
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Eenvoudige vuistregel: maakt een voorwerp je niet merkbaar sterker, houd het dan niet bij. De kracht van een legendarisch item is echter soms gebonden aan een specifieke speelstijl; twijfel je over een vondst, bewaar deze dan in je kist of recycleer deze bij de smid. Vergrendel waardevolle uitrusting in je overzicht voordat je spullen recyclet; per ongeluk gesloopte items krijg je niet terug. Omdat goud blijft binnenstromen, volg je een vaste begrotingsregel: eerst vitale weerstand en bepantsering op orde brengen, daarna investeren in schade-eigenschappen. Ruim je kist regelmatig op zodat er altijd ruimte blijft voor nieuwe legendarische vondsten."
+      }
+     ]
+    },
+    {
+     "id": "gereksinim-ve-platform",
+     "baslik": "Systeemvereisten en platforms",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4 wordt op pc gespeeld via de Battle.net-app of Steam, en op consoles via Xbox en PlayStation. Onderstaande waarden zijn afkomstig van de Steam-winkelpagina; ze gelden voor de basisgame en kunnen met uitbreidingen toenemen."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Onderdeel",
+        "Minimaal (1080p, 30 fps, laag)",
+        "Aanbevolen"
+       ],
+       "satirlar": [
+        [
+         "Processor",
+         "Intel Core i5-2500K of AMD FX-8350",
+         "Intel Core i5-4670K of AMD Ryzen 3 1300X"
+        ],
+        [
+         "Werkgeheugen",
+         "8 GB RAM",
+         "16 GB RAM"
+        ],
+        [
+         "Videokaart",
+         "NVIDIA GTX 660, Intel Arc A380 of AMD Radeon R9 280",
+         "NVIDIA GTX 970, Intel Arc A750 of AMD Radeon RX 470 (4 GB)"
+        ],
+        [
+         "Opslagruimte",
+         "90 GB, ssd vereist",
+         "90 GB ssd"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Sommige bronnen noemen de FX 8100 als minimale processor; kleine verschillen komen voor per overzicht, controleer daarom de actuele pagina van jouw versie. De game vereist een ssd in plaats van een traditionele harde schijf; op een harde schijf lopen de laadtijden fors op."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Alle klassen en uitbreidingen volgen dezelfde aanschafketen: eerst de basisgame, daarna Vessel of Hatred en Lord of Hatred. De Age of Hatred Collection levert alle drie in één aankoop."
+      }
+     ]
+    },
+    {
+     "id": "torment-basamaklari",
+     "baslik": "Torment-treden: hoe moeilijkheidsgraden ontgrendelen",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Vanaf niveau 70 verloopt de moeilijkheidskeuze via de kerker genaamd The Pit. Torment 1 ontgrendelt bij Pit 10; hogere treden openen naarmate je diepere Pit-niveaus uitspeelt. Onderstaande niveaus zijn samengesteld uit community-gegevens en kunnen per seizoen worden bijgesteld."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Trede",
+        "Ontgrendelend Pit-niveau",
+        "Toelichting"
+       ],
+       "satirlar": [
+        [
+         "Torment 1",
+         "Pit 10",
+         "Eerste trede; straffen op je verdedigingswaarden treden in werking"
+        ],
+        [
+         "Torment 2",
+         "Pit 15",
+         "Straffen op bepantsering en weerstanden nemen per trede toe"
+        ],
+        [
+         "Torment 3",
+         "Pit 20",
+         "Een extra beloningsdrempel volgens spelersinzichten"
+        ],
+        [
+         "Torment 5",
+         "Pit 30",
+         "Hierna groeit de tussenruimte naar 10 Pit-niveaus"
+        ],
+        [
+         "Torment 6",
+         "Pit 40",
+         "Forse beloningsvergrendelingen openen hier"
+        ],
+        [
+         "Torment 10",
+         "Pit 80",
+         "Praktisch richtpunt voor gerichte jacht op topbuit"
+        ],
+        [
+         "Torment 12",
+         "Niet officieel aangekondigd",
+         "Volgens het patroon rond Pit 100; niet officieel bevestigd"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Wanneer je overstapt naar een hogere trede worden vijanden taaier en lopen je bepantsering en weerstanden zware minpunten op. Sneuvel je te vaak, schakel dan terug naar een lagere trede om je defensieve statistieken te versterken; beloningen verdien je alleen als je overleeft."
+      }
+     ]
+    },
+    {
+     "id": "sezon-ve-alemler",
+     "baslik": "Seizoenen, het Seizoensrijk en het Eeuwige rijk",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Diablo 4 vernieuwt zich doorlopend via seizoenen. De Season Journey is een opeenvolging van doelstellingen en beloningen gedurende het seizoen, gekoppeld aan de Battle Pass. De game kent twee rijken: het Seizoensrijk bevat de nieuwe seizoensinhoud, de journey en de pass, en vereist een nieuw of herboren personage. Het Eeuwige rijk (Eternal realm) bevat geen seizoensmechanieken en wordt nooit gereset."
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Eigenschap",
+        "Seizoensrijk",
+        "Eeuwige rijk (Eternal)"
+       ],
+       "satirlar": [
+        [
+         "Seizoensinhoud en journey",
+         "Ja",
+         "Nee"
+        ],
+        [
+         "Battle Pass",
+         "Ja",
+         "Nee"
+        ],
+        [
+         "Personages",
+         "Nieuw of via Rebirth",
+         "Blijvende personages"
+        ],
+        [
+         "Reset",
+         "Voorwerpen verhuizen bij seizoenseinde naar de kist in Eternal",
+         "Wordt nooit gereset"
+        ]
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "Wacht op de seizoensstart",
+         "metin": "Maak aan het begin van een nieuw seizoen een seizoenspersonage aan; iedereen begint op hetzelfde startpunt."
+        },
+        {
+         "baslik": "Open de seizoensreis (Season Journey)",
+         "metin": "Bekijk de seizoensdoelen in het menu; bij voltooiing ontvang je waardevolle beloningen."
+        },
+        {
+         "baslik": "Gebruik Rebirth",
+         "metin": "De in Seizoen 15 geïntroduceerde Rebirth-optie zet een eeuwig personage op niveau 1 over naar het seizoensrijk. Klasse, naam, uiterlijk, Hardcore-status, cosmetica, rijdieren, huisdieren en speeltijd blijven behouden; uitrusting en voortgang worden herstart."
+        },
+        {
+         "baslik": "Zet voorwerpen over bij seizoenseinde",
+         "metin": "Seizoensvoorwerpen kunnen tot aan het einde van het daaropvolgende seizoen worden overgebracht naar de kist van het Eeuwige rijk."
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Twijfel je tussen Seizoensgebonden of Eeuwig, begin dan altijd in het Seizoensrijk; je leert de nieuwe mechanieken gelijktijdig met de voltallige spelerscommunity."
+      }
+     ]
+    },
+    {
+     "id": "oyun-sonu-ve-gelistirme",
+     "baslik": "Endgame-activiteiten en het opwaarderen van uitrusting",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "War Plans is een route die tot vijf activiteiten aaneenschakelt als een afspeellijst. Onderstaande activiteiten kunnen deel uitmaken van deze route:"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "Activiteit",
+        "Wat je doet",
+        "Geschikt voor"
+       ],
+       "satirlar": [
+        [
+         "Helltides",
+         "Monsterzwermen en schatkisten in de open wereld",
+         "Snelle uitrusting en grondstoffen"
+        ],
+        [
+         "Whispers",
+         "Korte wereldtaken",
+         "Kortere speelsessies"
+        ],
+        [
+         "Lair Bosses",
+         "Jacht op machtige eindbazen",
+         "Gerichte jacht op zeldzame topbuit"
+        ],
+        [
+         "Nightmare Dungeons",
+         "Uitdagendere kerkers via zegels",
+         "Vaste pijler gedurende alle seizoenen"
+        ],
+        [
+         "Infernal Hordes",
+         "Opeenvolgende golven intense gevechten",
+         "Liefhebbers van aanhoudende actie"
+        ],
+        [
+         "Pit of Artificers",
+         "Tijdgebonden kerkeruitdagingen",
+         "Ontgrendelen van Torment-treden"
+        ],
+        [
+         "Kurast Undercity",
+         "Snel opruimen van dichte monstergroepen",
+         "Snelle niveaustijgingen en goud"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "Voor het perfectioneren van uitrusting zijn er twee systemen: **tempering** en **masterworking**. Tempering voegt een beperkt aantal nieuwe attributen toe aan een voorwerp; masterworking versterkt stapsgewijs bestaande eigenschappen. Details (aantallen stappen, kosten, mogelijke eigenschappen) variëren per seizoen; raadpleeg Maxroll of de officiële patch notes voor actuele overzichten. De Horadric Cube helpt bij het omzetten van grondstoffen in deze keten."
+      },
+      {
+       "tip": "ipucu",
+       "metin": "Wees er vóór het opwaarderen zeker van dat je een item daadwerkelijk langdurig gaat gebruiken; tempering en masterworking kosten aanzienlijke grondstoffen en foute keuzes zijn niet altijd terug te draaien."
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "Veelgemaakte beginnersfouten",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Spullen aantrekken zonder eigenschappen te vergelijken, of juist uitrusting nooit vervangen.",
+        "Verdediging verwaarlozen: builds die puur op schade leunen sneuvelen direct op hogere moeilijkheidsgraden.",
+        "Goud oppotten en uit zuinigheid nergens in investeren.",
+        "Elk seizoen blindelings de tier-list van de populairste klasse volgen en spelen met een personage dat je eigenlijk niet ligt.",
+        "Overhaast Platinum aanschaffen met echt geld. Platinum dient uitsluitend voor cosmetica en versnelt de game niet."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Het aanschaffen van Platinum verhoogt je speelkracht niet; het is uitsluitend bestemd voor uiterlijke aanpassingen. Als je het gevoel hebt te moeten betalen voor voortgang, sta dan even stil bij de feiten."
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "Accountbeveiliging en uitgavenwaarschuwing",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "Je Blizzard-account is waardevol omdat het toegang biedt tot meerdere games. Deel je inloggegevens of beveiligingscodes nooit met anderen."
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "Schakel tweestapsverificatie (Blizzard Authenticator) in op je Battle.net-account.",
+        "Cheats, bots, macro's en het kopen of verkopen van accounts of voorwerpen voor echt geld (RMT) schenden de gebruikersvoorwaarden en leiden tot accountsperring.",
+        "Weblinks die gratis Platinum of voorwerpen beloven zijn valse inlogpagina's waarmee accounts worden gestolen.",
+        "Ga niet in op verzoeken om accounts te verhandelen; dit is verboden en brengt groot risico op oplichting met zich mee."
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "Websites die gratis Platinum, goud of voorwerpen aanbieden zijn oplichterij. Bij legitieme acties vraagt Blizzard nooit om je wachtwoord of beveiligingscodes."
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "Veelgestelde vragen",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "Is Diablo 4 gratis?",
+         "c": "Nee, het is een betaalde game. Voor nieuwe spelers biedt de Age of Hatred Collection de meest complete en voordelige instap."
+        },
+        {
+         "s": "Kan ik alleen spelen?",
+         "c": "Ja, maar de game vereist altijd een internetverbinding; ook voor solospel zijn internet en een Battle.net-account verplicht."
+        },
+        {
+         "s": "Moet ik Lord of Hatred aanschaffen?",
+         "c": "Voor nieuwe spelers wordt de Age of Hatred Collection sterk aangeraden; niveau 70, de nieuwe klassen en actuele endgame-content maken deel uit van de uitbreiding."
+        },
+        {
+         "s": "Wanneer verschijnt Seizoen 16?",
+         "c": "Dit is nog niet officieel bekendgemaakt. De testserver draaide eind oktober; houd de officiële kanalen van Blizzard in de gaten voor een datum."
+        },
+        {
+         "s": "Met welke klasse kan ik het beste starten?",
+         "c": "Kies de klasse waarvan het thema je het meest aanspreekt. Ranglijsten wisselen elk seizoen; spelplezier blijft altijd vooropstaan."
+        },
+        {
+         "s": "Kan ik mezelf sterker maken met echt geld?",
+         "c": "Nee; de betaalde valuta Platinum is uitsluitend bestemd voor cosmetische voorwerpen."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "zh": {
+   "baslik": "暗黑破坏神 4 新手指南：憎恨之王（Lord of Hatred）资料片之后（2026）",
+   "ozet": "今日入坑《暗黑破坏神 4》的完整指南：版本购买选择、职业推荐、前几个小时的开荒与 70 级满级后的终局内容。当前赛季：第 15 赛季（地狱遗产）。",
+   "kunye": [
+    {
+     "ad": "类型",
+     "deger": "动作角色扮演（ARPG，刷宝驱动）"
+    },
+    {
+     "ad": "平台",
+     "deger": "PC（Battle.net、Steam）、Xbox、PlayStation"
+    },
+    {
+     "ad": "收费模式",
+     "deger": "本体与资料片买断制付费；白金币（Platinum）外观商城为可选消费"
+    },
+    {
+     "ad": "当前版本",
+     "deger": "第 15 赛季地狱遗产（补丁 3.2.1）；《憎恨之王》（Lord of Hatred）资料片于 2026 年 4 月 28 日上线"
+    },
+    {
+     "ad": "土耳其语支持",
+     "deger": "支持土耳其语界面与字幕，无土耳其语配音（Steam 商店页面；共支持 14 种语言）"
+    }
+   ],
+   "bolumler": [
+    {
+     "id": "genel-bakis",
+     "baslik": "2026 年的暗黑破坏神 4 现状",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "《暗黑破坏神 4》（Diablo 4）是一款以刷宝为核心驱动力的动作角色扮演游戏，玩家在黑暗压抑的世界中斩妖除魔、搜集神装。游戏剧情发生在庇护之地（Sanctuary）；其最持久的魅力在于不断发掘装备与技能词条的联动组合，让角色战力产生质的飞跃。"
+      },
+      {
+       "tip": "p",
+       "metin": "本作采用赛季制运营。**第 15 赛季“地狱遗产”（Hell's Legacy）** 于 2026 年 9 月 15 日开启（补丁 3.2.1，包含系列 30 周年纪念内容及《巫师》联动）。最重要的重大变革源自 **《憎恨之王》（Lord of Hatred）** 资料片（2026 年 4 月 28 日）：带来两大全新职业、全职业技能树重构、全新战利品过滤器（Loot Filter）、赫拉迪姆方块（Horadric Cube）回归、战争图卷（War Plans 结构化终局路线）、等级上限由 60 级提升至 70 级以及苦痛 1 至 12 阶（Torment 1-12）难度体系。第 16 赛季测试服（PTR）已于 10 月底举行，但正式上线日期官方尚未公布；切勿臆造虚假日期。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "每逢新赛季更迭，赛季角色均会重置并让所有人站在统一起跑线上开荒，这是新玩家入坑的最佳契机。赛季结束后，你的赛季角色将自动迁移至永久保留的永恒界域（Eternal realm）。"
+      }
+     ]
+    },
+    {
+     "id": "baslamadan-once",
+     "baslik": "开始之前：版本购买指南",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "《暗黑破坏神 4》需要绑定 Battle.net 账号并保持全程网络连接；即便是独自单刷，游戏也是在线运行的。在 PC 端可通过 Battle.net 或 Steam 购买，主机端可通过 Xbox 与 PlayStation 商店购买。Xbox 商店页面亦标有 Game Pass 相关支持；具体入库权益可能变动，请以商城为准。PC 端运行 Battle.net 版本需要安装战网桌面应用。虽然跨平台游戏进度绑定在账号上共通，但游戏本体授权在各个平台是独立售卖的，因此购入前请先确定主力游玩平台。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "购买情境",
+        "建议购买版本",
+        "备注说明"
+       ],
+       "satirlar": [
+        [
+         "尚未拥有任何版本",
+         "Age of Hatred Collection（憎恨纪元典藏版）",
+         "一网打尽本体、《憎恨之躯》与《憎恨之王》完整内容"
+        ],
+        [
+         "已拥有游戏本体",
+         "Lord of Hatred（憎恨之王资料片）",
+         "同时包含前一部《憎恨之躯》资料片"
+        ],
+        [
+         "想要更多外观奖励",
+         "豪华版（Deluxe）或终极版（Ultimate）",
+         "附赠额外白金币与坐骑/外观；不会加快游戏通关进度"
+        ],
+        [
+         "多平台游玩需求",
+         "每个平台需单独购买",
+         "游戏软件授权按平台独立结算"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "直接购买完整合辑包通常远比日后分别单独补齐资料片划算。《憎恨之王》资料片售价为 49.99 美元（Game Informer 数据）；土耳其里拉定价尚未正式单独公布，请以当地商店实际结算页面为准。运行《憎恨之王》需要先拥有游戏本体。系统硬件配置要求见下一节。"
+      },
+      {
+       "tip": "uyari",
+       "metin": "请务必仅通过暴雪官方 Battle.net 商店、Steam 以及 Xbox、PlayStation 官方商城购买游戏。不明第三方低价激活码多为盗刷信用卡购买的黑卡，极易招致账号被封禁处罚。"
+      }
+     ]
+    },
+    {
+     "id": "ilk-saatler",
+     "baslik": "开荒初战：循序渐进",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "新手的第一阶段目标是通关主线战役剧情，升至 70 级并叩开苦痛（Torment）高阶难度的大门。主线战役大约能将角色带到 40 至 50 级；剩余的升级由终局活动顺利填补。"
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "挑选你的首发职业",
+         "metin": "参考下文的职业特性分析，挑选最符合个人审美的职业。角色名称创建后无法更改，但你可以随时新建其他职业的角色进行体验。"
+        },
+        {
+         "baslik": "推进主线战役剧情",
+         "metin": "紧随主线任务指引；沿途支线与区域探索能提供丰厚经验、装备与金币。随着区域地图被点亮，各传送平台（Waypoints）也将解锁。"
+        },
+        {
+         "baslik": "对比更替战利品装备",
+         "metin": "新拾取的装备只要基础主属性（如武器秒伤或护甲值）及词条优于当前装备，就立即换上。淘汰的闲置装备可在铁匠处分解为材料或出售换取金币。"
+        },
+        {
+         "baslik": "合理分配技能点数",
+         "metin": "将升级获得的技能点投入技能树；各职业均有强力的主力核心技能。若对技能流派不满意，只需消耗少量金币即可随时重置洗点。"
+        },
+        {
+         "baslik": "快速构建基础战斗循环",
+         "metin": "随着等级提升逐步解锁各类技能；初期搭建一套简洁循环：一个主力输出技、一个位移走位技，以及一个保命减伤/护盾技。"
+        },
+        {
+         "baslik": "迈向战役后的终局征程",
+         "metin": "达到 70 级后，将精力全面转向战争图卷（War Plans）和工匠深坑（The Pit）等终局活动。"
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "从第一天起就开启战利品过滤器（Loot Filter）。它会自动屏蔽不适合当前职业与等级的垃圾杂物，既能净化屏幕显示，又能节省整理背包的大量时间。"
+      }
+     ]
+    },
+    {
+     "id": "sinif-secimi",
+     "baslik": "职业抉择：8 大职业全景概览",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "各个职业之间的操作手感与战斗风格截然不同。如果对某个职业手感不适，在下个赛季换一个尝试即可。精要总结：对于新手而言，拥有远程输出手段或能召唤随从抵挡伤害的职业，容错率通常更高。灵巫（Spiritborn）于 2024 年 10 月 8 日随《憎恨之躯》登场；圣骑士（Paladin）与术士（Warlock）于 2026 年 4 月 28 日随《憎恨之王》降临。圣骑士借助四重誓言与仲裁者形态（Arbiter Form）作战；术士则操控地狱烈焰、恶魔爪牙与不可名状的禁忌古神法术。游玩资料片职业需要拥有对应的资料片授权。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "职业名称",
+        "战斗风格",
+        "适合玩家人群"
+       ],
+       "satirlar": [
+        [
+         "野蛮人（Barbarian）",
+         "近身肉搏、重型兵器、防御皮实",
+         "追求硬朗抗揍与拳拳到肉打击感的玩家"
+        ],
+        [
+         "德鲁伊（Druid）",
+         "变身猛兽与掌控自然风暴元素",
+         "兼顾近战爪击撕咬与大范围自然法术的玩家"
+        ],
+        [
+         "死灵法师（Necromancer）",
+         "统御骷髅仆从、精通白骨与鲜血秘术",
+         "热衷于带领召唤物军团平推大军的玩家"
+        ],
+        [
+         "游侠（Rogue）",
+         "迅捷敏锐、致命毒素与暗影刺杀",
+         "崇尚高速穿梭走位与高频爆发操作的玩家"
+        ],
+        [
+         "巫师（Sorcerer）",
+         "纯粹的烈焰、寒冰与狂暴雷电法术",
+         "钟情远距离大范围法术轰炸的玩家"
+        ],
+        [
+         "灵巫（Spiritborn）",
+         "引渡四灵动物守护神之力、迅捷连击",
+         "《憎恨之躯》带来的极具机动性的丛林格斗新职"
+        ],
+        [
+         "圣骑士（Paladin）",
+         "随《憎恨之王》登场；神圣近战武艺",
+         "渴望手持重盾神圣护体、刚正不阿的重装战士"
+        ],
+        [
+         "术士（Warlock）",
+         "随《憎恨之王》登场；黑暗与恶魔巫术",
+         "专注诅咒削弱、召唤恶魔与烈焰爆发的施法者"
+        ]
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "哪个职业所谓“最强”每逢赛季平衡调整都会变动。不变的铁律是：玩得开心才是最适合你的职业；通关第一个角色后再去翻看天梯 Meta 榜单完全来得及。"
+      }
+     ]
+    },
+    {
+     "id": "ilerleme-yolu",
+     "baslik": "升至 70 级与更远征程：进阶路线",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**主线剧情：** 完成剧情战役；通关时大约达到 40 至 50 级。",
+        "**冲刺 70 级：** 通过挑战地下城与终局活动快速积累经验升级；同步分配并完善技能树点数。",
+        "**工匠深坑（The Pit）：** 70 级解锁的核心地下城；通关 Pit 10 层解锁苦痛 1（Torment 1），此后在 T5 之前每升 5 层解锁一阶难度，随后每 10 层解锁一阶直至 T12。",
+        "**战争图卷（War Plans）：** 整合五项终局活动的结构化成长清单；是新手迷茫不知该刷什么时的最佳导航仪。",
+        "**赫拉迪姆方块（Horadric Cube）：** 用于转化词条、升级材料与重铸装备。"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "在每个进阶阶段，你的首要目标都是构建足以承受并碾压更高难度的伤害输出与生存韧性。如果推进过于艰难，切回低一阶难度刷几件极品装备再来挑战；如果当前难度如履平地，则应果断提升难度。达到 70 级后，角色强度不再由单纯的等级数字代表，而是完全取决于装备词条品质与能通关的深坑层数。建议设定每周成长目标：记录上次深坑通关记录，争取每次游戏推进一两层。若在某一层连续阵亡三次受阻，请先仔细核查装备的抗性与护甲减伤上限，切忌盲目推倒重构整个流派。"
+      }
+     ]
+    },
+    {
+     "id": "esya-ve-kaynak",
+     "baslik": "装备品质、金币与资源管理法则",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "**装备稀有度：** 稀有（黄色）与传奇（橙色）装备通常最为强力；白装与蓝装仅在游戏极前期作为短暂过渡。",
+        "**生存韧性：** 在高难度下，护甲值与元素抗性与伤害同样致命重要；只堆面板伤害的“玻璃大炮”在高难度下寸步难行。",
+        "**金币用途：** 金币广泛用于重置技能点、升级装备与工匠制作；开荒前期无需过分吝啬，该花则花。",
+        "**储物箱：** 背包容量有限时，充分利用城镇中的个人仓库与账号共享储物箱。",
+        "**账号共享进度：** 声望加成与莉莉丝祭坛等进度为全账号共享；换新角色起号无需从零重复跑图。"
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "最实用的断舍离法则：一件装备如果不能为你带来实质提升，就不要留在背包占用格子。然而某些传奇威能的强度依赖于特定流派构筑；对于拿不准的传奇装备，不妨先暂存仓库或分解提取威能。在装备列表中，分解前先将重要装备标记锁定，避免误操作导致不可逆的损失。由于金币属于持续产出的流动资源，建立清晰的投资优先级：保命所需的抗性与护甲词条优先强化，其次再追逐极限增伤。定期清理仓库中堆积的废弃词条，确保有足够空位容纳新掉落的极品传奇装备。"
+      }
+     ]
+    },
+    {
+     "id": "gereksinim-ve-platform",
+     "baslik": "系统硬件要求与对应平台",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "《暗黑破坏神 4》在 PC 端可通过 Battle.net 应用或 Steam 运行，在主机端支持 Xbox 与 PlayStation。以下数据源自 Steam 商店官方配置要求；所列指标适用于游戏本体，后续资料片可能会略微提升硬件需求。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "硬件配置",
+        "最低配置（1080p, 30 fps, 低画质）",
+        "推荐配置"
+       ],
+       "satirlar": [
+        [
+         "处理器",
+         "Intel Core i5-2500K 或 AMD FX-8350",
+         "Intel Core i5-4670K 或 AMD Ryzen 3 1300X"
+        ],
+        [
+         "运行内存",
+         "8 GB 内存",
+         "16 GB 内存"
+        ],
+        [
+         "显卡",
+         "NVIDIA GTX 660、Intel Arc A380 或 AMD Radeon R9 280",
+         "NVIDIA GTX 970、Intel Arc A750 或 AMD Radeon RX 470（4 GB）"
+        ],
+        [
+         "存储空间",
+         "90 GB 可用空间，必须为固态硬盘（SSD）",
+         "90 GB SSD 空间"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "个别硬件测评页面将 FX 8100 标为最低处理器；细微差异属于各页面记录口径不同，请以你所玩版本的商店官方说明为准。游戏强制要求安装在 SSD 上，不支持机械硬盘；机械硬盘会导致过图加载时间急剧恶化。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "所有职业与资料片内容遵循同一购买依赖链路：先拥有游戏本体，再拥有《憎恨之躯》与《憎恨之王》。购买 Age of Hatred Collection 可直接一步到位获取全套内容。"
+      }
+     ]
+    },
+    {
+     "id": "torment-basamaklari",
+     "baslik": "苦痛阶梯：高阶难度解锁机制",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "达到 70 级后，难度切换由“工匠深坑”（The Pit）地下城的层数驱动。通关 Pit 10 层即解锁苦痛 1（Torment 1）；后续更高阶梯则随通关更深层数逐步解封。下方层数整理自社区玩家实测数据，赛季之间可能会进行数值微调。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "难度阶梯",
+        "解锁所需 Pit 层数",
+        "阶段说明"
+       ],
+       "satirlar": [
+        [
+         "Torment 1（苦痛 1）",
+         "Pit 10 层",
+         "高阶起步；角色防御抗性开始受到负面减益压制"
+        ],
+        [
+         "Torment 2（苦痛 2）",
+         "Pit 15 层",
+         "每提升一阶，护甲与抗性承受的惩罚进一步加剧"
+        ],
+        [
+         "Torment 3（苦痛 3）",
+         "Pit 20 层",
+         "社区评测公认的关键额外掉落质变门槛"
+        ],
+        [
+         "Torment 5（苦痛 5）",
+         "Pit 30 层",
+         "此后难度解锁跨度扩大为每 10 层深坑一阶"
+        ],
+        [
+         "Torment 6（苦痛 6）",
+         "Pit 40 层",
+         "解锁核心高阶收益掉落池"
+        ],
+        [
+         "Torment 10（苦痛 10）",
+         "Pit 80 层",
+         "顶级毕业配装高效刷宝的常规目标"
+        ],
+        [
+         "Torment 12（苦痛 12）",
+         "官方未明确正式公布",
+         "按规律推算约为 Pit 100 层左右；非官方定论"
+        ]
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "随着难度跨阶，怪物的生命值与攻击力呈指数级膨胀，同时系统对你的护甲和元素抗性施加大幅百分比扣减。如果暴毙频率激增，请果断降回低一阶难度补齐防御减伤词条；站得住才有资格谈战利品收益。"
+      }
+     ]
+    },
+    {
+     "id": "sezon-ve-alemler",
+     "baslik": "赛季机制、赛季界域与永恒界域",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "《暗黑破坏神 4》通过赛季机制持续保持游戏新鲜感。赛季旅程（Season Journey）由贯穿整个赛季的进阶目标与丰厚奖励构成，并与战斗通行证紧密绑定。游戏分为两大界域：赛季界域（Seasonal realm）包含当季独占玩法机制、赛季旅程与通行证，需要新建角色或通过转生角色体验；永恒界域（Eternal realm）不含赛季专属玩法，角色与进度永久保存、永不重置。"
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "机制特征",
+        "赛季界域（Seasonal）",
+        "永恒界域（Eternal）"
+       ],
+       "satirlar": [
+        [
+         "赛季专属玩法与旅程任务",
+         "包含",
+         "不包含"
+        ],
+        [
+         "战斗通行证经验积累",
+         "支持",
+         "不支持"
+        ],
+        [
+         "角色来源",
+         "新创建或经由转生（Rebirth）",
+         "历届保留的永久角色"
+        ],
+        [
+         "数据重置机制",
+         "赛季结束时装备资产自动转入永恒储物箱",
+         "永久保存，永不重置"
+        ]
+       ]
+      },
+      {
+       "tip": "adimlar",
+       "ogeler": [
+        {
+         "baslik": "等待新赛季吹响号角",
+         "metin": "新赛季开启时，创建一个赛季新角色；所有玩家从统一起点开始同台开荒竞技。"
+        },
+        {
+         "baslik": "查阅赛季旅程任务清单",
+         "metin": "在游戏内菜单查看本赛季各章节目标；每完成一阶段即可领取专属强力奖励。"
+        },
+        {
+         "baslik": "利用转生（Rebirth）功能",
+         "metin": "第 15 赛季新增的转生功能可将永恒界域中的老角色重置为 1 级并转入当前赛季。职业、角色名、外貌捏脸、专家模式（Hardcore）状态、坐骑宠物与累计游玩时长完全保留；身上的旧装备与战斗等级重新归零。"
+        },
+        {
+         "baslik": "赛季交替平稳交接",
+         "metin": "赛季结束时，所获战利品会保留在临时提取箱中，可在下一个赛季结束前随时取出放入永恒界域仓库。"
+        }
+       ]
+      },
+      {
+       "tip": "ipucu",
+       "metin": "若在赛季界域与永恒界域之间犹豫不决，坚决首选赛季界域；你能与全体玩家在同一时间体验最新的赛季特色机制。"
+      }
+     ]
+    },
+    {
+     "id": "oyun-sonu-ve-gelistirme",
+     "baslik": "终局活动与装备进阶强化",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "战争图卷（War Plans）是将多达五项终局活动像播放列表一样串联起来的高效路线。下列各项常驻活动均会轮流进入该清单："
+      },
+      {
+       "tip": "tablo",
+       "basliklar": [
+        "终局活动",
+        "主要玩法内容",
+        "适合人群与目标"
+       ],
+       "satirlar": [
+        [
+         "地狱狂潮（Helltides）",
+         "大地图野外击杀潮水般的恶魔并开启神秘宝箱",
+         "快速获取海量装备与关键锻造素材"
+        ],
+        [
+         "死者低语（Whispers）",
+         "遍布庇护之地的限时区域小任务",
+         "碎片化零碎时间快速清日常"
+        ],
+        [
+         "巢穴首领（Lair Bosses）",
+         "集齐召唤材料挑战终极 Boss",
+         "定点刷取暗金核心毕业装备"
+        ],
+        [
+         "梦魇地下城（Nightmare Dungeons）",
+         "使用梦魇符印强化地下城词缀并深入挑战",
+         "各赛季提升雕文等级的核心基石"
+        ],
+        [
+         "狱火军团（Infernal Hordes）",
+         "在竞技场中迎战一波又一波高强度恶魔狂潮",
+         "热衷于高压密集团战与海量材料收割的玩家"
+        ],
+        [
+         "工匠深坑（Pit of Artificers）",
+         "限时快速通关深度地下城秘境",
+         "检验终极输出与解锁苦痛难度的试金石"
+        ],
+        [
+         "库拉斯特地下城（Kurast Undercity）",
+         "计时清怪竞速扫荡",
+         "快速冲级与积累金币"
+        ]
+       ]
+      },
+      {
+       "tip": "p",
+       "metin": "装备后期的深度进阶强化由两大系统主导：**回火（Tempering）** 与 **精造（Masterworking）**。回火可为装备附加有限次数的自选新词条；精造则按阶梯百分比全面强化装备已有的词条数值。具体数值（精造层数上限、消耗材料配比、暴击词条池）会随赛季平衡调整；最新确切数值请参考 Maxroll 数据库或官方补丁日志。赫拉迪姆方块在这一强化链条中承担着转化稀缺材料的关键作用。"
+      },
+      {
+       "tip": "ipucu",
+       "metin": "在投入昂贵材料强化前，务必确认这件底子装备值得长期穿戴；回火次数耗尽或高阶精造都会消耗极其珍贵的材料，错误的操作往往无法挽回。"
+      }
+     ]
+    },
+    {
+     "id": "sik-hatalar",
+     "baslik": "新手常见误区",
+     "bloklar": [
+      {
+       "tip": "liste",
+       "ogeler": [
+        "捡到装备不看词条无脑穿上，或者走到另一极端——认准一套装备无论如何不肯更替。",
+        "忽视防御属性的积累：纯堆输出面板的配装在高难度怪物面前往往被一击秒杀。",
+        "过度囤积金币舍不得花；前期金币正是用来重洗词条与打造关键装备以加速开荒的。",
+        "每个赛季盲目跟风选择天梯登顶职业，却硬着头皮玩一个自己毫无操作乐趣的流派。",
+        "急于充值真实货币购买白金币。白金币仅能购买外观饰品，对角色战斗力提升毫无帮助。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "购买白金币绝对不会提升游戏内的角色战斗力，它仅用于购买服饰、武器外观与坐骑。当你在游戏中产生“必须氪金才能变强”的想法时，请立刻停下来认清这一事实。"
+      }
+     ]
+    },
+    {
+     "id": "guvenlik",
+     "baslik": "账号安全与理性消费警示",
+     "bloklar": [
+      {
+       "tip": "p",
+       "metin": "你的暴雪战网账号关联着多款重量级游戏资产，价值极高。切勿将账号密码、短信验证码或安全令令牌透露给任何第三方。"
+      },
+      {
+       "tip": "liste",
+       "ogeler": [
+        "务必为你的 Battle.net 账号开启两步验证（暴雪安全令或短信验证）。",
+        "严禁使用外挂作弊器、自动脚本挂机软件，严禁通过真实货币进行线下账号/道具买卖（RMT），此类行为严重违背暴雪用户协议，一经查实直接永久停封。",
+        "凡是宣称提供免费白金币或极品装备的外链均为钓鱼仿冒网站，目的在于盗取战网账号控制权。",
+        "切勿轻信所谓的账号交易中介或代练代打服务；此类私下交易违规且极易沦为网络诈骗受害者。"
+       ]
+      },
+      {
+       "tip": "uyari",
+       "metin": "任何声称赠送免费白金币、大量金币或神话暗金装备的第三方网站均为网络诈骗。暴雪官方的正规赠礼与活动绝不会索要你的账号密码或安全验证码。"
+      }
+     ]
+    },
+    {
+     "id": "sss",
+     "baslik": "常见问题解答",
+     "bloklar": [
+      {
+       "tip": "sss",
+       "ogeler": [
+        {
+         "s": "《暗黑破坏神 4》是免费游戏吗？",
+         "c": "不是，本作属于买断制付费游戏。新玩家推荐直接购入 Age of Hatred Collection（憎恨纪元典藏版），性价比最高。"
+        },
+        {
+         "s": "可以一个人单刷游玩吗？",
+         "c": "可以，但本作全程需要联网运行；即便是单人通关，也必须保持网络连接并登录 Battle.net 账号。"
+        },
+        {
+         "s": "必须购买《憎恨之王》（Lord of Hatred）资料片吗？",
+         "c": "对于新手而言，强烈建议直接购入包含该资料片的合辑；70 级等级上限、两大新职业以及最新的核心终局玩法均依赖该资料片。"
+        },
+        {
+         "s": "第 16 赛季何时上线？",
+         "c": "目前官方尚未正式公布具体上线日期。测试服已于 10 月底举行完毕；请密切关注暴雪官方后续发布的新闻动态。"
+        },
+        {
+         "s": "新手初次入坑首选哪个职业？",
+         "c": "建议首选直觉上最吸引你的职业。职业强弱每季更替，但发自内心的游玩乐趣才是长久驱动力。"
+        },
+        {
+         "s": "充值真实货币能变强吗？",
+         "c": "不能；游戏内充值获得的白金币（Platinum）仅可用于购买外观饰品，不带任何数值战斗属性。"
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  }
 }
