@@ -92,6 +92,7 @@ class KaynakMetniTests(unittest.TestCase):
                   {'announcement_body': {'gid': '123', 'body': '[p]Real update[/p]'}}]
         raw = '<div data-partnereventstore="' + html.escape(json.dumps(events), quote=True) + '" data-partnereventadjacents="' + html.escape(json.dumps([{'announcementGID': '123'}]), quote=True) + '"></div>'
         self.assertEqual(oto.duz_metin(raw, True), 'Real update')
+        self.assertEqual(oto.duz_metin('<div data-partnereventstore="{}"></div>', True), '')
 
     def test_attempt_ceiling_is_eight(self):
         self.assertEqual(oto.CONFIG['sinirlar']['yazim_deneme'], 8)

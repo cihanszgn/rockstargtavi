@@ -158,9 +158,12 @@ class MetinOku(HTMLParser):
                 gid = (attrs.get('data-partnereventadjacents') or '')
                 adjacent = json.loads(gid) if gid else []
                 wanted = adjacent[0]['announcementGID'] if adjacent else None
-                for event in events:
+                for event in events if isinstance(events, list) else []:
+                    if not isinstance(event, dict):
+                        continue
                     body = event.get('announcement_body', {})
-                    if wanted and str(body.get('gid')) == str(wanted):
+                    if (isinstance(body, dict) and wanted and str(body.get('gid')) == str(wanted)
+                            and isinstance(body.get('body'), str)):
                         self.containers.append({'depth': 0, 'rank': 4, 'parts': [body.get('body', '')], 'closed': True})
                         break
             except (ValueError, TypeError, KeyError, IndexError):
@@ -379,7 +382,7 @@ def kaynak_tara(source, now):
     games_path = ROOT / 'data/oyunlar.json'
     games = json.loads(games_path.read_text(encoding='utf-8')) if games_path.exists() else []
     aliases = [norm(s) for game in games for s in [game['ad'], *game.get('eslesme', [])] if len(s) > 2]
-    fresh.sort(key=lambda x: (bool(x['tarih']), resmi(x.get('resmi_url') or x['url']),
+    fresh.sort(key=lambda x: (bool(x['tarih']), resmi(x.get('resmi_url') or x.get('url', '')),
                any(oyun_eslesir(x['baslik'], key) for key in aliases), x['tarih'] or ''), reverse=True)
     kept = fresh[:source.get('aday_siniri', CONFIG['sinirlar'].get('kaynak_basina', 6))]
     limited = len(kept)
