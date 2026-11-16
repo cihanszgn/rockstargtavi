@@ -12,11 +12,14 @@ tools/sosyal_yayinla.py bu dosyadan DILLER, GORUNEN, KLASOR, M, SITE ve kart_ad'
 """
 from __future__ import annotations
 
+import argparse
 import html
+import io
 import json
 import pathlib
 import re
 import sys
+import urllib.request
 from datetime import datetime, timezone
 from email.utils import format_datetime
 
@@ -208,10 +211,32 @@ YEDEK_YAZI = {
 }
 
 
-def kartlar(veri: list[dict]) -> tuple[int, int]:
-    from PIL import Image, ImageDraw, ImageFont
+def resmi_gorsel(veri, onbellek):
+    """Yalnız yerel görsel kaydının HTTPS adresi; hata durumunda kapak üretilir."""
+    from PIL import Image
+    if not veri or not str(veri.get("url", "")).startswith("https://"):
+        return None
+    url = veri["url"]
+    if url not in onbellek:
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "CTRL-A-GAME-social/1.0"})
+            with urllib.request.urlopen(req, timeout=8) as r:
+                ham = r.read(8 * 1024 * 1024 + 1)
+            if len(ham) > 8 * 1024 * 1024:
+                raise ValueError("Görsel çok büyük")
+            with Image.open(io.BytesIO(ham)) as img:
+                onbellek[url] = img.convert("RGB")
+        except (OSError, ValueError, TimeoutError, Image.DecompressionBombError):
+            onbellek[url] = None
+    return onbellek[url]
+
+
+def kartlar(veri: list[dict], sosyal=None, *, cikti=None) -> tuple[int, int]:
+    from PIL import Image, ImageDraw, ImageFont, ImageOps
+    from sosyal_kuyruk import SABLON
 
     onbellek: dict = {}
+    resimler = {}
 
     def font(tur: str, boy: int):
         if (tur, boy) not in onbellek:
@@ -227,6 +252,18 @@ def kartlar(veri: list[dict]) -> tuple[int, int]:
     def sar(c, metin, f, gen):
         satir, satirlar = "", []
         for k in metin.split():
+            if c.textlength(k, font=f) > gen:
+                if satir:
+                    satirlar.append(satir)
+                    satir = ""
+                parca = ""
+                for harf in k:
+                    if parca and c.textlength(parca + harf, font=f) > gen:
+                        satirlar.append(parca)
+                        parca = ""
+                    parca += harf
+                satir = parca
+                continue
             dene = (satir + " " + k).strip()
             if c.textlength(dene, font=f) <= gen:
                 satir = dene
@@ -303,7 +340,8 @@ def kartlar(veri: list[dict]) -> tuple[int, int]:
         lh = 52 if W >= 1200 else 60
         lx = logo(c, P, P, lh)
         th, ft = lh - 8, font("yari", round((lh - 8) * 0.46))
-        tur_ad = m["tur"][x["tur"]]
+        sosyal_tur = x.get("sosyal_tur")
+        tur_ad = SABLON[dil][sosyal_tur] if sosyal_tur and sosyal_tur != "haber" else m["tur"][x["tur"]]
         tw = tus(c, 0, 0, tur_ad, ft, th, olc=True)
         bosluk = W - P - (lx + 40) - tw - 12
         oyun = kisalt(c, x["oyun"], ft, max(60, bosluk - 2 * round(th * 0.36)))
@@ -326,7 +364,29 @@ def kartlar(veri: list[dict]) -> tuple[int, int]:
         c.text((W - P, yb), sag, font=fk, fill=SOLUK, anchor="rs")
         # başlık (ve dikey kartta özet), üst ile alt bilgi arasında dikey ortalı
         pad = 2 * round(64 * 0.22)
-        if ozetli:
+        if ozetli and sosyal_tur and sosyal_tur != "haber":
+            # Ayrı kart türleri aynı logo, tuş, mavi seçim ve altbilgiyi kullanır.
+            # Görsel ve metin alanları ayrıdır; başlık fotoğrafın üstüne binmez.
+            gy, gh = ty + th + 32, 300
+            foto = resmi_gorsel(x.get("gorsel"), resimler)
+            if foto is not None:
+                img.paste(ImageOps.fit(foto, (gen, gh)), (P, gy))
+                atif = kisalt(c, f"{SABLON[dil]['gorsel']}: {x['gorsel'].get('kaynak', '')}", font("duz", 19), gen - 28)
+                aw = round(c.textlength(atif, font=font("duz", 19))) + 24
+                c.rectangle((W - P - aw, gy + gh - 36, W - P, gy + gh), fill=ZEMIN)
+                c.text((W - P - 12, gy + gh - 10), atif, font=font("duz", 19), fill=YAZI, anchor="rs")
+            else:
+                c.rounded_rectangle((P, gy, W - P, gy + gh), radius=18, fill=YUZEY, outline=CIZGI, width=2)
+                for i in range(5):
+                    c.line((P + 24 + i * 32, gy + 20, P + 140 + i * 32, gy + gh - 20), fill=CIZGI, width=3)
+                fg, sg = sigdir(c, x["oyun"], "genis", 56, 30, gen - 80, 3)
+                for i, s in enumerate(sg):
+                    c.text((W // 2, gy + gh // 2 + (i - len(sg) / 2) * round(fg.size * 1.2)), s,
+                           font=fg, fill=YAZI, anchor="mt")
+            fb, sb = sigdir(c, t["baslik"], "genis", 60, 34, gen - pad, 4)
+            fo, so = sigdir(c, t["ozet"], "duz", 34, 26, gen, 3)
+            ust, alt = gy + gh + 34, yb - 54 - 30
+        elif ozetli:
             fb, sb = sigdir(c, t["baslik"], "genis", 70, 44, gen - pad, 6)
             fo, so = sigdir(c, t["ozet"], "duz", 40, 30, gen, 6)
             ust, alt = ty + th + 40, yb - 54 - 40
@@ -395,22 +455,34 @@ def kartlar(veri: list[dict]) -> tuple[int, int]:
 
     from datetime import date
     bugun = date.today()
-    (KOK / KART_KLASOR).mkdir(exist_ok=True)
+    kart_kok = pathlib.Path(cikti) if cikti is not None else KOK / KART_KLASOR
+    kart_kok.mkdir(parents=True, exist_ok=True)
+
+    def kart_yolu(oid, dil, tip):
+        return kart_kok / pathlib.Path(kart_ad(oid, dil, tip)).name
     gerekli, yeni = set(), 0
-    yeni += kaydet(marka_karti(), KOK / "og.png", "og")
+    if cikti is None:
+        yeni += kaydet(marka_karti(), KOK / "og.png", "og")
     for x in veri:
         yas = (bugun - date.fromisoformat(x["tarih"])).days
         for dil in DILLER:
-            yol = KOK / kart_ad(x["id"], dil, "og")
+            yol = kart_yolu(x["id"], dil, "og")
             gerekli.add(yol.name)
             yeni += kaydet(kart(x, dil, 1200, 630, False), yol, "og")
             if yas <= IG_SAKLA:  # IG kartı her dilde üretilir; hesap anahtarı sonradan eklense de hazır olsun
-                yol = KOK / kart_ad(x["id"], dil, "ig")
+                yol = kart_yolu(x["id"], dil, "ig")
                 gerekli.add(yol.name)
                 if yas <= IG_GUN or yol.exists():
                     yeni += kaydet(kart(x, dil, 1080, 1350, True), yol, "ig")
+    for x in sosyal or []:
+        if x.get("sosyal_tur") == "haber":
+            continue
+        for dil in x["diller"]:
+            yol = kart_yolu(x["id"], dil, "ig")
+            gerekli.add(yol.name)
+            yeni += kaydet(kart(x, dil, 1080, 1350, True), yol, "ig")
     silinen = 0
-    for f in (KOK / KART_KLASOR).iterdir():
+    for f in kart_kok.iterdir():
         if f.name not in gerekli:
             f.unlink()
             silinen += 1
@@ -418,13 +490,26 @@ def kartlar(veri: list[dict]) -> tuple[int, int]:
 
 
 # ---------------------------------------------------------------- ana akış
-def main() -> None:
+def main(argv=None) -> None:
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
     sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
     import site_derle
+    import sosyal_kuyruk
+
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--yalniz-kartlar", action="store_true", help="site sayfalarına dokunmadan paylaşım kartlarını derle")
+    args = ap.parse_args(argv)
 
     veri = yukle()
-    sonuc = site_derle.derle(veri)
-    yeni_kart, silinen = kartlar(veri)
+    sonuc = None if args.yalniz_kartlar else site_derle.derle(veri)
+    simdi = datetime.now(timezone.utc)
+    sosyal = sosyal_kuyruk.adaylar(veri, KOK, ayarlar(), simdi.date(), simdi)
+    yeni_kart, silinen = kartlar(veri, sosyal)
+    if sonuc is None:
+        print(f"Tamam: {yeni_kart} kart yazıldı, {silinen} eski kart silindi.")
+        return
     print(f"Tamam: {len(veri)} haber, {sonuc['sayfa']} sayfa ({sonuc['degisen']} dosya değişti); "
           f"{sonuc['soylenti']} söylenti, {sonuc['takvim']} çıkış, {sonuc['firsat']} fırsat, {sonuc['epic']} Epic oyunu; "
           f"{yeni_kart} kart yazıldı, {silinen} eski kart silindi, {sonuc['uyari']} uyarı.")

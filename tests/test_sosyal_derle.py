@@ -1,4 +1,5 @@
 import copy
+import io
 import json
 import pathlib
 import sys
@@ -20,6 +21,43 @@ except ImportError:
 
 @unittest.skipUnless(PIL_VAR, "Pillow yok")
 class KartTests(unittest.TestCase):
+    def test_yeni_turler_ve_indirilemeyen_gorsel_derlemeyi_dusurmez(self):
+        import sosyal_kuyruk as sk
+        from PIL import Image
+        haber = copy.deepcopy(json.loads((KOK / "data/icerik.json").read_text(encoding="utf-8"))[0])
+        veri = []
+        for tur in sk.TURLER[1:]:
+            x = copy.deepcopy(haber)
+            x.update(id=tur, sosyal_tur=tur, oyun="ÇokUzunBirOyunAdı" * 15,
+                     gorsel={"url": "https://example.com/resim.jpg", "kaynak": "Studio"})
+            for t in x['diller'].values():
+                t['baslik'] = "UzunOyunAdı" * 70
+                t['ozet'] = "Uzun özet cümlesi. " * 50
+            veri.append(x)
+        with tempfile.TemporaryDirectory() as t, patch.object(sd.urllib.request, "urlopen", side_effect=OSError("çevrimdışı")) as ag:
+            sd.kartlar([], veri, cikti=pathlib.Path(t))
+            self.assertEqual(ag.call_count, 1, "Aynı başarısız görsel dört dil ve tür için tekrar indirilmez")
+            for x in veri:
+                for d in sd.DILLER:
+                    p = pathlib.Path(t) / pathlib.Path(sd.kart_ad(x['id'], d, 'ig')).name
+                    with Image.open(p) as img:
+                        self.assertEqual(img.size, (1080, 1350))
+
+    def test_resmi_gorsel_onbellek_ve_bozuk_yanit(self):
+        from PIL import Image
+        ham = io.BytesIO()
+        Image.new('RGB', (30, 20), 'red').save(ham, 'PNG')
+        class Yanit(io.BytesIO):
+            pass
+        with patch.object(sd.urllib.request, 'urlopen', return_value=Yanit(ham.getvalue())) as ag:
+            cache = {}
+            g = {'url': 'https://example.com/test.png', 'kaynak': 'Studio'}
+            self.assertEqual(sd.resmi_gorsel(g, cache).size, (30, 20))
+            self.assertEqual(sd.resmi_gorsel(g, cache).getpixel((1, 1)), (255, 0, 0))
+            self.assertEqual(ag.call_count, 1)
+        with patch.object(sd.urllib.request, 'urlopen', return_value=Yanit(b'bozuk')):
+            self.assertIsNone(sd.resmi_gorsel(g, {}))
+
     def test_ig_karti_dort_dil_icin_hesap_ayarindan_bagimsiz_uretilir(self):
         haber = copy.deepcopy(json.loads((KOK / "data" / "icerik.json").read_text(encoding="utf-8"))[0])
         haber["tarih"] = date.today().isoformat()
