@@ -809,7 +809,7 @@ class Hat:
         def allowed(n):
             p = pathlib.PurePosixPath(n)
             return (n in scenarios or n in ('data/icerik.json', 'data/gorseller.json', 'data/sayfalar.json', 'sitemap.xml', 'og.png', 'oyun-tema.css')
-                    or (p.suffix in ('.html', '.xml') and (len(p.parts) == 1 or p.parts[0] in ('oyun-haberleri', 'en', 'fr', 'es', 'oyun')))
+                    or (p.suffix in ('.html', '.xml') and (len(p.parts) == 1 or p.parts[0] in ('oyun-haberleri', 'en', 'fr', 'es', 'oyun', 'rehber')))
                     or re.fullmatch(r'ara-(tr|en|fr|es)\.json', n)
                     or (p.parts[0] == 'kart' and p.suffix in ('.png', '.jpg')))
         if not names or any(not allowed(n) for n in names):
