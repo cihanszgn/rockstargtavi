@@ -126,6 +126,17 @@ def getir(url):
         return raw
 
 
+def steam_adresi(gid):
+    # ISteamNews gid duyuru kimliği değildir; resmî yönlendirici gerçek adresi verir.
+    url = f'https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/{gid}'
+    req = urllib.request.Request(url, headers={'User-Agent': UA})
+    with urllib.request.urlopen(req, timeout=15) as response:
+        final = response.geturl()
+        if not resmi(final) or urllib.parse.urlsplit(final).hostname != 'steamcommunity.com':
+            raise ValueError('Steam yönlendirmesi resmî duyuru detayına ulaşmadı')
+        return final
+
+
 def rss_oku(raw, source, now):
     if b'<!ENTITY' in raw or b'<!DOCTYPE' in raw:
         raise ValueError('DTD/entity içeren akış kabul edilmez')
@@ -186,7 +197,7 @@ def _kaynak_tara(source, now):
                     if not gid.isdigit():
                         continue
                     items.append({'kaynak': source['id'], 'ad': source['ad'], 'baslik': item['title'],
-                                  'url': f"https://steamcommunity.com/games/{source['appid']}/announcements/detail/{gid}",
+                                  'url': f'https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/{gid}', 'steam_gid': gid,
                                   'tarih': datetime.fromtimestamp(item['date'], timezone.utc).isoformat(), 'resmi_aday': True})
                 return {'id': source['id'], 'durum': 'ok', 'web_gerekli': False}, items
             for item in data['data']['Catalog']['searchStore']['elements']:
@@ -234,8 +245,20 @@ def kaynak_tara(source, now):
     fresh = tarih_suz(items, now)
     fresh.sort(key=lambda x: (bool(x['tarih']), x['tarih'] or ''), reverse=True)
     kept = fresh[:source.get('aday_siniri', CONFIG['sinirlar'].get('kaynak_basina', 6))]
+    limited = len(kept)
+    if source.get('bicim') == 'steam':
+        resolved, errors = [], []
+        for item in kept:
+            try:
+                item['url'] = steam_adresi(item['steam_gid'])
+                resolved.append(item)
+            except (OSError, ValueError) as exc:
+                errors.append(str(exc)[:200])
+        kept = resolved
+        if errors:
+            status.update(durum='kismi', web_gerekli=True, teyit_hatalari=errors)
     status.update(adet=len(kept), bulunan=len(items), tarih_elendi=len(items) - len(fresh),
-                  sinir_elendi=len(fresh) - len(kept), tarihsiz=sum(not x['tarih'] for x in kept))
+                  sinir_elendi=len(fresh) - limited, tarihsiz=sum(not x['tarih'] for x in kept))
     return status, kept
 
 
@@ -413,7 +436,6 @@ def hazirla(existing, batch, now=None, senaryo_klasoru=None):
             raise ValueError('platform metin listesi olmalı')
         if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', str(auto.get('konu', ''))):
             raise ValueError('otomasyon.konu: olayın tekrarını önleyecek değişmez kimlik gerekli')
-        official = auto.get('resmi_url', '')
         checked = tarih(auto.get('teyit_zamani'))
         if (not checked or not timedelta(0) <= now - checked <= timedelta(hours=2) or len(str(auto.get('oyuncuya_fayda', ''))) < 30):
             raise ValueError('son 2 saatte okunmuş kaynak ve oyuncuya somut fayda açıklaması gerekli')

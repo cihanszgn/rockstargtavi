@@ -291,6 +291,37 @@ class HatTests(unittest.TestCase):
         self.assertEqual([x['id'] for x in result], ['2', '3', '4'])
         self.assertEqual(write.call_count, 5)
 
+    def test_six_attempt_ceiling_and_time_budget(self):
+        candidates = [self._aday(i, f'Haber {i}') for i in range(9)]
+        with patch.object(self.hat, 'yaz', return_value=None) as write:
+            self.assertEqual(self.hat.adaylari_isle(candidates), [])
+        self.assertEqual(write.call_count, 6)
+        self.hat.deadline = h.time.monotonic() + 119
+        with patch.object(self.hat, 'yaz') as write:
+            self.assertEqual(self.hat.adaylari_isle(candidates), [])
+        write.assert_not_called()
+
+    def test_unreliable_local_veto_does_not_hide_followed_or_high_hype(self):
+        self._oyunlar([{'ad': 'Takipli', 'eslesme': []}])
+        candidates = [self._aday(0, 'Takipli yeni sezon'), self._aday(1, 'Yeni oyun duyurusu'), self._aday(2, 'New game reportedly leaked')]
+        decisions = [{'aday_id': i, 'karar': 'ele', 'hype': score, 'neden': 'anlamsız gerekçe'} for i, score in enumerate([4, 9, 10])]
+        with patch.object(self.hat, 'zincir', return_value=decisions):
+            selected = self.hat.ele(candidates)
+        self.assertEqual([x['baslik'] for x in selected], ['Takipli yeni sezon', 'Yeni oyun duyurusu'])
+
+    def test_freshness_then_official_only_break_score_ties(self):
+        now = datetime.now(timezone.utc)
+        def candidate(score, age, official=False, followed=False):
+            return {'on_puan': score, 'tarih': (now-timedelta(hours=age)).isoformat(), 'resmi': official, 'takipli': followed}
+        self.assertGreater(h.siralama(candidate(9, 20)), h.siralama(candidate(4, 1, True)))
+        self.assertGreater(h.siralama(candidate(7, 1)), h.siralama(candidate(7, 2, True)))
+        self.assertGreater(h.siralama(candidate(7, 1, True)), h.siralama(candidate(7, 1)))
+
+    def test_quota_duration_from_response_or_twelve_hour_default(self):
+        self.assertEqual(h.kota_suresi('FreeUsageLimitError {"retryAfterMs":7200000}'), 7200)
+        self.assertEqual(h.kota_suresi('HTTP 429'), 43200)
+        self.assertIsNone(h.kota_suresi('connection refused'))
+
     def test_same_event_keeps_official_url_and_independent_reports(self):
         candidates = [self._aday(0, 'New Game patch released'), self._aday(1, 'New Game patch released', ad='PlayStation Blog')]
         candidates[1]['url'] = 'https://blog.playstation.com/2026/11/16/new-game/'

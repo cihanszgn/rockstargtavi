@@ -5,7 +5,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
-from unittest.mock import patch
+from unittest.mock import patch, MagicMock
 from datetime import datetime, timedelta, timezone
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / 'tools'))
@@ -79,10 +79,12 @@ class NewsTests(unittest.TestCase):
         self.assertEqual(h.rss_oku(rdf, source, NOW)[0]['baslik'], 'JP patch')
         source = {'id': 'valve', 'ad': 'Valve', 'api': 'https://api.steampowered.com/a', 'bicim': 'steam', 'appid': 730}
         raw = {'appnews': {'newsitems': [{'title': 'Patch', 'gid': '123', 'date': int(NOW.timestamp()), 'feedname': 'steam_community_announcements'}, {'title': 'Press', 'feedname': 'pcgamer'}]}}
-        with patch.object(h, 'getir', return_value=json.dumps(raw).encode()):
+        with patch.object(h, 'getir', return_value=json.dumps(raw).encode()), \
+                patch.object(h, 'steam_adresi', return_value='https://steamcommunity.com/games/CSGO/announcements/detail/456') as resolve:
             status, items = h.kaynak_tara(source, NOW)
         self.assertEqual(len(items), 1)
         self.assertTrue(h.resmi(items[0]['url']))
+        resolve.assert_called_once_with('123')
 
     def test_primary_confirmation_requires_two_independent_named_reports(self):
         x = article()
@@ -91,12 +93,45 @@ class NewsTests(unittest.TestCase):
         for content in x['diller'].values():
             content['metin'] += ' IGN VGC'
         self.assertEqual(len(h.hazirla([], [x], NOW)[1]), 1)
+        valid = json.loads(json.dumps(x))
+        for field in ('kisi', 'gorev', 'kurum'):
+            invalid = json.loads(json.dumps(valid)); del invalid['otomasyon']['birincil_kaynak'][field]
+            with self.assertRaises(ValueError): h.hazirla([], [invalid], NOW)
+        invalid = json.loads(json.dumps(valid)); invalid['otomasyon']['capraz_kaynaklar'].pop()
+        with self.assertRaises(ValueError): h.hazirla([], [invalid], NOW)
+        invalid = json.loads(json.dumps(valid)); invalid['diller']['fr']['metin'] = ' '.join(['Texte'] * 60)
+        with self.assertRaises(ValueError): h.hazirla([], [invalid], NOW)
+        invalid = json.loads(json.dumps(valid)); invalid['diller']['en']['baslik'] = 'New game reportedly leaked'
+        with self.assertRaises(ValueError): h.hazirla([], [invalid], NOW)
+        invalid = json.loads(json.dumps(valid))
+        invalid['kaynaklar'][1] = {'ad': 'Eurogamer', 'url': 'https://www.eurogamer.net/report'}
+        invalid['otomasyon']['capraz_kaynaklar'][1] = invalid['kaynaklar'][1]['url']
+        with self.assertRaises(ValueError): h.hazirla([], [invalid], NOW)
         x['otomasyon']['birincil_kaynak']['tur'] = 'sizinti'
         with self.assertRaises(ValueError): h.hazirla([], [x], NOW)
         x['otomasyon']['birincil_kaynak']['tur'] = 'roportaj'
         x['kaynaklar'][1]['url'] = 'https://www.ign.com/articles/another'
         x['otomasyon']['capraz_kaynaklar'] = [s['url'] for s in x['kaynaklar']]
         with self.assertRaises(ValueError): h.hazirla([], [x], NOW)
+
+    def test_steam_news_gid_is_resolved_to_real_announcement_id(self):
+        response = MagicMock()
+        response.__enter__.return_value.geturl.return_value = 'https://steamcommunity.com/games/CSGO/announcements/detail/456'
+        with patch.object(h.urllib.request, 'urlopen', return_value=response):
+            self.assertEqual(h.steam_adresi('123'), 'https://steamcommunity.com/games/CSGO/announcements/detail/456')
+        response.__enter__.return_value.geturl.return_value = 'https://steamcommunity.com/games/CSGO/announcements'
+        with patch.object(h.urllib.request, 'urlopen', return_value=response), self.assertRaises(ValueError):
+            h.steam_adresi('123')
+
+    def test_source_filters_dates_before_cap_and_does_not_accept_html_feed(self):
+        items = [{'baslik': f'Old {i}', 'tarih': '2026-11-01T00:00:00Z'} for i in range(10)]
+        items += [{'baslik': 'Fresh', 'tarih': NOW.isoformat()}, {'baslik': 'Unknown'}]
+        source = {'id': 'test', 'ad': 'Test'}
+        with patch.object(h, '_kaynak_tara', return_value=({'id': 'test', 'durum': 'ok'}, items)):
+            status, kept = h.kaynak_tara(source, NOW)
+        self.assertEqual(status['tarih_elendi'], 10)
+        self.assertEqual([x['baslik'] for x in kept], ['Fresh', 'Unknown'])
+        with self.assertRaises(ValueError): h.rss_oku(b'<html><body>Not a feed</body></html>', source, NOW)
 
     def test_epic_api_is_official_confirmation(self):
         x = article()

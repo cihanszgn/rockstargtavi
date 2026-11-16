@@ -22,8 +22,6 @@ import haber_oto as oto
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 GORULEN_SAAT = 72
 ASAMALAR = ('eleme', 'yazar', 'denetci')
-# Resmî kaynak adları; Steam rol "karma" olduğu için listede ayrıca alınır.
-RESMI_KAYNAK = {x['ad'].lower() for x in oto.CONFIG['kaynaklar'] if x['rol'] in ('resmi', 'karma')}
 
 
 def olaylari_birlestir(candidates):
@@ -213,6 +211,7 @@ class Hat:
         self.gorulen = self.gorulen_oku()
         self.kotalar = self.kota_oku()
         self.haber_aday = {}
+        self.tur_onayli = []
 
     def kota_oku(self):
         try:
@@ -497,7 +496,7 @@ class Hat:
                 'hype_esigi': oto.hype_esigi(), 'resmi_alanlar': oto.CONFIG['resmi_alanlar'],
                 'takipli_oyunlar': getattr(self, 'games', []),
                 'kesif_kaynaklari': [x for x in oto.CONFIG['kaynaklar'] if x['rol'] == 'kesif'],
-                'mevcut_haberler': [{'baslik': x.get('diller', {}).get('tr', {}).get('baslik'), 'konu': x.get('otomasyon', {}).get('konu')} for x in oku(self.root / 'data/icerik.json')],
+                'mevcut_haberler': [{'baslik': x.get('diller', {}).get('tr', {}).get('baslik'), 'konu': x.get('otomasyon', {}).get('konu')} for x in oku(self.root / 'data/icerik.json') + self.tur_onayli],
                 'cikti': str(self.state / 'yazar.json')}
         example = self.root / 'video/senaryo/r6-siege-operation-vital-signal-duyuruldu-2026-11-15-tr.json'
         if example.exists():
@@ -573,7 +572,7 @@ class Hat:
                               'mevcut_haberler': [{'id': x['id'], 'baslik': x.get('diller', {}).get('tr', {}).get('baslik'),
                                                   'konu': x.get('otomasyon', {}).get('konu'),
                                                   'resmi_url': x.get('otomasyon', {}).get('resmi_url')}
-                                                 for x in oku(self.root / 'data/icerik.json')]})
+                                                 for x in oku(self.root / 'data/icerik.json') + self.tur_onayli]})
         decisions = self.zincir('denetci', self.config['denetci'], prompt, validate, retries=0)
         oto.json_yaz(self.state / 'denetim.json', decisions)
         if decisions is None:
@@ -612,6 +611,7 @@ class Hat:
                     audit.append({'id': article['id'], 'kararlar': oku(self.state / 'denetim.json')})
                 if accepted:
                     approved = self.paket_kontrol(approved + accepted)
+                    self.tur_onayli = approved
             oto.json_yaz(self.state / 'yazilan-paket.json', written)
             oto.json_yaz(self.state / 'denetimler.json', audit)
             oto.json_yaz(self.state / 'onayli-paket.json', approved)
