@@ -1,0 +1,99 @@
+name: Ses listesi ve örnekleri
+
+on:
+  workflow_dispatch:
+    inputs:
+      mod:
+        description: "Çalışma modu (liste: hesaptaki sesler, ornek: aday seslerden örnek mp3)"
+        required: true
+        type: choice
+        options:
+          - liste
+          - ornek
+        default: liste
+      sesler:
+        description: "Örnek modunda seslendirilecek ses adları (virgülle ayrılmış, ör. tr-TR-Aydin:MAI-Voice-2.1,tr-TR-EmelNeural)"
+        required: false
+        type: string
+        default: ""
+      dil:
+        description: "Örnek modunda kullanılacak dil (tr, en, es, fr, de, nl, zh)"
+        required: false
+        type: choice
+        options:
+          - tr
+          - en
+          - es
+          - fr
+          - de
+          - nl
+          - zh
+        default: tr
+      diller:
+        description: "Liste modunda taranacak diller (virgülle ayrılmış)"
+        required: false
+        type: string
+        default: "tr,en,es,fr,de,nl,zh"
+      yukle:
+        description: "Örnek sesleri medya sunucusuna yükle (--yukle)"
+        required: false
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  ses:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: astral-sh/setup-uv@v5
+        if: inputs.mod == 'ornek'
+
+      - name: SSH anahtarını hazırla
+        if: inputs.mod == 'ornek' && inputs.yukle == true
+        env:
+          MEDYA_SSH_KEY: ${{ secrets.MEDYA_SSH_KEY }}
+          MEDYA_SSH_BILINEN: ${{ secrets.MEDYA_SSH_BILINEN }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$MEDYA_SSH_KEY" > ~/.ssh/medya_anahtar
+          chmod 600 ~/.ssh/medya_anahtar
+          printf '%s\n' "$MEDYA_SSH_BILINEN" > ~/.ssh/known_hosts
+          printf 'Host medya.ctrl-agame.com\n  IdentityFile ~/.ssh/medya_anahtar\n  IdentitiesOnly yes\n' > ~/.ssh/config
+          chmod 600 ~/.ssh/config
+
+      - name: Ses listesini çek
+        if: inputs.mod == 'liste'
+        env:
+          AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
+          AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
+        run: |
+          python tools/ses_ornek.py liste --diller "${{ inputs.diller }}"
+
+      - name: Ses listesini artefakt olarak yükle
+        if: inputs.mod == 'liste'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ses-listesi
+          path: ses-listesi.json
+          if-no-files-found: error
+
+      - name: Örnek sesleri üret
+        if: inputs.mod == 'ornek'
+        env:
+          AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
+          AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
+        run: |
+          KOMUT=("python" "tools/ses_ornek.py" "ornek" "--sesler" "${{ inputs.sesler }}" "--dil" "${{ inputs.dil }}")
+          if [ "${{ inputs.yukle }}" = "true" ]; then
+            KOMUT+=("--yukle")
+          fi
+          "${KOMUT[@]}"

@@ -19,7 +19,6 @@ import os
 import re
 import shutil
 import sys
-import tempfile
 import urllib.request
 from pathlib import Path
 
@@ -31,6 +30,17 @@ VARSAYILAN_DILLER = "tr,en,es,fr,de,nl,zh"
 LISTE_CIKTI = Path("ses-listesi.json")
 ORNEK_KLASOR = ROOT / "ornek-cikti"
 DOGAL_IPUCLARI = ("MAI", "HD", "Dragon", "Multilingual", "Turbo")
+
+# Diller için yerel ayar ön ekleri
+YEREL_AYAR_ON_EKLERI = {
+    "tr": ("tr-TR",),
+    "en": ("en-US", "en-GB"),
+    "es": ("es-ES", "es-MX"),
+    "fr": ("fr-FR",),
+    "de": ("de-DE",),
+    "nl": ("nl-NL",),
+    "zh": ("zh-CN",),
+}
 
 # Haber tonunda, bir oyun adı, bir tarih ve bir sayı içeren ikişer cümle.
 ORNEK_METINLER = {
@@ -74,27 +84,55 @@ def yerel_ayar(kayit: dict) -> str:
     return str(ayar)
 
 
+def izinli_yereller(diller: list[str]) -> list[str]:
+    onekler = []
+    for d in diller:
+        d_lower = d.strip().lower()
+        if d_lower in YEREL_AYAR_ON_EKLERI:
+            onekler.extend(YEREL_AYAR_ON_EKLERI[d_lower])
+        else:
+            onekler.append(d.strip())
+    return onekler
+
+
 def sesleri_sec(kayitlar: list[dict], diller: list[str]) -> tuple[list[dict], list[dict]]:
-    """(dil filtresinden geçen sesler, bunlardan doğal aday olanlar)."""
-    secilen = [k for k in kayitlar if yerel_ayar(k).split("-")[0].lower() in diller]
-    dogal = [k for k in secilen if any(i.lower() in str(k.get("ShortName", "") + k.get("Name", "")).lower()
-                                       for i in DOGAL_IPUCLARI)]
+    """(dil/yerel filtresinden geçen sesler, bunlardan doğal aday olanlar)."""
+    onekler = izinli_yereller(diller)
+    secilen = [
+        k for k in kayitlar
+        if any(yerel_ayar(k).lower().startswith(on.lower()) for on in onekler)
+    ]
+    dogal = [
+        k for k in secilen
+        if any(i.lower() in str(k.get("ShortName", "") + k.get("Name", "")).lower() for i in DOGAL_IPUCLARI)
+    ]
     return secilen, dogal
 
 
 def _etiket(kayit: dict) -> str:
     etiket = kayit.get("VoiceTag")
-    if not isinstance(etiket, dict):
-        return ""
-    parcalar = []
-    for anahtar in ("TailoredScenarios", "VoicePersonalities"):
-        if etiket.get(anahtar):
-            parcalar.append(f"{anahtar}={','.join(map(str, etiket[anahtar]))}")
-    return "; ".join(parcalar)
+    if isinstance(etiket, dict):
+        parcalar = []
+        for anahtar in ("TailoredScenarios", "VoicePersonalities"):
+            val = etiket.get(anahtar)
+            if val:
+                parcalar.append(f"{anahtar}={','.join(map(str, val)) if isinstance(val, list) else val}")
+        for k, v in etiket.items():
+            if k not in ("TailoredScenarios", "VoicePersonalities") and v:
+                parcalar.append(f"{k}={','.join(map(str, v)) if isinstance(v, list) else v}")
+        return "; ".join(parcalar)
+    kisilik = kayit.get("VoicePersonalities") or kayit.get("Personalities")
+    if kisilik:
+        return f"VoicePersonalities={','.join(map(str, kisilik)) if isinstance(kisilik, list) else kisilik}"
+    return ""
 
 
 def satir(kayit: dict) -> str:
-    alanlar = [str(kayit.get("ShortName", "?")), str(kayit.get("Gender", "")), str(kayit.get("VoiceType", ""))]
+    alanlar = [str(kayit.get("ShortName") or kayit.get("Name", "?"))]
+    if kayit.get("Gender"):
+        alanlar.append(str(kayit["Gender"]))
+    if kayit.get("VoiceType"):
+        alanlar.append(str(kayit["VoiceType"]))
     if kayit.get("WordsPerMinute"):
         alanlar.append(f"{kayit['WordsPerMinute']} kelime/dk")
     etiket = _etiket(kayit)
@@ -118,12 +156,15 @@ def liste(diller: list[str], cikti_yolu: Path = LISTE_CIKTI, kayitlar: list[dict
     print("\n== Dillere göre tüm sesler ==")
     for dil in diller:
         print(f"-- {dil}")
+        dil_onekler = [on.lower() for on in YEREL_AYAR_ON_EKLERI.get(dil.lower(), (dil.lower(),))]
         for k in secilen:
-            if yerel_ayar(k).split("-")[0].lower() == dil:
+            if any(yerel_ayar(k).lower().startswith(on) for on in dil_onekler):
                 print(satir(k))
-    v._yaz_json = None  # noqa: SLF001 (yok; aşağıda doğrudan yazılır)
-    cikti_yolu.write_text(json.dumps({"diller": diller, "dogal_adaylar": dogal, "sesler": secilen},
-                                     ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")
+    cikti_yolu.write_text(
+        json.dumps({"diller": diller, "dogal_adaylar": dogal, "sesler": secilen}, ensure_ascii=False, indent=1) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
     print(f"\nYazıldı: {cikti_yolu.resolve()}")
     return 0
 
@@ -151,7 +192,7 @@ def ornekle(sesler: list[str], dil: str, klasor: Path, sentez=sentezle, cikti=pr
     yollar, hatalar = [], []
     for ses in sesler:
         try:
-            if not ses.startswith(dil + "-"):
+            if not ses.lower().startswith(dil.lower() + "-"):
                 raise ValueError(f"ses bu dile ait değil ({dil} bekleniyor)")
             yollar.append(sentez(ses, dil, ORNEK_METINLER[dil], klasor))
             cikti(f"tamam: {ses}")
@@ -186,7 +227,6 @@ def ornek(sesler_metni: str, dil: str, yukle_mi: bool, klasor: Path = ORNEK_KLAS
     if not sesler:
         raise SystemExit("--sesler boş")
     anahtar_bilgisi()
-    v.AzureSes("tr-TR-EmelNeural", "tr")._yardimci  # noqa: B018 (sınıf yüklü mü)
     yollar, hatalar = ornekle(sesler, dil, klasor)
     if yukle_mi and yollar:
         yukle(yollar)
