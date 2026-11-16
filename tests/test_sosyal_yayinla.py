@@ -352,6 +352,100 @@ class Short(Temel):
         self.assertEqual(ag.cagrilar, [])
 
 
+class HypeKurali(Temel):
+    def hypeli(self, puan):
+        x = haber()
+        x["otomasyon"]["hype"] = puan
+        return [x]
+
+    def test_hype_esigin_altinda_reels_ve_shorts_gitmez_gorsel_gider(self):
+        self.manifest_yaz()
+        ag = SahteAg()
+        a = ayar(instagram=True, instagram_reel=True, youtube=True)
+        a["video"] = {"hype_esigi": 7}
+        g, hata, _ = self.calistir(ag, a, veri=self.hypeli(6))
+        self.assertEqual((g, hata), (1, []))
+        self.assertEqual(set(self.kayitlar()), {"oyun-yama-1|tr|instagram|gorsel"})
+        self.assertFalse(any("googleapis" in u for _, u in ag.cagrilar), "Shorts yüklenmez")
+
+    def test_hype_esikte_reels_ve_shorts_gider(self):
+        self.manifest_yaz()
+        a = ayar(instagram_reel=True, youtube=True)
+        a["video"] = {"hype_esigi": 7}
+        a["calisma_basina_en_fazla"] = 2
+        g, hata, _ = self.calistir(SahteAg(), a, veri=self.hypeli(7))
+        self.assertEqual(hata, [])
+        self.assertEqual(set(self.kayitlar()), {"oyun-yama-1|tr|instagram|reel", "oyun-yama-1|tr|youtube|short"})
+
+    def test_puansiz_eski_haberde_manifestte_video_varsa_gider(self):
+        self.manifest_yaz()
+        a = ayar(instagram_reel=True)
+        a["video"] = {"hype_esigi": 7}
+        g, _, _ = self.calistir(SahteAg(), a)  # haber() hype içermez
+        self.assertEqual(g, 1)
+
+    def test_video_hakki_birim(self):
+        a = {"video": {"hype_esigi": 8}}
+        for hype, beklenen in ((None, True), (7, False), (8, True), (10, True), ("9", False), (True, False)):
+            x = {"otomasyon": {"hype": hype}} if hype is not None else {"otomasyon": {}}
+            self.assertEqual(sy.video_hakki(x, a), beklenen, hype)
+        self.assertTrue(sy.video_hakki({"otomasyon": {"hype": 7}}, {}), "ayar yoksa eşik 7")
+        self.assertFalse(sy.video_hakki({"otomasyon": {"hype": 6}}, {}))
+
+
+class AnahtarsizDil(Temel):
+    def test_anahtari_olmayan_dil_atlanir_ve_dort_dil_icin_ayar_acik(self):
+        self.manifest_yaz()
+        a = ayar(instagram=True)  # dört dilde de açık; yalnız tr anahtarı var
+        ag = SahteAg()
+        g, hata, atlanan = self.calistir(ag, a)
+        self.assertEqual((g, hata), (1, []))
+        self.assertEqual(set(self.kayitlar()), {"oyun-yama-1|tr|instagram|gorsel"})
+        self.assertEqual(sorted(atlanan), ["instagram/en", "instagram/es", "instagram/fr"])
+
+    def test_anahtar_eklenince_kod_degismeden_paylasilir(self):
+        a = ayar(instagram=True)
+        a["calisma_basina_en_fazla"] = 1
+        tum = dict(SIRLAR, IG_EN_USER_ID="999", IG_EN_TOKEN="tok2")
+        g, hata, atlanan = self.calistir(SahteAg(), a, tum=tum)
+        self.assertEqual(hata, [])
+        self.assertEqual(g, 2)
+        self.assertEqual(set(self.kayitlar()), {"oyun-yama-1|tr|instagram|gorsel", "oyun-yama-1|en|instagram|gorsel"})
+        self.assertEqual(sorted(atlanan), ["instagram/es", "instagram/fr"])
+
+    def test_dry_run_anahtarsiz_hesabi_atlandi_diye_yazar_tr_planlanir(self):
+        self.manifest_yaz()
+        satirlar = []
+        a = ayar(instagram=True, instagram_reel=True, youtube=True)
+        g, hata, atlanan = sy.calistir(a, [haber()], kayit_yolu=self.kayit, manifest_yolu=self.manifest, tum=SIRLAR,
+                                       ag=YasakAg(), dry_run=True, bugun=BUGUN, simdi=SIMDI, cikti=satirlar.append)
+        self.assertEqual(hata, [])
+        metin = "\n".join(map(str, satirlar))
+        for dil in ("en", "es", "fr"):
+            self.assertIn(f"instagram/{dil}: anahtar yok, atlandı", metin)
+            self.assertIn(f"youtube/{dil}: anahtar yok, atlandı", metin)
+            self.assertIn(f"IG_{dil.upper()}_TOKEN", metin, "eksik değişkenin yalnız adı yazılır")
+        self.assertNotIn("instagram/tr: anahtar yok", metin)
+        self.assertIn("oyun-yama-1", metin, "tr planlanmış görünür")
+        self.assertNotIn("tok", metin.replace("TOKEN", ""), "değer yazılmaz")
+
+    def test_anahtarsiz_goster_eski_onizlemeyi_korur(self):
+        satirlar = []
+        a = ayar(instagram=True)
+        sy.calistir(a, [haber()], kayit_yolu=self.kayit, manifest_yolu=self.manifest, tum={}, ag=YasakAg(), dry_run=True,
+                    bugun=BUGUN, simdi=SIMDI, cikti=satirlar.append, anahtarsiz_goster=True)
+        self.assertFalse(any("anahtar yok" in str(x) for x in satirlar))
+        self.assertTrue(any("oyun-yama-1" in str(x) for x in satirlar))
+
+    def test_paylasilacak_diller_yalniz_anahtari_olan_acik_hesaplar(self):
+        a = ayar(instagram=True)
+        self.assertEqual(sy.paylasilacak_diller(a, SIRLAR), ["tr"])
+        self.assertEqual(sy.paylasilacak_diller(a, dict(SIRLAR, IG_FR_USER_ID="1", IG_FR_TOKEN="t")), ["tr", "fr"])
+        self.assertEqual(sy.paylasilacak_diller(a, {}), [])
+        self.assertEqual(sy.paylasilacak_diller(ayar(), SIRLAR), [], "ayarda kapalıysa beklenmez")
+        self.assertEqual(sy.paylasilacak_diller(a), ["tr", "en", "fr", "es"], "anahtar verilmezse yalnız ayara bakılır")
+
+
 class DryRun(Temel):
     def test_dry_run_hic_ag_cagrisi_ve_yazma_yapmaz(self):
         self.manifest_yaz()
@@ -380,6 +474,38 @@ class Metin(unittest.TestCase):
     def test_sayfa_bekle_hazirsa_uyumaz(self):
         ag = SahteAg()
         self.assertEqual(sy.sayfa_bekle(ag, [haber()]), 0)
+
+    def test_sayfa_bekle_her_paylasilacak_dilin_sayfasini_sorar(self):
+        sorulan = []
+
+        class Ag(SahteAg):
+            def yayinda_mi(self, url):
+                sorulan.append(url)
+                return True
+
+        self.assertEqual(sy.sayfa_bekle(Ag(), [haber()], diller=["tr", "en", "fr"]), 0)
+        self.assertEqual(len(sorulan), 3)
+        self.assertTrue(any("/en/game-news/" in u for u in sorulan))
+        self.assertTrue(any("/fr/" in u for u in sorulan))
+        self.assertFalse(any("/es/" in u for u in sorulan), "paylaşılmayacak dil beklenmez")
+
+    def test_sayfa_bekle_bir_dil_gec_acilirsa_onu_bekler(self):
+        sayac = {"en": 0}
+
+        class Ag(SahteAg):
+            def yayinda_mi(self, url):
+                if "/en/" in url:
+                    sayac["en"] += 1
+                    return sayac["en"] >= 3
+                return True
+
+        self.assertEqual(sy.sayfa_bekle(Ag(), [haber()], deneme=5, aralik=0, diller=["tr", "en"]), 0)
+        self.assertEqual(sayac["en"], 3)
+
+    def test_sayfa_bekle_bos_dil_listesi_beklemez(self):
+        ag = SahteAg()
+        ag.yayinda = False
+        self.assertEqual(sy.sayfa_bekle(ag, [haber()], diller=[]), 0)
 
     def test_sayfa_bekle_sure_dolunca_yine_de_devam_eder(self):
         ag = SahteAg()

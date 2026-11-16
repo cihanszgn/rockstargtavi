@@ -23,22 +23,22 @@
    "x": false,
    "reddit": false,
    "instagram": true,
-   "instagram_reel": false,
-   "youtube": false
+   "instagram_reel": true,
+   "youtube": true
   },
   "fr": {
    "x": false,
    "reddit": false,
-   "instagram": false,
-   "instagram_reel": false,
-   "youtube": false
+   "instagram": true,
+   "instagram_reel": true,
+   "youtube": true
   },
   "es": {
    "x": false,
    "reddit": false,
-   "instagram": false,
-   "instagram_reel": false,
-   "youtube": false
+   "instagram": true,
+   "instagram_reel": true,
+   "youtube": true
   }
  },
  "reddit_topluluk": {},
@@ -47,7 +47,12 @@
  },
  "video": {
   "ses": "azure",
-  "konusmaci": "tr-TR-Aydin:MAI-Voice-2.1",
+  "konusmaci": {
+   "tr": "tr-TR-Aydin:MAI-Voice-2.1",
+   "en": "en-US-AndrewNeural",
+   "es": "es-ES-AlvaroNeural",
+   "fr": "fr-FR-HenriNeural"
+  },
   "yukleme_hedefi": "medyayukle@medya.ctrl-agame.com:/var/www/medya/v/",
   "gunluk_en_fazla": 2,
   "hype_esigi": 7
