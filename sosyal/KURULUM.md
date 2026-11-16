@@ -10,8 +10,9 @@ Yardımcı anahtarları dener, doğruysa GitHub'a gizli olarak kaydeder.
 
 > **Askıda (Cio'nun kararı, 2026-11-14):** şimdilik yalnız Instagram kullanılıyor. X ve Reddit bölümleri ileride açmak için duruyor; açarken Claude'a "X'i/Reddit'i aç" de (`sosyal/ayarlar.json`).
 
-**Önerilen başlangıç:** İngilizce (EN) ve Türkçe (TR) Instagram hesapları. Fransızca ve İspanyolca
-hesapları sonra aynı yolla eklersin.
+**Durum:** Haberler dört dilde (TR, EN, ES, FR) yayınlanır. Kartlar, açıklamalar ve videolar dört dil için de
+şimdiden üretilir. Şu an yalnız TR hesabının anahtarları kurulu; EN, ES ve FR hesapları açılıp anahtarları
+eklenince paylaşım kod değişmeden o dilde de başlar (bkz. 6. bölüm).
 
 **E-posta ipucu:** her hesap ayrı e-posta ister. Gmail'de `adın+gtatr@gmail.com` gibi `+`
 eklenmiş adresler aynı kutuya gelir; çoğu site bunu kabul eder.
@@ -93,9 +94,13 @@ at, birlikte bakarız.
 
 ## 5. Haber videoları: YouTube Shorts ve Instagram Reels
 
-Videolar kendiliğinden üretilir (`video.yml`) ve sitede haberin üstünde oynar. Aynı videoyu
-Instagram Reels'e ve YouTube Shorts'a yollamak için aşağıdakiler gerekir. Hesap kurulu
-değilse o adım sessizce atlanır, site videoları yine çalışır.
+Videolar kendiliğinden üretilir (`video.yml`) ve sitede haberin üstünde oynar. Dört dilde de üretilir; günlük
+kota dil başınadır (her dil için en çok 2 video). Aynı videoyu Instagram Reels'e ve YouTube Shorts'a yollamak için
+aşağıdakiler gerekir. Hesabın anahtarı yoksa o hesap atlanır (paylaşım çıktısında "anahtar yok, atlandı" yazar),
+site videoları yine çalışır.
+
+**Hangi haber video alır:** hype puanı eşiğe (`sosyal/ayarlar.json` → `video.hype_esigi`, şu an 7) ulaşan haber her
+dilde görsel gönderi + Reels + Shorts alır. Eşiğin altındaki haber yalnız görsel gönderi alır.
 
 **Instagram Reels için ekstra bir şey yok:** 3. bölümdeki Instagram hesabı yeter. Sonra Claude'a
 "Reels'i aç" de (`sosyal/ayarlar.json` içinde o dilin `instagram_reel` değeri `true` olur).
@@ -124,7 +129,7 @@ birlikte bakalım**.
    - Application type: **Desktop app**.
    - Çıkan **Client ID** ve **Client secret** değerlerini bir yere kopyala (birazdan
      yapıştıracaksın).
-6. Not: yeni kanalın kısa video yükleme kotası günlük sınırlıdır; sistem günde en çok 2
+6. Not: yeni kanalın kısa video yükleme kotası günlük sınırlıdır; sistem her dil kanalına günde en çok 2
    Short yükler (`gunluk_en_fazla.youtube`).
 
 ### 5.2 Anahtarı yardımcıya ver
@@ -149,6 +154,25 @@ birlikte bakalım**.
 4. `kurulum.bat` → **Azure Speech anahtarı ekle** → anahtarı ve bölgeyi yapıştır.
    Yardımcı dener, doğruysa `AZURE_SPEECH_KEY` ve `AZURE_SPEECH_REGION` olarak GitHub'a yazar.
 5. Anahtar yoksa videolar üretilmez, site eskisi gibi çalışır.
+6. Video sesi dil başına seçilir (`sosyal/ayarlar.json` → `video.konusmaci`, dil → ses adı haritası). TR sesi
+   `tr-TR-Aydin:MAI-Voice-2.1`; EN, ES ve FR için doğal erkek nöral sesler tanımlı. Değiştirmek için o dilin
+   satırını düzelt; harita dışı kalan dil varsayılan sese düşer.
+
+## 6. Yeni dil hesabı nasıl eklenir
+
+Dil başına kod, ayar veya iş akışı değişikliği gerekmez; yalnız hesabı açıp anahtarı girersin.
+
+1. O dilin Instagram hesabını (3. bölüm) ve YouTube kanalını (5.1) aç. EN, ES, FR için `sosyal/ayarlar.json`
+   içinde `instagram`, `instagram_reel` ve `youtube` zaten `true`; X ve Reddit askıda olduğu için `false`.
+2. `kurulum.bat` → **Hesap ekle** → dili ve platformu seç, değerleri yapıştır. Yardımcı anahtarları GitHub'a şu
+   adlarla yazar (`<DİL>` = TR, EN, ES veya FR):
+   - Instagram: `IG_<DİL>_USER_ID`, `IG_<DİL>_TOKEN`
+   - YouTube: `YT_<DİL>_CLIENT_ID`, `YT_<DİL>_CLIENT_SECRET`, `YT_<DİL>_REFRESH_TOKEN`
+   - `.github/workflows/sosyal.yml` bu adların dört dil için de olanlarını zaten okur.
+3. Sonraki paylaşım çalışmasında o dilin hesabı kendiliğinden devreye girer. **Deneme çalıştırması** (`--dry-run`)
+   anahtarı olmayan hesapları "anahtar yok, atlandı" diye listeler; anahtar eklenince o satır kaybolur.
+4. Kartlar ve videolar zaten üretildiği için eski görsellerin yeniden üretilmesi gerekmez. Paylaşım penceresi
+   (son 3 gün) içindeki haberler yeni hesaba da gider.
 
 ## Nasıl çalışıyor (bilgi için)
 
@@ -157,9 +181,10 @@ birlikte bakalım**.
 - Paylaşım: `.github/workflows/sosyal.yml` → `tools/sosyal_yayinla.py`.
   - Son 3 günün paylaşılmamış haberleri gider.
   - Her hesap için her çalışmada 1 gönderi, günde en çok 2 gönderi atılır
-    (`sosyal/ayarlar.json`).
+    (`sosyal/ayarlar.json`; sınır dil başınadır).
+  - Görsel gönderi her haberde gider. Reels ve Shorts yalnız hype puanı eşiğe ulaşan haberde gider.
   - Gönderilenler `sosyal/gonderilenler.json`'a yazılır, aynı haber iki kez gitmez.
-- Şifresi girilmemiş hesap atlanır. Bir hesap hata verirse GitHub sana "failed" e-postası
+- Anahtarı girilmemiş hesap atlanır ("anahtar yok, atlandı"). Bir hesap hata verirse GitHub sana "failed" e-postası
   atar; o e-postayı Claude'a göster.
 - Videolar: `.github/workflows/video.yml` yeni haberler için `tools/video_uret.py` ile video üretir ve
   `data/videolar.json`'a yazar. Paylaşım yalnız video hazır olunca (`sosyal.yml`) Reels/Shorts olarak gider.
