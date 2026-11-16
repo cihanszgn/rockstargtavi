@@ -1,0 +1,143 @@
+/* Ortak yapı: sahne yerleşimleri. Renkler paletten (--bg, --ana, --vurgu ...), kalıp paketten (temalar.css) gelir.
+   Güvenli alan: okunur yazı üstten 220 px, alttan 420 px (y ≤ 1500) içinde; alt yarıda sağdan 150 px boş (x ≤ 930).
+   İçerik sütunu .ic: x 54–930, y 288–1246 (güvenli alanın ~%75'i); altyazı 1262–1452; üst 220 ve alt 420 yalnız süs/doku.
+   Ön plan öğeleri data-on işaretlidir; doluluk denetimi bunların birleşik kutusunu ölçer. */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#000}
+body{font-family:var(--f-b)}
+#root{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--zemin);color:var(--yz);font-family:var(--f-b);font-weight:800}
+#cam{position:absolute;inset:0}
+#zemin,#dekor,.sc{position:absolute;left:0;top:0;width:1080px;height:1920px}
+#zemin{overflow:hidden}
+#dekor{overflow:hidden;pointer-events:none}
+.sc{overflow:hidden}
+.ic{position:absolute;left:54px;top:288px;width:876px;height:958px;display:flex;flex-direction:column;gap:18px}
+.d{font-family:var(--f-d);font-weight:var(--f-d-w);text-transform:var(--f-d-tt);letter-spacing:var(--f-d-ls);line-height:var(--f-d-lh)}
+.b{font-family:var(--f-b);font-weight:900;text-transform:uppercase;letter-spacing:.02em;line-height:1.05}
+.fit{overflow:hidden;overflow-wrap:normal}
+html[lang=zh] .fit,html[lang=zh] .cap{word-break:break-all;line-break:strict}
+html[lang=zh] .d,html[lang=zh] .b{letter-spacing:0;text-transform:none}
+.dekor-yazi{position:absolute;white-space:nowrap;font-family:var(--f-d);font-weight:var(--f-d-w);text-transform:var(--f-d-tt);line-height:1;pointer-events:none}
+
+/* ortak ögeler */
+.chip{display:inline-flex;align-items:center;height:62px;padding:0 24px;font-family:var(--f-b);font-weight:900;font-size:36px;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;max-width:100%}
+.c-tur{background:var(--vurgu);color:var(--vurgu-yazi)}
+.c-alt{background:var(--chip2);color:var(--chip2-yazi)}
+.etiket-satir{display:flex;gap:14px;align-items:center;flex:none;height:70px;overflow:hidden}
+.sh{flex:none;padding:14px 28px 16px;max-height:200px;line-height:1.02}
+.yuva{position:relative;flex:1;min-height:0;min-width:0;border:3px dashed rgba(128,128,128,.32);border-radius:14px}
+.yuva>*{position:absolute;left:0;top:0;right:0;bottom:0;width:auto;height:auto}
+
+/* ---- baslik: tam kare görsel + dev başlık ---- */
+.bk-bg{position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:hidden;pointer-events:none}
+.bk-img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover}
+.bk-ov{position:absolute;left:0;top:0;width:100%;height:100%}
+.bk-dev{position:absolute;left:54px;top:420px;width:876px;height:760px;text-align:center;line-height:.9;word-break:normal}
+.ic.t-baslik{justify-content:space-between;gap:0}
+.bk-ust{flex:none;display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+.bk-sol{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.bk-tarih{display:inline-block;padding:8px 20px;font-size:44px;white-space:nowrap}
+.bk-damga{flex:none;max-width:470px;height:122px;padding:10px 26px;font-size:96px;white-space:nowrap;display:block;line-height:1.05;text-align:center}
+.bk-bas{flex:none;position:relative;isolation:isolate;max-height:700px;overflow:visible;font-size:190px;line-height:.98;padding:0 0 .04em;width:100%;overflow-wrap:break-word}
+.bk-bas.fit{overflow:hidden}
+.bk-bas .bw{display:inline-block;position:relative;z-index:1}
+.bg{position:relative;display:inline-block}
+.bg .hl{position:absolute;left:-.08em;right:-.08em;top:.1em;bottom:.02em;z-index:0;background:var(--vurgu-bg);transform:scaleX(0);transform-origin:0 50%}
+.bg.on .bw{color:var(--vurgu-yazi2)}
+.bk-tuslar{flex:none;display:flex;gap:14px;height:86px;align-items:center;margin-top:14px}
+.bk-tuslar kbd{display:inline-flex;align-items:center;justify-content:center;min-width:86px;height:86px;padding:0 16px;font-size:52px;font-family:var(--f-d);font-weight:var(--f-d-w)}
+
+/* ---- kaynak ---- */
+.kn-etiket{flex:none;align-self:flex-start;height:auto;padding:8px 30px;font-size:72px;line-height:1.05;min-height:96px}
+.kn-bar{flex:none;display:flex;align-items:center;gap:14px;height:96px;padding:0 26px;font-size:46px;overflow:hidden;white-space:nowrap}
+.kn-bar b{font-weight:900}
+.kn-bar s{text-decoration:none;opacity:.7;overflow:hidden;text-overflow:ellipsis}
+.kn-ad{flex:1.2 1 0;min-height:0;padding:10px 26px;display:block}
+.kn-alinti{flex:1 1 0;min-height:0;padding:22px 30px;line-height:1.1;font-family:var(--f-q);font-weight:var(--f-q-w);text-transform:none}
+.kn-tarih{flex:none;height:70px;padding:8px 0;font-size:56px;line-height:1.1}
+
+/* ---- maddeler ---- */
+.mp-liste{flex:1;min-height:0;display:flex;flex-direction:column;gap:18px}
+.mp-oge{display:flex;align-items:center;gap:26px;padding:0 30px}
+.mp-no{flex:none;width:120px;text-align:center;font-size:110px;line-height:1}
+.mp-liste.n4 .mp-no,.mp-liste.n5 .mp-no,.mp-liste.n6 .mp-no{width:92px;font-size:84px}
+.mp-metin{flex:1;min-width:0;font-size:120px;line-height:1.04;max-height:100%}
+
+/* ---- yama_fark ---- */
+.yf-liste{flex:1;min-height:0;display:flex;flex-direction:column;gap:18px}
+.yf-satir{padding:16px 26px;display:flex;flex-direction:column;gap:6px;overflow:hidden}
+.yf-ad{flex:none;font-size:50px;height:60px;overflow:hidden;white-space:nowrap;line-height:1.2}
+.yf-degerler{flex:1;min-height:0;display:flex;align-items:center;gap:18px}
+.yf-eski{flex:none;font-size:100px;text-decoration:line-through;text-decoration-thickness:8px;opacity:.7;line-height:1}
+.yf-ok{flex:none;width:72px;height:48px}
+.yf-yeni{flex:1 1 0;min-width:0;font-size:290px;line-height:1;white-space:nowrap;min-height:0;max-height:100%}
+.yf-birim{flex:none;font-size:46px;align-self:flex-end;margin-bottom:14px}
+.yf-bar{flex:none;position:relative;height:26px}
+.yf-bar i{position:absolute;left:0;height:12px}
+.yf-bar i:first-child{top:0}.yf-bar i:last-child{top:14px;height:12px}
+.yf-liste.n3 .yf-satir,.yf-liste.n4 .yf-satir{flex-direction:row;align-items:center;gap:20px;padding:10px 24px}
+.yf-liste.n3 .yf-ad,.yf-liste.n4 .yf-ad{white-space:normal;width:210px;height:auto;max-height:100%;font-size:46px;line-height:1.05}
+.yf-liste.n3 .yf-bar,.yf-liste.n4 .yf-bar{display:none}
+.yf-liste.n3 .yf-eski{font-size:80px}.yf-liste.n3 .yf-ok{width:52px}
+.yf-liste.n4 .yf-eski{font-size:64px}.yf-liste.n4 .yf-ok{width:44px}
+
+/* ---- platform ---- */
+.pf-rozetler{flex:none;display:flex;flex-wrap:wrap;gap:14px}
+.pf-rozet{height:104px;padding:0 34px;display:flex;align-items:center;font-size:56px;white-space:nowrap}
+.pf-rozetler.solo{flex:1;min-height:0;flex-direction:column;flex-wrap:nowrap}
+.pf-rozetler.solo .pf-rozet{flex:1;height:auto;min-height:0;justify-content:center;font-size:130px;padding:0 30px}
+.pf-sayilar{flex:1;min-height:0;display:flex;flex-direction:column;gap:16px}
+.pf-kutu{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:10px 30px}
+.pf-deger{flex:1.2 1 0;min-width:0;font-size:280px;line-height:1;white-space:nowrap;text-align:left;max-height:100%}
+.pf-etk{flex:1 1 0;min-width:0;font-size:54px;text-align:right;line-height:1.05;max-height:100%}
+.pf-not{flex:none;font-size:56px;line-height:1.1;padding:18px 26px;max-height:200px}
+
+/* ---- tarih ---- */
+.tr-ust{flex:1 1 0;min-height:0;display:flex;align-items:center;gap:22px;overflow:visible}
+.tr-buyuk{flex:1 1 0;min-width:0;font-size:420px;line-height:.9;white-space:nowrap;max-height:100%}
+.tr-yan{flex:none;display:flex;flex-direction:column;gap:6px;width:300px}
+.tr-ay{font-size:150px;line-height:1;white-space:nowrap}
+.tr-yil{font-size:60px;line-height:1.05}
+.tr-takvim{flex:none;padding:10px 14px 12px;display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.tr-takvim span{height:50px;display:flex;align-items:center;justify-content:center;font-size:36px}
+.tr-takvim .hf{height:38px;font-size:28px;opacity:.75}
+.tr-not{flex:none;font-size:56px;line-height:1.1;max-height:150px;padding:10px 0}
+
+/* ---- fiyat ---- */
+.fy-etiket{flex:2.2 1 0;min-height:0;font-size:330px;line-height:.95;white-space:nowrap;padding:0 22px}
+.fy-eski{flex:none;font-size:100px;text-decoration:line-through;text-decoration-thickness:9px;opacity:.75;line-height:1.05}
+.fy-yeni{flex:1.5 1 0;min-height:0;font-size:300px;line-height:.95;white-space:nowrap;padding:0 22px}
+.fy-rozet{position:absolute;right:0;top:0;width:230px;height:230px;display:flex;align-items:center;justify-content:center;font-size:84px;transform:rotate(10deg)}
+.fy-bitis{flex:none;align-self:flex-start;padding:10px 26px;font-size:60px;height:auto;min-height:84px}
+.fy-magaza{flex:none;display:flex;flex-wrap:wrap;gap:14px;align-content:flex-start}
+.fy-magaza span{height:84px;padding:0 26px;display:flex;align-items:center;font-size:50px}
+
+/* ---- kapanis ---- */
+.ic.t-kapanis{gap:14px}
+.kp-ust{flex:none;height:var(--kp-u,470px);display:flex;flex-direction:column;gap:10px}
+.kp-cagri{flex:1 1 0;min-height:0;font-size:210px;line-height:.96}
+.kp-alt{flex:none;font-size:60px;line-height:1.1;height:130px}
+.kp-sat{flex:1 1 0;min-height:0;display:flex;gap:14px;align-items:stretch}
+.kp-sol{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:flex-end;gap:12px}
+.kp-site{flex:none;height:var(--kp-s,130px);font-size:120px;line-height:1.05;white-space:nowrap}
+.kp-adres{flex:none;height:var(--kp-a,112px);display:flex;align-items:center;padding:0 30px;font-size:84px;white-space:nowrap}
+.kp-mas{flex:none;width:380px}
+.mas-zemin{position:absolute;left:-8%;right:-8%;top:6%;bottom:-2%}
+#mas{position:absolute}
+
+/* HUD */
+#hud{position:absolute;left:0;top:0;width:1080px;height:1920px;pointer-events:none}
+#prog{position:absolute;left:54px;top:52px;width:972px;height:14px;display:flex;gap:6px}
+#prog i{flex:1;background:var(--ilerleme-bos);position:relative;overflow:hidden}
+#prog i b{position:absolute;left:0;top:0;bottom:0;width:100%;background:var(--ilerleme);transform:scaleX(0);transform-origin:0 50%}
+#logo{position:absolute;left:54px;top:224px;display:flex;gap:6px;align-items:center;height:56px;font-family:var(--f-d);font-weight:var(--f-d-w);font-size:38px;text-transform:uppercase}
+#logo kbd{display:inline-flex;align-items:center;justify-content:center;height:48px;min-width:48px;padding:0 12px;font-family:inherit;font-size:32px;background:var(--logo-bg);color:var(--logo-yazi)}
+#logo span{padding:0 10px;color:var(--logo-ad)}
+#sub{position:absolute;left:70px;top:1262px;width:860px;height:190px;display:flex;align-items:center;justify-content:center}
+#sub .part{position:absolute;left:0;top:0;width:860px;height:190px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;opacity:0}
+#sub .pl{white-space:nowrap;font-family:var(--f-c);font-weight:var(--f-c-w);text-transform:var(--f-c-tt);font-size:74px;line-height:1.12;color:var(--alt-yazi);text-shadow:var(--alt-golge)}
+html[lang=zh] #sub .pl{white-space:nowrap}
+#sub .w{display:inline-block;padding:0 .1em;margin:0 .02em;white-space:pre}
+#gecis{position:absolute;left:0;top:0;width:1080px;height:1920px;pointer-events:none;overflow:hidden}
+#gecis div{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.dk{position:absolute}

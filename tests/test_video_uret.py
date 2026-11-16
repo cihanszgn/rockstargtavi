@@ -2,6 +2,7 @@ import copy
 import json
 import os
 import pathlib
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -679,10 +680,10 @@ class HypeTests(unittest.TestCase):
             x = haber()
             x['otomasyon'] = {'hype': 3}
             icerik.write_text(json.dumps([x], ensure_ascii=False), encoding='utf-8')
-            self.assertEqual(v.bekleyenler('tr', bugun=bugun, cikti=lambda m: None), [])
+            self.assertEqual(v.bekleyenler('tr', bugun=bugun, cikti=lambda m: None, motor='remotion'), [])
             x['otomasyon']['hype'] = 7
             icerik.write_text(json.dumps([x], ensure_ascii=False), encoding='utf-8')
-            self.assertEqual(v.bekleyenler('tr', bugun=bugun, cikti=lambda m: None), [KIMLIK])
+            self.assertEqual(v.bekleyenler('tr', bugun=bugun, cikti=lambda m: None, motor='remotion'), [KIMLIK])
 
 
 class Ortam:
@@ -727,14 +728,15 @@ def durdur(komut, **kw):
 
 class UretTests(unittest.TestCase):
     def setUp(self):
-        self.k = v.anahtar(haber(), 'tr', senaryo(), v.seslendirici('edge', '', 'tr').ayar())
+        # Bu sınıf eski (Remotion) yolun anahtarını sınar; Hyperframes anahtarı tests/test_video_hf.py'de.
+        self.k = v.anahtar(haber(), 'tr', senaryo(), v.seslendirici('edge', '', 'tr', KIMLIK).ayar())
 
     def test_hazir_video_yeniden_uretilmez(self):
         with tempfile.TemporaryDirectory() as t, Ortam(t, manifest={'surum': 1, 'taban': v.TABAN,
                                                                      'videolar': {KIMLIK: {'tr': kayit(self.k)}}}), \
                 patch.object(v, '_calistir', durdur):
             mesaj = []
-            sonuc = v.uret(KIMLIK, 'tr', yukle=True, cikti=mesaj.append)
+            sonuc = v.uret(KIMLIK, 'tr', yukle=True, cikti=mesaj.append, motor='remotion')
         self.assertEqual(sonuc['anahtar'], self.k)
         self.assertIn(f'atlandı: {KIMLIK} tr zaten hazır (anahtar {self.k})', mesaj)
         self.assertIn('yükleme atlandı: sosyal/ayarlar.json içinde video.yukleme_hedefi boş', mesaj)
@@ -744,7 +746,7 @@ class UretTests(unittest.TestCase):
                                                                      'videolar': {KIMLIK: {'tr': kayit('eskieskieski')}}}), \
                 patch.object(v, '_calistir', durdur), patch.object(v.shutil, 'which', return_value='uv'):
             with self.assertRaises(Durdu) as c:
-                v.uret(KIMLIK, 'tr', cikti=lambda m: None)
+                v.uret(KIMLIK, 'tr', cikti=lambda m: None, motor='remotion')
             komut = c.exception.args[0]
             girdi = json.loads((pathlib.Path(t) / 'tmp' / 'ses').glob('*/tts-girdi.json').__next__().read_text('utf-8'))
         self.assertIn('edge-tts==7.3.1', komut)
@@ -754,15 +756,15 @@ class UretTests(unittest.TestCase):
     def test_bekleyenler_ve_gunluk_sinir(self):
         bugun = date(2026, 11, 16)
         with tempfile.TemporaryDirectory() as t, Ortam(t, manifest={'surum': 1, 'taban': v.TABAN, 'videolar': {}}):
-            self.assertEqual(v.bekleyenler('tr', bugun=bugun, cikti=lambda m: None), [KIMLIK])
-            self.assertEqual(v.bekleyenler('tr', bugun=date(2026, 11, 25), cikti=lambda m: None), [])
+            self.assertEqual(v.bekleyenler('tr', bugun=bugun, cikti=lambda m: None, motor='remotion'), [KIMLIK])
+            self.assertEqual(v.bekleyenler('tr', bugun=date(2026, 11, 25), cikti=lambda m: None, motor='remotion'), [])
         dolu = {'surum': 1, 'taban': v.TABAN, 'videolar': {'baska-haber': {'tr': kayit('aaaaaaaaaaaa', '2026-11-16')}}}
         with tempfile.TemporaryDirectory() as t, Ortam(t, ayar={'ses': 'edge', 'gunluk_en_fazla': 1}, manifest=dolu):
-            self.assertEqual(v.bekleyenler('tr', gunluk=True, bugun=bugun, cikti=lambda m: None), [])
-            self.assertEqual(v.bekleyenler('tr', gunluk=False, bugun=bugun, cikti=lambda m: None), [KIMLIK])
+            self.assertEqual(v.bekleyenler('tr', gunluk=True, bugun=bugun, cikti=lambda m: None, motor='remotion'), [])
+            self.assertEqual(v.bekleyenler('tr', gunluk=False, bugun=bugun, cikti=lambda m: None, motor='remotion'), [KIMLIK])
         hazir = {'surum': 1, 'taban': v.TABAN, 'videolar': {KIMLIK: {'tr': kayit(self.k)}}}
         with tempfile.TemporaryDirectory() as t, Ortam(t, manifest=hazir):
-            self.assertEqual(v.bekleyenler('tr', bugun=bugun, cikti=lambda m: None), [])
+            self.assertEqual(v.bekleyenler('tr', bugun=bugun, cikti=lambda m: None, motor='remotion'), [])
 
     def test_kota_dil_basina_sayilir(self):
         # Türkçede kota dolu; İngilizce kendi kotasını bağımsız kullanır.
@@ -772,8 +774,8 @@ class UretTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as t, Ortam(t, ayar={'ses': 'edge', 'gunluk_en_fazla': 2}, manifest=dolu):
             self.assertEqual(v.bugun_uretilen_dil(v.manifest_oku(), 'tr', bugun), 2)
             self.assertEqual(v.bugun_uretilen_dil(v.manifest_oku(), 'en', bugun), 0)
-            self.assertEqual(v.bekleyenler('tr', gunluk=True, bugun=bugun, cikti=lambda m: None), [])
-            self.assertEqual(v.bekleyenler('tr', gunluk=False, bugun=bugun, cikti=lambda m: None), [KIMLIK])
+            self.assertEqual(v.bekleyenler('tr', gunluk=True, bugun=bugun, cikti=lambda m: None, motor='remotion'), [])
+            self.assertEqual(v.bekleyenler('tr', gunluk=False, bugun=bugun, cikti=lambda m: None, motor='remotion'), [KIMLIK])
 
     def test_dogrula_cikis_kodu(self):
         with tempfile.TemporaryDirectory() as t, Ortam(t):
@@ -833,11 +835,15 @@ class SeslendirmeTests(unittest.TestCase):
         if not v.AYARLAR.exists():
             self.skipTest('sosyal/ayarlar.json yok')
         ayar = v.video_ayari()
-        self.assertEqual(set(ayar['konusmaci']), {'tr', 'en', 'es', 'fr'}, 'her dilin kendi konuşmacısı var')
-        for dil, ad in ayar['konusmaci'].items():
-            self.assertEqual(v.seslendirici(ayar['ses'], ayar['konusmaci'], dil).konusmaci, ad,
-                             f'{dil}: ayardaki ses varsayılana düşmeden kullanılır')
-        self.assertTrue(ayar['konusmaci']['tr'].startswith('tr-TR-Aydin:'), 'Türkçe ses değişmedi')
+        self.assertEqual(set(ayar['konusmaci']), {'tr', 'en', 'es', 'fr', 'de', 'nl', 'zh'},
+                         'her dilin kendi 3 sesli listesi var')
+        for dil, liste in ayar['konusmaci'].items():
+            self.assertEqual(len(liste), 3, f'{dil}: üç ses')
+            self.assertEqual(len(set(liste)), 3, f'{dil}: sesler birbirinden farklı')
+            for hid in ('a', 'b', 'c', 'd', 'e', 'f'):
+                self.assertIn(v.seslendirici(ayar['ses'], ayar['konusmaci'], dil, hid).konusmaci, liste,
+                              f'{dil}: ayardaki ses varsayılana düşmeden kullanılır')
+        self.assertEqual(ayar['konusmaci']['tr'][0], 'tr-TR-Aydin:MAI-Voice-2.1', 'Türkçe mevcut ses değişmedi')
 
     def test_konusmaci_dil_basina_secilir(self):
         harita = {'tr': 'tr-TR-Aydin:MAI-Voice-2.1', 'en': 'en-US-GuyNeural', 'es': 'es-ES-AlvaroNeural'}
@@ -848,7 +854,7 @@ class SeslendirmeTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as t:
             yol = pathlib.Path(t) / 'a.json'
             yol.write_text(json.dumps({'video': {'konusmaci': 'tr-TR-Aydin:MAI-Voice-2.1'}}), encoding='utf-8')
-            self.assertEqual(v.video_ayari(yol)['konusmaci'], {'tr': 'tr-TR-Aydin:MAI-Voice-2.1'},
+            self.assertEqual(v.video_ayari(yol)['konusmaci'], {'tr': ['tr-TR-Aydin:MAI-Voice-2.1']},
                              'eski tek değerli biçim kendi dilinin sesi olarak okunur')
 
     def test_azure_sinirsiz_ses_zamanlari_tanimadan_alir(self):
@@ -1158,7 +1164,7 @@ class GuvenliAlanTests(unittest.TestCase):
         self.addCleanup(p.stop)
 
     def denetle(self, olcumler):
-        r = subprocess.run([v._node(), '--input-type=module', '-e', GUVENLI_KOSUCU, str(v.VIDEO / 'guvenli.mjs')],
+        r = subprocess.run([shutil.which('node'), '--input-type=module', '-e', GUVENLI_KOSUCU, str(v.VIDEO / 'guvenli.mjs')],
                            input=json.dumps({'olcumler': olcumler, 'guvenli': self.g}), capture_output=True,
                            text=True, encoding='utf-8', timeout=60)
         self.assertEqual(r.returncode, 0, r.stderr)
@@ -1205,7 +1211,7 @@ class GuvenliAlanTests(unittest.TestCase):
             pathlib.Path(komut[komut.index('--denetle') + 1]).write_text(json.dumps(rapor), encoding='utf-8')
             return subprocess.CompletedProcess(komut, 3, '', '')
 
-        with tempfile.TemporaryDirectory() as t, patch.object(v, '_calistir', kos):
+        with tempfile.TemporaryDirectory() as t, patch.object(v, '_calistir', kos), patch.object(v, '_node', lambda: 'node'):
             with self.assertRaises(v.UretimHatasi) as c:
                 v.guvenli_denetle(pathlib.Path(t), cikti=lambda m: None)
             self.assertIn("2 ihlal ('Steam' sol 2 kare, en çok 7.5 px)", str(c.exception))

@@ -155,9 +155,13 @@ birlikte bakalım**.
 4. `kurulum.bat` → **Azure Speech anahtarı ekle** → anahtarı ve bölgeyi yapıştır.
    Yardımcı dener, doğruysa `AZURE_SPEECH_KEY` ve `AZURE_SPEECH_REGION` olarak GitHub'a yazar.
 5. Anahtar yoksa videolar üretilmez, site eskisi gibi çalışır.
-6. Video sesi dil başına seçilir (`sosyal/ayarlar.json` → `video.konusmaci`, dil → ses adı haritası). TR sesi
-   `tr-TR-Aydin:MAI-Voice-2.1`; EN, ES ve FR için doğal erkek nöral sesler tanımlı. Değiştirmek için o dilin
-   satırını düzelt; harita dışı kalan dil varsayılan sese düşer.
+6. Video sesi dil başına **3 sesli liste**dir (`sosyal/ayarlar.json` → `video.konusmaci`, dil → ses listesi; her listede
+   sırayla erkek, **kadın**, erkek). Hangi sesin okuyacağı haber kimliğinden türeyen sabit sayıyla seçilir: aynı haber
+   her çalışmada aynı sesi alır, farklı haberler üç sese dağılır. TR listesi `tr-TR-Aydin:MAI-Voice-2.1` (mevcut ses),
+   `tr-TR-EmelNeural` (kadın), `tr-TR-AhmetNeural`. Hazır diller: tr, en, es, fr, de, nl, zh. Değiştirmek için o dilin
+   satırını düzelt; listede dili tutmayan ses ya da boş liste varsayılan sese düşer. Yerel önizlemede (`--ses edge`)
+   Edge'de olmayan MAI sesi atlanır. Azure'da bölgenin ses adını tanımadığı durum (örn. kaldırılmış ad) üretimi durdurur;
+   ayarda adı değiştirmek yeter.
 
 ## 6. Yeni dil hesabı nasıl eklenir
 

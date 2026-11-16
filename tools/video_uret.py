@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Haber videosu: senaryo doğrulama, seslendirme, kelime zamanlama, Remotion render ve manifest.
+"""Haber videosu: senaryo doğrulama, seslendirme, kelime zamanlama, Hyperframes (varsayılan) ya da Remotion render ve manifest.
 
 Komutlar:
   py tools/video_uret.py dogrula --id ID --dil tr
   py tools/video_uret.py uret --id ID --dil tr [--ses azure|edge] [--yukle] [--zorla]
+                              [--motor hyperframes|remotion] [--onizleme KLASOR [--tema PAKET]]
   py tools/video_uret.py bekleyenler [--dil tr] [--gunluk]
 
 Senaryo `video/senaryo/<haber id>-<dil>.json`, çıktı `video/cikti/` (git dışı), manifest `data/videolar.json`.
@@ -29,6 +30,8 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlsplit
 
+import video_hf
+
 ROOT = Path(__file__).resolve().parents[1]
 ICERIK = ROOT / "data" / "icerik.json"
 MANIFEST = ROOT / "data" / "videolar.json"
@@ -42,16 +45,19 @@ GENISLIK_YOLU = VIDEO / "src" / "olcu" / "genislik.json"
 YARDIMCI = Path(__file__).with_name("video_ses_yardimci.py")
 REMOTION_CLI = VIDEO / "node_modules" / "@remotion" / "cli" / "remotion-cli.js"
 
-SABLON_SURUMU = 4
+SABLON_SURUMU = 5
 # 2. sürümde şablonların görünüşü, 3. sürümde kapak resmi, 4. sürümde güvenli alanlar (platform arayüzünün altında
-# yazı kalmaz) değişti; senaryo verisi aynı kaldı: eski sürümle yazılmış senaryolar da okunur.
-OKUNAN_SURUMLER = (1, 2, 3, 4)
+# yazı kalmaz) değişti; 5. sürümde video motoru Hyperframes oldu ve habere özel tema geldi (senaryoya isteğe bağlı
+# "tema" alanı eklendi). Senaryo verisi aynı kaldı: eski sürümle yazılmış senaryolar da okunur.
+OKUNAN_SURUMLER = (1, 2, 3, 4, 5)
 TABAN = "https://medya.ctrl-agame.com/v/"
 TZ = timezone(timedelta(hours=3))
 EN_KISA, EN_UZUN = 20.0, 80.0
 KELIME_ALT, KELIME_UST = 60, 110  # Türkçe (sondan eklemeli: az kelime, çok harf)
 # en/es/fr aynı sürede ~1,5 kat kelime söyler; uyarı eşiği dile göre
-KELIME_ARALIGI = {"tr": (60, 110), "en": (90, 175), "es": (90, 175), "fr": (90, 175)}
+# de/nl/zh: Remotion günlerinden kalan ölçü yok; en/es/fr ile aynı (zh boşluksuz yazılır: kelime sayısı güvenilmez).
+KELIME_ARALIGI = {"tr": (60, 110), "en": (90, 175), "es": (90, 175), "fr": (90, 175), "de": (80, 160), "nl": (90, 175),
+                  "zh": (1, 400)}
 ONDEN = 0.25      # sahne görüntüsü sesten biraz önce gelir
 KUYRUK = 1.4      # son sözden sonra kapanış için kalan süre
 # Kapak resmi (site oynatıcısının posteri, Reels kapağı, YouTube küçük resmi) başlık sahnesinin bir karesidir. Süreler
@@ -66,7 +72,8 @@ HIZ = "+0%"
 DURAK_DB, DURAK_SN = -40, 0.15  # konuşma arası sayılan sessizlik: bu düzeyin altında, en az bu kadar süren
 SES_PAKETLERI = {"edge": "edge-tts==7.3.1", "azure": "azure-cognitiveservices-speech==1.53.1"}
 VARSAYILAN_KONUSMACI = {"tr": "tr-TR-AhmetNeural", "en": "en-US-AndrewNeural",
-                        "fr": "fr-FR-HenriNeural", "es": "es-ES-AlvaroNeural"}
+                        "fr": "fr-FR-HenriNeural", "es": "es-ES-AlvaroNeural", "de": "de-DE-ChristophNeural",
+                        "nl": "nl-NL-MaartenNeural", "zh": "zh-CN-YunxiNeural"}
 SABLONLAR = ("baslik", "kaynak", "maddeler", "yama_fark", "tarih", "fiyat", "platform", "kapanis")
 SIMGELER = ("haber", "guncelleme", "indirim", "ucretsiz", "cikis", "kaynak", "liste", "yama", "takvim",
             "fiyat", "platform", "site")
@@ -78,6 +85,9 @@ TUR_ETIKET = {
     "fr": {"haber": "ACTU", "guncelleme": "MISE À JOUR", "indirim": "PROMO", "ucretsiz": "GRATUIT", "cikis": "SORTIE"},
     "es": {"haber": "NOTICIA", "guncelleme": "ACTUALIZACIÓN", "indirim": "OFERTA", "ucretsiz": "GRATIS",
            "cikis": "LANZAMIENTO"},
+    "de": {"haber": "NEWS", "guncelleme": "UPDATE", "indirim": "ANGEBOT", "ucretsiz": "GRATIS", "cikis": "RELEASE"},
+    "nl": {"haber": "NIEUWS", "guncelleme": "UPDATE", "indirim": "AANBIEDING", "ucretsiz": "GRATIS", "cikis": "RELEASE"},
+    "zh": {"haber": "资讯", "guncelleme": "更新", "indirim": "折扣", "ucretsiz": "免费", "cikis": "发售"},
 }
 AYLAR = {
     "tr": ["ocak", "şubat", "mart", "nisan", "mayıs", "haziran", "temmuz", "ağustos", "eylül", "ekim", "kasım", "aralık"],
@@ -87,9 +97,16 @@ AYLAR = {
            "novembre", "décembre"],
     "es": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre",
            "noviembre", "diciembre"],
+    "de": ["januar", "februar", "märz", "april", "mai", "juni", "juli", "august", "september", "oktober", "november",
+           "dezember"],
+    "nl": ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober",
+           "november", "december"],
+    "zh": ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
 }
-HAFTA = {"tr": "PSÇPCCP", "en": "MTWTFSS", "fr": "LMMJVSD", "es": "LMXJVSD"}
-KAYNAK_ETIKET = {"tr": "RESMÎ KAYNAK", "en": "OFFICIAL SOURCE", "fr": "SOURCE OFFICIELLE", "es": "FUENTE OFICIAL"}
+HAFTA = {"tr": "PSÇPCCP", "en": "MTWTFSS", "fr": "LMMJVSD", "es": "LMXJVSD", "de": "MDMDFSS", "nl": "MDWDVZZ",
+         "zh": "一二三四五六日"}
+KAYNAK_ETIKET = {"tr": "RESMÎ KAYNAK", "en": "OFFICIAL SOURCE", "fr": "SOURCE OFFICIELLE", "es": "FUENTE OFICIAL",
+                 "de": "OFFIZIELLE QUELLE", "nl": "OFFICIËLE BRON", "zh": "官方来源"}
 SAYI = re.compile(r"\d+(?:[.,]\d+)*")
 NOKTALAMA = "\"'“”‘’()[]{}.,;:!?…«»"
 KESMELER = ("'", "’")
@@ -129,6 +146,25 @@ DIL_KURALI = {
         # d', l', qu' ... kelime başına yapışır ve ayrı okunmaz: "l'opération" tek sözlü birimdir.
         "elision": ("qu", "jusqu", "lorsqu", "puisqu", "d", "l", "j", "n", "s", "c", "m", "t"),
         "kapanis": "Tout est sur notre site, Control A Game.",
+    },
+    "de": {
+        "bagli_son": frozenset("der die das den dem des ein eine einen einem einer und oder aber von zu in auf für mit "
+                               "bei nach aus an als wie".split()),
+        "bagli_bas": frozenset(),
+        "elision": (),
+        "kapanis": "Alles auf unserer Seite, Control A Game.",
+    },
+    "nl": {
+        "bagli_son": frozenset("de het een en of maar van te in op voor met bij naar uit aan als dan dat deze die".split()),
+        "bagli_bas": frozenset(),
+        "elision": (),
+        "kapanis": "Alles op onze site, Control A Game.",
+    },
+    "zh": {
+        "bagli_son": frozenset(),
+        "bagli_bas": frozenset(),
+        "elision": (),
+        "kapanis": "全部内容请访问我们的网站 Control A Game。",
     },
 }
 BAGLI_SON = DIL_KURALI["tr"]["bagli_son"]
@@ -382,7 +418,7 @@ def _ogeler(D: Denetci, ham: list, yol: str, kelimeler: list[str], alan: str, en
 
 def _ay_bul(ad: str, dil: str) -> int | None:
     ad = ad.casefold()
-    for d in (dil, "tr", "en", "fr", "es"):
+    for d in (dil, "tr", "en", "fr", "es", "de", "nl"):
         if ad in AYLAR[d]:
             return AYLAR[d].index(ad) + 1
     return None
@@ -439,6 +475,10 @@ def tarih_metni(iso: str, dil: str) -> str:
         return tr_upper(f"{ay} {g.day}, {g.year}", dil)
     if dil == "es":
         return tr_upper(f"{g.day} de {ay} de {g.year}", dil)
+    if dil == "zh":
+        return f"{g.year}年{g.month}月{g.day}日"
+    if dil == "de":
+        return tr_upper(f"{g.day}. {ay} {g.year}", dil)
     return tr_upper(f"{g.day} {ay} {g.year}", dil)
 
 
@@ -732,12 +772,37 @@ def tahmini_sure(sozlu: str, dil: str = "tr") -> float:
     return harf / HARF_HIZI.get(dil, 13.0) + rakam * 0.32 + cumle * 0.3 + KUYRUK
 
 
+RENK = re.compile(r"^#[0-9a-fA-F]{6}$")
+TEMA_PALET_ANAHTARLARI = ("bg", "ana", "ana2", "vurgu")
+TEMA_OGELERI = ("piksel", "gunbatimi", "keskin", "altigen")
+
+
+def _tema_denetle(D: "Denetci", tema) -> dict:
+    """Senaryodaki isteğe bağlı "tema": {"paket": esports|gazete|neon|kolaj, "palet": {bg|ana|ana2|vurgu: #rrggbb},
+    "oge": [piksel|gunbatimi|keskin|altigen, ...]}. Yoksa tema habere göre kendiliğinden seçilir; eski senaryolar geçerli."""
+    if tema is None:
+        return {}
+    if not isinstance(tema, dict) or not D.anahtarlar(tema, {"paket", "palet", "oge"}, "tema"):
+        D.hata("tema", "nesne olmalı: paket, palet, oge")
+        return {}
+    if "paket" in tema and tema["paket"] not in video_hf.PAKETLER:
+        D.hata("tema.paket", f"şunlardan biri olmalı: {', '.join(video_hf.PAKETLER)}")
+    palet = tema.get("palet", {})
+    if not isinstance(palet, dict) or not all(k in TEMA_PALET_ANAHTARLARI and isinstance(v, str) and RENK.match(v)
+                                              for k, v in palet.items()):
+        D.hata("tema.palet", f"{'/'.join(TEMA_PALET_ANAHTARLARI)} anahtarlı, #rrggbb renkli nesne olmalı")
+    oge = tema.get("oge", [])
+    if not isinstance(oge, list) or len(oge) > 3 or not all(o in TEMA_OGELERI for o in oge):
+        D.hata("tema.oge", f"en çok 3 öğe, şunlardan: {', '.join(TEMA_OGELERI)}")
+    return tema
+
+
 def senaryo_hazirla(senaryo, haber: dict, dil: str) -> dict:
     """Senaryoyu doğrular ve şablon verisini Remotion'a hazır biçime getirir. Hata varsa SenaryoHatasi."""
     if dil not in (haber.get("diller") or {}):
         raise SenaryoHatasi([f"dil: haberde {dil} metni yok"])
     D = Denetci(haber, dil)
-    if not D.anahtarlar(senaryo, {"id", "dil", "fps", "boyut", "sablon_surumu", "okunus", "sahneler", "ses"}, "senaryo"):
+    if not D.anahtarlar(senaryo, {"id", "dil", "fps", "boyut", "sablon_surumu", "okunus", "sahneler", "ses", "tema"}, "senaryo"):
         raise SenaryoHatasi(D.hatalar)
     if senaryo.get("id") != haber["id"]:
         D.hata("id", f"haber kimliğiyle aynı olmalı ({haber['id']})")
@@ -749,6 +814,7 @@ def senaryo_hazirla(senaryo, haber: dict, dil: str) -> dict:
         D.hata("boyut", "[1080, 1920] olmalı")
     if senaryo.get("sablon_surumu", SABLON_SURUMU) not in OKUNAN_SURUMLER:
         D.hata("sablon_surumu", f"şunlardan biri olmalı: {', '.join(map(str, OKUNAN_SURUMLER))}")
+    tema = _tema_denetle(D, senaryo.get("tema"))
     okunus = senaryo.get("okunus", {})
     if not isinstance(okunus, dict) or not all(
             isinstance(k, str) and isinstance(v, str) and k.strip() and v.strip() and len(k) <= 60 and len(v) <= 80
@@ -813,7 +879,7 @@ def senaryo_hazirla(senaryo, haber: dict, dil: str) -> dict:
     if D.hatalar:
         raise SenaryoHatasi(D.hatalar)
     return {"dil": dil, "sahneler": hazir, "tts": tts, "kelime_sayisi": kelime_sayisi,
-            "tahmini_sure": round(tahmin, 1), "uyarilar": D.uyarilar}
+            "tahmini_sure": round(tahmin, 1), "uyarilar": D.uyarilar, "tema": tema}
 
 
 def _cumle_bitir(metin: str) -> str:
@@ -1337,14 +1403,17 @@ def vtt_yaz(kelimeler: list[dict], parcalar: list[dict]) -> str:
 
 # ---------------------------------------------------------------- anahtar, manifest, ayar
 
-def anahtar(haber: dict, dil: str, senaryo, ses_ayari: dict) -> str:
-    """sha12: haber metni + senaryo + ses ayarı + şablon sürümü. Biri değişince video yeniden üretilir."""
+def anahtar(haber: dict, dil: str, senaryo, ses_ayari: dict, tema: dict | None = None) -> str:
+    """sha12: haber metni + senaryo + ses ayarı + şablon sürümü (+ Hyperframes tema girdileri). Biri değişince video
+    yeniden üretilir."""
     d = haber["diller"][dil]
     govde = {"haber": {"id": haber["id"], "tarih": haber.get("tarih"), "oyun": haber.get("oyun"),
                        "tur": haber.get("tur"), "platform": haber.get("platform"),
                        "kaynaklar": [k.get("url") for k in haber.get("kaynaklar") or []],
                        "baslik": d.get("baslik"), "ozet": d.get("ozet"), "metin": d.get("metin")},
              "senaryo": senaryo, "ses": ses_ayari, "sablon_surumu": SABLON_SURUMU}
+    if tema:
+        govde["tema"] = tema
     ham = json.dumps(govde, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(ham.encode("utf-8")).hexdigest()[:12]
 
@@ -1383,7 +1452,9 @@ def video_ayari(yol: Path | None = None) -> dict:
     harita = ayar.get("konusmaci") or {}
     if not isinstance(harita, dict):  # eski tek değerli biçim: yalnız kendi dilinin konuşmacısı olarak okunur
         harita = {str(harita)[:2].lower(): str(harita)} if harita else {}
-    return {"ses": ayar.get("ses") or "azure", "konusmaci": {str(d): str(k) for d, k in harita.items() if k},
+    # Dil başına 3 ses listesi (yeni) ya da tek ses (eski): hepsi liste olarak okunur.
+    konusmaci = {str(d): [str(x) for x in (k if isinstance(k, list) else [k]) if x] for d, k in harita.items() if k}
+    return {"ses": ayar.get("ses") or "azure", "konusmaci": konusmaci,
             "yukleme_hedefi": ayar.get("yukleme_hedefi") or "", "gunluk_en_fazla": int(ayar.get("gunluk_en_fazla", 2)),
             "hype_esigi": int(ayar.get("hype_esigi", 7))}
 
@@ -1475,16 +1546,27 @@ def tanima_sonlarini_kirp(kelimeler: list[dict], duraklar: list[tuple[float, flo
 SESLENDIRICILER = {"edge": EdgeSes, "azure": AzureSes}
 
 
-def seslendirici(ad: str, konusmaci: "str | dict", dil: str) -> Seslendirici:
-    """`konusmaci` dil → ses haritası (sosyal/ayarlar.json video.konusmaci) ya da tek ses adıdır."""
+def konusmaci_listesi(konusmaci: "str | list | dict", dil: str) -> list[str]:
+    """Ayardan dilin ses listesi: dil → liste/tek ses haritası, liste ya da tek ses kabul edilir. Ayardaki ses yalnız
+    kendi dilinde kullanılır (tr-TR sesi İngilizce metni okumasın); hiçbiri uymazsa dilin varsayılan sesi."""
+    if isinstance(konusmaci, dict):
+        konusmaci = konusmaci.get(dil) or []
+    if isinstance(konusmaci, str):
+        konusmaci = [konusmaci] if konusmaci else []
+    liste = [k for k in konusmaci if isinstance(k, str) and k.split("-")[0].lower() == dil]
+    return liste or ([VARSAYILAN_KONUSMACI[dil]] if dil in VARSAYILAN_KONUSMACI else [])
+
+
+def seslendirici(ad: str, konusmaci: "str | list | dict", dil: str, haber_id: str = "") -> Seslendirici:
+    """`konusmaci` dil → 3 sesli liste haritası (sosyal/ayarlar.json video.konusmaci), liste ya da tek ses adıdır.
+    Hangisinin okuyacağı haber kimliğinden türeyen sabit sayıyla seçilir (aynı haber her çalışmada aynı sesi alır).
+    Edge'de MAI sesi ("Ad:MAI-...") yoktur: yerel önizlemede (--ses edge) listedeki Neural seslerden biri seçilir."""
     if ad not in SESLENDIRICILER:
         raise UretimHatasi(f"bilinmeyen ses sağlayıcı: {ad!r} (edge veya azure)")
-    if isinstance(konusmaci, dict):
-        konusmaci = konusmaci.get(dil) or ""
-    # Ayardaki konuşmacı yalnız kendi dilinde kullanılır: tr-TR sesi İngilizce metni okumasın.
-    if not konusmaci or konusmaci.split("-")[0].lower() != dil:
-        konusmaci = VARSAYILAN_KONUSMACI.get(dil, "")
-    return SESLENDIRICILER[ad](konusmaci, dil)
+    secilen = video_hf.ses_sec(konusmaci_listesi(konusmaci, dil), haber_id, edge=ad == "edge")
+    if ad == "edge" and ":" in secilen:
+        secilen = VARSAYILAN_KONUSMACI.get(dil, "")
+    return SESLENDIRICILER[ad](secilen, dil)
 
 
 def olaylari_kelimeye(ham: dict) -> list[dict]:
@@ -1501,7 +1583,7 @@ def olaylari_kelimeye(ham: dict) -> list[dict]:
 
 def sessizlikler(yol: Path) -> list[tuple[float, float]]:
     """Sesteki duraklar (ffmpeg silencedetect): [(baş, bitiş)] saniye."""
-    r = _kos([_node(), str(REMOTION_CLI), "ffmpeg", "-hide_banner", "-nostats", "-i", str(yol), "-af",
+    r = _kos([*_arac("ffmpeg"), "-hide_banner", "-nostats", "-i", str(yol), "-af",
               f"silencedetect=noise={DURAK_DB}dB:d={DURAK_SN}", "-f", "null", "-"], cwd=VIDEO, timeout=300)
     bas = [float(x) for x in re.findall(r"silence_start: (-?[0-9.]+)", r.stderr)]
     bit = [float(x) for x in re.findall(r"silence_end: ([0-9.]+)", r.stderr)]
@@ -1566,14 +1648,27 @@ def _kos(komut: list[str], **kw) -> subprocess.CompletedProcess:
     return r
 
 
+def _arac(ad: str) -> list[str]:
+    """ffmpeg/ffprobe komutu: Remotion kuruluysa onun paketlisi (eski yol, aynı kodek ayarları), değilse sistemdeki."""
+    if REMOTION_CLI.exists():
+        return [_node(), str(REMOTION_CLI), ad]
+    dizin = video_hf.ffmpeg_dizini()
+    yol = Path(dizin) / (ad + (".exe" if os.name == "nt" else "")) if dizin else None
+    if yol and yol.exists():
+        return [str(yol)]
+    sistem = shutil.which(ad)
+    if not sistem:
+        raise UretimHatasi(f"{ad} bulunamadı (ffmpeg kurulu olmalı)")
+    return [sistem]
+
+
 def ffmpeg(*arg: str) -> None:
-    _kos([_node(), str(REMOTION_CLI), "ffmpeg", "-hide_banner", "-loglevel", "error", "-y", *arg], cwd=VIDEO,
-         timeout=900)
+    _kos([*_arac("ffmpeg"), "-hide_banner", "-loglevel", "error", "-y", *arg], cwd=VIDEO, timeout=900)
 
 
 def medya_bilgisi(yol: Path) -> dict:
-    r = _kos([_node(), str(REMOTION_CLI), "ffprobe", "-v", "error", "-show_entries",
-              "format=duration:stream=codec_type,width,height", "-of", "json", str(yol)], cwd=VIDEO, timeout=120)
+    r = _kos([*_arac("ffprobe"), "-v", "error", "-show_entries", "format=duration:stream=codec_type,width,height",
+              "-of", "json", str(yol)], cwd=VIDEO, timeout=120)
     ham = json.loads(r.stdout)
     video = next((s for s in ham.get("streams", []) if s.get("codec_type") == "video"), {})
     return {"sure": float(ham["format"]["duration"]), "genislik": video.get("width"), "yukseklik": video.get("height"),
@@ -1609,20 +1704,67 @@ def props_kur(haber: dict, dil: str, hazir: dict, zaman: dict) -> dict:
             "sahneler": zaman["sahneler"], "kelimeler": zaman["kelimeler"], "parcalar": zaman["parcalar"]}
 
 
+MOTORLAR = ("hyperframes", "remotion")
+
+
+def _hf_cizim(is_klasoru: Path, props: dict, haber: dict, girdi: dict, ses_yolu: Path, dosya: dict, cikti) -> dict:
+    """Hyperframes motoru: tema + proje klasörü, güvenli alan denetimi (çizimden önce), çizim, 1080p sıkıştırma, kapak.
+    Dönen: {ham, tema, crf}; 720/540 çıkışlarını ve vtt yi uret() ortak kısmı yapar."""
+    foto = video_hf.foto_hazirla(haber["id"], GECICI / "gorsel", is_klasoru / "foto.jpg", cikti)
+    tema = video_hf.tema_sec(haber, girdi, foto)
+    json_yaz(is_klasoru / "tema.json", tema)
+    cikti(f"tema: {tema['paket']} (renk kaynağı: {tema['renk']}, oyun: {tema['oyun'] or '-'})")
+    hf = video_hf.klasor_kur(is_klasoru / "hf", props, tema, ses_yolu, foto)
+    video_hf.guvenli_denetle(hf, props, is_klasoru / "denetim.json", cikti, kos=_calistir)
+    ham = is_klasoru / "ham-1080.mp4"
+    bas = time.monotonic()
+    video_hf.render(hf, ham, kos=_calistir, fps=props["fps"])
+    render_sure = time.monotonic() - bas
+    crf = video_hf.sikistir(ham, is_klasoru / dosya["mp4_1080"], kos=_calistir)
+    an = min(max(props["kapak_kare"] / props["fps"], 1.3), props["sahneler"][0]["bit"] - 0.2)
+    video_hf.kapak_cikar(is_klasoru / dosya["mp4_1080"], an, is_klasoru / dosya["kapak"], kos=_calistir)
+    return {"ham": ham, "tema": tema, "crf": crf, "render_sure": render_sure}
+
+
+def _remotion_cizim(is_klasoru: Path, ses_yolu: Path, dosya: dict, cikti) -> dict:
+    """Eski motor (--motor remotion): senaryo/ses/zamanlama aynı, çizim Remotion ile."""
+    guvenli_denetle(is_klasoru, cikti)  # çizimden önce: bozuk video hiç çizilmez
+    ham = is_klasoru / "ham-1080.mp4"
+    bas = time.monotonic()
+    _kos([_node(), str(VIDEO / "render.mjs"), "--girdi", str(is_klasoru / "zamanli.json"), "--ses", str(ses_yolu),
+          "--video", str(ham), "--kapak", str(is_klasoru / dosya["kapak"])], cwd=VIDEO, timeout=3600)
+    render_sure = time.monotonic() - bas
+    ffmpeg("-i", str(ham), "-c", "copy", "-movflags", "+faststart", str(is_klasoru / dosya["mp4_1080"]))
+    return {"ham": ham, "tema": None, "crf": None, "render_sure": render_sure}
+
+
 def uret(haber_id: str, dil: str, ses: str | None = None, yukle: bool = False, zorla: bool = False,
-         cikti=print) -> dict:
+         cikti=print, motor: str = "hyperframes", onizleme: Path | None = None, tema_paketi: str | None = None) -> dict:
+    """Videoyu üretir. onizleme=KLASOR: çıktı o klasöre yazılır; manifest (data/videolar.json) ve yükleme atlanır (yerel
+    deneme). tema_paketi yalnız onizlemede verilebilir (zorunlu paket denemesi)."""
+    if motor not in MOTORLAR:
+        raise UretimHatasi(f"bilinmeyen motor: {motor!r} ({', '.join(MOTORLAR)})")
+    if onizleme and yukle:
+        raise UretimHatasi("önizleme çıktısı yüklenmez (--onizleme ile --yukle birlikte verilmez)")
+    if tema_paketi and (not onizleme or motor != "hyperframes"):
+        raise UretimHatasi("--tema yalnız Hyperframes önizlemesinde (--onizleme) verilebilir")
     ayar = video_ayari()
-    haber = haber_bul(haber_id)
+    icerik = haberler()
+    haber = haber_bul(haber_id, icerik)
     senaryo = senaryo_oku(haber_id, dil)
     hazir = senaryo_hazirla(senaryo, haber, dil)
     for u in hazir["uyarilar"]:
         cikti(f"uyarı: {u}")
-    sesci = seslendirici(ses or ayar["ses"], ayar["konusmaci"], dil)
-    k = anahtar(haber, dil, senaryo, sesci.ayar())
+    sesci = seslendirici(ses or ayar["ses"], ayar["konusmaci"], dil, haber_id)
+    try:
+        girdi = video_hf.tema_girdisi(haber, senaryo, icerik, tema_paketi) if motor == "hyperframes" else None
+    except video_hf.TemaHatasi as e:
+        raise UretimHatasi(str(e)) from e
+    k = anahtar(haber, dil, senaryo, sesci.ayar(), video_hf.anahtar_eki(girdi) if girdi else None)
     m = manifest_oku()
     mevcut = m["videolar"].get(haber_id, {}).get(dil)
     taban = f"{haber_id}-{dil}-{k}"
-    if mevcut and mevcut.get("anahtar") == k and not zorla:
+    if mevcut and mevcut.get("anahtar") == k and not zorla and not onizleme:
         cikti(f"atlandı: {haber_id} {dil} zaten hazır (anahtar {k})")
         if yukle:
             yukle_dosyalar([CIKTI / mevcut[a] for a in ("mp4_1080", "mp4_720", "mp4_540", "kapak", "vtt")
@@ -1650,16 +1792,14 @@ def uret(haber_id: str, dil: str, ses: str | None = None, yukle: bool = False, z
     is_klasoru.mkdir(parents=True, exist_ok=True)
     props = props_kur(haber, dil, hazir, zaman)
     json_yaz(is_klasoru / "zamanli.json", props)
-    # Çizimden önce: denetim çizimin küçük bir kısmı kadar sürer, bozuk video hiç çizilmez.
-    guvenli_denetle(is_klasoru, cikti)
     dosya = {"mp4_1080": f"{taban}-1080.mp4", "mp4_720": f"{taban}-720.mp4", "mp4_540": f"{taban}-540.mp4",
              "kapak": f"{taban}-kapak.jpg", "vtt": f"{taban}.vtt"}
-    ham_video = is_klasoru / "ham-1080.mp4"
-    render_bas = time.monotonic()
-    _kos([_node(), str(VIDEO / "render.mjs"), "--girdi", str(is_klasoru / "zamanli.json"), "--ses", str(ses_yolu),
-          "--video", str(ham_video), "--kapak", str(is_klasoru / dosya["kapak"])], cwd=VIDEO, timeout=3600)
-    render_sure = time.monotonic() - render_bas
-    ffmpeg("-i", str(ham_video), "-c", "copy", "-movflags", "+faststart", str(is_klasoru / dosya["mp4_1080"]))
+    try:
+        cizim = (_hf_cizim(is_klasoru, props, haber, girdi, ses_yolu, dosya, cikti) if motor == "hyperframes"
+                 else _remotion_cizim(is_klasoru, ses_yolu, dosya, cikti))
+    except video_hf.TemaHatasi as e:
+        raise UretimHatasi(str(e)) from e
+    ham_video, render_sure = cizim["ham"], cizim["render_sure"]
     for ad, boy, crf, ses_bit in (("mp4_720", "720:1280", "24", "96k"), ("mp4_540", "540:960", "26", "80k")):
         ffmpeg("-i", str(ham_video), "-vf", f"scale={boy}:flags=lanczos", "-c:v", "libx264", "-preset", "slow",
                "-crf", crf, "-pix_fmt", "yuv420p", "-colorspace", "bt709", "-color_primaries", "bt709",
@@ -1673,15 +1813,18 @@ def uret(haber_id: str, dil: str, ses: str | None = None, yukle: bool = False, z
         if (b["genislik"], b["yukseklik"]) != boy or not b["ses_var"] or not EN_KISA <= b["sure"] <= EN_UZUN:
             raise UretimHatasi(f"{dosya[ad]}: beklenmeyen çıktı {b}")
         olcum[ad] = {**b, "bayt": (is_klasoru / dosya[ad]).stat().st_size}
-    CIKTI.mkdir(parents=True, exist_ok=True)
+    hedef = Path(onizleme) if onizleme else CIKTI
+    hedef.mkdir(parents=True, exist_ok=True)
     for ad in dosya.values():
-        os.replace(is_klasoru / ad, CIKTI / ad)
+        os.replace(is_klasoru / ad, hedef / ad)
     kayit = {"anahtar": k, "sure": round(olcum["mp4_1080"]["sure"], 1), **dosya,
              "uretildi": datetime.now(TZ).isoformat(timespec="seconds")}
-    m = manifest_oku()  # render uzun sürer; arada başka yazım olduysa onu koru
-    manifest_yaz(manifest_guncelle(m, haber_id, dil, kayit))
+    if not onizleme:
+        m = manifest_oku()  # render uzun sürer; arada başka yazım olduysa onu koru
+        manifest_yaz(manifest_guncelle(m, haber_id, dil, kayit))
     toplam = time.monotonic() - bas_zaman
-    cikti(json.dumps({"hazir": haber_id, "dil": dil, "anahtar": k, "sure": kayit["sure"],
+    cikti(json.dumps({"hazir": haber_id, "dil": dil, "anahtar": k, "motor": motor,
+                      "tema": (cizim["tema"] or {}).get("paket"), "ses": sesci.konusmaci, "sure": kayit["sure"],
                       "render_sn": round(render_sure, 1), "toplam_sn": round(toplam, 1),
                       "dosyalar": {a: {"ad": dosya[a], "bayt": o["bayt"]} for a, o in olcum.items()}},
                      ensure_ascii=False))
@@ -1740,7 +1883,8 @@ def bugun_uretilen_dil(m: dict, dil: str, bugun: date) -> int:
                if d == dil and str(g.get("uretildi", ""))[:10] == bugun.isoformat())
 
 
-def bekleyenler(dil: str = "tr", gunluk: bool = False, bugun: date | None = None, cikti=print, arsiv: bool = False) -> list[str]:
+def bekleyenler(dil: str = "tr", gunluk: bool = False, bugun: date | None = None, cikti=print,
+                motor: str = "hyperframes", arsiv: bool = False) -> list[str]:
     """Son günlerin (sosyal/ayarlar.json en_eski_gun, varsayılan 3) geçerli senaryolu ama hazır videosu olmayan haberleri.
     gunluk=True: günlük kota dil başınadır (video.gunluk_en_fazla her dil için ayrı sayılır)."""
     ayarlar = json_oku(AYARLAR) if AYARLAR.exists() else {}
@@ -1751,7 +1895,8 @@ def bekleyenler(dil: str = "tr", gunluk: bool = False, bugun: date | None = None
     if gunluk:
         kalan = max(0, ayar["gunluk_en_fazla"] - bugun_uretilen_dil(m, dil, bugun))
     sonuc = []
-    for h in sorted(haberler(), key=lambda x: (x.get("tarih", ""), x.get("id", "")), reverse=True):
+    icerik = haberler()
+    for h in sorted(icerik, key=lambda x: (x.get("tarih", ""), x.get("id", "")), reverse=True):
         if len(sonuc) >= kalan:
             break
         try:
@@ -1770,7 +1915,13 @@ def bekleyenler(dil: str = "tr", gunluk: bool = False, bugun: date | None = None
         except SenaryoHatasi as e:
             print(f"geçersiz senaryo atlandı: {h['id']}-{dil}: {e.hatalar[0]}", file=sys.stderr)
             continue
-        k = anahtar(h, dil, senaryo, seslendirici(ayar["ses"], ayar["konusmaci"], dil).ayar())
+        try:
+            girdi = video_hf.tema_girdisi(h, senaryo, icerik) if motor == "hyperframes" else None
+        except video_hf.TemaHatasi as e:
+            print(f"geçersiz tema atlandı: {h['id']}-{dil}: {e}", file=sys.stderr)
+            continue
+        k = anahtar(h, dil, senaryo, seslendirici(ayar["ses"], ayar["konusmaci"], dil, h["id"]).ayar(),
+                    video_hf.anahtar_eki(girdi) if girdi else None)
         if m["videolar"].get(h["id"], {}).get(dil, {}).get("anahtar") != k:
             sonuc.append(h["id"])
             cikti(h["id"])
@@ -1791,18 +1942,25 @@ def main(argv: list[str] | None = None) -> int:
             a.add_argument("--ses", choices=sorted(SESLENDIRICILER))
             a.add_argument("--yukle", action="store_true")
             a.add_argument("--zorla", action="store_true", help="aynı anahtarlı hazır video olsa da yeniden üret")
+            a.add_argument("--motor", choices=MOTORLAR, default="hyperframes",
+                           help="çizim motoru (varsayılan hyperframes; remotion eski yol)")
+            a.add_argument("--onizleme", metavar="KLASOR",
+                           help="çıktıyı bu klasöre yaz; manifest ve yükleme atlanır (yerel deneme)")
+            a.add_argument("--tema", choices=video_hf.PAKETLER, help="tema paketini zorla (yalnız --onizleme ile)")
     b = alt.add_parser("bekleyenler")
     b.add_argument("--dil", default="tr")
     b.add_argument("--gunluk", action="store_true", help="video.gunluk_en_fazla sınırını uygula")
     b.add_argument("--arsiv", action="store_true", help="kalıcı türdeki eski haberlerin geçerli senaryolarını da listele")
+    b.add_argument("--motor", choices=MOTORLAR, default="hyperframes")
     a = p.parse_args(argv)
     try:
         if a.komut == "dogrula":
             return dogrula(a.id, a.dil)
         if a.komut == "bekleyenler":
-            bekleyenler(a.dil, a.gunluk, arsiv=a.arsiv)
+            bekleyenler(a.dil, a.gunluk, motor=a.motor, arsiv=a.arsiv)
             return 0
-        uret(a.id, a.dil, a.ses, a.yukle, a.zorla)
+        uret(a.id, a.dil, a.ses, a.yukle, a.zorla, motor=a.motor, onizleme=Path(a.onizleme) if a.onizleme else None,
+             tema_paketi=a.tema)
         return 0
     except SenaryoHatasi as e:
         for h in e.hatalar:

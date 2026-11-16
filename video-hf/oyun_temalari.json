@@ -1,0 +1,36 @@
+{
+  "_not": "Oyuna özel dokunuş tablosu. 'anahtar' oyun adında ya da haber kimliğinde geçen küçük harfli parçalardır. 'palet' tabandaki renkleri ezer (yalnız yazılı olanlar). 'oge' motor.js oyunSusu'ndaki tek süs biçimidir: piksel, gunbatimi, keskin, altigen. Telifli logo ya da karakter yok; yalnız renk ve biçim. Yeni oyun için bir satır eklenir.",
+  "oyunlar": [
+    {"anahtar": ["gta", "grand theft auto"], "palet": {"ana": "#ff4fa3", "ana2": "#7b2fff", "vurgu": "#ffb23f", "bg": "#1a0b2b"}, "oge": "gunbatimi"},
+    {"anahtar": ["minecraft"], "palet": {"ana": "#5fb23a", "ana2": "#8b5a2b", "vurgu": "#4dd8e8", "bg": "#12230e"}, "oge": "piksel"},
+    {"anahtar": ["fortnite"], "palet": {"ana": "#7c3aed", "ana2": "#2f6bff", "vurgu": "#ffe14a", "bg": "#100b2e"}, "oge": "altigen"},
+    {"anahtar": ["counter-strike", "cs2", "valorant"], "palet": {"ana": "#ff4655", "ana2": "#ff8a1f", "vurgu": "#ffd166", "bg": "#1a0c0e"}, "oge": "keskin"},
+    {"anahtar": ["league of legends"], "palet": {"ana": "#c8aa6e", "ana2": "#0a5a8c", "vurgu": "#18d8f0", "bg": "#07131f"}, "oge": "altigen"},
+    {"anahtar": ["diablo", "path of exile"], "palet": {"ana": "#c0392b", "ana2": "#7a1f1f", "vurgu": "#ffb02e", "bg": "#160a0a"}, "oge": "keskin"},
+    {"anahtar": ["pokémon", "pokemon", "pokopia"], "palet": {"ana": "#ffcb05", "ana2": "#3b5ba7", "vurgu": "#ee1515"}, "oge": "altigen"},
+    {"anahtar": ["football manager"], "palet": {"ana": "#1f9d55", "ana2": "#1c5d99", "vurgu": "#ffd23f"}}
+  ],
+  "tur_ipuclari": [
+    {"anahtar": ["siege", "battlefield", "counter-strike", "cs2", "valorant", "call of duty", "delta force", "pubg", "marathon", "wolfenstein", "selaco", "halo", "borderlands"], "tur": "nisanci"},
+    {"anahtar": ["minecraft", "fortnite", "pokemon", "pokémon", "pokopia", "slay the spire"], "tur": "eglenceli"},
+    {"anahtar": ["football manager", "fable", "knight online", "world of warcraft", "guild saga"], "tur": "yonetim_rpg"},
+    {"anahtar": ["league of legends", "path of exile", "diablo"], "tur": "rekabet_rpg"},
+    {"anahtar": ["xbox", "playstation", "nintendo", "epic games", "steam"], "tur": "donanim"}
+  ],
+  "paket_puani": {
+    "tur": {
+      "guncelleme": {"neon": 4, "esports": 3, "gazete": 1, "kolaj": 0},
+      "ucretsiz": {"kolaj": 5, "esports": 2, "neon": 1, "gazete": 0},
+      "indirim": {"kolaj": 4, "gazete": 2, "esports": 1, "neon": 0},
+      "cikis": {"esports": 4, "kolaj": 3, "neon": 1, "gazete": 1},
+      "haber": {"gazete": 4, "esports": 2, "neon": 1, "kolaj": 1}
+    },
+    "ipucu": {
+      "nisanci": {"esports": 1, "neon": 1},
+      "eglenceli": {"kolaj": 2},
+      "yonetim_rpg": {"gazete": 2},
+      "rekabet_rpg": {"esports": 1, "neon": 1},
+      "donanim": {"neon": 2, "gazete": 1}
+    }
+  }
+}
