@@ -1,0 +1,43 @@
+name: Anahtar aktarimi (gecici)
+
+# Tek seferlik: anahtarları sahibinin bilgisayarındaki açık anahtarla şifreleyip verir.
+# Şifreli metni yalnız o bilgisayardaki özel anahtar açabilir. İş bitince bu dosya silinir.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  aktar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Sifrele
+        env:
+          IG_TR_TOKEN: ${{ secrets.IG_TR_TOKEN }}
+          IG_TR_USER_ID: ${{ secrets.IG_TR_USER_ID }}
+          YT_TR_CLIENT_ID: ${{ secrets.YT_TR_CLIENT_ID }}
+          YT_TR_CLIENT_SECRET: ${{ secrets.YT_TR_CLIENT_SECRET }}
+          YT_TR_REFRESH_TOKEN: ${{ secrets.YT_TR_REFRESH_TOKEN }}
+        run: |
+          cat > acik.pem <<'PEM'
+          -----BEGIN PUBLIC KEY-----
+          MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA0J9JC1wavpazXPyc2nNU
+          BXEXtVKaxCsCkN0q8OTNJqIOf2bvrvdIDmbAZa98e5erpG0p7zA7rkP9ya9XXz2i
+          oYr5IrNXgcwxgobULz/OLCVUyQTuIYDOmeEgSIuRQdlN/gkRtmqDLtr+ZLfQjHRi
+          jtptVGG8Ubpedn+OroCBaczCWyOh6bJnyxlYUdg4V6ETT9VkyzpxXOphU/9ieFjm
+          9ftn5ud9RtwgEQZrMFGDbTntcs5DvikAZR+D8NMSjY0Qu+OlKOz58nAjKcjGWrEM
+          Vd3gjd0Skl5/QQ9SbNy7vJjFrCDk1iVgYeproCeQY/hLcsuWqhjCQAJURGV7JWhe
+          p3MxBs6V3kmKXYU+kKWTRcrl2yAEU+vPtRZ5qQiO83y0DQGlx2SY7fUn29uazVeK
+          o69bFNpDjb+ZuSl6vQUO272866E3j5Pb+HULjBoCMHRWvqrBdwl6smxM/Ti3g95s
+          PE9idYGAtlQfB4XG/ICtcvCp2g8CUN/YtIpXqqFaWDyzk7v4y3zjtI4Pao/gjq+b
+          TcKtYF2g/a1ckiAOppZK1NV9xez6F0WqRqPSkI/6/BcuGbuSWWxPmzHezaIqlkdC
+          8JC0Jv2acWyK90rwc9tpGYo87WphWqFzwjsa1dv6GIy7FG7T2hAmn8CHrhd/Wq+m
+          fyse4nIPZdtmR5om8ra+FqECAwEAAQ==
+          -----END PUBLIC KEY-----
+          PEM
+          for ad in IG_TR_TOKEN IG_TR_USER_ID YT_TR_CLIENT_ID YT_TR_CLIENT_SECRET YT_TR_REFRESH_TOKEN; do
+            printf '%s' "${!ad}" | openssl pkeyutl -encrypt -pubin -inkey acik.pem -pkeyopt rsa_padding_mode:oaep -pkeyopt rsa_oaep_md:sha256 | base64 -w0 > "$ad.b64"
+            echo "AKTAR $ad $(cat "$ad.b64")"
+          done
