@@ -308,11 +308,12 @@ class HatTests(unittest.TestCase):
         self.assertEqual([x['id'] for x in result], ['2', '3', '4'])
         self.assertEqual(write.call_count, 5)
 
-    def test_six_attempt_ceiling_and_time_budget(self):
-        candidates = [self._aday(i, f'Haber {i}') for i in range(9)]
+    def test_configured_attempt_ceiling_and_time_budget(self):
+        limit = h.oto.CONFIG['sinirlar']['yazim_deneme']
+        candidates = [self._aday(i, f'Haber {i}') for i in range(limit + 3)]
         with patch.object(self.hat, 'yaz', return_value=None) as write:
             self.assertEqual(self.hat.adaylari_isle(candidates), [])
-        self.assertEqual(write.call_count, 6)
+        self.assertEqual(write.call_count, limit)
         self.hat.deadline = h.time.monotonic() + 119
         with patch.object(self.hat, 'yaz') as write:
             self.assertEqual(self.hat.adaylari_isle(candidates), [])
