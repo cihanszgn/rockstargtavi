@@ -6,8 +6,8 @@
   "args": ["C:/uygulama-gelistirme/projeler/cio-librarian/server.py"]
  },
  "eleme": [
-  {"ad":"qwen3-8b","tur":"yerel","komut":["py","tools/haber_hatti.py","--yerel","--yardimci","{home}/.claude/araclar/yerel_sor.py","--model","iyi","--baglam","4096"],"zaman_asimi":210},
-  {"ad":"gemma3-4b","tur":"yerel","komut":["py","tools/haber_hatti.py","--yerel","--yardimci","{home}/.claude/araclar/yerel_sor.py","--model","hizli","--baglam","4096"],"zaman_asimi":210}
+  {"ad":"gemma3-4b","tur":"yerel","komut":["py","tools/haber_hatti.py","--yerel","--yardimci","{home}/.claude/araclar/yerel_sor.py","--model","hizli","--baglam","4096"],"zaman_asimi":210},
+  {"ad":"qwen3-8b","tur":"yerel","komut":["py","tools/haber_hatti.py","--yerel","--yardimci","{home}/.claude/araclar/yerel_sor.py","--model","iyi","--baglam","4096"],"zaman_asimi":210}
  ],
  "yazar": [
   {"ad":"opencode/big-pickle","tur":"opencode","komut":["opencode","--standalone","run","--model","opencode/big-pickle","--format","json","--auto"],"zaman_asimi":720},
