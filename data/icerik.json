@@ -1,5 +1,65 @@
 [
  {
+  "id": "football-manager-27-27-1-0-guncelleme-2026-11-16",
+  "tarih": "2026-11-16",
+  "oyun": "Football Manager 27",
+  "tur": "guncelleme",
+  "kaynaklar": [
+   {
+    "url": "https://store.steampowered.com/news/app/4530370/view/710040324994499420",
+    "ad": "Steam",
+    "tarih": "2026-11-16"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Football Manager 27 için 27.1.0 güncellemesi bu hafta geliyor",
+    "ozet": "Güncelleme çökme düzeltmeleri, düşük donanımda daha hızlı yükleme ve maç motoru ayarlarını getiriyor.",
+    "metin": "Football Manager 27 için 27.1.0 güncellemesinin bu hafta yayımlanacağı, oyunun Steam'deki resmî duyurusunda açıklandı. Duyuruya göre oyun 10 Kasım'da çıktıktan sonra geliştirme ekibi topluluk geri bildirimlerine ve hata izleyicisindeki raporlara odaklanmış durumda. Güncelleme FM27, FM27 Console ve FM27 Touch oyuncularına açılacak; FM27 Mobile için de bu hafta ayrı bir güncelleme yayımlanacağı belirtiliyor.\n\nOyuncuyu en doğrudan etkileyecek kısım teknik tarafta. Duyuruda çok sayıda çökme sorununun giderildiği, büyük veritabanları yüklenirken düşük donanımlı bilgisayarlarda yükleme sürelerinin kısaltıldığı ve arayüzde performans iyileştirmeleri yapıldığı yazıyor. Bilgi Görüntüleme ayarı artık 1080p ve üzeri ekran çözünürlüğüne sahip herkes tarafından seçilebiliyor. Ayrıca şeffaf özellik kenarlıkları için bir kaydırıcı eklendi.\n\nMaç motorunda pas, dribling ve pres kararlarına yönelik ayarlamalar yapılıyor. Duyuru, bu değişikliklerin ayrıca test edilip değerlendirilmesi gerektiğini de vurguluyor. Hangi ayarların oynanışı nasıl değiştirdiğini ilk maçlarda kendi gözlemlerinizle takip etmek isteyebilirsiniz.",
+    "etiketler": [
+     "#FootballManager27",
+     "#FM27"
+    ]
+   },
+   "en": {
+    "baslik": "Football Manager 27 update 27.1.0 is set to roll out this week",
+    "ozet": "The update brings crash fixes, faster loading on lower-end PCs and Match Engine tweaks.",
+    "metin": "The official Steam announcement for Football Manager 27 says update 27.1.0 will roll out later this week. Since the game launched on November 10, the team has said it is focusing on community feedback and on reports logged in its bug tracker. The update will reach FM27, FM27 Console and FM27 Touch players, and a separate update for FM27 Mobile is also due this week.\n\nThe most direct change for players is technical. The announcement lists numerous crash fixes, shorter loading times on lower-end PCs when larger databases are loaded, and several interface performance improvements. The Information Display setting can now be chosen by anyone with a screen resolution of 1080p or higher. A new slider also makes attribute borders transparent.\n\nOn the pitch, the Match Engine receives adjustments to passing, dribbling and pressing decisions. The developer notes that these changes need thorough testing, so it is worth watching how they change your own matches once the patch is live.",
+    "etiketler": [
+     "#FootballManager27",
+     "#FM27"
+    ]
+   },
+   "fr": {
+    "baslik": "La mise à jour 27.1.0 de Football Manager 27 arrive cette semaine",
+    "ozet": "La mise à jour apporte des corrections de plantages, un chargement plus rapide sur les PC modestes et des ajustements du moteur de match.",
+    "metin": "L'annonce officielle de Football Manager 27 sur Steam indique que la mise à jour 27.1.0 sera déployée plus tard cette semaine. Depuis la sortie du jeu le 10 novembre, l'équipe dit concentrer ses efforts sur les retours de la communauté et sur les signalements inscrits dans son suivi des bugs. La mise à jour concernera les joueurs de FM27, FM27 Console et FM27 Touch, et une mise à jour distincte pour FM27 Mobile est également prévue cette semaine.\n\nLe changement le plus concret pour les joueurs est technique. L'annonce cite de nombreuses corrections de plantages, des temps de chargement réduits sur les PC modestes lorsque de grandes bases de données sont chargées, et plusieurs améliorations de performance de l'interface. Le réglage d'affichage des informations est désormais accessible à toute personne disposant d'une résolution d'écran de 1080p ou plus. Un nouveau curseur permet aussi de rendre transparentes les bordures des attributs.\n\nCôté terrain, le moteur de match reçoit des ajustements sur les décisions de passe, de dribble et de pressing. Le studio précise que ces changements demandent des tests approfondis : il vaut la peine de voir comment ils modifient vos propres matchs une fois le correctif en ligne.",
+    "etiketler": [
+     "#FootballManager27",
+     "#FM27"
+    ]
+   },
+   "es": {
+    "baslik": "La actualización 27.1.0 de Football Manager 27 llega esta semana",
+    "ozet": "La actualización trae correcciones de cierres inesperados, carga más rápida en equipos modestos y ajustes del motor de partido.",
+    "metin": "El anuncio oficial de Football Manager 27 en Steam indica que la actualización 27.1.0 se publicará más adelante esta semana. Desde el lanzamiento del juego el 10 de noviembre, el equipo afirma que se centra en los comentarios de la comunidad y en los reportes registrados en su rastreador de errores. La actualización llegará a los jugadores de FM27, FM27 Console y FM27 Touch, y también se anuncia una actualización aparte para FM27 Mobile esta semana.\n\nEl cambio más directo para los jugadores es técnico. El anuncio menciona numerosas correcciones de cierres inesperados, tiempos de carga más cortos en equipos de gama baja al cargar bases de datos grandes y varias mejoras de rendimiento de la interfaz. La opción de Visualización de información ya puede elegirse con una resolución de pantalla de 1080p o superior. Además, un nuevo control deslizante permite hacer transparentes los bordes de los atributos.\n\nEn el campo, el motor de partido recibe ajustes en las decisiones de pase, regate y presión. El estudio indica que estos cambios requieren pruebas exhaustivas, así que conviene observar cómo afectan a tus propios partidos cuando el parche esté disponible.",
+    "etiketler": [
+     "#FootballManager27",
+     "#FM27"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "football-manager-27-27-1-0-guncelleme-2026-11-16",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/4530370/view/710040324994499420",
+   "teyit_zamani": "2026-11-16T19:01:00+03:00",
+   "oyuncuya_fayda": "Çökme düzeltmeleri, düşük donanımda daha hızlı veritabanı yükleme ve 1080p üzeri ekranlarda Bilgi Görüntüleme ayarı; maç motoru değişiklikleri bu hafta gelir.",
+   "hype": 5,
+   "eklenme": "2026-11-16T19:02:38.798197+03:00"
+  }
+ },
+ {
   "id": "pokopia-apples-to-applin-2026-11-16",
   "tarih": "2026-11-16",
   "oyun": "Pokémon Pokopia",
