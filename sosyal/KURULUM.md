@@ -1,8 +1,8 @@
 # Sosyal hesap kurulumu: Cio'nun yapacakları
 
-Sistem kurulu. Claude her gün teyitli oyun haberlerini siteye ekliyor; GitHub günde 5 kez
-(TR saatiyle 10:17, 13:17, 16:17, 19:17 ve 22:17) yeni haberleri hesaplara paylaşıyor. Her
-gönderi sitedeki haber sayfasına bağlanıyor. Sayfa, ziyaretçinin tarayıcı diline
+Sistem kurulu. Haber hattı teyitli oyun haberlerini siteye ekliyor; GitHub her saatin 17. dakikasında
+paylaşım kuyruğunu işler (`17 * * * *`, UTC). GitHub zamanlı işleri gecikebilir; bu bir dakika garantisi değildir.
+Her gönderi sitedeki ilgili sayfaya bağlanır. Haber sayfası, ziyaretçinin tarayıcı diline
 (TR, EN, FR veya ES) kendiliğinden geçiyor.
 
 Senin yapacağın tek şey hesapları açıp anahtarları kurulum yardımcısına yapıştırmak.
@@ -95,12 +95,13 @@ at, birlikte bakarız.
 ## 5. Haber videoları: YouTube Shorts ve Instagram Reels
 
 Videolar kendiliğinden üretilir (`video.yml`) ve sitede haberin üstünde oynar. Dört dilde de üretilir; günlük
-kota dil başınadır (her dil için en çok 2 video). Aynı videoyu Instagram Reels'e ve YouTube Shorts'a yollamak için
+kota dil başınadır (her dil için en çok 4 video). Aynı videoyu Instagram Reels'e ve YouTube Shorts'a yollamak için
 aşağıdakiler gerekir. Hesabın anahtarı yoksa o hesap atlanır (paylaşım çıktısında "anahtar yok, atlandı" yazar),
 site videoları yine çalışır.
 
-**Hangi haber video alır:** hype puanı eşiğe (`sosyal/ayarlar.json` → `video.hype_esigi`, şu an 7) ulaşan haber her
-dilde görsel gönderi + Reels + Shorts alır. Eşiğin altındaki haber yalnız görsel gönderi alır.
+**Hangi haber video alır:** hype puanı eşiğe (`sosyal/ayarlar.json` → `video.hype_esigi`, şu an 5) ulaşan haber
+geçerli senaryo ve hazır/onaylı video varsa Reels ve Shorts adayıdır. Instagram'da aynı çalışmada
+en çok bir gönderi seçilir; hazır Reel önceliklidir, yoksa görsel seçilir. Eşiğin altındaki haber yalnız görsel adayıdır.
 
 **Instagram Reels için ekstra bir şey yok:** 3. bölümdeki Instagram hesabı yeter. Sonra Claude'a
 "Reels'i aç" de (`sosyal/ayarlar.json` içinde o dilin `instagram_reel` değeri `true` olur).
@@ -129,7 +130,7 @@ birlikte bakalım**.
    - Application type: **Desktop app**.
    - Çıkan **Client ID** ve **Client secret** değerlerini bir yere kopyala (birazdan
      yapıştıracaksın).
-6. Not: yeni kanalın kısa video yükleme kotası günlük sınırlıdır; sistem her dil kanalına günde en çok 2
+6. Not: yeni kanalın kısa video yükleme kotası günlük sınırlıdır; sistem her dil kanalına günde en çok 4
    Short yükler (`gunluk_en_fazla.youtube`).
 
 ### 5.2 Anahtarı yardımcıya ver
@@ -140,8 +141,8 @@ birlikte bakalım**.
 3. Tarayıcı açılır: kanalın Google hesabıyla gir, **İzin ver**'e bas. Sekmeyi kapat.
 4. Yardımcı kanal adını gösterirse doğru demektir. Üç değeri (`YT_<DİL>_CLIENT_ID`,
    `YT_<DİL>_CLIENT_SECRET`, `YT_<DİL>_REFRESH_TOKEN`) GitHub'a gizli yazar.
-5. Videolar önce **özel (private)** yüklenir. YouTube Studio'da bir video açıp bak. Memnunsan
-   Claude'a "YouTube gizliliğini public yap" de.
+5. YouTube görünürlüğü `sosyal/ayarlar.json → youtube.gizlilik` ile seçilir (mevcut değer `public`).
+   İlk video onayı `data/videolar.json` içindeki mevcut onay düzeniyle ayrıca korunur.
 6. Her dil için ayrı Google/YouTube hesabı kullanacaksan 2. ve 3. adımı dil başına tekrar et.
 
 ### 5.3 Azure Speech anahtarı (video sesi için)
@@ -176,13 +177,13 @@ Dil başına kod, ayar veya iş akışı değişikliği gerekmez; yalnız hesab�
 
 ## Nasıl çalışıyor (bilgi için)
 
-- Haberler: `data/icerik.json`. Claude her gün 10:00'da resmî kaynaktan teyit edip ekler.
+- Haberler: `data/icerik.json`. Saatlik haber hattı kaynakları teyit edip ekler.
   `tools/sosyal_derle.py` sayfaları, paylaşım görsellerini, RSS'i ve site haritasını üretir.
 - Paylaşım: `.github/workflows/sosyal.yml` → `tools/sosyal_yayinla.py`.
-  - Son 3 günün paylaşılmamış haberleri gider.
-  - Her hesap için her çalışmada 1 gönderi, günde en çok 2 gönderi atılır
-    (`sosyal/ayarlar.json`; sınır dil başınadır).
-  - Görsel gönderi her haberde gider. Reels ve Shorts yalnız hype puanı eşiğe ulaşan haberde gider.
+  - Son 3 günün paylaşılmamış haberleri önceliklidir; boşluklar aşağıdaki kuyruktan doldurulur.
+  - Her dil/platform için her çalışmada en çok 1 gönderi; günlük görsel Instagram 24, Reels 4, Shorts 4
+    (`sosyal/ayarlar.json`; sınır dil ve biçim başınadır, sosyal yayın günleri UTC'dir).
+  - Instagram'da hazır/onaylı Reel önceliklidir, aksi halde görsel seçilir. Reels ve Shorts hype eşiğini korur.
   - Gönderilenler `sosyal/gonderilenler.json`'a yazılır, aynı haber iki kez gitmez.
 - Anahtarı girilmemiş hesap atlanır ("anahtar yok, atlandı"). Bir hesap hata verirse GitHub sana "failed" e-postası
   atar; o e-postayı Claude'a göster.
@@ -191,3 +192,45 @@ Dil başına kod, ayar veya iş akışı değişikliği gerekmez; yalnız hesab�
   - Her paylaşımdan önce kayda "niyet" yazılır. Yanıtı kaybolan bir paylaşım kendiliğinden yeniden
     DENENMEZ; platformdan sorgulanır, bulunamazsa `sosyal/gonderilenler.json`'da `elle_bak` olur.
     Platformda gönderiye bak: varsa kaydı `tamam` yap, yoksa o kaydı sil, sistem yeniden dener.
+
+## Saatlik içerik kuyruğu ve ağsız deneme
+
+`turler` nesnesindeki `haber`, `takvim`, `firsat`, `ucretsiz`, `rehber`, `arsiv` anahtarları
+`true/false` ile açılıp kapanır. Sıra: taze haber → kesin tarihli çıkışa 30/14/7/3/1/0 gün
+kalmış oyun → en yüksek indirimli uygun fırsat → şu anda ücretsiz oyun → rehber → arşiv.
+Haber dışında aynı tür aynı hesapta art arda seçilmez; başka uygun tür yoksa o saat boş kalır.
+Takvimde her tarih/kilometre taşı, fırsatta her `dealID`, ücretsiz oyunda her kampanya bir kez;
+rehber aynı platform/dilde kayan 14 günde bir kez seçilir. Anahtar biçimi `konu|dil|platform|bicim` korunur.
+Arşiv, o platform/dilde hiçbir biçimde paylaşılmamış kalıcı yama/çıkış haberleriyle sınırlıdır;
+söylenti, sezon, etkinlik, kampanya içerenler elenir ve metin eski yayın tarihini belirtir.
+
+Fırsat ve tarihsiz ücretsiz fiyat verisi `indirimler.json` / `ucretsiz.json` içinden, en çok 24 saatlik
+önbellekten alınır; varsa bitiş tarihi de denetlenir. CheapShark'ın anlık verisi bitiş tarihi sağlamaz;
+metin mağazada fiyat kontrolü ister. Epic kampanyasının başlangıç/bitişi ayrıca uygulanır.
+Takvim/rehber/oyun kartları `oyun_gorselleri.json` kaydındaki resmî görseli ve küçük kaynak atfını kullanır;
+kayıt yoksa veya indirme başarısızsa kapak üretilir. Kartlar 1080×1350 JPEG'dir. Dört dilde şablon metni,
+tam sayfa adresi ve 3–6 etiket kullanılır; sosyal metin üretimi model çağırmaz.
+
+```powershell
+py tools/sosyal_yayinla.py --kuru --saat-benzet 24
+py tools/sosyal_yayinla.py --kuru --saat-benzet 24 --baslangic 2026-11-16T19:00:00Z
+```
+
+Benzetim gerçek kayıt ve veriyi okuyup yalnız bellekte ilerler: sır okumaz, ağ çağırmaz, kayıt yazmaz.
+Yalnız TR Instagram/YouTube hesapları varmış gibi davranır; hazır/onaylı olmayan videoyu var saymaz.
+Her saatin dil/platform/biçim/tür/id seçimini ve tür sayılarını yazar; Instagram'da boş saat varsa çıkış kodu 1'dir.
+Gerçek akış kartları üretir, kaydeder, mevcut Pages yayınının ilgili commit'le bitmesini bekler, sonra paylaşır;
+anahtarsız hesapları tek özet satırında atlar. Sonlu kuyruk ve günlük kota saatlik paylaşımı kısıtlayabilir.
+
+Eksik eski haber senaryolarını mevcut yerel Ollama yardımcısıyla küçük partilerde tamamlamak için:
+
+```powershell
+py tools/video_geri_doldur.py --kuru --dil tr --en-fazla 1
+py tools/video_geri_doldur.py --dil tr --en-fazla 1 --model gemma3-4b
+py tools/video_uret.py bekleyenler --dil tr --arsiv --gunluk
+```
+
+Gerçek geri doldurma yalnız eksik senaryoyu yazar; mevcut dosyayı ve haber verisini değiştirmez.
+`modeller.json` içindeki yerel yardımcı/model çağrısını ve `video_uret.senaryo_hazirla` doğrulamasını kullanır;
+bir düzeltme hakkından sonra geçersiz çıktı yazılmaz. Video render/yükleme/paylaşımı çalıştırmaz.
+Sonraki video iş akışı kalıcı arşiv senaryolarını da işler; video üretim kotası dil başına 4'tür ve mevcut onay korunur.

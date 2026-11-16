@@ -91,11 +91,17 @@ Haber tarihi gerçek kaynak tarihidir, ileri tarih veya 48 saatten eski haber re
 - 5–6: orta boy güncelleme, küçük ya da orta oyunun çıkışı, sınırlı kampanya.
 - 1–4: küçük yama, geliştirici notu, dar kitleli haber.
 - Yayın alt sınırı `kaynaklar.json` → `sinirlar.en_az_hype` (şu an 3): denetçinin verdiği puan bunun altındaysa (ör. bakım duyurusu) haber onaylansa da yayımlanmaz.
-- Eşik `sosyal/ayarlar.json` → `video.hype_esigi` (şu an 7). Eşiğe ulaşan haberin video senaryosu aynı turda yazılmak zorundadır, yoksa `hazirla` paketi reddeder. Eşiğin altındaki haber için senaryo yazılmaz; o haber sitede ve Instagram'da yalnız görsel olarak paylaşılır. Puan şişirilmez: kararsız kalınan haber düşük puanı alır.
+- Eşik `sosyal/ayarlar.json` → `video.hype_esigi` (şu an 5). Eşiğe ulaşan haberin video senaryosu aynı turda yazılmak zorundadır, yoksa `hazirla` paketi reddeder. Eşiğin altındaki haber için senaryo yazılmaz; o haber sitede ve Instagram'da yalnız görsel olarak paylaşılır. Puan şişirilmez: kararsız kalınan haber düşük puanı alır.
 
 ## Video senaryosu
 
 Hype `sosyal/ayarlar.json → video.hype_esigi` (varsayılan 7) eşiğine ulaşınca aynı turda `video/senaryo/<id>-{tr,en,es,fr}.json` yazılır. `hazirla` her dosyayı `video_uret.py dogrula` ile aynı doğrulayıcıdan geçirir. Her dil için yazara bir düzeltme hakkı verilir; yine geçersiz en/es/fr dosyası atılır ve gerekçe `otomasyon.senaryo_atlanan` içine Python tarafından yazılır. Haber geçerli kalan senaryolarla yayımlanabilir; Türkçe senaryo zorunludur. Video üretimi ayrı hatta ve dil başına kotayla yürür.
+
+Mevcut ayarda eşik 5, video üretim kotası dil başına 4'tür. Senaryosuz eski haberler için
+`py tools/video_geri_doldur.py --kuru --dil tr --en-fazla 1` ile aday görülür; `--kuru` kaldırılınca
+yalnız mevcut yerel Ollama yardımcısıyla senaryo yazılıp aynı doğrulayıcıdan geçirilir. Haber verisi,
+mevcut senaryolar, render ve yayın değişmez. `video_uret.py bekleyenler --arsiv --gunluk` kalıcı eski
+haberlerin geçerli senaryolarını da listeler. Saatlik sosyal kuyruk ve ağsız 24 saat denemesi için `sosyal/KURULUM.md`.
 
 ```powershell
 py tools/video_uret.py dogrula --id HABER-ID --dil tr
