@@ -342,6 +342,67 @@ class GuvenliAlanTests(unittest.TestCase):
                 self.assertEqual(bool(rapor['ihlal_sayisi']), bool(beklenen))
 
 
+class DolulukTests(unittest.TestCase):
+    def test_esikler_tanimli(self):
+        self.assertEqual(hf.GUVENLI['doluluk_min'], 0.7)
+        self.assertEqual(hf.GUVENLI['baslik_min'], 96)
+
+    def test_komut_sahne_turunu_tasir(self):
+        gorulen = []
+
+        def kos(komut, **kw):
+            gorulen.append(komut)
+            rapor = {'olcum_sayisi': 3, 'metin_sayisi': 9, 'ihlal_sayisi': 0, 'sinir': hf.GUVENLI, 'ihlaller': [],
+                     'doluluk': [{'sahne': 0, 'sablon': 'baslik', 'oran': 0.9}, {'sahne': 1, 'sablon': 'maddeler', 'oran': 0.81},
+                                 {'sahne': 2, 'sablon': 'maddeler', 'oran': 0.74}]}
+            if '--rapor' in komut:
+                pathlib.Path(komut[komut.index('--rapor') + 1]).write_text(json.dumps(rapor), encoding='utf-8')
+            return subprocess.CompletedProcess(komut, 0, '', '')
+        mesaj = []
+        with tempfile.TemporaryDirectory() as t, patch.object(hf, 'tarayici_yolu', lambda kos=None: 'chrome'),                 patch.object(hf, 'hf_koku', lambda kos=None: 'kok'):
+            hf.guvenli_denetle(pathlib.Path(t), sahte_props(), pathlib.Path(t) / 'r.json', mesaj.append, kos=kos)
+        sahneler = json.loads(gorulen[0][gorulen[0].index('--sahneler') + 1])
+        self.assertTrue(all(len(x) == 3 for x in sahneler))
+        self.assertEqual([x[2] for x in sahneler], [s['sablon'] for s in sahte_props()['sahneler']])
+        self.assertIn('  doluluk maddeler: en düşük %74', mesaj)
+        self.assertIn('  doluluk baslik: en düşük %90', mesaj)
+
+    def test_gercek_tarayicida_doluluk_ve_baslik_boyutu(self):
+        """Ön plan ([data-on]) kutusu güvenli alanın %70'inden kısaysa ve açılış başlığı 96 px'ten küçükse ihlal sayılır."""
+        try:
+            chrome, kok = hf.tarayici_yolu(), hf.hf_koku()
+        except (hf.TemaHatasi, OSError, IndexError):
+            self.skipTest('Chrome / global hyperframes yok')
+        sayfa = """<!doctype html><meta charset=utf-8><style>body{margin:0;width:1080px;height:1920px}
+        .sc{position:absolute;left:0;top:0;width:1080px;height:1920px} div{position:absolute;margin:0;left:100px;width:800px}
+        </style><section class="sc" id="s0">%s</section>
+        <script>window.__timelines={main:{seek(){}}}</script>"""
+        durumlar = {
+            'dolu': ('<div data-on="1" style="top:300px;height:950px"></div>', 'maddeler', 0, 0.74),
+            'dolu-iki-blok': ('<div data-on="1" style="top:300px;height:400px"></div><div data-on="1" style="top:850px;height:400px"></div>',
+                              'maddeler', 0, 0.74),
+            'kisa': ('<div data-on="1" style="top:300px;height:600px"></div>', 'maddeler', 3, 0.47),
+            'bos': ('', 'kapanis', 3, 0),
+            'baslik-iri': ('<div data-on="1" style="top:300px;height:1000px"></div><div class="bk-bas" style="top:300px;height:100px;font-size:140px">x</div>',
+                           'baslik', 0, 0.78),
+            'baslik-kucuk': ('<div data-on="1" style="top:300px;height:1000px"></div><div class="bk-bas" style="top:300px;height:100px;font-size:80px">x</div>',
+                             'baslik', 3, 0.78),
+        }
+        for ad, (ek, sablon, beklenen, _) in durumlar.items():
+            with self.subTest(ad), tempfile.TemporaryDirectory() as t:
+                klasor = pathlib.Path(t)
+                (klasor / 'index.html').write_text(sayfa % ek, encoding='utf-8')
+                komut = ['node', str(hf.GUVENLI_BETIK), '--klasor', str(klasor), '--rapor', str(klasor / 'r.json'),
+                         '--chrome', chrome, '--hf', kok, '--sahneler', json.dumps([[0, 4, sablon]]), '--sure', '4',
+                         '--sinir', json.dumps(hf.GUVENLI)]
+                r = subprocess.run(komut, capture_output=True, text=True, encoding='utf-8', timeout=120)
+                self.assertEqual(r.returncode, beklenen, r.stderr)
+                rapor = json.loads((klasor / 'r.json').read_text(encoding='utf-8'))
+                self.assertEqual(rapor['doluluk'][0]['sablon'], sablon)
+                if beklenen:
+                    self.assertIn(rapor['ihlaller'][0]['yon'], ('doluluk', 'başlık-boyutu'))
+
+
 class EskiSenaryoTests(unittest.TestCase):
     def test_depodaki_butun_senaryolar_gecerli(self):
         dosyalar = sorted((ROOT / 'video' / 'senaryo').glob('*.json'))

@@ -3,6 +3,9 @@
 // Kural: okunur yazı y >= 220 ve y <= 1500; alt yarıda (y > 960) x <= 930; her yerde 40 <= x <= 1040;
 // ayrıca sığdırma (.fit) taşması. Süs (data-dekor), geçiş katmanı ve ilerleme çubuğu denetim dışıdır (okunur yazı değil).
 // Kullanım: node guvenli_alan.mjs --klasor K --rapor R.json --chrome CHROME --hf HF_KOKU --sahneler "[[0,3],...]" --sure 30 --sinir '{...}'
+// Doluluk denetimi: sahne anahtar karesinde (süresinin %92'si) ön plan öğelerinin ([data-on]) birleşik sınır kutusunun yüksekliği
+// güvenli alan yüksekliğinin (alt-ust) en az doluluk_min (varsayılan 0.70) katı olmalı; açılış başlığı yazısı baslik_min px'ten küçük olamaz.
+// --sahneler üçüncü öğe olarak sahne türünü taşıyabilir: [[bas,bit,"baslik"],...] (türü verilmeyen sahnede doluluk ve başlık boyutu denetlenmez).
 // Çıkış kodu: 0 ihlal yok, 3 ihlal var, 1 çalışmadı.
 import { createRequire } from "node:module";
 import { pathToFileURL } from "node:url";
@@ -18,6 +21,7 @@ const puppeteer = createRequire(path.join(arg.hf, "package.json"))("puppeteer-co
 
 const OR = [0.45, 0.7, 0.92]; // sahne süresinin kesirleri: giriş animasyonları bitmiş anlar
 const ihlaller = [];
+const doluluk = [];
 let olcum = 0;
 let metin = 0;
 
@@ -41,7 +45,7 @@ try {
   if (!hazir) throw new Error("zaman çizelgesi (window.__timelines.main) 30 sn içinde kaydolmadı");
 
   for (let i = 0; i < sahneler.length; i++) {
-    const [bas, bit] = sahneler[i];
+    const [bas, bit, sablon = null] = sahneler[i];
     for (const k of OR) {
       const an = +(bas + (bit - bas) * k).toFixed(3);
       const sonuc = await sayfa.evaluate(
@@ -94,16 +98,41 @@ try {
           if (logo) sayDolas(logo);
           kok.querySelectorAll(".fit").forEach((e) => {
             if (etkinOpaklik(e) < 0.6) return;
-            if (e.scrollHeight > e.clientHeight + Math.max(4, parseFloat(getComputedStyle(e).fontSize) * 0.3) || e.scrollWidth > e.clientWidth + 3)
-              taşan.push({ t: (e.textContent || "").trim().slice(0, 40), sh: e.scrollHeight, ch: e.clientHeight, sw: e.scrollWidth, cw: e.clientWidth });
+            let sh = e.scrollHeight, sw = e.scrollWidth;
+            // kelime kutulu başlıkta vurgu çerçevesi/animasyon scroll ölçüsünü şişirir: yerleşim (offset) ölçüsüne bak
+            const bw = e.querySelectorAll(".bw");
+            if (bw.length) {
+              sh = 0; sw = 0;
+              bw.forEach((b) => { let t = 0, l = 0, n = b; while (n && n !== e) { t += n.offsetTop; l += n.offsetLeft; n = n.offsetParent; } sh = Math.max(sh, t + b.offsetHeight); sw = Math.max(sw, l + b.offsetWidth); });
+            }
+            if (sh > e.clientHeight + Math.max(4, parseFloat(getComputedStyle(e).fontSize) * 0.3) || sw > e.clientWidth + 3)
+              taşan.push({ t: (e.textContent || "").trim().slice(0, 40), sh, ch: e.clientHeight, sw, cw: e.clientWidth });
           });
-          return { bulunan, taşan };
+          // doluluk: ön plan öğelerinin birleşik kutusu (yalnız görünür, opaklık >= 0.6), güvenli alana kırpılır
+          let y1 = Infinity, y2 = -Infinity, adet = 0;
+          kok.querySelectorAll("[data-on]").forEach((e) => {
+            if (etkinOpaklik(e) < 0.6) return;
+            const b = e.getBoundingClientRect();
+            if (b.width < 2 || b.height < 2) return;
+            y1 = Math.min(y1, Math.max(b.top, S.ust)); y2 = Math.max(y2, Math.min(b.bottom, S.alt)); adet++;
+          });
+          const bas = kok.querySelector(".bk-bas");
+          const baslikPx = bas && etkinOpaklik(bas) >= 0.6 ? parseFloat(getComputedStyle(bas).fontSize) : null;
+          return { bulunan, taşan, dolu: adet ? [y1, y2, adet] : null, baslikPx };
         },
         i,
         an,
         S,
       );
       olcum++;
+      if (sablon !== null && k === OR[OR.length - 1]) {
+        const min = S.doluluk_min ?? 0.7, yuk = S.alt - S.ust;
+        const oran = sonuc.dolu ? Math.max(0, sonuc.dolu[1] - sonuc.dolu[0]) / yuk : 0;
+        doluluk.push({ sahne: i, sablon, oran: +oran.toFixed(3) });
+        if (oran < min) ihlaller.push({ sahne: i, an, metin: sablon, yon: "doluluk", deger: `${(oran * 100).toFixed(0)}% < ${(min * 100).toFixed(0)}%` });
+        if (sonuc.baslikPx !== null && sonuc.baslikPx < (S.baslik_min ?? 96) - 0.5)
+          ihlaller.push({ sahne: i, an, metin: sablon, yon: "başlık-boyutu", deger: `${sonuc.baslikPx}px < ${S.baslik_min ?? 96}px` });
+      }
       for (const b of sonuc.bulunan) {
         metin++;
         const kontrol = [];
@@ -122,7 +151,7 @@ try {
   await tarayici.close();
 }
 
-const ozet = { olcum_sayisi: olcum, metin_sayisi: metin, ihlal_sayisi: ihlaller.length, sinir: S, ihlaller };
+const ozet = { olcum_sayisi: olcum, metin_sayisi: metin, ihlal_sayisi: ihlaller.length, sinir: S, doluluk, ihlaller };
 fs.mkdirSync(path.dirname(path.resolve(arg.rapor)), { recursive: true });
 fs.writeFileSync(arg.rapor, JSON.stringify(ozet, null, 1), "utf-8");
 process.exit(ihlaller.length ? 3 : 0);

@@ -34,7 +34,7 @@ TURLER = ("haber", "guncelleme", "indirim", "ucretsiz", "cikis")
 BOYUT_SINIRI = 24_000_000  # 1080p mp4 en çok bu kadar bayt (hedef: 25 MB altı)
 
 # Güvenli alan (px): okunur yazı üstten 220, alttan 420 (y ≤ 1500); alt yarıda sağdan 150 boş (x ≤ 930).
-GUVENLI = {"ust": 220, "alt": 1500, "sol": 40, "sag": 1040, "sag_alt": 930, "alt_yari": 960}
+GUVENLI = {"ust": 220, "alt": 1500, "sol": 40, "sag": 1040, "sag_alt": 930, "alt_yari": 960, "doluluk_min": 0.7, "baslik_min": 96}
 
 # Haber türünün vurgu rengi: ücretsiz/indirim fiyat etiketi yeşil-sarı, çıkış kutlama altını, güncelleme teknik camgöbeği,
 # haber gazete kırmızısı. Hue, görselden renk alınamazsa da türe göre sabit bir taban verir.
@@ -466,14 +466,23 @@ def hf_koku(kos=subprocess.run) -> str:
     return str(kok)
 
 
+def _doluluk_ozeti(sonuc: dict) -> dict:
+    """Sahne türü başına ölçülen en düşük doluluk oranı."""
+    ozet: dict = {}
+    for d in sonuc.get("doluluk", []):
+        ozet[d["sablon"]] = min(d["oran"], ozet.get(d["sablon"], 9.0))
+    return ozet
+
+
 def guvenli_denetle(klasor: Path, props: dict, rapor: Path, cikti=print, kos=subprocess.run) -> dict:
     """Her sahnenin her yerleşmiş metni güvenli alanın içinde mi: üstten 220, alttan 420 (y ≤ 1500), alt yarıda
-    sağdan 150 boş; ayrıca sığdırma taşması. Bir ihlal üretimi durdurur (video çizilmez)."""
+    sağdan 150 boş; ayrıca sığdırma taşması, doluluk (ön plan öğelerinin birleşik kutusu güvenli alan yüksekliğinin
+    en az %70'i) ve açılış başlığı yazı boyutu alt sınırı (96 px). Bir ihlal üretimi durdurur (video çizilmez)."""
     node = shutil.which("node")
     if not node:
         raise TemaHatasi("node bulunamadı")
     komut = [node, str(GUVENLI_BETIK), "--klasor", str(klasor), "--rapor", str(rapor), "--chrome", tarayici_yolu(kos),
-             "--hf", hf_koku(kos), "--sahneler", json.dumps([[s["bas"], s["bit"]] for s in props["sahneler"]]),
+             "--hf", hf_koku(kos), "--sahneler", json.dumps([[s["bas"], s["bit"], s["sablon"]] for s in props["sahneler"]]),
              "--sure", str(props["sure"]), "--sinir", json.dumps(GUVENLI)]
     r = _kos(komut, kos, timeout=600)
     if r.returncode not in (0, 3) or not Path(rapor).exists():
@@ -483,6 +492,8 @@ def guvenli_denetle(klasor: Path, props: dict, rapor: Path, cikti=print, kos=sub
         ilk = "; ".join(f"{i['metin']!r} {i['yon']} {i['an']} sn, {i['deger']} px" for i in sonuc["ihlaller"][:5])
         raise TemaHatasi(f"güvenli alan denetimi: {sonuc['ihlal_sayisi']} ihlal ({ilk}); rapor: {rapor}")
     cikti(f"güvenli alan denetimi: {sonuc['olcum_sayisi']} ölçüm, {sonuc['metin_sayisi']} metin, ihlal yok")
+    for sablon, oran in sorted(_doluluk_ozeti(sonuc).items()):
+        cikti(f"  doluluk {sablon}: en düşük %{round(oran * 100)}")
     return sonuc
 
 
