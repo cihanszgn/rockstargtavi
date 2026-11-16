@@ -32,3 +32,5 @@ Ana sayfa ile aylık takvim aynı `cikis_satir()` üreticisini kullanır. Oyun a
 Klavye kısayolları, `data-*` ve id bağları korunur. Süzgeç, boş sonuç/temizleme, Ctrl+K/Escape, tema, takip/kalıcılık, görünüm, ICS, gündem durdurma ve video düğmeleri aynı `site.js` sahipliğindedir. Mobilde temel düğmeler en az 44px; metin bağlantıları paragraf akışını korur. 390px'te içerik tek sütundur ve yatay taşma olmaz. Koyu/açık tema ile dört dil aynı bileşen sözleşmesini kullanır. JavaScript kapalıyken statik içerik görünürdür; kaydırma animasyonu içerik görünürlüğünün önkoşulu değildir.
 
 Görsel değerler ve kırılma noktaları [DESIGN.md](DESIGN.md) içinde kayıtlıdır. Statik premium denetleyici `data-*` üzerinden olay delegasyonunu tanımadığı için düğmeleri eylemsiz raporlayabilir; gerçek olay bağları tarayıcıda denenerek değerlendirilir, bu uyarıyı susturmak için inline onclick eklenmez.
+
+Canlı mağaza isteği 10 saniyede tamamlanmazsa iptal edilir ve tarihli yerel liste gösterilir. İstek sürerken boş sonuç mesajı gizlenir; sonuç veya yedek geldiğinde iskeletler ve aria-busy kaldırılır. Yerel liste de boşsa yalnız açıklayıcı boş durum görünür.

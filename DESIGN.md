@@ -1,7 +1,7 @@
 ---
 version: alpha
 name: CTRL+A GAME
-description: Oyun haberleri ve oyuna özel rehberler için renkli, klavye tuşlarından esinlenen portal.
+description: Gerçek oyun görselleri, açık bilgi hiyerarşisi ve klavye kimliğiyle dört dilli oyun portalı.
 colors:
   background: '#0D1420'
   surface: '#151F2E'
