@@ -19,7 +19,48 @@ def article(oid='oyun-yama-1'):
             'diller': {d: {'baslik': 'Yeni oyun yaması', 'ozet': 'Yama yayımlandı.',
                           'metin': ' '.join(['Bilgi'] * 60)} for d in h.DILLER},
             'otomasyon': {'konu': oid, 'resmi_url': 'https://blog.playstation.com/2026/11/15/game-patch/',
-                          'teyit_zamani': NOW.isoformat(), 'oyuncuya_fayda': 'Kaydetme hatası giderildi; oyuncu yamasını kurabilir.'}}
+                          'teyit_zamani': NOW.isoformat(), 'oyuncuya_fayda': 'Kaydetme hatası giderildi; oyuncu yamasını kurabilir.',
+                          'hype': 3}}
+
+class HypeTests(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.klasor = pathlib.Path(self.temp.name)
+        self.esik = patch.object(h, 'hype_esigi', return_value=7)
+        self.esik.start()
+
+    def tearDown(self):
+        self.esik.stop()
+        self.temp.cleanup()
+
+    def haber(self, hype):
+        x = article('hype-test')
+        if hype is None:
+            del x['otomasyon']['hype']
+        else:
+            x['otomasyon']['hype'] = hype
+        return x
+
+    def test_hype_eksik_veya_gecersiz_reddedilir(self):
+        for hype in [None, 0, 11, '7', True]:
+            with self.subTest(hype=hype), self.assertRaises(ValueError) as c:
+                h.hazirla([], [self.haber(hype)], NOW, self.klasor)
+            self.assertIn('otomasyon.hype: 1–10 arası tam sayı gerekli', str(c.exception))
+
+    def test_dusuk_hype_senaryosuz_kabul_edilir(self):
+        for hype in [3, 6]:
+            with self.subTest(hype=hype):
+                self.assertEqual(len(h.hazirla([], [self.haber(hype)], NOW, self.klasor)[1]), 1)
+
+    def test_esige_ulasan_hype_senaryosuz_reddedilir(self):
+        with self.assertRaises(ValueError) as c:
+            h.hazirla([], [self.haber(7)], NOW, self.klasor)
+        self.assertIn('otomasyon.hype eşiğe ulaştı', str(c.exception))
+
+    def test_esige_ulasan_hype_gecerli_senaryoyla_kabul_edilir(self):
+        (self.klasor / 'hype-test-tr.json').write_text('{}', encoding='utf-8')
+        with patch.object(h, 'senaryo_denetle', return_value=[]):
+            self.assertEqual(len(h.hazirla([], [self.haber(7)], NOW, self.klasor)[1]), 1)
 
 class NewsTests(unittest.TestCase):
     def test_duplicate_url_title_and_topic_are_not_published_again(self):

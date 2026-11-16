@@ -1124,7 +1124,16 @@ def video_ayari(yol: Path | None = None) -> dict:
     yol = yol or AYARLAR
     ayar = (json_oku(yol) if Path(yol).exists() else {}).get("video") or {}
     return {"ses": ayar.get("ses") or "azure", "konusmaci": ayar.get("konusmaci") or "",
-            "yukleme_hedefi": ayar.get("yukleme_hedefi") or "", "gunluk_en_fazla": int(ayar.get("gunluk_en_fazla", 2))}
+            "yukleme_hedefi": ayar.get("yukleme_hedefi") or "", "gunluk_en_fazla": int(ayar.get("gunluk_en_fazla", 2)),
+            "hype_esigi": int(ayar.get("hype_esigi", 7))}
+
+
+def hype_yeterli(haber: dict, esik: int) -> bool:
+    """Puansız (eski) haber eskisi gibi kalır; puanlı haber yalnız eşiğe ulaşınca video kuyruğuna girer."""
+    hype = (haber.get("otomasyon") or {}).get("hype")
+    if hype is None:
+        return True
+    return type(hype) is int and hype >= esik
 
 
 # ---------------------------------------------------------------- seslendirme
@@ -1482,6 +1491,8 @@ def bekleyenler(dil: str = "tr", gunluk: bool = False, bugun: date | None = None
         except ValueError:
             continue
         if not 0 <= gun <= ayarlar.get("en_eski_gun", 3) or not (SENARYO / f"{h['id']}-{dil}.json").exists():
+            continue
+        if not hype_yeterli(h, ayar["hype_esigi"]):
             continue
         try:
             senaryo = senaryo_oku(h["id"], dil)

@@ -601,7 +601,35 @@ class AnahtarManifestTests(unittest.TestCase):
     def test_video_ayari_varsayilanlari(self):
         with tempfile.TemporaryDirectory() as t:
             self.assertEqual(v.video_ayari(pathlib.Path(t) / 'yok.json'),
-                             {'ses': 'azure', 'konusmaci': '', 'yukleme_hedefi': '', 'gunluk_en_fazla': 2})
+                             {'ses': 'azure', 'konusmaci': '', 'yukleme_hedefi': '', 'gunluk_en_fazla': 2, 'hype_esigi': 7})
+
+    def test_video_ayari_hype_esigi_dosyadan_okunur(self):
+        with tempfile.TemporaryDirectory() as t:
+            yol = pathlib.Path(t) / 'ayarlar.json'
+            yol.write_text(json.dumps({'video': {'hype_esigi': 9}}), encoding='utf-8')
+            self.assertEqual(v.video_ayari(yol)['hype_esigi'], 9)
+
+
+class HypeTests(unittest.TestCase):
+    def test_hype_yeterli(self):
+        self.assertTrue(v.hype_yeterli({'otomasyon': {}}, 7))
+        self.assertTrue(v.hype_yeterli({'otomasyon': {'hype': 7}}, 7))
+        self.assertTrue(v.hype_yeterli({'otomasyon': {'hype': 9}}, 7))
+        self.assertFalse(v.hype_yeterli({'otomasyon': {'hype': 6}}, 7))
+        self.assertFalse(v.hype_yeterli({'otomasyon': {'hype': True}}, 1))
+        self.assertFalse(v.hype_yeterli({'otomasyon': {'hype': '9'}}, 7))
+
+    def test_bekleyenler_hype_esik_altini_atlar(self):
+        bugun = date(2026, 11, 16)
+        with tempfile.TemporaryDirectory() as t, Ortam(t, manifest={'surum': 1, 'taban': v.TABAN, 'videolar': {}}):
+            icerik = pathlib.Path(t) / 'icerik.json'
+            x = haber()
+            x['otomasyon'] = {'hype': 3}
+            icerik.write_text(json.dumps([x], ensure_ascii=False), encoding='utf-8')
+            self.assertEqual(v.bekleyenler('tr', bugun=bugun, cikti=lambda m: None), [])
+            x['otomasyon']['hype'] = 7
+            icerik.write_text(json.dumps([x], ensure_ascii=False), encoding='utf-8')
+            self.assertEqual(v.bekleyenler('tr', bugun=bugun, cikti=lambda m: None), [KIMLIK])
 
 
 class Ortam:
@@ -1000,7 +1028,8 @@ def makale(oid='oyun-yama-1'):
                            'metin': ' '.join(['Bilgi'] * 60)} for d in haber_oto.DILLER},
             'otomasyon': {'konu': oid, 'resmi_url': 'https://blog.playstation.com/2026/11/15/game-patch/',
                           'teyit_zamani': '2026-11-15T08:00:00+00:00',
-                          'oyuncuya_fayda': 'Kaydetme hatası giderildi; oyuncu yamasını kurabilir.'}}
+                          'oyuncuya_fayda': 'Kaydetme hatası giderildi; oyuncu yamasını kurabilir.',
+                          'hype': 3}}
 
 
 class HaberOtoTests(unittest.TestCase):

@@ -51,15 +51,25 @@ Paket JSON listesinde normal `data/icerik.json` şemasına şu alan eklenir:
  "konu": "oyun-surum-olay-kimligi",
  "resmi_url": "https://blog.playstation.com/2026/11/13/ilgili-duyuru/",
  "teyit_zamani": "2026-11-15T04:05:00+03:00",
- "oyuncuya_fayda": "Yamanın hangi oyuncuları etkilediği ve ne yapabilecekleri."
+ "oyuncuya_fayda": "Yamanın hangi oyuncuları etkilediği ve ne yapabilecekleri.",
+ "hype": 7
 }
 ```
 
 Bu bir alan örneğidir, yayınlanacak haber değildir. Resmî URL aynı haberin kaynaklar listesinde bulunmalı; izinli alan adı olmalı; son iki saatte gerçekten okunmuş olmalı. Haber tarihi kaynak tarihidir, ileri tarih veya iki günden eski haber reddedilir. Her dilin yeni metni 50–300 kelime ve başlık ≤100 karakterdir. Yapay bilgi/dolgu ile alt sınır tamamlanmaz; yeterli olgu yoksa yayın yapılmaz.
 
+## Hype puanı
+
+- Her yeni habere 1–10 arası tam sayı `otomasyon.hype` verilir; puan haberin kaç oyuncuyu ilgilendirdiğini ölçer, editörün beğenisini değil.
+- 9–10: çok büyük oyunda (GTA, Call of Duty, Fortnite, Minecraft, EA Sports FC, League of Legends, Valorant, Counter-Strike 2 ve benzeri) çıkış tarihi, yeni oyun duyurusu, büyük ücretsiz oyun ya da herkesi etkileyen büyük değişiklik.
+- 7–8: takipli oyunların yeni sezonu/büyük güncellemesi, bilinen bir oyunun çıkışı, büyük mağaza kampanyası ya da tanınmış ücretsiz oyun.
+- 5–6: orta boy güncelleme, küçük ya da orta oyunun çıkışı, sınırlı kampanya.
+- 1–4: küçük yama, geliştirici notu, dar kitleli haber.
+- Eşik `sosyal/ayarlar.json` → `video.hype_esigi` (şu an 7). Eşiğe ulaşan haberin video senaryosu aynı turda yazılmak zorundadır, yoksa `hazirla` paketi reddeder. Eşiğin altındaki haber için senaryo yazılmaz; o haber sitede ve Instagram'da yalnız görsel olarak paylaşılır. Puan şişirilmez: kararsız kalınan haber düşük puanı alır.
+
 ## Video senaryosu
 
-Habere dikey video senaryosu aynı turda yazılabilir: `video/senaryo/<haber id>-tr.json`. Dosya varsa `hazirla` onu haberin kendi metniyle denetler; hatalı senaryo bütün paketi reddeder. Senaryo isteğe bağlıdır: yazılmazsa video sonra üretilir. Video üretimi saatlik turun işi değildir (render ve günlük kota ayrı yürür).
+Habere dikey video senaryosu `video/senaryo/<haber id>-tr.json` dosyası olarak yazılır. Hype puanı eşiğe (şu an 7) ulaşan ya da üstünde olan haberde senaryo zorunludur ve aynı turda yazılır; eşiğin altındaki haberde senaryo yazılmaz. Dosya varsa `hazirla` onu haberin kendi metniyle denetler; hatalı senaryo bütün paketi reddeder. Video üretimi saatlik turun işi değildir (render ve günlük kota ayrı yürür).
 
 ```powershell
 py tools/video_uret.py dogrula --id HABER-ID --dil tr

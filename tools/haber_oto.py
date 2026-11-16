@@ -31,6 +31,7 @@ DILLER = ('tr', 'en', 'fr', 'es')
 TRT = timezone(timedelta(hours=3))
 UA = 'Mozilla/5.0 (compatible; CTRLAGAME-News/1.0; +https://ctrl-agame.com/hakkinda.html)'
 SENARYO = ROOT / 'video/senaryo'
+AYARLAR = ROOT / 'sosyal/ayarlar.json'
 
 
 def simdi():
@@ -219,7 +220,7 @@ def kilit_birak(path, token):
 def senaryo_denetle(haber, klasor=None):
     """Haberle birlikte yazılmış video senaryosu varsa, yayından önce haber metniyle tutarlı mı diye sınar.
 
-    Senaryo isteğe bağlıdır; yoksa video sonra üretilir. Sayı ve tarihler yalnız haber metninden gelebilir.
+    Senaryo yalnız varsa denetlenir; hype eşiğe ulaşan haberde hazirla onun varlığını ayrıca zorunlu kılar. Sayı ve tarihler yalnız haber metninden gelebilir.
     """
     errors = []
     for lang in DILLER:
@@ -231,7 +232,14 @@ def senaryo_denetle(haber, klasor=None):
     return errors
 
 
-def hazirla(existing, batch, now=None):
+def hype_esigi():
+    """Video eşiği sosyal/ayarlar.json → video.hype_esigi (yoksa 7). Video araçlarını içe aktarmaz."""
+    if not AYARLAR.exists():
+        return 7
+    return int((json.loads(AYARLAR.read_text(encoding='utf-8')).get('video') or {}).get('hype_esigi', 7))
+
+
+def hazirla(existing, batch, now=None, senaryo_klasoru=None):
     now = now or simdi()
     if not isinstance(batch, list) or len(batch) > CONFIG['sinirlar']['tur_basina']:
         raise ValueError('paket liste olmalı ve en fazla 3 haber içermeli')
@@ -278,6 +286,11 @@ def hazirla(existing, batch, now=None):
         if (not resmi(official) or kanonik(official) not in incoming or not checked or
                 not timedelta(0) <= now - checked <= timedelta(hours=2) or len(str(auto.get('oyuncuya_fayda', ''))) < 30):
             raise ValueError('son 2 saatte okunmuş resmî kaynak ve oyuncuya somut fayda açıklaması gerekli')
+        hype = auto.get('hype')
+        if type(hype) is not int or not 1 <= hype <= 10:
+            raise ValueError('otomasyon.hype: 1–10 arası tam sayı gerekli')
+        if hype >= hype_esigi() and not ((senaryo_klasoru or SENARYO) / f"{x['id']}-tr.json").exists():
+            raise ValueError('otomasyon.hype eşiğe ulaştı: video senaryosu (video/senaryo/<id>-tr.json) gerekli')
         for lang in DILLER:
             content = x.get('diller', {}).get(lang) or {}
             if not all(isinstance(content.get(k), str) and content[k].strip() for k in ('baslik', 'ozet', 'metin')):
@@ -286,7 +299,7 @@ def hazirla(existing, batch, now=None):
                 raise ValueError(f'{lang}: başlık en fazla 100 karakter, haber 50–300 kelime olmalı')
             if any(not isinstance(tag, str) or not re.fullmatch(r'#[A-Za-z0-9]+', tag) for tag in content.get('etiketler', [])):
                 raise ValueError(f'{lang}: geçersiz etiket')
-        errors = senaryo_denetle(x)
+        errors = senaryo_denetle(x, senaryo_klasoru)
         if errors:
             raise ValueError('video senaryosu: ' + '; '.join(errors[:10]))
         new = json.loads(json.dumps(x, ensure_ascii=False))
