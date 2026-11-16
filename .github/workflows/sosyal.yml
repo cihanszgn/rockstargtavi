@@ -68,10 +68,23 @@ jobs:
           gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
           head=$(git rev-parse HEAD)
           yayinda=0
-          for i in $(seq 1 24); do
-            sonuc=$(gh api "repos/$GITHUB_REPOSITORY/pages/builds/latest" --jq '.status + " " + .commit')
-            if [ "$sonuc" = "built $head" ]; then yayinda=1; break; fi
-            if [ "$sonuc" = "errored $head" ]; then echo "Pages derlemesi başarısız"; exit 1; fi
+          # Başka bir oturum ya da otomasyon araya commit gönderirse en son derleme bizim HEAD'imizin
+          # değil, onun üstündeki daha yeni bir commit'in olur; o da kartlarımızı içerir, geçerli sayılır.
+          # Araya giren push bizim derlememizi "errored" yapabilir: bir kez yeniden derletilir.
+          yeniden=0
+          for i in $(seq 1 32); do
+            durum=$(gh api "repos/$GITHUB_REPOSITORY/pages/builds/latest" --jq '.status')
+            commit=$(gh api "repos/$GITHUB_REPOSITORY/pages/builds/latest" --jq '.commit')
+            if [ "$durum" = "built" ]; then
+              if [ "$commit" = "$head" ]; then yayinda=1; break; fi
+              iliski=$(gh api "repos/$GITHUB_REPOSITORY/compare/$head...$commit" --jq '.status' 2>/dev/null || true)
+              if [ "$iliski" = "ahead" ] || [ "$iliski" = "identical" ]; then yayinda=1; break; fi
+            fi
+            if [ "$durum" = "errored" ] && [ "$yeniden" = 0 ]; then
+              echo "Pages derlemesi hata verdi; bir kez yeniden derletiliyor."
+              gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds" >/dev/null
+              yeniden=1
+            fi
             sleep 15
           done
           [ "$yayinda" = 1 ] || { echo "Kartların Pages yayını doğrulanamadı; paylaşım yapılmadı."; exit 1; }
