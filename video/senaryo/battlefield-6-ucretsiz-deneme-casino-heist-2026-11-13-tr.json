@@ -4,21 +4,7 @@
  "fps": 30,
  "boyut": [1080, 1920],
  "sablon_surumu": 1,
- "okunus": {
-  "Battlefield": "Betılfiild",
-  "EA'nın": "İ Ey'nin",
-  "REDSEC'i": "Red Sek'i",
-  "EA app": "İ Ey ep",
-  "Steam": "Stiim",
-  "Epic": "Epik",
-  "PlayStation": "Pleysteyşın",
-  "Xbox": "Eksboks",
-  "PC": "Pi Si",
-  "Casual Breakthrough": "Kejuıl Breykturu",
-  "Casino Heist": "Kasino Hayst",
-  "Dough": "Dou",
-  "ctrl-agame.com'da": "kontrol ey geym nokta kom'da"
- },
+ "okunus": {},
  "sahneler": [
   {
    "sablon": "baslik",
@@ -93,7 +79,7 @@
   },
   {
    "sablon": "kapanis",
-   "anlatim": "Denemeye giriş adımları ctrl-agame.com'da.",
+   "anlatim": "Denemeye giriş adımları sitemizde, Control A Game'de.",
    "veri": {
     "cagri": "Giriş adımları sitede",
     "alt": "Mağaza bağlantıları ve ayrıntılar haberde."

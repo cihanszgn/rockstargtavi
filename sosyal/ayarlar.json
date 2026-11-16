@@ -46,8 +46,8 @@
   "gizlilik": "private"
  },
  "video": {
-  "ses": "edge",
-  "konusmaci": "tr-TR-AhmetNeural",
+  "ses": "azure",
+  "konusmaci": "tr-TR-Aydin:MAI-Voice-2.1",
   "yukleme_hedefi": "medyayukle@medya.ctrl-agame.com:/var/www/medya/v/",
   "gunluk_en_fazla": 2
  }

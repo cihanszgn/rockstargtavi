@@ -8,7 +8,8 @@ Komutlar:
 
 Senaryo `video/senaryo/<haber id>-<dil>.json`, çıktı `video/cikti/` (git dışı), manifest `data/videolar.json`.
 Senaryo metni yalnız veridir: kod olarak değerlendirilmez, kabuğa verilmez; alt süreçlere liste argümanı ve
-dosya olarak gider. Seslendirme servisine yalnız haberin herkese açık anlatım metni gider.
+dosya olarak gider. Seslendirme servisine yalnız haberin herkese açık anlatım metni gider. Kelime sınırı göndermeyen
+seslerde (MAI) zamanlar üretilen sesin kendisinden Azure konuşma tanımayla ölçülür; tanımaya yalnız o ses gider.
 """
 from __future__ import annotations
 
@@ -99,8 +100,12 @@ BAGLI_BAS = frozenset("de da ki mi mı mu mü".split())
 KIRILMAZ = 100.0
 KIMLIK = re.compile(r"^[a-z0-9][a-z0-9-]{2,150}$")
 DIL = re.compile(r"^[a-z]{2}$")
-KONUSMACI = re.compile(r"^[a-z]{2,3}-[A-Z]{2}-[A-Za-z]+Neural$")
+# Neural sesler "tr-TR-AhmetNeural", MAI sesleri "tr-TR-Aydin:MAI-Voice-2.1" biçiminde.
+KONUSMACI = re.compile(r"^[a-z]{2,3}-[A-Z]{2}-[A-Za-z]+(?:Neural|:[A-Za-z][A-Za-z0-9.-]{0,40}[A-Za-z0-9])$")
 HEDEF = re.compile(r"^(?:[A-Za-z0-9._-]+@)?[A-Za-z0-9._-]+:[A-Za-z0-9._/~-]*$")
+# Ses adresi harf harf ya da "nokta kom" diye okur; sahibi bunu duymak istemiyor (2026-11-16). Anlatım sitenin adını söyler.
+WEB_ADRESI = re.compile(r"\b[\w-]+\.(?:com|net|org|io|gg|tv|co)(?:\.[a-z]{2})?\b|\bwww\.|\bhttps?://"
+                        r"|\b(?:nokta|dot|point|punto)\s+(?:com|kom|net|org)\b", re.I)
 
 _calistir = subprocess.run  # testler sahte koşucu verir
 
@@ -693,6 +698,9 @@ def senaryo_hazirla(senaryo, haber: dict, dil: str) -> dict:
                 D.uyarilar.append(f"{y}.maskot.konum: maskotun yeri şablondan gelir, yok sayıldı")
         birimler = okunus_uygula(kel, okunus, kullanilan)
         sozlu.append(" ".join(b[1] for b in birimler))
+        if WEB_ADRESI.search(anlatim) or WEB_ADRESI.search(sozlu[-1]):
+            D.hata(f"{y}.anlatim", "web adresi seslendirilmez; sitenin adını yazın "
+                                   "(ör. \"tamamı sitemizde, Control A Game'de\")")
         hazir.append({"sablon": sablon, "anlatim": anlatim, "kelimeler": kel, "birimler": birimler, "veri": veri,
                       "alt_kart": _alt_kart(D, s.get("alt_kart"), f"{y}.alt_kart"),
                       "maskot": {"hareket": hareket or ""}})
@@ -709,8 +717,8 @@ def senaryo_hazirla(senaryo, haber: dict, dil: str) -> dict:
         D.hata("sahneler", f"tahmini süre {tahmin:.1f} sn; {EN_KISA:.0f}–{EN_UZUN:.0f} sn olmalı")
     if D.hatalar:
         raise SenaryoHatasi(D.hatalar)
-    return {"sahneler": hazir, "tts": tts, "kelime_sayisi": kelime_sayisi, "tahmini_sure": round(tahmin, 1),
-            "uyarilar": D.uyarilar}
+    return {"dil": dil, "sahneler": hazir, "tts": tts, "kelime_sayisi": kelime_sayisi,
+            "tahmini_sure": round(tahmin, 1), "uyarilar": D.uyarilar}
 
 
 def _cumle_bitir(metin: str) -> str:
@@ -743,16 +751,51 @@ def senaryo_dosyasi_denetle(yol: Path, haber: dict, dil: str) -> list[str]:
 
 # ---------------------------------------------------------------- zamanlama
 
-def hizala(sozlu_birimler: list[str], sinirlar: list[dict]) -> list[tuple[float, float] | None]:
+_BIRLER = ("", "bir", "iki", "üç", "dört", "beş", "altı", "yedi", "sekiz", "dokuz")
+_ONLAR = ("", "on", "yirmi", "otuz", "kırk", "elli", "altmış", "yetmiş", "seksen", "doksan")
+_BUYUKLER = ((10 ** 12, "trilyon"), (10 ** 9, "milyar"), (10 ** 6, "milyon"), (1000, "bin"))
+
+
+def sayi_oku_tr(n: int) -> str:
+    """Tam sayının Türkçe okunuşu: 750 → "yedi yüz elli", 1000 → "bin", 2026 → "iki bin yirmi altı"."""
+    if n == 0:
+        return "sıfır"
+    parca = []
+    for deger, ad in _BUYUKLER:
+        if n >= deger:
+            kat, n = divmod(n, deger)
+            if not (deger == 1000 and kat == 1):
+                parca.append(sayi_oku_tr(kat))
+            parca.append(ad)
+    yuz, n = divmod(n, 100)
+    if yuz:
+        parca.extend(([_BIRLER[yuz]] if yuz > 1 else []) + ["yüz"])
+    on, bir = divmod(n, 10)
+    parca.extend(x for x in (_ONLAR[on], _BIRLER[bir]) if x)
+    return " ".join(parca)
+
+
+def _soz_norm(metin: str, dil: str | None) -> str:
+    """Eşleme için sözlü biçim: Türkçede rakamlar okunduğu gibi yazılır (konuşma tanıma "750"yi "yedi yüz elli" verir).
+    Seslendirici sınırları rakamı rakam olarak verse de iki taraf aynı çevrildiği için eşleşme bozulmaz."""
+    if dil == "tr":
+        metin = re.sub(r"\d{1,3}(?:\.\d{3})+(?!\d)|\d+",
+                       lambda m: f" {sayi_oku_tr(int(m.group().replace('.', '')))} ", metin)
+    return _norm(metin)
+
+
+def hizala(sozlu_birimler: list[str], sinirlar: list[dict], dil: str | None = None) -> list[tuple[float, float] | None]:
     """Sözlü birimleri seslendirme kelime sınırlarına harf düzeyinde eşler.
-    Bir sınır birden çok birimi kapsıyorsa (ör. "1 Aralık'ta") süresi harf payına göre bölünür."""
+    Bir sınır birden çok birimi kapsıyorsa (ör. "1 Aralık'ta") süresi harf payına göre bölünür. Sınırlar seslendiricinin
+    kendi olayları da olabilir, sesten konuşma tanımayla çıkmış kelimeler de: ikincisinde yanlış duyulan adlar
+    eşleşmeyen harf olarak kalır, o birimler komşularının arasına _doldur ile yerleşir."""
     a, a_sahip, b, b_sahip = [], [], [], []
     for u, s in enumerate(sozlu_birimler):
-        for c in _norm(s):
+        for c in _soz_norm(s, dil):
             a.append(c)
             a_sahip.append(u)
     for j, s in enumerate(sinirlar):
-        for c in _norm(s["k"]):
+        for c in _soz_norm(s["k"], dil):
             b.append(c)
             b_sahip.append(j)
     eslesme: dict[int, dict[int, int]] = {}
@@ -764,9 +807,14 @@ def hizala(sozlu_birimler: list[str], sinirlar: list[dict]) -> list[tuple[float,
     araliklar: list = [None] * len(sozlu_birimler)
     for j in sorted(eslesme):
         sayim, s = eslesme[j], sinirlar[j]
-        toplam, bas, sure = sum(sayim.values()), s["b"], s["s"] - s["b"]
-        for u in sorted(sayim):
-            son = bas + sure * sayim[u] / toplam
+        ilk, son_birim = min(sayim), max(sayim)
+        # Tanıma birkaç sözü tek kelimede birleştirebiliyor ("EA app, Steam, Epic" → "epic"). Eşleşme sıralı olduğundan
+        # iki uç arasındaki birimler başka kelimeye düşemez; o sürede söylenmişlerdir ve tam harf payı alırlar.
+        pay = {u: sayim[u] if u in (ilk, son_birim) else len(_soz_norm(sozlu_birimler[u], dil)) or 1
+               for u in range(ilk, son_birim + 1)}
+        toplam, bas, sure = sum(pay.values()), s["b"], s["s"] - s["b"]
+        for u in range(ilk, son_birim + 1):
+            son = bas + sure * pay[u] / toplam
             eski = araliklar[u]
             araliklar[u] = (bas, son) if eski is None else (min(eski[0], bas), max(eski[1], son))
             bas = son
@@ -798,6 +846,28 @@ def _doldur(araliklar: list, agirlik: list[float], son: float) -> list[tuple[flo
         if k:
             b = max(b, sonuc[k - 1][0] + 0.01)
         sonuc[k] = (b, max(s, b + 0.05))
+    return sonuc
+
+
+def _duraklara_yerlestir(araliklar: list[tuple[float, float]], duraklar) -> list[tuple[float, float]]:
+    """Sesteki durak söz değildir: durağın içinde başlayıp sonra süren birim durak bitince başlar, durağa taşan birim
+    durak başında biter. Harf payıyla bölünmüş birleşik tanıma kelimesinin sözleri böylece aralarındaki duraklara
+    oturur. Durağı baştan sona kapsayan birime dokunulmaz (kod içi durak: "MBZ-19"). Duraktan sonraki ilk söz
+    durak bitiminden en çok 0,25 sn geç başlıyorsa durak bitimine, duraktan önceki son söz durak başından en çok
+    0,25 sn önce bitiyorsa durak başına uzatılır: ses orada başlamış ya da sürüyordur (tanıma, MAI sesinde bazı
+    kelimeleri ~0,1–0,2 sn geç başlatıp erken bitiriyor, ölçüm 2026-11-16)."""
+    sonuc = list(araliklar)
+    for d0, d1 in duraklar:
+        for k, (b, s) in enumerate(sonuc):
+            sonraki = sonuc[k + 1][0] if k + 1 < len(sonuc) else None
+            if d0 - 0.03 <= b < d1 < s:
+                sonuc[k] = (d1, s)
+            elif b < d0 < s <= d1 + 0.03:
+                sonuc[k] = (b, d0)
+            elif d1 < b <= d1 + 0.25 and (k == 0 or sonuc[k - 1][1] <= d1 + 0.02):
+                sonuc[k] = (d1, s)
+            elif b < s < d0 and d0 - s <= 0.25 and (sonraki is None or sonraki >= d1 - 0.02):
+                sonuc[k] = (b, d0)
     return sonuc
 
 
@@ -926,8 +996,9 @@ def parcalara_bol(kelimeler: list[dict]) -> list[dict]:
     return parcalar
 
 
-def zamanla(hazir: dict, sinirlar: list[dict], ses_suresi: float) -> dict:
-    """Kelime zamanlarını sahnelere bağlar: sahne ilk sözünden biraz önce başlar, sonrakine kadar sürer."""
+def zamanla(hazir: dict, sinirlar: list[dict], ses_suresi: float, duraklar=()) -> dict:
+    """Kelime zamanlarını sahnelere bağlar: sahne ilk sözünden biraz önce başlar, sonrakine kadar sürer.
+    duraklar verilirse birim zamanları sesteki duraklara yerleştirilir (_duraklara_yerlestir)."""
     birim_sozlu, birim_kelime, kelimeler = [], [], []
     for si, s in enumerate(hazir["sahneler"]):
         taban = len(kelimeler)
@@ -935,9 +1006,10 @@ def zamanla(hazir: dict, sinirlar: list[dict], ses_suresi: float) -> dict:
         for idx, soz in s["birimler"]:
             birim_sozlu.append(soz)
             birim_kelime.append([taban + x for x in idx])
-    agirlik = [float(len(_norm(s)) or 1) for s in birim_sozlu]
+    dil = hazir.get("dil")
+    agirlik = [float(len(_soz_norm(s, dil)) or 1) for s in birim_sozlu]
     son_sinir = max((s["s"] for s in sinirlar), default=0.0)
-    birim_zaman = _doldur(hizala(birim_sozlu, sinirlar), agirlik, son_sinir)
+    birim_zaman = _duraklara_yerlestir(_doldur(hizala(birim_sozlu, sinirlar, dil), agirlik, son_sinir), duraklar)
     for (b, s), idx in zip(birim_zaman, birim_kelime):
         uzunluk = [len(_norm(kelimeler[x]["k"])) or 1 for x in idx]
         t = b
@@ -1033,8 +1105,11 @@ def manifest_oku(yol: Path | None = None) -> dict:
 
 
 def manifest_guncelle(m: dict, haber_id: str, dil: str, kayit: dict) -> dict:
-    """Yalnız bu aracın alanlarını yazar; youtube/instagram ve bilinmeyen alanlar korunur."""
+    """Yalnız bu aracın alanlarını yazar; youtube/instagram ve bilinmeyen alanlar korunur.
+    Onay izlenmiş içeriğe verilir: anahtar değişince video yeniden onaysız döner."""
     girdi = m["videolar"].setdefault(haber_id, {}).setdefault(dil, {})
+    if girdi.get("anahtar") != kayit.get("anahtar"):
+        girdi.pop("onay", None)
     girdi.update(kayit)
     girdi.setdefault("youtube", "")
     girdi.setdefault("instagram", "")
@@ -1071,19 +1146,22 @@ class Seslendirici:
 
     def seslendir(self, metin: str, klasor: Path) -> tuple[Path, list[dict]]:
         self.on_kosul()
-        uv = shutil.which("uv")
-        if not uv:
-            raise UretimHatasi("uv bulunamadı (seslendirme yardımcısı uv ile çalışır)")
         klasor.mkdir(parents=True, exist_ok=True)
         girdi, ses, olay = klasor / "tts-girdi.json", klasor / "ses.mp3", klasor / "tts-olaylar.json"
         json_yaz(girdi, {"metin": metin, "konusmaci": self.konusmaci, "hiz": HIZ,
                          "dil": self.konusmaci[:5]})
-        komut = [uv, "run", "--quiet", "--no-project", "--with", self.paket, "python", "-I", str(YARDIMCI),
-                 self.ad, str(girdi), str(ses), str(olay)]
-        r = _calistir(komut, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=900)
-        if r.returncode != 0 or not ses.exists() or not olay.exists():
-            raise UretimHatasi(f"{self.ad} seslendirme başarısız: {(r.stderr or r.stdout or '').strip()[-800:]}")
+        self._yardimci(self.ad, girdi, ses, olay, "seslendirme", ses)
         return ses, olaylari_kelimeye(json_oku(olay))
+
+    def _yardimci(self, mod: str, girdi: Path, ses: Path, olay: Path, is_adi: str, beklenen: Path) -> None:
+        uv = shutil.which("uv")
+        if not uv:
+            raise UretimHatasi("uv bulunamadı (seslendirme yardımcısı uv ile çalışır)")
+        komut = [uv, "run", "--quiet", "--no-project", "--with", self.paket, "python", "-I", str(YARDIMCI),
+                 mod, str(girdi), str(ses), str(olay)]
+        r = _calistir(komut, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=900)
+        if r.returncode != 0 or not beklenen.exists() or not olay.exists():
+            raise UretimHatasi(f"{self.ad} {is_adi} başarısız: {(r.stderr or r.stdout or '').strip()[-800:]}")
 
 
 class EdgeSes(Seslendirici):
@@ -1097,6 +1175,32 @@ class AzureSes(Seslendirici):
         eksik = [k for k in ("AZURE_SPEECH_KEY", "AZURE_SPEECH_REGION") if not os.environ.get(k)]
         if eksik:
             raise UretimHatasi(f"Azure için ortam değişkeni yok: {', '.join(eksik)} (önizleme için --ses edge)")
+
+    def seslendir(self, metin: str, klasor: Path) -> tuple[Path, list[dict]]:
+        ses, sinirlar = super().seslendir(metin, klasor)
+        if sinirlar:
+            return ses, sinirlar
+        # MAI-Voice kelime sınırı göndermiyor: zamanlar videoya giren mp3'ün kendisinden, Azure konuşma tanımayla
+        # ölçülür. mp3, Remotion'ın da kullandığı ffmpeg ile açılır; böylece iki taraf aynı zaman çizgisini görür.
+        wav, girdi, olay = klasor / "tani.wav", klasor / "tani-girdi.json", klasor / "tani-olaylar.json"
+        ffmpeg("-i", str(ses), "-ac", "1", "-ar", "16000", "-c:a", "pcm_s16le", str(wav))
+        json_yaz(girdi, {"dil": self.konusmaci[:5]})
+        self._yardimci("tani", girdi, wav, olay, "konuşma tanıma", wav)
+        return ses, tanima_sonlarini_kirp(olaylari_kelimeye(json_oku(olay)), sessizlikler(ses))
+
+
+def tanima_sonlarini_kirp(kelimeler: list[dict], duraklar: list[tuple[float, float]]) -> list[dict]:
+    """Konuşma tanıma kelime başlarını sesle ölçer (durak sonrası başlar konuşmanın başlangıcına ~16 ms yakın), ama
+    durak önündeki kelimenin süresini durağın ~150 ms içine uzatır (ölçüm 2026-11-16). O bitiş durak başına çekilir.
+    Yalnız kelimenin bittiği durak sayılır: birleşik tanıma kelimesi ("EA app, Steam, Epic" → "epic") araya giren
+    duraklarda kesilmez. Durak kelimenin ortasındaysa (sonraki kelime durak bitmeden başlıyorsa) dokunulmaz."""
+    yeni = [dict(w) for w in kelimeler]
+    for d0, d1 in duraklar:
+        for i, w in enumerate(yeni):
+            sonraki = yeni[i + 1]["b"] if i + 1 < len(yeni) else None
+            if w["b"] < d0 < w["s"] <= d1 + 0.1 and (sonraki is None or sonraki >= d1 - 0.05):
+                w["s"] = round(max(d0, w["b"] + 0.05), 3)
+    return yeni
 
 
 SESLENDIRICILER = {"edge": EdgeSes, "azure": AzureSes}
@@ -1129,31 +1233,44 @@ def sessizlikler(yol: Path) -> list[tuple[float, float]]:
               f"silencedetect=noise={DURAK_DB}dB:d={DURAK_SN}", "-f", "null", "-"], cwd=VIDEO, timeout=300)
     bas = [float(x) for x in re.findall(r"silence_start: (-?[0-9.]+)", r.stderr)]
     bit = [float(x) for x in re.findall(r"silence_end: ([0-9.]+)", r.stderr)]
-    return [(max(0.0, b), e) for b, e in zip(bas, bit)]
+    duraklar = []
+    for b, e in zip(bas, bit):
+        # silencedetect uzun bir durağı bazen 10 ms arayla ikiye böler (MAI sesinde ölçüldü); tek durak sayılır.
+        if duraklar and b - duraklar[-1][1] < 0.03:
+            duraklar[-1] = (duraklar[-1][0], e)
+        else:
+            duraklar.append((max(0.0, b), e))
+    return duraklar
 
 
 def sesle_hizala(kelimeler: list[dict], duraklar: list[tuple[float, float]]) -> list[dict]:
     """Seslendiricinin kelime zamanlarını gerçek sese oturtur.
 
     Ölçüm (edge, 2026-11-16): kelime sınırları sesten ~95 ms önde; paragraf başındaki kelime duraklamanın bir
-    kısmını kendine sayıp ~330 ms önde başlıyordu, altyazı sözden önce yanıyordu. Önce duraklardan önceki kelime
-    bitişleriyle sabit kayma bulunur, sonra her durağın bittiği andaki kelimenin başı konuşmanın başladığı ana çekilir.
+    kısmını kendine sayıp ~330 ms önde başlıyordu, altyazı sözden önce yanıyordu. Azure'un kendi kelime sınırları da
+    aynı (Ahmet: bitişler ~94 ms, durak sonrası başlar ~313 ms önde). Önce duraklardan önceki kelime bitişleriyle sabit
+    kayma bulunur, sonra her durağın bittiği andaki kelimenin başı konuşmanın başladığı ana çekilir.
+    Konuşma tanımadan gelen zamanlar sesin kendisinden ölçüldüğü için kaymaz: durak önündeki kelimenin bitişi durağın
+    ~150 ms içine taşar, o fark aralık dışında kalır ve kayma sıfır çıkar.
     """
     if not kelimeler or not duraklar:
         return kelimeler
     farklar = []
     for d0, _ in duraklar:
-        once = [w for w in kelimeler if w["s"] <= d0 + 0.05]
-        if d0 > 0.05 and once and -0.05 <= d0 - once[-1]["s"] <= 0.3:
-            farklar.append(d0 - once[-1]["s"])
+        # Duraktan önce başlamış kelimelerden bitişi durak başına en yakın olan: duraktan hemen önceki söz.
+        once = [d0 - w["s"] for w in kelimeler if w["b"] < d0]
+        if d0 > 0.05 and once and -0.05 <= min(once, key=abs) <= 0.3:
+            farklar.append(min(once, key=abs))
     kayma = min(0.25, max(0.0, sorted(farklar)[len(farklar) // 2])) if farklar else 0.0
     yeni = [{**w, "b": w["b"] + kayma, "s": w["s"] + kayma} for w in kelimeler]
-    for _, d1 in duraklar:
+    for d0, d1 in duraklar:
         i = next((j for j, w in enumerate(yeni) if w["s"] > d1), None)
         if i is None:
             continue
         w = yeni[i]
-        if w["b"] < d1 - 0.04 < w["s"] - 0.09 and (i == 0 or yeni[i - 1]["s"] <= d1 + 0.02):
+        # Durağı çok önceden başlayıp içine alan kelime (birleşik tanıma kelimesi) durak sonrasına taşınmaz.
+        if (d0 - 0.15 <= w["b"] < d1 - 0.04 < w["s"] - 0.09
+                and (i == 0 or yeni[i - 1]["s"] <= d1 + 0.02)):
             w["b"] = d1
     return [{**w, "b": round(w["b"], 3), "s": round(w["s"], 3)} for w in yeni]
 
@@ -1234,9 +1351,10 @@ def uret(haber_id: str, dil: str, ses: str | None = None, yukle: bool = False, z
     if not sinirlar:
         raise UretimHatasi("seslendirme kelime zamanı vermedi")
     # Önbellekte seslendiricinin ham zamanları durur; sese oturtma her üretimde aynı sesten yeniden hesaplanır.
-    sinirlar = sesle_hizala(sinirlar, sessizlikler(ses_yolu))
+    duraklar = sessizlikler(ses_yolu)
+    sinirlar = sesle_hizala(sinirlar, duraklar)
     ses_suresi = medya_bilgisi(ses_yolu)["sure"]
-    zaman = zamanla(hazir, sinirlar, ses_suresi)
+    zaman = zamanla(hazir, sinirlar, ses_suresi, duraklar)
     if not EN_KISA <= zaman["sure"] <= EN_UZUN:
         raise UretimHatasi(f"video süresi {zaman['sure']:.1f} sn; {EN_KISA:.0f}–{EN_UZUN:.0f} sn olmalı, anlatımı ayarlayın")
     is_klasoru = GECICI / taban

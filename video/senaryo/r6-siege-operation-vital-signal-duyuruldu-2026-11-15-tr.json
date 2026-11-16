@@ -4,22 +4,7 @@
  "fps": 30,
  "boyut": [1080, 1920],
  "sablon_surumu": 1,
- "okunus": {
-  "Rainbow Six Siege'in": "Reynbou Siks Siyc'in",
-  "Operation Vital Signal": "Opıreyşın Vaytıl Signıl",
-  "Ubisoft'un": "Yubisoft'un",
-  "Steam": "Stiim",
-  "Doc": "Dok",
-  "Stim Pistol'ü": "Stim Pistıl'ü",
-  "E-Heal Monitor": "İ Hiil Monitır",
-  "Solo/Duo": "Solo Duo",
-  "Flex": "Fleks",
-  "MBZ-19": "Em Be Ze on dokuz",
-  "ACS12'nin": "A Se Se on iki'nin",
-  "TCSG12'nin": "Te Se Se Ge on iki'nin",
-  "Battle Pass": "Betıl Pas",
-  "ctrl-agame.com'da": "kontrol ey geym nokta kom'da"
- },
+ "okunus": {},
  "sahneler": [
   {
    "sablon": "baslik",
@@ -114,7 +99,7 @@
   },
   {
    "sablon": "kapanis",
-   "anlatim": "Harita ve silah değişikliklerinin tamamı ctrl-agame.com'da.",
+   "anlatim": "Harita ve silah değişikliklerinin tamamı sitemizde, Control A Game'de.",
    "veri": {
     "cagri": "Bütün değişiklikler sitede",
     "alt": "Kaynaklar ve harita yenilikleri haberde."

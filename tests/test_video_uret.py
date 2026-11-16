@@ -33,7 +33,7 @@ def haber():
 def senaryo():
     return {
         'id': KIMLIK, 'dil': 'tr', 'fps': 30, 'boyut': [1080, 1920], 'sablon_surumu': 1,
-        'okunus': {'PlayStation': 'Pleysteyşın', "ctrl-agame.com'da": "kontrol ey geym nokta kom'da"},
+        'okunus': {},
         'sahneler': [
             {'sablon': 'baslik',
              'anlatim': "Ornek Oyun'un ikinci sezon yaması 1 Aralık'ta PC ve PlayStation için geliyor.",
@@ -62,7 +62,7 @@ def senaryo():
              'alt_kart': {'simge': 'takvim', 'baslik': 'YAMA GÜNÜ', 'alt': '1 ARALIK'},
              'maskot': {'hareket': 'zipla'}},
             {'sablon': 'kapanis',
-             'anlatim': "Bütün yama notları ve ayrıntılar ctrl-agame.com'da.",
+             'anlatim': "Bütün yama notları ve ayrıntılar sitemizde, Control A Game'de.",
              'veri': {'cagri': 'Bütün ayrıntılar sitede'},
              'alt_kart': {'simge': 'site', 'baslik': 'CTRL+A GAME', 'alt': 'CTRL-AGAME.COM'},
              'maskot': {'hareket': 'bas'}},
@@ -113,14 +113,23 @@ def ses_yaz(komut):
 
 
 class GecerlilikTests(unittest.TestCase):
-    def test_ornek_senaryo_gecer_ve_okunus_seslendirmeye_gider(self):
+    def test_ornek_senaryo_gecer_ve_duz_yazimla_seslendirilir(self):
         hazir = v.senaryo_hazirla(senaryo(), haber(), 'tr')
         self.assertEqual([s['sablon'] for s in hazir['sahneler']],
                          ['baslik', 'kaynak', 'yama_fark', 'platform', 'tarih', 'kapanis'])
-        self.assertIn('Pleysteyşın', hazir['tts'])
-        self.assertIn("kontrol ey geym nokta kom'da", hazir['tts'])
-        self.assertNotIn('PlayStation', hazir['tts'])
+        # Ses adları kendi yazımıyla okur; site adı söylenir, adres okunmaz.
+        self.assertIn('PlayStation', hazir['tts'])
+        self.assertIn("sitemizde, Control A Game'de.", hazir['tts'])
+        self.assertNotIn('nokta', hazir['tts'])
+        self.assertNotIn('ctrl-agame', hazir['tts'].lower())
         self.assertTrue(v.EN_KISA <= hazir['tahmini_sure'] <= v.EN_UZUN)
+        # okunus gerekirse yine çalışır: yalnız seslendirmeye gider, altyazı yazılan kelimeyi gösterir.
+        s = senaryo()
+        s['okunus'] = {'PlayStation': 'Pleysteyşın'}
+        okunuslu = v.senaryo_hazirla(s, haber(), 'tr')
+        self.assertIn('Pleysteyşın', okunuslu['tts'])
+        self.assertNotIn('PlayStation', okunuslu['tts'])
+        self.assertIn('PlayStation', okunuslu['sahneler'][0]['kelimeler'])
         platform = hazir['sahneler'][3]['veri']
         self.assertEqual([p['ad'] for p in platform['platformlar']], ['PC', 'PLAYSTATION'])
         self.assertEqual(platform['pencere'], 'ORNEK OYUN')
@@ -166,6 +175,20 @@ class GecerlilikTests(unittest.TestCase):
         s = senaryo()
         s['okunus']['PlayStation'] = 'Pleysteyşın 5'
         self.assertTrue(any(e.startswith('okunus.PlayStation') and '"5"' in e for e in hatalar(s)))
+
+    def test_web_adresi_seslendirilmez(self):
+        for anlatim in ("Bütün ayrıntılar ctrl-agame.com'da.", 'Ayrıntılar www.ornek.net adresinde.',
+                        'Notlar https://example.com/blog sayfasında.', "Ayrıntılar kontrol ey geym nokta kom'da."):
+            s = senaryo()
+            s['sahneler'][5]['anlatim'] = anlatim
+            with self.subTest(anlatim):
+                self.assertTrue(any(e.startswith('sahneler[5].anlatim: web adresi') for e in hatalar(s)))
+        # okunusla sokulan adres de yakalanır: seslendirmeye giden metin denetlenir.
+        s = senaryo()
+        s['okunus'] = {'Control A Game': 'kontrol ey geym nokta kom'}
+        self.assertTrue(any(e.startswith('sahneler[5].anlatim: web adresi') for e in hatalar(s)))
+        for temiz in ('Sürüm 1.5 bugün EA app üzerinden geliyor.', "MBZ-19 ve ACS12 Siege'in yeni silahları."):
+            self.assertIsNone(v.WEB_ADRESI.search(temiz), temiz)
 
     def test_tarih_haberde_aynen_gecmeli(self):
         s = senaryo()
@@ -355,6 +378,89 @@ class ZamanlamaTests(unittest.TestCase):
                            {'metin': 'a', 'bas': 10_000_000, 'sure': 5_000_000}, {'metin': ' ', 'bas': 0, 'sure': 1}]}
         self.assertEqual(v.olaylari_kelimeye(ham), [{'k': 'a', 'b': 1.0, 's': 1.5}, {'k': 'b', 'b': 2.0, 's': 2.5}])
 
+    def araliklar_esit(self, bulunan, beklenen):
+        self.assertEqual(len(bulunan), len(beklenen))
+        for x, y in zip(bulunan, beklenen):
+            if y is None:
+                self.assertIsNone(x)
+            else:
+                self.assertAlmostEqual(x[0], y[0], places=6)
+                self.assertAlmostEqual(x[1], y[1], places=6)
+
+    def test_turkce_sayi_okunusu(self):
+        for n, soz in ((0, 'sıfır'), (11, 'on bir'), (100, 'yüz'), (750, 'yedi yüz elli'), (1000, 'bin'),
+                       (1500, 'bin beş yüz'), (2026, 'iki bin yirmi altı'), (64000, 'altmış dört bin')):
+            self.assertEqual(v.sayi_oku_tr(n), soz)
+        self.assertEqual(v._soz_norm('1.500', 'tr'), 'binbeşyüz', 'binlik ayırıcılı sayı tek sayıdır')
+        self.assertEqual(v._soz_norm("11.", 'tr'), 'onbir')
+        self.assertEqual(v._soz_norm("750'ye", 'tr'), 'yediyüzelliye')
+        self.assertEqual(v._soz_norm('750', 'en'), '750', 'yalnız Türkçede çevrilir')
+
+    def test_hizala_tanimadaki_sozlu_sayilari_esler(self):
+        # Konuşma tanıma rakamı sözle yazar; iki taraf aynı çevrildiği için "750" üç tanıma kelimesine oturur.
+        tani = [{'k': 'dakikada', 'b': 0.0, 's': 0.5}, {'k': 'yedi', 'b': 0.5, 's': 0.7}, {'k': 'yüz', 'b': 0.7, 's': 0.9},
+                {'k': 'elli', 'b': 0.9, 's': 1.2}, {'k': 'mermi', 'b': 1.2, 's': 1.6}]
+        birimler = ['dakikada', '750', 'mermi']
+        self.araliklar_esit(v.hizala(birimler, tani, 'tr'), [(0.0, 0.5), (0.5, 1.2), (1.2, 1.6)])
+        self.araliklar_esit(v.hizala(birimler, tani), [(0.0, 0.5), None, (1.2, 1.6)])
+
+    def test_hizala_birlesik_tanima_kelimesini_ara_birimlere_boler(self):
+        # "EA app, Steam, Epic" tek kelime ("eapic") duyuldu: iki uç arasındaki birimler o sürede söylenmiştir.
+        tani = [{'k': 'eapic', 'b': 1.0, 's': 3.6}]
+        self.araliklar_esit(v.hizala(['EA', 'app,', 'Steam,', 'Epic'], tani, 'tr'),
+                            [(1.0, 1.4), (1.4, 2.0), (2.0, 3.0), (3.0, 3.6)])
+
+    def test_duraklara_yerlestir(self):
+        d = [(2.0, 2.5)]
+        self.araliklar_esit(v._duraklara_yerlestir([(2.1, 2.9)], d), [(2.5, 2.9)])      # durakta başlayan, durak bitince
+        self.araliklar_esit(v._duraklara_yerlestir([(1.5, 2.2)], d), [(1.5, 2.0)])      # durağa taşan, durak başında biter
+        self.araliklar_esit(v._duraklara_yerlestir([(1.8, 2.8)], d), [(1.8, 2.8)])      # durağı kapsayan (MBZ-19) olduğu gibi
+        self.araliklar_esit(v._duraklara_yerlestir([(1.0, 2.0), (2.6, 3.0)], d), [(1.0, 2.0), (2.5, 3.0)])  # geç başlayan
+        self.araliklar_esit(v._duraklara_yerlestir([(1.0, 1.85), (2.5, 3.0)], d), [(1.0, 2.0), (2.5, 3.0)])  # erken biten
+        self.araliklar_esit(v._duraklara_yerlestir([(1.0, 1.6), (2.9, 3.2)], d), [(1.0, 1.6), (2.9, 3.2)])   # 0,25 sn'den uzak
+        self.assertEqual(v._duraklara_yerlestir([(1.0, 1.6)], ()), [(1.0, 1.6)])
+
+    def test_sessizlikler_bolunmus_duragi_birlestirir(self):
+        stderr = ('[silencedetect @ 0] silence_start: -0.01\n[silencedetect @ 0] silence_end: 0.2 | silence_duration: 0.21\n'
+                  'silence_start: 12.09\nsilence_end: 12.98 | silence_duration: 0.89\n'
+                  'silence_start: 12.99\nsilence_end: 13.53 | silence_duration: 0.54\n'
+                  'silence_start: 20.0\nsilence_end: 20.3 | silence_duration: 0.3\n')
+        cagrilar = []
+
+        def kos(komut, **kw):
+            cagrilar.append(komut)
+            return subprocess.CompletedProcess(komut, 0, '', stderr)
+
+        with patch.object(v, '_node', return_value='node'), patch.object(v, '_kos', kos):
+            self.assertEqual(v.sessizlikler(pathlib.Path('ses.mp3')), [(0.0, 0.2), (12.09, 13.53), (20.0, 20.3)])
+        self.assertIn(f'silencedetect=noise={v.DURAK_DB}dB:d={v.DURAK_SN}', cagrilar[0])
+
+    def test_tanima_sonlarini_kirp(self):
+        kel = [{'k': 'a', 'b': 1.0, 's': 2.15}, {'k': 'b', 'b': 2.5, 's': 3.0},
+               {'k': 'c', 'b': 3.05, 's': 5.0},   # birleşik tanıma kelimesi: içindeki durakta kesilmez
+               {'k': 'd', 'b': 5.1, 's': 6.3}, {'k': 'e', 'b': 6.32, 's': 7.0}]  # durak kelime ortasında
+        yeni = v.tanima_sonlarini_kirp(kel, [(2.0, 2.5), (3.5, 3.8), (6.2, 6.6)])
+        self.assertEqual([(w['b'], w['s']) for w in yeni], [(1.0, 2.0), (2.5, 3.0), (3.05, 5.0), (5.1, 6.3), (6.32, 7.0)])
+        self.assertEqual(kel[0]['s'], 2.15, 'girdi değişmez')
+        self.assertEqual(v.tanima_sonlarini_kirp([{'k': 'a', 'b': 1.98, 's': 2.1}], [(2.0, 2.5)])[0]['s'], 2.03)
+
+    def test_sesle_hizala_durak_oncesinden_gelen_kelimeyi_tasimaz(self):
+        # Durağı çok önceden başlayıp içine alan birleşik tanıma kelimesi durak sonrasına çekilmez.
+        self.assertEqual(v.sesle_hizala([{'k': 'epic', 'b': 1.0, 's': 3.0}], [(2.0, 2.3)])[0]['b'], 1.0)
+        self.assertEqual(v.sesle_hizala([{'k': 'epic', 'b': 1.95, 's': 3.0}], [(2.0, 2.3)])[0]['b'], 2.3)
+
+    def test_zamanla_duraklari_kullanir(self):
+        hazir = v.senaryo_hazirla(senaryo(), haber(), 'tr')
+        sinirlar = sahte_sinirlar(hazir['tts'])
+        n = len(hazir['sahneler'][0]['kelimeler'])
+        son, ilk = sinirlar[n - 1]['s'], sinirlar[n]['b']
+        duraklar = [(son + 0.1, ilk - 0.1)]
+        duz = v.zamanla(hazir, sinirlar, sinirlar[-1]['s'] + 0.5)['kelimeler']
+        z = v.zamanla(hazir, sinirlar, sinirlar[-1]['s'] + 0.5, duraklar)['kelimeler']
+        self.assertEqual((duz[n - 1]['s'], duz[n]['b']), (round(son, 3), round(ilk, 3)), 'durak verilmezse değişmez')
+        self.assertEqual((z[n - 1]['s'], z[n]['b']), (round(son + 0.1, 3), round(ilk - 0.1, 3)))
+        self.assertEqual([(w['b'], w['s']) for w in z[:n - 1]], [(w['b'], w['s']) for w in duz[:n - 1]])
+
 
 def baslik_sahnesi(son_soz=4.632, bit=5.733):
     """R6 haberinin başlık sahnesi zamanları (edge sesi): son söz `son_soz`ta biter, sahne `bit`te kayar."""
@@ -464,6 +570,17 @@ class AnahtarManifestTests(unittest.TestCase):
             with self.assertRaises(v.UretimHatasi):
                 v.manifest_oku(yol)
 
+    def test_onay_yalniz_ayni_anahtarda_kalir(self):
+        m = {'videolar': {'x': {'tr': {'anahtar': 'a1', 'onay': True, 'youtube': 'yt'}}}}
+        v.manifest_guncelle(m, 'x', 'tr', {'anahtar': 'a1', 'sure': 30.0})  # aynı içerik --zorla ile yeniden üretildi
+        self.assertIs(m['videolar']['x']['tr']['onay'], True)
+        v.manifest_guncelle(m, 'x', 'tr', {'anahtar': 'b2', 'sure': 31.0})  # yeni ses/senaryo: yeniden onay gerekir
+        self.assertNotIn('onay', m['videolar']['x']['tr'])
+        self.assertEqual(m['videolar']['x']['tr']['youtube'], 'yt')
+        m['videolar']['x']['tr']['onay'] = False
+        v.manifest_guncelle(m, 'x', 'tr', {'anahtar': 'c3'})
+        self.assertNotIn('onay', m['videolar']['x']['tr'])
+
     def test_depodaki_manifest_sozlesmeye_uyar(self):
         if not v.MANIFEST.exists():
             self.skipTest('data/videolar.json yok')
@@ -550,7 +667,8 @@ class UretTests(unittest.TestCase):
             komut = c.exception.args[0]
             girdi = json.loads((pathlib.Path(t) / 'tmp' / 'ses').glob('*/tts-girdi.json').__next__().read_text('utf-8'))
         self.assertIn('edge-tts==7.3.1', komut)
-        self.assertIn('Pleysteyşın', girdi['metin'])
+        self.assertIn("Control A Game'de.", girdi['metin'])
+        self.assertNotIn('nokta', girdi['metin'])
 
     def test_bekleyenler_ve_gunluk_sinir(self):
         bugun = date(2026, 11, 16)
@@ -613,6 +731,79 @@ class SeslendirmeTests(unittest.TestCase):
             v.seslendirici('google', '', 'tr')
         with self.assertRaises(v.UretimHatasi):
             v.seslendirici('edge', 'tr-TR-Ahmet;calc', 'tr')
+        self.assertEqual(v.seslendirici('azure', 'tr-TR-Aydin:MAI-Voice-2.1', 'tr').konusmaci, 'tr-TR-Aydin:MAI-Voice-2.1')
+        for kotu in ('tr-TR-Aydin:MAI;calc', 'tr-TR-Aydin:', 'tr-TR-Aydin:MAI-Voice-2.', "tr-TR-Aydin:MAI'><x",
+                     'tr-TR-Aydin:MAI Voice', 'tr-TR-Aydin', 'tr-TR-Aydin:-MAI'):
+            with self.subTest(kotu), self.assertRaises(v.UretimHatasi):
+                v.seslendirici('azure', kotu, 'tr')
+
+    def test_depodaki_ses_ayari_gecerli_ve_aynen_kullanilir(self):
+        if not v.AYARLAR.exists():
+            self.skipTest('sosyal/ayarlar.json yok')
+        ayar = v.video_ayari()
+        if ayar['konusmaci']:
+            self.assertEqual(v.seslendirici(ayar['ses'], ayar['konusmaci'], 'tr').konusmaci, ayar['konusmaci'],
+                             'ayardaki ses varsayılana düşmeden kullanılır')
+
+    def test_azure_sinirsiz_ses_zamanlari_tanimadan_alir(self):
+        # MAI sesi kelime sınırı göndermez: mp3 WAV'a açılır, aynı yardımcı `tani` kipinde çalışır, durak önündeki
+        # tanıma bitişleri kırpılır. Metin ve anahtar hiçbir komuta girmez; tanımaya metin de gitmez.
+        metin = 'Merhaba $(calc) dünya'
+        ffmpeg_cagrilari = []
+
+        def yap(komut):
+            if komut[9] == 'azure':
+                pathlib.Path(komut[-2]).write_bytes(b'ID3')
+                pathlib.Path(komut[-1]).write_text(json.dumps({'olaylar': []}), encoding='utf-8')
+            else:
+                pathlib.Path(komut[-1]).write_text(json.dumps({'olaylar': [
+                    {'metin': 'dünya', 'bas': 12_000_000, 'sure': 4_000_000},
+                    {'metin': 'merhaba', 'bas': 1_000_000, 'sure': 8_500_000}]}), encoding='utf-8')
+
+        def sahte_ffmpeg(*arg):
+            ffmpeg_cagrilari.append(arg)
+            pathlib.Path(arg[-1]).write_bytes(b'RIFF')
+
+        kosucu = Kosucu(yap)
+        with patch.dict(os.environ, {'AZURE_SPEECH_KEY': 'sahte-anahtar-123', 'AZURE_SPEECH_REGION': 'northeurope'}), \
+                tempfile.TemporaryDirectory() as t, patch.object(v, '_calistir', kosucu), \
+                patch.object(v.shutil, 'which', return_value='uv'), patch.object(v, 'ffmpeg', sahte_ffmpeg), \
+                patch.object(v, 'sessizlikler', return_value=[(0.8, 1.2)]):
+            klasor = pathlib.Path(t) / 'ses'
+            ses, kel = v.seslendirici('azure', 'tr-TR-Aydin:MAI-Voice-2.1', 'tr').seslendir(metin, klasor)
+            tts_girdi = json.loads((klasor / 'tts-girdi.json').read_text(encoding='utf-8'))
+            tani_girdi = json.loads((klasor / 'tani-girdi.json').read_text(encoding='utf-8'))
+        self.assertEqual([k[9] for k, _ in kosucu.cagrilar], ['azure', 'tani'])
+        komut, kw = kosucu.cagrilar[1]
+        self.assertEqual(komut[:9], ['uv', 'run', '--quiet', '--no-project', '--with',
+                                     'azure-cognitiveservices-speech==1.53.1', 'python', '-I', str(v.YARDIMCI)])
+        self.assertEqual(komut[10:], [str(klasor / 'tani-girdi.json'), str(klasor / 'tani.wav'),
+                                      str(klasor / 'tani-olaylar.json')])
+        self.assertNotIn('shell', kw)
+        for k, _ in kosucu.cagrilar:
+            self.assertFalse(any('calc' in a or 'sahte-anahtar' in a for a in k))
+        self.assertEqual(ffmpeg_cagrilari, [('-i', str(ses), '-ac', '1', '-ar', '16000', '-c:a', 'pcm_s16le',
+                                             str(klasor / 'tani.wav'))])
+        self.assertEqual(tts_girdi['konusmaci'], 'tr-TR-Aydin:MAI-Voice-2.1')
+        self.assertEqual(tani_girdi, {'dil': 'tr-TR'})
+        self.assertEqual(kel, [{'k': 'merhaba', 'b': 0.1, 's': 0.8}, {'k': 'dünya', 'b': 1.2, 's': 1.6}])
+
+    def test_azure_tanima_basarisizsa_hata_verir(self):
+        def kosucu(komut, **kw):
+            if komut[9] == 'azure':
+                pathlib.Path(komut[-2]).write_bytes(b'ID3')
+                pathlib.Path(komut[-1]).write_text(json.dumps({'olaylar': []}), encoding='utf-8')
+                return subprocess.CompletedProcess(komut, 0, '', '')
+            return subprocess.CompletedProcess(komut, 1, '', 'Azure konuşma tanıma başarısız: kota')
+
+        with patch.dict(os.environ, {'AZURE_SPEECH_KEY': 'x', 'AZURE_SPEECH_REGION': 'northeurope'}), \
+                tempfile.TemporaryDirectory() as t, patch.object(v, '_calistir', kosucu), \
+                patch.object(v.shutil, 'which', return_value='uv'), \
+                patch.object(v, 'ffmpeg', lambda *a: pathlib.Path(a[-1]).write_bytes(b'RIFF')), \
+                self.assertRaises(v.UretimHatasi) as c:
+            v.seslendirici('azure', 'tr-TR-Aydin:MAI-Voice-2.1', 'tr').seslendir('Merhaba', pathlib.Path(t))
+        self.assertIn('azure konuşma tanıma başarısız', str(c.exception))
+        self.assertIn('kota', str(c.exception))
 
     def test_azure_ortam_degiskeni_yoksa_durur(self):
         with patch.dict(os.environ):
@@ -649,23 +840,36 @@ class SeslendirmeTests(unittest.TestCase):
         self.assertIn('edge seslendirme başarısız', str(c.exception))
 
 
+def tanima_sonucu(*kelimeler, neden='tanindi'):
+    """Tanıyıcının `recognized` olayı: Detailed biçimli JSON (100 ns birim)."""
+    sozler = [{'Word': k, 'Offset': b, 'Duration': s} for k, b, s in kelimeler]
+    return SimpleNamespace(result=SimpleNamespace(reason=neden, json=json.dumps({'NBest': [{'Words': sozler}]})))
+
+
 class SahteSdk:
-    """azure-cognitiveservices-speech arayüzünün yardımcıda kullanılan kısmı."""
+    """azure-cognitiveservices-speech arayüzünün yardımcıda kullanılan kısmı (seslendirme ve konuşma tanıma)."""
 
     SpeechSynthesisOutputFormat = SimpleNamespace(Audio24Khz96KBitRateMonoMp3='mp3-24k')
-    ResultReason = SimpleNamespace(SynthesizingAudioCompleted='tamam')
+    ResultReason = SimpleNamespace(SynthesizingAudioCompleted='tamam', RecognizedSpeech='tanindi')
+    OutputFormat = SimpleNamespace(Detailed='ayrintili')
+    CancellationReason = SimpleNamespace(EndOfStream='akis_bitti', Error='hata')
 
-    def __init__(self, sonuc='tamam'):
+    def __init__(self, sonuc='tamam', sinirlar=True, tanima=(), iptal='akis_bitti', biter=True):
         sdk = self
         self.kayit = {}
-        self.audio = SimpleNamespace(AudioOutputConfig=lambda filename: SimpleNamespace(filename=filename))
+        self.audio = SimpleNamespace(AudioOutputConfig=lambda filename: SimpleNamespace(filename=filename),
+                                     AudioConfig=lambda filename: SimpleNamespace(filename=filename))
 
         class SpeechConfig:
             def __init__(self, subscription, region):
                 sdk.kayit['abonelik'] = (subscription, region)
+                sdk.kayit['ayar'] = self
 
             def set_speech_synthesis_output_format(self, bicim):
                 sdk.kayit['bicim'] = bicim
+
+            def request_word_level_timestamps(self):
+                sdk.kayit['kelime_zamani'] = True
 
         class SpeechSynthesizer:
             def __init__(self, speech_config, audio_config):
@@ -675,16 +879,40 @@ class SahteSdk:
 
             def speak_ssml_async(self, ssml):
                 sdk.kayit['ssml'] = ssml
-                for olay in (SimpleNamespace(text='Merhaba', audio_offset=1_000_000, duration=timedelta(milliseconds=400),
-                                             boundary_type='SpeechSynthesisBoundaryType.Word'),
-                             SimpleNamespace(text=',', audio_offset=5_000_000, duration=timedelta(0),
-                                             boundary_type='SpeechSynthesisBoundaryType.Punctuation')):
+                olaylar = (SimpleNamespace(text='Merhaba', audio_offset=1_000_000, duration=timedelta(milliseconds=400),
+                                           boundary_type='SpeechSynthesisBoundaryType.Word'),
+                           SimpleNamespace(text=',', audio_offset=5_000_000, duration=timedelta(0),
+                                           boundary_type='SpeechSynthesisBoundaryType.Punctuation'))
+                for olay in olaylar if sinirlar else ():
                     for d in self._dinleyiciler:
                         d(olay)
                 return SimpleNamespace(get=lambda: SimpleNamespace(
                     reason=sonuc, cancellation_details=SimpleNamespace(error_details='kota bitti')))
 
-        self.SpeechConfig, self.SpeechSynthesizer = SpeechConfig, SpeechSynthesizer
+        class SpeechRecognizer:
+            def __init__(self, speech_config, audio_config):
+                sdk.kayit['wav'] = audio_config.filename
+                self._d = {'recognized': [], 'canceled': [], 'session_stopped': []}
+                for ad, liste in self._d.items():
+                    setattr(self, ad, SimpleNamespace(connect=liste.append))
+
+            def _ates(self, ad, olay):
+                for d in self._d[ad]:
+                    d(olay)
+
+            def start_continuous_recognition(self):
+                if not biter:
+                    return
+                for olay in tanima:
+                    self._ates('recognized', olay)
+                self._ates('canceled', SimpleNamespace(cancellation_details=SimpleNamespace(
+                    reason=iptal, error_details='kota bitti' if iptal != 'akis_bitti' else '')))
+                self._ates('session_stopped', SimpleNamespace())
+
+            def stop_continuous_recognition(self):
+                sdk.kayit['durdu'] = True
+
+        self.SpeechConfig, self.SpeechSynthesizer, self.SpeechRecognizer = SpeechConfig, SpeechSynthesizer, SpeechRecognizer
 
 
 class YardimciTests(unittest.TestCase):
@@ -710,6 +938,55 @@ class YardimciTests(unittest.TestCase):
             os.environ.pop('AZURE_SPEECH_KEY', None)
             with self.assertRaises(SystemExit):
                 yardimci.azure(self.GIRDI, 'ses.mp3', sdk=SahteSdk())
+
+    def test_azure_mai_sesi_sinirsiz_doner(self):
+        sdk = SahteSdk(sinirlar=False)
+        with patch.dict(os.environ, {'AZURE_SPEECH_KEY': 'sahte', 'AZURE_SPEECH_REGION': 'northeurope'}):
+            olaylar = yardimci.azure({**self.GIRDI, 'konusmaci': 'tr-TR-Aydin:MAI-Voice-2.1'}, 'ses.mp3', sdk=sdk)
+        self.assertEqual(olaylar, [])
+        self.assertIn("<voice name='tr-TR-Aydin:MAI-Voice-2.1'>", sdk.kayit['ssml'])
+
+    def test_tani_kelime_zamanlarini_sirali_verir(self):
+        sdk = SahteSdk(tanima=(tanima_sonucu(('dünya', 12_000_000, 3_000_000)),
+                               tanima_sonucu(('boş', 0, 1), neden='eslesmedi'),
+                               tanima_sonucu(('merhaba', 1_000_000, 4_000_000), ('güzel', 6_000_000, 2_000_000))))
+        with patch.dict(os.environ, {'AZURE_SPEECH_KEY': 'sahte', 'AZURE_SPEECH_REGION': 'northeurope'}):
+            olaylar = yardimci.tani({'dil': 'tr-TR'}, 'tani.wav', sdk=sdk)
+        self.assertEqual(olaylar, [{'metin': 'merhaba', 'bas': 1_000_000, 'sure': 4_000_000},
+                                   {'metin': 'güzel', 'bas': 6_000_000, 'sure': 2_000_000},
+                                   {'metin': 'dünya', 'bas': 12_000_000, 'sure': 3_000_000}])
+        ayar = sdk.kayit['ayar']
+        self.assertEqual((ayar.speech_recognition_language, ayar.output_format), ('tr-TR', 'ayrintili'))
+        self.assertTrue(sdk.kayit['kelime_zamani'])
+        self.assertEqual((sdk.kayit['abonelik'], sdk.kayit['wav']), (('sahte', 'northeurope'), 'tani.wav'))
+        self.assertTrue(sdk.kayit['durdu'])
+
+    def test_tani_hata_zaman_asimi_ve_eksik_anahtar(self):
+        with patch.dict(os.environ, {'AZURE_SPEECH_KEY': 'sahte', 'AZURE_SPEECH_REGION': 'northeurope'}):
+            with self.assertRaises(SystemExit) as c:
+                yardimci.tani({'dil': 'tr-TR'}, 'tani.wav', sdk=SahteSdk(iptal='hata'))
+            self.assertIn('kota bitti', str(c.exception))
+            with self.assertRaises(SystemExit) as c:
+                yardimci.tani({'dil': 'tr-TR'}, 'tani.wav', sdk=SahteSdk(biter=False), bekleme=0.01)
+            self.assertIn('bitmedi', str(c.exception))
+        with patch.dict(os.environ):
+            os.environ.pop('AZURE_SPEECH_KEY', None)
+            with self.assertRaises(SystemExit):
+                yardimci.tani({'dil': 'tr-TR'}, 'tani.wav', sdk=SahteSdk())
+
+    def test_main_bos_sinir_yalniz_azurede_kabul(self):
+        with tempfile.TemporaryDirectory() as t:
+            girdi, olay = pathlib.Path(t) / 'girdi.json', pathlib.Path(t) / 'olay.json'
+            girdi.write_text(json.dumps({'metin': 'a', 'konusmaci': 'tr-TR-Aydin:MAI-Voice-2.1'}), encoding='utf-8')
+            bos = lambda g, s: []  # noqa: E731
+            with patch.dict(yardimci.SAGLAYICILAR, {'azure': bos, 'edge': bos, 'tani': bos}):
+                yardimci.main(['azure', str(girdi), 'ses.mp3', str(olay)])
+                self.assertEqual(json.loads(olay.read_text(encoding='utf-8')),
+                                 {'saglayici': 'azure', 'konusmaci': 'tr-TR-Aydin:MAI-Voice-2.1', 'olaylar': []})
+                for saglayici, mesaj in (('edge', 'kelime sınırı gelmedi'), ('tani', 'seste kelime tanınmadı')):
+                    with self.subTest(saglayici), self.assertRaises(SystemExit) as c:
+                        yardimci.main([saglayici, str(girdi), 'ses.mp3', str(pathlib.Path(t) / 'yok.json')])
+                    self.assertIn(mesaj, str(c.exception))
 
     def test_yardimci_bilinmeyen_saglayiciyi_reddeder(self):
         with self.assertRaises(SystemExit):
