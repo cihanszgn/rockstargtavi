@@ -1,5 +1,63 @@
 [
  {
+  "id": "xbox-25-yil-dergisi-2026-11-15",
+  "tarih": "2026-11-15",
+  "oyun": "Xbox",
+  "tur": "haber",
+  "kaynaklar": [
+   {
+    "url": "https://news.xbox.com/en-us/2026/11/15/xbox-25th-anniversary-the-magazine/",
+    "ad": "Xbox Wire",
+    "tarih": "2026-11-15"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Xbox'ın 25. yıl dergisi herkesin okumasına açıldı",
+    "ozet": "Xbox'ın 25. yıl özel dergisi Xbox Wire'da yayımlandı ve herkes tarafından okunabiliyor.",
+    "metin": "Xbox, 25. yılını anlatan özel bir dergi yayımladı: \"XBOX – The 25th Anniversary Magazine\". Dergi yalnızca geçmişe bakmıyor; oyunları, donanımları ve önemli anları geçmişten bugüne, bunları yapan ekiplerin anlatımıyla ele alıyor. Örnek olarak 38. sayfada Fable'ın başkenti Bowerstone hakkında bir bölüm yer alıyor. Xbox dergiden basılı nüshalar hazırladı ve geçen hafta Seattle'daki XBOX FanFest'te topluluk üyelerine dağıttı. Yayımlandığı günden itibaren dergi, Xbox Wire sayfasında herkes tarafından doğrudan okunabiliyor. Okuyucu ekranın sağ alt köşesindeki okları kullanarak tam ekran moduna geçebiliyor.",
+    "etiketler": [
+     "#Xbox",
+     "#XboxDergi"
+    ]
+   },
+   "en": {
+    "baslik": "Xbox's 25th anniversary magazine is now open to everyone",
+    "ozet": "Xbox's 25th anniversary special magazine is live on Xbox Wire and readable by anyone.",
+    "metin": "Xbox has published a special magazine marking 25 years of the platform: \"XBOX – The 25th Anniversary Magazine\". Rather than only looking back, it covers games, hardware and key moments from past and present, told through the teams who build them. As one example, page 38 features Bowerstone, the capital city of Fable. Xbox printed copies and gave them to community members at XBOX FanFest in Seattle the previous week. Since publication, anyone can read the magazine directly on the Xbox Wire page. Readers can switch to full-screen mode using the arrows in the lower right corner of the viewer.",
+    "etiketler": [
+     "#Xbox",
+     "#XboxMagazine"
+    ]
+   },
+   "fr": {
+    "baslik": "Le magazine des 25 ans de Xbox est désormais ouvert à tous",
+    "ozet": "Le magazine spécial des 25 ans de Xbox est en ligne sur Xbox Wire et accessible à tous.",
+    "metin": "Xbox publie un magazine spécial pour ses 25 ans : « XBOX – The 25th Anniversary Magazine ». Il ne se contente pas de regarder en arrière : il parcourt jeux, matériel et moments marquants, du passé au présent, à travers les témoignages des équipes qui les créent. Par exemple, la page 38 présente Bowerstone, la capitale de Fable. Des exemplaires imprimés ont été remis à des membres de la communauté lors du XBOX FanFest de Seattle, la semaine précédente. Depuis sa publication, le magazine peut être lu par tous directement sur la page Xbox Wire. Les flèches en bas à droite du lecteur permettent de passer en plein écran.",
+    "etiketler": [
+     "#Xbox",
+     "#XboxMagazine"
+    ]
+   },
+   "es": {
+    "baslik": "La revista del 25.º aniversario de Xbox ya es accesible para todos",
+    "ozet": "La revista especial por el 25.º aniversario de Xbox ya se puede leer en Xbox Wire.",
+    "metin": "Xbox ha publicado una revista especial por sus 25 años: «XBOX – The 25th Anniversary Magazine». No se limita a mirar atrás: repasa juegos, hardware y momentos clave, del pasado y del presente, contados por los equipos que los crean. Como ejemplo, la página 38 incluye un reportaje sobre Bowerstone, la ciudad capital de Fable. Xbox imprimió ejemplares y los repartió entre miembros de la comunidad en el XBOX FanFest de Seattle la semana pasada. Desde su publicación, cualquiera puede leer la revista directamente en la página de Xbox Wire. Las flechas de la esquina inferior derecha activan el modo de pantalla completa para leer con más comodidad.",
+    "etiketler": [
+     "#Xbox",
+     "#XboxMagazine"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "xbox-25-yil-dergisi-2026-11",
+   "resmi_url": "https://news.xbox.com/en-us/2026/11/15/xbox-25th-anniversary-the-magazine/",
+   "teyit_zamani": "2026-11-16T00:02:00+03:00",
+   "oyuncuya_fayda": "Oyuncular Xbox'ın 25 yıllık oyun, donanım ve anılarını Xbox Wire sayfasından doğrudan, tam ekranda okuyabilir.",
+   "eklenme": "2026-11-16T00:02:33.183308+03:00"
+  }
+ },
+ {
   "id": "r6-siege-operation-vital-signal-duyuruldu-2026-11-15",
   "tarih": "2026-11-15",
   "oyun": "Rainbow Six Siege",
