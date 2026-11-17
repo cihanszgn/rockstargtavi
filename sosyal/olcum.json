@@ -9,7 +9,12 @@
    "son": {
     "comments": 0,
     "likes": 0,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 1,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "views": 2
    },
    "tur": "haber",
    "url": "https://www.instagram.com/p/Df16B0OoN0K/",
@@ -24,7 +29,12 @@
    "son": {
     "comments": 0,
     "likes": 1,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 2,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 1,
+    "views": 3
    },
    "tur": "haber",
    "url": "https://www.instagram.com/p/Df0M-qhk48T/",
@@ -39,7 +49,12 @@
    "son": {
     "comments": 0,
     "likes": 2,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 2,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 2,
+    "views": 3
    },
    "tur": "haber",
    "url": "https://www.instagram.com/p/DfyoIOzkwBk/",
@@ -54,7 +69,12 @@
    "son": {
     "comments": 0,
     "likes": 1,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 2,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 1,
+    "views": 5
    },
    "tur": "haber",
    "url": "https://www.instagram.com/p/Dfzja-XE5lX/",
@@ -68,8 +88,14 @@
    "platform": "instagram",
    "son": {
     "comments": 0,
-    "likes": 0,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "ig_reels_avg_watch_time": 3179,
+    "likes": 1,
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 41,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 1,
+    "views": 43
    },
    "tur": "haber",
    "url": "https://www.instagram.com/reel/Df2IDP_tRUR/",
@@ -84,7 +110,12 @@
    "son": {
     "comments": 0,
     "likes": 2,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 2,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 2,
+    "views": 2
    },
    "tur": "haber",
    "url": "https://www.instagram.com/p/Df0O5KXl72r/",
@@ -99,7 +130,12 @@
    "son": {
     "comments": 0,
     "likes": 0,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 1,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "views": 2
    },
    "tur": "haber",
    "url": "https://www.instagram.com/p/Df2AYVBl3cB/",
@@ -113,8 +149,14 @@
    "platform": "instagram",
    "son": {
     "comments": 0,
+    "ig_reels_avg_watch_time": 6731,
     "likes": 2,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 43,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 2,
+    "views": 48
    },
    "tur": "haber",
    "url": "https://www.instagram.com/reel/Dfy4JJ1hiQJ/",
@@ -129,7 +171,12 @@
    "son": {
     "comments": 0,
     "likes": 0,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 1,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "views": 1
    },
    "tur": "haber",
    "url": "https://www.instagram.com/p/Df2CNv-k4vX/",
@@ -143,8 +190,14 @@
    "platform": "instagram",
    "son": {
     "comments": 0,
-    "likes": 0,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "ig_reels_avg_watch_time": 3062,
+    "likes": 1,
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 190,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 1,
+    "views": 202
    },
    "tur": "haber",
    "url": "https://www.instagram.com/reel/Df2IkRYAm5M/",
@@ -159,7 +212,12 @@
    "son": {
     "comments": 0,
     "likes": 0,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 1,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "views": 1
    },
    "tur": "takvim",
    "url": "https://www.instagram.com/p/Df2HEXzFyYR/",
@@ -174,7 +232,12 @@
    "son": {
     "comments": 0,
     "likes": 0,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 1,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "views": 2
    },
    "tur": "haber",
    "url": "https://www.instagram.com/p/Df2TpqrF8u9/",
@@ -189,7 +252,12 @@
    "son": {
     "comments": 0,
     "likes": 0,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 1,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "views": 1
    },
    "tur": "haber",
    "url": "https://www.instagram.com/p/Df1x1LxjVWJ/",
@@ -204,7 +272,12 @@
    "son": {
     "comments": 0,
     "likes": 1,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 2,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 1,
+    "views": 3
    },
    "tur": "haber",
    "url": "https://www.instagram.com/p/Df1E8y7DZr5/",
@@ -218,8 +291,13 @@
    "platform": "instagram",
    "son": {
     "comments": 0,
-    "likes": 0,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "likes": 1,
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 1,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 1,
+    "views": 4
    },
    "tur": "haber",
    "url": "https://www.instagram.com/p/Df2cBQqF_2C/",
@@ -234,7 +312,12 @@
    "son": {
     "comments": 0,
     "likes": 0,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 1,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "views": 1
    },
    "tur": "haber",
    "url": "https://www.instagram.com/p/Df2E1UhE0sG/",
@@ -248,8 +331,14 @@
    "platform": "instagram",
    "son": {
     "comments": 0,
+    "ig_reels_avg_watch_time": 5111,
     "likes": 2,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 43,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 2,
+    "views": 49
    },
    "tur": "haber",
    "url": "https://www.instagram.com/reel/Dfyvi8TOZSH/",
@@ -264,7 +353,12 @@
    "son": {
     "comments": 0,
     "likes": 0,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 1,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "views": 3
    },
    "tur": "haber",
    "url": "https://www.instagram.com/p/Df2WGoTGGzs/",
@@ -279,7 +373,12 @@
    "son": {
     "comments": 0,
     "likes": 0,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 1,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "views": 2
    },
    "tur": "haber",
    "url": "https://www.instagram.com/p/Df15VzzE2qu/",
@@ -293,8 +392,14 @@
    "platform": "instagram",
    "son": {
     "comments": 0,
+    "ig_reels_avg_watch_time": 6503,
     "likes": 0,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 194,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "views": 224
    },
    "tur": "haber",
    "url": "https://www.instagram.com/reel/Df10d3ABJL4/",
@@ -309,7 +414,12 @@
    "son": {
     "comments": 0,
     "likes": 2,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 2,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 2,
+    "views": 3
    },
    "tur": "haber",
    "url": "https://www.instagram.com/p/DfyvgiRF2lQ/",
@@ -324,7 +434,12 @@
    "son": {
     "comments": 0,
     "likes": 0,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 2,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "views": 2
    },
    "tur": "haber",
    "url": "https://www.instagram.com/p/Df0ivn6DHO-/",
@@ -339,7 +454,12 @@
    "son": {
     "comments": 0,
     "likes": 1,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 2,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 1,
+    "views": 4
    },
    "tur": "haber",
    "url": "https://www.instagram.com/p/Df0PlYmDaMi/",
@@ -353,8 +473,13 @@
    "platform": "instagram",
    "son": {
     "comments": 0,
-    "likes": 0,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "likes": 1,
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 1,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 1,
+    "views": 2
    },
    "tur": "haber",
    "url": "https://www.instagram.com/p/Df2JuxQjZg5/",
@@ -369,7 +494,12 @@
    "son": {
     "comments": 0,
     "likes": 0,
-    "olculdu": "2026-11-17T18:33:54+00:00"
+    "olculdu": "2026-11-17T20:49:46+00:00",
+    "reach": 2,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "views": 4
    },
    "tur": "haber",
    "url": "https://www.instagram.com/p/Df0TANxCeoF/",
@@ -384,7 +514,7 @@
    "son": {
     "begeni": 2,
     "izlenme": 171,
-    "olculdu": "2026-11-17T20:48:36+00:00",
+    "olculdu": "2026-11-17T20:49:46+00:00",
     "yorum": 0
    },
    "tur": "haber",
@@ -399,8 +529,8 @@
    "platform": "youtube",
    "son": {
     "begeni": 2,
-    "izlenme": 61,
-    "olculdu": "2026-11-17T20:48:36+00:00",
+    "izlenme": 62,
+    "olculdu": "2026-11-17T20:49:46+00:00",
     "yorum": 0
    },
    "tur": "haber",
@@ -416,7 +546,7 @@
    "son": {
     "begeni": 1,
     "izlenme": 6,
-    "olculdu": "2026-11-17T20:48:36+00:00",
+    "olculdu": "2026-11-17T20:49:46+00:00",
     "yorum": 0
    },
    "tur": "haber",
@@ -431,8 +561,8 @@
    "platform": "youtube",
    "son": {
     "begeni": 4,
-    "izlenme": 319,
-    "olculdu": "2026-11-17T20:48:36+00:00",
+    "izlenme": 360,
+    "olculdu": "2026-11-17T20:49:46+00:00",
     "yorum": 0
    },
    "tur": "haber",
@@ -448,7 +578,7 @@
    "son": {
     "begeni": 2,
     "izlenme": 79,
-    "olculdu": "2026-11-17T20:48:36+00:00",
+    "olculdu": "2026-11-17T20:49:46+00:00",
     "yorum": 0
    },
    "tur": "haber",
@@ -456,7 +586,7 @@
    "zaman": "2026-11-17T11:25:59+00:00"
   }
  },
- "guncelleme": "2026-11-17T20:48:36+00:00",
+ "guncelleme": "2026-11-17T20:49:46+00:00",
  "kayitlar": [
   {
    "hesaplar": {
@@ -513,6 +643,25 @@
     }
    },
    "zaman": "2026-11-17T20:48:36+00:00"
+  },
+  {
+   "hesaplar": {
+    "instagram|tr": {
+     "kullanici": "ctrlagame",
+     "medya": 25,
+     "reach_gunluk": 476,
+     "takip": 0,
+     "takipci": 2,
+     "views_gunluk": 604
+    },
+    "youtube|tr": {
+     "abone": 1,
+     "izlenme": 233,
+     "kanal": "Ctrl+A Game",
+     "video": 5
+    }
+   },
+   "zaman": "2026-11-17T20:49:46+00:00"
   }
  ],
  "surum": 1
