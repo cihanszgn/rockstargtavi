@@ -9,12 +9,17 @@ export PYTHONUTF8=1 PYTHONIOENCODING=utf-8
 mkdir -p "$G" "$H/calisma"
 LOG=$G/$(date +%F).log
 SON=$G/son-durum-saatlik.txt
-DENEME=0; NABIZ=1; BILDIRIM_KURU=0
+# Deneme için ortamdan değiştirilebilir (varsayılanlar gerçek yollar).
+PC_NABIZ=${PC_NABIZ:-$H/pc-nabiz}
+PC_SONUC=${PC_SONUC:-$H/pc-sonuc.json}
+IZLE_DURUM=${IZLE_DURUM:-$H/izleme-durum.json}
+DENEME=0; NABIZ=1; BILDIRIM_KURU=0; IZLE_DENEME=0
 for arg in "$@"; do
   case "$arg" in
     --deneme) DENEME=1 ;;
     --nabiz-yoksay) NABIZ=0 ;;
     --bildirim-deneme) BILDIRIM_KURU=1 ;;
+    --izle-deneme) IZLE_DENEME=1 ;;
     *) echo "Bilinmeyen seçenek: $arg" >&2; exit 2 ;;
   esac
 done
@@ -41,14 +46,42 @@ bitir() {
   fi
   exit "$kod"
 }
+# Sessiz arıza bekçisi. Nabız nedeniyle tur atlansa bile her çağrıda çalışır (atlama
+# bildirimsiz hata sessizliğinin kaynağıydı). Yalnız DURUM DEĞİŞİNCE mesaj gider; mesaj
+# gerçekten gitmeden durum kaydedilmez, gitmezse ertesi saat yeniden denenir.
+izle() {
+  local satirlar anahtar durum metin
+  satirlar=$(py tools/haber_hatti.py --izle --pc-sonuc "$PC_SONUC" --izle-durum "$IZLE_DURUM" 2>>"$LOG") \
+    || { echo "izleme çalışmadı (tur etkilenmez)" >> "$LOG"; return 0; }
+  while IFS=$'\t' read -r anahtar durum metin; do
+    [ -n "$anahtar" ] || continue
+    if [ "$DENEME" = 1 ]; then echo "IZLEME_KURU: $anahtar -> $durum: $metin"; continue; fi
+    if bildir "$metin"; then
+      py tools/haber_hatti.py --izle-kaydet "$anahtar" "$durum" --izle-durum "$IZLE_DURUM" </dev/null || yaz 'izleme durumu yazılamadı'
+    else
+      yaz 'izleme bildirimi gönderilemedi; sonraki turda yeniden denenecek'
+    fi
+  done <<< "$satirlar"
+}
 if [ "$BILDIRIM_KURU" = 1 ]; then bildir 'Geçiş tamam (kuru doğrulama).'; exit $?; fi
 cd "$R" || bitir 2 'depo bulunamadı'
-if [ "$NABIZ" = 1 ] && py tools/haber_hatti.py --nabiz-kontrol "$H/pc-nabiz"; then
-  bitir 0 'bilgisayar çalışıyor; nabız 50 dakikadan yeni, sunucu atlandı'
+NABIZ_DURUM=
+if [ "$IZLE_DENEME" = 1 ]; then
+  # Bildirim ve durum dosyası değişmez; yalnız kararlar yazdırılır.
+  DENEME=1
+  NABIZ_DURUM=$(py tools/haber_hatti.py --nabiz-kontrol "$PC_NABIZ" --pc-sonuc "$PC_SONUC")
+  echo "NABIZ_KARARI: $NABIZ_DURUM (atla = sunucu turu atlar; hatali/eski = sunucu turu çalıştırır)"
+  izle
+  exit 0
+fi
+izle
+if [ "$NABIZ" = 1 ] && NABIZ_DURUM=$(py tools/haber_hatti.py --nabiz-kontrol "$PC_NABIZ" --pc-sonuc "$PC_SONUC"); then
+  bitir 0 'bilgisayar çalışıyor; nabız 50 dakikadan yeni ve son turu hatasız, sunucu atlandı'
 fi
 exec 9>"$H/calisma.kilit"
 flock -n 9 || bitir 0 'günlük/saatlik ortak çalışma kilidi meşgul'
-yaz "tur başladı deneme=$DENEME; bilgisayar nabzı eski veya denemede devre dışı"
+if [ "$NABIZ_DURUM" = hatali ]; then NEDEN='bilgisayarın son turu hatayla bitti, yedek devrede'; else NEDEN='bilgisayar nabzı eski veya denemede devre dışı'; fi
+yaz "tur başladı deneme=$DENEME; $NEDEN"
 [ -s "$H/.haber.env" ] && { set -a; . "$H/.haber.env"; set +a; }
 git pull --ff-only origin main >> "$LOG" 2>&1 || bitir 3 'git pull başarısız; ağaç korundu'
 # PC hafızası atomik teslim edilir. Her URL için iki makinedeki en yeni kararı tut.

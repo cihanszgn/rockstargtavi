@@ -154,7 +154,7 @@ class SunucuTests(unittest.TestCase):
             self.assertEqual(self.hat.calistir(), 0)
         result = h.oku(self.hat.state / 'sonuc.json')
         self.assertNotIn('hata', result)
-        self.assertEqual([x['asama'] for x in result['esleme']], ['nabiz', 'hafiza'])
+        self.assertEqual([x['asama'] for x in result['esleme']], ['nabiz', 'hafiza', 'sonuc'])
         self.assertTrue(all(not x['ok'] for x in result['esleme']))
         self.assertTrue((self.hat.state / 'gorulen.json').exists())
 

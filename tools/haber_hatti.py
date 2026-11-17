@@ -42,6 +42,133 @@ def nabiz_taze(path, now=None):
         return False
 
 
+def pc_son_tur_hatali(nabiz, sonuc):
+    """Bilgisayarın SON BİTEN turu hatayla bittiyse True.
+
+    Nabız turun başında, sonuç dosyası sonunda yazılır. Sonuç nabızdan eskiyse
+    bilgisayar şu an yeni bir turun ortasındadır; sunucu onunla çakışmasın diye
+    False döner (tur gerçekten ölmüşse nabız 50 dakikada zaten bayatlar).
+    Dosya yok/bozuksa bilgi yoktur: eski davranış (yalnız nabza bak) korunur.
+    """
+    try:
+        veri = json.loads(pathlib.Path(sonuc).read_text(encoding='utf-8'))
+        sonuc_zamani = pathlib.Path(sonuc).stat().st_mtime
+        nabiz_zamani = pathlib.Path(nabiz).stat().st_mtime
+    except (OSError, ValueError):
+        return False
+    return isinstance(veri, dict) and veri.get('ok') is False and sonuc_zamani >= nabiz_zamani
+
+
+def sunucu_atlasin(nabiz, sonuc, now=None):
+    """'atla' | 'hatali' | 'eski'. Yalnız 'atla' turu atlatır.
+
+    Nabız taze olsa bile bilgisayarın son turu hatalıysa sunucu kendi turunu
+    çalıştırır; yoksa bilgisayar her hata verişinde nabız bırakıp sunucu
+    yedeğini susturur (2026-11-16 arızası: 16 saat haber çıkmadı).
+    """
+    if not nabiz_taze(nabiz, now):
+        return 'eski'
+    return 'hatali' if pc_son_tur_hatali(nabiz, sonuc) else 'atla'
+
+
+IZLEME_ESIK_SAAT = 6
+IZLEME_AYAR = 'otomasyon/izleme.json'
+
+
+def izleme_esigi(root=ROOT, deger=None):
+    """Haber yok eşiği (saat): komut satırı > HABER_ESIK_SAAT > otomasyon/izleme.json > 6."""
+    for aday in (deger, os.environ.get('HABER_ESIK_SAAT')):
+        try:
+            if aday not in (None, '') and float(aday) >= 0:
+                return float(aday)
+        except (TypeError, ValueError):
+            pass
+    try:
+        value = float(oku(pathlib.Path(root) / IZLEME_AYAR)['haber_yok_saat'])
+        if value >= 0:
+            return value
+    except (OSError, ValueError, KeyError, TypeError):
+        pass
+    return float(IZLEME_ESIK_SAAT)
+
+
+def son_yayin_zamani(root=ROOT):
+    """origin/main'deki son YAYIN commit'inin unix zamanı; bilinemezse None.
+
+    Yayın commit'i 'haber: ' ile başlar VE data/icerik.json'u değiştirir. Yalnız
+    konuya bakmak yetmez: 'haber: ...' başlıklı kod commit'leri de var. Özel bir
+    ref'e, FETCH_HEAD yazmadan çekilir ki sunucudaki pull/günlük bakımla ref
+    kilidi çakışmasın. Ulaşılamazsa None: bilinmeyen durumda alarm verilmez.
+    """
+    try:
+        subprocess.run(['git', 'fetch', '--quiet', '--no-write-fetch-head', 'origin',
+                        '+refs/heads/main:refs/izle/main'], cwd=root, capture_output=True, timeout=90, check=True)
+        out = subprocess.run(['git', 'log', 'refs/izle/main', '-n', '1', '--grep=^haber: ', '--format=%ct',
+                              '--', 'data/icerik.json'], cwd=root, capture_output=True, timeout=30,
+                             check=True, text=True).stdout.strip()
+        return int(out) if out else None
+    except (OSError, ValueError, subprocess.SubprocessError):
+        return None
+
+
+def izleme_karari(pc, son_yayin, simdi, esik_saat, onceki):
+    """Bildirilecek durum DEĞİŞİKLİKLERİ: [(anahtar, yeni_durum, metin)].
+
+    Durum 'onceki' ile aynıysa mesaj yok (aynı alarm her saat tekrarlanmaz);
+    kötüden iyiye dönüşte 'düzeldi' mesajı çıkar. Bilgi yoksa (pc/son_yayin None)
+    o alan değişmez.
+    """
+    onceki = onceki if isinstance(onceki, dict) else {}
+    mesajlar = []
+    if isinstance(pc, dict) and isinstance(pc.get('ok'), bool):
+        yeni = 'ok' if pc['ok'] else 'hata'
+        if yeni != onceki.get('pc', 'ok'):
+            if yeni == 'hata':
+                neden = ' '.join(str(pc.get('hata') or 'neden kaydedilmemiş').split())[:200]
+                mesajlar.append(('pc', yeni, f'🔴 Bilgisayardaki haber hattının son turu hatayla bitti; sunucu yedeği '
+                                             f'kendi turunu çalıştırıyor. Hata: {neden}'))
+            else:
+                mesajlar.append(('pc', yeni, '🟢 Bilgisayardaki haber hattı düzeldi: son tur hatasız bitti.'))
+    if son_yayin is not None:
+        yas = (simdi - son_yayin) / 3600
+        yeni = 'yok' if yas > esik_saat else 'ok'
+        if yeni != onceki.get('haber', 'ok'):
+            if yeni == 'yok':
+                yerel = datetime.fromtimestamp(son_yayin, timezone(timedelta(hours=3))).strftime('%d.%m %H:%M')
+                mesajlar.append(('haber', yeni, f'🟠 {yas:.0f} saattir sitede yeni haber yayınlanmadı '
+                                                f'(eşik {esik_saat:g} saat). Son yayın: {yerel} (TR saati).'))
+            else:
+                mesajlar.append(('haber', yeni, '🟢 Haber yayını düzeldi: sitede yeni haber yayınlandı.'))
+    return mesajlar
+
+
+def izleme_durumu_oku(path):
+    try:
+        veri = json.loads(pathlib.Path(path).read_text(encoding='utf-8'))
+        return veri if isinstance(veri, dict) else {}
+    except (OSError, ValueError):
+        return {}
+
+
+def izleme_durumu_yaz(path, anahtar, durum):
+    """Atomik yazım; bildirim gerçekten gittikten sonra çağrılır (gitmediyse ertesi tur yeniden dener)."""
+    path = pathlib.Path(path)
+    veri = izleme_durumu_oku(path)
+    veri[anahtar] = durum
+    gecici = path.with_name(path.name + '.tmp')
+    gecici.write_text(json.dumps(veri), encoding='utf-8')
+    os.replace(gecici, path)
+
+
+def izle(root, pc_sonuc, durum_dosyasi, esik_saat=None, now=None):
+    try:
+        pc = json.loads(pathlib.Path(pc_sonuc).read_text(encoding='utf-8'))
+    except (OSError, ValueError, TypeError):
+        pc = None
+    return izleme_karari(pc, son_yayin_zamani(root), time.time() if now is None else now,
+                         izleme_esigi(root, esik_saat), izleme_durumu_oku(durum_dosyasi))
+
+
 def codex_cikti(raw):
     texts, completed = [], False
     for line in raw.splitlines():
@@ -306,10 +433,26 @@ class Hat:
         self.yerel_model = None
         self.yazar_saglayici = None
 
-    def pc_esle(self, hafiza=False):
+    @staticmethod
+    def uzak_yaz_komutu(yol):
+        # stdin'den okunan içerik geçici dosyaya yazılıp atomik yer değiştirir: sunucu yarım dosya görmez.
+        return ("sudo -n -u haberci python3 -c 'import os,sys; p=\"" + yol + "\"; t=p+\".tmp\"; "
+                "open(t,\"w\").write(sys.stdin.read()); os.chmod(t,0o600); os.replace(t,p)'")
+
+    def pc_sonuc_json(self):
+        # Sunucu yedeği bu turun hatalı bitip bitmediğini bundan okur. ensure_ascii: uzak python3
+        # varsayılan kodlaması ASCII olsa da Türkçe hata metni bozulmaz.
+        hata = self.sonuc.get('hata')
+        return json.dumps({'zaman': datetime.now(timezone.utc).isoformat(), 'ok': not hata,
+                           'hata': ' '.join(str(hata).split())[:300] if hata else '',
+                           'eklenen': len(self.sonuc.get('eklenen') or []),
+                           'sure': round(time.monotonic() - self.start, 1)})
+
+    def pc_esle(self, hafiza=False, sonuc=False):
         # Sunucuda çalışmaz. Ağ hatası yayın turunu veya sonucunu değiştirmez.
         if sys.platform != 'win32' or self.deneme or os.environ.get('HABER_NABIZ') == '0':
             return
+        asama = 'sonuc' if sonuc else 'hafiza' if hafiza else 'nabiz'
         path = self.root / 'otomasyon/nabiz.json'
         try:
             ayar = oku(path) if path.exists() else {}
@@ -318,16 +461,18 @@ class Hat:
             host = ayar.get('ssh_hedef', 'oracle')
             if not re.fullmatch(r'[a-zA-Z0-9_.-]+', host) or host.startswith('-'):
                 raise ValueError('geçersiz SSH hedefi')
-            if hafiza:
-                command = "sudo -n -u haberci python3 -c 'import os,sys; p=\"/home/haberci/pc-gorulen.json\"; t=p+\".tmp\"; open(t,\"w\").write(sys.stdin.read()); os.chmod(t,0o600); os.replace(t,p)'"
+            if sonuc:
+                command, stdin = self.uzak_yaz_komutu('/home/haberci/pc-sonuc.json'), self.pc_sonuc_json()
+            elif hafiza:
+                command = self.uzak_yaz_komutu('/home/haberci/pc-gorulen.json')
                 stdin = (self.state / 'gorulen.json').read_text(encoding='utf-8')
             else:
                 command, stdin = 'sudo -n -u haberci touch /home/haberci/pc-nabiz', None
             calistir(['ssh', '-o', 'ConnectTimeout=5', '-o', 'BatchMode=yes', host, command],
                      self.root, 15, stdin=stdin)
-            record = {'asama': 'hafiza' if hafiza else 'nabiz', 'ok': True}
+            record = {'asama': asama, 'ok': True}
         except (OSError, ValueError, RuntimeError, TimeoutError) as exc:
-            record = {'asama': 'hafiza' if hafiza else 'nabiz', 'ok': False, 'neden': str(exc)[-300:]}
+            record = {'asama': asama, 'ok': False, 'neden': str(exc)[-300:]}
         self.sonuc.setdefault('esleme', []).append(record)
 
     def kota_oku(self):
@@ -1032,6 +1177,11 @@ class Hat:
         except (ValueError, RuntimeError, OSError, TimeoutError) as exc:
             self.sonuc['hata'] = str(exc)
             code = 1
+        except Exception as exc:
+            # Beklenmeyen istisna (ör. SubprocessError, KeyError) eskiden hata kaydı bırakmadan
+            # çıkardı; sunucuya "tur başarılı" gitmesin diye hatayı yaz, sonra yine yükselt.
+            self.sonuc['hata'] = f'beklenmeyen hata: {type(exc).__name__}: {exc}'
+            raise
         finally:
             try:
                 if not restarted:
@@ -1053,6 +1203,8 @@ class Hat:
             # Kalıcı aday hafızası: yayın olsun olmasın, yalnız gerçek turda yazılır.
             oto.json_yaz(self.state / 'gorulen.json', self.gorulen)
             self.pc_esle(hafiza=True)
+            # Sonuç EN SON gider: nabız "turdayım", sonuç "bitti, şu sonuçla" der.
+            self.pc_esle(sonuc=True)
         self.sonuc['sure_saniye'] = round(time.monotonic() - self.start, 1)
         oto.json_yaz(self.state / 'sonuc.json', self.sonuc)
         with (self.state / 'hat.log').open('a', encoding='utf-8', newline='\n') as log:
@@ -1081,6 +1233,11 @@ def main():
     parser.add_argument('--deneme', action='store_true')
     parser.add_argument('--modeller', help='Model zinciri JSON dosyası (veya HABER_MODELLER)')
     parser.add_argument('--nabiz-kontrol', type=pathlib.Path, help=argparse.SUPPRESS)
+    parser.add_argument('--pc-sonuc', type=pathlib.Path, help=argparse.SUPPRESS)
+    parser.add_argument('--izle', action='store_true', help=argparse.SUPPRESS)
+    parser.add_argument('--izle-kaydet', nargs=2, metavar=('ANAHTAR', 'DURUM'), help=argparse.SUPPRESS)
+    parser.add_argument('--izle-durum', type=pathlib.Path, help=argparse.SUPPRESS)
+    parser.add_argument('--esik-saat', help=argparse.SUPPRESS)
     parser.add_argument('--yerel', action='store_true', help=argparse.SUPPRESS)
     parser.add_argument('--yardimci', type=pathlib.Path, help=argparse.SUPPRESS)
     parser.add_argument('--model', help=argparse.SUPPRESS)
@@ -1090,7 +1247,18 @@ def main():
     parser.add_argument('--yeniden-head', help=argparse.SUPPRESS)
     args = parser.parse_args()
     if args.nabiz_kontrol:
-        return 0 if nabiz_taze(args.nabiz_kontrol) else 1
+        # Sarmalayıcı çıkış kodundan (0 = atla) ve yazdığımız nedenden okur.
+        neden = sunucu_atlasin(args.nabiz_kontrol, args.pc_sonuc) if args.pc_sonuc \
+            else 'atla' if nabiz_taze(args.nabiz_kontrol) else 'eski'
+        print(neden)
+        return 0 if neden == 'atla' else 1
+    if args.izle_kaydet:
+        izleme_durumu_yaz(args.izle_durum, *args.izle_kaydet)
+        return 0
+    if args.izle:
+        for anahtar, durum, metin in izle(ROOT, args.pc_sonuc, args.izle_durum, args.esik_saat):
+            print(f'{anahtar}\t{durum}\t{" ".join(metin.split())}')
+        return 0
     if args.yerel:
         return yerel_tek(args.yardimci, args.model, args.baglam, args.saglik, args.cikti_token)
     devral = json.load(sys.stdin) if args.yeniden_head else None
