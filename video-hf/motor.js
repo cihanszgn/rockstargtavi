@@ -385,7 +385,7 @@ B.tarih = function(sc,ic,s){
   var dt=v.gun_bit&&v.gun_bit!==v.gun_bas?(v.gun_bas+"–"+v.gun_bit):String(v.gun_bas);
   var bg=F(el("div","tr-buyuk d",dt,ust),420,150);
   var yn=el("div","tr-yan",null,ust);
-  var ay=F(el("div","tr-ay d",v.ay_adi||"",yn),150,50);var yl=el("div","tr-yil b",v.yil_metin||"",yn);
+  var ay=F(el("div","tr-ay d",v.ay_adi||"",yn),150,34);var yl=el("div","tr-yil b",v.yil_metin||"",yn);
   giris(bg,t0+.35,{r:-2,s:1.5,a:16});giris(yn,t0+.6,{r:2,s:1.3,a:8});
   var tk=ON(el("div","tr-takvim k2",null,ic));
   (v.hafta||[]).forEach(function(h){el("span","hf",h,tk)});
