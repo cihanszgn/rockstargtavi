@@ -1,0 +1,181 @@
+{
+ "id": "crusader-kings-iii-silk-silver-2026-11-17",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Ya está disponible Silk & Silver, la última gran expansión de Crusader Kings III.",
+   "veri": {
+    "ust_etiket": "CRUSADER KINGS III",
+    "baslik": "Silk & Silver ya está disponible",
+    "vurgu": [
+     "disponible"
+    ],
+    "tuslar": [
+     "C",
+     "K"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "CRUSADER KINGS III",
+    "alt": "SILK & SILVER"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según el anuncio oficial en Steam, la expansión añade dos nuevos tipos de gobierno.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Anuncio oficial en Steam",
+    "alinti": "Dirige una compañía mercantil y arrebata una república a tus rivales; dos nuevos escenarios."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "ANUNCIO EN STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Con el gobierno de mercader, una familia sin tierras dirige una compañía comercial. Puede especializarse como caravanero, prestamista o artesano y comerciar con más de 40 mercancías.",
+   "veri": {
+    "baslik": "Gobierno de mercader",
+    "maddeler": [
+     {
+      "metin": "Familia sin tierras al mando",
+      "tetik": "tierras"
+     },
+     {
+      "metin": "Caravanero, prestamista o artesano",
+      "tetik": "caravanero"
+     },
+     {
+      "metin": "Más de 40 mercancías",
+      "tetik": "40"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "GOBIERNO DE MERCADER",
+    "alt": "CARAVANEROS, PRESTAMISTAS, ARTESANOS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "En el gobierno de república, una familia patricia gobierna donde la popularidad decide quién conserva el título de dux. Las ligas comerciales ofrecen beneficios militares y económicos.",
+   "veri": {
+    "baslik": "Gobierno de república",
+    "maddeler": [
+     {
+      "metin": "Familia patricia en la república",
+      "tetik": "patricia"
+     },
+     {
+      "metin": "La popularidad decide el dux",
+      "tetik": "popularidad"
+     },
+     {
+      "metin": "Ligas comerciales con ventajas",
+      "tetik": "ligas"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "REPÚBLICA",
+    "alt": "FAMILIA PATRICIA Y DUX"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Dos nuevos escenarios: 1066, con los Canales del Comercio, y 1178, con güelfos y gibelinos.",
+   "veri": {
+    "baslik": "Dos nuevos escenarios",
+    "maddeler": [
+     {
+      "metin": "1066: Canales del Comercio",
+      "tetik": "1066"
+     },
+     {
+      "metin": "1178: Güelfos y gibelinos",
+      "tetik": "1178"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DOS NUEVOS ESCENARIOS",
+    "alt": "1066 Y 1178"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "La actualización 1.21 Florin es gratuita para todos los jugadores de Crusader Kings III. Añade mercancías, caminos y una economía renovada.",
+   "veri": {
+    "baslik": "Actualización 1.21 Florin",
+    "maddeler": [
+     {
+      "metin": "Gratis para todos los jugadores",
+      "tetik": "gratuita"
+     },
+     {
+      "metin": "Mercancías y necesidades de edificios",
+      "tetik": "mercancías"
+     },
+     {
+      "metin": "Caminos y nuevo sistema de construcción",
+      "tetik": "caminos"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "yama",
+    "baslik": "ACTUALIZACIÓN 1.21",
+    "alt": "FLORIN, GRATIS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game.",
+   "veri": {
+    "cagri": "Todo está en la web",
+    "alt": "Fuentes y cambios en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,181 @@
+{
+ "id": "crusader-kings-iii-silk-silver-2026-11-17",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Crusader Kings III's latest major expansion, Silk & Silver, is out now.",
+   "veri": {
+    "ust_etiket": "CRUSADER KINGS III",
+    "baslik": "Silk & Silver is out now",
+    "vurgu": [
+     "out now"
+    ],
+    "tuslar": [
+     "C",
+     "K"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "CRUSADER KINGS III",
+    "alt": "SILK & SILVER"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to the official Steam announcement, the expansion adds two new government types.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam official announcement",
+    "alinti": "Take charge of a merchant company and build a fortune one deal at a time."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "STEAM ANNOUNCEMENT"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Under the Merchant government, a landless family leads a trading company. Players can specialize as a Caravaneer, Creditor or Artisan, and trade over 40 goods.",
+   "veri": {
+    "baslik": "Merchant government",
+    "maddeler": [
+     {
+      "metin": "Landless family runs a trade company",
+      "tetik": "landless"
+     },
+     {
+      "metin": "Caravaneer, Creditor or Artisan",
+      "tetik": "Caravaneer"
+     },
+     {
+      "metin": "Trade over 40 goods",
+      "tetik": "40"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "MERCHANT GOVERNMENT",
+    "alt": "TRADE ROUTES AND MONOPOLIES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "The Republic places a patrician family in charge, where popularity decides who keeps the title of doge. Trade Leagues bring commercial and military benefits.",
+   "veri": {
+    "baslik": "Republic government",
+    "maddeler": [
+     {
+      "metin": "Patrician family in a Republic",
+      "tetik": "patrician"
+     },
+     {
+      "metin": "Popularity decides the doge",
+      "tetik": "popularity"
+     },
+     {
+      "metin": "Trade Leagues bring benefits",
+      "tetik": "Leagues"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "REPUBLIC",
+    "alt": "PATRICIAN FAMILY AND DOGE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Two new bookmarks arrive: 1066, Channels of Commerce, and 1178, Guelphs & Ghibellines.",
+   "veri": {
+    "baslik": "Two new bookmarks",
+    "maddeler": [
+     {
+      "metin": "1066: Channels of Commerce",
+      "tetik": "1066"
+     },
+     {
+      "metin": "1178: Guelphs & Ghibellines",
+      "tetik": "1178"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "TWO NEW BOOKMARKS",
+    "alt": "1066 AND 1178"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "The 1.21 Florin update is free for all Crusader Kings III players. It brings trade goods, roads, and a full economic overhaul.",
+   "veri": {
+    "baslik": "Free 1.21 update",
+    "maddeler": [
+     {
+      "metin": "Free for all players",
+      "tetik": "free"
+     },
+     {
+      "metin": "Trade goods and roads",
+      "tetik": "roads"
+     },
+     {
+      "metin": "Full economic overhaul",
+      "tetik": "economic"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "FREE 1.21 UPDATE",
+    "alt": "FLORIN FOR ALL PLAYERS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game.",
+   "veri": {
+    "cagri": "Every detail on the site",
+    "alt": "Sources and changes are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

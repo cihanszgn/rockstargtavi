@@ -1,0 +1,181 @@
+{
+ "id": "crusader-kings-iii-silk-silver-2026-11-17",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Crusader Kings III'ün yeni genişlemesi Silk & Silver bugün yayında.",
+   "veri": {
+    "ust_etiket": "CRUSADER KINGS III",
+    "baslik": "Silk & Silver yayında",
+    "vurgu": [
+     "yayında"
+    ],
+    "tuslar": [
+     "C",
+     "K"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "CRUSADER KINGS III",
+    "alt": "SILK & SILVER"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam'deki resmî duyuruya göre paket, tüccar ve cumhuriyet yönetimlerini getiriyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam resmî duyurusu",
+    "alinti": "Tüccar şirketini yönetin, Cumhuriyet'i rakiplerinizden alın; iki yeni senaryo da geliyor."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "STEAM DUYURUSU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Tüccar yönetiminde topraksız bir aile ticaret şirketini yönetir. Kervancı, kredici veya zanaatkâr olarak 40'tan fazla ticaret malında yol bulunur.",
+   "veri": {
+    "baslik": "Tüccar yönetimi",
+    "maddeler": [
+     {
+      "metin": "Topraksız aile bir ticaret şirketini yönetir",
+      "tetik": "topraksız"
+     },
+     {
+      "metin": "Kervancı, kredici veya zanaatkâr uzmanlığı",
+      "tetik": "kredici"
+     },
+     {
+      "metin": "40'tan fazla ticaret malında yol",
+      "tetik": "40'tan"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "TÜCCAR YÖNETİMİ",
+    "alt": "KERVANCI, KREDİCİ, ZANAATKÂR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Cumhuriyette patrici aile, yasa, rüşvet ve meclis kararlarıyla dojeliği hedefler. Ticaret birlikleri ticari ve askerî fayda sağlar.",
+   "veri": {
+    "baslik": "Cumhuriyet yönetimi",
+    "maddeler": [
+     {
+      "metin": "Meclisten geçen kanunlar",
+      "tetik": "meclis"
+     },
+     {
+      "metin": "Rüşvet ve yasa ile dojelik",
+      "tetik": "rüşvet"
+     },
+     {
+      "metin": "Ticaret birlikleri",
+      "tetik": "birlikleri"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CUMHURİYET",
+    "alt": "PATRİCİ AİLE VE DOJE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "İki yeni senaryo 1066'da ticaret kanallarını, 1178'de Guelflar ile Gibellinler çatışmasını konu alıyor.",
+   "veri": {
+    "baslik": "İki yeni senaryo",
+    "maddeler": [
+     {
+      "metin": "1066: Ticaret Kanalları",
+      "tetik": "1066"
+     },
+     {
+      "metin": "1178: Guelflar ve Gibellinler",
+      "tetik": "1178"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "İKİ YENİ SENARYO",
+    "alt": "1066 VE 1178"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "1.21 Florin güncellemesi tüm Crusader Kings III oyuncularına ücretsiz geliyor. Ticaret malları, yollar ve ekonomi yenileniyor.",
+   "veri": {
+    "baslik": "1.21 Florin güncellemesi",
+    "maddeler": [
+     {
+      "metin": "Tüm oyunculara ücretsiz",
+      "tetik": "ücretsiz"
+     },
+     {
+      "metin": "Ticaret malları ve yapı ihtiyaçları",
+      "tetik": "malları"
+     },
+     {
+      "metin": "Yollar ve yeni yapı sistemi",
+      "tetik": "yollar"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "yama",
+    "baslik": "ÜCRETSİZ 1.21 GÜNCELLEME",
+    "alt": "FLORİN"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Ayrıntıların tamamı sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "Bütün ayrıntılar sitede",
+    "alt": "Kaynaklar ve değişiklikler haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

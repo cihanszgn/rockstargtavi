@@ -1,0 +1,181 @@
+{
+ "id": "crusader-kings-iii-silk-silver-2026-11-17",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Silk & Silver, la dernière grande extension de Crusader Kings III, est disponible.",
+   "veri": {
+    "ust_etiket": "CRUSADER KINGS III",
+    "baslik": "Silk & Silver est disponible",
+    "vurgu": [
+     "disponible"
+    ],
+    "tuslar": [
+     "C",
+     "K"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "CRUSADER KINGS III",
+    "alt": "SILK & SILVER"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "D'après l'annonce officielle sur Steam, l'extension ajoute deux nouveaux types de gouvernement.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Annonce officielle sur Steam",
+    "alinti": "Prenez la tête d'une compagnie marchande et prenez le contrôle d'une République face à vos rivaux."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "ANNONCE STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Sous le gouvernement marchand, une famille sans terres dirige une compagnie commerciale. Le joueur peut se spécialiser en caravanier, créancier ou artisan, et faire circuler plus de 40 marchandises.",
+   "veri": {
+    "baslik": "Gouvernement marchand",
+    "maddeler": [
+     {
+      "metin": "Famille sans terres à la tête",
+      "tetik": "terres"
+     },
+     {
+      "metin": "Caravanier, créancier ou artisan",
+      "tetik": "caravanier"
+     },
+     {
+      "metin": "Plus de 40 marchandises",
+      "tetik": "40"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "GOUVERNEMENT MARCHAND",
+    "alt": "CARAVANIER, CRÉANCIER, ARTISAN"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Dans la république, une famille patricienne règne, et la popularité décide qui garde le titre de doge. Les ligues commerciales apportent des avantages militaires et économiques.",
+   "veri": {
+    "baslik": "Gouvernement républicain",
+    "maddeler": [
+     {
+      "metin": "Famille patricienne au pouvoir",
+      "tetik": "patricienne"
+     },
+     {
+      "metin": "La popularité désigne le doge",
+      "tetik": "popularité"
+     },
+     {
+      "metin": "Ligues commerciales",
+      "tetik": "ligues"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "RÉPUBLIQUE",
+    "alt": "FAMILLE PATRICIENNE, DOGE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Deux nouveaux scénarios : 1066, avec Les routes du commerce, et 1178, avec Guelfes et Gibelins.",
+   "veri": {
+    "baslik": "Deux nouveaux scénarios",
+    "maddeler": [
+     {
+      "metin": "1066 : Les routes du commerce",
+      "tetik": "1066"
+     },
+     {
+      "metin": "1178 : Guelfes et Gibelins",
+      "tetik": "1178"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DEUX NOUVEAUX SCÉNARIOS",
+    "alt": "1066 ET 1178"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "La mise à jour 1.21 « Florin » est gratuite pour tous les joueurs de Crusader Kings III. Elle apporte des marchandises, des routes et une économie refondue.",
+   "veri": {
+    "baslik": "Mise à jour 1.21 Florin",
+    "maddeler": [
+     {
+      "metin": "Gratuite pour tous les joueurs",
+      "tetik": "gratuite"
+     },
+     {
+      "metin": "Marchandises et besoins des bâtiments",
+      "tetik": "marchandises"
+     },
+     {
+      "metin": "Routes et nouveau système de construction",
+      "tetik": "routes"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "yama",
+    "baslik": "MISE À JOUR 1.21",
+    "alt": "FLORIN, GRATUITE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game.",
+   "veri": {
+    "cagri": "Tout est sur notre site",
+    "alt": "Sources et changements dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
