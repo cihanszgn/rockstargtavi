@@ -100,7 +100,8 @@ jobs:
         run: python tools/sosyal_yayinla.py --sayfa-bekle
 
       - name: Paylaş
-        if: steps.kart.outputs.yayinda != '0'
+        # Deneme çalışmasında kart adımı atlanır; atlanan adımın çıktısı null olur ve null != '0' yanlışlıkla false verir.
+        if: inputs.deneme == true || steps.kart.outputs.yayinda != '0'
         env:
           DENEME: ${{ inputs.deneme && '--dry-run' || '' }}
           X_TR_API_KEY: ${{ secrets.X_TR_API_KEY }}
