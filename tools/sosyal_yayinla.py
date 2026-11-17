@@ -697,7 +697,7 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
             global_ig = platform == 'instagram' and bool(ayar['hesaplar'][dil].get('instagram_icerik'))
             sinir = (ayar.get("gunluk_en_fazla") or {}).get(ad, VARSAYILAN_SINIR[ad])
             hak = min(1, ayar.get("calisma_basina_en_fazla", 1), sinir - bugunku_sayi(kayit, ad, dil, gun))
-            for x in kuyruk:
+            for x in sk.oncelikli(kuyruk, dil, platform, kayit, simdi):
                 if hak <= 0:
                     break
                 if not sk.uygun(x, dil, platform, kayit, simdi):

@@ -1,0 +1,149 @@
+{
+ "id": "gta-vi-cevrimici-mod-resmi-aciklama-2026-11-17",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "When is GTA VI online coming? The official answer right now: there is no announcement.",
+   "veri": {
+    "ust_etiket": "GTA VI ONLINE",
+    "baslik": "No official GTA VI online announcement",
+    "vurgu": [
+     "No official"
+    ],
+    "tuslar": [
+     "G",
+     "T",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "ONLINE MODE",
+    "alt": "NO OFFICIAL WORD"
+   },
+   "maskot": {
+    "hareket": "bekle"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Take-Two's June 24 press release describes a single-player experience. It gives no name, date or window for an online mode.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Take-Two press release",
+    "alinti": "Grand Theft Auto VI features a single-player experience."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "TAKE-TWO RELEASE"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "What is official: launch on November 19, 2026 at a price of $79.99. Take-Two's second-quarter results release repeats the date and platforms, and it does not mention an online mode.",
+   "veri": {
+    "baslik": "What is official",
+    "maddeler": [
+     {
+      "metin": "Launch: November 19, 2026",
+      "tetik": "launch"
+     },
+     {
+      "metin": "Price: $79.99",
+      "tetik": "price"
+     },
+     {
+      "metin": "Online mode: no announcement",
+      "tetik": "online"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "WHAT IS OFFICIAL",
+    "alt": "DATE AND PRICE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "What is only a rumor: according to PC Gamer, Twitch CEO Dan Clancy implied in September that online would arrive in 2027. That is an implication, not an official confirmation.",
+   "veri": {
+    "baslik": "Rumor",
+    "maddeler": [
+     {
+      "metin": "Twitch CEO implied 2027",
+      "tetik": "Twitch"
+     },
+     {
+      "metin": "Not officially confirmed",
+      "tetik": "official"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "RUMOR",
+    "alt": "NOT CONFIRMED"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "So the only confirmed thing is the single-player experience. For any online date, wait for Rockstar to say it.",
+   "veri": {
+    "baslik": "In short",
+    "maddeler": [
+     {
+      "metin": "Confirmed: single-player experience",
+      "tetik": "confirmed"
+     },
+     {
+      "metin": "Online: wait for Rockstar",
+      "tetik": "online"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "IN SHORT",
+    "alt": "WAIT FOR ROCKSTAR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game.",
+   "veri": {
+    "cagri": "Full details on the site",
+    "alt": "Sources in the story."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

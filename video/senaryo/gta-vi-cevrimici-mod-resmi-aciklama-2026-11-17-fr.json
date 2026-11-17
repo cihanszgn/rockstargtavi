@@ -1,0 +1,149 @@
+{
+ "id": "gta-vi-cevrimici-mod-resmi-aciklama-2026-11-17",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "GTA VI en ligne, c'est pour quand ? La réponse officielle pour l'instant : aucune annonce.",
+   "veri": {
+    "ust_etiket": "GTA VI EN LIGNE",
+    "baslik": "Aucune annonce officielle du online de GTA VI",
+    "vurgu": [
+     "Aucune annonce"
+    ],
+    "tuslar": [
+     "G",
+     "T",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "MODE EN LIGNE",
+    "alt": "AUCUNE ANNONCE"
+   },
+   "maskot": {
+    "hareket": "bekle"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Le communiqué de Take-Two du 24 juin décrit une expérience solo. Il ne donne ni nom, ni date, ni fenêtre pour un mode en ligne.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Communiqué Take-Two",
+    "alinti": "Grand Theft Auto VI propose une expérience solo."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "COMMUNIQUÉ TAKE-TWO"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Ce qui est officiel : sortie le 19 novembre 2026 au prix de 79,99 dollars. Le communiqué de résultats du deuxième trimestre reprend la date et les plateformes, sans mentionner de mode en ligne.",
+   "veri": {
+    "baslik": "Ce qui est officiel",
+    "maddeler": [
+     {
+      "metin": "Sortie : 19 novembre 2026",
+      "tetik": "sortie"
+     },
+     {
+      "metin": "Prix : 79,99 dollars",
+      "tetik": "prix"
+     },
+     {
+      "metin": "Mode en ligne : aucune annonce",
+      "tetik": "mode"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CE QUI EST OFFICIEL",
+    "alt": "DATE ET PRIX"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Ce qui n'est qu'une rumeur : selon PC Gamer, le PDG de Twitch, Dan Clancy, a laissé entendre en septembre que le online sortirait en 2027. C'est une allusion, pas une confirmation officielle.",
+   "veri": {
+    "baslik": "Rumeur",
+    "maddeler": [
+     {
+      "metin": "Le PDG de Twitch évoque 2027",
+      "tetik": "Twitch"
+     },
+     {
+      "metin": "Pas de confirmation officielle",
+      "tetik": "confirmation"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "RUMEUR",
+    "alt": "NON CONFIRMÉ"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Donc seule l'expérience solo est confirmée. Pour une date du online, attendez que Rockstar la communique.",
+   "veri": {
+    "baslik": "En bref",
+    "maddeler": [
+     {
+      "metin": "Confirmé : l'expérience solo",
+      "tetik": "confirmée"
+     },
+     {
+      "metin": "En ligne : attendez Rockstar",
+      "tetik": "online"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "EN BREF",
+    "alt": "ATTENDEZ ROCKSTAR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game.",
+   "veri": {
+    "cagri": "Tout est sur le site",
+    "alt": "Sources dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,141 @@
+{
+ "id": "gta-vi-kacta-aciliyor-2026-11-17",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "¿A qué hora se abre GTA VI? Según Rockstar, depende de tu país: la medianoche local.",
+   "veri": {
+    "ust_etiket": "HORA DE APERTURA GTA VI",
+    "baslik": "GTA VI abre a la medianoche local",
+    "vurgu": [
+     "medianoche local"
+    ],
+    "tuslar": [
+     "G",
+     "T",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "cikis",
+    "baslik": "HORA DE APERTURA",
+    "alt": "MEDIANOCHE LOCAL"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "La página de soporte de Rockstar indica que el juego se abre el 19 de noviembre a la medianoche local en cada región, en PS5 y en Xbox Series X|S. El mundo no arranca a la vez: se abre país por país.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Soporte de Rockstar",
+    "alinti": "El juego se abre el 19 de noviembre a la medianoche local en cada región."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "SOPORTE DE ROCKSTAR"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "En Turquía eso equivale a las 00:00 del 19 de noviembre. La hora de Turquía es un cálculo nuestro; Rockstar solo indica la regla de la medianoche local.",
+   "veri": {
+    "etiket": "Hora en Turquía",
+    "tarih": "19 de noviembre",
+    "not": "00:00, según la regla de medianoche local"
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "19 DE NOVIEMBRE",
+    "alt": "00:00 EN TURQUÍA"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "La precarga está abierta desde el 10 de noviembre. El archivo ocupa hasta 212 GB. Para la precarga automática, activa la descarga automática y deja la consola encendida o en reposo.",
+   "veri": {
+    "baslik": "Precarga",
+    "maddeler": [
+     {
+      "metin": "Abierta desde el 10 de noviembre",
+      "tetik": "precarga"
+     },
+     {
+      "metin": "Archivo de hasta 212 GB",
+      "tetik": "212"
+     },
+     {
+      "metin": "Descarga automática activada",
+      "tetik": "descarga automática"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "PRECARGA",
+    "alt": "HASTA 212 GB"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Las ediciones con código en la caja están en tiendas desde el 12 de noviembre. Si tienes un código, canjéalo ya y precarga para tener el juego listo a la medianoche de tu país.",
+   "veri": {
+    "baslik": "Código en la caja",
+    "maddeler": [
+     {
+      "metin": "En tiendas desde el 12 de noviembre",
+      "tetik": "ediciones"
+     },
+     {
+      "metin": "Canjea el código y precarga",
+      "tetik": "canjéalo"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CÓDIGO EN LA CAJA",
+    "alt": "CANJEA Y PRECARGA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game.",
+   "veri": {
+    "cagri": "Todos los detalles en la web",
+    "alt": "Fuentes en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

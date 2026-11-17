@@ -1,0 +1,149 @@
+{
+ "id": "gta-vi-cevrimici-mod-resmi-aciklama-2026-11-17",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "GTA VI çevrimiçi mod ne zaman? Resmî cevap şu: henüz bir duyuru yok.",
+   "veri": {
+    "ust_etiket": "GTA VI ÇEVRİMİÇİ",
+    "baslik": "Çevrimiçi mod için resmî duyuru yok",
+    "vurgu": [
+     "resmî duyuru yok"
+    ],
+    "tuslar": [
+     "G",
+     "T",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "ÇEVRİMİÇİ MOD",
+    "alt": "RESMÎ DUYURU YOK"
+   },
+   "maskot": {
+    "hareket": "bekle"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Take-Two'nun 24 Haziran tarihli bülteni oyunu tek oyunculu deneyim olarak anlatıyor. Çevrimiçi mod için ad, tarih ya da pencere verilmedi.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Take-Two bülteni",
+    "alinti": "Grand Theft Auto VI tek oyunculu deneyim sunuyor."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "TAKE-TWO BÜLTENİ"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Resmî olan şu: çıkış 19 Kasım 2026, fiyat 79,99 dolar. İkinci çeyrek bülteni de çevrimiçi moddan söz etmiyor.",
+   "veri": {
+    "baslik": "Resmî olan",
+    "maddeler": [
+     {
+      "metin": "Çıkış: 19 Kasım 2026",
+      "tetik": "çıkış"
+     },
+     {
+      "metin": "Fiyat: 79,99 dolar",
+      "tetik": "fiyat"
+     },
+     {
+      "metin": "Çevrimiçi mod: duyuru yok",
+      "tetik": "çevrimiçi"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "RESMÎ OLAN",
+    "alt": "ÇIKIŞ VE FİYAT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Söylenti tarafında PC Gamer'a göre Twitch CEO'su Dan Clancy, eylülde 2027'yi ima etti. Bu resmî teyit değil.",
+   "veri": {
+    "baslik": "Söylenti",
+    "maddeler": [
+     {
+      "metin": "Twitch CEO'su 2027'yi ima etti",
+      "tetik": "Twitch"
+     },
+     {
+      "metin": "Resmî teyit yok",
+      "tetik": "teyit"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "SÖYLENTİ",
+    "alt": "RESMÎ TEYİT YOK"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Özetle teyitli olan yalnız tek oyunculu deneyim. Çevrimiçi mod için Rockstar'ın açıklamasını bekle.",
+   "veri": {
+    "baslik": "Özet",
+    "maddeler": [
+     {
+      "metin": "Teyitli: tek oyunculu deneyim",
+      "tetik": "teyitli"
+     },
+     {
+      "metin": "Çevrimiçi mod: bekle",
+      "tetik": "çevrimiçi"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "ÖZET",
+    "alt": "RESMÎ AÇIKLAMA BEKLE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "Bütün ayrıntılar sitede",
+    "alt": "Kaynaklar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

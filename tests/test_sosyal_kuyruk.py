@@ -75,6 +75,29 @@ class KuyrukTests(unittest.TestCase):
         for i, tur in ((0, "haber"), (1, "takvim"), (2, "firsat"), (4, "ucretsiz"), (5, "rehber"), (6, "arsiv")):
             self.assertEqual(self.sec(adaylar[i:], {})[0]["sosyal_tur"], tur)
 
+    def test_gta_cikis_haftasi_her_gun_bir_gta_gonderisi(self):
+        self.yaz("takvim.json", [{"id": "gta-vi", "oyun": "Grand Theft Auto VI", "tarih": "2026-11-19", "kesin": True,
+                                  "platform": ["PS5"], "kaynak": {"ad": "Rockstar", "url": "https://example.com"}}])
+        diger = haber("baska-haber", "2026-11-16")
+        for gun in (5, 2):  # 14 Kasım yok: 2 gün kala takvim kartı kural dışı gün olsa bile çıkar
+            simdi = datetime(2026, 11, 19 - gun, 13, tzinfo=timezone.utc)
+            adaylar = sk.adaylar([diger], self.kok, self.ayar, simdi.date(), simdi)
+            takvim = [x for x in adaylar if x["sosyal_tur"] == "takvim"]
+            self.assertEqual(len(takvim), 1)
+            self.assertTrue(takvim[0]["gta_oncelik"])
+            ilk = sk.oncelikli(adaylar, "tr", "instagram", {}, simdi)[0]
+            self.assertEqual(ilk["id"], takvim[0]["id"])  # GTA kartı haberin önüne geçer
+            kayit = {f"{takvim[0]['sosyal_anahtar']}|tr|instagram|gorsel": {
+                "id": takvim[0]["id"], "durum": "tamam", "zaman": simdi.isoformat()}}
+            self.assertEqual(sk.oncelikli(adaylar, "tr", "instagram", kayit, simdi), adaylar)  # bugün bir GTA var: sıra normal
+        # Günlük sınır aşılmaz: hak yoksa hiçbir şey seçilmez.
+        self.ayar["gunluk_en_fazla"] = {"instagram": 1}
+        kayit = {"x|tr|instagram|gorsel": {"id": "x", "durum": "tamam", "zaman": simdi.isoformat()}}
+        self.assertEqual(self.sec(adaylar, kayit, simdi), [])
+        # Çıkıştan 8+ gün önce kural kapalı.
+        erken = datetime(2026, 11, 10, 13, tzinfo=timezone.utc)
+        self.assertFalse(any(x.get("gta_oncelik") for x in sk.adaylar([diger], self.kok, self.ayar, erken.date(), erken)))
+
     def test_kilometre_tasi_bir_kez_ve_sonraki_tas_ayri(self):
         x = self.tur("takvim")
         kayit = {}

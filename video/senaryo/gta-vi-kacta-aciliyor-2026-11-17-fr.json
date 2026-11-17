@@ -1,0 +1,141 @@
+{
+ "id": "gta-vi-kacta-aciliyor-2026-11-17",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "GTA VI ouvre à quelle heure ? Selon Rockstar, cela dépend de votre pays : minuit, heure locale.",
+   "veri": {
+    "ust_etiket": "HEURE D'OUVERTURE GTA VI",
+    "baslik": "GTA VI ouvre à minuit, heure locale",
+    "vurgu": [
+     "minuit"
+    ],
+    "tuslar": [
+     "G",
+     "T",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "cikis",
+    "baslik": "HEURE D'OUVERTURE",
+    "alt": "MINUIT LOCAL"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "La page d'assistance de Rockstar indique que le jeu s'ouvre le 19 novembre à minuit, heure locale, dans chaque région, sur PS5 et Xbox Series X|S. Le monde ne démarre pas en même temps : l'ouverture avance pays par pays.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Assistance Rockstar",
+    "alinti": "Le jeu s'ouvre le 19 novembre à minuit, heure locale, dans chaque région."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "ASSISTANCE ROCKSTAR"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "En Turquie, cela donne 00:00 le 19 novembre. L'heure turque est notre propre calcul ; Rockstar ne donne que la règle de minuit local.",
+   "veri": {
+    "etiket": "Heure en Turquie",
+    "tarih": "19 novembre",
+    "not": "00:00, d'après la règle de minuit local"
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "19 NOVEMBRE",
+    "alt": "00:00 EN TURQUIE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Le préchargement est ouvert depuis le 10 novembre. Le fichier pèse jusqu'à 212 Go. Pour le préchargement automatique, activez le téléchargement automatique et laissez la console allumée ou en mode repos.",
+   "veri": {
+    "baslik": "Préchargement",
+    "maddeler": [
+     {
+      "metin": "Ouvert depuis le 10 novembre",
+      "tetik": "préchargement"
+     },
+     {
+      "metin": "Fichier jusqu'à 212 Go",
+      "tetik": "212"
+     },
+     {
+      "metin": "Téléchargement automatique activé",
+      "tetik": "téléchargement automatique"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "PRÉCHARGEMENT",
+    "alt": "JUSQU'À 212 GO"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Les éditions avec code en boîte sont en magasin depuis le 12 novembre. Si vous avez un code, activez-le et préchargez dès maintenant pour que le jeu soit prêt à minuit chez vous.",
+   "veri": {
+    "baslik": "Code en boîte",
+    "maddeler": [
+     {
+      "metin": "En magasin depuis le 12 novembre",
+      "tetik": "éditions"
+     },
+     {
+      "metin": "Activez le code et préchargez",
+      "tetik": "activez"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CODE EN BOÎTE",
+    "alt": "ACTIVEZ ET PRÉCHARGEZ"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game.",
+   "veri": {
+    "cagri": "Tout est sur le site",
+    "alt": "Sources dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,141 @@
+{
+ "id": "gta-vi-kacta-aciliyor-2026-11-17",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "When does GTA VI open? According to Rockstar, it depends on your country: local midnight.",
+   "veri": {
+    "ust_etiket": "GTA VI UNLOCK TIME",
+    "baslik": "GTA VI opens at local midnight",
+    "vurgu": [
+     "local midnight"
+    ],
+    "tuslar": [
+     "G",
+     "T",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "cikis",
+    "baslik": "UNLOCK TIME",
+    "alt": "LOCAL MIDNIGHT"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Rockstar's support page says the game unlocks on November 19 at local midnight in every region, on both PS5 and Xbox Series X|S. So the world does not start at once. It rolls country by country.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Rockstar Support",
+    "alinti": "The game unlocks at local midnight in every region on November 19."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "ROCKSTAR SUPPORT"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "In Turkey that works out to 00:00 on November 19. The Turkey time is our own calculation; Rockstar only states the local midnight rule.",
+   "veri": {
+    "etiket": "Turkey time",
+    "tarih": "November 19",
+    "not": "00:00, from the local midnight rule"
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "NOVEMBER 19",
+    "alt": "00:00 IN TURKEY"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Pre-load has been open since November 10. The file is up to 212 GB. For automatic pre-load, turn on auto-download and keep the console on or in rest mode.",
+   "veri": {
+    "baslik": "Pre-load",
+    "maddeler": [
+     {
+      "metin": "Open since November 10",
+      "tetik": "Pre-load"
+     },
+     {
+      "metin": "File up to 212 GB",
+      "tetik": "212"
+     },
+     {
+      "metin": "Auto-download must be on",
+      "tetik": "auto-download"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "PRE-LOAD",
+    "alt": "UP TO 212 GB"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Code-in-box editions have been at retailers since November 12. If you have a code, redeem it now and pre-load so the game is ready at your country's midnight.",
+   "veri": {
+    "baslik": "Code-in-box",
+    "maddeler": [
+     {
+      "metin": "At retailers since November 12",
+      "tetik": "Code-in-box"
+     },
+     {
+      "metin": "Redeem the code, pre-load",
+      "tetik": "redeem"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CODE-IN-BOX",
+    "alt": "REDEEM AND PRE-LOAD"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game.",
+   "veri": {
+    "cagri": "Full details on the site",
+    "alt": "Sources in the story."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

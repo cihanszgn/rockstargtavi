@@ -1,0 +1,141 @@
+{
+ "id": "gta-vi-kacta-aciliyor-2026-11-17",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "GTA VI kaçta açılıyor? Rockstar'a göre cevap, ülkene göre yerel gece yarısı.",
+   "veri": {
+    "ust_etiket": "GTA VI AÇILIŞ SAATİ",
+    "baslik": "GTA VI yerel gece yarısı açılıyor",
+    "vurgu": [
+     "gece yarısı"
+    ],
+    "tuslar": [
+     "G",
+     "T",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "cikis",
+    "baslik": "AÇILIŞ SAATİ",
+    "alt": "YEREL GECE YARISI"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Rockstar'ın destek sayfasına göre oyun 19 Kasım'da her bölgede yerel gece yarısı açılıyor; yani ülke ülke başlıyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Rockstar Destek",
+    "alinti": "Oyun 19 Kasım'da her bölgede yerel gece yarısı açılıyor."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "ROCKSTAR DESTEK"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Türkiye'de bu, 19 Kasım'da saat 00:00. Saat hesabı bizim; Rockstar yalnız yerel gece yarısı kuralını yazıyor.",
+   "veri": {
+    "etiket": "Türkiye saati",
+    "tarih": "19 Kasım",
+    "not": "Saat 00:00, yerel gece yarısı kuralından"
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "19 KASIM",
+    "alt": "TÜRKİYE'DE SAAT 00:00"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Ön yükleme 10 Kasım'dan beri açık. Dosya en fazla 212 gigabayt. Otomatik ön yükleme için otomatik indirme açık, konsol açık ya da dinlenme modunda olmalı.",
+   "veri": {
+    "baslik": "Ön yükleme",
+    "maddeler": [
+     {
+      "metin": "10 Kasım'dan beri açık",
+      "tetik": "Ön"
+     },
+     {
+      "metin": "Dosya en fazla 212 GB",
+      "tetik": "212"
+     },
+     {
+      "metin": "Otomatik indirme açık olmalı",
+      "tetik": "otomatik indirme"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "ÖN YÜKLEME",
+    "alt": "212 GB'A KADAR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Kutulu sürüm 12 Kasım'dan beri satışta. Kodun varsa şimdiden etkinleştirip ön yükleme yap.",
+   "veri": {
+    "baslik": "Kutulu sürüm",
+    "maddeler": [
+     {
+      "metin": "12 Kasım'dan beri satışta",
+      "tetik": "Kutulu"
+     },
+     {
+      "metin": "Kodu etkinleştir, ön yükle",
+      "tetik": "etkinleştirip"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "KUTULU SÜRÜM",
+    "alt": "KODU ETKİNLEŞTİR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "Bütün ayrıntılar sitede",
+    "alt": "Kaynaklar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

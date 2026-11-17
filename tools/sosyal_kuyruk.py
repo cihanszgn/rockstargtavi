@@ -136,7 +136,7 @@ def adaylar(veri, kok: Path, ayar, bugun: date, simdi: datetime):
         if not x.get("tarih") or not x.get("kesin"):
             continue
         gun = (date.fromisoformat(x["tarih"]) - bugun).days
-        if gun not in (30, 14, 7, 3, 1, 0):
+        if gun not in (30, 14, 7, 3, 1, 0) and not (x.get("id") == GTA_ID and 0 <= gun <= GTA_ONCELIK_GUN):
             continue
         oid = f"takvim-{x['id']}-{x['tarih']}-{gun}"
         ekle(oid, "takvim", x["oyun"], [x["kaynak"]],
@@ -207,7 +207,38 @@ def adaylar(veri, kok: Path, ayar, bugun: date, simdi: datetime):
             t["ozet"] = SABLON[d]["arsiv_not"].format(tarih=x["tarih"]) + " " + t["ozet"]
             t["metin"] = t["ozet"]
         sonuc.append(a)
-    return [x for x in sonuc if ayar.get("turler", {}).get(x["sosyal_tur"], True)]
+    sonuc = [x for x in sonuc if ayar.get("turler", {}).get(x["sosyal_tur"], True)]
+    cikis = next((date.fromisoformat(x["tarih"]) for x in oku(kok, "takvim.json", [])
+                  if x.get("id") == GTA_ID and x.get("kesin") and x.get("tarih")), None)
+    if cikis and 0 <= (cikis - bugun).days <= GTA_ONCELIK_GUN:
+        for x in sonuc:
+            if x["sosyal_tur"] != "arsiv" and gta_mi(x):
+                x["gta_oncelik"] = True
+    return sonuc
+
+
+GTA_ID = "gta-vi"
+GTA_ONCELIK_GUN = 7  # çıkışa bu kadar gün kala her gün en az bir GTA VI gönderisi
+
+
+def gta_mi(x) -> bool:
+    return (norm(x.get("oyun")) in {"gta vi", "grand theft auto vi", "gta 6"}
+            or str(x.get("id", "")).startswith((GTA_ID + "-", "gta6-", "takvim-" + GTA_ID + "-")))
+
+
+def oncelikli(kuyruk, dil, platform, kayit, simdi):
+    """Çıkışa kalan son günlerde, bu (dil, platform) için bugün henüz GTA VI gönderisi yoksa GTA VI adayları öne alınır.
+    Günlük sınırlar çağıranda uygulanır; GTA gönderisi çıkınca sıra normale döner (GTA kuyruğu tüm hakkı yemez)."""
+    if not any(x.get("gta_oncelik") for x in kuyruk):
+        return kuyruk
+    gun = simdi.strftime("%Y-%m-%d")
+    for k, r in kayit.items():
+        p = k.split("|")
+        bugun_mu = (r.get("niyet_zamani") or r.get("zaman") or "")[:10] == gun
+        if (len(p) == 4 and p[1:3] == [dil, platform] and bugun_mu
+                and r.get("durum") in ("tamam", "niyet", "elle_bak") and gta_mi({"id": r.get("id", "")})):
+            return kuyruk
+    return sorted(kuyruk, key=lambda x: not x.get("gta_oncelik"))
 
 
 def son_tur(kayit, dil, platform):
