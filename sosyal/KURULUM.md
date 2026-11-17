@@ -10,9 +10,15 @@ Yardımcı anahtarları dener, doğruysa GitHub'a gizli olarak kaydeder.
 
 > **Askıda:** X ve Reddit bölümleri ileride açmak için duruyor; Instagram ve YouTube açık (`sosyal/ayarlar.json`).
 
-**Durum:** Site yedi dilde (TR, EN, ES, FR, DE, NL, ZH) yayınlanır. Mevcut tek Instagram hesabı globaldir:
-İngilizce kart/video, üstte İngilizce ve altta Türkçe açıklama paylaşır. Anahtarları `IG_TR_*` olarak kalır.
-YouTube Türkçe kanal, Türkçe video ve mevcut başlık/açıklama yerelleştirmeleriyle devam eder.
+**Durum:** Site yedi dilde (TR, EN, ES, FR, DE, NL, ZH) yayınlanır. Mevcut tek Instagram hesabı (`IG_TR_*`)
+17 Kasım 2026'da yeniden Türkçeye alındı (Cio: Türkiye'deki izleyiciye İngilizce içerik gitmesin, içerik izlendiği
+bölgenin dilinde olsun). Instagram tek gönderiyi bölgeye göre farklı dilde gösteremez: organik gönderide ülke hedefleme
+yoktur, Meta'nın Reels çevirisi Türkiye'deki hesaplara kapalıdır ve Türkçe desteklemez (kaynak: Meta yardım sayfası
+facebook.com/business/help/1090261056577580, 17 Kasım 2026). Bölge dili ancak dil başına ayrı hesapla sağlanır:
+İngilizce (global) hesap açılıp `IG_EN_*` anahtarları girilince kendiliğinden devreye girer (6. bölüm).
+Aşağıdaki "Global Instagram hesabı" bölümü şu an kullanılmayan `instagram_icerik` ayarını anlatır.
+YouTube Türkçe kanal, Türkçe video ve mevcut başlık/açıklama yerelleştirmeleriyle devam eder; YouTube'un otomatik
+dublajı Türkçe kaynaktan yalnız İngilizceye çevirir (kaynak: support.google.com/youtube/answer/15569972, 17 Kasım 2026).
 Diğer hesaplar anahtarları eklenince devreye girer (bkz. 6. bölüm).
 
 **E-posta ipucu:** her hesap ayrı e-posta ister. Gmail'de `adın+gtatr@gmail.com` gibi `+`
