@@ -1,0 +1,156 @@
+{
+ "id": "drg-survivor-knockout-1-2-2026-11-17",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Deep Rock Galactic Survivor's Knockout expansion and Update 1.2 are now live.",
+   "veri": {
+    "ust_etiket": "UPDATE 1.2",
+    "baslik": "Knockout expansion is out",
+    "vurgu": [
+     "out"
+    ],
+    "tuslar": [
+     "K",
+     "O"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "DEEP ROCK GALACTIC",
+    "alt": "KNOCKOUT EXPANSION"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to the official Steam announcement, the Brawler receives 11 new weapons.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Official Steam announcement",
+    "alinti": "The Brawler receives 11 new weapons, plus the Sandblasted Corridors biome and Hazard 6."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "STEAM ANNOUNCEMENT"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "The Shockwave Emitter fires wide shockwaves. Diffractor Spikes are plasma-powered throwing spikes. The Thunderlash is a whip built for the toughest enemies.",
+   "veri": {
+    "baslik": "New Brawler weapons",
+    "maddeler": [
+     {
+      "metin": "Shockwave Emitter: wide shockwaves",
+      "tetik": "Shockwave"
+     },
+     {
+      "metin": "Diffractor Spikes: plasma throwers",
+      "tetik": "Diffractor"
+     },
+     {
+      "metin": "Thunderlash: a whip for tough enemies",
+      "tetik": "Thunderlash"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NEW BRAWLER WEAPONS",
+    "alt": "SHOCKWAVE, SPIKES, WHIP"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Hazard 6 is here. Enemies you miss on one stage follow you to the next. In Sandblasted Corridors, sandstorms can disrupt your scanners.",
+   "veri": {
+    "baslik": "Hazard 6 and new biome",
+    "maddeler": [
+     {
+      "metin": "Hazard 6 arrives",
+      "tetik": "Hazard"
+     },
+     {
+      "metin": "Enemies follow you to next stage",
+      "tetik": "follow"
+     },
+     {
+      "metin": "Sandstorms disrupt scanners",
+      "tetik": "sandstorms"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "HAZARD 6 AND BIOME",
+    "alt": "SANDBLASTED CORRIDORS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "The update adds 11 new weapons and Hazard 6, and it is available on PC through Steam.",
+   "veri": {
+    "baslik": "Update 1.2 at a glance",
+    "platformlar": [],
+    "sayilar": [
+     {
+      "deger": "11",
+      "etiket": "NEW WEAPONS",
+      "tetik": "11"
+     },
+     {
+      "deger": "6",
+      "etiket": "HAZARD",
+      "tetik": "Hazard"
+     }
+    ],
+    "not": "Available on PC through Steam."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "UPDATE 1.2",
+    "alt": "PC • STEAM"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Weapon and Hazard 6 details: read the full story on our site, Control A Game.",
+   "veri": {
+    "cagri": "Every detail on the site",
+    "alt": "Weapons, biome and Hazard 6 are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,156 @@
+{
+ "id": "drg-survivor-knockout-1-2-2026-11-17",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Deep Rock Galactic Survivor'ın Knockout genişlemesi ve 1.2 güncellemesi yayında.",
+   "veri": {
+    "ust_etiket": "GÜNCELLEME 1.2",
+    "baslik": "Knockout genişlemesi yayında",
+    "vurgu": [
+     "yayında"
+    ],
+    "tuslar": [
+     "K",
+     "O"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "DEEP ROCK GALACTIC",
+    "alt": "KNOCKOUT GENİŞLEME"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam'deki resmî geliştirici duyurusuna göre Brawler'a 11 yeni silah ekleniyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam resmî duyuru",
+    "alinti": "Brawler ve varyantları için 11 yeni silah, yeni Sandblasted Corridors biyomu ve Hazard 6."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "STEAM DUYURUSU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Shockwave Emitter geniş şok dalgaları atar. Diffractor Spikes plazma lazerleriyle fırlatılır. Thunderlash ise en zor düşmanlar için bir kamçı.",
+   "veri": {
+    "baslik": "Brawler'ın yeni silahları",
+    "maddeler": [
+     {
+      "metin": "Shockwave Emitter: geniş şok dalgası",
+      "tetik": "Shockwave"
+     },
+     {
+      "metin": "Diffractor Spikes: plazma dikenler",
+      "tetik": "Diffractor"
+     },
+     {
+      "metin": "Thunderlash: zor düşmanlara kamçı",
+      "tetik": "Thunderlash"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "YENİ SİLAHLAR",
+    "alt": "ŞOK DALGASI, DİKEN, KAMÇI"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Hazard 6 geliyor. Bir aşamada yenemediğin düşmanlar sonraki aşamaya taşınıyor. Sandblasted Corridors'ta kum fırtınaları tarayıcıları bozabiliyor.",
+   "veri": {
+    "baslik": "Hazard 6 ve yeni biyom",
+    "maddeler": [
+     {
+      "metin": "Hazard 6 geliyor",
+      "tetik": "Hazard"
+     },
+     {
+      "metin": "Yenemediğin düşmanlar taşınır",
+      "tetik": "sonraki"
+     },
+     {
+      "metin": "Kum fırtınaları tarayıcıyı bozar",
+      "tetik": "kum"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "HAZARD 6 VE BİYOM",
+    "alt": "SANDBLASTED CORRIDORS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Güncelleme 11 yeni silah ve Hazard 6 getiriyor. Steam üzerinden PC'de oynanıyor.",
+   "veri": {
+    "baslik": "1.2 güncellemesi özeti",
+    "platformlar": [],
+    "sayilar": [
+     {
+      "deger": "11",
+      "etiket": "YENİ SİLAH",
+      "tetik": "11"
+     },
+     {
+      "deger": "6",
+      "etiket": "HAZARD",
+      "tetik": "Hazard"
+     }
+    ],
+    "not": "PC'de Steam üzerinden oynanır."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "GÜNCELLEME 1.2",
+    "alt": "PC • STEAM"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Silahların ve Hazard 6'nın tamamı sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "Bütün detaylar sitede",
+    "alt": "Yeni silahlar ve biyom haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

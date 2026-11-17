@@ -1,0 +1,156 @@
+{
+ "id": "drg-survivor-knockout-1-2-2026-11-17",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "La expansión Knockout y la actualización 1.2 de Deep Rock Galactic Survivor ya están disponibles.",
+   "veri": {
+    "ust_etiket": "ACTUALIZACIÓN 1.2",
+    "baslik": "Expansión Knockout ya disponible",
+    "vurgu": [
+     "disponible"
+    ],
+    "tuslar": [
+     "K",
+     "O"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "DEEP ROCK GALACTIC",
+    "alt": "EXPANSIÓN KNOCKOUT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según el anuncio oficial en Steam, el Brawler recibe 11 armas nuevas.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Anuncio oficial en Steam",
+    "alinti": "El Brawler recibe 11 armas nuevas, el bioma Sandblasted Corridors y Hazard 6."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "ANUNCIO EN STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "El Shockwave Emitter lanza ondas de choque amplias. Los Diffractor Spikes son púas lanzadas con láseres de plasma. El Thunderlash es un látigo para los enemigos más duros.",
+   "veri": {
+    "baslik": "Nuevas armas del Brawler",
+    "maddeler": [
+     {
+      "metin": "Shockwave Emitter: ondas de choque",
+      "tetik": "Shockwave"
+     },
+     {
+      "metin": "Diffractor Spikes: púas de plasma",
+      "tetik": "Diffractor"
+     },
+     {
+      "metin": "Thunderlash: un látigo",
+      "tetik": "Thunderlash"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NUEVAS ARMAS",
+    "alt": "ONDAS, PÚAS, LÁTIGO"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Llega Hazard 6. Los enemigos que no caen en una fase pasan a la siguiente. En Sandblasted Corridors, las tormentas de arena alteran los escáneres.",
+   "veri": {
+    "baslik": "Hazard 6 y nuevo bioma",
+    "maddeler": [
+     {
+      "metin": "Llega Hazard 6",
+      "tetik": "Hazard"
+     },
+     {
+      "metin": "Enemigos que pasan de fase",
+      "tetik": "siguiente"
+     },
+     {
+      "metin": "Tormentas que alteran escáneres",
+      "tetik": "tormentas"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "HAZARD 6 Y BIOMA",
+    "alt": "SANDBLASTED CORRIDORS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "La actualización trae 11 armas nuevas y Hazard 6, disponible en PC a través de Steam.",
+   "veri": {
+    "baslik": "Actualización 1.2 en breve",
+    "platformlar": [],
+    "sayilar": [
+     {
+      "deger": "11",
+      "etiket": "ARMAS NUEVAS",
+      "tetik": "11"
+     },
+     {
+      "deger": "6",
+      "etiket": "HAZARD",
+      "tetik": "Hazard"
+     }
+    ],
+    "not": "Disponible en PC a través de Steam."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "ACTUALIZACIÓN 1.2",
+    "alt": "PC • STEAM"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Los detalles de armas y Hazard 6: todos en nuestra web, Control A Game.",
+   "veri": {
+    "cagri": "Todos los detalles en la web",
+    "alt": "Armas, bioma y Hazard 6 en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
