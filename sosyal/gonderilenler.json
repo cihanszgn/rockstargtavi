@@ -192,5 +192,33 @@
   "platform": "instagram",
   "url": "https://www.instagram.com/p/DfyoIOzkwBk/",
   "zaman": "2026-11-16T05:40:32+00:00"
+ },
+ "zelda-ocarina-of-time-switch-2-cikis|tr|instagram|reel": {
+  "bicim": "reel",
+  "dil": "tr",
+  "durum": "tamam",
+  "icerik_dili": "en",
+  "id": "zelda-ocarina-of-time-switch-2-cikti-2026-11-16",
+  "kapsayici": "17869430157694894",
+  "kimlik": "18148439518572452",
+  "niyet_zamani": "2026-11-17T11:25:59+00:00",
+  "platform": "instagram",
+  "sosyal_tur": "haber",
+  "url": "https://www.instagram.com/reel/Df10d3ABJL4/",
+  "zaman": "2026-11-17T11:25:59+00:00"
+ },
+ "zelda-ocarina-of-time-switch-2-cikis|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 9961814,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "zelda-ocarina-of-time-switch-2-cikti-2026-11-16",
+  "kimlik": "oK_H47M1Fec",
+  "niyet_zamani": "2026-11-17T11:25:59+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg2QLeaaOfgcf1EzyFxgP8V5dHJdtSNL9uuaVUup_fn_AljZw6F03vGKv3Q8jULlWqooQgRyG27STogzxO4kOEv6hyynhHHgD4fUEW0OMsM",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/oK_H47M1Fec",
+  "zaman": "2026-11-17T11:25:59+00:00"
  }
 }
