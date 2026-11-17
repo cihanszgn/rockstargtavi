@@ -603,6 +603,10 @@ class Hat:
             # Teyit sözleşmesi değişti: eski erişim/yalnız resmî sayfa reddini yeniden araştır.
             if kayit and kayit['asama'] in ('yazar', 'denetci') and kayit.get('teyit_surumu', 0) < 3:
                 kayit = None
+            # Yazılıp yayımlanamayan haber (yayın adımı düştü) sonraki turda yeniden denenir;
+            # yayımlanmış olan yukarıda kaynak URL'siyle zaten elenir.
+            if kayit and kayit['asama'] == 'yazar' and kayit['neden'] == 'haber yazıldı':
+                kayit = None
             if kayit and kayit['asama'] in ('yazar', 'denetci'):
                 self.sonuc['atlanan'].append({'baslik': x['baslik'], 'neden': f"önceki turda atlandı: {kayit['neden']}"})
             elif kayit:
@@ -808,8 +812,10 @@ class Hat:
                 self.hafiza_haber(x['id'], 'denetci', neden, d['hype'])
                 continue
             if d['hype'] >= oto.hype_esigi() and not (self.root / 'video/senaryo' / f"{x['id']}-tr.json").exists():
-                self.sonuc['atlanan'].append({'id': x['id'], 'neden': 'denetçi hype eşiğini geçirdi; senaryo yok'})
-                continue
+                # Yazar eşiğin altında puanlayıp senaryo yazmadıysa haber yine yayımlanır, yalnız videosuz:
+                # hazirla eşikte senaryo istediği için puan eşiğin bir altına çekilir.
+                x['otomasyon']['hype'] = oto.hype_esigi() - 1
+                self.sonuc.setdefault('videosuz', []).append({'id': x['id'], 'denetci_hype': d['hype']})
             accepted.append(x)
         return accepted
 
@@ -901,7 +907,8 @@ class Hat:
             return yayin_dosyasi_izinli(n, scenarios)
         if not names or any(not allowed(n) for n in names):
             hata('yayın dosya izin listesi dışında değişiklik; yayın durduruldu')
-        self.komut(['git', 'add', '--', *sorted(names)])
+        # Yüzlerce dosya adı argv'de Windows'un 32 767 karakter sınırını aşar (WinError 206); stdin'den ver.
+        self.komut(['git', 'add', '--pathspec-from-file=-', '--pathspec-file-nul'], stdin=chr(0).join(sorted(names)))
         self.komut(['git', 'commit', '-m', 'haber: ' + ', '.join(x['id'] for x in articles)])
         # Commit sonrası dosya geri alma yok: push belirsizliğinde yerel commit korunur.
         self.committed = True

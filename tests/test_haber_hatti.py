@@ -78,8 +78,12 @@ class HatTests(unittest.TestCase):
         verdict = {'kararlar': [{'id': 'a', 'karar': 'ret', 'neden': 'kaynak yok', 'hype': 3},
                                 {'id': 'b', 'karar': 'onay', 'neden': 'uygun', 'hype': 8}]}
         with patch.object(self.hat, 'model', return_value=json.dumps(verdict)), patch.object(self.hat, 'prompt', return_value='audit'):
-            self.assertEqual(self.hat.denetle(articles), [])
-        self.assertEqual(len(self.hat.sonuc['atlanan']), 2)
+            accepted = self.hat.denetle(articles)
+        # Denetçi eşiği geçirdi, senaryo yok: haber düşmez, eşiğin bir altında videosuz yayımlanır.
+        self.assertEqual([x['id'] for x in accepted], ['b'])
+        self.assertEqual(accepted[0]['otomasyon']['hype'], h.oto.hype_esigi() - 1)
+        self.assertEqual(self.hat.sonuc['videosuz'], [{'id': 'b', 'denetci_hype': 8}])
+        self.assertEqual(len(self.hat.sonuc['atlanan']), 1)
 
     def test_auditor_failure_never_publishes(self):
         self.hat.config['denetci'] = [{'ad': 'sonnet'}, {'ad': 'opus'}]
