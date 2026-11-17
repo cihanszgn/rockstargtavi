@@ -1,5 +1,5 @@
 {
- "guncel": "2026-11-16T12:58:13Z",
+ "guncel": "2026-11-17T13:40:16Z",
  "epic": [
   {
    "baslik": "Knightica",
@@ -24,6 +24,22 @@
  ],
  "cheapshark": [
   {
+   "dealID": "9C%2B2hwINwXpuTAKoxmx56nS29WPr5Tt9tH%2BCX7Ls1uQ%3D",
+   "gameID": "326980",
+   "title": "Contractor: The Clean Up Part II",
+   "storeID": "25",
+   "salePrice": 0.0,
+   "normalPrice": 3.99,
+   "savings": 100.0,
+   "metacriticScore": 0,
+   "steamRatingText": null,
+   "steamRatingPercent": 0,
+   "steamAppID": null,
+   "releaseDate": 1784160000,
+   "dealRating": 10.0,
+   "thumb": "https://cdn1.epicgames.com/spt-assets/45a0995f31e348739b814de2cb32674b/contractor-the-clean-up-part-ii-io7r5.png"
+  },
+  {
    "dealID": "REe9mfdT3TdLdJWWX2dgNfk69WQiyQRifFoydZms2A4%3D",
    "gameID": "307340",
    "title": "Knightica",
@@ -36,7 +52,7 @@
    "steamRatingPercent": 74,
    "steamAppID": "3093400",
    "releaseDate": 1755734400,
-   "dealRating": 8.7,
+   "dealRating": 8.5,
    "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3093400/7b0ebe2cc1c7fd1fe219f4fce68edc5003b19a89/capsule_231x87.jpg?t=1794501426"
   }
  ]
