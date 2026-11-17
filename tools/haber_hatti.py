@@ -56,7 +56,12 @@ def pc_son_tur_hatali(nabiz, sonuc):
         nabiz_zamani = pathlib.Path(nabiz).stat().st_mtime
     except (OSError, ValueError):
         return False
-    return isinstance(veri, dict) and veri.get('ok') is False and sonuc_zamani >= nabiz_zamani
+    if not isinstance(veri, dict) or veri.get('ok') is not False:
+        return False
+    # Uzun sürüp yayın adımında düşen tur (2026-11-16 arızası) :10'dan sonra biter; ertesi saat
+    # yeni nabız sonucu yine eskitir ve yedek hiç devreye girmezdi. Üst üste iki hatalı turdan
+    # sonra bilgisayar turun ortasında olsa da yedek çalışır.
+    return sonuc_zamani >= nabiz_zamani or veri.get('ust_uste_hata', 0) >= 2
 
 
 def sunucu_atlasin(nabiz, sonuc, now=None):
@@ -443,7 +448,21 @@ class Hat:
         # Sunucu yedeği bu turun hatalı bitip bitmediğini bundan okur. ensure_ascii: uzak python3
         # varsayılan kodlaması ASCII olsa da Türkçe hata metni bozulmaz.
         hata = self.sonuc.get('hata')
-        return json.dumps({'zaman': datetime.now(timezone.utc).isoformat(), 'ok': not hata,
+        ust_uste = 0
+        if hata:
+            ust_uste = 1
+            try:
+                # hat.log bu turun satırını henüz içermez; sondan geriye hatalı gerçek turları say.
+                for line in reversed((self.state / 'hat.log').read_text(encoding='utf-8').splitlines()):
+                    kayit = json.loads(line)
+                    if kayit.get('deneme'):
+                        continue
+                    if not kayit.get('hata'):
+                        break
+                    ust_uste += 1
+            except (OSError, ValueError):
+                pass
+        return json.dumps({'zaman': datetime.now(timezone.utc).isoformat(), 'ok': not hata, 'ust_uste_hata': ust_uste,
                            'hata': ' '.join(str(hata).split())[:300] if hata else '',
                            'eklenen': len(self.sonuc.get('eklenen') or []),
                            'sure': round(time.monotonic() - self.start, 1)})

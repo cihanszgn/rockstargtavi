@@ -156,6 +156,26 @@ class IzlemeTests(unittest.TestCase):
             nabiz, sonuc, simdi = self.nabiz_sonuc(ok, sonra)
             self.assertEqual(h.sunucu_atlasin(nabiz, sonuc, simdi), beklenen, (ok, sonra))
 
+    def test_two_consecutive_failures_engage_backup_even_mid_turn(self):
+        # Uzun sürüp :10'dan sonra düşen turda sonuç hep nabızdan eski kalır; sayaç olmadan yedek hiç girmezdi.
+        nabiz, sonuc, simdi = self.nabiz_sonuc(False, sonuc_nabizdan_sonra=False)
+        for adet, beklenen in [(1, 'atla'), (2, 'hatali')]:
+            t = sonuc.stat().st_mtime
+            sonuc.write_text(json.dumps({'ok': False, 'hata': 'x', 'ust_uste_hata': adet}), encoding='utf-8')
+            os.utime(sonuc, (t, t))
+            self.assertEqual(h.sunucu_atlasin(nabiz, sonuc, simdi), beklenen, adet)
+
+    def test_result_counts_consecutive_real_failures(self):
+        log = self.hat.state / 'hat.log'
+        log.parent.mkdir(parents=True, exist_ok=True)
+        log.write_text('\n'.join(json.dumps(x) for x in [
+            {'deneme': False, 'hata': None}, {'deneme': False, 'hata': 'a'},
+            {'deneme': True, 'hata': None}, {'deneme': False, 'hata': 'b'}]) + '\n', encoding='utf-8')
+        self.hat.sonuc['hata'] = 'c'
+        self.assertEqual(json.loads(self.hat.pc_sonuc_json())['ust_uste_hata'], 3)
+        self.hat.sonuc.pop('hata')
+        self.assertEqual(json.loads(self.hat.pc_sonuc_json())['ust_uste_hata'], 0)
+
     def test_stale_heartbeat_always_runs_and_corrupt_result_is_ignored(self):
         nabiz, sonuc, simdi = self.nabiz_sonuc(False, nabiz_yas=50 * 60)
         self.assertEqual(h.sunucu_atlasin(nabiz, sonuc, simdi), 'eski')
