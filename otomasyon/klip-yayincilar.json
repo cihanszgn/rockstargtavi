@@ -1,5 +1,5 @@
 {
-  "_not": "Yayın klip hattı (tools/yayin_klip.py). Yayıncı eklemek: yayincilar listesine tek satır ekle. platform: kick (tek desteklenen). Doğrulama: 2026-11-17, kick.com/api/v2/channels/<kanal> (kanal var, onaylı, son yayınları listeleniyor). oyunlar: boş = bütün yayınlar; örn. [\"Grand Theft Auto VI\", \"GTA 6\", \"GTA VI\"] yalnız kategorisi/başlığı bu adlardan biriyle eşleşen yayınları işler (harf ve Türkçe karakter duyarsız; 'GTA V' ≠ 'GTA VI'). duzen: kadraj (yayın ortadan kırpılıp büyür; kadraj_oran 1.0 kare … 1.78 kırpma yok) veya serit (eski tam genişlik şerit). min_farkli_kullanici / min_emote_disi_oran: yalnız emote ya da çok az kişinin yazdığı zirveleri eler. SİNYAL YÖNTEMİ (yontem: sinyal; 2026-11-17): klip anı 'chat kalabalık' değil 'chat güldü / aynı konuda toplandı' ile seçilir. Kahkaha (gulme_*, emote_gulme, gulme_emojileri), ortak konu (konu_*), yoğunluk (yalnız ağırlık 0.2; tek başına zirve yapmaz). Oy/komut/dans-emote seli elenir (oy_kelimeleri, emote_gurultu, max_gurultu_oran). Emote listeleri: parçalar, emote adında (küçük harf, 'collectibles' öneki atılır) geçmesi yeter; sınıf sırası gülme > şaşkınlık > gürültü; listede olmayan emote nötr. Eski yöntem: yontem 'yogunluk'. Ayrıntı: otomasyon/KLIP-HATTI.md.",
+  "_not": "Yayın klip hattı (tools/yayin_klip.py). Yayıncı eklemek: yayincilar listesine tek satır ekle. platform: kick (tek desteklenen). Doğrulama: 2026-11-17, kick.com/api/v2/channels/<kanal> (kanal var, onaylı, son yayınları listeleniyor). oyunlar: boş = bütün yayınlar; örn. [\"Grand Theft Auto VI\", \"GTA 6\", \"GTA VI\"] yalnız kategorisi/başlığı bu adlardan biriyle eşleşen yayınları işler (harf ve Türkçe karakter duyarsız; 'GTA V' ≠ 'GTA VI'). duzen: kadraj (yayın ortadan kırpılıp büyür; kadraj_oran 1.0 kare … 1.78 kırpma yok) veya serit (eski tam genişlik şerit). min_farkli_kullanici / min_emote_disi_oran: yalnız emote ya da çok az kişinin yazdığı zirveleri eler. SİNYAL YÖNTEMİ (yontem: sinyal; 2026-11-17): klip anı 'chat kalabalık' değil 'chat güldü / aynı konuda toplandı' ile seçilir. Kahkaha (gulme_*, emote_gulme, gulme_emojileri), ortak konu (konu_*), yoğunluk (yalnız ağırlık 0.2; tek başına zirve yapmaz). Oy/komut/dans-emote seli elenir (oy_kelimeleri, emote_gurultu, max_gurultu_oran). Emote listeleri: parçalar, emote adında (küçük harf, 'collectibles' öneki atılır) geçmesi yeter; sınıf sırası gülme > şaşkınlık > gürültü; listede olmayan emote nötr. Eski yöntem: yontem 'yogunluk'. YAYIN SÜRERKEN (2026-11-17): 'py tools/yayin_klip.py canli' tek seferlik tur; canli_* ayarları: canli_min_sure_sn (bundan kısa yayın analiz edilmez), canli_azami_klip (yayın başına en çok canlı klip), canli_bekle_sn (kahkaha dalgası kapandıktan ve klip bitişinden sonra güvenlik payı), canli_min_puan (bunun altındaki zirve kesilmez), canli_sohbet_butce_sn (tur başına sohbet indirme süre bütçesi), canli_sohbet_marj_sn (en yeni sohbet saniyeleri henüz yazılıyor olabilir, bu kadar geri durulur). Ayrıntı: otomasyon/KLIP-HATTI.md.",
   "ayar": {
     "dilim_sn": 10,
     "esik_k": 2.5,
@@ -49,7 +49,13 @@
     "duzen": "kadraj",
     "kadraj_oran": 1.2,
     "oyunlar": [],
-    "oyun_baslikta_ara": true
+    "oyun_baslikta_ara": true,
+    "canli_min_sure_sn": 1200,
+    "canli_azami_klip": 6,
+    "canli_bekle_sn": 20,
+    "canli_min_puan": 0.0,
+    "canli_sohbet_butce_sn": 240,
+    "canli_sohbet_marj_sn": 20
   },
   "yayincilar": [
     {"ad": "Tolunay Ören", "platform": "kick", "kanal": "tolunayoren", "etkin": true},

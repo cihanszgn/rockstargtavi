@@ -894,3 +894,315 @@ class SinyalBaslikVePaket(unittest.TestCase):
         self.assertEqual(p['puan_bilesenleri'], k['puan_bilesenleri'])
         self.assertEqual(p['dalga_basi_sn'], k['dalga_basi_sn'])
         self.assertIn('kahkaha', yk.aciklama_uret(sinyal_vod(), k))
+
+
+# ===================================================================== canlı mod (yayın sürerken)
+
+class HlsListeOzeti(unittest.TestCase):
+    T0 = 1_000_000
+
+    def liste(self, adet=6, sure=10.0, kayma=0, her_birinde=True):
+        s = ['#EXTM3U', '#EXT-X-PLAYLIST-TYPE:EVENT']
+        for i in range(adet):
+            if her_birinde or i == 0:
+                s.append(f'#EXT-X-PROGRAM-DATE-TIME:{yk.epoch_iso(self.T0 + int(i * sure) + (kayma if i else 0))}')
+            s += [f'#EXTINF:{sure:.3f},', f'{i}.ts']
+        s.append('#EXT-X-ENDLIST')   # süren kayıtta da her güncellemede var
+        return '\n'.join(s)
+
+    def test_sure_ilk_ve_son_saat(self):
+        o = yk.hls_liste_ozeti(self.liste(6))
+        self.assertEqual(o['bolum'], 6)
+        self.assertAlmostEqual(o['sure_sn'], 60.0)
+        self.assertEqual(o['t0_epoch'], self.T0)
+        self.assertEqual(o['son_epoch'], self.T0 + 60)
+        self.assertEqual(o['kayma_sn'], 0.0)
+
+    def test_saat_kaymasi_olculur(self):
+        o = yk.hls_liste_ozeti(self.liste(6, kayma=2))
+        self.assertEqual(o['kayma_sn'], 2.0)   # sohbet hizası bu kadar sapabilir
+
+    def test_bos_liste(self):
+        self.assertEqual(yk.hls_liste_ozeti('#EXTM3U\n')['bolum'], 0)
+
+    def test_tek_program_date_time_yeter(self):
+        o = yk.hls_liste_ozeti(self.liste(30, 10.0, her_birinde=False))
+        self.assertEqual(o['t0_epoch'], self.T0)
+        self.assertAlmostEqual(o['sure_sn'], 300.0)
+        self.assertEqual(o['kayma_sn'], 0.0)
+
+
+class SohbetKademeliIndirme(unittest.TestCase):
+    T0 = 7_000_000
+
+    def sahte(self, cagri):
+        def http(url):
+            cagri.append(url)
+            bas = yk.iso_epoch(url.split('start_time=')[1])
+            return {'data': {'messages': [{'id': f'w{bas}', 'type': 'message', 'content': f'm{bas}',
+                                           'created_at': yk.epoch_iso(bas + 1), 'user_id': 1}]}}
+        return http
+
+    def test_butce_dolunca_durur_sonra_kalandan_surer(self):
+        cagri = []
+        with tempfile.TemporaryDirectory() as t:
+            part = pathlib.Path(t) / 'p.part.jsonl'
+            sayac = iter(range(0, 1000))
+            ilk = yk.kick_sohbet_indir(self.sahte(cagri), 7, self.T0, 300, part, butce_sn=2, saat=lambda: next(sayac))
+            self.assertEqual(len(cagri), 16)            # tek grup (4 iş parçacığı x 4)
+            self.assertEqual(len(ilk), 16)
+            self.assertEqual(yk.sohbet_hazir_sn(part, self.T0), 16 * 5)
+            tam = yk.kick_sohbet_indir(self.sahte(cagri), 7, self.T0, 300, part)
+            self.assertEqual(len(tam), 61)               # 0..300 sn = 61 pencere
+            self.assertEqual(len(cagri), 61)             # biten 16 pencere yeniden indirilmedi
+
+    def test_hazir_sure_bosluktan_oncesine_kadar(self):
+        with tempfile.TemporaryDirectory() as t:
+            part = pathlib.Path(t) / 'p.part.jsonl'
+            satirlar = [{'w': self.T0 + 5 * i, 'm': []} for i in (0, 1, 2, 4)]   # 4. pencere eksik
+            part.write_text('\n'.join(json.dumps(s) for s in satirlar) + '\n', encoding='utf-8')
+            self.assertEqual(yk.sohbet_hazir_sn(part, self.T0), 15)
+            self.assertEqual(yk.sohbet_hazir_sn(part.with_name('yok.jsonl'), self.T0), 0)
+
+    def test_yalniz_tamamlanmis_pencereler_istenir(self):
+        cagri = []
+        vod = {'platform': 'kick', 'vod_id': 'v1', 'kanal_id': 7, 't0_epoch': self.T0}
+        with tempfile.TemporaryDirectory() as t:
+            d = pathlib.Path(t)
+            # şimdi = t0+100, marj 20 -> sohbet t0+80'e kadar; son TAM pencere [75,80)
+            _, hazir = yk.sohbet_canli_guncelle(vod, d, self.sahte(cagri), 60, 20, self.T0 + 100)
+            self.assertEqual(hazir, 80)
+            baslar = sorted(yk.iso_epoch(u.split('start_time=')[1]) - self.T0 for u in cagri)
+            self.assertEqual(baslar[-1], 75)
+            # çok yeni yayın: hedef negatif -> hiç istek yok
+            cagri.clear()
+            self.assertEqual(yk.sohbet_canli_guncelle({**vod, 'vod_id': 'v2'}, d, self.sahte(cagri), 60, 20, self.T0 + 10), ([], 0))
+            self.assertEqual(cagri, [])
+
+
+class CanliAdaylari(unittest.TestCase):
+    def klip(self, zirve=3000, puan=60.0, bas=2980, bit=3022):
+        return {'zirve_sn': zirve, 'zirve_dilimleri': [zirve], 'puan': puan,
+                'klip_baslangic_sn': float(bas), 'klip_bitis_sn': float(bit)}
+
+    def test_dalga_kapanmadan_kesilmez(self):
+        a = yk.AYAR_VARSAYILAN
+        k = self.klip()
+        # dalga 3010'da biter; +30 sn kümeleme +20 sn pay = 3060
+        self.assertEqual(yk.canli_adaylar([k], 3059, a, [], 5), [])
+        self.assertEqual(yk.canli_adaylar([k], 3060, a, [], 5), [k])
+
+    def test_klibin_bitisi_videoda_yoksa_beklenir(self):
+        a = yk.AYAR_VARSAYILAN
+        uzun = self.klip(bit=3100)       # klip dalgadan uzun sürüyor: 3100 + 20 pay
+        self.assertEqual(yk.canli_adaylar([uzun], 3119, a, [], 5), [])
+        self.assertEqual(yk.canli_adaylar([uzun], 3120, a, [], 5), [uzun])
+
+    def test_daha_once_kesilenle_ortusen_atlanir_kenara_degen_atlanmaz(self):
+        a = yk.AYAR_VARSAYILAN
+        self.assertEqual(yk.canli_adaylar([self.klip()], 9999, a, [(3000, 3050)], 5), [])
+        self.assertEqual(len(yk.canli_adaylar([self.klip()], 9999, a, [(3022, 3080)], 5)), 1)
+
+    def test_min_puan_ve_kota(self):
+        a = {**yk.AYAR_VARSAYILAN, 'canli_min_puan': 55.0}
+        k1, k2, k3 = self.klip(1000, 70, 980, 1022), self.klip(2000, 50, 1980, 2022), self.klip(3000, 60, 2980, 3022)
+        s = yk.canli_adaylar([k1, k2, k3], 9999, a, [], 5)
+        self.assertEqual([k['zirve_sn'] for k in s], [1000, 3000])     # 50 puanlık elendi, zaman sırası
+        self.assertEqual([k['zirve_sn'] for k in yk.canli_adaylar([k1, k2, k3], 9999, a, [], 1)], [1000])   # en yüksek puan
+        self.assertEqual(yk.canli_adaylar([k1, k2, k3], 9999, a, [], 0), [])
+
+
+def kahkaha_dalgasi(t0, bas, kisi=40):
+    return [(t0 + bas + i // 4, ['hahaha', '[emote:1:KEKW]', 'asdfgh sjsj', 'xd'][i % 4], 2000 + i) for i in range(kisi)]
+
+
+class YeniZirveSecimi(unittest.TestCase):
+    T0 = 1_000_000
+
+    def test_engelli_aralik_ayni_ani_secmez_digerini_secer(self):
+        ek = kahkaha_dalgasi(self.T0, 3000) + kahkaha_dalgasi(self.T0, 5000)
+        hepsi = yk.analiz_et(sinyal_vod(), zemin_sohbet() + ek, SAYIM_AYAR)['klipler']
+        self.assertEqual([k['zirve_sn'] for k in hepsi], [3000, 5000])
+        engelli = [(hepsi[0]['klip_baslangic_sn'], hepsi[0]['klip_bitis_sn'])]
+        kalan = yk.analiz_et(sinyal_vod(), zemin_sohbet() + ek, SAYIM_AYAR, engelli=engelli)['klipler']
+        self.assertEqual([k['zirve_sn'] for k in kalan], [5000])
+        # ilk klibe kenarı değen aralık engel sayılmaz
+        kenar = [(hepsi[0]['klip_bitis_sn'], hepsi[0]['klip_bitis_sn'] + 50)]
+        self.assertEqual(len(yk.analiz_et(sinyal_vod(), zemin_sohbet() + ek, SAYIM_AYAR, engelli=kenar)['klipler']), 2)
+
+    def test_canli_ayar_anahtarlari_var(self):
+        for k in ('canli_min_sure_sn', 'canli_azami_klip', 'canli_bekle_sn', 'canli_min_puan',
+                  'canli_sohbet_butce_sn', 'canli_sohbet_marj_sn'):
+            self.assertIn(k, yk.AYAR_VARSAYILAN)
+
+
+class SahteKick:
+    """Kick API + HLS'in ağsız taklidi: süren bir yayın. video_sn büyüdükçe 'yayın ilerler'."""
+    T0 = 1_000_000
+    UUID = 'cccccccc-0000-0000-0000-000000000001'
+
+    def __init__(self, ekler=()):
+        self.video_sn = 3100
+        self.canli = True
+        self.mesajlar = {}
+        for t, x, g in zemin_sohbet(self.T0) + list(ekler):
+            self.mesajlar.setdefault(t, []).append((x, g))
+        self.istek = []
+
+    def http(self, url):
+        self.istek.append(url)
+        if url.endswith('/videos'):
+            return [{'id': 1, 'channel_id': 7, 'start_time': yk.epoch_iso(self.T0).replace('.000Z', ''),
+                     'session_title': 'Canlı deneme', 'is_live': self.canli, 'duration': 0,
+                     'source': 'https://cdn/v/master.m3u8', 'categories': [{'name': 'Just Chatting'}],
+                     'video': {'uuid': self.UUID}}]
+        bas = yk.iso_epoch(url.split('start_time=')[1])
+        liste = []
+        for t in range(bas, bas + 5):
+            for i, (x, g) in enumerate(self.mesajlar.get(t, [])):
+                liste.append({'id': f'm{t}-{i}', 'type': 'message', 'content': x, 'created_at': yk.epoch_iso(t),
+                              'user_id': g})
+        return {'data': {'messages': liste[:25]}}
+
+    def http_text(self, url, **k):
+        if url.endswith('master.m3u8'):
+            return '#EXTM3U\n#EXT-X-STREAM-INF:BANDWIDTH=8000000\n1080p60/playlist.m3u8\n'
+        s = ['#EXTM3U']
+        for i in range(int(self.video_sn // 10)):
+            s += [f'#EXT-X-PROGRAM-DATE-TIME:{yk.epoch_iso(self.T0 + i * 10)}', '#EXTINF:10.000,', f'{i}.ts']
+        return '\n'.join(s + ['#EXT-X-ENDLIST'])
+
+
+class CanliKomutuUctanUca(unittest.TestCase):
+    T0 = SahteKick.T0
+
+    def ayar(self):
+        a = {**SAYIM_AYAR, 'canli_sohbet_butce_sn': 120}
+        return {'ayar': a, 'yayincilar': [{'ad': 'Deneme', 'platform': 'kick', 'kanal': 'deneme', 'etkin': True, 'ayar': a}]}
+
+    def kesici(self, kesilenler):
+        def kes(vod, klip, mp4, vayar):
+            mp4.parent.mkdir(parents=True, exist_ok=True)
+            mp4.write_bytes(b'x')
+            kesilenler.append((klip['klip_baslangic_sn'], klip['klip_bitis_sn'], vod['sure_sn']))
+            return {'sure_sn': klip['klip_bitis_sn'] - klip['klip_baslangic_sn'], 'genislik': 1080, 'yukseklik': 1920}
+        return kes
+
+    def tur(self, k, d, kesilenler, simdi, **ek):
+        return yk.canli_komutu(self.ayar(), d, http=k.http, http_text=k.http_text, simdi=simdi,
+                               kesici=self.kesici(kesilenler), **ek)
+
+    def test_kapanmamis_dalga_beklenir_kapaninca_bir_kez_kesilir_tekrar_kesilmez(self):
+        k = SahteKick(kahkaha_dalgasi(self.T0, 3000))
+        kesilenler = []
+        with tempfile.TemporaryDirectory() as t:
+            d = pathlib.Path(t)
+            # video 3040 sn: dalga 3010'da bitti ama kümeleme penceresi + pay (3060) dolmadı -> kesilmez
+            k.video_sn = 3040
+            r = self.tur(k, d, kesilenler, self.T0 + 3100)[0]
+            self.assertEqual((r['durum'], r['acik_zirve'], kesilenler), ('tamam', 1, []))
+            self.assertAlmostEqual(r['hiz_kaymasi_sn'], 0.0)
+            # video 3100 sn: kapandı -> tam bir klip
+            k.video_sn = 3100
+            r = self.tur(k, d, kesilenler, self.T0 + 3150)[0]
+            self.assertEqual(len(kesilenler), 1)
+            bas, bit, sure_sn = kesilenler[0]
+            self.assertEqual((bas, bit), (2980.0, 3022.0))
+            self.assertLessEqual(bit, sure_sn)                # klibin bitişi videoda var: yarım klip yok
+            self.assertTrue(r['klipler'][0]['dosya'].endswith('canli-01.mp4'))
+            kayit = yk.durum_oku(d)['vod'][f'kick:{k.UUID}']
+            self.assertEqual(len(kayit['canli_klipler']), 1)
+            self.assertEqual(kayit['canli_klipler'][0]['bas_epoch'], self.T0 + 2980)   # video sn -> gerçek saat hizası
+            self.assertEqual(kayit['canli_klipler'][0]['bit_epoch'], self.T0 + 3022)
+            paket = json.loads(pathlib.Path(r['klipler'][0]['dosya']).with_suffix('.json').read_text(encoding='utf-8'))
+            self.assertTrue(paket['canli_kesim'])
+            self.assertFalse(paket['yayinlandi'])
+            # aynı an: yeni tur (daha çok video/sohbet) ikinci kez kesmez
+            k.video_sn = 3300
+            self.tur(k, d, kesilenler, self.T0 + 3350)
+            self.assertEqual(len(kesilenler), 1)
+            # yeni dalga -> yalnız o kesilir, numara 02
+            k2 = SahteKick(kahkaha_dalgasi(self.T0, 3000) + kahkaha_dalgasi(self.T0, 3400))
+            k2.video_sn = 3600
+            r = self.tur(k2, d, kesilenler, self.T0 + 3650)[0]
+            self.assertEqual(len(kesilenler), 2)
+            self.assertEqual(kesilenler[1][0], 3380.0)
+            self.assertTrue(r['klipler'][0]['dosya'].endswith('canli-02.mp4'))
+
+    def test_yayin_bitince_kes_canlida_kesileni_atlar(self):
+        from unittest import mock
+        ek = kahkaha_dalgasi(self.T0, 3000) + kahkaha_dalgasi(self.T0, 5000)
+        k = SahteKick(ek)
+        kesilenler = []
+        with tempfile.TemporaryDirectory() as t:
+            d = pathlib.Path(t)
+            k.video_sn = 3100
+            self.tur(k, d, kesilenler, self.T0 + 3150)
+            self.assertEqual(len(kesilenler), 1)
+            vod = {**sinyal_vod(), 't0_epoch': self.T0, 'anahtar': f'kick:{k.UUID}', 'vod_id': k.UUID}
+            sonuc = yk.analiz_et(vod, zemin_sohbet() + ek, SAYIM_AYAR)
+            self.assertEqual([c['zirve_sn'] for c in sonuc['klipler']], [3000, 5000])
+            sonuc['ayar'] = SAYIM_AYAR
+            kesildi = []
+
+            def sahte_kes(v, klip, hedef, ff, font, ayar=None):
+                kesildi.append(klip['zirve_sn'])
+                hedef.parent.mkdir(parents=True, exist_ok=True)
+                hedef.write_bytes(b'x')
+                return {'sure_sn': 40, 'genislik': 1080, 'yukseklik': 1920}
+            with mock.patch.object(yk, 'analiz_komutu', return_value=(vod, sonuc)), \
+                    mock.patch.object(yk, 'ffmpeg_bul', return_value='ff'), mock.patch.object(yk, 'font_bul', return_value='f'), \
+                    mock.patch.object(yk, 'klip_kes', side_effect=sahte_kes):
+                yk.kes_komutu(vod['anahtar'], d, self.ayar())
+            self.assertEqual(kesildi, [5000])      # 3000 anı canlıda kesilmişti
+            kayit = yk.durum_oku(d)['vod'][vod['anahtar']]
+            self.assertEqual(kayit['durum'], 'islendi')
+            self.assertEqual(len(kayit['canli_klipler']), 1)   # canlı kayıt "işlendi" durumuyla silinmedi
+
+    def test_canli_degilse_ve_kuru_tur_kesmez(self):
+        k = SahteKick(kahkaha_dalgasi(self.T0, 3000))
+        kesilenler = []
+        with tempfile.TemporaryDirectory() as t:
+            d = pathlib.Path(t)
+            k.canli = False
+            self.assertEqual(self.tur(k, d, kesilenler, self.T0 + 3150)[0]['durum'], 'canlı değil')
+            k.canli = True
+            r = self.tur(k, d, kesilenler, self.T0 + 3150, kuru=True)[0]
+            self.assertEqual(len(r['klipler']), 1)
+            self.assertEqual(kesilenler, [])
+            self.assertEqual(yk.durum_oku(d)['vod'], {})
+
+    def test_yayin_cok_kisaysa_analiz_edilmez(self):
+        k = SahteKick(kahkaha_dalgasi(self.T0, 300))
+        kesilenler = []
+        with tempfile.TemporaryDirectory() as t:
+            k.video_sn = 600
+            r = self.tur(k, pathlib.Path(t), kesilenler, self.T0 + 650)[0]
+            self.assertIn('kısa', r['durum'])
+            self.assertEqual(kesilenler, [])
+
+    def test_en_cok_ve_yayinci_suzgeci(self):
+        k = SahteKick(kahkaha_dalgasi(self.T0, 3000) + kahkaha_dalgasi(self.T0, 5000))
+        k.video_sn = 5200
+        kesilenler = []
+        with tempfile.TemporaryDirectory() as t:
+            d = pathlib.Path(t)
+            self.assertEqual(self.tur(k, d, kesilenler, self.T0 + 5250, kanal='baska'), [])
+            self.tur(k, d, kesilenler, self.T0 + 5250, en_cok=1)
+            self.assertEqual(len(kesilenler), 1)
+
+    def test_kilit(self):
+        import os
+        with tempfile.TemporaryDirectory() as t:
+            d = pathlib.Path(t)
+            with yk.canli_kilidi(d):
+                with self.assertRaises(yk.KlipHatasi):
+                    with yk.canli_kilidi(d):
+                        pass
+            with yk.canli_kilidi(d):      # çıkınca kilit kalkar
+                pass
+            (d / 'canli.kilit').write_text('1')
+            eski = (d / 'canli.kilit').stat().st_mtime - 20_000
+            os.utime(d / 'canli.kilit', (eski, eski))
+            with yk.canli_kilidi(d):      # bayat kilit yok sayılır
+                pass

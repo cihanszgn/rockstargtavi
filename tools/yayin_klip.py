@@ -1,11 +1,12 @@
-"""Yayın klip hattı: biten yayının sohbet yoğunluğundan 9:16 dikey klip paketi üretir. Yayın YAPMAZ.
+"""Yayın klip hattı: biten ya da SÜREN yayının sohbet sinyalinden 9:16 dikey klip paketi üretir. Yayın YAPMAZ.
 
-Komutlar: tara, analiz <vod>, kes <vod>, otomatik. Ayrıntı: otomasyon/KLIP-HATTI.md.
+Komutlar: tara, analiz <vod>, kes <vod>, otomatik, canli (yayın sürerken). Ayrıntı: otomasyon/KLIP-HATTI.md.
 Model çağrısı yok; başlık ve açıklama şablonla üretilir. Büyük dosyalar depo dışına yazılır.
 """
 from __future__ import annotations
 
 import argparse
+import contextlib
 import hashlib
 import json
 import math
@@ -88,6 +89,13 @@ AYAR_VARSAYILAN = {
     'emote_saskin': EMOTE_SASKIN,
     'emote_gurultu': EMOTE_GURULTU,
     'oy_kelimeleri': OY_KELIMELERI,
+    # canlı mod (`canli` komutu: yayın sürerken)
+    'canli_min_sure_sn': 1200,   # yayının en az bu kadarı (sohbet + kayıt) geçmeden canlı klip kesilmez (istatistik oturmaz)
+    'canli_azami_klip': 6,       # yayın başına canlı kesilecek en çok klip (sonradan `tara` kendi azami_klip'ini ayrıca keser)
+    'canli_bekle_sn': 20,        # dalga bittikten (kümeleme penceresi dahil) ve klip bitişinden sonra bu kadar süre beklenir
+    'canli_min_puan': 0.0,       # bu puanın altındaki canlı aday kesilmez
+    'canli_sohbet_butce_sn': 240,  # tek turda bir yayıncının sohbetini indirmeye en çok bu kadar süre
+    'canli_sohbet_marj_sn': 20,  # sohbetin "şimdi"den bu kadar gerisine kadarı tamam sayılır
     # görüntü düzeni
     'duzen': 'kadraj',     # 'kadraj': yayın ortadan kırpılıp büyütülür; 'serit': eski tam genişlik şerit
     'kadraj_oran': 1.2,    # kırpılan bölgenin genişlik/yükseklik oranı (1.0 = kare, 1.33 = 4:3, 1.78 = kırpma yok)
@@ -409,10 +417,8 @@ def kick_pencere(http, kanal_id: int, bas: int) -> list[tuple[str, int, str, int
     return list(gorulen.values())
 
 
-def kick_sohbet_indir(http, kanal_id: int, bas: int, sure_sn: int, part: pathlib.Path,
-                      is_parcacigi: int = 4, ilerleme=None) -> list[tuple[int, str, int | str]]:
-    """VOD süresince sohbeti indirir; yarım kalırsa part dosyasından devam eder. [(epoch, metin, gönderen)]"""
-    pencereler = list(range(bas, bas + sure_sn + KICK_PENCERE_SN, KICK_PENCERE_SN))
+def _part_oku(part: pathlib.Path) -> tuple[set[int], dict[str, tuple[int, str, int | str]]]:
+    """Kısmi sohbet dosyası: (bitmiş pencereler, mesajlar). Bozuk satır atlanır; eski satırlarda gönderen yok."""
     biten: set[int] = set()
     mesajlar: dict[str, tuple[int, str, int | str]] = {}
     if part.exists():
@@ -422,19 +428,37 @@ def kick_sohbet_indir(http, kanal_id: int, bas: int, sure_sn: int, part: pathlib
             except ValueError:
                 continue
             biten.add(k['w'])
-            for i, t, x, *g in k['m']:  # eski part satırlarında gönderen yok
+            for i, t, x, *g in k['m']:
                 mesajlar[i] = (t, x, g[0] if g else '')
+    return biten, mesajlar
+
+
+def kick_sohbet_indir(http, kanal_id: int, bas: int, sure_sn: int, part: pathlib.Path,
+                      is_parcacigi: int = 4, ilerleme=None, butce_sn: float | None = None,
+                      saat=time.monotonic) -> list[tuple[int, str, int | str]]:
+    """VOD süresince sohbeti indirir; yarım kalırsa part dosyasından devam eder. [(epoch, metin, gönderen)]
+    butce_sn verilirse pencereler sırayla küçük gruplar halinde indirilir ve süre dolunca durulur
+    (canlı yayında uzun geriden gelen sohbet birkaç turda yetişir; biten pencereler hep baştan ardışıktır)."""
+    pencereler = list(range(bas, bas + sure_sn + KICK_PENCERE_SN, KICK_PENCERE_SN))
+    biten, mesajlar = _part_oku(part)
     kalan = [w for w in pencereler if w not in biten]
     part.parent.mkdir(parents=True, exist_ok=True)
     sayac = 0
+    bitis = None if butce_sn is None else saat() + butce_sn
+    grup = len(kalan) if bitis is None else max(is_parcacigi * 4, 1)
     with part.open('a', encoding='utf-8') as f, ThreadPoolExecutor(max_workers=is_parcacigi) as havuz:
-        for w, sonuc in zip(kalan, havuz.map(lambda w: kick_pencere(http, kanal_id, w), kalan)):
-            f.write(json.dumps({'w': w, 'm': sonuc}, ensure_ascii=False) + '\n')
-            for i, t, x, g in sonuc:
-                mesajlar[i] = (t, x, g)
-            sayac += 1
-            if ilerleme and sayac % 200 == 0:
-                ilerleme(sayac, len(kalan))
+        for g0 in range(0, len(kalan), max(grup, 1)):
+            if bitis is not None and saat() >= bitis:
+                break
+            parca = kalan[g0:g0 + grup]
+            for w, sonuc in zip(parca, havuz.map(lambda w: kick_pencere(http, kanal_id, w), parca)):
+                f.write(json.dumps({'w': w, 'm': sonuc}, ensure_ascii=False) + '\n')
+                for i, t, x, g in sonuc:
+                    mesajlar[i] = (t, x, g)
+                sayac += 1
+                if ilerleme and sayac % 200 == 0:
+                    ilerleme(sayac, len(kalan))
+            f.flush()
     return sorted(mesajlar.values(), key=lambda m: (m[0], m[1]))
 
 
@@ -483,6 +507,32 @@ def hls_t0(oynatma_metni: str) -> int | None:
     """İlk bölümün gerçek zamanı (#EXT-X-PROGRAM-DATE-TIME). Sohbet saatiyle video konumu arasındaki köprü."""
     m = re.search(r'#EXT-X-PROGRAM-DATE-TIME:(\S+)', oynatma_metni)
     return iso_epoch(m.group(1)) if m else None
+
+
+def hls_liste_ozeti(metin: str) -> dict:
+    """Süren (büyüyen) çeşit listesinin özeti: video süresi, ilk/son bölümün gerçek saati ve saat kayması.
+    sure_sn = bölüm sürelerinin toplamı (video konumu); kayma_sn = bölümlerin PROGRAM-DATE-TIME'ı ile
+    birikmiş video süresi arasındaki en büyük fark (sohbet saatiyle video konumu arasındaki hata payı)."""
+    toplam, ilk, son_epoch, kayma, bolum = 0.0, None, None, 0.0, 0
+    bekleyen = None
+    for s in metin.splitlines():
+        s = s.strip()
+        if s.startswith('#EXT-X-PROGRAM-DATE-TIME:'):
+            bekleyen = iso_epoch(s.split(':', 1)[1])
+        elif s.startswith('#EXTINF:'):
+            try:
+                sure = float(s[8:].split(',', 1)[0])
+            except ValueError:
+                continue
+            if bekleyen is not None:
+                if ilk is None:
+                    ilk = bekleyen
+                kayma = max(kayma, abs((bekleyen - ilk) - toplam))
+                son_epoch = bekleyen + sure
+                bekleyen = None
+            toplam += sure
+            bolum += 1
+    return {'sure_sn': toplam, 'bolum': bolum, 't0_epoch': ilk, 'son_epoch': son_epoch, 'kayma_sn': round(kayma, 2)}
 
 
 def vod_t0_ekle(vod: dict, http_text=http_metin) -> dict:
@@ -882,9 +932,16 @@ def sinyal_ozetleri(ham: list[tuple], toplam_sn: float, ayar: dict, sf: Siniflay
     return [dilim_ozetle(k, sf, ayar) for k in kovalar], sf
 
 
-def sinyal_zirveleri(ozetler: list[dict], ayar: dict, toplam_sn: float, sf: Siniflayici, kalite=None) -> tuple[list[dict], dict]:
+def araliklar_orter(bas: float, bit: float, araliklar: list[tuple[float, float]] | None) -> bool:
+    """[bas, bit) aralığı verilen aralıklardan biriyle örtüşüyor mu? (kenar kenara değmek örtüşme sayılmaz)"""
+    return any(bas < b and a < bit for a, b in (araliklar or []))
+
+
+def sinyal_zirveleri(ozetler: list[dict], ayar: dict, toplam_sn: float, sf: Siniflayici, kalite=None,
+                     engelli: list[tuple[float, float]] | None = None) -> tuple[list[dict], dict]:
     """Kahkaha ya da ortak konu sinyali taşıyan dilimleri kümeler; oy/komut seli ve zayıf zirveler elenir.
-    Yoğunluk tek başına zirve yapmaz. En iyi azami_klip tanesi (örtüşmeyen) döndürülür."""
+    Yoğunluk tek başına zirve yapmaz. En iyi azami_klip tanesi (örtüşmeyen) döndürülür.
+    engelli: (başlangıç_sn, bitiş_sn) aralıkları; bunlarla örtüşen aday seçilmez (canlıda zaten kesilmiş anlar)."""
     dilim = ayar['dilim_sn']
     sayim = [o['n'] for o in ozetler]
     eski = istatistik(sayim, ayar)
@@ -988,6 +1045,8 @@ def sinyal_zirveleri(ozetler: list[dict], ayar: dict, toplam_sn: float, sf: Sini
             break
         if any(a['klip_baslangic_sn'] < s['klip_bitis_sn'] and s['klip_baslangic_sn'] < a['klip_bitis_sn'] for s in secilen):
             continue
+        if araliklar_orter(a['klip_baslangic_sn'], a['klip_bitis_sn'], engelli):
+            continue
         secilen.append(a)
     secilen.sort(key=lambda a: a['zirve_sn'])
     for n, a in enumerate(secilen, 1):
@@ -996,8 +1055,8 @@ def sinyal_zirveleri(ozetler: list[dict], ayar: dict, toplam_sn: float, sf: Sini
     return secilen, ist
 
 
-def analiz_et(vod: dict, mesajlar: list[tuple], ayar: dict) -> dict:
-    """mesajlar: (epoch, metin) veya (epoch, metin, gönderen)."""
+def analiz_et(vod: dict, mesajlar: list[tuple], ayar: dict, engelli: list[tuple[float, float]] | None = None) -> dict:
+    """mesajlar: (epoch, metin) veya (epoch, metin, gönderen). engelli: yalnız sinyal yönteminde (bkz. sinyal_zirveleri)."""
     ayar = {**AYAR_VARSAYILAN, **ayar}
     t0 = vod['t0_epoch']
     toplam = vod['sure_sn']
@@ -1010,7 +1069,8 @@ def analiz_et(vod: dict, mesajlar: list[tuple], ayar: dict) -> dict:
     else:
         ozetler, sf = sinyal_ozetleri(ham, toplam, ayar)
         klipler, ist = sinyal_zirveleri(ozetler, ayar, toplam, sf,
-                                        kalite=lambda a, b: zirve_kalitesi([(x, g) for t, x, g in ham if a <= t < b], sf))
+                                        kalite=lambda a, b: zirve_kalitesi([(x, g) for t, x, g in ham if a <= t < b], sf),
+                                        engelli=engelli)
         if 'gulme_esigi' in ist:
             ek = {'gulme_ortalama': round(ist['gulme_ort'], 2), 'gulme_std': round(ist['gulme_std'], 2),
                   'gulme_esigi': round(ist['gulme_esigi'], 2)}
@@ -1109,9 +1169,10 @@ def aciklama_uret(vod: dict, klip: dict) -> str:
     )
 
 
-def paket_json(vod: dict, klip: dict, mp4: pathlib.Path, dogrulama: dict, ayar: dict | None = None) -> dict:
+def paket_json(vod: dict, klip: dict, mp4: pathlib.Path, dogrulama: dict, ayar: dict | None = None,
+               ekstra: dict | None = None) -> dict:
     link, dogrulandi = zaman_damgali_baglanti(vod, klip['klip_baslangic_sn'])
-    return {
+    return {**{
         'yayinci': vod['yayinci'],
         'platform': vod['platform'],
         'kanal': vod['kanal'],
@@ -1143,7 +1204,7 @@ def paket_json(vod: dict, klip: dict, mp4: pathlib.Path, dogrulama: dict, ayar: 
         'duzen': duzen_imzasi(ayar or AYAR_VARSAYILAN),
         'uretim': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
         'yayinlandi': False,
-    }
+    }, **(ekstra or {})}
 
 
 # ---------------------------------------------------------------- ffmpeg
@@ -1377,7 +1438,11 @@ def kes_komutu(arguman: str, dizin: pathlib.Path, ayar: dict, gecersiz: dict | N
     ff, font = ffmpeg_bul(), font_bul()
     cikti_dizini = dizin / 'cikti' / f"{dosya_adi(vod['yayinci'])}-{vod['tarih'].replace('-', '')}-{vod['vod_id'][:8]}"
     uretilen = []
+    canli_engel = canli_aralik_listesi(durum_oku(dizin)['vod'].get(vod['anahtar'], {}), vod['t0_epoch'])
     for klip in sonuc['klipler']:
+        if araliklar_orter(klip['klip_baslangic_sn'], klip['klip_bitis_sn'], canli_engel):
+            print(f"  klip {klip['no']}: yayın sürerken zaten kesilmiş (canli-*.mp4), atlandı", file=sys.stderr, flush=True)
+            continue
         mp4 = cikti_dizini / f"klip-{klip['no']:02d}.mp4"
         paket = mp4.with_suffix('.json')
         if mp4.exists() and paket_guncel(paket, klip, vayar) and not zorla:
@@ -1436,6 +1501,207 @@ def tara(ayar: dict, dizin: pathlib.Path, yayinci: str | None = None, hepsi: boo
             'desteksiz': desteksiz, 'hata': hatalar}
 
 
+# ---------------------------------------------------------------- canlı: yayın sürerken klip
+
+@contextlib.contextmanager
+def canli_kilidi(dizin: pathlib.Path, bayat_sn: float = 3 * 3600):
+    """Aynı anda iki canlı tur çalışmasın (zamanlayıcı üst üste binerse aynı anı iki kez keserdi).
+    Kilit dosyası bayat_sn'den eskiyse (çöken tur) yok sayılır."""
+    dizin.mkdir(parents=True, exist_ok=True)
+    yol = dizin / 'canli.kilit'
+    for _ in range(2):
+        try:
+            fd = os.open(str(yol), os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+            break
+        except FileExistsError:
+            try:
+                yas = time.time() - yol.stat().st_mtime
+            except OSError:
+                continue
+            if yas < bayat_sn:
+                raise KlipHatasi('başka bir canlı tur çalışıyor (canli.kilit); çökmüşse dosyayı silin')
+            yol.unlink(missing_ok=True)
+    else:
+        raise KlipHatasi('canlı tur kilidi alınamadı')
+    try:
+        os.write(fd, str(os.getpid()).encode())
+        os.close(fd)
+        yield
+    finally:
+        yol.unlink(missing_ok=True)
+
+
+def sohbet_hazir_sn(part: pathlib.Path, t0: int) -> int:
+    """Sohbeti baştan itibaren kesintisiz indirilmiş süre (sn). Yarım/boşluklu pencerelerin ötesi sayılmaz."""
+    biten, _ = _part_oku(part)
+    n = 0
+    while t0 + n * KICK_PENCERE_SN in biten:
+        n += 1
+    return n * KICK_PENCERE_SN
+
+
+def canli_vod(y: dict, http=http_json, http_text=http_metin) -> dict | None:
+    """Yayıncının SÜREN yayını (yoksa None). vod['sure_sn'] = şu an videosu alınabilen süre (HLS bölümlerinin toplamı);
+    t0_epoch = video 0. sn'sinin gerçek saati (ilk bölümün PROGRAM-DATE-TIME'ı). Sohbet bu saatle hizalanır."""
+    for v in kick_vodlar(y['kanal'], y['ad'], http):
+        if not v['canli']:
+            continue
+        vod_t0_ekle(v, http_text)
+        ozet = hls_liste_ozeti(http_text(v['hls']))
+        if not ozet['bolum']:
+            raise KlipHatasi('canlı yayının video listesi boş veya okunamadı')
+        v['video_sn'] = ozet['sure_sn']
+        v['kayma_sn'] = ozet['kayma_sn']
+        v['sure_sn'] = int(ozet['sure_sn'])
+        return v
+    return None
+
+
+def sohbet_canli_guncelle(vod: dict, dizin: pathlib.Path, http=http_json, butce_sn: float = 240,
+                          marj_sn: float = 20, simdi: float | None = None) -> tuple[list[tuple], int]:
+    """Sohbeti yayın başından 'şimdi - marj' e kadar tamamlar; yalnız eksik pencereleri indirir (önceki turların
+    part dosyası ortak önbellektir; yayın bitince normal analiz de aynı dosyadan devam eder).
+    (mesajlar, baştan kesintisiz hazır süre sn)."""
+    simdi = simdi if simdi is not None else time.time()
+    part = dizin / 'sohbet' / f"{vod['platform']}-{vod['vod_id']}.part.jsonl"
+    hedef = int(simdi - marj_sn - vod['t0_epoch']) - KICK_PENCERE_SN   # son TAM pencerenin başlangıcı
+    if hedef < 0:
+        return [], 0
+    mesajlar = kick_sohbet_indir(http, vod['kanal_id'], vod['t0_epoch'], hedef, part, butce_sn=butce_sn)
+    return mesajlar, sohbet_hazir_sn(part, vod['t0_epoch'])
+
+
+def canli_adaylar(klipler: list[dict], toplam_sn: float, ayar: dict,
+                  engelli: list[tuple[float, float]], kota: int) -> list[dict]:
+    """Analizdeki zirvelerden şimdi kesilebilecekler: dalga KAPANMIŞ (son dilimden sonra kümeleme penceresi ve
+    bekleme payı geçmiş, klibin bitişi de videoda var), puanı yeterli, daha önce kesilen aralıkla örtüşmeyen.
+    En yüksek puanlı kota tanesi zaman sırasıyla döner."""
+    dilim = ayar['dilim_sn']
+    uygun = []
+    for k in klipler:
+        dalga_sonu = max(k['zirve_dilimleri']) + dilim
+        kapanis = max(dalga_sonu + ayar['birlestir_sn'], k['klip_bitis_sn']) + ayar['canli_bekle_sn']
+        if kapanis > toplam_sn or k['puan'] < ayar['canli_min_puan']:
+            continue
+        if araliklar_orter(k['klip_baslangic_sn'], k['klip_bitis_sn'], engelli):
+            continue
+        uygun.append(k)
+    uygun.sort(key=lambda k: (-k['puan'], k['zirve_sn']))
+    return sorted(uygun[:max(kota, 0)], key=lambda k: k['zirve_sn'])
+
+
+def canli_kesim_kaydet(dizin: pathlib.Path, vod: dict, kayit: dict) -> None:
+    """Kesilen anı kalıcı yazar (durum.json): sonraki turlar ve yayın bitince `kes` aynı anı yeniden kesmez."""
+    d = durum_oku(dizin)
+    k = d['vod'].setdefault(vod['anahtar'], {})
+    k.setdefault('durum', 'canli')
+    k['yayinci'] = vod['yayinci']
+    k.setdefault('canli_klipler', []).append(kayit)
+    k['guncellendi'] = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+    durum_yaz(dizin, d)
+
+
+def canli_aralik_listesi(kayit: dict, t0: float) -> list[tuple[float, float]]:
+    """Durumdaki canlı klip kayıtları -> bu VOD'un video saniyesinde (başlangıç, bitiş) aralıkları (gerçek saatten)."""
+    return [(c['bas_epoch'] - t0, c['bit_epoch'] - t0) for c in kayit.get('canli_klipler', [])]
+
+
+def canli_komutu(ayar: dict, dizin: pathlib.Path, kanal: str | None = None, en_cok: int | None = None,
+                 gecersiz: dict | None = None, butce_sn: float | None = None, kuru: bool = False,
+                 suzgecsiz: bool = False, http=http_json, http_text=http_metin, simdi: float | None = None,
+                 kesici=None) -> list[dict]:
+    """Tek seferlik tur: etkin yayıncılardan CANLI olanlarda, yayın başından şu ana kadar olan sohbeti (yalnız
+    yeni kısmı indirerek) analiz eder; dalgası kapanmış, daha önce kesilmemiş en iyi anları kesip dizin/cikti
+    altına canli-NN.mp4 yazar. Her kesim durum.json'a yazılır. kuru: indirir ve analiz eder ama kesmez.
+    kesici(vod, klip, mp4, vayar) -> doğrulama sözlüğü (testler için); varsayılan ffmpeg ile klip_kes."""
+    rapor, kesilen_toplam = [], 0
+    ff_font: list = []
+    if kesici is None:
+        def kesici(vod, klip, mp4, vayar):
+            if not ff_font:
+                ff_font.extend((ffmpeg_bul(), font_bul()))
+            return klip_kes(vod, klip, mp4, ff_font[0], ff_font[1], vayar)
+    for y in ayar['yayincilar']:
+        if not y['etkin'] or y['platform'] != 'kick':
+            continue
+        if kanal and kanal.lower() not in (y['ad'].lower(), y['kanal'].lower()):
+            continue
+        satir: dict = {'yayinci': y['ad']}
+        rapor.append(satir)
+        try:
+            vod = canli_vod(y, http, http_text)
+            if vod is None:
+                satir['durum'] = 'canlı değil'
+                continue
+            vayar = {**y['ayar'], **(gecersiz or {})}
+            if vayar['yontem'] != 'sinyal':
+                raise KlipHatasi("canlı mod yalnız 'sinyal' yöntemiyle çalışır")
+            uygun, _ = oyun_suzgeci(vod, vayar)
+            satir.update(anahtar=vod['anahtar'], baslik=vod['baslik'], oyun=vod['oyun'])
+            if not uygun and not suzgecsiz:
+                satir['durum'] = 'oyun süzgecine uymuyor'
+                continue
+            tur_simdi = simdi if simdi is not None else time.time()
+            kayit = durum_oku(dizin)['vod'].get(vod['anahtar'], {})
+            kesilmis = kayit.get('canli_klipler', [])
+            mesajlar, hazir = sohbet_canli_guncelle(
+                vod, dizin, http, butce_sn if butce_sn is not None else vayar['canli_sohbet_butce_sn'],
+                vayar['canli_sohbet_marj_sn'], tur_simdi)
+            dilim = vayar['dilim_sn']
+            toplam = int(min(vod['video_sn'], hazir) // dilim) * dilim
+            satir.update(video_sn=round(vod['video_sn']), sohbet_hazir_sn=hazir, analiz_sn=toplam,
+                         hiz_kaymasi_sn=vod['kayma_sn'], kesilmis=len(kesilmis))
+            if toplam < vayar['canli_min_sure_sn']:
+                satir['durum'] = ('sohbet henüz yetişmedi (sonraki turlarda sürer)' if hazir < vod['video_sn'] - 60
+                                  else 'yayın henüz kısa (analiz için en az canli_min_sure_sn gerekir)')
+                continue
+            engelli = canli_aralik_listesi(kayit, vod['t0_epoch'])
+            sonuc = analiz_et({**vod, 'sure_sn': toplam}, mesajlar,
+                              {**vayar, 'azami_klip': 50, 'son_dislama_sn': 0}, engelli=engelli)
+            adaylar = canli_adaylar(sonuc['klipler'], toplam, vayar, engelli,
+                                    vayar['canli_azami_klip'] - len(kesilmis))
+            satir['durum'] = 'tamam'
+            satir['acik_zirve'] = len(sonuc['klipler']) - len(adaylar)
+            satir['klipler'] = []
+            cikti_dizini = dizin / 'cikti' / f"{dosya_adi(vod['yayinci'])}-{vod['tarih'].replace('-', '')}-{vod['vod_id'][:8]}"
+            for k in adaylar:
+                if en_cok is not None and kesilen_toplam >= en_cok:
+                    break
+                bilgi_satiri = {'zirve': k['zirve_zaman'], 'klip_sn': [k['klip_baslangic_sn'], k['klip_bitis_sn']],
+                                'puan': k['puan'], 'baskin': k.get('baskin'), 'ornek_mesajlar': k.get('ornek_mesajlar', [])}
+                satir['klipler'].append(bilgi_satiri)
+                if kuru:
+                    continue
+                no = len(kesilmis) + 1
+                mp4 = cikti_dizini / f'canli-{no:02d}.mp4'
+                print(f"  {y['ad']} canlı klip {no}: {zaman_metni(k['klip_baslangic_sn'])}–{zaman_metni(k['klip_bitis_sn'])}",
+                      file=sys.stderr, flush=True)
+                try:
+                    vod_kes = {**vod, 'sure_sn': toplam}
+                    bilgi = kesici(vod_kes, k, mp4, vayar)
+                    mp4.with_suffix('.json').write_text(json.dumps(paket_json(
+                        vod_kes, k, mp4, bilgi, vayar,
+                        ekstra={'canli_kesim': True, 'kesimde_video_sn': round(vod['video_sn']),
+                                'kesimde_sohbet_sn': hazir, 'hiz_kaymasi_sn': vod['kayma_sn']}),
+                        ensure_ascii=False, indent=2), encoding='utf-8')
+                except KlipHatasi as e:
+                    bilgi_satiri['hata'] = str(e)
+                    continue
+                t0 = vod['t0_epoch']
+                kayit_yeni = {'no': no, 'dosya': str(mp4), 'bas_sn': k['klip_baslangic_sn'], 'bit_sn': k['klip_bitis_sn'],
+                              'bas_epoch': t0 + k['klip_baslangic_sn'], 'bit_epoch': t0 + k['klip_bitis_sn'],
+                              'zirve_sn': k['zirve_sn'], 'puan': k['puan'], 'video': bilgi,
+                              'kesim': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')}
+                canli_kesim_kaydet(dizin, vod, kayit_yeni)
+                kesilmis = kesilmis + [kayit_yeni]
+                kesilen_toplam += 1
+                bilgi_satiri['dosya'] = str(mp4)
+        except KlipHatasi as e:
+            satir['durum'] = 'hata'
+            satir['hata'] = str(e)
+    return rapor
+
+
 def _gecersiz(a) -> dict:
     g = {}
     for alan in ('esik_k', 'min_mesaj', 'azami_klip', 'bas_dislama_sn', 'min_oran', 'min_farkli_kullanici',
@@ -1484,6 +1750,15 @@ def main(argv=None) -> int:
     o = s.add_parser('otomatik', help='tara + analiz + kes (yeni yayınların hepsi)')
     o.add_argument('--yayinci')
     o.add_argument('--en-cok', dest='en_cok', type=int, default=3, help='bu çalıştırmada en çok kaç yayın')
+    c = s.add_parser('canli', help='yayın SÜRERKEN: canlı yayıncılarda kapanmış kahkaha/konu anlarını kes (tek seferlik tur)')
+    c.add_argument('--kanal', help='yalnız bu yayıncı (ad veya kanal)')
+    c.add_argument('--en-cok', dest='en_cok', type=int, help='bu turda en çok kaç klip')
+    c.add_argument('--kuru', action='store_true', help='sohbeti indir ve analiz et, ama kesme')
+    c.add_argument('--sohbet-butcesi-sn', dest='sohbet_butcesi_sn', type=float,
+                   help='bir yayıncının sohbetini indirmeye bu turda en çok bu kadar sn (ayar: canli_sohbet_butce_sn)')
+    c.add_argument('--min-puan', dest='canli_min_puan', type=float, help='canlı kesim için asgari puan (ayar: canli_min_puan)')
+    c.add_argument('--azami-klip', dest='canli_azami_klip', type=int, help='yayın başına en çok canlı klip (ayar: canli_azami_klip)')
+    c.add_argument('--suzgecsiz', action='store_true', help='oyun süzgecine uymasa da işle')
     a = p.parse_args(argv)
 
     ayar = ayar_yukle(a.ayar)
@@ -1498,6 +1773,11 @@ def main(argv=None) -> int:
         elif a.komut == 'kes':
             for m in kes_komutu(a.vod, dizin, ayar, _gecersiz(a), a.zorla, a.yeniden, a.suzgecsiz):
                 print(m)
+        elif a.komut == 'canli':
+            gec = {k: getattr(a, k) for k in ('canli_min_puan', 'canli_azami_klip') if getattr(a, k) is not None}
+            with canli_kilidi(dizin):
+                rapor = canli_komutu(ayar, dizin, a.kanal, a.en_cok, gec, a.sohbet_butcesi_sn, a.kuru, a.suzgecsiz)
+            print(json.dumps(rapor, ensure_ascii=False, indent=2))
         elif a.komut == 'otomatik':
             rapor = tara(ayar, dizin, a.yayinci)
             for k in rapor['desteksiz']:

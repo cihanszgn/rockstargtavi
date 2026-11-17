@@ -1,6 +1,6 @@
 # Yayın klip hattı
 
-Biten bir yayının sohbet yoğunluğundan 9:16 dikey klip paketi üretir. **Yayın yapmaz**: sosyal kuyruğa kayıt eklemez, hiçbir yere yüklemez. Çıktıyı (mp4 + json) sen incelersin.
+Biten bir yayının (ya da `canli` komutuyla **süren** yayının) sohbetinden 9:16 dikey klip paketi üretir. **Yayın yapmaz**: sosyal kuyruğa kayıt eklemez, hiçbir yere yüklemez. Çıktıyı (mp4 + json) sen incelersin.
 
 Araç: `tools/yayin_klip.py` · yayıncı listesi: `otomasyon/klip-yayincilar.json` · testler: `py -m unittest discover -s tests -p "test_yayin_klip.py"`
 
@@ -12,7 +12,11 @@ py tools/yayin_klip.py tara --yayinci jahrein --hepsi
 py tools/yayin_klip.py analiz kick:<uuid>        # sohbeti indir, zirveleri bul (JSON yazdırır)
 py tools/yayin_klip.py kes kick:<uuid>           # analiz + klipleri kes + paketle
 py tools/yayin_klip.py otomatik --en-cok 3       # tara + kes (yeni yayınların ilk 3'ü)
+py tools/yayin_klip.py canli                     # SÜREN yayınlarda tek tur: yeni biten kahkaha/konu anlarını keser
+py tools/yayin_klip.py canli --kanal wtcn --kuru # yalnız sohbeti indir + analiz et, kesme (deneme)
 ```
+
+`canli` **tek seferlik** çalışır (kalıcı servis değildir); yayın sürerken 5–10 dk'da bir çağrılması yeterli (aşağıda "Yayın sürerken klip"). Tampon/kayıt gerekmez.
 
 `<vod>` olarak `kick:<uuid>`, çıplak uuid veya `https://kick.com/<kanal>/videos/<uuid>` verilir. `analiz` ve `kes` için `--esik-k`, `--min-mesaj`, `--min-oran`, `--azami-klip`, `--bas-dislama-sn`, `--min-farkli-kullanici`, `--min-emote-disi-oran`, `--duzen kadraj|serit`, `--kadraj-oran`, `--yontem sinyal|yogunluk`, `--klip-baslangic dalga|tepe`, `--gulme-esik-k`, `--konu-min-kisi`, `--konu-min-lift`, `--max-gurultu-oran` ile o çalıştırmaya özel ayar verilir; `--yeniden` analizi önbellekten almaz, `--zorla` var olan klibi yeniden üretir, `--suzgecsiz` oyun süzgecine uymayan yayını da işler.
 
@@ -83,6 +87,35 @@ Sonuç: oy seli (Kemalcan'ın iki "1/2" zirvesi) artık seçilmiyor; gerçek kah
 
 **Sınırı gösteren sayılar:** `min_farkli_kullanici` 25 yüzünden Kemalcan'da 17–24 kişilik altı küçük zirve elendi (35:50, 41:30, 43:00, 48:00, 1:43:00, 2:09:20…). Bunların içeriğine tek tek bakılmadı; bu eşik gerçek kahkaha anlarını da kesebilir.
 
+## Yayın sürerken klip (`canli`, 2026-11-17)
+
+**Ölçüm (2026-11-17, wtcN ve Kemalcan canlı yayınları): yayın sürerken görüntü alınabiliyor → yol A. Yol B (kayıt/dönen tampon) gereksiz, yazılmadı.**
+
+- Kick `/v2/channels/<kanal>/videos` listesinin ilk kaydı süren yayındır (`is_live`, `duration` 0, `source` dolu).
+- `source` HLS adresi çalışır: ana liste → çeşit listesi, her güncellemede `#EXT-X-PLAYLIST-TYPE:EVENT` ve `#EXT-X-ENDLIST` birlikte gelir (yani liste "bitmiş" gibi görünür ama her yenilemede uzar), her bölümde `PROGRAM-DATE-TIME` var, görüntü gerçek saatin ≈20 sn gerisinde. ffmpeg süren listeden `-ss <sn> -t <süre>` ile klibi doğrudan keser; kesilen bölüm bittiyse bir daha değişmez.
+- Sohbet `/v2/channels/<kanal_id>/messages?start_time=` canlıda da derin geçmişi veriyor (yayın başından itibaren alındı; `video_sn` 7930 anında 0–2560. sn'ler çekildi).
+- Sohbet–video hiza kayması canlı ölçüldü: `hiz_kaymasi_sn` = 0.5–0.98 sn (liste içinde ilk ve son `PROGRAM-DATE-TIME` farkından ölçülür; tur raporunda yazar).
+- *Yönetici notundaki "`source` ile 0 parça" bulgusu doğrulanamadı:* iki ayrı yayıncının süren yayınında `source` doğru parça listesi verdi.
+
+**Tur akışı** (`canli_komutu`): canlı yayıncıları bul → `canli_min_sure_sn` (1200 sn) dolmayanı atla → sohbeti yayın başından "şimdi − `canli_sohbet_marj_sn` (20 sn)"ye kadar indir (`sohbet/kick-<uuid>.part.jsonl`'e yazar, sonraki tur kaldığı yerden sürer; tur başına `canli_sohbet_butce_sn` 240 sn indirme bütçesi, yetmezse "sohbet henüz yetişmedi" der ve sonraki turda sürer) → mevcut sinyal yöntemiyle zirveleri bul (`son_dislama_sn` canlıda 0; daha önce kesilmiş aralıklar `engelli` olarak o ana yeniden zirve seçilmesini engeller) → yalnız **kapanmış** dalgaları kes.
+
+- **Kapalı-dalga kuralı:** klip ancak `kapanis = max(dalga_sonu + birlestir_sn (30), klip_bitis_sn) + canli_bekle_sn (20)` videonun uzunluğuna (`video_sn`) varınca kesilir. Yani kahkaha dalgası bitti ve aynı dalganın devamı (30 sn kümeleme penceresi) gelmedi, klibin bitişi videoda var ve üstüne 20 sn pay var ⇒ **yarım klip çıkmaz**. Dalga sürüyorsa tur "açık zirve" diye sayıp bırakır, sonraki tur keser (testli: dalga 3000'de, klip [2980, 3022], 3040'ta kesilmez, 3100'de kesilir).
+- **Aynı an iki kez kesilmez:** kesilen klip `durum.json`'da `vod[kick:<uuid>].canli_klipler`'e **gerçek saat (epoch) aralığıyla** yazılır (yayın başı saati tur arası küçük oynasa da dayanır). Sonraki turlar o aralıkla örtüşen adayı atlar (kenar değme örtüşme sayılmaz). Aynı anda iki tur çalışmasın diye `canli.kilit` (O_EXCL; 3 saatten eskisi çökmüş sayılır).
+- **Yayın bitince `tara`/`kes`:** canlıda kesilen aralıkla örtüşen klip "yayın sürerken zaten kesilmiş (canli-*.mp4), atlandı" diye **atlanır**, kalanlar normal kesilir; `canli_klipler` kaydı "islendi" durumunda silinmez. Sohbet önbelleği (`.part.jsonl`) final analizde yeniden kullanılır (17.11 wtcN yayınında canlıdayken indirilen ilk ≈2560 sn tekrar indirilmedi). Final seçim normal `azami_klip` ile yapılır, sonra canlıda kesilenler atlanır; yani canlıda kesilen bir an finalin en iyi 3'ünde olsa bile yerine sıradaki gelmez (en iyi 3'ün 1'i canlı kesilirse bitişte 2 yeni klip çıkar).
+- **Çıktı:** `cikti/<yayinci>-<tarih>-<uuid8>/canli-NN.mp4` + `.json` (paket `canli_kesim: true`, `yayinlandi: false`). Final `klip-NN` dosyalarıyla karışmaz. Tur raporu (JSON, stdout) her yayıncı için `durum`, `video_sn`, `sohbet_hazir_sn`, `hiz_kaymasi_sn`, `acik_zirve`, klip listesini verir.
+- `canli_min_puan` 0 (alt sınır yok): puanlar yayınlar arası kıyaslanamadığı için sabit bir eşik şimdilik veriyle desteklenmiyor. Gözlem: wtcN 17.11 yayınında seçilen anlar 81–83, yayının en iyi 14 anı 65–83; Kemalcan'ın ilk 20 dk'sında 22–55. Çok klip istemiyorsan `--azami-klip` / `canli_azami_klip` (yayın başına 6) ile sınırla; kalitesiz klip istemiyorsan `--min-puan 55` makul başlangıç (tahmin).
+
+**Gerçek canlı deneme (Kemalcan, `kick:bf478c44…`, yayın sürerken):** `video_sn` 1385'te 4 klip kesildi (`canli-01..04.mp4`; hepsi 1080x1920, sesli, 42–55 sn). `canli-01` (zirve 5:30, puan 55.5, 22 kişi gülüyor): sohbetin gülme sayısı video 330–340. sn'de 14 ve 12 mesaja çıktı (öncesi 0–2), klip 310–352; klibin 20. sn'sindeki karede yayıncının ekranındaki sohbet bindirmesinde "…lan öptün" yazısı görülüyor ve aynı mesaj ("la niye alt dudumdan öptün") API sohbetinde video 327. sn'de ⇒ hiza ≈3 sn içinde doğrulandı. Kare: `C:\Cihan.Ai\.scratch\yayin-klip\kare\canli-01-orta.png`.
+
+**wtcN 17.11 değerlendirmesi (kuaför/boya yayını, 7959 sn, 23 773 mesaj):** "saç/boya/pembe/mavi" konusu sohbette gerçekten patlıyor (0:48–2:00 arası sürekli; 30 sn'lik en yoğun dilimler 1:59:00, 1:13:30, 1:56:00, 1:25:00, 0:53:30; "saç" 295, "pembe" 276, "saçı" 114, "boya" 85 kez). Sistem konuyu görüyor (`konu` bileşeni: "saçı" 13 kişi @1:59:00) ama klip seçimi kahkaha ağırlıklı (0.5) olduğu için seçilen 3 an kahkaha dalgalarıdır: 1:17:20 (p82.6, "gerçek/3k sub sözü"), 1:33:10 (p81.3, "offf", "FERİDEMİN KUAFÖR GÜNLÜKLERİ DAY 1"), 1:44:10 (p82.2, "YAKIŞMIŞ/havuç olmuş/icardi gibi/saçın artmış", boyalı yeni saçın ilk görünüşü; kare: `wtcn-klip-03.png` turuncu saç). Klip 2 karesinde yayıncının başında folyo var (boya bekleme). Dürüst yargı: klip 3 iyi; klip 2 iyi/sınırda (komik kare + kuaför konusu, ama sohbet dalgasının sebebi "CHP'li teyze"); klip 1 sınırda (yalnız mesajlara bakıldı, kareye bakılmadı; "3k sub sözü" bağlamı klipte anlaşılmıyor olabilir). "Saçı yokki" konu zirvesi (1:59:00) yayının 14. anı (p64.8): konu bileşeni tam (1.0) ama gülme 0.57 ⇒ elendi. İstenirse konu ağırlığı artırılabilir; denenmedi.
+
+**Maliyet (ölçüm/hesap, 2026-11-17):**
+- *Disk:* sohbet önbelleği ≈0.2–0.45 KB/sn (Kemalcan 637 KB @1405 sn; wtcN 7959 sn → 1.3 MB). 2 saatlik yayın ≈1–3 MB. Klip mp4: 2.6–23.6 MB (42–55 sn; ölçüm, 4 klip ortalama 11.9 MB). Tampon yok (B yazılmadığı için ek disk yok).
+- *Bant:* sohbet ≈10 sn sohbet/sn hızla iner (ilk tur: 2560 sn sohbet 240 sn bütçede); sonraki 5 dk'lık turlar ≈60 istek. Video: yalnız kesilen aralığı çeker (HLS 1080p60 ≈25 MB/dk akış hızı; 55 sn klip ≈23 MB indirme), tüm yayın indirilmez.
+- *İstek hızı:* sohbet istekleri ortak `_hiz_siniri`ni kullanır (`KLIP_ISTEK_ARALIK` 0.4 sn), canlıda ayrı bir hız yoktur.
+
+**Belirsizlikler:** (1) sohbet canlıda ≈20 sn ileride, video ≈20 sn geride; `canli_sohbet_marj_sn` bunu kapatır ama sohbetin gerçek yazılma gecikmesi ayrıca ölçülmedi (yalnız hiza kayması ölçüldü). (2) Süren yayının HLS listesi `ENDLIST` taşıyor; gerçek bir ağ kesintisi/yeniden başlama (yayıncı yayını kapatıp açarsa Kick yeni uuid veriyor, wtcN 17.11'de böyle oldu) yeni yayın sayılır; eski yayının canlı klipleri kendi uuid'sine bağlı kalır. (3) Kick uzun yayında listeyi kısaltırsa (yalnız son N bölüm tutma) `PROGRAM-DATE-TIME` t0'ı kayabilir: tur her seferinde yeniden ölçer, ama 8 saati aşan yayında denenmedi. (4) `canli` tek bir yayıncının iki eşzamanlı yayınını ayırt etmez (Kick kanalda tek canlı yayın tutuyor).
+
 ## Emote sınıfları (Kick, gerçek sohbetten)
 
 İki yayının kayıtlı sohbetinden en sık emote adları sayıldı; sınıf listeleri bunlara göre yazıldı (parça eşleşmesi: küçük harfli ad, `collectibles` öneki atılır, ad listedeki parçayı içeriyorsa sınıf o; sıra gülme > şaşkınlık > gürültü; listede olmayan **nötr** kalır).
@@ -138,13 +171,20 @@ Not: `asmonSmash` (278) hiçbir listede yok, nötr kalır. `HYPERCLAP` alkış o
 | emote_gulme / emote_saskin / emote_gurultu | listeler | emote sınıf parçaları (yukarıdaki bölüm) |
 | gulme_kelimeleri / gulme_emojileri / gulme_istisna | listeler | ek kahkaha kelimeleri / emojileri / kahkaha sayılmayacak kelimeler ("kafkas") |
 | oy_kelimeleri | liste | oy sayılan kısa cevaplar ("evet", "hayır", "katıl"…) |
+| canli_min_sure_sn | 1200 | `canli`: bundan kısa süren yayın analiz edilmez |
+| canli_azami_klip | 6 | `canli`: yayın başına canlı kesilecek en çok klip |
+| canli_bekle_sn | 20 | `canli`: dalga kapanışı / klip bitişinden sonra güvenlik payı |
+| canli_min_puan | 0.0 | `canli`: bu puanın altındaki zirve kesilmez |
+| canli_sohbet_butce_sn | 240 | `canli`: tur başına sohbet indirme süre bütçesi |
+| canli_sohbet_marj_sn | 20 | `canli`: sohbetin en yeni bu kadar sn'si indirilmez (yazılıyor olabilir) |
 
 ## Dosyalar (hepsi depo dışında)
 
 Taban klasör: Windows `C:\Cihan.Ai\.scratch\yayin-klip\`, Linux `~/.local/share/yayin-klip/`; `YAYIN_KLIP_DIZIN` ortam değişkeni veya `--dizin` ile değişir.
 
 - `durum.json`: işlenmiş yayınlar (`kes` bitince `islendi`). `tara` bunları atlar.
-- `sohbet/`: indirilen sohbet (yarım kalırsa `.part.jsonl`'den devam eder). Önbellek sürüm 2: her mesajla gönderen kimliği de saklanır (farklı kişi sayısı için). Gönderensiz eski (sürüm 1) önbellek geçersizdir, yeniden indirilir.
+- `canli.kilit`: aynı anda iki `canli` turu çalışmasın diye kilit (tur bitince silinir; çökerse 3 saat sonra yok sayılır). `durum.json` içinde `vod[...].canli_klipler`: canlıda kesilen aralıklar.
+- `sohbet/`: indirilen sohbet (yarım kalırsa `.part.jsonl`'den devam eder; `canli` turları da buraya yazar, yayın bitince `tara`/`kes` aynı dosyadan sürer). Önbellek sürüm 2: her mesajla gönderen kimliği de saklanır (farklı kişi sayısı için). Gönderensiz eski (sürüm 1) önbellek geçersizdir, yeniden indirilir.
 - `analiz/`: zirve JSON'u. `cikti/<yayinci>-<tarih>-<kısa id>/klip-NN.mp4` + `klip-NN.json` (yayıncı, platform, VOD ve zaman damgalı bağlantı, oyun, puan, önerilen başlık ve açıklama; açıklama yayıncıyı anar ve kanalına bağlanır; `yayinlandi: false`).
 
 Başlık ve açıklama sabit şablonlardan gelir (model çağrısı yok).
