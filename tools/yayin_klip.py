@@ -19,6 +19,7 @@ import sys
 import tempfile
 import threading
 import time
+import unicodedata
 import urllib.error
 import urllib.request
 from collections import Counter
@@ -42,6 +43,15 @@ AYAR_VARSAYILAN = {
     'bas_dislama_sn': 300, # yayın başı (selamlaşma patlaması)
     'son_dislama_sn': 180, # yayın sonu (veda / raid patlaması)
     'son_gun': 7,          # tara: bu kadar günden eski yayına bakma
+    # zayıf zirve elemesi (yalnız emote / tek karakter tekrarı patlamaları)
+    'min_farkli_kullanici': 25,  # zirvede en az bu kadar farklı kişi yazmış olmalı
+    'min_emote_disi_oran': 0.25,    # zirvedeki mesajların en az bu oranı emote dışında bir şey içermeli
+    # görüntü düzeni
+    'duzen': 'kadraj',     # 'kadraj': yayın ortadan kırpılıp büyütülür; 'serit': eski tam genişlik şerit
+    'kadraj_oran': 1.2,    # kırpılan bölgenin genişlik/yükseklik oranı (1.0 = kare, 1.33 = 4:3, 1.78 = kırpma yok)
+    # oyun süzgeci
+    'oyunlar': [],         # boş = bütün yayınlar; doluysa yalnız kategorisi/başlığı bu adlardan birine uyanlar
+    'oyun_baslikta_ara': True,  # kategori uymasa da yayın başlığında geçen oyun adı kabul edilir
 }
 SHORTS_AZAMI_SN = 60
 
@@ -52,13 +62,17 @@ DUZEN = {
     'fps': 30,
     'arka_blur': 8,          # küçültülmüş arka planda gblur sigma
     'arka_parlaklik': -0.12,
-    'ust_ad': {'boyut': 76, 'y': 430},
-    'ust_oyun': {'boyut': 46, 'y': 530},
-    'alt_kaynak': {'boyut': 44, 'y': 1340},
-    'alt_marka': {'boyut': 38, 'y': 1415},
+    'gorsel_merkez_y': 880,  # kadraj düzeninde görüntünün orta çizgisi (Shorts/Reels alt arayüzüne pay için biraz yukarıda)
+    'ust_ad': {'boyut': 76, 'y_serit': 430},
+    'ust_oyun': {'boyut': 46, 'y_serit': 530},
+    'alt_kaynak': {'boyut': 44, 'y_serit': 1340},
+    'alt_marka': {'boyut': 38, 'y_serit': 1415},
     'marka': 'CTRL+A GAME  ·  ctrl-agame.com',
     'metin_azami_px': 980,
 }
+KAYNAK_ORAN = 16 / 9       # Kick yayını 16:9; kadraj oranı bundan büyük olamaz (kırpılacak şey kalmaz)
+KADRAJ_EN_AZ = 1.0         # kareden dik kırpma yok: yazı bloğuna yer kalsın
+METIN_SATIR_KATSAYI = 1.25 # yazı kutusu yüksekliği ≈ boyut × bu (kenar çizgisi dahil)
 
 KICK_API = 'https://kick.com/api'
 UA = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36'}
@@ -153,6 +167,34 @@ def tr_kucuk(s: str) -> str:
     return s.translate(TR_KUCUK).lower()
 
 
+def oyun_belirtecleri(s: str) -> list[str]:
+    """Oyun adını büyük-küçük harf, Türkçe karakter ve noktalamadan bağımsız kelime listesine çevirir."""
+    d = unicodedata.normalize('NFKD', tr_kucuk(s))
+    d = ''.join(c for c in d if not unicodedata.combining(c)).replace('ı', 'i')
+    return re.findall(r'[a-z0-9]+', d)
+
+
+def _dizi_icerir(buyuk: list[str], kucuk: list[str]) -> bool:
+    n = len(kucuk)
+    return n > 0 and any(buyuk[i:i + n] == kucuk for i in range(len(buyuk) - n + 1))
+
+
+def oyun_suzgeci(vod: dict, ayar: dict) -> tuple[bool, str | None]:
+    """(uygun mu, eşleşen oyun adı). `oyunlar` boşsa süzgeç kapalıdır: her yayın uygundur.
+    Eşleşme kelime dizisi olarak yapılır: 'GTA V', 'GTA VI' kategorisine uymaz; 'GTA 6' ile 'GTA VI' ayrı yazılır."""
+    liste = [str(o) for o in (ayar.get('oyunlar') or []) if oyun_belirtecleri(str(o))]
+    if not liste:
+        return True, None
+    alanlar = [oyun_belirtecleri(k) for k in (vod.get('kategoriler') or [vod.get('oyun') or ''])]
+    if ayar.get('oyun_baslikta_ara', True):
+        alanlar.append(oyun_belirtecleri(vod.get('baslik') or ''))
+    for ad in liste:
+        t = oyun_belirtecleri(ad)
+        if any(_dizi_icerir(a, t) for a in alanlar):
+            return True, ad
+    return False, None
+
+
 def zaman_metni(sn: float) -> str:
     sn = int(sn)
     s, d, h = sn % 60, (sn // 60) % 60, sn // 3600
@@ -235,7 +277,8 @@ def vod_normalle(girdi: dict, kanal: str, yayinci_ad: str) -> dict:
     uuid = video.get('uuid')
     if not uuid:
         raise KlipHatasi('yayında video kimliği (uuid) yok')
-    kat = (girdi.get('categories') or [{}])[0].get('name') or ''
+    kategoriler = [c.get('name') for c in (girdi.get('categories') or []) if c.get('name')]
+    kat = kategoriler[0] if kategoriler else ''
     bas = iso_epoch(girdi['start_time'])
     return {
         'platform': 'kick',
@@ -246,6 +289,7 @@ def vod_normalle(girdi: dict, kanal: str, yayinci_ad: str) -> dict:
         'kanal_id': girdi['channel_id'],
         'baslik': girdi.get('session_title') or '',
         'oyun': kat,
+        'kategoriler': kategoriler,
         'baslangic_epoch': bas,
         'sure_sn': int((girdi.get('duration') or 0) / 1000),
         'kaynak': girdi.get('source') or '',
@@ -300,10 +344,11 @@ def vod_coz(arguman: str) -> tuple[str, str | None]:
 
 # ---------------------------------------------------------------- Kick: sohbet kaydı
 
-def kick_pencere(http, kanal_id: int, bas: int) -> list[tuple[str, int, str]]:
-    """[bas, bas+5) penceresindeki tüm mesajlar. Pencere 25'e kesildiyse kaldığı yerden devam eder."""
+def kick_pencere(http, kanal_id: int, bas: int) -> list[tuple[str, int, str, int | str]]:
+    """[bas, bas+5) penceresindeki tüm mesajlar: (id, epoch, metin, gönderen kimliği).
+    Pencere 25'e kesildiyse kaldığı yerden devam eder."""
     bitis = bas + KICK_PENCERE_SN
-    gorulen: dict[str, tuple[str, int, str]] = {}
+    gorulen: dict[str, tuple[str, int, str, int | str]] = {}
     ara = bas
     for _ in range(200):
         veri = http(f'{KICK_API}/v2/channels/{kanal_id}/messages?start_time={epoch_iso(ara)}')
@@ -313,7 +358,8 @@ def kick_pencere(http, kanal_id: int, bas: int) -> list[tuple[str, int, str]]:
             t = iso_epoch(m['created_at'])
             son = max(son, t)
             if bas <= t < bitis and m.get('type', 'message') in ('message', 'reply'):
-                gorulen[m['id']] = (m['id'], t, m.get('content') or '')
+                gonderen = m.get('user_id') or (m.get('sender') or {}).get('id') or ''
+                gorulen[m['id']] = (m['id'], t, m.get('content') or '', gonderen)
         if len(mesajlar) < KICK_SAYFA_LIMITI or son >= bitis:
             break
         # Tam dolu sayfa: aynı saniyede 25+ mesaj varsa bir saniye atla (az sayılır, ama döngüye girmez).
@@ -322,11 +368,11 @@ def kick_pencere(http, kanal_id: int, bas: int) -> list[tuple[str, int, str]]:
 
 
 def kick_sohbet_indir(http, kanal_id: int, bas: int, sure_sn: int, part: pathlib.Path,
-                      is_parcacigi: int = 4, ilerleme=None) -> list[tuple[int, str]]:
-    """VOD süresince sohbeti indirir; yarım kalırsa part dosyasından devam eder."""
+                      is_parcacigi: int = 4, ilerleme=None) -> list[tuple[int, str, int | str]]:
+    """VOD süresince sohbeti indirir; yarım kalırsa part dosyasından devam eder. [(epoch, metin, gönderen)]"""
     pencereler = list(range(bas, bas + sure_sn + KICK_PENCERE_SN, KICK_PENCERE_SN))
     biten: set[int] = set()
-    mesajlar: dict[str, tuple[int, str]] = {}
+    mesajlar: dict[str, tuple[int, str, int | str]] = {}
     if part.exists():
         for satir in part.read_text(encoding='utf-8').splitlines():
             try:
@@ -334,32 +380,39 @@ def kick_sohbet_indir(http, kanal_id: int, bas: int, sure_sn: int, part: pathlib
             except ValueError:
                 continue
             biten.add(k['w'])
-            for i, t, x in k['m']:
-                mesajlar[i] = (t, x)
+            for i, t, x, *g in k['m']:  # eski part satırlarında gönderen yok
+                mesajlar[i] = (t, x, g[0] if g else '')
     kalan = [w for w in pencereler if w not in biten]
     part.parent.mkdir(parents=True, exist_ok=True)
     sayac = 0
     with part.open('a', encoding='utf-8') as f, ThreadPoolExecutor(max_workers=is_parcacigi) as havuz:
         for w, sonuc in zip(kalan, havuz.map(lambda w: kick_pencere(http, kanal_id, w), kalan)):
             f.write(json.dumps({'w': w, 'm': sonuc}, ensure_ascii=False) + '\n')
-            for i, t, x in sonuc:
-                mesajlar[i] = (t, x)
+            for i, t, x, g in sonuc:
+                mesajlar[i] = (t, x, g)
             sayac += 1
             if ilerleme and sayac % 200 == 0:
                 ilerleme(sayac, len(kalan))
-    return sorted(mesajlar.values())
+    return sorted(mesajlar.values(), key=lambda m: (m[0], m[1]))
 
 
-def sohbet_al(vod: dict, dizin: pathlib.Path, http=http_json, ilerleme=None) -> list[tuple[int, str]]:
-    """Sohbet önbelleği varsa onu, yoksa indirip önbelleğe yazar. [(epoch_sn, metin)]"""
+SOHBET_SURUMU = 2  # 2: her mesajda gönderen kimliği var (farklı kullanıcı sayısı için)
+
+
+def sohbet_al(vod: dict, dizin: pathlib.Path, http=http_json, ilerleme=None) -> list[tuple[int, str, int | str]]:
+    """Sohbet önbelleği varsa onu, yoksa indirip önbelleğe yazar. [(epoch_sn, metin, gönderen)].
+    Gönderensiz eski (sürüm 1) önbellek geçersizdir: yeniden indirilir."""
     onbellek = dizin / 'sohbet' / f"{vod['platform']}-{vod['vod_id']}.json"
     if onbellek.exists():
-        return [(t, x) for t, x in json.loads(onbellek.read_text(encoding='utf-8'))['mesajlar']]
+        eski = json.loads(onbellek.read_text(encoding='utf-8'))
+        if eski.get('surum') == SOHBET_SURUMU:
+            return [(t, x, g) for t, x, g in eski['mesajlar']]
     if vod['platform'] != 'kick':
         raise Desteklenmiyor(DESTEK_YOK.get(vod['platform'], 'platform tanınmıyor'))
     part = dizin / 'sohbet' / f"{vod['platform']}-{vod['vod_id']}.part.jsonl"
     mesajlar = kick_sohbet_indir(http, vod['kanal_id'], vod['t0_epoch'], vod['sure_sn'], part, ilerleme=ilerleme)
-    onbellek.write_text(json.dumps({'vod': vod['anahtar'], 'mesajlar': mesajlar}, ensure_ascii=False), encoding='utf-8')
+    onbellek.write_text(json.dumps({'vod': vod['anahtar'], 'surum': SOHBET_SURUMU, 'mesajlar': mesajlar},
+                                   ensure_ascii=False), encoding='utf-8')
     part.unlink(missing_ok=True)
     return mesajlar
 
@@ -432,10 +485,13 @@ def istatistik(sayim: list[int], ayar: dict) -> dict:
     return {'lo': lo, 'hi': hi, 'ort': ort, 'std': std, 'esik': esik}
 
 
-def zirveleri_bul(sayim: list[int], ayar: dict, toplam_sn: float) -> tuple[list[dict], dict]:
-    """Eşiği aşan dilimleri kümeler, her küme için klip aralığı üretir; en iyi azami_klip tanesini döndürür."""
+def zirveleri_bul(sayim: list[int], ayar: dict, toplam_sn: float, kalite=None) -> tuple[list[dict], dict]:
+    """Eşiği aşan dilimleri kümeler, her küme için klip aralığı üretir; en iyi azami_klip tanesini döndürür.
+    kalite(bas_sn, bit_sn) -> zirve_kalitesi sözlüğü verilirse zayıf zirveler (az kişi / yalnız emote) seçime
+    girmeden elenir ve ist['elenen']'e nedenleriyle yazılır; elenenin yerini sıradaki aday alır."""
     dilim = ayar['dilim_sn']
     ist = istatistik(sayim, ayar)
+    ist['elenen'] = []
     if ist['esik'] == float('inf'):
         return [], ist
     isaretli = [i for i in range(ist['lo'], ist['hi']) if sayim[i] >= ist['esik']]
@@ -461,7 +517,16 @@ def zirveleri_bul(sayim: list[int], ayar: dict, toplam_sn: float) -> tuple[list[
             bas = max(0, bas - (bit - toplam_sn))
             bit = toplam_sn
         std = ist['std']
+        kalite_alani = {}
+        if kalite:
+            kalite_alani = kalite(k[0] * dilim, (k[-1] + 1) * dilim)
+            neden = zayiflik_nedenleri(kalite_alani, ayar)
+            if neden:
+                ist['elenen'].append({'zirve_sn': tepe * dilim, 'zirve_zaman': zaman_metni(tepe * dilim),
+                                      'mesaj': sayim[tepe], 'neden': neden, **kalite_alani})
+                continue
         adaylar.append({
+            **kalite_alani,
             'zirve_sn': tepe * dilim,
             'mesaj': sayim[tepe],
             'puan': round(min((sayim[tepe] - ist['ort']) / std, 99.0), 2) if std > 0 else 99.0,
@@ -483,6 +548,31 @@ def zirveleri_bul(sayim: list[int], ayar: dict, toplam_sn: float) -> tuple[list[
         a['no'] = n
         a['zirve_zaman'] = zaman_metni(a['zirve_sn'])
     return secilen, ist
+
+
+def emote_disi_mi(metin: str) -> bool:
+    """[emote:..] belirteçleri atıldıktan sonra boşluk dışında bir şey kalıyorsa mesaj emote'tan ibarettir değildir.
+    Ölçüt bilerek düz tutuldu: '1', '2', 'xd' gibi kısa oylar da yazıdır; oran yalnız emote seline bakar."""
+    return bool(EMOTE_RE.sub('', metin).strip())
+
+
+def zirve_kalitesi(mesajlar: list[tuple[str, object]]) -> dict:
+    """[(metin, gönderen)] -> farklı kullanıcı sayısı ve emote olmayan mesaj oranı.
+    Gönderen bilgisi yoksa (eski önbellek) farkli_kullanici None olur ve o ölçüt uygulanmaz."""
+    n = len(mesajlar)
+    kisiler = {g for _, g in mesajlar if g not in ('', None)}
+    yazi = sum(1 for x, _ in mesajlar if emote_disi_mi(x))
+    return {'zirve_mesaj_sayisi': n, 'farkli_kullanici': len(kisiler) if kisiler else None,
+            'emote_disi_mesaj': yazi, 'emote_disi_oran': round(yazi / n, 3) if n else 0.0}
+
+
+def zayiflik_nedenleri(kalite: dict, ayar: dict) -> list[str]:
+    neden = []
+    if kalite['farkli_kullanici'] is not None and kalite['farkli_kullanici'] < ayar['min_farkli_kullanici']:
+        neden.append(f"az_kullanici({kalite['farkli_kullanici']}<{ayar['min_farkli_kullanici']})")
+    if kalite['emote_disi_oran'] < ayar['min_emote_disi_oran']:
+        neden.append(f"emote_agirlikli({kalite['emote_disi_oran']}<{ayar['min_emote_disi_oran']})")
+    return neden
 
 
 DURAK = set('''bir bu şu ve ile de da mi mı mu mü ne ya ama çok daha gibi için kadar ben sen biz siz var yok
@@ -521,23 +611,24 @@ def one_cikan(tepe_metinler: list[str], tum_metinler: list[str], n: int = 5) -> 
     return sirala(pk, gk, 3), sirala(pe, ge, 3)
 
 
-def analiz_et(vod: dict, mesajlar: list[tuple[int, str]], ayar: dict) -> dict:
+def analiz_et(vod: dict, mesajlar: list[tuple], ayar: dict) -> dict:
+    """mesajlar: (epoch, metin) veya (epoch, metin, gönderen)."""
     t0 = vod['t0_epoch']
     toplam = vod['sure_sn']
-    ham = [(t - t0, x) for t, x in mesajlar]
-    sayim = dilim_say([t for t, _ in ham], ayar['dilim_sn'], toplam)
-    klipler, ist = zirveleri_bul(sayim, ayar, toplam)
-    tum = [x for t, x in ham if 0 <= t < toplam]
+    ham = [(m[0] - t0, m[1], m[2] if len(m) > 2 else '') for m in mesajlar]
+    sayim = dilim_say([t for t, _, _ in ham], ayar['dilim_sn'], toplam)
+    klipler, ist = zirveleri_bul(sayim, ayar, toplam,
+                                 kalite=lambda a, b: zirve_kalitesi([(x, g) for t, x, g in ham if a <= t < b]))
+    tum = [x for t, x, _ in ham if 0 <= t < toplam]
     for k in klipler:
         a = min(k['zirve_dilimleri'])
         b = max(k['zirve_dilimleri']) + ayar['dilim_sn']
-        tepe = [x for t, x in ham if a <= t < b]
+        tepe = [x for t, x, _ in ham if a <= t < b]
         k['kelimeler'], k['emojiler'] = one_cikan(tepe, tum)
         ornek = [x.strip() for x in tepe if 3 <= len(x.strip()) <= 80][:5]
         k['ornek_mesajlar'] = ornek
-        k['zirve_mesaj_sayisi'] = len(tepe)
     return {
-        'vod': {k: vod[k] for k in ('platform', 'vod_id', 'anahtar', 'yayinci', 'kanal', 'baslik', 'oyun',
+        'vod': {k: vod.get(k) for k in ('platform', 'vod_id', 'anahtar', 'yayinci', 'kanal', 'baslik', 'oyun', 'kategoriler',
                                       'sure_sn', 'vod_url', 'kanal_url', 'tarih', 't0_epoch', 't0_kaynagi')},
         'ayar': ayar,
         'istatistik': {'mesaj': len(tum), 'dilim': len(sayim), 'ortalama': round(ist['ort'], 2),
@@ -545,6 +636,7 @@ def analiz_et(vod: dict, mesajlar: list[tuple[int, str]], ayar: dict) -> dict:
                        'esik': None if ist['esik'] == float('inf') else round(ist['esik'], 2)},
         'dilim_sayimlari': sayim,
         'klipler': klipler,
+        'elenen_zirveler': ist['elenen'],
     }
 
 
@@ -592,7 +684,7 @@ def aciklama_uret(vod: dict, klip: dict) -> str:
     )
 
 
-def paket_json(vod: dict, klip: dict, mp4: pathlib.Path, dogrulama: dict) -> dict:
+def paket_json(vod: dict, klip: dict, mp4: pathlib.Path, dogrulama: dict, ayar: dict | None = None) -> dict:
     link, dogrulandi = zaman_damgali_baglanti(vod, klip['klip_baslangic_sn'])
     return {
         'yayinci': vod['yayinci'],
@@ -609,6 +701,8 @@ def paket_json(vod: dict, klip: dict, mp4: pathlib.Path, dogrulama: dict) -> dic
         'zirve_zaman': klip['zirve_zaman'],
         'zirve_puani': klip['puan'],
         'zirve_mesaj_sayisi': klip.get('zirve_mesaj_sayisi'),
+        'zirve_farkli_kullanici': klip.get('farkli_kullanici'),
+        'zirve_emote_disi_oran': klip.get('emote_disi_oran'),
         'klip_baslangic_sn': klip['klip_baslangic_sn'],
         'klip_bitis_sn': klip['klip_bitis_sn'],
         'one_cikan_kelimeler': klip.get('kelimeler', []),
@@ -618,6 +712,7 @@ def paket_json(vod: dict, klip: dict, mp4: pathlib.Path, dogrulama: dict) -> dic
         'aciklama': aciklama_uret(vod, klip),
         'dosya': mp4.name,
         'video': dogrulama,
+        'duzen': duzen_imzasi(ayar or AYAR_VARSAYILAN),
         'uretim': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
         'yayinlandi': False,
     }
@@ -676,17 +771,51 @@ def metin_boyutu(metin: str, boyut: int, azami_px: int) -> int:
     return max(24, min(boyut, int(azami_px / (0.62 * max(len(metin), 1)))))
 
 
-def filtre_yaz(font: str, metinler: dict[str, str], duzen: dict = DUZEN) -> str:
+def yerlesim(ayar: dict | None = None, duzen: dict = DUZEN) -> dict:
+    """Görüntü kutusu ve yazı konumları (1080x1920 tuvalde piksel).
+    'kadraj': yayın ortadan kadraj_oran'a kırpılıp genişliğe sığdırılır; yazılar görüntünün üstünde/altında kalır.
+    'serit': eski düzen, kırpmasız tam genişlik 16:9 şerit ve sabit yazı konumları."""
+    ayar = ayar or {}
+    w, h = duzen['genislik'], duzen['yukseklik']
+    mod = ayar.get('duzen', AYAR_VARSAYILAN['duzen'])
+    if mod not in ('kadraj', 'serit'):
+        raise KlipHatasi(f"duzen 'kadraj' veya 'serit' olmalı: {mod!r}")
+    yazilar = ('ust_ad', 'ust_oyun', 'alt_kaynak', 'alt_marka')
+    if mod == 'serit':
+        gh = int(round(w / KAYNAK_ORAN / 2)) * 2
+        return {'mod': mod, 'oran': None, 'gorsel_y': (h - gh) // 2, 'gorsel_h': gh,
+                'y': {a: duzen[a]['y_serit'] for a in yazilar}}
+    oran = min(max(float(ayar.get('kadraj_oran', AYAR_VARSAYILAN['kadraj_oran'])), KADRAJ_EN_AZ), KAYNAK_ORAN)
+    gh = int(round(w / oran / 2)) * 2
+    y0 = int(duzen['gorsel_merkez_y'] - gh / 2)
+    kat = METIN_SATIR_KATSAYI
+    oyun_y = y0 - 30 - int(duzen['ust_oyun']['boyut'] * kat)
+    ad_y = oyun_y - 18 - int(duzen['ust_ad']['boyut'] * kat)
+    kaynak_y = y0 + gh + 34
+    marka_y = kaynak_y + int(duzen['alt_kaynak']['boyut'] * kat) + 10
+    return {'mod': mod, 'oran': oran, 'gorsel_y': y0, 'gorsel_h': gh,
+            'y': {'ust_ad': ad_y, 'ust_oyun': oyun_y, 'alt_kaynak': kaynak_y, 'alt_marka': marka_y}}
+
+
+def filtre_yaz(font: str, metinler: dict[str, str], duzen: dict = DUZEN, ayar: dict | None = None) -> str:
     """filter_complex betiği. Metinler çalışma klasöründe t_<ad>.txt dosyalarından okunur (kaçış derdi yok)."""
     w, h = duzen['genislik'], duzen['yukseklik']
     kucuk_w = w // 4
     kucuk_h = h // 4
+    yz = yerlesim(ayar, duzen)
+    if yz['mod'] == 'serit':
+        on = f"scale={w}:-2:flags=lanczos"
+    else:
+        r = f"{yz['oran']:.4f}"
+        # Ortadan kırp: kaynak hedeften darsa yükseklikten değil genişlikten kırpılır (min ile).
+        on = (f"crop=w=min(iw\\,ih*{r}):h=min(ih\\,iw/{r}),"
+              f"scale={w}:{yz['gorsel_h']}:flags=lanczos")
     satirlar = [
         f"[0:v:0]fps={duzen['fps']},split=2[a][b]",
         f"[a]scale=-2:{kucuk_h},crop={kucuk_w}:{kucuk_h},gblur=sigma={duzen['arka_blur']},"
         f"scale={w}:{h},eq=brightness={duzen['arka_parlaklik']}:saturation=0.9[bg]",
-        f"[b]scale={w}:-2:flags=lanczos[fg]",
-        "[bg][fg]overlay=(W-w)/2:(H-h)/2[v0]",
+        f"[b]{on}[fg]",
+        f"[bg][fg]overlay=0:{yz['gorsel_y']}[v0]",
     ]
     cizim = []
     for ad, bolum, renk in (('ad', 'ust_ad', 'white'), ('oyun', 'ust_oyun', '0xFFD54A'),
@@ -695,7 +824,7 @@ def filtre_yaz(font: str, metinler: dict[str, str], duzen: dict = DUZEN) -> str:
         boyut = metin_boyutu(metinler[ad], b['boyut'], duzen['metin_azami_px'])
         cizim.append(
             f"drawtext=fontfile='{_fe(font)}':textfile='t_{ad}.txt':fontsize={boyut}:fontcolor={renk}:"
-            f"borderw=4:bordercolor=black@0.85:x=(w-text_w)/2:y={b['y']}"
+            f"borderw=4:bordercolor=black@0.85:x=(w-text_w)/2:y={yz['y'][bolum]}"
         )
     satirlar.append('[v0]' + ','.join(cizim) + ',setsar=1,format=yuv420p[v]')
     return ';\n'.join(satirlar) + '\n'
@@ -742,8 +871,8 @@ def klip_dogrula(ff: str, mp4: pathlib.Path) -> dict:
     return bilgi
 
 
-def klip_kes(vod: dict, klip: dict, hedef: pathlib.Path, ff: str, font: str) -> dict:
-    """Yalnız klip aralığını HLS'ten çeker ve 1080x1920 H.264+AAC olarak yazar."""
+def klip_kes(vod: dict, klip: dict, hedef: pathlib.Path, ff: str, font: str, ayar: dict | None = None) -> dict:
+    """Yalnız klip aralığını HLS'ten çeker ve 1080x1920 H.264+AAC olarak yazar. ayar: duzen, kadraj_oran."""
     kaynak = vod.get('hls') or vod['kaynak']
     sure = min(klip['klip_bitis_sn'], vod['sure_sn']) - klip['klip_baslangic_sn']
     hedef.parent.mkdir(parents=True, exist_ok=True)
@@ -753,7 +882,8 @@ def klip_kes(vod: dict, klip: dict, hedef: pathlib.Path, ff: str, font: str) -> 
         for ad, m in metinler.items():
             (tmp_yol / f't_{ad}.txt').write_text(m or ' ', encoding='utf-8')
         gecici = tmp_yol / 'cikti.mp4'
-        r = subprocess.run(ffmpeg_komutu(ff, kaynak, klip['klip_baslangic_sn'], sure, gecici.name, filtre_yaz(font, metinler)),
+        r = subprocess.run(ffmpeg_komutu(ff, kaynak, klip['klip_baslangic_sn'], sure, gecici.name,
+                                         filtre_yaz(font, metinler, ayar=ayar)),
                            cwd=tmp, capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=1200)
         if r.returncode != 0 or not gecici.exists():
             raise KlipHatasi(f'ffmpeg başarısız ({r.returncode}): {r.stderr[-800:]}')
@@ -774,9 +904,13 @@ def vod_hazirla(arguman: str, ayar: dict, http=http_json, http_text=http_metin) 
 
 
 def analiz_komutu(arguman: str, dizin: pathlib.Path, ayar: dict, gecersiz: dict | None = None,
-                  yeniden: bool = False) -> tuple[dict, dict]:
+                  yeniden: bool = False, suzgecsiz: bool = False) -> tuple[dict, dict]:
     vod, vayar = vod_hazirla(arguman, ayar)
     vayar = {**vayar, **(gecersiz or {})}
+    uygun, _ = oyun_suzgeci(vod, vayar)
+    if not uygun and not suzgecsiz:
+        raise KlipHatasi(f"yayın oyun süzgecine uymuyor (kategori: {', '.join(vod['kategoriler']) or '-'}; "
+                         f"başlık: {vod['baslik'][:50]}); yine de işlemek için --suzgecsiz")
     yol = dizin / 'analiz' / f"{vod['platform']}-{vod['vod_id']}.json"
     if yol.exists() and not yeniden:
         sonuc = json.loads(yol.read_text(encoding='utf-8'))
@@ -792,22 +926,45 @@ def analiz_komutu(arguman: str, dizin: pathlib.Path, ayar: dict, gecersiz: dict 
     return vod, sonuc
 
 
+def duzen_imzasi(ayar: dict) -> dict:
+    yz = yerlesim(ayar)
+    return {'duzen': yz['mod'], 'kadraj_oran': yz['oran']}
+
+
+def paket_guncel(paket: pathlib.Path, klip: dict, ayar: dict) -> bool:
+    """Var olan klip bu analizin bu zirvesi ve bu düzenle mi üretilmiş? Değilse yeniden üretilir."""
+    try:
+        eski = json.loads(paket.read_text(encoding='utf-8'))
+    except (OSError, ValueError):
+        return False
+    return (eski.get('klip_baslangic_sn') == klip['klip_baslangic_sn']
+            and eski.get('klip_bitis_sn') == klip['klip_bitis_sn']
+            and eski.get('duzen') == duzen_imzasi(ayar))
+
+
 def kes_komutu(arguman: str, dizin: pathlib.Path, ayar: dict, gecersiz: dict | None = None,
-               zorla: bool = False, yeniden: bool = False) -> list[pathlib.Path]:
-    vod, sonuc = analiz_komutu(arguman, dizin, ayar, gecersiz, yeniden)
+               zorla: bool = False, yeniden: bool = False, suzgecsiz: bool = False) -> list[pathlib.Path]:
+    vod, sonuc = analiz_komutu(arguman, dizin, ayar, gecersiz, yeniden, suzgecsiz)
+    vayar = sonuc['ayar']
     ff, font = ffmpeg_bul(), font_bul()
     cikti_dizini = dizin / 'cikti' / f"{dosya_adi(vod['yayinci'])}-{vod['tarih'].replace('-', '')}-{vod['vod_id'][:8]}"
     uretilen = []
     for klip in sonuc['klipler']:
         mp4 = cikti_dizini / f"klip-{klip['no']:02d}.mp4"
         paket = mp4.with_suffix('.json')
-        if mp4.exists() and paket.exists() and not zorla:
+        if mp4.exists() and paket_guncel(paket, klip, vayar) and not zorla:
             uretilen.append(mp4)
             continue
         print(f"  klip {klip['no']}: {zaman_metni(klip['klip_baslangic_sn'])}–{zaman_metni(klip['klip_bitis_sn'])}", file=sys.stderr, flush=True)
-        bilgi = klip_kes(vod, klip, mp4, ff, font)
-        paket.write_text(json.dumps(paket_json(vod, klip, mp4, bilgi), ensure_ascii=False, indent=2), encoding='utf-8')
+        bilgi = klip_kes(vod, klip, mp4, ff, font, vayar)
+        paket.write_text(json.dumps(paket_json(vod, klip, mp4, bilgi, vayar), ensure_ascii=False, indent=2), encoding='utf-8')
         uretilen.append(mp4)
+    # Yeni analiz daha az klip verdiyse eski numaralı artıkları sil değil, eski/ klasörüne taşı.
+    for artik in sorted(cikti_dizini.glob('klip-*.*')) if cikti_dizini.exists() else []:
+        m = re.match(r'klip-(\d+)\.(mp4|json)$', artik.name)
+        if m and int(m.group(1)) > len(sonuc['klipler']):
+            (cikti_dizini / 'eski').mkdir(exist_ok=True)
+            artik.replace(cikti_dizini / 'eski' / artik.name)
     durum_isaretle(dizin, vod['anahtar'], durum='islendi', yayinci=vod['yayinci'], klip=len(uretilen),
                    cikti=str(cikti_dizini))
     return uretilen
@@ -818,7 +975,7 @@ def tara(ayar: dict, dizin: pathlib.Path, yayinci: str | None = None, hepsi: boo
     """Etkin yayıncıların son biten yayınları; işlenmişler atlanır. Desteklenmeyen platform ayrı raporlanır."""
     durum = durum_oku(dizin)
     simdi = simdi if simdi is not None else time.time()
-    bulunan, atlanan, desteksiz, hatalar = [], [], [], []
+    bulunan, atlanan, desteksiz, hatalar, suzgece_uymayan = [], [], [], [], []
     for y in ayar['yayincilar']:
         if not y['etkin'] or (yayinci and yayinci.lower() not in (y['ad'].lower(), y['kanal'].lower())):
             continue
@@ -837,16 +994,24 @@ def tara(ayar: dict, dizin: pathlib.Path, yayinci: str | None = None, hepsi: boo
                 continue
             satir = {'yayinci': y['ad'], 'anahtar': v['anahtar'], 'tarih': v['tarih'], 'sure_sn': v['sure_sn'],
                      'oyun': v['oyun'], 'baslik': v['baslik'], 'vod_url': v['vod_url']}
+            uygun, eslesen = oyun_suzgeci(v, y['ayar'])
+            if not uygun:
+                suzgece_uymayan.append({k: satir[k] for k in ('yayinci', 'anahtar', 'tarih', 'oyun', 'baslik')})
+                continue
+            if eslesen:
+                satir['eslesen_oyun'] = eslesen
             if islendi_mi(durum, v['anahtar']) and not hepsi:
                 atlanan.append(v['anahtar'])
             else:
                 bulunan.append(satir)
-    return {'yeni': bulunan, 'atlanan_islenmis': atlanan, 'desteksiz': desteksiz, 'hata': hatalar}
+    return {'yeni': bulunan, 'atlanan_islenmis': atlanan, 'suzgece_uymayan': suzgece_uymayan,
+            'desteksiz': desteksiz, 'hata': hatalar}
 
 
 def _gecersiz(a) -> dict:
     g = {}
-    for alan in ('esik_k', 'min_mesaj', 'azami_klip', 'bas_dislama_sn', 'min_oran'):
+    for alan in ('esik_k', 'min_mesaj', 'azami_klip', 'bas_dislama_sn', 'min_oran', 'min_farkli_kullanici',
+                 'min_emote_disi_oran', 'kadraj_oran', 'duzen'):
         v = getattr(a, alan, None)
         if v is not None:
             g[alan] = v
@@ -872,9 +1037,14 @@ def main(argv=None) -> int:
         k.add_argument('--min-oran', dest='min_oran', type=float)
         k.add_argument('--azami-klip', dest='azami_klip', type=int)
         k.add_argument('--bas-dislama-sn', dest='bas_dislama_sn', type=int)
+        k.add_argument('--min-farkli-kullanici', dest='min_farkli_kullanici', type=int)
+        k.add_argument('--min-emote-disi-oran', dest='min_emote_disi_oran', type=float)
+        k.add_argument('--suzgecsiz', action='store_true', help='oyun süzgecine uymasa da işle')
         k.add_argument('--yeniden', action='store_true', help='analizi önbellekten alma')
         if ad == 'kes':
             k.add_argument('--zorla', action='store_true', help='var olan klibi yeniden üret')
+            k.add_argument('--duzen', choices=('kadraj', 'serit'), help='görüntü düzeni (ayardakini bu çalıştırma için değiştirir)')
+            k.add_argument('--kadraj-oran', dest='kadraj_oran', type=float, help='kırpılan bölgenin genişlik/yükseklik oranı')
     o = s.add_parser('otomatik', help='tara + analiz + kes (yeni yayınların hepsi)')
     o.add_argument('--yayinci')
     o.add_argument('--en-cok', dest='en_cok', type=int, default=3, help='bu çalıştırmada en çok kaç yayın')
@@ -886,11 +1056,11 @@ def main(argv=None) -> int:
         if a.komut == 'tara':
             print(json.dumps(tara(ayar, dizin, a.yayinci, a.hepsi), ensure_ascii=False, indent=2))
         elif a.komut == 'analiz':
-            vod, sonuc = analiz_komutu(a.vod, dizin, ayar, _gecersiz(a), a.yeniden)
+            vod, sonuc = analiz_komutu(a.vod, dizin, ayar, _gecersiz(a), a.yeniden, a.suzgecsiz)
             ozet = {k: v for k, v in sonuc.items() if k != 'dilim_sayimlari'}
             print(json.dumps(ozet, ensure_ascii=False, indent=2))
         elif a.komut == 'kes':
-            for m in kes_komutu(a.vod, dizin, ayar, _gecersiz(a), a.zorla, a.yeniden):
+            for m in kes_komutu(a.vod, dizin, ayar, _gecersiz(a), a.zorla, a.yeniden, a.suzgecsiz):
                 print(m)
         elif a.komut == 'otomatik':
             rapor = tara(ayar, dizin, a.yayinci)

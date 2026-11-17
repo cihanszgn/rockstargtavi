@@ -389,5 +389,292 @@ class Ayar(unittest.TestCase):
                 os.environ['YAYIN_KLIP_DIZIN'] = eski
 
 
+class OyunSuzgeci(unittest.TestCase):
+    def vod(self, kategori='Just Chatting', baslik='Gece yayını'):
+        return {'oyun': kategori, 'kategoriler': [kategori] if kategori else [], 'baslik': baslik}
+
+    def test_bos_liste_hepsini_gecirir(self):
+        self.assertEqual(yk.oyun_suzgeci(self.vod(), {'oyunlar': []}), (True, None))
+        self.assertEqual(yk.oyun_suzgeci(self.vod(), {}), (True, None))
+        self.assertEqual(yk.oyun_suzgeci(self.vod(), {'oyunlar': ['', '  ']}), (True, None))  # anlamsız girdi = kapalı
+
+    def test_varsayilan_ayar_kapali(self):
+        self.assertEqual(yk.AYAR_VARSAYILAN['oyunlar'], [])
+
+    def test_kategori_eslesmesi_ad_varyantlari(self):
+        ayar = {'oyunlar': ['Grand Theft Auto VI', 'GTA 6', 'GTA VI']}
+        self.assertEqual(yk.oyun_suzgeci(self.vod('Grand Theft Auto VI'), ayar), (True, 'Grand Theft Auto VI'))
+        self.assertEqual(yk.oyun_suzgeci(self.vod('GTA VI'), ayar), (True, 'GTA VI'))
+        self.assertEqual(yk.oyun_suzgeci(self.vod('gta 6'), ayar), (True, 'GTA 6'))
+
+    def test_buyuk_kucuk_harf_ve_turkce_karakter_duyarsiz(self):
+        ayar = {'oyunlar': ['Kaşık Oyunu', 'IŞIK']}
+        self.assertTrue(yk.oyun_suzgeci(self.vod('KASIK OYUNU'), ayar)[0])
+        self.assertTrue(yk.oyun_suzgeci(self.vod('kaşık oyunu'), ayar)[0])
+        self.assertTrue(yk.oyun_suzgeci(self.vod('Isik'), ayar)[0])
+        self.assertTrue(yk.oyun_suzgeci(self.vod('ışık'), ayar)[0])
+        self.assertTrue(yk.oyun_suzgeci(self.vod('Counter-Strike 2'), {'oyunlar': ['counter strike 2']})[0])
+
+    def test_gta_v_gta_vi_ye_uymaz(self):
+        self.assertFalse(yk.oyun_suzgeci(self.vod('Grand Theft Auto VI'), {'oyunlar': ['Grand Theft Auto V']})[0])
+        self.assertFalse(yk.oyun_suzgeci(self.vod('GTA VI'), {'oyunlar': ['GTA V']})[0])
+        self.assertTrue(yk.oyun_suzgeci(self.vod('GTA V'), {'oyunlar': ['GTA V']})[0])
+
+    def test_uymayan_kategori_elenir(self):
+        self.assertEqual(yk.oyun_suzgeci(self.vod('Just Chatting', 'sohbet'), {'oyunlar': ['GTA VI']}), (False, None))
+
+    def test_baslikta_gecen_oyun_adi(self):
+        v = self.vod('Just Chatting', 'GTA VI düşüren tek yayın!')
+        self.assertEqual(yk.oyun_suzgeci(v, {'oyunlar': ['GTA VI']}), (True, 'GTA VI'))
+        self.assertFalse(yk.oyun_suzgeci(v, {'oyunlar': ['GTA VI'], 'oyun_baslikta_ara': False})[0])
+
+    def test_birden_cok_kategori(self):
+        v = {'oyun': 'Just Chatting', 'kategoriler': ['Just Chatting', 'Grand Theft Auto VI'], 'baslik': ''}
+        self.assertTrue(yk.oyun_suzgeci(v, {'oyunlar': ['Grand Theft Auto VI']})[0])
+
+    def test_tara_suzgeci_uygular_ve_raporlar(self):
+        def kayit(uuid, kat):
+            return {'id': 1, 'channel_id': 7, 'start_time': '2026-11-16 20:00:00', 'session_title': 'Yayın',
+                    'is_live': False, 'source': 'x', 'duration': 3_600_000, 'categories': [{'name': kat}],
+                    'video': {'uuid': uuid}}
+        liste = [kayit('aaaaaaaa-0000-0000-0000-00000000000a', 'Grand Theft Auto VI'),
+                 kayit('aaaaaaaa-0000-0000-0000-00000000000b', 'Just Chatting'),
+                 kayit('aaaaaaaa-0000-0000-0000-00000000000c', 'EA Sports FC 27')]
+        simdi = yk.iso_epoch('2026-11-17 12:00:00')
+
+        def ayarla(oyunlar):
+            a = {**AYAR, 'oyunlar': oyunlar}
+            return {'ayar': a, 'yayincilar': [{'ad': 'D', 'platform': 'kick', 'kanal': 'd', 'etkin': True, 'ayar': a}]}
+        with tempfile.TemporaryDirectory() as t:
+            d = pathlib.Path(t)
+            hepsi = yk.tara(ayarla([]), d, http=lambda u: liste, simdi=simdi)
+            self.assertEqual(len(hepsi['yeni']), 3)
+            self.assertEqual(hepsi['suzgece_uymayan'], [])
+            r = yk.tara(ayarla(['GTA 6', 'Grand Theft Auto VI']), d, http=lambda u: liste, simdi=simdi)
+            self.assertEqual([v['oyun'] for v in r['yeni']], ['Grand Theft Auto VI'])
+            self.assertEqual(r['yeni'][0]['eslesen_oyun'], 'Grand Theft Auto VI')
+            self.assertEqual(sorted(v['oyun'] for v in r['suzgece_uymayan']), ['EA Sports FC 27', 'Just Chatting'])
+
+    def test_vod_normalle_kategorileri_tasir(self):
+        g = {'channel_id': 7, 'start_time': '2026-11-16 20:00:00', 'session_title': 'x', 'duration': 1000,
+             'categories': [{'name': 'A'}, {'name': 'B'}], 'video': {'uuid': 'u'}}
+        v = yk.vod_normalle(g, 'k', 'K')
+        self.assertEqual((v['oyun'], v['kategoriler']), ('A', ['A', 'B']))
+
+
+class Kadraj(unittest.TestCase):
+    TUVAL_H = 1920
+
+    def kutular(self, yz):
+        """(görüntü aralığı, {yazı: aralık}); yazı yüksekliği = boyut × satır katsayısı."""
+        gorsel = (yz['gorsel_y'], yz['gorsel_y'] + yz['gorsel_h'])
+        yazilar = {a: (y, y + int(yk.DUZEN[a]['boyut'] * yk.METIN_SATIR_KATSAYI)) for a, y in yz['y'].items()}
+        return gorsel, yazilar
+
+    def test_serit_eski_duzeni_aynen_verir(self):
+        yz = yk.yerlesim({'duzen': 'serit'})
+        self.assertEqual((yz['gorsel_h'], yz['gorsel_y']), (608, 656))
+        self.assertEqual(yz['y'], {'ust_ad': 430, 'ust_oyun': 530, 'alt_kaynak': 1340, 'alt_marka': 1415})
+        f = yk.filtre_yaz('C:\\Windows\\Fonts\\arialbd.ttf', yk.klip_metinleri(Paket.VOD), ayar={'duzen': 'serit'})
+        self.assertIn('scale=1080:-2:flags=lanczos', f)
+        self.assertNotIn('crop=w=min', f)
+        self.assertIn('overlay=0:656', f)
+
+    def test_kadraj_serit_den_belirgin_buyuk(self):
+        serit = yk.yerlesim({'duzen': 'serit'})['gorsel_h']
+        for oran, en_az_kat in ((1.0, 1.7), (1.2, 1.4), (4 / 3, 1.3)):
+            yz = yk.yerlesim({'duzen': 'kadraj', 'kadraj_oran': oran})
+            self.assertGreaterEqual(yz['gorsel_h'] / serit, en_az_kat, oran)
+
+    def test_kadraj_olculeri(self):
+        self.assertEqual(yk.yerlesim({'kadraj_oran': 1.0})['gorsel_h'], 1080)   # kare
+        self.assertEqual(yk.yerlesim({'kadraj_oran': 4 / 3})['gorsel_h'], 810)  # 4:3
+        yz = yk.yerlesim({'kadraj_oran': 1.2})
+        self.assertEqual(yz['gorsel_h'], 900)
+        self.assertEqual(yz['gorsel_y'], yk.DUZEN['gorsel_merkez_y'] - 450)     # görüntünün orta çizgisi sabit
+
+    def test_kadraj_orani_sinirlanir(self):
+        self.assertEqual(yk.yerlesim({'kadraj_oran': 0.5})['oran'], yk.KADRAJ_EN_AZ)   # çok dik: kareye kenetlenir
+        self.assertEqual(yk.yerlesim({'kadraj_oran': 5})['oran'], yk.KAYNAK_ORAN)      # kırpılacak şey kalmaz
+        self.assertEqual(yk.yerlesim({'kadraj_oran': 5})['gorsel_h'], 608)
+
+    def test_yazilar_goruntuyle_cakismaz_ve_tuvalde_kalir(self):
+        for oran in (1.0, 1.1, 1.2, 4 / 3, 1.5, 1.78):
+            yz = yk.yerlesim({'kadraj_oran': oran})
+            (g0, g1), yazilar = self.kutular(yz)
+            for ad, (y0, y1) in yazilar.items():
+                self.assertTrue(y1 <= g0 or y0 >= g1, f'{ad} görüntüye biniyor (oran {oran})')
+                self.assertGreaterEqual(y0, 100, f'{ad} üst kenara çok yakın (oran {oran})')
+                self.assertLessEqual(y1, self.TUVAL_H, f'{ad} tuval dışı (oran {oran})')
+            sirali = sorted(yazilar.values())
+            for a, b in zip(sirali, sirali[1:]):
+                self.assertLessEqual(a[1], b[0], f'yazılar birbirine biniyor (oran {oran})')
+
+    def test_kadraj_filtresi_ortadan_kirpar(self):
+        f = yk.filtre_yaz('C:\\Windows\\Fonts\\arialbd.ttf', yk.klip_metinleri(Paket.VOD), ayar={'kadraj_oran': 1.2})
+        crop = 'crop=w=min(iw\\,ih*1.2000):h=min(ih\\,iw/1.2000),scale=1080:900:flags=lanczos'
+        self.assertIn(crop, f)      # x/y verilmediği için kırpma ortadan yapılır: oyun ekranının ortası kalır
+        self.assertIn('overlay=0:430', f)
+        self.assertIn('1080:1920', f)
+
+    def test_varsayilan_kadraj(self):
+        self.assertEqual(yk.AYAR_VARSAYILAN['duzen'], 'kadraj')
+        self.assertEqual(yk.yerlesim()['mod'], 'kadraj')
+
+    def test_gecersiz_duzen_hata(self):
+        with self.assertRaises(yk.KlipHatasi):
+            yk.yerlesim({'duzen': 'baska'})
+
+    def test_paket_guncel_duzen_degisince_yeniden_uretir(self):
+        klip = {'klip_baslangic_sn': 10.0, 'klip_bitis_sn': 50.0}
+        with tempfile.TemporaryDirectory() as t:
+            yol = pathlib.Path(t) / 'klip-01.json'
+            yol.write_text(json.dumps({**klip, 'duzen': yk.duzen_imzasi({'kadraj_oran': 1.2})}), encoding='utf-8')
+            self.assertTrue(yk.paket_guncel(yol, klip, {'kadraj_oran': 1.2}))
+            self.assertFalse(yk.paket_guncel(yol, klip, {'kadraj_oran': 1.0}))
+            self.assertFalse(yk.paket_guncel(yol, klip, {'duzen': 'serit'}))
+            self.assertFalse(yk.paket_guncel(yol, {**klip, 'klip_baslangic_sn': 11.0}, {'kadraj_oran': 1.2}))
+            self.assertFalse(yk.paket_guncel(pathlib.Path(t) / 'yok.json', klip, {}))
+
+
+class ZayifZirve(unittest.TestCase):
+    def test_emote_disi_mi(self):
+        for metin in ('[emote:6:KEKW]', '[emote:1:A][emote:2:B] [emote:3:C]', '  [emote:1:A]  ', ''):
+            self.assertFalse(yk.emote_disi_mi(metin), metin)
+        for metin in ('kız bundan iyi kurtulmuş ya', 'ŞAMPİYON [emote:1:KEKW]', 'gol', '1', '2222', 'xd', '!kazan'):
+            self.assertTrue(yk.emote_disi_mi(metin), metin)
+
+    def test_zirve_kalitesi_sayilari(self):
+        k = yk.zirve_kalitesi([('1111', 1), ('[emote:1:X]', 2), ('harika gol', 3), ('süper maç', 3), ('[emote:2:Y] [emote:3:Z]', 4)])
+        self.assertEqual(k['zirve_mesaj_sayisi'], 5)
+        self.assertEqual(k['farkli_kullanici'], 4)
+        self.assertEqual(k['emote_disi_mesaj'], 3)
+        self.assertEqual(k['emote_disi_oran'], 0.6)
+
+    # Kemalcan Parlak yayınında (kick:9ae47b40) üç örnek klibin gerçek sohbet ölçümü (sohbet önbelleği v2):
+    GERCEK = {'klip-01': {'farkli_kullanici': 145, 'emote_disi_oran': 0.797},
+              'klip-02': {'farkli_kullanici': 83, 'emote_disi_oran': 0.142},
+              'klip-03': {'farkli_kullanici': 87, 'emote_disi_oran': 0.952}}
+
+    def test_gercek_olcum_yalniz_klip_02_elenir(self):
+        sonuc = {ad: yk.zayiflik_nedenleri(k, AYAR) for ad, k in self.GERCEK.items()}
+        self.assertEqual(sonuc['klip-01'], [])
+        self.assertEqual(sonuc['klip-03'], [])
+        self.assertEqual(len(sonuc['klip-02']), 1)
+        self.assertTrue(sonuc['klip-02'][0].startswith('emote_agirlikli'))
+
+    def test_gondericisiz_veri_kullanici_olcutunu_atlar(self):
+        k = yk.zirve_kalitesi([('merhaba nasılsın', ''), ('güzel yayın', None)])
+        self.assertIsNone(k['farkli_kullanici'])
+        self.assertEqual(yk.zayiflik_nedenleri(k, AYAR), [])
+
+    def test_nedenler(self):
+        self.assertEqual(yk.zayiflik_nedenleri({'farkli_kullanici': 40, 'emote_disi_oran': 0.6}, AYAR), [])
+        az = yk.zayiflik_nedenleri({'farkli_kullanici': 5, 'emote_disi_oran': 0.6}, AYAR)
+        self.assertEqual(len(az), 1)
+        self.assertTrue(az[0].startswith('az_kullanici'))
+        emote = yk.zayiflik_nedenleri({'farkli_kullanici': 80, 'emote_disi_oran': 0.05}, AYAR)
+        self.assertTrue(emote[0].startswith('emote_agirlikli'))
+        self.assertEqual(len(yk.zayiflik_nedenleri({'farkli_kullanici': 5, 'emote_disi_oran': 0.05}, AYAR)), 2)
+
+    def test_varsayilan_esikler_ayarda(self):
+        self.assertIn('min_farkli_kullanici', yk.AYAR_VARSAYILAN)
+        self.assertIn('min_emote_disi_oran', yk.AYAR_VARSAYILAN)
+
+    def vod(self):
+        return {'platform': 'kick', 'vod_id': 'y' * 8, 'anahtar': 'kick:yyyyyyyy', 'yayinci': 'D', 'kanal': 'd',
+                'baslik': 'b', 'oyun': 'GTA V', 'sure_sn': SURE, 'vod_url': 'u', 'kanal_url': 'k',
+                'tarih': '2026-11-16', 't0_epoch': 1_000_000, 't0_kaynagi': 'test'}
+
+    def sohbet(self, emote_kisi=3, gercek_kisi=60):
+        """Aynı hacimde iki patlama: 3000. sn yalnız emote (az kişi), 5000. sn gerçek yazı (çok kişi)."""
+        t0 = 1_000_000
+        m = [(t0 + s, 'selam hocam nasılsın', 1000 + s % 7) for s in range(0, SURE, 2)]
+        for i in range(90):
+            m.append((t0 + 3000 + i // 9, '[emote:1:dance]', i % emote_kisi))
+        for i in range(70):
+            m.append((t0 + 5000 + i // 7, 'ne kadar güzel gol oldu', 5000 + i % gercek_kisi))
+        return m
+
+    def test_emote_patlamasi_elenir_gercek_kalir(self):
+        sonuc = yk.analiz_et(self.vod(), self.sohbet(), AYAR)
+        self.assertEqual([k['zirve_sn'] for k in sonuc['klipler']], [5000])
+        el = sonuc['elenen_zirveler']
+        self.assertEqual([e['zirve_sn'] for e in el], [3000])
+        self.assertTrue(any(n.startswith('emote_agirlikli') for n in el[0]['neden']))
+        self.assertTrue(any(n.startswith('az_kullanici') for n in el[0]['neden']))
+        self.assertGreaterEqual(sonuc['klipler'][0]['farkli_kullanici'], 60)
+        self.assertGreaterEqual(sonuc['klipler'][0]['emote_disi_oran'], 0.9)
+
+    def test_az_kisinin_gercek_yazisi_da_elenir(self):
+        sonuc = yk.analiz_et(self.vod(), self.sohbet(gercek_kisi=4), AYAR)   # 4 kişi 70 mesaj yazdı
+        self.assertEqual([k['zirve_sn'] for k in sonuc['klipler']], [])
+        self.assertTrue(all(any(n.startswith('az_kullanici') for n in e['neden']) for e in sonuc['elenen_zirveler']))
+
+    def test_elenenin_yerini_siradaki_alir(self):
+        # Puanı en yüksek zirve (emote) zayıf: azami_klip=1 olsa da gerçek zirve seçilir.
+        sonuc = yk.analiz_et(self.vod(), self.sohbet(), {**AYAR, 'azami_klip': 1})
+        self.assertEqual([k['zirve_sn'] for k in sonuc['klipler']], [5000])
+
+    def test_esik_ayarla_degisir(self):
+        gevsek = {**AYAR, 'min_farkli_kullanici': 1, 'min_emote_disi_oran': 0.0}
+        sonuc = yk.analiz_et(self.vod(), self.sohbet(), gevsek)
+        self.assertEqual([k['zirve_sn'] for k in sonuc['klipler']], [3000, 5000])
+        self.assertEqual(sonuc['elenen_zirveler'], [])
+
+    def test_gondericisiz_eski_veride_yalniz_emote_olcutu_calisir(self):
+        eski = [(t, x) for t, x, _ in self.sohbet()]   # 2'li demetler: gönderen yok
+        sonuc = yk.analiz_et(self.vod(), eski, AYAR)
+        self.assertEqual([k['zirve_sn'] for k in sonuc['klipler']], [5000])
+        self.assertIsNone(sonuc['klipler'][0]['farkli_kullanici'])
+
+    def test_kalitesiz_cagri_eski_davranis(self):
+        klipler, ist = yk.zirveleri_bul(patlama(duz_sohbet(), 300, 90), AYAR, SURE)   # kalite verilmedi
+        self.assertEqual(len(klipler), 1)
+        self.assertEqual(ist['elenen'], [])
+
+
+class SohbetDepolama(unittest.TestCase):
+    def mesaj(self, i, sn, uid=7):
+        return {'id': f'm{i}', 'type': 'message', 'content': f'mesaj {i}', 'created_at': yk.epoch_iso(sn),
+                'user_id': uid, 'sender': {'id': uid}}
+
+    def test_pencere_gonderen_kimligini_tasir(self):
+        bas = 4_000_000
+        veri = {'data': {'messages': [self.mesaj(1, bas, 11), self.mesaj(2, bas + 1, 12),
+                                      {'id': 'm3', 'type': 'message', 'content': 'x',
+                                       'created_at': yk.epoch_iso(bas + 2), 'sender': {'id': 13}}]}}
+        sonuc = yk.kick_pencere(lambda u: veri, 7, bas)
+        self.assertEqual(sorted(m[3] for m in sonuc), [11, 12, 13])
+
+    def vod(self):
+        return {'platform': 'kick', 'vod_id': 'abc', 'anahtar': 'kick:abc', 'kanal_id': 7, 't0_epoch': 5_000_000,
+                'sure_sn': 5}
+
+    def test_eski_onbellek_gecersiz_yenisi_kullanilir(self):
+        bas = 5_000_000
+        veri = {'data': {'messages': [self.mesaj(1, bas, 21)]}}
+        with tempfile.TemporaryDirectory() as t:
+            d = pathlib.Path(t)
+            (d / 'sohbet').mkdir()
+            yol = d / 'sohbet' / 'kick-abc.json'
+            yol.write_text(json.dumps({'vod': 'kick:abc', 'mesajlar': [[bas, 'eski']]}), encoding='utf-8')  # sürüm 1
+            m = yk.sohbet_al(self.vod(), d, http=lambda u: veri)
+            self.assertEqual([(x[1], x[2]) for x in m], [('mesaj 1', 21)])
+            self.assertEqual(json.loads(yol.read_text(encoding='utf-8'))['surum'], yk.SOHBET_SURUMU)
+
+            def ag_yok(u):
+                raise AssertionError('önbellek varken ağa gidilmemeli')
+            self.assertEqual(yk.sohbet_al(self.vod(), d, http=ag_yok), m)
+
+    def test_eski_part_satiri_gondericisiz_okunur(self):
+        bas = 6_000_000
+        with tempfile.TemporaryDirectory() as t:
+            part = pathlib.Path(t) / 'x.part.jsonl'
+            part.write_text(json.dumps({'w': bas, 'm': [['m9', bas, 'eski mesaj']]}) + '\n', encoding='utf-8')
+            sonuc = yk.kick_sohbet_indir(lambda u: {'data': {'messages': []}}, 7, bas, 0, part)
+            self.assertEqual(sonuc, [(bas, 'eski mesaj', '')])
+
+
 if __name__ == '__main__':
     unittest.main()

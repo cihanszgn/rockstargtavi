@@ -1,5 +1,5 @@
 {
-  "_not": "Yayın klip hattı (tools/yayin_klip.py). Yayıncı eklemek: yayincilar listesine tek satır ekle. platform: kick (tek desteklenen). Doğrulama: 2026-11-17, kick.com/api/v2/channels/<kanal> (kanal var, onaylı, son yayınları listeleniyor).",
+  "_not": "Yayın klip hattı (tools/yayin_klip.py). Yayıncı eklemek: yayincilar listesine tek satır ekle. platform: kick (tek desteklenen). Doğrulama: 2026-11-17, kick.com/api/v2/channels/<kanal> (kanal var, onaylı, son yayınları listeleniyor). oyunlar: boş = bütün yayınlar; örn. [\"Grand Theft Auto VI\", \"GTA 6\", \"GTA VI\"] yalnız kategorisi/başlığı bu adlardan biriyle eşleşen yayınları işler (harf ve Türkçe karakter duyarsız; 'GTA V' ≠ 'GTA VI'). duzen: kadraj (yayın ortadan kırpılıp büyür; kadraj_oran 1.0 kare … 1.78 kırpma yok) veya serit (eski tam genişlik şerit). min_farkli_kullanici / min_emote_disi_oran: yalnız emote ya da çok az kişinin yazdığı zirveleri eler.",
   "ayar": {
     "dilim_sn": 10,
     "esik_k": 2.5,
@@ -13,7 +13,13 @@
     "azami_klip": 3,
     "bas_dislama_sn": 300,
     "son_dislama_sn": 180,
-    "son_gun": 7
+    "son_gun": 7,
+    "min_farkli_kullanici": 25,
+    "min_emote_disi_oran": 0.25,
+    "duzen": "kadraj",
+    "kadraj_oran": 1.2,
+    "oyunlar": [],
+    "oyun_baslikta_ara": true
   },
   "yayincilar": [
     {"ad": "Tolunay Ören", "platform": "kick", "kanal": "tolunayoren", "etkin": true},
