@@ -32,7 +32,7 @@ concurrency:
 jobs:
   paylas:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
         with:
@@ -46,6 +46,7 @@ jobs:
         run: python -m pip install --quiet pillow==11.3.0
 
       - name: Kuyruk kartlarını üret ve yayına al
+        id: kart
         if: inputs.deneme != true
         env:
           GH_TOKEN: ${{ github.token }}
@@ -72,7 +73,7 @@ jobs:
           # değil, onun üstündeki daha yeni bir commit'in olur; o da kartlarımızı içerir, geçerli sayılır.
           # Araya giren push bizim derlememizi "errored" yapabilir: bir kez yeniden derletilir.
           yeniden=0
-          for i in $(seq 1 32); do
+          for i in $(seq 1 60); do
             durum=$(gh api "repos/$GITHUB_REPOSITORY/pages/builds/latest" --jq '.status')
             commit=$(gh api "repos/$GITHUB_REPOSITORY/pages/builds/latest" --jq '.commit')
             if [ "$durum" = "built" ]; then
@@ -87,13 +88,19 @@ jobs:
             fi
             sleep 15
           done
-          [ "$yayinda" = 1 ] || { echo "Kartların Pages yayını doğrulanamadı; paylaşım yapılmadı."; exit 1; }
+          # Pages sırası dolu olabilir (art arda push'lar derlemeyi bekletir): bu arıza değil gecikmedir.
+          # Tur kırmızıya düşmez; paylaşım atlanır, kuyruk bir sonraki turda gönderilir.
+          if [ "$yayinda" != 1 ]; then
+            echo "::warning::Kartların Pages yayını 15 dakikada doğrulanamadı (son durum: $durum); paylaşım bir sonraki tura kaldı."
+            echo "yayinda=0" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Site yayına çıksın diye bekle (en yeni haber sayfası açılınca devam eder)
-        if: github.event_name == 'push' || github.event_name == 'workflow_run'
+        if: (github.event_name == 'push' || github.event_name == 'workflow_run') && steps.kart.outputs.yayinda != '0'
         run: python tools/sosyal_yayinla.py --sayfa-bekle
 
       - name: Paylaş
+        if: steps.kart.outputs.yayinda != '0'
         env:
           DENEME: ${{ inputs.deneme && '--dry-run' || '' }}
           X_TR_API_KEY: ${{ secrets.X_TR_API_KEY }}
