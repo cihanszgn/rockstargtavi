@@ -37,6 +37,22 @@ class GlobalInstagram(Temel):
         self.assertIn(sy.paylasim_linki('en', x, 'instagram'), m)
         self.assertTrue(m.endswith('#Game #Patch #Shared #Oyun #Yama'))
 
+    def test_ikinci_dil_yoksa_aciklama_yalniz_ingilizce_kaynak_adi_yalin(self):
+        x, a = self.haber(), self.ayar()
+        a['hesaplar']['tr']['instagram_icerik'] = {'ana': 'en'}
+        x['kaynaklar'][0]['ad'] = 'Steam resmî duyurusu'
+        m = sy.ig_aciklama('tr', x, a)
+        self.assertTrue(m.startswith('English title\n\nEnglish summary.\n\nSource: Steam\n'))
+        for turkce in ('Türkçe', '---', 'resmî', '#Oyun'):
+            self.assertNotIn(turkce, m)
+
+    def test_kaynak_adi_turkcede_aynen_baska_dilde_yalin(self):
+        ad = sy.kaynak_adi
+        self.assertEqual(ad('tr', 'Steam resmî duyurusu'), 'Steam resmî duyurusu')
+        self.assertEqual(ad('en', 'Selaco — Steam resmî duyurusu'), 'Selaco')
+        self.assertEqual(ad('en', 'Nintendo (resmî duyuru)'), 'Nintendo')
+        self.assertEqual(ad('en', 'World of Warcraft (Blizzard)'), 'World of Warcraft (Blizzard)')
+
     def test_2200_sinirinda_once_ikinci_dilin_cumleleri_kisalir(self):
         x = self.haber()
         x['diller']['en']['ozet'] = 'English sentence. ' * 60

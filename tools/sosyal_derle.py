@@ -40,6 +40,13 @@ AY, M = alan('ay'), alan('sosyal')
 e = lambda s: html.escape(str(s), quote=True)  # noqa: E731
 
 
+def kaynak_adi(dil, ad):
+    """Kaynak adları veride Türkçe yazılır; başka dilde Türkçe niteleme atılır, yalın yayın adı kalır."""
+    if dil == "tr":
+        return ad
+    return re.sub(r"\s*\(?resm[iî]\b.*$", "", ad.split(" — ")[0]).strip() or ad
+
+
 def metni_sar(c, metin, f, gen):
     """CJK metnini karakterlerden, Latin sözcükleri bölmeden satırlara ayırır."""
     if not re.search(r'[\u3400-\u9fff]', metin):
@@ -371,7 +378,7 @@ def kartlar(veri: list[dict], sosyal=None, *, cikti=None) -> tuple[int, int]:
         c.text((P, yb), GORUNEN, font=fs, fill=YAZI, anchor="ls")
         fk = font("duz", 26)
         iki_nokta = " : " if dil == "fr" else ": "
-        sag = kisalt(c, f"{tarih_yaz(dil, x['tarih'])}   {m['kaynak']}{iki_nokta}{x['kaynaklar'][0]['ad']}", fk,
+        sag = kisalt(c, f"{tarih_yaz(dil, x['tarih'])}   {m['kaynak']}{iki_nokta}{kaynak_adi(dil, x['kaynaklar'][0]['ad'])}", fk,
                      gen - round(c.textlength(GORUNEN, font=fs)) - 40)
         c.text((W - P, yb), sag, font=fk, fill=SOLUK, anchor="rs")
         # metin bloğu alttan hizalı: etiketler, başlık, özet
@@ -434,7 +441,7 @@ def kartlar(veri: list[dict], sosyal=None, *, cikti=None) -> tuple[int, int]:
         c.text((P, yb), GORUNEN, font=fs, fill=YAZI, anchor="ls")
         fk = font("duz", 26 if W >= 1200 else 28)
         iki_nokta = " : " if dil == "fr" else ": "
-        sag = kisalt(c, f"{tarih_yaz(dil, x['tarih'])}   {m['kaynak']}{iki_nokta}{x['kaynaklar'][0]['ad']}", fk,
+        sag = kisalt(c, f"{tarih_yaz(dil, x['tarih'])}   {m['kaynak']}{iki_nokta}{kaynak_adi(dil, x['kaynaklar'][0]['ad'])}", fk,
                      gen - round(c.textlength(GORUNEN, font=fs)) - 40)
         c.text((W - P, yb), sag, font=fk, fill=SOLUK, anchor="rs")
         # başlık (ve dikey kartta özet), üst ile alt bilgi arasında dikey ortalı

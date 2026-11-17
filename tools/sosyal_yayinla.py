@@ -48,7 +48,7 @@ from datetime import date, datetime, timedelta, timezone
 
 KOK = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(KOK / "tools"))
-from sosyal_derle import DILLER, GORUNEN, KLASOR, M, SITE, kart_ad  # noqa: E402
+from sosyal_derle import DILLER, GORUNEN, KLASOR, M, SITE, kart_ad, kaynak_adi  # noqa: E402
 import video_site as vs  # noqa: E402
 import sosyal_kuyruk as sk  # noqa: E402
 
@@ -265,7 +265,7 @@ def ig_aciklama(dil, x, ayar=None) -> str:
                 tags.append(tag)
                 gorulen.add(tag.casefold())
         tags = tags[:15]
-        kay = emojisiz(', '.join(s['ad'] for s in x['kaynaklar']))[:240]
+        kay = emojisiz(', '.join(kaynak_adi(ana, s['ad']) for s in x['kaynaklar']))[:240]
         cagri = f"{METIN[ana]['devam']} {paylasim_linki(ana, x, 'instagram')}"
 
         def birlestir():
@@ -285,7 +285,7 @@ def ig_aciklama(dil, x, ayar=None) -> str:
         return birlestir()
     # İçerik ayarı olmayan hesaplarda eski açıklama aynen korunur.
     t = x["diller"][dil]
-    kay = ", ".join(s["ad"] for s in x["kaynaklar"])
+    kay = ", ".join(kaynak_adi(dil, s["ad"]) for s in x["kaynaklar"])
     etiket = " ".join(etiketler(dil, x))
     son = f"\n\n{M[dil]['kaynak']}: {kay[:240]}\n{paylasim_linki(dil, x, 'instagram')}\n\n{etiket}"
     bas = t['baslik'][:300]
@@ -387,7 +387,7 @@ def yt_baslik(dil, x) -> str:
 
 def yt_aciklama(dil, x, link) -> str:
     t = x["diller"][dil]
-    kay = ", ".join(s["ad"] for s in x["kaynaklar"])
+    kay = ", ".join(kaynak_adi(dil, s["ad"]) for s in x["kaynaklar"])
     etiket = " ".join(etiketler(dil, x))
     metin = f"{t['ozet']}\n\n{METIN[dil]['devam']} {link}\n{M[dil]['kaynak']}: {kay}\n\n{etiket} #Shorts".strip()
     return emojisiz(re.sub(r"[<>]", "", metin))[:4900]

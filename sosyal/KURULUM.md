@@ -88,12 +88,14 @@ Mevcut hesap aynı hesaptır; yeni Instagram hesabı veya yeni GitHub Secret aç
 `sosyal/ayarlar.json` içindeki `hesaplar.tr.instagram_icerik` içerik dilini belirler:
 
 ```json
-"instagram_icerik": {"ana": "en", "ikinci": "tr"}
+"instagram_icerik": {"ana": "en"}
 ```
 
 Görsel gönderide İngilizce `kart/<id>-en-ig.jpg`, Reels'te haberin hazır/onaylı İngilizce videosu kullanılır.
 İngilizce video yoksa Türkçe videoya düşülmez; görsel gönderi seçilebilir. Reels için mevcut hype eşiği korunur.
-Her iki biçimde açıklama İngilizce başlık ve özet/metin, ayırıcı, Türkçe başlık ve kısa özet sırasındadır.
+Açıklama yalnız İngilizcedir (Cio, 2026-11-17: görsel İngilizceyken Türkçe bölüm istenmedi). `"ikinci": "tr"` eklenirse
+İngilizce bölümün altına ayırıcıyla Türkçe başlık ve kısa özet gelir. Kaynak adındaki Türkçe niteleme başka dilde atılır
+(`sosyal_derle.kaynak_adi`: "Steam resmî duyurusu" → "Steam").
 Sonda İngilizce bağlantı çağrısı, İngilizce haber sayfasına mevcut UTM'li adres ve iki dilin tekrarsız etiketleri vardır.
 En çok 15 etiket kullanılır; açıklama 2200 karakteri aşarsa önce ikinci dilin, sonra ana dilin metni tam cümlelerden
 kısaltılır. Başlıklar ve bağlantı çağrısı korunur. İkinci dil özeti en çok 500 karakterlik tam cümlelerle sınırlıdır.
