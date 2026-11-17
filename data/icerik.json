@@ -1,5 +1,66 @@
 [
  {
+  "id": "rob-run-patch-2026-11-17",
+  "oyun": "ROB RUN",
+  "tarih": "2026-11-17",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam resmî yama notları",
+    "url": "https://store.steampowered.com/news/app/4262460/view/717921532895037154"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "ROB RUN'da yeni yama yayında",
+    "ozet": "Hapis, sohbet ve bağlantı düzeltmeleri",
+    "metin": "ROB RUN için Steam'deki resmî yama notlarına göre yeni değişiklikler canlıya alındı. Karakter adlarında küfür filtresi eklendi ve ölüm ekranındaki Rapor butonu daha belirgin hale getirildi. Lenny'nin bağlam menüsüne Shipments seçeneği geldi. Bölge değiştiren oyuncuların ilerlemesi ve Battle Pass puanları artık korunuyor. Fare için Y ekseni ters çevirme seçeneği de eklendi. Hapis süresine günlük ve genel sınır getirildi. Arsa sahibi olmayan veya henüz hapis süresi birikmemiş oyuncular hapishanede ve Lenny's Motel'de sesli sohbete erişemiyor. Takasta Eviction Rights geçici olarak kaldırıldı. Geliştiriciler bağlantı kararlılığını da iyileştirdi ve ROB RUN üzerindeki çalışmaların sürdüğünü, geri bildirimleri dikkatle dinlediklerini belirtti."
+   },
+   "en": {
+    "baslik": "ROB RUN patch adds profanity filter and fixes",
+    "ozet": "Jail Time limits, voice chat and connection fixes",
+    "metin": "According to the official patch notes on Steam, a new ROB RUN update is now live. Character names now go through a profanity filter, and the Report button on the death screen is easier to spot. Lenny's context menu gains a Shipments option. Progress and Battle Pass points now carry over when players switch regions. A new setting lets you invert the mouse Y-axis. Jail Time now has daily and overall limits. Players without a land plot or without accumulated Jail Time cannot use voice chat in the Prison or at Lenny's Motel. Eviction Rights have been temporarily removed from barter. The developers also say they improved connection stability and are continuing work on ROB RUN, listening closely to player feedback."
+   },
+   "fr": {
+    "baslik": "ROB RUN : un patch avec filtre et corrections",
+    "ozet": "Temps de prison, vocal et connexion",
+    "metin": "D'après les notes de patch officielles publiées sur Steam, une nouvelle mise à jour de ROB RUN est désormais en ligne. Les noms de personnages passent par un filtre de grossièretés, et le bouton Signaler de l'écran de mort est plus visible. Le menu contextuel de Lenny reçoit une option Shipments. La progression et les points du Battle Pass sont conservés en cas de changement de région. Un nouveau réglage permet d'inverser l'axe Y de la souris. Le temps de prison est désormais limité par jour et au total. Les joueurs sans parcelle de terrain ou sans temps de prison accumulé n'ont pas accès au chat vocal à la prison ni au Motel de Lenny. Le droit d'expulsion a été temporairement retiré du troc. Les développeurs indiquent aussi avoir amélioré la stabilité de la connexion et poursuivre le travail sur ROB RUN."
+   },
+   "es": {
+    "baslik": "ROB RUN recibe un parche con filtro y arreglos",
+    "ozet": "Límites de cárcel, voz y conexión",
+    "metin": "Según las notas oficiales del parche publicadas en Steam, ya hay una nueva actualización de ROB RUN en vivo. Los nombres de personaje ahora pasan por un filtro de lenguaje ofensivo, y el botón Reportar de la pantalla de muerte es más visible. El menú contextual de Lenny suma la opción Shipments. El progreso y los puntos del Pase de batalla se mantienen al cambiar de región. También hay una opción para invertir el eje Y del ratón. El tiempo de cárcel tiene ahora límites diarios y generales. Los jugadores sin parcela de tierra o sin tiempo de cárcel acumulado no podrán usar el chat de voz en la prisión ni en el Motel de Lenny. Se ha quitado temporalmente el derecho de desalojo en el trueque. Los desarrolladores afirman que mejoraron la estabilidad de la conexión y que siguen trabajando en ROB RUN."
+   },
+   "de": {
+    "baslik": "ROB RUN: Patch mit Schimpfwortfilter und Fixes",
+    "ozet": "Haftzeit, Sprachchat und Verbindung",
+    "metin": "Laut den offiziellen Patchnotes auf Steam ist ein neues Update für ROB RUN jetzt live. Charakternamen werden nun mit einem Filter für Schimpfwörter geprüft, und der Melden-Button auf dem Todesbildschirm ist deutlicher zu sehen. Lennys Kontextmenü bekommt die Option Shipments. Fortschritt und Battle-Pass-Punkte bleiben erhalten, wenn Spieler die Region wechseln. Neu ist außerdem eine Option, die Y-Achse der Maus umzukehren. Die Haftzeit hat jetzt tägliche und allgemeine Grenzen. Spieler ohne Grundstück oder ohne angesammelte Haftzeit können im Gefängnis und im Motel von Lenny keinen Sprachchat nutzen. Das Vertreibungsrecht wurde im Tauschhandel vorübergehend entfernt. Die Entwickler haben außerdem die Verbindungsstabilität verbessert und arbeiten weiter an ROB RUN."
+   },
+   "nl": {
+    "baslik": "ROB RUN-patch met scheldwoordenfilter en fixes",
+    "ozet": "Gevangenistijd, spraakchat en verbinding",
+    "metin": "Volgens de officiële patchnotes op Steam is er nu een nieuwe update voor ROB RUN live. Karakternamen worden gecontroleerd met een scheldwoordenfilter, en de Melden-knop op het doodscherm valt beter op. Lenny's contextmenu krijgt een Shipments-optie. Voortgang en Battle Pass-punten blijven behouden als spelers van regio wisselen. Er is ook een nieuwe optie om de Y-as van de muis om te keren. Gevangenistijd heeft nu dagelijkse en algemene limieten. Spelers zonder perceel of zonder opgebouwde gevangenistijd hebben geen toegang tot spraakchat in de gevangenis of in Lenny's Motel. Uitzettingsrechten zijn tijdelijk uit de ruilhandel gehaald. De ontwikkelaars hebben ook de verbindingsstabiliteit verbeterd en werken verder aan ROB RUN."
+   },
+   "zh": {
+    "baslik": "ROB RUN 新补丁上线",
+    "ozet": "监狱时间、语音与连接修复",
+    "metin": "根据 Steam 上的官方补丁说明，《ROB RUN》的新更新现已上线。角色名称现在会经过脏话过滤，死亡界面上的举报按钮也更加醒目。Lenny's 右键菜单新增了 Shipments 选项。玩家切换地区时，进度和战斗通行证积分现在会保留。新增了反转鼠标 Y 轴的选项。监狱时间设置了每日和总体上限。没有地块或尚未积累监狱时间的玩家，无法在监狱和 Lenny's Motel 使用语音聊天。以物易物中的驱逐权已暂时移除。开发者还表示，他们改善了连接稳定性，并将继续开发《ROB RUN》，认真听取玩家反馈。"
+   }
+  },
+  "otomasyon": {
+   "konu": "rob-run-patch-2026-11-17",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/4262460/view/717921532895037154",
+   "teyit_zamani": "2026-11-17T15:00:52+03:00",
+   "oyuncuya_fayda": "Oyuncular yeni hapis sınırlarını ve sohbet kurallarını öğrenip yamayı buna göre planlayabilir.",
+   "hype": 3,
+   "eklenme": "2026-11-17T15:03:05.624334+03:00"
+  }
+ },
+ {
   "id": "melvor-idle-2-early-access-2026-11-17",
   "oyun": "Melvor Idle 2: A RuneScape Adventure",
   "tarih": "2026-11-17",
