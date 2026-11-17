@@ -1,0 +1,25 @@
+{
+  "_not": "Yayın klip hattı (tools/yayin_klip.py). Yayıncı eklemek: yayincilar listesine tek satır ekle. platform: kick (tek desteklenen). Doğrulama: 2026-11-17, kick.com/api/v2/channels/<kanal> (kanal var, onaylı, son yayınları listeleniyor).",
+  "ayar": {
+    "dilim_sn": 10,
+    "esik_k": 2.5,
+    "min_mesaj": 20,
+    "min_oran": 2.0,
+    "onceden_sn": 20,
+    "kuyruk_sn": 12,
+    "klip_min_sn": 30,
+    "klip_azami_sn": 55,
+    "birlestir_sn": 30,
+    "azami_klip": 3,
+    "bas_dislama_sn": 300,
+    "son_dislama_sn": 180,
+    "son_gun": 7
+  },
+  "yayincilar": [
+    {"ad": "Tolunay Ören", "platform": "kick", "kanal": "tolunayoren", "etkin": true},
+    {"ad": "wtcN", "platform": "kick", "kanal": "wtcn", "etkin": true},
+    {"ad": "Jahrein", "platform": "kick", "kanal": "jahrein", "etkin": true},
+    {"ad": "Kemalcan Parlak", "platform": "kick", "kanal": "kendinemuzisyen", "etkin": true},
+    {"ad": "Eraycan", "platform": "kick", "kanal": "eray", "etkin": true}
+  ]
+}
