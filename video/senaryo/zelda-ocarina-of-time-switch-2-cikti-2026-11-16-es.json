@@ -1,0 +1,143 @@
+{
+ "id": "zelda-ocarina-of-time-switch-2-cikti-2026-11-16",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "The Legend of Zelda: Ocarina of Time ya está disponible en Nintendo Switch 2.",
+   "veri": {
+    "ust_etiket": "NINTENDO SWITCH 2",
+    "baslik": "Ocarina of Time ya está en Switch 2",
+    "vurgu": [
+     "Switch 2"
+    ],
+    "tuslar": [
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "OCARINA OF TIME",
+    "alt": "NINTENDO SWITCH 2"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según la página oficial de Nintendo, el juego es exclusivo de Switch 2 y se puede jugar ya mismo.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Página oficial de Nintendo",
+    "alinti": "El juego ya está disponible en Nintendo Switch 2."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "NINTENDO"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Nintendo promete gráficos totalmente renovados, música orquestal, voces y escenas cinemáticas ampliadas para una nueva generación.",
+   "veri": {
+    "baslik": "Una experiencia renovada",
+    "maddeler": [
+     {
+      "metin": "Gráficos totalmente renovados",
+      "tetik": "gráficos"
+     },
+     {
+      "metin": "Música orquestal",
+      "tetik": "orquestal"
+     },
+     {
+      "metin": "Voces y escenas ampliadas",
+      "tetik": "voces"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "EXPERIENCIA RENOVADA",
+    "alt": "GRÁFICOS, MÚSICA, VOCES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Los controles mejorados y los movimientos de cámara modernos buscan que sea una buena puerta de entrada a la saga, mientras Link se convierte en el Héroe del Tiempo para frenar a Ganondorf.",
+   "veri": {
+    "baslik": "Puerta para novatos",
+    "maddeler": [
+     {
+      "metin": "Controles mejorados",
+      "tetik": "controles"
+     },
+     {
+      "metin": "Movimientos de cámara modernos",
+      "tetik": "cámara"
+     },
+     {
+      "metin": "Buena puerta de entrada a la saga",
+      "tetik": "puerta"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CONTROLES Y CÁMARA",
+    "alt": "PUERTA DE ENTRADA A LA SAGA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "La página de Nintendo está fechada el 16 de noviembre y el juego ya se puede jugar.",
+   "veri": {
+    "etiket": "Ya se puede jugar",
+    "tarih": "16 de noviembre",
+    "not": "Exclusivo de Nintendo Switch 2."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "16 DE NOVIEMBRE",
+    "alt": "EXCLUSIVO DE SWITCH 2"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game.",
+   "veri": {
+    "cagri": "Todos los detalles en la web",
+    "alt": "Fuente y detalles en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

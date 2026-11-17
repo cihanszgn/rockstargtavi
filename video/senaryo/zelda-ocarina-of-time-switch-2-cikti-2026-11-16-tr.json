@@ -1,0 +1,143 @@
+{
+ "id": "zelda-ocarina-of-time-switch-2-cikti-2026-11-16",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "The Legend of Zelda: Ocarina of Time, Nintendo Switch 2'de yayında.",
+   "veri": {
+    "ust_etiket": "NINTENDO SWITCH 2",
+    "baslik": "Ocarina of Time Switch 2'de yayında",
+    "vurgu": [
+     "Switch 2'de"
+    ],
+    "tuslar": [
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "OCARINA OF TIME",
+    "alt": "NINTENDO SWITCH 2"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Nintendo'nun resmî sayfasına göre oyun Switch 2'ye özel olarak çıktı ve şimdiden oynanabiliyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Nintendo resmî sayfası",
+    "alinti": "Oyun Nintendo Switch 2'de şimdi oynanabilir."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "NINTENDO"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Nintendo, tamamen elden geçirilmiş görüntüler, orkestral müzik, seslendirme ve genişletilmiş ara sahneler vaat ediyor.",
+   "veri": {
+    "baslik": "Yenilenen deneyim",
+    "maddeler": [
+     {
+      "metin": "Baştan yapılan görüntüler",
+      "tetik": "görüntüler"
+     },
+     {
+      "metin": "Orkestral müzik",
+      "tetik": "orkestral"
+     },
+     {
+      "metin": "Seslendirme ve geniş ara sahneler",
+      "tetik": "seslendirme"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "YENİLENEN DENEYİM",
+    "alt": "GÖRÜNTÜ, MÜZİK, SES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Gelişmiş kontroller ve modern kamera hareketleri, seriye yeni başlayanlar için iyi bir giriş sunuyor. Link ise Ganondorf'u durdurmak için Zamanın Kahramanı oluyor.",
+   "veri": {
+    "baslik": "Yeni oyunculara kapı",
+    "maddeler": [
+     {
+      "metin": "Gelişmiş kontroller",
+      "tetik": "kontroller"
+     },
+     {
+      "metin": "Modern kamera hareketleri",
+      "tetik": "kamera"
+     },
+     {
+      "metin": "Seriye iyi bir giriş",
+      "tetik": "giriş"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "KONTROL VE KAMERA",
+    "alt": "SERİYE İYİ BİR GİRİŞ"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Nintendo'nun 16 Kasım tarihli duyurusu, oyunun artık oynanabildiğini söylüyor.",
+   "veri": {
+    "etiket": "Artık oynanabilir",
+    "tarih": "16 Kasım",
+    "not": "Nintendo Switch 2'ye özel."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "16 KASIM",
+    "alt": "SWITCH 2'YE ÖZEL"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Ayrıntıların tamamı sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "Bütün ayrıntılar sitede",
+    "alt": "Kaynak ve ayrıntılar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

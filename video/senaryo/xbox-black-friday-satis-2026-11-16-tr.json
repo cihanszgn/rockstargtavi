@@ -1,0 +1,172 @@
+{
+ "id": "xbox-black-friday-satis-2026-11-16",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Xbox Black Friday indirimleri 19 Kasım'da başlıyor; seçili oyunlarda yüzde 80'e varan indirim var.",
+   "veri": {
+    "ust_etiket": "BLACK FRIDAY 2026",
+    "baslik": "Xbox Black Friday indirimleri 19 Kasım'da başlıyor",
+    "vurgu": [
+     "19 Kasım'da"
+    ],
+    "tuslar": [
+     "X",
+     "B",
+     "F"
+    ]
+   },
+   "alt_kart": {
+    "simge": "indirim",
+    "baslik": "XBOX BLACK FRIDAY",
+    "alt": "19 KASIM'DA BAŞLIYOR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Xbox Wire'ın resmî duyurusuna göre indirimler 19 Kasım'da başlayıp 2 Aralık'a kadar sürüyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Xbox Wire resmî duyuru",
+    "alinti": "Black Friday indirimleri 19 Kasım'da başlayıp 2 Aralık'a kadar sürüyor."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "XBOX WIRE • DUYURU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Black Friday'de 2.000'den fazla oyun indirimde. Forza Horizon 6 Premium Edition'da yüzde 25, NBA 2K27'de yüzde 55 indirim var.",
+   "veri": {
+    "baslik": "BÜYÜK İNDİRİMLER",
+    "maddeler": [
+     {
+      "metin": "2.000'den fazla oyun indirimde",
+      "tetik": "2.000'den"
+     },
+     {
+      "metin": "Forza Horizon 6 Premium Edition: %25",
+      "tetik": "Forza"
+     },
+     {
+      "metin": "NBA 2K27: %55",
+      "tetik": "NBA"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "BÜYÜK İNDİRİMLER",
+    "alt": "FORZA HORIZON 6 VE NBA 2K27"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Xbox Design Lab'de kumandalara yüzde 15'e varan indirim ve ücretsiz gravür var. Seçili aksesuarlar da indirimde.",
+   "veri": {
+    "baslik": "Kumanda ve aksesuar",
+    "maddeler": [
+     {
+      "metin": "Design Lab'de %15'e varan indirim",
+      "tetik": "Design"
+     },
+     {
+      "metin": "Ücretsiz gravür",
+      "tetik": "gravür"
+     },
+     {
+      "metin": "Seçili aksesuarlar indirimde",
+      "tetik": "aksesuarlar"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DESIGN LAB",
+    "alt": "ÜCRETSİZ GRAVÜR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Kampanya seçili Xbox ve PC oyunlarında geçerli; en yüksek indirim yüzde 80. İndirimler yalnızca ABD'de geçerli.",
+   "veri": {
+    "baslik": "Xbox ve PC",
+    "platformlar": [
+     "Xbox",
+     "PC"
+    ],
+    "sayilar": [
+     {
+      "deger": "80",
+      "etiket": "EN YÜKSEK İNDİRİM",
+      "tetik": "80"
+     }
+    ],
+    "not": "Yalnızca ABD'de geçerli"
+   },
+   "alt_kart": {
+    "simge": "indirim",
+    "baslik": "XBOX VE PC",
+    "alt": "SEÇİLİ OYUNLAR, ABD'DE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Kampanya 19 Kasım'da başlıyor ve 2 Aralık'a kadar sürüyor.",
+   "veri": {
+    "etiket": "Kampanya tarihi",
+    "tarih": "19 Kasım",
+    "not": "2 Aralık'a kadar sürüyor; 23 Kasım'da ek teklifler gelir."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "KAMPANYA TARİHİ",
+    "alt": "19 KASIM – 2 ARALIK"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Xbox indirimlerinin tamamı sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "Tüm indirimler sitede",
+    "alt": "Listeyi haberde ve sitede bulabilirsin."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

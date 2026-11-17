@@ -1,0 +1,135 @@
+{
+ "id": "melvor-idle-2-early-access-2026-11-17",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Melvor Idle 2: A RuneScape Adventure ya está disponible en acceso anticipado en Steam.",
+   "veri": {
+    "ust_etiket": "ACCESO ANTICIPADO",
+    "baslik": "Melvor Idle 2 ya está aquí",
+    "vurgu": [
+     "ya está aquí"
+    ],
+    "tuslar": [
+     "M",
+     "I",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "MELVOR IDLE 2",
+    "alt": "ACCESO ANTICIPADO EN STEAM"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según el anuncio del estudio en Steam, el juego ya se puede comprar en acceso anticipado.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Anuncio del estudio en Steam",
+    "alinti": "El juego ya se puede comprar en Steam y la hoja de ruta llegará la próxima semana."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "STEAM • ANUNCIO DEL ESTUDIO"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Las misiones del Acto 2 ya están disponibles y llevan hasta el nivel 70 aproximadamente. También hay una opción para saltar el tutorial.",
+   "veri": {
+    "baslik": "Acto 2 y opciones",
+    "maddeler": [
+     {
+      "metin": "Misiones del Acto 2",
+      "tetik": "Acto 2"
+     },
+     {
+      "metin": "Hasta el nivel 70",
+      "tetik": "70"
+     },
+     {
+      "metin": "Opción para saltar el tutorial",
+      "tetik": "saltar"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "MISIONES DEL ACTO 2",
+    "alt": "HASTA EL NIVEL 70"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Llegan tres habilidades nuevas: Astrology, Herblore y Agility. Además hay 121 enemigos, 25 mascotas y 4 rangos del gremio Mastery.",
+   "veri": {
+    "baslik": "Nuevo contenido",
+    "platformlar": [
+     "PC"
+    ],
+    "sayilar": [
+     {
+      "deger": "121",
+      "etiket": "ENEMIGOS",
+      "tetik": "121"
+     },
+     {
+      "deger": "25",
+      "etiket": "MASCOTAS",
+      "tetik": "25"
+     },
+     {
+      "deger": "4",
+      "etiket": "RANGOS",
+      "tetik": "4"
+     }
+    ],
+    "not": "Astrology, Herblore y Agility son nuevas."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "NUEVO CONTENIDO",
+    "alt": "ASTROLOGY • HERBLORE • AGILITY"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game.",
+   "veri": {
+    "cagri": "Todos los detalles en la web",
+    "alt": "Fuentes y hoja de ruta en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

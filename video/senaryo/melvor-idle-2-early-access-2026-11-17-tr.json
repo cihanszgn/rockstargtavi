@@ -1,0 +1,135 @@
+{
+ "id": "melvor-idle-2-early-access-2026-11-17",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Melvor Idle 2: A RuneScape Adventure, Steam'de erken erişime çıktı.",
+   "veri": {
+    "ust_etiket": "ERKEN ERİŞİM",
+    "baslik": "Melvor Idle 2 Steam'de çıktı",
+    "vurgu": [
+     "Steam'de çıktı"
+    ],
+    "tuslar": [
+     "M",
+     "I",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "MELVOR IDLE 2",
+    "alt": "STEAM ERKEN ERİŞİM"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam'deki geliştirici duyurusuna göre oyun artık erken erişimde satın alınabiliyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam geliştirici duyurusu",
+    "alinti": "Oyun artık erken erişimde satın alınabiliyor; yol haritası önümüzdeki hafta paylaşılacak."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "STEAM • GELİŞTİRİCİ DUYURUSU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Act 2 görevleri erken erişimde. Yaklaşık 70. seviyeye kadar sürüyor. Eğitimi atlama seçeneği de eklendi.",
+   "veri": {
+    "baslik": "Act 2 görevleri",
+    "maddeler": [
+     {
+      "metin": "Act 2 görevleri erken erişimde",
+      "tetik": "Act 2"
+     },
+     {
+      "metin": "Yaklaşık 70. seviyeye kadar",
+      "tetik": "70"
+     },
+     {
+      "metin": "Eğitimi atlama seçeneği",
+      "tetik": "atlama"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "ACT 2 GÖREVLERİ",
+    "alt": "70. SEVİYEYE KADAR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Üç yeni beceri var: Astrology, Herblore ve Agility. Oyunda 121 düşman, 25 evcil hayvan ve 4 Mastery Guild rütbesi de var.",
+   "veri": {
+    "baslik": "Yeni içerik",
+    "platformlar": [
+     "PC"
+    ],
+    "sayilar": [
+     {
+      "deger": "121",
+      "etiket": "DÜŞMAN",
+      "tetik": "121"
+     },
+     {
+      "deger": "25",
+      "etiket": "EVCİL HAYVAN",
+      "tetik": "25"
+     },
+     {
+      "deger": "4",
+      "etiket": "MASTERY RÜTBESİ",
+      "tetik": "4"
+     }
+    ],
+    "not": "Astrology, Herblore ve Agility geliyor."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "YENİ İÇERİK",
+    "alt": "ASTROLOGY • HERBLORE • AGILITY"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Haberin tamamı sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "Tüm ayrıntılar sitede",
+    "alt": "Kaynaklar ve yol haritası haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

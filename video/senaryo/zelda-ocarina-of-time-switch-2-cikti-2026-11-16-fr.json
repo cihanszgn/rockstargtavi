@@ -1,0 +1,143 @@
+{
+ "id": "zelda-ocarina-of-time-switch-2-cikti-2026-11-16",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "The Legend of Zelda: Ocarina of Time est disponible sur Nintendo Switch 2.",
+   "veri": {
+    "ust_etiket": "NINTENDO SWITCH 2",
+    "baslik": "Ocarina of Time est sur Switch 2",
+    "vurgu": [
+     "Switch 2"
+    ],
+    "tuslar": [
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "OCARINA OF TIME",
+    "alt": "NINTENDO SWITCH 2"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "D'après la page officielle de Nintendo, le jeu est exclusif à la Switch 2 et jouable dès maintenant.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Page officielle de Nintendo",
+    "alinti": "Le jeu est disponible dès maintenant sur Nintendo Switch 2."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "NINTENDO"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Nintendo promet des graphismes entièrement refaits, une musique orchestrale, des voix et des cinématiques étendues pour une nouvelle génération.",
+   "veri": {
+    "baslik": "Une expérience renouvelée",
+    "maddeler": [
+     {
+      "metin": "Graphismes entièrement refaits",
+      "tetik": "graphismes"
+     },
+     {
+      "metin": "Musique orchestrale",
+      "tetik": "musique"
+     },
+     {
+      "metin": "Voix et cinématiques étendues",
+      "tetik": "voix"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "EXPÉRIENCE RENOUVELÉE",
+    "alt": "IMAGE, MUSIQUE, VOIX"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Des commandes améliorées et des mouvements de caméra modernes en font une bonne porte d'entrée dans la série, alors que Link devient le Héros du Temps pour arrêter Ganondorf.",
+   "veri": {
+    "baslik": "Une porte pour les novices",
+    "maddeler": [
+     {
+      "metin": "Commandes améliorées",
+      "tetik": "commandes"
+     },
+     {
+      "metin": "Mouvements de caméra modernes",
+      "tetik": "caméra"
+     },
+     {
+      "metin": "Bonne porte d'entrée dans la série",
+      "tetik": "porte"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "COMMANDES ET CAMÉRA",
+    "alt": "PORTE D'ENTRÉE DANS LA SÉRIE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "La page de Nintendo est datée du 16 novembre et le jeu est jouable dès aujourd'hui.",
+   "veri": {
+    "etiket": "Jouable maintenant",
+    "tarih": "16 novembre",
+    "not": "Exclusif à la Nintendo Switch 2."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "16 NOVEMBRE",
+    "alt": "EXCLUSIF SWITCH 2"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game.",
+   "veri": {
+    "cagri": "Tous les détails sur le site",
+    "alt": "Source et détails dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

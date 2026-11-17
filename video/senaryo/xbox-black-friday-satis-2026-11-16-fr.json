@@ -1,0 +1,172 @@
+{
+ "id": "xbox-black-friday-satis-2026-11-16",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Les soldes Black Friday de Xbox commencent le 19 novembre, avec jusqu'à 80 % de réduction sur une sélection de jeux.",
+   "veri": {
+    "ust_etiket": "BLACK FRIDAY 2026",
+    "baslik": "Soldes Xbox : à partir du 19 novembre",
+    "vurgu": [
+     "19 novembre"
+    ],
+    "tuslar": [
+     "X",
+     "B",
+     "F"
+    ]
+   },
+   "alt_kart": {
+    "simge": "indirim",
+    "baslik": "BLACK FRIDAY XBOX",
+    "alt": "DÈS LE 19 NOVEMBRE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "D'après l'annonce officielle de Xbox Wire, les offres durent jusqu'au 2 décembre, et d'autres arrivent le 23 novembre.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Annonce officielle de Xbox Wire",
+    "alinti": "Les soldes commencent le 19 novembre et se terminent le 2 décembre."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "XBOX WIRE • ANNONCE"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Plus de 2 000 jeux sont en promotion. Forza Horizon 6 Premium Edition est à 25 % de réduction, et NBA 2K27 à 55 %.",
+   "veri": {
+    "baslik": "Grosses réductions",
+    "maddeler": [
+     {
+      "metin": "Plus de 2 000 jeux en promotion",
+      "tetik": "Plus"
+     },
+     {
+      "metin": "Forza Horizon 6 Premium : 25 %",
+      "tetik": "Forza"
+     },
+     {
+      "metin": "NBA 2K27 : 55 %",
+      "tetik": "NBA"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "GROSSES RÉDUCTIONS",
+    "alt": "FORZA HORIZON 6 ET NBA 2K27"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Xbox Design Lab propose jusqu'à 15 % de réduction sur les manettes personnalisées, avec gravure gratuite. Des accessoires sélectionnés sont aussi en promotion.",
+   "veri": {
+    "baslik": "Manettes et accessoires",
+    "maddeler": [
+     {
+      "metin": "Jusqu'à 15 % sur les manettes personnalisées",
+      "tetik": "Design"
+     },
+     {
+      "metin": "Gravure gratuite",
+      "tetik": "gravure"
+     },
+     {
+      "metin": "Accessoires sélectionnés en promotion",
+      "tetik": "accessoires"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DESIGN LAB",
+    "alt": "GRAVURE GRATUITE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Sur une sélection de jeux Xbox et PC, la réduction atteint 80 %. Les remises ne valent qu'aux États-Unis.",
+   "veri": {
+    "baslik": "Xbox et PC",
+    "platformlar": [
+     "Xbox",
+     "PC"
+    ],
+    "sayilar": [
+     {
+      "deger": "80",
+      "etiket": "RÉDUCTION MAX",
+      "tetik": "80"
+     }
+    ],
+    "not": "États-Unis uniquement"
+   },
+   "alt_kart": {
+    "simge": "indirim",
+    "baslik": "XBOX ET PC",
+    "alt": "ÉTATS-UNIS UNIQUEMENT"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Les soldes vont du 19 novembre au 2 décembre.",
+   "veri": {
+    "etiket": "Dates des soldes",
+    "tarih": "19 novembre",
+    "not": "Jusqu'au 2 décembre ; offres supplémentaires dès le 23 novembre."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "DATES",
+    "alt": "DU 19 NOVEMBRE AU 2 DÉCEMBRE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Toutes les offres : tout est sur notre site, Control A Game.",
+   "veri": {
+    "cagri": "Toutes les offres sur le site",
+    "alt": "Liste complète dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,172 @@
+{
+ "id": "xbox-black-friday-satis-2026-11-16",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Las rebajas del Black Friday de Xbox empiezan el 19 de noviembre, con hasta un 80 % de descuento en juegos seleccionados.",
+   "veri": {
+    "ust_etiket": "BLACK FRIDAY 2026",
+    "baslik": "Black Friday de Xbox: 19 de noviembre",
+    "vurgu": [
+     "19 de noviembre"
+    ],
+    "tuslar": [
+     "X",
+     "B",
+     "F"
+    ]
+   },
+   "alt_kart": {
+    "simge": "indirim",
+    "baslik": "BLACK FRIDAY XBOX",
+    "alt": "DESDE EL 19 DE NOVIEMBRE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según el anuncio oficial de Xbox Wire, las ofertas duran hasta el 2 de diciembre y habrá más desde el 23 de noviembre.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Anuncio oficial de Xbox Wire",
+    "alinti": "Las rebajas empiezan el 19 de noviembre y terminan el 2 de diciembre."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "XBOX WIRE • ANUNCIO"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Hay más de 2,000 juegos rebajados. Forza Horizon 6 Premium Edition tiene un 25 % de descuento y NBA 2K27, un 55 %.",
+   "veri": {
+    "baslik": "Grandes rebajas",
+    "maddeler": [
+     {
+      "metin": "Más de 2,000 juegos rebajados",
+      "tetik": "2,000"
+     },
+     {
+      "metin": "Forza Horizon 6 Premium: 25 %",
+      "tetik": "Forza"
+     },
+     {
+      "metin": "NBA 2K27: 55 %",
+      "tetik": "NBA"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "GRANDES REBAJAS",
+    "alt": "FORZA HORIZON 6 Y NBA 2K27"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Xbox Design Lab ofrece hasta un 15 % de descuento en mandos personalizados, con grabado gratuito. También hay accesorios rebajados.",
+   "veri": {
+    "baslik": "Mandos y accesorios",
+    "maddeler": [
+     {
+      "metin": "Hasta 15 % en mandos personalizados",
+      "tetik": "Design"
+     },
+     {
+      "metin": "Grabado gratuito",
+      "tetik": "grabado"
+     },
+     {
+      "metin": "Accesorios seleccionados rebajados",
+      "tetik": "accesorios"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DESIGN LAB",
+    "alt": "GRABADO GRATIS INCLUIDO"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "En juegos seleccionados de Xbox y PC, la mejor oferta llega al 80 %. Los descuentos solo son válidos en Estados Unidos.",
+   "veri": {
+    "baslik": "Xbox y PC",
+    "platformlar": [
+     "Xbox",
+     "PC"
+    ],
+    "sayilar": [
+     {
+      "deger": "80",
+      "etiket": "DESCUENTO MÁX.",
+      "tetik": "80"
+     }
+    ],
+    "not": "Solo EE. UU."
+   },
+   "alt_kart": {
+    "simge": "indirim",
+    "baslik": "XBOX Y PC",
+    "alt": "SOLO EN ESTADOS UNIDOS"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "La oferta empieza el 19 de noviembre y termina el 2 de diciembre.",
+   "veri": {
+    "etiket": "Fechas de la oferta",
+    "tarih": "19 de noviembre",
+    "not": "Termina el 2 de diciembre; más ofertas desde el 23 de noviembre."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "FECHAS",
+    "alt": "19 DE NOVIEMBRE – 2 DE DICIEMBRE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todas las rebajas: todos los detalles en nuestra web, Control A Game.",
+   "veri": {
+    "cagri": "Todas las rebajas en la web",
+    "alt": "Lista completa en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

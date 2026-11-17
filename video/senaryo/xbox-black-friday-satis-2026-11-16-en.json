@@ -1,0 +1,172 @@
+{
+ "id": "xbox-black-friday-satis-2026-11-16",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Xbox's Black Friday sale starts November 19, with up to 80 percent off select games.",
+   "veri": {
+    "ust_etiket": "BLACK FRIDAY 2026",
+    "baslik": "Xbox Black Friday starts November 19",
+    "vurgu": [
+     "November 19"
+    ],
+    "tuslar": [
+     "X",
+     "B",
+     "F"
+    ]
+   },
+   "alt_kart": {
+    "simge": "indirim",
+    "baslik": "XBOX BLACK FRIDAY",
+    "alt": "STARTS NOVEMBER 19"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Xbox Wire's announcement says the deals run through December 2, with more offers from November 23.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Xbox Wire announcement",
+    "alinti": "The Black Friday deals kick off on November 19 and run through December 2."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "XBOX WIRE • ANNOUNCEMENT"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "More than 2,000 games are on sale. Forza Horizon 6 Premium Edition is 25 percent off, and NBA 2K27 is 55 percent off.",
+   "veri": {
+    "baslik": "Big discounts",
+    "maddeler": [
+     {
+      "metin": "2,000+ games on sale",
+      "tetik": "2,000"
+     },
+     {
+      "metin": "Forza Horizon 6 Premium: 25%",
+      "tetik": "Forza"
+     },
+     {
+      "metin": "NBA 2K27: 55%",
+      "tetik": "NBA"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "BIG DISCOUNTS",
+    "alt": "FORZA HORIZON 6 AND NBA 2K27"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Xbox Design Lab offers up to 15 percent off custom controllers, with free engraving. Select accessories are discounted too.",
+   "veri": {
+    "baslik": "Hardware deals",
+    "maddeler": [
+     {
+      "metin": "Up to 15% off custom controllers",
+      "tetik": "Design"
+     },
+     {
+      "metin": "Free engraving included",
+      "tetik": "engraving"
+     },
+     {
+      "metin": "Select accessories discounted",
+      "tetik": "accessories"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DESIGN LAB",
+    "alt": "FREE ENGRAVING"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Select Xbox and PC games are discounted, with savings up to 80 percent. Discounts apply only in the United States.",
+   "veri": {
+    "baslik": "Xbox and PC deals",
+    "platformlar": [
+     "Xbox",
+     "PC"
+    ],
+    "sayilar": [
+     {
+      "deger": "80",
+      "etiket": "MAX SAVINGS",
+      "tetik": "80"
+     }
+    ],
+    "not": "US only"
+   },
+   "alt_kart": {
+    "simge": "indirim",
+    "baslik": "XBOX & PC",
+    "alt": "SELECT GAMES, US ONLY"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Sale runs from November 19 through December 2, with more offers from November 23.",
+   "veri": {
+    "etiket": "Sale dates",
+    "tarih": "November 19",
+    "not": "Runs through December 2; more offers from November 23."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "SALE DATES",
+    "alt": "NOVEMBER 19 – DECEMBER 2"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "All the Xbox deals: read the full story on our site, Control A Game.",
+   "veri": {
+    "cagri": "All deals on the site",
+    "alt": "Full list and details in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

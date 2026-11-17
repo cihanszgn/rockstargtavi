@@ -1,0 +1,135 @@
+{
+ "id": "melvor-idle-2-early-access-2026-11-17",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Melvor Idle 2: A RuneScape Adventure has launched in Steam Early Access.",
+   "veri": {
+    "ust_etiket": "EARLY ACCESS",
+    "baslik": "Melvor Idle 2 is out",
+    "vurgu": [
+     "is out"
+    ],
+    "tuslar": [
+     "M",
+     "I",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "MELVOR IDLE 2",
+    "alt": "STEAM EARLY ACCESS"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to the developer's Steam announcement, the game is now on sale in Early Access.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam developer announcement",
+    "alinti": "The game is now available for purchase on Steam, with a roadmap due next week."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "STEAM • DEVELOPER NEWS"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Act 2 quests are in Early Access and take you to around level 70. A tutorial skip option has also arrived.",
+   "veri": {
+    "baslik": "Act 2 and options",
+    "maddeler": [
+     {
+      "metin": "Act 2 quests in Early Access",
+      "tetik": "Act 2"
+     },
+     {
+      "metin": "Takes you to about level 70",
+      "tetik": "70"
+     },
+     {
+      "metin": "Tutorial skip option",
+      "tetik": "skip"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "ACT 2 QUESTS",
+    "alt": "UP TO ABOUT LEVEL 70"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "There are three new skills: Astrology, Herblore and Agility. Also 121 enemies, 25 pets and 4 Mastery Guild ranks.",
+   "veri": {
+    "baslik": "New content",
+    "platformlar": [
+     "PC"
+    ],
+    "sayilar": [
+     {
+      "deger": "121",
+      "etiket": "ENEMIES",
+      "tetik": "121"
+     },
+     {
+      "deger": "25",
+      "etiket": "PETS",
+      "tetik": "25"
+     },
+     {
+      "deger": "4",
+      "etiket": "GUILD RANKS",
+      "tetik": "4"
+     }
+    ],
+    "not": "Astrology, Herblore and Agility are new."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "NEW CONTENT",
+    "alt": "ASTROLOGY • HERBLORE • AGILITY"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game.",
+   "veri": {
+    "cagri": "Read the full story",
+    "alt": "Sources and roadmap are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

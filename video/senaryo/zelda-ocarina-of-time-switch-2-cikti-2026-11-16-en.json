@@ -1,0 +1,143 @@
+{
+ "id": "zelda-ocarina-of-time-switch-2-cikti-2026-11-16",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "The Legend of Zelda: Ocarina of Time is now available on Nintendo Switch 2.",
+   "veri": {
+    "ust_etiket": "NINTENDO SWITCH 2",
+    "baslik": "Ocarina of Time is out on Switch 2",
+    "vurgu": [
+     "Switch 2"
+    ],
+    "tuslar": [
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "OCARINA OF TIME",
+    "alt": "NINTENDO SWITCH 2"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to Nintendo's official page, the game is exclusive to Switch 2 and ready to play right now.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Nintendo official page",
+    "alinti": "The game is available now on Nintendo Switch 2."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "NINTENDO"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Nintendo promises completely overhauled visuals, orchestral music, voice acting and expanded cutscenes for a new generation.",
+   "veri": {
+    "baslik": "A refreshed experience",
+    "maddeler": [
+     {
+      "metin": "Completely overhauled visuals",
+      "tetik": "visuals"
+     },
+     {
+      "metin": "Orchestral music",
+      "tetik": "orchestral"
+     },
+     {
+      "metin": "Voice acting and longer cutscenes",
+      "tetik": "voice"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "A REFRESHED EXPERIENCE",
+    "alt": "VISUALS, MUSIC, VOICES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Improved controls and modern camera movement aim to make it a friendly entry point to the series, as Link becomes the Hero of Time to stop Ganondorf.",
+   "veri": {
+    "baslik": "A door for newcomers",
+    "maddeler": [
+     {
+      "metin": "Improved controls",
+      "tetik": "controls"
+     },
+     {
+      "metin": "Modern camera movement",
+      "tetik": "camera"
+     },
+     {
+      "metin": "A friendly entry to the series",
+      "tetik": "entry"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CONTROLS AND CAMERA",
+    "alt": "A FRIENDLY ENTRY POINT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Nintendo's page is dated November 16, and the game is playable today.",
+   "veri": {
+    "etiket": "Playable now",
+    "tarih": "November 16",
+    "not": "Exclusive to Nintendo Switch 2."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "NOVEMBER 16",
+    "alt": "SWITCH 2 EXCLUSIVE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game.",
+   "veri": {
+    "cagri": "Every detail on the site",
+    "alt": "Source and details are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
