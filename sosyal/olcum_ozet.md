@@ -1,6 +1,6 @@
 # Sosyal ölçüm özeti
 
-Son ölçüm: 2026-11-17 20:47 UTC. Ham veri: `sosyal/olcum.json`.
+Son ölçüm: 2026-11-17 20:48 UTC. Ham veri: `sosyal/olcum.json`.
 
 ## Hesaplar
 
