@@ -195,8 +195,10 @@ def ig_olculer(ag, taban: str, tok: str, yol: str, olculer, hatalar: list, bilgi
         return cikti
     except sy.PaylasimHatasi as h:
         ilk = kisa_hata(h)
-        if "access blocked" in ilk.lower() or "5258005" in ilk:
-            hatalar.append({**bilgi, "ne": "ölçü (engel)", "neden": ilk})
+        if izin_notu(ilk):
+            # Tek tek denemek aynı izin/engel hatasını yüzlerce kez alır: bir kez yaz, bırak.
+            hatalar.append({**bilgi, "ne": "ölçüler (insights)", "neden": ilk})
+            cikti["_izinsiz"] = 1
             return cikti
     for m in olculer:
         if m in cikti:
@@ -226,6 +228,7 @@ def instagram_olc(ag, sir, dil, hedef: list[dict], surum: str, hatalar: list):
     # Hesabın son 24 saatlik erişim/izlenmesi (varsa); reddedilirse yalnız not düşülür.
     gun = ig_olculer(ag, taban, tok, sir["USER_ID"], IG_HESAP_GUNLUK, hatalar, {**bilgi, "ne": "hesap"},
                      {"period": "day", "metric_type": "total_value"})
+    izinsiz = bool(gun.pop("_izinsiz", 0))
     for k, v in gun.items():
         hesap[f"{k}_gunluk"] = v
     gonderi = {}
@@ -248,7 +251,10 @@ def instagram_olc(ag, sir, dil, hedef: list[dict], surum: str, hatalar: list):
             hatalar.append({**bilgi, "ne": f"gönderi {mid}", "neden": kisa_hata(e)})
             continue
         olculer = IG_ORTAK + (IG_REEL_EK if (tur == "REELS" or h["bicim"] == "reel") else ())
-        o.update(ig_olculer(ag, taban, tok, mid, olculer, hatalar, {**bilgi, "ne": "gönderi"}))
+        if not izinsiz:
+            r = ig_olculer(ag, taban, tok, mid, olculer, hatalar, {**bilgi, "ne": "gönderi"})
+            izinsiz = bool(r.pop("_izinsiz", 0))   # izin yoksa kalan gönderilerde insights denenmez
+            o.update(r)
         gonderi[mid] = o
     return hesap, gonderi
 
@@ -317,7 +323,7 @@ def ozet_yaz(olcum: dict, atlanan: list[str], hatalar: list[dict], simdi: dateti
     gon = [g for g in (olcum.get("gonderiler") or {}).values() if izlenme(g) is not None]
     L += ["## En çok izlenen 10 içerik", ""]
     if not gon:
-        L += ["Gönderi ölçümü yok.", ""]
+        L += ["İzlenme sayısı alınabilen gönderi yok.", ""]
     else:
         L += ["| # | Platform | Tür | İçerik | İzlenme | Etkileşim | Yayın (TR) |", "|---|---|---|---|---|---|---|"]
         for i, g in enumerate(sorted(gon, key=lambda g: (-izlenme(g), g["id"]))[:10], 1):
@@ -326,12 +332,13 @@ def ozet_yaz(olcum: dict, atlanan: list[str], hatalar: list[dict], simdi: dateti
             ad = g["id"][:48]
             L.append(f"| {i} | {g['platform']}/{g['dil']} | {g['bicim']} | {ad} | {izlenme(g)} | {etkilesim(g)} | {yay} |")
         L.append("")
+    if olcum.get("gonderiler"):
         L += ["## Tür ortalaması (gönderi başına izlenme)", "", "| Platform / biçim | Gönderi | Ort. izlenme | Ort. etkileşim |", "|---|---|---|---|"]
         gr: dict = {}
-        for g in gon:
+        for g in (olcum.get("gonderiler") or {}).values():
             gr.setdefault(f"{g['platform']} / {g['bicim']}", []).append(g)
         for a, l in sorted(gr.items()):
-            L.append(f"| {a} | {len(l)} | {ortalama([izlenme(g) for g in l])} | {ortalama([etkilesim(g) for g in l])} |")
+            L.append(f"| {a} | {len(l)} | {ortalama([izlenme(g) for g in l if izlenme(g) is not None])} | {ortalama([etkilesim(g) for g in l])} |")
         L += ["", "## Yayın saatine göre (Türkiye saati)", "", "| Saat dilimi | Gönderi | Ort. izlenme |", "|---|---|---|"]
         sa: dict = {}
         for g in gon:
@@ -342,7 +349,7 @@ def ozet_yaz(olcum: dict, atlanan: list[str], hatalar: list[dict], simdi: dateti
         for a, l in sorted(sa.items()):
             L.append(f"| {a} | {len(l)} | {ortalama(l)} |")
         L.append("")
-        L.append("Not: Instagram izlenmesi `views` (yoksa `reach`), YouTube izlenmesi `viewCount`. Yeni gönderide sayılar henüz küçüktür; yaşa dikkat.")
+        L.append("Not: Instagram izlenmesi `views` (yoksa `reach`; alınamazsa tabloda eksik; etkileşim beğeni+yorum'a düşer), YouTube izlenmesi `viewCount`. Yeni gönderide sayılar henüz küçüktür; yaşa dikkat.")
         L.append("")
     L += ["## Alınamayanlar", ""]
     if not hatalar:
