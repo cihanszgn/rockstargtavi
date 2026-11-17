@@ -1896,7 +1896,9 @@ def bekleyenler(dil: str = "tr", gunluk: bool = False, bugun: date | None = None
         kalan = max(0, ayar["gunluk_en_fazla"] - bugun_uretilen_dil(m, dil, bugun))
     sonuc = []
     icerik = haberler()
-    for h in sorted(icerik, key=lambda x: (x.get("tarih", ""), x.get("id", "")), reverse=True):
+    from sosyal_kuyruk import gta_mi
+    # GTA VI haberleri günlük video hakkında öne geçer (sitenin ana konusu); kalanı yeniden eskiye
+    for h in sorted(icerik, key=lambda x: (gta_mi(x), x.get("tarih", ""), x.get("id", "")), reverse=True):
         if len(sonuc) >= kalan:
             break
         try:
