@@ -1,0 +1,148 @@
+{
+ "id": "mlb-the-show-27-tech-test-now-later-packs-2026-11-17",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "MLB The Show 27 recuperará su Tech Test.",
+   "veri": {
+    "ust_etiket": "MLB THE SHOW 27",
+    "baslik": "Vuelve el Tech Test",
+    "vurgu": [
+     "Tech Test"
+    ],
+    "tuslar": [
+     "T",
+     "T"
+    ]
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "MLB THE SHOW 27",
+    "alt": "VUELVE EL TECH TEST"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según PlayStation Blog, habrá más información el próximo año. Aún no hay fecha ni detalles para participar.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "PlayStation Blog",
+    "alinti": "Los detalles llegarán el próximo año; todavía no hay fechas ni información sobre cómo participar."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "ANUNCIO OFICIAL",
+    "alt": "PLAYSTATION BLOG"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "El estudio afirma que la prueba ayuda a detectar errores, evaluar el rendimiento y recoger comentarios antes del lanzamiento.",
+   "veri": {
+    "baslik": "Objetivos de la prueba",
+    "maddeler": [
+     {
+      "metin": "Detectar errores",
+      "tetik": "errores"
+     },
+     {
+      "metin": "Evaluar el rendimiento",
+      "tetik": "rendimiento"
+     },
+     {
+      "metin": "Recoger comentarios",
+      "tetik": "comentarios"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "OBJETIVOS DEL TEST",
+    "alt": "ERRORES • RENDIMIENTO • OPINIONES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Los paquetes Now & Later también vuelven a MLB The Show 26. Se consiguen jugando contenido de Diamond Dynasty en consola.",
+   "veri": {
+    "baslik": "Vuelven los paquetes",
+    "maddeler": [
+     {
+      "metin": "En MLB The Show 26",
+      "tetik": "vuelven"
+     },
+     {
+      "metin": "Jugando en consola",
+      "tetik": "consola"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NOW & LATER",
+    "alt": "JUEGA DIAMOND DYNASTY"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "El vale de cada paquete se convertirá en paquetes The Show al iniciar sesión en MLB The Show 27 para consola durante su lanzamiento estándar. Usa la misma cuenta.",
+   "veri": {
+    "baslik": "Usa la misma cuenta",
+    "maddeler": [
+     {
+      "metin": "El vale se convierte en paquetes",
+      "tetik": "convertirá"
+     },
+     {
+      "metin": "Inicia sesión con la misma cuenta",
+      "tetik": "misma"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "MISMA CUENTA",
+    "alt": "PAQUETES THE SHOW"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game.",
+   "veri": {
+    "cagri": "Detalles completos en la noticia",
+    "alt": "Información del test y los paquetes."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

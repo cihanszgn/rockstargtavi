@@ -1,0 +1,148 @@
+{
+ "id": "mlb-the-show-27-tech-test-now-later-packs-2026-11-17",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "MLB The Show 27 is bringing back its Tech Test.",
+   "veri": {
+    "ust_etiket": "MLB THE SHOW 27",
+    "baslik": "Tech Test returns",
+    "vurgu": [
+     "Tech Test"
+    ],
+    "tuslar": [
+     "T",
+     "T"
+    ]
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "MLB THE SHOW 27",
+    "alt": "TECH TEST RETURNS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to PlayStation Blog, more information is planned for the new year. No date or participation details have been announced.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "PlayStation Blog",
+    "alinti": "More information is planned for the new year, but no test dates or participation details have been announced."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL ANNOUNCEMENT",
+    "alt": "PLAYSTATION BLOG"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "The studio says the test helps find bugs, assess performance and collect player feedback before launch.",
+   "veri": {
+    "baslik": "What the test does",
+    "maddeler": [
+     {
+      "metin": "Find bugs",
+      "tetik": "bugs"
+     },
+     {
+      "metin": "Assess performance",
+      "tetik": "performance"
+     },
+     {
+      "metin": "Collect player feedback",
+      "tetik": "feedback"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "TEST GOALS",
+    "alt": "BUGS • PERFORMANCE • FEEDBACK"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Now & Later Packs are also returning to MLB The Show 26. Earn them by playing Diamond Dynasty content on console.",
+   "veri": {
+    "baslik": "Packs return",
+    "maddeler": [
+     {
+      "metin": "Back in MLB The Show 26",
+      "tetik": "returning"
+     },
+     {
+      "metin": "Earn them on console",
+      "tetik": "console"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NOW & LATER PACKS",
+    "alt": "PLAY DIAMOND DYNASTY"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Each pack has a voucher that becomes The Show Packs when you sign in to MLB The Show 27 on console during its standard release. Use the same account.",
+   "veri": {
+    "baslik": "Use the same account",
+    "maddeler": [
+     {
+      "metin": "Voucher becomes The Show Packs",
+      "tetik": "becomes"
+     },
+     {
+      "metin": "Sign in with the same account",
+      "tetik": "same"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "SAME ACCOUNT REQUIRED",
+    "alt": "THE SHOW PACKS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game.",
+   "veri": {
+    "cagri": "Full details in the story",
+    "alt": "Tech Test and pack information."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

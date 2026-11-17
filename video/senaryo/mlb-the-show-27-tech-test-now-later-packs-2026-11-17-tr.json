@@ -1,0 +1,148 @@
+{
+ "id": "mlb-the-show-27-tech-test-now-later-packs-2026-11-17",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "MLB The Show 27 için Tech Test geri dönüyor.",
+   "veri": {
+    "ust_etiket": "MLB THE SHOW 27",
+    "baslik": "Tech Test geri dönüyor",
+    "vurgu": [
+     "Tech Test"
+    ],
+    "tuslar": [
+     "T",
+     "T"
+    ]
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "MLB THE SHOW 27",
+    "alt": "TECH TEST GERİ DÖNÜYOR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "PlayStation Blog'a göre test ayrıntıları yeni yılda paylaşılacak; tarih ve katılım koşulu henüz açıklanmadı.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "PlayStation Blog",
+    "alinti": "Ayrıntılar yeni yılda paylaşılacak; henüz tarih veya katılım koşulu açıklanmadı."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ DUYURU",
+    "alt": "PLAYSTATION BLOG"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Test, ekiplerin hataları bulmasına, performansı değerlendirmesine ve oyunculardan geri bildirim toplamasına yardımcı olacak.",
+   "veri": {
+    "baslik": "Testin amacı",
+    "maddeler": [
+     {
+      "metin": "Hataları bulmaya yardımcı olacak",
+      "tetik": "hataları"
+     },
+     {
+      "metin": "Performansı değerlendirecek",
+      "tetik": "performansı"
+     },
+     {
+      "metin": "Oyuncu geri bildirimi toplayacak",
+      "tetik": "geri"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "TESTİN AMACI",
+    "alt": "HATA • PERFORMANS • GERİ BİLDİRİM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Now & Later paketleri de MLB The Show 26'ya dönüyor. Konsolda Diamond Dynasty içeriği oynayarak kazanılabilecek.",
+   "veri": {
+    "baslik": "Paketler geri geliyor",
+    "maddeler": [
+     {
+      "metin": "MLB The Show 26'da kazanılacak",
+      "tetik": "kazanılabilecek"
+     },
+     {
+      "metin": "Diamond Dynasty oynayarak",
+      "tetik": "Diamond"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NOW & LATER",
+    "alt": "DIAMOND DYNASTY OYNA"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Paket kuponları, MLB The Show 27'nin standart çıkışında konsoldan aynı hesapla giriş yapınca The Show paketlerine dönüşecek.",
+   "veri": {
+    "baslik": "Aynı hesap gerekli",
+    "maddeler": [
+     {
+      "metin": "Aynı hesapla giriş yap",
+      "tetik": "aynı"
+     },
+     {
+      "metin": "Kuponlar The Show paketlerine dönüşür",
+      "tetik": "dönüşecek"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "AYNI HESAP GEREKLİ",
+    "alt": "THE SHOW PAKETLERİ"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tech Test ve paketlerin tüm ayrıntıları sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "Ayrıntılar haberde",
+    "alt": "Tech Test ve Now & Later bilgileri."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
