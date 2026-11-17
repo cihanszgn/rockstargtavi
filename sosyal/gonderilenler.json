@@ -207,6 +207,34 @@
   "url": "https://www.instagram.com/p/DfyoIOzkwBk/",
   "zaman": "2026-11-16T05:40:32+00:00"
  },
+ "xbox-black-friday-satis-2026-11|tr|instagram|gorsel": {
+  "bicim": "gorsel",
+  "dil": "tr",
+  "durum": "tamam",
+  "icerik_dili": "en",
+  "id": "xbox-black-friday-satis-2026-11-16",
+  "kapsayici": "17869439679694894",
+  "kimlik": "17871708678661308",
+  "niyet_zamani": "2026-11-17T12:14:40+00:00",
+  "platform": "instagram",
+  "sosyal_tur": "haber",
+  "url": "https://www.instagram.com/p/Df16B0OoN0K/",
+  "zaman": "2026-11-17T12:14:40+00:00"
+ },
+ "xbox-black-friday-satis-2026-11|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 8964167,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "xbox-black-friday-satis-2026-11-16",
+  "kimlik": "_GRkDEBgBZs",
+  "niyet_zamani": "2026-11-17T12:14:40+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg0tBRmLBNBS63jJlMmYTaTPlAev3eHw_NUEJJfnpCeUKTN_BxXBakjouy0vwGfsXScAPCbgrIZi-MEZmlOYM0d66xbdqUFkPemKNKdh",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/_GRkDEBgBZs",
+  "zaman": "2026-11-17T12:14:40+00:00"
+ },
  "zelda-ocarina-of-time-switch-2-cikis|tr|instagram|reel": {
   "bicim": "reel",
   "dil": "tr",
