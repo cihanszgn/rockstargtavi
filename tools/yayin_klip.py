@@ -29,6 +29,17 @@ from datetime import datetime, timedelta, timezone
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 YAYINCI_DOSYASI = ROOT / 'otomasyon' / 'klip-yayincilar.json'
 
+# Emote sınıfları: emote adında (küçük harf, 'collectibles' önekiyle) geçen parçalar. Sınıf sırası: gülme > şaşkınlık > gürültü.
+# Gerçek Kick adları Kemalcan Parlak 15.11.2026 sohbetinden çıkarıldı (KLIP-HATTI.md "Emote sınıfları"); asıl liste ayar dosyasındadır.
+EMOTE_GULME = ['kek', 'lul', 'icant', 'pepelaugh', 'lmao', 'emojilol', 'haha', 'hehe', 'giggle', 'rofl']
+EMOTE_SASKIN = ['pog', 'coggers', 'noway', 'oooo', 'aaaa', 'sheesh', 'ayooo', 'caught', 'astonished', 'omg', 'monkaomega']
+EMOTE_GURULTU = ['dance', 'dans', 'clap', 'jam', 'vibe', 'disco', 'dj', 'edmusic', 'bobble', 'twerk', 'headbang',
+                 'boogie', 'shake', 'hopp', 'gachigasm']
+OY_KELIMELERI = ['evet', 'hayır', 'hayir', 'e', 'h', 'yes', 'no', 'katıl', 'katil', 'katılıyorum', 'katiliyorum',
+                 'katıldım', 'katildim', 'çekiliş', 'cekilis', 'giveaway']
+GULME_KELIMELERI = ['lol', 'lmao', 'lmfao', 'rofl', 'kahkaha', 'gülmekten', 'güldüm', 'yırtıldım']
+GULME_ISTISNA = ['kafkas']   # klavye-yığını biçimine uyan gerçek sözcükler (asla kahkaha sayılmaz)
+
 AYAR_VARSAYILAN = {
     'dilim_sn': 10,        # sohbet sayım dilimi
     'esik_k': 2.5,         # zirve eşiği: ortalama + esik_k * standart sapma
@@ -45,7 +56,38 @@ AYAR_VARSAYILAN = {
     'son_gun': 7,          # tara: bu kadar günden eski yayına bakma
     # zayıf zirve elemesi (yalnız emote / tek karakter tekrarı patlamaları)
     'min_farkli_kullanici': 25,  # zirvede en az bu kadar farklı kişi yazmış olmalı
-    'min_emote_disi_oran': 0.25,    # zirvedeki mesajların en az bu oranı emote dışında bir şey içermeli
+    'min_emote_disi_oran': 0.25,    # zirvedeki mesajların en az bu oranı emote dışında bir şey içermeli (gülme/şaşkınlık emote'u yazı sayılır)
+    # sohbet sinyalleri (yontem='sinyal'): kahkaha, ortak konu, yoğunluk bileşenleri; oy/komut seli elenir
+    'yontem': 'sinyal',          # 'sinyal' (yeni) | 'yogunluk' (eski: yalnız mesaj sayısı)
+    'klip_baslangic': 'dalga',   # 'dalga': klip, kahkaha/konu dalgasının başladığı dilimden onceden_sn önce başlar; 'tepe': en yoğun dilimden
+    'dalga_geri_oran': 0.4,      # önceki dilimde sinyal eşiğin bu oranını aşıyorsa dalga oradan başlamış sayılır
+    'dalga_geri_azami_dilim': 3, # dalga başlangıcı en çok bu kadar dilim geriye uzatılır
+    'gulme_min_kisi': 6,         # bir dilimde en az bu kadar farklı kişi gülmüş olmalı
+    'gulme_esik_k': 2.0,         # ve yayının dilim başına ortalama gülen kişi sayısı + gulme_esik_k * std'yi aşmalı
+    'gulme_min_oran': 0.15,      # gülen mesajlar, sinyalli mesajların en az bu oranı
+    'gulme_tam_kisi': 15,        # kahkaha bileşeni: bu kadar gülen kişi = tam puan
+    'gulme_tam_oran': 0.30,      # ve gülen mesaj oranı bu değerde tam puan
+    'saskin_agirlik': 0.5,       # şaşkınlık emote'u yazan (gülmeyen) kişi kahkaha sayısına bu ağırlıkla katılır
+    'konu_min_kisi': 6,          # ortak konu: aynı kelimeyi bir dilimde en az bu kadar FARKLI kişi yazmış olmalı
+    'konu_min_lift': 10.0,       # ve kelimenin dilimdeki payı, yayının geri kalanındaki payının en az bu katı
+    'konu_tam_kisi': 12,         # konu bileşeni: bu kadar farklı kişi = tam puan
+    'yayilma_min_kisi': 6,       # aynı uzun metni (kopyala-yapıştır) bu kadar kişi yazdıysa yayılma sayılır
+    'yayilma_min_uzunluk': 12,
+    'yayilma_min_kelime': 3,
+    'yayilma_konu_agirlik': 0.5, # yayılma kahkaha sayılmaz; konu puanına bu ağırlıkla sınırlı katkı verir
+    'max_gurultu_oran': 0.5,     # dilimde oy/komut/dans-emote mesajları bu orana ulaşırsa zirve elenir
+    'min_sinyal_mesaj': 10,      # gürültü (oy, komut) çıkarıldıktan sonra dilimde en az bu kadar mesaj
+    'agirlik_gulme': 0.5,        # toplam puan ağırlıkları (normalize edilir)
+    'agirlik_konu': 0.3,
+    'agirlik_yogunluk': 0.2,
+    'yogunluk_tam_z': 6.0,       # yoğunluk bileşeni: bu kadar std üstü = tam puan
+    'gulme_emojileri': ['😂', '🤣', '😹', '😆'],
+    'gulme_kelimeleri': GULME_KELIMELERI,
+    'gulme_istisna': GULME_ISTISNA,
+    'emote_gulme': EMOTE_GULME,
+    'emote_saskin': EMOTE_SASKIN,
+    'emote_gurultu': EMOTE_GURULTU,
+    'oy_kelimeleri': OY_KELIMELERI,
     # görüntü düzeni
     'duzen': 'kadraj',     # 'kadraj': yayın ortadan kırpılıp büyütülür; 'serit': eski tam genişlik şerit
     'kadraj_oran': 1.2,    # kırpılan bölgenin genişlik/yükseklik oranı (1.0 = kare, 1.33 = 4:3, 1.78 = kırpma yok)
@@ -556,12 +598,13 @@ def emote_disi_mi(metin: str) -> bool:
     return bool(EMOTE_RE.sub('', metin).strip())
 
 
-def zirve_kalitesi(mesajlar: list[tuple[str, object]]) -> dict:
+def zirve_kalitesi(mesajlar: list[tuple[str, object]], sf=None) -> dict:
     """[(metin, gönderen)] -> farklı kullanıcı sayısı ve emote olmayan mesaj oranı.
-    Gönderen bilgisi yoksa (eski önbellek) farkli_kullanici None olur ve o ölçüt uygulanmaz."""
+    Gönderen bilgisi yoksa (eski önbellek) farkli_kullanici None olur ve o ölçüt uygulanmaz.
+    sf (Siniflayici) verilirse gülme/şaşkınlık emote'u içeren mesaj da yazı sayılır: KEKW seli kahkahadır, emote yağmuru değil."""
     n = len(mesajlar)
     kisiler = {g for _, g in mesajlar if g not in ('', None)}
-    yazi = sum(1 for x, _ in mesajlar if emote_disi_mi(x))
+    yazi = sum(1 for x, _ in mesajlar if emote_disi_mi(x) or (sf is not None and sf.ozellik(x).emote_anlamli))
     return {'zirve_mesaj_sayisi': n, 'farkli_kullanici': len(kisiler) if kisiler else None,
             'emote_disi_mesaj': yazi, 'emote_disi_oran': round(yazi / n, 3) if n else 0.0}
 
@@ -611,14 +654,366 @@ def one_cikan(tepe_metinler: list[str], tum_metinler: list[str], n: int = 5) -> 
     return sirala(pk, gk, 3), sirala(pe, ge, 3)
 
 
+# ---------------------------------------------------------------- sohbet sinyalleri
+# Kahkaha, emote sınıfı, ortak konu ve oy/komut seli. Hepsi düz kural: model çağrısı yok, rastgelelik yok.
+
+_HARF_RE = re.compile(r'[a-zçğıöşü]+')
+_UNLU = frozenset('aeıioöuü')
+_SIRA = frozenset('asdfghjkl')
+_KLAVYE_DIZI = tuple(s[i:i + 4] for s in ('asdfghjkl', 'lkjhgfdsa') for i in range(6))
+_HAHA_RE = re.compile(r'(?:[hj][aeıi]){2,}[hj]?|(?:[aeıi][hj]){2,}[aeıi]?')
+_XD_RE = re.compile(r'(?:x+d+)+')
+_SJ_RE = re.compile(r'(?:sj|js|ks|sk|hs|sh|jk|kj|hj|jh){2,}')
+_ARDISIK_RE = re.compile(r'(.)\1+')
+_UZATMA_RE = re.compile(r'(.)\1{2,}')             # 'bakkkk' -> 'bak' (3+ tekrar uzatmadır)
+_UNSUZ_KUMESI_RE = re.compile(r'[^aeıioöuü]{3}')   # üç ardışık ünsüz: Türkçe sözcüklerde nadir, klavye yığınında sık
+_RAKAM_RE = re.compile(r'[\d\s.,:+\-/*]+')
+
+
+def _klavye_yigini_mi(tok: str) -> bool:
+    """Rastgele klavye vuruşu ('asdasd', 'ahsjdhd'): ≥5 harf, en az 3 farklı harf, harflerin ≥%80'i orta sıra (asdfghjkl),
+    ünlü oranı ≤%34 ve ayrıca ünlüsüzlük, 3 ardışık ünsüz, klavye dizisi ('asdf') ya da tekrarlı ikili ('asdasd') aranır;
+    böylece 'sadakat', 'kasada', 'askıda', 'dakika' (ünlü oranı ≥%43), 'skandal', 'flash' gibi sözcükler kahkaha sayılmaz.
+    3+ tekrarlı harf koşuları önce tek harfe indirilir ('bakkkk' -> 'bak'): uzatılmış sözcük kahkaha değildir."""
+    n = len(tok)
+    if n < 5 or len(set(tok)) < 3:
+        return False
+    sira = sum(1 for c in tok if c in _SIRA)
+    unlu = sum(1 for c in tok if c in _UNLU)
+    if sira / n < 0.8 or unlu / n > 0.34:
+        return False
+    if unlu == 0 or _UNSUZ_KUMESI_RE.search(tok):
+        return True
+    if any(d in tok for d in _KLAVYE_DIZI):
+        return True
+    return any(tok.count(tok[i:i + 2]) >= 2 for i in range(n - 1))
+
+
+def gulme_belirteci_mi(tok: str, ek: frozenset = frozenset(), istisna: frozenset = frozenset()) -> bool:
+    """tok: küçük harfli, yalnız harflerden oluşan tek kelime. Kahkaha biçimi mi?"""
+    if tok in istisna:
+        return False
+    if tok in ek:
+        return True
+    k = _ARDISIK_RE.sub(r'\1', tok)      # 'hahahaaa' -> 'hahaha'
+    if len(k) >= 4 and _HAHA_RE.fullmatch(k):
+        return True
+    if _XD_RE.fullmatch(k):
+        return True
+    if len(k) >= 4 and _SJ_RE.fullmatch(k):
+        return True
+    return _klavye_yigini_mi(_UZATMA_RE.sub(r'\1', tok))
+
+
+class MesajOzelligi:
+    __slots__ = ('gurultu', 'gulme', 'saskin', 'emote_anlamli', 'kelimeler')
+
+    def __init__(self, gurultu: str, gulme: bool, saskin: bool, emote_anlamli: bool, kelimeler: tuple):
+        self.gurultu, self.gulme, self.saskin = gurultu, gulme, saskin
+        self.emote_anlamli, self.kelimeler = emote_anlamli, kelimeler
+
+
+class Siniflayici:
+    """Ayardaki listelerle tek mesajı sınıflar. gurultu: '' | 'komut' | 'oy' | 'emote_yagmuru'.
+    Kahkaha: kahkaha biçimli kelime, gülme emojisi ya da gülme sınıfı emote; oy/komut mesajı kahkaha sayılmaz."""
+
+    def __init__(self, ayar: dict):
+        a = {**AYAR_VARSAYILAN, **ayar}
+        self.emojiler = tuple(a['gulme_emojileri'])
+        self.gulme_kel = frozenset(tr_kucuk(k) for k in a['gulme_kelimeleri'])
+        self.istisna = frozenset(tr_kucuk(k) for k in a['gulme_istisna'])
+        self.oy_kel = frozenset(tr_kucuk(k) for k in a['oy_kelimeleri'])
+        self.sinif_listeleri = (('gulme', tuple(s.lower() for s in a['emote_gulme'])),
+                                ('saskin', tuple(s.lower() for s in a['emote_saskin'])),
+                                ('gurultu', tuple(s.lower() for s in a['emote_gurultu'])))
+        self._onbellek: dict[str, str] = {}
+        self.yuzey: dict[str, str] = {}   # sadeleşmiş terim -> yazılışı (başlık için)
+
+    def emote_sinifi(self, ad: str) -> str:
+        s = self._onbellek.get(ad)
+        if s is None:
+            a = ad.lower()
+            if a.startswith('collectibles'):
+                a = a[len('collectibles'):]
+            s = next((sinif for sinif, liste in self.sinif_listeleri if any(p in a for p in liste)), 'notr')
+            self._onbellek[ad] = s
+        return s
+
+    def kahkaha_kelimesi(self, tok: str) -> bool:
+        return gulme_belirteci_mi(tok, self.gulme_kel, self.istisna)
+
+    def ozellik(self, metin: str) -> MesajOzelligi:
+        siniflar = [self.emote_sinifi(a) for a in EMOTE_RE.findall(metin)]
+        govde = EMOTE_RE.sub(' ', metin).strip()
+        if govde.startswith('!'):
+            return MesajOzelligi('komut', False, False, False, ())
+        kel = tuple(_HARF_RE.findall(tr_kucuk(URL_RE.sub(' ', govde))))
+        gulme_emote, saskin = 'gulme' in siniflar, 'saskin' in siniflar
+        if not (gulme_emote or saskin):
+            tek = len(re.sub(r'[\W_]+', '', govde)) == 1
+            if govde and (tek or _RAKAM_RE.fullmatch(govde) or ' '.join(kel) in self.oy_kel):
+                return MesajOzelligi('oy', False, False, False, ())
+            if not govde and siniflar and all(s == 'gurultu' for s in siniflar):
+                return MesajOzelligi('emote_yagmuru', False, False, False, ())
+        gulme = (gulme_emote or any(e in govde for e in self.emojiler)
+                 or any(self.kahkaha_kelimesi(t) for t in kel))
+        return MesajOzelligi('', gulme, saskin, bool(kel) or gulme_emote or saskin, kel)
+
+    def terimler(self, kel: tuple) -> list[str]:
+        """Konu adayı terimler: gürültü kelimesi, sayı ve kahkaha olmayan kelimeler ile ardışık ikililer."""
+        temiz = []
+        for k in kel:
+            if len(k) < 3 or k in DURAK or self.kahkaha_kelimesi(k):
+                continue
+            s = _ARDISIK_RE.sub(r'\1', k)
+            self.yuzey.setdefault(s, k)
+            temiz.append(s)
+        cikti = list(temiz)
+        for a, b in zip(temiz, temiz[1:]):
+            self.yuzey.setdefault(f'{a} {b}', f'{self.yuzey[a]} {self.yuzey[b]}')
+            cikti.append(f'{a} {b}')
+        return cikti
+
+
+def _yayilma_anahtari(metin: str) -> str:
+    return ' '.join(tr_kucuk(metin).split())
+
+
+def dilim_ozetle(mesajlar: list[tuple[str, object]], sf: Siniflayici, ayar: dict) -> dict:
+    """Tek dilimin sinyal özeti. mesajlar: [(metin, gönderen)]. Aynı kişinin tekrarı terim ve kahkaha sayısında bir kez sayılır."""
+    ozel = [sf.ozellik(x) for x, _ in mesajlar]
+    grup: dict[str, set] = {}
+    for (x, g), o in zip(mesajlar, ozel):
+        if not o.gurultu:
+            a = _yayilma_anahtari(x)
+            if len(a) >= ayar['yayilma_min_uzunluk'] and len(o.kelimeler) >= ayar['yayilma_min_kelime']:
+                grup.setdefault(a, set()).add(g)
+    yayilma = {a for a, s in grup.items() if len(s) >= ayar['yayilma_min_kisi']}
+    gurultu: Counter = Counter()
+    kisi, gulen, saskin = set(), set(), set()
+    n_sinyal = gulme_n = 0
+    agirlik: dict[tuple, float] = {}
+    for (x, g), o in zip(mesajlar, ozel):
+        kisi.add(g)
+        if o.gurultu:
+            gurultu[o.gurultu] += 1
+            continue
+        sel = _yayilma_anahtari(x) in yayilma
+        if sel:
+            gurultu['yayilma'] += 1
+        else:
+            n_sinyal += 1
+            if o.gulme:
+                gulme_n += 1
+                gulen.add(g)
+            elif o.saskin:
+                saskin.add(g)
+        w = ayar['yayilma_konu_agirlik'] if sel else 1.0
+        for t in sf.terimler(o.kelimeler):
+            agirlik[(t, g)] = max(agirlik.get((t, g), 0.0), w)
+    terimler: Counter = Counter()
+    for (t, _), w in agirlik.items():
+        terimler[t] += w
+    n = len(mesajlar)
+    saf_gurultu = gurultu['komut'] + gurultu['oy'] + gurultu['emote_yagmuru']
+    return {'n': n, 'n_sinyal': n_sinyal, 'kisi': len(kisi), 'gulme_n': gulme_n, 'gulme_kisi': len(gulen),
+            'saskin_kisi': len(saskin - gulen), 'gurultu': dict(gurultu),
+            'gurultu_oran': round(saf_gurultu / n, 3) if n else 0.0, 'terimler': terimler}
+
+
+def konu_bul(o: dict, genel: Counter, genel_kisi: int, ayar: dict, sf: Siniflayici) -> dict | None:
+    """Dilimde, yayının geri kalanına göre nadir olup çok FARKLI kişinin yazdığı kelime/ikili. Yoksa None."""
+    en = None
+    for t, dc in o['terimler'].items():
+        if dc < ayar['konu_min_kisi']:
+            continue
+        p_dilim = dc / max(o['kisi'], 1)
+        p_genel = (genel[t] - dc + 1.0) / max(genel_kisi - o['kisi'], 1)
+        lift = p_dilim / p_genel
+        if lift < ayar['konu_min_lift']:
+            continue
+        aday = {'anahtar': t, 'terim': sf.yuzey.get(t, t), 'kisi': round(dc, 1), 'lift': round(lift, 1)}
+        if en is None or (aday['kisi'], aday['lift']) > (en['kisi'], en['lift']):
+            en = aday
+    if en and ' ' not in en['anahtar']:
+        # kelime bir ikilinin parçasıysa ve ikili neredeyse aynı kişi sayısına ulaşıyorsa ikiliyi tercih et
+        for t, dc in o['terimler'].items():
+            if ' ' in t and en['anahtar'] in t.split() and dc >= 0.8 * en['kisi'] and dc >= ayar['konu_min_kisi']:
+                p_genel = (genel[t] - dc + 1.0) / max(genel_kisi - o['kisi'], 1)
+                if dc / max(o['kisi'], 1) / p_genel >= ayar['konu_min_lift']:
+                    en = {'anahtar': t, 'terim': sf.yuzey.get(t, t), 'kisi': round(dc, 1),
+                          'lift': round(dc / max(o['kisi'], 1) / p_genel, 1)}
+                    break
+    return en
+
+
+def dilim_bilesenleri(o: dict, ort_s: float, std_s: float, konu: dict | None, ayar: dict) -> dict:
+    """0-1 arası üç bileşen ve ağırlıklı toplam (0-100)."""
+    etkin = o['gulme_kisi'] + ayar['saskin_agirlik'] * o['saskin_kisi']
+    oran = o['gulme_n'] / max(o['n_sinyal'], 1)
+    g = (0.5 * min(1.0, etkin / ayar['gulme_tam_kisi']) + 0.5 * min(1.0, oran / ayar['gulme_tam_oran'])) if o['gulme_n'] else 0.0
+    k = min(1.0, konu['kisi'] / ayar['konu_tam_kisi']) if konu else 0.0
+    z = (o['n_sinyal'] - ort_s) / std_s if std_s > 0 else 0.0
+    y = min(1.0, max(0.0, z) / ayar['yogunluk_tam_z'])
+    wg, wk, wy = ayar['agirlik_gulme'], ayar['agirlik_konu'], ayar['agirlik_yogunluk']
+    return {'gulme': round(g, 3), 'konu': round(k, 3), 'yogunluk': round(y, 3), 'gulme_etkin_kisi': round(etkin, 1),
+            'gulme_oran': round(oran, 3), 'yogunluk_z': round(z, 2),
+            'toplam': round(100 * (wg * g + wk * k + wy * y) / (wg + wk + wy), 1)}
+
+
+def _kumele(indeksler: list[int], dilim: int, birlestir_sn: float) -> list[list[int]]:
+    kumeler: list[list[int]] = []
+    for i in indeksler:
+        if kumeler and (i - kumeler[-1][-1]) * dilim <= birlestir_sn:
+            kumeler[-1].append(i)
+        else:
+            kumeler.append([i])
+    return kumeler
+
+
+def sinyal_ozetleri(ham: list[tuple], toplam_sn: float, ayar: dict, sf: Siniflayici | None = None) -> tuple[list[dict], Siniflayici]:
+    """ham: (video_sn, metin, gönderen). Her dilim için dilim_ozetle."""
+    sf = sf or Siniflayici(ayar)
+    dilim = ayar['dilim_sn']
+    kovalar: list[list] = [[] for _ in range(int(math.ceil(toplam_sn / dilim)))]
+    for i, (t, x, g) in enumerate(ham):
+        if 0 <= t < toplam_sn:
+            kovalar[int(t // dilim)].append((x, g if g not in ('', None) else f'#{i}'))
+    return [dilim_ozetle(k, sf, ayar) for k in kovalar], sf
+
+
+def sinyal_zirveleri(ozetler: list[dict], ayar: dict, toplam_sn: float, sf: Siniflayici, kalite=None) -> tuple[list[dict], dict]:
+    """Kahkaha ya da ortak konu sinyali taşıyan dilimleri kümeler; oy/komut seli ve zayıf zirveler elenir.
+    Yoğunluk tek başına zirve yapmaz. En iyi azami_klip tanesi (örtüşmeyen) döndürülür."""
+    dilim = ayar['dilim_sn']
+    sayim = [o['n'] for o in ozetler]
+    eski = istatistik(sayim, ayar)
+    ist = {'lo': eski['lo'], 'hi': eski['hi'], 'ort': eski['ort'], 'std': eski['std'], 'esik': eski['esik'], 'elenen': []}
+    lo, hi = eski['lo'], eski['hi']
+    if hi - lo < 6:
+        return [], ist
+    ort_s = statistics.fmean(o['n_sinyal'] for o in ozetler[lo:hi])
+    std_s = statistics.pstdev(o['n_sinyal'] for o in ozetler[lo:hi])
+    etkinler = [o['gulme_kisi'] + ayar['saskin_agirlik'] * o['saskin_kisi'] for o in ozetler[lo:hi]]
+    ort_g, std_g = statistics.fmean(etkinler), statistics.pstdev(etkinler)
+    gulme_esigi = max(ayar['gulme_min_kisi'], ort_g + ayar['gulme_esik_k'] * std_g)
+    ist.update(gulme_ort=ort_g, gulme_std=std_g, gulme_esigi=gulme_esigi, sinyal_ort=ort_s, sinyal_std=std_s)
+    genel: Counter = Counter()
+    genel_kisi = 0
+    for o in ozetler:
+        genel.update(o['terimler'])
+        genel_kisi += o['kisi']
+    uygun, gurultulu = [], []
+    for i in range(lo, hi):
+        o = ozetler[i]
+        o['konu'] = konu_bul(o, genel, genel_kisi, ayar, sf)
+        o['b'] = b = dilim_bilesenleri(o, ort_s, std_s, o['konu'], ayar)
+        gulme_uygun = b['gulme_etkin_kisi'] >= gulme_esigi and o['gulme_n'] / max(o['n_sinyal'], 1) >= ayar['gulme_min_oran']
+        konu_uygun = o['konu'] is not None
+        o['uygun'] = (gulme_uygun, konu_uygun)
+        if (gulme_uygun or konu_uygun or o['n'] >= eski['esik']) and o['gurultu_oran'] >= ayar['max_gurultu_oran']:
+            gurultulu.append(i)
+        elif (gulme_uygun or konu_uygun) and o['n_sinyal'] >= ayar['min_sinyal_mesaj']:
+            uygun.append(i)
+    for k in _kumele(gurultulu, dilim, ayar['birlestir_sn']):
+        tepe = max(k, key=lambda i: ozetler[i]['n'])
+        o = ozetler[tepe]
+        ist['elenen'].append({'zirve_sn': tepe * dilim, 'zirve_zaman': zaman_metni(tepe * dilim), 'mesaj': o['n'],
+                              'neden': [f"oy_seli({o['gurultu_oran']}>={ayar['max_gurultu_oran']})"], 'gurultu': o['gurultu']})
+    adaylar = []
+    for k in _kumele(uygun, dilim, ayar['birlestir_sn']):
+        tepe = max(k, key=lambda i: ozetler[i]['b']['toplam'])
+        t = ozetler[tepe]
+        wg, wk = ayar['agirlik_gulme'], ayar['agirlik_konu']
+        g_en = max(ozetler[i]['b']['gulme'] for i in k)
+        k_en = max(ozetler[i]['b']['konu'] for i in k)
+        baskin = 'gulme' if wg * g_en >= wk * k_en else 'konu'
+        # dalga başlangıcı: kahkaha/konu OLAYDAN SONRA gelir; eşiği aşan ilk dilimden geriye, sinyal sürdüğü sürece
+        if baskin == 'gulme':
+            olcu = lambda i: (ozetler[i]['gulme_kisi'] + ayar['saskin_agirlik'] * ozetler[i]['saskin_kisi']) / gulme_esigi
+            terim = None
+        else:
+            terim = max((ozetler[i]['konu'] for i in k if ozetler[i]['konu']), key=lambda c: (c['kisi'], c['lift']))
+            olcu = lambda i: ozetler[i]['terimler'].get(terim['anahtar'], 0.0) / ayar['konu_min_kisi']
+        dalga = k[0]
+        for j in range(k[0] - 1, max(-1, k[0] - 1 - ayar['dalga_geri_azami_dilim']), -1):
+            if j < 0 or olcu(j) < ayar['dalga_geri_oran']:
+                break
+            dalga = j
+        referans = dalga if ayar['klip_baslangic'] == 'dalga' else tepe
+        bas = referans * dilim - ayar['onceden_sn']
+        bit = max((k[-1] + 1) * dilim + ayar['kuyruk_sn'], bas + ayar['klip_min_sn'])
+        bit = min(bit, bas + ayar['klip_azami_sn'])
+        if bas < 0:
+            bit -= bas
+            bas = 0
+        if bit > toplam_sn:
+            bas = max(0, bas - (bit - toplam_sn))
+            bit = toplam_sn
+        kalite_alani = {}
+        if kalite:
+            kalite_alani = kalite(k[0] * dilim, (k[-1] + 1) * dilim)
+            neden = zayiflik_nedenleri(kalite_alani, ayar)
+            if neden:
+                ist['elenen'].append({'zirve_sn': tepe * dilim, 'zirve_zaman': zaman_metni(tepe * dilim),
+                                      'mesaj': t['n'], 'neden': neden, **kalite_alani})
+                continue
+        b = t['b']
+        konu = terim if baskin == 'konu' else t['konu']
+        adaylar.append({
+            **kalite_alani,
+            'zirve_sn': tepe * dilim,
+            'mesaj': t['n'],
+            'puan': b['toplam'],
+            'oran': round(t['n'] / ist['ort'], 2) if ist['ort'] else 0.0,
+            'baskin': baskin,
+            'zirve_dilimleri': [i * dilim for i in k],
+            'dalga_basi_sn': dalga * dilim,
+            'klip_baslangic_sn': float(bas),
+            'klip_bitis_sn': float(bit),
+            'sure_sn': float(bit - bas),
+            'puan_bilesenleri': {
+                'toplam': b['toplam'],
+                'agirliklar': {'gulme': wg, 'konu': wk, 'yogunluk': ayar['agirlik_yogunluk']},
+                'gulme': {'puan': b['gulme'], 'kisi': t['gulme_kisi'], 'etkin_kisi': b['gulme_etkin_kisi'],
+                          'mesaj': t['gulme_n'], 'oran': b['gulme_oran'], 'esik_kisi': round(gulme_esigi, 1)},
+                'konu': {'puan': b['konu'], **({k_: konu[k_] for k_ in ('terim', 'kisi', 'lift')} if konu else {})},
+                'yogunluk': {'puan': b['yogunluk'], 'sinyal_mesaj': t['n_sinyal'], 'ham_mesaj': t['n'], 'z': b['yogunluk_z']},
+                'gurultu': {'oran': t['gurultu_oran'], **t['gurultu']},
+            },
+        })
+    secilen: list[dict] = []
+    for a in sorted(adaylar, key=lambda a: (-a['puan'], a['zirve_sn'])):
+        if len(secilen) >= ayar['azami_klip']:
+            break
+        if any(a['klip_baslangic_sn'] < s['klip_bitis_sn'] and s['klip_baslangic_sn'] < a['klip_bitis_sn'] for s in secilen):
+            continue
+        secilen.append(a)
+    secilen.sort(key=lambda a: a['zirve_sn'])
+    for n, a in enumerate(secilen, 1):
+        a['no'] = n
+        a['zirve_zaman'] = zaman_metni(a['zirve_sn'])
+    return secilen, ist
+
+
 def analiz_et(vod: dict, mesajlar: list[tuple], ayar: dict) -> dict:
     """mesajlar: (epoch, metin) veya (epoch, metin, gönderen)."""
+    ayar = {**AYAR_VARSAYILAN, **ayar}
     t0 = vod['t0_epoch']
     toplam = vod['sure_sn']
     ham = [(m[0] - t0, m[1], m[2] if len(m) > 2 else '') for m in mesajlar]
     sayim = dilim_say([t for t, _, _ in ham], ayar['dilim_sn'], toplam)
-    klipler, ist = zirveleri_bul(sayim, ayar, toplam,
-                                 kalite=lambda a, b: zirve_kalitesi([(x, g) for t, x, g in ham if a <= t < b]))
+    ek = {}
+    if ayar['yontem'] == 'yogunluk':
+        klipler, ist = zirveleri_bul(sayim, ayar, toplam,
+                                     kalite=lambda a, b: zirve_kalitesi([(x, g) for t, x, g in ham if a <= t < b]))
+    else:
+        ozetler, sf = sinyal_ozetleri(ham, toplam, ayar)
+        klipler, ist = sinyal_zirveleri(ozetler, ayar, toplam, sf,
+                                        kalite=lambda a, b: zirve_kalitesi([(x, g) for t, x, g in ham if a <= t < b], sf))
+        if 'gulme_esigi' in ist:
+            ek = {'gulme_ortalama': round(ist['gulme_ort'], 2), 'gulme_std': round(ist['gulme_std'], 2),
+                  'gulme_esigi': round(ist['gulme_esigi'], 2)}
     tum = [x for t, x, _ in ham if 0 <= t < toplam]
     for k in klipler:
         a = min(k['zirve_dilimleri'])
@@ -633,7 +1028,7 @@ def analiz_et(vod: dict, mesajlar: list[tuple], ayar: dict) -> dict:
         'ayar': ayar,
         'istatistik': {'mesaj': len(tum), 'dilim': len(sayim), 'ortalama': round(ist['ort'], 2),
                        'std': round(ist['std'], 2),
-                       'esik': None if ist['esik'] == float('inf') else round(ist['esik'], 2)},
+                       'esik': None if ist['esik'] == float('inf') else round(ist['esik'], 2), **ek},
         'dilim_sayimlari': sayim,
         'klipler': klipler,
         'elenen_zirveler': ist['elenen'],
@@ -650,10 +1045,31 @@ BASLIK_SABLONLARI = (
 )
 
 
+BASLIK_GULME = (
+    '{ad} yayınında chat kahkahaya boğuldu{oyun}',
+    '{ad} yayınında sohbet bir anda gülmeye başladı{oyun}',
+    '{ad} yayınında chat gülmekten kırıldı{oyun}',
+)
+BASLIK_KONU = (
+    '{ad} yayınında chat aynı kelimede buluştu: “{terim}”{oyun}',
+    '{ad} yayınında herkes aynı şeyi yazdı: “{terim}”{oyun}',
+)
+
+
 def baslik_uret(vod: dict, klip: dict) -> str:
-    sec = int(hashlib.sha1(f"{vod['anahtar']}:{klip['no']}".encode()).hexdigest(), 16) % len(BASLIK_SABLONLARI)
+    """Başlık baskın sinyale göre seçilir; sinyal bilgisi yoksa (eski yöntem) yoğunluk şablonları kullanılır.
+    Konu şablonu yalnız sohbetten gerçekten çıkarılmış bir terim varsa kullanılır; yoksa kahkaha şablonuna düşer."""
+    sec = int(hashlib.sha1(f"{vod['anahtar']}:{klip['no']}".encode()).hexdigest(), 16)
     oyun = f" | {vod['oyun']}" if vod.get('oyun') else ''
-    b = BASLIK_SABLONLARI[sec].format(ad=vod['yayinci'], oyun=oyun)
+    baskin = klip.get('baskin')
+    terim = ((klip.get('puan_bilesenleri') or {}).get('konu') or {}).get('terim')
+    if baskin == 'konu' and terim:
+        sablon = BASLIK_KONU[sec % len(BASLIK_KONU)]
+    elif baskin in ('gulme', 'konu'):
+        sablon = BASLIK_GULME[sec % len(BASLIK_GULME)]
+    else:
+        sablon = BASLIK_SABLONLARI[sec % len(BASLIK_SABLONLARI)]
+    b = sablon.format(ad=vod['yayinci'], oyun=oyun, terim=terim or '')
     return b if len(b) <= 95 else b[:94].rstrip() + '…'
 
 
@@ -668,6 +1084,15 @@ def zaman_damgali_baglanti(vod: dict, sn: float) -> tuple[str, bool]:
     return vod['vod_url'], False
 
 
+def _an_tarifi(klip: dict) -> str:
+    b = klip.get('baskin')
+    if b == 'gulme':
+        return 'sohbetin kahkahaya boğulduğu an'
+    if b == 'konu':
+        return 'sohbetin aynı konuda toplandığı an'
+    return 'sohbetin en yoğunlaştığı an'
+
+
 def aciklama_uret(vod: dict, klip: dict) -> str:
     bas = klip['klip_baslangic_sn']
     konu = ''
@@ -675,7 +1100,7 @@ def aciklama_uret(vod: dict, klip: dict) -> str:
         konu = ' Sohbette öne çıkanlar: ' + ', '.join((klip.get('kelimeler') or [])[:3] + (klip.get('emojiler') or [])[:2]) + '.'
     platform = vod['platform'].capitalize()
     return (
-        f"{vod['yayinci']} canlı yayınından ({vod['tarih']}, {platform}) sohbetin en yoğunlaştığı an.{konu}\n\n"
+        f"{vod['yayinci']} canlı yayınından ({vod['tarih']}, {platform}) {_an_tarifi(klip)}.{konu}\n\n"
         f"Yayıncı: {vod['yayinci']} — {vod['kanal_url']}\n"
         f"Kaynak yayın: {vod['vod_url']} (yayının {zaman_metni(bas)} noktası)\n"
         "Görüntü ve ses yayıncıya aittir; tam yayın için kanalına gidin.\n\n"
@@ -700,6 +1125,9 @@ def paket_json(vod: dict, klip: dict, mp4: pathlib.Path, dogrulama: dict, ayar: 
         'zirve_sn': klip['zirve_sn'],
         'zirve_zaman': klip['zirve_zaman'],
         'zirve_puani': klip['puan'],
+        'baskin_sinyal': klip.get('baskin'),
+        'puan_bilesenleri': klip.get('puan_bilesenleri'),
+        'dalga_basi_sn': klip.get('dalga_basi_sn'),
         'zirve_mesaj_sayisi': klip.get('zirve_mesaj_sayisi'),
         'zirve_farkli_kullanici': klip.get('farkli_kullanici'),
         'zirve_emote_disi_oran': klip.get('emote_disi_oran'),
@@ -1011,7 +1439,8 @@ def tara(ayar: dict, dizin: pathlib.Path, yayinci: str | None = None, hepsi: boo
 def _gecersiz(a) -> dict:
     g = {}
     for alan in ('esik_k', 'min_mesaj', 'azami_klip', 'bas_dislama_sn', 'min_oran', 'min_farkli_kullanici',
-                 'min_emote_disi_oran', 'kadraj_oran', 'duzen'):
+                 'min_emote_disi_oran', 'kadraj_oran', 'duzen', 'yontem', 'klip_baslangic',
+                 'gulme_esik_k', 'konu_min_kisi', 'konu_min_lift', 'max_gurultu_oran'):
         v = getattr(a, alan, None)
         if v is not None:
             g[alan] = v
@@ -1039,6 +1468,13 @@ def main(argv=None) -> int:
         k.add_argument('--bas-dislama-sn', dest='bas_dislama_sn', type=int)
         k.add_argument('--min-farkli-kullanici', dest='min_farkli_kullanici', type=int)
         k.add_argument('--min-emote-disi-oran', dest='min_emote_disi_oran', type=float)
+        k.add_argument('--yontem', choices=('sinyal', 'yogunluk'), help='sinyal = kahkaha/ortak konu/yoğunluk; yogunluk = eski yalnız mesaj sayısı')
+        k.add_argument('--klip-baslangic', dest='klip_baslangic', choices=('dalga', 'tepe'),
+                       help='kliplerin başlangıç referansı: kahkaha dalgasının başladığı dilim ya da tepe dilimi')
+        k.add_argument('--gulme-esik-k', dest='gulme_esik_k', type=float)
+        k.add_argument('--konu-min-kisi', dest='konu_min_kisi', type=int)
+        k.add_argument('--konu-min-lift', dest='konu_min_lift', type=float)
+        k.add_argument('--max-gurultu-oran', dest='max_gurultu_oran', type=float)
         k.add_argument('--suzgecsiz', action='store_true', help='oyun süzgecine uymasa da işle')
         k.add_argument('--yeniden', action='store_true', help='analizi önbellekten alma')
         if ad == 'kes':

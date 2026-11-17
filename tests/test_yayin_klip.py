@@ -8,7 +8,7 @@ import unittest
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / 'tools'))
 import yayin_klip as yk  # noqa: E402
 
-AYAR = dict(yk.AYAR_VARSAYILAN)
+AYAR = {**yk.AYAR_VARSAYILAN, 'yontem': 'yogunluk'}  # eski testler yoğunluk yöntemini sınar; sinyal yöntemi aşağıdaki sınıflarda
 SURE = 7200  # 2 saatlik yayın
 
 
@@ -678,3 +678,219 @@ class SohbetDepolama(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+# ===================================================================== sinyal yöntemi (kahkaha / ortak konu)
+
+SAYIM_AYAR = dict(yk.AYAR_VARSAYILAN)   # yontem: sinyal
+
+
+class KahkahaTespiti(unittest.TestCase):
+    """Türkçe rastgele klavye kahkahası yakalanır; gerçek kelimeler (kasada, sadakat…) yakalanmaz."""
+    GULME = ['hahaha', 'hahahaha', 'ahahahah', 'ahahha', 'jajaja', 'hehehe', 'xd', 'xdd', 'sjsj', 'sjsjsj', 'asdasd',
+             'asdfgh', 'sdfsdfsd', 'dkdkfnf', 'ajsjsjsk', 'hahahahahaha', 'ahdjfkdmskk', 'sdasdasdasd']
+    GULME_DEGIL = ['sadakat', 'kasada', 'askıda', 'dakika', 'flash', 'ahmet', 'halka', 'kaldık', 'aaaaa',
+                   'ahhhhh', 'aha', 'yuhhh', 'bakkkk', 'skandal', 'sabahhh', 'masa', 'salak', 'kadar',
+                   'hadi', 'abi', 'selam', 'dalga', 'kaslar', 'sakal']
+
+    def test_gulme_kelimeleri(self):
+        for k in self.GULME:
+            self.assertTrue(yk.gulme_belirteci_mi(k), k)
+
+    def test_gercek_kelimeler_gulme_sayilmaz(self):
+        for k in self.GULME_DEGIL:
+            self.assertFalse(yk.gulme_belirteci_mi(k), k)
+
+    def test_ozel_istisna_listesi(self):
+        # 'kafkas' klavye yığını gibi görünür; ayardaki istisna listesi onu kurtarır
+        self.assertTrue(yk.gulme_belirteci_mi('kafkas'))
+        self.assertFalse(yk.gulme_belirteci_mi('kafkas', frozenset(), frozenset({'kafkas'})))
+        self.assertFalse(yk.Siniflayici(SAYIM_AYAR).ozellik('kafkas yolu').gulme)
+
+    def test_mesaj_duzeyi(self):
+        sf = yk.Siniflayici(SAYIM_AYAR)
+        for m in ('hahaha ya', '😂😂', 'KEKW [emote:37226:KEKW]', '[emote:5:collectiblesGoldenKEKW]', 'sjsjsj ya'):
+            self.assertTrue(sf.ozellik(m).gulme, m)
+        for m in ('kasada para yok', 'sadakat kartı', 'dakika kaç', '[emote:1:beeBobble]', 'ne diyon amk'):
+            self.assertFalse(sf.ozellik(m).gulme, m)
+
+
+class EmoteSiniflari(unittest.TestCase):
+    """Adlar Kemalcan Parlak yayınının gerçek sohbetinden (Kick emote adları)."""
+
+    def setUp(self):
+        self.sf = yk.Siniflayici(SAYIM_AYAR)
+
+    def test_gulme_emoteleri(self):
+        for ad in ('KEKW', 'collectiblesGoldenKEKW', 'collectibleswideKEKW', 'LULW', 'collectiblesICANT', 'KEKLEO',
+                   'collectiblesPepeLaugh', 'emojiLol', 'OMEGALUL', 'LUL'):
+            self.assertEqual(self.sf.emote_sinifi(ad), 'gulme', ad)
+
+    def test_saskin_emoteleri(self):
+        for ad in ('PogU', 'OOOO', 'monkaOMEGA'):
+            self.assertEqual(self.sf.emote_sinifi(ad), 'saskin', ad)
+
+    def test_dans_alkis_gurultu(self):
+        for ad in ('beeBobble', 'catblobDance', 'DanceDance', 'HYPERCLAP', 'vibePls', 'catJAM'):
+            self.assertEqual(self.sf.emote_sinifi(ad), 'gurultu', ad)
+
+    def test_diger_emote_notr(self):
+        self.assertEqual(self.sf.emote_sinifi('Sadge'), 'notr')
+
+    def test_notr_ve_gurultu_kahkaha_sayilmaz(self):
+        for m in ('[emote:1:beeBobble]', '[emote:2:Sadge]', '[emote:3:catblobDance][emote:3:catblobDance]'):
+            self.assertFalse(self.sf.ozellik(m).gulme, m)
+
+    def test_dans_yagmuru_gurultu_olur(self):
+        self.assertEqual(self.sf.ozellik('[emote:1:DanceDance][emote:1:DanceDance]').gurultu, 'emote_yagmuru')
+        self.assertEqual(self.sf.ozellik('[emote:1:KEKW]').gurultu, '')
+
+    def test_liste_ayardan_gelir(self):
+        sf = yk.Siniflayici({**SAYIM_AYAR, 'emote_gulme': ['sadge']})
+        self.assertEqual(sf.emote_sinifi('Sadge'), 'gulme')
+        self.assertEqual(sf.emote_sinifi('KEKW'), 'notr')
+
+
+class OyKomutSuzgeci(unittest.TestCase):
+    def test_oy_ve_komut_mesajlari(self):
+        sf = yk.Siniflayici(SAYIM_AYAR)
+        for m in ('1', '2', 'e', 'h', '11111111111', '123', '!katıl', '!kazan 5'):
+            self.assertIn(sf.ozellik(m).gurultu, ('oy', 'komut'), m)
+            self.assertFalse(sf.ozellik(m).gulme, m)
+        for m in ('bu ne ya', 'evet ama', 'kesinlikle'):
+            self.assertEqual(sf.ozellik(m).gurultu, '', m)
+
+
+def sinyal_vod():
+    return {'platform': 'kick', 'vod_id': 'z' * 8, 'anahtar': 'kick:zzzzzzzz', 'yayinci': 'Deneme', 'kanal': 'd',
+            'baslik': 'b', 'oyun': 'GTA V', 'sure_sn': SURE, 'vod_url': 'u', 'kanal_url': 'k',
+            'tarih': '2026-11-16', 't0_epoch': 1_000_000, 't0_kaynagi': 'test'}
+
+
+def zemin_sohbet(t0=1_000_000):
+    """Yayın boyunca sakin arka plan: 2 sn'de bir mesaj, 7 kişi."""
+    return [(t0 + s, 'selam hocam nasılsın', 1000 + s % 7) for s in range(0, SURE, 2)]
+
+
+class SinyalZirveleri(unittest.TestCase):
+    T0 = 1_000_000
+    KONU = ['çorbacı geldi', 'çorbacı yine başladı', 'bu çorbacı kim', 'çorbacı çorbacı', 'abi çorbacıyı gördün mü',
+            'yok artık çorbacı', 'çorbacı mı o']
+
+    def analiz(self, ek, ayar=None):
+        return yk.analiz_et(sinyal_vod(), zemin_sohbet() + ek, ayar or SAYIM_AYAR)
+
+    def kahkaha(self, bas=3000, kisi=40):
+        return [(self.T0 + bas + i // 4, ['hahaha', '[emote:1:KEKW]', 'asdfgh sjsj', 'xd'][i % 4], 2000 + i) for i in range(kisi)]
+
+    def dalga(self):
+        return ([(self.T0 + 3000 + i // 2, 'hahaha', 2000 + i) for i in range(12)]
+                + [(self.T0 + 3010 + i // 2, 'hahaha', 2100 + i) for i in range(14)]
+                + [(self.T0 + 3020 + i // 2, '[emote:1:KEKW]', 2200 + i) for i in range(40)])
+
+    def test_kahkaha_dalgasi_bulunur(self):
+        k = self.analiz(self.kahkaha())['klipler']
+        self.assertEqual(len(k), 1)
+        self.assertEqual(k[0]['baskin'], 'gulme')
+        self.assertEqual(k[0]['zirve_sn'], 3000)
+        self.assertGreaterEqual(k[0]['puan_bilesenleri']['gulme']['kisi'], 30)
+
+    def test_oy_seli_elenir(self):
+        ek = [(self.T0 + 3000 + i // 12, str(1 + i % 2), 2000 + i % 100) for i in range(120)]
+        s = self.analiz(ek)
+        self.assertEqual(s['klipler'], [])
+        self.assertTrue(any(e['neden'][0].startswith('oy_seli') for e in s['elenen_zirveler']))
+
+    def test_ayni_iki_kisinin_kekwsi_klip_degil(self):
+        ek = [(self.T0 + 3000 + i // 6, '[emote:1:KEKW]', 2000 + i % 2) for i in range(60)]
+        self.assertEqual(self.analiz(ek)['klipler'], [])
+
+    def test_dans_yagmuru_klip_degil(self):
+        ek = [(self.T0 + 3000 + i // 9, '[emote:1:DanceDance]', 2000 + i) for i in range(90)]
+        self.assertEqual(self.analiz(ek)['klipler'], [])
+
+    def test_yogunluk_tek_basina_klip_degil(self):
+        def kelime(n):   # 90 mesajda hiçbir kelime ikinci kez geçmesin
+            return 'bcmnprtvyz'[n % 10] + 'aeiou'[(n // 10) % 5] + 'mnrtp'[(n // 50) % 5] + 'o'
+        ek = [(self.T0 + 3000 + i // 9, f'{kelime(i)} {kelime((i * 7 + 3) % 90 + 100)}', 2000 + i) for i in range(90)]
+        s = self.analiz(ek)
+        self.assertEqual(s['klipler'], [])   # 90 mesaj, 90 kişi var ama ortak kelime/kahkaha yok: yalnız yoğunluk
+
+    def test_ortak_konu_cok_kisiyle(self):
+        ek = [(self.T0 + 3000 + i // 3, self.KONU[i % 7] + ' ' + 'abcdefghij'[i % 10] * 3, 2000 + i) for i in range(30)]
+        k = self.analiz(ek)['klipler']
+        self.assertEqual(len(k), 1)
+        self.assertEqual(k[0]['baskin'], 'konu')
+        self.assertEqual(k[0]['puan_bilesenleri']['konu']['terim'], 'çorbacı')
+        self.assertGreaterEqual(k[0]['puan_bilesenleri']['konu']['kisi'], 6)
+
+    def test_ortak_konu_tek_kisinin_tekrari_sayilmaz(self):
+        ek = [(self.T0 + 3000 + i // 6, self.KONU[i % 7] + ' ' + 'abcdefghij'[i % 10] * 3, 2000) for i in range(60)]
+        self.assertEqual(self.analiz(ek)['klipler'], [])
+
+    def test_kopyala_yapistir_seli_kahkaha_sayilmaz(self):
+        ek = [(self.T0 + 3000 + i // 3, 'bu yayını izleyin hahaha lol kekw uzun mesaj', 2000 + i) for i in range(30)]
+        self.assertEqual(self.analiz(ek)['klipler'], [])
+
+    def test_kopyala_yapistir_konuya_yarim_agirlik(self):
+        sf = yk.Siniflayici(SAYIM_AYAR)
+        ayni = [('yeni video çıktı bakmayı unutmayın', 100 + i) for i in range(10)]
+        o = yk.dilim_ozetle(ayni, sf, SAYIM_AYAR)
+        self.assertEqual(o['gulme_n'], 0)
+        self.assertEqual(o['n_sinyal'], 0)                                              # sinyal mesajı sayılmaz
+        self.assertEqual(o['terimler']['video'], 10 * SAYIM_AYAR['yayilma_konu_agirlik'])  # konuya yarım ağırlık
+
+    def test_klip_dalganin_basladigi_dilimden_20_sn_once(self):
+        k = self.analiz(self.dalga())['klipler'][0]
+        self.assertEqual(k['zirve_sn'], 3020)       # tepe sonradan
+        self.assertEqual(k['dalga_basi_sn'], 3000)  # dalga erken başladı
+        self.assertEqual(k['klip_baslangic_sn'], 2980)
+
+    def test_klip_baslangic_tepe_secenegi(self):
+        k = self.analiz(self.dalga(), {**SAYIM_AYAR, 'klip_baslangic': 'tepe'})['klipler'][0]
+        self.assertEqual(k['klip_baslangic_sn'], 3000)
+
+    def test_bilesenler_ve_json(self):
+        k = self.analiz(self.kahkaha())['klipler'][0]
+        b = k['puan_bilesenleri']
+        for anahtar in ('toplam', 'agirliklar', 'gulme', 'konu', 'yogunluk', 'gurultu'):
+            self.assertIn(anahtar, b)
+        self.assertEqual(b['toplam'], k['puan'])
+        self.assertLessEqual(b['toplam'], 100)
+        json.dumps(k, ensure_ascii=False)
+
+    def test_eski_yontem_ayardan_secilebilir(self):
+        ek = [(self.T0 + 3000 + i // 9, 'ŞAMPİYON gol gol', 2000 + i) for i in range(90)]
+        s = self.analiz(ek, {**SAYIM_AYAR, 'yontem': 'yogunluk'})
+        self.assertEqual(len(s['klipler']), 1)
+        self.assertNotIn('baskin', s['klipler'][0])
+
+
+class SinyalBaslikVePaket(unittest.TestCase):
+    def klip(self, baskin, terim=None):
+        return {'no': 1, 'baskin': baskin, 'puan_bilesenleri': {'konu': {'terim': terim} if terim else {}}}
+
+    def test_gulme_basligi(self):
+        b = yk.baslik_uret(sinyal_vod(), self.klip('gulme'))
+        self.assertTrue(any(s in b for s in ('kahkaha', 'gülme', 'gülmek')), b)
+        self.assertNotIn('patla', b)
+
+    def test_konu_basligi_terimi_icerir(self):
+        self.assertIn('çorbacı', yk.baslik_uret(sinyal_vod(), self.klip('konu', 'çorbacı')))
+
+    def test_konu_terimsiz_bos_tirnak_birakmaz(self):
+        self.assertNotIn('“”', yk.baslik_uret(sinyal_vod(), self.klip('konu')))
+
+    def test_baslik_siniri_ve_eski_sablon(self):
+        v = {**sinyal_vod(), 'yayinci': 'A' * 120}
+        self.assertLessEqual(len(yk.baslik_uret(v, self.klip('gulme'))), 95)
+        self.assertIn('Deneme', yk.baslik_uret(sinyal_vod(), {'no': 1}))
+
+    def test_paket_json_bilesenleri_tasir(self):
+        ek = [(1_000_000 + 3000 + i // 4, 'hahaha', 2000 + i) for i in range(40)]
+        k = yk.analiz_et(sinyal_vod(), zemin_sohbet() + ek, SAYIM_AYAR)['klipler'][0]
+        p = yk.paket_json(sinyal_vod(), k, pathlib.Path('klip-01.mp4'), {'genislik': 1080}, SAYIM_AYAR)
+        self.assertEqual(p['baskin_sinyal'], 'gulme')
+        self.assertEqual(p['puan_bilesenleri'], k['puan_bilesenleri'])
+        self.assertEqual(p['dalga_basi_sn'], k['dalga_basi_sn'])
+        self.assertIn('kahkaha', yk.aciklama_uret(sinyal_vod(), k))
