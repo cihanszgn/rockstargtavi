@@ -126,7 +126,8 @@ class GlobalInstagram(Temel):
         with patch.object(vs, 'baglanti_yaz', wraps=vs.baglanti_yaz) as yaz:
             self.calistir(SahteAg(), ayar(instagram_reel=True), [self.haber()])
         self.assertEqual(yaz.call_args.args[2], 'en', 'ayar sonradan değişse de ilk video dili korunur')
-        self.assertEqual(self.kayitlar()['oyun-yama-1|tr|instagram|reel']['durum'], 'tamam')
+        rec = self.kayitlar()['oyun-yama-1|en|instagram|reel']  # kayıt içerik diline taşınır, hesap alanı korunur
+        self.assertEqual((rec['durum'], rec['dil'], rec['hesap']), ('tamam', 'en', 'tr'))
 
     def test_aciklama_tam_2200_ve_bir_karakter_fazlasi(self):
         x = self.haber()

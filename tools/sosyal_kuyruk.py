@@ -241,6 +241,21 @@ def oncelikli(kuyruk, dil, platform, kayit, simdi):
     return sorted(kuyruk, key=lambda x: not x.get("gta_oncelik"))
 
 
+def gta_bekliyor(kuyruk, dil, platform, kayit, simdi) -> bool:
+    """Çıkış haftasında bu (dil, platform) için bugün henüz GTA VI gönderisi yok ve kuyrukta GTA VI adayı var mı?
+    `oncelikli` ile aynı kural; hesap içinde hangi dilin önce deneneceğini belirlemek için kullanılır."""
+    if not any(x.get("gta_oncelik") and dil in x.get("diller", {}) for x in kuyruk):
+        return False
+    gun = simdi.strftime("%Y-%m-%d")
+    for k, r in kayit.items():
+        p = k.split("|")
+        bugun_mu = (r.get("niyet_zamani") or r.get("zaman") or "")[:10] == gun
+        if (len(p) == 4 and p[1:3] == [dil, platform] and bugun_mu
+                and r.get("durum") in ("tamam", "niyet", "elle_bak") and gta_mi({"id": r.get("id", "")})):
+            return False
+    return True
+
+
 def son_tur(kayit, dil, platform):
     son = [(v.get("zaman") or v.get("niyet_zamani") or "", v.get("sosyal_tur", "haber"))
            for k, v in kayit.items() if k.split("|")[1:3] == [dil, platform]

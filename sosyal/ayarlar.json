@@ -6,9 +6,45 @@
   "x": 2,
   "reddit": 2,
   "instagram": 12,
-  "instagram_reel": 4,
-  "youtube": 4
+  "instagram_reel": 6,
+  "youtube": 8
  },
+ "hesap_esleme": {
+  "instagram": {
+   "en": "tr",
+   "es": "tr",
+   "fr": "tr",
+   "de": "tr",
+   "nl": "tr",
+   "zh": "tr"
+  },
+  "youtube": {
+   "en": "tr",
+   "es": "tr",
+   "fr": "tr",
+   "de": "tr",
+   "nl": "tr",
+   "zh": "tr"
+  }
+ },
+ "ortak_hesap_bicimleri": [
+  "reel",
+  "short"
+ ],
+ "ana_dil_en_az": {
+  "instagram_reel": 3,
+  "youtube": 3
+ },
+ "ana_dil_payi_serbest_saat": 19,
+ "hesap_dil_sirasi": [
+  "en",
+  "es",
+  "fr",
+  "de",
+  "nl",
+  "zh"
+ ],
+ "ayni_konu_ara_saat": 4,
  "x_baglanti": "gonderide",
  "instagram_api_surumu": "v27.0",
  "hesaplar": {
@@ -117,5 +153,6 @@
   "rehber": true,
   "arsiv": true
  },
- "_instagram_notu": "2026-11-16: Meta engeli Cio'nun hesap doğrulamasıyla kalktı. Yeniden engellenmemek için iki saatte bir, günde en çok 12 görsel; sorunsuz bir haftadan sonra saatliğe (24) çıkarılabilir."
+ "_instagram_notu": "2026-11-16: Meta engeli Cio'nun hesap doğrulamasıyla kalktı. Yeniden engellenmemek için iki saatte bir, günde en çok 12 görsel; sorunsuz bir haftadan sonra saatliğe (24) çıkarılabilir.",
+ "_hesap_esleme_notu": "2026-11-17 (Cio): tek hesap çok dil. Kendi IG_<DİL>_*/YT_<DİL>_* anahtarı olmayan dilin Reels/Shorts içeriği hesap_esleme'deki hesaptan (tr = @ctrlagame, tek YouTube kanalı) yayınlanır, içerik kendi dilinde kalır. Günlük sınırlar HESAP başınadır. ana_dil_en_az: hesabın ana dili (tr) günde en az bu kadar hakkı alır (yabancı diller kalan hakları dönüşümlü kullanır). Ortak hesaptan yalnız ortak_hesap_bicimleri çıkar; Instagram görsel gönderisi Türkçe kalır. ana_dil_payi_serbest_saat: UTC saati; o saatten sonra ana dilde aday yoksa ayrılmış pay yabancı dillere açılır. ayni_konu_ara_saat: aynı haberin başka dil sürümü son gönderiden en az bu kadar saat sonra. Bir dile ayrı hesap açılırsa o dilin anahtarlarını gir; o dil kendi hesabına döner."
 }

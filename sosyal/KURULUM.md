@@ -10,16 +10,29 @@ Yardımcı anahtarları dener, doğruysa GitHub'a gizli olarak kaydeder.
 
 > **Askıda:** X ve Reddit bölümleri ileride açmak için duruyor; Instagram ve YouTube açık (`sosyal/ayarlar.json`).
 
-**Durum:** Site yedi dilde (TR, EN, ES, FR, DE, NL, ZH) yayınlanır. Mevcut tek Instagram hesabı (`IG_TR_*`)
-17 Kasım 2026'da yeniden Türkçeye alındı (Cio: Türkiye'deki izleyiciye İngilizce içerik gitmesin, içerik izlendiği
-bölgenin dilinde olsun). Instagram tek gönderiyi bölgeye göre farklı dilde gösteremez: organik gönderide ülke hedefleme
-yoktur, Meta'nın Reels çevirisi Türkiye'deki hesaplara kapalıdır ve Türkçe desteklemez (kaynak: Meta yardım sayfası
-facebook.com/business/help/1090261056577580, 17 Kasım 2026). Bölge dili ancak dil başına ayrı hesapla sağlanır:
-İngilizce (global) hesap açılıp `IG_EN_*` anahtarları girilince kendiliğinden devreye girer (6. bölüm).
-Aşağıdaki "Global Instagram hesabı" bölümü şu an kullanılmayan `instagram_icerik` ayarını anlatır.
-YouTube Türkçe kanal, Türkçe video ve mevcut başlık/açıklama yerelleştirmeleriyle devam eder; YouTube'un otomatik
-dublajı Türkçe kaynaktan yalnız İngilizceye çevirir (kaynak: support.google.com/youtube/answer/15569972, 17 Kasım 2026).
-Diğer hesaplar anahtarları eklenince devreye girer (bkz. 6. bölüm).
+**Durum:** Site yedi dilde (TR, EN, ES, FR, DE, NL, ZH) yayınlanır. **Tek hesap, çok dil (Cio'nun kararı,
+17 Kasım 2026):** tek Instagram hesabı (`IG_TR_*`, @ctrlagame) ve tek YouTube kanalı (`YT_TR_*`) bütün dillerin
+Reels ve Shorts videolarını paylaşır; dil başına ayrı hesap gerekmez. Düzen `sosyal/ayarlar.json` içindedir:
+
+- `hesap_esleme.instagram` / `hesap_esleme.youtube`: hangi dilin hangi hesaptan çıkacağı (şimdi en, es, fr, de, nl, zh
+  hepsi `tr` hesabına). Bir dile ileride kendi hesabı açılıp `IG_EN_*` / `YT_EN_*` anahtarları girilirse o dil
+  kendiliğinden kendi hesabına döner; eşlemeyi silmek gerekmez.
+- `ortak_hesap_bicimleri` (`["reel","short"]`): yabancı dil yalnız Reels ve Shorts olarak çıkar. Instagram görsel
+  gönderisi Türkçe kalır; yabancı dile de görsel istenirse `"gorsel"` bu listeye eklenir.
+- Günlük sınırlar HESAP başınadır, diller toplanır: Instagram görsel 12, Reels 6, Shorts 8
+  (`gunluk_en_fazla`); her çalışmada hesap başına en çok 1 gönderi (`calisma_basina_en_fazla`).
+- Türkçe payı: `ana_dil_en_az` Türkçeye günde en az 3 Reels ve 3 Shorts ayırır; `ana_dil_payi_serbest_saat`
+  (UTC 19) geçince Türkçe adayı yoksa kalan haklar yabancı dillere açılır. Yabancı dillerde sıra
+  `hesap_dil_sirasi` ile döner (en, es, fr, de, nl, zh; en uzun süredir paylaşılmayan dil önce); aynı haberin dil
+  sürümleri art arda gitmez (`ayni_konu_ara_saat`). GTA VI önceliği dil ve platform başına eskisi gibi çalışır.
+- Kayıt anahtarı `konu|dil|platform|bicim` dil ayrımını korur; ortak hesaptan çıkan kayda `hesap: tr` yazılır.
+- Dil alanları: YouTube `snippet.defaultLanguage` ve `defaultAudioLanguage` video diline eşit, başlık, açıklama ve
+  etiket o dildedir (kaynak: developers.google.com/youtube/v3/docs/videos, 17 Kasım 2026). Instagram altyazısı ve
+  etiketleri de o dildedir; tek dilli gönderide başka dil karışmaz.
+
+Not (2026-11-17): Instagram tek gönderiyi bölgeye göre farklı dilde gösteremez; bu yüzden yabancı dil ayrı Reels
+olarak, kendi dilinde yayınlanır. Aşağıdaki "Global Instagram hesabı" bölümü şu an kullanılmayan `instagram_icerik`
+ayarını anlatır.
 
 **E-posta ipucu:** her hesap ayrı e-posta ister. Gmail'de `adın+gtatr@gmail.com` gibi `+`
 eklenmiş adresler aynı kutuya gelir; çoğu site bunu kabul eder.
@@ -149,7 +162,7 @@ en çok bir gönderi seçilir; hazır Reel önceliklidir, yoksa görsel seçilir
 Menü adları zamanla değişir. Ekrandakiyle uyuşmayan adım olursa **ekran görüntüsü at,
 birlikte bakalım**.
 
-1. youtube.com'da kanalı aç (dil başına ayrı kanal ister, ilk adım için tek kanal yeter).
+1. youtube.com'da kanalı aç (tek kanal bütün dilleri yayınlar; `hesap_esleme.youtube` bkz. Durum).
    Kanalın bağlı olduğu Google hesabını not et.
 2. **console.cloud.google.com** adresine aynı hesapla gir. Üstteki proje seçiciden **Yeni proje**
    aç (ad: "ctrl-agame video").
@@ -181,7 +194,7 @@ birlikte bakalım**.
    `YT_<DİL>_CLIENT_SECRET`, `YT_<DİL>_REFRESH_TOKEN`) GitHub'a gizli yazar.
 5. YouTube görünürlüğü `sosyal/ayarlar.json → youtube.gizlilik` ile seçilir (mevcut değer `public`).
    İlk video onayı `data/videolar.json` içindeki mevcut onay düzeniyle ayrıca korunur.
-6. Her dil için ayrı Google/YouTube hesabı kullanacaksan 2. ve 3. adımı dil başına tekrar et.
+6. Bir dile ayrı Google/YouTube hesabı açmak istersen 2. ve 3. adımı o dil için tekrarla (`YT_<DIL>_*`); o dil kendi kanalına döner.
 
 ### 5.3 Azure Speech anahtarı (video sesi için)
 
@@ -224,8 +237,8 @@ Farklı içerik dili veya iki dilli Instagram açıklaması istersen o hesabın 
   `tools/sosyal_derle.py` sayfaları, paylaşım görsellerini, RSS'i ve site haritasını üretir.
 - Paylaşım: `.github/workflows/sosyal.yml` → `tools/sosyal_yayinla.py`.
   - Son 3 günün paylaşılmamış haberleri önceliklidir; boşluklar aşağıdaki kuyruktan doldurulur.
-  - Her hesap/platform için her çalışmada en çok 1 gönderi; günlük görsel Instagram 12, Reels 4, Shorts 4
-    (`sosyal/ayarlar.json`; sınır hesap dili ve biçim başınadır, sosyal yayın günleri UTC'dir).
+  - Her hesap/platform için her çalışmada en çok 1 gönderi; günlük görsel Instagram 12, Reels 6, Shorts 8
+    (`sosyal/ayarlar.json`; sınır HESAP ve biçim başınadır, ortak hesapta diller toplanır, sosyal yayın günleri UTC'dir).
   - Instagram'da hazır/onaylı Reel önceliklidir, aksi halde görsel seçilir. Reels ve Shorts hype eşiğini korur.
   - Gönderilenler `sosyal/gonderilenler.json`'a yazılır, aynı haber iki kez gitmez.
 - Anahtarı girilmemiş hesap atlanır ("anahtar yok, atlandı"). Bir hesap hata verirse GitHub sana "failed" e-postası

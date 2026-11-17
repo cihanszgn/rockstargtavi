@@ -96,7 +96,8 @@ def yt_kimligi(url: str) -> str | None:
 
 
 def hedefler(kayit: dict, manifest: dict) -> list[dict]:
-    """Yayınlanmış gönderiler: {platform, kimlik, dil, bicim, tur, id, url, zaman}. platform+kimlik tekil."""
+    """Yayınlanmış gönderiler: {platform, kimlik, dil (içerik dili), hesap (yayının çıktığı hesabın dili; manifestten
+    gelen kayıtta None, ölçümde ayardan çözülür), bicim, tur, id, url, zaman}. platform+kimlik tekil."""
     sonuc, gorulen = [], set()
     for k, r in kayit.items():
         p = k.split("|")
@@ -109,7 +110,7 @@ def hedefler(kayit: dict, manifest: dict) -> list[dict]:
             continue
         gorulen.add(a)
         sonuc.append({"anahtar": k, "platform": r["platform"], "kimlik": a[1], "dil": r.get("dil") or p[1],
-                      "bicim": r.get("bicim") or p[3], "tur": r.get("sosyal_tur", "haber"), "id": r.get("id", p[0]),
+                      "hesap": sy.kayit_hesabi(k, r), "bicim": r.get("bicim") or p[3], "tur": r.get("sosyal_tur", "haber"), "id": r.get("id", p[0]),
                       "url": r.get("url"), "zaman": r.get("zaman") or r.get("niyet_zamani")})
     for vid, diller in (manifest.get("videolar") or {}).items():
         for dil, v in (diller or {}).items():
@@ -117,7 +118,7 @@ def hedefler(kayit: dict, manifest: dict) -> list[dict]:
             if yid and ("youtube", yid) not in gorulen:
                 gorulen.add(("youtube", yid))
                 sonuc.append({"anahtar": f"{vid}|{dil}|youtube|short", "platform": "youtube", "kimlik": yid, "dil": dil,
-                              "bicim": "short", "tur": "haber", "id": vid, "url": v.get("youtube"),
+                              "hesap": None, "bicim": "short", "tur": "haber", "id": vid, "url": v.get("youtube"),
                               "zaman": v.get("uretildi")})
     return sonuc
 
@@ -391,7 +392,8 @@ def calistir(*, kayit_yolu=KAYIT, manifest_yolu=MANIFEST, ayar_yolu=AYAR, olcum_
     for platform in ("youtube", "instagram"):
         for dil in sy.DILLER:
             sir = sy.hesap_sirri(tum, platform, dil)
-            liste = [x for x in hedef if x["platform"] == platform and x["dil"] == dil]
+            liste = [x for x in hedef if x["platform"] == platform and
+                     (x.get("hesap") or sy.hesap_coz(ayar, tum, platform, x["dil"])[0]) == dil]
             if not sir:
                 if liste:
                     atlanan.append(f"{platform}/{dil}")
@@ -414,7 +416,7 @@ def calistir(*, kayit_yolu=KAYIT, manifest_yolu=MANIFEST, ayar_yolu=AYAR, olcum_
                     continue
                 url = o.pop("_url", None) or x.get("url")
                 g = olcum["gonderiler"].setdefault(f"{platform}|{x['kimlik']}", {})
-                g.update({"platform": platform, "dil": dil, "bicim": x["bicim"], "tur": x["tur"], "id": x["id"],
+                g.update({"platform": platform, "dil": x["dil"], "bicim": x["bicim"], "tur": x["tur"], "id": x["id"],
                           "kimlik": x["kimlik"], "url": url, "zaman": x["zaman"]})
                 g["son"] = {**(g.get("son") or {}), **o, "olculdu": za}
     if hesaplar:

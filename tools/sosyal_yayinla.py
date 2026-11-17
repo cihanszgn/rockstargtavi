@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Sosyal paylaşım: data/icerik.json'daki yeni haberleri X, Reddit, Instagram (görsel + Reels) ve YouTube Shorts'a gönderir.
 
-Hesap dili anahtarları ve kayıtları belirler; Instagram içerik dili ayardan değiştirilebilir.
-Bir hesabın anahtarları yoksa o hesap atlanır ("anahtar yok, atlandı" diye
-çıktıda görünür); anahtarlar eklenince paylaşım kod değişmeden başlar.
+Tek hesap, çok dil: ayardaki `hesap_esleme.<platform>.<dil>` yabancı dilin hangi hesaptan çıkacağını söyler
+(şimdi hepsi TR hesabı: IG_TR_*, YT_TR_*). Dilin kendi anahtarları girilirse o dil kendi hesabına döner. Yabancı dil
+yalnız `ortak_hesap_bicimleri` (reel, short) ile çıkar; günlük sınır hesap başınadır, Türkçe payı `ana_dil_en_az`,
+yabancı dil sırası `hesap_dil_sirasi` ile döner. Hesap anahtarları yoksa o hesap atlanır ("anahtar yok, atlandı"
+diye çıktıda görünür); anahtarlar eklenince paylaşım kod değişmeden başlar.
 Anahtarlar ortam değişkeninden okunur (GitHub Actions: her sır adıyla env olarak verilir).
 Görsel gönderi her haberde, Reels ve Shorts yalnız hype puanı sosyal/ayarlar.json video.hype_esigi ve üstündeki
 haberde gider (puanı olmayan eski haberde: manifestte video varsa gider).
@@ -19,7 +21,7 @@ Her paylaşımdan ÖNCE kayda "niyet" yazılır, kimlikler (Instagram kapsayıc�
 kaydedilir, iş bitince "tamam" olur. Yanıtı kaybolan (zaman aşımı) paylaşım bir sonraki çalışmada platformdan
 sorgulanıp tamamlanır; sorgulanamıyorsa "elle_bak" işaretlenir ve ASLA kendiliğinden yeniden denenmez.
 
-Gerekli sırlar (DIL = TR, EN, FR, ES):
+Gerekli sırlar (DIL = hesap dili; şimdi yalnız TR gerekir, EN/ES/FR yalnız ayrı hesap açılırsa):
   X_DIL_API_KEY, X_DIL_API_SECRET, X_DIL_ACCESS_TOKEN, X_DIL_ACCESS_SECRET
   REDDIT_DIL_CLIENT_ID, REDDIT_DIL_CLIENT_SECRET, REDDIT_DIL_USERNAME, REDDIT_DIL_PASSWORD
   IG_DIL_USER_ID, IG_DIL_TOKEN                      (görsel ve Reels için aynı hesap)
@@ -515,6 +517,21 @@ def kayit_goc(kayit: dict, veri: list) -> tuple[dict, bool]:
             yeni.setdefault(f"{konu.get(p[0], p[0])}|{p[1]}|{p[2]}|gorsel", rec)
         else:
             yeni[k] = v
+    # Hesap dilinden başka dilde içerik yayımlamış eski kayıt (dil=tr, icerik_dili=en): kayıt, içeriğin diline taşınır
+    # ve hesap alanı yazılır. Böylece Türkçe sürüm o kayıtla engellenmez, İngilizce sürüm de ikinci kez gitmez.
+    for k, v in list(yeni.items()):
+        p = k.split("|")
+        icerik = v.get("icerik_dili")
+        if len(p) != 4 or not icerik or icerik == p[1] or v.get("dil", p[1]) != p[1]:
+            continue
+        yk = f"{p[0]}|{icerik}|{p[2]}|{p[3]}"
+        if yk in yeni:
+            continue
+        rec = dict(v)
+        rec.update(dil=icerik, hesap=p[1])
+        del yeni[k]
+        yeni[yk] = rec
+        degisti = True
     return yeni, degisti
 
 
@@ -528,14 +545,70 @@ def sinir_adi(k: str) -> str:
     return {"reel": "instagram_reel", "short": "youtube"}.get(bicim, platform)
 
 
-def bugunku_sayi(kayit: dict, ad: str, dil: str, gun: str) -> int:
-    n = 0
+def kayit_hesabi(k: str, rec: dict) -> str:
+    """Kaydın yayınlandığı hesabın dili. Ortak hesaptan çıkan kayıtta `hesap` yazılıdır; yoksa hesap dili = kayıt dili."""
+    return rec.get("hesap") or rec.get("dil") or k.split("|")[1]
+
+
+def _sayilir(v: dict) -> bool:
+    return v.get("durum") in ("tamam", "niyet", "elle_bak")
+
+
+def _zaman_gunu(v: dict) -> str:
+    return (v.get("niyet_zamani") or v.get("zaman") or "")[:10]
+
+
+def bugunku_sayi(kayit: dict, ad: str, hesap: str, gun: str) -> int:
+    """Günlük sınır HESAP başınadır: hesap = yayının çıktığı hesabın dili (ortak hesaba giden diller o hesaba yazılır)."""
+    return sum(1 for k, v in kayit.items()
+               if len(k.split("|")) == 4 and kayit_hesabi(k, v) == hesap and sinir_adi(k) == ad
+               and _sayilir(v) and _zaman_gunu(v) == gun)
+
+
+def bugunku_dil_sayisi(kayit: dict, ad: str, hesap: str, dil: str, gun: str) -> int:
+    """Bir hesapta bugün çıkan, içeriği `dil` olan gönderiler (ana dil payı ve dil dönüşümü için)."""
+    return sum(1 for k, v in kayit.items()
+               if len(k.split("|")) == 4 and kayit_hesabi(k, v) == hesap and sinir_adi(k) == ad
+               and (v.get("dil") or k.split("|")[1]) == dil and _sayilir(v) and _zaman_gunu(v) == gun)
+
+
+def son_gonderi(kayit: dict, hesap: str, ad: str) -> tuple[str, str | None, str | None]:
+    """Hesabın bu sınır adındaki en son gönderisi -> (zaman, içerik dili, konu). Yoksa ("", None, None)."""
+    en = ("", None, None)
     for k, v in kayit.items():
         p = k.split("|")
-        if len(p) == 4 and p[1] == dil and sinir_adi(k) == ad and v.get("durum") in ("tamam", "niyet", "elle_bak") \
-                and (v.get("niyet_zamani") or v.get("zaman") or "")[:10] == gun:
-            n += 1
-    return n
+        if len(p) != 4 or kayit_hesabi(k, v) != hesap or sinir_adi(k) != ad or not _sayilir(v):
+            continue
+        z = v.get("zaman") or v.get("niyet_zamani") or ""
+        if z >= en[0]:
+            en = (z, v.get("dil") or p[1], p[0])
+    return en
+
+
+def ayni_konu_yakin(zaman_, simdi: datetime, ayar: dict) -> bool:
+    """Son gönderi `ayni_konu_ara_saat` saatten yeni mi? (Eşikten sonra aynı haberin başka dil sürümü yeniden serbest.)"""
+    saat = float((ayar or {}).get("ayni_konu_ara_saat", 0) or 0)
+    dt = sk.zaman(zaman_) if zaman_ else None
+    return bool(saat and dt and timedelta(0) <= simdi - dt < timedelta(hours=saat))
+
+
+def dil_sirasi(ayar, kuyruk, kayit, simdi, hesap, platform, uyeler, son_dil) -> list[str]:
+    """Hesabın bu çalışmada deneyeceği içerik dilleri, sırayla.
+    1) çıkışa yakın GTA VI önceliği bekleyen diller öne; 2) ana dil ile yabancı diller dönüşümlü (son gönderi ana dilse
+    yabancı önce, değilse ana dil önce); 3) yabancılar kendi içinde en uzun süredir gönderisi olmayandan başlar."""
+    yabanci_sira = [d for d in (ayar.get("hesap_dil_sirasi") or DILLER) if d in uyeler and d != hesap]
+    yabanci_sira += [d for d in DILLER if d in uyeler and d != hesap and d not in yabanci_sira]
+    en_son = {}
+    for k, v in kayit.items():
+        p = k.split("|")
+        if len(p) == 4 and kayit_hesabi(k, v) == hesap and _sayilir(v) and p[2] == platform:
+            d = v.get("dil") or p[1]
+            en_son[d] = max(en_son.get(d, ""), v.get("zaman") or v.get("niyet_zamani") or "")
+    yabanci = sorted(yabanci_sira, key=lambda d: (en_son.get(d, ""), yabanci_sira.index(d)))
+    ana = [hesap] if hesap in uyeler else []
+    sira = (yabanci + ana) if son_dil == hesap else (ana + yabanci)
+    gta = [d for d in sira if sk.gta_bekliyor(kuyruk, d, platform, kayit, simdi)]
+    return gta + [d for d in sira if d not in gta]
 
 
 def sirlari_oku(ortam=None) -> dict:
@@ -557,6 +630,17 @@ def hesap_sirri(tum, platform, dil):
     on = f"{ONEK_SIR[platform]}_{dil.upper()}_"
     sir = {a: (tum.get(on + a) or "").strip() for a in GEREKEN[platform]}
     return sir if all(sir.values()) else None
+
+
+def hesap_coz(ayar, tum, platform, dil):
+    """İçerik dilinin yayınlanacağı hesap -> (hesap dili, anahtarlar | None).
+    Dilin kendi anahtarları varsa kendi hesabı; yoksa ayardaki `hesap_esleme.<platform>.<dil>` ortak hesabı
+    (ileride bir dile ayrı hesap açılıp anahtarları girilirse o dil kendiliğinden kendi hesabına döner)."""
+    sir = hesap_sirri(tum, platform, dil)
+    if sir:
+        return dil, sir
+    hesap = (((ayar or {}).get("hesap_esleme") or {}).get(platform) or {}).get(dil) or dil
+    return hesap, hesap_sirri(tum, platform, hesap)
 
 
 def eksik_sirlar(tum, platform, dil) -> list[str]:
@@ -596,7 +680,7 @@ def uzlastir(ag, kayit, tum, ayar, manifest_yolu, kaydet, simdi) -> list:
         if rec.get("durum") != "niyet":
             continue
         platform, bicim, dil = rec.get("platform"), rec.get("bicim"), rec.get("dil")
-        sir = hesap_sirri(tum, platform, dil) if platform in ONEK_SIR else None
+        sir = hesap_sirri(tum, platform, kayit_hesabi(k, rec)) if platform in ONEK_SIR else None
 
         def elle(neden):
             rec.update(durum="elle_bak", **{"not": neden})
@@ -679,121 +763,175 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
         manifest = vs.yukle(manifest_yolu)
     else:
         onceki = set()
-    kullanilan = {(k.split('|')[1], k.split('|')[2]) for k in onceki if kayit[k].get('durum') == 'tamam'}
+    kullanilan = {(kayit_hesabi(k, kayit[k]), k.split('|')[2]) for k in onceki if kayit[k].get('durum') == 'tamam'}
 
-    for dil in DILLER:
-        for platform, bicim, ad in HEDEFLER:
+    ortak_bicim = tuple(ayar.get("ortak_hesap_bicimleri") or BICIMLER)
+    hesap_hatasi: set = set()
+    for platform, bicim, ad in HEDEFLER:
+        # Hesap başına grup: kendi anahtarı olan dil kendi hesabına, olmayan dil ayardaki ortak hesaba gider.
+        gruplar: dict[str, list[str]] = {}
+        for dil in DILLER:
             if not ayar["hesaplar"].get(dil, {}).get(ad):
                 continue
-            sir = hesap_sirri(tum, platform, dil)
+            hesap, sir = hesap_coz(ayar, tum, platform, dil)
+            if hesap != dil and bicim not in ortak_bicim:
+                continue  # başka dilin hesabından yalnız ayarda izinli biçimler (Reels/Shorts) çıkar
             if not sir and not (dry_run and anahtarsiz_goster):
                 atlanan.append(f"{ad}/{dil}")
                 if dry_run:
-                    cikti(f"[DENEME] {ad}/{dil}: anahtar yok, atlandı ({', '.join(eksik_sirlar(tum, platform, dil))})")
+                    cikti(f"[DENEME] {ad}/{dil}: anahtar yok, atlandı ({', '.join(eksik_sirlar(tum, platform, hesap))})")
                 continue
-            if (dil, platform) in kullanilan:
+            gruplar.setdefault(hesap, []).append(dil)
+        for hesap, uyeler in gruplar.items():
+            sir = hesap_sirri(tum, platform, hesap)
+            if (hesap, platform) in kullanilan:
                 continue
-            icerik_dili = ig_icerik_dilleri(dil, ayar)[0] if platform == 'instagram' else dil
-            global_ig = platform == 'instagram' and bool(ayar['hesaplar'][dil].get('instagram_icerik'))
             sinir = (ayar.get("gunluk_en_fazla") or {}).get(ad, VARSAYILAN_SINIR[ad])
-            hak = min(1, ayar.get("calisma_basina_en_fazla", 1), sinir - bugunku_sayi(kayit, ad, dil, gun))
-            for x in sk.oncelikli(kuyruk, dil, platform, kayit, simdi):
-                if hak <= 0:
+            hak = min(1, ayar.get("calisma_basina_en_fazla", 1), sinir - bugunku_sayi(kayit, ad, hesap, gun))
+            if hak <= 0:
+                continue
+            ortak = any(d != hesap for d in uyeler)
+            en_az = int((ayar.get("ana_dil_en_az") or {}).get(ad, 0)) if ortak and hesap in uyeler else 0
+            son_z, son_d, son_konu = son_gonderi(kayit, hesap, ad)
+            yasak_konu = son_konu if ortak and ayni_konu_yakin(son_z, simdi, ayar) else None
+
+            def adaylari(dil, hesap=hesap, platform=platform, bicim=bicim, yasak_konu=yasak_konu):
+                icerik_dili = ig_icerik_dilleri(dil, ayar)[0] if platform == 'instagram' else dil
+                global_ig = platform == 'instagram' and bool(ayar['hesaplar'][dil].get('instagram_icerik'))
+                for x in sk.oncelikli(kuyruk, dil, platform, kayit, simdi):
+                    if not sk.uygun(x, dil, platform, kayit, simdi):
+                        continue
+                    if icerik_dili not in x.get('diller', {}):
+                        continue  # Ana içerik dilinden hesap diline düşülmez.
+                    k = anahtar(x, dil, platform, bicim)
+                    if k in kayit:
+                        continue
+                    if global_ig and any(p.split('|')[1:3] == [dil, platform] and
+                                         (p.split('|')[0] == konu_veya_id(x) or
+                                          (x.get('sosyal_tur', 'haber') in ('haber', 'arsiv') and
+                                           (p.split('|')[0] == x['id'] or r.get('id') == x['id'])))
+                                         for p, r in kayit.items()):
+                        continue  # Eski TR gönderisi başka dil/biçimle yeniden paylaşılmaz.
+                    if yasak_konu and konu_veya_id(x) == yasak_konu:
+                        continue  # aynı haberin başka dil sürümü art arda gitmez; araya başka içerik girer
+                    video = None
+                    if bicim != "gorsel":
+                        if not video_hakki(x, ayar):
+                            continue  # hype puanı eşiğin altında: bu haber yalnız görsel gönderi alır
+                        video = vs.bul(manifest, x["id"], icerik_dili)
+                        if not video:
+                            continue  # bu haber/dil için video henüz yok
+                        if video.get("instagram" if bicim == "reel" else "youtube"):
+                            continue  # manifest bu videonun bu platforma çıktığını söylüyor
+                    yield x, k, video, icerik_dili
+
+            toplam = bugunku_sayi(kayit, ad, hesap, gun)
+            serbest_saat = int(ayar.get("ana_dil_payi_serbest_saat", 24))
+            for dil in dil_sirasi(ayar, kuyruk, kayit, simdi, hesap, platform, uyeler, son_d):
+                if hak <= 0 or (hesap, ad) in hesap_hatasi:
                     break
-                if not sk.uygun(x, dil, platform, kayit, simdi):
-                    continue
-                if icerik_dili not in x.get('diller', {}):
-                    continue  # Ana içerik dilinden hesap diline düşülmez.
-                k = anahtar(x, dil, platform, bicim)
-                if k in kayit:
-                    continue
-                if global_ig and any(p.split('|')[1:3] == [dil, platform] and
-                                     (p.split('|')[0] == konu_veya_id(x) or
-                                      (x.get('sosyal_tur', 'haber') in ('haber', 'arsiv') and
-                                       (p.split('|')[0] == x['id'] or r.get('id') == x['id'])))
-                                     for p, r in kayit.items()):
-                    continue  # Eski TR gönderisi başka dil/biçimle yeniden paylaşılmaz.
-                video = None
-                if bicim != "gorsel":
-                    if not video_hakki(x, ayar):
-                        continue  # hype puanı eşiğin altında: bu haber yalnız görsel gönderi alır
-                    video = vs.bul(manifest, x["id"], icerik_dili)
-                    if not video:
-                        continue  # bu haber/dil için video henüz yok
-                link = paylasim_linki(icerik_dili, x, platform)
-                sayfa = sayfa_adresi(icerik_dili, x)
-                if dry_run:
-                    cikti(f"\n[DENEME] {ad}/{dil}  {x['id']}" + ("" if sir else "  (hesap şifresi yok, gerçekte atlanır)"))
-                    if platform == "x":
-                        cikti(x_metin(dil, x, link, ayar.get("x_baglanti", "gonderide")))
-                    elif platform == "reddit":
-                        cikti(f"başlık: {x['diller'][dil]['baslik']}\nbağlantı: {link}")
-                    elif bicim == "reel":
-                        cikti(f"video: {ig_video_adresi(video)}\nkapak: {video['kapak']}\n{ig_aciklama(dil, x, ayar)}")
-                    elif bicim == "short":
-                        g = yt_govde(dil, x, link, ayar)
-                        cikti('yerelleştirme gövdesi: ' + json.dumps(g, ensure_ascii=False, sort_keys=True))
-                        cikti(f"video: {ig_video_adresi(video)}\nbaşlık: {g['snippet']['title']}\ngizlilik: {g['status']['privacyStatus']}\n{g['snippet']['description']}")
-                    else:
-                        cikti(f"görsel: {SITE}/{kart_ad(x['id'], icerik_dili, 'ig')}\n{ig_aciklama(dil, x, ayar)}")
-                    rec = {"id": x['id'], "sosyal_tur": x.get('sosyal_tur', 'haber'), "dil": dil,
-                           "platform": platform, "bicim": bicim, "durum": "tamam", "zaman": simdi.isoformat()}
+                if dil != hesap and en_az:
+                    eksik = max(0, en_az - bugunku_dil_sayisi(kayit, ad, hesap, hesap, gun))
+                    if eksik and sinir - toplam - eksik <= 0 and (simdi.hour < serbest_saat or next(adaylari(hesap), None) is not None):
+                        continue  # kalan haklar o günkü ana dil payına ayrılmış (serbest saatten sonra yalnız ana dilde aday varsa)
+                for x, k, video, icerik_dili in adaylari(dil):
+                    if hak <= 0:
+                        break
+                    link = paylasim_linki(icerik_dili, x, platform)
+                    sayfa = sayfa_adresi(icerik_dili, x)
+                    if dry_run:
+                        cikti(f"\n[DENEME] {ad}/{dil}  {x['id']}" + (f"  (hesap: {hesap})" if hesap != dil else "")
+                              + ("" if sir else "  (hesap şifresi yok, gerçekte atlanır)"))
+                        if platform == "x":
+                            cikti(x_metin(dil, x, link, ayar.get("x_baglanti", "gonderide")))
+                        elif platform == "reddit":
+                            cikti(f"başlık: {x['diller'][dil]['baslik']}\nbağlantı: {link}")
+                        elif bicim == "reel":
+                            cikti(f"video: {ig_video_adresi(video)}\nkapak: {video['kapak']}\n{ig_aciklama(dil, x, ayar)}")
+                        elif bicim == "short":
+                            g = yt_govde(dil, x, link, ayar)
+                            cikti('yerelleştirme gövdesi: ' + json.dumps(g, ensure_ascii=False, sort_keys=True))
+                            cikti(f"video: {ig_video_adresi(video)}\nbaşlık: {g['snippet']['title']}\ngizlilik: {g['status']['privacyStatus']}\n{g['snippet']['description']}")
+                        else:
+                            cikti(f"görsel: {SITE}/{kart_ad(x['id'], icerik_dili, 'ig')}\n{ig_aciklama(dil, x, ayar)}")
+                        rec = {"id": x['id'], "sosyal_tur": x.get('sosyal_tur', 'haber'), "dil": dil,
+                               "platform": platform, "bicim": bicim, "durum": "tamam", "zaman": simdi.isoformat()}
+                        if hesap != dil:
+                            rec['hesap'] = hesap
+                        if platform == 'instagram':
+                            rec['icerik_dili'] = icerik_dili
+                        kayit[k] = rec
+                        kullanilan.add((hesap, platform))
+                        if secildi:
+                            secildi(k, rec)
+                        hak -= 1
+                        toplam += 1
+                        continue
+                    if not ag.yayinda_mi(sayfa):
+                        cikti(f"Bekliyor (sayfa henüz yayında değil): {sayfa}")
+                        continue
+                    rec = {"id": x["id"], "dil": dil, "platform": platform, "bicim": bicim, "durum": "niyet",
+                           "sosyal_tur": x.get('sosyal_tur', 'haber'),
+                           "niyet_zamani": simdi.isoformat(timespec="seconds")}
+                    if hesap != dil:
+                        rec['hesap'] = hesap
                     if platform == 'instagram':
                         rec['icerik_dili'] = icerik_dili
                     kayit[k] = rec
-                    kullanilan.add((dil, platform))
-                    if secildi:
-                        secildi(k, rec)
-                    hak -= 1
-                    continue
-                if not ag.yayinda_mi(sayfa):
-                    cikti(f"Bekliyor (sayfa henüz yayında değil): {sayfa}")
-                    continue
-                rec = {"id": x["id"], "dil": dil, "platform": platform, "bicim": bicim, "durum": "niyet",
-                       "sosyal_tur": x.get('sosyal_tur', 'haber'),
-                       "niyet_zamani": simdi.isoformat(timespec="seconds")}
-                if platform == 'instagram':
-                    rec['icerik_dili'] = icerik_dili
-                kayit[k] = rec
-                kullanilan.add((dil, platform))
-                kaydet()  # çağrıdan ÖNCE: çökse bile bir sonraki çalışma çift paylaşmaz
+                    kullanilan.add((hesap, platform))
+                    kaydet()  # çağrıdan ÖNCE: çökse bile bir sonraki çalışma çift paylaşmaz
 
-                def ara(**alan):
-                    rec.update(alan)
-                    kaydet()
-                try:
-                    if platform == "x":
-                        sonuc = x_paylas(ag, sir, dil, x, link, ayar.get("x_baglanti", "gonderide"))
-                    elif platform == "reddit":
-                        sonuc = reddit_paylas(ag, sir, dil, x, link, ayar)
-                    elif platform == "instagram":
-                        sonuc = ig_paylas(ag, sir, dil, x, ayar, ara, video)
-                    else:
-                        sonuc = yt_paylas(ag, sir, dil, x, link, ayar, ara, video)
-                except PaylasimHatasi as h:
-                    if h.kesin:
-                        del kayit[k]  # sunucu açıkça reddetti, yayımlanmadı: sonra yeniden denenir
+                    def ara(rec=rec, **alan):
+                        rec.update(alan)
                         kaydet()
-                    hatalar.append(f"{ad}/{dil} {x['id']}: {h}" + ("" if h.kesin else "  [sonuç belirsiz; sonraki çalışmada platformdan sorgulanır]"))
-                    break  # bu hesapta sorun var; diğer hesaplara geç
-                _tamamla(rec, sonuc, simdi)
-                kaydet()
-                if bicim in ("reel", "short") and sonuc.get("url"):
-                    vs.baglanti_yaz(manifest_yolu, x["id"], icerik_dili, "instagram" if bicim == "reel" else "youtube", sonuc["url"])
-                cikti(f"Paylaşıldı: {ad}/{dil} {x['id']} {sonuc.get('url') or sonuc.get('kimlik')}")
-                gonderilen += 1
-                kullanilan.add((dil, platform))
-                hak -= 1
+                    try:
+                        if platform == "x":
+                            sonuc = x_paylas(ag, sir, dil, x, link, ayar.get("x_baglanti", "gonderide"))
+                        elif platform == "reddit":
+                            sonuc = reddit_paylas(ag, sir, dil, x, link, ayar)
+                        elif platform == "instagram":
+                            sonuc = ig_paylas(ag, sir, dil, x, ayar, ara, video)
+                        else:
+                            sonuc = yt_paylas(ag, sir, dil, x, link, ayar, ara, video)
+                    except PaylasimHatasi as h:
+                        if h.kesin:
+                            del kayit[k]  # sunucu açıkça reddetti, yayımlanmadı: sonra yeniden denenir
+                            kaydet()
+                        hatalar.append(f"{ad}/{dil} {x['id']}: {h}" + ("" if h.kesin else "  [sonuç belirsiz; sonraki çalışmada platformdan sorgulanır]"))
+                        hesap_hatasi.add((hesap, ad))
+                        break  # bu hesapta sorun var; diğer hesaplara geç
+                    _tamamla(rec, sonuc, simdi)
+                    kaydet()
+                    if bicim in ("reel", "short") and sonuc.get("url"):
+                        vs.baglanti_yaz(manifest_yolu, x["id"], icerik_dili, "instagram" if bicim == "reel" else "youtube", sonuc["url"])
+                    cikti(f"Paylaşıldı: {ad}/{dil} {x['id']} {sonuc.get('url') or sonuc.get('kimlik')}")
+                    gonderilen += 1
+                    kullanilan.add((hesap, platform))
+                    hak -= 1
+                    toplam += 1
     return gonderilen, hatalar, atlanan
 
 
 def paylasilacak_diller(ayar: dict, tum: dict | None = None) -> list[str]:
-    """Ayarda açık hesapların içerik dilleri. `tum` verilirse yalnız anahtarı da tam olanlar kalır.
+    """Ayarda açık hesapların içerik dilleri. `tum` verilirse yalnız anahtarı (kendi ya da ortak hesabı) tam olanlar kalır.
     --sayfa-bekle adımı sır görmez (env'de anahtar yok), bu yüzden orada yalnız ayara bakılır:
     anahtar sonradan eklenince bekleme de kod değişmeden o dili kapsar."""
-    diller = {ig_icerik_dilleri(d, ayar)[0] if platform == 'instagram' else d
-              for d in DILLER for platform, _, ad in HEDEFLER
-              if ayar['hesaplar'].get(d, {}).get(ad) and (tum is None or hesap_sirri(tum, platform, d))}
+    ortak = tuple(ayar.get("ortak_hesap_bicimleri") or BICIMLER)
+    diller = set()
+    for d in DILLER:
+        for platform, bicim, ad in HEDEFLER:
+            if not ayar['hesaplar'].get(d, {}).get(ad):
+                continue
+            if tum is None:
+                hesap, sir = d, True
+                if bicim not in ortak and ((ayar.get("hesap_esleme") or {}).get(platform) or {}).get(d, d) != d:
+                    continue
+            else:
+                hesap, sir = hesap_coz(ayar, tum, platform, d)
+                if hesap != d and bicim not in ortak:
+                    continue
+            if sir:
+                diller.add(ig_icerik_dilleri(d, ayar)[0] if platform == 'instagram' else d)
     return [d for d in DILLER if d in diller]
 
 
@@ -828,8 +966,7 @@ def benzet(ayar, veri, kayit, manifest_yolu, baslangic, saat, *, kok=KOK, cikti=
     bellek, _ = kayit_goc(copy.deepcopy(kayit), veri)
     tum = {f'{on}_TR_{ad}': 'BENZETIM' for on, adlar in (('IG', GEREKEN['instagram']), ('YT', GEREKEN['youtube'])) for ad in adlar}
     secimler = []
-    cikti("BENZETİM: yalnız TR Instagram/YouTube hesapları taklit edilir; ağ/model/yazma yok. Kota UTC gününe göre.")
-    cikti("Anahtar yok, atlandı: en, fr, es (benzetim hesap profili).")
+    cikti("BENZETİM: yalnız TR Instagram/YouTube anahtarları taklit edilir (ayardaki ortak hesap eşlemesiyle diğer diller de TR hesabından çıkar); ağ/model/yazma yok. Kota UTC gününe göre.")
     for i in range(saat):
         simdi = baslangic + timedelta(hours=i)
         aday = sk.adaylar(veri, kok, ayar, simdi.date(), simdi)

@@ -38,7 +38,7 @@ Gereken: Python 3.12, Pillow (yalnız kartlar için). Yerelde bakmak için: `py 
 | `fonts/` | Archivo (OFL), siteyle birlikte sunulur. `fonts/oyun/`: tema yazı tipleri (16 adet, hepsi OFL, tek ağırlık, Latin + Türkçe/Fransızca/İspanyolca alt kümesi, 7–21 KB; lisanslar `fonts/oyun/lisans/`). Her rehber yalnız kendi temasının yazı tipini yükler |
 | `gta-6.html` ve eski sayfalar | Elle yazılmış rehber sayfaları. Derleyici yalnız kabuğu (üst menü, alt bilgi, `<head>`) yeniler; `<main>` içeriğine dokunmaz. `gta-6.html`deki işaretli bloklar (`gta-ust`, `gta-haber`, `gta-dizin`) otomatik dolar |
 | `.github/workflows/indirim.yml` | Her gün 07:23 (TR) ve perşembe 19:09: veriyi çeker, siteyi derler, değişeni yazar |
-| `.github/workflows/sosyal.yml`, `sosyal/` | Sosyal medya paylaşımı (bu yapı değiştirmez) |
+| `.github/workflows/sosyal.yml`, `sosyal/` | Sosyal medya paylaşımı (bu yapı değiştirmez). Tek hesap, çok dil: tek Instagram (`IG_TR_*`) ve tek YouTube kanalı (`YT_TR_*`) Türkçe ile birlikte en/es/fr (ve de/nl/zh) Reels ve Shorts'u da paylaşır; dil başına ayrı hesap gerekmez. Eşleme, hesap başına günlük sınırlar ve Türkçe payı `sosyal/ayarlar.json`, ayrıntı `sosyal/KURULUM.md` |
 
 Dokunulmayanlar: `anma.js`, `CNAME`, `711f987a9d9616ba3f93c799dcb2030d.txt` (IndexNow anahtarı), GA etiketi.
 
