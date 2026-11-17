@@ -1,0 +1,84 @@
+# Günde bir kez YouTube/Instagram izlenme ve etkileşim sayılarını ölçer (yalnız okuma).
+# Çıktı: sosyal/olcum.json ve sosyal/olcum_ozet.md. Anahtarı olmayan hesap atlanır.
+# Bu iş akışı kırmızıya düşmez: API hatası uyarı (::warning::) olarak yazılır.
+# Push, sosyal/video iş akışlarını tetiklemez (onların yol süzgeci data/icerik.json; GITHUB_TOKEN push'u zaten iş akışı başlatmaz).
+name: Sosyal olcum
+
+on:
+  schedule:
+    - cron: "41 3 * * *"   # her gün UTC 03:41 (Türkiye 06:41)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sosyal-olcum
+  cancel-in-progress: false
+
+jobs:
+  olc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Ölç
+        env:
+          IG_TR_USER_ID: ${{ secrets.IG_TR_USER_ID }}
+          IG_TR_TOKEN: ${{ secrets.IG_TR_TOKEN }}
+          YT_TR_CLIENT_ID: ${{ secrets.YT_TR_CLIENT_ID }}
+          YT_TR_CLIENT_SECRET: ${{ secrets.YT_TR_CLIENT_SECRET }}
+          YT_TR_REFRESH_TOKEN: ${{ secrets.YT_TR_REFRESH_TOKEN }}
+          IG_EN_USER_ID: ${{ secrets.IG_EN_USER_ID }}
+          IG_EN_TOKEN: ${{ secrets.IG_EN_TOKEN }}
+          YT_EN_CLIENT_ID: ${{ secrets.YT_EN_CLIENT_ID }}
+          YT_EN_CLIENT_SECRET: ${{ secrets.YT_EN_CLIENT_SECRET }}
+          YT_EN_REFRESH_TOKEN: ${{ secrets.YT_EN_REFRESH_TOKEN }}
+          IG_FR_USER_ID: ${{ secrets.IG_FR_USER_ID }}
+          IG_FR_TOKEN: ${{ secrets.IG_FR_TOKEN }}
+          YT_FR_CLIENT_ID: ${{ secrets.YT_FR_CLIENT_ID }}
+          YT_FR_CLIENT_SECRET: ${{ secrets.YT_FR_CLIENT_SECRET }}
+          YT_FR_REFRESH_TOKEN: ${{ secrets.YT_FR_REFRESH_TOKEN }}
+          IG_ES_USER_ID: ${{ secrets.IG_ES_USER_ID }}
+          IG_ES_TOKEN: ${{ secrets.IG_ES_TOKEN }}
+          YT_ES_CLIENT_ID: ${{ secrets.YT_ES_CLIENT_ID }}
+          YT_ES_CLIENT_SECRET: ${{ secrets.YT_ES_CLIENT_SECRET }}
+          YT_ES_REFRESH_TOKEN: ${{ secrets.YT_ES_REFRESH_TOKEN }}
+          IG_DE_USER_ID: ${{ secrets.IG_DE_USER_ID }}
+          IG_DE_TOKEN: ${{ secrets.IG_DE_TOKEN }}
+          YT_DE_CLIENT_ID: ${{ secrets.YT_DE_CLIENT_ID }}
+          YT_DE_CLIENT_SECRET: ${{ secrets.YT_DE_CLIENT_SECRET }}
+          YT_DE_REFRESH_TOKEN: ${{ secrets.YT_DE_REFRESH_TOKEN }}
+          IG_NL_USER_ID: ${{ secrets.IG_NL_USER_ID }}
+          IG_NL_TOKEN: ${{ secrets.IG_NL_TOKEN }}
+          YT_NL_CLIENT_ID: ${{ secrets.YT_NL_CLIENT_ID }}
+          YT_NL_CLIENT_SECRET: ${{ secrets.YT_NL_CLIENT_SECRET }}
+          YT_NL_REFRESH_TOKEN: ${{ secrets.YT_NL_REFRESH_TOKEN }}
+          IG_ZH_USER_ID: ${{ secrets.IG_ZH_USER_ID }}
+          IG_ZH_TOKEN: ${{ secrets.IG_ZH_TOKEN }}
+          YT_ZH_CLIENT_ID: ${{ secrets.YT_ZH_CLIENT_ID }}
+          YT_ZH_CLIENT_SECRET: ${{ secrets.YT_ZH_CLIENT_SECRET }}
+          YT_ZH_REFRESH_TOKEN: ${{ secrets.YT_ZH_REFRESH_TOKEN }}
+        run: python tools/sosyal_olcum.py || echo "::warning::ölçüm aracı hata kodu döndürdü; sonuç yazılmadı olabilir"
+
+      - name: Sonucu depoya yaz
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sosyal/olcum.json sosyal/olcum_ozet.md 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "sosyal: günlük ölçüm"
+            basarili=0
+            for i in 1 2 3 4; do
+              if git pull --rebase && git push; then basarili=1; break; fi
+              sleep 5
+            done
+            [ "$basarili" = 1 ] || echo "::warning::ölçüm sonucu depoya yazılamadı (bir sonraki gün yeniden denenir)"
+          fi
