@@ -19,6 +19,12 @@ Kullanım:
   py tools/oyun_gorsel_cek.py --yenile     hepsini yeniden çek
   py tools/oyun_gorsel_cek.py --id <id>    tek kayıt (takvim veya oyun id'si)
   py tools/oyun_gorsel_cek.py --kuru       yazmadan ne bulacağını göster
+  py tools/oyun_gorsel_cek.py --appid <id>=<steam appid>   elle Steam eşleşmesi (ad doğrulanır, kayıt kilitlenir)
+  py tools/oyun_gorsel_cek.py --elle <id>=<https görsel adresi>   elle resmî görsel (ölçülür, kayıt kilitlenir)
+
+Kilit: kayda "kilit": true yazılırsa (--appid/--elle bunu yapar) --yenile bile o kaydı ezmez.
+Steam araması: ad listesindeki 5 karakterden kısa takma adlar (ör. "BDO") yalnız tam adın
+yanında aranmaz; kısaltma başka bir oyunla eşleşip yanlış görsel getirmesin diye atlanır.
 
 Hata bir kaydı atlar, aracı düşürmez; var olan iyi kayıt geçici hatada silinmez.
 """
@@ -49,7 +55,8 @@ GENIS_DOSYA = "library_hero.jpg"     # geniş afiş
 KART_EN_AZ = 460                     # px
 GENIS_EN_AZ = 1200                   # px
 BEKLE = 1.0                          # sn; istekler arası
-ALAN = ("url", "genis", "kaynak", "en", "boy")
+ALAN = ("url", "genis", "kaynak", "en", "boy", "appid", "kilit")
+TAKMA_AD_EN_AZ = 5                  # karakter; ilk ad hariç takma adlar için
 
 # Haber/inceleme siteleri kaynak olamaz (fan sitesi, wiki, haber sitesi kuralı).
 HABER_SITELERI = ("ign.com", "rpgfan.com", "hypebeast.com", "invenglobal.com",
@@ -78,9 +85,9 @@ def json_al(url: str):
 
 def steam_bul(adlar: list[str]) -> tuple[int, str] | None:
     """Adlardan biri Steam'de normalize tam eşleşirse (appid, steam_adı) döner."""
-    for ad in adlar:
+    for i, ad in enumerate(adlar):
         hedef = norm(ad)
-        if not hedef:
+        if not hedef or (i > 0 and len(hedef) < TAKMA_AD_EN_AZ):
             continue
         veri = json_al(STEAM_ARA.format(urllib.parse.quote(ad)))
         time.sleep(BEKLE)
@@ -147,16 +154,33 @@ def bul_kayit(adlar: list[str], resmi_url: str | None, resmi_ad: str) -> tuple[d
     s = steam_bul(adlar)
     if s:
         appid, steam_ad = s
-        kayit = steam_gorselleri(appid)
+        tamam, bilgi = steam_dogrula(appid, adlar[0])   # DLC/demo/oyun dışı uygulama olmasın
+        kayit = steam_gorselleri(appid) if tamam else None
+        if not tamam:
+            notlar.append(f"Steam eşleşmesi elendi: {bilgi}")
         if kayit:
             return kayit, f"Steam: {steam_ad} (appid {appid})"
-        notlar.append(f"Steam'de görsel yok (appid {appid})")
+        if tamam:
+            notlar.append(f"Steam'de görsel yok (appid {appid})")
     else:
         notlar.append("Steam'de tam eşleşme yok")
     kayit, neden = resmi_bul(resmi_url, resmi_ad)
     if kayit:
         return kayit, neden
     return None, "; ".join(notlar + [neden])
+
+
+def steam_oyun_gorseli(ad: str) -> tuple[dict | None, str]:
+    """Haber için yedek: oyun adı Steam'de tam eşleşir ve tür game ise Steam kart görseli (gorsel_cek çağırır)."""
+    s = steam_bul([ad])
+    if not s:
+        return None, "Steam'de tam eşleşme yok"
+    appid, steam_ad = s
+    tamam, bilgi = steam_dogrula(appid, ad)
+    if not tamam:
+        return None, f"Steam eşleşmesi elendi: {bilgi}"
+    kayit = steam_gorselleri(appid)
+    return (kayit, f"Steam: {steam_ad} (appid {appid})") if kayit else (None, f"Steam'de görsel yok (appid {appid})")
 
 
 def alanlari_sirala(kayit: dict) -> dict:
@@ -172,7 +196,7 @@ def topla(bolumler: dict, eski: dict, yenile: bool, idler: list[str], bul) -> tu
         onceki_bolum = eski.get(bolum) or {}
         for kid, adlar, url, ad in kayitlar:
             onceki = onceki_bolum.get(kid)
-            if (idler and kid not in idler) or (onceki and not yenile):
+            if (idler and kid not in idler) or (onceki and (not yenile or onceki.get("kilit"))):
                 if onceki:
                     yeni[bolum][kid] = onceki
                 continue
@@ -198,6 +222,66 @@ def sirali(yeni: dict) -> dict:
     return {b: {k: yeni[b][k] for k in sorted(yeni[b])} for b in ("takvim", "oyun")}
 
 
+def steam_dogrula(appid: int, ad: str) -> tuple[bool, str]:
+    """appid gerçekten bu oyun mu: type=game ve Steam adı ile kayıt adı birbirini içermeli."""
+    veri = json_al(STEAM_DETAY.format(appid))
+    time.sleep(BEKLE)
+    d = veri.get(str(appid)) or {}
+    if not d.get("success"):
+        return False, "appdetails başarısız"
+    dd = d.get("data") or {}
+    steam_ad = str(dd.get("name") or "")
+    if dd.get("type") != "game":
+        return False, f"tür game değil ({dd.get('type')}): {steam_ad}"
+    a, b = norm(ad), norm(steam_ad)
+    if not a or not (a in b or b in a):
+        return False, f"ad uyuşmuyor: kayıt '{ad}' / Steam '{steam_ad}'"
+    return True, steam_ad
+
+
+def elle_ekle(eski: dict, bolumler: dict, istekler: list[str], mod: str) -> int:
+    """--appid / --elle: kaydı doğrulayıp 'kilit' ile yazar. Dönüş: hata sayısı."""
+    hata = 0
+    for ist in istekler:
+        kid, _, deger = ist.partition("=")
+        bolum = next((b for b, ks in bolumler.items() if any(k[0] == kid for k in ks)), None)
+        if not bolum or not deger:
+            print(f"! {ist}: kayıt bulunamadı ya da değer yok")
+            hata += 1
+            continue
+        satir = next(k for k in bolumler[bolum] if k[0] == kid)
+        try:
+            if mod == "appid":
+                ok, bilgi = steam_dogrula(int(deger), satir[1][0])
+                if not ok:
+                    print(f"! {bolum}:{kid}: {bilgi}")
+                    hata += 1
+                    continue
+                kayit = steam_gorselleri(int(deger))
+                if not kayit:
+                    print(f"! {bolum}:{kid}: Steam görseli açılmadı (appid {deger})")
+                    hata += 1
+                    continue
+                kayit["appid"] = int(deger)
+                aciklama = f"Steam: {bilgi} (appid {deger})"
+            else:
+                if not deger.startswith("https://"):
+                    raise ValueError("https değil")
+                en, boy = gc.gorsel_olc(deger)
+                if en < gc.EN_AZ:
+                    raise ValueError(f"çok küçük ({en}x{boy})")
+                kayit = {"url": deger, "kaynak": satir[3], "en": en, "boy": boy}
+                aciklama = "elle resmî görsel"
+        except Exception as h:
+            print(f"! {bolum}:{kid}: {h}")
+            hata += 1
+            continue
+        kayit["kilit"] = True
+        eski.setdefault(bolum, {})[kid] = alanlari_sirala(kayit)
+        print(f"+ {bolum}:{kid}: {aciklama} -> {kayit['en']}x{kayit['boy']} (kilitli)")
+    return hata
+
+
 def main() -> int:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
@@ -205,6 +289,8 @@ def main() -> int:
     ap.add_argument("--yenile", action="store_true", help="kaydı olanları da yeniden çek")
     ap.add_argument("--id", action="append", default=[], help="yalnız bu kayıt(lar)")
     ap.add_argument("--kuru", action="store_true", help="dosyaya yazma")
+    ap.add_argument("--appid", action="append", default=[], metavar="ID=APPID", help="elle Steam appid (doğrulanır, kilitlenir)")
+    ap.add_argument("--elle", action="append", default=[], metavar="ID=URL", help="elle resmî görsel adresi (kilitlenir)")
     a = ap.parse_args()
 
     takvim = json.loads(TAKVIM.read_text(encoding="utf-8"))
@@ -229,6 +315,15 @@ def main() -> int:
             sonuc_cache[anahtar] = bul_kayit(adlar, url, ad)
         return sonuc_cache[anahtar]
 
+    if a.appid or a.elle:
+        eski.setdefault("takvim", {})
+        eski.setdefault("oyun", {})
+        hata = elle_ekle(eski, bolumler, a.appid, "appid") + elle_ekle(eski, bolumler, a.elle, "elle")
+        son = sirali(eski)
+        if not a.kuru:
+            CIKTI.write_text(json.dumps(son, ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")
+            print(f"yazıldı: {CIKTI.relative_to(KOK)}")
+        return 1 if hata else 0
     yeni, sayac = topla(bolumler, eski, a.yenile, a.id, bul)
     son = sirali(yeni)
     print(f"denenen {sayac['denenen']}, bulunan {sayac['bulunan']}, atlanan {sayac['atlanan']}; "

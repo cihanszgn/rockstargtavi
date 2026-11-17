@@ -244,7 +244,7 @@ def _liste(v, *anahtarlar) -> list:
 
 
 def gorseller_yukle() -> dict[str, dict]:
-    """Haber görselleri: yalnız https adres, kaynak adı ve ölçülmüş boyutu (>= 600 px) olan kayıt kullanılır."""
+    """Haber görselleri: yalnız https adres, kaynak adı ve ölçülmüş boyutu (>= 600 px; Steam kartı >= 460) olan kayıt kullanılır."""
     v = _json("gorseller.json", False)
     if v is None:
         return {}
@@ -254,8 +254,11 @@ def gorseller_yukle() -> dict[str, dict]:
     sonuc = {}
     for k, g in v.items():
         if (isinstance(g, dict) and https(g.get("url")) and str(g.get("kaynak") or "").strip()
-                and isinstance(g.get("en"), int) and isinstance(g.get("boy"), int) and g["en"] >= 600 and g["boy"] > 0):
+                and isinstance(g.get("en"), int) and isinstance(g.get("boy"), int)
+                and g["en"] >= (460 if g["kaynak"] == "Steam" else 600) and g["boy"] > 0):  # Steam kart görseli 460 px
             sonuc[k] = g
+        elif isinstance(g, dict) and g.get("kilit") and not g.get("url"):
+            continue  # elle "bu haberin kaynak görseli yanlış" işareti: kart oyunun resmî görseline düşer
         else:
             uyar(f"gorseller.json {k}: eksik/geçersiz kayıt; kapak kullanılacak.")
     return sonuc
@@ -787,7 +790,7 @@ def haber_kart(dil: str, x: dict, *, h: str = "h3", oge: bool = False, one: bool
     if oge:
         attr = (f' id="{x["id"]}" data-oge data-tur="{x["tur"]}" data-platform="{pl_attr(pl)}" data-oyun="{oyun_anahtar(x["oyun"])}"'
                 f' data-ara="{e(norm(" ".join([t["baslik"], t["ozet"], x["oyun"], " ".join(pl)])))}"')
-    kap = kapak_html(dil, x["oyun"], ek=f"{on_ek}h-{x['id']}", alt=t["baslik"], gorsel=GORSEL.get(x["id"]),
+    kap = kapak_html(dil, x["oyun"], ek=f"{on_ek}h-{x['id']}", alt=t["baslik"], gorsel=haber_gorseli(x),
                      rozet=tur_rozet(dil, x["tur"]), sinif=" kg-genis" if one else "", video=vs.bul(VIDEO, x["id"], dil))
     return (f'<li class="hk tur-{x["tur"]}{" hk-one" if one else ""}"{attr}>{kap}<div class="hk-govde">'
             f'<p class="meta">{zaman_etiketi(dil, x["tarih"])}{yeni_rozet(dil, x["tarih"])}{cip_oyun(x["oyun"], dil)}{pl_metin(pl, dil)}</p>'
@@ -896,8 +899,9 @@ def resmi_link(dil: str, s: dict) -> str:
 
 
 def soylenti_kapak(dil: str, s: dict, on_ek: str) -> str:
-    """Söylentide kaynak görseli kullanılmaz: yalnız üretilmiş kapak + durum damgası."""
-    return kapak_html(dil, s["oyun"], ek=f"{on_ek}-{s['id']}", rozet=damga(dil, s["durum"]), sinif=" kg-soylenti")
+    """Söylentide kaynak görseli kullanılmaz: oyunun doğrulanmış resmî görseli (yoksa üretilmiş kapak) + durum damgası."""
+    return kapak_html(dil, s["oyun"], ek=f"{on_ek}-{s['id']}", alt=s["diller"][dil]["baslik"], gorsel=oyun_gorsel(s["oyun"]),
+                      rozet=damga(dil, s["durum"]), sinif=" kg-soylenti")
 
 
 def soylenti_kisa(dil: str, s: dict, kapak: bool = True) -> str:
@@ -940,6 +944,11 @@ def oyun_gorsel(ad_veya_id: str) -> dict | None:
     if oid and oid in og:
         return og[oid]
     return None
+
+
+def haber_gorseli(x: dict) -> dict | None:
+    """Haberin kendi görseli; yoksa (ya da kilitli-yok işaretliyse) oyununun doğrulanmış resmî görseli; o da yoksa None (kapak)."""
+    return GORSEL.get(x["id"]) or oyun_gorsel(x.get("oyun") or "")
 
 
 def takvim_gorsel(c: dict) -> dict | None:
@@ -1201,7 +1210,7 @@ def haber_sayfasi(dil: str, x: dict, veri: list) -> str:
                        + "</ul></section>\n")
     pl = x.get("platform") or []
     vid = vs.bul(VIDEO, x["id"], dil)
-    kapak = kapak_html(dil, x["oyun"], ek=f"d-{x['id']}", alt=dl["baslik"], gorsel=GORSEL.get(x["id"]),
+    kapak = kapak_html(dil, x["oyun"], ek=f"d-{x['id']}", alt=dl["baslik"], gorsel=haber_gorseli(x),
                        rozet=tur_rozet(dil, x["tur"]), sinif=" kg-genis kg-hero")
     govde = (f'<article class="wrap haber-detay tur-{x["tur"]}">\n<p class="geri"><a href="{u(SAYFA["haber"][dil])}">{e(m["geri"])}</a></p>\n'
              f'{kapak}\n<div class="hd-govde{" hd-vid" if vid else ""}">\n'

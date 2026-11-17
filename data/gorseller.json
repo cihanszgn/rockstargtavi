@@ -1,9 +1,7 @@
 {
  "battlefield-6-ucretsiz-deneme-casino-heist-2026-11-13": {
-  "url": "https://drop-assets.ea.com/images/535OGZKDeZV5PWmqp7AALC/674e56a9acf98667d05bd09f64728f88/BF6_S4B3_FreeTrialImage_LogoLockUp_NoLegal_16x9_1920x1080_en-US.png?im=AspectCrop=(16,9),xPosition=0.5,yPosition=0.5",
-  "kaynak": "Electronic Arts — Battlefield 6 ücretsiz deneme sayfası",
-  "en": 1920,
-  "boy": 1080
+  "kilit": true,
+  "neden": "görsel üzerinde eski tarih (SEP 15-22) yazılı"
  },
  "borderlands-the-hunt-rekor-2026-11-16": {
   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1285190/library_hero.jpg",
@@ -23,6 +21,18 @@
   "en": 1920,
   "boy": 620
  },
+ "dreadmoor-early-access-update-7-2026-11-16": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3629430/5b80c132b3479c69a92c25a5266db523850cfc36/header.jpg",
+  "kaynak": "Steam",
+  "en": 460,
+  "boy": 215
+ },
+ "drg-survivor-knockout-1-2-2026-11-17": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2321470/0e8c1c1b24117b18cf37cac700440a836249a79b/header_alt_assets_13.jpg?t=1794920587",
+  "kaynak": "Steam",
+  "en": 460,
+  "boy": 215
+ },
  "epic-free-knightica-nov-19": {
   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3093400/library_hero.jpg",
   "kaynak": "Steam",
@@ -36,10 +46,8 @@
   "boy": 1080
  },
  "football-manager-27-27-1-0-guncelleme-2026-11-16": {
-  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4530370/58ff694d0b284789666cea9601d774acbcc415ea/page_bg_raw.jpg?t=1794483499",
-  "kaynak": "Steam",
-  "en": 1438,
-  "boy": 810
+  "kilit": true,
+  "neden": "Steam page_bg_raw arka plan dokusu, bulanık"
  },
  "football-manager-27-launch": {
   "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/FM27-Xbox-Key-Art-Request_Horizontal-1920x1080-1-7cfa15cafc015bcbca57.jpg",
@@ -83,6 +91,12 @@
   "en": 2560,
   "boy": 1440
  },
+ "just-volleyball-resmi-cikis-2026-11-16": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5037200/cd1b5a290d15e7379b31dcacc12f1e5b25d37577/header.jpg",
+  "kaynak": "Steam",
+  "en": 460,
+  "boy": 215
+ },
  "ko-guncelleme-2026-11-12": {
   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/389430/library_hero.jpg",
   "kaynak": "Steam",
@@ -95,11 +109,16 @@
   "en": 1920,
   "boy": 620
  },
+ "limbus-company-10-yil-hediye-2026-11-17": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1973530/capsule_616x353.jpg",
+  "kaynak": "Steam",
+  "en": 616,
+  "boy": 353,
+  "genis": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1973530/library_hero.jpg"
+ },
  "lol-new-dawn-2027-teaser": {
-  "url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/d3b7bd9decb1e1672dcb80be4f8bc1aa05490dc1-110x70.svg?accountingTag=LoL?w=1200&h=630&fm=webp&fit=crop&crop=center",
-  "kaynak": "League of Legends — New Dawn",
-  "en": 990,
-  "boy": 630
+  "kilit": true,
+  "neden": "110x70 svg logo büyütülmüş, piksel"
  },
  "lol-patch-26-22": {
   "url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/718b573bd914c3a8a334a89f70ff405eee9a6748-1920x1080.jpg?accountingTag=LoL?w=1200&h=630&fm=webp&fit=crop&crop=center",
@@ -112,6 +131,12 @@
   "kaynak": "PlayStation Blog",
   "en": 1920,
   "boy": 1080
+ },
+ "melvor-idle-2-early-access-2026-11-17": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3218350/21b3f6881a12eef86b7c17b21640b396f3510f92/header.jpg",
+  "kaynak": "Steam",
+  "en": 460,
+  "boy": 215
  },
  "minecraft-26-4-snapshot-8": {
   "url": "https://www.minecraft.net/content/dam/minecraftnet/article-asset/2026/minecraft-26-4-snapshot-8/new-article-hero-image.jpg",
@@ -126,28 +151,20 @@
   "boy": 1440
  },
  "nintendo-black-friday-offers-2026": {
-  "url": "https://assets.nintendo.com/image/upload/v1643742733/ncom/global/social-share.jpg",
-  "kaynak": "Nintendo News",
-  "en": 1200,
-  "boy": 630
+  "kilit": true,
+  "neden": "Nintendo sitesi geneli jenerik paylaşım görseli (social-share); oyuna özgü görsel yok"
  },
  "nintendo-eshop-family-gifting": {
-  "url": "https://assets.nintendo.com/image/upload/v1643742733/ncom/global/social-share.jpg",
-  "kaynak": "Nintendo News",
-  "en": 1200,
-  "boy": 630
+  "kilit": true,
+  "neden": "Nintendo sitesi geneli jenerik paylaşım görseli (social-share)"
  },
  "poe-covens-of-umbra-cikti-2026-11-13": {
-  "url": "https://web.poecdn.com/protected/image/favicon/ogimage.png?key=DDHQnVxwj0AxeMbsPiRoEQ",
-  "kaynak": "Path of Exile — Covens of Umbra canlı güncellemeler (Grinding Gear Games)",
-  "en": 800,
-  "boy": 800
+  "kilit": true,
+  "neden": "site geneli ogimage (PoE1 logosu, kare)"
  },
  "poe2-exilecon-2026-11-06": {
-  "url": "https://web.poecdn.com/protected/image/favicon/ogimage.png?key=DDHQnVxwj0AxeMbsPiRoEQ",
-  "kaynak": "Path of Exile Forum (GGG)",
-  "en": 800,
-  "boy": 800
+  "kilit": true,
+  "neden": "site geneli ogimage (yanlış sürüm logosu)"
  },
  "pokopia-apples-to-applin-2026-11-16": {
   "url": "https://assets.nintendo.com/image/upload/c_fill,w_1200,h_630/q_auto/f_auto/dpr_2.0/ncom/My%20Nintendo%20Store/EN-US/Nintendo%20Switch%202/Software/Pokemon%20Pokopia/121593-nintendo-pokemon-pokopia-2000x2000",
@@ -179,6 +196,12 @@
   "en": 1920,
   "boy": 1080
  },
+ "rob-run-patch-2026-11-17": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4262460/db8e0cf43c9475b96fb9446b4908de79fcb9f619/header.jpg",
+  "kaynak": "Steam",
+  "en": 460,
+  "boy": 215
+ },
  "selaco-chapter-2-machines-of-war-cikti-2026-11-13": {
   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1592280/library_hero.jpg",
   "kaynak": "Steam",
@@ -198,10 +221,8 @@
   "boy": 630
  },
  "wolfenstein-3-in-production": {
-  "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Hero-Alt-1-e015f2b7b4d6c5b7e5f3.jpg",
-  "kaynak": "Xbox Wire",
-  "en": 1920,
-  "boy": 1080
+  "kilit": true,
+  "neden": "Xbox 25. yıl özet görseli Wolfenstein ile ilgisiz; resmî görsel bulunamadı"
  },
  "wow-cost-of-honor": {
   "url": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/to/TOS2WHEN5MTM1793817547503.png",
@@ -240,9 +261,7 @@
   "boy": 1080
  },
  "zelda-ocarina-of-time-switch-2-cikti-2026-11-16": {
-  "url": "https://assets.nintendo.com/image/upload/v1643742733/ncom/global/social-share.jpg",
-  "kaynak": "Nintendo",
-  "en": 1200,
-  "boy": 630
+  "kilit": true,
+  "neden": "Nintendo sitesi geneli jenerik paylaşım görseli; resmî oyun görseli bulunamadı"
  }
 }

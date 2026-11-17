@@ -189,10 +189,12 @@
    "boy": 215
   },
   "black-desert": {
-   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5119640/4db39a6799b424b97fb6288d3b1817d2b0167689/header.jpg",
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582660/3c4172635738d9e5901e340b28136745fd9e491a/header_alt_assets_27.jpg?t=1786645008",
    "kaynak": "Steam",
    "en": 460,
-   "boy": 215
+   "boy": 215,
+   "appid": 582660,
+   "kilit": true
   },
   "borderlands-4": {
    "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1285190/986a88d1b0e1420b00183def2a7034508353afa3/header.jpg",
@@ -299,6 +301,15 @@
    "en": 460,
    "boy": 215
   },
+  "fall-guys": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1097150/capsule_616x353.jpg",
+   "genis": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1097150/library_hero.jpg",
+   "kaynak": "Steam",
+   "en": 616,
+   "boy": 353,
+   "appid": 1097150,
+   "kilit": true
+  },
   "final-fantasy-xiv": {
    "url": "https://lds-img.finalfantasyxiv.com/promo/h/W/IJiRfHALRP9Au7blzPTH7mxpac.jpg",
    "kaynak": "Square Enix",
@@ -330,6 +341,15 @@
    "en": 1200,
    "boy": 630
   },
+  "grand-theft-auto-v": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3240220/header.jpg",
+   "genis": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3240220/library_hero.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215,
+   "appid": 3240220,
+   "kilit": true
+  },
   "gta-6": {
    "url": "https://www.rockstargames.com/VI/_next/static/media/meta.0t8ty~nlmxq2s.jpg?yvw8ZozOI7a7Kz1war9qe",
    "kaynak": "Rockstar Games",
@@ -347,6 +367,13 @@
    "kaynak": "Steam",
    "en": 460,
    "boy": 215
+  },
+  "hearthstone": {
+   "url": "https://d39zum0jwvcigt.cloudfront.net/_next/static/images/default-475d770302527dbab7708dca2af05afd.jpg",
+   "kaynak": "Blizzard Entertainment",
+   "en": 1200,
+   "boy": 628,
+   "kilit": true
   },
   "helldivers-2": {
    "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/553850/850e2f9e5bb15c5706bb9a1edc832f4f782e8be5/header.jpg",
@@ -379,6 +406,15 @@
    "en": 1124,
    "boy": 630
   },
+  "lost-ark": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1599340/capsule_616x353.jpg",
+   "genis": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1599340/library_hero.jpg",
+   "kaynak": "Steam",
+   "en": 616,
+   "boy": 353,
+   "appid": 1599340,
+   "kilit": true
+  },
   "marathon": {
    "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3065800/c3093fec19fed6eb0750a87261c53743a5757827/header.jpg",
    "kaynak": "Steam",
@@ -399,10 +435,11 @@
    "boy": 628
   },
   "minecraft": {
-   "url": "https://www.minecraft.net/content/dam/minecraftnet/article-asset/2026/minecraft-26-4-snapshot-8/new-article-hero-image.jpg",
-   "kaynak": "Minecraft.net",
-   "en": 1170,
-   "boy": 500
+   "url": "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Hero-Image_Vanilla_Deluxe_1200x675.jpg",
+   "kaynak": "Mojang Studios",
+   "en": 1200,
+   "boy": 675,
+   "kilit": true
   },
   "mobile-legends": {
    "url": "https://akmweb.youngjoygame.com/web/gms/image/c3d1596795b86dc26e5f1ef2d48c3dfd.jpg",
@@ -480,10 +517,19 @@
    "boy": 720
   },
   "roblox": {
-   "url": "https://cms-media.roblox.com/assets/f179a9c3-60fb-b827-6b6d-c0c6073dba2f.webp",
+   "url": "https://cms-media.roblox.com/assets/2e1081fe-ced6-8191-df28-c8bf4a2b1715.webp",
    "kaynak": "Roblox Corporation",
    "en": 1200,
-   "boy": 627
+   "boy": 627,
+   "kilit": true
+  },
+  "rocket-league": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252950/3abd9ab079c8896a4762dbe34a853d89b7f704df/header_alt_assets_17.jpg?t=1791210513",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215,
+   "appid": 252950,
+   "kilit": true
   },
   "rust": {
    "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252490/capsule_616x353.jpg",
@@ -491,6 +537,14 @@
    "kaynak": "Steam",
    "en": 616,
    "boy": 353
+  },
+  "sea-of-thieves": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172620/579c6d544424019a032f4add98e8f923925c1cef/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215,
+   "appid": 1172620,
+   "kilit": true
   },
   "sid-meiers-civilization-vii": {
    "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1295660/capsule_616x353.jpg",
@@ -550,6 +604,14 @@
    "kaynak": "Steam",
    "en": 460,
    "boy": 215
+  },
+  "the-witcher-3-wild-hunt": {
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/4b5b1ba5061b8a992cc69ac58b4245434edb4296/header.jpg",
+   "kaynak": "Steam",
+   "en": 460,
+   "boy": 215,
+   "appid": 292030,
+   "kilit": true
   },
   "tom-clancys-rainbow-six-siege": {
    "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/1c7b1ea3405a69c54429e2aa3dc31f3cbbeaa456/header_alt_assets_28.jpg?t=1792001976",

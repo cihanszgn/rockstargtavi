@@ -79,8 +79,11 @@ Sürüm rozeti: Türkçede `surum`, diğer dillerde o dilin `kunye` 4. satırı 
 bu dosyalar JavaScript kapalıyken ve CheapShark'a ulaşılamazken gösterilir. Yalnız resmî/yetkili mağazalar (`indirim_cek.py` içindeki izin listesi).
 
 **`gorseller.json` — haber görselleri** (`gorsel_cek.py` yazar): `{"<haber-id>": {"url": "https://…", "kaynak": "Xbox Wire", "en": 1200, "boy": 630}}`.
-Görsel kaynağın sunucusundan doğrudan gösterilir (`referrerpolicy="no-referrer"`, sabit en-boy oranı). Kaydı olmayan ya da tarayıcıda yüklenemeyen
-haberde oyunun temasından üretilmiş kapak (renk + amblem + oyun adı + tür rozeti) görünür; söylentiler her zaman üretilmiş kapak kullanır.
+Görsel kaynağın sunucusundan doğrudan gösterilir (`referrerpolicy="no-referrer"`, sabit en-boy oranı). Kaydı olmayan haberde (ve söylentide) oyunun
+doğrulanmış resmî görseli (`oyun_gorselleri.json`) gösterilir; o da yoksa ya da tarayıcıda yüklenemezse oyunun temasından üretilmiş kapak (renk + amblem +
+oyun adı + tür rozeti) görünür. Elle düzeltilen kayda `"kilit": true` yazılır, `--yenile` onu ezmez; kaynak görseli yanlış habere url'siz
+`{"kilit": true, "neden": "…"}` yazılır (haber oyunun görseline düşer). `oyun_gorsel_cek.py --appid <oyun-id>=<steam appid>` ve `--elle <oyun-id>=<https adres>`
+oyun kaydını doğrulayıp kilitli yazar; Steam araması 5 karakterden kısa takma adları (ör. "BDO") ve game olmayan uygulamayı (DLC/demo) kabul etmez.
 
 **`sayfalar.json`** — derleyicinin yazdığı sayfa listesi (site haritası ve dil karşılıkları için). Elle düzenlenmez.
 
