@@ -489,6 +489,473 @@ class SayfaSunucusu(KlipYayinTemel):
         self.assertIn("\r\n", t)
 
 
+SAHTE_KESIM = '''import json, pathlib, sys, time
+d = pathlib.Path(__file__).parent
+mod = (d / "mod.txt").read_text(encoding="utf-8").strip() if (d / "mod.txt").exists() else "ok"
+arg = sys.argv[1:]
+with (d / "log.jsonl").open("a", encoding="utf-8") as f:
+    f.write(json.dumps({"olay": "basla", "arg": arg, "t": time.time()}) + "\\n")
+if mod == "yavas":
+    time.sleep(0.6)
+if mod == "hata":
+    sys.stderr.write("klip kaynağı indirilemedi\\n")
+    sys.exit(2)
+if mod == "tanimsiz":
+    sys.stderr.write("usage: yayin_klip.py yeniden-uret [-h]\\nyayin_klip.py yeniden-uret: error: unrecognized arguments: --oyunsuz\\n")
+    sys.exit(2)
+pathlib.Path(arg[1]).with_suffix(".mp4").write_bytes(b"yeni-kesim-" + str(len(arg)).encode())
+with (d / "log.jsonl").open("a", encoding="utf-8") as f:
+    f.write(json.dumps({"olay": "bitti", "t": time.time()}) + "\\n")
+print(json.dumps({"ok": True}))
+'''
+
+
+class PanelDuzenleme(KlipYayinTemel):
+    """Onay panelinde gönderinin düzenlenmesi: metin, platform, küçük resim, yeniden kesim. Geçici kapı, geçici manifest/dizin."""
+
+    MP4 = SayfaSunucusu.MP4
+    KLIP_MP4 = SayfaSunucusu.KLIP_MP4
+    _kapat = SayfaSunucusu._kapat
+    istek = SayfaSunucusu.istek
+    sayfa = SayfaSunucusu.sayfa
+    post = SayfaSunucusu.post
+    derleme_no = SayfaSunucusu.derleme_no
+
+    def setUp(self):
+        KlipYayinTemel.setUp(self)
+        self.paket_yaz(mp4=self.MP4)
+        self.sunucu = ky.sunucu_baslat(0, str(self.manifest))
+        self.port = self.sunucu.port
+        self.is_parcasi = threading.Thread(target=self.sunucu.serve_forever, daemon=True)
+        self.is_parcasi.start()
+        self.addCleanup(self._kapat)
+        self.sahte = self.kok / "sahte_kesim.py"
+        self.sahte.write_text(SAHTE_KESIM, encoding="utf-8")
+        yama = mock.patch.object(ky, "KESIM_KOMUTU", [sys.executable, str(self.sahte)])
+        yama.start()
+        self.addCleanup(yama.stop)
+        self.sayfa()
+        self.oid = ks.klip_id(self.dizin / "cikti" / "eraycan-20261112-aaa" / "klip-01.json")
+        self.json = self.dizin / "cikti" / "eraycan-20261112-aaa" / "klip-01.json"
+        self.yan = self.json.with_name("klip-01.duzenleme.json")
+
+    # ---- yardımcılar
+    def mod(self, ad):
+        (self.kok / "mod.txt").write_text(ad, encoding="utf-8")
+
+    def log(self):
+        yol = self.kok / "log.jsonl"
+        return [json.loads(s) for s in yol.read_text(encoding="utf-8").splitlines()] if yol.exists() else []
+
+    def metin_gonder(self, no="1", **ek):
+        g = {"no": no, "baslik": "Elle yazılmış başlık", "aciklama": "Elle yazılmış açıklama\nİkinci satır", "etiketler": "#Elle, Kick",
+             "platformlar": {"instagram": True, "youtube": True}}
+        g.update(ek)
+        return self.post("/api/metin-kaydet", g)
+
+    def otomatik(self):
+        return next(o for o in ky.tara() if o["id"] == self.oid)["metin"]
+
+    def kart(self, no="1", ac=False):
+        kod, _, g = self.istek("GET", f"/kart/{no}" + ("?ac=1" if ac else ""))
+        self.assertEqual(kod, 200)
+        return g.decode("utf-8")
+
+    # ---- sayfa düzeni
+    def test_sayfa_duzenle_suzgec_ozet_ve_telefon_uyumu(self):
+        h = self.sayfa()
+        for parca in ("Düzenle", "Paylaşım metni", "Video üstündekiler", "Kaydet ve yeniden kes", "Otomatik metne dön",
+                      'data-suz=hepsi', 'data-suz=onayli', 'data-suz=kufur', 'id=suz-yayinci', "elle düzenlenmiş", "Instagram Reel", "YouTube Short",
+                      "@media", 'name="viewport"'):
+            self.assertIn(parca, h)
+        self.assertNotIn("file:///", h)
+
+    def test_derlemede_video_bolumu_ve_instagram_yok(self):
+        self.derleme_yaz()
+        self.sayfa()
+        k = self.kart(self.derleme_no())
+        self.assertIn("derleme yalnız YouTube", k)
+        self.assertNotIn("name=p_instagram", k)
+        self.assertNotIn("Kaydet ve yeniden kes", k)
+
+    # ---- metin
+    def test_metin_kaydet_yan_dosyaya_yazar_ve_liste_yeniden_calisinca_kalir(self):
+        kod, v = self.metin_gonder()
+        self.assertEqual((kod, v["ok"]), (200, True))
+        self.assertTrue(self.yan.exists())
+        yan = json.loads(self.yan.read_text(encoding="utf-8"))
+        self.assertEqual(yan["metin"], {"baslik": "Elle yazılmış başlık", "aciklama": "Elle yazılmış açıklama\nİkinci satır",
+                                        "etiketler": ["#Elle", "#Kick"]})
+        self.assertNotIn("platformlar", yan)  # varsayılanla aynı: yazılmaz
+        self.assertIn("ELLE DÜZENLENDİ", v["kart"])
+        self.assertIn("Elle yazılmış başlık", v["kart"])
+        self.assertEqual(v["ozet"]["elle"], 1)
+        self.assertEqual(self.cli("liste")[0], 0)  # yeniden tarama düzenlemeyi ezmez
+        self.assertEqual(json.loads(self.yan.read_text(encoding="utf-8"))["metin"]["baslik"], "Elle yazılmış başlık")
+        self.assertEqual(self.otomatik()["baslik"], "Elle yazılmış başlık")
+        self.assertIn("Elle yazılmış başlık", self.sayfa())
+        # paket dosyasına dokunulmadı, yan dosya paket sayılmadı
+        self.assertNotIn("Elle yazılmış", self.json.read_text(encoding="utf-8"))
+        self.assertEqual(len([o for o in ky.tara() if not o["yok_notu"]]), 1)
+
+    def test_otomatik_metne_donus_yan_dosyayi_siler(self):
+        self.metin_gonder()
+        kod, v = self.post("/api/metin-sifirla", {"no": "1"})
+        self.assertEqual((kod, v["ok"]), (200, True))
+        self.assertFalse(self.yan.exists())
+        self.assertNotIn("ELLE DÜZENLENDİ", v["kart"])
+        kod, v = self.post("/api/metin-sifirla", {"no": "1"})
+        self.assertIn("Zaten otomatik", v["mesaj"])
+
+    def test_otomatik_metni_aynen_kaydetmek_elle_sayilmaz(self):
+        oto = self.otomatik()
+        kod, v = self.metin_gonder(baslik=oto["baslik"], aciklama=oto["aciklama"], etiketler=" ".join(oto["etiketler"]))
+        self.assertEqual(kod, 200)
+        self.assertFalse(self.yan.exists())
+        self.assertIn("Değişiklik yok", v["mesaj"])
+
+    def test_sinir_asimi_turkce_hata_ve_yazmaz(self):
+        kod, v = self.metin_gonder(baslik="x" * 101)
+        self.assertEqual(kod, 422)
+        self.assertIn("YouTube başlığı en çok 100", v["mesaj"])
+        kod, v = self.metin_gonder(aciklama="y" * 2300)
+        self.assertEqual(kod, 422)
+        self.assertIn("Instagram açıklaması en çok 2200", v["mesaj"])
+        kod, v = self.metin_gonder(aciklama="y" * 5200, platformlar={"instagram": False, "youtube": True})
+        self.assertEqual(kod, 422)
+        self.assertIn("YouTube açıklaması çok uzun", v["mesaj"])
+        kod, v = self.metin_gonder(etiketler=" ".join(f"#t{i}" for i in range(31)))
+        self.assertEqual(kod, 422)
+        self.assertIn("en çok 30 etiket", v["mesaj"])
+        self.assertFalse(self.yan.exists())
+        # Instagram kapalıysa 2300 karakter YouTube için sorun değil
+        kod, v = self.metin_gonder(aciklama="y" * 2300, platformlar={"instagram": False, "youtube": True})
+        self.assertEqual(kod, 200)
+
+    def test_kufur_turkce_hata_ile_reddedilir(self):
+        for alan in ("baslik", "aciklama", "etiketler"):
+            kod, v = self.metin_gonder(**{alan: "bu amk çok iyi" if alan != "etiketler" else "#amk"})
+            self.assertEqual(kod, 422, alan)
+            self.assertIn("küfür var, kaydedilmedi", v["mesaj"])
+        self.assertFalse(self.yan.exists())
+
+    def test_bos_baslik_ve_platformsuz_kayit_reddedilir(self):
+        self.assertEqual(self.metin_gonder(baslik="   ")[0], 422)
+        kod, v = self.metin_gonder(platformlar={"instagram": False, "youtube": False})
+        self.assertEqual(kod, 422)
+        self.assertIn("En az bir platform", v["mesaj"])
+        self.assertEqual(self.metin_gonder(platformlar={"instagram": "evet", "youtube": True})[0], 422)
+        self.assertEqual(self.metin_gonder(aciklama=5)[0], 422)
+        self.assertFalse(self.yan.exists())
+
+    def test_derlemede_instagram_acilamaz(self):
+        self.derleme_yaz()
+        self.sayfa()
+        dno = self.derleme_no()
+        kod, v = self.metin_gonder(no=dno, platformlar={"instagram": True, "youtube": True})
+        self.assertEqual(kod, 422)
+        self.assertIn("yalnız YouTube", v["mesaj"])
+        kod, v = self.metin_gonder(no=dno, platformlar={"instagram": False, "youtube": True}, baslik="Derleme elle başlık")
+        self.assertEqual(kod, 200)
+        self.assertTrue((self.dizin / "derleme" / "yayin-kolaji-1" / "derleme.duzenleme.json").exists())
+        self.assertEqual(len(ky.tara()), 2)  # derleme taraması yan dosyayı ayrı öğe saymadı
+
+    def test_girilen_metin_html_olarak_islenmez(self):
+        kotu = '"><img src=x onerror=alert(1)><script>alert(2)</script>'
+        kod, v = self.metin_gonder(baslik=kotu, aciklama=kotu)
+        self.assertEqual(kod, 200)
+        for h in (v["kart"], self.sayfa(), self.kart(ac=True)):
+            self.assertNotIn("<img src=x", h)
+            self.assertNotIn("<script>alert", h)
+            self.assertIn("&lt;img src=x", h)
+
+    def test_platform_secimi_kaydedilir_ve_rozet_gorunur(self):
+        kod, v = self.metin_gonder(platformlar={"instagram": False, "youtube": True})
+        self.assertEqual(kod, 200)
+        self.assertEqual(json.loads(self.yan.read_text(encoding="utf-8"))["platformlar"], {"instagram": False, "youtube": True})
+        self.assertIn("yalnız YouTube", v["kart"])
+        self.assertIn("platform seçimi", v["kart"])
+
+    # ---- onay düşmesi
+    def test_onayli_klip_duzenlenince_onay_duser_ve_soylenir(self):
+        self.assertEqual(self.post("/api/onayla", {"no": "1"})[0], 200)
+        self.assertTrue(ks.onay_gecerli(self.man()["ogeler"][self.oid]))
+        kod, v = self.metin_gonder()
+        self.assertEqual(kod, 200)
+        self.assertTrue(v["onay_dustu"])
+        self.assertIn("Onay düştü", v["mesaj"])
+        self.assertNotIn("onay", self.man()["ogeler"][self.oid])
+        self.assertIn("Henüz onaylanmadı", v["kart"])
+        self.assertEqual(v["ozet"]["onayli"], 0)
+
+    def test_degisiklik_yoksa_onay_dusmez(self):
+        self.post("/api/onayla", {"no": "1"})
+        oto = self.otomatik()
+        kod, v = self.metin_gonder(baslik=oto["baslik"], aciklama=oto["aciklama"], etiketler=" ".join(oto["etiketler"]))
+        self.assertFalse(v["onay_dustu"])
+        self.assertTrue(ks.onay_gecerli(self.man()["ogeler"][self.oid]))
+
+    def test_otomatik_metne_donmek_onayi_dusurur(self):
+        self.metin_gonder()
+        self.post("/api/onayla", {"no": "1"})
+        kod, v = self.post("/api/metin-sifirla", {"no": "1"})
+        self.assertTrue(v["onay_dustu"])
+        self.assertNotIn("onay", self.man()["ogeler"][self.oid])
+
+    def test_yeniden_onay_duzenlenmis_metni_manifeste_yazar_paylasim_zinciri(self):
+        """manifest `metin` + `platformlar` -> klip adayı -> sosyal_yayinla gönderi gövdesi: elle yazılan metin gerçekten gider."""
+        self.metin_gonder(platformlar={"instagram": True, "youtube": True})
+        self.assertEqual(self.post("/api/onayla", {"no": "1"})[0], 200)
+        m = self.man()["ogeler"][self.oid]
+        self.assertEqual(m["metin"]["baslik"], "Elle yazılmış başlık")
+        self.assertEqual(m["metin"]["etiketler"], ["#Elle", "#Kick"])
+        self.assertNotIn("platformlar", m)
+        self.yayinda_yap(self.oid)
+        a = ks.adaylar(self.man())
+        self.assertEqual(len(a), 1)
+        self.assertEqual(a[0]["diller"]["tr"]["baslik"], "Elle yazılmış başlık")
+        self.assertEqual(a[0]["platformlar"], {"instagram": True, "youtube": True})
+        satirlar = self._kuru_calistir()
+        yazi = "\n".join(satirlar)
+        self.assertIn("Elle yazılmış başlık", yazi)
+        self.assertIn("Elle yazılmış açıklama", yazi)
+        self.assertIn("#Elle #Kick", yazi)
+        self.assertIn("instagram_reel/tr", yazi)  # iki platform açıkken Instagram da aday
+
+    def test_platform_kapatma_paylasima_yansir(self):
+        self.metin_gonder(platformlar={"instagram": False, "youtube": True})
+        self.post("/api/onayla", {"no": "1"})
+        self.assertEqual(self.man()["ogeler"][self.oid]["platformlar"], {"instagram": False, "youtube": True})
+        self.yayinda_yap(self.oid)
+        yazi = "\n".join(self._kuru_calistir())
+        self.assertIn("youtube/tr", yazi)
+        self.assertNotIn("instagram_reel/tr", yazi)
+
+    def _kuru_calistir(self):
+        satirlar = []
+        a = ayar(instagram_reel=True, youtube=True)
+        a["turler"] = {"haber": True, "klip": True, "derleme": True}
+        a["klip"] = {"gunluk_en_fazla": {"instagram_reel": 2, "youtube": 2}, "derleme_gunluk_en_fazla": 1,
+                     "haber_varken_haber": True, "youtube_kategori": "20"}
+        haber_manifest = self.kok / "videolar.json"
+        haber_manifest.write_text(json.dumps({"surum": 1, "taban": "https://medya.test/v/", "videolar": {}}), encoding="utf-8")
+        for saat in (12, 14):
+            sy.calistir(a, [], kayit_yolu=self.kok / "gonderilenler.json", manifest_yolu=haber_manifest, tum=SIRLAR, ag=YasakAg(),
+                        dry_run=True, bugun=BUGUN, simdi=SIMDI.replace(hour=saat), cikti=satirlar.append, klip_yolu=self.manifest)
+        return satirlar
+
+    # ---- küçük resim
+    def test_kucuk_resim_secimi_kaydedilir_degisince_onay_duser(self):
+        self.derleme_yaz()
+        self.sayfa()
+        dno = self.derleme_no()
+        kod, v = self.post("/api/kucuk-resim", {"no": dno, "kucuk_resim": 2})
+        self.assertEqual((kod, v["ok"], v["onay_dustu"]), (200, True, False))
+        yan = self.dizin / "derleme" / "yayin-kolaji-1" / "derleme.duzenleme.json"
+        self.assertEqual(json.loads(yan.read_text(encoding="utf-8"))["kucuk_resim"], "kucuk-resim-2.png")
+        self.assertRegex(self.kart(dno), r'value="2" checked')
+        self.assertEqual(self.post("/api/onayla", {"no": dno, "kucuk_resim": 2})[0], 200)
+        self.assertEqual(self.post("/api/kucuk-resim", {"no": dno, "kucuk_resim": 2})[1]["onay_dustu"], False)
+        kod, v = self.post("/api/kucuk-resim", {"no": dno, "kucuk_resim": 1})
+        self.assertTrue(v["onay_dustu"])
+        self.assertNotIn("onay", self.man()["ogeler"]["derleme-yayin-kolaji-1"])
+        self.assertEqual(self.post("/api/kucuk-resim", {"no": dno, "kucuk_resim": 9})[0], 409)
+        self.assertEqual(self.post("/api/kucuk-resim", {"no": dno, "kucuk_resim": "1"})[0], 409)
+        self.assertEqual(self.post("/api/kucuk-resim", {"no": "1", "kucuk_resim": 1})[0], 409)  # klipte küçük resim yok
+
+    def test_derleme_basligi_ve_aciklamasi_duzenlenir(self):
+        self.derleme_yaz()
+        self.sayfa()
+        dno = self.derleme_no()
+        kod, v = self.metin_gonder(no=dno, baslik="Yeni kolaj başlığı", aciklama="Bölümler:\n0:00 Yeni", etiketler="#Kolaj",
+                                   platformlar={"instagram": False, "youtube": True})
+        self.assertEqual(kod, 200)
+        self.assertEqual(self.post("/api/onayla", {"no": dno, "kucuk_resim": 1})[0], 200)
+        m = self.man()["ogeler"]["derleme-yayin-kolaji-1"]
+        self.assertEqual((m["metin"]["baslik"], m["metin"]["etiketler"]), ("Yeni kolaj başlığı", ["#Kolaj"]))
+
+    # ---- yeniden kesim
+    def kesim_gonder(self, **ek):
+        g = {"no": "1", "oyun": "Yeni Oyun", "aciklama_metni": "Yeni yazı", "bas_kaydir": -1, "son_kaydir": 2}
+        g.update(ek)
+        return self.post("/api/kesim", g)
+
+    def test_kesim_alt_surec_liste_argumanlariyla_calisir_ve_kalici_olur(self):
+        self.post("/api/onayla", {"no": "1"})
+        kod, v = self.kesim_gonder(yayinci_adi="Eray", duzen="kadraj", kamera_kutu=["0.1", "0.2", "0.3", "0.3"])
+        self.assertEqual((kod, v["ok"]), (200, True))
+        self.assertTrue(v["onay_dustu"])
+        self.assertIn("Onay düştü", v["mesaj"])
+        self.assertIn('class=kesim data-durum="', v["kart"])
+        self.assertTrue(self.sunucu.kesim.bekle(20))
+        gunluk = self.log()
+        self.assertEqual([g["olay"] for g in gunluk], ["basla", "bitti"])
+        arg = gunluk[0]["arg"]
+        self.assertEqual(arg[0], "yeniden-uret")
+        self.assertEqual(pathlib.Path(arg[1]), self.json)
+        self.assertEqual(arg[2:], ["--aciklama-metni=Yeni yazı", "--oyun=Yeni Oyun", "--yayinci-adi=Eray", "--bas-kaydir=-1",
+                                    "--son-kaydir=2", "--duzen=kadraj", "--kamera-kutu=0.1,0.2,0.3,0.3"])
+        kod, _, g = self.istek("GET", "/api/durum")
+        d = json.loads(g)
+        self.assertEqual(d["kesimler"]["1"]["durum"], "bitti")
+        self.assertIn("Yeniden kesildi", d["kesimler"]["1"]["mesaj"])
+        yan = json.loads(self.yan.read_text(encoding="utf-8"))
+        self.assertEqual(yan["video"]["oyun"], "Yeni Oyun")
+        self.assertEqual(yan["video"]["aciklama_metni"], "Yeni yazı")
+        self.assertEqual(yan["video"]["duzen"], "kadraj")
+        self.assertIn("video", ky.tara()[0]["elle"])
+        k = self.kart(ac=True)
+        self.assertIn("ELLE DÜZENLENDİ", k)
+        self.assertIn('value="Yeni Oyun"', k)
+        self.assertIn("Yeniden kesildi", k)
+        # yeni video yeni adresle (tarayıcı eskisini göstermesin) ve eski özet yüzünden onay hatası yok
+        self.assertIn("klip-01.mp4?s=", k)
+        self.assertEqual(self.post("/api/onayla", {"no": "1"})[0], 200)
+        # `liste`/`sayfa` yeniden çalışınca korunur
+        self.cli("liste")
+        self.assertEqual(json.loads(self.yan.read_text(encoding="utf-8"))["video"]["oyun"], "Yeni Oyun")
+
+    def test_bos_oyun_ve_bos_yazi_oyunsuz_aciklamasiz_olur(self):
+        self.kesim_gonder(oyun="", aciklama_metni="", bas_kaydir=0, son_kaydir=0)
+        self.assertTrue(self.sunucu.kesim.bekle(20))
+        self.assertEqual(self.log()[0]["arg"][2:], ["--aciklamasiz", "--oyunsuz"])
+        yan = json.loads(self.yan.read_text(encoding="utf-8"))
+        self.assertEqual((yan["video"]["oyun"], yan["video"]["aciklama_metni"]), ("", ""))
+
+    def test_kesim_degerleri_kabuga_gitmez_tire_ile_baslayan_ad_secenek_olmaz(self):
+        self.kesim_gonder(oyun="--evil & calc.exe", aciklama_metni='"; rm -rf / #', bas_kaydir=0, son_kaydir=0)
+        self.assertTrue(self.sunucu.kesim.bekle(20))
+        arg = self.log()[0]["arg"]
+        self.assertEqual(arg[2:], ["--aciklama-metni=\"; rm -rf / #", "--oyun=--evil & calc.exe"])
+
+    def test_kesim_dogrulamasi(self):
+        for g, parca in (({"aciklama_metni": "u" * 46}, "en çok 45"), ({"duzen": "kutu"}, "Düzen"),
+                         ({"bas_kaydir": "abc"}, "sayı"), ({"bas_kaydir": 500}, "geçersiz"),
+                         ({"son_kaydir": -39}, "en az 3 sn"), ({"bas_kaydir": -200}, "geçersiz"),
+                         ({"kamera_kutu": [0.5, 0.5, 0.9, 0.9]}, "Kamera kutusu"), ({"kamera_kutu": [1, 2]}, "4 sayı"),
+                         ({"yayinci_adi": " "}, "boş olamaz")):
+            kod, v = self.post("/api/kesim", {"no": "1", **g})
+            self.assertEqual(kod, 422, g)
+            self.assertIn(parca, v["mesaj"], g)
+        kod, v = self.post("/api/kesim", {"no": "1"})
+        self.assertEqual(kod, 422)
+        self.assertIn("Değiştirdiğin bir şey yok", v["mesaj"])
+        self.assertEqual(self.log(), [])
+        self.assertFalse(self.yan.exists())
+
+    def test_kesim_hatasi_kartta_yazilir_video_ve_yan_dosya_degismez(self):
+        self.mod("hata")
+        onceki = self.json.with_suffix(".mp4").read_bytes()
+        self.kesim_gonder()
+        self.assertTrue(self.sunucu.kesim.bekle(20))
+        d = json.loads(self.istek("GET", "/api/durum")[2])
+        self.assertEqual(d["kesimler"]["1"]["durum"], "hata")
+        self.assertIn("klip kaynağı indirilemedi", d["kesimler"]["1"]["mesaj"])
+        self.assertIn("klip kaynağı indirilemedi", self.kart())
+        self.assertEqual(self.json.with_suffix(".mp4").read_bytes(), onceki)
+        self.assertFalse(self.yan.exists())
+        # hatadan sonra yeniden denenebilir
+        self.mod("ok")
+        self.assertEqual(self.kesim_gonder()[0], 200)
+        self.assertTrue(self.sunucu.kesim.bekle(20))
+        self.assertEqual(json.loads(self.istek("GET", "/api/durum")[2])["kesimler"]["1"]["durum"], "bitti")
+
+    def test_eski_arac_seceneği_tanimiyorsa_anlasilir_hata(self):
+        self.mod("tanimsiz")
+        self.kesim_gonder(oyun="")
+        self.assertTrue(self.sunucu.kesim.bekle(20))
+        d = json.loads(self.istek("GET", "/api/durum")[2])["kesimler"]["1"]
+        self.assertEqual(d["durum"], "hata")
+        self.assertIn("tanımıyor", d["mesaj"])
+        self.assertIn("unrecognized arguments", d["mesaj"])
+
+    def test_kesim_kuyrugu_ayni_anda_tek_kesim_ve_ayni_klip_iki_kez_olmaz(self):
+        self.paket_yaz(ad="klip-02", bas=500, bit=540)
+        self.sayfa()
+        self.mod("yavas")
+        self.assertEqual(self.kesim_gonder()[0], 200)
+        kod, v = self.kesim_gonder()
+        self.assertEqual(kod, 409)
+        self.assertIn("zaten kesiliyor", v["mesaj"])
+        self.assertEqual(self.kesim_gonder(no="2")[0], 200)
+        d = json.loads(self.istek("GET", "/api/durum")[2])["kesimler"]
+        self.assertEqual(d["2"]["durum"], "kuyrukta")
+        self.assertIn("Sırada", d["2"]["mesaj"])
+        self.assertIn(d["1"]["durum"], ("kesiliyor", "kuyrukta"))
+        # kesilirken onaylanamaz
+        kod, v = self.post("/api/onayla", {"no": "1"})
+        self.assertEqual(kod, 409)
+        self.assertIn("yeniden kesiliyor", v["mesaj"])
+        self.assertTrue(self.sunucu.kesim.bekle(30))
+        olaylar = [g["olay"] for g in self.log()]
+        self.assertEqual(olaylar, ["basla", "bitti", "basla", "bitti"])  # iç içe değil, sırayla
+        ilk, ikinci = self.log()[0], self.log()[2]
+        self.assertEqual(pathlib.Path(ilk["arg"][1]), self.json)
+        self.assertTrue(pathlib.Path(ikinci["arg"][1]).name == "klip-02.json")
+        d = json.loads(self.istek("GET", "/api/durum")[2])["kesimler"]
+        self.assertEqual((d["1"]["durum"], d["2"]["durum"]), ("bitti", "bitti"))
+        self.assertEqual(self.post("/api/onayla", {"no": "1"})[0], 200)
+
+    def test_derlemenin_videosu_kesilmez_ve_kesim_dosyasi_yokken_kapali_degil(self):
+        self.derleme_yaz()
+        self.sayfa()
+        kod, v = self.post("/api/kesim", {"no": self.derleme_no(), "oyun": "x"})
+        self.assertEqual(kod, 409)
+        self.assertIn("yeniden kesilmez", v["mesaj"])
+
+    def test_kesim_durumu_suresi_dolunca_silinir(self):
+        self.kesim_gonder()
+        self.assertTrue(self.sunucu.kesim.bekle(20))
+        with mock.patch.object(ky, "BITTI_SURESI", -1):
+            self.assertEqual(self.sunucu.kesim.durumlar(), {})
+        self.assertNotIn("class=kesim", self.kart())
+
+    def test_kesim_sahte_komut_olmadan_gercek_komut_secenek_listesi(self):
+        """Sahte komut yokken komut `yayin_klip.py yeniden-uret <paket> ...` liste argümanı olur (çalıştırmadan doğrulanır)."""
+        with mock.patch.object(ky, "KESIM_KOMUTU", None), mock.patch.object(subprocess, "run") as kos:
+            kos.return_value = subprocess.CompletedProcess([], 0, stdout='{"ok": true}\n', stderr="")
+            ok, ileti = ky.kesim_calistir("C:/x/klip-01.json", ["--oyunsuz"])
+        self.assertEqual((ok, ileti), (True, '{"ok": true}'))
+        komut = kos.call_args.args[0]
+        self.assertIsInstance(komut, list)
+        self.assertEqual(komut[2:], ["yeniden-uret", "C:/x/klip-01.json", "--oyunsuz"])
+        self.assertTrue(komut[1].endswith("yayin_klip.py"))
+        self.assertFalse(kos.call_args.kwargs.get("shell"))
+        self.assertEqual(kos.call_args.kwargs["env"]["YAYIN_KLIP_DIZIN"], str(self.dizin))
+
+    # ---- güvenlik: yeni uçlar
+    def test_yeni_uclar_belirtec_origin_host_ister(self):
+        govde = {"no": "1", "baslik": "x", "aciklama": "", "etiketler": ""}
+        for yol in ("/api/metin-kaydet", "/api/metin-sifirla", "/api/kesim", "/api/kucuk-resim"):
+            for kw in ({"belirtec": False}, {"belirtec": "yanlis"}, {"origin": "http://evil.example"}, {"origin": False}, {"host": "evil.example"}):
+                self.assertEqual(self.post(yol, govde, **kw)[0], 403, (yol, kw))
+        self.assertEqual(self.istek("GET", "/kart/1", belirtec=False)[0], 403)
+        self.assertEqual(self.istek("GET", "/kart/1", belirtec="yanlis")[0], 403)
+        self.assertEqual(self.istek("GET", "/api/durum", belirtec=False)[0], 403)
+        self.assertEqual(self.istek("GET", "/kart/1", host="evil.example")[0], 403)
+        self.assertEqual(self.istek("GET", "/kart/abc")[0], 404)
+        self.assertEqual(self.istek("GET", "/kart/99")[0], 404)
+        self.assertFalse(self.yan.exists())
+        self.assertEqual(self.log(), [])
+        kod, _, _ = self.istek("POST", "/api/metin-kaydet", baslik={"Content-Type": "text/plain"}, ham=b"{}")
+        self.assertEqual(kod, 415)
+
+    def test_govde_sinirlari_ve_gecersiz_numara(self):
+        self.assertEqual(self.istek("POST", "/api/metin-sifirla", {"no": "1", "x": "y" * 5000})[0], 400)
+        self.assertEqual(self.istek("POST", "/api/kesim", {"no": "1", "x": "y" * 20000})[0], 400)
+        self.assertEqual(self.istek("POST", "/api/metin-kaydet", {"no": "1", "x": "y" * 140000})[0], 400)
+        for yol in ("/api/metin-kaydet", "/api/metin-sifirla", "/api/kesim", "/api/kucuk-resim"):
+            for no in ("../x", "abc", None, 1, "99"):
+                self.assertEqual(self.post(yol, {"no": no})[0], 409, (yol, no))
+        self.assertEqual(self.post("/api/metin-kaydet", {"no": "1", "baslik": "a" * 5000, "aciklama": ""})[0], 422)
+
+    def test_duzenleme_ve_kesim_giris_dosyalari_degistirmez(self):
+        onceki = self.json.read_text(encoding="utf-8")
+        self.metin_gonder()
+        self.assertEqual(self.json.read_text(encoding="utf-8"), onceki)
+        self.assertFalse((self.dizin / "cikti" / "eraycan-20261112-aaa" / "klip-01.duzenleme.json.tmp").exists())
+
+
 class Metin(unittest.TestCase):
     def test_klip_metni_kaynak_ve_etiketler_shorts_yok(self):
         m = ks.klip_metni(paket(), "Eray")

@@ -913,6 +913,8 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                             continue
                         if video.get("instagram" if bicim == "reel" else "youtube"):
                             continue
+                        if (x.get("platformlar") or {}).get("instagram" if bicim == "reel" else "youtube") is False:
+                            continue  # onay panelinde bu platform kapatılmış
                     elif bicim != "gorsel":
                         if not video_hakki(x, ayar):
                             continue  # hype puanı eşiğin altında: bu haber yalnız görsel gönderi alır

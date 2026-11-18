@@ -29,6 +29,7 @@ from datetime import datetime, timedelta, timezone
 
 import klip_kamera
 import klip_konusma
+import klip_oyun
 import klip_youtube
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -1214,6 +1215,9 @@ def aciklama_uret(vod: dict, klip: dict) -> str:
 def paket_json(vod: dict, klip: dict, mp4: pathlib.Path, dogrulama: dict, ayar: dict | None = None,
                ekstra: dict | None = None) -> dict:
     link, dogrulandi = zaman_damgali_baglanti(vod, klip['klip_baslangic_sn'])
+    ok = klip.get('oyun_dogrulama')
+    if isinstance(ok, dict):   # oyun adı DOĞRU yazılır ya da hiç yazılmaz: kategori ancak doğrulanınca kullanılır
+        vod = {**vod, 'oyun': ok.get('oyun')}
     return {**{
         'yayinci': vod['yayinci'],
         'platform': vod['platform'],
@@ -1255,6 +1259,8 @@ def paket_json(vod: dict, klip: dict, mp4: pathlib.Path, dogrulama: dict, ayar: 
         'aciklama_yazisi': dogrulama.get('aciklama_yazisi'),
         **({'kamera_plani': dogrulama['kamera']} if dogrulama.get('kamera') else {}),
         'duzen': duzen_imzasi(ayar or AYAR_VARSAYILAN, klip_aciklamasi(klip, ayar)),
+        **({'oyun_dogrulama': ok} if isinstance(ok, dict) else {}),
+        **({'ses_yargisi': klip['ses_yargisi']} if isinstance(klip.get('ses_yargisi'), dict) else {}),
         'uretim': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
         'yayinlandi': False,
     }, **(ekstra or {})}
@@ -1683,6 +1689,44 @@ def kamera_karari(vod: dict, ayar: dict, ff: str, kaynak: str, bas: float, sure:
     return ({**kadraj, '_kamera_merkez_x': plan['merkez_x']} if 'merkez_x' in plan else kadraj), plan
 
 
+def klip_zenginlestir(vod: dict, klip: dict, ayar: dict | None, ff: str, kaynak: str, bas_t: float, sure: float,
+                      yerel: bool, tmp_yol: pathlib.Path) -> dict:
+    """(A) Yayın kategorisi klibin karelerine göre doğrulanır: dönen vod'da 'oyun' doğrulanmış ad ya da None.
+    (B) Dökümü olmayan klip için klibin kendi sesi yazıya çevrilir, kisa_aciklama + başlık üretilir.
+    Sonuçlar klip['oyun_dogrulama'] / klip['ses_yargisi'] (paket_json pakete yazar), metin alanları klibe işlenir.
+    Test/özelleştirme kancaları ayarda: _oyun_sor, _ses_dok, _ses_yargi_modeli. Hata = güvenli taraf (ad/metin yok)."""
+    ayar = ayar or {}
+    aralik = [klip['klip_baslangic_sn'], klip['klip_baslangic_sn'] + sure]
+    if ayar.get('klip_oyun_dogrula', True) or klip.get('oyun_elle') is not None:
+        karar = klip_oyun.oyun_karari(
+            vod.get('oyun'), aralik,
+            lambda: klip_kamera.kareleri_ornekle(ff, kaynak, bas_t, sure, yerel, klip_oyun.KARE_SAYISI,
+                                                 klip_oyun.KARE_GENISLIK, tmp_yol / 'oyunkare'),
+            elle=klip.get('oyun_elle'), onbellek=klip.get('oyun_dogrulama'), sor=ayar.get('_oyun_sor'),
+            tmp=tmp_yol / 'oyun')
+        klip['oyun_dogrulama'] = karar
+        vod = {**vod, 'oyun': karar['oyun']}
+    if ayar.get('klip_ses_yargisi', True) and not str(klip.get('dokum_metni') or '').strip():
+        elle_metin = klip.get('aciklama_elle')
+        s = klip.get('ses_yargisi')
+        if not klip_oyun.ses_onbellek_gecerli(s, aralik):
+            try:
+                wav = tmp_yol / 'klip-ses.wav'
+                klip_oyun.ses_cikar(ff, kaynak, bas_t, sure, yerel, wav)
+                s = klip_oyun.ses_yargisi(aralik, vod.get('kisa_ad') or vod['yayinci'], wav, tmp_yol / 'ses', ayar,
+                                          yargi=not elle_metin, model=ayar.get('_ses_yargi_modeli'),
+                                          dok=ayar.get('_ses_dok'))
+            except Exception as e:   # noqa: BLE001 - metin üretimi yardımcıdır; hata = şablon metin
+                s = {'durum': 'hata', 'kaynak': 'klip-sesi-whisper', 'aralik': aralik, 'hata': f'{type(e).__name__}: {e}'[:300]}
+        klip['ses_yargisi'] = s
+        if s.get('dokum'):
+            klip['dokum_metni'] = s['dokum']
+        if s.get('durum') == 'tamam' and s.get('kisa_aciklama') and not elle_metin:
+            klip['konusma_kisa_aciklama'] = s['kisa_aciklama']
+            klip['konusma_baslik'] = s.get('baslik') or s['kisa_aciklama']
+    return vod
+
+
 def klip_kes(vod: dict, klip: dict, hedef: pathlib.Path, ff: str, font: str, ayar: dict | None = None) -> dict:
     """Yalnız klip aralığını HLS'ten çeker ve 1080x1920 H.264+AAC olarak yazar. ayar: duzen, kadraj_oran."""
     kaynak = vod.get('hls') or vod['kaynak']
@@ -1690,7 +1734,6 @@ def klip_kes(vod: dict, klip: dict, hedef: pathlib.Path, ff: str, font: str, aya
     hedef.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='klip-') as tmp:
         tmp_yol = pathlib.Path(tmp)
-        aciklama_metni = klip_aciklamasi(klip, ayar)
         gecici = tmp_yol / 'cikti.mp4'
         bas, yerel = klip['klip_baslangic_sn'], False
         plan_bas = bas
@@ -1726,6 +1769,9 @@ def klip_kes(vod: dict, klip: dict, hedef: pathlib.Path, ff: str, font: str, aya
         ayar_k = ayar
         if (ayar or {}).get('duzen', AYAR_VARSAYILAN['duzen']) == 'kamera':
             ayar_k, kamera_bilgisi = kamera_karari(vod, ayar or {}, ff, kaynak, bas-origin if yerel else bas, sure, yerel)
+        # (A) oyun adı doğrulaması ve (B) dökümsüz klibin kendi sesinden metin: kesimden önce (yazı videoya yanar).
+        vod = klip_zenginlestir(vod, klip, ayar, ff, kaynak, bas-origin if yerel else bas, sure, yerel, tmp_yol)
+        aciklama_metni = klip_aciklamasi(klip, ayar)
         aciklama = aciklama_duzeni(aciklama_metni, aciklama_fontu(), ayar_k, oyun_var=bool(vod.get('oyun')))
         metinler = klip_metinleri(vod, aciklama)
         for ad, m in metinler.items():
@@ -1965,6 +2011,9 @@ def kes_komutu(arguman: str, dizin: pathlib.Path, ayar: dict, gecersiz: dict | N
                     bilgi['ses_hizasi'] = eski['video']['ses_hizasi']
                 if eski.get('video', {}).get('aciklama_yazisi'):
                     bilgi['aciklama_yazisi'] = eski['video']['aciklama_yazisi']
+                for anahtar in ('oyun_dogrulama', 'ses_yargisi'):
+                    if isinstance(eski.get(anahtar), dict):
+                        klip[anahtar] = eski[anahtar]
                 paket.write_text(json.dumps(paket_json(vod, klip, mp4, bilgi, vayar),
                                              ensure_ascii=False, indent=2), encoding='utf-8')
             uretilen.append(mp4)
@@ -2411,28 +2460,177 @@ def yedekle(paket: pathlib.Path, yedek: pathlib.Path) -> list[str]:
     return kopya
 
 
+KLIP_EN_AZ_SN, KLIP_EN_COK_SN = 5.0, 59.0
+
+
+def kamera_kutusu_coz(metin) -> tuple[float, float, float, float]:
+    """'x,y,w,h' (kare genişliği/yüksekliğine oransal, 0–1) -> dörtlü. Geçersizse anlaşılır KlipHatasi."""
+    try:
+        kutu = tuple(float(v) for v in str(metin).replace(';', ',').split(','))
+    except ValueError:
+        raise KlipHatasi(f'kamera kutusu sayı olmalı: x,y,w,h (örnek 0.02,0.60,0.28,0.38); verilen: {metin}') from None
+    if len(kutu) != 4 or not klip_kamera.kutu_gecerli(kutu):
+        raise KlipHatasi('kamera kutusu geçersiz: x,y,w,h oransal (0–1) olmalı, w ve h > 0, kutu kareden taşmamalı '
+                         f'(örnek 0.02,0.60,0.28,0.38); verilen: {metin}')
+    return tuple(round(v, 5) for v in kutu)
+
+
+def aciklama_metni_dogrula(metin: str, ayar: dict | None = None) -> str:
+    """--aciklama-metni: 45 karakter sınırı ve yasak kelime denetimi (model çıktısıyla aynı kural). Neden anlaşılır."""
+    ham = re.sub(r'\s+', ' ', str(metin or '')).strip().strip('"“”\'`').strip().rstrip('.').strip()
+    azami = int((ayar or {}).get('aciklama_azami_karakter', klip_konusma.ACIKLAMA_AZAMI))
+    if not ham:
+        raise KlipHatasi('açıklama metni boş')
+    if len(ham) > azami:
+        raise KlipHatasi(f'açıklama metni {len(ham)} karakter; en çok {azami} olabilir')
+    if klip_konusma.yasak_kelime_var(ham, [*klip_konusma.ACIKLAMA_YASAK_VARSAYILAN,
+                                           *((ayar or {}).get('aciklama_yasak_kelimeler') or [])]):
+        raise KlipHatasi('açıklama metninde yasak kelime (küfür/argo) var')
+    temiz = klip_konusma.kisa_aciklama_dogrula(ham, ayar)
+    if temiz is None:
+        raise KlipHatasi('açıklama metni uygun değil: en az 2 kelime olmalı; ünlem yığını, emoji, #etiket, büyük harf '
+                         'yığını, "yayıncı ..." ile başlama ve tık tuzağı kalıpları kullanılmaz')
+    return temiz
+
+
+def baslik_oyun_duzelt(baslik: str | None, eski_oyun: str | None, yeni_oyun: str | None) -> str | None:
+    """Şablon başlığın sonundaki ' | <oyun>' eki yeni oyun adına uyar: eski ek atılır, yeni ad varsa eklenir."""
+    if not baslik:
+        return baslik
+    if eski_oyun and baslik.endswith(f' | {eski_oyun}'):
+        baslik = baslik[:-len(f' | {eski_oyun}')].rstrip()
+    if yeni_oyun and not baslik.endswith(f' | {yeni_oyun}'):
+        baslik = f'{baslik} | {yeni_oyun}'
+    return baslik
+
+
 def paketten_uret(paket_yolu: pathlib.Path, ayar: dict, dizin: pathlib.Path, yedek: pathlib.Path | None = None,
-                  aciklamasiz: bool = False) -> dict:
+                  aciklamasiz: bool = False, secenek: dict | None = None) -> dict:
     """Var olan klibi paketindeki (ses hizası düzeltilmiş) aralıkla, bugünkü düzenle ve paketteki kisa_aciklama ile
-    YENİDEN keser. Model çağrısı yok. Eski mp4/json önce yedeğe kopyalanır; paketin diğer alanları korunur."""
+    YENİDEN keser. Eski mp4/json önce yedeğe kopyalanır; paketin diğer alanları korunur.
+
+    secenek (hepsi isteğe bağlı; verilen değer pakete KALICI yazılır -> `duzenleme`, sonraki yeniden kesimlerde korunur):
+      oyun (ad) | oyunsuz (bool), aciklama_metni (45 kr, yasak kelimesiz) | aciklamasiz (bool), yayinci_adi,
+      bas_kaydir / son_kaydir (sn, eksi = daha erken; süre 5–59 sn), duzen (kamera|kadraj|serit), kamera_kutu (x,y,w,h oransal).
+    Oyun adı kategori+kare doğrulamasından (klip_oyun) ya da --oyun/--oyunsuz'dan gelir; dökümsüz klip için kendi sesinden
+    metin üretilir (klip_oyun.ses_yargisi). Önbellekteki karar/metin aynı aralık için tekrar sorulmaz."""
+    sec = dict(secenek or {})
+    if aciklamasiz:
+        sec['aciklamasiz'] = True
+    if sec.get('oyun') is not None and sec.get('oyunsuz'):
+        raise KlipHatasi('--oyun ile --oyunsuz birlikte verilemez')
+    if sec.get('aciklama_metni') is not None and sec.get('aciklamasiz'):
+        raise KlipHatasi('--aciklama-metni ile --aciklamasiz birlikte verilemez')
     d = json.loads(paket_yolu.read_text(encoding='utf-8'))
+    dz = dict(d.get('duzenleme') or {})
+    cfg_ac = {**AYAR_VARSAYILAN, **(ayar.get('ayar') or {})}
+    if sec.get('oyun') is not None:
+        ad = re.sub(r'\s+', ' ', str(sec['oyun'])).strip()
+        if not ad or len(ad) > klip_oyun.OYUN_AD_AZAMI:
+            raise KlipHatasi(f'oyun adı boş olamaz ve en çok {klip_oyun.OYUN_AD_AZAMI} karakter olabilir')
+        dz['oyun'] = ad
+        dz.pop('oyunsuz', None)
+    if sec.get('oyunsuz'):
+        dz['oyunsuz'] = True
+        dz.pop('oyun', None)
+    if sec.get('aciklama_metni') is not None:
+        dz['aciklama_metni'] = aciklama_metni_dogrula(sec['aciklama_metni'], cfg_ac)
+        dz['aciklamasiz'] = False
+    if sec.get('aciklamasiz'):
+        dz['aciklamasiz'] = True
+    if sec.get('yayinci_adi') is not None:
+        ad = re.sub(r'\s+', ' ', str(sec['yayinci_adi'])).strip()
+        if not ad or len(ad) > 40:
+            raise KlipHatasi('yayıncı adı boş olamaz ve en çok 40 karakter olabilir')
+        dz['yayinci_adi'] = ad
+    if sec.get('duzen') is not None:
+        if sec['duzen'] not in ('kamera', 'kadraj', 'serit'):
+            raise KlipHatasi(f"düzen kamera, kadraj ya da serit olmalı; verilen: {sec['duzen']}")
+        dz['duzen'] = sec['duzen']
+    if sec.get('kamera_kutu') is not None:
+        kutu = kamera_kutusu_coz(sec['kamera_kutu']) if isinstance(sec['kamera_kutu'], str) else tuple(sec['kamera_kutu'])
+        if len(kutu) != 4 or not klip_kamera.kutu_gecerli(kutu):
+            raise KlipHatasi('kamera kutusu geçersiz (oransal x,y,w,h)')
+        dz['kamera_kutu'] = list(kutu)
+    bk, sk = float(sec.get('bas_kaydir') or 0), float(sec.get('son_kaydir') or 0)
+    eski_bas, eski_bit = float(d['klip_baslangic_sn']), float(d['klip_bitis_sn'])
+    bas, bit = round(eski_bas + bk, 3), round(eski_bit + sk, 3)
+    sure = bit - bas
+    if sure < KLIP_EN_AZ_SN - 1e-6 or sure > KLIP_EN_COK_SN + 1e-6:
+        raise KlipHatasi(f'klip {sure:.1f} sn olurdu (şimdi {eski_bit - eski_bas:.1f} sn); süre {KLIP_EN_AZ_SN:.0f}–'
+                         f'{KLIP_EN_COK_SN:.0f} sn arasında olmalı')
+    if bas < 0:
+        raise KlipHatasi(f'başlangıç yayının başından {-bas:.1f} sn önceye gidiyor')
+    kaydirildi = bool(bk or sk)
+    if kaydirildi:
+        dz['bas_kaydir_toplam'] = round(float(dz.get('bas_kaydir_toplam') or 0) + bk, 3)
+        dz['son_kaydir_toplam'] = round(float(dz.get('son_kaydir_toplam') or 0) + sk, 3)
+    vod, vayar = vod_hazirla(d['vod_url'], ayar)
+    if bit > vod['sure_sn'] + .01:
+        raise KlipHatasi(f"bitiş yayının süresini ({vod['sure_sn']:.0f} sn) {bit - vod['sure_sn']:.1f} sn aşıyor")
     yedek = yedek or (pathlib.Path(r'C:\Cihan.Ai\_yedek') / f"yayin-klip-{datetime.now().strftime('%Y%m%d')}"
                       if os.name == 'nt' else dizin / 'yedek')
     kopya = yedekle(paket_yolu, yedek)
-    vod, vayar = vod_hazirla(d['vod_url'], ayar)
-    vayar = {**vayar, 'konusma': True, **({'klip_aciklama_yazi': False} if aciklamasiz else {})}
-    klip = {'klip_baslangic_sn': d['klip_baslangic_sn'], 'klip_bitis_sn': d['klip_bitis_sn'],
-            'konusma_kisa_aciklama': d.get('kisa_aciklama')}
+    vayar = {**vayar, 'konusma': True, **({'klip_aciklama_yazi': False} if dz.get('aciklamasiz') else {}),
+             **({'duzen': dz['duzen']} if dz.get('duzen') else {})}
+    vod_ad = d.get('yayinci')
+    if dz.get('yayinci_adi'):
+        vod = {**vod, 'yayinci': dz['yayinci_adi'], 'kisa_ad': dz['yayinci_adi']}
+    if dz.get('kamera_kutu'):
+        vod['kamera_kutu'] = tuple(dz['kamera_kutu'])
+    elle_metin = dz.get('aciklama_metni')
+    onbellek = {} if kaydirildi else {k: d[k] for k in ('oyun_dogrulama', 'ses_yargisi') if isinstance(d.get(k), dict)}
+    klip = {'klip_baslangic_sn': bas, 'klip_bitis_sn': bit, 'baskin': d.get('baskin_sinyal'),
+            'kelimeler': d.get('one_cikan_kelimeler'), 'emojiler': d.get('one_cikan_emojiler'),
+            'konusma_kisa_aciklama': elle_metin or d.get('kisa_aciklama'),
+            'dokum_metni': None if kaydirildi else d.get('dokum_metni'),
+            **({'aciklama_elle': elle_metin} if elle_metin else {}), **onbellek,
+            **({'oyun_elle': ''} if dz.get('oyunsuz') else {'oyun_elle': dz['oyun']} if dz.get('oyun') else {})}
     bilgi = klip_kes(vod, klip, paket_yolu.with_suffix('.mp4'), ffmpeg_bul(), font_bul(), vayar)
     d.pop('kamera_plani', None)
     if bilgi.get('kamera'):
         d['kamera_plani'] = bilgi['kamera']
-    d.update({'kisa_aciklama': d.get('kisa_aciklama'), 'aciklama_yazisi': bilgi.get('aciklama_yazisi'), 'video': bilgi,
-              'duzen': duzen_imzasi(vayar, klip_aciklamasi(klip, vayar)),
+    ok = klip.get('oyun_dogrulama')
+    eski_oyun = d.get('oyun')
+    yeni_oyun = ok['oyun'] if isinstance(ok, dict) else eski_oyun
+    s = klip.get('ses_yargisi') if isinstance(klip.get('ses_yargisi'), dict) else None
+    metin_yeni = bool(elle_metin) or bool(s and s.get('durum') == 'tamam' and s.get('kisa_aciklama'))
+    if elle_metin:
+        d['baslik'] = elle_metin
+    elif metin_yeni and klip.get('konusma_baslik'):
+        d['baslik'] = klip['konusma_baslik']
+    else:
+        d['baslik'] = baslik_oyun_duzelt(d.get('baslik'), eski_oyun, yeni_oyun)
+    if metin_yeni or dz.get('yayinci_adi'):
+        d['aciklama'] = aciklama_uret({**vod, 'oyun': yeni_oyun}, {**klip, 'konusma_baslik': d['baslik']})
+    if kaydirildi:
+        d['klip_baslangic_sn'], d['klip_bitis_sn'] = bas, bit
+        d['vod_zaman_damgali_url'], d['vod_zaman_damgali_url_dogrulandi'] = zaman_damgali_baglanti(vod, bas)
+    d['oyun'] = yeni_oyun
+    if isinstance(ok, dict):
+        d['oyun_dogrulama'] = ok
+    elif kaydirildi:
+        d.pop('oyun_dogrulama', None)
+    if s:
+        d['ses_yargisi'] = s
+    elif kaydirildi:
+        d.pop('ses_yargisi', None)
+    if klip.get('dokum_metni'):
+        d['dokum_metni'] = klip['dokum_metni']
+    if dz.get('yayinci_adi'):
+        d['yayinci_adi'] = dz['yayinci_adi']
+    d['yayinci'] = vod_ad
+    if dz:
+        d['duzenleme'] = dz
+    d.update({'kisa_aciklama': klip.get('konusma_kisa_aciklama'), 'aciklama_yazisi': bilgi.get('aciklama_yazisi'),
+              'video': bilgi, 'duzen': duzen_imzasi(vayar, klip_aciklamasi(klip, vayar)),
               'uretim': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')})
     paket_yolu.write_text(json.dumps(d, ensure_ascii=False, indent=2), encoding='utf-8')
     return {'paket': str(paket_yolu), 'mp4': str(paket_yolu.with_suffix('.mp4')), 'yedek': kopya,
-            'aciklama_yazisi': bilgi.get('aciklama_yazisi'), 'video': {k: bilgi[k] for k in ('genislik', 'yukseklik', 'sure_sn', 'ses')}}
+            'aciklama_yazisi': bilgi.get('aciklama_yazisi'),
+            'video': {k: bilgi[k] for k in ('genislik', 'yukseklik', 'sure_sn', 'ses')},
+            'oyun': d.get('oyun'), 'oyun_kaynagi': ok.get('kaynak') if isinstance(ok, dict) else None,
+            'baslik': d.get('baslik'), 'kisa_aciklama': d.get('kisa_aciklama'), 'duzenleme': d.get('duzenleme')}
 
 
 def _gecersiz(a) -> dict:
@@ -2452,6 +2650,27 @@ def _gecersiz(a) -> dict:
     return g
 
 
+class _TrParser(argparse.ArgumentParser):
+    """Komut satırı hatası: tek satır Türkçe stderr ('HATA: ...') ve çıkış kodu 2 (kullanım dökümü yok)."""
+    def error(self, message):
+        for en, tr in (('expected one argument', 'değer eksik'), ('unrecognized arguments', 'tanınmayan seçenek'),
+                       ('the following arguments are required', 'gerekli değer eksik'),
+                       ('invalid choice', 'geçersiz seçim'), ('argument ', 'seçenek '), ('not allowed with', 'birlikte verilemez')):
+            message = message.replace(en, tr)
+        print('HATA: komut satırı: ' + ' '.join(message.split()), file=sys.stderr)
+        sys.exit(2)
+
+
+def _sn_tipi(metin: str) -> float:
+    try:
+        v = float(metin)
+    except ValueError:
+        raise argparse.ArgumentTypeError(f'saniye sayı olmalı (eksi = daha erken); verilen: {metin}') from None
+    if not math.isfinite(v):
+        raise argparse.ArgumentTypeError(f'saniye sonlu bir sayı olmalı; verilen: {metin}')
+    return v
+
+
 def _konusma_bayraklari(parser):
     g = parser.add_mutually_exclusive_group()
     g.add_argument('--konusma',action='store_true',help='konuşma katmanını bu çalıştırmada aç')
@@ -2462,7 +2681,7 @@ def main(argv=None) -> int:
     if hasattr(sys.stdout, 'reconfigure'):
         sys.stdout.reconfigure(encoding='utf-8')
         sys.stderr.reconfigure(encoding='utf-8')
-    p = argparse.ArgumentParser(description='Yayın klip hattı (yayın yapmaz).')
+    p = _TrParser(description='Yayın klip hattı (yayın yapmaz).')
     p.add_argument('--ayar', help='yayıncı ayar dosyası (varsayılan otomasyon/klip-yayincilar.json)')
     p.add_argument('--dizin', help='çalışma dizini (YAYIN_KLIP_DIZIN)')
     s = p.add_subparsers(dest='komut', required=True)
@@ -2501,7 +2720,15 @@ def main(argv=None) -> int:
     yu = s.add_parser('yeniden-uret', help='var olan klibi paketindeki aralık ve kisa_aciklama ile yeniden kes (önce yedeğe kopyalar)')
     yu.add_argument('paket', nargs='+', help='klip paket .json yolu')
     yu.add_argument('--yedek', help='yedek klasörü (varsayılan: C:\\Cihan.Ai\\_yedek\\yayin-klip-<tarih>)')
-    yu.add_argument('--aciklamasiz', action='store_true', help='açıklama yazısı koyma')
+    yu.add_argument('--aciklamasiz', action='store_true', help='açıklama yazısı koyma (kalıcı)')
+    yu.add_argument('--oyun', help='videoya/pakete yazılacak oyun adı (kalıcı; doğrulamayı atlar)')
+    yu.add_argument('--oyunsuz', action='store_true', help='oyun adı yazma (kalıcı)')
+    yu.add_argument('--aciklama-metni', dest='aciklama_metni', help='klip açıklaması (en çok 45 karakter, yasak kelimesiz; kalıcı)')
+    yu.add_argument('--yayinci-adi', dest='yayinci_adi', help='videoda yazan yayıncı adı (kalıcı)')
+    yu.add_argument('--bas-kaydir', dest='bas_kaydir', type=_sn_tipi, help='başlangıcı kaydır, sn (eksi = daha erken; kalıcı)')
+    yu.add_argument('--son-kaydir', dest='son_kaydir', type=_sn_tipi, help='bitişi kaydır, sn (eksi = daha erken; kalıcı)')
+    yu.add_argument('--duzen', choices=('kamera', 'kadraj', 'serit'), help='görüntü düzeni (kalıcı)')
+    yu.add_argument('--kamera-kutu', dest='kamera_kutu', help='kamera kutusu x,y,w,h oransal (tespiti ezer; kalıcı)')
     o = s.add_parser('otomatik', help='tara + analiz + kes (yeni yayınların hepsi)')
     o.add_argument('--yayinci')
     _konusma_bayraklari(o)
@@ -2537,9 +2764,25 @@ def main(argv=None) -> int:
             except (klip_konusma.ModelKotasi, ValueError, RuntimeError) as e:
                 raise KlipHatasi(f'açıklama doldurma: {e}') from e
         elif a.komut == 'yeniden-uret':
+            sec = {k: getattr(a, k) for k in ('oyun', 'aciklama_metni', 'yayinci_adi', 'bas_kaydir', 'son_kaydir', 'duzen')
+                   if getattr(a, k) is not None}
+            if a.oyunsuz:
+                sec['oyunsuz'] = True
+            if a.kamera_kutu is not None:
+                sec['kamera_kutu'] = kamera_kutusu_coz(a.kamera_kutu)
+            if 'oyun' in sec and a.oyunsuz:
+                raise KlipHatasi('--oyun ile --oyunsuz birlikte verilemez')
+            if 'aciklama_metni' in sec and a.aciklamasiz:
+                raise KlipHatasi('--aciklama-metni ile --aciklamasiz birlikte verilemez')
             for yol in a.paket:
-                print(json.dumps(paketten_uret(pathlib.Path(yol), ayar, dizin, pathlib.Path(a.yedek) if a.yedek else None,
-                                               a.aciklamasiz), ensure_ascii=False))
+                if not pathlib.Path(yol).is_file():
+                    raise KlipHatasi(f'paket dosyası bulunamadı: {yol}')
+                try:
+                    cikti = paketten_uret(pathlib.Path(yol), ayar, dizin, pathlib.Path(a.yedek) if a.yedek else None,
+                                          a.aciklamasiz, sec)
+                except (OSError, ValueError, KeyError, TypeError) as e:   # tek satır, anlaşılır hata
+                    raise KlipHatasi(f'{pathlib.Path(yol).name}: {type(e).__name__}: {str(e)[:200]}') from e
+                print(json.dumps(cikti, ensure_ascii=False))
         elif a.komut == 'canli':
             gec = {k: getattr(a, k) for k in ('canli_min_puan', 'canli_azami_klip') if getattr(a, k) is not None}
             gec.update(_gecersiz(a))
@@ -2558,7 +2801,7 @@ def main(argv=None) -> int:
                 except KlipHatasi as e:
                     print(f"  atlandı: {e}", file=sys.stderr)
     except KlipHatasi as e:
-        print(f'HATA: {e}', file=sys.stderr)
+        print('HATA: ' + ' '.join(str(e).split()), file=sys.stderr)
         return 1
     return 0
 

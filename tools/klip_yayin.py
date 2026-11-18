@@ -22,17 +22,21 @@ import http.server
 import json
 import os
 import pathlib
+import queue
 import re
 import secrets
 import shutil
 import subprocess
 import sys
 import threading
+import time
 import urllib.parse
 import webbrowser
 
 KOK = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(KOK / "tools"))
+import klip_duzenle as kd  # noqa: E402
+import klip_panel_ui as ui  # noqa: E402
 import klip_sosyal as ks  # noqa: E402
 import yayin_klip as yk  # noqa: E402
 
@@ -104,6 +108,25 @@ def paket_dosyalari(d: pathlib.Path) -> list[tuple[str, pathlib.Path, pathlib.Pa
     return sonuc
 
 
+def duzenleme_uygula(oge: dict) -> None:
+    """Paketin yanındaki `.duzenleme.json` varsa metni/platformu ona çevirir (kalıcı elle düzenleme). Otomatik metin saklanır."""
+    dz = kd.oku(oge["json"])
+    oge["duzenleme"] = dz
+    oge["otomatik_metin"] = {k: (list(v) if isinstance(v, list) else v) for k, v in oge["metin"].items()}
+    varsayilan = kd.varsayilan_platformlar(oge["tur"])
+    oge["platformlar"] = dict(dz.get("platformlar") or varsayilan)
+    if oge["tur"] == "derleme":
+        oge["platformlar"]["instagram"] = False  # derleme yalnız YouTube'a gider
+    oge["elle"] = []
+    if dz.get("metin"):
+        oge["metin"] = {**dz["metin"], "uyarilar": []}
+        oge["elle"].append("metin")
+    if dz.get("platformlar") and oge["platformlar"] != varsayilan:
+        oge["elle"].append("platform")
+    if dz.get("video"):
+        oge["elle"].append("video")
+
+
 def tara(d: pathlib.Path | None = None, ayar: dict | None = None) -> list[dict]:
     """Bütün klip/derleme paketlerini öğe sözlüğü olarak döndürür (varyant tekilleştirmesi `tekillestir`te)."""
     d = d or yk.calisma_dizini()
@@ -123,6 +146,8 @@ def tara(d: pathlib.Path | None = None, ayar: dict | None = None) -> list[dict]:
             oge["oncelik"] = oncelik(json_yol)
             kisa = yk.yayinci_kisa_ad(ayar, paket)
             oge["metin"] = ks.klip_metni(paket, kisa, ek_yasak)
+            oge["kisa_ad"] = kisa
+            duzenleme_uygula(oge)
             oge["yayinci"] = paket.get("yayinci") or ""
             oge["oyun"] = paket.get("oyun") or ""
             oge["kanal_url"] = paket.get("kanal_url") or ""
@@ -138,11 +163,15 @@ def tara(d: pathlib.Path | None = None, ayar: dict | None = None) -> list[dict]:
                 oge["uyarilar"].append("döküm yok: konuşmadaki küfür denetlenemedi, klibi dinle")
             oge["uyarilar"] += oge["metin"].get("uyarilar") or []
             oge["kufur"] = oge["kufur"] or bool(oge["metin"].get("uyarilar"))
+            if "metin" in oge["elle"] and ks.kufur_var(oge["metin"]["baslik"] + " " + oge["metin"]["aciklama"], ek_yasak):
+                oge["uyarilar"].append("elle yazılan başlıkta/açıklamada küfür var")
+                oge["kufur"] = True
             oge["kucuk_resimler"] = []
         else:
             oge["id"] = ks.derleme_id(json_yol.parent)
             oge["oncelik"] = 0
             oge["metin"] = ks.derleme_metni(paket, ek_yasak)
+            duzenleme_uygula(oge)
             oge["yayinci"] = "Yayın kolajı"
             oge["oyun"] = ""
             oge["kanal_url"] = ""
@@ -274,56 +303,177 @@ def ozet_sayilari(ogeler: list[dict], manifest: dict) -> dict:
     listede = [o for o in ogeler if not o["yok_notu"]]
     siniflar = [durum_metni(o, manifest)[1] for o in listede]
     return {"toplam": len(listede), "onayli": sum(1 for x in siniflar if x in ONAYLI_SINIFLAR),
-            "bekleyen": sum(1 for x in siniflar if x == "onayli"), "dusen": sum(1 for x in siniflar if x == "dustu")}
+            "bekleyen": sum(1 for x in siniflar if x == "onayli"), "dusen": sum(1 for x in siniflar if x == "dustu"),
+            "kufur": sum(1 for o in listede if o["kufur"]), "elle": sum(1 for o in listede if o.get("elle"))}
 
 
-def html_uret(ogeler: list[dict], manifest: dict, zaman: str, etk: dict | None = None) -> str:
-    """`etk` verilirse (sayfa sunucusu) düğmeli canlı sayfa; yoksa durağan liste (file:// adresleri)."""
-    def esc(x) -> str:
-        return html.escape(str(x if x is not None else ""))
+def esc(x) -> str:
+    return html.escape(str(x if x is not None else ""))
 
-    def kart(o: dict) -> str:
-        etiket, sinif = durum_metni(o, manifest)
-        m = o["metin"]
-        v = o["paket"]
-        dikey = o["tur"] == "klip"
-        uyari = "".join(f"<li>{esc(u)}</li>" for u in o["uyarilar"])
-        kufur = o["kufur"]
-        sure = o.get("sure")
-        sure_s = f"{float(sure):.0f} sn" if isinstance(sure, (int, float)) else ""
-        bilgi = [("Yayıncı", o["yayinci"]), ("Oyun", o["oyun"]), ("Yayın tarihi", o["yayin_tarihi"]), ("Süre", sure_s)]
-        if o["tur"] == "klip":
-            bilgi.append(("Konuşma puanı", v.get("konusma_puani") if v.get("konusma_puani") is not None else "—"))
-        satir = "".join(f"<tr><th>{esc(a)}</th><td>{esc(b)}</td></tr>" for a, b in bilgi if b not in ("", None))
-        kaynak = o["kanal_url"]
-        kaynak_html = f'<a href="{esc(kaynak)}">{esc(kaynak)}</a>' if kaynak.startswith("https://") else ""
-        kisa = v.get("kisa_aciklama") or v.get("baslik") or m["baslik"]
-        dokum = str(v.get("dokum_metni") or "").strip()
-        kr = ""
-        if etk and o["tur"] == "derleme" and o["kucuk_resimler"]:
-            kayit_o = (manifest.get("ogeler") or {}).get(o["id"]) or {}
-            secili = (kayit_o.get("onay") or {}).get("kucuk_resim")
-            kr = "<p><b>Küçük resim seç</b> (seçmeden onaylanamaz)</p><div class=kr>" + "".join(
-                f'<label class=krsec><input type=radio name="kr{esc(o["no"])}" value="{i}"{" checked" if k.name == secili else ""}>'
-                f'<img loading=lazy src="{esc(dosya_url(k))}" alt="küçük resim {i}"><span>{i}</span></label>'
-                for i, k in enumerate(o["kucuk_resimler"], 1)) + "</div>"
-        elif o["tur"] == "derleme" and o["kucuk_resimler"]:
-            kr = "<p><b>Küçük resim seçenekleri</b> (onay için numara seç: <code>--kucuk-resim N</code>)</p><div class=kr>" + "".join(
-                f'<figure><img loading=lazy src="{esc(k.as_uri())}" alt="küçük resim {i}"><figcaption>{i}</figcaption></figure>'
-                for i, k in enumerate(o["kucuk_resimler"], 1)) + "</div>"
-        komut = (f"py tools/klip_yayin.py onayla {o['no']}" + (" --kucuk-resim 1" if o["tur"] == "derleme" else ""))
-        if etk:
-            video_url = dosya_url(o["mp4"])
-            onayli = sinif in ONAYLI_SINIFLAR
-            alt = ('<div class=islem><button type=button class=onayla>Onayla</button>'
-                   '<button type=button class=geri>Onayı geri al</button></div><p class=hata role=alert hidden></p>')
-        else:
-            video_url = o["mp4"].as_uri()
-            onayli = False
-            alt = f"<p class=ipucu>Onay için asistana yaz: <code>{esc(komut)}</code> (butonlar için: {esc(BASLATICI_AD)})</p>"
-        return f"""<article class="kart {sinif}{' kufur' if kufur else ''}" id="k{esc(o['no'])}" data-no="{esc(o['no'])}" data-tur="{esc(o['tur'])}" data-kufur="{'1' if kufur else '0'}" data-onayli="{'evet' if onayli else 'hayir'}" data-sinif="{sinif}">
-<h3><span class=no>{esc(o['no'])}</span> {esc(kisa)}{' <span class=kufurrozet>KÜFÜR UYARISI</span>' if kufur else ''}</h3>
+
+ELLE_ADLARI = {"metin": "metin", "platform": "platform seçimi", "video": "video"}
+
+
+def _yazi_metni(v) -> str:
+    if isinstance(v, str):
+        return v
+    if isinstance(v, dict):
+        return str(v.get("metin") or v.get("yazi") or "")
+    return ""
+
+
+def video_ilk_degerler(o: dict, ayar_duzen: str) -> dict:
+    """Video-üstü formunun başlangıç değerleri: son istenen (sidecar) ya da paketten/ayardan."""
+    v = (o.get("duzenleme") or {}).get("video") or {}
+    paket = o["paket"]
+    kutu = v.get("kamera_kutu")
+    return {
+        "aciklama_metni": v["aciklama_metni"] if "aciklama_metni" in v else (_yazi_metni(paket.get("aciklama_yazisi")) or str(paket.get("kisa_aciklama") or "")),
+        "oyun": v["oyun"] if "oyun" in v else str(paket.get("oyun") or ""),
+        "yayinci_adi": v["yayinci_adi"] if "yayinci_adi" in v else str(o.get("kisa_ad") or o.get("yayinci") or ""),
+        "duzen": v["duzen"] if v.get("duzen") in kd.DUZENLER else (ayar_duzen if ayar_duzen in kd.DUZENLER else "kamera"),
+        "kamera_kutu": [str(x) for x in kutu] if isinstance(kutu, list) and len(kutu) == 4 else ["", "", "", ""],
+    }
+
+
+def kesim_kutusu(durum: dict | None) -> str:
+    if not durum:
+        return ""
+    return f'<p class=kesim data-durum="{esc(durum["durum"])}" role=status>{esc(durum["mesaj"])}</p>'
+
+
+def duzen_paneli(o: dict, kesim: dict | None, acik: bool, ayar_duzen: str) -> str:
+    no = esc(o["no"])
+    klip = o["tur"] == "klip"
+    m, pl = o["metin"], o["platformlar"]
+    S = kd.SINIRLAR
+    aktif = bool(kesim and kesim["durum"] in ("kuyrukta", "kesiliyor"))
+    if klip:
+        plat = (f'<label class=anahtar><input type=checkbox name=p_instagram{" checked" if pl["instagram"] else ""}> Instagram Reel</label>'
+                f'<label class=anahtar><input type=checkbox name=p_youtube{" checked" if pl["youtube"] else ""}> YouTube Short</label>')
+        sayac_ig = f'<span class=s-ig>Instagram açıklaması <b>0</b>/{S["ig_aciklama"]}</span>'
+    else:
+        plat = '<label class=anahtar><input type=checkbox name=p_youtube checked disabled> YouTube (derleme yalnız YouTube\'a gider)</label>'
+        sayac_ig = ""
+    metin = f"""<fieldset class=metin data-ig-acik="{S['ig_aciklama']}" data-yt-baslik="{S['yt_baslik']}" data-yt-acik="{S['yt_aciklama_karakter']}">
+<legend>Paylaşım metni <span class=kucuk>(video yeniden kesilmez)</span></legend>
+<label for="b{no}">Başlık <span class="say say-baslik"></span></label>
+<input type=text id="b{no}" name=baslik value="{esc(m['baslik'])}" autocomplete=off>
+<label for="a{no}">Açıklama</label>
+<textarea id="a{no}" name=aciklama rows=6>{esc(m['aciklama'])}</textarea>
+<label for="e{no}">Etiketler <span class=kucuk>(boşlukla ayır; # kendiliğinden eklenir)</span></label>
+<input type=text id="e{no}" name=etiketler value="{esc(' '.join(m['etiketler']))}" autocomplete=off>
+<p><b>Nereye paylaşılsın?</b></p>
+{plat}
+<div class=sayaclar>{sayac_ig}<span class=s-ytb>YouTube başlığı <b>0</b>/{S['yt_baslik']}</span><span class=s-yta>YouTube açıklaması <b>0</b>/{S['yt_aciklama_karakter']}</span></div>
+<div class=islem><button type=button class="birincil metin-kaydet">Metni kaydet</button>
+<button type=button class="tehlike metin-sifirla"{'' if 'metin' in o.get('elle', []) else ' disabled'}>Otomatik metne dön</button></div>
+<p class=hata role=alert hidden></p><p class=tamam role=status hidden></p>
+</fieldset>"""
+    video = ""
+    if klip:
+        ilk = video_ilk_degerler(o, ayar_duzen)
+        b0, b1 = o["paket"].get("klip_baslangic_sn"), o["paket"].get("klip_bitis_sn")
+        secenek = [("kamera", "Kamera + oyun (iki panel)"), ("kadraj", "Tek panel")]
+        if ilk["duzen"] == "serit":
+            secenek.append(("serit", "Şerit"))
+        opt = "".join(f'<option value="{k}"{" selected" if k == ilk["duzen"] else ""}>{esc(a)}</option>' for k, a in secenek)
+
+        def adim(alan: str) -> str:
+            return (f'<div class=kaydir><button type=button class=adim data-adim="-2">−2</button><button type=button class=adim data-adim="-0.5">−0,5</button>'
+                    f'<input type=number step=0.1 inputmode=decimal name={alan} value=0 aria-label="saniye">'
+                    f'<button type=button class=adim data-adim="0.5">+0,5</button><button type=button class=adim data-adim="2">+2</button></div>')
+        kutu = "".join(f'<input type=number step=any min=0 max=1 inputmode=decimal name={n} value="{esc(v)}" placeholder="{p}" aria-label="{p}">'
+                       for n, v, p in zip(("kx", "ky", "kw", "kh"), ilk["kamera_kutu"], ("x", "y", "genişlik", "yükseklik")))
+        video = f"""<fieldset class=video data-yazi-sinir="{S['aciklama_yazisi']}" data-bas="{esc(b0 if isinstance(b0, (int, float)) else '')}" data-son="{esc(b1 if isinstance(b1, (int, float)) else '')}">
+<legend>Video üstündekiler <span class=kucuk>(yeniden kesim gerekir; 20-60 sn sürer)</span></legend>
+<label for="va{no}">Video üstü kısa açıklama <span class="say say-yazi"></span></label>
+<input type=text id="va{no}" name=aciklama_metni value="{esc(ilk['aciklama_metni'])}" data-ilk="{esc(ilk['aciklama_metni'])}" autocomplete=off>
+<p class=kucuk>Boş bırakırsan videoda yazı olmaz.</p>
+<label for="vo{no}">Oyun adı</label>
+<input type=text id="vo{no}" name=oyun value="{esc(ilk['oyun'])}" data-ilk="{esc(ilk['oyun'])}" autocomplete=off>
+<p class=kucuk>Boş bırakırsan oyun adı yazılmaz.</p>
+<label for="vy{no}">Yayıncı adı</label>
+<input type=text id="vy{no}" name=yayinci_adi value="{esc(ilk['yayinci_adi'])}" data-ilk="{esc(ilk['yayinci_adi'])}" autocomplete=off>
+<label>Başlangıcı kaydır (saniye; + ileri, − geri)</label>{adim('bas_kaydir')}
+<label>Bitişi kaydır (saniye; + uzatır, − kısaltır)</label>{adim('son_kaydir')}
+<p class="kucuk sure-yeni"></p>
+<label for="vd{no}">Düzen</label>
+<select id="vd{no}" name=duzen data-ilk="{esc(ilk['duzen'])}">{opt}</select>
+<details><summary>Gelişmiş: kamera kutusu</summary>
+<p class=kucuk>Kameranın yerini elle göster: x, y, genişlik, yükseklik (görüntünün 0 ile 1 arası oranları). Boş bırakırsan kendiliğinden bulunur.</p>
+<div class=kutu4 data-ilk="{esc(','.join(ilk['kamera_kutu']) if any(ilk['kamera_kutu']) else '')}">{kutu}</div></details>
+<div class=islem><button type=button class="birincil kesim-baslat"{' disabled' if aktif else ''}>Kaydet ve yeniden kes</button></div>
+<p class=hata role=alert hidden></p><p class=tamam role=status hidden></p>
+</fieldset>"""
+    return f'<div class=duzenle{"" if acik else " hidden"}>{metin}{video}</div>'
+
+
+def kart_uret(o: dict, manifest: dict, etk: dict | None = None) -> str:
+    """Tek kartın HTML'i. `etk` verilirse (sayfa sunucusu) düğmeli + düzenlemeli; yoksa durağan (file://) kart."""
+    etiket, sinif = durum_metni(o, manifest)
+    m = o["metin"]
+    v = o["paket"]
+    dikey = o["tur"] == "klip"
+    uyari = "".join(f"<li>{esc(u)}</li>" for u in o["uyarilar"])
+    kufur = o["kufur"]
+    sure = o.get("sure")
+    sure_s = f"{float(sure):.0f} sn" if isinstance(sure, (int, float)) else ""
+    bilgi = [("Yayıncı", o["yayinci"]), ("Oyun", o["oyun"]), ("Yayın tarihi", o["yayin_tarihi"]), ("Süre", sure_s)]
+    if o["tur"] == "klip":
+        bilgi.append(("Konuşma puanı", v.get("konusma_puani") if v.get("konusma_puani") is not None else "—"))
+    satir = "".join(f"<tr><th>{esc(a)}</th><td>{esc(b)}</td></tr>" for a, b in bilgi if b not in ("", None))
+    kaynak = o["kanal_url"]
+    kaynak_html = f'<a href="{esc(kaynak)}">{esc(kaynak)}</a>' if kaynak.startswith("https://") else ""
+    kisa = v.get("kisa_aciklama") or v.get("baslik") or m["baslik"]
+    dokum = str(v.get("dokum_metni") or "").strip()
+    kr = ""
+    if etk and o["tur"] == "derleme" and o["kucuk_resimler"]:
+        kayit_o = (manifest.get("ogeler") or {}).get(o["id"]) or {}
+        secili = (kayit_o.get("onay") or {}).get("kucuk_resim") or (o.get("duzenleme") or {}).get("kucuk_resim")
+        kr = "<p><b>Küçük resim seç</b> (seçmeden onaylanamaz; değiştirirsen onay düşer)</p><div class=kr>" + "".join(
+            f'<label class=krsec><input type=radio name="kr{esc(o["no"])}" value="{i}"{" checked" if k.name == secili else ""}>'
+            f'<img loading=lazy src="{esc(dosya_url(k))}" alt="küçük resim {i}"><span>{i}</span></label>'
+            for i, k in enumerate(o["kucuk_resimler"], 1)) + "</div>"
+    elif o["tur"] == "derleme" and o["kucuk_resimler"]:
+        kr = "<p><b>Küçük resim seçenekleri</b> (onay için numara seç: <code>--kucuk-resim N</code>)</p><div class=kr>" + "".join(
+            f'<figure><img loading=lazy src="{esc(k.as_uri())}" alt="küçük resim {i}"><figcaption>{i}</figcaption></figure>'
+            for i, k in enumerate(o["kucuk_resimler"], 1)) + "</div>"
+    komut = (f"py tools/klip_yayin.py onayla {o['no']}" + (" --kucuk-resim 1" if o["tur"] == "derleme" else ""))
+    rozetler = ""
+    if kufur:
+        rozetler += ' <span class=kufurrozet>KÜFÜR UYARISI</span>'
+    if o.get("elle"):
+        ad = ", ".join(ELLE_ADLARI.get(x, x) for x in o["elle"])
+        rozetler += f' <span class=ellerozet title="Elle düzenlenen: {esc(ad)}">ELLE DÜZENLENDİ</span>'
+    pl = o.get("platformlar") or {}
+    if dikey and pl.get("instagram") != pl.get("youtube"):
+        rozetler += f' <span class=platrozet>yalnız {"Instagram" if pl.get("instagram") else "YouTube"}</span>'
+    kesim = ((etk or {}).get("kesimler") or {}).get(o["id"])
+    aktif = bool(kesim and kesim["durum"] in ("kuyrukta", "kesiliyor"))
+    duzen_dugme = ""
+    panel = ""
+    if etk:
+        video_url = dosya_url(o["mp4"])
+        try:
+            video_url += f"?s={o['mp4'].stat().st_mtime_ns}"  # yeniden kesilince tarayıcı eski videoyu göstermesin
+        except OSError:
+            pass
+        onayli = sinif in ONAYLI_SINIFLAR
+        acik = o["id"] in ((etk or {}).get("acik") or ())
+        panel = duzen_paneli(o, kesim, acik, str(((etk.get("ayar") or {}).get("ayar") or {}).get("duzen") or ""))
+        alt = (f'<div class=islem><button type=button class=onayla{" disabled" if aktif else ""}>Onayla</button>'
+               '<button type=button class=geri>Onayı geri al</button>'
+               f'<button type=button class=duzen-ac aria-expanded="{"true" if acik else "false"}">{"Düzenlemeyi kapat" if acik else "Düzenle"}</button></div>'
+               '<p class=hata role=alert hidden></p><p class=tamam role=status hidden></p>')
+    else:
+        video_url = o["mp4"].as_uri()
+        onayli = False
+        alt = f"<p class=ipucu>Onay için asistana yaz: <code>{esc(komut)}</code> (butonlar için: {esc(BASLATICI_AD)})</p>"
+    return f"""<article class="kart {sinif}{' kufur' if kufur else ''}" id="k{esc(o['no'])}" data-no="{esc(o['no'])}" data-tur="{esc(o['tur'])}" data-kufur="{'1' if kufur else '0'}" data-onayli="{'evet' if onayli else 'hayir'}" data-sinif="{sinif}" data-yayinci="{esc(o['yayinci'])}" data-elle="{'1' if o.get('elle') else '0'}">
+<h3><span class=no>{esc(o['no'])}</span> {esc(kisa)}{rozetler}</h3>
 <p class="durum {sinif}"><span class=etiket>{esc(etiket)}</span></p>
+{kesim_kutusu(kesim)}
 <div class="govde{' dikey' if dikey else ''}">
 <video controls preload="metadata" {'height=480' if dikey else 'width=560'} src="{esc(video_url)}"></video>
 <div class=yan>
@@ -337,8 +487,13 @@ def html_uret(ogeler: list[dict], manifest: dict, zaman: str, etk: dict | None =
 {kr}
 {('<details><summary>Konuşma dökümü</summary><pre>' + esc(dokum) + '</pre></details>') if dokum else ''}
 {alt}
+{panel}
 </article>"""
 
+
+def html_uret(ogeler: list[dict], manifest: dict, zaman: str, etk: dict | None = None) -> str:
+    """`etk` verilirse (sayfa sunucusu) düğmeli canlı sayfa; yoksa durağan liste (file:// adresleri)."""
+    kart = lambda o: kart_uret(o, manifest, etk)  # noqa: E731
     klipler = [o for o in ogeler if o["tur"] == "klip" and not o["yok_notu"]]
     derlemeler = [o for o in ogeler if o["tur"] == "derleme"]
     gizli = [o for o in ogeler if o["yok_notu"]]
@@ -352,12 +507,23 @@ def html_uret(ogeler: list[dict], manifest: dict, zaman: str, etk: dict | None =
             f"<li>{esc(o['goreli'])} — {esc(o['yok_notu'])}</li>" for o in gizli) + "</ul>")
     if etk:
         sy = ozet_sayilari(ogeler, manifest)
+        yayincilar = sorted({o["yayinci"] for o in klipler + derlemeler if o["yayinci"]}, key=str.casefold)
+        secenek = '<option value="">Tüm yayıncılar</option>' + "".join(f'<option value="{esc(y)}">{esc(y)}</option>' for y in yayincilar)
         ust = (f'<div id=ozet class=ozet><span><b id=s-onayli>{sy["onayli"]}</b> onaylı</span> · '
                f'<span><b id=s-bekleyen>{sy["bekleyen"]}</b> yüklenmeyi bekliyor</span> · '
-               f'<span>{sy["toplam"]} öğeden</span></div>'
+               f'<span><b id=s-kufur>{sy["kufur"]}</b> küfür uyarılı</span> · '
+               f'<span><b id=s-elle>{sy["elle"]}</b> elle düzenlenmiş</span> · '
+               f'<span><b id=s-toplam>{sy["toplam"]}</b> öğe</span></div>'
+               '<div class=suzgec role=group aria-label="Süzgeç">'
+               '<button type=button data-suz=hepsi aria-pressed=true>Hepsi</button>'
+               '<button type=button data-suz=onayli aria-pressed=false>Onaylı</button>'
+               '<button type=button data-suz=kufur aria-pressed=false>Küfür uyarılı</button>'
+               f'<select id=suz-yayinci aria-label="Yayıncıya göre">{secenek}</select>'
+               '<span id=suz-sayi class=kucuk></span></div>'
                '<p class=not><b>Onay yalnız işaretler; paylaşım için yükleme ve gönderim ayrı adımdır.</b> '
-               'Kırmızı çerçeveli kartlarda küfür uyarısı var: önce dinle.</p>')
-        betik = SAYFA_BETIGI
+               'Kırmızı çerçeveli kartlarda küfür uyarısı var: önce dinle. '
+               'Bir kartta <b>Düzenle</b>ye basarak metni, platformu ve video üstündekileri değiştirebilirsin; onaylı bir kartı düzenlersen onayı düşer.</p>')
+        betik = ui.BETIK
         belirtec = f'<meta name="belirtec" content="{esc(etk["belirtec"])}">'
     else:
         ust = (f'<p>Hazırlanma: {esc(zaman)} · {len(klipler)} klip, {len(derlemeler)} derleme · küfür uyarılı: {kufurlu}.</p>\n'
@@ -370,39 +536,7 @@ def html_uret(ogeler: list[dict], manifest: dict, zaman: str, etk: dict | None =
 <html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 {belirtec}
 <title>Klip onay listesi</title>
-<style>
-:root{{--bg:#f6f6f4;--fg:#1c1c1a;--kart:#fff;--cizgi:#d9d9d4;--vurgu:#0a6cff;--kirmizi:#b3261e;--yesil:#1b7a3a;--sari:#8a6100}}
-@media (prefers-color-scheme:dark){{:root{{--bg:#141413;--fg:#ecebe6;--kart:#1f1f1d;--cizgi:#3a3a36;--vurgu:#6aa4ff;--kirmizi:#ff8b82;--yesil:#6fd08a;--sari:#e0b64a}}}}
-body{{margin:0;padding:16px;background:var(--bg);color:var(--fg);font:16px/1.45 system-ui,Segoe UI,sans-serif}}
-main{{max-width:1100px;margin:0 auto}}
-h1{{font-size:1.4rem}} h2{{margin-top:2rem;border-bottom:1px solid var(--cizgi);padding-bottom:.3rem;font-size:1.15rem}}
-.kart{{background:var(--kart);border:1px solid var(--cizgi);border-radius:10px;padding:14px;margin:14px 0}}
-.kart.kufur{{border-color:var(--kirmizi);border-width:2px}}
-.kart h3{{margin:0 0 6px;font-size:1.05rem}} .no{{display:inline-block;min-width:1.8em;text-align:center;background:var(--vurgu);color:#fff;border-radius:6px;padding:0 6px;margin-right:6px}}
-.govde{{display:flex;gap:16px;flex-wrap:wrap}} .govde video{{background:#000;max-width:100%;border-radius:6px}}
-.yan{{flex:1;min-width:260px}} table{{border-collapse:collapse}} th{{text-align:left;padding:1px 10px 1px 0;color:var(--sari);font-weight:600}}
-pre{{white-space:pre-wrap;word-break:break-word;background:var(--bg);padding:8px;border-radius:6px;margin:4px 0}}
-.uyari{{color:var(--kirmizi);padding-left:1.2em;margin:.4em 0}} .durum{{margin:2px 0 8px;font-weight:600}}
-.durum.yayinda,.durum.paylasildi{{color:var(--yesil)}} .durum.dustu,.durum.bekle{{color:var(--kirmizi)}}
-.kr{{display:flex;gap:10px;flex-wrap:wrap}} .kr img{{width:280px;max-width:100%;border-radius:4px}} figure{{margin:0}}
-a{{color:var(--vurgu)}} .ipucu{{color:var(--sari);font-size:.92rem}} code{{background:var(--bg);padding:1px 5px;border-radius:4px}}
-.kufurrozet{{display:inline-block;background:var(--kirmizi);color:var(--bg);font-size:.75rem;font-weight:700;border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:middle}}
-.ozet{{position:sticky;top:0;z-index:5;background:var(--kart);border:1px solid var(--cizgi);border-radius:8px;padding:8px 12px;font-size:1.05rem}}
-.not{{color:var(--sari)}}
-.islem{{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}}
-button{{font:inherit;font-weight:600;min-height:44px;padding:8px 18px;border-radius:8px;border:1px solid var(--cizgi);background:var(--kart);color:var(--fg);cursor:pointer}}
-button.onayla{{background:var(--yesil);color:var(--bg);border-color:var(--yesil)}}
-button[disabled]{{opacity:.55;cursor:wait}}
-.kart[data-onayli=evet] .onayla,.kart[data-onayli=hayir] .geri{{display:none}}
-.kart[data-onayli=evet]{{border-left:6px solid var(--yesil)}}
-.hata{{color:var(--kirmizi);font-weight:600;border:1px solid var(--kirmizi);border-radius:6px;padding:6px 10px;margin:8px 0 0}}
-.hata[hidden]{{display:none}}
-.krsec{{position:relative;display:block;cursor:pointer;border:3px solid transparent;border-radius:6px}}
-.krsec input{{position:absolute;top:8px;left:8px;width:22px;height:22px;z-index:1}}
-.krsec span{{position:absolute;right:8px;top:6px;background:var(--vurgu);color:#fff;border-radius:6px;padding:0 8px}}
-.krsec:has(input:checked){{border-color:var(--yesil)}}
-@media (max-width:600px){{body{{padding:10px}} .islem button{{flex:1 1 100%}} .govde video{{height:auto;width:100%}}}}
-</style>{betik}</head><body><main>
+<style>{ui.CSS}</style>{betik}</head><body><main>
 <h1>Klip onay listesi</h1>
 {ust}
 {''.join(govde)}
@@ -475,7 +609,10 @@ def onayla_bir(o: dict, ogeler: list[dict], manifest: dict, kucuk_no: int | None
             raise Hata(f"{o['id']}: aynı anın başka sürümü ({diger_id}) zaten onaylı; önce onu geri çek")
     ozet = ozet_onay(o, kucuk)
     eski = (manifest["ogeler"].get(o["id"]) or {})
-    if ks.onay_gecerli(eski) and eski["onay"]["ozet"] == ozet and eski.get("metin") == metin:
+    # platform seçimi yalnız varsayılandan farklıysa manifeste yazılır (yoksa her platform açık sayılır)
+    pl = o.get("platformlar")
+    pl_yaz = dict(pl) if pl and pl != kd.varsayilan_platformlar(o["tur"]) else None
+    if ks.onay_gecerli(eski) and eski["onay"]["ozet"] == ozet and eski.get("metin") == metin and eski.get("platformlar") == pl_yaz:
         return f"{o['id']}: zaten onaylı"
     yeni = {k: v for k, v in eski.items() if k in ("instagram", "youtube")}  # eski bağlantılar kalır (çift paylaşımı önler)
     yeni.update({
@@ -485,6 +622,8 @@ def onayla_bir(o: dict, ogeler: list[dict], manifest: dict, kucuk_no: int | None
     })
     if kucuk is not None:
         yeni["onay"]["kucuk_resim"] = kucuk.name
+    if pl_yaz is not None:
+        yeni["platformlar"] = pl_yaz
     manifest["ogeler"][o["id"]] = yeni
     return f"{o['id']}: onaylandı"
 
@@ -545,54 +684,15 @@ def komut_geri_cek(args) -> int:
 
 
 # ---------------------------------------------------------------- yerel onay sayfası (düğmeli)
-SAYFA_BETIGI = """<script>
-(function(){
-  function belirtec(){var m=document.querySelector('meta[name=belirtec]');return m?m.content:'';}
-  function gonder(yol,govde){
-    return fetch(yol,{method:'POST',headers:{'Content-Type':'application/json','X-Belirtec':belirtec()},body:JSON.stringify(govde)})
-      .then(function(r){return r.json().catch(function(){return {ok:false,mesaj:'Sunucu yanıtı anlaşılamadı (kod '+r.status+').'};});},
-            function(){return {ok:false,mesaj:'Sunucuya ulaşılamadı: Onay Sayfası penceresi kapanmış olabilir.'};});
-  }
-  function hata(kart,mesaj){var h=kart.querySelector('.hata');h.textContent=mesaj||'';h.hidden=!mesaj;}
-  function uygula(kart,d){
-    if(d.durum){
-      kart.classList.remove(kart.dataset.sinif);kart.classList.add(d.durum.sinif);kart.dataset.sinif=d.durum.sinif;
-      kart.dataset.onayli=d.durum.onayli?'evet':'hayir';
-      var p=kart.querySelector('p.durum');p.className='durum '+d.durum.sinif;p.querySelector('.etiket').textContent=d.durum.etiket;
-    }
-    if(d.ozet){
-      document.getElementById('s-onayli').textContent=d.ozet.onayli;
-      document.getElementById('s-bekleyen').textContent=d.ozet.bekleyen;
-    }
-  }
-  document.addEventListener('click',function(e){
-    var dugme=e.target.closest('button.onayla,button.geri');if(!dugme)return;
-    var kart=dugme.closest('.kart');var onay=dugme.classList.contains('onayla');var govde={no:kart.dataset.no};
-    hata(kart,'');
-    if(onay){
-      if(kart.dataset.tur==='derleme'){
-        var sec=kart.querySelector('input[type=radio]:checked');
-        if(!sec){hata(kart,'Önce bir küçük resim seç (resme tıkla), sonra onayla.');return;}
-        govde.kucuk_resim=parseInt(sec.value,10);
-      }
-      if(kart.dataset.kufur==='1'&&!window.confirm('Bu kartta küfür uyarısı var. Dinledin ve yine de onaylansın mı?'))return;
-    }else if((kart.dataset.sinif==='yayinda'||kart.dataset.sinif==='paylasildi')&&
-             !window.confirm('Bu klip medya sunucusuna yüklenmiş ya da paylaşılmış. Onayı geri alınsın mı? (Sunucudaki dosya ve paylaşılmış gönderi silinmez.)')){return;}
-    var tum=kart.querySelectorAll('button');tum.forEach(function(b){b.disabled=true;});
-    gonder(onay?'/api/onayla':'/api/geri-al',govde).then(function(d){
-      tum.forEach(function(b){b.disabled=false;});
-      uygula(kart,d);
-      if(!d.ok)hata(kart,d.mesaj||'Bilinmeyen hata.');
-    });
-  });
-})();
-</script>"""
+SAYFA_BETIGI = ui.BETIK  # geri uyum: betik klip_panel_ui.py'de
 
 DOSYA_TURLERI = {".mp4": "video/mp4", ".webm": "video/webm", ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg"}
 KAPI_VARSAYILAN = 8765
 KAPI_DENEME = 20
 ISTEK_AZAMI_BAYT = 4096
 BLOK_BAYT = 64 * 1024
+DUZENLE_YOLLARI = {"/api/metin-kaydet": ("metin-kaydet", 131072), "/api/metin-sifirla": ("metin-sifirla", 4096),
+                   "/api/kesim": ("kesim", 16384), "/api/kucuk-resim": ("kucuk-resim", 4096)}
 SAYFA_CSP = ("default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self'; "
              "media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'")
 
@@ -631,6 +731,7 @@ class OnaySunucusu(http.server.ThreadingHTTPServer):
         self.belirtec = secrets.token_urlsafe(24)
         self.manifest_arg = manifest_arg
         self.kilit = threading.Lock()
+        self.kesim = KesimIsleri(self.kilit, manifest_arg)
         self.izinli_host = {f"127.0.0.1:{self.port}", f"localhost:{self.port}"}
         self.izinli_origin = {f"http://127.0.0.1:{self.port}", f"http://localhost:{self.port}"}
 
@@ -693,15 +794,41 @@ class OnayIstegi(http.server.BaseHTTPRequestHandler):
                 return self._sayfa(gonder)
             if yol.startswith("/dosya/"):
                 return self._dosya(yol[len("/dosya/"):], gonder)
+            if yol == "/api/durum" or yol.startswith("/kart/"):
+                return self._canli(yol, gonder)
             return self._yanit(404, "Bulunamadı.".encode("utf-8"), gonder=gonder)
         except (ConnectionError, TimeoutError):
             self.close_connection = True
 
+    def _canli(self, yol: str, gonder: bool):
+        """Belirteçli okuma uçları: kesim durumu ve tek kart parçası (sayfa betiği çağırır)."""
+        if not hmac.compare_digest((self.headers.get("X-Belirtec") or "").encode("utf-8"), self.server.belirtec.encode("utf-8")):
+            return self._yanit(403, "Oturum belirteci geçersiz: sayfayı yenile (F5).".encode("utf-8"), gonder=gonder)
+        if yol == "/api/durum":
+            with self.server.kilit:
+                kayit = liste_kaydi_oku()
+            id_no = {v["id"]: no for no, v in kayit["ogeler"].items()}
+            kesimler = {id_no[k]: d for k, d in self.server.kesim.durumlar().items() if k in id_no}
+            veri = json.dumps({"ok": True, "kesimler": kesimler}, ensure_ascii=False).encode("utf-8")
+            return self._yanit(200, veri, "application/json; charset=utf-8", gonder=gonder)
+        no = yol[len("/kart/"):]
+        if not no.isdigit():
+            return self._yanit(404, "Bulunamadı.".encode("utf-8"), gonder=gonder)
+        acik = urllib.parse.parse_qs(self.path.split("?", 1)[1] if "?" in self.path else "").get("ac") == ["1"]
+        with self.server.kilit:
+            ogeler, manifest, _kayit, ayar = ogeleri_oku(self.server.manifest_arg)
+            o = next((x for x in ogeler if x["no"] == no), None)
+            if o is None:
+                return self._yanit(404, "Bu numarada klip yok; sayfayı yenile.".encode("utf-8"), gonder=gonder)
+            govde = kart_html(o, manifest, ayar, self.server.kesim, acik)
+        self._yanit(200, govde.encode("utf-8"), "text/html; charset=utf-8", {"Content-Security-Policy": SAYFA_CSP}, gonder)
+
     def _sayfa(self, gonder: bool):
         with self.server.kilit:
-            ogeler, manifest, _kayit, _ayar = liste_hazirla(self.server.manifest_arg)
+            ogeler, manifest, _kayit, ayar = liste_hazirla(self.server.manifest_arg)
             zaman = ks.simdi_iso().replace("T", " ").replace("Z", " UTC")
-            sayfa = html_uret(ogeler, manifest, zaman, {"belirtec": self.server.belirtec})
+            sayfa = html_uret(ogeler, manifest, zaman, {"belirtec": self.server.belirtec, "kesimler": self.server.kesim.durumlar(),
+                                                        "acik": set(), "ayar": ayar})
         self._yanit(200, sayfa.encode("utf-8"), "text/html; charset=utf-8", {"Content-Security-Policy": SAYFA_CSP}, gonder)
 
     def _dosya(self, ham: str, gonder: bool):
@@ -769,15 +896,16 @@ class OnayIstegi(http.server.BaseHTTPRequestHandler):
         if not hmac.compare_digest((self.headers.get("X-Belirtec") or "").encode("utf-8"), self.server.belirtec.encode("utf-8")):
             return self._json(403, {"ok": False, "mesaj": "Oturum belirteci geçersiz: sayfayı yenile (F5)."})
         yol = self.path.split("?", 1)[0]
-        if yol not in ("/api/onayla", "/api/geri-al"):
+        if yol not in ("/api/onayla", "/api/geri-al") and yol not in DUZENLE_YOLLARI:
             return self._json(404, {"ok": False, "mesaj": "Bilinmeyen işlem."})
+        azami = DUZENLE_YOLLARI[yol][1] if yol in DUZENLE_YOLLARI else ISTEK_AZAMI_BAYT
         if not (self.headers.get("Content-Type") or "").lower().startswith("application/json"):
             return self._json(415, {"ok": False, "mesaj": "İçerik türü application/json olmalı."})
         try:
             n = int(self.headers.get("Content-Length") or "0")
         except ValueError:
             n = -1
-        if not 0 < n <= ISTEK_AZAMI_BAYT:
+        if not 0 < n <= azami:
             self.close_connection = True
             return self._json(400, {"ok": False, "mesaj": "İstek gövdesi geçersiz."})
         try:
@@ -788,7 +916,12 @@ class OnayIstegi(http.server.BaseHTTPRequestHandler):
             return self._json(400, {"ok": False, "mesaj": "İstek gövdesi geçersiz."})
         try:
             with self.server.kilit:
-                sonuc = onay_islemi(yol == "/api/onayla", veri, self.server.manifest_arg)
+                if yol in DUZENLE_YOLLARI:
+                    sonuc = duzenle_islemi(DUZENLE_YOLLARI[yol][0], veri, self.server.manifest_arg, self.server.kesim)
+                else:
+                    sonuc = onay_islemi(yol == "/api/onayla", veri, self.server.manifest_arg, self.server.kesim)
+        except kd.Hata as e:
+            return self._json(422, {"ok": False, "mesaj": str(e)})
         except (Hata, RuntimeError, OSError) as e:
             m = str(e)
             if "`liste`" in m:
@@ -810,7 +943,7 @@ def liste_hazirla(manifest_arg: str | None):
     return ogeler, manifest, kayit, ayar
 
 
-def onay_islemi(onayla: bool, veri: dict, manifest_arg: str | None) -> dict:
+def onay_islemi(onayla: bool, veri: dict, manifest_arg: str | None, kesim=None) -> dict:
     """Tek öğe: onayla ya da geri al. Mevcut `onayla_bir`/`geri_cek_oge` mantığı; numaralar son sayfa yüklemesindeki liste.json'dandır."""
     no = veri.get("no")
     if not isinstance(no, str) or not no.isdigit():
@@ -826,6 +959,8 @@ def onay_islemi(onayla: bool, veri: dict, manifest_arg: str | None) -> dict:
     kayit = liste_kaydi_oku()  # güncellenmez: onay, kullanıcının izlediği listedeki özete bağlı kalır
     if onayla:
         o = hedef_coz(no, ogeler, kayit)
+        if kesim is not None and kesim.aktif(o["id"]):
+            raise Hata("Bu klip şu an yeniden kesiliyor; kesim bitince onayla.")
         if o["tur"] == "derleme" and kr is None:
             raise Hata("Küçük resim seçmeden onaylanamaz: önce bir küçük resme tıkla.")
         mesaj = onayla_bir(o, ogeler, manifest, kr, ayar)
@@ -841,6 +976,235 @@ def onay_islemi(onayla: bool, veri: dict, manifest_arg: str | None) -> dict:
     etiket, sinif = durum_metni(o, manifest)
     return {"ok": True, "mesaj": mesaj, "durum": {"etiket": etiket, "sinif": sinif, "onayli": sinif in ONAYLI_SINIFLAR},
             "ozet": ozet_sayilari(ogeler, manifest)}
+
+
+# ---------------------------------------------------------------- düzenleme + yeniden kesim
+KESIM_KOMUTU: list[str] | None = None  # yalnız test: gerçek `yayin_klip.py` yerine sahte komut (liste, kabuk yok)
+KESIM_ZAMAN_ASIMI = 1800
+BITTI_SURESI = 60
+HATA_SURESI = 600
+
+
+def ogeleri_oku(manifest_arg: str | None):
+    """Yalnız okur (liste.json'a dokunmaz): öğeler, manifest, kayıt, ayar. Öğelere kayıttaki kalıcı numara verilir."""
+    ayar = ayar_oku()
+    ogeler = tara(yk.calisma_dizini(), ayar)
+    manifest = ks.yukle(manifest_yolu(manifest_arg))
+    kayit = liste_kaydi_oku()
+    yol_no = {v["paket"]: no for no, v in kayit["ogeler"].items()}
+    for o in ogeler:
+        o["no"] = None if o["yok_notu"] else yol_no.get(o["goreli"])
+    return ogeler, manifest, kayit, ayar
+
+
+def onayi_dusur(manifest: dict, oge_id: str) -> bool:
+    k = (manifest.get("ogeler") or {}).get(oge_id)
+    if k and k.get("onay"):
+        k.pop("onay")
+        return True
+    return False
+
+
+def liste_oge_yenile(no: str, o: dict) -> None:
+    """Düzenlenen/yeniden kesilen tek öğenin özetini liste.json'da günceller (öbür öğelere dokunmaz): kullanıcı yeni hâlini görüyor."""
+    kayit = liste_kaydi_oku()
+    if no in kayit["ogeler"]:
+        kayit["ogeler"][no]["ozet"] = ozet_taban(o)
+        liste_yolu().write_text(json.dumps(kayit, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
+
+
+def kart_html(o: dict, manifest: dict, ayar: dict, kesim, acik: bool = True) -> str:
+    etk = {"kesimler": kesim.durumlar() if kesim is not None else {}, "acik": {o["id"]} if acik else set(), "ayar": ayar}
+    return kart_uret(o, manifest, etk)
+
+
+def kesim_calistir(paket_yolu: str, arg: list[str]) -> tuple[bool, str]:
+    """`yayin_klip.py yeniden-uret <paket> <seçenekler>` alt süreci. Liste argümanı (kabuk yok). (başarılı, ileti)."""
+    komut = list(KESIM_KOMUTU) if KESIM_KOMUTU else [sys.executable, str(KOK / "tools" / "yayin_klip.py")]
+    komut += ["yeniden-uret", str(paket_yolu), *arg]
+    env = {**os.environ, "YAYIN_KLIP_DIZIN": str(yk.calisma_dizini()), "PYTHONUTF8": "1"}
+    bayrak = getattr(subprocess, "CREATE_NO_WINDOW", 0) if os.name == "nt" else 0
+    try:
+        kos = subprocess.run(komut, capture_output=True, text=True, encoding="utf-8", errors="replace",
+                             timeout=KESIM_ZAMAN_ASIMI, env=env, creationflags=bayrak, stdin=subprocess.DEVNULL)
+    except subprocess.TimeoutExpired:
+        return False, f"Kesim {KESIM_ZAMAN_ASIMI // 60} dakikada bitmedi, durduruldu."
+    except OSError as e:
+        return False, f"Kesim başlatılamadı: {e}"
+    cikti = [s.strip() for s in (kos.stdout or "").splitlines() if s.strip()]
+    hatalar = [s.strip() for s in (kos.stderr or "").splitlines() if s.strip()]
+    if kos.returncode != 0:
+        if "unrecognized arguments" in (kos.stderr or ""):
+            return False, "Kesim aracı bu seçeneği tanımıyor (yayin_klip.py eski sürüm olabilir): " + (hatalar[-1] if hatalar else "")[:200]
+        return False, (hatalar[-1] if hatalar else (cikti[-1] if cikti else f"Kesim {kos.returncode} koduyla bitti."))[:400]
+    return True, cikti[-1] if cikti else ""
+
+
+class KesimIsleri:
+    """Yeniden kesim kuyruğu: aynı anda tek kesim (tek işçi iş parçacığı), öbürleri sırada bekler."""
+
+    def __init__(self, sunucu_kilidi: threading.Lock, manifest_arg: str | None):
+        self.kilit = threading.Lock()
+        self.sunucu_kilidi = sunucu_kilidi
+        self.manifest_arg = manifest_arg
+        self.kuyruk: queue.Queue = queue.Queue()
+        self.durum: dict[str, dict] = {}
+        self.isci: threading.Thread | None = None
+
+    def aktif(self, oge_id: str) -> bool:
+        with self.kilit:
+            return (self.durum.get(oge_id) or {}).get("durum") in ("kuyrukta", "kesiliyor")
+
+    def ekle(self, o: dict, arg: list[str], video: dict) -> None:
+        with self.kilit:
+            if (self.durum.get(o["id"]) or {}).get("durum") in ("kuyrukta", "kesiliyor"):
+                raise Hata("Bu klip zaten kesiliyor ya da sırada; bitmesini bekle.")
+            self.durum[o["id"]] = {"durum": "kuyrukta", "mesaj": "", "zaman": time.monotonic()}
+            self.kuyruk.put({"id": o["id"], "no": o["no"], "json": str(o["json"]), "arg": list(arg), "video": dict(video)})
+            if self.isci is None or not self.isci.is_alive():
+                self.isci = threading.Thread(target=self._isle, name="klip-kesim", daemon=True)
+                self.isci.start()
+
+    def _yaz(self, oge_id: str, durum: str, mesaj: str) -> None:
+        with self.kilit:
+            self.durum[oge_id] = {"durum": durum, "mesaj": mesaj, "zaman": time.monotonic()}
+
+    def _isle(self) -> None:
+        while True:
+            job = self.kuyruk.get()
+            try:
+                self._yaz(job["id"], "kesiliyor", "Kesiliyor… (20-60 sn sürer; bu sayfayı açık tutman şart değil)")
+                ok, mesaj = kesim_calistir(job["json"], job["arg"])
+                if ok:
+                    self._bitir(job)
+                    self._yaz(job["id"], "bitti", "Yeniden kesildi. Videoyu izle; beğenirsen yeniden onayla.")
+                else:
+                    self._yaz(job["id"], "hata", f"Kesim başarısız, video değişmedi: {mesaj}")
+            except Exception as e:  # noqa: BLE001 — işçi ölmesin; hata kartta görünsün
+                self._yaz(job["id"], "hata", f"Kesim sonrası işlem başarısız: {e}")
+            finally:
+                self.kuyruk.task_done()
+
+    def _bitir(self, job: dict) -> None:
+        """Başarılı kesim: istenen video-üstü seçenekleri düzenleme dosyasına işler, listedeki özeti tazeler."""
+        with self.sunucu_kilidi:
+            ogeler = tara(yk.calisma_dizini(), ayar_oku())
+            o = next((x for x in ogeler if x["id"] == job["id"]), None)
+            if o is None:
+                raise Hata("paket kesimden sonra bulunamadı")
+            dz = kd.oku(o["json"])
+            dz["video"] = {**(dz.get("video") or {}), **job["video"]}
+            kd.yaz(o["json"], dz)
+            liste_oge_yenile(job["no"], o)
+
+    def bekle(self, saniye: float = 30.0) -> bool:
+        """Kuyruk boşalana kadar bekler (test)."""
+        bitis = time.monotonic() + saniye
+        while time.monotonic() < bitis:
+            if self.kuyruk.unfinished_tasks == 0:
+                return True
+            time.sleep(0.02)
+        return False
+
+    def durumlar(self) -> dict:
+        with self.kilit:
+            simdi = time.monotonic()
+            for k in list(self.durum):
+                d = self.durum[k]
+                if d["durum"] in ("bitti", "hata") and simdi - d["zaman"] > (BITTI_SURESI if d["durum"] == "bitti" else HATA_SURESI):
+                    del self.durum[k]
+            sirada = [j["id"] for j in list(self.kuyruk.queue)]
+            onde = 1 if any(d["durum"] == "kesiliyor" for d in self.durum.values()) else 0
+            cikti = {}
+            for k, d in self.durum.items():
+                mesaj = d["mesaj"]
+                if d["durum"] == "kuyrukta":
+                    n = (sirada.index(k) if k in sirada else 0) + onde
+                    mesaj = f"Sırada bekliyor (önünde {n} kesim var)…"
+                cikti[k] = {"durum": d["durum"], "mesaj": mesaj}
+            return cikti
+
+
+def duzenle_islemi(islem: str, veri: dict, manifest_arg: str | None, kesim: KesimIsleri | None) -> dict:
+    """Panelden gelen düzenleme. Metin/platform/küçük resim ya da yeniden kesim; onaylı öğe düzenlenirse ONAY DÜŞER."""
+    no = veri.get("no")
+    if not isinstance(no, str) or not no.isdigit():
+        raise Hata("Geçersiz klip numarası.")
+    ogeler, manifest, kayit, ayar = ogeleri_oku(manifest_arg)
+    o = hedef_coz(no, ogeler, kayit)
+    yol = manifest_yolu(manifest_arg)
+    ek: dict = {}
+    dustu = False
+    if islem == "metin-kaydet":
+        ek_yasak = tuple((ayar.get("ayar") or {}).get("aciklama_yasak_kelimeler") or ())
+        metin, pl, uyarilar = kd.metin_dogrula({"baslik": veri.get("baslik"), "aciklama": veri.get("aciklama"),
+                                                "etiketler": veri.get("etiketler", ""), "platformlar": veri.get("platformlar")},
+                                               o["tur"], ek_yasak)
+        dz = kd.oku(o["json"])
+        once = json.dumps(dz, sort_keys=True)
+        oto = o["otomatik_metin"]
+        if metin == {"baslik": oto["baslik"], "aciklama": oto["aciklama"], "etiketler": list(oto["etiketler"])}:
+            dz.pop("metin", None)
+        else:
+            dz["metin"] = metin
+        if pl == kd.varsayilan_platformlar(o["tur"]):
+            dz.pop("platformlar", None)
+        else:
+            dz["platformlar"] = pl
+        if json.dumps(dz, sort_keys=True) == once:
+            mesaj = "Değişiklik yok; kaydedilecek bir şey yoktu."
+        else:
+            kd.yaz(o["json"], dz)
+            dustu = onayi_dusur(manifest, o["id"])
+            mesaj = "Kaydedildi." + (" Onay düştü: yeniden onaylaman gerekir." if dustu else "")
+        ek["uyarilar"] = uyarilar
+    elif islem == "metin-sifirla":
+        dz = kd.oku(o["json"])
+        if "metin" not in dz and "platformlar" not in dz:
+            mesaj = "Zaten otomatik metin kullanılıyor."
+        else:
+            dz.pop("metin", None)
+            dz.pop("platformlar", None)
+            kd.yaz(o["json"], dz)
+            dustu = onayi_dusur(manifest, o["id"])
+            mesaj = "Otomatik metne dönüldü." + (" Onay düştü: yeniden onaylaman gerekir." if dustu else "")
+    elif islem == "kucuk-resim":
+        if o["tur"] != "derleme":
+            raise Hata("Küçük resim yalnız derlemede seçilir.")
+        n = veri.get("kucuk_resim")
+        if isinstance(n, bool) or not isinstance(n, int):
+            raise Hata("Küçük resim numarası geçersiz.")
+        secilen = kucuk_resim_sec(o, n)
+        dz = kd.oku(o["json"])
+        onayli_ad = ((manifest["ogeler"].get(o["id"]) or {}).get("onay") or {}).get("kucuk_resim")
+        if dz.get("kucuk_resim") != secilen.name:
+            dz["kucuk_resim"] = secilen.name
+            kd.yaz(o["json"], dz)
+        if onayli_ad is not None and onayli_ad != secilen.name:
+            dustu = onayi_dusur(manifest, o["id"])
+        mesaj = "Küçük resim seçildi." + (" Onay düştü: yeniden onaylaman gerekir." if dustu else "")
+    elif islem == "kesim":
+        if o["tur"] != "klip":
+            raise Hata("Derlemenin videosu bu panelde yeniden kesilmez.")
+        if kesim is None:
+            raise Hata("Yeniden kesim bu sunucuda kapalı.")
+        arg, video = kd.kesim_argumanlari(veri, o["paket"])
+        kesim.ekle(o, arg, video)
+        dustu = onayi_dusur(manifest, o["id"])
+        mesaj = "Kesim başlatıldı; 20-60 sn sürer." + (" Onay düştü: kesim bitince yeniden onaylaman gerekir." if dustu else "")
+    else:
+        raise Hata("Bilinmeyen işlem.")
+    if dustu:
+        ks.kaydet(manifest, yol)
+    # taze hâl: kartı yeniden üret; listedeki özet yalnız bu öğe için tazelenir
+    ogeler, manifest, kayit, ayar = ogeleri_oku(manifest_arg)
+    o2 = next((x for x in ogeler if x["id"] == o["id"]), None)
+    sonuc = {"ok": True, "mesaj": mesaj, "onay_dustu": dustu, "ozet": ozet_sayilari(ogeler, manifest), **ek}
+    if o2 is not None:
+        if islem != "kesim":
+            liste_oge_yenile(no, o2)
+        sonuc["kart"] = kart_html(o2, manifest, ayar, kesim)
+    return sonuc
 
 
 def baslatici_yaz() -> pathlib.Path:

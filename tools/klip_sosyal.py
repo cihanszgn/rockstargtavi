@@ -303,7 +303,11 @@ def aday_uret(oge_id: str, oge: dict) -> dict:
     zaman = oge["onay"]["zaman"]
     ig = "\n\n".join(p for p in (m["baslik"], m["aciklama"], " ".join(etiketler)) if p)
     yt = "\n\n".join(p for p in (m["aciklama"], " ".join(etiketler)) if p)
+    p = oge.get("platformlar") if isinstance(oge.get("platformlar"), dict) else {}
+    # Onay panelinde seçilen platformlar; yoksa ya da bozuksa eski davranış (hepsi açık). Derleme zaten yalnız YouTube'a gider.
+    platformlar = {k: p.get(k) is not False for k in ("instagram", "youtube")}
     return {
+        "platformlar": platformlar,
         "id": oge_id, "sosyal_tur": tur, "sosyal_anahtar": oge_id, "oyun": oge.get("oyun") or "",
         "tarih": zaman[:10], "tur": "haber", "kaynaklar": [{"ad": oge.get("yayinci") or "CTRL+A GAME", "url": oge.get("kanal_url") or ""}],
         "sayfalar": {}, "gorsel": None,
