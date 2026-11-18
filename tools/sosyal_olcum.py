@@ -390,7 +390,7 @@ def calistir(*, kayit_yolu=KAYIT, manifest_yolu=MANIFEST, ayar_yolu=AYAR, olcum_
     hesaplar: dict = {}
     za = simdi.isoformat(timespec="seconds")
     for platform in ("youtube", "instagram"):
-        for dil in sy.DILLER:
+        for dil in (*sy.DILLER, sy.KLIP_HESABI):
             sir = sy.hesap_sirri(tum, platform, dil)
             liste = [x for x in hedef if x["platform"] == platform and
                      (x.get("hesap") or sy.hesap_coz(ayar, tum, platform, x["dil"])[0]) == dil]

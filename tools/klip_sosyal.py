@@ -29,6 +29,10 @@ MANIFEST_YOLU = KOK / "data" / "klipler.json"
 TABAN_VARSAYILAN = "https://medya.ctrl-agame.com/v/"
 SURUM = 1
 TURLER = ("klip", "derleme")
+# Yayıncı klipleri CTRL+A GAME hesaplarına değil AYRI klip hesabına gider (sır önekleri YT_KLIP_* / IG_KLIP_*).
+# sosyal_yayinla.KLIP_HESABI ile aynı değer (test denetler). `yukle` manifestte hedefi bu alana açıkça yazar.
+KLIP_HESABI = "klip"
+HESAP_ALANI = "hesap"
 BASLIK_AZAMI = 90
 OZET_BLOK = 1024 * 1024
 
@@ -162,17 +166,32 @@ def etiket_kelime(s: str) -> str:
     return ("#" + k) if k else ""
 
 
-def etiketler_uret(paket: dict, kisa_ad: str = "") -> list[str]:
+def marka_paylasim(paket: dict | None = None, ayar: dict | None = None) -> tuple[str, list[str]]:
+    """Paylaşım metnine giren marka: (imza satırı, ek etiketler). Kaynak: klip-yayincilar.json `ayar`
+    (klip_paylasim_imza, klip_ek_etiketler; boş = yok). Ayar yoksa eski davranış: imza yok, ek etiket #CTRLA_GAME.
+    Paket `duzenleme.marka_yazi` taşıyorsa (yeniden-uret --marka / --markasiz) o geçerlidir; ek etiket markadan türer."""
+    dz = (paket or {}).get("duzenleme")
+    if isinstance(dz, dict) and "marka_yazi" in dz:
+        marka = sade(dz.get("marka_yazi"))
+        kelime = etiket_kelime(marka)
+        return marka, ([kelime] if kelime else [])
+    a = ayar or {}
+    imza = a.get("klip_paylasim_imza")
+    ek = a.get("klip_ek_etiketler")
+    return (sade(imza) if imza is not None else ""), (["#CTRLA_GAME"] if ek is None else [str(e) for e in ek if str(e).strip()])
+
+
+def etiketler_uret(paket: dict, kisa_ad: str = "", ayar: dict | None = None) -> list[str]:
     sonuc = []
     for ham in (kisa_ad or paket.get("yayinci"), str(paket.get("platform") or "").capitalize(), paket.get("oyun"),
-                "CTRLA_GAME"):
+                *marka_paylasim(paket, ayar)[1]):
         t = etiket_kelime(ham)
         if t and t.casefold() not in {x.casefold() for x in sonuc}:
             sonuc.append(t)
     return sonuc[:5]
 
 
-def klip_metni(paket: dict, kisa_ad: str = "", ek_yasak=()) -> dict:
+def klip_metni(paket: dict, kisa_ad: str = "", ek_yasak=(), ayar: dict | None = None) -> dict:
     """Paketten paylaşım başlığı + açıklaması + etiketleri. Küfür içeren parça yedek parçayla değişir.
     -> {baslik, aciklama, etiketler, uyarilar}. Açıklamada #Shorts yok (YouTube gönderimi sonuna kendisi ekler)."""
     yayinci = sade(paket.get("yayinci")) or "Yayıncı"
@@ -212,19 +231,23 @@ def klip_metni(paket: dict, kisa_ad: str = "", ek_yasak=()) -> dict:
     vod = str(paket.get("vod_zaman_damgali_url") or "")
     if paket.get("vod_zaman_damgali_url_dogrulandi") is True and vod.startswith("https://"):
         satirlar.append(f"Yayının bu anı: {vod}")
-    etiketler = etiketler_uret(paket, kisa)
+    etiketler = etiketler_uret(paket, kisa, ayar)
+    imza = marka_paylasim(paket, ayar)[0]
+    if imza:
+        satirlar.append(imza)
     aciklama = "\n".join(satirlar)
     return {"baslik": baslik, "aciklama": aciklama, "etiketler": etiketler, "uyarilar": list(dict.fromkeys(uyarilar))}
 
 
-def derleme_metni(derleme: dict, ek_yasak=()) -> dict:
+def derleme_metni(derleme: dict, ek_yasak=(), ayar: dict | None = None) -> dict:
     """Derleme.json'dan YouTube başlığı/açıklaması. Bölüm zaman damgaları derleme.json'daki açıklamadadır."""
     baslik = baslik_kisalt(derleme.get("baslik") or "Yayın Kolajı", 100)
     aciklama = str(derleme.get("aciklama") or "").strip()
     uyarilar = []
     if kufur_var(baslik + "\n" + aciklama, ek_yasak):
         uyarilar.append("metinde küfür var")
-    return {"baslik": baslik, "aciklama": aciklama, "etiketler": ["#CTRLA_GAME", "#Kick"], "uyarilar": uyarilar}
+    ek = marka_paylasim(None, ayar)[1]
+    return {"baslik": baslik, "aciklama": aciklama, "etiketler": [*ek, "#Kick"], "uyarilar": uyarilar}
 
 
 # ---------------------------------------------------------------- örtüşen varyantlar
@@ -285,6 +308,7 @@ def bul(manifest: dict, oge_id: str) -> dict | None:
     y = oge["yayinda"]
     cikti = {a: taban + y[a] for a in ("mp4_1080", "mp4_720", "mp4_540", "kapak") if y.get(a)}
     cikti["sure"] = float(y["sure"])
+    cikti[HESAP_ALANI] = str(y.get(HESAP_ALANI) or "")   # `yukle` yazar; boş = eski kayıt (klip hesabı sayılır)
     for p in ("youtube", "instagram"):
         cikti[p] = oge[p] if isinstance(oge.get(p), str) and oge[p].startswith("https://") else ""
     return cikti

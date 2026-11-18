@@ -65,6 +65,46 @@ def liste_yolu() -> pathlib.Path:
     return onay_dizini() / "liste.json"
 
 
+def sosyal_ayar_oku() -> dict:
+    try:
+        ham = json.loads((KOK / "sosyal" / "ayarlar.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    return ham if isinstance(ham, dict) else {}
+
+
+def sosyal_saklama_dizini() -> pathlib.Path:
+    """sosyal_kurulum.py'nin Windows şifreli (DPAPI) saklama klasörü; KLIP_SOSYAL_SAKLA ile değişir (test)."""
+    return pathlib.Path(os.environ.get("KLIP_SOSYAL_SAKLA")
+                        or (pathlib.Path(os.environ.get("LOCALAPPDATA", str(pathlib.Path.home()))) / "rockstargtavi-sosyal"))
+
+
+def klip_hesabi_durumu(ayar: dict | None = None, sosyal: dict | None = None, sakla: pathlib.Path | None = None) -> dict:
+    """Klip hesabı (ayrı kanal) bu bilgisayardan görünen durumu. GitHub sırlarını ölçmez (ağ yok): kurulum aracı bağlayınca
+    yerelde `yt_klip.bin` / `ig_klip.bin` yazar ve ayarlar.json klip.youtube / klip.instagram açılır; ikisi birlikte 'bağlı' sayılır.
+    ad: videodaki marka yazısı (ayar.marka_yazi) ya da yoksa 'klip kanalı'."""
+    ayar = ayar if ayar is not None else ayar_oku()
+    sosyal = sosyal if sosyal is not None else sosyal_ayar_oku()
+    sakla = sakla or sosyal_saklama_dizini()
+    klip = sosyal.get("klip") if isinstance(sosyal.get("klip"), dict) else {}
+    ad = yk.marka_yazisi(ayar.get("ayar")) or "klip kanalı"
+    yt = bool(klip.get("youtube", True)) and (sakla / f"yt_{ks.KLIP_HESABI}.bin").exists()
+    ig = bool(klip.get("instagram", False)) and (sakla / f"ig_{ks.KLIP_HESABI}.bin").exists()
+    return {"ad": ad, "youtube": yt, "instagram": ig}
+
+
+def klip_hesabi_kutusu(h: dict) -> str:
+    """Panelin üstündeki kanal satırı; bağlı değilse uyarı (klipler HİÇBİR hesaba gitmez)."""
+    durum = "bağlı" if h["youtube"] else "bağlı değil"
+    s = (f'<p class=klip-hesap data-bagli="{"evet" if h["youtube"] else "hayir"}">Klipler şu kanalda paylaşılır: '
+         f'<b>{esc(h["ad"])}</b> ({durum})</p>')
+    if not h["youtube"]:
+        s += ('<p class=uyari role=alert>Klip kanalı bağlı değil: onaylanan klipler şu an HİÇBİR hesaba gitmez '
+              '(CTRL+A GAME kanalına da gitmez). Bağlamak için <code>sosyal\\kurulum.bat</code> &rarr; "YouTube kanalı bağla (Shorts; klip kanalı için KLİP seç)" '
+              '&rarr; KLİP.</p>')
+    return s
+
+
 def ayar_oku() -> dict:
     try:
         return yk.ayar_yukle()
@@ -145,7 +185,7 @@ def tara(d: pathlib.Path | None = None, ayar: dict | None = None) -> list[dict]:
             oge["id"] = ks.klip_id(json_yol)
             oge["oncelik"] = oncelik(json_yol)
             kisa = yk.yayinci_kisa_ad(ayar, paket)
-            oge["metin"] = ks.klip_metni(paket, kisa, ek_yasak)
+            oge["metin"] = ks.klip_metni(paket, kisa, ek_yasak, ayar.get("ayar"))
             oge["kisa_ad"] = kisa
             duzenleme_uygula(oge)
             oge["yayinci"] = paket.get("yayinci") or ""
@@ -170,7 +210,7 @@ def tara(d: pathlib.Path | None = None, ayar: dict | None = None) -> list[dict]:
         else:
             oge["id"] = ks.derleme_id(json_yol.parent)
             oge["oncelik"] = 0
-            oge["metin"] = ks.derleme_metni(paket, ek_yasak)
+            oge["metin"] = ks.derleme_metni(paket, ek_yasak, ayar.get("ayar"))
             duzenleme_uygula(oge)
             oge["yayinci"] = "Yayın kolajı"
             oge["oyun"] = ""
@@ -342,15 +382,19 @@ def kesim_kutusu(durum: dict | None) -> str:
     return f'<p class=kesim data-durum="{esc(durum["durum"])}" role=status>{esc(durum["mesaj"])}</p>'
 
 
-def duzen_paneli(o: dict, kesim: dict | None, acik: bool, ayar_duzen: str) -> str:
+def duzen_paneli(o: dict, kesim: dict | None, acik: bool, ayar_duzen: str, hesap: dict | None = None) -> str:
     no = esc(o["no"])
+    hesap = hesap or klip_hesabi_durumu()
     klip = o["tur"] == "klip"
     m, pl = o["metin"], o["platformlar"]
     S = kd.SINIRLAR
     aktif = bool(kesim and kesim["durum"] in ("kuyrukta", "kesiliyor"))
     if klip:
-        plat = (f'<label class=anahtar><input type=checkbox name=p_instagram{" checked" if pl["instagram"] else ""}> Instagram Reel</label>'
-                f'<label class=anahtar><input type=checkbox name=p_youtube{" checked" if pl["youtube"] else ""}> YouTube Short</label>')
+        # Klip Instagram hesabı (IG_KLIP_*) yoksa seçenek kapalı: işaret durumu DEĞİŞMEZ (kaydetme platform seçimini bozup onayı düşürmesin)
+        ig_kapali = not hesap["instagram"]
+        ig_not = (' <span class=kucuk>(klip Instagram hesabı bağlı değil, Instagram\'a gitmez; bağlayınca açılır)</span>' if ig_kapali else "")
+        plat = (f'<label class=anahtar><input type=checkbox name=p_instagram{" checked" if pl["instagram"] else ""}{" disabled" if ig_kapali else ""}> Instagram Reel{ig_not}</label>'
+                f'<label class=anahtar><input type=checkbox name=p_youtube{" checked" if pl["youtube"] else ""}> YouTube Short ({esc(hesap["ad"])})</label>')
         sayac_ig = f'<span class=s-ig>Instagram açıklaması <b>0</b>/{S["ig_aciklama"]}</span>'
     else:
         plat = '<label class=anahtar><input type=checkbox name=p_youtube checked disabled> YouTube (derleme yalnız YouTube\'a gider)</label>'
@@ -409,7 +453,7 @@ def duzen_paneli(o: dict, kesim: dict | None, acik: bool, ayar_duzen: str) -> st
     return f'<div class=duzenle{"" if acik else " hidden"}>{metin}{video}</div>'
 
 
-def kart_uret(o: dict, manifest: dict, etk: dict | None = None) -> str:
+def kart_uret(o: dict, manifest: dict, etk: dict | None = None, hesap: dict | None = None) -> str:
     """Tek kartın HTML'i. `etk` verilirse (sayfa sunucusu) düğmeli + düzenlemeli; yoksa durağan (file://) kart."""
     etiket, sinif = durum_metni(o, manifest)
     m = o["metin"]
@@ -461,7 +505,7 @@ def kart_uret(o: dict, manifest: dict, etk: dict | None = None) -> str:
             pass
         onayli = sinif in ONAYLI_SINIFLAR
         acik = o["id"] in ((etk or {}).get("acik") or ())
-        panel = duzen_paneli(o, kesim, acik, str(((etk.get("ayar") or {}).get("ayar") or {}).get("duzen") or ""))
+        panel = duzen_paneli(o, kesim, acik, str(((etk.get("ayar") or {}).get("ayar") or {}).get("duzen") or ""), hesap)
         alt = (f'<div class=islem><button type=button class=onayla{" disabled" if aktif else ""}>Onayla</button>'
                '<button type=button class=geri>Onayı geri al</button>'
                f'<button type=button class=duzen-ac aria-expanded="{"true" if acik else "false"}">{"Düzenlemeyi kapat" if acik else "Düzenle"}</button></div>'
@@ -491,9 +535,11 @@ def kart_uret(o: dict, manifest: dict, etk: dict | None = None) -> str:
 </article>"""
 
 
-def html_uret(ogeler: list[dict], manifest: dict, zaman: str, etk: dict | None = None) -> str:
-    """`etk` verilirse (sayfa sunucusu) düğmeli canlı sayfa; yoksa durağan liste (file:// adresleri)."""
-    kart = lambda o: kart_uret(o, manifest, etk)  # noqa: E731
+def html_uret(ogeler: list[dict], manifest: dict, zaman: str, etk: dict | None = None, hesap: dict | None = None) -> str:
+    """`etk` verilirse (sayfa sunucusu) düğmeli canlı sayfa; yoksa durağan liste (file:// adresleri).
+    `hesap`: klip hesabı durumu (klip_hesabi_durumu); verilmezse yerelden ölçülür."""
+    hesap = hesap or klip_hesabi_durumu((etk or {}).get("ayar"))
+    kart = lambda o: kart_uret(o, manifest, etk, hesap)  # noqa: E731
     klipler = [o for o in ogeler if o["tur"] == "klip" and not o["yok_notu"]]
     derlemeler = [o for o in ogeler if o["tur"] == "derleme"]
     gizli = [o for o in ogeler if o["yok_notu"]]
@@ -538,6 +584,7 @@ def html_uret(ogeler: list[dict], manifest: dict, zaman: str, etk: dict | None =
 <title>Klip onay listesi</title>
 <style>{ui.CSS}</style>{betik}</head><body><main>
 <h1>Klip onay listesi</h1>
+{klip_hesabi_kutusu(hesap)}
 {ust}
 {''.join(govde)}
 </main></body></html>
@@ -1366,7 +1413,7 @@ def komut_yukle(args) -> int:
             continue
         adlar = ks.dosya_adlari(oge_id, o["tur"])
         if args.kuru:
-            print(f"[kuru] {oge_id} ({o['tur']})")
+            print(f"[kuru] {oge_id} ({o['tur']})  hedef hesap: {ks.KLIP_HESABI}")
             print(f"  {adlar['mp4_1080']}  <- {o['mp4']}")
             for a in ("mp4_720", "mp4_540"):
                 if a in adlar:
@@ -1387,6 +1434,7 @@ def komut_yukle(args) -> int:
             print(f"HATA {oge_id}: {e}")
             hata = 1
             continue
+        kayit[ks.HESAP_ALANI] = ks.KLIP_HESABI   # paylaşım hedefi AÇIKÇA yazılır: CTRL+A GAME hesaplarına değil, klip hesabına
         kayit["yayinda"] = {"zaman": ks.simdi_iso(), "yuklenen_ozet": kayit["onay"]["ozet"], "sure": round(sure, 2),
                             **{a: adlar[a] for a in adlar}}
         print(f"{oge_id}: yüklendi, yayında")

@@ -1557,7 +1557,8 @@ class AciklamaAyariVeImzaTesti(unittest.TestCase):
 
     def test_gorsel_ayarlar_analiz_karsilastirmasindan_ayrilir(self):
         self.assertEqual(set(yk.GORSEL_AYAR), {'klip_aciklama_yazi', 'aciklama_yasak_kelimeler', 'klip_aciklama_stil',
-                                               'duzen', 'kadraj_oran', *yk.klip_kamera.VARSAYILAN})
+                                               'duzen', 'kadraj_oran', 'marka_yazi', 'klip_paylasim_imza', 'klip_ek_etiketler',
+                                               *yk.klip_kamera.VARSAYILAN})
         ayar = {'yontem': 'sinyal', 'klip_aciklama_yazi': False, 'aciklama_yasak_kelimeler': ['x']}
         self.assertEqual(yk.gorselsiz(ayar), {'yontem': 'sinyal'})
         self.assertIsNone(yk.gorselsiz(None))

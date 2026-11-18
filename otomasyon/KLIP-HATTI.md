@@ -567,7 +567,19 @@ Kick/konuşma/YouTube üç dosyada toplam **203 test geçti** (eski ölçüm: 17
 
 ## Paylaşım (onay kapılı; 2026-11-18)
 
-Karar (Cio): klipler ayrı kanalda değil, mevcut CTRL+A GAME hesaplarında (Instagram Reels + YouTube Shorts) paylaşılır. **Onaysız hiçbir klip paylaşılmaz.**
+Karar (Cio, 2026-11-18, önceki kararın yerine geçer): yayıncı klipleri CTRL+A GAME hesaplarında DEĞİL, **ayrı bir YouTube kanalında (Komixsi, yalnız Shorts)** paylaşılır. **Onaysız hiçbir klip paylaşılmaz.**
+
+**Klip hesabı (ayrı kanal).**
+- Sahte hesap adı `klip`; GitHub sırları `YT_KLIP_CLIENT_ID`, `YT_KLIP_CLIENT_SECRET`, `YT_KLIP_REFRESH_TOKEN` (Instagram açılırsa ayrıca `IG_KLIP_USER_ID`, `IG_KLIP_TOKEN`). Klip ve derleme YALNIZ bu sırlarla paylaşılır.
+- **Sır yoksa klip hiçbir hesaba gitmez**: CTRL+A GAME (TR/EN/FR/ES) kanalına da, Instagram'a da düşmez (testle kanıtlı: `KlipPaylasim.test_klip_sirri_yoksa_hicbir_hesaba_gitmez`). Çalışma çıktısında `youtube/klip` "atlanan" listesinde görünür.
+- Instagram klip paylaşımı varsayılan KAPALI (`sosyal/ayarlar.json` → `klip.instagram: false`). Açmak için hem `klip.instagram: true` hem `IG_KLIP_*` sırları gerekir.
+- Günlük sınır (platform başına 2, derleme 1) klip hesabında ayrı sayılır; haber paylaşımının günlük hakkı ve "haber varken haber" sırası klip hesabını kısıtlamaz (`haber_varken_haber` ayarı kaldırıldı). Haber paylaşımı eskisi gibi CTRL+A GAME hesaplarındadır.
+- Eskiden CTRL+A GAME hesabına gitmiş kayıt (`id|tr|…`) varsa o klip klip hesabına yeniden gitmez.
+- `yukle` manifestte hedefi açıkça yazar (`yayinda.hesap: klip`); `yukle --kuru` "hedef hesap: klip" gösterir. Manifest başka hesap yazarsa klip klip hesabına gönderilmez.
+- Panel: sayfanın üstünde "Klipler şu kanalda paylaşılır: Komixsi (bağlı / bağlı değil)"; bağlı değilse uyarı. "Bağlı" yerel ölçüttür (ayarlar.json `klip.youtube` açık + bu bilgisayarda `yt_klip.bin`); GitHub sırlarını ölçmez. Klip Instagram hesabı yoksa Instagram işareti kapalı ve açıklamalı.
+- **Kanal bağlama (Cio):** `sosyal\kurulum.bat` → menüde "YouTube kanalı bağla (Shorts; klip kanalı için KLİP seç)" → hesap olarak KLİP. Bilgisayarda TR için kayıtlı Google Cloud istemcisi varsa aynısı kullanılır (Enter = evet). Tarayıcıda izin verirken **Komixsi kanalının Google hesabını** seç (CTRL+A GAME hesabını değil); TR ile aynı izin gelirse araç "OLMADI" der ve hiçbir şey kaydetmez. Kısayol: `py tools\sosyal_kurulum.py --klip-kanali-bagla` (GitHub CLI girişi gerekir; `gh auth status`). Araç `YT_KLIP_*` sırlarını GitHub'a yazar. Ayrıntı: `sosyal/KURULUM.md` → "Klip kanalı bağlama".
+
+**Marka (2026-11-18, klip kanalı Komixsi).** `otomasyon/klip-yayincilar.json` → `ayar`: `marka_yazi` (videonun altında yanan satır; boş = satır yok), `klip_paylasim_imza` (paylaşım açıklamasının son satırı), `klip_ek_etiketler` (açıklama etiketleri). Üçü de analiz önbelleğini bozmaz; ama `marka_yazi` videoya yandığı için değişince klipler `paket_guncel` ile "güncel değil" olur ve yeniden kesilmeli (onaylar düşer). Pakete özel (kalıcı, `duzenleme.marka_yazi`): `yeniden-uret --marka "Yazı"` (en çok 40 karakter; imza ve `#Yazı` etiketi markadan türer) ya da `--markasiz` (satır, imza ve ek etiket yok); ikisi birlikte verilemez. Videodaki satırın doğrulaması: kopya paketle yeniden kesilip kare incelendi (alt blokta `Komixsi`, eski `CTRL+A GAME · ctrl-agame.com` yok). **Derleme filigranı (`otomasyon/derleme.json` → `filigran_yazi`) AYRI bir ayardır ve bu değişiklikte DEĞİŞMEDİ** (varsayılan hâlâ `CTRL+A GAME`); derlemeler de Komixsi'de yayınlanacaksa ayrıca güncellenmelidir.
 
 Akış:
 
@@ -586,9 +598,9 @@ Akış:
 4. **Onayla (bilgisayar):** `py tools/klip_yayin.py onayla 3 7` (derleme için `--kucuk-resim 2`). Onay `data/klipler.json`a, paket+mp4 özetine bağlı yazılır; dosya sonradan değişirse onay düşer. Geri almak: `geri-cek 3`.
 5. **Yükle (bilgisayar):** `py tools/klip_yayin.py yukle --kuru` (ne yükleneceğini gösterir), sonra `yukle`. 720/540/kapak ffmpeg ile üretilir, medya sunucusuna (`/var/www/medya/v/`, varsayılan hedef `oracle:` takma adı; `--hedef` ya da `KLIP_YUKLEME_HEDEFI` ile değişir) kopyalanır, manifestte "yayında" yazılır.
 6. **Commit + push (bilgisayar, Cio onayıyla):** `data/klipler.json` depoya gider. Mp4'ler depoya girmez.
-7. **Paylaş (GitHub Actions, `sosyal.yml`):** `sosyal_yayinla.py` yalnız `onay` + `yayinda` geçerli klipleri aday sayar. Reels + Shorts, yalnız Türkçe; derleme yalnız YouTube (normal video, `#Shorts` yok, bölüm zaman damgalı açıklama). Paylaşım bağlantıları `data/klipler.json`a ve kayıt `data/gonderilenler.json`a yazılır.
+7. **Paylaş (GitHub Actions, `sosyal.yml`):** `sosyal_yayinla.py` yalnız `onay` + `yayinda` geçerli klipleri aday sayar ve yalnız klip hesabına (`YT_KLIP_*`) gönderir. Shorts (Instagram Reels yalnız `klip.instagram` + `IG_KLIP_*` ile), Türkçe; derleme yalnız YouTube (normal video, `#Shorts` yok, bölüm zaman damgalı açıklama). Paylaşım bağlantıları `data/klipler.json`a ve kayıt `data/gonderilenler.json`a yazılır.
 
-Sınırlar (`sosyal/ayarlar.json` → `klip`): platform başına günde 2 klip, derleme günde 1; `haber_varken_haber: true` iken paylaşılabilir haber adayı varsa sıra haberde; hesap başı genel günlük hak ayrıca geçerli; aynı klip aynı platforma iki kez gitmez; art arda iki klip gitmez (araya başka tür girer). Klipler haber sitesinde görünmez (ayrı manifest). YouTube: `containsSyntheticMedia: false`, kategori 20 (24 seçilebilir).
+Sınırlar (`sosyal/ayarlar.json` → `klip`): platform başına günde 2 klip, derleme günde 1 (klip hesabında ayrı sayılır; haber hakkı ve haber sırası klibi etkilemez); aynı klip aynı platforma iki kez gitmez; art arda iki klip gitmez (araya başka tür girer). Klipler haber sitesinde görünmez (ayrı manifest). YouTube: `containsSyntheticMedia: false`, kategori 20 (24 seçilebilir).
 
 Bilinen sınırlar: Actions mp4'ü göremez, yalnız manifesti ve sunucudaki dosyaları; onay özeti bilgisayarda doğrulanır. Derleme üçüncü kişi videoları içerir (yeniden kullanım/telif riski Cio'nundur). Küfür denetimi sözlük tabanlıdır; dökümü olmayan klibi Cio dinler. Küçük resim yükleme kanal doğrulaması ister (reddedilirse video küçük resimsiz yayında kalır).
 

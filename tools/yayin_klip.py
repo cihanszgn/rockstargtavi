@@ -120,7 +120,15 @@ AYAR_VARSAYILAN = {
 # yoksa her ayar değişikliği (pahalı) sohbet/yargı analizini geçersiz kılardı.
 # Kesim aşaması ayarları (düzen, kadraj oranı, kamera eşikleri) da burada: yalnız KESİMİ etkiler, analiz önbelleğini bozmaz.
 GORSEL_AYAR = ('klip_aciklama_yazi', 'aciklama_yasak_kelimeler', 'klip_aciklama_stil', 'duzen', 'kadraj_oran',
-               *klip_kamera.VARSAYILAN)
+               'marka_yazi', 'klip_paylasim_imza', 'klip_ek_etiketler', *klip_kamera.VARSAYILAN)
+# Marka (klip hesabı ayrı kanal): videonun altındaki marka satırı, paylaşım açıklamasındaki imza ve ek etiketler AYARDAN gelir
+# (otomasyon/klip-yayincilar.json -> ayar.marka_yazi / klip_paylasim_imza / klip_ek_etiketler). Ayar YOKSA eski görünüm.
+#   marka_yazi: videoya yazılan marka satırı; boş metin = marka satırı yok.  Pakete özel: `yeniden-uret --marka "..." | --markasiz`.
+#   klip_paylasim_imza: paket açıklamasındaki imza satırı (boş = satır yok).  klip_ek_etiketler: açıklama sonu etiketleri (boş = yok).
+MARKA_YAZI_VARSAYILAN = 'CTRL+A GAME  ·  ctrl-agame.com'
+PAYLASIM_IMZA_VARSAYILAN = 'CTRL+A GAME · ctrl-agame.com'
+EK_ETIKET_VARSAYILAN = ('#CTRLAGAME',)
+MARKA_AZAMI = 40
 ACIKLAMA_STILLERI = ('A', 'B', 'C')
 ACIKLAMA_STIL_VARSAYILAN = 'A'
 ACIKLAMA_TASARIM_SURUMU = 2   # düzen imzasına girer: tasarım değişince açıklamalı klipler 'güncel değil' olur
@@ -1194,7 +1202,29 @@ def _an_tarifi(klip: dict) -> str:
     return 'sohbetin en yoğunlaştığı an'
 
 
-def aciklama_uret(vod: dict, klip: dict) -> str:
+def marka_yazisi(ayar: dict | None = None) -> str:
+    """Videoya yazılan marka satırı. Ayarda anahtar varsa (boş dahil) o; yoksa eski sabit."""
+    m = (ayar or {}).get('marka_yazi')
+    return MARKA_YAZI_VARSAYILAN if m is None else re.sub(r'\s+', ' ', str(m)).strip()
+
+
+def marka_ayari(marka: str) -> dict:
+    """Pakete özel marka: video yazısı + paylaşım imzası aynı metin, ek etiket markadan türer (boş marka = hiçbiri)."""
+    kelime = re.sub(r'[^\w]', '', marka or '')
+    return {'marka_yazi': marka, 'klip_paylasim_imza': marka, 'klip_ek_etiketler': ['#' + kelime] if kelime else []}
+
+
+def paylasim_imzasi(ayar: dict | None = None) -> tuple[str, list[str]]:
+    """(imza satırı, ek etiketler). Boş imza = satır yok; boş liste = ek etiket yok."""
+    a = ayar or {}
+    imza = a.get('klip_paylasim_imza')
+    imza = PAYLASIM_IMZA_VARSAYILAN if imza is None else str(imza).strip()
+    ek = a.get('klip_ek_etiketler')
+    ek = list(EK_ETIKET_VARSAYILAN) if ek is None else [str(e).strip() for e in ek if str(e).strip()]
+    return imza, ek
+
+
+def aciklama_uret(vod: dict, klip: dict, ayar: dict | None = None) -> str:
     bas = klip['klip_baslangic_sn']
     konu = ''
     if klip.get('kelimeler') or klip.get('emojiler'):
@@ -1202,13 +1232,14 @@ def aciklama_uret(vod: dict, klip: dict) -> str:
     youtube = vod['platform'] == 'youtube'
     platform = 'YouTube' if youtube else vod['platform'].capitalize()
     kaynak = 'videosundan' if youtube else 'canlı yayınından'
+    imza, ek = paylasim_imzasi(ayar)
     return (
         f"{vod['yayinci']} {kaynak} ({vod['tarih']}, {platform}) {_an_tarifi(klip)}.{konu}\n\n"
         f"Yayıncı: {vod['yayinci']} — {vod['kanal_url']}\n"
         f"Kaynak yayın: {vod['vod_url']} (yayının {zaman_metni(bas)} noktası)\n"
         "Görüntü ve ses yayıncıya aittir; tam yayın için kanalına gidin.\n\n"
-        "CTRL+A GAME · ctrl-agame.com\n"
-        f"#Shorts #{platform} #{etiket(vod['yayinci'])} #CTRLAGAME"
+        + (imza + "\n" if imza else "")
+        + ' '.join([f"#Shorts #{platform} #{etiket(vod['yayinci'])}", *ek]).strip()
     )
 
 
@@ -1252,7 +1283,7 @@ def paket_json(vod: dict, klip: dict, mp4: pathlib.Path, dogrulama: dict, ayar: 
         'one_cikan_emojiler': klip.get('emojiler', []),
         'ornek_mesajlar': klip.get('ornek_mesajlar', []),
         'baslik': baslik_uret(vod, klip),
-        'aciklama': aciklama_uret(vod, klip),
+        'aciklama': aciklama_uret(vod, klip, ayar),
         'dosya': mp4.name,
         'video': dogrulama,
         'kisa_aciklama': klip_aciklamasi(klip, ayar),
@@ -1621,13 +1652,13 @@ def _kamera_filtresi(font: str, metinler: dict[str, str], duzen: dict, ayar: dic
     return _yazilari_ekle(satirlar, font, metinler, duzen, aciklama, yz)
 
 
-def klip_metinleri(vod: dict, aciklama: dict | None = None) -> dict[str, str]:
+def klip_metinleri(vod: dict, aciklama: dict | None = None, ayar: dict | None = None) -> dict[str, str]:
     m = {
         'ad': vod['yayinci'],
         'oyun': vod.get('oyun') or '',
         'kaynak': (f"Kaynak: kick.com/{vod['kanal']}" if vod['platform'] == 'kick' else
                    f"Kaynak: youtube.com/@{vod['kanal']}" if vod['platform'] == 'youtube' else f"Kaynak: {vod['kanal_url']}"),
-        'marka': DUZEN['marka'],
+        'marka': marka_yazisi(ayar),
     }
     for i, satir in enumerate((aciklama or {}).get('satirlar', [])):
         m[f'aciklama{i + 1}'] = satir
@@ -1773,7 +1804,7 @@ def klip_kes(vod: dict, klip: dict, hedef: pathlib.Path, ff: str, font: str, aya
         vod = klip_zenginlestir(vod, klip, ayar, ff, kaynak, bas-origin if yerel else bas, sure, yerel, tmp_yol)
         aciklama_metni = klip_aciklamasi(klip, ayar)
         aciklama = aciklama_duzeni(aciklama_metni, aciklama_fontu(), ayar_k, oyun_var=bool(vod.get('oyun')))
-        metinler = klip_metinleri(vod, aciklama)
+        metinler = klip_metinleri(vod, aciklama, ayar)
         for ad, m in metinler.items():
             (tmp_yol / f't_{ad}.txt').write_text(m or ' ', encoding='utf-8')
         katman = None
@@ -1966,7 +1997,9 @@ def duzen_imzasi(ayar: dict, aciklama: str | None = None) -> dict:
             **({'kamera_surumu': klip_kamera.KAMERA_SURUMU} if yz['mod'] == 'kamera' else {}),
             **({'konusma_saat_surumu': 3} if ayar.get('konusma') else {}),
             **({'aciklama': aciklama, 'aciklama_stil': aciklama_stili(ayar),
-                'aciklama_tasarim': ACIKLAMA_TASARIM_SURUMU} if aciklama else {})}
+                'aciklama_tasarim': ACIKLAMA_TASARIM_SURUMU} if aciklama else {}),
+            # marka yazısı videoya yanar: eski sabitten başkaysa imzaya girer (marka değişince klip 'güncel değil' olur)
+            **({'marka': marka_yazisi(ayar)} if marka_yazisi(ayar) != marka_yazisi({}) else {})}
 
 
 def paket_guncel(paket: pathlib.Path, klip: dict, ayar: dict) -> bool:
@@ -2510,7 +2543,7 @@ def paketten_uret(paket_yolu: pathlib.Path, ayar: dict, dizin: pathlib.Path, yed
     YENİDEN keser. Eski mp4/json önce yedeğe kopyalanır; paketin diğer alanları korunur.
 
     secenek (hepsi isteğe bağlı; verilen değer pakete KALICI yazılır -> `duzenleme`, sonraki yeniden kesimlerde korunur):
-      oyun (ad) | oyunsuz (bool), aciklama_metni (45 kr, yasak kelimesiz) | aciklamasiz (bool), yayinci_adi,
+      marka (yazı) | markasiz (bool), oyun (ad) | oyunsuz (bool), aciklama_metni (45 kr, yasak kelimesiz) | aciklamasiz (bool), yayinci_adi,
       bas_kaydir / son_kaydir (sn, eksi = daha erken; süre 5–59 sn), duzen (kamera|kadraj|serit), kamera_kutu (x,y,w,h oransal).
     Oyun adı kategori+kare doğrulamasından (klip_oyun) ya da --oyun/--oyunsuz'dan gelir; dökümsüz klip için kendi sesinden
     metin üretilir (klip_oyun.ses_yargisi). Önbellekteki karar/metin aynı aralık için tekrar sorulmaz."""
@@ -2521,6 +2554,8 @@ def paketten_uret(paket_yolu: pathlib.Path, ayar: dict, dizin: pathlib.Path, yed
         raise KlipHatasi('--oyun ile --oyunsuz birlikte verilemez')
     if sec.get('aciklama_metni') is not None and sec.get('aciklamasiz'):
         raise KlipHatasi('--aciklama-metni ile --aciklamasiz birlikte verilemez')
+    if sec.get('marka') is not None and sec.get('markasiz'):
+        raise KlipHatasi('--marka ile --markasiz birlikte verilemez')
     d = json.loads(paket_yolu.read_text(encoding='utf-8'))
     dz = dict(d.get('duzenleme') or {})
     cfg_ac = {**AYAR_VARSAYILAN, **(ayar.get('ayar') or {})}
@@ -2538,6 +2573,13 @@ def paketten_uret(paket_yolu: pathlib.Path, ayar: dict, dizin: pathlib.Path, yed
         dz['aciklamasiz'] = False
     if sec.get('aciklamasiz'):
         dz['aciklamasiz'] = True
+    if sec.get('marka') is not None:
+        m = re.sub(r'\s+', ' ', str(sec['marka'])).strip()
+        if not m or len(m) > MARKA_AZAMI:
+            raise KlipHatasi(f'marka yazısı boş olamaz (markasız için --markasiz) ve en çok {MARKA_AZAMI} karakter olabilir')
+        dz['marka_yazi'] = m
+    if sec.get('markasiz'):
+        dz['marka_yazi'] = ''
     if sec.get('yayinci_adi') is not None:
         ad = re.sub(r'\s+', ' ', str(sec['yayinci_adi'])).strip()
         if not ad or len(ad) > 40:
@@ -2572,7 +2614,8 @@ def paketten_uret(paket_yolu: pathlib.Path, ayar: dict, dizin: pathlib.Path, yed
                       if os.name == 'nt' else dizin / 'yedek')
     kopya = yedekle(paket_yolu, yedek)
     vayar = {**vayar, 'konusma': True, **({'klip_aciklama_yazi': False} if dz.get('aciklamasiz') else {}),
-             **({'duzen': dz['duzen']} if dz.get('duzen') else {})}
+             **({'duzen': dz['duzen']} if dz.get('duzen') else {}),
+             **(marka_ayari(dz['marka_yazi']) if 'marka_yazi' in dz else {})}
     vod_ad = d.get('yayinci')
     if dz.get('yayinci_adi'):
         vod = {**vod, 'yayinci': dz['yayinci_adi'], 'kisa_ad': dz['yayinci_adi']}
@@ -2601,8 +2644,8 @@ def paketten_uret(paket_yolu: pathlib.Path, ayar: dict, dizin: pathlib.Path, yed
         d['baslik'] = klip['konusma_baslik']
     else:
         d['baslik'] = baslik_oyun_duzelt(d.get('baslik'), eski_oyun, yeni_oyun)
-    if metin_yeni or dz.get('yayinci_adi'):
-        d['aciklama'] = aciklama_uret({**vod, 'oyun': yeni_oyun}, {**klip, 'konusma_baslik': d['baslik']})
+    if metin_yeni or dz.get('yayinci_adi') or 'marka_yazi' in dz:
+        d['aciklama'] = aciklama_uret({**vod, 'oyun': yeni_oyun}, {**klip, 'konusma_baslik': d['baslik']}, vayar)
     if kaydirildi:
         d['klip_baslangic_sn'], d['klip_bitis_sn'] = bas, bit
         d['vod_zaman_damgali_url'], d['vod_zaman_damgali_url_dogrulandi'] = zaman_damgali_baglanti(vod, bas)
@@ -2724,6 +2767,8 @@ def main(argv=None) -> int:
     yu.add_argument('--oyun', help='videoya/pakete yazılacak oyun adı (kalıcı; doğrulamayı atlar)')
     yu.add_argument('--oyunsuz', action='store_true', help='oyun adı yazma (kalıcı)')
     yu.add_argument('--aciklama-metni', dest='aciklama_metni', help='klip açıklaması (en çok 45 karakter, yasak kelimesiz; kalıcı)')
+    yu.add_argument('--marka', help='videonun altındaki marka yazısı + paylaşım imzası (en çok 40 karakter; kalıcı)')
+    yu.add_argument('--markasiz', action='store_true', help='marka satırı ve imza koyma (kalıcı)')
     yu.add_argument('--yayinci-adi', dest='yayinci_adi', help='videoda yazan yayıncı adı (kalıcı)')
     yu.add_argument('--bas-kaydir', dest='bas_kaydir', type=_sn_tipi, help='başlangıcı kaydır, sn (eksi = daha erken; kalıcı)')
     yu.add_argument('--son-kaydir', dest='son_kaydir', type=_sn_tipi, help='bitişi kaydır, sn (eksi = daha erken; kalıcı)')
@@ -2764,10 +2809,14 @@ def main(argv=None) -> int:
             except (klip_konusma.ModelKotasi, ValueError, RuntimeError) as e:
                 raise KlipHatasi(f'açıklama doldurma: {e}') from e
         elif a.komut == 'yeniden-uret':
-            sec = {k: getattr(a, k) for k in ('oyun', 'aciklama_metni', 'yayinci_adi', 'bas_kaydir', 'son_kaydir', 'duzen')
+            sec = {k: getattr(a, k) for k in ('oyun', 'aciklama_metni', 'yayinci_adi', 'bas_kaydir', 'son_kaydir', 'duzen', 'marka')
                    if getattr(a, k) is not None}
             if a.oyunsuz:
                 sec['oyunsuz'] = True
+            if a.markasiz:
+                sec['markasiz'] = True
+            if a.marka is not None and a.markasiz:
+                raise KlipHatasi('--marka ile --markasiz birlikte verilemez')
             if a.kamera_kutu is not None:
                 sec['kamera_kutu'] = kamera_kutusu_coz(a.kamera_kutu)
             if 'oyun' in sec and a.oyunsuz:

@@ -29,12 +29,14 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 
 KOK = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(KOK / "tools"))
-from sosyal_yayinla import GEREKEN, ONEK_SIR, PaylasimHatasi, istek, oauth1_baslik  # noqa: E402
+from sosyal_yayinla import GEREKEN, KLIP_HESABI, ONEK_SIR, PaylasimHatasi, istek, oauth1_baslik  # noqa: E402
 
 REPO = "cihanszgn/rockstargtavi"
 AYAR = KOK / "sosyal" / "ayarlar.json"
 SAKLA = pathlib.Path(os.environ.get("LOCALAPPDATA", str(pathlib.Path.home()))) / "rockstargtavi-sosyal"
 DIL_AD = {"tr": "Türkçe", "en": "İngilizce", "fr": "Fransızca", "es": "İspanyolca"}
+# Hesap hedefleri: diller + yayıncı klipleri için AYRI hesap ("klip": YT_KLIP_* / IG_KLIP_* sırları). Klip hesabı bir dil değildir.
+HEDEF_AD = {**DIL_AD, KLIP_HESABI: "KLİP kanalı (yayıncı klipleri, ayrı hesap)"}
 
 SORU = {
     "x": [("API_KEY", "API Key (Consumer Key)", True), ("API_SECRET", "API Key Secret", True),
@@ -178,16 +180,41 @@ def yt_dene(s: dict) -> str:
     return ogeler[0]["snippet"]["title"]
 
 
-def youtube_ekle() -> None:
-    dil = secim("Hangi dilin YouTube kanalı?", list(DIL_AD), lambda d: f"{d.upper()} — {DIL_AD[d]}")
+def yt_istemci_sec(dil: str) -> dict | None:
+    """Client ID/secret kaynağı. Klip hesabı için bu bilgisayarda saklı bir Google Cloud istemcisi (klip ya da TR kanalından)
+    varsa onu yeniden kullanmayı önerir; Google Cloud'dan yeniden almak gerekmez. Dönüş {CLIENT_ID, CLIENT_SECRET} | None (iptal)."""
+    if dil == KLIP_HESABI:
+        for kaynak in (KLIP_HESABI, "tr"):
+            try:
+                kayitli = yt_oku(kaynak)
+            except OSError:
+                kayitli = None
+            if kayitli and all(kayitli.get(a) for a in ("CLIENT_ID", "CLIENT_SECRET")):
+                yanit = input(f"\nBu bilgisayarda kayıtlı Google Cloud istemcisi var ({kaynak.upper()} kanalından). "
+                              "Klip kanalı için de aynısı kullanılsın mı? (e/h, Enter = evet): ").strip().lower()
+                if yanit in ("", "e", "evet"):
+                    return {a: kayitli[a] for a in ("CLIENT_ID", "CLIENT_SECRET")}
+                break
     print("\nGoogle Cloud'dan aldığın Client ID ve Client secret'ı yapıştır (ekranda görünmez, bu normal).")
     s = {}
     for anahtar, soru, _gizli in SORU["youtube"]:
         deger = getpass.getpass(f"  {soru}: ").strip()
         if not deger:
             print("Boş bırakıldı, iptal.")
-            return
+            return None
         s[anahtar] = deger
+    return s
+
+
+def youtube_ekle(dil: str | None = None) -> None:
+    dil = dil or secim("Hangi hesabın YouTube kanalı?", list(HEDEF_AD), lambda d: f"{d.upper()} — {HEDEF_AD[d]}")
+    if dil == KLIP_HESABI:
+        print("\nKLİP kanalı: yayıncı klipleri yalnız bu kanala (Shorts) yüklenir, CTRL+A GAME kanalına değil.")
+        print("Tarayıcıda izin verirken KLİP kanalının bağlı olduğu Google hesabını seç (CTRL+A GAME hesabını değil).")
+    s = yt_istemci_sec(dil)
+    if s is None:
+        return
+    s = dict(s)
     try:
         s["REFRESH_TOKEN"] = yt_izin_al(s["CLIENT_ID"], s["CLIENT_SECRET"])
         print("İzin alındı, kanal deneniyor...")
@@ -196,11 +223,23 @@ def youtube_ekle() -> None:
         print(f"\nOLMADI: {h}\nBu ekranın görüntüsünü Claude'a at (şifreler görünmez).")
         return
     print(f'Doğru: kanal "{ad}"')
+    if dil == KLIP_HESABI:
+        try:
+            tr = yt_oku("tr")
+        except OSError:
+            tr = None
+        if tr and tr.get("REFRESH_TOKEN") == s["REFRESH_TOKEN"]:
+            print("\nOLMADI: izin CTRL+A GAME (TR) kanalının hesabıyla verildi; klip kanalı ayrı olmalı. Hiçbir şey kaydedilmedi. "
+                  "Menüyü yeniden açıp tarayıcıda KLİP kanalının Google hesabını seç.")
+            return
     for a in GEREKEN["youtube"]:
         sir_yaz(f"YT_{dil.upper()}_{a}", s[a])
     yt_sakla(dil, s)
     ayar = json.loads(AYAR.read_text(encoding="utf-8"))
-    ayar["hesaplar"][dil]["youtube"] = True
+    if dil == KLIP_HESABI:
+        ayar.setdefault("klip", {})["youtube"] = True
+    else:
+        ayar["hesaplar"][dil]["youtube"] = True
     ayar.setdefault("youtube", {}).setdefault("gizlilik", "private")
     AYAR.write_text(json.dumps(ayar, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f'\nTAMAM: YouTube / {dil.upper()} ("{ad}") kuruldu. Videolar önce ÖZEL (private) yüklenir; '
@@ -228,8 +267,9 @@ def azure_ekle() -> None:
 
 
 def hesap_ekle() -> None:
-    dil = secim("Hangi dilin hesabı?", list(DIL_AD), lambda d: f"{d.upper()} — {DIL_AD[d]}")
-    platform = secim("Hangi platform?", ["x", "reddit", "instagram"], lambda p: {"x": "X (Twitter)", "reddit": "Reddit", "instagram": "Instagram"}[p])
+    dil = secim("Hangi dilin hesabı?", list(HEDEF_AD), lambda d: f"{d.upper()} — {HEDEF_AD[d]}")
+    platform = "instagram" if dil == KLIP_HESABI else secim(
+        "Hangi platform?", ["x", "reddit", "instagram"], lambda p: {"x": "X (Twitter)", "reddit": "Reddit", "instagram": "Instagram"}[p])
     print("\nBilgileri yapıştır (sağ tık ya da Ctrl+V). Gizli alanlar ekranda görünmez, bu normal.")
     s = {}
     for anahtar, soru, gizli in SORU[platform]:
@@ -250,7 +290,11 @@ def hesap_ekle() -> None:
     if platform == "instagram":
         ig_sakla(dil, s["TOKEN"])
     ayar = json.loads(AYAR.read_text(encoding="utf-8"))
-    if not ayar["hesaplar"][dil].get(platform):
+    if dil == KLIP_HESABI:
+        ayar.setdefault("klip", {})["instagram"] = True
+        AYAR.write_text(json.dumps(ayar, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        print("Not: ayarlar.json'da klip Instagram'ı açıldı; Claude'a 'sosyal ayarı pushla' de.")
+    elif not ayar["hesaplar"][dil].get(platform):
         ayar["hesaplar"][dil][platform] = True
         AYAR.write_text(json.dumps(ayar, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         print("Not: ayarlar.json'da bu hesap açıldı; Claude'a 'sosyal ayarı pushla' de.")
@@ -274,6 +318,11 @@ def yt_yeniden_izin(dil: str = "tr", kanal: str | None = None) -> int:
     if kanal and ad != kanal:
         print(f'OLMADI: izin "{ad}" kanalının hesabıyla verildi, beklenen "{kanal}". Hiçbir şey kaydedilmedi.')
         return 1
+    if dil == KLIP_HESABI:
+        tr = yt_oku("tr")
+        if tr and tr.get("REFRESH_TOKEN") == s["REFRESH_TOKEN"]:
+            print("OLMADI: izin CTRL+A GAME (TR) kanalının hesabıyla verildi; klip kanalı ayrı olmalı. Hiçbir şey kaydedilmedi.")
+            return 1
     sir_yaz(f"YT_{dil.upper()}_REFRESH_TOKEN", s["REFRESH_TOKEN"])
     yt_sakla(dil, s)
     print(f'TAMAM: "{ad}" kanalı için izin yenilendi.')
@@ -282,7 +331,7 @@ def yt_yeniden_izin(dil: str = "tr", kanal: str | None = None) -> int:
 
 def ig_yenile(sessiz: bool = False) -> int:
     hata = 0
-    for dil in DIL_AD:
+    for dil in HEDEF_AD:
         tok = ig_oku(dil)
         if not tok:
             continue
@@ -317,7 +366,12 @@ def durum() -> None:
                 isaret = "✓" if all(f"{ONEK_SIR[p]}_{dil.upper()}_{a}" in var for a in GEREKEN[p]) else "·"
             parca.append(f"{p} {isaret}")
         print(f"  {dil.upper()}: " + "   ".join(parca))
-    print("  Azure Speech: " + ("✓ kurulu" if {"AZURE_SPEECH_KEY", "AZURE_SPEECH_REGION"} <= var else "· eksik"))
+    klip_yt = all(f"YT_KLIP_{a}" in var for a in GEREKEN["youtube"])
+    klip_ig = all(f"IG_KLIP_{a}" in var for a in GEREKEN["instagram"])
+    klip_ig_acik = bool((ayar.get("klip") or {}).get("instagram"))
+    print("  KLİP kanalı: youtube " + ("✓" if klip_yt else "· bağlı değil (klipler hiçbir yere gitmez)")
+          + "   instagram " + ("✓" if klip_ig and klip_ig_acik else ("· ayarda kapalı" if klip_ig else "- yok")))
+    print("  Azure Speech: " +("✓ kurulu" if {"AZURE_SPEECH_KEY", "AZURE_SPEECH_REGION"} <= var else "· eksik"))
 
 
 def deneme() -> None:
@@ -340,14 +394,25 @@ def main() -> int:
         return ig_yenile(sessiz="--sessiz" in sys.argv)
     if "--yt-yeniden-izin" in sys.argv:
         i = sys.argv.index("--kanal") if "--kanal" in sys.argv else -1
-        return yt_yeniden_izin(kanal=sys.argv[i + 1] if 0 <= i < len(sys.argv) - 1 else None)
+        j = sys.argv.index("--dil") if "--dil" in sys.argv else -1
+        dil = sys.argv[j + 1] if 0 <= j < len(sys.argv) - 1 else "tr"
+        if dil not in HEDEF_AD:
+            print(f"Bilinmeyen hesap: {dil} (tr, en, fr, es ya da klip)")
+            return 1
+        return yt_yeniden_izin(dil=dil, kanal=sys.argv[i + 1] if 0 <= i < len(sys.argv) - 1 else None)
+    if "--klip-kanali-bagla" in sys.argv:
+        if gh("auth", "status").returncode != 0:
+            print("GitHub girişi yok. Önce PowerShell'de:  gh auth login")
+            return 1
+        youtube_ekle(KLIP_HESABI)
+        return 0
     if gh("auth", "status").returncode != 0:
         print("GitHub girişi yok. Önce PowerShell'de:  gh auth login")
         return 1
     while True:
         is_ = secim("Ne yapalım?", ["ekle", "durum", "deneme", "ig", "youtube", "azure", "cik"], lambda k: {
             "ekle": "Hesap ekle (X / Reddit / Instagram)", "durum": "Hangi hesaplar kurulu?",
-            "deneme": "Deneme çalıştırması (gönderi atmadan)", "ig": "Instagram anahtarını şimdi yenile", "youtube": "YouTube kanalı bağla (Shorts)",
+            "deneme": "Deneme çalıştırması (gönderi atmadan)", "ig": "Instagram anahtarını şimdi yenile", "youtube": "YouTube kanalı bağla (Shorts; klip kanalı için KLİP seç)",
             "azure": "Azure Speech anahtarı ekle (video sesi)", "cik": "Çık"}[k])
         if is_ == "ekle":
             hesap_ekle()

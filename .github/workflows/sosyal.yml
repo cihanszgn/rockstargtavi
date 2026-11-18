@@ -173,6 +173,12 @@ jobs:
           YT_ZH_CLIENT_ID: ${{ secrets.YT_ZH_CLIENT_ID }}
           YT_ZH_CLIENT_SECRET: ${{ secrets.YT_ZH_CLIENT_SECRET }}
           YT_ZH_REFRESH_TOKEN: ${{ secrets.YT_ZH_REFRESH_TOKEN }}
+          # Yayıncı klipleri AYRI hesaba gider; bu sırlar boşsa klip hiçbir hesaba gitmez
+          YT_KLIP_CLIENT_ID: ${{ secrets.YT_KLIP_CLIENT_ID }}
+          YT_KLIP_CLIENT_SECRET: ${{ secrets.YT_KLIP_CLIENT_SECRET }}
+          YT_KLIP_REFRESH_TOKEN: ${{ secrets.YT_KLIP_REFRESH_TOKEN }}
+          IG_KLIP_USER_ID: ${{ secrets.IG_KLIP_USER_ID }}
+          IG_KLIP_TOKEN: ${{ secrets.IG_KLIP_TOKEN }}
         run: python tools/sosyal_yayinla.py $DENEME
 
       - name: Gönderi kaydını depoya yaz
@@ -181,6 +187,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add sosyal/gonderilenler.json 2>/dev/null || true
+          # Klip/derleme paylaşım bağlantıları data/klipler.json'a yazılır; commitlenmezse sonraki tur aynı klibi yeniden paylaşır
+          git add data/klipler.json 2>/dev/null || true
           if ! git diff --quiet data/videolar.json 2>/dev/null; then
             # Reels/Shorts bağlantıları manifeste yazıldı: sayfalardaki YouTube/Instagram bağlantıları için siteyi yeniden üret
             git add data/videolar.json

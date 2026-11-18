@@ -720,7 +720,7 @@ class PanelDuzenleme(KlipYayinTemel):
         self.assertIn("Elle yazılmış başlık", yazi)
         self.assertIn("Elle yazılmış açıklama", yazi)
         self.assertIn("#Elle #Kick", yazi)
-        self.assertIn("instagram_reel/tr", yazi)  # iki platform açıkken Instagram da aday
+        self.assertIn("instagram_reel/klip", yazi)  # iki platform açıkken Instagram da aday
 
     def test_platform_kapatma_paylasima_yansir(self):
         self.metin_gonder(platformlar={"instagram": False, "youtube": True})
@@ -728,19 +728,19 @@ class PanelDuzenleme(KlipYayinTemel):
         self.assertEqual(self.man()["ogeler"][self.oid]["platformlar"], {"instagram": False, "youtube": True})
         self.yayinda_yap(self.oid)
         yazi = "\n".join(self._kuru_calistir())
-        self.assertIn("youtube/tr", yazi)
-        self.assertNotIn("instagram_reel/tr", yazi)
+        self.assertIn("youtube/klip", yazi)
+        self.assertNotIn("instagram_reel/klip", yazi)
 
     def _kuru_calistir(self):
         satirlar = []
         a = ayar(instagram_reel=True, youtube=True)
         a["turler"] = {"haber": True, "klip": True, "derleme": True}
         a["klip"] = {"gunluk_en_fazla": {"instagram_reel": 2, "youtube": 2}, "derleme_gunluk_en_fazla": 1,
-                     "haber_varken_haber": True, "youtube_kategori": "20"}
+                     "instagram": True, "youtube": True, "youtube_kategori": "20"}
         haber_manifest = self.kok / "videolar.json"
         haber_manifest.write_text(json.dumps({"surum": 1, "taban": "https://medya.test/v/", "videolar": {}}), encoding="utf-8")
         for saat in (12, 14):
-            sy.calistir(a, [], kayit_yolu=self.kok / "gonderilenler.json", manifest_yolu=haber_manifest, tum=SIRLAR, ag=YasakAg(),
+            sy.calistir(a, [], kayit_yolu=self.kok / "gonderilenler.json", manifest_yolu=haber_manifest, tum={**SIRLAR, **KLIP_SIRLARI}, ag=YasakAg(),
                         dry_run=True, bugun=BUGUN, simdi=SIMDI.replace(hour=saat), cikti=satirlar.append, klip_yolu=self.manifest)
         return satirlar
 
@@ -1042,8 +1042,26 @@ class DerlemeAg(SahteAg):
         return super().ham(method, url, govde=govde, basliklar=basliklar, zaman=zaman)
 
 
+KLIP_YT = {"YT_KLIP_CLIENT_ID": "klip-cid", "YT_KLIP_CLIENT_SECRET": "klip-sec", "YT_KLIP_REFRESH_TOKEN": "klip-rt"}
+KLIP_IG = {"IG_KLIP_USER_ID": "99001", "IG_KLIP_TOKEN": "klip-tok"}
+KLIP_SIRLARI = {**KLIP_YT, **KLIP_IG}
+
+
+class KlipAg(DerlemeAg):
+    """Hangi hesabın anahtarıyla gidildiğini de kaydeder (Instagram: kullanıcı kimliği; YouTube: OAuth client_id)."""
+
+    def __init__(self, *a, **k):
+        super().__init__(*a, **k)
+        self.yt_istemci = []
+
+    def istek(self, method, url, *, veri=None, json_govde=None, basliklar=None, zaman=30):
+        if "oauth2.googleapis.com" in url:
+            self.yt_istemci.append((veri or {}).get("client_id"))
+        return super().istek(method, url, veri=veri, json_govde=json_govde, basliklar=basliklar, zaman=zaman)
+
+
 class KlipPaylasim(SosyalTemel):
-    """sosyal_yayinla.calistir: klip adayları haber akışına nasıl katılır."""
+    """sosyal_yayinla.calistir: klip adayları YALNIZ ayrı klip hesabına (YT_KLIP_* / IG_KLIP_*) gider."""
 
     def setUp(self):
         super().setUp()
@@ -1056,31 +1074,68 @@ class KlipPaylasim(SosyalTemel):
         m["ogeler"] = ogeler
         ks.kaydet(m, self.klip)
 
-    def kos(self, ag, ayar_, veri=None, dry=False, simdi=SIMDI, **ek):
+    def kos(self, ag, ayar_, veri=None, dry=False, simdi=SIMDI, tum=None, **ek):
         return sy.calistir(ayar_, veri if veri is not None else [], kayit_yolu=self.kayit, manifest_yolu=self.manifest,
-                           tum=SIRLAR, ag=ag, dry_run=dry, bugun=BUGUN, simdi=simdi, cikti=lambda *_: None,
-                           klip_yolu=self.klip, **ek)
+                           tum={**SIRLAR, **KLIP_SIRLARI} if tum is None else tum, ag=ag, dry_run=dry, bugun=BUGUN, simdi=simdi,
+                           cikti=lambda *_: None, klip_yolu=self.klip, **ek)
 
-    def hesap_ayari(self, **ek):
+    def hesap_ayari(self, instagram=True, **ek):
         a = ayar(instagram_reel=True, youtube=True)
         a["turler"] = {"haber": True, "klip": True, "derleme": True}
         a["klip"] = {"gunluk_en_fazla": {"instagram_reel": 2, "youtube": 2}, "derleme_gunluk_en_fazla": 1,
-                     "haber_varken_haber": True, "youtube_kategori": "20"}
+                     "instagram": instagram, "youtube": True, "youtube_kategori": "20"}
         a["klip"].update(ek)
         return a
 
-    def test_klip_reel_ve_short_gider_baglanti_klip_manifestine_yazilir(self):
+    def ikinci_oge(self):
+        metin = {"baslik": "Eray ikinci klip | Eray", "aciklama": "Kaynak: https://kick.com/eray", "etiketler": ["#Eray", "#Kick"]}
+        return oge(baslik=metin["baslik"], onay={"zaman": "2026-11-18T10:05:00Z", "ozet": "ozet1", "metin_ozeti": ks.metin_ozeti(metin)})
+
+    def test_klip_reel_ve_short_klip_hesabina_gider_baglanti_klip_manifestine_yazilir(self):
         self.klip_yaz({"k1": oge()})
-        ag = SahteAg()
+        ag = KlipAg()
         a = self.hesap_ayari()
         self.kos(ag, a)
         self.kos(ag, a, simdi=SIMDI.replace(hour=15))
-        anahtarlar = set(self.kayitlar())
-        self.assertEqual(anahtarlar, {"k1|tr|instagram|reel", "k1|tr|youtube|short"})
+        self.assertEqual(set(self.kayitlar()), {"k1|klip|instagram|reel", "k1|klip|youtube|short"})
         m = ks.yukle(self.klip)["ogeler"]["k1"]
         self.assertEqual(m["instagram"], "https://www.instagram.com/reel/ABC/")
         self.assertTrue(m["youtube"].startswith("https://www.youtube.com/shorts/"))
-        self.assertTrue(all(r["sosyal_tur"] == "klip" for r in self.kayitlar().values()))
+        for r in self.kayitlar().values():
+            self.assertEqual((r["sosyal_tur"], r["hesap"], r["dil"]), ("klip", "klip", "klip"))
+        # Gerçekten KLIP hesabının anahtarlarıyla gitti (TR/CTRL+A GAME anahtarlarıyla değil)
+        self.assertEqual(set(ag.yt_istemci), {"klip-cid"})
+        self.assertTrue(all("/99001/" in u for _, u in ag.cagrilar if u.endswith("/media")))
+        self.assertFalse(any("/17841/" in u for _, u in ag.cagrilar))
+
+    def test_klip_sirri_yoksa_hicbir_hesaba_gitmez(self):
+        """TR (CTRL+A GAME) anahtarları ve açık TR hesabı var; klip anahtarı yok: hiçbir çağrı, hiçbir kayıt."""
+        self.klip_yaz({"k1": oge()})
+        ag = KlipAg()
+        a = self.hesap_ayari()
+        a["hesaplar"]["tr"].update(instagram=True, instagram_reel=True, youtube=True)
+        for saat in (12, 14, 16):
+            g, hata, atlanan = self.kos(ag, a, simdi=SIMDI.replace(hour=saat), tum=dict(SIRLAR))
+        self.assertEqual((ag.cagrilar, self.kayitlar(), g, hata), ([], {}, 0, []))
+        self.assertIn("youtube/klip", atlanan)
+        self.assertEqual(ag.yt_istemci, [])
+
+    def test_yalniz_youtube_klip_sirri_varsa_instagram_a_gitmez(self):
+        self.klip_yaz({"k1": oge()})
+        ag = KlipAg()
+        self.kos(ag, self.hesap_ayari(), tum={**SIRLAR, **KLIP_YT})
+        self.assertEqual(list(self.kayitlar()), ["k1|klip|youtube|short"])
+        self.assertFalse(any(u.endswith("/media") for _, u in ag.cagrilar))
+
+    def test_klip_instagram_varsayilan_kapali_anahtar_olsa_da_gitmez(self):
+        self.klip_yaz({"k1": oge()})
+        ag = KlipAg()
+        a = self.hesap_ayari(instagram=False)
+        for saat in (12, 14):
+            self.kos(ag, a, simdi=SIMDI.replace(hour=saat))
+        self.assertEqual(list(self.kayitlar()), ["k1|klip|youtube|short"])
+        self.assertFalse(any(u.endswith("/media") for _, u in ag.cagrilar))
+        self.assertFalse(sy.klip_ayari({})["platformlar"]["instagram_reel"])  # ayar yazılmamışsa da kapalı
 
     def test_onaysiz_klip_hicbir_cagri_yapmaz(self):
         o = oge()
@@ -1092,71 +1147,89 @@ class KlipPaylasim(SosyalTemel):
 
     def test_ayni_klip_ayni_platforma_iki_kez_gitmez(self):
         self.klip_yaz({"k1": oge()})
-        ag = SahteAg()
+        ag = KlipAg()
         a = self.hesap_ayari()
         for saat in (12, 14, 16, 18):
             self.kos(ag, a, simdi=SIMDI.replace(hour=saat))
-        self.assertEqual(sorted(self.kayitlar()), ["k1|tr|instagram|reel", "k1|tr|youtube|short"])
+        self.assertEqual(sorted(self.kayitlar()), ["k1|klip|instagram|reel", "k1|klip|youtube|short"])
         self.assertEqual(sum(1 for _, u in ag.cagrilar if "media_publish" in u), 1)
 
-    def test_yalniz_turkce_yabanci_dil_hesaplari_klip_almaz(self):
+    def test_eskiden_tr_hesabina_gitmis_klip_klip_hesabina_yeniden_gitmez(self):
         self.klip_yaz({"k1": oge()})
-        ag = SahteAg()
-        a = self.hesap_ayari()
-        for saat in (12, 14, 16):
+        self.kayit.write_text(json.dumps({"k1|tr|youtube|short": {"id": "k1", "sosyal_tur": "klip", "dil": "tr", "platform": "youtube",
+                                                                  "bicim": "short", "durum": "tamam", "zaman": "2026-11-17T10:00:00+00:00"}}),
+                              encoding="utf-8")
+        ag = KlipAg()
+        self.kos(ag, self.hesap_ayari(instagram=False))
+        self.assertEqual(ag.cagrilar, [])
+
+    def test_klip_gunluk_siniri_klip_hesabinda_sayilir(self):
+        self.klip_yaz({"k1": oge(), "k2": self.ikinci_oge()})
+        ag = KlipAg()
+        a = self.hesap_ayari(instagram=False, gunluk_en_fazla={"instagram_reel": 1, "youtube": 1})
+        for saat in (12, 14, 16, 18):
             self.kos(ag, a, simdi=SIMDI.replace(hour=saat))
-        self.assertTrue(self.kayitlar())
-        self.assertTrue(all(k.split("|")[1] == "tr" for k in self.kayitlar()))
-
-    def test_klip_gunluk_siniri(self):
-        self.klip_yaz({"k1": oge(), "k2": oge(baslik="Eray ikinci klip | Eray", onay={
-            "zaman": "2026-11-18T10:05:00Z", "ozet": "ozet1", "metin_ozeti": ks.metin_ozeti(
-                {"baslik": "Eray ikinci klip | Eray", "aciklama": "Kaynak: https://kick.com/eray",
-                 "etiketler": ["#Eray", "#Kick"]})})})
-        ag = SahteAg()
-        a = self.hesap_ayari(gunluk_en_fazla={"instagram_reel": 1, "youtube": 1})
-        a["hesaplar"]["tr"]["youtube"] = False
-        # bugün bir klip Reel zaten gitmiş, ondan sonra bir haber gitmiş (art arda aynı tür kuralı devre dışı kalsın)
-        self.kayit_yaz(klip_zamani="2026-11-15T03:00:00+00:00")
+        self.assertEqual(len([k for k in self.kayitlar() if k.endswith("youtube|short")]), 1)
+        a["klip"]["gunluk_en_fazla"]["youtube"] = 2
         self.kos(ag, a, simdi=SIMDI.replace(hour=20))
-        self.assertEqual([k for k in self.kayitlar() if k.startswith("k")], [])
-
-    def kayit_yaz(self, klip_zamani):
-        r = {"dil": "tr", "platform": "instagram", "bicim": "reel", "durum": "tamam"}
-        self.kayit.write_text(json.dumps({
-            "eski|tr|instagram|reel": {**r, "id": "eski", "sosyal_tur": "klip", "zaman": klip_zamani},
-            "haberx|tr|instagram|reel": {**r, "id": "haberx", "sosyal_tur": "haber", "zaman": "2026-11-15T10:00:00+00:00"}}),
-            encoding="utf-8")
+        self.assertEqual(len([k for k in self.kayitlar() if k.endswith("youtube|short")]), 2)
 
     def test_klip_gunluk_siniri_dun_sayilmaz(self):
         self.klip_yaz({"k1": oge()})
-        a = self.hesap_ayari(gunluk_en_fazla={"instagram_reel": 1, "youtube": 1})
-        a["hesaplar"]["tr"]["youtube"] = False
-        self.kayit_yaz(klip_zamani="2026-11-14T03:00:00+00:00")  # dünkü klip bugünün hakkını yemez
-        self.kos(SahteAg(), a, simdi=SIMDI.replace(hour=20))
-        self.assertEqual([k for k in self.kayitlar() if k.startswith("k1")], ["k1|tr|instagram|reel"])
+        a = self.hesap_ayari(instagram=False, gunluk_en_fazla={"instagram_reel": 1, "youtube": 1})
+        self.kayit.write_text(json.dumps({"eski|klip|youtube|short": {
+            "id": "eski", "sosyal_tur": "klip", "dil": "klip", "hesap": "klip", "platform": "youtube", "bicim": "short",
+            "durum": "tamam", "zaman": "2026-11-14T03:00:00+00:00"}}), encoding="utf-8")  # dünkü klip bugünün hakkını yemez
+        self.kos(KlipAg(), a, simdi=SIMDI.replace(hour=20))
+        self.assertIn("k1|klip|youtube|short", self.kayitlar())
 
-    def test_haber_varken_sira_haberde(self):
+    def test_bugunku_klip_siniri_dolmussa_ikincisi_gitmez(self):
+        self.klip_yaz({"k1": oge()})
+        a = self.hesap_ayari(instagram=False, gunluk_en_fazla={"instagram_reel": 1, "youtube": 1})
+        self.kayit.write_text(json.dumps({"eski|klip|youtube|short": {
+            "id": "eski", "sosyal_tur": "klip", "dil": "klip", "hesap": "klip", "platform": "youtube", "bicim": "short",
+            "durum": "tamam", "zaman": "2026-11-15T03:00:00+00:00"}}), encoding="utf-8")
+        ag = KlipAg()
+        self.kos(ag, a, simdi=SIMDI.replace(hour=20))
+        self.assertEqual(ag.cagrilar, [])
+
+    def test_haber_ve_klip_birbirini_beklemez_ve_haber_kotasini_klip_yemez(self):
+        """Haber hesabı (TR) ile klip hesabı ayrı: aynı çalışmada ikisi de gider; klip TR'nin günlük hakkını saymaz."""
         self.klip_yaz({"k1": oge()})
         self.manifest_yaz()
-        ag = SahteAg()
-        a = self.hesap_ayari()
-        a["hesaplar"]["tr"]["youtube"] = False
+        ag = KlipAg()
+        a = self.hesap_ayari(instagram=False)
+        a["hesaplar"]["tr"]["instagram_reel"] = False
+        a["gunluk_en_fazla"]["youtube"] = 1  # TR YouTube günlük hakkı 1: klip bu hakkı yerse haber sığmazdı
         self.kos(ag, a, veri=[haber()])
-        self.assertEqual(list(self.kayitlar()), ["oyun-yama-1|tr|instagram|reel"])
+        self.assertEqual(set(self.kayitlar()), {"oyun-yama-1|tr|youtube|short", "k1|klip|youtube|short"})
+        self.assertEqual(sy.bugunku_sayi(self.kayitlar(), "youtube", "tr", "2026-11-15"), 1)
+        self.assertEqual(sy.bugunku_sayi(self.kayitlar(), "youtube", "klip", "2026-11-15"), 1)
 
-    def test_haber_yoksa_klip_gider_ve_haber_varken_haber_kapatilabilir(self):
+    def test_haber_varken_klip_beklemez(self):
         self.klip_yaz({"k1": oge()})
         self.manifest_yaz()
-        a = self.hesap_ayari(haber_varken_haber=False)
+        ag = KlipAg()
+        a = self.hesap_ayari(instagram=False)
         a["hesaplar"]["tr"]["youtube"] = False
-        self.kos(SahteAg(), a, veri=[haber()])
-        self.assertEqual(len(self.kayitlar()), 1)  # çalışma başına tek gönderi: haber ya da klip yarışır
-        self.kayit.unlink()
-        b = self.hesap_ayari()
-        b["hesaplar"]["tr"]["youtube"] = False
-        self.kos(SahteAg(), b, veri=[])
-        self.assertEqual(list(self.kayitlar()), ["k1|tr|instagram|reel"])
+        a["hesaplar"]["tr"]["instagram_reel"] = True
+        self.kos(ag, a, veri=[haber()])
+        self.assertEqual(set(self.kayitlar()), {"oyun-yama-1|tr|instagram|reel", "k1|klip|youtube|short"})
+
+    def test_haber_akisi_klip_gorunce_degismez(self):
+        """Klip manifesti dolu da olsa haber hesabının kayıtları ve çağrıları, klipsizle aynıdır (klip sırrı yok)."""
+        sonuc = []
+        for klipli in (False, True):
+            self.kayit.unlink(missing_ok=True)
+            self.manifest_yaz()
+            self.klip_yaz({"k1": oge()} if klipli else {})
+            ag = KlipAg()
+            a = ayar(instagram_reel=True, youtube=True, instagram=True)
+            a["turler"] = {"haber": True, "klip": True, "derleme": True}
+            self.kos(ag, a, veri=[haber()], tum=dict(SIRLAR))
+            sonuc.append((ag.cagrilar, {k: {a_: b for a_, b in r.items() if a_ != "niyet_zamani"} for k, r in self.kayitlar().items()}))
+        self.assertTrue(sonuc[0][1])
+        self.assertEqual(sonuc[0], sonuc[1])
 
     def test_derleme_yalniz_youtube_instagram_a_gitmez(self):
         self.klip_yaz({"d1": oge(baslik="Yayın Kolajı #1", tur="derleme", yayinda=False)})
@@ -1165,25 +1238,37 @@ class KlipPaylasim(SosyalTemel):
                                         **ks.dosya_adlari("d1", "derleme")}
         ks.kaydet(m, self.klip)
 
-        ag = DerlemeAg()
+        ag = KlipAg()
         a = self.hesap_ayari()
         for saat in (12, 14, 16):
             self.kos(ag, a, simdi=SIMDI.replace(hour=saat))
-        self.assertEqual(list(self.kayitlar()), ["d1|tr|youtube|short"])
+        self.assertEqual(list(self.kayitlar()), ["d1|klip|youtube|short"])
         self.assertFalse(any("media" in u for _, u in ag.cagrilar))
         self.assertTrue(ks.yukle(self.klip)["ogeler"]["d1"]["youtube"].startswith("https://www.youtube.com/watch?v="))
 
-    def test_dry_run_klip_basligi_ve_govdesi(self):
+    def test_dry_run_klip_hesabi_ve_govdesi(self):
         self.klip_yaz({"k1": oge()})
         satirlar = []
         a = self.hesap_ayari()
-        sy.calistir(a, [], kayit_yolu=self.kayit, manifest_yolu=self.manifest, tum=SIRLAR, ag=YasakAg(), dry_run=True,
+        sy.calistir(a, [], kayit_yolu=self.kayit, manifest_yolu=self.manifest, tum={**SIRLAR, **KLIP_SIRLARI}, ag=YasakAg(), dry_run=True,
                     bugun=BUGUN, simdi=SIMDI, cikti=satirlar.append, klip_yolu=self.klip)
         yazi = "\n".join(satirlar)
-        self.assertIn("[klip]", yazi)
+        self.assertIn("[DENEME] youtube/klip  k1  (hesap: klip)  [klip]", yazi)
+        self.assertIn("[DENEME] instagram_reel/klip  k1  (hesap: klip)  [klip]", yazi)
+        self.assertNotIn("youtube/tr", yazi)
         self.assertIn("Eray patates soyuyor | Eray", yazi)
         self.assertIn('"containsSyntheticMedia": false', yazi)
         self.assertFalse(self.kayit.exists())  # kuru çalışma kayıt yazmaz
+
+    def test_dry_run_klip_sirri_yoksa_atlandi_der(self):
+        self.klip_yaz({"k1": oge()})
+        satirlar = []
+        sy.calistir(self.hesap_ayari(), [], kayit_yolu=self.kayit, manifest_yolu=self.manifest, tum=dict(SIRLAR), ag=YasakAg(),
+                    dry_run=True, bugun=BUGUN, simdi=SIMDI, cikti=satirlar.append, klip_yolu=self.klip)
+        yazi = "\n".join(satirlar)
+        self.assertIn("klipler HİÇBİR hesaba gitmez", yazi)
+        self.assertIn("YT_KLIP_CLIENT_ID", yazi)
+        self.assertNotIn("(hesap: klip)", yazi)
 
     def test_klip_yokken_haber_akisi_birebir_ayni(self):
         sonuclar = []

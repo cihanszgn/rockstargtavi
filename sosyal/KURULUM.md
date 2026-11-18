@@ -307,4 +307,14 @@ Sonraki video iş akışı kalıcı arşiv senaryolarını da işler; video üre
 
 ## Klip ve derleme paylaşımı (2026-11-18)
 
-Yeni anahtar/hesap gerekmez: klipler mevcut CTRL+A GAME hesaplarından (Reels + Shorts) gider. Cio'nun onayladığı ve medya sunucusuna yüklenen klipler paylaşılır; akış ve komutlar: `otomasyon/KLIP-HATTI.md` → "Paylaşım". Ayarlar `sosyal/ayarlar.json` → `klip` (günlük sınır, `haber_varken_haber`, `youtube_kategori`). Kuru deneme: `py tools/klip_yayin.py yukle --kuru`, sonra `py tools/sosyal_yayinla.py --dry-run --anahtarsiz-goster`.
+Klipler CTRL+A GAME hesaplarından DEĞİL, **ayrı klip kanalından (Komixsi, yalnız YouTube Shorts)** gider; bunun için bir kez kanal bağlanır (aşağıda). Cio'nun onayladığı ve medya sunucusuna yüklenen klipler paylaşılır; akış ve komutlar: `otomasyon/KLIP-HATTI.md` → "Paylaşım". Ayarlar `sosyal/ayarlar.json` → `klip` (günlük sınır, `youtube`, `instagram`, `youtube_kategori`). **Klip sırları (`YT_KLIP_*`) yoksa klipler hiçbir hesaba gitmez** (CTRL+A GAME kanalına ya da Instagram'a düşmez). Instagram klip varsayılan kapalı: açmak için `klip.instagram: true` ve ayrı `IG_KLIP_USER_ID` + `IG_KLIP_TOKEN` sırları gerekir.
+
+### Klip kanalı bağlama (bir kez, Cio)
+
+1. `gh auth status` ile GitHub CLI girişini doğrula (sırlar GitHub'a böyle yazılır; giriş yoksa araç durur).
+2. `sosyal\kurulum.bat` çalıştır (çift tıkla). Menüden "YouTube kanalı bağla (Shorts; klip kanalı için KLİP seç)" seçeneğini seç, sonra hesap olarak **KLİP** seç. (Kısayol: `py tools\sosyal_kurulum.py --klip-kanali-bagla`.)
+3. Bu bilgisayarda CTRL+A GAME için kayıtlı Google Cloud istemcisi varsa araç "aynısı kullanılsın mı" diye sorar: Enter (evet). Yoksa Client ID ve Client secret'ı yapıştır (ekranda görünmez; 5.1'deki Google Cloud projesi).
+4. Tarayıcı açılınca izni **Komixsi kanalının Google hesabıyla** ver (CTRL+A GAME hesabıyla değil). Araç kanal adını gösterir ("Doğru: kanal ...").
+5. Araç `YT_KLIP_CLIENT_ID`, `YT_KLIP_CLIENT_SECRET`, `YT_KLIP_REFRESH_TOKEN` sırlarını GitHub'a yazar ve ayarlar.json'da `klip.youtube` değerini açar. İzin yanlışlıkla CTRL+A GAME hesabıyla verilirse araç "OLMADI" der, hiçbir şey kaydetmez; menüyü yeniden aç.
+6. Kontrol: menüde "Hangi hesaplar kurulu?" → "KLİP kanalı: youtube ✓". Ardından `py tools/klip_yayin.py yukle --kuru` ve `py tools/sosyal_yayinla.py --dry-run --anahtarsiz-goster` (klipler yalnız `klip` hesabına gider).
+7. Gizlilik haber videolarıyla ortak `ayarlar.json` → `youtube.gizlilik` değerinden gelir (şu an `public`: ilk klip doğrudan herkese açık yayınlanır). İlk klibi Studio'da önce görmek istersen bunu Claude'dan `private` yaptırıp sonra geri al. Kuru deneme: `py tools/klip_yayin.py yukle --kuru`, sonra `py tools/sosyal_yayinla.py --dry-run --anahtarsiz-goster`.
