@@ -232,11 +232,20 @@ def ayar_yukle(yol: pathlib.Path | None = None) -> dict:
     genel.update(ham.get('ayar') or {})
     yayincilar = []
     for y in ham.get('yayincilar') or []:
-        for alan in ('ad', 'platform', 'kanal'):
+        for alan in ('ad', 'platform'):
             if not y.get(alan):
                 raise KlipHatasi(f'yayıncı kaydında "{alan}" yok: {y}')
         e = dict(y)
-        e['platform'] = e['platform'].lower()
+        e['platform'] = str(e['platform']).lower()
+        if e['platform'] == 'youtube':
+            # Yalnız YouTube'u olan yayıncı (Kick kanalı yok): kaynak youtube_kanallari'dır; `kanal` yalnız ad/filtre içindir.
+            kanallar = [c for c in (e.get('youtube_kanallari') or []) if isinstance(c, dict) and c.get('kanal_id')]
+            if not kanallar:
+                raise KlipHatasi(f'platform "youtube" olan yayıncıda en az bir youtube_kanallari kaydı (kanal_id) olmalı: {y.get("ad")}')
+            if not e.get('kanal'):
+                e['kanal'] = str(kanallar[0].get('tanitici') or kanallar[0]['kanal_id']).lstrip('@').lower()
+        elif not e.get('kanal'):
+            raise KlipHatasi(f'yayıncı kaydında "kanal" yok: {y}')
         e['etkin'] = bool(e.get('etkin', True))
         e['ayar'] = {**genel, **(e.get('ayar') or {})}
         yayincilar.append(e)
@@ -2092,6 +2101,8 @@ def tara(ayar: dict, dizin: pathlib.Path, yayinci: str | None = None, hepsi: boo
     for y in ayar['yayincilar']:
         if not y['etkin'] or (yayinci and yayinci.lower() not in (y['ad'].lower(), y['kanal'].lower())):
             continue
+        if y['platform'] == 'youtube':
+            continue   # yalnız YouTube yayıncısı: klip_youtube.tara aşağıda işler (desteksiz değil)
         if y['platform'] != 'kick':
             desteksiz.append({'yayinci': y['ad'], 'platform': y['platform'],
                               'neden': DESTEK_YOK.get(y['platform'], 'platform tanınmıyor')})

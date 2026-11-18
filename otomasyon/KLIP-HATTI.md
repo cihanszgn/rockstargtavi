@@ -613,3 +613,25 @@ Bilinen sınırlar: Actions mp4'ü göremez, yalnız manifesti ve sunucudaki dos
 **`yeniden-uret` sözleşmesi.**
 `py tools/yayin_klip.py yeniden-uret <paket.json> [--oyun "Ad" | --oyunsuz] [--aciklama-metni "…" | --aciklamasiz] [--yayinci-adi "…"] [--bas-kaydir SN] [--son-kaydir SN] [--duzen kamera|kadraj|serit] [--kamera-kutu x,y,w,h] [--yedek KLASOR]`
 Kaydırma saniye, eksi = daha erken; süre 5..59 sn dışında anlaşılır hata. `--kamera-kutu` orantılıdır ve tespiti ezer. Verilen her değer pakette `duzenleme` altında kalıcıdır. Çıktı tek satır JSON (`oyun`, `oyun_kaynagi`, `baslik`, `kisa_aciklama`, `duzenleme` dahil); hatada çıkış kodu != 0 ve stderr'de tek satır Türkçe `HATA: …`. Açıklama metninde 45 karakter sınırı ve yasak kelime denetimi geçerlidir. Kaydırma, oyun önbelleğini ve döküm kayıtlarını düşürür.
+
+## Yayıncılar bölümü (onay panelinde, 2026-11-18)
+
+Kod: `tools/klip_yayincilar.py` (mantık), `tools/klip_yayinci_ui.py` (arayüz), `tools/klip_yayin.py` (rotalar). Panelde ("Onay Sayfası.bat") üstte **Klipler | Yayıncılar** sekmesi var. JSON dosyasını elle düzenlemek gerekmez.
+
+**Yayıncı eklemek (Cio için):**
+1. Onay Sayfası'nı aç, **Yayıncılar** sekmesine geç.
+2. "Yayıncı ekle" kutusuna Kick adını veya bağlantısını (`kick.com/ad`) ve/veya YouTube `@tanıtıcı` ya da kanal bağlantısını yaz. En az biri yeter; yalnız YouTube da olur.
+3. **Kontrol et**: sunucu kanalı gerçekten doğrular (Kick API, YouTube için yt-dlp) ve önizleme kartı gösterir (ad, kanal, son yayınlar).
+4. Ad ve kısa adı gerekirse düzelt (kısa ad boşsa adın ilk kelimesi olur), **Ekle**'ye bas. Dosyaya güvenli yazılır (yedek alınır, yazım atomik, yazdıktan sonra yeniden okunup doğrulanır).
+5. Aynı kanal ikinci kez eklenemez (harf duyarsız denetlenir).
+
+**Düzenle / Kaldır / Geri getir:** her satırda Düzenle (ad, kısa ad, açık/kapalı, YouTube kanalı etkin/pasif) ve Kaldır var. Kaldır kaydı silmez, `kaldirilanlar` listesine taşır; aynı sekmede "Geri getir" ile geri gelir. Mevcut klip paketlerine dokunulmaz. Not: yayıncı kaldırılınca eski klipler yayıncı adı eşleşmesiyle sayıldığı için klip sayısı 0 görünebilir.
+
+**Yalnız-YouTube yayıncı:** destekleniyor (`platform: "youtube"`, Kick'e hiç istek gitmez; `tara` doğrudan YouTube taramasını çalıştırır). Testle doğrulandı.
+
+**"Son yayından klip çıkar":** yayıncı satırındaki buton. Onay sorusu çıkar (yaklaşık 30–35 dk sürer, Claude kotası harcar). Arka planda `yayin_klip.py otomatik --yayinci <ad> --en-cok 1 --konusma` çalışır; durum satırı, İptal düğmesi vardır. Aynı anda tek iş çalışır (kesim kuyruğuyla da çakışmaz). Bitince liste yenilenir. **Panel penceresi kapanırsa iş durur** (alt süreç panel sunucusuna bağlıdır); en çok 3 saat zaman aşımı. Otomatik mod en yeni İŞLENMEMİŞ yayını alır.
+
+**Güvenlik:** yalnız 127.0.0.1, belirteç, Origin/Host denetimi, sıkı kanal adı doğrulaması, liste argümanlı alt süreç (kabuk yok), dış isteklere zaman aşımı, arayüzde `textContent` (HTML enjeksiyonu yok).
+
+**Bilinen zayıflıklar:** mevcut yayıncıya panelden ek YouTube kanalı eklenemez (yalnız etkin/pasif); önceki testlerin üçü canlı ayar dosyasına bağlı olduğu için sabit sayılar yerine esnek denetime çevrildi.
+

@@ -38,6 +38,8 @@ sys.path.insert(0, str(KOK / "tools"))
 import klip_duzenle as kd  # noqa: E402
 import klip_panel_ui as ui  # noqa: E402
 import klip_sosyal as ks  # noqa: E402
+import klip_yayincilar as ky_y  # noqa: E402
+import klip_yayinci_ui as yui  # noqa: E402
 import yayin_klip as yk  # noqa: E402
 
 YUKLEME_HEDEFI_VARSAYILAN = "oracle:/var/www/medya/v/"
@@ -578,15 +580,20 @@ def html_uret(ogeler: list[dict], manifest: dict, zaman: str, etk: dict | None =
                'Kırmızı çerçeveli kartlarda küfür uyarısı var: önce dinle.</p>')
         betik = ""
         belirtec = ""
+    if etk:  # canlı sayfa: Klipler / Yayıncılar sekmeleri
+        icerik = "\n".join([yui.SEKMELER, "<div id=sekme-klipler>", ust, "".join(govde), "</div>", yui.BOLUM])
+        css, betik = ui.CSS + yui.CSS, betik + yui.BETIK
+    else:
+        icerik = "\n".join([ust, "".join(govde)])
+        css = ui.CSS
     return f"""<!doctype html>
 <html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 {belirtec}
 <title>Klip onay listesi</title>
-<style>{ui.CSS}</style>{betik}</head><body><main>
+<style>{css}</style>{betik}</head><body><main>
 <h1>Klip onay listesi</h1>
 {klip_hesabi_kutusu(hesap)}
-{ust}
-{''.join(govde)}
+{icerik}
 </main></body></html>
 """
 
@@ -738,6 +745,9 @@ KAPI_VARSAYILAN = 8765
 KAPI_DENEME = 20
 ISTEK_AZAMI_BAYT = 4096
 BLOK_BAYT = 64 * 1024
+YAYINCI_GET = ("/api/yayinci/liste", "/api/yayinci/is")
+YAYINCI_POST = tuple(f"/api/yayinci/{a}" for a in ("onizle", "ekle", "duzenle", "kaldir", "geri-getir", "klip-cikar", "iptal"))
+YAYINCI_AZAMI = 8192
 DUZENLE_YOLLARI = {"/api/metin-kaydet": ("metin-kaydet", 131072), "/api/metin-sifirla": ("metin-sifirla", 4096),
                    "/api/kesim": ("kesim", 16384), "/api/kucuk-resim": ("kucuk-resim", 4096)}
 SAYFA_CSP = ("default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self'; "
@@ -779,6 +789,8 @@ class OnaySunucusu(http.server.ThreadingHTTPServer):
         self.manifest_arg = manifest_arg
         self.kilit = threading.Lock()
         self.kesim = KesimIsleri(self.kilit, manifest_arg)
+        self.yayinci = ky_y.YayinciIsleri()
+        self.kesim.dis_mesgul = self.yayinci.calisiyor  # yayından klip çıkarırken yeniden kesim sıraya girmez
         self.izinli_host = {f"127.0.0.1:{self.port}", f"localhost:{self.port}"}
         self.izinli_origin = {f"http://127.0.0.1:{self.port}", f"http://localhost:{self.port}"}
 
@@ -791,7 +803,12 @@ class OnaySunucusu(http.server.ThreadingHTTPServer):
     def server_close(self):
         global _ONBELLEK
         _ONBELLEK = None
-        super().server_close()
+        try:
+            yi = getattr(self, "yayinci", None)  # kapı doluysa yapıcı yarıda kalır
+            if yi is not None:
+                yi.kapat()  # çalışan klip çıkarma işi de durur
+        finally:
+            super().server_close()
 
     def adres(self) -> str:
         return f"http://127.0.0.1:{self.port}/"
@@ -841,7 +858,7 @@ class OnayIstegi(http.server.BaseHTTPRequestHandler):
                 return self._sayfa(gonder)
             if yol.startswith("/dosya/"):
                 return self._dosya(yol[len("/dosya/"):], gonder)
-            if yol == "/api/durum" or yol.startswith("/kart/"):
+            if yol in YAYINCI_GET or yol == "/api/durum" or yol.startswith("/kart/"):
                 return self._canli(yol, gonder)
             return self._yanit(404, "Bulunamadı.".encode("utf-8"), gonder=gonder)
         except (ConnectionError, TimeoutError):
@@ -851,6 +868,15 @@ class OnayIstegi(http.server.BaseHTTPRequestHandler):
         """Belirteçli okuma uçları: kesim durumu ve tek kart parçası (sayfa betiği çağırır)."""
         if not hmac.compare_digest((self.headers.get("X-Belirtec") or "").encode("utf-8"), self.server.belirtec.encode("utf-8")):
             return self._yanit(403, "Oturum belirteci geçersiz: sayfayı yenile (F5).".encode("utf-8"), gonder=gonder)
+        if yol in YAYINCI_GET:
+            try:
+                if yol == "/api/yayinci/is":
+                    veri = {"ok": True, **self.server.yayinci.cikar.goster()}
+                else:
+                    veri = yayinci_listesi(self.server.manifest_arg)
+            except (ky_y.Hata, OSError, ValueError) as e:
+                veri = {"ok": False, "mesaj": f"Yayıncı listesi okunamadı: {e}"}
+            return self._yanit(200, json.dumps(veri, ensure_ascii=False).encode("utf-8"), "application/json; charset=utf-8", gonder=gonder)
         if yol == "/api/durum":
             with self.server.kilit:
                 kayit = liste_kaydi_oku()
@@ -943,9 +969,9 @@ class OnayIstegi(http.server.BaseHTTPRequestHandler):
         if not hmac.compare_digest((self.headers.get("X-Belirtec") or "").encode("utf-8"), self.server.belirtec.encode("utf-8")):
             return self._json(403, {"ok": False, "mesaj": "Oturum belirteci geçersiz: sayfayı yenile (F5)."})
         yol = self.path.split("?", 1)[0]
-        if yol not in ("/api/onayla", "/api/geri-al") and yol not in DUZENLE_YOLLARI:
+        if yol not in ("/api/onayla", "/api/geri-al") and yol not in DUZENLE_YOLLARI and yol not in YAYINCI_POST:
             return self._json(404, {"ok": False, "mesaj": "Bilinmeyen işlem."})
-        azami = DUZENLE_YOLLARI[yol][1] if yol in DUZENLE_YOLLARI else ISTEK_AZAMI_BAYT
+        azami = DUZENLE_YOLLARI[yol][1] if yol in DUZENLE_YOLLARI else (YAYINCI_AZAMI if yol in YAYINCI_POST else ISTEK_AZAMI_BAYT)
         if not (self.headers.get("Content-Type") or "").lower().startswith("application/json"):
             return self._json(415, {"ok": False, "mesaj": "İçerik türü application/json olmalı."})
         try:
@@ -961,6 +987,13 @@ class OnayIstegi(http.server.BaseHTTPRequestHandler):
             return self._json(400, {"ok": False, "mesaj": "İstek gövdesi JSON değil."})
         if not isinstance(veri, dict):
             return self._json(400, {"ok": False, "mesaj": "İstek gövdesi geçersiz."})
+        if yol in YAYINCI_POST:
+            try:
+                return self._json(200, yayinci_islemi(yol, veri, self.server))
+            except ky_y.Hata as e:
+                return self._json(422, {"ok": False, "mesaj": str(e)})
+            except (Hata, RuntimeError, OSError) as e:
+                return self._json(409, {"ok": False, "mesaj": f"İşlem yapılamadı: {e}"})
         try:
             with self.server.kilit:
                 if yol in DUZENLE_YOLLARI:
@@ -975,6 +1008,37 @@ class OnayIstegi(http.server.BaseHTTPRequestHandler):
                 m = f"{m.split(';')[0]}; sayfayı yenile (F5)."
             return self._json(409, {"ok": False, "mesaj": m})
         return self._json(200, sonuc)
+
+
+def yayinci_listesi(manifest_arg: str | None) -> dict:
+    """Yayıncılar sekmesi: dosyadaki liste + yayıncı başına kayıtlı klip sayısı (paketlerden)."""
+    sayilar: dict[str, int] = {}
+    for o in tara(yk.calisma_dizini(), ayar_oku()):  # yalnız okur: sunucu kilidi gerekmez
+        if o["tur"] == "klip" and not o["yok_notu"] and o["yayinci"]:
+            sayilar[o["yayinci"]] = sayilar.get(o["yayinci"], 0) + 1
+    return ky_y.liste(sayilar)
+
+
+def yayinci_islemi(yol: str, veri: dict, sunucu) -> dict:
+    """Yayıncı yönetimi POST'ları. Dış istekler (Kick/YouTube) sunucu kilidi DIŞINDA yapılır; klip çıkarma kilit İÇİNDE başlar
+    (aynı anda yeniden kesimle yarışmasın)."""
+    ad = yol[len("/api/yayinci/"):]
+    yi = sunucu.yayinci
+    if ad == "onizle":
+        return ky_y.onizle(veri, yi.onizlemeler)
+    if ad == "ekle":
+        return ky_y.ekle(veri, yi.onizlemeler)
+    if ad == "duzenle":
+        return ky_y.duzenle(veri)
+    if ad == "kaldir":
+        return ky_y.kaldir(veri)
+    if ad == "geri-getir":
+        return ky_y.geri_getir(veri)
+    if ad == "iptal":
+        yi.cikar.iptal()
+        return {"ok": True, "mesaj": "İptal ediliyor…"}
+    with sunucu.kilit:  # klip-cikar
+        return yi.klip_cikar(veri, sunucu.kesim.mesgul())
 
 
 def liste_hazirla(manifest_arg: str | None):
@@ -1097,12 +1161,19 @@ class KesimIsleri:
         self.kuyruk: queue.Queue = queue.Queue()
         self.durum: dict[str, dict] = {}
         self.isci: threading.Thread | None = None
+        self.dis_mesgul = None  # çağrılabilir: başka bir uzun iş (yayından klip çıkarma) sürüyorsa True
+
+    def mesgul(self) -> bool:
+        with self.kilit:
+            return any(d.get("durum") in ("kuyrukta", "kesiliyor") for d in self.durum.values())
 
     def aktif(self, oge_id: str) -> bool:
         with self.kilit:
             return (self.durum.get(oge_id) or {}).get("durum") in ("kuyrukta", "kesiliyor")
 
     def ekle(self, o: dict, arg: list[str], video: dict) -> None:
+        if self.dis_mesgul and self.dis_mesgul():
+            raise Hata("Yayından klip çıkarma işi sürüyor; bitince yeniden kes (Yayıncılar sekmesinden görebilir ya da iptal edebilirsin).")
         with self.kilit:
             if (self.durum.get(o["id"]) or {}).get("durum") in ("kuyrukta", "kesiliyor"):
                 raise Hata("Bu klip zaten kesiliyor ya da sırada; bitmesini bekle.")
@@ -1280,6 +1351,8 @@ def sunucu_baslat(kapi: int, manifest_arg: str | None) -> OnaySunucusu:
 
 
 def komut_sayfa(args) -> int:
+    if getattr(args, "ayar", None):  # yayıncı ayar dosyası (deneme: geçici kopya)
+        os.environ["KLIP_YAYINCILAR"] = str(pathlib.Path(args.ayar).resolve())
     liste_hazirla(args.manifest)  # numaralar hazır olsun; hata varsa sunucu açılmadan görünsün
     baslatici_yaz()
     sunucu = sunucu_baslat(args.kapi, args.manifest)
@@ -1484,6 +1557,7 @@ def ana(argv=None) -> int:
     p = alt.add_parser("sayfa", help="yerel onay sayfası (Onayla / Onayı geri al düğmeleri); yalnız 127.0.0.1")
     p.add_argument("--kapi", type=int, default=KAPI_VARSAYILAN, help=f"kapı numarası (varsayılan {KAPI_VARSAYILAN}; doluysa sıradaki boş kapı)")
     p.add_argument("--acma", action="store_true", help="tarayıcıyı otomatik AÇMA (varsayılan: açar)")
+    p.add_argument("--ayar", help="yayıncı ayar dosyası (varsayılan otomasyon/klip-yayincilar.json; deneme için kopya)")
     a = ap.parse_args(argv)
     try:
         return {"liste": komut_liste, "onayla": komut_onayla, "geri-cek": komut_geri_cek, "yukle": komut_yukle,

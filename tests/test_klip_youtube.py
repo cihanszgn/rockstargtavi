@@ -40,11 +40,15 @@ class KimlikVeSüzme(unittest.TestCase):
         self.assertIsNone(q.atlama_nedeni(INFO, CFG, 1795046400))
 
     def test_yan_kanallar_kapali_kick_kalir(self):
+        # Canlı ayar dosyasına bağlı: Cio panelden yayıncı ekleyip çıkarınca bozulmamalı (sayılar sabit değil).
         ayar = y.ayar_yukle()
-        self.assertEqual(len(ayar['yayincilar']), 5)
-        self.assertTrue(all(p['platform'] == 'kick' for p in ayar['yayincilar']))
-        self.assertEqual(sum(len(q.yayin_kaydi(p)) for p in ayar['yayincilar']), 5)
-        self.assertEqual(sum(not c['etkin'] for p in ayar['yayincilar'] for c in p['youtube_kanallari']), 2)
+        kick = [p for p in ayar['yayincilar'] if p['platform'] == 'kick']
+        self.assertGreaterEqual(len(kick), 1)
+        self.assertGreaterEqual(len(ayar['yayincilar']), 1)
+        for p in ayar['yayincilar']:
+            self.assertIn(p['platform'], ('kick', 'youtube'))
+            acik = [c for c in p.get('youtube_kanallari', []) if c['etkin']]
+            self.assertEqual(q.yayin_kaydi(p), acik)          # yalnız etkin yan kanallar taranır
 
     def test_tara_tekrari_islenmisi_ve_sekmeleri(self):
         calls = []
