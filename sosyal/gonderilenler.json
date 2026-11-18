@@ -122,6 +122,20 @@
   "url": "https://www.youtube.com/shorts/0wqnJXyxnLg",
   "zaman": "2026-11-18T04:17:52+00:00"
  },
+ "gta-vi-cevrimici-mod-resmi-aciklama-yok|tr|instagram|reel": {
+  "bicim": "reel",
+  "dil": "tr",
+  "durum": "tamam",
+  "icerik_dili": "tr",
+  "id": "gta-vi-cevrimici-mod-resmi-aciklama-2026-11-17",
+  "kapsayici": "17869622715694894",
+  "kimlik": "17953096317341369",
+  "niyet_zamani": "2026-11-18T04:24:13+00:00",
+  "platform": "instagram",
+  "sosyal_tur": "haber",
+  "url": "https://www.instagram.com/reel/Df3o_uZBzPb/",
+  "zaman": "2026-11-18T04:24:13+00:00"
+ },
  "gta-vi-kacta-aciliyor-yerel-gece-yarisi|es|instagram|reel": {
   "bicim": "reel",
   "dil": "es",
@@ -136,6 +150,20 @@
   "sosyal_tur": "haber",
   "url": "https://www.instagram.com/reel/Df3oRKcTLMk/",
   "zaman": "2026-11-18T04:17:52+00:00"
+ },
+ "gta-vi-kacta-aciliyor-yerel-gece-yarisi|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 11554934,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "gta-vi-kacta-aciliyor-2026-11-17",
+  "kimlik": "p4MZ2LgOU60",
+  "niyet_zamani": "2026-11-18T04:24:13+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg3_ZzsM_geIVpx0z82Ykq4MeFSJwhT_xTQZoQJxD_dGzBuxs2QtHOQIfzb9sUk6B9L8sx9FNJbp0HXf_EiAEJtuS-jLMXuVM2lMZEEfUIY",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/p4MZ2LgOU60",
+  "zaman": "2026-11-18T04:24:13+00:00"
  },
  "hounded-ps5-2027-duyuru|tr|instagram|gorsel": {
   "bicim": "gorsel",
