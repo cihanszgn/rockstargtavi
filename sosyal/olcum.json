@@ -1,15 +1,36 @@
 {
  "gonderiler": {
+  "instagram|17869260849680759": {
+   "bicim": "reel",
+   "dil": "en",
+   "id": "drg-survivor-knockout-1-2-2026-11-17",
+   "kimlik": "17869260849680759",
+   "platform": "instagram",
+   "son": {
+    "comments": 0,
+    "ig_reels_avg_watch_time": 2278,
+    "likes": 0,
+    "olculdu": "2026-11-18T12:12:41+00:00",
+    "reach": 131,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "views": 153
+   },
+   "tur": "haber",
+   "url": "https://www.instagram.com/reel/Df4C1slyYJL/",
+   "zaman": "2026-11-18T08:10:01+00:00"
+  },
   "instagram|17871708678661308": {
    "bicim": "gorsel",
-   "dil": "tr",
+   "dil": "en",
    "id": "xbox-black-friday-satis-2026-11-16",
    "kimlik": "17871708678661308",
    "platform": "instagram",
    "son": {
     "comments": 0,
     "likes": 0,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "reach": 1,
     "saved": 0,
     "shares": 0,
@@ -29,7 +50,7 @@
    "son": {
     "comments": 0,
     "likes": 1,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "reach": 2,
     "saved": 0,
     "shares": 0,
@@ -49,7 +70,7 @@
    "son": {
     "comments": 0,
     "likes": 2,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "reach": 2,
     "saved": 0,
     "shares": 0,
@@ -60,6 +81,27 @@
    "url": "https://www.instagram.com/p/DfyoIOzkwBk/",
    "zaman": "2026-11-16T05:40:32+00:00"
   },
+  "instagram|17953096317341369": {
+   "bicim": "reel",
+   "dil": "tr",
+   "id": "gta-vi-cevrimici-mod-resmi-aciklama-2026-11-17",
+   "kimlik": "17953096317341369",
+   "platform": "instagram",
+   "son": {
+    "comments": 0,
+    "ig_reels_avg_watch_time": 4388,
+    "likes": 0,
+    "olculdu": "2026-11-18T12:12:41+00:00",
+    "reach": 46,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "views": 50
+   },
+   "tur": "haber",
+   "url": "https://www.instagram.com/reel/Df3o_uZBzPb/",
+   "zaman": "2026-11-18T04:24:13+00:00"
+  },
   "instagram|17958129117280247": {
    "bicim": "gorsel",
    "dil": "tr",
@@ -69,7 +111,7 @@
    "son": {
     "comments": 0,
     "likes": 1,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "reach": 2,
     "saved": 0,
     "shares": 0,
@@ -88,14 +130,14 @@
    "platform": "instagram",
    "son": {
     "comments": 0,
-    "ig_reels_avg_watch_time": 3179,
-    "likes": 1,
-    "olculdu": "2026-11-17T20:49:46+00:00",
-    "reach": 41,
+    "ig_reels_avg_watch_time": 3397,
+    "likes": 2,
+    "olculdu": "2026-11-18T12:12:41+00:00",
+    "reach": 42,
     "saved": 0,
     "shares": 0,
-    "total_interactions": 1,
-    "views": 43
+    "total_interactions": 2,
+    "views": 44
    },
    "tur": "haber",
    "url": "https://www.instagram.com/reel/Df2IDP_tRUR/",
@@ -110,7 +152,7 @@
    "son": {
     "comments": 0,
     "likes": 2,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "reach": 2,
     "saved": 0,
     "shares": 0,
@@ -123,14 +165,14 @@
   },
   "instagram|18076269626784689": {
    "bicim": "gorsel",
-   "dil": "tr",
+   "dil": "en",
    "id": "drg-survivor-knockout-1-2-2026-11-17",
    "kimlik": "18076269626784689",
    "platform": "instagram",
    "son": {
     "comments": 0,
     "likes": 0,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "reach": 1,
     "saved": 0,
     "shares": 0,
@@ -151,7 +193,7 @@
     "comments": 0,
     "ig_reels_avg_watch_time": 6731,
     "likes": 2,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "reach": 43,
     "saved": 0,
     "shares": 0,
@@ -164,14 +206,14 @@
   },
   "instagram|18085600565378469": {
    "bicim": "gorsel",
-   "dil": "tr",
+   "dil": "en",
    "id": "slay-the-spire-2-beta-0-113-1-turkce-duzeltme-2026-11-14",
    "kimlik": "18085600565378469",
    "platform": "instagram",
    "son": {
     "comments": 0,
     "likes": 0,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "reach": 1,
     "saved": 0,
     "shares": 0,
@@ -190,14 +232,14 @@
    "platform": "instagram",
    "son": {
     "comments": 0,
-    "ig_reels_avg_watch_time": 3062,
-    "likes": 1,
-    "olculdu": "2026-11-17T20:49:46+00:00",
-    "reach": 190,
+    "ig_reels_avg_watch_time": 3940,
+    "likes": 2,
+    "olculdu": "2026-11-18T12:12:41+00:00",
+    "reach": 225,
     "saved": 0,
-    "shares": 0,
-    "total_interactions": 1,
-    "views": 202
+    "shares": 1,
+    "total_interactions": 3,
+    "views": 252
    },
    "tur": "haber",
    "url": "https://www.instagram.com/reel/Df2IkRYAm5M/",
@@ -205,14 +247,14 @@
   },
   "instagram|18108862898206010": {
    "bicim": "gorsel",
-   "dil": "tr",
+   "dil": "en",
    "id": "takvim-hela-of-mice-and-magic-2026-12-01-14",
    "kimlik": "18108862898206010",
    "platform": "instagram",
    "son": {
     "comments": 0,
     "likes": 0,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "reach": 1,
     "saved": 0,
     "shares": 0,
@@ -223,6 +265,27 @@
    "url": "https://www.instagram.com/p/Df2HEXzFyYR/",
    "zaman": "2026-11-17T14:08:38+00:00"
   },
+  "instagram|18109038941307282": {
+   "bicim": "reel",
+   "dil": "tr",
+   "id": "cs2-singapur-2026-major-esyalari-2026-11-18",
+   "kimlik": "18109038941307282",
+   "platform": "instagram",
+   "son": {
+    "comments": 0,
+    "ig_reels_avg_watch_time": 0,
+    "likes": 0,
+    "olculdu": "2026-11-18T12:12:41+00:00",
+    "reach": 0,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "views": 13
+   },
+   "tur": "haber",
+   "url": "https://www.instagram.com/reel/Df4Yz4TKfQ9/",
+   "zaman": "2026-11-18T11:22:01+00:00"
+  },
   "instagram|18113410622159384": {
    "bicim": "gorsel",
    "dil": "tr",
@@ -232,7 +295,7 @@
    "son": {
     "comments": 0,
     "likes": 0,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "reach": 1,
     "saved": 0,
     "shares": 0,
@@ -243,16 +306,37 @@
    "url": "https://www.instagram.com/p/Df2TpqrF8u9/",
    "zaman": "2026-11-17T15:58:35+00:00"
   },
+  "instagram|18119412761109585": {
+   "bicim": "reel",
+   "dil": "es",
+   "id": "gta-vi-kacta-aciliyor-2026-11-17",
+   "kimlik": "18119412761109585",
+   "platform": "instagram",
+   "son": {
+    "comments": 0,
+    "ig_reels_avg_watch_time": 14608,
+    "likes": 0,
+    "olculdu": "2026-11-18T12:12:41+00:00",
+    "reach": 5,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "views": 7
+   },
+   "tur": "haber",
+   "url": "https://www.instagram.com/reel/Df4I-2SRuQq/",
+   "zaman": "2026-11-18T09:03:45+00:00"
+  },
   "instagram|18119926009789800": {
    "bicim": "gorsel",
-   "dil": "tr",
+   "dil": "en",
    "id": "melvor-idle-2-early-access-2026-11-17",
    "kimlik": "18119926009789800",
    "platform": "instagram",
    "son": {
     "comments": 0,
     "likes": 0,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "reach": 1,
     "saved": 0,
     "shares": 0,
@@ -265,14 +349,14 @@
   },
   "instagram|18120899164953787": {
    "bicim": "gorsel",
-   "dil": "tr",
+   "dil": "en",
    "id": "borderlands-4-boss-blitz-skins-2026-11-16",
    "kimlik": "18120899164953787",
    "platform": "instagram",
    "son": {
     "comments": 0,
     "likes": 1,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "reach": 2,
     "saved": 0,
     "shares": 0,
@@ -283,6 +367,27 @@
    "url": "https://www.instagram.com/p/Df1E8y7DZr5/",
    "zaman": "2026-11-17T04:30:52+00:00"
   },
+  "instagram|18121637068994448": {
+   "bicim": "reel",
+   "dil": "tr",
+   "id": "cs2-cobblestone-matchmaking-2026-11-18",
+   "kimlik": "18121637068994448",
+   "platform": "instagram",
+   "son": {
+    "comments": 0,
+    "ig_reels_avg_watch_time": 0,
+    "likes": 0,
+    "olculdu": "2026-11-18T12:12:41+00:00",
+    "reach": 0,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "views": 4
+   },
+   "tur": "haber",
+   "url": "https://www.instagram.com/reel/Df4bHXTOzbh/",
+   "zaman": "2026-11-18T11:41:17+00:00"
+  },
   "instagram|18121644385997768": {
    "bicim": "gorsel",
    "dil": "tr",
@@ -292,12 +397,12 @@
    "son": {
     "comments": 0,
     "likes": 1,
-    "olculdu": "2026-11-17T20:49:46+00:00",
-    "reach": 1,
+    "olculdu": "2026-11-18T12:12:41+00:00",
+    "reach": 2,
     "saved": 0,
     "shares": 0,
     "total_interactions": 1,
-    "views": 4
+    "views": 6
    },
    "tur": "haber",
    "url": "https://www.instagram.com/p/Df2cBQqF_2C/",
@@ -305,14 +410,14 @@
   },
   "instagram|18128887990883984": {
    "bicim": "gorsel",
-   "dil": "tr",
+   "dil": "en",
    "id": "lol-new-dawn-2027-teaser",
    "kimlik": "18128887990883984",
    "platform": "instagram",
    "son": {
     "comments": 0,
     "likes": 0,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "reach": 1,
     "saved": 0,
     "shares": 0,
@@ -333,7 +438,7 @@
     "comments": 0,
     "ig_reels_avg_watch_time": 5111,
     "likes": 2,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "reach": 43,
     "saved": 0,
     "shares": 0,
@@ -353,7 +458,7 @@
    "son": {
     "comments": 0,
     "likes": 0,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "reach": 1,
     "saved": 0,
     "shares": 0,
@@ -366,14 +471,14 @@
   },
   "instagram|18140528014631597": {
    "bicim": "gorsel",
-   "dil": "tr",
+   "dil": "en",
    "id": "rob-run-patch-2026-11-17",
    "kimlik": "18140528014631597",
    "platform": "instagram",
    "son": {
     "comments": 0,
     "likes": 0,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "reach": 1,
     "saved": 0,
     "shares": 0,
@@ -386,20 +491,20 @@
   },
   "instagram|18148439518572452": {
    "bicim": "reel",
-   "dil": "tr",
+   "dil": "en",
    "id": "zelda-ocarina-of-time-switch-2-cikti-2026-11-16",
    "kimlik": "18148439518572452",
    "platform": "instagram",
    "son": {
     "comments": 0,
-    "ig_reels_avg_watch_time": 6503,
+    "ig_reels_avg_watch_time": 6354,
     "likes": 0,
-    "olculdu": "2026-11-17T20:49:46+00:00",
-    "reach": 194,
+    "olculdu": "2026-11-18T12:12:41+00:00",
+    "reach": 204,
     "saved": 0,
     "shares": 0,
     "total_interactions": 0,
-    "views": 224
+    "views": 232
    },
    "tur": "haber",
    "url": "https://www.instagram.com/reel/Df10d3ABJL4/",
@@ -414,7 +519,7 @@
    "son": {
     "comments": 0,
     "likes": 2,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "reach": 2,
     "saved": 0,
     "shares": 0,
@@ -427,14 +532,14 @@
   },
   "instagram|18149567110590033": {
    "bicim": "gorsel",
-   "dil": "tr",
+   "dil": "en",
    "id": "borderlands-the-hunt-rekor-2026-11-16",
    "kimlik": "18149567110590033",
    "platform": "instagram",
    "son": {
     "comments": 0,
     "likes": 0,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "reach": 2,
     "saved": 0,
     "shares": 0,
@@ -454,7 +559,7 @@
    "son": {
     "comments": 0,
     "likes": 1,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "reach": 2,
     "saved": 0,
     "shares": 0,
@@ -474,7 +579,7 @@
    "son": {
     "comments": 0,
     "likes": 1,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "reach": 1,
     "saved": 0,
     "shares": 0,
@@ -485,6 +590,27 @@
    "url": "https://www.instagram.com/p/Df2JuxQjZg5/",
    "zaman": "2026-11-17T14:31:54+00:00"
   },
+  "instagram|18247689193315088": {
+   "bicim": "reel",
+   "dil": "fr",
+   "id": "mlb-the-show-27-tech-test-now-later-packs-2026-11-17",
+   "kimlik": "18247689193315088",
+   "platform": "instagram",
+   "son": {
+    "comments": 0,
+    "ig_reels_avg_watch_time": 2703,
+    "likes": 0,
+    "olculdu": "2026-11-18T12:12:41+00:00",
+    "reach": 126,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "views": 141
+   },
+   "tur": "haber",
+   "url": "https://www.instagram.com/reel/Df39hjSRDXb/",
+   "zaman": "2026-11-18T07:23:37+00:00"
+  },
   "instagram|18641478889043802": {
    "bicim": "gorsel",
    "dil": "tr",
@@ -494,7 +620,7 @@
    "son": {
     "comments": 0,
     "likes": 0,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "reach": 2,
     "saved": 0,
     "shares": 0,
@@ -513,13 +639,29 @@
    "platform": "youtube",
    "son": {
     "begeni": 2,
-    "izlenme": 171,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "izlenme": 177,
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "yorum": 0
    },
    "tur": "haber",
    "url": "https://www.youtube.com/shorts/AI6dtnuUrLI",
    "zaman": "2026-11-16T08:00:24+00:00"
+  },
+  "youtube|Bucl5C7ouPI": {
+   "bicim": "short",
+   "dil": "tr",
+   "id": "cs2-cobblestone-matchmaking-2026-11-18",
+   "kimlik": "Bucl5C7ouPI",
+   "platform": "youtube",
+   "son": {
+    "begeni": 2,
+    "izlenme": 4,
+    "olculdu": "2026-11-18T12:12:41+00:00",
+    "yorum": 0
+   },
+   "tur": "haber",
+   "url": "https://www.youtube.com/shorts/Bucl5C7ouPI",
+   "zaman": "2026-11-18T11:41:17+00:00"
   },
   "youtube|DqHTK1EteVc": {
    "bicim": "short",
@@ -529,13 +671,29 @@
    "platform": "youtube",
    "son": {
     "begeni": 2,
-    "izlenme": 62,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "izlenme": 64,
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "yorum": 0
    },
    "tur": "haber",
    "url": "https://www.youtube.com/shorts/DqHTK1EteVc",
    "zaman": "2026-11-16T23:31:59+00:00"
+  },
+  "youtube|SeTX8UdyFxg": {
+   "bicim": "short",
+   "dil": "tr",
+   "id": "cs2-singapur-2026-major-esyalari-2026-11-18",
+   "kimlik": "SeTX8UdyFxg",
+   "platform": "youtube",
+   "son": {
+    "begeni": 2,
+    "izlenme": 4,
+    "olculdu": "2026-11-18T12:12:41+00:00",
+    "yorum": 0
+   },
+   "tur": "haber",
+   "url": "https://www.youtube.com/shorts/SeTX8UdyFxg",
+   "zaman": "2026-11-18T11:22:01+00:00"
   },
   "youtube|ZimEqKloZZg": {
    "bicim": "short",
@@ -544,9 +702,9 @@
    "kimlik": "ZimEqKloZZg",
    "platform": "youtube",
    "son": {
-    "begeni": 1,
-    "izlenme": 6,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "begeni": 2,
+    "izlenme": 8,
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "yorum": 0
    },
    "tur": "haber",
@@ -561,13 +719,29 @@
    "platform": "youtube",
    "son": {
     "begeni": 4,
-    "izlenme": 360,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "izlenme": 381,
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "yorum": 0
    },
    "tur": "haber",
    "url": "https://www.youtube.com/shorts/_GRkDEBgBZs",
    "zaman": "2026-11-17T12:14:40+00:00"
+  },
+  "youtube|_XGW5efe5x8": {
+   "bicim": "short",
+   "dil": "tr",
+   "id": "gta-vi-kacta-aciliyor-2026-11-17",
+   "kimlik": "_XGW5efe5x8",
+   "platform": "youtube",
+   "son": {
+    "begeni": 5,
+    "izlenme": 558,
+    "olculdu": "2026-11-18T12:12:41+00:00",
+    "yorum": 0
+   },
+   "tur": "haber",
+   "url": "https://www.youtube.com/shorts/_XGW5efe5x8",
+   "zaman": "2026-11-18T09:03:45+00:00"
   },
   "youtube|oK_H47M1Fec": {
    "bicim": "short",
@@ -577,8 +751,8 @@
    "platform": "youtube",
    "son": {
     "begeni": 2,
-    "izlenme": 79,
-    "olculdu": "2026-11-17T20:49:46+00:00",
+    "izlenme": 95,
+    "olculdu": "2026-11-18T12:12:41+00:00",
     "yorum": 0
    },
    "tur": "haber",
@@ -586,7 +760,7 @@
    "zaman": "2026-11-17T11:25:59+00:00"
   }
  },
- "guncelleme": "2026-11-17T20:49:46+00:00",
+ "guncelleme": "2026-11-18T12:12:41+00:00",
  "kayitlar": [
   {
    "hesaplar": {
@@ -662,6 +836,25 @@
     }
    },
    "zaman": "2026-11-17T20:49:46+00:00"
+  },
+  {
+   "hesaplar": {
+    "instagram|tr": {
+     "kullanici": "ctrlagame",
+     "medya": 31,
+     "reach_gunluk": 759,
+     "takip": 0,
+     "takipci": 2,
+     "views_gunluk": 911
+    },
+    "youtube|tr": {
+     "abone": 1,
+     "izlenme": 694,
+     "kanal": "Ctrl+A Game",
+     "video": 8
+    }
+   },
+   "zaman": "2026-11-18T12:12:41+00:00"
   }
  ],
  "surum": 1
