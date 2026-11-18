@@ -8,8 +8,8 @@
 "2026-11-18"
 ],
 "de/angebote.html": [
-"c6d58cd2c202",
-"2026-11-17"
+"feee94dcd672",
+"2026-11-18"
 ],
 "de/datenschutz.html": [
 "939bff9dd5f8",
@@ -28,11 +28,11 @@
 "2026-11-18"
 ],
 "de/index.html": [
-"0ebd945f6270",
+"592aae30bae3",
 "2026-11-18"
 ],
 "de/kostenlose-spiele.html": [
-"6b1b9210b5e1",
+"d0f9f862bc02",
 "2026-11-18"
 ],
 "de/nachrichten.html": [
@@ -116,7 +116,7 @@
 "2026-11-16"
 ],
 "de/spiele-news.html": [
-"eaad087aab09",
+"d0300e059f52",
 "2026-11-18"
 ],
 "de/spiele/albion-online.html": [
@@ -472,15 +472,15 @@
 "2026-11-15"
 ],
 "en/deals.html": [
-"88029b8cf2da",
-"2026-11-17"
+"7c3dd3249b95",
+"2026-11-18"
 ],
 "en/free-games.html": [
-"ee49ae210406",
+"2965d32c0d75",
 "2026-11-18"
 ],
 "en/game-news.html": [
-"4f4935a57e55",
+"91303a835d0c",
 "2026-11-18"
 ],
 "en/game/albion-online.html": [
@@ -896,7 +896,7 @@
 "2026-11-17"
 ],
 "en/index.html": [
-"4cd4d2789097",
+"7ea1d3d8ae31",
 "2026-11-18"
 ],
 "en/languages.html": [
@@ -1012,7 +1012,7 @@
 "2026-11-09"
 ],
 "es/index.html": [
-"e7342d0c72db",
+"0a6ec576f993",
 "2026-11-18"
 ],
 "es/juego/albion-online.html": [
@@ -1348,7 +1348,7 @@
 "2026-11-16"
 ],
 "es/juegos-gratis.html": [
-"291aaf87da24",
+"f2e3ac0e1fef",
 "2026-11-18"
 ],
 "es/languages.html": [
@@ -1360,12 +1360,12 @@
 "2026-11-17"
 ],
 "es/noticias-juegos.html": [
-"5b4298314a8d",
+"5f3ddb66baed",
 "2026-11-18"
 ],
 "es/ofertas.html": [
-"67b7cb507031",
-"2026-11-17"
+"3aa4d8130869",
+"2026-11-18"
 ],
 "es/privacy.html": [
 "4f08edb03d1e",
@@ -1384,7 +1384,7 @@
 "2026-11-15"
 ],
 "fr/actus-jeux.html": [
-"e5331bae9cbc",
+"eed0a616bc61",
 "2026-11-18"
 ],
 "fr/calendrier-sorties.html": [
@@ -1472,7 +1472,7 @@
 "2026-11-17"
 ],
 "fr/index.html": [
-"0fe9eb4bb8c0",
+"bd450e646ac3",
 "2026-11-18"
 ],
 "fr/jeu/albion-online.html": [
@@ -1808,7 +1808,7 @@
 "2026-11-16"
 ],
 "fr/jeux-gratuits.html": [
-"7c17be62fe17",
+"7e3cbe0748a5",
 "2026-11-18"
 ],
 "fr/languages.html": [
@@ -1824,8 +1824,8 @@
 "2026-11-15"
 ],
 "fr/promos.html": [
-"ba8c59c08be6",
-"2026-11-17"
+"28c64fb0be72",
+"2026-11-18"
 ],
 "fr/rumeurs.html": [
 "d39032d4c974",
@@ -1872,27 +1872,27 @@
 "2026-11-15"
 ],
 "index.html": [
-"5156a282f9ef",
+"b8ec81cf641c",
 "2026-11-18"
 ],
 "indirimler.html": [
-"c28293e9156e",
-"2026-11-17"
+"770e67390f03",
+"2026-11-18"
 ],
 "kaynaklar.html": [
 "cc0ce3566f46",
 "2026-11-09"
 ],
 "nl/aanbiedingen.html": [
-"814d9408c254",
-"2026-11-17"
+"0e483e3770c2",
+"2026-11-18"
 ],
 "nl/bronnen.html": [
 "d17f8f52cd82",
 "2026-11-16"
 ],
 "nl/gamenieuws.html": [
-"f7ff1f4c183b",
+"0c1b7588afa4",
 "2026-11-18"
 ],
 "nl/games/albion-online.html": [
@@ -2304,7 +2304,7 @@
 "2026-11-17"
 ],
 "nl/gratis-games.html": [
-"8c072c3d65c9",
+"c1a34315ca2c",
 "2026-11-18"
 ],
 "nl/gta-6.html": [
@@ -2312,7 +2312,7 @@
 "2026-11-18"
 ],
 "nl/index.html": [
-"64bbc990c121",
+"6e3dd7df6b93",
 "2026-11-18"
 ],
 "nl/nieuws.html": [
@@ -2340,7 +2340,7 @@
 "2026-11-16"
 ],
 "oyun-haberleri.html": [
-"e4e36436815b",
+"24767b90c5e0",
 "2026-11-18"
 ],
 "oyun/albion-online.html": [
@@ -2764,7 +2764,7 @@
 "2026-11-09"
 ],
 "ucretsiz-oyunlar.html": [
-"33152be0fbbd",
+"256cb56b00c8",
 "2026-11-18"
 ],
 "zh/chuanyan.html": [
@@ -2860,7 +2860,7 @@
 "2026-11-16"
 ],
 "zh/index.html": [
-"cbcbce22ee9a",
+"4a929abf6cc1",
 "2026-11-18"
 ],
 "zh/laiyuan.html": [
@@ -2868,7 +2868,7 @@
 "2026-11-16"
 ],
 "zh/mianfei-youxi.html": [
-"228c3b1db057",
+"b231731e2697",
 "2026-11-18"
 ],
 "zh/xinwen.html": [
@@ -2880,11 +2880,11 @@
 "2026-11-16"
 ],
 "zh/youhui.html": [
-"0d97050b4f34",
-"2026-11-17"
+"229a5cc0d5cf",
+"2026-11-18"
 ],
 "zh/youxi-xinwen.html": [
-"5203023c95d4",
+"538bbfef3130",
 "2026-11-18"
 ],
 "zh/youxi/albion-online.html": [

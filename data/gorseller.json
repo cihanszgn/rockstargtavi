@@ -15,6 +15,12 @@
   "en": 1920,
   "boy": 620
  },
+ "crusader-kings-iii-silk-silver-2026-11-17": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1158310/c952fefe134c1684b009ad7daf29ccb306036f55/header_alt_assets_14.jpg?t=1794934751",
+  "kaynak": "Steam",
+  "en": 460,
+  "boy": 215
+ },
  "d2r-legacy-of-terror": {
   "url": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/4i/4IFTV1PGDTC61793910189717.png",
   "kaynak": "Blizzard News",
@@ -175,6 +181,12 @@
  "nintendo-eshop-family-gifting": {
   "kilit": true,
   "neden": "Nintendo sitesi geneli jenerik paylaşım görseli (social-share)"
+ },
+ "planet-zoo-2-game-awards-aday-2026-11-17": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3219030/a5131aa4b84d04a55e3b9c561d7c886cc22bbe1c/header.jpg",
+  "kaynak": "Steam",
+  "en": 460,
+  "boy": 215
  },
  "poe-covens-of-umbra-cikti-2026-11-13": {
   "kilit": true,
