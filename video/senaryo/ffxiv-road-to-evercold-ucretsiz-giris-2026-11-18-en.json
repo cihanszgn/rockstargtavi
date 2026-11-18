@@ -1,0 +1,117 @@
+{
+ "id": "ffxiv-road-to-evercold-ucretsiz-giris-2026-11-18",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Final Fantasy XIV's Road to Evercold promotion has begun, and players can now play free for up to 30 days.",
+   "veri": {
+    "ust_etiket": "ROAD TO EVERCOLD",
+    "baslik": "Play free for up to 30 days",
+    "vurgu": [
+     "up to 30 days"
+    ],
+    "tuslar": [
+     "F",
+     "X",
+     "I",
+     "V"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "FINAL FANTASY XIV",
+    "alt": "FREE LOGIN CAMPAIGN"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to the official Steam news post, this is the longest Free Login Campaign the game has ever run.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Official Steam news post",
+    "alinti": "Longest Free Login Campaign ever: play free for up to 30 days."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "STEAM NEWS POST"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Tales of Adventure: Winter's Prelude is on sale for a limited time at a special price. Players who have finished the Endwalker scenario can jump straight to Patch 7.5.",
+   "veri": {
+    "baslik": "Winter's Prelude offer",
+    "maddeler": [
+     {
+      "metin": "Limited time, special price",
+      "tetik": "limited"
+     },
+     {
+      "metin": "Finish the Endwalker scenario",
+      "tetik": "Endwalker"
+     },
+     {
+      "metin": "Jump straight to Patch 7.5",
+      "tetik": "7.5"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "WINTER'S PRELUDE",
+    "alt": "SPECIAL PRICE, LIMITED TIME"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "The free login campaign started on November 16 and runs until January 14. Players outside the campaign can claim items by logging in before Patch 8.0 maintenance begins.",
+   "veri": {
+    "etiket": "Campaign started",
+    "tarih": "November 16",
+    "not": "Runs until January 14, 2027"
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "FREE LOGIN CAMPAIGN",
+    "alt": "NOVEMBER 16 TO JANUARY 14"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game.",
+   "veri": {
+    "cagri": "Full details on our site",
+    "alt": "Dates and sources are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

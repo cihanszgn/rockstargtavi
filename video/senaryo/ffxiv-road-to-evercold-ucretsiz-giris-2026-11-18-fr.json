@@ -1,0 +1,117 @@
+{
+ "id": "ffxiv-road-to-evercold-ucretsiz-giris-2026-11-18",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "La promotion Road to Evercold de Final Fantasy XIV a commencé : jouez gratuitement jusqu'à 30 jours.",
+   "veri": {
+    "ust_etiket": "ROAD TO EVERCOLD",
+    "baslik": "Jouez gratuitement jusqu'à 30 jours",
+    "vurgu": [
+     "jusqu'à 30 jours"
+    ],
+    "tuslar": [
+     "F",
+     "X",
+     "I",
+     "V"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "FINAL FANTASY XIV",
+    "alt": "CONNEXION GRATUITE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "D'après l'annonce officielle publiée sur Steam, c'est la campagne de connexion gratuite la plus longue jamais proposée.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Annonce officielle sur Steam",
+    "alinti": "La campagne de connexion gratuite la plus longue à ce jour : jouez gratuitement jusqu'à 30 jours."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "ANNONCE SUR STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Tales of Adventure: Winter's Prelude est disponible pour une durée limitée, à prix spécial. Les joueurs ayant terminé la quête Endwalker peuvent passer directement au patch 7.5.",
+   "veri": {
+    "baslik": "Offre Winter's Prelude",
+    "maddeler": [
+     {
+      "metin": "Durée limitée",
+      "tetik": "limitée"
+     },
+     {
+      "metin": "Prix spécial",
+      "tetik": "prix"
+     },
+     {
+      "metin": "Passage direct au patch 7.5",
+      "tetik": "7.5"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "WINTER'S PRELUDE",
+    "alt": "PRIX SPÉCIAL, DURÉE LIMITÉE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "La campagne de connexion gratuite a débuté le 16 novembre et se termine le 14 janvier. Les joueurs non éligibles recevront des objets via Moogle s'ils se connectent avant la maintenance du patch 8.0.",
+   "veri": {
+    "etiket": "Campagne lancée",
+    "tarih": "16 novembre",
+    "not": "Se termine le 14 janvier 2027"
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "CONNEXION GRATUITE",
+    "alt": "DU 16 NOVEMBRE AU 14 JANVIER"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game.",
+   "veri": {
+    "cagri": "Tout est sur le site",
+    "alt": "Sources et dates dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

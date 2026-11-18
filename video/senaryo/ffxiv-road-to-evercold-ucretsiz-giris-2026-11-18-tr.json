@@ -1,0 +1,117 @@
+{
+ "id": "ffxiv-road-to-evercold-ucretsiz-giris-2026-11-18",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Final Fantasy XIV'te Road to Evercold tanıtımı başladı. Evercold öncesi 30 güne kadar ücretsiz oynama fırsatı var.",
+   "veri": {
+    "ust_etiket": "ROAD TO EVERCOLD",
+    "baslik": "30 güne kadar ücretsiz giriş",
+    "vurgu": [
+     "30 güne kadar ücretsiz"
+    ],
+    "tuslar": [
+     "F",
+     "X",
+     "I",
+     "V"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "FINAL FANTASY XIV",
+    "alt": "ÜCRETSİZ GİRİŞ KAMPANYASI"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam'deki resmî duyuruya göre bu, şimdiye kadarki en uzun ücretsiz giriş kampanyası ve oyuncular 30 güne kadar ücretsiz oynayabiliyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam resmî haber",
+    "alinti": "Şimdiye kadarki en uzun ücretsiz giriş kampanyası: 30 güne kadar ücretsiz oynayın."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "STEAM • RESMÎ HABER"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Tales of Adventure: Winter's Prelude sınırlı süreliğine özel fiyatla satışta. Ana senaryosu Endwalker olan oyuncular bu paketle doğrudan 7.5 yamasına geçebilir.",
+   "veri": {
+    "baslik": "Winter's Prelude fırsatı",
+    "maddeler": [
+     {
+      "metin": "Sınırlı süreli, özel fiyat",
+      "tetik": "Sınırlı"
+     },
+     {
+      "metin": "Endwalker'ı bitirmek şart",
+      "tetik": "Endwalker"
+     },
+     {
+      "metin": "Doğrudan 7.5 yamasına geçiş",
+      "tetik": "7.5"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "WINTER'S PRELUDE",
+    "alt": "ÖZEL FİYAT, SINIRLI SÜRE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Kampanya 16 Kasım'da başladı ve 14 Ocak'ta sona eriyor. Kampanya dışındaki oyuncular, 8.0 yaması bakımı başlamadan giriş yaparsa eşya alabilir.",
+   "veri": {
+    "etiket": "Kampanya başladı",
+    "tarih": "16 Kasım",
+    "not": "14 Ocak'a kadar sürüyor"
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "ÜCRETSİZ GİRİŞ",
+    "alt": "14 OCAK'A KADAR"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "Ayrıntılar sitemizde",
+    "alt": "Tarihler ve kaynaklar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

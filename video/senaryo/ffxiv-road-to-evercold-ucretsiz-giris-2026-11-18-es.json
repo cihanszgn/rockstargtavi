@@ -1,0 +1,117 @@
+{
+ "id": "ffxiv-road-to-evercold-ucretsiz-giris-2026-11-18",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "La promoción Road to Evercold de Final Fantasy XIV ya está en marcha: puedes jugar gratis hasta 30 días.",
+   "veri": {
+    "ust_etiket": "ROAD TO EVERCOLD",
+    "baslik": "Juega gratis hasta 30 días",
+    "vurgu": [
+     "hasta 30 días"
+    ],
+    "tuslar": [
+     "F",
+     "X",
+     "I",
+     "V"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "FINAL FANTASY XIV",
+    "alt": "INICIO DE SESIÓN GRATIS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según la noticia oficial publicada en Steam, es la campaña de inicio de sesión gratuito más larga hasta ahora.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Noticia oficial en Steam",
+    "alinti": "La campaña de inicio de sesión gratuito más larga hasta la fecha: juega gratis hasta 30 días."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "NOTICIA EN STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Tales of Adventure: Winter's Prelude está disponible por tiempo limitado, a precio especial. Quienes hayan completado la misión Endwalker pueden saltar directamente al parche 7.5.",
+   "veri": {
+    "baslik": "Oferta Winter's Prelude",
+    "maddeler": [
+     {
+      "metin": "Tiempo limitado",
+      "tetik": "limitado"
+     },
+     {
+      "metin": "Precio especial",
+      "tetik": "precio"
+     },
+     {
+      "metin": "Salto directo al parche 7.5",
+      "tetik": "7.5"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "WINTER'S PRELUDE",
+    "alt": "PRECIO ESPECIAL Y LIMITADO"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "La campaña de inicio de sesión gratuito comenzó el 16 de noviembre y termina el 14 de enero. Quienes no sean elegibles recibirán objetos por moogle si inician sesión antes del mantenimiento del parche 8.0.",
+   "veri": {
+    "etiket": "Campaña iniciada",
+    "tarih": "16 de noviembre",
+    "not": "Termina el 14 de enero de 2027"
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "SESIÓN GRATIS",
+    "alt": "DEL 16 DE NOVIEMBRE AL 14 DE ENERO"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game.",
+   "veri": {
+    "cagri": "Todos los detalles en la web",
+    "alt": "Fechas y fuentes en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

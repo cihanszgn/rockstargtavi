@@ -28,7 +28,7 @@
 "2026-11-18"
 ],
 "de/index.html": [
-"592aae30bae3",
+"304e2c548aa6",
 "2026-11-18"
 ],
 "de/kostenlose-spiele.html": [
@@ -116,7 +116,7 @@
 "2026-11-16"
 ],
 "de/spiele-news.html": [
-"d0300e059f52",
+"9b0caee0d601",
 "2026-11-18"
 ],
 "de/spiele/albion-online.html": [
@@ -208,8 +208,8 @@
 "2026-11-16"
 ],
 "de/spiele/escape-from-tarkov.html": [
-"d7d4d5cfcaed",
-"2026-11-16"
+"6077c9ef8166",
+"2026-11-18"
 ],
 "de/spiele/euro-truck-simulator-2.html": [
 "03295ec19be9",
@@ -220,8 +220,8 @@
 "2026-11-17"
 ],
 "de/spiele/final-fantasy-xiv.html": [
-"8c1f0ac4bcba",
-"2026-11-16"
+"21eef12a65ca",
+"2026-11-18"
 ],
 "de/spiele/football-manager-27.html": [
 "a0f37db6591f",
@@ -276,7 +276,7 @@
 "2026-11-16"
 ],
 "de/spiele/index.html": [
-"92a9df45b04c",
+"7ed42ad66773",
 "2026-11-18"
 ],
 "de/spiele/knight-online.html": [
@@ -480,7 +480,7 @@
 "2026-11-18"
 ],
 "en/game-news.html": [
-"91303a835d0c",
+"ad04ca7d8384",
 "2026-11-18"
 ],
 "en/game/albion-online.html": [
@@ -572,8 +572,8 @@
 "2026-11-16"
 ],
 "en/game/escape-from-tarkov.html": [
-"77f4affc6d26",
-"2026-11-16"
+"d97c49a78aaa",
+"2026-11-18"
 ],
 "en/game/euro-truck-simulator-2.html": [
 "6b170bd36d50",
@@ -584,8 +584,8 @@
 "2026-11-17"
 ],
 "en/game/final-fantasy-xiv.html": [
-"b954d108f209",
-"2026-11-16"
+"5d06e5366adc",
+"2026-11-18"
 ],
 "en/game/football-manager-27.html": [
 "5d60cfd11d71",
@@ -640,7 +640,7 @@
 "2026-11-16"
 ],
 "en/game/index.html": [
-"d915cf54b4c6",
+"264234278511",
 "2026-11-18"
 ],
 "en/game/knight-online.html": [
@@ -896,7 +896,7 @@
 "2026-11-17"
 ],
 "en/index.html": [
-"7ea1d3d8ae31",
+"92a00b35c531",
 "2026-11-18"
 ],
 "en/languages.html": [
@@ -1012,7 +1012,7 @@
 "2026-11-09"
 ],
 "es/index.html": [
-"0a6ec576f993",
+"b146409dc602",
 "2026-11-18"
 ],
 "es/juego/albion-online.html": [
@@ -1104,8 +1104,8 @@
 "2026-11-16"
 ],
 "es/juego/escape-from-tarkov.html": [
-"5976e0b58dc3",
-"2026-11-16"
+"4700ea9a1930",
+"2026-11-18"
 ],
 "es/juego/euro-truck-simulator-2.html": [
 "42357f8a0015",
@@ -1116,8 +1116,8 @@
 "2026-11-17"
 ],
 "es/juego/final-fantasy-xiv.html": [
-"04e00d4b375c",
-"2026-11-16"
+"87b2bdf6bd1a",
+"2026-11-18"
 ],
 "es/juego/football-manager-27.html": [
 "2651217882b6",
@@ -1172,7 +1172,7 @@
 "2026-11-16"
 ],
 "es/juego/index.html": [
-"f7749c1e5482",
+"2af93e5b9aba",
 "2026-11-18"
 ],
 "es/juego/knight-online.html": [
@@ -1360,7 +1360,7 @@
 "2026-11-17"
 ],
 "es/noticias-juegos.html": [
-"5f3ddb66baed",
+"598ade4103da",
 "2026-11-18"
 ],
 "es/ofertas.html": [
@@ -1384,7 +1384,7 @@
 "2026-11-15"
 ],
 "fr/actus-jeux.html": [
-"eed0a616bc61",
+"ab10e6220ee9",
 "2026-11-18"
 ],
 "fr/calendrier-sorties.html": [
@@ -1472,7 +1472,7 @@
 "2026-11-17"
 ],
 "fr/index.html": [
-"bd450e646ac3",
+"a59e05400be8",
 "2026-11-18"
 ],
 "fr/jeu/albion-online.html": [
@@ -1564,8 +1564,8 @@
 "2026-11-16"
 ],
 "fr/jeu/escape-from-tarkov.html": [
-"e0d960533db9",
-"2026-11-16"
+"8d20c04c87ee",
+"2026-11-18"
 ],
 "fr/jeu/euro-truck-simulator-2.html": [
 "c8a7f1152c6a",
@@ -1576,8 +1576,8 @@
 "2026-11-17"
 ],
 "fr/jeu/final-fantasy-xiv.html": [
-"c2d28f0f49fa",
-"2026-11-16"
+"1b85cec610a5",
+"2026-11-18"
 ],
 "fr/jeu/football-manager-27.html": [
 "9cc45b018c34",
@@ -1632,7 +1632,7 @@
 "2026-11-16"
 ],
 "fr/jeu/index.html": [
-"af46b4a6d9dd",
+"731ac63b7fc7",
 "2026-11-18"
 ],
 "fr/jeu/knight-online.html": [
@@ -1872,7 +1872,7 @@
 "2026-11-15"
 ],
 "index.html": [
-"b8ec81cf641c",
+"41cddeac0d0d",
 "2026-11-18"
 ],
 "indirimler.html": [
@@ -1892,7 +1892,7 @@
 "2026-11-16"
 ],
 "nl/gamenieuws.html": [
-"0c1b7588afa4",
+"ec87aea2b664",
 "2026-11-18"
 ],
 "nl/games/albion-online.html": [
@@ -1984,8 +1984,8 @@
 "2026-11-16"
 ],
 "nl/games/escape-from-tarkov.html": [
-"db6471c9cb32",
-"2026-11-16"
+"f3d11312472e",
+"2026-11-18"
 ],
 "nl/games/euro-truck-simulator-2.html": [
 "a843af75105a",
@@ -1996,8 +1996,8 @@
 "2026-11-17"
 ],
 "nl/games/final-fantasy-xiv.html": [
-"f83ef2812fab",
-"2026-11-16"
+"300ffa0285d3",
+"2026-11-18"
 ],
 "nl/games/football-manager-27.html": [
 "735d4d240f9f",
@@ -2052,7 +2052,7 @@
 "2026-11-16"
 ],
 "nl/games/index.html": [
-"63528ad2a753",
+"c5f92d222214",
 "2026-11-18"
 ],
 "nl/games/knight-online.html": [
@@ -2312,7 +2312,7 @@
 "2026-11-18"
 ],
 "nl/index.html": [
-"6e3dd7df6b93",
+"0bc2e6d9a86a",
 "2026-11-18"
 ],
 "nl/nieuws.html": [
@@ -2340,7 +2340,7 @@
 "2026-11-16"
 ],
 "oyun-haberleri.html": [
-"24767b90c5e0",
+"8822a5e992bb",
 "2026-11-18"
 ],
 "oyun/albion-online.html": [
@@ -2432,8 +2432,8 @@
 "2026-11-16"
 ],
 "oyun/escape-from-tarkov.html": [
-"2c36f3af2574",
-"2026-11-16"
+"80fd79f3121d",
+"2026-11-18"
 ],
 "oyun/euro-truck-simulator-2.html": [
 "36900f1b67e6",
@@ -2444,8 +2444,8 @@
 "2026-11-17"
 ],
 "oyun/final-fantasy-xiv.html": [
-"7711bbda3b7f",
-"2026-11-16"
+"a65756cb898e",
+"2026-11-18"
 ],
 "oyun/football-manager-27.html": [
 "1457ab42ba23",
@@ -2500,7 +2500,7 @@
 "2026-11-16"
 ],
 "oyun/index.html": [
-"1c88dbfb0950",
+"5a043eb4d0f8",
 "2026-11-18"
 ],
 "oyun/knight-online.html": [
@@ -2860,7 +2860,7 @@
 "2026-11-16"
 ],
 "zh/index.html": [
-"4a929abf6cc1",
+"f9ce39553bc7",
 "2026-11-18"
 ],
 "zh/laiyuan.html": [
@@ -2884,7 +2884,7 @@
 "2026-11-18"
 ],
 "zh/youxi-xinwen.html": [
-"538bbfef3130",
+"3a2095142ceb",
 "2026-11-18"
 ],
 "zh/youxi/albion-online.html": [
@@ -2976,8 +2976,8 @@
 "2026-11-16"
 ],
 "zh/youxi/escape-from-tarkov.html": [
-"dd5b81d22255",
-"2026-11-16"
+"995605dd9fd1",
+"2026-11-18"
 ],
 "zh/youxi/euro-truck-simulator-2.html": [
 "22996448724d",
@@ -2988,8 +2988,8 @@
 "2026-11-17"
 ],
 "zh/youxi/final-fantasy-xiv.html": [
-"c81cfff39c9a",
-"2026-11-16"
+"76698ac2dbe6",
+"2026-11-18"
 ],
 "zh/youxi/football-manager-27.html": [
 "82126547e7b4",
@@ -3044,7 +3044,7 @@
 "2026-11-16"
 ],
 "zh/youxi/index.html": [
-"8209b4f9d64e",
+"0db2c03b9169",
 "2026-11-18"
 ],
 "zh/youxi/knight-online.html": [
