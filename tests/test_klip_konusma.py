@@ -157,14 +157,15 @@ class Katman(unittest.TestCase):
     def test_tam_tarama_sohbetsiz_aday_uretir_ortusen_pencere_teklesir(self):
         # Aynı gerçek cümleye iki tarama penceresinden dönülür; zaman ID'leri her pencerede yereldir.
         def model(prompt):
-            data = json.loads(prompt.split('<dokum>\n')[1].split('\n</dokum>')[0])
-            rows = [r for r in data if 310 <= r['bas_sn'] <= 340]
+            data = json.loads(prompt.split('<dokum>\n')[1].split('\n</dokum>')[0])[0]['cumleler']
+            rows = [r for r in data if 310 <= r['bas'] <= 340]
             if len(rows) != 4:
-                return '{"anlar":[]}'
-            return json.dumps({'anlar': [answer(puan=9, bas_cumle=rows[0]['id'], son_cumle=rows[-1]['id'])]})
+                return '{"pencereler":[{"id":0,"anlar":[]}]}'
+            return json.dumps({'pencereler': [{'id': 0, 'anlar': [answer(puan=9, bas_cumle=rows[0]['id'], son_cumle=rows[-1]['id'])]}]})
         with tempfile.TemporaryDirectory() as d:
             clips, report = k.katman(VOD, [], d,
-                {**CFG, 'konusma_cihaz': 'cuda', 'konusma_tam_tarama': True}, 'ff', None,
+                {**CFG, 'konusma_cihaz': 'cuda', 'konusma_tam_tarama': True,
+                 'konusma_pencere_sn': 240, 'konusma_ortusme_sn': 45}, 'ff', None,
                 model=model, dokumcu=lambda *a: (sentences(), []))
         self.assertTrue(report['tam_tarama'])
         self.assertEqual(len(clips), 1)
@@ -210,6 +211,73 @@ class Katman(unittest.TestCase):
                 model=lambda _: json.dumps(answer()), dokumcu=lambda *a: (sentences(), []))
         self.assertTrue(clips[0]['dokum_metni'])
         self.assertEqual(y.baslik_uret({}, clips[0]), answer()['baslik'])
+
+
+class TopluYargi(unittest.TestCase):
+    def test_iki_saat_en_cok_15_cagri(self):
+        rows=[{'bas':i,'bit':i+9,'metin':'Tam bir cümle.','tam':True,'bas_tam':True} for i in range(0,7200,10)]
+        calls=[]
+        def model(prompt):
+            calls.append(prompt)
+            data=json.loads(prompt.split('<dokum>\n')[1].split('\n</dokum>')[0])
+            return json.dumps({'pencereler':[{'id':r['id'],'anlar':[]} for r in data]})
+        with tempfile.TemporaryDirectory() as d:
+            clips,report=k.katman({**VOD,'sure_sn':7200},[aday(300+i*100) for i in range(15)],d,
+                {**CFG,**k.AYAR,'konusma':True,'konusma_cihaz':'cuda','konusma_tam_tarama':True},'ff',None,
+                model=model,dokumcu=lambda *a:(rows,[]))
+        self.assertEqual(len(calls),8)  # 1 toplu aday + 7 tam tarama
+        self.assertLessEqual(report['cagrilar'],15)
+        self.assertEqual(clips,[])  # geçerli boş yargı adayları veto eder
+
+    def test_yeniden_denemeler_butceye_dahil(self):
+        model=Mock(return_value='bozuk')
+        limited=k.ButceliModel(model,3)
+        with tempfile.TemporaryDirectory() as d:
+            for _ in range(4):k.toplu_yargi([sentences()[:6]],limited,pathlib.Path(d),{**CFG,'konusma_yargi_onbelleksiz':True})
+        self.assertEqual(model.call_count,3)
+
+    def test_pencere_id_tekrari_reddedilir(self):
+        model=Mock(return_value=json.dumps({'pencereler':[{'id':0,'anlar':[]},{'id':0,'anlar':[]}]}))
+        with tempfile.TemporaryDirectory() as d:
+            self.assertEqual(k.toplu_yargi([sentences()[:6]]*2,model,pathlib.Path(d),CFG),[None,None])
+        self.assertEqual(model.call_count,2)
+
+    def test_tek_pencerenin_gecersiz_yargisi_digerlerini_atmaz(self):
+        sent=sentences()[:6]
+        iyi={'puan':7,'gerekce':'komik','anlasilir':True,'bas_cumle':0,'son_cumle':2,'baslik':'Olay'}
+        kotu={**iyi,'puan':99}
+        model=Mock(return_value=json.dumps({'pencereler':[{'id':0,'anlar':[iyi]},{'id':1,'anlar':[kotu]}]}))
+        with tempfile.TemporaryDirectory() as d:
+            sonuc=k.toplu_yargi([sent,sent],model,pathlib.Path(d),CFG)
+        self.assertEqual(model.call_count,2)  # geçersiz pencere için bir yeniden deneme
+        self.assertEqual(sonuc[0][0]['puan'],7)
+        self.assertIsNone(sonuc[1])
+
+    def test_yargisiz_aday_tarama_kapsiyorsa_secime_girmez(self):
+        rows=[{'bas':i,'bit':i+9,'metin':'Tam bir cümle.','tam':True,'bas_tam':True} for i in range(0,400,10)]
+        def model(prompt):
+            data=json.loads(prompt.split('<dokum>\n')[1].split('\n</dokum>')[0])
+            if 'BAŞTAN SONA' in prompt:
+                return json.dumps({'pencereler':[{'id':r['id'],'anlar':[]} for r in data]})
+            return 'bozuk'
+        with tempfile.TemporaryDirectory() as d:
+            clips,report=k.katman({**VOD,'sure_sn':400},[aday(300),aday(350)],d,
+                {**CFG,**k.AYAR,'konusma':True,'konusma_cihaz':'cuda','konusma_tam_tarama':True},'ff',None,
+                model=model,dokumcu=lambda *a:(rows,[]))
+        self.assertEqual(clips,[])
+        self.assertTrue(any('tarama penceresi kapsıyor' in x['sonuc'] for x in report['kararlar']))
+
+    def test_kota_sessizce_yutulmaz(self):
+        with self.assertRaises(k.ModelKotasi):
+            k.yargi_al(sentences(),Mock(side_effect=k.ModelKotasi('quota')))
+
+    def test_toplu_onbellek_atlanabilir(self):
+        model=Mock(return_value='{"pencereler":[{"id":0,"anlar":[]}]}')
+        with tempfile.TemporaryDirectory() as d:
+            for _ in range(2):k.toplu_yargi([sentences()],model,pathlib.Path(d),CFG)
+            self.assertEqual(model.call_count,1)
+            k.toplu_yargi([sentences()],model,pathlib.Path(d),{**CFG,'konusma_yargi_onbelleksiz':True})
+            self.assertEqual(model.call_count,2)
 
 
 class Onbellek(unittest.TestCase):

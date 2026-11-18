@@ -1288,6 +1288,21 @@ class KonusmaButunlesme(unittest.TestCase):
         self.assertEqual(analiz.call_args.args[2]['azami_klip'], 15)
         self.assertEqual(sonuc['ayar']['azami_klip'], 3)
 
+    def test_kick_model_kotasi_analizi_dusurmez_sohbet_secimine_doner(self):
+        from unittest import mock
+        vod = {**sinyal_vod(), 'vod_id': 'kota-test', 'platform': 'kick', 'anahtar': 'kick:kota-test'}
+        cfg = {**yk.AYAR_VARSAYILAN, 'konusma': True}
+        fake = {'klipler': [], 'ayar': {}, 'dilim_sayimlari': []}
+        with tempfile.TemporaryDirectory() as t, \
+                mock.patch.object(yk, 'vod_hazirla', return_value=(vod, cfg)), \
+                mock.patch.object(yk, 'sohbet_al', return_value=[]), \
+                mock.patch.object(yk, 'analiz_et', return_value=fake), \
+                mock.patch.object(yk, 'ffmpeg_bul', return_value='ff'), \
+                mock.patch.object(yk.klip_konusma, 'katman', side_effect=yk.klip_konusma.ModelKotasi('429 usage limit')):
+            _, sonuc = yk.analiz_komutu(vod['anahtar'], pathlib.Path(t), {'ayar': cfg})
+        self.assertEqual(sonuc['konusma']['durum'], 'konuşma katmanı kapalı')
+        self.assertIn('429', sonuc['konusma']['neden'])
+
     def test_konusmasiz_komut_satiri_gecersizi(self):
         import argparse
         self.assertEqual(yk._gecersiz(argparse.Namespace(konusmasiz=True)), {'konusma': False})

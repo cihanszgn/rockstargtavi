@@ -28,6 +28,7 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 
 import klip_konusma
+import klip_youtube
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 YAYINCI_DOSYASI = ROOT / 'otomasyon' / 'klip-yayincilar.json'
@@ -1147,6 +1148,8 @@ def zaman_damgali_baglanti(vod: dict, sn: float) -> tuple[str, bool]:
     """(adres, platformda doğrulandı mı). Kick'in belgelenmiş bir zaman parametresi yok: ?t= denenmedi."""
     if vod['platform'] == 'kick':
         return f"{vod['vod_url']}?t={int(sn)}", False
+    if vod['platform'] == 'youtube':
+        return f"https://youtu.be/{vod['vod_id']}?t={int(sn)}", True
     return vod['vod_url'], False
 
 
@@ -1166,9 +1169,11 @@ def aciklama_uret(vod: dict, klip: dict) -> str:
     konu = ''
     if klip.get('kelimeler') or klip.get('emojiler'):
         konu = ' Sohbette öne çıkanlar: ' + ', '.join((klip.get('kelimeler') or [])[:3] + (klip.get('emojiler') or [])[:2]) + '.'
-    platform = vod['platform'].capitalize()
+    youtube = vod['platform'] == 'youtube'
+    platform = 'YouTube' if youtube else vod['platform'].capitalize()
+    kaynak = 'videosundan' if youtube else 'canlı yayınından'
     return (
-        f"{vod['yayinci']} canlı yayınından ({vod['tarih']}, {platform}) {_an_tarifi(klip)}.{konu}\n\n"
+        f"{vod['yayinci']} {kaynak} ({vod['tarih']}, {platform}) {_an_tarifi(klip)}.{konu}\n\n"
         f"Yayıncı: {vod['yayinci']} — {vod['kanal_url']}\n"
         f"Kaynak yayın: {vod['vod_url']} (yayının {zaman_metni(bas)} noktası)\n"
         "Görüntü ve ses yayıncıya aittir; tam yayın için kanalına gidin.\n\n"
@@ -1183,6 +1188,8 @@ def paket_json(vod: dict, klip: dict, mp4: pathlib.Path, dogrulama: dict, ayar: 
     return {**{
         'yayinci': vod['yayinci'],
         'platform': vod['platform'],
+        'vod_id': vod['vod_id'],
+        'kaynak_sure_sn': vod['sure_sn'],
         'kanal': vod['kanal'],
         'kanal_url': vod['kanal_url'],
         'vod_url': vod['vod_url'],
@@ -1337,7 +1344,8 @@ def klip_metinleri(vod: dict) -> dict[str, str]:
     return {
         'ad': vod['yayinci'],
         'oyun': vod.get('oyun') or '',
-        'kaynak': f"Kaynak: kick.com/{vod['kanal']}" if vod['platform'] == 'kick' else f"Kaynak: {vod['kanal_url']}",
+        'kaynak': (f"Kaynak: kick.com/{vod['kanal']}" if vod['platform'] == 'kick' else
+                   f"Kaynak: youtube.com/@{vod['kanal']}" if vod['platform'] == 'youtube' else f"Kaynak: {vod['kanal_url']}"),
         'marka': DUZEN['marka'],
     }
 
@@ -1392,7 +1400,16 @@ def klip_kes(vod: dict, klip: dict, hedef: pathlib.Path, ff: str, font: str, aya
         plan_bas = bas
         hizalar = []
         bolumler, origin = None, 0.0
-        if (ayar or {}).get('konusma'):
+        youtube_indirme = None
+        if vod['platform'] == 'youtube':
+            origin = max(0, bas-6)
+            try:
+                media, youtube_indirme = klip_youtube.bolum_indir(vod, origin,
+                    min(vod['sure_sn'], bas+sure+6), tmp_yol/'youtube.mkv', ff)
+            except (OSError, RuntimeError, ValueError) as e:
+                raise KlipHatasi(f'YouTube kesit indirilemedi: {e}') from e
+            kaynak, yerel = str(media), True
+        elif (ayar or {}).get('konusma'):
             try:
                 bolumler = klip_konusma.hls_bolumleri(kaynak, http_metin(kaynak))
                 playlist = tmp_yol / 'klip.m3u8'
@@ -1478,12 +1495,30 @@ def klip_kes(vod: dict, klip: dict, hedef: pathlib.Path, ff: str, font: str, aya
     bilgi = klip_dogrula(ff, hedef)
     if hizalar:
         bilgi['ses_hizasi'] = {'denemeler': hizalar, 'kaydirma_sn': round(bas-plan_bas,4)}
+    if youtube_indirme:
+        bilgi['youtube_indirme'] = youtube_indirme
     return bilgi
 
 
 # ---------------------------------------------------------------- akış
 
 def vod_hazirla(arguman: str, ayar: dict, http=http_json, http_text=http_metin) -> tuple[dict, dict]:
+    vid = klip_youtube.video_id(arguman)
+    if vid:
+        try:
+            info = klip_youtube.bilgi(f'https://www.youtube.com/watch?v={vid}')
+            vod = klip_youtube.normalle(info, ayar)
+            y, c = klip_youtube.yayinci(ayar, vod['kanal_id'])
+            cfg = {**klip_youtube.AYAR, **(y['ayar'] if y else ayar['ayar']),
+                   'konusma': True, 'bas_dislama_sn': 0, 'son_dislama_sn': 0,
+                   **((c or {}).get('ayar') or {})}
+            reason = klip_youtube.atlama_nedeni(info, cfg, tarih_suz=False)
+            if reason:
+                raise KlipHatasi(f'YouTube video atlandı: {reason}')
+            vod['_youtube_bilgi'] = info
+            return vod, cfg
+        except (OSError, RuntimeError, ValueError) as e:
+            raise KlipHatasi(str(e)) from e
     uuid, ipucu = vod_coz(arguman)
     vod = kick_vod_bilgi(uuid, ipucu, ayar, http)
     if vod['canli']:
@@ -1510,6 +1545,15 @@ def analiz_komutu(arguman: str, dizin: pathlib.Path, ayar: dict, gecersiz: dict 
             return vod, sonuc
     def ilerleme(a, b):
         print(f'  sohbet: {a}/{b} pencere', file=sys.stderr, flush=True)
+    if vod['platform'] == 'youtube':
+        info = vod.pop('_youtube_bilgi')
+        try:
+            sonuc = klip_youtube.analiz(vod, info, dizin, vayar, ffmpeg_bul(), http_metin)
+        except (OSError, RuntimeError, ValueError) as e:
+            raise KlipHatasi(f'YouTube analiz: {e}') from e
+        klip_konusma.json_yaz(yol, sonuc)
+        durum_isaretle(dizin, vod['anahtar'], durum='analiz', yayinci=vod['yayinci'], klip=len(sonuc['klipler']))
+        return vod, sonuc
     mesajlar = sohbet_al(vod, dizin, ilerleme=ilerleme)
     konusma_acik = vayar.get('konusma') and vayar['yontem'] == 'sinyal'
     sonuc = analiz_et(vod, mesajlar, {**vayar, 'azami_klip': max(vayar['azami_klip'],
@@ -1518,7 +1562,7 @@ def analiz_komutu(arguman: str, dizin: pathlib.Path, ayar: dict, gecersiz: dict 
         try:
             sonuc['klipler'], sonuc['konusma'] = klip_konusma.katman(
                 vod, sonuc['klipler'], dizin, vayar, ffmpeg_bul(), http_metin)
-        except KlipHatasi as e:
+        except (KlipHatasi, klip_konusma.ModelKotasi) as e:
             sonuc['klipler'] = klip_konusma.son_secim(sonuc['klipler'], vayar)
             sonuc['konusma'] = {'durum': 'konuşma katmanı kapalı', 'neden': str(e)}
         print(f"  {sonuc['konusma']['durum']}: {sonuc['konusma'].get('neden', '')}", file=sys.stderr, flush=True)
@@ -1560,6 +1604,11 @@ def kes_komutu(arguman: str, dizin: pathlib.Path, ayar: dict, gecersiz: dict | N
     uretilen = []
     canli_engel = canli_aralik_listesi(durum_oku(dizin)['vod'].get(vod['anahtar'], {}), vod['t0_epoch'])
     for klip in sonuc['klipler']:
+        tekrar = klip_youtube.metin_tekrar(klip, vod, dizin)
+        if tekrar:
+            sonuc.setdefault('kesimde_elenen', []).append({'zirve_sn': klip['zirve_sn'],
+                'neden': 'çift kaynak döküm eşleşmesi', 'paket': tekrar})
+            continue
         if araliklar_orter(klip['klip_baslangic_sn'], klip['klip_bitis_sn'], canli_engel):
             print(f"  klip {klip['no']}: yayın sürerken zaten kesilmiş (canli-*.mp4), atlandı", file=sys.stderr, flush=True)
             continue
@@ -1643,8 +1692,10 @@ def tara(ayar: dict, dizin: pathlib.Path, yayinci: str | None = None, hepsi: boo
                 atlanan.append(v['anahtar'])
             else:
                 bulunan.append(satir)
-    return {'yeni': bulunan, 'atlanan_islenmis': atlanan, 'suzgece_uymayan': suzgece_uymayan,
-            'desteksiz': desteksiz, 'hata': hatalar}
+    yt = klip_youtube.tara(ayar, dizin, yayinci, hepsi, simdi)
+    return {'yeni': bulunan + yt['yeni'], 'atlanan_islenmis': atlanan + yt['atlanan_islenmis'],
+            'suzgece_uymayan': suzgece_uymayan, 'desteksiz': desteksiz, 'hata': hatalar + yt['hata'],
+            'youtube_atlanan': yt['youtube_atlanan'], 'youtube_kanallar': yt['youtube_kanallar']}
 
 
 # ---------------------------------------------------------------- canlı: yayın sürerken klip
@@ -1847,7 +1898,7 @@ def canli_komutu(ayar: dict, dizin: pathlib.Path, kanal: str | None = None, en_c
                         {**vod, 'sure_sn': toplam}, adaylar, dizin,
                         {**vayar, 'son_dislama_sn': 0, 'azami_klip': vayar['canli_azami_klip'] - len(kesilmis)},
                         ffmpeg_bul(), http_text, canli=True, engelli=engelli)
-                except KlipHatasi as e:
+                except (KlipHatasi, klip_konusma.ModelKotasi) as e:
                     satir['konusma'] = {'durum': 'konuşma katmanı kapalı', 'neden': str(e)}
                 if not kuru:
                     satir['konusma_veto_yeni'] = konusma_veto_kaydet(dizin, vod, satir['konusma'], vayar)
@@ -1936,7 +1987,7 @@ def main(argv=None) -> int:
     t.add_argument('--hepsi', action='store_true', help='işlenmişleri de göster')
     for ad, yardim in (('analiz', 'sohbeti indir, zirveleri bul'), ('kes', 'klipleri kes ve paketle')):
         k = s.add_parser(ad, help=yardim)
-        k.add_argument('vod', help='kick:<uuid>, uuid veya kick.com/<kanal>/videos/<uuid>')
+        k.add_argument('vod', help='kick:<uuid>, Kick adresi, youtube:<id> veya YouTube video adresi')
         k.add_argument('--esik-k', dest='esik_k', type=float)
         k.add_argument('--min-mesaj', dest='min_mesaj', type=int)
         k.add_argument('--min-oran', dest='min_oran', type=float)

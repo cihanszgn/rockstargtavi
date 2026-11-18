@@ -1,8 +1,8 @@
 # Yayın klip hattı
 
-Biten bir yayının (ya da `canli` komutuyla **süren** yayının) sohbetinden ve isteğe bağlı konuşma dökümünden 9:16 dikey klip paketi üretir. **Yayın yapmaz**: sosyal kuyruğa kayıt eklemez, hiçbir yere yüklemez. Çıktıyı (mp4 + json) sen incelersin.
+Biten bir Kick yayınının (ya da `canli` komutuyla **süren** yayının) sohbetinden ve isteğe bağlı konuşma dökümünden, ayrıca aynı yayıncıların **YouTube** videolarının konuşmasından (altyazı/Whisper + Sonnet yargısı) 9:16 dikey klip paketi üretir. **Yayın yapmaz**: sosyal kuyruğa kayıt eklemez, hiçbir yere yüklemez. Çıktıyı (mp4 + json) sen incelersin.
 
-Araç: `tools/yayin_klip.py` · yayıncı listesi: `otomasyon/klip-yayincilar.json` · testler: `py -m unittest discover -s tests -p "test_yayin_klip.py"`
+Araç: `tools/yayin_klip.py` (YouTube bölümü `tools/klip_youtube.py`, konuşma katmanı `tools/klip_konusma.py`) · yayıncı listesi: `otomasyon/klip-yayincilar.json` · testler: `py -m unittest discover -s tests -p "test_*klip*.py"`
 
 ## Komutlar
 
@@ -14,7 +14,10 @@ py tools/yayin_klip.py kes kick:<uuid>           # analiz + klipleri kes + paket
 py tools/yayin_klip.py otomatik --en-cok 3       # tara + kes (yeni yayınların ilk 3'ü)
 py tools/yayin_klip.py canli                     # SÜREN yayınlarda tek tur: yeni biten kahkaha/konu anlarını keser
 py tools/yayin_klip.py canli --kanal wtcn --kuru # yalnız sohbeti indir + analiz et, kesme (deneme)
+py tools/yayin_klip.py kes youtube:<11 karakterlik id>   # YouTube videosu (adres de olur: youtu.be/…, youtube.com/watch?v=…); aşağıda "YouTube kaynağı"
 ```
+
+`tara` Kick yayınlarını ve ayrıca listedeki beş yayıncının etkin YouTube kanallarının (`videos` + `streams` sekmeleri) son `son_gun` günlük videolarını bulur.
 
 `canli` **tek seferlik** çalışır (kalıcı servis değildir); yayın sürerken 5–10 dk'da bir çağrılması yeterli (aşağıda "Yayın sürerken klip"). Tampon/kayıt gerekmez.
 
@@ -183,7 +186,14 @@ Not: `asmonSmash` (278) hiçbir listede yok, nötr kalır. `HYPERCLAP` alkış o
 | konusma_parca_sn / konusma_aday_parca_sn | 300 / 60 | tam döküm / aday için önbellek ızgarası; her iki yanda 15 sn bağlam |
 | konusma_aday_sayisi / konusma_canli_aday_sayisi | 15 / 6 | bitmiş yayın / tek canlı turda değerlendirilecek aday sayısı |
 | konusma_tam_tarama | true | bitmiş yayında ve GPU varken tam döküm taraması |
-| konusma_pencere_sn / konusma_ortusme_sn | 240 / 45 | modelin tam tarama penceresi ve örtüşmesi |
+| konusma_pencere_sn / konusma_ortusme_sn | 1200 / 60 | modelin tam tarama penceresi ve örtüşmesi (2026-11-18: 240/45 idi; bkz. "Model çağrısı azaltma") |
+| konusma_toplu | true | tek istekte birden çok pencere/aday yargılanır (`{"pencereler":[…]}`); false ise pencere başına bir çağrı |
+| konusma_tarama_an | 8 | tarama penceresi başına en çok olay |
+| konusma_cagri_butcesi | 15 | 2 saatlik (7200 sn) yayın başına model çağrısı tavanı; daha uzun yayında `ceil(süre/7200)` katı. Yeniden denemeler de sayılır, önbellek okuması sayılmaz. Aşılırsa "konuşma çağrı bütçesi doldu" hatası (kota değil): o istekteki pencereler yargısız kalır, yargısız aday tarama kapsıyorsa seçime girmez |
+| youtube_min_sure_sn | 300 | bundan kısa YouTube videosu atlanır (`cok_kisa`) |
+| youtube_liste_siniri | 50 | kanal sekmesinden bakılacak en yeni video sayısı |
+| youtube_heatmap_agirlik / youtube_heatmap_min | 0.2 / 0.6 | YouTube "en çok izlenen" eğrisinin puana katkısı (0–1) ve yerel tepe eşiği; heatmap yalnız eski/çok izlenen videoda dolu |
+| youtube_aday_whisper | true | altyazıdan bulunan adayların çevresi gerçek sınırlar ve ses hizası için Whisper ile yeniden dökülür |
 | konusma_agirlik_sohbet / konusma_agirlik_icerik | 0.35 / 0.65 | birleşik 0–100 puan; konuşmanın 0–10 puanı önce 10 ile çarpılır |
 | konusma_min_puan | 6.0 | bunun altındaki veya `anlasilir:false` yargılı aday elenir |
 | konusma_azami_sn | 59 | cümle sınırlarıyla klip üst süresi; kod 59 sn'den yukarı çıkmaz |
@@ -208,9 +218,37 @@ Konuşma yargısı geçerliyse başlık ve açıklama klipte anlatılan olaydan 
 |---|---|---|---|
 | Kick | evet (`/api/v2/channels/<id>/messages`) | evet (HLS, ffmpeg) | çalışıyor; giriş/anahtar istemiyor |
 | Twitch | — | — | desteklenmiyor: listedeki yayıncıların kayıtlı yayını (VOD) yok (2026-11-17) |
-| YouTube | — | — | desteklenmiyor: yazılmadı/denenmedi (yt-dlp `live_chat` ile eklenebilir) |
+| YouTube | hayır (canlı sohbet tekrarı yazılmadı/denenmedi) | evet (yt-dlp aralık indirme, anahtarsız/çerezsiz) | **yalnız konuşma yöntemi**: altyazı/Whisper dökümü + Sonnet yargısı + heatmap; 3 gerçek videoda uçtan uca denendi (2026-11-18) |
 
 Desteklenmeyen platformdaki yayıncı `tara`'da `desteksiz` altında nedeniyle raporlanır, diğerleri sürer.
+
+## YouTube kaynağı (2026-11-18)
+
+Kod: `tools/klip_youtube.py`; bütünleşme `yayin_klip.py` (`kes`, `analiz`, `tara`, `otomatik`). Yeni servis, anahtar, çerez veya hesap yoktur; yalnız `yt-dlp` (2026.10.26 denendi).
+
+**Kanallar.** `klip-yayincilar.json` içinde her yayıncıda `youtube_kanallari: [{kanal_id, tanitici, etkin}]`. Etkin: Tolunay Ören `@TolunayOren`, wtcN `@wtcNFerit`, Jahrein `@jahreinboss`, Kemalcan Parlak `@KendineMüzisyenKM`, Eraycan `@erayozkenar`. Eski ikinci kanallar (`tolunayorentwitch`, `erayozkenaryt`) `etkin:false`. Paketteki "Kaynak: youtube.com/@<tanıtıcı>" yazısı buradan gelir.
+
+**Akış.** `video_id` (adres/`youtube:<id>`) → tekil metadata → atlama süzgeci → konuşma yolu:
+1. Döküm: otomatik altyazı (JSON3, `tr-orig`) varsa onunla **aday taraması**; yoksa bütün video Whisper'la (faster-whisper, 330 sn parça önbelleği) dökülür. Altyazı kelime sınırı için yeterince kesin değildir: seçilen adayların çevresi (±25 sn) ayrıca Whisper'la dökülüp yeniden yargılanır; kesim sınırı ve ses referansı bu gerçek dökümden gelir.
+2. Tarama: 1200 sn pencereler (60 sn örtüşme), toplu yargı. Heatmap'te yerel tepe (`youtube_heatmap_min`) varsa çevresindeki ±45 sn de bağımsız aday olur (içerik yargısı yine zorunlu); heatmap yalnız puana `youtube_heatmap_agirlik` kadar katkı verir.
+3. Kesim: tam cümle sınırı (30–55 sn, en çok 59), yalnız o aralık (+6 sn pay) `download_ranges` ile 1080p indirilir (tüm video inmez), kadraj düzeni, ses hizası doğrulaması, 1080x1920 h264+aac ≤60 sn. İndirme/ffmpeg çökmesinde bir kez yeniden denenir; bot/403'te `player_client=android,ios,tv` yedeği, üyelik/özel/erişilemez videoda yeniden deneme yok. Denenen 3 videonun hepsi normal istemciyle 1080p indi; indirilen yükseklik `video.youtube_indirme.yukseklik` alanında yazar.
+4. Konuşma katmanı YouTube'da **zorunludur** (sohbet yok): `konusma:false` verilirse "YouTube sohbet içermez" hatası çıkar. Kick'te varsayılan yine kapalıdır.
+
+**Atlananlar (`tara` → `youtube_atlanan`, kanal başına sayı ve nedenler `youtube_kanallar`).** `shorts`, `uyelere_ozel_veya_ozel`/`uyelere_ozel`, `canli_veya_islenmemis` (canlı/yaklaşan), `sure_bilinmiyor`, `cok_kisa` (<300 sn), `eski` (son 7 günden eski; liste girdisi 14 günden de eskiyse tekil metadata istenmeden `eski_yaklasik_tarih`), `tarih_bilinmiyor` (yeni olduğu varsayılmaz), `bilgi_hatasi`, `oyun_suzgeci`, `islenmis`.
+
+**Paket JSON'u.** Kick alanları korunur; `platform:"youtube"`, `vod_id` = video kimliği, `vod_url`, `vod_zaman_damgali_url` = `https://youtu.be/<id>?t=<sn>` (`..._dogrulandi:true`), `kanal`, `kanal_url`, `yayin_basligi`, `aday_kaynaklari` (`altyazi_tarama` / `whisper_tarama` / `heatmap`), `video.youtube_indirme` (istemci, yükseklik, indirilen aralık).
+
+**Kick + YouTube çift kaynak.** Aynı yayıncının aynı yayını iki platformda olabilir; aynı an iki kez kesilmesin diye: (a) `ayni_yayin` kimlik kesin değilse tarih (≤2 gün), süre (±%3, ≥90 dk) ve başlık benzerliğiyle `muhtemel_ayni_yayin_inceleme` der ve YouTube analizi **kesmeden** durur (`inceleme` listesi); (b) üretilen klibin dökümü başka platformdaki mevcut paketin dökümüyle ≥%80 benzerse (≥15 kelime) `cift_kaynak_dokum_eslesmesi` ile elenir. **Gerçek bir Kick+YouTube çiftiyle denenmedi** (66 çiftin metadatasında hepsi `belirsiz`; aşağıda bilinen belirsizlikler).
+
+**Gerçek denemeler (2026-11-18).**
+
+| Video | Süre | Altyazı | Heatmap | Klip | Whisper/Sonnet çağrı |
+|---|---|---|---|---|---|
+| `L7QH0sUtHJ0` Tolunay Ören (kurgulu) | 26 dk | tr-orig | dolu (1 tepe) | 3 (31.8, 49.0, 32.6 sn) | 682 satır altyazı, 4 çağrı |
+| `r8v8zcyIYf4` Jahrein (CoD) | 30 dk | tr-orig | boş | 1 (34.0 sn) | 3 çağrı |
+| `TE7Q0eKsIaY` Eraycan (final bölümü, kurgulu) | 3 sa 46 dk | tr-orig | boş | 2 (45.6, 37.5 sn) | 13 Sonnet çağrısı (12 tarama + 1 doğrulama; tavan 45; 12'si ffmpeg çökmesiyle biten ilk koşudan yargı önbelleğinden geldi, son koşu 1 yeni çağrı gösterir), 16 Whisper parçası (yalnız aday çevresi) |
+
+Hepsi 1080x1920, h264+aac, ses hizası korelasyonu ≥0.97, 1080p indi. Klip başına değerlendirme, döküm alıntıları ve kare yolları: `C:\Cihan.Ai\.scratch\yayin-klip\youtube-rapor.md`. `tara` beş kanalda çalıştı (3 dk 19 sn): bulunan Tolunay 0 (üyelere özel 6, eski 70), wtcN 0 (eski 50), Jahrein 2, Kemalcan 0, Eraycan 10; atlanan toplam 264.
 
 Kick sohbet sınırları: pencere başına 25 mesaj (araç kalanı devam sorgusuyla alır), saniye çözünürlüğü, hız sınırı (429). Araç istekleri ortak bir hız sınırıyla gönderir (`KLIP_ISTEK_ARALIK`, varsayılan 0.4 sn; 4 paralel + sınırsız hızda Kick 429 verdi; 429 gelirse bekleyip tekrar dener). Ölçüm: 139 dk'lık yayın (1583 pencere) ~12 dk; 6 saatlik yayın ~4300 pencere ≈ 30–40 dk. 403 gelirse araç "desteklenmiyor: bot koruması" der.
 
@@ -219,11 +257,14 @@ Kick sohbet sınırları: pencere başına 25 mesaj (araç kalanı devam sorgusu
 ## ffmpeg, yt-dlp, yazı tipi
 
 - **ffmpeg** aranma sırası: `FFMPEG` ortam değişkeni → PATH'teki `ffmpeg` (drawtext ve gblur süzgeçleri varsa) → `imageio-ffmpeg` paketinin ffmpeg'i. Kurulum (kullanıcı düzeyi): `py -m pip install --user imageio-ffmpeg`; Linux'ta `apt install ffmpeg` (libfreetype'lı). Remotion'un kırpılmış ffmpeg'i kullanılmaz.
-- **yt-dlp** Kick için gerekmez (ffmpeg HLS'i doğrudan okur). Yalnız ileride YouTube eklenirse lazım (`py -m pip install --user yt-dlp`).
+- **yt-dlp** Kick için gerekmez (ffmpeg HLS'i doğrudan okur); YouTube kaynağı için lazım (`py -m pip install --user yt-dlp`, 2026.10.26 denendi). Çerez/oturum kullanılmaz.
 - **ffprobe** yok; klip doğrulaması `ffmpeg -i` çıktısından yapılır (1080x1920, ≤60 sn, ses var; değilse klip reddedilir).
 - **Yazı tipi:** `KLIP_FONT` → Windows `arialbd.ttf`/`segoeuib.ttf` → Linux DejaVuSans-Bold/LiberationSans-Bold/NotoSans-Bold (`apt install fonts-dejavu-core`).
 
 ## Bilinen belirsizlikler
+
+- **YouTube (2026-11-18):** (1) Kick+YouTube **çift kaynak gerçek çiftle denenmedi**; 66 çiftin metadatasında hepsi `belirsiz` çıktı, `muhtemel_ayni_yayin_inceleme` ve döküm eşleşmesi yalnız birim testle doğrulandı. (2) Altyazı↔Whisper kalitesi tek videoda ölçüldü (wtcN `uuPCSH9CQic`): altyazı aday taraması için yeterli, kelime/cümle sınırı için değil; bu yüzden seçilen adaylarda Whisper doğrulaması zorunlu. (3) ≥2 saatlik denemede video kurgulu final bölümüydü (3 s 46 dk), canlı yayın kaydı değil; gerçek uzun canlı yayın kaydı (sessizlik, müzik, konuk) denenmedi. (4) Heatmap yalnız eski/çok izlenen videoda dolu (3 denemeden 1'inde); yeni videoda aday kaynağı altyazı taramasıdır. (5) `tara` hem `videos` hem `streams` sekmesine bakar; denenen 3 videonun hepsi kurgulu yüklemeydi, `streams` sekmesinden gelen bir canlı yayın kaydı kesilmedi. (6) Kare düzeni Kick için ayarlı: YouTube'un 16:9 kurgulu videosunda yüz kamerası/oyun kadrajı klip başına değişir; Jahrein klibinde ortadan kırpma yüz kamerasını ve menü yazısını kesti (zayıf). (7) Model küfürlü anları elemiyor; paketlerde küfür var, yayın öncesi insan incelemesi şart. (8) yt-dlp YouTube'a bağlıdır; YouTube değişirse `yt-dlp` güncellemesi gerekir. Erişim denemesinde engel çıkmadı, ama hesap/çerez olmadan üyelere özel/yaş sınırlı videolar atlanır.
+- **Model çağrısı azaltma:** Kemalcan'ın eski iyi klibi (1470 sn) yeni yolda çıkmadı; nedeni ayrıca incelenmedi. Yargı kalitesi elle etiketlenmedi; çağrı sayısı düştü, "daha iyi" iddiası yok.
 
 - Kick VOD adresine `?t=<sn>` eklemek belgelenmemiş; paket JSON'unda `vod_zaman_damgali_url_dogrulandi: false`. Açıklamada güvenli olan "yayının M:SS noktası" yazısı kullanılır.
 - Yayıncıların görüntüsünü yeniden paylaşmanın izin/telif durumu araçtan bağımsız bir karardır: yayınlamadan önce yayıncılardan izin alınması önerilir.
@@ -276,11 +317,31 @@ Linux ARM için kod yolu `konusma_cihaz:cpu`, `konusma_kucuk_model:small`; CPU o
 
 Sohbetten son üç yerine en iyi 15 örtüşmeyen aday alınır. Her adaya bağlamıyla cümle ID'leri verilir; dil modeli 0–10 puan, anlaşılabilirlik, kısa gerekçe, olayın ilk/son cümlesi ve somut Türkçe başlık döndürür. Serbest metinden JSON avlanmaz; yalnız nesne veya tek JSON kod çiti kabul edilir. Şema bozuksa bir kez yeniden istenir; ikinci hata o adayı konuşma puansız bırakır. Geçerli yargı veremeyen modellerin ortam hataları kalıcı yargı önbelleğine yazılmaz.
 
-Bitmiş yayında GPU varsa 240 sn pencereler, 45 sn örtüşmeyle ayrıca taranır (en çok üç olay/pencere). Birbirinin kısa aralığının en az yarısını kaplayan adaylar tek olaya iner, en yüksek sohbet puanı korunur. Tam tarama sohbetin kaçırdığı aday üretebilir; görsel olayı görmez. Son puan `100 × (0.35 × sohbet/100 + 0.65 × konuşma/10)`; ağırlıklar normalize edilir. Konuşma puanı <6 veya `anlasilir:false` ise sohbet puanı ne olursa olsun elenir. Yargı yoksa eski sohbet puanı korunur; hiçbir çağrı/yargı yapılamazsa raporda **konuşma katmanı kapalı** ve neden yazar, sohbet yöntemiyle devam edilir.
+Bitmiş yayında GPU varsa 1200 sn (20 dk) pencereler, 60 sn örtüşmeyle ayrıca taranır (en çok `konusma_tarama_an` = 8 olay/pencere; 2026-11-18'e dek 240/45 sn ve 3 olaydı, bkz. "Model çağrısı azaltma"). Birbirinin kısa aralığının en az yarısını kaplayan adaylar tek olaya iner, en yüksek sohbet puanı korunur. Tam tarama sohbetin kaçırdığı aday üretebilir; görsel olayı görmez. Son puan `100 × (0.35 × sohbet/100 + 0.65 × konuşma/10)`; ağırlıklar normalize edilir. Konuşma puanı <6 veya `anlasilir:false` ise sohbet puanı ne olursa olsun elenir. Yargı yoksa eski sohbet puanı korunur; hiçbir çağrı/yargı yapılamazsa raporda **konuşma katmanı kapalı** ve neden yazar, sohbet yöntemiyle devam edilir.
 
 Cümleler segment sınırından değil zaman damgalı kelimelerdeki `.?!…` işaretlerinden kurulur. Tam cümle başlangıç/bitişleri aranır; önce 30–55 sn denenir, yalnız gerekirse ayardaki 59 sn'ye esner. 350 ms ses payı da üst sınıra dahildir (üst süreye sığdığı kadar). Olay 59 sn'ye sığmıyorsa veya tam cümle çifti yoksa aday kesilmez. Noktalama ASR'nin tahminidir; konuşmacı ayrımı, üst üste konuşma ve gerçek sözdizimsel cümle sonu garantisi değildir.
 
 Dil modeli taşıması haber hattının `model_ayari` ve `Hat.model` işlevleridir; `Hat.__init__` veya haber iş akışı çalıştırılmaz. Aynı `otomasyon/modeller.json` kullanılır. Ölçümde yerel modeller yetersiz bulunduğu için tercih mevcut haber yazar ayarındaki `sonnet` oldu; `konusma_bulut:true` bunu etkinleştirir. Yalnız adı seçilen model çağrılır; başarısız kalite ölçümü olan modele sessiz geri düşme yapılmaz. Sonnet çağrılamazsa sohbet yöntemi sürer. Yargıda araçlar ve MCP/kasa erişimi kapatılır; haber araştırmasının yetkileri taşınmaz (yerel Claude CLI yardımındaki `--tools ""` ile). `konusma_bulut:false` ile bulut modeli çağrılmaz; `konusma:false` ile tüm katman kapalıdır. Yeni servis/anahtar eklenmedi; mevcut Claude CLI oturumu kullanılır, bunun var olan plan kotasına etkisi vardır. Haber dosyaları, sosyal kuyruk, git ve site değişmez.
+
+### Model çağrısı azaltma (2026-11-18)
+
+Sorun: 240 sn'lik pencere başına bir Sonnet çağrısı 2 saatlik yayında 81–95 çağrı (Kemalcan 139 dk: 81 çağrı / 1473.5 sn; Eray 155 dk: 95 çağrı). Çözüm: (1) tarama penceresi 1200 sn / 60 sn örtüşme; (2) sohbet adayları ve heatmap adayları tek istekte toplu doğrulanır (`konusma_toplu`); (3) çağrı tavanı `konusma_cagri_butcesi` (2 saat için 15; yeniden denemeler dahil). Toplu şema `{"pencereler":[{"id":N,"anlar":[…]}]}`; her pencere ayrı doğrulanır: yapısal hata (id tekrarı, eksik/fazla pencere) bütün yanıtı reddeder ve hata mesajıyla bir kez yeniden istenir, tek pencerenin içerik hatası yalnız o pencereyi yargısız bırakır. Yalnız tamamen geçerli yanıt yargı önbelleğine yazılır. Yargısız kalan bir aday, tarama penceresi onu zaten kapsıyorsa seçime girmez (eski sohbet puanıyla "yargısız klip" çıkmaz).
+
+Ölçüm (aynı gerçek döküm, **eski yargı önbelleği kullanılmadan**, `konusma_yargi_onbelleksiz`; Sonnet; betik `C:\Cihan.Ai\.scratch\yayin-klip\youtube-cagri-olcum2.py`):
+
+| VOD | Önce | Sonra |
+|---|---|---|
+| Kemalcan `kick:9ae47b40…` (139 dk) | 81 çağrı, 1473.5 sn | **9 çağrı**, 361.9 sn model süresi (duvar 363.8 sn) |
+| Eraycan `kick:d38999bc…` (155 dk) | 59 çağrı, 1056 sn (önceki ölçüm turu; ilk tam tarama 95) | **12 çağrı**, 344.4 sn duvar |
+
+Nihai anlar (başlangıç sn, sohbet+konuşma birleşik puan / konuşma puanı):
+
+| VOD | Eski | Yeni |
+|---|---|---|
+| Kemalcan | 1470 (57.3/6), 1704 (65.8/7), 2609 (74.8/8) | 1282 (72.1/7), 2229 (66.6/7), 2614 (74.8/8) |
+| Eraycan | 585 (45.5/7), 1841 (45.5/7), 4774 (58.9/6) | 1904 (61.5/6), 4358 (45.5/7), 4774 (65.4/7) |
+
+Okuma: iki VOD'da da çağrı ≤15 hedefinin içinde. Kemalcan'da 2609/2614 (şort/boxer) ortak kaldı, diğer iki an değişti: eski ilk an (1470, karnaval/basket) yeni listede **yok**; yeni ölçümde bunun neden elendiği ayrıca incelenmedi. Eraycan'da 4774 (patates soyma oyunu) ortak; eski 585 ve 1841 yerine 1904 (aynı patates esprisinin devamı) ve 4358 (havuç soyma) geldi. "Daha iyi" iddiası yoktur: yargı tek model çağrısı, elle etiket yok; çağrı sayısı düşerken seçilen ortak an sayısı Kemalcan'da 1/3, Eraycan'da 1/3 kaldı (tahmin: pencere büyüdükçe modelin her pencerede göstereceği an sayısı sınırlı). Aynı toplu yol YouTube'da da kullanılır (3 gerçek videoda 4, 3 ve 13 çağrı; en uzunu 3 s 46 dk: 12 tarama penceresi + 1 aday doğrulaması, tavan 45).
 
 ### Canlı kip
 
@@ -439,8 +500,8 @@ VRAM, NVIDIA-SMI ile 1 sn aralıkla örneklendi; değerler örneklenen en yükse
 
 | Tam VOD | ASR / model yükleme / ses indirme süreleri toplamı | Dil modeli |
 |---|---|---|
-| Kemalcan, 139 dk | 302.359 / 197.297 / 240.843 sn; soğuk ASR duvar 834.031 sn | 81 çağrı, 1473.532 sn; analiz+ilk kesim 1520.157 sn (ASR önbellekte) |
-| Eray, 155 dk | son geçerli parçalarda 376.174 / 224.526 / 31.701 sn; tek kesintisiz soğuk yeniden ölçüm yok | ilk tam tarama 95 çağrı / 1622.329 sn; bunun 36 çağrısı diğer VOD’la eşzamanlı yapıldı |
+| Kemalcan, 139 dk | 302.359 / 197.297 / 240.843 sn; soğuk ASR duvar 834.031 sn | *eski (240 sn pencere)*: 81 çağrı, 1473.532 sn; analiz+ilk kesim 1520.157 sn (ASR önbellekte). *Güncel (1200 sn, toplu)*: 9 çağrı, 361.9 sn |
+| Eray, 155 dk | son geçerli parçalarda 376.174 / 224.526 / 31.701 sn; tek kesintisiz soğuk yeniden ölçüm yok | *eski*: ilk tam tarama 95 çağrı / 1622.329 sn; bunun 36 çağrısı diğer VOD’la eşzamanlı yapıldı. *Güncel*: 12 çağrı, 344.4 sn |
 
 Eray ilk 40 dk güvenli yolla yenilendikten sonra yalnız değişen pencereler yeniden değerlendirildi: 27 ek çağrı / 573.376 sn; gerçek standart `kes --konusma` turu 631.188 sn ve üç çıktı. Tekrar `kes --konusma` 1.750 sn sürdü, MP4 değişim saatlerinin üçü de aynı kaldı: yeniden döküm/model/kodlama yapılmadı.
 
@@ -450,7 +511,7 @@ Canlı: gerçek kanal kontrolü 3.047 sn, beş kanal da kapalı. **Gerçek canl�
 
 Güncel son kodla yeni test durum dizininde, aynı gerçek ASR/yargı önbelleği kullanılarak canlı benzetimi yeniden çalıştı: **16.625 sn**, 14 parça önbellekten, 0 yeni model çağrısı, sesin başı/sonu doğrulanmış bir klip; ikinci tur yine 0 sn ve yeni kesim yok. Kanıt: `konusma-canli-son-benzetim.json`.
 
-Canlıda yeni bölümü tam tarama eklenmedi: aday yokken mevcut yol sıfır ASR/model çağrısı yapar. Beş kanalı her5dk zorunlu taramak, tek pencereyle bile en az60, örtüşen tam kapsamayla yaklaşık120 ek Sonnet çağrısı/saat demektir (hesap, gerçek canlı ölçümü değil). Yargı kalitesi sınırlı, mevcut ücretsiz yol kotada ve soğuk aday turu7:22 sürdüğü için bu sürekli ek yük ucuz kabul edilmedi.
+Canlıda yeni bölümü tam tarama eklenmedi: aday yokken mevcut yol sıfır ASR/model çağrısı yapar. Beş kanalı her5dk zorunlu taramak, tek pencereyle bile en az60, örtüşen tam kapsamayla yaklaşık120 ek Sonnet çağrısı/saat demektir (hesap, gerçek canlı ölçümü değil; **eskidi**: 240 sn pencereye göre. 1200 sn pencere ve toplu yargıyla 2 saatlik yayın ≈9–13 çağrı ölçüldü, canlı için yeniden hesaplanmadı). Yargı kalitesi sınırlı, mevcut ücretsiz yol kotada ve soğuk aday turu7:22 sürdüğü için bu sürekli ek yük ucuz kabul edilmedi.
 
 ## Sınırlar ve test sonucu
 
@@ -458,11 +519,15 @@ Yerel Gemma/Qwen yeterli görülmedi. Sonnet, önceki sekiz etiketin puan bandı
 
 Ses olayı denemesinde 10 etiket: iyi anların ortalama RMS tepe z’si 0.56, zayıfların 0.66; z≥1 hiçbir iyiyi bulmayıp bir zayıfı buldu. Kahkaha/ses sıçraması aday üreticisi **eklenmedi**.
 
-`py -m unittest discover -s tests -p "test_yayin_klip.py"`: **137 test, 4.232 sn, son satır `OK`**.
+`py -m unittest discover -s tests -p "test_yayin_klip.py"`: **138 test, 4.295 sn, son satır `OK`** (2026-11-18, YouTube devrinden sonra).
 
-`py -m unittest discover -s tests -p "test_klip_konusma.py"`: **37 test, 0.21 sn, son satır `OK`**.
+`py -m unittest discover -s tests -p "test_klip_konusma.py"`: **44 test, 0.233 sn, son satır `OK`**.
 
-Toplam **174 test geçti**; başlangıçtaki 128 test korundu. Derleme kontrolü (`py_compile`) ve yalnız altı görev dosyasında `git diff --check` geçti. `--konusmasiz` gerçek iki VOD’da eski 22:00/44:10/1:33:10 ve 13:30/31:50/49:50 listelerini verdi; gerçek `yogunluk` 6:20/40:50/1:33:10 listesini verdi.
+`py -m unittest discover -s tests -p "test_klip_youtube.py"`: **21 test, 0.018 sn, son satır `OK`**.
+
+`py -m unittest discover -s tests -p "test_*klip*.py"` (başka çalışanın derleme testleri dahil): **289 test, 4.624 sn, son satır `OK`**.
+
+Kick/konuşma/YouTube üç dosyada toplam **203 test geçti** (eski ölçüm: 174). Derleme kontrolü (`py_compile`) ve yalnız altı görev dosyasında `git diff --check` geçti. `--konusmasiz` gerçek iki VOD’da eski 22:00/44:10/1:33:10 ve 13:30/31:50/49:50 listelerini verdi; gerçek `yogunluk` 6:20/40:50/1:33:10 listesini verdi.
 
 
 <!-- KONUSMA-SON-OLCUM-END -->
