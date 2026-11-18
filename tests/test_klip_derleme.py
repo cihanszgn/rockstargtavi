@@ -9,6 +9,7 @@ import pathlib
 import sys
 import tempfile
 import unittest
+from unittest.mock import Mock, patch
 
 TOOLS = pathlib.Path(__file__).resolve().parents[1] / 'tools'
 if str(TOOLS) not in sys.path:
@@ -267,7 +268,7 @@ class KesitKisaltmaTesti(unittest.TestCase):
     def test_viral_araligi(self):
         self.assertEqual(kd.viral_araligi(9.0, ayar(), 'ele')['sure'], 9.0)
         self.assertIsNone(kd.viral_araligi(40.0, ayar(), 'ele'))
-        self.assertEqual(kd.viral_araligi(40.0, ayar(), 'kirp')['sure'], 15.0)
+        self.assertEqual(kd.viral_araligi(40.0, ayar(), 'kirp')['sure'], 30.0)
 
 
 class BaslikVeAciklamaTesti(unittest.TestCase):
@@ -590,6 +591,164 @@ class AnlamliBaslikTesti(unittest.TestCase):
         self.assertFalse(kd.anlamli_mi('ss'))
         self.assertFalse(kd.anlamli_mi(None))
         self.assertTrue(kd.anlamli_mi('Eraycan yayınında chat kahkahaya boğuldu'))
+
+
+class YapayZekaTesti(unittest.TestCase):
+    def test_kelime_siniri_en_az_on_baslik(self):
+        for baslik in ['#AI komik video', 'AI generated cat', 'ai video', 'yapay zekâ ile',
+                       'yapay zeka videosu', 'yz ile video', 'Sora videosu', 'Veo 3 denemesi',
+                       'veo3 denemesi', 'Kling testi', 'Runway filmi', 'Midjourney', 'Pika',
+                       'Hailuo', 'Luma', 'Suno', 'AIArt', 'aivideo', 'ai shorts', 'ChatGPT',
+                       'Gemini burcu', 'deepfake', '𝐀𝐈 videosu']:
+            with self.subTest(baslik=baslik):
+                self.assertIsNotNone(kd.yapay_zeka_nedeni({'title': baslik}, ayar()))
+        for baslik in ['kaIl', 'Aile', 'said', 'Dubai', 'Ailecek piknik', 'Soralım bakalım',
+                       'Pikachu oyunu', 'Lumalı değil', 'İbrahim geldi', 'mail adresi', 'yayında saç boyası']:
+            with self.subTest(baslik=baslik):
+                self.assertIsNone(kd.yapay_zeka_nedeni({'title': baslik}, ayar()))
+
+    def test_kara_liste_ad_kimlik_ve_alakasiz_url(self):
+        for field in ['channel', 'channel_id', 'uploader_id']:
+            self.assertEqual(kd.yapay_zeka_nedeni({field: '@Kanal'}, ayar(viral_kanal_kara_liste=['kanal'])), 'kanal_kara_liste')
+        self.assertIsNone(kd.yapay_zeka_nedeni({'title': 'gerçek video', 'url': 'https://aivideo.example',
+                                               'formats': [{'format_id': 'sora'}]}, ayar()))
+
+    def test_aciklama_etiket_kanal_bilgisi(self):
+        for d in [{'description': 'Yapay zekâ ile üretildi'}, {'tags': ['ai']},
+                  {'channel_description': 'AI destekli görsel araçları'}, {'chapters': [{'title': 'Sora testi'}]}]:
+            self.assertIsNotNone(kd.yapay_zeka_nedeni(d, ayar()))
+        d = {'title': '#AI', 'duration': 1000, 'view_count': 0}
+        self.assertEqual(kd.viral_ele_nedeni(d, ayar(), None, 'ele'), 'yapay_zeka')
+
+    def test_shorts_kanal_aciklamasi_elenen_kaydi(self):
+        d = {'id': 'test', 'title': 'Çok komik video', 'language': 'tr', 'duration': 20,
+             'view_count': 999999, 'channel': 'Normal', 'channel_url': 'https://youtube.com/channel/xyz'}
+        rapor = {}
+        with patch.object(kd, 'kanal_detay', return_value={'channel_description': 'AI destekli görseller'}):
+            a = kd.shorts_topla(ayar(shorts_kaynaklari=[{'hedef': 'komik'}]), kd.simdi_utc(), rapor, None,
+                               liste_al=lambda _: [d], detay_al=lambda _: d)
+        self.assertEqual(a, [])
+        self.assertEqual(rapor['elenen_adaylar'][0]['neden'], 'yapay_zeka')
+
+
+class ParcaAciklamasiTesti(unittest.TestCase):
+    def test_kaynak_sirasi(self):
+        a = aday('yayinci', 1, .9, yayinci='wtcN')
+        a.update(paket_turu='konusma', baslik='wtcN saçlarını yayında boyatıyor', gerekce='Ferit yeni renk seçiyor')
+        self.assertEqual(kd.aciklama_kaynagi(a, ayar()), ('Ferit saçlarını yayında boyatıyor', 'konusma_paketi'))
+        a['baslik'] = 'ss'
+        self.assertEqual(kd.aciklama_kaynagi(a, ayar())[0], 'Ferit yeni renk seçiyor')
+        a.update(tur='izleyici', paket_turu='', baslik='tolu bir tık sinirli sankiii')
+        self.assertEqual(kd.aciklama_kaynagi(a, ayar()), ('Tolunay bir tık sinirli sanki', 'izleyici_basligi'))
+        a.update(tur='viral', baslik='Köpeğe rüşvet verdiler 🐶 #komik')
+        self.assertEqual(kd.aciklama_kaynagi(a, ayar()), ('Köpeğe rüşvet verdiler', 'viral_basligi'))
+
+    def test_anlamsiz_ve_sablon_aciklama_degil(self):
+        for t in ['ss', '.', '...', 'aaaa', 'zzz', 'pembiş', 'BASMA',
+                  'Eraycan yayınında sohbet bir anda gülmeye başladı',
+                  'ADAMIN HAYATININ ŞOKU', 'Detayı yoruma yazanı sabitliyorum']:
+            with self.subTest(t=t):
+                self.assertIsNone(kd.aciklama_temizle(t, ayar()))
+        self.assertIsNone(kd.aciklama_kaynagi(aday('yayinci', 1, .9), ayar())[0])
+
+    def test_uzunluk_emoji_buyuk_harf_ve_satir(self):
+        self.assertIsNone(kd.aciklama_temizle('Çok uzun bir olay anlatılıyor ' * 8, ayar()))
+        self.assertEqual(kd.aciklama_temizle('ERAY PATATES SOYUYOR 😂 #keşfet', ayar()), 'Eray patates soyuyor')
+        yer = kd.aciklama_yerlesimi('WWWWWWW WWWWWWW WWWWWWW WWWWWWW', ayar(genislik=1080), 'C:/Windows/Fonts/arialbd.ttf')
+        self.assertEqual(len(yer['metin'].splitlines()), 2)
+
+    def test_kutular_cakismiyor(self):
+        for metin in ['Ferit saçlarını yayında boyatıyor', 'WWWWWWW WWWWWWW WWWWWWW WWWWWWW']:
+            yer = kd.aciklama_yerlesimi(metin, ayar(), 'C:/Windows/Fonts/arialbd.ttf')
+            for x, y, w, h in [yer['filigran_kutu'], yer['etiket_kutu']]:
+                self.assertTrue(yer['x'] + yer['w'] <= x or x + w <= yer['x'] or
+                                yer['y'] + yer['h'] <= y or y + h <= yer['y'])
+            self.assertGreaterEqual(yer['x'], 0)
+            self.assertLessEqual(yer['x'] + yer['w'], 1920)
+
+    def _toplu(self, root, model, **cfg):
+        a = aday('yayinci', 1, .9)
+        h = {a['id']: {'dosya': 'deneme.mkv', 'sure_sn': 22}}
+        dok = Mock(return_value='Patates soymak çok zor, elimi kestim diyorum.')
+        rapor = kd.aciklamalari_hazirla([a], h, ayar(**cfg), 'ff', pathlib.Path(root), model=model, dokum=dok)
+        return a, h, dok, rapor
+
+    def test_model_null_ve_onbellek_yeniden_cagri_yok(self):
+        model = Mock(return_value='{"parcalar":[{"id":"yayinci:1","aciklama":null}]}')
+        with tempfile.TemporaryDirectory() as root:
+            a, h, dok, r = self._toplu(root, model)
+            self.assertIsNone(a['aciklama'])
+            self.assertEqual(r['model_cagrisi'], 1)
+            a, h, dok, r = self._toplu(root, model)
+            dok.assert_not_called()
+            self.assertEqual(r['model_cagrisi'], 0)
+        self.assertEqual(model.call_count, 1)
+
+    def test_model_bozuk_yanit_ve_hata_cokertmez(self):
+        for model in [Mock(return_value='bozuk'), Mock(side_effect=RuntimeError('quota 429'))]:
+            with tempfile.TemporaryDirectory() as root:
+                a, _, _, r = self._toplu(root, model)
+                self.assertIsNone(a['aciklama'])
+                self.assertTrue(r['uyarilar'])
+                self.assertEqual(r['model_cagrisi'], 1)
+
+    def test_butce_sifir_ve_kapali_model_cagirmaz(self):
+        for cfg in [{'aciklama_model_butcesi': 0}, {'aciklama_etkin': False}]:
+            with tempfile.TemporaryDirectory() as root:
+                model = Mock()
+                a, _, _, r = self._toplu(root, model, **cfg)
+                model.assert_not_called()
+                self.assertEqual(r['model_cagrisi'], 0)
+                self.assertIsNone(a['aciklama'])
+
+    def test_birden_cok_parca_tek_toplu_cagri(self):
+        aa = [aday('yayinci', i, .8) for i in range(3)]
+        h = {a['id']: {'dosya': str(i), 'sure_sn': 22} for i, a in enumerate(aa)}
+        model = Mock(return_value=json.dumps({'parcalar': [{'id': a['id'], 'aciklama': 'Eray patates soyuyor'} for a in aa]}))
+        with tempfile.TemporaryDirectory() as root:
+            r = kd.aciklamalari_hazirla(aa, h, ayar(), 'ff', pathlib.Path(root), model,
+                                      dokum=lambda *args: 'Patates soyuyorum ve çok zorlanıyorum işte böyle.')
+        self.assertEqual(model.call_count, 1)
+        self.assertEqual(r['kaynaklar'], {'dokum_model': 3})
+
+    def test_yanit_sema_dogrulamasi(self):
+        for data in ['null', '{"parcalar":[]}', '{"parcalar":[{"id":"bilinmeyen","aciklama":null}]}',
+                     '{"parcalar":[{"id":"a"}]}',
+                     '{"parcalar":[{"id":"a","aciklama":12}]}']:
+            with self.assertRaises(ValueError):
+                kd.aciklama_yaniti(data, {'a'}, ayar())
+
+    def test_model_arayuzu_yoksa_uyari_ve_cagri_yok(self):
+        with tempfile.TemporaryDirectory() as root, patch.object(kd, 'konusma_yukle', side_effect=kd.DerlemeHatasi('arayüz değişmiş')):
+            a, _, _, r = self._toplu(root, None)
+        self.assertIsNone(a['aciklama'])
+        self.assertEqual(r['model_cagrisi'], 0)
+        self.assertIn('arayüz değişmiş', r['uyarilar'][0])
+
+    def test_bolum_ve_baslik_aciklamayi_kullanir(self):
+        a = aday('yayinci', 1, .9, yayinci='wtcN')
+        a.update(baslik='wtcN yayınında sohbet bir anda gülmeye başladı', aciklama='Ferit saçlarını yayında boyatıyor')
+        p = {'aday': a, 'rol': 'yayinci', 'bas_sn': 20}
+        self.assertIn((20, a['aciklama']), kd.bolum_listesi([p]))
+        b = kd.baslik_sec([p], ayar(), 1)
+        self.assertEqual(b['neden'], 'parca_aciklamasi')
+        a['aciklama'] = None
+        self.assertNotIn('sohbet', str(kd.bolum_listesi([p])))
+
+    def test_dokum_cpu_ve_yedeksiz(self):
+        kk = Mock()
+        kk.dok_calistir.return_value = {'segmentler': [{'metin': 'Deneme metni'}]}
+        with tempfile.TemporaryDirectory() as root, patch.object(kd, 'ffmpeg_dene'), patch.object(kd, 'konusma_yukle', return_value=kk):
+            kd.parca_dokumu('ff', 'deneme.mkv', pathlib.Path(root))
+        self.assertEqual(kk.dok_calistir.call_args.args[2], 'cpu')
+        self.assertFalse(kk.dok_calistir.call_args.kwargs['yedek'])
+
+    def test_aciklamali_yayinci_baslikta_izleyiciden_once(self):
+        a = aday('yayinci', 1, .5)
+        b = aday('izleyici', 2, .99)
+        a['aciklama'], b['aciklama'] = 'Ferit saçlarını boyatıyor', 'Eray patates soyuyor'
+        parcalar = [{'aday': x, 'rol': x['tur']} for x in [a, b]]
+        self.assertEqual(kd.baslik_sec(parcalar, ayar(), 1)['kaynak_aday'], a['id'])
 
 
 if __name__ == '__main__':

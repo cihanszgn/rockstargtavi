@@ -17,20 +17,110 @@
     "izleyici_kanal_ust": 3,
     "yayinci_toplam_ust": 6,
     "viral_min_sn": 5,
-    "viral_max_sn": 15,
+    "viral_max_sn": 30.0,
     "izleyici_min_izlenme": 5,
     "ek_kick_kanallari": [],
     "baglantilar": [],
     "shorts_kaynaklari": [
-      {"ad": "etiket-komik", "tur": "etiket", "hedef": "komik", "kac": 30},
-      {"ad": "etiket-mizah", "tur": "etiket", "hedef": "mizah", "kac": 30},
-      {"ad": "etiket-kesfet", "tur": "etiket", "hedef": "kesfet", "kac": 30},
-      {"ad": "etiket-komedi", "tur": "etiket", "hedef": "komedi", "kac": 30},
-      {"ad": "jahrein-shorts", "tur": "kanal", "hedef": "https://www.youtube.com/channel/UCfo8l0mgO_eleaditz0EClA/shorts", "kac": 15},
-      {"ad": "wtcn-shorts", "tur": "kanal", "hedef": "https://www.youtube.com/channel/UCFK97P1mRAY9tQ2PUDjubEA/shorts", "kac": 15},
-      {"ad": "eray-shorts", "tur": "kanal", "hedef": "https://www.youtube.com/channel/UCv1quKbtp1HLqoBbv3g2oIQ/shorts", "kac": 15},
-      {"ad": "kemalcan-shorts", "tur": "kanal", "hedef": "https://www.youtube.com/channel/UCTPyakN5CEST9lgz-Q6p8uA/shorts", "kac": 15},
-      {"ad": "tolunay-shorts", "tur": "kanal", "hedef": "https://www.youtube.com/channel/UCssA44vdQ0dNEMHrpa8iC9Q/shorts", "kac": 15}
-    ]
+      {
+        "ad": "etiket-komik",
+        "tur": "etiket",
+        "hedef": "komik",
+        "kac": 30
+      },
+      {
+        "ad": "etiket-mizah",
+        "tur": "etiket",
+        "hedef": "mizah",
+        "kac": 30
+      },
+      {
+        "ad": "etiket-kesfet",
+        "tur": "etiket",
+        "hedef": "kesfet",
+        "kac": 30
+      },
+      {
+        "ad": "etiket-komedi",
+        "tur": "etiket",
+        "hedef": "komedi",
+        "kac": 30
+      },
+      {
+        "ad": "jahrein-shorts",
+        "tur": "kanal",
+        "hedef": "https://www.youtube.com/channel/UCfo8l0mgO_eleaditz0EClA/shorts",
+        "kac": 15
+      },
+      {
+        "ad": "wtcn-shorts",
+        "tur": "kanal",
+        "hedef": "https://www.youtube.com/channel/UCFK97P1mRAY9tQ2PUDjubEA/shorts",
+        "kac": 15
+      },
+      {
+        "ad": "eray-shorts",
+        "tur": "kanal",
+        "hedef": "https://www.youtube.com/channel/UCv1quKbtp1HLqoBbv3g2oIQ/shorts",
+        "kac": 15
+      },
+      {
+        "ad": "kemalcan-shorts",
+        "tur": "kanal",
+        "hedef": "https://www.youtube.com/channel/UCTPyakN5CEST9lgz-Q6p8uA/shorts",
+        "kac": 15
+      },
+      {
+        "ad": "tolunay-shorts",
+        "tur": "kanal",
+        "hedef": "https://www.youtube.com/channel/UCssA44vdQ0dNEMHrpa8iC9Q/shorts",
+        "kac": 15
+      }
+    ],
+    "viral_yz_izleri": [
+      "ai",
+      "ai generated",
+      "ai video",
+      "yapay zeka",
+      "yapay zekâ",
+      "yz ile",
+      "sora",
+      "veo 3",
+      "veo3",
+      "kling",
+      "runway",
+      "midjourney",
+      "pika",
+      "hailuo",
+      "luma",
+      "suno",
+      "aiart",
+      "aivideo",
+      "chatgpt",
+      "gemini",
+      "deepfake"
+    ],
+    "viral_kanal_kara_liste": [
+      "UCvUbC6bhia6CVSIbHIjqQpw",
+      "UCPSpytJNCTd-MXApA8honUw",
+      "UC1L6GsRGV_g5ERALdhnG_2g",
+      "UCUmlqXAgmBD7MSlxoITrgRQ",
+      "UCc82fd4v8p8hzVsWcz3LUGA",
+      "UCB4xCns2J6LjQOLhO6le6_w",
+      "UCgC06bb0m0JypfNu65yPZ4g"
+    ],
+    "aciklama_etkin": true,
+    "aciklama_sn": 0,
+    "aciklama_azami_karakter": 45,
+    "aciklama_punto": 54,
+    "aciklama_model_butcesi": 3,
+    "aciklama_dokum_model": "small",
+    "yayinci_kisa_adlar": {
+      "wtcN": "Ferit",
+      "Eraycan": "Eray",
+      "Kemalcan Parlak": "Kemalcan",
+      "Tolunay Ören": "Tolunay",
+      "Jahrein": "Jahrein"
+    }
   }
 }
