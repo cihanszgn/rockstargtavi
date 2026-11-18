@@ -54,6 +54,34 @@
   "url": "https://www.instagram.com/p/Df0ivn6DHO-/",
   "zaman": "2026-11-16T23:31:59+00:00"
  },
+ "cs2-singapur-2026-major-esyalari-monstercat-kit|tr|instagram|reel": {
+  "bicim": "reel",
+  "dil": "tr",
+  "durum": "tamam",
+  "icerik_dili": "tr",
+  "id": "cs2-singapur-2026-major-esyalari-2026-11-18",
+  "kapsayici": "17869689333694894",
+  "kimlik": "18109038941307282",
+  "niyet_zamani": "2026-11-18T11:22:01+00:00",
+  "platform": "instagram",
+  "sosyal_tur": "haber",
+  "url": "https://www.instagram.com/reel/Df4Yz4TKfQ9/",
+  "zaman": "2026-11-18T11:22:01+00:00"
+ },
+ "cs2-singapur-2026-major-esyalari-monstercat-kit|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 9026287,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "cs2-singapur-2026-major-esyalari-2026-11-18",
+  "kimlik": "SeTX8UdyFxg",
+  "niyet_zamani": "2026-11-18T11:22:01+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg1-slXyY8-SctZ4RPDTdyluhScdJI3EhGF7BXt6j7xe1QdvYxKcdzKCJiron97Rh4er3QAuJ78V0ZUeAKkvjCEMt8rLqG0eqnqN9eFj6BY",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/SeTX8UdyFxg",
+  "zaman": "2026-11-18T11:22:01+00:00"
+ },
  "delta-force-brakkesh-2-aurora-faction-map-devblog-2026-11-15|tr|instagram|gorsel": {
   "bicim": "gorsel",
   "dil": "tr",
