@@ -54,6 +54,34 @@
   "url": "https://www.instagram.com/p/Df0ivn6DHO-/",
   "zaman": "2026-11-16T23:31:59+00:00"
  },
+ "cs2-cobblestone-matchmaking|tr|instagram|reel": {
+  "bicim": "reel",
+  "dil": "tr",
+  "durum": "tamam",
+  "icerik_dili": "tr",
+  "id": "cs2-cobblestone-matchmaking-2026-11-18",
+  "kapsayici": "17869693218694894",
+  "kimlik": "18121637068994448",
+  "niyet_zamani": "2026-11-18T11:41:17+00:00",
+  "platform": "instagram",
+  "sosyal_tur": "haber",
+  "url": "https://www.instagram.com/reel/Df4bHXTOzbh/",
+  "zaman": "2026-11-18T11:41:17+00:00"
+ },
+ "cs2-cobblestone-matchmaking|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 9702728,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "cs2-cobblestone-matchmaking-2026-11-18",
+  "kimlik": "Bucl5C7ouPI",
+  "niyet_zamani": "2026-11-18T11:41:17+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg1EtlSDWSbVMyfxEmRwppXn6k0vxUReUO38nfL47J9A62Pi5ZksiFuZp-8KIkjCWXhVJn15bgOfBN_624o-J7rPBgOuMY38XMHfXNPrCdE",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/Bucl5C7ouPI",
+  "zaman": "2026-11-18T11:41:17+00:00"
+ },
  "cs2-singapur-2026-major-esyalari-monstercat-kit|tr|instagram|reel": {
   "bicim": "reel",
   "dil": "tr",
