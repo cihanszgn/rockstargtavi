@@ -82,7 +82,7 @@
     "konusma_model_ayari": "otomasyon/modeller.json",
     "konusma_bulut": true,
     "klip_aciklama_yazi": true,
-    "klip_aciklama_stil": "A",
+    "klip_aciklama_stil": "B",
     "aciklama_yasak_kelimeler": []
   },
   "yayincilar": [
