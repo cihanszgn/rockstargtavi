@@ -192,6 +192,20 @@
   "url": "https://www.instagram.com/reel/Df3o_uZBzPb/",
   "zaman": "2026-11-18T04:24:13+00:00"
  },
+ "gta-vi-cevrimici-mod-resmi-aciklama-yok|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 8780048,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "gta-vi-cevrimici-mod-resmi-aciklama-2026-11-17",
+  "kimlik": "I9V5JYBWpaA",
+  "niyet_zamani": "2026-11-18T14:23:21+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg26Psh4oDSZ-1vvRK0XYwubcBQh8mpDDVcRBnXEHfN3VeBbnTKqEUz22zD219yexDzVIVl0mYQQWNsgkoC8vE55jPTynOQJyA_uBqYEDQ",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/I9V5JYBWpaA",
+  "zaman": "2026-11-18T14:23:21+00:00"
+ },
  "gta-vi-kacta-aciliyor-yerel-gece-yarisi|es|instagram|reel": {
   "bicim": "reel",
   "dil": "es",
@@ -429,6 +443,20 @@
   "sosyal_tur": "takvim",
   "url": "https://www.instagram.com/p/Df2HEXzFyYR/",
   "zaman": "2026-11-17T14:08:38+00:00"
+ },
+ "wuthering-waves-steam-fullpackage-modu-2026-11-18|tr|instagram|gorsel": {
+  "bicim": "gorsel",
+  "dil": "tr",
+  "durum": "tamam",
+  "icerik_dili": "tr",
+  "id": "wuthering-waves-steam-fullpackage-2026-11-18",
+  "kapsayici": "17869727895694894",
+  "kimlik": "18006140133013342",
+  "niyet_zamani": "2026-11-18T14:23:21+00:00",
+  "platform": "instagram",
+  "sosyal_tur": "haber",
+  "url": "https://www.instagram.com/p/Df4tjL9DuGl/",
+  "zaman": "2026-11-18T14:23:21+00:00"
  },
  "xbox-25-yil-dergisi-2026-11|tr|instagram|gorsel": {
   "bicim": "gorsel",
