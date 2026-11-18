@@ -92,16 +92,18 @@ jobs:
           # Tur kırmızıya düşmez; paylaşım atlanır, kuyruk bir sonraki turda gönderilir.
           if [ "$yayinda" != 1 ]; then
             echo "::warning::Kartların Pages yayını 15 dakikada doğrulanamadı (son durum: $durum); paylaşım bir sonraki tura kaldı."
-            echo "yayinda=0" >> "$GITHUB_OUTPUT"
           fi
+          # Çıktı her zaman açıkça yazılır: yazılmamış çıktı null olur, GitHub null ile '0'ı
+          # sayıya çevirip eşit sayar ve "!= '0'" koşulu hep false verir (paylaşım hiç çalışmaz).
+          echo "yayinda=$yayinda" >> "$GITHUB_OUTPUT"
 
       - name: Site yayına çıksın diye bekle (en yeni haber sayfası açılınca devam eder)
-        if: (github.event_name == 'push' || github.event_name == 'workflow_run') && steps.kart.outputs.yayinda != '0'
+        if: (github.event_name == 'push' || github.event_name == 'workflow_run') && steps.kart.outputs.yayinda == '1'
         run: python tools/sosyal_yayinla.py --sayfa-bekle
 
       - name: Paylaş
-        # Deneme çalışmasında kart adımı atlanır; atlanan adımın çıktısı null olur ve null != '0' yanlışlıkla false verir.
-        if: inputs.deneme == true || steps.kart.outputs.yayinda != '0'
+        # Deneme çalışmasında kart adımı atlanır (çıktı yok); normal turda kart adımı yayını doğruladıysa '1' yazar.
+        if: inputs.deneme == true || steps.kart.outputs.yayinda == '1'
         env:
           DENEME: ${{ inputs.deneme && '--dry-run' || '' }}
           X_TR_API_KEY: ${{ secrets.X_TR_API_KEY }}
