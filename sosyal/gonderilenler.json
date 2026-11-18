@@ -165,6 +165,21 @@
   "url": "https://www.instagram.com/reel/Df4C1slyYJL/",
   "zaman": "2026-11-18T08:10:01+00:00"
  },
+ "eraycan-20261112-d38999bc-klip-01|klip|youtube|short": {
+  "bicim": "short",
+  "boyut": 18640834,
+  "dil": "klip",
+  "durum": "tamam",
+  "hesap": "klip",
+  "id": "eraycan-20261112-d38999bc-klip-01",
+  "kimlik": "yoLbUER4dTk",
+  "niyet_zamani": "2026-11-18T21:29:27+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status&upload_id=AFy3sg0d53CeOzMFgOAn1hMhwoOfe7EyJTWIxTPNRzLfAr3VI4gjRvFUxHcA4JfXl9Bb-pCdvbjInFCN2E5cvU8jd4hYIsGaijk3prvL5IbqKm4",
+  "platform": "youtube",
+  "sosyal_tur": "klip",
+  "url": "https://www.youtube.com/shorts/yoLbUER4dTk",
+  "zaman": "2026-11-18T21:29:27+00:00"
+ },
  "ffxiv-road-to-evercold-free-login-2026-11-18|tr|instagram|gorsel": {
   "bicim": "gorsel",
   "dil": "tr",
@@ -583,6 +598,20 @@
   "sosyal_tur": "haber",
   "url": "https://www.instagram.com/p/Df2cBQqF_2C/",
   "zaman": "2026-11-17T17:11:43+00:00"
+ },
+ "zelda-ocarina-of-time-dijital-kart-paketi-2026-11-18|tr|instagram|gorsel": {
+  "bicim": "gorsel",
+  "dil": "tr",
+  "durum": "tamam",
+  "icerik_dili": "tr",
+  "id": "zelda-ocarina-of-time-kart-paketi-2026-11-18",
+  "kapsayici": "17869821924694894",
+  "kimlik": "18124869553969811",
+  "niyet_zamani": "2026-11-18T21:29:27+00:00",
+  "platform": "instagram",
+  "sosyal_tur": "haber",
+  "url": "https://www.instagram.com/p/Df5eT_fk6bV/",
+  "zaman": "2026-11-18T21:29:27+00:00"
  },
  "zelda-ocarina-of-time-switch-2-cikis|en|instagram|reel": {
   "bicim": "reel",
