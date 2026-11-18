@@ -109,21 +109,6 @@
   "url": "https://www.instagram.com/reel/Df4C1slyYJL/",
   "zaman": "2026-11-18T08:10:01+00:00"
  },
- "drg-survivor-knockout-1-2-2026-11-17|fr|youtube|short": {
-  "bicim": "short",
-  "boyut": 11571331,
-  "dil": "fr",
-  "durum": "tamam",
-  "hesap": "tr",
-  "id": "drg-survivor-knockout-1-2-2026-11-17",
-  "kimlik": "eCBDJQ8ukpM",
-  "niyet_zamani": "2026-11-18T08:10:01+00:00",
-  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg1V6kYcbf1iYqLCh6qdyOXrdozg0CovXdt6-gI-9rSn6n77ijvGlaIMNpYTTF1xA9ygypJmzGnKSlvhYY0S0NLUKkNeTrszJj5RjRLJkVo",
-  "platform": "youtube",
-  "sosyal_tur": "haber",
-  "url": "https://www.youtube.com/shorts/eCBDJQ8ukpM",
-  "zaman": "2026-11-18T08:10:01+00:00"
- },
  "football-manager-27-27-1-0-guncelleme-2026-11-16|tr|instagram|gorsel": {
   "bicim": "gorsel",
   "dil": "tr",
@@ -264,21 +249,6 @@
   "sosyal_tur": "haber",
   "url": "https://www.instagram.com/p/Df1x1LxjVWJ/",
   "zaman": "2026-11-17T11:03:02+00:00"
- },
- "mlb-the-show-27-tech-test-now-later-packs-2026-11-17|es|youtube|short": {
-  "bicim": "short",
-  "boyut": 7493389,
-  "dil": "es",
-  "durum": "tamam",
-  "hesap": "tr",
-  "id": "mlb-the-show-27-tech-test-now-later-packs-2026-11-17",
-  "kimlik": "sxoTMIvuJdo",
-  "niyet_zamani": "2026-11-18T07:23:37+00:00",
-  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg1_gYifrF7uIuslXcs_ozydjxkNrvHatPCwO_HDOMCJNkiTTT8yYcYBAVHcWyNacEpuN-6-TlBTp6p4nE2wh7oRCS-tXvdtRzQlZ56eGQ",
-  "platform": "youtube",
-  "sosyal_tur": "haber",
-  "url": "https://www.youtube.com/shorts/sxoTMIvuJdo",
-  "zaman": "2026-11-18T07:23:37+00:00"
  },
  "mlb-the-show-27-tech-test-now-later-packs-2026-11-17|fr|instagram|reel": {
   "bicim": "reel",

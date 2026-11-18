@@ -119,7 +119,8 @@ class Limit(Ortak):
         self.assertEqual((a["gunluk_en_fazla"]["instagram_reel"], a["gunluk_en_fazla"]["youtube"], a["gunluk_en_fazla"]["instagram"]), (6, 8, 12))
         self.assertEqual(a["calisma_basina_en_fazla"], 1)
         self.assertEqual(a["hesap_esleme"]["instagram"]["en"], "tr")
-        self.assertEqual(a["hesap_esleme"]["youtube"]["fr"], "tr")
+        # YouTube'da yabancı dil ortak hesaptan çıkmaz (Cio'nun kararı, 2026-11-18): yalnız Türkçe Shorts
+        self.assertEqual(a["hesap_esleme"]["youtube"], {})
         self.assertEqual(a["ortak_hesap_bicimleri"], ["reel", "short"])
         self.assertGreaterEqual(a["ana_dil_en_az"]["instagram_reel"], 3)
         self.assertGreaterEqual(a["ana_dil_en_az"]["youtube"], 3)
