@@ -1,0 +1,161 @@
+{
+ "id": "disney-dreamlight-valley-keepsake-sea-2026-11-18",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Disney Dreamlight Valley's new expansion, The Keepsake Sea, is out today, November 18.",
+   "veri": {
+    "ust_etiket": "NEW EXPANSION",
+    "baslik": "The Keepsake Sea is out today",
+    "vurgu": [
+     "today"
+    ],
+    "tuslar": [
+     "D",
+     "V"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "DREAMLIGHT VALLEY",
+    "alt": "THE KEEPSAKE SEA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to Nintendo's official announcement, players transform into a Merfolk and uncover strange echoes of the Valley's past.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Nintendo announcement",
+    "alinti": "The Keepsake Sea sets sail today: players become a magical Merfolk and explore three new island biomes."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "NINTENDO • ANNOUNCEMENT"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Three new islands await: Shipwreck Shores with Milo Thatch and Jack Sparrow, Candy Cove with Megara and Captain Hook, and the Kingdom of Oublié with Wendy.",
+   "veri": {
+    "baslik": "Three new island biomes",
+    "maddeler": [
+     {
+      "metin": "Shipwreck Shores: Milo and Jack Sparrow",
+      "tetik": "Shipwreck"
+     },
+     {
+      "metin": "Candy Cove: Megara and Captain Hook",
+      "tetik": "Candy"
+     },
+     {
+      "metin": "Kingdom of Oublié: Wendy",
+      "tetik": "Kingdom"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "THREE NEW ISLANDS",
+    "alt": "UNDERWATER AREAS IN EACH BIOME"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Dory debuts as a new kind of Adventure Companion. The Enchanted Pirate Ship carries up to four Villagers as crew, and the Captain's Cabin can be fully decorated.",
+   "veri": {
+    "baslik": "Ship and companion",
+    "maddeler": [
+     {
+      "metin": "Dory: new Adventure Companion",
+      "tetik": "Dory"
+     },
+     {
+      "metin": "Up to four Villagers as crew",
+      "tetik": "four"
+     },
+     {
+      "metin": "Fully decorated Captain's Cabin",
+      "tetik": "Captain's"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "SHIP AND COMPANION",
+    "alt": "ENCHANTED PIRATE SHIP"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Buy the expansion and play between November 18 and December 2 to earn an exclusive fin for your mermaids.",
+   "veri": {
+    "etiket": "Early Adopter Bonus",
+    "tarih": "December 2",
+    "not": "Play by this date to earn the exclusive fin."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "EARLY ADOPTER BONUS",
+    "alt": "PLAY UNTIL DECEMBER 2"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "The free 'Ohana Holidays update brings Lilo and a new Star Path on December 9.",
+   "veri": {
+    "etiket": "'Ohana Holidays",
+    "tarih": "December 9",
+    "not": "Lilo and a new Star Path arrive."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "'OHANA HOLIDAYS",
+    "alt": "FREE UPDATE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game.",
+   "veri": {
+    "cagri": "Full story on the site",
+    "alt": "Sources and details are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

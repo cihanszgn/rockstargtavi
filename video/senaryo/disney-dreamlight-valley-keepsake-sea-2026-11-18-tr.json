@@ -1,0 +1,161 @@
+{
+ "id": "disney-dreamlight-valley-keepsake-sea-2026-11-18",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Disney Dreamlight Valley'in yeni genişlemesi The Keepsake Sea bugün, 18 Kasım'da çıktı.",
+   "veri": {
+    "ust_etiket": "YENİ GENİŞLEME",
+    "baslik": "The Keepsake Sea bugün çıktı",
+    "vurgu": [
+     "bugün"
+    ],
+    "tuslar": [
+     "D",
+     "V"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "DREAMLIGHT VALLEY",
+    "alt": "THE KEEPSAKE SEA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Nintendo'nun resmî duyurusuna göre oyuncular Merfolk formuna bürünüp Vadi'nin geçmişindeki gizemli yankıları keşfediyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Nintendo duyurusu",
+    "alinti": "The Keepsake Sea bugün yola çıkıyor: oyuncular büyülü bir Merfolk'a dönüşüp üç yeni ada biyomunu keşfediyor."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "NINTENDO • DUYURU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Üç yeni ada var: Shipwreck Shores'ta Milo Thatch ve Jack Sparrow, Candy Cove'da Megara ve Captain Hook, Kingdom of Oublié'de ise Wendy karşılıyor.",
+   "veri": {
+    "baslik": "Üç yeni ada biyomu",
+    "maddeler": [
+     {
+      "metin": "Shipwreck Shores: Milo ve Jack Sparrow",
+      "tetik": "Shipwreck"
+     },
+     {
+      "metin": "Candy Cove: Megara ve Captain Hook",
+      "tetik": "Candy"
+     },
+     {
+      "metin": "Kingdom of Oublié: Wendy",
+      "tetik": "Kingdom"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "ÜÇ YENİ ADA",
+    "alt": "HER BİYOMDA SU ALTI BÖLGESİ"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Dory, yeni bir yoldaş türü olan Adventure Companion olarak geliyor. Enchanted Pirate Ship en fazla dört köylüyü tayfa olarak alıyor, Captain's Cabin de dekore edilebiliyor.",
+   "veri": {
+    "baslik": "Gemi ve yoldaş",
+    "maddeler": [
+     {
+      "metin": "Dory: yeni Adventure Companion",
+      "tetik": "Dory"
+     },
+     {
+      "metin": "Gemide en fazla dört köylü",
+      "tetik": "dört"
+     },
+     {
+      "metin": "Dekore edilebilen Captain's Cabin",
+      "tetik": "Captain's"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "GEMİ VE YOLDAŞ",
+    "alt": "ENCHANTED PIRATE SHIP"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Genişlemeyi satın alıp 18 Kasım ile 2 Aralık arasında oynayanlar, denizkızları için özel bir yüzgeç kazanıyor.",
+   "veri": {
+    "etiket": "Erken oyuncu bonusu",
+    "tarih": "2 Aralık",
+    "not": "Bu tarihe kadar oynayan özel yüzgeç kazanıyor."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "ERKEN OYUNCU BONUSU",
+    "alt": "2 ARALIK'A KADAR"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Ücretsiz 'Ohana Holidays güncellemesi 9 Aralık'ta Lilo'yu ve yeni bir Star Path'i getiriyor.",
+   "veri": {
+    "etiket": "'Ohana Holidays",
+    "tarih": "9 Aralık",
+    "not": "Lilo ve yeni Star Path geliyor."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "'OHANA HOLIDAYS",
+    "alt": "ÜCRETSİZ GÜNCELLEME"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tüm ayrıntılar sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "Tüm ayrıntılar sitede",
+    "alt": "Kaynak ve ayrıntılar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
