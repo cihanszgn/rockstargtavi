@@ -29,6 +29,7 @@ Başlık: `<BÜYÜK HARF OLAY> | <Seri Adı> #<Sayı>`. Seri sayısı `durum.jso
 
 ## Seçim kuralları (2. tur)
 - **Paket öncelik ve örtüşme:** aynı yayında (VOD) zaman aralığı örtüşen yayıncı paketlerinden yalnız biri kullanılır. Öncelik `konusma-hizali` > `konusma` (`konusma-ek-*` dahil) > `canli` > `klip`; eşitlikte yüksek değer. Örtüşme `ortusme_esik_sn` (5 sn) üstüyse eleme olur (`paket_ortusme`).
+- **Konuşma paketi önceliği (2026-11-18):** konuşma katmanından geçmiş yayıncı paketleri (`konusma_puani` olan: `konusma-hizali-*`, `konusma-*`, YouTube `klip-*`) yalnız sohbet yoğunluğundan bulunan paketlerin **önünde** seçilir (`kesit_oncelik`: anahtar = (konuşma paketi mi? 0/1, −değer)); aynı yayıncı üst sınırları ve art arda gelmeme kuralı bunun üstünde aynen uygulanır. Sohbet-only paketler yer kalırsa girer. Gerekçe: konuşma yargısı olayı anlaşılır bulmuş ve `kisa_aciklama` üretmiştir; sohbet yoğunluğu iç şaka da olabilir.
 - **Konuşma paketi kesiti:** paketlerde cümle zamanı yok (`konusma_puani`, `konusma_plan_araligi`, `dokum_metni` var). Bu yüzden konuşma paketinde kesit, modelin verdiği aralığın **başından** alınır (yöntem `konusma_bas`); bitiş cümle sonuna oturmayabilir. Cümle zamanı paketlere eklenirse `_cumleler` onu okur.
 - **Türkçe süzgeci (Shorts):** dil alanı `tr` ise geçer; başka dil elenir (`dil_turkce_degil`). Dil boşsa başlık + kanal + açıklamanın ilk 200 karakterinde Türkçe harf (ç ğ ı İ ö ş ü) ya da ayardaki kelimelerden 2 ya da fazlası aranır (`turkce_izi_yok`). Başlıkta Latin dışı yazı varsa `baslik_latin_disi`. Etiketler atılınca başlıkta `viral_min_kelime` (2) kelimeden az kalırsa `baslik_cok_az_kelime`. `viral_turkce_sart: false` ile kapanır. Elle seçilen (bağlantı, ara-videolar) videolara uygulanmaz.
 - **Eşik:** `viral_min_izlenme` 250 000 (100 000'den yükseltildi). Gerekçe: ham Shorts listesinde (195 aday, 2026-11-18) 100 000–250 000 bandı 26 aday (%13); `keşfet` etiketi bu bantta ilgisiz içerik getiriyor. Eşik 250 000 ile 136 aday kalıyor.
@@ -51,7 +52,7 @@ Değer: paket zirve puanı/100; izleyici ve viral için log izlenme (izleyici ×
 | `viral_dolgu` | true | kesit bitince bütçeyi viralle doldur |
 | `kesit_min/hedef/max_sn` | 12 / 22 / 28 | yayıncı kesiti süresi |
 | `viral_min_sn` / `viral_max_sn`, `viral_uzun` | 5 / 30, `ele` | viral süre sınırı; uzunsa ele (`kirp` ilk kısmı alır) |
-| `viral_min_izlenme`, `viral_gun` | 100000, 90 | Shorts süzgeci |
+| `viral_min_izlenme`, `viral_gun` | 100000 (koddaki varsayılan; `derleme.json` **250000** yazar), 90 | Shorts süzgeci |
 | `gun` | 7 | yayıncı kesiti/izleyici klibi yaş sınırı |
 | `izleyici_min_izlenme`, `izleyici_max_sn`, `izleyici_uzun` | 5, 60, `kirp` | izleyici klibi süzgeci |
 | `ses_hedef_lufs` | −16 | loudnorm hedefi |
@@ -141,8 +142,8 @@ bu karar otomatik sınıflandırma başarısı veya doğrulanmış üretim köke
 
 ### Açıklama yazısının kaynağı ve görünümü
 
-Sıra: (1) konuşma paketinin anlamlı başlığı, yoksa gerekçesi; (2) anlamlı izleyici klibi başlığı;
-(3) kısa ve anlamlı viral başlığı; (4) kesin kesitin ses dökümüyle **tek toplu Sonnet çağrısı**.
+Sıra: (0) paketin `kisa_aciklama`sı (konuşma yargısı üretmiş, **model çağrısı yok**, `aciklama_kaynagi: kisa_aciklama`); (1) konuşma paketinin anlamlı başlığı, yoksa gerekçesi; (2) anlamlı izleyici klibi başlığı;
+(3) kısa ve anlamlı viral başlığı; (4) kesin kesitin ses dökümüyle **tek toplu Sonnet çağrısı** (yalnız (0)–(3)'ten açıklama çıkmayan kesitler için).
 Eski “yayınında sohbet bir anda gülmeye başladı” başlıkları olay açıklaması sayılmaz.
 `ss`, `.`, `...`, `aaaa`, `zzz`, `pembiş` gibi belirsiz tek kelimeler, emoji/etiket yığınları ve tık tuzağı reddedilir.
 Uzun metnin yüklemi körlemesine kesilmez; 45 karakteri aşarsa döküm/model aşamasına bırakılır.
@@ -171,3 +172,28 @@ Dikey videoda da aynı tuval konumu kullanılır. Örnek kanal kareleri incelend
 Her parça kaydında `aciklama`, `aciklama_kaynagi` bulunur (boşsa null). Bölümler açıklamayı kullanır;
 olay açıklaması yoksa yalnız yayıncı/kanal adı yazılır. Derleme başlığında açıklaması olan en değerli yayıncı/izleyici
 parçası önce gelir. Kaynaklar `konusma_paketi`, `izleyici_basligi`, `viral_basligi`, `dokum_model` olarak raporlanır.
+
+### Kısa açıklama + konuşma önceliği: gerçek derleme (2026-11-18, deneme)
+
+`py tools/klip_derleme.py uret --deneme` (ön planda, libx264, 15 dk 9 sn; ortam `YAYIN_KLIP_DIZIN=C:\Cihan.Ai\.scratch\yayin-klip`). Çıktı: `C:\Cihan.Ai\.scratch\yayin-klip\derleme\deneme-20261118-112753\derleme.mp4` — 648.51 sn (10 dk 48 sn), 1920x1080, 30 fps, sesli; `dogrula`: `gecti: true`, 6 yayıncı parçasında LUFS −15.4…−16.2 (hedef −16), görüntü/ses farkı 0.08 sn, 10 kare çıkarıldı.
+Parçalar: 11 yayıncı kesiti, 0 izleyici klibi, 23 viral. **Yayıncı kesitlerinden 10'u konuşma paketinden** (`kisa_aciklama` kaynağı), 1'i konuşma paketi değil; **11'inin hepsinde açıklama var** (10 `kisa_aciklama`, 1 `dokum_model`). 3 yayıncı kesiti YouTube aralığından **yatay** yeniden kesildi (`youtube_aralik`); dikey mp4'e düşen 0. Viral parçalarda açıklama kaynağı `viral_basligi` (19); 3 viral parçada açıklama yok (nedeni ayrıca incelenmedi). Model çağrısı bu derlemede 1 (`konuşma yargısı sonnet: 1 çağrı`). Uyarı: "aynı yayıncı art arda: 2 yerde kaçınılamadı (yayıncı çeşitliliği az)".
+Sol alt ilk 3 sn kaynak etiketi YouTube parçasında `Yayıncı: Eraycan · youtube.com/@erayozkenar`, Kick parçasında `Yayıncı: wtcN · kick.com/wtcn`. Kareler (`kareler/kare-03…09`) incelendi: yatay tuvalde açıklama alt bantta (54 pt, siyah %62 bant), etiket ve filigranla çakışmıyor, Türkçe karakter doğru. Dikey klibin üst bölge yazısı için `KLIP-HATTI.md` "Kısa açıklama" bölümüne bak.
+Sınır: derleme `--deneme` ile üretildi, `durum.json` yazılmadı; gerçek derleme için `--deneme` olmadan çalıştırılmalı.
+
+### Son derleme ölçümleri (`deneme-20261118-112753`, 2026-11-18, bu bilgisayar)
+
+- **Süre:** toplama 205,7 sn + parça hazırlama 419,2 sn; toplam üretim 908,9 sn (15 dk 9 sn, CPU). Çıktı 648,51 sn (10:48), 461.720.427 bayt (≈440 MB). Bu çalıştırmada indirilen: 58.321.540 bayt (≈55,6 MB). `derleme/indirilen/` klasörü önceki denemelerle birikmiş toplam ≈199 MB tutuyor.
+- **Parça:** 38 kayıt = 34 gövde (11 yayıncı kesiti + 23 viral; 0 izleyici klibi) + 2 teaser + giriş + kapanış. İzleyici klibi 0 çünkü konuşma paketli kesitler izleyici kliplerinin önüne alınıyor ve 11 kesit bütçeyi doldurdu.
+- **Kaynak başına (bulunan → kalan):** paket 35 → 22 (3 eski yöntem klasörü, 6 konuşma hizasız, 3 gün dışı, 1 paket örtüşmesi); Kick izleyici klibi 100 → 75 (18 çok uzun, 7 gün dışı; kanal başına 13–17 kaldı); `ara-videolar` 0, bağlantı 0; Shorts: etiket-komik 30 → 14, etiket-mizah 30 → 9, etiket-keşfet 30 → 8, etiket-komedi 30 → 0 (22'si Türkçe değil), yayıncı kanalı Shorts'ları 5 × 15 → toplam 3 (çoğu düşük izlenme). Kick klip örtüşmesi 8 elendi; epoch'u bilinmeyen 3 aday örtüşme denetimine giremedi.
+- **Toplam elenen (`elenen_adaylar`, 266 kayıt):** düşük izlenme 58, çok uzun 41, Türkçe değil 37, `yayinci_toplam_ust` 32, `izleyici_kanal_ust` 32, gün dışı 26, `yapay_zeka` 11, örtüşme 8, konuşma hizasız 6, başlık az kelime 5, kanal üst 4, Latin dışı başlık 4, paket örtüşme 1, Türkçe izi yok 1.
+- **Doğrulama** (`dogrula`, `gecti: true`): görüntü 648,43 / ses 648,51 sn (fark 0,08 sn); kapanış kartı plan 643,53 / gerçek 643,50 sn (fark 0,03 sn); 6 parçada LUFS −16,2 / −15,4 / −16,0 / −15,9 / −16,0 / −16,0 (hepsi yayıncı kesiti; viral parçada LUFS ölçülmedi); 10 kare `kareler/` içinde, gözle bakıldı.
+- **Testler:** `test_klip_derleme.py` 105 test OK; `test_yayin_klip.py` 162 test OK (aynı gün, aynı çalışma ağacı).
+
+### Dürüst zayıflıklar (son derleme)
+
+- **Küçük resimler** üç viral videonun karesi (`kucuk-resim-1..3.png`); yayıncı kesiti kullanılmıyor, üzerinde yalnız filigran var, başlıkla (Ferit) örtüşmüyor. Yayın için elle seçim gerekir.
+- **Viral videonun kendi altyazısı** ile bizim açıklama bandı bazı parçalarda üst üste biniyor (ör. kare "Polis yakaladı !").
+- 3 viral parçada açıklama yazısı yok; 2 yerde aynı yayıncı art arda geldi.
+- Kara liste (`viral_kanal_kara_liste`) ve `viral_yz_izleri` yanlış eleme yapabilir; elenmeyen videoların gerçek olduğu garanti değildir.
+- **Model kullanımı:** başlık model çağrısıyla üretilmiyor (kural tabanlı: `baslik_bilgi.neden = parca_aciklamasi`). Ama parça açıklaması için bu çalıştırmada **1 Sonnet çağrısı** (üst sınır 3, `aciklama_model_butcesi`) ve CPU Whisper dökümü kullanıldı; `kisa_aciklama`lar paketteki konuşma yargısından geliyor. Model gerekmeden çalıştırmak için `--aciklamasiz` ya da `aciklama_etkin: false`.
+- Derleme `--deneme` ile üretildi: seri sayısı (`durum.json`) artmadı ve video "kullanıldı" sayılmadı. Kalıcı üretim için `--deneme` olmadan yeniden çalıştırılmalı (~15 dk).

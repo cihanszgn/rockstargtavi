@@ -107,6 +107,20 @@ AYAR_VARSAYILAN = {
     'oyunlar': [],         # boş = bütün yayınlar; doluysa yalnız kategorisi/başlığı bu adlardan birine uyanlar
     'oyun_baslikta_ara': True,  # kategori uymasa da yayın başlığında geçen oyun adı kabul edilir
 }
+# Kısa olay açıklaması ayarları (konuşma yargısındaki kisa_aciklama; dikey klipte üst bölgeye büyük yazılır):
+#   klip_aciklama_yazi      true (varsayılan) | false  -> false ya da --aciklamasiz: yazısız eski görünüm
+#   aciklama_yasak_kelimeler  listeyi genişletir (klip_konusma.ACIKLAMA_YASAK_VARSAYILAN'a eklenir)
+#   klip_aciklama_stil      A | B | C (varsayılan ACIKLAMA_STIL_VARSAYILAN): A dolu sarı etiket, B koyu etiket + sarı ad,
+#                           C zeminsiz kalın kontur. Ayrıntı: otomasyon/KLIP-HATTI.md "Açıklama görünümü".
+# Bunlar AYAR_VARSAYILAN'a GİRMEZ ve analiz önbelleği karşılaştırmasında yok sayılır: yalnız görünümü etkiler,
+# yoksa her ayar değişikliği (pahalı) sohbet/yargı analizini geçersiz kılardı.
+GORSEL_AYAR = ('klip_aciklama_yazi', 'aciklama_yasak_kelimeler', 'klip_aciklama_stil')
+ACIKLAMA_STILLERI = ('A', 'B', 'C')
+ACIKLAMA_STIL_VARSAYILAN = 'A'
+ACIKLAMA_TASARIM_SURUMU = 2   # düzen imzasına girer: tasarım değişince açıklamalı klipler 'güncel değil' olur
+ACIKLAMA_FONT_DOSYASI = ROOT / 'otomasyon' / 'fontlar' / 'Anton-Regular.ttf'   # SIL OFL 1.1, lisans yanında (Anton-OFL.txt)
+MARKA_SARI = (255, 213, 74)      # derleme giriş kartıyla aynı: 0xFFD54A
+MARKA_LACIVERT = (11, 13, 23)    # derleme kart zemini: 0x0B0D17
 SHORTS_AZAMI_SN = 60
 
 # Dikey düzenin tek yeri: değerler 1080x1920 tuvale göre piksel.
@@ -123,6 +137,12 @@ DUZEN = {
     'alt_marka': {'boyut': 38, 'y_serit': 1415},
     'marka': 'CTRL+A GAME  ·  ctrl-agame.com',
     'metin_azami_px': 980,
+    # Açıklama yazısı (yalnız açıklama varsa): görüntü karesinin HEMEN ÜSTÜNDE etiket (video_boslugu px aralıkla);
+    # en üst 'ust_sinir' px boş kalır (Shorts/Reels üst çubuğu). Yayıncı adı + oyun, kaynak ve marka satırları
+    # görüntünün ALTINA iner. Hepsi tek PNG katmanı olarak çizilir (aciklama_katmani), ffmpeg yalnız bindirir.
+    'aciklama': {'boyut': 78, 'tek_satir_en_az': 64, 'en_az': 54, 'satir_arasi': 8, 'pad_x': 30, 'pad_y': 10,
+                 'yaricap': 22, 'video_boslugu': 40, 'ust_sinir': 150, 'golge_pay': 16,
+                 'ad_boyut': 44, 'kaynak_boyut': 34, 'marka_boyut': 30, 'alt_bosluk': 28, 'alt_satir_arasi': 6},
 }
 KAYNAK_ORAN = 16 / 9       # Kick yayını 16:9; kadraj oranı bundan büyük olamaz (kırpılacak şey kalmaz)
 KADRAJ_EN_AZ = 1.0         # kareden dik kırpma yok: yazı bloğuna yer kalsın
@@ -1222,7 +1242,9 @@ def paket_json(vod: dict, klip: dict, mp4: pathlib.Path, dogrulama: dict, ayar: 
         'aciklama': aciklama_uret(vod, klip),
         'dosya': mp4.name,
         'video': dogrulama,
-        'duzen': duzen_imzasi(ayar or AYAR_VARSAYILAN),
+        'kisa_aciklama': klip_aciklamasi(klip, ayar),
+        'aciklama_yazisi': dogrulama.get('aciklama_yazisi'),
+        'duzen': duzen_imzasi(ayar or AYAR_VARSAYILAN, klip_aciklamasi(klip, ayar)),
         'uretim': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
         'yayinlandi': False,
     }, **(ekstra or {})}
@@ -1281,7 +1303,120 @@ def metin_boyutu(metin: str, boyut: int, azami_px: int) -> int:
     return max(24, min(boyut, int(azami_px / (0.62 * max(len(metin), 1)))))
 
 
-def yerlesim(ayar: dict | None = None, duzen: dict = DUZEN) -> dict:
+def _aciklamayi_isle(yz: dict, aciklama: dict | None) -> dict:
+    """Açıklama yerleşimi (aciklama_duzeni sonucu) varsa yerleşime ekler. Görüntü kutusu ve eski yazı konumları
+    değişmez; açıklamalı klipte yazıların hepsini aciklama['alt'] ve aciklama['y'] belirler (PNG katmanı)."""
+    if aciklama:
+        yz['aciklama'] = aciklama
+    return yz
+
+
+def yazi_genisligi(font: str, metin: str, boyut: int, kenar: int = 0) -> float:
+    """drawtext çıktısının yaklaşık genişliği (PIL ile ölçülür; PIL yoksa 0.62 em tahmini) + iki yan kenar çizgisi."""
+    try:
+        from PIL import ImageFont
+        return ImageFont.truetype(font, boyut).getlength(metin) + 2 * kenar
+    except Exception:
+        return 0.62 * boyut * len(metin) + 2 * kenar
+
+
+def aciklama_satirlari(metin: str, font: str, boyut: int, azami_px: float, kenar: int,
+                       tek_satir: bool) -> list[str] | None:
+    """Metni ≤2 satıra böler (kelime ortasından değil, kısaltmadan); sığmıyorsa None.
+    tek_satir=True ise sığıyorsa tek satır tercih edilir; değilse en dengeli ikili bölüm aranır."""
+    kelimeler = metin.split()
+    if not kelimeler:
+        return None
+    if tek_satir and yazi_genisligi(font, ' '.join(kelimeler), boyut, kenar) <= azami_px:
+        return [' '.join(kelimeler)]
+    en_iyi = None
+    for i in range(1, len(kelimeler)):
+        a, b = ' '.join(kelimeler[:i]), ' '.join(kelimeler[i:])
+        w = max(yazi_genisligi(font, a, boyut, kenar), yazi_genisligi(font, b, boyut, kenar))
+        if w <= azami_px and (en_iyi is None or w < en_iyi[0]):
+            en_iyi = (w, [a, b])
+    return en_iyi[1] if en_iyi else None
+
+
+def aciklama_stili(ayar: dict | None = None) -> str:
+    """Ayardaki klip_aciklama_stil (A|B|C); yoksa varsayılan. Geçersiz değer sessizce yutulmaz."""
+    s = str((ayar or {}).get('klip_aciklama_stil') or ACIKLAMA_STIL_VARSAYILAN).strip().upper()
+    if s not in ACIKLAMA_STILLERI:
+        raise KlipHatasi(f"klip_aciklama_stil {'/'.join(ACIKLAMA_STILLERI)} olmalı: {s!r}")
+    return s
+
+
+def aciklama_fontu() -> str:
+    """Açıklama yazı tipi: KLIP_ACIKLAMA_FONT, depodaki Anton (OFL), yoksa sistemin kalın yazı tipi."""
+    env = os.environ.get('KLIP_ACIKLAMA_FONT', '')
+    for a in (env, str(ACIKLAMA_FONT_DOSYASI)):
+        if a and pathlib.Path(a).is_file():
+            return a
+    return font_bul()
+
+
+def _murekkep(font: str, metinler: list[str], boyut: int) -> tuple[int, int]:
+    """Taban çizgisine göre mürekkep sınırı (üst eksi): verilen satırlar + 'Kg' (büyük harf ve alt uzantı payı).
+    Etiket yüksekliği buradan çıkar: diakritikli büyük harf (Ğ İ Ü) satırdaysa etiket onu da kapsar."""
+    try:
+        from PIL import ImageFont
+        f = ImageFont.truetype(font, boyut)
+        ust = alt = 0
+        for t in [*metinler, 'Kg']:
+            b = f.getbbox(t, anchor='ls')
+            ust, alt = min(ust, b[1]), max(alt, b[3])
+        return ust, alt
+    except Exception:   # noqa: BLE001 - PIL/yazı tipi yoksa kaba tahmin (katman zaten çizilemez)
+        return -int(boyut * 1.1), int(boyut * 0.3)
+
+
+def _alt_satir_yuksekligi(boyut: int) -> int:
+    return int(boyut * 1.4)
+
+
+def aciklama_duzeni(metin: str | None, font: str, ayar: dict | None = None, duzen: dict = DUZEN,
+                    oyun_var: bool = True) -> dict | None:
+    """Kısa açıklamanın yeri: görüntü karesinin hemen ÜSTÜNDE (alt kenar = kare üstü - video_boslugu), ≤2 satır,
+    en üst 'ust_sinir' px boş. Satır başına bir etiket kutusu (kutular), hepsi aynı yükseklikte.
+    Yayıncı adı + oyun, kaynak ve marka görüntünün ALTINA dizilir ('alt').
+    Tek satır yalnız 'tek_satir_en_az' pt ve üstünde, iki satır 'en_az' pt'e kadar küçülür.
+    Sığmıyorsa None (açıklama çizilmez, eski görünüm). 'font' ölçüm içindir: çizimde de aynı yazı tipi kullanılır."""
+    if not metin or not metin.strip():
+        return None
+    c = duzen['aciklama']
+    stil = aciklama_stili(ayar)
+    yz = yerlesim(ayar, duzen)
+    y0 = yz['gorsel_y']
+    gorsel_alt = y0 + yz['gorsel_h']
+    alt = y0 - c['video_boslugu']
+    for boyut in range(c['boyut'], c['en_az'] - 1, -2):
+        satirlar = aciklama_satirlari(metin, font, boyut, duzen['metin_azami_px'], c['pad_x'],
+                                      tek_satir=boyut >= c['tek_satir_en_az'])
+        if not satirlar:
+            continue
+        ust_m, alt_m = _murekkep(font, satirlar, boyut)
+        kutu_h = (alt_m - ust_m) + 2 * c['pad_y']
+        toplam = kutu_h * len(satirlar) + c['satir_arasi'] * (len(satirlar) - 1)
+        ust = alt - toplam
+        if ust < c['ust_sinir'] + c['golge_pay']:   # gölge/kontur 150 px sınırına taşmasın
+            continue
+        ys = [ust + i * (kutu_h + c['satir_arasi']) for i in range(len(satirlar))]
+        kutular = []
+        for y, s in zip(ys, satirlar):
+            w = yazi_genisligi(font, s, boyut, c['pad_x'])
+            x0 = (duzen['genislik'] - w) / 2
+            kutular.append((round(x0, 1), y, round(x0 + w, 1), y + kutu_h))
+        alt_satirlar, y_alt = {}, gorsel_alt + c['alt_bosluk']
+        for ad, b in (('ad_oyun', c['ad_boyut']), ('kaynak', c['kaynak_boyut']), ('marka', c['marka_boyut'])):
+            alt_satirlar[ad] = {'y': y_alt, 'boyut': b, 'h': _alt_satir_yuksekligi(b)}
+            y_alt += _alt_satir_yuksekligi(b) + c['alt_satir_arasi']
+        return {'satirlar': satirlar, 'boyut': boyut, 'y': ys, 'kutu_h': kutu_h, 'kutular': kutular,
+                'taban': [y + c['pad_y'] - ust_m for y in ys], 'ust': ust, 'alt': alt, 'stil': stil, 'font': font,
+                'alt_satirlar': alt_satirlar, 'oyun_var': bool(oyun_var), 'alt_son': y_alt - c['alt_satir_arasi']}
+    return None
+
+
+def yerlesim(ayar: dict | None = None, duzen: dict = DUZEN, aciklama: dict | None = None) -> dict:
     """Görüntü kutusu ve yazı konumları (1080x1920 tuvalde piksel).
     'kadraj': yayın ortadan kadraj_oran'a kırpılıp genişliğe sığdırılır; yazılar görüntünün üstünde/altında kalır.
     'serit': eski düzen, kırpmasız tam genişlik 16:9 şerit ve sabit yazı konumları."""
@@ -1293,8 +1428,8 @@ def yerlesim(ayar: dict | None = None, duzen: dict = DUZEN) -> dict:
     yazilar = ('ust_ad', 'ust_oyun', 'alt_kaynak', 'alt_marka')
     if mod == 'serit':
         gh = int(round(w / KAYNAK_ORAN / 2)) * 2
-        return {'mod': mod, 'oran': None, 'gorsel_y': (h - gh) // 2, 'gorsel_h': gh,
-                'y': {a: duzen[a]['y_serit'] for a in yazilar}}
+        return _aciklamayi_isle({'mod': mod, 'oran': None, 'gorsel_y': (h - gh) // 2, 'gorsel_h': gh,
+                                 'y': {a: duzen[a]['y_serit'] for a in yazilar}}, aciklama)
     oran = min(max(float(ayar.get('kadraj_oran', AYAR_VARSAYILAN['kadraj_oran'])), KADRAJ_EN_AZ), KAYNAK_ORAN)
     gh = int(round(w / oran / 2)) * 2
     y0 = int(duzen['gorsel_merkez_y'] - gh / 2)
@@ -1303,16 +1438,93 @@ def yerlesim(ayar: dict | None = None, duzen: dict = DUZEN) -> dict:
     ad_y = oyun_y - 18 - int(duzen['ust_ad']['boyut'] * kat)
     kaynak_y = y0 + gh + 34
     marka_y = kaynak_y + int(duzen['alt_kaynak']['boyut'] * kat) + 10
-    return {'mod': mod, 'oran': oran, 'gorsel_y': y0, 'gorsel_h': gh,
-            'y': {'ust_ad': ad_y, 'ust_oyun': oyun_y, 'alt_kaynak': kaynak_y, 'alt_marka': marka_y}}
+    return _aciklamayi_isle({'mod': mod, 'oran': oran, 'gorsel_y': y0, 'gorsel_h': gh,
+                             'y': {'ust_ad': ad_y, 'ust_oyun': oyun_y, 'alt_kaynak': kaynak_y,
+                                   'alt_marka': marka_y}}, aciklama)
 
 
-def filtre_yaz(font: str, metinler: dict[str, str], duzen: dict = DUZEN, ayar: dict | None = None) -> str:
+def aciklama_katmani(aciklama: dict, metinler: dict[str, str], duzen: dict = DUZEN):
+    """Açıklamalı klibin TÜM yazılarını (açıklama etiketi, yayıncı adı · oyun, kaynak, marka) tek şeffaf RGBA katmanına
+    çizer (1080x1920, PIL; ffmpeg yazı tipi/drawtext kaçışı gerekmez, Linux'ta da aynı). Etiket ve metin 2x çizilip
+    küçültülür (yumuşak kenar); gölge 1x çizilip bulanıklaştırılır. Stil: A dolu sarı etiket + lacivert yazı,
+    B koyu yarı saydam etiket + sarı çerçeve, beyaz yazı + sarı ad, C zeminsiz: kalın siyah kontur + gölge, beyaz/sarı."""
+    try:
+        from PIL import Image, ImageDraw, ImageFilter, ImageFont
+    except ImportError as e:
+        raise KlipHatasi('açıklama yazısı için Pillow gerekli: py -m pip install --user pillow') from e
+    c = duzen['aciklama']
+    W, H, k = duzen['genislik'], duzen['yukseklik'], 2
+    stil, fyol = aciklama['stil'], aciklama['font']
+    beyaz, gri = (255, 255, 255, 255), (204, 204, 204, 255)
+    sari, lacivert = (*MARKA_SARI, 255), (*MARKA_LACIVERT, 255)
+    golge = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    ust = Image.new('RGBA', (W * k, H * k), (0, 0, 0, 0))
+    dg, du = ImageDraw.Draw(golge), ImageDraw.Draw(ust)
+
+    def font(boyut: int, kat: int = k):
+        return ImageFont.truetype(fyol, boyut * kat)
+
+    def yaz(x: float, taban: float, parca: list, boyut: int, kontur: int, golge_oteleme: int,
+            golge_alfa: int = 190) -> None:
+        """parca = [(metin, renk)] soldan sağa; x = ilk parçanın sol kenarı, taban = taban çizgisi (1x px)."""
+        f1, f2 = font(boyut, 1), font(boyut)
+        for metin, renk in parca:
+            if kontur or golge_oteleme:
+                dg.text((x, taban + golge_oteleme), metin, font=f1, fill=(0, 0, 0, golge_alfa), anchor='ls',
+                        stroke_width=kontur, stroke_fill=(0, 0, 0, golge_alfa))
+            du.text((x * k, taban * k), metin, font=f2, fill=renk, anchor='ls',
+                    stroke_width=kontur * k, stroke_fill=(0, 0, 0, 255) if kontur else None)
+            x += f2.getlength(metin) / k
+
+    # -- açıklama etiketleri
+    for i, (satir, (x0, y0, x1, y1), taban) in enumerate(zip(aciklama['satirlar'], aciklama['kutular'], aciklama['taban'])):
+        if stil == 'A':
+            dg.rounded_rectangle((x0, y0 + 8, x1, y1 + 8), radius=c['yaricap'], fill=(0, 0, 0, 150))
+            du.rounded_rectangle((x0 * k, y0 * k, x1 * k, y1 * k), radius=c['yaricap'] * k, fill=sari)
+            parca = [(satir, lacivert)]
+        elif stil == 'B':
+            dg.rounded_rectangle((x0, y0 + 8, x1, y1 + 8), radius=c['yaricap'], fill=(0, 0, 0, 150))
+            du.rounded_rectangle((x0 * k, y0 * k, x1 * k, y1 * k), radius=c['yaricap'] * k, fill=(*MARKA_LACIVERT, 214),
+                                 outline=sari, width=3 * k)
+            parca = [(satir, beyaz)]
+        else:
+            parca = [(satir, beyaz)]
+        if stil != 'A' and i == 0:   # ilk kelime (açıklamanın öznesi) sarı
+            ilk, _, kalan = satir.partition(' ')
+            parca = [(ilk + ' ', sari)] + ([(kalan, beyaz)] if kalan else [])
+        yaz(x0 + c['pad_x'], taban, parca, aciklama['boyut'], kontur=9 if stil == 'C' else 0,
+            golge_oteleme=8 if stil == 'C' else 0, golge_alfa=215)
+
+    # -- altta: yayıncı adı · oyun, kaynak, marka (kontur + gölge, zeminsiz)
+    azami = duzen['metin_azami_px']
+
+    def alt_satir(ad: str, parcalar: list) -> None:
+        a = aciklama['alt_satirlar'][ad]
+        boyut = a['boyut']
+        while boyut > 20 and sum(font(boyut, 1).getlength(m) for m, _ in parcalar) > azami:
+            boyut -= 2
+        w = sum(font(boyut, 1).getlength(m) for m, _ in parcalar)
+        yaz((W - w) / 2, a['y'] + int(boyut * 1.1), parcalar, boyut, kontur=5, golge_oteleme=4, golge_alfa=170)
+
+    ad_parca = [(metinler['ad'], beyaz)]
+    if aciklama['oyun_var'] and metinler.get('oyun'):
+        ad_parca += [('  \u00b7  ', gri), (metinler['oyun'], sari)]
+    alt_satir('ad_oyun', ad_parca)
+    alt_satir('kaynak', [(metinler['kaynak'], beyaz)])
+    alt_satir('marka', [(metinler['marka'], gri)])
+
+    golge = golge.filter(ImageFilter.GaussianBlur(6))
+    ust = ust.resize((W, H), Image.LANCZOS)
+    return Image.alpha_composite(golge, ust)
+
+
+def filtre_yaz(font: str, metinler: dict[str, str], duzen: dict = DUZEN, ayar: dict | None = None,
+               aciklama: dict | None = None) -> str:
     """filter_complex betiği. Metinler çalışma klasöründe t_<ad>.txt dosyalarından okunur (kaçış derdi yok)."""
     w, h = duzen['genislik'], duzen['yukseklik']
     kucuk_w = w // 4
     kucuk_h = h // 4
-    yz = yerlesim(ayar, duzen)
+    yz = yerlesim(ayar, duzen, aciklama)
     if yz['mod'] == 'serit':
         on = f"scale={w}:-2:flags=lanczos"
     else:
@@ -1327,11 +1539,14 @@ def filtre_yaz(font: str, metinler: dict[str, str], duzen: dict = DUZEN, ayar: d
         f"[b]{on}[fg]",
         f"[bg][fg]overlay=0:{yz['gorsel_y']}[v0]",
     ]
+    if aciklama:   # tüm yazılar ikinci girdideki PNG katmanında (aciklama_katmani); drawtext yok
+        satirlar.append('[v0][1:v:0]overlay=0:0:format=auto,setsar=1,format=yuv420p[v]')
+        return ';\n'.join(satirlar) + '\n'
     cizim = []
     for ad, bolum, renk in (('ad', 'ust_ad', 'white'), ('oyun', 'ust_oyun', '0xFFD54A'),
                             ('kaynak', 'alt_kaynak', 'white'), ('marka', 'alt_marka', '0xCCCCCC')):
         b = duzen[bolum]
-        boyut = metin_boyutu(metinler[ad], b['boyut'], duzen['metin_azami_px'])
+        boyut = metin_boyutu(metinler[ad], yz.get('boyut', {}).get(bolum, b['boyut']), duzen['metin_azami_px'])
         cizim.append(
             f"drawtext=fontfile='{_fe(font)}':textfile='t_{ad}.txt':fontsize={boyut}:fontcolor={renk}:"
             f"borderw=4:bordercolor=black@0.85:x=(w-text_w)/2:y={yz['y'][bolum]}"
@@ -1340,22 +1555,27 @@ def filtre_yaz(font: str, metinler: dict[str, str], duzen: dict = DUZEN, ayar: d
     return ';\n'.join(satirlar) + '\n'
 
 
-def klip_metinleri(vod: dict) -> dict[str, str]:
-    return {
+def klip_metinleri(vod: dict, aciklama: dict | None = None) -> dict[str, str]:
+    m = {
         'ad': vod['yayinci'],
         'oyun': vod.get('oyun') or '',
         'kaynak': (f"Kaynak: kick.com/{vod['kanal']}" if vod['platform'] == 'kick' else
                    f"Kaynak: youtube.com/@{vod['kanal']}" if vod['platform'] == 'youtube' else f"Kaynak: {vod['kanal_url']}"),
         'marka': DUZEN['marka'],
     }
+    for i, satir in enumerate((aciklama or {}).get('satirlar', [])):
+        m[f'aciklama{i + 1}'] = satir
+    return m
 
 
 def ffmpeg_komutu(ff: str, kaynak: str, bas: float, sure: float, cikti: str, filtre: str,
-                  yerel_hls: bool = False) -> list[str]:
+                  yerel_hls: bool = False, katman: str | None = None) -> list[str]:
     # -filter_complex_script ffmpeg 7+'da kalktı, -/filter_complex 6'da yok: süzgeç (~1 KB) argüman olarak verilir.
     return [ff, '-hide_banner', '-loglevel', 'error', '-y',
             *(['-protocol_whitelist', 'file,http,https,tcp,tls,crypto'] if yerel_hls else []),
-            *(['-i', kaynak, '-ss', f'{bas:.3f}'] if yerel_hls else ['-ss', f'{bas:.3f}', '-i', kaynak]),
+            # katman (PNG) kaynağın hemen ardından gelir: yerel_hls'te sonraki -ss çıkış seçeneği kalır, PNG'yi kaydırmaz
+            *(['-i', kaynak, *(['-i', katman] if katman else []), '-ss', f'{bas:.3f}'] if yerel_hls else
+              ['-ss', f'{bas:.3f}', '-i', kaynak, *(['-i', katman] if katman else [])]),
             '-t', f'{sure:.3f}',
             '-filter_complex', filtre.replace('\n', ''),
             '-map', '[v]', '-map', '0:a:0',
@@ -1392,9 +1612,15 @@ def klip_kes(vod: dict, klip: dict, hedef: pathlib.Path, ff: str, font: str, aya
     hedef.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='klip-') as tmp:
         tmp_yol = pathlib.Path(tmp)
-        metinler = klip_metinleri(vod)
+        aciklama_metni = klip_aciklamasi(klip, ayar)
+        aciklama = aciklama_duzeni(aciklama_metni, aciklama_fontu(), ayar, oyun_var=bool(vod.get('oyun')))
+        metinler = klip_metinleri(vod, aciklama)
         for ad, m in metinler.items():
             (tmp_yol / f't_{ad}.txt').write_text(m or ' ', encoding='utf-8')
+        katman = None
+        if aciklama:
+            aciklama_katmani(aciklama, metinler).save(tmp_yol / 'katman.png')
+            katman = 'katman.png'
         gecici = tmp_yol / 'cikti.mp4'
         bas, yerel = klip['klip_baslangic_sn'], False
         plan_bas = bas
@@ -1434,7 +1660,7 @@ def klip_kes(vod: dict, klip: dict, hedef: pathlib.Path, ff: str, font: str, aya
                 except RuntimeError as e:
                     raise KlipHatasi(str(e)) from e
             r = subprocess.run(ffmpeg_komutu(ff, kaynak, bas-origin if yerel else bas, sure, gecici.name,
-                                             filtre_yaz(font, metinler, ayar=ayar), yerel),
+                                             filtre_yaz(font, metinler, ayar=ayar, aciklama=aciklama), yerel, katman),
                                cwd=tmp, capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=1200)
             if r.returncode != 0 or not gecici.exists():
                 raise KlipHatasi(f'ffmpeg başarısız ({r.returncode}): {r.stderr[-800:]}')
@@ -1497,6 +1723,11 @@ def klip_kes(vod: dict, klip: dict, hedef: pathlib.Path, ff: str, font: str, aya
         bilgi['ses_hizasi'] = {'denemeler': hizalar, 'kaydirma_sn': round(bas-plan_bas,4)}
     if youtube_indirme:
         bilgi['youtube_indirme'] = youtube_indirme
+    if aciklama_metni:
+        bilgi['aciklama_yazisi'] = ({'metin': aciklama_metni, 'satirlar': aciklama['satirlar'],
+                                     'boyut': aciklama['boyut'], 'y': aciklama['y'], 'stil': aciklama['stil'],
+                                     'yazi_tipi': pathlib.Path(aciklama['font']).name} if aciklama else
+                                    {'metin': aciklama_metni, 'yazilmadi': 'üst bölgeye sığmadı'})
     return bilgi
 
 
@@ -1516,6 +1747,7 @@ def vod_hazirla(arguman: str, ayar: dict, http=http_json, http_text=http_metin) 
             if reason:
                 raise KlipHatasi(f'YouTube video atlandı: {reason}')
             vod['_youtube_bilgi'] = info
+            vod['kisa_ad'] = (y or {}).get('kisa_ad')
             return vod, cfg
         except (OSError, RuntimeError, ValueError) as e:
             raise KlipHatasi(str(e)) from e
@@ -1525,7 +1757,13 @@ def vod_hazirla(arguman: str, ayar: dict, http=http_json, http_text=http_metin) 
         raise KlipHatasi('yayın hâlâ sürüyor; bittikten sonra işlenir')
     y = yayinci_bul(ayar, 'kick', vod['kanal'])
     vod_t0_ekle(vod, http_text)
+    vod['kisa_ad'] = (y or {}).get('kisa_ad')
     return vod, (y['ayar'] if y else dict(ayar['ayar']))
+
+
+def gorselsiz(ayar: dict | None) -> dict | None:
+    """Analiz önbelleği karşılaştırması için yalnız görünümü etkileyen ayarlar atılır (GORSEL_AYAR)."""
+    return {k: v for k, v in ayar.items() if k not in GORSEL_AYAR} if isinstance(ayar, dict) else ayar
 
 
 def analiz_komutu(arguman: str, dizin: pathlib.Path, ayar: dict, gecersiz: dict | None = None,
@@ -1539,9 +1777,10 @@ def analiz_komutu(arguman: str, dizin: pathlib.Path, ayar: dict, gecersiz: dict 
     yol = dizin / 'analiz' / f"{vod['platform']}-{vod['vod_id']}.json"
     if yol.exists() and not yeniden:
         sonuc = json.loads(yol.read_text(encoding='utf-8'))
-        if sonuc.get('ayar') == vayar and (not vayar.get('konusma') or
+        if gorselsiz(sonuc.get('ayar')) == gorselsiz(vayar) and (not vayar.get('konusma') or
                 (sonuc.get('konusma', {}).get('durum') == 'açık' and
                  sonuc.get('konusma_surumu') == klip_konusma.SURUM)):
+            sonuc['ayar'] = vayar   # görünüm ayarı (açıklama yazısı vb.) bu çalıştırmanınki; diske yazılmaz
             return vod, sonuc
     def ilerleme(a, b):
         print(f'  sohbet: {a}/{b} pencere', file=sys.stderr, flush=True)
@@ -1576,10 +1815,23 @@ def analiz_komutu(arguman: str, dizin: pathlib.Path, ayar: dict, gecersiz: dict 
     return vod, sonuc
 
 
-def duzen_imzasi(ayar: dict) -> dict:
+def klip_aciklamasi(klip: dict, ayar: dict | None = None) -> str | None:
+    """Klibe yazılacak kısa açıklama: konuşma yargısından gelen konusma_kisa_aciklama, yeniden doğrulanmış.
+    Ayarda klip_aciklama_yazi=false (ya da --aciklamasiz) ise None: eski, yazısız görünüm."""
+    ayar = ayar or {}
+    if ayar.get('klip_aciklama_yazi') is False:
+        return None
+    return klip_konusma.kisa_aciklama_dogrula(klip.get('konusma_kisa_aciklama') or klip.get('kisa_aciklama'), ayar)
+
+
+def duzen_imzasi(ayar: dict, aciklama: str | None = None) -> dict:
+    """Görünüm imzası; açıklama yazılacaksa metni de girer (açıklama ya da düzen değişince klip yeniden üretilir).
+    Açıklamasız klipte imza eskisiyle birebir aynıdır."""
     yz = yerlesim(ayar)
     return {'duzen': yz['mod'], 'kadraj_oran': yz['oran'],
-            **({'konusma_saat_surumu': 3} if ayar.get('konusma') else {})}
+            **({'konusma_saat_surumu': 3} if ayar.get('konusma') else {}),
+            **({'aciklama': aciklama, 'aciklama_stil': aciklama_stili(ayar),
+                'aciklama_tasarim': ACIKLAMA_TASARIM_SURUMU} if aciklama else {})}
 
 
 def paket_guncel(paket: pathlib.Path, klip: dict, ayar: dict) -> bool:
@@ -1589,10 +1841,10 @@ def paket_guncel(paket: pathlib.Path, klip: dict, ayar: dict) -> bool:
     except (OSError, ValueError):
         return False
     if klip.get('konusma_plan_araligi'):
-        return eski.get('konusma_plan_araligi') == klip['konusma_plan_araligi'] and eski.get('duzen') == duzen_imzasi(ayar)
+        return eski.get('konusma_plan_araligi') == klip['konusma_plan_araligi'] and eski.get('duzen') == duzen_imzasi(ayar, klip_aciklamasi(klip, ayar))
     return (eski.get('klip_baslangic_sn') == klip['klip_baslangic_sn']
             and eski.get('klip_bitis_sn') == klip['klip_bitis_sn']
-            and eski.get('duzen') == duzen_imzasi(ayar))
+            and eski.get('duzen') == duzen_imzasi(ayar, klip_aciklamasi(klip, ayar)))
 
 
 def kes_komutu(arguman: str, dizin: pathlib.Path, ayar: dict, gecersiz: dict | None = None,
@@ -1622,6 +1874,8 @@ def kes_komutu(arguman: str, dizin: pathlib.Path, ayar: dict, gecersiz: dict | N
                 klip['klip_baslangic_sn'], klip['klip_bitis_sn'] = eski['klip_baslangic_sn'], eski['klip_bitis_sn']
                 if eski.get('video', {}).get('ses_hizasi'):
                     bilgi['ses_hizasi'] = eski['video']['ses_hizasi']
+                if eski.get('video', {}).get('aciklama_yazisi'):
+                    bilgi['aciklama_yazisi'] = eski['video']['aciklama_yazisi']
                 paket.write_text(json.dumps(paket_json(vod, klip, mp4, bilgi, vayar),
                                              ensure_ascii=False, indent=2), encoding='utf-8')
             uretilen.append(mp4)
@@ -1953,12 +2207,150 @@ def canli_komutu(ayar: dict, dizin: pathlib.Path, kanal: str | None = None, en_c
     return rapor
 
 
+# ---------------------------------------------------------------- kısa açıklama: geri doldurma ve yeniden üretim
+
+def paket_yollari(dizin: pathlib.Path, klasor: pathlib.Path | None = None) -> list[pathlib.Path]:
+    kok = klasor or (dizin / 'cikti')
+    return sorted(y for y in kok.rglob('*.json') if 'eski' not in {x.lower() for x in y.parts}
+                  and not y.name.startswith('_') and y.with_suffix('.mp4').exists())
+
+
+def yayinci_kisa_ad(ayar: dict, paket: dict) -> str:
+    for y in ayar.get('yayincilar', []):
+        if y['ad'] == paket.get('yayinci') or (y['platform'] == paket.get('platform') and
+                                             y['kanal'].lower() == str(paket.get('kanal') or '').lower()):
+            return y.get('kisa_ad') or y['ad']
+    return paket.get('yayinci') or ''
+
+
+def analiz_onbellegine_isle(dizin: pathlib.Path, paket: dict, metin: str | None) -> bool:
+    """Analiz önbelleğindeki aynı klibe de açıklamayı yazar; yoksa sonraki `kes` klibi açıklamasız yeniden keserdi."""
+    vod_id = paket.get('vod_id')
+    if not vod_id:   # Kick konuşma paketlerinde vod_id yok: adresten çıkar (Kick VOD uuid'i / YouTube video kimliği)
+        m = re.search(r'kick\.com/[^/\s]+/videos/([0-9a-fA-F-]{36})', str(paket.get('vod_url') or '')) or             re.search(r'(?:youtube\.com/watch\?(?:[^#\s]*&)?v=|youtu\.be/)([\w-]{11})', str(paket.get('vod_url') or ''))
+        vod_id = m.group(1) if m else None
+    yol = dizin / 'analiz' / f"{paket.get('platform')}-{vod_id}.json"
+    if not yol.exists():
+        return False
+    sonuc = json.loads(yol.read_text(encoding='utf-8'))
+    degisti = False
+    for k in sonuc.get('klipler', []):
+        ayni = (k.get('konusma_plan_araligi') and k.get('konusma_plan_araligi') == paket.get('konusma_plan_araligi')) or \
+               (k.get('zirve_sn') == paket.get('zirve_sn') and k.get('klip_baslangic_sn') == paket.get('klip_baslangic_sn'))
+        if ayni and k.get('konusma_kisa_aciklama') != metin:
+            k['konusma_kisa_aciklama'] = metin
+            degisti = True
+    if degisti:
+        yol.write_text(json.dumps(sonuc, ensure_ascii=False, indent=1), encoding='utf-8')
+    return degisti
+
+
+def aciklama_doldur(ayar: dict, dizin: pathlib.Path, klasor: pathlib.Path | None = None, model=None,
+                    kuru: bool = False, parca: int = 20) -> dict:
+    """kisa_aciklama anahtarı olmayan konuşma paketlerinin (döküm metni olanlar) hepsi için TEK toplu model çağrısı
+    (parça sayısı `parca`'yı aşarsa parça başına bir). Dökümsüz eski sohbet paketlerine dokunulmaz.
+    Sonuç paket JSON'una `kisa_aciklama` (doğrulanmış metin ya da null) ve `kisa_aciklama_ham` olarak yazılır."""
+    aday, atlanan = [], []
+    for yol in paket_yollari(dizin, klasor):
+        try:
+            d = json.loads(yol.read_text(encoding='utf-8'))
+        except (OSError, ValueError):
+            continue
+        if not isinstance(d, dict):
+            continue
+        # Daha önce yargılanmış paket tekrar sorulmaz; tek istisna: model metni yalnız uzunluk yüzünden null kalmış
+        # ve henüz tamir edilmemiş (kisa_aciklama_tamir yok) -> yeniden yazdırılır.
+        tamirlik = ('kisa_aciklama' in d and d['kisa_aciklama'] is None and not d.get('kisa_aciklama_tamir')
+                    and klip_konusma.uzun_mu(d.get('kisa_aciklama_ham'), ayar.get('ayar')))
+        if 'kisa_aciklama' in d and not tamirlik:
+            continue
+        if not str(d.get('dokum_metni') or '').strip():
+            atlanan.append(str(yol))
+            continue
+        d['_tamirlik'] = tamirlik   # yalnız bellekte; dosyaya yazılmadan silinir
+        aday.append((yol, d))
+    rapor = {'aday': len(aday), 'model_cagrisi': 0, 'atlanan_dokumsuz': atlanan, 'paketler': []}
+    sayac = {'n': 0}
+    if not aday or kuru:
+        return rapor
+    if model is None:
+        model = klip_konusma.ButceliModel(
+            klip_konusma.ModelYolu({**klip_konusma.AYAR, 'konusma_yargi_model': 'sonnet', 'konusma_bulut': True}), 4)
+    cfg = {**AYAR_VARSAYILAN, **(ayar.get('ayar') or {})}
+    gercek_model = model
+
+    def model(istem):   # noqa: F811 - gerçek model çağrılarını sayar (ilk çağrı + varsa biçim/uzunluk tamiri)
+        sayac['n'] += 1
+        return gercek_model(istem)
+    for i in range(0, len(aday), parca):
+        grup = aday[i:i + parca]
+        kayit = [{'id': str(n), 'ad': yayinci_kisa_ad(ayar, d), 'oyun': d.get('oyun'), 'baslik': d.get('baslik'),
+                  'gerekce': d.get('konusma_gerekce'), 'dokum': d.get('dokum_metni'),
+                  **({'onceki': d['kisa_aciklama_ham'], 'onceki_uzunluk': klip_konusma._temiz_uzunluk(d['kisa_aciklama_ham'])}
+                     if d['_tamirlik'] else {})}
+                 for n, (_, d) in enumerate(grup, start=i)]
+        try:
+            yanit = klip_konusma.aciklama_toplu(kayit, model, cfg)
+        finally:
+            rapor['model_cagrisi'] = sayac['n']
+        for n, (yol, d) in enumerate(grup, start=i):
+            y = yanit[str(n)]
+            tamirlikti = d.pop('_tamirlik')
+            if tamirlikti or y.get('tamir'):
+                d['kisa_aciklama_onceki_ham'] = y.get('onceki_ham') or d.get('kisa_aciklama_ham')
+            d['kisa_aciklama'] = y['aciklama']
+            d['kisa_aciklama_ham'] = y['ham']
+            if tamirlikti or y.get('tamir') or klip_konusma.uzun_mu(y['ham'], cfg):
+                d['kisa_aciklama_tamir'] = True   # bir kez denendi: tekrar sorulmaz
+            yol.write_text(json.dumps(d, ensure_ascii=False, indent=2), encoding='utf-8')
+            analiz_onbellegine_isle(dizin, d, y['aciklama'])
+            rapor['paketler'].append({'paket': str(yol), 'yayinci': d.get('yayinci'),
+                                      'kisa_aciklama': y['aciklama'], 'ham': y['ham'], 'tamir': bool(y.get('tamir'))})
+    return rapor
+
+
+def yedekle(paket: pathlib.Path, yedek: pathlib.Path) -> list[str]:
+    """mp4 + json'u yedek klasörüne KOPYALAR (üzerine yazılmadan önce); aynı adlı yedek varsa dokunmaz."""
+    hedef_klasor = yedek / paket.parent.name
+    hedef_klasor.mkdir(parents=True, exist_ok=True)
+    kopya = []
+    for yol in (paket.with_suffix('.mp4'), paket):
+        h = hedef_klasor / yol.name
+        if not h.exists():
+            shutil.copy2(yol, h)
+        kopya.append(str(h))
+    return kopya
+
+
+def paketten_uret(paket_yolu: pathlib.Path, ayar: dict, dizin: pathlib.Path, yedek: pathlib.Path | None = None,
+                  aciklamasiz: bool = False) -> dict:
+    """Var olan klibi paketindeki (ses hizası düzeltilmiş) aralıkla, bugünkü düzenle ve paketteki kisa_aciklama ile
+    YENİDEN keser. Model çağrısı yok. Eski mp4/json önce yedeğe kopyalanır; paketin diğer alanları korunur."""
+    d = json.loads(paket_yolu.read_text(encoding='utf-8'))
+    yedek = yedek or (pathlib.Path(r'C:\Cihan.Ai\_yedek') / f"yayin-klip-{datetime.now().strftime('%Y%m%d')}"
+                      if os.name == 'nt' else dizin / 'yedek')
+    kopya = yedekle(paket_yolu, yedek)
+    vod, vayar = vod_hazirla(d['vod_url'], ayar)
+    vayar = {**vayar, 'konusma': True, **({'klip_aciklama_yazi': False} if aciklamasiz else {})}
+    klip = {'klip_baslangic_sn': d['klip_baslangic_sn'], 'klip_bitis_sn': d['klip_bitis_sn'],
+            'konusma_kisa_aciklama': d.get('kisa_aciklama')}
+    bilgi = klip_kes(vod, klip, paket_yolu.with_suffix('.mp4'), ffmpeg_bul(), font_bul(), vayar)
+    d.update({'kisa_aciklama': d.get('kisa_aciklama'), 'aciklama_yazisi': bilgi.get('aciklama_yazisi'), 'video': bilgi,
+              'duzen': duzen_imzasi(vayar, klip_aciklamasi(klip, vayar)),
+              'uretim': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')})
+    paket_yolu.write_text(json.dumps(d, ensure_ascii=False, indent=2), encoding='utf-8')
+    return {'paket': str(paket_yolu), 'mp4': str(paket_yolu.with_suffix('.mp4')), 'yedek': kopya,
+            'aciklama_yazisi': bilgi.get('aciklama_yazisi'), 'video': {k: bilgi[k] for k in ('genislik', 'yukseklik', 'sure_sn', 'ses')}}
+
+
 def _gecersiz(a) -> dict:
     g = {}
     if getattr(a, 'konusmasiz', False):
         g['konusma'] = False
     elif getattr(a, 'konusma', False):
         g['konusma'] = True
+    if getattr(a, 'aciklamasiz', False):
+        g['klip_aciklama_yazi'] = False
     for alan in ('esik_k', 'min_mesaj', 'azami_klip', 'bas_dislama_sn', 'min_oran', 'min_farkli_kullanici',
                  'min_emote_disi_oran', 'kadraj_oran', 'duzen', 'yontem', 'klip_baslangic',
                  'gulme_esik_k', 'konu_min_kisi', 'konu_min_lift', 'max_gurultu_oran'):
@@ -2007,8 +2399,17 @@ def main(argv=None) -> int:
         k.add_argument('--yeniden', action='store_true', help='analizi önbellekten alma')
         if ad == 'kes':
             k.add_argument('--zorla', action='store_true', help='var olan klibi yeniden üret')
+            k.add_argument('--aciklamasiz', action='store_true',
+                           help='klibe kısa açıklama yazısı koyma (ayar: klip_aciklama_yazi=false)')
             k.add_argument('--duzen', choices=('kadraj', 'serit'), help='görüntü düzeni (ayardakini bu çalıştırma için değiştirir)')
             k.add_argument('--kadraj-oran', dest='kadraj_oran', type=float, help='kırpılan bölgenin genişlik/yükseklik oranı')
+    ad_ = s.add_parser('aciklama-doldur', help='kisa_aciklama olmayan konuşma paketlerine TEK toplu model çağrısıyla açıklama yaz')
+    ad_.add_argument('--klasor', help='yalnız bu klasördeki paketler (varsayılan: çalışma dizini/cikti)')
+    ad_.add_argument('--kuru', action='store_true', help='yalnız kaç paketin dolacağını say')
+    yu = s.add_parser('yeniden-uret', help='var olan klibi paketindeki aralık ve kisa_aciklama ile yeniden kes (önce yedeğe kopyalar)')
+    yu.add_argument('paket', nargs='+', help='klip paket .json yolu')
+    yu.add_argument('--yedek', help='yedek klasörü (varsayılan: C:\\Cihan.Ai\\_yedek\\yayin-klip-<tarih>)')
+    yu.add_argument('--aciklamasiz', action='store_true', help='açıklama yazısı koyma')
     o = s.add_parser('otomatik', help='tara + analiz + kes (yeni yayınların hepsi)')
     o.add_argument('--yayinci')
     _konusma_bayraklari(o)
@@ -2037,6 +2438,16 @@ def main(argv=None) -> int:
         elif a.komut == 'kes':
             for m in kes_komutu(a.vod, dizin, ayar, _gecersiz(a), a.zorla, a.yeniden, a.suzgecsiz):
                 print(m)
+        elif a.komut == 'aciklama-doldur':
+            try:
+                print(json.dumps(aciklama_doldur(ayar, dizin, pathlib.Path(a.klasor) if a.klasor else None, kuru=a.kuru),
+                                 ensure_ascii=False, indent=2))
+            except (klip_konusma.ModelKotasi, ValueError, RuntimeError) as e:
+                raise KlipHatasi(f'açıklama doldurma: {e}') from e
+        elif a.komut == 'yeniden-uret':
+            for yol in a.paket:
+                print(json.dumps(paketten_uret(pathlib.Path(yol), ayar, dizin, pathlib.Path(a.yedek) if a.yedek else None,
+                                               a.aciklamasiz), ensure_ascii=False))
         elif a.komut == 'canli':
             gec = {k: getattr(a, k) for k in ('canli_min_puan', 'canli_azami_klip') if getattr(a, k) is not None}
             gec.update(_gecersiz(a))

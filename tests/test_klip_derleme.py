@@ -751,5 +751,211 @@ class ParcaAciklamasiTesti(unittest.TestCase):
         self.assertEqual(kd.baslik_sec(parcalar, ayar(), 1)['kaynak_aday'], a['id'])
 
 
+def paket(**ek) -> dict:
+    d = {'yayinci': 'wtcN', 'platform': 'kick', 'kanal': 'wtcn', 'kanal_url': 'https://kick.com/wtcn',
+         'vod_url': 'https://kick.com/wtcn/videos/6bbe5c53-b0a3-4ec3-9d43-0123456789ab', 'klip_baslangic_sn': 100.0,
+         'klip_bitis_sn': 140.0, 'zirve_puani': 5, 'yayin_tarihi': '2026-11-17', 'baslik': 'Ferit saçlarını boyatıyor',
+         'konusma_puani': 7, 'duzen': {'duzen': 'kadraj', 'konusma_saat_surumu': 3}}
+    d.update(ek)
+    return d
+
+
+YT = 'https://www.youtube.com/watch?v=TE7Q0eKsIaY'
+
+
+class KonusmaPaketiToplamaTesti(unittest.TestCase):
+    def test_paket_kaynagi_kick_youtube_yok(self):
+        self.assertEqual(kd.paket_kaynagi(paket()['vod_url'])[:2], ('kick', 'wtcn'))
+        self.assertEqual(kd.paket_kaynagi(YT), ('youtube', None, 'yt-TE7Q0eKsIaY'))
+        self.assertEqual(kd.paket_kaynagi('https://youtu.be/TE7Q0eKsIaY')[2], 'yt-TE7Q0eKsIaY')
+        self.assertIsNone(kd.paket_kaynagi('https://example.com/x'))
+        self.assertIsNone(kd.paket_kaynagi(None))
+
+    def test_dosya_taramasi_konusma_paketlerini_de_bulur(self):
+        with tempfile.TemporaryDirectory() as root:
+            kok = pathlib.Path(root) / 'cikti'
+            (kok / 'a-1').mkdir(parents=True)
+            (kok / 'ESKI-b').mkdir()
+            for ad in ('klip-01', 'canli-01', 'konusma-01', 'konusma-hizali-01', 'konusma-ek-patates', 'baska'):
+                (kok / 'a-1' / f'{ad}.json').write_text('{}')
+            (kok / 'ESKI-b' / 'konusma-hizali-01.json').write_text('{}')
+            dosyalar, haric = kd.paket_dosyalari(pathlib.Path(root), ayar(paket_klasor_haric=['ESKI']))
+        self.assertEqual(sorted(d.stem for d in dosyalar),
+                         ['canli-01', 'klip-01', 'konusma-01', 'konusma-ek-patates', 'konusma-hizali-01'])
+        self.assertEqual(haric, 1)
+
+    def test_hizasiz_eski_konusma_paketi_elenir_digerleri_kalir(self):
+        eski = paket(duzen={'duzen': 'kadraj', 'konusma_saat_surumu': 2})
+        self.assertEqual(kd.paket_ele_nedeni(eski, ayar(), '2026-11-01', 'konusma-01'), 'konusma_hizasiz')
+        yok = paket(duzen=None)
+        self.assertEqual(kd.paket_ele_nedeni(yok, ayar(), '2026-11-01', 'konusma-02'), 'konusma_hizasiz')
+        for ad in ('konusma-hizali-01', 'konusma-ek-patates', 'klip-01'):
+            self.assertIsNone(kd.paket_ele_nedeni(eski, ayar(), '2026-11-01', ad), ad)
+        self.assertIsNone(kd.paket_ele_nedeni(paket(), ayar(), '2026-11-01', 'konusma-01'))   # v3 konusma-NN geçer
+
+    def test_youtube_paketi_kabul_edilir_gun_disi_elenir(self):
+        yt = paket(vod_url=YT, platform='youtube', kanal='erayozkenar', yayin_tarihi='2026-11-17')
+        self.assertIsNone(kd.paket_ele_nedeni(yt, ayar(), '2026-11-11', 'klip-01'))
+        yt['yayin_tarihi'] = '2026-09-26'
+        self.assertEqual(kd.paket_ele_nedeni(yt, ayar(), '2026-11-11', 'klip-01'), 'gun_disi')
+
+    def test_youtube_adayi_yatay_erisim_ve_aciklama_alanlari(self):
+        with tempfile.TemporaryDirectory() as root:
+            mp4 = pathlib.Path(root) / 'klip-01.mp4'
+            mp4.write_bytes(b'x')
+            p = paket(vod_url=YT, platform='youtube', kanal='erayozkenar', yayinci='Eraycan',
+                      kanal_url='https://www.youtube.com/@erayozkenar', kisa_aciklama='Eray patates soyuyor',
+                      aciklama_yazisi={'metin': 'Eray patates soyuyor', 'satirlar': ['Eray patates soyuyor']})
+            a, neden = kd.paket_adayi('eraycan-x', 'klip-01', p, None, mp4, ayar())
+        self.assertIsNone(neden)
+        self.assertEqual((a['platform'], a['erisim'], a['youtube_url'], a['vod_uuid']), ('youtube', 'youtube', YT, 'yt-TE7Q0eKsIaY'))
+        self.assertIsNone(a['hls'])
+        self.assertEqual(a['kisa_aciklama'], 'Eray patates soyuyor')
+        self.assertEqual(a['dikey_aciklama_metni'], 'Eray patates soyuyor')
+        self.assertEqual(a['konusma_puani'], 7)
+
+    def test_youtube_adayi_mp4_yoksa_da_yatay_aralikla_gecer(self):
+        p = paket(vod_url=YT, platform='youtube', kanal='k')
+        a, neden = kd.paket_adayi('k-x', 'klip-01', p, None, pathlib.Path('yok-boyle.mp4'), ayar())
+        self.assertIsNone(neden)
+        self.assertIsNone(a['dikey_mp4'])
+
+    def test_kick_adayi_hls_yoksa_dikeye_duser_ikisi_de_yoksa_elenir(self):
+        with tempfile.TemporaryDirectory() as root:
+            mp4 = pathlib.Path(root) / 'konusma-hizali-01.mp4'
+            self.assertEqual(kd.paket_adayi('k', 'konusma-hizali-01', paket(), None, mp4, ayar())[1], 'kaynak_yok')
+            mp4.write_bytes(b'x')
+            a, _ = kd.paket_adayi('k', 'konusma-hizali-01', paket(), None, mp4, ayar())
+            self.assertEqual((a['erisim'], a['platform'], a['paket_turu']), ('dikey', 'kick', 'konusma-hizali'))
+            self.assertIsNone(a['youtube_url'])
+
+    def test_etiket_youtube_ve_kick(self):
+        yt = aday('yayinci', 1, .9, yayinci='Eraycan')
+        yt.update(platform='youtube', kanal='erayozkenar', kanal_url='https://www.youtube.com/@erayozkenar')
+        self.assertEqual(kd.etiket_metni(yt, ayar()), 'Yayıncı: Eraycan  ·  youtube.com/@erayozkenar')
+        yt['kanal_url'] = None
+        self.assertEqual(kd.etiket_metni(yt, ayar()), 'Yayıncı: Eraycan  ·  youtube.com/@erayozkenar')
+        kick = aday('yayinci', 2, .9, yayinci='Kemalcan')
+        self.assertEqual(kd.etiket_metni(kick, ayar()), 'Yayıncı: Kemalcan  ·  kick.com/kemalcan')
+
+
+class KonusmaOnceligiTesti(unittest.TestCase):
+    def _k(self, i, deger, konusma, yayinci='Ferit'):
+        a = aday('yayinci', i, deger, yayinci=yayinci)
+        a['konusma_puani'] = 7 if konusma else None
+        return a
+
+    def test_konusma_paketi_dusuk_degerle_bile_sohbetten_once_secilir(self):
+        sohbet = self._k(1, 0.99, False)
+        konusma = self._k(2, 0.10, True)
+        self.assertEqual([a['id'] for a in sorted([sohbet, konusma], key=kd.kesit_oncelik)], [konusma['id'], sohbet['id']])
+
+    def test_ust_sinir_dolunca_konusma_girer_sohbet_elenir(self):
+        a = [self._k(1, 0.99, False), self._k(2, 0.95, False), self._k(3, 0.10, True)]
+        kalan, elenen = kd.ust_sinir_uygula(a, ayar(yayinci_toplam_ust=1, izleyici_kanal_ust=0))
+        self.assertEqual([x['id'] for x in kalan], [a[2]['id']])
+        self.assertEqual({e['neden'] for e in elenen}, {'yayinci_toplam_ust'})
+
+    def test_plan_konusma_paketlerini_once_alir_sohbet_yer_kalirsa_girer(self):
+        adaylar = [self._k(i, 0.9 - i * 0.01, False, yayinci=f'Y{i}') for i in range(12)]
+        adaylar += [self._k(20 + i, 0.2, True, yayinci=f'K{i}') for i in range(3)]
+        plan = kd.plan_olustur(adaylar, ayar())
+        idler = [p['aday']['id'] for p in plan['parcalar'] if p['rol'] == 'yayinci']
+        for i in range(3):
+            self.assertIn(f'yayinci:{20 + i}', idler)
+        self.assertGreater(len(idler), 3)            # yer kaldı: sohbet paketleri de girdi
+
+    def test_izleyici_klibi_konusma_sayilmaz(self):
+        a = aday('izleyici', 1, .5)
+        a['konusma_puani'] = 7
+        self.assertFalse(kd.konusma_paketi_mi(a))
+
+
+class KisaAciklamaKaynagiTesti(unittest.TestCase):
+    def test_kisa_aciklama_once_gelir_model_cagrisi_yok(self):
+        a = aday('yayinci', 1, .9, yayinci='wtcN')
+        a.update(paket_turu='konusma-hizali', baslik='başka bir başlık burada', kisa_aciklama='Ferit saçlarını yayında boyatıyor')
+        self.assertEqual(kd.aciklama_kaynagi(a, ayar()), ('Ferit saçlarını yayında boyatıyor', 'kisa_aciklama'))
+        model, dok = Mock(), Mock()
+        with tempfile.TemporaryDirectory() as root:
+            r = kd.aciklamalari_hazirla([a], {a['id']: {'dosya': 'x.mkv', 'sure_sn': 22}}, ayar(), 'ff', pathlib.Path(root), model, dok)
+        model.assert_not_called()
+        dok.assert_not_called()
+        self.assertEqual((r['model_cagrisi'], r['kaynaklar']), (0, {'kisa_aciklama': 1}))
+
+    def test_kisa_aciklama_null_ya_da_gecersizse_eski_siraya_duser(self):
+        a = aday('yayinci', 1, .9, yayinci='wtcN')
+        a.update(paket_turu='konusma', baslik='wtcN saçlarını yayında boyatıyor', kisa_aciklama=None)
+        self.assertEqual(kd.aciklama_kaynagi(a, ayar()), ('Ferit saçlarını yayında boyatıyor', 'konusma_paketi'))
+        a['kisa_aciklama'] = 'x' * 80
+        self.assertEqual(kd.aciklama_kaynagi(a, ayar())[1], 'konusma_paketi')
+
+    def test_tek_toplu_cagri_yalniz_aciklamasiz_kalanlar_icin(self):
+        var, yok = aday('yayinci', 1, .9), aday('yayinci', 2, .8)
+        var.update(paket_turu='konusma-hizali', kisa_aciklama='Eray patates soyuyor')
+        model = Mock(return_value=json.dumps({'parcalar': [{'id': yok['id'], 'aciklama': 'Kemalcan oyunu kapatıyor'}]}))
+        dok = Mock(return_value='Oyunu kapatıyorum artık, yeter bu kadar oynadık bugün.')
+        h = {a['id']: {'dosya': 'x', 'sure_sn': 22} for a in (var, yok)}
+        with tempfile.TemporaryDirectory() as root:
+            r = kd.aciklamalari_hazirla([var, yok], h, ayar(), 'ff', pathlib.Path(root), model, dok)
+        self.assertEqual(r['model_cagrisi'], 1)
+        self.assertEqual(dok.call_count, 1)
+        self.assertEqual((var['aciklama_kaynagi'], yok['aciklama_kaynagi']), ('kisa_aciklama', 'dokum_model'))
+
+
+class YoutubeKaynakVeGomuluAciklamaTesti(unittest.TestCase):
+    def _a(self):
+        a = aday('yayinci', 1, .9, yayinci='Eraycan')
+        a.update(platform='youtube', youtube_url=YT, vod_uuid='yt-TE7Q0eKsIaY', dikey_mp4='C:/yok/klip-01.mp4',
+                 klip_baslangic_sn=100.0, hls=None)
+        a['kes'] = {'bas': 110.0, 'sure': 22.0, 'tepe': 8.0, 'yontem': 'konusma_bas'}
+        return a
+
+    def test_yatay_aralik_varsa_kullanilir(self):
+        with patch.object(kd, 'video_bilgi', return_value={'genislik': 1920, 'yukseklik': 1080, 'ses': True, 'sure_sn': 22.0}):
+            k = kd.kaynak_belirle('ff', self._a(), 'C:/ind/yt.mkv')
+        self.assertEqual((k['tur'], k['ss'], k['w'], k['h']), ('youtube_aralik', 0.0, 1920, 1080))
+        self.assertAlmostEqual(k['sure'], 21.95, places=2)
+
+    def test_yatay_yoksa_hata_dikeye_dusme_aday_parcasinda(self):
+        a = self._a()
+        a['youtube_indirme_hata'] = 'ağ yok'
+        with self.assertRaises(kd.DerlemeHatasi):
+            kd.kaynak_belirle('ff', a, None)
+        sonuclar = []
+
+        def uret(ff, font, ad, k, etiket, calisma, ayar_, zorla):
+            sonuclar.append(k['tur'])
+            return {'dosya': 'p.mkv', 'sure_sn': 20.0}
+        dikey = {'yol': 'C:/yok/klip-01.mp4', 'ss': 10.0, 'sure': 20.0, 'w': 1080, 'h': 1920, 'ses': True, 'tur': 'dikey_mp4'}
+        gercek = kd.kaynak_belirle
+        with patch.object(kd, 'parca_uret', side_effect=uret), patch.object(
+                kd, 'kaynak_belirle', side_effect=lambda ff, a_, y, geri_dus=False: dikey if geri_dus else gercek(ff, a_, y, geri_dus)):
+            s = kd.aday_parcasi('ff', 'font', 'p', a, None, pathlib.Path('.'), ayar(), False)
+        self.assertEqual(sonuclar, ['dikey_mp4'])
+        self.assertIn('YouTube yatay aralık alınamadı', s['geri_dusme'])
+        self.assertEqual(s['kaynak_turu'], 'dikey_mp4')
+
+    def test_gomulu_aciklamali_dikey_klipte_ikinci_yazi_basilmaz(self):
+        a = self._a()
+        a.update(aciklama='Eray patates soyuyor', dikey_aciklama_metni='Eray patates soyuyor')
+        hz = {'dosya': 'p.mkv', 'sure_sn': 20.0, 'kaynak_turu': 'dikey_mp4'}
+        with patch.object(kd, 'ffmpeg_dene') as ff:
+            sonuc = kd.aciklama_bindir('ff', 'C:/Windows/Fonts/arialbd.ttf', a, hz, ayar(), pathlib.Path('.'))
+        ff.assert_not_called()
+        self.assertTrue(sonuc['aciklama_gomulu'])
+        self.assertEqual(sonuc['dosya'], 'p.mkv')
+
+    def test_secim_ozeti_sayimlari(self):
+        k = [{'rol': 'yayinci', 'id': 'a', 'konusma_paketi': True, 'aciklama': 'x', 'aciklama_kaynagi': 'kisa_aciklama',
+              'kaynak_turu': 'youtube_aralik', 'platform': 'youtube', 'paket_turu': 'klip'},
+             {'rol': 'yayinci', 'id': 'b', 'konusma_paketi': False, 'aciklama': None, 'aciklama_kaynagi': None,
+              'kaynak_turu': 'hls', 'platform': 'kick', 'paket_turu': 'klip'},
+             {'rol': 'viral', 'id': 'c'}]
+        o = kd.secim_ozeti(k)
+        self.assertEqual((o['yayinci_kesiti'], o['konusma_paketinden'], o['aciklamali'], o['youtube_yatay']), (2, 1, 1, 1))
+        self.assertEqual([x['id'] for x in o['aciklamasiz']], ['b'])
+
+
 if __name__ == '__main__':
     unittest.main()

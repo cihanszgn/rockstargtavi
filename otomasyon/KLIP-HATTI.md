@@ -15,6 +15,8 @@ py tools/yayin_klip.py otomatik --en-cok 3       # tara + kes (yeni yayınların
 py tools/yayin_klip.py canli                     # SÜREN yayınlarda tek tur: yeni biten kahkaha/konu anlarını keser
 py tools/yayin_klip.py canli --kanal wtcn --kuru # yalnız sohbeti indir + analiz et, kesme (deneme)
 py tools/yayin_klip.py kes youtube:<11 karakterlik id>   # YouTube videosu (adres de olur: youtu.be/…, youtube.com/watch?v=…); aşağıda "YouTube kaynağı"
+py tools/yayin_klip.py aciklama-doldur [--klasor DIR] [--kuru]   # kisa_aciklamasi olmayan konuşma paketlerine TEK toplu model çağrısıyla açıklama yaz (dökümsüz pakete dokunmaz)
+py tools/yayin_klip.py yeniden-uret PAKET.json... [--yedek DIR] [--aciklamasiz]   # paketin dikey mp4'ünü bugünkü düzenle yeniden üret (eski mp4 önce yedeğe kopyalanır)
 ```
 
 `tara` Kick yayınlarını ve ayrıca listedeki beş yayıncının etkin YouTube kanallarının (`videos` + `streams` sekmeleri) son `son_gun` günlük videolarını bulur.
@@ -259,7 +261,7 @@ Kick sohbet sınırları: pencere başına 25 mesaj (araç kalanı devam sorgusu
 - **ffmpeg** aranma sırası: `FFMPEG` ortam değişkeni → PATH'teki `ffmpeg` (drawtext ve gblur süzgeçleri varsa) → `imageio-ffmpeg` paketinin ffmpeg'i. Kurulum (kullanıcı düzeyi): `py -m pip install --user imageio-ffmpeg`; Linux'ta `apt install ffmpeg` (libfreetype'lı). Remotion'un kırpılmış ffmpeg'i kullanılmaz.
 - **yt-dlp** Kick için gerekmez (ffmpeg HLS'i doğrudan okur); YouTube kaynağı için lazım (`py -m pip install --user yt-dlp`, 2026.10.26 denendi). Çerez/oturum kullanılmaz.
 - **ffprobe** yok; klip doğrulaması `ffmpeg -i` çıktısından yapılır (1080x1920, ≤60 sn, ses var; değilse klip reddedilir).
-- **Yazı tipi:** `KLIP_FONT` → Windows `arialbd.ttf`/`segoeuib.ttf` → Linux DejaVuSans-Bold/LiberationSans-Bold/NotoSans-Bold (`apt install fonts-dejavu-core`).
+- **Yazı tipi:** `KLIP_FONT` → Windows `arialbd.ttf`/`segoeuib.ttf` → Linux DejaVuSans-Bold/LiberationSans-Bold/NotoSans-Bold (`apt install fonts-dejavu-core`). **Açıklama yazısı** bunlara bağlı değildir: depodaki `otomasyon/fontlar/Anton-Regular.ttf` (Anton, SIL Open Font License 1.1; lisans metni yanında `Anton-OFL.txt`; kaynak: github.com/google/fonts `ofl/anton`, 2026-11-18) kullanılır, bu yüzden Linux sunucuda sistem yazı tipi kurmadan aynı görünür. Açıklama katmanı **Pillow** ile çizilir (`py -m pip install --user pillow`; Linux: `pip install pillow`); `KLIP_ACIKLAMA_FONT` ortam değişkeni yazı tipini değiştirir.
 
 ## Bilinen belirsizlikler
 
@@ -440,7 +442,31 @@ Her pozitif konuşma adayı, ilk ve son cümlenin döküldüğü gerçek 16 kHz 
 Canlı ilk turda en çok **6** aday dökülür (bitmiş yayında 15). Geçerli içerik/cümle vetoları `durum.json → konusma_elenen` içine gerçek saat aralığı ve model/ayar/prompt imzasıyla kaydedilir. Sonraki tur bu adaylarda takılmadan sıradakine ilerler; konuşmasız kip veto hafızasını dikkate almaz, model/eşik değişikliği yeniden değerlendirmeyi açar. Ortam/JSON hatası kalıcı veto değildir. Bu davranış birim ve bütünleşme testinde iki ardışık turla sınandı.
 
 
+## Kısa açıklama (`kisa_aciklama`, 2026-11-18)
+
+Cio'nun isteği: videolarda "Ferit saçlarını yayında boyatıyor" gibi çok kısa bir olay cümlesi olsun.
+
+**Üretim (`tools/klip_konusma.py`).** Konuşma yargısı şemasına `kisa_aciklama` eklendi: klipte olanı söyleyen tek Türkçe cümle, ≤45 karakter, düz anlatım, özne yayıncının `kisa_ad`ı (wtcN→Ferit, Eraycan→Eray, Kemalcan Parlak→Kemalcan, Tolunay Ören→Tolunay, Jahrein→Jahrein; `klip-yayincilar.json`). Yargı çağrısının **içinde** istenir, ek model çağrısı yok. Kod güvenliği (`kisa_aciklama_dogrula`): 45'i aşan, yasak kelimeli (`aciklama_yasak_kelimeler` koddaki listeye eklenir), emoji/#etiket/büyük harf yığınlı veya boş metin `null` olur; **kısaltma yapılmaz** (yüklemi kesmek anlamı bozar). Anlamlı cümle yoksa model `null` verir → yazısız klip.
+
+**Geri doldurma (`aciklama-doldur`).** `kisa_aciklama`sı olmayan ve döküm metni olan konuşma paketlerinin hepsi TEK toplu çağrıya girer; dökümsüz eski sohbet paketlerine dokunulmaz. Model hâlâ 45'i aşarsa en çok **1 ek çağrıyla** "tamir" yapılır (`aciklama_toplu(..., tamir=True)`: istemde `onceki` ve `onceki_uzunluk` verilir); sonuç paketteki `kisa_aciklama_tamir`/`kisa_aciklama_onceki_ham` alanlarına yazılır. Ölçüm: ilk çağrıda 19 paketin 12'si 45+ karakterdi (`null`); istem sertleştirilip tamir eklendikten sonra 19'unun 19'u geçerli. Bu işte açıklama için toplam 3 Sonnet çağrısı yapıldı (ilk toplu çağrı, tamir ve iki dayanaksız/muğlak açıklamanın notlu yeniden yazımı birleştirilerek); derleme ayrıca 1 çağrı yaptı. Analiz önbelleği: `analiz_onbellegine_isle` artık `vod_id` yoksa `vod_url`'den Kick uuid / YouTube 11 karakter id çıkarır (Kick paketleri `kick-None.json` arıyordu).
+
+**Yazı (dikey klip, `tools/yayin_klip.py`).** `kisa_aciklama` varsa görüntü karesinin hemen ÜSTÜNDE, en büyük yazı olarak etiket biçiminde (satır başına bir kutu) durur; ≤2 satır. Ayrıntı, yerleşim ve stiller: aşağıdaki **Açıklama görünümü**. Açıklama yoksa filtre zinciri eski koddakiyle **birebir aynı** (`ALTIN_FILTRE` testi: kadraj, şerit, varsayılan; yazılar drawtext ile). `klip_aciklama_yazi: false` veya `--aciklamasiz` yazıyı kapatır; düzen imzası açıklamayı, stili ve tasarım sürümünü içerir (`paket_guncel` açıklama/stil değişince yeniden üretir). `GORSEL_AYAR` (`klip_aciklama_yazi`, `aciklama_yasak_kelimeler`, `klip_aciklama_stil`) analiz önbellek imzasına girmez; `gorselsiz()` ile ayrılır.
+
+**Dürüst zayıflıklar.** (1) `konusma-hizali-*` paketleri analiz önbelleğindeki klip kaydıyla eşleşmiyor (yalnız `konusma-NN` eşleşti); `kes` yeniden çalıştırılırsa `paket_guncel` açıklamasız yeniden kesme riski var — ölçmedim, koddan çıkarım. (2) Açıklamalar dökümle elle karşılaştırıldı, hepsi dökümle uyumlu; ama "Eray ile arkadaşları '10'da 10 ama' oynuyor" doğru ama zayıf (şaka, olay değil). Eray konusma-hizali-01 `kisa_aciklama`sı ilk çağrıda dayanaksız çıktı ("tatil" dökümde yok); notlu yeniden yazımla düzeltildi (`kisa_aciklama_inceleme`). (3) Dökümsüz sohbet paketleri açıklamasız kalır.
+
+
 <!-- KONUSMA-SON-OLCUM-BEGIN -->
+
+### Açıklama görünümü (2026-11-18, Cio: "çok düz, fontu değiştir, biraz aşağı koy")
+
+- **Yerleşim (1080x1920, kadraj varsayılanı: görüntü y=430–1330).** Açıklama etiketinin alt kenarı görüntü karesinin üstünden **40 px** yukarıdadır (`video_boslugu`); en üst **150 px boştur** (Shorts/Reels arayüzü; gölge payı 16 px dahil etiket en az y=166'da başlar). Yayıncı adı + oyun, kaynak ve marka satırları görüntünün **altında** (y≈1358'den) alt alta dizilir (`Ad · Oyun` tek satırda: ad beyaz, oyun sarı). Oyun adı yoksa yalnız ad. Aynı hesap serit düzeninde de geçerlidir (kare y=656'dan başlar).
+- **Boyut.** Anton 78 pt'tan başlar; tek satır yalnız ≥64 pt'ta kabul edilir, değilse iki satıra bölünür (kelime ortasından değil, kısaltma yok); iki satır 54 pt'a kadar küçülür; üst sınıra sığmazsa açıklama çizilmez ve klip eski görünümle kesilir (`aciklama_yazisi.yazilmadi`).
+- **Stil (`klip_aciklama_stil`, ayar bölümü `ayar`; varsayılan `A`; `A|B|C`, başka değer `KlipHatasi`).** `A`: dolu sarı (0xFFD54A) yuvarlak köşeli etiket + lacivert (0x0B0D17) yazı, satır başına kutu, hafif gölge. `B`: koyu lacivert yarı saydam etiket + sarı çerçeve, beyaz yazı, ilk kelime (özne) sarı. `C`: zeminsiz, kalın siyah kontur + gölge, beyaz yazı, ilk kelime sarı. Ad/oyun/kaynak/marka her stilde aynı (kontur + gölge, zeminsiz). Üç stilin geometrisi aynıdır; yalnız çizim değişir. Ayar `otomasyon/klip-yayincilar.json` > `ayar` > `klip_aciklama_stil`; stil değişince açıklamalı klipler `paket_guncel` ile yeniden üretilir (`yeniden-uret`).
+- **Nasıl çizilir.** Açıklamalı klipte bütün yazılar tek şeffaf PNG katmanına çizilir (`aciklama_katmani`, Pillow, 2x çizim + LANCZOS küçültme) ve ffmpeg'e ikinci girdi olarak verilir (`[v0][1:v:0]overlay=0:0:format=auto`); drawtext, yazı tipi yolu veya Türkçe karakter kaçışı yoktur, Windows ve Linux'ta aynı çıkar. Girdi sırası tuzağı: PNG kaynağın hemen ardından gelir, yoksa yerel HLS'te `-ss` PNG'yi de kaydırırdı (`ffmpeg_komutu(..., katman=)`, testli).
+- **Seçilen varsayılan: A.** Gerekçe, aynı gerçek karede (Kemalcan, parlak bulanık arka plan): sarı dolu etiket arka plandan en net ayrılan ve telefon boyutunda en okunaklı olandır; B şık ve okunaklı ama beyaz yazı ile çerçeve A kadar güçlü bir leke oluşturmaz; C zeminsiz olduğu için parlak/karışık arka planlarda en zayıfı.
+- **Yazı tipi.** Anton, OFL 1.1 (`otomasyon/fontlar/`); Türkçe harfler (ç ğ ı İ ö ş ü) tam, `İğüşöçıĞÜŞÖÇ` gerçek kare üzerinde çizilip doğrulandı, testte fontTools ile de denetlenir.
+- **Kareler (scratch):** `C:\Cihan.Ai\.scratch\yayin-klip\tasarim\aciklama-{A,B,C}.png`, `aciklama-karsilastirma.png`, `aciklama-uzun-2satir.png` (Eray), `aciklama-youtube-tolunay.png`.
+
 
 ## Yalnız sohbet ↔ sohbet + konuşma
 
@@ -525,9 +551,27 @@ Ses olayı denemesinde 10 etiket: iyi anların ortalama RMS tepe z’si 0.56, za
 
 `py -m unittest discover -s tests -p "test_klip_youtube.py"`: **21 test, 0.018 sn, son satır `OK`**.
 
-`py -m unittest discover -s tests -p "test_*klip*.py"` (başka çalışanın derleme testleri dahil): **289 test, 4.624 sn, son satır `OK`**.
+`py -m unittest discover -s tests -p "test_*klip*.py"` (derleme testleri dahil): **404 test, ~20 sn, son satır `OK`** (2026-11-18, açıklama görünümü yenilemesi sonrası; önceki ölçüm 353).
 
 Kick/konuşma/YouTube üç dosyada toplam **203 test geçti** (eski ölçüm: 174). Derleme kontrolü (`py_compile`) ve yalnız altı görev dosyasında `git diff --check` geçti. `--konusmasiz` gerçek iki VOD’da eski 22:00/44:10/1:33:10 ve 13:30/31:50/49:50 listelerini verdi; gerçek `yogunluk` 6:20/40:50/1:33:10 listesini verdi.
 
 
 <!-- KONUSMA-SON-OLCUM-END -->
+
+## Paylaşım (onay kapılı; 2026-11-18)
+
+Karar (Cio): klipler ayrı kanalda değil, mevcut CTRL+A GAME hesaplarında (Instagram Reels + YouTube Shorts) paylaşılır. **Onaysız hiçbir klip paylaşılmaz.**
+
+Akış:
+
+1. **Üret (bilgisayar):** `yayin_klip.py` / `klip_youtube.py` klip paketlerini, `klip_derleme.py` 16:9 derlemeyi üretir (bu belgenin üst bölümleri).
+2. **Listele (bilgisayar):** `py tools/klip_yayin.py liste` → tek sayfa `.scratch\yayin-klip\onay\index.html` (oynatıcı, başlık/açıklama, kaynak, döküm, uyarılar: küfür, 1080p değil, döküm yok). Numaralar kalıcıdır.
+3. **Cio izler, karar verir.** Küfür uyarısı olanlar ve dökümü olmayanlar (konuşma denetlenemedi) kulakla dinlenir.
+4. **Onayla (bilgisayar):** `py tools/klip_yayin.py onayla 3 7` (derleme için `--kucuk-resim 2`). Onay `data/klipler.json`a, paket+mp4 özetine bağlı yazılır; dosya sonradan değişirse onay düşer. Geri almak: `geri-cek 3`.
+5. **Yükle (bilgisayar):** `py tools/klip_yayin.py yukle --kuru` (ne yükleneceğini gösterir), sonra `yukle`. 720/540/kapak ffmpeg ile üretilir, medya sunucusuna (`/var/www/medya/v/`, varsayılan hedef `oracle:` takma adı; `--hedef` ya da `KLIP_YUKLEME_HEDEFI` ile değişir) kopyalanır, manifestte "yayında" yazılır.
+6. **Commit + push (bilgisayar, Cio onayıyla):** `data/klipler.json` depoya gider. Mp4'ler depoya girmez.
+7. **Paylaş (GitHub Actions, `sosyal.yml`):** `sosyal_yayinla.py` yalnız `onay` + `yayinda` geçerli klipleri aday sayar. Reels + Shorts, yalnız Türkçe; derleme yalnız YouTube (normal video, `#Shorts` yok, bölüm zaman damgalı açıklama). Paylaşım bağlantıları `data/klipler.json`a ve kayıt `data/gonderilenler.json`a yazılır.
+
+Sınırlar (`sosyal/ayarlar.json` → `klip`): platform başına günde 2 klip, derleme günde 1; `haber_varken_haber: true` iken paylaşılabilir haber adayı varsa sıra haberde; hesap başı genel günlük hak ayrıca geçerli; aynı klip aynı platforma iki kez gitmez; art arda iki klip gitmez (araya başka tür girer). Klipler haber sitesinde görünmez (ayrı manifest). YouTube: `containsSyntheticMedia: false`, kategori 20 (24 seçilebilir).
+
+Bilinen sınırlar: Actions mp4'ü göremez, yalnız manifesti ve sunucudaki dosyaları; onay özeti bilgisayarda doğrulanır. Derleme üçüncü kişi videoları içerir (yeniden kullanım/telif riski Cio'nundur). Küfür denetimi sözlük tabanlıdır; dökümü olmayan klibi Cio dinler. Küçük resim yükleme kanal doğrulaması ister (reddedilirse video küçük resimsiz yayında kalır).

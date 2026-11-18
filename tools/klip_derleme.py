@@ -435,6 +435,17 @@ def duzenle(ogeler: list[dict], anahtar) -> list[dict]:
     return sonuc
 
 
+def konusma_paketi_mi(a: dict) -> bool:
+    """Konuşma katmanından geçmiş yayıncı paketi (konusma_puani var): yalnız sohbet yoğunluğundan bulunanın önünde seçilir."""
+    return a.get('tur') == 'yayinci' and a.get('konusma_puani') is not None
+
+
+def kesit_oncelik(a: dict) -> tuple[int, float]:
+    """Seçim sırası anahtarı: ÖNCE konuşma paketi (kendi içinde değerine göre), sonra diğerleri değerine göre.
+    Yayıncı üst sınırları ve art arda gelmeme kuralı bunun üstünde aynen uygulanır."""
+    return (0 if konusma_paketi_mi(a) else 1, -float(a.get('deger', 0.0)))
+
+
 def yayinci_anahtari(a: dict) -> str:
     return (a.get('yayinci') or a.get('kanal') or '').lower()
 
@@ -452,7 +463,7 @@ def ust_sinir_uygula(kesitler: list[dict], ayar: dict) -> tuple[list[dict], list
     elenen: list[dict] = []
     izleyici_say: Counter = Counter()
     toplam_say: Counter = Counter()
-    for a in sorted(kesitler, key=lambda a: -a['deger']):
+    for a in sorted(kesitler, key=kesit_oncelik):
         y = yayinci_anahtari(a)
         if a['tur'] == 'izleyici' and ik and izleyici_say[y] >= ik:
             elenen.append({'id': a['id'], 'neden': 'izleyici_kanal_ust', 'baslik': a.get('baslik'), 'kaynak': 'izleyici'})
@@ -477,7 +488,7 @@ def plan_olustur(adaylar: list[dict], ayar: dict, hedef_sn: float | None = None,
     teaser_sn = float(ayar['teaser_sn'])
     oran = max(0, int(ayar['yayinci_basina_viral']))
     kesitler = sorted([a for a in adaylar if a['tur'] in ('yayinci', 'izleyici') and a['tur'] in turler],
-                      key=lambda a: -a['deger'])
+                      key=kesit_oncelik)
     kesitler, ust_elenen = ust_sinir_uygula(kesitler, ayar)
     virallar = sorted([a for a in adaylar if a['tur'] == 'viral' and 'viral' in turler], key=lambda a: -a['deger'])
     sabit = giris + kapanis + teaser_n * teaser_sn
@@ -511,7 +522,7 @@ def plan_olustur(adaylar: list[dict], ayar: dict, hedef_sn: float | None = None,
             break
     # artık bütçe: kalan adaylardan en değerli sığanı ekle (sıra kuralı sonra yine uygulanır)
     kalanlar = [a for a in kesitler + virallar if a not in secK and a not in secV]
-    for a in sorted(kalanlar, key=lambda a: -a['deger']):
+    for a in sorted(kalanlar, key=kesit_oncelik):
         if a['tur'] == 'viral' and not ayar.get('viral_dolgu', True) and len(secV) >= len(secK) * oran:
             continue                      # viral_dolgu kapalıyken oran aşılmaz
         if toplam + a['kes_sure_sn'] <= butce:
@@ -772,10 +783,14 @@ def izleyici_topla(ayar: dict, kanallar: list[tuple[str, str]], gun: float, kesi
 # ---------------------------------------------------------------- yayıncı paketleri (kendi kliplerimiz)
 
 VOD_URL_RE = re.compile(r'kick\.com/([^/\s]+)/videos/([0-9a-fA-F-]{36})')
+YT_URL_RE = re.compile(r'(?:youtube\.com/watch\?(?:[^#\s]*&)?v=|youtu\.be/)([\w-]{11})')
+PAKET_DESENLERI = ('klip-*.json', 'canli-*.json', 'konusma-*.json')   # konusma-*: konusma-hizali-NN, konusma-ek-*, konusma-NN
+KONUSMA_SAAT_EN_AZ = 3   # duzen.konusma_saat_surumu: bunun altı ses hizası düzeltilmemiş (kayık) kesimdir
 
 
 def paket_dosyalari(dizin: pathlib.Path, ayar: dict) -> tuple[list[pathlib.Path], int]:
-    """cikti/<yayinci-tarih-id>/klip-NN.json ve canli-NN.json; haric önekli klasörler (eski yöntem) atlanır."""
+    """cikti/<yayinci-tarih-id>/klip-NN, canli-NN ve konusma-*.json (konusma-hizali-NN, konusma-ek-*, konusma-NN);
+    haric önekli klasörler (eski yöntem) atlanır."""
     kok = dizin / 'cikti'
     dosyalar: list[pathlib.Path] = []
     haric = 0
@@ -784,15 +799,29 @@ def paket_dosyalari(dizin: pathlib.Path, ayar: dict) -> tuple[list[pathlib.Path]
     oneks = tuple(ayar.get('paket_klasor_haric') or ())
     for klasor in sorted(p for p in kok.iterdir() if p.is_dir()):
         if oneks and klasor.name.startswith(oneks):
-            haric += len(list(klasor.glob('klip-*.json')) + list(klasor.glob('canli-*.json')))
+            haric += len({y for d in PAKET_DESENLERI for y in klasor.glob(d)})
             continue
-        dosyalar += sorted(klasor.glob('klip-*.json')) + sorted(klasor.glob('canli-*.json'))
+        dosyalar += sorted({y for d in PAKET_DESENLERI for y in klasor.glob(d)})
     return dosyalar, haric
 
 
-def paket_ele_nedeni(paket: dict, ayar: dict, kesim_tarih: str) -> str | None:
-    if not paket.get('vod_url') or not VOD_URL_RE.search(paket['vod_url']):
+def paket_kaynagi(url: str | None) -> tuple[str, str | None, str] | None:
+    """Paketin yayın adresi -> (platform, kick kanalı | None, kaynak kimliği). Kick: VOD uuid; YouTube: 'yt-<video kimliği>'."""
+    m = VOD_URL_RE.search(url or '')
+    if m:
+        return 'kick', m.group(1), m.group(2).lower()
+    y = YT_URL_RE.search(url or '')
+    if y:
+        return 'youtube', None, 'yt-' + y.group(1)
+    return None
+
+
+def paket_ele_nedeni(paket: dict, ayar: dict, kesim_tarih: str, dosya_adi: str | None = None) -> str | None:
+    if not paket.get('vod_url') or not paket_kaynagi(paket['vod_url']):
         return 'vod_adresi_yok'
+    if (dosya_adi or '').startswith('konusma-') and not dosya_adi.startswith(('konusma-hizali', 'konusma-ek')) and \
+            int((paket.get('duzen') or {}).get('konusma_saat_surumu') or 0) < KONUSMA_SAAT_EN_AZ:
+        return 'konusma_hizasiz'   # ilk sürüm konusma-NN: ses hizası düzeltilmeden kesilmiş, kayık olabilir
     for alan in ('klip_baslangic_sn', 'klip_bitis_sn', 'yayinci'):
         if paket.get(alan) is None:
             return f'alan_eksik:{alan}'
@@ -830,19 +859,24 @@ def vod_getir(uuid: str, kanal: str) -> dict:
 
 def paket_adayi(klasor_adi: str, dosya_adi: str, paket: dict, vod: dict | None, mp4: pathlib.Path, ayar: dict) -> tuple[dict | None, str | None]:
     """(aday, eleme nedeni). VOD yoksa/HLS yoksa dikey mp4'e düşer (erisim='dikey'), o da yoksa elenir."""
-    m = VOD_URL_RE.search(paket['vod_url'])
-    kanal, uuid = m.group(1), m.group(2).lower()
-    hls = (vod or {}).get('hls') or ''
-    erisim = 'hls' if hls else ('dikey' if mp4.exists() else None)
+    platform, kanal, uuid = paket_kaynagi(paket['vod_url'])
+    youtube = platform == 'youtube'
+    hls = '' if youtube else ((vod or {}).get('hls') or '')
+    erisim = 'youtube' if youtube else ('hls' if hls else ('dikey' if mp4.exists() else None))
     if erisim is None:
         return None, 'kaynak_yok'
     kes = kesit_araligi(paket, ayar)
     if vod and vod.get('sure_sn') and kes['bit'] > vod['sure_sn'] + 1:
         return None, 'klip_vod_disinda'
     t0 = (vod or {}).get('t0_epoch')
+    yazi = paket.get('aciklama_yazisi') or {}
     return {
-        'id': f'paket:{klasor_adi}/{dosya_adi}', 'tur': 'yayinci', 'kaynak': 'paket',
-        'yayinci': paket['yayinci'], 'kanal': paket.get('kanal') or kanal, 'kanal_url': paket.get('kanal_url') or f'https://kick.com/{kanal}',
+        'id': f'paket:{klasor_adi}/{dosya_adi}', 'tur': 'yayinci', 'kaynak': 'paket', 'platform': platform,
+        'yayinci': paket['yayinci'], 'kanal': paket.get('kanal') or kanal,
+        'kanal_url': paket.get('kanal_url') or f'https://kick.com/{kanal}',
+        'konusma_puani': paket.get('konusma_puani'), 'kisa_aciklama': paket.get('kisa_aciklama'),
+        'dikey_aciklama_metni': yazi.get('metin') if yazi.get('satirlar') else None,
+        'youtube_url': paket['vod_url'] if youtube else None,
         'baslik': (paket.get('baslik') or '').strip(), 'puan': paket.get('zirve_puani'), 'izlenme': None,
         'deger': deger_paket(paket.get('zirve_puani')), 'tarih': paket.get('yayin_tarihi'),
         'vod_url': paket['vod_url'], 'vod_uuid': uuid, 'oyun': paket.get('oyun'), 'paket_turu': paket_turu(dosya_adi),
@@ -903,20 +937,19 @@ def paket_topla(ayar: dict, dizin: pathlib.Path, gun: float, simdi: datetime, ra
         except (OSError, json.JSONDecodeError):
             nedenler['okunamadi'] += 1
             continue
-        neden = paket_ele_nedeni(paket, ayar, kesim_tarih)
+        neden = paket_ele_nedeni(paket, ayar, kesim_tarih, j.stem)
         if neden:
             nedenler[neden] += 1
             elenen_kaydet(rapor, f'paket:{j.parent.name}/{j.stem}', neden, paket.get('baslik'), 'paket')
             continue
-        m = VOD_URL_RE.search(paket['vod_url'])
-        uuid = m.group(2).lower()
-        if uuid not in vodlar:
+        platform, kanal, uuid = paket_kaynagi(paket['vod_url'])
+        if platform == 'kick' and uuid not in vodlar:
             try:
-                vodlar[uuid] = vod_al(uuid, m.group(1))
+                vodlar[uuid] = vod_al(uuid, kanal)
             except DerlemeHatasi as e:
                 vodlar[uuid] = None
                 r['vod_hata'][uuid[:8]] = str(e)
-        aday, neden = paket_adayi(j.parent.name, j.stem, paket, vodlar[uuid], j.with_suffix('.mp4'), ayar)
+        aday, neden = paket_adayi(j.parent.name, j.stem, paket, vodlar.get(uuid), j.with_suffix('.mp4'), ayar)
         if neden:
             nedenler[neden] += 1
             elenen_kaydet(rapor, f'paket:{j.parent.name}/{j.stem}', neden, paket.get('baslik'), 'paket')
@@ -1561,10 +1594,18 @@ def ffmpeg_dene(ff: str, args: list[str], cwd: str | pathlib.Path | None = None,
         raise DerlemeHatasi(f'ffmpeg başarısız {ad}: {r.stderr.strip()[-700:]}')
 
 
+def kanal_adresi(a: dict) -> str:
+    """Etiketteki kanal adresi: Kick için kick.com/<kanal>, YouTube için youtube.com/@<kanal> (kanal_url'den)."""
+    if a.get('platform') == 'youtube':
+        u = re.sub(r'^https?://(www\.)?', '', str(a.get('kanal_url') or '')).rstrip('/')
+        return u or f'youtube.com/@{a.get("kanal")}'
+    return f'kick.com/{a["kanal"]}'
+
+
 def etiket_metni(a: dict, ayar: dict) -> str | None:
     """Parçanın kaynak etiketi (sol alt, ilk kaynak_etiketi_sn sn). Yayıncı kesitinde yayıncı adı."""
     if a['tur'] == 'yayinci':
-        return f'Yayıncı: {a["yayinci"]}  ·  kick.com/{a["kanal"]}'
+        return f'Yayıncı: {a["yayinci"]}  ·  {kanal_adresi(a)}'
     if a['tur'] == 'izleyici':
         return f'Kick klibi  ·  {a["yayinci"]}  ·  kick.com/{a["kanal"]}'
     if ayar.get('viral_etiketi'):
@@ -1733,12 +1774,35 @@ def viral_indir(ff: str, a: dict, dizin: pathlib.Path) -> tuple[str, int]:
     return str(dosyalar[0]), dosyalar[0].stat().st_size
 
 
+def youtube_kesit_indir(ff: str, a: dict, dizin: pathlib.Path) -> tuple[str, int]:
+    """YouTube paketinin derleme kesitini (yalnız kes.bas..kes.bit) yatay 1080p'ye kadar indirir (yt-dlp aralık indirmesi).
+    Aynı aralık varsa tekrar indirmez. Hata -> DerlemeHatasi (çağıran dikey mp4'e düşer)."""
+    kes = a['kes']
+    hedef_klasor = derleme_dizini(dizin) / 'indirilen'
+    hedef_klasor.mkdir(parents=True, exist_ok=True)
+    hedef = hedef_klasor / f"{guvenli_ad(a['vod_uuid'])}-{int(kes['bas'] * 100)}-{int(kes['bit'] * 100)}.mkv"
+    if hedef.exists() and hedef.stat().st_size > 0:
+        return str(hedef), 0
+    try:
+        import klip_youtube as ky
+        dosya, _bilgi = ky.bolum_indir({'vod_url': a['youtube_url']}, float(kes['bas']), float(kes['bit']), hedef, ff)
+    except Exception as e:  # noqa: BLE001 - yt-dlp her türlü hatayla düşebilir; derleme dikey mp4'e düşer
+        raise DerlemeHatasi(f'YouTube aralığı indirilemedi: {str(e)[:200]}') from e
+    return str(dosya), pathlib.Path(dosya).stat().st_size
+
+
 def kaynak_belirle(ff: str, a: dict, yol_yerel: str | None, geri_dus: bool = False) -> dict:
     """Adayın kesim girdisi. geri_dus=True: yayıncı paketi için dikey mp4 (yayın kalkmış/HLS açılmadı)."""
     kes = a['kes']
     if a['tur'] == 'yayinci':
         if not geri_dus and a.get('hls'):
             return {'yol': a['hls'], 'ss': kes['bas'], 'sure': kes['sure'], 'w': 1920, 'h': 1080, 'ses': True, 'tur': 'hls'}
+        if not geri_dus and a.get('youtube_url'):
+            if not yol_yerel:
+                raise DerlemeHatasi('YouTube yatay aralığı yok: ' + str(a.get('youtube_indirme_hata') or 'indirilmedi'))
+            b = video_bilgi(ff, yol_yerel)
+            return {'yol': yol_yerel, 'ss': 0.0, 'sure': round(min(kes['sure'], b['sure_sn'] - 0.05), 2),
+                    'w': b['genislik'], 'h': b['yukseklik'], 'ses': b['ses'], 'tur': 'youtube_aralik'}
         mp4 = a.get('dikey_mp4')
         if not mp4 or not pathlib.Path(mp4).exists():
             raise DerlemeHatasi('yayın kaynağı kullanılamıyor ve dikey mp4 yok')
@@ -1763,7 +1827,12 @@ def kaynak_belirle(ff: str, a: dict, yol_yerel: str | None, geri_dus: bool = Fal
 def aday_parcasi(ff: str, font: str, ad: str, a: dict, yol_yerel: str | None, calisma: pathlib.Path, ayar: dict, zorla: bool) -> dict:
     """Adayı hazırlar. Yayıncı paketinde HLS başarısız olursa dikey mp4'e düşer ve bunu sonuca yazar."""
     etiket = etiket_metni(a, ayar)
-    deneme = [False] if a['tur'] != 'yayinci' else ([False, True] if a.get('hls') and a.get('dikey_mp4') else [not a.get('hls')])
+    if a['tur'] != 'yayinci':
+        deneme = [False]
+    elif a.get('youtube_url'):
+        deneme = [False, True] if a.get('dikey_mp4') else [False]   # önce yatay aralık, olmazsa dikey mp4
+    else:
+        deneme = [False, True] if a.get('hls') and a.get('dikey_mp4') else [not a.get('hls')]
     son_hata = None
     for geri in deneme:
         try:
@@ -1773,7 +1842,9 @@ def aday_parcasi(ff: str, font: str, ad: str, a: dict, yol_yerel: str | None, ca
             s = parca_uret(ff, font, ad, k, etiket, calisma, ayar, zorla)
             s.update({'kaynak_turu': k['tur'], 'kaynak_ss': k['ss'], 'kaynak_sure': k['sure'],
                       'kaynak_w': k['w'], 'kaynak_h': k['h']})
-            if geri and a.get('hls'):
+            if geri and a.get('youtube_url'):
+                s['geri_dusme'] = f'YouTube yatay aralık alınamadı, dikey mp4 kullanıldı: {son_hata}'
+            elif geri and a.get('hls'):
                 s['geri_dusme'] = f'HLS açılamadı, dikey mp4 kullanıldı: {son_hata}'
             elif geri:
                 s['geri_dusme'] = 'yayın kaynağı (HLS) yok, dikey mp4 kullanıldı'
@@ -1817,6 +1888,12 @@ def aciklama_temizle(metin, ayar: dict) -> str | None:
 
 
 def aciklama_kaynagi(a: dict, ayar: dict) -> tuple[str | None, str | None]:
+    """Sıra: (1) paketin kisa_aciklama'sı (konuşma yargısı üretmiş; model çağrısı yok), (2) eski konuşma paketi başlığı/gerekçesi,
+    (3) izleyici/viral başlığı. Hiçbiri yoksa (None, None) ve toplu yargıya kalır."""
+    if a.get('kisa_aciklama'):
+        t = aciklama_temizle(a['kisa_aciklama'], ayar)
+        if t:
+            return t, 'kisa_aciklama'
     if (a.get('paket_turu') or '').startswith('konusma'):
         for key in ('baslik', 'gerekce'):
             t = aciklama_temizle(a.get(key), ayar)
@@ -1973,6 +2050,8 @@ def aciklama_yerlesimi(metin: str, ayar: dict, font: str) -> dict:
 def aciklama_bindir(ff: str, font: str, a: dict, hz: dict, ayar: dict, calisma: pathlib.Path) -> dict:
     if not a.get('aciklama') or not ayar.get('aciklama_etkin', True):
         return hz
+    if hz.get('kaynak_turu') == 'dikey_mp4' and a.get('dikey_aciklama_metni'):
+        return {**hz, 'aciklama_gomulu': True}   # dikey klip açıklamasını kendi üst bölgesinde taşıyor: çift yazı olmasın
     yer = aciklama_yerlesimi(a['aciklama'], ayar, font)
     imza = hashlib.sha1(json.dumps(['rgb-v2', yer, ayar.get('aciklama_sn', 0)], sort_keys=True).encode()).hexdigest()[:10]
     ad = parca_adi(a) + '-aciklama-' + imza
@@ -2010,6 +2089,11 @@ def _hazirla_bir(ff: str, font: str, a: dict, dizin: pathlib.Path, calisma: path
     yerel, bayt = (None, 0)
     if a['tur'] == 'viral':
         yerel, bayt = viral_indir(ff, a, dizin)
+    elif a['tur'] == 'yayinci' and a.get('youtube_url'):
+        try:
+            yerel, bayt = youtube_kesit_indir(ff, a, dizin)
+        except DerlemeHatasi as e:    # yatay aralık alınamadı: aday_parcasi dikey mp4'e düşer ve bunu sonuca yazar
+            a['youtube_indirme_hata'] = str(e)
     s = aday_parcasi(ff, font, parca_adi(a), a, yerel, calisma, ayar, zorla)
     s['indirilen_bayt'] = bayt
     return s
@@ -2077,6 +2161,18 @@ def kart_satirlari(ayar: dict, sayi: int, giris: bool) -> list[tuple[str, int, s
             (ayar['filigran_yazi'], 36, 'white', 190)]
 
 
+def secim_ozeti(kayitlar: list[dict]) -> dict:
+    """Yayıncı kesitlerinin kaçı konuşma paketinden, kaçında açıklama var; açıklamasızların listesi."""
+    kes = [k for k in kayitlar if k['rol'] == 'yayinci']
+    ac = [k for k in kes if k.get('aciklama')]
+    return {'yayinci_kesiti': len(kes), 'konusma_paketinden': sum(1 for k in kes if k.get('konusma_paketi')),
+            'aciklamali': len(ac), 'aciklama_kaynaklari': dict(Counter(k.get('aciklama_kaynagi') or 'yok' for k in kes)),
+            'dikey_mp4_dusen': sum(1 for k in kes if k.get('kaynak_turu') == 'dikey_mp4'),
+            'youtube_yatay': sum(1 for k in kes if k.get('kaynak_turu') == 'youtube_aralik'),
+            'aciklamasiz': [{'id': k['id'], 'platform': k.get('platform'), 'paket_turu': k.get('paket_turu')}
+                            for k in kes if not k.get('aciklama')]}
+
+
 def parca_kaydi(p: dict, sira: int, bas: float, sure: float, hz: dict | None) -> dict:
     a = p['aday']
     k = {'sira': sira, 'rol': p['rol'], 'bas_sn': round(bas, 2), 'bit_sn': round(bas + sure, 2), 'sure_sn': round(sure, 2)}
@@ -2085,6 +2181,8 @@ def parca_kaydi(p: dict, sira: int, bas: float, sure: float, hz: dict | None) ->
         ss = (hz or {}).get('kaynak_ss', kes['bas'])
         k.update({'tur': a['tur'], 'id': a['id'], 'kaynak': a.get('kaynak'), 'yayinci': a.get('yayinci'),
                   'aciklama': a.get('aciklama'), 'aciklama_kaynagi': a.get('aciklama_kaynagi'),
+                  'platform': a.get('platform'), 'paket_turu': a.get('paket_turu'),
+                  'konusma_paketi': konusma_paketi_mi(a), 'aciklama_gomulu': bool((hz or {}).get('aciklama_gomulu')),
                   'kanal': a.get('kanal') or a.get('kanal_adi'), 'baslik': a.get('baslik'),
                   'adres': a.get('vod_url') or a.get('web_url') or a.get('url'), 'izlenme': a.get('izlenme'),
                   'puan': a.get('puan'), 'deger': round(a['deger'], 3), 'kaynak_bas_sn': round(ss, 2),
@@ -2193,7 +2291,7 @@ def uret(ayar: dict, dizin: pathlib.Path, kaynaklar: tuple[str, ...] = ('paket',
         'dosya': str(cikis), 'sure_sn': round(b['sure_sn'], 2), 'cozunurluk': f'{b["genislik"]}x{b["yukseklik"]}',
         'fps': ayar['fps'], 'sayilar': sayilar, 'parcalar': kayitlar, 'kucuk_resimler': kucukler,
         'uyarilar': plan['uyarilar'], 'elenen_adaylar': elenenler,
-        'aciklama_raporu': aciklama_rapor,
+        'aciklama_raporu': aciklama_rapor, 'secim_ozeti': secim_ozeti(kayitlar),
         'olcum': {'toplama_sn': round(toplama_sn, 1), 'hazirlama_sn': round(hazirlama_sn, 1),
                   'toplam_uretim_sn': round(time.time() - t_basla, 1), 'indirilen_bayt': bayt,
                   'cikti_bayt': cikis.stat().st_size, 'toplama': toplama_rapor},

@@ -401,6 +401,7 @@ def metin_tekrar(item, vod, dizin):
 
 def analiz(vod, info, dizin, cfg, ff, http):
     cfg = {**k.AYAR, **AYAR, **cfg}
+    yargi_cfg = {**cfg, 'kisa_ad': cfg.get('kisa_ad') or vod.get('kisa_ad') or vod.get('yayinci')}  # ayar kaydına girmez
     if not cfg['konusma']:
         raise RuntimeError('YouTube sohbet içermez; konuşmasız analiz desteklenmiyor')
     uncertain = cift_kaynak_engeli(vod, dizin)
@@ -422,13 +423,13 @@ def analiz(vod, info, dizin, cfg, ff, http):
     for a in range(0, math.ceil(vod['sure_sn']), size-overlap):
         window = [s for s in rows if a <= s['bas'] and s['bit'] <= a+size]
         if window:
-            found = k.toplu_yargi([window], model, folder, cfg, True)[0]
+            found = k.toplu_yargi([window], model, folder, yargi_cfg, True)[0]
             if found:
                 answers.extend(found)
     # Heatmap yerel tepeleri de bağımsız adaydır; içerik yargısı zorunlu.
     heat_windows = [[s for s in rows if p['sn']-45 <= s['bas'] and s['bit'] <= p['sn']+45] for p in peaks[:cfg['konusma_aday_sayisi']]]
     if heat_windows:
-        for found in k.toplu_yargi(heat_windows, model, folder, cfg):
+        for found in k.toplu_yargi(heat_windows, model, folder, yargi_cfg):
             if found:
                 answers.extend(found)
     provisional = []
@@ -443,7 +444,7 @@ def analiz(vod, info, dizin, cfg, ff, http):
         precise, measurements = whisper_dokum(vod, ranges, dizin, cfg, ff)
         windows = [[s for s in precise if a-25 <= s['bas'] and s['bit'] <= b+25]
                    for a, b in [(p['klip_baslangic_sn'], p['klip_bitis_sn']) for p in provisional]]
-        revised = k.toplu_yargi(windows, model, folder, cfg)
+        revised = k.toplu_yargi(windows, model, folder, yargi_cfg)
         answers = [found[0] for found in revised if found]
         rows = precise
     else:
@@ -465,7 +466,8 @@ def analiz(vod, info, dizin, cfg, ff, http):
         item = {'zirve_sn': peak, 'zirve_dilimleri': [peak], 'zirve_zaman': f'{int(peak)//60}:{int(peak)%60:02d}',
                 'klip_baslangic_sn': a, 'klip_bitis_sn': b, 'sure_sn': round(b-a, 3),
                 'puan': round(score, 3), 'konusma_puani': answer['puan'], 'konusma_gerekce': answer['gerekce'],
-                'konusma_baslik': answer['baslik'], 'heatmap_puani': heat,
+                'konusma_baslik': answer['baslik'], 'konusma_kisa_aciklama': answer.get('kisa_aciklama'),
+                'heatmap_puani': heat,
                 'baskin': 'konusma', 'kaynaklar': ['altyazi_tarama' if captions else 'whisper_tarama']+(['heatmap'] if heat else []),
                 'dokum_metni': ' '.join(s['metin'] for s in rows if a <= s['bas'] and s['bit'] <= b)}
         duplicate = metin_tekrar(item, vod, dizin)

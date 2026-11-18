@@ -53,6 +53,7 @@ sys.path.insert(0, str(KOK / "tools"))
 from sosyal_derle import DILLER, GORUNEN, KLASOR, M, SITE, kart_ad, kaynak_adi  # noqa: E402
 import video_site as vs  # noqa: E402
 import sosyal_kuyruk as sk  # noqa: E402
+import klip_sosyal as ks  # noqa: E402
 
 KAYIT = KOK / "sosyal" / "gonderilenler.json"
 AYAR = KOK / "sosyal" / "ayarlar.json"
@@ -60,6 +61,11 @@ ICERIK = KOK / "data" / "icerik.json"
 UA = "rockstargtavi-sosyal/1.0"
 BICIMLER = ("gorsel", "reel", "short")
 MAX_VIDEO_BAYT = 256 * 1024 * 1024
+# Derleme (16:9, ~11 dk) 300-420 MB görüldü; YouTube yüklemesi baytları bellekte tutar (Actions 7 GB RAM): tavan yalnız derlemede 512 MB.
+MAX_DERLEME_BAYT = 512 * 1024 * 1024
+KLIP_TURLERI = ks.KLIP_TURLERI
+KLIP_SINIR_VARSAYILAN = {"instagram_reel": 2, "youtube": 2}
+YT_KATEGORILER = ("20", "24")
 
 from diller import alan, HREFLANG
 METIN = alan('paylasim')
@@ -110,14 +116,15 @@ class Ag:
         except (urllib.error.URLError, TimeoutError, OSError) as u:
             raise PaylasimHatasi(f"{method} {url.split('?')[0]} → bağlantı hatası: {getattr(u, 'reason', u)}") from None
 
-    def indir(self, url: str) -> bytes:
+    def indir(self, url: str, azami: int | None = None) -> bytes:
+        azami = azami or MAX_VIDEO_BAYT
         req = urllib.request.Request(url, headers={"User-Agent": UA})
         try:
             with urllib.request.urlopen(req, timeout=120) as r:
-                veri = r.read(MAX_VIDEO_BAYT + 1)
+                veri = r.read(azami + 1)
         except (urllib.error.URLError, TimeoutError, OSError) as u:
             raise PaylasimHatasi(f"video indirilemedi ({url}): {getattr(u, 'reason', u)}", kesin=True) from None
-        if len(veri) > MAX_VIDEO_BAYT:
+        if len(veri) > azami:
             raise PaylasimHatasi(f"video çok büyük: {url}", kesin=True)
         return veri
 
@@ -245,6 +252,8 @@ def cumle_kisalt(metin, sinir):
 
 
 def ig_aciklama(dil, x, ayar=None) -> str:
+    if x.get('sosyal_tur') in KLIP_TURLERI:
+        return emojisiz(x['diller'][dil]['ig_aciklama'])[:2200]  # klip metni onay anında saklanmış ve onaylanmıştır
     if (ayar or {}).get('hesaplar', {}).get(dil, {}).get('instagram_icerik'):
         ana, ikinci = ig_icerik_dilleri(dil, ayar)
         diller = [d for d in (ana, ikinci) if d and d in x['diller']]
@@ -388,6 +397,11 @@ def yt_baslik(dil, x) -> str:
 
 
 def yt_aciklama(dil, x, link) -> str:
+    if x.get("sosyal_tur") in KLIP_TURLERI:
+        metin = x["diller"][dil]["yt_aciklama"]
+        if x["sosyal_tur"] == "klip":
+            metin = (metin + " #Shorts").strip()  # dikey klip Shorts; derleme normal video (#Shorts yok)
+        return emojisiz(re.sub(r"[<>]", "", metin))[:4900]
     t = x["diller"][dil]
     kay = ", ".join(kaynak_adi(dil, s["ad"]) for s in x["kaynaklar"])
     etiket = " ".join(etiketler(dil, x))
@@ -409,6 +423,15 @@ def yt_govde(dil, x, link, ayar) -> dict:
     gizlilik = (ayar.get("youtube") or {}).get("gizlilik", "private")
     if gizlilik not in YT_GIZLILIK:
         gizlilik = "private"
+    if x.get("sosyal_tur") in KLIP_TURLERI:
+        # Gerçek yayın kesiti: yapay medya değil. Kategori ayardan (20 Oyun, 24 Eğlence); yerelleştirme yok (yalnız Türkçe).
+        kat = str((ayar.get("klip") or {}).get("youtube_kategori", "20"))
+        return {
+            "snippet": {"title": yt_baslik(dil, x), "description": yt_aciklama(dil, x, link), "tags": yt_etiketler(dil, x),
+                        "categoryId": kat if kat in YT_KATEGORILER else "20",
+                        "defaultLanguage": HREFLANG[dil], "defaultAudioLanguage": HREFLANG[dil]},
+            "status": {"privacyStatus": gizlilik, "selfDeclaredMadeForKids": False, "containsSyntheticMedia": False},
+        }
     return {
         "snippet": {"title": yt_baslik(dil, x), "description": yt_aciklama(dil, x, link), "tags": yt_etiketler(dil, x),
                     "categoryId": "20", "defaultLanguage": HREFLANG[dil], "defaultAudioLanguage": HREFLANG[dil]},
@@ -460,14 +483,34 @@ def yt_oturum_sorgu(ag, oturum, toplam: int):
     raise PaylasimHatasi(f"YouTube oturum sorgusu anlaşılmadı (HTTP {durum})")
 
 
+def yt_url_duzelt(sonuc: dict, tur) -> dict:
+    """Derleme normal videodur: /shorts/ yerine /watch?v= adresi."""
+    if tur == "derleme" and sonuc.get("kimlik"):
+        sonuc = {**sonuc, "url": f"https://www.youtube.com/watch?v={sonuc['kimlik']}"}
+    return sonuc
+
+
+def yt_kapak(ag, tok, video_kimlik, kapak_adresi) -> str | None:
+    """Derleme küçük resmi (en iyi çaba: kanal doğrulanmamışsa API reddeder, video yine yayında kalır). -> not | None"""
+    try:
+        resim = ag.indir(kapak_adresi)
+        durum, _, metin = ag.ham("POST", f"https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId={video_kimlik}",
+                                 govde=resim, basliklar={"Authorization": f"Bearer {tok}", "Content-Type": "image/jpeg"}, zaman=120)
+        return None if durum in (200, 201) else f"küçük resim yüklenmedi (HTTP {durum})"
+    except PaylasimHatasi as h:
+        return f"küçük resim yüklenmedi: {str(h)[:160]}"
+
+
 def yt_paylas(ag, sir, dil, x, link, ayar, ara, video) -> dict:
     medya = ig_video_adresi(video)
+    tur = x.get("sosyal_tur")
     if not ag.yayinda_mi(medya):
         raise PaylasimHatasi(f"YouTube videosu yayında değil: {medya}", kesin=True)
-    bayt = ag.indir(medya)
+    bayt = ag.indir(medya, MAX_DERLEME_BAYT) if tur == "derleme" else ag.indir(medya)
     tok = yt_erisim(ag, sir)
+    parca = "snippet,status" if tur in KLIP_TURLERI else "snippet,status,localizations"
     durum, bas, metin = ag.ham(
-        "POST", f"{YT_UST}?uploadType=resumable&part=snippet,status,localizations",
+        "POST", f"{YT_UST}?uploadType=resumable&part={parca}",
         govde=json.dumps(yt_govde(dil, x, link, ayar)).encode(),
         basliklar={"Authorization": f"Bearer {tok}", "Content-Type": "application/json; charset=UTF-8",
                    "X-Upload-Content-Type": "video/mp4", "X-Upload-Content-Length": str(len(bayt))}, zaman=60)
@@ -475,7 +518,12 @@ def yt_paylas(ag, sir, dil, x, link, ayar, ara, video) -> dict:
     if not oturum or not oturum.startswith("https://"):
         raise PaylasimHatasi(f"YouTube yükleme oturumu açılamadı (HTTP {durum}): {metin[:200]}", kesin=True)
     ara(oturum=oturum, boyut=len(bayt))  # baytlar gitmeden önce kaydedilir
-    return yt_yukle(ag, oturum, bayt)
+    sonuc = yt_url_duzelt(yt_yukle(ag, oturum, bayt), tur)
+    if tur == "derleme" and video.get("kapak"):
+        kapak_not = yt_kapak(ag, tok, sonuc["kimlik"], video["kapak"])
+        if kapak_not:
+            sonuc = {**sonuc, "kapak_not": kapak_not}
+    return sonuc
 
 
 # ---------------------------------------------------------------- kayıt modeli
@@ -570,6 +618,26 @@ def bugunku_dil_sayisi(kayit: dict, ad: str, hesap: str, dil: str, gun: str) -> 
     return sum(1 for k, v in kayit.items()
                if len(k.split("|")) == 4 and kayit_hesabi(k, v) == hesap and sinir_adi(k) == ad
                and (v.get("dil") or k.split("|")[1]) == dil and _sayilir(v) and _zaman_gunu(v) == gun)
+
+
+def bugunku_tur_sayisi(kayit: dict, ad: str, hesap: str, gun: str, turler) -> int:
+    """Bugün hesapta çıkan, `sosyal_tur`u `turler` içinde olan gönderiler (klip/derleme günlük sınırı için)."""
+    return sum(1 for k, v in kayit.items()
+               if len(k.split("|")) == 4 and kayit_hesabi(k, v) == hesap and sinir_adi(k) == ad
+               and v.get("sosyal_tur") in turler and _sayilir(v) and _zaman_gunu(v) == gun)
+
+
+def klip_ayari(ayar: dict) -> dict:
+    k = ayar.get("klip") or {}
+    return {"gunluk_en_fazla": {**KLIP_SINIR_VARSAYILAN, **(k.get("gunluk_en_fazla") or {})},
+            "derleme_gunluk_en_fazla": int(k.get("derleme_gunluk_en_fazla", 1)),
+            "haber_varken_haber": bool(k.get("haber_varken_haber", True))}
+
+
+def video_baglanti_yaz(manifest_yolu, klip_yolu, tur, oge_id, dil, alan, url) -> bool:
+    if tur in KLIP_TURLERI:
+        return ks.baglanti_yaz(klip_yolu, oge_id, alan, url)
+    return vs.baglanti_yaz(manifest_yolu, oge_id, dil, alan, url)
 
 
 def son_gonderi(kayit: dict, hesap: str, ad: str) -> tuple[str, str | None, str | None]:
@@ -672,7 +740,7 @@ def _tamamla(rec: dict, sonuc: dict, simdi: datetime) -> None:
     rec.update(durum="tamam", zaman=simdi.isoformat(timespec="seconds"), **sonuc)
 
 
-def uzlastir(ag, kayit, tum, ayar, manifest_yolu, kaydet, simdi) -> list:
+def uzlastir(ag, kayit, tum, ayar, manifest_yolu, kaydet, simdi, klip_yolu=None) -> list:
     """Önceki çalışmadan kalan "niyet" kayıtlarını platformdan sorgulayıp tamamlar ya da elle_bak yapar.
     Hiçbir koşulda yeniden paylaşım denemez (yalnız zaten yaratılmış kapsayıcı/oturum devam ettirilir)."""
     mesajlar = []
@@ -710,20 +778,22 @@ def uzlastir(ag, kayit, tum, ayar, manifest_yolu, kaydet, simdi) -> list:
                 continue
             kaydet()
             if bicim == "reel" and rec.get("url"):
-                vs.baglanti_yaz(manifest_yolu, rec["id"], rec.get('icerik_dili', dil), "instagram", rec["url"])
+                video_baglanti_yaz(manifest_yolu, klip_yolu, rec.get("sosyal_tur"), rec["id"], rec.get('icerik_dili', dil), "instagram", rec["url"])
         elif platform == "youtube" and rec.get("oturum") and rec.get("boyut"):
             try:
-                video = vs.bul(vs.yukle(manifest_yolu), rec["id"], dil)
+                klip_mi = rec.get("sosyal_tur") in KLIP_TURLERI
+                video = ks.bul(ks.yukle(klip_yolu), rec["id"]) if klip_mi else vs.bul(vs.yukle(manifest_yolu), rec["id"], dil)
                 durum, s = yt_oturum_sorgu(ag, rec["oturum"], rec["boyut"])
                 if durum == "surmekte":
                     if not video:
                         elle("YouTube yüklemesi yarım ama video manifestte yok")
                         continue
-                    bayt = ag.indir(ig_video_adresi(video))
+                    bayt = ag.indir(ig_video_adresi(video), MAX_DERLEME_BAYT) if rec.get("sosyal_tur") == "derleme" else ag.indir(ig_video_adresi(video))
                     if len(bayt) != rec["boyut"]:
                         elle("YouTube yüklemesi yarım ve video dosyası değişmiş")
                         continue
                     s = yt_yukle(ag, rec["oturum"], bayt, s)
+                s = yt_url_duzelt(s, rec.get("sosyal_tur"))
             except PaylasimHatasi as h:
                 if "HTTP 404" in str(h) or "HTTP 410" in str(h):
                     elle("YouTube yükleme oturumu bulunamadı (süresi dolmuş olabilir); YouTube Studio'da kontrol edin")
@@ -732,7 +802,7 @@ def uzlastir(ag, kayit, tum, ayar, manifest_yolu, kaydet, simdi) -> list:
                 continue
             _tamamla(rec, s, simdi)
             kaydet()
-            vs.baglanti_yaz(manifest_yolu, rec["id"], dil, "youtube", s["url"])
+            video_baglanti_yaz(manifest_yolu, klip_yolu, rec.get("sosyal_tur"), rec["id"], dil, "youtube", s["url"])
         else:
             elle("yanıt kaybolmuş olabilir ve platformdan doğrulanamıyor; platformda gönderiye bakın, yoksa kaydı silin")
     return mesajlar
@@ -741,13 +811,23 @@ def uzlastir(ag, kayit, tum, ayar, manifest_yolu, kaydet, simdi) -> list:
 # ---------------------------------------------------------------- akış
 def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu: pathlib.Path, tum: dict, ag, dry_run: bool,
             bugun: date, simdi: datetime, cikti=print, anahtarsiz_goster: bool = False,
-            kuyruk=None, bellek=None, secildi=None) -> tuple[int, list, list]:
+            kuyruk=None, bellek=None, secildi=None, klip_yolu=None) -> tuple[int, list, list]:
     ham = json.loads(kayit_yolu.read_text(encoding="utf-8")) if kayit_yolu.exists() else {}
     kayit, goc = kayit_goc(ham, veri) if bellek is None else (bellek, False)
     # Kütüphane çağıran eski istemciler yalnız verdikleri haberleri işler.
     # CLI ve derleyici ortak kuyruk üreticisini açıkça kullanır.
     kuyruk = kuyruk if kuyruk is not None else sk.adaylar(veri, kayit_yolu.parent.parent, ayar, bugun, simdi)
     manifest = vs.yukle(manifest_yolu)
+    # Klip/derleme: Cio'nun onayladığı ve medya sunucusuna yüklenmiş olanlar haber akışına katılır (arşivden önce);
+    # onay/yükleme olmadıkça aday çıkmaz. Manifest yoksa/boşsa kuyruk birebir aynı kalır.
+    klip_yolu = pathlib.Path(klip_yolu) if klip_yolu else kayit_yolu.parent.parent / "data" / "klipler.json"
+    klip_manifest = ks.yukle(klip_yolu)
+    klipler = ks.adaylar(klip_manifest, ayar)
+    if klipler:
+        kuyruk = list(kuyruk)
+        ilk_arsiv = next((i for i, y in enumerate(kuyruk) if y.get("sosyal_tur") == "arsiv"), len(kuyruk))
+        kuyruk[ilk_arsiv:ilk_arsiv] = klipler
+    kayar = klip_ayari(ayar)
     gun = simdi.strftime("%Y-%m-%d")
     hatalar, atlanan, gonderilen = [], [], 0
 
@@ -759,8 +839,9 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
         kaydet()
     if not dry_run:
         onceki = {k for k, r in kayit.items() if r.get('durum') == 'niyet'}
-        hatalar += uzlastir(ag, kayit, tum, ayar, manifest_yolu, kaydet, simdi)
+        hatalar += uzlastir(ag, kayit, tum, ayar, manifest_yolu, kaydet, simdi, klip_yolu)
         manifest = vs.yukle(manifest_yolu)
+        klip_manifest = ks.yukle(klip_yolu)
     else:
         onceki = set()
     kullanilan = {(kayit_hesabi(k, kayit[k]), k.split('|')[2]) for k in onceki if kayit[k].get('durum') == 'tamam'}
@@ -795,10 +876,14 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
             son_z, son_d, son_konu = son_gonderi(kayit, hesap, ad)
             yasak_konu = son_konu if ortak and ayni_konu_yakin(son_z, simdi, ayar) else None
 
-            def adaylari(dil, hesap=hesap, platform=platform, bicim=bicim, yasak_konu=yasak_konu):
+            def adaylari(dil, hesap=hesap, platform=platform, bicim=bicim, yasak_konu=yasak_konu, ad=ad, uyeler=uyeler,
+                         klipsiz=False):
                 icerik_dili = ig_icerik_dilleri(dil, ayar)[0] if platform == 'instagram' else dil
                 global_ig = platform == 'instagram' and bool(ayar['hesaplar'][dil].get('instagram_icerik'))
                 for x in sk.oncelikli(kuyruk, dil, platform, kayit, simdi):
+                    klip_mi = x.get('sosyal_tur') in KLIP_TURLERI
+                    if klip_mi and (klipsiz or bicim == "gorsel" or (x['sosyal_tur'] == "derleme" and platform != "youtube")):
+                        continue  # klip görsel gönderi olmaz; derleme yalnız YouTube'a (normal video) gider
                     if not sk.uygun(x, dil, platform, kayit, simdi):
                         continue
                     if icerik_dili not in x.get('diller', {}):
@@ -815,7 +900,20 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                     if yasak_konu and konu_veya_id(x) == yasak_konu:
                         continue  # aynı haberin başka dil sürümü art arda gitmez; araya başka içerik girer
                     video = None
-                    if bicim != "gorsel":
+                    if klip_mi:
+                        sinir_k = (kayar["derleme_gunluk_en_fazla"] if x['sosyal_tur'] == "derleme"
+                                   else kayar["gunluk_en_fazla"].get(ad, KLIP_SINIR_VARSAYILAN.get(ad, 2)))
+                        if bugunku_tur_sayisi(kayit, ad, hesap, gun, (x['sosyal_tur'],)) >= sinir_k:
+                            continue  # klip/derleme için ayrı günlük sınır
+                        if kayar["haber_varken_haber"] and any(
+                                y.get('sosyal_tur', 'haber') == 'haber' for d in uyeler for y, *_ in adaylari(d, klipsiz=True)):
+                            continue  # sıra haberde: haber adayı varken klip beklemede
+                        video = ks.bul(klip_manifest, x["id"])
+                        if not video:
+                            continue
+                        if video.get("instagram" if bicim == "reel" else "youtube"):
+                            continue
+                    elif bicim != "gorsel":
                         if not video_hakki(x, ayar):
                             continue  # hype puanı eşiğin altında: bu haber yalnız görsel gönderi alır
                         video = vs.bul(manifest, x["id"], icerik_dili)
@@ -837,10 +935,12 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                 for x, k, video, icerik_dili in adaylari(dil):
                     if hak <= 0:
                         break
-                    link = paylasim_linki(icerik_dili, x, platform)
-                    sayfa = sayfa_adresi(icerik_dili, x)
+                    klip_mi = x.get('sosyal_tur') in KLIP_TURLERI
+                    link = "" if klip_mi else paylasim_linki(icerik_dili, x, platform)
+                    sayfa = None if klip_mi else sayfa_adresi(icerik_dili, x)
                     if dry_run:
                         cikti(f"\n[DENEME] {ad}/{dil}  {x['id']}" + (f"  (hesap: {hesap})" if hesap != dil else "")
+                              + (f"  [{x['sosyal_tur']}]" if klip_mi else "")
                               + ("" if sir else "  (hesap şifresi yok, gerçekte atlanır)"))
                         if platform == "x":
                             cikti(x_metin(dil, x, link, ayar.get("x_baglanti", "gonderide")))
@@ -867,7 +967,7 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                         hak -= 1
                         toplam += 1
                         continue
-                    if not ag.yayinda_mi(sayfa):
+                    if not klip_mi and not ag.yayinda_mi(sayfa):
                         cikti(f"Bekliyor (sayfa henüz yayında değil): {sayfa}")
                         continue
                     rec = {"id": x["id"], "dil": dil, "platform": platform, "bicim": bicim, "durum": "niyet",
@@ -903,7 +1003,8 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                     _tamamla(rec, sonuc, simdi)
                     kaydet()
                     if bicim in ("reel", "short") and sonuc.get("url"):
-                        vs.baglanti_yaz(manifest_yolu, x["id"], icerik_dili, "instagram" if bicim == "reel" else "youtube", sonuc["url"])
+                        video_baglanti_yaz(manifest_yolu, klip_yolu, x.get('sosyal_tur'), x["id"], icerik_dili,
+                                           "instagram" if bicim == "reel" else "youtube", sonuc["url"])
                     cikti(f"Paylaşıldı: {ad}/{dil} {x['id']} {sonuc.get('url') or sonuc.get('kimlik')}")
                     gonderilen += 1
                     kullanilan.add((hesap, platform))

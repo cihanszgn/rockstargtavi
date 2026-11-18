@@ -304,3 +304,7 @@ Gerçek geri doldurma yalnız eksik senaryoyu yazar; mevcut dosyayı ve haber ve
 `modeller.json` içindeki yerel yardımcı/model çağrısını ve `video_uret.senaryo_hazirla` doğrulamasını kullanır;
 bir düzeltme hakkından sonra geçersiz çıktı yazılmaz. Video render/yükleme/paylaşımı çalıştırmaz.
 Sonraki video iş akışı kalıcı arşiv senaryolarını da işler; video üretim kotası dil başına 4'tür ve mevcut onay korunur.
+
+## Klip ve derleme paylaşımı (2026-11-18)
+
+Yeni anahtar/hesap gerekmez: klipler mevcut CTRL+A GAME hesaplarından (Reels + Shorts) gider. Cio'nun onayladığı ve medya sunucusuna yüklenen klipler paylaşılır; akış ve komutlar: `otomasyon/KLIP-HATTI.md` → "Paylaşım". Ayarlar `sosyal/ayarlar.json` → `klip` (günlük sınır, `haber_varken_haber`, `youtube_kategori`). Kuru deneme: `py tools/klip_yayin.py yukle --kuru`, sonra `py tools/sosyal_yayinla.py --dry-run --anahtarsiz-goster`.

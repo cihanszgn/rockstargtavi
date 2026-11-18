@@ -4,6 +4,7 @@ import pathlib
 import sys
 import tempfile
 import unittest
+from unittest.mock import Mock
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / 'tools'))
 import yayin_klip as yk  # noqa: E402
@@ -1334,3 +1335,383 @@ class KonusmaButunlesme(unittest.TestCase):
         klip = {'zirve_sn': 3000, 'zirve_dilimleri': [3000], 'puan': 80,
                 'klip_baslangic_sn': 2980, 'klip_bitis_sn': 3090}
         self.assertEqual(yk.canli_adaylar([klip], 3100, cfg, [], 3), [])
+
+
+# ---- Kısa açıklama (kisa_aciklama): dikey klip üst bölgesi ----
+ALTIN_FILTRE = {
+    'kadraj': "[0:v:0]fps=30,split=2[a][b];\n[a]scale=-2:480,crop=270:480,gblur=sigma=8,scale=1080:1920,eq=brightness=-0.12:saturation=0.9[bg];\n[b]crop=w=min(iw\\,ih*1.2000):h=min(ih\\,iw/1.2000),scale=1080:900:flags=lanczos[fg];\n[bg][fg]overlay=0:430[v0];\n[v0]drawtext=fontfile='{FONT}':textfile='t_ad.txt':fontsize=76:fontcolor=white:borderw=4:bordercolor=black@0.85:x=(w-text_w)/2:y=230,drawtext=fontfile='{FONT}':textfile='t_oyun.txt':fontsize=46:fontcolor=0xFFD54A:borderw=4:bordercolor=black@0.85:x=(w-text_w)/2:y=343,drawtext=fontfile='{FONT}':textfile='t_kaynak.txt':fontsize=44:fontcolor=white:borderw=4:bordercolor=black@0.85:x=(w-text_w)/2:y=1364,drawtext=fontfile='{FONT}':textfile='t_marka.txt':fontsize=38:fontcolor=0xCCCCCC:borderw=4:bordercolor=black@0.85:x=(w-text_w)/2:y=1429,setsar=1,format=yuv420p[v]\n",
+    'serit': "[0:v:0]fps=30,split=2[a][b];\n[a]scale=-2:480,crop=270:480,gblur=sigma=8,scale=1080:1920,eq=brightness=-0.12:saturation=0.9[bg];\n[b]scale=1080:-2:flags=lanczos[fg];\n[bg][fg]overlay=0:656[v0];\n[v0]drawtext=fontfile='{FONT}':textfile='t_ad.txt':fontsize=76:fontcolor=white:borderw=4:bordercolor=black@0.85:x=(w-text_w)/2:y=430,drawtext=fontfile='{FONT}':textfile='t_oyun.txt':fontsize=46:fontcolor=0xFFD54A:borderw=4:bordercolor=black@0.85:x=(w-text_w)/2:y=530,drawtext=fontfile='{FONT}':textfile='t_kaynak.txt':fontsize=44:fontcolor=white:borderw=4:bordercolor=black@0.85:x=(w-text_w)/2:y=1340,drawtext=fontfile='{FONT}':textfile='t_marka.txt':fontsize=38:fontcolor=0xCCCCCC:borderw=4:bordercolor=black@0.85:x=(w-text_w)/2:y=1415,setsar=1,format=yuv420p[v]\n",
+    'varsayilan': "[0:v:0]fps=30,split=2[a][b];\n[a]scale=-2:480,crop=270:480,gblur=sigma=8,scale=1080:1920,eq=brightness=-0.12:saturation=0.9[bg];\n[b]crop=w=min(iw\\,ih*1.2000):h=min(ih\\,iw/1.2000),scale=1080:900:flags=lanczos[fg];\n[bg][fg]overlay=0:430[v0];\n[v0]drawtext=fontfile='{FONT}':textfile='t_ad.txt':fontsize=76:fontcolor=white:borderw=4:bordercolor=black@0.85:x=(w-text_w)/2:y=230,drawtext=fontfile='{FONT}':textfile='t_oyun.txt':fontsize=46:fontcolor=0xFFD54A:borderw=4:bordercolor=black@0.85:x=(w-text_w)/2:y=343,drawtext=fontfile='{FONT}':textfile='t_kaynak.txt':fontsize=44:fontcolor=white:borderw=4:bordercolor=black@0.85:x=(w-text_w)/2:y=1364,drawtext=fontfile='{FONT}':textfile='t_marka.txt':fontsize=38:fontcolor=0xCCCCCC:borderw=4:bordercolor=black@0.85:x=(w-text_w)/2:y=1429,setsar=1,format=yuv420p[v]\n",
+}
+ALTIN_VOD = {'yayinci': 'wtcN', 'oyun': 'Potato Please', 'platform': 'kick', 'kanal': 'wtcn', 'kanal_url': 'https://kick.com/wtcn'}
+ALTIN_AYAR = {'kadraj': {'kadraj_oran': 1.2}, 'serit': {'duzen': 'serit'}, 'varsayilan': None}
+
+def _font():
+    try:
+        return yk.font_bul()
+    except Exception:   # noqa: BLE001 - yazı tipi yoksa genişlik tahmini devreye girer; geometri değişmezleri yine sınanır
+        return 'arialbd.ttf'
+
+
+FONT_YOLU = _font()
+FONT_ACIKLAMA = yk.aciklama_fontu()   # repodaki Anton (açıklama yazısı bununla çizilir)
+BIR_SATIR = 'Ab cd'
+IKI_SATIR = 'Kemalcan eşini kıskandırmak için mesaj atıyor'
+UC_AYAR = ({'kadraj_oran': 1.2}, {'duzen': 'serit'}, None)
+
+
+class AciklamaYokkenEskiGorunumTesti(unittest.TestCase):
+    """Açıklama verilmeyen klipte filter_complex önceki kodun ölçülmüş çıktısıyla birebir aynı olmalı."""
+
+    def test_filtre_birebir_ayni(self):
+        for ad, ayar in ALTIN_AYAR.items():
+            bekle = ALTIN_FILTRE[ad].replace('{FONT}', yk._fe(FONT_YOLU))
+            self.assertEqual(yk.filtre_yaz(FONT_YOLU, yk.klip_metinleri(ALTIN_VOD), ayar=ayar), bekle, ad)
+            self.assertEqual(yk.filtre_yaz(FONT_YOLU, yk.klip_metinleri(ALTIN_VOD), ayar=ayar, aciklama=None), bekle, ad)
+
+    def test_bos_aciklama_dizisi_de_degistirmez(self):
+        for ayar in UC_AYAR:
+            self.assertIsNone(yk.aciklama_duzeni(None, FONT_YOLU, ayar))
+            self.assertIsNone(yk.aciklama_duzeni('   ', FONT_YOLU, ayar))
+            self.assertEqual(yk.yerlesim(ayar), yk.yerlesim(ayar, aciklama=None))
+
+    def test_imza_aciklamasizda_eskisiyle_ayni(self):
+        self.assertEqual(yk.duzen_imzasi({'konusma': True}), {'duzen': 'kadraj', 'kadraj_oran': yk.AYAR_VARSAYILAN['kadraj_oran'],
+                                                              'konusma_saat_surumu': 3})
+        self.assertNotIn('aciklama', yk.duzen_imzasi({}, None))
+
+
+class AciklamaKonumTesti(unittest.TestCase):
+    """Açıklama etiketi görüntü karesinin hemen ÜSTÜNDE; en üst 150 px boş; hiçbir yazı görüntüye ya da birbirine binmez.
+    Hem geometri (aciklama_duzeni) hem de gerçekten çizilen şeffaf katman (aciklama_katmani) ölçülür; 1 ve 2 satır."""
+
+    def kutu_kontrol(self, metin, ayar, oyun_var=True):
+        d = yk.DUZEN
+        c = d['aciklama']
+        a = yk.aciklama_duzeni(metin, FONT_ACIKLAMA, ayar, oyun_var=oyun_var)
+        self.assertIsNotNone(a, (metin, ayar))
+        yz = yk.yerlesim(ayar, aciklama=a)
+        gorsel_ust, gorsel_alt = yz['gorsel_y'], yz['gorsel_y'] + yz['gorsel_h']
+        self.assertLessEqual(len(a['satirlar']), 2)
+        self.assertEqual(' '.join(a['satirlar']), metin)                 # kısaltma yok, kelime kaybı yok
+        self.assertEqual(c['ust_sinir'], 150)
+        self.assertGreaterEqual(min(k[1] for k in a['kutular']), c['ust_sinir'])    # en üst 150 px boş (Shorts/Reels arayüzü)
+        for onceki, sonraki in zip(a['kutular'], a['kutular'][1:]):
+            self.assertLessEqual(onceki[3], sonraki[1])                  # satır etiketleri birbirine binmez
+        son_alt = a['kutular'][-1][3]
+        self.assertEqual(son_alt, gorsel_ust - c['video_boslugu'])       # alt kenar kareye video_boslugu kadar yakın
+        self.assertTrue(30 <= gorsel_ust - son_alt <= 50)                # ~30-50 px: kareyle bağ kurar, binmez
+        for x0, y0, x1, y1 in a['kutular']:                              # her etiket tuvalin içinde
+            self.assertGreaterEqual(x0, 0)
+            self.assertLessEqual(x1, d['genislik'])
+        # altta ad·oyun / kaynak / marka: görüntünün altında, birbirinin altında
+        al = a['alt_satirlar']
+        sira = [al['ad_oyun'], al['kaynak'], al['marka']]
+        self.assertGreaterEqual(sira[0]['y'], gorsel_alt)
+        for onceki, sonraki in zip(sira, sira[1:]):
+            self.assertGreaterEqual(sonraki['y'], onceki['y'] + onceki['h'])
+        self.assertLess(a['alt_son'], d['yukseklik'])
+        self.assertGreaterEqual(a['boyut'], c['en_az'])
+        # gerçek katman: şeffaf; üst 150 px ve görüntü karesi bölgesi tamamen boş
+        kat = yk.aciklama_katmani(a, yk.klip_metinleri(ALTIN_VOD, a))
+        self.assertEqual(kat.size, (d['genislik'], d['yukseklik']))
+        alfa = kat.getchannel('A').point(lambda v: 255 if v > 6 else 0)   # alfa<=6: gözle görünmez gölge ucu
+        self.assertIsNone(alfa.crop((0, 0, d['genislik'], c['ust_sinir'])).getbbox(), 'üst 150 px boş olmalı')
+        self.assertIsNone(alfa.crop((0, gorsel_ust, d['genislik'], gorsel_alt)).getbbox(), 'görüntü karesine yazı binmemeli')
+        self.assertIsNotNone(alfa.crop((0, c['ust_sinir'], d['genislik'], gorsel_ust)).getbbox())   # açıklama gerçekten çizilmiş
+        self.assertIsNotNone(alfa.crop((0, gorsel_alt, d['genislik'], d['yukseklik'])).getbbox())   # alt yazılar çizilmiş
+        return a
+
+    def test_tek_satir_her_duzende(self):
+        for ayar in UC_AYAR:
+            a = self.kutu_kontrol(BIR_SATIR, ayar)
+            self.assertEqual(len(a['satirlar']), 1)
+            self.assertEqual(a['boyut'], yk.DUZEN['aciklama']['boyut'])   # kısa metin tam punto
+
+    def test_iki_satir_her_duzende(self):
+        for ayar in UC_AYAR:
+            a = self.kutu_kontrol(IKI_SATIR, ayar)
+            self.assertEqual(len(a['satirlar']), 2)
+
+    def test_kirk_bes_karakter_her_stil_ve_duzende(self):
+        metin = 'Tolunay sahte canlı yayını fark edip çıldırıyor'
+        self.assertGreaterEqual(len(metin), 45)
+        for stil in 'ABC':
+            for ayar in UC_AYAR:
+                self.kutu_kontrol(metin, {**(ayar or {}), 'klip_aciklama_stil': stil})
+
+    def test_oyun_adi_yoksa_da_cakismaz(self):
+        for ayar in UC_AYAR:
+            self.kutu_kontrol(BIR_SATIR, ayar, oyun_var=False)
+            self.kutu_kontrol(IKI_SATIR, ayar, oyun_var=False)
+
+    def test_gercekci_cumleler_sigar(self):
+        for m in ('Ferit saçlarını yayında boyatıyor', 'Eray patates soyarken sinirleniyor',
+                  'Tolunay sahte canlı yayını fark ediyor', 'Jahrein köpeğiyle büyük kavgaya tutuşuyor',
+                  "Eray ile arkadaşları '10'da 10 ama' oynuyor"):
+            for ayar in UC_AYAR:
+                self.kutu_kontrol(m, ayar)
+
+    def test_her_stil_ayni_geometriyi_kullanir(self):
+        for ayar in UC_AYAR:
+            a, b, c_ = (yk.aciklama_duzeni(IKI_SATIR, FONT_ACIKLAMA, {**(ayar or {}), 'klip_aciklama_stil': s}) for s in 'ABC')
+            self.assertEqual((a['kutular'], a['taban'], a['boyut']), (b['kutular'], b['taban'], b['boyut']))
+            self.assertEqual((a['kutular'], a['taban'], a['boyut']), (c_['kutular'], c_['taban'], c_['boyut']))
+            self.assertEqual([x['stil'] for x in (a, b, c_)], ['A', 'B', 'C'])
+
+    def test_sigmayan_metin_none_kirpilmaz(self):
+        self.assertIsNone(yk.aciklama_duzeni('uzun ' * 60, FONT_ACIKLAMA, {'kadraj_oran': 1.2}))
+        self.assertIsNone(yk.aciklama_duzeni('x' * 300, FONT_ACIKLAMA, {'kadraj_oran': 1.2}))   # tek kelime bölünmez
+
+    def test_satir_bolme_kelime_ortasindan_degil(self):
+        satirlar = yk.aciklama_satirlari(IKI_SATIR, FONT_ACIKLAMA, 60, yk.DUZEN['metin_azami_px'], 6, tek_satir=False)
+        self.assertEqual(len(satirlar), 2)
+        self.assertEqual(' '.join(satirlar), IKI_SATIR)
+        self.assertIsNone(yk.aciklama_satirlari('', FONT_ACIKLAMA, 60, 900, 6, True))
+
+    def test_turkce_karakterler_katmana_cizilir_filtreye_girmez(self):
+        a = yk.aciklama_duzeni('Eray şişeyi ağzıyla açıyor çünkü öfkeli', FONT_ACIKLAMA, {'kadraj_oran': 1.2})
+        m = yk.klip_metinleri(ALTIN_VOD, a)
+        self.assertEqual(' '.join(m[f'aciklama{i + 1}'] for i in range(len(a['satirlar']))), 'Eray şişeyi ağzıyla açıyor çünkü öfkeli')
+        f = yk.filtre_yaz(FONT_ACIKLAMA, m, ayar={'kadraj_oran': 1.2}, aciklama=a)
+        self.assertNotIn('drawtext', f)                                  # açıklamalı klipte yazılar PNG katmanında
+        self.assertIn('[v0][1:v:0]overlay=0:0:format=auto,setsar=1,format=yuv420p[v]', f)
+        self.assertNotIn('Eray', f)                                      # metin süzgecin içinde değil: kaçış sorunu yok
+
+    def test_katman_png_ikinci_girdi_ve_ss_kaymaz(self):
+        for yerel in (False, True):
+            k = yk.ffmpeg_komutu('ffmpeg', 'kaynak.mkv', 5.0, 30.0, 'c.mp4', 'f', yerel, 'katman.png')
+            girdiler = [i for i, x in enumerate(k) if x == '-i']
+            self.assertEqual([k[i + 1] for i in girdiler], ['kaynak.mkv', 'katman.png'])
+            ss_i = k.index('-ss')
+            if yerel:
+                self.assertLess(girdiler[1], ss_i)                       # -ss PNG'den sonra: yalnız çıkış seçeneği
+            else:
+                self.assertLess(ss_i, girdiler[0])                       # -ss kaynağa uygulanır (PNG'ye değil)
+        yok = yk.ffmpeg_komutu('ffmpeg', 'kaynak.mkv', 5.0, 30.0, 'c.mp4', 'f')
+        self.assertEqual(yok.count('-i'), 1)                             # açıklamasız: tek girdi, eskisi gibi
+
+    def test_acikmali_filtrede_gorsel_ayni(self):
+        a = yk.aciklama_duzeni(IKI_SATIR, FONT_ACIKLAMA, {'kadraj_oran': 1.2})
+        yazisiz = yk.yerlesim({'kadraj_oran': 1.2})
+        yazili = yk.yerlesim({'kadraj_oran': 1.2}, aciklama=a)
+        for anahtar in ('gorsel_y', 'gorsel_h', 'mod', 'oran'):
+            self.assertEqual(yazisiz[anahtar], yazili[anahtar])
+        self.assertEqual(yk.filtre_yaz(FONT_ACIKLAMA, yk.klip_metinleri(ALTIN_VOD), ayar={'kadraj_oran': 1.2}).split('[v0]')[0],
+                         yk.filtre_yaz(FONT_ACIKLAMA, yk.klip_metinleri(ALTIN_VOD, a), ayar={'kadraj_oran': 1.2}, aciklama=a).split('[v0]')[0])
+
+    def test_font_dosyasi_ve_lisansi_repoda(self):
+        self.assertTrue(yk.ACIKLAMA_FONT_DOSYASI.is_file())
+        self.assertEqual(pathlib.Path(yk.aciklama_fontu()), yk.ACIKLAMA_FONT_DOSYASI)   # sistem yazı tipine bağlı değil (Linux)
+        lisans = (yk.ACIKLAMA_FONT_DOSYASI.parent / 'Anton-OFL.txt').read_text(encoding='utf-8')
+        self.assertIn('SIL OPEN FONT LICENSE', lisans.upper())
+
+    def test_font_turkce_harfleri_tasir(self):
+        try:
+            from fontTools.ttLib import TTFont
+        except ImportError:
+            self.skipTest('fontTools yok')
+        cmap = TTFont(str(yk.ACIKLAMA_FONT_DOSYASI)).getBestCmap()
+        eksik = [ch for ch in 'İğüşöçıĞÜŞÖÇ' if ord(ch) not in cmap]
+        self.assertEqual(eksik, [])
+
+    def test_stil_dogrulanir(self):
+        self.assertEqual(yk.aciklama_stili({}), yk.ACIKLAMA_STIL_VARSAYILAN)
+        self.assertEqual(yk.aciklama_stili({'klip_aciklama_stil': 'b'}), 'B')
+        with self.assertRaises(yk.KlipHatasi):
+            yk.aciklama_stili({'klip_aciklama_stil': 'D'})
+
+
+class AciklamaAyariVeImzaTesti(unittest.TestCase):
+    def klip(self, **ek):
+        return {'klip_baslangic_sn': 10, 'klip_bitis_sn': 60, 'konusma_kisa_aciklama': 'Ferit saçlarını yayında boyatıyor', **ek}
+
+    def test_klip_aciklamasi_dogrular(self):
+        self.assertEqual(yk.klip_aciklamasi(self.klip(), {}), 'Ferit saçlarını yayında boyatıyor')
+        self.assertIsNone(yk.klip_aciklamasi(self.klip(konusma_kisa_aciklama='Ferit amk diyor'), {}))
+        self.assertIsNone(yk.klip_aciklamasi({}, {}))
+
+    def test_ayar_kapaliysa_yazi_yok(self):
+        self.assertIsNone(yk.klip_aciklamasi(self.klip(), {'klip_aciklama_yazi': False}))
+        self.assertEqual(yk.klip_aciklamasi(self.klip(), {'klip_aciklama_yazi': True}), 'Ferit saçlarını yayında boyatıyor')
+
+    def test_aciklama_imzaya_girer_ve_degisince_guncel_degil(self):
+        a = 'Ferit saçlarını yayında boyatıyor'
+        self.assertEqual(yk.duzen_imzasi({}, a)['aciklama'], a)
+        self.assertEqual(yk.duzen_imzasi({}, a)['aciklama_stil'], 'A')
+        self.assertNotEqual(yk.duzen_imzasi({}, a), yk.duzen_imzasi({'klip_aciklama_stil': 'B'}, a))   # stil değişince yeniden üretilir
+        self.assertNotIn('aciklama_stil', yk.duzen_imzasi({'klip_aciklama_stil': 'B'}, None))      # açıklamasızda imza aynı
+        self.assertNotEqual(yk.duzen_imzasi({}, a), yk.duzen_imzasi({}, 'Başka cümle burada'))
+        self.assertNotEqual(yk.duzen_imzasi({}, a), yk.duzen_imzasi({}, None))
+        with tempfile.TemporaryDirectory() as t:
+            p = pathlib.Path(t) / 'klip-01.json'
+            klip = self.klip()
+            p.write_text(json.dumps({'klip_baslangic_sn': 10, 'klip_bitis_sn': 60, 'duzen': yk.duzen_imzasi({}, a)}), encoding='utf-8')
+            self.assertTrue(yk.paket_guncel(p, klip, {}))
+            self.assertFalse(yk.paket_guncel(p, klip, {'klip_aciklama_yazi': False}))   # --aciklamasiz: eski görünüm yeniden üretilir
+            self.assertFalse(yk.paket_guncel(p, self.klip(konusma_kisa_aciklama='Eray tavuk pişiriyor'), {}))
+
+    def test_gorsel_ayarlar_analiz_karsilastirmasindan_ayrilir(self):
+        self.assertEqual(set(yk.GORSEL_AYAR), {'klip_aciklama_yazi', 'aciklama_yasak_kelimeler', 'klip_aciklama_stil'})
+        ayar = {'yontem': 'sinyal', 'klip_aciklama_yazi': False, 'aciklama_yasak_kelimeler': ['x']}
+        self.assertEqual(yk.gorselsiz(ayar), {'yontem': 'sinyal'})
+        self.assertIsNone(yk.gorselsiz(None))
+        self.assertEqual(yk.gorselsiz({**ayar, 'klip_aciklama_yazi': True}), yk.gorselsiz(ayar))
+
+    def test_stil_ayari_dosyadan_yayinci_ayarina_gecer(self):
+        ham = json.loads(yk.YAYINCI_DOSYASI.read_text(encoding='utf-8'))
+        self.assertIn(ham['ayar']['klip_aciklama_stil'], yk.ACIKLAMA_STILLERI)
+        with tempfile.TemporaryDirectory() as t:
+            yol = pathlib.Path(t) / 'y.json'
+            ham['ayar']['klip_aciklama_stil'] = 'C'
+            yol.write_text(json.dumps(ham), encoding='utf-8')
+            ayar = yk.ayar_yukle(yol)
+            self.assertEqual(yk.aciklama_stili(ayar['ayar']), 'C')
+            for y in ayar['yayincilar']:
+                self.assertEqual(yk.aciklama_stili(y['ayar']), 'C', y['ad'])   # kesimde kullanılan, yayıncıya birleşmiş ayar
+
+    def test_yayinci_dosyasindaki_kisa_adlar(self):
+        ayar = json.loads(yk.YAYINCI_DOSYASI.read_text(encoding='utf-8'))
+        beklenen = {'wtcN': 'Ferit', 'Eraycan': 'Eray', 'Kemalcan Parlak': 'Kemalcan', 'Tolunay Ören': 'Tolunay', 'Jahrein': 'Jahrein'}
+        for ad, kisa in beklenen.items():
+            self.assertEqual(yk.yayinci_kisa_ad(ayar, {'yayinci': ad}), kisa, ad)
+        self.assertTrue(ayar['ayar']['klip_aciklama_yazi'])
+        self.assertEqual(yk.yayinci_kisa_ad(ayar, {'yayinci': 'Bilinmeyen'}), 'Bilinmeyen')
+        self.assertEqual(yk.yayinci_kisa_ad(ayar, {'platform': 'kick', 'kanal': 'WTCN', 'yayinci': 'başka ad'}), 'Ferit')
+
+
+class AciklamaDoldurTesti(unittest.TestCase):
+    AYAR = {'yayincilar': [{'ad': 'wtcN', 'platform': 'kick', 'kanal': 'wtcn', 'kisa_ad': 'Ferit'},
+                           {'ad': 'Eraycan', 'platform': 'kick', 'kanal': 'eray', 'kisa_ad': 'Eray'}],
+            'ayar': {}}
+
+    def paket(self, dizin, klasor, ad, **alanlar):
+        k = dizin / 'cikti' / klasor
+        k.mkdir(parents=True, exist_ok=True)
+        (k / f'{ad}.json').write_text(json.dumps({'platform': 'kick', 'oyun': 'Oyun', 'baslik': 'b', 'konusma_gerekce': 'g', **alanlar},
+                                                 ensure_ascii=False), encoding='utf-8')
+        (k / f'{ad}.mp4').write_bytes(b'x')
+        return k / f'{ad}.json'
+
+    def kur(self, dizin):
+        a = self.paket(dizin, 'wtcn-1', 'konusma-hizali-01', yayinci='wtcN', dokum_metni='saçımı boyatıyorum')
+        b = self.paket(dizin, 'eray-1', 'konusma-hizali-01', yayinci='Eraycan', dokum_metni='patates soyuyorum')
+        eski = self.paket(dizin, 'eray-1', 'klip-01', yayinci='Eraycan')                          # dökümsüz eski sohbet paketi
+        hazir = self.paket(dizin, 'wtcn-1', 'konusma-hizali-02', yayinci='wtcN', dokum_metni='x', kisa_aciklama=None)   # zaten yargılanmış
+        return a, b, eski, hazir
+
+    def test_tek_model_cagrisi_ve_dokumsuze_dokunmaz(self):
+        with tempfile.TemporaryDirectory() as t:
+            dizin = pathlib.Path(t)
+            a, b, eski, hazir = self.kur(dizin)
+            eski_oncesi, hazir_oncesi = eski.read_bytes(), hazir.read_bytes()
+            model = Mock(return_value=json.dumps({'aciklamalar': [
+                {'id': '0', 'kisa_aciklama': 'Eray patates soyuyor'}, {'id': '1', 'kisa_aciklama': 'Ferit saçlarını yayında boyatıyor'}]}))
+            rapor = yk.aciklama_doldur(self.AYAR, dizin, model=model)
+            self.assertEqual(model.call_count, 1)
+            self.assertEqual(rapor['model_cagrisi'], 1)
+            self.assertEqual(rapor['aday'], 2)
+            self.assertEqual(len(rapor['atlanan_dokumsuz']), 1)
+            ad_listesi = json.loads(model.call_args[0][0].split('\n')[-1])   # istemin sonundaki JSON listesi
+            self.assertEqual({k['ad'] for k in ad_listesi}, {'Ferit', 'Eray'})   # kısa adlar modele gider
+            self.assertEqual(json.loads(a.read_text(encoding='utf-8'))['kisa_aciklama'], 'Ferit saçlarını yayında boyatıyor')
+            self.assertEqual(json.loads(b.read_text(encoding='utf-8'))['kisa_aciklama'], 'Eray patates soyuyor')
+            self.assertEqual(eski.read_bytes(), eski_oncesi)
+            self.assertEqual(hazir.read_bytes(), hazir_oncesi)
+            self.assertNotIn('kisa_aciklama', json.loads(eski.read_text(encoding='utf-8')))
+
+    def test_ikinci_calistirma_model_cagirmaz(self):
+        with tempfile.TemporaryDirectory() as t:
+            dizin = pathlib.Path(t)
+            self.kur(dizin)
+            model = Mock(return_value=json.dumps({'aciklamalar': [
+                {'id': '0', 'kisa_aciklama': None}, {'id': '1', 'kisa_aciklama': 'Eray patates soyuyor'}]}))
+            yk.aciklama_doldur(self.AYAR, dizin, model=model)
+            ikinci = Mock()
+            rapor = yk.aciklama_doldur(self.AYAR, dizin, model=ikinci)
+            ikinci.assert_not_called()                     # null da "yargılandı" demektir: tekrar sorulmaz
+            self.assertEqual(rapor['aday'], 0)
+
+    def test_gecersiz_aciklama_null_yazilir_ham_saklanir(self):
+        with tempfile.TemporaryDirectory() as t:
+            dizin = pathlib.Path(t)
+            a, b, _, _ = self.kur(dizin)
+            model = Mock(return_value=json.dumps({'aciklamalar': [
+                {'id': '0', 'kisa_aciklama': 'Eray amk diye bağırıyor'}, {'id': '1', 'kisa_aciklama': 'Ferit saçlarını yayında boyatıyor'}]}))
+            yk.aciklama_doldur(self.AYAR, dizin, model=model)
+            d = json.loads(b.read_text(encoding='utf-8'))
+            self.assertIsNone(d['kisa_aciklama'])
+            self.assertEqual(d['kisa_aciklama_ham'], 'Eray amk diye bağırıyor')
+
+    def test_kuru_calistirma_yazmaz(self):
+        with tempfile.TemporaryDirectory() as t:
+            dizin = pathlib.Path(t)
+            a, *_ = self.kur(dizin)
+            oncesi = a.read_bytes()
+            model = Mock()
+            rapor = yk.aciklama_doldur(self.AYAR, dizin, model=model, kuru=True)
+            model.assert_not_called()
+            self.assertEqual(rapor['aday'], 2)
+            self.assertEqual(a.read_bytes(), oncesi)
+
+    def test_analiz_onbellegindeki_klibe_de_islenir(self):
+        with tempfile.TemporaryDirectory() as t:
+            dizin = pathlib.Path(t)
+            a, *_ = self.kur(dizin)
+            d = json.loads(a.read_text(encoding='utf-8'))
+            d.update({'vod_id': 'abc', 'zirve_sn': 100, 'klip_baslangic_sn': 80})
+            a.write_text(json.dumps(d, ensure_ascii=False), encoding='utf-8')
+            (dizin / 'analiz').mkdir()
+            (dizin / 'analiz' / 'kick-abc.json').write_text(json.dumps({'klipler': [
+                {'zirve_sn': 100, 'klip_baslangic_sn': 80}, {'zirve_sn': 500, 'klip_baslangic_sn': 480}]}), encoding='utf-8')
+            model = Mock(return_value=json.dumps({'aciklamalar': [
+                {'id': '0', 'kisa_aciklama': 'Eray patates soyuyor'}, {'id': '1', 'kisa_aciklama': 'Ferit saçlarını yayında boyatıyor'}]}))
+            yk.aciklama_doldur(self.AYAR, dizin, model=model)
+            klipler = json.loads((dizin / 'analiz' / 'kick-abc.json').read_text(encoding='utf-8'))['klipler']
+            self.assertEqual(klipler[0]['konusma_kisa_aciklama'], 'Ferit saçlarını yayında boyatıyor')
+            self.assertNotIn('konusma_kisa_aciklama', klipler[1])
+
+
+
+class AciklamaDoldurTamirTesti(unittest.TestCase):
+    AYAR = AciklamaDoldurTesti.AYAR
+    UZUN = 'Ferit yayında saçlarını boyatırken bir anda hepsini döküyor'
+
+    def kur(self, dizin, **ek):
+        k = dizin / 'cikti' / 'wtcn-1'
+        k.mkdir(parents=True)
+        yol = k / 'konusma-hizali-01.json'
+        yol.write_text(json.dumps({'platform': 'kick', 'yayinci': 'wtcN', 'dokum_metni': 'saçımı boyatıyorum',
+                                   'kisa_aciklama': None, 'kisa_aciklama_ham': self.UZUN, **ek}, ensure_ascii=False), encoding='utf-8')
+        yol.with_suffix('.mp4').write_bytes(b'x')
+        return yol
+
+    def test_uzunluktan_null_kalan_bir_kez_yeniden_yazdirilir(self):
+        with tempfile.TemporaryDirectory() as t:
+            yol = self.kur(pathlib.Path(t))
+            model = Mock(return_value=json.dumps({'aciklamalar': [{'id': '0', 'kisa_aciklama': 'Ferit saçını yayında boyatıyor'}]}))
+            r = yk.aciklama_doldur(self.AYAR, pathlib.Path(t), model=model)
+            self.assertEqual(r['aday'], 1)
+            d = json.loads(yol.read_text(encoding='utf-8'))
+            self.assertEqual(d['kisa_aciklama'], 'Ferit saçını yayında boyatıyor')
+            self.assertTrue(d['kisa_aciklama_tamir'])
+            r2 = yk.aciklama_doldur(self.AYAR, pathlib.Path(t), model=Mock())
+            self.assertEqual(r2['aday'], 0)
+
+    def test_tamir_basarisiz_olsa_da_tekrar_sorulmaz(self):
+        with tempfile.TemporaryDirectory() as t:
+            yol = self.kur(pathlib.Path(t))
+            model = Mock(return_value=json.dumps({'aciklamalar': [{'id': '0', 'kisa_aciklama': self.UZUN}]}))
+            r = yk.aciklama_doldur(self.AYAR, pathlib.Path(t), model=model)
+            self.assertEqual(r['model_cagrisi'], 1)                       # yalnız uzunluk tamiri: tek çağrı
+            self.assertIsNone(json.loads(yol.read_text(encoding='utf-8'))['kisa_aciklama'])
+            self.assertEqual(yk.aciklama_doldur(self.AYAR, pathlib.Path(t), model=Mock())['aday'], 0)
+
+    def test_yasak_kelimeden_null_olan_yeniden_sorulmaz(self):
+        with tempfile.TemporaryDirectory() as t:
+            self.kur(pathlib.Path(t), kisa_aciklama_ham='Ferit amk diyor')
+            self.assertEqual(yk.aciklama_doldur(self.AYAR, pathlib.Path(t), model=Mock())['aday'], 0)
+
+
+if __name__ == "__main__":
+    unittest.main()
