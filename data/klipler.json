@@ -1,5 +1,160 @@
 {
- "ogeler": {},
+ "ogeler": {
+  "eraycan-20261112-d38999bc-klip-01": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/eray",
+   "metin": {
+    "aciklama": "Kaynak: https://kick.com/eray",
+    "baslik": "Eraycan AWP kullanıyor | Counter-Strike 2",
+    "etiketler": [
+     "#Eray",
+     "#Kick",
+     "#CounterStrike2",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "2c1b5175f5c84ae5acb1ea3decd0a313d01c6fde42fa4a4ad05ab54bb04475bf",
+    "ozet": "c0fb4f378bba238d3f51f97eb73079b77327a99105a5349d06180687e695e727",
+    "zaman": "2026-11-18T19:48:29Z"
+   },
+   "oyun": "Counter-Strike 2",
+   "paket": "cikti/eraycan-20261112-d38999bc/klip-01.json",
+   "sure": 42.0,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-12",
+   "yayinci": "Eraycan",
+   "yayinda": {
+    "kapak": "klip-eraycan-20261112-d38999bc-klip-01-kapak.jpg",
+    "mp4_1080": "klip-eraycan-20261112-d38999bc-klip-01-1080.mp4",
+    "mp4_540": "klip-eraycan-20261112-d38999bc-klip-01-540.mp4",
+    "mp4_720": "klip-eraycan-20261112-d38999bc-klip-01-720.mp4",
+    "sure": 42.0,
+    "yuklenen_ozet": "c0fb4f378bba238d3f51f97eb73079b77327a99105a5349d06180687e695e727",
+    "zaman": "2026-11-18T19:49:25Z"
+   }
+  },
+  "kemalcan-parlak-20261115-9ae47b40-klip-01": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/kendinemuzisyen",
+   "metin": {
+    "aciklama": "Kaynak: https://kick.com/kendinemuzisyen",
+    "baslik": "Kemalcan Parlak Annemi karıştırma",
+    "etiketler": [
+     "#Kemalcan",
+     "#Kick",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "879fde1177ddc4d17914af5d9d3f04bcdbdb571ed7266655869eb40eeb4b0196",
+    "ozet": "59424b93a27778c41ca0406bdbbd5d4de8e32f941df8fb54e5b0c51a7476c3c6",
+    "zaman": "2026-11-18T19:48:29Z"
+   },
+   "oyun": "",
+   "paket": "cikti/kemalcan-parlak-20261115-9ae47b40/klip-01.json",
+   "sure": 55.0,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-15",
+   "yayinci": "Kemalcan Parlak",
+   "yayinda": {
+    "kapak": "klip-kemalcan-parlak-20261115-9ae47b40-klip-01-kapak.jpg",
+    "mp4_1080": "klip-kemalcan-parlak-20261115-9ae47b40-klip-01-1080.mp4",
+    "mp4_540": "klip-kemalcan-parlak-20261115-9ae47b40-klip-01-540.mp4",
+    "mp4_720": "klip-kemalcan-parlak-20261115-9ae47b40-klip-01-720.mp4",
+    "sure": 55.0,
+    "yuklenen_ozet": "59424b93a27778c41ca0406bdbbd5d4de8e32f941df8fb54e5b0c51a7476c3c6",
+    "zaman": "2026-11-18T19:50:01Z"
+   }
+  },
+  "kemalcan-parlak-20261115-9ae47b40-klip-02": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/kendinemuzisyen",
+   "metin": {
+    "aciklama": "Şaka olsun diye arkadaşının şortunu indiriyor, altındaki iç çamaşırı da şortla birlikte iniyor.\nKaynak: https://kick.com/kendinemuzisyen",
+    "baslik": "Abdü'nün şortu",
+    "etiketler": [
+     "#Kemalcan",
+     "#Kick",
+     "#JustChatting",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "e24af1420cba082d9065a3494ebf3f3e8960d022c57a9b91a88dabb9e38e387a",
+    "ozet": "b09ae20504d5400a4869a5354c499e4e54017529b44a5f142b4c595e8f092a0e",
+    "zaman": "2026-11-18T19:48:29Z"
+   },
+   "oyun": "Just Chatting",
+   "paket": "cikti/kemalcan-parlak-20261115-9ae47b40/klip-02.json",
+   "sure": 55.0,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-15",
+   "yayinci": "Kemalcan Parlak",
+   "yayinda": {
+    "kapak": "klip-kemalcan-parlak-20261115-9ae47b40-klip-02-kapak.jpg",
+    "mp4_1080": "klip-kemalcan-parlak-20261115-9ae47b40-klip-02-1080.mp4",
+    "mp4_540": "klip-kemalcan-parlak-20261115-9ae47b40-klip-02-540.mp4",
+    "mp4_720": "klip-kemalcan-parlak-20261115-9ae47b40-klip-02-720.mp4",
+    "sure": 55.0,
+    "yuklenen_ozet": "b09ae20504d5400a4869a5354c499e4e54017529b44a5f142b4c595e8f092a0e",
+    "zaman": "2026-11-18T19:50:41Z"
+   }
+  },
+  "wtcn-20261117-6bbe5c53-klip-02": {
+   "kanal_url": "https://kick.com/wtcn",
+   "metin": {
+    "aciklama": "Kaynak: https://kick.com/wtcn",
+    "baslik": "wtcN yayınında chat gülmekten kırıldı | Just Chatting",
+    "etiketler": [
+     "#Ferit",
+     "#Kick",
+     "#JustChatting",
+     "#CTRLA_GAME"
+    ]
+   },
+   "oyun": "Just Chatting",
+   "paket": "cikti/wtcn-20261117-6bbe5c53/klip-02.json",
+   "sure": 52.0,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-17",
+   "yayinci": "wtcN"
+  },
+  "wtcn-20261117-6bbe5c53-klip-03": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/wtcn",
+   "metin": {
+    "aciklama": "Saç boyandıktan sonra renk kontrol edilirken rengin sapsarı çıkıp çıkmadığı tartışılıyor. | Just Chatting.\nKaynak: https://kick.com/wtcn\nKomixsi",
+    "baslik": "Ferit saç rengini kontrol ediyor",
+    "etiketler": [
+     "#Ferit",
+     "#Kick",
+     "#JustChatting",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "a5f96a7f15a0441364d1bad92f6bbf2f3d21efd11dd12c3615a8bd08e5fe03aa",
+    "ozet": "3c5f7b54cd8fb7aae442896229943027890e60b17eee7dd5f2b1fec9af32a1e2",
+    "zaman": "2026-11-18T19:44:52Z"
+   },
+   "oyun": "Just Chatting",
+   "paket": "cikti/wtcn-20261117-6bbe5c53/klip-03.json",
+   "sure": 55.0,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-17",
+   "yayinci": "wtcN",
+   "yayinda": {
+    "kapak": "klip-wtcn-20261117-6bbe5c53-klip-03-kapak.jpg",
+    "mp4_1080": "klip-wtcn-20261117-6bbe5c53-klip-03-1080.mp4",
+    "mp4_540": "klip-wtcn-20261117-6bbe5c53-klip-03-540.mp4",
+    "mp4_720": "klip-wtcn-20261117-6bbe5c53-klip-03-720.mp4",
+    "sure": 55.0,
+    "yuklenen_ozet": "3c5f7b54cd8fb7aae442896229943027890e60b17eee7dd5f2b1fec9af32a1e2",
+    "zaman": "2026-11-18T19:51:31Z"
+   }
+  }
+ },
  "surum": 1,
  "taban": "https://medya.ctrl-agame.com/v/"
 }
