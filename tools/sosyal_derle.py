@@ -59,10 +59,12 @@ def metni_sar(c, metin, f, gen):
             satir += k
         elif satir.strip():
             # Noktalama işareti tek başına yeni satıra düşmesin.
-            if k in '，。！？：；、）》】' and len(satir.rstrip()) > 1:
-                onceki = satir.rstrip()
-                satirlar.append(onceki[:-1].rstrip())
-                satir = onceki[-1] + k
+            # Yanında önceki satırın son karakteri iner; Latin sözcük/sayı (III, 3.0.1) bölünmeden iner.
+            onceki = satir.rstrip()
+            son = re.search(r"[A-Za-z0-9]+(?:[-.:’'][A-Za-z0-9]+)*$|.$", onceki, re.S)
+            if k in '，。！？：；、）》】' and son and len(son.group(0)) < len(onceki):
+                satirlar.append(onceki[:-len(son.group(0))].rstrip())
+                satir = son.group(0) + k
             else:
                 satirlar.append(satir.rstrip())
                 satir = k.lstrip()
@@ -174,8 +176,10 @@ def rss(dil: str, veri: list[dict]) -> str:
 ZEMIN, YUZEY, CIZGI = (11, 19, 34), (30, 44, 71), (42, 57, 88)
 YAZI, SOLUK, SECIM, SECIM_ALT, TUS_ALT = (233, 238, 248), (154, 168, 195), (59, 108, 246), (36, 71, 184), (6, 11, 21)
 TUR_RENK = {"haber": YAZI, "ucretsiz": (61, 220, 151), "indirim": (245, 184, 61), "cikis": (141, 176, 255), "guncelleme": SOLUK}
-YAZI_DOSYA = {"genis": "Archivo-ExpandedExtraBold.ttf", "yari": "Archivo-SemiBold.ttf", "duz": "Archivo-Regular.ttf"}
+YAZI_DOSYA = {"genis": "Archivo-ExpandedExtraBold.ttf", "yari": "Archivo-SemiBold.ttf", "duz": "Archivo-Regular.ttf",
+              "dar": "../../otomasyon/fontlar/Anton-Regular.ttf"}   # dar ve iri afiş yazısı (Instagram kartı başlığı)
 YEDEK_YAZI = {
+    "dar": ["C:/Windows/Fonts/impact.ttf", "C:/Windows/Fonts/segoeuib.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"],
     "genis": ["C:/Windows/Fonts/segoeuib.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"],
     "yari": ["C:/Windows/Fonts/seguisb.ttf", "C:/Windows/Fonts/segoeuib.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"],
     "duz": ["C:/Windows/Fonts/segoeui.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"],
@@ -326,86 +330,157 @@ def kartlar(veri: list[dict], sosyal=None, *, cikti=None) -> tuple[int, int]:
         r, g, b = colorsys.hsv_to_rgb(h, min(1.0, max(s, 0.62)), max(v, 0.9))
         return (round(r * 255), round(g * 255), round(b * 255))
 
+    def buyuk(dil, s):
+        """Büyük harf; Türkçede i→İ, ı→I."""
+        if dil == "tr":
+            s = s.replace("i", "İ").replace("ı", "I")
+        return s.upper()
+
+    VURGU_DISI = {"THE", "OF", "AND", "A", "AN", "IN", "ON", "TO", "FOR", "DE", "LA", "LE", "DU", "EL", "VE", "İLE"}
+    NOKTALAMA = ".,:;!?()\"“”«»-–—|"
+    # Türkçe başlıkta büyük harfle başlayan sözcük çoğunlukla yabancı özel addır (Sniper → SNIPER, SNİPER değil);
+    # Türkçe olup büyük harfle başlayan ve içinde yalnız noktalı i bulunan sık sözcükler burada sayılır.
+    TR_OZEL = {"Yeni", "Bir", "Resmi", "Geri", "Yerli", "Tarih", "Fiyat", "Sistem", "Hikaye", "Kritik", "Dikkat", "Bilgi",
+               "Nisan", "Haziran", "Ekim", "Pazartesi", "Cumartesi", "Singapur", "Amerika", "Hindistan", "Meksika",
+               "Brezilya", "Arjantin", "Filipinler", "Sezonluk", "Efsanevi", "Kimler", "Neler", "Elit", "Rekabet"}
+
+    def baslik_buyuk(dil, metin):
+        """Başlığı büyük harfe çevirir; Türkçede yabancı özel adın i'si noktasız kalır, eki Türkçe kuralla büyür."""
+        if dil != "tr":
+            return metin.upper()
+        cikti = []
+        for w in metin.split(" "):
+            es = re.match(r"([^'’]*)(['’].*)?$", w)
+            kok, ek = es.group(1), es.group(2) or ""
+            cek = kok.strip(NOKTALAMA)
+            turkce = not cek[:1].isupper() or cek in TR_OZEL or re.search(r"[çğıöşüÇĞİÖŞÜâîû]", cek)
+            cikti.append((buyuk(dil, kok) if turkce else kok.upper()) + buyuk(dil, ek))
+        return " ".join(cikti)
+
+    def vurgu_parcalari(dil, satirlar, oyun):
+        """Her satırı (metin, vurgulu) parçalarına böler: oyun adı ve sayılar vurgu renginde yazılır."""
+        oyun_kume = {k.strip(NOKTALAMA) for k in oyun.upper().split()} - VURGU_DISI - {""}
+        sonuc, ad_durum = [], 0   # 0: oyun adı henüz geçmedi, 1: adın içindeyiz, 2: ad bitti (ikinci kez boyanmaz)
+        for s in satirlar:
+            if dil == "zh":
+                p = re.split(r"([A-Za-z0-9][A-Za-z0-9 .:'’+&-]*)", s)
+                sonuc.append([(k, i % 2 == 1) for i, k in enumerate(p) if k])
+                continue
+            satir = []
+            for i, w in enumerate(s.split(" ")):
+                cek = re.sub(r"['’].*$", "", w).strip(NOKTALAMA)
+                adda = cek in oyun_kume and ad_durum < 2
+                ad_durum = 1 if adda else (2 if ad_durum == 1 else ad_durum)
+                satir.append(((" " if i else "") + w, bool(cek) and (adda or any(h.isdigit() for h in cek))))
+            sonuc.append(satir)
+        if sonuc and not any(v for s in sonuc for _, v in s):   # hiçbir sözcük tutmadıysa ilk satır vurgulanır
+            sonuc[0] = [(k, True) for k, _ in sonuc[0]]
+        return sonuc
+
     def dikey_kart(x, dil, W, H):
-        """Instagram kartı: oyunun görseli kartı taşır, renk görselden gelir, yazı altta."""
+        """Instagram kartı: görsel üstte, altında afiş gibi dar ve iri BÜYÜK HARF başlık.
+
+        Başlık kaydırırken okunacak tek şeydir: oyun adı ve sayılar görselden gelen vurgu renginde,
+        gerisi beyaz. Özet en çok iki satır, altbilgi tek satır; başka süs yok."""
         nonlocal kart_dili
         from PIL import ImageFilter
         kart_dili = dil
         t, m = x["diller"][dil], M[dil]
-        P = 72
+        P = 64
         gen = W - 2 * P
-        GH = 770
         sosyal_tur = x.get("sosyal_tur")
         tur_ad = SABLON[dil][sosyal_tur] if sosyal_tur and sosyal_tur != "haber" else m["tur"][x["tur"]]
         gkayit = x.get("gorsel") or haber_gorseli(x)
         foto = resmi_gorsel(gkayit, resimler)
+        c = ImageDraw.Draw(Image.new("RGB", (8, 8)))   # ölçüm için; asıl tuval yerleşim belli olunca kurulur
+        # --- başlık: sığan en iri boy (iri boyda en çok 3, küçülünce 4 satır)
+        bas = baslik_buyuk(dil, t["baslik"])
+        for boy in range(132, 70, -4):
+            fb = font("dar", boy)
+            sb = sar(c, bas, fb, gen)
+            if len(sb) <= (3 if boy > 100 else 4) and all(c.textlength(s, font=fb) <= gen for s in sb):
+                break
+        else:
+            fb, sb = sigdir(c, bas, "dar", 72, 72, gen, 4)
+        harf = -fb.getbbox("国" if dil == "zh" else "H", anchor="ls")[1]   # büyük harf yüksekliği
+        badim = round(harf * (1.28 if dil == "zh" else 1.44))   # İ, Ğ, Ş işaretleri üst satıra değmesin
+        bh = harf + (len(sb) - 1) * badim
+        fo, so = sigdir(c, t["ozet"], "yari", 36, 30, gen, 2)
+        oadim = round(fo.size * 1.34)
+        th, ft = 54, font("dar", 31)
+        yb = H - 62                                   # altbilgi taban çizgisi
+        ozet_alt = yb - 70
+        y_ozet = ozet_alt - len(so) * oadim
+        y_bas = y_ozet - (48 if dil == "zh" else 36) - bh
+        y_tus = y_bas - 34 - th
+        GH = max(520, min(840, y_tus + 96))           # görsel, yazı bloğunun başladığı yere kadar iner
+        # --- zemin ve görsel
         img = Image.new("RGB", (W, H), ZEMIN)
+        gecis = Image.linear_gradient("L")
+        erime, UST, galt = 400, 124, GH
         if foto is not None:
             vurgu = vurgu_rengi(foto)
             arka = ImageOps.fit(foto, (W // 8, H // 8)).filter(ImageFilter.GaussianBlur(6)).resize((W, H))
-            img.paste(Image.blend(arka, Image.new("RGB", (W, H), ZEMIN), 0.84))
-            zemin_alt = img.crop((0, GH - 460, W, GH))
-            img.paste(ImageOps.fit(foto, (W, GH), centering=(0.5, 0.3)), (0, 0))
+            img.paste(Image.blend(arka, Image.new("RGB", (W, H), ZEMIN), 0.82))
+            # Logo şeridi görselin üstünde ayrı durur. Geniş görsel tam ene oturur (kenardaki oyun logosu
+            # kesilmesin, en çok %15 kırpılır); çok yayvan görsel ise alanın en az %80'ini dolduracak kadar kırpılır.
+            ih = min(GH - UST, max(round(W * foto.height / foto.width * 1.15), round((GH - UST) * 0.8)))
+            galt = UST + ih
+            erime = min(ih, 300)
+            zemin_alt = img.crop((0, galt - erime, W, galt))
+            img.paste(ImageOps.fit(foto, (W, ih), centering=(0.5, 0.3)), (0, UST))
         else:
             vurgu = TUR_RENK.get(x["tur"], SECIM)
-            vurgu = vurgu if isinstance(vurgu, tuple) else SECIM
+            vurgu = vurgu if isinstance(vurgu, tuple) and vurgu not in (YAZI, SOLUK) else SECIM
             ust = Image.new("RGB", (W, GH), tuple(round(v * 0.42 + z * 0.58) for v, z in zip(vurgu, ZEMIN)))
             cu = ImageDraw.Draw(ust)
             for i in range(-GH, W, 56):   # çapraz şeritler: boş kalan kapakta doku
                 cu.line((i, GH, i + GH, 0), fill=tuple(round(v * 0.5 + z * 0.5) for v, z in zip(vurgu, ZEMIN)), width=14)
             img.paste(ust, (0, 0))
-            zemin_alt = Image.new("RGB", (W, 460), ZEMIN)
-        gecis = Image.linear_gradient("L")
+            zemin_alt = Image.new("RGB", (W, erime), ZEMIN)
+            img.paste(Image.new("RGB", (W, 210), ZEMIN), (0, 0), ImageOps.flip(gecis).resize((W, 210)).point(lambda v: round(v * 0.8)))
         # görsel, alttaki yazı zeminine dikişsiz erir
-        img.paste(zemin_alt, (0, GH - 460), gecis.resize((W, 460)).point(lambda v: min(255, round(v * 1.25))))
-        img.paste(Image.new("RGB", (W, 230), ZEMIN), (0, 0), ImageOps.flip(gecis).resize((W, 230)).point(lambda v: round(v * 0.8)))
+        img.paste(zemin_alt, (0, galt - erime), gecis.resize((W, erime)).point(lambda v: min(255, round(v * 1.45))))
         c = ImageDraw.Draw(img)
-        logo(c, P, P - 10, 56)
+        logo(c, P, (UST - 54) // 2 - 2, 50)
         if foto is None:
-            fg, sg = sigdir(c, x["oyun"], "genis", 104, 52, gen, 3)
-            adim = round(fg.size * 1.12)
-            y0 = 250 + (GH - 430 - len(sg) * adim) // 2
+            fg, sg = sigdir(c, x["oyun"].upper(), "dar", 150, 70, gen, 2)
+            gh_ = -fg.getbbox("国" if dil == "zh" else "H", anchor="ls")[1]
+            adim = round(gh_ * 1.24)
+            y0 = 170 + max(0, (y_tus - 60 - 170 - gh_ - (len(sg) - 1) * adim) // 2)
             for i, s in enumerate(sg):
-                c.text((P, y0 + i * adim + fg.size), s, font=fg, fill=(255, 255, 255), anchor="ls")
+                c.text((P, y0 + gh_ + i * adim), s, font=fg, fill=(255, 255, 255), anchor="ls")
         elif isinstance(gkayit, dict) and gkayit.get("kaynak"):
             fa = font("duz", 20)
             atif = kisalt(c, f"{SABLON[dil]['gorsel']}: {gkayit['kaynak']}", fa, gen // 2)
-            c.text((W - P, P + 30), atif, font=fa, fill=(214, 222, 238), anchor="rs")
-        # alt bilgi
-        yb = H - P
-        c.line([(P, yb - 54), (W - P, yb - 54)], fill=tuple(round(v * 0.35 + z * 0.65) for v, z in zip(vurgu, ZEMIN)), width=2)
-        fs = font("yari", 32)
+            c.text((W - P, UST // 2 + 7), atif, font=fa, fill=(214, 222, 238), anchor="rs")
+        acik = (vurgu[0] * 299 + vurgu[1] * 587 + vurgu[2] * 114) / 1000 > 150
+        # --- tür etiketi (vurgu renginde dolu) ve oyun adı
+        tur_yazi = buyuk(dil, tur_ad)
+        tw = round(c.textlength(tur_yazi, font=ft)) + 44
+        c.rectangle((P, y_tus, P + tw, y_tus + th), fill=vurgu)
+        c.text((P + tw / 2, y_tus + th / 2), tur_yazi, font=ft, fill=ZEMIN if acik else (255, 255, 255), anchor="mm")
+        fy = font("yari", 27)
+        oyun = kisalt(c, x["oyun"].upper(), fy, gen - tw - 22)
+        c.text((P + tw + 22, y_tus + th / 2), oyun, font=fy, fill=(226, 232, 244), anchor="lm")
+        # --- başlık
+        for i, satir in enumerate(vurgu_parcalari(dil, sb, x["oyun"])):
+            bx, by = P, y_bas + harf + i * badim
+            for parca, v in satir:
+                c.text((bx, by), parca, font=fb, fill=vurgu if v else (255, 255, 255), anchor="ls")
+                bx += c.textlength(parca, font=fb)
+        # --- özet
+        for i, s in enumerate(so):
+            c.text((P, y_ozet + i * oadim + round(fo.size * 0.95)), s, font=fo, fill=(206, 215, 233), anchor="ls")
+        # --- altbilgi: site solda, kaynak sağda; en altta vurgu şeridi
+        fs = font("yari", 30)
         c.text((P, yb), GORUNEN, font=fs, fill=YAZI, anchor="ls")
-        fk = font("duz", 26)
+        fk = font("duz", 24)
         iki_nokta = " : " if dil == "fr" else ": "
-        sag = kisalt(c, f"{tarih_yaz(dil, x['tarih'])}   {m['kaynak']}{iki_nokta}{kaynak_adi(dil, x['kaynaklar'][0]['ad'])}", fk,
+        sag = kisalt(c, f"{m['kaynak']}{iki_nokta}{kaynak_adi(dil, x['kaynaklar'][0]['ad'])}", fk,
                      gen - round(c.textlength(GORUNEN, font=fs)) - 40)
         c.text((W - P, yb), sag, font=fk, fill=SOLUK, anchor="rs")
-        # metin bloğu alttan hizalı: etiketler, başlık, özet
-        girinti = 30
-        fb, sb = sigdir(c, t["baslik"], "genis", 66, 40, gen - girinti, 4)
-        fo, so = sigdir(c, t["ozet"], "duz", 34, 27, gen, 3)
-        th = 52
-        ft = font("yari", 24)
-        badim, oadim = round(fb.size * 1.16), round(fo.size * 1.36)
-        toplam = th + 30 + len(sb) * badim + 26 + len(so) * oadim
-        y = yb - 54 - 34 - toplam
-        # etiketler: oyun adı koyu tuş, tür vurgu renginde dolu
-        pad = round(th * 0.36)
-        tw = round(c.textlength(tur_ad, font=ft)) + 2 * pad
-        oyun = kisalt(c, x["oyun"], ft, gen - tw - 14 - 2 * pad)
-        ow = tus(c, P, y, oyun, ft, th)
-        tx = P + ow + 14
-        c.rounded_rectangle((tx, y, tx + tw, y + th), radius=round(th * 0.2), fill=vurgu)
-        acik = (vurgu[0] * 299 + vurgu[1] * 587 + vurgu[2] * 114) / 1000 > 150
-        c.text((tx + tw / 2, y + (th + ft.size * 0.7) / 2), tur_ad, font=ft, fill=ZEMIN if acik else (255, 255, 255), anchor="ms")
-        y += th + 30
-        c.rounded_rectangle((P, y + 6, P + 8, y + len(sb) * badim - 6), radius=4, fill=vurgu)
-        for i, s in enumerate(sb):
-            c.text((P + girinti, y + i * badim + round(fb.size * 0.92)), s, font=fb, fill=(255, 255, 255), anchor="ls")
-        y += len(sb) * badim + 26
-        for i, s in enumerate(so):
-            c.text((P, y + i * oadim + round(fo.size * 0.95)), s, font=fo, fill=(196, 206, 226), anchor="ls")
+        c.rectangle((0, H - 14, W, H), fill=vurgu)
         return img
 
     def kart(x, dil, W, H, ozetli):
