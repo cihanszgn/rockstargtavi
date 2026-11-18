@@ -33,7 +33,7 @@ env:
 jobs:
   uret:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 150   # video başına ~3,5 dk; 45 dk'da iş kesiliyor ve manifest yazılmadan bütün üretim boşa gidiyordu
     steps:
       - uses: actions/checkout@v4
 
