@@ -250,6 +250,36 @@
   "url": "https://www.instagram.com/p/Df1x1LxjVWJ/",
   "zaman": "2026-11-17T11:03:02+00:00"
  },
+ "mlb-the-show-27-tech-test-now-later-packs-2026-11-17|es|youtube|short": {
+  "bicim": "short",
+  "boyut": 7493389,
+  "dil": "es",
+  "durum": "tamam",
+  "hesap": "tr",
+  "id": "mlb-the-show-27-tech-test-now-later-packs-2026-11-17",
+  "kimlik": "sxoTMIvuJdo",
+  "niyet_zamani": "2026-11-18T07:23:37+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg1_gYifrF7uIuslXcs_ozydjxkNrvHatPCwO_HDOMCJNkiTTT8yYcYBAVHcWyNacEpuN-6-TlBTp6p4nE2wh7oRCS-tXvdtRzQlZ56eGQ",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/sxoTMIvuJdo",
+  "zaman": "2026-11-18T07:23:37+00:00"
+ },
+ "mlb-the-show-27-tech-test-now-later-packs-2026-11-17|fr|instagram|reel": {
+  "bicim": "reel",
+  "dil": "fr",
+  "durum": "tamam",
+  "hesap": "tr",
+  "icerik_dili": "fr",
+  "id": "mlb-the-show-27-tech-test-now-later-packs-2026-11-17",
+  "kapsayici": "17869647681694894",
+  "kimlik": "18247689193315088",
+  "niyet_zamani": "2026-11-18T07:23:37+00:00",
+  "platform": "instagram",
+  "sosyal_tur": "haber",
+  "url": "https://www.instagram.com/reel/Df39hjSRDXb/",
+  "zaman": "2026-11-18T07:23:37+00:00"
+ },
  "mlb-the-show-27-tech-test-now-later-packs-2026-11-17|tr|instagram|gorsel": {
   "bicim": "gorsel",
   "dil": "tr",
