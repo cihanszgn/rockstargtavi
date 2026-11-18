@@ -274,7 +274,12 @@ def tema_girdisi(haber: dict, senaryo: dict | None = None, icerik: list[dict] | 
 
 def anahtar_eki(girdi: dict) -> dict:
     """video_uret.anahtar() içine eklenen tema bölümü (üretimde bu girdilerden bir şey değişirse video yenilenir)."""
-    return {k: girdi[k] for k in ("motor", "paket", "oyun", "ozel_palet", "ozel_oge", "gorsel")}
+    ek = {k: girdi[k] for k in ("motor", "paket", "oyun", "ozel_palet", "ozel_oge", "gorsel")}
+    if not girdi.get("gorsel"):
+        # Görselsiz açılışın çizimi değişince artır: yalnız görselsiz videolar yeniden üretilir.
+        # 2 (2026-11-18): dev oyun adı soluk arka plan oldu; eskiden başlıkla üst üste biniyordu.
+        ek["gorselsiz_surum"] = 2
+    return ek
 
 
 def tema_sec(haber: dict, girdi: dict, foto: Path | None = None) -> dict:

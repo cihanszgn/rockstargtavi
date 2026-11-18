@@ -74,6 +74,9 @@ def bul(manifest: dict, haber_id: str, dil: str) -> dict | None:
     v = ((manifest.get("videolar") or {}).get(haber_id) or {}).get(dil)
     if not isinstance(v, dict):
         return None
+    # Hatalı çıktığı görülen video yeniden üretilene dek bekletilir (yeni anahtarla üretilince işaret kalkar).
+    if v.get("beklet"):
+        return None
     # İlk videolar Cio'nun onayıyla yayımlanır: onaylanmamış video üretilip sunucuda durur,
     # ama sitede ve sosyal paylaşımda yok sayılır. Onay: `py tools/video_site.py onayla <haber id>`.
     if manifest.get("onay_gerekli", True) and v.get("onay") is not True:

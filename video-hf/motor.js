@@ -276,12 +276,13 @@ B.baslik = function(sc,ic,s){
     else if(P==="neon"){ov("ov-alt");ov("ov-tara");ov("ov-vin");for(var q=1;q<=4;q++)el("i","ov-k k"+q,null,bg)}
     else{ov("ov-nokta")}
   }else{
-    /* görselsiz haber: dev oyun adı + doku, aynı doluluk */
+    /* görselsiz haber: dev oyun adı + doku, aynı doluluk. Oyun adı yalnız soluk arka plan dokusudur (opaklık .13):
+       tam opak kalırsa üstüne gelen başlıkla üst üste biner ve ikisi de okunmaz. */
     ov("ov-doku");
     var dv=ON(F(el("div","bk-dev d",H.oyun||"",bg),420,110));
     if(P==="esports"){ov("ov-renk");}
     if(P==="neon"){ov("ov-tara");ov("ov-vin");for(var w=1;w<=4;w++)el("i","ov-k k"+w,null,bg)}
-    tl.fromTo(dv,{scale:1.25,opacity:0},{scale:1,opacity:1,duration:.5,ease:"power3.out"},t0);
+    tl.fromTo(dv,{scale:1.25,opacity:0},{scale:1,opacity:.13,duration:.5,ease:"power3.out"},t0);
     drift(dv,t0+.5,t1-t0,{y:0},{y:-40});
   }
   /* üst satır: etiket + tarih solda, haber türü damgası sağda */

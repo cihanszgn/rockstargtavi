@@ -1436,6 +1436,7 @@ def manifest_guncelle(m: dict, haber_id: str, dil: str, kayit: dict) -> dict:
     girdi = m["videolar"].setdefault(haber_id, {}).setdefault(dil, {})
     if girdi.get("anahtar") != kayit.get("anahtar"):
         girdi.pop("onay", None)
+        girdi.pop("beklet", None)
     girdi.update(kayit)
     girdi.setdefault("youtube", "")
     girdi.setdefault("instagram", "")
