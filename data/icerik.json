@@ -1,5 +1,66 @@
 [
  {
+  "id": "dota-2-patch-7-42-2026-11-18",
+  "oyun": "Dota 2",
+  "tarih": "2026-11-18",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Valve Dota 2 Steam duyurusu",
+    "url": "https://steamcommunity.com/games/dota2/announcements/detail/689773669992367213"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Dota 2 7.42 yaması yayında: yeni kısayollar ve düzeltmeler",
+    "ozet": "Daha fazla yetenek için kısayol ayarı geldi.",
+    "metin": "Valve, Dota 2 için 7.42 güncellemesinin yayında olduğunu duyurdu. Yamanın ayrıntılı notları Steam üzerindeki resmî duyuruda yer alıyor.\n\nYeniliklerin başında kısayol ayarları var. Invoker'ın Invoked büyüleri, Largo'nun şarkıları ve Kez'in Sai yetenekleri artık tek tek kısayola atanabiliyor. Lycan'ın Summon Wolves gibi bazı birim yetenekleri için de benzer ayarlar eklendi.\n\nGörsel tarafta, görüşü engellenen birimlerin siluetini gösteren yeni bir seçenek var. Dota+ altındaki Gold Received dökümlerinde Hand of Midas ayrı bir kategori olarak listelenecek. Sunucu tarafında da performans iyileştirmeleri yapıldı ve çeşitli hatalar giderildi. Tam liste için Steam duyurusuna bakabilirsiniz."
+   },
+   "en": {
+    "baslik": "Dota 2 Patch 7.42 is out with hotkey updates",
+    "ozet": "Hotkeys for more abilities and bug fixes.",
+    "metin": "Valve has released Dota 2 Patch 7.42. According to the official Steam announcement, the update adds hotkey options for more abilities. Players can now bind individual hotkeys for Invoker's Invoked Spells, Largo's songs and Kez's Sai abilities. Hotkey settings were also added for several unit abilities, including Lycan's Summon Wolves.\n\nOn the interface side, units that are visually blocked can now show silhouettes, and Hand of Midas has its own category in Dota+ Gold Received Breakdowns.\n\nValve also reports client performance gains when illusions spawn, along with server-side work on stat tracking, hero deaths and unit behavior. Several bugs are fixed, including issues with Aghanim's Shard transfers and stash access. The full list is in the Steam announcement."
+   },
+   "es": {
+    "baslik": "Dota 2 parche 7.42: nuevos atajos y correcciones",
+    "ozet": "Atajos para más habilidades y arreglos de errores.",
+    "metin": "Valve ha publicado el parche 7.42 de Dota 2. Según el anuncio oficial en Steam, la actualización añade opciones de atajos para más habilidades. Ahora los jugadores pueden asignar atajos individuales a las habilidades Invocadas de Invoker, a las canciones de Largo y a las habilidades Sai de Kez. También se añadieron ajustes de atajos para varias habilidades de unidades, como Summon Wolves de Lycan.\n\nEn cuanto a la interfaz, las unidades que quedan visualmente bloqueadas pueden mostrar siluetas, y Hand of Midas tiene su propia categoría en el desglose de oro recibido de Dota+.\n\nValve también informa de mejoras de rendimiento del cliente al crear ilusiones, además de cambios en el servidor en el registro de estadísticas, las muertes de héroes y el comportamiento de unidades. Se corrigieron varios errores, incluidos problemas con las transferencias de Aghanim's Shard y el acceso al almacén. La lista completa está en el anuncio de Steam."
+   },
+   "fr": {
+    "baslik": "Dota 2 patch 7.42 disponible : raccourcis et corrections",
+    "ozet": "De nouveaux raccourcis et plusieurs corrections de bugs.",
+    "metin": "Valve a publié le patch 7.42 de Dota 2. D'après l'annonce officielle sur Steam, la mise à jour ajoute des options de raccourcis pour davantage de capacités. Les joueurs peuvent désormais attribuer des raccourcis individuels aux sorts invoqués d'Invoker, aux chansons de Largo et aux capacités Sai de Kez. Des réglages de raccourcis ont aussi été ajoutés pour plusieurs capacités d'unités, comme Summon Wolves de Lycan.\n\nCôté interface, les unités masquées visuellement peuvent afficher une silhouette, et Hand of Midas dispose désormais de sa propre catégorie dans le détail de l'or reçu de Dota+.\n\nValve indique aussi une amélioration des performances du client lors de l'apparition des illusions, ainsi que des changements côté serveur. Plusieurs bugs sont corrigés, dont des problèmes de transfert d'Aghanim's Shard et d'accès au coffre. La liste complète figure dans l'annonce Steam."
+   },
+   "de": {
+    "baslik": "Dota 2 Patch 7.42 ist da: neue Tastenkürzel",
+    "ozet": "Mehr Tastenkürzel für Fähigkeiten und einige Fehlerbehebungen.",
+    "metin": "Valve hat den Dota 2 Patch 7.42 veröffentlicht. Laut der offiziellen Ankündigung auf Steam erhalten mehr Fähigkeiten eigene Tastenkürzel. Spieler können nun einzelne Tasten für Invokes Invoked-Zauber, Largos Lieder und Kez' Sai-Fähigkeiten belegen. Auch für mehrere Einheitenfähigkeiten, etwa Summon Wolves von Lycan, wurden Kurzbefehl-Einstellungen ergänzt.\n\nIm Interface können visuell verdeckte Einheiten nun als Silhouette angezeigt werden. Zudem erscheint Hand of Midas in den Aufschlüsselungen des erhaltenen Goldes in Dota+ als eigene Kategorie.\n\nValve nennt außerdem Leistungsverbesserungen des Clients beim Erscheinen von Illusionen sowie Änderungen auf dem Server. Mehrere Fehler wurden behoben, darunter Probleme beim Übertragen von Aghanims Splitter und beim Zugriff auf das Lager. Die vollständige Liste steht in der Steam-Ankündigung."
+   },
+   "nl": {
+    "baslik": "Dota 2 patch 7.42 uit: nieuwe sneltoetsen",
+    "ozet": "Sneltoetsen voor meer vaardigheden en bugfixes.",
+    "metin": "Valve heeft Dota 2 patch 7.42 uitgebracht. Volgens de officiële aankondiging op Steam voegt de update sneltoetsopties toe voor meer vaardigheden. Spelers kunnen nu afzonderlijke sneltoetsen instellen voor de Invoked-spreuken van Invoker, de liedjes van Largo en de Sai-vaardigheden van Kez. Ook voor enkele eenheidsvaardigheden, zoals Summon Wolves van Lycan, zijn sneltoetsinstellingen toegevoegd.\n\nAan de interfacekant kunnen eenheden die visueel worden geblokkeerd nu als silhouet zichtbaar blijven. Hand of Midas heeft bovendien een eigen categorie in de overzichten van ontvangen goud in Dota+.\n\nValve meldt ook betere clientprestaties bij het verschijnen van illusies en wijzigingen aan de serverkant. Meerdere bugs zijn verholpen, waaronder problemen met het overdragen van Aghanim's Shard en met toegang tot de stash. De volledige lijst staat in de Steam-aankondiging."
+   },
+   "zh": {
+    "baslik": "Dota 2 7.42 更新上线：新增技能快捷键",
+    "ozet": "新增更多技能快捷键并修复若干问题。",
+    "metin": "Valve已在Steam上发布Dota 2 7.42版本更新，官方公告中附有完整的更新日志。本次更新为Invoker的Invoked法术、Largo的歌曲以及Kez的Sai技能增加了单独的快捷键绑定功能，Lycan的Summon Wolves等部分单位技能也新增了快捷键设置。界面方面，被视野遮挡的单位可以显示轮廓，Dota+的金币收入明细中也新增了Hand of Midas单独分类。此外，召唤幻象时的客户端性能有所提升，服务器端的数据统计与英雄死亡相关逻辑也进行了优化，并修复了多个错误，包括神杖碎片转移和仓库物品访问等问题。"
+   }
+  },
+  "otomasyon": {
+   "konu": "dota-2-patch-7-42-gameplay-update",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://steamcommunity.com/games/dota2/announcements/detail/689773669992367213",
+   "teyit_zamani": "2026-11-18T23:10:02+00:00",
+   "oyuncuya_fayda": "Oyuncular yeni kısayol ayarlarını ve hata düzeltmelerini Steam'de hemen kullanabilir.",
+   "hype": 4,
+   "eklenme": "2026-11-19T02:12:37.205737+03:00"
+  }
+ },
+ {
   "id": "disney-dreamlight-valley-keepsake-sea-2026-11-18",
   "oyun": "Disney Dreamlight Valley",
   "tarih": "2026-11-18",
