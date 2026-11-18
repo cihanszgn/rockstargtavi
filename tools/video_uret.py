@@ -1879,9 +1879,10 @@ def dogrula(haber_id: str, dil: str, cikti=print) -> int:
 
 
 def bugun_uretilen_dil(m: dict, dil: str, bugun: date) -> int:
-    """Bugün bu dilde üretilmiş video sayısı (günlük kota dil başınadır)."""
+    """Bugün bu dilde üretilmiş video sayısı (günlük kota dil başınadır).
+    Bekletilen (hatalı çıkıp yeniden üretilecek) video sayılmaz: yerine geleni kotayı beklemesin."""
     return sum(1 for v in m["videolar"].values() for d, g in v.items()
-               if d == dil and str(g.get("uretildi", ""))[:10] == bugun.isoformat())
+               if d == dil and not g.get("beklet") and str(g.get("uretildi", ""))[:10] == bugun.isoformat())
 
 
 def bekleyenler(dil: str = "tr", gunluk: bool = False, bugun: date | None = None, cikti=print,

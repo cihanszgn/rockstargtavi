@@ -635,6 +635,21 @@ class AnahtarManifestTests(unittest.TestCase):
         v.manifest_guncelle(m, 'x', 'tr', {'anahtar': 'c3'})
         self.assertNotIn('onay', m['videolar']['x']['tr'])
 
+    def test_beklet_yeni_anahtarla_kalkar_ve_video_yok_sayilir(self):
+        import video_site as vs
+        kayit = {'anahtar': 'a1', 'sure': 40, 'mp4_1080': 'x-tr-a1-1080.mp4', 'mp4_720': 'x-tr-a1-720.mp4',
+                 'mp4_540': 'x-tr-a1-540.mp4', 'kapak': 'x-tr-a1-kapak.jpg', 'vtt': 'x-tr-a1.vtt'}
+        m = {'surum': 1, 'taban': 'https://medya.ctrl-agame.com/v/', 'onay_gerekli': False, 'videolar': {}}
+        v.manifest_guncelle(m, 'x', 'tr', dict(kayit))
+        self.assertIsNotNone(vs.bul(m, 'x', 'tr'))
+        m['videolar']['x']['tr']['beklet'] = True
+        self.assertIsNone(vs.bul(m, 'x', 'tr'))
+        v.manifest_guncelle(m, 'x', 'tr', dict(kayit))  # aynı anahtar: hatalı video hâlâ bekler
+        self.assertIsNone(vs.bul(m, 'x', 'tr'))
+        v.manifest_guncelle(m, 'x', 'tr', dict(kayit, anahtar='a2'))
+        self.assertNotIn('beklet', m['videolar']['x']['tr'])
+        self.assertIsNotNone(vs.bul(m, 'x', 'tr'))
+
     def test_depodaki_manifest_sozlesmeye_uyar(self):
         if not v.MANIFEST.exists():
             self.skipTest('data/videolar.json yok')
@@ -646,8 +661,9 @@ class AnahtarManifestTests(unittest.TestCase):
         for kimlik, diller in m['videolar'].items():
             for dil, g in diller.items():
                 with self.subTest(f'{kimlik}-{dil}'):
-                    # 'onay' isteğe bağlıdır: Cio onaylayınca tools/video_site.py yazar
-                    self.assertEqual(set(g) - {'onay'}, alanlar)
+                    # 'onay' isteğe bağlıdır: Cio onaylayınca tools/video_site.py yazar.
+                    # 'beklet' isteğe bağlıdır: hatalı video yeniden üretilene dek sitede ve paylaşımda yok sayılır.
+                    self.assertEqual(set(g) - {'onay', 'beklet'}, alanlar)
                     k = g['anahtar']
                     self.assertEqual(g['mp4_1080'], f'{kimlik}-{dil}-{k}-1080.mp4')
                     self.assertEqual(g['vtt'], f'{kimlik}-{dil}-{k}.vtt')

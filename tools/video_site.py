@@ -208,7 +208,8 @@ def bugun_uretilen(manifest: dict, gun: str, dil: str | None = None) -> int:
         for d, v in (diller or {}).items():
             if dil and d != dil:
                 continue
-            if isinstance(v, dict) and str(v.get("uretildi") or "")[:10] == gun:
+            # bekletilen (hatalı, yeniden üretilecek) video sayılmaz: yerine geleni kotayı beklemesin
+            if isinstance(v, dict) and not v.get("beklet") and str(v.get("uretildi") or "")[:10] == gun:
                 n += 1
     return n
 
