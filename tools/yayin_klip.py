@@ -27,6 +27,7 @@ from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 
+import klip_kamera
 import klip_konusma
 import klip_youtube
 
@@ -101,8 +102,10 @@ AYAR_VARSAYILAN = {
     'canli_sohbet_butce_sn': 240,  # tek turda bir yayıncının sohbetini indirmeye en çok bu kadar süre
     'canli_sohbet_marj_sn': 20,  # sohbetin "şimdi"den bu kadar gerisine kadarı tamam sayılır
     # görüntü düzeni
-    'duzen': 'kadraj',     # 'kadraj': yayın ortadan kırpılıp büyütülür; 'serit': eski tam genişlik şerit
+    'duzen': 'kamera',     # 'kamera': yayıncı kamerası bulunup AYRI panelde gösterilir (bulunamazsa 'kadraj'a düşer);
+                           # 'kadraj': yayın ortadan kırpılıp büyütülür; 'serit': eski tam genişlik şerit
     'kadraj_oran': 1.2,    # kırpılan bölgenin genişlik/yükseklik oranı (1.0 = kare, 1.33 = 4:3, 1.78 = kırpma yok)
+    **klip_kamera.VARSAYILAN,   # kamera_* eşikleri (klip_kamera.py'de açıklamalı)
     # oyun süzgeci
     'oyunlar': [],         # boş = bütün yayınlar; doluysa yalnız kategorisi/başlığı bu adlardan birine uyanlar
     'oyun_baslikta_ara': True,  # kategori uymasa da yayın başlığında geçen oyun adı kabul edilir
@@ -114,7 +117,9 @@ AYAR_VARSAYILAN = {
 #                           C zeminsiz kalın kontur. Ayrıntı: otomasyon/KLIP-HATTI.md "Açıklama görünümü".
 # Bunlar AYAR_VARSAYILAN'a GİRMEZ ve analiz önbelleği karşılaştırmasında yok sayılır: yalnız görünümü etkiler,
 # yoksa her ayar değişikliği (pahalı) sohbet/yargı analizini geçersiz kılardı.
-GORSEL_AYAR = ('klip_aciklama_yazi', 'aciklama_yasak_kelimeler', 'klip_aciklama_stil')
+# Kesim aşaması ayarları (düzen, kadraj oranı, kamera eşikleri) da burada: yalnız KESİMİ etkiler, analiz önbelleğini bozmaz.
+GORSEL_AYAR = ('klip_aciklama_yazi', 'aciklama_yasak_kelimeler', 'klip_aciklama_stil', 'duzen', 'kadraj_oran',
+               *klip_kamera.VARSAYILAN)
 ACIKLAMA_STILLERI = ('A', 'B', 'C')
 ACIKLAMA_STIL_VARSAYILAN = 'A'
 ACIKLAMA_TASARIM_SURUMU = 2   # düzen imzasına girer: tasarım değişince açıklamalı klipler 'güncel değil' olur
@@ -137,6 +142,10 @@ DUZEN = {
     'alt_marka': {'boyut': 38, 'y_serit': 1415},
     'marka': 'CTRL+A GAME  ·  ctrl-agame.com',
     'metin_azami_px': 980,
+    # 'kamera' düzeni: üstte içerik (oyun) paneli, altında yayıncı kamerası paneli; ikisi blok olarak 'kadraj'ın
+    # görüntü kutusunun yerine geçer. Blok üstü (etiket altı) 430, alt kenarı 1450: alttaki yazı bloğu (~190 px)
+    # 1670'te biter, son 250 px (platform arayüzü) boş kalır.
+    'kamera': {'ust': 430, 'icerik_h': 590, 'bosluk': 10, 'kamera_h': 420},
     # Açıklama yazısı (yalnız açıklama varsa): görüntü karesinin HEMEN ÜSTÜNDE etiket (video_boslugu px aralıkla);
     # en üst 'ust_sinir' px boş kalır (Shorts/Reels üst çubuğu). Yayıncı adı + oyun, kaynak ve marka satırları
     # görüntünün ALTINA iner. Hepsi tek PNG katmanı olarak çizilir (aciklama_katmani), ffmpeg yalnız bindirir.
@@ -1244,6 +1253,7 @@ def paket_json(vod: dict, klip: dict, mp4: pathlib.Path, dogrulama: dict, ayar: 
         'video': dogrulama,
         'kisa_aciklama': klip_aciklamasi(klip, ayar),
         'aciklama_yazisi': dogrulama.get('aciklama_yazisi'),
+        **({'kamera_plani': dogrulama['kamera']} if dogrulama.get('kamera') else {}),
         'duzen': duzen_imzasi(ayar or AYAR_VARSAYILAN, klip_aciklamasi(klip, ayar)),
         'uretim': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
         'yayinlandi': False,
@@ -1423,9 +1433,22 @@ def yerlesim(ayar: dict | None = None, duzen: dict = DUZEN, aciklama: dict | Non
     ayar = ayar or {}
     w, h = duzen['genislik'], duzen['yukseklik']
     mod = ayar.get('duzen', AYAR_VARSAYILAN['duzen'])
-    if mod not in ('kadraj', 'serit'):
-        raise KlipHatasi(f"duzen 'kadraj' veya 'serit' olmalı: {mod!r}")
+    if mod not in ('kamera', 'kadraj', 'serit'):
+        raise KlipHatasi(f"duzen 'kamera', 'kadraj' veya 'serit' olmalı: {mod!r}")
     yazilar = ('ust_ad', 'ust_oyun', 'alt_kaynak', 'alt_marka')
+    if mod == 'kamera':
+        k = duzen['kamera']
+        gh = k['icerik_h'] + k['bosluk'] + k['kamera_h']
+        kaynak_y = k['ust'] + gh + 34
+        marka_y = kaynak_y + int(duzen['alt_kaynak']['boyut'] * METIN_SATIR_KATSAYI) + 10
+        oyun_y = k['ust'] - 30 - int(duzen['ust_oyun']['boyut'] * METIN_SATIR_KATSAYI)
+        return _aciklamayi_isle({
+            'mod': mod, 'oran': None, 'gorsel_y': k['ust'], 'gorsel_h': gh,
+            'paneller': {'icerik': {'y': k['ust'], 'h': k['icerik_h'], 'oran': round(w / k['icerik_h'], 4)},
+                         'kamera': {'y': k['ust'] + k['icerik_h'] + k['bosluk'], 'h': k['kamera_h'],
+                                    'oran': round(w / k['kamera_h'], 4)}},
+            'y': {'ust_ad': oyun_y - 18 - int(duzen['ust_ad']['boyut'] * METIN_SATIR_KATSAYI),
+                  'ust_oyun': oyun_y, 'alt_kaynak': kaynak_y, 'alt_marka': marka_y}}, aciklama)
     if mod == 'serit':
         gh = int(round(w / KAYNAK_ORAN / 2)) * 2
         return _aciklamayi_isle({'mod': mod, 'oran': None, 'gorsel_y': (h - gh) // 2, 'gorsel_h': gh,
@@ -1525,12 +1548,17 @@ def filtre_yaz(font: str, metinler: dict[str, str], duzen: dict = DUZEN, ayar: d
     kucuk_w = w // 4
     kucuk_h = h // 4
     yz = yerlesim(ayar, duzen, aciklama)
+    if yz['mod'] == 'kamera':
+        return _kamera_filtresi(font, metinler, duzen, ayar, aciklama, yz)
     if yz['mod'] == 'serit':
         on = f"scale={w}:-2:flags=lanczos"
     else:
         r = f"{yz['oran']:.4f}"
         # Ortadan kırp: kaynak hedeften darsa yükseklikten değil genişlikten kırpılır (min ile).
-        on = (f"crop=w=min(iw\\,ih*{r}):h=min(ih\\,iw/{r}),"
+        mx = (ayar or {}).get('_kamera_merkez_x')
+        # tek büyük yüz varsa kırpma merkezi yüze kayar (yüz kesilmesin); yoksa ortadan (eski çıktı birebir)
+        konum = f":x=min(max({float(mx):.4f}*iw-out_w/2\\,0)\\,iw-out_w):y=(ih-out_h)/2" if mx is not None else ''
+        on = (f"crop=w=min(iw\\,ih*{r}):h=min(ih\\,iw/{r}){konum},"
               f"scale={w}:{yz['gorsel_h']}:flags=lanczos")
     satirlar = [
         f"[0:v:0]fps={duzen['fps']},split=2[a][b]",
@@ -1539,6 +1567,12 @@ def filtre_yaz(font: str, metinler: dict[str, str], duzen: dict = DUZEN, ayar: d
         f"[b]{on}[fg]",
         f"[bg][fg]overlay=0:{yz['gorsel_y']}[v0]",
     ]
+    return _yazilari_ekle(satirlar, font, metinler, duzen, aciklama, yz)
+
+
+def _yazilari_ekle(satirlar: list[str], font: str, metinler: dict[str, str], duzen: dict, aciklama: dict | None,
+                   yz: dict) -> str:
+    """Süzgeç zincirinin sonu: [v0] üstüne yazılar (PNG katmanı ya da drawtext) ve [v] çıkışı."""
     if aciklama:   # tüm yazılar ikinci girdideki PNG katmanında (aciklama_katmani); drawtext yok
         satirlar.append('[v0][1:v:0]overlay=0:0:format=auto,setsar=1,format=yuv420p[v]')
         return ';\n'.join(satirlar) + '\n'
@@ -1553,6 +1587,32 @@ def filtre_yaz(font: str, metinler: dict[str, str], duzen: dict = DUZEN, ayar: d
         )
     satirlar.append('[v0]' + ','.join(cizim) + ',setsar=1,format=yuv420p[v]')
     return ';\n'.join(satirlar) + '\n'
+
+
+def _kirpma_ifadesi(k: tuple, w: int, h: int) -> str:
+    """Oransal (x,y,w,h) kutusu için ffmpeg crop ifadesi (konum ve boyut çift piksele indirilir)."""
+    return (f"crop=w=trunc(iw*{k[2]:.5f}/2)*2:h=trunc(ih*{k[3]:.5f}/2)*2:"
+            f"x=trunc(iw*{k[0]:.5f}/2)*2:y=trunc(ih*{k[1]:.5f}/2)*2,scale={w}:{h}:flags=lanczos")
+
+
+def _kamera_filtresi(font: str, metinler: dict[str, str], duzen: dict, ayar: dict | None, aciklama: dict | None,
+                     yz: dict) -> str:
+    """'kamera' düzeni: kaynak üçe bölünür (bulanık arka plan, içerik paneli, kamera paneli)."""
+    w, h = duzen['genislik'], duzen['yukseklik']
+    plan = (ayar or {}).get('_kamera_plan')
+    if not plan or plan.get('duzen') != 'kamera':
+        raise KlipHatasi("'kamera' düzeni için kamera planı yok (klip_kes önce kamerayı bulmalı)")
+    ic, km = yz['paneller']['icerik'], yz['paneller']['kamera']
+    satirlar = [
+        f"[0:v:0]fps={duzen['fps']},split=3[a][b][c]",
+        f"[a]scale=-2:{h // 4},crop={w // 4}:{h // 4},gblur=sigma={duzen['arka_blur']},"
+        f"scale={w}:{h},eq=brightness={duzen['arka_parlaklik']}:saturation=0.9[bg]",
+        f"[b]{_kirpma_ifadesi(tuple(plan['icerik_kirpma']), w, ic['h'])}[ic]",
+        f"[c]{_kirpma_ifadesi(tuple(plan['kamera_kirpma']), w, km['h'])}[km]",
+        f"[bg][ic]overlay=0:{ic['y']}[v1]",
+        f"[v1][km]overlay=0:{km['y']}[v0]",
+    ]
+    return _yazilari_ekle(satirlar, font, metinler, duzen, aciklama, yz)
 
 
 def klip_metinleri(vod: dict, aciklama: dict | None = None) -> dict[str, str]:
@@ -1605,6 +1665,24 @@ def klip_dogrula(ff: str, mp4: pathlib.Path) -> dict:
     return bilgi
 
 
+def kamera_karari(vod: dict, ayar: dict, ff: str, kaynak: str, bas: float, sure: float, yerel: bool) -> tuple[dict, dict]:
+    """'kamera' düzeni için klip başına bir kez kamera bulur. Dönüş: (etkin ayar, plan özeti). Etkin ayarda duzen
+    'kamera' (plan '_kamera_plan'da) ya da tek panel ('kadraj'; tek büyük yüz varsa '_kamera_merkez_x'). Herhangi bir
+    hata (model yok, kare alınamadı, OpenCV) güvenli tarafa düşer: eski tek panel; neden 'hata' + metin plana yazılır."""
+    pn = yerlesim({**ayar, 'duzen': 'kamera'})['paneller']
+    kadraj = {**ayar, 'duzen': 'kadraj'}
+    try:
+        plan = klip_kamera.kamera_bul(ff, kaynak, bas, sure, yerel, ayar, vod.get('kamera_kutu'))
+        plan = klip_kamera.kesim_plani(plan, plan['kare_oran'], pn['icerik']['oran'], pn['kamera']['oran'],
+                                       min(max(float(ayar.get('kadraj_oran', AYAR_VARSAYILAN['kadraj_oran'])),
+                                               KADRAJ_EN_AZ), KAYNAK_ORAN), ayar)
+    except Exception as e:   # noqa: BLE001 - kamera bulma yardımcıdır: her hatada eski düzenle kesilir
+        return kadraj, {'duzen': 'tek', 'neden': 'hata', 'hata': f'{type(e).__name__}: {e}'[:300]}
+    if plan['duzen'] == 'kamera':
+        return {**ayar, 'duzen': 'kamera', '_kamera_plan': plan}, plan
+    return ({**kadraj, '_kamera_merkez_x': plan['merkez_x']} if 'merkez_x' in plan else kadraj), plan
+
+
 def klip_kes(vod: dict, klip: dict, hedef: pathlib.Path, ff: str, font: str, ayar: dict | None = None) -> dict:
     """Yalnız klip aralığını HLS'ten çeker ve 1080x1920 H.264+AAC olarak yazar. ayar: duzen, kadraj_oran."""
     kaynak = vod.get('hls') or vod['kaynak']
@@ -1613,14 +1691,6 @@ def klip_kes(vod: dict, klip: dict, hedef: pathlib.Path, ff: str, font: str, aya
     with tempfile.TemporaryDirectory(prefix='klip-') as tmp:
         tmp_yol = pathlib.Path(tmp)
         aciklama_metni = klip_aciklamasi(klip, ayar)
-        aciklama = aciklama_duzeni(aciklama_metni, aciklama_fontu(), ayar, oyun_var=bool(vod.get('oyun')))
-        metinler = klip_metinleri(vod, aciklama)
-        for ad, m in metinler.items():
-            (tmp_yol / f't_{ad}.txt').write_text(m or ' ', encoding='utf-8')
-        katman = None
-        if aciklama:
-            aciklama_katmani(aciklama, metinler).save(tmp_yol / 'katman.png')
-            katman = 'katman.png'
         gecici = tmp_yol / 'cikti.mp4'
         bas, yerel = klip['klip_baslangic_sn'], False
         plan_bas = bas
@@ -1650,6 +1720,20 @@ def klip_kes(vod: dict, klip: dict, hedef: pathlib.Path, ff: str, font: str, aya
                 kaynak, yerel = str(playlist), True
             except (RuntimeError, ValueError) as e:
                 raise KlipHatasi(f'klip HLS zamanlaması: {e}') from e
+        # Kamera bulma klip başına BİR kez, kesimden önce (yerel kaynakta zaman çizgisi bas-origin). Sonuca göre etkin
+        # düzen belli olur ('kamera' ya da tek panel); açıklama/yazı yerleşimi bundan sonra, etkin düzenle hesaplanır.
+        kamera_bilgisi = None
+        ayar_k = ayar
+        if (ayar or {}).get('duzen', AYAR_VARSAYILAN['duzen']) == 'kamera':
+            ayar_k, kamera_bilgisi = kamera_karari(vod, ayar or {}, ff, kaynak, bas-origin if yerel else bas, sure, yerel)
+        aciklama = aciklama_duzeni(aciklama_metni, aciklama_fontu(), ayar_k, oyun_var=bool(vod.get('oyun')))
+        metinler = klip_metinleri(vod, aciklama)
+        for ad, m in metinler.items():
+            (tmp_yol / f't_{ad}.txt').write_text(m or ' ', encoding='utf-8')
+        katman = None
+        if aciklama:
+            aciklama_katmani(aciklama, metinler).save(tmp_yol / 'katman.png')
+            katman = 'katman.png'
         aligned = False
         for attempt in range(4):
             if bas < 0 or bas+sure > vod['sure_sn']+.01:
@@ -1660,7 +1744,7 @@ def klip_kes(vod: dict, klip: dict, hedef: pathlib.Path, ff: str, font: str, aya
                 except RuntimeError as e:
                     raise KlipHatasi(str(e)) from e
             r = subprocess.run(ffmpeg_komutu(ff, kaynak, bas-origin if yerel else bas, sure, gecici.name,
-                                             filtre_yaz(font, metinler, ayar=ayar, aciklama=aciklama), yerel, katman),
+                                             filtre_yaz(font, metinler, ayar=ayar_k, aciklama=aciklama), yerel, katman),
                                cwd=tmp, capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=1200)
             if r.returncode != 0 or not gecici.exists():
                 raise KlipHatasi(f'ffmpeg başarısız ({r.returncode}): {r.stderr[-800:]}')
@@ -1723,6 +1807,8 @@ def klip_kes(vod: dict, klip: dict, hedef: pathlib.Path, ff: str, font: str, aya
         bilgi['ses_hizasi'] = {'denemeler': hizalar, 'kaydirma_sn': round(bas-plan_bas,4)}
     if youtube_indirme:
         bilgi['youtube_indirme'] = youtube_indirme
+    if kamera_bilgisi:
+        bilgi['kamera'] = kamera_bilgisi
     if aciklama_metni:
         bilgi['aciklama_yazisi'] = ({'metin': aciklama_metni, 'satirlar': aciklama['satirlar'],
                                      'boyut': aciklama['boyut'], 'y': aciklama['y'], 'stil': aciklama['stil'],
@@ -1748,6 +1834,7 @@ def vod_hazirla(arguman: str, ayar: dict, http=http_json, http_text=http_metin) 
                 raise KlipHatasi(f'YouTube video atlandı: {reason}')
             vod['_youtube_bilgi'] = info
             vod['kisa_ad'] = (y or {}).get('kisa_ad')
+            vod['kamera_kutu'] = (y or {}).get('kamera_kutu')
             return vod, cfg
         except (OSError, RuntimeError, ValueError) as e:
             raise KlipHatasi(str(e)) from e
@@ -1758,6 +1845,7 @@ def vod_hazirla(arguman: str, ayar: dict, http=http_json, http_text=http_metin) 
     y = yayinci_bul(ayar, 'kick', vod['kanal'])
     vod_t0_ekle(vod, http_text)
     vod['kisa_ad'] = (y or {}).get('kisa_ad')
+    vod['kamera_kutu'] = (y or {}).get('kamera_kutu')   # elle kamera kutusu (oransal x,y,w,h); tespiti ezer
     return vod, (y['ayar'] if y else dict(ayar['ayar']))
 
 
@@ -1829,6 +1917,7 @@ def duzen_imzasi(ayar: dict, aciklama: str | None = None) -> dict:
     Açıklamasız klipte imza eskisiyle birebir aynıdır."""
     yz = yerlesim(ayar)
     return {'duzen': yz['mod'], 'kadraj_oran': yz['oran'],
+            **({'kamera_surumu': klip_kamera.KAMERA_SURUMU} if yz['mod'] == 'kamera' else {}),
             **({'konusma_saat_surumu': 3} if ayar.get('konusma') else {}),
             **({'aciklama': aciklama, 'aciklama_stil': aciklama_stili(ayar),
                 'aciklama_tasarim': ACIKLAMA_TASARIM_SURUMU} if aciklama else {})}
@@ -2335,6 +2424,9 @@ def paketten_uret(paket_yolu: pathlib.Path, ayar: dict, dizin: pathlib.Path, yed
     klip = {'klip_baslangic_sn': d['klip_baslangic_sn'], 'klip_bitis_sn': d['klip_bitis_sn'],
             'konusma_kisa_aciklama': d.get('kisa_aciklama')}
     bilgi = klip_kes(vod, klip, paket_yolu.with_suffix('.mp4'), ffmpeg_bul(), font_bul(), vayar)
+    d.pop('kamera_plani', None)
+    if bilgi.get('kamera'):
+        d['kamera_plani'] = bilgi['kamera']
     d.update({'kisa_aciklama': d.get('kisa_aciklama'), 'aciklama_yazisi': bilgi.get('aciklama_yazisi'), 'video': bilgi,
               'duzen': duzen_imzasi(vayar, klip_aciklamasi(klip, vayar)),
               'uretim': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')})
@@ -2401,7 +2493,7 @@ def main(argv=None) -> int:
             k.add_argument('--zorla', action='store_true', help='var olan klibi yeniden üret')
             k.add_argument('--aciklamasiz', action='store_true',
                            help='klibe kısa açıklama yazısı koyma (ayar: klip_aciklama_yazi=false)')
-            k.add_argument('--duzen', choices=('kadraj', 'serit'), help='görüntü düzeni (ayardakini bu çalıştırma için değiştirir)')
+            k.add_argument('--duzen', choices=('kamera', 'kadraj', 'serit'), help='görüntü düzeni (ayardakini bu çalıştırma için değiştirir)')
             k.add_argument('--kadraj-oran', dest='kadraj_oran', type=float, help='kırpılan bölgenin genişlik/yükseklik oranı')
     ad_ = s.add_parser('aciklama-doldur', help='kisa_aciklama olmayan konuşma paketlerine TEK toplu model çağrısıyla açıklama yaz')
     ad_.add_argument('--klasor', help='yalnız bu klasördeki paketler (varsayılan: çalışma dizini/cikti)')

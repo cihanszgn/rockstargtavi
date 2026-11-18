@@ -351,7 +351,7 @@ class HlsAraclari(unittest.TestCase):
 class Duzen(unittest.TestCase):
     def test_filtre_1080x1920_ve_metin_dosyalari(self):
         metinler = yk.klip_metinleri(Paket.VOD)
-        f = yk.filtre_yaz('C:\\Windows\\Fonts\\arialbd.ttf', metinler)
+        f = yk.filtre_yaz('C:\\Windows\\Fonts\\arialbd.ttf', metinler, ayar={'duzen': 'kadraj'})
         self.assertIn('1080:1920', f)
         self.assertIn("fontfile='C\\:/Windows/Fonts/arialbd.ttf'", f)
         for ad in ('ad', 'oyun', 'kaynak', 'marka'):
@@ -488,20 +488,20 @@ class Kadraj(unittest.TestCase):
             self.assertGreaterEqual(yz['gorsel_h'] / serit, en_az_kat, oran)
 
     def test_kadraj_olculeri(self):
-        self.assertEqual(yk.yerlesim({'kadraj_oran': 1.0})['gorsel_h'], 1080)   # kare
-        self.assertEqual(yk.yerlesim({'kadraj_oran': 4 / 3})['gorsel_h'], 810)  # 4:3
-        yz = yk.yerlesim({'kadraj_oran': 1.2})
+        self.assertEqual(yk.yerlesim({'duzen': 'kadraj', 'kadraj_oran': 1.0})['gorsel_h'], 1080)   # kare
+        self.assertEqual(yk.yerlesim({'duzen': 'kadraj', 'kadraj_oran': 4 / 3})['gorsel_h'], 810)  # 4:3
+        yz = yk.yerlesim({'duzen': 'kadraj', 'kadraj_oran': 1.2})
         self.assertEqual(yz['gorsel_h'], 900)
         self.assertEqual(yz['gorsel_y'], yk.DUZEN['gorsel_merkez_y'] - 450)     # görüntünün orta çizgisi sabit
 
     def test_kadraj_orani_sinirlanir(self):
-        self.assertEqual(yk.yerlesim({'kadraj_oran': 0.5})['oran'], yk.KADRAJ_EN_AZ)   # çok dik: kareye kenetlenir
-        self.assertEqual(yk.yerlesim({'kadraj_oran': 5})['oran'], yk.KAYNAK_ORAN)      # kırpılacak şey kalmaz
-        self.assertEqual(yk.yerlesim({'kadraj_oran': 5})['gorsel_h'], 608)
+        self.assertEqual(yk.yerlesim({'duzen': 'kadraj', 'kadraj_oran': 0.5})['oran'], yk.KADRAJ_EN_AZ)   # çok dik: kareye kenetlenir
+        self.assertEqual(yk.yerlesim({'duzen': 'kadraj', 'kadraj_oran': 5})['oran'], yk.KAYNAK_ORAN)      # kırpılacak şey kalmaz
+        self.assertEqual(yk.yerlesim({'duzen': 'kadraj', 'kadraj_oran': 5})['gorsel_h'], 608)
 
     def test_yazilar_goruntuyle_cakismaz_ve_tuvalde_kalir(self):
         for oran in (1.0, 1.1, 1.2, 4 / 3, 1.5, 1.78):
-            yz = yk.yerlesim({'kadraj_oran': oran})
+            yz = yk.yerlesim({'duzen': 'kadraj', 'kadraj_oran': oran})
             (g0, g1), yazilar = self.kutular(yz)
             for ad, (y0, y1) in yazilar.items():
                 self.assertTrue(y1 <= g0 or y0 >= g1, f'{ad} görüntüye biniyor (oran {oran})')
@@ -512,15 +512,16 @@ class Kadraj(unittest.TestCase):
                 self.assertLessEqual(a[1], b[0], f'yazılar birbirine biniyor (oran {oran})')
 
     def test_kadraj_filtresi_ortadan_kirpar(self):
-        f = yk.filtre_yaz('C:\\Windows\\Fonts\\arialbd.ttf', yk.klip_metinleri(Paket.VOD), ayar={'kadraj_oran': 1.2})
+        f = yk.filtre_yaz('C:\\Windows\\Fonts\\arialbd.ttf', yk.klip_metinleri(Paket.VOD), ayar={'duzen': 'kadraj', 'kadraj_oran': 1.2})
         crop = 'crop=w=min(iw\\,ih*1.2000):h=min(ih\\,iw/1.2000),scale=1080:900:flags=lanczos'
         self.assertIn(crop, f)      # x/y verilmediği için kırpma ortadan yapılır: oyun ekranının ortası kalır
         self.assertIn('overlay=0:430', f)
         self.assertIn('1080:1920', f)
 
     def test_varsayilan_kadraj(self):
-        self.assertEqual(yk.AYAR_VARSAYILAN['duzen'], 'kadraj')
-        self.assertEqual(yk.yerlesim()['mod'], 'kadraj')
+        self.assertEqual(yk.AYAR_VARSAYILAN['duzen'], 'kamera')
+        self.assertEqual(yk.yerlesim()['mod'], 'kamera')
+        self.assertEqual(yk.yerlesim({'duzen': 'kadraj'})['mod'], 'kadraj')
 
     def test_gecersiz_duzen_hata(self):
         with self.assertRaises(yk.KlipHatasi):
@@ -530,11 +531,11 @@ class Kadraj(unittest.TestCase):
         klip = {'klip_baslangic_sn': 10.0, 'klip_bitis_sn': 50.0}
         with tempfile.TemporaryDirectory() as t:
             yol = pathlib.Path(t) / 'klip-01.json'
-            yol.write_text(json.dumps({**klip, 'duzen': yk.duzen_imzasi({'kadraj_oran': 1.2})}), encoding='utf-8')
-            self.assertTrue(yk.paket_guncel(yol, klip, {'kadraj_oran': 1.2}))
-            self.assertFalse(yk.paket_guncel(yol, klip, {'kadraj_oran': 1.0}))
+            yol.write_text(json.dumps({**klip, 'duzen': yk.duzen_imzasi({'duzen': 'kadraj', 'kadraj_oran': 1.2})}), encoding='utf-8')
+            self.assertTrue(yk.paket_guncel(yol, klip, {'duzen': 'kadraj', 'kadraj_oran': 1.2}))
+            self.assertFalse(yk.paket_guncel(yol, klip, {'duzen': 'kadraj', 'kadraj_oran': 1.0}))
             self.assertFalse(yk.paket_guncel(yol, klip, {'duzen': 'serit'}))
-            self.assertFalse(yk.paket_guncel(yol, {**klip, 'klip_baslangic_sn': 11.0}, {'kadraj_oran': 1.2}))
+            self.assertFalse(yk.paket_guncel(yol, {**klip, 'klip_baslangic_sn': 11.0}, {'duzen': 'kadraj', 'kadraj_oran': 1.2}))
             self.assertFalse(yk.paket_guncel(pathlib.Path(t) / 'yok.json', klip, {}))
 
 
@@ -1344,7 +1345,7 @@ ALTIN_FILTRE = {
     'varsayilan': "[0:v:0]fps=30,split=2[a][b];\n[a]scale=-2:480,crop=270:480,gblur=sigma=8,scale=1080:1920,eq=brightness=-0.12:saturation=0.9[bg];\n[b]crop=w=min(iw\\,ih*1.2000):h=min(ih\\,iw/1.2000),scale=1080:900:flags=lanczos[fg];\n[bg][fg]overlay=0:430[v0];\n[v0]drawtext=fontfile='{FONT}':textfile='t_ad.txt':fontsize=76:fontcolor=white:borderw=4:bordercolor=black@0.85:x=(w-text_w)/2:y=230,drawtext=fontfile='{FONT}':textfile='t_oyun.txt':fontsize=46:fontcolor=0xFFD54A:borderw=4:bordercolor=black@0.85:x=(w-text_w)/2:y=343,drawtext=fontfile='{FONT}':textfile='t_kaynak.txt':fontsize=44:fontcolor=white:borderw=4:bordercolor=black@0.85:x=(w-text_w)/2:y=1364,drawtext=fontfile='{FONT}':textfile='t_marka.txt':fontsize=38:fontcolor=0xCCCCCC:borderw=4:bordercolor=black@0.85:x=(w-text_w)/2:y=1429,setsar=1,format=yuv420p[v]\n",
 }
 ALTIN_VOD = {'yayinci': 'wtcN', 'oyun': 'Potato Please', 'platform': 'kick', 'kanal': 'wtcn', 'kanal_url': 'https://kick.com/wtcn'}
-ALTIN_AYAR = {'kadraj': {'kadraj_oran': 1.2}, 'serit': {'duzen': 'serit'}, 'varsayilan': None}
+ALTIN_AYAR = {'kadraj': {'duzen': 'kadraj', 'kadraj_oran': 1.2}, 'serit': {'duzen': 'serit'}, 'varsayilan': {'duzen': 'kadraj'}}
 
 def _font():
     try:
@@ -1357,7 +1358,7 @@ FONT_YOLU = _font()
 FONT_ACIKLAMA = yk.aciklama_fontu()   # repodaki Anton (açıklama yazısı bununla çizilir)
 BIR_SATIR = 'Ab cd'
 IKI_SATIR = 'Kemalcan eşini kıskandırmak için mesaj atıyor'
-UC_AYAR = ({'kadraj_oran': 1.2}, {'duzen': 'serit'}, None)
+UC_AYAR = ({'duzen': 'kadraj', 'kadraj_oran': 1.2}, {'duzen': 'serit'}, None)
 
 
 class AciklamaYokkenEskiGorunumTesti(unittest.TestCase):
@@ -1376,8 +1377,11 @@ class AciklamaYokkenEskiGorunumTesti(unittest.TestCase):
             self.assertEqual(yk.yerlesim(ayar), yk.yerlesim(ayar, aciklama=None))
 
     def test_imza_aciklamasizda_eskisiyle_ayni(self):
-        self.assertEqual(yk.duzen_imzasi({'konusma': True}), {'duzen': 'kadraj', 'kadraj_oran': yk.AYAR_VARSAYILAN['kadraj_oran'],
-                                                              'konusma_saat_surumu': 3})
+        self.assertEqual(yk.duzen_imzasi({'duzen': 'kadraj', 'konusma': True}),
+                         {'duzen': 'kadraj', 'kadraj_oran': yk.AYAR_VARSAYILAN['kadraj_oran'], 'konusma_saat_surumu': 3})
+        self.assertEqual(yk.duzen_imzasi({'konusma': True}),   # varsayılan düzen 'kamera': algoritma sürümü imzada
+                         {'duzen': 'kamera', 'kadraj_oran': None, 'kamera_surumu': yk.klip_kamera.KAMERA_SURUMU,
+                          'konusma_saat_surumu': 3})
         self.assertNotIn('aciklama', yk.duzen_imzasi({}, None))
 
 
@@ -1460,8 +1464,8 @@ class AciklamaKonumTesti(unittest.TestCase):
             self.assertEqual([x['stil'] for x in (a, b, c_)], ['A', 'B', 'C'])
 
     def test_sigmayan_metin_none_kirpilmaz(self):
-        self.assertIsNone(yk.aciklama_duzeni('uzun ' * 60, FONT_ACIKLAMA, {'kadraj_oran': 1.2}))
-        self.assertIsNone(yk.aciklama_duzeni('x' * 300, FONT_ACIKLAMA, {'kadraj_oran': 1.2}))   # tek kelime bölünmez
+        self.assertIsNone(yk.aciklama_duzeni('uzun ' * 60, FONT_ACIKLAMA, {'duzen': 'kadraj', 'kadraj_oran': 1.2}))
+        self.assertIsNone(yk.aciklama_duzeni('x' * 300, FONT_ACIKLAMA, {'duzen': 'kadraj', 'kadraj_oran': 1.2}))   # tek kelime bölünmez
 
     def test_satir_bolme_kelime_ortasindan_degil(self):
         satirlar = yk.aciklama_satirlari(IKI_SATIR, FONT_ACIKLAMA, 60, yk.DUZEN['metin_azami_px'], 6, tek_satir=False)
@@ -1470,10 +1474,10 @@ class AciklamaKonumTesti(unittest.TestCase):
         self.assertIsNone(yk.aciklama_satirlari('', FONT_ACIKLAMA, 60, 900, 6, True))
 
     def test_turkce_karakterler_katmana_cizilir_filtreye_girmez(self):
-        a = yk.aciklama_duzeni('Eray şişeyi ağzıyla açıyor çünkü öfkeli', FONT_ACIKLAMA, {'kadraj_oran': 1.2})
+        a = yk.aciklama_duzeni('Eray şişeyi ağzıyla açıyor çünkü öfkeli', FONT_ACIKLAMA, {'duzen': 'kadraj', 'kadraj_oran': 1.2})
         m = yk.klip_metinleri(ALTIN_VOD, a)
         self.assertEqual(' '.join(m[f'aciklama{i + 1}'] for i in range(len(a['satirlar']))), 'Eray şişeyi ağzıyla açıyor çünkü öfkeli')
-        f = yk.filtre_yaz(FONT_ACIKLAMA, m, ayar={'kadraj_oran': 1.2}, aciklama=a)
+        f = yk.filtre_yaz(FONT_ACIKLAMA, m, ayar={'duzen': 'kadraj', 'kadraj_oran': 1.2}, aciklama=a)
         self.assertNotIn('drawtext', f)                                  # açıklamalı klipte yazılar PNG katmanında
         self.assertIn('[v0][1:v:0]overlay=0:0:format=auto,setsar=1,format=yuv420p[v]', f)
         self.assertNotIn('Eray', f)                                      # metin süzgecin içinde değil: kaçış sorunu yok
@@ -1492,13 +1496,13 @@ class AciklamaKonumTesti(unittest.TestCase):
         self.assertEqual(yok.count('-i'), 1)                             # açıklamasız: tek girdi, eskisi gibi
 
     def test_acikmali_filtrede_gorsel_ayni(self):
-        a = yk.aciklama_duzeni(IKI_SATIR, FONT_ACIKLAMA, {'kadraj_oran': 1.2})
-        yazisiz = yk.yerlesim({'kadraj_oran': 1.2})
-        yazili = yk.yerlesim({'kadraj_oran': 1.2}, aciklama=a)
+        a = yk.aciklama_duzeni(IKI_SATIR, FONT_ACIKLAMA, {'duzen': 'kadraj', 'kadraj_oran': 1.2})
+        yazisiz = yk.yerlesim({'duzen': 'kadraj', 'kadraj_oran': 1.2})
+        yazili = yk.yerlesim({'duzen': 'kadraj', 'kadraj_oran': 1.2}, aciklama=a)
         for anahtar in ('gorsel_y', 'gorsel_h', 'mod', 'oran'):
             self.assertEqual(yazisiz[anahtar], yazili[anahtar])
-        self.assertEqual(yk.filtre_yaz(FONT_ACIKLAMA, yk.klip_metinleri(ALTIN_VOD), ayar={'kadraj_oran': 1.2}).split('[v0]')[0],
-                         yk.filtre_yaz(FONT_ACIKLAMA, yk.klip_metinleri(ALTIN_VOD, a), ayar={'kadraj_oran': 1.2}, aciklama=a).split('[v0]')[0])
+        self.assertEqual(yk.filtre_yaz(FONT_ACIKLAMA, yk.klip_metinleri(ALTIN_VOD), ayar={'duzen': 'kadraj', 'kadraj_oran': 1.2}).split('[v0]')[0],
+                         yk.filtre_yaz(FONT_ACIKLAMA, yk.klip_metinleri(ALTIN_VOD, a), ayar={'duzen': 'kadraj', 'kadraj_oran': 1.2}, aciklama=a).split('[v0]')[0])
 
     def test_font_dosyasi_ve_lisansi_repoda(self):
         self.assertTrue(yk.ACIKLAMA_FONT_DOSYASI.is_file())
@@ -1552,7 +1556,8 @@ class AciklamaAyariVeImzaTesti(unittest.TestCase):
             self.assertFalse(yk.paket_guncel(p, self.klip(konusma_kisa_aciklama='Eray tavuk pişiriyor'), {}))
 
     def test_gorsel_ayarlar_analiz_karsilastirmasindan_ayrilir(self):
-        self.assertEqual(set(yk.GORSEL_AYAR), {'klip_aciklama_yazi', 'aciklama_yasak_kelimeler', 'klip_aciklama_stil'})
+        self.assertEqual(set(yk.GORSEL_AYAR), {'klip_aciklama_yazi', 'aciklama_yasak_kelimeler', 'klip_aciklama_stil',
+                                               'duzen', 'kadraj_oran', *yk.klip_kamera.VARSAYILAN})
         ayar = {'yontem': 'sinyal', 'klip_aciklama_yazi': False, 'aciklama_yasak_kelimeler': ['x']}
         self.assertEqual(yk.gorselsiz(ayar), {'yontem': 'sinyal'})
         self.assertIsNone(yk.gorselsiz(None))

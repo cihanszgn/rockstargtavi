@@ -1,5 +1,6 @@
 """Klip/derleme paylaşım hattı: onay kapısı, manifest, metin, paylaşım seçimi. Ağ ve gerçek dosya yok (geçici klasör)."""
 import contextlib
+import http.client
 import io
 import json
 import os
@@ -7,6 +8,7 @@ import pathlib
 import subprocess
 import sys
 import tempfile
+import threading
 import unittest
 from unittest import mock
 
@@ -256,6 +258,235 @@ class OnayKapisi(KlipYayinTemel):
     def test_yukle_hedef_bicimi_denetlenir(self):
         self.assertRaises(ky.Hata, ky.hedef_dogrula, "-oProxyCommand=x")
         self.assertRaises(ky.Hata, ky.hedef_dogrula, "bosluklu hedef:/a")
+
+
+class SayfaSunucusu(KlipYayinTemel):
+    """`sayfa`: yerel onay sunucusu. Geçici kapı (0), geçici manifest ve geçici çalışma dizini; gerçek data/klipler.json'a dokunmaz."""
+
+    MP4 = bytes(range(256)) * 4  # 1024 bayt
+    KLIP_MP4 = "/dosya/cikti/eraycan-20261112-aaa/klip-01.mp4"
+
+    def setUp(self):
+        super().setUp()
+        self.paket_yaz(mp4=self.MP4)
+        self.sunucu = ky.sunucu_baslat(0, str(self.manifest))
+        self.port = self.sunucu.port
+        self.is_parcasi = threading.Thread(target=self.sunucu.serve_forever, daemon=True)
+        self.is_parcasi.start()
+        self.addCleanup(self._kapat)
+
+    def _kapat(self):
+        self.sunucu.shutdown()
+        self.sunucu.server_close()
+        self.is_parcasi.join(5)
+
+    def istek(self, yontem, yol, govde=None, baslik=None, host=True, origin=True, belirtec=True, ham=None):
+        b = {}
+        if origin is True:
+            b["Origin"] = f"http://127.0.0.1:{self.port}"
+        elif origin:
+            b["Origin"] = origin
+        if belirtec is True:
+            b["X-Belirtec"] = self.sunucu.belirtec
+        elif belirtec:
+            b["X-Belirtec"] = belirtec
+        if govde is not None:
+            b["Content-Type"] = "application/json"
+            govde = json.dumps(govde).encode("utf-8")
+        if ham is not None:
+            govde = ham
+        b.update(baslik or {})
+        c = http.client.HTTPConnection("127.0.0.1", self.port, timeout=10)
+        try:
+            c.putrequest(yontem, yol, skip_host=True)
+            c.putheader("Host", f"127.0.0.1:{self.port}" if host is True else host)
+            for k, v in b.items():
+                c.putheader(k, v)
+            if govde is not None:
+                c.putheader("Content-Length", str(len(govde)))
+            c.endheaders(govde)
+            r = c.getresponse()
+            return r.status, dict(r.getheaders()), r.read()
+        finally:
+            c.close()
+
+    def sayfa(self):
+        kod, _, g = self.istek("GET", "/")
+        self.assertEqual(kod, 200)
+        return g.decode("utf-8")
+
+    def post(self, yol, veri, **kw):
+        kod, _, g = self.istek("POST", yol, veri, **kw)
+        return kod, json.loads(g.decode("utf-8"))
+
+    def derleme_no(self):
+        liste = json.loads((self.dizin / "onay" / "liste.json").read_text(encoding="utf-8"))["ogeler"]
+        return next(n for n, v in liste.items() if v["paket"].startswith("derleme/"))
+
+    def test_yalniz_127_0_0_1_dinler(self):
+        self.assertEqual(self.sunucu.server_address[0], "127.0.0.1")
+
+    def test_sayfa_butonlari_belirteci_ve_notu_icerir(self):
+        h = self.sayfa()
+        for parca in ("Onayla", "Onayı geri al", self.sunucu.belirtec, "Onay yalnız işaretler; paylaşım için yükleme ve gönderim ayrı adımdır.",
+                      "yüklenmeyi bekliyor", self.KLIP_MP4, 'name="viewport"'):
+            self.assertIn(parca, h)
+        self.assertNotIn("file:///", h)
+
+    def test_belirtecsiz_ve_yanlis_belirtecli_post_reddedilir(self):
+        self.sayfa()
+        for bel in (False, "yanlis"):
+            kod, v = self.post("/api/onayla", {"no": "1"}, belirtec=bel)
+            self.assertEqual(kod, 403)
+            self.assertFalse(v["ok"])
+        self.assertFalse(self.manifest.exists())
+
+    def test_yanlis_origin_host_ve_icerik_turu_reddedilir(self):
+        self.sayfa()
+        for kw in ({"origin": "http://evil.example"}, {"origin": False}, {"origin": f"http://127.0.0.1:{self.port + 1}"}):
+            self.assertEqual(self.post("/api/onayla", {"no": "1"}, **kw)[0], 403)
+        self.assertEqual(self.post("/api/onayla", {"no": "1"}, host="evil.example")[0], 403)
+        self.assertEqual(self.istek("GET", "/", host="evil.example")[0], 403)
+        kod, _, _ = self.istek("POST", "/api/onayla", baslik={"Content-Type": "text/plain"}, ham=b'{"no":"1"}')
+        self.assertEqual(kod, 415)
+        self.assertFalse(self.manifest.exists())
+
+    def test_onayla_manifeste_yazar_geri_al_siler(self):
+        self.sayfa()
+        kod, v = self.post("/api/onayla", {"no": "1"})
+        self.assertEqual((kod, v["ok"]), (200, True))
+        self.assertEqual(v["durum"]["sinif"], "onayli")
+        self.assertTrue(v["durum"]["onayli"])
+        self.assertEqual((v["ozet"]["onayli"], v["ozet"]["bekleyen"]), (1, 1))
+        oid = ks.klip_id(self.dizin / "cikti" / "eraycan-20261112-aaa" / "klip-01.json")
+        self.assertTrue(ks.onay_gecerli(self.man()["ogeler"][oid]))
+        self.assertIn("Onayı geri al", self.sayfa())
+        kod, v = self.post("/api/geri-al", {"no": "1"})
+        self.assertEqual((kod, v["ok"]), (200, True))
+        self.assertFalse(v["durum"]["onayli"])
+        self.assertEqual(v["ozet"]["onayli"], 0)
+        self.assertNotIn("onay", self.man()["ogeler"][oid])
+
+    def test_komut_satiri_ile_ayni_sonuc(self):
+        self.sayfa()
+        self.post("/api/onayla", {"no": "1"})
+        sayfa_onay = {k: v["onay"]["ozet"] for k, v in self.man()["ogeler"].items()}
+        self.assertEqual(self.cli("geri-cek", "1")[0], 0)
+        self.assertEqual(self.man()["ogeler"][next(iter(sayfa_onay))].get("onay"), None)
+        self.assertEqual(self.cli("onayla", "1")[0], 0)
+        self.assertEqual({k: v["onay"]["ozet"] for k, v in self.man()["ogeler"].items()}, sayfa_onay)
+
+    def test_derlemede_kucuk_resim_secilmeden_onaylanamaz(self):
+        self.derleme_yaz()
+        self.sayfa()
+        dno = self.derleme_no()
+        kod, v = self.post("/api/onayla", {"no": dno})
+        self.assertEqual(kod, 409)
+        self.assertIn("Küçük resim", v["mesaj"])
+        self.assertEqual(self.man()["ogeler"], {})
+        self.assertEqual(self.post("/api/onayla", {"no": dno, "kucuk_resim": 9})[0], 409)
+        self.assertEqual(self.post("/api/onayla", {"no": dno, "kucuk_resim": "2"})[0], 409)
+        kod, v = self.post("/api/onayla", {"no": dno, "kucuk_resim": 2})
+        self.assertEqual(kod, 200)
+        self.assertEqual(self.man()["ogeler"]["derleme-yayin-kolaji-1"]["onay"]["kucuk_resim"], "kucuk-resim-2.png")
+        h = self.sayfa()
+        self.assertIn("type=radio", h)
+        self.assertIn("/dosya/derleme/yayin-kolaji-1/kucuk-resim-2.png", h)
+
+    def test_kufurlu_metin_turkce_hata_verir_ve_onaylamaz(self):
+        self.derleme_yaz(baslik="Amk ne olay #1")
+        self.sayfa()
+        kod, v = self.post("/api/onayla", {"no": self.derleme_no(), "kucuk_resim": 1})
+        self.assertEqual(kod, 409)
+        self.assertIn("küfür", v["mesaj"])
+        self.assertEqual(self.man()["ogeler"], {})
+
+    def test_kufur_uyarili_kart_belirgin_isaretlenir(self):
+        self.paket_yaz(ad="klip-02", dokum_metni="bu amk çok iyi", bas=500, bit=540)
+        h = self.sayfa()
+        self.assertIn("KÜFÜR UYARISI", h)
+        self.assertIn('data-kufur="1"', h)
+
+    def test_gecersiz_numara_ve_govde_reddedilir(self):
+        self.sayfa()
+        self.assertEqual(self.post("/api/onayla", {"no": "99"})[0], 409)
+        self.assertEqual(self.post("/api/onayla", {"no": "../x"})[0], 409)
+        self.assertEqual(self.post("/api/onayla", {})[0], 409)
+        self.assertEqual(self.istek("POST", "/api/onayla", baslik={"Content-Type": "application/json"}, ham=b"{bozuk")[0], 400)
+        self.assertEqual(self.istek("POST", "/api/onayla", baslik={"Content-Type": "application/json"}, ham=b"[1]")[0], 400)
+        self.assertEqual(self.post("/api/baska", {"no": "1"})[0], 404)
+        self.assertFalse(self.manifest.exists())
+
+    def test_dosya_yol_kacisi_reddedilir(self):
+        (self.kok / "gizli.mp4").write_bytes(b"gizli")
+        for yol in ("/dosya/../gizli.mp4", "/dosya/%2e%2e/gizli.mp4", "/dosya/cikti/../../gizli.mp4",
+                    "/dosya/cikti%2f..%2f..%2fgizli.mp4", "/dosya/..%5cgizli.mp4", "/dosya/C:/Windows/win.ini", "/dosya//gizli.mp4"):
+            kod, _, g = self.istek("GET", yol)
+            self.assertIn(kod, (400, 404), yol)
+            self.assertNotIn(b"gizli", g, yol)
+
+    def test_yalniz_bilinen_medya_uzantilari_sunulur(self):
+        self.assertEqual(self.istek("GET", "/dosya/cikti/eraycan-20261112-aaa/klip-01.json")[0], 404)
+        self.assertEqual(self.istek("GET", "/dosya/cikti/yok.mp4")[0], 404)
+        kod, h, g = self.istek("GET", self.KLIP_MP4)
+        self.assertEqual((kod, g), (200, self.MP4))
+        self.assertEqual(h["Content-Type"], "video/mp4")
+        self.assertEqual(h["Accept-Ranges"], "bytes")
+
+    def test_range_206_ve_416(self):
+        kod, h, g = self.istek("GET", self.KLIP_MP4, baslik={"Range": "bytes=10-19"})
+        self.assertEqual((kod, g), (206, self.MP4[10:20]))
+        self.assertEqual(h["Content-Range"], "bytes 10-19/1024")
+        kod, h, g = self.istek("GET", self.KLIP_MP4, baslik={"Range": "bytes=1000-"})
+        self.assertEqual((kod, g, h["Content-Range"]), (206, self.MP4[1000:], "bytes 1000-1023/1024"))
+        kod, h, g = self.istek("GET", self.KLIP_MP4, baslik={"Range": "bytes=-4"})
+        self.assertEqual((kod, g), (206, self.MP4[-4:]))
+        kod, h, g = self.istek("GET", self.KLIP_MP4, baslik={"Range": "bytes=5000-"})
+        self.assertEqual((kod, h["Content-Range"]), (416, "bytes */1024"))
+        kod, h, g = self.istek("HEAD", self.KLIP_MP4, baslik={"Range": "bytes=0-9"})
+        self.assertEqual((kod, g, h["Content-Length"]), (206, b"", "10"))
+
+    def test_aralik_coz(self):
+        self.assertIsNone(ky.aralik_coz(None, 10))
+        self.assertIsNone(ky.aralik_coz("bytes=0-1,4-5", 10))
+        self.assertIsNone(ky.aralik_coz("bytes=-", 10))
+        self.assertEqual(ky.aralik_coz("bytes=2-", 10), (2, 9))
+        self.assertEqual(ky.aralik_coz("bytes=2-99", 10), (2, 9))
+        self.assertEqual(ky.aralik_coz("bytes=-3", 10), (7, 9))
+        self.assertEqual(ky.aralik_coz("bytes=-30", 10), (0, 9))
+        self.assertEqual(ky.aralik_coz("bytes=10-", 10), "yok")
+        self.assertEqual(ky.aralik_coz("bytes=5-2", 10), "yok")
+
+    def test_dolu_kapida_siradaki_bos_kapi_ve_tumu_doluysa_anlasilir_hata(self):
+        ikinci = ky.sunucu_baslat(self.port, str(self.manifest))
+        self.addCleanup(ikinci.server_close)
+        self.assertNotEqual(ikinci.port, self.port)
+        with mock.patch.object(ky, "OnaySunucusu", side_effect=OSError("dolu")):
+            with self.assertRaises(ky.Hata) as h:
+                ky.sunucu_baslat(self.port, str(self.manifest))
+        self.assertIn("dolu", str(h.exception))
+
+    def test_sunucu_yukleme_ya_da_komut_calistirmaz(self):
+        self.sayfa()
+        with mock.patch.object(subprocess, "run", side_effect=AssertionError("komut koştu")), \
+                mock.patch.object(subprocess, "Popen", side_effect=AssertionError("komut koştu")):
+            self.assertEqual(self.post("/api/onayla", {"no": "1"})[0], 200)
+            self.assertEqual(self.post("/api/geri-al", {"no": "1"})[0], 200)
+        for o in self.man()["ogeler"].values():
+            self.assertNotIn("yayinda", o)
+
+    def test_duragan_liste_notu_ve_baslatici(self):
+        self.cli("liste")
+        h = (self.dizin / "onay" / "index.html").read_text(encoding="utf-8")
+        self.assertIn("butonlar için: Onay Sayfası.bat", h)
+        self.assertNotIn("<button", h)
+        bat = (self.dizin / "onay" / "Onay Sayfası.bat").read_bytes()
+        self.assertFalse(bat.startswith(b"\xef\xbb\xbf"))
+        t = bat.decode("utf-8")
+        self.assertIn("chcp 65001", t)
+        self.assertIn(r"py tools\klip_yayin.py sayfa", t)
+        self.assertIn(str(ky.KOK), t)
+        self.assertIn("\r\n", t)
 
 
 class Metin(unittest.TestCase):
