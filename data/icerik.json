@@ -1,5 +1,189 @@
 [
  {
+  "id": "anno-117-pax-romana-patch-3-0-1-2026-11-18",
+  "oyun": "Anno 117: Pax Romana",
+  "tarih": "2026-11-18",
+  "tur": "guncelleme",
+  "platform": [
+   "PC",
+   "PS5"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam geliştirici duyurusu",
+    "url": "https://store.steampowered.com/news/app/3274580/view/687522870377578504"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Anno 117: Pax Romana 3.0.1 yaması yayında",
+    "ozet": "Aegyptus'ta liman ve ticaret değişiklikleri geldi.",
+    "metin": "Anno 117: Pax Romana için 3.0.1 yaması 18 Kasım 2026'da yayımlandı. Steam'deki geliştirici duyurusuna göre yama 10:00 UTC'de (11:00 CET) kullanıma açıldı. Aegyptus'un kuzeyindeki üç adaya, liman gerektiren binalar için ek kıyı alanı eklendi; böylece bu adalar diğer eyaletlerle ticaret merkezi olarak daha işe yarayacak. Ambar bonusları artık üst üste binmiyor; bölgedeki en yüksek seviyeli ambarın bonusu uygulanıyor. Aegyptus'taki Heron artık Wax Tablets yerine Scribe Sets istiyor. Performans tarafında PlayStation 5'te büyük yerleşimlere bakarken görülen kare hızı düşüşleri düzeltildi; bu düşüşler tek haneli kare hızına inebiliyordu. Konsollarda bellek yetersizliğinden kaynaklanan çökmeler, özellikle PS5'te, giderildi. Intel Arc ekran kartlı bazı PC'lerde ana menü ve kayıt yüklemede görülen çökme de düzeltildi. Duyuruda bilinen sorunlar da var: bazı zemin plakaları, duvar sistemleri ve Oasis Overgrowth oyunda görünmeyebiliyor; DLSS Frame Generation kullanan oyuncularda kare hızı düşüşü ve görsel bozulma yaşanabiliyor. Geliştirici, liman alanına süs yerleştirmemeyi öneriyor."
+   },
+   "en": {
+    "baslik": "Anno 117: Pax Romana Patch 3.0.1 is live",
+    "ozet": "Harbour and trade changes arrive in Aegyptus.",
+    "metin": "Patch 3.0.1 for Anno 117: Pax Romana went live on November 18, 2026, at 10 AM UTC (11 AM CET), according to the developer announcement on Steam. Three islands in the far north of Aegyptus gained extra coastal space for buildings that need a harbour, which should make them more useful as trade hubs between Aegyptus and other provinces. Granary bonuses no longer stack: only the buff from the highest-level Granary in an area applies. Heron in Aegyptus now requests Scribe Sets instead of Wax Tablets. On the fix side, the patch addresses frame rate drops on PlayStation 5 when viewing large settlements, which could fall to single-digit frames per second, and a crash caused by running out of memory on consoles, especially PS5. A crash on some PCs with Intel Arc graphics cards, in the main menu or when loading a save, is also fixed. Known issues remain: some groundplates, wall systems and the Oasis Overgrowth may be invisible in the game, and DLSS Frame Generation can cause FPS drops and visual distortions. The developer advises players not to place ornaments in their harbour for now."
+   },
+   "fr": {
+    "baslik": "Anno 117 : Pax Romana passe en version 3.0.1",
+    "ozet": "Ports et commerce revus en Aegyptus.",
+    "metin": "Le patch 3.0.1 d'Anno 117 : Pax Romana est sorti le 18 novembre 2026 à 10 h UTC (11 h CET), selon l'annonce du développeur sur Steam. Trois îles situées à l'extrême nord d'Aegyptus gagnent de l'espace côtier pour les bâtiments qui nécessitent un port, ce qui doit en faire de meilleurs pôles commerciaux entre Aegyptus et les autres provinces. Les bonus des greniers ne se cumulent plus : seul celui du grenier de plus haut niveau de la zone s'applique. Heron, à Aegyptus, demande désormais des Scribe Sets au lieu des Wax Tablets. Côté corrections, le patch règle les chutes de fréquence d'images sur PlayStation 5 lorsqu'on observe de grandes colonies, qui pouvaient descendre à un seul chiffre d'images par seconde, ainsi qu'un plantage dû à la saturation de la mémoire sur consoles, surtout la PS5. Un crash survenant sur certains PC équipés de cartes Intel Arc, au menu principal ou au chargement d'une sauvegarde, est aussi corrigé. Des problèmes restent connus : certaines plaques de sol, systèmes de murs et l'Oasis Overgrowth peuvent être invisibles en jeu, et DLSS Frame Generation peut provoquer des baisses de FPS et des distorsions visuelles. Le développeur conseille de ne pas placer d'ornements dans le port pour le moment."
+   },
+   "es": {
+    "baslik": "Anno 117: Pax Romana ya tiene el parche 3.0.1",
+    "ozet": "Cambios en puertos y comercio en Aegyptus.",
+    "metin": "El parche 3.0.1 de Anno 117: Pax Romana se publicó el 18 de noviembre de 2026, a las 10:00 UTC (11:00 CET), según el anuncio del desarrollador en Steam. Tres islas del extremo norte de Aegyptus recibieron más espacio costero para edificios que requieren puerto, lo que debería convertirlas en mejores centros comerciales entre Aegyptus y otras provincias. Los bonus de los graneros ya no se acumulan: solo se aplica el del granero de mayor nivel de la zona. Heron, en Aegyptus, ahora pide Scribe Sets en lugar de Wax Tablets. En cuanto a correcciones, el parche atiende las caídas de tasa de imágenes en PlayStation 5 al ver asentamientos grandes, que podían bajar a un solo dígito de fotogramas por segundo, y un cierre por falta de memoria en consolas, sobre todo en PS5. También se corrige un fallo en algunos PC con gráficas Intel Arc al cargar partidas o en el menú principal. Quedan problemas conocidos: algunas bases, sistemas de muros y el Oasis Overgrowth pueden no verse en el juego, y DLSS Frame Generation puede causar caídas de FPS y distorsiones visuales. El desarrollador recomienda no colocar adornos en el puerto por ahora."
+   },
+   "de": {
+    "baslik": "Anno 117: Pax Romana: Patch 3.0.1 ist da",
+    "ozet": "Hafen- und Handelsänderungen in Aegyptus.",
+    "metin": "Patch 3.0.1 für Anno 117: Pax Romana ist am 18. November 2026 um 10 Uhr UTC (11 Uhr MEZ) erschienen, wie die Entwickler-Ankündigung auf Steam zeigt. Drei Inseln ganz im Norden von Aegyptus erhalten zusätzlichen Küstenplatz für Gebäude, die einen Hafen benötigen. Dadurch sollen sie als Handelsknoten zwischen Aegyptus und anderen Provinzen nützlicher werden. Die Boni der Kornspeicher stapeln sich nicht mehr: Es gilt nur der Bonus des höchststufigen Speichers im Gebiet. Heron in Aegyptus verlangt jetzt Schreiber-Sets statt Wachstafeln. Bei den Fehlerbehebungen geht es um Einbrüche der Bildrate auf der PlayStation 5 bei großen Siedlungen, die auf einstellige Bilder pro Sekunde fallen konnten, sowie um Abstürze durch Speichermangel auf Konsolen, besonders der PS5. Außerdem wurde ein Absturz behoben, der auf einigen PCs mit Intel-Arc-Grafikkarten im Hauptmenü oder beim Laden eines Spielstands auftrat. Bekannte Probleme bleiben: Einige Bodenplatten, Wandsysteme und die Oase aus der Ruhmeshalle sind im Spiel womöglich unsichtbar. DLSS Frame Generation kann zudem zu FPS-Einbrüchen und Bildverzerrungen führen. Der Entwickler rät, vorerst keine Zierobjekte im Hafen zu platzieren."
+   },
+   "nl": {
+    "baslik": "Anno 117: Pax Romana patch 3.0.1 is uit",
+    "ozet": "Haven- en handelswijzigingen in Aegyptus.",
+    "metin": "Patch 3.0.1 voor Anno 117: Pax Romana is op 18 november 2026 om 10.00 uur UTC (11.00 uur CET) uitgekomen, volgens de aankondiging van de ontwikkelaar op Steam. Drie eilanden in het uiterste noorden van Aegyptus krijgen extra kustruimte voor gebouwen die een haven nodig hebben, zodat ze beter kunnen dienen als handelsknooppunten tussen Aegyptus en andere provincies. Graanschuurbonussen stapelen niet meer op: alleen de bonus van de hoogste graanschuur in een gebied geldt. Heron in Aegyptus vraagt nu om schrijversets in plaats van wastabletten. Bij de reparaties gaat het om framerate-dalingen op de PlayStation 5 bij grote nederzettingen, die konden terugvallen tot enkele beelden per seconde, en om een crash door geheugengebrek op consoles, vooral de PS5. Ook is een crash opgelost die op sommige pc's met Intel Arc-grafische kaarten optrad in het hoofdmenu of bij het laden van een save. Bekende problemen blijven: sommige grondplaten, muursystemen en de Oasis Overgrowth kunnen in het spel onzichtbaar zijn, en DLSS Frame Generation kan fps-dalingen en visuele vervormingen veroorzaken. De ontwikkelaar adviseert om voorlopig geen ornamenten in de haven te plaatsen."
+   },
+   "zh": {
+    "baslik": "《Anno 117：罗马和平》3.0.1补丁上线",
+    "ozet": "埃及行省港口与贸易调整。",
+    "metin": "据Steam上的开发者公告，《Anno 117：罗马和平》3.0.1补丁于2026年11月18日协调世界时10:00（中欧时间11:00）上线。埃及行省最北端的三座岛屿新增了供需要港口面积的建筑使用的沿海空间，有望成为埃及与其他省份之间更实用的贸易枢纽。粮仓加成不再叠加，区域内仅生效等级最高的粮仓加成。埃及的Heron现在改为索要抄写员套装，不再回购蜡板。修复方面，补丁解决了查看大型聚落时PlayStation 5上的帧率下降问题，严重时可能降至个位数帧每秒；另外修复了主机内存耗尽导致的崩溃，主要影响PS5。部分搭载Intel Arc显卡的电脑在主菜单或读取存档时的崩溃也已修复。已知问题仍然存在：部分地基板、墙体系统和名人堂中的绿洲丛林在游戏中可能不可见；启用DLSS帧生成时可能出现帧率下降和画面失真。开发者建议暂时不要在港口放置装饰物。"
+   }
+  },
+  "otomasyon": {
+   "konu": "anno-117-pax-romana-patch-3-0-1",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/3274580/view/687522870377578504",
+   "teyit_zamani": "2026-11-18T11:10:06+00:00",
+   "oyuncuya_fayda": "PS5 ve Intel Arc kullanıcıları çökme ve performans düzeltmelerinden yararlanır; bilinen sorunlar da listeleniyor.",
+   "hype": 4,
+   "eklenme": "2026-11-18T14:16:28.292858+03:00"
+  }
+ },
+ {
+  "id": "wuthering-waves-steam-fullpackage-2026-11-18",
+  "oyun": "Wuthering Waves",
+  "tarih": "2026-11-18",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam resmi haber sayfası",
+    "url": "https://store.steampowered.com/news/app/3513350/view/690900570100203611"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Wuthering Waves'e Steam'de Fullpackage indirme modu geldi",
+    "ozet": "Steam oyuncuları tam paketi doğrudan Steam üzerinden indirebilecek.",
+    "metin": "Wuthering Waves için Steam'e ikinci bir indirme modu eklendi: Fullpackage. Steam'deki resmi duyuruya göre oyunun Steam indirme yöntemi 3.8 sürümünden beri başlatıcı (launcher) moduna dayanıyordu. Bazı oyuncular oyunu doğrudan Steam üzerinden indirip başlatmak istediğini bildirince geliştirici ekip bu seçeneği ekledi. Fullpackage modunda tam paket Steam üzerinden iner ve oyun “Play Wuthering Waves - fullpackage” başlatma seçeneğiyle açılır. Bu modda yalnızca varsayılan Yüksek Çözünürlük (HD) paketi sunuluyor. Varsayılan modda ise cihaz performansına göre grafik kalitesi ve kaynak katmanı seçilebiliyor, böylece disk alanı tasarrufu sağlanabiliyor. Oyun içeriği iki modda aynı, hesap verileri ise ortak. Geçmek için kütüphanede oyuna sağ tıklanıp Özellikler açılır, Game Versions & Betas bölümünden Fullpackage seçilir. Mod değiştirildiğinde diğer modun dosyaları üzerine yazılabilir. Steam, başlatıcıyla indirilmiş kalan kaynakları geçişten sonra elle silmeyi öneriyor."
+   },
+   "en": {
+    "baslik": "Wuthering Waves adds a Fullpackage download mode on Steam",
+    "ozet": "Steam players can now download and launch the full package directly through Steam.",
+    "metin": "Wuthering Waves now has a second download mode on Steam, called Fullpackage, alongside the existing Default mode that runs through the launcher. The official Steam announcement says the Steam download method switched to launcher mode in Version 3.8. Some players, however, preferred downloading and starting the game directly through Steam, so the development team added this option. In Fullpackage mode the complete package downloads through Steam, and the game starts from the launch option “Play Wuthering Waves - fullpackage”. Only the default High-Definition package is offered in this mode. The Default mode lets players choose graphics quality and resource tiers based on their device and disk space. Game content is identical in both modes, and account data is fully shared. To switch, right-click the game in your Library, open Properties, and choose Fullpackage under Game Versions & Betas. Switching modes can overwrite files from the other mode, and launcher downloads may stay on the drive, so Steam recommends deleting them manually after switching."
+   },
+   "es": {
+    "baslik": "Wuthering Waves añade un modo de descarga Fullpackage en Steam",
+    "ozet": "Los jugadores de Steam ya pueden descargar y abrir el paquete completo desde Steam.",
+    "metin": "Wuthering Waves tiene ahora un segundo modo de descarga en Steam, llamado Fullpackage, junto al modo Predeterminado que funciona a través del launcher. Según el anuncio oficial en Steam, desde la versión 3.8 el método de descarga en Steam pasó al modo launcher. Algunos jugadores preferían descargar y abrir el juego directamente desde Steam, así que el equipo de desarrollo añadió esta opción. En el modo Fullpackage, el paquete completo se descarga por Steam y el juego se inicia con la opción “Play Wuthering Waves - fullpackage”. Este modo solo ofrece el paquete predeterminado de Alta Definición. El modo Predeterminado permite elegir la calidad gráfica y los niveles de recursos según el dispositivo y el espacio disponible. El contenido del juego es idéntico en ambos modos y los datos de cuenta se comparten. Para cambiar, haz clic derecho en el juego en la biblioteca, abre Propiedades y elige Fullpackage en Game Versions & Betas. Al cambiar de modo, los archivos del otro podrían sobrescribirse, y los recursos descargados con el launcher pueden quedarse en el disco, así que Steam recomienda borrarlos manualmente después."
+   },
+   "fr": {
+    "baslik": "Wuthering Waves ajoute un mode de téléchargement Fullpackage sur Steam",
+    "ozet": "Les joueurs Steam peuvent désormais télécharger et lancer le pack complet directement depuis Steam.",
+    "metin": "Wuthering Waves propose désormais sur Steam un second mode de téléchargement, appelé Fullpackage, en plus du mode Par défaut passant par le lanceur. D'après l'annonce officielle sur Steam, le mode lanceur a remplacé la méthode de téléchargement Steam à partir de la version 3.8. Certains joueurs voulaient toutefois télécharger et démarrer le jeu directement via Steam, et l'équipe de développement a donc ajouté cette option. En mode Fullpackage, le pack complet est téléchargé via Steam, puis le jeu se lance avec l'option « Play Wuthering Waves - fullpackage ». Ce mode ne propose que le pack Haute Définition par défaut. Le mode Par défaut permet de choisir la qualité graphique et les niveaux de ressources selon l'appareil et l'espace disque. Le contenu du jeu est identique dans les deux modes et les données de compte sont partagées. Pour changer, faites un clic droit sur le jeu dans la bibliothèque, ouvrez les Propriétés et choisissez Fullpackage sous Game Versions & Betas. Changer de mode peut écraser des fichiers de l'autre mode, et les ressources téléchargées via le lanceur peuvent rester sur le disque ; Steam conseille de les supprimer manuellement après le changement."
+   },
+   "de": {
+    "baslik": "Wuthering Waves erhält auf Steam einen Fullpackage-Downloadmodus",
+    "ozet": "Steam-Spieler können das komplette Paket nun direkt über Steam laden und starten.",
+    "metin": "Für Wuthering Waves gibt es auf Steam einen zweiten Downloadmodus namens Fullpackage, neben dem bestehenden Standardmodus über den Launcher. Laut der offiziellen Steam-Ankündigung wurde die Download-Methode auf Steam mit Version 3.8 auf den Launcher-Modus umgestellt. Da einige Spieler das Spiel lieber direkt über Steam herunterladen und starten wollten, hat das Entwicklerteam diese Option ergänzt. Im Fullpackage-Modus wird das vollständige Paket über Steam geladen, und das Spiel startet über die Option „Play Wuthering Waves - fullpackage“. Dieser Modus bietet nur das Standardpaket in High-Definition. Der Standardmodus erlaubt dagegen die Wahl von Grafikqualität und Ressourcenstufen, um Speicherplatz zu sparen. Der Spielinhalt ist in beiden Modi identisch, Kontodaten werden geteilt. Zum Wechseln klicken Sie in der Bibliothek mit der rechten Maustaste auf das Spiel, öffnen die Eigenschaften und wählen unter Game Versions & Betas Fullpackage. Beim Wechsel können Dateien des anderen Modus überschrieben werden; Steam empfiehlt, übrig gebliebene Launcher-Dateien danach manuell zu löschen."
+   },
+   "nl": {
+    "baslik": "Wuthering Waves krijgt Fullpackage-downloadmodus op Steam",
+    "ozet": "Steam-spelers kunnen het volledige pakket nu direct via Steam downloaden en starten.",
+    "metin": "Wuthering Waves heeft op Steam een tweede downloadmodus gekregen, Fullpackage, naast de bestaande standaardmodus via de launcher. Volgens de officiële Steam-aankondiging is de downloadmethode op Steam sinds versie 3.8 overgezet naar de launchermodus. Sommige spelers wilden het spel echter rechtstreeks via Steam downloaden en starten, dus voegde het ontwikkelteam deze optie toe. In de Fullpackage-modus wordt het volledige pakket via Steam gedownload en start je het spel met de startoptie „Play Wuthering Waves - fullpackage“. Deze modus biedt alleen het standaardpakket in High-Definition. In de standaardmodus kun je grafische kwaliteit en resourceniveaus kiezen op basis van je apparaat en opslagruimte. De spelinhoud is in beide modi gelijk en accountgegevens worden gedeeld. Om te wisselen klik je met de rechtermuisknop op het spel in je bibliotheek, open je Eigenschappen en kies je Fullpackage onder Game Versions & Betas. Bij het wisselen kunnen bestanden van de andere modus overschreven worden. Steam raadt aan achtergebleven launcherbestanden daarna handmatig te verwijderen."
+   },
+   "zh": {
+    "baslik": "Wuthering Waves 在 Steam 新增 Fullpackage 下载模式",
+    "ozet": "Steam 玩家现在可以直接通过 Steam 下载并启动完整安装包。",
+    "metin": "Wuthering Waves 在 Steam 上新增了第二种下载模式“Fullpackage”，与原有的启动器默认模式并存。据 Steam 官方公告，自 3.8 版本起，Steam 版的下载方式已切换为启动器模式。但部分玩家希望直接通过 Steam 下载并启动游戏，开发团队因此增加了这一选项。Fullpackage 模式会通过 Steam 下载完整安装包，并需选择“Play Wuthering Waves - fullpackage”启动游戏。该模式仅提供默认的高清（HD）安装包。默认模式则可以根据设备性能选择画质和资源档位，节省存储空间。两种模式的游戏内容相同，账号数据互通。切换方法是在库中右键点击游戏，进入属性，在 Game Versions & Betas 中选择 Fullpackage。需要注意，切换模式可能覆盖另一模式已下载的文件，启动器下载的资源也可能残留在硬盘上，官方建议切换后手动删除。"
+   }
+  },
+  "otomasyon": {
+   "konu": "wuthering-waves-steam-fullpackage-modu-2026-11-18",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/3513350/view/690900570100203611",
+   "teyit_zamani": "2026-11-18T11:10:02+00:00",
+   "oyuncuya_fayda": "Steam'deki oyuncular tam paketi doğrudan Steam üzerinden indirip başlatabilir.",
+   "hype": 4,
+   "eklenme": "2026-11-18T14:16:28.292858+03:00"
+  }
+ },
+ {
+  "id": "war-thunder-pce-842-coastal-defender-2026-11-16",
+  "oyun": "War Thunder",
+  "tarih": "2026-11-16",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam resmî duyuru",
+    "url": "https://store.steampowered.com/news/app/236390/view/681892966116098330"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "PCE-842, Coastal Defender etkinliğiyle geliyor",
+    "ozet": "Deniz savaşlarında görev puanı toplayan oyuncular aşamaları ve ödülleri açabilir.",
+    "metin": "War Thunder'ın Steam'deki resmî duyurusuna göre Coastal Defender etkinliği 18 Kasım'da 11:00 GMT'de başlıyor ve 2 Aralık'ta 11:00 GMT'de sona eriyor. Oyuncular Deniz Savaşları'nda görev puanı kazanıp aşamaların kilidini açıyor ve ABD Sahil Güvenlik bayrağı ile temalı çıkartmalar gibi ödüller alıyor. Her aşama 35.000 görev puanı gerektiriyor; yedi aşamayı tamamlayan oyuncu PCE-842 için devredilemez bir kupon kazanıyor. PCE-842, ABD kıyı filosu için IV. rütbeli bir etkinlik gemisi; baş tarafında 76 mm top, altı adet 40 mm Bofors, dört adet 20 mm Oerlikon ve derinlik bombası taşıyor. Görev puanları III. rütbe ve üzeri araçlarla Arcade ve Realistic savaşlarda kazanılabiliyor. Kuponu pazarda satmak isteyenler için 600.000 görev puanına alınabilen 'Upgrade for coupon' eşyası gerekiyor; bu eşya 4 Aralık 11:00 GMT'ye kadar geçerli."
+   },
+   "en": {
+    "baslik": "PCE-842 arrives with the Coastal Defender event",
+    "ozet": "Earn mission points in Naval Battles to unlock stages and rewards.",
+    "metin": "According to the official War Thunder announcement on Steam, the Coastal Defender event runs from November 18 (11:00 GMT) to December 2 (11:00 GMT). Players earn mission points in Naval Battles, unlock stages and collect rewards, including a US Coast Guard flag and themed decals. Each stage requires 35,000 mission points, and completing seven stages earns a non-tradable PCE-842 coupon. The PCE-842 is a Rank IV event vessel for the US coastal fleet, armed with a 76 mm bow gun, six 40 mm Bofors, four 20 mm Oerlikons and depth charges. Mission points can be earned in Arcade and Realistic Battles at Rank III or above. To sell the coupon on the Market, players need the 'Upgrade for coupon' item, which costs 600,000 mission points and is valid until December 4 (11:00 GMT)."
+   },
+   "fr": {
+    "baslik": "Le PCE-842 arrive avec l'événement Coastal Defender",
+    "ozet": "Gagnez des points de mission en batailles navales pour débloquer étapes et récompenses.",
+    "metin": "D'après l'annonce officielle de War Thunder sur Steam, l'événement Coastal Defender se déroule du 18 novembre (11:00 GMT) au 2 décembre (11:00 GMT). Les joueurs gagnent des points de mission dans les batailles navales, débloquent des étapes et reçoivent des récompenses, dont un pavillon de la garde côtière américaine et des décalcomanies à thème. Chaque étape demande 35 000 points de mission ; sept étapes donnent un coupon non échangeable pour le PCE-842. Ce navire d'événement de rang IV pour la flotte côtière américaine embarque un canon de 76 mm à l'avant, six Bofors de 40 mm, quatre Oerlikon de 20 mm et des grenades anti-sous-marines. Les points se gagnent en batailles arcade et réalistes à partir du rang III. Pour revendre le coupon, il faut l'objet « Upgrade for coupon », à 600 000 points de mission, valable jusqu'au 4 décembre (11:00 GMT)."
+   },
+   "es": {
+    "baslik": "PCE-842 llega con el evento Coastal Defender",
+    "ozet": "Gana puntos de misión en batallas navales para desbloquear etapas y recompensas.",
+    "metin": "Según el anuncio oficial de War Thunder en Steam, el evento Coastal Defender se celebra del 18 de noviembre (11:00 GMT) al 2 de diciembre (11:00 GMT). Los jugadores obtienen puntos de misión en las batallas navales, desbloquean etapas y reciben recompensas, como una bandera de la Guardia Costera de EE. UU. y calcomanías temáticas. Cada etapa exige 35.000 puntos de misión, y completar siete etapas da un cupón no transferible del PCE-842. Este barco de evento de rango IV para la flota costera estadounidense lleva un cañón de proa de 76 mm, seis Bofors de 40 mm, cuatro Oerlikon de 20 mm y cargas de profundidad. Los puntos se obtienen en batallas arcade y realistas desde el rango III. Para poner el cupón a la venta hace falta el objeto 'Upgrade for coupon', que cuesta 600.000 puntos de misión y es válido hasta el 4 de diciembre (11:00 GMT)."
+   },
+   "de": {
+    "baslik": "PCE-842 kommt mit dem Coastal-Defender-Event",
+    "ozet": "Missionspunkte in Seeschlachten sammeln, Stufen und Belohnungen freischalten.",
+    "metin": "Laut der offiziellen Ankündigung von War Thunder auf Steam läuft das Coastal-Defender-Event vom 18. November (11:00 GMT) bis zum 2. Dezember (11:00 GMT). Spielerinnen und Spieler sammeln Missionspunkte in Seeschlachten, schalten Stufen frei und erhalten Belohnungen wie eine Flagge der US-Küstenwache und passende Abziehbilder. Jede Stufe kostet 35.000 Missionspunkte; wer sieben Stufen schafft, erhält einen nicht handelbaren Gutschein für die PCE-842. Das Eventschiff vom Rang IV für die US-Küstenflotte trägt ein 76-mm-Buggeschütz, sechs 40-mm-Bofors, vier 20-mm-Oerlikon und Wasserbomben. Punkte gibt es in Arcade- und Realistic-Gefechten ab Rang III. Um den Gutschein handelbar zu machen, braucht man das Item „Upgrade für Gutschein“ für 600.000 Missionspunkte, gültig bis zum 4. Dezember (11:00 GMT)."
+   },
+   "nl": {
+    "baslik": "PCE-842 komt met het Coastal Defender-evenement",
+    "ozet": "Verdien missiepunten in zeeslagen om fases en beloningen vrij te spelen.",
+    "metin": "Volgens de officiële aankondiging van War Thunder op Steam loopt het Coastal Defender-evenement van 18 november (11:00 GMT) tot 2 december (11:00 GMT). Spelers verdienen missiepunten in zeeslagen, ontgrendelen fases en krijgen beloningen, zoals een vlag van de Amerikaanse kustwacht en thematische stickers. Elke fase kost 35.000 missiepunten; wie zeven fases voltooit, krijgt een niet-verhandelbare coupon voor de PCE-842. Dit evenementschip van rang IV voor de Amerikaanse kustvloot heeft een 76 mm kanon op de boeg, zes 40 mm Bofors, vier 20 mm Oerlikons en dieptebommen. Punten worden in Arcade- en Realistic-gevechten vanaf rang III verdiend. Om de coupon te kunnen verkopen, is het item 'Upgrade voor coupon' nodig; dat kost 600.000 missiepunten en is geldig tot 4 december (11:00 GMT)."
+   },
+   "zh": {
+    "baslik": "PCE-842 随 Coastal Defender 活动登场",
+    "ozet": "在海战中赚取任务点数，解锁阶段与奖励。",
+    "metin": "根据 War Thunder 在 Steam 上发布的官方公告，Coastal Defender 活动将于 11 月 18 日（GMT 11:00）开始，至 12 月 2 日（GMT 11:00）结束。玩家可在海战中赚取任务点数，解锁各个阶段并领取奖励，包括美国海岸警卫队旗帜和主题贴花。每个阶段需要 35,000 任务点数，完成七个阶段即可获得一张不可交易的 PCE-842 兑换券。PCE-842 是面向美国沿岸舰队的 IV 级活动舰艇，船首配备 76 毫米火炮、六门 40 毫米博福斯炮、四门 20 毫米厄利空炮，并可投放深水炸弹。III 级及以上载具在街机与拟真战斗中均可赚取任务点数。若想将兑换券上架交易，需要“兑换券升级”道具，该道具需 600,000 任务点数，有效期至 12 月 4 日（GMT 11:00）。"
+   }
+  },
+  "otomasyon": {
+   "konu": "war-thunder-pce-842-coastal-defender-2026-11-16",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/236390/view/681892966116098330",
+   "teyit_zamani": "2026-11-18T14:10:02+03:00",
+   "oyuncuya_fayda": "Oyuncular PCE-842 kuponunun nasıl kazanılacağını ve 600.000 puanlık yükseltmenin son tarihini öğrenip aşamaları planlayabilir.",
+   "hype": 4,
+   "eklenme": "2026-11-18T14:16:28.292858+03:00"
+  }
+ },
+ {
   "id": "mahjong-soul-frieren-collab-2026-11-18",
   "oyun": "Mahjong Soul",
   "tarih": "2026-11-18",
