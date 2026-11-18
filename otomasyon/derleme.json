@@ -1,0 +1,31 @@
+{
+  "_not": "Derleme aracı ayarı (tools/klip_derleme.py). Anlamlar ve ölçümler: otomasyon/DERLEME.md. Burada yazılmayan her ayar koddaki varsayılanı alır. shorts_kaynaklari: {ad, tur: kanal|etiket|arama|url, hedef, kac (listelenecek video), gun (isteğe bağlı: bu kaynak için yaş sınırı), uzun (ele|kirp)}. YouTube Shorts anahtarsız ve çerezsiz çalışır ama yalnız bu bilgisayardan (ev IP'si); veri merkezi sunucusu YouTube bot engeline takılır. Reddit/TikTok/Instagram/X anahtarsız çalışmıyor (ölçüldü), eklenmedi.",
+  "ayar": {
+    "seri_adi": "Yayın Kolajı",
+    "filigran_yazi": "CTRL+A GAME",
+    "sure_dk": 11,
+    "sure_min_dk": 10,
+    "sure_max_dk": 12,
+    "fps": 30,
+    "yayinci_basina_viral": 2,
+    "gun": 7,
+    "viral_gun": 90,
+    "viral_min_izlenme": 100000,
+    "viral_min_sn": 5,
+    "viral_max_sn": 15,
+    "izleyici_min_izlenme": 5,
+    "ek_kick_kanallari": [],
+    "baglantilar": [],
+    "shorts_kaynaklari": [
+      {"ad": "etiket-komik", "tur": "etiket", "hedef": "komik", "kac": 30},
+      {"ad": "etiket-mizah", "tur": "etiket", "hedef": "mizah", "kac": 30},
+      {"ad": "etiket-kesfet", "tur": "etiket", "hedef": "kesfet", "kac": 30},
+      {"ad": "etiket-komedi", "tur": "etiket", "hedef": "komedi", "kac": 30},
+      {"ad": "jahrein-shorts", "tur": "kanal", "hedef": "https://www.youtube.com/channel/UCfo8l0mgO_eleaditz0EClA/shorts", "kac": 15},
+      {"ad": "wtcn-shorts", "tur": "kanal", "hedef": "https://www.youtube.com/channel/UCFK97P1mRAY9tQ2PUDjubEA/shorts", "kac": 15},
+      {"ad": "eray-shorts", "tur": "kanal", "hedef": "https://www.youtube.com/channel/UCv1quKbtp1HLqoBbv3g2oIQ/shorts", "kac": 15},
+      {"ad": "kemalcan-shorts", "tur": "kanal", "hedef": "https://www.youtube.com/channel/UCTPyakN5CEST9lgz-Q6p8uA/shorts", "kac": 15},
+      {"ad": "tolunay-shorts", "tur": "kanal", "hedef": "https://www.youtube.com/channel/UCssA44vdQ0dNEMHrpa8iC9Q/shorts", "kac": 15}
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 # Yayın klip hattı
 
-Biten bir yayının (ya da `canli` komutuyla **süren** yayının) sohbetinden 9:16 dikey klip paketi üretir. **Yayın yapmaz**: sosyal kuyruğa kayıt eklemez, hiçbir yere yüklemez. Çıktıyı (mp4 + json) sen incelersin.
+Biten bir yayının (ya da `canli` komutuyla **süren** yayının) sohbetinden ve isteğe bağlı konuşma dökümünden 9:16 dikey klip paketi üretir. **Yayın yapmaz**: sosyal kuyruğa kayıt eklemez, hiçbir yere yüklemez. Çıktıyı (mp4 + json) sen incelersin.
 
 Araç: `tools/yayin_klip.py` · yayıncı listesi: `otomasyon/klip-yayincilar.json` · testler: `py -m unittest discover -s tests -p "test_yayin_klip.py"`
 
@@ -22,7 +22,7 @@ py tools/yayin_klip.py canli --kanal wtcn --kuru # yalnız sohbeti indir + anali
 
 ## Nasıl çalışır
 
-Varsayılan yöntem **sinyal** (`yontem: sinyal`, 2026-11-17). Hedef: "sohbet kalabalık" değil "sohbet güldü / aynı konuda toplandı" anını bulmak. Model çağrısı yok, yalnız standart kütüphane; bütün listeler ve eşikler `klip-yayincilar.json` içindedir.
+Varsayılan yöntem **sinyal** (`yontem: sinyal`, 2026-11-17). Hedef: "sohbet kalabalık" değil "sohbet güldü / aynı konuda toplandı" anını bulmak. Bu bölüm konuşmasız yöntemi anlatır: model çağrısı yok, yalnız standart kütüphane; bütün listeler ve eşikler `klip-yayincilar.json` içindedir.
 
 1. **Mesaj sınıfı.** Sohbet 10 sn'lik dilimlere ayrılır; her mesaj tek tek sınıflanır:
    - *gürültü* (kahkaha sayılmaz, dilimin `gurultu_oran`ına girer): **komut** (`!` ile başlayan), **oy** (tek karakter, yalnız rakam/noktalama, ya da `oy_kelimeleri`: evet, hayır, katıl…), **emote yağmuru** (yazısız, yalnız dans/alkış sınıfı emote'lar: `emote_gurultu`). Ayrıca **yayılma** (aynı metnin kopyası: ≥12 karakter, ≥3 kelime, ≥6 farklı kişi) kahkaha ve yoğunluk sayımına girmez; yalnız konu bileşenine yarım ağırlıkla (`yayilma_konu_agirlik` 0.5) girer.
@@ -37,7 +37,7 @@ Varsayılan yöntem **sinyal** (`yontem: sinyal`, 2026-11-17). Hedef: "sohbet ka
 3. **Zirve koşulu.** Dilim ancak (a) gülen kişi sayısı `max(gulme_min_kisi 6, ortalama + gulme_esik_k·std)` eşiğini ve gülen mesaj oranı `gulme_min_oran` (0.15) değerini geçerse ya da (b) ortak konu bulunursa aday olur; en az `min_sinyal_mesaj` (10) gürültüsüz mesaj gerekir. Gürültü oranı ≥ `max_gurultu_oran` (0.5) olan dilim **`oy_seli`** diye elenir (aday olacaktı ya da eski eşiği geçiyordu). Kalan adaylara eski **zayıf zirve elemesi** yine uygulanır (`min_farkli_kullanici` 25, `min_emote_disi_oran` 0.25); elenenler analiz JSON'unda `elenen_zirveler` altında nedeniyle durur.
 4. **Klip başlangıcı.** Kahkaha olaydan *sonra* gelir; referans kahkaha dalgasının **başladığı dilimdir**: ilk uygun dilimden geriye en çok `dalga_geri_azami_dilim` (3) dilim yürünür, sinyal eşiğin `dalga_geri_oran` (0.4) katının üstünde kaldığı sürece. Klip dalga başından **`onceden_sn` (20) önce** başlar, son zirve diliminden `kuyruk_sn` (12) sonra biter, 30–55 sn arası kalır. `klip_baslangic: tepe` eski davranıştır (en yüksek dilimin 20 sn öncesi). Dalga başı paket JSON'unda `dalga_basi_sn`.
 5. Yayın başına en çok `azami_klip` (3) klip, birbiriyle örtüşmeyen, toplam puanı en yüksek olanlar; çıktı zamana göre sıralı. Yayının ilk 5 dk'sı (`bas_dislama_sn`) ve son 3 dk'sı (`son_dislama_sn`) sayılmaz.
-6. **Başlık/açıklama** hâlâ sabit şablon (model yok) ama baskın sinyale göre seçilir: `gulme` → sohbetin güldüğünü söyleyen ölçülü şablonlar; `konu` ve terim varsa → o terimli konu şablonu; baskın sinyal yoksa (eski yöntem) eski şablonlar. Paket JSON'una `baskin_sinyal`, `puan_bilesenleri` (G/K/Y puanı, kişi sayıları, gürültü dökümü), `dalga_basi_sn` yazılır.
+6. **Konuşmasız başlık/açıklama** sabit şablon ama baskın sinyale göre seçilir: `gulme` → sohbetin güldüğünü söyleyen ölçülü şablonlar; `konu` ve terim varsa → o terimli konu şablonu; baskın sinyal yoksa (eski yöntem) eski şablonlar. Paket JSON'una `baskin_sinyal`, `puan_bilesenleri` (G/K/Y puanı, kişi sayıları, gürültü dökümü), `dalga_basi_sn` yazılır.
 
 ### Eski yöntem (`yontem: yogunluk`)
 
@@ -177,6 +177,19 @@ Not: `asmonSmash` (278) hiçbir listede yok, nötr kalır. `HYPERCLAP` alkış o
 | canli_min_puan | 0.0 | `canli`: bu puanın altındaki zirve kesilmez |
 | canli_sohbet_butce_sn | 240 | `canli`: tur başına sohbet indirme süre bütçesi |
 | canli_sohbet_marj_sn | 20 | `canli`: sohbetin en yeni bu kadar sn'si indirilmez (yazılıyor olabilir) |
+| konusma | false | konuşma katmanı; `--konusmasiz` ile tek çalıştırmalık kapatılır |
+| konusma_model / konusma_kucuk_model | large-v3-turbo / small | tercih edilen ASR ve bellek/GPU hatasındaki yedek |
+| konusma_cihaz | auto | `auto`, `cuda`, `cpu`; GPU yoksa küçük model CPU int8 |
+| konusma_parca_sn / konusma_aday_parca_sn | 300 / 60 | tam döküm / aday için önbellek ızgarası; her iki yanda 15 sn bağlam |
+| konusma_aday_sayisi / konusma_canli_aday_sayisi | 15 / 6 | bitmiş yayın / tek canlı turda değerlendirilecek aday sayısı |
+| konusma_tam_tarama | true | bitmiş yayında ve GPU varken tam döküm taraması |
+| konusma_pencere_sn / konusma_ortusme_sn | 240 / 45 | modelin tam tarama penceresi ve örtüşmesi |
+| konusma_agirlik_sohbet / konusma_agirlik_icerik | 0.35 / 0.65 | birleşik 0–100 puan; konuşmanın 0–10 puanı önce 10 ile çarpılır |
+| konusma_min_puan | 6.0 | bunun altındaki veya `anlasilir:false` yargılı aday elenir |
+| konusma_azami_sn | 59 | cümle sınırlarıyla klip üst süresi; kod 59 sn'den yukarı çıkmaz |
+| konusma_yargi_model | sonnet | mevcut haber model ayarındaki tercih edilen model adı |
+| konusma_model_ayari | otomasyon/modeller.json | haber hattıyla ortak model taşıması/komutları |
+| konusma_bulut | true | mevcut haber bulut modelinin seçilmesine izin ver; yeni servis/anahtar yok. `konusma:false` iken hiçbir çağrı yapılmaz |
 
 ## Dosyalar (hepsi depo dışında)
 
@@ -187,7 +200,7 @@ Taban klasör: Windows `C:\Cihan.Ai\.scratch\yayin-klip\`, Linux `~/.local/share
 - `sohbet/`: indirilen sohbet (yarım kalırsa `.part.jsonl`'den devam eder; `canli` turları da buraya yazar, yayın bitince `tara`/`kes` aynı dosyadan sürer). Önbellek sürüm 2: her mesajla gönderen kimliği de saklanır (farklı kişi sayısı için). Gönderensiz eski (sürüm 1) önbellek geçersizdir, yeniden indirilir.
 - `analiz/`: zirve JSON'u. `cikti/<yayinci>-<tarih>-<kısa id>/klip-NN.mp4` + `klip-NN.json` (yayıncı, platform, VOD ve zaman damgalı bağlantı, oyun, puan, önerilen başlık ve açıklama; açıklama yayıncıyı anar ve kanalına bağlanır; `yayinlandi: false`).
 
-Başlık ve açıklama sabit şablonlardan gelir (model çağrısı yok).
+Konuşma yargısı geçerliyse başlık ve açıklama klipte anlatılan olaydan gelir; model yoksa eski şablonlar kullanılır. Paket JSON’unda konuşma puanı, gerekçesi, kaynakları ve klip aralığının döküm metni bulunur.
 
 ## Platform durumu
 
@@ -214,8 +227,8 @@ Kick sohbet sınırları: pencere başına 25 mesaj (araç kalanı devam sorgusu
 
 - Kick VOD adresine `?t=<sn>` eklemek belgelenmemiş; paket JSON'unda `vod_zaman_damgali_url_dogrulandi: false`. Açıklamada güvenli olan "yayının M:SS noktası" yazısı kullanılır.
 - Yayıncıların görüntüsünü yeniden paylaşmanın izin/telif durumu araçtan bağımsız bir karardır: yayınlamadan önce yayıncılardan izin alınması önerilir.
-- Sohbeti olmayan/çok seyrek yayınlarda zirve çıkmaz (klip üretilmez).
-- **Yalnız sohbetle sınırlı:** sinyaller sohbetin tepkisini ölçer, yayında olanı değil. Sohbet güldüğünde gülünç olan şey bazen yalnız iç şaka ya da bir izleyici didişmesidir (Kemalcan 22:00 "sınırda"); sohbetin sustuğu ama yayının çok güldüğü anlar kaçar. Sohbet tabanlı vurgu yakalama literatürü de ses+görüntüyle birleşik yönteme göre daha zayıf sonuç bildirir.
+- Konuşmasız kipte sohbeti olmayan/çok seyrek yayınlarda zirve çıkmaz. GPU ile tam döküm taraması sohbetten bağımsız aday da üretebilir; CPU ve canlı kipte yalnız sohbet adayları doğrulanır.
+- **Konuşmasız kip yalnız sohbetle sınırlı:** sinyaller sohbetin tepkisini ölçer, yayında olanı değil. Sohbet güldüğünde gülünç olan şey bazen yalnız iç şaka ya da bir izleyici didişmesidir (Kemalcan 22:00 "sınırda"); sohbetin sustuğu ama yayının çok güldüğü anlar kaçar. Sohbet tabanlı vurgu yakalama literatürü de ses+görüntüyle birleşik yönteme göre daha zayıf sonuç bildirir.
 - **Veri azlığı:** eşikler ve emote listeleri iki yayına (biri Just Chatting, biri oyun) bakılarak seçildi. Üçüncü bir yayıncıda yeniden bakılmalı; özellikle farklı dilli ya da farklı emote kültürlü sohbetlerde.
 - **Kopyala-yapıştır seli ağırlığı** (`yayilma_konu_agirlik` 0.5) veriyle desteklenmiyor: Kemalcan'da ≥4 kişilik yayılma yok, Eraycan'da en çok 6–8 kişilik. Sel zaten kahkaha ve yoğunluktan sayılmıyor; konuya yarım kredi verilmesi tahmindir.
 - **`min_farkli_kullanici` 25**, 17–24 kişilik sınırda kahkaha anlarını eler (Kemalcan'da 6 zirve). Küçük sohbetli yayıncıda yayıncı bazında düşürülmeli (`ayar` içinde).
@@ -235,5 +248,221 @@ Soru: sesin yükselmesi ikinci bir sinyal olarak kullanılabilir mi? Gerçek öl
 | 20:00'den 10 dk, 160p akış | −19.9 | – | 2.5 sn |
 
 - **Maliyet:** HLS ana listesinde yalnız-ses akışı yok (çeşitler 1080p60 … 160p, hepsi görüntülü); ses için en ucuz çeşit 160p (≈230 kbit/sn). 10 dk = 2.5 sn ⇒ 139 dk'lık yayın ≈ 35 sn, indirme ≈ 240 MB (hesap: bant genişliği × süre). 1080p60 akışta 60 sn = 1.2 sn, bütün yayın ≈ 3 dk ama ≈ 3.5 GB.
-- **Yapılabilir ve ucuz.** Önerilen biçim: 160p akıştan `ebur128` ile 10 sn'lik kısa dönem yüksekliği → yayının kendi dağılımına göre z puanı → dördüncü sinyal ("ses sıçraması"), özellikle sohbet sessiz yayıncılar için yedek.
+- **Yapılabilir ve ucuz; aday üretici olarak henüz etkin değil.** Denenebilecek biçim: 160p akıştan `ebur128` ile 10 sn'lik kısa dönem yüksekliği → yayının kendi dağılımına göre z puanı → dördüncü sinyal ("ses sıçraması"), özellikle sohbet sessiz yayıncılar için yedek.
 - **Henüz kanıt yok:** iki pencerelik ölçümde kahkaha anı zirve olmayan andan *daha yüksek değildi* (−20.7 vs −18.4 LUFS); bu tek örnek bir şey ispatlamaz, ama sesin tek başına güvenilir olmadığına işaret eder (konuşma düzeyi ve oyun müziği baskın olabilir). Koda eklemeden önce en az 10 işaretli klip anıyla (ses z puanı ↔ insan değerlendirmesi) denenmeli.
+
+## Konuşma katmanı (2026-11-18)
+
+Kod: `tools/klip_konusma.py`; bütünleşme: `analiz`, `kes`, `otomatik`, `canli`. Yalnız döküm/yargı görmek için `analiz` kullanılır; kesim veya yayın yapmaz. `--konusma` tek çalıştırmalık açık denemedir; `--konusmasiz` eski sohbet akışıdır; `yontem:yogunluk` konuşma ayarı açık olsa bile eski yöntemi seçer. Kod varsayılanı kapalıdır; proje ayarı yukarıdaki tabloda gösterilir.
+
+### Kurulum ve cihaz
+
+Windows 11 / Python 3.12 kullanıcı düzeyinde denenmiş kurulum:
+
+```powershell
+py -m pip install --user faster-whisper==1.2.1 av==16.1.0 nvidia-cublas-cu12 nvidia-cudnn-cu12
+py -m unittest discover -s tests -p "test_klip_konusma.py"
+```
+
+Deneme sürümleri: CTranslate2 4.9.0, cuBLAS 12.9.2.10, cuDNN 9.28.1.4, NVIDIA sürücü 621.24. İlk model çalıştırması açık model ağırlıklarını Hugging Face önbelleğine indirir; sonraki çağrılar yereldir. **Tuzak:** otomatik gelen PyAV 19.0.2, faster-whisper 1.2.1'in `metadata_errors` parametresini kabul etmedi; PyAV 16.1.0 ile düzeldi. Windows'ta NVIDIA pip DLL klasörleri yalnız ASR alt sürecinin PATH/DLL arama yoluna eklenir, kalıcı sistem ayarı değiştirilmez. Resmî bağımlılık açıklaması: [faster-whisper README](https://github.com/SYSTRAN/faster-whisper#gpu) (18.11.2026).
+
+ASR `int8_float16` ile GPU'da, `int8` ile CPU'da çalışır. GPU denemesi → küçük model GPU → küçük model CPU sırası bellek/CUDA hatasında geri düşer. ASR ayrı süreçtedir; CUDA'nın süreç sonlandıran hatası ana klip hattını düşürmez. Whisper'dan önce Ollama'daki yüklü modeller `keep_alive:0` ile boşaltılır; servis kapatılmaz. Önce bütün ASR, sonra bütün dil modeli çağrıları yapılır: 6 GB VRAM'de iki model aynı anda tutulmaz.
+
+Linux ARM için kod yolu `konusma_cihaz:cpu`, `konusma_kucuk_model:small`; CPU otomatik kipinde bütün yayın taranmaz, yalnız sohbet adayları dökülür. Sunucuya paket kurulmadı ve ARM'da ASR çalıştırılmadı; Python bağımlılıklarının o mimaride kurulabilirliği ayrıca doğrulanmalı. Windows CPU denemesi aşağıdadır.
+
+### Önbellek ve seçim
+
+`dokum/kick-<uuid>/ses/` içinde 16 kHz mono PCM WAV bulunur. Ana HLS listesinin en düşük bant genişlikli çeşidi seçilir: denenen Kick yayınında 160p, 230.000 bit/sn, yalnız-ses çeşidi yoktur. Tam döküm 300 sn, CPU/canlı adayları 60 sn ızgaraya oturur; her parçanın iki yanında 15 sn bağlam indirilir. Aynı parçayı isteyen örtüşen adaylar yeniden indirme/döküm yapmaz. Döküm modeli/cihazı, parça boyu, algoritma sürümü ve HLS başlangıç saati imzaya dahildir. Tamamlanmış her parça atomik JSON'dur; yarım kalan parçadan sürer. Segment ve kelime zamanları, sözcük olasılığı ve konuşma-yok olasılığı `.worker.json` içinde; yayının mutlak saniyesindeki sözcükler parça JSON'undadır. `--yeniden` analizi yeniden hesaplar, geçerli ses/döküm/yargı önbelleğini silmez.
+
+Sohbetten son üç yerine en iyi 15 örtüşmeyen aday alınır. Her adaya bağlamıyla cümle ID'leri verilir; dil modeli 0–10 puan, anlaşılabilirlik, kısa gerekçe, olayın ilk/son cümlesi ve somut Türkçe başlık döndürür. Serbest metinden JSON avlanmaz; yalnız nesne veya tek JSON kod çiti kabul edilir. Şema bozuksa bir kez yeniden istenir; ikinci hata o adayı konuşma puansız bırakır. Geçerli yargı veremeyen modellerin ortam hataları kalıcı yargı önbelleğine yazılmaz.
+
+Bitmiş yayında GPU varsa 240 sn pencereler, 45 sn örtüşmeyle ayrıca taranır (en çok üç olay/pencere). Birbirinin kısa aralığının en az yarısını kaplayan adaylar tek olaya iner, en yüksek sohbet puanı korunur. Tam tarama sohbetin kaçırdığı aday üretebilir; görsel olayı görmez. Son puan `100 × (0.35 × sohbet/100 + 0.65 × konuşma/10)`; ağırlıklar normalize edilir. Konuşma puanı <6 veya `anlasilir:false` ise sohbet puanı ne olursa olsun elenir. Yargı yoksa eski sohbet puanı korunur; hiçbir çağrı/yargı yapılamazsa raporda **konuşma katmanı kapalı** ve neden yazar, sohbet yöntemiyle devam edilir.
+
+Cümleler segment sınırından değil zaman damgalı kelimelerdeki `.?!…` işaretlerinden kurulur. Tam cümle başlangıç/bitişleri aranır; önce 30–55 sn denenir, yalnız gerekirse ayardaki 59 sn'ye esner. 350 ms ses payı da üst sınıra dahildir (üst süreye sığdığı kadar). Olay 59 sn'ye sığmıyorsa veya tam cümle çifti yoksa aday kesilmez. Noktalama ASR'nin tahminidir; konuşmacı ayrımı, üst üste konuşma ve gerçek sözdizimsel cümle sonu garantisi değildir.
+
+Dil modeli taşıması haber hattının `model_ayari` ve `Hat.model` işlevleridir; `Hat.__init__` veya haber iş akışı çalıştırılmaz. Aynı `otomasyon/modeller.json` kullanılır. Ölçümde yerel modeller yetersiz bulunduğu için tercih mevcut haber yazar ayarındaki `sonnet` oldu; `konusma_bulut:true` bunu etkinleştirir. Yalnız adı seçilen model çağrılır; başarısız kalite ölçümü olan modele sessiz geri düşme yapılmaz. Sonnet çağrılamazsa sohbet yöntemi sürer. Yargıda araçlar ve MCP/kasa erişimi kapatılır; haber araştırmasının yetkileri taşınmaz (yerel Claude CLI yardımındaki `--tools ""` ile). `konusma_bulut:false` ile bulut modeli çağrılmaz; `konusma:false` ile tüm katman kapalıdır. Yeni servis/anahtar eklenmedi; mevcut Claude CLI oturumu kullanılır, bunun var olan plan kotasına etkisi vardır. Haber dosyaları, sosyal kuyruk, git ve site değişmez.
+
+### Canlı kip
+
+Yalnız kapanmış dalgaların aday çevresi dökülür; canlıda tam tarama yapılmaz. Böylece her 5–10 dakikalık tek turda geçmiş yayının tamamı yeniden işlenmez. 60 sn ızgara ve 15 sn bağlam nedeniyle tek adayın indirdiği/döktüğü süre önerilen yaklaşık 60 sn pencereden bir miktar geniş olabilir. Son 60 sn ses ızgarası ve 15 sn bağlam henüz kapanmamışsa aday sonraki tura bırakılır; kısmi kuyruk tamamlanmış önbellek sayılmaz. Yargıdan sonra cümleye oturan aralık için kapalı-dalga ve daha önce kesilmiş epoch aralığı denetimi tekrar yapılır. Mevcut `canli.kilit`, kesim başına durum kaydı ve yarım klibi reddetme korunur. Tur raporunda `tur_sn`, konuşma raporunda ASR/indirme/model çağrı süreleri yer alır.
+
+### İlk ASR ölçümü (gerçek yayın, 18.11.2026)
+
+Kemalcan 15.11, aynı 1200–1800 sn / 600 sn ses. RTX 3060 Laptop 6 GB, 31 GB RAM, Python 3.12. GPU öncesi Ollama boşaltıldı. Hız sütunu yalnız döküm süresinden, model yükleme ayrı; ilk ağırlık indirme dahil değil.
+
+| Model / cihaz | Döküm | Yükleme | Hız | Tepe toplam VRAM |
+|---|---:|---:|---:|---:|
+| large-v3-turbo / GPU int8_float16 | 34.141 sn | 9.406 sn | 17.57× | 3116 MiB (önce 722) |
+| small / GPU int8_float16 | 46.969 sn | 6.281 sn | 12.77× | 2540 MiB (önce 722) |
+| small / CPU int8, 4 iş parçacığı | 131.671 sn | 7.407 sn | 4.56× | ASR CPU'da; eşzamanlı başka GPU işi olduğundan toplam VRAM kıyaslanmaz |
+
+Aynı 10 dk'yı 160p'den WAV'a indirme 15.859 sn; master bant değerinden hesaplanan trafik 17.25 MB. Yalın 2 saatlik akış 207 MB; 300 sn ızgaradaki 15+15 sn bağlam yaklaşık %10 ek indirme/döküm getirir. 2 saatlik dökümün bu kısa örnekten düz hesabı turbo GPU 6.83 dk, small GPU 9.39 dk, small CPU 26.33 dk; model yükleme, her parçada süreç başlatma, ağ ve dil modeli çağrıları dahil değildir. Tam hat süreleri ayrıca ölçülür; bunlar bitmiş yayın ölçümü diye okunmamalıdır.
+
+İki dökümün ilk 20 segmenti metin üzerinden yan yana incelendi. Turbo `Salçalı makarna. Çok güzel.` ve `Tamam et al yapıyorum.` yazarken small `Sağ ol, çalamakarla.` ve `Tamam, et almıyor, püüüüm.` üretti. İkisinde de `Neredesin aşkım sen?`, `Aşkım bugün bize ne yemek yapıyorsun bakalım ya?` ve çalışmaya inanılmadığı konuşması korunuyor. Turbo da `Et almıyorum çevre`, `Ahmadiko` gibi belirsiz/hatalı ifadeler üretiyor. Seçim: daha hızlı ve bu örnekte daha okunaklı **large-v3-turbo**; bu, elle dinlenmiş referans/WER ölçümü değildir. Döküm bir olayın geçtiğinin tek başına kesin kanıtı sayılmaz.
+
+Aynı parçadaki ilk konuşmadan 15 cümle/ifade, metinlerin elle karşılaştırması (ses referansına göre doğruluk puanı değildir):
+
+| Yaklaşık yayın zamanı | Turbo | Small | Metin üzerinden yargı |
+|---|---|---|---|
+| 20:00 | Neredesin aşkım sen? | Neredesin aşkım sen? | aynı |
+| 20:02 | Mutfak. | Hıhı. | farklı; sonraki cümle mutfağa işaret ediyor |
+| 20:03 | Mutfakta oturuyor. | Mutfakta hatırıya. | turbo daha anlaşılır |
+| 20:04 | Aşkım bugün bize ne yemek yapıyorsun bakalım ya? | aynı cümle | aynı |
+| 20:10 | Salçalı makarna. | Sağ ol, çalamakarla. | turbo anlamlı yemek adı |
+| 20:12 | Çok güzel. | Çok güzel. | aynı |
+| 20:15 | Aşkım bu şeylere ne zaman başlayacaksın böyle hani kordon bulu falan gibi şeyler yapmaya ne bileyim. | Aşkım bu şeylere ne zaman başlayacaksın? Böyle hani kordon blu falan gibi şeyler yapmaya ne bileyim. | içerik benzer; yemek adı ikisinde de sorunlu |
+| 20:20 | Et almıyorum çevre. | Et almıyor, çelerti. | ikisi de belirsiz |
+| 20:22 | Et almıyorum eve mi? | Et almıyor mu evime? | özne/ekler farklı; ses referansı olmadan karar yok |
+| 20:23 | Almıyorum. | Almıyor. | kişi eki farklı; karar yok |
+| 20:24 | Ulan burada bak oturmuş burada eşin çalışıyor işte iş başında şu an. | Ulan burada bak, oturmuş, burada eşin çalışıyor işte. İş başında şu an. | aynı anlam |
+| 20:27 | Tamam et al yapıyorum. | Tamam, et almıyor, püüüüm. | turbo daha anlaşılır |
+| 20:29 | Abi bu kız benim çalıştığıma bir türlü inanmıyor ya şu an ben çalışıyorum. | Abi bu kız benim çalıştığıma bir türlü inanmıyor ya. Şu an ben çalışıyorum. | aynı anlam |
+| 20:33 | Ahmadiko / Ahmadım / bizim Ahmet değil mi | Ahmet İko / Ahmet'im / bizim Ahmet değil mi | small özel adda daha tutarlı |
+| 20:38 | Ahmet'im çok çok teşekkür ediyorum. | Ahmet'im çok çok teşekkür ediyorum. | aynı |
+
+### HLS zaman çizelgesi tuzağı (Eray 12.11, gerçek ölçüm)
+
+Eray VOD API süresi 9322 sn; HLS medya süreleri toplamı 9269.019 sn, PDT duvar saati ekseni yaklaşık 9320.684 sn. 2489.251. medya saniyesinde `EXT-X-DISCONTINUITY` ve yaklaşık 52 sn duvar saati boşluğu var. Tam HLS listesine `ffmpeg -ss 6585 ... -t 330` denemesi 194.77 sn WAV verdi ve listedeki 700'lü segmentlere atladı: **kesintiden sonra global HLS seek yanlış bölümü seçebiliyor**. İstenen PDT aralığının 28 segmentinden yerel liste yapınca aynı deneme tam 330.0 sn verdi.
+
+Konuşma ses yolu bu nedenle segmentleri `PROGRAM-DATE-TIME` ile eşler, sürekli kısımları ayrı indirir, gerçek yayın kesintisini sessizlikle aynı saniye ekseninde tutar. Konuşmalı klip kesimi de yalnız istenen segmentlerden yerel HLS listesi kullanır; kesintiyi aşan klip reddedilir. Kesintili VOD’un eski global-seek dökümlerinin tamamı `-pdt2` önbelleğinden ayrılır; kesinti öncesinin de varsayımla doğru olduğu kabul edilmez. Eray’ın ilk 40 dakikası da yeni yolla yeniden üretildi; bazı cümleler aynı çıksa da eski ve yeni parçalar karıştırılmadı. Şifreli HLS ve saat damgası olmayan kesinti desteklenmez; konuşma katmanı nedenini raporlayarak kapanır. Konuşmasız eski kesim yoluna müdahale edilmedi: **bu eski yoldaki Eray kesimlerinin kesinti sonrasındaki içerik hizası yeniden doğrulanmalıdır**. Önceki sohbet temelli iyi/sınırda etiketler bu kısıtla değerlendirilir.
+
+### Ses olayı sinyali kararı (10 etiketli an)
+
+Yeni ölçüm: iki gerçek yayının doğru PDT eksenindeki WAV'larında 10 sn RMS dBFS; her etiket için −30…+20 sn aralığındaki tepe, yayının RMS dağılımına göre z puanı. Bu, önceki LUFS/LRA denemesiyle aynı metrik değildir.
+
+| Yayın / an | Önceki etiket | Tepe RMS z |
+|---|---|---:|
+| Kemalcan 6:20 | zayıf | 1.03 |
+| Kemalcan 40:50 | zayıf | 0.15 |
+| Kemalcan 22:00 | sınırda | 0.14 |
+| Kemalcan 44:10 | iyi | 0.86 |
+| Kemalcan 1:33:10 | iyi | 0.68 |
+| Eray 13:30 | sınırda | 0.90 |
+| Eray 31:50 | sınırda | 0.52 |
+| Eray 49:50 | iyi | 0.15 |
+| Eray 39:00 | zayıf | 0.80 |
+| Eray 41:50 | zayıf | 0.64 |
+
+Üç iyi anın ortalama tepe z'si 0.56; dört zayıf anın 0.66. `z≥1` üç iyi anın hiçbirini bulmuyor, bir zayıf anı buluyor (bu küçük kümede kesinlik 0/1, yakalama 0/3). Konuşma-yok olasılığı dökülmüş konuşma segmentlerinde dört ondalıkta yaklaşık sıfırdı; VAD'nin dışarıda bıraktığı sessizlik/kahkahayı temsil etmez. **Karar: ses yüksekliğini/kahkaha varsayımını aday üretici olarak ekleme.** n=10 küçük ve etiketler önceki sohbet incelemesinden; bu sonuç daha iyi bir kahkaha sınıflandırıcısının işe yaramayacağını kanıtlamaz.
+
+Gerçek HLS bayt ölçümü: Kemalcan 1200–1800 hedefini örten 49 adet 160p segment, 608.333 sn medya, **22,065,560 bayt** (iki HTTP okuyucuyla 1.234 sn; yeniden döküm yapılmadı). Bu yaklaşık 290 kbit/sn gerçek TS trafiğidir; master'daki 230 kbit/sn değeriyle yapılan önceki 207 MB / 2 saat hesabı düşük kalıyor. Aynı örnek hızla 2 saat yaklaşık 261 MB; 15 sn bağlam ve segment kenarlarıyla 300 sn ızgarada yaklaşık **0.29–0.30 GB** indirme beklenir. Bunlar yayın boyunca sabit bitrate varsayımıdır, tüm iki saatin ağ sayacı ölçümü değildir.
+
+### Dil modeli karşılaştırması (aynı sekiz gerçek pencere)
+
+Önceki insan etiketleri kesin altın standart değildir: sohbet/kare incelemesinden gelir; konuşma dökümünde görünmeyen görsel olayları içerebilir. Buna rağmen aynı 80 sn döküm pencereleriyle karşılaştırıldı. Puan bandı: 0–3 zayıf, 4–5 sınırda, 6–10 iyi. `anlasilir:false` ayrıca vetodur. Aşağıda `—` iki denemede şema/cümle sınırı geçmemiş yargıdır.
+
+| An / önceki etiket | Gemma 4B | Qwen 8B | Haiku | Sonnet |
+|---|---:|---:|---:|---:|
+| Kemalcan 6:20 / zayıf | 7 | 6 | 2 | 6 |
+| Kemalcan 22:00 / sınırda | — | 6 | 2 | 5 |
+| Kemalcan 44:10 / iyi | — | 6 | 2 | 6 |
+| Kemalcan 1:33:10 / iyi | 8 | 5, anlaşılmaz | 2 | 4, anlaşılmaz |
+| Eray 31:50 / sınırda | 9 | 7 | 2 | 4, anlaşılmaz |
+| Eray 39:00 / zayıf | — | — | 2 | 3, anlaşılmaz |
+| Eray 49:50 / iyi | 6 | 6 | 2 | 2, anlaşılmaz |
+| wtcN 1:17:20, eski klip 1 / sınırda | 7 | 7 | 3 | 3, anlaşılmaz |
+
+Gemma 5/8, Qwen 7/8, Haiku ve Sonnet 8/8 geçerli yargı verdi. Eski etiketle puan bandı örtüşmesi sırasıyla 2/8, 2/8, 2/8 ve 4/8. `puan≥6 && anlasilir` ile iyi önerme kesinliği Gemma 2/5 (%40), Qwen 2/6 (%33), Sonnet 1/2 (%50); Haiku hiç iyi önermedi ve üç iyi etiketli anın tamamını reddetti. Sekiz pencerenin toplam çağrı duvar süreleri Gemma 54.718 sn, Qwen 203.579 sn, Haiku yaklaşık 149 sn, Sonnet yaklaşık 106 sn; ilk model yüklemeleri ve yeniden denemeler dahil. Bu küçük ve gürültülü veriyle genel doğruluk iddiası yoktur.
+
+Big Pickle mevcut ücretsiz yolunda ilk çağrı HTTP 429 / `FreeUsageLimitError` verdi; kalan örneklerde yeniden çağrılmadı. Yeni hesap/ödeme açılmadı. Mevcut Haiku/Sonnet CLI yolları çalıştı. Karar: **Sonnet ile deneme, en az 6 puan**; yerel modellerde anlaşılmaz metni absürt mizah sayma ve gerekçe/puan çelişkisi görüldü, Haiku ise aşırı muhafazakâr kaldı. Sonnet tek başına güvenilir otomatik editör sayılmaz: 6:20 oy şakasına 6 vererek eski zayıf etikete katılmadı; bu yanlış pozitif riski açıktır. Sohbetten elenmiş bu an tam taramada dönse bile sohbet puanı 0 olur ve diğer adaylarla birleşik puanda yarışır.
+
+Özellikle istenen iki sınırda örnek: Sonnet Kemalcan 22:00'a **5**, “anneniz de dayınızın kardeşi” karşılığını kısmen anlaşılır ama chat bağlamına bağlı buldu; 6 eşiğinde elenir. wtcN eski klip 1'e **3 / anlaşılmaz**: “AI mı bu, gerçek mi” tepkisinin hangi görüntüye verildiği dökümden anlaşılmadı, elenir. Kemalcan 44:10'a 6 verip şort/boksör takasını somut olay olarak anlattı. Eray 49:50'de döküm rutin Discord bağlantısı gösteriyor; eski iyi etiketin dayandığı “Discord'u WhatsApp okudu” anı bu dar pencerede yoktur. Dökümde WhatsApp ifadeleri 48:04 ve 48:45'tedir; sohbet tepki gecikmesi ve önceki zaman hizası bu örnekte belirsizdir.
+
+### Kesilen sesin gerçekten dökümle aynı olması
+
+Yalnız kelime zamanına ve dosya süresine güvenilmez. Gerçek canlı benzetiminde 160p ASR sesi ile eski HD kesiminin ilk 15 sn dalga biçimi arasında **1.910 sn / korelasyon 0.996** fark bulundu. Küçük HLS listesindeki `-ss`yi `-i`nin **sonrasına** almak, denenen doğru kliplerde artık farkı yaklaşık **0.043 sn**'ye indirdi. Eski global/input seek sonuçlarını cümle sınırı doğrulaması olarak kullanmayın.
+
+Her pozitif konuşma adayı, ilk ve son cümlenin döküldüğü gerçek 16 kHz WAV'a referans taşır. Kesilmiş HD klibin başı (en çok 15 sn) ve sonu (10 sn), ilgili WAV'la ±5 sn alanda 1500 Hz anti-alias filtresi sonrası normalize FFT korelasyonuyla eşlenir. En az 0.70 korelasyon ve en çok 0.12 sn artık fark gerekir. Gerekirse baş ve son ayrı düzeltilip tekrar kodlanır; en çok dört deneme. Düzeltme 30–59 sn sınırından, VOD'dan, HLS kesintisinden veya daha önce kesilmiş aralıktan taşamaz. Gerçek kodlanmış MP4 süresinin istenen süreden >0.15 sn sapması da yarım klip diye reddedilir. Başarısız aday nihai dosyaya taşınmaz; diğer adayların kesimi sürer. Hiç klip başarılamazsa VOD işlenmiş sayılmaz.
+
+`video.ses_hizasi` baş/son korelasyonlarını ve düzeltmeleri kaydeder. `konusma_plan_araligi`, modelin ASR saati üzerindeki planıdır; paketin asıl başlangıç/bitişi doğrulanmış video saatidir. Bu ayrım, hizalanmış klibi her çağrıda yeniden kodlamadan önbellekten kullanmayı sağlar. Dalga eşleşmesi aynı sesin kesildiğini doğrular; ASR'nin kelimeyi doğru anladığını veya esprinin iyi olduğunu kanıtlamaz.
+
+Canlı ilk turda en çok **6** aday dökülür (bitmiş yayında 15). Geçerli içerik/cümle vetoları `durum.json → konusma_elenen` içine gerçek saat aralığı ve model/ayar/prompt imzasıyla kaydedilir. Sonraki tur bu adaylarda takılmadan sıradakine ilerler; konuşmasız kip veto hafızasını dikkate almaz, model/eşik değişikliği yeniden değerlendirmeyi açar. Ortam/JSON hatası kalıcı veto değildir. Bu davranış birim ve bütünleşme testinde iki ardışık turla sınandı.
+
+
+<!-- KONUSMA-SON-OLCUM-BEGIN -->
+
+## Yalnız sohbet ↔ sohbet + konuşma
+
+Satırlar iki sıralı listeyi yan yana gösterir; aynı olayın zaman eşlemesi değildir. Yargılar döküm ve örnek karelerin elle incelemesidir, kör insan deneyi değildir. Her iki VOD’da tam döküm, geniş aday doğrulama, tam tarama ve gerçek kesim çalıştı.
+
+### Kemalcan Parlak — Just Chatting
+
+| Yalnız sohbet zirvesi | Yeni klip aralığı | Konuşma puanı / kısa gerekçe | Dökümden kısa alıntı | Benim değerlendirmem |
+|---|---|---|---|---|
+| 22:00 | 24:29–25:26 (56.84 sn) | 6/10 — Yayıncı karnaval oyunlarında kazandığı oyuncakları ve attığı basketle övünüyor, sevgilisi 'yalan söylüyorsun' diye itiraz ediyor. O da balonları ve oyuncakları kanıt g… | “Yalan söylüyorsun.” / “Hepsini ben kazandım.” | iyi — oyuncak iddiası ve sevgilisinin itirazı birlikte var. |
+| 44:10 | 28:24–28:58 (34.07 sn) | 7/10 — Koltuk ve ezilmiş panda esprisi kendi içinde tamamlanıyor. | “Üç katın koltuk almışsın. İçinde kayboldu.” | sınırda — panda/koltuk şakası var; ilk cümleler dağınık, isimler belirsiz. |
+| 1:33:10 | 43:29–44:24 (55.0 sn) | 8/10 — Biri şaka olsun diye arkadaşının şortunu indiriyor, altında boxer olduğu ortaya çıkıyor. Anlatan, adamın etrafına bakıp yavaşça çekmesini ve boxer düğmesinin açık olma… | “Ben de sana donumu vereyim dedi.” / “Abi ayıp olurdu.” | iyi — don hediyesiyle biten olay anlaşılıyor; bazı isim/özne ayrıntıları ASR’de belirsiz. |
+
+### Eraycan — Potato Please
+
+| Yalnız sohbet zirvesi | Yeni klip aralığı | Konuşma puanı / kısa gerekçe | Dökümden kısa alıntı | Benim değerlendirmem |
+|---|---|---|---|---|
+| 13:30 | 1:03:24–1:04:18 (54.2 sn) | 7/10 — İki aşamalı kız çocuğu tatil sorusu, 'yasak, evden çıkamaz' ve 'baba olunca düşünürüm' çıkışı | “Ben o ikinci aşamayı baba olunca düşünüyorum. Kardeşim bana ne ya.” | sınırda — tatil sorusu anlaşılır, önceki soru aşamasına atıfla başlıyor. |
+| 31:50 | 1:09:37–1:10:22 (45.73 sn) | 7/10 — Arkadaşının sevgilisinin aldatması sorusuna 'üç gün beklerim' cevabı ve 'o yüke hazır olmak' açıklaması. | “Ben bir üç gün beklerim.” / “O yüke hazır olmak üç gün.” | iyi — soru, üç gün bekleme cevabı ve nedeni kendi başına anlaşılır. |
+| 49:50 | 1:19:34–1:20:15 (40.8 sn) | 6/10 — '10'da 10 ama...' oyunu: biri 'evde patatesleri Eray gibi soyacak' diye laf atıyor, karşı taraf alınıp 'ben hep patates soydum' diye atışıyor. Ardından 'sizinlikten 24… | “10’da 10 ama evde patatesleri Eray gibi soyacak.” / “Olur, olur.” | sınırda — patates iç şakası önde; “kavga” başlıkta abartılı, sonraki ilişki soruları daha bağımsız. |
+
+Konuşmanın sohbetin kaçırdığı **nihai** anları var: Eray 1:03:24–1:04:18 ve 1:09:37–1:10:22, yalnız `tarama` kaynağından geldi; ilk 15 sohbet adayı arasında da yoktu. Kemalcan’ın nihai üçünde konuşma + geniş sohbet listesi etkili, yalnız konuşmadan gelen bir nihai seçim **yok**. Kemalcan 22:00 Sonnet’te 5 / sınırda; wtcN eski klip 1, 1:17:20’de 3 / anlaşılmaz: ikisi de 6 eşiğinde elendi.
+
+## Nihai MP4 ve paketler
+
+- [C:\Cihan.Ai\.scratch\yayin-klip\cikti\kemalcan-parlak-20261115-9ae47b40\konusma-hizali-01.mp4](C:/Cihan.Ai/.scratch/yayin-klip/cikti/kemalcan-parlak-20261115-9ae47b40/konusma-hizali-01.mp4) — 56.84 sn; aynı adlı `.json` paket.
+- [C:\Cihan.Ai\.scratch\yayin-klip\cikti\kemalcan-parlak-20261115-9ae47b40\konusma-hizali-02.mp4](C:/Cihan.Ai/.scratch/yayin-klip/cikti/kemalcan-parlak-20261115-9ae47b40/konusma-hizali-02.mp4) — 34.07 sn; aynı adlı `.json` paket.
+- [C:\Cihan.Ai\.scratch\yayin-klip\cikti\kemalcan-parlak-20261115-9ae47b40\konusma-hizali-03.mp4](C:/Cihan.Ai/.scratch/yayin-klip/cikti/kemalcan-parlak-20261115-9ae47b40/konusma-hizali-03.mp4) — 55.0 sn; aynı adlı `.json` paket.
+- [C:\Cihan.Ai\.scratch\yayin-klip\cikti\eraycan-20261112-d38999bc\konusma-hizali-01.mp4](C:/Cihan.Ai/.scratch/yayin-klip/cikti/eraycan-20261112-d38999bc/konusma-hizali-01.mp4) — 54.2 sn; aynı adlı `.json` paket.
+- [C:\Cihan.Ai\.scratch\yayin-klip\cikti\eraycan-20261112-d38999bc\konusma-hizali-02.mp4](C:/Cihan.Ai/.scratch/yayin-klip/cikti/eraycan-20261112-d38999bc/konusma-hizali-02.mp4) — 45.73 sn; aynı adlı `.json` paket.
+- [C:\Cihan.Ai\.scratch\yayin-klip\cikti\eraycan-20261112-d38999bc\konusma-hizali-03.mp4](C:/Cihan.Ai/.scratch/yayin-klip/cikti/eraycan-20261112-d38999bc/konusma-hizali-03.mp4) — 40.8 sn; aynı adlı `.json` paket.
+
+Altısı da H.264 + sesli 1080×1920; 34.07–56.84 sn. Son bağımsız ses kontrolünde baş/son farkı 0.0427–0.0527 sn, normalize korelasyon 0.90440–0.99765. Tam doğrulama: `C:\Cihan.Ai\.scratch\yayin-klip\konusma-nihai-kontrol.json`. Eski `klip-*`, ilk `konusma-*` ve ara doğrulama varyantları silinmedi; incelemede yukarıdaki altı **konusma-hizali** dosyasını kullanın.
+
+## Cümle sınırı kanıtı
+
+ASR saati tek başına kabul edilmedi: gerçek kodlanmış klibin başı/sonu, ASR’nin dinlediği WAV ile eşleşti. Ayrıca MP4’ün ilk/son 5 sn sesi bağımsız döküldü; aşağıdaki bir saniyelik parçalar bunun içinden alınmıştır.
+
+| Klip | İlk 1 sn / ilk tam cümle | Son 1 sn / son tam cümle |
+|---|---|---|
+| Kemalcan nihai 01 | “Bak” / “Bak bunların karnavalı görüyor musunuz?” | “ama nakoyemi” (bağımsız ASR yazımı belirsiz) / “…ev oyuncak doldu…” |
+| Eray ek patates klibi | “Ben sakin” / “Ben sakin bir şekilde sohbet muhabbet eşliğinde patates soymak istiyorum.” | “Gayet iyiyim.” / “Gayet iyiyim.” |
+
+İkinci kanıt klibi `C:\Cihan.Ai\.scratch\yayin-klip\cikti\eraycan-20261112-d38999bc\konusma-ek-patates.mp4`: ilk taramada bulundu, son ilk üç sıralamasında değil; ses/ölçüm kanıtı için ayrıca korundu. Kanıt JSON’ları `konusma-sinir-son.json` ve `konusma-sinir-eray.json`. Noktalama ve bazı kelimeler ASR tahmini; %100 dilsel doğruluk iddiası yok.
+
+## Ölçümler
+
+| Aynı 600 sn gerçek ses | Döküm | Yükleme | Hız | Toplam tepe VRAM |
+|---|---:|---:|---:|---:|
+| Turbo GPU int8_float16 | 34.141 sn | 9.406 sn | 17.57× | 3116 MiB (önce 722) |
+| Small GPU int8_float16 | 46.969 sn | 6.281 sn | 12.77× | 2540 MiB |
+| Small CPU int8, 4 iş parçacığı | 131.671 sn | 7.407 sn | 4.56× | CPU işi; eşzamanlı diğer GPU işi yüzünden toplam VRAM kıyası yok |
+
+15 cümle/ifade metin üzerinden yan yana incelendi; Turbo daha okunaklı ve hızlı, fakat onda da isim/kelime hataları var. Elle dinlenmiş referans veya WER ölçümü yapılmadı. Gerçek tam dökümlerde toplam GPU belleği en çok Kemalcan’da 3180, Eray’da 3930 MiB görüldü; bunlar yalnız ASR tahsisi değil tüm GPU kullanımıdır.
+
+VRAM, NVIDIA-SMI ile 1 sn aralıkla örneklendi; değerler örneklenen en yüksek toplam kullanımdır. CPU hızı Windows’taki bu koşulun ölçümüdür, ARM sunucu hızına genellenmez.
+
+| Tam VOD | ASR / model yükleme / ses indirme süreleri toplamı | Dil modeli |
+|---|---|---|
+| Kemalcan, 139 dk | 302.359 / 197.297 / 240.843 sn; soğuk ASR duvar 834.031 sn | 81 çağrı, 1473.532 sn; analiz+ilk kesim 1520.157 sn (ASR önbellekte) |
+| Eray, 155 dk | son geçerli parçalarda 376.174 / 224.526 / 31.701 sn; tek kesintisiz soğuk yeniden ölçüm yok | ilk tam tarama 95 çağrı / 1622.329 sn; bunun 36 çağrısı diğer VOD’la eşzamanlı yapıldı |
+
+Eray ilk 40 dk güvenli yolla yenilendikten sonra yalnız değişen pencereler yeniden değerlendirildi: 27 ek çağrı / 573.376 sn; gerçek standart `kes --konusma` turu 631.188 sn ve üç çıktı. Tekrar `kes --konusma` 1.750 sn sürdü, MP4 değişim saatlerinin üçü de aynı kaldı: yeniden döküm/model/kodlama yapılmadı.
+
+2 saat için bu gerçek 139/155 dk koşularından **yaklaşık 31–35 dk** GPU ASR + Sonnet + üç klip üretimi öngörülür; ayrı tam soğuk 120 dk koşusu yapılmadı, model/bağlantı yükü değişebilir. 160p gerçek örnek trafik 608.333 sn için 22,065,560 bayt; 2 saat bağlam/segment kenarlarıyla yaklaşık **0.29–0.30 GB** ASR medya indirmesi, ayrıca normal HD klip indirmesi. WAV önbelleği 16 kHz mono PCM; ilk model/CUDA paket indirmeleri bu hesaba dahil değil.
+
+Canlı: gerçek kanal kontrolü 3.047 sn, beş kanal da kapalı. **Gerçek canlıda denenmedi.** Kayıtlı Kemalcan’ın ilk 3000 sn’siyle benzetim: 14 ASR parçası, 90.502 sn döküm + 122.000 sn model yükleme + 9.686 sn ses indirme; 8 yargı çağrısı / 135.437 sn; ilk tur kesimle **442.453 sn (7 dk 22 sn)**. İkinci tur kota dolu / 0 sn, tekrar kesim yok. Model/ASR/kesim/kilit gerçektir; yalnız VOD keşfi ve sohbet sayfalaması kayıtlı veriye çevrildi. Sonraki sınır/hiza doğrulama işlemleri ilk tur süresine eklenmedi.
+
+Güncel son kodla yeni test durum dizininde, aynı gerçek ASR/yargı önbelleği kullanılarak canlı benzetimi yeniden çalıştı: **16.625 sn**, 14 parça önbellekten, 0 yeni model çağrısı, sesin başı/sonu doğrulanmış bir klip; ikinci tur yine 0 sn ve yeni kesim yok. Kanıt: `konusma-canli-son-benzetim.json`.
+
+Canlıda yeni bölümü tam tarama eklenmedi: aday yokken mevcut yol sıfır ASR/model çağrısı yapar. Beş kanalı her5dk zorunlu taramak, tek pencereyle bile en az60, örtüşen tam kapsamayla yaklaşık120 ek Sonnet çağrısı/saat demektir (hesap, gerçek canlı ölçümü değil). Yargı kalitesi sınırlı, mevcut ücretsiz yol kotada ve soğuk aday turu7:22 sürdüğü için bu sürekli ek yük ucuz kabul edilmedi.
+
+## Sınırlar ve test sonucu
+
+Yerel Gemma/Qwen yeterli görülmedi. Sonnet, önceki sekiz etiketin puan bandıyla yalnız 4/8 örtüştü; düşük kaliteli ve sınırda öneri hâlâ gelebilir. Bu yüzden varsayılan kapalı ve çıktılar inceleme paketidir. Big Pickle 429 kota verdi; mevcut Haiku fazla muhafazakâr kaldı. Görsel espri, üst üste konuşma, ASR kelime/özne hatası ve chat gecikmesi belirsizliktir. Bir FPS adayının son ses korelasyonu güvenilir çıkmadı; nihai listeden çıkarıldı. Sorunun eski önbellekten kaynaklandığı kanıtlanmadı; güvenli sesin yeniden alınmasıyla tek başına düzelmedi, eşik düşürülmedi. ARM sunucuya kurulum yapılmadı; Windows CPU yolu çalıştırıldı, ARM bağımlılıkları denenmedi.
+
+Ses olayı denemesinde 10 etiket: iyi anların ortalama RMS tepe z’si 0.56, zayıfların 0.66; z≥1 hiçbir iyiyi bulmayıp bir zayıfı buldu. Kahkaha/ses sıçraması aday üreticisi **eklenmedi**.
+
+`py -m unittest discover -s tests -p "test_yayin_klip.py"`: **137 test, 4.232 sn, son satır `OK`**.
+
+`py -m unittest discover -s tests -p "test_klip_konusma.py"`: **37 test, 0.21 sn, son satır `OK`**.
+
+Toplam **174 test geçti**; başlangıçtaki 128 test korundu. Derleme kontrolü (`py_compile`) ve yalnız altı görev dosyasında `git diff --check` geçti. `--konusmasiz` gerçek iki VOD’da eski 22:00/44:10/1:33:10 ve 13:30/31:50/49:50 listelerini verdi; gerçek `yogunluk` 6:20/40:50/1:33:10 listesini verdi.
+
+
+<!-- KONUSMA-SON-OLCUM-END -->

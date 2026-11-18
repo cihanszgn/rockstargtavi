@@ -1206,3 +1206,116 @@ class CanliKomutuUctanUca(unittest.TestCase):
             os.utime(d / 'canli.kilit', (eski, eski))
             with yk.canli_kilidi(d):      # bayat kilit yok sayılır
                 pass
+
+
+class KonusmaButunlesme(unittest.TestCase):
+    def test_eslesmeyen_klip_yazilmaz_digeri_surer_hepsi_hata_ise_islenmis_sayilmaz(self):
+        from unittest import mock
+        for fail_all in (False, True):
+            cfg = {**yk.AYAR_VARSAYILAN, 'konusma': True}
+            vod = {**sinyal_vod(), 'platform': 'kick', 'vod_id': 'kes-test', 'anahtar': 'kick:kes-test'}
+            result = {'ayar': cfg, 'klipler': [
+                {'no':i,'zirve_sn':p,'zirve_zaman':str(p),'puan':80,
+                 'klip_baslangic_sn':p-20,'klip_bitis_sn':p+22} for i,p in [(1,3000),(2,5000)]]}
+            def cut(v,c,path,*args):
+                if fail_all or c['no'] == 1:
+                    raise yk.KlipHatasi('ses eşleşmedi')
+                path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(b'validated-by-mock')
+                return {'ses':True,'sure_sn':42,'genislik':1080,'yukseklik':1920}
+            with tempfile.TemporaryDirectory() as t, mock.patch.object(yk,'analiz_komutu',return_value=(vod,result)), \
+                    mock.patch.object(yk,'ffmpeg_bul',return_value='ff'),mock.patch.object(yk,'font_bul',return_value='font'), \
+                    mock.patch.object(yk,'klip_kes',side_effect=cut):
+                d=pathlib.Path(t);paths=yk.kes_komutu(vod['anahtar'],d,{'ayar':cfg})
+                self.assertEqual(len(paths),0 if fail_all else 1)
+                self.assertEqual(yk.durum_oku(d)['vod'][vod['anahtar']]['durum'], 'kesim_hatasi' if fail_all else 'islendi')
+                self.assertFalse(list((d/'cikti').rglob('klip-01.mp4')))
+
+    def test_canli_veto_sonraki_turda_siradaki_adaya_ilerler(self):
+        from unittest import mock
+        fixture = CanliKomutuUctanUca()
+        cfg = fixture.ayar()
+        for publisher in cfg['yayincilar']:
+            publisher['ayar'] = {**publisher['ayar'], 'konusma': True, 'konusma_canli_aday_sayisi': 1}
+        kick = SahteKick(kahkaha_dalgasi(fixture.T0, 3000) + kahkaha_dalgasi(fixture.T0, 5000))
+        kick.video_sn = 5200
+        peaks = []
+        def veto(vod, candidates, *args, **kwargs):
+            self.assertEqual(len(candidates), 1)
+            c = candidates[0]
+            peaks.append(c['zirve_sn'])
+            return [], {'durum': 'açık', 'kararlar': [{**c, 'sonuc': 'içerik vetosu', 'yargi': {'puan': 2}}]}
+        with tempfile.TemporaryDirectory() as t, mock.patch.object(yk.klip_konusma, 'katman', side_effect=veto), \
+                mock.patch.object(yk, 'ffmpeg_bul', return_value='ff'):
+            for _ in range(2):
+                yk.canli_komutu(cfg, pathlib.Path(t), http=kick.http, http_text=kick.http_text,
+                                simdi=fixture.T0+5250)
+        self.assertEqual(set(peaks), {3000, 5000})
+
+    def test_canli_veto_hafizasi_yinelenmez_ayar_degisiminde_acilir(self):
+        cfg = {**yk.AYAR_VARSAYILAN, 'konusma': True}
+        vod = {'anahtar': 'kick:veto', 't0_epoch': 1000}
+        report = {'kararlar': [{'zirve_sn': 330, 'klip_baslangic_sn': 310, 'klip_bitis_sn': 350,
+                  'sonuc': 'içerik vetosu', 'yargi': {'puan': 2}}]}
+        with tempfile.TemporaryDirectory() as t:
+            d = pathlib.Path(t)
+            self.assertEqual(yk.konusma_veto_kaydet(d, vod, report, cfg), 1)
+            self.assertEqual(yk.konusma_veto_kaydet(d, vod, report, cfg), 0)
+            rec = yk.durum_oku(d)['vod'][vod['anahtar']]
+        self.assertEqual(yk.konusma_veto_araliklari(rec, 1000, cfg), [(310, 350)])
+        self.assertEqual(yk.konusma_veto_araliklari(rec, 1000, {**cfg, 'konusma': False}), [])
+        self.assertEqual(yk.konusma_veto_araliklari(rec, 1000, {**cfg, 'konusma_min_puan': 4}), [])
+
+    def test_model_hatasi_canli_vetosu_olarak_hatirlanmaz(self):
+        cfg = {**yk.AYAR_VARSAYILAN, 'konusma': True}
+        with tempfile.TemporaryDirectory() as t:
+            d = pathlib.Path(t)
+            self.assertEqual(yk.konusma_veto_kaydet(d, {'anahtar': 'kick:v'},
+                {'kararlar': [{'sonuc': 'seçim havuzunda', 'yargi': None}]}, cfg), 0)
+            self.assertEqual(yk.durum_oku(d)['vod'], {})
+
+    def test_analiz_genis_aday_listesi_verir_son_ayar_korunur(self):
+        from unittest import mock
+        vod = {**sinyal_vod(), 'vod_id': 'konusma-test', 'platform': 'kick', 'anahtar': 'kick:konusma-test'}
+        cfg = {**yk.AYAR_VARSAYILAN, 'konusma': True}
+        fake = {'klipler': [], 'ayar': {}, 'dilim_sayimlari': []}
+        with tempfile.TemporaryDirectory() as t, \
+                mock.patch.object(yk, 'vod_hazirla', return_value=(vod, cfg)), \
+                mock.patch.object(yk, 'sohbet_al', return_value=[]), \
+                mock.patch.object(yk, 'analiz_et', return_value=fake) as analiz, \
+                mock.patch.object(yk, 'ffmpeg_bul', return_value='ff'), \
+                mock.patch.object(yk.klip_konusma, 'katman', return_value=([], {'durum': 'açık'})):
+            _, sonuc = yk.analiz_komutu(vod['anahtar'], pathlib.Path(t), {'ayar': cfg})
+        self.assertEqual(analiz.call_args.args[2]['azami_klip'], 15)
+        self.assertEqual(sonuc['ayar']['azami_klip'], 3)
+
+    def test_konusmasiz_komut_satiri_gecersizi(self):
+        import argparse
+        self.assertEqual(yk._gecersiz(argparse.Namespace(konusmasiz=True)), {'konusma': False})
+        self.assertEqual(yk._gecersiz(argparse.Namespace(konusma=True)), {'konusma': True})
+
+    def test_hizalanmis_video_model_planindan_farkli_olsa_da_onbellek_kullanilir(self):
+        cfg={**yk.AYAR_VARSAYILAN,'konusma':True}
+        clip={'klip_baslangic_sn':100,'klip_bitis_sn':150,'konusma_plan_araligi':[100,150]}
+        old={'klip_baslangic_sn':98,'klip_bitis_sn':148,'konusma_plan_araligi':[100,150],
+             'duzen':yk.duzen_imzasi(cfg)}
+        with tempfile.TemporaryDirectory() as d:
+            p=pathlib.Path(d)/'clip.json';p.write_text(json.dumps(old),encoding='utf-8')
+            self.assertTrue(yk.paket_guncel(p,clip,cfg))
+            self.assertFalse(yk.paket_guncel(p,{**clip,'konusma_plan_araligi':[101,151]},cfg))
+
+    def test_yeni_paket_alanlari(self):
+        vod = sinyal_vod()
+        klip = {'no': 1, 'zirve_sn': 330, 'zirve_zaman': '5:30', 'puan': 70,
+                'klip_baslangic_sn': 310, 'klip_bitis_sn': 350,
+                'konusma_puani': 8, 'konusma_gerekce': 'Somut olay.',
+                'konusma_baslik': 'Yanlış kapıyı açınca şaşırdı.', 'dokum_metni': 'Nereye geldim ben?'}
+        paket = yk.paket_json(vod, klip, pathlib.Path('klip.mp4'), {})
+        self.assertEqual(paket['konusma_puani'], 8)
+        self.assertEqual(paket['dokum_metni'], klip['dokum_metni'])
+        self.assertIn(klip['konusma_baslik'].rstrip('.'), paket['aciklama'])
+
+    def test_canli_cumle_uzatmasi_sonrasi_yarim_kesim_engellenir(self):
+        cfg = dict(yk.AYAR_VARSAYILAN)
+        klip = {'zirve_sn': 3000, 'zirve_dilimleri': [3000], 'puan': 80,
+                'klip_baslangic_sn': 2980, 'klip_bitis_sn': 3090}
+        self.assertEqual(yk.canli_adaylar([klip], 3100, cfg, [], 3), [])
