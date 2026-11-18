@@ -484,8 +484,8 @@ class BicimlemeGercekDosya(unittest.TestCase):
                     o = kyc.onizle({"kick": "yeniyayinci"}, on)
                 kyc.ekle({"jeton": o["jeton"], "ad": "Yeni"}, on)
                 eklenmis = kopya.read_bytes().decode("utf-8")
-                eski_satirlar = onceki.decode("utf-8").split("\r\n")
-                yeni_satirlar = eklenmis.split("\r\n")
+                eski_satirlar = onceki.decode("utf-8").splitlines()
+                yeni_satirlar = eklenmis.splitlines()
                 # yalnız bir satır eklendi (yeni yayıncı, tek satır); diğer her satır aynı sırayla duruyor
                 self.assertEqual(len(yeni_satirlar), len(eski_satirlar) + 1)
                 kalan = [s for s in yeni_satirlar if '"ad": "Yeni"' not in s]
