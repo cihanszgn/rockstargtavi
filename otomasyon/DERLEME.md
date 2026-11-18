@@ -10,8 +10,11 @@ py klip_derleme.py topla  [--gun 7] [--kaynaklar paket,izleyici,viral] > adaylar
 py klip_derleme.py uret   [--sure-dk 11] [--yalniz-yayinci] [--viral-oran 2] [--kuru]  # seç, indir/kes, tek mp4
 py klip_derleme.py uret   --adaylar-dosyasi adaylar.json                               # toplamayı atla
 py klip_derleme.py dogrula <derleme-klasoru>                                           # ölçüm + kare çıkarma
+py klip_derleme.py uret   --deneme                                                     # deneme: durum.json'a yazmaz
 ```
 `--kuru`: yalnız plan (indirme/kodlama yok). `--zorla`: önceki parça dosyalarını yeniden üret. Kodlama yalnız CPU (libx264); GPU/NVENC kullanılmaz.
+
+`--deneme`: çıktı `derleme/deneme-<tarihsaat>/` klasörüne gider; `durum.json` okunur ama **yazılmaz** (seri sayısı ve kullanılanlar değişmez) ve daha önce kullanılmış videolar da aday sayılır. Deneme derlemesi yayınlanmış sayılmaz; gerçek derleme için `--deneme` olmadan üret.
 
 ## Ne yapar
 
@@ -24,8 +27,19 @@ py klip_derleme.py dogrula <derleme-klasoru>                                    
 Çıktı: `.scratch/yayin-klip/derleme/<seri>-<sayı>/` → `derleme.mp4`, `derleme.json` (parça listesi, başlık, açıklama, `yayinlandi: false`, uyarılar, elenenler, ölçüm), `aciklama.txt` (yayıncı bağlantıları + zaman damgalı bölümler + her videonun kaynağı), `liste.txt`, `kucuk-resim-1..3.png` (en iyi 3 andan), `parcalar/`; `dogrula` ayrıca `dogrulama.json` ve `kareler/` yazar.
 Başlık: `<BÜYÜK HARF OLAY> | <Seri Adı> #<Sayı>`. Seri sayısı `durum.json`da artar.
 
+## Seçim kuralları (2. tur)
+- **Paket öncelik ve örtüşme:** aynı yayında (VOD) zaman aralığı örtüşen yayıncı paketlerinden yalnız biri kullanılır. Öncelik `konusma-hizali` > `konusma` (`konusma-ek-*` dahil) > `canli` > `klip`; eşitlikte yüksek değer. Örtüşme `ortusme_esik_sn` (5 sn) üstüyse eleme olur (`paket_ortusme`).
+- **Konuşma paketi kesiti:** paketlerde cümle zamanı yok (`konusma_puani`, `konusma_plan_araligi`, `dokum_metni` var). Bu yüzden konuşma paketinde kesit, modelin verdiği aralığın **başından** alınır (yöntem `konusma_bas`); bitiş cümle sonuna oturmayabilir. Cümle zamanı paketlere eklenirse `_cumleler` onu okur.
+- **Türkçe süzgeci (Shorts):** dil alanı `tr` ise geçer; başka dil elenir (`dil_turkce_degil`). Dil boşsa başlık + kanal + açıklamanın ilk 200 karakterinde Türkçe harf (ç ğ ı İ ö ş ü) ya da ayardaki kelimelerden 2 ya da fazlası aranır (`turkce_izi_yok`). Başlıkta Latin dışı yazı varsa `baslik_latin_disi`. Etiketler atılınca başlıkta `viral_min_kelime` (2) kelimeden az kalırsa `baslik_cok_az_kelime`. `viral_turkce_sart: false` ile kapanır. Elle seçilen (bağlantı, ara-videolar) videolara uygulanmaz.
+- **Eşik:** `viral_min_izlenme` 250 000 (100 000'den yükseltildi). Gerekçe: ham Shorts listesinde (195 aday, 2026-11-18) 100 000–250 000 bandı 26 aday (%13); `keşfet` etiketi bu bantta ilgisiz içerik getiriyor. Eşik 250 000 ile 136 aday kalıyor.
+- **Kanal sınırı:** aynı Shorts kanalından en çok `viral_kanal_ust` (2) video (`kanal_ust`).
+- **Yayıncı başına üst sınır:** izleyici klibi en çok `izleyici_kanal_ust` (3); derlemede yayıncı başına toplam kesit (yayıncı kesiti + izleyici klibi) en çok `yayinci_toplam_ust` (6). Taşan adaylar `izleyici_kanal_ust` / `yayinci_toplam_ust` nedeniyle elenir.
+- **Başlık kaynağı (sırayla):** (1) konuşma paketinin başlığı (en değerli, vurucu); (2) en çok izlenen anlamlı izleyici klibi başlığı; (3) eski şablon başlık (yayıncı kesiti, yoksa izleyici klibi) en son çare. Viral yalnız hiç yayıncı/izleyici parçası yoksa kullanılır. Anlamsız başlıklar (3 harften kısa, ünlüsüz, ya da en çok 3 farklı harfli klavye ezmesi: `ss`, `zzz`, `QWEQWEEWQWEQWEQ`) başlık ve teaser adayı olamaz; parça olarak kalabilir.
+- **Teaser:** yalnız yayıncı/izleyici içeriğinden; yayıncı yoksa viral.
+- **Elenen adaylar:** `derleme.json` → `elenen_adaylar`: her elenen aday için `id`, `neden`, `baslik`, `kaynak` (süzgeçler, üst sınırlar, örtüşme, önceki derlemede kullanılma, hazırlama hatası).
+
 ## Sıra kuralı
-Değer: paket zirve puanı/100; izleyici ve viral için log izlenme (izleyici × `izleyici_agirlik` 0.75). En iyi parça başa, ikinci en iyi sona; aynı yayıncı art arda gelmez (önce orta takasla giderilir; yetmezse uyarı verilir).
+Değer: paket zirve puanı/100; izleyici ve viral için log izlenme (izleyici × `izleyici_agirlik` 0.75). En iyi parça başa, ikinci en iyi sona; aynı yayıncı art arda gelmez (önce orta takasla giderilir; yetmezse uyarı verilir). Art arda sayımı yayıncı kesiti ve izleyici klibini birlikte sayar; viral aradaysa da bitişik sayılır.
 
 ## Ayarlar (`derleme.json` → `ayar`; yazılmayan koddaki varsayılanı alır)
 
@@ -45,6 +59,17 @@ Değer: paket zirve puanı/100; izleyici ve viral için log izlenme (izleyici ×
 
 ## Elle viral video
 `C:\Cihan.Ai\.scratch\yayin-klip\ara-videolar\` içine mp4 bırak (varsayılan klasör) veya `baglantilar` listesine bağlantı ekle; elle seçilenlere izlenme/tarih süzgeci uygulanmaz.
+
+## Deneme (2. tur, 2026-11-18): `uret --deneme`
+
+Çıktı: `.scratch/yayin-klip/derleme/deneme-20261118-090034/` (`derleme.mp4`, 287 MB, 10:37 = 637,67 sn, 1920x1080/30 fps). Üretim 666 sn (CPU). `durum.json` hash'i üretimden önce ve sonra aynı (değişmedi).
+- Parça: 10 yayıncı kesiti, 11 izleyici klibi, 15 viral (+2 teaser, giriş, kapanış). Yayıncı dağılımı: Kemalcan Parlak 6, Eraycan 6, wtcN 4, Jahrein 3, Tolunay Ören 2 (önceki derlemede Eraycan 9 izleyici klibiyle tek başına baskındı).
+- Başlık: `ZEHRA'NIN DİSCORDUNU DENEYELİM` (`en_cok_izlenen_izleyici_klibi`); bu planda konuşma paketi yoktu. Teaser yalnız yayıncı kesitlerinden.
+- Uyarı: `viral yetmedi: 21 kesit için 42 viral istendi, 15 var`. Kesit sayısı 21'de kaldı (`izleyici_kanal_ust` 41 aday, `yayinci_toplam_ust` 13 aday elendi); süre yine de 10–12 dk aralığında.
+- Doğrulama (`dogrula`, geçti): görüntü 637,6 / ses 637,65 sn (fark 0,05 sn); kapanış geçişi 0,007 sn sapma; 6 parçada LUFS −15,3…−17,0 (hedef −16 ±2 içinde); 10 kare + 1 izleyici klibi karesi (`kareler/`).
+- Elenenler (`elenen_adaylar`): cok_uzun 116, dusuk_izlenme 57, izleyici_kanal_ust 41, dil_turkce_degil 17, yayinci_toplam_ust 13, gun_disi 10, ortusme 8, baslik_latin_disi 4, baslik_cok_az_kelime 3, onceki_derlemede_kullanildi (genel süzgeçte, ayrı sayılır).
+
+**Açık kalanlar:** viral havuzu yetersiz (15 < 42). En büyük neden `viral_max_sn` 15 sn (`cok_uzun` 116). Hedef 11 dk'ya yaklaşmak için `viral_uzun: kirp` ya da kesit üst sınırını artırmak gerekir; kaliteyi düşürmeden bu tur yapılmadı.
 
 ## Ölçümler (2026-11-18, gerçek veri, bu bilgisayar)
 

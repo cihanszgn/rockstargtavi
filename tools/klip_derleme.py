@@ -125,9 +125,23 @@ AYAR_VARSAYILAN = {
     'baglantilar': [],
     'ara_video_klasoru': None,       # varsayılan: <çalışma dizini>/ara-videolar
     'viral_min_sn': 5.0, 'viral_max_sn': 15.0,
+    # Shorts süzgeci (dil, başlık, kanal)
+    'viral_turkce_sart': True,       # Shorts: dil tr değilse ya da Türkçe izi yoksa ele
+    'viral_min_kelime': 2,           # Shorts: etiketler atılınca başlıkta en az bu kadar kelime (0 = kapalı)
+    'viral_kanal_ust': 2,            # Shorts: aynı kanaldan en çok bu kadar video (0 = sınırsız)
+    # derleme üst sınırları (yayıncı başına)
+    'izleyici_kanal_ust': 3,         # yayıncı başına en çok izleyici klibi (0 = sınırsız)
+    'yayinci_toplam_ust': 6,         # yayıncı başına en çok kesit: yayıncı kesiti + izleyici klibi (0 = sınırsız)
 }
 
 IZLEYICI_SIRALA = 'view'
+
+# Türkçe izi: bu harfler ya da bu kelimelerin en az ikisi (dil alanı boşsa başlık + kanal + açıklamada aranır)
+TURKCE_HARFLER = set('çğıİöşüÇĞÖŞÜ')
+TURKCE_KELIMELER = frozenset(('bir', 've', 'bu', 'çok', 'ne', 'abi', 'komik', 'olay', 'nasıl', 'değil', 'ama', 'için',
+                              'ben', 'sen', 'hem', 'daha', 'ile', 'kadar'))
+# paket dosya öneki -> öncelik (küçük = önce). Aynı yayında örtüşende yalnız en düşük değerli tutulur.
+PAKET_ONCELIK = (('konusma-hizali', 0), ('konusma', 1), ('canli', 2), ('klip', 3))
 
 
 def ayar_yukle_d(yol: pathlib.Path | str | None = None) -> dict:
@@ -260,6 +274,11 @@ def kesit_araligi(klip: dict, ayar: dict) -> dict:
     yontem = 'tam'
     if ke - kb <= mx:
         bas, bit = kb, ke
+    elif klip.get('konusma_puani') is not None:
+        # konuşma paketi: model aralığı cümle başında başlar; cümle zamanı yok, o yüzden kesit başından alınır
+        yontem = 'konusma_bas'
+        bas = kb
+        bit = min(ke, kb + hedef)
     else:
         yontem = 'dalga'
         bas = tepe_mutlak - float(ayar['dalga_oncesi_sn'])
@@ -415,6 +434,30 @@ def viral_anahtari(a: dict) -> str:
     return (a.get('kanal_adi') or a.get('yayinci') or a.get('id') or '').lower()
 
 
+def ust_sinir_uygula(kesitler: list[dict], ayar: dict) -> tuple[list[dict], list[dict]]:
+    """Yayıncı başına üst sınırlar: izleyici klibi (`izleyici_kanal_ust`) ve toplam kesit (`yayinci_toplam_ust`).
+    Değeri yüksek olan önce girer; sınır dolunca kalan aynı yayıncıdan adaylar elenir (nedeni yazılır)."""
+    ik = int(ayar.get('izleyici_kanal_ust', 0) or 0)
+    yt = int(ayar.get('yayinci_toplam_ust', 0) or 0)
+    kabul: list[dict] = []
+    elenen: list[dict] = []
+    izleyici_say: Counter = Counter()
+    toplam_say: Counter = Counter()
+    for a in sorted(kesitler, key=lambda a: -a['deger']):
+        y = yayinci_anahtari(a)
+        if a['tur'] == 'izleyici' and ik and izleyici_say[y] >= ik:
+            elenen.append({'id': a['id'], 'neden': 'izleyici_kanal_ust', 'baslik': a.get('baslik'), 'kaynak': 'izleyici'})
+            continue
+        if yt and toplam_say[y] >= yt:
+            elenen.append({'id': a['id'], 'neden': 'yayinci_toplam_ust', 'baslik': a.get('baslik'), 'kaynak': a.get('kaynak')})
+            continue
+        kabul.append(a)
+        toplam_say[y] += 1
+        if a['tur'] == 'izleyici':
+            izleyici_say[y] += 1
+    return kabul, elenen
+
+
 def plan_olustur(adaylar: list[dict], ayar: dict, hedef_sn: float | None = None,
                  turler: tuple[str, ...] = ('yayinci', 'izleyici', 'viral')) -> dict:
     """Seçim + sıra. Adaylar `tur`, `deger`, `kes_sure_sn` taşır. Döngü: 1 yayıncı kesiti + `yayinci_basina_viral`
@@ -426,6 +469,7 @@ def plan_olustur(adaylar: list[dict], ayar: dict, hedef_sn: float | None = None,
     oran = max(0, int(ayar['yayinci_basina_viral']))
     kesitler = sorted([a for a in adaylar if a['tur'] in ('yayinci', 'izleyici') and a['tur'] in turler],
                       key=lambda a: -a['deger'])
+    kesitler, ust_elenen = ust_sinir_uygula(kesitler, ayar)
     virallar = sorted([a for a in adaylar if a['tur'] == 'viral' and 'viral' in turler], key=lambda a: -a['deger'])
     sabit = giris + kapanis + teaser_n * teaser_sn
     butce = hedef - sabit
@@ -469,7 +513,8 @@ def plan_olustur(adaylar: list[dict], ayar: dict, hedef_sn: float | None = None,
     Vdz = duzenle(secV, viral_anahtari)
     dongu_sayisi = max(len(Kdz), math.ceil(len(Vdz) / oran) if oran else 0)
     parcalar: list[dict] = []
-    en_iyiler = sorted(secK + secV, key=lambda a: -a['deger'])[:teaser_n]
+    teaser_havuzu = secK if secK else secV      # teaser yalnız yayıncı içeriğinden; yayıncı yoksa viral
+    en_iyiler = sorted(teaser_havuzu, key=lambda a: -a['deger'])[:teaser_n]
     for a in en_iyiler:
         parcalar.append({'rol': 'teaser', 'aday': a, 'sure_sn': teaser_sn})
     parcalar.append({'rol': 'giris', 'aday': None, 'sure_sn': giris})
@@ -497,7 +542,7 @@ def plan_olustur(adaylar: list[dict], ayar: dict, hedef_sn: float | None = None,
     if ihlal:
         uyarilar.append(f'aynı yayıncı art arda: {ihlal} yerde kaçınılamadı (yayıncı çeşitliliği az)')
     return {
-        'hedef_sn': round(hedef, 1), 'toplam_sn': toplam_sn, 'parcalar': parcalar,
+        'hedef_sn': round(hedef, 1), 'toplam_sn': toplam_sn, 'parcalar': parcalar, 'ust_elenen': ust_elenen,
         'sayilar': {'yayinci': sum(1 for p in govde if p['rol'] == 'yayinci'),
                     'izleyici': sum(1 for p in govde if p['rol'] == 'izleyici'),
                     'viral': sum(1 for p in govde if p['rol'] == 'viral'),
@@ -692,15 +737,19 @@ def izleyici_topla(ayar: dict, kanallar: list[tuple[str, str]], gun: float, kesi
         except DerlemeHatasi as e:
             r['hata'][slug_] = str(e)
             continue
-        kanal_say = {'bulunan': len(ham), 'kalan': 0}
+        kanal_say = {'bulunan': len(ham), 'kalan': 0, 'elenen': {}}
         for k in ham:
             neden = izleyici_ele_nedeni(k, ayar, kesim_epoch - 86400)  # created_at, yayın saatinden geç olabilir: 1 gün pay
             if neden:
                 nedenler[neden] += 1
+                kanal_say['elenen'][neden] = kanal_say['elenen'].get(neden, 0) + 1
+                elenen_kaydet(rapor, 'kick-klip:' + str(k.get('id')), neden, k.get('title'), slug_)
                 continue
             pdt = pdt_al(k.get('clip_url') or k.get('video_url'))
             if pdt is not None and pdt < kesim_epoch:
                 nedenler['gun_disi'] += 1
+                kanal_say['elenen']['gun_disi'] = kanal_say['elenen'].get('gun_disi', 0) + 1
+                elenen_kaydet(rapor, 'kick-klip:' + str(k.get('id')), 'gun_disi', k.get('title'), slug_)
                 continue
             sonuc.append(izleyici_adayi(k, slug_, ad, ayar, pdt))
             kanal_say['kalan'] += 1
@@ -787,7 +836,7 @@ def paket_adayi(klasor_adi: str, dosya_adi: str, paket: dict, vod: dict | None, 
         'yayinci': paket['yayinci'], 'kanal': paket.get('kanal') or kanal, 'kanal_url': paket.get('kanal_url') or f'https://kick.com/{kanal}',
         'baslik': (paket.get('baslik') or '').strip(), 'puan': paket.get('zirve_puani'), 'izlenme': None,
         'deger': deger_paket(paket.get('zirve_puani')), 'tarih': paket.get('yayin_tarihi'),
-        'vod_url': paket['vod_url'], 'vod_uuid': uuid, 'oyun': paket.get('oyun'),
+        'vod_url': paket['vod_url'], 'vod_uuid': uuid, 'oyun': paket.get('oyun'), 'paket_turu': paket_turu(dosya_adi),
         'klip_baslangic_sn': float(paket['klip_baslangic_sn']), 'klip_bitis_sn': float(paket['klip_bitis_sn']),
         'sure_sn': float(paket['klip_bitis_sn']) - float(paket['klip_baslangic_sn']),
         'kes': kes, 'kes_sure_sn': kes['sure'],
@@ -795,6 +844,37 @@ def paket_adayi(klasor_adi: str, dosya_adi: str, paket: dict, vod: dict | None, 
         'epoch_bas': (t0 + kes['bas']) if t0 else None, 'epoch_bit': (t0 + kes['bit']) if t0 else None,
         'dokum_metni': paket.get('dokum_metni'),
     }, None
+
+
+def paket_turu(dosya_adi: str) -> str:
+    """Dosya adı önekinden paket türü: konusma-hizali | konusma | canli | klip | diger."""
+    for on, _ in PAKET_ONCELIK:
+        if dosya_adi.startswith(on):
+            return on
+    return 'diger'
+
+
+def paket_oncelik(turu: str | None) -> int:
+    return dict(PAKET_ONCELIK).get(turu or 'diger', 4)
+
+
+def paket_ortusmesini_ele(adaylar: list[dict], esik_sn: float) -> tuple[list[dict], list[dict]]:
+    """Aynı yayında (VOD) zaman aralığı örtüşen yayıncı paketlerinden yalnız biri: öncelik konusma-hizali > konusma >
+    canli > klip; aynı öncelikte yüksek değer. Aralıklar aynı VOD'un saniyesi olduğu için doğrudan karşılaştırılır."""
+    sirali = sorted(adaylar, key=lambda a: (paket_oncelik(a.get('paket_turu')), -a.get('deger', 0.0)))
+    kabul: list[dict] = []
+    elenen: list[dict] = []
+    for a in sirali:
+        cakisan = next((k for k in kabul if k['vod_uuid'] == a['vod_uuid'] and
+                        aralik_ortusme_sn(a['klip_baslangic_sn'], a['klip_bitis_sn'],
+                                          k['klip_baslangic_sn'], k['klip_bitis_sn']) >= esik_sn), None)
+        if cakisan:
+            elenen.append({'id': a['id'], 'neden': 'paket_ortusme', 'ortusen': cakisan['id'], 'baslik': a.get('baslik'),
+                           'kaynak': 'paket'})
+        else:
+            kabul.append(a)
+    kabul_idler = {a['id'] for a in kabul}
+    return [a for a in adaylar if a['id'] in kabul_idler], elenen
 
 
 def paket_topla(ayar: dict, dizin: pathlib.Path, gun: float, simdi: datetime, rapor: dict, vod_al=vod_getir) -> list[dict]:
@@ -816,6 +896,7 @@ def paket_topla(ayar: dict, dizin: pathlib.Path, gun: float, simdi: datetime, ra
         neden = paket_ele_nedeni(paket, ayar, kesim_tarih)
         if neden:
             nedenler[neden] += 1
+            elenen_kaydet(rapor, f'paket:{j.parent.name}/{j.stem}', neden, paket.get('baslik'), 'paket')
             continue
         m = VOD_URL_RE.search(paket['vod_url'])
         uuid = m.group(2).lower()
@@ -828,10 +909,15 @@ def paket_topla(ayar: dict, dizin: pathlib.Path, gun: float, simdi: datetime, ra
         aday, neden = paket_adayi(j.parent.name, j.stem, paket, vodlar[uuid], j.with_suffix('.mp4'), ayar)
         if neden:
             nedenler[neden] += 1
+            elenen_kaydet(rapor, f'paket:{j.parent.name}/{j.stem}', neden, paket.get('baslik'), 'paket')
             continue
         if aday['erisim'] == 'dikey':
             r['dikey_geri_dusme'] += 1
         sonuc.append(aday)
+    sonuc, ortusen = paket_ortusmesini_ele(sonuc, float(ayar['ortusme_esik_sn']))
+    for e in ortusen:
+        nedenler['paket_ortusme'] += 1
+        rapor.setdefault('elenen_adaylar', []).append(e)
     r['elenen'] = dict(nedenler)
     r['kalan'] = len(sonuc)
     return sonuc
@@ -910,7 +996,53 @@ def viral_ele_nedeni(d: dict, ayar: dict, kesim_tarih: str | None, uzun: str, se
         t = upload_tarih(d)
         if kesim_tarih and t and t < kesim_tarih:
             return 'gun_disi'
+        if ayar.get('viral_turkce_sart', True):
+            neden = turkce_neden(d, ayar)
+            if neden:
+                return neden
     return None
+
+
+def latin_disi_mi(metin: str) -> bool:
+    """Harf içinde Latin alfabesi dışı yazı (Kore, Japon, Arap, Kiril vb.) var mı."""
+    return any(ch.isalpha() and not unicodedata.name(ch, '').startswith('LATIN') for ch in metin or '')
+
+
+def kelime_sayisi(baslik: str) -> int:
+    """Etiketler (#...) atıldıktan sonra harf/rakam içeren kelime sayısı. Emoji tek başına kelime sayılmaz."""
+    metin = re.sub(r'#\S+', ' ', baslik or '')
+    return sum(1 for k in re.findall(r'\w+', metin) if any(c.isalnum() for c in k))
+
+
+def turkce_izi_var(metin: str) -> bool:
+    if any(ch in TURKCE_HARFLER for ch in metin or ''):
+        return True
+    kelimeler = {k.lower() for k in re.findall(r'\w+', metin or '')}
+    return len(kelimeler & TURKCE_KELIMELER) >= 2
+
+
+def turkce_neden(d: dict, ayar: dict) -> str | None:
+    """Shorts için dil/yazı/başlık süzgeci. Dil alanı varsa ona bakılır (tr değilse ele); yoksa Türkçe izi aranır."""
+    baslik = d.get('title') or ''
+    if latin_disi_mi(baslik):
+        return 'baslik_latin_disi'
+    dil = (d.get('language') or '').strip().lower()
+    if dil:
+        if not dil.startswith('tr'):
+            return 'dil_turkce_degil'
+    else:
+        metin = ' '.join([baslik, d.get('channel') or d.get('uploader') or '', (d.get('description') or '')[:200]])
+        if not turkce_izi_var(metin):
+            return 'turkce_izi_yok'
+    azami_kisa = int(ayar.get('viral_min_kelime', 2) or 0)
+    if azami_kisa and kelime_sayisi(baslik) < azami_kisa:
+        return 'baslik_cok_az_kelime'
+    return None
+
+
+def elenen_kaydet(rapor: dict, kimlik: str, neden: str, baslik: str = '', kaynak: str = '') -> None:
+    """Her elenen adayın nedeni (derleme.json `elenen_adaylar` için)."""
+    rapor.setdefault('elenen_adaylar', []).append({'id': kimlik, 'neden': neden, 'baslik': (baslik or '')[:90], 'kaynak': kaynak})
 
 
 def viral_adayi(d: dict, kaynak_adi: str, ayar: dict, uzun: str, deger: float | None = None) -> dict:
@@ -936,6 +1068,7 @@ def shorts_topla(ayar: dict, simdi: datetime, rapor: dict, gun: float | None, li
     sr = r.setdefault('shorts', {})
     sonuc: list[dict] = []
     gorulen: set[str] = set()
+    kanal_sayac: Counter = Counter()     # kanal başına kabul edilen video (tüm kaynaklar boyunca)
     for kaynak in ayar.get('shorts_kaynaklari') or []:
         ad = kaynak.get('ad') or kaynak['hedef']
         kayit = {'listelenen': 0, 'detay_cozulen': 0, 'elenen': {}, 'kalan': 0}
@@ -958,9 +1091,11 @@ def shorts_topla(ayar: dict, simdi: datetime, rapor: dict, gun: float | None, li
                 continue
             if int(e.get('view_count') or 0) < int(ayar['viral_min_izlenme']):
                 nedenler['dusuk_izlenme'] += 1
+                elenen_kaydet(rapor, 'yt:' + vid, 'dusuk_izlenme', e.get('title'), ad)
                 continue
             if e.get('duration') and e['duration'] > 3600:
                 nedenler['cok_uzun'] += 1
+                elenen_kaydet(rapor, 'yt:' + vid, 'cok_uzun', e.get('title'), ad)
                 continue
             eslesen.append(e)
         eslesen.sort(key=lambda e: -int(e.get('view_count') or 0))
@@ -977,16 +1112,24 @@ def shorts_topla(ayar: dict, simdi: datetime, rapor: dict, gun: float | None, li
         for e, d, hata in sonuclar:
             if d is None:
                 nedenler['detay_cozulemedi'] += 1
+                elenen_kaydet(rapor, 'yt:' + str(e.get('id')), 'detay_cozulemedi', e.get('title'), ad)
                 continue
             kayit['detay_cozulen'] += 1
             neden = viral_ele_nedeni(d, ayar, kesim, uzun)
             if neden:
                 nedenler[neden] += 1
+                elenen_kaydet(rapor, 'yt:' + str(d.get('id')), neden, d.get('title'), ad)
                 continue
             a = viral_adayi(d, ad, ayar, uzun)
             if a['id'] in gorulen:
                 nedenler['kopya'] += 1
                 continue
+            kanal_ust = int(ayar.get('viral_kanal_ust', 0) or 0)
+            if kanal_ust and kanal_sayac[viral_anahtari(a)] >= kanal_ust:
+                nedenler['kanal_ust'] += 1
+                elenen_kaydet(rapor, a['id'], 'kanal_ust', a['baslik'], ad)
+                continue
+            kanal_sayac[viral_anahtari(a)] += 1
             gorulen.add(a['id'])
             sonuc.append(a)
             kayit['kalan'] += 1
@@ -1123,6 +1266,11 @@ def aday_topla(ayar: dict, dizin: pathlib.Path, kaynaklar: tuple[str, ...] = ('p
     rapor['ortusme'] = {'elenen': ortusen, 'belirsiz_adayi_sayisi': belirsiz,
                         'not': 'epoch aralığı bilinmeyen paket/izleyici adayı (VOD ya da klip listesi PROGRAM-DATE-TIME vermedi) '
                                'örtüşme denetimine giremez; ikisi de kalır'}
+    rapor.setdefault('elenen_adaylar', [])
+    rapor['elenen_adaylar'] += [{'id': e['id'], 'neden': 'ortusme', 'ortusen': e.get('ortusen'), 'kaynak': 'genel'} for e in ortusen]
+    rapor['elenen_adaylar'] += [{'id': e['id'], 'neden': 'onceki_derlemede_kullanildi', 'derleme': e.get('derleme'), 'kaynak': 'durum'}
+                                for e in kullanilmis]
+    rapor['elenen_adaylar'] += [{'id': e['id'], 'neden': 'kopya', 'kaynak': 'genel'} for e in kopya]
     rapor['kopya_elenen'] = len(kopya)
     rapor['onceki_derlemede_kullanilan'] = kullanilmis
     rapor['aday_sayilari'] = {t: sum(1 for a in adaylar if a['tur'] == t) for t in ('yayinci', 'izleyici', 'viral')}
@@ -1178,31 +1326,54 @@ def baslik_sablon_mu(b: str | None, sablonlar: list[str] | None = None) -> bool:
     return bool(re.search(r'yayınında .*(chat|sohbet|herkes)', b, re.I))
 
 
-def vurucu_mu(b: str | None, sablonlar: list[str] | None = None) -> bool:
+def anlamsiz_baslik(t: str | None) -> bool:
+    """Başlık anlamsız mı: 3 harften kısa, ünlüsüz, ya da klavye ezmesi (en çok 3 farklı harf, en az 6 harf).
+    Örnekler: 'ss', 'zzz', 'QWEQWEEWQWEQWEQ'."""
+    harfler = [c.lower() for c in (t or '') if c.isalpha()]
+    if len(harfler) < 3:
+        return True
+    if not any(c in 'aeıioöuü' for c in harfler):
+        return True
+    return len(harfler) >= 6 and len(set(harfler)) <= 3
+
+
+def anlamli_mi(b: str | None) -> bool:
+    """Başlık, şablon olsa bile, kullanılabilir düzeyde mi (en az 8 karakter, 2 kelime, anlamsız değil)."""
     t = temiz_baslik(b)
-    if len(t) < 8 or len(t.split()) < 2:
+    return len(t) >= 8 and len(t.split()) >= 2 and not anlamsiz_baslik(t)
+
+
+def vurucu_mu(b: str | None, sablonlar: list[str] | None = None) -> bool:
+    if not anlamli_mi(b):
         return False
     return not baslik_sablon_mu(b, sablonlar)
 
 
 def baslik_sec(parcalar: list[dict], ayar: dict, sayi: int, sablonlar: list[str] | None = None) -> dict:
-    """Önerilen başlık: `<BÜYÜK HARF OLAY> | <Seri> #<Sayı>`. Olay: en değerli parçanın başlığı vurucuysa o; değilse en çok
-    izlenen vurucu izleyici klibi; o da yoksa en çok izlenen vurucu parça; hiçbiri yoksa genel başlık."""
+    """Önerilen başlık: `<BÜYÜK HARF OLAY> | <Seri> #<Sayı>`. Başlık yalnız yayıncı içeriğinden seçilir, sırayla:
+    (1) konuşma katmanının başlığı (konusma* paketi, en değerli, vurucu); (2) en çok izlenen anlamlı izleyici klibi başlığı;
+    (3) eski şablon başlık (yayıncı kesiti, sonra izleyici klibi). Viral yalnız hiç yayıncı/izleyici parçası yoksa kullanılır."""
     sablonlar = sablonlar if sablonlar is not None else sablon_listesi()
-    adaylar = [p['aday'] for p in parcalar if p.get('aday') and p['rol'] in ('yayinci', 'izleyici', 'viral')]
+    govde = [p['aday'] for p in parcalar if p.get('aday') and p['rol'] in ('yayinci', 'izleyici', 'viral')]
+    kesit = sorted([a for a in govde if a['tur'] in ('yayinci', 'izleyici')], key=lambda a: -a['deger'])
     secim, neden = None, 'genel'
-    if adaylar:
-        en_iyi = max(adaylar, key=lambda a: a['deger'])
-        if vurucu_mu(en_iyi.get('baslik'), sablonlar):
-            secim, neden = en_iyi, 'en_degerli_parca'
-        else:
-            izl = [a for a in adaylar if a['tur'] == 'izleyici' and vurucu_mu(a.get('baslik'), sablonlar)]
-            if izl:
-                secim, neden = max(izl, key=lambda a: a.get('izlenme') or 0), 'en_cok_izlenen_izleyici_klibi'
-            else:
-                izl = [a for a in adaylar if (a.get('izlenme') or 0) > 0 and vurucu_mu(a.get('baslik'), sablonlar)]
-                if izl:
-                    secim, neden = max(izl, key=lambda a: a.get('izlenme') or 0), 'en_cok_izlenen_parca'
+    konusma = [a for a in kesit if a['tur'] == 'yayinci' and (a.get('paket_turu') or '').startswith('konusma')
+               and vurucu_mu(a.get('baslik'), sablonlar)]
+    izl = [a for a in kesit if a['tur'] == 'izleyici' and vurucu_mu(a.get('baslik'), sablonlar)]
+    yay_anlamli = [a for a in kesit if a['tur'] == 'yayinci' and anlamli_mi(a.get('baslik'))]
+    izl_anlamli = [a for a in kesit if a['tur'] == 'izleyici' and anlamli_mi(a.get('baslik'))]
+    vir = sorted([a for a in govde if a['tur'] == 'viral' and vurucu_mu(a.get('baslik'), sablonlar)],
+                 key=lambda a: -(a.get('izlenme') or 0))
+    if konusma:
+        secim, neden = konusma[0], 'konusma_katmani'
+    elif izl:
+        secim, neden = max(izl, key=lambda a: a.get('izlenme') or 0), 'en_cok_izlenen_izleyici_klibi'
+    elif yay_anlamli:
+        secim, neden = yay_anlamli[0], 'eski_sablon_yayinci'
+    elif izl_anlamli:
+        secim, neden = max(izl_anlamli, key=lambda a: a.get('izlenme') or 0), 'eski_sablon_izleyici'
+    elif not kesit and vir:
+        secim, neden = vir[0], 'viral_yedek'
     olay = tr_buyuk(temiz_baslik(secim['baslik'])) if secim else 'EN ÇOK KONUŞULAN ANLAR'
     son = f' | {ayar["seri_adi"]} #{sayi}'
     if len(olay) + len(son) > 100:
@@ -1622,11 +1793,15 @@ def parca_kaydi(p: dict, sira: int, bas: float, sure: float, hz: dict | None) ->
 
 def uret(ayar: dict, dizin: pathlib.Path, kaynaklar: tuple[str, ...] = ('paket', 'izleyici', 'viral'), gun: float | None = None,
          hedef_dk: float | None = None, turler: tuple[str, ...] = ('yayinci', 'izleyici', 'viral'), kuru: bool = False,
-         adaylar_dosyasi: pathlib.Path | None = None, zorla: bool = False) -> dict:
+         adaylar_dosyasi: pathlib.Path | None = None, zorla: bool = False, deneme: bool = False) -> dict:
+    """deneme=True: durum.json'a hiçbir şey yazılmaz (seri sayısı ve kullanılanlar değişmez), önceki derlemelerde
+    kullanılmış videolar da aday sayılır, çıktı `derleme/deneme-<tarihsaat>/` klasörüne gider."""
     t_basla = time.time()
     yk = yk_yukle()
     ff, font = yk.ffmpeg_bul(), yk.font_bul()
     durum = durum_oku(dizin)
+    if deneme:
+        durum = {'seri': durum.get('seri', {}), 'kullanilan': {}}   # yalnız seri adı için; kullanılanlar aday sayılır
     if adaylar_dosyasi:
         yuk = json.loads(pathlib.Path(adaylar_dosyasi).read_text(encoding='utf-8'))
         adaylar, toplama_rapor = yuk['adaylar'], yuk.get('rapor', {})
@@ -1639,11 +1814,16 @@ def uret(ayar: dict, dizin: pathlib.Path, kaynaklar: tuple[str, ...] = ('paket',
         plan = plan_olustur(adaylar, ayar, hedef_sn, turler)
         return {'kuru': True, 'plan': plan_ozeti(plan), 'toplama': toplama_rapor}
     sayi = sonraki_sayi(durum, ayar['seri_adi'])
-    ad = f'{slug(ayar["seri_adi"])}-{sayi}'
+    if deneme:
+        ad = 'deneme-' + simdi_utc().strftime('%Y%m%d-%H%M%S')
+    else:
+        ad = f'{slug(ayar["seri_adi"])}-{sayi}'
     kok = derleme_dizini(dizin) / ad
     calisma = kok / 'parcalar'
     calisma.mkdir(parents=True, exist_ok=True)
-    plan, hazir, elenenler = planla_ve_hazirla(adaylar, ayar, hedef_sn, turler, ff, font, dizin, calisma, zorla)
+    plan, hazir, elenen_hazirlama = planla_ve_hazirla(adaylar, ayar, hedef_sn, turler, ff, font, dizin, calisma, zorla)
+    # her elenen adayın nedeni: toplama süzgeçleri + yayıncı üst sınırı + hazırlama hatası
+    elenenler = list(toplama_rapor.get('elenen_adaylar', [])) + list(plan.get('ust_elenen', [])) + list(elenen_hazirlama)
     hazirlama_sn = time.time() - t_basla - toplama_sn
 
     # kartlar ve teaser
@@ -1694,7 +1874,7 @@ def uret(ayar: dict, dizin: pathlib.Path, kaynaklar: tuple[str, ...] = ('paket',
     sonuc = {
         'seri': ayar['seri_adi'], 'sayi': sayi, 'ad': ad, 'olusturma': simdi_utc().strftime('%Y-%m-%dT%H:%M:%SZ'),
         'baslik': bsl['baslik'], 'baslik_bilgi': {k: bsl[k] for k in ('olay', 'neden', 'kaynak_aday')},
-        'aciklama': aciklama, 'yayinlandi': False,
+        'aciklama': aciklama, 'yayinlandi': False, 'deneme': deneme,
         'dosya': str(cikis), 'sure_sn': round(b['sure_sn'], 2), 'cozunurluk': f'{b["genislik"]}x{b["yukseklik"]}',
         'fps': ayar['fps'], 'sayilar': sayilar, 'parcalar': kayitlar, 'kucuk_resimler': kucukler,
         'uyarilar': plan['uyarilar'], 'elenen_adaylar': elenenler,
@@ -1704,10 +1884,12 @@ def uret(ayar: dict, dizin: pathlib.Path, kaynaklar: tuple[str, ...] = ('paket',
     }
     (kok / 'derleme.json').write_text(json.dumps(sonuc, ensure_ascii=False, indent=2), encoding='utf-8')
     (kok / 'aciklama.txt').write_text(aciklama, encoding='utf-8')
-    durum = durum_oku(dizin)
-    kullanilanlari_isle(durum, ayar['seri_adi'], sayi, ad, [{'aday': p['aday'], 'rol': p['rol']} for p in govde])
-    durum_yaz(dizin, durum)
-    log(f'tamam: {cikis} ({zaman_m(b["sure_sn"])}, {cikis.stat().st_size / 1e6:.0f} MB, üretim {sonuc["olcum"]["toplam_uretim_sn"]:.0f} sn)')
+    if not deneme:      # deneme durum dosyasına yazmaz: seri sayısı ve kullanılanlar olduğu gibi kalır
+        durum = durum_oku(dizin)
+        kullanilanlari_isle(durum, ayar['seri_adi'], sayi, ad, [{'aday': p['aday'], 'rol': p['rol']} for p in govde])
+        durum_yaz(dizin, durum)
+    log(f'tamam{" (deneme, durum.json değişmedi)" if deneme else ""}: {cikis} ({zaman_m(b["sure_sn"])}, '
+        f'{cikis.stat().st_size / 1e6:.0f} MB, üretim {sonuc["olcum"]["toplam_uretim_sn"]:.0f} sn)')
     return sonuc
 
 
@@ -1854,6 +2036,9 @@ def main(argv: list[str] | None = None) -> int:
     u.add_argument('--adaylar-dosyasi', help='topla çıktısı (toplamayı atlar)')
     u.add_argument('--kuru', action='store_true', help='yalnız plan (indirme/kodlama yok)')
     u.add_argument('--zorla', action='store_true', help='önceki parça dosyalarını yeniden üret')
+    u.add_argument('--deneme', action='store_true',
+                   help='deneme: durum.json yazılmaz (seri sayısı/kullanılanlar değişmez), önceki derlemelerdeki videolar da aday, '
+                        'çıktı derleme/deneme-<tarihsaat>/')
     d = sp.add_parser('dogrula', help='bitmiş derlemeyi ölç, kare çıkar')
     d.add_argument('klasor')
     a = ap.parse_args(argv)
@@ -1872,7 +2057,7 @@ def main(argv: list[str] | None = None) -> int:
             if a.yalniz_yayinci:
                 kaynaklar, turler = tuple(k for k in kaynaklar if k != 'viral'), ('yayinci', 'izleyici')
             s = uret(ayar, dizin, kaynaklar, a.gun, a.sure_dk, turler, a.kuru,
-                     pathlib.Path(a.adaylar_dosyasi) if a.adaylar_dosyasi else None, a.zorla)
+                     pathlib.Path(a.adaylar_dosyasi) if a.adaylar_dosyasi else None, a.zorla, a.deneme)
             ozet = s if s.get('kuru') else {k: s[k] for k in ('ad', 'baslik', 'dosya', 'sure_sn', 'cozunurluk', 'sayilar',
                                                               'uyarilar', 'elenen_adaylar', 'olcum')}
             print(json.dumps(ozet, ensure_ascii=False, indent=2))

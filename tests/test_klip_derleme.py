@@ -288,12 +288,19 @@ class BaslikVeAciklamaTesti(unittest.TestCase):
         self.assertEqual(s['baslik'], 'MADARA OLDUK İLGİNÇ AN | Yayın Kolajı #7')
         self.assertLessEqual(len(s['baslik']), 100)
 
-    def test_sablon_baslik_kullanilmaz(self):
+    def test_sablon_baslik_en_son_care(self):
+        # gerçek (konuşma/izleyici) başlığı yoksa eski şablon, yayıncı parçasından, en son çare olarak kullanılır
         a = aday('yayinci', 1, 0.9)
         a['baslik'] = 'Eraycan yayınında chat kahkahaya boğuldu'
         s = kd.baslik_sec([{'rol': 'yayinci', 'aday': a}], ayar(), 2, sablonlar=[])
-        self.assertEqual(s['olay'], 'EN ÇOK KONUŞULAN ANLAR')
+        self.assertEqual(s['neden'], 'eski_sablon_yayinci')
+        self.assertEqual(s['olay'], 'ERAYCAN YAYININDA CHAT KAHKAHAYA BOĞULDU')
         self.assertTrue(s['baslik'].endswith('| Yayın Kolajı #2'))
+        # yayıncı yoksa genel başlık
+        v = aday('viral', 2, 0.9)
+        v['baslik'] = 'Eraycan yayınında chat kahkahaya boğuldu'
+        g = kd.baslik_sec([{'rol': 'viral', 'aday': v}], ayar(), 2, sablonlar=[])
+        self.assertEqual(g['olay'], 'EN ÇOK KONUŞULAN ANLAR')
 
     def test_uzun_baslik_sinira_kesilir(self):
         a = aday('viral', 1, 0.9)
@@ -390,6 +397,199 @@ class FiltreVeAdTesti(unittest.TestCase):
         a = kd.ayar_yukle_d(kd.AYAR_DOSYASI)
         self.assertLessEqual(a['sure_min_dk'], a['sure_dk'])
         self.assertLessEqual(a['sure_dk'], a['sure_max_dk'])
+
+
+class TurkceVeKaynakSuzgeciTesti(unittest.TestCase):
+    """Derleme düzeltmeleri (2. tur): Shorts Türkçe süzgeci, kanal üst sınırı, eleme kayıtları."""
+    KESIM = None
+
+    def _viral(self, baslik, dil=None, sure=10.0, izlenme=2_000_000, kanal='Kanal', **ek):
+        d = {'id': 'v' + str(abs(hash(baslik)) % 99999), 'title': baslik, 'duration': sure, 'view_count': izlenme,
+             'channel': kanal, 'upload_date': '20261116', 'availability': 'public'}
+        if dil is not None:
+            d['language'] = dil
+        d.update(ek)
+        return d
+
+    def _neden(self, d, **ayar_ek):
+        return kd.viral_ele_nedeni(d, ayar(**ayar_ek), None, 'ele')
+
+    def test_yabanci_ve_etiket_yigini_elenir(self):
+        self.assertEqual(self._neden(self._viral('초콜릿으로 진짜부자 구별하는법🤙🤪🤙')), 'baslik_latin_disi')
+        self.assertEqual(self._neden(self._viral("How a Spider Bite Can Change Your Family's Destiny", kanal='Carlos Reig')),
+                         'turkce_izi_yok')
+        self.assertIn(self._neden(self._viral('#funny #comedy #challenge #memes #family', kanal='Bro Mode ON')),
+                      ('turkce_izi_yok', 'baslik_cok_az_kelime'))
+
+    def test_turkce_baslik_gecer(self):
+        self.assertIsNone(self._neden(self._viral('Köpeğe rüşvet verdiler 🐶😂', kanal='Bir Mesele Var', sure=14.0)))
+        self.assertIsNone(self._neden(self._viral('Tavşan Dağa Küsmüş', kanal='Malafaith', sure=5.0)))
+
+    def test_dil_alani_once_gelir(self):
+        self.assertEqual(self._neden(self._viral('Köpeğe rüşvet verdiler', dil='en')), 'dil_turkce_degil')
+        self.assertIsNone(self._neden(self._viral('Bro mode on always', dil='tr')))
+
+    def test_elle_secilen_turkce_suzgecine_girmez(self):
+        d = self._viral('How a Spider Bite Can Change', kanal='Carlos')
+        self.assertIsNone(kd.viral_ele_nedeni(d, ayar(), None, 'kirp', serbest=True))
+
+    def test_turkce_suzgeci_kapatilabilir(self):
+        d = self._viral('How a Spider Bite Can Change', kanal='Carlos')
+        self.assertIsNone(self._neden(d, viral_turkce_sart=False))
+
+    def test_etiketler_atilinca_kelime_sayisi(self):
+        self.assertEqual(kd.kelime_sayisi('#komik #komedi #kedi'), 0)
+        self.assertEqual(kd.kelime_sayisi('Kandıramadı🦁🐈 fear😹#komik'), 2)
+        self.assertEqual(kd.kelime_sayisi('😂😂'), 0)
+
+    def test_latin_disi_tespiti(self):
+        self.assertTrue(kd.latin_disi_mi('초콜릿 abc'))
+        self.assertTrue(kd.latin_disi_mi('Привет'))
+        self.assertFalse(kd.latin_disi_mi('Şişli ığdır ÖZGÜR çok'))
+
+    def test_shorts_ayni_kanal_en_cok_iki_ve_kayit(self):
+        simdi = kd.datetime(2026, 11, 18, tzinfo=kd.timezone.utc)
+        videolar = {f'v{i}': self._viral(f'Bir komik olay çok {i}', dil='tr', kanal='Tek Kanal', id=f'v{i}') for i in range(4)}
+        videolar['x'] = self._viral('Bir komik olay başka kanal', dil='tr', kanal='Diğer', id='x')
+        liste = [{'id': k, 'view_count': v['view_count'], 'title': v['title'], 'duration': v['duration']} for k, v in videolar.items()]
+        rapor: dict = {}
+        ayr = ayar(shorts_kaynaklari=[{'ad': 't', 'tur': 'etiket', 'hedef': 'komik', 'kac': 5}], viral_kanal_ust=2)
+        sonuc = kd.shorts_topla(ayr, simdi, rapor, None, liste_al=lambda k: liste, detay_al=lambda url: videolar[url.split('=')[-1]])
+        self.assertEqual(len(sonuc), 3)
+        self.assertEqual(sum(1 for a in sonuc if a['kanal_adi'] == 'Tek Kanal'), 2)
+        elenen = rapor['elenen_adaylar']
+        # aynı kanaldan 4 video: 2'si kabul, 2'si 'kanal_ust' olarak kayda geçer
+        self.assertEqual([e['neden'] for e in elenen if e['neden'] == 'kanal_ust'], ['kanal_ust', 'kanal_ust'])
+
+    def test_izleyici_eleme_kanal_bazinda_yazilir(self):
+        klip = {'id': 'k1', 'privacy': 'public', 'clip_url': 'https://x/k1.mp4', 'duration': 20, 'views': 2, 'title': 'ss',
+                'created_at': '2026-11-17 10:00:00'}
+        rapor: dict = {}
+        kanallar = [('kanalA', 'Yayıncı A')]
+        kd.izleyici_topla(ayar(), kanallar, 7, 0.0, rapor, json_al=lambda url: {'clips': [klip], 'nextCursor': None},
+                          pdt_al=lambda url: None)
+        self.assertEqual(rapor['izleyici']['kanal']['kanalA']['elenen'], {'dusuk_izlenme': 1})
+        self.assertEqual(rapor['elenen_adaylar'][0]['id'], 'kick-klip:k1')
+
+    def test_yayinci_basina_izleyici_ve_toplam_ust_siniri(self):
+        adaylar = [aday('izleyici', i, 0.9 - i * 0.01, 22.0, 'Tek') for i in range(6)]
+        adaylar += [aday('yayinci', 10 + i, 0.5 - i * 0.01, 22.0, 'Tek') for i in range(6)]
+        adaylar += [aday('izleyici', 30, 0.2, 22.0, 'Diger'), aday('yayinci', 31, 0.2, 22.0, 'Diger')]
+        adaylar += [aday('viral', i, 0.6 - i * 0.01) for i in range(20)]
+        plan = kd.plan_olustur(adaylar, ayar(izleyici_kanal_ust=2, yayinci_toplam_ust=3, viral_dolgu=True))
+        kesit = [p['aday'] for p in govde(plan) if p['rol'] in ('yayinci', 'izleyici')]
+        tek = [a for a in kesit if a['yayinci'] == 'Tek']
+        self.assertLessEqual(len(tek), 3)
+        self.assertLessEqual(sum(1 for a in tek if a['tur'] == 'izleyici'), 2)
+        self.assertTrue(any(a['yayinci'] == 'Diger' for a in kesit))
+        self.assertIn('izleyici_kanal_ust', {e['neden'] for e in plan['ust_elenen']})
+        self.assertIn('yayinci_toplam_ust', {e['neden'] for e in plan['ust_elenen']})
+
+    def test_teaser_yayinci_iceriginden(self):
+        adaylar = malzeme(8, 6) + [aday('viral', 99, 0.999)]
+        plan = kd.plan_olustur(adaylar, ayar())
+        teaser = [p for p in plan['parcalar'] if p['rol'] == 'teaser']
+        self.assertTrue(teaser)
+        self.assertTrue(all(p['aday']['tur'] in ('yayinci', 'izleyici') for p in teaser))
+
+    def test_teaser_yayinci_yoksa_viral(self):
+        plan = kd.plan_olustur([aday('viral', i, 0.9 - i * 0.01) for i in range(10)], ayar())
+        teaser = [p for p in plan['parcalar'] if p['rol'] == 'teaser']
+        self.assertTrue(all(p['aday']['tur'] == 'viral' for p in teaser))
+
+
+class PaketOnceligiVeKesitTesti(unittest.TestCase):
+    def test_paket_turu(self):
+        self.assertEqual(kd.paket_turu('konusma-hizali-01'), 'konusma-hizali')
+        self.assertEqual(kd.paket_turu('konusma-ek-patates'), 'konusma')
+        self.assertEqual(kd.paket_turu('konusma-01'), 'konusma')
+        self.assertEqual(kd.paket_turu('canli-02'), 'canli')
+        self.assertEqual(kd.paket_turu('klip-03'), 'klip')
+
+    def _p(self, i, turu, bas, bit, deger, vod='u1'):
+        return {'id': f'paket:{i}', 'vod_uuid': vod, 'klip_baslangic_sn': bas, 'klip_bitis_sn': bit, 'deger': deger,
+                'paket_turu': turu, 'baslik': f'b{i}'}
+
+    def test_ortusende_konusma_kalir_klip_elenir(self):
+        klip = self._p(1, 'klip', 100.0, 140.0, 0.9)
+        konusma = self._p(2, 'konusma-hizali', 105.0, 130.0, 0.4)
+        kalan, elenen = kd.paket_ortusmesini_ele([klip, konusma], 5.0)
+        self.assertEqual([a['id'] for a in kalan], ['paket:2'])
+        self.assertEqual(elenen[0]['id'], 'paket:1')
+        self.assertEqual(elenen[0]['neden'], 'paket_ortusme')
+
+    def test_farkli_yayin_ve_kucuk_ortusme_korunur(self):
+        a = self._p(1, 'klip', 100.0, 140.0, 0.9, vod='u1')
+        b = self._p(2, 'klip', 100.0, 140.0, 0.8, vod='u2')
+        c = self._p(3, 'klip', 138.0, 160.0, 0.7, vod='u1')    # 2 sn örtüşme < 5 sn eşik
+        kalan, elenen = kd.paket_ortusmesini_ele([a, b, c], 5.0)
+        self.assertEqual(len(kalan), 3)
+        self.assertEqual(elenen, [])
+
+    def test_konusma_kesiti_model_araligi_basindan(self):
+        klip = {'klip_baslangic_sn': 585.95, 'klip_bitis_sn': 623.36, 'zirve_sn': 604.655, 'konusma_puani': 7}
+        k = kd.kesit_araligi(klip, ayar())
+        self.assertEqual(k['yontem'], 'konusma_bas')
+        self.assertEqual(k['bas'], 585.95)
+        self.assertEqual(k['sure'], 22.0)
+
+    def test_kisa_konusma_paketi_oldugu_gibi(self):
+        klip = {'klip_baslangic_sn': 100.0, 'klip_bitis_sn': 120.0, 'zirve_sn': 110.0, 'konusma_puani': 3}
+        k = kd.kesit_araligi(klip, ayar())
+        self.assertEqual((k['bas'], k['bit']), (100.0, 120.0))
+
+
+class BaslikKaynagiTesti(unittest.TestCase):
+    def _b(self, tur, i, deger, baslik, izlenme=1000, turu=None):
+        a = aday(tur, i, deger)
+        a['baslik'] = baslik
+        a['izlenme'] = izlenme
+        if turu:
+            a['paket_turu'] = turu
+        return {'rol': tur, 'aday': a}
+
+    def test_anlamsiz_baslik(self):
+        for t in ('ss', 'zzz', 'QWEQWEEWQWEQWEQ'):
+            self.assertTrue(kd.anlamsiz_baslik(t), t)
+        self.assertFalse(kd.anlamsiz_baslik('Madara olduk ilginç an'))
+
+    def test_konusma_basligi_once_viral_asla(self):
+        parcalar = [self._b('viral', 1, 0.99, 'Kandıramadı FEAR kedi videosu', 10**7),
+                    self._b('yayinci', 2, 0.5, "Takım B'ye saldıran rakiplerin koşarak vurmasına isyan ediyor", 0, 'konusma'),
+                    self._b('izleyici', 3, 0.4, 'QWEQWEEWQWEQWEQ', 9_000_000)]
+        s = kd.baslik_sec(parcalar, ayar(), 1, sablonlar=[])
+        self.assertEqual(s['neden'], 'konusma_katmani')
+        self.assertTrue(s['olay'].startswith("TAKIM B'YE"))
+        self.assertNotIn('KANDIRAMADI', s['baslik'])
+
+    def test_anlamsiz_izleyici_basligi_secilmez(self):
+        parcalar = [self._b('izleyici', 1, 0.9, 'ss', 9_000_000),
+                    self._b('izleyici', 2, 0.5, 'Madara olduk ilginç an', 500)]
+        s = kd.baslik_sec(parcalar, ayar(), 1, sablonlar=[])
+        self.assertEqual(s['neden'], 'en_cok_izlenen_izleyici_klibi')
+        self.assertEqual(s['olay'], 'MADARA OLDUK İLGİNÇ AN')
+
+    def test_yalniz_anlamsiz_izleyici_sablon_yedegi(self):
+        parcalar = [self._b('izleyici', 1, 0.9, 'zzz', 9_000_000),
+                    self._b('izleyici', 2, 0.5, 'Kemalcan Parlak yayınında sohbet bir anda gülmeye başladı', 100)]
+        s = kd.baslik_sec(parcalar, ayar(), 1)
+        self.assertEqual(s['neden'], 'eski_sablon_izleyici')
+        self.assertNotIn('ZZZ', s['olay'])
+
+    def test_viral_yalniz_yayinci_yoksa(self):
+        s = kd.baslik_sec([self._b('viral', 1, 0.9, 'Madara olduk ilginç an', 10**6)], ayar(), 1, sablonlar=[])
+        self.assertEqual(s['neden'], 'viral_yedek')
+        parcalar = [self._b('viral', 1, 0.9, 'Madara olduk ilginç an', 10**6),
+                    self._b('izleyici', 2, 0.1, 'zzz', 100)]
+        s2 = kd.baslik_sec(parcalar, ayar(), 1, sablonlar=[])
+        self.assertNotEqual(s2['neden'], 'viral_yedek')
+
+
+class AnlamliBaslikTesti(unittest.TestCase):
+    def test_bosluk_ve_kisa_baslik_anlamli_degil(self):
+        self.assertFalse(kd.anlamli_mi('ss'))
+        self.assertFalse(kd.anlamli_mi(None))
+        self.assertTrue(kd.anlamli_mi('Eraycan yayınında chat kahkahaya boğuldu'))
 
 
 if __name__ == '__main__':
