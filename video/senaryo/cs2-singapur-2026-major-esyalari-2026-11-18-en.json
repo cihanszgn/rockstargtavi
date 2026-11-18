@@ -1,0 +1,128 @@
+{
+ "id": "cs2-singapur-2026-major-esyalari-2026-11-18",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Valve's latest Counter-Strike 2 update puts Singapore 2026 Major tournament items on sale.",
+   "veri": {
+    "ust_etiket": "COUNTER-STRIKE 2",
+    "baslik": "Singapore 2026 Major items on sale",
+    "vurgu": [
+     "Singapore 2026 Major"
+    ],
+    "tuslar": [
+     "C",
+     "S",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "COUNTER-STRIKE 2",
+    "alt": "SINGAPORE 2026 MAJOR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to Valve's Steam announcement, Viewer Passes and autograph stickers are now in the Major Shop.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Valve Steam announcement",
+    "alinti": "Major Viewer Passes and Team and Player Autograph stickers are now available for purchase in the Major Shop."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "VALVE • STEAM ANNOUNCEMENT"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "A Viewer Pass unlocks a Bronze Challenge Coin. Autograph stickers have a fixed price. Half of the proceeds go to players, teams and the tournament organizer.",
+   "veri": {
+    "baslik": "Major items",
+    "maddeler": [
+     {
+      "metin": "Bronze Challenge Coin with a pass",
+      "tetik": "Challenge"
+     },
+     {
+      "metin": "Autograph stickers at fixed prices",
+      "tetik": "Autograph"
+     },
+     {
+      "metin": "50% of proceeds to players and teams",
+      "tetik": "Half"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "MAJOR ITEMS",
+    "alt": "BRONZE COIN AND AUTOGRAPHS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "The update also adds 8 new Monstercat music kits, from Tristam & Braken's classic release to Noisestorm's viral April Fool's joke.",
+   "veri": {
+    "baslik": "Monstercat kits",
+    "maddeler": [
+     {
+      "metin": "8 new music kits",
+      "tetik": "8"
+     },
+     {
+      "metin": "Tristam & Braken's classic",
+      "tetik": "Tristam"
+     },
+     {
+      "metin": "Noisestorm's viral joke",
+      "tetik": "Noisestorm"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "MONSTERCAT KITS",
+    "alt": "8 NEW MUSIC KITS"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "All the Singapore 2026 Major items are on our site, Control A Game.",
+   "veri": {
+    "cagri": "All Major items on the site",
+    "alt": "Sales details and rewards are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

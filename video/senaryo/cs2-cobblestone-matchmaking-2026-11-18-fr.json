@@ -1,0 +1,149 @@
+{
+ "id": "cs2-cobblestone-matchmaking-2026-11-18",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Cobblestone rejoint le matchmaking de Counter-Strike 2, et trois cartes quittent le pool officiel.",
+   "veri": {
+    "ust_etiket": "COUNTER-STRIKE 2",
+    "baslik": "Cobblestone rejoint le matchmaking",
+    "vurgu": [
+     "Cobblestone"
+    ],
+    "tuslar": [
+     "C",
+     "S"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "COUNTER-STRIKE 2",
+    "alt": "COBBLESTONE ARRIVE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "D'après l'annonce Steam de Valve, Cobblestone entre dans le matchmaking officiel de Casual, Competitive, Wingman, Retakes et Deathmatch.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Annonce Steam de Valve",
+    "alinti": "Cobblestone ajoutée au matchmaking officiel de Casual, Competitive, Wingman, Retakes et Deathmatch."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "VALVE • ANNONCE STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Boulder, Fachwerk et Shelter quittent le pool officiel. Cobblestone entre en Casual, Competitive et Deathmatch.",
+   "veri": {
+    "baslik": "Changements de cartes",
+    "maddeler": [
+     {
+      "metin": "Cobblestone ajoutée",
+      "tetik": "Cobblestone"
+     },
+     {
+      "metin": "Boulder, Fachwerk, Shelter retirées",
+      "tetik": "Boulder"
+     },
+     {
+      "metin": "Casual, Competitive, Deathmatch",
+      "tetik": "Casual"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CHANGEMENTS DE CARTES",
+    "alt": "COBBLESTONE ENTRE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Valve ajoute 8 nouveaux kits musicaux Monstercat, et la boutique prévisualise désormais l'hymne MVP.",
+   "veri": {
+    "baslik": "Nouveaux kits musicaux",
+    "platformlar": [
+     "PC"
+    ],
+    "sayilar": [
+     {
+      "deger": "8",
+      "etiket": "NOUVEAUX KITS",
+      "tetik": "8"
+     }
+    ],
+    "not": "Prévisualisation de l'hymne MVP en boutique."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "KITS MUSICAUX",
+    "alt": "MONSTERCAT • HYMNE MVP"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "La tête ne s'enfonce plus trop aux angles de visée extrêmes. En Retakes, les kits de désamorçage sont bien attribués.",
+   "veri": {
+    "baslik": "Corrections",
+    "maddeler": [
+     {
+      "metin": "Tête corrigée",
+      "tetik": "tête"
+     },
+     {
+      "metin": "Kits de désamorçage en Retakes",
+      "tetik": "désamorçage"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CORRECTIONS",
+    "alt": "RETAKES ET VISÉE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Le hub du Major PGL Singapore 2026 est en ligne. Tout est sur notre site, Control A Game.",
+   "veri": {
+    "cagri": "Tout est sur le site",
+    "alt": "Hub du Major et correctifs dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

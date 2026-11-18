@@ -1,0 +1,128 @@
+{
+ "id": "cs2-singapur-2026-major-esyalari-2026-11-18",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Counter-Strike 2'nin yeni güncellemesiyle Singapur 2026 Major eşyaları satışa çıktı.",
+   "veri": {
+    "ust_etiket": "COUNTER-STRIKE 2",
+    "baslik": "Singapur 2026 Major eşyaları satışta",
+    "vurgu": [
+     "Singapur 2026 Major"
+    ],
+    "tuslar": [
+     "C",
+     "S",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "COUNTER-STRIKE 2",
+    "alt": "SINGAPUR 2026 MAJOR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Valve'in Steam duyurusuna göre izleyici geçişleri ve imza çıkartmaları Major Mağazası'nda satışta.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Valve Steam duyurusu",
+    "alinti": "Major İzleyici Geçişleri ve takım ile oyuncu imza çıkartmaları Major Mağazası'nda satışta."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "VALVE • STEAM DUYURUSU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Major İzleyici Geçişi alan oyuncu bronz Challenge Coin kazanır. İmza çıkartmaları sabit fiyatla satılıyor. Satış gelirinin yarısı oyunculara, takımlara ve organizatöre gidiyor.",
+   "veri": {
+    "baslik": "Major eşyaları",
+    "maddeler": [
+     {
+      "metin": "Bronz Challenge Coin kazanılır",
+      "tetik": "Challenge"
+     },
+     {
+      "metin": "İmza çıkartmaları sabit fiyatlı",
+      "tetik": "İmza"
+     },
+     {
+      "metin": "Gelirin %50'si oyunculara gider",
+      "tetik": "yarısı"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "MAJOR EŞYALARI",
+    "alt": "BRONZ COIN VE İMZA ÇIKARTMA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Güncellemeyle 8 yeni Monstercat müzik kiti geliyor. Tristam & Braken'ın klasik sürümünden Noisestorm'un viral şakasına kadar her zevke uygun seçenek var.",
+   "veri": {
+    "baslik": "Monstercat müzik kitleri",
+    "maddeler": [
+     {
+      "metin": "8 yeni müzik kiti",
+      "tetik": "8"
+     },
+     {
+      "metin": "Tristam & Braken'ın klasiği",
+      "tetik": "Tristam"
+     },
+     {
+      "metin": "Noisestorm'un viral şakası",
+      "tetik": "Noisestorm"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "MONSTERCAT KİTLERİ",
+    "alt": "8 YENİ MÜZİK KİTİ"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Singapur 2026 Major eşyalarının tamamı sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "Bütün Major eşyaları sitede",
+    "alt": "Satış ve kazanım ayrıntıları haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

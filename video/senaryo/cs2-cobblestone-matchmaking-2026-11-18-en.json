@@ -1,0 +1,149 @@
+{
+ "id": "cs2-cobblestone-matchmaking-2026-11-18",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Cobblestone joins Counter-Strike 2 matchmaking, and three maps leave the official pool.",
+   "veri": {
+    "ust_etiket": "COUNTER-STRIKE 2",
+    "baslik": "Cobblestone joins matchmaking",
+    "vurgu": [
+     "Cobblestone"
+    ],
+    "tuslar": [
+     "C",
+     "S"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "COUNTER-STRIKE 2",
+    "alt": "COBBLESTONE ADDED"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to Valve's Steam announcement, Cobblestone is now in Casual, Competitive, Wingman, Retakes and Deathmatch.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Valve Steam announcement",
+    "alinti": "Added Cobblestone map to official Casual, Competitive, Wingman, Retakes, and Deathmatch matchmaking."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "VALVE • STEAM ANNOUNCEMENT"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Boulder, Fachwerk and Shelter are removed from the official matchmaking pool. Cobblestone is added to Casual, Competitive and Deathmatch.",
+   "veri": {
+    "baslik": "Map pool changes",
+    "maddeler": [
+     {
+      "metin": "Cobblestone added",
+      "tetik": "Cobblestone"
+     },
+     {
+      "metin": "Boulder, Fachwerk, Shelter removed",
+      "tetik": "Boulder"
+     },
+     {
+      "metin": "Casual, Competitive, Deathmatch",
+      "tetik": "Casual"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "MAP POOL",
+    "alt": "COBBLESTONE IN, THREE OUT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Valve adds 8 new Monstercat music kits, and the store now previews the MVP Anthem.",
+   "veri": {
+    "baslik": "New music kits",
+    "platformlar": [
+     "PC"
+    ],
+    "sayilar": [
+     {
+      "deger": "8",
+      "etiket": "NEW MUSIC KITS",
+      "tetik": "8"
+     }
+    ],
+    "not": "MVP Anthem preview is in the store."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "MUSIC KITS",
+    "alt": "MONSTERCAT • MVP ANTHEM"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Head dipping at extreme aim angles is fixed. Defuse kits now get granted correctly in Retakes.",
+   "veri": {
+    "baslik": "Bug fixes",
+    "maddeler": [
+     {
+      "metin": "Head dipping fixed",
+      "tetik": "dipping"
+     },
+     {
+      "metin": "Retakes defuse kits fixed",
+      "tetik": "defuse"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "BUG FIXES",
+    "alt": "RETAKES AND AIM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "The Singapore 2026 Major Hub is live too. Read the full story on our site, Control A Game.",
+   "veri": {
+    "cagri": "Full story on our site",
+    "alt": "Major Hub and fixes are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,149 @@
+{
+ "id": "cs2-cobblestone-matchmaking-2026-11-18",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Cobblestone llega al emparejamiento de Counter-Strike 2 y tres mapas salen del grupo oficial.",
+   "veri": {
+    "ust_etiket": "COUNTER-STRIKE 2",
+    "baslik": "Cobblestone llega al emparejamiento",
+    "vurgu": [
+     "Cobblestone"
+    ],
+    "tuslar": [
+     "C",
+     "S"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "COUNTER-STRIKE 2",
+    "alt": "COBBLESTONE LLEGA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según el anuncio de Valve en Steam, Cobblestone se añade a las partidas oficiales de Casual, Competitive, Wingman, Retakes y Deathmatch.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Anuncio de Valve en Steam",
+    "alinti": "Cobblestone se añade al emparejamiento oficial de Casual, Competitive, Wingman, Retakes y Deathmatch."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "VALVE • ANUNCIO EN STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Boulder, Fachwerk y Shelter salen del grupo oficial. Cobblestone entra en Casual, Competitive y Deathmatch.",
+   "veri": {
+    "baslik": "Cambios de mapas",
+    "maddeler": [
+     {
+      "metin": "Entra Cobblestone",
+      "tetik": "Cobblestone"
+     },
+     {
+      "metin": "Salen Boulder, Fachwerk y Shelter",
+      "tetik": "Boulder"
+     },
+     {
+      "metin": "Casual, Competitive y Deathmatch",
+      "tetik": "Casual"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CAMBIOS DE MAPAS",
+    "alt": "COBBLESTONE ENTRA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Valve añade 8 nuevos kits de música de Monstercat, y la tienda ya previsualiza el himno MVP.",
+   "veri": {
+    "baslik": "Nuevos kits de música",
+    "platformlar": [
+     "PC"
+    ],
+    "sayilar": [
+     {
+      "deger": "8",
+      "etiket": "NUEVOS KITS",
+      "tetik": "8"
+     }
+    ],
+    "not": "Previsualización del himno MVP en la tienda."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "KITS DE MÚSICA",
+    "alt": "MONSTERCAT • HIMNO MVP"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Se corrige la inclinación de la cabeza en ángulos extremos. En Retakes, los kits de desactivación se entregan bien.",
+   "veri": {
+    "baslik": "Correcciones",
+    "maddeler": [
+     {
+      "metin": "Cabeza corregida",
+      "tetik": "cabeza"
+     },
+     {
+      "metin": "Kits de desactivación en Retakes",
+      "tetik": "desactivación"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CORRECCIONES",
+    "alt": "RETAKES Y APUNTADO"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "El centro del Major de Singapur 2026 ya está abierto. Todos los detalles en nuestra web, Control A Game.",
+   "veri": {
+    "cagri": "Todos los detalles en la web",
+    "alt": "Centro del Major y correcciones en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

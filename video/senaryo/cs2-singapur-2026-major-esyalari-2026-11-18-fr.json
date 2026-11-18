@@ -1,0 +1,128 @@
+{
+ "id": "cs2-singapur-2026-major-esyalari-2026-11-18",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "La dernière mise à jour de Counter-Strike 2 met en vente les objets du Major de Singapour 2026.",
+   "veri": {
+    "ust_etiket": "COUNTER-STRIKE 2",
+    "baslik": "Objets du Major de Singapour 2026 en vente",
+    "vurgu": [
+     "Major de Singapour 2026"
+    ],
+    "tuslar": [
+     "C",
+     "S",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "COUNTER-STRIKE 2",
+    "alt": "MAJOR DE SINGAPOUR 2026"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "D'après l'annonce Steam de Valve, les Pass spectateur et les autocollants dédicacés sont déjà disponibles dans la boutique du Major.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Annonce Steam de Valve",
+    "alinti": "Les Major Viewer Passes et les autocollants dédicacés des joueurs et équipes sont en vente dans la boutique du Major."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "VALVE • ANNONCE STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Un Pass spectateur donne une Challenge Coin de bronze. Les autocollants dédicacés ont un prix fixe. La moitié des revenus revient aux joueurs, aux équipes et à l'organisateur.",
+   "veri": {
+    "baslik": "Objets du Major",
+    "maddeler": [
+     {
+      "metin": "Challenge Coin de bronze",
+      "tetik": "Challenge"
+     },
+     {
+      "metin": "Autocollants à prix fixe",
+      "tetik": "fixe"
+     },
+     {
+      "metin": "Moitié des revenus aux joueurs",
+      "tetik": "moitié"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "OBJETS DU MAJOR",
+    "alt": "COIN DE BRONZE ET AUTOCOLLANTS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "La mise à jour ajoute aussi 8 nouveaux kits musicaux Monstercat, du classique de Tristam & Braken à la blague virale de Noisestorm.",
+   "veri": {
+    "baslik": "Kits Monstercat",
+    "maddeler": [
+     {
+      "metin": "8 nouveaux kits musicaux",
+      "tetik": "8"
+     },
+     {
+      "metin": "Classique de Tristam & Braken",
+      "tetik": "Tristam"
+     },
+     {
+      "metin": "Blague virale de Noisestorm",
+      "tetik": "Noisestorm"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "KITS MONSTERCAT",
+    "alt": "8 NOUVEAUX KITS MUSICAUX"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tous les objets du Major de Singapour 2026 sont sur notre site, Control A Game.",
+   "veri": {
+    "cagri": "Tous les objets sur le site",
+    "alt": "Prix et récompenses dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

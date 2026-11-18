@@ -1,0 +1,149 @@
+{
+ "id": "cs2-cobblestone-matchmaking-2026-11-18",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Counter-Strike 2'ye Cobblestone haritası eklendi, üç harita da resmî eşleşmeden çıkarıldı.",
+   "veri": {
+    "ust_etiket": "COUNTER-STRIKE 2",
+    "baslik": "Cobblestone eşleşmeye eklendi",
+    "vurgu": [
+     "Cobblestone"
+    ],
+    "tuslar": [
+     "C",
+     "S"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "COUNTER-STRIKE 2",
+    "alt": "COBBLESTONE EKLENDİ"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Valve'ın Steam duyurusuna göre Cobblestone resmî eşleşmelere eklendi; Boulder, Fachwerk ve Shelter çıkarıldı.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Valve Steam duyurusu",
+    "alinti": "Cobblestone resmî Casual, Competitive, Wingman, Retakes ve Deathmatch eşleşmelerine eklendi."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "VALVE • STEAM DUYURUSU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Boulder, Fachwerk ve Shelter resmî havuzdan çıkarıldı; Cobblestone ise Casual, Competitive ve Deathmatch'te oynanabiliyor.",
+   "veri": {
+    "baslik": "Harita havuzu",
+    "maddeler": [
+     {
+      "metin": "Cobblestone eklendi",
+      "tetik": "Cobblestone"
+     },
+     {
+      "metin": "Boulder, Fachwerk, Shelter çıktı",
+      "tetik": "Boulder"
+     },
+     {
+      "metin": "Casual, Competitive, Deathmatch",
+      "tetik": "Casual"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "HARİTA HAVUZU",
+    "alt": "COBBLESTONE GELDİ"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Monstercat'ten 8 yeni müzik kiti geldi; mağazada MVP marşını da önizleyebilirsiniz.",
+   "veri": {
+    "baslik": "Yeni müzik kitleri",
+    "platformlar": [
+     "PC"
+    ],
+    "sayilar": [
+     {
+      "deger": "8",
+      "etiket": "YENİ MÜZİK KİTİ",
+      "tetik": "8"
+     }
+    ],
+    "not": "Müzik kitlerinde MVP marşı önizlemesi var."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "MÜZİK KİTLERİ",
+    "alt": "MONSTERCAT • MVP MARŞI"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Aşırı nişan açılarında kafanın aşırı eğilmesi düzeltildi. Retakes'te defuse kitleri artık doğru veriliyor.",
+   "veri": {
+    "baslik": "Hata düzeltmeleri",
+    "maddeler": [
+     {
+      "metin": "Kafa eğilmesi düzeltildi",
+      "tetik": "eğilmesi"
+     },
+     {
+      "metin": "Retakes'te defuse kiti",
+      "tetik": "defuse"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "HATA DÜZELTMELERİ",
+    "alt": "RETAKES VE NİŞAN"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Singapore 2026 Major merkezinin ayrıntıları da dahil, tamamı sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "Bütün güncelleme sitede",
+    "alt": "Major merkezi ve düzeltmeler haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

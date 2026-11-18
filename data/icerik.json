@@ -1,5 +1,131 @@
 [
  {
+  "id": "cs2-cobblestone-matchmaking-2026-11-18",
+  "oyun": "Counter-Strike 2",
+  "tarih": "2026-11-18",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Valve Counter-Strike 2 resmî duyurusu",
+    "url": "https://steamcommunity.com/games/CSGO/announcements/detail/687522235410286588"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "CS2'ye Cobblestone eklendi, üç harita çıktı",
+    "ozet": "Resmî eşleşme havuzu değişti.",
+    "metin": "Valve, Counter-Strike 2 için yeni bir güncelleme yayımladı. Cobblestone haritası Casual, Competitive, Wingman, Retakes ve Deathmatch resmî eşleşmelerine eklendi. Boulder, Fachwerk ve Shelter ise resmî eşleşme havuzundan çıkarıldı. Güncellemede Monstercat'ten 8 yeni müzik kiti de var; müzik kitlerine mağazada bakarken MVP marşı önizlenebiliyor. Aşırı nişan açılarında kafanın fazla eğilmesi düzeltildi, Retakes'te defuse kitlerinin doğru verilmemesi sorunu giderildi. Ayrıca Singapore 2026 Major merkezi yayında: turnuva eşyaları satın alınabiliyor ve Pick'Em Challenge oynanabiliyor."
+   },
+   "en": {
+    "baslik": "Cobblestone joins CS2 matchmaking, three maps removed",
+    "ozet": "Map pool and music kits changed.",
+    "metin": "Valve has released a new Counter-Strike 2 update. Cobblestone is now part of official Casual, Competitive, Wingman, Retakes and Deathmatch matchmaking. Boulder, Fachwerk and Shelter have been removed from the official matchmaking pool. The update also adds 8 new music kits from Monstercat, and inspecting music kits in the in-game store now shows an MVP Anthem preview button. Animation fixes stop the head from dipping too low at extreme aim angles and restore the lowered aim pose for the T side. In Retakes, defuse kits are now granted correctly, and T-side bots now attack CTs who try to defuse the bomb. Meanwhile, the PGL Singapore 2026 Major Hub is live, where players can buy tournament items and play the Pick'Em Challenge."
+   },
+   "es": {
+    "baslik": "CS2 añade Cobblestone al emparejamiento y quita tres mapas",
+    "ozet": "Cambios en mapas y música.",
+    "metin": "Valve ha publicado una nueva actualización de Counter-Strike 2. Cobblestone se añade a las partidas oficiales Casual, Competitive, Wingman, Retakes y Deathmatch. Boulder, Fachwerk y Shelter salen del grupo oficial de emparejamiento. La actualización incluye también 8 nuevos kits de música de Monstercat, y al ver un kit en la tienda del juego aparece un botón para previsualizar el himno MVP. Se corrige la inclinación excesiva de la cabeza en ángulos de puntería extremos, y se restaura la postura de apuntado baja del bando T. En Retakes, los kits de desactivación ya se entregan correctamente, y los bots del bando T atacan a los CT que intentan desactivar la bomba. Además, el centro del Major de Singapur 2026 de PGL está disponible: allí se compran objetos del torneo y se juega el Pick'Em Challenge."
+   },
+   "fr": {
+    "baslik": "CS2 : Cobblestone ajouté au matchmaking, trois cartes retirées",
+    "ozet": "Carte et musiques modifiées.",
+    "metin": "Valve a publié une nouvelle mise à jour de Counter-Strike 2. Cobblestone rejoint le matchmaking officiel Casual, Competitive, Wingman, Retakes et Deathmatch. Boulder, Fachwerk et Shelter sont retirées du pool officiel. La mise à jour ajoute aussi 8 nouveaux kits musicaux Monstercat ; en consultant un kit dans la boutique du jeu, un bouton permet désormais de prévisualiser l'hymne MVP. Une correction limite la descente excessive de la tête aux angles de visée extrêmes, et la posture de visée basse du camp T est rétablie. En Retakes, les kits de désamorçage sont désormais correctement attribués, et les bots T attaquent les CT qui tentent de désamorcer la bombe. Le hub du Major PGL Singapore 2026 est en ligne : on peut y acheter des objets de tournoi et jouer au Pick'Em Challenge."
+   },
+   "de": {
+    "baslik": "CS2: Cobblestone im Matchmaking, drei Karten entfernt",
+    "ozet": "Kartenpool und Musik geändert.",
+    "metin": "Valve hat ein neues Update für Counter-Strike 2 veröffentlicht. Cobblestone wurde in das offizielle Matchmaking für Casual, Competitive, Wingman, Retakes und Deathmatch aufgenommen. Boulder, Fachwerk und Shelter wurden aus dem offiziellen Matchmaking-Pool entfernt. Außerdem kommen 8 neue Musik-Kits von Monstercat hinzu; beim Ansehen eines Musik-Kits im Ingame-Shop gibt es nun einen Knopf, um die MVP-Hymne vorzuhören. Eine Korrektur verhindert, dass der Kopf bei extremen Zielwinkeln zu tief absinkt, und die tiefere Zielhaltung der T-Seite ist zurück. In Retakes werden Entschärfungskits nun korrekt vergeben, und T-Bots greifen CTs an, die die Bombe entschärfen wollen. Gleichzeitig ist der Hub des PGL Singapore 2026 Major online: Dort lassen sich Turnier-Items kaufen und der Pick'Em Challenge spielen."
+   },
+   "nl": {
+    "baslik": "CS2: Cobblestone in matchmaking, drie maps verwijderd",
+    "ozet": "Mapselectie en muziek gewijzigd.",
+    "metin": "Valve heeft een nieuwe update voor Counter-Strike 2 uitgebracht. Cobblestone is toegevoegd aan de officiële matchmaking voor Casual, Competitive, Wingman, Retakes en Deathmatch. Boulder, Fachwerk en Shelter zijn uit de officiële matchmakingpool gehaald. De update voegt ook 8 nieuwe muziekkits van Monstercat toe; wie een muziekkit in de ingame winkel bekijkt, kan nu de MVP-hymne voorbeluisteren. Een fix voorkomt dat het hoofd bij extreme richthoeken te ver omlaag zakt, en de lagere richthouding voor de T-kant is hersteld. In Retakes krijgen spelers defuse kits nu correct, en T-bots vallen CT's aan die de bom proberen te ontmantelen. Daarnaast is de hub van het PGL Singapore 2026 Major online: daar koop je toernooi-items en speel je de Pick'Em Challenge."
+   },
+   "zh": {
+    "baslik": "CS2更新：Cobblestone加入官方匹配，三张地图移出",
+    "ozet": "CS2地图池与音乐包更新。",
+    "metin": "Valve发布了《反恐精英2》的新更新。Cobblestone地图已加入官方休闲、竞技、Wingman、Retakes和死亡竞赛匹配。Boulder、Fachwerk和Shelter已从官方匹配地图池中移除。本次更新还新增了8套Monstercat音乐包；在游戏内商店查看音乐包时，现在可以预览MVP颂歌。修复了极端瞄准角度下头部压得过低的问题，并恢复了T方较低的瞄准姿势。Retakes中拆弹套件现在能正确发放，T方机器人也会攻击试图拆除炸弹的CT。另外，PGL新加坡2026 Major中心已上线，玩家可以在这里购买赛事物品并参与Pick'Em挑战。"
+   }
+  },
+  "otomasyon": {
+   "konu": "cs2-cobblestone-matchmaking",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://steamcommunity.com/games/CSGO/announcements/detail/687522235410286588",
+   "teyit_zamani": "2026-11-18T03:00:08+03:00",
+   "oyuncuya_fayda": "Oyuncular yeni harita havuzunu ve düzeltmeleri eşleşmelerde görecek, müzik kitlerini mağazada önizleyebilecek.",
+   "hype": 6,
+   "eklenme": "2026-11-18T03:10:05.392906+03:00"
+  }
+ },
+ {
+  "id": "cs2-singapur-2026-major-esyalari-2026-11-18",
+  "oyun": "Counter-Strike 2",
+  "tarih": "2026-11-18",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam haber duyurusu",
+    "url": "https://store.steampowered.com/news/app/730/view/687522235410285288"
+   },
+   {
+    "ad": "Valve Counter-Strike 2 duyurusu",
+    "url": "https://steamcommunity.com/games/CSGO/announcements/detail/687522235410285289"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Singapur 2026 Major eşyaları satışta",
+    "ozet": "İzleyici geçişleri, imza çıkartmaları ve 8 yeni müzik kiti.",
+    "metin": "Valve, Counter-Strike 2'nin son güncellemesiyle PGL Singapur 2026 Major turnuvasına özel eşyaları satışa çıkardı. Major İzleyici Geçişleri ve takım ile oyuncu imza çıkartmaları Major Mağazası'nda alınabiliyor. İmza çıkartmaları sabit fiyatla satılıyor; hatıra eşyaları ise seçilen silahın nadirliğine göre sabit fiyatla üretilebiliyor. Satış gelirinin %50'si oyunculara, takımlara ve turnuva organizatörüne gidiyor; pay, takımların başlangıç sıralamasına ve final derecesine göre dağıtılıyor. Güncellemeyle ayrıca 8 yeni Monstercat müzik kiti eklendi. Bilgiler Steam'de yayımlanan resmî duyuruda yer alıyor."
+   },
+   "en": {
+    "baslik": "Singapore 2026 Major items on sale",
+    "ozet": "Viewer passes, autograph stickers and 8 Monstercat music kits.",
+    "metin": "Valve has released PGL Major Singapore 2026 tournament items for Counter-Strike 2 in its latest update. Major Viewer Passes and Team and Player Autograph stickers are now available in the Major Shop. Autograph stickers come in Paper, Foil, Holo and Gold finishes at fixed prices, and souvenir items can be crafted for a fixed price based on the weapon's rarity. 50% of the proceeds go to the players, teams and tournament organizer, with revenue shared based on each team's initial seed and final placement. Buying a Viewer Pass also grants a Bronze Challenge Coin, Steam.tv chat flair and unlimited team graffiti for the event. The update also adds 8 new Monstercat music kits. Details are in Valve's official Steam announcement."
+   },
+   "es": {
+    "baslik": "Objetos del Major de Singapur 2026 a la venta",
+    "ozet": "Pases de espectador, pegatinas de autógrafo y 8 kits de música de Monstercat.",
+    "metin": "Valve ha lanzado en su última actualización de Counter-Strike 2 los objetos del torneo PGL Major Singapur 2026. Los pases de espectador del Major y las pegatinas de autógrafo de equipos y jugadores ya se pueden comprar en la Tienda del Major. Las pegatinas de autógrafo están disponibles en acabados Paper, Foil, Holo y Gold a precio fijo, y los objetos de recuerdo se pueden fabricar a precio fijo según la rareza del arma elegida. El 50 % de los ingresos va a los jugadores, equipos y organizador del torneo, repartido según la posición inicial y el resultado final de cada equipo. Un pase de espectador también concede una Challenge Coin de bronce, un distintivo de chat en Steam.tv y grafitis de equipo ilimitados durante el evento. La actualización añade además 8 nuevos kits de música de Monstercat. Los detalles están en el anuncio oficial de Valve en Steam."
+   },
+   "fr": {
+    "baslik": "Objets du Major de Singapour 2026 en vente",
+    "ozet": "Pass spectateur, autocollants dédicacés et 8 kits musicaux Monstercat.",
+    "metin": "Valve a publié dans sa dernière mise à jour de Counter-Strike 2 les objets du tournoi PGL Major Singapour 2026. Les Pass spectateur du Major et les autocollants dédicacés des équipes et joueurs sont désormais disponibles dans la boutique du Major. Les autocollants dédicacés existent en finitions Paper, Foil, Holo et Gold à prix fixe, et les souvenirs peuvent être fabriqués à prix fixe selon la rareté de l'arme choisie. 50 % des revenus reviennent aux joueurs, aux équipes et à l'organisateur du tournoi. Un Pass spectateur donne en outre une Challenge Coin de bronze, un badge de chat Steam.tv et des graffitis d'équipe illimités pendant l'événement. La mise à jour ajoute également 8 nouveaux kits musicaux Monstercat. Tous les détails figurent dans l'annonce officielle de Valve sur Steam."
+   },
+   "de": {
+    "baslik": "CS2: Major-Turnierartikel für Singapur 2026 erhältlich",
+    "ozet": "Zuschauerpässe, Autogramm-Sticker und 8 Monstercat-Musikkits.",
+    "metin": "Valve hat mit dem neuesten Update von Counter-Strike 2 die Turnierartikel für das PGL Major Singapur 2026 veröffentlicht. Zuschauerpässe des Majors sowie Autogramm-Sticker für Teams und Spieler sind jetzt im Major-Shop erhältlich. Die Autogramm-Sticker gibt es in den Ausführungen Paper, Foil, Holo und Gold zu einem festen Preis; Souvenirs können ebenfalls zu einem festen Preis hergestellt werden, abhängig von der Seltenheit der gewählten Waffe. 50 % der Erlöse gehen an die Spieler, Teams und den Turnierveranstalter. Ein Zuschauerpass enthält außerdem eine Bronze-Challenge-Coin, einen Steam.tv-Chat-Flair und unbegrenzte Team-Graffiti für die Dauer des Events. Zusätzlich kommen 8 neue Monstercat-Musikkits ins Spiel. Die Details stehen in der offiziellen Ankündigung von Valve auf Steam."
+   },
+   "nl": {
+    "baslik": "CS2: Singapore 2026 Major-artikelen nu verkrijgbaar",
+    "ozet": "Kijkerspassen, handtekeningstickers en 8 Monstercat-muziekkits.",
+    "metin": "Valve heeft met de nieuwste update van Counter-Strike 2 de toernooi-artikelen voor het PGL Major Singapore 2026 uitgebracht. Kijkerspassen voor het Major en handtekeningstickers voor teams en spelers zijn nu verkrijgbaar in de Major-winkel. De handtekeningstickers zijn verkrijgbaar in Paper, Foil, Holo en Gold voor een vaste prijs; souvenirs kunnen ook tegen een vaste prijs worden gemaakt, afhankelijk van de zeldzaamheid van het gekozen wapen. 50% van de opbrengst gaat naar de spelers, teams en de toernooiorganisator. Een kijkerspas levert bovendien een Bronze Challenge Coin, een Steam.tv-chatbadge en onbeperkte teamgraffiti op voor de duur van het evenement. De update voegt ook 8 nieuwe Monstercat-muziekkits toe. Alle details staan in de officiële Steam-aankondiging van Valve."
+   },
+   "zh": {
+    "baslik": "《反恐精英2》新加坡2026 Major赛事物品上架",
+    "ozet": "观赛通行证、签名贴纸与8套Monstercat音乐包上线。",
+    "metin": "Valve在《反恐精英2》最新更新中推出了PGL新加坡2026 Major赛事专属物品。Major观赛通行证以及队伍和选手签名贴纸现已在Major商店开售。签名贴纸提供纸质、箔面、全息和金色等版本，价格固定；纪念品也可按所选武器的稀有度以固定价格合成。销售收入的50%将归选手、战队和赛事组织方所有，分配依据各队的初始种子位次与最终名次。购买观赛通行证还可获得青铜挑战硬币、Steam.tv聊天头衔以及赛事期间无限次的队伍涂鸦。此次更新还新增了8套Monstercat音乐包。详细信息见Valve在Steam上的官方公告。"
+   }
+  },
+  "otomasyon": {
+   "konu": "cs2-singapur-2026-major-esyalari-monstercat-kit",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://steamcommunity.com/games/CSGO/announcements/detail/687522235410285289",
+   "teyit_zamani": "2026-11-18T03:00:08+03:00",
+   "oyuncuya_fayda": "Oyuncular Major izleyici geçişi, imza çıkartmaları ve yeni müzik kitlerinin nerede bulunacağını öğrenir.",
+   "hype": 6,
+   "eklenme": "2026-11-18T03:10:05.392906+03:00"
+  }
+ },
+ {
   "id": "last-pirates-die-together-xbox-preview-2026-11-17",
   "oyun": "Last Pirates: Die Together",
   "tarih": "2026-11-17",
