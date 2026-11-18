@@ -94,6 +94,36 @@
   "url": "https://www.instagram.com/p/Df2AYVBl3cB/",
   "zaman": "2026-11-17T13:10:11+00:00"
  },
+ "drg-survivor-knockout-1-2-2026-11-17|en|instagram|reel": {
+  "bicim": "reel",
+  "dil": "en",
+  "durum": "tamam",
+  "hesap": "tr",
+  "icerik_dili": "en",
+  "id": "drg-survivor-knockout-1-2-2026-11-17",
+  "kapsayici": "17869655259694894",
+  "kimlik": "17869260849680759",
+  "niyet_zamani": "2026-11-18T08:10:01+00:00",
+  "platform": "instagram",
+  "sosyal_tur": "haber",
+  "url": "https://www.instagram.com/reel/Df4C1slyYJL/",
+  "zaman": "2026-11-18T08:10:01+00:00"
+ },
+ "drg-survivor-knockout-1-2-2026-11-17|fr|youtube|short": {
+  "bicim": "short",
+  "boyut": 11571331,
+  "dil": "fr",
+  "durum": "tamam",
+  "hesap": "tr",
+  "id": "drg-survivor-knockout-1-2-2026-11-17",
+  "kimlik": "eCBDJQ8ukpM",
+  "niyet_zamani": "2026-11-18T08:10:01+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg1V6kYcbf1iYqLCh6qdyOXrdozg0CovXdt6-gI-9rSn6n77ijvGlaIMNpYTTF1xA9ygypJmzGnKSlvhYY0S0NLUKkNeTrszJj5RjRLJkVo",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/eCBDJQ8ukpM",
+  "zaman": "2026-11-18T08:10:01+00:00"
+ },
  "football-manager-27-27-1-0-guncelleme-2026-11-16|tr|instagram|gorsel": {
   "bicim": "gorsel",
   "dil": "tr",
