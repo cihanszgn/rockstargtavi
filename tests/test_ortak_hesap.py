@@ -116,7 +116,7 @@ class Limit(Ortak):
 
     def test_ayardaki_sayilar(self):
         a = json.loads((pathlib.Path(__file__).resolve().parents[1] / "sosyal" / "ayarlar.json").read_text(encoding="utf-8"))
-        self.assertEqual((a["gunluk_en_fazla"]["instagram_reel"], a["gunluk_en_fazla"]["youtube"], a["gunluk_en_fazla"]["instagram"]), (6, 8, 12))
+        self.assertEqual((a["gunluk_en_fazla"]["instagram_reel"], a["gunluk_en_fazla"]["youtube"], a["gunluk_en_fazla"]["instagram"]), (6, 8, 4))
         self.assertEqual(a["calisma_basina_en_fazla"], 1)
         self.assertEqual(a["hesap_esleme"]["instagram"]["en"], "tr")
         # YouTube'da yabancı dil ortak hesaptan çıkmaz (Cio'nun kararı, 2026-11-18): yalnız Türkçe Shorts
@@ -256,7 +256,11 @@ class DilAlanlari(Ortak):
                 if d != dil:
                     self.assertNotIn(f"Baslik-{d}-h1", g["snippet"]["title"])
                     self.assertNotIn(f"Ozet-{d}-h1", g["snippet"]["description"])
-            self.assertTrue(all(f"{dil.upper()}" in t.upper() for t in g["snippet"]["tags"]))
+            tags = g["snippet"]["tags"]
+            self.assertIn(f"Etiket{dil.upper()}", tags)  # yazar etiketi kendi dilinden
+            self.assertTrue(all(f"Etiket{d.upper()}" not in tags for d in sy.DILLER if d != dil))
+            self.assertIn("CTRL+A GAME", tags)
+            self.assertTrue(tags and sum(len(t) + 1 for t in tags) <= 400)
 
     def test_instagram_aciklamasi_tek_dilde_karismaz(self):
         x = dilli_haber("h1")

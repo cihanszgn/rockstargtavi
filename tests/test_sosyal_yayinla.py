@@ -522,5 +522,102 @@ class IgSunucuTests(unittest.TestCase):
         self.assertEqual(sy.ig_sunucu("IGAAabc"), "graph.instagram.com")
 
 
+class SessizSaat(Temel):
+    """video_sessiz_saat_utc: bu aralıkta Reels/Shorts gitmez, görsel gider, niyet kaydı yazılmaz."""
+
+    def ayari(self, sessiz=None):
+        a = ayar(instagram=True, instagram_reel=True, youtube=True)
+        a["calisma_basina_en_fazla"] = 1
+        if sessiz is not None:
+            a["video_sessiz_saat_utc"] = sessiz
+        return a
+
+    def saat(self, h):
+        return datetime(2026, 11, 15, h, 17, tzinfo=timezone.utc)
+
+    def test_sessiz_saatte_video_gitmez_kayit_yazilmaz_gorsel_gider(self):
+        for h in (23, 21, 0, 3):
+            self.tearDown()
+            self.setUp()
+            self.manifest_yaz()
+            ag = SahteAg()
+            g, hata, _ = self.calistir(ag, self.ayari({"bas": 21, "son": 4}), simdi=self.saat(h))
+            self.assertEqual((g, hata), (1, []), h)
+            self.assertEqual(set(self.kayitlar()), {"oyun-yama-1|tr|instagram|gorsel"}, h)
+            self.assertTrue(all(r["durum"] == "tamam" for r in self.kayitlar().values()))
+            self.assertFalse(any("googleapis" in u for _, u in ag.cagrilar), "Shorts yüklenmez")
+
+    def test_sessiz_saat_cikti_nedeni_yazar(self):
+        self.manifest_yaz()
+        satirlar = []
+        sy.calistir(self.ayari({"bas": 21, "son": 4}), [haber()], kayit_yolu=self.kayit, manifest_yolu=self.manifest,
+                    tum=SIRLAR, ag=SahteAg(), dry_run=False, bugun=BUGUN, simdi=self.saat(23), cikti=satirlar.append)
+        self.assertTrue(any("sessiz saat" in s and "instagram_reel" in s for s in satirlar))
+        self.assertTrue(any("sessiz saat" in s and "youtube" in s for s in satirlar))
+
+    def test_saat_disinda_ve_sonraki_calismada_video_gider(self):
+        for h in (4, 12, 20):
+            self.tearDown()
+            self.setUp()
+            self.manifest_yaz()
+            g, hata, _ = self.calistir(SahteAg(), self.ayari({"bas": 21, "son": 4}), simdi=self.saat(h))
+            self.assertEqual(hata, [], h)
+            self.assertIn("oyun-yama-1|tr|instagram|reel", self.kayitlar(), h)
+            self.assertIn("oyun-yama-1|tr|youtube|short", self.kayitlar(), h)
+        # sessiz saatte atlanan video, sıradaki çalışmada normal yayınlanır
+        self.tearDown()
+        self.setUp()
+        self.manifest_yaz()
+        a = self.ayari({"bas": 21, "son": 4})
+        self.calistir(SahteAg(), a, simdi=self.saat(23))
+        self.calistir(SahteAg(), a, simdi=self.saat(5))
+        self.assertIn("oyun-yama-1|tr|instagram|reel", self.kayitlar())
+        self.assertIn("oyun-yama-1|tr|youtube|short", self.kayitlar())
+
+    def test_ayar_yoksa_ya_da_gecersizse_kisit_yok(self):
+        for sessiz in (None, {}, "gece", {"bas": 21}, {"bas": 5, "son": 5}, {"bas": "21", "son": 4},
+                       {"bas": 25, "son": 4}, {"bas": True, "son": 4}, [21, 4]):
+            self.tearDown()
+            self.setUp()
+            self.manifest_yaz()
+            g, hata, _ = self.calistir(SahteAg(), self.ayari(sessiz), simdi=self.saat(23))
+            self.assertEqual(hata, [], sessiz)
+            self.assertIn("oyun-yama-1|tr|instagram|reel", self.kayitlar(), sessiz)
+            self.assertIn("oyun-yama-1|tr|youtube|short", self.kayitlar(), sessiz)
+
+    def test_gece_yarisini_asmayan_aralik(self):
+        self.assertTrue(sy.sessiz_saat_mi({"video_sessiz_saat_utc": {"bas": 1, "son": 5}}, 1))
+        self.assertTrue(sy.sessiz_saat_mi({"video_sessiz_saat_utc": {"bas": 1, "son": 5}}, 4))
+        self.assertFalse(sy.sessiz_saat_mi({"video_sessiz_saat_utc": {"bas": 1, "son": 5}}, 5))
+        self.assertFalse(sy.sessiz_saat_mi({"video_sessiz_saat_utc": {"bas": 1, "son": 5}}, 0))
+        self.assertFalse(sy.sessiz_saat_mi({"video_sessiz_saat_utc": {"bas": 1, "son": 5}}, 23))
+
+    def test_gece_yarisini_asan_aralik_sinirlari(self):
+        a = {"video_sessiz_saat_utc": {"bas": 21, "son": 4}}
+        icinde = [h for h in range(24) if sy.sessiz_saat_mi(a, h)]
+        self.assertEqual(icinde, [0, 1, 2, 3, 21, 22, 23])
+        self.assertFalse(sy.sessiz_saat_mi({}, 23))
+
+    def test_dry_run_ve_benzet_ayni_kurali_gorur(self):
+        self.manifest_yaz()
+        secilen = []
+        sy.calistir(self.ayari({"bas": 21, "son": 4}), [haber()], kayit_yolu=self.kayit, manifest_yolu=self.manifest,
+                    tum=SIRLAR, ag=YasakAg(), dry_run=True, bugun=BUGUN, simdi=self.saat(23),
+                    cikti=lambda *_: None, secildi=lambda k, r: secilen.append(r))
+        self.assertEqual({r["bicim"] for r in secilen}, {"gorsel"})
+        r = sy.benzet(self.ayari({"bas": 21, "son": 4}), [haber()], {}, self.manifest, self.saat(22), 8,
+                      kok=self.kok, cikti=lambda *_: None)
+        for x in r:
+            if x["bicim"] in ("reel", "short"):
+                self.assertNotIn((x["saat"] + 22) % 24, (21, 22, 23, 0, 1, 2, 3), x)
+
+    def test_klip_hesabi_etkilenmez(self):
+        # klip hesabı ayrı geçiştir; sessiz saat yalnız haber hesaplarının Reels/Shorts'unu durdurur
+        import inspect
+        kaynak = inspect.getsource(sy.calistir)
+        self.assertEqual(kaynak.count("sessiz_saat_mi("), 1)
+        self.assertLess(kaynak.index("sessiz_saat_mi("), kaynak.index("# ---- Klip/derleme"))
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -19,7 +19,7 @@ Reels ve Shorts videolarını paylaşır; dil başına ayrı hesap gerekmez. Dü
   kendiliğinden kendi hesabına döner; eşlemeyi silmek gerekmez.
 - `ortak_hesap_bicimleri` (`["reel","short"]`): yabancı dil yalnız Reels ve Shorts olarak çıkar. Instagram görsel
   gönderisi Türkçe kalır; yabancı dile de görsel istenirse `"gorsel"` bu listeye eklenir.
-- Günlük sınırlar HESAP başınadır, diller toplanır: Instagram görsel 12, Reels 6, Shorts 8
+- Günlük sınırlar HESAP başınadır, diller toplanır: Instagram görsel 4, Reels 6, Shorts 8
   (`gunluk_en_fazla`); her çalışmada hesap başına en çok 1 gönderi (`calisma_basina_en_fazla`).
 - Türkçe payı: `ana_dil_en_az` Türkçeye günde en az 3 Reels ve 3 Shorts ayırır; `ana_dil_payi_serbest_saat`
   (UTC 19) geçince Türkçe adayı yoksa kalan haklar yabancı dillere açılır. Yabancı dillerde sıra
@@ -262,6 +262,13 @@ Ağsız inceleme: `py tools/sosyal_yayinla.py --dry-run --anahtarsiz-goster`. Yo
 Kaynak: 16 Kasım 2026 tarihinde okunan resmî YouTube belgeleri: https://developers.google.com/youtube/v3/docs/videos (`localizations.(key).title`, `localizations.(key).description`, `snippet.defaultLanguage`) ve https://developers.google.com/youtube/v3/docs/videos/insert (`part=snippet,status,localizations`).
 
 Çince kartlar `tools/yazi/NotoSansSC-Regular.otf` ve `NotoSansSC-Bold.otf` kullanır; SIL OFL 1.1 lisansı yanlarındadır. Kaynak: https://github.com/notofonts/noto-cjk/tree/main/Sans/SubsetOTF/SC . Bu fontlar web sayfalarına indirilmez; sayfalar sistem CJK fontlarını kullanır.
+
+## Keşif etiketleri ve sessiz saatler (2026-11-19)
+
+- Etiketleri `tools/sosyal_etiket.py` üretir: oyun adı (ör. `#CounterStrike2`, kısa ad `#CS2`), yazarın konuya özel etiketi, platform (`#PS5`, `#Xbox`...), konu (`#OyunHaberleri`, `#BedavaOyun`, `#OyunFırsatları`) ve en sonda tek genel etiket. `#CTRLA_GAME`, `#Reels`, `#Shorts` üretilmez; şablondaki genel etiketler yazar etiketi sayılmaz.
+- Instagram gönderi/Reel başına en çok 5 hashtag kabul eder (Aralık 2025'ten beri); fazlası kırpılır, öncelik oyun adındadır. YouTube açıklamasında 3 hashtag + `#Shorts` gider (ilk 3'ü başlığın üstünde görünür); `snippet.tags` oyun adı, takma adlar, platform ve genel ifadelerle doldurulur; başlık sığarsa sonuna oyun etiketi eklenir.
+- Özel yazım gereken oyun (Roma rakamlı ad vb.) `tools/sosyal_etiket.py` içindeki `OZEL` tablosuna eklenir: `"gta vi": ["#GTA6", "#GTAVI"]` (anahtar küçük harfli oyun adı, rakamlı biçim önce). Kısa ad ve takma adlar `data/oyunlar.json`dan gelir.
+- Sessiz saat: `ayarlar.json` → `video_sessiz_saat_utc {"bas": 21, "son": 4}` (UTC; Türkiye 00:00-07:00). Bu aralıkta haber hesaplarında Reels/Shorts yayınlanmaz, sıradaki çalışmaya kalır; görsel gönderi ve klip hesabı etkilenmez. Ayarı silmek kısıtı kaldırır.
 
 ## Saatlik içerik kuyruğu ve ağsız deneme
 

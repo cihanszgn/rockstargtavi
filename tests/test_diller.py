@@ -11,6 +11,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
 import haber_oto as oto
 import sosyal_yayinla as sy
+import sosyal_etiket as se
 from test_haber_oto import article, NOW
 
 
@@ -127,7 +128,7 @@ class DilTests(unittest.TestCase):
         self.assertEqual(body['snippet']['defaultLanguage'], 'tr')
         self.assertIn('zh-Hans', body['localizations'])
         for lang in ('en', 'de', 'nl'):
-            self.assertEqual(body['localizations'][lang]['title'], x['diller'][lang]['baslik'])
+            self.assertEqual(body['localizations'][lang]['title'], x['diller'][lang]['baslik'] + ' ' + se.oyun_etiketleri(x)[0])  # başlığa oyun etiketi eklenir
             self.assertIn('/' + lang + '/', body['localizations'][lang]['description'])
         del x['diller']['nl']
         self.assertNotIn('nl', sy.yt_govde('tr', x, '', {})['localizations'])

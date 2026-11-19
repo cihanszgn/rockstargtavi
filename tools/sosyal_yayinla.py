@@ -55,12 +55,15 @@ sys.path.insert(0, str(KOK / "tools"))
 from sosyal_derle import DILLER, GORUNEN, KLASOR, M, SITE, kart_ad, kaynak_adi  # noqa: E402
 import video_site as vs  # noqa: E402
 import sosyal_kuyruk as sk  # noqa: E402
+import sosyal_etiket as se  # noqa: E402
 import klip_sosyal as ks  # noqa: E402
 
 KAYIT = KOK / "sosyal" / "gonderilenler.json"
 AYAR = KOK / "sosyal" / "ayarlar.json"
 ICERIK = KOK / "data" / "icerik.json"
 UA = "rockstargtavi-sosyal/1.0"
+IG_ETIKET_SINIRI = 5  # Instagram Aralık 2025'ten beri gönderi/Reel başına en çok 5 hashtag kabul eder
+YT_ACIKLAMA_ETIKET = 3  # açıklamadaki ilk 3 hashtag başlığın üstünde görünür
 BICIMLER = ("gorsel", "reel", "short")
 MAX_VIDEO_BAYT = 256 * 1024 * 1024
 # Derleme (16:9, ~11 dk) 300-420 MB görüldü; YouTube yüklemesi baytları bellekte tutar (Actions 7 GB RAM): tavan yalnız derlemede 512 MB.
@@ -269,19 +272,7 @@ def ig_aciklama(dil, x, ayar=None) -> str:
         # İkinci dil kısa özet olarak kalır; ana dil gerektiğinde tam metni kullanabilir.
         if len(govdeler) == 2:
             govdeler[1] = cumle_kisalt(govdeler[1], 500)
-        tags, gorulen = [], set()
-        for d in diller:
-            for tag in x['diller'][d].get('etiketler', []):
-                if re.fullmatch(r'#[\w]+', tag) and tag.casefold() not in gorulen:
-                    tags.append(tag)
-                    gorulen.add(tag.casefold())
-        for tag in sk.SABLON[ana]['etiket'].split():
-            if len(tags) >= 3:
-                break
-            if tag.casefold() not in gorulen:
-                tags.append(tag)
-                gorulen.add(tag.casefold())
-        tags = tags[:15]
+        tags = se.hashtagler(ana, x, IG_ETIKET_SINIRI)  # ana dil esas; Instagram toplam 5 hashtag kabul eder
         kay = emojisiz(', '.join(kaynak_adi(ana, s['ad']) for s in x['kaynaklar']))[:240]
         cagri = f"{METIN[ana]['devam']} {paylasim_linki(ana, x, 'instagram')}"
 
@@ -311,14 +302,8 @@ def ig_aciklama(dil, x, ayar=None) -> str:
 
 
 def etiketler(dil, x):
-    tags = list(dict.fromkeys(t for t in x['diller'][dil].get('etiketler', [])
-                              if re.fullmatch(r'#[\w]+', t)))[:5]
-    for t in sk.SABLON[dil]['etiket'].split():
-        if len(tags) >= 3:
-            break
-        if t not in tags:
-            tags.append(t)
-    return tags
+    """Instagram için keşif etiketleri (en çok 5): oyun adı, yazar, platform, konu, genel (sosyal_etiket)."""
+    return se.hashtagler(dil, x, IG_ETIKET_SINIRI)
 
 
 def ig_video_adresi(v: dict) -> str:
@@ -399,7 +384,12 @@ YT_GIZLILIK = ("private", "unlisted", "public")
 
 def yt_baslik(dil, x) -> str:
     b = emojisiz(re.sub(r"[<>]", "", x["diller"][dil]["baslik"])).strip()
-    return b if len(b) <= 100 else b[:99].rstrip() + "…"
+    b = b if len(b) <= 100 else b[:99].rstrip() + "…"
+    if x.get("sosyal_tur") not in KLIP_TURLERI and "#" not in b:
+        oyun = se.oyun_etiketleri(x)
+        if oyun and len(b) + 1 + len(oyun[0]) <= 100:
+            b = f"{b} {oyun[0]}"  # sığmazsa eklenmez, başlık kısaltılmaz
+    return b
 
 
 def yt_aciklama(dil, x, link) -> str:
@@ -410,12 +400,14 @@ def yt_aciklama(dil, x, link) -> str:
         return emojisiz(re.sub(r"[<>]", "", metin))[:4900]
     t = x["diller"][dil]
     kay = ", ".join(kaynak_adi(dil, s["ad"]) for s in x["kaynaklar"])
-    etiket = " ".join(etiketler(dil, x))
+    etiket = " ".join(se.hashtagler(dil, x, YT_ACIKLAMA_ETIKET))
     metin = f"{t['ozet']}\n\n{METIN[dil]['devam']} {link}\n{M[dil]['kaynak']}: {kay}\n\n{etiket} #Shorts".strip()
     return emojisiz(re.sub(r"[<>]", "", metin))[:4900]
 
 
 def yt_etiketler(dil, x) -> list:
+    if x.get("sosyal_tur") not in KLIP_TURLERI:
+        return se.yt_anahtar_kelimeler(dil, x)
     sonuc, toplam = [], 0
     for e in x["diller"][dil].get("etiketler", []):
         e = re.sub(r"[<>,#]", "", e).strip()
@@ -544,6 +536,17 @@ ONEK_SIR = {"x": "X", "reddit": "REDDIT", "instagram": "IG", "youtube": "YT"}
 HEDEFLER = (("x", "gorsel", "x"), ("reddit", "gorsel", "reddit"), ("instagram", "reel", "instagram_reel"),
             ("instagram", "gorsel", "instagram"), ("youtube", "short", "youtube"))
 VARSAYILAN_SINIR = {"x": 2, "reddit": 2, "instagram": 2, "instagram_reel": 2, "youtube": 2}
+
+
+def sessiz_saat_mi(ayar: dict, saat: int) -> bool:
+    """video_sessiz_saat_utc {bas, son} (UTC, gece yarısını aşabilir) içinde mi? Ayar yok/geçersizse False."""
+    c = (ayar or {}).get("video_sessiz_saat_utc")
+    if not isinstance(c, dict):
+        return False
+    bas, son = c.get("bas"), c.get("son")
+    if any(isinstance(v, bool) or not isinstance(v, int) or not 0 <= v <= 23 for v in (bas, son)) or bas == son:
+        return False
+    return bas <= saat < son if bas < son else (saat >= bas or saat < son)
 
 
 def konu_veya_id(x: dict) -> str:
@@ -866,6 +869,9 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                     cikti(f"[DENEME] {ad}/{dil}: anahtar yok, atlandı ({', '.join(eksik_sirlar(tum, platform, hesap))})")
                 continue
             gruplar.setdefault(hesap, []).append(dil)
+        if gruplar and bicim in ("reel", "short") and sessiz_saat_mi(ayar, simdi.hour):
+            cikti(f"{ad}: sessiz saat (UTC {simdi.hour}), Reels/Shorts bu çalışmada yayınlanmaz; sıradaki çalışmaya kalır")
+            continue  # niyet kaydı yazılmaz
         for hesap, uyeler in gruplar.items():
             sir = hesap_sirri(tum, platform, hesap)
             if (hesap, platform) in kullanilan:

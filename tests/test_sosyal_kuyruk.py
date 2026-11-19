@@ -201,7 +201,7 @@ class KuyrukTests(unittest.TestCase):
             for d in sk.DILLER:
                 m = sy.ig_aciklama(d, x)
                 self.assertIn(sy.sayfa_adresi(d, x), m)
-                self.assertTrue(3 <= len(sy.etiketler(d, x)) <= 6)
+                self.assertTrue(3 <= len(sy.etiketler(d, x)) <= 5)
                 if x["sosyal_tur"] == "arsiv":
                     self.assertIn(sk.SABLON[d]["arsiv"], m)
 

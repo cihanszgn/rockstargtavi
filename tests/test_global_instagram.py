@@ -35,7 +35,7 @@ class GlobalInstagram(Temel):
         self.assertTrue(m.startswith('English title\n\nEnglish summary.\n\n---\n\nTürkçe başlık\n\nTürkçe özet.'))
         self.assertIn(sy.METIN['en']['devam'], m)
         self.assertIn(sy.paylasim_linki('en', x, 'instagram'), m)
-        self.assertTrue(m.endswith('#Game #Patch #Shared #Oyun #Yama'))
+        self.assertTrue(m.endswith('#Oyun #Game #Patch #GamingNews #Gaming'))
 
     def test_ikinci_dil_yoksa_aciklama_yalniz_ingilizce_kaynak_adi_yalin(self):
         x, a = self.haber(), self.ayar()
@@ -43,7 +43,7 @@ class GlobalInstagram(Temel):
         x['kaynaklar'][0]['ad'] = 'Steam resmî duyurusu'
         m = sy.ig_aciklama('tr', x, a)
         self.assertTrue(m.startswith('English title\n\nEnglish summary.\n\nSource: Steam\n'))
-        for turkce in ('Türkçe', '---', 'resmî', '#Oyun'):
+        for turkce in ('Türkçe', '---', 'resmî', '#Yama'):
             self.assertNotIn(turkce, m)
 
     def test_kaynak_adi_turkcede_aynen_baska_dilde_yalin(self):
@@ -84,14 +84,15 @@ class GlobalInstagram(Temel):
         self.assertIn('Whole sentence.', m)
         self.assertNotIn('word', m)
 
-    def test_etiketler_iki_dilden_tekrarsiz_en_fazla_15(self):
+    def test_etiketler_ana_dilden_tekrarsiz_en_fazla_5(self):
         x = self.haber()
         x['diller']['en']['etiketler'] = ['#Same', '#same', 'boşluk var'] + [f'#English{i}' for i in range(8)]
         x['diller']['tr']['etiketler'] = ['#SAME'] + [f'#Turkce{i}' for i in range(30)]
         tags = sy.ig_aciklama('tr', x, self.ayar()).split('\n')[-1].split()
-        self.assertEqual(len(tags), 15)
-        self.assertEqual(len({t.casefold() for t in tags}), 15)
-        self.assertIn('#Turkce0', tags)
+        self.assertEqual(len(tags), 5)  # Instagram gönderi başına en çok 5 hashtag kabul eder
+        self.assertEqual(len({t.casefold() for t in tags}), 5)
+        self.assertIn('#Same', tags)
+        self.assertNotIn('#Turkce0', tags)  # etiketler ana dilden (en) gelir
         self.assertTrue(all(t.startswith('#') for t in tags))
 
     def test_ingilizce_kart_secimi_ve_hesap_anahtari(self):
