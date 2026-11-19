@@ -42,7 +42,11 @@ class GeriDoldurTests(unittest.TestCase):
         self.assertEqual(once, {p: p.read_bytes() for p in self.kok.rglob('*.json')})
 
     def test_uc_sahne_sablonu_mevcut_dogrulayicidan_gecer(self):
-        hazir = vu.senaryo_hazirla(gd.senaryo_ornegi(self.h, 'tr'), self.h, 'tr')
+        ornek = gd.senaryo_ornegi(self.h, 'tr')
+        vurgu = ornek['sahneler'][0]['veri']['vurgu']
+        self.assertTrue(vurgu, 'kanca vurgusu boş bırakılmamalı')
+        self.assertIn(vurgu[0], ornek['sahneler'][0]['veri']['baslik'])
+        hazir = vu.senaryo_hazirla(ornek, self.h, 'tr')
         self.assertEqual(len(hazir['sahneler']), 3)
         self.assertTrue(20 <= hazir['tahmini_sure'] <= 80)
 
@@ -56,6 +60,9 @@ class GeriDoldurTests(unittest.TestCase):
         self.assertEqual(vu.senaryo_dosyasi_denetle(yol, self.h, 'tr'), [])
         self.assertEqual(self.doldur(uretici=uret), [])
         self.assertEqual(len(cagrilar), 1)
+        self.assertIn('35-65 words', cagrilar[0])
+        self.assertIn('20-35 seconds', cagrilar[0])
+        self.assertIn('2-second hook', cagrilar[0])
         self.assertEqual(gd.hh.oku(self.kok / 'data/icerik.json'), [self.h])
 
     def test_bozuk_senaryo_bir_duzeltme_sonra_kayit_yok(self):

@@ -253,6 +253,34 @@ class GecerlilikTests(unittest.TestCase):
         self.assertIn('sahneler[1].bas: zamanlamadan hesaplanır, yazılan değer yok sayıldı', uyarilar)
         self.assertTrue(any('maskot.konum' in u for u in uyarilar))
 
+    def test_kanca_ve_kisa_sure_uyarilari(self):
+        self.assertEqual(v.EN_KISA, 15.0)
+        self.assertEqual(v.KUYRUK, 0.7)
+        self.assertEqual(v.KELIME_ARALIGI['tr'], (35, 65))
+        self.assertEqual(v.KELIME_ARALIGI['en'], (55, 95))
+        # Kısa (~18-24 sn) ve vurgulu senaryo hatasız ve kanca uyarısız geçer.
+        kisa = copy.deepcopy(senaryo())
+        kisa['sahneler'] = [kisa['sahneler'][0], kisa['sahneler'][2], kisa['sahneler'][-1]]
+        hazir = v.senaryo_hazirla(kisa, haber(), 'tr')
+        self.assertTrue(15.0 <= hazir['tahmini_sure'] <= 35.0)
+        self.assertFalse(any('kanca' in u or 'vurgu' in u for u in hazir['uyarilar']), hazir['uyarilar'])
+        # Boş vurgu ve uzun açılış anlatımı hata değil uyarı üretir.
+        uyarili = copy.deepcopy(kisa)
+        uyarili['sahneler'][0]['veri']['vurgu'] = []
+        uyarili['sahneler'][0]['anlatim'] = (
+            "Ornek Oyun'un ikinci sezon yaması 1 Aralık'ta PC ve PlayStation için çıkıyor "
+            "ve silah dengesiyle birlikte oyuncu sınırı tamamen yenileniyor."
+        )
+        uyarilar = v.senaryo_hazirla(uyarili, haber(), 'tr')['uyarilar']
+        self.assertTrue(any('veri.vurgu boş' in u for u in uyarilar), uyarilar)
+        self.assertTrue(any('ilk 2 sn kancası' in u for u in uyarilar), uyarilar)
+        # 40 sn üzeri senaryo geriye dönük geçerlidir ama süre uyarısı verir.
+        uzun = copy.deepcopy(senaryo())
+        uzun['sahneler'][1]['anlatim'] += ' ' + ' '.join(['Yeni sezon detayları geliştirici blogunda açıklandı.'] * 4)
+        uzun_hazir = v.senaryo_hazirla(uzun, haber(), 'tr')
+        self.assertGreater(uzun_hazir['tahmini_sure'], v.HEDEF_SURE_UST)
+        self.assertTrue(any('20–35 sn' in u for u in uzun_hazir['uyarilar']), uzun_hazir['uyarilar'])
+
     def test_senaryo_oku_kimligi_yol_olarak_kullanmaz(self):
         for kimlik, dil in (('../../etc/passwd', 'tr'), ('ornek-oyun', 'tr/../x'), ('A b', 'tr')):
             with self.assertRaises(v.SenaryoHatasi):

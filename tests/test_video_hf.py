@@ -403,6 +403,97 @@ class DolulukTests(unittest.TestCase):
                 if beklenen:
                     self.assertIn(rapor['ihlaller'][0]['yon'], ('doluluk', 'başlık-boyutu'))
 
+    def test_ilk_kare_kancasi_bos_degil_ve_vurgu_erken_yanar(self):
+        """İlk karede (t=0) başlık kelimeleri, etiket ve tür damgası görünür (opacity>=0.9); vurgu ilk 0.55 sn içinde yanar."""
+        try:
+            chrome, kok = hf.tarayici_yolu(), hf.hf_koku()
+        except (hf.TemaHatasi, OSError, IndexError):
+            self.skipTest('Chrome / global hyperframes yok')
+        h = haber()
+        s = senaryo()
+        hazir = v.senaryo_hazirla(s, h, 'tr')
+        kel, t = [], 0.1
+        for sh in hazir['sahneler']:
+            for k in sh['kelimeler']:
+                kel.append({'k': k, 'b': round(t, 3), 's': round(t + 0.32, 3)})
+                t += 0.35
+        zaman = v.zamanla(hazir, kel, t + 1.0)
+        props = v.props_kur(h, 'tr', hazir, zaman)
+        betik = r"""
+const { createRequire } = require('node:module');
+const { pathToFileURL } = require('node:url');
+const path = require('node:path');
+(async () => {
+  const [chrome, kok, ...klasorler] = process.argv.slice(1);
+  const puppeteer = createRequire(path.join(kok, 'package.json'))('puppeteer-core');
+  const browser = await puppeteer.launch({
+    executablePath: chrome, headless: 'shell',
+    args: ['--no-sandbox', '--disable-gpu', '--allow-file-access-from-files'],
+  });
+  const sonuclar = {};
+  try {
+    const page = await browser.newPage();
+    await page.setViewport({ width: 1080, height: 1920, deviceScaleFactor: 1 });
+    for (const k of klasorler) {
+      await page.goto(pathToFileURL(path.join(k, 'index.html')).href, { waitUntil: 'load' });
+      await page.evaluate(() => document.fonts.ready);
+      await page.waitForFunction(() => !!(window.__timelines && window.__timelines.main));
+      const t0 = await page.evaluate(() => {
+        window.__timelines.main.seek(0);
+        const op = (el) => parseFloat(getComputedStyle(el).opacity || '0');
+        const words = [...document.querySelectorAll('#s0 .bk-bas .bw')];
+        const chip = document.querySelector('#s0 .bk-ust .chip');
+        const damga = document.querySelector('#s0 .bk-damga');
+        return {
+          wordCount: words.length,
+          minWordOp: words.length ? Math.min(...words.map(op)) : 0,
+          chipOp: chip ? op(chip) : 0,
+          damgaOp: damga ? op(damga) : 0,
+          baslikH: document.querySelector('#s0 .bk-bas')?.getBoundingClientRect().height || 0,
+        };
+      });
+      const t55 = await page.evaluate(() => {
+        window.__timelines.main.seek(0.55);
+        const bgOn = [...document.querySelectorAll('#s0 .bk-bas .bg.on')];
+        const hls = [...document.querySelectorAll('#s0 .bk-bas .bg.on .hl')];
+        const maxHlW = hls.length ? Math.max(...hls.map((e) => e.getBoundingClientRect().width)) : 0;
+        const onBw = document.querySelector('#s0 .bk-bas .bg.on .bw');
+        const onBg = onBw ? getComputedStyle(onBw).backgroundColor : '';
+        return { bgOnCount: bgOn.length, maxHlW, onBg };
+      });
+      sonuclar[path.basename(k)] = { t0, t55 };
+    }
+  } finally {
+    await browser.close();
+  }
+  console.log(JSON.stringify(sonuclar));
+})();
+"""
+        with tempfile.TemporaryDirectory() as tmp:
+            ses = pathlib.Path(tmp) / 'ses.mp3'
+            ses.write_bytes(b'ID3')
+            klasorler = []
+            for paket in hf.PAKETLER:
+                tema = hf.tema_sec(h, {'paket': paket}, None)
+                klasorler.append(str(hf.klasor_kur(pathlib.Path(tmp) / paket, props, tema, ses, None)))
+            r = subprocess.run(['node', '-e', betik, chrome, kok, *klasorler],
+                               capture_output=True, text=True, encoding='utf-8', timeout=120)
+            self.assertEqual(r.returncode, 0, r.stderr)
+            veri = json.loads(r.stdout.strip().splitlines()[-1])
+            for paket in hf.PAKETLER:
+                with self.subTest(paket):
+                    olcum = veri[paket]
+                    self.assertGreater(olcum['t0']['wordCount'], 0)
+                    self.assertGreaterEqual(olcum['t0']['minWordOp'], 0.9)
+                    self.assertGreaterEqual(olcum['t0']['chipOp'], 0.9)
+                    self.assertGreaterEqual(olcum['t0']['damgaOp'], 0.9)
+                    self.assertGreater(olcum['t0']['baslikH'], 80)
+                    self.assertGreaterEqual(olcum['t55']['bgOnCount'], 1)
+                    if paket == 'kolaj':
+                        self.assertEqual(olcum['t55']['onBg'], 'rgb(17, 17, 17)')
+                    else:
+                        self.assertGreater(olcum['t55']['maxHlW'], 20)
+
 
 class EskiSenaryoTests(unittest.TestCase):
     def test_depodaki_butun_senaryolar_gecerli(self):

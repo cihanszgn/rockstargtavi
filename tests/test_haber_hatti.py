@@ -465,6 +465,23 @@ class HatTests(unittest.TestCase):
         self.assertEqual(count, 1)
         self.assertEqual(len(list((self.root / 'video/senaryo').glob(f'{oid}-*.json'))), 4)
 
+    def test_writer_payload_includes_short_video_hook_targets(self):
+        self.hat.config['yazar'] = [{'ad': 'writer'}]
+        candidate = dict(self._aday(0, 'Sezon'), kaynak_metni='verified ' * 80)
+        captured = {}
+        def fake_prompt(ad, data):
+            captured.update(data)
+            return 'write'
+        with patch.object(self.hat, 'prompt', side_effect=fake_prompt), \
+                patch.object(self.hat, 'model', return_value=json.dumps({'durum': 'atla', 'neden': 'test'})):
+            self.hat.yaz(candidate)
+        hedef = captured.get('senaryo_hedefi')
+        self.assertIsInstance(hedef, dict)
+        self.assertEqual(hedef['hedef_sure_sn'], [20, 35])
+        self.assertEqual(hedef['hedef_sahne'], [4, 5])
+        self.assertEqual(hedef['kelime_araligi']['tr'], [35, 65])
+        self.assertEqual(hedef['kanca_ilk_sahne_en_cok_kelime']['tr'], 18)
+
     def test_optional_language_drops_only_after_one_correction(self):
         for lang in ('en', 'es', 'fr'):
             with self.subTest(lang=lang):

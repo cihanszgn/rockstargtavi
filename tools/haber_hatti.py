@@ -858,6 +858,15 @@ class Hat:
                 'cikti': str(self.state / 'yazar.json')}
         data['senaryo_sema_ornekleri'] = {lang: oku(p) for lang in oto.DILLER
             if (p := self.root / f'video/senaryo/r6-siege-operation-vital-signal-duyuruldu-2026-11-15-{lang}.json').exists()}
+        data['senaryo_hedefi'] = {
+            'hedef_sure_sn': [20, 35],
+            'hedef_sahne': [4, 5],
+            'kelime_araligi': {'tr': [35, 65], 'en': [55, 95], 'es': [55, 95], 'fr': [55, 95]},
+            'kanca_ilk_sahne_en_cok_kelime': {'tr': 18, 'en': 24, 'es': 24, 'fr': 24},
+            'kanca_kurali': ('İlk 2 sn içinde haberin en somut olgusunu, oyuncu etkisini veya doğrulanmış sorusunu ver; '
+                             'baslik.veri.baslik kısa (<=45 kr) ve baslik.veri.vurgu en az 1–2 kanca kelimesi içersin; '
+                             'senaryo_sema_ornekleri yalnız alan şeması içindir, uzunluk örneği değildir.'),
+        }
         kota = []  # hazirla'nın kota/tekrar reddi model kararı değildir; hafızaya yazılmaz
         scenario_errors = {}
         def validate(value):

@@ -40,6 +40,22 @@ function giris(e,t,o){
     if(o.sh!==false&&(o.a||0)>14)shake(t,6);
   }
 }
+/* kancaGiris: ilk karede (t=0) boş ekran kalmasın diye tam görünür (opacity:1) başlar, hızlı darbeyle oturur */
+function kancaGiris(e,t,o){
+  o=o||{};var r=(o.r||0)*(P==="kolaj"?2:1),sk=P==="esports"?(o.sk===undefined?-6:o.sk):0,d=o.d||.18;
+  if(P==="esports"){
+    tl.fromTo(e,{scale:o.s||1.18,rotation:r-3,skewX:sk,opacity:1},{scale:1,rotation:r,skewX:sk,opacity:1,duration:d,ease:"power4.out"},t);
+    if(o.sh)shake(t+.02,o.a||10);
+  }else if(P==="gazete"){
+    tl.fromTo(e,{y:18,scale:1.04,rotation:r*.15,opacity:1},{y:0,scale:1,rotation:r*.15,opacity:1,duration:.22,ease:"power3.out"},t);
+  }else if(P==="neon"){
+    tl.fromTo(e,{scale:1.1,x:o.dx||0,opacity:1},{scale:1,x:0,opacity:1,duration:.14,ease:"power3.out"},t);
+    tl.fromTo(e,{opacity:.7},{opacity:1,duration:.04,ease:"none",immediateRender:false},t+.14);
+  }else{
+    tl.fromTo(e,{scale:1.14,rotation:r-6,opacity:1},{scale:1,rotation:r,opacity:1,duration:.24,ease:"back.out(2.0)"},t);
+    if(o.sh)shake(t+.02,6);
+  }
+}
 /* yan: yandan kayarak gelen şerit */
 function yan(e,t,o){
   o=o||{};var x=o.x===undefined?-1100:o.x,d=o.d||.28;
@@ -230,18 +246,23 @@ function kelimeKur(host,tx,vg){
 }
 var ROT=[-3,2.5,-1.5,3.5,-2.5];
 function kelimeGiris(kw,t0,gap){
+  /* İlk karede (t=0) bütün başlık okunur (opacity:1); kelimeler hızlı dalga + vurgu şeridiyle ilk 0.5 sn'de kanca atar */
   kw.words.forEach(function(w,i){
     var t=t0+i*gap;
-    if(P==="esports"){tl.fromTo(w,{scale:1.7,y:-30,skewX:-10,opacity:0},{scale:1,y:0,skewX:0,opacity:1,duration:.15,ease:"power4.out"},t);if(i%2===0)shake(t,9)}
-    else if(P==="gazete"){tl.fromTo(w,{y:60,opacity:0},{y:0,opacity:1,duration:.3,ease:"power2.out"},t)}
-    else if(P==="neon"){tl.fromTo(w,{opacity:0,x:i%2?40:-40,scale:1.08},{opacity:1,x:0,scale:1,duration:.08,ease:"steps(2)"},t);tl.fromTo(w,{opacity:.3},{opacity:1,duration:.05,ease:"none",immediateRender:false},t+.1)}
-    else{tl.fromTo(w,{scale:.2,rotation:ROT[i%5]-16,opacity:0},{scale:1,rotation:ROT[i%5],opacity:1,duration:.34,ease:"back.out(2.6)"},t)}
+    if(P==="esports"){tl.fromTo(w,{scale:.94,y:-14,skewX:-4,opacity:1},{scale:1,y:0,skewX:0,opacity:1,duration:.16,ease:"power4.out"},t)}
+    else if(P==="gazete"){tl.fromTo(w,{y:14,opacity:1},{y:0,opacity:1,duration:.2,ease:"power3.out"},t)}
+    else if(P==="neon"){tl.fromTo(w,{y:-10,scale:.96,opacity:1},{y:0,scale:1,opacity:1,duration:.14,ease:"power3.out"},t)}
+    else{tl.fromTo(w,{scale:.92,rotation:ROT[i%5],opacity:1},{scale:1,rotation:ROT[i%5],opacity:1,duration:.22,ease:"back.out(2.2)"},t)}
   });
-  kw.groups.forEach(function(g){
-    var tg=g.g.goster||t0+kw.words.length*gap+.3;
+  if(P==="esports"||P==="kolaj")shake(t0+.02,P==="esports"?10:6);
+  kw.groups.forEach(function(g,gi){
+    /* Vurgu kutusu ilk 0.5 sn içinde yanar; izleyici kaydırmadan kanca kelimesini yakalar */
+    var erken=t0+.22+gi*.14;
+    var tg=g.g.goster?Math.min(g.g.goster,erken+.18):erken;
     tl.set(g.wrap,{className:"bg on"},tg);
-    tl.fromTo(g.hl,{scaleX:0},{scaleX:1,duration:.2,ease:"power3.out"},tg);
-    tl.fromTo(g.wrap,{scale:1},{scale:1.08,duration:.12,yoyo:true,repeat:1,immediateRender:false,ease:"power2.out"},tg);
+    tl.fromTo(g.hl,{scaleX:0},{scaleX:1,duration:.18,ease:"power3.out"},tg);
+    tl.fromTo(g.wrap,{scale:1},{scale:1.08,duration:.11,yoyo:true,repeat:1,immediateRender:false,ease:"power2.out"},tg);
+    if(gi===0)shake(tg,8);
   });
 }
 
@@ -249,7 +270,7 @@ function kelimeGiris(kw,t0,gap){
 var B = {};
 
 B.baslik = function(sc,ic,s){
-  var v=s.veri,t0=s.bas,t1=s.bit;
+  var v=s.veri,t0=s.bas,t1=s.bit,kalan=Math.max(.4,t1-t0-.32);
   ic.classList.add("t-baslik");
   var bg=el("div","bk-bg");sc.insertBefore(bg,sc.firstChild);
   var ov=function(c){return el("div","bk-ov "+c,null,bg)};
@@ -258,47 +279,60 @@ B.baslik = function(sc,ic,s){
     if(P==="kolaj"){
       var pol=el("div","pol",null,bg);ho=el("div","pol-foto",null,pol);
       el("i","bant b1",null,bg);el("i","bant b2",null,bg);
-      drift(pol,t0,t1-t0,{rotation:-3.6},{rotation:-2.4});
+      tl.fromTo(pol,{scale:1.08,rotation:-5},{scale:1,rotation:-3.2,duration:.26,ease:"back.out(1.8)"},t0);
+      tl.to(pol,{rotation:-2.0,duration:kalan,ease:"none"},t0+.26);
     }
     im=el("img","bk-img",null,ho);im.src=V.foto;im.alt="";
     if(P==="neon"){
       var c1=el("img","bk-img rgb c1",null,bg),c2=el("img","bk-img rgb c2",null,bg);c1.src=c2.src=V.foto;c1.alt=c2.alt="";
-      [t0+.5,t0+1.9,t0+3.3].forEach(function(tt){
+      [t0+.1,t0+.45,t0+1.5].forEach(function(tt){
         tl.fromTo(c1,{x:-12},{x:-34,duration:.05,yoyo:true,repeat:1,immediateRender:false,ease:"none"},tt);
         tl.fromTo(c2,{x:12},{x:34,duration:.05,yoyo:true,repeat:1,immediateRender:false,ease:"none"},tt);
       });
-      drift(c1,t0,t1-t0,{scale:1.03},{scale:1.16});drift(c2,t0,t1-t0,{scale:1.03},{scale:1.16});
+      tl.fromTo(c1,{scale:1.18},{scale:1.04,duration:.32,ease:"power3.out"},t0);
+      tl.to(c1,{scale:1.14,duration:kalan,ease:"none"},t0+.32);
+      tl.fromTo(c2,{scale:1.18},{scale:1.04,duration:.32,ease:"power3.out"},t0);
+      tl.to(c2,{scale:1.14,duration:kalan,ease:"none"},t0+.32);
     }
-    if(P==="gazete")drift(im,t0,t1-t0,{scale:1.04,y:0},{scale:1.12,y:-30});
-    else if(P!=="kolaj")drift(im,t0,t1-t0,{scale:1.03},{scale:1.16});
+    if(P==="gazete"){
+      tl.fromTo(im,{scale:1.14,y:0},{scale:1.04,y:-8,duration:.32,ease:"power3.out"},t0);
+      tl.to(im,{scale:1.12,y:-32,duration:kalan,ease:"none"},t0+.32);
+    }else if(P!=="kolaj"){
+      tl.fromTo(im,{scale:1.18},{scale:1.04,duration:.32,ease:"power3.out"},t0);
+      tl.to(im,{scale:1.14,duration:kalan,ease:"none"},t0+.32);
+    }
     if(P==="esports"){ov("ov-renk");ov("ov-ust");ov("ov-serit");ov("ov-nokta")}
     else if(P==="gazete"){ov("ov-nokta");ov("ov-kagit")}
     else if(P==="neon"){ov("ov-alt");ov("ov-tara");ov("ov-vin");for(var q=1;q<=4;q++)el("i","ov-k k"+q,null,bg)}
     else{ov("ov-nokta")}
   }else{
-    /* görselsiz haber: dev oyun adı + doku, aynı doluluk. Oyun adı yalnız soluk arka plan dokusudur (opaklık .13):
-       tam opak kalırsa üstüne gelen başlıkla üst üste biner ve ikisi de okunmaz. */
+    /* görselsiz haber: dev oyun adı + doku, ilk karede görünür ve hafif darbeyle oturur (opaklık .13) */
     ov("ov-doku");
     var dv=ON(F(el("div","bk-dev d",H.oyun||"",bg),420,110));
     if(P==="esports"){ov("ov-renk");}
     if(P==="neon"){ov("ov-tara");ov("ov-vin");for(var w=1;w<=4;w++)el("i","ov-k k"+w,null,bg)}
-    tl.fromTo(dv,{scale:1.25,opacity:0},{scale:1,opacity:.13,duration:.5,ease:"power3.out"},t0);
-    drift(dv,t0+.5,t1-t0,{y:0},{y:-40});
+    tl.fromTo(dv,{scale:1.14,opacity:.13},{scale:1,opacity:.13,duration:.32,ease:"power3.out"},t0);
+    tl.to(dv,{y:-40,duration:kalan,ease:"none"},t0+.32);
   }
-  /* üst satır: etiket + tarih solda, haber türü damgası sağda */
+  /* kanca darbesi: ilk 0.4 sn'de üst vurgu şeridi süpürür (süs katmanı, güvenli alan dışı) */
+  var kf=el("div","",null,bg);kf.setAttribute("data-dekor","1");
+  kf.style.cssText="position:absolute;left:54px;top:212px;width:972px;height:8px;background:var(--vurgu);transform-origin:0 50%;opacity:.95";
+  tl.fromTo(kf,{scaleX:0,opacity:.95},{scaleX:1,opacity:.95,duration:.18,ease:"power3.out"},t0);
+  tl.to(kf,{opacity:0,duration:.24,ease:"power2.in"},t0+.22);
+  /* üst satır: etiket ve tür damgası ilk karede (t=0) görünür; tarih hemen ardından oturur */
   var ust=ON(el("div","bk-ust",null,ic));
   var sol=el("div","bk-sol",null,ust);
   var et=F(el("div","chip c-tur",v.ust_etiket||H.tur_etiket||"",sol),40,18);
   var td=H.tarih_metin?el("div","bk-tarih b",H.tarih_metin,sol):null;
   var dm=F(el("div","bk-damga d",H.tur_etiket||"",ust),96,38);
-  giris(et,t0+.05,{r:-2,s:1.4,a:8});
-  if(td)giris(td,t0+.95,{r:-2,s:1.5,a:6});
-  giris(dm,t0+.8,{r:-7,s:2.4,a:16});
-  /* başlık: kelime kelime vurarak girer */
+  kancaGiris(et,t0,{r:-2,s:1.16,d:.16});
+  kancaGiris(dm,t0,{r:-7,s:1.28,d:.22,sh:true,a:10});
+  if(td)giris(td,t0+.22,{r:-2,s:1.3,a:5,sh:false});
+  /* başlık: ilk karede tam okunur, hızlı kelime dalgası + ilk 0.5 sn'de vurgu şeridi */
   var bs=ON(F(el("div","bk-bas d",null,ic),190,96));
   var kw=kelimeKur(bs,String(v.baslik||""),v.vurgu);
-  kelimeGiris(kw,t0+.18,Math.min(.13,1.5/Math.max(1,kw.words.length)));
-  if((v.tuslar||[]).length){var tr=ON(el("div","bk-tuslar",null,ic));v.tuslar.forEach(function(k,n){var kb=el("kbd","",k,tr);giris(kb,t0+1.3+n*.12,{s:1.6,a:6,sh:false})})}
+  kelimeGiris(kw,t0,Math.min(.045,.22/Math.max(1,kw.words.length)));
+  if((v.tuslar||[]).length){var tr=ON(el("div","bk-tuslar",null,ic));v.tuslar.forEach(function(k,n){var kb=el("kbd","",k,tr);giris(kb,t0+.32+n*.06,{s:1.4,a:5,sh:false})})}
 };
 
 B.kaynak = function(sc,ic,s){
@@ -310,15 +344,16 @@ B.kaynak = function(sc,ic,s){
   var al=null;
   if(v.alinti){al=ON(F(el("div","kn-alinti k3","“"+v.alinti+"”",ic),90,34))}
   var tr=v.tarih?ON(F(el("div","kn-tarih b",v.tarih,ic),56,24)):null;
-  giris(et,t0+.1,{r:-2,s:1.4,a:10});yan(bar,t0+.3,{x:-1000});
-  giris(ad,v.goster||t0+.5,{r:-1,s:1.3});
-  if(al)giris(al,(v.goster||t0+.5)+.5,{r:1,s:1.25,a:10});
-  if(tr)giris(tr,t0+1.4,{sh:false});
+  giris(et,t0+.02,{r:-2,s:1.35,a:8});yan(bar,t0+.14,{x:-1000,d:.22});
+  var tad=Math.min(v.goster||t0+.25,t0+.35);
+  giris(ad,tad,{r:-1,s:1.25});
+  if(al)giris(al,tad+.26,{r:1,s:1.2,a:8});
+  if(tr)giris(tr,t0+.65,{sh:false});
 };
 
 B.maddeler = function(sc,ic,s){
   var v=s.veri,t0=s.bas,L=v.maddeler||[],n=Math.max(1,L.length);
-  var hd=sahneBaslik(ic,v.baslik||"");giris(hd,t0+.1,{r:-1,s:1.35,a:10});
+  var hd=sahneBaslik(ic,v.baslik||"");giris(hd,t0+.02,{r:-1,s:1.3,a:8});
   var ls=el("div","mp-liste n"+n,null,ic);
   var mx=[0,124,116,100,84,70,60][Math.min(n,6)];
   L.forEach(function(m,i){
@@ -331,7 +366,7 @@ B.maddeler = function(sc,ic,s){
 
 B.yama_fark = function(sc,ic,s){
   var v=s.veri,t0=s.bas,L=v.satirlar||[],n=Math.max(1,L.length);
-  var hd=sahneBaslik(ic,v.baslik||"");giris(hd,t0+.1,{r:-1,s:1.35,a:10});
+  var hd=sahneBaslik(ic,v.baslik||"");giris(hd,t0+.02,{r:-1,s:1.3,a:8});
   var ls=el("div","yf-liste n"+n,null,ic);
   L.forEach(function(r,i){
     var o=ON(el("div","yf-satir "+KART[i%3]+" i"+(i%2),null,yuva(ls)));
@@ -346,24 +381,24 @@ B.yama_fark = function(sc,ic,s){
     var eo=Math.max(4,Math.min(100,(r.eski_oran||0)*(r.eski_oran<=1?100:1))),yo=Math.max(4,Math.min(100,(r.yeni_oran||0)*(r.yeni_oran<=1?100:1)));
     i1.style.width=eo+"%";i2.style.width=eo+"%";
     var t=r.goster;
-    yan(o,t-.05,{x:-1100});
-    giris(es,t+.2,{r:-2,s:1.4,a:8});
-    tl.fromTo(ok,{opacity:0,x:-40},{opacity:1,x:0,duration:.16},t+.55);
-    giris(ye,t+.8,{r:2,s:1.7,a:16});
-    tl.fromTo(i2,{width:eo+"%"},{width:yo+"%",duration:.4,ease:"power4.in"},t+.8);
-    tl.fromTo(es,{opacity:.7},{opacity:.45,duration:.2},t+.8);
+    yan(o,t-.05,{x:-1100,d:.22});
+    giris(es,t+.12,{r:-2,s:1.35,a:8});
+    tl.fromTo(ok,{opacity:0,x:-40},{opacity:1,x:0,duration:.14},t+.28);
+    giris(ye,t+.44,{r:2,s:1.6,a:14});
+    tl.fromTo(i2,{width:eo+"%"},{width:yo+"%",duration:.32,ease:"power4.in"},t+.44);
+    tl.fromTo(es,{opacity:.7},{opacity:.45,duration:.18},t+.44);
     if(r.yon==="ayni")ok.style.visibility="hidden";
   });
 };
 
 B.platform = function(sc,ic,s){
   var v=s.veri,t0=s.bas,PL=v.platformlar||[],SY=v.sayilar||[],solo=!SY.length;
-  var hd=sahneBaslik(ic,v.baslik||"");giris(hd,t0+.1,{r:-1,s:1.35,a:10});
+  var hd=sahneBaslik(ic,v.baslik||"");giris(hd,t0+.02,{r:-1,s:1.3,a:8});
   if(PL.length){
     var rz=ON(el("div","pf-rozetler"+(solo?" solo n"+PL.length:""),null,ic));
     PL.forEach(function(p,i){
       var r=F(el("div","pf-rozet d "+(p.renk||"diger"),p.ad,rz),solo?130:52,24);
-      giris(r,p.goster-.05,{r:(i%2?1:-1)*2,s:1.5,a:10});
+      giris(r,p.goster-.05,{r:(i%2?1:-1)*2,s:1.45,a:10});
     });
   }
   if(SY.length){
@@ -372,44 +407,44 @@ B.platform = function(sc,ic,s){
       var k=ON(el("div","pf-kutu "+KART[(i+1)%3]+" i"+(i%2),null,yuva(sy)));
       var dg=F(el("div","pf-deger d",String(q.deger),k),280,110);
       F(el("div","pf-etk b",q.etiket||"",k),54,22);
-      giris(k,q.goster-.05,{r:(i%2?1:-1)*1.5,s:1.4,a:12});
-      if(/^\d{1,5}$/.test(String(q.deger))){sayac(dg,0,parseInt(q.deger,10),q.goster,.6)}
+      giris(k,q.goster-.05,{r:(i%2?1:-1)*1.5,s:1.35,a:12});
+      if(/^\d{1,5}$/.test(String(q.deger))){sayac(dg,0,parseInt(q.deger,10),q.goster,.5)}
     });
   }
-  if(v.not){var nt=ON(F(el("div","pf-not k1 b",v.not,ic),56,26));yan(nt,(SY.length?SY[SY.length-1].goster:(PL.length?PL[PL.length-1].goster:t0+2))+.5,{x:1100})}
+  if(v.not){var nt=ON(F(el("div","pf-not k1 b",v.not,ic),56,26));yan(nt,(SY.length?SY[SY.length-1].goster:(PL.length?PL[PL.length-1].goster:t0+1.2))+.25,{x:1100,d:.22})}
 };
 
 B.tarih = function(sc,ic,s){
   var v=s.veri,t0=s.bas;
-  var et=chipSatir(ic,v.etiket||"",null,54);giris(et,t0+.1,{r:-2,s:1.4,a:10});
+  var et=chipSatir(ic,v.etiket||"",null,54);giris(et,t0+.02,{r:-2,s:1.35,a:8});
   var ust=ON(el("div","tr-ust",null,ic));
   var dt=v.gun_bit&&v.gun_bit!==v.gun_bas?(v.gun_bas+"–"+v.gun_bit):String(v.gun_bas);
   var bg=F(el("div","tr-buyuk d",dt,ust),420,150);
   var yn=el("div","tr-yan",null,ust);
   var ay=F(el("div","tr-ay d",v.ay_adi||"",yn),150,34);var yl=el("div","tr-yil b",v.yil_metin||"",yn);
-  giris(bg,t0+.35,{r:-2,s:1.5,a:16});giris(yn,t0+.6,{r:2,s:1.3,a:8});
+  giris(bg,t0+.15,{r:-2,s:1.45,a:14});giris(yn,t0+.28,{r:2,s:1.25,a:8});
   var tk=ON(el("div","tr-takvim k2",null,ic));
   (v.hafta||[]).forEach(function(h){el("span","hf",h,tk)});
   var bos=(v.ilk_haftagunu||0);
   for(var b=0;b<bos;b++)el("span","",null,tk);
   var lo=v.gun_bas,hi=v.gun_bit||v.gun_bas;
   for(var g=1;g<=(v.gun_sayisi||30);g++){el("span",(g>=lo&&g<=hi)?"on":"",String(g),tk)}
-  yan(tk,t0+.8,{x:-1000});
-  tk.querySelectorAll("span.on").forEach(function(e,n){tl.fromTo(e,{scale:1},{scale:1.3,duration:.18,yoyo:true,repeat:1,immediateRender:false},t0+1.3+n*.12)});
-  if(v.not){var nt=ON(F(el("div","tr-not k1 b",v.not,ic),56,26));giris(nt,t0+1.6,{r:1,s:1.3})}
-  tl.fromTo(bg,{y:0},{y:-8,duration:2,ease:"sine.inOut",yoyo:true,repeat:1,immediateRender:false},t0+2);
+  yan(tk,t0+.42,{x:-1000,d:.22});
+  tk.querySelectorAll("span.on").forEach(function(e,n){tl.fromTo(e,{scale:1},{scale:1.3,duration:.16,yoyo:true,repeat:1,immediateRender:false},t0+.75+n*.1)});
+  if(v.not){var nt=ON(F(el("div","tr-not k1 b",v.not,ic),56,26));giris(nt,t0+.9,{r:1,s:1.25})}
+  tl.fromTo(bg,{y:0},{y:-8,duration:1.8,ease:"sine.inOut",yoyo:true,repeat:1,immediateRender:false},t0+1.1);
 };
 
 B.fiyat = function(sc,ic,s){
-  var v=s.veri,t0=s.bas,uc=v.durum==="ucretsiz",tg=v.goster||t0+.7;
+  var v=s.veri,t0=s.bas,uc=v.durum==="ucretsiz",tg=Math.min(v.goster||t0+.35,t0+.45);
   var eti=ON(F(el("div","fy-etiket d k3",v.etiket||"",ic),330,100));
-  giris(eti,t0+.15,{r:-2,s:1.6,a:18});
-  if(v.eski_fiyat){var es=ON(el("div","fy-eski d",String(v.eski_fiyat),ic));giris(es,tg,{r:-1,s:1.4})}
-  if(v.yeni_fiyat){var ye=ON(F(el("div","fy-yeni d",String(v.yeni_fiyat),ic),300,100));giris(ye,tg+.35,{r:1,s:1.6,a:18})}
-  if(v.indirim){var ro=el("div","fy-rozet d k1",String(v.indirim),ic);giris(ro,tg+.5,{r:10,s:2.2,a:16})}
-  if(v.bitis){var bt=ON(F(el("div","fy-bitis chip c-alt",v.bitis,ic),60,24));giris(bt,t0+1.8,{r:-1,s:1.3})}
+  giris(eti,t0+.04,{r:-2,s:1.5,a:16});
+  if(v.eski_fiyat){var es=ON(el("div","fy-eski d",String(v.eski_fiyat),ic));giris(es,tg,{r:-1,s:1.35})}
+  if(v.yeni_fiyat){var ye=ON(F(el("div","fy-yeni d",String(v.yeni_fiyat),ic),300,100));giris(ye,tg+.22,{r:1,s:1.5,a:16})}
+  if(v.indirim){var ro=el("div","fy-rozet d k1",String(v.indirim),ic);giris(ro,tg+.34,{r:10,s:2.0,a:14})}
+  if(v.bitis){var bt=ON(F(el("div","fy-bitis chip c-alt",v.bitis,ic),60,24));giris(bt,t0+.85,{r:-1,s:1.25})}
   var mg=ON(el("div","fy-magaza"+(uc?" uc":""),null,ic));
-  (v.magazalar||[]).forEach(function(m,i){var q=F(el("span","b "+KART[i%3],m.ad,mg),50,24);giris(q,m.goster-.05,{r:(i%2?1:-1)*2,s:1.4,a:6})});
+  (v.magazalar||[]).forEach(function(m,i){var q=F(el("span","b "+KART[i%3],m.ad,mg),50,24);giris(q,m.goster-.05,{r:(i%2?1:-1)*2,s:1.35,a:6})});
 };
 
 /* ---------- maskot: piksel mavi blok; kapanışta büyük (x ≤ 930), ayakta zıplar ---------- */
@@ -434,14 +469,14 @@ function maskot(sc,t0,t1){
   svg.style.transformOrigin="50% 100%";
   var rot=MP.r;
   tl.set(g2,{opacity:0},t0);
-  tl.fromTo(kap,{x:560,rotation:rot,opacity:1},{x:0,rotation:rot,duration:.34,ease:"power3.out"},t0+.4);
-  var t=t0+1.2,H0=P==="neon"?40:104;
-  while(t<t1-1.0){
+  tl.fromTo(kap,{x:560,rotation:rot,opacity:1},{x:0,rotation:rot,duration:.28,ease:"power3.out"},t0+.18);
+  var t=t0+.6,H0=P==="neon"?40:104;
+  while(t<t1-.7){
     tl.set(g1,{opacity:0},t);tl.set(g2,{opacity:1},t);
-    tl.fromTo(svg,{y:0,scaleY:.86,scaleX:1.1},{y:-H0,scaleY:1.06,scaleX:.96,duration:.3,ease:"power2.out",immediateRender:false},t);
-    tl.to(svg,{y:0,scaleY:1,scaleX:1,duration:.28,ease:"power2.in"},t+.3);
-    tl.set(g1,{opacity:1},t+.58);tl.set(g2,{opacity:0},t+.58);
-    t+=1.25;
+    tl.fromTo(svg,{y:0,scaleY:.86,scaleX:1.1},{y:-H0,scaleY:1.06,scaleX:.96,duration:.28,ease:"power2.out",immediateRender:false},t);
+    tl.to(svg,{y:0,scaleY:1,scaleX:1,duration:.26,ease:"power2.in"},t+.28);
+    tl.set(g1,{opacity:1},t+.54);tl.set(g2,{opacity:0},t+.54);
+    t+=1.15;
   }
 }
 
@@ -455,7 +490,7 @@ B.kapanis = function(sc,ic,s){
   var st=ON(F(el("div","kp-site d","CTRL+A GAME",sol),120,50));
   var ad=ON(F(el("div","kp-adres d k3",v.adres||"",sol),84,36));
   el("div","kp-mas",null,sat);
-  giris(c,t0+.1,{r:-2,s:1.5,a:18});giris(a,t0+.7,{r:1,s:1.3});giris(st,t0+.95,{r:-1,s:1.4,a:8});yan(ad,t0+1.2,{x:1000});
+  giris(c,t0+.03,{r:-2,s:1.45,a:14});giris(a,t0+.28,{r:1,s:1.25});giris(st,t0+.42,{r:-1,s:1.35,a:8});yan(ad,t0+.56,{x:1000,d:.22});
   maskot(sc,t0,t1);
 };
 

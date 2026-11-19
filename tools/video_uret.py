@@ -52,14 +52,16 @@ SABLON_SURUMU = 5
 OKUNAN_SURUMLER = (1, 2, 3, 4, 5)
 TABAN = "https://medya.ctrl-agame.com/v/"
 TZ = timezone(timedelta(hours=3))
-EN_KISA, EN_UZUN = 20.0, 80.0
-KELIME_ALT, KELIME_UST = 60, 110  # Türkçe (sondan eklemeli: az kelime, çok harf)
+EN_KISA, EN_UZUN = 15.0, 80.0
+KELIME_ALT, KELIME_UST = 35, 65  # Türkçe (sondan eklemeli: az kelime, çok harf; hedef 20–35 sn kısa dikey video)
 # en/es/fr aynı sürede ~1,5 kat kelime söyler; uyarı eşiği dile göre
 # de/nl/zh: Remotion günlerinden kalan ölçü yok; en/es/fr ile aynı (zh boşluksuz yazılır: kelime sayısı güvenilmez).
-KELIME_ARALIGI = {"tr": (60, 110), "en": (90, 175), "es": (90, 175), "fr": (90, 175), "de": (80, 160), "nl": (90, 175),
-                  "zh": (1, 400)}
+KELIME_ARALIGI = {"tr": (35, 65), "en": (55, 95), "es": (55, 95), "fr": (55, 95), "de": (50, 85), "nl": (55, 95),
+                  "zh": (1, 240)}
+KANCA_KELIME_UST = {"tr": 18, "en": 24, "es": 24, "fr": 24, "de": 22, "nl": 24, "zh": 60}
+HEDEF_SURE_UST = 40.0
 ONDEN = 0.25      # sahne görüntüsü sesten biraz önce gelir
-KUYRUK = 1.4      # son sözden sonra kapanış için kalan süre
+KUYRUK = 0.7      # son sözden sonra kapanış için kalan süre
 # Kapak resmi (site oynatıcısının posteri, Reels kapağı, YouTube küçük resmi) başlık sahnesinin bir karesidir. Süreler
 # video/src ile aynı: sabit girişler (pencere, marka şeridi, çipler, tuşlar, kehribar şerit, alt kart) en geç 1 sn'de
 # biter; başlık kelimesi söylendikten 0.25 sn sonra yerine oturur, eşleşmeyen son kelimeler son sözden en çok 0.3 sn
@@ -872,10 +874,20 @@ def senaryo_hazirla(senaryo, haber: dict, dil: str) -> dict:
     alt, ust = KELIME_ARALIGI.get(dil, (KELIME_ALT, KELIME_UST))
     if not alt <= kelime_sayisi <= ust:
         D.uyarilar.append(f"anlatım {kelime_sayisi} kelime; önerilen {alt}–{ust}")
+    if hazir and hazir[0]["sablon"] == "baslik":
+        kanca_ust = KANCA_KELIME_UST.get(dil, 18)
+        if len(hazir[0]["kelimeler"]) > kanca_ust:
+            D.uyarilar.append(f"sahneler[0].anlatim {len(hazir[0]['kelimeler'])} kelime; "
+                              f"ilk 2 sn kancası için en çok {kanca_ust} kelime önerilir")
+        if not hazir[0]["veri"].get("vurgu"):
+            D.uyarilar.append("sahneler[0].veri.vurgu boş; ilk karede 1–2 kanca kelimesi vurgulanması önerilir")
     tts = "\n".join(_cumle_bitir(x) for x in sozlu)
     tahmin = tahmini_sure(tts, dil)
     if not EN_KISA <= tahmin <= EN_UZUN:
         D.hata("sahneler", f"tahmini süre {tahmin:.1f} sn; {EN_KISA:.0f}–{EN_UZUN:.0f} sn olmalı")
+    elif tahmin > HEDEF_SURE_UST:
+        D.uyarilar.append(f"tahmini süre {tahmin:.1f} sn; kısa dikey video için 20–35 sn "
+                          f"(en çok {HEDEF_SURE_UST:.0f} sn) önerilir")
     if D.hatalar:
         raise SenaryoHatasi(D.hatalar)
     return {"dil": dil, "sahneler": hazir, "tts": tts, "kelime_sayisi": kelime_sayisi,
@@ -1722,7 +1734,7 @@ def _hf_cizim(is_klasoru: Path, props: dict, haber: dict, girdi: dict, ses_yolu:
     video_hf.render(hf, ham, kos=_calistir, fps=props["fps"])
     render_sure = time.monotonic() - bas
     crf = video_hf.sikistir(ham, is_klasoru / dosya["mp4_1080"], kos=_calistir)
-    an = min(max(props["kapak_kare"] / props["fps"], 1.3), props["sahneler"][0]["bit"] - 0.2)
+    an = min(max(props["kapak_kare"] / props["fps"], 0.8), max(0.2, props["sahneler"][0]["bit"] - 0.2))
     video_hf.kapak_cikar(is_klasoru / dosya["mp4_1080"], an, is_klasoru / dosya["kapak"], kos=_calistir)
     return {"ham": ham, "tema": tema, "crf": crf, "render_sure": render_sure}
 
