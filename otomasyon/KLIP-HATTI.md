@@ -620,9 +620,9 @@ Kod: `tools/klip_yayincilar.py` (mantık), `tools/klip_yayinci_ui.py` (arayüz),
 
 **Yayıncı eklemek (Cio için):**
 1. Onay Sayfası'nı aç, **Yayıncılar** sekmesine geç.
-2. "Yayıncı ekle" kutusuna Kick adını veya bağlantısını (`kick.com/ad`) ve/veya YouTube `@tanıtıcı` ya da kanal bağlantısını yaz. En az biri yeter; yalnız YouTube da olur.
-3. **Kontrol et**: sunucu kanalı gerçekten doğrular (Kick API, YouTube için yt-dlp) ve önizleme kartı gösterir (ad, kanal, son yayınlar).
-4. Ad ve kısa adı gerekirse düzelt (kısa ad boşsa adın ilk kelimesi olur), **Ekle**'ye bas. Dosyaya güvenli yazılır (yedek alınır, yazım atomik, yazdıktan sonra yeniden okunup doğrulanır).
+2. "Yayıncı ekle" tek kutusuna Kick adını (`Hype`), `kick.com/ad` bağlantısını ya da YouTube bağlantısını / `@tanıtıcı`yı yaz. Çıplak ad önce Kick'te, bulunamazsa YouTube `@ad` olarak denenir.
+3. **Ekle ve klip çıkar**'a bas (ya da Enter). Sistem kanalı doğrular, listeye ekler (dosyaya güvenli yazım) ve son yayından klip çıkarmayı kendiliğinden başlatır. Başka iş sürüyorsa yeni iş sıraya girer. Hata iletileri Türkçedir; klip çıkarma başlayamazsa yayıncı yine de eklenmiş kalır ve bunu söyler.
+4. Sayfanın üstündeki iş kutusu aşamayı gösterir (yayınlar taranıyor, sohbet indiriliyor a/b, klip N kesiliyor), hazır klip sayısını, sırayı, bitiş/hata iletisini. Bitince "N yeni klip hazır" şeridi ve **Klip listesini yenile** düğmesi çıkar (sayfa kendiliğinden yenilenmez). "Yalnız kontrol et" önizleme kartı gösterir, "Yalnız listeye ekle" klip çıkarmadan ekler: ikisi isteğe bağlıdır.
 5. Aynı kanal ikinci kez eklenemez (harf duyarsız denetlenir).
 
 **Düzenle / Kaldır / Geri getir:** her satırda Düzenle (ad, kısa ad, açık/kapalı, YouTube kanalı etkin/pasif) ve Kaldır var. Kaldır kaydı silmez, `kaldirilanlar` listesine taşır; aynı sekmede "Geri getir" ile geri gelir. Mevcut klip paketlerine dokunulmaz. Not: yayıncı kaldırılınca eski klipler yayıncı adı eşleşmesiyle sayıldığı için klip sayısı 0 görünebilir.
@@ -635,3 +635,8 @@ Kod: `tools/klip_yayincilar.py` (mantık), `tools/klip_yayinci_ui.py` (arayüz),
 
 **Bilinen zayıflıklar:** mevcut yayıncıya panelden ek YouTube kanalı eklenemez (yalnız etkin/pasif); önceki testlerin üçü canlı ayar dosyasına bağlı olduğu için sabit sayılar yerine esnek denetime çevrildi.
 
+## Onaylananları yayınla ve günlük otomatik klip (2026-11-19)
+
+**Onaylananları yayınla** (panelin üstündeki düğme, yalnız tıklamayla, onay sorusu çıkar): `tools/klip_yayinla.py`. Sırayla: (1) `klip_yayin.py yukle` (onaylı ve yüklenmemiş klipler), hata varsa durur, commit/push yapılmaz; (2) `git add` + `git commit` yalnız `data/klipler.json`; (3) `git pull --rebase --autostash`, çakışmada `git rebase --abort`, hata sayfada, commit yerelde kalır; (4) `git push`. Sonuç sayfada yazar. Birim testleri git/yükleme adımlarını sahteler (`tests/test_klip_tek_kutu.py`).
+
+**Günlük otomatik klip:** Zamanlanmış görev `Komixsi Klip Cikar`, her gün 10:00 (kapalıysa açılınca telafi), kullanıcı oturumu açıkken, yönetici yetkisiz. Eylem: `conhost.exe --headless powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools\klip_otomatik.ps1` → `tools/klip_otomatik.py`: etkin her yayıncıda `yayin_klip.py otomatik --yayinci <ad> --en-cok 2 --konusma` (işlenmiş yayınları atlar). YALNIZ üretir; onaylamaz, yüklemez, paylaşmaz, push yapmaz. Panelden başlatılan işle aynı anda çalışmaz (`<çalışma dizini>\klip-cikar.kilit`): kilit doluysa en çok 60 dk bekler, sonra o günü atlar. Log: `C:\Cihan.Ai\.scratch\yayin-klip\gunluk\klip-YYYY-MM-DD.log`, son satır "N yeni klip onay bekliyor". Panelde Klipler sekmesinde onayla, sonra "Onaylananları yayınla".
