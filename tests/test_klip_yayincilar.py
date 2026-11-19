@@ -765,6 +765,12 @@ class BetikGuvenligi(unittest.TestCase):
         for yasak in ("innerHTML", "outerHTML", "insertAdjacentHTML", "document.write", "eval(", "new Function"):
             self.assertNotIn(yasak, yui.BETIK)
 
+    def test_betik_govde_olusmadan_calismaz(self):
+        """Betik <head> içinde yüklenir; gövdeyi beklemezse düğmeler hiç bağlanmaz (gerçek arıza)."""
+        import klip_yayinci_ui as yui
+        self.assertIn("document.readyState==='loading'", yui.BETIK)
+        self.assertIn("addEventListener('DOMContentLoaded',basla)", yui.BETIK)
+
     def test_bolum_ve_sekmeler_sabit(self):
         import klip_yayinci_ui as yui
         self.assertIn("kapanırsa", yui.BOLUM)

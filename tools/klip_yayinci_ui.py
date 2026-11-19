@@ -56,6 +56,8 @@ CSS = """
 BETIK = r"""<script>
 (function(){
   'use strict';
+  // Betik <head> içinde yüklenir: sayfa gövdesi oluşmadan çalışırsa hiçbir düğme bağlanmaz (sessiz arıza). Gövdeyi bekle.
+  function basla(){
   var kok=document.getElementById('sekme-yayincilar');if(!kok)return;
   function belirtec(){var m=document.querySelector('meta[name=belirtec]');return m?m.content:'';}
   function oku(r){return r.json().catch(function(){return {ok:false,mesaj:'Sunucu yanıtı anlaşılamadı (kod '+r.status+').'};});}
@@ -251,5 +253,7 @@ BETIK = r"""<script>
   });
 
   sekme(location.hash==='#yayincilar'?'yayincilar':'klipler');
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',basla);else basla();
 })();
 </script>"""
