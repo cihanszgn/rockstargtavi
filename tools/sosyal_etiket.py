@@ -22,6 +22,7 @@ OZEL = {
     "grand theft auto vi": ["#GTA6", "#GTAVI"],
     "crusader kings iii": ["#CK3", "#CrusaderKingsIII"],
     "final fantasy xiv": ["#FFXIV", "#FinalFantasyXIV"],
+    "the legend of zelda: ocarina of time": ["#Zelda", "#OcarinaOfTime"],
 }
 
 UZUN_AD_SINIRI = 24
