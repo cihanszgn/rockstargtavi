@@ -136,6 +136,20 @@
   "url": "https://www.instagram.com/p/Df5rFyXjJ7T/",
   "zaman": "2026-11-18T23:21:08+00:00"
  },
+ "disney-dreamlight-valley-keepsake-sea-cikis-2026-11-18|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 9659212,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "disney-dreamlight-valley-keepsake-sea-2026-11-18",
+  "kimlik": "d6pey0jfBtk",
+  "niyet_zamani": "2026-11-19T08:17:10+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg1McRV_B5OPiVz7z8jqCkQr_WEIbex_QB7YjvMmBgKfjjYQqVPQs3uV-ajTNR40R3ujvr6Pf-qN6SZUUP44Ocu9JxLdVL9m10FKoAqXvQ",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/d6pey0jfBtk",
+  "zaman": "2026-11-19T08:17:10+00:00"
+ },
  "dota-2-patch-7-42-gameplay-update|tr|instagram|gorsel": {
   "bicim": "gorsel",
   "dil": "tr",
@@ -221,6 +235,21 @@
   "sosyal_tur": "haber",
   "url": "https://www.instagram.com/p/Df5gtMpEwPY/",
   "zaman": "2026-11-18T21:50:23+00:00"
+ },
+ "ffxiv-road-to-evercold-free-login-2026-11-18|es|instagram|reel": {
+  "bicim": "reel",
+  "dil": "es",
+  "durum": "tamam",
+  "hesap": "tr",
+  "icerik_dili": "es",
+  "id": "ffxiv-road-to-evercold-ucretsiz-giris-2026-11-18",
+  "kapsayici": "17869921776694894",
+  "kimlik": "18201627946385946",
+  "niyet_zamani": "2026-11-19T08:17:10+00:00",
+  "platform": "instagram",
+  "sosyal_tur": "haber",
+  "url": "https://www.instagram.com/reel/Df6ocsBq-ZP/",
+  "zaman": "2026-11-19T08:17:10+00:00"
  },
  "ffxiv-road-to-evercold-free-login-2026-11-18|tr|instagram|gorsel": {
   "bicim": "gorsel",
