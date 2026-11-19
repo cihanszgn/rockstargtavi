@@ -1,5 +1,66 @@
 [
  {
+  "id": "cs2-cobblestone-inferno-guncelleme-2026-11-19",
+  "oyun": "Counter-Strike 2",
+  "tarih": "2026-11-19",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Valve Counter-Strike 2 duyurusu",
+    "url": "https://steamcommunity.com/games/CSGO/announcements/detail/694278269818634560"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "CS2 güncellemesi Cobblestone ve Inferno sorunlarını düzeltiyor",
+    "ozet": "Yama harita hatalarını giderirken İsviçre'deki oyuncular için yeni bir kasa sekmesi ekliyor.",
+    "metin": "Valve, Counter-Strike 2 için yeni bir güncelleme yayımladı. Cobblestone haritasında uzun A bölgesindeki bazı yürünebilir çıkıntılar düzeltildi, boş gökyüzü kutusunun yüklenmesine yol açan sorun giderildi ve mid/A bölgesindeki ses engelleme hatası kapatıldı. Assault van tamponuna bir el bombası çarpışma alanı eklendi. Inferno'da B bölgesinde kilise ile dark arasından yapılan el bombası ve molotof istismarı kapatıldı. AWP'nin yavaş şarj animasyonu güncellendi; çok yüksek grafik ayarlarında duman altındaki yere yanık izlerinin performansı da iyileştirildi. İsviçre'deki oyuncuların envanterinde X-Ray Scanner sekmesi açılıyor ve bu oyuncular kasaları yalnızca bu tarayıcıyla açabiliyor."
+   },
+   "en": {
+    "baslik": "CS2 update fixes Cobblestone and Inferno issues",
+    "ozet": "The patch fixes map bugs and adds an X-Ray Scanner tab for players in Switzerland.",
+    "metin": "Valve has released a new update for Counter-Strike 2. On Cobblestone, some walkable ledges in long A have been fixed, a map issue that loaded an empty skybox has been resolved, and an audio blocker problem near mid/A has been corrected. A grenade clip was added to the assault van bumper. On Inferno, an exploit where grenades and Molotovs could be thrown from the church to dark on bombsite B has been fixed. The AWP's slow reload animation has been updated, and ground burn decals under smoke were optimized on very high graphics settings. Players in Switzerland will now see an X-Ray Scanner tab in their Inventory, and containers for them can only be opened through the scanner."
+   },
+   "es": {
+    "baslik": "La actualización de CS2 corrige problemas en Cobblestone e Inferno",
+    "ozet": "El parche corrige errores de mapa y añade una pestaña de Escáner de Rayos X para jugadores en Suiza.",
+    "metin": "Valve ha publicado una nueva actualización para Counter-Strike 2. En Cobblestone se han corregido algunos salientes transitables en el largo A, se ha resuelto un problema que cargaba un skybox vacío y se ha corregido un bloqueo de audio cerca de mid/A. Se añadió un clip de granada al parachoques de la assault van. En Inferno se ha corregido un exploit con granadas y cócteles molotov desde la iglesia hasta dark en el sitio B. La animación de recarga lenta del AWP se ha actualizado y las marcas de quemado en el suelo bajo el humo se han optimizado con los gráficos en calidad muy alta. Los jugadores de Suiza verán una pestaña de Escáner de Rayos X en su inventario y solo podrán abrir los contenedores con ese escáner."
+   },
+   "fr": {
+    "baslik": "La mise à jour de CS2 corrige des problèmes sur Cobblestone et Inferno",
+    "ozet": "Le patch corrige des bugs de cartes et ajoute un onglet Scanner à rayons X pour les joueurs suisses.",
+    "metin": "Valve a publié une nouvelle mise à jour pour Counter-Strike 2. Sur Cobblestone, certaines corniches praticables du long A ont été corrigées, un problème de chargement d'une skybox vide a été résolu et un bloqueur audio près de mid/A a été réglé. Un clip de grenade a été ajouté au pare-chocs de l'assault van. Sur Inferno, un exploit de grenades et de cocktails Molotov lancés depuis l'église vers dark sur le site B a été corrigé. L'animation de rechargement lent de l'AWP a été mise à jour et les traces de brûlure au sol sous la fumée ont été optimisées avec les graphismes très élevés. Les joueurs suisses verront un onglet Scanner à rayons X dans leur inventaire, et leurs conteneurs ne pourront être ouverts qu'avec ce scanner."
+   },
+   "de": {
+    "baslik": "CS2-Update behebt Probleme auf Cobblestone und Inferno",
+    "ozet": "Der Patch behebt Kartenfehler und ergänzt für Spieler in der Schweiz einen X-Ray-Scanner-Tab.",
+    "metin": "Valve hat ein neues Update für Counter-Strike 2 veröffentlicht. Auf Cobblestone wurden einige begehbare Vorsprünge in Long A behoben, ein Problem mit einer leeren Skybox beseitigt und ein Audioblocker bei Mid/A korrigiert. Am Stoßfänger des Assault Van wurde ein Granatenclip ergänzt. Auf Inferno wurde ein Granaten- und Molotov-Exploit von der Kirche zur Dark-Position an Bombsite B behoben. Die Nachladeanimation der AWP wurde überarbeitet, und Brandflecken am Boden unter Rauch wurden bei sehr hohen Grafikeinstellungen optimiert. Spieler in der Schweiz erhalten im Inventar einen X-Ray-Scanner-Tab; ihre Container lassen sich nur noch über den Scanner öffnen."
+   },
+   "nl": {
+    "baslik": "CS2-update herstelt problemen op Cobblestone en Inferno",
+    "ozet": "De patch verhelpt kaartfouten en voegt een X-Ray Scanner-tab toe voor spelers in Zwitserland.",
+    "metin": "Valve heeft een nieuwe update voor Counter-Strike 2 uitgebracht. Op Cobblestone zijn enkele begaanbare richels in long A hersteld, een probleem dat een lege skybox laadde is opgelost en een audioblokkade bij mid/A is verholpen. Aan de bumper van de assault van is een granaatclip toegevoegd. Op Inferno is een exploit met granaten en molotovs van de kerk naar dark op bombsite B verholpen. De langzame herlaadanimatie van de AWP is bijgewerkt en brandvlekken op de grond onder rook zijn geoptimaliseerd bij zeer hoge grafische instellingen. Spelers in Zwitserland krijgen een X-Ray Scanner-tab in hun inventaris en kunnen containers alleen via die scanner openen."
+   },
+   "zh": {
+    "baslik": "CS2 更新修复 Cobblestone 与 Inferno 问题",
+    "ozet": "此次补丁修复地图问题，并为瑞士玩家新增 X-Ray Scanner 标签页。",
+    "metin": "Valve 发布了 Counter-Strike 2 的新更新。Cobblestone 地图长A区域的部分可行走平台已修复，加载空白天空盒的问题也已解决，mid/A 的音频阻挡问题同样得到修复。Assault van 保险杠处新增了手雷碰撞区域。Inferno 中 B 点从教堂到 dark 的手雷和燃烧瓶卡点漏洞已修复。AWP 的慢速装填动画已更新，极高画质下烟雾下方地面燃烧痕迹的性能也得到优化。瑞士地区玩家的物品栏中将出现 X-Ray Scanner 标签页，这些玩家只能通过该扫描仪开启箱子。"
+   }
+  },
+  "otomasyon": {
+   "konu": "cs2-cobblestone-inferno-guncelleme-2026-11-19",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://steamcommunity.com/games/CSGO/announcements/detail/694278269818634560",
+   "teyit_zamani": "2026-11-19T01:10:03+00:00",
+   "oyuncuya_fayda": "Oyuncular Cobblestone ve Inferno'daki düzeltmeleri ve yeni güncelleme içeriklerini öğrenir.",
+   "hype": 4,
+   "eklenme": "2026-11-19T04:11:40.266169+03:00"
+  }
+ },
+ {
   "id": "dota-2-patch-7-42-2026-11-18",
   "oyun": "Dota 2",
   "tarih": "2026-11-18",
