@@ -292,6 +292,21 @@
   "url": "https://www.instagram.com/reel/Df4I-2SRuQq/",
   "zaman": "2026-11-18T09:03:45+00:00"
  },
+ "gta-vi-kacta-aciliyor-yerel-gece-yarisi|fr|instagram|reel": {
+  "bicim": "reel",
+  "dil": "fr",
+  "durum": "tamam",
+  "hesap": "tr",
+  "icerik_dili": "fr",
+  "id": "gta-vi-kacta-aciliyor-2026-11-17",
+  "kapsayici": "17869845834694894",
+  "kimlik": "18118123457156229",
+  "niyet_zamani": "2026-11-19T00:22:17+00:00",
+  "platform": "instagram",
+  "sosyal_tur": "haber",
+  "url": "https://www.instagram.com/reel/Df5yMYAisgj/",
+  "zaman": "2026-11-19T00:22:17+00:00"
+ },
  "gta-vi-kacta-aciliyor-yerel-gece-yarisi|tr|youtube|short": {
   "bicim": "short",
   "boyut": 10958860,
@@ -360,6 +375,21 @@
   "sosyal_tur": "haber",
   "url": "https://www.youtube.com/shorts/DqHTK1EteVc",
   "zaman": "2026-11-16T23:31:59+00:00"
+ },
+ "kemalcan-parlak-20261115-9ae47b40-klip-01|klip|youtube|short": {
+  "bicim": "short",
+  "boyut": 10997306,
+  "dil": "klip",
+  "durum": "tamam",
+  "hesap": "klip",
+  "id": "kemalcan-parlak-20261115-9ae47b40-klip-01",
+  "kimlik": "SeL2HCi9284",
+  "niyet_zamani": "2026-11-19T00:22:17+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status&upload_id=AFy3sg25pD8znNk1pk87X-G4Dx1Raei6wHz8luEMQBgbwNbR3gDgKsbvbYiKkj6TrdzGr1kDNclXyGEwe7-I_igCBK_T70C8oj1-ySUsS7IgVYo",
+  "platform": "youtube",
+  "sosyal_tur": "klip",
+  "url": "https://www.youtube.com/shorts/SeL2HCi9284",
+  "zaman": "2026-11-19T00:22:17+00:00"
  },
  "league-of-legends-new-dawn-2027-ilk-duyuru|en|instagram|gorsel": {
   "bicim": "gorsel",
