@@ -35,6 +35,105 @@
    },
    "youtube": "https://www.youtube.com/shorts/yoLbUER4dTk"
   },
+  "eraycan-20261119-aea421a4-canli-01": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/eray",
+   "metin": {
+    "aciklama": "Kaynak: https://kick.com/eray\nKomixsi",
+    "baslik": "Eray İngilizce kahve siparişi veriyor",
+    "etiketler": [
+     "#Eray",
+     "#Kick",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "8d41b01e46f6d2627c42865acbc4fd730504a33d3f4b7e5acb2243e55b73b0c0",
+    "ozet": "9145d61a4b6937cc2b8137f1329be1a77ad32909b99416921167eb9954ce4d4c",
+    "zaman": "2026-11-19T15:15:49Z"
+   },
+   "oyun": "",
+   "paket": "cikti/eraycan-20261119-aea421a4/canli-01.json",
+   "sure": 55.0,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-19",
+   "yayinci": "Eraycan",
+   "yayinda": {
+    "kapak": "klip-eraycan-20261119-aea421a4-canli-01-kapak.jpg",
+    "mp4_1080": "klip-eraycan-20261119-aea421a4-canli-01-1080.mp4",
+    "mp4_540": "klip-eraycan-20261119-aea421a4-canli-01-540.mp4",
+    "mp4_720": "klip-eraycan-20261119-aea421a4-canli-01-720.mp4",
+    "sure": 55.0,
+    "yuklenen_ozet": "9145d61a4b6937cc2b8137f1329be1a77ad32909b99416921167eb9954ce4d4c",
+    "zaman": "2026-11-19T15:36:36Z"
+   }
+  },
+  "hype-20261118-bb86dc1f-klip-01": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/hype",
+   "metin": {
+    "aciklama": "Kaynak: https://kick.com/hype\nKomixsi",
+    "baslik": "Hype oyuna daldı",
+    "etiketler": [
+     "#Hype",
+     "#Kick",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "b227515238cf64c02baa7352a759943529a111ab707012cbf975d4a24c76485d",
+    "ozet": "a318b53dddafe82827c9ba5fcf130d12dbdcfa97775b37219a57d17941550ef7",
+    "zaman": "2026-11-19T15:30:14Z"
+   },
+   "oyun": "",
+   "paket": "cikti/hype-20261118-bb86dc1f/klip-01.json",
+   "sure": 55.0,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-18",
+   "yayinci": "Hype",
+   "yayinda": {
+    "kapak": "klip-hype-20261118-bb86dc1f-klip-01-kapak.jpg",
+    "mp4_1080": "klip-hype-20261118-bb86dc1f-klip-01-1080.mp4",
+    "mp4_540": "klip-hype-20261118-bb86dc1f-klip-01-540.mp4",
+    "mp4_720": "klip-hype-20261118-bb86dc1f-klip-01-720.mp4",
+    "sure": 55.0,
+    "yuklenen_ozet": "a318b53dddafe82827c9ba5fcf130d12dbdcfa97775b37219a57d17941550ef7",
+    "zaman": "2026-11-19T15:37:02Z"
+   }
+  },
+  "hype-20261118-bb86dc1f-klip-03": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/hype",
+   "metin": {
+    "aciklama": "Kaynak: https://kick.com/hype\nKomixsi",
+    "baslik": "Hype bug buluyor",
+    "etiketler": [
+     "#Hype",
+     "#Kick",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "251b973000f3999eddae4f9b90a97fa6b1841c78978fd05d77be8abdb18acc82",
+    "ozet": "ca0d812f4ab4814d0fdd8fabe8e4a187c233a23217a385bd08a9365eccc58ddc",
+    "zaman": "2026-11-19T15:29:45Z"
+   },
+   "oyun": "Gta6",
+   "paket": "cikti/hype-20261118-bb86dc1f/klip-03.json",
+   "sure": 55.0,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-18",
+   "yayinci": "Hype",
+   "yayinda": {
+    "kapak": "klip-hype-20261118-bb86dc1f-klip-03-kapak.jpg",
+    "mp4_1080": "klip-hype-20261118-bb86dc1f-klip-03-1080.mp4",
+    "mp4_540": "klip-hype-20261118-bb86dc1f-klip-03-540.mp4",
+    "mp4_720": "klip-hype-20261118-bb86dc1f-klip-03-720.mp4",
+    "sure": 55.0,
+    "yuklenen_ozet": "ca0d812f4ab4814d0fdd8fabe8e4a187c233a23217a385bd08a9365eccc58ddc",
+    "zaman": "2026-11-19T15:37:38Z"
+   }
+  },
   "kemalcan-parlak-20261115-9ae47b40-klip-01": {
    "hesap": "klip",
    "kanal_url": "https://kick.com/kendinemuzisyen",
@@ -157,6 +256,74 @@
     "zaman": "2026-11-18T19:51:31Z"
    },
    "youtube": "https://www.youtube.com/shorts/AvTUSOXFbqc"
+  },
+  "wtcn-20261119-e0ca1c15-canli-01": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/wtcn",
+   "metin": {
+    "aciklama": "Kaynak: https://kick.com/wtcn\nKomixsi",
+    "baslik": "Ferit çatışmada MP5'le hedefi şaşırıyor",
+    "etiketler": [
+     "#Ferit",
+     "#Kick",
+     "#GrandTheftAutoVI",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "e503a97cefe47337e3fc4ef021e73801ff75b64b7559c741710574aa2e705ae6",
+    "ozet": "5172391d9361ecd472a1a0a288e50fc9883e6787853718d9f94a44be98f08d4a",
+    "zaman": "2026-11-19T15:18:13Z"
+   },
+   "oyun": "Grand Theft Auto VI",
+   "paket": "cikti/wtcn-20261119-e0ca1c15/canli-01.json",
+   "sure": 52.0,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-19",
+   "yayinci": "wtcN",
+   "yayinda": {
+    "kapak": "klip-wtcn-20261119-e0ca1c15-canli-01-kapak.jpg",
+    "mp4_1080": "klip-wtcn-20261119-e0ca1c15-canli-01-1080.mp4",
+    "mp4_540": "klip-wtcn-20261119-e0ca1c15-canli-01-540.mp4",
+    "mp4_720": "klip-wtcn-20261119-e0ca1c15-canli-01-720.mp4",
+    "sure": 52.0,
+    "yuklenen_ozet": "5172391d9361ecd472a1a0a288e50fc9883e6787853718d9f94a44be98f08d4a",
+    "zaman": "2026-11-19T15:38:07Z"
+   }
+  },
+  "wtcn-20261119-e0ca1c15-canli-03": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/wtcn",
+   "metin": {
+    "aciklama": "Kaynak: https://kick.com/wtcn\nKomixsi",
+    "baslik": "Ferit arabayı iyi sürmesine şaşırıyor",
+    "etiketler": [
+     "#Ferit",
+     "#Kick",
+     "#GrandTheftAutoVI",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "ac655302aa2135c3cc0f565fcf8a162f234e0bba28df1f1b2afc6df369db7324",
+    "ozet": "8ff8ba0ffebc2676f05c31a3a84ca2992cc950f0406e40e5dfb95dc5eaa505f0",
+    "zaman": "2026-11-19T15:19:05Z"
+   },
+   "oyun": "Grand Theft Auto VI",
+   "paket": "cikti/wtcn-20261119-e0ca1c15/canli-03.json",
+   "sure": 55.0,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-19",
+   "yayinci": "wtcN",
+   "yayinda": {
+    "kapak": "klip-wtcn-20261119-e0ca1c15-canli-03-kapak.jpg",
+    "mp4_1080": "klip-wtcn-20261119-e0ca1c15-canli-03-1080.mp4",
+    "mp4_540": "klip-wtcn-20261119-e0ca1c15-canli-03-540.mp4",
+    "mp4_720": "klip-wtcn-20261119-e0ca1c15-canli-03-720.mp4",
+    "sure": 55.0,
+    "yuklenen_ozet": "8ff8ba0ffebc2676f05c31a3a84ca2992cc950f0406e40e5dfb95dc5eaa505f0",
+    "zaman": "2026-11-19T15:38:46Z"
+   }
   }
  },
  "surum": 1,
