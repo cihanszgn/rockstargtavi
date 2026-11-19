@@ -3,7 +3,12 @@ Sunucudan gelen her değer (yayıncı adı, kanal, başlık...) sayfaya yalnız 
 
 SEKMELER = ('<nav class=sekmeler role=group aria-label="Bölümler">'
             '<button type=button data-sekme=klipler aria-pressed=true>Klipler</button>'
-            '<button type=button data-sekme=yayincilar aria-pressed=false>Yayıncılar</button></nav>')
+            '<button type=button data-sekme=yayincilar aria-pressed=false>Yayıncılar</button></nav>'
+            '<div id=bildirim class=tamam hidden><span id=bildirim-metin></span> <button type=button id=bildirim-yenile class=birincil>Klip listesini yenile</button></div>'
+            '<div class=ykart id=yayinla-bar><div class=islem><button type=button id=y-yayinla class=birincil>Onaylananları yayınla</button>'
+            '<span id=y-yayinla-sayi class=kucuk></span></div>'
+            '<p class=kucuk>Onaylı ve henüz yüklenmemiş klipleri sunucuya yükler, kaydı GitHub\'a gönderir. Yalnız sen basınca çalışır; '
+            'çalışırken onay/düzenleme yapma.</p><div id=y-yayinla-durum class=kesim hidden></div></div>')
 
 BOLUM = """<section id=sekme-yayincilar hidden>
 <h2>Yayıncılar</h2>
@@ -14,12 +19,11 @@ BOLUM = """<section id=sekme-yayincilar hidden>
 <div id=y-genel-mesaj class=hata hidden></div>
 <div class=ykart id=y-ekle>
 <h3>Yayıncı ekle</h3>
-<p class=kucuk>Yalnız kanal adını ya da bağlantısını yapıştır; gerisini kendim doldururum. En az biri şart.</p>
-<label for=y-kick><b>Kick kanalı</b> (kick.com/kanaladi ya da yalnız kanal adı)</label>
-<input type=text id=y-kick autocomplete=off spellcheck=false maxlength=200 placeholder="kick.com/wtcn">
-<label for=y-yt><b>YouTube kanalı</b> (@tanıtıcı ya da youtube.com/@tanıtıcı)</label>
-<input type=text id=y-yt autocomplete=off spellcheck=false maxlength=200 placeholder="@wtcNFerit">
-<div class=islem><button type=button id=y-kontrol class=birincil>Kontrol et</button></div>
+<p class=kucuk>Yayıncının adını ya da bağlantısını tek kutuya yaz: Kick adı (Hype), kick.com bağlantısı ya da YouTube bağlantısı / @tanıtıcı.
+Doğrularım, listeye eklerim ve son yayınından klip çıkarmayı kendim başlatırım. Çıkan klipler onay listesine düşer; onaylamadıkça hiçbir şey paylaşılmaz.</p>
+<label for=y-girdi><b>Yayıncı</b></label>
+<input type=text id=y-girdi autocomplete=off spellcheck=false maxlength=200 placeholder="Hype   ·   kick.com/hype   ·   youtube.com/@kanal">
+<div class=islem><button type=button id=y-ekle-cikar class=birincil>Ekle ve klip çıkar</button><button type=button id=y-kontrol>Yalnız kontrol et</button></div>
 <div id=y-ekle-mesaj class=hata hidden></div>
 <div id=y-onizleme hidden>
 <h3>Bulunan kanal</h3>
@@ -28,7 +32,7 @@ BOLUM = """<section id=sekme-yayincilar hidden>
 <input type=text id=y-ad maxlength=60 autocomplete=off>
 <label for=y-kisa><b>Kısa ad</b> (videonun üstüne yazılan; boş bırakırsan adın ilk kelimesi)</label>
 <input type=text id=y-kisa maxlength=60 autocomplete=off>
-<div class=islem><button type=button id=y-onayla class=birincil>Ekle</button><button type=button id=y-vazgec>Vazgeç</button></div>
+<div class=islem><button type=button id=y-onayla class=birincil>Yalnız listeye ekle</button><button type=button id=y-vazgec>Vazgeç</button></div>
 </div>
 </div>
 <details class=ykart id=y-kaldirilan><summary><b>Kaldırılanlar</b> <span id=y-kaldirilan-say class=kucuk></span></summary><div id=y-kaldirilan-liste></div></details>
@@ -195,23 +199,30 @@ BETIK = r"""<script>
   // ---- iş durumu
   function sureYaz(sn){var d=Math.floor(sn/60),s=sn%60;return d+' dk '+(s<10?'0':'')+s+' sn';}
   var DURUM={calisiyor:'çalışıyor…',bitti:'bitti',hata:'başarısız',iptal:'iptal edildi'};
+  function bildirimGoster(n){
+    $('bildirim-metin').textContent=n+' yeni klip hazır ve onay listesinde bekliyor.';$('bildirim').hidden=false;
+  }
+  $('bildirim-yenile').addEventListener('click',function(){location.hash='#klipler';location.reload();});
   function isDurumu(){
     return al('/api/yayinci/is').then(function(v){
       var kutu=$('y-is');
       if(!v.ok||v.durum==='yok'){kutu.hidden=true;calisiyor=false;onceki='';ciftBekle();return;}
       calisiyor=v.durum==='calisiyor';
       kutu.hidden=false;kutu.textContent='';kutu.dataset.durum=v.durum==='hata'?'hata':'';
-      kutu.appendChild(el('div',null,'Klip çıkarma: '+v.yayinci+' — '+(DURUM[v.durum]||v.durum)+' ('+sureYaz(v.gecen_sn)+')'));
-      if(v.son_satir)kutu.appendChild(el('div','kucuk','Son satır: '+v.son_satir));
+      kutu.appendChild(el('div',null,'Klip çıkarma: '+v.yayinci+' — '+(v.asama||DURUM[v.durum]||v.durum)+' ('+sureYaz(v.gecen_sn)+')'));
+      if(v.klip)kutu.appendChild(el('div','kucuk','Hazır klip: '+v.klip));
+      if(v.sirada&&v.sirada.length)kutu.appendChild(el('div','kucuk','Sırada: '+v.sirada.join(', ')));
+      if(calisiyor&&v.son_satir)kutu.appendChild(el('div','kucuk','Son satır: '+v.son_satir));
+      if(!calisiyor&&v.uyarilar&&v.uyarilar.length)kutu.appendChild(el('div','kucuk','Notlar: '+v.uyarilar.join(' | ')));
       if(v.mesaj)kutu.appendChild(el('div',null,v.mesaj));
       var is=el('div','islem');
       if(calisiyor){is.appendChild(dugme('İptal','tehlike',function(b){
-        if(!window.confirm('Çalışan klip çıkarma işi durdurulsun mu?'))return;
+        if(!window.confirm('Çalışan klip çıkarma işi durdurulsun mu? Sıradakiler de iptal olur.'))return;
         b.disabled=true;gonder('/api/yayinci/iptal',{}).then(function(){isDurumu();});}));}
-      else is.appendChild(dugme('Klip listesini yenile',null,function(){location.hash='#klipler';location.reload();}));
+      else if(v.klip)is.appendChild(dugme('Klip listesini yenile',null,function(){location.hash='#klipler';location.reload();}));
       kutu.appendChild(is);
       document.querySelectorAll('#y-liste button.cikar').forEach(function(b){b.disabled=calisiyor;});
-      if(onceki==='calisiyor'&&!calisiyor&&aktif==='yayincilar'&&v.durum==='bitti'){location.hash='#klipler';location.reload();return;}
+      if(onceki==='calisiyor'&&!calisiyor&&v.durum==='bitti'&&v.klip&&!(v.sirada&&v.sirada.length))bildirimGoster(v.klip);
       onceki=v.durum;
       ciftBekle();
     });
@@ -221,17 +232,35 @@ BETIK = r"""<script>
     if(calisiyor)zamanlayici=setTimeout(isDurumu,3000);
   }
 
-  // ---- ekle
+  // ---- ekle (tek kutu: ekle + klip çıkar)
   var jeton='';
   function onizlemeKapat(){jeton='';$('y-onizleme').hidden=true;}
+  function sonuc(m,v,varsayilan){m.className=v.ok?'tamam':'hata';mesaj(m,v.mesaj||varsayilan);}
+  function ekleCikar(){
+    var b=$('y-ekle-cikar'),m=$('y-ekle-mesaj'),g=$('y-girdi').value.trim();onizlemeKapat();
+    if(!g){m.className='hata';mesaj(m,'Yayıncının adını ya da bağlantısını yaz.');return;}
+    b.disabled=true;mesaj(m,'');var eski=b.textContent;b.textContent='Doğrulanıyor ve ekleniyor… (birkaç saniye)';
+    gonder('/api/yayinci/ekle-cikar',{girdi:g}).then(function(v){
+      b.disabled=false;b.textContent=eski;
+      sonuc(m,v,'Eklenemedi.');
+      if(v.ok)$('y-girdi').value='';
+      yukle();isDurumu();
+    });
+  }
+  $('y-ekle-cikar').addEventListener('click',ekleCikar);
+  $('y-girdi').addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();ekleCikar();}});
+  function girdiAyir(g){
+    if(/^(https?:\/\/)?((www|m)\.)?youtube\.com(\/|$)/i.test(g)||UC_RE.test(g)||g.charAt(0)==='@')return {kick:'',youtube:g};
+    return {kick:g,youtube:''};
+  }
   $('y-kontrol').addEventListener('click',function(){
     var b=$('y-kontrol'),m=$('y-ekle-mesaj');onizlemeKapat();
-    var kick=$('y-kick').value.trim(),yt=$('y-yt').value.trim();
-    if(!kick&&!yt){mesaj(m,'Kick kanalı ya da YouTube kanalı yaz; en az biri şart.');return;}
-    b.disabled=true;mesaj(m,'');b.textContent='Kontrol ediliyor… (YouTube birkaç saniye sürebilir)';
-    gonder('/api/yayinci/onizle',{kick:kick,youtube:yt}).then(function(v){
-      b.disabled=false;b.textContent='Kontrol et';
-      if(!v.ok){mesaj(m,v.mesaj||'Kanal doğrulanamadı.');return;}
+    var g=$('y-girdi').value.trim();
+    if(!g){m.className='hata';mesaj(m,'Yayıncının adını ya da bağlantısını yaz.');return;}
+    b.disabled=true;mesaj(m,'');b.textContent='Kontrol ediliyor…';
+    gonder('/api/yayinci/onizle',girdiAyir(g)).then(function(v){
+      b.disabled=false;b.textContent='Yalnız kontrol et';
+      if(!v.ok){m.className='hata';mesaj(m,v.mesaj||'Kanal doğrulanamadı.');return;}
       jeton=v.jeton;var kt=v.kart,s=$('y-onizleme-satir');s.textContent='';
       if(kt.kick)s.appendChild(el('p',null,'Kick: kick.com/'+kt.kick.kanal+' — '+kt.kick.ad+(kt.kick.canli?' (şu an canlı)':'')+(kt.kick.son_yayin?' — son yayın: '+kt.kick.son_yayin:'')));
       if(kt.youtube)s.appendChild(el('p',null,'YouTube: '+(kt.youtube.tanitici?'@'+kt.youtube.tanitici:kt.youtube.kanal_id)+' — '+kt.youtube.ad+(kt.youtube.son_video?' — son video: '+kt.youtube.son_video:'')));
@@ -245,14 +274,44 @@ BETIK = r"""<script>
     b.disabled=true;
     gonder('/api/yayinci/ekle',{jeton:jeton,ad:$('y-ad').value,kisa_ad:$('y-kisa').value}).then(function(v){
       b.disabled=false;
-      if(!v.ok){mesaj(m,v.mesaj||'Eklenemedi.');return;}
-      onizlemeKapat();$('y-kick').value='';$('y-yt').value='';mesaj(m,'');
-      var g=$('y-genel-mesaj');g.className='tamam';mesaj(g,v.mesaj);
+      if(!v.ok){m.className='hata';mesaj(m,v.mesaj||'Eklenemedi.');return;}
+      onizlemeKapat();$('y-girdi').value='';sonuc(m,v,'');
       yukle();
     });
   });
 
+  // ---- onaylananları yayınla (yalnız tıklamayla)
+  var yayinlaZaman=null;
+  function yayinlaDurumu(){
+    return al('/api/yayinci/yayinla-durum').then(function(v){
+      var kutu=$('y-yayinla-durum'),d=$('y-yayinla');
+      if(!v.ok){kutu.hidden=false;kutu.dataset.durum='hata';kutu.textContent=v.mesaj||'Durum okunamadı.';return;}
+      var calis=v.durum==='calisiyor';
+      $('y-yayinla-sayi').textContent=(v.bekleyen==null?'':v.bekleyen+' onaylı klip yüklenmeyi bekliyor');
+      d.disabled=calis||!v.bekleyen;
+      if(v.durum==='yok'){kutu.hidden=true;}
+      else{
+        kutu.hidden=false;kutu.textContent='';kutu.dataset.durum=v.durum==='hata'?'hata':'';
+        kutu.appendChild(el('div',null,(v.adim||'')+' ('+sureYaz(v.gecen_sn)+')'));
+        if(v.mesaj)kutu.appendChild(el('div',null,v.mesaj));
+        (v.satirlar||[]).forEach(function(x){kutu.appendChild(el('div','kucuk',x));});
+      }
+      if(yayinlaZaman){clearTimeout(yayinlaZaman);yayinlaZaman=null;}
+      if(calis)yayinlaZaman=setTimeout(yayinlaDurumu,2000);
+    });
+  }
+  $('y-yayinla').addEventListener('click',function(){
+    var b=$('y-yayinla'),kutu=$('y-yayinla-durum');
+    if(!window.confirm('Onaylı klipler sunucuya YÜKLENECEK ve klipler.json kaydı GitHub\'a GÖNDERİLECEK. Devam edilsin mi?'))return;
+    b.disabled=true;
+    gonder('/api/yayinci/yayinla',{}).then(function(v){
+      if(!v.ok){kutu.hidden=false;kutu.dataset.durum='hata';kutu.textContent=v.mesaj||'Başlatılamadı.';b.disabled=false;return;}
+      yayinlaDurumu();
+    });
+  });
+
   sekme(location.hash==='#yayincilar'?'yayincilar':'klipler');
+  isDurumu();yayinlaDurumu();
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',basla);else basla();
 })();

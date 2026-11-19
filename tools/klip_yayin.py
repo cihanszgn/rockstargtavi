@@ -39,6 +39,7 @@ import klip_duzenle as kd  # noqa: E402
 import klip_panel_ui as ui  # noqa: E402
 import klip_sosyal as ks  # noqa: E402
 import klip_yayincilar as ky_y  # noqa: E402
+import klip_yayinla as ky_l  # noqa: E402
 import klip_yayinci_ui as yui  # noqa: E402
 import yayin_klip as yk  # noqa: E402
 
@@ -745,8 +746,8 @@ KAPI_VARSAYILAN = 8765
 KAPI_DENEME = 20
 ISTEK_AZAMI_BAYT = 4096
 BLOK_BAYT = 64 * 1024
-YAYINCI_GET = ("/api/yayinci/liste", "/api/yayinci/is")
-YAYINCI_POST = tuple(f"/api/yayinci/{a}" for a in ("onizle", "ekle", "duzenle", "kaldir", "geri-getir", "klip-cikar", "iptal"))
+YAYINCI_GET = ("/api/yayinci/liste", "/api/yayinci/is", "/api/yayinci/yayinla-durum")
+YAYINCI_POST = tuple(f"/api/yayinci/{a}" for a in ("onizle", "ekle", "ekle-cikar", "duzenle", "kaldir", "geri-getir", "klip-cikar", "iptal", "yayinla"))
 YAYINCI_AZAMI = 8192
 DUZENLE_YOLLARI = {"/api/metin-kaydet": ("metin-kaydet", 131072), "/api/metin-sifirla": ("metin-sifirla", 4096),
                    "/api/kesim": ("kesim", 16384), "/api/kucuk-resim": ("kucuk-resim", 4096)}
@@ -790,6 +791,7 @@ class OnaySunucusu(http.server.ThreadingHTTPServer):
         self.kilit = threading.Lock()
         self.kesim = KesimIsleri(self.kilit, manifest_arg)
         self.yayinci = ky_y.YayinciIsleri()
+        self.yayinla = ky_l.Yayinla(lambda: manifest_yolu(manifest_arg))
         self.kesim.dis_mesgul = self.yayinci.calisiyor  # yayından klip çıkarırken yeniden kesim sıraya girmez
         self.izinli_host = {f"127.0.0.1:{self.port}", f"localhost:{self.port}"}
         self.izinli_origin = {f"http://127.0.0.1:{self.port}", f"http://localhost:{self.port}"}
@@ -872,9 +874,11 @@ class OnayIstegi(http.server.BaseHTTPRequestHandler):
             try:
                 if yol == "/api/yayinci/is":
                     veri = {"ok": True, **self.server.yayinci.cikar.goster()}
+                elif yol == "/api/yayinci/yayinla-durum":
+                    veri = {"ok": True, **self.server.yayinla.goster()}
                 else:
                     veri = yayinci_listesi(self.server.manifest_arg)
-            except (ky_y.Hata, OSError, ValueError) as e:
+            except (ky_y.Hata, ky_l.Hata, OSError, ValueError) as e:
                 veri = {"ok": False, "mesaj": f"Yayıncı listesi okunamadı: {e}"}
             return self._yanit(200, json.dumps(veri, ensure_ascii=False).encode("utf-8"), "application/json; charset=utf-8", gonder=gonder)
         if yol == "/api/durum":
@@ -990,7 +994,7 @@ class OnayIstegi(http.server.BaseHTTPRequestHandler):
         if yol in YAYINCI_POST:
             try:
                 return self._json(200, yayinci_islemi(yol, veri, self.server))
-            except ky_y.Hata as e:
+            except (ky_y.Hata, ky_l.Hata) as e:
                 return self._json(422, {"ok": False, "mesaj": str(e)})
             except (Hata, RuntimeError, OSError) as e:
                 return self._json(409, {"ok": False, "mesaj": f"İşlem yapılamadı: {e}"})
@@ -1028,6 +1032,15 @@ def yayinci_islemi(yol: str, veri: dict, sunucu) -> dict:
         return ky_y.onizle(veri, yi.onizlemeler)
     if ad == "ekle":
         return ky_y.ekle(veri, yi.onizlemeler)
+    if ad == "ekle-cikar":
+        def baslat(yayinci_adi: str) -> str:
+            with sunucu.kilit:   # yeniden kesimle yarışmasın; dış doğrulama (Kick/YouTube) bu kilidin DIŞINDA yapıldı
+                if sunucu.kesim.mesgul():
+                    raise ky_y.Hata("Şu an bir klip yeniden kesiliyor; bitince listeden \"Son yayından klip çıkar\"a bas.")
+                return yi.cikar.baslat(yayinci_adi, sirala=True)
+        return ky_y.ekle_ve_cikar(veri, yi, baslat)
+    if ad == "yayinla":
+        return sunucu.yayinla.baslat()
     if ad == "duzenle":
         return ky_y.duzenle(veri)
     if ad == "kaldir":
