@@ -212,6 +212,7 @@ BETIK = r"""<script>
       kutu.appendChild(el('div',null,'Klip çıkarma: '+v.yayinci+' — '+(v.asama||DURUM[v.durum]||v.durum)+' ('+sureYaz(v.gecen_sn)+')'));
       if(v.klip)kutu.appendChild(el('div','kucuk','Hazır klip: '+v.klip));
       if(v.sirada&&v.sirada.length)kutu.appendChild(el('div','kucuk','Sırada: '+v.sirada.join(', ')));
+      if(calisiyor&&v.sessiz_sn>120)kutu.appendChild(el('div','kucuk','Son çıktıdan beri '+sureYaz(v.sessiz_sn)+' geçti: ağır bir adım (konuşma çözme/analiz) sürüyor olabilir; iş çalışıyor.'));
       if(calisiyor&&v.son_satir)kutu.appendChild(el('div','kucuk','Son satır: '+v.son_satir));
       if(!calisiyor&&v.uyarilar&&v.uyarilar.length)kutu.appendChild(el('div','kucuk','Notlar: '+v.uyarilar.join(' | ')));
       if(v.mesaj)kutu.appendChild(el('div',null,v.mesaj));

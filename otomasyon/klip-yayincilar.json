@@ -93,6 +93,8 @@
     {"ad": "wtcN", "kisa_ad": "Ferit", "platform": "kick", "kanal": "wtcn", "etkin": true, "youtube_kanallari": [{"kanal_id": "UCFK97P1mRAY9tQ2PUDjubEA", "tanitici": "wtcNFerit", "etkin": true}]},
     {"ad": "Jahrein", "kisa_ad": "Jahrein", "platform": "kick", "kanal": "jahrein", "etkin": true, "youtube_kanallari": [{"kanal_id": "UCfo8l0mgO_eleaditz0EClA", "tanitici": "jahreinboss", "etkin": true}]},
     {"ad": "Kemalcan Parlak", "kisa_ad": "Kemalcan", "platform": "kick", "kanal": "kendinemuzisyen", "etkin": true, "youtube_kanallari": [{"kanal_id": "UCTPyakN5CEST9lgz-Q6p8uA", "tanitici": "KendineMüzisyenKM", "etkin": true}]},
-    {"ad": "Eraycan", "kisa_ad": "Eray", "platform": "kick", "kanal": "eray", "etkin": true, "youtube_kanallari": [{"kanal_id": "UCv1quKbtp1HLqoBbv3g2oIQ", "tanitici": "erayozkenar", "etkin": true}, {"kanal_id": "UCT_06qt49r6coz_n6XxO1Uw", "tanitici": "erayozkenaryt", "etkin": false}]}
+    {"ad": "Eraycan", "kisa_ad": "Eray", "platform": "kick", "kanal": "eray", "etkin": true, "youtube_kanallari": [{"kanal_id": "UCv1quKbtp1HLqoBbv3g2oIQ", "tanitici": "erayozkenar", "etkin": true}, {"kanal_id": "UCT_06qt49r6coz_n6XxO1Uw", "tanitici": "erayozkenaryt", "etkin": false}]},
+    {"ad": "Hype", "kisa_ad": "Hype", "platform": "kick", "kanal": "hype", "etkin": true},
+    {"ad": "RRaenee", "kisa_ad": "RRaenee", "platform": "kick", "kanal": "rraenee", "etkin": true}
   ]
 }

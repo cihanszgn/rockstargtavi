@@ -725,7 +725,7 @@ class KlipCikar:
             self.zaman_asimi = False
             self.durum = {"durum": "calisiyor", "yayinci": ad, "baslangic": time.monotonic(), "bitis": None,
                           "son_satir": "", "satir": 0, "mesaj": "", "asama": "Yayınlar taranıyor", "klip": 0,
-                          "uyarilar": [], "paketler": []}
+                          "uyarilar": [], "paketler": [], "son_zaman": time.monotonic()}
             proc = self.proc
         threading.Thread(target=self._oku, args=(proc,), name="klip-cikar", daemon=True).start()
         zamanlayici = threading.Timer(CIKAR_ZAMAN_ASIMI, self._zaman_asimi, args=(proc,))
@@ -748,6 +748,7 @@ class KlipCikar:
                     with self.kilit:
                         d = self.durum
                         d["son_satir"] = s
+                        d["son_zaman"] = time.monotonic()
                         d["satir"] += 1
                         if s.lower().endswith(".mp4"):
                             d["klip"] += 1
@@ -856,7 +857,8 @@ class KlipCikar:
             gecen = int((d["bitis"] or simdi) - d["baslangic"])
             return {"durum": d["durum"], "yayinci": d["yayinci"], "gecen_sn": gecen, "son_satir": d["son_satir"],
                     "mesaj": d["mesaj"], "asama": d["asama"], "klip": d["klip"], "uyarilar": list(d["uyarilar"]),
-                    "sirada": list(self.kuyruk)}
+                    "sirada": list(self.kuyruk),
+                    "sessiz_sn": int(simdi - d["son_zaman"]) if d["bitis"] is None and "son_zaman" in d else 0}
 
 
 class YayinciIsleri:
