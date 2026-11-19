@@ -576,6 +576,18 @@ def kayitlar(oid: str, dil: str, veri: list, soy: list, tak: list) -> tuple[list
             [c for c in tak if oyun_id(c["oyun"]) == oid])
 
 
+def hub_bos(oid: str, veri: list, soy: list, tak: list) -> bool:
+    """Oyun sayfasında hiçbir dilde içerik yoksa (haber, söylenti, tarih, rehber, kaynak) True döner.
+
+    Boş sayfa arama motoruna kapatılır (noindex, site haritası dışı): yalnız kısa tanımdan oluşan yüzlerce sayfa
+    Search Console'da "Tarandı, dizine eklenmedi" olarak birikiyor ve sitenin geri kalanını da aşağı çekiyordu.
+    İlk kayıt geldiğinde sayfa kendiliğinden yeniden dizine açılır. Ölçüt dilden bağımsızdır ki hreflang eşleri tutarlı kalsın.
+    """
+    if oid == "gta-6" or oid in REHBER or any(k["hub"] == oid for k in KAYNAKLAR):
+        return False
+    return not any(oyun_id(x["oyun"]) == oid for x in list(veri) + list(soy) + list(tak))
+
+
 def merkez_sayfasi(dil: str, oid: str, veri: list, soy: list, tak: list) -> str:
     global SIMDI_HUB
     SIMDI_HUB = oid
@@ -649,7 +661,8 @@ def _merkez(dil: str, oid: str, veri: list, soy: list, tak: list) -> str:
     esler = {d: hub_yol(d, oid) for d in S.DILLER}
     baslik = f'{o["ad"]} – {tt["o_yazi_bas"]}'
     return S.kabuk(dil, yol, baslik, kisalt(tt["o_hub_desc"].format(oyun=o["ad"])), govde, esler=esler, bolum="oyunlar",
-                   ek_bas=bas_ek(t) + iz_ld, sayfa_turu="oyun", ana_sinif=ot.siniflar(t))
+                   ek_bas=bas_ek(t) + iz_ld, sayfa_turu="oyun", ana_sinif=ot.siniflar(t),
+                   dizinle=not hub_bos(oid, veri, soy, tak))
 
 
 # ---------------------------------------------------------------- dizinler
@@ -786,12 +799,17 @@ def tema_yaz() -> int:
     return int(S.sd.yaz(S.KOK / "oyun-tema.css", css))
 
 
+HARITA_DISI: set[str] = set()   # bu derlemede yazılan ama site haritasına girmeyen (noindex) oyun sayfaları
+
+
 def sayfalari_yaz(dil: str, veri: list, soy: list, tak: list) -> int:
     degisen = S.sayfa_yaz(SAYFA["oyunlar"][dil], oyunlar_dizini(dil, veri, soy, tak), esler=SAYFA["oyunlar"])
     degisen += S.sayfa_yaz(SAYFA["rehberler"][dil], rehberler_dizini(dil), esler=SAYFA["rehberler"])
     for o in OYUNLAR:
         esler = {d: hub_yol(d, o["id"]) for d in S.DILLER}
-        degisen += S.sayfa_yaz(esler[dil], merkez_sayfasi(dil, o["id"], veri, soy, tak), esler=esler)
+        bos = hub_bos(o["id"], veri, soy, tak)
+        (HARITA_DISI.add if bos else HARITA_DISI.discard)(esler[dil])
+        degisen += S.sayfa_yaz(esler[dil], merkez_sayfasi(dil, o["id"], veri, soy, tak), esler=esler, harita=not bos)
     for oid in _rehber_sirasi(dil):
         esler = {d: rehber_yol(d, oid) for d in S.DILLER if rehber_var(oid, d)}
         degisen += S.sayfa_yaz(esler[dil], rehber_sayfasi(dil, oid), esler=esler)
@@ -813,7 +831,7 @@ def artiklari_temizle(uretilen: dict) -> int:
         p = S.KOK / k
         for f in sorted(p.glob("*.html")) if p.is_dir() else []:
             yol = f"{k}/{f.name}"
-            if f.name == "index.html" or yol in uretilen:
+            if f.name == "index.html" or yol in uretilen or yol in HARITA_DISI:
                 continue
             try:
                 if 'class="o-sayfa t-' not in f.read_text(encoding="utf-8", errors="ignore"):
