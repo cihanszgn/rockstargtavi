@@ -236,6 +236,20 @@
   "url": "https://www.instagram.com/p/Df5WRWnl4Bk/",
   "zaman": "2026-11-18T20:19:12+00:00"
  },
+ "ffxiv-road-to-evercold-free-login-2026-11-18|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 8099107,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "ffxiv-road-to-evercold-ucretsiz-giris-2026-11-18",
+  "kimlik": "XEOR7UJKgKA",
+  "niyet_zamani": "2026-11-19T02:25:45+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg3KeD2Unvk7uVNNIKm79W7Ws6ZhA1FB-nSvgSTsBwDr7AxpjJsAQapsI4z1igfV-BlTIOvcBdcX8CSK2c3OtaVN7Hv8pv4jnlYgbJHvDQ",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/XEOR7UJKgKA",
+  "zaman": "2026-11-19T02:25:45+00:00"
+ },
  "football-manager-27-27-1-0-guncelleme-2026-11-16|tr|instagram|gorsel": {
   "bicim": "gorsel",
   "dil": "tr",
@@ -321,6 +335,20 @@
   "sosyal_tur": "haber",
   "url": "https://www.instagram.com/reel/Df5yMYAisgj/",
   "zaman": "2026-11-19T00:22:17+00:00"
+ },
+ "gta-vi-kacta-aciliyor-yerel-gece-yarisi|tr|instagram|reel": {
+  "bicim": "reel",
+  "dil": "tr",
+  "durum": "tamam",
+  "icerik_dili": "tr",
+  "id": "gta-vi-kacta-aciliyor-2026-11-17",
+  "kapsayici": "17869863783694894",
+  "kimlik": "18117054686164692",
+  "niyet_zamani": "2026-11-19T02:25:45+00:00",
+  "platform": "instagram",
+  "sosyal_tur": "haber",
+  "url": "https://www.instagram.com/reel/Df6ASmOqEJe/",
+  "zaman": "2026-11-19T02:25:45+00:00"
  },
  "gta-vi-kacta-aciliyor-yerel-gece-yarisi|tr|youtube|short": {
   "bicim": "short",
