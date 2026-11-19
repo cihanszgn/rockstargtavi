@@ -23,6 +23,7 @@ from datetime import datetime, timezone
 KOK = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(KOK / "tools"))
 import klip_duzenle as kd  # noqa: E402
+import klip_kilit as kk  # noqa: E402
 import klip_youtube as kyt  # noqa: E402
 import yayin_klip as yk  # noqa: E402
 
@@ -467,6 +468,52 @@ def ekle(girdi: dict, onizlemeler: Onizlemeler) -> dict:
             + ("" if kick else " (Yalnız YouTube kaynağı)"), "anahtar": anahtar(rec)}
 
 
+# ---------------------------------------------------------------- tek kutu: ekle + klip çıkar
+def girdi_coz(metin) -> tuple[dict, dict | None]:
+    """Tek kutudaki yazı -> (önizleme girdisi, Kick'te bulunamazsa denenecek yedek girdi | None).
+    youtube.com bağlantısı, UC... kimliği ve @tanıtıcı YouTube; kick.com bağlantısı Kick; çıplak ad önce Kick sonra YouTube @ad."""
+    g = str(metin or "").strip()
+    if not g:
+        raise Hata("Yayıncının adını ya da bağlantısını yaz (örnek: Hype, kick.com/hype, youtube.com/@tanıtıcı).")
+    if len(g) > 300:
+        raise Hata("Yazı çok uzun; yalnız kanal adını ya da bağlantısını yaz.")
+    if re.match(r"^(https?://)?((www|m)\.)?youtube\.com(/|$)", g, re.I) or UC_RE.fullmatch(g) or g.startswith("@"):
+        return {"youtube": g}, None
+    if re.match(r"^(https?://)?((www|m)\.)?kick\.com(/|$)", g, re.I):
+        return {"kick": g}, None
+    if "/" in g or "." in g or ":" in g:
+        raise Hata("Bağlantıyı anlayamadım. kick.com/kanaladi, youtube.com/@tanıtıcı ya da yalnız yayıncının adını yaz.")
+    return {"kick": g}, {"youtube": "@" + g}
+
+
+def ekle_ve_cikar(girdi: dict, yi: "YayinciIsleri", baslat) -> dict:
+    """Doğrula -> listeye ekle -> klip çıkarmayı başlat (ya da sıraya al). `baslat(ad)` "basladi" | "sirada" döndürür,
+    başlayamazsa Hata atar: yayıncı yine de eklenmiş kalır ve bunu açıkça söyleriz."""
+    birinci, yedek = girdi_coz(girdi.get("girdi"))
+    try:
+        on = onizle(birinci, yi.onizlemeler)
+    except Hata as e:
+        if yedek is None or "bulunamadı" not in str(e):
+            raise
+        try:
+            on = onizle(yedek, yi.onizlemeler)
+        except Hata as e2:
+            raise Hata(f"Kick'te bu adda kanal bulunamadı. YouTube'da da denedim: {e2}") from None
+    kart = on["kart"]
+    ad = kart["ad"]
+    sonuc = ekle({"jeton": on["jeton"], "ad": ad, "kisa_ad": kart["kisa_ad"]}, yi.onizlemeler)
+    try:
+        durum = baslat(ad)
+    except Hata as e:
+        return {"ok": True, "anahtar": sonuc["anahtar"], "klip_cikar": "baslamadi",
+                "mesaj": f"{ad} listeye eklendi, ama klip çıkarma başlamadı: {e} Listedeki \"Son yayından klip çıkar\" düğmesiyle sonra başlatabilirsin."}
+    if durum == "sirada":
+        return {"ok": True, "anahtar": sonuc["anahtar"], "klip_cikar": "sirada",
+                "mesaj": f"{ad} eklendi. Başka bir klip işi sürdüğü için sıraya alındı; sırası gelince kendiliğinden başlar."}
+    return {"ok": True, "anahtar": sonuc["anahtar"], "klip_cikar": "basladi",
+            "mesaj": f"{ad} eklendi; son yayından klip çıkarma başladı. İlerlemeyi aşağıda izleyebilirsin."}
+
+
 # ---------------------------------------------------------------- düzenle, kaldır, geri getir
 def _bul(veri: dict, liste: str, an) -> tuple[int, dict]:
     for i, r in enumerate(veri.get(liste) or []):
@@ -595,9 +642,34 @@ def _agaci_oldur(proc: subprocess.Popen) -> None:
         pass
 
 
+_TARIH_RE = re.compile(r"\b\d{4}-\d{2}-\d{2}\b")
+_UYARI_RE = re.compile(r"(atlandı|elendi|desteklenmiyor|^hata:|^bilgi:|^HATA)", re.I)
+
+
+def asama_coz(satir: str) -> str | None:
+    """`yayin_klip.py otomatik` çıktı satırından Cio'nun okuyacağı aşama adı; tanınmayan satır aşamayı değiştirmez."""
+    s = satir.strip()
+    if not s:
+        return None
+    if s.lower().endswith(".mp4"):
+        return "Klip hazır"
+    m = re.match(r"sohbet: (\d+)/(\d+)", s)
+    if m:
+        return f"Sohbet indiriliyor ({m.group(1)}/{m.group(2)})"
+    if re.match(r"klip \d+ elendi", s) or _UYARI_RE.search(s):
+        return None
+    m = re.match(r"klip (\d+):", s)
+    if m:
+        return f"Klip {m.group(1)} kesiliyor"
+    if _TARIH_RE.search(s):
+        return "Yayın bulundu, analiz ediliyor"
+    return None
+
+
 class KlipCikar:
-    """Yayından klip çıkarma: aynı anda TEK iş. `yayin_klip.py otomatik --yayinci <ad> --en-cok 1 --konusma` alt süreci,
-    çıktısı satır satır okunur (durum satırı için). Sunucu kapanırsa iş de durdurulur."""
+    """Yayından klip çıkarma: aynı anda TEK iş (öncesine sıra eklenebilir). `yayin_klip.py otomatik --yayinci <ad> --en-cok 1 --konusma`
+    alt süreci; çıktısı satır satır okunur (aşama ve sayaç için). Zamanlanmış günlük betikle çakışmamak için
+    çalışma dizinindeki `klip-cikar.kilit` alınır. Sunucu kapanırsa iş de durdurulur."""
 
     def __init__(self):
         self.kilit = threading.Lock()
@@ -606,31 +678,54 @@ class KlipCikar:
         self.iptal_istendi = False
         self.zaman_asimi = False
         self.zamanlayici: threading.Timer | None = None
+        self.kuyruk: list[str] = []
+        self.dosya_kilidi: kk.Kilit | None = None
 
     def mesgul(self) -> bool:
         with self.kilit:
             return bool(self.durum and self.durum["durum"] == "calisiyor")
 
-    def baslat(self, ad: str) -> None:
+    def baslat(self, ad: str, sirala: bool = False) -> str:
+        """İşi başlatır ("basladi"). Meşgulse: `sirala` ise sıraya alır ("sirada"), değilse Hata."""
+        with self.kilit:
+            if self.durum and self.durum["durum"] == "calisiyor":
+                if not sirala:
+                    raise Hata("Zaten bir klip çıkarma işi sürüyor; bitmesini bekle ya da iptal et.")
+                if ad == self.durum["yayinci"] or ad in self.kuyruk:
+                    raise Hata(f"{ad} için klip çıkarma zaten sürüyor ya da sırada.")
+                self.kuyruk.append(ad)
+                return "sirada"
+        self._baslat_ic(ad)
+        return "basladi"
+
+    def _baslat_ic(self, ad: str) -> None:
         komut = (list(CIKAR_KOMUTU) if CIKAR_KOMUTU else [sys.executable, str(KOK / "tools" / "yayin_klip.py")])
         komut += ["--ayar", str(ayar_dosyasi()), "--dizin", str(yk.calisma_dizini()), "otomatik",
                   "--yayinci", ad, "--en-cok", "1", "--konusma"]
-        env = {**os.environ, "PYTHONUTF8": "1", "KLIP_YAYINCILAR": str(ayar_dosyasi()),
+        env = {**os.environ, "PYTHONUTF8": "1", "PYTHONUNBUFFERED": "1", "KLIP_YAYINCILAR": str(ayar_dosyasi()),
                "YAYIN_KLIP_DIZIN": str(yk.calisma_dizini())}
         with self.kilit:
             if self.durum and self.durum["durum"] == "calisiyor":
                 raise Hata("Zaten bir klip çıkarma işi sürüyor; bitmesini bekle ya da iptal et.")
+            dk = kk.Kilit(yk.calisma_dizini(), f"panel: {ad}")
+            try:
+                dk.al()
+            except kk.KilitDolu as e:
+                raise Hata(f"Şu an başka bir klip çıkarma işi çalışıyor ({e.sahip}); o bitince yeniden dene.") from None
             bayrak = 0 if (os.name != "nt" or _pencere_var()) else getattr(subprocess, "CREATE_NO_WINDOW", 0)
             try:
                 self.proc = subprocess.Popen(komut, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.DEVNULL,
                                              text=True, encoding="utf-8", errors="replace", env=env, creationflags=bayrak,
                                              start_new_session=(os.name != "nt"))
             except OSError as e:
+                dk.birak()
                 raise Hata(f"İş başlatılamadı: {e}") from e
+            self.dosya_kilidi = dk
             self.iptal_istendi = False
             self.zaman_asimi = False
             self.durum = {"durum": "calisiyor", "yayinci": ad, "baslangic": time.monotonic(), "bitis": None,
-                          "son_satir": "", "satir": 0, "mesaj": ""}
+                          "son_satir": "", "satir": 0, "mesaj": "", "asama": "Yayınlar taranıyor", "klip": 0,
+                          "uyarilar": [], "paketler": []}
             proc = self.proc
         threading.Thread(target=self._oku, args=(proc,), name="klip-cikar", daemon=True).start()
         zamanlayici = threading.Timer(CIKAR_ZAMAN_ASIMI, self._zaman_asimi, args=(proc,))
@@ -651,8 +746,19 @@ class KlipCikar:
                 s = " ".join(ham.split())[:300]
                 if s:
                     with self.kilit:
-                        self.durum["son_satir"] = s
-                        self.durum["satir"] += 1
+                        d = self.durum
+                        d["son_satir"] = s
+                        d["satir"] += 1
+                        if s.lower().endswith(".mp4"):
+                            d["klip"] += 1
+                            d["paketler"].append(s)
+                        elif _UYARI_RE.search(s) and len(d["uyarilar"]) < 6:
+                            d["uyarilar"].append(s)
+                        a = asama_coz(s)
+                        if a:
+                            d["asama"] = a
+                        if self.dosya_kilidi:
+                            self.dosya_kilidi.tazele()
         except (OSError, ValueError):
             pass
         finally:
@@ -666,30 +772,65 @@ class KlipCikar:
                 self.zamanlayici.cancel()
             d = self.durum
             d["bitis"] = time.monotonic()
+            n = d["klip"]
             if self.zaman_asimi:
                 d["durum"], d["mesaj"] = "hata", f"{CIKAR_ZAMAN_ASIMI // 3600} saatte bitmedi, durduruldu."
             elif self.iptal_istendi:
                 d["durum"], d["mesaj"] = "iptal", "İptal edildi. Yarım kalan iş varsa bir sonraki çalıştırmada tekrar denenir."
             elif rc == 0:
                 d["durum"] = "bitti"
-                d["mesaj"] = ("Bitti. Yeni klipler Klipler sekmesinde; listeyi yenile." if d["satir"]
-                              else "Bitti: işlenecek yeni yayın bulunamadı (son 7 günde, daha önce işlenmemiş).")
+                if n:
+                    d["mesaj"] = f"Bitti: {n} yeni klip onay bekliyor (Klipler sekmesinde; listeyi yenile)."
+                elif d["satir"]:
+                    neden = "; ".join(d["uyarilar"]) or d["son_satir"]
+                    d["mesaj"] = f"Bitti ama yeni klip çıkmadı: {neden}"
+                else:
+                    d["mesaj"] = "Bitti: işlenecek yeni yayın bulunamadı (son 7 günde, daha önce işlenmemiş)."
             else:
                 d["durum"], d["mesaj"] = "hata", f"Başarısız (kod {rc}): {d['son_satir'] or 'çıktı yok'}"
+            d["asama"] = {"bitti": "Bitti", "iptal": "İptal edildi"}.get(d["durum"], "Hata")
+            if self.dosya_kilidi:
+                self.dosya_kilidi.birak()
+                self.dosya_kilidi = None
+            iptal = self.iptal_istendi
+            if iptal:
+                self.kuyruk.clear()
+        if not iptal:
+            self._siradakini_baslat()
+
+    def _siradakini_baslat(self) -> None:
+        while True:
+            with self.kilit:
+                if not self.kuyruk:
+                    return
+                ad = self.kuyruk[0]
+            try:
+                self._baslat_ic(ad)
+                with self.kilit:
+                    self.kuyruk.remove(ad)
+                return
+            except Hata as e:
+                with self.kilit:
+                    self.kuyruk.remove(ad)
+                    self.durum = {"durum": "hata", "yayinci": ad, "baslangic": time.monotonic(), "bitis": time.monotonic(),
+                                  "son_satir": "", "satir": 0, "mesaj": f"{ad} için klip çıkarma başlatılamadı: {e}",
+                                  "asama": "Hata", "klip": 0, "uyarilar": [], "paketler": []}
 
     def iptal(self) -> None:
         with self.kilit:
             if not (self.durum and self.durum["durum"] == "calisiyor" and self.proc):
                 raise Hata("Çalışan bir iş yok.")
             self.iptal_istendi = True
+            self.kuyruk.clear()
             proc = self.proc
         _agaci_oldur(proc)
 
     def durdur(self) -> None:
-        """Sunucu kapanırken: iş de durur."""
+        """Sunucu kapanırken: iş de durur (sıradakiler başlamaz)."""
         with self.kilit:
             proc = self.proc if (self.durum and self.durum["durum"] == "calisiyor") else None
             self.iptal_istendi = True
+            self.kuyruk.clear()
         if proc is not None:
             _agaci_oldur(proc)
 
@@ -697,7 +838,9 @@ class KlipCikar:
         bitis = time.monotonic() + saniye
         while time.monotonic() < bitis:
             if not self.mesgul():
-                return True
+                with self.kilit:
+                    if not self.kuyruk:
+                        return True
             time.sleep(0.02)
         return False
 
@@ -707,12 +850,13 @@ class KlipCikar:
             if d is None:
                 return {"durum": "yok"}
             simdi = time.monotonic()
-            if d["bitis"] is not None and simdi - d["bitis"] > BITTI_SURESI:
+            if d["bitis"] is not None and simdi - d["bitis"] > BITTI_SURESI and not self.kuyruk:
                 self.durum = None
                 return {"durum": "yok"}
             gecen = int((d["bitis"] or simdi) - d["baslangic"])
             return {"durum": d["durum"], "yayinci": d["yayinci"], "gecen_sn": gecen, "son_satir": d["son_satir"],
-                    "mesaj": d["mesaj"]}
+                    "mesaj": d["mesaj"], "asama": d["asama"], "klip": d["klip"], "uyarilar": list(d["uyarilar"]),
+                    "sirada": list(self.kuyruk)}
 
 
 class YayinciIsleri:

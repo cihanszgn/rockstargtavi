@@ -2853,6 +2853,11 @@ def main(argv=None) -> int:
             rapor = tara(ayar, dizin, a.yayinci)
             for k in rapor['desteksiz']:
                 print(f"desteklenmiyor: {k['yayinci']} ({k['platform']}): {k['neden']}", file=sys.stderr)
+            for h in rapor['hata']:   # Kick/YouTube okunamadıysa sessiz kalma: panel ve günlük nedeni göstersin
+                print(f"hata: {h.get('yayinci', '?')}: {' '.join(str(h.get('hata', '')).split())[:200]}", file=sys.stderr, flush=True)
+            if not rapor['yeni']:
+                print(f"bilgi: yeni yayın yok ({len(rapor['atlanan_islenmis'])} yayın daha önce işlenmiş, "
+                      f"{len(rapor['suzgece_uymayan'])} yayın oyun süzgecine uymadı)", file=sys.stderr, flush=True)
             for v in rapor['yeni'][:a.en_cok]:
                 print(f"{v['yayinci']} {v['tarih']} {v['baslik'][:50]}", file=sys.stderr)
                 try:

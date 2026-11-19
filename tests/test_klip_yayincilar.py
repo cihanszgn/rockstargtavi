@@ -526,14 +526,16 @@ class KlipCikarma(AyarTemel):
         self.addCleanup(m.stop)
 
     def test_basarili_is_ve_arguman_listesi(self):
-        self.komut("import sys,json;print('ARG',json.dumps(sys.argv[1:]),flush=True);print('islem sürüyor',flush=True)")
+        self.komut("import sys,json;print('ARG',json.dumps(sys.argv[1:]),flush=True);print('klip 1: x',flush=True);print('C:/a/klip1.mp4',flush=True)")
         s = self.yi.klip_cikar({"anahtar": self.an}, kesim_mesgul=False)
         self.assertTrue(s["ok"])
         self.assertTrue(self.yi.cikar.bekle(20))
         d = self.yi.cikar.goster()
         self.assertEqual(d["durum"], "bitti")
         self.assertEqual(d["yayinci"], "wtcN")
-        self.assertEqual(d["son_satir"], "islem sürüyor")
+        self.assertEqual(d["son_satir"], "C:/a/klip1.mp4")
+        self.assertEqual(d["klip"], 1)
+        self.assertIn("1 yeni klip", d["mesaj"])
         self.assertIn("yenile", d["mesaj"])
 
     def test_arguman_icerigi(self):
