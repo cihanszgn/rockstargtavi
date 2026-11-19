@@ -188,6 +188,22 @@ class OnayKapisi(KlipYayinTemel):
         self.assertEqual(kayit["1"]["paket"], "cikti/eraycan-20261112-aaa/klip-01.json")
         self.assertEqual(kayit["2"]["paket"], "cikti/eraycan-20261112-aaa/klip-00.json")
 
+    def test_en_yeniler_en_basta_siralanir(self):
+        self.paket_yaz(klasor="eraycan-20261112-aaa", ad="klip-01", yayin_tarihi="2026-11-12")
+        self.paket_yaz(klasor="wtcn-20261119-ccc", ad="canli-02", yayin_tarihi="2026-11-19")
+        self.paket_yaz(klasor="wtcn-20261119-ccc", ad="canli-01", yayin_tarihi="2026-11-19")
+        self.paket_yaz(klasor="hype-20261118-bbb", ad="klip-01", yayin_tarihi="2026-11-18")
+        self.paket_yaz(klasor="eski-tarihsiz-ddd", ad="klip-01", yayin_tarihi="")
+        self.paket_yaz(klasor="tarihsiz-ddd", ad="klip-01", yayin_tarihi="")
+        sirali = [o["goreli"] for o in ky.tara()]
+        self.assertEqual(sirali, [
+            "cikti/wtcn-20261119-ccc/canli-01.json",
+            "cikti/wtcn-20261119-ccc/canli-02.json",
+            "cikti/hype-20261118-bbb/klip-01.json",
+            "cikti/eraycan-20261112-aaa/klip-01.json",
+            "cikti/tarihsiz-ddd/klip-01.json",
+        ])
+
     def test_ortusen_varyant_listede_gizlenir_ve_ikincisi_onaylanamaz(self):
         self.paket_yaz(ad="konusma-hizali-01", bas=100, bit=140)
         self.paket_yaz(ad="canli-01", bas=105, bit=145)
@@ -926,7 +942,7 @@ class PanelDuzenleme(KlipYayinTemel):
     # ---- güvenlik: yeni uçlar
     def test_yeni_uclar_belirtec_origin_host_ister(self):
         govde = {"no": "1", "baslik": "x", "aciklama": "", "etiketler": ""}
-        for yol in ("/api/metin-kaydet", "/api/metin-sifirla", "/api/kesim", "/api/kucuk-resim"):
+        for yol in ("/api/metin-kaydet", "/api/metin-sifirla", "/api/kesim", "/api/kucuk-resim", "/api/kaldir"):
             for kw in ({"belirtec": False}, {"belirtec": "yanlis"}, {"origin": "http://evil.example"}, {"origin": False}, {"host": "evil.example"}):
                 self.assertEqual(self.post(yol, govde, **kw)[0], 403, (yol, kw))
         self.assertEqual(self.istek("GET", "/kart/1", belirtec=False)[0], 403)
@@ -942,12 +958,37 @@ class PanelDuzenleme(KlipYayinTemel):
 
     def test_govde_sinirlari_ve_gecersiz_numara(self):
         self.assertEqual(self.istek("POST", "/api/metin-sifirla", {"no": "1", "x": "y" * 5000})[0], 400)
+        self.assertEqual(self.istek("POST", "/api/kaldir", {"no": "1", "x": "y" * 5000})[0], 400)
         self.assertEqual(self.istek("POST", "/api/kesim", {"no": "1", "x": "y" * 20000})[0], 400)
         self.assertEqual(self.istek("POST", "/api/metin-kaydet", {"no": "1", "x": "y" * 140000})[0], 400)
-        for yol in ("/api/metin-kaydet", "/api/metin-sifirla", "/api/kesim", "/api/kucuk-resim"):
+        for yol in ("/api/metin-kaydet", "/api/metin-sifirla", "/api/kesim", "/api/kucuk-resim", "/api/kaldir"):
             for no in ("../x", "abc", None, 1, "99"):
                 self.assertEqual(self.post(yol, {"no": no})[0], 409, (yol, no))
         self.assertEqual(self.post("/api/metin-kaydet", {"no": "1", "baslik": "a" * 5000, "aciklama": ""})[0], 422)
+
+    def test_kaldir_gizler_dosya_silmez_ve_varyanti_da_saklar(self):
+        varyant = self.paket_yaz(ad="canli-01", bas=105, bit=145)
+        self.assertIn("class=\"tehlike kaldir\"", self.sayfa())
+        kod, v = self.post("/api/kaldir", {"no": "1"})
+        self.assertEqual(kod, 200)
+        self.assertTrue(v["ok"] and v["kaldirildi"])
+        self.assertEqual(v["ozet"]["toplam"], 0)
+        self.assertTrue(self.json.exists() and self.json.with_suffix(".mp4").exists())
+        self.assertTrue(ky.kd.oku(self.json).get("gizli"))
+        self.assertTrue(ky.kd.oku(varyant).get("gizli"))
+        self.assertEqual(ky.tara(), [])
+        self.assertNotIn("id=\"k1\"", self.sayfa())
+
+    def test_kaldir_onayli_bekleyeni_engeller_yayindaki_kalkar(self):
+        self.assertEqual(self.post("/api/onayla", {"no": "1"})[0], 200)
+        kod, v = self.post("/api/kaldir", {"no": "1"})
+        self.assertEqual(kod, 409)
+        self.assertIn("Onayı geri al", v["mesaj"])
+        self.yayinda_yap(self.oid)
+        kod, v = self.post("/api/kaldir", {"no": "1"})
+        self.assertEqual(kod, 200)
+        self.assertTrue(v["kaldirildi"])
+        self.assertIn(self.oid, self.man()["ogeler"])
 
     def test_duzenleme_ve_kesim_giris_dosyalari_degistirmez(self):
         onceki = self.json.read_text(encoding="utf-8")

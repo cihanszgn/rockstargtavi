@@ -227,6 +227,20 @@ BETIK = """<script>
       d.textContent=p.hidden?'Düzenle':'Düzenlemeyi kapat';d.setAttribute('aria-expanded',p.hidden?'false':'true');
       if(!p.hidden)sayaclar(kart);return;
     }
+    if(d.classList.contains('kaldir')){
+      mesaj(kart,'hata','');
+      var uy='Bu öğe onay listesinden kaldırılacak (dosya silinmez). Devam edilsin mi?';
+      if(kart.dataset.sinif==='yayinda'||kart.dataset.sinif==='paylasildi'){
+        uy='Bu öğe zaten yüklendi/paylaşıldı; listeden kaldırılsın mı? (Sunucudaki dosya ve gönderi etkilenmez.)';
+      }
+      if(!window.confirm(uy))return;
+      dugmeler(kart,true);
+      gonder('/api/kaldir',{no:kart.dataset.no}).then(function(r){
+        if(!r.ok){dugmeler(kart,false);mesaj(kart,'hata',r.mesaj||'Bilinmeyen hata.');return;}
+        kart.remove();ozetYaz(r.ozet);suzgecUygula();
+      });
+      return;
+    }
     if(d.classList.contains('adim')){
       var inp=d.parentElement.querySelector('input');
       var yeni=Math.round(((parseFloat(inp.value)||0)+parseFloat(d.dataset.adim))*100)/100;

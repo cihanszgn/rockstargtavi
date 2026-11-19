@@ -292,7 +292,7 @@ class YenidenUretSecenekTesti(unittest.TestCase):
                                                      sor=oyun_sor or sorucu('{"karar":"evet","oyun":null,"kanit":"x"}'))
             return {'genislik': 1080, 'yukseklik': 1920, 'sure_sn': klip['klip_bitis_sn'] - klip['klip_baslangic_sn'], 'ses': True,
                     'aciklama_yazisi': None}
-        with mock.patch.object(yk, 'vod_hazirla', lambda a, b: (dict(VOD), {})), mock.patch.object(yk, 'klip_kes', sahte_kes), \
+        with mock.patch.object(yk, 'vod_hazirla', lambda a, b, **_: (dict(VOD), {})), mock.patch.object(yk, 'klip_kes', sahte_kes), \
                 mock.patch.object(yk, 'ffmpeg_bul', lambda: 'ff'), mock.patch.object(yk, 'font_bul', lambda: 'f'), kolajsiz():
             cikti = yk.paketten_uret(yol, {'ayar': {}}, kok, kok / 'yedek', secenek=secenek, **kw)
         return cikti, goruldu, json.loads(yol.read_text(encoding='utf-8'))
@@ -434,6 +434,20 @@ class KomutSatiriTesti(unittest.TestCase):
             sec = m.call_args.args[5]
             self.assertEqual(sec, {'oyun': 'Elden Ring', 'yayinci_adi': 'Eray', 'bas_kaydir': -3.0, 'son_kaydir': 2.5,
                                    'duzen': 'serit', 'kamera_kutu': (0.1, 0.2, 0.3, 0.4)})
+
+    def test_canli_vod_hazirla_izin(self):
+        canli = {'platform': 'kick', 'kanal': 'wtcn', 'yayinci': 'wtcN', 'canli': True, 'sure_sn': 0,
+                 'baslangic_epoch': 1700000000, 'kaynak': 'https://x/master.m3u8', 'vod_url': 'https://kick.com/wtcn/videos/11111111-1111-1111-1111-111111111111'}
+        hls_master = '#EXTM3U\n#EXT-X-STREAM-INF:BANDWIDTH=5000000,RESOLUTION=1920x1080\n1080p.m3u8\n'
+        hls_medya = '#EXTM3U\n#EXT-X-PROGRAM-DATE-TIME:2026-11-19T12:00:00Z\n#EXTINF:10.0,\na.ts\n#EXTINF:10.0,\nb.ts\n'
+        sahte_metin = lambda u, **_: hls_master if 'master.m3u8' in u else hls_medya
+        ayar = {'yayincilar': [], 'ayar': {}}
+        with mock.patch.object(yk, 'kick_vod_bilgi', lambda *a: dict(canli)):
+            with self.assertRaisesRegex(yk.KlipHatasi, 'yayın hâlâ sürüyor'):
+                yk.vod_hazirla(canli['vod_url'], ayar, http_text=sahte_metin)
+            vod, _ = yk.vod_hazirla(canli['vod_url'], ayar, http_text=sahte_metin, canli_izin=True)
+            self.assertEqual(vod['sure_sn'], 20)
+            self.assertEqual(vod['hls'], 'https://x/1080p.m3u8')
 
 
 if __name__ == '__main__':

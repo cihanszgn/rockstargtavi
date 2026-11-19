@@ -177,6 +177,8 @@ def tara(d: pathlib.Path | None = None, ayar: dict | None = None) -> list[dict]:
     ek_yasak = tuple((ayar.get("ayar") or {}).get("aciklama_yasak_kelimeler") or ())
     ogeler = []
     for tur, json_yol, mp4 in paket_dosyalari(d):
+        if kd.oku(json_yol).get("gizli"):
+            continue
         paket = json_oku(json_yol)
         if not paket:
             continue
@@ -234,6 +236,12 @@ def tara(d: pathlib.Path | None = None, ayar: dict | None = None) -> list[dict]:
     return tekillestir(ogeler)
 
 
+def _sira_anahtari(o: dict) -> tuple:
+    """Klipler önce, derlemeler sonra; her biri yayın tarihine göre en yeniden en eskiye, aynı günde dosya sırasıyla."""
+    t = re.sub(r"\D", "", str(o.get("yayin_tarihi") or ""))[:8]
+    return (o["tur"] != "klip", -int(t) if len(t) == 8 else 0, o["goreli"])
+
+
 def tekillestir(ogeler: list[dict]) -> list[dict]:
     """Aynı yayın anını gösteren klip varyantlarından yalnız en iyisi öne çıkar; öbürleri `yok_notu` alır."""
     sirali = sorted(ogeler, key=lambda o: (o["tur"] != "klip", o["oncelik"], o["goreli"]))
@@ -244,7 +252,7 @@ def tekillestir(ogeler: list[dict]) -> list[dict]:
             if es is not None:
                 o["yok_notu"] = f"aynı anın başka sürümü listede: {es['goreli']}"
         secilen.append(o)
-    return sorted(ogeler, key=lambda o: (o["tur"] != "klip", o["goreli"]))
+    return sorted(ogeler, key=_sira_anahtari)
 
 
 _ONBELLEK: dict | None = None  # yalnız `sayfa` sunucusu açar: (yollar, boyut, değişim zamanı) -> özet
@@ -511,7 +519,8 @@ def kart_uret(o: dict, manifest: dict, etk: dict | None = None, hesap: dict | No
         panel = duzen_paneli(o, kesim, acik, str(((etk.get("ayar") or {}).get("ayar") or {}).get("duzen") or ""), hesap)
         alt = (f'<div class=islem><button type=button class=onayla{" disabled" if aktif else ""}>Onayla</button>'
                '<button type=button class=geri>Onayı geri al</button>'
-               f'<button type=button class=duzen-ac aria-expanded="{"true" if acik else "false"}">{"Düzenlemeyi kapat" if acik else "Düzenle"}</button></div>'
+               f'<button type=button class=duzen-ac aria-expanded="{"true" if acik else "false"}">{"Düzenlemeyi kapat" if acik else "Düzenle"}</button>'
+               f'<button type=button class="tehlike kaldir"{" disabled" if aktif else ""}>Kaldır</button></div>'
                '<p class=hata role=alert hidden></p><p class=tamam role=status hidden></p>')
     else:
         video_url = o["mp4"].as_uri()
@@ -750,7 +759,8 @@ YAYINCI_GET = ("/api/yayinci/liste", "/api/yayinci/is", "/api/yayinci/yayinla-du
 YAYINCI_POST = tuple(f"/api/yayinci/{a}" for a in ("onizle", "ekle", "ekle-cikar", "duzenle", "kaldir", "geri-getir", "klip-cikar", "iptal", "yayinla"))
 YAYINCI_AZAMI = 8192
 DUZENLE_YOLLARI = {"/api/metin-kaydet": ("metin-kaydet", 131072), "/api/metin-sifirla": ("metin-sifirla", 4096),
-                   "/api/kesim": ("kesim", 16384), "/api/kucuk-resim": ("kucuk-resim", 4096)}
+                   "/api/kesim": ("kesim", 16384), "/api/kucuk-resim": ("kucuk-resim", 4096),
+                   "/api/kaldir": ("kaldir", 4096)}
 SAYFA_CSP = ("default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self'; "
              "media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'")
 
@@ -1323,6 +1333,21 @@ def duzenle_islemi(islem: str, veri: dict, manifest_arg: str | None, kesim: Kesi
         kesim.ekle(o, arg, video)
         dustu = onayi_dusur(manifest, o["id"])
         mesaj = "Kesim başlatıldı; 20-60 sn sürer." + (" Onay düştü: kesim bitince yeniden onaylaman gerekir." if dustu else "")
+    elif islem == "kaldir":
+        if kesim is not None and kesim.aktif(o["id"]):
+            raise Hata("Bu klip şu an yeniden kesiliyor; bitince kaldır.")
+        _, sinif = durum_metni(o, manifest)
+        if sinif == "onayli":
+            raise Hata("Bu öğe onaylı ve yüklenmeyi bekliyor. Kaldırmak için önce 'Onayı geri al'a bas.")
+        hedefler = [o["json"]]
+        if o["tur"] == "klip":
+            hedefler += [x["json"] for x in ogeler if x["tur"] == "klip" and x["json"] != o["json"] and ks.ortusuyor(o["paket"], x["paket"])]
+        for yol_j in hedefler:
+            dz = kd.oku(yol_j)
+            dz["gizli"] = True
+            kd.yaz(yol_j, dz)
+        mesaj = "Listeden kaldırıldı (dosya silinmedi)."
+        ek["kaldirildi"] = True
     else:
         raise Hata("Bilinmeyen işlem.")
     if dustu:

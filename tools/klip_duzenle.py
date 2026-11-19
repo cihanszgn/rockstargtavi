@@ -61,6 +61,8 @@ def oku(json_yol: pathlib.Path) -> dict:
     v = ham.get("video")
     if isinstance(v, dict):
         sonuc["video"] = {k: x for k, x in v.items() if k in ("oyun", "aciklama_metni", "yayinci_adi", "duzen", "kamera_kutu")}
+    if ham.get("gizli") is True:
+        sonuc["gizli"] = True
     return sonuc
 
 

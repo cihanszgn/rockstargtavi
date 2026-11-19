@@ -1905,7 +1905,8 @@ def klip_kes(vod: dict, klip: dict, hedef: pathlib.Path, ff: str, font: str, aya
 
 # ---------------------------------------------------------------- akış
 
-def vod_hazirla(arguman: str, ayar: dict, http=http_json, http_text=http_metin) -> tuple[dict, dict]:
+def vod_hazirla(arguman: str, ayar: dict, http=http_json, http_text=http_metin,
+                canli_izin: bool = False) -> tuple[dict, dict]:
     vid = klip_youtube.video_id(arguman)
     if vid:
         try:
@@ -1926,10 +1927,17 @@ def vod_hazirla(arguman: str, ayar: dict, http=http_json, http_text=http_metin) 
             raise KlipHatasi(str(e)) from e
     uuid, ipucu = vod_coz(arguman)
     vod = kick_vod_bilgi(uuid, ipucu, ayar, http)
-    if vod['canli']:
+    if vod['canli'] and not canli_izin:
         raise KlipHatasi('yayın hâlâ sürüyor; bittikten sonra işlenir')
     y = yayinci_bul(ayar, 'kick', vod['kanal'])
     vod_t0_ekle(vod, http_text)
+    if vod['canli']:
+        ozet = hls_liste_ozeti(http_text(vod['hls']))
+        if not ozet['bolum']:
+            raise KlipHatasi('canlı yayının video listesi boş veya okunamadı')
+        vod['video_sn'] = ozet['sure_sn']
+        vod['kayma_sn'] = ozet['kayma_sn']
+        vod['sure_sn'] = int(ozet['sure_sn'])
     vod['kisa_ad'] = (y or {}).get('kisa_ad')
     vod['kamera_kutu'] = (y or {}).get('kamera_kutu')   # elle kamera kutusu (oransal x,y,w,h); tespiti ezer
     return vod, (y['ayar'] if y else dict(ayar['ayar']))
@@ -2618,7 +2626,7 @@ def paketten_uret(paket_yolu: pathlib.Path, ayar: dict, dizin: pathlib.Path, yed
     if kaydirildi:
         dz['bas_kaydir_toplam'] = round(float(dz.get('bas_kaydir_toplam') or 0) + bk, 3)
         dz['son_kaydir_toplam'] = round(float(dz.get('son_kaydir_toplam') or 0) + sk, 3)
-    vod, vayar = vod_hazirla(d['vod_url'], ayar)
+    vod, vayar = vod_hazirla(d['vod_url'], ayar, canli_izin=True)
     if bit > vod['sure_sn'] + .01:
         raise KlipHatasi(f"bitiş yayının süresini ({vod['sure_sn']:.0f} sn) {bit - vod['sure_sn']:.1f} sn aşıyor")
     yedek = yedek or (pathlib.Path(r'C:\Cihan.Ai\_yedek') / f"yayin-klip-{datetime.now().strftime('%Y%m%d')}"
