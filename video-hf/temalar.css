@@ -70,8 +70,8 @@
 .p-gazete .k3{background:var(--vurgu-kagit);color:var(--kagit)}
 .p-gazete .sh{background:none;color:var(--murekkep);border-top:8px double var(--murekkep);border-bottom:8px double var(--murekkep);text-align:center;padding:10px 12px 12px}
 .p-gazete .etiket-satir{justify-content:center}
-/* açılış: yarım ton siyah-beyaz dev manşet foto; altta kâğıt, ink manşet çift çizgi */
-.p-gazete .bk-img{filter:grayscale(1) contrast(1.25) brightness(1.02)}
+/* açılış: canlı renkli dev manşet foto; altta kâğıt, ink manşet çift çizgi */
+.p-gazete .bk-img{filter:contrast(1.12) saturate(1.12) brightness(.98)}
 .p-gazete .ov-nokta{background:radial-gradient(rgba(0,0,0,.6) 30%,transparent 33%) 0 0/9px 9px;mix-blend-mode:multiply;opacity:.6}
 .p-gazete .ov-kagit{background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,transparent 18%,transparent 62%,var(--murekkep) 62% calc(62% + 8px),var(--kagit) calc(62% + 8px) 100%)}
 .p-gazete .ov-doku{background:repeating-linear-gradient(90deg,rgba(0,0,0,.08) 0 3px,transparent 3px 26px)}

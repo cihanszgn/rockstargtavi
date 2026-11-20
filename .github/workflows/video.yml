@@ -15,6 +15,10 @@ on:
         description: "Yalnız dene (bekleyenleri listele, video üretme)"
         type: boolean
         default: false
+      kapak_yenile:
+        description: "Mevcut tüm videoların kapak afişlerini oyun görselleriyle yenileyip yükle"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -41,10 +45,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Görsel kütüphanesi (site yeniden üretilirken kart görselleri için)
+      - name: Görsel kütüphanesi (kapak afişleri ve site kart görselleri için)
         run: python -m pip install --quiet pillow==11.3.0
 
       - uses: actions/setup-node@v4
+        if: inputs.kapak_yenile != true
         with:
           node-version: "24"
 
@@ -54,6 +59,7 @@ jobs:
           AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
           AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
           MEDYA_SSH_KEY: ${{ secrets.MEDYA_SSH_KEY }}
+          KAPAK_YENILE: ${{ inputs.kapak_yenile }}
         run: |
           # Ses yolu sosyal/ayarlar.json içinden okunur: "edge" anahtar istemez, "azure" iki anahtar ister.
           ses=$(python -c "import json;print((json.load(open('sosyal/ayarlar.json',encoding='utf-8')).get('video') or {}).get('ses') or 'azure')")
@@ -61,7 +67,7 @@ jobs:
           if [ -z "$MEDYA_SSH_KEY" ]; then
             echo "hazir=false" >> "$GITHUB_OUTPUT"
             echo "Sunucu anahtarı girilmemiş: video üretimi atlandı (hata değil)."
-          elif [ "$ses" = "azure" ] && { [ -z "$AZURE_SPEECH_KEY" ] || [ -z "$AZURE_SPEECH_REGION" ]; }; then
+          elif [ "$KAPAK_YENILE" != "true" ] && [ "$ses" = "azure" ] && { [ -z "$AZURE_SPEECH_KEY" ] || [ -z "$AZURE_SPEECH_REGION" ]; }; then
             echo "hazir=false" >> "$GITHUB_OUTPUT"
             echo "Azure Speech anahtarı girilmemiş: video üretimi atlandı (hata değil)."
           else
@@ -69,10 +75,11 @@ jobs:
           fi
 
       - uses: astral-sh/setup-uv@v5
-        if: steps.kontrol.outputs.hazir == 'true' && inputs.deneme != true
+        if: steps.kontrol.outputs.hazir == 'true' && inputs.deneme != true && inputs.kapak_yenile != true
 
       - name: Bekleyenleri listele (dil dil)
         id: bekleyen
+        if: inputs.kapak_yenile != true
         run: |
           # Her satır "<haber id> <dil>". Bir dilin listelenememesi diğerlerini durdurmaz; hata iş sonunda raporlanır.
           : > bekleyen.txt
@@ -93,7 +100,7 @@ jobs:
           [ "$hata" = 0 ] || echo "liste_hatasi=1" >> "$GITHUB_OUTPUT"
 
       - name: Hyperframes, Chrome ve ffmpeg kur
-        if: steps.kontrol.outputs.hazir == 'true' && inputs.deneme != true
+        if: steps.kontrol.outputs.hazir == 'true' && inputs.deneme != true && inputs.kapak_yenile != true
         run: |
           # Yalnız yerel çizim komutları kullanılır (render, snapshot, browser); publish/share/cloud/auth/templates/billing
           # HeyGen'e içerik gönderir, çağrılmaz. Yazı tipleri depoda (video-hf/assets/fonts), sistem fontu gerekmez.
@@ -119,8 +126,12 @@ jobs:
           printf 'Host medya.ctrl-agame.com\n  IdentityFile ~/.ssh/medya_anahtar\n  IdentitiesOnly yes\n' > ~/.ssh/config
           chmod 600 ~/.ssh/config
 
+      - name: Mevcut kapak afişlerini oyun görselleriyle yenile ve yükle
+        if: steps.kontrol.outputs.hazir == 'true' && inputs.deneme != true && inputs.kapak_yenile == true
+        run: python tools/video_uret.py kapak-yenile --yukle
+
       - name: Videoları üret ve yükle (dil başına günlük sınıra kadar)
-        if: steps.kontrol.outputs.hazir == 'true' && inputs.deneme != true
+        if: steps.kontrol.outputs.hazir == 'true' && inputs.deneme != true && inputs.kapak_yenile != true
         env:
           AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
           AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}

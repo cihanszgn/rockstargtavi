@@ -27,7 +27,12 @@ ROOT = Path(__file__).resolve().parents[1]
 HF = ROOT / "video-hf"
 OYUN_TEMALARI = HF / "oyun_temalari.json"
 GORSELLER = ROOT / "data" / "gorseller.json"
+OYUN_GORSELLERI = ROOT / "data" / "oyun_gorselleri.json"
+OYUNLAR = ROOT / "data" / "oyunlar.json"
 GUVENLI_BETIK = HF / "araclar" / "guvenli_alan.mjs"
+KAPAK_FONT_BASLIK = ROOT / "otomasyon" / "fontlar" / "Anton-Regular.ttf"
+KAPAK_FONT_ETIKET = ROOT / "tools" / "yazi" / "Archivo-ExpandedExtraBold.ttf"
+KAPAK_FONT_CJK = ROOT / "tools" / "yazi" / "NotoSansSC-Bold.otf"
 HF_SURUMU = "0.9.56"
 PAKETLER = ("esports", "gazete", "neon", "kolaj")
 TURLER = ("haber", "guncelleme", "indirim", "ucretsiz", "cikis")
@@ -269,7 +274,7 @@ def tema_girdisi(haber: dict, senaryo: dict | None = None, icerik: list[dict] | 
     anahtar, oyun = oyun_dokunusu(haber, tablo)
     return {"motor": "hyperframes", "paket": paket, "oyun": anahtar, "oyun_ogesi": (oyun or {}).get("oge"),
             "oyun_palet": (oyun or {}).get("palet"), "ozel_palet": ozel.get("palet") or None,
-            "ozel_oge": ozel.get("oge") or None, "gorsel": gorsel_adresi(haber.get("id", ""))}
+            "ozel_oge": ozel.get("oge") or None, "gorsel": gorsel_adresi(haber.get("id", ""), haber=haber)}
 
 
 def anahtar_eki(girdi: dict) -> dict:
@@ -319,46 +324,471 @@ def ses_sec(liste: list[str], haber_id: str, edge: bool = False) -> str:
 
 # ---------------------------------------------------------------- görsel
 
-def gorsel_adresi(haber_id: str, yol: Path | None = None) -> str | None:
+_OYUN_TAKMA = {
+    "gta-vi": "gta-6", "gta6": "gta-6", "gta-v": "grand-theft-auto-v", "gta5": "grand-theft-auto-v",
+    "cs2": "counter-strike-2", "ffxiv": "final-fantasy-xiv", "ff14": "final-fantasy-xiv",
+    "r6": "tom-clancys-rainbow-six-siege", "r6-siege": "tom-clancys-rainbow-six-siege",
+    "rainbow-six-siege": "tom-clancys-rainbow-six-siege", "bf6": "battlefield-6",
+}
+_STEAM_APP_RE = re.compile(r"https://(?:shared\.[a-z0-9.-]*steamstatic\.com/store_item_assets|cdn\.[a-z0-9.-]*steamstatic\.com|steamcdn-a\.akamaihd\.net)/steam/apps/(\d+)/")
+
+
+def _oyun_slug(ad: str) -> str:
+    s = str(ad or "").lower().translate(str.maketrans("çğıöşü", "cgiosu"))
+    s = re.sub(r"\([^)]*\)", " ", s)
+    s = re.sub(r"[^a-z0-9]+", "-", s).strip("-")
+    if s.startswith("grand-theft-auto-"):
+        s = "gta-" + s[len("grand-theft-auto-"):]
+    return s
+
+
+def _oyun_eslesme(oyunlar_yol: Path | None = None) -> dict[str, str]:
+    esles = dict(_OYUN_TAKMA)
+    yol = Path(oyunlar_yol or OYUNLAR)
+    try:
+        liste = json.loads(yol.read_text(encoding="utf-8")) or []
+    except (OSError, ValueError):
+        return esles
+    for o in liste:
+        if not isinstance(o, dict) or not o.get("id"):
+            continue
+        oid = str(o["id"])
+        for a in (oid, o.get("ad"), o.get("kisa"), *(o.get("eslesme") or [])):
+            k = _oyun_slug(str(a or ""))
+            if k:
+                esles[k] = oid
+    return esles
+
+
+def _oyun_gorsel_adresi(haber: dict | None, oyun_yol: Path | None = None,
+                        oyunlar_yol: Path | None = None) -> str | None:
+    if not isinstance(haber, dict):
+        return None
+    ad = str(haber.get("oyun") or "").strip()
+    if not ad:
+        return None
+    yol = Path(oyun_yol or OYUN_GORSELLERI)
+    try:
+        veri = json.loads(yol.read_text(encoding="utf-8")) or {}
+    except (OSError, ValueError):
+        return None
+    s = _oyun_slug(ad)
+    esles = _oyun_eslesme(oyunlar_yol)
+    adaylar = []
+    for k in (s, esles.get(s, "")):
+        if k and k not in adaylar:
+            adaylar.append(k)
+    for k in adaylar:
+        for bolum in ("oyun", "takvim"):
+            kayit = (veri.get(bolum) or {}).get(k) or {}
+            url = kayit.get("url")
+            if isinstance(url, str) and url.startswith("https://"):
+                return url
+    return None
+
+
+def gorsel_adresi(haber_id: str, yol: Path | None = None, haber: dict | None = None,
+                  oyun_yol: Path | None = None) -> str | None:
+    """Önce habere özel görseli (data/gorseller.json), yoksa ilgili oyunun resmî kapak/tanıtım görselini
+    (data/oyun_gorselleri.json) döndürür."""
     yol = Path(yol or GORSELLER)
     try:
         k = (json.loads(yol.read_text(encoding="utf-8")) or {}).get(haber_id) or {}
     except (OSError, ValueError):
-        return None
+        k = {}
     url = k.get("url")
-    return url if isinstance(url, str) and url.startswith("https://") else None
+    if isinstance(url, str) and url.startswith("https://"):
+        return url
+    return _oyun_gorsel_adresi(haber, oyun_yol)
 
 
-def foto_hazirla(haber_id: str, onbellek: Path, hedef: Path, cikti=print, yol: Path | None = None) -> Path | None:
-    """Haberin resmî görselini indirir (önbellekli), 1600 px genişliğe indirip hedefe JPEG yazar. Alınamazsa None:
-    başlık sahnesi görselsiz (oyun adı büyük yazı) çalışır."""
-    url = gorsel_adresi(haber_id, yol)
+def _gorsel_indir(url: str, onbellek: Path, *, en_az_boyut: tuple[int, int] | None = None,
+                  dikey_sart: bool = False) -> Path | None:
+    from PIL import Image, ImageStat
+    onbellek.mkdir(parents=True, exist_ok=True)
+    anahtar = hashlib.sha256(url.encode("utf-8")).hexdigest()[:12]
+    onb = onbellek / f"{anahtar}.jpg"
+    yok = onbellek / f"{anahtar}.yok"
+    if onb.exists():
+        if dikey_sart or en_az_boyut:
+            try:
+                with Image.open(onb) as cim:
+                    if max(ImageStat.Stat(cim.convert("RGB")).stddev) < 12.0:
+                        onb.unlink(missing_ok=True)
+                        yok.write_text("blank", encoding="utf-8")
+                        return None
+            except Exception:
+                pass
+        return onb
+    if yok.exists():
+        return None
+    gecici = onb.with_suffix(".indir")
+    try:
+        istek = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; video-uretici)"})
+        with urllib.request.urlopen(istek, timeout=30) as r:
+            ham = r.read(20_000_000)
+        gecici.write_bytes(ham)
+        im = Image.open(gecici).convert("RGB")
+        if dikey_sart and im.height <= im.width:
+            yok.write_text("not-portrait", encoding="utf-8")
+            return None
+        if en_az_boyut and (im.width < en_az_boyut[0] or im.height < en_az_boyut[1]):
+            yok.write_text("too-small", encoding="utf-8")
+            return None
+        if (dikey_sart or en_az_boyut) and max(ImageStat.Stat(im).stddev) < 12.0:
+            yok.write_text("blank", encoding="utf-8")
+            return None
+        if im.width > 1600:
+            im = im.resize((1600, round(im.height * 1600 / im.width)), Image.LANCZOS)
+        im.save(onb, quality=90)
+        return onb
+    except Exception:
+        if dikey_sart or en_az_boyut:
+            try:
+                yok.write_text("err", encoding="utf-8")
+            except OSError:
+                pass
+        return None
+    finally:
+        gecici.unlink(missing_ok=True)
+
+
+def foto_hazirla(haber_id: str, onbellek: Path, hedef: Path, cikti=print, yol: Path | None = None,
+                 haber: dict | None = None, oyun_yol: Path | None = None,
+                 dikey_tercih: bool = False) -> Path | None:
+    """Haberin ya da ilgili oyunun resmî görselini indirir (önbellekli), JPEG olarak hedefe yazar.
+    dikey_tercih=True (kapak için): Steam oyun görselinde önce yüksek çözünürlüklü 600×900 dikey kutu kapağını,
+    yoksa geniş hero görselini dener; olmazsa özgün URL'ye düşer."""
+    url = gorsel_adresi(haber_id, yol, haber=haber, oyun_yol=oyun_yol)
     if not url:
         return None
     try:
-        from PIL import Image
+        from PIL import Image  # noqa: F401
     except ImportError:
         cikti("uyarı: Pillow yok, görsel kullanılmadı")
         return None
-    onbellek.mkdir(parents=True, exist_ok=True)
-    onb = onbellek / (hashlib.sha256(url.encode("utf-8")).hexdigest()[:12] + ".jpg")
-    if not onb.exists():
-        try:
-            istek = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; video-uretici)"})
-            with urllib.request.urlopen(istek, timeout=30) as r:
-                ham = r.read(20_000_000)
-            gecici = onb.with_suffix(".indir")
-            gecici.write_bytes(ham)
-            im = Image.open(gecici).convert("RGB")
-            if im.width > 1600:
-                im = im.resize((1600, round(im.height * 1600 / im.width)), Image.LANCZOS)
-            im.save(onb, quality=88)
-            gecici.unlink(missing_ok=True)
-        except Exception as e:  # ağ/format hatası videoyu durdurmaz
-            cikti(f"uyarı: görsel alınamadı ({type(e).__name__}); başlık görselsiz çizilecek")
-            return None
+    onb = None
+    if dikey_tercih:
+        m = _STEAM_APP_RE.match(url)
+        if m:
+            appid = m.group(1)
+            onb = _gorsel_indir(
+                f"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/{appid}/library_600x900_2x.jpg",
+                onbellek, en_az_boyut=(400, 600), dikey_sart=True)
+            if onb is None and "/header.jpg" in url:
+                onb = _gorsel_indir(
+                    f"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/{appid}/library_hero.jpg",
+                    onbellek, en_az_boyut=(1000, 400))
+    if onb is None:
+        onb = _gorsel_indir(url, onbellek)
+    if onb is None:
+        cikti("uyarı: görsel alınamadı; başlık görselsiz çizilecek")
+        return None
     hedef.parent.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(onb, hedef)
+    return hedef
+
+
+# ---------------------------------------------------------------- Reels / Shorts kapak afişi
+
+def _kapak_buyuk(metin: str, dil: str) -> str:
+    s = str(metin or "").strip()
+    if dil == "zh":
+        return s
+    if dil == "tr":
+        return s.replace("i", "İ").replace("ı", "I").upper()
+    return s.upper()
+
+
+def _kapak_norm(kelime: str, dil: str) -> str:
+    s = _kapak_buyuk(kelime, dil)
+    return re.sub(r"[^\w\u00c0-\u024f\u4e00-\u9fff]+", "", s)
+
+
+def _kapak_font(yollar: tuple[Path, ...], boyut: int):
+    from PIL import ImageFont
+    for y in yollar:
+        if y.exists():
+            return ImageFont.truetype(str(y), boyut)
+    return ImageFont.load_default()
+
+
+def _hex_rgba(hexs: str, alfa: int = 255) -> tuple[int, int, int, int]:
+    r, g, b = (round(c * 255) for c in _rgb(hexs))
+    return (r, g, b, max(0, min(255, alfa)))
+
+
+def _dikey_gradyan(w: int, h: int, duraklar: list[tuple[float, tuple[int, int, int, int]]]):
+    """Hızlı dikey RGBA gradyanı: 1×h şeritten w×h'ye ölçekler."""
+    from PIL import Image
+    serit = Image.new("RGBA", (1, h))
+    px = serit.load()
+    for y in range(h):
+        t = y / max(1, h - 1)
+        a, b = duraklar[0], duraklar[-1]
+        for i in range(len(duraklar) - 1):
+            if duraklar[i][0] <= t <= duraklar[i + 1][0]:
+                a, b = duraklar[i], duraklar[i + 1]
+                break
+        f = 0.0 if b[0] == a[0] else (t - a[0]) / (b[0] - a[0])
+        px[0, y] = tuple(round(a[1][c] + (b[1][c] - a[1][c]) * f) for c in range(4))
+    return serit.resize((w, h), Image.BILINEAR)
+
+
+def _kapak_satirla(metin: str, font, azami_w: int, dil: str) -> list[list[str]]:
+    """Metni azami_w genişliğe sığacak satırlara böler (CJK karakter, diğer diller kelime tabanlı)."""
+    cjk = dil == "zh" or bool(re.search(r"[\u4e00-\u9fff]", metin))
+    parcalar = list(metin) if cjk else metin.split()
+    if not parcalar:
+        return []
+    ayrac = "" if cjk else " "
+    satirlar: list[list[str]] = []
+    cur: list[str] = []
+    for p in parcalar:
+        deneme = ayrac.join([*cur, p])
+        if cur and font.getlength(deneme) > azami_w:
+            satirlar.append(cur)
+            cur = [p]
+        else:
+            cur.append(p)
+    if cur:
+        satirlar.append(cur)
+    return satirlar
+
+
+def _kapak_cover_kirp(im, w: int, h: int, ust_pay: float = 0.35):
+    from PIL import Image
+    oran = max(w / im.width, h / im.height)
+    nw, nh = max(w, round(im.width * oran)), max(h, round(im.height * oran))
+    im = im.resize((nw, nh), Image.LANCZOS)
+    x0 = (nw - w) // 2
+    y0 = round((nh - h) * ust_pay)
+    return im.crop((x0, y0, x0 + w, y0 + h))
+
+
+def _kapak_kenar_yumusat(im, ust_px: int, alt_px: int):
+    """Yatay hero görselinin üst ve alt kenarlarını yumuşak alpha maskesiyle arka plana eritir."""
+    from PIL import Image
+    w, h = im.size
+    serit = Image.new("L", (1, h), 255)
+    px = serit.load()
+    for y in range(min(ust_px, h)):
+        px[0, y] = round(255 * ((y / max(1, ust_px)) ** 1.35))
+    for y in range(max(0, h - alt_px), h):
+        kalan = h - 1 - y
+        px[0, y] = round(255 * ((kalan / max(1, alt_px)) ** 1.45))
+    maske = serit.resize((w, h), Image.BILINEAR)
+    out = im.convert("RGBA")
+    out.putalpha(maske)
+    return out
+
+
+def kapak_ciz(hedef: Path, *, foto: Path | None, baslik: str, vurgu: list[str] | None = None,
+              tur_etiket: str = "", oyun: str = "", palet: dict | None = None, dil: str = "tr") -> Path:
+    """Reels & Shorts için 1080×1920 oyun odaklı dikkat çekici kapak afişi üretir.
+    Oyun görseli üst bölgede temiz ve engelsiz durur; kategori rozeti, oyun adı ve kısa vurucu başlık
+    platform güvenli alanında (y ≈ 1000–1520) yüksek kontrastla yer alır. Altyazı / tuş / tarih kalabalığı yok."""
+    from PIL import Image, ImageDraw, ImageEnhance, ImageFilter
+
+    W, H = 1080, 1920
+    p = palet or {"bg": "#0b0914", "bg2": "#1c1330", "ana": "#ff2a85", "ana2": "#19e3ff", "vurgu": "#ffc233"}
+    bg_hex = _ayarla(p.get("bg") or "#0b0914", "#ffffff", 11.0, "koyu")
+    bg2_hex = _ayarla(p.get("bg2") or p.get("ana") or "#1c1330", "#ffffff", 5.5, "koyu")
+    ana_hex = p.get("ana") or "#ff2a85"
+    vurgu_hex = _ayarla(p.get("vurgu") or "#ffc233", bg_hex, 6.2, "acik")
+    rozet_yazi = okunur_yazi(vurgu_hex)
+    bg_rgb = _hex_rgba(bg_hex)[:3]
+
+    tuval = Image.new("RGBA", (W, H), (*bg_rgb, 255))
+    im = None
+    if foto and Path(foto).exists():
+        try:
+            im = Image.open(foto).convert("RGB")
+        except Exception:
+            im = None
+
+    if im is not None:
+        if im.height > im.width:
+            # Dikey resmi oyun kapağı (örn. Steam 600×900): üst yarı tamamen temiz, alt yarıda yumuşak karartma.
+            hero = _kapak_cover_kirp(im, W, H, ust_pay=0.22)
+            hero = ImageEnhance.Color(hero).enhance(1.12)
+            hero = ImageEnhance.Contrast(hero).enhance(1.06)
+            hero = ImageEnhance.Sharpness(hero).enhance(1.08)
+            tuval.paste(hero.convert("RGBA"), (0, 0))
+            perde = _dikey_gradyan(W, H, [
+                (0.00, (*bg_rgb, 40)),
+                (0.14, (*bg_rgb, 0)),
+                (0.46, (*bg_rgb, 0)),
+                (0.58, (*bg_rgb, 155)),
+                (0.70, (*bg_rgb, 232)),
+                (0.84, (*bg_rgb, 248)),
+                (1.00, (*bg_rgb, 255)),
+            ])
+            tuval.alpha_composite(perde)
+        else:
+            # Yatay / kare resmi oyun görseli (örn. GTA VI 1200×630, R6 1920×1080):
+            # Tam ekran renk atmosferli bulanık arka plan + üst-ortada keskin, yumuşak kenarlı hero vitrin.
+            arka = _kapak_cover_kirp(im, W, H, ust_pay=0.45)
+            arka = ImageEnhance.Color(arka).enhance(1.30)
+            arka = arka.filter(ImageFilter.GaussianBlur(radius=42))
+            arka = ImageEnhance.Brightness(arka).enhance(0.42)
+            tuval.paste(arka.convert("RGBA"), (0, 0))
+
+            oran = im.width / max(1, im.height)
+            # Geniş görsellerde karakter/logo kesilmesin diye dengeli kırpma (~780–940 px yükseklik)
+            vitrin_h = 840 if oran >= 1.55 else 940
+            vitrin_y = 120 if oran >= 1.55 else 80
+            hero = _kapak_cover_kirp(im, W, vitrin_h, ust_pay=0.38)
+            hero = ImageEnhance.Color(hero).enhance(1.13)
+            hero = ImageEnhance.Contrast(hero).enhance(1.07)
+            hero = ImageEnhance.Sharpness(hero).enhance(1.10)
+            hero_rgba = _kapak_kenar_yumusat(hero, ust_px=95, alt_px=155)
+            tuval.alpha_composite(hero_rgba, (0, vitrin_y))
+
+            perde = _dikey_gradyan(W, H, [
+                (0.00, (*bg_rgb, 120)),
+                (0.10, (*bg_rgb, 0)),
+                (0.44, (*bg_rgb, 0)),
+                (0.54, (*bg_rgb, 170)),
+                (0.66, (*bg_rgb, 235)),
+                (0.84, (*bg_rgb, 248)),
+                (1.00, (*bg_rgb, 255)),
+            ])
+            tuval.alpha_composite(perde)
+    else:
+        # Görselsiz oyunlar için koyu atmosfer + renkli radyal parlama + büyük soluk oyun adı dokusu
+        zemin = _dikey_gradyan(W, H, [
+            (0.00, _hex_rgba(bg2_hex, 255)),
+            (0.45, (*bg_rgb, 255)),
+            (1.00, (*bg_rgb, 255)),
+        ])
+        tuval.alpha_composite(zemin)
+        parla = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        pd = ImageDraw.Draw(parla)
+        pd.ellipse((-120, -60, 920, 980), fill=_hex_rgba(ana_hex, 125))
+        pd.ellipse((320, 260, 1260, 1200), fill=_hex_rgba(p.get("ana2") or vurgu_hex, 85))
+        tuval.alpha_composite(parla.filter(ImageFilter.GaussianBlur(radius=140)))
+        if oyun:
+            f_arka = _kapak_font((KAPAK_FONT_BASLIK, KAPAK_FONT_ETIKET), 170)
+            katman = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+            kd = ImageDraw.Draw(katman)
+            oyun_u = _kapak_buyuk(oyun, dil)
+            sat = _kapak_satirla(oyun_u, f_arka, W - 96, dil)[:2]
+            yy = 280
+            for s in sat:
+                kd.text((64, yy), " ".join(s), font=f_arka, fill=(255, 255, 255, 26))
+                yy += 168
+            tuval.alpha_composite(katman)
+
+    # Başlık metni hazırlığı (kısa, vurucu, 2-3 satır, güvenli alan içinde)
+    cjk = dil == "zh" or bool(re.search(r"[\u4e00-\u9fff]", baslik or ""))
+    baslik_fontlar = (KAPAK_FONT_CJK,) if cjk else (KAPAK_FONT_BASLIK, KAPAK_FONT_ETIKET)
+    etiket_fontlar = (KAPAK_FONT_CJK,) if cjk else (KAPAK_FONT_ETIKET, KAPAK_FONT_BASLIK)
+    baslik_u = _kapak_buyuk(baslik or oyun or "CTRL+A GAME", dil)
+    sol, sag = 64, 64
+    azami_w = W - sol - sag
+
+    vurgu_parcalar = []
+    for v_oge in (vurgu or []):
+        if isinstance(v_oge, dict):
+            m = v_oge.get("metin") or v_oge.get("yazi") or ""
+        else:
+            m = str(v_oge or "")
+        if m:
+            vurgu_parcalar.append(str(m))
+    vurgu_set = set()
+    for m in vurgu_parcalar:
+        for k in m.split():
+            nk = _kapak_norm(k, dil)
+            if nk:
+                vurgu_set.add(nk)
+
+    sec_font, sec_satir, sec_boyut = None, [], 92
+    for boyut in (122, 114, 106, 98, 90, 82, 74):
+        f = _kapak_font(baslik_fontlar, boyut)
+        sat = _kapak_satirla(baslik_u, f, azami_w, dil)
+        if len(sat) <= 3:
+            sec_font, sec_satir, sec_boyut = f, sat, boyut
+            break
+    if sec_font is None:
+        sec_boyut = 70
+        sec_font = _kapak_font(baslik_fontlar, sec_boyut)
+        sec_satir = _kapak_satirla(baslik_u, sec_font, azami_w, dil)[:3]
+
+    satir_h = round(sec_boyut * (1.22 if cjk else 1.24))
+    baslik_h = len(sec_satir) * satir_h
+    # Başlığı Instagram 3:4 grid (y=240..1680) ve Reels/Shorts güvenli alan (y<=1500) içine oturt
+    baslik_y = max(1040, min(1140, 1465 - baslik_h))
+
+    # Üst meta satırı: [KATEGORİ ROZETİ] + OYUN ADI (üst görseli hiç kapatmaz!)
+    meta_y = baslik_y - 78
+    ciz = ImageDraw.Draw(tuval)
+    cur_x = sol
+    if tur_etiket:
+        f_rozet = _kapak_font(etiket_fontlar, 27)
+        et_u = _kapak_buyuk(tur_etiket, dil)
+        bb = f_rozet.getbbox(et_u)
+        tw, th = bb[2] - bb[0], bb[3] - bb[1]
+        pw, ph = tw + 36, 48
+        ciz.rounded_rectangle((cur_x, meta_y, cur_x + pw, meta_y + ph), radius=12, fill=_hex_rgba(vurgu_hex, 255))
+        ciz.text((cur_x + 18 - bb[0], meta_y + (ph - th) // 2 - bb[1] - 1), et_u,
+                 font=f_rozet, fill=_hex_rgba(rozet_yazi, 255))
+        cur_x += pw + 20
+    else:
+        ciz.rounded_rectangle((cur_x, meta_y + 20, cur_x + 56, meta_y + 28), radius=4, fill=_hex_rgba(vurgu_hex, 255))
+        cur_x += 72
+
+    if oyun:
+        f_oyun = _kapak_font(etiket_fontlar, 26)
+        # Oyun adları çoğunlukla İngilizce özel addır (COUNTER-STRIKE 2, RAINBOW SIX SIEGE);
+        # yalnızca Türkçe harf içeriyorsa Türkçe büyük harf uygulanır.
+        oyun_dil = dil if any(c in oyun.lower() for c in "çğıöşü") else "en"
+        oyun_u = _kapak_buyuk(oyun, oyun_dil)
+        kalan_w = W - sag - cur_x
+        while oyun_u and f_oyun.getlength(oyun_u) > kalan_w and len(oyun_u) > 6:
+            oyun_u = oyun_u[:-2].rstrip() + "…"
+        if oyun_u and kalan_w > 120:
+            bb = f_oyun.getbbox(oyun_u)
+            th = bb[3] - bb[1]
+            oy_y = meta_y + (48 - th) // 2 - bb[1]
+            ciz.text((cur_x + 2, oy_y + 2), oyun_u, font=f_oyun, fill=(0, 0, 0, 190))
+            ciz.text((cur_x, oy_y), oyun_u, font=f_oyun, fill=(245, 245, 250, 235))
+
+    # Gölge katmanı + net ana başlık (vurgulu kelimeler canlı vurgu renginde)
+    golge = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    gd = ImageDraw.Draw(golge)
+    ayrac = "" if cjk else " "
+    ayrac_w = 0.0 if cjk else sec_font.getlength(" ")
+    vurgu_str = _kapak_buyuk(" ".join(vurgu_parcalar), dil)
+
+    yy = baslik_y
+    for satir in sec_satir:
+        satir_metin = ayrac.join(satir)
+        gd.text((sol, yy + 8), satir_metin, font=sec_font, fill=(0, 0, 0, 225), stroke_width=8, stroke_fill=(0, 0, 0, 225))
+        yy += satir_h
+    tuval.alpha_composite(golge.filter(ImageFilter.GaussianBlur(radius=10)))
+
+    ciz = ImageDraw.Draw(tuval)
+    yy = baslik_y
+    for satir in sec_satir:
+        xx = float(sol)
+        for parca in satir:
+            vurgulu = (parca in vurgu_str) if cjk else (_kapak_norm(parca, dil) in vurgu_set)
+            renk = _hex_rgba(vurgu_hex, 255) if vurgulu else (255, 255, 255, 255)
+            ciz.text((round(xx), yy), parca, font=sec_font, fill=renk, stroke_width=4, stroke_fill=(8, 8, 12, 235))
+            xx += sec_font.getlength(parca) + ayrac_w
+        yy += satir_h
+
+    # Alt marka imzası (sade, başlık alt uzantılarının altında temiz boşlukla)
+    imza_y = yy + 44
+    if imza_y <= 1590:
+        f_marka = _kapak_font((KAPAK_FONT_ETIKET, KAPAK_FONT_BASLIK), 22)
+        ciz.ellipse((sol, imza_y + 7, sol + 12, imza_y + 19), fill=_hex_rgba(vurgu_hex, 245))
+        ciz.text((sol + 22, imza_y), "CTRL+A GAME", font=f_marka, fill=(235, 235, 242, 185))
+
+    hedef = Path(hedef)
+    hedef.parent.mkdir(parents=True, exist_ok=True)
+    tuval.convert("RGB").save(hedef, format="JPEG", quality=92, optimize=True, progressive=True)
     return hedef
 
 

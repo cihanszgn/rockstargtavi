@@ -77,6 +77,8 @@ class SahteAg:
             if govde == b"":  # oturum sorgusu
                 return 308, {"range": "bytes=0-9"}, ""
             return 200, {}, json.dumps({"id": "YT1"})
+        if "thumbnails/set" in url:
+            return 200, {}, "{}"
         raise AssertionError(f"beklenmeyen ham {method} {url}")
 
     def indir(self, url):
@@ -309,6 +311,7 @@ class Short(Temel):
         self.assertEqual((rec["durum"], rec["kimlik"], rec["oturum"]), ("tamam", "YT1", "https://upload.example/oturum1"))
         v = json.loads(self.manifest.read_text(encoding="utf-8"))["videolar"]["oyun-yama-1"]["tr"]
         self.assertEqual(v["youtube"], "https://www.youtube.com/shorts/YT1")
+        self.assertTrue(any("thumbnails/set" in u for _, u in ag.cagrilar), ag.cagrilar)
 
     def test_short_govdesi(self):
         x = haber()

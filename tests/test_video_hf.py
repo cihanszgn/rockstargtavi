@@ -549,5 +549,77 @@ class UretimYoluTests(unittest.TestCase):
         self.assertNotIn('publish', paket.get('scripts', {}))
 
 
+class KapakAfisTests(unittest.TestCase):
+    def test_gorsel_adresi_oyun_gorseline_duser_ve_haber_gorseli_onceliklidir(self):
+        with tempfile.TemporaryDirectory() as t:
+            g_yol = pathlib.Path(t) / 'gorseller.json'
+            og_yol = pathlib.Path(t) / 'oyun_gorselleri.json'
+            g_yol.write_text(json.dumps({'ozel-haber': {'url': 'https://cdn.example/haber.jpg'}}), encoding='utf-8')
+            og_yol.write_text(json.dumps({
+                'oyun': {'gta-6': {'url': 'https://cdn.example/gta6.jpg'},
+                         'counter-strike-2': {'url': 'https://cdn.example/cs2.jpg'}},
+                'takvim': {'fable': {'url': 'https://cdn.example/fable.jpg'}},
+            }), encoding='utf-8')
+            # Haber görseli varsa öncelikli
+            self.assertEqual(hf.gorsel_adresi('ozel-haber', g_yol, haber={'oyun': 'Grand Theft Auto VI'}, oyun_yol=og_yol),
+                             'https://cdn.example/haber.jpg')
+            # Haber görseli yoksa oyunun resmî görseline düşer (GTA VI -> gta-6, CS2 -> counter-strike-2)
+            self.assertEqual(hf.gorsel_adresi('yok', g_yol, haber={'oyun': 'Grand Theft Auto VI'}, oyun_yol=og_yol),
+                             'https://cdn.example/gta6.jpg')
+            self.assertEqual(hf.gorsel_adresi('yok', g_yol, haber={'oyun': 'Counter-Strike 2'}, oyun_yol=og_yol),
+                             'https://cdn.example/cs2.jpg')
+            self.assertEqual(hf.gorsel_adresi('yok', g_yol, haber={'oyun': 'Fable'}, oyun_yol=og_yol),
+                             'https://cdn.example/fable.jpg')
+            self.assertIsNone(hf.gorsel_adresi('yok', g_yol, haber={'oyun': 'Bilinmeyen Oyun'}, oyun_yol=og_yol))
+
+    def test_gercek_gta6_haberleri_oyun_gorseli_bulur(self):
+        url = hf.gorsel_adresi('gta-vi-kacta-aciliyor-2026-11-17', haber={'oyun': 'Grand Theft Auto VI'})
+        self.assertIsNotNone(url)
+        self.assertTrue(url.startswith('https://'))
+
+    def test_kapak_ciz_yatay_dikey_gorselsiz_ve_turkce_cjk(self):
+        from PIL import Image
+        palet = hf.palet_kur('esports', 'cikis', 330, 0.85, 45)
+        with tempfile.TemporaryDirectory() as t:
+            tmp = pathlib.Path(t)
+            yatay = tmp / 'yatay.jpg'
+            dikey = tmp / 'dikey.jpg'
+            Image.new('RGB', (1200, 630), (210, 60, 140)).save(yatay)
+            Image.new('RGB', (600, 900), (240, 130, 20)).save(dikey)
+
+            for ad, foto, baslik, vurgu, dil in (
+                ('yatay', yatay, 'GTA VI yerel gece yarısı açılıyor', [{'metin': 'gece yarısı', 'tetik': 'gece'}], 'tr'),
+                ('dikey', dikey, 'Cobblestone eşleşmeye eklendi', ['Cobblestone'], 'tr'),
+                ('gorselsiz', None, "Ocarina of Time Switch 2'de yayında", ['Switch 2'], 'tr'),
+                ('cjk', yatay, '新版本正式上线支持中文', ['正式上线'], 'zh'),
+            ):
+                with self.subTest(ad):
+                    cikti = hf.kapak_ciz(tmp / f'{ad}.jpg', foto=foto, baslik=baslik, vurgu=vurgu,
+                                         tur_etiket='ÇIKIŞ', oyun='Grand Theft Auto VI', palet=palet, dil=dil)
+                    self.assertTrue(cikti.exists())
+                    with Image.open(cikti) as im:
+                        self.assertEqual(im.size, (1080, 1920))
+                        self.assertEqual(im.format, 'JPEG')
+
+    def test_kapak_yenile_manifest_kapaklarini_uretir(self):
+        from PIL import Image
+        with tempfile.TemporaryDirectory() as t:
+            tmp = pathlib.Path(t)
+            manifest = tmp / 'videolar.json'
+            manifest.write_text(json.dumps({
+                'surum': 1, 'taban': 'https://medya.test/v/',
+                'videolar': {KIMLIK: {'tr': {'anahtar': 'abc', 'kapak': 'test-kapak.jpg'}}},
+            }), encoding='utf-8')
+            cikti_dir = tmp / 'cikti'
+            with patch.object(v, 'MANIFEST', manifest), patch.object(v, 'CIKTI', cikti_dir), \
+                    patch.object(v, 'haberler', lambda: [haber()]), \
+                    patch.object(v, 'senaryo_oku', lambda hid, d: senaryo()), \
+                    patch.object(hf, 'foto_hazirla', lambda *a, **kw: None):
+                dosyalar = v.kapak_yenile(cikti=lambda *_: None)
+            self.assertEqual([d.name for d in dosyalar], ['test-kapak.jpg'])
+            with Image.open(cikti_dir / 'test-kapak.jpg') as im:
+                self.assertEqual(im.size, (1080, 1920))
+
+
 if __name__ == '__main__':
     unittest.main()

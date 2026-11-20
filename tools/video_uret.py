@@ -1757,7 +1757,7 @@ MOTORLAR = ("hyperframes", "remotion")
 def _hf_cizim(is_klasoru: Path, props: dict, haber: dict, girdi: dict, ses_yolu: Path, dosya: dict, cikti) -> dict:
     """Hyperframes motoru: tema + proje klasörü, güvenli alan denetimi (çizimden önce), çizim, 1080p sıkıştırma, kapak.
     Dönen: {ham, tema, crf}; 720/540 çıkışlarını ve vtt yi uret() ortak kısmı yapar."""
-    foto = video_hf.foto_hazirla(haber["id"], GECICI / "gorsel", is_klasoru / "foto.jpg", cikti)
+    foto = video_hf.foto_hazirla(haber["id"], GECICI / "gorsel", is_klasoru / "foto.jpg", cikti, haber=haber)
     tema = video_hf.tema_sec(haber, girdi, foto)
     json_yaz(is_klasoru / "tema.json", tema)
     cikti(f"tema: {tema['paket']} (renk kaynağı: {tema['renk']}, oyun: {tema['oyun'] or '-'})")
@@ -1768,8 +1768,24 @@ def _hf_cizim(is_klasoru: Path, props: dict, haber: dict, girdi: dict, ses_yolu:
     video_hf.render(hf, ham, kos=_calistir, fps=props["fps"])
     render_sure = time.monotonic() - bas
     crf = video_hf.sikistir(ham, is_klasoru / dosya["mp4_1080"], kos=_calistir)
-    an = min(max(props["kapak_kare"] / props["fps"], 0.8), max(0.2, props["sahneler"][0]["bit"] - 0.2))
-    video_hf.kapak_cikar(is_klasoru / dosya["mp4_1080"], an, is_klasoru / dosya["kapak"], kos=_calistir)
+    kapak_hedef = is_klasoru / dosya["kapak"]
+    try:
+        kapak_foto = video_hf.foto_hazirla(haber["id"], GECICI / "gorsel", is_klasoru / "kapak-foto.jpg", cikti,
+                                           haber=haber, dikey_tercih=True) or foto
+        bas_veri = (props["sahneler"][0].get("veri") or {}) if props.get("sahneler") else {}
+        video_hf.kapak_ciz(
+            kapak_hedef,
+            foto=kapak_foto,
+            baslik=bas_veri.get("baslik") or props["haber"].get("oyun", ""),
+            vurgu=bas_veri.get("vurgu") or [],
+            tur_etiket=props["haber"].get("tur_etiket", ""),
+            oyun=props["haber"].get("oyun", ""),
+            palet=tema["palet"],
+            dil=props.get("dil", "tr"),
+        )
+    except ImportError:
+        an = min(max(props["kapak_kare"] / props["fps"], 0.8), max(0.2, props["sahneler"][0]["bit"] - 0.2))
+        video_hf.kapak_cikar(is_klasoru / dosya["mp4_1080"], an, kapak_hedef, kos=_calistir)
     return {"ham": ham, "tema": tema, "crf": crf, "render_sure": render_sure}
 
 
@@ -1978,6 +1994,60 @@ def bekleyenler(dil: str = "tr", gunluk: bool = False, bugun: date | None = None
     return sonuc
 
 
+def kapak_yenile(haber_id: str | None = None, dil: str | None = None, yukle: bool = False, cikti=print) -> list[Path]:
+    """Manifestteki hazır videoların kapak fotoğraflarını (*-kapak.jpg) oyun görseli odaklı yeni afişle yeniden çizer;
+    --yukle verilirse medya sunucusundaki mevcut kapak dosyalarının üstüne yükler (video yeniden çizilmez)."""
+    ayar = video_ayari()
+    icerik = haberler()
+    haber_map = {h["id"]: h for h in icerik if isinstance(h, dict) and h.get("id")}
+    m = manifest_oku()
+    CIKTI.mkdir(parents=True, exist_ok=True)
+    uretilen: list[Path] = []
+    for hid, diller in sorted((m.get("videolar") or {}).items()):
+        if haber_id and hid != haber_id:
+            continue
+        haber = haber_map.get(hid)
+        if not haber:
+            cikti(f"atlandı (haber yok): {hid}")
+            continue
+        for d, kayit in sorted((diller or {}).items()):
+            if dil and d != dil:
+                continue
+            kapak_ad = (kayit or {}).get("kapak")
+            if not kapak_ad:
+                continue
+            senaryo, baslik, vurgu = None, "", []
+            try:
+                senaryo = senaryo_oku(hid, d)
+                hazir = senaryo_hazirla(senaryo, haber, d)
+                bas_veri = (hazir["sahneler"][0].get("veri") or {}) if hazir.get("sahneler") else {}
+                baslik = bas_veri.get("baslik") or ""
+                vurgu = bas_veri.get("vurgu") or []
+            except SenaryoHatasi:
+                baslik = ((haber.get("diller") or {}).get(d) or {}).get("baslik") or haber.get("oyun", "")
+            girdi = video_hf.tema_girdisi(haber, senaryo, icerik)
+            foto = video_hf.foto_hazirla(hid, GECICI / "gorsel", GECICI / "kapak-foto" / f"{hid}.jpg", cikti,
+                                         haber=haber, dikey_tercih=True)
+            tema = video_hf.tema_sec(haber, girdi, foto)
+            tur_et = TUR_ETIKET.get(d, TUR_ETIKET["en"]).get(haber.get("tur"), "")
+            hedef = CIKTI / kapak_ad
+            video_hf.kapak_ciz(
+                hedef,
+                foto=foto,
+                baslik=baslik or haber.get("oyun", ""),
+                vurgu=vurgu,
+                tur_etiket=tur_et,
+                oyun=haber.get("oyun", ""),
+                palet=tema["palet"],
+                dil=d,
+            )
+            uretilen.append(hedef)
+            cikti(f"kapak: {kapak_ad} (görsel={'var' if foto else 'yok'})")
+    if yukle and uretilen:
+        yukle_dosyalar(uretilen, ayar["yukleme_hedefi"], cikti)
+    return uretilen
+
+
 def main(argv: list[str] | None = None) -> int:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
@@ -2002,12 +2072,19 @@ def main(argv: list[str] | None = None) -> int:
     b.add_argument("--gunluk", action="store_true", help="video.gunluk_en_fazla sınırını uygula")
     b.add_argument("--arsiv", action="store_true", help="kalıcı türdeki eski haberlerin geçerli senaryolarını da listele")
     b.add_argument("--motor", choices=MOTORLAR, default="hyperframes")
+    k = alt.add_parser("kapak-yenile")
+    k.add_argument("--id", default=None, help="yalnız bu haberin kapaklarını yenile")
+    k.add_argument("--dil", default=None, help="yalnız bu dilin kapaklarını yenile")
+    k.add_argument("--yukle", action="store_true", help="yenilenen kapakları medya sunucusuna yükle")
     a = p.parse_args(argv)
     try:
         if a.komut == "dogrula":
             return dogrula(a.id, a.dil)
         if a.komut == "bekleyenler":
             bekleyenler(a.dil, a.gunluk, motor=a.motor, arsiv=a.arsiv)
+            return 0
+        if a.komut == "kapak-yenile":
+            kapak_yenile(a.id, a.dil, a.yukle)
             return 0
         uret(a.id, a.dil, a.ses, a.yukle, a.zorla, motor=a.motor, onizleme=Path(a.onizleme) if a.onizleme else None,
              tema_paketi=a.tema)

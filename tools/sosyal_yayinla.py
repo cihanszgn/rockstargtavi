@@ -489,7 +489,7 @@ def yt_url_duzelt(sonuc: dict, tur) -> dict:
 
 
 def yt_kapak(ag, tok, video_kimlik, kapak_adresi) -> str | None:
-    """Derleme küçük resmi (en iyi çaba: kanal doğrulanmamışsa API reddeder, video yine yayında kalır). -> not | None"""
+    """Video küçük resmi (en iyi çaba: kanal doğrulanmamışsa ya da Shorts reddederse video yine yayında kalır). -> not | None"""
     try:
         resim = ag.indir(kapak_adresi)
         durum, _, metin = ag.ham("POST", f"https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId={video_kimlik}",
@@ -517,7 +517,7 @@ def yt_paylas(ag, sir, dil, x, link, ayar, ara, video) -> dict:
         raise PaylasimHatasi(f"YouTube yükleme oturumu açılamadı (HTTP {durum}): {metin[:200]}", kesin=True)
     ara(oturum=oturum, boyut=len(bayt))  # baytlar gitmeden önce kaydedilir
     sonuc = yt_url_duzelt(yt_yukle(ag, oturum, bayt), tur)
-    if tur == "derleme" and video.get("kapak"):
+    if tur != "klip" and video.get("kapak"):
         kapak_not = yt_kapak(ag, tok, sonuc["kimlik"], video["kapak"])
         if kapak_not:
             sonuc = {**sonuc, "kapak_not": kapak_not}
