@@ -54,6 +54,21 @@
   "url": "https://www.instagram.com/p/Df0ivn6DHO-/",
   "zaman": "2026-11-16T23:31:59+00:00"
  },
+ "crusader-kings-iii-silk-silver-2026-11-17|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 9369899,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "crusader-kings-iii-silk-silver-2026-11-17",
+  "kapak_not": "küçük resim yüklenmedi: POST https://www.googleapis.com/upload/youtube/v3/thumbnails/set → HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"The user has uploaded too many thumbnails recently. Please try the request again later.\",\n    \"errors\": [\n      {\n        \"message\": \"The user has uploaded too many thumbnails recently. Please tr",
+  "kimlik": "UrgYr1C7K2c",
+  "niyet_zamani": "2026-11-20T10:01:20+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg0cOWK4A7EhSlQ-iL-sTmJmfM6ILaS8AccpNPjbfnAtmj7w8YiT4diFpT_sDU6IvQRG4A0uE9RYLAS5HNaEd7JqMoyxmsP0CLtq-trcy6c",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/UrgYr1C7K2c",
+  "zaman": "2026-11-20T10:01:20+00:00"
+ },
  "cs2-cobblestone-matchmaking|tr|instagram|reel": {
   "bicim": "reel",
   "dil": "tr",
