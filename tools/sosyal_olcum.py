@@ -375,6 +375,24 @@ def zaman_oku(s):
         return None
 
 
+def hesap_kapali_mi(ayar: dict, platform: str, dil: str) -> bool:
+    """ayarlar.json bu platform+hesabı açıkça kapattıysa True (ayar boşsa/yoksa False)."""
+    if not isinstance(ayar, dict) or not ayar:
+        return False
+    if dil == sy.KLIP_HESABI:
+        klip = ayar.get("klip")
+        return isinstance(klip, dict) and klip.get(platform) is False
+    hesaplar = ayar.get("hesaplar")
+    if not isinstance(hesaplar, dict):
+        return False
+    esleme = ((ayar.get("hesap_esleme") or {}).get(platform) or {})
+    ilgili = [d for d in sy.DILLER if d == dil or esleme.get(d) == dil]
+    anahtarlar = ("instagram", "instagram_reel") if platform == "instagram" else ("youtube",)
+    if not any(d in hesaplar for d in ilgili):
+        return False
+    return not any(bool((hesaplar.get(d) or {}).get(a)) for d in ilgili for a in anahtarlar)
+
+
 def calistir(*, kayit_yolu=KAYIT, manifest_yolu=MANIFEST, ayar_yolu=AYAR, olcum_yolu=OLCUM, ozet_yolu=OZET,
              tum: dict, ag, simdi: datetime, yaz: bool = True) -> tuple[dict, str, list]:
     gunluk = Gunluk(list(tum.values()))
@@ -392,6 +410,10 @@ def calistir(*, kayit_yolu=KAYIT, manifest_yolu=MANIFEST, ayar_yolu=AYAR, olcum_
     for platform in ("youtube", "instagram"):
         for dil in (*sy.DILLER, sy.KLIP_HESABI):
             sir = sy.hesap_sirri(tum, platform, dil)
+            if hesap_kapali_mi(ayar, platform, dil):
+                if sir:
+                    gunluk(f"Ayarda kapalı, atlandı: {platform}/{dil}")
+                continue
             liste = [x for x in hedef if x["platform"] == platform and
                      (x.get("hesap") or sy.hesap_coz(ayar, tum, platform, x["dil"])[0]) == dil]
             if not sir:
@@ -522,6 +544,17 @@ def selftest() -> int:
                 raise sy.PaylasimHatasi("GET x → HTTP 400: " + json.dumps({"error": {"message": "API access blocked", "code": 200, "error_subcode": 5258005}}))
         o4, ozet4, h4 = calistir(tum=sirlar, ag=Bozuk(), simdi=simdi + timedelta(days=3), **yollar)
         assert h4 and "engelli" in ozet4 and len(o4["kayitlar"]) == 2
+        # ayarda Instagram kapalı: Meta API çağrısı yapılmaz, YouTube devam eder
+        (t / "ayar.json").write_text(json.dumps({
+            "hesap_esleme": {"instagram": {"en": "tr"}, "youtube": {}},
+            "hesaplar": {d: {"instagram": False, "instagram_reel": False, "youtube": True} for d in sy.DILLER},
+            "klip": {"youtube": True, "instagram": False},
+        }), encoding="utf-8")
+        ag5 = SahteAg()
+        o5, _, h5 = calistir(tum=sirlar, ag=ag5, simdi=simdi + timedelta(days=4), **{**yollar, "ayar_yolu": t / "ayar.json"})
+        assert not any("graph." in u for u in ag5.cagri), ag5.cagri
+        assert "youtube|tr" in o5["kayitlar"][-1]["hesaplar"] and "instagram|tr" not in o5["kayitlar"][-1]["hesaplar"]
+        assert not any(h["platform"] == "instagram" for h in h5), h5
     print("selftest tamam")
     return 0
 
