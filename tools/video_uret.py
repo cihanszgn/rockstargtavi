@@ -1995,14 +1995,16 @@ def bekleyenler(dil: str = "tr", gunluk: bool = False, bugun: date | None = None
 
 
 def kapak_yenile(haber_id: str | None = None, dil: str | None = None, yukle: bool = False, cikti=print) -> list[Path]:
-    """Manifestteki hazır videoların kapak fotoğraflarını (*-kapak.jpg) oyun görseli odaklı yeni afişle yeniden çizer;
-    --yukle verilirse medya sunucusundaki mevcut kapak dosyalarının üstüne yükler (video yeniden çizilmez)."""
+    """Manifestteki hazır videoların kapak fotoğraflarını oyun görseli odaklı yeni afişle yeniden çizer.
+    Medya sunucusunda eski dosyaların üstüne yazma kapalı olabildiği ve CDN önbelleği temizlensin diye
+    içerik özetli yeni dosya adı (<taban>-kapak-<ozet6>.jpg) üretir; --yukle ile yükleyip manifesti günceller."""
     ayar = video_ayari()
     icerik = haberler()
     haber_map = {h["id"]: h for h in icerik if isinstance(h, dict) and h.get("id")}
     m = manifest_oku()
     CIKTI.mkdir(parents=True, exist_ok=True)
     uretilen: list[Path] = []
+    degisiklikler: list[tuple[str, str, str]] = []
     for hid, diller in sorted((m.get("videolar") or {}).items()):
         if haber_id and hid != haber_id:
             continue
@@ -2030,9 +2032,9 @@ def kapak_yenile(haber_id: str | None = None, dil: str | None = None, yukle: boo
                                          haber=haber, dikey_tercih=True)
             tema = video_hf.tema_sec(haber, girdi, foto)
             tur_et = TUR_ETIKET.get(d, TUR_ETIKET["en"]).get(haber.get("tur"), "")
-            hedef = CIKTI / kapak_ad
+            gecici = GECICI / "kapak-yenile" / f"{hid}-{d}.jpg"
             video_hf.kapak_ciz(
-                hedef,
+                gecici,
                 foto=foto,
                 baslik=baslik or haber.get("oyun", ""),
                 vurgu=vurgu,
@@ -2041,10 +2043,25 @@ def kapak_yenile(haber_id: str | None = None, dil: str | None = None, yukle: boo
                 palet=tema["palet"],
                 dil=d,
             )
+            ozet = hashlib.sha256(gecici.read_bytes()).hexdigest()[:6]
+            kok = re.sub(r"-kapak(?:-[0-9a-f]{6})?\.jpg$", "", kapak_ad)
+            yeni_ad = f"{kok}-kapak-{ozet}.jpg"
+            if yeni_ad == kapak_ad:
+                cikti(f"atlandı (güncel): {yeni_ad}")
+                continue
+            hedef = CIKTI / yeni_ad
+            shutil.copyfile(gecici, hedef)
             uretilen.append(hedef)
-            cikti(f"kapak: {kapak_ad} (görsel={'var' if foto else 'yok'})")
+            degisiklikler.append((hid, d, yeni_ad))
+            cikti(f"kapak: {yeni_ad} (görsel={'var' if foto else 'yok'})")
     if yukle and uretilen:
         yukle_dosyalar(uretilen, ayar["yukleme_hedefi"], cikti)
+    if degisiklikler:
+        m = manifest_oku()
+        for hid, d, yeni_ad in degisiklikler:
+            if hid in m.get("videolar", {}) and d in m["videolar"][hid]:
+                m["videolar"][hid][d] = {**m["videolar"][hid][d], "kapak": yeni_ad}
+        manifest_yaz(m)
     return uretilen
 
 

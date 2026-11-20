@@ -612,12 +612,16 @@ class KapakAfisTests(unittest.TestCase):
             }), encoding='utf-8')
             cikti_dir = tmp / 'cikti'
             with patch.object(v, 'MANIFEST', manifest), patch.object(v, 'CIKTI', cikti_dir), \
+                    patch.object(v, 'GECICI', tmp / 'gecici'), \
                     patch.object(v, 'haberler', lambda: [haber()]), \
                     patch.object(v, 'senaryo_oku', lambda hid, d: senaryo()), \
                     patch.object(hf, 'foto_hazirla', lambda *a, **kw: None):
                 dosyalar = v.kapak_yenile(cikti=lambda *_: None)
-            self.assertEqual([d.name for d in dosyalar], ['test-kapak.jpg'])
-            with Image.open(cikti_dir / 'test-kapak.jpg') as im:
+            self.assertEqual(len(dosyalar), 1)
+            self.assertRegex(dosyalar[0].name, r'^test-kapak-[0-9a-f]{6}\.jpg$')
+            guncel = json.loads(manifest.read_text(encoding='utf-8'))
+            self.assertEqual(guncel['videolar'][KIMLIK]['tr']['kapak'], dosyalar[0].name)
+            with Image.open(dosyalar[0]) as im:
                 self.assertEqual(im.size, (1080, 1920))
 
 
