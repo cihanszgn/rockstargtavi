@@ -538,15 +538,26 @@ HEDEFLER = (("x", "gorsel", "x"), ("reddit", "gorsel", "reddit"), ("instagram", 
 VARSAYILAN_SINIR = {"x": 2, "reddit": 2, "instagram": 2, "instagram_reel": 2, "youtube": 2}
 
 
-def sessiz_saat_mi(ayar: dict, saat: int) -> bool:
-    """video_sessiz_saat_utc {bas, son} (UTC, gece yarısını aşabilir) içinde mi? Ayar yok/geçersizse False."""
-    c = (ayar or {}).get("video_sessiz_saat_utc")
+def _aralik_icinde_mi(c, saat: int) -> bool:
     if not isinstance(c, dict):
         return False
     bas, son = c.get("bas"), c.get("son")
     if any(isinstance(v, bool) or not isinstance(v, int) or not 0 <= v <= 23 for v in (bas, son)) or bas == son:
         return False
     return bas <= saat < son if bas < son else (saat >= bas or saat < son)
+
+
+def sessiz_saat_mi(ayar: dict, saat: int) -> bool:
+    """video_sessiz_saat_utc {bas, son} (UTC, gece yarısını aşabilir) içinde mi? Ayar yok/geçersizse False."""
+    return _aralik_icinde_mi((ayar or {}).get("video_sessiz_saat_utc"), saat)
+
+
+def klip_sessiz_saat_mi(ayar: dict, saat: int) -> bool:
+    """Klip hesabı sessiz saati: klip.sessiz_saat_utc tanımlıysa onu (null/boş=kapalı), yoksa video_sessiz_saat_utc'yi kullanır."""
+    k = (ayar or {}).get("klip")
+    if isinstance(k, dict) and "sessiz_saat_utc" in k:
+        return _aralik_icinde_mi(k.get("sessiz_saat_utc"), saat)
+    return sessiz_saat_mi(ayar, saat)
 
 
 def konu_veya_id(x: dict) -> str:
@@ -638,8 +649,10 @@ def bugunku_tur_sayisi(kayit: dict, ad: str, hesap: str, gun: str, turler) -> in
 
 def klip_ayari(ayar: dict) -> dict:
     k = ayar.get("klip") or {}
+    ara = k.get("en_az_ara_saat", 0)
     return {"gunluk_en_fazla": {**KLIP_SINIR_VARSAYILAN, **(k.get("gunluk_en_fazla") or {})},
             "derleme_gunluk_en_fazla": int(k.get("derleme_gunluk_en_fazla", 1)),
+            "en_az_ara_saat": 0 if isinstance(ara, bool) or not isinstance(ara, (int, float)) or ara <= 0 else float(ara),
             # Hangi platforma klip gitsin: YouTube açık, Instagram varsayılan kapalı (açılsa da ayrı IG_KLIP_* sırrı ister).
             "platformlar": {"youtube": bool(k.get("youtube", True)), "instagram_reel": bool(k.get("instagram", False))}}
 
@@ -668,6 +681,14 @@ def ayni_konu_yakin(zaman_, simdi: datetime, ayar: dict) -> bool:
     saat = float((ayar or {}).get("ayni_konu_ara_saat", 0) or 0)
     dt = sk.zaman(zaman_) if zaman_ else None
     return bool(saat and dt and timedelta(0) <= simdi - dt < timedelta(hours=saat))
+
+
+def son_gonderi_yakin(zaman_, simdi: datetime, saat) -> bool:
+    """Son gönderi `saat` saatten yeni mi? (Aynı hesapta art arda video basmayı önler.)"""
+    if isinstance(saat, bool) or not isinstance(saat, (int, float)) or saat <= 0:
+        return False
+    dt = sk.zaman(zaman_) if zaman_ else None
+    return bool(dt and timedelta(0) <= simdi - dt < timedelta(hours=float(saat)))
 
 
 def dil_sirasi(ayar, kuyruk, kayit, simdi, hesap, platform, uyeler, son_dil) -> list[str]:
@@ -883,6 +904,9 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
             ortak = any(d != hesap for d in uyeler)
             en_az = int((ayar.get("ana_dil_en_az") or {}).get(ad, 0)) if ortak and hesap in uyeler else 0
             son_z, son_d, son_konu = son_gonderi(kayit, hesap, ad)
+            if bicim in ("reel", "short") and son_gonderi_yakin(son_z, simdi, ayar.get("video_en_az_ara_saat")):
+                cikti(f"{ad}/{hesap}: son videodan bu yana {ayar['video_en_az_ara_saat']} saat dolmadı, sıradaki çalışmaya kalır")
+                continue
             yasak_konu = son_konu if ortak and ayni_konu_yakin(son_z, simdi, ayar) else None
 
             def adaylari(dil, hesap=hesap, platform=platform, bicim=bicim, yasak_konu=yasak_konu, ad=ad, uyeler=uyeler):
@@ -1020,6 +1044,13 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                       f"({', '.join(eksik_sirlar(tum, platform, KLIP_HESABI))})")
             continue
         if (KLIP_HESABI, platform) in kullanilan:
+            continue
+        if klip_sessiz_saat_mi(ayar, simdi.hour):
+            cikti(f"{ad}/{KLIP_HESABI}: sessiz saat (UTC {simdi.hour}), klip bu çalışmada yayınlanmaz; sıradaki çalışmaya kalır")
+            continue
+        son_z, _, _ = son_gonderi(kayit, KLIP_HESABI, ad)
+        if son_gonderi_yakin(son_z, simdi, kayar["en_az_ara_saat"]):
+            cikti(f"{ad}/{KLIP_HESABI}: son klipten bu yana {kayar['en_az_ara_saat']} saat dolmadı, sıradaki çalışmaya kalır")
             continue
         hak = min(1, ayar.get("calisma_basina_en_fazla", 1))
         for x in klipler:

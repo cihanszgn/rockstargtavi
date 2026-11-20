@@ -66,6 +66,11 @@ jobs:
           YT_ZH_CLIENT_ID: ${{ secrets.YT_ZH_CLIENT_ID }}
           YT_ZH_CLIENT_SECRET: ${{ secrets.YT_ZH_CLIENT_SECRET }}
           YT_ZH_REFRESH_TOKEN: ${{ secrets.YT_ZH_REFRESH_TOKEN }}
+          YT_KLIP_CLIENT_ID: ${{ secrets.YT_KLIP_CLIENT_ID }}
+          YT_KLIP_CLIENT_SECRET: ${{ secrets.YT_KLIP_CLIENT_SECRET }}
+          YT_KLIP_REFRESH_TOKEN: ${{ secrets.YT_KLIP_REFRESH_TOKEN }}
+          IG_KLIP_USER_ID: ${{ secrets.IG_KLIP_USER_ID }}
+          IG_KLIP_TOKEN: ${{ secrets.IG_KLIP_TOKEN }}
         run: python tools/sosyal_olcum.py || echo "::warning::ölçüm aracı hata kodu döndürdü; sonuç yazılmadı olabilir"
 
       - name: Sonucu depoya yaz

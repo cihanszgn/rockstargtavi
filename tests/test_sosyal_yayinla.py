@@ -614,12 +614,48 @@ class SessizSaat(Temel):
             if x["bicim"] in ("reel", "short"):
                 self.assertNotIn((x["saat"] + 22) % 24, (21, 22, 23, 0, 1, 2, 3), x)
 
-    def test_klip_hesabi_etkilenmez(self):
-        # klip hesabı ayrı geçiştir; sessiz saat yalnız haber hesaplarının Reels/Shorts'unu durdurur
-        import inspect
-        kaynak = inspect.getsource(sy.calistir)
-        self.assertEqual(kaynak.count("sessiz_saat_mi("), 1)
-        self.assertLess(kaynak.index("sessiz_saat_mi("), kaynak.index("# ---- Klip/derleme"))
+    def test_klip_sessiz_saat_ayari_ve_geri_dususu(self):
+        # klip.sessiz_saat_utc tanımlıysa onu kullanır; null/boşsa kapatır; yoksa video_sessiz_saat_utc'ye düşer
+        a = {"video_sessiz_saat_utc": {"bas": 21, "son": 4}, "klip": {"sessiz_saat_utc": {"bas": 19, "son": 10}}}
+        acik = [h for h in range(24) if not sy.klip_sessiz_saat_mi(a, h)]
+        self.assertEqual(acik, [10, 11, 12, 13, 14, 15, 16, 17, 18])  # TR 13:00-21:59
+        self.assertFalse(sy.klip_sessiz_saat_mi({**a, "klip": {"sessiz_saat_utc": None}}, 23))
+        self.assertTrue(sy.klip_sessiz_saat_mi({"video_sessiz_saat_utc": {"bas": 21, "son": 4}, "klip": {}}, 23))
+        self.assertFalse(sy.klip_sessiz_saat_mi({"video_sessiz_saat_utc": {"bas": 21, "son": 4}, "klip": {}}, 12))
+
+    def test_video_en_az_ara_saat_haber_serisini_frenler_gorseli_etkilemez(self):
+        a = self.ayari()
+        a["video_en_az_ara_saat"] = 1.5
+        a["gunluk_en_fazla"] = {"x": 2, "reddit": 2, "instagram": 4, "instagram_reel": 6, "youtube": 8}
+        h1, h2 = haber("h1"), haber("h2")
+        self.manifest.write_text(json.dumps({
+            "surum": 1, "taban": "https://medya.test/v/",
+            "videolar": {hid: {"tr": {"anahtar": hid, "mp4_1080": f"{hid}.mp4", "mp4_720": f"{hid}.mp4",
+                                      "mp4_540": f"{hid}.mp4", "kapak": f"{hid}.jpg", "vtt": f"{hid}.vtt",
+                                      "sure": 30.0, "onay": True}} for hid in ("h1", "h2")},
+        }), encoding="utf-8")
+        # 10:17 UTC: ilk Short + Reel gider (Instagram çalışma başına tek gönderi: görsel bu turda gitmez)
+        g1, hata1, _ = self.calistir(SahteAg(), a, veri=[h1, h2], simdi=self.saat(10))
+        self.assertEqual((g1, hata1), (2, []))
+        self.assertEqual(len([k for k in self.kayitlar() if k.endswith("|short")]), 1)
+        self.assertEqual(len([k for k in self.kayitlar() if k.endswith("|reel")]), 1)
+        # 11:17 UTC (1 saat sonra < 1.5 sa): ikinci Short/Reel gitmez, yalnız görsel gider
+        g2, hata2, _ = self.calistir(SahteAg(), a, veri=[h1, h2], simdi=self.saat(11))
+        self.assertEqual((g2, hata2), (1, []))
+        self.assertEqual(len([k for k in self.kayitlar() if k.endswith("|short")]), 1)
+        self.assertEqual(len([k for k in self.kayitlar() if k.endswith("|reel")]), 1)
+        self.assertEqual(len([k for k in self.kayitlar() if k.endswith("|gorsel")]), 1)
+        # 12:17 UTC (2 saat sonra >= 1.5 sa): ikinci Short + Reel gider
+        g3, hata3, _ = self.calistir(SahteAg(), a, veri=[h1, h2], simdi=self.saat(12))
+        self.assertEqual((g3, hata3), (2, []))
+        self.assertEqual(len([k for k in self.kayitlar() if k.endswith("|short")]), 2)
+        self.assertEqual(len([k for k in self.kayitlar() if k.endswith("|reel")]), 2)
+
+    def test_ayarlar_json_klip_ve_video_zamanlama_kurallari(self):
+        gercek = json.loads((pathlib.Path(__file__).resolve().parents[1] / "sosyal" / "ayarlar.json").read_text(encoding="utf-8"))
+        self.assertEqual(gercek["klip"]["sessiz_saat_utc"], {"bas": 19, "son": 10})
+        self.assertGreaterEqual(gercek["klip"]["en_az_ara_saat"], 5)
+        self.assertGreaterEqual(gercek["video_en_az_ara_saat"], 1.5)
 
 
 class YtKapakGuncelle(Temel):

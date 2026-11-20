@@ -288,5 +288,31 @@ class ManifestHesapKorumasi(tky.KlipPaylasim):
         self.assertFalse(any("hesap: tr" in x and "klip" in x for x in satirlar))
 
 
+class KlipZamanlama(tky.KlipPaylasim):
+    """Klip kanalı sessiz saatte (TR 22:00-13:00) ve iki klip arası süre dolmadan paylaşım yapmaz."""
+
+    def test_sessiz_saatte_klip_gitmez_aktif_saatte_5_saat_arayla_gider(self):
+        self.klip_yaz({"k1": oge(zaman="2026-11-15T08:00:00Z"), "k2": oge(zaman="2026-11-15T08:05:00Z")})
+        a = self.hesap_ayari(instagram=False, sessiz_saat_utc={"bas": 19, "son": 10}, en_az_ara_saat=5)
+        ag = KlipAg()
+        # Gece/sabah (UTC 01, 05, 09, 19, 23): hiç klip gitmez
+        for h in (1, 5, 9, 19, 23):
+            g, hata, _ = self.kos(ag, a, simdi=SIMDI.replace(hour=h))
+            self.assertEqual((g, hata), (0, []), h)
+        self.assertEqual(self.kayitlar(), {})
+        # UTC 10 (TR 13:00): ilk klip gider
+        g, hata, _ = self.kos(ag, a, simdi=SIMDI.replace(hour=10))
+        self.assertEqual((g, hata), (1, []))
+        self.assertEqual(set(self.kayitlar()), {"k1|klip|youtube|short"})
+        # UTC 12 ve 14 (2 ve 4 saat sonra < 5 sa): ikinci klip bekler
+        for h in (12, 14):
+            g, hata, _ = self.kos(ag, a, simdi=SIMDI.replace(hour=h))
+            self.assertEqual((g, hata), (0, []), h)
+        # UTC 16 (TR 19:00, 6 saat sonra >= 5 sa): ikinci klip gider
+        g, hata, _ = self.kos(ag, a, simdi=SIMDI.replace(hour=16))
+        self.assertEqual((g, hata), (1, []))
+        self.assertEqual(set(self.kayitlar()), {"k1|klip|youtube|short", "k2|klip|youtube|short"})
+
+
 if __name__ == "__main__":
     unittest.main()
