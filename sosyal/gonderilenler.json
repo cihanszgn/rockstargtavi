@@ -579,6 +579,20 @@
   "url": "https://www.instagram.com/p/Df1x1LxjVWJ/",
   "zaman": "2026-11-17T11:03:02+00:00"
  },
+ "melvor-idle-2-early-access-cikis-2026-11-17|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 8737303,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "melvor-idle-2-early-access-2026-11-17",
+  "kimlik": "xS8VZWUFKb8",
+  "niyet_zamani": "2026-11-20T08:55:12+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg37GKEgicrBjglkHPZFEFqhU6mtzw9JouJZxgc4UCqt9KWA79BFzGPRdQdLZvCpKkj8b_npFm-D9kfktK9hGXz1MFEl0m9cq_IJRIkKPdI",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/xS8VZWUFKb8",
+  "zaman": "2026-11-20T08:55:12+00:00"
+ },
  "mlb-the-show-27-tech-test-now-later-packs-2026-11-17|fr|instagram|reel": {
   "bicim": "reel",
   "dil": "fr",
