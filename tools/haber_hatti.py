@@ -250,7 +250,7 @@ def yedek_puan(candidate):
 
 
 def kota_suresi(message):
-    if not any(x in message.lower() for x in ('429', 'quota', 'usage limit', 'usage_limit', 'rate limit', 'rate_limit', 'freeusagelimiterror', 'retryafterms')):
+    if not any(x in message.lower() for x in ('429', 'quota', 'usage limit', 'usage_limit', 'rate limit', 'rate_limit', 'weekly limit', 'hit your limit', 'freeusagelimiterror', 'retryafterms')):
         return None
     match = re.search(r'retryAfterMs[\s\x22\x27:=]+(\d+)', message, re.I)
     return max(1, int(match[1]) / 1000) if match else 12 * 3600
@@ -1091,21 +1091,29 @@ class Hat:
         except RuntimeError as exc:
             if '[rejected]' not in str(exc) or not any(s in str(exc) for s in ('fetch first', 'non-fast-forward')):
                 raise
+            # İlk push kesin olarak reddedildi; 2. push öncesi rebase/doğrulama hatasında yerel commit geri alınır ki sonraki tur pull'da kilitlenmesin.
             try:
-                self.komut(['git', 'pull', '--rebase', 'origin', 'main'], 90)
-            except (RuntimeError, TimeoutError):
-                self.komut(['git', 'rebase', '--abort'], 30)
+                try:
+                    self.komut(['git', 'pull', '--rebase', 'origin', 'main'], 90)
+                except (RuntimeError, TimeoutError):
+                    self.komut(['git', 'rebase', '--abort'], 30)
+                    raise
+                # İki taraf birlikte yeniden doğrulanmadan ikinci push yok.
+                rebuilt = self.komut([sys.executable, 'tools/sosyal_derle.py'], 240)
+                if not re.search(r'\b0 uyarı', rebuilt):
+                    hata('rebase sonrası derleme sıfır uyarı doğrulanamadı')
+                self.oto('kontrol')
+                self.komut([sys.executable, '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_haber_oto.py'], 120)
+                self.komut(['git', 'diff', '--check'])
+                if self.git('status', '--porcelain'):
+                    hata('rebase sonrası derleme farklı; belirsizlikte push yapılmadı')
+                self.oto('kilit-kontrol', '--token', token)
+            except (ValueError, RuntimeError, OSError, TimeoutError):
+                if self.head:
+                    self.komut(['git', 'reset', '--hard', self.head], 30)
+                    self.committed = False
+                    self.sonuc['commit'] = None
                 raise
-            # İki taraf birlikte yeniden doğrulanmadan ikinci push yok.
-            rebuilt = self.komut([sys.executable, 'tools/sosyal_derle.py'], 240)
-            if not re.search(r'\b0 uyarı', rebuilt):
-                hata('rebase sonrası derleme sıfır uyarı doğrulanamadı')
-            self.oto('kontrol')
-            self.komut([sys.executable, '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_haber_oto.py'], 120)
-            self.komut(['git', 'diff', '--check'])
-            if self.git('status', '--porcelain'):
-                hata('rebase sonrası derleme farklı; belirsizlikte push yapılmadı')
-            self.oto('kilit-kontrol', '--token', token)
             self.komut(['git', 'push', 'origin', 'main'], 90)
             self.sonuc['commit'] = self.git('rev-parse', 'HEAD')
         self.sonuc['eklenen'] = [x['id'] for x in articles]

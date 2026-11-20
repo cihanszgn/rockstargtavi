@@ -12,10 +12,13 @@
  "yazar": [
   {"ad":"opencode/big-pickle","tur":"opencode","komut":["opencode","--standalone","run","--model","opencode/big-pickle","--format","json","--auto"],"zaman_asimi":720},
   {"ad":"haiku","tur":"claude","komut":["claude","-p","--model","haiku","--output-format","json","--permission-mode","dontAsk","--tools","WebFetch,WebSearch","--allowedTools","WebFetch,WebSearch,mcp__cio_librarian__library_search"],"zaman_asimi":720},
-  {"ad":"sonnet","tur":"claude","komut":["claude","-p","--model","sonnet","--output-format","json","--permission-mode","dontAsk","--tools","WebFetch,WebSearch","--allowedTools","WebFetch,WebSearch,mcp__cio_librarian__library_search"],"zaman_asimi":720}
+  {"ad":"sonnet","tur":"claude","komut":["claude","-p","--model","sonnet","--output-format","json","--permission-mode","dontAsk","--tools","WebFetch,WebSearch","--allowedTools","WebFetch,WebSearch,mcp__cio_librarian__library_search"],"zaman_asimi":720},
+  {"ad":"gpt-6-luna","tur":"codex","komut":["codex","-a","never","exec","--model","gpt-6-luna","-c","model_reasoning_effort=\"medium\""],"zaman_asimi":720},
+  {"ad":"gpt-6.1-terra","tur":"codex","komut":["codex","-a","never","exec","--model","gpt-6.1-terra","-c","model_reasoning_effort=\"medium\""],"zaman_asimi":720}
  ],
  "denetci": [
   {"ad":"sonnet","tur":"claude","komut":["claude","-p","--model","sonnet","--output-format","json","--permission-mode","dontAsk","--tools","WebFetch,WebSearch","--allowedTools","WebFetch,WebSearch,mcp__cio_librarian__library_search"],"zaman_asimi":600},
+  {"ad":"gpt-6.1-sol","tur":"codex","komut":["codex","-a","never","exec","--model","gpt-6.1-sol","-c","model_reasoning_effort=\"high\""],"zaman_asimi":600},
   {"ad":"opus","tur":"claude","komut":["claude","-p","--model","opus","--output-format","json","--permission-mode","dontAsk","--tools","WebFetch,WebSearch","--allowedTools","WebFetch,WebSearch,mcp__cio_librarian__library_search"],"zaman_asimi":600}
  ]
 }

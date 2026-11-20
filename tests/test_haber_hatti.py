@@ -395,7 +395,41 @@ class HatTests(unittest.TestCase):
     def test_quota_duration_from_response_or_twelve_hour_default(self):
         self.assertEqual(h.kota_suresi('FreeUsageLimitError {"retryAfterMs":7200000}'), 7200)
         self.assertEqual(h.kota_suresi('HTTP 429'), 43200)
+        self.assertEqual(h.kota_suresi("You've hit your weekly limit · resets 1am (Europe/Istanbul)"), 43200)
         self.assertIsNone(h.kota_suresi('connection refused'))
+
+    def test_rejected_push_rebase_conflict_rolls_back_local_commit(self):
+        self.hat.head = self.hat.git('rev-parse', 'HEAD')
+        self.hat.snapshot = h.Anlik(self.root)
+        approved = [{'id': 'test-haber'}]
+        h.oto.json_yaz(self.hat.state / 'onayli-paket.json', approved)
+        original_komut = self.hat.komut
+        def fake_komut(argv, timeout=120, **kwargs):
+            if argv[:2] == [sys.executable, 'tools/gorsel_cek.py']:
+                return ''
+            if argv[:2] == [sys.executable, 'tools/sosyal_derle.py']:
+                return 'Site: 1 sayfa, 0 uyarı.'
+            if argv[:4] == [sys.executable, '-m', 'unittest', 'discover']:
+                return 'OK'
+            if argv == ['git', 'push', 'origin', 'main']:
+                raise RuntimeError('! [rejected] main -> main (fetch first)')
+            if argv == ['git', 'pull', '--rebase', 'origin', 'main']:
+                raise RuntimeError('CONFLICT (content): Merge conflict')
+            if argv == ['git', 'rebase', '--abort']:
+                return ''
+            return original_komut(argv, timeout, **kwargs)
+        def fake_oto(*args, **kwargs):
+            if args and args[0] == 'hazirla':
+                (self.root / 'data/icerik.json').write_text('[{"id":"test-haber"}]\n', encoding='utf-8')
+            return {}
+        with patch.object(self.hat, 'oto', side_effect=fake_oto), \
+                patch.object(self.hat, 'komut', side_effect=fake_komut):
+            with self.assertRaisesRegex(RuntimeError, 'CONFLICT'):
+                self.hat.yayinla(approved, 'test-token')
+        self.assertEqual(self.hat.git('rev-parse', 'HEAD'), self.hat.head)
+        self.assertFalse(self.hat.committed)
+        self.assertIsNone(self.hat.sonuc['commit'])
+        self.assertEqual(self.hat.git('status', '--porcelain'), '')
 
     def test_same_event_keeps_official_url_and_independent_reports(self):
         candidates = [self._aday(0, 'New Game patch released'), self._aday(1, 'New Game patch released', ad='PlayStation Blog')]
