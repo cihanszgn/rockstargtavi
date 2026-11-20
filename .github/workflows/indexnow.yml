@@ -1,0 +1,49 @@
+# Yeni haber yayınlanınca sayfaları IndexNow ile arama motorlarına (Bing, Yandex, Naver, Seznam) bildirir.
+# Yalnız okur ve bildirir; depoya yazmaz. Bu iş akışı kırmızıya düşmez (hata uyarı olarak yazılır).
+# Elle çalıştırma: "tum" işaretlenirse site haritasındaki bütün adresler gider (alan adı taşıma gibi durumlarda).
+name: IndexNow bildirimi
+
+on:
+  push:
+    branches: [main]
+    paths: [data/icerik.json]
+  workflow_dispatch:
+    inputs:
+      tum:
+        description: "Site haritasındaki bütün adresleri bildir"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  bildir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 50
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Bildir
+        env:
+          ONCE: ${{ github.event.before }}
+          SONRA: ${{ github.sha }}
+          TUM: ${{ inputs.tum }}
+        run: |
+          if [ "$TUM" = "true" ]; then
+            python tools/indexnow.py --tum || echo "::warning::IndexNow aracı hata verdi"
+          elif [ -n "$ONCE" ] && git cat-file -e "$ONCE^{commit}" 2>/dev/null; then
+            python tools/indexnow.py --aralik "$ONCE" "$SONRA" || echo "::warning::IndexNow aracı hata verdi"
+          else
+            echo "Karşılaştırılacak önceki commit yok; atlandı."
+          fi

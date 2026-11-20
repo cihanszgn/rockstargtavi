@@ -119,7 +119,7 @@ gizli başlayan her stil `.js` sınıfına bağlı (JavaScript kapalıyken büt�
 - Her sayfada `canonical`, dört dil + `x-default` (=en) `hreflang`, Open Graph/Twitter etiketleri; `sitemap.xml` `xhtml:link` ile dil karşılıklarını verir.
 - RSS: `oyun-haberleri.xml`, `en/game-news.xml`, `fr/actus-jeux.xml`, `es/noticias-juegos.xml` (haber akışı) ve her dilde `feed.xml`.
 - Haber sayfalarında `NewsArticle`, ana sayfada `WebSite` JSON-LD. Paylaşım görseli `og.png` (1200x630, `sosyal_derle.py` üretir).
-- IndexNow anahtarı kökte; gönderme elle yapılır.
+- IndexNow anahtarı kökte. Yeni haber yayınlanınca `.github/workflows/indexnow.yml` eklenen haber sayfalarını ve dil ana sayfalarını kendiliğinden bildirir (`tools/indexnow.py`; bütün site için iş akışını elle "tum" ile çalıştır).
 
 ## DNS (Hostinger)
 A `@` → 185.199.108.153 / .109.153 / .110.153 / .111.153, CNAME `www` → cihanszgn.github.io
