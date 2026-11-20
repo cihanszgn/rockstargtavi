@@ -1,0 +1,142 @@
+{
+ "id": "zenless-zone-zero-3-4-the-finality-of-the-day-2026-11-20",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Zenless Zone Zero 3.4 güncellemesi 2 Aralık’ta geliyor ve S-Rank Robin ücretsiz veriliyor.",
+   "veri": {
+    "ust_etiket": "SÜRÜM 3.4 • 2 ARALIK",
+    "baslik": "ZZZ 3.4: Ücretsiz Robin geliyor",
+    "vurgu": [
+     "Ücretsiz Robin"
+    ],
+    "tuslar": [
+     "Z",
+     "Z",
+     "Z"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "ZENLESS ZONE ZERO",
+    "alt": "THE FINALITY OF THE DAY"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Honkai: Star Rail iş birliğinde giriş yapanlar S-Rank Robin ve yükseltme malzemelerini alıyor. Yeni Void Hunter Sunbringer ve ücretsiz Bangboo Pom-Pom da geliyor; Kafka ise 1 Ocak sonrasında ekleniyor.",
+   "veri": {
+    "baslik": "3.4 yenilikleri",
+    "maddeler": [
+     {
+      "metin": "Girişte ücretsiz S-Rank Robin",
+      "tetik": "Robin"
+     },
+     {
+      "metin": "Yeni Void Hunter: Sunbringer",
+      "tetik": "Sunbringer"
+     },
+     {
+      "metin": "Etkinlikte ücretsiz Bangboo Pom-Pom",
+      "tetik": "Pom-Pom"
+     },
+     {
+      "metin": "Kafka 1 Ocak sonrasında geliyor",
+      "tetik": "Kafka"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "STAR RAIL İŞ BİRLİĞİ",
+    "alt": "ROBIN • POM-POM • KAFKA"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Giriş etkinliklerinden 1.840 ve ek 480 Polychrome, 10 Encrypted Master Tape ile 10 Boopon kazanılıyor.",
+   "veri": {
+    "baslik": "Giriş ödülleri",
+    "platformlar": [
+     "PC",
+     "PS5",
+     "Xbox",
+     "Mobil"
+    ],
+    "sayilar": [
+     {
+      "deger": "480",
+      "etiket": "EK POLYCHROME",
+      "tetik": "480"
+     },
+     {
+      "deger": "10",
+      "etiket": "MASTER TAPE",
+      "tetik": "10"
+     },
+     {
+      "deger": "10",
+      "etiket": "BOOPON",
+      "tetik": "Boopon"
+     }
+    ],
+    "not": "Ayrıca ana giriş etkinliğinden 1.840 Polychrome."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "ETKİNLİK ÖDÜLLERİ",
+    "alt": "POLYCHROME VE TAPE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Güncelleme 2 Aralık’ta yayımlanıyor; özel yayın ödül kodunu 22 Kasım bitmeden kullanın.",
+   "veri": {
+    "etiket": "Çıkış tarihi",
+    "tarih": "2 Aralık",
+    "not": "Özel yayın kodu 22 Kasım 23.59.59 (UTC+8) biter."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "2 ARALIK",
+    "alt": "KOD BİTİŞİ 22 KASIM"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tüm ödül ayrıntıları ve kaynaklar sitemizde, Control A Game’de.",
+   "veri": {
+    "cagri": "Bütün ödüller sitede",
+    "alt": "Resmî bağlantılar ve detaylar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

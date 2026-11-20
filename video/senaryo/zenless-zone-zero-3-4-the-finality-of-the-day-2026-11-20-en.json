@@ -1,0 +1,142 @@
+{
+ "id": "zenless-zone-zero-3-4-the-finality-of-the-day-2026-11-20",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Zenless Zone Zero Version 3.4 launches December 2 with a free S-Rank Robin crossover.",
+   "veri": {
+    "ust_etiket": "VERSION 3.4 • DEC 2",
+    "baslik": "ZZZ 3.4: Free S-Rank Robin",
+    "vurgu": [
+     "Free S-Rank Robin"
+    ],
+    "tuslar": [
+     "Z",
+     "Z",
+     "Z"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "ZENLESS ZONE ZERO",
+    "alt": "THE FINALITY OF THE DAY"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Log in during the Honkai: Star Rail crossover to claim S-Rank Robin and upgrade materials. Void Hunter Sunbringer arrives too, Bangboo Pom-Pom is free via event, and Kafka joins after January 1.",
+   "veri": {
+    "baslik": "What arrives in 3.4",
+    "maddeler": [
+     {
+      "metin": "Free S-Rank Robin on login",
+      "tetik": "Robin"
+     },
+     {
+      "metin": "New Void Hunter: Sunbringer",
+      "tetik": "Sunbringer"
+     },
+     {
+      "metin": "Free Bangboo Pom-Pom event",
+      "tetik": "Pom-Pom"
+     },
+     {
+      "metin": "Kafka arrives after January 1",
+      "tetik": "Kafka"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "STAR RAIL CROSSOVER",
+    "alt": "ROBIN • POM-POM • KAFKA"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Check-in events award 1,840 plus 480 Polychrome, 10 Encrypted Master Tapes, and 10 Boopons.",
+   "veri": {
+    "baslik": "Check-in rewards",
+    "platformlar": [
+     "PC",
+     "PS5",
+     "Xbox",
+     "Mobil"
+    ],
+    "sayilar": [
+     {
+      "deger": "480",
+      "etiket": "BONUS POLYCHROME",
+      "tetik": "480"
+     },
+     {
+      "deger": "10",
+      "etiket": "MASTER TAPES",
+      "tetik": "10"
+     },
+     {
+      "deger": "10",
+      "etiket": "BOOPONS",
+      "tetik": "Boopons"
+     }
+    ],
+    "not": "Plus 1,840 Polychrome from version check-in."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "LOGIN REWARDS",
+    "alt": "POLYCHROME & TAPES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Version 3.4 launches December 2, and the Special Program code expires November 22.",
+   "veri": {
+    "etiket": "Launch date",
+    "tarih": "December 2",
+    "not": "Livestream code expires November 22 (UTC+8)."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "DECEMBER 2",
+    "alt": "CODE EXPIRES NOV 22"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game.",
+   "veri": {
+    "cagri": "Full reward list on site",
+    "alt": "Official links and details in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,142 @@
+{
+ "id": "zenless-zone-zero-3-4-the-finality-of-the-day-2026-11-20",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Zenless Zone Zero 3.4 sort le 2 décembre avec l’agente de rang S Robin gratuite.",
+   "veri": {
+    "ust_etiket": "VERSION 3.4 • 2 DÉC",
+    "baslik": "ZZZ 3.4 : Robin gratuite",
+    "vurgu": [
+     "Robin gratuite"
+    ],
+    "tuslar": [
+     "Z",
+     "Z",
+     "Z"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "ZENLESS ZONE ZERO",
+    "alt": "THE FINALITY OF THE DAY"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Grâce au crossover Honkai: Star Rail, connectez-vous pour obtenir Robin gratuitement. Sunbringer arrive aussi, le Bangboo Pom-Pom est offert en événement et Kafka suit après le 1er janvier.",
+   "veri": {
+    "baslik": "Nouveautés 3.4",
+    "maddeler": [
+     {
+      "metin": "Robin rang S offerte en jeu",
+      "tetik": "Robin"
+     },
+     {
+      "metin": "Nouvelle Void Hunter : Sunbringer",
+      "tetik": "Sunbringer"
+     },
+     {
+      "metin": "Bangboo Pom-Pom gratuit",
+      "tetik": "Pom-Pom"
+     },
+     {
+      "metin": "Kafka après le 1er janvier",
+      "tetik": "Kafka"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CROSSOVER STAR RAIL",
+    "alt": "ROBIN • POM-POM • KAFKA"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Les connexions offrent 1 840 et 480 Polychrome, 10 Encrypted Master Tapes et 10 Boopons.",
+   "veri": {
+    "baslik": "Récompenses de connexion",
+    "platformlar": [
+     "PC",
+     "PS5",
+     "Xbox",
+     "Mobil"
+    ],
+    "sayilar": [
+     {
+      "deger": "480",
+      "etiket": "BONUS POLYCHROME",
+      "tetik": "480"
+     },
+     {
+      "deger": "10",
+      "etiket": "MASTER TAPES",
+      "tetik": "10"
+     },
+     {
+      "deger": "10",
+      "etiket": "BOOPONS",
+      "tetik": "Boopons"
+     }
+    ],
+    "not": "Plus 1 840 Polychrome de connexion."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "RÉCOMPENSES",
+    "alt": "POLYCHROME ET TAPES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "La mise à jour arrive le 2 décembre et le code du live expire le 22 novembre.",
+   "veri": {
+    "etiket": "Date de sortie",
+    "tarih": "2 décembre",
+    "not": "Code valable jusqu’au 22 novembre (UTC+8)."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "2 DÉCEMBRE",
+    "alt": "CODE JUSQU’AU 22 NOV"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game.",
+   "veri": {
+    "cagri": "Tous les détails sur le site",
+    "alt": "Sources officielles et récompenses dans l’article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,142 @@
+{
+ "id": "zenless-zone-zero-3-4-the-finality-of-the-day-2026-11-20",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Zenless Zone Zero 3.4 se lanza el 2 de diciembre y regala a Robin de rango S.",
+   "veri": {
+    "ust_etiket": "VERSIÓN 3.4 • 2 DIC",
+    "baslik": "ZZZ 3.4: Robin gratis",
+    "vurgu": [
+     "Robin gratis"
+    ],
+    "tuslar": [
+     "Z",
+     "Z",
+     "Z"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "ZENLESS ZONE ZERO",
+    "alt": "THE FINALITY OF THE DAY"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "En la colaboración con Honkai: Star Rail podrás reclamar gratis a Robin al iniciar sesión. También llegan Sunbringer, el Bangboo Pom-Pom gratis en evento y Kafka después del 1 de enero.",
+   "veri": {
+    "baslik": "Novedades de la 3.4",
+    "maddeler": [
+     {
+      "metin": "Robin rango S gratis al entrar",
+      "tetik": "Robin"
+     },
+     {
+      "metin": "Nueva Void Hunter: Sunbringer",
+      "tetik": "Sunbringer"
+     },
+     {
+      "metin": "Bangboo Pom-Pom gratis en evento",
+      "tetik": "Pom-Pom"
+     },
+     {
+      "metin": "Kafka tras el 1 de enero",
+      "tetik": "Kafka"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "COLABORACIÓN",
+    "alt": "ROBIN • POM-POM • KAFKA"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Los eventos de registro entregan 1.840 y 480 Polychrome, 10 Encrypted Master Tapes y 10 Boopons.",
+   "veri": {
+    "baslik": "Recompensas de registro",
+    "platformlar": [
+     "PC",
+     "PS5",
+     "Xbox",
+     "Mobil"
+    ],
+    "sayilar": [
+     {
+      "deger": "480",
+      "etiket": "POLYCHROME EXTRA",
+      "tetik": "480"
+     },
+     {
+      "deger": "10",
+      "etiket": "MASTER TAPES",
+      "tetik": "10"
+     },
+     {
+      "deger": "10",
+      "etiket": "BOOPONS",
+      "tetik": "Boopons"
+     }
+    ],
+    "not": "Además de 1.840 Polychrome por registro."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "RECOMPENSAS",
+    "alt": "POLYCHROME Y TAPES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "La versión 3.4 sale el 2 de diciembre y el código del directo caduca el 22 de noviembre.",
+   "veri": {
+    "etiket": "Lanzamiento",
+    "tarih": "2 de diciembre",
+    "not": "Código válido hasta el 22 de noviembre (UTC+8)."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "2 DE DICIEMBRE",
+    "alt": "CÓDIGO HASTA 22 NOV"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game.",
+   "veri": {
+    "cagri": "Todos los detalles en la web",
+    "alt": "Enlaces oficiales y recompensas en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

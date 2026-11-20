@@ -28,7 +28,7 @@
 "2026-11-19"
 ],
 "de/index.html": [
-"69a4a5a51ed4",
+"74f55499c61b",
 "2026-11-20"
 ],
 "de/kostenlose-spiele.html": [
@@ -116,7 +116,11 @@
 "2026-11-16"
 ],
 "de/spiele-news.html": [
-"71d8a74c2bff",
+"4f243a7f4786",
+"2026-11-20"
+],
+"de/spiele/apex-legends.html": [
+"cdb2706e435a",
 "2026-11-20"
 ],
 "de/spiele/battlefield-6.html": [
@@ -180,8 +184,8 @@
 "2026-11-16"
 ],
 "de/spiele/index.html": [
-"4c330227873b",
-"2026-11-19"
+"4611b08534a9",
+"2026-11-20"
 ],
 "de/spiele/knight-online.html": [
 "060ffcc8781a",
@@ -259,6 +263,10 @@
 "d6ab82e0b469",
 "2026-11-18"
 ],
+"de/spiele/zenless-zone-zero.html": [
+"6a8ec20683aa",
+"2026-11-20"
+],
 "de/sprachen.html": [
 "2ab4a7f7abf7",
 "2026-11-16"
@@ -288,7 +296,11 @@
 "2026-11-20"
 ],
 "en/game-news.html": [
-"10667fde93bf",
+"d8dec44e87cd",
+"2026-11-20"
+],
+"en/game/apex-legends.html": [
+"e41e1c7b08f1",
 "2026-11-20"
 ],
 "en/game/battlefield-6.html": [
@@ -352,8 +364,8 @@
 "2026-11-16"
 ],
 "en/game/index.html": [
-"431c68aed7f0",
-"2026-11-19"
+"91eaf9c26b54",
+"2026-11-20"
 ],
 "en/game/knight-online.html": [
 "7459042a3f7d",
@@ -430,6 +442,10 @@
 "en/game/wuthering-waves.html": [
 "f3ae529fec97",
 "2026-11-18"
+],
+"en/game/zenless-zone-zero.html": [
+"a47abda1c54d",
+"2026-11-20"
 ],
 "en/gta-6.html": [
 "27a35ab8b22c",
@@ -512,7 +528,7 @@
 "2026-11-17"
 ],
 "en/index.html": [
-"81d3e77a485c",
+"e88f8050aae1",
 "2026-11-20"
 ],
 "en/languages.html": [
@@ -628,7 +644,11 @@
 "2026-11-09"
 ],
 "es/index.html": [
-"05ed125561af",
+"c5be32985320",
+"2026-11-20"
+],
+"es/juego/apex-legends.html": [
+"4de180788cf0",
 "2026-11-20"
 ],
 "es/juego/battlefield-6.html": [
@@ -692,8 +712,8 @@
 "2026-11-16"
 ],
 "es/juego/index.html": [
-"5dd91463e13b",
-"2026-11-19"
+"f2205faa912a",
+"2026-11-20"
 ],
 "es/juego/knight-online.html": [
 "ddcfe4f0d44b",
@@ -771,6 +791,10 @@
 "e95a774fca1b",
 "2026-11-19"
 ],
+"es/juego/zenless-zone-zero.html": [
+"d8c332d16f63",
+"2026-11-20"
+],
 "es/juegos-gratis.html": [
 "a703cdfa75fc",
 "2026-11-20"
@@ -784,7 +808,7 @@
 "2026-11-17"
 ],
 "es/noticias-juegos.html": [
-"5eae83a5b9ee",
+"46ae189983ce",
 "2026-11-20"
 ],
 "es/ofertas.html": [
@@ -808,7 +832,7 @@
 "2026-11-15"
 ],
 "fr/actus-jeux.html": [
-"b08410fffdc1",
+"c7c2ea6ef26a",
 "2026-11-20"
 ],
 "fr/calendrier-sorties.html": [
@@ -896,7 +920,11 @@
 "2026-11-17"
 ],
 "fr/index.html": [
-"2b2a9e262294",
+"bc62214ff5fe",
+"2026-11-20"
+],
+"fr/jeu/apex-legends.html": [
+"d63843541757",
 "2026-11-20"
 ],
 "fr/jeu/battlefield-6.html": [
@@ -960,8 +988,8 @@
 "2026-11-16"
 ],
 "fr/jeu/index.html": [
-"a775b8d54ce7",
-"2026-11-19"
+"d10f0b819d37",
+"2026-11-20"
 ],
 "fr/jeu/knight-online.html": [
 "8be189bb5bf2",
@@ -1039,6 +1067,10 @@
 "3046ebdfccab",
 "2026-11-19"
 ],
+"fr/jeu/zenless-zone-zero.html": [
+"986035664497",
+"2026-11-20"
+],
 "fr/jeux-gratuits.html": [
 "5c4dab81355f",
 "2026-11-20"
@@ -1104,7 +1136,7 @@
 "2026-11-15"
 ],
 "index.html": [
-"08d9cc2c4a1a",
+"5bf3dbad9a7a",
 "2026-11-20"
 ],
 "indirimler.html": [
@@ -1124,7 +1156,11 @@
 "2026-11-16"
 ],
 "nl/gamenieuws.html": [
-"6a228513b402",
+"db656d9de078",
+"2026-11-20"
+],
+"nl/games/apex-legends.html": [
+"65660ad23c6a",
 "2026-11-20"
 ],
 "nl/games/battlefield-6.html": [
@@ -1188,8 +1224,8 @@
 "2026-11-16"
 ],
 "nl/games/index.html": [
-"05949c64008b",
-"2026-11-19"
+"6bf3f47ac36e",
+"2026-11-20"
 ],
 "nl/games/knight-online.html": [
 "038174e91975",
@@ -1266,6 +1302,10 @@
 "nl/games/wuthering-waves.html": [
 "4455050ec935",
 "2026-11-18"
+],
+"nl/games/zenless-zone-zero.html": [
+"2c8c320e3c2b",
+"2026-11-20"
 ],
 "nl/geruchten.html": [
 "612b8574d84b",
@@ -1352,7 +1392,7 @@
 "2026-11-19"
 ],
 "nl/index.html": [
-"e9236277760b",
+"27a69badf8a2",
 "2026-11-20"
 ],
 "nl/nieuws.html": [
@@ -1380,7 +1420,11 @@
 "2026-11-16"
 ],
 "oyun-haberleri.html": [
-"65facf840c2d",
+"24ba9477e7ad",
+"2026-11-20"
+],
+"oyun/apex-legends.html": [
+"948cf2c072d5",
 "2026-11-20"
 ],
 "oyun/battlefield-6.html": [
@@ -1444,8 +1488,8 @@
 "2026-11-16"
 ],
 "oyun/index.html": [
-"1f2b0408b139",
-"2026-11-19"
+"c87e7f2d017a",
+"2026-11-20"
 ],
 "oyun/knight-online.html": [
 "41fccc577cd1",
@@ -1522,6 +1566,10 @@
 "oyun/wuthering-waves.html": [
 "288f317f4428",
 "2026-11-19"
+],
+"oyun/zenless-zone-zero.html": [
+"2d0afc47984c",
+"2026-11-20"
 ],
 "oyunlar.html": [
 "c6471b23a81e",
@@ -1708,7 +1756,7 @@
 "2026-11-16"
 ],
 "zh/index.html": [
-"8545609a2f25",
+"854f7adc7f48",
 "2026-11-20"
 ],
 "zh/laiyuan.html": [
@@ -1732,7 +1780,11 @@
 "2026-11-20"
 ],
 "zh/youxi-xinwen.html": [
-"50938fa0a0ff",
+"b9b154d49417",
+"2026-11-20"
+],
+"zh/youxi/apex-legends.html": [
+"d5c613268ce4",
 "2026-11-20"
 ],
 "zh/youxi/battlefield-6.html": [
@@ -1796,8 +1848,8 @@
 "2026-11-16"
 ],
 "zh/youxi/index.html": [
-"4be19d12c8a8",
-"2026-11-19"
+"4f3fe3b4f9c8",
+"2026-11-20"
 ],
 "zh/youxi/knight-online.html": [
 "58e368b9bbf6",
@@ -1874,6 +1926,10 @@
 "zh/youxi/wuthering-waves.html": [
 "b125c0174a5e",
 "2026-11-18"
+],
+"zh/youxi/zenless-zone-zero.html": [
+"338ae099e1f3",
+"2026-11-20"
 ],
 "zh/yuyan.html": [
 "69e333589bf8",

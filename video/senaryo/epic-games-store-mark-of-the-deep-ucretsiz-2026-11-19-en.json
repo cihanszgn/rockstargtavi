@@ -1,0 +1,119 @@
+{
+ "id": "epic-games-store-mark-of-the-deep-ucretsiz-2026-11-19",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Mark of the Deep is free to keep on the Epic Games Store until November 26.",
+   "veri": {
+    "ust_etiket": "EPIC FREE GAME",
+    "baslik": "Mark of the Deep is free",
+    "vurgu": [
+     "free"
+    ],
+    "tuslar": [
+     "E",
+     "G",
+     "S"
+    ]
+   },
+   "alt_kart": {
+    "simge": "ucretsiz",
+    "baslik": "MARK OF THE DEEP",
+    "alt": "FREE UNTIL NOV 26"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "fiyat",
+   "anlatim": "Claim it at 100% off on PC via the Epic Games Store and keep it in your library.",
+   "veri": {
+    "durum": "ucretsiz",
+    "etiket": "Free",
+    "bitis": "Nov 26, 16:00 UTC",
+    "magazalar": [
+     "Epic Games Store"
+    ]
+   },
+   "alt_kart": {
+    "simge": "fiyat",
+    "baslik": "100% OFF ON PC",
+    "alt": "EPIC GAMES STORE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "This pirate-themed adventure blends Metroidvania exploration with Souls-like combat on a cursed island as you search for your missing crew.",
+   "veri": {
+    "baslik": "What to expect",
+    "maddeler": [
+     {
+      "metin": "Pirate-themed narrative adventure",
+      "tetik": "pirate"
+     },
+     {
+      "metin": "Metroidvania and Souls-like mix",
+      "tetik": "Metroidvania"
+     },
+     {
+      "metin": "Explore a cursed island",
+      "tetik": "cursed"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "METROIDVANIA + SOULS",
+    "alt": "CURSED ISLAND"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "The giveaway started November 19 and ends November 26 at 16:00 UTC.",
+   "veri": {
+    "etiket": "Claim deadline",
+    "tarih": "November 26",
+    "not": "Ends at 16:00 UTC on Epic Games Store."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "NOVEMBER 26",
+    "alt": "16:00 UTC DEADLINE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game.",
+   "veri": {
+    "cagri": "Store link on our site",
+    "alt": "Full giveaway details in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

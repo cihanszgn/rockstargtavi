@@ -1,5 +1,211 @@
 [
  {
+  "id": "zenless-zone-zero-3-4-the-finality-of-the-day-2026-11-20",
+  "oyun": "Zenless Zone Zero",
+  "tarih": "2026-11-20",
+  "tur": "guncelleme",
+  "platform": [
+   "PC",
+   "PS5",
+   "Xbox",
+   "Mobil"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "HoYoverse resmî duyurusu (Benefits Express)",
+    "url": "https://zenless.hoyoverse.com/en-us/news/167400"
+   },
+   {
+    "ad": "HoYoverse 3.4 Özel Yayın Özeti",
+    "url": "https://zenless.hoyoverse.com/en-us/news/167399"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Zenless Zone Zero 3.4 güncellemesi 2 Aralık’ta geliyor: Ücretsiz Robin",
+    "ozet": "Honkai: Star Rail iş birliğiyle ücretsiz S-Rank Robin, Bangboo Pom-Pom ve yeni Void Hunter Sunbringer oyuna ekleniyor.",
+    "metin": "HoYoverse, Zenless Zone Zero için 3.4 sürümü “The Finality of the Day” güncellemesinin 2 Aralık’ta yayımlanacağını resmî olarak duyurdu. Güncelleme, oyunun ilk Enchainer ajanı olan yeni Void Hunter karakteri Sunbringer’ı beraberinde getiriyor. En dikkat çekici yenilik ise Zenless Zone Zero ile Honkai: Star Rail arasındaki iş birliği içeriği oldu. Etkinlik döneminde oyuna giriş yapan oyuncular sınırlı süreli S-Rank ajan Robin’i, yükseltme malzemelerini ve önerilen ana istatistiklere sahip özel Drive Disc setini ücretsiz alabilecek. İş birliğinin diğer karakteri Kafka ise 1 Ocak sonrasında sınırlı süreli Signal Search havuzuna katılacak. “Lost in a Theatrical Dream” etkinliğinden yeni Bangboo Pom-Pom ücretsiz kazanılabilirken, giriş etkinlikleri toplamda 10 Encrypted Master Tape, 10 Boopon ve 2.320 Polychrome (sürüm etkinliğinden 1.840 ve “The Final Battle Before Dawn” etkinliğinden 480) sunacak. Özel yayın ödül kodu 22 Kasım 23.59.59 (UTC+8) itibarıyla sona eriyor."
+   },
+   "en": {
+    "baslik": "Zenless Zone Zero Version 3.4 launches December 2 with free S-Rank Robin",
+    "ozet": "The Finality of the Day adds Void Hunter Sunbringer, a Honkai: Star Rail crossover, free Robin, and Bangboo Pom-Pom.",
+    "metin": "HoYoverse has officially announced that Zenless Zone Zero Version 3.4, titled \"The Finality of the Day,\" launches on December 2. The update introduces Sunbringer, a new Void Hunter and the game’s first Enchainer Agent, alongside new story content, outfits, and Signal Search reruns. Headlining the patch is a Zenless Zone Zero and Honkai: Star Rail crossover: players who log in during the event period can claim the limited-time S-Rank Agent Robin for free along with her upgrade materials and a custom set of Drive Discs with recommended Main Stats. Fellow crossover Agent Kafka will join the limited-time Signal Search after January 1, while the \"Lost in a Theatrical Dream\" event awards the new Bangboo Pom-Pom for free. Check-in events grant 10 Encrypted Master Tapes, 10 Boopons, 1,840 Polychrome from the version check-in, and 480 Polychrome from \"The Final Battle Before Dawn.\" The Special Program redemption code expires November 22 at 23:59:59 (UTC+8)."
+   },
+   "es": {
+    "baslik": "Zenless Zone Zero 3.4 llega el 2 de diciembre con Robin de rango S gratis",
+    "ozet": "The Finality of the Day suma a Sunbringer, la colaboración con Honkai: Star Rail y al Bangboo Pom-Pom gratis.",
+    "metin": "HoYoverse anunció oficialmente que la versión 3.4 de Zenless Zone Zero, titulada \"The Finality of the Day\", se lanzará el 2 de diciembre. La actualización incorpora a Sunbringer, nueva Void Hunter y primera agente Enchainer del juego, junto con nuevo contenido de historia, atuendos y regresos en Signal Search. El plato fuerte es la colaboración con Honkai: Star Rail: quienes inicien sesión durante el evento obtendrán gratis a la agente de rango S Robin, sus materiales de mejora y un conjunto personalizado de Drive Discs con estadísticas principales recomendadas. Además, Kafka se unirá al Signal Search por tiempo limitado después del 1 de enero, y el evento \"Lost in a Theatrical Dream\" regalará al nuevo Bangboo Pom-Pom. Los eventos de registro otorgan 10 Encrypted Master Tapes, 10 Boopons, 1.840 Polychrome del registro de versión y 480 Polychrome en \"The Final Battle Before Dawn\". El código del programa especial caduca el 22 de noviembre a las 23:59:59 (UTC+8)."
+   },
+   "fr": {
+    "baslik": "Zenless Zone Zero 3.4 sort le 2 décembre avec Robin rang S gratuite",
+    "ozet": "The Finality of the Day ajoute Sunbringer, le crossover Honkai: Star Rail et le Bangboo Pom-Pom gratuit.",
+    "metin": "HoYoverse a officiellement annoncé la sortie de la version 3.4 de Zenless Zone Zero, intitulée « The Finality of the Day », pour le 2 décembre. Cette mise à jour introduit Sunbringer, nouvelle Void Hunter et première agente Enchainer du jeu, ainsi que de nouveaux contenus d’histoire et tenues. L’événement phare est le crossover avec Honkai: Star Rail : en se connectant pendant la période dédiée, les joueurs obtiendront gratuitement l’agente de rang S Robin, ses matériaux d’amélioration et un ensemble de Drive Discs personnalisés aux statistiques principales recommandées. Kafka rejoindra ensuite le Signal Search limité après le 1er janvier, tandis que l’événement « Lost in a Theatrical Dream » offrira le nouveau Bangboo Pom-Pom. Les événements de connexion distribuent 10 Encrypted Master Tapes, 10 Boopons, 1 840 Polychrome ainsi que 480 Polychrome via « The Final Battle Before Dawn ». Le code du programme spécial expire le 22 novembre à 23h59:59 (UTC+8)."
+   },
+   "de": {
+    "baslik": "Zenless Zone Zero 3.4 startet am 2. Dezember mit gratis S-Rang-Agentin Robin",
+    "ozet": "The Finality of the Day bringt Void Hunter Sunbringer, das Honkai: Star Rail-Crossover und Bangboo Pom-Pom.",
+    "metin": "HoYoverse hat offiziell bestätigt, dass Version 3.4 von Zenless Zone Zero mit dem Titel „The Finality of the Day“ am 2. Dezember erscheint. Das Update führt Sunbringer als neue Void Hunter und erste Enchainer-Agentin ein und ergänzt neue Story-Inhalte sowie Outfits. Im Mittelpunkt steht das Crossover mit Honkai: Star Rail: Spieler erhalten beim Login im Eventzeitraum die limitierte S-Rang-Agentin Robin kostenlos samt Aufwertungsmaterialien und einem Set aus benutzerdefinierten Drive Discs mit empfohlenen Hauptwerten. Nach dem 1. Januar stößt zudem Kafka zur zeitlich begrenzten Signal Search hinzu, während das Event „Lost in a Theatrical Dream“ das neue Bangboo Pom-Pom gratis freischaltet. Über die Check-in-Events gibt es 10 Encrypted Master Tapes, 10 Boopons, 1.840 Polychrome sowie 480 Polychrome aus „The Final Battle Before Dawn“. Der Code aus dem Sonderprogramm läuft am 22. November um 23:59:59 Uhr (UTC+8) ab."
+   },
+   "nl": {
+    "baslik": "Zenless Zone Zero 3.4 verschijnt op 2 december met gratis S-Rank Robin",
+    "ozet": "The Finality of the Day voegt Void Hunter Sunbringer, de Honkai: Star Rail-crossover en gratis Bangboo Pom-Pom toe.",
+    "metin": "HoYoverse heeft officieel aangekondigd dat versie 3.4 van Zenless Zone Zero, getiteld “The Finality of the Day”, op 2 december verschijnt. De update introduceert Sunbringer, een nieuwe Void Hunter en de eerste Enchainer-agent van de game, naast nieuwe verhaalinhoud en outfits. De blikvanger is de crossover met Honkai: Star Rail: spelers die tijdens het evenement inloggen krijgen de tijdelijke S-Rank-agent Robin gratis, inclusief upgradematerialen en een set Drive Discs met aanbevolen hoofdstatistieken. Na 1 januari komt ook Kafka naar de tijdelijke Signal Search, terwijl het evenement “Lost in a Theatrical Dream” de nieuwe Bangboo Pom-Pom gratis oplevert. Check-in-evenementen geven 10 Encrypted Master Tapes, 10 Boopons, 1.840 Polychrome en nog eens 480 Polychrome via “The Final Battle Before Dawn”. De code uit het speciale programma verloopt op 22 november om 23:59:59 (UTC+8)."
+   },
+   "zh": {
+    "baslik": "《绝区零》3.4版本12月2日上线，联动免费领S级知更鸟",
+    "ozet": "新虚狩Sunbringer登场，与《崩坏：星穹铁道》联动送出知更鸟、帕姆邦布及多项登录奖励。",
+    "metin": "HoYoverse官方宣布，《绝区零》3.4版本“The Finality of the Day”将于12月2日正式上线。本次更新将带来全新虚狩兼首位Enchainer代理人Sunbringer，并同步推出新剧情、新时装与信号搜索复刻内容。版本核心亮点是与《崩坏：星穹铁道》的联动活动：玩家在活动期间登录即可免费领取限定S级联动代理人知更鸟（Robin），以及对应的养成材料和附带推荐主属性的定制驱动盘。1月1日之后，联动代理人卡芙卡（Kafka）也将加入限时信号搜索；参与“Lost in a Theatrical Dream”活动还可免费获得全新邦布帕姆（Pom-Pom）。版本签到活动共提供10枚加密母带、10枚邦布券与1840菲林，“The Final Battle Before Dawn”签到另赠480菲林，参与玩法还能免费获取Pyrois影画与音擎超频材料。特别节目兑换码将于11月22日23:59:59（UTC+8）到期。"
+   }
+  },
+  "otomasyon": {
+   "konu": "zenless-zone-zero-3-4-the-finality-of-the-day",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://zenless.hoyoverse.com/en-us/news/167400",
+   "teyit_zamani": "2026-11-20T17:24:45.425992+00:00",
+   "oyuncuya_fayda": "Oyuncular 2 Aralık çıkış tarihini, ücretsiz S-Rank Robin ve Bangboo Pom-Pom alma şartlarını ile 22 Kasım kod bitişini öğrenebilir.",
+   "hype": 8,
+   "eklenme": "2026-11-20T20:26:55.317525+03:00"
+  }
+ },
+ {
+  "id": "epic-games-store-mark-of-the-deep-ucretsiz-2026-11-19",
+  "oyun": "Mark of the Deep",
+  "tarih": "2026-11-19",
+  "tur": "ucretsiz",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Epic Games Store API",
+    "url": "https://store-site-backend-static.ak.epicgames.com/freeGamesPromotions?locale=en-US&country=TR&allowCountries=TR"
+   },
+   {
+    "ad": "Epic Games Store sayfası",
+    "url": "https://store.epicgames.com/en-US/p/mark-of-the-deep-f7dc08"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Mark of the Deep, Epic Games Store’da 26 Kasım’a kadar ücretsiz",
+    "ozet": "Metroidvania ve Souls-like öğelerini harmanlayan korsan temalı macera oyunu Türkiye mağazasında ücretsiz alınabiliyor.",
+    "metin": "Epic Games Store’un haftalık ücretsiz oyun kampanyası kapsamında Mark of the Deep, Türkiye bölgesinde yüzde 100 indirimle ücretsiz olarak sunuldu. Resmî Epic Games Store API verilerine göre kampanya 19 Kasım 2026 saat 16.00 UTC (19.00 TSİ) itibarıyla başladı ve 26 Kasım 2026 saat 16.00 UTC’ye (19.00 TSİ) kadar devam edecek. PC oyuncuları bu süre içinde oyunu mağaza sayfası üzerinden Epic hesaplarına ücretsiz ekleyerek kalıcı olarak kütüphanelerinde saklayabiliyor. Korsan temalı bir macera sunan Mark of the Deep, güçlü anlatıyı Metroidvania keşif yapısı ve Souls-like dövüş unsurlarıyla bir araya getiriyor; oyuncular lanetli bir adanın gizemlerini araştırarak kayıp korsan mürettebatını bulmaya çalışıyor."
+   },
+   "en": {
+    "baslik": "Mark of the Deep is free on Epic Games Store through November 26",
+    "ozet": "The pirate-themed Metroidvania and Souls-like adventure can be claimed at 100% off in the TR storefront.",
+    "metin": "Mark of the Deep is now available to claim for free on the Epic Games Store as part of the platform’s weekly PC giveaway. According to official Epic Games Store API data for the Turkey (TR) region, the 100% discount promotion began on November 19, 2026 at 16:00 UTC and runs until November 26, 2026 at 16:00 UTC. Players who add the game to their library before the deadline can keep it on PC at no cost. Mark of the Deep is a pirate-themed adventure combining strong narrative storytelling with Metroidvania exploration and Souls-like combat, tasking players with uncovering the mysteries of a cursed island to rescue their missing pirate crew."
+   },
+   "es": {
+    "baslik": "Mark of the Deep es gratis en Epic Games Store hasta el 26 de noviembre",
+    "ozet": "La aventura pirata con tintes Metroidvania y Souls-like puede reclamarse con un 100 % de descuento en PC.",
+    "metin": "Mark of the Deep ya se puede reclamar gratis en PC a través de la promoción semanal de Epic Games Store. Según los datos oficiales de la API de Epic Games Store para la región de Turquía (TR), la oferta del 100 % de descuento comenzó el 19 de noviembre de 2026 a las 16:00 UTC y permanecerá activa hasta el 26 de noviembre de 2026 a las 16:00 UTC. Quienes añadan el título a su cuenta antes del cierre de la campaña lo conservarán en su biblioteca sin coste. Mark of the Deep propone una aventura de temática pirata que combina narrativa con mecánicas Metroidvania y Souls-like, invitando a explorar una isla maldita para rescatar a una tripulación desaparecida."
+   },
+   "fr": {
+    "baslik": "Mark of the Deep est gratuit sur l’Epic Games Store jusqu’au 26 novembre",
+    "ozet": "L’aventure pirate mêlant Metroidvania et Souls-like est proposée à 100 % de réduction sur PC.",
+    "metin": "Mark of the Deep est actuellement gratuit sur PC dans le cadre de l’offre hebdomadaire de l’Epic Games Store. D’après les données officielles de l’API Epic Games Store pour la région Turquie (TR), la remise de 100 % a débuté le 19 novembre 2026 à 16h00 UTC et se poursuit jusqu’au 26 novembre 2026 à 16h00 UTC. Les joueurs qui récupèrent le jeu avant cette échéance le conservent définitivement dans leur bibliothèque. Mark of the Deep est une aventure sur le thème des pirates combinant narration, exploration Metroidvania et combat Souls-like, dans laquelle il faut percer les mystères d’une île maudite pour retrouver un équipage disparu."
+   },
+   "de": {
+    "baslik": "Mark of the Deep bis 26. November kostenlos im Epic Games Store",
+    "ozet": "Das Piraten-Abenteuer mit Metroidvania- und Souls-like-Elementen ist mit 100 % Rabatt für PC erhältlich.",
+    "metin": "Im Rahmen der wöchentlichen Gratis-Aktion des Epic Games Store steht Mark of the Deep derzeit kostenlos für PC zum Abruf bereit. Laut offiziellen Angaben der Epic Games Store API für die Region Türkei (TR) startete der 100-Prozent-Rabatt am 19. November 2026 um 16:00 UTC und läuft noch bis zum 26. November 2026 um 16:00 UTC. Wer den Titel vor Fristende über die Shop-Seite sichert, behält ihn dauerhaft in der eigenen Bibliothek. Mark of the Deep verbindet ein Piraten-Abenteuer mit starker Handlung sowie Metroidvania- und Souls-like-Elementen rund um die Erkundung einer verfluchten Insel auf der Suche nach der vermissten Crew."
+   },
+   "nl": {
+    "baslik": "Mark of the Deep gratis in de Epic Games Store tot 26 november",
+    "ozet": "Het piratenavontuur met Metroidvania- en Souls-like-elementen is met 100% korting te claimen op pc.",
+    "metin": "Mark of the Deep is momenteel gratis te claimen voor pc via de wekelijkse actie van de Epic Games Store. Volgens officiële gegevens uit de Epic Games Store API voor de regio Turkije (TR) begon de actie met 100% korting op 19 november 2026 om 16:00 UTC en loopt deze tot 26 november 2026 om 16:00 UTC. Spelers die de game voor die eindtijd aan hun account toevoegen, houden het spel blijvend in hun bibliotheek. Mark of the Deep is een piratenavontuur dat een sterk verhaal combineert met Metroidvania- en Souls-like-elementen, waarin spelers een vervloekt eiland verkennen om hun vermiste bemanning terug te vinden."
+   },
+   "zh": {
+    "baslik": "Epic商城免费领取《Mark of the Deep》，截止11月26日",
+    "ozet": "融合类银河战士恶魔城与类魂元素的海盗冒险游戏现已在PC端开启100%折扣限免。",
+    "metin": "作为Epic Games Store每周免费游戏活动的一部分，《Mark of the Deep》现已面向PC玩家开启限时免费领取。根据Epic Games Store官方API在土耳其（TR）区域返回的数据，本次100%折扣活动自2026年11月19日16:00 UTC开始，并将持续至2026年11月26日16:00 UTC结束。玩家在截止时间前通过商店页面将其加入账户，即可永久保留在游戏库中。《Mark of the Deep》是一款海盗题材冒险游戏，融合了强叙事体验、类银河战士恶魔城探索机制与类魂战斗元素，玩家将深入一座受诅咒的岛屿揭开谜团，寻找失踪的海盗船员。"
+   }
+  },
+  "otomasyon": {
+   "konu": "epic-games-store-mark-of-the-deep-ucretsiz-2026-11-19",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store-site-backend-static.ak.epicgames.com/freeGamesPromotions?locale=en-US&country=TR&allowCountries=TR",
+   "resmi_veri": {
+    "api_url": "https://store-site-backend-static.ak.epicgames.com/freeGamesPromotions?locale=en-US&country=TR&allowCountries=TR",
+    "alinma_zamani": "2026-11-20T17:24:45.425992+00:00",
+    "oyun": "Mark of the Deep",
+    "baslangic": "2026-11-19T16:00:00+00:00",
+    "bitis": "2026-11-26T16:00:00+00:00",
+    "magaza_url": "https://store.epicgames.com/en-US/p/mark-of-the-deep-f7dc08",
+    "ulke": "TR",
+    "ucretsiz": true,
+    "indirim_yuzdesi": 100,
+    "aciklama": "Mark of the Deep is an epic pirate-themed adventure with a strong narrative and a thrilling mix of Metroidvania and Souls-Like elements. Embark on this journey, explore the mysteries of a cursed island and find your missing pirate crew!"
+   },
+   "teyit_zamani": "2026-11-20T17:24:45.425992+00:00",
+   "oyuncuya_fayda": "Oyuncular 26 Kasım 19.00 TSİ (16.00 UTC) bitişinden önce Mark of the Deep oyununu Epic kütüphanesine ücretsiz ekleyebilir.",
+   "hype": 6,
+   "eklenme": "2026-11-20T20:26:55.317525+03:00"
+  }
+ },
+ {
+  "id": "apex-legends-anti-cheat-yanlis-yasaklama-duzeltmesi-2026-11-19",
+  "oyun": "Apex Legends",
+  "tarih": "2026-11-19",
+  "tur": "haber",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Apex Legends Steam resmî duyurusu",
+    "url": "https://steamcommunity.com/games/1172470/announcements/detail/680767470935475033"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Apex Legends anti-hile ekibi hatalı yasaklamaları geri aldı",
+    "ozet": "Yaklaşık 1.000 oyuncuyu etkileyen yanlış yasaklama kaldırıldı, donanım yasağı sistemindeki sorun da giderildi.",
+    "metin": "Apex Legends anti-hile ekibi, 19 Kasım tarihli resmî Steam duyurusuyla oyuncuları etkileyen iki teknik sorunu paylaştı. Ekibin açıklamasına göre kısa süre önce yayımlanan bir güncelleme, yaklaşık 1.000 oyuncunun yanlışlıkla yasaklanmasına yol açtı. Sorunun hızla tespit edilmesiyle ilgili algılama mekanizması devre dışı bırakıldı ve bu hatadan etkilenen tüm hesapların yasağı geri alındı. Ayrıca donanım yasağı sisteminde bazı cihazları hatalı işaretleyen ikinci bir sorun belirlendi; bu hata, hileciler tarafından ele geçirilmiş hesapların donanım yasaklarını kaldırırken aksaklıklara neden oluyordu. Ekip bu sorunun da çözüldüğünü ve etkilenen hesapların yasaklarının aktif olarak kaldırıldığını bildirdi."
+   },
+   "en": {
+    "baslik": "Apex Legends anti-cheat team reverses ~1,000 erroneous bans",
+    "ozet": "Developers disabled a faulty detection and fixed a hardware ban bug affecting compromised accounts.",
+    "metin": "The Apex Legends anti-cheat team has published an official November 19 Steam announcement addressing two recent issues affecting players. First, an update deployed a day earlier inadvertently caused approximately 1,000 players to be incorrectly banned. Developers stated they quickly identified the cause, disabled the faulty detection, and reversed all bans tied to the error. Second, the team uncovered a bug in the hardware ban system that incorrectly flagged certain devices and complicated efforts to lift hardware bans from accounts previously compromised by cheaters. That issue has now been resolved, and impacted accounts are actively being unbanned."
+   },
+   "es": {
+    "baslik": "El equipo antitrampas de Apex Legends revierte unos 1.000 bloqueos erróneos",
+    "ozet": "Se desactivó la detección defectuosa y se corrigió un fallo en los bloqueos de hardware de cuentas comprometidas.",
+    "metin": "El equipo antitrampas de Apex Legends publicó el 19 de noviembre un comunicado oficial en Steam detallando dos incidencias recientes que afectaron a los jugadores. Por un lado, una actualización desplegada el día anterior provocó por error el bloqueo de aproximadamente 1.000 cuentas. El equipo identificó el fallo con rapidez, desactivó la detección afectada y revirtió todas esas sanciones. Por otro lado, se detectó un error en el sistema de bloqueos de hardware que marcaba dispositivos de forma incorrecta y dificultaba retirar sanciones a cuentas comprometidas por tramposos. Este problema ya fue resuelto y el equipo está desbloqueando activamente las cuentas afectadas."
+   },
+   "fr": {
+    "baslik": "Apex Legends annule environ 1 000 bannissements erronés liés à l’anti-triche",
+    "ozet": "La détection fautive a été désactivée et un bug du système de bannissement matériel a été corrigé.",
+    "metin": "L’équipe anti-triche d’Apex Legends a publié le 19 novembre une annonce officielle sur Steam concernant deux incidents ayant récemment touché des joueurs. Une mise à jour déployée la veille avait par erreur entraîné le bannissement d’environ 1 000 joueurs. Les développeurs ont rapidement identifié le problème, désactivé la détection concernée et annulé l’ensemble de ces sanctions. L’équipe a également corrigé un dysfonctionnement du système de bannissement matériel qui signalait à tort certains appareils et compliquait la levée des sanctions sur les comptes piratés par des tricheurs. Les comptes concernés sont désormais activement débannis."
+   },
+   "de": {
+    "baslik": "Apex Legends Anti-Cheat hebt rund 1.000 fehlerhafte Sperren auf",
+    "ozet": "Die fehlerhafte Erkennung wurde deaktiviert und ein Fehler im Hardware-Ban-System behoben.",
+    "metin": "Das Anti-Cheat-Team von Apex Legends hat am 19. November in einer offiziellen Steam-Mitteilung zwei aktuelle Probleme eingeräumt, die Spieler betroffen haben. Ein am Vortag aufgespieltes Update führte versehentlich dazu, dass rund 1.000 Spieler fälschlicherweise gesperrt wurden. Das Team schaltete die betroffene Erkennung ab und hob alle entsprechenden Sperren vollständig auf. Zudem wurde ein Fehler im Hardware-Ban-System behoben, der bestimmte Geräte falsch markierte und die Aufhebung von Hardware-Sperren bei durch Cheater kompromittierten Konten erschwerte. Betroffene Konten werden laut Entwicklern derzeit aktiv entsperrt."
+   },
+   "nl": {
+    "baslik": "Apex Legends anti-cheat draait circa 1.000 onterechte bans terug",
+    "ozet": "De foutieve detectie is uitgeschakeld en een bug in het hardwarebansysteem is opgelost.",
+    "metin": "Het anti-cheatteam van Apex Legends heeft op 19 november via een officiële Steam-aankondiging twee recente problemen toegelicht die spelers raakten. Een update van een dag eerder zorgde er per ongeluk voor dat ongeveer 1.000 spelers onterecht werden verbannen. Het team schakelde de getroffen detectie snel uit en draaide al deze bans terug. Daarnaast werd een fout in het hardwarebansysteem gevonden waardoor bepaalde apparaten ten onrechte werden gemarkeerd en het verwijderen van hardwarebans bij gehackte accounts werd bemoeilijkt. Ook dit probleem is inmiddels verholpen en getroffen accounts worden actief gedeblokkeerd."
+   },
+   "zh": {
+    "baslik": "《Apex英雄》反作弊团队撤销约1000起误封并修复硬件封禁故障",
+    "ozet": "官方已停用异常检测并全部解封受误封玩家，同时修复硬件封禁系统错误标记设备的问题。",
+    "metin": "《Apex英雄》反作弊团队于11月19日在Steam发布官方公告，通报并处理了近期影响玩家的两项技术问题。首先，前一日部署的更新意外导致约1000名玩家遭到错误封禁。开发团队在迅速定位原因后，立即停用了相关检测机制，并已撤销此次误封涉及的全部账号处罚。其次，团队发现硬件封禁系统存在故障，会错误标记部分设备，导致此前被作弊者盗号的玩家在申请解除硬件封禁时遇到障碍。目前该问题已经修复，团队正持续为受影响账号解除封禁。"
+   }
+  },
+  "otomasyon": {
+   "konu": "apex-legends-anti-cheat-yanlis-yasaklama-duzeltmesi-2026-11-19",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://steamcommunity.com/games/1172470/announcements/detail/680767470935475033",
+   "teyit_zamani": "2026-11-20T17:24:45.425992+00:00",
+   "oyuncuya_fayda": "Hatalı güncelleme veya donanım yasağı nedeniyle hesabı etkilenen Apex Legends oyuncuları yasakların kaldırıldığını öğrenebilir.",
+   "hype": 4,
+   "eklenme": "2026-11-20T20:26:55.317525+03:00"
+  }
+ },
+ {
   "id": "binding-of-isaac-repentance-plus-steam-guncellemesi-2026-11-19",
   "oyun": "The Binding of Isaac: Repentance+",
   "tarih": "2026-11-19",

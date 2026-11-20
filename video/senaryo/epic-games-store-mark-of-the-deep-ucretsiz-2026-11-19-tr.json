@@ -1,0 +1,119 @@
+{
+ "id": "epic-games-store-mark-of-the-deep-ucretsiz-2026-11-19",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Mark of the Deep, Epic Games Store’da 26 Kasım’a kadar ücretsiz alınabiliyor.",
+   "veri": {
+    "ust_etiket": "EPIC ÜCRETSİZ OYUN",
+    "baslik": "Mark of the Deep ücretsiz",
+    "vurgu": [
+     "ücretsiz"
+    ],
+    "tuslar": [
+     "E",
+     "G",
+     "S"
+    ]
+   },
+   "alt_kart": {
+    "simge": "ucretsiz",
+    "baslik": "MARK OF THE DEEP",
+    "alt": "26 KASIM’A KADAR ÜCRETSİZ"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "fiyat",
+   "anlatim": "Türkiye mağazasında yüzde 100 indirimle ücretsiz; süre bitmeden ekleyince kütüphanede kalıcı oluyor.",
+   "veri": {
+    "durum": "ucretsiz",
+    "etiket": "Ücretsiz",
+    "bitis": "26 Kasım 19.00 TSİ",
+    "magazalar": [
+     "Epic Games Store"
+    ]
+   },
+   "alt_kart": {
+    "simge": "fiyat",
+    "baslik": "YÜZDE 100 İNDİRİM",
+    "alt": "EPIC GAMES STORE • PC"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Korsan temalı oyunda Metroidvania keşfi ile Souls-like dövüş birleşiyor; lanetli adada kayıp mürettebatı arıyorsunuz.",
+   "veri": {
+    "baslik": "Oyun neler sunuyor",
+    "maddeler": [
+     {
+      "metin": "Korsan temalı macera",
+      "tetik": "Korsan"
+     },
+     {
+      "metin": "Metroidvania ve Souls-like karışımı",
+      "tetik": "Metroidvania"
+     },
+     {
+      "metin": "Lanetli adada kayıp mürettebat",
+      "tetik": "lanetli"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "METROIDVANIA + SOULS",
+    "alt": "KORSAN MACERASI"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Kampanya 19 Kasım’da başladı ve 26 Kasım saat 19.00 TSİ’de sona eriyor.",
+   "veri": {
+    "etiket": "Son alma tarihi",
+    "tarih": "26 Kasım",
+    "not": "16.00 UTC (19.00 TSİ) bitişi."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "26 KASIM",
+    "alt": "19.00 TSİ BİTİŞ"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Mağaza bağlantısı ve ayrıntıların tamamı sitemizde, Control A Game’de.",
+   "veri": {
+    "cagri": "Mağaza bağlantısı sitede",
+    "alt": "Haftalık ücretsiz oyun ayrıntıları haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

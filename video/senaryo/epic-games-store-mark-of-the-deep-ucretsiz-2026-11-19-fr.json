@@ -1,0 +1,119 @@
+{
+ "id": "epic-games-store-mark-of-the-deep-ucretsiz-2026-11-19",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Mark of the Deep est gratuit sur l’Epic Games Store jusqu’au 26 novembre.",
+   "veri": {
+    "ust_etiket": "GRATUIT SUR EPIC",
+    "baslik": "Mark of the Deep gratuit",
+    "vurgu": [
+     "gratuit"
+    ],
+    "tuslar": [
+     "E",
+     "G",
+     "S"
+    ]
+   },
+   "alt_kart": {
+    "simge": "ucretsiz",
+    "baslik": "MARK OF THE DEEP",
+    "alt": "GRATUIT JUSQU’AU 26 NOV"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "fiyat",
+   "anlatim": "Proposé à 100 % de réduction sur PC, le jeu reste définitivement dans votre bibliothèque Epic Games Store.",
+   "veri": {
+    "durum": "ucretsiz",
+    "etiket": "Gratuit",
+    "bitis": "26 nov, 16h00 UTC",
+    "magazalar": [
+     "Epic Games Store"
+    ]
+   },
+   "alt_kart": {
+    "simge": "fiyat",
+    "baslik": "100 % DE RÉDUCTION",
+    "alt": "EPIC GAMES STORE • PC"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Cette aventure de pirates mêle exploration Metroidvania et combat Souls-like sur une île maudite pour retrouver votre équipage.",
+   "veri": {
+    "baslik": "Au programme",
+    "maddeler": [
+     {
+      "metin": "Aventure narrative de pirates",
+      "tetik": "pirates"
+     },
+     {
+      "metin": "Mélange Metroidvania et Souls-like",
+      "tetik": "Metroidvania"
+     },
+     {
+      "metin": "Explorez une île maudite",
+      "tetik": "maudite"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "METROIDVANIA + SOULS",
+    "alt": "ÎLE MAUDITE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "L’offre a débuté le 19 novembre et s’achève le 26 novembre à 16h00 UTC.",
+   "veri": {
+    "etiket": "Date limite",
+    "tarih": "26 novembre",
+    "not": "Fin de l’offre à 16h00 UTC."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "26 NOVEMBRE",
+    "alt": "FIN À 16H00 UTC"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game.",
+   "veri": {
+    "cagri": "Lien boutique sur le site",
+    "alt": "Détails de l’offre dans l’article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
