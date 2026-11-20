@@ -1,5 +1,66 @@
 [
  {
+  "id": "binding-of-isaac-repentance-plus-steam-guncellemesi-2026-11-19",
+  "oyun": "The Binding of Isaac: Repentance+",
+  "tarih": "2026-11-19",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam",
+    "url": "https://store.steampowered.com/news/app/250900/view/683019270749159998"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Repentance+ Steam yaması hata düzeltmeleri getirdi",
+    "ozet": "Steam sürümünde koşuları etkileyen sorunlar ve açıklama hataları giderildi.",
+    "metin": "The Binding of Isaac: Repentance+ için Steam güncellemesi 19 Kasım'da yayımlandı. Yama; Carrion Queen sesleri, Mr. Me! etkileşimleri, Ultra Secret Room'da yaşanabilen sıkışma ve bomba patlaması sırasında tuzak kapısından geçerken oluşabilen softlock gibi sorunları düzeltiyor. Tainted Isaac, Tainted Forgotten ve Tainted ??? ile ilgili çeşitli hatalar da ele alındı. Item Descriptions artık Flip tutulurken eşyanın dönüşeceği sonucu gösteriyor; Rock Bottom ve bazı yanlış açıklamalar da düzeltildi. Steam duyurusuna göre EOS başlatılamadığında görülen çökme ile Mega Satan kapısından sonra sürekli titreşen kontrolcü sorunu da giderildi."
+   },
+   "en": {
+    "baslik": "Repentance+ Steam patch fixes run-breaking bugs",
+    "ozet": "The Steam build receives fixes for softlocks, crashes and item-description issues.",
+    "metin": "A Steam update for The Binding of Isaac: Repentance+ arrived on November 19. It fixes issues affecting Carrion Queen audio, Mr. Me! interactions, an Ultra Secret Room trap, and a potential softlock when entering a trapdoor as a bomb explodes. Several problems involving Tainted Isaac, Tainted Forgotten and Tainted ??? are also addressed. Item Descriptions now show an item's result while Flip is held, while incorrect descriptions and Rock Bottom stat displays have been corrected. Steam's announcement also lists a crash when EOS fails to initialize and a controller-rumble issue after opening the Mega Satan door among the fixes."
+   },
+   "es": {
+    "baslik": "El parche de Repentance+ en Steam corrige errores",
+    "ozet": "La actualización soluciona bloqueos, cierres inesperados y fallos de descripciones.",
+    "metin": "The Binding of Isaac: Repentance+ recibió una actualización en Steam el 19 de noviembre. El parche corrige problemas con los sonidos de Carrion Queen, las interacciones de Mr. Me!, una trampa en la Ultra Secret Room y un posible bloqueo al entrar en una trampilla mientras explota una bomba. También resuelve varios errores relacionados con Tainted Isaac, Tainted Forgotten y Tainted ???. Las descripciones de objetos ahora muestran el resultado de un objeto al mantener Flip, y se han corregido textos erróneos y estadísticas mostradas incorrectamente por Rock Bottom. El anuncio de Steam también incluye un cierre al fallar la inicialización de EOS y vibración continua del mando tras abrir la puerta de Mega Satan."
+   },
+   "fr": {
+    "baslik": "Le patch Steam de Repentance+ corrige des bugs",
+    "ozet": "La mise à jour traite des blocages, un crash et les descriptions d'objets.",
+    "metin": "The Binding of Isaac: Repentance+ a reçu une mise à jour Steam le 19 novembre. Elle corrige des problèmes liés aux sons de Carrion Queen, aux interactions de Mr. Me!, à un piège dans l'Ultra Secret Room et à un blocage possible lors de l'entrée dans une trappe pendant l'explosion d'une bombe. Plusieurs bugs touchant Tainted Isaac, Tainted Forgotten et Tainted ??? sont également corrigés. Les descriptions d'objets affichent désormais le résultat d'un objet lorsque Flip est maintenu, tandis que des textes inexacts et les statistiques de Rock Bottom ont été revus. L'annonce Steam mentionne aussi un crash lors de l'initialisation d'EOS et des vibrations continues après la porte de Mega Satan."
+   },
+   "de": {
+    "baslik": "Repentance+-Patch auf Steam behebt Fehler",
+    "ozet": "Das Update beseitigt Softlocks, Abstürze und Fehler bei Gegenstandsbeschreibungen.",
+    "metin": "Für The Binding of Isaac: Repentance+ ist am 19. November ein Steam-Update erschienen. Es behebt Probleme mit den Geräuschen der Carrion Queen, mit Mr.-Me!-Interaktionen, einer Falle im Ultra Secret Room und einem möglichen Softlock beim Betreten einer Falltür während einer Bombenexplosion. Auch mehrere Fehler rund um Tainted Isaac, Tainted Forgotten und Tainted ??? wurden korrigiert. Gegenstandsbeschreibungen zeigen nun bei gedrücktem Flip das Ergebnis eines Gegenstands an; fehlerhafte Beschreibungen und die von Rock Bottom angezeigten Werte wurden ebenfalls überarbeitet. Laut Steam-Ankündigung wurden zudem ein Absturz bei fehlgeschlagener EOS-Initialisierung und dauerhaftes Controller-Vibrieren nach dem Öffnen der Mega-Satan-Tür behoben."
+   },
+   "nl": {
+    "baslik": "Repentance+-patch op Steam lost fouten op",
+    "ozet": "De update pakt softlocks, crashes en fouten in voorwerpbeschrijvingen aan.",
+    "metin": "The Binding of Isaac: Repentance+ kreeg op 19 november een update op Steam. Die verhelpt problemen met het geluid van Carrion Queen, interacties van Mr. Me!, een val in de Ultra Secret Room en een mogelijke softlock bij het betreden van een luik terwijl een bom ontploft. Ook verschillende fouten rond Tainted Isaac, Tainted Forgotten en Tainted ??? zijn opgelost. Voorwerpbeschrijvingen tonen nu het resultaat van een voorwerp wanneer Flip wordt ingedrukt, en onjuiste beschrijvingen en statistieken van Rock Bottom zijn gecorrigeerd. Volgens de Steam-aankondiging zijn ook een crash bij een mislukte EOS-initialisatie en aanhoudende controllervibratie na het openen van de Mega Satan-deur verholpen."
+   },
+   "zh": {
+    "baslik": "《以撒的结合：忏悔+》Steam补丁上线",
+    "ozet": "更新修复软锁、崩溃、角色与道具说明问题。",
+    "metin": "《以撒的结合：忏悔+》于11月19日在Steam推出更新。本次补丁修复了Carrion Queen音效异常、Mr. Me!互动失效、Ultra Secret Room中可能被困，以及炸弹爆炸时进入活板门可能导致软锁的问题。Tainted Isaac、Tainted Forgotten和Tainted ???相关的多项异常也得到处理。现在按住Flip时，道具说明会显示道具翻转后的结果；部分错误说明和Rock Bottom的属性显示也已修正。Steam公告还确认，EOS初始化失败时的崩溃，以及打开Mega Satan门后手柄持续震动的问题均已修复。"
+   }
+  },
+  "otomasyon": {
+   "konu": "binding-of-isaac-repentance-plus-steam-bugfix-update",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/250900/view/683019270749159998",
+   "teyit_zamani": "2026-11-20T07:00:10+00:00",
+   "oyuncuya_fayda": "Koşuyu bozabilecek softlock ve çökme sorunları giderildiği için oyuncular güncellemeyi kurarak daha istikrarlı oynayabilir.",
+   "hype": 4,
+   "eklenme": "2026-11-20T10:11:38.414775+03:00"
+  }
+ },
+ {
   "id": "xbox-free-play-days-deadlink-slayers-x-polterguys-2026-11-19",
   "oyun": "Xbox Free Play Days",
   "tarih": "2026-11-19",
