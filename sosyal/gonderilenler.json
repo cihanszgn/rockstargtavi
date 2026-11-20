@@ -221,6 +221,21 @@
   "url": "https://www.instagram.com/reel/Df4C1slyYJL/",
   "zaman": "2026-11-18T08:10:01+00:00"
  },
+ "drg-survivor-knockout-1-2-2026-11-17|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 11614265,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "drg-survivor-knockout-1-2-2026-11-17",
+  "kapak_not": "küçük resim yüklenmedi: POST https://www.googleapis.com/upload/youtube/v3/thumbnails/set → HTTP 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The authenticated user doesn't have",
+  "kimlik": "UWqymuZV914",
+  "niyet_zamani": "2026-11-20T09:36:02+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg22DY-A2-UYmI9mpmWY2PSXKISAtfKkqs1PuZc4R_7ou7RD902FNl9DVwx7Z8gHWfnlhH1_-ZGcJy4lj2TsZ69mYbEiK-Bz_RREi-Rrcg",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/UWqymuZV914",
+  "zaman": "2026-11-20T09:36:02+00:00"
+ },
  "eraycan-20261112-d38999bc-klip-01|klip|youtube|short": {
   "bicim": "short",
   "boyut": 18640834,
