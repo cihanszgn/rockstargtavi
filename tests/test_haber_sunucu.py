@@ -90,8 +90,8 @@ class SunucuTests(unittest.TestCase):
             server = h.model_ayari(h.ROOT)
             self.assertEqual(h.model_ayari(h.ROOT, 'otomasyon/modeller.json'), default)
         self.assertEqual([s['ad'] for s in server['yazar']],
-                         ['opencode/big-pickle', 'gpt-6-luna', 'haiku', 'gpt-6.1-terra', 'sonnet'])
-        self.assertEqual([s['ad'] for s in server['denetci']], ['sonnet', 'gpt-6.1-sol', 'opus'])
+                         ['opencode/big-pickle', 'gpt-6-luna', 'haiku', 'gpt-5.6-terra', 'sonnet'])
+        self.assertEqual([s['ad'] for s in server['denetci']], ['sonnet', 'gpt-6-luna', 'opus'])
         self.assertEqual(server['eleme'], [])
 
     def test_auditor_prefers_different_provider_preserving_fallback_order(self):
