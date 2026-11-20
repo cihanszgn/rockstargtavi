@@ -153,3 +153,51 @@ class DogrulanabilirlikTests(unittest.TestCase):
             self.assertFalse((runner.state / 'sonuc.json').exists())
         finally:
             h.shutil.rmtree(clone, ignore_errors=True)
+
+    def test_cross_source_same_event_merges_rephrased_headlines_without_merging_distinct_events(self):
+        oyunlar = [('gta 6', 'gta vi'), ('world of warcraft', 'world of warcraft'), ('wow', 'world of warcraft')]
+        a = {'baslik': 'GTA 6 day-one sales are enormous, estimates suggest, making previous $2 billion opening weekend predictions seem conservative',
+             'url': 'https://www.eurogamer.net/gta-6-day-one-sales', 'kaynak': 'eurogamer'}
+        b = {'baslik': 'GTA 6 sold around 25 million copies and made $2.36 billion in its first day, estimates suggest',
+             'url': 'https://www.videogameschronicle.com/news/gta-6-25-million/', 'kaynak': 'vgc'}
+        c = {'baslik': 'The first GTA 6 speedrun is less than 40 hours',
+             'url': 'https://www.gamesradar.com/gta-6-speedrun/', 'kaynak': 'gamesradar'}
+        jp1 = {'baslik': '「アズールプロミリア」のガチャ情報発表', 'url': 'https://game.watch.impress.co.jp/docs/1.html', 'kaynak': 'gamewatch'}
+        jp2 = {'baslik': '「アズールプロミリア」新キャラ登場', 'url': 'https://game.watch.impress.co.jp/docs/2.html', 'kaynak': 'gamewatch'}
+        v1 = {'baslik': 'Zenless Zone Zero version 3.4 update launches December 2', 'url': 'https://www.gematsu.com/zzz-3-4', 'kaynak': 'gematsu'}
+        v2 = {'baslik': 'Zenless Zone Zero version 3.5 update launches December 2', 'url': 'https://www.ign.com/news/zzz-3-5', 'kaynak': 'ign'}
+        merged = h.olaylari_birlestir([a, b, c, jp1, jp2, v1, v2], oyunlar)
+        self.assertEqual(len(merged), 6)
+        self.assertEqual(len(merged[0]['ilgili_kaynaklar']), 2)
+        self.assertIsNone(h.kesif_engeli(merged[0]))
+
+    def test_guide_and_deal_filters_block_discovery_while_concrete_announcements_pass(self):
+        for title in ('How to make money in GTA 6', 'GTA 6 Daily Driver Mission Walkthrough',
+                      'All JoySystem Video Games In GTA 6', 'Surprise PS5 Black Friday Deals for GTA 6'):
+            self.assertEqual(h.kesif_engeli(self.aday(0, sources=2, title=title)), 'rehber/liste/fırsat başlığı')
+            self.assertIsNone(h.kesif_engeli(self.aday(1, official=True, title=title)))
+        for title in ('Zenless Zone Zero version 3.4 update launches December 2',
+                      'Xenoblade Chronicles 3 version 3.0.0 is now available, patch notes revealed',
+                      'New World of Warcraft Forever patch notes buff Paladins'):
+            self.assertIsNone(h.kesif_engeli(self.aday(2, sources=1, title=title)))
+
+    def test_anti_cheat_official_announcement_is_not_blocked_as_cheats(self):
+        (self.root / 'data/oyunlar.json').write_text('[]', encoding='utf-8')
+        official = {'baslik': 'An Update from the Anti-Cheat Team - 11/19/2026',
+                    'url': 'https://steamcommunity.com/games/1172470/announcements/detail/123',
+                    'resmi_aday': True, 'tarih': datetime.now(timezone.utc).isoformat()}
+        cheat = {'baslik': 'Free cheats for GTA 6 released online',
+                 'url': 'https://www.ign.com/news/cheat', 'tarih': datetime.now(timezone.utc).isoformat()}
+        decisions = [{'aday_id': 0, 'karar': 'al', 'hype': 5, 'neden': 'resmi'},
+                     {'aday_id': 1, 'karar': 'al', 'hype': 5, 'neden': 'hile'}]
+        with patch.object(self.hat, 'zincir', return_value=decisions):
+            selected = self.hat.ele([official, cheat])
+        self.assertEqual([x['baslik'] for x in selected], [official['baslik']])
+
+    def test_subprocess_error_combines_stderr_and_stdout_for_quota_detection(self):
+        code = 'import sys; sys.stderr.write("Reading prompt from stdin...\\n"); sys.stdout.write("{\\"error\\":\\"You have hit your usage limit\\"}\\n"); sys.exit(1)'
+        with self.assertRaises(RuntimeError) as ctx:
+            h.calistir([sys.executable, '-c', code], self.root, 10)
+        self.assertIn('Reading prompt from stdin', str(ctx.exception))
+        self.assertIn('usage limit', str(ctx.exception))
+        self.assertEqual(h.kota_suresi(str(ctx.exception)), 43200)

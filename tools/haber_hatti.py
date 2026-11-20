@@ -192,18 +192,116 @@ class YenidenBaslat(Exception):
     pass
 
 
-def olaylari_birlestir(candidates):
-    """Yalnız çok yakın başlık/aynı olay kimliği; farklı oyun olaylarını birleştirme."""
+_OLAY_DURAK = {
+    'the', 'and', 'for', 'with', 'from', 'that', 'this', 'are', 'was', 'were', 'has', 'have', 'had',
+    'been', 'will', 'into', 'over', 'out', 'its', 'you', 'your', 'they', 'their', 'them', 'our', 'who',
+    'what', 'when', 'where', 'how', 'why', 'but', 'not', 'all', 'can', 'new', 'now', 'more', 'than',
+    'just', 'about', 'after', 'before', 'while', 'only', 'very', 'some', 'even', 'also', 'still',
+    'says', 'said', 'say', 'report', 'reports', 'news', 'game', 'games', 'gaming', 'player', 'players',
+    'make', 'makes', 'making', 'one', 'two', 'first', 'get', 'got', 'really', 'like', 'back', 'time',
+    'most', 'much', 'many', 'here', 'there', 'year', 'years', 'month', 'months', 'week', 'weeks',
+    'day', 'days', 'today', 'blizzard', 'rockstar', 'nintendo', 'sony', 'microsoft', 'xbox',
+    'playstation', 'valve', 'steam', 'ubisoft', 'capcom', 'epic', 'riot', 'square', 'enix', 'bandai',
+    'namco', 'hoyoverse', 'studio', 'developer', 'publisher',
+    'les', 'des', 'une', 'pour', 'dans', 'que', 'qui', 'pas', 'sur', 'est', 'sont', 'avec', 'plus', 'par',
+    'los', 'las', 'una', 'para', 'por', 'con', 'del', 'como', 'mas', 'pero', 'sus', 'sin', 'sobre',
+    'esta', 'este', 'son', 'fue', 'ser', 'bir', 've', 'ile', 'icin', 'bu', 'da', 'de',
+}
+_OLAY_ES_ANLAM = (
+    (r'\bgrand theft auto (?:vi|6)\b', 'gta 6'),
+    (r'\bgta vi\b', 'gta 6'),
+    (r'\bworld of warcraft\b', 'wow'),
+    (r'\bfinal fantasy (?:xiv|14)\b', 'ffxiv'),
+    (r'\bcall of duty\b', 'cod'),
+    (r'\bplaystation 5\b', 'ps5'),
+    (r'\bday one\b', 'day1'),
+    (r'\bfirst day\b', 'day1'),
+    (r'\bopening day\b', 'day1'),
+    (r'\bbest in slot\b', 'bis'),
+    (r'\b(sold|selling|sell)\b', 'sales'),
+)
+_AY_ADLARI = (
+    r'january|february|march|april|may|june|july|august|september|october|november|december|'
+    r'ocak|subat|mart|nisan|mayis|haziran|temmuz|agustos|eylul|ekim|kasim|aralik'
+)
+
+
+def _olay_metin(text):
+    value = oto.norm(text)
+    for pattern, replacement in _OLAY_ES_ANLAM:
+        value = re.sub(pattern, replacement, value)
+    return value
+
+
+def _kok(token):
+    if len(token) >= 5 and token.endswith('ies'):
+        return token[:-3] + 'y'
+    if len(token) >= 5 and token.endswith('s') and not token.endswith(('ss', 'us', 'is')):
+        return token[:-1]
+    return token
+
+
+def _olay_belirtecleri(title, game_name=None):
+    drop = set(_OLAY_DURAK)
+    if game_name:
+        drop.update(_kok(w) for w in _olay_metin(game_name).split())
+    tokens = set()
+    for word in _olay_metin(title).split():
+        stemmed = _kok(word)
+        if (len(stemmed) >= 3 or stemmed.isdigit()) and stemmed not in drop:
+            tokens.add(stemmed)
+    return tokens
+
+
+def _kaynak_kimligi(candidate):
+    source = oto.kesif_kaynagi(candidate.get('url', ''))
+    if source:
+        return source['id']
+    if candidate.get('url'):
+        host = urllib.parse.urlsplit(candidate['url']).hostname or ''
+        if host:
+            return host.removeprefix('www.')
+    return candidate.get('kaynak', '')
+
+
+def _olay_ayni(a, b, oyunlar=None):
+    if adres(a) and adres(a) == adres(b):
+        return True
+    if a.get('konu') and a.get('konu') == b.get('konu'):
+        return True
+    ta, tb = oto.norm(a['baslik']), oto.norm(b['baslik'])
+    na, nb = set(re.findall(r'\d+', ta)), set(re.findall(r'\d+', tb))
+    if (ta and tb and na == nb and
+            (set(ta.split()) ^ set(tb.split())) <= {'the', 'a', 'an', 'is', 'are', 'has', 'been'} and
+            SequenceMatcher(None, ta, tb).ratio() >= .9):
+        return True
+    # Farklı bağımsız kaynaklarda aynı oyun + aynı somut olay (farklı başlık kalıbı olsa bile).
+    sa, sb = _kaynak_kimligi(a), _kaynak_kimligi(b)
+    if not sa or not sb or sa == sb:
+        return False
+    va = set(re.findall(r'\b(?:v|ver|version|patch|update)?\s*(\d+\.\d+(?:\.\d+)?)\b', a['baslik'], re.I))
+    vb = set(re.findall(r'\b(?:v|ver|version|patch|update)?\s*(\d+\.\d+(?:\.\d+)?)\b', b['baslik'], re.I))
+    if va and vb and va != vb:
+        return False
+    ga = next((name for key, name in (oyunlar or ()) if oto.oyun_eslesir(a['baslik'], key)), None)
+    gb = next((name for key, name in (oyunlar or ()) if oto.oyun_eslesir(b['baslik'], key)), None)
+    if ga or gb:
+        if ga != gb:
+            return False
+        shared = _olay_belirtecleri(a['baslik'], ga) & _olay_belirtecleri(b['baslik'], gb)
+        distinctive_num = any((t.isdigit() and len(t) >= 2) or t in ('day1', 'million', 'billion', 'milyon', 'milyar') for t in shared)
+        return len(shared) >= 4 or (len(shared) >= 3 and distinctive_num)
+    shared = _olay_belirtecleri(a['baslik']) & _olay_belirtecleri(b['baslik'])
+    non_digits = {t for t in shared if not t.isdigit()}
+    return len(shared) >= 4 and len(non_digits) >= 4
+
+
+def olaylari_birlestir(candidates, oyunlar=None):
+    """Aynı olayın farklı yayınlardaki kopyalarını birleştirir; farklı olayları ayırır."""
     out = []
     for candidate in candidates:
         c = dict(candidate)
-        title = oto.norm(c['baslik'])
-        numbers = set(re.findall(r'\d+', title))
-        existing = next((x for x in out if (adres(x) and adres(x) == adres(c)) or
-                         (c.get('konu') and c.get('konu') == x.get('konu')) or
-                         (numbers == set(re.findall(r'\d+', oto.norm(x['baslik']))) and
-                          (set(title.split()) ^ set(oto.norm(x['baslik']).split())) <= {'the', 'a', 'an', 'is', 'are', 'has', 'been'} and
-                          SequenceMatcher(None, title, oto.norm(x['baslik'])).ratio() >= .9)), None)
+        existing = next((x for x in out if _olay_ayni(x, c, oyunlar)), None)
         refs = c.get('ilgili_kaynaklar') or [{k: v for k, v in c.items()
                                             if k in ('ad', 'url') or k.startswith('kaynak_metni')}]
         if existing is None:
@@ -218,9 +316,14 @@ def olaylari_birlestir(candidates):
     return out
 
 
+def kesif_kaynak_sayisi(c):
+    return len({s['id'] for ref in [c, *c.get('ilgili_kaynaklar', [])]
+                if (s := oto.kesif_kaynagi(ref.get('url', '')))})
+
+
 def siralama(c):
     dt = oto.aday_tarihi(c)
-    return (dt is not None, resmi_aday(c), c.get('takipli', False), c.get('on_puan', 0), dt.timestamp() if dt else 0)
+    return (dt is not None, resmi_aday(c), kesif_kaynak_sayisi(c) >= 2, c.get('takipli', False), c.get('on_puan', 0), dt.timestamp() if dt else 0)
 
 
 def resmi_aday(c):
@@ -233,13 +336,25 @@ def kesif_engeli(c):
     title = oto.norm(c['baslik'])
     if ('?' in c['baslik'] or re.search(
             r'\b(opinion|why|remember|analysts?|analysis|fans?|player turns|retrospective|'
-            r'community.run|politician|politics|yorum|analiz|nostalji)\b', title)):
+            r'community.run|politician|politics|politique|yorum|analiz|nostalji|nostalgia)\b', title)):
         return 'görüş/yorum/analiz/topluluk başlığı'
-    sources = {s['id'] for ref in [c, *c.get('ilgili_kaynaklar', [])]
-               if (s := oto.kesif_kaynagi(ref.get('url', '')))}
-    if len(sources) < 2:
-        return 'tek kaynak, resmî teyit yok'
-    return None
+    if (re.search(
+            r'\b(how to|walkthrough|puzzle solutions?|missable|guides?|tips|tricks|cosplay|'
+            r'speedrun|glitch(?:es)?|scam|thirst|deals?|'
+            r'como conseguir|comment|ou trouver|guia|trucos|astuces|soluce)\b', title)
+            or re.match(r'^all .+ in\b', title)):
+        return 'rehber/liste/fırsat başlığı'
+    if kesif_kaynak_sayisi(c) >= 2:
+        return None
+    # Tek kaynaklı somut sürüm/yama notu/tarihli çıkış duyurusu: yazar resmî sayfasını araştırabilir.
+    has_version = bool(re.search(r'\b(?:version|ver|v|patch|update)\s+\d+\.\d+(?:\.\d+)?\b', c['baslik'], re.I))
+    has_patch_notes = bool(re.search(r'\b(patch notes|hotfix(?:es)?|changelog)\b', title))
+    has_dated_launch = bool(
+        re.search(r'\b(launches|launching|releases|releasing|begins|starts|coming|arrives|out now|now available)\b', title)
+        and (re.search(r'\b(out now|now available)\b', title) or re.search(rf'\b({_AY_ADLARI})\b', title)))
+    if has_version or has_patch_notes or has_dated_launch:
+        return None
+    return 'tek kaynak, resmî teyit yok'
 
 
 def yedek_puan(candidate):
@@ -352,7 +467,8 @@ def calistir(argv, cwd, timeout, *, env=None, stdin=None):
         raise TimeoutError(f'{pathlib.Path(executable).name}: {timeout:.0f} sn zaman aşımı')
     out, err = out.decode('utf-8', 'replace'), err.decode('utf-8', 'replace')
     if process.returncode:
-        raise RuntimeError(f'{pathlib.Path(executable).name} ({process.returncode}): {(err or out)[-1500:]}')
+        detail = '\n'.join(part for part in (err.strip(), out.strip()) if part)
+        raise RuntimeError(f'{pathlib.Path(executable).name} ({process.returncode}): {detail[-1500:]}')
     return out
 
 
@@ -734,15 +850,15 @@ class Hat:
             else:
                 new.append(c)
         self.sonuc['yayinda_elendi'] = len(fresh) - len(new)
-        candidates = olaylari_birlestir(new)
-        self.sonuc['olay_birlestirildi'] = len(new) - len(candidates)
-        titles = [{'baslik': x.get('diller', {}).get('tr', {}).get('baslik', ''),
-                   'konu': x.get('otomasyon', {}).get('konu', '')} for x in recent[:100]]
         games = oku(self.root / 'data/oyunlar.json')
         self.games = [s for x in games for s in [x['ad'], *x.get('eslesme', [])]]
         # Takipli eşleşme: (normalize ad, oyunun normalize adı). "Aynı oyun" sınırı oyun adına göre.
         self.oyunlar = [(oto.norm(s), oto.norm(x['ad'])) for x in games
                         for s in [x['ad'], *x.get('eslesme', [])] if len(s) > 2 and oto.norm(s)]
+        candidates = olaylari_birlestir(new, self.oyunlar)
+        self.sonuc['olay_birlestirildi'] = len(new) - len(candidates)
+        titles = [{'baslik': x.get('diller', {}).get('tr', {}).get('baslik', ''),
+                   'konu': x.get('otomasyon', {}).get('konu', '')} for x in recent[:100]]
         # Tarihsizler sona; kaynak sayısı arttığında yerel bağlam/süre sınırlı kalır.
         limit = oto.CONFIG['sinirlar'].get('yerel_aday', 72)
         if len(candidates) > limit:
@@ -814,7 +930,7 @@ class Hat:
         for x in decisions:
             c = candidates[x['aday_id']]
             eslesme = next((oyun for anahtar, oyun in self.oyunlar if oto.oyun_eslesir(c['baslik'], anahtar)), None)
-            blocked = re.search(r'\b(leak(?:ed|s)?|rumou?rs?|reportedly|sizinti|soylenti|cheats?|piracy)\b', oto.norm(c['baslik']))
+            blocked = re.search(r'\b(leak(?:ed|s)?|rumou?rs?|reportedly|sizinti|soylenti|(?<!anti )cheats?|piracy)\b', oto.norm(c['baslik']))
             # Küçük modelin anlamsız ret/tekrar gerekçesi teyidin yerini alamaz.
             investigate = x['karar'] == 'al' or eslesme or x['hype'] >= 7 or c.get('resmi_aday')
             if investigate and not blocked:

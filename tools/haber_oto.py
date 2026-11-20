@@ -348,11 +348,16 @@ def _kaynak_tara(source, now):
                     if not slug:
                         continue
                     store = 'https://store.epicgames.com/en-US/p/' + slug.removesuffix('/home')
+                    desc = duz_metin(item.get('description') or '')[:400]
+                    resmi_veri = {'api_url': source['api'], 'alinma_zamani': now.isoformat(),
+                                  'oyun': item['title'], 'baslangic': start.isoformat(),
+                                  'bitis': end.isoformat(), 'magaza_url': store, 'ulke': 'TR',
+                                  'ucretsiz': True, 'indirim_yuzdesi': 100}
+                    if desc:
+                        resmi_veri['aciklama'] = desc
                     items.append({'kaynak': source['id'], 'ad': source['ad'], 'baslik': item['title'],
                                   'url': store, 'tarih': start.isoformat() if start <= now else None, 'resmi_aday': True,
-                                  'resmi_veri': {'api_url': source['api'], 'alinma_zamani': now.isoformat(),
-                                                'oyun': item['title'], 'baslangic': start.isoformat(),
-                                                'bitis': end.isoformat(), 'magaza_url': store, 'ulke': 'TR'}})
+                                  'resmi_veri': resmi_veri})
             return {'id': source['id'], 'durum': 'ok', 'web_gerekli': False,
                     'not': 'Epic API kampanya olguları resmî teyittir; mağaza 403 olsa da geçerlidir.'}, items
         parser = LinkOku()

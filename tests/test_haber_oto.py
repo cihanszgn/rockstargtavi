@@ -209,12 +209,15 @@ class NewsTests(unittest.TestCase):
     def test_epic_scanner_preserves_only_free_unexpired_campaign_facts(self):
         source = next(s for s in h.CONFIG['kaynaklar'] if s['id'] == 'epic')
         offer = {'startDate': (NOW - timedelta(hours=1)).isoformat(), 'endDate': (NOW + timedelta(days=6)).isoformat(), 'discountSetting': {'discountPercentage': 0}}
-        game = {'title': 'Game', 'productSlug': 'game/home', 'promotions': {'promotionalOffers': [{'promotionalOffers': [offer]}]}}
+        game = {'title': 'Game', 'description': 'A pirate metroidvania adventure.', 'productSlug': 'game/home', 'promotions': {'promotionalOffers': [{'promotionalOffers': [offer]}]}}
         raw = {'data': {'Catalog': {'searchStore': {'elements': [game]}}}}
         with patch.object(h, 'getir', return_value=json.dumps(raw).encode()):
             status, items = h.kaynak_tara(source, NOW)
         self.assertEqual(status['durum'], 'ok')
         self.assertEqual(items[0]['resmi_veri']['oyun'], 'Game')
+        self.assertTrue(items[0]['resmi_veri']['ucretsiz'])
+        self.assertEqual(items[0]['resmi_veri']['indirim_yuzdesi'], 100)
+        self.assertEqual(items[0]['resmi_veri']['aciklama'], 'A pirate metroidvania adventure.')
         self.assertEqual(items[0]['url'], 'https://store.epicgames.com/en-US/p/game')
         self.assertEqual(items[0]['resmi_veri']['api_url'], source['api'])
 
