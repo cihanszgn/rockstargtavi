@@ -236,6 +236,21 @@
   "url": "https://www.youtube.com/shorts/yoLbUER4dTk",
   "zaman": "2026-11-18T21:29:27+00:00"
  },
+ "eraycan-20261119-aea421a4-canli-01|klip|youtube|short": {
+  "bicim": "short",
+  "boyut": 27715668,
+  "dil": "klip",
+  "durum": "tamam",
+  "hesap": "klip",
+  "id": "eraycan-20261119-aea421a4-canli-01",
+  "kimlik": "rAG5wryiHnk",
+  "niyet_zamani": "2026-11-20T01:49:29+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status&upload_id=AFy3sg09W6UuVvWQupMx4ARMBO9hBq8nLI5e_Ja7FYbPn9TG-dnulveU3voGjIC8styz87ye78fQxxFlk0JK5KjqT_6LuMMxa7-sYV8RkKcR2zY",
+  "platform": "youtube",
+  "sosyal_tur": "klip",
+  "url": "https://www.youtube.com/shorts/rAG5wryiHnk",
+  "zaman": "2026-11-20T01:49:29+00:00"
+ },
  "escape-from-tarkov-1-3-5-0-teknik-guncelleme|tr|instagram|gorsel": {
   "bicim": "gorsel",
   "dil": "tr",
