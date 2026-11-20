@@ -622,5 +622,45 @@ class SessizSaat(Temel):
         self.assertLess(kaynak.index("sessiz_saat_mi("), kaynak.index("# ---- Klip/derleme"))
 
 
+class YtKapakGuncelle(Temel):
+    def _hazirla(self):
+        self.manifest.write_text(json.dumps({
+            "surum": 1,
+            "taban": "https://medya.test/v/",
+            "videolar": {
+                "oyun-a": {"tr": {"kapak": "oyun-a-tr-kapak.jpg", "mp4_540": "a540.mp4", "mp4_720": "a720.mp4", "sure": 30.0}},
+                "oyun-beklet": {"tr": {"kapak": "oyun-beklet-tr-kapak.jpg", "mp4_540": "b540.mp4", "mp4_720": "b720.mp4", "sure": 30.0, "beklet": True}},
+            },
+        }), encoding="utf-8")
+        self.kayit.write_text(json.dumps({
+            "konu-a|tr|youtube|short": {"id": "oyun-a", "dil": "tr", "platform": "youtube", "bicim": "short", "durum": "tamam", "kimlik": "VID_A"},
+            "konu-b|tr|youtube|short": {"id": "oyun-beklet", "dil": "tr", "platform": "youtube", "bicim": "short", "durum": "tamam", "kimlik": "VID_B"},
+            "klip-1|klip|youtube|short": {"id": "klip-1", "dil": "klip", "hesap": "klip", "platform": "youtube", "bicim": "short", "sosyal_tur": "klip", "durum": "tamam", "kimlik": "VID_K"},
+            "konu-a|tr|instagram|reel": {"id": "oyun-a", "dil": "tr", "platform": "instagram", "bicim": "reel", "durum": "tamam", "kimlik": "IG_A"},
+            "konu-c|tr|youtube|short": {"id": "oyun-yok", "dil": "tr", "platform": "youtube", "bicim": "short", "durum": "tamam", "kimlik": "VID_C"},
+        }), encoding="utf-8")
+
+    def test_yayinlanmis_haber_shortlari_guncellenir_beklet_dahil_klip_atlanir(self):
+        self._hazirla()
+        ag = SahteAg()
+        ozet = sy.yt_kapaklari_guncelle(kayit_yolu=self.kayit, manifest_yolu=self.manifest, tum=SIRLAR, ag=ag, cikti=lambda *_: None)
+        self.assertEqual((ozet["guncellenen"], ozet["hatali"], ozet["atlanan"]), (2, 0, 1))
+        thumb_cagrilar = [u for _, u in ag.cagrilar if "thumbnails/set" in u]
+        self.assertEqual(len(thumb_cagrilar), 2)
+        self.assertEqual(sum("oauth2.googleapis.com" in u for _, u in ag.cagrilar), 1)
+        self.assertFalse(any("uploadType=resumable" in u for _, u in ag.cagrilar))
+
+    def test_dry_run_ag_cagrisi_yapmaz(self):
+        self._hazirla()
+        ozet = sy.yt_kapaklari_guncelle(kayit_yolu=self.kayit, manifest_yolu=self.manifest, tum={}, ag=YasakAg(), dry_run=True, cikti=lambda *_: None)
+        self.assertEqual((ozet["guncellenen"], ozet["hatali"], ozet["atlanan"]), (2, 0, 1))
+
+    def test_yalniz_id_suzgeci(self):
+        self._hazirla()
+        ag = SahteAg()
+        ozet = sy.yt_kapaklari_guncelle(kayit_yolu=self.kayit, manifest_yolu=self.manifest, tum=SIRLAR, ag=ag, yalniz_id={"VID_A"}, cikti=lambda *_: None)
+        self.assertEqual((ozet["guncellenen"], ozet["hatali"], ozet["atlanan"]), (1, 0, 0))
+
+
 if __name__ == "__main__":
     unittest.main()

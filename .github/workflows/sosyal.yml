@@ -20,6 +20,10 @@ on:
         description: "Yalnız dene (hiçbir şey gönderme)"
         type: boolean
         default: false
+      yt_kapak_guncelle:
+        description: "Yayınlanmış YouTube Shorts kapaklarını silmeden güncelle"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -47,7 +51,7 @@ jobs:
 
       - name: Kuyruk kartlarını üret ve yayına al
         id: kart
-        if: inputs.deneme != true
+        if: inputs.deneme != true && inputs.yt_kapak_guncelle != true
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -102,10 +106,11 @@ jobs:
         run: python tools/sosyal_yayinla.py --sayfa-bekle
 
       - name: Paylaş
-        # Deneme çalışmasında kart adımı atlanır (çıktı yok); normal turda kart adımı yayını doğruladıysa '1' yazar.
-        if: inputs.deneme == true || steps.kart.outputs.yayinda == '1'
+        # Deneme veya kapak güncelleme çalışmasında kart adımı atlanır; normal turda kart adımı yayını doğruladıysa '1' yazar.
+        if: inputs.yt_kapak_guncelle == true || inputs.deneme == true || steps.kart.outputs.yayinda == '1'
         env:
           DENEME: ${{ inputs.deneme && '--dry-run' || '' }}
+          KAPAK_GUNCELLE: ${{ inputs.yt_kapak_guncelle && '--yt-kapak-guncelle' || '' }}
           X_TR_API_KEY: ${{ secrets.X_TR_API_KEY }}
           X_TR_API_SECRET: ${{ secrets.X_TR_API_SECRET }}
           X_TR_ACCESS_TOKEN: ${{ secrets.X_TR_ACCESS_TOKEN }}
@@ -179,10 +184,10 @@ jobs:
           YT_KLIP_REFRESH_TOKEN: ${{ secrets.YT_KLIP_REFRESH_TOKEN }}
           IG_KLIP_USER_ID: ${{ secrets.IG_KLIP_USER_ID }}
           IG_KLIP_TOKEN: ${{ secrets.IG_KLIP_TOKEN }}
-        run: python tools/sosyal_yayinla.py $DENEME
+        run: python tools/sosyal_yayinla.py $DENEME $KAPAK_GUNCELLE
 
       - name: Gönderi kaydını depoya yaz
-        if: always() && inputs.deneme != true
+        if: always() && inputs.deneme != true && inputs.yt_kapak_guncelle != true
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

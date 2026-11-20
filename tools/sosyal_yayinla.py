@@ -494,9 +494,9 @@ def yt_kapak(ag, tok, video_kimlik, kapak_adresi) -> str | None:
         resim = ag.indir(kapak_adresi)
         durum, _, metin = ag.ham("POST", f"https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId={video_kimlik}",
                                  govde=resim, basliklar={"Authorization": f"Bearer {tok}", "Content-Type": "image/jpeg"}, zaman=120)
-        return None if durum in (200, 201) else f"küçük resim yüklenmedi (HTTP {durum})"
+        return None if durum in (200, 201) else f"küçük resim yüklenmedi (HTTP {durum}): {metin[:200]}"
     except PaylasimHatasi as h:
-        return f"küçük resim yüklenmedi: {str(h)[:160]}"
+        return f"küçük resim yüklenmedi: {str(h)[:320]}"
 
 
 def yt_paylas(ag, sir, dil, x, link, ayar, ara, video) -> dict:
@@ -1169,6 +1169,94 @@ def benzet(ayar, veri, kayit, manifest_yolu, baslangic, saat, *, kok=KOK, cikti=
     return secimler
 
 
+def _manifest_kapak(manifest: dict, haber_id: str, dil: str) -> str | None:
+    """Manifestten haber/dil için kapak URL'si (zaten yayında olan video `beklet` olsa bile okur)."""
+    if not manifest:
+        return None
+    taban = manifest.get("taban")
+    v = ((manifest.get("videolar") or {}).get(haber_id) or {}).get(dil)
+    if not (isinstance(taban, str) and taban.startswith("https://") and isinstance(v, dict)):
+        return None
+    ad = vs._dosya(v, "kapak")
+    if not ad:
+        return None
+    return (taban if taban.endswith("/") else taban + "/") + ad
+
+
+def yt_kapaklari_guncelle(*, kayit_yolu: pathlib.Path, manifest_yolu: pathlib.Path, tum: dict, ag,
+                          dry_run: bool = False, yalniz_id: set[str] | None = None, cikti=print) -> dict:
+    """Yayınlanmış haber YouTube Shorts videolarının kapaklarını silmeden, yalnızca thumbnails.set ile günceller."""
+    kayit = json.loads(kayit_yolu.read_text(encoding="utf-8")) if kayit_yolu.exists() else {}
+    manifest = vs.yukle(manifest_yolu)
+    hedefler = []
+    for k, rec in sorted(kayit.items()):
+        if rec.get("durum") != "tamam" or rec.get("platform") != "youtube" or rec.get("bicim") != "short":
+            continue
+        if rec.get("sosyal_tur") in KLIP_TURLERI:
+            continue
+        vid = rec.get("kimlik")
+        hid = rec.get("id")
+        dil = rec.get("dil") or (k.split("|")[1] if len(k.split("|")) == 4 else None)
+        if not (vid and hid and dil):
+            continue
+        if yalniz_id and hid not in yalniz_id and vid not in yalniz_id:
+            continue
+        kapak = _manifest_kapak(manifest, hid, dil)
+        hesap = kayit_hesabi(k, rec)
+        hedefler.append((hesap, hid, dil, vid, kapak))
+
+    ozet = {"guncellenen": 0, "hatali": 0, "atlanan": 0, "detay": []}
+    if not hedefler:
+        cikti("Güncellenecek yayınlanmış YouTube Shorts bulunamadı.")
+        return ozet
+
+    tok_onbellek: dict[str, str | None] = {}
+    for hesap, hid, dil, vid, kapak in hedefler:
+        if not kapak:
+            ozet["atlanan"] += 1
+            ozet["detay"].append({"id": hid, "dil": dil, "kimlik": vid, "durum": "atlandi", "not": "manifestte kapak yok"})
+            cikti(f"ATLANDI {hid} ({dil}) [{vid}]: manifestte kapak yok")
+            continue
+        sir = hesap_sirri(tum, "youtube", hesap)
+        if dry_run:
+            ozet["guncellenen"] += 1
+            ozet["detay"].append({"id": hid, "dil": dil, "kimlik": vid, "durum": "deneme", "kapak": kapak})
+            cikti(f"[DENEME] {hid} ({dil}) [{vid}] (hesap: {hesap}) <- {kapak}" + ("" if sir else " (anahtar yok)"))
+            continue
+        if not sir:
+            ozet["atlanan"] += 1
+            ozet["detay"].append({"id": hid, "dil": dil, "kimlik": vid, "durum": "atlandi", "not": f"youtube/{hesap} anahtarı yok"})
+            cikti(f"ATLANDI {hid} ({dil}) [{vid}]: youtube/{hesap} anahtarı yok ({', '.join(eksik_sirlar(tum, 'youtube', hesap))})")
+            continue
+        if hesap not in tok_onbellek:
+            try:
+                tok_onbellek[hesap] = yt_erisim(ag, sir)
+            except PaylasimHatasi as h:
+                tok_onbellek[hesap] = None
+                cikti(f"HATA youtube/{hesap} erişim anahtarı alınamadı: {h}")
+        tok = tok_onbellek[hesap]
+        if not tok:
+            ozet["hatali"] += 1
+            ozet["detay"].append({"id": hid, "dil": dil, "kimlik": vid, "durum": "hata", "not": "erişim anahtarı alınamadı"})
+            continue
+        if not ag.yayinda_mi(kapak):
+            ozet["hatali"] += 1
+            ozet["detay"].append({"id": hid, "dil": dil, "kimlik": vid, "durum": "hata", "not": f"kapak yayında değil: {kapak}"})
+            cikti(f"HATA {hid} ({dil}) [{vid}]: kapak yayında değil ({kapak})")
+            continue
+        hata_not = yt_kapak(ag, tok, vid, kapak)
+        if hata_not:
+            ozet["hatali"] += 1
+            ozet["detay"].append({"id": hid, "dil": dil, "kimlik": vid, "durum": "hata", "not": hata_not})
+            cikti(f"HATA {hid} ({dil}) [{vid}]: {hata_not}")
+        else:
+            ozet["guncellenen"] += 1
+            ozet["detay"].append({"id": hid, "dil": dil, "kimlik": vid, "durum": "tamam", "kapak": kapak})
+            cikti(f"GÜNCELLENDİ {hid} ({dil}) [{vid}] <- {kapak}")
+    cikti(f"YouTube kapak güncellemesi bitti: {ozet['guncellenen']} güncellendi, {ozet['hatali']} hatalı, {ozet['atlanan']} atlandı.")
+    return ozet
+
+
 def main(argv=None) -> int:
     for stream in (sys.stdout, sys.stderr):
         if hasattr(stream, "reconfigure"):
@@ -1183,9 +1271,17 @@ def main(argv=None) -> int:
     ap.add_argument("--klip-manifest", metavar="YOL",
                     help="klip onay manifesti (varsayılan data/klipler.json); deneme için geçici kopya verilebilir")
     ap.add_argument("--sayfa-bekle", action="store_true", help="en yeni haberin sayfası yayında olana dek bekle (en çok 10 dk); sabit uyku yerine")
+    ap.add_argument("--yt-kapak-guncelle", action="store_true",
+                    help="yayınlanmış haber YouTube Shorts kapaklarını silmeden manifestteki güncel kapakla değiştir")
+    ap.add_argument("--yt-id", help="--yt-kapak-guncelle için virgülle ayrılmış haber ya da YouTube video kimliği süzgeci")
     a = ap.parse_args(argv)
     if a.selftest:
         return selftest()
+    if a.yt_kapak_guncelle:
+        suzgec = {s.strip() for s in a.yt_id.split(",") if s.strip()} if a.yt_id else None
+        ozet = yt_kapaklari_guncelle(kayit_yolu=KAYIT, manifest_yolu=vs.MANIFEST_YOLU, tum=sirlari_oku(),
+                                     ag=Ag(), dry_run=a.dry_run, yalniz_id=suzgec)
+        return 0 if ozet["hatali"] == 0 else 1
     if a.saat_benzet is not None and (not a.dry_run or not 1 <= a.saat_benzet <= 168):
         ap.error('--saat-benzet için --kuru ve 1–168 saat gerekir')
     if a.baslangic and a.saat_benzet is None:
