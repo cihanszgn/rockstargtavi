@@ -361,6 +361,21 @@ class ZamanlamaTests(unittest.TestCase):
         self.assertTrue(vtt.startswith('WEBVTT\n\n'))
         self.assertEqual(vtt.count(' --> '), len(z['parcalar']))
 
+    def test_gosterim_zamanlari_gec_ve_ters_tetikte_denetimden_once_oturur(self):
+        # 1) Son tetik sahnenin %95'inde: kart 0.92 denetiminden en az 0.5 sn önce açılmalı (es/fr gta-vi maddeler)
+        kel = ['bir', 'iki', 'uc', 'dort', 'son']
+        zam = [{'k': k, 'b': 20.0 + i * 2.3, 's': 20.0 + i * 2.3 + 0.4} for i, k in enumerate(kel)]
+        ogeler = [{'metin': 'A', 'tetik': 'iki'}, {'metin': 'B', 'tetik': 'son'}]
+        v._gosterim_zamanlari(ogeler, kel, zam, 20.0, 30.0)
+        self.assertAlmostEqual(ogeler[0]['goster'], 22.3, places=3)
+        self.assertLessEqual(ogeler[1]['goster'], 20.0 + 10.0 * 0.92 - 0.5 + 1e-9)
+        self.assertLessEqual(ogeler[1]['goster'], 30.0 - 0.85 + 1e-9)
+        # 2) İlk tetik ikinciden sonra ve sahne sonunda (mlb-the-show-27 tr): ilk öge ikinciyi tavana sıkıştırmaz
+        ogeler_ters = [{'metin': 'A', 'tetik': 'son'}, {'metin': 'B', 'tetik': 'dort'}]
+        v._gosterim_zamanlari(ogeler_ters, kel, zam, 20.0, 26.0)
+        self.assertLess(ogeler_ters[0]['goster'], ogeler_ters[1]['goster'])
+        self.assertLessEqual(ogeler_ters[1]['goster'], 20.0 + 6.0 * 0.92 - 0.5 + 1e-9)
+
     def test_altyazi_kirma_cezasi(self):
         self.assertEqual(v.kirma_cezasi('750', 'mermi'), v.KIRILMAZ, 'sayı birimden ayrılmaz')
         self.assertEqual(v.kirma_cezasi('11.', 'yılın'), v.KIRILMAZ, 'sıra sayısı kelimesinden ayrılmaz')
@@ -996,6 +1011,32 @@ class SeslendirmeTests(unittest.TestCase):
             v.seslendirici('edge', '', 'tr').seslendir('Merhaba', pathlib.Path(t))
         self.assertIn('edge seslendirme başarısız', str(c.exception))
 
+    def test_azure_mai_1007_hatasinda_neural_sese_duser(self):
+        denenen = []
+
+        def kosucu(komut, **kw):
+            girdi = json.loads(pathlib.Path(komut[-3]).read_text(encoding='utf-8'))
+            denenen.append(girdi['konusmaci'])
+            if ':MAI-' in girdi['konusmaci']:
+                return subprocess.CompletedProcess(
+                    komut, 1, '',
+                    'Azure seslendirme başarısız: Error code: 1007. Detail="Bad MAI Request: {"error":{"code":"invalid_request"')
+            pathlib.Path(komut[-2]).write_bytes(b'ID3')
+            pathlib.Path(komut[-1]).write_text(json.dumps({
+                'olaylar': [{'metin': 'Hello', 'bas': 1_000_000, 'sure': 3_000_000}],
+            }), encoding='utf-8')
+            return subprocess.CompletedProcess(komut, 0, '', '')
+
+        with patch.dict(os.environ, {'AZURE_SPEECH_KEY': 'x', 'AZURE_SPEECH_REGION': 'northeurope'}), \
+                tempfile.TemporaryDirectory() as t, patch.object(v, '_calistir', kosucu), \
+                patch.object(v.shutil, 'which', return_value='uv'):
+            sesci = v.seslendirici('azure', 'en-US-Ethan:MAI-Voice-2.1', 'en')
+            ses, kel = sesci.seslendir('Xbox Series X|S', pathlib.Path(t))
+            self.assertTrue(ses.exists())
+            self.assertEqual(denenen, ['en-US-Ethan:MAI-Voice-2.1', v.VARSAYILAN_KONUSMACI['en']])
+            self.assertEqual(sesci.konusmaci, 'en-US-Ethan:MAI-Voice-2.1', 'manifest anahtarı değişmez')
+            self.assertEqual(kel, [{'k': 'Hello', 'b': 0.1, 's': 0.4}])
+
 
 def tanima_sonucu(*kelimeler, neden='tanindi'):
     """Tanıyıcının `recognized` olayı: Detailed biçimli JSON (100 ns birim)."""
@@ -1102,6 +1143,12 @@ class YardimciTests(unittest.TestCase):
             olaylar = yardimci.azure({**self.GIRDI, 'konusmaci': 'tr-TR-Aydin:MAI-Voice-2.1'}, 'ses.mp3', sdk=sdk)
         self.assertEqual(olaylar, [])
         self.assertIn("<voice name='tr-TR-Aydin:MAI-Voice-2.1'>", sdk.kayit['ssml'])
+
+    def test_ssml_dik_cizgi_ve_kontrol_temizler(self):
+        xml = yardimci.ssml({'metin': 'PS5 and Xbox Series X|S\x00!\nNext.', 'konusmaci': 'en-US-Ethan:MAI-Voice-2.1'})
+        self.assertIn('Xbox Series X S!\nNext.', xml)
+        self.assertNotIn('|', xml)
+        self.assertNotIn('\x00', xml)
 
     def test_tani_kelime_zamanlarini_sirali_verir(self):
         sdk = SahteSdk(tanima=(tanima_sonucu(('dünya', 12_000_000, 3_000_000)),

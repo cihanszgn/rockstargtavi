@@ -10,10 +10,13 @@ olaylar.json: {"olaylar": [{"metin", "bas", "sure"}]} (100 ns birim).
 import asyncio
 import json
 import os
+import re
 import sys
 from xml.sax.saxutils import escape
 
 TIK = 10_000_000  # saniyedeki 100 ns sayısı
+_XML_KONTROL = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f]")
+_DIK_CIZGI = re.compile(r"\s*\|\s*")
 
 
 def _yaz(yol, deger):
@@ -41,11 +44,18 @@ def edge(girdi, ses_yolu):
     return asyncio.run(_edge(girdi, ses_yolu))
 
 
+def _ssml_metin(metin):
+    """Azure MAI-Voice-2.1 `|` (ör. 'Xbox Series X|S') karakterinde 1007/invalid_request veriyor;
+    okunuşu bozmadan boşluğa çevrilir, XML 1.0 dışı kontrol karakterleri temizlenir."""
+    temiz = _XML_KONTROL.sub("", str(metin))
+    return _DIK_CIZGI.sub(" ", temiz)
+
+
 def ssml(girdi):
     dil = girdi.get("dil") or girdi["konusmaci"][:5]
     return (f"<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='{escape(dil)}'>"
             f"<voice name='{escape(girdi['konusmaci'])}'><prosody rate='{escape(girdi.get('hiz', '+0%'))}'>"
-            f"{escape(girdi['metin'])}</prosody></voice></speak>")
+            f"{escape(_ssml_metin(girdi['metin']))}</prosody></voice></speak>")
 
 
 def _tik(deger):

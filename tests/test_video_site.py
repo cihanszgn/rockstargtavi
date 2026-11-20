@@ -174,6 +174,32 @@ class SiteHtmlTests(unittest.TestCase):
         self.assertIn("A &amp; B &lt;c&gt;", g)
         self.assertIn(f"<video:content_loc>{TABAN}a720.mp4</video:content_loc>", g)
 
+    def test_manifest_birlestir_eszamanli_degisiklikleri_korur(self):
+        eski = {"surum": 1, "taban": TABAN, "videolar": {
+            "h1": {"tr": {"anahtar": "a1", "sure": 30.0, "youtube": "", "instagram": ""}},
+        }}
+        yerel = {"surum": 1, "taban": TABAN, "videolar": {
+            "h1": {"tr": {"anahtar": "a1", "sure": 30.0, "youtube": "", "instagram": ""}},
+            "h2": {"en": {"anahtar": "b1", "sure": 41.2, "youtube": "", "instagram": ""}},
+        }}
+        guncel = {"surum": 1, "taban": TABAN, "videolar": {
+            "h1": {"tr": {"anahtar": "a1", "sure": 30.0, "youtube": "https://youtu.be/X", "instagram": ""}},
+            "h3": {"es": {"anahtar": "c1", "sure": 35.0, "youtube": "", "instagram": ""}},
+        }}
+        sonuc, degisen = vs.manifest_birlestir(eski, yerel, guncel)
+        self.assertEqual(degisen, 1)
+        self.assertEqual(sonuc["videolar"]["h1"]["tr"]["youtube"], "https://youtu.be/X", "sosyal.yml linki korunur")
+        self.assertIn("h3", sonuc["videolar"], "main'e arada gelen başka video korunur")
+        self.assertEqual(sonuc["videolar"]["h2"]["en"]["anahtar"], "b1", "yeni üretilen video eklenir")
+        # Aynı kayda eşzamanlı youtube linki gelmişse yeniden üretim onu silmez
+        yerel_guncel = {"surum": 1, "taban": TABAN, "videolar": {
+            "h1": {"tr": {"anahtar": "a2", "sure": 31.0, "youtube": "", "instagram": ""}},
+        }}
+        sonuc2, degisen2 = vs.manifest_birlestir(eski, yerel_guncel, guncel)
+        self.assertEqual(degisen2, 1)
+        self.assertEqual(sonuc2["videolar"]["h1"]["tr"]["anahtar"], "a2")
+        self.assertEqual(sonuc2["videolar"]["h1"]["tr"]["youtube"], "https://youtu.be/X")
+
 
 if __name__ == "__main__":
     unittest.main()

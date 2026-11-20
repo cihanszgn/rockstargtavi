@@ -159,14 +159,44 @@ jobs:
       - name: Siteyi yeniden üret ve manifesti depoya yaz
         if: always()
         run: |
+          if git diff --quiet -- data/videolar.json && [ -z "$(git ls-files --others --exclude-standard -- data/videolar.json)" ]; then
+            echo "Manifest değişmedi; commit atlandı."
+            exit 0
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/videolar.json 2>/dev/null || true
-          if ! git diff --cached --quiet; then
-            # manifest değiştiyse sayfalardaki oynatıcılar ve video site haritası da güncellenir
+          gecici=$(mktemp -d)
+          trap 'rm -rf "$gecici"' EXIT
+          git show HEAD:data/videolar.json > "$gecici/eski.json" 2>/dev/null || echo '{}' > "$gecici/eski.json"
+          cp data/videolar.json "$gecici/yerel.json"
+          basarili=0
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard FETCH_HEAD
+            degisen=$(python tools/video_site.py birlestir "$gecici/eski.json" "$gecici/yerel.json" data/videolar.json)
+            if [ "${degisen:-0}" -eq 0 ]; then
+              echo "Birleştirilecek yeni video kaydı kalmadı."
+              basarili=1
+              break
+            fi
+            # manifest değiştiyse sayfalardaki oynatıcılar ve video site haritası güncel main üstünden yeniden üretilir
             python tools/site_derle.py
             python tools/sosyal_derle.py
+            git add data/videolar.json
             git add -u
+            if git diff --cached --quiet; then
+              basarili=1
+              break
+            fi
             git commit -m "video: üretilen videolar ve siteye işlenmesi"
-            for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
+            if git push origin HEAD:main; then
+              basarili=1
+              break
+            fi
+            echo "Push yarıştı (deneme $i/5), güncel main üstünden yeniden deneniyor..."
+            sleep 5
+          done
+          if [ "$basarili" != 1 ]; then
+            echo "::error::Üretilen videolar manifeste itilemedi (5 deneme)"
+            exit 1
           fi

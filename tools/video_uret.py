@@ -1212,18 +1212,26 @@ def _tetik_zamani(tetik, kelimeler, zamanlar):
 
 
 def _gosterim_zamanlari(ogeler: list[dict], kelimeler, zamanlar, bas: float, bit: float) -> None:
-    """Ögelerin görünme anı: tetik kelimesi söylendiğinde, yoksa sahnenin konuşma aralığına eşit dağıtılmış."""
+    """Ögelerin görünme anı: tetik kelimesi söylendiğinde, yoksa sahnenin konuşma aralığına eşit dağıtılmış.
+    Son öge sahnenin %92 güvenli-alan denetiminden ve sahne sonundan yeterince önce yerleşir ki giriş animasyonu
+    tamamlansın ve izleyici okuyabilsin; erken ya da ters sıralı tetikler son ögeyi sona sıkıştırmaz."""
     if not ogeler:
         return
+    sure = max(0.0, bit - bas)
     ilk = zamanlar[0]["b"] if zamanlar else bas + 0.3
     son = zamanlar[-1]["s"] if zamanlar else bit - 0.5
     adim = max(0.35, (son - ilk) / len(ogeler))
-    onceki = bas + 0.2
+    taban = min(bas + 0.2, max(bas, bit - 0.4))
+    son_tavan = max(taban, min(bit - 0.85, bas + sure * 0.92 - 0.5))
+    min_ara = min(0.3, max(0.0, son_tavan - taban) / (len(ogeler) - 1)) if len(ogeler) > 1 else 0.0
+    onceki = taban
     for j, o in enumerate(ogeler):
         t = _tetik_zamani(o.pop("tetik", None), kelimeler, zamanlar)
         if t is None:
             t = ilk + 0.15 + j * adim
-        t = min(max(t, onceki + (0.3 if j else 0)), bit - 0.4)
+        kalan = len(ogeler) - 1 - j
+        tavan = max(taban, son_tavan - kalan * min_ara)
+        t = min(max(t, onceki + (min_ara if j else 0.0)), tavan)
         o["goster"] = round(t, 3)
         onceki = t
 
@@ -1521,6 +1529,12 @@ class EdgeSes(Seslendirici):
     ad = "edge"
 
 
+def _mai_istek_hatasi(mesaj: str) -> bool:
+    """Azure MAI-Voice-2.1'in reddettiği istekler (ör. 1007 / Bad MAI Request / invalid_request)."""
+    m = mesaj.casefold()
+    return "bad mai request" in m or "invalid_request" in m or "error code: 1007" in m
+
+
 class AzureSes(Seslendirici):
     ad = "azure"
 
@@ -1529,15 +1543,35 @@ class AzureSes(Seslendirici):
         if eksik:
             raise UretimHatasi(f"Azure için ortam değişkeni yok: {', '.join(eksik)} (önizleme için --ses edge)")
 
+    def _seslendir_konusmaci(self, metin: str, klasor: Path, konusmaci: str) -> tuple[Path, list[dict]]:
+        self.on_kosul()
+        klasor.mkdir(parents=True, exist_ok=True)
+        girdi, ses, olay = klasor / "tts-girdi.json", klasor / "ses.mp3", klasor / "tts-olaylar.json"
+        json_yaz(girdi, {"metin": metin, "konusmaci": konusmaci, "hiz": HIZ, "dil": konusmaci[:5]})
+        self._yardimci(self.ad, girdi, ses, olay, "seslendirme", ses)
+        return ses, olaylari_kelimeye(json_oku(olay))
+
     def seslendir(self, metin: str, klasor: Path) -> tuple[Path, list[dict]]:
-        ses, sinirlar = super().seslendir(metin, klasor)
+        konusmaci = self.konusmaci
+        try:
+            ses, sinirlar = self._seslendir_konusmaci(metin, klasor, konusmaci)
+        except UretimHatasi as e:
+            yedek = VARSAYILAN_KONUSMACI.get(self.dil)
+            if ":" not in konusmaci or not yedek or yedek == konusmaci or not _mai_istek_hatasi(str(e)):
+                raise
+            # MAI-Voice-2.1 geçersiz istek/1007 verirse aynı dilin kararlı Neural sesine düşülür;
+            # self.konusmaci ve manifest anahtarı korunur ki bekleyenler kuyruğu döngüye girmesin.
+            for yol in (klasor / "ses.mp3", klasor / "tts-olaylar.json"):
+                yol.unlink(missing_ok=True)
+            ses, sinirlar = self._seslendir_konusmaci(metin, klasor, yedek)
+            konusmaci = yedek
         if sinirlar:
             return ses, sinirlar
         # MAI-Voice kelime sınırı göndermiyor: zamanlar videoya giren mp3'ün kendisinden, Azure konuşma tanımayla
         # ölçülür. mp3, Remotion'ın da kullandığı ffmpeg ile açılır; böylece iki taraf aynı zaman çizgisini görür.
         wav, girdi, olay = klasor / "tani.wav", klasor / "tani-girdi.json", klasor / "tani-olaylar.json"
         ffmpeg("-i", str(ses), "-ac", "1", "-ar", "16000", "-c:a", "pcm_s16le", str(wav))
-        json_yaz(girdi, {"dil": self.konusmaci[:5]})
+        json_yaz(girdi, {"dil": konusmaci[:5]})
         self._yardimci("tani", girdi, wav, olay, "konuşma tanıma", wav)
         return ses, tanima_sonlarini_kirp(olaylari_kelimeye(json_oku(olay)), sessizlikler(ses))
 

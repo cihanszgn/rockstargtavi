@@ -214,6 +214,39 @@ def bugun_uretilen(manifest: dict, gun: str, dil: str | None = None) -> int:
     return n
 
 
+def manifest_birlestir(eski: dict, yerel: dict, guncel: dict) -> tuple[dict, int]:
+    """Üç yollu manifest birleştirme: yalnız bu çalışmada eklenen/değişen (haber_id, dil) kayıtlarını güncel
+    `origin/main` manifestine işler; eşzamanlı gelen başka haber kayıtları ve youtube/instagram bağlantıları korunur."""
+    taban = ((guncel or {}).get("taban") or (yerel or {}).get("taban")
+             or "https://medya.ctrl-agame.com/v/")
+    sonuc = json.loads(json.dumps(guncel)) if guncel and isinstance(guncel.get("videolar"), dict) else {
+        "surum": 1, "taban": taban, "videolar": {},
+    }
+    eski_v = (eski or {}).get("videolar") or {}
+    yerel_v = (yerel or {}).get("videolar") or {}
+    degisen = 0
+    for hid, diller in yerel_v.items():
+        if not isinstance(diller, dict):
+            continue
+        for dil, yeni in diller.items():
+            if not isinstance(yeni, dict):
+                continue
+            onceki = (eski_v.get(hid) or {}).get(dil)
+            if yeni == onceki:
+                continue
+            hedef_diller = sonuc["videolar"].setdefault(hid, {})
+            hedef = hedef_diller.get(dil) if isinstance(hedef_diller.get(dil), dict) else {}
+            kayit = json.loads(json.dumps(yeni))
+            for alan in ("youtube", "instagram"):
+                if not kayit.get(alan) and hedef.get(alan):
+                    kayit[alan] = hedef[alan]
+            if hedef.get("anahtar") == kayit.get("anahtar") and "onay" not in kayit and "onay" in hedef:
+                kayit["onay"] = hedef["onay"]
+            hedef_diller[dil] = kayit
+            degisen += 1
+    return sonuc, degisen
+
+
 if __name__ == "__main__":
     import sys
     from datetime import datetime, timezone
@@ -228,3 +261,11 @@ if __name__ == "__main__":
         tamam = onay_yaz(MANIFEST_YOLU, sys.argv[2], dil, sys.argv[1] == "onayla")
         print("tamam" if tamam else "kayıt bulunamadı")
         sys.exit(0 if tamam else 1)
+    elif sys.argv[1:2] == ["birlestir"] and len(sys.argv) >= 4:
+        eski_yol, yerel_yol = pathlib.Path(sys.argv[2]), pathlib.Path(sys.argv[3])
+        hedef_yol = pathlib.Path(sys.argv[4]) if len(sys.argv) > 4 else MANIFEST_YOLU
+        sonuc, degisen = manifest_birlestir(yukle(eski_yol), yukle(yerel_yol), yukle(hedef_yol))
+        if degisen:
+            hedef_yol.parent.mkdir(parents=True, exist_ok=True)
+            hedef_yol.write_text(json.dumps(sonuc, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+        print(degisen)
