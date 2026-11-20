@@ -964,9 +964,9 @@
    "kimlik": "AI6dtnuUrLI",
    "platform": "youtube",
    "son": {
-    "begeni": 2,
-    "izlenme": 185,
-    "olculdu": "2026-11-19T12:06:16+00:00",
+    "begeni": 5,
+    "izlenme": 190,
+    "olculdu": "2026-11-20T12:08:22+00:00",
     "yorum": 0
    },
    "tur": "haber",
@@ -980,9 +980,9 @@
    "kimlik": "Bucl5C7ouPI",
    "platform": "youtube",
    "son": {
-    "begeni": 3,
-    "izlenme": 589,
-    "olculdu": "2026-11-19T12:06:16+00:00",
+    "begeni": 10,
+    "izlenme": 901,
+    "olculdu": "2026-11-20T12:08:22+00:00",
     "yorum": 0
    },
    "tur": "haber",
@@ -996,9 +996,9 @@
    "kimlik": "DqHTK1EteVc",
    "platform": "youtube",
    "son": {
-    "begeni": 2,
-    "izlenme": 957,
-    "olculdu": "2026-11-19T12:06:16+00:00",
+    "begeni": 5,
+    "izlenme": 970,
+    "olculdu": "2026-11-20T12:08:22+00:00",
     "yorum": 1
    },
    "tur": "haber",
@@ -1012,9 +1012,9 @@
    "kimlik": "I9V5JYBWpaA",
    "platform": "youtube",
    "son": {
-    "begeni": 0,
-    "izlenme": 15,
-    "olculdu": "2026-11-19T12:06:16+00:00",
+    "begeni": 6,
+    "izlenme": 158,
+    "olculdu": "2026-11-20T12:08:22+00:00",
     "yorum": 0
    },
    "tur": "haber",
@@ -1028,14 +1028,46 @@
    "kimlik": "SeTX8UdyFxg",
    "platform": "youtube",
    "son": {
-    "begeni": 4,
-    "izlenme": 247,
-    "olculdu": "2026-11-19T12:06:16+00:00",
+    "begeni": 8,
+    "izlenme": 865,
+    "olculdu": "2026-11-20T12:08:22+00:00",
     "yorum": 0
    },
    "tur": "haber",
    "url": "https://www.youtube.com/shorts/SeTX8UdyFxg",
    "zaman": "2026-11-18T11:22:01+00:00"
+  },
+  "youtube|UWqymuZV914": {
+   "bicim": "short",
+   "dil": "tr",
+   "id": "drg-survivor-knockout-1-2-2026-11-17",
+   "kimlik": "UWqymuZV914",
+   "platform": "youtube",
+   "son": {
+    "begeni": 0,
+    "izlenme": 0,
+    "olculdu": "2026-11-20T12:08:22+00:00",
+    "yorum": 0
+   },
+   "tur": "haber",
+   "url": "https://www.youtube.com/shorts/UWqymuZV914",
+   "zaman": "2026-11-20T09:36:02+00:00"
+  },
+  "youtube|UrgYr1C7K2c": {
+   "bicim": "short",
+   "dil": "tr",
+   "id": "crusader-kings-iii-silk-silver-2026-11-17",
+   "kimlik": "UrgYr1C7K2c",
+   "platform": "youtube",
+   "son": {
+    "begeni": 0,
+    "izlenme": 0,
+    "olculdu": "2026-11-20T12:08:22+00:00",
+    "yorum": 0
+   },
+   "tur": "haber",
+   "url": "https://www.youtube.com/shorts/UrgYr1C7K2c",
+   "zaman": "2026-11-20T10:01:20+00:00"
   },
   "youtube|XEOR7UJKgKA": {
    "bicim": "short",
@@ -1044,9 +1076,9 @@
    "kimlik": "XEOR7UJKgKA",
    "platform": "youtube",
    "son": {
-    "begeni": 0,
-    "izlenme": 32,
-    "olculdu": "2026-11-19T12:06:16+00:00",
+    "begeni": 5,
+    "izlenme": 107,
+    "olculdu": "2026-11-20T12:08:22+00:00",
     "yorum": 0
    },
    "tur": "haber",
@@ -1060,9 +1092,9 @@
    "kimlik": "ZimEqKloZZg",
    "platform": "youtube",
    "son": {
-    "begeni": 2,
-    "izlenme": 11,
-    "olculdu": "2026-11-19T12:06:16+00:00",
+    "begeni": 5,
+    "izlenme": 16,
+    "olculdu": "2026-11-20T12:08:22+00:00",
     "yorum": 0
    },
    "tur": "haber",
@@ -1076,10 +1108,10 @@
    "kimlik": "_GRkDEBgBZs",
    "platform": "youtube",
    "son": {
-    "begeni": 7,
-    "izlenme": 922,
-    "olculdu": "2026-11-19T12:06:16+00:00",
-    "yorum": 0
+    "begeni": 10,
+    "izlenme": 962,
+    "olculdu": "2026-11-20T12:08:22+00:00",
+    "yorum": 2
    },
    "tur": "haber",
    "url": "https://www.youtube.com/shorts/_GRkDEBgBZs",
@@ -1092,9 +1124,9 @@
    "kimlik": "_XGW5efe5x8",
    "platform": "youtube",
    "son": {
-    "begeni": 6,
-    "izlenme": 1202,
-    "olculdu": "2026-11-19T12:06:16+00:00",
+    "begeni": 10,
+    "izlenme": 1253,
+    "olculdu": "2026-11-20T12:08:22+00:00",
     "yorum": 0
    },
    "tur": "haber",
@@ -1108,9 +1140,9 @@
    "kimlik": "d6pey0jfBtk",
    "platform": "youtube",
    "son": {
-    "begeni": 0,
-    "izlenme": 4,
-    "olculdu": "2026-11-19T12:06:16+00:00",
+    "begeni": 5,
+    "izlenme": 108,
+    "olculdu": "2026-11-20T12:08:22+00:00",
     "yorum": 0
    },
    "tur": "haber",
@@ -1124,17 +1156,49 @@
    "kimlik": "oK_H47M1Fec",
    "platform": "youtube",
    "son": {
-    "begeni": 3,
-    "izlenme": 641,
-    "olculdu": "2026-11-19T12:06:16+00:00",
+    "begeni": 6,
+    "izlenme": 648,
+    "olculdu": "2026-11-20T12:08:22+00:00",
     "yorum": 0
    },
    "tur": "haber",
    "url": "https://www.youtube.com/shorts/oK_H47M1Fec",
    "zaman": "2026-11-17T11:25:59+00:00"
+  },
+  "youtube|xS8VZWUFKb8": {
+   "bicim": "short",
+   "dil": "tr",
+   "id": "melvor-idle-2-early-access-2026-11-17",
+   "kimlik": "xS8VZWUFKb8",
+   "platform": "youtube",
+   "son": {
+    "begeni": 3,
+    "izlenme": 107,
+    "olculdu": "2026-11-20T12:08:22+00:00",
+    "yorum": 0
+   },
+   "tur": "haber",
+   "url": "https://www.youtube.com/shorts/xS8VZWUFKb8",
+   "zaman": "2026-11-20T08:55:12+00:00"
+  },
+  "youtube|xiCvhfn2lEU": {
+   "bicim": "short",
+   "dil": "tr",
+   "id": "mlb-the-show-27-tech-test-now-later-packs-2026-11-17",
+   "kimlik": "xiCvhfn2lEU",
+   "platform": "youtube",
+   "son": {
+    "begeni": 4,
+    "izlenme": 53,
+    "olculdu": "2026-11-20T12:08:22+00:00",
+    "yorum": 0
+   },
+   "tur": "haber",
+   "url": "https://www.youtube.com/shorts/xiCvhfn2lEU",
+   "zaman": "2026-11-20T08:20:32+00:00"
   }
  },
- "guncelleme": "2026-11-19T12:06:16+00:00",
+ "guncelleme": "2026-11-20T12:08:22+00:00",
  "kayitlar": [
   {
    "hesaplar": {
@@ -1267,6 +1331,17 @@
     }
    },
    "zaman": "2026-11-19T12:06:16+00:00"
+  },
+  {
+   "hesaplar": {
+    "youtube|tr": {
+     "abone": 4,
+     "izlenme": 5561,
+     "kanal": "Ctrl+A Game",
+     "video": 16
+    }
+   },
+   "zaman": "2026-11-20T12:08:22+00:00"
   }
  ],
  "surum": 1
