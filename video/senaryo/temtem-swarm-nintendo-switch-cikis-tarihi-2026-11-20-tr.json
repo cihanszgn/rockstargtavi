@@ -1,0 +1,92 @@
+{
+ "id": "temtem-swarm-nintendo-switch-cikis-tarihi-2026-11-20",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Temtem: Swarm, 21 Ocak 2027'de ilk günden çapraz oyun desteğiyle Nintendo Switch'e çıkıyor.",
+   "veri": {
+    "ust_etiket": "ÇIKIŞ TARİHİ",
+    "baslik": "Temtem: Swarm 21 Ocak'ta Switch'te",
+    "vurgu": [
+     "21 Ocak'ta"
+    ],
+    "tuslar": [
+     "T",
+     "E",
+     "M"
+    ]
+   },
+   "alt_kart": {
+    "simge": "cikis",
+    "baslik": "TEMTEM: SWARM",
+    "alt": "NINTENDO SWITCH • 21 OCAK 2027"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Nintendo eShop'ta istek listesine açılan oyun 21 Ocak 2027 tarihinde Switch oyuncularıyla buluşuyor.",
+   "veri": {
+    "etiket": "Switch çıkış tarihi",
+    "tarih": "21 Ocak",
+    "not": "Nintendo eShop'ta şimdiden istek listesinde."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "21 OCAK 2027",
+    "alt": "NINTENDO ESHOP İSTEK LİSTESİ"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Switch sürümü ilk günden PC ve PlayStation ile çapraz oyun sunuyor. Aynı gün tüm platformlara bellek iyileştirmesi ve hata düzeltme yaması gelecek.",
+   "veri": {
+    "baslik": "Çapraz oyun ve yeni yama",
+    "platformlar": [
+     "Switch",
+     "PC",
+     "PlayStation"
+    ],
+    "sayilar": [],
+    "not": "Tüm platformlara bellek iyileştirmesi ve hata düzeltmesi."
+   },
+   "alt_kart": {
+    "simge": "platform",
+    "baslik": "İLK GÜNDEN CROSS-PLAY",
+    "alt": "SWITCH • PC • PLAYSTATION"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Temtem: Swarm çıkış ve yama detaylarının tamamı sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "Tüm detaylar sitede",
+    "alt": "Resmî Steam duyurusu haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "id": "temtem-swarm-nintendo-switch-cikis-tarihi-2026-11-20",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Temtem: Swarm llega a Nintendo Switch el 21 de enero de 2027 con juego cruzado desde el estreno.",
+   "veri": {
+    "ust_etiket": "FECHA DE SALIDA",
+    "baslik": "Temtem: Swarm en Switch el 21 de enero",
+    "vurgu": [
+     "21 de enero"
+    ],
+    "tuslar": [
+     "T",
+     "E",
+     "M"
+    ]
+   },
+   "alt_kart": {
+    "simge": "cikis",
+    "baslik": "TEMTEM: SWARM",
+    "alt": "NINTENDO SWITCH • 21 ENERO 2027"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "El juego de acción bullet-heaven ya puede añadirse a la lista de deseos de Nintendo eShop antes de su salida el 21 de enero de 2027.",
+   "veri": {
+    "etiket": "Estreno en Switch",
+    "tarih": "21 de enero",
+    "not": "Ya disponible en la lista de deseos de eShop."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "21 DE ENERO DE 2027",
+    "alt": "LISTA DE DESEOS EN ESHOP"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Habrá juego cruzado desde el primer día entre Switch, PC y PlayStation, junto a una actualización con mejoras de memoria y correcciones para todas las plataformas.",
+   "veri": {
+    "baslik": "Juego cruzado y parche",
+    "platformlar": [
+     "Switch",
+     "PC",
+     "PlayStation"
+    ],
+    "sayilar": [],
+    "not": "Mejoras de memoria y correcciones en todos los sistemas."
+   },
+   "alt_kart": {
+    "simge": "platform",
+    "baslik": "CROSS-PLAY DE SALIDA",
+    "alt": "SWITCH • PC • PLAYSTATION"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles del estreno y del parche están en nuestra web, Control A Game.",
+   "veri": {
+    "cagri": "Todos los detalles en la web",
+    "alt": "Anuncio oficial de Steam en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

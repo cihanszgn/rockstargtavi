@@ -1,0 +1,110 @@
+{
+ "id": "gta-vi-resmen-cikti-2026-11-19",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Grand Theft Auto VI, 19 Kasım'da PlayStation 5 ve Xbox Series X|S için çıktı.",
+   "veri": {
+    "ust_etiket": "RESMÎ ÇIKIŞ",
+    "baslik": "GTA VI resmen çıktı!",
+    "vurgu": [
+     "resmen çıktı"
+    ],
+    "tuslar": [
+     "G",
+     "T",
+     "A",
+     "VI"
+    ]
+   },
+   "alt_kart": {
+    "simge": "cikis",
+    "baslik": "GTA VI",
+    "alt": "19 KASIM 2026 • ÇIKTI"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Oyun PlayStation 5 ve Xbox Series X|S'te PlayStation Store, Microsoft Store ve Rockstar Games Store'dan alınabiliyor.",
+   "veri": {
+    "baslik": "Çıkış platformları",
+    "platformlar": [
+     "PS5",
+     "Xbox"
+    ],
+    "sayilar": [
+     {
+      "deger": "34",
+      "etiket": "ÖZGÜN PARÇA",
+      "tetik": "PlayStation"
+     }
+    ],
+    "not": "Vice City ve Leonida'da Jason ile Lucia'nın hikâyesi."
+   },
+   "alt_kart": {
+    "simge": "platform",
+    "baslik": "PS5 VE XBOX SERIES X|S",
+    "alt": "DİJİTAL VE PERAKENDE SATIŞTA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Jason ve Lucia, Leonida'da suç komplosuna düşüyor. Atlantic Records'tan 34 parçalık albüm de geldi.",
+   "veri": {
+    "baslik": "Öne çıkan detaylar",
+    "maddeler": [
+     {
+      "metin": "Vice City ve Leonida'da geçiyor",
+      "tetik": "Leonida"
+     },
+     {
+      "metin": "34 parçalık resmî albüm",
+      "tetik": "34"
+     },
+     {
+      "metin": "Sam Houser'dan çıkış mesajı",
+      "tetik": "albüm"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "RESMÎ ÇIKIŞ DETAYLARI",
+    "alt": "VICE CITY • LEONIDA • 34 PARÇA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Sam Houser'ın açıklaması ve tüm çıkış detayları sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "Tüm çıkış detayları sitede",
+    "alt": "Resmî kaynaklar ve albüm bilgisi haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

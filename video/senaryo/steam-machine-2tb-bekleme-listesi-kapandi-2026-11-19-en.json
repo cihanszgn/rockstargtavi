@@ -1,0 +1,100 @@
+{
+ "id": "steam-machine-2tb-bekleme-listesi-kapandi-2026-11-19",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Valve closed the Steam Machine 2TB waitlist while opening the 512GB model for direct purchase.",
+   "veri": {
+    "ust_etiket": "STEAM HARDWARE",
+    "baslik": "Steam Machine 2TB waitlist closed",
+    "vurgu": [
+     "2TB",
+     "closed"
+    ],
+    "tuslar": [
+     "2",
+     "T",
+     "B"
+    ]
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "STEAM MACHINE",
+    "alt": "VALVE • STOCK UPDATE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "All 512GB reservations are filled, so anyone can buy one while stock lasts. New 2TB waitlist signups are closed, though current waitlist holders keep their spot.",
+   "veri": {
+    "baslik": "Current model status",
+    "maddeler": [
+     {
+      "metin": "512GB: direct add-to-cart orders",
+      "tetik": "512GB"
+     },
+     {
+      "metin": "2TB: waitlist closed, out of stock",
+      "tetik": "2TB"
+     },
+     {
+      "metin": "Switch to 512GB forfeits 2TB spot",
+      "tetik": "spot"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "512GB & 2TB STATUS",
+    "alt": "RESERVATION AND WAITLIST RULES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Valve warned that rising memory and storage costs leave future supply and pricing uncertain, with another update coming in January.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Valve Steam Hardware",
+    "alinti": "Memory and storage costs keep rising; future volume and pricing remain uncertain, with more news expected in January."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL UPDATE",
+    "alt": "VALVE • JANUARY SUPPLY NEWS"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full Steam Machine stock and waitlist breakdown on our site, Control A Game.",
+   "veri": {
+    "cagri": "Full breakdown on our site",
+    "alt": "Official Valve announcement inside."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

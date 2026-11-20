@@ -1,0 +1,110 @@
+{
+ "id": "gta-vi-resmen-cikti-2026-11-19",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Grand Theft Auto VI launched worldwide on November 19 for PlayStation 5 and Xbox Series X|S.",
+   "veri": {
+    "ust_etiket": "OFFICIAL LAUNCH",
+    "baslik": "GTA VI is out now!",
+    "vurgu": [
+     "out now"
+    ],
+    "tuslar": [
+     "G",
+     "T",
+     "A",
+     "VI"
+    ]
+   },
+   "alt_kart": {
+    "simge": "cikis",
+    "baslik": "GTA VI",
+    "alt": "NOVEMBER 19, 2026 • OUT NOW"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Players can buy it now on PlayStation 5 and Xbox Series X|S via digital stores and retailers, alongside the 34-track soundtrack.",
+   "veri": {
+    "baslik": "Launch platforms",
+    "platformlar": [
+     "PS5",
+     "Xbox"
+    ],
+    "sayilar": [
+     {
+      "deger": "34",
+      "etiket": "ORIGINAL TRACKS",
+      "tetik": "34"
+     }
+    ],
+    "not": "PlayStation Store, Microsoft Store and Rockstar Store."
+   },
+   "alt_kart": {
+    "simge": "platform",
+    "baslik": "PS5 & XBOX SERIES X|S",
+    "alt": "DIGITAL AND RETAIL RELEASE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Set in Vice City and Leonida, the story follows Jason and Lucia. Sam Houser thanked fans as the series nears 480 million units.",
+   "veri": {
+    "baslik": "Launch highlights",
+    "maddeler": [
+     {
+      "metin": "Jason and Lucia in Leonida",
+      "tetik": "Leonida"
+     },
+     {
+      "metin": "Atlantic Records 34-track album",
+      "tetik": "Jason"
+     },
+     {
+      "metin": "Series nears 480 million units",
+      "tetik": "480"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "LAUNCH HIGHLIGHTS",
+    "alt": "VICE CITY • LEONIDA • 34 TRACKS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read Sam Houser's message and the full launch report on our site, Control A Game.",
+   "veri": {
+    "cagri": "Full launch report on site",
+    "alt": "Official sources and album info inside."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

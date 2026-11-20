@@ -1,0 +1,92 @@
+{
+ "id": "temtem-swarm-nintendo-switch-cikis-tarihi-2026-11-20",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Temtem: Swarm launches on Nintendo Switch on January 21, 2027 with day-one cross-play.",
+   "veri": {
+    "ust_etiket": "RELEASE DATE",
+    "baslik": "Temtem: Swarm hits Switch Jan 21",
+    "vurgu": [
+     "Switch"
+    ],
+    "tuslar": [
+     "T",
+     "E",
+     "M"
+    ]
+   },
+   "alt_kart": {
+    "simge": "cikis",
+    "baslik": "TEMTEM: SWARM",
+    "alt": "NINTENDO SWITCH • JAN 21, 2027"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "The bullet-heaven action game is already available to wishlist on the Nintendo eShop ahead of its January 21, 2027 release.",
+   "veri": {
+    "etiket": "Nintendo Switch launch",
+    "tarih": "January 21",
+    "not": "Wishlist now open on the Nintendo eShop."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "JANUARY 21, 2027",
+    "alt": "WISHLIST ON NINTENDO ESHOP"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Switch players can team up with PC and PlayStation players from day one, while an all-platform update brings memory improvements and bug fixes.",
+   "veri": {
+    "baslik": "Cross-play and new update",
+    "platformlar": [
+     "Switch",
+     "PC",
+     "PlayStation"
+    ],
+    "sayilar": [],
+    "not": "Memory improvements and bug fixes for every platform."
+   },
+   "alt_kart": {
+    "simge": "platform",
+    "baslik": "DAY-ONE CROSS-PLAY",
+    "alt": "SWITCH • PC • PLAYSTATION"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full Temtem: Swarm launch and update report on our site, Control A Game.",
+   "veri": {
+    "cagri": "Full story on our site",
+    "alt": "Official Steam announcement inside."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

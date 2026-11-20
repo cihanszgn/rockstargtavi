@@ -1,0 +1,100 @@
+{
+ "id": "steam-machine-2tb-bekleme-listesi-kapandi-2026-11-19",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Valve ferme la liste d'attente du Steam Machine 2TB et ouvre l'achat direct du modèle 512GB.",
+   "veri": {
+    "ust_etiket": "STEAM HARDWARE",
+    "baslik": "Steam Machine 2TB : liste fermée",
+    "vurgu": [
+     "2TB",
+     "fermée"
+    ],
+    "tuslar": [
+     "2",
+     "T",
+     "B"
+    ]
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "STEAM MACHINE",
+    "alt": "VALVE • POINT STOCK"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Le 512GB passe en achat direct jusqu'à épuisement des stocks. Pour le 2TB, les nouvelles inscriptions ferment, mais les inscrits gardent leur place.",
+   "veri": {
+    "baslik": "Situation des deux modèles",
+    "maddeler": [
+     {
+      "metin": "512GB : achat direct ouvert",
+      "tetik": "512GB"
+     },
+     {
+      "metin": "2TB : liste fermée et épuisé",
+      "tetik": "2TB"
+     },
+     {
+      "metin": "Passer au 512GB libère sa place",
+      "tetik": "place"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "MODÈLES 512GB ET 2TB",
+    "alt": "RÈGLES DE LISTE D'ATTENTE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Face à la hausse des coûts de mémoire et de stockage, Valve ignore les futurs volumes et tarifs, et prévoit des nouvelles en janvier.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Valve Steam Hardware",
+    "alinti": "La hausse des coûts de mémoire et stockage laisse volumes et prix incertains ; plus d'infos en janvier."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "ANNONCE OFFICIELLE",
+    "alt": "VALVE • POINT EN JANVIER"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tous les détails sur les stocks du Steam Machine sont sur notre site, Control A Game.",
+   "veri": {
+    "cagri": "Tous les détails sur le site",
+    "alt": "Communiqué officiel de Valve dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

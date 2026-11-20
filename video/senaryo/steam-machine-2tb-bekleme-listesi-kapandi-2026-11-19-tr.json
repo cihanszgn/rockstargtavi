@@ -1,0 +1,100 @@
+{
+ "id": "steam-machine-2tb-bekleme-listesi-kapandi-2026-11-19",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Valve, Steam Machine 2TB bekleme listesini kapattı; 512GB modeli ise doğrudan satışa açıldı.",
+   "veri": {
+    "ust_etiket": "STEAM HARDWARE",
+    "baslik": "Steam Machine 2TB listesi kapandı",
+    "vurgu": [
+     "2TB",
+     "kapandı"
+    ],
+    "tuslar": [
+     "2",
+     "T",
+     "B"
+    ]
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "STEAM MACHINE",
+    "alt": "VALVE • STOK GÜNCELLEMESİ"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "512GB rezervasyonları tamamlandı ve stok bitene kadar doğrudan satın alınabiliyor. 2TB için yeni kayıt alınmıyor, mevcut listedekiler sırasını koruyor.",
+   "veri": {
+    "baslik": "İki modelde son durum",
+    "maddeler": [
+     {
+      "metin": "512GB: doğrudan sepete ekle",
+      "tetik": "512GB"
+     },
+     {
+      "metin": "2TB: yeni bekleme kaydı kapalı",
+      "tetik": "2TB"
+     },
+     {
+      "metin": "Listedekiler 512GB'a geçebilir",
+      "tetik": "mevcut"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "512GB VE 2TB DURUMU",
+    "alt": "BEKLEME LİSTESİ KURALLARI"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Valve bellek ve depolama maliyetlerinin arttığını, gelecek üretim adedi ile fiyatın netleşmediğini ve Ocak'ta bilgi vereceğini açıkladı.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Valve Steam Hardware",
+    "alinti": "Artan bellek ve depolama maliyetleri nedeniyle yeni adet ve fiyat henüz net değil; Ocak'ta yeni bilgi paylaşılacak."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ DUYURU",
+    "alt": "VALVE • OCAK AYI GÜNCELLEMESİ"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Steam Machine stok ve bekleme listesi detaylarının tamamı sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "Tüm detaylar sitede",
+    "alt": "Resmî Valve duyurusu haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

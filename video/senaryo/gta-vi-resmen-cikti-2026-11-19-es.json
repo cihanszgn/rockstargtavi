@@ -1,0 +1,110 @@
+{
+ "id": "gta-vi-resmen-cikti-2026-11-19",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Grand Theft Auto VI se estrenó el 19 de noviembre en PlayStation 5 y Xbox Series X|S.",
+   "veri": {
+    "ust_etiket": "LANZAMIENTO OFICIAL",
+    "baslik": "¡GTA VI ya está aquí!",
+    "vurgu": [
+     "ya está aquí"
+    ],
+    "tuslar": [
+     "G",
+     "T",
+     "A",
+     "VI"
+    ]
+   },
+   "alt_kart": {
+    "simge": "cikis",
+    "baslik": "GTA VI",
+    "alt": "19 DE NOVIEMBRE • DISPONIBLE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Ya se vende en PlayStation 5 y Xbox Series X|S en tiendas digitales y comercios, junto a su álbum de 34 temas.",
+   "veri": {
+    "baslik": "Plataformas de salida",
+    "platformlar": [
+     "PS5",
+     "Xbox"
+    ],
+    "sayilar": [
+     {
+      "deger": "34",
+      "etiket": "TEMAS ORIGINALES",
+      "tetik": "34"
+     }
+    ],
+    "not": "PlayStation Store, Microsoft Store y Rockstar Store."
+   },
+   "alt_kart": {
+    "simge": "platform",
+    "baslik": "PS5 Y XBOX SERIES X|S",
+    "alt": "DIGITAL Y TIENDAS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Jason y Lucia recorren Vice City y Leonida en una trama criminal. Sam Houser agradeció el apoyo mientras la saga roza 480 millones.",
+   "veri": {
+    "baslik": "Claves del estreno",
+    "maddeler": [
+     {
+      "metin": "Jason y Lucia en Leonida",
+      "tetik": "Leonida"
+     },
+     {
+      "metin": "Álbum oficial de Atlantic Records",
+      "tetik": "Sam"
+     },
+     {
+      "metin": "La saga roza 480 millones",
+      "tetik": "480"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CLAVES DEL ESTRENO",
+    "alt": "VICE CITY • LEONIDA • 34 TEMAS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "El mensaje de Sam Houser y todos los detalles están en nuestra web, Control A Game.",
+   "veri": {
+    "cagri": "Todos los detalles en la web",
+    "alt": "Fuentes oficiales y datos del álbum."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
