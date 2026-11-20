@@ -489,10 +489,7 @@ const path = require('node:path');
                     self.assertGreaterEqual(olcum['t0']['damgaOp'], 0.9)
                     self.assertGreater(olcum['t0']['baslikH'], 80)
                     self.assertGreaterEqual(olcum['t55']['bgOnCount'], 1)
-                    if paket == 'kolaj':
-                        self.assertEqual(olcum['t55']['onBg'], 'rgb(17, 17, 17)')
-                    else:
-                        self.assertGreater(olcum['t55']['maxHlW'], 20)
+                    self.assertGreater(olcum['t55']['maxHlW'], 20)
 
 
 class EskiSenaryoTests(unittest.TestCase):

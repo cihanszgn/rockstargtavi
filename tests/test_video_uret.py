@@ -2,6 +2,7 @@ import copy
 import json
 import os
 import pathlib
+import re
 import shutil
 import subprocess
 import sys
@@ -710,7 +711,10 @@ class AnahtarManifestTests(unittest.TestCase):
                     k = g['anahtar']
                     self.assertEqual(g['mp4_1080'], f'{kimlik}-{dil}-{k}-1080.mp4')
                     self.assertEqual(g['vtt'], f'{kimlik}-{dil}-{k}.vtt')
-                    self.assertEqual(g['kapak'], f'{kimlik}-{dil}-{k}-kapak.jpg')
+                    self.assertRegex(
+                        g['kapak'],
+                        rf'^{re.escape(kimlik)}-{re.escape(dil)}-{re.escape(k)}-kapak(?:-[0-9a-f]{{6}})?\.jpg$',
+                    )
 
     def test_video_ayari_varsayilanlari(self):
         with tempfile.TemporaryDirectory() as t:

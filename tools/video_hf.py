@@ -468,17 +468,17 @@ def foto_hazirla(haber_id: str, onbellek: Path, hedef: Path, cikti=print, yol: P
         cikti("uyarı: Pillow yok, görsel kullanılmadı")
         return None
     onb = None
-    if dikey_tercih:
-        m = _STEAM_APP_RE.match(url)
-        if m:
-            appid = m.group(1)
+    m = _STEAM_APP_RE.match(url)
+    if m:
+        appid = m.group(1)
+        if dikey_tercih:
             onb = _gorsel_indir(
                 f"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/{appid}/library_600x900_2x.jpg",
                 onbellek, en_az_boyut=(400, 600), dikey_sart=True)
-            if onb is None and "/header.jpg" in url:
-                onb = _gorsel_indir(
-                    f"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/{appid}/library_hero.jpg",
-                    onbellek, en_az_boyut=(1000, 400))
+        if onb is None and "/header.jpg" in url:
+            onb = _gorsel_indir(
+                f"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/{appid}/library_hero.jpg",
+                onbellek, en_az_boyut=(1000, 400))
     if onb is None:
         onb = _gorsel_indir(url, onbellek)
     if onb is None:
@@ -807,13 +807,16 @@ def sahne_html(sahneler: list[dict]) -> str:
                      for i, s in enumerate(sahneler))
 
 
-def veri_olustur(props: dict, tema: dict, foto: str | None) -> dict:
+def veri_olustur(props: dict, tema: dict, foto: str | None, foto_oran: float | None = None) -> dict:
     """window.VIDEO: motor.js'in okuduğu her şey (metin, sayı, süre, görsel yolu, tema) senaryo verisinden gelir."""
-    return {"sure": props["sure"], "dil": props["dil"], "tema": {"paket": tema["paket"], "oge": tema["oge"]},
-            "haber": props["haber"], "foto": foto,
-            "sahneler": [{"sablon": s["sablon"], "bas": s["bas"], "bit": s["bit"], "veri": s["veri"]}
-                         for s in props["sahneler"]],
-            "kelimeler": props["kelimeler"], "parcalar": props["parcalar"]}
+    d = {"sure": props["sure"], "dil": props["dil"], "tema": {"paket": tema["paket"], "oge": tema["oge"]},
+         "haber": props["haber"], "foto": foto,
+         "sahneler": [{"sablon": s["sablon"], "bas": s["bas"], "bit": s["bit"], "veri": s["veri"]}
+                      for s in props["sahneler"]],
+         "kelimeler": props["kelimeler"], "parcalar": props["parcalar"]}
+    if foto_oran is not None:
+        d["foto_oran"] = round(foto_oran, 3)
+    return d
 
 
 def klasor_kur(klasor: Path, props: dict, tema: dict, ses: Path, foto: Path | None) -> Path:
@@ -827,11 +830,19 @@ def klasor_kur(klasor: Path, props: dict, tema: dict, ses: Path, foto: Path | No
     shutil.copytree(HF / "vendor", klasor / "vendor")
     shutil.copyfile(ses, klasor / "assets" / "ses" / "ses.mp3")
     foto_yolu = None
+    foto_oran = None
     if foto:
         (klasor / "assets" / "img").mkdir()
         shutil.copyfile(foto, klasor / "assets" / "img" / "foto.jpg")
         foto_yolu = "assets/img/foto.jpg"
-    veri = veri_olustur(props, tema, foto_yolu)
+        try:
+            from PIL import Image
+            with Image.open(foto) as _im:
+                if _im.height > 0:
+                    foto_oran = _im.width / _im.height
+        except Exception:
+            foto_oran = None
+    veri = veri_olustur(props, tema, foto_yolu, foto_oran=foto_oran)
     (klasor / "assets" / "data.js").write_text("window.VIDEO = " + json.dumps(veri, ensure_ascii=False) + ";\n",
                                                encoding="utf-8")
     sablon = (HF / "index.html").read_text(encoding="utf-8")
