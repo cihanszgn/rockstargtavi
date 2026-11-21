@@ -819,6 +819,21 @@
   "url": "https://www.youtube.com/shorts/nzv-gykjUbM",
   "zaman": "2026-11-20T05:59:39+00:00"
  },
+ "wtcn-20261119-e0ca1c15-canli-03|klip|youtube|short": {
+  "bicim": "short",
+  "boyut": 34522927,
+  "dil": "klip",
+  "durum": "tamam",
+  "hesap": "klip",
+  "id": "wtcn-20261119-e0ca1c15-canli-03",
+  "kimlik": "s2z3QsNWrJc",
+  "niyet_zamani": "2026-11-21T10:29:14+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status&upload_id=AFy3sg0kCYQpE8iSMvhQwxnroW1K5pLz0yMnleNcm0bkSkIp9ZIGVwsFvWVHZYzHaVMADY3FYKRtCkCLkDvBHv4RtJB_-TpcDqMe6pPEZ2QjNQ",
+  "platform": "youtube",
+  "sosyal_tur": "klip",
+  "url": "https://www.youtube.com/shorts/s2z3QsNWrJc",
+  "zaman": "2026-11-21T10:29:14+00:00"
+ },
  "wuthering-waves-steam-fullpackage-modu-2026-11-18|tr|instagram|gorsel": {
   "bicim": "gorsel",
   "dil": "tr",
