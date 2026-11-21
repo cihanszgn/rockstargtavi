@@ -612,13 +612,15 @@
 .o-amblem-gorsel>.o-amblem-svg{position:absolute;inset:0;width:100%;height:100%;animation:none}
 .o-amblem-gorsel>.kg-img{object-fit:cover}
 .kg-sinirli>.kg-img{inset:50% auto auto 50%;width:min(100%,460px);height:auto;max-height:100%;object-fit:contain;transform:translate(-50%,-50%)}
-.o-izgara{gap:24px;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr))}
+.o-izgara{gap:20px;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr))}
 .o-kart>a{background:var(--yuzey);border-color:var(--cizgi);color:var(--yazi);box-shadow:none}
 .o-kart>a:hover,.o-kart>a:focus-visible{border-color:var(--o-vurgu);box-shadow:none}
 .o-kart-tur,.o-kart-ozet{color:var(--soluk);line-height:1.6}
 .o-kart-alt{margin-bottom:0}
 .o-kart-cta{color:var(--baglanti)}
 .o-populer{grid-template-columns:repeat(4,minmax(0,1fr))}
+.o-populer .o-kart-metin{padding:16px 18px;gap:8px}
+.o-populer .o-kart-ad{font-size:1.06rem}
 .o-merkez-govde{gap:40px;padding-top:48px}
 .o-merkez-ana,.o-merkez-yan{gap:32px}
 .o-tanitim>.kg{max-height:300px}

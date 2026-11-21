@@ -71,7 +71,7 @@
   // ------------------------------------------------------------ tema
   function temaUygula(t) {
     H.setAttribute('data-tema', t);
-    $$('meta[name="theme-color"]').forEach(function (m) { m.setAttribute('content', t === 'acik' ? '#F3F5F9' : '#0D1420'); });
+    $$('meta[name="theme-color"]').forEach(function (m) { m.setAttribute('content', t === 'acik' ? '#F3F5F9' : '#0B101B'); });
     $$('[data-tema-dugme]').forEach(function (b) { b.setAttribute('aria-pressed', t === 'acik' ? 'true' : 'false'); });
   }
   function temaDegistir(e) {
@@ -95,11 +95,6 @@
     vt.finished.then(bitir, bitir);
   }
   temaUygula(H.getAttribute('data-tema') || 'koyu');
-  if (window.matchMedia) {
-    var mq = matchMedia('(prefers-color-scheme: light)');
-    var izle = function () { var k = depo.al('cag-tema'); if (k !== 'acik' && k !== 'koyu') temaUygula(mq.matches ? 'acik' : 'koyu'); };
-    if (mq.addEventListener) mq.addEventListener('change', izle); else if (mq.addListener) mq.addListener(izle);
-  }
   d.addEventListener('click', function (e) {
     if (e.target.closest && e.target.closest('[data-tema-dugme]')) temaDegistir(e);
   });
