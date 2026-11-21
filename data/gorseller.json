@@ -11,6 +11,12 @@
   "en": 460,
   "boy": 215
  },
+ "ark-survival-ascended-turkey-trial-2026-11-21": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2399830/d934813ca531af0fce69fe36bc972f1c90d1aa19/header.jpg",
+  "kaynak": "Steam",
+  "en": 460,
+  "boy": 215
+ },
  "battlefield-6-ucretsiz-deneme-casino-heist-2026-11-13": {
   "kilit": true,
   "neden": "görsel üzerinde eski tarih (SEP 15-22) yazılı"
@@ -218,6 +224,12 @@
   "en": 460,
   "boy": 215
  },
+ "playstation-share-of-the-week-texture-2026-11-20": {
+  "url": "https://blog.playstation.com/tachyon/2026/11/0dae810dd887ca71868123d031118d549b52e9bf.png",
+  "kaynak": "PlayStation Blog",
+  "en": 1920,
+  "boy": 1080
+ },
  "poe-covens-of-umbra-cikti-2026-11-13": {
   "kilit": true,
   "neden": "site geneli ogimage (PoE1 logosu, kare)"
@@ -334,6 +346,12 @@
  },
  "xbox-game-pass-dalga-2-2026-11-17": {
   "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/XGP_ComingSoon171126_16x9_FBXTH_N_CW90_GBL_MGP_N_N_1_EN-US-2b3ccff528820c96b6f9.jpg",
+  "kaynak": "Xbox Wire",
+  "en": 1920,
+  "boy": 1080
+ },
+ "xbox-haftalik-yeni-oyunlar-2026-11-23-27": {
+  "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/nwox-hero-f37af1684711fca65783.jpg",
   "kaynak": "Xbox Wire",
   "en": 1920,
   "boy": 1080
