@@ -766,7 +766,7 @@ def populer_serit(dil: str, veri: list, soy: list, tak: list) -> str:
     sec = sorted(OYUNLAR, key=lambda o: (-skor.get(o["id"], 0), S.norm(o["ad"])))[:8]
     kartlar = "".join(_kart(dil, o, hub_yol(dil, o["id"]), o["ad"], o["tur"][dil], "", "", tt["r_hub"], "", kapak_ek="p" + o["id"],
                             h="h3", oge=False) for o in sec)
-    return (f'<section class="blok populer" id="populer" aria-labelledby="b-populer"><div class="wrap">\n'
+    return (f'<section class="blok populer bant-ton" id="populer" aria-labelledby="b-populer"><div class="wrap">\n'
             f'<div class="blok-bas"><h2 id="b-populer">{S.e(tt["populer"])}</h2><p>{S.e(tt["populer_not"])}</p>'
             f'<a class="panel-link" href="{S.u(SAYFA["oyunlar"][dil])}">{S.e(tt["o_tum"])}</a></div>\n'
             f'<ul class="o-izgara o-populer">\n{kartlar}</ul>\n</div></section>\n')
