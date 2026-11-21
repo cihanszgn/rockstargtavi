@@ -24,6 +24,10 @@ on:
         description: "Yayınlanmış YouTube Shorts kapaklarını silmeden güncelle"
         type: boolean
         default: false
+      yt_sil:
+        description: "Tek bir YouTube videosunu KALICI sil (11 karakterlik kimlik; geri alınamaz)"
+        type: string
+        default: ""
       yt_id:
         description: "Yalnız belirtilen YouTube video veya haber kimlikleri (virgülle ayrılmış, isteğe bağlı)"
         type: string
@@ -55,7 +59,7 @@ jobs:
 
       - name: Kuyruk kartlarını üret ve yayına al
         id: kart
-        if: inputs.deneme != true && inputs.yt_kapak_guncelle != true
+        if: inputs.deneme != true && inputs.yt_kapak_guncelle != true && inputs.yt_sil == ''
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -111,11 +115,12 @@ jobs:
 
       - name: Paylaş
         # Deneme veya kapak güncelleme çalışmasında kart adımı atlanır; normal turda kart adımı yayını doğruladıysa '1' yazar.
-        if: inputs.yt_kapak_guncelle == true || inputs.deneme == true || steps.kart.outputs.yayinda == '1'
+        if: inputs.yt_sil != '' || inputs.yt_kapak_guncelle == true || inputs.deneme == true || steps.kart.outputs.yayinda == '1'
         env:
           DENEME: ${{ inputs.deneme && '--dry-run' || '' }}
           KAPAK_GUNCELLE: ${{ inputs.yt_kapak_guncelle && '--yt-kapak-guncelle' || '' }}
           YT_ID: ${{ inputs.yt_id || '' }}
+          YT_SIL: ${{ inputs.yt_sil || '' }}
           X_TR_API_KEY: ${{ secrets.X_TR_API_KEY }}
           X_TR_API_SECRET: ${{ secrets.X_TR_API_SECRET }}
           X_TR_ACCESS_TOKEN: ${{ secrets.X_TR_ACCESS_TOKEN }}
@@ -194,10 +199,11 @@ jobs:
           [ -n "$DENEME" ] && args+=("$DENEME")
           [ -n "$KAPAK_GUNCELLE" ] && args+=("$KAPAK_GUNCELLE")
           [ -n "$YT_ID" ] && args+=(--yt-id "$YT_ID")
+          [ -n "$YT_SIL" ] && args+=(--yt-sil "$YT_SIL")
           python tools/sosyal_yayinla.py "${args[@]}"
 
       - name: Gönderi kaydını depoya yaz
-        if: always() && inputs.deneme != true && inputs.yt_kapak_guncelle != true
+        if: always() && inputs.deneme != true && inputs.yt_kapak_guncelle != true && inputs.yt_sil == ''
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

@@ -1332,10 +1332,28 @@ def main(argv=None) -> int:
     ap.add_argument("--sayfa-bekle", action="store_true", help="en yeni haberin sayfası yayında olana dek bekle (en çok 10 dk); sabit uyku yerine")
     ap.add_argument("--yt-kapak-guncelle", action="store_true",
                     help="yayınlanmış haber YouTube Shorts kapaklarını silmeden manifestteki güncel kapakla değiştir")
+    ap.add_argument("--yt-sil", metavar="KIMLIK", help="tek bir YouTube videosunu kalıcı olarak sil (yalnız elle; geri alınamaz)")
+    ap.add_argument("--yt-hesap", default="tr", help="--yt-sil için hesap (varsayılan tr)")
     ap.add_argument("--yt-id", help="--yt-kapak-guncelle için virgülle ayrılmış haber ya da YouTube video kimliği süzgeci")
     a = ap.parse_args(argv)
     if a.selftest:
         return selftest()
+    if a.yt_sil:
+        if not re.fullmatch(r"[A-Za-z0-9_-]{11}", a.yt_sil):
+            ap.error("--yt-sil için 11 karakterlik tek bir YouTube video kimliği gerekir")
+        sir = hesap_sirri(sirlari_oku(), "youtube", a.yt_hesap)
+        if not sir:
+            print(f"youtube/{a.yt_hesap} anahtarı yok; silinmedi.")
+            return 1
+        ag = Ag()
+        try:
+            durum, _, metin = ag.ham("DELETE", f"https://www.googleapis.com/youtube/v3/videos?id={a.yt_sil}",
+                                     basliklar={"Authorization": f"Bearer {yt_erisim(ag, sir)}"}, zaman=60)
+        except PaylasimHatasi as h:
+            print(f"SİLİNEMEDİ {a.yt_sil}: {h}")
+            return 1
+        print(f"SİLİNDİ {a.yt_sil} (HTTP {durum})" if durum == 204 else f"SİLİNEMEDİ {a.yt_sil} (HTTP {durum}): {metin[:200]}")
+        return 0 if durum == 204 else 1
     if a.yt_kapak_guncelle:
         suzgec = {s.strip() for s in a.yt_id.split(",") if s.strip()} if a.yt_id else None
         ozet = yt_kapaklari_guncelle(kayit_yolu=KAYIT, manifest_yolu=vs.MANIFEST_YOLU, tum=sirlari_oku(),
