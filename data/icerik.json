@@ -1,5 +1,188 @@
 [
  {
+  "id": "here-comes-the-horde-1-2-0-2026-11-21",
+  "oyun": "Here Comes the Horde",
+  "tarih": "2026-11-21",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam",
+    "url": "https://store.steampowered.com/news/app/5066010/view/719048067771269590"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Here Comes the Horde 1.2.0 prestij sistemini getirdi",
+    "ozet": "Kampanya baştan başlıyor, Yozlaşmış Kalp kazanılıyor.",
+    "metin": "Here Comes the Horde, 1.2.0 güncellemesiyle prestij sistemini aldı. Moriana'yı yendikten sonra kampanyayı Seviye 1'den yeniden başlatabiliyor ve her galibiyetle bir Yozlaşmış Kalp kazanıyorsunuz. Bu kalpler, kampanya yeniden başladığında geçerli olan özel prestij yeteneklerine harcanıyor. Yetenekler arasındaki Time Warp, x2 savaş hızını açıyor; savaşlar artık kendiliğinden hızlanmıyor, hızı siz seçiyorsunuz. Savaş alanları da büyüdü: 30. seviyede 5.000 x 3.600 boyuta ulaşıyor ve kalabalık savaşlarda kamera uzaklaşıyor. Moriana'nın canı 6.666.666'dan 3.000.000'a indirildi, Mage patlamaları yüzde 30 büyüdü. Steam'deki resmî yama notları, değişikliklerin tamamını ve 22 dildeki çeviri güncellemelerini içeriyor."
+   },
+   "en": {
+    "baslik": "Here Comes the Horde 1.2.0 adds a prestige system",
+    "ozet": "Restart the campaign and earn Corrupted Hearts.",
+    "metin": "Here Comes the Horde has added a prestige system with version 1.2.0. After defeating Moriana, players can restart the campaign from Level 1 and earn a Corrupted Heart for each victory. Hearts are spent on prestige talents when a new run begins. One of them is Time Warp, which unlocks x2 battle speed. Battles no longer speed up automatically, so the faster setting is now the player's choice. Battlefields have also grown: Level 30 reaches 5,000 x 3,600, up from 3,671 x 2,700, and the camera zooms out when battles get crowded. Moriana's health falls from 6,666,666 to 3,000,000, and Mage explosions are 30% larger. The official Steam patch notes list the full set of changes, along with fixes and translation updates for 22 languages."
+   },
+   "es": {
+    "baslik": "Here Comes the Horde 1.2.0 añade sistema de prestigio",
+    "ozet": "Reinicia la campaña y gana Corazones Corruptos.",
+    "metin": "Here Comes the Horde suma un sistema de prestigio con la versión 1.2.0. Tras vencer a Moriana, los jugadores pueden reiniciar la campaña desde el nivel 1 y ganar un Corazón Corrupto por cada victoria. Los corazones se gastan en talentos de prestigio al empezar una nueva partida. Entre ellos está Time Warp, que desbloquea la velocidad x2 en batalla. Las batallas ya no se aceleran automáticamente, así que el jugador decide. Los campos de batalla también crecen: el nivel 30 llega a 5.000 x 3.600, y la cámara se aleja cuando hay mucha gente. La vida de Moriana baja de 6.666.666 a 3.000.000 y las explosiones de los magos son un 30 % más grandes. El anuncio oficial en Steam incluye además correcciones y traducciones a 22 idiomas."
+   },
+   "fr": {
+    "baslik": "Here Comes the Horde 1.2.0 ajoute un système de prestige",
+    "ozet": "Relancez la campagne et gagnez des Cœurs corrompus.",
+    "metin": "Here Comes the Horde ajoute un système de prestige avec la version 1.2.0. Après avoir vaincu Moriana, les joueurs peuvent relancer la campagne depuis le niveau 1 et gagner un Cœur corrompu à chaque victoire. Ces cœurs se dépensent dans des talents de prestige au début d'une nouvelle partie. Parmi eux, Time Warp débloque la vitesse de combat x2. Les combats n'accélèrent plus automatiquement : le joueur choisit. Les champs de bataille ont aussi été agrandis, jusqu'à 5 000 x 3 600 au niveau 30, et la caméra s'éloigne quand la foule grandit. La santé de Moriana passe de 6 666 666 à 3 000 000, et les explosions des mages sont 30 % plus grandes. L'annonce officielle sur Steam précise en outre les corrections et les traductions dans 22 langues."
+   },
+   "de": {
+    "baslik": "Here Comes the Horde 1.2.0 bringt Prestige-System",
+    "ozet": "Kampagne neu starten und Verderbte Herzen sammeln.",
+    "metin": "Here Comes the Horde hat mit Version 1.2.0 ein Prestige-System erhalten. Nach dem Sieg über Moriana kann die Kampagne ab Level 1 neu gestartet werden, und jeder Sieg bringt ein Verderbtes Herz ein. Diese Herzen werden für Prestige-Talente ausgegeben, die im neuen Durchgang aktiv sind. Zu den Talenten gehört Time Warp, das die doppelte Kampfgeschwindigkeit freischaltet. Schlachten beschleunigen sich nun nicht mehr automatisch, sondern die Geschwindigkeit wählt man selbst. Die Schlachtfelder wurden vergrößert, auf Level 30 bis 5.000 x 3.600, und die Kamera zoomt bei vielen Einheiten heraus. Morianas Lebenspunkte sinken von 6.666.666 auf 3.000.000, und Mage-Explosionen sind 30 Prozent größer. Laut der offiziellen Steam-Ankündigung enthält das Update außerdem Fehlerbehebungen und Übersetzungen für 22 Sprachen."
+   },
+   "nl": {
+    "baslik": "Here Comes the Horde 1.2.0 voegt prestigesysteem toe",
+    "ozet": "Start de campagne opnieuw en verdien Corrupte Harten.",
+    "metin": "Here Comes the Horde krijgt met versie 1.2.0 een prestigesysteem. Na het verslaan van Moriana kun je de campagne vanaf level 1 opnieuw starten en bij elke overwinning een Corrupt Hart verdienen. Die harten besteed je aan prestige-talenten wanneer een nieuwe run begint. Een daarvan is Time Warp, dat de x2 gevechtssnelheid vrijspeelt. Gevechten versnellen niet langer automatisch, dus de snellere stand kies je zelf. De slagvelden zijn ook groter geworden: level 30 bereikt 5.000 x 3.600, en de camera zoomt uit als het druk wordt. Morianas gezondheid daalt van 6.666.666 naar 3.000.000 en Mage-explosies zijn 30 procent groter. De officiële Steam-aankondiging bevat ook bugfixes en vertalingen in 22 talen."
+   },
+   "zh": {
+    "baslik": "《Here Comes the Horde》1.2.0加入声望系统",
+    "ozet": "重新开始战役，获取腐化之心。",
+    "metin": "《Here Comes the Horde》1.2.0版本正式加入声望系统。击败莫里安娜后，玩家可以从第1关重新开始战役，每次击败她都会获得一颗腐化之心。腐化之心可在新一轮战役中用于购买声望天赋，其中“时间扭曲”可解锁x2战斗速度。战斗不再自动加速，是否加速由玩家自行选择。战场也随之扩大，第30关最大可达5000×3600，人群密集时镜头会自动拉远。莫里安娜的生命值从6666666降至3000000，法师爆炸范围增大30%。据Steam官方公告，此次更新还包含多项修复以及22种语言的翻译更新。"
+   }
+  },
+  "otomasyon": {
+   "konu": "here-comes-the-horde-1-2-0-prestij-sistemi",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/5066010/view/719048067771269590",
+   "teyit_zamani": "2026-11-21T08:10:02+00:00",
+   "oyuncuya_fayda": "Oyuncular prestij sistemiyle kampanyayı baştan oynayıp yeni yetenekler açabilir.",
+   "hype": 4,
+   "eklenme": "2026-11-21T11:14:26.865486+03:00"
+  }
+ },
+ {
+  "id": "aion-2-world-market-world-exchange-2026-11-25",
+  "oyun": "AION 2",
+  "tarih": "2026-11-21",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam resmî duyuru",
+    "url": "https://store.steampowered.com/news/app/3393110/view/675137971401261911"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "AION 2'ye Dünya Pazarı ve Dünya Borsası geliyor",
+    "ozet": "25 Kasım'da bakımın ardından sunucular arası ticaret açılıyor.",
+    "metin": "AION 2'de Dünya Pazarı ve Dünya Borsası 25 Kasım'da, bakımın ardından açılacak. Steam'deki resmî duyuruya göre oyuncular, aynı hizip ve bölge içindeki diğer sunuculardaki kullanıcılarla serbestçe ticaret yapabilecek. Mevcut Sunucu Pazarı ve Sunucu Borsası her zamanki gibi kullanılmaya devam edecek. Dünya Pazarı ve Dünya Borsası üzerinden satılan eşyalara yüzde 20 satış vergisi uygulanacak. Dünya Pazarı ile Dünya Borsası'nın (Quna) her birinde günlük satış ilanı sınırı 10 olacak. Her iki sistem de yalnızca Membership kullanıcılarına açık olacak. Geliştirici, oyuncuların bu ayrıntılara bakarak hazırlık yapmasını istiyor."
+   },
+   "en": {
+    "baslik": "AION 2 adds World Market and World Exchange on November 25",
+    "ozet": "Cross-server trading opens after maintenance on November 25.",
+    "metin": "AION 2 is getting the World Market and World Exchange on November 25, after maintenance. According to the official Steam notice, players will be able to trade freely with users on other servers within the same faction and region. The existing Server Market and Server Exchange stay available as usual. A 20% sales tax applies to items sold through the World Market and World Exchange. The World Market and the World Exchange (Quna) each have a limit of 10 sale listings per day. Both systems are available to Membership users only. The notice shares these details so players can prepare ahead of the launch."
+   },
+   "es": {
+    "baslik": "AION 2 estrenará Mercado Mundial e Intercambio Mundial el 25 de noviembre",
+    "ozet": "El comercio entre servidores se abre tras el mantenimiento del 25 de noviembre.",
+    "metin": "AION 2 incorporará el Mercado Mundial y el Intercambio Mundial el 25 de noviembre, después del mantenimiento. Según el anuncio oficial en Steam, los jugadores podrán comerciar libremente con usuarios de otros servidores de la misma facción y región. El Mercado de Servidor y el Intercambio de Servidor actuales seguirán disponibles como siempre. Se aplicará un impuesto de venta del 20 % a los objetos vendidos mediante el Mercado Mundial y el Intercambio Mundial. Cada uno de ellos, incluido el Intercambio Mundial (Quna), tendrá un límite de 10 anuncios de venta al día. Ambos sistemas serán solo para usuarios con Membership. El aviso comparte estos detalles para que los jugadores puedan prepararse."
+   },
+   "fr": {
+    "baslik": "AION 2 : Marché mondial et Échange mondial le 25 novembre",
+    "ozet": "Le commerce entre serveurs s'ouvre après la maintenance du 25 novembre.",
+    "metin": "AION 2 accueillera le Marché mondial et l'Échange mondial le 25 novembre, après la maintenance. D'après l'annonce officielle sur Steam, les joueurs pourront échanger librement avec les utilisateurs d'autres serveurs de la même faction et de la même région. Le Marché de serveur et l'Échange de serveur actuels restent disponibles comme d'habitude. Une taxe de vente de 20 % s'appliquera aux objets vendus via le Marché mondial et l'Échange mondial. Chacun d'eux, y compris l'Échange mondial (Quna), est limité à 10 annonces de vente par jour. Les deux systèmes seront réservés aux utilisateurs Membership. L'annonce détaille ces points pour que les joueurs puissent se préparer."
+   },
+   "de": {
+    "baslik": "AION 2: Weltmarkt und Weltbörse starten am 25. November",
+    "ozet": "Serverübergreifender Handel startet nach der Wartung am 25. November.",
+    "metin": "In AION 2 starten der Weltmarkt und die Weltbörse am 25. November nach der Wartung. Laut der offiziellen Steam-Ankündigung können Spieler dann frei mit Nutzern anderer Server derselben Fraktion und Region handeln. Der bisherige Servermarkt und die Serverbörse bleiben wie gewohnt verfügbar. Auf Gegenstände, die über den Weltmarkt und die Weltbörse verkauft werden, fällt eine Verkaufssteuer von 20 % an. Für den Weltmarkt und die Weltbörse (Quna) gilt jeweils ein Limit von 10 Verkaufsangeboten pro Tag. Beide Systeme stehen ausschließlich Membership-Nutzern zur Verfügung. Die Ankündigung nennt diese Details, damit sich Spieler vorbereiten können."
+   },
+   "nl": {
+    "baslik": "AION 2 krijgt Wereldmarkt en Wereldbeurs op 25 november",
+    "ozet": "Handel tussen servers start na het onderhoud op 25 november.",
+    "metin": "AION 2 krijgt op 25 november, na het onderhoud, de Wereldmarkt en de Wereldbeurs. Volgens de officiële Steam-aankondiging kunnen spelers vrij handelen met gebruikers op andere servers binnen dezelfde factie en regio. De bestaande Servermarkt en Serverbeurs blijven gewoon beschikbaar. Op items die via de Wereldmarkt en de Wereldbeurs worden verkocht, geldt een verkoopbelasting van 20%. De Wereldmarkt en de Wereldbeurs (Quna) hebben elk een limiet van 10 verkoopaanbiedingen per dag. Beide systemen zijn alleen beschikbaar voor Membership-gebruikers. De aankondiging deelt deze details zodat spelers zich kunnen voorbereiden."
+   },
+   "zh": {
+    "baslik": "AION 2将于11月25日开放世界市场与世界交易所",
+    "ozet": "11月25日维护后开放跨服交易。",
+    "metin": "AION 2将于11月25日维护结束后开放世界市场和世界交易所。根据Steam上的官方公告,玩家将可以与同一阵营、同一地区其他服务器的用户自由交易。现有的服务器市场和服务器交易所仍将照常提供。通过世界市场和世界交易所出售的物品将征收20%的销售税。世界市场与世界交易所(Quna)每天各有10条出售挂单的上限。这两个系统仅向Membership用户开放。公告公布这些细节,方便玩家提前做好准备。"
+   }
+  },
+  "otomasyon": {
+   "konu": "aion-2-world-market-world-exchange-kasim-25",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/3393110/view/675137971401261911",
+   "teyit_zamani": "2026-11-21T08:10:02+00:00",
+   "oyuncuya_fayda": "Oyuncular 25 Kasım'dan önce sunucular arası ticaretin vergisini, ilan sınırını ve Membership şartını öğrenip hazırlık yapabilir.",
+   "hype": 4,
+   "eklenme": "2026-11-21T11:14:26.865486+03:00"
+  }
+ },
+ {
+  "id": "war-thunder-wtscreen251-ekran-goruntusu-2026-11-21",
+  "oyun": "War Thunder",
+  "tarih": "2026-11-21",
+  "tur": "haber",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam",
+    "url": "https://store.steampowered.com/news/app/236390/view/711166768421274410"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "War Thunder 251. ekran görüntüsü yarışması: roket ve füze teması",
+    "ozet": "Ham oyun görüntülerini #WTscreen251 etiketiyle 27 Kasım'a kadar paylaşın.",
+    "metin": "War Thunder'ın Steam topluluk yarışmasının 251. turu roket ve füze temasıyla başladı. Katılmak için ekran görüntüsünde roket ya da füze taşıyan bir araç bulunmalı veya bir roket ya da füzenin kullanımı yakalanmış olmalı. Yönlendirilmeyen roketli uçaklar, hava-hava füzesi taşıyanlar, ATGM taşıyıcıları ve saldırı helikopterleri bu temaya uygun. Görüntü, War Thunder'ın Steam Topluluk Merkezi'ne #WTscreen251 etiketiyle yüklenmeli; başlıkta başka metin olamaz. Yalnızca oyundan alınmış ham görüntüler kabul ediliyor. Düzenleme yazılımı ve Nvidia Ansel gibi görsel eklentiler yasak; oyunun kendi filtre ve ayarları ile tekrar izleme özelliği serbest. Görüntüler yeni olmalı, daha önce yayımlanmamış ya da başka yarışmalarda kullanılmamış olmalı. Katılım son tarihi 27 Kasım. Altı kazanan seçilecek: üçü topluluk oylarıyla, üçü jüri tarafından. Her kazanana 300 GE verilecek ve ödüller 14 iş günü içinde hesaba iletilecek."
+   },
+   "en": {
+    "baslik": "War Thunder screenshot contest 251 focuses on rockets",
+    "ozet": "Submit raw in-game shots tagged #WTscreen251 by November 27.",
+    "metin": "War Thunder's 251st Steam Screenshot Competition has a rocket and missile theme. To enter, a screenshot must show a vehicle armed with rockets or missiles, or capture a rocket or missile in use. Eligible aircraft include planes with unguided rockets, air-to-air missile carriers, ATGM carriers and attack helicopters. Upload the image to the War Thunder Steam Community Hub with the tag #WTscreen251, and keep the title free of any other text. Only raw in-game captures are accepted: no editing software or extras such as Nvidia Ansel filters. Built-in game filters, settings and the replay tool are allowed. Images must be new and must not have been published or used in other contests. Entries close on 27 November. Six winners will be picked: three by community rating and three by the developer's judges. Each receives 300 GE, delivered to their account within 14 working days."
+   },
+   "fr": {
+    "baslik": "Concours de captures War Thunder 251 : roquettes et missiles",
+    "ozet": "Publiez vos captures brutes avec le tag #WTscreen251 avant le 27 novembre.",
+    "metin": "La 251e édition du concours de captures d'écran Steam de War Thunder a pour thème les roquettes et les missiles. Pour participer, la capture doit montrer un véhicule armé de roquettes ou de missiles, ou saisir une roquette ou un missile en action. Les avions avec roquettes non guidées, les porteurs de missiles air-air, les porteurs d'ATGM et les hélicoptères d'attaque sont acceptés. Publiez l'image sur le Hub communautaire Steam de War Thunder avec le tag #WTscreen251 ; le titre ne doit contenir aucun autre texte. Seules les captures brutes du jeu sont admises : pas de logiciel de retouche ni d'effets comme les filtres Nvidia Ansel. Les filtres et réglages intégrés au jeu, ainsi que la fonction replay, sont autorisés. Les images doivent être inédites et ne pas avoir servi à d'autres concours. Les envois se terminent le 27 novembre. Six gagnants seront désignés : trois par le vote de la communauté et trois par le jury. Chacun recevra 300 GE sur son compte dans un délai de 14 jours ouvrés."
+   },
+   "es": {
+    "baslik": "Concurso de capturas de War Thunder 251: cohetes y misiles",
+    "ozet": "Sube capturas sin editar con la etiqueta #WTscreen251 antes del 27 de noviembre.",
+    "metin": "La 251.ª edición del concurso de capturas de War Thunder en Steam gira en torno a cohetes y misiles. Para participar, la imagen debe mostrar un vehículo armado con cohetes o misiles, o captar un cohete o misil en uso. Se admiten aeronaves con cohetes no guiados, portadores de misiles aire-aire, portadores de ATGM y helicópteros de ataque. Sube la captura al Centro de la Comunidad de Steam de War Thunder con la etiqueta #WTscreen251; el título no puede llevar ningún otro texto. Solo se aceptan capturas sin editar, sin software de edición ni extras como los filtros Nvidia Ansel. Los filtros y ajustes integrados del juego y la función de repetición sí están permitidos. Las imágenes deben ser inéditas y no usadas en otros concursos. Las inscripciones cierran el 27 de noviembre. Se elegirán seis ganadores: tres por valoración de la comunidad y tres por el jurado. Cada uno recibirá 300 GE en su cuenta en un plazo de 14 días laborables."
+   },
+   "de": {
+    "baslik": "War Thunder Screenshot-Wettbewerb 251: Raketen und Flugkörper",
+    "ozet": "Reiche unbearbeitete Spielaufnahmen mit dem Tag #WTscreen251 bis zum 27. November ein.",
+    "metin": "Der 251. Screenshot-Wettbewerb von War Thunder auf Steam dreht sich um Raketen und Lenkflugkörper. Zur Teilnahme muss der Screenshot ein Fahrzeug mit Raketen oder Lenkflugkörpern zeigen oder einen Raketen- bzw. Flugkörperstart festhalten. Zugelassen sind Flugzeuge mit ungelenkten Raketen, Träger von Luft-Luft-Raketen, ATGM-Träger und Kampfhubschrauber. Lade das Bild mit dem Tag #WTscreen251 im Steam-Community-Hub von War Thunder hoch; der Titel darf keinen anderen Text enthalten. Erlaubt sind nur unbearbeitete Spielaufnahmen, ohne Bildbearbeitungssoftware oder Zusätze wie Nvidia-Ansel-Filter. Eingebaute Filter, Einstellungen des Spiels und die Replay-Funktion sind erlaubt. Die Bilder müssen neu sein und dürfen nicht bereits veröffentlicht oder in anderen Wettbewerben verwendet worden sein. Einsendeschluss ist der 27. November. Sechs Gewinner werden ausgewählt: drei nach Community-Bewertung und drei von der Jury. Jeder erhält 300 GE, die innerhalb von 14 Werktagen auf dem Konto gutgeschrieben werden."
+   },
+   "nl": {
+    "baslik": "War Thunder screenshotwedstrijd 251: raketten en geleide wapens",
+    "ozet": "Stuur ruwe in-game opnames met de tag #WTscreen251 vóór 27 november in.",
+    "metin": "De 251e Steam-screenshotwedstrijd van War Thunder draait om raketten en geleide wapens. Om mee te doen moet de screenshot een voertuig met raketten of geleide wapens tonen, of een raket of geleid wapen in actie vastleggen. Toegestaan zijn vliegtuigen met ongeleide raketten, dragers van lucht-luchtraketten, ATGM-dragers en gevechtshelikopters. Upload de afbeelding naar de War Thunder Steam Community Hub met de tag #WTscreen251; de titel mag geen andere tekst bevatten. Alleen ruwe in-game opnames worden geaccepteerd, zonder bewerkingssoftware of extra's zoals Nvidia Ansel-filters. Ingebouwde filters en instellingen van het spel en de replayfunctie zijn wel toegestaan. De afbeeldingen moeten nieuw zijn en mogen niet eerder gepubliceerd of in andere wedstrijden gebruikt zijn. Inzendingen sluiten op 27 november. Er worden zes winnaars gekozen: drie op basis van de stemmen van de community en drie door de jury. Elk ontvangt 300 GE, binnen 14 werkdagen op het account."
+   },
+   "zh": {
+    "baslik": "战争雷霆第251期Steam截图大赛：火箭与导弹主题",
+    "ozet": "用标签 #WTscreen251 提交原始游戏截图，11月27日截止。",
+    "metin": "战争雷霆Steam截图大赛第251期以火箭和导弹为主题。参赛截图需要展示配备火箭或导弹的载具，或捕捉到正在使用的火箭或导弹。无制导火箭的飞机、空对空导弹载机、反坦克导弹载具和武装直升机均可参加。请将截图上传至战争雷霆Steam社区中心，并添加标签#WTscreen251，标题中不得包含其他文字。仅接受游戏内原始截图，禁止使用编辑软件及Nvidia Ansel滤镜等额外视觉效果；游戏内置滤镜、设置和回放功能可以使用。截图必须是新作品，且未曾发布或用于其他比赛。截稿时间为11月27日。将选出六名获奖者，其中三名由社区投票评分产生，三名由评审团选出。每位获奖者可获得300 GE，奖励将在14个工作日内发送至其账户。"
+   }
+  },
+  "otomasyon": {
+   "konu": "war-thunder-wtscreen251-ekran-goruntusu-yarismasi",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/236390/view/711166768421274410",
+   "teyit_zamani": "2026-11-21T08:10:02+00:00",
+   "oyuncuya_fayda": "Oyuncular ham oyun görüntüsüyle katılıp 300 GE ödül kazanabilir.",
+   "hype": 3,
+   "eklenme": "2026-11-21T11:14:26.865486+03:00"
+  }
+ },
+ {
   "id": "gta-vi-resmen-cikti-2026-11-19",
   "oyun": "GTA VI",
   "tarih": "2026-11-19",
