@@ -379,6 +379,20 @@
   "url": "https://www.instagram.com/p/Df0PlYmDaMi/",
   "zaman": "2026-11-16T20:44:33+00:00"
  },
+ "grand-theft-auto-vi-resmen-cikti-2026-11-19|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 5691532,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "gta-vi-resmen-cikti-2026-11-19",
+  "kimlik": "G9Xb-syUoXo",
+  "niyet_zamani": "2026-11-21T16:16:28+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg07JgD4wQLExe7wSzJIIYm2TVjbJvZ_wD6U5PIgPudyc4zYDH_iBVHSIWuNp-zQcv0ghSzJqY6RXvHcjrBH4kh834sbtSQi79eo9wAPmw",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/G9Xb-syUoXo",
+  "zaman": "2026-11-21T16:16:28+00:00"
+ },
  "gta-vi-cevrimici-mod-resmi-aciklama-yok|en|instagram|reel": {
   "bicim": "reel",
   "dil": "en",
@@ -493,6 +507,21 @@
   "sosyal_tur": "haber",
   "url": "https://www.instagram.com/p/Df2WGoTGGzs/",
   "zaman": "2026-11-17T16:20:00+00:00"
+ },
+ "hype-20261118-bb86dc1f-klip-03|klip|youtube|short": {
+  "bicim": "short",
+  "boyut": 31883696,
+  "dil": "klip",
+  "durum": "tamam",
+  "hesap": "klip",
+  "id": "hype-20261118-bb86dc1f-klip-03",
+  "kimlik": "13uj-K8oJA0",
+  "niyet_zamani": "2026-11-21T16:16:28+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status&upload_id=AFy3sg2GrvAwBsJvSYfRYTCFeJHgeqAjHcPGGFDZvTVV9g6uK7s5Qsa_fL2SoO1sk4t07joaQ4JsBMaAd3K_G6Zu3ff5yR8jSGEpFpYN4dwTVcM",
+  "platform": "youtube",
+  "sosyal_tur": "klip",
+  "url": "https://www.youtube.com/shorts/13uj-K8oJA0",
+  "zaman": "2026-11-21T16:16:28+00:00"
  },
  "just-volleyball-resmi-cikis-2026-11-16|tr|instagram|gorsel": {
   "bicim": "gorsel",
