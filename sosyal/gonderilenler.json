@@ -958,5 +958,20 @@
   "sosyal_tur": "haber",
   "url": "https://www.youtube.com/shorts/oK_H47M1Fec",
   "zaman": "2026-11-17T11:25:59+00:00"
+ },
+ "zenless-zone-zero-3-4-the-finality-of-the-day|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 4508046,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "zenless-zone-zero-3-4-the-finality-of-the-day-2026-11-20",
+  "kapak_not": "küçük resim yüklenmedi: POST https://www.googleapis.com/upload/youtube/v3/thumbnails/set → HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"The user has uploaded too many thumbnails recently. Please try the request again later.\",\n    \"errors\": [\n      {\n        \"message\": \"The user has uploaded too many thumbnails recently. Please tr",
+  "kimlik": "yZlmEsVSNDY",
+  "niyet_zamani": "2026-11-21T09:33:47+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg1VVG6-95Zcs-yQrWGC-Uh8T1K4yI_cbdKYKz6xwBRxdGbKCWmSj830mNeUN_GZBMlRwYOcG6ED2zGdvGvHlisQmITik5yiNMZxNuU4S8s",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/yZlmEsVSNDY",
+  "zaman": "2026-11-21T09:33:47+00:00"
  }
 }
