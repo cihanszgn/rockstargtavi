@@ -1,26 +1,26 @@
 # Sosyal ölçüm özeti
 
-Son ölçüm: 2026-11-20 12:08 UTC. Ham veri: `sosyal/olcum.json`.
+Son ölçüm: 2026-11-21 11:43 UTC. Ham veri: `sosyal/olcum.json`.
 
 ## Hesaplar
 
-- youtube / tr: abone 4, önceki günden +3, ilk ölçümden +3, toplam izlenme 5561, video 16
-- Anahtarı olmadığı için atlanan: youtube/klip
+- youtube / klip: abone 4, toplam izlenme 4043, video 7
+- youtube / tr: abone 5, önceki günden +1, ilk ölçümden +4, toplam izlenme 6481, video 17
 
 ## En çok izlenen 10 içerik
 
 | # | Platform | Tür | İçerik | İzlenme | Etkileşim | Yayın (TR) |
 |---|---|---|---|---|---|---|
-| 1 | youtube/tr | short | gta-vi-kacta-aciliyor-2026-11-17 | 1253 | 10 | 18.11 12:03 |
-| 2 | youtube/tr | short | just-volleyball-resmi-cikis-2026-11-16 | 970 | 6 | 17.11 02:31 |
-| 3 | youtube/tr | short | xbox-black-friday-satis-2026-11-16 | 962 | 12 | 17.11 15:14 |
-| 4 | youtube/tr | short | cs2-cobblestone-matchmaking-2026-11-18 | 901 | 10 | 18.11 14:41 |
-| 5 | youtube/tr | short | cs2-singapur-2026-major-esyalari-2026-11-18 | 865 | 8 | 18.11 14:22 |
-| 6 | youtube/tr | short | zelda-ocarina-of-time-switch-2-cikti-2026-11-16 | 648 | 6 | 17.11 14:25 |
-| 7 | instagram/tr | reel | just-volleyball-resmi-cikis-2026-11-16 | 351 | 4 | 17.11 17:21 |
-| 8 | instagram/en | reel | zelda-ocarina-of-time-switch-2-cikti-2026-11-16 | 234 | 1 | 17.11 14:25 |
-| 9 | instagram/tr | reel | disney-dreamlight-valley-keepsake-sea-2026-11-18 | 194 | 1 | 19.11 11:22 |
-| 10 | instagram/fr | reel | gta-vi-kacta-aciliyor-2026-11-17 | 193 | 5 | 19.11 03:22 |
+| 1 | youtube/klip | short | kemalcan-parlak-20261115-9ae47b40-klip-01 | 1382 | 15 | 19.11 03:22 |
+| 2 | youtube/klip | short | eraycan-20261119-aea421a4-canli-01 | 1271 | 11 | 20.11 04:49 |
+| 3 | youtube/tr | short | gta-vi-kacta-aciliyor-2026-11-17 | 1265 | 10 | 18.11 12:03 |
+| 4 | youtube/klip | short | wtcn-20261117-6bbe5c53-klip-03 | 1210 | 14 | 18.11 23:19 |
+| 5 | youtube/klip | short | wtcn-20261119-e0ca1c15-canli-01 | 1204 | 14 | 20.11 08:59 |
+| 6 | youtube/klip | short | eraycan-20261112-d38999bc-klip-01 | 1168 | 18 | 19.11 00:29 |
+| 7 | youtube/tr | short | xbox-black-friday-satis-2026-11-16 | 996 | 12 | 17.11 15:14 |
+| 8 | youtube/tr | short | just-volleyball-resmi-cikis-2026-11-16 | 977 | 6 | 17.11 02:31 |
+| 9 | youtube/tr | short | cs2-singapur-2026-major-esyalari-2026-11-18 | 957 | 8 | 18.11 14:22 |
+| 10 | youtube/tr | short | cs2-cobblestone-matchmaking-2026-11-18 | 938 | 10 | 18.11 14:41 |
 
 ## Tür ortalaması (gönderi başına izlenme)
 
@@ -28,18 +28,18 @@ Son ölçüm: 2026-11-20 12:08 UTC. Ham veri: `sosyal/olcum.json`.
 |---|---|---|---|
 | instagram / gorsel | 30 | 2.7 | 0.6 |
 | instagram / reel | 17 | 109.1 | 1.7 |
-| youtube / short | 15 | 422.5 | 5.7 |
+| youtube / short | 23 | 593.3 | 7.1 |
 
 ## Yayın saatine göre (Türkiye saati)
 
 | Saat dilimi | Gönderi | Ort. izlenme |
 |---|---|---|
-| 00-03 | 8 | 146.8 |
-| 04-07 | 5 | 50.4 |
-| 08-11 | 13 | 93.5 |
-| 12-15 | 17 | 295.6 |
-| 16-19 | 13 | 44.7 |
-| 20-23 | 6 | 3.8 |
+| 00-03 | 10 | 373.1 |
+| 04-07 | 7 | 302.4 |
+| 08-11 | 14 | 184.1 |
+| 12-15 | 19 | 277.2 |
+| 16-19 | 13 | 50.5 |
+| 20-23 | 7 | 176.1 |
 
 Not: Instagram izlenmesi `views` (yoksa `reach`; alınamazsa tabloda eksik; etkileşim beğeni+yorum'a düşer), YouTube izlenmesi `viewCount`. Yeni gönderide sayılar henüz küçüktür; yaşa dikkat.
 
