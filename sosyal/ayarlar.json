@@ -1,14 +1,15 @@
 {
  "_aciklama": "Sosyal paylaşım ayarları. Bir platformu kapatmak için false yap. Şifreler burada DEĞİL, GitHub Secrets'ta durur (tools/sosyal_kurulum.py ekler).",
- "en_eski_gun": 3,
+ "en_eski_gun": 5,
  "calisma_basina_en_fazla": 1,
  "gunluk_en_fazla": {
   "x": 2,
   "reddit": 2,
-  "instagram": 4,
+  "instagram": 20,
   "instagram_reel": 6,
   "youtube": 8
  },
+ "haber_disi_gunluk_en_fazla": {"instagram": 4},
  "hesap_esleme": {
   "instagram": {
    "en": "tr",
@@ -169,7 +170,7 @@
   "youtube_kategori": "20"
  },
  "_klip_notu": "2026-11-18 (Cio, yeni karar): yayıncı klipleri CTRL+A GAME hesaplarına GİTMEZ; ayrı bir YouTube kanalına (yalnız Shorts) gider. O kanalın sırları YT_KLIP_CLIENT_ID / YT_KLIP_CLIENT_SECRET / YT_KLIP_REFRESH_TOKEN (araç: tools/sosyal_kurulum.py, hedef KLIP). Bu sırlar yoksa klip HİÇBİR hesaba gitmez; haber paylaşımı etkilenmez. Yalnız Cio'nun onayladığı ve medya sunucusuna yüklenen klip/derleme gider (tools/klip_yayin.py; onay kaydı data/klipler.json). klip.gunluk_en_fazla: klip hesabında platform başına günlük sınır (haber hesaplarının hakkından ayrı sayılır, haber kotasını yemez). derleme_gunluk_en_fazla: 16:9 derlemeler (yalnız YouTube, normal video). klip.sessiz_saat_utc: klip hesabında bu UTC aralığında (19-10 UTC = TR 22:00-13:00) paylaşım yapılmaz; yalnız TR 13:00-22:00 arası yayınlanır (null = kapalı). klip.en_az_ara_saat: aynı klip hesabında iki yükleme arasında en az 5 saat beklenir (13:17 + 19:17 TR gibi). klip.youtube: Shorts açık/kapalı. klip.instagram: varsayılan false; true yapılırsa ayrı IG_KLIP_USER_ID / IG_KLIP_TOKEN ister (CTRL+A GAME Instagram'ına klip gitmez). youtube_kategori: 20 (Oyun) ya da 24 (Eğlence). Klipler yalnız Türkçe çıkar. Haber varken haber kuralı klip hesabında yoktur.",
- "_instagram_notu": "2026-11-16: Meta engeli Cio'nun hesap doğrulamasıyla kalktı. Yeniden engellenmemek için iki saatte bir, günde en çok 12 görsel; sorunsuz bir haftadan sonra saatliğe (24) çıkarılabilir. 2026-11-19: görsel gönderi başına erişim ortalama 1,6 ölçüldü; günde 4'e indirildi, ağırlık Reels'te. 2026-11-20 (Cio): profil fotoğrafı sorunu nedeniyle Instagram şimdilik donduruldu; tüm dillerde instagram ve instagram_reel false yapıldı, sırlar ve eşleme korundu. Hesap yeniden açılınca false -> true yapmak yeterlidir; YouTube Shorts (CTRL+A GAME) kesintisiz devam eder. 2026-11-22 (Cio): hesap yeniden açıldı; tüm dillerde instagram ve instagram_reel yeniden true.",
+ "_instagram_notu": "2026-11-16: Meta engeli Cio'nun hesap doğrulamasıyla kalktı. Yeniden engellenmemek için iki saatte bir, günde en çok 12 görsel; sorunsuz bir haftadan sonra saatliğe (24) çıkarılabilir. 2026-11-19: görsel gönderi başına erişim ortalama 1,6 ölçüldü; günde 4'e indirildi, ağırlık Reels'te. 2026-11-20 (Cio): profil fotoğrafı sorunu nedeniyle Instagram şimdilik donduruldu; tüm dillerde instagram ve instagram_reel false yapıldı, sırlar ve eşleme korundu. Hesap yeniden açılınca false -> true yapmak yeterlidir; YouTube Shorts (CTRL+A GAME) kesintisiz devam eder. 2026-11-22 (Cio): hesap yeniden açıldı; tüm dillerde instagram ve instagram_reel yeniden true. 2026-11-22 (Cio): her haber mutlaka gönderi alsın; görsel sınırı günde 20, en_eski_gun 5 (birikeni yetiştirmek için). Haber dışı dolgu (rehber, arşiv, takvim, fırsat, ücretsiz) haber_disi_gunluk_en_fazla ile günde 4'te kalır, haberlerin hakkını yemez.",
  "_hesap_esleme_notu": "2026-11-17 (Cio): tek hesap çok dil. Kendi IG_<DİL>_*/YT_<DİL>_* anahtarı olmayan dilin Reels/Shorts içeriği hesap_esleme'deki hesaptan (tr = @ctrlagame, tek YouTube kanalı) yayınlanır, içerik kendi dilinde kalır. Günlük sınırlar HESAP başınadır. ana_dil_en_az: hesabın ana dili (tr) günde en az bu kadar hakkı alır (yabancı diller kalan hakları dönüşümlü kullanır). Ortak hesaptan yalnız ortak_hesap_bicimleri çıkar; Instagram görsel gönderisi Türkçe kalır. ana_dil_payi_serbest_saat: UTC saati; o saatten sonra ana dilde aday yoksa ayrılmış pay yabancı dillere açılır. ayni_konu_ara_saat: aynı haberin başka dil sürümü son gönderiden en az bu kadar saat sonra. Bir dile ayrı hesap açılırsa o dilin anahtarlarını gir; o dil kendi hesabına döner.",
  "_video_sessiz_saat_notu": "2026-11-19: gece (Türkiye 00:00-07:00 = UTC 21-04) yayınlanan Reels ve Shorts belirgin düşük izlendi; haber hesaplarında video_sessiz_saat_utc aralığında (bas dahil, son hariç, gece yarısını aşabilir) Reels/Shorts yayınlanmaz, sıradaki çalışmaya kalır; görsel gönderi etkilenmez. 2026-11-20: video_en_az_ara_saat (1.5 sa) art arda push/workflow_run tetiklemelerinde aynı hesaba sık Shorts basmayı önler; klip hesabı da kendi klip.sessiz_saat_utc ve klip.en_az_ara_saat kuralını uygular."
 }

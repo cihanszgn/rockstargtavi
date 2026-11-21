@@ -116,7 +116,9 @@ class Limit(Ortak):
 
     def test_ayardaki_sayilar(self):
         a = json.loads((pathlib.Path(__file__).resolve().parents[1] / "sosyal" / "ayarlar.json").read_text(encoding="utf-8"))
-        self.assertEqual((a["gunluk_en_fazla"]["instagram_reel"], a["gunluk_en_fazla"]["youtube"], a["gunluk_en_fazla"]["instagram"]), (6, 8, 4))
+        self.assertEqual((a["gunluk_en_fazla"]["instagram_reel"], a["gunluk_en_fazla"]["youtube"], a["gunluk_en_fazla"]["instagram"]), (6, 8, 20))
+        # Her haber gönderi alır (Cio, 2026-11-22); haber dışı dolgu ayrı ve küçük bir payla sınırlı kalır
+        self.assertEqual(a["haber_disi_gunluk_en_fazla"]["instagram"], 4)
         self.assertEqual(a["calisma_basina_en_fazla"], 1)
         self.assertEqual(a["hesap_esleme"]["instagram"]["en"], "tr")
         # YouTube'da yabancı dil ortak hesaptan çıkmaz (Cio'nun kararı, 2026-11-18): yalnız Türkçe Shorts

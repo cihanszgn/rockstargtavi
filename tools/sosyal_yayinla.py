@@ -630,6 +630,9 @@ def _zaman_gunu(v: dict) -> str:
     return (v.get("niyet_zamani") or v.get("zaman") or "")[:10]
 
 
+HABER_DISI_TURLER = ("takvim", "firsat", "ucretsiz", "rehber", "arsiv")
+
+
 def bugunku_sayi(kayit: dict, ad: str, hesap: str, gun: str) -> int:
     """Günlük sınır HESAP başınadır: hesap = yayının çıktığı hesabın dili (ortak hesaba giden diller o hesaba yazılır)."""
     return sum(1 for k, v in kayit.items()
@@ -912,8 +915,13 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                 cikti(f"{ad}/{hesap}: son videodan bu yana {ayar['video_en_az_ara_saat']} saat dolmadı, sıradaki çalışmaya kalır")
                 continue
             yasak_konu = son_konu if ortak and ayni_konu_yakin(son_z, simdi, ayar) else None
+            # Haber dışı (dolgu) içeriğin hesap başına günlük payı; ayarda yoksa sınır uygulanmaz.
+            hd_sinir = (ayar.get("haber_disi_gunluk_en_fazla") or {}).get(ad)
+            haber_disi_doldu = (hd_sinir is not None and
+                                bugunku_tur_sayisi(kayit, ad, hesap, gun, HABER_DISI_TURLER) >= int(hd_sinir))
 
-            def adaylari(dil, hesap=hesap, platform=platform, bicim=bicim, yasak_konu=yasak_konu, ad=ad, uyeler=uyeler):
+            def adaylari(dil, hesap=hesap, platform=platform, bicim=bicim, yasak_konu=yasak_konu, ad=ad, uyeler=uyeler,
+                         haber_disi_doldu=haber_disi_doldu):
                 icerik_dili = ig_icerik_dilleri(dil, ayar)[0] if platform == 'instagram' else dil
                 global_ig = platform == 'instagram' and bool(ayar['hesaplar'][dil].get('instagram_icerik'))
                 for x in sk.oncelikli(kuyruk, dil, platform, kayit, simdi):
@@ -921,6 +929,8 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                         continue  # klip/derleme haber hesaplarına gitmez; ayrı klip hesabı geçişinde işlenir
                     if not sk.uygun(x, dil, platform, kayit, simdi):
                         continue
+                    if x.get('sosyal_tur', 'haber') != 'haber' and haber_disi_doldu:
+                        continue  # dolgu içerik (rehber, arşiv, takvim, fırsat) günlük payını doldurdu; haberler sınırsız sürer
                     if icerik_dili not in x.get('diller', {}):
                         continue  # Ana içerik dilinden hesap diline düşülmez.
                     k = anahtar(x, dil, platform, bicim)
