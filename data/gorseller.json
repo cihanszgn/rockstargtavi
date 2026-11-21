@@ -1,43 +1,91 @@
 {
  "aion-2-world-market-world-exchange-2026-11-25": {
-  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3393110/10aa4b096ebe6af0d1dd7882e5ba004271aef6f7/header.jpg",
+  "url": "https://clan.akamai.steamstatic.com/images/46074831/7e0eb87b60306a96bfeeb6dcf35cdf3515744ffb.png",
   "kaynak": "Steam",
-  "en": 460,
-  "boy": 215
+  "en": 800,
+  "boy": 450,
+  "kilit": true
  },
  "american-truck-simulator-road-trip-dodge-viper-2026-11-21": {
-  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/270880/a80e5a18363259677ca96c2a39503ea595d2a45f/header.jpg",
+  "url": "https://clan.akamai.steamstatic.com/images/9084219/626e5e77e4add815fb38f2a413a6a488a6a8f786.jpg",
   "kaynak": "Steam",
-  "en": 460,
-  "boy": 215
+  "en": 800,
+  "boy": 450,
+  "kilit": true
  },
  "anno-117-pax-romana-patch-3-0-1-2026-11-18": {
-  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3274580/038d88b3917b4f1c6919c8120adabf86a6702085/header_alt_assets_5.jpg?t=1793873126",
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3274580/6e939ee9883cee83dace5d690ce94d37d4e85c35/ss_6e939ee9883cee83dace5d690ce94d37d4e85c35.1920x1080.jpg?t=1793873126",
   "kaynak": "Steam",
-  "en": 460,
-  "boy": 215
+  "en": 1920,
+  "boy": 1080,
+  "kilit": true
+ },
+ "apex-legends-anti-cheat-yanlis-yasaklama-duzeltmesi-2026-11-19": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/51c8778e7d61d7834436c2e68084b17243711505/ss_51c8778e7d61d7834436c2e68084b17243711505.1920x1080.jpg?t=1794958367",
+  "kaynak": "Steam",
+  "en": 1920,
+  "boy": 1080,
+  "kilit": true
  },
  "ark-survival-ascended-turkey-trial-2026-11-21": {
-  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2399830/d934813ca531af0fce69fe36bc972f1c90d1aa19/header.jpg",
+  "url": "https://clan.akamai.steamstatic.com/images/44719856/324a13d53fee81fe3d27f50807ef6c67851647c4.jpg",
   "kaynak": "Steam",
-  "en": 460,
-  "boy": 215
+  "en": 1920,
+  "boy": 1080,
+  "kilit": true
  },
  "battlefield-6-ucretsiz-deneme-casino-heist-2026-11-13": {
   "kilit": true,
   "neden": "görsel üzerinde eski tarih (SEP 15-22) yazılı"
  },
- "borderlands-the-hunt-rekor-2026-11-16": {
-  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1285190/library_hero.jpg",
+ "binding-of-isaac-repentance-plus-steam-guncellemesi-2026-11-19": {
+  "url": "https://clan.akamai.steamstatic.com/images/6743820/0e2dd158107ff1165d11fa00777731fe6cab62ea.png",
   "kaynak": "Steam",
   "en": 1920,
-  "boy": 620
+  "boy": 1080,
+  "kilit": true
+ },
+ "borderlands-4-boss-blitz-skins-2026-11-16": {
+  "url": "https://clan.akamai.steamstatic.com/images/45157740/ab6c08caa25b3dae2d533dc3ab7baba8aaee4036.png",
+  "kaynak": "Steam",
+  "en": 800,
+  "boy": 450,
+  "kilit": true
+ },
+ "borderlands-the-hunt-rekor-2026-11-16": {
+  "url": "https://clan.akamai.steamstatic.com/images/45157740/9147e165cbb76a4c35f2c878c506c1ce55e2f516.jpg",
+  "kaynak": "Steam",
+  "en": 1920,
+  "boy": 1080,
+  "kilit": true
+ },
+ "crimson-desert-game-awards-community-support-2026-11-18": {
+  "url": "https://clan.akamai.steamstatic.com/images/45343476/f37c2963f0fcf9d39fce68241c789b502f7ac668.jpg",
+  "kaynak": "Steam",
+  "en": 800,
+  "boy": 450,
+  "kilit": true
  },
  "crusader-kings-iii-silk-silver-2026-11-17": {
-  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1158310/c952fefe134c1684b009ad7daf29ccb306036f55/header_alt_assets_14.jpg?t=1794934751",
+  "url": "https://clan.akamai.steamstatic.com/images/36033026/e995b347897dd673b6e0a341f642d68a6ff356f7.png",
   "kaynak": "Steam",
-  "en": 460,
-  "boy": 215
+  "en": 1920,
+  "boy": 622,
+  "kilit": true
+ },
+ "cs2-cobblestone-inferno-guncelleme-2026-11-19": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/4ef95eed5fcd98c576bf13e024bc6c845b622132/ss_4ef95eed5fcd98c576bf13e024bc6c845b622132.1920x1080.jpg?t=1793054556",
+  "kaynak": "Steam",
+  "en": 1920,
+  "boy": 1080,
+  "kilit": true
+ },
+ "cs2-cobblestone-matchmaking-2026-11-18": {
+  "url": "https://clan.akamai.steamstatic.com/images/3381077/e0204c6b59d67ae2ec12a6e22618b1f5bced9eeb.png",
+  "kaynak": "Steam",
+  "en": 1920,
+  "boy": 622,
+  "kilit": true
  },
  "d2r-legacy-of-terror": {
   "url": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/4i/4IFTV1PGDTC61793910189717.png",
@@ -46,28 +94,32 @@
   "boy": 540
  },
  "delta-force-brakkesh-2-gelistirici-notlari-2026-11-15": {
-  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2507950/library_hero.jpg",
+  "url": "https://clan.akamai.steamstatic.com/images/45050610/c5e63c59efb6dc76f62c1863f56501b9410ee008.png",
   "kaynak": "Steam",
-  "en": 1920,
-  "boy": 620
+  "en": 800,
+  "boy": 450,
+  "kilit": true
  },
  "disney-dreamlight-valley-keepsake-sea-2026-11-18": {
-  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1401590/6d8dbdfe6e1596412fce1444bad31e4d2b0540c3/header_alt_assets_11.jpg?t=1795029987",
-  "kaynak": "Steam",
-  "en": 460,
-  "boy": 215
+  "url": "https://assets.nintendo.com/image/upload/q_auto/f_auto/c_fill,w_813/dpr_2.0/ncom/en_US/articles/2026/the-keepsake-sea-sets-sail-in-disney-dreamlight-valley/Screenshot_-_Avatar_underwater",
+  "kaynak": "Nintendo",
+  "en": 1626,
+  "boy": 915,
+  "kilit": true
  },
  "dreadmoor-early-access-update-7-2026-11-16": {
-  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3629430/5b80c132b3479c69a92c25a5266db523850cfc36/header.jpg",
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3629430/fa3a77da0c7ef0fd4dafd47d12f65423cab34910/ss_fa3a77da0c7ef0fd4dafd47d12f65423cab34910.1920x1080.jpg?t=1794233002",
   "kaynak": "Steam",
-  "en": 460,
-  "boy": 215
+  "en": 1920,
+  "boy": 1080,
+  "kilit": true
  },
  "drg-survivor-knockout-1-2-2026-11-17": {
-  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2321470/0e8c1c1b24117b18cf37cac700440a836249a79b/header_alt_assets_13.jpg?t=1794920587",
+  "url": "https://clan.akamai.steamstatic.com/images/43726543/a351ea48673ecab425e05520bcbc1e48b92c3fcc.png",
   "kaynak": "Steam",
-  "en": 460,
-  "boy": 215
+  "en": 1920,
+  "boy": 622,
+  "kilit": true
  },
  "epic-free-knightica-nov-19": {
   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3093400/library_hero.jpg",
@@ -76,16 +128,25 @@
   "boy": 620
  },
  "epic-games-store-mark-of-the-deep-ucretsiz-2026-11-19": {
-  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1933370/d353e340086cd4d46263cfe02c25469b56c87862/header.jpg",
+  "url": "https://cdn1.epicgames.com/spt-assets/83a240506a884c10ad8fb99694e57a0d/mark-of-the-deep-1k2bg.png",
+  "kaynak": "Epic Games Store",
+  "en": 1920,
+  "boy": 1080,
+  "kilit": true
+ },
+ "escape-from-tarkov-1-3-5-0-teknik-guncelleme-2026-11-18": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3932890/ce1407465e6207a69dafd22e7e071097c4a56757/ss_ce1407465e6207a69dafd22e7e071097c4a56757.1920x1080.jpg?t=1794590253",
   "kaynak": "Steam",
-  "en": 460,
-  "boy": 215
+  "en": 1920,
+  "boy": 1080,
+  "kilit": true
  },
  "fable-deepwood-oynanis-incelemesi-2026-11-13": {
-  "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Wire_EP290-b452df595ddb7f22b68e.jpg",
-  "kaynak": "Xbox Wire — Playground Games ile resmî podcast",
-  "en": 1920,
-  "boy": 1080
+  "url": "https://cms-assets.xboxservices.com/assets/20/3e/203ea436-1fa6-4ae2-b0c3-0a2222b581ab.jpg?n=Fable_Gallery_1350x759_02.jpg",
+  "kaynak": "Xbox",
+  "en": 1350,
+  "boy": 759,
+  "kilit": true
  },
  "ffxiv-rmt-botting-yaptirim-2026-11-19": {
   "url": "https://lds-img.finalfantasyxiv.com/h/L/HkNRaE5rCnYnxc_V_LV6u6cc7A.png",
@@ -93,9 +154,19 @@
   "en": 1200,
   "boy": 630
  },
+ "ffxiv-road-to-evercold-ucretsiz-giris-2026-11-18": {
+  "url": "https://clan.akamai.steamstatic.com/images/4459756/e20e213200130bdac5cfc6da402feb0b9c94c322.png",
+  "kaynak": "Steam",
+  "en": 800,
+  "boy": 450,
+  "kilit": true
+ },
  "football-manager-27-27-1-0-guncelleme-2026-11-16": {
-  "kilit": true,
-  "neden": "Steam page_bg_raw arka plan dokusu, bulanık"
+  "url": "https://clan.akamai.steamstatic.com/images/46407636/5e62e3734e2a5be12796cbb91b3a34b9003c2935.jpg",
+  "kaynak": "Steam",
+  "en": 800,
+  "boy": 450,
+  "kilit": true
  },
  "football-manager-27-launch": {
   "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/FM27-Xbox-Key-Art-Request_Horizontal-1920x1080-1-7cfa15cafc015bcbca57.jpg",
@@ -134,10 +205,11 @@
   "boy": 1080
  },
  "here-comes-the-horde-1-2-0-2026-11-21": {
-  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5066010/660ba25cbec114093ff8245eeafc64e779518a05/header.jpg",
+  "url": "https://clan.akamai.steamstatic.com/images/46280948/250aad0814d208779e9030a724562ab03bce5537.png",
   "kaynak": "Steam",
-  "en": 460,
-  "boy": 215
+  "en": 1920,
+  "boy": 622,
+  "kilit": true
  },
  "hounded-ps5-2027-duyuru-2026-11-17": {
   "url": "https://blog.playstation.com/tachyon/2048/11/35ee932cfac0044b7c4d4d1d41f95533dd2f3202-scaled.jpg",
@@ -146,10 +218,11 @@
   "boy": 1440
  },
  "just-volleyball-resmi-cikis-2026-11-16": {
-  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5037200/cd1b5a290d15e7379b31dcacc12f1e5b25d37577/header.jpg",
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5037200/8fa2393b78e2b5db7a3cd8310fac160c4b1e6d76/ss_8fa2393b78e2b5db7a3cd8310fac160c4b1e6d76.1920x1080.jpg?t=1794852941",
   "kaynak": "Steam",
-  "en": 460,
-  "boy": 215
+  "en": 1920,
+  "boy": 1080,
+  "kilit": true
  },
  "ko-guncelleme-2026-11-12": {
   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/389430/library_hero.jpg",
@@ -164,21 +237,25 @@
   "boy": 620
  },
  "last-pirates-die-together-xbox-preview-2026-11-17": {
-  "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/LPDT_Wire_Hero_1920x1080-1d5b148eefa8a5a971a2.jpg",
+  "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/LPDT_gameplay_loot-ab43ee7e169520b83f03.jpg",
   "kaynak": "Xbox Wire",
   "en": 1920,
-  "boy": 1080
+  "boy": 1080,
+  "kilit": true
  },
  "limbus-company-10-yil-hediye-2026-11-17": {
-  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1973530/capsule_616x353.jpg",
+  "url": "https://clan.akamai.steamstatic.com/images/43587230/67519605a3c8132e716b14dbe62dcf38251a655c.png",
   "kaynak": "Steam",
-  "en": 616,
-  "boy": 353,
-  "genis": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1973530/library_hero.jpg"
+  "en": 3000,
+  "boy": 1350,
+  "kilit": true
  },
  "lol-new-dawn-2027-teaser": {
-  "kilit": true,
-  "neden": "110x70 svg logo büyütülmüş, piksel"
+  "url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/f0ee480527d51be22454acbd8c22bafc9bc40bd8-1920x800.png",
+  "kaynak": "Riot Games",
+  "en": 1920,
+  "boy": 800,
+  "kilit": true
  },
  "lol-patch-26-22": {
   "url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/718b573bd914c3a8a334a89f70ff405eee9a6748-1920x1080.jpg?accountingTag=LoL?w=1200&h=630&fm=webp&fit=crop&crop=center",
@@ -187,10 +264,11 @@
   "boy": 630
  },
  "mahjong-soul-frieren-collab-2026-11-18": {
-  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2739990/30f6fa7ca8ef3b0fc173072f1c1b6a5066346558/header.jpg",
+  "url": "https://clan.akamai.steamstatic.com/images/45073129/757f3ebe396eb77280c99cc87164e1be9ecd2fdd.png",
   "kaynak": "Steam",
-  "en": 460,
-  "boy": 215
+  "en": 800,
+  "boy": 450,
+  "kilit": true
  },
  "marathon-symbiosis-update": {
   "url": "https://blog.playstation.com/tachyon/2048/11/475e02e6da09723fe2dd0469175d593a7c1fee39.jpg",
@@ -199,10 +277,11 @@
   "boy": 1080
  },
  "melvor-idle-2-early-access-2026-11-17": {
-  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3218350/21b3f6881a12eef86b7c17b21640b396f3510f92/header.jpg",
+  "url": "https://clan.akamai.steamstatic.com/images/45594183/1abe1e2960dcccf99da21702f21a6ee85d437de0.png",
   "kaynak": "Steam",
-  "en": 460,
-  "boy": 215
+  "en": 1920,
+  "boy": 622,
+  "kilit": true
  },
  "minecraft-26-4-snapshot-8": {
   "url": "https://www.minecraft.net/content/dam/minecraftnet/article-asset/2026/minecraft-26-4-snapshot-8/new-article-hero-image.jpg",
@@ -211,18 +290,29 @@
   "boy": 500
  },
  "mlb-the-show-27-tech-test-now-later-packs-2026-11-17": {
-  "url": "https://blog.playstation.com/tachyon/2048/11/b629a310e4bac8288f76e56b99624cb57b67037e-scaled.jpg",
-  "kaynak": "PlayStation Blog",
-  "en": 2560,
-  "boy": 1440
+  "kilit": true,
+  "neden": "Resmî duyurunun seri logosu dikey kartta kesiliyor. MLB The Show 27 için uygun resmî görsel bulunamadı."
+ },
+ "nanatsu-no-taizai-origin-guncelleme-2026-11-21": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3679080/33059da9c5bc2e3a9b4335700d7453970cba7700/ss_33059da9c5bc2e3a9b4335700d7453970cba7700.1920x1080.jpg?t=1791364897",
+  "kaynak": "Steam",
+  "en": 1920,
+  "boy": 1080,
+  "kilit": true
  },
  "nintendo-black-friday-offers-2026": {
-  "kilit": true,
-  "neden": "Nintendo sitesi geneli jenerik paylaşım görseli (social-share); oyuna özgü görsel yok"
+  "url": "https://assets.nintendo.com/image/upload/q_auto/f_auto/c_fill,w_813/dpr_2.0/ncom/en_US/articles/2026/nintendo-announces-black-friday-offers-to-help-spread-joy-this-holiday-season/MKW_BF",
+  "kaynak": "Nintendo",
+  "en": 1626,
+  "boy": 915,
+  "kilit": true
  },
  "nintendo-eshop-family-gifting": {
-  "kilit": true,
-  "neden": "Nintendo sitesi geneli jenerik paylaşım görseli (social-share)"
+  "url": "https://assets.nintendo.com/image/upload/q_auto/f_auto/c_fill,w_813/dpr_2.0/ncom/en_US/articles/2026/coming-soon-gift-digital-games-to-family-group-members/EN/5._Accept_Gift_English",
+  "kaynak": "Nintendo",
+  "en": 1626,
+  "boy": 915,
+  "kilit": true
  },
  "planet-zoo-2-game-awards-aday-2026-11-17": {
   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3219030/a5131aa4b84d04a55e3b9c561d7c886cc22bbe1c/header.jpg",
@@ -241,14 +331,18 @@
   "neden": "site geneli ogimage (PoE1 logosu, kare)"
  },
  "poe2-exilecon-2026-11-06": {
-  "kilit": true,
-  "neden": "site geneli ogimage (yanlış sürüm logosu)"
+  "url": "https://web.poecdn.com/public/news/2026-11-07/ExileCon/PoE2/ENPointerPostTitle.jpg",
+  "kaynak": "Grinding Gear Games",
+  "en": 920,
+  "boy": 261,
+  "kilit": true
  },
  "pokopia-apples-to-applin-2026-11-16": {
-  "url": "https://assets.nintendo.com/image/upload/c_fill,w_1200,h_630/q_auto/f_auto/dpr_2.0/ncom/My%20Nintendo%20Store/EN-US/Nintendo%20Switch%202/Software/Pokemon%20Pokopia/121593-nintendo-pokemon-pokopia-2000x2000",
+  "url": "https://assets.nintendo.com/image/upload/q_auto/f_auto/c_fill,w_813/dpr_2.0/ncom/en_US/articles/2026/join-the-apples-to-applin-event-in-pokemon-pokopia/PP_Nov_05",
   "kaynak": "Nintendo",
-  "en": 2400,
-  "boy": 1260
+  "en": 1626,
+  "boy": 915,
+  "kilit": true
  },
  "ps-plus-catalog-november-2026": {
   "url": "https://blog.playstation.com/tachyon/2026/11/6ae8af767f59801bb5a0ceabf7fe915f00eed004.jpg",
@@ -269,22 +363,25 @@
   "boy": 1080
  },
  "r6-siege-operation-vital-signal-duyuruldu-2026-11-15": {
-  "url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2OEc3pchsbPN8y4uhRawR4/daea94815ef21ad76a7d633f79a54458/r6s-y11s3-splitfire.jpg",
-  "kaynak": "Ubisoft — Operation Vital Signal sezon sayfası",
-  "en": 1920,
-  "boy": 1080
+  "url": "https://clan.akamai.steamstatic.com/images/8328525/403bf0b7c5a83486b50c10436d4e7cd49595d8a8.jpg",
+  "kaynak": "Steam",
+  "en": 800,
+  "boy": 450,
+  "kilit": true
  },
  "rob-run-patch-2026-11-17": {
-  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4262460/db8e0cf43c9475b96fb9446b4908de79fcb9f619/header.jpg",
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4262460/258546065bdba3f2dc14b476a6c0ba8caaf5b367/ss_258546065bdba3f2dc14b476a6c0ba8caaf5b367.1920x1080.jpg?t=1793811654",
   "kaynak": "Steam",
-  "en": 460,
-  "boy": 215
+  "en": 1917,
+  "boy": 1080,
+  "kilit": true
  },
  "selaco-chapter-2-machines-of-war-cikti-2026-11-13": {
-  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1592280/library_hero.jpg",
+  "url": "https://clan.akamai.steamstatic.com/images/40325504/bcab7bd2bd384289bb9efcffae0d454c2d7bca31.png",
   "kaynak": "Steam",
-  "en": 1920,
-  "boy": 620
+  "en": 3508,
+  "boy": 1365,
+  "kilit": true
  },
  "slay-the-spire-2-beta-0-113-1-turkce-duzeltme-2026-11-14": {
   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2868840/library_hero.jpg",
@@ -293,16 +390,32 @@
   "boy": 620
  },
  "sonic-racing-crossworlds-mclaren-2026-11-18": {
-  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2486820/05bd63661af5e8786b51aed30931af5012f8b762/header_alt_assets_18.jpg?t=1794951691",
+  "url": "https://clan.akamai.steamstatic.com/images/45493126/f78feccc509a7bbd8bcdb825778d970ff6010175.png",
   "kaynak": "Steam",
-  "en": 460,
-  "boy": 215
+  "en": 1920,
+  "boy": 622,
+  "kilit": true
+ },
+ "steam-machine-2tb-bekleme-listesi-kapandi-2026-11-19": {
+  "url": "https://clan.akamai.steamstatic.com/images/45479024/d2ce7e96bb0ab51817ba37cf61e3ca919d6f7209.jpg",
+  "kaynak": "Steam",
+  "en": 800,
+  "boy": 450,
+  "kilit": true
  },
  "temtem-swarm-nintendo-switch-cikis-tarihi-2026-11-20": {
-  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2510960/9eed19ba2e454b3a0a00dde88966dcd2e5decc04/header.jpg",
+  "url": "https://clan.akamai.steamstatic.com/images/44890008/879cf7b3e8d977f1c24a2c3fb0f7945fea11c6b7.png",
   "kaynak": "Steam",
-  "en": 460,
-  "boy": 215
+  "en": 800,
+  "boy": 450,
+  "kilit": true
+ },
+ "the-game-awards-2026-adaylari-nintendo-2026-11-17": {
+  "url": "https://assets.nintendo.com/image/upload/q_auto/f_auto/c_fill,w_1200/ncom/en_US/articles/2026/congrats-to-the-game-awards-2026-nominees/TGA26_KeyArt_16x9_wdate",
+  "kaynak": "Nintendo",
+  "en": 1200,
+  "boy": 675,
+  "kilit": true
  },
  "valorant-patch-13-10": {
   "url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/296cff0d10e916f8a529ec9b60da134f0c80a448-1920x1080.png?accountingTag=VAL?w=1200&h=630&fm=webp&fit=crop&crop=center",
@@ -310,15 +423,37 @@
   "en": 1120,
   "boy": 630
  },
+ "war-thunder-pce-842-coastal-defender-2026-11-16": {
+  "url": "https://clan.akamai.steamstatic.com/images/4649813/4c864bcc681cb2c27cbeea434d2ceec142c4d8df.png",
+  "kaynak": "Steam",
+  "en": 800,
+  "boy": 450,
+  "kilit": true
+ },
+ "war-thunder-wtscreen251-ekran-goruntusu-2026-11-21": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/236390/33d8e5aba677bb107c838e2abaff51289fbc4035/ss_33d8e5aba677bb107c838e2abaff51289fbc4035.1920x1080.jpg?t=1794405808",
+  "kaynak": "Steam",
+  "en": 1920,
+  "boy": 1080,
+  "kilit": true
+ },
  "wolfenstein-3-in-production": {
   "kilit": true,
   "neden": "Xbox 25. yıl özet görseli Wolfenstein ile ilgisiz; resmî görsel bulunamadı"
  },
- "world-of-warships-avrupa-kruvazorleri-erken-erisim-2026-11-21": {
-  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/552990/dfc3d15ad7b723a0b1e0a93ce197a8fa3b05311f/header_alt_assets_20.jpg?t=1795091468",
+ "world-of-tanks-wci-2026-finals-2026-11-19": {
+  "url": "https://clan.akamai.steamstatic.com/images/39263509/63b14b68762acee5ac2a600e81a05024f753c92c.jpg",
   "kaynak": "Steam",
-  "en": 460,
-  "boy": 215
+  "en": 1920,
+  "boy": 622,
+  "kilit": true
+ },
+ "world-of-warships-avrupa-kruvazorleri-erken-erisim-2026-11-21": {
+  "url": "https://clan.akamai.steamstatic.com/images/31013613/08e161d84f175273a2a8b029aa87ddb2c149ecc3.png",
+  "kaynak": "Steam",
+  "en": 1280,
+  "boy": 353,
+  "kilit": true
  },
  "wow-cost-of-honor": {
   "url": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/to/TOS2WHEN5MTM1793817547503.png",
@@ -338,6 +473,13 @@
   "en": 2400,
   "boy": 1350
  },
+ "wuthering-waves-steam-fullpackage-2026-11-18": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3513350/e22709229f5dd8265db361feebf1a3809d3fad2b/ss_e22709229f5dd8265db361feebf1a3809d3fad2b.1920x1080.jpg?t=1794439536",
+  "kaynak": "Steam",
+  "en": 1920,
+  "boy": 1080,
+  "kilit": true
+ },
  "xbox-25-yil-dergisi-2026-11-15": {
   "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/XBOX_Magazine_mockup_perspective-37cf15975daed19bb5dd.png",
   "kaynak": "Xbox Wire",
@@ -345,10 +487,11 @@
   "boy": 1080
  },
  "xbox-black-friday-satis-2026-11-16": {
-  "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/BF-CM-2027_Comp_Wire-Collection-B-RGB_1920x1080_02-34da270902fc95df2602.jpg",
+  "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Black-Friday-Sale_MSOX_Spotlight_A_1136x639_01-1-bf7d714987d24723f754.jpg",
   "kaynak": "Xbox Wire",
   "en": 1920,
-  "boy": 1080
+  "boy": 1080,
+  "kilit": true
  },
  "xbox-free-play-days-deadlink-slayers-x-polterguys-2026-11-19": {
   "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/FY26-Social-FPD_11-19-2026_1920x1080-1-8a260a38e15a242f67c1.png",
@@ -368,8 +511,25 @@
   "en": 1920,
   "boy": 1080
  },
+ "zelda-ocarina-of-time-kart-paketi-2026-11-18": {
+  "url": "https://assets.nintendo.com/image/upload/q_auto/f_auto/c_fill,w_1200/ncom/en_US/articles/2026/the-legend-of-zelda-ocarina-of-time-cards-coming-to-the-nintendo-today-app/1920x1080_EN",
+  "kaynak": "Nintendo",
+  "en": 1200,
+  "boy": 675,
+  "kilit": true
+ },
  "zelda-ocarina-of-time-switch-2-cikti-2026-11-16": {
-  "kilit": true,
-  "neden": "Nintendo sitesi geneli jenerik paylaşım görseli; resmî oyun görseli bulunamadı"
+  "url": "https://assets.nintendo.com/image/upload/f_auto/q_auto/dpr_2.0/Marketing2/DNDPqUcrg1784158469aaH8EIiMcjzbYSlnG0ncVJW3rSzR35s0l1pKOdPLJAm2y/section_key-upgrades/Ocarina-Child_FB",
+  "kaynak": "Nintendo",
+  "en": 1920,
+  "boy": 1080,
+  "kilit": true
+ },
+ "zenless-zone-zero-3-4-the-finality-of-the-day-2026-11-20": {
+  "url": "https://fastcdn.hoyoverse.com/content-v2/nap/167400/b6fda8464233f5f94e9f9972eb695bd3_6921370082449638096.jpg",
+  "kaynak": "HoYoverse",
+  "en": 1920,
+  "boy": 1080,
+  "kilit": true
  }
 }
