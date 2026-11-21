@@ -488,6 +488,10 @@ def yt_url_duzelt(sonuc: dict, tur) -> dict:
     return sonuc
 
 
+YT_KAPAK_ONARIM_AZAMI = 4  # her saatlik turda en çok bu kadar eksik dikey kapak onarılır
+YT_DIKEY_KAPAK ="https://i.ytimg.com/vi/{}/sardefault.jpg"  # yalnız dikey özel kapak işlendiyse 200 döner
+
+
 def yt_kapak(ag, tok, video_kimlik, kapak_adresi) -> str | None:
     """Video küçük resmi (en iyi çaba: kanal doğrulanmamışsa ya da Shorts reddederse video yine yayında kalır). -> not | None"""
     try:
@@ -1215,8 +1219,14 @@ def _manifest_kapak(manifest: dict, haber_id: str, dil: str) -> str | None:
 
 
 def yt_kapaklari_guncelle(*, kayit_yolu: pathlib.Path, manifest_yolu: pathlib.Path, tum: dict, ag,
-                          dry_run: bool = False, yalniz_id: set[str] | None = None, cikti=print) -> dict:
-    """Yayınlanmış haber YouTube Shorts videolarının kapaklarını silmeden, yalnızca thumbnails.set ile günceller."""
+                          dry_run: bool = False, yalniz_id: set[str] | None = None, yalniz_eksik: bool = False,
+                          azami: int | None = None, cikti=print) -> dict:
+    """Yayınlanmış haber YouTube Shorts videolarının kapaklarını silmeden, yalnızca thumbnails.set ile günceller.
+
+    yalniz_eksik: yalnız dikey kapağı (sardefault.jpg) YouTube'da oluşmamış videolar. Yüklemenin hemen ardından
+    yapılan thumbnails.set, video henüz Short olarak işlenmediği için yalnız yatay küçük resmi günceller; kanalın
+    Shorts sekmesi o zaman videodan rastgele bir kare gösterir. İşlendikten sonra yeniden ayarlamak dikey kapağı üretir.
+    azami: bir turda en çok kaç kapak (YouTube kısa sürede çok kapak yüklemeyi HTTP 429 ile keser)."""
     kayit = json.loads(kayit_yolu.read_text(encoding="utf-8")) if kayit_yolu.exists() else {}
     manifest = vs.yukle(manifest_yolu)
     hedefler = []
@@ -1234,7 +1244,15 @@ def yt_kapaklari_guncelle(*, kayit_yolu: pathlib.Path, manifest_yolu: pathlib.Pa
             continue
         kapak = _manifest_kapak(manifest, hid, dil)
         hesap = kayit_hesabi(k, rec)
-        hedefler.append((hesap, hid, dil, vid, kapak))
+        hedefler.append((str(rec.get("zaman") or ""), hesap, hid, dil, vid, kapak))
+    if yalniz_eksik:
+        # En yeni önce; kapaksız kayıt ve dikey kapağı zaten olan video sessizce geçilir.
+        hedefler = [h for h in sorted(hedefler, reverse=True) if h[5]]
+        if not dry_run:
+            hedefler = [h for h in hedefler if not ag.yayinda_mi(YT_DIKEY_KAPAK.format(h[4]))]
+    if azami is not None:
+        hedefler = hedefler[:azami]
+    hedefler = [h[1:] for h in hedefler]
 
     ozet = {"guncellenen": 0, "hatali": 0, "atlanan": 0, "detay": []}
     if not hedefler:
@@ -1338,6 +1356,13 @@ def main(argv=None) -> int:
     if atlanan and not a.dry_run:
         print("Anahtar yok, atlandı: " + ", ".join(atlanan))
     print(f"Bitti: {gonderilen} gönderi.")
+    if not a.dry_run:
+        # Önceki turlarda yüklenip dikey kapağı oluşmamış Shorts'ları onar (en iyi çaba; paylaşım sonucunu etkilemez).
+        try:
+            yt_kapaklari_guncelle(kayit_yolu=KAYIT, manifest_yolu=vs.MANIFEST_YOLU, tum=sirlari_oku(), ag=Ag(),
+                                  yalniz_eksik=True, azami=YT_KAPAK_ONARIM_AZAMI)
+        except Exception as h:  # noqa: BLE001 - kapak onarımı paylaşım turunu düşürmemeli
+            print(f"Kapak onarımı atlandı: {h}")
     if hatalar:
         print("HATALAR:\n  " + "\n  ".join(hatalar))
         return 1

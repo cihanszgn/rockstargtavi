@@ -697,6 +697,34 @@ class YtKapakGuncelle(Temel):
         ozet = sy.yt_kapaklari_guncelle(kayit_yolu=self.kayit, manifest_yolu=self.manifest, tum=SIRLAR, ag=ag, yalniz_id={"VID_A"}, cikti=lambda *_: None)
         self.assertEqual((ozet["guncellenen"], ozet["hatali"], ozet["atlanan"]), (1, 0, 0))
 
+    def test_yalniz_eksik_dikey_kapagi_olan_videoyu_gecer(self):
+        self._hazirla()
+
+        class Ag(SahteAg):
+            def yayinda_mi(self, url):
+                # VID_A'nın dikey kapağı YouTube'da var; VID_B'ninki yok. Kapak dosyaları yayında.
+                return "sardefault" not in url or "/VID_A/" in url
+
+        ag = Ag()
+        ozet = sy.yt_kapaklari_guncelle(kayit_yolu=self.kayit, manifest_yolu=self.manifest, tum=SIRLAR, ag=ag,
+                                        yalniz_eksik=True, cikti=lambda *_: None)
+        self.assertEqual((ozet["guncellenen"], ozet["hatali"], ozet["atlanan"]), (1, 0, 0))
+        thumb = [u for _, u in ag.cagrilar if "thumbnails/set" in u]
+        self.assertEqual(len(thumb), 1)
+
+    def test_yalniz_eksik_azami_sinirina_uyar(self):
+        self._hazirla()
+
+        class Ag(SahteAg):
+            def yayinda_mi(self, url):
+                return "sardefault" not in url
+
+        ag = Ag()
+        ozet = sy.yt_kapaklari_guncelle(kayit_yolu=self.kayit, manifest_yolu=self.manifest, tum=SIRLAR, ag=ag,
+                                        yalniz_eksik=True, azami=1, cikti=lambda *_: None)
+        self.assertEqual(ozet["guncellenen"], 1)
+        self.assertEqual(len([u for _, u in ag.cagrilar if "thumbnails/set" in u]), 1)
+
 
 if __name__ == "__main__":
     unittest.main()
