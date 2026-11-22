@@ -1,5 +1,215 @@
 [
  {
+  "id": "dungeonbound-1-0-14-guncelleme-2026-11-22",
+  "oyun": "Dungeonbound",
+  "tarih": "2026-11-22",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam resmî haber sayfası",
+    "url": "https://store.steampowered.com/news/app/5200620/view/694278269818635116"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Dungeonbound 1.0.14: Jerry, hile koruması ve denge değişiklikleri",
+    "ozet": "Steam'deki resmî duyuruya göre güncelleme, yeni karakter Jerry'yi, hile tespitini ve birkaç silah ile eşya dengesini getiriyor.",
+    "metin": "Dungeonbound'un 1.0.14 güncellemesi 22 Kasım 2026'da Steam'de yayımlandı. Oyunun resmî Steam haber sayfasına göre sürümle birlikte yeni bir karakter, yeni görevler ve hile tespitinde sıkılaştırma geliyor.\n\nYeni karakter Jerry'yi açmak için 25 Jerry'yi yenmek gerekiyor. Yeni Slot Makinesi tapınağına bir silah konup çevrildiğinde üç aynı sembol gelirse silah kutsanıyor. Savaş hızının yanına Harita, Ayarlar ve Hata Bildir düğmeleri eklendi; imkânsız görünen tablolar için yeni REPORT RIVAL düğmesi geliyor.\n\nHile tarafında değiştirilmiş kayıtlar ve skor tabloları artık tespit edilip liderlik tablolarından ve rakip havuzundan çıkarılıyor. Sunucu tarafı tespit ince ayar aldı, hileli yapıların hayalet olarak görünmesini önlemek için bir güven sistemi devrede. Dengede Ashigaru, Relic Hunter, Snuffy, Jeiku ve Archer küçük güçlendirmeler aldı; yaygın silahlar ve nadir seçilen +30 eşya da iyileştirildi.\n\nOrtak oyunda lobi sahibi perdeyi ve Derinliği seçiyor, savaştan sonra herkes kendi hasar dökümünü görebiliyor. Death'ı yenmek artık koşuyu bitirip skoru gönderiyor. Oyundan çıkıp dönmek tapınak ve sandıkların durumunu bozmuyor veya tekrarlatmıyor; yeni bir cihaz Steam Bulut kaydınızın üzerine yazamıyor.",
+    "etiketler": [
+     "#Dungeonbound",
+     "#Steam",
+     "#PC",
+     "#CoOp"
+    ]
+   },
+   "en": {
+    "baslik": "Dungeonbound 1.0.14 adds Jerry and new anti-cheat",
+    "ozet": "Steam's official announcement says the update adds the hero Jerry, a slot machine shrine, server-side cheat detection and balance changes.",
+    "metin": "Dungeonbound version 1.0.14 went live on Steam on November 22, 2026. According to the official Steam news post, the update adds a new hero, new quests, a new shrine and stronger anti-cheat measures.\n\nThe new hero Jerry unlocks after you beat 25 Jerry's. The new Slot Machine shrine lets you put a weapon in and spin; three of a kind blesses it. New Map, Settings and Report Bug buttons sit next to the battle speed control, and a new REPORT RIVAL button targets boards that look impossible.\n\nOn the cheating side, edited saves and boards are now caught and kept off the leaderboards and out of the rival pool. Server-side detection has been fine-tuned, and a trust system is in place to ban cheater builds from appearing as ghosts. Balance changes give small buffs to Ashigaru, Relic Hunter, Snuffy, Jeiku and the Archer, plus buffs to common weapons and to rarely picked items (+30).\n\nIn co-op, the lobby host now picks the act and the Depth, and everyone sees their own damage breakdown after a battle. Killing Death now ends the run and posts your score. Quitting and resuming no longer undoes or repeats shrines and chests, and a new device can no longer overwrite your Steam Cloud save.",
+    "etiketler": [
+     "#Dungeonbound",
+     "#Steam",
+     "#PC",
+     "#CoOp"
+    ]
+   },
+   "es": {
+    "baslik": "Dungeonbound 1.0.14 añade a Jerry y anticheat en Steam",
+    "ozet": "Según el anuncio oficial en Steam, la actualización incorpora al personaje Jerry, un santuario de tragaperras y detección anticheat.",
+    "metin": "Dungeonbound en su versión 1.0.14 llegó a Steam el 22 de noviembre de 2026. Según la noticia oficial publicada en Steam, la actualización añade un héroe nuevo, nuevas misiones, un santuario inédito y medidas anticheat más estrictas.\n\nPara desbloquear al héroe Jerry hay que vencer a Jerry 25 veces. El nuevo santuario de máquina tragaperras permite meter un arma y girar; si salen tres iguales, el arma recibe una bendición. Junto a la velocidad de combate aparecen los botones de Mapa, Ajustes y Reportar error, y un nuevo botón REPORT RIVAL sirve para las tablas con rivales que parecen imposibles.\n\nEn cuanto a trampas, los guardados y tablas editados ahora se detectan y se apartan de las clasificaciones y del grupo de rivales. La detección en servidor se ha afinado y un sistema de confianza evita que las builds tramposas aparezcan como fantasmas. En equilibrio, Ashigaru, Relic Hunter, Snuffy, Jeiku y el Archer reciben mejoras pequeñas, y también se refuerzan las armas comunes y los objetos poco elegidos (+30).\n\nEn cooperativo, el anfitrión del lobby elige el acto y la Profundidad, y tras cada batalla todos ven su desglose de daño. Vencer a Death ahora termina la partida y publica tu puntuación. Retomar tras salir ya no deshace ni repite santuarios y cofres, y un dispositivo nuevo no puede sobrescribir tu guardado de Steam Cloud.",
+    "etiketler": [
+     "#Dungeonbound",
+     "#Steam",
+     "#PC",
+     "#CoOp"
+    ]
+   },
+   "fr": {
+    "baslik": "Dungeonbound 1.0.14 ajoute Jerry et un anticheat sur Steam",
+    "ozet": "Selon l'annonce officielle sur Steam, la mise à jour ajoute le héros Jerry, un sanctuaire machine à sous et une détection anti-triche.",
+    "metin": "Dungeonbound en version 1.0.14 est disponible sur Steam depuis le 22 novembre 2026. D'après l'annonce officielle publiée sur Steam, la mise à jour ajoute un nouveau héros, de nouvelles quêtes, un sanctuaire inédit et des contrôles anti-triche renforcés.\n\nPour débloquer le héros Jerry, il faut vaincre Jerry 25 fois. Le nouveau sanctuaire machine à sous permet de placer une arme et de lancer le tirage ; si trois symboles identiques apparaissent, l'arme reçoit une bénédiction. De nouveaux boutons Carte, Paramètres et Signaler un bug sont placés à côté de la vitesse de combat, et un bouton REPORT RIVAL vise les classements aux adversaires jugés impossibles.\n\nCôté triche, les sauvegardes et classements modifiés sont désormais détectés, retirés des tableaux et écartés du vivier d'adversaires. La détection côté serveur a été affinée et un système de confiance empêche les versions trichées d'apparaître comme des fantômes. Côté équilibrage, Ashigaru, Relic Hunter, Snuffy, Jeiku et l'Archer reçoivent de légers renforts, ainsi que les armes courantes et les objets rarement choisis (+30).\n\nEn coopération, l'hôte du lobby choisit l'acte et la Profondeur, et chacun voit son propre détail des dégâts après un combat. Vaincre la Mort met désormais fin à la partie et publie votre score. Quitter puis reprendre ne défait ni ne répète plus les sanctuaires et coffres, et un nouvel appareil ne peut plus écraser votre sauvegarde Steam Cloud.",
+    "etiketler": [
+     "#Dungeonbound",
+     "#Steam",
+     "#PC",
+     "#CoOp"
+    ]
+   },
+   "de": {
+    "baslik": "Dungeonbound 1.0.14: Neuer Held Jerry und Anti-Cheat",
+    "ozet": "Laut dem offiziellen Steam-Beitrag bringt das Update den Helden Jerry, einen neuen Spielautomaten-Schrein, Betrugserkennung und Balance-Änderungen.",
+    "metin": "Dungeonbound ist mit Version 1.0.14 seit dem 22. November 2026 auf Steam verfügbar. Laut dem offiziellen Steam-Beitrag bringt das Update einen neuen Helden, neue Quests, einen neuen Schrein und strengere Anti-Cheat-Maßnahmen.\n\nDen neuen Helden Jerry schaltet man frei, indem man Jerry 25-mal besiegt. Der neue Spielautomaten-Schrein nimmt eine Waffe auf; drei gleiche Symbole segnen sie. Neben der Kampfgeschwindigkeit gibt es neue Schaltflächen für Karte, Einstellungen und Fehler melden, und die Schaltfläche REPORT RIVAL meldet Bestenlisten mit unmöglich wirkenden Einträgen.\n\nGegen Betrug werden bearbeitete Speicherstände und Bestenlisten nun erkannt und von den Ranglisten sowie dem Rivalen-Pool ferngehalten. Die serverseitige Erkennung wurde feinjustiert, und ein Vertrauenssystem soll verhindern, dass betrügerische Builds als Geister auftauchen. Bei der Balance erhalten Ashigaru, Relic Hunter, Snuffy, Jeiku und der Archer kleine Verbesserungen, außerdem gewöhnliche Waffen und selten gewählte Gegenstände (+30).\n\nIm Koop bestimmt der Lobby-Host Akt und Tiefe, und nach jedem Kampf sieht jeder seine eigene Schadensübersicht. Death zu besiegen beendet nun den Durchlauf und übermittelt deine Punktzahl. Beenden und Fortsetzen macht Schreine und Truhen nicht mehr rückgängig und wiederholt sie nicht, und ein neues Gerät kann den Steam-Cloud-Spielstand nicht mehr überschreiben.",
+    "etiketler": [
+     "#Dungeonbound",
+     "#Steam",
+     "#PC",
+     "#CoOp"
+    ]
+   },
+   "nl": {
+    "baslik": "Dungeonbound 1.0.14 voegt Jerry en anticheat toe",
+    "ozet": "Volgens de officiële Steam-aankondiging brengt de update de held Jerry, een gokkastschrijn, serverzijdige cheatdetectie en balanswijzigingen.",
+    "metin": "Dungeonbound versie 1.0.14 is sinds 22 november 2026 op Steam beschikbaar. Volgens de officiële Steam-aankondiging voegt de update een nieuwe held, nieuwe quests, een nieuwe schrijn en strengere anticheatmaatregelen toe.\n\nDe nieuwe held Jerry ontgrendel je door Jerry 25 keer te verslaan. De nieuwe gokkastschrijn neemt een wapen aan; drie gelijke symbolen geven het een zegen. Naast de gevechtssnelheid staan nieuwe knoppen voor Kaart, Instellingen en Bug melden, en de knop REPORT RIVAL is bedoeld voor ranglijsten met onmogelijk lijkende tegenstanders.\n\nBij vals spelen worden bewerkte opslagbestanden en ranglijsten nu gedetecteerd en uit de klassementen en de rivalenpool gehouden. De detectie op de server is verfijnd en een vertrouwenssysteem moet voorkomen dat vals gespeelde builds als geesten verschijnen. Qua balans krijgen Ashigaru, Relic Hunter, Snuffy, Jeiku en de Archer kleine versterkingen, net als gewone wapens en zelden gekozen items (+30).\n\nIn co-op bepaalt de lobbyhost de akt en de Diepte, en na elk gevecht ziet iedereen zijn eigen schade-overzicht. Het verslaan van Death beëindigt nu de run en plaatst je score. Stoppen en hervatten maakt schrijnen en kisten niet meer ongedaan en herhaalt ze niet meer, en een nieuw apparaat kan je Steam Cloud-opslag niet meer overschrijven.",
+    "etiketler": [
+     "#Dungeonbound",
+     "#Steam",
+     "#PC",
+     "#CoOp"
+    ]
+   },
+   "zh": {
+    "baslik": "Dungeonbound 1.0.14 上线：新角色Jerry与反作弊",
+    "ozet": "Steam官方公告称，此次更新新增角色Jerry和老虎机圣坛，并加强服务器端作弊检测与平衡调整。",
+    "metin": "Dungeonbound于2026年11月22日在Steam发布1.0.14版本更新。根据Steam官方新闻，本次更新新增英雄Jerry、新任务和老虎机圣坛，并加强了反作弊措施。\n\n击败25次Jerry即可解锁新角色Jerry。新的老虎机圣坛可放入一件武器并转动，出现三个相同图案即可获得祝福。战斗速度旁新增地图、设置和报告错误按钮；对于看似不可能的排行榜记录，可使用新的REPORT RIVAL按钮举报。\n\n在反作弊方面，被修改的存档和排行榜记录会被识别，并从排行榜和对手池中移除；服务器端检测也经过了更细致的调整，并引入信任系统，阻止作弊版本以幽灵形式出现。平衡方面，Ashigaru、Relic Hunter、Snuffy、Jeiku和Archer获得小幅增强，常见武器以及+30的少用物品也得到了增强。\n\n联机模式中，大厅房主可选择章节和深度，战斗后每位玩家都能看到自己的伤害明细。击败Death现在会结束本局并提交分数；退出再继续不再撤销或重复神龛与宝箱，新设备也不会覆盖Steam云存档。",
+    "etiketler": [
+     "#Dungeonbound",
+     "#Steam",
+     "#PC",
+     "#CoOp"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "dungeonbound-1-0-14-guncelleme-2026-11-22",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/5200620/view/694278269818635116",
+   "teyit_zamani": "2026-11-22T19:10:02+00:00",
+   "oyuncuya_fayda": "Oyuncular yeni karakter, hile koruması ve kayıt düzeltmelerini yamadan sonra doğrudan görebilir.",
+   "hype": 4,
+   "eklenme": "2026-11-22T22:14:32.170082+03:00"
+  }
+ },
+ {
+  "id": "everyones-tier-list-20-bin-satis-2026-11-22",
+  "oyun": "Everyone's Tier List!",
+  "tarih": "2026-11-22",
+  "tur": "haber",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam geliştirici haberi",
+    "url": "https://store.steampowered.com/news/app/4921660/view/671760271681782698"
+   },
+   {
+    "ad": "Steam mağaza sayfası",
+    "url": "https://store.steampowered.com/app/4921660/"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Everyone's Tier List! 20 bin satışı aştı",
+    "ozet": "Geliştirici, 12 Kasım'daki çıkıştan on gün sonra satışların 20 bini geçtiğini ve yüzde 15 çıkış indiriminin 26 Kasım'a kadar sürdüğünü açıkladı.",
+    "metin": "Everyone's Tier List! (Japonca adı 『みんなでティア表!』), 12 Kasım'da Steam'de çıktı. Arkadaşlarla bir araya gelip birlikte oynanmak üzere tasarlanan bu oyun, Steam'deki geliştirici duyurusuna göre kısa sürede geniş bir oyuncu kitlesine ulaştı.\n\nGeliştirici, çıkıştan on gün sonra oyunun satış sayısının 20 bini aştığını açıkladı. Duyuruda, hafta sonu ve hafta içi çok sayıda kişinin oyunu arkadaşlarıyla oynadığı belirtiliyor. Çıkış anısına uygulanan yüzde 15 indirim ise 26 Kasım Perşembe gününe kadar sürüyor. Oyunu henüz almamış olanlar ve arkadaşlarını davet etmek isteyenler için bu kısa bir fırsat.\n\nGeliştirici ayrıca Steam incelemelerini ve topluluk forumundaki tüm yazıları okuduğunu söyledi. Anlaşılması zor bulunan noktalar, istenen yeni temalar ve bildirilen hatalar için düzeltilebilecek konulardan başlayarak güncellemeler yayımlanacak. Oyuncular deneyimlerini Steam incelemesi olarak paylaşabilir.",
+    "etiketler": [
+     "#EveryonesTierList",
+     "#TierList",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "en": {
+    "baslik": "Everyone's Tier List! passes 20,000 sales",
+    "ozet": "The developer says the game sold more than 20,000 copies within ten days of its 12 November launch, and a 15% discount runs through 26 November.",
+    "metin": "Everyone's Tier List! (Japanese title: みんなでティア表!) launched on Steam on 12 November. Designed to be played together with friends, the game has drawn a large audience in its first days, according to the developer's Steam announcement.\n\nThe developer announced that sales passed 20,000 copies within the first ten days after release. The post notes that many people have been playing with friends on both weekdays and weekends. The launch-celebration 15% discount remains in effect until Thursday, 26 November, so players who have the game on their wishlist or want to invite friends still have a short window to buy it at the reduced price.\n\nThe developer also said the team has read every Steam review and community board post. Points that players find confusing, requested new themes and reported bugs will be addressed through updates, starting with the fixes that can be made first. Players who want to help shape the game can leave a review on Steam.",
+    "etiketler": [
+     "#EveryonesTierList",
+     "#TierList",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "es": {
+    "baslik": "Everyone's Tier List! supera las 20.000 copias",
+    "ozet": "La desarrolladora informa de más de 20.000 copias vendidas en diez días tras el lanzamiento del 12 de noviembre; el 15 % de descuento vence el 26.",
+    "metin": "Everyone's Tier List! (título japonés: みんなでティア表!) salió a la venta en Steam el 12 de noviembre. Pensado para jugar en grupo con amigos, el juego ya cuenta con una base de jugadores amplia, según el anuncio oficial del desarrollador en Steam.\n\nEl desarrollador anunció que las ventas superaron las 20.000 copias en los diez días posteriores al lanzamiento. Según el anuncio, muchos jugadores se reúnen con amigos tanto entre semana como durante el fin de semana. La celebración del lanzamiento incluye un 15 % de descuento que termina el jueves 26 de noviembre, así que quienes tengan el juego en su lista de deseados o quieran invitar a amigos tienen poco tiempo para aprovecharlo.\n\nEl equipo afirma que ha leído todas las reseñas de Steam y las publicaciones del foro de la comunidad. Los puntos confusos, los nuevos temas solicitados y los errores reportados se abordarán con actualizaciones, empezando por lo que pueda corregirse antes. Para quienes quieran influir en el rumbo del juego, dejar una reseña en Steam es la forma más directa de participar.",
+    "etiketler": [
+     "#EveryonesTierList",
+     "#TierList",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "fr": {
+    "baslik": "Everyone's Tier List! dépasse les 20 000 ventes",
+    "ozet": "Selon son éditeur, le jeu a dépassé 20 000 exemplaires vendus en dix jours après sa sortie du 12 novembre, avec une remise de 15 % jusqu'au 26.",
+    "metin": "Everyone's Tier List! (titre japonais : みんなでティア表!) est sorti sur Steam le 12 novembre. Conçu pour être joué entre amis, le jeu attire déjà un large public, d'après l'annonce officielle du studio sur Steam.\n\nLe développeur annonce que les ventes ont dépassé 20 000 exemplaires dans les dix jours suivant la sortie. Selon le message, de nombreux joueurs se retrouvent entre amis aussi bien en semaine que le week-end. La remise de lancement de 15 % reste valable jusqu'au jeudi 26 novembre : une courte fenêtre pour ceux qui ont le jeu dans leur liste de souhaits ou veulent inviter des amis.\n\nLe studio assure avoir lu chaque avis Steam et chaque message du forum communautaire. Les points jugés peu clairs, les nouveaux thèmes demandés et les bogues signalés seront traités par des mises à jour, en commençant par les corrections les plus rapides à réaliser. Les joueurs qui veulent faire évoluer le jeu peuvent laisser un avis sur Steam.",
+    "etiketler": [
+     "#EveryonesTierList",
+     "#TierList",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "de": {
+    "baslik": "Everyone's Tier List! knackt 20.000 verkaufte Exemplare",
+    "ozet": "Der Entwickler meldet über 20.000 Verkäufe in zehn Tagen nach dem Start am 12. November; der 15-Prozent-Rabatt endet am 26. November.",
+    "metin": "Everyone's Tier List! (japanischer Titel: みんなでティア表!) erschien am 12. November auf Steam. Das Spiel ist für gemeinsames Spielen mit Freunden gedacht, und laut der offiziellen Steam-Ankündigung des Entwicklers hat es bereits eine große Spielerschaft gefunden.\n\nDer Entwickler gab bekannt, dass die Verkaufszahlen innerhalb der ersten zehn Tage über 20.000 Exemplare hinausgingen. In der Mitteilung heißt es, dass viele Spielerinnen und Spieler sowohl unter der Woche als auch am Wochenende mit Freunden zusammen spielen. Der Launch-Rabatt von 15 Prozent gilt noch bis Donnerstag, den 26. November. Wer das Spiel auf der Wunschliste hat oder Freunde einladen möchte, sollte also nicht lange warten.\n\nDas Team erklärt, dass es alle Steam-Bewertungen und Beiträge im Community-Forum liest. Unklare Stellen, gewünschte neue Themen und gemeldete Fehler sollen mit Updates behoben werden, zuerst dort, wo es schnell geht. Wer das Spiel mitgestalten möchte, kann eine Bewertung auf Steam hinterlassen.",
+    "etiketler": [
+     "#EveryonesTierList",
+     "#TierList",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "nl": {
+    "baslik": "Everyone's Tier List! verkoopt meer dan 20.000 exemplaren",
+    "ozet": "De ontwikkelaar meldt meer dan 20.000 verkopen in tien dagen na de lancering op 12 november; de korting van 15 procent loopt tot 26 november.",
+    "metin": "Everyone's Tier List! (Japanse titel: みんなでティア表!) verscheen op 12 november op Steam. Het spel is bedoeld om samen met vrienden te spelen, en volgens de officiële aankondiging van de ontwikkelaar op Steam heeft het al een groot publiek bereikt.\n\nDe ontwikkelaar kondigde aan dat de verkoop binnen de eerste tien dagen na de release meer dan 20.000 exemplaren bereikte. Volgens de aankondiging spelen veel mensen het spel doordeweeks en in het weekend samen met vrienden. De lanceringskorting van 15 procent duurt nog tot donderdag 26 november, dus wie het spel op het verlanglijstje heeft of vrienden wil uitnodigen, heeft nog een korte periode om toe te slaan.\n\nHet team zegt alle Steam-recensies en berichten op het communityforum te lezen. Onduidelijke onderdelen, gevraagde nieuwe thema's en gemelde bugs worden met updates aangepakt, te beginnen met de oplossingen die het snelst te realiseren zijn. Spelers die het spel willen helpen verbeteren, kunnen een recensie op Steam achterlaten.",
+    "etiketler": [
+     "#EveryonesTierList",
+     "#TierList",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "zh": {
+    "baslik": "《Everyone's Tier List!》销量突破2万份",
+    "ozet": "开发者称，游戏发售十天内销量超过2万份，发售纪念15%折扣将持续到11月26日。",
+    "metin": "《Everyone's Tier List!》（日文名《みんなでティア表!》）于11月12日在Steam上发售。游戏专为与朋友一起游玩而设计，据开发者在Steam上的官方公告，游戏已吸引了大量玩家。\n\n开发者宣布，游戏发售后十天内销量已超过2万份。公告提到，无论工作日还是周末，都有很多玩家与朋友一起游玩。发售纪念15%折扣将持续到11月26日（周四），想加入愿望单或邀请朋友的玩家可以把握这段时间。\n\n开发者表示，团队已阅读了所有Steam评测和社区论坛的帖子。对于玩家感到难以理解的地方、希望新增的主题以及反馈的错误，团队将通过更新逐步处理，并优先处理能够快速修复的问题。想要参与游戏改进的玩家，可以在Steam上留下评测。",
+    "etiketler": [
+     "#EveryonesTierList",
+     "#TierList",
+     "#Steam",
+     "#PC"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "everyones-tier-list-20-bin-satis-2026-11-22",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/4921660/view/671760271681782698",
+   "teyit_zamani": "2026-11-22T19:10:02+00:00",
+   "oyuncuya_fayda": "Oyuncular yüzde 15 çıkış indiriminin 26 Kasım'a kadar sürdüğünü ve geliştiricinin güncelleme planını öğrenir.",
+   "hype": 4,
+   "eklenme": "2026-11-22T22:14:32.170082+03:00"
+  }
+ },
+ {
   "id": "just-volleyball-gelistirici-kayit-plan-2026-11-22",
   "oyun": "Just Volleyball",
   "tarih": "2026-11-22",
