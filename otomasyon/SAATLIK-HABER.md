@@ -122,13 +122,13 @@ Her dilde 3–6 benzersiz `etiketler` öğesi zorunludur (ör. `["#Minecraft", "
 - 5–6: orta boy güncelleme, küçük ya da orta oyunun çıkışı, sınırlı kampanya.
 - 1–4: küçük yama, geliştirici notu, dar kitleli haber.
 - Yayın alt sınırı `kaynaklar.json` → `sinirlar.en_az_hype` (şu an 3): denetçinin verdiği puan bunun altındaysa (ör. bakım duyurusu) haber onaylansa da yayımlanmaz.
-- Eşik `sosyal/ayarlar.json` → `video.hype_esigi` (şu an 5). Eşiğe ulaşan haberin video senaryosu aynı turda yazılmak zorundadır, yoksa `hazirla` paketi reddeder. Eşiğin altındaki haber için senaryo yazılmaz; o haber sitede ve Instagram'da yalnız görsel olarak paylaşılır. Puan şişirilmez: kararsız kalınan haber düşük puanı alır.
+- Eşik `sosyal/ayarlar.json` → `video.hype_esigi` (şu an 3; 2026-11-23, Cio: yayımlanan her habere video). Eşiğe ulaşan haberin video senaryosu aynı turda yazılmak zorundadır, yoksa `hazirla` paketi reddeder. Eşiğin altındaki haber için senaryo yazılmaz; o haber sitede ve Instagram'da yalnız görsel olarak paylaşılır. Puan şişirilmez: kararsız kalınan haber düşük puanı alır.
 
 ## Video senaryosu
 
 Hype `sosyal/ayarlar.json → video.hype_esigi` (varsayılan 7) eşiğine ulaşınca aynı turda `video/senaryo/<id>-{tr,en,es,fr}.json` yazılır. `hazirla` her dosyayı `video_uret.py dogrula` ile aynı doğrulayıcıdan geçirir. Her dil için yazara bir düzeltme hakkı verilir; yine geçersiz en/es/fr dosyası atılır ve gerekçe `otomasyon.senaryo_atlanan` içine Python tarafından yazılır. Haber geçerli kalan senaryolarla yayımlanabilir; Türkçe senaryo zorunludur. de/nl/zh senaryosu şimdilik istenmez; dosya gelirse doğrulama ve yayın izin listesi kabul eder. Video üretimi ayrı hatta ve dil başına kotayla yürür.
 
-Mevcut ayarda eşik 5, video üretim kotası dil başına 4'tür. Senaryosuz eski haberler için
+Mevcut ayarda eşik 3 (yayın alt sınırıyla aynı: yayımlanan her haber video adayıdır), video üretim kotası dil başına 4'tür. Senaryosuz eski haberler için
 `py tools/video_geri_doldur.py --kuru --dil tr --en-fazla 1` ile aday görülür; `--kuru` kaldırılınca
 yalnız mevcut yerel Ollama yardımcısıyla senaryo yazılıp aynı doğrulayıcıdan geçirilir. Haber verisi,
 mevcut senaryolar, render ve yayın değişmez. `video_uret.py bekleyenler --arsiv --gunluk` kalıcı eski

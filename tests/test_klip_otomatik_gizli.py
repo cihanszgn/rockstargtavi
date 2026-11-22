@@ -283,6 +283,22 @@ class OtomatikOnay(KlipYayinTemel):
         (secilen, _), _m = self.sec(en_cok=2)
         self.assertEqual([o["yayin_tarihi"] for o in secilen], ["2026-11-13", "2026-11-12"])
 
+    def test_tazelik_sinirindan_eski_klip_otomatik_onaylanmaz(self):
+        self.hazirla(3)
+        ayar_ = ky.ayar_oku()
+        ogeler = ky.tara(self.dizin, ayar_)
+        eski = next(o for o in ogeler if o["yayin_tarihi"] == "2026-11-13")
+        simdi = eski["mp4"].stat().st_mtime
+        os.utime(eski["mp4"], (simdi - 48 * 3600, simdi - 48 * 3600))
+        m = ks.yukle(self.manifest)
+        sosyal = {"klip": {"otomatik_gizli": True, "gizli_gunluk_en_fazla": 4}}
+        secilen, notlar = ky.otomatik_sec(ogeler, m, sosyal, {}, "2026-11-22", ayar_, None, simdi - 24 * 3600)
+        self.assertEqual(sorted(o["yayin_tarihi"] for o in secilen), ["2026-11-11", "2026-11-12"])
+        self.assertNotIn(eski["id"], m["ogeler"])
+        self.assertTrue(any("1 eski klip" in n for n in notlar))
+        self.assertEqual(sy.klip_ayari({})["otomatik_taze_saat"], 24)
+        self.assertEqual(sy.klip_ayari({"klip": {"otomatik_taze_saat": 0}})["otomatik_taze_saat"], 0)
+
     def test_gunluk_gizli_sinir_bugunku_yukleme_ve_bekleyenleri_sayar(self):
         self.hazirla(4)
         bugun = {"x|klip|youtube|short": {"id": "x", "sosyal_tur": "klip", "hesap": "klip", "platform": "youtube", "bicim": "short",

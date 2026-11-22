@@ -1630,10 +1630,12 @@ def otomatik_bekleyenler(manifest: dict) -> list[str]:
 
 
 def otomatik_sec(ogeler: list[dict], manifest: dict, sosyal: dict, kayit: dict, gun: str, ayar: dict,
-                 en_cok: int | None = None) -> tuple[list[dict], list[str]]:
+                 en_cok: int | None = None, en_eski: float | None = None) -> tuple[list[dict], list[str]]:
     """Otomatik onaylanacak klipleri seçer ve MANIFESTE işler (kuru çalışmada kopya verilir). En yeni yayın önce.
     Hak = gizli günlük sınır − bugün yüklenen gizli − onaylı ama henüz paylaşılmamış otomatik; `en_cok` ile de kısılır.
     Cio'nun kararı korunur: manifestte kaydı olan klip yalnız KENDİ otomatik kaydıysa (ve geri çekilmediyse) yeniden onaylanır.
+    `en_eski` (epoch sn) verilirse mp4'ü bundan önce kesilmiş klip otomatik onaylanmaz (2026-11-23, Cio: birikmiş eski klipler
+    paylaşılmaz, yalnız o günün analizinden çıkanlar gizli yüklenir); elle onay bundan etkilenmez.
     -> (onaylananlar, atlama notları)"""
     k = sy.klip_ayari(sosyal)
     kullanilan = sy.bugunku_tur_sayisi(kayit, "youtube", ks.KLIP_HESABI, gun, ("klip",), gizli=True)
@@ -1642,11 +1644,19 @@ def otomatik_sec(ogeler: list[dict], manifest: dict, sosyal: dict, kayit: dict, 
         hak = min(hak, en_cok)
     secilen: list[dict] = []
     notlar: list[str] = []
+    eski_sayisi = 0
     for o in ogeler:
         if hak <= 0:
             break
         if o["tur"] != "klip" or o["yok_notu"]:
             continue
+        if en_eski is not None:
+            try:
+                if o["mp4"].stat().st_mtime < en_eski:
+                    eski_sayisi += 1
+                    continue
+            except OSError:
+                continue
         e = (manifest.get("ogeler") or {}).get(o["id"])
         if e is not None and (e.get("otomatik") is not True or e.get("otomatik_red")):
             continue  # Cio'nun onayladığı/geri çektiği/düzenleyip düşürdüğü kayıt: otomatik akış dokunmaz
@@ -1665,6 +1675,8 @@ def otomatik_sec(ogeler: list[dict], manifest: dict, sosyal: dict, kayit: dict, 
             continue
         secilen.append(o)
         hak -= 1
+    if eski_sayisi:
+        notlar.append(f"{eski_sayisi} eski klip (tazelik sınırından önce kesilmiş) otomatik akışa alınmadı")
     return secilen, notlar
 
 
@@ -1822,7 +1834,9 @@ def komut_otomatik_gizli(args) -> int:
         kayit = gonderilenler_oku()
         gun = ks.simdi_iso()[:10]
         calisma = copy.deepcopy(manifest) if args.kuru else manifest
-        secilen, notlar = otomatik_sec(ogeler, calisma, sosyal, kayit, gun, ayar, args.en_cok)
+        taze_saat = sy.klip_ayari(sosyal)["otomatik_taze_saat"]
+        en_eski = time.time() - taze_saat * 3600 if taze_saat else None
+        secilen, notlar = otomatik_sec(ogeler, calisma, sosyal, kayit, gun, ayar, args.en_cok, en_eski)
         for n in notlar:
             print(f"ATLANDI {n}")
         etiket = "[kuru] " if args.kuru else ""

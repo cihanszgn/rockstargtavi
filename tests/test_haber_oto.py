@@ -21,7 +21,7 @@ def article(oid='oyun-yama-1'):
                           'etiketler': ['#Oyun', '#Yayinci', '#PC']} for d in h.DILLER},
             'otomasyon': {'konu': oid, 'resmi_url': 'https://blog.playstation.com/2026/11/15/game-patch/',
                           'teyit_zamani': NOW.isoformat(), 'oyuncuya_fayda': 'Kaydetme hatası giderildi; oyuncu yamasını kurabilir.',
-                          'hype': 3}}
+                          'hype': 2}}  # canlı video eşiğinin (şu an 3) altı: senaryosuz yayımlanabilen örnek
 
 class HypeTests(unittest.TestCase):
     def setUp(self):

@@ -749,6 +749,8 @@ def klip_ayari(ayar: dict) -> dict:
             # kapalıyken onay.otomatik işaretli klipler HİÇBİR yere gitmez. Gizliler kendi günlük sınırına tabidir.
             "otomatik_gizli": k.get("otomatik_gizli") is True,
             "gizli_gunluk_en_fazla": _tam_sayi(k.get("gizli_gunluk_en_fazla"), 4),
+            # Otomatik onay yalnız son N saatte kesilmiş klibe verilir (0: sınırsız). Birikmiş eski klipler otomatik akışa girmez.
+            "otomatik_taze_saat": _tam_sayi(k.get("otomatik_taze_saat"), 24),
             "gizli_calisma_basina_en_fazla": _tam_sayi(k.get("gizli_calisma_basina_en_fazla"), _tam_sayi(k.get("gizli_gunluk_en_fazla"), 4)),
             "en_az_ara_saat": 0 if isinstance(ara, bool) or not isinstance(ara, (int, float)) or ara <= 0 else float(ara),
             # Hangi platforma klip gitsin: YouTube açık, Instagram varsayılan kapalı (açılsa da ayrı IG_KLIP_* sırrı ister).
