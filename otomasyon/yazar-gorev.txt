@@ -25,3 +25,6 @@ video/senaryo/r6-siege-operation-vital-signal-duyuruldu-2026-11-15-tr.json
 video/senaryo/r6-siege-operation-vital-signal-duyuruldu-2026-11-15-en.json
 video/senaryo/r6-siege-operation-vital-signal-duyuruldu-2026-11-15-es.json
 video/senaryo/r6-siege-operation-vital-signal-duyuruldu-2026-11-15-fr.json
+
+OYUN ADI VE BAŞLIK (sert kural, hat reddeder): `oyun` alanı oyunun uluslararası resmî adıdır ve Latin harfleriyle yazılır (Japonca/Çince/Korece/Kiril mağaza adı değil; örn. "七つの大罪：Origin" değil "The Seven Deadly Sins: Origin"). tr/en/es/fr/de/nl başlıklarının her biri oyunun adını (ya da herkesin bildiği kısaltmasını: CS2, GTA VI) içerir ve tek başına okunduğunda hangi oyunun ne haberi olduğunu söyler; "Yeni güncelleme hataları düzeltiyor" gibi adsız başlık yazma. `ozet` soru cümlesi değil, haberin en somut bilgisini veren bir cümledir.
+YORUM ÇAĞRISI: Senaryonun `kapanis` sahnesinin anlatımı, izleyicinin yorumda yanıtlayabileceği tek kısa ve gerçek bir soruyla bitsin (tercih/görüş sorusu: "İlk gün alır mısın, indirimi mi beklersin?"). Uydurma bilgi, kasıtlı hata ve abartı yok. Videoda Instagram, TikTok gibi başka platformların ya da montaj programlarının adı ve logosu geçmez.

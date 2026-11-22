@@ -260,7 +260,55 @@ def cumle_kisalt(metin, sinir):
     return metin[:bitisler[-1]] if bitisler else ''
 
 
-IG_METIN_OZETI = 700  # Instagram açıklamasına haber metninden eklenecek en çok karakter
+# Yorum çağrısı: haber türüne göre gerçek, tartışmaya açık tek soru (etkileşim Shorts/Reels önerisini besler).
+# Uydurma bilgi ya da kasıtlı hata içermez; soru okurun tercihine dairdir.
+YORUM_SORUSU = {
+    "guncelleme": {"tr": "Bu güncelleme yeterli mi, yoksa hâlâ eksik mi? Yorumlara yaz.",
+                   "en": "Is this update enough, or is something still missing? Tell us in the comments.",
+                   "es": "¿Basta con esta actualización o todavía falta algo? Cuéntalo en los comentarios.",
+                   "fr": "Cette mise à jour suffit-elle, ou manque-t-il encore quelque chose ? Dis-le en commentaire.",
+                   "de": "Reicht dieses Update oder fehlt noch etwas? Schreib es in die Kommentare.",
+                   "nl": "Is deze update genoeg, of ontbreekt er nog iets? Laat het weten in de reacties.",
+                   "zh": "这次更新够了吗，还是仍有不足？欢迎在评论区留言。"},
+    "cikis": {"tr": "İlk gün alır mısın, yoksa indirimi mi beklersin? Yorumlara yaz.",
+              "en": "Day-one buy, or waiting for a sale? Tell us in the comments.",
+              "es": "¿Lo compras el primer día o esperas una oferta? Cuéntalo en los comentarios.",
+              "fr": "Achat dès le premier jour ou attente d'une promo ? Dis-le en commentaire.",
+              "de": "Kauf am ersten Tag oder lieber auf einen Sale warten? Schreib es in die Kommentare.",
+              "nl": "Koop je hem op dag één of wacht je op een aanbieding? Laat het weten in de reacties.",
+              "zh": "首发就买，还是等打折？欢迎在评论区留言。"},
+    "ucretsiz": {"tr": "Kütüphanene ekledin mi, yoksa pas mı geçiyorsun? Yorumlara yaz.",
+                 "en": "Claiming it, or skipping this one? Tell us in the comments.",
+                 "es": "¿Lo reclamas o lo dejas pasar? Cuéntalo en los comentarios.",
+                 "fr": "Tu le récupères ou tu passes ton tour ? Dis-le en commentaire.",
+                 "de": "Holst du es dir oder lässt du es aus? Schreib es in die Kommentare.",
+                 "nl": "Claim je hem of sla je deze over? Laat het weten in de reacties.",
+                 "zh": "你领了吗，还是这次跳过？欢迎在评论区留言。"},
+    "indirim": {"tr": "Bu fiyata alınır mı, yoksa daha da düşer mi? Yorumlara yaz.",
+                "en": "Worth it at this price, or will it drop further? Tell us in the comments.",
+                "es": "¿Merece la pena a este precio o bajará más? Cuéntalo en los comentarios.",
+                "fr": "Ça vaut le coup à ce prix, ou ça baissera encore ? Dis-le en commentaire.",
+                "de": "Lohnt es sich zu diesem Preis oder wird es noch günstiger? Schreib es in die Kommentare.",
+                "nl": "Is het deze prijs waard, of zakt hij nog verder? Laat het weten in de reacties.",
+                "zh": "这个价格值得入手吗，还是会再降？欢迎在评论区留言。"},
+    "haber": {"tr": "Sence bu oyuncular için iyi haber mi, kötü haber mi? Yorumlara yaz.",
+              "en": "Good news or bad news for players? Tell us in the comments.",
+              "es": "¿Buena o mala noticia para los jugadores? Cuéntalo en los comentarios.",
+              "fr": "Bonne ou mauvaise nouvelle pour les joueurs ? Dis-le en commentaire.",
+              "de": "Gute oder schlechte Nachricht für Spieler? Schreib es in die Kommentare.",
+              "nl": "Goed of slecht nieuws voor spelers? Laat het weten in de reacties.",
+              "zh": "这对玩家来说是好消息还是坏消息？欢迎在评论区留言。"},
+}
+
+
+def yorum_sorusu(dil, x) -> str:
+    """Yalnız haber gönderilerinde; tür tanınmıyorsa genel haber sorusu, dil yoksa boş."""
+    if x.get("sosyal_tur", "haber") != "haber":
+        return ""
+    return (YORUM_SORUSU.get(x.get("tur")) or YORUM_SORUSU["haber"]).get(dil, "")
+
+
+IG_METIN_OZETI = 700 # Instagram açıklamasına haber metninden eklenecek en çok karakter
 
 
 def ig_aciklama(dil, x, ayar=None) -> str:
@@ -305,7 +353,10 @@ def ig_aciklama(dil, x, ayar=None) -> str:
     metin = (t.get('metin') or '').strip()
     ek = cumle_kisalt(metin, IG_METIN_OZETI) if metin and metin != ozet else ''
     govde = '\n\n'.join(b for b in (ozet, ek) if b)
-    yer = max(0, 2200 - len(bas) - len(son) - 2)
+    soru = yorum_sorusu(dil, x)
+    if soru:
+        son = f"\n\n{soru}{son}"
+    yer =max(0, 2200 - len(bas) - len(son) - 2)
     if len(govde) > yer:
         govde = cumle_kisalt(govde, yer) or ozet[:yer]
     return emojisiz(f"{bas}\n\n{govde}{son}")
@@ -411,7 +462,9 @@ def yt_aciklama(dil, x, link) -> str:
     t = x["diller"][dil]
     kay = ", ".join(kaynak_adi(dil, s["ad"]) for s in x["kaynaklar"])
     etiket = " ".join(se.hashtagler(dil, x, YT_ACIKLAMA_ETIKET))
-    metin = f"{t['ozet']}\n\n{METIN[dil]['devam']} {link}\n{M[dil]['kaynak']}: {kay}\n\n{etiket} #Shorts".strip()
+    soru = yorum_sorusu(dil, x)
+    metin = (f"{t['ozet']}\n\n" + (f"{soru}\n\n" if soru else "")
+             + f"{METIN[dil]['devam']} {link}\n{M[dil]['kaynak']}: {kay}\n\n{etiket} #Shorts").strip()
     return emojisiz(re.sub(r"[<>]", "", metin))[:4900]
 
 
