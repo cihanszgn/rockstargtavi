@@ -4,35 +4,35 @@
 "2026-11-11"
 ],
 "cikis-takvimi.html": [
-"5c98abbb864b",
+"9a1ff9fc6b3f",
 "2026-11-22"
 ],
 "de/angebote.html": [
-"26b2dfe9f75c",
-"2026-11-21"
+"228fc1b8d6ce",
+"2026-11-22"
 ],
 "de/datenschutz.html": [
 "939bff9dd5f8",
 "2026-11-16"
 ],
 "de/erscheinungskalender.html": [
-"fe16029be7ea",
+"9d280c8272c8",
 "2026-11-22"
 ],
 "de/geruechte.html": [
-"1dc6e7cd1f62",
-"2026-11-17"
+"10fecf40eeec",
+"2026-11-22"
 ],
 "de/gta-6.html": [
 "95074242e9dc",
 "2026-11-19"
 ],
 "de/index.html": [
-"1f1cbf546184",
+"32172b706fde",
 "2026-11-22"
 ],
 "de/kostenlose-spiele.html": [
-"8a59145ec824",
+"7807bc85acd0",
 "2026-11-22"
 ],
 "de/nachrichten.html": [
@@ -44,8 +44,8 @@
 "2026-11-16"
 ],
 "de/ratgeber.html": [
-"079b3251f6e8",
-"2026-11-17"
+"4eef7f1b3462",
+"2026-11-22"
 ],
 "de/ratgeber/call-of-duty.html": [
 "4111d6db31e7",
@@ -288,11 +288,11 @@
 "2026-11-15"
 ],
 "en/deals.html": [
-"af8e7b65354a",
-"2026-11-21"
+"6b2520d53635",
+"2026-11-22"
 ],
 "en/free-games.html": [
-"5d95f6f00048",
+"5a72821fb5b7",
 "2026-11-22"
 ],
 "en/game-news.html": [
@@ -524,11 +524,11 @@
 "2026-11-16"
 ],
 "en/guides.html": [
-"fc68a4372812",
-"2026-11-17"
+"a516aca9d92f",
+"2026-11-22"
 ],
 "en/index.html": [
-"cdfe379c49b1",
+"9523b5418793",
 "2026-11-22"
 ],
 "en/languages.html": [
@@ -544,12 +544,12 @@
 "2026-11-15"
 ],
 "en/release-calendar.html": [
-"7c39945cc22d",
+"ac3475e2175f",
 "2026-11-22"
 ],
 "en/rumors.html": [
-"5c266b05ddb4",
-"2026-11-17"
+"ebe69f8668a0",
+"2026-11-22"
 ],
 "en/sources.html": [
 "2a933ed3628c",
@@ -560,7 +560,7 @@
 "2026-11-15"
 ],
 "es/calendario-lanzamientos.html": [
-"a9600914217c",
+"8c02103d60c6",
 "2026-11-22"
 ],
 "es/gta-6.html": [
@@ -636,15 +636,15 @@
 "2026-11-16"
 ],
 "es/guias.html": [
-"e01b0fe5bea2",
-"2026-11-17"
+"bc4b0822110c",
+"2026-11-22"
 ],
 "es/guide.html": [
 "6ab879a3d91f",
 "2026-11-09"
 ],
 "es/index.html": [
-"6fdb63777052",
+"cf0c5b7bb4ff",
 "2026-11-22"
 ],
 "es/juego/apex-legends.html": [
@@ -796,7 +796,7 @@
 "2026-11-20"
 ],
 "es/juegos-gratis.html": [
-"a33e2ce23b3b",
+"94f81728ff8e",
 "2026-11-22"
 ],
 "es/languages.html": [
@@ -812,16 +812,16 @@
 "2026-11-22"
 ],
 "es/ofertas.html": [
-"b157baa0925c",
-"2026-11-21"
+"ff29a16b4e4e",
+"2026-11-22"
 ],
 "es/privacy.html": [
 "4f08edb03d1e",
 "2026-11-15"
 ],
 "es/rumores.html": [
-"316c38a1a424",
-"2026-11-17"
+"7c966e8b467f",
+"2026-11-22"
 ],
 "es/sources.html": [
 "e69b28e87189",
@@ -836,7 +836,7 @@
 "2026-11-22"
 ],
 "fr/calendrier-sorties.html": [
-"3e2003c2488c",
+"abcfbf465387",
 "2026-11-22"
 ],
 "fr/gta-6.html": [
@@ -916,11 +916,11 @@
 "2026-11-16"
 ],
 "fr/guides.html": [
-"db67d95652a0",
-"2026-11-17"
+"02e8cc459f47",
+"2026-11-22"
 ],
 "fr/index.html": [
-"3662552ab026",
+"de1f12a2097d",
 "2026-11-22"
 ],
 "fr/jeu/apex-legends.html": [
@@ -1072,7 +1072,7 @@
 "2026-11-20"
 ],
 "fr/jeux-gratuits.html": [
-"fcf1c0e7e753",
+"3f7bc04dba92",
 "2026-11-22"
 ],
 "fr/languages.html": [
@@ -1088,12 +1088,12 @@
 "2026-11-15"
 ],
 "fr/promos.html": [
-"f879b8361767",
-"2026-11-21"
+"1f1f01e0aed3",
+"2026-11-22"
 ],
 "fr/rumeurs.html": [
-"d39032d4c974",
-"2026-11-17"
+"0e87dfe88620",
+"2026-11-22"
 ],
 "fr/sources.html": [
 "b3a964c7e824",
@@ -1136,20 +1136,20 @@
 "2026-11-15"
 ],
 "index.html": [
-"7de251d2f980",
+"eb1b630156eb",
 "2026-11-22"
 ],
 "indirimler.html": [
-"373c76a4345c",
-"2026-11-21"
+"af6b41ed8f87",
+"2026-11-22"
 ],
 "kaynaklar.html": [
 "cc0ce3566f46",
 "2026-11-09"
 ],
 "nl/aanbiedingen.html": [
-"014b6d432227",
-"2026-11-21"
+"24ec5f4d499b",
+"2026-11-22"
 ],
 "nl/bronnen.html": [
 "d17f8f52cd82",
@@ -1308,8 +1308,8 @@
 "2026-11-20"
 ],
 "nl/geruchten.html": [
-"612b8574d84b",
-"2026-11-17"
+"36122d83e677",
+"2026-11-22"
 ],
 "nl/gids/call-of-duty.html": [
 "b1de556503e7",
@@ -1380,11 +1380,11 @@
 "2026-11-16"
 ],
 "nl/gidsen.html": [
-"b5bb563ec843",
-"2026-11-17"
+"2f2ba8165ed3",
+"2026-11-22"
 ],
 "nl/gratis-games.html": [
-"81a2d17a7236",
+"1e3a4a5f1080",
 "2026-11-22"
 ],
 "nl/gta-6.html": [
@@ -1392,7 +1392,7 @@
 "2026-11-19"
 ],
 "nl/index.html": [
-"4ced3b4b65f5",
+"41826dff4ec6",
 "2026-11-22"
 ],
 "nl/nieuws.html": [
@@ -1408,7 +1408,7 @@
 "2026-11-16"
 ],
 "nl/releasekalender.html": [
-"c3e5635e1a60",
+"f12c82000919",
 "2026-11-22"
 ],
 "nl/talen.html": [
@@ -1648,27 +1648,27 @@
 "2026-11-16"
 ],
 "rehberler.html": [
-"eefd71776dae",
-"2026-11-17"
+"413ae66573b1",
+"2026-11-22"
 ],
 "soylentiler.html": [
-"12d90dcacf10",
-"2026-11-17"
+"2b26a4154cdc",
+"2026-11-22"
 ],
 "turkce.html": [
 "cf86e908cecd",
 "2026-11-09"
 ],
 "ucretsiz-oyunlar.html": [
-"4cc0c18989b9",
+"b9302dc3619c",
 "2026-11-22"
 ],
 "zh/chuanyan.html": [
-"8fa4e34c5665",
-"2026-11-17"
+"fb1cc03824b7",
+"2026-11-22"
 ],
 "zh/fashou-rili.html": [
-"358091d1b5cb",
+"b8c9dbe6736c",
 "2026-11-22"
 ],
 "zh/fashou-zhinan.html": [
@@ -1676,8 +1676,8 @@
 "2026-11-16"
 ],
 "zh/gonglue.html": [
-"d9610d2afa64",
-"2026-11-17"
+"5630c749cf24",
+"2026-11-22"
 ],
 "zh/gonglue/call-of-duty.html": [
 "5ca1f09a6996",
@@ -1756,7 +1756,7 @@
 "2026-11-16"
 ],
 "zh/index.html": [
-"c7140014ef89",
+"af0473556dec",
 "2026-11-22"
 ],
 "zh/laiyuan.html": [
@@ -1764,7 +1764,7 @@
 "2026-11-16"
 ],
 "zh/mianfei-youxi.html": [
-"f140ac65980f",
+"43dda73d8b2f",
 "2026-11-22"
 ],
 "zh/xinwen.html": [
@@ -1776,8 +1776,8 @@
 "2026-11-16"
 ],
 "zh/youhui.html": [
-"176d9c3329cc",
-"2026-11-21"
+"d5080ab4aa83",
+"2026-11-22"
 ],
 "zh/youxi-xinwen.html": [
 "37e538d6842a",
