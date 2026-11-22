@@ -924,3 +924,11 @@ a.cip-etiket{color:var(--baglanti)}
 a.cip-etiket:hover{border-color:var(--baglanti);text-decoration:underline}
 .konu-seridi{margin-bottom:var(--space-5)}
 .konu-seridi h2{font-size:1rem;margin:0 0 8px}
+
+/* ---------- Kartın tamamı tıklanır: başlık bağlantısı kartı kaplar; karttaki diğer bağlantı ve düğmeler üstte kalır */
+.hk,.akis-satir,.manset-ana,.mk,.cikis,.firsat,.soylenti-kisa{position:relative;cursor:pointer}
+:is(.hk,.akis-satir,.manset-ana,.mk,.cikis,.firsat,.soylenti-kisa) :is(.hk-baslik,.akis-baslik,.manset-baslik,.mk-baslik,.cikis-adi,.satir-baslik) a::after,.firsat .f-ad::after{content:"";position:absolute;inset:0;z-index:1}
+:is(.hk,.akis-satir,.manset-ana,.mk,.cikis,.firsat,.soylenti-kisa) :is(a,button,label,summary):not(.f-ad):not(:is(.hk-baslik,.akis-baslik,.manset-baslik,.mk-baslik,.cikis-adi,.satir-baslik) a){z-index:2}
+:is(.hk,.akis-satir,.manset-ana,.mk,.cikis,.firsat,.soylenti-kisa) :is(a,button,label,summary):not(.f-ad):not(:is(.hk-baslik,.akis-baslik,.manset-baslik,.mk-baslik,.cikis-adi,.satir-baslik) a):not(.kg-vid-ui *){position:relative}
+:is(.hk,.akis-satir,.manset-ana,.mk,.cikis,.soylenti-kisa) .kg-videolu{z-index:2;pointer-events:none}
+:is(.hk,.akis-satir,.manset-ana,.mk,.cikis,.soylenti-kisa) .kg-videolu .kg-vid-ui{pointer-events:auto}
