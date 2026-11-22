@@ -610,6 +610,21 @@
   "url": "https://www.instagram.com/p/Df2WGoTGGzs/",
   "zaman": "2026-11-17T16:20:00+00:00"
  },
+ "hype-20261118-bb86dc1f-klip-01|klip|youtube|short": {
+  "bicim": "short",
+  "boyut": 14853210,
+  "dil": "klip",
+  "durum": "tamam",
+  "hesap": "klip",
+  "id": "hype-20261118-bb86dc1f-klip-01",
+  "kimlik": "NulBTJrD-_U",
+  "niyet_zamani": "2026-11-22T10:43:53+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status&upload_id=AFy3sg1H6Yb-B85fIUcVs7WPmJX7f3uyzTtI-A5pjW5zIavsZBX5OOR4d_326HppXV0Pw0OIRi1AGVplvX1o4AFyUrGZhgjxsWtcpyEKac79VXs",
+  "platform": "youtube",
+  "sosyal_tur": "klip",
+  "url": "https://www.youtube.com/shorts/NulBTJrD-_U",
+  "zaman": "2026-11-22T10:43:53+00:00"
+ },
  "hype-20261118-bb86dc1f-klip-03|klip|youtube|short": {
   "bicim": "short",
   "boyut": 31883696,
@@ -989,6 +1004,20 @@
   "sosyal_tur": "haber",
   "url": "https://www.instagram.com/p/DgCS5uOj9-e/",
   "zaman": "2026-11-22T07:42:55+00:00"
+ },
+ "valve-steam-machine-2tb-512gb-stok-guncellemesi-2026-11-19|tr|instagram|reel": {
+  "bicim": "reel",
+  "dil": "tr",
+  "durum": "tamam",
+  "icerik_dili": "tr",
+  "id": "steam-machine-2tb-bekleme-listesi-kapandi-2026-11-19",
+  "kapsayici": "17870783943694894",
+  "kimlik": "18147855793720470",
+  "niyet_zamani": "2026-11-22T10:43:53+00:00",
+  "platform": "instagram",
+  "sosyal_tur": "haber",
+  "url": "https://www.instagram.com/reel/DgCnn8sBsi2/",
+  "zaman": "2026-11-22T10:43:53+00:00"
  },
  "valve-steam-machine-2tb-512gb-stok-guncellemesi-2026-11-19|tr|youtube|short": {
   "bicim": "short",
