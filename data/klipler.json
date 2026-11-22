@@ -141,6 +141,76 @@
    },
    "youtube": "https://www.youtube.com/shorts/UptcCCdr2jI"
   },
+  "eraycan-20261121-20e63ab8-klip-01": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/eray",
+   "metin": {
+    "aciklama": "Baran ehliyeti geçti, Sercan kalınca ekip sevindi.\nKaynak: https://kick.com/eray\nKomixsi",
+    "baslik": "Eray arkadaşının ehliyeti kalınca seviniyor",
+    "etiketler": [
+     "#Eray",
+     "#Kick",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "831d515fc84d0c03d1c57e5f51c445332bc31957ebd62630129df016b13366c4",
+    "otomatik": true,
+    "ozet": "15000516a925d37155aefab1c0c54cae5d04a370a5b27571ebadb71c560802e4",
+    "zaman": "2026-11-22T23:28:50Z"
+   },
+   "otomatik": true,
+   "oyun": "",
+   "paket": "cikti/eraycan-20261121-20e63ab8/klip-01.json",
+   "sure": 38.5,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-21",
+   "yayinci": "Eraycan",
+   "yayinda": {
+    "kapak": "klip-eraycan-20261121-20e63ab8-klip-01-kapak.jpg",
+    "mp4_1080": "klip-eraycan-20261121-20e63ab8-klip-01-1080.mp4",
+    "mp4_540": "klip-eraycan-20261121-20e63ab8-klip-01-540.mp4",
+    "mp4_720": "klip-eraycan-20261121-20e63ab8-klip-01-720.mp4",
+    "sure": 38.5,
+    "yuklenen_ozet": "15000516a925d37155aefab1c0c54cae5d04a370a5b27571ebadb71c560802e4",
+    "zaman": "2026-11-22T23:29:13Z"
+   }
+  },
+  "eraycan-20261121-20e63ab8-klip-02": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/eray",
+   "metin": {
+    "aciklama": "Köpek Eric'e Türkçe ve İngilizce defalarca otur deniyor ama dinlemiyor.\nKaynak: https://kick.com/eray\nKomixsi",
+    "baslik": "Eray köpeğe İngilizce otur diyor",
+    "etiketler": [
+     "#Eray",
+     "#Kick",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "980ada84511eb54626dde12dd349fe3796a1bace36f922da0db4930ab12a4f17",
+    "otomatik": true,
+    "ozet": "0d519c40000cb7928fc5acc486d4d4aa261fa539132888cc3101316e5ecdb0a3",
+    "zaman": "2026-11-22T23:28:50Z"
+   },
+   "otomatik": true,
+   "oyun": "",
+   "paket": "cikti/eraycan-20261121-20e63ab8/klip-02.json",
+   "sure": 34.6,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-21",
+   "yayinci": "Eraycan",
+   "yayinda": {
+    "kapak": "klip-eraycan-20261121-20e63ab8-klip-02-kapak.jpg",
+    "mp4_1080": "klip-eraycan-20261121-20e63ab8-klip-02-1080.mp4",
+    "mp4_540": "klip-eraycan-20261121-20e63ab8-klip-02-540.mp4",
+    "mp4_720": "klip-eraycan-20261121-20e63ab8-klip-02-720.mp4",
+    "sure": 34.6,
+    "yuklenen_ozet": "0d519c40000cb7928fc5acc486d4d4aa261fa539132888cc3101316e5ecdb0a3",
+    "zaman": "2026-11-22T23:29:33Z"
+   }
+  },
   "hype-20261118-bb86dc1f-klip-01": {
    "hesap": "klip",
    "kanal_url": "https://kick.com/hype",
