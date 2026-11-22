@@ -6,7 +6,9 @@ name: Sosyal paylasim
 on:
   push:
     branches: [main]
-    paths: [data/icerik.json]
+    # sosyal/tetik.txt: sunucudaki saatlik zamanlayıcı (sosyal-tetik.timer) bu dosyayı günceller; GitHub'ın kendi
+    # zamanlaması (schedule) saatlerce gecikip tur atladığı için güvenilir saat başı tetik budur.
+    paths: [data/icerik.json, sosyal/tetik.txt]
   workflow_run:
     # GITHUB_TOKEN ile yapılan push başka iş akışını tetiklemez; video hazır olunca bu iş akışı böyle uyanır
     workflows: ["Haber videosu"]
