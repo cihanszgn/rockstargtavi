@@ -203,6 +203,13 @@ class BildirimMetniVeGonderimi(unittest.TestCase):
         self.assertIn("https://studio.youtube.com/video/AAAAAAAAAAA/edit", satirlar)
         self.assertIn("https://studio.youtube.com/video/BBBBBBBBBBB/edit", satirlar)
 
+    def test_metin_markdown_ozel_karakterleri_kacirilir(self):
+        """Kimlikte/başlıkta alt çizgi varken Telegram (eski Markdown) mesajı reddetmesin."""
+        t = ks.bildirim_metni([{"id": "a", "baslik": "Eray_AWP *şov* [canlı]", "kimlik": "Alot59_uoT8"}])
+        self.assertIn("https://studio.youtube.com/video/Alot59\\_uoT8/edit", t)
+        self.assertIn("• Eray\\_AWP \\*şov\\* \\[canlı]", t)
+        self.assertNotRegex(t, r"(?<!\\)[_*`\[]")
+
     def test_sir_varsa_tek_mesaj_gider_adres_loga_yazilmaz(self):
         yollar, cikti = [], []
         adres = "http://10.9.8.7/webhook/gizli-yol"

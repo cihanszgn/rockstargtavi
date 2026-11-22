@@ -355,7 +355,13 @@ def bildirim_metni(gizli: list[dict]) -> str:
         satirlar.append(f"• {g.get('baslik') or g.get('id') or '(başlıksız)'}")
         if g.get("kimlik"):
             satirlar.append(studio_adresi(g["kimlik"]))
-    return "\n".join(satirlar)
+    return _telegram_kacis("\n".join(satirlar))
+
+
+def _telegram_kacis(metin: str) -> str:
+    """n8n Telegram düğümü metni eski Markdown olarak yollar: video kimliğindeki/başlıktaki `_ * ` [` kapanmamış biçim sayılır,
+    Telegram 400 döner ve mesaj HİÇ gitmez (2026-11-22, kimlik `Alot59_uoT8`). Ters bölüyle kaçırılır; adres yine tıklanır."""
+    return re.sub(r"([_*`\[])", r"\\\1", metin)
 
 
 def adaylar(manifest: dict, ayar: dict | None = None) -> list[dict]:
