@@ -323,6 +323,38 @@
   "url": "https://www.youtube.com/shorts/rAG5wryiHnk",
   "zaman": "2026-11-20T01:49:29+00:00"
  },
+ "eraycan-20261120-6bbb2ae2-klip-01|klip|youtube|short": {
+  "bicim": "short",
+  "boyut": 9065671,
+  "dil": "klip",
+  "durum": "tamam",
+  "gizli": true,
+  "hesap": "klip",
+  "id": "eraycan-20261120-6bbb2ae2-klip-01",
+  "kimlik": "Alot59_uoT8",
+  "niyet_zamani": "2026-11-22T02:48:03+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status&upload_id=AFy3sg12yLwpBH_-dYDCyl8o4sWdE_yiVUR07reHSgspdiDfjcgtVYX83LQTZOSOmPNZJXYoxZOcZpZsYUfQpxRWbUC3DLNnqMFs347luQSN7g",
+  "platform": "youtube",
+  "sosyal_tur": "klip",
+  "url": "https://www.youtube.com/shorts/Alot59_uoT8",
+  "zaman": "2026-11-22T02:48:03+00:00"
+ },
+ "eraycan-20261120-6bbb2ae2-klip-02|klip|youtube|short": {
+  "bicim": "short",
+  "boyut": 6229772,
+  "dil": "klip",
+  "durum": "tamam",
+  "gizli": true,
+  "hesap": "klip",
+  "id": "eraycan-20261120-6bbb2ae2-klip-02",
+  "kimlik": "UptcCCdr2jI",
+  "niyet_zamani": "2026-11-22T02:48:03+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status&upload_id=AFy3sg240bLsKPdpLqDA06pY_jFGXeeu21bzONXuKF8HpPDp7JSVC025snY4A970IXyYwT4bX9dghyOsK6_4HAoVU749Jw2gMp9R7vs7DcP1TFo",
+  "platform": "youtube",
+  "sosyal_tur": "klip",
+  "url": "https://www.youtube.com/shorts/UptcCCdr2jI",
+  "zaman": "2026-11-22T02:48:03+00:00"
+ },
  "escape-from-tarkov-1-3-5-0-teknik-guncelleme|tr|instagram|gorsel": {
   "bicim": "gorsel",
   "dil": "tr",
@@ -1071,6 +1103,20 @@
   "sosyal_tur": "haber",
   "url": "https://www.instagram.com/p/Df2cBQqF_2C/",
   "zaman": "2026-11-17T17:11:43+00:00"
+ },
+ "xbox-haftalik-yeni-oyunlar-kasim-23-27|tr|instagram|gorsel": {
+  "bicim": "gorsel",
+  "dil": "tr",
+  "durum": "tamam",
+  "icerik_dili": "tr",
+  "id": "xbox-haftalik-yeni-oyunlar-2026-11-23-27",
+  "kapsayici": "17870689440694894",
+  "kimlik": "17916940389555530",
+  "niyet_zamani": "2026-11-22T02:48:03+00:00",
+  "platform": "instagram",
+  "sosyal_tur": "haber",
+  "url": "https://www.instagram.com/p/DgBxKDSDZm6/",
+  "zaman": "2026-11-22T02:48:03+00:00"
  },
  "zelda-ocarina-of-time-dijital-kart-paketi-2026-11-18|tr|instagram|gorsel": {
   "bicim": "gorsel",
