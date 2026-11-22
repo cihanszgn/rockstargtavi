@@ -934,6 +934,21 @@
   "url": "https://www.youtube.com/shorts/bC82La_lHgQ",
   "zaman": "2026-11-21T13:18:07+00:00"
  },
+ "valve-steam-machine-2tb-512gb-stok-guncellemesi-2026-11-19|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 3211390,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "steam-machine-2tb-bekleme-listesi-kapandi-2026-11-19",
+  "kapak_not": "küçük resim yüklenmedi: POST https://www.googleapis.com/upload/youtube/v3/thumbnails/set → HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"The user has uploaded too many thumbnails recently. Please try the request again later.\",\n    \"errors\": [\n      {\n        \"message\": \"The user has uploaded too many thumbnails recently. Please tr",
+  "kimlik": "5xs-FBekPJQ",
+  "niyet_zamani": "2026-11-22T04:43:07+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg2_M1KguvVY8MXYWa_HwBzFYni3Zd3mPmSUeRYBypoAMqQJS-_W6YwFhNF8GlLGjUbZLSS0YfvU_nGQsOeiR1tIe0LxeGlAjIE30imd5co",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/5xs-FBekPJQ",
+  "zaman": "2026-11-22T04:43:07+00:00"
+ },
  "war-thunder-wtscreen251-ekran-goruntusu-yarismasi|tr|instagram|gorsel": {
   "bicim": "gorsel",
   "dil": "tr",
@@ -1188,6 +1203,21 @@
   "sosyal_tur": "haber",
   "url": "https://www.youtube.com/shorts/oK_H47M1Fec",
   "zaman": "2026-11-17T11:25:59+00:00"
+ },
+ "zenless-zone-zero-3-4-the-finality-of-the-day|fr|instagram|reel": {
+  "bicim": "reel",
+  "dil": "fr",
+  "durum": "tamam",
+  "hesap": "tr",
+  "icerik_dili": "fr",
+  "id": "zenless-zone-zero-3-4-the-finality-of-the-day-2026-11-20",
+  "kapsayici": "17870708961694894",
+  "kimlik": "17915380857489994",
+  "niyet_zamani": "2026-11-22T04:43:07+00:00",
+  "platform": "instagram",
+  "sosyal_tur": "haber",
+  "url": "https://www.instagram.com/reel/DgB-VjfI6s_/",
+  "zaman": "2026-11-22T04:43:07+00:00"
  },
  "zenless-zone-zero-3-4-the-finality-of-the-day|tr|instagram|gorsel": {
   "bicim": "gorsel",
