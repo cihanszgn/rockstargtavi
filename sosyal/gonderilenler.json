@@ -439,6 +439,38 @@
   "url": "https://www.youtube.com/shorts/UptcCCdr2jI",
   "zaman": "2026-11-22T02:48:03+00:00"
  },
+ "eraycan-20261121-20e63ab8-klip-01|klip|youtube|short": {
+  "bicim": "short",
+  "boyut": 13418625,
+  "dil": "klip",
+  "durum": "tamam",
+  "gizli": true,
+  "hesap": "klip",
+  "id": "eraycan-20261121-20e63ab8-klip-01",
+  "kimlik": "zbzi6JZB3UQ",
+  "niyet_zamani": "2026-11-22T23:32:55+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status&upload_id=AFy3sg38PrKLn13xs1GWH0RsJ1h6inYEw4TxgFkouR4vg_La-zR0EJO0YVX6gQIIVuxOw-Iof5o5uOhpgI8OTiYNbxJWRo3GePw8egRJtk9Sdg",
+  "platform": "youtube",
+  "sosyal_tur": "klip",
+  "url": "https://www.youtube.com/shorts/zbzi6JZB3UQ",
+  "zaman": "2026-11-22T23:32:55+00:00"
+ },
+ "eraycan-20261121-20e63ab8-klip-02|klip|youtube|short": {
+  "bicim": "short",
+  "boyut": 10245044,
+  "dil": "klip",
+  "durum": "tamam",
+  "gizli": true,
+  "hesap": "klip",
+  "id": "eraycan-20261121-20e63ab8-klip-02",
+  "kimlik": "wPI5e9UaOWU",
+  "niyet_zamani": "2026-11-22T23:32:55+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status&upload_id=AFy3sg29ybSWXAuoG-nkPFK7xJh6C0drAz9-3Uge6HhZZTbQh0JBQqp4q5HVY56XYpgTqzBKZMAyjDklkDX-8BRX9f-AcK3iref4btJe7G3u2CQ",
+  "platform": "youtube",
+  "sosyal_tur": "klip",
+  "url": "https://www.youtube.com/shorts/wPI5e9UaOWU",
+  "zaman": "2026-11-22T23:32:55+00:00"
+ },
  "escape-from-tarkov-1-3-5-0-teknik-guncelleme|tr|instagram|gorsel": {
   "bicim": "gorsel",
   "dil": "tr",
