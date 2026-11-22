@@ -415,7 +415,8 @@ a.cip-tema:hover{border-color:var(--gc);background:color-mix(in srgb,var(--gc) 2
   .serit-duzen>.serit{position:static;max-height:none;overflow:visible;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px 24px;padding:18px 20px;border:1px solid var(--cizgi);border-radius:var(--r-panel);background:var(--yuzey)}
   .serit>.suzgec{flex-direction:row;flex-wrap:wrap;align-items:start;gap:16px 24px}
   .serit .sz-ara{flex:1 1 220px;max-width:300px}
-  .serit>.gorunum{align-self:end}
+  .serit>.suzgec{grid-column:1;grid-row:1}
+  .serit>.gorunum{grid-column:2;grid-row:1;align-self:end}
   .serit>.sonuc{grid-column:1/-1;margin:0}
 }
 
@@ -919,3 +920,7 @@ dialog::backdrop{background:rgba(4,8,16,.66)}
   body{background:#fff;color:#000}
   .bekle{opacity:1!important;transform:none!important}
 }
+a.cip-etiket{color:var(--baglanti)}
+a.cip-etiket:hover{border-color:var(--baglanti);text-decoration:underline}
+.konu-seridi{margin-bottom:var(--space-5)}
+.konu-seridi h2{font-size:1rem;margin:0 0 8px}

@@ -1373,7 +1373,7 @@ def yayin_dosyasi_izinli(n, scenarios=()):
         return False
     klasorler = {k['klasor'] for k in KAYIT.values() if k['klasor']}
     klasorler.update(k[a].split('/')[0] for k in KAYIT.values()
-                     for a in ('haber_klasor', 'oyun_klasor', 'rehber_klasor'))
+                     for a in ('haber_klasor', 'oyun_klasor', 'rehber_klasor', 'etiket_klasor'))
     return (n in scenarios or n in ('data/icerik.json', 'data/gorseller.json', 'data/sayfalar.json', 'sitemap.xml', 'og.png', 'oyun-tema.css')
             or (p.suffix in ('.html', '.xml') and (len(p.parts) == 1 or p.parts[0] in klasorler))
             or n in {f'ara-{d}.json' for d in KAYIT}

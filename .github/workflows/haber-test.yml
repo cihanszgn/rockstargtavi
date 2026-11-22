@@ -3,9 +3,9 @@ name: Haber otomasyonu testleri
 on:
   push:
     branches: [main]
-    paths: ['tools/haber_oto.py', 'tests/test_haber_oto.py', 'otomasyon/kaynaklar.json', '.github/workflows/haber-test.yml']
+    paths: ['tools/haber_oto.py', 'tools/site_*.py', 'tests/test_haber_oto.py', 'tests/test_site_seo.py', 'otomasyon/kaynaklar.json', '.github/workflows/haber-test.yml']
   pull_request:
-    paths: ['tools/haber_oto.py', 'tests/test_haber_oto.py', 'otomasyon/kaynaklar.json', '.github/workflows/haber-test.yml']
+    paths: ['tools/haber_oto.py', 'tools/site_*.py', 'tests/test_haber_oto.py', 'tests/test_site_seo.py', 'otomasyon/kaynaklar.json', '.github/workflows/haber-test.yml']
   workflow_dispatch:
 
 permissions:
@@ -21,5 +21,6 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m unittest discover -s tests -p test_haber_oto.py
+      - run: python -m unittest discover -s tests -p test_site_seo.py
       - run: python tools/site_derle.py
       - run: python tools/haber_oto.py kontrol

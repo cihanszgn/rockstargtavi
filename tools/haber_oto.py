@@ -612,18 +612,31 @@ def hazirla(existing, batch, now=None, senaryo_klasoru=None):
                     reason = dropped.get(lang) if isinstance(dropped, dict) else None
                     if lang == 'tr' or not isinstance(reason, str) or not reason.strip():
                         raise ValueError(f'{lang}: video senaryosu veya tek düzeltme sonrası düşürme gerekçesi gerekli')
+        ortak_etiketler = None
         for lang in DILLER:
             content = x.get('diller', {}).get(lang) or {}
             if not all(isinstance(content.get(k), str) and content[k].strip() for k in ('baslik', 'ozet', 'metin')):
                 raise ValueError(f'{lang}: başlık, özet veya metin eksik')
             if not KAYIT[lang]['kelime']:
                 n = len(re.findall(r'[\u3400-\u4dbf\u4e00-\u9fff\U00020000-\U0002fa1f]', content['metin']))
-                if len(content['baslik']) > 50 or not 100 <= n <= 600:
-                    raise ValueError(f'{lang}: başlık en fazla 50 karakter, haber 100–600 Çince karakter olmalı')
-            elif len(content['baslik']) > 100 or not 50 <= len(content['metin'].split()) <= 300:
-                raise ValueError(f'{lang}: başlık en fazla 100 karakter, haber 50–300 kelime olmalı')
-            if any(not isinstance(tag, str) or not re.fullmatch(r'#[A-Za-z0-9]+', tag) for tag in content.get('etiketler', [])):
-                raise ValueError(f'{lang}: geçersiz etiket')
+                if len(content['baslik']) > 50 or not 160 <= n <= 600:
+                    raise ValueError(f'{lang}: başlık en fazla 50 karakter, haber 160–600 Çince karakter olmalı')
+            else:
+                n = sum(any(c.isalnum() for c in kelime) for kelime in content['metin'].split())
+                if len(content['baslik']) > 100 or not 80 <= n <= 300:
+                    raise ValueError(f'{lang}: başlık en fazla 100 karakter, haber 80–300 kelime olmalı')
+            if not 2 <= len(re.split(r'\n\s*\n', content['metin'].strip())) <= 4:
+                raise ValueError(f'{lang}: haber boş satırla ayrılmış 2–4 paragraf olmalı')
+            tags = content.get('etiketler')
+            if not isinstance(tags, list) or not 3 <= len(tags) <= 6 or any(
+                    not isinstance(tag, str) or not re.fullmatch(r'#[A-Za-z0-9]+', tag) for tag in tags):
+                raise ValueError(f'{lang}: # ile başlayan 3–6 harf/rakam etiketi gerekli')
+            kume = {tag.casefold() for tag in tags}
+            if len(kume) != len(tags):
+                raise ValueError(f'{lang}: etiketler tekrarlanamaz')
+            if ortak_etiketler is not None and kume != ortak_etiketler:
+                raise ValueError(f'{lang}: etiket kümesi yedi dilde aynı olmalı')
+            ortak_etiketler = kume
         errors = senaryo_denetle(x, senaryo_klasoru)
         if errors:
             raise ValueError('video senaryosu: ' + '; '.join(errors[:10]))

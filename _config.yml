@@ -6,4 +6,5 @@ exclude:
   - otomasyon
   - tests
   - README.md
+  - video
   - video-hf

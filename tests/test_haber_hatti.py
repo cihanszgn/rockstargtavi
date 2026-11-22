@@ -475,6 +475,12 @@ class HatTests(unittest.TestCase):
         oid = 'r6-siege-operation-vital-signal-duyuruldu-2026-11-15'
         now = datetime(2026, 11, 16, 14, tzinfo=timezone.utc)
         article = next(x for x in h.oku(h.ROOT / 'data/icerik.json') if x['id'] == oid)
+        # Senaryonun özgün olguları korunur. Arşivden alınan örnek, yeni paket biçimini bellekte tamamlar.
+        for lang, content in article['diller'].items():
+            metin = ' '.join(content['metin'].split())
+            ayirac = '。' if lang == 'zh' else '. '
+            content['metin'] = metin.replace(ayirac, ayirac.rstrip() + '\n\n', 1)
+            content['etiketler'] = ['#RainbowSixSiege', '#Ubisoft', '#PC']
         article.setdefault('otomasyon', {}).update(hype=8, konu=oid,
             resmi_url=next(s['url'] for s in article['kaynaklar'] if h.oto.resmi(s['url'])),
             teyit_zamani=now.isoformat(), oyuncuya_fayda='Oyuncular yeni sezonun değişikliklerini öğrenir.')

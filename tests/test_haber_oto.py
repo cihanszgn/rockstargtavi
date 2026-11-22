@@ -17,7 +17,8 @@ def article(oid='oyun-yama-1'):
     return {'id': oid, 'tarih': '2026-11-15', 'oyun': 'Oyun', 'tur': 'guncelleme',
             'kaynaklar': [{'url': 'https://blog.playstation.com/2026/11/15/game-patch/', 'ad': 'PlayStation Blog'}],
             'diller': {d: {'baslik': 'Yeni oyun yaması', 'ozet': 'Yama yayımlandı.',
-                          'metin': '游' * 120 if d == 'zh' else ' '.join(['Bilgi'] * 60)} for d in h.DILLER},
+                          'metin': '\n\n'.join(['游' * 80] * 2 if d == 'zh' else [' '.join(['Bilgi'] * 40)] * 2),
+                          'etiketler': ['#Oyun', '#Yayinci', '#PC']} for d in h.DILLER},
             'otomasyon': {'konu': oid, 'resmi_url': 'https://blog.playstation.com/2026/11/15/game-patch/',
                           'teyit_zamani': NOW.isoformat(), 'oyuncuya_fayda': 'Kaydetme hatası giderildi; oyuncu yamasını kurabilir.',
                           'hype': 3}}
@@ -79,6 +80,41 @@ class HypeTests(unittest.TestCase):
                 h.hazirla([], [x], NOW, self.klasor)
 
 class NewsTests(unittest.TestCase):
+    def test_new_article_body_minimums_and_paragraphs(self):
+        x = article()
+        self.assertEqual(len(h.hazirla([], [x], NOW)[1]), 1)
+        for lang, body, error in (
+                ('tr', 'Bilgi ' * 39 + '\n\n' + 'Bilgi ' * 40, '80–300 kelime'),
+                ('zh', '游' * 80 + '\n\n' + '游' * 79, '160–600 Çince karakter'),
+                ('en', 'word ' * 80, '2–4 paragraf'),
+                ('en', '\n\n'.join(['word ' * 16] * 5), '2–4 paragraf')):
+            with self.subTest(lang=lang, error=error):
+                x = article()
+                x['diller'][lang]['metin'] = body
+                with self.assertRaisesRegex(ValueError, error):
+                    h.hazirla([], [x], NOW)
+
+    def test_new_article_tags_are_required_and_shared_across_languages(self):
+        for tags in (None, '#PC', ['#Oyun', '#PC'], ['#Oyun', '#Yayinci', '#PC', '#4', '#5', '#6', '#7'],
+                     ['#Oyun', '#Yayinci', '#Play Station'], ['#Oyun', '#Yayinci', 123]):
+            with self.subTest(tags=tags):
+                x = article()
+                if tags is None:
+                    del x['diller']['en']['etiketler']
+                else:
+                    x['diller']['en']['etiketler'] = tags
+                with self.assertRaisesRegex(ValueError, '3–6'):
+                    h.hazirla([], [x], NOW)
+        for tags, error in ((['#Oyun', '#PC', '#pc'], 'tekrarlanamaz'),
+                            (['#Oyun', '#Yayinci', '#Xbox'], 'yedi dilde aynı')):
+            x = article()
+            x['diller']['en']['etiketler'] = tags
+            with self.assertRaisesRegex(ValueError, error):
+                h.hazirla([], [x], NOW)
+        x = article()
+        x['diller']['en']['etiketler'] = ['#pc', '#oyun', '#Yayinci']
+        self.assertEqual(len(h.hazirla([], [x], NOW)[1]), 1)
+
     def test_raw_source_bodies_remain_internal_and_existing_content_is_preserved(self):
         new, old = article('new'), article('old')
         new['otomasyon']['kaynak_metinleri'] = [{'kaynak_metni': 'raw article body'}]

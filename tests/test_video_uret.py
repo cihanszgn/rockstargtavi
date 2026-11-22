@@ -1201,17 +1201,6 @@ class YardimciTests(unittest.TestCase):
             yardimci.main(['python', 'a.json', 'b.mp3', 'c.json'])
 
 
-def makale(oid='oyun-yama-1'):
-    return {'id': oid, 'tarih': '2026-11-15', 'oyun': 'Oyun', 'tur': 'guncelleme',
-            'kaynaklar': [{'url': 'https://blog.playstation.com/2026/11/15/game-patch/', 'ad': 'PlayStation Blog'}],
-            'diller': {d: {'baslik': 'Yeni oyun yaması', 'ozet': 'Yama yayımlandı.',
-                           'metin': '游' * 120 if d == 'zh' else ' '.join(['Bilgi'] * 60)} for d in haber_oto.DILLER},
-            'otomasyon': {'konu': oid, 'resmi_url': 'https://blog.playstation.com/2026/11/15/game-patch/',
-                          'teyit_zamani': '2026-11-15T08:00:00+00:00',
-                          'oyuncuya_fayda': 'Kaydetme hatası giderildi; oyuncu yamasını kurabilir.',
-                          'hype': 3}}
-
-
 class HaberOtoTests(unittest.TestCase):
     def test_senaryo_denetle(self):
         with tempfile.TemporaryDirectory() as t:
@@ -1226,14 +1215,13 @@ class HaberOtoTests(unittest.TestCase):
             self.assertEqual(hata, [f'{KIMLIK}-tr.json: sahneler[2].veri.satirlar[0].yeni: "99" sayısı haber metninde yok'])
 
     def test_hazirla_bozuk_senaryolu_haberi_yayimlamaz(self):
-        from datetime import datetime, timezone
-        simdi = datetime(2026, 11, 15, 8, tzinfo=timezone.utc)
+        from test_haber_oto import NOW, article
         with tempfile.TemporaryDirectory() as t, patch.object(haber_oto, 'SENARYO', pathlib.Path(t)):
-            self.assertEqual(len(haber_oto.hazirla([], [makale()], simdi)[1]), 1)
+            self.assertEqual(len(haber_oto.hazirla([], [article()], NOW)[1]), 1)
             (pathlib.Path(t) / 'oyun-yama-1-tr.json').write_text(
                 json.dumps({'id': 'oyun-yama-1', 'dil': 'tr', 'sahneler': []}), encoding='utf-8')
             with self.assertRaises(ValueError) as c:
-                haber_oto.hazirla([], [makale()], simdi)
+                haber_oto.hazirla([], [article()], NOW)
         self.assertIn('video senaryosu', str(c.exception))
         self.assertIn('3–9 sahnelik', str(c.exception))
 

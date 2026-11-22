@@ -3,6 +3,10 @@
 "f72b611a0842",
 "2026-11-11"
 ],
+"bilinenler.html": [
+"2bb96bdf7cae",
+"2026-11-22"
+],
 "cikis-takvimi.html": [
 "9a1ff9fc6b3f",
 "2026-11-22"
@@ -116,7 +120,7 @@
 "2026-11-16"
 ],
 "de/spiele-news.html": [
-"39bebf76ffe2",
+"635829fda53a",
 "2026-11-22"
 ],
 "de/spiele/apex-legends.html": [
@@ -271,6 +275,74 @@
 "2ab4a7f7abf7",
 "2026-11-16"
 ],
+"de/thema/blizzard.html": [
+"7d121d2bb74b",
+"2026-11-22"
+],
+"de/thema/counterstrike2.html": [
+"3dee24f0ea69",
+"2026-11-22"
+],
+"de/thema/gtavi.html": [
+"c2724e2aa212",
+"2026-11-22"
+],
+"de/thema/pc.html": [
+"e8760a2a5e0f",
+"2026-11-22"
+],
+"de/thema/playstation.html": [
+"cff5f42c7ae0",
+"2026-11-22"
+],
+"de/thema/ps5.html": [
+"42f2b36dd81e",
+"2026-11-22"
+],
+"de/thema/riotgames.html": [
+"ffecc06c4733",
+"2026-11-22"
+],
+"de/thema/rockstargames.html": [
+"ba6cdf551ed1",
+"2026-11-22"
+],
+"de/thema/switch2.html": [
+"ced93a85903b",
+"2026-11-22"
+],
+"de/thema/tur-cikis.html": [
+"08da9c26ce9b",
+"2026-11-22"
+],
+"de/thema/tur-guncelleme.html": [
+"edd4fdc715eb",
+"2026-11-22"
+],
+"de/thema/tur-haber.html": [
+"d463b6f67a3f",
+"2026-11-22"
+],
+"de/thema/tur-ucretsiz.html": [
+"214c8e31c9b2",
+"2026-11-22"
+],
+"de/thema/worldofwarcraft.html": [
+"ea7300a4033a",
+"2026-11-22"
+],
+"de/thema/wowforever.html": [
+"7620b1f312d0",
+"2026-11-22"
+],
+"de/thema/xbox.html": [
+"f8053cc97e45",
+"2026-11-22"
+],
+"de/thema/xboxseriesxs.html": [
+"999d2976abd1",
+"2026-11-22"
+],
 "de/ueber-uns.html": [
 "fc416c2de7f3",
 "2026-11-16"
@@ -296,7 +368,7 @@
 "2026-11-22"
 ],
 "en/game-news.html": [
-"919835b92458",
+"f37224115bca",
 "2026-11-22"
 ],
 "en/game/apex-legends.html": [
@@ -555,6 +627,74 @@
 "2a933ed3628c",
 "2026-11-09"
 ],
+"en/tag/blizzard.html": [
+"a16720c7e996",
+"2026-11-22"
+],
+"en/tag/counterstrike2.html": [
+"521421d9a5d0",
+"2026-11-22"
+],
+"en/tag/gtavi.html": [
+"042159b9261c",
+"2026-11-22"
+],
+"en/tag/pc.html": [
+"ca4d418e24d3",
+"2026-11-22"
+],
+"en/tag/playstation.html": [
+"db60d33e21a3",
+"2026-11-22"
+],
+"en/tag/ps5.html": [
+"d95c83b16402",
+"2026-11-22"
+],
+"en/tag/riotgames.html": [
+"b962edac83a6",
+"2026-11-22"
+],
+"en/tag/rockstargames.html": [
+"3ef2acdaf6aa",
+"2026-11-22"
+],
+"en/tag/switch2.html": [
+"aada63b88d0e",
+"2026-11-22"
+],
+"en/tag/tur-cikis.html": [
+"4896d854b78e",
+"2026-11-22"
+],
+"en/tag/tur-guncelleme.html": [
+"efb6800595a2",
+"2026-11-22"
+],
+"en/tag/tur-haber.html": [
+"e46d4d622e11",
+"2026-11-22"
+],
+"en/tag/tur-ucretsiz.html": [
+"af8eb808972c",
+"2026-11-22"
+],
+"en/tag/worldofwarcraft.html": [
+"e469a7b5b89b",
+"2026-11-22"
+],
+"en/tag/wowforever.html": [
+"abbcc1665ff8",
+"2026-11-22"
+],
+"en/tag/xbox.html": [
+"c5459c841026",
+"2026-11-22"
+],
+"en/tag/xboxseriesxs.html": [
+"65b933ef6e69",
+"2026-11-22"
+],
 "es/about.html": [
 "d375ca358aa8",
 "2026-11-15"
@@ -808,7 +948,7 @@
 "2026-11-17"
 ],
 "es/noticias-juegos.html": [
-"24e0b9066236",
+"f4a7eebcc631",
 "2026-11-22"
 ],
 "es/ofertas.html": [
@@ -827,12 +967,148 @@
 "e69b28e87189",
 "2026-11-09"
 ],
+"es/tema/blizzard.html": [
+"db2fea07b9c2",
+"2026-11-22"
+],
+"es/tema/counterstrike2.html": [
+"dae8a5a4658e",
+"2026-11-22"
+],
+"es/tema/gtavi.html": [
+"ff25d27ecc6c",
+"2026-11-22"
+],
+"es/tema/pc.html": [
+"ce6ec50417c8",
+"2026-11-22"
+],
+"es/tema/playstation.html": [
+"5299047f8433",
+"2026-11-22"
+],
+"es/tema/ps5.html": [
+"fc5a46f05612",
+"2026-11-22"
+],
+"es/tema/riotgames.html": [
+"fd502fa6da5d",
+"2026-11-22"
+],
+"es/tema/rockstargames.html": [
+"0384ab108cde",
+"2026-11-22"
+],
+"es/tema/switch2.html": [
+"29ff443df990",
+"2026-11-22"
+],
+"es/tema/tur-cikis.html": [
+"2b8bfca78da6",
+"2026-11-22"
+],
+"es/tema/tur-guncelleme.html": [
+"cbaca9596b89",
+"2026-11-22"
+],
+"es/tema/tur-haber.html": [
+"20a4a85bf153",
+"2026-11-22"
+],
+"es/tema/tur-ucretsiz.html": [
+"4370c18e32dd",
+"2026-11-22"
+],
+"es/tema/worldofwarcraft.html": [
+"9cdba35d1227",
+"2026-11-22"
+],
+"es/tema/wowforever.html": [
+"12f3a9322992",
+"2026-11-22"
+],
+"es/tema/xbox.html": [
+"3b0d6e7e0fa9",
+"2026-11-22"
+],
+"es/tema/xboxseriesxs.html": [
+"0511f9094445",
+"2026-11-22"
+],
+"etiket/blizzard.html": [
+"24c5c4830620",
+"2026-11-22"
+],
+"etiket/counterstrike2.html": [
+"e2dd39e1b2c4",
+"2026-11-22"
+],
+"etiket/gtavi.html": [
+"6c3c9e1e239b",
+"2026-11-22"
+],
+"etiket/pc.html": [
+"309484058f11",
+"2026-11-22"
+],
+"etiket/playstation.html": [
+"f8d2baaa6101",
+"2026-11-22"
+],
+"etiket/ps5.html": [
+"5f5689d6bce4",
+"2026-11-22"
+],
+"etiket/riotgames.html": [
+"b0943170e90a",
+"2026-11-22"
+],
+"etiket/rockstargames.html": [
+"dd9faa1dc893",
+"2026-11-22"
+],
+"etiket/switch2.html": [
+"e072b0b56a26",
+"2026-11-22"
+],
+"etiket/tur-cikis.html": [
+"248a6788ebf4",
+"2026-11-22"
+],
+"etiket/tur-guncelleme.html": [
+"8953f238ce52",
+"2026-11-22"
+],
+"etiket/tur-haber.html": [
+"d20bb1fa8bbe",
+"2026-11-22"
+],
+"etiket/tur-ucretsiz.html": [
+"c5889b619138",
+"2026-11-22"
+],
+"etiket/worldofwarcraft.html": [
+"e440772e728d",
+"2026-11-22"
+],
+"etiket/wowforever.html": [
+"a38573580ea6",
+"2026-11-22"
+],
+"etiket/xbox.html": [
+"ac8ec56972c8",
+"2026-11-22"
+],
+"etiket/xboxseriesxs.html": [
+"f1b36ca620d0",
+"2026-11-22"
+],
 "fr/about.html": [
 "68d9cde433e6",
 "2026-11-15"
 ],
 "fr/actus-jeux.html": [
-"bef120c907fc",
+"97d24416cb49",
 "2026-11-22"
 ],
 "fr/calendrier-sorties.html": [
@@ -1099,6 +1375,74 @@
 "b3a964c7e824",
 "2026-11-09"
 ],
+"fr/sujet/blizzard.html": [
+"4b955e20ca0c",
+"2026-11-22"
+],
+"fr/sujet/counterstrike2.html": [
+"fa35439e3ca7",
+"2026-11-22"
+],
+"fr/sujet/gtavi.html": [
+"c97c5bdc9a34",
+"2026-11-22"
+],
+"fr/sujet/pc.html": [
+"85c4a7342c05",
+"2026-11-22"
+],
+"fr/sujet/playstation.html": [
+"03ac6ccdfcc3",
+"2026-11-22"
+],
+"fr/sujet/ps5.html": [
+"0e187ccca0e7",
+"2026-11-22"
+],
+"fr/sujet/riotgames.html": [
+"c85b57f24851",
+"2026-11-22"
+],
+"fr/sujet/rockstargames.html": [
+"a8a9ef3626f3",
+"2026-11-22"
+],
+"fr/sujet/switch2.html": [
+"d6ccbe49a0f5",
+"2026-11-22"
+],
+"fr/sujet/tur-cikis.html": [
+"69b465831009",
+"2026-11-22"
+],
+"fr/sujet/tur-guncelleme.html": [
+"f69c141f9adf",
+"2026-11-22"
+],
+"fr/sujet/tur-haber.html": [
+"09968db380bf",
+"2026-11-22"
+],
+"fr/sujet/tur-ucretsiz.html": [
+"c49da486512a",
+"2026-11-22"
+],
+"fr/sujet/worldofwarcraft.html": [
+"36dc4fe59bee",
+"2026-11-22"
+],
+"fr/sujet/wowforever.html": [
+"9cdfb20f391f",
+"2026-11-22"
+],
+"fr/sujet/xbox.html": [
+"eae0f81ebcbf",
+"2026-11-22"
+],
+"fr/sujet/xboxseriesxs.html": [
+"d1cbfda3af8e",
+"2026-11-22"
+],
 "gizlilik.html": [
 "cf74670cb2f8",
 "2026-11-15"
@@ -1156,7 +1500,7 @@
 "2026-11-16"
 ],
 "nl/gamenieuws.html": [
-"9262306e433d",
+"558166bd9c05",
 "2026-11-22"
 ],
 "nl/games/apex-legends.html": [
@@ -1399,6 +1743,74 @@
 "6172026c5fc0",
 "2026-11-17"
 ],
+"nl/onderwerp/blizzard.html": [
+"8346c0ce643d",
+"2026-11-22"
+],
+"nl/onderwerp/counterstrike2.html": [
+"02dc7e564d92",
+"2026-11-22"
+],
+"nl/onderwerp/gtavi.html": [
+"f2c709c4e5bd",
+"2026-11-22"
+],
+"nl/onderwerp/pc.html": [
+"56919aa5e955",
+"2026-11-22"
+],
+"nl/onderwerp/playstation.html": [
+"ef0822c51d3c",
+"2026-11-22"
+],
+"nl/onderwerp/ps5.html": [
+"662fed6f6352",
+"2026-11-22"
+],
+"nl/onderwerp/riotgames.html": [
+"5607d968385a",
+"2026-11-22"
+],
+"nl/onderwerp/rockstargames.html": [
+"db9e0a8cb94e",
+"2026-11-22"
+],
+"nl/onderwerp/switch2.html": [
+"03e179dcd558",
+"2026-11-22"
+],
+"nl/onderwerp/tur-cikis.html": [
+"0d7a9aba5fb1",
+"2026-11-22"
+],
+"nl/onderwerp/tur-guncelleme.html": [
+"707b7f2f2fa6",
+"2026-11-22"
+],
+"nl/onderwerp/tur-haber.html": [
+"32871f6a4d82",
+"2026-11-22"
+],
+"nl/onderwerp/tur-ucretsiz.html": [
+"e4fc833b5e5a",
+"2026-11-22"
+],
+"nl/onderwerp/worldofwarcraft.html": [
+"ba47b34639c6",
+"2026-11-22"
+],
+"nl/onderwerp/wowforever.html": [
+"a33be76a4e6b",
+"2026-11-22"
+],
+"nl/onderwerp/xbox.html": [
+"d8a011ea3d89",
+"2026-11-22"
+],
+"nl/onderwerp/xboxseriesxs.html": [
+"4dcbee8ac370",
+"2026-11-22"
+],
 "nl/over-ons.html": [
 "152e62761e01",
 "2026-11-16"
@@ -1420,7 +1832,7 @@
 "2026-11-16"
 ],
 "oyun-haberleri.html": [
-"5269bc8fcecb",
+"ddfc557659e2",
 "2026-11-22"
 ],
 "oyun/apex-legends.html": [
@@ -1755,6 +2167,74 @@
 "991a486d9d81",
 "2026-11-16"
 ],
+"zh/huati/blizzard.html": [
+"e26a8b950e65",
+"2026-11-22"
+],
+"zh/huati/counterstrike2.html": [
+"6f3ed7b193cf",
+"2026-11-22"
+],
+"zh/huati/gtavi.html": [
+"58bf5c103811",
+"2026-11-22"
+],
+"zh/huati/pc.html": [
+"087b11124708",
+"2026-11-22"
+],
+"zh/huati/playstation.html": [
+"4c2cbe16bd4c",
+"2026-11-22"
+],
+"zh/huati/ps5.html": [
+"5d1b6847efb2",
+"2026-11-22"
+],
+"zh/huati/riotgames.html": [
+"20595fdefca7",
+"2026-11-22"
+],
+"zh/huati/rockstargames.html": [
+"b7c88f8b9969",
+"2026-11-22"
+],
+"zh/huati/switch2.html": [
+"794887fbef5f",
+"2026-11-22"
+],
+"zh/huati/tur-cikis.html": [
+"ca46158be683",
+"2026-11-22"
+],
+"zh/huati/tur-guncelleme.html": [
+"693c7e2bc101",
+"2026-11-22"
+],
+"zh/huati/tur-haber.html": [
+"af1b7d958b90",
+"2026-11-22"
+],
+"zh/huati/tur-ucretsiz.html": [
+"1351c5aaaae1",
+"2026-11-22"
+],
+"zh/huati/worldofwarcraft.html": [
+"579e61874f18",
+"2026-11-22"
+],
+"zh/huati/wowforever.html": [
+"5ee6233760e4",
+"2026-11-22"
+],
+"zh/huati/xbox.html": [
+"291a6259adc9",
+"2026-11-22"
+],
+"zh/huati/xboxseriesxs.html": [
+"032c68cdc43c",
+"2026-11-22"
+],
 "zh/index.html": [
 "3e5d45403457",
 "2026-11-22"
@@ -1780,7 +2260,7 @@
 "2026-11-22"
 ],
 "zh/youxi-xinwen.html": [
-"f2ffe9f9b12d",
+"dfbc9ddcee4d",
 "2026-11-22"
 ],
 "zh/youxi/apex-legends.html": [

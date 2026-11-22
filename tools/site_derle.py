@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""CTRL+A GAME site derleyici (4 dil, düz statik HTML).
+"""CTRL+A GAME site derleyici (7 dil, düz statik HTML).
 
 Üretir:  ana sayfa, oyun haberleri (liste + haber sayfaları + RSS), indirimler, ücretsiz oyunlar,
          söylentiler, çıkış takvimi, GTA VI dosyası, 404, arama dizini (ara-<dil>.json), sitemap.xml.
@@ -23,15 +23,18 @@ import pathlib
 import re
 import sys
 import unicodedata
+from dataclasses import dataclass, field
 from datetime import date, datetime, time, timedelta, timezone
+from urllib.parse import quote
+from xml.sax.saxutils import escape as xml_kacis
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import oyun_tema as ot  # noqa: E402
 import site_oyun as so  # noqa: E402
 import sosyal_derle as sd  # noqa: E402
 import video_site as vs  # noqa: E402
-from site_metin import (AY_KISA, DIL_AD, ESLER, GTA_ALT_SAYI, GTA_HEDEF, GTA_SAYFALAR, GTA_SERI,  # noqa: E402
-                        GTA_TARIH, GTA_UST, MARKA, PLATFORMLAR, SAYFA, T, TEK_TR, say)
+from site_metin import (AY_KISA, DIL_AD, ESLER, ETIKET_KLASOR, GTA_ALT_SAYI, GTA_HEDEF, GTA_SAYFALAR, GTA_SERI,  # noqa: E402
+                        GTA_TARIH, GTA_UST, KONU_METIN, KONU_TURLERI, MARKA, PLATFORMLAR, SAYFA, T, TEK_TR, say)
 
 KOK, SITE, DILLER, M, e = sd.KOK, sd.SITE, sd.DILLER, sd.M, sd.e
 TRT = timezone(timedelta(hours=3))
@@ -45,6 +48,8 @@ SEMBOL = {"USD": "$", "TRY": "₺", "EUR": "€", "GBP": "£"}
 GUVEN = ("dusuk", "orta", "yuksek")
 DURUM = ("dogrulanmadi", "dogrulandi", "yalanlandi")
 SLUG = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*")
+KONU_ESIK = 3
+KONU_SERIT_ADET = 12
 
 GA = ("<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-67FMKX5E05\"></script>\n"
       "<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}"
@@ -80,6 +85,13 @@ SURUM: dict[str, str] = {}
 SABIT: dict[str, dict] = {}
 
 
+@dataclass
+class Konu:
+    ad: str
+    cesit: str
+    haberler: list[dict] = field(default_factory=list)
+
+
 def uyar(metin: str) -> None:
     UYARILAR.append(metin)
 
@@ -90,8 +102,8 @@ def u(yol: str) -> str:
     if yol == "index.html":
         return "/"
     if yol.endswith("/index.html"):
-        return "/" + yol[: -len("index.html")]
-    return "/" + yol
+        return "/" + quote(yol[: -len("index.html")])
+    return "/" + quote(yol)
 
 
 def tam(yol: str) -> str:
@@ -124,6 +136,26 @@ def oyun_anahtar(ad: str) -> str:
 def gom(veri) -> str:
     """Sayfaya gömülecek JSON (</script> kaçışlı)."""
     return json.dumps(veri, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+
+
+def ld_etiket(veri: dict) -> str:
+    return f'<script type="application/ld+json">{gom(veri)}</script>\n'
+
+
+def yayinci() -> dict:
+    return {"@type": "Organization", "name": MARKA, "url": f"{SITE}/",
+            "logo": {"@type": "ImageObject", "url": tam("yayinci-logo.png"), "width": 256, "height": 256}}
+
+
+def sayfa_ld(dil: str, yol: str, ad: str, aciklama: str, *, tur: str = "CollectionPage",
+             ust: tuple[tuple[str, str], ...] = (), ogeler: list[str] | None = None) -> str:
+    ld = {"@context": "https://schema.org", "@type": tur, "url": tam(yol), "name": ad,
+          "description": aciklama, "inLanguage": HTML_LANG[dil]}
+    if ogeler is not None:
+        ld["mainEntity"] = {"@type": "ItemList",
+                            "itemListElement": [{"@type": "ListItem", "position": i, "url": adres}
+                                                for i, adres in enumerate(ogeler, 1)]}
+    return ld_etiket(ld) + so.iz_ld([(T[dil]["nav"]["ana"], SAYFA["ana"][dil]), *ust, (ad, None)])
 
 
 def zaman_al(s) -> datetime | None:
@@ -428,6 +460,7 @@ def eski_oku(yol: str) -> dict | None:
         return None
     t = p.read_text(encoding="utf-8")
     bas = t.split("</head>", 1)[0]
+    bas = re.sub(r"<!-- dizin-ld:basla -->.*?<!-- dizin-ld:bitir -->", "", bas, flags=re.S)
     m = re.search(r'<main id="main"[^>]*>(.*)</main>', t, re.S)
     b = re.search(r"<title>(.*?)</title>", bas, re.S)
     if not m or not b:
@@ -679,10 +712,10 @@ def takip_dugme(dil: str, ad: str) -> str:
             f'<span class="takip-isaret" aria-hidden="true"></span><span data-takip-yazi>{e(T[dil]["takip_et"])}</span></button>')
 
 
-def sayfa_bas(dil: str, bolum: str, h1: str, giris: str = "", ek: str = "") -> str:
-    n = BOLUM_NO[bolum]
+def sayfa_bas(dil: str, bolum: str | None, h1: str, giris: str = "", ek: str = "") -> str:
+    tus = f'<kbd class="tus tus-bolum" aria-hidden="true">{BOLUM_NO[bolum]}</kbd>' if bolum else ""
     return (f'<header class="sayfa-bas"><div class="wrap">\n'
-            f'<div class="sb-satir"><kbd class="tus tus-bolum" aria-hidden="true">{n}</kbd><h1>{e(h1)}</h1></div>\n'
+            f'<div class="sb-satir">{tus}<h1>{e(h1)}</h1></div>\n'
             + (f'<p class="giris">{giris}</p>\n' if giris else "") + ek + '</div></header>\n')
 
 
@@ -1193,9 +1226,10 @@ def ana_sayfa(dil: str, veri: list, ind: dict, ucr: dict, soy: list, tak: list) 
              + so.populer_serit(dil, veri, soy, tak) + radar + yaklasan
              + f'<script type="application/json" id="takip-veri">{gom(takip_veri)}</script>\n')
     ld = {"@context": "https://schema.org", "@type": "WebSite", "name": MARKA, "url": f"{SITE}/", "inLanguage": dil}
+    org = {"@context": "https://schema.org", **yayinci()}
     return kabuk(dil, SAYFA["ana"][dil], t["ana_title"], t["ana_desc"], govde, esler=SAYFA["ana"], bolum="ana",
                  tam_baslik=True, sayfa_turu="ana",
-                 ek_bas=f'<script type="application/ld+json">{gom(ld)}</script>\n' + so.bas_ek())
+                 ek_bas=ld_etiket(ld) + ld_etiket(org) + so.bas_ek())
 
 
 def takip_verisi(dil: str, veri: list, soy: list, tak: list) -> dict:
@@ -1216,7 +1250,98 @@ def takip_verisi(dil: str, veri: list, soy: list, tak: list) -> dict:
     return d
 
 
-def hub_sayfasi(dil: str, veri: list) -> str:
+def etiket_anahtar(ad: str) -> str:
+    return norm(ad.casefold()).replace(" ", "")
+
+
+def etiket_eslemeleri() -> dict[str, str]:
+    veri = _json("etiket_esles.json", False)
+    if not isinstance(veri, dict):
+        return {}
+    return {etiket_anahtar(k): v.strip() for k, v in veri.items()
+            if isinstance(v, str) and etiket_anahtar(k) and etiket_anahtar(v)}
+
+
+def haber_etiketleri(dil: str, x: dict, esles: dict) -> list[tuple[str, str, str]]:
+    """Her çip için konu anahtarı, görünür ad ve etiket çeşidi."""
+    oyun = so.oyun_bul(x["oyun"])
+    ad = oyun["ad"] if oyun else x["oyun"]
+    ogeler = [(ad, "oyun")]
+    ogeler.extend((p, "platform") for p in x.get("platform") or [])
+    ogeler.extend((s, "yazar") for s in x["diller"][dil].get("etiketler", []))
+    dizi = []
+    for ham, cesit in ogeler:
+        asil = esles.get(etiket_anahtar(ham), ham)
+        anahtar = etiket_anahtar(asil)
+        if not anahtar:
+            continue
+        if cesit == "yazar":
+            gorunen = "#" + asil.lstrip("#").replace(" ", "")
+        elif cesit == "platform":
+            gorunen = so.pl_ad(dil, asil.lstrip("#"))
+        else:
+            gorunen = ad
+        dizi.append((anahtar, gorunen, cesit))
+    dizi.append(("tur-" + x["tur"], M[dil]["tur"][x["tur"]], "tur"))
+    return list(dict.fromkeys(dizi))
+
+
+def konulari_topla(dil: str, veri: list, esles: dict) -> dict[str, Konu]:
+    konular: dict[str, Konu] = {}
+    for x in veri:
+        gorulen = set()
+        for anahtar, ad, cesit in haber_etiketleri(dil, x, esles):
+            if cesit == "tur":
+                ad = KONU_TURLERI[dil][x["tur"]]
+            konu = konular.setdefault(anahtar, Konu(ad.lstrip("#"), cesit))
+            if konu.cesit == "yazar" and cesit != "yazar":
+                konu.ad, konu.cesit = ad, cesit
+            if anahtar not in gorulen:
+                konu.haberler.append(x)
+                gorulen.add(anahtar)
+    return {k: v for k, v in konular.items() if len(v.haberler) >= KONU_ESIK}
+
+
+def konu_yol(dil: str, anahtar: str) -> str:
+    return f"{ETIKET_KLASOR[dil]}/{anahtar}.html"
+
+
+def etiket_cipi(ad: str, yol: str | None) -> str:
+    if yol:
+        return f'<a class="cip cip-etiket" href="{u(yol)}">{e(ad)}</a>'
+    return f'<span class="cip cip-etiket">{e(ad)}</span>'
+
+
+def konu_seridi(dil: str, konular: dict[str, Konu]) -> str:
+    if not konular:
+        return ""
+    sirali = sorted(konular, key=lambda k: (-len(konular[k].haberler), k))
+    cipler = " ".join(etiket_cipi(konular[k].ad, konu_yol(dil, k)) for k in sirali[:KONU_SERIT_ADET])
+    return (f'<section class="wrap konu-seridi" aria-labelledby="b-konular"><h2 id="b-konular">{e(KONU_METIN[dil][2])}</h2>'
+            f'<p class="etiketler">{cipler}</p></section>\n')
+
+
+def konu_sayfasi(dil: str, konu: Konu, yollar: dict[str, str]) -> str:
+    baslik, aciklama, _ = KONU_METIN[dil]
+    ad = konu.ad if konu.cesit == "tur" else baslik.format(ad=konu.ad)
+    aciklama = aciklama.format(ad=konu.ad)
+    oyun = so.oyun_bul(konu.ad)
+    if not oyun:
+        oyunlar = {so.oyun_id(x["oyun"]) for x in konu.haberler}
+        if len(oyunlar) == 1:
+            oyun = so.OYUN.get(next(iter(oyunlar)))
+    ek = f'<p class="sb-meta">{cip_oyun(oyun["ad"], dil)}</p>\n' if oyun else ""
+    kartlar = "".join(haber_kart(dil, x, h="h2") for x in konu.haberler)
+    govde = (sayfa_bas(dil, None, ad, e(aciklama), ek)
+             + f'<div class="wrap"><ul class="haber-izgara">\n{kartlar}</ul></div>\n')
+    yukari = ((M[dil]["hub_h1"], SAYFA["haber"][dil]),)
+    ld = sayfa_ld(dil, yollar[dil], ad, aciklama, ust=yukari,
+                  ogeler=[SITE + haber_url(dil, x) for x in konu.haberler])
+    return kabuk(dil, yollar[dil], ad, aciklama, govde, esler=yollar,
+                 bolum="haber", sayfa_turu="konu", ek_bas=ld + so.bas_ek())
+
+
+def hub_sayfasi(dil: str, veri: list, konular: dict[str, Konu]) -> str:
     t, m = T[dil], M[dil]
     son = veri[0]["tarih"] if veri else BUGUN.isoformat()
     turler = [(k, m["tur"][k]) for k in sd.TUR if any(x["tur"] == k for x in veri)]
@@ -1233,13 +1358,16 @@ def hub_sayfasi(dil: str, veri: list) -> str:
     ek = (f'<p class="not">{e(m["hub_not"])}</p>\n<p class="sb-meta">{e(m["guncel"])}: {zaman_etiketi(dil, son)}'
           f'<a href="/{sd.FEED[dil]}">{e(t["rss_abone"])}</a></p>\n')
     govde = (sayfa_bas(dil, "haber", m["hub_h1"], e(m["hub_aciklama"]), ek)
+             + konu_seridi(dil, konular)
              + '<div class="wrap liste-duzen serit-duzen" data-suzgec-kok>\n<aside class="liste-yan serit">'
              + gorunum_dugme(dil)
              + suzgec(dil, [("tur", t["f_tur"], turler), ("platform", t["f_platform"], platform_secenek(veri, dil))], "haber")
              + '</aside>\n<div class="liste-ana">\n' + (liste or bos_kutu(t["bos_haber"]))
              + bos_kutu("", t["bos_filtre"]) + '</div>\n</div>\n')
-    return kabuk(dil, SAYFA["haber"][dil], m["hub_baslik"], m["hub_aciklama"], govde, esler=SAYFA["haber"], bolum="haber",
-                 sayfa_turu="haber", ek_bas=so.bas_ek())
+    yol = SAYFA["haber"][dil]
+    ld = sayfa_ld(dil, yol, m["hub_h1"], m["hub_aciklama"], ogeler=[SITE + haber_url(dil, x) for x in veri[:20]])
+    return kabuk(dil, yol, m["hub_baslik"], m["hub_aciklama"], govde, esler=SAYFA["haber"], bolum="haber",
+                 sayfa_turu="haber", ek_bas=ld + so.bas_ek())
 
 
 def gorunum_dugme(dil: str) -> str:
@@ -1254,7 +1382,68 @@ def gorunum_dugme(dil: str) -> str:
             f'<button type="button" data-gorunum="liste" aria-pressed="false">{satir}<span>{e(t["g_liste"])}</span></button></div>')
 
 
-def haber_sayfasi(dil: str, x: dict, veri: list) -> str:
+def meta_aciklama(dil: str, ozet: str, metin: str) -> str:
+    alt, ust = (55, 78) if dil == "zh" else (110, 155)
+    ayir = re.compile(r"(?<=[.!?])\s+|(?<=[。！？])\s*")
+    aciklama = " ".join(ozet.split())
+    gorulen = [norm(s) for s in ayir.split(aciklama) if norm(s)]
+    for cumle in ayir.split(" ".join(metin.split())):
+        if len(aciklama) >= alt:
+            break
+        anahtar = norm(cumle)
+        if not anahtar or anahtar in gorulen:
+            continue
+        if any((anahtar in s or s in anahtar) and min(len(anahtar), len(s)) >= .75 * max(len(anahtar), len(s))
+               for s in gorulen):
+            continue
+        nokta = "" if aciklama.endswith((".", "?", "!", "。", "？", "！")) else ("。" if dil == "zh" else ".")
+        ek = nokta + ("" if dil == "zh" else " ")
+        yer = ust - len(aciklama) - len(ek)
+        if len(cumle) > yer:
+            parca = cumle[:yer]
+            if dil == "zh":
+                sinirlar = list(re.finditer(r"[\s，。！？、；：,.!?;:]", parca))
+                if not sinirlar:
+                    continue
+                parca = parca[:sinirlar[-1].end()]
+            elif not cumle[yer].isspace():
+                parca = parca.rpartition(" ")[0]
+            parca = parca.rstrip(" ,;:–-，、；：")
+            if not parca:
+                continue
+            aciklama += ek + parca
+            break
+        aciklama += ek + cumle
+        gorulen.append(anahtar)
+    return aciklama
+
+
+def saatli_iso(deger) -> datetime | None:
+    if not isinstance(deger, str):
+        return None
+    try:
+        dt = datetime.fromisoformat(deger.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    return dt if dt.tzinfo is not None else None
+
+
+def haber_yayim(x: dict) -> str:
+    eklenme = saatli_iso((x.get("otomasyon") or {}).get("eklenme"))
+    if eklenme and eklenme.date().isoformat() == x["tarih"]:
+        return eklenme.isoformat()
+    return x["tarih"]
+
+
+def haber_degisim(x: dict, yayim: str) -> str:
+    guncelleme = x.get("guncelleme") or (x.get("otomasyon") or {}).get("guncelleme")
+    saatli = saatli_iso(guncelleme)
+    if saatli:
+        return saatli.isoformat()
+    return guncelleme if iso_gun(guncelleme) else yayim
+
+
+def haber_sayfasi(dil: str, x: dict, veri: list, konular: dict[str, Konu] | None = None, esles: dict | None = None) -> str:
     t, m, dl = T[dil], M[dil], x["diller"][dil]
     yollar = {d: f"{sd.KLASOR[d]}/{x['id']}.html" for d in DILLER}
     og = sd.kart_ad(x["id"], dil, "og")
@@ -1262,20 +1451,41 @@ def haber_sayfasi(dil: str, x: dict, veri: list) -> str:
     buyuk_gorsel = gor if gor.get('en', 0) >= 1200 else {}
     paylas_gorsel = buyuk_gorsel.get('url') or og
     paylas_olcu = (buyuk_gorsel['en'], buyuk_gorsel['boy']) if buyuk_gorsel else (1200, 630)
-    ld = {"@context": "https://schema.org", "@type": "NewsArticle", "headline": dl["baslik"], "description": dl["ozet"],
-          "datePublished": x["tarih"], "inLanguage": dil,
+    aciklama = meta_aciklama(dil, dl["ozet"], dl["metin"])
+    yayim = haber_yayim(x)
+    oyun = so.oyun_bul(x["oyun"])
+    oyun_yolu = so.hub_yol(dil, oyun["id"]) if oyun else None
+    etiketler = haber_etiketleri(dil, x, esles or {})
+    ld = {"@context": "https://schema.org", "@type": "NewsArticle", "headline": dl["baslik"], "description": aciklama,
+          "datePublished": yayim, "dateModified": haber_degisim(x, yayim), "inLanguage": dil,
           "image": [paylas_gorsel if https(paylas_gorsel) else f"{SITE}/{paylas_gorsel}"], "mainEntityOfPage": tam(yollar[dil]),
           "author": {"@type": "Organization", "name": MARKA, "url": tam(SAYFA['hakkinda'][dil])},
-          "publisher": {"@type": "Organization", "name": MARKA, "url": f"{SITE}/"},
+          "publisher": yayinci(), "keywords": list(dict.fromkeys([x["oyun"], *(ad for _, ad, _ in etiketler)])),
+          "about": {"@type": "VideoGame", "name": oyun["ad"] if oyun else x["oyun"],
+                    **({"url": tam(oyun_yolu)} if oyun_yolu else {})},
+          "articleSection": m["tur"][x["tur"]],
           "isBasedOn": [s["url"] for s in x["kaynaklar"]]}
+    iz_ld = [(t["nav"]["ana"], SAYFA["ana"][dil]), (m["hub_h1"], SAYFA["haber"][dil])]
+    if oyun_yolu:
+        iz_ld.append((oyun["ad"], oyun_yolu))
+    iz_ld.append((dl["baslik"], None))
     yon = sd.YONLENDIR % json.dumps({d: "/" + yollar[d] for d in DILLER})
     paragraflar = "".join(f"<p>{e(p.strip())}</p>\n" for p in re.split(r"\n\s*\n", dl["metin"]) if p.strip())
     kaynaklar = "".join(f'<li><a href="{e(s["url"])}" rel="noopener">{e(s["ad"])}</a> {zaman_etiketi(dil, s.get("tarih") or x["tarih"])}</li>'
                         for s in x["kaynaklar"])
-    etiket = " ".join(f'<span class="cip cip-etiket">{e(s)}</span>' for s in dl.get("etiketler", []))
+    konular = konular or {}
+    cipler = []
+    gorunen = set()
+    for anahtar, ad, cesit in etiketler:
+        oyun_cipi = cesit == "oyun" and oyun_yolu is not None
+        yol = oyun_yolu if oyun_cipi else (konu_yol(dil, anahtar) if anahtar in konular else None)
+        kimlik = (anahtar, yol)
+        if kimlik not in gorunen:
+            cipler.append(cip_oyun(ad, dil) if oyun_cipi else etiket_cipi(ad, yol))
+            gorunen.add(kimlik)
+    etiket = " ".join(cipler)
     url = tam(yollar[dil])
     paylas_metin = dl["baslik"]
-    from urllib.parse import quote
     x_link = f"https://x.com/intent/post?text={quote(paylas_metin)}&url={quote(url, safe='')}"
     wa_link = f"https://wa.me/?text={quote(paylas_metin + ' ' + url)}"
     k = oyun_anahtar(x["oyun"])
@@ -1317,11 +1527,11 @@ def haber_sayfasi(dil: str, x: dict, veri: list) -> str:
              f'<a class="dugme" href="{e(x_link)}" rel="noopener">{e(t["x_paylas"])}</a>'
              f'<a class="dugme" href="{e(wa_link)}" rel="noopener">{e(t["wa_paylas"])}</a></div>'
              f'<p class="paylas-durum" data-paylas-durum aria-live="polite"></p></section>\n'
-             + (f'<section class="kutu"><h2>{e(t["etiketler"])}</h2><p class="etiketler">{etiket}</p></section>\n' if etiket else "")
+             + f'<section class="kutu"><h2>{e(t["etiketler"])}</h2><p class="etiketler">{etiket}</p></section>\n'
              + '</aside>\n</div>\n' + ilgili_html + '</article>\n')
-    return kabuk(dil, yollar[dil], f"{dl['baslik']} | {m['menu']}", dl["ozet"], govde, esler=yollar, bolum="haber", tip="article",
+    return kabuk(dil, yollar[dil], dl["baslik"], aciklama, govde, esler=yollar, bolum="haber", tip="article",
                  gorsel=paylas_gorsel, gorsel_olcu=paylas_olcu, sayfa_turu="haber-detay",
-                 ek_bas=f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n'
+                 ek_bas=ld_etiket(ld) + so.iz_ld(iz_ld)
                  + (vs.ld_etiket(vs.video_ld(vid, ad=dl["baslik"], aciklama=dl["ozet"], tarih=x["tarih"], dil=dil)) if vid else "")
                  + yon + so.bas_ek())
 
@@ -1348,8 +1558,9 @@ def indirim_sayfasi(dil: str, ind: dict) -> str:
              + f'<p class="devam js-only"><button type="button" class="dugme" data-firsat-daha hidden>{e(t["daha"])}</button></p>\n'
              + f'<p class="not">{e(t["firsat_not"])} {e(t["usd_not"])}</p>\n</div>\n'
              + f'<script type="application/json" id="indirim-veri">{gom(ind)}</script>\n</div>\n')
-    return kabuk(dil, SAYFA["indirim"][dil], t["indirim_title"], t["indirim_desc"], govde, esler=SAYFA["indirim"], bolum="indirim",
-                 sayfa_turu="indirim")
+    yol = SAYFA["indirim"][dil]
+    return kabuk(dil, yol, t["indirim_title"], t["indirim_desc"], govde, esler=SAYFA["indirim"], bolum="indirim",
+                 sayfa_turu="indirim", ek_bas=sayfa_ld(dil, yol, t["indirim_h1"], t["indirim_desc"]))
 
 
 def ucretsiz_sayfasi(dil: str, ucr: dict, ind: dict) -> str:
@@ -1367,8 +1578,9 @@ def ucretsiz_sayfasi(dil: str, ucr: dict, ind: dict) -> str:
              + '<p class="durum-satir" data-firsat-durum aria-live="polite"></p>\n'
              + f'<script type="application/json" id="indirim-veri">{gom(gomu)}</script>\n</section>\n'
              + f'<p class="not">{e(t["firsat_not"])} {e(t["usd_not"])}</p>\n</div>\n')
-    return kabuk(dil, SAYFA["ucretsiz"][dil], t["ucretsiz_title"], t["ucretsiz_desc"], govde, esler=SAYFA["ucretsiz"],
-                 bolum="ucretsiz", sayfa_turu="ucretsiz")
+    yol = SAYFA["ucretsiz"][dil]
+    return kabuk(dil, yol, t["ucretsiz_title"], t["ucretsiz_desc"], govde, esler=SAYFA["ucretsiz"],
+                 bolum="ucretsiz", sayfa_turu="ucretsiz", ek_bas=sayfa_ld(dil, yol, t["ucretsiz_h1"], t["ucretsiz_desc"]))
 
 
 def soylenti_sayfasi(dil: str, soy: list) -> str:
@@ -1386,8 +1598,9 @@ def soylenti_sayfasi(dil: str, soy: list) -> str:
              + (suzgec(dil, [("guven", t["f_guven"], guven), ("durum", t["f_durum"], durum),
                              ("platform", t["f_platform"], platform_secenek(ogeler, dil))], "soylenti") if ogeler else "")
              + '</aside>\n<div class="liste-ana">\n' + liste + bos_kutu("", t["bos_filtre"], sifir=t["bos_sifir"]) + '</div>\n</div>\n')
-    return kabuk(dil, SAYFA["soylenti"][dil], t["soylenti_title"], t["soylenti_desc"], govde, esler=SAYFA["soylenti"],
-                 bolum="soylenti", sayfa_turu="soylenti", ek_bas=so.bas_ek())
+    yol = SAYFA["soylenti"][dil]
+    return kabuk(dil, yol, t["soylenti_title"], t["soylenti_desc"], govde, esler=SAYFA["soylenti"], bolum="soylenti",
+                 sayfa_turu="soylenti", ek_bas=sayfa_ld(dil, yol, t["soylenti_h1"], t["soylenti_desc"]) + so.bas_ek())
 
 
 def takvim_sayfasi(dil: str, tak: list) -> str:
@@ -1417,8 +1630,9 @@ def takvim_sayfasi(dil: str, tak: list) -> str:
              + (suzgec(dil, [("platform", t["f_platform"], platform_secenek(tak, dil))], "cikis", ek=ics) if tak else "")
              + '</aside>\n<div class="liste-ana">\n' + ("".join(bolumler) or bos_kutu(t["bos_takvim"], yon=(SAYFA["haber"][dil], t["bos_yon"])))
              + bos_kutu("", t["bos_filtre"]) + '</div>\n</div>\n')
-    return kabuk(dil, SAYFA["takvim"][dil], t["takvim_title"], t["takvim_desc"], govde, esler=SAYFA["takvim"], bolum="takvim",
-                 sayfa_turu="takvim", ek_bas=so.bas_ek())
+    yol = SAYFA["takvim"][dil]
+    return kabuk(dil, yol, t["takvim_title"], t["takvim_desc"], govde, esler=SAYFA["takvim"], bolum="takvim",
+                 sayfa_turu="takvim", ek_bas=sayfa_ld(dil, yol, t["takvim_h1"], t["takvim_desc"]) + so.bas_ek())
 
 
 def yok_sayfasi(veri: list | None = None) -> str:
@@ -1454,8 +1668,12 @@ def eski_sayfa(dil: str, bilgi: dict, esler: dict | None, gta: bool) -> str:
         govde = "\n" + govde
     govde = govde[1:] if govde.startswith("\n") else govde
     bolum = "gta" if gta else None
+    ld = bilgi["ld"]
+    if not ld:
+        ek = sayfa_ld(dil, yol, bilgi["baslik"], bilgi["aciklama"], tur="WebPage")
+        ld = f"<!-- dizin-ld:basla -->\n{ek}<!-- dizin-ld:bitir -->\n"
     return kabuk(dil, yol, bilgi["baslik"], bilgi["aciklama"], govde, esler=esler, bolum=bolum, tip=bilgi["tip"],
-                 ek_bas=bilgi["ld"], gta=gta, sayfa_turu="eski")
+                 ek_bas=ld, gta=gta, sayfa_turu="eski")
 
 
 # ---------------------------------------------------------------- arama dizini
@@ -1531,6 +1749,42 @@ def site_haritasi() -> int:
     return int(sd.yaz(KOK / "sitemap.xml", xml))
 
 
+def haber_haritasi(veri: list) -> int:
+    # SITE_BUGUN sabitken Türkiye takviminde bugün ve dün, gelecekteki günler hariç.
+    dun = BUGUN - timedelta(days=1)
+    satirlar = []
+    for x in veri:
+        if not dun <= date.fromisoformat(x["tarih"]) <= BUGUN:
+            continue
+        yayim = haber_yayim(x)
+        for d in DILLER:
+            dl = x["diller"].get(d)
+            if not dl:
+                continue
+            dil = "zh-cn" if d == "zh" else d
+            satirlar.append(f"  <url><loc>{SITE}{haber_url(d, x)}</loc><news:news>"
+                            f"<news:publication><news:name>{xml_kacis(MARKA)}</news:name>"
+                            f"<news:language>{dil}</news:language></news:publication>"
+                            f"<news:publication_date>{yayim}</news:publication_date>"
+                            f"<news:title>{xml_kacis(dl['baslik'])}</news:title></news:news></url>\n")
+    xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">\n'
+           + "".join(satirlar) + "</urlset>\n")
+    return int(sd.yaz(KOK / "news-sitemap.xml", xml))
+
+
+def konu_artiklarini_temizle() -> int:
+    silinen = 0
+    for klasor in ETIKET_KLASOR.values():
+        for dosya in (KOK / klasor).glob("*.html"):
+            if f"{klasor}/{dosya.name}" in URETILEN:
+                continue
+            if 'data-sayfa="konu"' in dosya.read_text(encoding="utf-8", errors="replace"):
+                dosya.unlink()
+                silinen += 1
+    return silinen
+
+
 def surum_al(yol: str) -> str:
     p = KOK / yol
     return hashlib.sha1(p.read_bytes()).hexdigest()[:8] if p.exists() else "0"
@@ -1545,6 +1799,7 @@ def derle(veri: list) -> dict:
     UYARILAR.clear()
     URETILEN.clear()
     MANIFEST.clear()
+    ESKI_HARITA.clear()
     SABIT.clear()
     SABIT.update(_json('sabit_sayfalar.json', False) or {})
     mp = KOK / "data" / "sayfalar.json"
@@ -1580,6 +1835,8 @@ def derle(veri: list) -> dict:
 
     so.bagla(sys.modules[__name__])
     so.yukle()
+    esles = etiket_eslemeleri()
+    konular = {d: konulari_topla(d, veri, esles) for d in DILLER}
     degisen = so.tema_yaz()
     for d in DILLER:
         dizin = ara_dizini(d, veri, soy, tak, [b for dd, b, _, _ in eski_gruplar if dd == d])
@@ -1589,12 +1846,16 @@ def derle(veri: list) -> dict:
 
     for d in DILLER:
         degisen += sayfa_yaz(SAYFA["ana"][d], ana_sayfa(d, veri, ind, ucr, soy, tak), esler=SAYFA["ana"])
-        degisen += sayfa_yaz(SAYFA["haber"][d], hub_sayfasi(d, veri), esler=SAYFA["haber"])
+        degisen += sayfa_yaz(SAYFA["haber"][d], hub_sayfasi(d, veri, konular[d]), esler=SAYFA["haber"])
         for x in veri:
             yollar = {dd: f"{sd.KLASOR[dd]}/{x['id']}.html" for dd in DILLER}
             vid = vs.bul(VIDEO, x["id"], d)
             vh = vs.harita_girdisi(vid, ad=x["diller"][d]["baslik"], aciklama=x["diller"][d]["ozet"], tarih=x["tarih"]) if vid else ""
-            degisen += sayfa_yaz(yollar[d], haber_sayfasi(d, x, veri), esler=yollar, lastmod=x["tarih"], video=vh)
+            degisen += sayfa_yaz(yollar[d], haber_sayfasi(d, x, veri, konular[d], esles),
+                                 esler=yollar, lastmod=haber_degisim(x, x["tarih"]), video=vh)
+        for anahtar, konu in konular[d].items():
+            yollar = {dd: konu_yol(dd, anahtar) for dd in DILLER if anahtar in konular[dd]}
+            degisen += sayfa_yaz(yollar[d], konu_sayfasi(d, konu, yollar), esler=yollar)
         degisen += sayfa_yaz(SAYFA["indirim"][d], indirim_sayfasi(d, ind), esler=SAYFA["indirim"])
         degisen += sayfa_yaz(SAYFA["ucretsiz"][d], ucretsiz_sayfasi(d, ucr, ind), esler=SAYFA["ucretsiz"])
         degisen += sayfa_yaz(SAYFA["soylenti"][d], soylenti_sayfasi(d, soy), esler=SAYFA["soylenti"])
@@ -1608,11 +1869,13 @@ def derle(veri: list) -> dict:
         degisen += sayfa_yaz(b["yol"], eski_sayfa(d, b, esler, gta), esler=esler)
     degisen += sayfa_yaz("404.html", yok_sayfasi(veri), harita=False)
     degisen += so.artiklari_temizle(URETILEN)
+    degisen += konu_artiklarini_temizle()
 
     for k in [k for k in MANIFEST if k not in URETILEN]:
         del MANIFEST[k]
     degisen += int(sd.yaz(mp, json.dumps(dict(sorted(MANIFEST.items())), ensure_ascii=False, indent=0) + "\n"))
     degisen += site_haritasi()
+    degisen += haber_haritasi(veri)
     for w in UYARILAR:
         print("UYARI:", w)
     return {"sayfa": len(URETILEN) + 1, "degisen": degisen, "soylenti": len(soy), "takvim": len(tak),

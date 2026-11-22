@@ -61,7 +61,8 @@ class DilTests(unittest.TestCase):
         from haber_hatti import yayin_dosyasi_izinli
         for path in ['rehber/minecraft.html', 'de/spiele-news/neu.html', 'nl/gamenieuws/nieuw.html',
                      'zh/youxi-xinwen/xin.html', 'ara-de.json', 'ara-nl.json', 'ara-zh.json',
-                     'de/ratgeber/minecraft.html', 'oyun/index.html']:
+                     'de/ratgeber/minecraft.html', 'oyun/index.html',
+                     'etiket/pc.html', 'en/tag/pc.html', 'news-sitemap.xml']:
             self.assertTrue(yayin_dosyasi_izinli(path), path)
         self.assertTrue(yayin_dosyasi_izinli('video/senaryo/haber-zh.json', {'video/senaryo/haber-zh.json'}))
         for path in ['tools/haber_oto.py', 'video/senaryo/haber-zh.json', '../de/test.html', 'ara-xx.json']:
@@ -101,22 +102,22 @@ class DilTests(unittest.TestCase):
         self.assertEqual(set(oto.DILLER), {'tr', 'en', 'es', 'fr', 'de', 'nl', 'zh'})
         for lang in oto.DILLER:
             x = article()
-            x['diller']['zh'] = {'baslik': '游戏更新', 'ozet': '修复存档问题。', 'metin': '游戏更新修复存档问题。' * 12}
             del x['diller'][lang]
             with self.subTest(lang=lang), self.assertRaisesRegex(ValueError, lang + ':'):
                 oto.hazirla([], [x], NOW)
 
     def test_cince_karakter_sinirlari(self):
-        for length, valid in [(99, False), (100, True), (600, True), (601, False)]:
+        for length, valid in [(159, False), (160, True), (600, True), (601, False)]:
             x = article()
-            x['diller']['zh'] = {'baslik': '游戏更新', 'ozet': '更新已发布。', 'metin': '游' * length}
+            x['diller']['zh'].update(baslik='游戏更新', ozet='更新已发布。',
+                                    metin='游' * 80 + '\n\n' + '游' * (length - 80))
             with self.subTest(length=length):
                 if valid:
                     self.assertEqual(len(oto.hazirla([], [x], NOW)[1]), 1)
                 else:
                     with self.assertRaisesRegex(ValueError, 'zh:'):
                         oto.hazirla([], [x], NOW)
-        x['diller']['zh']['metin'] = '游' * 100
+        x = article()
         x['diller']['zh']['baslik'] = '游' * 51
         with self.assertRaisesRegex(ValueError, 'zh:'):
             oto.hazirla([], [x], NOW)

@@ -167,6 +167,7 @@
     "oyun_klasor": "oyun",
     "rehber_klasor": "rehber",
     "haber_klasor": "oyun-haberleri",
+    "etiket_klasor": "etiket",
     "feed": "oyun-haberleri.xml",
     "sosyal": {
       "menu": "Oyun haberleri",
@@ -626,6 +627,7 @@
     "oyun_klasor": "en/game",
     "rehber_klasor": "en/guide",
     "haber_klasor": "en/game-news",
+    "etiket_klasor": "en/tag",
     "feed": "en/game-news.xml",
     "sosyal": {
       "menu": "Game news",
@@ -1085,6 +1087,7 @@
     "oyun_klasor": "fr/jeu",
     "rehber_klasor": "fr/guide",
     "haber_klasor": "fr/actus-jeux",
+    "etiket_klasor": "fr/sujet",
     "feed": "fr/actus-jeux.xml",
     "sosyal": {
       "menu": "Actus jeux",
@@ -1544,6 +1547,7 @@
     "oyun_klasor": "es/juego",
     "rehber_klasor": "es/guia",
     "haber_klasor": "es/noticias-juegos",
+    "etiket_klasor": "es/tema",
     "feed": "es/noticias-juegos.xml",
     "sosyal": {
       "menu": "Noticias de juegos",
@@ -2003,6 +2007,7 @@
     "oyun_klasor": "de/spiele",
     "rehber_klasor": "de/ratgeber",
     "haber_klasor": "de/spiele-news",
+    "etiket_klasor": "de/thema",
     "feed": "de/spiele-news.xml",
     "sosyal": {
       "menu": "Spiele-News",
@@ -2462,6 +2467,7 @@
     "oyun_klasor": "nl/games",
     "rehber_klasor": "nl/gids",
     "haber_klasor": "nl/gamenieuws",
+    "etiket_klasor": "nl/onderwerp",
     "feed": "nl/gamenieuws.xml",
     "sosyal": {
       "menu": "Gamenieuws",
@@ -2921,6 +2927,7 @@
     "oyun_klasor": "zh/youxi",
     "rehber_klasor": "zh/gonglue",
     "haber_klasor": "zh/youxi-xinwen",
+    "etiket_klasor": "zh/huati",
     "feed": "zh/youxi-xinwen.xml",
     "sosyal": {
       "menu": "游戏新闻",

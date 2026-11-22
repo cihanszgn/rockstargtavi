@@ -340,17 +340,17 @@ def bas_ek(t: dict | None = None) -> str:
     return h
 
 
-def _ld(veri) -> str:
-    return f'<script type="application/ld+json">{S.gom(veri)}</script>\n'
+def iz_ld(parcalar: list[tuple[str, str | None]]) -> str:
+    ld = {"@context": "https://schema.org", "@type": "BreadcrumbList",
+          "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": a, **({"item": S.tam(y)} if y else {})}
+                              for i, (a, y) in enumerate(parcalar)]}
+    return S.ld_etiket(ld)
 
 
 def _iz(dil: str, parcalar: list[tuple[str, str | None]]) -> tuple[str, str]:
     li = "".join(f'<li><a href="{S.u(y)}">{S.e(a)}</a></li>' if y else f'<li aria-current="page">{S.e(a)}</li>'
                  for a, y in parcalar)
-    ld = {"@context": "https://schema.org", "@type": "BreadcrumbList",
-          "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": a, **({"item": S.tam(y)} if y else {})}
-                              for i, (a, y) in enumerate(parcalar)]}
-    return f'<nav class="o-iz" aria-label="{S.e(T[dil]["o_iz"])}"><ol>{li}</ol></nav>', _ld(ld)
+    return f'<nav class="o-iz" aria-label="{S.e(T[dil]["o_iz"])}"><ol>{li}</ol></nav>', iz_ld(parcalar)
 
 
 def _kahraman(dil: str, o: dict, iz: str, ust: str, ana: str, vurgu: str, ozet: str, ek: str) -> str:
@@ -542,9 +542,9 @@ def rehber_sayfasi(dil: str, oid: str) -> str:
         makale["datePublished"] = makale["dateModified"] = r["guncelleme"]
     if r["kaynaklar"]:
         makale["isBasedOn"] = [k["url"] for k in r["kaynaklar"]]
-    ld = _ld(makale) + iz_ld
+    ld = S.ld_etiket(makale) + iz_ld
     if sss:
-        ld += _ld({"@context": "https://schema.org", "@type": "FAQPage",
+        ld += S.ld_etiket({"@context": "https://schema.org", "@type": "FAQPage",
                    "mainEntity": [{"@type": "Question", "name": s, "acceptedAnswer": {"@type": "Answer", "text": c}} for s, c in sss]})
     return S.kabuk(dil, yol, rd["baslik"], kisalt(tt["r_desc"].format(oyun=o["ad"], ozet=rd["ozet"])), govde, esler=esler,
                    bolum="rehberler", tip="article", ek_bas=bas_ek(t) + ld, sayfa_turu="rehber", hedefler=hedefler,
@@ -729,8 +729,10 @@ def oyunlar_dizini(dil: str, veri: list, soy: list, tak: list) -> str:
         kartlar.append(_kart(dil, o, hub_yol(dil, o["id"]), o["ad"], o["tur"][dil], kisalt(o["tanim"][dil], 130), alt,
                              tt["r_hub"], ara, kapak_ek="k" + o["id"]))
     govde = _dizin_govde(dil, "oyunlar", tt["oyunlar_h1"], tt["oyunlar_giris"], "".join(kartlar), sira, "oyun")
-    return S.kabuk(dil, SAYFA["oyunlar"][dil], tt["oyunlar_title"], tt["oyunlar_desc"], govde, esler=SAYFA["oyunlar"],
-                   bolum="oyunlar", ek_bas=bas_ek(), sayfa_turu="oyunlar")
+    yol = SAYFA["oyunlar"][dil]
+    ld = S.sayfa_ld(dil, yol, tt["oyunlar_h1"], tt["oyunlar_desc"])
+    return S.kabuk(dil, yol, tt["oyunlar_title"], tt["oyunlar_desc"], govde, esler=SAYFA["oyunlar"],
+                   bolum="oyunlar", ek_bas=ld + bas_ek(), sayfa_turu="oyunlar")
 
 
 def rehberler_dizini(dil: str) -> str:
@@ -753,8 +755,10 @@ def rehberler_dizini(dil: str) -> str:
                              alt, tt["r_oku"], ara, kapak_ek="r" + oid))
         ogeler.append(o)
     govde = _dizin_govde(dil, "rehberler", tt["rehberler_h1"], tt["rehberler_giris"], "".join(kartlar), ogeler, "rehber")
-    return S.kabuk(dil, SAYFA["rehberler"][dil], tt["rehberler_title"], tt["rehberler_desc"], govde, esler=SAYFA["rehberler"],
-                   bolum="rehberler", ek_bas=bas_ek(), sayfa_turu="rehberler")
+    yol = SAYFA["rehberler"][dil]
+    ld = S.sayfa_ld(dil, yol, tt["rehberler_h1"], tt["rehberler_desc"])
+    return S.kabuk(dil, yol, tt["rehberler_title"], tt["rehberler_desc"], govde, esler=SAYFA["rehberler"],
+                   bolum="rehberler", ek_bas=ld + bas_ek(), sayfa_turu="rehberler")
 
 
 def populer_serit(dil: str, veri: list, soy: list, tak: list) -> str:

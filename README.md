@@ -116,9 +116,11 @@ gizli başlayan her stil `.js` sınıfına bağlı (JavaScript kapalıyken büt�
 - Reklam/istatistik değişirse `gizlilik.html` güncellenir.
 
 ## SEO
-- Her sayfada `canonical`, dört dil + `x-default` (=en) `hreflang`, Open Graph/Twitter etiketleri; `sitemap.xml` `xhtml:link` ile dil karşılıklarını verir.
+- Dizinlenen sayfalarda `canonical` ve Open Graph/Twitter etiketleri bulunur. `hreflang` ile `sitemap.xml` var olan dil karşılıklarını ve birden fazla karşılık varsa `x-default` adresini verir.
 - RSS: `oyun-haberleri.xml`, `en/game-news.xml`, `fr/actus-jeux.xml`, `es/noticias-juegos.xml` (haber akışı) ve her dilde `feed.xml`.
-- Haber sayfalarında `NewsArticle`, ana sayfada `WebSite` JSON-LD. Paylaşım görseli `og.png` (1200x630, `sosyal_derle.py` üretir).
+- Haberlerde `NewsArticle` ve gezinme yolu, haber ve konu dizinlerinde `CollectionPage` ve `ItemList`, dil ana sayfalarında `WebSite` ve `Organization` kullanılır. Paylaşım görseli `og.png` (1200x630, `sosyal_derle.py` üretir), yayıncı logosu `yayinci-logo.png` dosyasıdır.
+- Konu sayfası, aynı dilde en az üç habere ulaşan oyun, platform, tür veya yazar etiketi için üretilir. İsteğe bağlı `data/etiket_esles.json` eş anlamlıları birleştirir. Haber merkezinde en çok haberli 12 konu görünür.
+- `news-sitemap.xml` Türkiye takviminde derleme günü ve önceki gün yayımlanan haberleri listeler. `SITE_BUGUN` yerel denemede iki günlük pencereyi sabitler.
 - IndexNow anahtarı kökte. Yeni haber yayınlanınca `.github/workflows/indexnow.yml` eklenen haber sayfalarını ve dil ana sayfalarını kendiliğinden bildirir (`tools/indexnow.py`; bütün site için iş akışını elle "tum" ile çalıştır).
 
 ## DNS (Hostinger)
