@@ -4,6 +4,9 @@
 Komutlar:
   py tools/ses_ornek.py liste --diller tr,en,es,fr,de,nl,zh
       Azure ses listesini çeker, verilen dillerin seslerini yazar; ses-listesi.json dosyasına da kaydeder.
+  py tools/ses_ornek.py deneme --dosya otomasyon/ses-deneme.json
+      Telaffuz denemesi: dosyadaki her {"ad", "ses", "metin"} kaydını seslendirir (ornek-cikti/deneme-<ad>.mp3).
+      Bir kelimenin hangi yazımla doğru okunduğunu gerçek sesle ölçmek içindir.
   py tools/ses_ornek.py ornek --sesler "ad1,ad2" --dil tr [--yukle]
       Her ses için o dilin sabit örnek metnini seslendirir (mp3). --yukle: videoların yüklendiği sunucuda
       ornek/ klasörüne koyar ve açık adreslerini yazar.
@@ -236,6 +239,39 @@ def ornek(sesler_metni: str, dil: str, yukle_mi: bool, klasor: Path = ORNEK_KLAS
     return 1 if hatalar else 0
 
 
+DENEME_ADI = re.compile(r"^[a-z0-9][a-z0-9-]{0,40}$")
+
+
+def deneme(dosya: Path, klasor: Path = ORNEK_KLASOR, sentez=None, cikti=print) -> int:
+    """Dosyadaki kayıtları ({"ad", "ses", "metin"}) tek tek seslendirir; bir kaydın hatası diğerlerini durdurmaz."""
+    kayitlar = json.loads(Path(dosya).read_text(encoding="utf-8"))
+    if not isinstance(kayitlar, list) or not kayitlar:
+        raise SystemExit(f"{dosya}: boş olmayan liste olmalı")
+    if sentez is None:
+        anahtar_bilgisi()
+        sentez = _deneme_sentez
+    hata = 0
+    for k in kayitlar:
+        ad, ses, metin = str(k.get("ad", "")), str(k.get("ses", "")), str(k.get("metin", ""))
+        try:
+            if not DENEME_ADI.match(ad) or not metin.strip() or len(metin) > 600:
+                raise ValueError("ad küçük harf/rakam/tire, metin 1–600 karakter olmalı")
+            sentez(ses, metin, klasor / f"deneme-{ad}.mp3")
+            cikti(f"tamam: {ad}")
+        except (Exception, SystemExit) as e:  # noqa: BLE001 - her kayıt için hatayı yazıp devam et
+            hata += 1
+            cikti(f"HATA: {ad}: {e}")
+    return 1 if hata else 0
+
+
+def _deneme_sentez(ses: str, metin: str, yol: Path) -> None:
+    sentez = v.AzureSes(ses, ses[:2])
+    yol.parent.mkdir(parents=True, exist_ok=True)
+    girdi, olay = yol.with_suffix(".girdi.json"), yol.with_suffix(".olaylar.json")
+    v.json_yaz(girdi, {"metin": metin, "konusmaci": ses, "hiz": v.HIZ, "dil": ses[:5]})
+    sentez._yardimci("azure", girdi, yol, olay, "deneme seslendirme", yol)  # noqa: SLF001
+
+
 def main(argv: list[str]) -> int:
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     alt = p.add_subparsers(dest="komut", required=True)
@@ -245,7 +281,11 @@ def main(argv: list[str]) -> int:
     o.add_argument("--sesler", required=True)
     o.add_argument("--dil", required=True, choices=sorted(ORNEK_METINLER))
     o.add_argument("--yukle", action="store_true")
+    d = alt.add_parser("deneme")
+    d.add_argument("--dosya", required=True, type=Path)
     a = p.parse_args(argv)
+    if a.komut == "deneme":
+        return deneme(a.dosya)
     if a.komut == "liste":
         return liste([d.strip().lower() for d in a.diller.split(",") if d.strip()])
     return ornek(a.sesler, a.dil, a.yukle)

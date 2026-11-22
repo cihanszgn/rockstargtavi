@@ -4,12 +4,13 @@ on:
   workflow_dispatch:
     inputs:
       mod:
-        description: "Çalışma modu (liste: hesaptaki sesler, ornek: aday seslerden örnek mp3)"
+        description: "Çalışma modu (liste: hesaptaki sesler, ornek: aday seslerden örnek mp3, deneme: otomasyon/ses-deneme.json telaffuz denemesi)"
         required: true
         type: choice
         options:
           - liste
           - ornek
+          - deneme
         default: liste
       sesler:
         description: "Örnek modunda seslendirilecek ses adları (virgülle ayrılmış, ör. tr-TR-Aydin:MAI-Voice-2.1,tr-TR-EmelNeural)"
@@ -55,7 +56,22 @@ jobs:
           python-version: "3.12"
 
       - uses: astral-sh/setup-uv@v5
-        if: inputs.mod == 'ornek'
+        if: inputs.mod != 'liste'
+
+      - name: Telaffuz denemesini seslendir
+        if: inputs.mod == 'deneme'
+        env:
+          AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
+          AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
+        run: python tools/ses_ornek.py deneme --dosya otomasyon/ses-deneme.json
+
+      - name: Deneme seslerini artefakt olarak yükle
+        if: always() && inputs.mod == 'deneme'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ses-deneme
+          path: ornek-cikti/*.mp3
+          if-no-files-found: error
 
       - name: SSH anahtarını hazırla
         if: inputs.mod == 'ornek' && inputs.yukle == true

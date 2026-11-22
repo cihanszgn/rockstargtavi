@@ -1,0 +1,127 @@
+[
+ {
+  "ad": "tr-aydin-ham",
+  "ses": "tr-TR-Aydin:MAI-Voice-2.1",
+  "metin": "Valve, Steam Machine 2TB bekleme listesini kapattı; 512GB modeli ise doğrudan satışa açıldı."
+ },
+ {
+  "ad": "tr-aydin-bosluk",
+  "ses": "tr-TR-Aydin:MAI-Voice-2.1",
+  "metin": "Valve, Steam Machine 2 TB bekleme listesini kapattı; 512 GB modeli ise doğrudan satışa açıldı."
+ },
+ {
+  "ad": "tr-aydin-birim",
+  "ses": "tr-TR-Aydin:MAI-Voice-2.1",
+  "metin": "Valve, Steam Machine 2 terabayt bekleme listesini kapattı; 512 gigabayt modeli ise doğrudan satışa açıldı."
+ },
+ {
+  "ad": "tr-aydin-yazi",
+  "ses": "tr-TR-Aydin:MAI-Voice-2.1",
+  "metin": "Valve, Steam Machine iki terabayt bekleme listesini kapattı; beş yüz on iki gigabayt modeli ise doğrudan satışa açıldı."
+ },
+ {
+  "ad": "tr-aydin-ham2",
+  "ses": "tr-TR-Aydin:MAI-Voice-2.1",
+  "metin": "Valve, Steam Machine 2TB bekleme listesini kapattı; 512GB modeli ise doğrudan satışa açıldı."
+ },
+ {
+  "ad": "tr-elif-ham",
+  "ses": "tr-TR-Elif:MAI-Voice-2.1",
+  "metin": "Valve, Steam Machine 2TB bekleme listesini kapattı; 512GB modeli ise doğrudan satışa açıldı."
+ },
+ {
+  "ad": "tr-elif-bosluk",
+  "ses": "tr-TR-Elif:MAI-Voice-2.1",
+  "metin": "Valve, Steam Machine 2 TB bekleme listesini kapattı; 512 GB modeli ise doğrudan satışa açıldı."
+ },
+ {
+  "ad": "tr-elif-birim",
+  "ses": "tr-TR-Elif:MAI-Voice-2.1",
+  "metin": "Valve, Steam Machine 2 terabayt bekleme listesini kapattı; 512 gigabayt modeli ise doğrudan satışa açıldı."
+ },
+ {
+  "ad": "tr-elif-yazi",
+  "ses": "tr-TR-Elif:MAI-Voice-2.1",
+  "metin": "Valve, Steam Machine iki terabayt bekleme listesini kapattı; beş yüz on iki gigabayt modeli ise doğrudan satışa açıldı."
+ },
+ {
+  "ad": "tr-elif-ham2",
+  "ses": "tr-TR-Elif:MAI-Voice-2.1",
+  "metin": "Valve, Steam Machine 2TB bekleme listesini kapattı; 512GB modeli ise doğrudan satışa açıldı."
+ },
+ {
+  "ad": "tr-grant-ham",
+  "ses": "tr-TR-Grant:MAI-Voice-2.1",
+  "metin": "Valve, Steam Machine 2TB bekleme listesini kapattı; 512GB modeli ise doğrudan satışa açıldı."
+ },
+ {
+  "ad": "tr-grant-bosluk",
+  "ses": "tr-TR-Grant:MAI-Voice-2.1",
+  "metin": "Valve, Steam Machine 2 TB bekleme listesini kapattı; 512 GB modeli ise doğrudan satışa açıldı."
+ },
+ {
+  "ad": "tr-grant-birim",
+  "ses": "tr-TR-Grant:MAI-Voice-2.1",
+  "metin": "Valve, Steam Machine 2 terabayt bekleme listesini kapattı; 512 gigabayt modeli ise doğrudan satışa açıldı."
+ },
+ {
+  "ad": "tr-grant-yazi",
+  "ses": "tr-TR-Grant:MAI-Voice-2.1",
+  "metin": "Valve, Steam Machine iki terabayt bekleme listesini kapattı; beş yüz on iki gigabayt modeli ise doğrudan satışa açıldı."
+ },
+ {
+  "ad": "tr-grant-ham2",
+  "ses": "tr-TR-Grant:MAI-Voice-2.1",
+  "metin": "Valve, Steam Machine 2TB bekleme listesini kapattı; 512GB modeli ise doğrudan satışa açıldı."
+ },
+ {
+  "ad": "en-ethan-ham",
+  "ses": "en-US-Ethan:MAI-Voice-2.1",
+  "metin": "Valve closed the Steam Machine 2TB waitlist while opening the 512GB model for direct purchase."
+ },
+ {
+  "ad": "en-ethan-birim",
+  "ses": "en-US-Ethan:MAI-Voice-2.1",
+  "metin": "Valve closed the Steam Machine 2 terabyte waitlist while opening the 512 gigabyte model for direct purchase."
+ },
+ {
+  "ad": "en-harper-ham",
+  "ses": "en-US-Harper:MAI-Voice-2.1",
+  "metin": "Valve closed the Steam Machine 2TB waitlist while opening the 512GB model for direct purchase."
+ },
+ {
+  "ad": "en-harper-birim",
+  "ses": "en-US-Harper:MAI-Voice-2.1",
+  "metin": "Valve closed the Steam Machine 2 terabyte waitlist while opening the 512 gigabyte model for direct purchase."
+ },
+ {
+  "ad": "en-jasper-ham",
+  "ses": "en-US-Jasper:MAI-Voice-2.1",
+  "metin": "Valve closed the Steam Machine 2TB waitlist while opening the 512GB model for direct purchase."
+ },
+ {
+  "ad": "en-jasper-birim",
+  "ses": "en-US-Jasper:MAI-Voice-2.1",
+  "metin": "Valve closed the Steam Machine 2 terabyte waitlist while opening the 512 gigabyte model for direct purchase."
+ },
+ {
+  "ad": "es-alvaro-ham",
+  "ses": "es-ES-AlvaroNeural",
+  "metin": "Valve cerró la lista de espera del Steam Machine 2TB y abrió la compra directa del modelo 512GB."
+ },
+ {
+  "ad": "es-alvaro-birim",
+  "ses": "es-ES-AlvaroNeural",
+  "metin": "Valve cerró la lista de espera del Steam Machine 2 terabytes y abrió la compra directa del modelo 512 gigabytes."
+ },
+ {
+  "ad": "fr-henri-ham",
+  "ses": "fr-FR-HenriNeural",
+  "metin": "Valve ferme la liste d'attente du Steam Machine 2TB et ouvre l'achat direct du modèle 512GB."
+ },
+ {
+  "ad": "fr-henri-birim",
+  "ses": "fr-FR-HenriNeural",
+  "metin": "Valve ferme la liste d'attente du Steam Machine 2 téraoctets et ouvre l'achat direct du modèle 512 gigaoctets."
+ }
+]
