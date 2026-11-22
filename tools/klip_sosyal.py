@@ -332,12 +332,30 @@ def aday_uret(oge_id: str, oge: dict) -> dict:
     platformlar = {k: p.get(k) is not False for k in ("instagram", "youtube")}
     return {
         "platformlar": platformlar,
+        # Cio onaylamadan önce makine onayı (`onay.otomatik`): yalnız klip, YouTube'a GİZLİ gider; Cio Studio'dan açar.
+        "otomatik_gizli": tur == "klip" and (oge.get("onay") or {}).get("otomatik") is True,
         "id": oge_id, "sosyal_tur": tur, "sosyal_anahtar": oge_id, "oyun": oge.get("oyun") or "",
         "tarih": zaman[:10], "tur": "haber", "kaynaklar": [{"ad": oge.get("yayinci") or "CTRL+A GAME", "url": oge.get("kanal_url") or ""}],
         "sayfalar": {}, "gorsel": None,
         "diller": {"tr": {"baslik": m["baslik"], "ozet": m["aciklama"], "metin": m["aciklama"], "etiketler": etiketler,
                           "ig_aciklama": ig, "yt_aciklama": yt}},
     }
+
+
+def studio_adresi(video_kimlik: str) -> str:
+    return f"https://studio.youtube.com/video/{video_kimlik}/edit"
+
+
+def bildirim_metni(gizli: list[dict]) -> str:
+    """Otomatik gizli yüklenen Shorts için Telegram mesajı. `gizli`: [{baslik, kimlik}]. Kimliği olmayan satıra Studio adresi konmaz."""
+    n = len(gizli)
+    satirlar = [f"Komixsi: {n} Shorts gizli olarak yüklendi, onayını bekliyor."]
+    for g in gizli:
+        satirlar.append("")
+        satirlar.append(f"• {g.get('baslik') or g.get('id') or '(başlıksız)'}")
+        if g.get("kimlik"):
+            satirlar.append(studio_adresi(g["kimlik"]))
+    return "\n".join(satirlar)
 
 
 def adaylar(manifest: dict, ayar: dict | None = None) -> list[dict]:

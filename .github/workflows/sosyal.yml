@@ -196,6 +196,8 @@ jobs:
           YT_KLIP_REFRESH_TOKEN: ${{ secrets.YT_KLIP_REFRESH_TOKEN }}
           IG_KLIP_USER_ID: ${{ secrets.IG_KLIP_USER_ID }}
           IG_KLIP_TOKEN: ${{ secrets.IG_KLIP_TOKEN }}
+          # Otomatik gizli klip bildirimi (Telegram, n8n webhook). Sır yoksa bildirim sessizce atlanır; adres loga yazılmaz.
+          KLIP_BILDIRIM_ADRESI: ${{ secrets.KLIP_BILDIRIM_ADRESI }}
         run: |
           args=()
           [ -n "$DENEME" ] && args+=("$DENEME")

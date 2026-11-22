@@ -84,9 +84,22 @@ class PaylasimHatasi(Exception):
     """kesin=True: sunucu isteği açıkça reddetti (4xx), hiçbir şey yayımlanmadı, yeniden denenebilir.
     kesin=False: sonuç bilinmiyor (zaman aşımı, bağlantı kopması, 5xx); paylaşım yapılmış olabilir."""
 
-    def __init__(self, mesaj: str, kesin: bool = False):
+    def __init__(self, mesaj: str, kesin: bool = False, kota: bool = False):
         super().__init__(mesaj)
         self.kesin = kesin
+        self.kota = kota  # kota/yetki sorunu (YouTube günlük kotası, yetki reddi): hata değil "sonra denenir" durumu
+
+
+def kota_mi(kod: int, metin: str) -> bool:
+    """YouTube kota ya da yetki reddi mi? (403/401 ve gövdede kota/yetki işareti.) Başka 4xx'ler bunu ETKİLEMEZ."""
+    m = (metin or "").lower()
+    if kod == 400:
+        return "invalid_grant" in m or "unauthorized_client" in m  # yenileme anahtarı iptal/süresi dolmuş
+    if kod not in (401, 403):
+        return False
+    return any(a in m for a in ("quotaexceeded", "uploadlimitexceeded", "ratelimitexceeded", "dailylimitexceeded",
+                                "insufficientpermissions", "forbidden", "invalid_grant", "unauthorized_client",
+                                "autherror", "invalid credentials", "youtubesignuprequired", "channelsuspended"))
 
 
 # ---------------------------------------------------------------- HTTP (testte yerine sahte Ag konur)
@@ -107,7 +120,8 @@ class Ag:
                 return r.status, (json.loads(ham) if ham.strip().startswith(("{", "[")) else ham)
         except urllib.error.HTTPError as h:
             ham = h.read().decode("utf-8", "replace")
-            raise PaylasimHatasi(f"{method} {url.split('?')[0]} → HTTP {h.code}: {ham[:400]}", kesin=400 <= h.code < 500) from None
+            raise PaylasimHatasi(f"{method} {url.split('?')[0]} → HTTP {h.code}: {ham[:400]}", kesin=400 <= h.code < 500,
+                                 kota=kota_mi(h.code, ham)) from None
         except (urllib.error.URLError, TimeoutError, OSError) as u:
             raise PaylasimHatasi(f"{method} {url.split('?')[0]} → bağlantı hatası: {getattr(u, 'reason', u)}") from None
 
@@ -121,7 +135,8 @@ class Ag:
             metin = h.read().decode("utf-8", "replace")
             if h.code == 308:
                 return 308, {k.lower(): v for k, v in h.headers.items()}, metin
-            raise PaylasimHatasi(f"{method} {url.split('?')[0]} → HTTP {h.code}: {metin[:400]}", kesin=400 <= h.code < 500 and h.code != 404) from None
+            raise PaylasimHatasi(f"{method} {url.split('?')[0]} → HTTP {h.code}: {metin[:400]}", kesin=400 <= h.code < 500 and h.code != 404,
+                                 kota=kota_mi(h.code, metin)) from None
         except (urllib.error.URLError, TimeoutError, OSError) as u:
             raise PaylasimHatasi(f"{method} {url.split('?')[0]} → bağlantı hatası: {getattr(u, 'reason', u)}") from None
 
@@ -491,7 +506,9 @@ def yt_govde(dil, x, link, ayar) -> dict:
             "snippet": {"title": yt_baslik(dil, x), "description": yt_aciklama(dil, x, link), "tags": yt_etiketler(dil, x),
                         "categoryId": kat if kat in YT_KATEGORILER else "20",
                         "defaultLanguage": HREFLANG[dil], "defaultAudioLanguage": HREFLANG[dil]},
-            "status": {"privacyStatus": gizlilik, "selfDeclaredMadeForKids": False, "containsSyntheticMedia": False},
+            # Otomatik onaylı klip HER ZAMAN gizli yüklenir (ortak `youtube.gizlilik` ayarından bağımsız); Cio Studio'dan açar.
+            "status": {"privacyStatus": "private" if x.get("otomatik_gizli") else gizlilik,
+                       "selfDeclaredMadeForKids": False, "containsSyntheticMedia": False},
         }
     return {
         "snippet": {"title": yt_baslik(dil, x), "description": yt_aciklama(dil, x, link), "tags": yt_etiketler(dil, x),
@@ -508,7 +525,7 @@ def yt_erisim(ag, sir) -> str:
                           "refresh_token": sir["REFRESH_TOKEN"], "grant_type": "refresh_token"})
     tok = c.get("access_token") if isinstance(c, dict) else None
     if not tok:
-        raise PaylasimHatasi(f"YouTube erişim anahtarı alınamadı: {str(c)[:200]}", kesin=True)
+        raise PaylasimHatasi(f"YouTube erişim anahtarı alınamadı: {str(c)[:200]}", kesin=True, kota=True)
     return tok
 
 
@@ -710,11 +727,17 @@ def bugunku_dil_sayisi(kayit: dict, ad: str, hesap: str, dil: str, gun: str) -> 
                and (v.get("dil") or k.split("|")[1]) == dil and _sayilir(v) and _zaman_gunu(v) == gun)
 
 
-def bugunku_tur_sayisi(kayit: dict, ad: str, hesap: str, gun: str, turler) -> int:
-    """Bugün hesapta çıkan, `sosyal_tur`u `turler` içinde olan gönderiler (klip/derleme günlük sınırı için)."""
+def bugunku_tur_sayisi(kayit: dict, ad: str, hesap: str, gun: str, turler, gizli: bool | None = None) -> int:
+    """Bugün hesapta çıkan, `sosyal_tur`u `turler` içinde olan gönderiler (klip/derleme günlük sınırı için).
+    gizli=None hepsini sayar; False yalnız herkese açık (otomatik gizli yüklemeler HAKKI YEMEZ); True yalnız otomatik gizli."""
     return sum(1 for k, v in kayit.items()
                if len(k.split("|")) == 4 and kayit_hesabi(k, v) == hesap and sinir_adi(k) == ad
-               and v.get("sosyal_tur") in turler and _sayilir(v) and _zaman_gunu(v) == gun)
+               and v.get("sosyal_tur") in turler and _sayilir(v) and _zaman_gunu(v) == gun
+               and (gizli is None or bool(v.get("gizli")) == gizli))
+
+
+def _tam_sayi(v, varsayilan: int) -> int:
+    return varsayilan if isinstance(v, bool) or not isinstance(v, int) or v < 0 else v
 
 
 def klip_ayari(ayar: dict) -> dict:
@@ -722,6 +745,11 @@ def klip_ayari(ayar: dict) -> dict:
     ara = k.get("en_az_ara_saat", 0)
     return {"gunluk_en_fazla": {**KLIP_SINIR_VARSAYILAN, **(k.get("gunluk_en_fazla") or {})},
             "derleme_gunluk_en_fazla": int(k.get("derleme_gunluk_en_fazla", 1)),
+            # Otomatik gizli yükleme (Cio onayı beklemeden, YouTube'a `private`): ana anahtar `klip.otomatik_gizli`;
+            # kapalıyken onay.otomatik işaretli klipler HİÇBİR yere gitmez. Gizliler kendi günlük sınırına tabidir.
+            "otomatik_gizli": k.get("otomatik_gizli") is True,
+            "gizli_gunluk_en_fazla": _tam_sayi(k.get("gizli_gunluk_en_fazla"), 4),
+            "gizli_calisma_basina_en_fazla": _tam_sayi(k.get("gizli_calisma_basina_en_fazla"), _tam_sayi(k.get("gizli_gunluk_en_fazla"), 4)),
             "en_az_ara_saat": 0 if isinstance(ara, bool) or not isinstance(ara, (int, float)) or ara <= 0 else float(ara),
             # Hangi platforma klip gitsin: YouTube açık, Instagram varsayılan kapalı (açılsa da ayrı IG_KLIP_* sırrı ister).
             "platformlar": {"youtube": bool(k.get("youtube", True)), "instagram_reel": bool(k.get("instagram", False))}}
@@ -733,12 +761,15 @@ def video_baglanti_yaz(manifest_yolu, klip_yolu, tur, oge_id, dil, alan, url) ->
     return vs.baglanti_yaz(manifest_yolu, oge_id, dil, alan, url)
 
 
-def son_gonderi(kayit: dict, hesap: str, ad: str) -> tuple[str, str | None, str | None]:
-    """Hesabın bu sınır adındaki en son gönderisi -> (zaman, içerik dili, konu). Yoksa ("", None, None)."""
+def son_gonderi(kayit: dict, hesap: str, ad: str, gizli_haric: bool = False) -> tuple[str, str | None, str | None]:
+    """Hesabın bu sınır adındaki en son gönderisi -> (zaman, içerik dili, konu). Yoksa ("", None, None).
+    gizli_haric=True: otomatik gizli yüklemeler sayılmaz (herkese açık paylaşımın `en_az_ara_saat` aralığını bozmasın)."""
     en = ("", None, None)
     for k, v in kayit.items():
         p = k.split("|")
         if len(p) != 4 or kayit_hesabi(k, v) != hesap or sinir_adi(k) != ad or not _sayilir(v):
+            continue
+        if gizli_haric and v.get("gizli"):
             continue
         z = v.get("zaman") or v.get("niyet_zamani") or ""
         if z >= en[0]:
@@ -912,7 +943,7 @@ def uzlastir(ag, kayit, tum, ayar, manifest_yolu, kaydet, simdi, klip_yolu=None)
 # ---------------------------------------------------------------- akış
 def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu: pathlib.Path, tum: dict, ag, dry_run: bool,
             bugun: date, simdi: datetime, cikti=print, anahtarsiz_goster: bool = False,
-            kuyruk=None, bellek=None, secildi=None, klip_yolu=None) -> tuple[int, list, list]:
+            kuyruk=None, bellek=None, secildi=None, klip_yolu=None, gizli_yuklenen: list | None = None) -> tuple[int, list, list]:
     ham = json.loads(kayit_yolu.read_text(encoding="utf-8")) if kayit_yolu.exists() else {}
     kayit, goc = kayit_goc(ham, veri) if bellek is None else (bellek, False)
     # Kütüphane çağıran eski istemciler yalnız verdikleri haberleri işler.
@@ -1120,25 +1151,41 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                 cikti(f"[DENEME] {ad}/{KLIP_HESABI}: klip hesabı anahtarı yok, klipler HİÇBİR hesaba gitmez "
                       f"({', '.join(eksik_sirlar(tum, platform, KLIP_HESABI))})")
             continue
+        # Herkese açık (Cio'nun elle onayladığı) klip: eski kurallar AYNEN (sessiz saat, en az ara, günlük sınır).
+        acik_hak = min(1, ayar.get("calisma_basina_en_fazla", 1))
         if (KLIP_HESABI, platform) in kullanilan:
-            continue
-        if klip_sessiz_saat_mi(ayar, simdi.hour):
+            acik_hak = 0
+        elif klip_sessiz_saat_mi(ayar, simdi.hour):
             cikti(f"{ad}/{KLIP_HESABI}: sessiz saat (UTC {simdi.hour}), klip bu çalışmada yayınlanmaz; sıradaki çalışmaya kalır")
+            acik_hak = 0
+        else:
+            son_z, _, _ = son_gonderi(kayit, KLIP_HESABI, ad, gizli_haric=True)
+            if son_gonderi_yakin(son_z, simdi, kayar["en_az_ara_saat"]):
+                cikti(f"{ad}/{KLIP_HESABI}: son klipten bu yana {kayar['en_az_ara_saat']} saat dolmadı, sıradaki çalışmaya kalır")
+                acik_hak = 0
+        # Otomatik gizli (`onay.otomatik`): yalnız YouTube Shorts, `private`; sessiz saate/ara saate takılmaz, herkese açık hakkını
+        # yemez, kendi günlük sınırı (`klip.gizli_gunluk_en_fazla`) vardır. Ana anahtar kapalıysa bu adaylar hiçbir yere gitmez.
+        gizli_hak = 0
+        if kayar["otomatik_gizli"] and bicim == "short":
+            gizli_hak = max(0, min(kayar["gizli_calisma_basina_en_fazla"], kayar["gizli_gunluk_en_fazla"]
+                                   - bugunku_tur_sayisi(kayit, ad, KLIP_HESABI, gun, ("klip",), gizli=True)))
+        if acik_hak <= 0 and gizli_hak <= 0:
             continue
-        son_z, _, _ = son_gonderi(kayit, KLIP_HESABI, ad)
-        if son_gonderi_yakin(son_z, simdi, kayar["en_az_ara_saat"]):
-            cikti(f"{ad}/{KLIP_HESABI}: son klipten bu yana {kayar['en_az_ara_saat']} saat dolmadı, sıradaki çalışmaya kalır")
-            continue
-        hak = min(1, ayar.get("calisma_basina_en_fazla", 1))
         for x in klipler:
-            if hak <= 0 or (KLIP_HESABI, ad) in hesap_hatasi:
+            if (KLIP_HESABI, ad) in hesap_hatasi or (acik_hak <= 0 and gizli_hak <= 0):
                 break
             tur = x["sosyal_tur"]
+            gizli_aday = bool(x.get("otomatik_gizli"))
+            if gizli_aday and gizli_hak <= 0:
+                continue
+            if not gizli_aday and acik_hak <= 0:
+                continue
             if tur == "derleme" and platform != "youtube":
                 continue  # derleme yalnız YouTube'a (normal video) gider
-            sinir_k = kayar["derleme_gunluk_en_fazla"] if tur == "derleme" else kayar["gunluk_en_fazla"].get(ad, KLIP_SINIR_VARSAYILAN.get(ad, 2))
-            if bugunku_tur_sayisi(kayit, ad, KLIP_HESABI, gun, (tur,)) >= sinir_k:
-                continue  # klip/derleme için klip hesabında ayrı günlük sınır
+            if not gizli_aday:
+                sinir_k = kayar["derleme_gunluk_en_fazla"] if tur == "derleme" else kayar["gunluk_en_fazla"].get(ad, KLIP_SINIR_VARSAYILAN.get(ad, 2))
+                if bugunku_tur_sayisi(kayit, ad, KLIP_HESABI, gun, (tur,), gizli=False) >= sinir_k:
+                    continue  # klip/derleme için klip hesabında ayrı günlük sınır (gizliler sayılmaz)
             k = anahtar(x, KLIP_HESABI, platform, bicim)
             if k in kayit or anahtar(x, KLIP_ICERIK_DILI, platform, bicim) in kayit:
                 continue  # eskiden CTRL+A GAME hesabına gitmişse yeniden paylaşılmaz
@@ -1151,7 +1198,7 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                 continue  # onay panelinde bu platform kapatılmış
             d = KLIP_ICERIK_DILI
             if dry_run:
-                cikti(f"\n[DENEME] {ad}/{KLIP_HESABI}  {x['id']}  (hesap: {KLIP_HESABI})  [{tur}]"
+                cikti(f"\n[DENEME] {ad}/{KLIP_HESABI}  {x['id']}  (hesap: {KLIP_HESABI})  [{tur}]" + ("  [otomatik gizli]" if gizli_aday else "")
                       + ("" if sir else "  (hesap şifresi yok, gerçekte atlanır)"))
                 if bicim == "reel":
                     cikti(f"video: {ig_video_adresi(video)}\nkapak: {video['kapak']}\n{ig_aciklama(d, x, ayar)}")
@@ -1161,16 +1208,24 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                     cikti(f"video: {ig_video_adresi(video)}\nbaşlık: {g['snippet']['title']}\ngizlilik: {g['status']['privacyStatus']}\n{g['snippet']['description']}")
                 rec = {"id": x["id"], "sosyal_tur": tur, "dil": KLIP_HESABI, "hesap": KLIP_HESABI,
                        "platform": platform, "bicim": bicim, "durum": "tamam", "zaman": simdi.isoformat()}
+                if gizli_aday:
+                    rec["gizli"] = True
                 kayit[k] = rec
-                kullanilan.add((KLIP_HESABI, platform))
+                if gizli_aday:
+                    gizli_hak -= 1
+                else:
+                    kullanilan.add((KLIP_HESABI, platform))
+                    acik_hak -= 1
                 if secildi:
                     secildi(k, rec)
-                hak -= 1
                 continue
             rec = {"id": x["id"], "dil": KLIP_HESABI, "hesap": KLIP_HESABI, "platform": platform, "bicim": bicim,
                    "durum": "niyet", "sosyal_tur": tur, "niyet_zamani": simdi.isoformat(timespec="seconds")}
+            if gizli_aday:
+                rec["gizli"] = True
             kayit[k] = rec
-            kullanilan.add((KLIP_HESABI, platform))
+            if not gizli_aday:
+                kullanilan.add((KLIP_HESABI, platform))
             kaydet()  # çağrıdan ÖNCE: çökse bile bir sonraki çalışma çift paylaşmaz
 
             def ara(rec=rec, **alan):
@@ -1185,16 +1240,25 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                 if h.kesin:
                     del kayit[k]  # sunucu açıkça reddetti, yayımlanmadı: sonra yeniden denenir
                     kaydet()
-                hatalar.append(f"{ad}/{KLIP_HESABI} {x['id']}: {h}" + ("" if h.kesin else "  [sonuç belirsiz; sonraki çalışmada platformdan sorgulanır]"))
+                if gizli_aday and h.kota and h.kesin:
+                    # Kota/yetki sorunu hata DEĞİL: tur kırmızıya düşmez, kalıcı hata yazılmaz; klip sonraki çalışmada yeniden denenir.
+                    cikti(f"UYARI {ad}/{KLIP_HESABI} {x['id']}: YouTube kota/yetki sorunu, otomatik gizli yükleme sonraki çalışmaya kaldı: {str(h)[:300]}")
+                else:
+                    hatalar.append(f"{ad}/{KLIP_HESABI} {x['id']}: {h}" + ("" if h.kesin else "  [sonuç belirsiz; sonraki çalışmada platformdan sorgulanır]"))
                 hesap_hatasi.add((KLIP_HESABI, ad))
                 break
             _tamamla(rec, sonuc, simdi)
             kaydet()
             if sonuc.get("url"):
                 video_baglanti_yaz(manifest_yolu, klip_yolu, tur, x["id"], d, "instagram" if bicim == "reel" else "youtube", sonuc["url"])
-            cikti(f"Paylaşıldı: {ad}/{KLIP_HESABI} {x['id']} {sonuc.get('url') or sonuc.get('kimlik')}")
+            cikti(f"Paylaşıldı: {ad}/{KLIP_HESABI} {x['id']} {sonuc.get('url') or sonuc.get('kimlik')}" + (" [gizli]" if gizli_aday else ""))
             gonderilen += 1
-            hak -= 1
+            if gizli_aday:
+                gizli_hak -= 1
+                if gizli_yuklenen is not None:
+                    gizli_yuklenen.append({"id": x["id"], "baslik": x["diller"][KLIP_ICERIK_DILI]["baslik"], "kimlik": sonuc.get("kimlik")})
+            else:
+                acik_hak -= 1
     return gonderilen, hatalar, atlanan
 
 
@@ -1440,13 +1504,17 @@ def main(argv=None) -> int:
     veri = json.loads(ICERIK.read_text(encoding="utf-8"))
     simdi = datetime.now(timezone.utc)
     kuyruk = sk.adaylar(veri, KOK, ayar, simdi.date(), simdi)
+    gizli_yuklenen: list = []
     gonderilen, hatalar, atlanan = calistir(ayar, veri, kayit_yolu=KAYIT, manifest_yolu=vs.MANIFEST_YOLU, tum=sirlari_oku(), ag=Ag(),
                                             dry_run=a.dry_run, bugun=simdi.date(), simdi=simdi,
                                             anahtarsiz_goster=a.anahtarsiz_goster, kuyruk=kuyruk,
-                                            klip_yolu=pathlib.Path(a.klip_manifest) if a.klip_manifest else None)
+                                            klip_yolu=pathlib.Path(a.klip_manifest) if a.klip_manifest else None,
+                                            gizli_yuklenen=gizli_yuklenen)
     if atlanan and not a.dry_run:
         print("Anahtar yok, atlandı: " + ", ".join(atlanan))
     print(f"Bitti: {gonderilen} gönderi.")
+    if gizli_yuklenen and not a.dry_run:
+        klip_bildirimi_gonder(gizli_yuklenen)  # tur sonunda tek mesaj; hata turu düşürmez
     if not a.dry_run:
         # Önceki turlarda yüklenip dikey kapağı oluşmamış Shorts'ları onar (en iyi çaba; paylaşım sonucunu etkilemez).
         try:
@@ -1458,6 +1526,42 @@ def main(argv=None) -> int:
         print("HATALAR:\n  " + "\n  ".join(hatalar))
         return 1
     return 0
+
+
+BILDIRIM_SIRRI = "KLIP_BILDIRIM_ADRESI"
+
+
+def _json_gonder(adres: str, govde: dict, zaman: float = 20) -> int:
+    """JSON POST (yalnız standart kütüphane). Adres hata iletisine/loga ASLA yazılmaz. -> HTTP durum kodu; ağ hatasında OSError."""
+    req = urllib.request.Request(adres, data=json.dumps(govde).encode("utf-8"), method="POST",
+                                 headers={"Content-Type": "application/json", "User-Agent": UA})
+    try:
+        with urllib.request.urlopen(req, timeout=zaman) as r:
+            return r.status
+    except urllib.error.HTTPError as h:
+        return h.code
+
+
+def klip_bildirimi_gonder(gizli: list[dict], ortam=None, cikti=print, gonder=None) -> bool:
+    """Otomatik gizli yüklenen Shorts için tek Telegram mesajı (n8n webhook, sır KLIP_BILDIRIM_ADRESI).
+    Yükleme yoksa mesaj yok; sır yoksa sessizce atlanır; hata turu DÜŞÜRMEZ (uyarı loglanır, adres yazılmaz). -> gönderildi mi"""
+    gizli = [g for g in (gizli or []) if g.get("kimlik")]
+    if not gizli:
+        return False
+    adres = ((os.environ if ortam is None else ortam).get(BILDIRIM_SIRRI) or "").strip()
+    if not adres.startswith(("http://", "https://")):
+        cikti(f"UYARI: Telegram bildirimi atlandı ({BILDIRIM_SIRRI} sırrı yok); {len(gizli)} gizli Shorts yüklendi.")
+        return False
+    try:
+        kod = (gonder or _json_gonder)(adres, {"metin": ks.bildirim_metni(gizli)[:3500]})
+    except Exception as h:  # noqa: BLE001 — bildirim hatası turu düşürmez; adres hata metnine sızmasın diye yalnız tür yazılır
+        cikti(f"UYARI: Telegram bildirimi gönderilemedi ({type(h).__name__}); {len(gizli)} gizli Shorts yüklendi.")
+        return False
+    if 200 <= kod < 300:
+        cikti(f"KLIP_BILDIRIM: gönderildi ({len(gizli)} gizli Shorts)")
+        return True
+    cikti(f"UYARI: Telegram bildirimi gönderilemedi (HTTP {kod}); {len(gizli)} gizli Shorts yüklendi.")
+    return False
 
 
 def selftest() -> int:
