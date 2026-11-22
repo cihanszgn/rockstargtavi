@@ -7,15 +7,22 @@
   py tools/klip_yayin.py geri-cek 3             onayı geri alır (sunucudaki dosya silinmez)
   py tools/klip_yayin.py yukle [--kuru]         onaylı klipleri medya sunucusuna yükler (--kuru: yalnız yazdırır)
   py tools/klip_yayin.py durum                  manifestin özeti
+  py tools/klip_yayin.py otomatik-gizli [--kuru] [--en-cok N]   (sosyal/ayarlar.json klip.otomatik_gizli açıkken) Cio onayını beklemeden
+                                                yeni klipleri onay.otomatik=true ile onaylar, sunucuya yükler, klipler.json'ı push eder, sosyal.yml
+                                                turunu başlatır (YouTube'a HER ZAMAN gizli) ve en az 1 gizli Shorts yüklendiyse Telegram'a tek mesaj yollar.
+                                                Gizliyi herkese açmak Cio'nun işidir (YouTube Studio). Günlük otomatik klip işinin sonunda kendiliğinden çalışır.
   py tools/klip_yayin.py sayfa [--kapi 8765] [--acma]   yerel onay sayfası: Onayla / Onayı geri al düğmeleri
                                                 (yalnız 127.0.0.1; yükleme ya da paylaşım yapmaz; --acma tarayıcıyı AÇMAZ)
 
 Onaysız hiçbir klip paylaşılmaz: sosyal_yayinla.py yalnız `onay` + `yayinda` kaydı geçerli olan öğeleri görür.
+(`onay.otomatik: true` onayı yalnız gizli yüklemeye gider; elle onay her zaman eskisi gibi herkese açık akıştır.)
 Onay, onay anındaki paket+mp4 özetine bağlıdır; dosya sonradan değişirse `yukle` onayı düşürür.
 """
 from __future__ import annotations
 
 import argparse
+import copy
+import datetime
 import hmac
 import html
 import http.server
@@ -36,10 +43,12 @@ import webbrowser
 KOK = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(KOK / "tools"))
 import klip_duzenle as kd  # noqa: E402
+import klip_kilit as kk  # noqa: E402
 import klip_panel_ui as ui  # noqa: E402
 import klip_sosyal as ks  # noqa: E402
 import klip_yayincilar as ky_y  # noqa: E402
 import klip_yayinla as ky_l  # noqa: E402
+import sosyal_yayinla as sy  # noqa: E402
 import klip_yayinci_ui as yui  # noqa: E402
 import yayin_klip as yk  # noqa: E402
 
@@ -654,7 +663,8 @@ def hedef_coz(token: str, ogeler: list[dict], kayit: dict) -> dict:
 
 
 # ---------------------------------------------------------------- onayla / geri-çek
-def onayla_bir(o: dict, ogeler: list[dict], manifest: dict, kucuk_no: int | None, ayar: dict) -> str:
+def onayla_bir(o: dict, ogeler: list[dict], manifest: dict, kucuk_no: int | None, ayar: dict, otomatik: bool = False) -> str:
+    """otomatik=True: Cio'nun elle onayı yerine `onay.otomatik` işaretli onay (YouTube'a yalnız GİZLİ yüklenir; bkz. otomatik_gizli)."""
     if o["tur"] == "derleme":
         kucuk = kucuk_resim_sec(o, kucuk_no)
     else:
@@ -676,7 +686,8 @@ def onayla_bir(o: dict, ogeler: list[dict], manifest: dict, kucuk_no: int | None
     # platform seçimi yalnız varsayılandan farklıysa manifeste yazılır (yoksa her platform açık sayılır)
     pl = o.get("platformlar")
     pl_yaz = dict(pl) if pl and pl != kd.varsayilan_platformlar(o["tur"]) else None
-    if ks.onay_gecerli(eski) and eski["onay"]["ozet"] == ozet and eski.get("metin") == metin and eski.get("platformlar") == pl_yaz:
+    if (ks.onay_gecerli(eski) and eski["onay"]["ozet"] == ozet and eski.get("metin") == metin and eski.get("platformlar") == pl_yaz
+            and bool(eski["onay"].get("otomatik")) == otomatik):  # elle onay, otomatik gizli onayı AÇIĞA çevirir (ve tersi yapılmaz)
         return f"{o['id']}: zaten onaylı"
     yeni = {k: v for k, v in eski.items() if k in ("instagram", "youtube")}  # eski bağlantılar kalır (çift paylaşımı önler)
     yeni.update({
@@ -684,12 +695,16 @@ def onayla_bir(o: dict, ogeler: list[dict], manifest: dict, kucuk_no: int | None
         "sure": o.get("sure"), "yayin_tarihi": o["yayin_tarihi"], "metin": metin,
         "onay": {"zaman": ks.simdi_iso(), "ozet": ozet, "metin_ozeti": ks.metin_ozeti(metin)},
     })
+    if otomatik:
+        yeni["onay"]["otomatik"] = True
+        yeni["otomatik"] = True  # kayıt otomatik akışın: onayı düşse bile yalnız bu işaretle yeniden otomatik onaylanır
     if kucuk is not None:
         yeni["onay"]["kucuk_resim"] = kucuk.name
     if pl_yaz is not None:
         yeni["platformlar"] = pl_yaz
+    yeni.pop("otomatik_red", None)
     manifest["ogeler"][o["id"]] = yeni
-    return f"{o['id']}: onaylandı"
+    return f"{o['id']}: " + ("otomatik onaylandı (gizli)" if otomatik else "onaylandı")
 
 
 def komut_onayla(args) -> int:
@@ -716,6 +731,7 @@ def geri_cek_oge(oge_id: str, manifest: dict) -> str:
     if not kayit_oge or not kayit_oge.get("onay"):
         return f"{oge_id}: zaten onaylı değil"
     kayit_oge.pop("onay")
+    kayit_oge["otomatik_red"] = True  # Cio geri çekti: otomatik gizli akışı bu klibi bir daha onaylamaz (elle onay bunu temizler)
     return f"{oge_id}: onay geri çekildi (sunucudaki dosyalar silinmedi; paylaşılmış gönderi varsa elle kaldırılır)"
 
 
@@ -1555,6 +1571,309 @@ def komut_yukle(args) -> int:
     return hata
 
 
+# ---------------------------------------------------------------- otomatik gizli (Cio onayı beklenmez; YouTube'a yalnız GİZLİ)
+BILDIRIM_SUNUCU = "oracle"                           # ssh takma adı (medya sunucusuyla aynı)
+BILDIRIM_ADRES_DOSYASI = "/home/haberci/.bildirim-adresi"   # n8n webhook adresi YALNIZ sunucuda durur; buraya/loga/rapora yazılmaz
+BILDIRIM_SON_GUN = 3                                 # gönderilenler kaydında yalnız son N günün gizli yüklemeleri bildirilir
+CALISMA_BEKLE_DK = 20                                # `sosyal.yml` turunu en çok bu kadar bekler (0: bekleme)
+GITHUB_ISLEM_ZAMAN_ASIMI = 120
+
+
+def _git(*arg: str, zaman_asimi: float = 300) -> subprocess.CompletedProcess:
+    return ky_l._kos(["git", *arg], zaman_asimi, KOK)
+
+
+def _gh(*arg: str, zaman_asimi: float = GITHUB_ISLEM_ZAMAN_ASIMI) -> subprocess.CompletedProcess:
+    gh = shutil.which("gh")
+    if not gh:
+        raise Hata("gh (GitHub CLI) bulunamadı")
+    return ky_l._kos([gh, *arg], zaman_asimi, KOK)
+
+
+def _uyu(saniye: float) -> None:
+    time.sleep(saniye)
+
+
+def bildirilen_yolu() -> pathlib.Path:
+    return onay_dizini() / "bildirilen.json"
+
+
+def bildirilenleri_oku() -> set[str]:
+    ham = json_oku(bildirilen_yolu()) or {}
+    return {str(x) for x in (ham.get("anahtarlar") or [])}
+
+
+def bildirilenleri_yaz(kume: set[str]) -> None:
+    yol = bildirilen_yolu()
+    yol.parent.mkdir(parents=True, exist_ok=True)
+    yol.write_text(json.dumps({"anahtarlar": sorted(kume)[-500:]}, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+def gonderilenler_oku() -> dict:
+    """Paylaşım kaydı (Actions yazar): önce origin/main'deki güncel hâli, olmazsa yerel dosya."""
+    try:
+        _git("fetch", "--quiet", "origin", "main")
+        r = _git("show", "origin/main:sosyal/gonderilenler.json")
+        if r.returncode == 0:
+            ham = json.loads(r.stdout)
+            if isinstance(ham, dict):
+                return ham
+    except (OSError, ValueError, subprocess.SubprocessError):
+        pass
+    return json_oku(sy.KAYIT) or {}
+
+
+def otomatik_bekleyenler(manifest: dict) -> list[str]:
+    """Otomatik onaylı (geçerli) ve YouTube'a henüz paylaşılmamış öğeler: yüklenmiş ya da yüklenecek, günlük gizli hakkını kullanacaklar."""
+    return sorted(i for i, e in (manifest.get("ogeler") or {}).items()
+                  if (e.get("onay") or {}).get("otomatik") is True and ks.onay_gecerli(e) and not e.get("youtube"))
+
+
+def otomatik_sec(ogeler: list[dict], manifest: dict, sosyal: dict, kayit: dict, gun: str, ayar: dict,
+                 en_cok: int | None = None) -> tuple[list[dict], list[str]]:
+    """Otomatik onaylanacak klipleri seçer ve MANIFESTE işler (kuru çalışmada kopya verilir). En yeni yayın önce.
+    Hak = gizli günlük sınır − bugün yüklenen gizli − onaylı ama henüz paylaşılmamış otomatik; `en_cok` ile de kısılır.
+    Cio'nun kararı korunur: manifestte kaydı olan klip yalnız KENDİ otomatik kaydıysa (ve geri çekilmediyse) yeniden onaylanır.
+    -> (onaylananlar, atlama notları)"""
+    k = sy.klip_ayari(sosyal)
+    kullanilan = sy.bugunku_tur_sayisi(kayit, "youtube", ks.KLIP_HESABI, gun, ("klip",), gizli=True)
+    hak = k["gizli_gunluk_en_fazla"] - kullanilan - len(otomatik_bekleyenler(manifest))
+    if en_cok is not None:
+        hak = min(hak, en_cok)
+    secilen: list[dict] = []
+    notlar: list[str] = []
+    for o in ogeler:
+        if hak <= 0:
+            break
+        if o["tur"] != "klip" or o["yok_notu"]:
+            continue
+        e = (manifest.get("ogeler") or {}).get(o["id"])
+        if e is not None and (e.get("otomatik") is not True or e.get("otomatik_red")):
+            continue  # Cio'nun onayladığı/geri çektiği/düzenleyip düşürdüğü kayıt: otomatik akış dokunmaz
+        e = e or {}
+        if ks.onay_gecerli(e) or e.get("beklet") or e.get("youtube"):
+            continue
+        if (o.get("platformlar") or {}).get("youtube") is False:
+            continue
+        if o["kufur"]:
+            notlar.append(f"{o['id']}: küfür uyarısı var, otomatik onaylanmadı")
+            continue
+        try:
+            onayla_bir(o, ogeler, manifest, None, ayar, otomatik=True)
+        except (Hata, RuntimeError, OSError) as h:
+            notlar.append(str(h))
+            continue
+        secilen.append(o)
+        hak -= 1
+    return secilen, notlar
+
+
+def manifesti_gonder(yol: pathlib.Path, mesaj: str) -> bool:
+    """`klipler.json` commit + `pull --rebase` + push (panel düğmesiyle aynı adımlar). -> commit atıldı mı"""
+    r = _git("add", "--", str(yol))
+    if r.returncode != 0:
+        raise Hata(f"git add başarısız: {ky_l._son_satirlar(r)}")
+    degisti = _git("diff", "--cached", "--quiet", "--", str(yol)).returncode != 0
+    if degisti:
+        r = _git("commit", "-m", mesaj, "--", str(yol))
+        if r.returncode != 0:
+            raise Hata(f"git commit başarısız: {ky_l._son_satirlar(r)}")
+    r = _git("pull", "--rebase", "--autostash")
+    if r.returncode != 0:
+        ayrinti = ky_l._son_satirlar(r)
+        _git("rebase", "--abort")
+        raise Hata(f"git pull --rebase başarısız, rebase iptal edildi, commit yerelde duruyor: {ayrinti}")
+    r = _git("push")
+    if r.returncode != 0:
+        raise Hata(f"git push başarısız: {ky_l._son_satirlar(r)}")
+    return degisti
+
+
+def paylasim_turu_baslat() -> int | None:
+    """`gh workflow run sosyal.yml` (klipler.json push'u turu kendiliğinden tetiklemez). -> yeni turun kimliği (bulunamazsa None)."""
+    t0 = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(seconds=30)
+    r = _gh("workflow", "run", "sosyal.yml", "--ref", "main")
+    if r.returncode != 0:
+        raise Hata(f"gh workflow run başarısız: {ky_l._son_satirlar(r)}")
+    for _ in range(12):
+        _uyu(5)
+        r = _gh("run", "list", "--workflow", "sosyal.yml", "--event", "workflow_dispatch", "--limit", "5",
+                "--json", "databaseId,createdAt")
+        try:
+            tur = json.loads(r.stdout or "[]")
+        except ValueError:
+            continue
+        for x in tur:
+            try:
+                zaman = datetime.datetime.fromisoformat(str(x["createdAt"]).replace("Z", "+00:00"))
+            except (KeyError, ValueError):
+                continue
+            if zaman >= t0:
+                return int(x["databaseId"])
+    return None
+
+
+def paylasim_turu_bekle(tur_id: int, dakika: int) -> str | None:
+    """Tur bitene dek bekler. -> sonuç ('success', 'failure', …) ya da zaman aşımında None"""
+    bitis = time.monotonic() + dakika * 60
+    while True:
+        r = _gh("run", "view", str(tur_id), "--json", "status,conclusion")
+        try:
+            d = json.loads(r.stdout or "{}")
+        except ValueError:
+            d = {}
+        if d.get("status") == "completed":
+            return str(d.get("conclusion") or "")
+        if time.monotonic() > bitis:
+            return None
+        _uyu(20)
+
+
+def paylasim_turu_satirlari(tur_id: int) -> list[str]:
+    """Turun logundan yalnız ilgili satırlar (gizli paylaşım, uyarı, bildirim işareti). Adres/sır zaten loga yazılmaz."""
+    r = _gh("run", "view", str(tur_id), "--log", zaman_asimi=300)
+    cikti = []
+    for s in (r.stdout or "").splitlines():
+        s = s.split("\t")[-1].strip()
+        if "[gizli]" in s or "KLIP_BILDIRIM" in s or s.startswith("UYARI") or "Telegram" in s:
+            cikti.append(s[:300])
+    return cikti
+
+
+def telegram_gonder(metin: str) -> bool:
+    """Mesajı sunucu üzerinden n8n webhook'una yollar: adres yalnız sunucuda okunur (buraya hiç gelmez); stderr yazdırılmaz."""
+    ssh = shutil.which("ssh")
+    if not ssh:
+        return False
+    govde = json.dumps({"metin": metin[:3500]}, ensure_ascii=False).encode("utf-8")
+    komut = ('curl -sS -m 20 -o /dev/null -w "%{http_code}" -X POST -H "Content-Type: application/json; charset=utf-8" '
+             f'--data-binary @- "$(sudo -n cat {BILDIRIM_ADRES_DOSYASI})"')
+    try:
+        kos = subprocess.run([ssh, "-o", "BatchMode=yes", "-o", "ConnectTimeout=15", BILDIRIM_SUNUCU, komut],
+                             input=govde, capture_output=True, timeout=60)
+    except (OSError, subprocess.SubprocessError):
+        return False
+    kod = (kos.stdout or b"").decode("utf-8", "replace").strip()
+    return kos.returncode == 0 and kod.startswith("2")
+
+
+def gizli_bildirimleri(kayit: dict, manifest: dict, bildirilen: set[str], bugun: datetime.date) -> list[dict]:
+    """Gizli yüklenmiş (paylaşıldı kaydı tamam, Studio kimliği var) ve henüz bildirilmemiş Shorts'lar. Son BILDIRIM_SON_GUN gün."""
+    sinir = (bugun - datetime.timedelta(days=BILDIRIM_SON_GUN)).isoformat()
+    cikti = []
+    for k, v in sorted(kayit.items()):
+        if (len(k.split("|")) != 4 or not v.get("gizli") or v.get("sosyal_tur") != "klip" or v.get("platform") != "youtube"
+                or v.get("durum") != "tamam" or not v.get("kimlik") or k in bildirilen):
+            continue
+        zaman = str(v.get("zaman") or v.get("niyet_zamani") or "")
+        if zaman[:10] < sinir:
+            continue
+        baslik = ((manifest.get("ogeler") or {}).get(v.get("id")) or {}).get("metin", {}).get("baslik") or v.get("id")
+        cikti.append({"anahtar": k, "id": v.get("id"), "baslik": baslik, "kimlik": v["kimlik"], "zaman": zaman})
+    return cikti
+
+
+def gizli_bildir(manifest: dict, tur_basi: str | None, tur_satirlari: list[str], cikti=print) -> int:
+    """Bildirilmemiş gizli Shorts için TEK Telegram mesajı. Actions turu zaten gönderdiyse (log işareti) onlar tekrar yollanmaz.
+    Hata turu/komutu düşürmez. -> mesajda bildirilen Shorts sayısı"""
+    bildirilen = bildirilenleri_oku()
+    bekleyen = gizli_bildirimleri(gonderilenler_oku(), manifest, bildirilen, datetime.datetime.now(datetime.timezone.utc).date())
+    if tur_basi and any("KLIP_BILDIRIM: gönderildi" in s for s in tur_satirlari):
+        bu_tur = [b for b in bekleyen if b["zaman"] >= tur_basi]
+        bildirilen |= {b["anahtar"] for b in bu_tur}
+        bekleyen = [b for b in bekleyen if b not in bu_tur]
+        bildirilenleri_yaz(bildirilen)
+        cikti(f"Telegram: {len(bu_tur)} Shorts için bildirimi GitHub turu zaten gönderdi")
+    if not bekleyen:
+        cikti("Telegram: bildirilecek yeni gizli Shorts yok, mesaj gitmedi")
+        return 0
+    if not telegram_gonder(ks.bildirim_metni(bekleyen)):
+        cikti(f"UYARI: Telegram bildirimi gönderilemedi ({len(bekleyen)} gizli Shorts yüklendi); sonraki çalışmada yeniden denenir")
+        return 0
+    bildirilenleri_yaz(bildirilen | {b["anahtar"] for b in bekleyen})
+    cikti(f"TELEGRAM: gönderildi ({len(bekleyen)} gizli Shorts)")
+    return len(bekleyen)
+
+
+def komut_otomatik_gizli(args) -> int:
+    """Cio onayını beklemeden: yeni klipleri otomatik onayla -> medya sunucusuna yükle -> klipler.json commit+push -> sosyal.yml turu
+    (YouTube'a HER ZAMAN gizli) -> tur sonunda tek Telegram mesajı. Yalnız `sosyal/ayarlar.json` klip.otomatik_gizli açıkken."""
+    sosyal = sosyal_ayar_oku()
+    if not sy.klip_ayari(sosyal)["otomatik_gizli"]:
+        print("otomatik gizli kapalı (sosyal/ayarlar.json → klip.otomatik_gizli); bir şey yapılmadı")
+        return 0
+    if args.en_cok is not None and args.en_cok < 1:
+        raise Hata("--en-cok en az 1 olmalı")
+    d = yk.calisma_dizini()
+    yol = manifest_yolu(args.manifest)
+    kilit = None
+    if not args.kuru:
+        kilit = kk.Kilit(d, "otomatik gizli onay+yükleme")
+        try:
+            kilit.al()
+        except kk.KilitDolu as e:
+            print(f"ATLANDI: başka klip işi çalışıyor ({e.sahip}); sonraki çalışmada denenir")
+            return 0
+    hata = 0
+    try:
+        ayar = ayar_oku()
+        ogeler = tara(d, ayar)
+        manifest = ks.yukle(yol)
+        kayit = gonderilenler_oku()
+        gun = ks.simdi_iso()[:10]
+        calisma = copy.deepcopy(manifest) if args.kuru else manifest
+        secilen, notlar = otomatik_sec(ogeler, calisma, sosyal, kayit, gun, ayar, args.en_cok)
+        for n in notlar:
+            print(f"ATLANDI {n}")
+        etiket = "[kuru] " if args.kuru else ""
+        for o in secilen:
+            print(f"{etiket}otomatik onay: {o['id']}  {o['yayinci']} / {o['oyun']}  \"{o['metin']['baslik']}\"")
+        bekleyen = otomatik_bekleyenler(calisma)
+        yuklenecek = [i for i in bekleyen if not ks.yayinda_gecerli(calisma["ogeler"][i])]
+        k = sy.klip_ayari(sosyal)
+        print(f"{etiket}bugün gizli yüklenen: {sy.bugunku_tur_sayisi(kayit, 'youtube', ks.KLIP_HESABI, gun, ('klip',), gizli=True)}"
+              f"/{k['gizli_gunluk_en_fazla']}; yeni onaylanan: {len(secilen)}; paylaşılmayı bekleyen: {len(bekleyen)}; "
+              f"sunucuya yüklenecek: {len(yuklenecek)}")
+        if args.kuru:
+            print("[kuru] yükleme, commit, push, GitHub turu ve Telegram yapılmadı")
+            return 0
+        if secilen:
+            ks.kaydet(manifest, yol)
+        if yuklenecek:
+            hata = komut_yukle(argparse.Namespace(manifest=args.manifest, hedef=args.hedef, kuru=False, idler=yuklenecek))
+    finally:
+        if kilit is not None:
+            kilit.birak()
+    manifest = ks.yukle(yol)
+    hazir = [i for i in otomatik_bekleyenler(manifest) if ks.yayinda_gecerli(manifest["ogeler"][i])]
+    tur_basi = None
+    tur_satirlari: list[str] = []
+    try:
+        if manifesti_gonder(yol, f"klipler: {len(hazir) or len(secilen)} klip otomatik onaylandı (gizli yükleme)"):
+            print("klipler.json commit edildi ve GitHub'a gönderildi")
+        if hazir:
+            tur_basi = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S")
+            tur_id = paylasim_turu_baslat()
+            if tur_id is None:
+                print("UYARI: başlatılan GitHub turu bulunamadı; saatlik tur paylaşımı yapar")
+            else:
+                print(f"GitHub turu başladı: {tur_id}")
+                if args.calisma_bekle > 0:
+                    sonuc = paylasim_turu_bekle(tur_id, args.calisma_bekle)
+                    print(f"GitHub turu sonucu: {sonuc or 'beklenirken zaman aşımı'}")
+                    tur_satirlari = paylasim_turu_satirlari(tur_id) if sonuc else []
+                    for s in tur_satirlari:
+                        print(f"  tur: {s}")
+    except (Hata, subprocess.SubprocessError, OSError) as e:
+        print(f"HATA: {e}")
+        hata = 1
+    try:
+        gizli_bildir(ks.yukle(yol), tur_basi, tur_satirlari)
+    except (Hata, OSError, ValueError, subprocess.SubprocessError) as e:  # bildirim hatası komutu düşürmez
+        print(f"UYARI: Telegram adımı tamamlanamadı: {type(e).__name__}")
+    return hata
+
+
 def komut_durum(args) -> int:
     manifest = ks.yukle(manifest_yolu(args.manifest))
     sayac = {"onayli": 0, "yayinda": 0, "paylasilan": 0, "dusen": 0}
@@ -1592,6 +1911,11 @@ def ana(argv=None) -> int:
     p.add_argument("--hedef", help="kullanici@sunucu:/yol/ (varsayılan oracle:/var/www/medya/v/; KLIP_YUKLEME_HEDEFI)")
     p.add_argument("idler", nargs="*", help="yalnız bu öğe kimlikleri")
     alt.add_parser("durum", help="manifest özeti")
+    p = alt.add_parser("otomatik-gizli", help="Cio onayını beklemeden: otomatik onayla, yükle, push, GitHub turu, Telegram (YouTube'a yalnız gizli)")
+    p.add_argument("--kuru", action="store_true", help="hiçbir şey yazmaz/yüklemez/göndermez; yalnız neyin onaylanacağını yazdırır")
+    p.add_argument("--en-cok", type=int, default=None, help="bu çalışmada en çok kaç YENİ klip onaylansın (günlük gizli sınır yine geçerli)")
+    p.add_argument("--hedef", help="kullanici@sunucu:/yol/ (varsayılan oracle:/var/www/medya/v/)")
+    p.add_argument("--calisma-bekle", type=int, default=CALISMA_BEKLE_DK, help=f"GitHub turunu en çok kaç dakika beklesin (varsayılan {CALISMA_BEKLE_DK}; 0: bekleme)")
     p = alt.add_parser("sayfa", help="yerel onay sayfası (Onayla / Onayı geri al düğmeleri); yalnız 127.0.0.1")
     p.add_argument("--kapi", type=int, default=KAPI_VARSAYILAN, help=f"kapı numarası (varsayılan {KAPI_VARSAYILAN}; doluysa sıradaki boş kapı)")
     p.add_argument("--acma", action="store_true", help="tarayıcıyı otomatik AÇMA (varsayılan: açar)")
@@ -1599,7 +1923,7 @@ def ana(argv=None) -> int:
     a = ap.parse_args(argv)
     try:
         return {"liste": komut_liste, "onayla": komut_onayla, "geri-cek": komut_geri_cek, "yukle": komut_yukle,
-                "durum": komut_durum, "sayfa": komut_sayfa}[a.komut](a)
+                "durum": komut_durum, "sayfa": komut_sayfa, "otomatik-gizli": komut_otomatik_gizli}[a.komut](a)
     except Hata as e:
         print(f"HATA: {e}")
         return 1

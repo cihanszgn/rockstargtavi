@@ -21,6 +21,9 @@ class Otomatik(unittest.TestCase):
                   mock.patch.object(ko, "CALISMA", self.kok / "calisma")):
             m.start()
             self.addCleanup(m.stop)
+        # gerçek otomatik gizli adımı (yükleme/push) hiçbir testte çalışmasın
+        self.gizli = mock.patch.object(ko, "otomatik_gizli_calistir", return_value=0).start()
+        self.addCleanup(mock.patch.stopall)
 
     def log_son(self):
         yol = next((self.kok / "gunluk").glob("klip-*.log"))
@@ -46,6 +49,32 @@ class Otomatik(unittest.TestCase):
         son = self.log_son()
         self.assertTrue(son[-1].endswith("0 yeni klip onay bekliyor"))
         self.assertTrue(any("atlandı" in s for s in son))
+
+    def test_gizli_adim_uretimden_sonra_kilit_birakilinca_calisir(self):
+        durum = {}
+
+        def gizli(log):
+            durum["kilit_var"] = (self.kok / "calisma" / kk.KILIT_ADI).exists()
+            return 0
+        with mock.patch.object(ko, "yayinci_calistir", lambda ad, log: 1), mock.patch.object(ko, "otomatik_gizli_calistir", gizli):
+            self.assertEqual(ko.main(), 0)
+        self.assertEqual(durum, {"kilit_var": False})
+        son = self.log_son()
+        self.assertTrue(any("otomatik gizli adımı bitti (çıkış kodu 0)" in s for s in son))
+        self.assertTrue(son[-1].endswith("2 yeni klip onay bekliyor"))
+
+    def test_gizli_adim_patlarsa_uretim_ve_cikis_kodu_bozulmaz(self):
+        with mock.patch.object(ko, "yayinci_calistir", lambda ad, log: 1), \
+                mock.patch.object(ko, "otomatik_gizli_calistir", side_effect=RuntimeError("ssh yok")):
+            self.assertEqual(ko.main(), 0)
+        son = self.log_son()
+        self.assertTrue(any("UYARI: otomatik gizli adımı tamamlanamadı" in s for s in son))
+        self.assertTrue(son[-1].endswith("2 yeni klip onay bekliyor"))
+
+    def test_gizli_adim_hata_kodu_cikis_kodunu_bozmaz(self):
+        with mock.patch.object(ko, "yayinci_calistir", lambda ad, log: 1), \
+                mock.patch.object(ko, "otomatik_gizli_calistir", return_value=1):
+            self.assertEqual(ko.main(), 0)
 
     def test_bir_yayinci_patlarsa_digeri_surer(self):
         def f(ad, log):

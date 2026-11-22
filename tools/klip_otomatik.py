@@ -1,7 +1,10 @@
 """Günlük otomatik klip çıkarma (zamanlanmış görev `Komixsi Klip Cikar`, her gün 10:00).
 
 Etkin her yayıncı için `yayin_klip.py otomatik --yayinci <ad> --en-cok 2 --konusma` çalıştırır; işlenmiş yayınları o komut
-zaten atlar. YALNIZ klip ÜRETİR: onaylamaz, yüklemez, paylaşmaz, push yapmaz.
+zaten atlar. Klip üretimi onaylamaz, yüklemez, paylaşmaz, push yapmaz. Üretimden SONRA (kilit bırakıldığında) tek istisna:
+`sosyal/ayarlar.json` klip.otomatik_gizli açıksa `klip_yayin.py otomatik-gizli` çalışır (2026-11-22, Cio): yeni klipleri onay.otomatik ile
+onaylar, sunucuya yükler, klipler.json'ı push eder, sosyal.yml turunu başlatır; YouTube'a YALNIZ GİZLİ (private) gider, Telegram'a tek mesaj atılır.
+Herkese açmak Cio'nun işidir (YouTube Studio). Bu adımın hatası klip üretimini ve çıkış kodunu bozmaz (loga yazılır).
 Panelden başlatılan klip işiyle aynı anda çalışmaz (çalışma dizinindeki `klip-cikar.kilit`): kilit doluysa en çok
 BEKLEME_SN bekler, olmazsa o gün atlanır ("0 yeni klip onay bekliyor"; ertesi gün tekrar denenir).
 Log: C:\\Cihan.Ai\\.scratch\\yayin-klip\\gunluk\\klip-YYYY-MM-DD.log, son satır "N yeni klip onay bekliyor"."""
@@ -26,6 +29,7 @@ BEKLEME_SN = 60 * 60
 BEKLEME_ARALIK = 30
 YAYINCI_ZAMAN_ASIMI = 3 * 3600     # bir yayıncı için üst sınır; aşarsa o yayıncı atlanır, diğerleri sürer
 EN_COK_YAYIN = "2"
+OTOMATIK_GIZLI_ZAMAN_ASIMI = 2 * 3600   # onay + yükleme + GitHub turu beklemesi için üst sınır
 
 _SIR = re.compile(r"(https?://)[^/@\s]+@|(?i:(token|belirte[cç]|key|secret|password)\s*[=:]\s*)\S+")
 
@@ -84,6 +88,20 @@ def yayinci_calistir(ad: str, log: Gunluk) -> int:
     return n if rc == 0 else -n - 1000      # hata işareti: negatif
 
 
+def otomatik_gizli_calistir(log: Gunluk) -> int:
+    """`klip_yayin.py otomatik-gizli` (ana anahtar kapalıysa komut kendiliğinden bir şey yapmaz). Çıktıyı loga yazar. -> çıkış kodu"""
+    komut = [sys.executable, str(KOK / "tools" / "klip_yayin.py"), "otomatik-gizli"]
+    env = {**os.environ, "PYTHONUTF8": "1", "PYTHONUNBUFFERED": "1", "YAYIN_KLIP_DIZIN": str(CALISMA)}
+    kos = subprocess.run(komut, capture_output=True, text=True, encoding="utf-8", errors="replace", env=env, cwd=str(KOK),
+                         stdin=subprocess.DEVNULL, timeout=OTOMATIK_GIZLI_ZAMAN_ASIMI,
+                         creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
+    for ham in ((kos.stdout or "") + "\n" + (kos.stderr or "")).splitlines():
+        s = " ".join(ham.split())[:400]
+        if s:
+            log.yaz(f"  otomatik gizli: {s}")
+    return kos.returncode
+
+
 def main() -> int:
     log = Gunluk(GUNLUK / f"klip-{time.strftime('%Y-%m-%d')}.log")
     toplam, hatali = 0, 0
@@ -125,6 +143,11 @@ def main() -> int:
                 kilit.tazele()
         finally:
             kilit.birak()
+        try:
+            rc = otomatik_gizli_calistir(log)
+            log.yaz(f"otomatik gizli adımı bitti (çıkış kodu {rc})")
+        except Exception as e:  # noqa: BLE001 — onay/yükleme sorunu klip üretimini ve çıkış kodunu bozmaz; ayrıntı yukarıda
+            log.yaz(f"UYARI: otomatik gizli adımı tamamlanamadı: {type(e).__name__}: {e}")
         if hatali:
             log.yaz(f"Uyarı: {hatali} yayıncıda hata oldu (ayrıntı yukarıda)")
         log.yaz(f"{toplam} yeni klip onay bekliyor")
