@@ -260,6 +260,9 @@ def cumle_kisalt(metin, sinir):
     return metin[:bitisler[-1]] if bitisler else ''
 
 
+IG_METIN_OZETI = 700  # Instagram açıklamasına haber metninden eklenecek en çok karakter
+
+
 def ig_aciklama(dil, x, ayar=None) -> str:
     if x.get('sosyal_tur') in KLIP_TURLERI:
         return emojisiz(x['diller'][dil]['ig_aciklama'])[:2200]  # klip metni onay anında saklanmış ve onaylanmıştır
@@ -295,9 +298,16 @@ def ig_aciklama(dil, x, ayar=None) -> str:
     t = x["diller"][dil]
     kay = ", ".join(kaynak_adi(dil, s["ad"]) for s in x["kaynaklar"])
     etiket = " ".join(etiketler(dil, x))
-    son = f"\n\n{M[dil]['kaynak']}: {kay[:240]}\n{paylasim_linki(dil, x, 'instagram')}\n\n{etiket}"
+    son = f"\n\n{M[dil]['kaynak']}: {kay[:240]}\n{METIN[dil]['devam']} {paylasim_linki(dil, x, 'instagram')}\n\n{etiket}"
     bas = t['baslik'][:300]
-    govde = t.get('ozet', '')[:max(0, 2200 - len(bas) - len(son) - 2)]
+    # Açıklama haberi tek başına anlatmalı: özetin ardından haber metninin sığan ilk cümleleri gelir.
+    ozet = (t.get('ozet') or '').strip()
+    metin = (t.get('metin') or '').strip()
+    ek = cumle_kisalt(metin, IG_METIN_OZETI) if metin and metin != ozet else ''
+    govde = '\n\n'.join(b for b in (ozet, ek) if b)
+    yer = max(0, 2200 - len(bas) - len(son) - 2)
+    if len(govde) > yer:
+        govde = cumle_kisalt(govde, yer) or ozet[:yer]
     return emojisiz(f"{bas}\n\n{govde}{son}")
 
 

@@ -28,6 +28,9 @@ SITE = "https://ctrl-agame.com"
 GORUNEN = "ctrl-agame.com"
 MARKA = "CTRL+A GAME"
 from diller import DILLER, KAYIT, alan, tarih_yaz
+import oyun_adi
+
+oyun_takma = oyun_adi.takma_adlar(KOK)
 ONEK = {d: '/' + (k['klasor'] + '/' if k['klasor'] else '') for d, k in KAYIT.items()}
 HUB = {d: k['sayfa']['haber'] for d, k in KAYIT.items()}
 KLASOR, FEED = alan('haber_klasor'), alan('feed')
@@ -386,6 +389,8 @@ def kartlar(veri: list[dict], sosyal=None, *, cikti=None) -> tuple[int, int]:
         from PIL import ImageFilter
         kart_dili = dil
         t, m = x["diller"][dil], M[dil]
+        # Kart tek başına okunur: başlıkta oyun adı yoksa öne eklenir (site başlığı değişmez).
+        t = {**t, "baslik": oyun_adi.oyunlu_baslik(t["baslik"], x.get("oyun") or "", oyun_takma)}
         P = 64
         gen = W - 2 * P
         sosyal_tur = x.get("sosyal_tur")

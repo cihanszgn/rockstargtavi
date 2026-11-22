@@ -9,6 +9,7 @@ import unicodedata
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
+import oyun_adi
 from site_metin import SAYFA, REHBER_KLASOR
 
 DILLER = ("tr", "en", "fr", "es", "de", "nl", "zh")
@@ -109,9 +110,19 @@ def adaylar(veri, kok: Path, ayar, bugun: date, simdi: datetime):
     sonuc = []
     pencere = ayar.get("en_eski_gun", 3)
     haberler = sorted(veri, key=lambda x: (x["tarih"], x["id"]), reverse=True)
+    takma = oyun_adi.takma_adlar(kok)
+
+    def oyunlu(x):
+        """Sosyal gönderide başlık tek başına okunur: oyun adı geçmiyorsa başlığın önüne eklenir (site verisi değişmez)."""
+        y = copy.deepcopy(x)
+        for t in y.get("diller", {}).values():
+            if isinstance(t, dict) and t.get("baslik"):
+                t["baslik"] = oyun_adi.oyunlu_baslik(t["baslik"], x.get("oyun") or "", takma)
+        return y
+
     for x in haberler:
         if 0 <= (bugun - date.fromisoformat(x["tarih"])).days <= pencere:
-            sonuc.append({**x, "sosyal_tur": "haber"})
+            sonuc.append({**oyunlu(x), "sosyal_tur": "haber"})
 
     gorseller = oku(kok, "oyun_gorselleri.json", {})
     oyunlar = oku(kok, "oyunlar.json", [])

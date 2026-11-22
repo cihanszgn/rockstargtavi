@@ -19,6 +19,7 @@ from difflib import SequenceMatcher
 from datetime import datetime, timedelta, timezone
 
 import haber_oto as oto
+import oyun_adi
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 GORULEN_SAAT = 72
@@ -1001,6 +1002,18 @@ class Hat:
             oid = article.get('id', '')
             if not isinstance(oid, str) or not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', oid):
                 hata('geçersiz haber id')
+            # Başlık tek başına okunur (sosyal gönderi, arama sonucu): oyunun adı Latin yazıyla ve her dilin başlığında geçmeli.
+            oyun = str(article.get('oyun') or '').strip()
+            if not oyun_adi.latin_mi(oyun):
+                hata(f'oyun adı uluslararası (Latin harfli, resmî İngilizce) adıyla yazılmalı: {oyun!r}')
+            takma = oyun_adi.takma_adlar(self.root)
+            basliklar = {lang: str(t.get('baslik') or '') for lang, t in (article.get('diller') or {}).items() if isinstance(t, dict)}
+            eksik = [lang for lang, b in basliklar.items() if lang != 'zh' and not oyun_adi.gecer(b, oyun, takma)]
+            if eksik:
+                hata(f'başlıkta oyun adı ({oyun}) geçmiyor: {", ".join(eksik)}; her dilin başlığı hangi oyunun haberi olduğunu söylemeli')
+            latin_disi = [lang for lang, b in basliklar.items() if lang != 'zh' and oyun_adi.LATIN_DISI.search(b)]
+            if latin_disi:
+                hata(f'başlıkta Latin dışı yazı var: {", ".join(latin_disi)}; oyun adını uluslararası adıyla yaz')
             scenarios = value.get('senaryolar') or {}
             if not isinstance(scenarios, dict) or set(scenarios) - set(oto.DILLER):
                 hata('senaryolar dil kaydındaki dillerden oluşan bir nesne olmalı')

@@ -214,7 +214,13 @@ class GlobalInstagram(Temel):
             self.assertEqual(self.calistir(ag, a, [x])[:2], (1, []))
         medya = next(c.kwargs['veri'] for c in istek.call_args_list if c.args[1].endswith('/media'))
         self.assertTrue(medya['image_url'].endswith('-en-ig.jpg'))
-        self.assertEqual(medya['caption'], sy.ig_aciklama('tr', x, a))
+        # Kuyruk, başlığında oyun adı geçmeyen habere adı öne ekler (gönderi tek başına anlaşılsın)
+        import copy, oyun_adi
+        beklenen = copy.deepcopy(x)
+        for t in beklenen['diller'].values():
+            t['baslik'] = oyun_adi.oyunlu_baslik(t['baslik'], x['oyun'])
+        self.assertEqual(medya['caption'], sy.ig_aciklama('tr', beklenen, a))
+        self.assertIn(x['oyun'], medya['caption'].splitlines()[0])
         self.assertEqual(sayfa.call_args_list[0].args[0], sy.sayfa_adresi('en', x))
 
 
