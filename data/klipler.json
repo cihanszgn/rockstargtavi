@@ -69,6 +69,76 @@
    },
    "youtube": "https://www.youtube.com/shorts/rAG5wryiHnk"
   },
+  "eraycan-20261120-6bbb2ae2-klip-01": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/eray",
+   "metin": {
+    "aciklama": "Horlama videosu yüzünden Bekir'le ev arkadaşları arasında intikam planı kuruluyor.\nKaynak: https://kick.com/eray\nKomixsi",
+    "baslik": "Eray süpürge sesiyle uyumaya çalışıyor",
+    "etiketler": [
+     "#Eray",
+     "#Kick",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "70d22d6ea00cff429788c553a01c98f37df4cfadbeb888263b183355e1dda3f5",
+    "otomatik": true,
+    "ozet": "3d4e8d5dc77b362796650341b7b9f87290c2d1971df5bf5d923a3f716ae6956d",
+    "zaman": "2026-11-22T02:41:01Z"
+   },
+   "otomatik": true,
+   "oyun": "",
+   "paket": "cikti/eraycan-20261120-6bbb2ae2/klip-01.json",
+   "sure": 55.84,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-20",
+   "yayinci": "Eraycan",
+   "yayinda": {
+    "kapak": "klip-eraycan-20261120-6bbb2ae2-klip-01-kapak.jpg",
+    "mp4_1080": "klip-eraycan-20261120-6bbb2ae2-klip-01-1080.mp4",
+    "mp4_540": "klip-eraycan-20261120-6bbb2ae2-klip-01-540.mp4",
+    "mp4_720": "klip-eraycan-20261120-6bbb2ae2-klip-01-720.mp4",
+    "sure": 55.84,
+    "yuklenen_ozet": "3d4e8d5dc77b362796650341b7b9f87290c2d1971df5bf5d923a3f716ae6956d",
+    "zaman": "2026-11-22T02:41:24Z"
+   }
+  },
+  "eraycan-20261120-6bbb2ae2-klip-02": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/eray",
+   "metin": {
+    "aciklama": "Kombinin Pull&Bear çıktığı anlaşılınca arkadaşları yeni kıyafetle dalga geçiyor.\nKaynak: https://kick.com/eray\nKomixsi",
+    "baslik": "Eray kombininin markasıyla dalga geçiliyor",
+    "etiketler": [
+     "#Eray",
+     "#Kick",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "7f2a19f7840714b9a5eb7f5fa849a60b6f813a06ddb2579d4eb60e2add39589d",
+    "otomatik": true,
+    "ozet": "7855eba59556cba4fb5b0820db7a67371e122c0e35bb39bdb6c4f7dd5ed13630",
+    "zaman": "2026-11-22T02:41:01Z"
+   },
+   "otomatik": true,
+   "oyun": "",
+   "paket": "cikti/eraycan-20261120-6bbb2ae2/klip-02.json",
+   "sure": 35.03,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-20",
+   "yayinci": "Eraycan",
+   "yayinda": {
+    "kapak": "klip-eraycan-20261120-6bbb2ae2-klip-02-kapak.jpg",
+    "mp4_1080": "klip-eraycan-20261120-6bbb2ae2-klip-02-1080.mp4",
+    "mp4_540": "klip-eraycan-20261120-6bbb2ae2-klip-02-540.mp4",
+    "mp4_720": "klip-eraycan-20261120-6bbb2ae2-klip-02-720.mp4",
+    "sure": 35.03,
+    "yuklenen_ozet": "7855eba59556cba4fb5b0820db7a67371e122c0e35bb39bdb6c4f7dd5ed13630",
+    "zaman": "2026-11-22T02:41:43Z"
+   }
+  },
   "hype-20261118-bb86dc1f-klip-01": {
    "hesap": "klip",
    "kanal_url": "https://kick.com/hype",
