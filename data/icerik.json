@@ -1,5 +1,108 @@
 [
  {
+  "id": "just-volleyball-gelistirici-kayit-plan-2026-11-22",
+  "oyun": "Just Volleyball",
+  "tarih": "2026-11-22",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam geliştirici duyurusu",
+    "url": "https://store.steampowered.com/news/app/5037200/view/702159569166533415"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Just Volleyball geliştiricisi kayıt kaybı için çözüm planını açıkladı",
+    "ozet": "Kayıt kaybı yaşayan oyuncular ekran görüntülerini şimdiden saklamalı; yama sonrası destek kanalından geri yükleme talep edebilir.",
+    "metin": "Just Volleyball geliştiricisi 22 Kasım 2026'da Steam'de yayımladığı geliştirici notunda, oyundaki birçok hatanın kararlılık gerekçesiyle sonraki bir yamaya bırakıldığını açıkladı. Notta bazı oyuncuların kayıt verisini kaybettiği de yazıyor.\n\nGeliştirici, kaybolan seviye ve çiplerin arka uç sistemi üzerinden kayıtlara eklenmesi için çalıştığını söylüyor. Bu süreçte kayıtlı saat ve profil ekran görüntülerini şimdiden saklamayı öneriyor; yama yayımlandığında sunucudaki destek kanalına bilet açılabilecek. Dereceli modun ilk sürümünün Aralık başında, hazır olursa çıkması hedefleniyor. Rütbelerin her ay sıfırlanacağı, sezon sistemi olmayacağı açıklandı. Ayrıca iki yeni maç müziğinin muhtemelen Aralık sonu ya da Ocak başında, kozmetik ve harita eklemelerinin ise Aralık başındaki büyük yamada gelmesi planlanıyor. Notta, maç sırasında Duraklat menüsünden Oyuncular ve Takımlar bölümüne girilip tek tek oyuncuların sessize alınabileceği de hatırlatılıyor.\n\nOyuncular için en somut adım, kayıt kaybı yaşayanların ekran görüntülerini hemen saklaması. Dereceli ve yeni içerik planları henüz kesinleşmiş değil; geliştirici dereceli modda dengesiz eşleşmeler ve uzun kuyruk sürelerinin yaşanabileceğini de not etti.",
+    "etiketler": [
+     "#JustVolleyball",
+     "#Steam",
+     "#PC",
+     "#GameUpdate"
+    ]
+   },
+   "en": {
+    "baslik": "Just Volleyball developer maps out save recovery, ranked plans",
+    "ozet": "Players who lost save data should keep screenshots now and open a ticket to request restores after the next update.",
+    "metin": "The developer of Just Volleyball said in a Steam news post on November 22, 2026, that many bugs will wait for a later patch because quick fixes could break other parts of the game. The post also acknowledges that some players have reported losing save data.\n\nThe developer is working on restoring lost levels and chips to saves through its backend. Until then, affected players are advised to keep screenshots of their logged hours and older profiles, then open a ticket on the developer's Discord server once the update arrives. The first version of ranked mode is targeted for early December, if it is thoroughly tested. Ranks will reset monthly, and there will be no seasons. Two extra match music tracks will probably arrive in late December or early January, while more cosmetics and maps are planned for a large patch in early December. The post also notes that during a match, players can open Players & Teams from the pause menu and mute individuals to hide their chat and avatar content.\n\nThe most concrete step for players right now is to keep proof of their progress before the update. Ranked and the new content are not yet confirmed, and the developer warns that ranked may be experimental, with imperfect matchmaking and longer queues outside busy regions and hours.",
+    "etiketler": [
+     "#JustVolleyball",
+     "#Steam",
+     "#PC",
+     "#GameUpdate"
+    ]
+   },
+   "es": {
+    "baslik": "Just Volleyball: recuperación de datos y plan para clasificatorias",
+    "ozet": "Quienes perdieron datos de guardado deben guardar capturas ahora y pedir la restauración tras la actualización.",
+    "metin": "El desarrollador de Just Volleyball publicó el 22 de noviembre de 2026 una nota en Steam en la que explica que muchos errores se corregirán en un parche posterior, porque los arreglos rápidos podrían romper otras partes del juego. La nota también reconoce que algunos jugadores reportaron pérdida de datos de guardado.\n\nSegún la nota, el equipo trabaja para devolver niveles y fichas a los guardados mediante su sistema de backend. Mientras tanto, los jugadores afectados deben guardar capturas de sus horas registradas y perfiles anteriores, y abrir un ticket en el servidor de Discord tras la actualización. La primera versión del modo clasificatorio se prepara para comienzos de diciembre, si las pruebas son satisfactorias, con rangos que se reinician cada mes y sin temporadas. Dos pistas musicales adicionales para las partidas llegarían probablemente a finales de diciembre o principios de enero, y más cosméticos y mapas se planean para un gran parche a comienzos de diciembre. Además, durante una partida, el menú de pausa permite silenciar a un jugador desde Jugadores y equipos.\n\nLo más concreto para los jugadores es conservar pruebas de su progreso antes de la actualización. El modo clasificatorio y los contenidos nuevos siguen siendo un plan sin fecha confirmada, y el desarrollador advierte de emparejamientos imperfectos y colas más largas fuera de las regiones y horarios con más jugadores.",
+    "etiketler": [
+     "#JustVolleyball",
+     "#Steam",
+     "#PC",
+     "#GameUpdate"
+    ]
+   },
+   "fr": {
+    "baslik": "Just Volleyball : récupération des sauvegardes et plan du classé",
+    "ozet": "Les joueurs ayant perdu leur progression doivent garder des captures dès maintenant et ouvrir un ticket après la mise à jour.",
+    "metin": "Le développeur de Just Volleyball a publié le 22 novembre 2026 une note sur Steam expliquant que de nombreux bugs seront corrigés dans un patch ultérieur, car des correctifs rapides risqueraient de casser d'autres éléments. Il reconnaît aussi que certains joueurs ont signalé la perte de leurs données de sauvegarde.\n\nLe studio explique travailler sur la restauration des niveaux et des puces perdus via son backend. D'ici là, les joueurs concernés sont invités à conserver des captures de leurs heures enregistrées et de leurs anciens profils, puis à ouvrir un ticket sur le serveur Discord une fois la mise à jour disponible. La première version du mode classé est visée pour début décembre si elle est suffisamment testée ; les rangs seront réinitialisés chaque mois et il n'y aura pas de saisons. Deux pistes musicales supplémentaires arriveraient probablement fin décembre ou début janvier, tandis que de nouveaux cosmétiques et cartes sont prévus pour un grand patch début décembre. La note rappelle aussi que, depuis le menu pause, on peut ouvrir Joueurs et équipes pour rendre muet un joueur précis.\n\nLa démarche la plus concrète pour les joueurs reste de garder des preuves de leur progression avant la mise à jour. Le classé et les nouveautés ne sont pas encore confirmés, et le développeur prévient que les premières versions du classé pourraient être imparfaites, avec des files plus longues.",
+    "etiketler": [
+     "#JustVolleyball",
+     "#Steam",
+     "#PC",
+     "#GameUpdate"
+    ]
+   },
+   "de": {
+    "baslik": "Just Volleyball: Speicherstand-Wiederherstellung und Ranglistenplan",
+    "ozet": "Wer Spielstände verloren hat, sollte jetzt Screenshots sichern und nach dem Update ein Ticket für die Wiederherstellung öffnen.",
+    "metin": "Der Entwickler von Just Volleyball hat am 22. November 2026 in einer Steam-Mitteilung angekündigt, dass viele Fehler erst in einem späteren Patch behoben werden, da schnelle Korrekturen andere Systeme beschädigen könnten. In dem Beitrag wird außerdem eingeräumt, dass einige Spieler den Verlust von Speicherdaten gemeldet haben.\n\nLaut Entwickler arbeitet das Team daran, verlorene Level und Chips über das Backend wieder in die Speicherstände einzufügen. Bis dahin sollten betroffene Spieler Screenshots ihrer protokollierten Spielzeit und früheren Profile sichern und nach dem Update über den Discord-Server ein Ticket eröffnen. Der erste Ranglistenmodus soll Anfang Dezember erscheinen, falls er gründlich getestet ist. Die Ränge werden monatlich zurückgesetzt, Saisons soll es nicht geben. Zwei weitere Musikstücke für Partien sind vermutlich für Ende Dezember oder Anfang Januar geplant, neue Kosmetikartikel und Karten für einen großen Patch Anfang Dezember. Während eines Spiels lassen sich Spieler über das Pausenmenü unter Spieler und Teams einzeln stummschalten.\n\nFür Spieler ist der konkreteste Schritt, jetzt Belege ihres Fortschritts zu sichern. Ranglistenmodus und neue Inhalte sind noch nicht bestätigt. Der Entwickler warnt zudem, dass der Modus experimentell sein könnte, mit unausgewogenen Partien und längeren Warteschlangen außerhalb stark besuchter Regionen und Zeiten.",
+    "etiketler": [
+     "#JustVolleyball",
+     "#Steam",
+     "#PC",
+     "#GameUpdate"
+    ]
+   },
+   "nl": {
+    "baslik": "Just Volleyball: herstel van opslagdata en plannen voor ranglijst",
+    "ozet": "Spelers die opslagdata kwijt zijn, moeten nu screenshots bewaren en na de update een ticket openen voor herstel.",
+    "metin": "De ontwikkelaar van Just Volleyball kondigde op 22 november 2026 in een Steam-bericht aan dat veel bugs pas in een latere patch worden opgelost, omdat snelle reparaties andere onderdelen kunnen breken. Het bericht erkent ook dat sommige spelers melden dat hun opslagdata verdwenen is.\n\nVolgens de ontwikkelaar wordt er gewerkt aan het terugzetten van verloren levels en chips in opslagbestanden via de backend. Tot die tijd wordt getroffen spelers geadviseerd screenshots te bewaren van hun gelogde speeltijd en oude profielen, en na de update een ticket te openen op de Discord-server. De eerste versie van de ranglijstmodus is gepland voor begin december, als deze grondig is getest. Rangen worden elke maand gereset en er komen geen seizoenen. Twee extra muziektracks voor wedstrijden komen waarschijnlijk eind december of begin januari, en nieuwe cosmetica en kaarten staan gepland voor een grote patch begin december. In het pauzemenu kun je onder Spelers en teams afzonderlijke spelers dempen.\n\nVoor spelers is de meest concrete stap nu hun voortgang vast te leggen. De ranglijst en nieuwe inhoud zijn nog niet bevestigd. De ontwikkelaar waarschuwt ook dat de modus experimenteel kan zijn, met minder evenwichtige wedstrijden en langere wachttijden buiten drukke regio's en uren.",
+    "etiketler": [
+     "#JustVolleyball",
+     "#Steam",
+     "#PC",
+     "#GameUpdate"
+    ]
+   },
+   "zh": {
+    "baslik": "Just Volleyball开发者说明存档恢复与排位赛计划",
+    "ozet": "存档丢失的玩家请现在保存截图，更新后在Discord服务器提交工单申请恢复，排位赛仍在开发中。",
+    "metin": "Just Volleyball开发者于2026年11月22日在Steam发布开发者公告，表示由于游戏目前的稳定性问题，许多错误将留到后续补丁中修复，而不是仓促修改以免破坏其他内容。公告也承认，有部分玩家反映存档数据丢失。\n\n开发者称，团队正在研究通过后端为存档补回丢失的等级和芯片。在此之前，受影响的玩家应先保存已记录游戏时长和旧档案的截图，更新推出后可在其Discord服务器提交工单。排位赛首个版本计划在12月初推出，前提是经过充分测试；段位每月重置，不设赛季。另外两首比赛音乐可能在12月下旬或1月初推出，更多外观和地图则计划放入12月初的大型补丁。公告还提醒，比赛中可在暂停菜单的玩家与队伍页面单独静音玩家。\n\n对玩家来说，眼下最具体的做法是保留进度证明。排位赛及其他新内容尚未确定，开发者也坦言，排位赛可能偏实验性，匹配并不完美，并且在人少的地区或时段排队时间会更长。",
+    "etiketler": [
+     "#JustVolleyball",
+     "#Steam",
+     "#PC",
+     "#GameUpdate"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "just-volleyball-gelistirici-kayit-plan-2026-11-22",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/5037200/view/702159569166533415",
+   "teyit_zamani": "2026-11-22T17:10:02+00:00",
+   "oyuncuya_fayda": "Oyuncular kayıt kaybı durumunda ekran görüntülerini saklayıp destek talebi açabilir.",
+   "hype": 3,
+   "eklenme": "2026-11-22T20:11:43.640674+03:00"
+  }
+ },
+ {
   "id": "worst-class-ever-1-milyon-kopya-2026-11-22",
   "oyun": "Worst Class Ever",
   "tarih": "2026-11-22",
