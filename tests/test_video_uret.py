@@ -494,6 +494,53 @@ class ZamanlamaTests(unittest.TestCase):
         self.assertEqual(v.okunus_uygula(["l'Operation"], okunus, dil='tr'), [([0], "l'Operation")],
                          'kesme ayırma yalnız Fransızcada')
 
+    def test_roma_rakami_sozcukle_okunur(self):
+        def oku(metin, dil):
+            return ' '.join(b[1] for b in v.yazim_oku(v.okunus_uygula(metin.split(), {}, dil=dil), dil))
+        self.assertEqual(oku("Crusader Kings III'ün yeni paketi, Final Fantasy XIV'te (GTA VI).", 'tr'),
+                         "Crusader Kings üç'ün yeni paketi, Final Fantasy on dört'te (GTA altı).")
+        self.assertEqual(oku("Final Fantasy XIV's Road and Crusader Kings III", 'en'),
+                         "Final Fantasy fourteen's Road and Crusader Kings three")
+        self.assertEqual(oku('Final Fantasy XIV, Grand Theft Auto VI', 'es'), 'Final Fantasy catorce, Grand Theft Auto seis')
+        self.assertEqual(oku('Final Fantasy XIV', 'fr'), 'Final Fantasy quatorze')
+        self.assertEqual(oku('Final Fantasy XIV', 'de'), 'Final Fantasy 14', 'sayı okuyucusu olmayan dilde rakam')
+        # Tek harfler ad ya da sürümdür; Roma rakamı olmayan büyük harf dizileri de değişmez.
+        ayni = 'Xbox Series X|S ve X, V, I, MIX, XL, IIII, VX'
+        self.assertEqual(oku(ayni, 'tr'), ayni)
+        self.assertEqual([v.roma_degeri(x) for x in ('II', 'IV', 'IX', 'XIV', 'XIX', 'XXXIX', 'X', 'XL', 'vi')],
+                         [2, 4, 9, 14, 19, 39, None, None, None])
+
+    def test_turkce_birim_sozcukle_okunur(self):
+        def oku(metin, dil='tr'):
+            return ' '.join(b[1] for b in v.yazim_oku(v.okunus_uygula(metin.split(), {}, dil=dil), dil))
+        self.assertEqual(oku('Steam Machine 2TB listesi kapandı; 512GB modeli açıldı.'),
+                         'Steam Machine iki terabayt listesi kapandı; beş yüz on iki gigabayt modeli açıldı.')
+        # Ek harf okunuşuna göre yazılmış olabilir (GB'ye); "gigabayt"a uyan ek takılır.
+        self.assertEqual(oku("512GB'a geçiş, 2 TB'ye geçiş, 16 GB'lik bellek"),
+                         'beş yüz on iki gigabayta geçiş, 2 terabayta geçiş, 16 gigabaytlık bellek')
+        self.assertEqual(oku('GB ve TB kısaltmaları'), 'GB ve TB kısaltmaları', 'sayıya bağlı olmayan kısaltma değişmez')
+        self.assertEqual(oku('the 512GB model', 'en'), 'the 512GB model', 'İngilizce ses birimi doğru okuyor')
+        # Senaryodaki okunus önce gelir.
+        self.assertEqual(' '.join(b[1] for b in v.yazim_oku(v.okunus_uygula(['512GB'], {'512GB': 'yarım terabayt'}), 'tr')),
+                         'yarım terabayt')
+
+    def test_sozcukler_arasindaki_egik_cizgi_okunmaz(self):
+        def oku(metin, dil):
+            return ' '.join(b[1] for b in v.yazim_oku(v.okunus_uygula(metin.split(), {}, dil=dil), dil))
+        self.assertEqual(oku('las colas Solo/Duo, 24/7 y PS4/PS5', 'es'), 'las colas Solo Duo, 24/7 y PS4/PS5')
+
+    def test_yazim_oku_yalniz_sese_gider(self):
+        s = senaryo()
+        s['sahneler'][0]['anlatim'] = "Ornek Oyun II'nin ikinci sezon yaması 1 Aralık'ta PC ve PlayStation için geliyor."
+        h = v.senaryo_hazirla(s, haber(), 'tr')
+        self.assertIn("Ornek Oyun iki'nin", h['tts'])
+        self.assertIn("II'nin", h['sahneler'][0]['kelimeler'], 'altyazı yazılan kelimeyi gösterir')
+
+    def test_hizala_birim_kisaltmasini_esler(self):
+        # Konuşma tanıma "512 GB" de verse "beş yüz on iki gigabayt" da verse söylenen birimle aynı harflere iner.
+        self.assertEqual(v._soz_norm('512 gb', 'tr'), v._soz_norm('beş yüz on iki gigabayt', 'tr'))
+        self.assertEqual(v._soz_norm("2TB'a", 'tr'), v._soz_norm('iki terabayta', 'tr'))
+
     def test_hizala_tanimadaki_sozlu_sayilari_esler(self):
         # Konuşma tanıma rakamı sözle yazar; iki taraf aynı çevrildiği için "750" üç tanıma kelimesine oturur.
         tani = [{'k': 'dakikada', 'b': 0.0, 's': 0.5}, {'k': 'yedi', 'b': 0.5, 's': 0.7}, {'k': 'yüz', 'b': 0.7, 's': 0.9},

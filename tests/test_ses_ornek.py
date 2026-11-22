@@ -120,6 +120,22 @@ class SesOrnekTests(unittest.TestCase):
         self.assertEqual(yollar[0].name, "tr-TR-Ses1Neural.mp3")
         self.assertEqual(yollar[1].name, "tr-TR-Ses2Neural.mp3")
 
+    def test_deneme_her_kaydi_ayri_seslendirir(self):
+        import json
+        import tempfile
+        from pathlib import Path
+        with tempfile.TemporaryDirectory() as g:
+            dosya = Path(g) / 'deneme.json'
+            dosya.write_text(json.dumps([{'ad': 'tr-a', 'ses': 'tr-TR-EmelNeural', 'metin': 'Merhaba.'},
+                                         {'ad': 'Kötü Ad', 'ses': 'tr-TR-EmelNeural', 'metin': 'Merhaba.'},
+                                         {'ad': 'tr-b', 'ses': 'tr-TR-EmelNeural', 'metin': ''}]), encoding='utf-8')
+            cagri, satirlar = [], []
+            kod = so.deneme(dosya, Path(g), sentez=lambda ses, metin, yol: cagri.append((ses, metin, yol.name)),
+                            cikti=satirlar.append)
+        self.assertEqual(kod, 1)
+        self.assertEqual(cagri, [('tr-TR-EmelNeural', 'Merhaba.', 'deneme-tr-a.mp3')])
+        self.assertEqual([x.split(':')[0] for x in satirlar], ['tamam', 'HATA', 'HATA'])
+
     def test_ornekle_dil_uyusmazligi_hata_olarak_kaydedilir(self):
         ciktilar = []
 

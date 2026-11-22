@@ -254,8 +254,8 @@ def deneme(dosya: Path, klasor: Path = ORNEK_KLASOR, sentez=None, cikti=print) -
     for k in kayitlar:
         ad, ses, metin = str(k.get("ad", "")), str(k.get("ses", "")), str(k.get("metin", ""))
         try:
-            if not DENEME_ADI.match(ad) or not metin.strip() or len(metin) > 600:
-                raise ValueError("ad küçük harf/rakam/tire, metin 1–600 karakter olmalı")
+            if not DENEME_ADI.match(ad) or not metin.strip() or len(metin) > 1500:
+                raise ValueError("ad küçük harf/rakam/tire, metin 1–1500 karakter olmalı")
             sentez(ses, metin, klasor / f"deneme-{ad}.mp3")
             cikti(f"tamam: {ad}")
         except (Exception, SystemExit) as e:  # noqa: BLE001 - her kayıt için hatayı yazıp devam et

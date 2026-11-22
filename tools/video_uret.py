@@ -763,6 +763,72 @@ def okunus_uygula(kelimeler: list[str], okunus: dict, kullanilan: set | None = N
     return birimler
 
 
+# Sesin kendi başına yanlış okuduğu iki yazım (ölçüm 2026-11-22, deneme sesleri yazıya dökülerek): MAI sesleri
+# Roma rakamını uyduruyor ("Kings III'ün" → "King Serd'ün", "XIV's" → "X category's"; tr ve en'de 9 denemenin 9'u),
+# Türkçe sesler sayıya bitişik birimi her seferinde başka okuyor ("512GB" → "ce be", "gigabay", İngilizce "twelve
+# gigabytes"). Sözcükle yazılınca 9 denemenin 9'u doğru okundu; bu yüzden ikisi de seslendirmeden önce çevrilir.
+# Altyazı ve ekrandaki yazı değişmez: yalnız sese giden metin çevrilir.
+_ROMA_DEGER = {"I": 1, "V": 5, "X": 10}
+ROMA = re.compile(r"^(?=[IVX]{2,})(X{0,3})(IX|IV|V?I{0,3})$")  # 2–39; tek harf (I, V, X) ad ya da sürüm olabilir
+BIRIM_OKUNUSU = {"tr": {"KB": "kilobayt", "MB": "megabayt", "GB": "gigabayt", "TB": "terabayt"}}
+BIRIM = re.compile(r"^(\d+)?(KB|MB|GB|TB)$")
+# İki sözcük arasındaki eğik çizgi ("Solo/Duo"): İspanyolca ses "solo barra diagonal duo" okudu (ölçüm 2026-11-22).
+_EGIK = re.compile(r"(?<=[^\W\d_])/(?=[^\W\d_])")
+# "GB'ye" harf okunuşuna göre yazılmış ektir; "gigabayt"a uyan ek takılır (gigabayta, gigabaytlık).
+_BIRIM_EKI_TR = {"yi": "ı", "i": "ı", "ı": "ı", "ye": "a", "e": "a", "a": "a", "de": "ta", "da": "ta", "te": "ta",
+                 "ta": "ta", "den": "tan", "dan": "tan", "ten": "tan", "tan": "tan", "nin": "ın", "in": "ın",
+                 "ın": "ın", "lik": "lık", "lık": "lık", "li": "lı", "lı": "lı", "yle": "la", "le": "la", "la": "la"}
+
+
+def roma_degeri(metin: str) -> int | None:
+    """"XIV" → 14; Roma rakamı değilse (ya da tek harfse) None."""
+    if not ROMA.match(metin):
+        return None
+    toplam = 0
+    for i, c in enumerate(metin):
+        d = _ROMA_DEGER[c]
+        toplam += -d if i + 1 < len(metin) and _ROMA_DEGER[metin[i + 1]] > d else d
+    return toplam
+
+
+def _tam_sayi_oku(n: int, dil: str | None) -> str:
+    oku = {"tr": sayi_oku_tr, "en": sayi_oku_en, "es": sayi_oku_es, "fr": sayi_oku_fr}.get(dil or "")
+    return oku(n) if oku else str(n)
+
+
+def _govde_eki(govde: str) -> tuple[str, str, str]:
+    """"III'ün" → ("III", "'", "ün"); kesme yoksa (govde, "", "")."""
+    for i, c in enumerate(govde):
+        if c in KESMELER:
+            return govde[:i], c, govde[i + 1:]
+    return govde, "", ""
+
+
+def yazim_oku(birimler: list[tuple[list[int], str]], dil: str | None) -> list[tuple[list[int], str]]:
+    """Sözlü birimlerde sesin yanlış okuduğu yazımları sözcüğe çevirir: Roma rakamı ("III'ün" → "üç'ün",
+    "XIV's" → "fourteen's") ve Türkçede sayıya bağlı birim ("512GB" → "beş yüz on iki gigabayt", "2 TB'ye" →
+    "2 terabayta"); iki sözcük arasındaki eğik çizgi boşluk olur ("Solo/Duo" → "Solo Duo"). Senaryodaki `okunus` önce
+    uygulanır; onun yazdığı metne dokunulmaz."""
+    birim_adi = BIRIM_OKUNUSU.get(dil or "", {})
+    cikti = []
+    for sira, (idx, soz) in enumerate(birimler):
+        if len(idx) == 1 and " " not in soz:
+            on, govde, arka = _parcala(soz)
+            kok, kesme, ek = _govde_eki(govde)
+            deger = roma_degeri(kok)
+            m = BIRIM.match(kok) if birim_adi else None
+            onceki = _parcala(birimler[sira - 1][1])[1] if sira else ""
+            if deger is not None:
+                soz = on + _tam_sayi_oku(deger, dil) + kesme + ek + arka
+            elif m and (m.group(1) or onceki[-1:].isdigit()):
+                sayi = _tam_sayi_oku(int(m.group(1)), dil) + " " if m.group(1) else ""
+                soz = on + sayi + birim_adi[m.group(2)] + _BIRIM_EKI_TR.get(ek, kesme + ek) + arka
+            elif _EGIK.search(soz):
+                soz = _EGIK.sub(" ", soz)
+        cikti.append((idx, soz))
+    return cikti
+
+
 HARF_HIZI = {"tr": 13.0, "en": 14.5, "es": 15.0, "fr": 14.5}  # neural ses harf/sn (kaba; gerçek süreyi uret ölçer)
 
 
@@ -855,7 +921,7 @@ def senaryo_hazirla(senaryo, haber: dict, dil: str) -> dict:
                 D.hata(f"{y}.maskot.hareket", f"şunlardan biri olmalı: {', '.join(HAREKETLER)}")
             if "konum" in maskot:
                 D.uyarilar.append(f"{y}.maskot.konum: maskotun yeri şablondan gelir, yok sayıldı")
-        birimler = okunus_uygula(kel, okunus, kullanilan, dil)
+        birimler = yazim_oku(okunus_uygula(kel, okunus, kullanilan, dil), dil)
         sozlu.append(" ".join(b[1] for b in birimler))
         if WEB_ADRESI.search(anlatim) or WEB_ADRESI.search(sozlu[-1]):
             D.hata(f"{y}.anlatim", "web adresi seslendirilmez; sitenin adını yazın "
@@ -1111,9 +1177,15 @@ def sayilari_oku(metin: str, dil: str | None) -> str:
     return kalip.sub(lambda m: f" {oku(m.group())} ", metin)
 
 
+_TANINAN_BIRIM = re.compile(r"(\d)\s*(KB|MB|GB|TB)(?![a-z])", re.IGNORECASE)
+
+
 def _soz_norm(metin: str, dil: str | None) -> str:
     """Eşleme için sözlü biçim: rakamlar okunduğu gibi yazılır (konuşma tanıma "750"yi "yedi yüz elli" verir).
     Seslendirici sınırları rakamı rakam olarak verse de iki taraf aynı çevrildiği için eşleşme bozulmaz."""
+    adlar = BIRIM_OKUNUSU.get(dil or "")
+    if adlar:  # konuşma tanıma birimi kısaltmayla da verebilir ("512 GB"); söylenen "gigabayt"la aynı harflere iner
+        metin = _TANINAN_BIRIM.sub(lambda m: f"{m.group(1)} {adlar[m.group(2).upper()]}", metin)
     return _norm(sayilari_oku(metin, dil))
 
 
