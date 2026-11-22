@@ -1,0 +1,69 @@
+{
+ "id": "worst-class-ever-1-milyon-kopya-2026-11-22",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 5,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Worst Class Ever, çıkışından 12 gün sonra 1 milyon kopyayı geçti.",
+   "veri": {
+    "ust_etiket": "SATIŞ REKORU",
+    "baslik": "Worst Class Ever 1 milyonu geçti",
+    "vurgu": [
+     "1 milyonu"
+    ],
+    "tuslar": [
+     "C",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "CTRL+A GAME",
+    "alt": "ctrl-agame.com"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Funcore Games rakamı Steam'deki resmî duyuruda açıkladı. Stüdyo bir yol haritası da paylaştı: hata düzeltmeleri, çevrimiçi bağlantı iyileştirmeleri ve yeni içerikler geliyor. Ancak bu içeriklerin tarihi henüz belli değil.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam resmî duyurusu",
+    "alinti": "12 günde 1 milyondan fazla kopya satıldı."
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "CTRL+A GAME",
+    "alt": "ctrl-agame.com"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Sen oynadın mı? Tamamı sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "CTRL+A GAME",
+    "alt": "ctrl-agame.com"
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "CTRL+A GAME",
+    "alt": "ctrl-agame.com"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

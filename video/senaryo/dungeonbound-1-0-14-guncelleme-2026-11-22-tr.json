@@ -1,0 +1,69 @@
+{
+ "id": "dungeonbound-1-0-14-guncelleme-2026-11-22",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 5,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Dungeonbound 1.0.14 güncellemesi yeni karakter Jerry'yi getirdi.",
+   "veri": {
+    "ust_etiket": "GÜNCELLEME",
+    "baslik": "Dungeonbound 1.0.14: Jerry geldi",
+    "vurgu": [
+     "Jerry geldi"
+    ],
+    "tuslar": [
+     "C",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "CTRL+A GAME",
+    "alt": "ctrl-agame.com"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Jerry'yi açmak için 25 Jerry'yi yenmen gerekiyor. Hile tarafı da sıkılaştı: değiştirilmiş kayıtlar ve skor tabloları artık tespit edilip liderlik tablolarından çıkarılıyor. Birkaç silah ve eşya da küçük güçlendirmeler aldı.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam resmî haber sayfası",
+    "alinti": "Jerry'yi açmak için 25 Jerry'yi yenmek gerekiyor."
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "CTRL+A GAME",
+    "alt": "ctrl-agame.com"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Hile koruması sence yeterli mi? Tamamı sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "CTRL+A GAME",
+    "alt": "ctrl-agame.com"
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "CTRL+A GAME",
+    "alt": "ctrl-agame.com"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

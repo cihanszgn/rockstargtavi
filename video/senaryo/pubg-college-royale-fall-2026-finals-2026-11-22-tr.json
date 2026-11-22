@@ -1,0 +1,69 @@
+{
+ "id": "pubg-college-royale-fall-2026-finals-2026-11-22",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 5,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "PUBG College Royale Fall 2026 finali canlı yayında başladı.",
+   "veri": {
+    "ust_etiket": "ESPOR",
+    "baslik": "PUBG College Royale finali başladı",
+    "vurgu": [
+     "finali başladı"
+    ],
+    "tuslar": [
+     "C",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "CTRL+A GAME",
+    "alt": "ctrl-agame.com"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "En iyi 16 üniversite takımı, 15.000 dolarlık burs havuzu için beş final maçında yarışıyor. Turnuvayı PlayVS ve KRAFTON düzenliyor. ABD ve Kanada'daki üniversite öğrencilerine ücretsiz açık; katılanlar G-COIN ve oyun içi eşya da kazanabiliyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam resmî duyurusu",
+    "alinti": "16 takım, 15.000 dolarlık burs havuzu için yarışıyor."
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "CTRL+A GAME",
+    "alt": "ctrl-agame.com"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Sence böyle bir turnuva Türkiye'de de olmalı mı? Tamamı sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "CTRL+A GAME",
+    "alt": "ctrl-agame.com"
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "CTRL+A GAME",
+    "alt": "ctrl-agame.com"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

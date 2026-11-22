@@ -1,0 +1,69 @@
+{
+ "id": "everyones-tier-list-20-bin-satis-2026-11-22",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 5,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Everyone's Tier List! on günde 20 bin satışı aştı.",
+   "veri": {
+    "ust_etiket": "YENİ ÇIKAN",
+    "baslik": "Everyone's Tier List! 20 bini aştı",
+    "vurgu": [
+     "20 bini"
+    ],
+    "tuslar": [
+     "C",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "CTRL+A GAME",
+    "alt": "ctrl-agame.com"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Arkadaşlarla birlikte oynanmak için tasarlanan oyun 12 Kasım'da Steam'de çıkmıştı. Yüzde 15 çıkış indirimi 26 Kasım'a kadar sürüyor. Geliştirici, incelemeleri okuduğunu ve istenen yeni temalar ile hata düzeltmeleri için güncelleme yayımlayacağını söyledi.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam geliştirici haberi",
+    "alinti": "Yüzde 15 çıkış indirimi 26 Kasım'a kadar sürüyor."
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "CTRL+A GAME",
+    "alt": "ctrl-agame.com"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Arkadaşlarınla denemek ister misin? Tamamı sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "CTRL+A GAME",
+    "alt": "ctrl-agame.com"
+   },
+   "alt_kart": {
+    "simge": "haber",
+    "baslik": "CTRL+A GAME",
+    "alt": "ctrl-agame.com"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
