@@ -964,13 +964,30 @@
  "jahrein-20261116-82e22279-klip-02|klip|youtube|short": {
   "bicim": "short",
   "dil": "klip",
-  "durum": "niyet",
+  "durum": "elle_bak",
   "gizli": true,
   "hesap": "klip",
   "id": "jahrein-20261116-82e22279-klip-02",
   "niyet_zamani": "2026-11-23T18:59:26+00:00",
+  "not": "yanıt kaybolmuş olabilir ve platformdan doğrulanamıyor; platformda gönderiye bakın, yoksa kaydı silin",
   "platform": "youtube",
   "sosyal_tur": "klip"
+ },
+ "jahrein-20261116-82e22279-klip-03|klip|youtube|short": {
+  "bicim": "short",
+  "boyut": 10066709,
+  "dil": "klip",
+  "durum": "tamam",
+  "gizli": true,
+  "hesap": "klip",
+  "id": "jahrein-20261116-82e22279-klip-03",
+  "kimlik": "P5kgwEHd0vo",
+  "niyet_zamani": "2026-11-23T19:21:28+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status&upload_id=AFy3sg2xc3JzUBVGReRP7hUPdjrTmLjZFEopsAvQBlGdu5oTUyyZHWR_q6PZhIpVsRyAQYoYiG1iNVM2W9Aj6SxaNZY9SbQ5W2AyZ61WU6hNkA",
+  "platform": "youtube",
+  "sosyal_tur": "klip",
+  "url": "https://www.youtube.com/shorts/P5kgwEHd0vo",
+  "zaman": "2026-11-23T19:21:28+00:00"
  },
  "just-volleyball-gelistirici-kayit-plan-2026-11-22|tr|instagram|gorsel": {
   "bicim": "gorsel",
@@ -1306,6 +1323,22 @@
   "sosyal_tur": "haber",
   "url": "https://www.instagram.com/p/Df15VzzE2qu/",
   "zaman": "2026-11-17T12:08:41+00:00"
+ },
+ "rraenee-20261118-13c4146d-klip-03|klip|youtube|short": {
+  "bicim": "short",
+  "boyut": 18640767,
+  "dil": "klip",
+  "durum": "tamam",
+  "gizli": true,
+  "hesap": "klip",
+  "id": "rraenee-20261118-13c4146d-klip-03",
+  "kimlik": "09h8mGeRF1M",
+  "niyet_zamani": "2026-11-23T19:21:28+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status&upload_id=AFy3sg18Og04iaZN-886mXLKq8r_A5mQzwNBPFpgE9wweKj9sWSVyaKBYEBR9jrfpD0mf9gYWyrykVkZTYqF198_6WffO3F9NnvtIl5kXGsigQ",
+  "platform": "youtube",
+  "sosyal_tur": "klip",
+  "url": "https://www.youtube.com/shorts/09h8mGeRF1M",
+  "zaman": "2026-11-23T19:21:28+00:00"
  },
  "slay-the-spire-2-beta-hotfix-v0-113-1-2026-11-14|en|instagram|gorsel": {
   "bicim": "gorsel",
