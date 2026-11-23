@@ -1,0 +1,112 @@
+{
+ "id": "sea-of-remnants-dawnbreaker-cbt-2026-11-23",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Free-to-play roguelike Sea of Remnants hits Xbox Series X for a closed beta on December 3.",
+   "veri": {
+    "ust_etiket": "XBOX SERIES X BETA",
+    "baslik": "Sea of Remnants closed beta",
+    "vurgu": [
+     "closed beta"
+    ],
+    "tuslar": [
+     "S",
+     "O",
+     "R"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "SEA OF REMNANTS",
+    "alt": "XBOX SERIES X • CLOSED BETA"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Xbox Wire says the test opens to Xbox Insiders, with pre-download from December 1.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Xbox Wire",
+    "alinti": "Dawnbreaker Closed Beta opens to XBOX Insiders on XBOX Series X, and joining the test is free."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "XBOX WIRE • ANNOUNCEMENT"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "The beta runs from December 3 to December 18, and progress resets when it ends.",
+   "veri": {
+    "etiket": "BETA ENDS",
+    "tarih": "December 18",
+    "not": "Pre-download begins December 1; progress resets."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "CLOSED BETA",
+    "alt": "DECEMBER 3 TO 18"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "There are two ways in: direct registration spots on launch day, or the additional access draw. A NetEase Passport account is needed.",
+   "veri": {
+    "baslik": "Two ways to get access",
+    "maddeler": [
+     {
+      "metin": "Direct registration: limited, first come first served",
+      "tetik": "direct"
+     },
+     {
+      "metin": "Access draw: NetEase Passport account required",
+      "tetik": "draw"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "TWO WAYS IN",
+    "alt": "DIRECT OR DRAW"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Would you join the closed beta, or wait for launch?",
+   "veri": {
+    "cagri": "Would you join the beta?",
+    "alt": "Full details in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

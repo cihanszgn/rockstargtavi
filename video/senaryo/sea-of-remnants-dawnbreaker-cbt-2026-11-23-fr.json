@@ -1,0 +1,112 @@
+{
+ "id": "sea-of-remnants-dawnbreaker-cbt-2026-11-23",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Le roguelike gratuit Sea of Remnants arrive sur Xbox Series X pour une bêta fermée le 3 décembre.",
+   "veri": {
+    "ust_etiket": "BÊTA FERMÉE",
+    "baslik": "Sea of Remnants : bêta fermée",
+    "vurgu": [
+     "bêta fermée"
+    ],
+    "tuslar": [
+     "S",
+     "O",
+     "R"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "SEA OF REMNANTS",
+    "alt": "XBOX SERIES X • BÊTA FERMÉE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Selon Xbox Wire, le test s'adresse aux Xbox Insiders, et le téléchargement anticipé commence le 1er décembre.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Xbox Wire",
+    "alinti": "La bêta fermée Dawnbreaker arrive sur XBOX Series X pour les XBOX Insiders, et y participer est gratuit."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "XBOX WIRE • ANNONCE"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "La bêta va du 3 au 18 décembre, et la progression est effacée à la fin.",
+   "veri": {
+    "etiket": "FIN DE LA BÊTA",
+    "tarih": "18 décembre",
+    "not": "Du 3 au 18 décembre ; progression effacée."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "BÊTA FERMÉE",
+    "alt": "DU 3 AU 18 DÉCEMBRE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Deux façons d'entrer : des places en inscription directe le jour du lancement, ou le tirage d'accès supplémentaire.",
+   "veri": {
+    "baslik": "Deux façons d'entrer",
+    "maddeler": [
+     {
+      "metin": "Inscription directe : places limitées, premier arrivé",
+      "tetik": "directe"
+     },
+     {
+      "metin": "Tirage : compte NetEase Passport requis",
+      "tetik": "tirage"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DEUX FAÇONS D'ENTRER",
+    "alt": "INSCRIPTION OU TIRAGE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tous les détails sont sur notre site, Control A Game. Participerez-vous à la bêta ou attendrez-vous le lancement ?",
+   "veri": {
+    "cagri": "Participerez-vous à la bêta ?",
+    "alt": "Tous les détails sont dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

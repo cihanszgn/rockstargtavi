@@ -1,0 +1,112 @@
+{
+ "id": "sea-of-remnants-dawnbreaker-cbt-2026-11-23",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "El roguelike gratuito Sea of Remnants llega a Xbox Series X con una beta cerrada el 3 de diciembre.",
+   "veri": {
+    "ust_etiket": "BETA CERRADA",
+    "baslik": "Sea of Remnants: beta cerrada",
+    "vurgu": [
+     "beta cerrada"
+    ],
+    "tuslar": [
+     "S",
+     "O",
+     "R"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "SEA OF REMNANTS",
+    "alt": "XBOX SERIES X • BETA CERRADA"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según Xbox Wire, la prueba abre a los Xbox Insiders; la descarga previa empieza el 1 de diciembre.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Xbox Wire",
+    "alinti": "La beta cerrada Dawnbreaker llega a XBOX Series X para los XBOX Insiders, y participar es gratis."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "XBOX WIRE • ANUNCIO"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "La beta va del 3 al 18 de diciembre, y el progreso se borra al terminar.",
+   "veri": {
+    "etiket": "FIN DE LA BETA",
+    "tarih": "18 de diciembre",
+    "not": "Va del 3 al 18 de diciembre; el progreso se borra."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "BETA CERRADA",
+    "alt": "DEL 3 AL 18 DE DICIEMBRE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Hay dos formas de entrar: plazas de registro directo el día del lanzamiento, o el sorteo de acceso adicional.",
+   "veri": {
+    "baslik": "Dos formas de entrar",
+    "maddeler": [
+     {
+      "metin": "Registro directo: plazas limitadas, por orden de llegada",
+      "tetik": "directo"
+     },
+     {
+      "metin": "Sorteo: se necesita una cuenta de NetEase Passport",
+      "tetik": "sorteo"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DOS FORMAS DE ENTRAR",
+    "alt": "REGISTRO O SORTEO"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles están en nuestra web, Control A Game. ¿Te unirás a la beta o esperarás al lanzamiento?",
+   "veri": {
+    "cagri": "¿Te unirás a la beta?",
+    "alt": "Todos los detalles están en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

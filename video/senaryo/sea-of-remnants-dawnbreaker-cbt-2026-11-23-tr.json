@@ -1,0 +1,112 @@
+{
+ "id": "sea-of-remnants-dawnbreaker-cbt-2026-11-23",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Ücretsiz Sea of Remnants, Xbox Series X'te 3 Aralık'ta kapalı betaya çıkıyor.",
+   "veri": {
+    "ust_etiket": "XBOX SERIES X",
+    "baslik": "Sea of Remnants kapalı betada",
+    "vurgu": [
+     "kapalı betada"
+    ],
+    "tuslar": [
+     "S",
+     "O",
+     "R"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "SEA OF REMNANTS",
+    "alt": "XBOX SERIES X • KAPALI BETA"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Xbox Wire'ın duyurusuna göre test, Xbox Insider'lara açılıyor; ön yükleme 1 Aralık'ta başlıyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Xbox Wire",
+    "alinti": "Dawnbreaker kapalı betası, XBOX Series X için XBOX Insider'lara açılıyor ve katılmak ücretsiz."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "XBOX WIRE • DUYURU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Test 18 Aralık'ta bitiyor ve ilerleme o tarihte sıfırlanıyor.",
+   "veri": {
+    "etiket": "KAPALI BETA SONU",
+    "tarih": "18 Aralık",
+    "not": "Ön yükleme 1 Aralık'ta; ilerleme sıfırlanır."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "KAPALI BETA",
+    "alt": "18 ARALIK'A KADAR"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Katılım iki yoldan: doğrudan kayıt veya ek erişim çekilişi.",
+   "veri": {
+    "baslik": "İki yoldan katılım",
+    "maddeler": [
+     {
+      "metin": "Doğrudan kayıt: sınırlı yer, ilk gelen alır",
+      "tetik": "kayıt"
+     },
+     {
+      "metin": "Ek çekiliş: NetEase Passport hesabı gerekir",
+      "tetik": "çekiliş"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "İKİ YOLDAN KATILIM",
+    "alt": "KAYIT VEYA ÇEKİLİŞ"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tüm ayrıntılar sitemizde, Control A Game'de. Kapalı betaya katılır mısın, yoksa tam sürümü mü beklersin?",
+   "veri": {
+    "cagri": "Kapalı betaya katılır mısın?",
+    "alt": "Tüm ayrıntılar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
