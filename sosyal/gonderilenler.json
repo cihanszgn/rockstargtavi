@@ -541,6 +541,20 @@
   "url": "https://www.instagram.com/p/DgELOxtGocX/",
   "zaman": "2026-11-23T01:14:22+00:00"
  },
+ "everyones-tier-list-20-bin-satis-2026-11-22|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 1746714,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "everyones-tier-list-20-bin-satis-2026-11-22",
+  "kimlik": "bjnWGxi6ajk",
+  "niyet_zamani": "2026-11-23T08:43:19+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg2EF-D2vmXbVpSSmhTBCstGKOXYEXfaG5l8g0yS4xyCaSTeVFGafxcuOuRewRP-UatW34EJII2H2VJTD2VK2NJ8w0Cgs_Hk3dekIk3yOAM",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/bjnWGxi6ajk",
+  "zaman": "2026-11-23T08:43:19+00:00"
+ },
  "ffxiv-rmt-botting-yaptirim-2026-11-12-18|tr|instagram|gorsel": {
   "bicim": "gorsel",
   "dil": "tr",
@@ -1204,6 +1218,21 @@
   "sosyal_tur": "takvim",
   "url": "https://www.instagram.com/p/Df2HEXzFyYR/",
   "zaman": "2026-11-17T14:08:38+00:00"
+ },
+ "temtem-swarm-nintendo-switch-21-ocak-2027|en|instagram|reel": {
+  "bicim": "reel",
+  "dil": "en",
+  "durum": "tamam",
+  "hesap": "tr",
+  "icerik_dili": "en",
+  "id": "temtem-swarm-nintendo-switch-cikis-tarihi-2026-11-20",
+  "kapsayici": "17871042708694894",
+  "kimlik": "18134352502831331",
+  "niyet_zamani": "2026-11-23T08:43:19+00:00",
+  "platform": "instagram",
+  "sosyal_tur": "haber",
+  "url": "https://www.instagram.com/reel/DgE-q2YMZiF/",
+  "zaman": "2026-11-23T08:43:19+00:00"
  },
  "temtem-swarm-nintendo-switch-21-ocak-2027|fr|instagram|reel": {
   "bicim": "reel",
