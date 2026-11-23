@@ -1177,6 +1177,21 @@
   "url": "https://www.instagram.com/p/Df2HEXzFyYR/",
   "zaman": "2026-11-17T14:08:38+00:00"
  },
+ "temtem-swarm-nintendo-switch-21-ocak-2027|fr|instagram|reel": {
+  "bicim": "reel",
+  "dil": "fr",
+  "durum": "tamam",
+  "hesap": "tr",
+  "icerik_dili": "fr",
+  "id": "temtem-swarm-nintendo-switch-cikis-tarihi-2026-11-20",
+  "kapsayici": "17871006159694894",
+  "kimlik": "18145859605619418",
+  "niyet_zamani": "2026-11-23T04:43:58+00:00",
+  "platform": "instagram",
+  "sosyal_tur": "haber",
+  "url": "https://www.instagram.com/reel/DgEjVDmsAEq/",
+  "zaman": "2026-11-23T04:43:58+00:00"
+ },
  "temtem-swarm-nintendo-switch-21-ocak-2027|tr|instagram|gorsel": {
   "bicim": "gorsel",
   "dil": "tr",
@@ -1317,6 +1332,20 @@
   "sosyal_tur": "haber",
   "url": "https://www.instagram.com/p/DgBf-99Gmk-/",
   "zaman": "2026-11-22T00:17:58+00:00"
+ },
+ "worst-class-ever-1-milyon-kopya-yol-haritasi-2026-11-22|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 2595037,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "worst-class-ever-1-milyon-kopya-2026-11-22",
+  "kimlik": "zTQei_wgV38",
+  "niyet_zamani": "2026-11-23T04:43:58+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg22Q9wtjZ4aKsx32mbTZXxxLVO7oXC3jaCF43_N8vzI-NFsHk6UxofPCipV0hA-a4lEar6Nej_Bz8vMZDP44mhRjda5XSZrik3l76s1",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/zTQei_wgV38",
+  "zaman": "2026-11-23T04:43:58+00:00"
  },
  "wtcn-20261117-6bbe5c53-klip-03|klip|youtube|short": {
   "bicim": "short",
