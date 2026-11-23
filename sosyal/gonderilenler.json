@@ -405,6 +405,21 @@
   "url": "https://www.instagram.com/p/DgEOneMjWEn/",
   "zaman": "2026-11-23T01:43:58+00:00"
  },
+ "dungeonbound-1-0-14-guncelleme-2026-11-22|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 2753288,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "dungeonbound-1-0-14-guncelleme-2026-11-22",
+  "kapak_not": "küçük resim yüklenmedi: POST https://www.googleapis.com/upload/youtube/v3/thumbnails/set → HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"The user has uploaded too many thumbnails recently. Please try the request again later.\",\n    \"errors\": [\n      {\n        \"message\": \"The user has uploaded too many thumbnails recently. Please tr",
+  "kimlik": "q5V30iIqSc4",
+  "niyet_zamani": "2026-11-23T10:44:26+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg1EUqvA3vu50rXbVsXASSU6Z0ZrJJrrqd_AB31M1wA2hApJP25-usCwm39CabKj6615RdTna49G6ANBnIbdxiGcGA6_DcibZMkBOfQZxDs",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/q5V30iIqSc4",
+  "zaman": "2026-11-23T10:44:26+00:00"
+ },
  "epic-games-store-mark-of-the-deep-ucretsiz-2026-11-19|tr|instagram|gorsel": {
   "bicim": "gorsel",
   "dil": "tr",
@@ -1108,6 +1123,20 @@
   "sosyal_tur": "haber",
   "url": "https://www.instagram.com/p/DgEHzo7kqsH/",
   "zaman": "2026-11-23T00:44:27+00:00"
+ },
+ "pubg-college-royale-fall-2026-finals|tr|instagram|reel": {
+  "bicim": "reel",
+  "dil": "tr",
+  "durum": "tamam",
+  "icerik_dili": "tr",
+  "id": "pubg-college-royale-fall-2026-finals-2026-11-22",
+  "kapsayici": "17871065283694894",
+  "kimlik": "18037457552911386",
+  "niyet_zamani": "2026-11-23T10:44:26+00:00",
+  "platform": "instagram",
+  "sosyal_tur": "haber",
+  "url": "https://www.instagram.com/reel/DgFMhXMgpzP/",
+  "zaman": "2026-11-23T10:44:26+00:00"
  },
  "pubg-college-royale-fall-2026-finals|tr|youtube|short": {
   "bicim": "short",
