@@ -1,0 +1,105 @@
+{
+ "id": "zombies-arent-real-update-2-2026-11-23",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Zombies Aren't Real lands on Mac, and its Gunship now targets the thickest zombie crowds.",
+   "veri": {
+    "ust_etiket": "UPDATE #2",
+    "baslik": "Zombies Aren't Real lands on Mac",
+    "vurgu": [
+     "Mac"
+    ],
+    "tuslar": [
+     "M",
+     "A",
+     "C"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "ZOMBIES AREN'T REAL",
+    "alt": "UPDATE #2 • MAC"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "The Gunship now circles a spot you pick and fires 12 missiles into the thickest zombie crowds. After a minute it resupplies, then returns 30 seconds later. Its missiles never hurt your walls or units.",
+   "veri": {
+    "baslik": "Gunship now circles",
+    "maddeler": [
+     {
+      "metin": "12 missiles per barrage",
+      "tetik": "12"
+     },
+     {
+      "metin": "Returns 30 seconds after resupply",
+      "tetik": "30"
+     },
+     {
+      "metin": "Never hurts your walls or units",
+      "tetik": "walls"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "GUNSHIP REWORKED",
+    "alt": "12 MISSILES • 30 SECONDS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "yama_fark",
+   "anlatim": "The tank no longer leaves when its shells run out. It reloads in place all battle and each level costs 2 SP instead of 4.",
+   "veri": {
+    "baslik": "Tank changes",
+    "satirlar": [
+     {
+      "ad": "SP per level",
+      "eski": "4",
+      "yeni": "2",
+      "tetik": "costs"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "yama",
+    "baslik": "TANK NO LONGER LEAVES",
+    "alt": "SP COST: 4 TO 2"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Which would you try first, the Gunship or the tank?",
+   "veri": {
+    "cagri": "Every change is on the site",
+    "alt": "Sources and details are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

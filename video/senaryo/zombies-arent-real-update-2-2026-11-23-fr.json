@@ -1,0 +1,105 @@
+{
+ "id": "zombies-arent-real-update-2-2026-11-23",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Zombies Aren't Real arrive sur Mac et son Gunship tire 12 missiles sur la foule.",
+   "veri": {
+    "ust_etiket": "MISE À JOUR 2",
+    "baslik": "Zombies Aren't Real arrive sur Mac",
+    "vurgu": [
+     "Mac"
+    ],
+    "tuslar": [
+     "M",
+     "A",
+     "C"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "ZOMBIES AREN'T REAL",
+    "alt": "MISE À JOUR 2 • MAC"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Le Gunship survole la zone choisie et tire des salves de 12 missiles. Après une minute de ravitaillement, il revient 30 secondes plus tard. Ses missiles ne touchent jamais vos murs ni vos unités.",
+   "veri": {
+    "baslik": "Le Gunship change",
+    "maddeler": [
+     {
+      "metin": "12 missiles par salve",
+      "tetik": "12"
+     },
+     {
+      "metin": "Revient 30 secondes plus tard",
+      "tetik": "30"
+     },
+     {
+      "metin": "Épargne murs et unités",
+      "tetik": "murs"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "LE GUNSHIP CHANGE",
+    "alt": "12 MISSILES • 30 SECONDES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "yama_fark",
+   "anlatim": "Le char ne quitte plus le terrain à court d'obus et se recharge sur place. Chaque niveau coûte 2 SP au lieu de 4.",
+   "veri": {
+    "baslik": "Le char change",
+    "satirlar": [
+     {
+      "ad": "SP par niveau",
+      "eski": "4",
+      "yeni": "2",
+      "tetik": "coûte"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "yama",
+    "baslik": "LE CHAR NE PART PLUS",
+    "alt": "COÛT : 4 À 2 SP"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Quelle nouveauté testeriez-vous en premier : le Gunship ou le char ?",
+   "veri": {
+    "cagri": "Tous les changements sur le site",
+    "alt": "Sources et détails complets dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

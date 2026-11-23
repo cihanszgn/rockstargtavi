@@ -1,0 +1,106 @@
+{
+ "id": "zombies-arent-real-update-2-2026-11-23",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Zombies Aren't Real Mac'e geldi; Gunship artık 12 füzeyle daire çiziyor.",
+   "veri": {
+    "ust_etiket": "2. GÜNCELLEME",
+    "baslik": "Zombies Aren't Real Mac'te: Gunship değişti",
+    "vurgu": [
+     "Mac'te",
+     "Gunship"
+    ],
+    "tuslar": [
+     "M",
+     "A",
+     "C"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "ZOMBIES AREN'T REAL",
+    "alt": "UPDATE #2 • MAC"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Gunship tıklanan alana uçup 12 füzelik salvolar atıyor. Bir dakikalık ikmalin ardından 30 saniye sonra geri dönüyor. Füzeler kendi duvarlarına zarar vermiyor.",
+   "veri": {
+    "baslik": "Gunship yeniden tasarlandı",
+    "maddeler": [
+     {
+      "metin": "12 füzelik salvolar",
+      "tetik": "12"
+     },
+     {
+      "metin": "30 saniye sonra geri dönüş",
+      "tetik": "30"
+     },
+     {
+      "metin": "Kendi duvarlarına zarar yok",
+      "tetik": "duvarlarına"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "GUNSHIP YENİDEN TASARLANDI",
+    "alt": "12 FÜZE • 30 SANİYE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "yama_fark",
+   "anlatim": "Tank mermisi bitince çekilmiyor; savaş boyunca yerinde yeniden doluyor. Seviye başına maliyet 4 SP'den 2 SP'ye indi.",
+   "veri": {
+    "baslik": "Tank yeniden tasarlandı",
+    "satirlar": [
+     {
+      "ad": "Seviye başı SP",
+      "eski": "4",
+      "yeni": "2",
+      "tetik": "maliyet"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "yama",
+    "baslik": "TANK ARTIK ÇEKİLMİYOR",
+    "alt": "SEVİYE BAŞI: 4'TEN 2 SP"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. İlk hangisini denersin: Gunship'i mi, tankı mı?",
+   "veri": {
+    "cagri": "Bütün değişiklikler sitede",
+    "alt": "Kaynak ve tüm yenilikler haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,116 @@
+{
+ "id": "warhammer-40k-dawn-of-war-iv-2026-11-23",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Warhammer 40,000: Dawn of War IV lands December 3, and Commander Edition pre-orders play three days early.",
+   "veri": {
+    "ust_etiket": "COMMANDER EDITION",
+    "baslik": "Dawn of War IV lands December 3",
+    "vurgu": [
+     "December 3"
+    ],
+    "tuslar": [
+     "D",
+     "O",
+     "W"
+    ]
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "WARHAMMER 40,000",
+    "alt": "DAWN OF WAR IV"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to Steam's official announcement, Commander Edition pre-orders unlock early access from November 30.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam official announcement",
+    "alinti": "Pre-order the Commander Edition and take command three days early from November 30th."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "STEAM • OFFICIAL NEWS"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "The edition includes the digital soundtrack at launch. Blood Ravens Story Prologue arrives in Spring 2027, and Aftermath follows in Summer 2027.",
+   "veri": {
+    "baslik": "What the edition includes",
+    "maddeler": [
+     {
+      "metin": "Digital soundtrack at launch",
+      "tetik": "soundtrack"
+     },
+     {
+      "metin": "Blood Ravens Story Prologue: Spring 2027",
+      "tetik": "Prologue"
+     },
+     {
+      "metin": "Aftermath: Summer 2027",
+      "tetik": "Aftermath"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "WHAT'S INCLUDED",
+    "alt": "TWO EXPANSIONS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Early access starts November 30, and the game launches December 3.",
+   "veri": {
+    "etiket": "Early access starts",
+    "tarih": "November 30",
+    "not": "Commander Edition pre-orders only; general launch December 3."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "EARLY ACCESS",
+    "alt": "COMMANDER EDITION"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Will you play early, or wait for December 3?",
+   "veri": {
+    "cagri": "Play early, or wait?",
+    "alt": "Full details in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

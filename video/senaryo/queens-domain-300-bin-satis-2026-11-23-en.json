@@ -1,0 +1,98 @@
+{
+ "id": "queens-domain-300-bin-satis-2026-11-23",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Queen's Domain has sold 300,000 copies on Steam in just 3 weeks.",
+   "veri": {
+    "ust_etiket": "SALES MILESTONE",
+    "baslik": "Queen's Domain sells 300,000",
+    "vurgu": [
+     "300,000"
+    ],
+    "tuslar": [
+     "Q",
+     "D"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "QUEEN'S DOMAIN",
+    "alt": "300,000 COPIES IN 3 WEEKS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "The developers announced the milestone in a Steam post. Eurogamer also gave the action-RPG a 5/5 review, and the team thanked players for their continued support.",
+   "veri": {
+    "baslik": "Announcement recap",
+    "maddeler": [
+     {
+      "metin": "300,000 copies sold",
+      "tetik": "milestone"
+     },
+     {
+      "metin": "5/5 from Eurogamer",
+      "tetik": "Eurogamer"
+     },
+     {
+      "metin": "Team thanks the players",
+      "tetik": "thanked"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "ANNOUNCEMENT RECAP",
+    "alt": "300,000 COPIES AND 5/5"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Eurogamer calls it a richly rewarding action-RPG whose island setting inspires real wonder.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam developer announcement",
+    "alinti": "A fascinating, richly rewarding action-RPG whose island setting inspires real wonder."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "STEAM ANNOUNCEMENT"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Would you give Queen's Domain a try?",
+   "veri": {
+    "cagri": "Full details on the site",
+    "alt": "Sources and quotes are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

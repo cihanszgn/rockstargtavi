@@ -1,0 +1,116 @@
+{
+ "id": "warhammer-40k-dawn-of-war-iv-2026-11-23",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Warhammer 40,000: Dawn of War IV llega el 3 de diciembre; la Commander Edition da tres días de ventaja.",
+   "veri": {
+    "ust_etiket": "COMMANDER EDITION",
+    "baslik": "Dawn of War IV: 3 de diciembre",
+    "vurgu": [
+     "3 de diciembre"
+    ],
+    "tuslar": [
+     "D",
+     "O",
+     "W"
+    ]
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "WARHAMMER 40,000",
+    "alt": "DAWN OF WAR IV"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según el anuncio oficial en Steam, la reserva de la Commander Edition da acceso desde el 30 de noviembre.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Anuncio oficial en Steam",
+    "alinti": "Reserva la Commander Edition y toma el mando tres días antes, desde el 30 de noviembre."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "STEAM • ANUNCIO OFICIAL"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "La edición incluye la banda sonora digital. Blood Ravens Story Prologue llega en primavera de 2027 y Aftermath en verano.",
+   "veri": {
+    "baslik": "Qué incluye la edición",
+    "maddeler": [
+     {
+      "metin": "Banda sonora digital en el lanzamiento",
+      "tetik": "banda sonora"
+     },
+     {
+      "metin": "Blood Ravens Story Prologue: primavera de 2027",
+      "tetik": "Prologue"
+     },
+     {
+      "metin": "Aftermath: verano de 2027",
+      "tetik": "Aftermath"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "QUÉ INCLUYE",
+    "alt": "DOS EXPANSIONES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "El acceso anticipado empieza el 30 de noviembre y el juego sale el 3 de diciembre.",
+   "veri": {
+    "etiket": "Acceso anticipado",
+    "tarih": "30 de noviembre",
+    "not": "Solo para la Commander Edition; lanzamiento general el 3 de diciembre."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "ACCESO ANTICIPADO",
+    "alt": "SOLO COMMANDER EDITION"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles están en nuestra web, Control A Game. ¿Jugarás desde el día uno o esperarás al 3 de diciembre?",
+   "veri": {
+    "cagri": "¿Jugarás antes o esperarás?",
+    "alt": "Detalles completos en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

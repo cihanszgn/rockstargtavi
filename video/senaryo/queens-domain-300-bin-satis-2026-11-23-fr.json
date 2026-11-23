@@ -1,0 +1,98 @@
+{
+ "id": "queens-domain-300-bin-satis-2026-11-23",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Queen's Domain a atteint 300 000 exemplaires vendus sur Steam en 3 semaines.",
+   "veri": {
+    "ust_etiket": "CAP DES VENTES",
+    "baslik": "Queen's Domain : 300 000 ventes",
+    "vurgu": [
+     "300 000"
+    ],
+    "tuslar": [
+     "Q",
+     "D"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "QUEEN'S DOMAIN",
+    "alt": "300 000 VENTES EN 3 SEMAINES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "L'équipe a annoncé cette étape sur Steam. Eurogamer lui a attribué un 5/5, et les développeurs ont remercié les joueurs pour leur soutien.",
+   "veri": {
+    "baslik": "L'annonce en bref",
+    "maddeler": [
+     {
+      "metin": "300 000 exemplaires vendus",
+      "tetik": "étape"
+     },
+     {
+      "metin": "Eurogamer : 5/5",
+      "tetik": "Eurogamer"
+     },
+     {
+      "metin": "Merci aux joueurs",
+      "tetik": "remercié"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "L'ANNONCE EN BREF",
+    "alt": "300 000 VENTES ET 5/5"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Selon Eurogamer, c'est un action-RPG gratifiant dont le cadre insulaire suscite un véritable émerveillement.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Annonce du studio sur Steam",
+    "alinti": "Un action-RPG fascinant et gratifiant, qui suscite un véritable émerveillement."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "ANNONCE STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Tu lancerais Queen's Domain ?",
+   "veri": {
+    "cagri": "Tous les détails sur le site",
+    "alt": "Sources et citations dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

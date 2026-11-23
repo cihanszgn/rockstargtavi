@@ -374,6 +374,12 @@
   "en": 1920,
   "boy": 1080
  },
+ "queens-domain-300-bin-satis-2026-11-23": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1799840/1a209734951f53b019ec9fa03f835def14f2a968/header.jpg",
+  "kaynak": "Steam",
+  "en": 460,
+  "boy": 215
+ },
  "r6-siege-operation-vital-signal-duyuruldu-2026-11-15": {
   "url": "https://clan.akamai.steamstatic.com/images/8328525/403bf0b7c5a83486b50c10436d4e7cd49595d8a8.jpg",
   "kaynak": "Steam",
@@ -463,6 +469,12 @@
  },
  "wardogs-nvidia-surucu-sorunu-2026-11-23": {
   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1867240/fba79a72d6bf20722284bdfd01615752ec08965b/header_alt_assets_1.jpg?t=1794488577",
+  "kaynak": "Steam",
+  "en": 460,
+  "boy": 215
+ },
+ "warhammer-40k-dawn-of-war-iv-2026-11-23": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2272360/f50a309da98ef75cbdae400a7d492e36314ce415/header.jpg",
   "kaynak": "Steam",
   "en": 460,
   "boy": 215
@@ -567,5 +579,11 @@
   "en": 1920,
   "boy": 1080,
   "kilit": true
+ },
+ "zombies-arent-real-update-2-2026-11-23": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5185890/cd54755b9d15a2cad33471464fb630d6a5363ff0/header.jpg",
+  "kaynak": "Steam",
+  "en": 460,
+  "boy": 215
  }
 }

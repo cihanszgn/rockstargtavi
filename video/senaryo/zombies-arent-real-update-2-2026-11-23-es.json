@@ -1,0 +1,105 @@
+{
+ "id": "zombies-arent-real-update-2-2026-11-23",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Zombies Aren't Real llega a Mac y su Gunship ahora dispara 12 misiles sobre la multitud.",
+   "veri": {
+    "ust_etiket": "ACTUALIZACIÓN 2",
+    "baslik": "Zombies Aren't Real llega a Mac",
+    "vurgu": [
+     "Mac"
+    ],
+    "tuslar": [
+     "M",
+     "A",
+     "C"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "ZOMBIES AREN'T REAL",
+    "alt": "ACTUALIZACIÓN #2 • MAC"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "El Gunship sobrevuela la zona que eliges y lanza andanadas de 12 misiles. Tras un minuto de reabastecimiento, vuelve 30 segundos después. Sus misiles nunca dañan tus muros ni tus unidades.",
+   "veri": {
+    "baslik": "El Gunship cambia",
+    "maddeler": [
+     {
+      "metin": "12 misiles por andanada",
+      "tetik": "12"
+     },
+     {
+      "metin": "Vuelve 30 segundos después",
+      "tetik": "30"
+     },
+     {
+      "metin": "No dañan muros ni unidades",
+      "tetik": "muros"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "EL GUNSHIP CAMBIA",
+    "alt": "12 MISILES • 30 SEGUNDOS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "yama_fark",
+   "anlatim": "El tanque no se retira al quedarse sin proyectiles y recarga en el sitio toda la batalla. Cada nivel cuesta 2 SP en lugar de 4.",
+   "veri": {
+    "baslik": "El tanque cambia",
+    "satirlar": [
+     {
+      "ad": "SP por nivel",
+      "eski": "4",
+      "yeni": "2",
+      "tetik": "cuesta"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "yama",
+    "baslik": "EL TANQUE NO SE RETIRA",
+    "alt": "COSTE: 4 A 2 SP"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Cuál probarías primero: el Gunship o el tanque?",
+   "veri": {
+    "cagri": "Todos los cambios en la web",
+    "alt": "Fuentes y detalles completos en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,116 @@
+{
+ "id": "warhammer-40k-dawn-of-war-iv-2026-11-23",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Warhammer 40,000: Dawn of War IV 3 Aralık'ta çıkıyor; ön sipariş verenler üç gün erken oynayacak.",
+   "veri": {
+    "ust_etiket": "COMMANDER EDITION",
+    "baslik": "Dawn of War IV 3 Aralık'ta çıkıyor",
+    "vurgu": [
+     "3 Aralık'ta"
+    ],
+    "tuslar": [
+     "D",
+     "O",
+     "W"
+    ]
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "WARHAMMER 40,000",
+    "alt": "DAWN OF WAR IV"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Resmî Steam duyurusu bu bilgileri doğruluyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam resmî duyurusu",
+    "alinti": "Commander Edition'ı ön sipariş edin; 30 Kasım'dan itibaren üç gün erken komutayı devralın."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "STEAM • RESMÎ DUYURU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Pakette dijital soundtrack lansmanda geliyor. Blood Ravens Story Prologue 2027 baharında, Aftermath 2027 yazında geliyor.",
+   "veri": {
+    "baslik": "Paket neler içeriyor?",
+    "maddeler": [
+     {
+      "metin": "Dijital soundtrack lansmanda",
+      "tetik": "soundtrack"
+     },
+     {
+      "metin": "Blood Ravens Story Prologue: 2027 baharında",
+      "tetik": "Prologue"
+     },
+     {
+      "metin": "Aftermath: 2027 yazında",
+      "tetik": "Aftermath"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "PAKET NELER İÇERİYOR",
+    "alt": "İKİ GENİŞLEME"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Erken erişim 30 Kasım'da, oyun 3 Aralık'ta çıkıyor.",
+   "veri": {
+    "etiket": "Erken erişim",
+    "tarih": "30 Kasım",
+    "not": "Commander Edition sahiplerine özel; genel lansman 3 Aralık."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "ERKEN ERİŞİM",
+    "alt": "COMMANDER EDITION SAHİPLERİNE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Erken mi oynarsın, yoksa 3 Aralık'ı mı beklersin?",
+   "veri": {
+    "cagri": "Erken mi, yoksa 3 Aralık mı?",
+    "alt": "Tüm ayrıntılar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

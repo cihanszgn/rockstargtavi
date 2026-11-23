@@ -1,0 +1,98 @@
+{
+ "id": "queens-domain-300-bin-satis-2026-11-23",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Queen's Domain, Steam'de 3 haftada 300.000 kopya sattı.",
+   "veri": {
+    "ust_etiket": "SATIŞ BAŞARISI",
+    "baslik": "Queen's Domain 300.000 sattı",
+    "vurgu": [
+     "300.000"
+    ],
+    "tuslar": [
+     "Q",
+     "D"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "QUEEN'S DOMAIN",
+    "alt": "3 HAFTADA 300.000 KOPYA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Geliştirici ekip bu dönüm noktasını Steam duyurusunda açıkladı. Eurogamer oyuna 5/5 verdi, ekip de oyunculara teşekkür etti.",
+   "veri": {
+    "baslik": "Duyurunun özeti",
+    "maddeler": [
+     {
+      "metin": "300.000 kopya satıldı",
+      "tetik": "dönüm"
+     },
+     {
+      "metin": "Eurogamer'dan 5/5 puan",
+      "tetik": "Eurogamer"
+     },
+     {
+      "metin": "Ekipten oyunculara teşekkür",
+      "tetik": "teşekkür"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DUYURUNUN ÖZETİ",
+    "alt": "300.000 KOPYA VE 5/5"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Eurogamer'a göre Queen's Domain, ada ortamıyla gerçek bir hayranlık uyandıran bir aksiyon RPG.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam geliştirici duyurusu",
+    "alinti": "Büyüleyici, emeğin karşılığını veren bir aksiyon RPG; ada ortamı gerçek bir hayranlık uyandırıyor."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "STEAM DUYURUSU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Sen Queen's Domain'e bir şans verir miydin?",
+   "veri": {
+    "cagri": "Tüm ayrıntılar sitede",
+    "alt": "Kaynak ve alıntılar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,5 +1,315 @@
 [
  {
+  "id": "zombies-arent-real-update-2-2026-11-23",
+  "oyun": "Zombies Aren't Real",
+  "tarih": "2026-11-23",
+  "tur": "guncelleme",
+  "platform": [
+   "PC",
+   "Mac"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam",
+    "url": "https://store.steampowered.com/news/app/5185890/view/701033669261788192"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Zombies Aren't Real Mac'e geldi: 2. güncelleme yayında",
+    "ozet": "Steam'deki resmî duyuruya göre güncelleme Gunship'i yeniden tasarlıyor, ortak oyuna sahiplik görünümü ekliyor ve iki yeni dil getiriyor.",
+    "metin": "Zombies Aren't Real, 23 Kasım 2026'da 2. güncellemesiyle Mac'e geldi. Steam'deki resmî duyuruya göre oyun artık Mac'te de oynanabiliyor; resmî sistem gereksinimleri için mağaza sayfasına bakmak gerekiyor.\n\nGunship artık farklı çalışıyor: bir noktaya tıklanınca Gunship o alana uçup daire çiziyor ve çemberin içindeki en yoğun zombi kalabalıklarına 12 füzelik salvolar atıyor. Bir dakika süren ikmalin ardından 30 saniye sonra aynı çembere geri dönüyor. Hedeflerini kendisi seçtiği için füzeleri duvarlarınıza ve yerleştirdiğiniz birimlere zarar vermiyor. Ultra Hardcore dışında sivilleri, subayları ve birimlerinizin tuttuğu binaları da esirgiyor.\n\nOrtak oyunda Shift+V ile açılan Sahiplik görünümü, her binayı ve güvenli bölgeyi sahibi oyuncunun rengiyle gösteriyor. Ayarlar'daki Clear Badges düğmesi tüm kayıtlardaki rozetleri ve en iyi skorları siliyor, kazanılan galibiyetler korunuyor. Tank artık mermisi bitince sahadan çekilmiyor; savaş boyunca yerinde yeniden dolduruyor, yüzde 25 daha hızlı ateş ediyor ve seviye başına maliyeti 4 SP'den 2 SP'ye indi. Yazı boyutu Carlito yazı tipinde yüzde 200'e kadar çıkabiliyor; Macarca ve Tayca dilleri de eklendi.\n\nPerformans ayarları artık performance.ini dosyasında tutuluyor. Bu ayarları değiştirmek oyun dosyasını değiştirilmiş saymıyor, skorlar liderlik tablolarına gitmeye devam ediyor. Steam duyurusuna göre ilk güncellemeler kalite iyileştirmeleri, kararlılık ve hata düzeltmelerine odaklanıyor; 3. güncelleme de üzerinde çalışılan aşamada.",
+    "etiketler": [
+     "#ZombiesArentReal",
+     "#Steam",
+     "#Mac",
+     "#Update2"
+    ]
+   },
+   "en": {
+    "baslik": "Zombies Aren't Real lands on Mac with Update #2",
+    "ozet": "The Steam announcement says the patch reworks the Gunship, adds a co-op ownership view and brings two new languages.",
+    "metin": "Zombies Aren't Real arrived on Mac with its Update #2 on November 23, 2026. According to the official Steam announcement, the game is now available on Mac, and players should check the Steam page for the official system requirements.\n\nThe biggest gameplay change is the Gunship. Click a spot and it flies in to circle it, firing barrages of 12 missiles at the thickest zombie crowds inside the circle. After a minute it resupplies and returns to the same circle 30 seconds later. Because it picks its own targets, its missiles never hurt your walls or your units. Outside Ultra Hardcore, it also spares civilians, officers and the buildings your units hold.\n\nOther changes include a Shift+V Ownership view in co-op, which colours each building and safe zone by its owner, and a Clear Badges button in Settings that removes badges and best scores while keeping your wins. Font size now reaches 200% on the Carlito font, and Hungarian and Thai have been added. The tank no longer leaves when it runs out of shells; it reloads in place for the whole battle and costs 2 SP per level instead of 4.\n\nPerformance settings now live in performance.ini, and changing them no longer counts as a modified game file, so scores still reach the leaderboards. The developers say the early post-launch updates focus on quality of life, stability and bug fixes, and Update #3 is already in progress.",
+    "etiketler": [
+     "#ZombiesArentReal",
+     "#Steam",
+     "#Mac",
+     "#Update2"
+    ]
+   },
+   "es": {
+    "baslik": "Zombies Aren't Real llega a Mac con la actualización 2",
+    "ozet": "Según el anuncio oficial en Steam, la Actualización #2 rehace el Gunship, añade una vista de propiedad cooperativa y dos idiomas nuevos.",
+    "metin": "Zombies Aren't Real llegó a Mac con su Actualización #2 el 23 de noviembre de 2026. Según el anuncio oficial en Steam, el juego ya se puede jugar en Mac, y los requisitos oficiales del sistema figuran en la página de la tienda.\n\nEl cambio más destacado es el Gunship. Al hacer clic en una zona, sobrevuela el área, da vueltas y lanza andanadas de 12 misiles contra las mayores multitudes de zombis dentro del círculo. Tras un minuto de reabastecimiento vuelve al mismo punto 30 segundos después. Como elige sus propios objetivos, sus misiles no dañan tus muros ni tus unidades. Fuera de Ultra Hardcore, también respeta a civiles, oficiales y edificios ocupados por tus unidades.\n\nEntre las novedades figura una vista de propiedad en cooperativo (Mayús+V), que colorea cada edificio y zona segura según su dueño, y un botón Clear Badges en Ajustes que elimina insignias y mejores puntuaciones sin borrar las victorias. El tamaño de letra llega ahora al 200 % con la fuente Carlito, y se añaden húngaro y tailandés. El tanque ya no se retira al quedarse sin proyectiles: recarga en el sitio durante toda la batalla y cuesta 2 SP por nivel en lugar de 4.\n\nLos ajustes de rendimiento se guardan en performance.ini y cambiarlos ya no cuenta como modificar archivos del juego, así que las puntuaciones siguen yendo a las clasificaciones. Según la misma publicación de Steam, las primeras actualizaciones se centran en calidad de vida, estabilidad y correcciones, y la Actualización #3 ya está en desarrollo.",
+    "etiketler": [
+     "#ZombiesArentReal",
+     "#Steam",
+     "#Mac",
+     "#Update2"
+    ]
+   },
+   "fr": {
+    "baslik": "Zombies Aren't Real arrive sur Mac avec la mise à jour 2",
+    "ozet": "Selon l'annonce officielle sur Steam, la mise à jour retravaille le Gunship, ajoute une vue de propriété en coopération et deux langues.",
+    "metin": "Zombies Aren't Real est arrivé sur Mac avec sa mise à jour n° 2, le 23 novembre 2026. Selon l'annonce officielle sur Steam, le jeu est désormais disponible sur Mac ; la configuration requise officielle figure sur la page Steam.\n\nLe changement le plus notable concerne le Gunship. Un clic sur une zone suffit : il survole l'endroit, tourne autour et tire des salves de 12 missiles sur les plus fortes concentrations de zombies du cercle. Au bout d'une minute, il repart se ravitailler et revient au même endroit 30 secondes plus tard. Comme il choisit ses propres cibles, ses missiles n'endommagent ni vos murs ni vos unités. Hors Ultra Hardcore, il épargne aussi les civils, les officiers et les bâtiments tenus par vos unités.\n\nParmi les autres nouveautés, la vue Propriété (Maj+V) en coopération colore chaque bâtiment et zone sûre selon son propriétaire, et le bouton Clear Badges des Paramètres supprime insignes et meilleurs scores tout en conservant les victoires. La taille de police atteint désormais 200 % avec la police Carlito, et le hongrois et le thaï sont ajoutés. Le char ne quitte plus le terrain à court d'obus : il se recharge sur place pendant toute la bataille et coûte 2 SP par niveau, contre 4 auparavant.\n\nLes réglages de performance sont désormais dans performance.ini, et les modifier ne compte plus comme un fichier de jeu modifié : les scores restent classés. Selon le même message Steam, les premières mises à jour se concentrent sur la qualité de vie, la stabilité et les corrections, et la mise à jour 3 est déjà en cours de développement.",
+    "etiketler": [
+     "#ZombiesArentReal",
+     "#Steam",
+     "#Mac",
+     "#Update2"
+    ]
+   },
+   "de": {
+    "baslik": "Zombies Aren't Real kommt mit Update 2 auf den Mac",
+    "ozet": "Laut der Steam-Ankündigung überarbeitet das Update den Gunship, bringt eine Besitzansicht für Koop und zwei neue Sprachen.",
+    "metin": "Zombies Aren't Real ist am 23. November 2026 mit dem Update 2 auf den Mac gekommen. Laut der offiziellen Ankündigung auf Steam ist das Spiel nun auch für Mac erhältlich; die offiziellen Systemanforderungen stehen auf der Steam-Seite.\n\nDie größte Spielneuerung betrifft den Gunship. Ein Klick auf eine Stelle genügt: Er fliegt hin, kreist darüber und feuert Salven von 12 Raketen auf die dichtesten Zombiemengen im Kreis. Nach einer Minute fliegt er zum Nachladen weg und kehrt 30 Sekunden später an dieselbe Stelle zurück. Da er seine Ziele selbst wählt, treffen seine Raketen weder Mauern noch eigene Einheiten. Außerhalb von Ultra Hardcore verschont er außerdem Zivilisten, Offiziere und Gebäude, die von euren Einheiten gehalten werden.\n\nWeitere Neuerungen: Im Koop zeigt die Besitzansicht (Umschalt+V) jedes Gebäude und jede sichere Zone in der Farbe des Besitzers. Der Button Clear Badges in den Einstellungen entfernt alle Abzeichen und Bestwerte, Siege bleiben erhalten. Die Schriftgröße lässt sich mit der Schrift Carlito bis 200 % steigern, und Ungarisch sowie Thai wurden hinzugefügt. Der Panzer verlässt das Feld nicht mehr, wenn ihm die Geschosse ausgehen: Er lädt während der ganzen Schlacht an Ort und Stelle nach und kostet pro Stufe 2 SP statt 4.\n\nLeistungseinstellungen liegen nun in der Datei performance.ini. Ihre Änderung gilt nicht mehr als veränderte Spieldatei, sodass Ergebnisse weiterhin in die Bestenlisten kommen. Laut derselben Steam-Ankündigung konzentrieren sich die ersten Updates auf Komfort, Stabilität und Fehlerbehebungen, und Update 3 ist bereits in Arbeit.",
+    "etiketler": [
+     "#ZombiesArentReal",
+     "#Steam",
+     "#Mac",
+     "#Update2"
+    ]
+   },
+   "nl": {
+    "baslik": "Zombies Aren't Real komt naar Mac met update 2",
+    "ozet": "Volgens de officiële Steam-aankondiging herwerkt de update de Gunship, voegt een eigendomsweergave voor co-op toe en brengt twee nieuwe talen.",
+    "metin": "Zombies Aren't Real is op 23 november 2026 met update 2 naar Mac gekomen. Volgens de officiële aankondiging op Steam is het spel nu ook op Mac beschikbaar; de officiële systeemeisen staan op de Steam-pagina.\n\nDe grootste speelwijziging betreft de Gunship. Eén klik op een plek volstaat: hij vliegt erheen, cirkelt eromheen en vuurt salvo's van 12 raketten af op de dichtste zombiemenigten binnen de cirkel. Na een minuut vliegt hij weg om bij te tanken en keert 30 seconden later terug naar dezelfde plek. Omdat hij zelf zijn doelen kiest, raken zijn raketten nooit je muren of eenheden. Buiten Ultra Hardcore spaart hij ook burgers, officieren en gebouwen die je eenheden bezetten.\n\nVerder is er in co-op een eigendomsweergave (Shift+V) die elk gebouw en elke veilige zone in de kleur van de eigenaar toont. De knop Clear Badges in de instellingen verwijdert alle badges en beste scores, terwijl overwinningen blijven staan. De lettergrootte gaat nu tot 200 procent met het lettertype Carlito, en Hongaars en Thai zijn toegevoegd. De tank vertrekt niet meer als de granaten op zijn: hij laadt de hele slag ter plaatse bij en kost 2 SP per niveau in plaats van 4.\n\nPrestatie-instellingen staan nu in performance.ini, en het wijzigen ervan telt niet langer als aangepast spelbestand, dus scores blijven op de ranglijsten verschijnen. Volgens dezelfde Steam-aankondiging richten de eerste updates zich op gebruiksgemak, stabiliteit en bugfixes, en update 3 is al in ontwikkeling.",
+    "etiketler": [
+     "#ZombiesArentReal",
+     "#Steam",
+     "#Mac",
+     "#Update2"
+    ]
+   },
+   "zh": {
+    "baslik": "Zombies Aren't Real 2号更新登陆Mac",
+    "ozet": "Steam官方公告显示，本次更新调整了Gunship的攻击方式，新增联机归属视图，并加入匈牙利语和泰语。",
+    "metin": "Zombies Aren't Real于2026年11月23日随2号更新登陆Mac。据Steam官方公告，该游戏现已支持Mac，官方系统配置请查看Steam商店页面。\n\n本次最大的玩法变化是Gunship。点击地图某处后，它会飞到该区域盘旋，并对圈内最密集的僵尸群发射每轮12枚导弹。一分钟补给后，它会在30秒后回到同一位置。由于它自行选择目标，导弹不会伤害你的墙壁或单位。在非Ultra Hardcore模式下，它还会避开平民、军官以及你的单位所占据的建筑。\n\n其他改动包括：联机时按Shift+V可打开归属视图，按所属玩家颜色显示每座建筑和安全区；设置中新增Clear Badges按钮，可清除所有徽章和最佳成绩，但保留胜场。Carlito字体下字体大小最高可达200%，并新增匈牙利语和泰语。坦克耗尽炮弹后不再离场，而是在整场战斗中原地装填，每级消耗2 SP，原为4 SP。\n\n性能设置现已保存在performance.ini中，修改它不再算作游戏文件被改动，成绩仍可上传排行榜。Steam公告称，发布后的早期更新将侧重体验优化、稳定性和错误修复，3号更新也在开发中。",
+    "etiketler": [
+     "#ZombiesArentReal",
+     "#Steam",
+     "#Mac",
+     "#Update2"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "zombies-arent-real-update-2-mac",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/5185890/view/701033669261788192",
+   "teyit_zamani": "2026-11-23T16:10:03+00:00",
+   "oyuncuya_fayda": "Mac'te oynamak isteyenler oyunu Steam'den kurabilir; mevcut oyuncular öğreticiyi sıfırlayıp yeni Gunship davranışını deneyebilir.",
+   "hype": 4,
+   "eklenme": "2026-11-23T19:23:20.152147+03:00"
+  }
+ },
+ {
+  "id": "warhammer-40k-dawn-of-war-iv-2026-11-23",
+  "oyun": "Warhammer 40,000: Dawn of War IV",
+  "tarih": "2026-11-23",
+  "tur": "cikis",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam resmî duyurusu",
+    "url": "https://store.steampowered.com/news/app/2272360/view/696530069632321137"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Warhammer 40,000: Dawn of War IV 3 Aralık'ta çıkıyor",
+    "ozet": "Commander Edition ön siparişinde 30 Kasım'dan itibaren üç gün erken erişim var; iki genişleme 2027'de gelecek.",
+    "metin": "Warhammer 40,000: Dawn of War IV, 3 Aralık 2026'da çıkıyor. Commander Edition'ı ön sipariş veren oyuncular, oyuna 30 Kasım'dan itibaren üç gün erken girebilecek.\n\nSteam'deki resmî duyuruya göre Commander Edition, lansmanda dijital soundtrack içeriyor ve iki yakında gelecek genişlemeyi kapsıyor. Bunlardan Blood Ravens Story Prologue 2027 baharında geliyor ve oyunu Blood Ravens'ın kayıp anavatanı Aurelia'ya götürüyor; burada bir Blood Ravens saldırı ekibi, Chapter'ın geleceği için hayati önemde bir şey arıyor. Aftermath ise 2027 yazında geliyor. Duyuruya göre Kronus savaşı sona ererken yeni bir fraksiyon çatışmaya dahil oluyor.\n\nOyuncular için karar net: erken oynamak isteyenlerin Commander Edition'a ihtiyacı var, diğerleri ise oyunu 3 Aralık'ta başlatabilir. Genişlemeler, duyuruya göre yeni kampanyalar ve birden çok oyun modunda ek içerik getirecek.",
+    "etiketler": [
+     "#WarhammerDawnOfWarIV",
+     "#Warhammer40K",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "en": {
+    "baslik": "Warhammer 40,000: Dawn of War IV launches December 3",
+    "ozet": "Commander Edition pre-orders get three days of early access from November 30, and two expansions follow in 2027 with new campaigns.",
+    "metin": "Warhammer 40,000: Dawn of War IV launches on December 3, 2026. Players who pre-order the Commander Edition can start playing three days early, from November 30.\n\nAccording to the official Steam news post, the edition includes the digital soundtrack at launch and two upcoming expansions with new campaigns and extra content across several game modes. Blood Ravens Story Prologue arrives in Spring 2027 and sends players back to Aurelia, the lost homeworld of the Blood Ravens, where a strike force searches for something vital to the Chapter's future. Aftermath follows in Summer 2027, and the announcement says a new faction enters the conflict as the battle for Kronus comes to an end.\n\nFor players, the choice mostly comes down to whether they want to start early: the Commander Edition offers early access, while the general launch is on December 3. The expansions extend the Kronus story into 2027.",
+    "etiketler": [
+     "#WarhammerDawnOfWarIV",
+     "#Warhammer40K",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "es": {
+    "baslik": "Warhammer 40,000: Dawn of War IV sale el 3 de diciembre",
+    "ozet": "Quienes reserven la Commander Edition tendrán tres días de acceso anticipado desde el 30 de noviembre, y dos expansiones llegarán en 2027.",
+    "metin": "Warhammer 40,000: Dawn of War IV sale el 3 de diciembre de 2026. Quienes reserven la Commander Edition podrán jugar tres días antes, desde el 30 de noviembre.\n\nSegún el anuncio oficial en Steam, la edición incluye la banda sonora digital en el lanzamiento y dos expansiones próximas con nuevas campañas y contenido adicional en varios modos de juego. Blood Ravens Story Prologue llegará en primavera de 2027 y lleva de nuevo a Aurelia, el mundo natal perdido de los Blood Ravens, donde una fuerza de asalto busca algo vital para el futuro del Capítulo. Aftermath llegará en verano de 2027; el anuncio indica que, al terminar la batalla por Kronus, entra en el conflicto una nueva facción.\n\nPara los jugadores, la decisión depende de si quieren empezar antes: la Commander Edition da acceso anticipado, mientras que el lanzamiento general es el 3 de diciembre. Las expansiones amplían la historia de Kronus hasta 2027.",
+    "etiketler": [
+     "#WarhammerDawnOfWarIV",
+     "#Warhammer40K",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "fr": {
+    "baslik": "Warhammer 40,000: Dawn of War IV sortira le 3 décembre",
+    "ozet": "Les précommandes de la Commander Edition donnent trois jours d'accès anticipé dès le 30 novembre, et deux extensions arrivent en 2027.",
+    "metin": "Warhammer 40,000: Dawn of War IV sortira le 3 décembre 2026. Les joueurs qui précommandent la Commander Edition pourront jouer trois jours plus tôt, dès le 30 novembre.\n\nSelon l'annonce officielle sur Steam, l'édition comprend la bande originale numérique au lancement et deux extensions à venir, avec de nouvelles campagnes et du contenu supplémentaire dans plusieurs modes de jeu. Blood Ravens Story Prologue arrive au printemps 2027 et ramène les joueurs sur Aurelia, le monde natal perdu des Blood Ravens, où une escouade cherche quelque chose d'essentiel pour l'avenir du Chapitre. Aftermath arrive à l'été 2027 ; l'annonce indique qu'à la fin de la bataille pour Kronus, une nouvelle faction entre dans le conflit.\n\nPour les joueurs, le choix dépend surtout de l'envie de commencer plus tôt : la Commander Edition offre l'accès anticipé, tandis que le lancement général a lieu le 3 décembre. Les extensions prolongent l'histoire de Kronus jusqu'en 2027.",
+    "etiketler": [
+     "#WarhammerDawnOfWarIV",
+     "#Warhammer40K",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "de": {
+    "baslik": "Warhammer 40,000: Dawn of War IV erscheint am 3. Dezember",
+    "ozet": "Vorbesteller der Commander Edition erhalten drei Tage früher Zugang ab dem 30. November, und zwei Erweiterungen folgen 2027.",
+    "metin": "Warhammer 40,000: Dawn of War IV erscheint am 3. Dezember 2026. Spieler, die die Commander Edition vorbestellen, können ab dem 30. November drei Tage früher loslegen.\n\nLaut der offiziellen Ankündigung auf Steam umfasst die Edition zum Start den digitalen Soundtrack sowie zwei kommende Erweiterungen mit neuen Kampagnen und zusätzlichen Inhalten für mehrere Spielmodi. Blood Ravens Story Prologue erscheint im Frühjahr 2027 und führt zurück nach Aurelia, die verlorene Heimatwelt der Blood Ravens, wo ein Angriffstrupp nach etwas sucht, das für die Zukunft des Ordens entscheidend ist. Aftermath folgt im Sommer 2027; die Ankündigung nennt außerdem eine neue Fraktion, die in den Konflikt eingreift, sobald die Schlacht um Kronus endet.\n\nFür Spieler ist die Entscheidung einfach: Wer früher starten möchte, braucht die Commander Edition, alle anderen steigen mit dem Release am 3. Dezember ein. Die Erweiterungen führen die Geschichte um Kronus bis ins Jahr 2027 weiter.",
+    "etiketler": [
+     "#WarhammerDawnOfWarIV",
+     "#Warhammer40K",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "nl": {
+    "baslik": "Warhammer 40,000: Dawn of War IV verschijnt op 3 december",
+    "ozet": "Pre-orders van de Commander Edition krijgen drie dagen vroege toegang vanaf 30 november, en twee uitbreidingen volgen in 2027.",
+    "metin": "Warhammer 40,000: Dawn of War IV verschijnt op 3 december 2026. Wie de Commander Edition vooraf bestelt, kan vanaf 30 november drie dagen eerder aan de slag.\n\nVolgens de officiële aankondiging op Steam bevat de editie bij de lancering de digitale soundtrack en twee komende uitbreidingen met nieuwe campagnes en extra content in meerdere spelmodi. Blood Ravens Story Prologue komt in het voorjaar van 2027 en brengt spelers terug naar Aurelia, de verloren thuiswereld van de Blood Ravens, waar een aanvalsgroep zoekt naar iets van vitaal belang voor de toekomst van het Chapter. Aftermath volgt in de zomer van 2027; de aankondiging meldt ook dat een nieuwe factie de strijd betreedt zodra de slag om Kronus voorbij is.\n\nVoor spelers is de keuze simpel: wie eerder wil beginnen, heeft de Commander Edition nodig, terwijl de algemene release op 3 december volgt. De uitbreidingen zetten het verhaal van Kronus door tot in 2027.",
+    "etiketler": [
+     "#WarhammerDawnOfWarIV",
+     "#Warhammer40K",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "zh": {
+    "baslik": "Warhammer 40,000: Dawn of War IV 12月3日发售",
+    "ozet": "预购指挥官版可从11月30日起提前三天进入游戏，两款扩展计划于2027年春季与夏季推出，并加入新战役。",
+    "metin": "Warhammer 40,000: Dawn of War IV将于2026年12月3日正式发售。预购指挥官版（Commander Edition）的玩家，可以从11月30日起提前三天开始游玩。\n\n据Steam官方公告，指挥官版在发售时附带数字原声带，并包含两款即将推出的扩展，二者都将带来新战役以及多种游戏模式的额外内容。《Blood Ravens Story Prologue》将于2027年春季推出，带玩家重返Blood Ravens失落的母星Aurelia；一支突击小队在那里搜寻对军团未来至关重要的东西。《Aftermath》则计划于2027年夏季推出。公告还表示，随着Kronus之战接近尾声，一个新阵营将加入冲突。\n\n对玩家来说，选择很直接：想提前开始的人需要购买指挥官版，其他人则可以等待12月3日的正式发售。两款扩展将把Kronus的故事延续到2027年。",
+    "etiketler": [
+     "#WarhammerDawnOfWarIV",
+     "#Warhammer40K",
+     "#Steam",
+     "#PC"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "warhammer-40k-dawn-of-war-iv-commander-edition-2026-11-23",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/2272360/view/696530069632321137",
+   "teyit_zamani": "2026-11-23T16:10:03+00:00",
+   "oyuncuya_fayda": "Ön sipariş verenler oyuna üç gün erken girebilir; diğer oyuncular 3 Aralık'ta başlayabilir.",
+   "hype": 6,
+   "eklenme": "2026-11-23T19:23:20.152147+03:00"
+  }
+ },
+ {
+  "id": "queens-domain-300-bin-satis-2026-11-23",
+  "oyun": "Queen's Domain",
+  "tarih": "2026-11-23",
+  "tur": "haber",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam geliştirici duyurusu",
+    "url": "https://store.steampowered.com/news/app/1799840/view/669508471871243339"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Queen's Domain 3 haftada 300.000 kopya sattı",
+    "ozet": "Geliştirici ekip Steam duyurusunda 300.000 satışa ulaştığını açıkladı; Eurogamer oyuna 5/5 puan verdi.",
+    "metin": "Steam'de yer alan aksiyon RPG Queen's Domain, resmen 300.000 kopya sattı. Geliştirici ekip bu dönüm noktasını 23 Kasım'da Steam'de yayımladığı resmî duyuruda paylaştı. Duyurunun başlığı \"300,000 copies sold in 3 weeks!\" yani 3 haftada 300.000 kopya.\n\nDuyuru ayrıca Eurogamer'dan gelen yeni bir 5/5 puanı öne çıkarıyor. Ekibin paylaştığı alıntıya göre yayın, Queen's Domain'i büyüleyici ve emeğin karşılığını bol bol veren bir aksiyon RPG olarak tanımlıyor. Eurogamer'a göre oyunun olağanüstü ada ortamı, sırlar ve keşiflerle dolu son derece karmaşık bir gezinme bulmacası ve gerçek bir hayranlık uyandırıyor.\n\nEkip, süregelen destek için oyunculara teşekkür etti ve incelemelerin hâlâ gelmesinden memnun olduğunu belirtti. Oyuncular için bu paylaşım, oyunun kitlesini bulduğunu ve eleştirmenlerin keşif odaklı tasarımı övdüğünü gösteriyor. Duyuruda yeni içerik, fiyat değişikliği veya indirim yer almıyor.",
+    "etiketler": [
+     "#QueensDomain",
+     "#ActionRPG",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "en": {
+    "baslik": "Queen's Domain sells 300,000 copies in 3 weeks",
+    "ozet": "The developers announced 300,000 copies sold on Steam, and Eurogamer gave the action-RPG a 5/5 review.",
+    "metin": "Queen's Domain, an action-RPG on Steam, has officially sold 300,000 copies. The developers shared the milestone on November 23 in an official Steam announcement titled \"300,000 copies sold in 3 weeks!\"\n\nThe announcement also highlights a new 5/5 review from Eurogamer. According to the quote the team shared, the outlet describes Queen's Domain as a fascinating, richly rewarding action-RPG, and says its extraordinary island setting, a vastly intricate traversal puzzle of secrets and discoveries, inspires real wonder.\n\nThe team thanked players for their continued support and said it is exciting to see reviews still coming in. For players, the post shows that the game is finding its audience and that critics are praising its exploration-focused design. It does not announce new content, a price change or a sale.",
+    "etiketler": [
+     "#QueensDomain",
+     "#ActionRPG",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "es": {
+    "baslik": "Queen's Domain vende 300.000 copias en 3 semanas",
+    "ozet": "El equipo anunció en Steam 300.000 copias vendidas y Eurogamer dio un 5/5 al action-RPG.",
+    "metin": "Queen's Domain, un action-RPG disponible en Steam, ha vendido oficialmente 300.000 copias. El equipo de desarrollo compartió el hito el 23 de noviembre en un anuncio oficial de Steam titulado «300,000 copies sold in 3 weeks!», es decir, 300.000 copias en 3 semanas.\n\nEl anuncio destaca además una nueva reseña de Eurogamer con un 5/5. Según la cita que difundió el estudio, el medio describe Queen's Domain como un action-RPG fascinante y muy gratificante, y afirma que su extraordinario escenario insular, un enorme rompecabezas de exploración lleno de secretos y descubrimientos, despierta un auténtico asombro.\n\nEl equipo agradeció el apoyo continuo de los jugadores y dijo que es emocionante seguir recibiendo reseñas. Para los jugadores, la publicación muestra que el juego sigue ganando público y que la crítica elogia su diseño centrado en la exploración. No anuncia contenido nuevo, cambios de precio ni ofertas.",
+    "etiketler": [
+     "#QueensDomain",
+     "#ActionRPG",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "fr": {
+    "baslik": "Queen's Domain atteint 300 000 ventes en 3 semaines",
+    "ozet": "L'équipe annonce 300 000 exemplaires vendus sur Steam, et Eurogamer a donné un 5/5 à l'action-RPG.",
+    "metin": "Queen's Domain, un action-RPG disponible sur Steam, a officiellement atteint 300 000 exemplaires vendus. L'équipe de développement a partagé cette étape le 23 novembre dans une annonce Steam officielle intitulée « 300,000 copies sold in 3 weeks! », soit 300 000 exemplaires en 3 semaines.\n\nL'annonce met aussi en avant une nouvelle note de 5/5 attribuée par Eurogamer. D'après la citation relayée par l'équipe, le site décrit Queen's Domain comme un action-RPG fascinant et très gratifiant, et estime que son cadre insulaire extraordinaire, un immense casse-tête de déplacement rempli de secrets et de découvertes, suscite un véritable émerveillement.\n\nL'équipe a remercié les joueurs pour leur soutien continu et se réjouit que des critiques continuent d'arriver. Pour les joueurs, ce message montre que le jeu trouve son public et que la presse salue sa conception centrée sur l'exploration. Il n'annonce ni contenu, ni changement de prix, ni promotion.",
+    "etiketler": [
+     "#QueensDomain",
+     "#ActionRPG",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "de": {
+    "baslik": "Queen's Domain verkauft 300.000 Exemplare in 3 Wochen",
+    "ozet": "Das Team meldet auf Steam 300.000 verkaufte Exemplare, und Eurogamer vergab 5/5 für das Action-RPG.",
+    "metin": "Queen's Domain, ein Action-RPG auf Steam, hat offiziell 300.000 Exemplare verkauft. Das Entwicklerteam teilte den Meilenstein am 23. November in einer offiziellen Steam-Ankündigung mit dem Titel „300,000 copies sold in 3 weeks!“ mit, also 300.000 Verkäufe in 3 Wochen.\n\nDie Ankündigung hebt außerdem eine neue 5/5-Wertung von Eurogamer hervor. Laut dem vom Team geteilten Zitat beschreibt das Magazin Queen's Domain als faszinierendes, reich belohnendes Action-RPG und sagt, das außergewöhnliche Inselsetting, ein riesiges, verschachteltes Fortbewegungsrätsel voller Geheimnisse und Entdeckungen, wecke echtes Staunen.\n\nDas Team bedankte sich für die anhaltende Unterstützung und freut sich, dass weiter Wertungen eintreffen. Für Spieler zeigt der Beitrag, dass das Spiel sein Publikum findet und die Kritik das auf Erkundung ausgerichtete Design lobt. Neue Inhalte, Preisänderungen oder Rabatte werden nicht angekündigt.",
+    "etiketler": [
+     "#QueensDomain",
+     "#ActionRPG",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "nl": {
+    "baslik": "Queen's Domain verkoopt 300.000 exemplaren in 3 weken",
+    "ozet": "Het team meldt op Steam 300.000 verkochte exemplaren en Eurogamer gaf de action-RPG een 5/5.",
+    "metin": "Queen's Domain, een action-RPG op Steam, heeft officieel 300.000 exemplaren verkocht. Het ontwikkelteam deelde de mijlpaal op 23 november in een officiële Steam-aankondiging met de titel „300,000 copies sold in 3 weeks!”, dus 300.000 verkopen in 3 weken.\n\nDe aankondiging belicht ook een nieuwe 5/5-beoordeling van Eurogamer. Volgens het citaat dat het team deelde, noemt de site Queen's Domain een fascinerende, rijk belonende action-RPG en zegt dat de buitengewone eilandomgeving, een enorm ingewikkelde verplaatsingspuzzel vol geheimen en ontdekkingen, echte verwondering oproept.\n\nHet team bedankte spelers voor de blijvende steun en vindt het fijn dat er nog steeds recensies binnenkomen. Voor spelers laat de post zien dat de game een publiek vindt en dat critici het op verkenning gerichte ontwerp prijzen. Nieuwe content, prijswijzigingen of kortingen worden niet aangekondigd.",
+    "etiketler": [
+     "#QueensDomain",
+     "#ActionRPG",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "zh": {
+    "baslik": "《Queen's Domain》3周售出300,000份",
+    "ozet": "开发团队在Steam公告中宣布销量达到300,000份，Eurogamer给出5/5评分。",
+    "metin": "动作RPG《Queen's Domain》在Steam上正式售出300,000份。开发团队于11月23日在Steam官方公告中分享了这一里程碑，公告标题为“300,000 copies sold in 3 weeks!”，即3周内售出300,000份。\n\n公告还提到Eurogamer给出了5/5的新评分。根据团队分享的引文，该媒体称《Queen's Domain》是一款迷人且回报丰厚的动作RPG，并表示其非凡的岛屿场景是一个充满秘密与发现、极其复杂的探索解谜，令人真正感到惊叹。\n\n团队感谢玩家一直以来的支持，并表示很高兴看到评测仍在陆续发布。对玩家来说，这则公告说明游戏正在找到自己的受众，评论也称赞其以探索为核心的设计。公告没有宣布新内容、价格调整或折扣。",
+    "etiketler": [
+     "#QueensDomain",
+     "#ActionRPG",
+     "#Steam",
+     "#PC"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "queens-domain-300000-kopya-satis",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/1799840/view/669508471871243339",
+   "teyit_zamani": "2026-11-23T16:10:03+00:00",
+   "oyuncuya_fayda": "Oyuncular Queen's Domain'in 300.000 satışa ulaştığını ve Eurogamer'dan 5/5 aldığını görüp oyunu değerlendirebilir.",
+   "hype": 3,
+   "eklenme": "2026-11-23T19:23:20.152147+03:00"
+  }
+ },
+ {
   "id": "wardogs-nvidia-surucu-sorunu-2026-11-23",
   "oyun": "WARDOGS",
   "tarih": "2026-11-23",

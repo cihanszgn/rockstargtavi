@@ -1,0 +1,98 @@
+{
+ "id": "queens-domain-300-bin-satis-2026-11-23",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Queen's Domain ha vendido 300.000 copias en Steam en solo 3 semanas.",
+   "veri": {
+    "ust_etiket": "HITO DE VENTAS",
+    "baslik": "Queen's Domain: 300.000 copias",
+    "vurgu": [
+     "300.000"
+    ],
+    "tuslar": [
+     "Q",
+     "D"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "QUEEN'S DOMAIN",
+    "alt": "300.000 COPIAS EN 3 SEMANAS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "El equipo anunció el hito en Steam. Eurogamer le dio un 5/5 y los desarrolladores agradecieron el apoyo de los jugadores.",
+   "veri": {
+    "baslik": "Resumen del anuncio",
+    "maddeler": [
+     {
+      "metin": "300.000 copias vendidas",
+      "tetik": "hito"
+     },
+     {
+      "metin": "5/5 de Eurogamer",
+      "tetik": "Eurogamer"
+     },
+     {
+      "metin": "Gracias por el apoyo",
+      "tetik": "agradecieron"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "RESUMEN DEL ANUNCIO",
+    "alt": "300.000 COPIAS Y 5/5"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según Eurogamer, es un action-RPG gratificante cuyo escenario insular despierta auténtico asombro.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Anuncio del estudio en Steam",
+    "alinti": "Un action-RPG fascinante y muy gratificante que despierta auténtico asombro."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "ANUNCIO EN STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Le darías una oportunidad a Queen's Domain?",
+   "veri": {
+    "cagri": "Todos los detalles en la web",
+    "alt": "Fuentes y citas en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
