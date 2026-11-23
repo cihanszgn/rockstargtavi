@@ -1,0 +1,98 @@
+{
+ "id": "the-regreening-steam-cikis-2026-11-23",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "The Regreening llega a Steam el 7 de diciembre y tú restauras un mundo desierto.",
+   "veri": {
+    "ust_etiket": "PC • STEAM",
+    "baslik": "The Regreening llega el 7 de diciembre",
+    "vurgu": [
+     "7 de diciembre"
+    ],
+    "tuslar": [
+     "R",
+     "G"
+    ]
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "THE REGREENING",
+    "alt": "PC • STEAM"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "La fecha de lanzamiento prevista en la página de Steam es el 7 de diciembre.",
+   "veri": {
+    "etiket": "Lanzamiento previsto",
+    "tarih": "7 de diciembre",
+    "not": "PC, a través de Steam"
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "FECHA DE SALIDA",
+    "alt": "7 DE DICIEMBRE • PC"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Cultivas plantas y reconstruyes hábitats de fauna, y conviertes la basura en herramientas y decoración. No hay temporizadores, así que avanzas a tu ritmo.",
+   "veri": {
+    "baslik": "Restauración sin prisas",
+    "maddeler": [
+     {
+      "metin": "Cultivas plantas y hábitats",
+      "tetik": "Cultivas"
+     },
+     {
+      "metin": "Basura convertida en herramientas",
+      "tetik": "herramientas"
+     },
+     {
+      "metin": "Sin temporizadores",
+      "tetik": "temporizadores"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "SIN TEMPORIZADORES",
+    "alt": "CULTIVA Y RECICLA A TU RITMO"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Lo comprarías el primer día o probarías antes la demo?",
+   "veri": {
+    "cagri": "Demo primero, luego 7 de diciembre",
+    "alt": "Detalles completos en la noticia"
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

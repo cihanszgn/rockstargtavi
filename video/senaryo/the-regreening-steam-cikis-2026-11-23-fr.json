@@ -1,0 +1,98 @@
+{
+ "id": "the-regreening-steam-cikis-2026-11-23",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "The Regreening sort le 7 décembre sur Steam : vous restaurez un monde désert.",
+   "veri": {
+    "ust_etiket": "PC • STEAM",
+    "baslik": "The Regreening sort le 7 décembre",
+    "vurgu": [
+     "7 décembre"
+    ],
+    "tuslar": [
+     "R",
+     "G"
+    ]
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "THE REGREENING",
+    "alt": "PC • STEAM"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "La date de sortie prévue sur la page Steam du jeu est le 7 décembre.",
+   "veri": {
+    "etiket": "Sortie prévue",
+    "tarih": "7 décembre",
+    "not": "PC, via Steam"
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "DATE DE SORTIE",
+    "alt": "7 DÉCEMBRE • PC"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Vous cultivez des plantes et reconstruisez des habitats sauvages, puis transformez les déchets en outils et décorations. Il n'y a pas de minuteur, vous avancez à votre rythme.",
+   "veri": {
+    "baslik": "Restaurer le monde",
+    "maddeler": [
+     {
+      "metin": "Cultiver et reconstruire",
+      "tetik": "cultivez"
+     },
+     {
+      "metin": "Déchets transformés en outils",
+      "tetik": "outils"
+     },
+     {
+      "metin": "Aucun minuteur",
+      "tetik": "minuteur"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "AUCUN MINUTEUR",
+    "alt": "CULTIVEZ • RECYCLEZ • VOTRE RYTHME"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. L'achèteriez-vous dès le premier jour, ou testeriez-vous d'abord la démo ?",
+   "veri": {
+    "cagri": "Démo d'abord, puis 7 décembre",
+    "alt": "Détails complets dans l'article"
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

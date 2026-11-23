@@ -1,0 +1,98 @@
+{
+ "id": "the-regreening-steam-cikis-2026-11-23",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "The Regreening launches December 7 on Steam, and you restore a deserted world.",
+   "veri": {
+    "ust_etiket": "PC • STEAM",
+    "baslik": "The Regreening launches December 7",
+    "vurgu": [
+     "December 7"
+    ],
+    "tuslar": [
+     "R",
+     "G"
+    ]
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "THE REGREENING",
+    "alt": "PC • STEAM"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "The planned release date on the Steam store page is December 7.",
+   "veri": {
+    "etiket": "Planned release",
+    "tarih": "December 7",
+    "not": "PC via Steam"
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "RELEASE DATE",
+    "alt": "DECEMBER 7 • PC"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "You grow plants, rebuild wildlife habitats, and upcycle junk into tools and decorations. There are no timers, so you progress at your own pace.",
+   "veri": {
+    "baslik": "Restore the world",
+    "maddeler": [
+     {
+      "metin": "Grow plants and rebuild habitats",
+      "tetik": "grow"
+     },
+     {
+      "metin": "Upcycle junk into tools",
+      "tetik": "upcycle"
+     },
+     {
+      "metin": "No timers, your own pace",
+      "tetik": "timers"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "RESTORE THE WORLD",
+    "alt": "GROW • UPCYCLE • NO TIMERS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Would you buy it on day one, or try the demo first?",
+   "veri": {
+    "cagri": "Demo first, then December 7",
+    "alt": "Full details in the article"
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,98 @@
+{
+ "id": "the-regreening-steam-cikis-2026-11-23",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "The Regreening 7 Aralık'ta Steam'e geliyor; terk edilmiş bir dünyayı yeniden canlandırıyorsunuz.",
+   "veri": {
+    "ust_etiket": "PC • STEAM",
+    "baslik": "The Regreening 7 Aralık'ta geliyor",
+    "vurgu": [
+     "7 Aralık'ta"
+    ],
+    "tuslar": [
+     "R",
+     "G"
+    ]
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "THE REGREENING",
+    "alt": "PC • STEAM"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Steam sayfasındaki planlanan çıkış tarihi 7 Aralık 2026.",
+   "veri": {
+    "etiket": "Planlanan çıkış",
+    "tarih": "7 Aralık",
+    "not": "PC'de Steam üzerinden"
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "ÇIKIŞ TARİHİ",
+    "alt": "7 ARALIK • PC"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Oyunda bitki yetiştiriyor, yaban hayat yuvaları kuruyor ve atıkları alet ve dekorasyona dönüştürüyorsunuz. Zaman sayacı yok; ilerlemeyi kendi temponuzda yürütüyorsunuz.",
+   "veri": {
+    "baslik": "Yeniden canlandırma",
+    "maddeler": [
+     {
+      "metin": "Bitki yetiştirme ve yaban hayat yuvaları",
+      "tetik": "yetiştiriyor"
+     },
+     {
+      "metin": "Atıklardan alet ve dekorasyon",
+      "tetik": "alet"
+     },
+     {
+      "metin": "Zaman sayacı yok",
+      "tetik": "sayacı"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "YENİDEN CANLANDIRMA",
+    "alt": "ALET VE DEKORASYON"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. İlk gün alır mısınız, yoksa önce demoyu mu denersiniz?",
+   "veri": {
+    "cagri": "Önce demo, sonra 7 Aralık",
+    "alt": "Oyun detayları haberde"
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
