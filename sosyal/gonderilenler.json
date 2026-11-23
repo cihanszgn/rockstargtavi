@@ -1081,6 +1081,20 @@
   "url": "https://www.instagram.com/p/DgEHzo7kqsH/",
   "zaman": "2026-11-23T00:44:27+00:00"
  },
+ "pubg-college-royale-fall-2026-finals|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 3420201,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "pubg-college-royale-fall-2026-finals-2026-11-22",
+  "kimlik": "UUXH2XHBlGQ",
+  "niyet_zamani": "2026-11-23T06:43:44+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg0AqvteBpjgukyOPMXmZKAgHPe_hnWsKhnTOxUbjauwWDiUOrzmvsvgeTLn4ByM1jffblpSIbaNBikDlfD7RoKe0EGpKWBOZeU_bfcBTH0",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/UUXH2XHBlGQ",
+  "zaman": "2026-11-23T06:43:44+00:00"
+ },
  "rainbow-six-siege-y11s4-operation-vital-signal-reveal-2026-11-15|tr|instagram|gorsel": {
   "bicim": "gorsel",
   "dil": "tr",
@@ -1346,6 +1360,20 @@
   "sosyal_tur": "haber",
   "url": "https://www.instagram.com/p/DgBf-99Gmk-/",
   "zaman": "2026-11-22T00:17:58+00:00"
+ },
+ "worst-class-ever-1-milyon-kopya-yol-haritasi-2026-11-22|tr|instagram|reel": {
+  "bicim": "reel",
+  "dil": "tr",
+  "durum": "tamam",
+  "icerik_dili": "tr",
+  "id": "worst-class-ever-1-milyon-kopya-2026-11-22",
+  "kapsayici": "17871022260694894",
+  "kimlik": "17979408924175539",
+  "niyet_zamani": "2026-11-23T06:43:44+00:00",
+  "platform": "instagram",
+  "sosyal_tur": "haber",
+  "url": "https://www.instagram.com/reel/DgExCX-S_m-/",
+  "zaman": "2026-11-23T06:43:44+00:00"
  },
  "worst-class-ever-1-milyon-kopya-yol-haritasi-2026-11-22|tr|youtube|short": {
   "bicim": "short",
