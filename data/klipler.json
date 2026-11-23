@@ -213,6 +213,78 @@
    },
    "youtube": "https://www.youtube.com/shorts/wPI5e9UaOWU"
   },
+  "eraycan-20261122-16a64881-klip-01": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/eray",
+   "metin": {
+    "aciklama": "Hediye dağıtılırken biri ürünlerin kaça satılacağını sorunca çekiliş iptal ediliyor.\nKaynak: https://kick.com/eray\nKomixsi",
+    "baslik": "Eray çekiliş hediyesini satmaya kızıyor",
+    "etiketler": [
+     "#Eray",
+     "#Kick",
+     "#JustChatting",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "19f26ec21274cf94fb3eff6371d0755e090bd41bd4263ef1eb1f334123b6a2b6",
+    "otomatik": true,
+    "ozet": "81b606505993ed6b78254e5f9bb07bdf437f23ed299dfef8b39db90de8da29d5",
+    "zaman": "2026-11-23T18:51:21Z"
+   },
+   "otomatik": true,
+   "oyun": "Just Chatting",
+   "paket": "cikti/eraycan-20261122-16a64881/klip-01.json",
+   "sure": 45.0,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-22",
+   "yayinci": "Eraycan",
+   "yayinda": {
+    "kapak": "klip-eraycan-20261122-16a64881-klip-01-kapak.jpg",
+    "mp4_1080": "klip-eraycan-20261122-16a64881-klip-01-1080.mp4",
+    "mp4_540": "klip-eraycan-20261122-16a64881-klip-01-540.mp4",
+    "mp4_720": "klip-eraycan-20261122-16a64881-klip-01-720.mp4",
+    "sure": 45.0,
+    "yuklenen_ozet": "81b606505993ed6b78254e5f9bb07bdf437f23ed299dfef8b39db90de8da29d5",
+    "zaman": "2026-11-23T18:51:48Z"
+   }
+  },
+  "eraycan-20261122-16a64881-klip-02": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/eray",
+   "metin": {
+    "aciklama": "Oyunda kulüp arayan ekip gittikleri yerin striptiz kulübü olduğunu fark ediyor.\nKaynak: https://kick.com/eray\nKomixsi",
+    "baslik": "Eray oyunda striptiz kulübünü buluyor",
+    "etiketler": [
+     "#Eray",
+     "#Kick",
+     "#GrandTheftAutoVI",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "f58b0e01842c5c55e084622c9f50201e2e4f76bd8f76aa741a9d5d463e9bc18d",
+    "otomatik": true,
+    "ozet": "9174024dcbacf542153bdfa638d4cf7ca31587a5c260d4d9bbb3bb27e7f1221c",
+    "zaman": "2026-11-23T18:51:21Z"
+   },
+   "otomatik": true,
+   "oyun": "Grand Theft Auto VI",
+   "paket": "cikti/eraycan-20261122-16a64881/klip-02.json",
+   "sure": 55.0,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-22",
+   "yayinci": "Eraycan",
+   "yayinda": {
+    "kapak": "klip-eraycan-20261122-16a64881-klip-02-kapak.jpg",
+    "mp4_1080": "klip-eraycan-20261122-16a64881-klip-02-1080.mp4",
+    "mp4_540": "klip-eraycan-20261122-16a64881-klip-02-540.mp4",
+    "mp4_720": "klip-eraycan-20261122-16a64881-klip-02-720.mp4",
+    "sure": 55.0,
+    "yuklenen_ozet": "9174024dcbacf542153bdfa638d4cf7ca31587a5c260d4d9bbb3bb27e7f1221c",
+    "zaman": "2026-11-23T18:52:26Z"
+   }
+  },
   "hype-20261118-bb86dc1f-klip-01": {
    "hesap": "klip",
    "kanal_url": "https://kick.com/hype",
@@ -280,6 +352,148 @@
     "zaman": "2026-11-19T15:37:38Z"
    },
    "youtube": "https://www.youtube.com/shorts/13uj-K8oJA0"
+  },
+  "hype-20261120-b454860a-klip-02": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/hype",
+   "metin": {
+    "aciklama": "Polise yakalanıp tutuklanan ikili, kaybettikleri parayı şakaya vurup adaletten kaçılmaz diyor.\nKaynak: https://kick.com/hype\nKomixsi",
+    "baslik": "Hype tutuklanıp parayı şakaya vuruyor",
+    "etiketler": [
+     "#Hype",
+     "#Kick",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "5259672a065521c78decda52f12fd2d35f46f1bc2b645470c2fc7bac1cc4568b",
+    "otomatik": true,
+    "ozet": "cd2871b1d9f0e755af2de58b2868f99ba276a46a6458b9a4c35a5cefb23cce65",
+    "zaman": "2026-11-23T18:51:21Z"
+   },
+   "otomatik": true,
+   "oyun": "",
+   "paket": "cikti/hype-20261120-b454860a/klip-02.json",
+   "sure": 54.37,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-20",
+   "yayinci": "Hype",
+   "yayinda": {
+    "kapak": "klip-hype-20261120-b454860a-klip-02-kapak.jpg",
+    "mp4_1080": "klip-hype-20261120-b454860a-klip-02-1080.mp4",
+    "mp4_540": "klip-hype-20261120-b454860a-klip-02-540.mp4",
+    "mp4_720": "klip-hype-20261120-b454860a-klip-02-720.mp4",
+    "sure": 54.37,
+    "yuklenen_ozet": "cd2871b1d9f0e755af2de58b2868f99ba276a46a6458b9a4c35a5cefb23cce65",
+    "zaman": "2026-11-23T18:53:03Z"
+   }
+  },
+  "hype-20261121-8d2d0c25-klip-03": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/hype",
+   "metin": {
+    "aciklama": "Filmlerde kaçırılan ineklerden bahsedilip uzaylılar için süt isteniyor.\nKaynak: https://kick.com/hype\nKomixsi",
+    "baslik": "Hype uzaylılar için süt arıyor",
+    "etiketler": [
+     "#Hype",
+     "#Kick",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "201976673dab76c71572dcef4f3922a4c9aea9ad794872e1d7a9c851f045b830",
+    "otomatik": true,
+    "ozet": "7e59f65f70d4ef37c3ec48262f2d50cb9b4d62ead365c34641d59a37f3c49ddc",
+    "zaman": "2026-11-23T18:51:21Z"
+   },
+   "otomatik": true,
+   "oyun": "",
+   "paket": "cikti/hype-20261121-8d2d0c25/klip-03.json",
+   "sure": 52.17,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-21",
+   "yayinci": "Hype",
+   "yayinda": {
+    "kapak": "klip-hype-20261121-8d2d0c25-klip-03-kapak.jpg",
+    "mp4_1080": "klip-hype-20261121-8d2d0c25-klip-03-1080.mp4",
+    "mp4_540": "klip-hype-20261121-8d2d0c25-klip-03-540.mp4",
+    "mp4_720": "klip-hype-20261121-8d2d0c25-klip-03-720.mp4",
+    "sure": 52.17,
+    "yuklenen_ozet": "7e59f65f70d4ef37c3ec48262f2d50cb9b4d62ead365c34641d59a37f3c49ddc",
+    "zaman": "2026-11-23T18:53:38Z"
+   }
+  },
+  "jahrein-20261116-82e22279-klip-02": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/jahrein",
+   "metin": {
+    "aciklama": "Kaynak: https://kick.com/jahrein\nKomixsi",
+    "baslik": "Jahrein 15 bin dolar sitemini eleştiriyor",
+    "etiketler": [
+     "#Jahrein",
+     "#Kick",
+     "#JustChatting",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "f9765ff76f3a6ebdc1119ac15b64181f3f77e7320eeaf00e3c8e5ab8d1dd3db4",
+    "otomatik": true,
+    "ozet": "8c7677b33a670af1b1bb27ae3e346b44da6e85ff389d97e6ad0d89f32828a339",
+    "zaman": "2026-11-23T18:51:21Z"
+   },
+   "otomatik": true,
+   "oyun": "Just Chatting",
+   "paket": "cikti/jahrein-20261116-82e22279/klip-02.json",
+   "sure": 45.33,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-16",
+   "yayinci": "Jahrein",
+   "yayinda": {
+    "kapak": "klip-jahrein-20261116-82e22279-klip-02-kapak.jpg",
+    "mp4_1080": "klip-jahrein-20261116-82e22279-klip-02-1080.mp4",
+    "mp4_540": "klip-jahrein-20261116-82e22279-klip-02-540.mp4",
+    "mp4_720": "klip-jahrein-20261116-82e22279-klip-02-720.mp4",
+    "sure": 45.33,
+    "yuklenen_ozet": "8c7677b33a670af1b1bb27ae3e346b44da6e85ff389d97e6ad0d89f32828a339",
+    "zaman": "2026-11-23T18:54:04Z"
+   }
+  },
+  "jahrein-20261116-82e22279-klip-03": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/jahrein",
+   "metin": {
+    "aciklama": "Şifreleri çalınan yayıncıya nasıl yardım ettiklerini ve sonrasında yaşananları anlatıyor.\nKaynak: https://kick.com/jahrein\nKomixsi",
+    "baslik": "Jahrein şifreleri çalınan yayıncıyı anlatıyor",
+    "etiketler": [
+     "#Jahrein",
+     "#Kick",
+     "#JustChatting",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "c4f52ce7694e12657830460843e397ce56678ea1d1b75eb4c431a6a063809600",
+    "otomatik": true,
+    "ozet": "db2acb1172585c9d30564c535f3d3c9539ff4f64e2d6d8866fe4f3edc9b39861",
+    "zaman": "2026-11-23T18:51:21Z"
+   },
+   "otomatik": true,
+   "oyun": "Just Chatting",
+   "paket": "cikti/jahrein-20261116-82e22279/klip-03.json",
+   "sure": 57.13,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-16",
+   "yayinci": "Jahrein",
+   "yayinda": {
+    "kapak": "klip-jahrein-20261116-82e22279-klip-03-kapak.jpg",
+    "mp4_1080": "klip-jahrein-20261116-82e22279-klip-03-1080.mp4",
+    "mp4_540": "klip-jahrein-20261116-82e22279-klip-03-540.mp4",
+    "mp4_720": "klip-jahrein-20261116-82e22279-klip-03-720.mp4",
+    "sure": 57.13,
+    "yuklenen_ozet": "db2acb1172585c9d30564c535f3d3c9539ff4f64e2d6d8866fe4f3edc9b39861",
+    "zaman": "2026-11-23T18:54:33Z"
+   }
   },
   "kemalcan-parlak-20261115-9ae47b40-klip-01": {
    "hesap": "klip",
@@ -349,6 +563,42 @@
     "zaman": "2026-11-18T19:50:41Z"
    },
    "youtube": "https://www.youtube.com/shorts/HT4STVMhhr8"
+  },
+  "rraenee-20261118-13c4146d-klip-03": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/rraenee",
+   "metin": {
+    "aciklama": "Oyunda dayak yiyince şapka, gözlük, silah ve paranın hepsi gidiyor.\nKaynak: https://kick.com/rraenee\nKomixsi",
+    "baslik": "RRaenee oyunda tüm eşyalarını kaybediyor",
+    "etiketler": [
+     "#RRaenee",
+     "#Kick",
+     "#GrandTheftAutoVIGTA",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "fee13ba56f9e06777a84256a7a1cc8d5a3e8e08044eeceaf12185b75481cee25",
+    "otomatik": true,
+    "ozet": "7ff65b6891ca24b22af1c27ef96b80bc44560b36356090fdf7c3b5ac98db7e1d",
+    "zaman": "2026-11-23T18:51:21Z"
+   },
+   "otomatik": true,
+   "oyun": "Grand Theft Auto VI (GTA)",
+   "paket": "cikti/rraenee-20261118-13c4146d/klip-03.json",
+   "sure": 57.5,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-18",
+   "yayinci": "RRaenee",
+   "yayinda": {
+    "kapak": "klip-rraenee-20261118-13c4146d-klip-03-kapak.jpg",
+    "mp4_1080": "klip-rraenee-20261118-13c4146d-klip-03-1080.mp4",
+    "mp4_540": "klip-rraenee-20261118-13c4146d-klip-03-540.mp4",
+    "mp4_720": "klip-rraenee-20261118-13c4146d-klip-03-720.mp4",
+    "sure": 57.5,
+    "yuklenen_ozet": "7ff65b6891ca24b22af1c27ef96b80bc44560b36356090fdf7c3b5ac98db7e1d",
+    "zaman": "2026-11-23T18:55:16Z"
+   }
   },
   "wtcn-20261117-6bbe5c53-klip-02": {
    "kanal_url": "https://kick.com/wtcn",
