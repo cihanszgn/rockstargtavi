@@ -32,7 +32,7 @@
 "2026-11-19"
 ],
 "de/index.html": [
-"4f989b48e982",
+"baa7fec41436",
 "2026-11-24"
 ],
 "de/kostenlose-spiele.html": [
@@ -120,7 +120,7 @@
 "2026-11-16"
 ],
 "de/spiele-news.html": [
-"6dde02d8b8fc",
+"9949b80d9298",
 "2026-11-24"
 ],
 "de/spiele/apex-legends.html": [
@@ -180,8 +180,8 @@
 "2026-11-16"
 ],
 "de/spiele/gta-6.html": [
-"68fd5bf05f86",
-"2026-11-20"
+"392e43ec64b6",
+"2026-11-24"
 ],
 "de/spiele/halo-campaign-evolved.html": [
 "ff6b0763dbf6",
@@ -288,11 +288,15 @@
 "2026-11-23"
 ],
 "de/thema/gtavi.html": [
-"fa859e4ddcd1",
-"2026-11-23"
+"b2e5b0ae47b7",
+"2026-11-24"
+],
+"de/thema/mobil.html": [
+"7bd626330d4c",
+"2026-11-24"
 ],
 "de/thema/pc.html": [
-"d0aad55b7b13",
+"b1d6b3f8f4d9",
 "2026-11-24"
 ],
 "de/thema/playstation.html": [
@@ -308,8 +312,8 @@
 "2026-11-22"
 ],
 "de/thema/rockstargames.html": [
-"3942a7df9394",
-"2026-11-23"
+"061d54e7ff74",
+"2026-11-24"
 ],
 "de/thema/steam.html": [
 "980624d5de44",
@@ -328,7 +332,7 @@
 "2026-11-24"
 ],
 "de/thema/tur-haber.html": [
-"580e8ea54656",
+"e73944df66ee",
 "2026-11-24"
 ],
 "de/thema/tur-indirim.html": [
@@ -348,7 +352,7 @@
 "2026-11-22"
 ],
 "de/thema/xbox.html": [
-"53db5b61e16e",
+"baac1c40f35a",
 "2026-11-24"
 ],
 "de/thema/xboxseriesxs.html": [
@@ -380,7 +384,7 @@
 "2026-11-24"
 ],
 "en/game-news.html": [
-"fac6909289ad",
+"10bfd32312a6",
 "2026-11-24"
 ],
 "en/game/apex-legends.html": [
@@ -440,8 +444,8 @@
 "2026-11-16"
 ],
 "en/game/gta-6.html": [
-"09a1429be0f6",
-"2026-11-20"
+"c07034f54767",
+"2026-11-24"
 ],
 "en/game/halo-campaign-evolved.html": [
 "e76688b3dd58",
@@ -616,7 +620,7 @@
 "2026-11-22"
 ],
 "en/index.html": [
-"fad94ca6e301",
+"48ed781b6f19",
 "2026-11-24"
 ],
 "en/languages.html": [
@@ -652,11 +656,15 @@
 "2026-11-23"
 ],
 "en/tag/gtavi.html": [
-"c969087d222e",
-"2026-11-23"
+"8ae5bc9f3f51",
+"2026-11-24"
+],
+"en/tag/mobil.html": [
+"96b4152734ea",
+"2026-11-24"
 ],
 "en/tag/pc.html": [
-"2031dc2f4540",
+"fa2f0ee7238b",
 "2026-11-24"
 ],
 "en/tag/playstation.html": [
@@ -672,8 +680,8 @@
 "2026-11-22"
 ],
 "en/tag/rockstargames.html": [
-"219b88110633",
-"2026-11-23"
+"c4e90fb836a2",
+"2026-11-24"
 ],
 "en/tag/steam.html": [
 "8b2f7a8649b9",
@@ -692,7 +700,7 @@
 "2026-11-24"
 ],
 "en/tag/tur-haber.html": [
-"75acc27dd79f",
+"3ed0891fdee2",
 "2026-11-24"
 ],
 "en/tag/tur-indirim.html": [
@@ -712,7 +720,7 @@
 "2026-11-22"
 ],
 "en/tag/xbox.html": [
-"08a90831e604",
+"1f584d2d9c41",
 "2026-11-24"
 ],
 "en/tag/xboxseriesxs.html": [
@@ -808,7 +816,7 @@
 "2026-11-09"
 ],
 "es/index.html": [
-"d66543d8c9c1",
+"236880d378b6",
 "2026-11-24"
 ],
 "es/juego/apex-legends.html": [
@@ -868,8 +876,8 @@
 "2026-11-16"
 ],
 "es/juego/gta-6.html": [
-"b2afa67e789c",
-"2026-11-20"
+"8afd625d9c3f",
+"2026-11-24"
 ],
 "es/juego/halo-campaign-evolved.html": [
 "bd754c71d475",
@@ -976,7 +984,7 @@
 "2026-11-17"
 ],
 "es/noticias-juegos.html": [
-"2af3b4bc88e6",
+"281c083842f4",
 "2026-11-24"
 ],
 "es/ofertas.html": [
@@ -1004,11 +1012,15 @@
 "2026-11-23"
 ],
 "es/tema/gtavi.html": [
-"b766b653e11a",
-"2026-11-23"
+"ab1096e06c38",
+"2026-11-24"
+],
+"es/tema/mobil.html": [
+"06ded8171157",
+"2026-11-24"
 ],
 "es/tema/pc.html": [
-"2d07b6c4d808",
+"b4bd75daeae9",
 "2026-11-24"
 ],
 "es/tema/playstation.html": [
@@ -1024,8 +1036,8 @@
 "2026-11-22"
 ],
 "es/tema/rockstargames.html": [
-"1988c31eb8f6",
-"2026-11-23"
+"54ad0d2fb7fb",
+"2026-11-24"
 ],
 "es/tema/steam.html": [
 "efabcb7a0db4",
@@ -1044,7 +1056,7 @@
 "2026-11-24"
 ],
 "es/tema/tur-haber.html": [
-"3a49996f3314",
+"c74396e86ac3",
 "2026-11-24"
 ],
 "es/tema/tur-indirim.html": [
@@ -1064,7 +1076,7 @@
 "2026-11-22"
 ],
 "es/tema/xbox.html": [
-"0223abb5e161",
+"80be596aba51",
 "2026-11-24"
 ],
 "es/tema/xboxseriesxs.html": [
@@ -1080,11 +1092,15 @@
 "2026-11-23"
 ],
 "etiket/gtavi.html": [
-"779faada054e",
-"2026-11-23"
+"d62b1e771e0e",
+"2026-11-24"
+],
+"etiket/mobil.html": [
+"dc5e7d108910",
+"2026-11-24"
 ],
 "etiket/pc.html": [
-"7f4a8ac309ea",
+"f0ad7ef525e3",
 "2026-11-24"
 ],
 "etiket/playstation.html": [
@@ -1100,8 +1116,8 @@
 "2026-11-22"
 ],
 "etiket/rockstargames.html": [
-"b68fdeb875d4",
-"2026-11-23"
+"d08fead3b9e1",
+"2026-11-24"
 ],
 "etiket/steam.html": [
 "43be0a059b1a",
@@ -1120,7 +1136,7 @@
 "2026-11-24"
 ],
 "etiket/tur-haber.html": [
-"df9ea81d6d85",
+"3aacba74f543",
 "2026-11-24"
 ],
 "etiket/tur-indirim.html": [
@@ -1140,7 +1156,7 @@
 "2026-11-22"
 ],
 "etiket/xbox.html": [
-"824c7891bf2e",
+"3e1af431134b",
 "2026-11-24"
 ],
 "etiket/xboxseriesxs.html": [
@@ -1152,7 +1168,7 @@
 "2026-11-15"
 ],
 "fr/actus-jeux.html": [
-"d997701eefd0",
+"7b31304e7d9f",
 "2026-11-24"
 ],
 "fr/calendrier-sorties.html": [
@@ -1240,7 +1256,7 @@
 "2026-11-22"
 ],
 "fr/index.html": [
-"47bad12e7652",
+"ce9b7270510c",
 "2026-11-24"
 ],
 "fr/jeu/apex-legends.html": [
@@ -1300,8 +1316,8 @@
 "2026-11-16"
 ],
 "fr/jeu/gta-6.html": [
-"877b85d1415c",
-"2026-11-20"
+"bba9c3c21252",
+"2026-11-24"
 ],
 "fr/jeu/halo-campaign-evolved.html": [
 "1827540b956b",
@@ -1432,11 +1448,15 @@
 "2026-11-23"
 ],
 "fr/sujet/gtavi.html": [
-"56ab5c416106",
-"2026-11-23"
+"bb7ae5e43270",
+"2026-11-24"
+],
+"fr/sujet/mobil.html": [
+"81eecdf4f053",
+"2026-11-24"
 ],
 "fr/sujet/pc.html": [
-"8d74e07afb49",
+"878d390fbfd4",
 "2026-11-24"
 ],
 "fr/sujet/playstation.html": [
@@ -1452,8 +1472,8 @@
 "2026-11-22"
 ],
 "fr/sujet/rockstargames.html": [
-"67bfb9bcf07f",
-"2026-11-23"
+"5c73ad49ec7a",
+"2026-11-24"
 ],
 "fr/sujet/steam.html": [
 "301f8810c831",
@@ -1472,7 +1492,7 @@
 "2026-11-24"
 ],
 "fr/sujet/tur-haber.html": [
-"cf3d00191917",
+"4bfc03b2f181",
 "2026-11-24"
 ],
 "fr/sujet/tur-indirim.html": [
@@ -1492,7 +1512,7 @@
 "2026-11-22"
 ],
 "fr/sujet/xbox.html": [
-"98d99bc0fbdb",
+"4f17506b059c",
 "2026-11-24"
 ],
 "fr/sujet/xboxseriesxs.html": [
@@ -1536,7 +1556,7 @@
 "2026-11-15"
 ],
 "index.html": [
-"aca4e8fbc8c8",
+"08cd46057361",
 "2026-11-24"
 ],
 "indirimler.html": [
@@ -1556,7 +1576,7 @@
 "2026-11-16"
 ],
 "nl/gamenieuws.html": [
-"873707f7f43b",
+"b700dd76ed81",
 "2026-11-24"
 ],
 "nl/games/apex-legends.html": [
@@ -1616,8 +1636,8 @@
 "2026-11-16"
 ],
 "nl/games/gta-6.html": [
-"8ea9df5cf2c2",
-"2026-11-20"
+"8a9250bde2aa",
+"2026-11-24"
 ],
 "nl/games/halo-campaign-evolved.html": [
 "7e095e0436cc",
@@ -1796,7 +1816,7 @@
 "2026-11-19"
 ],
 "nl/index.html": [
-"52757b427f6e",
+"c66a9b775c8a",
 "2026-11-24"
 ],
 "nl/nieuws.html": [
@@ -1812,11 +1832,15 @@
 "2026-11-23"
 ],
 "nl/onderwerp/gtavi.html": [
-"7d1e4e849b45",
-"2026-11-23"
+"4fb2bdd03348",
+"2026-11-24"
+],
+"nl/onderwerp/mobil.html": [
+"2654ba84e8a1",
+"2026-11-24"
 ],
 "nl/onderwerp/pc.html": [
-"cfd026d5b5bc",
+"2a2d1fced579",
 "2026-11-24"
 ],
 "nl/onderwerp/playstation.html": [
@@ -1832,8 +1856,8 @@
 "2026-11-22"
 ],
 "nl/onderwerp/rockstargames.html": [
-"6d4d2418a6d9",
-"2026-11-23"
+"8fabdf53e5f6",
+"2026-11-24"
 ],
 "nl/onderwerp/steam.html": [
 "8a65d7cf5669",
@@ -1852,7 +1876,7 @@
 "2026-11-24"
 ],
 "nl/onderwerp/tur-haber.html": [
-"78db58ce33ef",
+"8c9a0e06fa77",
 "2026-11-24"
 ],
 "nl/onderwerp/tur-indirim.html": [
@@ -1872,7 +1896,7 @@
 "2026-11-22"
 ],
 "nl/onderwerp/xbox.html": [
-"619b42cdb1f2",
+"0b11852b9689",
 "2026-11-24"
 ],
 "nl/onderwerp/xboxseriesxs.html": [
@@ -1900,7 +1924,7 @@
 "2026-11-16"
 ],
 "oyun-haberleri.html": [
-"6d612ab27570",
+"872e670bd4d1",
 "2026-11-24"
 ],
 "oyun/apex-legends.html": [
@@ -1960,8 +1984,8 @@
 "2026-11-16"
 ],
 "oyun/gta-6.html": [
-"3b749c143f4b",
-"2026-11-20"
+"abc43acd99ba",
+"2026-11-24"
 ],
 "oyun/halo-campaign-evolved.html": [
 "0ea61809a45b",
@@ -2248,11 +2272,15 @@
 "2026-11-23"
 ],
 "zh/huati/gtavi.html": [
-"7f0543bf677b",
-"2026-11-23"
+"9ec9f2086bed",
+"2026-11-24"
+],
+"zh/huati/mobil.html": [
+"4f87815c9b19",
+"2026-11-24"
 ],
 "zh/huati/pc.html": [
-"c9de32775065",
+"f424ce28f6bd",
 "2026-11-24"
 ],
 "zh/huati/playstation.html": [
@@ -2268,8 +2296,8 @@
 "2026-11-22"
 ],
 "zh/huati/rockstargames.html": [
-"8811a1fabe8e",
-"2026-11-23"
+"d40e0d171e24",
+"2026-11-24"
 ],
 "zh/huati/steam.html": [
 "71c6282ccabb",
@@ -2288,7 +2316,7 @@
 "2026-11-24"
 ],
 "zh/huati/tur-haber.html": [
-"107cb666f7db",
+"3766425636ce",
 "2026-11-24"
 ],
 "zh/huati/tur-indirim.html": [
@@ -2308,7 +2336,7 @@
 "2026-11-22"
 ],
 "zh/huati/xbox.html": [
-"127ec93fb972",
+"d9412390a77c",
 "2026-11-24"
 ],
 "zh/huati/xboxseriesxs.html": [
@@ -2316,7 +2344,7 @@
 "2026-11-24"
 ],
 "zh/index.html": [
-"f74ddc559066",
+"db0f1021edcc",
 "2026-11-24"
 ],
 "zh/laiyuan.html": [
@@ -2340,7 +2368,7 @@
 "2026-11-23"
 ],
 "zh/youxi-xinwen.html": [
-"7d1728116541",
+"e471fe1acad6",
 "2026-11-24"
 ],
 "zh/youxi/apex-legends.html": [
@@ -2400,8 +2428,8 @@
 "2026-11-16"
 ],
 "zh/youxi/gta-6.html": [
-"75879aca463c",
-"2026-11-20"
+"fbdaea5e04e1",
+"2026-11-24"
 ],
 "zh/youxi/halo-campaign-evolved.html": [
 "afe09e3607c9",

@@ -1,0 +1,107 @@
+{
+ "id": "gta-vi-xbox-cloud-remote-play-2026-11-23",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Grand Theft Auto VI artık Xbox Cloud Gaming'de de oynanabiliyor.",
+   "veri": {
+    "ust_etiket": "XBOX WIRE REHBERİ",
+    "baslik": "GTA VI artık Xbox Cloud'da",
+    "vurgu": [
+     "Xbox Cloud"
+    ],
+    "tuslar": [
+     "G",
+     "T",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "GRAND THEFT AUTO VI",
+    "alt": "XBOX CLOUD GAMING"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Seçili Game Pass planları aylık 15 saate kadar bulut oyunu veriyor, ek süre satın alınabiliyor. Bulutta oyun Xbox Series S grafik ayarlarıyla çalışıyor.",
+   "veri": {
+    "baslik": "Bulutta oynamak",
+    "maddeler": [
+     {
+      "metin": "Aylık en fazla 15 saat",
+      "tetik": "15"
+     },
+     {
+      "metin": "Ek bulut süresi satın alınabilir",
+      "tetik": "ek"
+     },
+     {
+      "metin": "Xbox Series S grafik ayarları",
+      "tetik": "Series"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "BULUT OYUNU",
+    "alt": "AYLIK 15 SAATE KADAR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Remote Play ile Xbox Series X|S'ten telefona, PC'ye veya ROG Ally'ye yayın yapılıyor; Xbox Store kopyası şart.",
+   "veri": {
+    "baslik": "Remote Play",
+    "maddeler": [
+     {
+      "metin": "Telefon, PC veya ROG Ally",
+      "tetik": "telefona"
+     },
+     {
+      "metin": "Xbox Store kopyası şart",
+      "tetik": "Store"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "REMOTE PLAY",
+    "alt": "KONSOLDAN CİHAZLARA YAYIN"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Adımların tamamı sitemizde, Control A Game'de. Bulutta mı oynarsın, konsolda mı?",
+   "veri": {
+    "cagri": "Bütün adımlar sitede",
+    "alt": "Kaynak ve ayrıntılar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

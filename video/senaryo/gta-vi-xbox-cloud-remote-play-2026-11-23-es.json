@@ -1,0 +1,107 @@
+{
+ "id": "gta-vi-xbox-cloud-remote-play-2026-11-23",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Grand Theft Auto VI ya es compatible con Xbox Cloud Gaming, incluso sin una consola actual.",
+   "veri": {
+    "ust_etiket": "GUÍA DE XBOX WIRE",
+    "baslik": "GTA VI llega a Xbox Cloud",
+    "vurgu": [
+     "Xbox Cloud"
+    ],
+    "tuslar": [
+     "G",
+     "T",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "GRAND THEFT AUTO VI",
+    "alt": "XBOX CLOUD GAMING"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Algunos planes de Game Pass incluyen hasta 15 horas de juego al mes, y puedes comprar más tiempo en la nube. En la nube usa los ajustes gráficos de Xbox Series S.",
+   "veri": {
+    "baslik": "Jugar en la nube",
+    "maddeler": [
+     {
+      "metin": "Hasta 15 horas de juego al mes",
+      "tetik": "15"
+     },
+     {
+      "metin": "Tiempo extra en la nube",
+      "tetik": "comprar"
+     },
+     {
+      "metin": "Ajustes gráficos de Xbox Series S",
+      "tetik": "Series"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "JUEGO EN LA NUBE",
+    "alt": "HASTA 15 HORAS AL MES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Remote Play transmite desde tu Xbox Series X|S a un móvil, un PC o una ROG Ally, y necesitas la copia de la Xbox Store.",
+   "veri": {
+    "baslik": "Remote Play",
+    "maddeler": [
+     {
+      "metin": "Móvil, PC o ROG Ally",
+      "tetik": "móvil"
+     },
+     {
+      "metin": "Copia de la Xbox Store",
+      "tetik": "Store"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "REMOTE PLAY",
+    "alt": "DE LA CONSOLA A TUS DISPOSITIVOS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Jugarás en la nube o en consola?",
+   "veri": {
+    "cagri": "Todos los pasos en la web",
+    "alt": "Fuente y detalles en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
