@@ -102,6 +102,37 @@ def kota_mi(kod: int, metin: str) -> bool:
                                 "autherror", "invalid credentials", "youtubesignuprequired", "channelsuspended"))
 
 
+ENGEL_MOLA_SAAT = (6, 12, 24)  # art arda engelde mola uzar; başarılı paylaşımda sıfırlanır
+_META_ENGEL = re.compile(r'"error_subcode"\s*:\s*(2207051|5258005|2207042)\b|request limit reached', re.I)
+
+
+def meta_engel_mi(metin: str) -> bool:
+    """Instagram/Meta hesabı ya da uygulamayı geçici kısıtladı mı? (eylem engellendi 2207051, API erişimi engellendi 5258005,
+    yayın sınırı 2207042, istek sınırı.) Bu bizim hatamız değil: saat başı yeniden denemek engeli uzatır, mola verilir."""
+    return bool(_META_ENGEL.search(metin or ""))
+
+
+def engel_oku(yol: pathlib.Path) -> dict:
+    try:
+        v = json.loads(yol.read_text(encoding="utf-8"))
+        return v if isinstance(v, dict) else {}
+    except (OSError, ValueError):
+        return {}
+
+
+def engel_yaz(yol: pathlib.Path, engel: dict) -> None:
+    yol.write_text(json.dumps(engel, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+
+
+def engel_molada_mi(engel: dict, anahtar: str, simdi: datetime) -> str:
+    """Mola sürüyorsa bitiş zamanını (ISO), sürmüyorsa boş metin döndürür. Bozuk kayıt mola sayılmaz."""
+    try:
+        bitis = (engel.get(anahtar) or {}).get("bitis") or ""
+        return bitis if bitis and simdi < datetime.fromisoformat(bitis) else ""
+    except (TypeError, ValueError, AttributeError):
+        return ""
+
+
 # ---------------------------------------------------------------- HTTP (testte yerine sahte Ag konur)
 class Ag:
     def istek(self, method: str, url: str, *, veri=None, json_govde=None, basliklar=None, zaman=30):
@@ -964,6 +995,9 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
     kayar = klip_ayari(ayar)
     gun = simdi.strftime("%Y-%m-%d")
     hatalar, atlanan, gonderilen = [], [], 0
+    # Platform engeli molası (sosyal/engel.json): denemede okunmaz/yazılmaz, yalnız gerçek turda geçerlidir.
+    engel_yolu = kayit_yolu.parent / "engel.json"
+    engel = {} if dry_run else engel_oku(engel_yolu)
 
     def kaydet():
         if not dry_run:
@@ -1003,6 +1037,10 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
         for hesap, uyeler in gruplar.items():
             sir = hesap_sirri(tum, platform, hesap)
             if (hesap, platform) in kullanilan:
+                continue
+            mola = engel_molada_mi(engel, f"{platform}|{hesap}", simdi)
+            if mola:
+                cikti(f"{ad}/{hesap}: platform engeli molası ({mola} zamanına kadar), bu çalışmada denenmez")
                 continue
             sinir = (ayar.get("gunluk_en_fazla") or {}).get(ad, VARSAYILAN_SINIR[ad])
             hak = min(1, ayar.get("calisma_basina_en_fazla", 1), sinir - bugunku_sayi(kayit, ad, hesap, gun))
@@ -1127,11 +1165,24 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                         if h.kesin:
                             del kayit[k]  # sunucu açıkça reddetti, yayımlanmadı: sonra yeniden denenir
                             kaydet()
-                        hatalar.append(f"{ad}/{dil} {x['id']}: {h}" + ("" if h.kesin else "  [sonuç belirsiz; sonraki çalışmada platformdan sorgulanır]"))
+                        if platform == "instagram" and h.kesin and meta_engel_mi(str(h)):
+                            # Platform kısıtı hata DEĞİL: tur kırmızıya düşmez (e-posta yağmaz), mola verilir; gönderi kuyrukta kalır.
+                            ek = f"{platform}|{hesap}"
+                            sayi = int((engel.get(ek) or {}).get("sayi", 0)) + 1
+                            saat = ENGEL_MOLA_SAAT[min(sayi, len(ENGEL_MOLA_SAAT)) - 1]
+                            engel[ek] = {"bitis": (simdi + timedelta(hours=saat)).isoformat(timespec="seconds"), "sayi": sayi,
+                                         "son": simdi.isoformat(timespec="seconds"), "neden": str(h)[-260:]}
+                            engel_yaz(engel_yolu, engel)
+                            cikti(f"::warning::Instagram ({hesap}) paylaşımı platformca engellendi; {saat} saat mola verildi, "
+                                  f"gönderi kuyrukta bekliyor ({x['id']}): {str(h)[:300]}")
+                        else:
+                            hatalar.append(f"{ad}/{dil} {x['id']}: {h}" + ("" if h.kesin else "  [sonuç belirsiz; sonraki çalışmada platformdan sorgulanır]"))
                         hesap_hatasi.add((hesap, ad))
                         break  # bu hesapta sorun var; diğer hesaplara geç
                     _tamamla(rec, sonuc, simdi)
                     kaydet()
+                    if engel.pop(f"{platform}|{hesap}", None) is not None:
+                        engel_yaz(engel_yolu, engel)  # paylaşım geçti: engel bitti, mola sayacı sıfırlanır
                     if bicim in ("reel", "short") and sonuc.get("url"):
                         video_baglanti_yaz(manifest_yolu, klip_yolu, x.get('sosyal_tur'), x["id"], icerik_dili,
                                            "instagram" if bicim == "reel" else "youtube", sonuc["url"])

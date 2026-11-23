@@ -269,6 +269,61 @@ class KayipYanit(Temel):
         self.assertEqual(g, 1)
 
 
+ENGEL_METNI = ('POST https://graph.facebook.com/v27.0/17841/media_publish → HTTP 403: {"error":{"message":"Application request '
+               'limit reached","code":4,"type":"OAuthException","error_subcode":2207051,"is_transient":false}}')
+
+
+class PlatformEngeli(Temel):
+    """Instagram 'eylem engellendi' derse tur kırmızıya düşmez, mola verilir, gönderi kuyrukta kalır."""
+
+    def engel(self):
+        yol = self.kok / "engel.json"
+        return json.loads(yol.read_text(encoding="utf-8")) if yol.exists() else {}
+
+    def engelli_ag(self):
+        return SahteAg(mutasyon_hatasi={"media_publish": sy.PaylasimHatasi(ENGEL_METNI, kesin=True)})
+
+    def test_engel_hata_sayilmaz_mola_yazilir_kayit_silinir(self):
+        g, hata, _ = self.calistir(self.engelli_ag(), ayar(instagram=True))
+        self.assertEqual((g, hata), (0, []))
+        self.assertNotIn("oyun-yama-1|tr|instagram|gorsel", self.kayitlar())
+        e = self.engel()["instagram|tr"]
+        self.assertEqual(e["sayi"], 1)
+        self.assertEqual(datetime.fromisoformat(e["bitis"]), SIMDI + sy.timedelta(hours=6))
+
+    def test_molada_instagram_hic_cagrilmaz(self):
+        self.calistir(self.engelli_ag(), ayar(instagram=True))
+        ag = SahteAg()
+        g, hata, _ = self.calistir(ag, ayar(instagram=True), simdi=SIMDI + sy.timedelta(hours=5))
+        self.assertEqual((g, hata, ag.cagrilar), (0, [], []))
+
+    def test_mola_bitince_paylasir_ve_engel_silinir(self):
+        self.calistir(self.engelli_ag(), ayar(instagram=True))
+        g, hata, _ = self.calistir(SahteAg(), ayar(instagram=True), simdi=SIMDI + sy.timedelta(hours=7))
+        self.assertEqual((g, hata), (1, []))
+        self.assertEqual(self.engel(), {})
+
+    def test_art_arda_engelde_mola_uzar(self):
+        self.calistir(self.engelli_ag(), ayar(instagram=True))
+        self.calistir(self.engelli_ag(), ayar(instagram=True), simdi=SIMDI + sy.timedelta(hours=7))
+        e = self.engel()["instagram|tr"]
+        self.assertEqual(e["sayi"], 2)
+        self.assertEqual(datetime.fromisoformat(e["bitis"]), SIMDI + sy.timedelta(hours=7 + 12))
+
+    def test_baska_4xx_hata_olarak_kalir(self):
+        ag = SahteAg(mutasyon_hatasi={"media_publish": sy.PaylasimHatasi("HTTP 400: gecersiz medya", kesin=True)})
+        g, hata, _ = self.calistir(ag, ayar(instagram=True))
+        self.assertEqual((g, len(hata)), (0, 1))
+        self.assertEqual(self.engel(), {})
+
+    def test_deneme_molayi_okumaz(self):
+        self.calistir(self.engelli_ag(), ayar(instagram=True))
+        metinler = []
+        sy.calistir(ayar(instagram=True), [haber()], kayit_yolu=self.kayit, manifest_yolu=self.manifest, tum=SIRLAR, ag=YasakAg(),
+                    dry_run=True, bugun=BUGUN, simdi=SIMDI, cikti=metinler.append)
+        self.assertFalse(any("molası" in m for m in metinler))
+
+
 class Reel(Temel):
     def test_reel_manifest_yoksa_atlanir(self):
         ag = SahteAg()
