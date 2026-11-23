@@ -1,0 +1,97 @@
+{
+ "id": "crimson-desert-steam-awards-2026-nominasyon-2026-11-23",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Crimson Desert için Steam Awards 2026 adaylığı 30 Kasım'a kadar açık.",
+   "veri": {
+    "ust_etiket": "STEAM AWARDS 2026",
+    "baslik": "Steam Awards 2026 adaylığı açık",
+    "vurgu": [
+     "Steam Awards"
+    ],
+    "tuslar": [
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "CRIMSON DESERT",
+    "alt": "STEAM AWARDS 2026"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Oyun Game of the Year dalında, ayrıca Outstanding Visual Style ve Best Soundtrack gibi dallarda aday gösterilebiliyor. Düğme duyuru sayfasının üstünde.",
+   "veri": {
+    "baslik": "Örnek dallar",
+    "maddeler": [
+     {
+      "metin": "Game of the Year",
+      "tetik": "Game"
+     },
+     {
+      "metin": "Outstanding Visual Style",
+      "tetik": "Outstanding"
+     },
+     {
+      "metin": "Best Soundtrack",
+      "tetik": "Best"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "ADAYLIK DALLARI",
+    "alt": "DÜĞME DUYURU SAYFASINDA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Süre 23 Kasım 19:00'da başladı ve 30 Kasım 19:00'da bitiyor; saat CET.",
+   "veri": {
+    "etiket": "Adaylık sona eriyor",
+    "tarih": "30 Kasım",
+    "not": "Saat 19:00 CET'e kadar."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "ADAYLIK BİTİŞİ",
+    "alt": "30 KASIM 19:00 CET"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Sen oyunu aday gösterir misin?",
+   "veri": {
+    "cagri": "Tamamı sitede",
+    "alt": "Kaynak ve saat ayrıntıları haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

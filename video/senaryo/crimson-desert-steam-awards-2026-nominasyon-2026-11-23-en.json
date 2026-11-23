@@ -1,0 +1,97 @@
+{
+ "id": "crimson-desert-steam-awards-2026-nominasyon-2026-11-23",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Crimson Desert can be nominated for the Steam Awards 2026 until November 30.",
+   "veri": {
+    "ust_etiket": "STEAM AWARDS 2026",
+    "baslik": "Steam Awards 2026 nominations open",
+    "vurgu": [
+     "Steam Awards"
+    ],
+    "tuslar": [
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "CRIMSON DESERT",
+    "alt": "STEAM AWARDS 2026"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "You can nominate it for Game of the Year, plus categories like Outstanding Visual Style and Best Soundtrack. Just press the button at the top of the Steam announcement page.",
+   "veri": {
+    "baslik": "Example categories",
+    "maddeler": [
+     {
+      "metin": "Game of the Year",
+      "tetik": "Game"
+     },
+     {
+      "metin": "Outstanding Visual Style",
+      "tetik": "Outstanding"
+     },
+     {
+      "metin": "Best Soundtrack",
+      "tetik": "Best"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NOMINATION CATEGORIES",
+    "alt": "BUTTON AT THE TOP OF THE PAGE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Nominations opened November 23 at 19:00 CET and close November 30 at 19:00 CET.",
+   "veri": {
+    "etiket": "Nominations close",
+    "tarih": "November 30",
+    "not": "Until 19:00 CET."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "NOMINATIONS CLOSE",
+    "alt": "NOVEMBER 30, 19:00 CET"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Will you nominate Crimson Desert?",
+   "veri": {
+    "cagri": "Full story on the site",
+    "alt": "Source and time details are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
