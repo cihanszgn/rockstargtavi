@@ -124,6 +124,16 @@ def engel_yaz(yol: pathlib.Path, engel: dict) -> None:
     yol.write_text(json.dumps(engel, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
 
 
+def engel_mola_ver(engel: dict, yol: pathlib.Path, anahtar: str, simdi: datetime, neden: str) -> int:
+    """Hesabı molaya alır (art arda engelde 6/12/24 saat), dosyaya yazar ve mola saatini döndürür."""
+    sayi = int((engel.get(anahtar) or {}).get("sayi", 0)) + 1
+    saat = ENGEL_MOLA_SAAT[min(sayi, len(ENGEL_MOLA_SAAT)) - 1]
+    engel[anahtar] = {"bitis": (simdi + timedelta(hours=saat)).isoformat(timespec="seconds"), "sayi": sayi,
+                      "son": simdi.isoformat(timespec="seconds"), "neden": neden[-260:]}
+    engel_yaz(yol, engel)
+    return saat
+
+
 def engel_molada_mi(engel: dict, anahtar: str, simdi: datetime) -> str:
     """Mola sürüyorsa bitiş zamanını (ISO), sürmüyorsa boş metin döndürür. Bozuk kayıt mola sayılmaz."""
     try:
@@ -909,7 +919,8 @@ def _tamamla(rec: dict, sonuc: dict, simdi: datetime) -> None:
     rec.update(durum="tamam", zaman=simdi.isoformat(timespec="seconds"), **sonuc)
 
 
-def uzlastir(ag, kayit, tum, ayar, manifest_yolu, kaydet, simdi, klip_yolu=None) -> list:
+def uzlastir(ag, kayit, tum, ayar, manifest_yolu, kaydet, simdi, klip_yolu=None, engel=None, engel_yolu=None,
+             cikti=print) -> list:
     """Önceki çalışmadan kalan "niyet" kayıtlarını platformdan sorgulayıp tamamlar ya da elle_bak yapar.
     Hiçbir koşulda yeniden paylaşım denemez (yalnız zaten yaratılmış kapsayıcı/oturum devam ettirilir)."""
     mesajlar = []
@@ -927,6 +938,9 @@ def uzlastir(ag, kayit, tum, ayar, manifest_yolu, kaydet, simdi, klip_yolu=None)
         if platform == "instagram" and rec.get("kapsayici"):
             if not sir:
                 continue
+            ek = f"instagram|{kayit_hesabi(k, rec)}"
+            if engel is not None and engel_molada_mi(engel, ek, simdi):
+                continue  # mola sürerken platforma hiç gidilmez; kayıt "niyet" olarak bekler
             surum = ayar.get("instagram_api_surumu", "v27.0")
             try:
                 kod = ig_durum(ag, sir, surum, rec["kapsayici"])
@@ -935,7 +949,12 @@ def uzlastir(ag, kayit, tum, ayar, manifest_yolu, kaydet, simdi, klip_yolu=None)
                 elif kod == "FINISHED":
                     _tamamla(rec, ig_yayimla(ag, sir, surum, rec["kapsayici"]), simdi)
                 elif kod in ("ERROR", "EXPIRED"):
-                    elle(f"Instagram kapsayıcı {kod}; yayımlanmadı, kontrol edip gerekirse kaydı silin")
+                    if rec.get("engel"):
+                        # Engel yüzünden bekleyen kapsayıcı yayımlanmadan düştü: yayımlanmış olsaydı PUBLISHED kalırdı.
+                        del kayit[k]  # gönderi kuyruğa döner, sonra yeniden denenir
+                        kaydet()
+                    else:
+                        elle(f"Instagram kapsayıcı {kod}; yayımlanmadı, kontrol edip gerekirse kaydı silin")
                     continue
                 else:
                     ilk = datetime.fromisoformat(rec["niyet_zamani"])
@@ -943,9 +962,16 @@ def uzlastir(ag, kayit, tum, ayar, manifest_yolu, kaydet, simdi, klip_yolu=None)
                         elle("Instagram kapsayıcı 24 saatten uzun işleniyor")
                     continue
             except PaylasimHatasi as h:
-                mesajlar.append(f"Uzlaştırma bekliyor {k}: {h}")
+                if engel is not None and engel_yolu is not None and meta_engel_mi(str(h)):
+                    saat = engel_mola_ver(engel, engel_yolu, ek, simdi, str(h))
+                    cikti(f"::warning::Instagram engeli sürüyor; {saat} saat mola verildi, gönderi bekliyor ({rec.get('id')})")
+                else:
+                    mesajlar.append(f"Uzlaştırma bekliyor {k}: {h}")
                 continue
+            rec.pop("engel", None)
             kaydet()
+            if engel is not None and engel_yolu is not None and engel.pop(ek, None) is not None:
+                engel_yaz(engel_yolu, engel)
             if bicim == "reel" and rec.get("url"):
                 video_baglanti_yaz(manifest_yolu, klip_yolu, rec.get("sosyal_tur"), rec["id"], rec.get('icerik_dili', dil), "instagram", rec["url"])
         elif platform == "youtube" and rec.get("oturum") and rec.get("boyut"):
@@ -1007,12 +1033,12 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
         kaydet()
     if not dry_run:
         onceki = {k for k, r in kayit.items() if r.get('durum') == 'niyet'}
-        hatalar += uzlastir(ag, kayit, tum, ayar, manifest_yolu, kaydet, simdi, klip_yolu)
+        hatalar += uzlastir(ag, kayit, tum, ayar, manifest_yolu, kaydet, simdi, klip_yolu, engel, engel_yolu, cikti)
         manifest = vs.yukle(manifest_yolu)
         klip_manifest = ks.yukle(klip_yolu)
     else:
         onceki = set()
-    kullanilan = {(kayit_hesabi(k, kayit[k]), k.split('|')[2]) for k in onceki if kayit[k].get('durum') == 'tamam'}
+    kullanilan = {(kayit_hesabi(k, kayit[k]), k.split('|')[2]) for k in onceki if k in kayit and kayit[k].get('durum') == 'tamam'}
 
     ortak_bicim = tuple(ayar.get("ortak_hesap_bicimleri") or BICIMLER)
     hesap_hatasi: set = set()
@@ -1162,17 +1188,18 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                         else:
                             sonuc = yt_paylas(ag, sir, dil, x, link, ayar, ara, video)
                     except PaylasimHatasi as h:
-                        if h.kesin:
+                        ig_engel = platform == "instagram" and h.kesin and meta_engel_mi(str(h))
+                        if ig_engel and rec.get("kapsayici"):
+                            # Instagram "engellendi" derken gönderiyi yine de yayımlayabiliyor (2026-11-23, Dawn of War IV):
+                            # kayıt silinmez, "niyet" kalır; mola bitince kapsayıcı sorgulanır, yeni gönderi AÇILMAZ.
+                            rec["engel"] = True
+                            kaydet()
+                        elif h.kesin:
                             del kayit[k]  # sunucu açıkça reddetti, yayımlanmadı: sonra yeniden denenir
                             kaydet()
-                        if platform == "instagram" and h.kesin and meta_engel_mi(str(h)):
+                        if ig_engel:
                             # Platform kısıtı hata DEĞİL: tur kırmızıya düşmez (e-posta yağmaz), mola verilir; gönderi kuyrukta kalır.
-                            ek = f"{platform}|{hesap}"
-                            sayi = int((engel.get(ek) or {}).get("sayi", 0)) + 1
-                            saat = ENGEL_MOLA_SAAT[min(sayi, len(ENGEL_MOLA_SAAT)) - 1]
-                            engel[ek] = {"bitis": (simdi + timedelta(hours=saat)).isoformat(timespec="seconds"), "sayi": sayi,
-                                         "son": simdi.isoformat(timespec="seconds"), "neden": str(h)[-260:]}
-                            engel_yaz(engel_yolu, engel)
+                            saat = engel_mola_ver(engel, engel_yolu, f"{platform}|{hesap}", simdi, str(h))
                             cikti(f"::warning::Instagram ({hesap}) paylaşımı platformca engellendi; {saat} saat mola verildi, "
                                   f"gönderi kuyrukta bekliyor ({x['id']}): {str(h)[:300]}")
                         else:

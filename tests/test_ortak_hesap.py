@@ -120,7 +120,8 @@ class Limit(Ortak):
         # Her haber gönderi alır (Cio, 2026-11-22); haber dışı dolgu ayrı ve küçük bir payla sınırlı kalır
         self.assertEqual(a["haber_disi_gunluk_en_fazla"]["instagram"], 4)
         self.assertEqual(a["calisma_basina_en_fazla"], 1)
-        self.assertEqual(a["hesap_esleme"]["instagram"]["en"], "tr")
+        # Instagram'da da yabancı dil ortak hesaptan çıkmaz (Cio, 2026-11-23): aynı haber Türkçe hesapta 4 dilde tekrar ediyordu
+        self.assertEqual(a["hesap_esleme"]["instagram"], {})
         # YouTube'da yabancı dil ortak hesaptan çıkmaz (Cio'nun kararı, 2026-11-18): yalnız Türkçe Shorts
         self.assertEqual(a["hesap_esleme"]["youtube"], {})
         self.assertEqual(a["ortak_hesap_bicimleri"], ["reel", "short"])

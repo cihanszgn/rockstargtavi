@@ -283,10 +283,12 @@ class PlatformEngeli(Temel):
     def engelli_ag(self):
         return SahteAg(mutasyon_hatasi={"media_publish": sy.PaylasimHatasi(ENGEL_METNI, kesin=True)})
 
-    def test_engel_hata_sayilmaz_mola_yazilir_kayit_silinir(self):
+    def test_engel_hata_sayilmaz_mola_yazilir_kayit_niyet_kalir(self):
         g, hata, _ = self.calistir(self.engelli_ag(), ayar(instagram=True))
         self.assertEqual((g, hata), (0, []))
-        self.assertNotIn("oyun-yama-1|tr|instagram|gorsel", self.kayitlar())
+        # Instagram "engellendi" dese de gönderi yayımlanmış olabilir: kayıt silinmez, kapsayıcıyla bekler
+        rec = self.kayitlar()["oyun-yama-1|tr|instagram|gorsel"]
+        self.assertEqual((rec["durum"], rec["kapsayici"], rec["engel"]), ("niyet", "KAP1", True))
         e = self.engel()["instagram|tr"]
         self.assertEqual(e["sayi"], 1)
         self.assertEqual(datetime.fromisoformat(e["bitis"]), SIMDI + sy.timedelta(hours=6))
@@ -299,9 +301,34 @@ class PlatformEngeli(Temel):
 
     def test_mola_bitince_paylasir_ve_engel_silinir(self):
         self.calistir(self.engelli_ag(), ayar(instagram=True))
-        g, hata, _ = self.calistir(SahteAg(), ayar(instagram=True), simdi=SIMDI + sy.timedelta(hours=7))
-        self.assertEqual((g, hata), (1, []))
+        ag = SahteAg()
+        g, hata, _ = self.calistir(ag, ayar(instagram=True), simdi=SIMDI + sy.timedelta(hours=7))
+        self.assertEqual(hata, [])
+        rec = self.kayitlar()["oyun-yama-1|tr|instagram|gorsel"]
+        self.assertEqual((rec["durum"], rec["kimlik"]), ("tamam", "MED1"))
+        self.assertNotIn("engel", rec)
         self.assertEqual(self.engel(), {})
+        # aynı kapsayıcı yayımlanır; yeni kapsayıcı (yeni gönderi) AÇILMAZ
+        self.assertFalse(any(m == "POST" and u.endswith("/media") for m, u in ag.cagrilar))
+
+    def test_engele_ragmen_yayimlanmis_gonderi_yeniden_atilmaz(self):
+        # 2026-11-23: media_publish 403 (2207051) döndü ama gönderi profilde çıktı
+        self.calistir(self.engelli_ag(), ayar(instagram=True))
+        ag = SahteAg(durumlar=["PUBLISHED"])
+        g, hata, _ = self.calistir(ag, ayar(instagram=True), simdi=SIMDI + sy.timedelta(hours=7))
+        self.assertEqual((g, hata), (0, []))
+        self.assertEqual(self.kayitlar()["oyun-yama-1|tr|instagram|gorsel"]["durum"], "tamam")
+        self.assertFalse(any(m == "POST" for m, u in ag.cagrilar))
+        self.assertEqual(self.engel(), {})
+
+    def test_engelde_dusen_kapsayici_kuyruga_doner(self):
+        self.calistir(self.engelli_ag(), ayar(instagram=True))
+        # eski kapsayıcı düşmüş (yayımlanmamış): kayıt silinir, aynı turda yeni kapsayıcıyla yeniden paylaşılır
+        g, hata, _ = self.calistir(SahteAg(durumlar=["EXPIRED", "FINISHED"]), ayar(instagram=True), simdi=SIMDI + sy.timedelta(hours=7))
+        self.assertEqual((g, hata), (1, []))
+        rec = self.kayitlar()["oyun-yama-1|tr|instagram|gorsel"]
+        self.assertEqual(rec["durum"], "tamam")
+        self.assertNotIn("engel", rec)
 
     def test_art_arda_engelde_mola_uzar(self):
         self.calistir(self.engelli_ag(), ayar(instagram=True))
