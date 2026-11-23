@@ -1,0 +1,119 @@
+{
+ "id": "007-first-light-steam-awards-indirim-2026-11-23",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "007 First Light est à 50 % de réduction sur Steam dès aujourd'hui.",
+   "veri": {
+    "ust_etiket": "STEAM AWARDS 2026",
+    "baslik": "007 First Light : 50 % de réduction",
+    "vurgu": [
+     "50 % de réduction"
+    ],
+    "tuslar": [
+     "S",
+     "T"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "007 FIRST LIGHT",
+    "alt": "STEAM AWARDS 2026"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "D'après l'annonce officielle sur Steam, le jeu peut être proposé aux Steam Awards 2026.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Annonce officielle sur Steam",
+    "alinti": "Vous pouvez proposer 007 First Light aux Steam Awards 2026."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "ANNONCE SUR STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Quatre catégories sont concernées : Jeu de l'année, Meilleure bande originale, Jeu narratif remarquable et Style visuel remarquable.",
+   "veri": {
+    "baslik": "Quatre catégories",
+    "maddeler": [
+     {
+      "metin": "Jeu de l'année",
+      "tetik": "Jeu"
+     },
+     {
+      "metin": "Meilleure bande originale",
+      "tetik": "bande"
+     },
+     {
+      "metin": "Jeu narratif remarquable",
+      "tetik": "narratif"
+     },
+     {
+      "metin": "Style visuel remarquable",
+      "tetik": "Style"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "QUATRE CATÉGORIES",
+    "alt": "PROPOSER LE JEU"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "La réduction a commencé le 23 novembre, mais l'annonce ne précise pas sa date de fin.",
+   "veri": {
+    "etiket": "RÉDUCTION EN COURS",
+    "tarih": "23 novembre",
+    "not": "Date de fin non annoncée"
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "DATE DE FIN INCONNUE",
+    "alt": "VÉRIFIEZ LA BOUTIQUE STEAM"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Et vous, quelle édition choisirez-vous : Standard ou Deluxe ?",
+   "veri": {
+    "cagri": "Tout est sur notre site",
+    "alt": "Catégories et précisions dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

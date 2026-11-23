@@ -1,0 +1,119 @@
+{
+ "id": "007-first-light-steam-awards-indirim-2026-11-23",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "007 First Light is 50% off on Steam starting today.",
+   "veri": {
+    "ust_etiket": "STEAM AWARDS 2026",
+    "baslik": "007 First Light: 50% off on Steam",
+    "vurgu": [
+     "50% off"
+    ],
+    "tuslar": [
+     "S",
+     "T"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "007 FIRST LIGHT",
+    "alt": "STEAM AWARDS 2026"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam's official store post says 007 First Light can be nominated for The Steam Awards 2026.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam store announcement",
+    "alinti": "You can nominate 007 First Light for The Steam Awards 2026."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "STEAM STORE ANNOUNCEMENT"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "There are four categories: Game of the Year, Best Soundtrack, Outstanding Story-Rich Game and Outstanding Visual Style.",
+   "veri": {
+    "baslik": "Four nomination categories",
+    "maddeler": [
+     {
+      "metin": "Game of the Year",
+      "tetik": "Game"
+     },
+     {
+      "metin": "Best Soundtrack",
+      "tetik": "Soundtrack"
+     },
+     {
+      "metin": "Outstanding Story-Rich Game",
+      "tetik": "Story-Rich"
+     },
+     {
+      "metin": "Outstanding Visual Style",
+      "tetik": "Visual"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "FOUR CATEGORIES",
+    "alt": "STEAM AWARDS 2026"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "The discount began on November 23, and the announcement gives no end date.",
+   "veri": {
+    "etiket": "DISCOUNT STARTED",
+    "tarih": "November 23",
+    "not": "No end date announced"
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "NO END DATE",
+    "alt": "CHECK THE STEAM STORE PAGE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Would you pick the Standard Edition or the Deluxe Edition Upgrade?",
+   "veri": {
+    "cagri": "Read the full story",
+    "alt": "Categories and discount note are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,119 @@
+{
+ "id": "007-first-light-steam-awards-indirim-2026-11-23",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "007 First Light Steam'de yüzde 50 indirimde, bugün başladı.",
+   "veri": {
+    "ust_etiket": "STEAM AWARDS 2026",
+    "baslik": "007 First Light %50 indirimde",
+    "vurgu": [
+     "%50 indirimde"
+    ],
+    "tuslar": [
+     "S",
+     "T"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "007 FIRST LIGHT",
+    "alt": "STEAM AWARDS 2026"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam'in mağaza duyurusu, oyunun Steam Awards 2026'da aday gösterilebildiğini belirtiyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam mağaza duyurusu",
+    "alinti": "Oyunu bu yılın Steam Awards'ında aday gösterebilirsiniz."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "STEAM • MAĞAZA DUYURUSU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Dört kategori var: Yılın Oyunu, En İyi Müzik, Öne Çıkan Hikâye Odaklı Oyun ve Öne Çıkan Görsel Stil.",
+   "veri": {
+    "baslik": "Dört aday kategorisi",
+    "maddeler": [
+     {
+      "metin": "Yılın Oyunu",
+      "tetik": "Yılın"
+     },
+     {
+      "metin": "En İyi Müzik",
+      "tetik": "Müzik"
+     },
+     {
+      "metin": "Öne Çıkan Hikâye Odaklı Oyun",
+      "tetik": "Hikâye"
+     },
+     {
+      "metin": "Öne Çıkan Görsel Stil",
+      "tetik": "Görsel"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DÖRT KATEGORİ",
+    "alt": "ADAY GÖSTERİLEBİLİR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Duyuruda 23 Kasım'daki indirimin bitiş tarihi yok.",
+   "veri": {
+    "etiket": "İNDİRİM BAŞLADI",
+    "tarih": "23 Kasım",
+    "not": "Bitiş tarihi duyuruda yok"
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "İNDİRİM",
+    "alt": "BİTİŞ TARİHİ YOK"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Standard mı, yoksa Deluxe Edition Upgrade mi alırsın?",
+   "veri": {
+    "cagri": "Tamamı sitemizde",
+    "alt": "Kategoriler ve indirim notu haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

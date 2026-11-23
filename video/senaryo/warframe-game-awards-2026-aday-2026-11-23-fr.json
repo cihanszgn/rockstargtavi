@@ -1,0 +1,116 @@
+{
+ "id": "warframe-game-awards-2026-aday-2026-11-23",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Warframe est nommé aux The Game Awards 2026, et le vote se termine le 9 décembre.",
+   "veri": {
+    "ust_etiket": "SOUTIEN COMMUNAUTAIRE",
+    "baslik": "Warframe nommé aux Game Awards",
+    "vurgu": [
+     "Warframe",
+     "nommé"
+    ],
+    "tuslar": [
+     "W",
+     "F"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "WARFRAME",
+    "alt": "THE GAME AWARDS 2026"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "D'après l'annonce de Warframe sur Steam, le vote se fait sur la page de nomination des Game Awards.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Annonce Steam",
+    "alinti": "Votez sur la page de nomination en vous connectant avec un compte Google, X ou Facebook."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "WARFRAME • ANNONCE STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Les joueurs en Chine peuvent aussi voter via Bilibili, Douyin, WeChat et Xiaohongshu. La cérémonie est diffusée en direct le 10 décembre.",
+   "veri": {
+    "baslik": "Voter et suivre la cérémonie",
+    "maddeler": [
+     {
+      "metin": "Chine : plateformes en plus",
+      "tetik": "Chine"
+     },
+     {
+      "metin": "Bilibili, Douyin, WeChat, Xiaohongshu",
+      "tetik": "Bilibili"
+     },
+     {
+      "metin": "Cérémonie en direct le 10 décembre",
+      "tetik": "cérémonie"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "VOTE ET CÉRÉMONIE",
+    "alt": "PLATEFORMES EN PLUS EN CHINE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Le vote se termine le 9 décembre : il reste peu de temps pour voter.",
+   "veri": {
+    "etiket": "Fin du vote",
+    "tarih": "9 décembre",
+    "not": "Votez avant cette date."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "FIN DU VOTE",
+    "alt": "AVANT LE 9 DÉCEMBRE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Voterez-vous pour Warframe ?",
+   "veri": {
+    "cagri": "Tout est sur le site",
+    "alt": "Sources et détails dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

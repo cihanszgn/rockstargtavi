@@ -8,8 +8,8 @@
 "2026-11-22"
 ],
 "cikis-takvimi.html": [
-"b4437413c37f",
-"2026-11-23"
+"484699aa186f",
+"2026-11-24"
 ],
 "de/angebote.html": [
 "3a06b538b729",
@@ -20,8 +20,8 @@
 "2026-11-16"
 ],
 "de/erscheinungskalender.html": [
-"6566aaea11d4",
-"2026-11-23"
+"e074db133666",
+"2026-11-24"
 ],
 "de/geruechte.html": [
 "10fecf40eeec",
@@ -32,12 +32,12 @@
 "2026-11-19"
 ],
 "de/index.html": [
-"5a2d0e464d26",
-"2026-11-23"
+"4f989b48e982",
+"2026-11-24"
 ],
 "de/kostenlose-spiele.html": [
-"fb7267709689",
-"2026-11-23"
+"fd2e3c54dfc8",
+"2026-11-24"
 ],
 "de/nachrichten.html": [
 "b5d260365596",
@@ -120,8 +120,8 @@
 "2026-11-16"
 ],
 "de/spiele-news.html": [
-"67ccaa62fde0",
-"2026-11-23"
+"6dde02d8b8fc",
+"2026-11-24"
 ],
 "de/spiele/apex-legends.html": [
 "cdb2706e435a",
@@ -188,8 +188,8 @@
 "2026-11-16"
 ],
 "de/spiele/index.html": [
-"9e32a3b0d1b7",
-"2026-11-23"
+"cdba430cd6d1",
+"2026-11-24"
 ],
 "de/spiele/knight-online.html": [
 "060ffcc8781a",
@@ -220,8 +220,8 @@
 "2026-11-16"
 ],
 "de/spiele/path-of-exile-2.html": [
-"89d195fa84c2",
-"2026-11-23"
+"959417cf9a41",
+"2026-11-24"
 ],
 "de/spiele/path-of-exile.html": [
 "882fd3a41636",
@@ -254,6 +254,10 @@
 "de/spiele/war-thunder.html": [
 "d69d7d78572a",
 "2026-11-21"
+],
+"de/spiele/warframe.html": [
+"13b7130b58d9",
+"2026-11-24"
 ],
 "de/spiele/world-of-tanks.html": [
 "b156c861c042",
@@ -288,16 +292,16 @@
 "2026-11-23"
 ],
 "de/thema/pc.html": [
-"fa91e8549100",
-"2026-11-23"
+"d0aad55b7b13",
+"2026-11-24"
 ],
 "de/thema/playstation.html": [
-"cff5f42c7ae0",
-"2026-11-22"
+"503e46fc9ac7",
+"2026-11-24"
 ],
 "de/thema/ps5.html": [
-"a7500c310a21",
-"2026-11-23"
+"938355c41b3f",
+"2026-11-24"
 ],
 "de/thema/riotgames.html": [
 "ffecc06c4733",
@@ -308,24 +312,28 @@
 "2026-11-23"
 ],
 "de/thema/steam.html": [
-"91c215c18c64",
-"2026-11-23"
+"980624d5de44",
+"2026-11-24"
 ],
 "de/thema/switch2.html": [
 "ced93a85903b",
 "2026-11-22"
 ],
 "de/thema/tur-cikis.html": [
-"3c072310f4d8",
-"2026-11-23"
+"852ab8bd54fc",
+"2026-11-24"
 ],
 "de/thema/tur-guncelleme.html": [
-"54a818162742",
-"2026-11-23"
+"3f07bf2cbcfe",
+"2026-11-24"
 ],
 "de/thema/tur-haber.html": [
-"078fec1ca54e",
-"2026-11-23"
+"580e8ea54656",
+"2026-11-24"
+],
+"de/thema/tur-indirim.html": [
+"8fe1880f69be",
+"2026-11-24"
 ],
 "de/thema/tur-ucretsiz.html": [
 "816733fff282",
@@ -340,12 +348,12 @@
 "2026-11-22"
 ],
 "de/thema/xbox.html": [
-"bbe05b4e5bae",
-"2026-11-23"
+"53db5b61e16e",
+"2026-11-24"
 ],
 "de/thema/xboxseriesxs.html": [
-"db887b5d3e6e",
-"2026-11-23"
+"01b494e17681",
+"2026-11-24"
 ],
 "de/ueber-uns.html": [
 "fc416c2de7f3",
@@ -368,12 +376,12 @@
 "2026-11-23"
 ],
 "en/free-games.html": [
-"dfc8b1b8442e",
-"2026-11-23"
+"24a93e5d2cfd",
+"2026-11-24"
 ],
 "en/game-news.html": [
-"38e2bee8d636",
-"2026-11-23"
+"fac6909289ad",
+"2026-11-24"
 ],
 "en/game/apex-legends.html": [
 "e41e1c7b08f1",
@@ -440,8 +448,8 @@
 "2026-11-16"
 ],
 "en/game/index.html": [
-"db9e25533b23",
-"2026-11-23"
+"bfa272520f02",
+"2026-11-24"
 ],
 "en/game/knight-online.html": [
 "7459042a3f7d",
@@ -472,8 +480,8 @@
 "2026-11-16"
 ],
 "en/game/path-of-exile-2.html": [
-"0f1309fe6d02",
-"2026-11-23"
+"6eafaaca5e31",
+"2026-11-24"
 ],
 "en/game/path-of-exile.html": [
 "e158ccba289a",
@@ -506,6 +514,10 @@
 "en/game/war-thunder.html": [
 "89598e620bef",
 "2026-11-21"
+],
+"en/game/warframe.html": [
+"52d322c7fecf",
+"2026-11-24"
 ],
 "en/game/world-of-tanks.html": [
 "5e7f4cdd6e9a",
@@ -604,8 +616,8 @@
 "2026-11-22"
 ],
 "en/index.html": [
-"b7d42bc97fd8",
-"2026-11-23"
+"fad94ca6e301",
+"2026-11-24"
 ],
 "en/languages.html": [
 "c4ea9df84208",
@@ -620,8 +632,8 @@
 "2026-11-15"
 ],
 "en/release-calendar.html": [
-"2d401026728e",
-"2026-11-23"
+"ce1cf7c011e0",
+"2026-11-24"
 ],
 "en/rumors.html": [
 "ebe69f8668a0",
@@ -644,16 +656,16 @@
 "2026-11-23"
 ],
 "en/tag/pc.html": [
-"c59bea3abc7c",
-"2026-11-23"
+"2031dc2f4540",
+"2026-11-24"
 ],
 "en/tag/playstation.html": [
-"a5db2ffe4ac5",
-"2026-11-22"
+"47775377dce6",
+"2026-11-24"
 ],
 "en/tag/ps5.html": [
-"e0e2edd80148",
-"2026-11-23"
+"b7cdf1414155",
+"2026-11-24"
 ],
 "en/tag/riotgames.html": [
 "b962edac83a6",
@@ -664,24 +676,28 @@
 "2026-11-23"
 ],
 "en/tag/steam.html": [
-"6bcdf20726b4",
-"2026-11-23"
+"8b2f7a8649b9",
+"2026-11-24"
 ],
 "en/tag/switch2.html": [
 "aada63b88d0e",
 "2026-11-22"
 ],
 "en/tag/tur-cikis.html": [
-"e91c948b9b14",
-"2026-11-23"
+"4d46c1491a81",
+"2026-11-24"
 ],
 "en/tag/tur-guncelleme.html": [
-"8770d0347951",
-"2026-11-23"
+"f2cc1cb50d5c",
+"2026-11-24"
 ],
 "en/tag/tur-haber.html": [
-"baaf05879a21",
-"2026-11-23"
+"75acc27dd79f",
+"2026-11-24"
+],
+"en/tag/tur-indirim.html": [
+"6d6cabbc9600",
+"2026-11-24"
 ],
 "en/tag/tur-ucretsiz.html": [
 "2789410bd544",
@@ -696,20 +712,20 @@
 "2026-11-22"
 ],
 "en/tag/xbox.html": [
-"ba1bfc8a9cf1",
-"2026-11-23"
+"08a90831e604",
+"2026-11-24"
 ],
 "en/tag/xboxseriesxs.html": [
-"5508eb4ffabd",
-"2026-11-23"
+"6d75f0307eb9",
+"2026-11-24"
 ],
 "es/about.html": [
 "d375ca358aa8",
 "2026-11-15"
 ],
 "es/calendario-lanzamientos.html": [
-"74cf84d0afbc",
-"2026-11-23"
+"9e80ddc92469",
+"2026-11-24"
 ],
 "es/gta-6.html": [
 "1d297fe067a2",
@@ -792,8 +808,8 @@
 "2026-11-09"
 ],
 "es/index.html": [
-"f86dfe252405",
-"2026-11-23"
+"d66543d8c9c1",
+"2026-11-24"
 ],
 "es/juego/apex-legends.html": [
 "4de180788cf0",
@@ -860,8 +876,8 @@
 "2026-11-16"
 ],
 "es/juego/index.html": [
-"b6e5018b9fd5",
-"2026-11-23"
+"59a93abf9bad",
+"2026-11-24"
 ],
 "es/juego/knight-online.html": [
 "ddcfe4f0d44b",
@@ -892,8 +908,8 @@
 "2026-11-16"
 ],
 "es/juego/path-of-exile-2.html": [
-"0fd38c04eb73",
-"2026-11-23"
+"fe7fa14a536f",
+"2026-11-24"
 ],
 "es/juego/path-of-exile.html": [
 "2cf8bc2455fa",
@@ -927,6 +943,10 @@
 "814766977ece",
 "2026-11-21"
 ],
+"es/juego/warframe.html": [
+"dd134d118225",
+"2026-11-24"
+],
 "es/juego/world-of-tanks.html": [
 "8e4cca619ba6",
 "2026-11-19"
@@ -944,8 +964,8 @@
 "2026-11-20"
 ],
 "es/juegos-gratis.html": [
-"95155f9a13d1",
-"2026-11-23"
+"867477205c46",
+"2026-11-24"
 ],
 "es/languages.html": [
 "f53ed671bbf6",
@@ -956,8 +976,8 @@
 "2026-11-17"
 ],
 "es/noticias-juegos.html": [
-"739df0d54baa",
-"2026-11-23"
+"2af3b4bc88e6",
+"2026-11-24"
 ],
 "es/ofertas.html": [
 "8c77bc789f2b",
@@ -988,16 +1008,16 @@
 "2026-11-23"
 ],
 "es/tema/pc.html": [
-"c32c8058c76d",
-"2026-11-23"
+"2d07b6c4d808",
+"2026-11-24"
 ],
 "es/tema/playstation.html": [
-"1257a13e41ed",
-"2026-11-22"
+"5b65ef638e6a",
+"2026-11-24"
 ],
 "es/tema/ps5.html": [
-"38ee2f42bdc4",
-"2026-11-23"
+"f4eda2453abb",
+"2026-11-24"
 ],
 "es/tema/riotgames.html": [
 "fd502fa6da5d",
@@ -1008,24 +1028,28 @@
 "2026-11-23"
 ],
 "es/tema/steam.html": [
-"b650b9b67c96",
-"2026-11-23"
+"efabcb7a0db4",
+"2026-11-24"
 ],
 "es/tema/switch2.html": [
 "29ff443df990",
 "2026-11-22"
 ],
 "es/tema/tur-cikis.html": [
-"2ca4b4891d0b",
-"2026-11-23"
+"14c2fdc80e9c",
+"2026-11-24"
 ],
 "es/tema/tur-guncelleme.html": [
-"252ccf7ded60",
-"2026-11-23"
+"582490836875",
+"2026-11-24"
 ],
 "es/tema/tur-haber.html": [
-"cdccb26beee6",
-"2026-11-23"
+"3a49996f3314",
+"2026-11-24"
+],
+"es/tema/tur-indirim.html": [
+"8d8c1a79fa46",
+"2026-11-24"
 ],
 "es/tema/tur-ucretsiz.html": [
 "e8ca84604bac",
@@ -1040,12 +1064,12 @@
 "2026-11-22"
 ],
 "es/tema/xbox.html": [
-"3a7008886d3b",
-"2026-11-23"
+"0223abb5e161",
+"2026-11-24"
 ],
 "es/tema/xboxseriesxs.html": [
-"0ac1d731b064",
-"2026-11-23"
+"c4064371644a",
+"2026-11-24"
 ],
 "etiket/blizzard.html": [
 "24c5c4830620",
@@ -1060,16 +1084,16 @@
 "2026-11-23"
 ],
 "etiket/pc.html": [
-"86a4c3d1bbbb",
-"2026-11-23"
+"7f4a8ac309ea",
+"2026-11-24"
 ],
 "etiket/playstation.html": [
-"b1a05ebda541",
-"2026-11-22"
+"187c715fdd5c",
+"2026-11-24"
 ],
 "etiket/ps5.html": [
-"4d4ae60f21d5",
-"2026-11-23"
+"a601c65d4f76",
+"2026-11-24"
 ],
 "etiket/riotgames.html": [
 "b0943170e90a",
@@ -1080,24 +1104,28 @@
 "2026-11-23"
 ],
 "etiket/steam.html": [
-"9c01403b745b",
-"2026-11-23"
+"43be0a059b1a",
+"2026-11-24"
 ],
 "etiket/switch2.html": [
 "e072b0b56a26",
 "2026-11-22"
 ],
 "etiket/tur-cikis.html": [
-"5d8baf4fc447",
-"2026-11-23"
+"72ead25a7917",
+"2026-11-24"
 ],
 "etiket/tur-guncelleme.html": [
-"279a5d36070d",
-"2026-11-23"
+"2524d4366aac",
+"2026-11-24"
 ],
 "etiket/tur-haber.html": [
-"938d1870f8d1",
-"2026-11-23"
+"df9ea81d6d85",
+"2026-11-24"
+],
+"etiket/tur-indirim.html": [
+"3fb65ca41f90",
+"2026-11-24"
 ],
 "etiket/tur-ucretsiz.html": [
 "07f148548f0c",
@@ -1112,24 +1140,24 @@
 "2026-11-22"
 ],
 "etiket/xbox.html": [
-"6f3db1966284",
-"2026-11-23"
+"824c7891bf2e",
+"2026-11-24"
 ],
 "etiket/xboxseriesxs.html": [
-"5a2a9090c77a",
-"2026-11-23"
+"b7c68084ca2c",
+"2026-11-24"
 ],
 "fr/about.html": [
 "68d9cde433e6",
 "2026-11-15"
 ],
 "fr/actus-jeux.html": [
-"0c6b2c3be55e",
-"2026-11-23"
+"d997701eefd0",
+"2026-11-24"
 ],
 "fr/calendrier-sorties.html": [
-"1fb6ba179a80",
-"2026-11-23"
+"682874638512",
+"2026-11-24"
 ],
 "fr/gta-6.html": [
 "8789278dfd2d",
@@ -1212,8 +1240,8 @@
 "2026-11-22"
 ],
 "fr/index.html": [
-"926909d4a552",
-"2026-11-23"
+"47bad12e7652",
+"2026-11-24"
 ],
 "fr/jeu/apex-legends.html": [
 "d63843541757",
@@ -1280,8 +1308,8 @@
 "2026-11-16"
 ],
 "fr/jeu/index.html": [
-"24e044bc997d",
-"2026-11-23"
+"ce290c51fee4",
+"2026-11-24"
 ],
 "fr/jeu/knight-online.html": [
 "8be189bb5bf2",
@@ -1312,8 +1340,8 @@
 "2026-11-16"
 ],
 "fr/jeu/path-of-exile-2.html": [
-"2b67e4fe0803",
-"2026-11-23"
+"2255df774bfb",
+"2026-11-24"
 ],
 "fr/jeu/path-of-exile.html": [
 "2e8a5ebd63c9",
@@ -1347,6 +1375,10 @@
 "766ea8310b89",
 "2026-11-21"
 ],
+"fr/jeu/warframe.html": [
+"d9f5a46f532b",
+"2026-11-24"
+],
 "fr/jeu/world-of-tanks.html": [
 "03b26d2a065f",
 "2026-11-19"
@@ -1364,8 +1396,8 @@
 "2026-11-20"
 ],
 "fr/jeux-gratuits.html": [
-"b783062cc784",
-"2026-11-23"
+"fea94f0fbafa",
+"2026-11-24"
 ],
 "fr/languages.html": [
 "8947bedb5387",
@@ -1404,16 +1436,16 @@
 "2026-11-23"
 ],
 "fr/sujet/pc.html": [
-"d0a18d6106a2",
-"2026-11-23"
+"8d74e07afb49",
+"2026-11-24"
 ],
 "fr/sujet/playstation.html": [
-"6b5ad4d1e265",
-"2026-11-22"
+"2ab3c96f1c36",
+"2026-11-24"
 ],
 "fr/sujet/ps5.html": [
-"ed818e9ad44a",
-"2026-11-23"
+"95b3e2ae5456",
+"2026-11-24"
 ],
 "fr/sujet/riotgames.html": [
 "c85b57f24851",
@@ -1424,24 +1456,28 @@
 "2026-11-23"
 ],
 "fr/sujet/steam.html": [
-"393bbd980a0a",
-"2026-11-23"
+"301f8810c831",
+"2026-11-24"
 ],
 "fr/sujet/switch2.html": [
 "d6ccbe49a0f5",
 "2026-11-22"
 ],
 "fr/sujet/tur-cikis.html": [
-"264db5beed01",
-"2026-11-23"
+"33c95eb52b9c",
+"2026-11-24"
 ],
 "fr/sujet/tur-guncelleme.html": [
-"acb60145416a",
-"2026-11-23"
+"ceb1d10197ca",
+"2026-11-24"
 ],
 "fr/sujet/tur-haber.html": [
-"2b528e63d38f",
-"2026-11-23"
+"cf3d00191917",
+"2026-11-24"
+],
+"fr/sujet/tur-indirim.html": [
+"6416eb0824ca",
+"2026-11-24"
 ],
 "fr/sujet/tur-ucretsiz.html": [
 "70aebee6d673",
@@ -1456,12 +1492,12 @@
 "2026-11-22"
 ],
 "fr/sujet/xbox.html": [
-"76a07961d12c",
-"2026-11-23"
+"98d99bc0fbdb",
+"2026-11-24"
 ],
 "fr/sujet/xboxseriesxs.html": [
-"e786745a1547",
-"2026-11-23"
+"83adf2fa94af",
+"2026-11-24"
 ],
 "gizlilik.html": [
 "cf74670cb2f8",
@@ -1500,8 +1536,8 @@
 "2026-11-15"
 ],
 "index.html": [
-"83afc77af885",
-"2026-11-23"
+"aca4e8fbc8c8",
+"2026-11-24"
 ],
 "indirimler.html": [
 "d1582a2e6b04",
@@ -1520,8 +1556,8 @@
 "2026-11-16"
 ],
 "nl/gamenieuws.html": [
-"94a96463b122",
-"2026-11-23"
+"873707f7f43b",
+"2026-11-24"
 ],
 "nl/games/apex-legends.html": [
 "65660ad23c6a",
@@ -1588,8 +1624,8 @@
 "2026-11-16"
 ],
 "nl/games/index.html": [
-"24a36231087c",
-"2026-11-23"
+"ae464fb08349",
+"2026-11-24"
 ],
 "nl/games/knight-online.html": [
 "038174e91975",
@@ -1620,8 +1656,8 @@
 "2026-11-16"
 ],
 "nl/games/path-of-exile-2.html": [
-"7e6939c8409e",
-"2026-11-23"
+"6630dea60b7e",
+"2026-11-24"
 ],
 "nl/games/path-of-exile.html": [
 "f8454e74f1b2",
@@ -1654,6 +1690,10 @@
 "nl/games/war-thunder.html": [
 "a96f829188db",
 "2026-11-21"
+],
+"nl/games/warframe.html": [
+"37880a85ff47",
+"2026-11-24"
 ],
 "nl/games/world-of-tanks.html": [
 "cb7847ec734d",
@@ -1748,16 +1788,16 @@
 "2026-11-22"
 ],
 "nl/gratis-games.html": [
-"873f86bf3146",
-"2026-11-23"
+"d42d94c7ead8",
+"2026-11-24"
 ],
 "nl/gta-6.html": [
 "4b9ad521566c",
 "2026-11-19"
 ],
 "nl/index.html": [
-"a0c2723f106d",
-"2026-11-23"
+"52757b427f6e",
+"2026-11-24"
 ],
 "nl/nieuws.html": [
 "6172026c5fc0",
@@ -1776,16 +1816,16 @@
 "2026-11-23"
 ],
 "nl/onderwerp/pc.html": [
-"dc17cd5af10f",
-"2026-11-23"
+"cfd026d5b5bc",
+"2026-11-24"
 ],
 "nl/onderwerp/playstation.html": [
-"ef0822c51d3c",
-"2026-11-22"
+"9263e6331778",
+"2026-11-24"
 ],
 "nl/onderwerp/ps5.html": [
-"e92526e38e8b",
-"2026-11-23"
+"eeed12bdd7c2",
+"2026-11-24"
 ],
 "nl/onderwerp/riotgames.html": [
 "5607d968385a",
@@ -1796,24 +1836,28 @@
 "2026-11-23"
 ],
 "nl/onderwerp/steam.html": [
-"a214bb049293",
-"2026-11-23"
+"8a65d7cf5669",
+"2026-11-24"
 ],
 "nl/onderwerp/switch2.html": [
 "03e179dcd558",
 "2026-11-22"
 ],
 "nl/onderwerp/tur-cikis.html": [
-"dde5e0074b9f",
-"2026-11-23"
+"c742ac034081",
+"2026-11-24"
 ],
 "nl/onderwerp/tur-guncelleme.html": [
-"9d0ac7233988",
-"2026-11-23"
+"46b099fce8b3",
+"2026-11-24"
 ],
 "nl/onderwerp/tur-haber.html": [
-"192731e82285",
-"2026-11-23"
+"78db58ce33ef",
+"2026-11-24"
+],
+"nl/onderwerp/tur-indirim.html": [
+"d2a3e2f5bc96",
+"2026-11-24"
 ],
 "nl/onderwerp/tur-ucretsiz.html": [
 "4f0905d54201",
@@ -1828,12 +1872,12 @@
 "2026-11-22"
 ],
 "nl/onderwerp/xbox.html": [
-"ba06350917a4",
-"2026-11-23"
+"619b42cdb1f2",
+"2026-11-24"
 ],
 "nl/onderwerp/xboxseriesxs.html": [
-"7e1b24b62fd7",
-"2026-11-23"
+"221644e1cc0c",
+"2026-11-24"
 ],
 "nl/over-ons.html": [
 "152e62761e01",
@@ -1844,8 +1888,8 @@
 "2026-11-16"
 ],
 "nl/releasekalender.html": [
-"6c68fed5172e",
-"2026-11-23"
+"56a934646566",
+"2026-11-24"
 ],
 "nl/talen.html": [
 "0fda2155224a",
@@ -1856,8 +1900,8 @@
 "2026-11-16"
 ],
 "oyun-haberleri.html": [
-"810d86f2b8ee",
-"2026-11-23"
+"6d612ab27570",
+"2026-11-24"
 ],
 "oyun/apex-legends.html": [
 "948cf2c072d5",
@@ -1924,8 +1968,8 @@
 "2026-11-16"
 ],
 "oyun/index.html": [
-"5eb850132e35",
-"2026-11-23"
+"437f305df81f",
+"2026-11-24"
 ],
 "oyun/knight-online.html": [
 "41fccc577cd1",
@@ -1956,8 +2000,8 @@
 "2026-11-16"
 ],
 "oyun/path-of-exile-2.html": [
-"c86edbcf6807",
-"2026-11-23"
+"77d0a1294510",
+"2026-11-24"
 ],
 "oyun/path-of-exile.html": [
 "e9c0cb3fbca7",
@@ -1990,6 +2034,10 @@
 "oyun/war-thunder.html": [
 "735d98211868",
 "2026-11-21"
+],
+"oyun/warframe.html": [
+"d90641a23ca6",
+"2026-11-24"
 ],
 "oyun/world-of-tanks.html": [
 "d968b8fb6cdf",
@@ -2096,16 +2144,16 @@
 "2026-11-09"
 ],
 "ucretsiz-oyunlar.html": [
-"6ab0acb4012f",
-"2026-11-23"
+"f716f0bb7437",
+"2026-11-24"
 ],
 "zh/chuanyan.html": [
 "fb1cc03824b7",
 "2026-11-22"
 ],
 "zh/fashou-rili.html": [
-"ec627d34e2a1",
-"2026-11-23"
+"a50358f5f399",
+"2026-11-24"
 ],
 "zh/fashou-zhinan.html": [
 "9acd3850b616",
@@ -2204,16 +2252,16 @@
 "2026-11-23"
 ],
 "zh/huati/pc.html": [
-"ad1c2f03c54a",
-"2026-11-23"
+"c9de32775065",
+"2026-11-24"
 ],
 "zh/huati/playstation.html": [
-"4c2cbe16bd4c",
-"2026-11-22"
+"dea9c4688eb5",
+"2026-11-24"
 ],
 "zh/huati/ps5.html": [
-"b9e4e96150d5",
-"2026-11-23"
+"11ae99be0abe",
+"2026-11-24"
 ],
 "zh/huati/riotgames.html": [
 "20595fdefca7",
@@ -2224,24 +2272,28 @@
 "2026-11-23"
 ],
 "zh/huati/steam.html": [
-"7b3dc444abba",
-"2026-11-23"
+"71c6282ccabb",
+"2026-11-24"
 ],
 "zh/huati/switch2.html": [
 "794887fbef5f",
 "2026-11-22"
 ],
 "zh/huati/tur-cikis.html": [
-"c99d5d9fc798",
-"2026-11-23"
+"2008e78c821a",
+"2026-11-24"
 ],
 "zh/huati/tur-guncelleme.html": [
-"a00f780ab2e8",
-"2026-11-23"
+"6a2dd6d06904",
+"2026-11-24"
 ],
 "zh/huati/tur-haber.html": [
-"3a0462c72c42",
-"2026-11-23"
+"107cb666f7db",
+"2026-11-24"
+],
+"zh/huati/tur-indirim.html": [
+"9a11f5db653c",
+"2026-11-24"
 ],
 "zh/huati/tur-ucretsiz.html": [
 "21eace1c6eb6",
@@ -2256,24 +2308,24 @@
 "2026-11-22"
 ],
 "zh/huati/xbox.html": [
-"e77fdc5bfbca",
-"2026-11-23"
+"127ec93fb972",
+"2026-11-24"
 ],
 "zh/huati/xboxseriesxs.html": [
-"fba9a2c66378",
-"2026-11-23"
+"ab3deb8a9639",
+"2026-11-24"
 ],
 "zh/index.html": [
-"6e4bb407ba9e",
-"2026-11-23"
+"f74ddc559066",
+"2026-11-24"
 ],
 "zh/laiyuan.html": [
 "58e029aba784",
 "2026-11-16"
 ],
 "zh/mianfei-youxi.html": [
-"d16bee85420e",
-"2026-11-23"
+"7dc485e323cd",
+"2026-11-24"
 ],
 "zh/xinwen.html": [
 "f006025febfc",
@@ -2288,8 +2340,8 @@
 "2026-11-23"
 ],
 "zh/youxi-xinwen.html": [
-"b2b7ac769caa",
-"2026-11-23"
+"7d1728116541",
+"2026-11-24"
 ],
 "zh/youxi/apex-legends.html": [
 "d5c613268ce4",
@@ -2356,8 +2408,8 @@
 "2026-11-16"
 ],
 "zh/youxi/index.html": [
-"9aa306d43ff7",
-"2026-11-23"
+"4933ca682e56",
+"2026-11-24"
 ],
 "zh/youxi/knight-online.html": [
 "58e368b9bbf6",
@@ -2388,8 +2440,8 @@
 "2026-11-16"
 ],
 "zh/youxi/path-of-exile-2.html": [
-"d0919b99619b",
-"2026-11-23"
+"4f7c80d9fa59",
+"2026-11-24"
 ],
 "zh/youxi/path-of-exile.html": [
 "f631e15ba530",
@@ -2422,6 +2474,10 @@
 "zh/youxi/war-thunder.html": [
 "4a0f0c27df8b",
 "2026-11-21"
+],
+"zh/youxi/warframe.html": [
+"3a2b1c4c3511",
+"2026-11-24"
 ],
 "zh/youxi/world-of-tanks.html": [
 "1a1037463bb9",

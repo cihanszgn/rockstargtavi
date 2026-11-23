@@ -1,0 +1,116 @@
+{
+ "id": "warframe-game-awards-2026-aday-2026-11-23",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Warframe, The Game Awards 2026'da aday; oylar 9 Aralık'ta kapanıyor.",
+   "veri": {
+    "ust_etiket": "TOPLULUK DESTEĞİ",
+    "baslik": "Warframe için oy zamanı",
+    "vurgu": [
+     "Warframe",
+     "oy zamanı"
+    ],
+    "tuslar": [
+     "W",
+     "F"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "WARFRAME",
+    "alt": "THE GAME AWARDS 2026"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Warframe'un Steam duyurusuna göre oylama The Game Awards'ın aday sayfasında.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam haber duyurusu",
+    "alinti": "Oy için aday sayfasını ziyaret edin ve Google, X veya Facebook hesabınızla giriş yapın."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "WARFRAME • STEAM DUYURUSU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Çin'deki oyuncular Bilibili, Douyin, WeChat ve Xiaohongshu'dan oy verebiliyor. Ödül töreni 10 Aralık'ta canlı yayında.",
+   "veri": {
+    "baslik": "Oy ve tören",
+    "maddeler": [
+     {
+      "metin": "Çin'de ek oy platformları",
+      "tetik": "Çin'deki"
+     },
+     {
+      "metin": "Bilibili, Douyin, WeChat, Xiaohongshu",
+      "tetik": "Bilibili"
+     },
+     {
+      "metin": "Tören 10 Aralık'ta canlı",
+      "tetik": "töreni"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "OY VE TÖREN",
+    "alt": "ÇİN'DE EK PLATFORMLAR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Oylama 9 Aralık'ta kapanıyor, oy vermek için kalan süre sınırlı.",
+   "veri": {
+    "etiket": "Oylama kapanıyor",
+    "tarih": "9 Aralık",
+    "not": "Oyunuzu bu tarihten önce verin."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "OYLAMA KAPANIYOR",
+    "alt": "9 ARALIK'A KADAR"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Siz Warframe'a oy verecek misiniz?",
+   "veri": {
+    "cagri": "Tamamı sitemizde",
+    "alt": "Kaynak ve ayrıntılar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,119 @@
+{
+ "id": "007-first-light-steam-awards-indirim-2026-11-23",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "007 First Light tiene un 50 % de descuento en Steam desde hoy.",
+   "veri": {
+    "ust_etiket": "STEAM AWARDS 2026",
+    "baslik": "007 First Light: 50 % de descuento",
+    "vurgu": [
+     "50 % de descuento"
+    ],
+    "tuslar": [
+     "S",
+     "T"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "007 FIRST LIGHT",
+    "alt": "STEAM AWARDS 2026"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según la publicación oficial de Steam, el juego puede nominarse a The Steam Awards 2026.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Anuncio oficial en Steam",
+    "alinti": "Puedes nominar 007 First Light en The Steam Awards 2026."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "ANUNCIO EN LA TIENDA DE STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Las nominaciones cubren cuatro categorías: Juego del año, Mejor banda sonora, Juego narrativo destacado y Estilo visual destacado.",
+   "veri": {
+    "baslik": "Cuatro categorías",
+    "maddeler": [
+     {
+      "metin": "Juego del año",
+      "tetik": "Juego"
+     },
+     {
+      "metin": "Mejor banda sonora",
+      "tetik": "banda"
+     },
+     {
+      "metin": "Juego narrativo destacado",
+      "tetik": "narrativo"
+     },
+     {
+      "metin": "Estilo visual destacado",
+      "tetik": "Estilo"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CUATRO CATEGORÍAS",
+    "alt": "NOMINACIÓN EN THE STEAM AWARDS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "La publicación indica que el descuento empezó el 23 de noviembre, pero no señala cuándo termina.",
+   "veri": {
+    "etiket": "DESCUENTO DESDE HOY",
+    "tarih": "23 de noviembre",
+    "not": "Fecha de fin no anunciada"
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "SIN FECHA DE FIN",
+    "alt": "REVISA LA TIENDA DE STEAM"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Comprarías la edición Standard o la actualización a Deluxe?",
+   "veri": {
+    "cagri": "Todos los detalles en nuestra web",
+    "alt": "Categorías y nota de descuento en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
