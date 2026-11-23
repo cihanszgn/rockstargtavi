@@ -1,0 +1,99 @@
+{
+ "id": "rob-run-anti-cheat-2026-11-23",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "ROB RUN ha bloqueado más de 200.000 cuentas y se estudian baneos de hardware.",
+   "veri": {
+    "ust_etiket": "ANTITRAMPAS",
+    "baslik": "ROB RUN bloquea 200.000 cuentas",
+    "vurgu": [
+     "200.000"
+    ],
+    "tuslar": [
+     "R",
+     "U",
+     "N"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "ROB RUN",
+    "alt": "MEDIDAS ANTITRAMPAS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Se retrasan temporalmente algunas mecánicas. Primero llegarán servidores separados con acceso más estricto. La entrada exigirá tiempo de cárcel o compras en el juego.",
+   "veri": {
+    "baslik": "Nuevas medidas",
+    "maddeler": [
+     {
+      "metin": "Algunas mecánicas se retrasan",
+      "tetik": "retrasan"
+     },
+     {
+      "metin": "Servidores separados primero",
+      "tetik": "servidores"
+     },
+     {
+      "metin": "Cárcel o compras en el juego",
+      "tetik": "compras"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NUEVAS MEDIDAS",
+    "alt": "SERVIDORES SEPARADOS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según la publicación de Steam, los servidores separados se lanzarían antes que los baneos de hardware.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Publicación del desarrollador en Steam",
+    "alinti": "Se estudian baneos de hardware y los servidores con acceso más estricto se lanzarían primero."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "PUBLICACIÓN EN STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Aceptarías pasar tiempo en la cárcel o pagar para entrar a esos servidores?",
+   "veri": {
+    "cagri": "Todos los detalles en nuestra web, Control A Game.",
+    "alt": "Reglas de acceso y fuente en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "id": "rob-run-anti-cheat-2026-11-23",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "ROB RUN'da 200.000'den fazla hesap engellendi; donanım yasağı araştırılıyor.",
+   "veri": {
+    "ust_etiket": "HİLE ÖNLEMİ",
+    "baslik": "ROB RUN'da 200.000 hesap engellendi",
+    "vurgu": [
+     "200.000"
+    ],
+    "tuslar": [
+     "R",
+     "U",
+     "N"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "ROB RUN",
+    "alt": "HİLE ÖNLEMİ"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Bazı oyun içi mekanikler geçici olarak erteleniyor. İlk olarak daha sıkı girişli ayrı sunucular gelecek. Bu sunucularda hapis süresi ya da satın alım şartı aranacak.",
+   "veri": {
+    "baslik": "Yeni önlemler",
+    "maddeler": [
+     {
+      "metin": "Bazı mekanikler ertelendi",
+      "tetik": "ertelen"
+     },
+     {
+      "metin": "Ayrı sunucular ilk gelecek",
+      "tetik": "ayrı"
+     },
+     {
+      "metin": "Hapis süresi veya satın alım şartı",
+      "tetik": "satın"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "YENİ ÖNLEMLER",
+    "alt": "AYRI SUNUCULAR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam'deki resmî duyuruya göre ayrı sunucular, donanım yasağından önce devreye girecek.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam geliştirici duyurusu",
+    "alinti": "Donanım yasakları araştırılıyor; daha sıkı erişimli ayrı sunucular önce devreye alınacak."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "STEAM GELİŞTİRİCİ DUYURUSU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Sence hangisi daha adil: hapis süresi mi, satın alım şartı mı?",
+   "veri": {
+    "cagri": "Tamamı sitemizde, Control A Game'de.",
+    "alt": "Erişim şartları ve kaynak haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

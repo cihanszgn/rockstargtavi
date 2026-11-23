@@ -1,5 +1,108 @@
 [
  {
+  "id": "rob-run-anti-cheat-2026-11-23",
+  "oyun": "ROB RUN",
+  "tarih": "2026-11-23",
+  "tur": "haber",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam",
+    "url": "https://store.steampowered.com/news/app/4262460/view/712292668328117294"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "ROB RUN'da donanım yasağı araştırılıyor, ayrı sunucu planlanıyor",
+    "ozet": "Geliştirici 200.000'den fazla hesabı engellediğini ve daha sıkı erişimli ayrı sunucuları ilk sıraya aldığını açıkladı.",
+    "metin": "ROB RUN'ın geliştiricisi, 23 Kasım 2026'da Steam'deki resmî haber duyurusunda yeni bir yasak dalgasının uygulandığını açıkladı. Ekip şimdiye kadar 200.000'den fazla hesabı engellediğini belirtiyor. Ücretsiz oynanan bir oyunda standart yasağın yetersiz kaldığını söyleyen ekip, yeni hesap açıp geri dönen hileciler için donanım yasaklarını araştırıyor.\n\nGeliştirici, hile önlemini öncelik yapmak için yaklaşan bazı oyun içi mekaniklerin geliştirilmesini geçici olarak erteliyor. Ayrıca Easy Anti-Cheat (EAC) ekibiyle ek güvenlik önlemleri görüşülüyor, kendi hile tespit araçları geliştiriliyor ve iç anti-hile ekibi büyütülüyor. İlk planlanan adım, daha sıkı erişim şartları olan ayrı sunucular. Bu sunuculara giriş için sunucuya göre minimum hapis süresi ya da belirli bir oyun içi satın alım toplamı gerekecek ve bu sunucularda eşleşmeler standart sunuculardan ayrı yapılacak.\n\nOyuncular için hedef, hile yapıp yeni hesapla geri dönen kullanıcılarla karşılaşma sıklığını azaltmak. Geliştirici bu değişikliğin yasak kaçışını ciddi biçimde azaltmasını beklediğini söylüyor. Standart sunucularda anti-hile iyileştirmeleri sürecek; büyük güvenlik gelişmeleri ayrıca duyurulacak. Bu duyuruda ayrı sunucuların tarihi yer almıyor.",
+    "etiketler": [
+     "#RobRun",
+     "#Steam",
+     "#PC",
+     "#AntiCheat"
+    ]
+   },
+   "en": {
+    "baslik": "ROB RUN explores hardware bans and stricter servers",
+    "ozet": "The developer says over 200,000 accounts are blocked, and separate servers with stricter access are planned to launch first.",
+    "metin": "ROB RUN's developer announced on Steam on November 23, 2026 that a new wave of bans has just rolled out. The team says it has blocked more than 200,000 accounts so far. Because cheaters can quickly make new accounts in a free-to-play game, the developer says a standard ban is not enough and is exploring hardware bans.\n\nTo make anti-cheat its top priority, the studio is temporarily delaying development of some upcoming in-game mechanics. It is also discussing extra security measures with the Easy Anti-Cheat (EAC) team, building its own cheat-detection tools and expanding its in-house anti-cheat team. The first planned step is separate servers with stricter access. Depending on the server, entry will require either a minimum amount of jail time or a set total of in-game purchases, and these servers will be matchmade separately from standard ones.\n\nFor players, the aim is fewer encounters with cheaters who return on new accounts, and the developer expects the change to reduce ban evasion sharply. Anti-cheat improvements will continue on all servers, and major security updates will be announced. The post does not give dates for the restricted servers.",
+    "etiketler": [
+     "#RobRun",
+     "#Steam",
+     "#PC",
+     "#AntiCheat"
+    ]
+   },
+   "es": {
+    "baslik": "ROB RUN estudia baneos de hardware y servidores más estrictos",
+    "ozet": "El desarrollador afirma haber bloqueado más de 200.000 cuentas y planea lanzar primero servidores separados con acceso más estricto.",
+    "metin": "El desarrollador de ROB RUN anunció el 23 de noviembre de 2026, en una publicación de Steam, que acaba de desplegarse una nueva oleada de baneos. El equipo afirma haber bloqueado más de 200.000 cuentas hasta ahora. Como en un juego gratuito los tramposos pueden crear cuentas nuevas con rapidez, el estudio considera insuficiente un baneo estándar y estudia baneos de hardware.\n\nPara dar prioridad a la lucha contra las trampas, el estudio retrasa temporalmente el desarrollo de algunas mecánicas del juego que estaban previstas. También negocia medidas de seguridad adicionales con el equipo de Easy Anti-Cheat (EAC), desarrolla sus propias herramientas de detección de trampas y amplía su equipo interno de anticheat. El primer paso previsto son servidores separados con requisitos de acceso más estrictos. Según el servidor, la entrada exigirá un tiempo mínimo de cárcel en el juego o una cantidad determinada de compras dentro del juego, y las partidas en esos servidores se emparejarán por separado.\n\nPara los jugadores, la meta es encontrarse con menos tramposos que regresan con cuentas nuevas, y el desarrollador espera reducir mucho la evasión de baneos. Las mejoras anticheat seguirán en todos los servidores y se anunciarán los cambios de seguridad importantes. La publicación no indica fechas para los servidores restringidos.",
+    "etiketler": [
+     "#RobRun",
+     "#Steam",
+     "#PC",
+     "#AntiCheat"
+    ]
+   },
+   "fr": {
+    "baslik": "ROB RUN étudie les bannissements matériels et des serveurs stricts",
+    "ozet": "Le développeur affirme avoir bloqué plus de 200 000 comptes et prévoit d'abord des serveurs séparés aux accès plus stricts.",
+    "metin": "Le développeur de ROB RUN a annoncé le 23 novembre 2026, sur Steam, qu'une nouvelle vague de bannissements vient d'être déployée. L'équipe indique avoir bloqué plus de 200 000 comptes jusqu'ici. Dans un jeu free-to-play, les tricheurs peuvent vite recréer un compte ; le studio juge donc un bannissement classique insuffisant et étudie les bannissements matériels.\n\nPour faire de la lutte contre la triche une priorité, le studio retarde temporairement le développement de certaines mécaniques de jeu à venir. Il discute aussi de mesures de sécurité supplémentaires avec l'équipe d'Easy Anti-Cheat (EAC), développe ses propres outils de détection de triche et renforce son équipe interne. La première étape prévue concerne des serveurs séparés aux conditions d'accès plus strictes. Selon le serveur, l'accès exigera une durée minimale de prison dans le jeu ou un total défini d'achats en jeu, et les parties sur ces serveurs seront formées séparément.\n\nPour les joueurs, l'objectif est de croiser moins de tricheurs revenus avec un nouveau compte, le développeur s'attendant à réduire nettement le contournement des bannissements. Les améliorations anti-triche continueront sur tous les serveurs, et les grandes évolutions de sécurité seront annoncées. Le message ne donne pas de date pour les serveurs restreints.",
+    "etiketler": [
+     "#RobRun",
+     "#Steam",
+     "#PC",
+     "#AntiCheat"
+    ]
+   },
+   "de": {
+    "baslik": "ROB RUN prüft Hardware-Bans und strengere Anti-Cheat-Server",
+    "ozet": "Der Entwickler meldet über 200.000 gesperrte Konten und plant zuerst getrennte Server mit strengeren Zugangsregeln.",
+    "metin": "Der Entwickler von ROB RUN hat am 23. November 2026 auf Steam angekündigt, dass gerade eine neue Welle von Sperren ausgerollt wurde. Das Team gibt an, bislang mehr als 200.000 Konten blockiert zu haben. Da Cheater in einem Free-to-play-Spiel schnell neue Konten erstellen können, reicht laut Entwickler eine normale Sperre nicht aus; deshalb werden Hardware-Bans geprüft.\n\nDamit die Bekämpfung von Cheats oberste Priorität erhält, verschiebt das Studio die Entwicklung einiger geplanter Spielmechaniken vorübergehend. Außerdem werden mit dem Easy Anti-Cheat (EAC)-Team zusätzliche Sicherheitsmaßnahmen besprochen, eigene Erkennungswerkzeuge entwickelt und das interne Anti-Cheat-Team vergrößert. Als erster Schritt sind getrennte Server mit strengeren Zugangsregeln geplant. Je nach Server wird entweder eine Mindestzeit im Gefängnis im Spiel oder eine bestimmte Summe an Ingame-Käufen nötig sein; Partien auf diesen Servern werden getrennt von Standardservern vermittelt.\n\nFür Spielerinnen und Spieler bedeutet das vor allem weniger Begegnungen mit Cheatern, die mit neuen Konten zurückkehren. Laut Entwickler soll die Umgehung von Sperren deutlich sinken. Anti-Cheat-Verbesserungen auf allen Servern laufen weiter, größere Sicherheitsneuerungen werden angekündigt. Für die eingeschränkten Server nennt die Ankündigung kein Datum.",
+    "etiketler": [
+     "#RobRun",
+     "#Steam",
+     "#PC",
+     "#AntiCheat"
+    ]
+   },
+   "nl": {
+    "baslik": "ROB RUN onderzoekt hardwarebans en strengere anti-cheatservers",
+    "ozet": "De ontwikkelaar meldt meer dan 200.000 geblokkeerde accounts en plant eerst aparte servers met strengere toegangseisen.",
+    "metin": "De ontwikkelaar van ROB RUN heeft op 23 november 2026 op Steam aangekondigd dat er net een nieuwe golf van bans is uitgerold. Het team meldt tot nu toe meer dan 200.000 accounts te hebben geblokkeerd. Omdat valsspelers in een free-to-play-game snel nieuwe accounts kunnen maken, vindt de ontwikkelaar een gewone ban niet genoeg en onderzoekt het team hardwarebans.\n\nOm het bestrijden van cheats de hoogste prioriteit te geven, stelt het studio de ontwikkeling van enkele geplande spelmechanica tijdelijk uit. Daarnaast wordt overlegd over extra beveiligingsmaatregelen met het team van Easy Anti-Cheat (EAC), worden eigen detectietools ontwikkeld en wordt het interne anti-cheatteam uitgebreid. Als eerste stap zijn aparte servers met strengere toegangseisen gepland. Afhankelijk van de server is toegang nodig via een minimale hoeveelheid gevangenistijd in het spel of een bepaald totaalbedrag aan in-game-aankopen, en partijen op deze servers worden apart gematcht van standaardservers.\n\nVoor spelers betekent dit vooral minder ontmoetingen met valsspelers die terugkeren met een nieuw account. De ontwikkelaar verwacht dat omzeiling van bans sterk afneemt. Anti-cheatverbeteringen op alle servers gaan door en grote beveiligingsupdates worden aangekondigd. Voor de beperkte servers geeft de aankondiging geen datum.",
+    "etiketler": [
+     "#RobRun",
+     "#Steam",
+     "#PC",
+     "#AntiCheat"
+    ]
+   },
+   "zh": {
+    "baslik": "ROB RUN研究硬件封禁并推出更严格的独立服务器",
+    "ozet": "开发商称已封禁超过20万个账号，并计划率先推出准入规则更严格的独立服务器，以减少封禁规避。",
+    "metin": "ROB RUN开发商于2026年11月23日在Steam发布公告称，新一轮封禁已经推出。团队表示，目前已封禁超过20万个账号。由于免费游戏中的作弊者可以很快创建新账号，标准封禁不足以应对，开发商正在研究硬件封禁。\n\n为了把反作弊放在首要位置，工作室暂时推迟了部分即将推出的游戏内机制的开发。团队还在与Easy Anti-Cheat（EAC）团队讨论额外安全措施，开发自有作弊检测工具，并扩大内部反作弊团队。首个计划步骤是推出准入条件更严格的独立服务器。根据服务器不同，进入时需要最低游戏内监禁时间或一定额度的游戏内消费，这些服务器的匹配也将与标准服务器分开。\n\n对玩家而言，目标是减少遇到以新账号回归的作弊者的次数。开发商预计这一措施将大幅减少封禁规避。所有服务器的反作弊改进仍将继续，重大安全更新也会另行公布。本公告未给出限制服务器的具体日期。",
+    "etiketler": [
+     "#RobRun",
+     "#Steam",
+     "#PC",
+     "#AntiCheat"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "rob-run-anti-cheat-donanim-yasagi-ayri-sunucu-2026-11-23",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/4262460/view/712292668328117294",
+   "teyit_zamani": "2026-11-23T12:10:02+00:00",
+   "oyuncuya_fayda": "Oyuncular, yeni yasak ve ayrı sunucu şartlarını öğrenip hesaplarına göre erişimi planlayabilir.",
+   "hype": 4,
+   "eklenme": "2026-11-23T15:17:42.858202+03:00"
+  }
+ },
+ {
   "id": "pubg-college-royale-fall-2026-finals-2026-11-22",
   "oyun": "PUBG: BATTLEGROUNDS",
   "tarih": "2026-11-22",

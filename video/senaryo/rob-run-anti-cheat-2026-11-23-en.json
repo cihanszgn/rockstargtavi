@@ -1,0 +1,99 @@
+{
+ "id": "rob-run-anti-cheat-2026-11-23",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "ROB RUN has blocked over 200,000 accounts, and hardware bans are being explored.",
+   "veri": {
+    "ust_etiket": "ANTI-CHEAT",
+    "baslik": "ROB RUN blocks 200,000 accounts",
+    "vurgu": [
+     "200,000"
+    ],
+    "tuslar": [
+     "R",
+     "U",
+     "N"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "ROB RUN",
+    "alt": "ANTI-CHEAT UPDATE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Some upcoming mechanics are temporarily delayed. First come separate servers with stricter access. Entry will need minimum jail time or a set amount of in-game purchases.",
+   "veri": {
+    "baslik": "New measures",
+    "maddeler": [
+     {
+      "metin": "Some mechanics delayed",
+      "tetik": "delayed"
+     },
+     {
+      "metin": "Separate stricter servers first",
+      "tetik": "separate"
+     },
+     {
+      "metin": "Jail time or in-game purchases",
+      "tetik": "purchases"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NEW MEASURES",
+    "alt": "SEPARATE SERVERS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to the developer's Steam post, separate stricter servers will launch before hardware bans.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam developer announcement",
+    "alinti": "Hardware bans are being explored; separate servers with stricter access are planned to roll out first."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "STEAM DEVELOPER POST"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Would you rather serve jail time or spend money to enter stricter servers?",
+   "veri": {
+    "cagri": "Read the full story on our site, Control A Game.",
+    "alt": "Access rules and sources are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

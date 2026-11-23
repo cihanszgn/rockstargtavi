@@ -1,0 +1,99 @@
+{
+ "id": "rob-run-anti-cheat-2026-11-23",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "ROB RUN a bloqué plus de 200 000 comptes et étudie les bannissements matériels.",
+   "veri": {
+    "ust_etiket": "ANTI-TRICHE",
+    "baslik": "ROB RUN bloque 200 000 comptes",
+    "vurgu": [
+     "200 000"
+    ],
+    "tuslar": [
+     "R",
+     "U",
+     "N"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "ROB RUN",
+    "alt": "MESURES ANTI-TRICHE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Certaines mécaniques sont retardées. Des serveurs séparés, aux accès plus stricts, arriveront d'abord. L'entrée exigera un temps de prison minimal ou des achats en jeu.",
+   "veri": {
+    "baslik": "Nouvelles mesures",
+    "maddeler": [
+     {
+      "metin": "Mécaniques retardées",
+      "tetik": "retardées"
+     },
+     {
+      "metin": "Serveurs séparés en premier",
+      "tetik": "serveurs"
+     },
+     {
+      "metin": "Prison ou achats en jeu",
+      "tetik": "achats"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NOUVELLES MESURES",
+    "alt": "SERVEURS SÉPARÉS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "D'après l'annonce sur Steam, les serveurs séparés seraient lancés avant les bannissements matériels.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Annonce du développeur sur Steam",
+    "alinti": "Les bannissements matériels sont à l'étude, et les serveurs plus stricts seraient lancés en premier."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "ANNONCE SUR STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Préférez-vous le temps de prison ou les achats pour entrer sur les serveurs stricts ?",
+   "veri": {
+    "cagri": "Tout est sur notre site, Control A Game.",
+    "alt": "Règles d'accès et source dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
