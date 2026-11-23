@@ -1,0 +1,115 @@
+{
+ "id": "aion-2-season-2-roadmap-2026-11-23",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "La Saison 2 d'AION 2 commence le 16 décembre, et la nouvelle classe Brawler arrive bientôt.",
+   "veri": {
+    "ust_etiket": "SAISON 2 FEUILLE DE ROUTE",
+    "baslik": "AION 2 : Saison 2 dès le 16 décembre",
+    "vurgu": [
+     "16 décembre"
+    ],
+    "tuslar": [
+     "S",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "SAISON 2 FEUILLE DE ROUTE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "D'après l'annonce officielle sur Steam, le contenu et le calendrier de la feuille de route peuvent changer.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Annonce du développeur sur Steam",
+    "alinti": "Le contenu et le calendrier de la feuille de route peuvent évoluer."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "ANNONCE STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "La nouvelle classe Brawler manie le Gauntlet, son arme signature, pour des attaques au corps à corps rapides et agressives.",
+   "veri": {
+    "baslik": "Nouvelle classe : Brawler",
+    "maddeler": [
+     {
+      "metin": "Classe Brawler bientôt disponible",
+      "tetik": "Brawler"
+     },
+     {
+      "metin": "Arme signature : le Gauntlet",
+      "tetik": "Gauntlet"
+     },
+     {
+      "metin": "Attaques rapides au corps à corps",
+      "tetik": "rapides"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NOUVELLE CLASSE",
+    "alt": "BRAWLER ET GAUNTLET"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "La Saison 2 commence le 16 décembre, et le logement arrive en janvier 2027 sur votre propre île.",
+   "veri": {
+    "etiket": "Début de la Saison 2",
+    "tarih": "16 décembre",
+    "not": "Logement disponible en janvier 2027."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "SAISON 2",
+    "alt": "DÈS LE 16 DÉCEMBRE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Toute la feuille de route est sur notre site, Control A Game. Testerez-vous la classe Brawler dès le premier jour ?",
+   "veri": {
+    "cagri": "Toute la feuille de route sur notre site",
+    "alt": "Sources et dates dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

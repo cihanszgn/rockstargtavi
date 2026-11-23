@@ -32,7 +32,7 @@
 "2026-11-19"
 ],
 "de/index.html": [
-"baa7fec41436",
+"cad21f341e78",
 "2026-11-24"
 ],
 "de/kostenlose-spiele.html": [
@@ -120,7 +120,7 @@
 "2026-11-16"
 ],
 "de/spiele-news.html": [
-"9949b80d9298",
+"a9aac364d8a6",
 "2026-11-24"
 ],
 "de/spiele/apex-legends.html": [
@@ -140,8 +140,8 @@
 "2026-11-16"
 ],
 "de/spiele/counter-strike-2.html": [
-"3f65aa74848e",
-"2026-11-19"
+"2ea42d06998c",
+"2026-11-24"
 ],
 "de/spiele/delta-force.html": [
 "ae73665382d5",
@@ -284,8 +284,8 @@
 "2026-11-22"
 ],
 "de/thema/counterstrike2.html": [
-"628f0df96a7e",
-"2026-11-23"
+"60407e6c76f9",
+"2026-11-24"
 ],
 "de/thema/gtavi.html": [
 "b2e5b0ae47b7",
@@ -296,7 +296,7 @@
 "2026-11-24"
 ],
 "de/thema/pc.html": [
-"b1d6b3f8f4d9",
+"f87ce2a4f2bf",
 "2026-11-24"
 ],
 "de/thema/playstation.html": [
@@ -316,7 +316,7 @@
 "2026-11-24"
 ],
 "de/thema/steam.html": [
-"980624d5de44",
+"698da3ae27b0",
 "2026-11-24"
 ],
 "de/thema/switch2.html": [
@@ -328,7 +328,7 @@
 "2026-11-24"
 ],
 "de/thema/tur-guncelleme.html": [
-"3f07bf2cbcfe",
+"98c3c9640864",
 "2026-11-24"
 ],
 "de/thema/tur-haber.html": [
@@ -384,7 +384,7 @@
 "2026-11-24"
 ],
 "en/game-news.html": [
-"10bfd32312a6",
+"25e4cc75b09c",
 "2026-11-24"
 ],
 "en/game/apex-legends.html": [
@@ -404,8 +404,8 @@
 "2026-11-16"
 ],
 "en/game/counter-strike-2.html": [
-"89be2719abca",
-"2026-11-19"
+"333b8a776737",
+"2026-11-24"
 ],
 "en/game/delta-force.html": [
 "5c4e701c051b",
@@ -620,7 +620,7 @@
 "2026-11-22"
 ],
 "en/index.html": [
-"48ed781b6f19",
+"a000e3e464f4",
 "2026-11-24"
 ],
 "en/languages.html": [
@@ -652,8 +652,8 @@
 "2026-11-22"
 ],
 "en/tag/counterstrike2.html": [
-"ff2c32897853",
-"2026-11-23"
+"9baa2e016cb8",
+"2026-11-24"
 ],
 "en/tag/gtavi.html": [
 "8ae5bc9f3f51",
@@ -664,7 +664,7 @@
 "2026-11-24"
 ],
 "en/tag/pc.html": [
-"fa2f0ee7238b",
+"7b061628d6d2",
 "2026-11-24"
 ],
 "en/tag/playstation.html": [
@@ -684,7 +684,7 @@
 "2026-11-24"
 ],
 "en/tag/steam.html": [
-"8b2f7a8649b9",
+"00883fbf19b5",
 "2026-11-24"
 ],
 "en/tag/switch2.html": [
@@ -696,7 +696,7 @@
 "2026-11-24"
 ],
 "en/tag/tur-guncelleme.html": [
-"f2cc1cb50d5c",
+"5c9b92d32bfd",
 "2026-11-24"
 ],
 "en/tag/tur-haber.html": [
@@ -816,7 +816,7 @@
 "2026-11-09"
 ],
 "es/index.html": [
-"236880d378b6",
+"652fae0ba492",
 "2026-11-24"
 ],
 "es/juego/apex-legends.html": [
@@ -836,8 +836,8 @@
 "2026-11-16"
 ],
 "es/juego/counter-strike-2.html": [
-"004b9cce1f6e",
-"2026-11-19"
+"4674d6bc0633",
+"2026-11-24"
 ],
 "es/juego/delta-force.html": [
 "6d669ce88431",
@@ -984,7 +984,7 @@
 "2026-11-17"
 ],
 "es/noticias-juegos.html": [
-"281c083842f4",
+"c6212ea5c089",
 "2026-11-24"
 ],
 "es/ofertas.html": [
@@ -1008,8 +1008,8 @@
 "2026-11-22"
 ],
 "es/tema/counterstrike2.html": [
-"b39544337dec",
-"2026-11-23"
+"f560984a522c",
+"2026-11-24"
 ],
 "es/tema/gtavi.html": [
 "ab1096e06c38",
@@ -1020,7 +1020,7 @@
 "2026-11-24"
 ],
 "es/tema/pc.html": [
-"b4bd75daeae9",
+"70f81a58960c",
 "2026-11-24"
 ],
 "es/tema/playstation.html": [
@@ -1040,7 +1040,7 @@
 "2026-11-24"
 ],
 "es/tema/steam.html": [
-"efabcb7a0db4",
+"4a1c0184afa5",
 "2026-11-24"
 ],
 "es/tema/switch2.html": [
@@ -1052,7 +1052,7 @@
 "2026-11-24"
 ],
 "es/tema/tur-guncelleme.html": [
-"582490836875",
+"bc3d6488f0e6",
 "2026-11-24"
 ],
 "es/tema/tur-haber.html": [
@@ -1088,8 +1088,8 @@
 "2026-11-22"
 ],
 "etiket/counterstrike2.html": [
-"c9c613e91784",
-"2026-11-23"
+"34ed785337ab",
+"2026-11-24"
 ],
 "etiket/gtavi.html": [
 "d62b1e771e0e",
@@ -1100,7 +1100,7 @@
 "2026-11-24"
 ],
 "etiket/pc.html": [
-"f0ad7ef525e3",
+"5b359d4b5ba9",
 "2026-11-24"
 ],
 "etiket/playstation.html": [
@@ -1120,7 +1120,7 @@
 "2026-11-24"
 ],
 "etiket/steam.html": [
-"43be0a059b1a",
+"6cd0bec45766",
 "2026-11-24"
 ],
 "etiket/switch2.html": [
@@ -1132,7 +1132,7 @@
 "2026-11-24"
 ],
 "etiket/tur-guncelleme.html": [
-"2524d4366aac",
+"735546efdddb",
 "2026-11-24"
 ],
 "etiket/tur-haber.html": [
@@ -1168,7 +1168,7 @@
 "2026-11-15"
 ],
 "fr/actus-jeux.html": [
-"7b31304e7d9f",
+"78fdc3b816c1",
 "2026-11-24"
 ],
 "fr/calendrier-sorties.html": [
@@ -1256,7 +1256,7 @@
 "2026-11-22"
 ],
 "fr/index.html": [
-"ce9b7270510c",
+"b6d2caf86459",
 "2026-11-24"
 ],
 "fr/jeu/apex-legends.html": [
@@ -1276,8 +1276,8 @@
 "2026-11-16"
 ],
 "fr/jeu/counter-strike-2.html": [
-"3ee3a3c92643",
-"2026-11-19"
+"64233147a2dc",
+"2026-11-24"
 ],
 "fr/jeu/delta-force.html": [
 "8f94c5d65bfe",
@@ -1444,8 +1444,8 @@
 "2026-11-22"
 ],
 "fr/sujet/counterstrike2.html": [
-"c02f1cccaa3d",
-"2026-11-23"
+"074a0b6b757b",
+"2026-11-24"
 ],
 "fr/sujet/gtavi.html": [
 "bb7ae5e43270",
@@ -1456,7 +1456,7 @@
 "2026-11-24"
 ],
 "fr/sujet/pc.html": [
-"878d390fbfd4",
+"e7f89e544f05",
 "2026-11-24"
 ],
 "fr/sujet/playstation.html": [
@@ -1476,7 +1476,7 @@
 "2026-11-24"
 ],
 "fr/sujet/steam.html": [
-"301f8810c831",
+"9986202d09e9",
 "2026-11-24"
 ],
 "fr/sujet/switch2.html": [
@@ -1488,7 +1488,7 @@
 "2026-11-24"
 ],
 "fr/sujet/tur-guncelleme.html": [
-"ceb1d10197ca",
+"171582570148",
 "2026-11-24"
 ],
 "fr/sujet/tur-haber.html": [
@@ -1556,7 +1556,7 @@
 "2026-11-15"
 ],
 "index.html": [
-"08cd46057361",
+"24eccc693e48",
 "2026-11-24"
 ],
 "indirimler.html": [
@@ -1576,7 +1576,7 @@
 "2026-11-16"
 ],
 "nl/gamenieuws.html": [
-"b700dd76ed81",
+"823b37d7d2f9",
 "2026-11-24"
 ],
 "nl/games/apex-legends.html": [
@@ -1596,8 +1596,8 @@
 "2026-11-16"
 ],
 "nl/games/counter-strike-2.html": [
-"31d2a07052ef",
-"2026-11-19"
+"67e641711493",
+"2026-11-24"
 ],
 "nl/games/delta-force.html": [
 "55f11723636d",
@@ -1816,7 +1816,7 @@
 "2026-11-19"
 ],
 "nl/index.html": [
-"c66a9b775c8a",
+"402588d6dcaa",
 "2026-11-24"
 ],
 "nl/nieuws.html": [
@@ -1828,8 +1828,8 @@
 "2026-11-22"
 ],
 "nl/onderwerp/counterstrike2.html": [
-"5d5d5c750657",
-"2026-11-23"
+"f1896b24f48b",
+"2026-11-24"
 ],
 "nl/onderwerp/gtavi.html": [
 "4fb2bdd03348",
@@ -1840,7 +1840,7 @@
 "2026-11-24"
 ],
 "nl/onderwerp/pc.html": [
-"2a2d1fced579",
+"b813c96e71cc",
 "2026-11-24"
 ],
 "nl/onderwerp/playstation.html": [
@@ -1860,7 +1860,7 @@
 "2026-11-24"
 ],
 "nl/onderwerp/steam.html": [
-"8a65d7cf5669",
+"83297862b0bd",
 "2026-11-24"
 ],
 "nl/onderwerp/switch2.html": [
@@ -1872,7 +1872,7 @@
 "2026-11-24"
 ],
 "nl/onderwerp/tur-guncelleme.html": [
-"46b099fce8b3",
+"11b2869a2530",
 "2026-11-24"
 ],
 "nl/onderwerp/tur-haber.html": [
@@ -1924,7 +1924,7 @@
 "2026-11-16"
 ],
 "oyun-haberleri.html": [
-"872e670bd4d1",
+"4cf1d600907e",
 "2026-11-24"
 ],
 "oyun/apex-legends.html": [
@@ -1944,8 +1944,8 @@
 "2026-11-16"
 ],
 "oyun/counter-strike-2.html": [
-"d62ae6bbb857",
-"2026-11-19"
+"f5f689fec758",
+"2026-11-24"
 ],
 "oyun/delta-force.html": [
 "58143b12145e",
@@ -2268,8 +2268,8 @@
 "2026-11-22"
 ],
 "zh/huati/counterstrike2.html": [
-"ca53ad4c305b",
-"2026-11-23"
+"1bbacff6adf3",
+"2026-11-24"
 ],
 "zh/huati/gtavi.html": [
 "9ec9f2086bed",
@@ -2280,7 +2280,7 @@
 "2026-11-24"
 ],
 "zh/huati/pc.html": [
-"f424ce28f6bd",
+"9a800a07ce20",
 "2026-11-24"
 ],
 "zh/huati/playstation.html": [
@@ -2300,7 +2300,7 @@
 "2026-11-24"
 ],
 "zh/huati/steam.html": [
-"71c6282ccabb",
+"d4dc74035b61",
 "2026-11-24"
 ],
 "zh/huati/switch2.html": [
@@ -2312,7 +2312,7 @@
 "2026-11-24"
 ],
 "zh/huati/tur-guncelleme.html": [
-"6a2dd6d06904",
+"056e599d4a4e",
 "2026-11-24"
 ],
 "zh/huati/tur-haber.html": [
@@ -2344,7 +2344,7 @@
 "2026-11-24"
 ],
 "zh/index.html": [
-"db0f1021edcc",
+"af3997621e0b",
 "2026-11-24"
 ],
 "zh/laiyuan.html": [
@@ -2368,7 +2368,7 @@
 "2026-11-23"
 ],
 "zh/youxi-xinwen.html": [
-"e471fe1acad6",
+"de22fb699acf",
 "2026-11-24"
 ],
 "zh/youxi/apex-legends.html": [
@@ -2388,8 +2388,8 @@
 "2026-11-16"
 ],
 "zh/youxi/counter-strike-2.html": [
-"1af18b54f114",
-"2026-11-19"
+"1dd422ef0378",
+"2026-11-24"
 ],
 "zh/youxi/delta-force.html": [
 "dd4136921bf8",

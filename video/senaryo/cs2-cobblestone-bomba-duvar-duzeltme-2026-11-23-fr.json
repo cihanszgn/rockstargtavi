@@ -1,0 +1,107 @@
+{
+ "id": "cs2-cobblestone-bomba-duvar-duzeltme-2026-11-23",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Valve corrige des bugs de bombe et de murs sur Cobblestone dans Counter-Strike 2.",
+   "veri": {
+    "ust_etiket": "MISE À JOUR CS2",
+    "baslik": "Cobblestone corrigé",
+    "vurgu": [
+     "Cobblestone"
+    ],
+    "tuslar": [
+     "C",
+     "S",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "COUNTER-STRIKE 2",
+    "alt": "CARTE COBBLESTONE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "À Princess tower, la bombe ne peut plus être lancée hors de portée. Sur le site B, certaines grenades ne tombent plus à travers la carte.",
+   "veri": {
+    "baslik": "Bombe et grenades",
+    "maddeler": [
+     {
+      "metin": "Bombe hors de portée bloquée",
+      "tetik": "Princess"
+     },
+     {
+      "metin": "Grenades du site B corrigées",
+      "tetik": "B"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "BOMBE ET GRENADES",
+    "alt": "PRINCESS TOWER ET B"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Des positions de wall bang sont corrigées et des trous de la carte bouchés. Le rechargement silencieux à la troisième personne retrouve la bonne vitesse.",
+   "veri": {
+    "baslik": "Corrections de carte",
+    "maddeler": [
+     {
+      "metin": "Positions de wall bang corrigées",
+      "tetik": "wall"
+     },
+     {
+      "metin": "Trous de la carte bouchés",
+      "tetik": "trous"
+     },
+     {
+      "metin": "Rechargement silencieux corrigé",
+      "tetik": "silencieux"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CORRECTIONS DE CARTE",
+    "alt": "WALL BANG ET TROUS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Quelle correction de Cobblestone vous attendiez-vous le plus ? Tous les changements sont sur notre site, Control A Game.",
+   "veri": {
+    "cagri": "Tous les changements sur le site",
+    "alt": "Sources et détails sont dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

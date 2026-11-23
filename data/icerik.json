@@ -1,5 +1,211 @@
 [
  {
+  "id": "cs2-cobblestone-bomba-duvar-duzeltme-2026-11-23",
+  "oyun": "Counter-Strike 2",
+  "tarih": "2026-11-23",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Valve Counter-Strike 2 Steam duyurusu",
+    "url": "https://steamcommunity.com/games/CSGO/announcements/detail/694278269818635489"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "CS2'de Cobblestone'daki bomba ve duvar hataları düzeltildi",
+    "ozet": "Valve'ın Steam duyurusuna göre güncelleme, haritadaki erişilemez bomba noktalarını, hatalı boost alanlarını ve dünyadaki boşlukları kapatıyor.",
+    "metin": "Valve, Counter-Strike 2 için 23 Kasım 2026'da Steam'de yayımladığı duyuruyla Cobblestone haritasına yönelik bir dizi düzeltme getirdi. Güncelleme, haritadaki çeşitli oyun alanı hatalarını gideriyor.\n\nPrincess tower bölgesinde bomba, ulaşılamaz bir noktaya atılamayacak hale geldi. B bölgesinde ise bazı el bombalarının dünyanın içinden düşmesine neden olan hata giderildi. Valve ayrıca bazı hatalı duvar arkası vuruş konumlarını, kötü boost noktalarını ve yürünebilir çıkıntıları düzeltti; haritadaki çeşitli boşlukları da kapattı. Amaç, oyuncu hareketinin haritanın tamamında daha akıcı olması.\n\nOyun genelinde ise üçüncü şahıs görünümdeki sessiz şarjör değiştirme animasyonları doğru hızda oynatılıyor ve çeşitli kararlılık iyileştirmeleri yapıldı. Cobblestone oynayan oyuncular için en somut değişiklik, bomba atma, el bombası ve boost ile ilgili bilinen hatalı noktaların düzeltilmesi.",
+    "etiketler": [
+     "#CS2",
+     "#Valve",
+     "#PC",
+     "#Cobblestone"
+    ]
+   },
+   "en": {
+    "baslik": "Counter-Strike 2 fixes Cobblestone bomb and wall bugs",
+    "ozet": "Valve's Steam announcement says the update fixes unreachable bomb spots, bad boosts and grenades falling through the map.",
+    "metin": "Valve released a set of Cobblestone map fixes for Counter-Strike 2 on November 23, 2026, according to its official Steam announcement. The update targets several gameplay problems on the map.\n\nAt Princess Tower, a bomb can no longer be thrown to a spot players cannot reach. On B, a bug that let grenades fall through the world has been fixed. Valve also corrected some bad wall-bang positions, poor boosts and walkable ledges, and closed various gaps in the level to make player movement smoother.\n\nThe patch also makes third-person silent reload animations play at the correct speed and includes various stability improvements. For Cobblestone players, the clearest change is that several known broken spots in the map's bomb, grenade and boost areas have been fixed.",
+    "etiketler": [
+     "#CS2",
+     "#Valve",
+     "#PC",
+     "#Cobblestone"
+    ]
+   },
+   "fr": {
+    "baslik": "CS2 : bombe et murs corrigés sur Cobblestone",
+    "ozet": "Selon Valve, le patch corrige des lancers de bombe hors de portée, des boosts défectueux et des grenades tombant de la carte.",
+    "metin": "Valve a publié le 23 novembre 2026 une série de corrections pour la carte Cobblestone de Counter-Strike 2, selon son annonce officielle sur Steam. La mise à jour s'attaque à plusieurs problèmes de jeu de la carte.\n\nSur Princess tower, la bombe ne peut plus être lancée vers un endroit hors de portée. Sur le site B, les grenades qui pouvaient traverser le monde ont été corrigées. Valve a aussi ajusté certaines positions de wall bang, des boosts mal conçus et des rebords praticables, et comblé plusieurs trous de la carte pour un déplacement plus fluide.\n\nLe patch corrige également l'animation de rechargement silencieux à la troisième personne, qui se joue désormais à la bonne vitesse, et apporte diverses améliorations de stabilité. Pour les joueurs de Cobblestone, le changement le plus concret est la correction de plusieurs zones défectueuses liées aux bombes, grenades et boosts.",
+    "etiketler": [
+     "#CS2",
+     "#Valve",
+     "#PC",
+     "#Cobblestone"
+    ]
+   },
+   "es": {
+    "baslik": "Counter-Strike 2 corrige fallos de bombas y muros en Cobblestone",
+    "ozet": "Según el anuncio oficial de Valve en Steam, la actualización corrige zonas inalcanzables para la bomba, boosts defectuosos y granadas que caían del mapa.",
+    "metin": "Valve publicó el 23 de noviembre de 2026 una serie de correcciones para el mapa Cobblestone de Counter-Strike 2, según su anuncio oficial en Steam. La actualización afecta a varios problemas de juego del mapa.\n\nEn Princess tower, la bomba ya no puede lanzarse a un punto inalcanzable para los jugadores. En la zona B, se corrigió un fallo que permitía que las granadas cayeran fuera del mundo. Valve también ajustó algunas posiciones de wall bang, boosts defectuosos y salientes transitables, y cerró varios huecos del mapa para que el movimiento sea más fluido.\n\nEl parche corrige además la animación de recarga silenciosa en tercera persona, que ahora se reproduce a la velocidad correcta, y añade mejoras generales de estabilidad. Para quienes juegan en Cobblestone, el cambio más claro es que varios puntos problemáticos de bombas, granadas y boosts quedan solucionados.",
+    "etiketler": [
+     "#CS2",
+     "#Valve",
+     "#PC",
+     "#Cobblestone"
+    ]
+   },
+   "de": {
+    "baslik": "CS2: Cobblestone-Fehler bei Bombe und Wänden behoben",
+    "ozet": "Laut Valves Steam-Ankündigung behebt das Update unerreichbare Bombenwürfe, fehlerhafte Boosts und Granaten, die durch die Karte fielen.",
+    "metin": "Valve hat am 23. November 2026 laut seiner offiziellen Ankündigung auf Steam eine Reihe von Korrekturen für die Karte Cobblestone in Counter-Strike 2 veröffentlicht. Das Update behebt mehrere Spielprobleme auf der Karte.\n\nIn Princess Tower lässt sich die Bombe nicht mehr an eine für Spieler unerreichbare Stelle werfen. Auf B wurde ein Fehler behoben, durch den Granaten durch die Welt fallen konnten. Außerdem hat Valve einige ungünstige Wall-Bang-Positionen, schlechte Boosts und begehbare Vorsprünge korrigiert sowie verschiedene Lücken in der Welt geschlossen, damit sich Spieler flüssiger bewegen.\n\nAuch die Animation des leisen Nachladens in der Third-Person-Ansicht läuft nun mit der richtigen Geschwindigkeit, dazu kommen allgemeine Stabilitätsverbesserungen. Für Spieler von Cobblestone ist die deutlichste Änderung, dass mehrere bekannte fehlerhafte Stellen bei Bomben, Granaten und Boosts behoben wurden.",
+    "etiketler": [
+     "#CS2",
+     "#Valve",
+     "#PC",
+     "#Cobblestone"
+    ]
+   },
+   "nl": {
+    "baslik": "CS2: Cobblestone-bugs bij bom en muren verholpen",
+    "ozet": "Volgens Valves officiële Steam-aankondiging verhelpt de update bomworpen buiten bereik, foute boosts en granaten die door de map vielen.",
+    "metin": "Valve heeft op 23 november 2026 volgens de officiële aankondiging op Steam een reeks reparaties voor de map Cobblestone in Counter-Strike 2 uitgebracht. De update lost meerdere speelproblemen op de map op.\n\nOp Princess Tower kan de bom niet meer naar een plek buiten bereik van spelers worden gegooid. Op B is een fout verholpen waardoor granaten door de wereld konden vallen. Valve heeft ook enkele slechte wall bang-posities, foute boosts en begaanbare richels gecorrigeerd en diverse gaten in de map gedicht, zodat de bewegingen soepeler verlopen.\n\nDaarnaast speelt de stille herlaadanimatie in de derdepersoonsweergave nu af met de juiste snelheid, en zijn er algemene stabiliteitsverbeteringen doorgevoerd. Voor spelers op Cobblestone is de duidelijkste verandering dat meerdere bekende foutieve plekken rond bommen, granaten en boosts zijn opgelost.",
+    "etiketler": [
+     "#CS2",
+     "#Valve",
+     "#PC",
+     "#Cobblestone"
+    ]
+   },
+   "zh": {
+    "baslik": "Counter-Strike 2 修复 Cobblestone 炸弹与穿墙点位问题",
+    "ozet": "据 Valve 官方 Steam 公告，本次更新修复了炸弹投掷到够不到位置、问题助跑点和手雷穿地等问题。",
+    "metin": "Valve 于 2026年11月23日 在 Steam 发布官方公告，为 Counter-Strike 2 的 Cobblestone 地图推出一系列修复。根据公告，此次更新针对地图中多处游戏体验问题进行调整。\n\n在 Princess tower 区域，炸弹不能再被投掷到玩家无法到达的位置。在 B 区，手雷不再会穿过地图世界掉落。Valve 还调整了部分不合理的穿墙射击位置、问题助跑点和可行走的平台边缘，并填补了地图中的多处缝隙，让玩家移动更加流畅。\n\n此外，第三人称视角下的无声换弹动画现在以正确速度播放，并包含多项稳定性改进。对 Cobblestone 玩家而言，最直接的变化是地图中多个已知的炸弹、手雷和助跑问题点已被修复。",
+    "etiketler": [
+     "#CS2",
+     "#Valve",
+     "#PC",
+     "#Cobblestone"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "cs2-cobblestone-bomba-duvar-duzeltme-2026-11-23",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://steamcommunity.com/games/CSGO/announcements/detail/694278269818635489",
+   "teyit_zamani": "2026-11-23T23:10:03+00:00",
+   "oyuncuya_fayda": "Cobblestone oynayan oyuncular, bomba ve duvar hatalarının giderildiğini bilerek maçlarına bu güncellemeden sonra girebilir.",
+   "hype": 5,
+   "eklenme": "2026-11-24T02:16:12.815208+03:00"
+  }
+ },
+ {
+  "id": "aion-2-season-2-roadmap-2026-11-23",
+  "oyun": "AION 2",
+  "tarih": "2026-11-23",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam resmî duyuru",
+    "url": "https://store.steampowered.com/news/app/3393110/view/675137971401262388"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "AION 2'nin 2. sezonu 16 Aralık'ta başlıyor",
+    "ozet": "Yol haritasında Brawler sınıfı, Ocak 2027'de gelecek konut özelliği ve sezon takvimi var; bazı tarihler değişebilir.",
+    "metin": "AION 2'nin 2. sezon yol haritası Steam'deki resmî duyuruyla açıklandı. Sezon 2, 16 Aralık 2026 Çarşamba günü başlayacak.\n\nYol haritasına göre yeni Brawler sınıfı yakında gelecek. Bu sınıf, imza silahı Gauntlet ile hızlı ve agresif yakın dövüş saldırıları yapacak. Brawler'ın yanı sıra konut (housing) özelliği Ocak 2027'de geliyor. Oyuncular Atreia dünyasında kendilerine ait özel bir adada mobilya ve dekorasyon parçalarını serbestçe yerleştirip kişisel bir alan oluşturabilecek.\n\nGeliştirici, global sürümde bazı içeriklerin yayın zamanının veya sırasının oyuncu deneyimine ve hizmet koşullarına göre değişebileceğini belirtti. Bu nedenle yol haritasındaki içerik ve takvim kesin taahhüt değil. Duyuruda Brawler sınıfının çıkış tarihi de yer almıyor.\n\nOyuncular için pratik sonuç şu: Yeni sezonu 16 Aralık için takvime ekleyip Brawler ve konut tarihlerini geçici kabul etmek yeterli. Güncellemeleri AION 2'nin Steam haber sayfasından takip edebilirsiniz.",
+    "etiketler": [
+     "#AION2",
+     "#Steam",
+     "#PC",
+     "#Roadmap"
+    ]
+   },
+   "en": {
+    "baslik": "AION 2 Season 2 starts December 16 with new Brawler class",
+    "ozet": "The roadmap covers the Brawler class and housing arriving in January 2027, though some timing may change.",
+    "metin": "AION 2's Season 2 roadmap was revealed in an official Steam announcement. Season 2 begins on Wednesday, December 16, 2026.\n\nThe roadmap introduces a new Brawler class, which is coming soon. Brawlers wield the Gauntlet, a signature weapon built for fast, aggressive melee attacks. Housing follows in January 2027, letting players create a personal space on their own private island and freely arrange furniture and decorations.\n\nThe developer also said the release timing or order of some content in the global version may change based on player experience and service conditions. The content and schedules in the roadmap are therefore subject to change, and the announcement gives no specific release date for the Brawler class.\n\nFor players, the practical takeaway is to plan around December 16 for the new season while treating the Brawler and housing dates as tentative until more details arrive. AION 2's Steam news page is the best place to follow updates.",
+    "etiketler": [
+     "#AION2",
+     "#Steam",
+     "#PC",
+     "#Roadmap"
+    ]
+   },
+   "es": {
+    "baslik": "AION 2 Temporada 2 llega el 16 de diciembre con Brawler",
+    "ozet": "La hoja de ruta incluye la clase Brawler y la vivienda para enero de 2027, aunque algunas fechas podrían cambiar.",
+    "metin": "La hoja de ruta de la Temporada 2 de AION 2 se publicó en un anuncio oficial en Steam. La temporada comienza el miércoles 16 de diciembre de 2026.\n\nSegún el anuncio, pronto llegará una nueva clase llamada Brawler, que empuña el Gauntlet, un arma característica para ataques cuerpo a cuerpo rápidos y agresivos. La vivienda llegará en enero de 2027: cada jugador podrá tener una isla privada y colocar muebles y decoraciones a su gusto dentro del mundo de Atreia.\n\nEl desarrollador advierte de que el momento o el orden de algunos contenidos de la versión global puede cambiar según la experiencia de los jugadores y las condiciones del servicio. Por eso, el contenido y los calendarios de la hoja de ruta pueden variar, y el anuncio no fija una fecha concreta para la clase Brawler.\n\nPara los jugadores, lo práctico es apuntar el 16 de diciembre para la nueva temporada y tomar las fechas de Brawler y vivienda como provisionales hasta que haya más detalles. La página de noticias de Steam seguirá recogiendo las actualizaciones.",
+    "etiketler": [
+     "#AION2",
+     "#Steam",
+     "#PC",
+     "#Roadmap"
+    ]
+   },
+   "fr": {
+    "baslik": "AION 2 Saison 2 le 16 décembre, avec la classe Brawler",
+    "ozet": "La feuille de route prévoit la classe Brawler et le logement pour janvier 2027, mais certaines dates peuvent évoluer.",
+    "metin": "La feuille de route de la Saison 2 d'AION 2 a été dévoilée dans une annonce officielle sur Steam. La saison débutera le mercredi 16 décembre 2026.\n\nUne nouvelle classe, le Brawler, arrivera bientôt. Elle manie le Gauntlet, son arme signature, pour des attaques au corps à corps rapides et agressives. Le logement suivra en janvier 2027 : chaque joueur pourra disposer de sa propre île privée et y placer meubles et décorations à sa guise dans le monde d'Atreia.\n\nLe développeur précise que le calendrier et l'ordre de certains contenus de la version mondiale peuvent être ajustés selon l'expérience des joueurs et les conditions du service. Le contenu et les échéances de la feuille de route restent donc susceptibles de changer, et aucune date précise n'est donnée pour la classe Brawler.\n\nPour les joueurs, le plus utile est de retenir le 16 décembre pour la nouvelle saison et de considérer les dates du Brawler et du logement comme provisoires en attendant d'autres détails. La page d'actualités Steam restera le meilleur endroit pour suivre les mises à jour.",
+    "etiketler": [
+     "#AION2",
+     "#Steam",
+     "#PC",
+     "#Roadmap"
+    ]
+   },
+   "de": {
+    "baslik": "AION 2 Season 2 startet am 16. Dezember mit neuer Brawler-Klasse",
+    "ozet": "Die Roadmap nennt die Brawler-Klasse und das Housing für Januar 2027, einzelne Termine können sich jedoch ändern.",
+    "metin": "Die Roadmap für Season 2 von AION 2 wurde in einer offiziellen Ankündigung auf Steam veröffentlicht. Season 2 beginnt am Mittwoch, dem 16. Dezember 2026.\n\nNeu kommt die Brawler-Klasse, die bald verfügbar sein soll. Sie führt das Gauntlet als Markenzeichenwaffe und setzt auf schnelle, aggressive Nahkampfangriffe. Das Housing folgt im Januar 2027 und gibt Spielern eine eigene Privatinsel, auf der sie Möbel und Dekoration frei anordnen können.\n\nDer Entwickler weist darauf hin, dass Zeitpunkt oder Reihenfolge einzelner Inhalte in der globalen Version je nach Spielerfahrung und Servicebedingungen angepasst werden können. Inhalte und Zeitpläne der Roadmap sind daher nicht festgeschrieben, und für die Brawler-Klasse nennt die Ankündigung kein konkretes Veröffentlichungsdatum.\n\nFür Spieler heißt das vor allem: Den 16. Dezember für den Saisonstart vormerken und die Termine für Brawler und Housing vorerst als vorläufig betrachten. Die Steam-Newsseite bleibt der beste Ort, um neue Informationen zu verfolgen.",
+    "etiketler": [
+     "#AION2",
+     "#Steam",
+     "#PC",
+     "#Roadmap"
+    ]
+   },
+   "nl": {
+    "baslik": "AION 2 Season 2 start 16 december met nieuwe Brawler-klasse",
+    "ozet": "De roadmap noemt de Brawler-klasse en housing voor januari 2027, maar sommige data en de volgorde van content kunnen nog veranderen.",
+    "metin": "De roadmap voor Season 2 van AION 2 is gepubliceerd in een officiële aankondiging op Steam. Season 2 begint op woensdag 16 december 2026.\n\nEr komt een nieuwe klasse, de Brawler, die binnenkort beschikbaar is. Deze klasse gebruikt het Gauntlet als kenmerkend wapen voor snelle, agressieve aanvallen van dichtbij. Housing volgt in januari 2027, waarmee spelers op hun eigen privé-eiland meubels en decoratie vrij kunnen plaatsen.\n\nDe ontwikkelaar waarschuwt dat het moment of de volgorde van bepaalde content in de wereldwijde versie kan worden aangepast op basis van de ervaring van spelers en de servicecondities. De inhoud en planning in de roadmap kunnen daarom veranderen, en voor de Brawler-klasse is geen concrete releasedatum genoemd.\n\nVoor spelers betekent dit vooral dat ze 16 december in hun agenda kunnen zetten voor het nieuwe seizoen en de data voor Brawler en housing als voorlopig moeten zien. De Steam-nieuwspagina blijft de beste plek om updates te volgen.",
+    "etiketler": [
+     "#AION2",
+     "#Steam",
+     "#PC",
+     "#Roadmap"
+    ]
+   },
+   "zh": {
+    "baslik": "AION 2第2赛季将于12月16日开始，新职业即将登场",
+    "ozet": "路线图还公布了Brawler职业与2027年1月上线的住房系统，部分内容的发布时间和顺序仍可能调整。",
+    "metin": "AION 2的第2赛季路线图已在Steam官方公告中公布。第2赛季将于2026年12月16日（周三）开始。\n\n路线图显示，全新Brawler职业即将推出。该职业使用标志性武器“Gauntlet”，可发动快速、激进的近战攻击。住房系统将于2027年1月上线，玩家可在专属私人岛屿上自由摆放家具和装饰，打造独一无二的空间。\n\n开发方在公告中提到，全球版部分内容的上线时间或顺序可能会根据玩家体验和服务情况进行调整，路线图中的内容与时间安排因此并非最终定案。公告中也没有给出Brawler职业的具体发布日期。\n\n对玩家而言，目前最实用的做法是记下12月16日新赛季开始的时间，并将Brawler和住房的日期视为暂定。后续更新可关注AION 2的Steam新闻页面。",
+    "etiketler": [
+     "#AION2",
+     "#Steam",
+     "#PC",
+     "#Roadmap"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "aion-2-season-2-roadmap-2026-11-23",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/3393110/view/675137971401262388",
+   "teyit_zamani": "2026-11-23T23:10:03+00:00",
+   "oyuncuya_fayda": "Oyuncular yeni sezonun 16 Aralık'ta başladığını ve Brawler ile konut tarihlerinin henüz kesin olmadığını öğrenir.",
+   "hype": 5,
+   "eklenme": "2026-11-24T02:16:12.815208+03:00"
+  }
+ },
+ {
   "id": "gta-vi-xbox-cloud-remote-play-2026-11-23",
   "oyun": "Grand Theft Auto VI",
   "tarih": "2026-11-23",

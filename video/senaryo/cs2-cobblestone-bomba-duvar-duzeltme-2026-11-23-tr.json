@@ -1,0 +1,107 @@
+{
+ "id": "cs2-cobblestone-bomba-duvar-duzeltme-2026-11-23",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "CS2'de Cobblestone'daki bomba ve duvar hatalarını Valve düzeltti.",
+   "veri": {
+    "ust_etiket": "CS2 GÜNCELLEME",
+    "baslik": "Cobblestone'da hatalar düzeltildi",
+    "vurgu": [
+     "Cobblestone'da"
+    ],
+    "tuslar": [
+     "C",
+     "S",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "COUNTER-STRIKE 2",
+    "alt": "COBBLESTONE HARİTASI"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Princess tower bölgesinde bomba erişilemez noktaya atılamayacak. B bölgesinde bazı el bombaları dünyaya düşmeyecek.",
+   "veri": {
+    "baslik": "Bomba hataları",
+    "maddeler": [
+     {
+      "metin": "Princess tower'da bomba erişilemez yere gitmiyor",
+      "tetik": "Princess"
+     },
+     {
+      "metin": "B'de el bombaları dünyaya düşmüyor",
+      "tetik": "B"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "BOMBA HATALARI",
+    "alt": "PRINCESS TOWER VE B"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Duvar arkası konumları düzeltildi, dünyadaki boşluklar kapatıldı. Sessiz şarjör animasyonu doğru hızda oynuyor.",
+   "veri": {
+    "baslik": "Harita düzeltmeleri",
+    "maddeler": [
+     {
+      "metin": "Duvar arkası konumları düzeltildi",
+      "tetik": "Duvar"
+     },
+     {
+      "metin": "Dünyadaki boşluklar kapatıldı",
+      "tetik": "boşluklar"
+     },
+     {
+      "metin": "Sessiz şarjör animasyonu düzeldi",
+      "tetik": "Sessiz"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DİĞER DÜZELTMELER",
+    "alt": "DUVAR VE BOŞLUKLAR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Cobblestone'da en çok hangi düzeltmeyi beklerdin? Tüm değişiklikler sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "Bütün değişiklikler sitede",
+    "alt": "Kaynak ve ayrıntılar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

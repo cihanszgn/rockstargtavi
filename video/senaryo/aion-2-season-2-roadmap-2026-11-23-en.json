@@ -1,0 +1,115 @@
+{
+ "id": "aion-2-season-2-roadmap-2026-11-23",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "AION 2's Season 2 starts December 16, and the new Brawler class is coming soon.",
+   "veri": {
+    "ust_etiket": "SEASON 2 ROADMAP",
+    "baslik": "AION 2 Season 2 starts December 16",
+    "vurgu": [
+     "December 16"
+    ],
+    "tuslar": [
+     "S",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "SEASON 2 ROADMAP"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam's official announcement says the roadmap's content and schedules may change.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam developer announcement",
+    "alinti": "The content and schedules in the roadmap are subject to change."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "STEAM ANNOUNCEMENT"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "The new Brawler class wields the Gauntlet, a signature weapon for fast, aggressive melee attacks.",
+   "veri": {
+    "baslik": "New class: Brawler",
+    "maddeler": [
+     {
+      "metin": "Brawler class is coming soon",
+      "tetik": "Brawler"
+     },
+     {
+      "metin": "Signature weapon: the Gauntlet",
+      "tetik": "Gauntlet"
+     },
+     {
+      "metin": "Fast, aggressive melee attacks",
+      "tetik": "aggressive"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NEW CLASS",
+    "alt": "BRAWLER AND GAUNTLET"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Season 2 begins December 16, and housing arrives in January 2027 on your own private island.",
+   "veri": {
+    "etiket": "Season 2 begins",
+    "tarih": "December 16",
+    "not": "Housing arrives in January 2027."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "SEASON 2",
+    "alt": "STARTS DECEMBER 16"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full roadmap on our site, Control A Game. Will you try the Brawler on day one?",
+   "veri": {
+    "cagri": "Read the full roadmap on our site",
+    "alt": "Sources and dates are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

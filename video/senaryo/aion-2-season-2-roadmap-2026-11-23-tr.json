@@ -1,0 +1,115 @@
+{
+ "id": "aion-2-season-2-roadmap-2026-11-23",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "AION 2'nin 2. sezonu 16 Aralık'ta başlıyor; yeni Brawler sınıfı ve konut sistemi yolda.",
+   "veri": {
+    "ust_etiket": "SEZON 2 YOL HARİTASI",
+    "baslik": "AION 2 Sezon 2 16 Aralık'ta başlıyor",
+    "vurgu": [
+     "16 Aralık'ta"
+    ],
+    "tuslar": [
+     "S",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "SEZON 2 YOL HARİTASI"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam'deki resmî duyuruya göre yol haritasındaki içerik ve tarihler değişebilir.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam geliştirici duyurusu",
+    "alinti": "Yol haritasındaki içerik ve takvim değişebilir."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "STEAM DUYURUSU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Yeni Brawler sınıfı yakında geliyor; imza silahı Gauntlet ile hızlı ve agresif yakın dövüş saldırıları yapıyor.",
+   "veri": {
+    "baslik": "Yeni sınıf: Brawler",
+    "maddeler": [
+     {
+      "metin": "Brawler sınıfı yakında geliyor",
+      "tetik": "Brawler"
+     },
+     {
+      "metin": "İmza silahı: Gauntlet",
+      "tetik": "Gauntlet"
+     },
+     {
+      "metin": "Hızlı ve agresif yakın dövüş",
+      "tetik": "agresif"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "YENİ SINIF",
+    "alt": "BRAWLER VE GAUNTLET"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Sezon 2, 16 Aralık'ta başlıyor; konut özelliği ise Ocak 2027'de gelecek.",
+   "veri": {
+    "etiket": "Sezon 2 başlıyor",
+    "tarih": "16 Aralık",
+    "not": "Konut özelliği Ocak 2027'de geliyor."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "SEZON 2",
+    "alt": "16 ARALIK'TA BAŞLIYOR"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Yol haritasının tamamı sitemizde, Control A Game'de. Brawler'ı ilk günden mi deneyeceksin?",
+   "veri": {
+    "cagri": "Tüm yol haritası sitemizde",
+    "alt": "Kaynak ve tarihler haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,107 @@
+{
+ "id": "cs2-cobblestone-bomba-duvar-duzeltme-2026-11-23",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Valve has fixed Cobblestone bomb and wall issues in Counter-Strike 2.",
+   "veri": {
+    "ust_etiket": "CS2 UPDATE",
+    "baslik": "Cobblestone bugs fixed",
+    "vurgu": [
+     "Cobblestone"
+    ],
+    "tuslar": [
+     "C",
+     "S",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "COUNTER-STRIKE 2",
+    "alt": "COBBLESTONE MAP"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "At Princess Tower, the bomb can no longer be thrown out of reach. On site B, some grenades no longer fall through the world.",
+   "veri": {
+    "baslik": "Bomb and grenade fixes",
+    "maddeler": [
+     {
+      "metin": "Bomb can't be thrown out of reach",
+      "tetik": "Princess"
+     },
+     {
+      "metin": "Grenades no longer fall through B",
+      "tetik": "B"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "BOMB AND GRENADES",
+    "alt": "PRINCESS TOWER AND B"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Wall-bang spots are fixed, gaps in the world are closed, and third-person silent reloads play at the correct speed.",
+   "veri": {
+    "baslik": "Map and animation fixes",
+    "maddeler": [
+     {
+      "metin": "Wall-bang spots fixed",
+      "tetik": "Wall-bang"
+     },
+     {
+      "metin": "Gaps in the world closed",
+      "tetik": "gaps"
+     },
+     {
+      "metin": "Silent reload speed corrected",
+      "tetik": "silent"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "MAP AND ANIMATION",
+    "alt": "WALL-BANG AND GAPS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Which Cobblestone fix matters most to you? All the changes are on our site, Control A Game.",
+   "veri": {
+    "cagri": "Every change on the site",
+    "alt": "Sources and details are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

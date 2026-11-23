@@ -1,0 +1,107 @@
+{
+ "id": "cs2-cobblestone-bomba-duvar-duzeltme-2026-11-23",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Valve corrige en Counter-Strike 2 problemas de bombas y muros en Cobblestone.",
+   "veri": {
+    "ust_etiket": "ACTUALIZACIÓN CS2",
+    "baslik": "Cobblestone recibe correcciones",
+    "vurgu": [
+     "Cobblestone"
+    ],
+    "tuslar": [
+     "C",
+     "S",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "COUNTER-STRIKE 2",
+    "alt": "MAPA COBBLESTONE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "En Princess tower, la bomba ya no puede lanzarse fuera de alcance. En la zona B, ciertas granadas ya no caen a través del mapa.",
+   "veri": {
+    "baslik": "Fallos de bomba",
+    "maddeler": [
+     {
+      "metin": "Bomba fuera de alcance bloqueada",
+      "tetik": "Princess"
+     },
+     {
+      "metin": "Granadas de la zona B corregidas",
+      "tetik": "B"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "FALLOS DE BOMBA",
+    "alt": "PRINCESS TOWER Y B"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Se corrigen posiciones de wall bang y se cierran huecos del mapa. La recarga silenciosa en tercera persona ya va a la velocidad correcta.",
+   "veri": {
+    "baslik": "Correcciones del mapa",
+    "maddeler": [
+     {
+      "metin": "Posiciones de wall bang corregidas",
+      "tetik": "wall"
+     },
+     {
+      "metin": "Huecos del mapa cerrados",
+      "tetik": "huecos"
+     },
+     {
+      "metin": "Recarga silenciosa corregida",
+      "tetik": "silenciosa"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CORRECCIONES DE MAPA",
+    "alt": "WALL BANG Y HUECOS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "¿Qué corrección de Cobblestone te interesa más? Todos los cambios están en nuestra web, Control A Game.",
+   "veri": {
+    "cagri": "Todos los cambios en la web",
+    "alt": "Fuentes y detalles están en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
