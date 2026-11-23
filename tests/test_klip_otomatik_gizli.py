@@ -257,6 +257,7 @@ class OtomatikOnay(KlipYayinTemel):
     """klip_yayin: otomatik onay, seçim kuralları, Cio kararının korunması."""
 
     def hazirla(self, n=1, **ek):
+        ek.setdefault("sohbet_puani", 80)  # canlı kalite süzgecinin (60) üstünde; süzgecin kendi testi ayrı
         for i in range(1, n + 1):
             self.paket_yaz(klasor=f"eraycan-2026111{i}-aaa{i}", ad="klip-01", vod=f"https://kick.com/eray/videos/v{i}",
                            yayin_tarihi=f"2026-11-1{i}", baslik=f"Konu {i} başlığı uzun cümle", **ek)
@@ -298,6 +299,23 @@ class OtomatikOnay(KlipYayinTemel):
         self.assertTrue(any("1 eski klip" in n for n in notlar))
         self.assertEqual(sy.klip_ayari({})["otomatik_taze_saat"], 24)
         self.assertEqual(sy.klip_ayari({"klip": {"otomatik_taze_saat": 0}})["otomatik_taze_saat"], 0)
+
+    def test_izleyici_tepkisi_zayif_klip_alinmaz_ve_en_komik_once(self):
+        puanlar = {1: 0, 2: 65, 3: 95, 4: 70}
+        for i, puan in puanlar.items():
+            self.paket_yaz(klasor=f"eraycan-2026111{i}-aaa{i}", ad="klip-01", vod=f"https://kick.com/eray/videos/v{i}",
+                           yayin_tarihi=f"2026-11-1{i}", baslik=f"Konu {i} başlığı uzun cümle", sohbet_puani=puan, konusma_puani=7)
+        sosyal = {"klip": {"otomatik_gizli": True, "gizli_gunluk_en_fazla": 8, "otomatik_yayinci_basina": 0}}
+        (secilen, notlar), _m = self.sec(sosyal=sosyal)
+        self.assertEqual([o["yayin_tarihi"] for o in secilen], ["2026-11-13", "2026-11-14", "2026-11-12"])
+        self.assertTrue(any("1 klip izleyici tepkisi zayıf" in n for n in notlar))
+        sosyal["klip"]["otomatik_yayinci_basina"] = 2  # aynı yayıncıdan günde en çok 2
+        (secilen, _), _m = self.sec(sosyal=sosyal)
+        self.assertEqual([o["yayin_tarihi"] for o in secilen], ["2026-11-13", "2026-11-14"])
+        sosyal["klip"].update(otomatik_min_sohbet_puani=0, otomatik_yayinci_basina=0)  # süzgeç kapalı
+        (secilen, _), _m = self.sec(sosyal=sosyal)
+        self.assertEqual(len(secilen), 4)
+        self.assertEqual((sy.klip_ayari({})["otomatik_min_sohbet_puani"], sy.klip_ayari({})["otomatik_yayinci_basina"]), (60, 2))
 
     def test_gunluk_gizli_sinir_bugunku_yukleme_ve_bekleyenleri_sayar(self):
         self.hazirla(4)
@@ -402,7 +420,7 @@ class OtomatikGizliKomutu(KlipYayinTemel):
         super().setUp()
         for i in (1, 2):
             self.paket_yaz(klasor=f"eraycan-2026111{i}-aaa{i}", ad="klip-01", vod=f"https://kick.com/eray/videos/v{i}",
-                           yayin_tarihi=f"2026-11-1{i}", baslik=f"Konu {i} başlığı uzun cümle")
+                           yayin_tarihi=f"2026-11-1{i}", baslik=f"Konu {i} başlığı uzun cümle", sohbet_puani=80)
         self.sosyal = {"klip": {"otomatik_gizli": True, "gizli_gunluk_en_fazla": 4}}
         self.olaylar = []
         self.kayit = {}

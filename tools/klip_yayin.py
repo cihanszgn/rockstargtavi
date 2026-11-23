@@ -1629,6 +1629,19 @@ def otomatik_bekleyenler(manifest: dict) -> list[str]:
                   if (e.get("onay") or {}).get("otomatik") is True and ks.onay_gecerli(e) and not e.get("youtube"))
 
 
+def _sayi(v) -> float:
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def _sohbet_puani(o: dict) -> float:
+    """Klip anında izleyicinin tepkisi (0-100; sohbette gülme/ortak konu). Eski pakette alan yoksa zirve puanı aynı ölçüdür."""
+    p = o.get("paket") or {}
+    return _sayi(p["sohbet_puani"] if p.get("sohbet_puani") is not None else p.get("zirve_puani"))
+
+
 def otomatik_sec(ogeler: list[dict], manifest: dict, sosyal: dict, kayit: dict, gun: str, ayar: dict,
                  en_cok: int | None = None, en_eski: float | None = None) -> tuple[list[dict], list[str]]:
     """Otomatik onaylanacak klipleri seçer ve MANIFESTE işler (kuru çalışmada kopya verilir). En yeni yayın önce.
@@ -1636,6 +1649,8 @@ def otomatik_sec(ogeler: list[dict], manifest: dict, sosyal: dict, kayit: dict, 
     Cio'nun kararı korunur: manifestte kaydı olan klip yalnız KENDİ otomatik kaydıysa (ve geri çekilmediyse) yeniden onaylanır.
     `en_eski` (epoch sn) verilirse mp4'ü bundan önce kesilmiş klip otomatik onaylanmaz (2026-11-23, Cio: birikmiş eski klipler
     paylaşılmaz, yalnız o günün analizinden çıkanlar gizli yüklenir); elle onay bundan etkilenmez.
+    Kalite (2026-11-23, Cio): yalnız sohbet puanı `otomatik_min_sohbet_puani` ve üstü olan klip aday olur (izleyici gerçekten
+    güldü/tepki verdi); adaylar puana göre sıralanır, yayıncı başına en çok `otomatik_yayinci_basina` klip alınır.
     -> (onaylananlar, atlama notları)"""
     k = sy.klip_ayari(sosyal)
     kullanilan = sy.bugunku_tur_sayisi(kayit, "youtube", ks.KLIP_HESABI, gun, ("klip",), gizli=True)
@@ -1645,9 +1660,9 @@ def otomatik_sec(ogeler: list[dict], manifest: dict, sosyal: dict, kayit: dict, 
     secilen: list[dict] = []
     notlar: list[str] = []
     eski_sayisi = 0
+    zayif_sayisi = 0
+    adaylar: list[dict] = []
     for o in ogeler:
-        if hak <= 0:
-            break
         if o["tur"] != "klip" or o["yok_notu"]:
             continue
         if en_eski is not None:
@@ -1665,6 +1680,19 @@ def otomatik_sec(ogeler: list[dict], manifest: dict, sosyal: dict, kayit: dict, 
             continue
         if (o.get("platformlar") or {}).get("youtube") is False:
             continue
+        if _sohbet_puani(o) < k["otomatik_min_sohbet_puani"]:
+            zayif_sayisi += 1
+            continue
+        adaylar.append(o)
+    # En komik önce (2026-11-23, Cio: "manasız, komik değil"): sıra artık dosya sırası değil, izleyicinin tepkisi.
+    adaylar.sort(key=lambda o: (-_sohbet_puani(o), -_sayi((o.get("paket") or {}).get("konusma_puani"))))  # eşitlikte tarama sırası (en yeni yayın önce)
+    yayinci_sayisi: dict[str, int] = {}
+    for o in adaylar:
+        if hak <= 0:
+            break
+        yayinci = str(o.get("yayinci") or "")
+        if k["otomatik_yayinci_basina"] and yayinci_sayisi.get(yayinci, 0) >= k["otomatik_yayinci_basina"]:
+            continue
         if o["kufur"]:
             notlar.append(f"{o['id']}: küfür uyarısı var, otomatik onaylanmadı")
             continue
@@ -1674,7 +1702,11 @@ def otomatik_sec(ogeler: list[dict], manifest: dict, sosyal: dict, kayit: dict, 
             notlar.append(str(h))
             continue
         secilen.append(o)
+        yayinci_sayisi[yayinci] = yayinci_sayisi.get(yayinci, 0) + 1
         hak -= 1
+    if zayif_sayisi:
+        notlar.append(f"{zayif_sayisi} klip izleyici tepkisi zayıf olduğu için (sohbet puanı < {k['otomatik_min_sohbet_puani']}) "
+                      "otomatik akışa alınmadı")
     if eski_sayisi:
         notlar.append(f"{eski_sayisi} eski klip (tazelik sınırından önce kesilmiş) otomatik akışa alınmadı")
     return secilen, notlar
