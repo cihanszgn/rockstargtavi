@@ -1,0 +1,105 @@
+{
+ "id": "wardogs-nvidia-surucu-sorunu-2026-11-23",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Si WARDOGS se congela con tu RTX, el desarrollador recomienda volver al controlador NVIDIA 617.42.",
+   "veri": {
+    "ust_etiket": "PROBLEMA DE CONTROLADOR",
+    "baslik": "WARDOGS: vuelve al driver 617.42",
+    "vurgu": [
+     "617.42"
+    ],
+    "tuslar": [
+     "G",
+     "P",
+     "U"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "WARDOGS",
+    "alt": "AVISO SOBRE NVIDIA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "El estudio aconseja evitar los controladores 621.14, 621.24 y 621.35 hasta que NVIDIA publique una corrección. Se informan bloqueos, problemas de compilación de shaders y tirones. Afecta a algunos usuarios de RTX 40 y 50, no a todos.",
+   "veri": {
+    "baslik": "Controladores a evitar",
+    "maddeler": [
+     {
+      "metin": "Evita 621.14, 621.24 y 621.35",
+      "tetik": "evitar"
+     },
+     {
+      "metin": "Bloqueos y tirones",
+      "tetik": "bloqueos"
+     },
+     {
+      "metin": "Algunos usuarios de RTX 40 y 50",
+      "tetik": "RTX"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "VERSIONES A EVITAR",
+    "alt": "621.14 • 621.24 • 621.35"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "yama_fark",
+   "anlatim": "Volver de 621.35 a 617.42 es lo primero que hay que probar si falla el juego.",
+   "veri": {
+    "baslik": "Vuelta atrás sugerida",
+    "satirlar": [
+     {
+      "ad": "Controlador",
+      "eski": "621.35",
+      "yeni": "617.42",
+      "tetik": "617.42"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "yama",
+    "baslik": "VOLVER ATRÁS",
+    "alt": "617.42 ES ESTABLE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Vuelves a un controlador anterior o esperas la corrección?",
+   "veri": {
+    "cagri": "Todos los detalles en la web",
+    "alt": "Fuente y fechas en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

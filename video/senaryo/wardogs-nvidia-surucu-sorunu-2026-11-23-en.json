@@ -1,0 +1,105 @@
+{
+ "id": "wardogs-nvidia-surucu-sorunu-2026-11-23",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "If WARDOGS stutters on your RTX card, NVIDIA driver 617.42 is the developer's last known stable version.",
+   "veri": {
+    "ust_etiket": "NVIDIA DRIVER ISSUE",
+    "baslik": "WARDOGS stutters? Try driver 617.42",
+    "vurgu": [
+     "617.42"
+    ],
+    "tuslar": [
+     "G",
+     "P",
+     "U"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "WARDOGS",
+    "alt": "NVIDIA DRIVER WARNING"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "The team advises skipping drivers 621.14, 621.24 and 621.35 until NVIDIA ships a fix. Players report freezes, shader compilation problems and stuttering. Some RTX 40 and 50 series owners are affected, but not everyone.",
+   "veri": {
+    "baslik": "Drivers to avoid",
+    "maddeler": [
+     {
+      "metin": "Skip 621.14, 621.24, 621.35",
+      "tetik": "skipping"
+     },
+     {
+      "metin": "Freezes and stuttering reported",
+      "tetik": "freezes"
+     },
+     {
+      "metin": "Some RTX 40 and 50 owners",
+      "tetik": "RTX"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DRIVERS TO AVOID",
+    "alt": "621.14 • 621.24 • 621.35"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "yama_fark",
+   "anlatim": "Rolling back from 621.35 to 617.42 is the first thing to try if the game misbehaves.",
+   "veri": {
+    "baslik": "Suggested rollback",
+    "satirlar": [
+     {
+      "ad": "Driver",
+      "eski": "621.35",
+      "yeni": "617.42",
+      "tetik": "617.42"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "yama",
+    "baslik": "DRIVER ROLLBACK",
+    "alt": "617.42 IS STABLE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Are you rolling back, or waiting for a fix?",
+   "veri": {
+    "cagri": "Full details on the site",
+    "alt": "Source and driver dates are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

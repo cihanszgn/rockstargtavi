@@ -1,0 +1,105 @@
+{
+ "id": "wardogs-nvidia-surucu-sorunu-2026-11-23",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "WARDOGS'ta takılma yaşıyorsan NVIDIA sürücüsü 617.42'ye dönmek ilk çare.",
+   "veri": {
+    "ust_etiket": "NVIDIA SÜRÜCÜ SORUNU",
+    "baslik": "WARDOGS takılıyorsa 617.42'ye dön",
+    "vurgu": [
+     "617.42'ye"
+    ],
+    "tuslar": [
+     "G",
+     "P",
+     "U"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "WARDOGS",
+    "alt": "NVIDIA SÜRÜCÜ UYARISI"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Geliştirici 621.14, 621.24 ve 621.35 sürümlerinden kaçınmayı öneriyor. Donma, gölgelendirici derleme sorunları ve takılmalar bildiriliyor. Bazı RTX 40 ve 50 serisi sahipleri etkileniyor.",
+   "veri": {
+    "baslik": "Kaçınılacak sürücüler",
+    "maddeler": [
+     {
+      "metin": "621.14, 621.24, 621.35'ten kaçının",
+      "tetik": "kaçınmayı"
+     },
+     {
+      "metin": "Donma ve takılma bildirildi",
+      "tetik": "takılmalar"
+     },
+     {
+      "metin": "Bazı RTX 40 ve 50 sahipleri",
+      "tetik": "RTX"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "KAÇINILACAK SÜRÜMLER",
+    "alt": "621.14 • 621.24 • 621.35"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "yama_fark",
+   "anlatim": "Bilinen son kararlı sürüm 617.42; sorun yaşayanlar 621.35'ten ona dönebilir.",
+   "veri": {
+    "baslik": "Geri dönüş önerisi",
+    "satirlar": [
+     {
+      "ad": "Sürücü",
+      "eski": "621.35",
+      "yeni": "617.42",
+      "tetik": "617.42"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "yama",
+    "baslik": "SÜRÜCÜ GERİ DÖNÜŞÜ",
+    "alt": "617.42 KARARLI"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Sen hangi sürücüyü kullanıyorsun?",
+   "veri": {
+    "cagri": "Tüm ayrıntılar sitede",
+    "alt": "Kaynak ve sürücü tarihleri haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

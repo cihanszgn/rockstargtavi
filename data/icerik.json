@@ -1,5 +1,111 @@
 [
  {
+  "id": "wardogs-nvidia-surucu-sorunu-2026-11-23",
+  "oyun": "WARDOGS",
+  "tarih": "2026-11-23",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam geliştirici duyurusu",
+    "url": "https://store.steampowered.com/news/app/1867240/view/679641571029681228"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "WARDOGS: NVIDIA 621.14, 621.24 ve 621.35 uyarısı",
+    "ozet": "Geliştirici, NVIDIA 621.14, 621.24 ve 621.35 sürümlerinden kaçınılmasını, takılma için 617.42'ye dönülmesini öneriyor.",
+    "metin": "WARDOGS geliştiricisi, 23 Kasım'da Steam'de yayımladığı duyuruda bazı NVIDIA sürücü sürümlerinin oyunda sorun çıkardığını bildirdi. Ekip, NVIDIA düzeltme yayımlayana kadar 621.14, 621.24 ve 621.35 sürümlerinden kaçınılmasını öneriyor.\n\nDuyuruya göre oyuncular 621.14 sürümünden beri oyun sırasında donma, gölgelendirici derlemesinde sorunlar ve takılmalar yaşadığını bildiriyor. Sorun bazı RTX 40 ve 50 serisi kart sahiplerini etkiliyor, herkesi değil. 621.14 4 Kasım'da, 621.24 12 Kasım'da, 621.35 ise 20 Kasım'da hotfix olarak çıkmıştı; hotfix sorunu çözmüyor. Ekip, bunun yalnızca WARDOGS'a özgü olmadığını, birçok PC oyununda aynı davranışın görüldüğünü belirtiyor.\n\nGeliştiriciye göre WARDOGS için bilinen son kararlı sürüm 617.42. Etkilenen bir sürücüdeyseniz ve oyun sorunsuz çalışıyorsa bir şey yapmanıza gerek yok; donma veya takılma yaşıyorsanız ilk adım 617.42'ye geri dönmek. Ekip NVIDIA'nın yeni sürümlerini izliyor ve daha yeni bir sürücü güvenli olduğunda duyuracak.",
+    "etiketler": [
+     "#WARDOGS",
+     "#NVIDIA",
+     "#PC",
+     "#GPU"
+    ]
+   },
+   "en": {
+    "baslik": "WARDOGS warns against NVIDIA drivers 621.14, 621.24, 621.35",
+    "ozet": "The developer advises skipping NVIDIA drivers 621.14, 621.24 and 621.35 and rolling back to 617.42 if the game stutters.",
+    "metin": "The WARDOGS team says some NVIDIA driver versions are causing problems in the game, according to a Steam announcement published on November 23. Until NVIDIA ships a fix, the developers recommend avoiding drivers 621.14, 621.24 and 621.35.\n\nPlayers have reported freezes, shader compilation problems and stuttering since 621.14. The issue affects some RTX 40 and 50 series owners, but not everyone. Driver 621.14 was released on November 4, 621.24 on November 12, and 621.35, a hotfix, on November 20; the hotfix does not resolve the problem. The team adds that this is not isolated to WARDOGS, as numerous other PC titles show the same behaviour on these drivers.\n\nThe developer says 617.42 is the last driver it knows to be stable for WARDOGS. If you are on an affected driver and the game runs fine, you do not need to change anything. If you get freezes or stuttering, rolling back to 617.42 is the first thing to try. The team is watching NVIDIA's releases and will say when a newer driver is safe.",
+    "etiketler": [
+     "#WARDOGS",
+     "#NVIDIA",
+     "#PC",
+     "#GPU"
+    ]
+   },
+   "es": {
+    "baslik": "WARDOGS desaconseja los controladores NVIDIA 621.14, 621.24 y 621.35",
+    "ozet": "El estudio recomienda evitar los controladores NVIDIA 621.14, 621.24 y 621.35 y volver a la 617.42 si el juego va a tirones.",
+    "metin": "El equipo de WARDOGS ha informado, en un anuncio publicado en Steam el 23 de noviembre, de que algunas versiones de los controladores de NVIDIA causan problemas en el juego. Hasta que NVIDIA publique una corrección, recomienda evitar las versiones 621.14, 621.24 y 621.35.\n\nSegún el anuncio, desde la 621.14 los jugadores han notado bloqueos durante la partida, problemas de compilación de shaders y tirones. Afecta a algunos usuarios de las series RTX 40 y 50, pero no a todos. La 621.14 salió el 4 de noviembre, la 621.24 el 12 de noviembre y la 621.35, un hotfix, el 20 de noviembre; ese hotfix no soluciona el problema. El estudio añade que no es algo exclusivo de WARDOGS, ya que muchos otros juegos de PC muestran el mismo comportamiento con estos controladores.\n\nEl desarrollador indica que la 617.42 es el último controlador que sabe estable para WARDOGS. Si usas una versión afectada y el juego funciona bien, no tienes que cambiar nada. Si sufres bloqueos o tirones, lo primero que conviene probar es volver a la 617.42. El equipo vigila las novedades de NVIDIA y avisará cuando un controlador más reciente sea seguro.",
+    "etiketler": [
+     "#WARDOGS",
+     "#NVIDIA",
+     "#PC",
+     "#GPU"
+    ]
+   },
+   "fr": {
+    "baslik": "WARDOGS déconseille les pilotes NVIDIA 621.14, 621.24 et 621.35",
+    "ozet": "Le studio recommande d'éviter les pilotes NVIDIA 621.14, 621.24 et 621.35 et de revenir à la 617.42 en cas de saccades.",
+    "metin": "L'équipe de WARDOGS indique, dans une annonce publiée sur Steam le 23 novembre, que certaines versions des pilotes NVIDIA posent problème dans le jeu. En attendant un correctif de NVIDIA, elle recommande d'éviter les versions 621.14, 621.24 et 621.35.\n\nSelon l'annonce, des joueurs signalent depuis la 621.14 des blocages en cours de partie, des problèmes de compilation de shaders et des saccades. Certains possesseurs de cartes RTX 40 et 50 sont touchés, mais pas tous. La 621.14 est sortie le 4 novembre, la 621.24 le 12 novembre et la 621.35, un correctif, le 20 novembre ; ce correctif ne règle pas le problème. Le studio précise que WARDOGS n'est pas le seul concerné : de nombreux autres jeux PC présentent le même comportement avec ces pilotes.\n\nLe développeur indique que la 617.42 est le dernier pilote qu'il sait stable pour WARDOGS. Si vous utilisez une version concernée et que le jeu fonctionne bien, rien ne change pour vous. En cas de blocages ou de saccades, la première chose à essayer est de revenir à la 617.42. L'équipe surveille les publications de NVIDIA et préviendra quand un pilote plus récent sera sûr.",
+    "etiketler": [
+     "#WARDOGS",
+     "#NVIDIA",
+     "#PC",
+     "#GPU"
+    ]
+   },
+   "de": {
+    "baslik": "WARDOGS rät von NVIDIA-Treibern 621.14, 621.24 und 621.35 ab",
+    "ozet": "Das Entwicklerteam empfiehlt, die NVIDIA-Treiber 621.14, 621.24 und 621.35 zu meiden und bei Rucklern auf 617.42 zurückzugehen.",
+    "metin": "Das Team von WARDOGS meldet in einer am 23. November auf Steam veröffentlichten Ankündigung, dass einige NVIDIA-Treiberversionen im Spiel Probleme verursachen. Bis NVIDIA eine Korrektur liefert, empfehlen die Entwickler, die Versionen 621.14, 621.24 und 621.35 zu meiden.\n\nLaut Ankündigung berichten Spieler seit 621.14 von Freezes während des Spiels, Problemen bei der Shader-Kompilierung und Rucklern. Betroffen sind einige Besitzer von Karten der RTX-40- und 50-Serie, aber nicht alle. Treiber 621.14 erschien am 4. November, 621.24 am 12. November und 621.35 als Hotfix am 20. November; der Hotfix behebt das Problem nicht. Das Team betont, dass dies nicht nur WARDOGS betrifft, denn zahlreiche andere PC-Titel zeigen mit diesen Treibern dasselbe Verhalten.\n\nAls letzten für WARDOGS bekannten stabilen Treiber nennt der Entwickler 617.42. Wer einen betroffenen Treiber nutzt und ohne Probleme spielt, muss nichts ändern. Bei Freezes oder Rucklern ist der erste Schritt der Rückgang auf 617.42. Das Team beobachtet die NVIDIA-Veröffentlichungen und meldet sich, sobald ein neuerer Treiber sicher ist.",
+    "etiketler": [
+     "#WARDOGS",
+     "#NVIDIA",
+     "#PC",
+     "#GPU"
+    ]
+   },
+   "nl": {
+    "baslik": "WARDOGS waarschuwt voor NVIDIA-drivers 621.14, 621.24 en 621.35",
+    "ozet": "De ontwikkelaar adviseert NVIDIA-drivers 621.14, 621.24 en 621.35 te mijden en bij haperingen terug te gaan naar 617.42.",
+    "metin": "Het team van WARDOGS meldt in een op 23 november op Steam geplaatste aankondiging dat sommige NVIDIA-driverversies problemen in de game veroorzaken. Totdat NVIDIA een oplossing uitbrengt, raden de ontwikkelaars aan de versies 621.14, 621.24 en 621.35 te vermijden.\n\nVolgens de aankondiging melden spelers sinds 621.14 vastlopers tijdens het spelen, problemen met shadercompilatie en haperingen. Het raakt sommige bezitters van RTX 40- en 50-videokaarten, maar niet iedereen. Driver 621.14 verscheen op 4 november, 621.24 op 12 november en 621.35, een hotfix, op 20 november; die hotfix lost het probleem niet op. Het team benadrukt dat dit niet alleen WARDOGS treft, want tal van andere pc-games vertonen met deze drivers hetzelfde gedrag.\n\nDe ontwikkelaar noemt 617.42 de laatste driver waarvan bekend is dat die stabiel werkt met WARDOGS. Gebruik je een getroffen driver en draait de game prima, dan hoef je niets te veranderen. Heb je vastlopers of haperingen, probeer dan eerst terug te gaan naar 617.42. Het team volgt de NVIDIA-releases en laat weten wanneer een nieuwere driver veilig is.",
+    "etiketler": [
+     "#WARDOGS",
+     "#NVIDIA",
+     "#PC",
+     "#GPU"
+    ]
+   },
+   "zh": {
+    "baslik": "WARDOGS提醒避开NVIDIA驱动621.14、621.24和621.35",
+    "ozet": "开发团队建议避开NVIDIA驱动621.14、621.24和621.35,游戏卡顿时可回退到617.42。",
+    "metin": "WARDOGS开发团队在11月23日于Steam发布的公告中表示,部分NVIDIA驱动版本会在游戏中引发问题。在NVIDIA发布修复之前,团队建议避开621.14、621.24和621.35这三个版本。\n\n公告称,自621.14起,玩家陆续反馈游戏过程中出现卡死、着色器编译问题和卡顿。部分RTX 40和50系列显卡用户受到影响,但并非所有人。621.14发布于11月4日,621.24发布于11月12日,621.35是11月20日发布的热修复版本,但该热修复并未解决问题。团队还指出,这并非WARDOGS独有,许多其他PC游戏在这些驱动上也出现了相同表现。\n\n开发团队表示,617.42是他们所知最后一个对WARDOGS稳定的驱动版本。如果你使用的是受影响的驱动但游戏运行正常,无需做任何改动;如果遇到卡死或卡顿,首先可以尝试回退到617.42。团队会持续关注NVIDIA的新版本,并在更新的驱动确认安全后通知玩家。",
+    "etiketler": [
+     "#WARDOGS",
+     "#NVIDIA",
+     "#PC",
+     "#GPU"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "wardogs-nvidia-621-surucu-sorunu-2026-11-23",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/1867240/view/679641571029681228",
+   "teyit_zamani": "2026-11-23T15:10:03+00:00",
+   "oyuncuya_fayda": "RTX oyuncuları takılma ve donmalarda hangi NVIDIA sürücülerinden kaçınacağını ve 617.42'ye dönebileceğini öğrenir.",
+   "hype": 3,
+   "senaryo_atlanan": {
+    "fr": "Tek düzeltme sonrası: sahneler[1].veri.maddeler[0].tetik: \"éviter\" bu sahnenin anlatımında geçmiyor"
+   },
+   "eklenme": "2026-11-23T18:17:55.488656+03:00"
+  }
+ },
+ {
   "id": "the-regreening-steam-cikis-2026-11-23",
   "oyun": "The Regreening",
   "tarih": "2026-11-23",
