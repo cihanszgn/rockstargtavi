@@ -1,5 +1,5 @@
 {
- "guncel": "2026-11-22T12:44:07Z",
+ "guncel": "2026-11-23T15:01:50Z",
  "kaynak": "https://www.cheapshark.com",
  "magazalar": [
   {
@@ -21,11 +21,6 @@
    "id": "7",
    "ad": "GOG",
    "ikon": "https://www.cheapshark.com/img/stores/icons/6.png"
-  },
-  {
-   "id": "11",
-   "ad": "Humble Store",
-   "ikon": "https://www.cheapshark.com/img/stores/icons/10.png"
   },
   {
    "id": "13",
@@ -155,6 +150,57 @@
    "enDusuk": 3.88
   },
   {
+   "dealID": "MLrlqP3OBVN2G%2B%2BuhlDAcwkf8%2FlSghW%2F%2BG7D2he6lWM%3D",
+   "gameID": "242112",
+   "title": "The Quarry Deluxe Edition",
+   "storeID": "30",
+   "salePrice": 6.99,
+   "normalPrice": 69.99,
+   "savings": 90.01,
+   "metacriticScore": 0,
+   "steamRatingText": null,
+   "steamRatingPercent": 0,
+   "steamAppID": null,
+   "releaseDate": 0,
+   "dealRating": 10.0,
+   "thumb": "https://sttc.gamersgate.com/images/product/the-quarry-deluxe-edition/cover-180-c14ad4.jpg",
+   "enDusuk": 5.86
+  },
+  {
+   "dealID": "Vxh3CX2udAzzCzvvEBrax6dN93%2F45uwRSje4RbNhiKs%3D",
+   "gameID": "261037",
+   "title": "Fairy Fencer F: Refrain Chord - Deluxe Edition",
+   "storeID": "30",
+   "salePrice": 6.99,
+   "normalPrice": 69.99,
+   "savings": 90.01,
+   "metacriticScore": 0,
+   "steamRatingText": null,
+   "steamRatingPercent": 0,
+   "steamAppID": null,
+   "releaseDate": 0,
+   "dealRating": 10.0,
+   "thumb": "https://images.greenmangaming.com/8178012beda34591830be2d4bc1268d2/57f195d5acb8494e8c28b3f273903cf3.jpg",
+   "enDusuk": 6.99
+  },
+  {
+   "dealID": "H%2FPwo1uwJLViFenAyTCaQROFtbvdShesBLajq01BrGk%3D",
+   "gameID": "304593",
+   "title": "Touhou Spell Carnival Deluxe Edition",
+   "storeID": "30",
+   "salePrice": 6.99,
+   "normalPrice": 69.99,
+   "savings": 90.01,
+   "metacriticScore": 0,
+   "steamRatingText": null,
+   "steamRatingPercent": 0,
+   "steamAppID": null,
+   "releaseDate": 0,
+   "dealRating": 10.0,
+   "thumb": "https://images.greenmangaming.com/1837294240fc448e8afa6ec2c11cd29e/8090bc416fe74039a2c1cd3d0807eeff.jpg",
+   "enDusuk": 6.99
+  },
+  {
    "dealID": "tbfhAnpKWgIw3AyPA%2BDmIaYpwSY8JzEReS2X69F3zo4%3D",
    "gameID": "165849",
    "title": "The Incredible Adventures of Van Helsing Anthology",
@@ -170,23 +216,6 @@
    "dealRating": 10.0,
    "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/subs/75825/capsule_231x87.jpg?t=1705948029",
    "enDusuk": 2.81
-  },
-  {
-   "dealID": "OdCKe107lqKxgMVPq1CjObTbgF0lF3ewrwLsKibrAS8%3D",
-   "gameID": "242112",
-   "title": "The Quarry Deluxe Edition",
-   "storeID": "23",
-   "salePrice": 5.9,
-   "normalPrice": 69.99,
-   "savings": 91.57,
-   "metacriticScore": 0,
-   "steamRatingText": null,
-   "steamRatingPercent": 0,
-   "steamAppID": null,
-   "releaseDate": 0,
-   "dealRating": 10.0,
-   "thumb": "https://sttc.gamersgate.com/images/product/the-quarry-deluxe-edition/cover-180-c14ad4.jpg",
-   "enDusuk": 5.86
   },
   {
    "dealID": "OdeM7qNg%2BMU8PRSFbbLMRYEP33iCTpZ%2BoG1PLLyuG%2Bw%3D",
@@ -323,40 +352,6 @@
    "dealRating": 10.0,
    "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/subs/648168/capsule_231x87.jpg?t=1773778564",
    "enDusuk": 5.59
-  },
-  {
-   "dealID": "qFFYG2UOLm1MV%2B7qHh8b2e6cfCFHmTNmwmU8u3jGIL0%3D",
-   "gameID": "261037",
-   "title": "Fairy Fencer F: Refrain Chord - Deluxe Edition",
-   "storeID": "3",
-   "salePrice": 7.0,
-   "normalPrice": 69.99,
-   "savings": 90.0,
-   "metacriticScore": 0,
-   "steamRatingText": null,
-   "steamRatingPercent": 0,
-   "steamAppID": null,
-   "releaseDate": 0,
-   "dealRating": 10.0,
-   "thumb": "https://images.greenmangaming.com/8178012beda34591830be2d4bc1268d2/57f195d5acb8494e8c28b3f273903cf3.jpg",
-   "enDusuk": 6.99
-  },
-  {
-   "dealID": "KIM2asA4Qen1pHvKMkZp%2FdMilBVjrVxiSspydSYo%2BSo%3D",
-   "gameID": "304593",
-   "title": "Touhou Spell Carnival Deluxe Edition",
-   "storeID": "3",
-   "salePrice": 7.0,
-   "normalPrice": 69.99,
-   "savings": 90.0,
-   "metacriticScore": 0,
-   "steamRatingText": null,
-   "steamRatingPercent": 0,
-   "steamAppID": null,
-   "releaseDate": 0,
-   "dealRating": 10.0,
-   "thumb": "https://images.greenmangaming.com/1837294240fc448e8afa6ec2c11cd29e/8090bc416fe74039a2c1cd3d0807eeff.jpg",
-   "enDusuk": 6.99
   },
   {
    "dealID": "1FgTMMUmnTfwWDP8weQUh35nmwjV0PXWMZVkdRscq9o%3D",
