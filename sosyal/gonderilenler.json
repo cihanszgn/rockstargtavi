@@ -871,6 +871,21 @@
   "url": "https://www.youtube.com/shorts/_XGW5efe5x8",
   "zaman": "2026-11-18T09:03:45+00:00"
  },
+ "gta-vi-xbox-cloud-remote-play-rehberi|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 6811592,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "gta-vi-xbox-cloud-remote-play-2026-11-23",
+  "kapak_not": "küçük resim yüklenmedi: POST https://www.googleapis.com/upload/youtube/v3/thumbnails/set → HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"The user has uploaded too many thumbnails recently. Please try the request again later.\",\n    \"errors\": [\n      {\n        \"message\": \"The user has uploaded too many thumbnails recently. Please tr",
+  "kimlik": "dD8b0eNa7Us",
+  "niyet_zamani": "2026-11-24T10:44:38+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg0yFsoEISfmQ2Iw1NxkdMk-W_pnaaYUf3rKuSaiFv6afvw0F4WcZ7W613xoG4Zi2tf4N7bui4O1SsyN9pd2BG8TSfdRSGOi99sLbghMUKI",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/dD8b0eNa7Us",
+  "zaman": "2026-11-24T10:44:38+00:00"
+ },
  "here-comes-the-horde-1-2-0-prestij-sistemi|tr|instagram|gorsel": {
   "bicim": "gorsel",
   "dil": "tr",
