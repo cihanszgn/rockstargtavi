@@ -440,13 +440,8 @@
      "#Komixsi"
     ]
    },
-   "onay": {
-    "metin_ozeti": "f9765ff76f3a6ebdc1119ac15b64181f3f77e7320eeaf00e3c8e5ab8d1dd3db4",
-    "otomatik": true,
-    "ozet": "8c7677b33a670af1b1bb27ae3e346b44da6e85ff389d97e6ad0d89f32828a339",
-    "zaman": "2026-11-23T18:51:21Z"
-   },
    "otomatik": true,
+   "otomatik_red": true,
    "oyun": "Just Chatting",
    "paket": "cikti/jahrein-20261116-82e22279/klip-02.json",
    "sure": 45.33,
