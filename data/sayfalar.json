@@ -32,7 +32,7 @@
 "2026-11-19"
 ],
 "de/index.html": [
-"5677cfaf59bf",
+"da751cde3b1a",
 "2026-11-24"
 ],
 "de/kostenlose-spiele.html": [
@@ -120,7 +120,7 @@
 "2026-11-16"
 ],
 "de/spiele-news.html": [
-"05c1eac749a5",
+"64f6513fc5a5",
 "2026-11-24"
 ],
 "de/spiele/apex-legends.html": [
@@ -141,6 +141,10 @@
 ],
 "de/spiele/counter-strike-2.html": [
 "2ea42d06998c",
+"2026-11-24"
+],
+"de/spiele/dead-by-daylight.html": [
+"4a87c9c64542",
 "2026-11-24"
 ],
 "de/spiele/delta-force.html": [
@@ -188,7 +192,7 @@
 "2026-11-16"
 ],
 "de/spiele/index.html": [
-"a1386a19bf20",
+"c576d4eb9c58",
 "2026-11-24"
 ],
 "de/spiele/knight-online.html": [
@@ -340,7 +344,7 @@
 "2026-11-24"
 ],
 "de/thema/tur-guncelleme.html": [
-"8f0befeba6ed",
+"fdbbbe9fbc9d",
 "2026-11-24"
 ],
 "de/thema/tur-haber.html": [
@@ -364,11 +368,15 @@
 "2026-11-22"
 ],
 "de/thema/xbox.html": [
-"baac1c40f35a",
+"62d819e84a80",
+"2026-11-24"
+],
+"de/thema/xboxone.html": [
+"ce2af88cf828",
 "2026-11-24"
 ],
 "de/thema/xboxseriesxs.html": [
-"25e372872d33",
+"c37e8ac28555",
 "2026-11-24"
 ],
 "de/ueber-uns.html": [
@@ -396,7 +404,7 @@
 "2026-11-24"
 ],
 "en/game-news.html": [
-"23b640430e26",
+"92fe34df7bce",
 "2026-11-24"
 ],
 "en/game/apex-legends.html": [
@@ -417,6 +425,10 @@
 ],
 "en/game/counter-strike-2.html": [
 "333b8a776737",
+"2026-11-24"
+],
+"en/game/dead-by-daylight.html": [
+"ca53008259b3",
 "2026-11-24"
 ],
 "en/game/delta-force.html": [
@@ -464,7 +476,7 @@
 "2026-11-16"
 ],
 "en/game/index.html": [
-"90f77fcb9402",
+"a42664d13c4c",
 "2026-11-24"
 ],
 "en/game/knight-online.html": [
@@ -632,7 +644,7 @@
 "2026-11-22"
 ],
 "en/index.html": [
-"5f2ab2a446a6",
+"c3560bdbfab7",
 "2026-11-24"
 ],
 "en/languages.html": [
@@ -720,7 +732,7 @@
 "2026-11-24"
 ],
 "en/tag/tur-guncelleme.html": [
-"9399ede93ed0",
+"960bdc1a7913",
 "2026-11-24"
 ],
 "en/tag/tur-haber.html": [
@@ -744,11 +756,15 @@
 "2026-11-22"
 ],
 "en/tag/xbox.html": [
-"3e3240b59ddf",
+"3f3b3d026fe7",
+"2026-11-24"
+],
+"en/tag/xboxone.html": [
+"a7f74ee345b3",
 "2026-11-24"
 ],
 "en/tag/xboxseriesxs.html": [
-"a2a5ae3405a6",
+"21ce60a36123",
 "2026-11-24"
 ],
 "es/about.html": [
@@ -840,7 +856,7 @@
 "2026-11-09"
 ],
 "es/index.html": [
-"84a039806700",
+"41c750c6babc",
 "2026-11-24"
 ],
 "es/juego/apex-legends.html": [
@@ -861,6 +877,10 @@
 ],
 "es/juego/counter-strike-2.html": [
 "4674d6bc0633",
+"2026-11-24"
+],
+"es/juego/dead-by-daylight.html": [
+"242c8760d740",
 "2026-11-24"
 ],
 "es/juego/delta-force.html": [
@@ -908,7 +928,7 @@
 "2026-11-16"
 ],
 "es/juego/index.html": [
-"b14cc67b3484",
+"7dbd3a4da6e5",
 "2026-11-24"
 ],
 "es/juego/knight-online.html": [
@@ -1008,7 +1028,7 @@
 "2026-11-17"
 ],
 "es/noticias-juegos.html": [
-"54ec52d8559a",
+"6c86e3fe5d6f",
 "2026-11-24"
 ],
 "es/ofertas.html": [
@@ -1088,7 +1108,7 @@
 "2026-11-24"
 ],
 "es/tema/tur-guncelleme.html": [
-"a8d005d3a779",
+"9ca10bf9e9d3",
 "2026-11-24"
 ],
 "es/tema/tur-haber.html": [
@@ -1112,11 +1132,15 @@
 "2026-11-22"
 ],
 "es/tema/xbox.html": [
-"3fbe4c97c5a0",
+"b406434a65d5",
+"2026-11-24"
+],
+"es/tema/xboxone.html": [
+"d7ae7795fdd7",
 "2026-11-24"
 ],
 "es/tema/xboxseriesxs.html": [
-"29147fddc938",
+"192e90fb86da",
 "2026-11-24"
 ],
 "etiket/blizzard.html": [
@@ -1180,7 +1204,7 @@
 "2026-11-24"
 ],
 "etiket/tur-guncelleme.html": [
-"d47681a36de4",
+"785f13c023b8",
 "2026-11-24"
 ],
 "etiket/tur-haber.html": [
@@ -1204,11 +1228,15 @@
 "2026-11-22"
 ],
 "etiket/xbox.html": [
-"f5ecf721e405",
+"7fbef461bf0c",
+"2026-11-24"
+],
+"etiket/xboxone.html": [
+"169fba5adcfb",
 "2026-11-24"
 ],
 "etiket/xboxseriesxs.html": [
-"3670b79e89ac",
+"986f98fb2d08",
 "2026-11-24"
 ],
 "fr/about.html": [
@@ -1216,7 +1244,7 @@
 "2026-11-15"
 ],
 "fr/actus-jeux.html": [
-"2cdf3a0f47b6",
+"8c6b8d4082ce",
 "2026-11-24"
 ],
 "fr/calendrier-sorties.html": [
@@ -1304,7 +1332,7 @@
 "2026-11-22"
 ],
 "fr/index.html": [
-"f737d71c9c78",
+"bb2ff6c7ed25",
 "2026-11-24"
 ],
 "fr/jeu/apex-legends.html": [
@@ -1325,6 +1353,10 @@
 ],
 "fr/jeu/counter-strike-2.html": [
 "64233147a2dc",
+"2026-11-24"
+],
+"fr/jeu/dead-by-daylight.html": [
+"7d0a81a267b0",
 "2026-11-24"
 ],
 "fr/jeu/delta-force.html": [
@@ -1372,7 +1404,7 @@
 "2026-11-16"
 ],
 "fr/jeu/index.html": [
-"ee54557200d8",
+"daabab0e432e",
 "2026-11-24"
 ],
 "fr/jeu/knight-online.html": [
@@ -1548,7 +1580,7 @@
 "2026-11-24"
 ],
 "fr/sujet/tur-guncelleme.html": [
-"c4e4e5660ec5",
+"6cb29c0f0ec4",
 "2026-11-24"
 ],
 "fr/sujet/tur-haber.html": [
@@ -1572,11 +1604,15 @@
 "2026-11-22"
 ],
 "fr/sujet/xbox.html": [
-"c489e3c41164",
+"d3fc711c449f",
+"2026-11-24"
+],
+"fr/sujet/xboxone.html": [
+"350001c11968",
 "2026-11-24"
 ],
 "fr/sujet/xboxseriesxs.html": [
-"d49b6c7664db",
+"54c4440ad7cc",
 "2026-11-24"
 ],
 "gizlilik.html": [
@@ -1616,7 +1652,7 @@
 "2026-11-15"
 ],
 "index.html": [
-"60eb205c8785",
+"16abe3db9fb6",
 "2026-11-24"
 ],
 "indirimler.html": [
@@ -1636,7 +1672,7 @@
 "2026-11-16"
 ],
 "nl/gamenieuws.html": [
-"717cd14d98d0",
+"fc78bab46617",
 "2026-11-24"
 ],
 "nl/games/apex-legends.html": [
@@ -1657,6 +1693,10 @@
 ],
 "nl/games/counter-strike-2.html": [
 "67e641711493",
+"2026-11-24"
+],
+"nl/games/dead-by-daylight.html": [
+"47cda0ca4667",
 "2026-11-24"
 ],
 "nl/games/delta-force.html": [
@@ -1704,7 +1744,7 @@
 "2026-11-16"
 ],
 "nl/games/index.html": [
-"03ee3eaa17a9",
+"4786df8c44f6",
 "2026-11-24"
 ],
 "nl/games/knight-online.html": [
@@ -1876,7 +1916,7 @@
 "2026-11-19"
 ],
 "nl/index.html": [
-"b1c6873ee2d7",
+"93028e07ed1e",
 "2026-11-24"
 ],
 "nl/nieuws.html": [
@@ -1944,7 +1984,7 @@
 "2026-11-24"
 ],
 "nl/onderwerp/tur-guncelleme.html": [
-"f8c4d565775e",
+"1dc0412e3f68",
 "2026-11-24"
 ],
 "nl/onderwerp/tur-haber.html": [
@@ -1968,11 +2008,15 @@
 "2026-11-22"
 ],
 "nl/onderwerp/xbox.html": [
-"0b11852b9689",
+"6f8e06e895a9",
+"2026-11-24"
+],
+"nl/onderwerp/xboxone.html": [
+"5ec024d639ae",
 "2026-11-24"
 ],
 "nl/onderwerp/xboxseriesxs.html": [
-"cf121287f633",
+"36a554b1c577",
 "2026-11-24"
 ],
 "nl/over-ons.html": [
@@ -1996,7 +2040,7 @@
 "2026-11-16"
 ],
 "oyun-haberleri.html": [
-"274edf6c4700",
+"3bd7decbab27",
 "2026-11-24"
 ],
 "oyun/apex-legends.html": [
@@ -2017,6 +2061,10 @@
 ],
 "oyun/counter-strike-2.html": [
 "f5f689fec758",
+"2026-11-24"
+],
+"oyun/dead-by-daylight.html": [
+"1705da6c0c00",
 "2026-11-24"
 ],
 "oyun/delta-force.html": [
@@ -2064,7 +2112,7 @@
 "2026-11-16"
 ],
 "oyun/index.html": [
-"a3840129683b",
+"5abe19cf81a9",
 "2026-11-24"
 ],
 "oyun/knight-online.html": [
@@ -2396,7 +2444,7 @@
 "2026-11-24"
 ],
 "zh/huati/tur-guncelleme.html": [
-"cb2f0166faf4",
+"db4076e9350d",
 "2026-11-24"
 ],
 "zh/huati/tur-haber.html": [
@@ -2420,15 +2468,19 @@
 "2026-11-22"
 ],
 "zh/huati/xbox.html": [
-"d9412390a77c",
+"3086323a61fa",
+"2026-11-24"
+],
+"zh/huati/xboxone.html": [
+"54133be9be77",
 "2026-11-24"
 ],
 "zh/huati/xboxseriesxs.html": [
-"f1f683db16bf",
+"cc46af694e89",
 "2026-11-24"
 ],
 "zh/index.html": [
-"17cc56ef5102",
+"8ba8882265ec",
 "2026-11-24"
 ],
 "zh/laiyuan.html": [
@@ -2452,7 +2504,7 @@
 "2026-11-24"
 ],
 "zh/youxi-xinwen.html": [
-"54312d630f63",
+"07ff986e76ff",
 "2026-11-24"
 ],
 "zh/youxi/apex-legends.html": [
@@ -2473,6 +2525,10 @@
 ],
 "zh/youxi/counter-strike-2.html": [
 "1dd422ef0378",
+"2026-11-24"
+],
+"zh/youxi/dead-by-daylight.html": [
+"d49519f01f49",
 "2026-11-24"
 ],
 "zh/youxi/delta-force.html": [
@@ -2520,7 +2576,7 @@
 "2026-11-16"
 ],
 "zh/youxi/index.html": [
-"d4488bccd96f",
+"aa1f601aaeed",
 "2026-11-24"
 ],
 "zh/youxi/knight-online.html": [

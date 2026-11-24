@@ -1,0 +1,128 @@
+{
+ "id": "dead-by-daylight-terrifier-killer-2026-11-24",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Dead by Daylight'a Art the Clown geliyor: Terrifier bugün Xbox'ta.",
+   "veri": {
+    "ust_etiket": "YENİ KATİL",
+    "baslik": "Dead by Daylight'a Terrifier geldi",
+    "vurgu": [
+     "Terrifier"
+    ],
+    "tuslar": [
+     "A",
+     "R",
+     "T"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "DEAD BY DAYLIGHT",
+    "alt": "ART THE CLOWN"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Art'ın çantasından alev makinesi, topuz ve asitli bira şişesi çıkıyor; her isabet silahı güçlendirir.",
+   "veri": {
+    "baslik": "Çuvaldan çıkan silahlar",
+    "maddeler": [
+     {
+      "metin": "Alev makinesi ve topuz",
+      "tetik": "alev"
+     },
+     {
+      "metin": "Ateşli silah ve asitli şişe",
+      "tetik": "asitli"
+     },
+     {
+      "metin": "Her isabet silahı güçlendirir",
+      "tetik": "isabet"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "BAG OF TOYS",
+    "alt": "ALEV, TOPUZ, ASİT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Xbox Wire'a göre Art'ın emote'ları da silahlarını güçlendiriyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Xbox Wire",
+    "alinti": "Bir Survivor'ı yere serdikten ya da kancaya astıktan sonra ona emote yapmak, Art'ın tüm silahlarını güçlendirir."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "XBOX WIRE • DUYURU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Art'ın her silahına özel bir Mini-Mori var; iki ek infazla toplam yedi infaz.",
+   "veri": {
+    "baslik": "Yedi infaz, yeni rekor",
+    "maddeler": [
+     {
+      "metin": "Her silaha özel Mini-Mori",
+      "tetik": "Mini-Mori"
+     },
+     {
+      "metin": "İki ek infaz daha",
+      "tetik": "ek"
+     },
+     {
+      "metin": "Toplam yedi infaz, seride rekor",
+      "tetik": "yedi"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "YEDİ İNFAZ",
+    "alt": "SERİDE YENİ REKOR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tüm ayrıntılar sitemizde, Control A Game'de. Art'ı ilk maçında denemek ister misin?",
+   "veri": {
+    "cagri": "Ayrıntılar sitemizde",
+    "alt": "Kaynak ve oynanış detayları haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

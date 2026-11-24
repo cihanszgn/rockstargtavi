@@ -1,0 +1,128 @@
+{
+ "id": "dead-by-daylight-terrifier-killer-2026-11-24",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Dead by Daylight adds Art the Clown today: Terrifier is out on Xbox.",
+   "veri": {
+    "ust_etiket": "NEW KILLER",
+    "baslik": "Dead by Daylight adds Art the Clown",
+    "vurgu": [
+     "Art the Clown"
+    ],
+    "tuslar": [
+     "A",
+     "R",
+     "T"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "DEAD BY DAYLIGHT",
+    "alt": "TERRIFIER"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Art's Bag of Toys pulls a flamethrower, a flail or an acid bottle, and every hit makes the weapon deadlier.",
+   "veri": {
+    "baslik": "Weapons from a trash bag",
+    "maddeler": [
+     {
+      "metin": "Flamethrower or flail",
+      "tetik": "flamethrower"
+     },
+     {
+      "metin": "Firearm or acid bottle",
+      "tetik": "acid"
+     },
+     {
+      "metin": "Every hit adds deadliness",
+      "tetik": "hit"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "BAG OF TOYS",
+    "alt": "FLAME, FLAIL, ACID"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Xbox Wire says his emotes are part of the kit too, not just self-expression.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Xbox Wire",
+    "alinti": "Emoting at a Survivor after downing or hooking them increases the deadliness of all his weapons."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "XBOX WIRE • ANNOUNCEMENT"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Each weapon has its own Mini-Mori, and two extra finishers bring seven executions, a series record.",
+   "veri": {
+    "baslik": "Seven executions",
+    "maddeler": [
+     {
+      "metin": "Own Mini-Mori per weapon",
+      "tetik": "Mini-Mori"
+     },
+     {
+      "metin": "Two extra finishers",
+      "tetik": "two"
+     },
+     {
+      "metin": "Seven executions, a series record",
+      "tetik": "seven"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "SEVEN EXECUTIONS",
+    "alt": "A SERIES RECORD"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Full details are on our site, Control A Game. Would you play Art in your first match?",
+   "veri": {
+    "cagri": "Full details on our site",
+    "alt": "Sources and gameplay details in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

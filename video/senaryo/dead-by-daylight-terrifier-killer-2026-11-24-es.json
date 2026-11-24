@@ -1,0 +1,128 @@
+{
+ "id": "dead-by-daylight-terrifier-killer-2026-11-24",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Dead by Daylight suma hoy a Art the Clown: Terrifier ya está en Xbox.",
+   "veri": {
+    "ust_etiket": "NUEVO ASESINO",
+    "baslik": "Dead by Daylight suma a Art the Clown",
+    "vurgu": [
+     "Art the Clown"
+    ],
+    "tuslar": [
+     "A",
+     "R",
+     "T"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "DEAD BY DAYLIGHT",
+    "alt": "TERRIFIER"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Su Bag of Toys saca un lanzallamas, un mayal o una botella de ácido, y cada golpe la hace más letal.",
+   "veri": {
+    "baslik": "Armas de una bolsa",
+    "maddeler": [
+     {
+      "metin": "Lanzallamas o mayal",
+      "tetik": "lanzallamas"
+     },
+     {
+      "metin": "Arma de fuego o ácido",
+      "tetik": "ácido"
+     },
+     {
+      "metin": "Cada golpe la hace más letal",
+      "tetik": "golpe"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "BAG OF TOYS",
+    "alt": "LANZALLAMAS, ÁCIDO"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Xbox Wire explica que sus emotes también forman parte de su equipo.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Xbox Wire",
+    "alinti": "Hacer un emote a un sobreviviente tras derribarlo o engancharlo aumenta la letalidad de todas sus armas."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "XBOX WIRE • ANUNCIO"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Cada arma tiene su propio Mini-Mori y dos remates extra dejan a Art con siete ejecuciones.",
+   "veri": {
+    "baslik": "Siete ejecuciones",
+    "maddeler": [
+     {
+      "metin": "Mini-Mori propio por arma",
+      "tetik": "Mini-Mori"
+     },
+     {
+      "metin": "Dos remates extra",
+      "tetik": "dos"
+     },
+     {
+      "metin": "Siete ejecuciones, récord de la serie",
+      "tetik": "siete"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "SIETE EJECUCIONES",
+    "alt": "RÉCORD DE LA SERIE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles están en nuestra web, Control A Game. ¿Jugarías con Art en tu primera partida?",
+   "veri": {
+    "cagri": "Todos los detalles en la web",
+    "alt": "Fuentes y detalles de juego en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
