@@ -4,7 +4,7 @@ import pathlib
 import sys
 import tempfile
 import unittest
-from unittest.mock import Mock
+from unittest.mock import Mock, patch
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / 'tools'))
 import yayin_klip as yk  # noqa: E402
@@ -100,6 +100,40 @@ class KlipAraligi(unittest.TestCase):
             k = yk.zirveleri_bul(sayim, AYAR, SURE)[0][0]
             self.assertLessEqual(k['sure_sn'], AYAR['klip_azami_sn'])
             self.assertGreaterEqual(k['sure_sn'], AYAR['klip_min_sn'])
+
+    def test_kisa_zirve_18_saniyeye_oturur(self):
+        ayar = {**AYAR, 'onceden_sn': 0, 'kuyruk_sn': 0}
+        sayim = patlama(duz_sohbet(), 300, 90)
+        klipler, _ = yk.zirveleri_bul(sayim, ayar, SURE)
+        self.assertEqual([klip['sure_sn'] for klip in klipler], [18])
+
+    def test_hizalanmis_klip_18_saniye_kabul_17_saniye_ret(self):
+        vod = {'platform': 'kick', 'kaynak': 'sahte.m3u8', 'sure_sn': 100,
+               'kanal': 'deneme', 'yayinci': 'Deneme'}
+        ayar = {'duzen': 'serit', 'klip_oyun_dogrula': False, 'klip_ses_yargisi': False}
+
+        def ffmpeg(komut, cwd=None, **_):
+            if cwd is not None:
+                pathlib.Path(cwd, komut[-1]).touch()
+            return Mock(returncode=0)
+
+        for bitis in (18, 17):
+            with self.subTest(bitis=bitis), tempfile.TemporaryDirectory() as d:
+                hedef = pathlib.Path(d) / 'klip.mp4'
+                klip = {'klip_baslangic_sn': 10, 'klip_bitis_sn': 29,
+                        'konusma_ses_referansi': {'dosya': 'bas.wav', 'hedef_bas_sn': 10, 'bas_sn': 0},
+                        'konusma_son_ses_referansi': {'dosya': 'son.wav', 'hedef_bitis_sn': 29, 'bas_sn': 0}}
+                hizalar = [{'ofset_sn': ofset, 'korelasyon': 1} for ofset in (0, 19 - bitis, 0, 0)]
+                with patch.object(yk.subprocess, 'run', side_effect=ffmpeg), \
+                     patch.object(yk, 'klip_dogrula', side_effect=[{'sure_sn': 19}, {'sure_sn': bitis}, {'sure_sn': bitis}]), \
+                     patch.object(yk.klip_konusma, 'dalga_hizasi', side_effect=hizalar):
+                    if bitis == 18:
+                        self.assertEqual(yk.klip_kes(vod, klip, hedef, 'ff', 'font', ayar)['sure_sn'], 18)
+                        self.assertTrue(hedef.is_file())
+                    else:
+                        with self.assertRaisesRegex(yk.KlipHatasi, '18–59 sn'):
+                            yk.klip_kes(vod, klip, hedef, 'ff', 'font', ayar)
+                        self.assertFalse(hedef.exists())
 
     def test_uzun_zirve_kumesi_azami_sureye_kirpilir(self):
         sayim = duz_sohbet()
@@ -375,6 +409,7 @@ class Ayar(unittest.TestCase):
         self.assertGreaterEqual(len(a['yayincilar']), 1)
         for y in a['yayincilar']:
             self.assertIn(y['platform'], ('kick', 'twitch', 'youtube'))
+            self.assertEqual(y['ayar']['klip_min_sn'], 18)
             self.assertLessEqual(y['ayar']['klip_azami_sn'], yk.SHORTS_AZAMI_SN)
 
     def test_calisma_dizini_env(self):

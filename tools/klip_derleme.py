@@ -268,7 +268,7 @@ def cumleye_oturt(bas: float, bit: float, cumleler: list[tuple[float, float]], a
 
 
 def kesit_araligi(klip: dict, ayar: dict) -> dict:
-    """Paket klibinin (30–55 sn) derlemelik kesiti: en yoğun bölüm.
+    """Paket klibinin derlemelik kesiti: en yoğun bölüm.
     Dönüş: bas/bit (yayının mutlak sn'si), sure, tepe (kesit içindeki an: kahkaha dalgasının başı), yontem.
     Kural: tepe = dalga_basi_sn (yoksa zirve_sn); kesit tepe−dalga_oncesi_sn'den başlar, kesit_hedef_sn sürer,
     klip aralığının dışına taşmaz; konuşma cümle sınırı varsa oraya oturur; kesit_min..max dışına çıkmaz."""

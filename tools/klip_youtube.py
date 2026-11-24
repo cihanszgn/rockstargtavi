@@ -453,10 +453,11 @@ def analiz(vod, info, dizin, cfg, ff, http):
     weight = float(cfg['youtube_heatmap_agirlik'])
     if not 0 <= weight <= 1:
         raise ValueError('youtube_heatmap_agirlik 0–1 olmalı')
+    klip_min_sn = max(k.KLIP_MIN_SN, cfg['klip_min_sn'])
     for answer in answers:
         if not answer['anlasilir'] or answer['puan'] < cfg['konusma_min_puan']:
             continue
-        bounds = k.sinira_oturt(rows, answer['bas_sn'], answer['bit_sn'], 30, cfg['konusma_azami_sn'])
+        bounds = k.sinira_oturt(rows, answer['bas_sn'], answer['bit_sn'], klip_min_sn, cfg['konusma_azami_sn'])
         if not bounds:
             continue
         a, b = bounds

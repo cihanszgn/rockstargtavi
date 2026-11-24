@@ -54,7 +54,6 @@ AYAR_VARSAYILAN = {
     'min_oran': 2.0,       # ve ortalamanın en az bu katı
     'onceden_sn': 20,      # klip zirveden bu kadar önce başlar
     'kuyruk_sn': 12,       # son zirve diliminden sonra klipte kalan süre
-    'klip_min_sn': 30,
     'klip_azami_sn': 55,   # Shorts/Reels sınırı 60 sn; pay bırakılır
     'birlestir_sn': 30,    # bu kadar yakın zirveler tek klipte birleşir
     'azami_klip': 3,       # yayın başına en çok klip
@@ -659,6 +658,8 @@ def zirveleri_bul(sayim: list[int], ayar: dict, toplam_sn: float, kalite=None) -
         if bit > toplam_sn:
             bas = max(0, bas - (bit - toplam_sn))
             bit = toplam_sn
+        if round(bit - bas, 3) < ayar['klip_min_sn']:
+            continue
         std = ist['std']
         kalite_alani = {}
         if kalite:
@@ -1058,6 +1059,8 @@ def sinyal_zirveleri(ozetler: list[dict], ayar: dict, toplam_sn: float, sf: Sini
         if bit > toplam_sn:
             bas = max(0, bas - (bit - toplam_sn))
             bit = toplam_sn
+        if round(bit - bas, 3) < ayar['klip_min_sn']:
+            continue
         kalite_alani = {}
         if kalite:
             kalite_alani = kalite(k[0] * dilim, (k[-1] + 1) * dilim)
@@ -1874,8 +1877,9 @@ def klip_kes(vod: dict, klip: dict, hedef: pathlib.Path, ff: str, font: str, aya
                     raise KlipHatasi(f'konuşma sonu güvenle eşleşmedi: {end}')
                 if abs(end['ofset_sn']) > .12:
                     sure = round(sure-end['ofset_sn'],4)
-                    if not 30 <= sure <= 59:
-                        raise KlipHatasi('hizalanmış konuşma 30–59 sn aralığına sığmıyor')
+                    klip_min_sn = max(klip_konusma.KLIP_MIN_SN, (ayar or {}).get('klip_min_sn', klip_konusma.KLIP_MIN_SN))
+                    if not klip_min_sn <= sure <= 59:
+                        raise KlipHatasi(f'hizalanmış konuşma {klip_min_sn}–59 sn aralığına sığmıyor')
                     continue
             aligned = True
             break

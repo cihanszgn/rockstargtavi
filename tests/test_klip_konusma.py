@@ -48,10 +48,19 @@ class Puan(unittest.TestCase):
 
 
 class Sinir(unittest.TestCase):
-    def test_tam_cumle_minimum(self):
+    def test_olayin_tum_cumleleri_korunur(self):
         a, b = k.sinira_oturt(sentences(), 321, 342)
-        self.assertEqual((a, b), (309.65, 349.35))
-        self.assertGreaterEqual(b-a, 30)
+        self.assertEqual((a, b), (319.65, 349.35))
+
+    def test_18_saniyelik_tam_cumle_kabul_edilir(self):
+        self.assertEqual(k.sinira_oturt([{'bas': 0, 'bit': 18}], 0, 18, maximum=18), (0, 18))
+
+    def test_17_saniyelik_tek_cumle_reddedilir(self):
+        self.assertIsNone(k.sinira_oturt([{'bas': 0, 'bit': 17}], 0, 17))
+
+    def test_20_saniyelik_olaya_komsu_cumleler_eklenmez(self):
+        rows = [{'bas': 20, 'bit': 30}, {'bas': 31, 'bit': 51}, {'bas': 52, 'bit': 64}]
+        self.assertEqual(k.sinira_oturt(rows, 31, 51), (30.65, 51.35))
 
     def test_uzun_olay_kesilmez(self):
         self.assertIsNone(k.sinira_oturt(sentences(), 310, 390))
@@ -145,6 +154,14 @@ class ModelYaniti(unittest.TestCase):
 
 
 class Katman(unittest.TestCase):
+    def test_canli_kisa_olay_icin_kurulum_eklenmez(self):
+        rows = [{'bas': 322, 'bit': 342, 'metin': 'Yanlış kapıyı açınca şaşırdı.'}]
+        with tempfile.TemporaryDirectory() as d:
+            clips, _ = k.katman(VOD, [aday()], d, CFG, 'ff', None, canli=True,
+                model=lambda _: json.dumps(answer(bas_cumle=0, son_cumle=0)),
+                dokumcu=lambda *a: (rows, []))
+        self.assertEqual([clip['sure_sn'] for clip in clips], [20.7])
+
     def test_canli_henuz_tamamlanmamis_ses_izgarasini_bekler(self):
         dok = Mock(side_effect=AssertionError('henüz dökülmemeli'))
         clips, report = k.katman({**VOD, 'sure_sn': 385}, [aday()], '.', CFG, 'ff', None,

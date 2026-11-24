@@ -23,7 +23,10 @@ import wave
 from datetime import datetime
 from urllib.parse import urljoin
 
+KLIP_MIN_SN = 18
+
 AYAR = {
+    'klip_min_sn': KLIP_MIN_SN,
     'konusma': False,
     'konusma_model': 'large-v3-turbo',
     'konusma_cihaz': 'auto',
@@ -390,7 +393,7 @@ def puan_birlestir(sohbet, konusma, ayar):
     return round((a * min(100, max(0, sohbet)) + b * konusma * 10) / (a + b), 3)
 
 
-def sinira_oturt(sentences, bas, bit, minimum=30, maximum=59):
+def sinira_oturt(sentences, bas, bit, minimum=KLIP_MIN_SN, maximum=59):
     """Olayın tamamını kapsayan en yakın TAM cümle çifti; sığmıyorsa kesmez.
     Sayısal süreyi doldurmak için cümle ortasına rastgele saniye eklenmez.
     """
@@ -684,7 +687,8 @@ sarılma sahnesi takıldı = 4.
 gerçek absürtlük ya da beklenmedik bir dönüş varsa ver. 8 güçlü, 9 çok güçlü,
 10 istisnai. Bu puanlar için gerekçede espriyi ya da dönüşü taşıyan kısa sözü
 dökümden aynen alıntıla ve neden işe yaradığını söyle. Kanıt yoksa 7'yi aşma.
-Olayın kurulumunu ve sonucunu içeren cümle ID'lerini seç. Klip 30–59 sn olmalı.
+Olayı anlamak için gerekli cümlelerin ve sonucun ID'lerini seç. Klip 18–59 sn olmalı.
+Espri kısa ise klibi kısa tut, gereksiz kurulum ekleme.
 Çıkış yalnız JSON, her an şu şemada:
 {"puan":7,"gerekce":"somut kısa Türkçe gerekçe","anlasilir":true,
 "bas_cumle":0,"son_cumle":5,"baslik":"Klipte olanı anlatan tek Türkçe cümle"}.
@@ -970,6 +974,9 @@ def katman(vod, adaylar, dizin, ayar, ff, http, canli=False, engelli=(),
         if not valid_count:
             raise RuntimeError('dil modeli geçerli yargı veremedi')
         combined = []
+        klip_min_sn = max(KLIP_MIN_SN, cfg['klip_min_sn'])
+        klip_azami_sn = cfg.get('klip_azami_sn', 55)
+        konusma_azami_sn = min(59, cfg['konusma_azami_sn'])
         for k, answer in judged:
             decision = {key: k[key] for key in ('zirve_sn', 'klip_baslangic_sn', 'klip_bitis_sn')}
             item = {**k, 'sohbet_puani': k['puan'], 'kaynaklar': k.get('kaynaklar', ['sohbet'])}
@@ -982,12 +989,13 @@ def katman(vod, adaylar, dizin, ayar, ff, http, canli=False, engelli=(),
                     report['kararlar'].append({**decision, 'sonuc': 'içerik vetosu', 'yargi': answer})
                     continue
                 bounds = sinira_oturt(sentences, answer['bas_sn'], answer['bit_sn'],
-                                      max(30, cfg.get('klip_min_sn', 30)), min(cfg.get('klip_azami_sn', 55), cfg['konusma_azami_sn']))
-                if bounds is None and cfg['konusma_azami_sn'] > cfg.get('klip_azami_sn', 55):
+                                      klip_min_sn, min(klip_azami_sn, konusma_azami_sn))
+                if bounds is None and konusma_azami_sn > klip_azami_sn:
                     bounds = sinira_oturt(sentences, answer['bas_sn'], answer['bit_sn'],
-                                          max(30, cfg.get('klip_min_sn', 30)), cfg['konusma_azami_sn'])
+                                          klip_min_sn, konusma_azami_sn)
                 if bounds is None:
-                    report['kararlar'].append({**decision, 'sonuc': '30–59 sn tam cümle aralığı yok', 'yargi': answer})
+                    report['kararlar'].append({**decision, 'yargi': answer,
+                        'sonuc': f'{klip_min_sn}–{konusma_azami_sn} sn tam cümle aralığı yok'})
                     continue
                 a, b = bounds
                 gaps = report['dokum_olcumleri'][0].get('hls_kesintileri', []) if report['dokum_olcumleri'] else []
