@@ -1,0 +1,125 @@
+{
+ "id": "apex-legends-javelin-anti-cheat-2026-11-24",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Javelin de Apex Legends banea un 51% más de tramposos.",
+   "veri": {
+    "ust_etiket": "ACTUALIZACIÓN ANTI-TRAMPAS",
+    "baslik": "Javelin banea 51% más de tramposos",
+    "vurgu": [
+     "51%"
+    ],
+    "tuslar": [
+     "A",
+     "P",
+     "X"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "APEX LEGENDS",
+    "alt": "JAVELIN ANTI-TRAMPAS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según el anuncio oficial en Steam, el anti-trampas de PC pasó a EA Javelin a finales de septiembre.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Anuncio oficial en Steam",
+    "alinti": "El anti-trampas de PC pasó a EA Javelin a finales de septiembre."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "APEX LEGENDS • ANUNCIO STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Al lanzamiento, Javelin baneó unos 4.000 tramposos al día. Los baneos de hardware llegaron a 25.236, y la sanción que tardaba hasta cuatro horas ahora llega en una sola partida.",
+   "veri": {
+    "baslik": "Sanciones más rápidas",
+    "maddeler": [
+     {
+      "metin": "Unos 4.000 baneos al día",
+      "tetik": "4.000"
+     },
+     {
+      "metin": "25.236 baneos de hardware",
+      "tetik": "25.236"
+     },
+     {
+      "metin": "Sanción en una sola partida",
+      "tetik": "sola"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "SANCIONES MÁS RÁPIDAS",
+    "alt": "4.000 AL DÍA EN EL LANZAMIENTO"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Javelin banea un 51% más de tramposos que el sistema anterior, y la actualización es para PC.",
+   "veri": {
+    "baslik": "Resultados de Javelin",
+    "platformlar": [
+     "PC"
+    ],
+    "sayilar": [
+     {
+      "deger": "51",
+      "etiket": "% MÁS BANEOS",
+      "tetik": "51%"
+     }
+    ],
+    "not": "Válido para jugadores de PC."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PC",
+    "alt": "PROTECCIÓN A NIVEL DE KERNEL"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Crees que las sanciones ya son lo bastante rápidas?",
+   "veri": {
+    "cagri": "Todos los detalles en nuestra web",
+    "alt": "¿Crees que las sanciones ya son lo bastante rápidas?"
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,125 @@
+{
+ "id": "apex-legends-javelin-anti-cheat-2026-11-24",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Apex Legends'ta Javelin %51 daha fazla hileci yasaklıyor.",
+   "veri": {
+    "ust_etiket": "ANTİ-HİLE GÜNCELLEMESİ",
+    "baslik": "Javelin %51 daha fazla hileci yasaklıyor",
+    "vurgu": [
+     "%51"
+    ],
+    "tuslar": [
+     "A",
+     "P",
+     "X"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "APEX LEGENDS",
+    "alt": "JAVELIN ANTİ-HİLE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam'deki resmî duyuruya göre PC anti-hile sistemi eylül sonunda Javelin'e geçti.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam resmî duyurusu",
+    "alinti": "PC anti-hile sistemi eylül sonunda EA Javelin'e geçirildi."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "APEX LEGENDS • STEAM DUYURUSU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Lansmanda günde 4.000 hileci yasaklandı. Donanım yasağı 25.236'ya ulaştı, tespit sonrası bekleme ise tek maça indi.",
+   "veri": {
+    "baslik": "Yaptırım hızlandı",
+    "maddeler": [
+     {
+      "metin": "Lansmanda günde 4.000 yasak",
+      "tetik": "4.000"
+     },
+     {
+      "metin": "Donanım yasağı: 25.236",
+      "tetik": "Donanım"
+     },
+     {
+      "metin": "Tespit sonrası tek maç",
+      "tetik": "tek"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "YAPTIRIM HIZLANDI",
+    "alt": "LANSMANDA GÜNDE 4.000"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Javelin, önceki sisteme göre yüzde 51 daha fazla hileci yasaklıyor; açıklama PC için geçerli.",
+   "veri": {
+    "baslik": "Javelin sonuçları",
+    "platformlar": [
+     "PC"
+    ],
+    "sayilar": [
+     {
+      "deger": "51",
+      "etiket": "% DAHA FAZLA YASAK",
+      "tetik": "51"
+     }
+    ],
+    "not": "Güncelleme PC oyuncularını ilgilendiriyor."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PC",
+    "alt": "KERNEL SEVİYESİNDE KORUMA"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Sizce hile tespiti yeterince hızlı mı?",
+   "veri": {
+    "cagri": "Tamamı sitemizde",
+    "alt": "Sizce hile tespiti yeterince hızlı mı?"
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

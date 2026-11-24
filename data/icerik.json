@@ -1,5 +1,108 @@
 [
  {
+  "id": "apex-legends-javelin-anti-cheat-2026-11-24",
+  "oyun": "Apex Legends",
+  "tarih": "2026-11-24",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Apex Legends Steam duyurusu",
+    "url": "https://steamcommunity.com/games/1172470/announcements/detail/680767470935475787"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Apex Legends'ta Javelin %51 daha fazla hileci yasaklıyor",
+    "ozet": "Steam'deki resmî duyuruya göre EA'nın Javelin anti-hile sistemi iki ayda yasak sayısını artırdı, hile tespitinden yaptırıma kadar geçen süre ise kısaldı.",
+    "metin": "Apex Legends'ın PC anti-hile sistemi eylül sonunda EA Javelin'e geçirildi. Geliştirici ekip, geçişin iki aylık sonuçlarını Steam'deki resmî duyuruda paylaştı.\n\nAçıklamaya göre Javelin lansmanda günde yaklaşık 4.000 hileciyi yasakladı. Sistem, eski anti-hile sistemine göre %51 daha fazla hileci yasaklıyor. Donanım yasakları da 25.236 sayısına ulaştı. Ekip, tespit edilen bazı hilecilerin maçlarda dört saate kadar kalabildiğini kabul etti; yeni sistemle bu süre tek maça kadar kısaldı. Ayrıca yaklaşık 1.000 hatalı yasak tespit edilip geri alındı ve bazı cihazları yanlış işaretleyen donanım yasağı hatası düzeltildi.\n\nJavelin, çekirdek (kernel) seviyesinde çalışarak sanal makine, DMA donanımı ve kötü amaçlı sürücülere karşı daha derin koruma sağlıyor. Uyumluluk risklerini azaltmak için EA, sistemi başlangıçta bazı alt seviye korumalar kapalıyken açtı ve zamanla yenilerini etkinleştirdi. Lansmanın hemen ardından EA App'te bir sorun çıktı, ertesi gün çözüldü.\n\nOyuncular için en somut değişiklik, hile tespitinden yaptırıma kadar geçen sürenin kısalması. Ekip ise hilecilerin hâlâ karşılaşıldığını ve daha fazla koruma eklenmesi gerektiğini kabul ediyor.",
+    "etiketler": [
+     "#ApexLegends",
+     "#EA",
+     "#Javelin",
+     "#PC"
+    ]
+   },
+   "en": {
+    "baslik": "Apex Legends' Javelin anti-cheat now bans 51% more cheaters",
+    "ozet": "According to the official Steam post, EA's Javelin anti-cheat has issued more bans in two months, and the time from detection to enforcement has shrunk.",
+    "metin": "Apex Legends moved its PC anti-cheat system to EA Javelin at the end of September. Two months later, the team published a review of the transition on Steam.\n\nAt launch, Javelin was banning about 4,000 cheaters per day. Overall, it now bans 51% more cheaters than the previous system, and 25,236 hardware bans have been issued since launch. The team admitted that some identified cheaters could stay in matches for up to four hours. A new system has cut that window to as little as a single match. About 1,000 false bans were reversed earlier, and a hardware-ban error that flagged certain devices has been fixed.\n\nJavelin runs at kernel level, giving deeper protection against virtualization, DMA hardware and malicious drivers. To limit compatibility risk, EA first launched with some lower-level protections disabled and enabled more over time. An issue affecting the EA App appeared shortly after launch and was fixed the next day.\n\nFor players, the most visible change is faster enforcement, though the team says more work remains. Cheaters are still encountered, and more protections are planned as confidence in compatibility grows.",
+    "etiketler": [
+     "#ApexLegends",
+     "#EA",
+     "#Javelin",
+     "#PC"
+    ]
+   },
+   "es": {
+    "baslik": "Javelin banea un 51% más de tramposos en Apex Legends",
+    "ozet": "Según el anuncio oficial en Steam, el anti-trampas Javelin de EA ha emitido más baneos en dos meses y las sanciones llegan ahora más rápido.",
+    "metin": "Apex Legends trasladó su sistema anti-trampas de PC a EA Javelin a finales de septiembre. Dos meses después, el equipo publicó en Steam un balance de la transición.\n\nAl lanzamiento, Javelin llegó a banear unos 4.000 tramposos al día. En conjunto, banea un 51% más de tramposos que el sistema anterior, y desde su lanzamiento se han emitido 25.236 baneos de hardware. El equipo reconoce que algunos tramposos identificados podían seguir en partidas hasta cuatro horas. Con un nuevo sistema, ese plazo se ha reducido hasta una sola partida. Además, se revirtieron unos 1.000 baneos falsos y se corrigió un fallo que marcaba ciertos dispositivos por error.\n\nJavelin funciona a nivel de kernel, lo que ofrece más protección frente a la virtualización, el hardware DMA y los controladores maliciosos. Para evitar problemas de compatibilidad, EA lo activó por fases y añadió protecciones con el tiempo. Poco después del lanzamiento surgió un problema con la EA App, que se resolvió al día siguiente.\n\nPara los jugadores, el cambio más visible es una respuesta más rápida ante los tramposos, aunque el equipo admite que aún queda trabajo. La empresa seguirá ampliando la cobertura a medida que gane confianza en la compatibilidad.",
+    "etiketler": [
+     "#ApexLegends",
+     "#EA",
+     "#Javelin",
+     "#PC"
+    ]
+   },
+   "fr": {
+    "baslik": "Apex Legends : Javelin bannit 51 % de tricheurs en plus",
+    "ozet": "Selon l'annonce officielle sur Steam, l'anti-triche Javelin d'EA a banni davantage de joueurs en deux mois et les sanctions arrivent plus vite.",
+    "metin": "Apex Legends a confié son anti-triche PC à EA Javelin fin septembre. Deux mois plus tard, l'équipe a publié sur Steam un bilan de cette transition.\n\nAu lancement, Javelin bannissait environ 4 000 tricheurs par jour. Au total, il bannit 51 % de tricheurs de plus que l'ancien système, et 25 236 bannissements matériels ont été prononcés depuis le lancement. L'équipe reconnaît que certains tricheurs identifiés pouvaient rester en partie jusqu'à quatre heures. Un nouveau système a réduit ce délai à une seule partie. Environ 1 000 faux bannissements ont aussi été levés, et une erreur ayant signalé à tort certains appareils a été corrigée.\n\nJavelin fonctionne au niveau du noyau, ce qui renforce la protection contre la virtualisation, le matériel DMA et les pilotes malveillants. Pour limiter les problèmes de compatibilité, EA avait d'abord désactivé certaines protections, puis les a activées progressivement. Un souci touchant l'EA App est survenu peu après le lancement et a été corrigé le lendemain.\n\nPour les joueurs, le changement le plus concret est une sanction plus rapide, même si l'équipe reconnaît que le travail continue. Elle prévoit d'étendre ses protections à mesure que la compatibilité sera mieux maîtrisée.",
+    "etiketler": [
+     "#ApexLegends",
+     "#EA",
+     "#Javelin",
+     "#PC"
+    ]
+   },
+   "de": {
+    "baslik": "Apex Legends: Javelin sperrt 51 % mehr Cheater",
+    "ozet": "EA zufolge läuft das PC-Anti-Cheat-System Javelin seit Ende September, und die Zeit bis zur Sperre hat sich auf teils eine einzige Partie verkürzt.",
+    "metin": "Apex Legends stellt sein PC-Anti-Cheat-System seit Ende September auf EA Javelin um. Zwei Monate später hat das Team auf Steam eine Bilanz des Wechsels veröffentlicht.\n\nZum Start sperrte Javelin täglich rund 4.000 Cheater. Insgesamt sperrt das System nun 51 % mehr Cheater als das bisherige Anti-Cheat, und seit dem Start wurden 25.236 Hardware-Sperren verhängt. Das Team räumt ein, dass erkannte Cheater bis zu vier Stunden in Partien bleiben konnten. Ein neues System hat diese Zeit auf teils nur eine Partie verkürzt. Zudem wurden rund 1.000 Fehlsperren aufgehoben, und ein Fehler, der bestimmte Geräte falsch markierte, wurde behoben.\n\nJavelin arbeitet auf Kernel-Ebene und bietet so besseren Schutz gegen Virtualisierung, DMA-Hardware und schädliche Treiber. Um Kompatibilitätsprobleme zu vermeiden, wurden einige Schutzfunktionen zunächst deaktiviert und nach und nach aktiviert. Kurz nach dem Start gab es ein Problem mit der EA App, das am folgenden Tag behoben wurde.\n\nFür Spieler ist vor allem die schnellere Reaktion spürbar, doch das Team sagt, die Arbeit gehe weiter. Cheater begegnen Spielern weiterhin, daher sind weitere Schutzmaßnahmen geplant.",
+    "etiketler": [
+     "#ApexLegends",
+     "#EA",
+     "#Javelin",
+     "#PC"
+    ]
+   },
+   "nl": {
+    "baslik": "Apex Legends: Javelin verbant 51% meer valsspelers",
+    "ozet": "EA meldt dat het anti-cheatsysteem Javelin sinds eind september op pc draait en dat de tijd tussen detectie en ban is teruggebracht tot soms één match.",
+    "metin": "Apex Legends heeft zijn anti-cheatsysteem voor pc eind september overgezet naar EA Javelin. Twee maanden later publiceerde het team op Steam een terugblik op die overstap.\n\nBij de lancering verbande Javelin ongeveer 4.000 valsspelers per dag. Over de hele periode verbant het systeem 51% meer valsspelers dan het vorige systeem, en sinds de lancering zijn 25.236 hardwarebans uitgedeeld. Het team erkent dat herkende valsspelers tot vier uur in matches konden blijven. Een nieuw systeem heeft die wachttijd teruggebracht tot soms één match. Eerder zijn ook ongeveer 1.000 onterechte bans teruggedraaid, en een fout die bepaalde apparaten ten onrechte markeerde, is opgelost.\n\nJavelin draait op kernelniveau en biedt daardoor meer bescherming tegen virtualisatie, DMA-hardware en kwaadaardige stuurprogramma's. Om compatibiliteitsproblemen te beperken, werd een deel van de beveiligingen eerst uitgeschakeld en later stap voor stap ingeschakeld. Kort na de lancering trad een probleem op bij de EA App, dat de volgende dag is opgelost.\n\nVoor spelers is vooral de snellere aanpak merkbaar, al geeft het team toe dat het werk nog niet klaar is. Valsspelers komen nog steeds voor, en er komen meer beveiligingen zodra de compatibiliteit goed genoeg is.",
+    "etiketler": [
+     "#ApexLegends",
+     "#EA",
+     "#Javelin",
+     "#PC"
+    ]
+   },
+   "zh": {
+    "baslik": "Apex Legends启用Javelin反作弊 封禁作弊者多51%",
+    "ozet": "EA公布Javelin上线两个月的成效：封禁作弊者人数增加，从检测到处罚最快可缩短至一局比赛之内，相关问题仍在改进。",
+    "metin": "Apex Legends的PC反作弊系统已于9月底改用EA Javelin。两个月后，开发团队在Steam上发布了这次切换的复盘公告。\n\n据公告，Javelin上线时每天约封禁4000名作弊者。整体而言，它封禁作弊者的数量比旧系统多51%，上线至今已执行25236次硬件封禁。团队承认，部分已识别的作弊者曾在对局中停留长达四小时；新系统上线后，这一时间最短可缩至一局比赛。此外，团队此前还公布并撤销了约1000次误封，并修复了一个误标部分设备的硬件封禁问题。\n\nJavelin在内核层运行，能更有效地防范虚拟化、DMA硬件和恶意驱动程序。为降低兼容性风险，团队起初关闭了部分底层保护，之后逐步开启。上线后不久，Javelin与EA App出现一个问题，次日已修复。\n\n对玩家而言，最直接的变化是处罚更快，但团队表示仍需改进，作弊者依然存在。随着对兼容性更有信心，团队将继续扩大保护范围。",
+    "etiketler": [
+     "#ApexLegends",
+     "#EA",
+     "#Javelin",
+     "#PC"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "apex-legends-javelin-iki-aylik-anti-cheat",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://steamcommunity.com/games/1172470/announcements/detail/680767470935475787",
+   "teyit_zamani": "2026-11-24T21:10:03+00:00",
+   "oyuncuya_fayda": "Oyuncular hile tespitinin yaptırım süresinin nasıl değiştiğini ve Javelin korumalarının hangi aşamada olduğunu öğrenir.",
+   "hype": 5,
+   "eklenme": "2026-11-25T00:23:23.856249+03:00"
+  }
+ },
+ {
   "id": "dead-by-daylight-terrifier-killer-2026-11-24",
   "oyun": "Dead by Daylight",
   "tarih": "2026-11-24",

@@ -1,0 +1,125 @@
+{
+ "id": "apex-legends-javelin-anti-cheat-2026-11-24",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Apex Legends' Javelin anti-cheat now bans 51% more cheaters.",
+   "veri": {
+    "ust_etiket": "ANTI-CHEAT UPDATE",
+    "baslik": "Javelin bans 51% more cheaters",
+    "vurgu": [
+     "51%"
+    ],
+    "tuslar": [
+     "A",
+     "P",
+     "X"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "APEX LEGENDS",
+    "alt": "JAVELIN ANTI-CHEAT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to the official Steam post, the PC anti-cheat moved to EA Javelin at the end of September.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Official Steam announcement",
+    "alinti": "The PC anti-cheat moved to EA Javelin at the end of September."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "APEX LEGENDS • STEAM POST"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "At launch, Javelin banned about 4,000 cheaters a day. Hardware bans reached 25,236, and detections that once took up to four hours now end within a single match.",
+   "veri": {
+    "baslik": "Enforcement got faster",
+    "maddeler": [
+     {
+      "metin": "About 4,000 bans a day at launch",
+      "tetik": "4,000"
+     },
+     {
+      "metin": "25,236 hardware bans",
+      "tetik": "25,236"
+     },
+     {
+      "metin": "Enforcement in one match",
+      "tetik": "single"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "ENFORCEMENT FASTER",
+    "alt": "4,000 A DAY AT LAUNCH"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Javelin now bans 51% more cheaters than the old system, and the update applies to PC.",
+   "veri": {
+    "baslik": "Javelin results",
+    "platformlar": [
+     "PC"
+    ],
+    "sayilar": [
+     {
+      "deger": "51",
+      "etiket": "% MORE BANS",
+      "tetik": "51%"
+     }
+    ],
+    "not": "The update applies to PC players."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PC",
+    "alt": "KERNEL-LEVEL PROTECTION"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Is enforcement fast enough now?",
+   "veri": {
+    "cagri": "Read the full story on our site",
+    "alt": "Is enforcement fast enough now?"
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

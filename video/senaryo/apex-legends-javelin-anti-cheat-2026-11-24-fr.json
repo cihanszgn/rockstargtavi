@@ -1,0 +1,125 @@
+{
+ "id": "apex-legends-javelin-anti-cheat-2026-11-24",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Javelin d'Apex Legends bannit désormais 51 % de tricheurs en plus.",
+   "veri": {
+    "ust_etiket": "MISE À JOUR ANTI-TRICHE",
+    "baslik": "Javelin bannit 51 % de tricheurs en plus",
+    "vurgu": [
+     "51 %"
+    ],
+    "tuslar": [
+     "A",
+     "P",
+     "X"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "APEX LEGENDS",
+    "alt": "JAVELIN ANTI-TRICHE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "D'après l'annonce officielle sur Steam, l'anti-triche PC est passé à EA Javelin fin septembre.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Annonce officielle sur Steam",
+    "alinti": "L'anti-triche PC est passé à EA Javelin fin septembre."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "APEX LEGENDS • ANNONCE STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Au lancement, Javelin bannissait environ 4 000 tricheurs par jour. Les bannissements matériels ont atteint 25 236, et une sanction qui pouvait prendre quatre heures tient désormais en une seule partie.",
+   "veri": {
+    "baslik": "Sanctions plus rapides",
+    "maddeler": [
+     {
+      "metin": "Environ 4 000 bans par jour",
+      "tetik": "4 000"
+     },
+     {
+      "metin": "25 236 bannissements matériels",
+      "tetik": "25 236"
+     },
+     {
+      "metin": "Sanction en une seule partie",
+      "tetik": "seule"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "SANCTIONS PLUS RAPIDES",
+    "alt": "4 000 PAR JOUR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Javelin bannit 51 % de tricheurs de plus que l'ancien système, et la mise à jour concerne le PC.",
+   "veri": {
+    "baslik": "Résultats de Javelin",
+    "platformlar": [
+     "PC"
+    ],
+    "sayilar": [
+     {
+      "deger": "51",
+      "etiket": "% DE PLUS",
+      "tetik": "51"
+     }
+    ],
+    "not": "Concerne les joueurs PC."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PC",
+    "alt": "PROTECTION NIVEAU NOYAU"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Pensez-vous que les sanctions sont assez rapides maintenant ?",
+   "veri": {
+    "cagri": "Tout est sur notre site",
+    "alt": "Pensez-vous que les sanctions sont assez rapides ?"
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
