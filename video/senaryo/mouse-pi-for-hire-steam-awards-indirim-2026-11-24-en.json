@@ -1,0 +1,120 @@
+{
+ "id": "mouse-pi-for-hire-steam-awards-indirim-2026-11-24",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "MOUSE: P.I. For Hire is 34 percent off on Steam, and Steam Awards voting is open.",
+   "veri": {
+    "ust_etiket": "STEAM AWARDS 2026",
+    "baslik": "MOUSE: P.I. For Hire 34% off",
+    "vurgu": [
+     "34% off"
+    ],
+    "tuslar": [
+     "S",
+     "A",
+     "L"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "MOUSE: P.I. FOR HIRE",
+    "alt": "STEAM AWARDS 2026"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam's official news page says the 2026 Steam Awards nominations are live and voting is open now.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam official news page",
+    "alinti": "Nominations for the 2026 Steam Awards are live! Voting is live now."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "STEAM • OFFICIAL NEWS PAGE"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Players are asked to vote in five categories: Game of the Year, Best Handheld Game, Outstanding Visual Style and Best Soundtrack.",
+   "veri": {
+    "baslik": "Vote in five categories",
+    "maddeler": [
+     {
+      "metin": "Game of the Year",
+      "tetik": "Year"
+     },
+     {
+      "metin": "Best Handheld Game",
+      "tetik": "Handheld"
+     },
+     {
+      "metin": "Outstanding Visual Style",
+      "tetik": "Visual"
+     },
+     {
+      "metin": "Best Soundtrack",
+      "tetik": "Soundtrack"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "STEAM AWARDS VOTE",
+    "alt": "GAME OF THE YEAR AND MORE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "The 34 percent discount runs until November 27.",
+   "veri": {
+    "etiket": "Sale ends",
+    "tarih": "November 27",
+    "not": "The 34% discount runs until this date."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "SALE ENDS",
+    "alt": "UNTIL NOVEMBER 27"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Would you buy it during this sale?",
+   "veri": {
+    "cagri": "Full story on our site",
+    "alt": "Vote details and sale dates are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,120 @@
+{
+ "id": "mouse-pi-for-hire-steam-awards-indirim-2026-11-24",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "MOUSE: P.I. For Hire est à 34 % de remise, et les votes des Steam Awards sont ouverts.",
+   "veri": {
+    "ust_etiket": "STEAM AWARDS 2026",
+    "baslik": "MOUSE: P.I. For Hire à 34 % de remise",
+    "vurgu": [
+     "34 % de remise"
+    ],
+    "tuslar": [
+     "S",
+     "A",
+     "L"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "MOUSE: P.I. FOR HIRE",
+    "alt": "STEAM AWARDS 2026"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "D'après la page officielle Steam du jeu, les nominations des Steam Awards 2026 sont ouvertes et le vote est en cours.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Actualité officielle Steam",
+    "alinti": "Les nominations pour les Steam Awards 2026 sont ouvertes ! Le vote est en cours."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "STEAM • ACTUALITÉ OFFICIELLE"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Les joueurs sont invités à voter dans cinq catégories : Jeu de l'année, Meilleur jeu portable, Style visuel exceptionnel et Meilleure bande originale.",
+   "veri": {
+    "baslik": "Cinq catégories de vote",
+    "maddeler": [
+     {
+      "metin": "Jeu de l'année",
+      "tetik": "Jeu"
+     },
+     {
+      "metin": "Meilleur jeu portable",
+      "tetik": "portable"
+     },
+     {
+      "metin": "Style visuel exceptionnel",
+      "tetik": "visuel"
+     },
+     {
+      "metin": "Meilleure bande originale",
+      "tetik": "bande"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CINQ CATÉGORIES",
+    "alt": "JEU DE L'ANNÉE ET PLUS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "La remise de 34 % dure jusqu'au 27 novembre.",
+   "veri": {
+    "etiket": "Fin de la remise",
+    "tarih": "27 novembre",
+    "not": "Remise de 34 % jusqu'à cette date."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "FIN DE LA REMISE",
+    "alt": "JUSQU'AU 27 NOVEMBRE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Achèterez-vous le jeu pendant cette remise ?",
+   "veri": {
+    "cagri": "Tout est sur le site",
+    "alt": "Votes et dates dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

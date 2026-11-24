@@ -1,0 +1,120 @@
+{
+ "id": "mouse-pi-for-hire-steam-awards-indirim-2026-11-24",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "MOUSE: P.I. For Hire'da yüzde 34 indirim var ve Steam Ödülleri oylaması açık.",
+   "veri": {
+    "ust_etiket": "STEAM ÖDÜLLERİ 2026",
+    "baslik": "MOUSE: P.I. For Hire'da %34 indirim",
+    "vurgu": [
+     "%34 indirim"
+    ],
+    "tuslar": [
+     "S",
+     "A",
+     "L"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "MOUSE: P.I. FOR HIRE",
+    "alt": "STEAM ÖDÜLLERİ 2026"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam'deki resmî duyuruya göre Steam Ödülleri 2026 adaylıkları açıldı ve oylama başladı.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam resmî haber sayfası",
+    "alinti": "Steam Ödülleri 2026 adaylıkları açıldı; oylama şu anda sürüyor."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "STEAM • RESMÎ HABER"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Oyuncular beş kategoride oy vermeye çağrılıyor: Yılın Oyunu, En İyi Taşınabilir Oyun, Olağanüstü Görsel Stil ve En İyi Müzik.",
+   "veri": {
+    "baslik": "Beş kategoride oy",
+    "maddeler": [
+     {
+      "metin": "Yılın Oyunu",
+      "tetik": "Yılın"
+     },
+     {
+      "metin": "En İyi Taşınabilir Oyun",
+      "tetik": "Taşınabilir"
+     },
+     {
+      "metin": "Olağanüstü Görsel Stil",
+      "tetik": "Görsel"
+     },
+     {
+      "metin": "En İyi Müzik",
+      "tetik": "Müzik"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "BEŞ KATEGORİDE OY",
+    "alt": "YILIN OYUNU VE DAHASI"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Oyun, 27 Kasım'a kadar yüzde 34 indirimde.",
+   "veri": {
+    "etiket": "İndirim bitiyor",
+    "tarih": "27 Kasım",
+    "not": "Oyun yüzde 34 indirimde; indirim bu tarihe kadar sürer."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "İNDİRİM BİTİYOR",
+    "alt": "27 KASIM'A KADAR"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Bu indirimde oyunu alır mısın?",
+   "veri": {
+    "cagri": "Bütün ayrıntılar sitede",
+    "alt": "Oylama ve indirim ayrıntıları haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
