@@ -784,6 +784,7 @@ def _tam_sayi(v, varsayilan: int) -> int:
 def klip_ayari(ayar: dict) -> dict:
     k = ayar.get("klip") or {}
     ara = k.get("en_az_ara_saat", 0)
+    min_konusma = _tam_sayi(k.get("otomatik_min_konusma_puani"), 8)
     return {"gunluk_en_fazla": {**KLIP_SINIR_VARSAYILAN, **(k.get("gunluk_en_fazla") or {})},
             "derleme_gunluk_en_fazla": int(k.get("derleme_gunluk_en_fazla", 1)),
             # Otomatik gizli yükleme (Cio onayı beklemeden, YouTube'a `private`): ana anahtar `klip.otomatik_gizli`;
@@ -792,10 +793,11 @@ def klip_ayari(ayar: dict) -> dict:
             "gizli_gunluk_en_fazla": _tam_sayi(k.get("gizli_gunluk_en_fazla"), 4),
             # Otomatik onay yalnız son N saatte kesilmiş klibe verilir (0: sınırsız). Birikmiş eski klipler otomatik akışa girmez.
             "otomatik_taze_saat": _tam_sayi(k.get("otomatik_taze_saat"), 24),
-        # Otomatik onayın kalite süzgeci: izleyici tepkisi (paket sohbet_puani, 0-100) bundan düşük klip alınmaz; 0: süzgeç yok.
-        "otomatik_min_sohbet_puani": _tam_sayi(k.get("otomatik_min_sohbet_puani"), 60),
-        # Bir günde aynı yayıncıdan otomatik onaylanan en çok klip (0: sınırsız).
-        "otomatik_yayinci_basina": _tam_sayi(k.get("otomatik_yayinci_basina"), 2),
+            # İçerik puanı zorunlu (0–10). İçerik puanı 9 ve üstüyse sohbet eşiği aranmaz.
+            "otomatik_min_konusma_puani": min_konusma if min_konusma <= 10 else 8,
+            "otomatik_min_sohbet_puani": _tam_sayi(k.get("otomatik_min_sohbet_puani"), 60),
+            # Bir günde aynı yayıncıdan otomatik onaylanan en çok klip (0: sınırsız).
+            "otomatik_yayinci_basina": _tam_sayi(k.get("otomatik_yayinci_basina"), 2),
             "gizli_calisma_basina_en_fazla": _tam_sayi(k.get("gizli_calisma_basina_en_fazla"), _tam_sayi(k.get("gizli_gunluk_en_fazla"), 4)),
             "en_az_ara_saat": 0 if isinstance(ara, bool) or not isinstance(ara, (int, float)) or ara <= 0 else float(ara),
             # Hangi platforma klip gitsin: YouTube açık, Instagram varsayılan kapalı (açılsa da ayrı IG_KLIP_* sırrı ister).

@@ -257,10 +257,12 @@ class OtomatikOnay(KlipYayinTemel):
     """klip_yayin: otomatik onay, seçim kuralları, Cio kararının korunması."""
 
     def hazirla(self, n=1, **ek):
-        ek.setdefault("sohbet_puani", 80)  # canlı kalite süzgecinin (60) üstünde; süzgecin kendi testi ayrı
+        ek.setdefault("sohbet_puani", 80)
+        ek.setdefault("konusma_puani", 8)
         for i in range(1, n + 1):
+            alanlar = {"baslik": f"Konu {i} başlığı uzun cümle", **ek}
             self.paket_yaz(klasor=f"eraycan-2026111{i}-aaa{i}", ad="klip-01", vod=f"https://kick.com/eray/videos/v{i}",
-                           yayin_tarihi=f"2026-11-1{i}", baslik=f"Konu {i} başlığı uzun cümle", **ek)
+                           yayin_tarihi=f"2026-11-1{i}", **alanlar)
 
     def sec(self, kayit=None, sosyal=None, en_cok=None, manifest=None):
         ayar_ = ky.ayar_oku()
@@ -300,22 +302,49 @@ class OtomatikOnay(KlipYayinTemel):
         self.assertEqual(sy.klip_ayari({})["otomatik_taze_saat"], 24)
         self.assertEqual(sy.klip_ayari({"klip": {"otomatik_taze_saat": 0}})["otomatik_taze_saat"], 0)
 
-    def test_izleyici_tepkisi_zayif_klip_alinmaz_ve_en_komik_once(self):
-        puanlar = {1: 0, 2: 65, 3: 95, 4: 70}
-        for i, puan in puanlar.items():
+    def test_once_icerik_sonra_sohbet_puanina_gore_secim(self):
+        # None ve 7 yüksek sohbete rağmen elenir; 8 için 60 yeter, 9 için sohbet gerekmez.
+        puanlar = [(None, 100), (7, 100), (8, 59), (8, 60), (9, 0), (8, 95), (9, 80)]
+        for i, (icerik, sohbet) in enumerate(puanlar, 1):
             self.paket_yaz(klasor=f"eraycan-2026111{i}-aaa{i}", ad="klip-01", vod=f"https://kick.com/eray/videos/v{i}",
-                           yayin_tarihi=f"2026-11-1{i}", baslik=f"Konu {i} başlığı uzun cümle", sohbet_puani=puan, konusma_puani=7)
+                           yayin_tarihi=f"2026-11-1{i}", baslik=f"Konu {i} başlığı uzun cümle",
+                           sohbet_puani=sohbet, konusma_puani=icerik)
         sosyal = {"klip": {"otomatik_gizli": True, "gizli_gunluk_en_fazla": 8, "otomatik_yayinci_basina": 0}}
         (secilen, notlar), _m = self.sec(sosyal=sosyal)
-        self.assertEqual([o["yayin_tarihi"] for o in secilen], ["2026-11-13", "2026-11-14", "2026-11-12"])
+        self.assertEqual([o["yayin_tarihi"] for o in secilen], ["2026-11-17", "2026-11-15", "2026-11-16", "2026-11-14"])
+        self.assertIn("içerik puanı düşük/yok: 2 klip", notlar)
         self.assertTrue(any("1 klip izleyici tepkisi zayıf" in n for n in notlar))
         sosyal["klip"]["otomatik_yayinci_basina"] = 2  # aynı yayıncıdan günde en çok 2
         (secilen, _), _m = self.sec(sosyal=sosyal)
-        self.assertEqual([o["yayin_tarihi"] for o in secilen], ["2026-11-13", "2026-11-14"])
-        sosyal["klip"].update(otomatik_min_sohbet_puani=0, otomatik_yayinci_basina=0)  # süzgeç kapalı
+        self.assertEqual([o["yayin_tarihi"] for o in secilen], ["2026-11-17", "2026-11-15"])
+        sosyal["klip"].update(otomatik_min_sohbet_puani=0, otomatik_yayinci_basina=0)
         (secilen, _), _m = self.sec(sosyal=sosyal)
-        self.assertEqual(len(secilen), 4)
+        self.assertEqual(len(secilen), 5)
         self.assertEqual((sy.klip_ayari({})["otomatik_min_sohbet_puani"], sy.klip_ayari({})["otomatik_yayinci_basina"]), (60, 2))
+
+    def test_icerik_esigi_ayarlanabilir_ve_gecersiz_deger_varsayilana_doner(self):
+        anahtar = "otomatik_min_konusma_puani"
+        self.assertEqual(sy.klip_ayari({})[anahtar], 8)
+        for deger in (-1, 11, True, "10", None):
+            with self.subTest(deger=deger):
+                self.assertEqual(sy.klip_ayari({"klip": {anahtar: deger}})[anahtar], 8)
+        self.hazirla(konusma_puani=9, sohbet_puani=100)
+        (secilen, notlar), _m = self.sec(sosyal={"klip": {anahtar: 10}})
+        self.assertEqual(secilen, [])
+        self.assertIn("içerik puanı düşük/yok: 1 klip", notlar)
+
+    def test_jenerik_paket_veya_paylasim_basligi_yuksek_puanla_da_elenir(self):
+        for baslik, kisa in (
+            ("Eraycan yayınında sohbet bir anda gülmeye başladı | GTA", "Eray siparişi çorapla ödedi"),
+            ("Eray siparişi çorapla ödedi", "Eraycan yayınında chat kahkahaya boğuldu"),
+            ("Eray siparişi çorapla ödedi", "Eraycan yayınından kesit"),
+            (None, None),
+        ):
+            with self.subTest(baslik=baslik, kisa=kisa):
+                self.hazirla(baslik=baslik, kisa_aciklama=kisa, konusma_puani=10)
+                (secilen, notlar), m = self.sec()
+                self.assertEqual((secilen, m["ogeler"]), ([], {}))
+                self.assertIn("jenerik başlık: 1 klip", notlar)
 
     def test_gunluk_gizli_sinir_bugunku_yukleme_ve_bekleyenleri_sayar(self):
         self.hazirla(4)
@@ -405,7 +434,7 @@ class OtomatikOnay(KlipYayinTemel):
         self.assertEqual((secilen, m["ogeler"]), ([], {}))
 
     def test_youtube_kapali_klip_secilmez(self):
-        j = self.paket_yaz()
+        j = self.paket_yaz(sohbet_puani=80, konusma_puani=8)
         ogeler = ky.tara(self.dizin, ky.ayar_oku())
         ogeler[0]["platformlar"] = {"youtube": False, "instagram": False}
         m = ks.bos_manifest()
@@ -420,7 +449,8 @@ class OtomatikGizliKomutu(KlipYayinTemel):
         super().setUp()
         for i in (1, 2):
             self.paket_yaz(klasor=f"eraycan-2026111{i}-aaa{i}", ad="klip-01", vod=f"https://kick.com/eray/videos/v{i}",
-                           yayin_tarihi=f"2026-11-1{i}", baslik=f"Konu {i} başlığı uzun cümle", sohbet_puani=80)
+                           yayin_tarihi=f"2026-11-1{i}", baslik=f"Konu {i} başlığı uzun cümle",
+                           sohbet_puani=80, konusma_puani=8)
         self.sosyal = {"klip": {"otomatik_gizli": True, "gizli_gunluk_en_fazla": 4}}
         self.olaylar = []
         self.kayit = {}
