@@ -1,0 +1,115 @@
+{
+ "id": "wave-race-blue-storm-nso-expansion-2026-11-23",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Wave Race: Blue Storm stands out in Nintendo's latest Switch Online Expansion Pack update.",
+   "veri": {
+    "ust_etiket": "NINTENDO SWITCH ONLINE",
+    "baslik": "Wave Race: Blue Storm stands out",
+    "vurgu": [
+     "Blue Storm"
+    ],
+    "tuslar": [
+     "W",
+     "R"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "WAVE RACE",
+    "alt": "GAMECUBE • 2001"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to Nintendo's official announcement, it is a watercraft racer from the GameCube era.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Nintendo official announcement",
+    "alinti": "A watercraft racer released for GameCube in 2001, where weather changes visibility and waves."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "NINTENDO • ANNOUNCEMENT"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Released in 2001 for GameCube, the race changes with weather: visibility, water levels and wave height shift mid-race.",
+   "veri": {
+    "baslik": "Weather shapes every race",
+    "maddeler": [
+     {
+      "metin": "Released in 2001 for GameCube",
+      "tetik": "2001"
+     },
+     {
+      "metin": "Weather changes visibility",
+      "tetik": "Weather"
+     },
+     {
+      "metin": "Water levels and wave height",
+      "tetik": "Water"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "WEATHER SHAPES RACES",
+    "alt": "GAMECUBE • 2001"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Nintendo posted the update on November 23, and Expansion Pack members on Switch 2 can access it.",
+   "veri": {
+    "etiket": "UPDATE DATE",
+    "tarih": "November 23",
+    "not": "Expansion Pack members on Switch 2."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "UPDATE DATE",
+    "alt": "NINTENDO SWITCH 2"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Would you try this racer on Switch 2?",
+   "veri": {
+    "cagri": "Would you try this racer?",
+    "alt": "Read the full story on our site."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

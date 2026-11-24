@@ -32,7 +32,7 @@
 "2026-11-19"
 ],
 "de/index.html": [
-"bb8a1bb0398a",
+"a205ad8ad7c4",
 "2026-11-24"
 ],
 "de/kostenlose-spiele.html": [
@@ -120,7 +120,7 @@
 "2026-11-16"
 ],
 "de/spiele-news.html": [
-"48689bfe65db",
+"faf3246814bc",
 "2026-11-24"
 ],
 "de/spiele/apex-legends.html": [
@@ -295,6 +295,10 @@
 "7bd626330d4c",
 "2026-11-24"
 ],
+"de/thema/nintendo.html": [
+"e660d1428991",
+"2026-11-24"
+],
 "de/thema/pc.html": [
 "f90cec440a09",
 "2026-11-24"
@@ -324,15 +328,15 @@
 "2026-11-24"
 ],
 "de/thema/switch2.html": [
-"ced93a85903b",
-"2026-11-22"
+"2ee45a864909",
+"2026-11-24"
 ],
 "de/thema/tur-cikis.html": [
 "852ab8bd54fc",
 "2026-11-24"
 ],
 "de/thema/tur-guncelleme.html": [
-"98c3c9640864",
+"fc09d48a8651",
 "2026-11-24"
 ],
 "de/thema/tur-haber.html": [
@@ -388,7 +392,7 @@
 "2026-11-24"
 ],
 "en/game-news.html": [
-"958e9a3bf26a",
+"07627b130f5f",
 "2026-11-24"
 ],
 "en/game/apex-legends.html": [
@@ -624,7 +628,7 @@
 "2026-11-22"
 ],
 "en/index.html": [
-"c3beb5d627cd",
+"f0d9a6e94f6a",
 "2026-11-24"
 ],
 "en/languages.html": [
@@ -667,6 +671,10 @@
 "3e16751e4e5a",
 "2026-11-24"
 ],
+"en/tag/nintendo.html": [
+"e77075849c57",
+"2026-11-24"
+],
 "en/tag/pc.html": [
 "912648c46948",
 "2026-11-24"
@@ -696,15 +704,15 @@
 "2026-11-24"
 ],
 "en/tag/switch2.html": [
-"aada63b88d0e",
-"2026-11-22"
+"4b743d7c8bd7",
+"2026-11-24"
 ],
 "en/tag/tur-cikis.html": [
 "f7fe4fcb7954",
 "2026-11-24"
 ],
 "en/tag/tur-guncelleme.html": [
-"5bcd512c86cf",
+"f97b0cf8982f",
 "2026-11-24"
 ],
 "en/tag/tur-haber.html": [
@@ -824,7 +832,7 @@
 "2026-11-09"
 ],
 "es/index.html": [
-"5b58c43538ee",
+"adbe19791cdb",
 "2026-11-24"
 ],
 "es/juego/apex-legends.html": [
@@ -992,7 +1000,7 @@
 "2026-11-17"
 ],
 "es/noticias-juegos.html": [
-"af5c233afffd",
+"7a27d4e4ba5f",
 "2026-11-24"
 ],
 "es/ofertas.html": [
@@ -1027,6 +1035,10 @@
 "0593149a2f33",
 "2026-11-24"
 ],
+"es/tema/nintendo.html": [
+"2841ac847415",
+"2026-11-24"
+],
 "es/tema/pc.html": [
 "9b94a17ace07",
 "2026-11-24"
@@ -1056,15 +1068,15 @@
 "2026-11-24"
 ],
 "es/tema/switch2.html": [
-"29ff443df990",
-"2026-11-22"
+"64bb1c760786",
+"2026-11-24"
 ],
 "es/tema/tur-cikis.html": [
 "c8e28e1e323f",
 "2026-11-24"
 ],
 "es/tema/tur-guncelleme.html": [
-"c78813bd3543",
+"71a132cfe7b0",
 "2026-11-24"
 ],
 "es/tema/tur-haber.html": [
@@ -1111,6 +1123,10 @@
 "52b6be1886d4",
 "2026-11-24"
 ],
+"etiket/nintendo.html": [
+"bd4fbc023147",
+"2026-11-24"
+],
 "etiket/pc.html": [
 "59e0a7127955",
 "2026-11-24"
@@ -1140,15 +1156,15 @@
 "2026-11-24"
 ],
 "etiket/switch2.html": [
-"e072b0b56a26",
-"2026-11-22"
+"df9e63ce4d44",
+"2026-11-24"
 ],
 "etiket/tur-cikis.html": [
 "f38f474d8fbe",
 "2026-11-24"
 ],
 "etiket/tur-guncelleme.html": [
-"f822af0ee35a",
+"67d9272ec650",
 "2026-11-24"
 ],
 "etiket/tur-haber.html": [
@@ -1184,7 +1200,7 @@
 "2026-11-15"
 ],
 "fr/actus-jeux.html": [
-"ffd49c82cb46",
+"0ab02b64ff0e",
 "2026-11-24"
 ],
 "fr/calendrier-sorties.html": [
@@ -1272,7 +1288,7 @@
 "2026-11-22"
 ],
 "fr/index.html": [
-"d8bd20fd5dfe",
+"6c4a59308c1a",
 "2026-11-24"
 ],
 "fr/jeu/apex-legends.html": [
@@ -1471,6 +1487,10 @@
 "3034e5f20eba",
 "2026-11-24"
 ],
+"fr/sujet/nintendo.html": [
+"9e31cda39b6a",
+"2026-11-24"
+],
 "fr/sujet/pc.html": [
 "830b5ceb50ff",
 "2026-11-24"
@@ -1500,15 +1520,15 @@
 "2026-11-24"
 ],
 "fr/sujet/switch2.html": [
-"d6ccbe49a0f5",
-"2026-11-22"
+"67d838b7eb2c",
+"2026-11-24"
 ],
 "fr/sujet/tur-cikis.html": [
 "f752c334464d",
 "2026-11-24"
 ],
 "fr/sujet/tur-guncelleme.html": [
-"38ff4db86709",
+"81c18bc995f8",
 "2026-11-24"
 ],
 "fr/sujet/tur-haber.html": [
@@ -1576,7 +1596,7 @@
 "2026-11-15"
 ],
 "index.html": [
-"94c0509c594e",
+"718acd7f11f0",
 "2026-11-24"
 ],
 "indirimler.html": [
@@ -1596,7 +1616,7 @@
 "2026-11-16"
 ],
 "nl/gamenieuws.html": [
-"30a6bb2fc6a7",
+"a3de4cede95c",
 "2026-11-24"
 ],
 "nl/games/apex-legends.html": [
@@ -1836,7 +1856,7 @@
 "2026-11-19"
 ],
 "nl/index.html": [
-"f89f77dc6faf",
+"7f33a04340cd",
 "2026-11-24"
 ],
 "nl/nieuws.html": [
@@ -1857,6 +1877,10 @@
 ],
 "nl/onderwerp/mobil.html": [
 "2654ba84e8a1",
+"2026-11-24"
+],
+"nl/onderwerp/nintendo.html": [
+"b9984ca7b905",
 "2026-11-24"
 ],
 "nl/onderwerp/pc.html": [
@@ -1888,15 +1912,15 @@
 "2026-11-24"
 ],
 "nl/onderwerp/switch2.html": [
-"03e179dcd558",
-"2026-11-22"
+"80943b885c36",
+"2026-11-24"
 ],
 "nl/onderwerp/tur-cikis.html": [
 "c742ac034081",
 "2026-11-24"
 ],
 "nl/onderwerp/tur-guncelleme.html": [
-"11b2869a2530",
+"e678dfc567fe",
 "2026-11-24"
 ],
 "nl/onderwerp/tur-haber.html": [
@@ -1948,7 +1972,7 @@
 "2026-11-16"
 ],
 "oyun-haberleri.html": [
-"8a741664a183",
+"71a995a5df00",
 "2026-11-24"
 ],
 "oyun/apex-legends.html": [
@@ -2303,6 +2327,10 @@
 "4f87815c9b19",
 "2026-11-24"
 ],
+"zh/huati/nintendo.html": [
+"8d5e5f51dd50",
+"2026-11-24"
+],
 "zh/huati/pc.html": [
 "f63376984cb8",
 "2026-11-24"
@@ -2332,15 +2360,15 @@
 "2026-11-24"
 ],
 "zh/huati/switch2.html": [
-"794887fbef5f",
-"2026-11-22"
+"6012937d6cf2",
+"2026-11-24"
 ],
 "zh/huati/tur-cikis.html": [
 "2008e78c821a",
 "2026-11-24"
 ],
 "zh/huati/tur-guncelleme.html": [
-"056e599d4a4e",
+"0eec4c4fe5d9",
 "2026-11-24"
 ],
 "zh/huati/tur-haber.html": [
@@ -2372,7 +2400,7 @@
 "2026-11-24"
 ],
 "zh/index.html": [
-"fc8ca1df0401",
+"8253ff4322fd",
 "2026-11-24"
 ],
 "zh/laiyuan.html": [
@@ -2396,7 +2424,7 @@
 "2026-11-23"
 ],
 "zh/youxi-xinwen.html": [
-"6bde25704a9e",
+"b3a31f4fb55f",
 "2026-11-24"
 ],
 "zh/youxi/apex-legends.html": [

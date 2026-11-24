@@ -1,0 +1,115 @@
+{
+ "id": "wave-race-blue-storm-nso-expansion-2026-11-23",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Wave Race: Blue Storm aparece destacado en la última actualización de Switch Online Expansion Pack de Nintendo.",
+   "veri": {
+    "ust_etiket": "NINTENDO SWITCH ONLINE",
+    "baslik": "Wave Race: Blue Storm, destacado",
+    "vurgu": [
+     "Blue Storm"
+    ],
+    "tuslar": [
+     "W",
+     "R"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "WAVE RACE",
+    "alt": "GAMECUBE • 2001"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según el anuncio oficial de Nintendo, es un juego de carreras en el agua que llegó a GameCube.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Anuncio oficial de Nintendo",
+    "alinti": "Juego de carreras acuáticas lanzado en GameCube, donde el clima cambia la visibilidad y las olas."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "NINTENDO • ANUNCIO"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Lanzado en 2001, el clima cambia la visibilidad, el nivel del agua y la altura de las olas en plena carrera.",
+   "veri": {
+    "baslik": "El clima manda en la carrera",
+    "maddeler": [
+     {
+      "metin": "Lanzado en 2001 para GameCube",
+      "tetik": "2001"
+     },
+     {
+      "metin": "El clima cambia la visibilidad",
+      "tetik": "clima"
+     },
+     {
+      "metin": "Olas y nivel del agua",
+      "tetik": "olas"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "EL CLIMA CAMBIA LA CARRERA",
+    "alt": "GAMECUBE • 2001"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "La actualización se publicó el 23 de noviembre, y los miembros de Expansion Pack pueden acceder con Switch 2.",
+   "veri": {
+    "etiket": "FECHA DE ACTUALIZACIÓN",
+    "tarih": "23 de noviembre",
+    "not": "Miembros de Expansion Pack con Switch 2."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "FECHA DE ACTUALIZACIÓN",
+    "alt": "NINTENDO SWITCH 2"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Probarías este clásico en Switch 2?",
+   "veri": {
+    "cagri": "¿Probarías este clásico?",
+    "alt": "Todos los detalles en nuestra web."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

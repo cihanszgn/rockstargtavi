@@ -1,0 +1,115 @@
+{
+ "id": "wave-race-blue-storm-nso-expansion-2026-11-23",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Wave Race: Blue Storm est mis en avant dans la dernière mise à jour Nintendo Switch Online + Expansion Pack.",
+   "veri": {
+    "ust_etiket": "NINTENDO SWITCH ONLINE",
+    "baslik": "Wave Race: Blue Storm mis en avant",
+    "vurgu": [
+     "Blue Storm"
+    ],
+    "tuslar": [
+     "W",
+     "R"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "WAVE RACE",
+    "alt": "GAMECUBE • 2001"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Selon l'annonce officielle de Nintendo, c'est un jeu de course sur l'eau sorti sur GameCube.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Annonce officielle de Nintendo",
+    "alinti": "Jeu de course sur l'eau sorti sur GameCube, où la météo modifie visibilité et vagues."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "NINTENDO • ANNONCE"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Sorti en 2001, le jeu fait varier la météo : visibilité, niveau de l'eau et hauteur des vagues pendant la course.",
+   "veri": {
+    "baslik": "La météo change la course",
+    "maddeler": [
+     {
+      "metin": "Sorti en 2001 sur GameCube",
+      "tetik": "2001"
+     },
+     {
+      "metin": "La météo change la visibilité",
+      "tetik": "météo"
+     },
+     {
+      "metin": "Niveau de l'eau et vagues",
+      "tetik": "vagues"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "LA MÉTÉO CHANGE LA COURSE",
+    "alt": "GAMECUBE • 2001"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "La mise à jour a été publiée le 23 novembre, et les membres Expansion Pack peuvent y accéder sur Switch 2.",
+   "veri": {
+    "etiket": "DATE DE MISE À JOUR",
+    "tarih": "23 novembre",
+    "not": "Membres Expansion Pack sur Switch 2."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "DATE DE MISE À JOUR",
+    "alt": "NINTENDO SWITCH 2"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Tenteriez-vous ce classique sur Switch 2 ?",
+   "veri": {
+    "cagri": "Tenteriez-vous ce classique ?",
+    "alt": "Tout est sur notre site."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

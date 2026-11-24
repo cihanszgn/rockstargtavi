@@ -1,0 +1,115 @@
+{
+ "id": "wave-race-blue-storm-nso-expansion-2026-11-23",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Wave Race: Blue Storm, Nintendo'nun son Expansion Pack güncellemesinde öne çıkıyor.",
+   "veri": {
+    "ust_etiket": "NINTENDO SWITCH ONLINE",
+    "baslik": "Wave Race: Blue Storm öne çıktı",
+    "vurgu": [
+     "Blue Storm"
+    ],
+    "tuslar": [
+     "W",
+     "R"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "WAVE RACE",
+    "alt": "GAMECUBE • 2001"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Nintendo'nun resmî duyurusuna göre bu, klasik bir su aracı yarış oyunu.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Nintendo resmî duyurusu",
+    "alinti": "Su aracı yarış oyunu, 2001'de GameCube için çıktı; hava koşulları görüşü ve dalgaları değiştirir."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "NINTENDO • DUYURU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Oyun 2001'de GameCube için çıktı; yarış sırasında hava koşulları görüşü, su seviyesini ve dalga yüksekliğini değiştirebiliyor.",
+   "veri": {
+    "baslik": "Yarış havayla değişiyor",
+    "maddeler": [
+     {
+      "metin": "2001 yapımı GameCube oyunu",
+      "tetik": "2001"
+     },
+     {
+      "metin": "Hava koşulları görüşü etkiler",
+      "tetik": "hava"
+     },
+     {
+      "metin": "Su seviyesi ve dalga yüksekliği",
+      "tetik": "su"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "YARIŞ HAVAYLA DEĞİŞİR",
+    "alt": "2001 • GAMECUBE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Güncelleme 23 Kasım'da duyuruldu; Expansion Pack üyeleri bu klasiğe Switch 2'de erişebiliyor.",
+   "veri": {
+    "etiket": "GÜNCELLEME TARİHİ",
+    "tarih": "23 Kasım",
+    "not": "Expansion Pack üyeleri için Switch 2'de."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "GÜNCELLEME",
+    "alt": "NINTENDO SWITCH 2"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Wave Race'i denemek ister misin?",
+   "veri": {
+    "cagri": "Wave Race'i denemek ister misin?",
+    "alt": "Tamamı sitemizde, Control A Game'de."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
