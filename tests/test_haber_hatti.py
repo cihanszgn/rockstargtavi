@@ -431,6 +431,73 @@ class HatTests(unittest.TestCase):
         self.assertIsNone(self.hat.sonuc['commit'])
         self.assertEqual(self.hat.git('status', '--porcelain'), '')
 
+    def test_second_push_cannot_lock_ref_retries_and_final_rejection_rolls_back(self):
+        self.hat.head = self.hat.git('rev-parse', 'HEAD')
+        self.hat.snapshot = h.Anlik(self.root)
+        approved = [{'id': 'test-haber'}]
+        h.oto.json_yaz(self.hat.state / 'onayli-paket.json', approved)
+        original_komut = self.hat.komut
+        pushes = []
+        rebases = []
+        def fake_komut(argv, timeout=120, **kwargs):
+            if argv[:2] == [sys.executable, 'tools/gorsel_cek.py']:
+                return ''
+            if argv[:2] == [sys.executable, 'tools/sosyal_derle.py']:
+                return 'Site: 1 sayfa, 0 uyarı.'
+            if argv[:4] == [sys.executable, '-m', 'unittest', 'discover']:
+                return 'OK'
+            if argv == ['git', 'push', 'origin', 'main']:
+                pushes.append(len(pushes) + 1)
+                if len(pushes) == 1:
+                    raise RuntimeError('! [rejected] main -> main (fetch first)')
+                raise RuntimeError("! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at aaa but expected bbb)")
+            if argv == ['git', 'pull', '--rebase', 'origin', 'main']:
+                rebases.append(len(rebases) + 1)
+                return ''
+            return original_komut(argv, timeout, **kwargs)
+        def fake_oto(*args, **kwargs):
+            if args and args[0] == 'hazirla':
+                (self.root / 'data/icerik.json').write_text('[{"id":"test-haber"}]\n', encoding='utf-8')
+            return {}
+        with patch.object(self.hat, 'oto', side_effect=fake_oto), \
+                patch.object(self.hat, 'komut', side_effect=fake_komut):
+            with self.assertRaisesRegex(RuntimeError, 'cannot lock ref'):
+                self.hat.yayinla(approved, 'test-token')
+        self.assertEqual(len(pushes), 3)
+        self.assertEqual(len(rebases), 2)
+        self.assertEqual(self.hat.git('rev-parse', 'HEAD'), self.hat.head)
+        self.assertFalse(self.hat.committed)
+        self.assertIsNone(self.hat.sonuc['commit'])
+        self.assertEqual(self.hat.git('status', '--porcelain'), '')
+
+    def test_ambiguous_push_error_preserves_local_commit(self):
+        self.hat.head = self.hat.git('rev-parse', 'HEAD')
+        self.hat.snapshot = h.Anlik(self.root)
+        approved = [{'id': 'test-haber'}]
+        h.oto.json_yaz(self.hat.state / 'onayli-paket.json', approved)
+        original_komut = self.hat.komut
+        def fake_komut(argv, timeout=120, **kwargs):
+            if argv[:2] == [sys.executable, 'tools/gorsel_cek.py']:
+                return ''
+            if argv[:2] == [sys.executable, 'tools/sosyal_derle.py']:
+                return 'Site: 1 sayfa, 0 uyarı.'
+            if argv[:4] == [sys.executable, '-m', 'unittest', 'discover']:
+                return 'OK'
+            if argv == ['git', 'push', 'origin', 'main']:
+                raise RuntimeError('ssh: connection reset by peer')
+            return original_komut(argv, timeout, **kwargs)
+        def fake_oto(*args, **kwargs):
+            if args and args[0] == 'hazirla':
+                (self.root / 'data/icerik.json').write_text('[{"id":"test-haber"}]\n', encoding='utf-8')
+            return {}
+        with patch.object(self.hat, 'oto', side_effect=fake_oto), \
+                patch.object(self.hat, 'komut', side_effect=fake_komut):
+            with self.assertRaisesRegex(RuntimeError, 'connection reset'):
+                self.hat.yayinla(approved, 'test-token')
+        self.assertNotEqual(self.hat.git('rev-parse', 'HEAD'), self.hat.head)
+        self.assertTrue(self.hat.committed)
+        self.assertEqual(self.hat.sonuc['commit'], self.hat.git('rev-parse', 'HEAD'))
+
     def test_same_event_keeps_official_url_and_independent_reports(self):
         candidates = [self._aday(0, 'New Game patch released'), self._aday(1, 'New Game patch released', ad='PlayStation Blog')]
         candidates[1]['url'] = 'https://blog.playstation.com/2026/11/16/new-game/'

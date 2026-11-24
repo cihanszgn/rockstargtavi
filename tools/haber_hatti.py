@@ -1215,36 +1215,42 @@ class Hat:
         # Commit sonrası dosya geri alma yok: push belirsizliğinde yerel commit korunur.
         self.committed = True
         self.sonuc['commit'] = self.git('rev-parse', 'HEAD')
-        try:
-            self.komut(['git', 'push', 'origin', 'main'], 90)
-        except RuntimeError as exc:
-            if '[rejected]' not in str(exc) or not any(s in str(exc) for s in ('fetch first', 'non-fast-forward')):
-                raise
-            # İlk push kesin olarak reddedildi; 2. push öncesi rebase/doğrulama hatasında yerel commit geri alınır ki sonraki tur pull'da kilitlenmesin.
+        def geri_al():
+            if self.head:
+                self.komut(['git', 'reset', '--hard', self.head], 30)
+                self.committed = False
+                self.sonuc['commit'] = None
+        for deneme in range(3):
             try:
-                try:
-                    self.komut(['git', 'pull', '--rebase', 'origin', 'main'], 90)
-                except (RuntimeError, TimeoutError):
-                    self.komut(['git', 'rebase', '--abort'], 30)
+                self.sonuc['commit'] = self.git('rev-parse', 'HEAD')
+                self.komut(['git', 'push', 'origin', 'main'], 90)
+                break
+            except RuntimeError as exc:
+                if not push_kesin_red(str(exc)):
                     raise
-                # İki taraf birlikte yeniden doğrulanmadan ikinci push yok.
-                rebuilt = self.komut([sys.executable, 'tools/sosyal_derle.py'], 240)
-                if not re.search(r'\b0 uyarı', rebuilt):
-                    hata('rebase sonrası derleme sıfır uyarı doğrulanamadı')
-                self.oto('kontrol')
-                self.komut([sys.executable, '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_haber_oto.py'], 120)
-                self.komut(['git', 'diff', '--check'])
-                if self.git('status', '--porcelain'):
-                    hata('rebase sonrası derleme farklı; belirsizlikte push yapılmadı')
-                self.oto('kilit-kontrol', '--token', token)
-            except (ValueError, RuntimeError, OSError, TimeoutError):
-                if self.head:
-                    self.komut(['git', 'reset', '--hard', self.head], 30)
-                    self.committed = False
-                    self.sonuc['commit'] = None
-                raise
-            self.komut(['git', 'push', 'origin', 'main'], 90)
-            self.sonuc['commit'] = self.git('rev-parse', 'HEAD')
+                # Push kesin olarak reddedildi: son denemede bile yerel commit bırakılmaz ki sonraki tur pull'da kilitlenmesin.
+                if deneme == 2:
+                    geri_al()
+                    raise
+                try:
+                    try:
+                        self.komut(['git', 'pull', '--rebase', 'origin', 'main'], 90)
+                    except (RuntimeError, TimeoutError):
+                        self.komut(['git', 'rebase', '--abort'], 30)
+                        raise
+                    # İki taraf birlikte yeniden doğrulanmadan yeni push yok.
+                    rebuilt = self.komut([sys.executable, 'tools/sosyal_derle.py'], 240)
+                    if not re.search(r'\b0 uyarı', rebuilt):
+                        hata('rebase sonrası derleme sıfır uyarı doğrulanamadı')
+                    self.oto('kontrol')
+                    self.komut([sys.executable, '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_haber_oto.py'], 120)
+                    self.komut(['git', 'diff', '--check'])
+                    if self.git('status', '--porcelain'):
+                        hata('rebase sonrası derleme farklı; belirsizlikte push yapılmadı')
+                    self.oto('kilit-kontrol', '--token', token)
+                except (ValueError, RuntimeError, OSError, TimeoutError):
+                    geri_al()
+                    raise
         self.sonuc['eklenen'] = [x['id'] for x in articles]
         self.canli(articles)
 
@@ -1376,6 +1382,15 @@ class Hat:
             log.write(json.dumps({'zaman': self.sonuc['zaman'], 'deneme': self.deneme, 'sure': self.sonuc['sure_saniye'],
                                   'eklenen': self.sonuc['eklenen'], 'onaylanan': self.sonuc.get('onaylanan', []),
                                   'hata': self.sonuc.get('hata')}, ensure_ascii=False) + '\n')
+
+
+def push_kesin_red(hata_metni: str) -> bool:
+    """Uzak deponun commit'i kesin olarak reddettiği yarış/eski-ref hataları."""
+    if '[rejected]' in hata_metni and any(s in hata_metni for s in ('fetch first', 'non-fast-forward', 'stale info')):
+        return True
+    if '[remote rejected]' in hata_metni and 'cannot lock ref' in hata_metni:
+        return True
+    return False
 
 
 def yayin_dosyasi_izinli(n, scenarios=()):
