@@ -1,5 +1,109 @@
 [
  {
+  "id": "ffxiv-store-mog-station-2026-11-23",
+  "oyun": "Final Fantasy XIV",
+  "tarih": "2026-11-24",
+  "tur": "guncelleme",
+  "platform": [
+   "Xbox Series X|S",
+   "Nintendo Switch 2"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Final Fantasy XIV Lodestone",
+    "url": "https://na.finalfantasyxiv.com/lodestone/news/detail/ced4dc7698b0dd47b8508c34b9e671f2737055e6"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Final Fantasy XIV Mog Station'a Amazon Pay desteği geldi",
+    "ozet": "Tekrarlı ödemelerde ve ek abonelik süresinde kullanılabiliyor; Online Store'da alıcı karakter açılır menüden seçiliyor.",
+    "metin": "Final Fantasy XIV'ün Online Store ve Mog Station'ı 23 Kasım 2026'da, saat 22.00 Pasifik saatine (PST) göre güncellendi. Mog Station'da Amazon Pay artık ek abonelik süresi satın alımları dahil tekrarlayan ödemelerde kullanılabiliyor.\n\nResmî Lodestone duyurusuna göre, Xbox Series X|S ve Nintendo Switch 2 sürümleri dahil birden fazla platform sürümü tek bir hesaba kayıtlıysa, platform seçim menüsü artık varsayılan olarak sayfanın sol tarafında açılıyor. Online Store'da tüm eşyalar için alıcı seçerken ise istenen karakter açılır menüden seçilerek işlem tamamlanabiliyor.\n\nOyuncular için pratik fayda, abonelik süresi uzatmalarını Amazon Pay ile tekrarlı olarak ödeyebilmek ve çok platformlu hesaplarda doğru sürümü daha hızlı seçebilmek. Duyuruda fiyat değişikliği yer almıyor.",
+    "etiketler": [
+     "#FinalFantasyXIV",
+     "#FFXIV",
+     "#XboxSeriesXS",
+     "#NintendoSwitch2"
+    ]
+   },
+   "en": {
+    "baslik": "Final Fantasy XIV's Mog Station adds Amazon Pay",
+    "ozet": "It now covers recurring payments and extra subscription time; Online Store recipients are picked from a dropdown.",
+    "metin": "Final Fantasy XIV's Online Store and Mog Station were updated on November 23, 2026 at 10:00 p.m. PST. Mog Station now accepts Amazon Pay for recurring payments, including purchases of additional subscription time.\n\nAccording to the official Lodestone notice, when several platform versions are registered to one service account, including the Xbox Series X|S and Nintendo Switch 2 versions, the platform selection menu now appears by default on the left side of the page. In the Online Store, the recipient for all items can be chosen from a pulldown menu, so the process can be completed by selecting the intended character.\n\nFor players, the practical benefit is paying recurring charges and extra time with Amazon Pay, and picking the right platform version faster on multi-platform accounts. The notice lists no price changes.",
+    "etiketler": [
+     "#FinalFantasyXIV",
+     "#FFXIV",
+     "#XboxSeriesXS",
+     "#NintendoSwitch2"
+    ]
+   },
+   "es": {
+    "baslik": "Final Fantasy XIV añade Amazon Pay a Mog Station",
+    "ozet": "Ya sirve para pagos recurrentes y tiempo extra de suscripción; en Online Store el destinatario se elige en un desplegable.",
+    "metin": "Final Fantasy XIV actualizó su Online Store y Mog Station el 23 de noviembre de 2026, a las 22:00 hora del Pacífico (PST). Mog Station ya acepta Amazon Pay para pagos recurrentes, incluida la compra de tiempo adicional de suscripción.\n\nSegún el aviso oficial de Lodestone, cuando varias versiones de plataforma, como las de Xbox Series X|S y Nintendo Switch 2, están vinculadas a una misma cuenta, el menú de selección de plataforma aparece ahora por defecto en el lado izquierdo de la página. En Online Store, el destinatario de todos los artículos se elige desde un desplegable, y basta seleccionar el personaje deseado para completar el proceso.\n\nPara los jugadores, el beneficio práctico es pagar renovaciones y tiempo extra con Amazon Pay y elegir más rápido la versión correcta en cuentas multiplataforma. El aviso no menciona cambios de precio.",
+    "etiketler": [
+     "#FinalFantasyXIV",
+     "#FFXIV",
+     "#XboxSeriesXS",
+     "#NintendoSwitch2"
+    ]
+   },
+   "fr": {
+    "baslik": "Final Fantasy XIV ajoute Amazon Pay à Mog Station",
+    "ozet": "Il sert désormais aux paiements récurrents et au temps d'abonnement supplémentaire ; le destinataire se choisit dans une liste.",
+    "metin": "Final Fantasy XIV : la boutique en ligne et Mog Station ont été mises à jour le 23 novembre 2026 à 22 h 00 (heure du Pacifique, PST). Mog Station accepte désormais Amazon Pay pour les paiements récurrents, y compris l'achat de temps d'abonnement supplémentaire.\n\nD'après l'avis officiel de Lodestone, lorsque plusieurs versions de plateforme, dont celles sur Xbox Series X|S et Nintendo Switch 2, sont liées à un même compte, le menu de choix de plateforme s'affiche désormais par défaut à gauche de la page. Dans la boutique en ligne, le destinataire de tous les articles se choisit dans une liste déroulante, et il suffit de sélectionner le personnage voulu pour finaliser l'opération.\n\nPour les joueurs, l'intérêt pratique est de payer les renouvellements et le temps supplémentaire avec Amazon Pay, et de choisir plus vite la bonne version sur les comptes multiplateformes. L'avis ne mentionne aucune modification de prix.",
+    "etiketler": [
+     "#FinalFantasyXIV",
+     "#FFXIV",
+     "#XboxSeriesXS",
+     "#NintendoSwitch2"
+    ]
+   },
+   "de": {
+    "baslik": "Final Fantasy XIV: Amazon Pay für Mog Station",
+    "ozet": "Nun für wiederkehrende Zahlungen und zusätzliche Abolaufzeit nutzbar; im Online Store wird der Empfänger per Auswahlmenü gewählt.",
+    "metin": "Final Fantasy XIV: Online Store und Mog Station wurden am 23. November 2026 um 22:00 Uhr Pacific Time (PST) aktualisiert. Mog Station unterstützt nun Amazon Pay für wiederkehrende Zahlungen, einschließlich des Kaufs zusätzlicher Abonnementzeit.\n\nLaut der offiziellen Ankündigung von Lodestone wird bei mehreren Plattformversionen, darunter Xbox Series X|S und Nintendo Switch 2, die mit einem Service-Konto verknüpft sind, das Plattformauswahlmenü nun standardmäßig links auf der Seite angezeigt. Im Online Store lässt sich der Empfänger aller Artikel direkt über ein Auswahlmenü festlegen, indem man den gewünschten Charakter auswählt.\n\nFür Spieler bedeutet das: Verlängerungen lassen sich mit Amazon Pay bezahlen, und auf Konten mit mehreren Plattformen ist die passende Version schneller gewählt. Die Ankündigung nennt keine Preisänderungen.",
+    "etiketler": [
+     "#FinalFantasyXIV",
+     "#FFXIV",
+     "#XboxSeriesXS",
+     "#NintendoSwitch2"
+    ]
+   },
+   "nl": {
+    "baslik": "Final Fantasy XIV: Amazon Pay voor Mog Station",
+    "ozet": "Nu te gebruiken voor terugkerende betalingen en extra abonnementstijd; in Online Store kies je de ontvanger uit een keuzelijst.",
+    "metin": "Final Fantasy XIV: de Online Store en Mog Station zijn op 23 november 2026 om 22.00 uur Pacific Time (PST) bijgewerkt. Mog Station ondersteunt nu Amazon Pay voor terugkerende betalingen, inclusief de aankoop van extra abonnementstijd.\n\nVolgens de officiële aankondiging van Lodestone verschijnt bij meerdere platformversies, waaronder die voor Xbox Series X|S en Nintendo Switch 2, die aan één serviceaccount zijn gekoppeld, het menu voor platformselectie nu standaard links op de pagina. In de Online Store kies je de ontvanger voor alle artikelen eenvoudig uit een keuzelijst door het gewenste personage te selecteren.\n\nVoor spelers betekent dit dat ze verlengingen met Amazon Pay kunnen betalen en op accounts met meerdere platforms sneller de juiste versie kiezen. De aankondiging vermeldt geen prijswijzigingen.",
+    "etiketler": [
+     "#FinalFantasyXIV",
+     "#FFXIV",
+     "#XboxSeriesXS",
+     "#NintendoSwitch2"
+    ]
+   },
+   "zh": {
+    "baslik": "Final Fantasy XIV 的 Mog Station 支持 Amazon Pay",
+    "ozet": "现可用于定期付款，包括购买额外订阅时长；在 Online Store 中可通过下拉菜单快速选择收件角色。",
+    "metin": "Final Fantasy XIV 的 Online Store 与 Mog Station 已于2026年11月23日（太平洋时间22:00）更新。Mog Station 现支持使用 Amazon Pay 进行定期付款，包括购买额外订阅时长。\n\n根据 Lodestone 官方公告，当同一服务账户绑定了多个平台版本（包括 Xbox Series X|S 和 Nintendo Switch 2 版本）时，平台选择菜单现在默认显示在页面左侧。在 Online Store 中，所有物品的收件角色可通过下拉菜单直接选择，选中目标角色即可完成操作。\n\n对玩家而言，实际好处是可以用 Amazon Pay 支付续订及额外时长，并在多平台账户中更快选中正确版本。公告未提及价格变动。",
+    "etiketler": [
+     "#FinalFantasyXIV",
+     "#FFXIV",
+     "#XboxSeriesXS",
+     "#NintendoSwitch2"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "ffxiv-store-mog-station-amazon-pay-2026-11-23",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://na.finalfantasyxiv.com/lodestone/news/detail/ced4dc7698b0dd47b8508c34b9e671f2737055e6",
+   "teyit_zamani": "2026-11-24T08:10:02+00:00",
+   "oyuncuya_fayda": "Oyuncular Mog Station aboneliklerini Amazon Pay ile yenileyebilir ve çok platformlu hesaplarda doğru sürümü daha hızlı seçebilir.",
+   "hype": 3,
+   "eklenme": "2026-11-24T11:14:10.751397+03:00"
+  }
+ },
+ {
   "id": "wave-race-blue-storm-nso-expansion-2026-11-23",
   "oyun": "Wave Race: Blue Storm",
   "tarih": "2026-11-23",

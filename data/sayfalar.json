@@ -32,7 +32,7 @@
 "2026-11-19"
 ],
 "de/index.html": [
-"a205ad8ad7c4",
+"79f60cf93aa6",
 "2026-11-24"
 ],
 "de/kostenlose-spiele.html": [
@@ -120,7 +120,7 @@
 "2026-11-16"
 ],
 "de/spiele-news.html": [
-"faf3246814bc",
+"2f20befd00f3",
 "2026-11-24"
 ],
 "de/spiele/apex-legends.html": [
@@ -164,8 +164,8 @@
 "2026-11-18"
 ],
 "de/spiele/final-fantasy-xiv.html": [
-"f5b18284b448",
-"2026-11-19"
+"f8c2b5f66a97",
+"2026-11-24"
 ],
 "de/spiele/football-manager-27.html": [
 "a0f37db6591f",
@@ -188,7 +188,7 @@
 "2026-11-16"
 ],
 "de/spiele/index.html": [
-"50a4706796f8",
+"a1386a19bf20",
 "2026-11-24"
 ],
 "de/spiele/knight-online.html": [
@@ -287,6 +287,10 @@
 "60407e6c76f9",
 "2026-11-24"
 ],
+"de/thema/finalfantasyxiv.html": [
+"66b29b6cdf08",
+"2026-11-24"
+],
 "de/thema/gtavi.html": [
 "d71834cff695",
 "2026-11-24"
@@ -328,7 +332,7 @@
 "2026-11-24"
 ],
 "de/thema/switch2.html": [
-"2ee45a864909",
+"a28709e26a42",
 "2026-11-24"
 ],
 "de/thema/tur-cikis.html": [
@@ -336,7 +340,7 @@
 "2026-11-24"
 ],
 "de/thema/tur-guncelleme.html": [
-"fc09d48a8651",
+"8f0befeba6ed",
 "2026-11-24"
 ],
 "de/thema/tur-haber.html": [
@@ -364,7 +368,7 @@
 "2026-11-24"
 ],
 "de/thema/xboxseriesxs.html": [
-"01b494e17681",
+"25e372872d33",
 "2026-11-24"
 ],
 "de/ueber-uns.html": [
@@ -392,7 +396,7 @@
 "2026-11-24"
 ],
 "en/game-news.html": [
-"07627b130f5f",
+"e298c40c3f95",
 "2026-11-24"
 ],
 "en/game/apex-legends.html": [
@@ -436,8 +440,8 @@
 "2026-11-18"
 ],
 "en/game/final-fantasy-xiv.html": [
-"ae81bb9559b7",
-"2026-11-19"
+"005e61b63d3d",
+"2026-11-24"
 ],
 "en/game/football-manager-27.html": [
 "5d60cfd11d71",
@@ -460,7 +464,7 @@
 "2026-11-16"
 ],
 "en/game/index.html": [
-"4486319cc988",
+"90f77fcb9402",
 "2026-11-24"
 ],
 "en/game/knight-online.html": [
@@ -628,7 +632,7 @@
 "2026-11-22"
 ],
 "en/index.html": [
-"f0d9a6e94f6a",
+"0f196e4f9fbd",
 "2026-11-24"
 ],
 "en/languages.html": [
@@ -661,6 +665,10 @@
 ],
 "en/tag/counterstrike2.html": [
 "9baa2e016cb8",
+"2026-11-24"
+],
+"en/tag/finalfantasyxiv.html": [
+"7665ebcafbc5",
 "2026-11-24"
 ],
 "en/tag/gtavi.html": [
@@ -704,7 +712,7 @@
 "2026-11-24"
 ],
 "en/tag/switch2.html": [
-"4b743d7c8bd7",
+"f215e5e7bd88",
 "2026-11-24"
 ],
 "en/tag/tur-cikis.html": [
@@ -712,7 +720,7 @@
 "2026-11-24"
 ],
 "en/tag/tur-guncelleme.html": [
-"f97b0cf8982f",
+"9399ede93ed0",
 "2026-11-24"
 ],
 "en/tag/tur-haber.html": [
@@ -740,7 +748,7 @@
 "2026-11-24"
 ],
 "en/tag/xboxseriesxs.html": [
-"6d75f0307eb9",
+"a2a5ae3405a6",
 "2026-11-24"
 ],
 "es/about.html": [
@@ -832,7 +840,7 @@
 "2026-11-09"
 ],
 "es/index.html": [
-"adbe19791cdb",
+"1c4a84e8380f",
 "2026-11-24"
 ],
 "es/juego/apex-legends.html": [
@@ -876,8 +884,8 @@
 "2026-11-19"
 ],
 "es/juego/final-fantasy-xiv.html": [
-"ef8c87bee089",
-"2026-11-19"
+"26f0f0c2863d",
+"2026-11-24"
 ],
 "es/juego/football-manager-27.html": [
 "2651217882b6",
@@ -900,7 +908,7 @@
 "2026-11-16"
 ],
 "es/juego/index.html": [
-"3f68717557d3",
+"b14cc67b3484",
 "2026-11-24"
 ],
 "es/juego/knight-online.html": [
@@ -1000,7 +1008,7 @@
 "2026-11-17"
 ],
 "es/noticias-juegos.html": [
-"7a27d4e4ba5f",
+"78630c6b6fce",
 "2026-11-24"
 ],
 "es/ofertas.html": [
@@ -1025,6 +1033,10 @@
 ],
 "es/tema/counterstrike2.html": [
 "f560984a522c",
+"2026-11-24"
+],
+"es/tema/finalfantasyxiv.html": [
+"57eabeca61c9",
 "2026-11-24"
 ],
 "es/tema/gtavi.html": [
@@ -1068,7 +1080,7 @@
 "2026-11-24"
 ],
 "es/tema/switch2.html": [
-"64bb1c760786",
+"274060c5f279",
 "2026-11-24"
 ],
 "es/tema/tur-cikis.html": [
@@ -1076,7 +1088,7 @@
 "2026-11-24"
 ],
 "es/tema/tur-guncelleme.html": [
-"71a132cfe7b0",
+"a8d005d3a779",
 "2026-11-24"
 ],
 "es/tema/tur-haber.html": [
@@ -1104,7 +1116,7 @@
 "2026-11-24"
 ],
 "es/tema/xboxseriesxs.html": [
-"c4064371644a",
+"29147fddc938",
 "2026-11-24"
 ],
 "etiket/blizzard.html": [
@@ -1113,6 +1125,10 @@
 ],
 "etiket/counterstrike2.html": [
 "34ed785337ab",
+"2026-11-24"
+],
+"etiket/finalfantasyxiv.html": [
+"9c7940e10dc8",
 "2026-11-24"
 ],
 "etiket/gtavi.html": [
@@ -1156,7 +1172,7 @@
 "2026-11-24"
 ],
 "etiket/switch2.html": [
-"df9e63ce4d44",
+"396bb9c4bfac",
 "2026-11-24"
 ],
 "etiket/tur-cikis.html": [
@@ -1164,7 +1180,7 @@
 "2026-11-24"
 ],
 "etiket/tur-guncelleme.html": [
-"67d9272ec650",
+"d47681a36de4",
 "2026-11-24"
 ],
 "etiket/tur-haber.html": [
@@ -1192,7 +1208,7 @@
 "2026-11-24"
 ],
 "etiket/xboxseriesxs.html": [
-"b7c68084ca2c",
+"3670b79e89ac",
 "2026-11-24"
 ],
 "fr/about.html": [
@@ -1200,7 +1216,7 @@
 "2026-11-15"
 ],
 "fr/actus-jeux.html": [
-"0ab02b64ff0e",
+"f9c6b1689261",
 "2026-11-24"
 ],
 "fr/calendrier-sorties.html": [
@@ -1288,7 +1304,7 @@
 "2026-11-22"
 ],
 "fr/index.html": [
-"6c4a59308c1a",
+"00844010b72e",
 "2026-11-24"
 ],
 "fr/jeu/apex-legends.html": [
@@ -1332,8 +1348,8 @@
 "2026-11-19"
 ],
 "fr/jeu/final-fantasy-xiv.html": [
-"726cf26f2978",
-"2026-11-19"
+"9f93a822fabf",
+"2026-11-24"
 ],
 "fr/jeu/football-manager-27.html": [
 "9cc45b018c34",
@@ -1356,7 +1372,7 @@
 "2026-11-16"
 ],
 "fr/jeu/index.html": [
-"396ce1dd44cd",
+"ee54557200d8",
 "2026-11-24"
 ],
 "fr/jeu/knight-online.html": [
@@ -1479,6 +1495,10 @@
 "074a0b6b757b",
 "2026-11-24"
 ],
+"fr/sujet/finalfantasyxiv.html": [
+"a23f2edbf6a6",
+"2026-11-24"
+],
 "fr/sujet/gtavi.html": [
 "511eb44b1652",
 "2026-11-24"
@@ -1520,7 +1540,7 @@
 "2026-11-24"
 ],
 "fr/sujet/switch2.html": [
-"67d838b7eb2c",
+"075f80d920d3",
 "2026-11-24"
 ],
 "fr/sujet/tur-cikis.html": [
@@ -1528,7 +1548,7 @@
 "2026-11-24"
 ],
 "fr/sujet/tur-guncelleme.html": [
-"81c18bc995f8",
+"c4e4e5660ec5",
 "2026-11-24"
 ],
 "fr/sujet/tur-haber.html": [
@@ -1556,7 +1576,7 @@
 "2026-11-24"
 ],
 "fr/sujet/xboxseriesxs.html": [
-"83adf2fa94af",
+"d49b6c7664db",
 "2026-11-24"
 ],
 "gizlilik.html": [
@@ -1596,7 +1616,7 @@
 "2026-11-15"
 ],
 "index.html": [
-"718acd7f11f0",
+"666b7c61e293",
 "2026-11-24"
 ],
 "indirimler.html": [
@@ -1616,7 +1636,7 @@
 "2026-11-16"
 ],
 "nl/gamenieuws.html": [
-"a3de4cede95c",
+"b8f01b7449fb",
 "2026-11-24"
 ],
 "nl/games/apex-legends.html": [
@@ -1660,8 +1680,8 @@
 "2026-11-18"
 ],
 "nl/games/final-fantasy-xiv.html": [
-"e1e1152a7eb4",
-"2026-11-19"
+"6aecf0ed360a",
+"2026-11-24"
 ],
 "nl/games/football-manager-27.html": [
 "735d4d240f9f",
@@ -1684,7 +1704,7 @@
 "2026-11-16"
 ],
 "nl/games/index.html": [
-"a8b05bddaea7",
+"03ee3eaa17a9",
 "2026-11-24"
 ],
 "nl/games/knight-online.html": [
@@ -1856,7 +1876,7 @@
 "2026-11-19"
 ],
 "nl/index.html": [
-"7f33a04340cd",
+"656ee0a9e0d7",
 "2026-11-24"
 ],
 "nl/nieuws.html": [
@@ -1869,6 +1889,10 @@
 ],
 "nl/onderwerp/counterstrike2.html": [
 "f1896b24f48b",
+"2026-11-24"
+],
+"nl/onderwerp/finalfantasyxiv.html": [
+"b378f62c67fe",
 "2026-11-24"
 ],
 "nl/onderwerp/gtavi.html": [
@@ -1912,7 +1936,7 @@
 "2026-11-24"
 ],
 "nl/onderwerp/switch2.html": [
-"80943b885c36",
+"33081021e53b",
 "2026-11-24"
 ],
 "nl/onderwerp/tur-cikis.html": [
@@ -1920,7 +1944,7 @@
 "2026-11-24"
 ],
 "nl/onderwerp/tur-guncelleme.html": [
-"e678dfc567fe",
+"f8c4d565775e",
 "2026-11-24"
 ],
 "nl/onderwerp/tur-haber.html": [
@@ -1948,7 +1972,7 @@
 "2026-11-24"
 ],
 "nl/onderwerp/xboxseriesxs.html": [
-"221644e1cc0c",
+"cf121287f633",
 "2026-11-24"
 ],
 "nl/over-ons.html": [
@@ -1972,7 +1996,7 @@
 "2026-11-16"
 ],
 "oyun-haberleri.html": [
-"71a995a5df00",
+"1a80c460c8cc",
 "2026-11-24"
 ],
 "oyun/apex-legends.html": [
@@ -2016,8 +2040,8 @@
 "2026-11-19"
 ],
 "oyun/final-fantasy-xiv.html": [
-"1b55aa1a8753",
-"2026-11-19"
+"61070ed1076c",
+"2026-11-24"
 ],
 "oyun/football-manager-27.html": [
 "1457ab42ba23",
@@ -2040,7 +2064,7 @@
 "2026-11-16"
 ],
 "oyun/index.html": [
-"0808ce2f6bb9",
+"a3840129683b",
 "2026-11-24"
 ],
 "oyun/knight-online.html": [
@@ -2319,6 +2343,10 @@
 "1bbacff6adf3",
 "2026-11-24"
 ],
+"zh/huati/finalfantasyxiv.html": [
+"f98fd9263761",
+"2026-11-24"
+],
 "zh/huati/gtavi.html": [
 "319ae9ed1742",
 "2026-11-24"
@@ -2360,7 +2388,7 @@
 "2026-11-24"
 ],
 "zh/huati/switch2.html": [
-"6012937d6cf2",
+"0719fe08f6bc",
 "2026-11-24"
 ],
 "zh/huati/tur-cikis.html": [
@@ -2368,7 +2396,7 @@
 "2026-11-24"
 ],
 "zh/huati/tur-guncelleme.html": [
-"0eec4c4fe5d9",
+"cb2f0166faf4",
 "2026-11-24"
 ],
 "zh/huati/tur-haber.html": [
@@ -2396,11 +2424,11 @@
 "2026-11-24"
 ],
 "zh/huati/xboxseriesxs.html": [
-"ab3deb8a9639",
+"f1f683db16bf",
 "2026-11-24"
 ],
 "zh/index.html": [
-"8253ff4322fd",
+"d012b5785c0a",
 "2026-11-24"
 ],
 "zh/laiyuan.html": [
@@ -2424,7 +2452,7 @@
 "2026-11-23"
 ],
 "zh/youxi-xinwen.html": [
-"b3a31f4fb55f",
+"fa3dbe6c0e49",
 "2026-11-24"
 ],
 "zh/youxi/apex-legends.html": [
@@ -2468,8 +2496,8 @@
 "2026-11-18"
 ],
 "zh/youxi/final-fantasy-xiv.html": [
-"3e8cc7373e47",
-"2026-11-19"
+"8967317ec42a",
+"2026-11-24"
 ],
 "zh/youxi/football-manager-27.html": [
 "82126547e7b4",
@@ -2492,7 +2520,7 @@
 "2026-11-16"
 ],
 "zh/youxi/index.html": [
-"a5e58ece2a01",
+"d4488bccd96f",
 "2026-11-24"
 ],
 "zh/youxi/knight-online.html": [

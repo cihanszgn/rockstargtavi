@@ -1,0 +1,116 @@
+{
+ "id": "ffxiv-store-mog-station-2026-11-23",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Final Fantasy XIV's Mog Station now takes Amazon Pay for recurring payments.",
+   "veri": {
+    "ust_etiket": "FINAL FANTASY XIV",
+    "baslik": "Mog Station adds Amazon Pay",
+    "vurgu": [
+     "Amazon Pay"
+    ],
+    "tuslar": [
+     "F",
+     "F",
+     "X"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "FINAL FANTASY XIV",
+    "alt": "MOG STATION AND ONLINE STORE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to the official Lodestone notice, the updates are now live.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Lodestone official notice",
+    "alinti": "The following updates have been implemented."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "LODESTONE NEWS"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Mog Station accepts Amazon Pay for recurring payments. Platform selection now opens on the left by default. In the Online Store, recipients are picked from a dropdown.",
+   "veri": {
+    "baslik": "What changed",
+    "maddeler": [
+     {
+      "metin": "Amazon Pay for recurring payments",
+      "tetik": "Amazon"
+     },
+     {
+      "metin": "Platform menu opens on the left",
+      "tetik": "left"
+     },
+     {
+      "metin": "Recipient picked from a dropdown",
+      "tetik": "dropdown"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "WHAT CHANGED",
+    "alt": "PAYMENT, MENU, RECIPIENT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "The Online Store and Mog Station were updated on November 23.",
+   "veri": {
+    "etiket": "UPDATED",
+    "tarih": "November 23",
+    "not": "Online Store and Mog Station were updated."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "UPDATE DATE",
+    "alt": "PACIFIC TIME"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Would you use Amazon Pay for subscription renewals?",
+   "veri": {
+    "cagri": "Read the full story on our site",
+    "alt": "Sources and details are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

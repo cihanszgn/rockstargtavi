@@ -1,0 +1,116 @@
+{
+ "id": "ffxiv-store-mog-station-2026-11-23",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Final Fantasy XIV'ün Mog Station'ına Amazon Pay geldi; tekrarlı ödemeler artık mümkün.",
+   "veri": {
+    "ust_etiket": "FINAL FANTASY XIV",
+    "baslik": "Mog Station'a Amazon Pay geldi",
+    "vurgu": [
+     "Amazon Pay"
+    ],
+    "tuslar": [
+     "F",
+     "F",
+     "X"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "FINAL FANTASY XIV",
+    "alt": "MOG STATION VE ONLINE STORE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Lodestone'daki resmî duyuruya göre güncelleme uygulandı.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Lodestone resmî duyurusu",
+    "alinti": "Mog Station ve Online Store'daki güncellemeler uygulandı."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "LODESTONE • RESMÎ DUYURU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Mog Station'da Amazon Pay tekrarlı ödemelerde kullanılabiliyor. Platform seçim menüsü artık solda açılıyor. Online Store'da alıcı açılır menüden seçiliyor.",
+   "veri": {
+    "baslik": "Ne değişti?",
+    "maddeler": [
+     {
+      "metin": "Amazon Pay ile tekrarlı ödeme",
+      "tetik": "Amazon"
+     },
+     {
+      "metin": "Platform menüsü solda açılır",
+      "tetik": "solda"
+     },
+     {
+      "metin": "Alıcı açılır menüden seçilir",
+      "tetik": "açılır"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NE DEĞİŞTİ",
+    "alt": "ÖDEME, MENÜ, ALICI"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Online Store ve Mog Station 23 Kasım'da güncellendi.",
+   "veri": {
+    "etiket": "GÜNCELLEME",
+    "tarih": "23 Kasım",
+    "not": "Online Store ve Mog Station güncellendi."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "GÜNCELLEME TARİHİ",
+    "alt": "PASİFİK SAATİYLE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Amazon Pay ile abonelik yenilemesi yapar mısın?",
+   "veri": {
+    "cagri": "Tamamı sitemizde",
+    "alt": "Kaynak ve ayrıntılar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

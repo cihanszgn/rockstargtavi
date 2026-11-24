@@ -1,0 +1,116 @@
+{
+ "id": "ffxiv-store-mog-station-2026-11-23",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Final Fantasy XIV: Mog Station ya acepta Amazon Pay para pagos recurrentes.",
+   "veri": {
+    "ust_etiket": "FINAL FANTASY XIV",
+    "baslik": "Mog Station acepta Amazon Pay",
+    "vurgu": [
+     "Amazon Pay"
+    ],
+    "tuslar": [
+     "F",
+     "F",
+     "X"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "FINAL FANTASY XIV",
+    "alt": "MOG STATION Y ONLINE STORE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según el aviso oficial de Lodestone, las actualizaciones ya están aplicadas.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Aviso oficial de Lodestone",
+    "alinti": "Las siguientes actualizaciones ya han sido aplicadas."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "LODESTONE"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Mog Station acepta Amazon Pay en pagos recurrentes. El menú de plataforma aparece ahora a la izquierda por defecto. En Online Store, el destinatario se elige en un desplegable.",
+   "veri": {
+    "baslik": "Qué cambia",
+    "maddeler": [
+     {
+      "metin": "Amazon Pay en pagos recurrentes",
+      "tetik": "Amazon"
+     },
+     {
+      "metin": "Menú de plataforma a la izquierda",
+      "tetik": "izquierda"
+     },
+     {
+      "metin": "Destinatario en un desplegable",
+      "tetik": "desplegable"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "QUÉ CAMBIA",
+    "alt": "PAGOS, MENÚ, DESTINATARIO"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Online Store y Mog Station se actualizaron el 23 de noviembre.",
+   "veri": {
+    "etiket": "ACTUALIZADO",
+    "tarih": "23 de noviembre",
+    "not": "Online Store y Mog Station se actualizaron."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "FECHA DE ACTUALIZACIÓN",
+    "alt": "HORA DEL PACÍFICO"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Pagarías tus renovaciones con Amazon Pay?",
+   "veri": {
+    "cagri": "Todos los detalles en la web",
+    "alt": "Fuentes y detalles en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
