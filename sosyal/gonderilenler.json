@@ -1187,6 +1187,20 @@
   "platform": "instagram",
   "sosyal_tur": "haber"
  },
+ "mouse-pi-for-hire-steam-awards-indirim-2026-11-24|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 3877086,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "mouse-pi-for-hire-steam-awards-indirim-2026-11-24",
+  "kimlik": "ea4B0YWc9BY",
+  "niyet_zamani": "2026-11-24T04:43:28+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg2YHVLcpFsti0JFY-KxNoS4BHzyEgjF5WU9yZg9qEHclJX6MBY6zJlQv8E2iOBXKd0j1ipLgrguMsvSKEoYoi3KDaNrbo0fobLotvdVN0E",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/ea4B0YWc9BY",
+  "zaman": "2026-11-24T04:43:28+00:00"
+ },
  "nanatsu-no-taizai-origin-guncelleme-2026-11-21|tr|instagram|gorsel": {
   "bicim": "gorsel",
   "dil": "tr",
