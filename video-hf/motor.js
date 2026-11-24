@@ -28,7 +28,7 @@ function sayac(e,from,to,t,dur){
   tl.fromTo(e,{textContent:from},{textContent:to,duration:dur,ease:"power2.out",snap:{textContent:1}},Math.max(0,t));
 }
 
-/* ---------- tüm video boyunca sinematik oyun arka planı ---------- */
+/* ---------- tüm video boyunca sinematik oyun arka planı (video öncelikli) ---------- */
 function zeminKur(){
   var z=$("#zemin");
   if(V.foto){
@@ -89,8 +89,9 @@ function altyaziKur(){
 /* ---------- ortak parçalar ---------- */
 function yuva(ata){return el("div","yuva",null,ata)}
 function sahneVitrin(ic,baslik,etiket,t0,t1,kisa){
-  var v=ON(el("div","sahne-vitrin"+(kisa?" kisa":""),null,ic));
-  if(V.foto){
+  var vidVar=!!V.oyun_video;
+  var v=ON(el("div","sahne-vitrin"+(kisa?" kisa":"")+(vidVar?" vid-pencere":""),null,ic));
+  if(!vidVar && V.foto){
     var im=el("img","",null,v);im.src=V.foto;im.alt="";
     tl.fromTo(im,{scale:1.04},{scale:1.11,duration:Math.max(.5,t1-t0),ease:"none"},t0);
   }
@@ -139,7 +140,9 @@ B.baslik = function(sc,ic,s){
   var v=s.veri,t0=s.bas,t1=s.bit,dur=Math.max(.5,t1-t0);
   ic.classList.add("t-baslik");
   var bg=el("div","bk-bg"+(V.foto_oran&&V.foto_oran>=2.15?" genis":""));sc.insertBefore(bg,sc.firstChild);
-  if(V.foto){
+  if(V.oyun_video){
+    el("div","bk-ov ov-vid",null,bg);
+  }else if(V.foto){
     var im=el("img","bk-img",null,bg);im.src=V.foto;im.alt="";
     if(!V.foto_oran){
       im.addEventListener("load",function(){if(im.naturalHeight&&im.naturalWidth/im.naturalHeight>=2.15)bg.classList.add("genis")});

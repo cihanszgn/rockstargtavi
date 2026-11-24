@@ -321,14 +321,62 @@ class PlatformEngeli(Temel):
         self.assertFalse(any(m == "POST" for m, u in ag.cagrilar))
         self.assertEqual(self.engel(), {})
 
-    def test_engelde_dusen_kapsayici_kuyruga_doner(self):
+    def test_engelde_dusen_kapsayici_yeniden_paylasilmaz(self):
+        # 2026-11-24 (MOUSE): Instagram 2207051 sonrası gönderiyi yayımlayıp kapsayıcıyı EXPIRED/ERROR gösterebiliyor.
+        # Kayıt silinmez ve ikinci kez gönderi açılmaz; tekrar önlemek için tamam olarak kapatılır.
         self.calistir(self.engelli_ag(), ayar(instagram=True))
-        # eski kapsayıcı düşmüş (yayımlanmamış): kayıt silinir, aynı turda yeni kapsayıcıyla yeniden paylaşılır
-        g, hata, _ = self.calistir(SahteAg(durumlar=["EXPIRED", "FINISHED"]), ayar(instagram=True), simdi=SIMDI + sy.timedelta(hours=7))
-        self.assertEqual((g, hata), (1, []))
+        ag = SahteAg(durumlar=["EXPIRED"])
+        g, hata, _ = self.calistir(ag, ayar(instagram=True), simdi=SIMDI + sy.timedelta(hours=7))
+        self.assertEqual((g, hata), (0, []))
         rec = self.kayitlar()["oyun-yama-1|tr|instagram|gorsel"]
         self.assertEqual(rec["durum"], "tamam")
         self.assertNotIn("engel", rec)
+        self.assertIn("EXPIRED", rec["not"])
+        self.assertFalse(any(m == "POST" for m, u in ag.cagrilar))
+
+    def test_instagram_tek_gonderi_ayni_haberi_iki_bicimde_atmaz(self):
+        self.manifest_yaz()
+        a = ayar(instagram=True, instagram_reel=True)
+        a["instagram_tek_gonderi"] = True
+        g1, hata1, _ = self.calistir(SahteAg(), a, simdi=SIMDI)
+        self.assertEqual((g1, hata1), (1, []))
+        self.assertEqual(set(self.kayitlar()), {"oyun-yama-1|tr|instagram|reel"})
+        # Ertesi tur aynı haber görsel kart olarak ikinci kez atılmaz
+        ag2 = SahteAg()
+        g2, hata2, _ = self.calistir(ag2, a, simdi=SIMDI + sy.timedelta(hours=3))
+        self.assertEqual((g2, hata2, ag2.cagrilar), (0, [], []))
+
+    def test_instagram_haber_yalniz_reel_statik_kart_atmaz(self):
+        # Videosu henüz hazır olmayan haber (hype yeterli) statik görsel kart olarak atılmaz; Reels beklenir.
+        a = ayar(instagram=True, instagram_reel=True)
+        a["instagram_tek_gonderi"] = True
+        a["instagram_haber_yalniz_reel"] = True
+        a["video"] = {"hype_esigi": 3}
+        h = haber()
+        h["otomasyon"]["hype"] = 5
+        ag = SahteAg()
+        g, hata, _ = self.calistir(ag, a, veri=[h], simdi=SIMDI)
+        self.assertEqual((g, hata, ag.cagrilar), (0, [], []))
+        # Video hazır olunca tek bir Reels olarak paylaşılır
+        self.manifest_yaz()
+        g2, hata2, _ = self.calistir(SahteAg(), a, veri=[h], simdi=SIMDI + sy.timedelta(hours=1))
+        self.assertEqual((g2, hata2), (1, []))
+        self.assertEqual(set(self.kayitlar()), {"oyun-yama-1|tr|instagram|reel"})
+
+    def test_instagram_en_az_ara_saat_pes_pese_atmaz(self):
+        self.manifest_yaz("h1")
+        a = ayar(instagram=True, instagram_reel=True)
+        a["instagram_en_az_ara_saat"] = 2.0
+        h1, h2 = haber("h1"), haber("h2")
+        g1, hata1, _ = self.calistir(SahteAg(), a, veri=[h1, h2], simdi=SIMDI)
+        self.assertEqual((g1, hata1), (1, []))
+        # 15 dk sonra ikinci tur: ne görsel ne Reel atılır
+        ag2 = SahteAg()
+        g2, hata2, _ = self.calistir(ag2, a, veri=[h1, h2], simdi=SIMDI + sy.timedelta(minutes=15))
+        self.assertEqual((g2, hata2, ag2.cagrilar), (0, [], []))
+        # 2 saat sonra normal paylaşır
+        g3, hata3, _ = self.calistir(SahteAg(), a, veri=[h1, h2], simdi=SIMDI + sy.timedelta(hours=2, minutes=1))
+        self.assertEqual((g3, hata3), (1, []))
 
     def test_art_arda_engelde_mola_uzar(self):
         self.calistir(self.engelli_ag(), ayar(instagram=True))

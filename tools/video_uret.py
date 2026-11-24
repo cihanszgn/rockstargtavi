@@ -1827,13 +1827,17 @@ MOTORLAR = ("hyperframes", "remotion")
 
 
 def _hf_cizim(is_klasoru: Path, props: dict, haber: dict, girdi: dict, ses_yolu: Path, dosya: dict, cikti) -> dict:
-    """Hyperframes motoru: tema + proje klasörü, güvenli alan denetimi (çizimden önce), çizim, 1080p sıkıştırma, kapak.
-    Dönen: {ham, tema, crf}; 720/540 çıkışlarını ve vtt yi uret() ortak kısmı yapar."""
+    """Hyperframes motoru: tema + oyun videosu + proje klasörü, güvenli alan denetimi (çizimden önce), çizim, 1080p sıkıştırma, kapak.
+    Dönen: {ham, tema, crf, oyun_video}; 720/540 çıkışlarını ve vtt yi uret() ortak kısmı yapar."""
     foto = video_hf.foto_hazirla(haber["id"], GECICI / "gorsel", is_klasoru / "foto.jpg", cikti, haber=haber)
+    oyun_video = video_hf.oyun_video_hazirla(
+        haber["id"], GECICI / "video_kaynak", is_klasoru / "oyun.mp4",
+        sure=float(props["sure"]), cikti=cikti, haber=haber, kos=_calistir,
+    )
     tema = video_hf.tema_sec(haber, girdi, foto)
     json_yaz(is_klasoru / "tema.json", tema)
-    cikti(f"tema: {tema['paket']} (renk kaynağı: {tema['renk']}, oyun: {tema['oyun'] or '-'})")
-    hf = video_hf.klasor_kur(is_klasoru / "hf", props, tema, ses_yolu, foto)
+    cikti(f"tema: {tema['paket']} (renk kaynağı: {tema['renk']}, oyun: {tema['oyun'] or '-'}, oyun_video: {'var' if oyun_video else 'yok'})")
+    hf = video_hf.klasor_kur(is_klasoru / "hf", props, tema, ses_yolu, foto, oyun_video=oyun_video)
     video_hf.guvenli_denetle(hf, props, is_klasoru / "denetim.json", cikti, kos=_calistir)
     ham = is_klasoru / "ham-1080.mp4"
     bas = time.monotonic()
@@ -1858,7 +1862,7 @@ def _hf_cizim(is_klasoru: Path, props: dict, haber: dict, girdi: dict, ses_yolu:
     except ImportError:
         an = min(max(props["kapak_kare"] / props["fps"], 0.8), max(0.2, props["sahneler"][0]["bit"] - 0.2))
         video_hf.kapak_cikar(is_klasoru / dosya["mp4_1080"], an, kapak_hedef, kos=_calistir)
-    return {"ham": ham, "tema": tema, "crf": crf, "render_sure": render_sure}
+    return {"ham": ham, "tema": tema, "crf": crf, "render_sure": render_sure, "oyun_video": bool(oyun_video)}
 
 
 def _remotion_cizim(is_klasoru: Path, ses_yolu: Path, dosya: dict, cikti) -> dict:
@@ -1959,7 +1963,8 @@ def uret(haber_id: str, dil: str, ses: str | None = None, yukle: bool = False, z
         manifest_yaz(manifest_guncelle(m, haber_id, dil, kayit))
     toplam = time.monotonic() - bas_zaman
     cikti(json.dumps({"hazir": haber_id, "dil": dil, "anahtar": k, "motor": motor,
-                      "tema": (cizim["tema"] or {}).get("paket"), "ses": sesci.konusmaci, "sure": kayit["sure"],
+                      "tema": (cizim["tema"] or {}).get("paket"), "oyun_video": bool(cizim.get("oyun_video")),
+                      "ses": sesci.konusmaci, "sure": kayit["sure"],
                       "render_sn": round(render_sure, 1), "toplam_sn": round(toplam, 1),
                       "dosyalar": {a: {"ad": dosya[a], "bayt": o["bayt"]} for a, o in olcum.items()}},
                      ensure_ascii=False))

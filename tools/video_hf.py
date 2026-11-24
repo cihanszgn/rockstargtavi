@@ -28,6 +28,7 @@ HF = ROOT / "video-hf"
 OYUN_TEMALARI = HF / "oyun_temalari.json"
 GORSELLER = ROOT / "data" / "gorseller.json"
 OYUN_GORSELLERI = ROOT / "data" / "oyun_gorselleri.json"
+OYUN_VIDEOLARI = ROOT / "data" / "oyun_videolari.json"
 OYUNLAR = ROOT / "data" / "oyunlar.json"
 GUVENLI_BETIK = HF / "araclar" / "guvenli_alan.mjs"
 KAPAK_FONT_BASLIK = ROOT / "otomasyon" / "fontlar" / "Anton-Regular.ttf"
@@ -280,6 +281,8 @@ def tema_girdisi(haber: dict, senaryo: dict | None = None, icerik: list[dict] | 
 def anahtar_eki(girdi: dict) -> dict:
     """video_uret.anahtar() içine eklenen tema bölümü (üretimde bu girdilerden bir şey değişirse video yenilenir)."""
     ek = {k: girdi[k] for k in ("motor", "paket", "oyun", "ozel_palet", "ozel_oge", "gorsel")}
+    # video_surum 2 (2026-11-24): oyunun gerçek resmî fragman/oynanış videosu arka planda ve sahne vitrininde oynar.
+    ek["video_surum"] = 2
     if not girdi.get("gorsel"):
         # Görselsiz açılışın çizimi değişince artır: yalnız görselsiz videolar yeniden üretilir.
         # 2 (2026-11-18): dev oyun adı soluk arka plan oldu; eskiden başlıkla üst üste biniyordu.
@@ -486,6 +489,254 @@ def foto_hazirla(haber_id: str, onbellek: Path, hedef: Path, cikti=print, yol: P
         return None
     hedef.parent.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(onb, hedef)
+    return hedef
+
+
+# ---------------------------------------------------------------- resmî oyun videosu (Steam fragmanı / doğrudan MP4)
+
+_STEAM_URL_APP_RE = re.compile(r"(?:steampowered\.com/(?:news/)?app|steam/apps)/(\d+)", re.I)
+
+
+_SURUM_EKLERI = frozenset(("edition", "definitive", "remastered", "remake", "enhanced", "complete",
+                           "standard", "deluxe", "ultimate", "legacy", "classic", "goty", "collection"))
+
+
+def _ad_kelimeler(ad: str) -> list[str]:
+    s = str(ad or "").lower().translate(str.maketrans("çğıöşü", "cgiosu"))
+    s = re.sub(r"['’`]", "", s)
+    return re.findall(r"[a-z0-9]+", s)
+
+
+def _steam_ad_eslesir_mi(hedef: str, aday: str) -> bool:
+    ta, tb = _ad_kelimeler(hedef), _ad_kelimeler(aday)
+    if not ta or not tb:
+        return False
+    if ta == tb or "".join(ta) == "".join(tb):
+        return True
+    # Yalnız tam kelime öneki + zararsız sürüm eki ("Enhanced", "Edition" vb.) kabul edilir;
+    # GTA VI vs GTA V veya Dawn of War IV vs III asla eşleşmez.
+    kisa, uzun = (ta, tb) if len(ta) < len(tb) else (tb, ta)
+    if uzun[:len(kisa)] != kisa:
+        return False
+    fazla = uzun[len(kisa):]
+    return bool(fazla) and all(w in _SURUM_EKLERI for w in fazla)
+
+
+def steam_appid_bul(haber: dict | None, haber_id: str = "", *, gorsel_yol: Path | None = None,
+                    oyun_yol: Path | None = None, ag_ara: bool = True) -> str | None:
+    """Haberin kaynaklarından, görsel kaydından veya Steam mağaza aramasından resmî Steam AppID bulur."""
+    aday_urller: list[str] = []
+    if isinstance(haber, dict):
+        for k in haber.get("kaynaklar") or []:
+            if isinstance(k, dict) and k.get("url"):
+                aday_urller.append(str(k["url"]))
+    g_url = gorsel_adresi(haber_id, gorsel_yol, haber=haber, oyun_yol=oyun_yol)
+    if g_url:
+        aday_urller.append(g_url)
+    for u in aday_urller:
+        m = _STEAM_URL_APP_RE.search(u)
+        if m:
+            return m.group(1)
+    if not ag_ara or not isinstance(haber, dict):
+        return None
+    oyun = str(haber.get("oyun") or "").strip()
+    if len(oyun) < 3:
+        return None
+    try:
+        import urllib.parse
+        sorgu = urllib.parse.urlencode({"term": oyun, "l": "english", "cc": "US"})
+        istek = urllib.request.Request(
+            f"https://store.steampowered.com/api/storesearch/?{sorgu}",
+            headers={"User-Agent": "Mozilla/5.0 (compatible; video-uretici)"},
+        )
+        with urllib.request.urlopen(istek, timeout=10) as r:
+            veri = json.loads(r.read(2_000_000).decode("utf-8", "replace"))
+        for oge in (veri.get("items") or [])[:5]:
+            if isinstance(oge, dict) and oge.get("id") and _steam_ad_eslesir_mi(oyun, str(oge.get("name") or "")):
+                return str(oge["id"])
+    except Exception:
+        return None
+    return None
+
+
+def _fragman_puani(m: dict, sira: int) -> tuple[int, int]:
+    """Oynanış/çıkış fragmanlarını öne, basın alıntısı/yazı dolu 'accolades' fragmanlarını en sona koyar."""
+    ad = str(m.get("name") or "").lower()
+    puan = 0
+    if any(k in ad for k in ("gameplay", "combat", "walkthrough", "demo")):
+        puan += 40
+    if any(k in ad for k in ("launch", "out now", "release", "official", "reveal", "overview", "story", "trailer")):
+        puan += 15
+    if m.get("highlight"):
+        puan += 5
+    if any(k in ad for k in ("accolade", "award", "review", "quote", "behind the scenes", "dev diary", "interview", "soundtrack")):
+        puan -= 60
+    return (-puan, sira)
+
+
+def steam_fragman_adresi(appid: str) -> str | None:
+    """Steam appdetails API'den resmî oyun fragmanı (mp4 veya hls_h264) adresini döndürür."""
+    if not appid or not str(appid).isdigit():
+        return None
+    try:
+        istek = urllib.request.Request(
+            f"https://store.steampowered.com/api/appdetails?appids={appid}&l=english",
+            headers={"User-Agent": "Mozilla/5.0 (compatible; video-uretici)"},
+        )
+        with urllib.request.urlopen(istek, timeout=15) as r:
+            veri = json.loads(r.read(5_000_000).decode("utf-8", "replace"))
+        bilgi = (veri.get(str(appid)) or {}).get("data") or {}
+        filmler = [m for m in (bilgi.get("movies") or []) if isinstance(m, dict)]
+        filmler = [m for _, m in sorted(enumerate(filmler), key=lambda x: _fragman_puani(x[1], x[0]))]
+        for m in filmler:
+            mp4 = m.get("mp4") if isinstance(m.get("mp4"), dict) else {}
+            for url in (mp4.get("max"), mp4.get("480"), m.get("hls_h264"), m.get("dash_h264")):
+                if isinstance(url, str) and url.startswith("https://"):
+                    return url
+    except Exception:
+        return None
+    return None
+
+
+def _kayitli_oyun_video_adresi(haber_id: str, haber: dict | None, video_yol: Path | None = None) -> str | None:
+    yol = Path(video_yol or OYUN_VIDEOLARI)
+    if not yol.exists():
+        return None
+    try:
+        veri = json.loads(yol.read_text(encoding="utf-8")) or {}
+    except (OSError, ValueError):
+        return None
+    adaylar = [haber_id]
+    if isinstance(haber, dict) and haber.get("oyun"):
+        s = _oyun_slug(str(haber["oyun"]))
+        if s:
+            adaylar.append(s)
+            esles = _oyun_eslesme().get(s)
+            if esles:
+                adaylar.append(esles)
+    for k in adaylar:
+        v = veri.get(k)
+        url = v.get("url") if isinstance(v, dict) else (v if isinstance(v, str) else None)
+        if isinstance(url, str) and url.startswith("https://"):
+            return url
+    return None
+
+
+def _video_suresi_olc(yol: Path, kos=subprocess.run) -> float:
+    d = ffmpeg_dizini()
+    fp = str(Path(d) / ("ffprobe.exe" if os.name == "nt" else "ffprobe")) if d else "ffprobe"
+    r = kos([fp, "-v", "error", "-show_entries", "format=duration", "-of", "default=noprint_wrappers=1:nokey=1",
+             str(yol)], capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=30)
+    try:
+        return float((r.stdout or "").strip())
+    except ValueError:
+        return 0.0
+
+
+def _fragman_montajla(ham: Path, hedef: Path, sure: float, kos=subprocess.run) -> None:
+    """Ham fragmandan izleyiciyi tutacak dinamik aksiyon montajı üretir:
+    - Uzun fragmansa (≥ 24 sn) başlangıç logo/uyarısını atlayıp 4 farklı aksiyon anından kesitler birleştirir.
+    - Kısa fragmansa kesintisiz döngüleyip hedef süreye tamamlar.
+    - Hyperframes seek hızı için 30 fps, 1 sn keyframe (-g 30) ve sessiz (-an) H.264 yazar."""
+    hedef_sure = max(8.0, float(sure) + 1.5)
+    ham_sure = _video_suresi_olc(ham, kos=kos)
+    if ham_sure >= 24.0:
+        dilim_sayisi = 4 if hedef_sure <= 32 else 5
+        dilim_suresi = hedef_sure / dilim_sayisi
+        # Yayıncı/stüdyo açılış logolarını atlayıp doğrudan oyunun aksiyon sahnelerinden başla
+        bas_pay = min(8.0, ham_sure * 0.14)
+        son_pay = max(bas_pay + 1.0, ham_sure - dilim_suresi - 2.0)
+        aralik = max(0.0, son_pay - bas_pay)
+        noktalar = [bas_pay + (aralik * i / max(1, dilim_sayisi - 1)) for i in range(dilim_sayisi)]
+        parcalar = []
+        etiketler = []
+        for idx, b in enumerate(noktalar):
+            parcalar.append(
+                f"[0:v]trim=start={b:.2f}:duration={dilim_suresi:.2f},setpts=PTS-STARTPTS,"
+                f"scale=-2:720,fps=30[v{idx}]"
+            )
+            etiketler.append(f"[v{idx}]")
+        filtre = ";".join(parcalar) + ";" + "".join(etiketler) + f"concat=n={dilim_sayisi}:v=1:a=0[outv]"
+        ffmpeg_calistir(
+            "-i", str(ham), "-filter_complex", filtre, "-map", "[outv]",
+            "-an", "-c:v", "libx264", "-preset", "veryfast", "-crf", "22",
+            "-g", "30", "-keyint_min", "30", "-pix_fmt", "yuv420p", "-movflags", "+faststart",
+            str(hedef), kos=kos,
+        )
+    else:
+        ffmpeg_calistir(
+            "-stream_loop", "-1", "-i", str(ham), "-t", f"{hedef_sure:.2f}",
+            "-an", "-vf", "scale=-2:720,fps=30",
+            "-c:v", "libx264", "-preset", "veryfast", "-crf", "22",
+            "-g", "30", "-keyint_min", "30", "-pix_fmt", "yuv420p", "-movflags", "+faststart",
+            str(hedef), kos=kos,
+        )
+
+
+def oyun_video_hazirla(haber_id: str, onbellek: Path, hedef: Path, sure: float, cikti=print, *,
+                       haber: dict | None = None, gorsel_yol: Path | None = None,
+                       oyun_yol: Path | None = None, video_yol: Path | None = None,
+                       kos=subprocess.run) -> Path | None:
+    """Oyunun resmî fragman/oynanış videosunu indirir, aksiyon montajı yapar ve `hedef`'e yazar.
+    Kaynak yoksa ya da indirme başarısız olursa None döner (video sabit görsel arka plana düşer, üretim durmaz)."""
+    url = _kayitli_oyun_video_adresi(haber_id, haber, video_yol)
+    kaynak = "kayıt"
+    if not url:
+        appid = steam_appid_bul(haber, haber_id, gorsel_yol=gorsel_yol, oyun_yol=oyun_yol)
+        if appid:
+            url = steam_fragman_adresi(appid)
+            kaynak = f"Steam {appid}"
+    if not url:
+        return None
+    onbellek.mkdir(parents=True, exist_ok=True)
+    ham_anahtar = hashlib.sha256(url.encode("utf-8")).hexdigest()[:12]
+    ham_onb = onbellek / f"{ham_anahtar}-ham.mp4"
+    yok = onbellek / f"{ham_anahtar}.yok"
+    if yok.exists():
+        return None
+    if not ham_onb.exists():
+        gecici_ham = onbellek / f"{ham_anahtar}-ham.tmp.mp4"
+        try:
+            # İlk 4 saniyeyi atlayarak (PEGI/logo ekranı) en çok 60 saniyelik temiz kaynak indir
+            try:
+                ffmpeg_calistir(
+                    "-ss", "4", "-i", url, "-t", "60", "-an",
+                    "-vf", "scale=-2:720,fps=30", "-c:v", "libx264", "-preset", "veryfast", "-crf", "22",
+                    "-pix_fmt", "yuv420p", str(gecici_ham), kos=kos,
+                )
+            except TemaHatasi:
+                gecici_ham.unlink(missing_ok=True)
+                ffmpeg_calistir(
+                    "-i", url, "-t", "60", "-an",
+                    "-vf", "scale=-2:720,fps=30", "-c:v", "libx264", "-preset", "veryfast", "-crf", "22",
+                    "-pix_fmt", "yuv420p", str(gecici_ham), kos=kos,
+                )
+            if not gecici_ham.exists() or gecici_ham.stat().st_size < 30_000:
+                gecici_ham.unlink(missing_ok=True)
+                yok.write_text("small", encoding="utf-8")
+                return None
+            os.replace(gecici_ham, ham_onb)
+        except Exception as e:
+            gecici_ham.unlink(missing_ok=True)
+            cikti(f"uyarı: oyun videosu indirilemedi ({kaynak}): {str(e)[:180]}; görsel arka plan kullanılacak")
+            return None
+    montaj_anahtar = hashlib.sha256(f"{ham_anahtar}|{round(sure)}".encode("utf-8")).hexdigest()[:12]
+    montaj_onb = onbellek / f"{montaj_anahtar}-montaj.mp4"
+    if not montaj_onb.exists():
+        gecici_m = onbellek / f"{montaj_anahtar}-montaj.tmp.mp4"
+        try:
+            _fragman_montajla(ham_onb, gecici_m, sure, kos=kos)
+            if not gecici_m.exists() or gecici_m.stat().st_size < 30_000:
+                gecici_m.unlink(missing_ok=True)
+                return None
+            os.replace(gecici_m, montaj_onb)
+        except Exception as e:
+            gecici_m.unlink(missing_ok=True)
+            cikti(f"uyarı: oyun videosu montajlanamadı ({kaynak}): {str(e)[:180]}; görsel arka plan kullanılacak")
+            return None
+    hedef.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(montaj_onb, hedef)
+    cikti(f"oyun videosu hazır ({kaynak}, {montaj_onb.stat().st_size // 1024} KB)")
     return hedef
 
 
@@ -807,8 +1058,9 @@ def sahne_html(sahneler: list[dict]) -> str:
                      for i, s in enumerate(sahneler))
 
 
-def veri_olustur(props: dict, tema: dict, foto: str | None, foto_oran: float | None = None) -> dict:
-    """window.VIDEO: motor.js'in okuduğu her şey (metin, sayı, süre, görsel yolu, tema) senaryo verisinden gelir."""
+def veri_olustur(props: dict, tema: dict, foto: str | None, foto_oran: float | None = None,
+                 oyun_video: str | None = None) -> dict:
+    """window.VIDEO: motor.js'in okuduğu her şey (metin, sayı, süre, görsel/video yolu, tema) senaryo verisinden gelir."""
     d = {"sure": props["sure"], "dil": props["dil"], "tema": {"paket": tema["paket"], "oge": tema["oge"]},
          "haber": props["haber"], "foto": foto,
          "sahneler": [{"sablon": s["sablon"], "bas": s["bas"], "bit": s["bit"], "veri": s["veri"]}
@@ -816,11 +1068,14 @@ def veri_olustur(props: dict, tema: dict, foto: str | None, foto_oran: float | N
          "kelimeler": props["kelimeler"], "parcalar": props["parcalar"]}
     if foto_oran is not None:
         d["foto_oran"] = round(foto_oran, 3)
+    if oyun_video:
+        d["oyun_video"] = oyun_video
     return d
 
 
-def klasor_kur(klasor: Path, props: dict, tema: dict, ses: Path, foto: Path | None) -> Path:
-    """Çizilecek Hyperframes projesi: şablon + sabit dosyalar + yazı tipleri + üretilen veri, ses ve görsel."""
+def klasor_kur(klasor: Path, props: dict, tema: dict, ses: Path, foto: Path | None,
+               oyun_video: Path | None = None) -> Path:
+    """Çizilecek Hyperframes projesi: şablon + sabit dosyalar + yazı tipleri + üretilen veri, ses, görsel ve oyun videosu."""
     if klasor.exists():
         shutil.rmtree(klasor)
     (klasor / "assets" / "ses").mkdir(parents=True)
@@ -842,14 +1097,27 @@ def klasor_kur(klasor: Path, props: dict, tema: dict, ses: Path, foto: Path | No
                     foto_oran = _im.width / _im.height
         except Exception:
             foto_oran = None
-    veri = veri_olustur(props, tema, foto_yolu, foto_oran=foto_oran)
+    video_yolu = None
+    zemin_video_html = ""
+    video_sinif = ""
+    if oyun_video and Path(oyun_video).exists():
+        (klasor / "assets" / "video").mkdir()
+        shutil.copyfile(oyun_video, klasor / "assets" / "video" / "oyun.mp4")
+        video_yolu = "assets/video/oyun.mp4"
+        video_sinif = " has-video"
+        zemin_video_html = (
+            f'<video id="zm-vid" class="clip zm-video" src="{video_yolu}" muted playsinline '
+            f'data-start="0" data-duration="{props["sure"]}" data-track-index="0"></video>'
+        )
+    veri = veri_olustur(props, tema, foto_yolu, foto_oran=foto_oran, oyun_video=video_yolu)
     (klasor / "assets" / "data.js").write_text("window.VIDEO = " + json.dumps(veri, ensure_ascii=False) + ";\n",
                                                encoding="utf-8")
     sablon = (HF / "index.html").read_text(encoding="utf-8")
     html = (sablon.replace("__DIL__", props["dil"]).replace("__PALET__", palet_css(tema["palet"]))
-            .replace("__PAKET__", tema["paket"]).replace("__SURE__", str(props["sure"]))
+            .replace("__PAKET__", tema["paket"]).replace("__VIDEO_SINIF__", video_sinif)
+            .replace("__ZEMIN_VIDEO__", zemin_video_html).replace("__SURE__", str(props["sure"]))
             .replace("__SAHNELER__", sahne_html(props["sahneler"])))
-    if "__" in re.sub(r"__[a-z_]+__", "", html) and re.search(r"__[A-Z]+__", html):
+    if "__" in re.sub(r"__[a-z_]+__", "", html) and re.search(r"__[A-Z_]+__", html):
         raise TemaHatasi("şablonda doldurulmamış yer tutucu kaldı")
     (klasor / "index.html").write_text(html, encoding="utf-8")
     return klasor

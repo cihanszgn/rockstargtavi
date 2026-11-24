@@ -622,5 +622,48 @@ class KapakAfisTests(unittest.TestCase):
                 self.assertEqual(im.size, (1080, 1920))
 
 
+class OyunVideoTests(unittest.TestCase):
+    def test_steam_appid_kaynak_ve_gorsel_urlden_cozulur(self):
+        h = {'id': 'x', 'oyun': 'MOUSE: P.I. For Hire',
+             'kaynaklar': [{'url': 'https://store.steampowered.com/news/app/2416450/view/702159569166533175'}]}
+        self.assertEqual(hf.steam_appid_bul(h, 'x', ag_ara=False), '2416450')
+        with tempfile.TemporaryDirectory() as t:
+            gy = pathlib.Path(t) / 'g.json'
+            gy.write_text(json.dumps({'y': {'url': 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2272360/header.jpg'}}), encoding='utf-8')
+            self.assertEqual(hf.steam_appid_bul({'id': 'y', 'oyun': 'Dawn of War IV', 'kaynaklar': []}, 'y', gorsel_yol=gy, ag_ara=False), '2272360')
+
+    def test_steam_ad_eslesmesi_yanlis_oyunu_reddeder(self):
+        self.assertTrue(hf._steam_ad_eslesir_mi("MOUSE: P.I. For Hire", "MOUSE: P.I. For Hire"))
+        self.assertTrue(hf._steam_ad_eslesir_mi("Zombies Arent Real", "Zombies Aren't Real"))
+        self.assertFalse(hf._steam_ad_eslesir_mi("Grand Theft Auto VI", "Grand Theft Auto V"))
+        self.assertFalse(hf._steam_ad_eslesir_mi("Wave Race: Blue Storm", "Blue Storm Racing"))
+
+    def test_fragman_secimi_oynanisi_accolades_onune_alir(self):
+        filmler = [
+            {"name": "MOUSE: Accolades trailer", "highlight": True},
+            {"name": "MOUSE: Out Now trailer", "highlight": True},
+            {"name": "MOUSE: Official Gameplay Trailer", "highlight": False},
+        ]
+        sirali = [m["name"] for _, m in sorted(enumerate(filmler), key=lambda x: hf._fragman_puani(x[1], x[0]))]
+        self.assertEqual(sirali[0], "MOUSE: Official Gameplay Trailer")
+        self.assertEqual(sirali[-1], "MOUSE: Accolades trailer")
+
+    def test_klasor_kur_oyun_videosu_ekler(self):
+        with tempfile.TemporaryDirectory() as t:
+            ses = pathlib.Path(t) / 'ses.mp3'
+            ses.write_bytes(b'ID3')
+            vid = pathlib.Path(t) / 'oyun.mp4'
+            vid.write_bytes(b'\x00\x00\x00\x18ftypmp42')
+            tema = hf.tema_sec(haber(), hf.tema_girdisi(haber(), None, None, 'esports'))
+            k = hf.klasor_kur(pathlib.Path(t) / 'hf', sahte_props(), tema, ses, None, oyun_video=vid)
+            html = (k / 'index.html').read_text(encoding='utf-8')
+            veri = (k / 'assets' / 'data.js').read_text(encoding='utf-8')
+            self.assertIn('p-esports has-video', html)
+            self.assertIn('<video id="zm-vid"', html)
+            self.assertIn('assets/video/oyun.mp4', html)
+            self.assertIn('"oyun_video": "assets/video/oyun.mp4"', veri)
+            self.assertTrue((k / 'assets' / 'video' / 'oyun.mp4').exists())
+
+
 if __name__ == '__main__':
     unittest.main()

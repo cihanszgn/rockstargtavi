@@ -116,9 +116,12 @@ class Limit(Ortak):
 
     def test_ayardaki_sayilar(self):
         a = json.loads((pathlib.Path(__file__).resolve().parents[1] / "sosyal" / "ayarlar.json").read_text(encoding="utf-8"))
-        self.assertEqual((a["gunluk_en_fazla"]["instagram_reel"], a["gunluk_en_fazla"]["youtube"], a["gunluk_en_fazla"]["instagram"]), (6, 8, 20))
-        # Her haber gönderi alır (Cio, 2026-11-22); haber dışı dolgu ayrı ve küçük bir payla sınırlı kalır
-        self.assertEqual(a["haber_disi_gunluk_en_fazla"]["instagram"], 4)
+        # 2026-11-24 (Cio): Instagram'da haberler tekrar atılmaz, yalnız oyun videosuyla Reels çıkar; görsel spam'i kısıtlı
+        self.assertEqual((a["gunluk_en_fazla"]["instagram_reel"], a["gunluk_en_fazla"]["youtube"], a["gunluk_en_fazla"]["instagram"]), (6, 8, 4))
+        self.assertEqual(a["haber_disi_gunluk_en_fazla"]["instagram"], 1)
+        self.assertTrue(a["instagram_tek_gonderi"])
+        self.assertTrue(a["instagram_haber_yalniz_reel"])
+        self.assertGreaterEqual(a["instagram_en_az_ara_saat"], 2.0)
         self.assertEqual(a["calisma_basina_en_fazla"], 1)
         # Instagram'da da yabancı dil ortak hesaptan çıkmaz (Cio, 2026-11-23): aynı haber Türkçe hesapta 4 dilde tekrar ediyordu
         self.assertEqual(a["hesap_esleme"]["instagram"], {})

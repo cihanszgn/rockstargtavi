@@ -826,6 +826,32 @@ def son_gonderi(kayit: dict, hesap: str, ad: str, gizli_haric: bool = False) -> 
     return en
 
 
+def son_platform_gonderisi(kayit: dict, hesap: str, platform: str) -> str:
+    """Hesabın bu platformdaki (biçimden bağımsız: görsel veya Reels) en son gönderi zamanı."""
+    en = ""
+    for k, v in kayit.items():
+        p = k.split("|")
+        if len(p) != 4 or kayit_hesabi(k, v) != hesap or p[2] != platform or not _sayilir(v):
+            continue
+        z = v.get("zaman") or v.get("niyet_zamani") or ""
+        if z >= en:
+            en = z
+    return en
+
+
+def hesapta_konu_var_mi(kayit: dict, hesap: str, platform: str, x: dict) -> bool:
+    """Aynı haber/konu bu hesapta ve platformda herhangi bir biçimde (görsel veya Reel) daha önce paylaşıldı mı?"""
+    konu = konu_veya_id(x)
+    xid = x.get("id")
+    for k, v in kayit.items():
+        p = k.split("|")
+        if len(p) != 4 or kayit_hesabi(k, v) != hesap or p[2] != platform or not _sayilir(v):
+            continue
+        if p[0] == konu or (xid and (p[0] == xid or v.get("id") == xid)):
+            return True
+    return False
+
+
 def ayni_konu_yakin(zaman_, simdi: datetime, ayar: dict) -> bool:
     """Son gönderi `ayni_konu_ara_saat` saatten yeni mi? (Eşikten sonra aynı haberin başka dil sürümü yeniden serbest.)"""
     saat = float((ayar or {}).get("ayni_konu_ara_saat", 0) or 0)
@@ -952,9 +978,14 @@ def uzlastir(ag, kayit, tum, ayar, manifest_yolu, kaydet, simdi, klip_yolu=None,
                     _tamamla(rec, ig_yayimla(ag, sir, surum, rec["kapsayici"]), simdi)
                 elif kod in ("ERROR", "EXPIRED"):
                     if rec.get("engel"):
-                        # Engel yüzünden bekleyen kapsayıcı yayımlanmadan düştü: yayımlanmış olsaydı PUBLISHED kalırdı.
-                        del kayit[k]  # gönderi kuyruğa döner, sonra yeniden denenir
+                        # 2026-11-24 ölçümü (MOUSE): Instagram media_publish 2207051 döndürse de gönderiyi yayımlayıp
+                        # 6-12 saat sonra kapsayıcıyı EXPIRED/ERROR gösterebiliyor. Kayıt silinirse aynı haber ikinci
+                        # kez atılır! Tekrarı önlemek için kapatılır; asla yeniden denenmez.
+                        _tamamla(rec, {"kimlik": None, "url": None,
+                                       "not": f"Instagram engeli sonrası kapsayıcı {kod}; yayımlanmış olabileceğinden yeniden denenmedi"}, simdi)
+                        rec.pop("engel", None)
                         kaydet()
+                        cikti(f"::warning::Instagram kapsayıcı {kod} ({rec.get('id')}): engelde yayımlanmış olabileceğinden yeniden denenmedi")
                     else:
                         elle(f"Instagram kapsayıcı {kod}; yayımlanmadı, kontrol edip gerekirse kaydı silin")
                     continue
@@ -1077,6 +1108,11 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
             ortak = any(d != hesap for d in uyeler)
             en_az = int((ayar.get("ana_dil_en_az") or {}).get(ad, 0)) if ortak and hesap in uyeler else 0
             son_z, son_d, son_konu = son_gonderi(kayit, hesap, ad)
+            if platform == "instagram" and ayar.get("instagram_en_az_ara_saat"):
+                son_ig = son_platform_gonderisi(kayit, hesap, "instagram")
+                if son_gonderi_yakin(son_ig, simdi, ayar.get("instagram_en_az_ara_saat")):
+                    cikti(f"{ad}/{hesap}: son Instagram gönderisinden bu yana {ayar['instagram_en_az_ara_saat']} saat dolmadı, sıradaki çalışmaya kalır")
+                    continue
             if bicim in ("reel", "short") and son_gonderi_yakin(son_z, simdi, ayar.get("video_en_az_ara_saat")):
                 cikti(f"{ad}/{hesap}: son videodan bu yana {ayar['video_en_az_ara_saat']} saat dolmadı, sıradaki çalışmaya kalır")
                 continue
@@ -1090,6 +1126,10 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                          haber_disi_doldu=haber_disi_doldu):
                 icerik_dili = ig_icerik_dilleri(dil, ayar)[0] if platform == 'instagram' else dil
                 global_ig = platform == 'instagram' and bool(ayar['hesaplar'][dil].get('instagram_icerik'))
+                ig_tek = platform == 'instagram' and bool(ayar.get('instagram_tek_gonderi'))
+                ig_haber_reel = (platform == 'instagram' and bicim == 'gorsel'
+                                 and bool(ayar.get('instagram_haber_yalniz_reel'))
+                                 and bool(ayar['hesaplar'].get(dil, {}).get('instagram_reel')))
                 for x in sk.oncelikli(kuyruk, dil, platform, kayit, simdi):
                     if x.get('sosyal_tur') in KLIP_TURLERI:
                         continue  # klip/derleme haber hesaplarına gitmez; ayrı klip hesabı geçişinde işlenir
@@ -1102,6 +1142,10 @@ def calistir(ayar: dict, veri: list, *, kayit_yolu: pathlib.Path, manifest_yolu:
                     k = anahtar(x, dil, platform, bicim)
                     if k in kayit:
                         continue
+                    if ig_tek and hesapta_konu_var_mi(kayit, hesap, 'instagram', x):
+                        continue  # Aynı haber Instagram'da (görsel veya Reels) ikinci kez paylaşılmaz.
+                    if ig_haber_reel and x.get('sosyal_tur', 'haber') == 'haber' and video_hakki(x, ayar):
+                        continue  # Video adayı haber statik görsel kart olarak atılmaz; videosu hazır olunca Reels çıkar.
                     if global_ig and any(p.split('|')[1:3] == [dil, platform] and
                                          (p.split('|')[0] == konu_veya_id(x) or
                                           (x.get('sosyal_tur', 'haber') in ('haber', 'arsiv') and
