@@ -1,0 +1,97 @@
+{
+ "id": "the-blood-of-dawnwalker-steam-indirim-2026-11-24",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "The Blood of Dawnwalker Steam'de ilk kez yüzde 20 indirimde.",
+   "veri": {
+    "ust_etiket": "STEAM İNDİRİMİ",
+    "baslik": "The Blood of Dawnwalker %20 indirimde",
+    "vurgu": [
+     "indirimde"
+    ],
+    "tuslar": [
+     "20"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "THE BLOOD OF DAWNWALKER",
+    "alt": "STEAM • PC"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Güncelleme 1.2 ile New Game+ geldi. Seviye sınırı 100'e çıkıyor, bölge ölçeklemesi yok ve yeni ekipmanlar var.",
+   "veri": {
+    "baslik": "1.2 ile New Game+",
+    "maddeler": [
+     {
+      "metin": "New Game+ yayında",
+      "tetik": "New"
+     },
+     {
+      "metin": "Seviye sınırı 100",
+      "tetik": "Seviye"
+     },
+     {
+      "metin": "Bölge ölçeklemesi yok",
+      "tetik": "ölçeklemesi"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "GÜNCELLEME 1.2",
+    "alt": "NEW GAME+"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "İndirim 7 Aralık'a kadar sürüyor.",
+   "veri": {
+    "etiket": "İndirim bitiyor",
+    "tarih": "7 Aralık",
+    "not": "Steam'de yüzde 20 indirim."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "STEAM İNDİRİMİ",
+    "alt": "7 ARALIK'A KADAR"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. İlk fırsatta mı alırsın, daha büyük indirimi mi beklersin?",
+   "veri": {
+    "cagri": "Tamamı sitede",
+    "alt": "Kaynak ve ayrıntılar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

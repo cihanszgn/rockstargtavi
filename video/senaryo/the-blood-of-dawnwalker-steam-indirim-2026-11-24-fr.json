@@ -1,0 +1,97 @@
+{
+ "id": "the-blood-of-dawnwalker-steam-indirim-2026-11-24",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "The Blood of Dawnwalker est pour la première fois à -20 % sur Steam.",
+   "veri": {
+    "ust_etiket": "PROMO STEAM",
+    "baslik": "Dawnwalker à -20 % sur Steam",
+    "vurgu": [
+     "-20 %"
+    ],
+    "tuslar": [
+     "20"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "THE BLOOD OF DAWNWALKER",
+    "alt": "STEAM • PC"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "La mise à jour 1.2 apporte New Game+. Le niveau maximal passe à 100, sans adaptation par zone, avec un nouvel équipement plus puissant.",
+   "veri": {
+    "baslik": "New Game+ avec la 1.2",
+    "maddeler": [
+     {
+      "metin": "New Game+ disponible",
+      "tetik": "New"
+     },
+     {
+      "metin": "Niveau maximal : 100",
+      "tetik": "niveau"
+     },
+     {
+      "metin": "Pas d'adaptation par zone",
+      "tetik": "adaptation"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "MISE À JOUR 1.2",
+    "alt": "NEW GAME+"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "La réduction dure jusqu'au 7 décembre.",
+   "veri": {
+    "etiket": "Fin de la promo",
+    "tarih": "7 décembre",
+    "not": "-20 % sur Steam."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "PROMO STEAM",
+    "alt": "JUSQU'AU 7 DÉCEMBRE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Vous l'achetez maintenant ou vous attendez une plus grosse réduction ?",
+   "veri": {
+    "cagri": "Tout est sur le site",
+    "alt": "Source et détails dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

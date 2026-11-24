@@ -1,0 +1,97 @@
+{
+ "id": "the-blood-of-dawnwalker-steam-indirim-2026-11-24",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "The Blood of Dawnwalker is 20% off on Steam for the first time.",
+   "veri": {
+    "ust_etiket": "STEAM SALE",
+    "baslik": "Dawnwalker is 20% off on Steam",
+    "vurgu": [
+     "20% off"
+    ],
+    "tuslar": [
+     "20"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "THE BLOOD OF DAWNWALKER",
+    "alt": "STEAM • PC"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Update 1.2 brings New Game+. The level cap rises to 100, there is no zone scaling, and new gear arrives with upgraded stats.",
+   "veri": {
+    "baslik": "New Game+ in 1.2",
+    "maddeler": [
+     {
+      "metin": "New Game+ is live",
+      "tetik": "New"
+     },
+     {
+      "metin": "Level cap rises to 100",
+      "tetik": "level"
+     },
+     {
+      "metin": "No zone scaling",
+      "tetik": "scaling"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "UPDATE 1.2",
+    "alt": "NEW GAME+"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "The discount runs until December 7.",
+   "veri": {
+    "etiket": "Sale ends",
+    "tarih": "December 7",
+    "not": "20% off on Steam."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "STEAM SALE",
+    "alt": "UNTIL DECEMBER 7"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Will you buy it now, or wait for a deeper discount?",
+   "veri": {
+    "cagri": "Full story on the site",
+    "alt": "Source and details are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
