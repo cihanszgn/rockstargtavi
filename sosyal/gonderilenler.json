@@ -1994,5 +1994,19 @@
   "sosyal_tur": "haber",
   "url": "https://www.instagram.com/p/DgF0OnSjCbQ/",
   "zaman": "2026-11-23T16:31:51+00:00"
+ },
+ "zombies-arent-real-update-2-mac|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 4016852,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "zombies-arent-real-update-2-2026-11-23",
+  "kimlik": "sZobkBCU0Gg",
+  "niyet_zamani": "2026-11-24T06:43:58+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg2SykhcwvGwYyFbxSK7mfLdycoIHPuOGlfhQz9Z3KzFO2F6LPbVyMRyj4VFIPJfCcRx3xVrdBoOTEfzQc9M397MfkWfpqpZWgZqfsIrXw",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/sZobkBCU0Gg",
+  "zaman": "2026-11-24T06:43:58+00:00"
  }
 }
