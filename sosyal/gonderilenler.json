@@ -871,6 +871,21 @@
   "url": "https://www.youtube.com/shorts/_XGW5efe5x8",
   "zaman": "2026-11-18T09:03:45+00:00"
  },
+ "gta-vi-playstation-tarihinin-en-buyuk-cikisi-2026-11-23|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 6862692,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "gta-vi-playstation-tarihinin-en-buyuk-cikisi-2026-11-23",
+  "kapak_not": "küçük resim yüklenmedi: POST https://www.googleapis.com/upload/youtube/v3/thumbnails/set → HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"The user has uploaded too many thumbnails recently. Please try the request again later.\",\n    \"errors\": [\n      {\n        \"message\": \"The user has uploaded too many thumbnails recently. Please tr",
+  "kimlik": "jXzTKolnwKA",
+  "niyet_zamani": "2026-11-24T12:43:56+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg1XqAqBr6kf26PbIdYrSHzMv_ZpvRfVEhEmc37ScpmUB_BtFKyjKQUtCg6e9vkiuIep7NW06CQw2iP8xDah2QAQbOUms_pjMtINsNUmGg",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/jXzTKolnwKA",
+  "zaman": "2026-11-24T12:43:56+00:00"
+ },
  "gta-vi-xbox-cloud-remote-play-rehberi|tr|youtube|short": {
   "bicim": "short",
   "boyut": 6811592,
