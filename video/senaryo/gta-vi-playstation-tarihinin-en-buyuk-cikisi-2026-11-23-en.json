@@ -1,0 +1,107 @@
+{
+ "id": "gta-vi-playstation-tarihinin-en-buyuk-cikisi-2026-11-23",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Grand Theft Auto VI is now PlayStation's biggest launch ever, with over 39 million players on PS5.",
+   "veri": {
+    "ust_etiket": "PLAYSTATION RECORD",
+    "baslik": "39 million players on PS5",
+    "vurgu": [
+     "39 million"
+    ],
+    "tuslar": [
+     "G",
+     "T",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "GRAND THEFT AUTO VI",
+    "alt": "PLAYSTATION'S BIGGEST LAUNCH"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Sony says PS5 players logged 683 million hours in the launch window ending November 22, averaging 17.4 hours each.",
+   "veri": {
+    "baslik": "Time played on PS5",
+    "platformlar": [],
+    "sayilar": [
+     {
+      "deger": "683",
+      "etiket": "MILLION HOURS",
+      "tetik": "683"
+     },
+     {
+      "deger": "17.4",
+      "etiket": "HOURS / PLAYER",
+      "tetik": "17.4"
+     }
+    ],
+    "not": "Sony internal data, November 19 to 22."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "LAUNCH NUMBERS",
+    "alt": "SONY INTERNAL DATA"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "GTA VI also set a PlayStation record for concurrent players, and it was the first game played on 70% of new PS5 consoles.",
+   "veri": {
+    "baslik": "Records",
+    "maddeler": [
+     {
+      "metin": "PlayStation concurrent player record",
+      "tetik": "concurrent"
+     },
+     {
+      "metin": "First game on 70% of new PS5s",
+      "tetik": "first"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "RECORDS",
+    "alt": "PLAYSTATION HISTORY"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "The full story is on our site, Control A Game. Did you play on day one?",
+   "veri": {
+    "cagri": "All the numbers on the site",
+    "alt": "Did you play on day one? Tell us below."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,115 @@
+{
+ "id": "path-of-exile-2-tales-of-oriath-streaming-2026-11-23",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Path of Exile 2 müziği ilk kez Spotify ve diğer yayın platformlarında: Tales of Oriath yayında.",
+   "veri": {
+    "ust_etiket": "SOUNDTRACK",
+    "baslik": "PoE 2 müziği Spotify'da",
+    "vurgu": [
+     "Spotify'da"
+    ],
+    "tuslar": [
+     "P",
+     "O",
+     "E"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PATH OF EXILE 2",
+    "alt": "TALES OF ORIATH"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Tales of Oriath, oyunun müzik albümünden seçilmiş parçalardan oluşuyor. Besteci Kamil Orman-Janowski, solo çello ise Martin Roberts'tan; tam albüm sonra gelecek.",
+   "veri": {
+    "baslik": "Seçilmiş parçalar",
+    "maddeler": [
+     {
+      "metin": "Besteci: Kamil Orman-Janowski",
+      "tetik": "Besteci"
+     },
+     {
+      "metin": "Solo çello: Martin Roberts",
+      "tetik": "çello"
+     },
+     {
+      "metin": "Tam albüm daha sonra gelecek",
+      "tetik": "tam"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "SEÇME PARÇALAR",
+    "alt": "TAM ALBÜM SONRA GELECEK"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Spotify, Apple Music, Tidal ve YouTube Music'te dinleyebilirsin.",
+   "veri": {
+    "baslik": "Dinleme platformları",
+    "maddeler": [
+     {
+      "metin": "Spotify",
+      "tetik": "Spotify"
+     },
+     {
+      "metin": "Apple Music",
+      "tetik": "Apple"
+     },
+     {
+      "metin": "Tidal",
+      "tetik": "Tidal"
+     },
+     {
+      "metin": "YouTube Music",
+      "tetik": "YouTube"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NEREDE DİNLENİR",
+    "alt": "SPOTIFY, APPLE MUSIC, TIDAL"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Oyun müziğini oyun dışında da dinler misin?",
+   "veri": {
+    "cagri": "Bütün ayrıntılar sitede",
+    "alt": "Kaynak ve parça listesi haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,107 @@
+{
+ "id": "gta-vi-playstation-tarihinin-en-buyuk-cikisi-2026-11-23",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Grand Theft Auto VI es el mayor lanzamiento de la historia de PlayStation, con más de 39 millones de jugadores en PS5.",
+   "veri": {
+    "ust_etiket": "RÉCORD PLAYSTATION",
+    "baslik": "39 millones en PS5",
+    "vurgu": [
+     "39 millones"
+    ],
+    "tuslar": [
+     "G",
+     "T",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "GRAND THEFT AUTO VI",
+    "alt": "MAYOR LANZAMIENTO DE PLAYSTATION"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Según Sony, hasta el 22 de noviembre se jugaron 683 millones de horas en PS5, con 17,4 horas de media por jugador.",
+   "veri": {
+    "baslik": "Tiempo jugado en PS5",
+    "platformlar": [],
+    "sayilar": [
+     {
+      "deger": "683",
+      "etiket": "MILLONES DE HORAS",
+      "tetik": "683"
+     },
+     {
+      "deger": "17,4",
+      "etiket": "HORAS / JUGADOR",
+      "tetik": "17,4"
+     }
+    ],
+    "not": "Datos internos de Sony, 19 al 22 de noviembre."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "CIFRAS DEL LANZAMIENTO",
+    "alt": "DATOS INTERNOS DE SONY"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Además, batió el récord de jugadores simultáneos en PlayStation y fue el primer juego en el 70% de las PS5 nuevas.",
+   "veri": {
+    "baslik": "Récords",
+    "maddeler": [
+     {
+      "metin": "Récord de jugadores simultáneos",
+      "tetik": "simultáneos"
+     },
+     {
+      "metin": "Primer juego en el 70% de PS5 nuevas",
+      "tetik": "primer"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "RÉCORDS",
+    "alt": "HISTORIA DE PLAYSTATION"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Lo jugaste desde el primer día?",
+   "veri": {
+    "cagri": "Todas las cifras en la web",
+    "alt": "¿Lo jugaste el primer día? Cuéntanoslo."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

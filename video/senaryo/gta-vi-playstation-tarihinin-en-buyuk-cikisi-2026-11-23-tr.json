@@ -1,0 +1,107 @@
+{
+ "id": "gta-vi-playstation-tarihinin-en-buyuk-cikisi-2026-11-23",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Grand Theft Auto VI, PlayStation tarihinin en büyük çıkışı oldu; PS5'te 39 milyondan fazla oyuncu var.",
+   "veri": {
+    "ust_etiket": "PLAYSTATION REKORU",
+    "baslik": "PS5'te 39 milyon oyuncu",
+    "vurgu": [
+     "39 milyon"
+    ],
+    "tuslar": [
+     "G",
+     "T",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "GRAND THEFT AUTO VI",
+    "alt": "PLAYSTATION'IN EN BÜYÜK ÇIKIŞI"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "PS5'te toplam 683 milyon saat oynandı; oyuncu başına ortalama 17,4 saat düştü.",
+   "veri": {
+    "baslik": "PS5'te oynanan süre",
+    "platformlar": [],
+    "sayilar": [
+     {
+      "deger": "683",
+      "etiket": "MİLYON SAAT",
+      "tetik": "683"
+     },
+     {
+      "deger": "17,4",
+      "etiket": "SAAT / OYUNCU",
+      "tetik": "17,4"
+     }
+    ],
+    "not": "Sony'nin iç verisi, 19–22 Kasım."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "LANSMAN RAKAMLARI",
+    "alt": "SONY İÇ VERİSİ"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "PlayStation'da eş zamanlı oyuncu rekoru kırıldı ve GTA VI, yeni PS5'lerin yüzde 70'inde ilk oynanan oyun oldu.",
+   "veri": {
+    "baslik": "Rekorlar",
+    "maddeler": [
+     {
+      "metin": "PlayStation'da eş zamanlı oyuncu rekoru",
+      "tetik": "rekoru"
+     },
+     {
+      "metin": "Yeni PS5'lerin %70'inde ilk oyun",
+      "tetik": "yüzde"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "REKORLAR",
+    "alt": "PLAYSTATION TARİHİ"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Sen oyuna ilk günden mi girdin?",
+   "veri": {
+    "cagri": "Tüm rakamlar sitede",
+    "alt": "Sen ilk gün oynadın mı? Yorumlara yaz."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

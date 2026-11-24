@@ -1,0 +1,115 @@
+{
+ "id": "path-of-exile-2-tales-of-oriath-streaming-2026-11-23",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "La música de Path of Exile 2 llega por primera vez a Spotify y otras plataformas de streaming.",
+   "veri": {
+    "ust_etiket": "BANDA SONORA",
+    "baslik": "La música de PoE 2, en Spotify",
+    "vurgu": [
+     "Spotify"
+    ],
+    "tuslar": [
+     "P",
+     "O",
+     "E"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PATH OF EXILE 2",
+    "alt": "TALES OF ORIATH"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Tales of Oriath reúne temas de la banda sonora del juego. El compositor es Kamil Orman-Janowski, con un solo de violonchelo de Martin Roberts. La banda sonora completa llegará más adelante.",
+   "veri": {
+    "baslik": "Temas seleccionados",
+    "maddeler": [
+     {
+      "metin": "Compositor: Kamil Orman-Janowski",
+      "tetik": "compositor"
+     },
+     {
+      "metin": "Violonchelo solo: Martin Roberts",
+      "tetik": "violonchelo"
+     },
+     {
+      "metin": "Banda sonora completa, más adelante",
+      "tetik": "completa"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "TEMAS SELECCIONADOS",
+    "alt": "BANDA COMPLETA MÁS ADELANTE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Puedes escucharlo en Spotify, Apple Music, Tidal y YouTube Music.",
+   "veri": {
+    "baslik": "Dónde escucharlo",
+    "maddeler": [
+     {
+      "metin": "Spotify",
+      "tetik": "Spotify"
+     },
+     {
+      "metin": "Apple Music",
+      "tetik": "Apple"
+     },
+     {
+      "metin": "Tidal",
+      "tetik": "Tidal"
+     },
+     {
+      "metin": "YouTube Music",
+      "tetik": "YouTube"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DÓNDE ESCUCHARLO",
+    "alt": "SPOTIFY, APPLE MUSIC, TIDAL"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Escuchas bandas sonoras de videojuegos fuera del juego?",
+   "veri": {
+    "cagri": "Todos los detalles en la web",
+    "alt": "Fuente y temas en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

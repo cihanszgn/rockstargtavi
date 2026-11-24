@@ -1,0 +1,115 @@
+{
+ "id": "path-of-exile-2-tales-of-oriath-streaming-2026-11-23",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "La musique de Path of Exile 2 arrive pour la première fois sur Spotify et d'autres plateformes.",
+   "veri": {
+    "ust_etiket": "BANDE ORIGINALE",
+    "baslik": "La musique de PoE 2 sur Spotify",
+    "vurgu": [
+     "Spotify"
+    ],
+    "tuslar": [
+     "P",
+     "O",
+     "E"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PATH OF EXILE 2",
+    "alt": "TALES OF ORIATH"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Tales of Oriath rassemble des morceaux de la bande originale du jeu. Le compositeur est Kamil Orman-Janowski, avec un solo de violoncelle de Martin Roberts. La bande originale complète suivra plus tard.",
+   "veri": {
+    "baslik": "Morceaux choisis",
+    "maddeler": [
+     {
+      "metin": "Compositeur : Kamil Orman-Janowski",
+      "tetik": "compositeur"
+     },
+     {
+      "metin": "Violoncelle solo : Martin Roberts",
+      "tetik": "violoncelle"
+     },
+     {
+      "metin": "Bande originale complète plus tard",
+      "tetik": "complète"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "MORCEAUX CHOISIS",
+    "alt": "ALBUM COMPLET PLUS TARD"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Vous pouvez l'écouter sur Spotify, Apple Music, Tidal et YouTube Music.",
+   "veri": {
+    "baslik": "Où l'écouter",
+    "maddeler": [
+     {
+      "metin": "Spotify",
+      "tetik": "Spotify"
+     },
+     {
+      "metin": "Apple Music",
+      "tetik": "Apple"
+     },
+     {
+      "metin": "Tidal",
+      "tetik": "Tidal"
+     },
+     {
+      "metin": "YouTube Music",
+      "tetik": "YouTube"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "OÙ L'ÉCOUTER",
+    "alt": "SPOTIFY, APPLE MUSIC, TIDAL"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Écoutez-vous les bandes originales de jeux en dehors du jeu ?",
+   "veri": {
+    "cagri": "Tous les détails sur le site",
+    "alt": "Source et morceaux dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
