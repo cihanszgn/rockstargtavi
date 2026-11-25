@@ -167,6 +167,7 @@
   "otomatik_gizli": true,
   "otomatik_taze_saat": 24,
   "otomatik_min_konusma_puani": 8,
+  "otomatik_kufurlu_izin": true,
   "otomatik_min_sohbet_puani": 60,
   "otomatik_yayinci_basina": 2,
   "gizli_gunluk_en_fazla": 8

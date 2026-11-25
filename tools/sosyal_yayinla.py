@@ -796,6 +796,9 @@ def klip_ayari(ayar: dict) -> dict:
             # İçerik puanı zorunlu (0–10). İçerik puanı 9 ve üstüyse sohbet eşiği aranmaz.
             "otomatik_min_konusma_puani": min_konusma if min_konusma <= 10 else 8,
             "otomatik_min_sohbet_puani": _tam_sayi(k.get("otomatik_min_sohbet_puani"), 60),
+            # Videoda (konuşmada) küfür geçen klip otomatik akışa girsin mi (2026-11-25, Cio: "küfürde sıkıntı yok").
+            # Paylaşım METNİNDEKİ (başlık/açıklama) küfür her durumda engellenir (onayla_bir).
+            "otomatik_kufurlu_izin": k.get("otomatik_kufurlu_izin") is True,
             # Bir günde aynı yayıncıdan otomatik onaylanan en çok klip (0: sınırsız).
             "otomatik_yayinci_basina": _tam_sayi(k.get("otomatik_yayinci_basina"), 2),
             "gizli_calisma_basina_en_fazla": _tam_sayi(k.get("gizli_calisma_basina_en_fazla"), _tam_sayi(k.get("gizli_gunluk_en_fazla"), 4)),

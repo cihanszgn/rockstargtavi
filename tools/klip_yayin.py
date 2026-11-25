@@ -1724,7 +1724,7 @@ def otomatik_sec(ogeler: list[dict], manifest: dict, sosyal: dict, kayit: dict, 
         yayinci = str(o.get("yayinci") or "")
         if k["otomatik_yayinci_basina"] and yayinci_sayisi.get(yayinci, 0) >= k["otomatik_yayinci_basina"]:
             continue
-        if o["kufur"]:
+        if o["kufur"] and not k["otomatik_kufurlu_izin"]:
             notlar.append(f"{o['id']}: küfür uyarısı var, otomatik onaylanmadı")
             continue
         try:

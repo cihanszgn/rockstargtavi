@@ -402,6 +402,15 @@ class OtomatikOnay(KlipYayinTemel):
         self.assertTrue(any("küfür" in n for n in notlar))
         self.assertEqual(m["ogeler"], {})
 
+    def test_kufurlu_klip_izin_varsa_otomatik_onaylanir(self):
+        self.hazirla(1, dokum_metni="amk ne diyor bu")
+        (secilen, _n), _m = self.sec(sosyal={"klip": {"otomatik_gizli": True, "otomatik_kufurlu_izin": True}})
+        self.assertEqual(len(secilen), 1)
+
+    def test_kufurlu_izin_varsayilan_kapali(self):
+        self.assertFalse(sy.klip_ayari({})["otomatik_kufurlu_izin"])
+        self.assertFalse(sy.klip_ayari({"klip": {"otomatik_kufurlu_izin": "evet"}})["otomatik_kufurlu_izin"])
+
     def test_kufurlu_paylasim_metni_otomatik_onaylanmaz(self):
         self.hazirla(1, kisa_aciklama="Eray amk dedi")
         (secilen, notlar), _m = self.sec()
