@@ -287,6 +287,76 @@
    },
    "youtube": "https://www.youtube.com/shorts/_b_BR4MiFDc"
   },
+  "eraycan-20261123-bc01e91d-klip-01": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/eray",
+   "metin": {
+    "aciklama": "Kaynak: https://kick.com/eray\nKomixsi",
+    "baslik": "Eray robota iade günü dramını soruyor",
+    "etiketler": [
+     "#Eray",
+     "#Kick",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "2767013ac7da626ac7870a65252759488fa47b1ae3d86dd2e175318014af453b",
+    "otomatik": true,
+    "ozet": "719bee8ac3cbd62204e37a67c41258c4c3edc1bbe1de5b2e09293a376b92ac72",
+    "zaman": "2026-11-25T16:55:24Z"
+   },
+   "otomatik": true,
+   "oyun": "",
+   "paket": "cikti/eraycan-20261123-bc01e91d/klip-01.json",
+   "sure": 57.24,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-23",
+   "yayinci": "Eraycan",
+   "yayinda": {
+    "kapak": "klip-eraycan-20261123-bc01e91d-klip-01-kapak.jpg",
+    "mp4_1080": "klip-eraycan-20261123-bc01e91d-klip-01-1080.mp4",
+    "mp4_540": "klip-eraycan-20261123-bc01e91d-klip-01-540.mp4",
+    "mp4_720": "klip-eraycan-20261123-bc01e91d-klip-01-720.mp4",
+    "sure": 57.24,
+    "yuklenen_ozet": "719bee8ac3cbd62204e37a67c41258c4c3edc1bbe1de5b2e09293a376b92ac72",
+    "zaman": "2026-11-25T16:55:48Z"
+   }
+  },
+  "eraycan-20261123-bc01e91d-klip-03": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/eray",
+   "metin": {
+    "aciklama": "Annesinin ve arkadaşının UFO ışığı gördüğünü anlatıp buna inanıyor.\nKaynak: https://kick.com/eray\nKomixsi",
+    "baslik": "Eray annesinin UFO gördüğüne inanıyor",
+    "etiketler": [
+     "#Eray",
+     "#Kick",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "d478af3afaf3955901c658ee429545e9d4026feb2e43b05223cf22ed1c17b159",
+    "otomatik": true,
+    "ozet": "3c57ea802285b3a0a01965d1c6f9734136be714ef7585a93d02051b8d2de7db9",
+    "zaman": "2026-11-25T16:55:24Z"
+   },
+   "otomatik": true,
+   "oyun": "",
+   "paket": "cikti/eraycan-20261123-bc01e91d/klip-03.json",
+   "sure": 41.54,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-23",
+   "yayinci": "Eraycan",
+   "yayinda": {
+    "kapak": "klip-eraycan-20261123-bc01e91d-klip-03-kapak.jpg",
+    "mp4_1080": "klip-eraycan-20261123-bc01e91d-klip-03-1080.mp4",
+    "mp4_540": "klip-eraycan-20261123-bc01e91d-klip-03-540.mp4",
+    "mp4_720": "klip-eraycan-20261123-bc01e91d-klip-03-720.mp4",
+    "sure": 41.54,
+    "yuklenen_ozet": "3c57ea802285b3a0a01965d1c6f9734136be714ef7585a93d02051b8d2de7db9",
+    "zaman": "2026-11-25T16:56:09Z"
+   }
+  },
   "hype-20261118-bb86dc1f-klip-01": {
    "hesap": "klip",
    "kanal_url": "https://kick.com/hype",
@@ -427,6 +497,42 @@
    },
    "youtube": "https://www.youtube.com/shorts/y_jsyojf03s"
   },
+  "hype-20261123-085efba7-klip-02": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/hype",
+   "metin": {
+    "aciklama": "Kaçıranlar çocuk için 25 milyon isteyince oyuncu çocuğun onlarda kalmasını söylüyor.\nKaynak: https://kick.com/hype\nKomixsi",
+    "baslik": "Hype kaçırılan çocuğun fidyesini reddediyor",
+    "etiketler": [
+     "#Hype",
+     "#Kick",
+     "#GrandTheftAutoVIGTA",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "f849af21c528afa9988872f66eac910eeee7ef7ed5d272bb2cacc84bc026dcf4",
+    "otomatik": true,
+    "ozet": "7213c2b3efce7fe1f58d162fb6a7b20c7123795ea842b502307a64eca13ff375",
+    "zaman": "2026-11-25T16:55:24Z"
+   },
+   "otomatik": true,
+   "oyun": "Grand Theft Auto VI (GTA)",
+   "paket": "cikti/hype-20261123-085efba7/klip-02.json",
+   "sure": 19.9,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-23",
+   "yayinci": "Hype",
+   "yayinda": {
+    "kapak": "klip-hype-20261123-085efba7-klip-02-kapak.jpg",
+    "mp4_1080": "klip-hype-20261123-085efba7-klip-02-1080.mp4",
+    "mp4_540": "klip-hype-20261123-085efba7-klip-02-540.mp4",
+    "mp4_720": "klip-hype-20261123-085efba7-klip-02-720.mp4",
+    "sure": 19.9,
+    "yuklenen_ozet": "7213c2b3efce7fe1f58d162fb6a7b20c7123795ea842b502307a64eca13ff375",
+    "zaman": "2026-11-25T16:56:26Z"
+   }
+  },
   "jahrein-20261116-82e22279-klip-02": {
    "hesap": "klip",
    "kanal_url": "https://kick.com/jahrein",
@@ -494,6 +600,42 @@
     "zaman": "2026-11-23T18:54:33Z"
    },
    "youtube": "https://www.youtube.com/shorts/P5kgwEHd0vo"
+  },
+  "jahrein-20261124-deae6bec-klip-01": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/jahrein",
+   "metin": {
+    "aciklama": "Kaynak: https://kick.com/jahrein\nKomixsi",
+    "baslik": "Jahrein One Piece'in halini anlatıyor",
+    "etiketler": [
+     "#Jahrein",
+     "#Kick",
+     "#JustChatting",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "a68167392019c5cca3061fe1e5df6769f30dedcb9834c8386269c862703c5db2",
+    "otomatik": true,
+    "ozet": "60156fe47d850a665f34f48c077487beb431a5e17bff405ccafefec8be4ea12c",
+    "zaman": "2026-11-25T16:55:24Z"
+   },
+   "otomatik": true,
+   "oyun": "Just Chatting",
+   "paket": "cikti/jahrein-20261124-deae6bec/klip-01.json",
+   "sure": 43.37,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-24",
+   "yayinci": "Jahrein",
+   "yayinda": {
+    "kapak": "klip-jahrein-20261124-deae6bec-klip-01-kapak.jpg",
+    "mp4_1080": "klip-jahrein-20261124-deae6bec-klip-01-1080.mp4",
+    "mp4_540": "klip-jahrein-20261124-deae6bec-klip-01-540.mp4",
+    "mp4_720": "klip-jahrein-20261124-deae6bec-klip-01-720.mp4",
+    "sure": 43.37,
+    "yuklenen_ozet": "60156fe47d850a665f34f48c077487beb431a5e17bff405ccafefec8be4ea12c",
+    "zaman": "2026-11-25T16:56:47Z"
+   }
   },
   "kemalcan-parlak-20261115-9ae47b40-klip-01": {
    "hesap": "klip",
