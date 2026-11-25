@@ -1,0 +1,111 @@
+{
+ "id": "forza-horizon-6-itasha-moderasyon-2026-11-25",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "El equipo de Forza Horizon 6 explicó cómo modera las decoraciones Itasha.",
+   "veri": {
+    "ust_etiket": "ANUNCIO EN STEAM",
+    "baslik": "Normas Itasha explicadas",
+    "vurgu": [
+     "Itasha"
+    ],
+    "tuslar": [
+     "F",
+     "H",
+     "6"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "FORZA HORIZON 6",
+    "alt": "MODERACIÓN ITASHA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Entre el 16 de septiembre y el 15 de octubre se crearon 12,5 millones de contenidos. Se denunciaron 14.000 y hubo 60 bloqueos permanentes.",
+   "veri": {
+    "baslik": "Cifras de moderación",
+    "maddeler": [
+     {
+      "metin": "12,5 millones de contenidos",
+      "tetik": "millones"
+     },
+     {
+      "metin": "14.000 denunciados",
+      "tetik": "denunciaron"
+     },
+     {
+      "metin": "60 bloqueos permanentes",
+      "tetik": "permanentes"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CIFRAS DE MODERACIÓN",
+    "alt": "16 SEPT. – 15 OCT."
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Un moderador humano revisa los diseños denunciados. La IA no elimina contenido ni bloquea jugadores automáticamente. Personaje, pose y escenario se valoran juntos.",
+   "veri": {
+    "baslik": "Cómo se valoran",
+    "maddeler": [
+     {
+      "metin": "Lo revisa un moderador humano",
+      "tetik": "humano"
+     },
+     {
+      "metin": "La IA no bloquea sola",
+      "tetik": "automáticamente"
+     },
+     {
+      "metin": "Pose y escenario, juntos",
+      "tetik": "escenario"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "MODERADOR HUMANO",
+    "alt": "SIN BLOQUEOS AUTOMÁTICOS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "El equipo actualiza su Código de Conducta y los mensajes del juego. Todos los detalles en nuestra web, Control A Game. ¿Te parecen claras las normas?",
+   "veri": {
+    "cagri": "Todo en la web",
+    "alt": "Fuentes y detalles en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

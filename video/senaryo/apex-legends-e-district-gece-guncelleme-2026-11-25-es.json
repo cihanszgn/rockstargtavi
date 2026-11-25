@@ -1,0 +1,127 @@
+{
+ "id": "apex-legends-e-district-gece-guncelleme-2026-11-25",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "El mapa nocturno E-District de Apex Legends vuelve a la rotación, con menos niebla y más visibilidad.",
+   "veri": {
+    "ust_etiket": "ACTUALIZACIÓN",
+    "baslik": "Apex Legends: E-District de noche vuelve",
+    "vurgu": [
+     "E-District de noche"
+    ],
+    "tuslar": [
+     "E",
+     "D"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "APEX LEGENDS",
+    "alt": "E-DISTRICT NOCTURNO"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según el anuncio oficial en Steam, el equipo admite que se pasó con la atmósfera.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Anuncio oficial de Steam",
+    "alinti": "Nos excedimos con la atmósfera y el ambiente para complacer a los fans de la versión nocturna."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "EA • ANUNCIO EN STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "La niebla pierde un 20% de densidad y un 40% de brillo. Su distancia de dibujado se duplica.",
+   "veri": {
+    "baslik": "Menos niebla, más visibilidad",
+    "maddeler": [
+     {
+      "metin": "Densidad de niebla baja un 20%",
+      "tetik": "densidad"
+     },
+     {
+      "metin": "Brillo de niebla baja un 40%",
+      "tetik": "brillo"
+     },
+     {
+      "metin": "Distancia de niebla duplicada",
+      "tetik": "duplica"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "MENOS NIEBLA",
+    "alt": "MÁS VISIBILIDAD"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "El dron de Crypto se despliega en 1.3 segundos, frente a 2.2, y solo gasta batería al pilotarlo. Se corrigen también los avisos superpuestos del lobby.",
+   "veri": {
+    "baslik": "Crypto y correcciones",
+    "maddeler": [
+     {
+      "metin": "Dron se despliega en 1.3 s",
+      "tetik": "despliega"
+     },
+     {
+      "metin": "Batería solo al pilotarlo",
+      "tetik": "batería"
+     },
+     {
+      "metin": "Avisos del lobby corregidos",
+      "tetik": "lobby"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "CRYPTO Y CORRECCIONES",
+    "alt": "DRON Y CORRECCIONES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Preferirías jugar con menos niebla o con más atmósfera?",
+   "veri": {
+    "cagri": "Todos los detalles en la web",
+    "alt": "Fuentes y cambios de mapa en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

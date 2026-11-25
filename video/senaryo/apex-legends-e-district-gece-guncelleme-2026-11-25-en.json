@@ -1,0 +1,127 @@
+{
+ "id": "apex-legends-e-district-gece-guncelleme-2026-11-25",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Apex Legends' E-District night map returns, with less fog and clearer visibility.",
+   "veri": {
+    "ust_etiket": "LATEST UPDATE",
+    "baslik": "Apex Legends: E-District night is back",
+    "vurgu": [
+     "E-District night"
+    ],
+    "tuslar": [
+     "E",
+     "D"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "APEX LEGENDS",
+    "alt": "E-DISTRICT NIGHT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to the official Steam announcement, the team admits it leaned too hard into atmosphere and mood.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Official Steam announcement",
+    "alinti": "We over indexed on atmosphere and mood in an effort to please fans of the night version."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "EA • STEAM ANNOUNCEMENT"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Fog density drops about 20%, and fog brightness drops about 40%. The fog draw distance is doubled.",
+   "veri": {
+    "baslik": "Less fog, more visibility",
+    "maddeler": [
+     {
+      "metin": "Fog density down about 20%",
+      "tetik": "density"
+     },
+     {
+      "metin": "Fog brightness down about 40%",
+      "tetik": "brightness"
+     },
+     {
+      "metin": "Fog draw distance doubled",
+      "tetik": "doubled"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "LESS FOG, MORE VISIBILITY",
+    "alt": "FOG AND VISIBILITY"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Crypto's drone now deploys in 1.3 seconds, down from 2.2, and drains battery only while piloted. Lobby prompt overlaps are fixed too.",
+   "veri": {
+    "baslik": "Crypto and fixes",
+    "maddeler": [
+     {
+      "metin": "Drone deploy time: 2.2s to 1.3s",
+      "tetik": "deploys"
+     },
+     {
+      "metin": "Drone drains battery only when piloted",
+      "tetik": "battery"
+     },
+     {
+      "metin": "Lobby prompt overlaps fixed",
+      "tetik": "Lobby"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "CRYPTO AND FIXES",
+    "alt": "DRONE AND BUG FIXES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Would you rather play E-District with less fog?",
+   "veri": {
+    "cagri": "Read the full story on our site",
+    "alt": "Sources and map details in the article"
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

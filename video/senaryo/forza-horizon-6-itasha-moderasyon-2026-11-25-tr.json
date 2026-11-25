@@ -1,0 +1,111 @@
+{
+ "id": "forza-horizon-6-itasha-moderasyon-2026-11-25",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Forza Horizon 6, Itasha kaplamaları için moderasyon kurallarını açıkladı.",
+   "veri": {
+    "ust_etiket": "STEAM DUYURUSU",
+    "baslik": "Itasha kuralları açıklandı",
+    "vurgu": [
+     "Itasha"
+    ],
+    "tuslar": [
+     "F",
+     "H",
+     "6"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "FORZA HORIZON 6",
+    "alt": "ITASHA MODERASYONU"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Eylül ve Ekim arasında 12,5 milyon içerik yapıldı, 14.000'i şikâyet edildi. 60 oyuncu kalıcı olarak banlandı.",
+   "veri": {
+    "baslik": "Moderasyon rakamları",
+    "maddeler": [
+     {
+      "metin": "12,5 milyon içerik yapıldı",
+      "tetik": "milyon"
+     },
+     {
+      "metin": "14.000 içerik şikâyet edildi",
+      "tetik": "şikâyet"
+     },
+     {
+      "metin": "60 oyuncuya kalıcı ban",
+      "tetik": "kalıcı"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "MODERASYON RAKAMLARI",
+    "alt": "16 EYLÜL–15 EKİM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Şikâyet edilen içeriği insan moderatör inceliyor; yapay zekâ otomatik ban vermiyor. Karakter, poz ve ortam birlikte değerlendiriliyor.",
+   "veri": {
+    "baslik": "Nasıl değerlendiriliyor?",
+    "maddeler": [
+     {
+      "metin": "İnsan moderatör inceliyor",
+      "tetik": "moderatör"
+     },
+     {
+      "metin": "Yapay zekâ otomatik ban vermiyor",
+      "tetik": "otomatik"
+     },
+     {
+      "metin": "Poz ve ortam birlikte bakılıyor",
+      "tetik": "ortam"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "İNSAN MODERATÖR",
+    "alt": "OTOMATİK BAN YOK"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Ekip kuralları ve oyun içi mesajları güncelliyor. Tamamı sitemizde, Control A Game'de. Sence moderasyon kuralları yeterince net mi?",
+   "veri": {
+    "cagri": "Tamamı sitede",
+    "alt": "Kaynak ve ayrıntılar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

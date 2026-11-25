@@ -1,5 +1,218 @@
 [
  {
+  "id": "apex-legends-e-district-gece-guncelleme-2026-11-25",
+  "oyun": "Apex Legends",
+  "tarih": "2026-11-25",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "EA Apex Legends Steam duyurusu",
+    "url": "https://steamcommunity.com/games/1172470/announcements/detail/680768104678031636"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Apex Legends'ta E-District Gece haritası geri döndü",
+    "ozet": "Sis yoğunluğu yaklaşık yüzde 20, parlaklığı yüzde 40 azaldı; Crypto'nun dronu daha hızlı açılıyor ve bir dizi hata düzeltildi.",
+    "metin": "Apex Legends'ın 25 Kasım 2026 güncellemesiyle E-District Gece haritası harita rotasyonuna geri döndü. EA'nın Steam'de yayımladığı resmî duyuruya göre harita, topluluk geri bildirimlerinin ardından görünürlük için yeniden ayarlandı.\n\nGüncellemede sis yoğunluğu yaklaşık yüzde 20, sis parlaklığı yaklaşık yüzde 40 azaltıldı ve sis çizim mesafesi iki katına çıkarıldı. Ayrıca temel pozlama artırıldı, ortam parlaklığı yükseltildi ve renk düzeltmesi daha nötr hale getirildi. Geliştiriciler, atmosfer ve ruh halini fazla öne çıkardıklarını kabul ediyor ve diğer haritaları da gözden geçirecek.\n\nCrypto'nun dronunu açma ve girme süresi 2,2 saniyeden 1,3 saniyeye indi; drone artık yalnızca kumanda edilirken pil harcıyor. Düzeltilen hatalar arasında lobideki çakışan tuş istemleri, maç sonu özetinde görünmeyen Event Pass ilerlemesi, tekrar tekrar çıkan Goliath durum yazısı ve Fuse'un Ultimate'ında Breach modunda çökmeler yer alıyor.\n\nOyuncular için bu, E-District Gece haritasında daha net görüş ve daha hızlı drone kullanımı demek. Güncelleme ayrıca maç içinde bir oyuncunun yasaklanma nedeniyle atıldığını gösteren yeni bir mesaj ekliyor.",
+    "etiketler": [
+     "#ApexLegends",
+     "#EA",
+     "#PC",
+     "#BattleRoyale"
+    ]
+   },
+   "en": {
+    "baslik": "Apex Legends' E-District night map returns with less fog",
+    "ozet": "Fog density drops about 20%, fog brightness about 40%, and Crypto's drone now deploys faster, with several bug fixes included.",
+    "metin": "Apex Legends has returned the E-District night map to map rotations in its update of November 25, 2026. According to the official Steam announcement from EA, the map received visibility changes after community feedback.\n\nFog density was reduced by about 20%, fog brightness by about 40%, and fog draw distance was doubled. Base exposure and ambient brightness were increased, and color correction was rebalanced toward a more neutral render. The developers admit they over indexed on atmosphere and mood and will revisit other maps as well.\n\nThe time to deploy and enter Crypto's drone dropped from 2.2 seconds to 1.3 seconds, and the drone now drains battery only while piloted. Fixes include overlapping button prompts in the lobby, Event Pass progress missing from the post-match summary, a repeating Goliath status obituary, and crashes in Breach mode on Fuse's Ultimate.\n\nFor players, this means clearer visibility on the night version of E-District and a faster Crypto drone. The update also adds an in-match message when a player is kicked as a result of a ban.",
+    "etiketler": [
+     "#ApexLegends",
+     "#EA",
+     "#PC",
+     "#BattleRoyale"
+    ]
+   },
+   "es": {
+    "baslik": "Apex Legends: el mapa E-District nocturno vuelve con menos niebla",
+    "ozet": "La niebla pierde cerca de un 20% de densidad y un 40% de brillo, y el dron de Crypto se despliega antes, junto a varias correcciones.",
+    "metin": "Apex Legends ha reincorporado el mapa nocturno E-District a la rotación de mapas con la actualización del 25 de noviembre de 2026. Según el anuncio oficial de EA publicado en Steam, el mapa recibió ajustes de visibilidad tras los comentarios de la comunidad.\n\nLa densidad de la niebla baja cerca de un 20%, el brillo de la niebla cerca de un 40% y la distancia de dibujado de la niebla se duplica. También suben la exposición base y el brillo ambiental, y la corrección de color es más neutra. Los desarrolladores reconocen que se excedieron con la atmósfera y el ambiente y revisarán otros mapas.\n\nCrypto tarda ahora 1.3 segundos en desplegar y entrar en su dron, frente a 2.2, y el dron solo consume batería cuando se pilota. Además se corrigen los avisos de botones superpuestos en el lobby, el progreso del Pase de Evento que no aparecía en el resumen de la partida y los cierres del modo Breach en el Ultimate de Fuse.\n\nPara los jugadores, esto significa una visibilidad más clara en el mapa nocturno y un despliegue más rápido del dron de Crypto. La actualización también añade un mensaje dentro de la partida cuando un jugador es expulsado por una sanción.",
+    "etiketler": [
+     "#ApexLegends",
+     "#EA",
+     "#PC",
+     "#BattleRoyale"
+    ]
+   },
+   "fr": {
+    "baslik": "Apex Legends : E-District de nuit revient avec moins de brouillard",
+    "ozet": "Le brouillard perd environ 20% de densité et 40% de luminosité, et le drone de Crypto se déploie plus vite, avec plusieurs correctifs.",
+    "metin": "Apex Legends a remis la carte nocturne E-District dans la rotation des cartes avec la mise à jour du 25 novembre 2026. Selon l'annonce officielle d'EA publiée sur Steam, la carte a été réglée pour une meilleure visibilité après les retours des joueurs.\n\nLa densité du brouillard baisse d'environ 20%, sa luminosité d'environ 40%, et sa distance d'affichage est doublée. L'exposition de base et la luminosité ambiante augmentent, tandis que l'étalonnage des couleurs devient plus neutre. Les développeurs reconnaissent avoir trop misé sur l'atmosphère et l'ambiance, et vont revoir leurs autres cartes.\n\nLe temps nécessaire pour déployer et entrer dans le drone de Crypto passe de 2.2 à 1.3 seconde, et le drone ne consomme la batterie qu'en pilotage. Les correctifs incluent les invites de boutons qui se chevauchaient dans le lobby, la progression du Pass d'événement absente du résumé de fin de partie et les plantages du mode Breach sur l'Ultimate de Fuse.\n\nPour les joueurs, cela signifie une meilleure lisibilité sur la carte nocturne et un drone de Crypto plus rapide à mettre en place. Une nouvelle notification en partie indique aussi quand un joueur est expulsé à cause d'un bannissement.",
+    "etiketler": [
+     "#ApexLegends",
+     "#EA",
+     "#PC",
+     "#BattleRoyale"
+    ]
+   },
+   "de": {
+    "baslik": "Apex Legends: E-District-Nachtkarte kehrt mit weniger Nebel zurück",
+    "ozet": "Der Nebel verliert rund 20% Dichte und 40% Helligkeit, Cryptos Drohne wird schneller eingesetzt und mehrere Fehler sind behoben.",
+    "metin": "Apex Legends hat die Nachtkarte E-District mit dem Update vom 25. November 2026 wieder in die Kartenrotation aufgenommen. Laut der offiziellen Ankündigung von EA auf Steam wurde die Karte nach Community-Feedback für bessere Sichtbarkeit überarbeitet.\n\nDie Nebeldichte wurde um etwa 20% verringert, die Helligkeit des Nebels um etwa 40% gesenkt und die Nebel-Renderdistanz verdoppelt. Außerdem wurden die Grundbelichtung und die Umgebungshelligkeit erhöht und die Farbkorrektur neutraler abgestimmt. Die Entwickler räumen ein, dass sie bei Atmosphäre und Stimmung zu weit gegangen sind, und wollen auch andere Karten überprüfen.\n\nDie Zeit, bis Crypto seine Drohne eingesetzt und betreten hat, sank von 2,2 auf 1,3 Sekunden, und die Drohne verbraucht nur noch Akku, während sie gesteuert wird. Behoben wurden außerdem überlappende Tastenhinweise in der Lobby, fehlender Event-Pass-Fortschritt in der Zusammenfassung nach dem Match, ein sich ständig wiederholender Goliath-Statustext sowie Abstürze im Breach-Modus auf Fuses Ultimate.\n\nFür Spieler bedeutet das eine klarere Sicht auf die Nachtversion von E-District und eine schnellere Drohne für Crypto. Das Update fügt außerdem eine Nachricht im Match hinzu, wenn ein Spieler wegen eines Banns gekickt wird.",
+    "etiketler": [
+     "#ApexLegends",
+     "#EA",
+     "#PC",
+     "#BattleRoyale"
+    ]
+   },
+   "nl": {
+    "baslik": "Apex Legends: E-District-nachtkaart keert terug met minder mist",
+    "ozet": "De mist wordt ongeveer 20% minder dicht en 40% minder fel, Crypto's drone gaat sneller open en er zijn meerdere bugfixes.",
+    "metin": "Apex Legends heeft met de update van 25 november 2026 de E-District-nachtkaart weer in de maprotatie gezet. Volgens de officiële aankondiging van EA op Steam is de kaart na feedback van spelers opnieuw afgestemd op betere zichtbaarheid.\n\nDe mistdichtheid is ongeveer 20% lager, de helderheid van de mist ongeveer 40% lager en de tekenafstand van de mist is verdubbeld. Ook zijn de basisbelichting en de omgevingshelderheid verhoogd en is de kleurcorrectie neutraler gemaakt. Het team geeft toe dat het te ver is gegaan met sfeer en stemming.\n\nDe tijd om Crypto's drone in te zetten en te betreden is teruggebracht van 2,2 naar 1,3 seconden, en de drone verbruikt alleen batterij wanneer hij wordt bestuurd. Verder zijn overlappende knopmeldingen in de lobby verholpen, ontbrekende Event Pass-voortgang in het overzicht na de wedstrijd en crashes in de Breach-modus op Fuse's Ultimate.\n\nVoor spelers betekent dit een duidelijker zicht op de nachtkaart en een snellere inzet van Crypto's drone. Ook toont het spel nu een bericht in de wedstrijd wanneer iemand door een ban is gekickt.",
+    "etiketler": [
+     "#ApexLegends",
+     "#EA",
+     "#PC",
+     "#BattleRoyale"
+    ]
+   },
+   "zh": {
+    "baslik": "Apex Legends：E-District夜景地图回归，雾气减弱",
+    "ozet": "雾气浓度降低约20%，亮度降低约40%，Crypto无人机部署更快，大厅提示重叠和比赛后进度显示等问题也已修复。",
+    "metin": "Apex Legends于2026年11月25日的更新中，将夜间版E-District地图重新加入地图轮换。根据EA在Steam上发布的官方公告，该地图在听取玩家反馈后进行了能见度调整。\n\n雾气浓度降低约20%，雾气亮度降低约40%，雾气绘制距离增加一倍。同时，基础曝光提高，环境亮度提升，色彩校正也更趋中性。开发团队承认，他们在氛围和情绪上做得过头，并将重新检视其他地图。\n\nCrypto无人机的部署和进入时间从2.2秒缩短至1.3秒，且无人机只有在被操控时才会消耗电量。此外，修复了大厅中按钮提示重叠、比赛结束总结中可能不显示活动通行证进度、Goliath状态提示重复出现，以及Fuse终极技能上Breach模式崩溃等问题。\n\n对玩家而言，夜间版E-District的视野更清晰，Crypto也能更快部署无人机。新增的比赛内消息还会在玩家因封禁被踢出时显示提示。",
+    "etiketler": [
+     "#ApexLegends",
+     "#EA",
+     "#PC",
+     "#BattleRoyale"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "apex-legends-e-district-gece-guncelleme",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://steamcommunity.com/games/1172470/announcements/detail/680768104678031636",
+   "teyit_zamani": "2026-11-25T21:10:02+00:00",
+   "oyuncuya_fayda": "Oyuncular E-District gece haritasında daha net görüp Crypto'nun dronunu daha hızlı kullanabilir.",
+   "hype": 5,
+   "eklenme": "2026-11-26T00:28:28.882682+03:00"
+  }
+ },
+ {
+  "id": "forza-horizon-6-itasha-moderasyon-2026-11-25",
+  "oyun": "Forza Horizon 6",
+  "tarih": "2026-11-25",
+  "tur": "haber",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam resmî duyurusu",
+    "url": "https://store.steampowered.com/news/app/2483190/view/702160202911187030"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Forza Horizon 6 Itasha kurallarını açıkladı: 60 kalıcı ban",
+    "ozet": "Ekip, 16 Eylül–15 Ekim arasında 12,5 milyon içerikten 14.000'inin şikâyet edildiğini ve 60 kalıcı ban verildiğini bildirdi.",
+    "metin": "Forza Horizon 6 ekibi, 25 Kasım 2026'da Steam'de yayımladığı duyuruda Itasha tasarımlarının nasıl denetlendiğini açıkladı. Yazı, kaldırılan kaplamalar ve banlanan oyunculara dair şikâyetlere yanıt veriyor; ekip, kuralların bazı yaratıcılara belirsiz, kararların tutarsız göründüğünü kabul ediyor.\n\nPaylaşılan rakamlar yalnızca Itasha'yı değil, tüm oyuncu yapımı içeriği kapsıyor. 16 Eylül–15 Ekim 2026 arasında 12,5 milyon içerik oluşturuldu; yaklaşık yüzde 0,1'ine denk gelen 14.000 benzersiz içerik şikâyet edildi. Bunların yüzde 3'ü cinsel içerik nedeniyle yaptırımla sonuçlandı ve 500'den az oyuncuyu etkiledi: 250 oyuncu uyarı, 90 oyuncu askıya alma aldı, 60 oyuncu ise tam çıplaklık veya tekrarlanan ihlal nedeniyle kalıcı olarak banlandı.\n\nŞikâyet edilen içeriği bir moderatör inceliyor; yapay zekâ tasarımları otomatik kaldırmıyor, oyuncuları otomatik banlamıyor, şikâyet sayısı da sonucu belirlemiyor. Karakter, kıyafet, ifade, poz, ortam ve aksesuarlar birlikte değerlendiriliyor; çocuk görünümlü karakterler asla imalı gösterilemiyor. Yayımlanmamış kaplamalar da Davranış Kuralları'na tabi, çünkü Drivatar'lar aracılığıyla başkalarına görünebiliyor. Ekip Davranış Kuralları'nı güncellemeye başladı ve kaldırma nedenlerini oyun içi mesajlarla daha açık anlatacak. Itasha yapan oyuncular itiraz hakkını kullanmayı sürdürebilir.",
+    "etiketler": [
+     "#ForzaHorizon6",
+     "#PlaygroundGames",
+     "#Itasha",
+     "#Moderation",
+     "#Steam"
+    ]
+   },
+   "en": {
+    "baslik": "Forza Horizon 6 explains Itasha moderation: 60 permanent bans",
+    "ozet": "The team says 14,000 of 12.5 million pieces of content were reported from September 16 to October 15, and 60 players were permanently banned.",
+    "metin": "The Forza Horizon 6 team published a Steam post on November 25, 2026 explaining how it moderates Itasha liveries. It responds to complaints about removed designs and banned players, and admits that some creators found the rules unclear and the decisions inconsistent.\n\nThe figures cover all player-made content, not only Itasha. From September 16 to October 15, 2026, players created 12.5 million pieces of content, and 14,000 unique items, roughly 0.1%, were reported. Of those, 3% led to action for sexual content, affecting fewer than 500 players: 250 received warnings, 90 were suspended, and 60 were permanently banned for full nudity or repeat violations.\n\nA human moderator reviews reported content; AI does not automatically remove designs or ban players, and the number of reports does not decide the outcome. Character, clothing, expression, pose, setting and props are weighed together, and characters who look like children must never be shown suggestively. Unpublished liveries still fall under the Code of Conduct because Drivatars can show them to other players. The team has begun updating the Code of Conduct and is changing in-game messages to explain removals, while Itasha creators can keep appealing decisions.",
+    "etiketler": [
+     "#ForzaHorizon6",
+     "#PlaygroundGames",
+     "#Itasha",
+     "#Moderation",
+     "#Steam"
+    ]
+   },
+   "es": {
+    "baslik": "Forza Horizon 6 explica la moderación Itasha: 60 bloqueos",
+    "ozet": "El equipo indica que se denunciaron 14.000 de 12,5 millones de contenidos entre el 16 de septiembre y el 15 de octubre; 60 bloqueos permanentes.",
+    "metin": "El equipo de Forza Horizon 6 publicó el 25 de noviembre de 2026 una entrada en Steam que explica cómo modera las decoraciones Itasha. Responde a las quejas por diseños eliminados y jugadores bloqueados, y reconoce que algunos creadores vieron las normas poco claras y las decisiones incoherentes.\n\nLas cifras abarcan todo el contenido creado por jugadores, no solo Itasha. Entre el 16 de septiembre y el 15 de octubre de 2026 se crearon 12,5 millones de contenidos y se denunciaron 14.000 únicos, aproximadamente el 0,1 %. El 3 % de ellos acabó en sanciones por contenido sexual y afectó a menos de 500 jugadores: 250 recibieron advertencias, 90 suspensiones y 60 bloqueos permanentes por desnudez total o infracciones repetidas.\n\nUn moderador humano revisa el contenido denunciado; la IA no elimina diseños ni bloquea jugadores automáticamente, y el número de denuncias no decide el resultado. Personaje, ropa, expresión, pose, escenario y accesorios se valoran juntos, y los personajes de aspecto infantil nunca pueden mostrarse de forma sugerente. Las decoraciones sin publicar también están sujetas al Código de Conducta porque los Drivatars pueden mostrarlas a otros jugadores. El equipo ha empezado a actualizar el Código de Conducta y cambiará los mensajes del juego para explicar las eliminaciones; los creadores de Itasha pueden seguir apelando.",
+    "etiketler": [
+     "#ForzaHorizon6",
+     "#PlaygroundGames",
+     "#Itasha",
+     "#Moderation",
+     "#Steam"
+    ]
+   },
+   "fr": {
+    "baslik": "Forza Horizon 6 détaille la modération Itasha : 60 bannis",
+    "ozet": "L'équipe indique que 14 000 des 12,5 millions de contenus ont été signalés du 16 septembre au 15 octobre, avec 60 bannissements définitifs.",
+    "metin": "L'équipe de Forza Horizon 6 a publié le 25 novembre 2026 un billet sur Steam expliquant comment elle modère les livrées Itasha. Elle répond aux plaintes concernant des créations supprimées et des joueurs bannis, et reconnaît que certains créateurs trouvaient les règles floues et les décisions incohérentes.\n\nLes chiffres couvrent tous les contenus créés par les joueurs, pas seulement Itasha. Du 16 septembre au 15 octobre 2026, 12,5 millions de contenus ont été créés et 14 000 contenus uniques, soit environ 0,1 %, ont été signalés. Parmi eux, 3 % ont entraîné une sanction pour contenu sexuel et touché moins de 500 joueurs : 250 avertissements, 90 suspensions et 60 bannissements définitifs pour nudité totale ou infractions répétées.\n\nUn modérateur humain examine les contenus signalés ; l'IA ne supprime pas automatiquement les créations ni ne bannit les joueurs, et le nombre de signalements ne décide pas du résultat. Personnage, tenue, expression, pose, décor et accessoires sont évalués ensemble, et les personnages d'apparence enfantine ne doivent jamais être montrés de façon suggestive. Les livrées non publiées restent soumises au Code de conduite, car les Drivatars peuvent les montrer à d'autres joueurs. L'équipe a commencé à mettre à jour ce code et modifie les messages en jeu pour expliquer les suppressions ; les créateurs Itasha peuvent toujours faire appel.",
+    "etiketler": [
+     "#ForzaHorizon6",
+     "#PlaygroundGames",
+     "#Itasha",
+     "#Moderation",
+     "#Steam"
+    ]
+   },
+   "de": {
+    "baslik": "Forza Horizon 6 erklärt Itasha-Moderation: 60 Dauersperren",
+    "ozet": "Das Team nennt für 16. September bis 15. Oktober 14.000 gemeldete von 12,5 Millionen Inhalten und 60 dauerhafte Sperren.",
+    "metin": "Das Team von Forza Horizon 6 hat am 25. November 2026 einen Steam-Beitrag veröffentlicht, der erklärt, wie Itasha-Lackierungen moderiert werden. Er reagiert auf Beschwerden über entfernte Designs und gesperrte Spieler und räumt ein, dass manche Ersteller die Regeln unklar und die Entscheidungen uneinheitlich fanden.\n\nDie Zahlen betreffen alle von Spielern erstellten Inhalte, nicht nur Itasha. Vom 16. September bis 15. Oktober 2026 entstanden 12,5 Millionen Inhalte, und 14.000 einzelne Inhalte, etwa 0,1 %, wurden gemeldet. 3 % davon führten wegen sexueller Inhalte zu Maßnahmen und betrafen weniger als 500 Spieler: 250 erhielten Verwarnungen, 90 Sperren auf Zeit und 60 wurden wegen vollständiger Nacktheit oder wiederholter Verstöße dauerhaft gesperrt.\n\nEin menschlicher Moderator prüft gemeldete Inhalte; KI entfernt Designs nicht automatisch und sperrt keine Spieler, und die Zahl der Meldungen entscheidet nicht über das Ergebnis. Figur, Kleidung, Ausdruck, Pose, Umgebung und Requisiten werden gemeinsam bewertet; kindlich wirkende Figuren dürfen nie anzüglich gezeigt werden. Unveröffentlichte Lackierungen unterliegen ebenfalls dem Verhaltenskodex, da Drivatars sie anderen Spielern zeigen können. Das Team hat begonnen, den Kodex zu überarbeiten, und ändert Spielmeldungen, um Entfernungen zu erklären; Itasha-Ersteller können weiterhin Einspruch einlegen.",
+    "etiketler": [
+     "#ForzaHorizon6",
+     "#PlaygroundGames",
+     "#Itasha",
+     "#Moderation",
+     "#Steam"
+    ]
+   },
+   "nl": {
+    "baslik": "Forza Horizon 6 legt Itasha-moderatie uit: 60 permanente bans",
+    "ozet": "Het team meldt dat van 16 september tot 15 oktober 14.000 van 12,5 miljoen inhoud is gemeld en 60 spelers permanent zijn verbannen.",
+    "metin": "Het team van Forza Horizon 6 publiceerde op 25 november 2026 een Steam-bericht over hoe Itasha-livreien worden gemodereerd. Het reageert op klachten over verwijderde ontwerpen en verbannen spelers en erkent dat sommige makers de regels onduidelijk en de beslissingen inconsistent vonden.\n\nDe cijfers gaan over alle door spelers gemaakte inhoud, niet alleen Itasha. Van 16 september tot 15 oktober 2026 werd 12,5 miljoen inhoud gemaakt en 14.000 unieke stukken, ongeveer 0,1 %, werden gemeld. Daarvan leidde 3 % tot maatregelen wegens seksuele inhoud, voor minder dan 500 spelers: 250 kregen een waarschuwing, 90 een schorsing en 60 werden permanent verbannen vanwege volledige naaktheid of herhaalde overtredingen.\n\nEen menselijke moderator beoordeelt gemelde inhoud; AI verwijdert ontwerpen niet automatisch en verbant geen spelers, en het aantal meldingen bepaalt de uitkomst niet. Personage, kleding, uitdrukking, pose, setting en attributen worden samen beoordeeld, en personages die er kinderlijk uitzien mogen nooit suggestief worden getoond. Ongepubliceerde livreien vallen ook onder de gedragscode, omdat Drivatars ze aan andere spelers kunnen tonen. Het team is begonnen de gedragscode bij te werken en past spelmeldingen aan om verwijderingen uit te leggen; Itasha-makers kunnen blijven in beroep gaan.",
+    "etiketler": [
+     "#ForzaHorizon6",
+     "#PlaygroundGames",
+     "#Itasha",
+     "#Moderation",
+     "#Steam"
+    ]
+   },
+   "zh": {
+    "baslik": "《Forza Horizon 6》公布Itasha审核规则：60人被永久封禁",
+    "ozet": "团队称9月16日至10月15日共有1250万件内容，1.4万件被举报，60名玩家被永久封禁。",
+    "metin": "Forza Horizon 6团队于2026年11月25日在Steam发布公告，说明如何审核Itasha涂装。公告回应了涂装被删除、玩家被封禁的质疑，并承认部分创作者认为规则不够清晰、处理结果不够一致。\n\n公布的数据涵盖所有玩家自制内容，而不只是Itasha。2026年9月16日至10月15日，玩家共创作了1250万件内容，其中约0.1%，即1.4万件独立内容被举报。这些被举报内容中有3%因涉及色情内容被处理，影响的玩家不到500人：250人收到警告，90人被暂时封禁，60人因完全裸露或重复违规被永久封禁。\n\n被举报的内容由人工审核员查看；AI不会自动删除设计或封禁玩家，举报数量也不决定结果。审核会综合考虑角色、服装、表情、姿势、场景和道具，外表像儿童的角色绝不能被呈现得带有暗示性。未发布的涂装同样适用行为准则，因为它们可能通过Drivatar显示给其他玩家。团队已开始更新行为准则，并将改进游戏内提示，说明内容被删除的原因；Itasha创作者仍可申诉。",
+    "etiketler": [
+     "#ForzaHorizon6",
+     "#PlaygroundGames",
+     "#Itasha",
+     "#Moderation",
+     "#Steam"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "forza-horizon-6-itasha-moderasyon-aciklamasi",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/2483190/view/702160202911187030",
+   "teyit_zamani": "2026-11-25T21:10:02+00:00",
+   "oyuncuya_fayda": "Oyuncular Itasha kaplamalarının hangi ölçütlerle denetlendiğini ve kaldırma ya da ban durumunda nasıl itiraz edebileceğini öğrenir.",
+   "hype": 5,
+   "eklenme": "2026-11-26T00:28:28.882682+03:00"
+  }
+ },
+ {
   "id": "aion-2-bountiful-feast-of-thanks-2026-11-25",
   "oyun": "AION 2",
   "tarih": "2026-11-25",

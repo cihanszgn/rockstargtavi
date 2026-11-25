@@ -1,0 +1,127 @@
+{
+ "id": "apex-legends-e-district-gece-guncelleme-2026-11-25",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Apex Legends'ta E-District gece haritası geri döndü, sis azaldı ve görüş arttı.",
+   "veri": {
+    "ust_etiket": "GÜNCELLEME",
+    "baslik": "E-District gece haritası geri döndü",
+    "vurgu": [
+     "geri döndü"
+    ],
+    "tuslar": [
+     "E",
+     "D"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "APEX LEGENDS",
+    "alt": "E-DISTRICT GECE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam'deki resmî duyuruya göre ekip, atmosferi fazla öne çıkardığını kabul ediyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam resmî duyurusu",
+    "alinti": "Atmosfer ve ruh halini fazla öne çıkardığımızı fark ettik."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "EA • STEAM DUYURUSU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Sis yoğunluğu yaklaşık yüzde 20 azaldı, parlaklığı yüzde 40 düştü. Sis çizim mesafesi iki katına çıktı.",
+   "veri": {
+    "baslik": "Sis azaldı, görüş arttı",
+    "maddeler": [
+     {
+      "metin": "Sis yoğunluğu azaldı",
+      "tetik": "Sis"
+     },
+     {
+      "metin": "Sis parlaklığı azaldı",
+      "tetik": "parlaklığı"
+     },
+     {
+      "metin": "Sis çizim mesafesi iki katına çıktı",
+      "tetik": "iki katına"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "SİS VE GÖRÜŞ",
+    "alt": "E-DISTRICT GECE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Crypto'nun dronu daha hızlı açılıyor, pil yalnızca kumandayken harcanıyor. Lobideki tuş istemleri de düzeltildi.",
+   "veri": {
+    "baslik": "Crypto ve düzeltmeler",
+    "maddeler": [
+     {
+      "metin": "Drone daha hızlı açılıyor",
+      "tetik": "hızlı"
+     },
+     {
+      "metin": "Pil yalnızca kumandayken harcanıyor",
+      "tetik": "pil"
+     },
+     {
+      "metin": "Lobideki tuş istemleri düzeltildi",
+      "tetik": "Lobideki"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "yama",
+    "baslik": "CRYPTO VE DÜZELTMELER",
+    "alt": "DRONE VE HATA DÜZELTMELERİ"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Gece haritasını yeni haliyle oynamak ister misin?",
+   "veri": {
+    "cagri": "Tamamı sitemizde",
+    "alt": "Kaynaklar ve tüm değişiklikler haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

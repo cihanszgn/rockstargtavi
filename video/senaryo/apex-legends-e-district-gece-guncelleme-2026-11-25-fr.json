@@ -1,0 +1,127 @@
+{
+ "id": "apex-legends-e-district-gece-guncelleme-2026-11-25",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "La carte nocturne E-District d'Apex Legends revient dans la rotation, avec moins de brouillard et une meilleure visibilité.",
+   "veri": {
+    "ust_etiket": "MISE À JOUR",
+    "baslik": "Apex Legends : E-District de nuit revient",
+    "vurgu": [
+     "E-District de nuit"
+    ],
+    "tuslar": [
+     "E",
+     "D"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "APEX LEGENDS",
+    "alt": "E-DISTRICT DE NUIT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "D'après l'annonce officielle sur Steam, l'équipe admet avoir trop insisté sur l'ambiance.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Annonce officielle sur Steam",
+    "alinti": "Nous avons trop misé sur l'atmosphère et l'ambiance pour plaire aux fans de la version nocturne."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "EA • ANNONCE STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "La densité du brouillard baisse d'environ 20%, et sa luminosité d'environ 40%. La distance d'affichage du brouillard est doublée.",
+   "veri": {
+    "baslik": "Moins de brouillard",
+    "maddeler": [
+     {
+      "metin": "Densité du brouillard réduite d'environ 20%",
+      "tetik": "densité"
+     },
+     {
+      "metin": "Luminosité du brouillard réduite d'environ 40%",
+      "tetik": "luminosité"
+     },
+     {
+      "metin": "Distance d'affichage du brouillard doublée",
+      "tetik": "doublée"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "MOINS DE BROUILLARD",
+    "alt": "PLUS DE VISIBILITÉ"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Le drone de Crypto se déploie en 1.3 seconde, contre 2.2, et ne consomme la batterie qu'en pilotage. Le lobby corrige aussi des invites de boutons superposées.",
+   "veri": {
+    "baslik": "Crypto et correctifs",
+    "maddeler": [
+     {
+      "metin": "Déploiement du drone : 2.2 s à 1.3 s",
+      "tetik": "déploie"
+     },
+     {
+      "metin": "Batterie consommée seulement en pilotage",
+      "tetik": "batterie"
+     },
+     {
+      "metin": "Invites de boutons du lobby corrigées",
+      "tetik": "lobby"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "CRYPTO ET CORRECTIFS",
+    "alt": "DRONE ET BUGS CORRIGÉS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Préférerais-tu jouer avec moins de brouillard ou plus d'atmosphère ?",
+   "veri": {
+    "cagri": "Tout est sur notre site",
+    "alt": "Sources et nouveautés des cartes dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

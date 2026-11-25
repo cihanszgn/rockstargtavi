@@ -1,0 +1,111 @@
+{
+ "id": "forza-horizon-6-itasha-moderasyon-2026-11-25",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Forza Horizon 6's team explained how Itasha liveries are moderated.",
+   "veri": {
+    "ust_etiket": "STEAM ANNOUNCEMENT",
+    "baslik": "Itasha rules explained",
+    "vurgu": [
+     "Itasha"
+    ],
+    "tuslar": [
+     "F",
+     "H",
+     "6"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "FORZA HORIZON 6",
+    "alt": "ITASHA MODERATION"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Between September 16 and October 15, players made 12.5 million pieces of content. About 14,000 were reported, and 60 players were permanently banned.",
+   "veri": {
+    "baslik": "Moderation numbers",
+    "maddeler": [
+     {
+      "metin": "12.5 million items created",
+      "tetik": "million"
+     },
+     {
+      "metin": "14,000 items reported",
+      "tetik": "reported"
+     },
+     {
+      "metin": "60 players permanently banned",
+      "tetik": "permanently"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "MODERATION NUMBERS",
+    "alt": "SEPTEMBER 16 – OCTOBER 15"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "A human moderator reviews reported designs. AI does not remove content or ban players automatically. Character, pose and setting are judged together.",
+   "veri": {
+    "baslik": "How designs are judged",
+    "maddeler": [
+     {
+      "metin": "A human moderator reviews",
+      "tetik": "human"
+     },
+     {
+      "metin": "No automatic AI bans",
+      "tetik": "automatically"
+     },
+     {
+      "metin": "Pose and setting judged together",
+      "tetik": "setting"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "HUMAN MODERATORS",
+    "alt": "NO AUTOMATIC BANS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "The team is updating its Code of Conduct and in-game removal messages. Read the full story on our site, Control A Game. Do the rules feel clear to you?",
+   "veri": {
+    "cagri": "Full story on the site",
+    "alt": "Sources and details are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

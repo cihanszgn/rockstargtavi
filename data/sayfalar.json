@@ -8,8 +8,8 @@
 "2026-11-22"
 ],
 "cikis-takvimi.html": [
-"0a5f3f7293dd",
-"2026-11-25"
+"ca7688e74f6d",
+"2026-11-26"
 ],
 "de/angebote.html": [
 "b01d6a59ad2e",
@@ -20,8 +20,8 @@
 "2026-11-16"
 ],
 "de/erscheinungskalender.html": [
-"814ff63eac86",
-"2026-11-25"
+"f5ea0bf870fb",
+"2026-11-26"
 ],
 "de/geruechte.html": [
 "10fecf40eeec",
@@ -32,12 +32,12 @@
 "2026-11-19"
 ],
 "de/index.html": [
-"1ec83d822248",
-"2026-11-25"
+"b279f1fd2630",
+"2026-11-26"
 ],
 "de/kostenlose-spiele.html": [
-"94a8469e2125",
-"2026-11-25"
+"94e7e2bdff17",
+"2026-11-26"
 ],
 "de/nachrichten.html": [
 "b5d260365596",
@@ -120,12 +120,12 @@
 "2026-11-16"
 ],
 "de/spiele-news.html": [
-"d7cad23331f4",
-"2026-11-25"
+"943b7b1bd427",
+"2026-11-26"
 ],
 "de/spiele/apex-legends.html": [
-"0c9f15744159",
-"2026-11-25"
+"5258f02ab22d",
+"2026-11-26"
 ],
 "de/spiele/battlefield-6.html": [
 "a754522f56b6",
@@ -192,8 +192,8 @@
 "2026-11-16"
 ],
 "de/spiele/index.html": [
-"1206658fb57e",
-"2026-11-25"
+"710bce58c4fc",
+"2026-11-26"
 ],
 "de/spiele/knight-online.html": [
 "060ffcc8781a",
@@ -224,8 +224,8 @@
 "2026-11-16"
 ],
 "de/spiele/path-of-exile-2.html": [
-"7b95301aab1d",
-"2026-11-25"
+"81d6f1fdd0ff",
+"2026-11-26"
 ],
 "de/spiele/path-of-exile.html": [
 "882fd3a41636",
@@ -284,8 +284,12 @@
 "2026-11-16"
 ],
 "de/thema/aion2.html": [
-"22fbb7bef7f7",
-"2026-11-25"
+"3f516887a992",
+"2026-11-26"
+],
+"de/thema/apexlegends.html": [
+"296882ddd29f",
+"2026-11-26"
 ],
 "de/thema/blizzard.html": [
 "7d121d2bb74b",
@@ -312,16 +316,16 @@
 "2026-11-25"
 ],
 "de/thema/pc.html": [
-"db6db61a3cb8",
-"2026-11-25"
+"9dd5b0afa86e",
+"2026-11-26"
 ],
 "de/thema/playstation.html": [
 "c3596257a9a5",
 "2026-11-24"
 ],
 "de/thema/ps5.html": [
-"058caea76f18",
-"2026-11-25"
+"f761e36253f4",
+"2026-11-26"
 ],
 "de/thema/riotgames.html": [
 "ffecc06c4733",
@@ -332,8 +336,8 @@
 "2026-11-24"
 ],
 "de/thema/steam.html": [
-"53163c5c9127",
-"2026-11-25"
+"212fde47f323",
+"2026-11-26"
 ],
 "de/thema/steamawards.html": [
 "9bfc34ba9793",
@@ -348,12 +352,12 @@
 "2026-11-24"
 ],
 "de/thema/tur-guncelleme.html": [
-"846a4e05dbdc",
-"2026-11-25"
+"5ecbbf4e0f69",
+"2026-11-26"
 ],
 "de/thema/tur-haber.html": [
-"51b8e09d25ac",
-"2026-11-25"
+"68482e245f79",
+"2026-11-26"
 ],
 "de/thema/tur-indirim.html": [
 "89bd0d5e5d62",
@@ -408,16 +412,16 @@
 "2026-11-25"
 ],
 "en/free-games.html": [
-"4ae0c2d2c2a6",
-"2026-11-25"
+"3aa2a670189b",
+"2026-11-26"
 ],
 "en/game-news.html": [
-"bc52db4ea8b3",
-"2026-11-25"
+"9d10dff9a1dc",
+"2026-11-26"
 ],
 "en/game/apex-legends.html": [
-"755b7446a396",
-"2026-11-25"
+"84d8af605c81",
+"2026-11-26"
 ],
 "en/game/battlefield-6.html": [
 "51862778743b",
@@ -484,8 +488,8 @@
 "2026-11-16"
 ],
 "en/game/index.html": [
-"c253718d083b",
-"2026-11-25"
+"b6e02ba4440d",
+"2026-11-26"
 ],
 "en/game/knight-online.html": [
 "7459042a3f7d",
@@ -516,8 +520,8 @@
 "2026-11-16"
 ],
 "en/game/path-of-exile-2.html": [
-"676e1bfa847f",
-"2026-11-25"
+"c794d4c4d576",
+"2026-11-26"
 ],
 "en/game/path-of-exile.html": [
 "e158ccba289a",
@@ -652,8 +656,8 @@
 "2026-11-22"
 ],
 "en/index.html": [
-"b053e0333b1e",
-"2026-11-25"
+"8006e548bc92",
+"2026-11-26"
 ],
 "en/languages.html": [
 "c4ea9df84208",
@@ -668,8 +672,8 @@
 "2026-11-15"
 ],
 "en/release-calendar.html": [
-"44389655d31b",
-"2026-11-25"
+"bc11fcb11096",
+"2026-11-26"
 ],
 "en/rumors.html": [
 "ebe69f8668a0",
@@ -680,8 +684,12 @@
 "2026-11-09"
 ],
 "en/tag/aion2.html": [
-"2a69d7692278",
-"2026-11-25"
+"5d5a0141f167",
+"2026-11-26"
+],
+"en/tag/apexlegends.html": [
+"f9bf46b461f3",
+"2026-11-26"
 ],
 "en/tag/blizzard.html": [
 "a16720c7e996",
@@ -708,16 +716,16 @@
 "2026-11-25"
 ],
 "en/tag/pc.html": [
-"37e3a327e294",
-"2026-11-25"
+"9d2b8479d09b",
+"2026-11-26"
 ],
 "en/tag/playstation.html": [
 "cbd27e7f70e3",
 "2026-11-25"
 ],
 "en/tag/ps5.html": [
-"575cb6d5ef68",
-"2026-11-25"
+"02fae8176962",
+"2026-11-26"
 ],
 "en/tag/riotgames.html": [
 "b962edac83a6",
@@ -728,8 +736,8 @@
 "2026-11-25"
 ],
 "en/tag/steam.html": [
-"20c04d3515cd",
-"2026-11-25"
+"9d8acbc66e16",
+"2026-11-26"
 ],
 "en/tag/steamawards.html": [
 "a9486d164652",
@@ -744,12 +752,12 @@
 "2026-11-25"
 ],
 "en/tag/tur-guncelleme.html": [
-"d61657c2fa4d",
-"2026-11-25"
+"3302c8cc1dcd",
+"2026-11-26"
 ],
 "en/tag/tur-haber.html": [
-"ae20ff2874df",
-"2026-11-25"
+"739ebb1c6457",
+"2026-11-26"
 ],
 "en/tag/tur-indirim.html": [
 "c978fccbdba9",
@@ -788,8 +796,8 @@
 "2026-11-15"
 ],
 "es/calendario-lanzamientos.html": [
-"c437fa8a05cf",
-"2026-11-25"
+"c33e66a1fb3a",
+"2026-11-26"
 ],
 "es/gta-6.html": [
 "1d297fe067a2",
@@ -872,12 +880,12 @@
 "2026-11-09"
 ],
 "es/index.html": [
-"82e7a6fb45e4",
-"2026-11-25"
+"076a6579ea0e",
+"2026-11-26"
 ],
 "es/juego/apex-legends.html": [
-"cd6cf5ab6079",
-"2026-11-25"
+"d7dfde5ae9ac",
+"2026-11-26"
 ],
 "es/juego/battlefield-6.html": [
 "004a5d6d98c0",
@@ -944,8 +952,8 @@
 "2026-11-16"
 ],
 "es/juego/index.html": [
-"19928b8f9850",
-"2026-11-25"
+"f8c908567a1c",
+"2026-11-26"
 ],
 "es/juego/knight-online.html": [
 "ddcfe4f0d44b",
@@ -976,8 +984,8 @@
 "2026-11-16"
 ],
 "es/juego/path-of-exile-2.html": [
-"c8d49567e558",
-"2026-11-25"
+"ad5832bb29cb",
+"2026-11-26"
 ],
 "es/juego/path-of-exile.html": [
 "2cf8bc2455fa",
@@ -1032,8 +1040,8 @@
 "2026-11-20"
 ],
 "es/juegos-gratis.html": [
-"7e1b1ffe7629",
-"2026-11-25"
+"4fd094cbfd9d",
+"2026-11-26"
 ],
 "es/languages.html": [
 "f53ed671bbf6",
@@ -1044,8 +1052,8 @@
 "2026-11-17"
 ],
 "es/noticias-juegos.html": [
-"3acff0b3f8d3",
-"2026-11-25"
+"16c0d0b8aaa2",
+"2026-11-26"
 ],
 "es/ofertas.html": [
 "767302a58366",
@@ -1064,8 +1072,12 @@
 "2026-11-09"
 ],
 "es/tema/aion2.html": [
-"cae16b8b5314",
-"2026-11-25"
+"774060978554",
+"2026-11-26"
+],
+"es/tema/apexlegends.html": [
+"658b05e2ce42",
+"2026-11-26"
 ],
 "es/tema/blizzard.html": [
 "db2fea07b9c2",
@@ -1092,16 +1104,16 @@
 "2026-11-25"
 ],
 "es/tema/pc.html": [
-"ef95a1caf5df",
-"2026-11-25"
+"1696ef3804eb",
+"2026-11-26"
 ],
 "es/tema/playstation.html": [
 "0079aa2d7c06",
 "2026-11-25"
 ],
 "es/tema/ps5.html": [
-"6f2fa2595f08",
-"2026-11-25"
+"dab4753ec851",
+"2026-11-26"
 ],
 "es/tema/riotgames.html": [
 "fd502fa6da5d",
@@ -1112,8 +1124,8 @@
 "2026-11-25"
 ],
 "es/tema/steam.html": [
-"cb444efecd07",
-"2026-11-25"
+"84695b9b1981",
+"2026-11-26"
 ],
 "es/tema/steamawards.html": [
 "3dc434cf1612",
@@ -1128,12 +1140,12 @@
 "2026-11-25"
 ],
 "es/tema/tur-guncelleme.html": [
-"ee4779cc8726",
-"2026-11-25"
+"47796f84e98e",
+"2026-11-26"
 ],
 "es/tema/tur-haber.html": [
-"2e22d2f86fb9",
-"2026-11-25"
+"8e04d16790f1",
+"2026-11-26"
 ],
 "es/tema/tur-indirim.html": [
 "be58afc69656",
@@ -1168,8 +1180,12 @@
 "2026-11-25"
 ],
 "etiket/aion2.html": [
-"0fb12706a858",
-"2026-11-25"
+"8323e29b3034",
+"2026-11-26"
+],
+"etiket/apexlegends.html": [
+"10d1e2401b8f",
+"2026-11-26"
 ],
 "etiket/blizzard.html": [
 "24c5c4830620",
@@ -1196,16 +1212,16 @@
 "2026-11-25"
 ],
 "etiket/pc.html": [
-"47ecf0eb0881",
-"2026-11-25"
+"42275feec687",
+"2026-11-26"
 ],
 "etiket/playstation.html": [
 "7c91c26ec5a9",
 "2026-11-25"
 ],
 "etiket/ps5.html": [
-"b2924b1977fb",
-"2026-11-25"
+"d5c18e35a108",
+"2026-11-26"
 ],
 "etiket/riotgames.html": [
 "b0943170e90a",
@@ -1216,8 +1232,8 @@
 "2026-11-25"
 ],
 "etiket/steam.html": [
-"e46bfdd20918",
-"2026-11-25"
+"23a4c922d4a4",
+"2026-11-26"
 ],
 "etiket/steamawards.html": [
 "881a02c3701b",
@@ -1232,12 +1248,12 @@
 "2026-11-25"
 ],
 "etiket/tur-guncelleme.html": [
-"2ad0298d85c3",
-"2026-11-25"
+"881028e57277",
+"2026-11-26"
 ],
 "etiket/tur-haber.html": [
-"d9de4a290d6d",
-"2026-11-25"
+"254a3a9e7d73",
+"2026-11-26"
 ],
 "etiket/tur-indirim.html": [
 "ddd514cf6279",
@@ -1276,12 +1292,12 @@
 "2026-11-15"
 ],
 "fr/actus-jeux.html": [
-"74499464aea7",
-"2026-11-25"
+"fa50aec95dad",
+"2026-11-26"
 ],
 "fr/calendrier-sorties.html": [
-"bb41155c3e2f",
-"2026-11-25"
+"8ad7a02a5a4c",
+"2026-11-26"
 ],
 "fr/gta-6.html": [
 "8789278dfd2d",
@@ -1364,12 +1380,12 @@
 "2026-11-22"
 ],
 "fr/index.html": [
-"5bb556e00161",
-"2026-11-25"
+"b139ea315b2d",
+"2026-11-26"
 ],
 "fr/jeu/apex-legends.html": [
-"44078fd8c8b8",
-"2026-11-25"
+"1cadc29613fe",
+"2026-11-26"
 ],
 "fr/jeu/battlefield-6.html": [
 "4ca8e287845b",
@@ -1436,8 +1452,8 @@
 "2026-11-16"
 ],
 "fr/jeu/index.html": [
-"5f51f0ad0f3e",
-"2026-11-25"
+"76603c7f4d13",
+"2026-11-26"
 ],
 "fr/jeu/knight-online.html": [
 "8be189bb5bf2",
@@ -1468,8 +1484,8 @@
 "2026-11-16"
 ],
 "fr/jeu/path-of-exile-2.html": [
-"137318a0fb93",
-"2026-11-25"
+"9a0960c8b891",
+"2026-11-26"
 ],
 "fr/jeu/path-of-exile.html": [
 "2e8a5ebd63c9",
@@ -1524,8 +1540,8 @@
 "2026-11-20"
 ],
 "fr/jeux-gratuits.html": [
-"3da15b06b7b7",
-"2026-11-25"
+"8f81feb538c1",
+"2026-11-26"
 ],
 "fr/languages.html": [
 "8947bedb5387",
@@ -1552,8 +1568,12 @@
 "2026-11-09"
 ],
 "fr/sujet/aion2.html": [
-"c0a84fb2c160",
-"2026-11-25"
+"3af2266077a7",
+"2026-11-26"
+],
+"fr/sujet/apexlegends.html": [
+"b991815c83cc",
+"2026-11-26"
 ],
 "fr/sujet/blizzard.html": [
 "4b955e20ca0c",
@@ -1580,16 +1600,16 @@
 "2026-11-25"
 ],
 "fr/sujet/pc.html": [
-"b0a62e33171b",
-"2026-11-25"
+"f98e14072e3e",
+"2026-11-26"
 ],
 "fr/sujet/playstation.html": [
 "ac6ff01d7b16",
 "2026-11-25"
 ],
 "fr/sujet/ps5.html": [
-"9afe0785e75a",
-"2026-11-25"
+"ccaac1d7cbf8",
+"2026-11-26"
 ],
 "fr/sujet/riotgames.html": [
 "c85b57f24851",
@@ -1600,8 +1620,8 @@
 "2026-11-25"
 ],
 "fr/sujet/steam.html": [
-"feb8c8ff2604",
-"2026-11-25"
+"4dee530933b1",
+"2026-11-26"
 ],
 "fr/sujet/steamawards.html": [
 "62da8b902c97",
@@ -1616,12 +1636,12 @@
 "2026-11-25"
 ],
 "fr/sujet/tur-guncelleme.html": [
-"5ff40bae44d3",
-"2026-11-25"
+"a4bf8fdf1d27",
+"2026-11-26"
 ],
 "fr/sujet/tur-haber.html": [
-"028bb020fdc4",
-"2026-11-25"
+"2b19cf564726",
+"2026-11-26"
 ],
 "fr/sujet/tur-indirim.html": [
 "cddedc250f6b",
@@ -1692,8 +1712,8 @@
 "2026-11-15"
 ],
 "index.html": [
-"444ea3d1aa23",
-"2026-11-25"
+"a95765182d49",
+"2026-11-26"
 ],
 "indirimler.html": [
 "4ccfcf6000d1",
@@ -1712,12 +1732,12 @@
 "2026-11-16"
 ],
 "nl/gamenieuws.html": [
-"50b8754d9048",
-"2026-11-25"
+"57c746cc1f75",
+"2026-11-26"
 ],
 "nl/games/apex-legends.html": [
-"7c6988b6d417",
-"2026-11-25"
+"9c67712b199d",
+"2026-11-26"
 ],
 "nl/games/battlefield-6.html": [
 "153a22d5ab84",
@@ -1784,8 +1804,8 @@
 "2026-11-16"
 ],
 "nl/games/index.html": [
-"33b85cc6490e",
-"2026-11-25"
+"7eb5e803305b",
+"2026-11-26"
 ],
 "nl/games/knight-online.html": [
 "038174e91975",
@@ -1816,8 +1836,8 @@
 "2026-11-16"
 ],
 "nl/games/path-of-exile-2.html": [
-"568e830e97df",
-"2026-11-25"
+"0bc1e189fcd4",
+"2026-11-26"
 ],
 "nl/games/path-of-exile.html": [
 "f8454e74f1b2",
@@ -1948,24 +1968,28 @@
 "2026-11-22"
 ],
 "nl/gratis-games.html": [
-"b0d1e946599a",
-"2026-11-25"
+"06bf8dd9e63a",
+"2026-11-26"
 ],
 "nl/gta-6.html": [
 "4b9ad521566c",
 "2026-11-19"
 ],
 "nl/index.html": [
-"0c5c815e4a88",
-"2026-11-25"
+"c77d1841c9a7",
+"2026-11-26"
 ],
 "nl/nieuws.html": [
 "6172026c5fc0",
 "2026-11-17"
 ],
 "nl/onderwerp/aion2.html": [
-"4a4652443415",
-"2026-11-25"
+"e07ca417acb6",
+"2026-11-26"
+],
+"nl/onderwerp/apexlegends.html": [
+"a504a3b1042f",
+"2026-11-26"
 ],
 "nl/onderwerp/blizzard.html": [
 "8346c0ce643d",
@@ -1992,16 +2016,16 @@
 "2026-11-25"
 ],
 "nl/onderwerp/pc.html": [
-"339f067aee26",
-"2026-11-25"
+"e0aa17a277a7",
+"2026-11-26"
 ],
 "nl/onderwerp/playstation.html": [
 "b5f053d5e925",
 "2026-11-24"
 ],
 "nl/onderwerp/ps5.html": [
-"66eae3e31a19",
-"2026-11-25"
+"3903e6b112bc",
+"2026-11-26"
 ],
 "nl/onderwerp/riotgames.html": [
 "5607d968385a",
@@ -2012,8 +2036,8 @@
 "2026-11-24"
 ],
 "nl/onderwerp/steam.html": [
-"fc18b59e94ca",
-"2026-11-25"
+"b94814b0b02a",
+"2026-11-26"
 ],
 "nl/onderwerp/steamawards.html": [
 "9203b82f49cb",
@@ -2028,12 +2052,12 @@
 "2026-11-24"
 ],
 "nl/onderwerp/tur-guncelleme.html": [
-"68cabf4ee507",
-"2026-11-25"
+"6e5006872d2d",
+"2026-11-26"
 ],
 "nl/onderwerp/tur-haber.html": [
-"c5ab2011cb94",
-"2026-11-25"
+"d053384a17d5",
+"2026-11-26"
 ],
 "nl/onderwerp/tur-indirim.html": [
 "c7eec30a8e3b",
@@ -2076,8 +2100,8 @@
 "2026-11-16"
 ],
 "nl/releasekalender.html": [
-"a93b7b19ec66",
-"2026-11-25"
+"79db2a2b8c9a",
+"2026-11-26"
 ],
 "nl/talen.html": [
 "0fda2155224a",
@@ -2088,12 +2112,12 @@
 "2026-11-16"
 ],
 "oyun-haberleri.html": [
-"ce82807d2bbe",
-"2026-11-25"
+"e26bf3553c54",
+"2026-11-26"
 ],
 "oyun/apex-legends.html": [
-"e645e86a5bfb",
-"2026-11-25"
+"49440316e6e7",
+"2026-11-26"
 ],
 "oyun/battlefield-6.html": [
 "2879343afac3",
@@ -2160,8 +2184,8 @@
 "2026-11-16"
 ],
 "oyun/index.html": [
-"0d0231468e07",
-"2026-11-25"
+"598c40a3c1ff",
+"2026-11-26"
 ],
 "oyun/knight-online.html": [
 "41fccc577cd1",
@@ -2192,8 +2216,8 @@
 "2026-11-16"
 ],
 "oyun/path-of-exile-2.html": [
-"51f5ff8f3e73",
-"2026-11-25"
+"21260b0d645b",
+"2026-11-26"
 ],
 "oyun/path-of-exile.html": [
 "e9c0cb3fbca7",
@@ -2336,16 +2360,16 @@
 "2026-11-09"
 ],
 "ucretsiz-oyunlar.html": [
-"8ffaa344c59c",
-"2026-11-25"
+"85a564540cf0",
+"2026-11-26"
 ],
 "zh/chuanyan.html": [
 "fb1cc03824b7",
 "2026-11-22"
 ],
 "zh/fashou-rili.html": [
-"89c8633112bc",
-"2026-11-25"
+"e8550d5814ee",
+"2026-11-26"
 ],
 "zh/fashou-zhinan.html": [
 "9acd3850b616",
@@ -2432,8 +2456,12 @@
 "2026-11-16"
 ],
 "zh/huati/aion2.html": [
-"b9aeaa94968f",
-"2026-11-25"
+"57248b290459",
+"2026-11-26"
+],
+"zh/huati/apexlegends.html": [
+"b07687f78f27",
+"2026-11-26"
 ],
 "zh/huati/blizzard.html": [
 "e26a8b950e65",
@@ -2460,16 +2488,16 @@
 "2026-11-25"
 ],
 "zh/huati/pc.html": [
-"ba2ca1af3767",
-"2026-11-25"
+"8aaeb9f49e1f",
+"2026-11-26"
 ],
 "zh/huati/playstation.html": [
 "080a59abf8f5",
 "2026-11-24"
 ],
 "zh/huati/ps5.html": [
-"451e347584d3",
-"2026-11-25"
+"8c3ae50f757e",
+"2026-11-26"
 ],
 "zh/huati/riotgames.html": [
 "20595fdefca7",
@@ -2480,8 +2508,8 @@
 "2026-11-24"
 ],
 "zh/huati/steam.html": [
-"38585d91dca5",
-"2026-11-25"
+"b240897e3ff8",
+"2026-11-26"
 ],
 "zh/huati/steamawards.html": [
 "41838039ae9b",
@@ -2496,12 +2524,12 @@
 "2026-11-24"
 ],
 "zh/huati/tur-guncelleme.html": [
-"93ad7e7fddb5",
-"2026-11-25"
+"ed76683a7c8b",
+"2026-11-26"
 ],
 "zh/huati/tur-haber.html": [
-"fb45f28bdcf3",
-"2026-11-25"
+"c6d312608981",
+"2026-11-26"
 ],
 "zh/huati/tur-indirim.html": [
 "8487f5b0989a",
@@ -2536,16 +2564,16 @@
 "2026-11-25"
 ],
 "zh/index.html": [
-"d3bf1d901f18",
-"2026-11-25"
+"83f0ae266060",
+"2026-11-26"
 ],
 "zh/laiyuan.html": [
 "58e029aba784",
 "2026-11-16"
 ],
 "zh/mianfei-youxi.html": [
-"6bf165f24f20",
-"2026-11-25"
+"5d96b953ce9f",
+"2026-11-26"
 ],
 "zh/xinwen.html": [
 "f006025febfc",
@@ -2560,12 +2588,12 @@
 "2026-11-25"
 ],
 "zh/youxi-xinwen.html": [
-"c1b05ca621d8",
-"2026-11-25"
+"04db62b77608",
+"2026-11-26"
 ],
 "zh/youxi/apex-legends.html": [
-"6997f5833cc4",
-"2026-11-25"
+"468eac3d4132",
+"2026-11-26"
 ],
 "zh/youxi/battlefield-6.html": [
 "dccf6738979e",
@@ -2632,8 +2660,8 @@
 "2026-11-16"
 ],
 "zh/youxi/index.html": [
-"e532d41ef92c",
-"2026-11-25"
+"0d39a9ba1698",
+"2026-11-26"
 ],
 "zh/youxi/knight-online.html": [
 "58e368b9bbf6",
@@ -2664,8 +2692,8 @@
 "2026-11-16"
 ],
 "zh/youxi/path-of-exile-2.html": [
-"93fb18595e06",
-"2026-11-25"
+"6586aee2f041",
+"2026-11-26"
 ],
 "zh/youxi/path-of-exile.html": [
 "f631e15ba530",

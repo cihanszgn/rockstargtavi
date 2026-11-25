@@ -1,0 +1,111 @@
+{
+ "id": "forza-horizon-6-itasha-moderasyon-2026-11-25",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "L'équipe de Forza Horizon 6 explique comment elle modère les livrées Itasha.",
+   "veri": {
+    "ust_etiket": "ANNONCE STEAM",
+    "baslik": "Règles Itasha expliquées",
+    "vurgu": [
+     "Itasha"
+    ],
+    "tuslar": [
+     "F",
+     "H",
+     "6"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "FORZA HORIZON 6",
+    "alt": "MODÉRATION ITASHA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Du 16 septembre au 15 octobre, 12,5 millions de contenus ont été créés. 14 000 ont été signalés et 60 joueurs ont reçu un bannissement définitif.",
+   "veri": {
+    "baslik": "Chiffres de modération",
+    "maddeler": [
+     {
+      "metin": "12,5 millions de contenus",
+      "tetik": "millions"
+     },
+     {
+      "metin": "14 000 signalés",
+      "tetik": "signalés"
+     },
+     {
+      "metin": "60 bannissements définitifs",
+      "tetik": "définitif"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CHIFFRES DE MODÉRATION",
+    "alt": "16 SEPT. – 15 OCT."
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Un modérateur humain examine les créations signalées. L'IA ne bannit personne automatiquement. Personnage, pose et décor sont jugés ensemble.",
+   "veri": {
+    "baslik": "Comment c'est jugé",
+    "maddeler": [
+     {
+      "metin": "Examen par un modérateur humain",
+      "tetik": "humain"
+     },
+     {
+      "metin": "Aucun bannissement automatique",
+      "tetik": "automatiquement"
+     },
+     {
+      "metin": "Pose et décor jugés ensemble",
+      "tetik": "décor"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "MODÉRATEUR HUMAIN",
+    "alt": "PAS DE BAN AUTOMATIQUE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "L'équipe met à jour son Code de conduite et les messages en jeu. Tout est sur notre site, Control A Game. Les règles vous semblent-elles claires ?",
+   "veri": {
+    "cagri": "Tout est sur le site",
+    "alt": "Sources et détails dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
