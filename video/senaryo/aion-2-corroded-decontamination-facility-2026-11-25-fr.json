@@ -1,0 +1,98 @@
+{
+ "id": "aion-2-corroded-decontamination-facility-2026-11-25",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "L'événement Corroded Decontamination Facility d'AION 2 dure jusqu'au 15 décembre.",
+   "veri": {
+    "ust_etiket": "ÉVÉNEMENT AION 2",
+    "baslik": "Événement jusqu'au 15 décembre",
+    "vurgu": [
+     "15 décembre"
+    ],
+    "tuslar": [
+     "A",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "CORRODED DECONTAMINATION"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Battez Bargott pour gagner des Event Coins. Échangez-les contre Sync Stone, Soul Crystal et d'autres récompenses. Il y a 7 entrées par semaine.",
+   "veri": {
+    "baslik": "Récompenses de l'événement",
+    "maddeler": [
+     {
+      "metin": "Battez Bargott, gagnez des Event Coins",
+      "tetik": "Bargott"
+     },
+     {
+      "metin": "Échange : Sync Stone, Soul Crystal",
+      "tetik": "Sync"
+     },
+     {
+      "metin": "7 entrées par semaine",
+      "tetik": "7"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "EVENT COINS",
+    "alt": "RÉCOMPENSES DE BARGOTT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Les pièces sont réinitialisées chaque mercredi ; le premier retrait suit la maintenance du 2 décembre.",
+   "veri": {
+    "etiket": "Retrait des pièces",
+    "tarih": "2 décembre",
+    "not": "Dépensez vos pièces avant la remise à zéro."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "REMISE À ZÉRO",
+    "alt": "PREMIER RETRAIT : 2 DÉC."
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Quelle récompense visez-vous en premier ?",
+   "veri": {
+    "cagri": "Tout est sur le site",
+    "alt": "Source et récompenses dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

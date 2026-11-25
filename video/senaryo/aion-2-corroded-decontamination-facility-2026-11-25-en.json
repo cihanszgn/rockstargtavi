@@ -1,0 +1,98 @@
+{
+ "id": "aion-2-corroded-decontamination-facility-2026-11-25",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "AION 2's Corroded Decontamination Facility event runs until December 15.",
+   "veri": {
+    "ust_etiket": "AION 2 EVENT",
+    "baslik": "Event runs until December 15",
+    "vurgu": [
+     "December 15"
+    ],
+    "tuslar": [
+     "A",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "CORRODED DECONTAMINATION"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Defeat Bargott to earn Event Coins. Spend them on rewards like Sync Stone and Soul Crystal. Entry needs item level 2,100, with 7 entries per week.",
+   "veri": {
+    "baslik": "Event rewards",
+    "maddeler": [
+     {
+      "metin": "Defeat Bargott, earn Event Coins",
+      "tetik": "Bargott"
+     },
+     {
+      "metin": "Buy Sync Stone and Soul Crystal",
+      "tetik": "Sync"
+     },
+     {
+      "metin": "Item level 2,100, 7 entries a week",
+      "tetik": "2,100"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "EVENT COINS",
+    "alt": "BARGOTT REWARDS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Coins reset every Wednesday, and the first removal comes after maintenance on December 2.",
+   "veri": {
+    "etiket": "Coins get removed",
+    "tarih": "December 2",
+    "not": "Spend coins before the weekly reset."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "WEEKLY RESET",
+    "alt": "FIRST REMOVAL DECEMBER 2"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Which reward are you going for first?",
+   "veri": {
+    "cagri": "Every detail on the site",
+    "alt": "Source and reward list in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

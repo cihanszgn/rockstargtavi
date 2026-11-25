@@ -1,0 +1,98 @@
+{
+ "id": "aion-2-corroded-decontamination-facility-2026-11-25",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "El evento Corroded Decontamination Facility de AION 2 dura hasta el 15 de diciembre.",
+   "veri": {
+    "ust_etiket": "EVENTO DE AION 2",
+    "baslik": "Evento hasta el 15 de diciembre",
+    "vurgu": [
+     "15 de diciembre"
+    ],
+    "tuslar": [
+     "A",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "CORRODED DECONTAMINATION"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Derrota a Bargott para ganar Event Coins. Se canjean por Sync Stone, Soul Crystal y más. Hace falta nivel de objeto 2.100 y hay 7 entradas por semana.",
+   "veri": {
+    "baslik": "Recompensas del evento",
+    "maddeler": [
+     {
+      "metin": "Derrota a Bargott, gana Event Coins",
+      "tetik": "Bargott"
+     },
+     {
+      "metin": "Canjea Sync Stone y Soul Crystal",
+      "tetik": "Sync"
+     },
+     {
+      "metin": "Nivel de objeto 2.100, 7 entradas",
+      "tetik": "2.100"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "EVENT COINS",
+    "alt": "RECOMPENSAS DE BARGOTT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Las monedas se reinician cada miércoles y la primera retirada llega tras el mantenimiento del 2 de diciembre.",
+   "veri": {
+    "etiket": "Se retiran las monedas",
+    "tarih": "2 de diciembre",
+    "not": "Gasta las monedas antes del reinicio semanal."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "REINICIO SEMANAL",
+    "alt": "PRIMERA RETIRADA: 2 DIC."
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Qué recompensa vas a priorizar?",
+   "veri": {
+    "cagri": "Todos los detalles en la web",
+    "alt": "Fuente y recompensas en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,98 @@
+{
+ "id": "aion-2-corroded-decontamination-facility-2026-11-25",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "AION 2'de Corroded Decontamination Facility etkinliği 15 Aralık'a kadar sürüyor.",
+   "veri": {
+    "ust_etiket": "AION 2 ETKİNLİK",
+    "baslik": "Etkinlik 15 Aralık'a kadar sürüyor",
+    "vurgu": [
+     "15 Aralık'a"
+    ],
+    "tuslar": [
+     "A",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "CORRODED DECONTAMINATION"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Bargott'u yenince Event Coin kazanılıyor. Coin'ler Sync Stone ve Soul Crystal gibi ödüllere dönüşüyor. Giriş için eşya seviyesi 2.100, haftada 7 hak var.",
+   "veri": {
+    "baslik": "Etkinlik ödülleri",
+    "maddeler": [
+     {
+      "metin": "Bargott'u yen, Event Coin kazan",
+      "tetik": "Bargott'u"
+     },
+     {
+      "metin": "Sync Stone ve Soul Crystal al",
+      "tetik": "Sync"
+     },
+     {
+      "metin": "Eşya seviyesi 2.100, haftada 7 giriş",
+      "tetik": "2.100"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "EVENT COIN",
+    "alt": "BARGOTT ÖDÜLLERİ"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Coin'ler çarşambaları sıfırlanıyor; ilk silinme 2 Aralık'taki bakımın ardından.",
+   "veri": {
+    "etiket": "Coin'ler siliniyor",
+    "tarih": "2 Aralık",
+    "not": "Coin'leri sıfırlamadan önce harca."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "HAFTALIK SIFIRLAMA",
+    "alt": "İLK SİLİNME 2 ARALIK"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. En çok hangi ödülü hedefliyorsun?",
+   "veri": {
+    "cagri": "Tüm ayrıntılar sitede",
+    "alt": "Kaynak ve ödül listesi haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
