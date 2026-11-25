@@ -1,0 +1,121 @@
+{
+ "id": "arknights-endfield-surum-2026-11-25",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Arknights: Endfield's new version brings Wuling - Old Dam and fresh weapons on November 25.",
+   "veri": {
+    "ust_etiket": "ARKNIGHTS: ENDFIELD",
+    "baslik": "Endfield update: Wuling - Old Dam",
+    "vurgu": [
+     "Wuling - Old Dam"
+    ],
+    "tuslar": [
+     "F",
+     "E"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "ARKNIGHTS: ENDFIELD",
+    "alt": "WULING - OLD DAM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "It adds new operators, the Sweet Deal polearm and four new enemies.",
+   "veri": {
+    "baslik": "What the update adds",
+    "maddeler": [
+     {
+      "metin": "New operators",
+      "tetik": "operators"
+     },
+     {
+      "metin": "Sweet Deal (Polearm)",
+      "tetik": "Sweet"
+     },
+     {
+      "metin": "Four new enemies",
+      "tetik": "enemies"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NEW CONTENT",
+    "alt": "OPERATORS AND ENEMIES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "RE-Factor Headhunting #1 ends December 16, so plan your pulls.",
+   "veri": {
+    "etiket": "Headhunting ends",
+    "tarih": "December 16",
+    "not": "Ends at 11:59 server time."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "HEADHUNTING",
+    "alt": "ENDS DECEMBER 16"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "The mandatory update lands on PC, PS5, iOS and Android, so check your platform's steps.",
+   "veri": {
+    "baslik": "Platforms",
+    "platformlar": [
+     "PC",
+     "PS5",
+     "iOS",
+     "Android"
+    ],
+    "sayilar": [],
+    "not": "Update is mandatory."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PLATFORMS",
+    "alt": "PC • PS5 • iOS • ANDROID"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Will you update on day one?",
+   "veri": {
+    "cagri": "Read the full story",
+    "alt": "Compensation details are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

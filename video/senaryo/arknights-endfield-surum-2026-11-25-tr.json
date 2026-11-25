@@ -1,0 +1,121 @@
+{
+ "id": "arknights-endfield-surum-2026-11-25",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Arknights: Endfield'ın yeni sürümü Wuling - Old Dam bölgesi ve yeni silahlar getiriyor.",
+   "veri": {
+    "ust_etiket": "ARKNIGHTS: ENDFIELD",
+    "baslik": "Endfield'ın yeni sürümü geliyor",
+    "vurgu": [
+     "yeni sürümü"
+    ],
+    "tuslar": [
+     "E",
+     "F"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "ARKNIGHTS: ENDFIELD",
+    "alt": "WULING - OLD DAM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Yeni operatörler, Sweet Deal silahı ve dört yeni düşman geliyor.",
+   "veri": {
+    "baslik": "Güncellemede neler var",
+    "maddeler": [
+     {
+      "metin": "Yeni operatörler",
+      "tetik": "operatörler"
+     },
+     {
+      "metin": "Sweet Deal (Polearm)",
+      "tetik": "Sweet"
+     },
+     {
+      "metin": "Dört yeni düşman",
+      "tetik": "düşman"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "GÜNCELLEMEDE NELER VAR",
+    "alt": "YENİ OPERATÖRLER VE DÜŞMAN"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "RE-Factor Headhunting #1, 16 Aralık'a kadar sürüyor; çağrılarınızı planlayın.",
+   "veri": {
+    "etiket": "Çağrı sona eriyor",
+    "tarih": "16 Aralık",
+    "not": "Sunucu saatiyle 11:59'a kadar."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "ÇAĞRI TAKVİMİ",
+    "alt": "16 ARALIK'A KADAR"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Zorunlu güncelleme PC, PS5, iOS ve Android'de geliyor; platformunuzun adımlarına bakın.",
+   "veri": {
+    "baslik": "Platformlar",
+    "platformlar": [
+     "PC",
+     "PS5",
+     "iOS",
+     "Android"
+    ],
+    "sayilar": [],
+    "not": "Güncelleme zorunlu."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PLATFORMLAR",
+    "alt": "PC • PS5 • iOS • ANDROID"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. İlk gün güncelleyecek misiniz, yoksa çağrıyı mı bekleyeceksiniz?",
+   "veri": {
+    "cagri": "Tamamı sitemizde",
+    "alt": "Telafi ve bakım saatleri haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

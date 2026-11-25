@@ -1,0 +1,121 @@
+{
+ "id": "arknights-endfield-surum-2026-11-25",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "La nueva versión de Arknights: Endfield añade la zona Wuling - Old Dam y nuevas armas.",
+   "veri": {
+    "ust_etiket": "ARKNIGHTS: ENDFIELD",
+    "baslik": "Endfield: nueva versión",
+    "vurgu": [
+     "nueva versión"
+    ],
+    "tuslar": [
+     "E",
+     "F"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "ARKNIGHTS: ENDFIELD",
+    "alt": "WULING - OLD DAM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Llegan nuevos operadores, el arma Sweet Deal y cuatro enemigos nuevos.",
+   "veri": {
+    "baslik": "Lo que añade",
+    "maddeler": [
+     {
+      "metin": "Nuevos operadores",
+      "tetik": "operadores"
+     },
+     {
+      "metin": "Sweet Deal (Polearm)",
+      "tetik": "Sweet"
+     },
+     {
+      "metin": "Cuatro enemigos nuevos",
+      "tetik": "enemigos"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "LO QUE AÑADE",
+    "alt": "OPERADORES Y ENEMIGOS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "RE-Factor Headhunting #1 termina el 16 de diciembre; planifica tus reclutamientos.",
+   "veri": {
+    "etiket": "Reclutamiento termina",
+    "tarih": "16 de diciembre",
+    "not": "Fin a las 11:59, hora del servidor."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "RECLUTAMIENTO",
+    "alt": "TERMINA EL 16 DE DICIEMBRE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "La actualización obligatoria llega a PC, PS5, iOS y Android; revisa los pasos de tu plataforma.",
+   "veri": {
+    "baslik": "Plataformas",
+    "platformlar": [
+     "PC",
+     "PS5",
+     "iOS",
+     "Android"
+    ],
+    "sayilar": [],
+    "not": "Actualización obligatoria."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PLATAFORMAS",
+    "alt": "PC • PS5 • iOS • ANDROID"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Actualizarás el primer día?",
+   "veri": {
+    "cagri": "Todos los detalles en la web",
+    "alt": "Compensaciones y fechas en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
