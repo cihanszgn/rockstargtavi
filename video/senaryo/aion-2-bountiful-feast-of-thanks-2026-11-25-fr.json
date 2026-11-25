@@ -1,0 +1,127 @@
+{
+ "id": "aion-2-bountiful-feast-of-thanks-2026-11-25",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "AION 2 a lancé le pass d'événement Bountiful Feast of Thanks le 25 novembre.",
+   "veri": {
+    "ust_etiket": "PASS D'ÉVÉNEMENT",
+    "baslik": "Le pass d'événement est là",
+    "vurgu": [
+     "pass d'événement"
+    ],
+    "tuslar": [
+     "A",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "BOUNTIFUL FEAST OF THANKS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Le pass compte deux voies, Basic et Premium, à 100 Kina chacune, achetables une fois par serveur. Les récompenses vont jusqu'au niveau 20.",
+   "veri": {
+    "baslik": "Comment ça marche",
+    "maddeler": [
+     {
+      "metin": "Voies Basic et Premium",
+      "tetik": "Basic"
+     },
+     {
+      "metin": "100 Kina chacune",
+      "tetik": "100"
+     },
+     {
+      "metin": "Récompenses jusqu'au niveau 20",
+      "tetik": "niveau"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DEUX VOIES",
+    "alt": "BASIC ET PREMIUM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Vaincre 10 monstres rapporte 60 d'EXP, terminer une expédition 300 et ouvrir un Hidden Cube 50.",
+   "veri": {
+    "baslik": "D'où vient l'EXP",
+    "maddeler": [
+     {
+      "metin": "10 monstres : 60 EXP",
+      "tetik": "monstres"
+     },
+     {
+      "metin": "Expédition : 300 EXP",
+      "tetik": "expédition"
+     },
+     {
+      "metin": "Hidden Cube : 50 EXP",
+      "tetik": "Hidden"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "EXP DU PASS",
+    "alt": "GAGNÉE PAR MISSIONS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "L'événement dure jusqu'à la maintenance du 15 décembre, heure du Pacifique, ou du 16 en Europe.",
+   "veri": {
+    "etiket": "Fin de l'événement",
+    "tarih": "15 décembre",
+    "not": "PST ; le 16 décembre en CET."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "DURÉE",
+    "alt": "JUSQU'AU 15 DÉCEMBRE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Prendrez-vous la voie Premium ?",
+   "veri": {
+    "cagri": "Tous les détails sur le site",
+    "alt": "Liste des récompenses et source dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

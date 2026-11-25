@@ -1,0 +1,127 @@
+{
+ "id": "aion-2-bountiful-feast-of-thanks-2026-11-25",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "AION 2'de Bountiful Feast of Thanks Etkinlik Bileti 25 Kasım'da açıldı.",
+   "veri": {
+    "ust_etiket": "ETKİNLİK BİLETİ",
+    "baslik": "Yeni Etkinlik Bileti açıldı",
+    "vurgu": [
+     "Etkinlik Bileti"
+    ],
+    "tuslar": [
+     "A",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "BOUNTIFUL FEAST OF THANKS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Bilet iki hattan oluşuyor: Basic ve Premium. İkisi de 100 Kina, sunucu başına bir kez alınıyor. Ödüller 20. seviyeye kadar açılıyor.",
+   "veri": {
+    "baslik": "Bilet nasıl işliyor",
+    "maddeler": [
+     {
+      "metin": "Basic ve Premium hattı",
+      "tetik": "Basic"
+     },
+     {
+      "metin": "Her biri 100 Kina",
+      "tetik": "100"
+     },
+     {
+      "metin": "Ödüller 20. seviyeye kadar",
+      "tetik": "seviyeye"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "İKİ ÖDÜL HATTI",
+    "alt": "BASIC VE PREMIUM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "10 canavar yenmek 60, keşif tamamlamak 300, Hidden Cube açmak 50 EXP veriyor.",
+   "veri": {
+    "baslik": "EXP nereden geliyor",
+    "maddeler": [
+     {
+      "metin": "10 canavar: 60 EXP",
+      "tetik": "canavar"
+     },
+     {
+      "metin": "Keşif tamamlamak: 300 EXP",
+      "tetik": "300"
+     },
+     {
+      "metin": "Hidden Cube: 50 EXP",
+      "tetik": "Hidden"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "PASS EXP",
+    "alt": "GÖREVLERLE TOPLANIYOR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Etkinlik 15 Aralık'ta bakım öncesine kadar sürüyor.",
+   "veri": {
+    "etiket": "Etkinlik bitiyor",
+    "tarih": "15 Aralık",
+    "not": "PST'ye göre; CET'te 16 Aralık."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "ETKİNLİK SÜRESİ",
+    "alt": "15 ARALIK'A KADAR"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Sen Premium hattını alır mısın?",
+   "veri": {
+    "cagri": "Bütün ayrıntılar sitede",
+    "alt": "Ödül listesi ve kaynak haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

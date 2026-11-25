@@ -1,0 +1,127 @@
+{
+ "id": "aion-2-bountiful-feast-of-thanks-2026-11-25",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "AION 2 opened its Bountiful Feast of Thanks Event Pass on November 25.",
+   "veri": {
+    "ust_etiket": "EVENT PASS",
+    "baslik": "New Event Pass is live",
+    "vurgu": [
+     "Event Pass"
+    ],
+    "tuslar": [
+     "A",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "BOUNTIFUL FEAST OF THANKS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "The pass has Basic and Premium tracks. Each costs 100 Kina and can be bought once per server. Rewards unlock up to level 20.",
+   "veri": {
+    "baslik": "How the pass works",
+    "maddeler": [
+     {
+      "metin": "Basic and Premium tracks",
+      "tetik": "Basic"
+     },
+     {
+      "metin": "100 Kina each",
+      "tetik": "100"
+     },
+     {
+      "metin": "Rewards up to level 20",
+      "tetik": "level"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "TWO REWARD TRACKS",
+    "alt": "BASIC AND PREMIUM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Defeating 10 monsters gives 60 EXP, clearing an expedition gives 300, and opening a Hidden Cube gives 50.",
+   "veri": {
+    "baslik": "Where EXP comes from",
+    "maddeler": [
+     {
+      "metin": "10 monsters: 60 EXP",
+      "tetik": "monsters"
+     },
+     {
+      "metin": "Expedition clear: 300 EXP",
+      "tetik": "300"
+     },
+     {
+      "metin": "Hidden Cube: 50 EXP",
+      "tetik": "Hidden"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "PASS EXP",
+    "alt": "EARNED THROUGH MISSIONS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "The event runs until maintenance on December 15 Pacific time, or December 16 in Europe.",
+   "veri": {
+    "etiket": "Event ends",
+    "tarih": "December 15",
+    "not": "PST; December 16 in CET."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "EVENT PERIOD",
+    "alt": "UNTIL DECEMBER 15"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Will you grab the Premium track?",
+   "veri": {
+    "cagri": "Every detail on the site",
+    "alt": "Reward list and source in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

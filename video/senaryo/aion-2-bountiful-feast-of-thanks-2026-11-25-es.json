@@ -1,0 +1,127 @@
+{
+ "id": "aion-2-bountiful-feast-of-thanks-2026-11-25",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "AION 2 ha abierto el pase de evento Bountiful Feast of Thanks el 25 de noviembre.",
+   "veri": {
+    "ust_etiket": "PASE DE EVENTO",
+    "baslik": "Ya está el pase de evento",
+    "vurgu": [
+     "pase de evento"
+    ],
+    "tuslar": [
+     "A",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "BOUNTIFUL FEAST OF THANKS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "El pase tiene dos vías, Basic y Premium, de 100 Kina cada una y una compra por servidor. Las recompensas llegan al nivel 20.",
+   "veri": {
+    "baslik": "Cómo funciona",
+    "maddeler": [
+     {
+      "metin": "Vías Basic y Premium",
+      "tetik": "Basic"
+     },
+     {
+      "metin": "100 Kina cada una",
+      "tetik": "100"
+     },
+     {
+      "metin": "Recompensas hasta el nivel 20",
+      "tetik": "nivel"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DOS VÍAS",
+    "alt": "BASIC Y PREMIUM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Derrotar 10 monstruos da 60 de EXP, completar una expedición da 300 y abrir un Hidden Cube da 50.",
+   "veri": {
+    "baslik": "De dónde sale la EXP",
+    "maddeler": [
+     {
+      "metin": "10 monstruos: 60 EXP",
+      "tetik": "monstruos"
+     },
+     {
+      "metin": "Expedición: 300 EXP",
+      "tetik": "expedición"
+     },
+     {
+      "metin": "Hidden Cube: 50 EXP",
+      "tetik": "Hidden"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "EXP DEL PASE",
+    "alt": "SE GANA CON MISIONES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "El evento dura hasta antes del mantenimiento del 15 de diciembre, hora del Pacífico, o del 16 en Europa.",
+   "veri": {
+    "etiket": "Fin del evento",
+    "tarih": "15 de diciembre",
+    "not": "PST; el 16 de diciembre en CET."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "DURACIÓN",
+    "alt": "HASTA EL 15 DE DICIEMBRE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Comprarás la vía Premium?",
+   "veri": {
+    "cagri": "Todos los detalles en la web",
+    "alt": "Lista de recompensas y fuente en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
