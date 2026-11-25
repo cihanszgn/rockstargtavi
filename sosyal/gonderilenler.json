@@ -750,14 +750,17 @@
  "firsat-8280b5498c32da3490b4|tr|instagram|gorsel": {
   "bicim": "gorsel",
   "dil": "tr",
-  "durum": "niyet",
-  "engel": true,
+  "durum": "tamam",
   "icerik_dili": "tr",
   "id": "firsat-8280b5498c32da3490b4",
   "kapsayici": "17871686319694894",
+  "kimlik": null,
   "niyet_zamani": "2026-11-25T16:43:39+00:00",
+  "not": "Instagram engeli sonrası kapsayıcı ERROR; yayımlanmış olabileceğinden yeniden denenmedi",
   "platform": "instagram",
-  "sosyal_tur": "firsat"
+  "sosyal_tur": "firsat",
+  "url": null,
+  "zaman": "2026-11-25T22:44:31+00:00"
  },
  "football-manager-27-27-1-0-guncelleme-2026-11-16|tr|instagram|gorsel": {
   "bicim": "gorsel",
