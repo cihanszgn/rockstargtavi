@@ -1,0 +1,99 @@
+{
+ "id": "the-witcher-4-buyuk-sicrama-2026-11-24",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Le co-PDG de CD Projekt estime que The Witcher 4 fera un bond comparable à celui de GTA 6.",
+   "veri": {
+    "ust_etiket": "THE WITCHER 4",
+    "baslik": "CD Projekt attend un bond technique pour The Witcher 4",
+    "vurgu": [
+     "bond technique"
+    ],
+    "tuslar": [
+     "T",
+     "W",
+     "4"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "THE WITCHER 4",
+    "alt": "CD PROJEKT · APPEL AUX INVESTISSEURS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Selon PC Gamer, Nowakowski attend un saut bien plus grand, et rappelle que 11 ans se sont écoulés depuis The Witcher 3.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "PC Gamer",
+    "alinti": "Nowakowski : il faut s'attendre à un saut bien plus grand entre The Witcher 3 et The Witcher 4."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE PRESSE",
+    "alt": "PC GAMER · APPEL AUX INVESTISSEURS"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Sortie estimée en 2028. Cyberpunk 2 n'est pas attendu avant 2030. Sur PC, GTA 6 n'a eu aucun impact sur les ventes.",
+   "veri": {
+    "baslik": "Ce que l'on sait",
+    "maddeler": [
+     {
+      "metin": "Sortie estimée en 2028",
+      "tetik": "2028"
+     },
+     {
+      "metin": "Cyberpunk 2 pas avant 2030",
+      "tetik": "2030"
+     },
+     {
+      "metin": "Aucun impact sur les ventes PC",
+      "tetik": "PC"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CE QUE L'ON SAIT",
+    "alt": "2028 ET 2030"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Qu'attendez-vous le plus de The Witcher 4, les graphismes ou l'histoire ?",
+   "veri": {
+    "cagri": "Donnez votre avis en commentaire",
+    "alt": "Graphismes ou histoire, lequel ?"
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

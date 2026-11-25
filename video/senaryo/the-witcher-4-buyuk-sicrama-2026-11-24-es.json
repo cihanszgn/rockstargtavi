@@ -1,0 +1,99 @@
+{
+ "id": "the-witcher-4-buyuk-sicrama-2026-11-24",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "El copresidente de CD Projekt cree que The Witcher 4 dará un salto como el de GTA 5 a GTA 6.",
+   "veri": {
+    "ust_etiket": "THE WITCHER 4",
+    "baslik": "CD Projekt espera un gran salto para The Witcher 4",
+    "vurgu": [
+     "gran salto"
+    ],
+    "tuslar": [
+     "T",
+     "W",
+     "4"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "THE WITCHER 4",
+    "alt": "CD PROJEKT · LLAMADA CON INVERSORES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según PC Gamer, Nowakowski espera un salto mucho mayor y recuerda que han pasado 11 años desde The Witcher 3.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "PC Gamer",
+    "alinti": "Nowakowski: se debe esperar un salto mucho mayor entre Witcher 3 y Witcher 4."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE DE PRENSA",
+    "alt": "PC GAMER · LLAMADA CON INVERSORES"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Llegada estimada en 2028. Cyberpunk 2 no llega antes de 2030. En PC, GTA 6 no ha tenido impacto en las ventas.",
+   "veri": {
+    "baslik": "Lo que sabemos",
+    "maddeler": [
+     {
+      "metin": "Llegada estimada en 2028",
+      "tetik": "2028"
+     },
+     {
+      "metin": "Cyberpunk 2 no antes de 2030",
+      "tetik": "2030"
+     },
+     {
+      "metin": "Sin impacto en ventas de PC",
+      "tetik": "PC"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "LO QUE SABEMOS",
+    "alt": "2028 Y 2030"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Qué esperas más de The Witcher 4, gráficos o historia?",
+   "veri": {
+    "cagri": "Cuéntanos tu opinión",
+    "alt": "Gráficos o historia, ¿cuál?"
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

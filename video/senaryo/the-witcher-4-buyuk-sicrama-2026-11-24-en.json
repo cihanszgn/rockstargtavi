@@ -1,0 +1,99 @@
+{
+ "id": "the-witcher-4-buyuk-sicrama-2026-11-24",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "CD Projekt's co-CEO believes The Witcher 4 will leap much like GTA 6 over GTA 5.",
+   "veri": {
+    "ust_etiket": "THE WITCHER 4",
+    "baslik": "The Witcher 4: CD Projekt hints at a big leap",
+    "vurgu": [
+     "big leap"
+    ],
+    "tuslar": [
+     "T",
+     "W",
+     "4"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "THE WITCHER 4",
+    "alt": "CD PROJEKT · INVESTOR CALL"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to PC Gamer, co-CEO Michał Nowakowski expects a much bigger jump, noting that 11 years have passed since The Witcher 3.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "PC Gamer",
+    "alinti": "Nowakowski: a much bigger jump between Witcher 3 and Witcher 4 should be expected."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE REPORT",
+    "alt": "PC GAMER · INVESTOR CALL"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Estimated launch is 2028. Cyberpunk 2 is not expected before 2030. On PC, GTA 6 has had no impact on sales.",
+   "veri": {
+    "baslik": "What we know",
+    "maddeler": [
+     {
+      "metin": "Estimated launch in 2028",
+      "tetik": "2028"
+     },
+     {
+      "metin": "Cyberpunk 2 not before 2030",
+      "tetik": "2030"
+     },
+     {
+      "metin": "No impact on PC sales",
+      "tetik": "PC"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "WHAT WE KNOW",
+    "alt": "2028 AND 2030"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. What would you most like to see improved in The Witcher 4?",
+   "veri": {
+    "cagri": "Share your take in the comments",
+    "alt": "Graphics, story or gameplay?"
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

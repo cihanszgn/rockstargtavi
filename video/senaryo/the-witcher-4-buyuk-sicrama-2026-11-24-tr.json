@@ -1,0 +1,99 @@
+{
+ "id": "the-witcher-4-buyuk-sicrama-2026-11-24",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "CD Projekt'in ortak CEO'su The Witcher 4'ün GTA 5'ten GTA 6'ya benzer bir sıçrama yapabileceğini düşünüyor.",
+   "veri": {
+    "ust_etiket": "THE WITCHER 4",
+    "baslik": "The Witcher 4 için büyük sıçrama bekleniyor",
+    "vurgu": [
+     "büyük sıçrama"
+    ],
+    "tuslar": [
+     "T",
+     "W",
+     "4"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "THE WITCHER 4",
+    "alt": "CD PROJEKT · YATIRIMCI GÖRÜŞMESİ"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "PC Gamer'a göre Nowakowski, aradan geçen 11 yılın ardından Witcher 4'ün çok daha büyük bir sıçrama yapmasını beklediklerini söyledi.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "PC Gamer",
+    "alinti": "Witcher 3'ten Witcher 4'e çok daha büyük bir sıçrama beklenmeli."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "YAYIN KAYNAĞI",
+    "alt": "PC GAMER · YATIRIMCI GÖRÜŞMESİ"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Tahmini çıkış 2028. Cyberpunk 2 için 2030'dan önce beklenmiyor. PC'de GTA 6 etkisi görülmedi.",
+   "veri": {
+    "baslik": "Şimdilik bilinenler",
+    "maddeler": [
+     {
+      "metin": "Tahmini çıkış: 2028",
+      "tetik": "2028"
+     },
+     {
+      "metin": "Cyberpunk 2: 2030'dan önce yok",
+      "tetik": "2030"
+     },
+     {
+      "metin": "PC satışlarında etki yok",
+      "tetik": "PC"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "ŞİMDİLİK BİLİNENLER",
+    "alt": "2028 VE 2030"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. The Witcher 4'ten en çok neyi bekliyorsunuz?",
+   "veri": {
+    "cagri": "Yorumda görüşünüzü yazın",
+    "alt": "Grafik mi, hikâye mi, oynanış mı?"
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
