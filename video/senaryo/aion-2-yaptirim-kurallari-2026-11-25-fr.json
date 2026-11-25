@@ -1,0 +1,128 @@
+{
+ "id": "aion-2-yaptirim-kurallari-2026-11-25",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Les sanctions d'AION 2 pourront retirer de la monnaie du jeu, même sans suspension temporaire.",
+   "veri": {
+    "ust_etiket": "MISE À JOUR DE POLITIQUE",
+    "baslik": "AION 2 : déduction de Kinah",
+    "vurgu": [
+     "déduction de Kinah"
+    ],
+    "tuslar": [
+     "K",
+     "I",
+     "N"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "Kinah non lié"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Selon l'avis de Steam, la politique de sanctions et son tableau de critères changent.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Avis officiel de Steam",
+    "alinti": "Ajoute une déduction de monnaie et une règle de déduction du Kinah non lié à la politique de sanctions."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "STEAM • AVIS OFFICIEL"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "La déduction de monnaie récupère celle obtenue par infraction, même sans suspension temporaire. Si le solde manque, il peut devenir négatif.",
+   "veri": {
+    "baslik": "Déduction de monnaie",
+    "maddeler": [
+     {
+      "metin": "Récupère la monnaie obtenue par infraction",
+      "tetik": "récupère"
+     },
+     {
+      "metin": "Possible sans suspension temporaire",
+      "tetik": "suspension"
+     },
+     {
+      "metin": "Le solde peut devenir négatif",
+      "tetik": "négatif"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DÉDUCTION DE MONNAIE",
+    "alt": "RÉCUPÉRATION ET SOLDE NÉGATIF"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Tant que cette dette n'est pas réglée, le personnage ne peut changer de serveur ni utiliser son Kinah non lié. Les échanges à la Bourse et sur le Marketplace sont aussi restreints.",
+   "veri": {
+    "baslik": "Dette à régler",
+    "maddeler": [
+     {
+      "metin": "Pas de changement de serveur",
+      "tetik": "serveur"
+     },
+     {
+      "metin": "Kinah non lié bloqué",
+      "tetik": "utiliser"
+     },
+     {
+      "metin": "Bourse et Marketplace restreints",
+      "tetik": "Bourse"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DETTE ET RESTRICTIONS",
+    "alt": "SERVEUR, KINAH, BOURSE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Les dates d'entrée en vigueur et la procédure de contestation sont sur notre site, Control A Game. Trouvez-vous ces règles justes ?",
+   "veri": {
+    "cagri": "Dates et contestation sur le site",
+    "alt": "Détails complets dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

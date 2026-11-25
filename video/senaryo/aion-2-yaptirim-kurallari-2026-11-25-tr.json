@@ -1,0 +1,120 @@
+{
+ "id": "aion-2-yaptirim-kurallari-2026-11-25",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "AION 2'de yaptırımlar oyun içi parayı da kesebilecek; bağlanmamış kinah eksiye düşerse işlemler kısıtlanıyor.",
+   "veri": {
+    "ust_etiket": "POLİTİKA GÜNCELLEMESİ",
+    "baslik": "AION 2'de yeni kinah kesintisi kuralı",
+    "vurgu": [
+     "kinah kesintisi"
+    ],
+    "tuslar": [
+     "K",
+     "I",
+     "N"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "Bağlanmamış kinah kesintisi"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam duyurusuna göre yaptırım politikası güncelleniyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam resmî duyurusu",
+    "alinti": "Yaptırım Politikası ve Kriterler Tablosu güncelleniyor; Bağlanmamış Kinah Kesinti Politikası ekleniyor."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "STEAM • AION 2 DUYURUSU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Para kesintisi, ihlalle kazanılan parayı geri alır; bakiye eksiye düşebilir.",
+   "veri": {
+    "baslik": "Para kesintisi geliyor",
+    "maddeler": [
+     {
+      "metin": "İhlalle kazanılan para geri alınır",
+      "tetik": "geri"
+     },
+     {
+      "metin": "Bakiye eksiye düşebilir",
+      "tetik": "eksiye"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "PARA KESİNTİSİ",
+    "alt": "YENİ YAPTIRIM TÜRÜ"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Borç kapanana kadar sunucu transferi ve bağlanmamış kinah kullanımı kısıtlanır.",
+   "veri": {
+    "baslik": "Borç kapanana kadar",
+    "maddeler": [
+     {
+      "metin": "Sunucu transferi kapalı",
+      "tetik": "transferi"
+     },
+     {
+      "metin": "Bağlanmamış kinah kullanılamaz",
+      "tetik": "kullanımı"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "BORÇ KISITLARI",
+    "alt": "SUNUCU VE KİNAH"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Yürürlük tarihleri ve itiraz yolu sitemizde, Control A Game'de. Bu kurallar size adil geliyor mu?",
+   "veri": {
+    "cagri": "Tarihler ve itiraz sitede",
+    "alt": "Tam ayrıntılar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

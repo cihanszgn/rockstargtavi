@@ -1,0 +1,124 @@
+{
+ "id": "aion-2-yaptirim-kurallari-2026-11-25",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "AION 2 sanctions can now take in-game currency, even without a game ban.",
+   "veri": {
+    "ust_etiket": "POLICY UPDATE",
+    "baslik": "AION 2 gets Kinah deductions",
+    "vurgu": [
+     "Kinah deductions"
+    ],
+    "tuslar": [
+     "K",
+     "I",
+     "N"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "Unbound Kinah rules"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam's official notice revises the Sanctions Policy and adds a new Unbound Kinah rule.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam official notice",
+    "alinti": "Adds a Currency Deduction sanction and an Unbound Kinah Deduction Policy to the Sanctions Policy."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "STEAM • AION 2 NOTICE"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Currency Deduction recovers ill-gotten currency. If the balance runs short, it can go negative.",
+   "veri": {
+    "baslik": "Currency Deduction",
+    "maddeler": [
+     {
+      "metin": "Recovers ill-gotten currency",
+      "tetik": "recovers"
+     },
+     {
+      "metin": "Balance can go negative",
+      "tetik": "negative"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CURRENCY DEDUCTION",
+    "alt": "RECOVERY AND NEGATIVE BALANCE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Until that debt is repaid, the character cannot transfer servers or use Unbound Kinah. Exchange and Marketplace trades are restricted too.",
+   "veri": {
+    "baslik": "Debt restrictions",
+    "maddeler": [
+     {
+      "metin": "No server transfers",
+      "tetik": "transfer"
+     },
+     {
+      "metin": "No Unbound Kinah use",
+      "tetik": "use"
+     },
+     {
+      "metin": "Exchange and Marketplace limited",
+      "tetik": "Exchange"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DEBT RESTRICTIONS",
+    "alt": "SERVERS, KINAH, TRADING"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Effective dates and the appeal process are on our site, Control A Game. Do you think these rules are fair?",
+   "veri": {
+    "cagri": "Dates and appeals on our site",
+    "alt": "Full details are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

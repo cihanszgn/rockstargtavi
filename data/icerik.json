@@ -1,5 +1,101 @@
 [
  {
+  "id": "aion-2-yaptirim-kurallari-2026-11-25",
+  "oyun": "AION 2",
+  "tarih": "2026-11-25",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam resmî duyurusu",
+    "url": "https://store.steampowered.com/news/app/3393110/view/675137971401262420"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "AION 2'de yaptırım kuralları değişti: bağlanmamış kinah kesintisi",
+    "ozet": "Steam'deki resmî duyuruya göre yeni düzenleme, bakiyesi eksiye düşen karakterlere borç takibi ve işlem kısıtları getiriyor.",
+    "metin": "AION 2 için Steam'de yayımlanan resmî duyuruya göre, oyunun operasyon politikasındaki yaptırım kuralları güncelleniyor. Giriş metninde yürürlük tarihi 25 Kasım 2026 olarak geçerken, ayrıntılı maddede 18 Aralık 2026 yazıyor.\n\nYeni düzenlemeyle yaptırımlara para kesintisi (Currency Deduction) türü ekleniyor. İhlal yoluyla elde edilen oyun içi para geri alınabiliyor; bakiye yetmezse eksiye düşebiliyor. Bu kesinti, geçici oyun yasağı veya başka bir erişim kısıtı konsa da uygulanabiliyor. Bağlanmamış kinah bakiyesi eksiye düşerse fark tahsil edilecek bir borç sayılıyor. Borç kapanana kadar karakter için sunucu transferi, bağlanmamış kinah kullanımı, Borsa'da (Exchange) satış ve satış geliri alma, Pazar'da (Marketplace) ise satış, gelir alma ve satın alma kısıtlanıyor.\n\nGerçek parayla işlemlere ilişkin kriterler de güncelleniyor. Duyuruya göre, kâr amacıyla tekrarlanan gerçek parayla işlemlerde ilk yaptırımda bile kalıcı yasak uygulanabiliyor; bu yolla elde edilen eşyalar geri alınabiliyor, oyun içi para geri alınabilir ya da kesilebilir. Yürürlük tarihine kadar onay ya da red bildirilmezse değişiklik kabul edilmiş sayılacak. Kabul etmeyen oyuncular üyeliğin iptalini isteyebiliyor; itirazlar için duyurudaki Müşteri Destek bağlantısı kullanılıyor.\n\nOyuncular için pratik sonuç açık: hesap ve ticaret alışkanlıklarını şimdiden gözden geçirmek, özellikle Borsa ve Pazar kullananların yürürlük tarihinden önce karar vermesi gerekiyor.",
+    "etiketler": [
+     "#AION2",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "en": {
+    "baslik": "AION 2 changes sanctions: unbound Kinah deductions",
+    "ozet": "Steam's official notice adds currency deductions and a debt rule that restricts transfers and trading until a negative Kinah balance is repaid.",
+    "metin": "According to the official notice on Steam, AION 2's operational policy has been revised, and its sanctions now include a Currency Deduction. The notice gives two effective dates: November 25, 2026 in the introduction and December 18, 2026 in the detailed section.\n\nCurrency Deduction recovers in-game currency obtained through rule violations, and it applies even when a temporary game ban or another access restriction is imposed. If the balance is too low, it can go negative by the missing amount. Under the new Unbound Kinah Deduction Policy, that shortfall becomes an outstanding debt. While it remains, the character cannot transfer servers or use Unbound Kinah. On the Exchange, listing items and claiming sales proceeds are restricted, and on the Marketplace, listing, claiming proceeds and purchasing are also restricted.\n\nThe notice also expands the rules for real-money transactions. Items obtained that way can be recovered, and in-game currency can be recovered or deducted. If real-money trading is repeated for profit, a Permanent Game Ban may apply even on the first sanction. Players who disagree can request cancellation of their membership, and if they neither consent nor refuse by the effective date, the changes are considered accepted. Objections go through the Customer Support link in the notice.\n\nFor players, the practical takeaway is to review their trading habits now, especially on the Exchange and Marketplace, and to keep the effective date in mind.",
+    "etiketler": [
+     "#AION2",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "es": {
+    "baslik": "AION 2 cambia sus sanciones: deducciones de Kinah no vinculado",
+    "ozet": "El aviso oficial en Steam añade deducciones de moneda y una regla de deuda que limita transferencias y comercio hasta pagarla.",
+    "metin": "Según el aviso oficial publicado en Steam, la política operativa de AION 2 se ha revisado y las sanciones incluyen ahora una deducción de moneda. El aviso da dos fechas de entrada en vigor: el 25 de noviembre de 2026 en la introducción y el 18 de diciembre de 2026 en la sección detallada.\n\nLa Currency Deduction recupera moneda del juego obtenida mediante infracciones y puede aplicarse aunque también se imponga una suspensión temporal u otra restricción de acceso. Si el saldo no alcanza, puede quedar en negativo por la diferencia. Según la nueva Unbound Kinah Deduction Policy, esa diferencia se convierte en deuda pendiente. Mientras exista, el personaje no puede transferirse de servidor ni usar Kinah no vinculado, y tampoco puede poner objetos a la venta ni cobrar ingresos en el Exchange. En el Marketplace también quedan restringidas las ventas, el cobro de ingresos y las compras.\n\nTambién se amplían las reglas de compraventa por dinero real: los objetos obtenidos así pueden recuperarse, y la moneda puede recuperarse o deducirse. Si se repite con fines de lucro, puede aplicarse una prohibición permanente incluso en la primera sanción. Quien no esté de acuerdo puede pedir la cancelación de su membresía, y si no comunica consentimiento ni rechazo antes de la fecha de entrada en vigor, se considerará aceptado. Las objeciones se envían por el enlace de Atención al cliente del aviso.\n\nPara los jugadores, lo práctico es revisar ahora sus hábitos de comercio, sobre todo si usan el Exchange o el Marketplace, y anotar la fecha de entrada en vigor antes de que llegue.",
+    "etiketler": [
+     "#AION2",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "fr": {
+    "baslik": "AION 2 modifie ses sanctions : déduction de Kinah non lié",
+    "ozet": "L'avis officiel sur Steam ajoute des déductions de monnaie et une règle de dette qui limite transferts et échanges jusqu'au remboursement.",
+    "metin": "Selon l'avis officiel publié sur Steam, la politique opérationnelle d'AION 2 a été révisée et les sanctions incluent désormais une déduction de monnaie. L'avis indique deux dates d'entrée en vigueur : le 25 novembre 2026 dans l'introduction et le 18 décembre 2026 dans la section détaillée.\n\nLa Currency Deduction récupère la monnaie du jeu obtenue par infraction et peut s'appliquer même si une suspension temporaire ou une autre restriction d'accès est imposée. Si le solde est insuffisant, il peut devenir négatif à hauteur du manquant. Selon la nouvelle Unbound Kinah Deduction Policy, ce manque devient une dette à recouvrer. Tant qu'elle subsiste, le personnage ne peut pas changer de serveur, ni utiliser son Kinah non lié, ni mettre des objets en vente ou encaisser les produits à la Bourse. Sur le Marketplace, la mise en vente, l'encaissement et les achats sont aussi restreints.\n\nLes règles sur l'argent réel sont aussi élargies : les objets obtenus ainsi peuvent être récupérés, et la monnaie peut être récupérée ou déduite. En cas de répétition à des fins lucratives, une interdiction permanente peut être appliquée dès la première sanction. Les joueurs non d'accord peuvent demander la résiliation de leur adhésion ; sans réponse avant la date d'entrée en vigueur, le changement est considéré comme accepté. Les réclamations passent par le lien du service client indiqué dans l'avis.\n\nPour les joueurs, l'enjeu pratique est de revoir dès maintenant leurs habitudes d'échange, surtout sur la Bourse et le Marketplace, et de noter la date d'entrée en vigueur avant qu'elle n'arrive.",
+    "etiketler": [
+     "#AION2",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "de": {
+    "baslik": "AION 2 ändert Sanktionen: Abzug von ungebundenem Kinah",
+    "ozet": "Die offizielle Steam-Mitteilung führt Währungsabzüge ein und sperrt den Handel, bis ein negatives Kinah-Saldo ausgeglichen ist.",
+    "metin": "Laut der offiziellen Mitteilung auf Steam wurde die Betriebsrichtlinie für AION 2 überarbeitet, und die Sanktionen umfassen nun einen Währungsabzug. Die Mitteilung nennt zwei Termine für das Inkrafttreten: den 25. November 2026 im Einleitungstext und den 18. Dezember 2026 im Detailabschnitt.\n\nBeim Währungsabzug wird im Spiel erworbene Währung eingezogen, die durch Verstöße gewonnen wurde. Er kann auch dann gelten, wenn eine vorübergehende Spielsperre oder eine andere Zugangsbeschränkung verhängt wird. Reicht der Bestand nicht aus, kann er um den fehlenden Betrag ins Negative fallen. Nach der neuen Richtlinie zum Abzug von ungebundenem Kinah wird dieser Fehlbetrag zu einer offenen Forderung. Solange sie besteht, darf der Charakter nicht den Server wechseln oder ungebundenes Kinah nutzen. An der Börse sind das Einstellen von Gegenständen und das Abholen von Erlösen gesperrt; auf dem Marktplatz kommen Käufe hinzu.\n\nAuch die Regeln für Echtgeldhandel wurden erweitert. Gegenstände aus Echtgeldhandel können zurückgefordert werden, Spielwährung kann ebenfalls zurückgefordert oder abgezogen werden. Wird Echtgeldhandel wiederholt zum Zweck der Gewinnerzielung betrieben, kann eine dauerhafte Sperre schon bei der ersten Sanktion greifen. Wer nicht zustimmt, kann die Kündigung seiner Mitgliedschaft verlangen; ohne Zustimmung oder Ablehnung bis zum Inkrafttreten gilt die Änderung als akzeptiert. Einwände gehen über den Kundenservice-Link der Mitteilung.\n\nFür Spieler heißt das vor allem: Handelsgewohnheiten jetzt prüfen, besonders bei Börse und Marktplatz, und das Inkrafttreten im Blick behalten.",
+    "etiketler": [
+     "#AION2",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "nl": {
+    "baslik": "AION 2 past sancties aan: aftrek van niet-gebonden Kinah",
+    "ozet": "De officiële Steam-aankondiging voegt valutaaftrek toe en beperkt handel zolang een negatief Kinah-saldo niet is aangezuiverd.",
+    "metin": "Volgens de officiële aankondiging op Steam is het bedrijfsbeleid van AION 2 herzien en omvatten de sancties nu een valutaaftrek. De aankondiging noemt twee ingangsdata: 25 november 2026 in de inleiding en 18 december 2026 in het gedetailleerde deel.\n\nBij valutaaftrek wordt in het spel verkregen valuta teruggevorderd die met een overtreding is verkregen. Dit kan ook gelden als er een tijdelijke spelban of een andere toegangsbeperking wordt opgelegd. Is het saldo te laag, dan kan het negatief worden met het ontbrekende bedrag. Volgens het nieuwe beleid voor de aftrek van niet-gebonden Kinah wordt dat tekort een openstaand bedrag. Zolang dat openstaat, kan het personage niet van server wisselen en geen niet-gebonden Kinah gebruiken. Op de Exchange kunnen geen items worden aangeboden of opbrengsten worden geclaimd; op de Marketplace gelden ook beperkingen voor verkopen en kopen.\n\nOok de regels voor echt-geldhandel zijn uitgebreid. Items die zo zijn verkregen kunnen worden teruggevorderd, en in-game valuta kan worden teruggevorderd of afgetrokken. Wordt echt-geldhandel herhaald voor winst, dan kan een permanente ban al bij de eerste sanctie gelden. Wie niet akkoord gaat, kan opzegging van het lidmaatschap vragen; zonder reactie vóór de ingangsdatum geldt de wijziging als geaccepteerd. Bezwaren verlopen via de klantenservicelink in de aankondiging.\n\nVoor spelers betekent dit vooral: de handelsgewoonten nu nakijken, zeker bij Exchange en Marketplace, en de ingangsdatum niet uit het oog verliezen.",
+    "etiketler": [
+     "#AION2",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "zh": {
+    "baslik": "AION 2调整处罚规则：未绑定Kinah可被扣除",
+    "ozet": "Steam官方公告新增货币扣除处罚；未绑定Kinah为负时，角色转服与交易将受限，直至欠款补清。",
+    "metin": "据AION 2在Steam上发布的官方公告，其运营政策的处罚条款已经修订，新增货币扣除（Currency Deduction）处罚。公告给出两个生效日期：引言中为2026年11月25日，详细条款中为2026年12月18日。\n\n货币扣除用于追回因违规获得的游戏内货币，即使同时施加临时封禁或其他访问限制也可执行。余额不足时，余额可能被扣成负数，负数部分即为欠款。根据新增的未绑定Kinah扣除政策，欠款未清期间，该角色不能转服，也不能使用未绑定Kinah；在交易所不能挂售物品或领取收益，在市场中不能挂售、领取收益或购买。\n\n真实货币交易相关的规则也有扩展：通过此类交易获得的物品可被追回，游戏内货币可被追回或扣除。若为牟利而反复进行真实货币交易，即使是首次处罚也可能被永久封禁。不同意的玩家可以要求注销会员资格；在生效日期前未表示同意或拒绝，视为接受变更。异议请通过公告中的客服链接提交。\n\n对玩家而言，最实际的是现在检查自己的交易习惯，尤其是使用交易所和市场的玩家，并留意生效日期。",
+    "etiketler": [
+     "#AION2",
+     "#Steam",
+     "#PC"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "aion-2-yaptirim-kurallari",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/3393110/view/675137971401262420",
+   "teyit_zamani": "2026-11-25T03:10:09+00:00",
+   "oyuncuya_fayda": "Oyuncular hangi işlemlerin yaptırıma gireceğini ve kinah eksiye düşünce hangi kısıtların uygulanacağını öğrenir.",
+   "hype": 4,
+   "eklenme": "2026-11-25T06:13:57.927192+03:00"
+  }
+ },
+ {
   "id": "mario-kart-world-1-9-0-guncelleme-2026-11-24",
   "oyun": "Mario Kart World",
   "tarih": "2026-11-24",

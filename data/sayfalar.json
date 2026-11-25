@@ -32,7 +32,7 @@
 "2026-11-19"
 ],
 "de/index.html": [
-"2e96b906132b",
+"4167e1bbc06e",
 "2026-11-25"
 ],
 "de/kostenlose-spiele.html": [
@@ -120,7 +120,7 @@
 "2026-11-16"
 ],
 "de/spiele-news.html": [
-"56f95ff125fb",
+"4da1627b9dc0",
 "2026-11-25"
 ],
 "de/spiele/apex-legends.html": [
@@ -283,6 +283,10 @@
 "2ab4a7f7abf7",
 "2026-11-16"
 ],
+"de/thema/aion2.html": [
+"3a373c404441",
+"2026-11-25"
+],
 "de/thema/blizzard.html": [
 "7d121d2bb74b",
 "2026-11-22"
@@ -308,7 +312,7 @@
 "2026-11-25"
 ],
 "de/thema/pc.html": [
-"afef88e648b5",
+"fc0433d1676b",
 "2026-11-25"
 ],
 "de/thema/playstation.html": [
@@ -328,7 +332,7 @@
 "2026-11-24"
 ],
 "de/thema/steam.html": [
-"2559edeef700",
+"d2ab3f663ca2",
 "2026-11-25"
 ],
 "de/thema/steamawards.html": [
@@ -344,7 +348,7 @@
 "2026-11-24"
 ],
 "de/thema/tur-guncelleme.html": [
-"dd164ba1a8b1",
+"c4449ad773ea",
 "2026-11-25"
 ],
 "de/thema/tur-haber.html": [
@@ -408,7 +412,7 @@
 "2026-11-25"
 ],
 "en/game-news.html": [
-"6c965d5b6ae2",
+"856b603d4181",
 "2026-11-25"
 ],
 "en/game/apex-legends.html": [
@@ -648,7 +652,7 @@
 "2026-11-22"
 ],
 "en/index.html": [
-"b409f049f205",
+"8d31d16a142a",
 "2026-11-25"
 ],
 "en/languages.html": [
@@ -675,6 +679,10 @@
 "2a933ed3628c",
 "2026-11-09"
 ],
+"en/tag/aion2.html": [
+"3727a1bc08b4",
+"2026-11-25"
+],
 "en/tag/blizzard.html": [
 "a16720c7e996",
 "2026-11-22"
@@ -700,7 +708,7 @@
 "2026-11-25"
 ],
 "en/tag/pc.html": [
-"b4c66f3f22e7",
+"bb9a044c0137",
 "2026-11-25"
 ],
 "en/tag/playstation.html": [
@@ -720,7 +728,7 @@
 "2026-11-25"
 ],
 "en/tag/steam.html": [
-"2acd7ee80f0a",
+"2dffec876472",
 "2026-11-25"
 ],
 "en/tag/steamawards.html": [
@@ -736,7 +744,7 @@
 "2026-11-25"
 ],
 "en/tag/tur-guncelleme.html": [
-"7242d9bf6ad3",
+"c003c9b59024",
 "2026-11-25"
 ],
 "en/tag/tur-haber.html": [
@@ -864,7 +872,7 @@
 "2026-11-09"
 ],
 "es/index.html": [
-"513e8fc300ab",
+"975c4b7ac3a9",
 "2026-11-25"
 ],
 "es/juego/apex-legends.html": [
@@ -1036,7 +1044,7 @@
 "2026-11-17"
 ],
 "es/noticias-juegos.html": [
-"304ecd89d42e",
+"0003388b76d9",
 "2026-11-25"
 ],
 "es/ofertas.html": [
@@ -1054,6 +1062,10 @@
 "es/sources.html": [
 "e69b28e87189",
 "2026-11-09"
+],
+"es/tema/aion2.html": [
+"c1d814f3b696",
+"2026-11-25"
 ],
 "es/tema/blizzard.html": [
 "db2fea07b9c2",
@@ -1080,7 +1092,7 @@
 "2026-11-25"
 ],
 "es/tema/pc.html": [
-"53fd31fa866f",
+"2c3fae66ad5f",
 "2026-11-25"
 ],
 "es/tema/playstation.html": [
@@ -1100,7 +1112,7 @@
 "2026-11-25"
 ],
 "es/tema/steam.html": [
-"c85fdbb6d40d",
+"27f2e18621ce",
 "2026-11-25"
 ],
 "es/tema/steamawards.html": [
@@ -1116,7 +1128,7 @@
 "2026-11-25"
 ],
 "es/tema/tur-guncelleme.html": [
-"b55ccf5bc272",
+"25e10b073c81",
 "2026-11-25"
 ],
 "es/tema/tur-haber.html": [
@@ -1155,6 +1167,10 @@
 "6f27387d94ca",
 "2026-11-25"
 ],
+"etiket/aion2.html": [
+"b2a99b6bb935",
+"2026-11-25"
+],
 "etiket/blizzard.html": [
 "24c5c4830620",
 "2026-11-22"
@@ -1180,7 +1196,7 @@
 "2026-11-25"
 ],
 "etiket/pc.html": [
-"21b61b698efe",
+"f8d71cdec951",
 "2026-11-25"
 ],
 "etiket/playstation.html": [
@@ -1200,7 +1216,7 @@
 "2026-11-25"
 ],
 "etiket/steam.html": [
-"b022b5ae87ef",
+"5a68ef83f0c8",
 "2026-11-25"
 ],
 "etiket/steamawards.html": [
@@ -1216,7 +1232,7 @@
 "2026-11-25"
 ],
 "etiket/tur-guncelleme.html": [
-"c1ec1e1422a8",
+"ee040a34a7b9",
 "2026-11-25"
 ],
 "etiket/tur-haber.html": [
@@ -1260,7 +1276,7 @@
 "2026-11-15"
 ],
 "fr/actus-jeux.html": [
-"bb51a4ae28f9",
+"2ff42b9af78d",
 "2026-11-25"
 ],
 "fr/calendrier-sorties.html": [
@@ -1348,7 +1364,7 @@
 "2026-11-22"
 ],
 "fr/index.html": [
-"f75f3d49e2a6",
+"b0d6c46f553f",
 "2026-11-25"
 ],
 "fr/jeu/apex-legends.html": [
@@ -1535,6 +1551,10 @@
 "b3a964c7e824",
 "2026-11-09"
 ],
+"fr/sujet/aion2.html": [
+"fdf5a151ef57",
+"2026-11-25"
+],
 "fr/sujet/blizzard.html": [
 "4b955e20ca0c",
 "2026-11-22"
@@ -1560,7 +1580,7 @@
 "2026-11-25"
 ],
 "fr/sujet/pc.html": [
-"81c591333c19",
+"2beb4a129635",
 "2026-11-25"
 ],
 "fr/sujet/playstation.html": [
@@ -1580,7 +1600,7 @@
 "2026-11-25"
 ],
 "fr/sujet/steam.html": [
-"9259dc7d76ae",
+"7a6c7236efa8",
 "2026-11-25"
 ],
 "fr/sujet/steamawards.html": [
@@ -1596,7 +1616,7 @@
 "2026-11-25"
 ],
 "fr/sujet/tur-guncelleme.html": [
-"c58eecbcabf1",
+"12d77a0e0f14",
 "2026-11-25"
 ],
 "fr/sujet/tur-haber.html": [
@@ -1672,7 +1692,7 @@
 "2026-11-15"
 ],
 "index.html": [
-"59c3d2492185",
+"d87554f1534e",
 "2026-11-25"
 ],
 "indirimler.html": [
@@ -1692,7 +1712,7 @@
 "2026-11-16"
 ],
 "nl/gamenieuws.html": [
-"77b739c66c11",
+"8f7288ce542a",
 "2026-11-25"
 ],
 "nl/games/apex-legends.html": [
@@ -1936,12 +1956,16 @@
 "2026-11-19"
 ],
 "nl/index.html": [
-"81996e70381e",
+"9defc9b37ea8",
 "2026-11-25"
 ],
 "nl/nieuws.html": [
 "6172026c5fc0",
 "2026-11-17"
+],
+"nl/onderwerp/aion2.html": [
+"c435610e7db4",
+"2026-11-25"
 ],
 "nl/onderwerp/blizzard.html": [
 "8346c0ce643d",
@@ -1968,7 +1992,7 @@
 "2026-11-25"
 ],
 "nl/onderwerp/pc.html": [
-"d5a32e54647c",
+"1492f9b5f158",
 "2026-11-25"
 ],
 "nl/onderwerp/playstation.html": [
@@ -1988,7 +2012,7 @@
 "2026-11-24"
 ],
 "nl/onderwerp/steam.html": [
-"555a59c74842",
+"8c5195a9acf1",
 "2026-11-25"
 ],
 "nl/onderwerp/steamawards.html": [
@@ -2004,7 +2028,7 @@
 "2026-11-24"
 ],
 "nl/onderwerp/tur-guncelleme.html": [
-"61a99a34fd72",
+"9db53b413830",
 "2026-11-25"
 ],
 "nl/onderwerp/tur-haber.html": [
@@ -2064,7 +2088,7 @@
 "2026-11-16"
 ],
 "oyun-haberleri.html": [
-"4da0302d7dfe",
+"44b5c160f470",
 "2026-11-25"
 ],
 "oyun/apex-legends.html": [
@@ -2407,6 +2431,10 @@
 "991a486d9d81",
 "2026-11-16"
 ],
+"zh/huati/aion2.html": [
+"586dd3fb388c",
+"2026-11-25"
+],
 "zh/huati/blizzard.html": [
 "e26a8b950e65",
 "2026-11-22"
@@ -2432,7 +2460,7 @@
 "2026-11-25"
 ],
 "zh/huati/pc.html": [
-"f6ae2dfa06b4",
+"17eb2345fc3d",
 "2026-11-25"
 ],
 "zh/huati/playstation.html": [
@@ -2452,7 +2480,7 @@
 "2026-11-24"
 ],
 "zh/huati/steam.html": [
-"27456393fd3d",
+"e733743c3c76",
 "2026-11-25"
 ],
 "zh/huati/steamawards.html": [
@@ -2468,7 +2496,7 @@
 "2026-11-24"
 ],
 "zh/huati/tur-guncelleme.html": [
-"66896f7fc8e7",
+"547c42ef50ed",
 "2026-11-25"
 ],
 "zh/huati/tur-haber.html": [
@@ -2508,7 +2536,7 @@
 "2026-11-25"
 ],
 "zh/index.html": [
-"df8997a54af1",
+"0a591756b37c",
 "2026-11-25"
 ],
 "zh/laiyuan.html": [
@@ -2532,7 +2560,7 @@
 "2026-11-24"
 ],
 "zh/youxi-xinwen.html": [
-"a7a09d9ff4e9",
+"4f051e8beb2e",
 "2026-11-25"
 ],
 "zh/youxi/apex-legends.html": [

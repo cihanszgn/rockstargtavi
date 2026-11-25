@@ -1,0 +1,128 @@
+{
+ "id": "aion-2-yaptirim-kurallari-2026-11-25",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Las sanciones de AION 2 podrán quitarte moneda del juego incluso sin prohibición de jugar.",
+   "veri": {
+    "ust_etiket": "ACTUALIZACIÓN DE POLÍTICA",
+    "baslik": "AION 2: nueva deducción de Kinah",
+    "vurgu": [
+     "deducción de Kinah"
+    ],
+    "tuslar": [
+     "K",
+     "I",
+     "N"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "Kinah no vinculado"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según el aviso de Steam, cambian la política de sanciones y su tabla de criterios.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Aviso oficial de Steam",
+    "alinti": "Añade la deducción de moneda y una regla de deducción de Kinah no vinculado a la política de sanciones."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "STEAM • AVISO OFICIAL"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "La deducción de moneda recupera la obtenida con infracciones, incluso sin prohibición temporal. Si el saldo no alcanza, puede quedar en negativo.",
+   "veri": {
+    "baslik": "Deducción de moneda",
+    "maddeler": [
+     {
+      "metin": "Recupera la moneda obtenida con infracciones",
+      "tetik": "recupera"
+     },
+     {
+      "metin": "Funciona sin prohibición temporal",
+      "tetik": "prohibición"
+     },
+     {
+      "metin": "El saldo puede quedar en negativo",
+      "tetik": "negativo"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DEDUCCIÓN DE MONEDA",
+    "alt": "RECUPERACIÓN Y SALDO NEGATIVO"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Hasta pagar esa deuda, el personaje no puede transferirse de servidor ni usar Kinah no vinculado. El Exchange y el Marketplace también quedan restringidos.",
+   "veri": {
+    "baslik": "Restricciones de la deuda",
+    "maddeler": [
+     {
+      "metin": "Sin cambio de servidor",
+      "tetik": "transferirse"
+     },
+     {
+      "metin": "Sin uso de Kinah no vinculado",
+      "tetik": "usar"
+     },
+     {
+      "metin": "Exchange y Marketplace limitados",
+      "tetik": "restringidos"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "RESTRICCIONES",
+    "alt": "SERVIDOR, KINAH, COMERCIO"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Las fechas de vigencia y la vía de objeción están en nuestra web, Control A Game. ¿Te parecen justas estas reglas?",
+   "veri": {
+    "cagri": "Fechas y objeciones en la web",
+    "alt": "Detalles completos en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
