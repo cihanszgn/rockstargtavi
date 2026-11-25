@@ -1,0 +1,114 @@
+{
+ "id": "aion-2-server-matchmaking-2026-11-25",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "AION 2'de Abyss ve Rift sunucu eşleşmeleri 25 Kasım'da açıklandı.",
+   "veri": {
+    "ust_etiket": "SUNUCU EŞLEŞMESİ",
+    "baslik": "AION 2 sunucu eşleşmeleri açıklandı",
+    "vurgu": [
+     "eşleşmeleri"
+    ],
+    "tuslar": [
+     "A",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "SUNUCU EŞLEŞMELERİ"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Asmodian sunucusu Israphel, Elyos sunucusu Siel'le eşleşirse, Abyss'e giren Israphel oyuncuları Siel'in Elyos'larıyla karşılaşır. Avrupa'da 25, Asya'da 11, NA East'te 10 çift var.",
+   "veri": {
+    "baslik": "Sunucu çiftleri",
+    "maddeler": [
+     {
+      "metin": "Israphel, Siel ile Abyss'te karşılaşır",
+      "tetik": "Israphel"
+     },
+     {
+      "metin": "Avrupa: 25 çift",
+      "tetik": "Avrupa"
+     },
+     {
+      "metin": "Asya: 11 çift",
+      "tetik": "Asya"
+     },
+     {
+      "metin": "NA East: 10 çift",
+      "tetik": "NA"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "SUNUCU ÇİFTLERİ",
+    "alt": "ABYSS VE RIFT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Eşleşmeler kalıcı değil. Ekip dengeyi korumak için çiftleri düzenli güncelleyecek; aynı hizip bile eşleşebilir, mesela Asmodian'a karşı Asmodian.",
+   "veri": {
+    "baslik": "Eşleşmeler değişecek",
+    "maddeler": [
+     {
+      "metin": "Eşleşmeler kalıcı değil",
+      "tetik": "kalıcı"
+     },
+     {
+      "metin": "Çiftler düzenli güncellenecek",
+      "tetik": "güncelleyecek"
+     },
+     {
+      "metin": "Asmodian'a karşı Asmodian olabilir",
+      "tetik": "Asmodian'a"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "KALICI DEĞİL",
+    "alt": "ÇİFTLER GÜNCELLENECEK"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tam listeler sitemizde, Control A Game'de. Sunucunun rakibi seni memnun etti mi?",
+   "veri": {
+    "cagri": "Tam listeler sitede",
+    "alt": "Tüm bölgelerin Abyss ve Rift çiftleri haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

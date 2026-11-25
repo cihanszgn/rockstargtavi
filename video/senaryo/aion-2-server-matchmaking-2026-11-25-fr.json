@@ -1,0 +1,114 @@
+{
+ "id": "aion-2-server-matchmaking-2026-11-25",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "AION 2 a dévoilé le 25 novembre les appariements de serveurs pour l'Abyss et les Rift.",
+   "veri": {
+    "ust_etiket": "APPARIEMENT",
+    "baslik": "AION 2 dévoile ses appariements",
+    "vurgu": [
+     "appariements"
+    ],
+    "tuslar": [
+     "A",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "APPARIEMENTS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Si le serveur Asmodian Israphel est apparié au serveur Elyos Siel, les joueurs d'Israphel dans l'Abyss croiseront les Elyos de Siel. En Europe, il y a 25 paires, en Asie 11 et sur NA East 10.",
+   "veri": {
+    "baslik": "Paires de serveurs",
+    "maddeler": [
+     {
+      "metin": "Israphel affronte Siel",
+      "tetik": "Israphel"
+     },
+     {
+      "metin": "Europe : 25 paires",
+      "tetik": "Europe"
+     },
+     {
+      "metin": "Asie : 11 paires",
+      "tetik": "Asie"
+     },
+     {
+      "metin": "NA East : 10 paires",
+      "tetik": "NA"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "PAIRES DE SERVEURS",
+    "alt": "ABYSS ET RIFT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Ces appariements ne sont pas permanents. L'équipe les mettra à jour régulièrement pour équilibrer les combats, et une même faction peut être appariée, comme Asmodian contre Asmodian.",
+   "veri": {
+    "baslik": "Les paires évolueront",
+    "maddeler": [
+     {
+      "metin": "Appariements non permanents",
+      "tetik": "permanents"
+     },
+     {
+      "metin": "Mises à jour régulières",
+      "tetik": "régulièrement"
+     },
+     {
+      "metin": "Asmodian contre Asmodian",
+      "tetik": "Asmodian"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NON PERMANENTS",
+    "alt": "MISES À JOUR PRÉVUES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Le rival de ton serveur te convient-il ?",
+   "veri": {
+    "cagri": "Listes complètes sur le site",
+    "alt": "Les paires Abyss et Rift de chaque région, dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

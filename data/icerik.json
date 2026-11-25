@@ -1,5 +1,214 @@
 [
  {
+  "id": "aion-2-server-matchmaking-2026-11-25",
+  "oyun": "AION 2",
+  "tarih": "2026-11-25",
+  "tur": "haber",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam duyurusu",
+    "url": "https://store.steampowered.com/news/app/3393110/view/675138605143818266"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "AION 2 sunucu eşleşmeleri 25 Kasım'da açıklandı",
+    "ozet": "Abyss ve Rift için Avrupa, Kuzey Amerika, Güney Amerika ve Asya sunucu çiftleri yayımlandı; eşleşmeler düzenli olarak değişecek.",
+    "metin": "AION 2'de sunucu eşleşmeleri 25 Kasım'da açıklandı. Steam'deki duyuruya göre oyuncular, Spacetime Rifts ve Abyss gibi modlarda kendi sunucularının hangi sunucuyla karşılaşacağını artık listeden görebiliyor.\n\nMantık sunucudan sunucuya işliyor. Asmodian sunucusu Israphel, Elyos sunucusu Siel ile eşleştirildiyse, Abyss'e giren her Israphel Asmodian'ı Siel'in Elyos oyuncularıyla karşılaşıyor. Avrupa, NA East, NA West, Güney Amerika ve Asya için ayrı listeler yayımlandı. Avrupa'da hem Abyss hem Rift için 25'er çift var; NA East'te 10, NA West'te 6, Güney Amerika'da 6 ve Asya'da 11 çift bulunuyor.\n\nEşleşmeler kalıcı değil. Ekip, savaş dengesini korumak için çiftleri düzenli aralıklarla güncelleyeceğini söylüyor; bu yüzden aynı hizip de eşleşebilir, örneğin Asmodian'a karşı Asmodian. Oyuncular bugün hangi sunucuyla karşılaşacaklarını listeden kontrol edip hazırlanabilir, ancak rakibin ileride değişebileceğini de hesaba katmalı.",
+    "etiketler": [
+     "#AION2",
+     "#Abyss",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "en": {
+    "baslik": "AION 2 reveals server matchmaking pairings on November 25",
+    "ozet": "Abyss and Rift server pairs are published for Europe, North America, South America and Asia, and they will be updated periodically.",
+    "metin": "AION 2 has revealed its server matchmaking pairings in a Steam notice dated November 25. The list shows which server each community will face in modes such as Spacetime Rifts and the Abyss, and players can look up their own server.\n\nPairings work server against server. If the Asmodian server Israphel is paired with the Elyos server Siel, every Israphel Asmodian who enters the Abyss will run into Siel's Elyos players. Separate lists cover Europe, NA East, NA West, South America and Asia. Europe has 25 pairs for both the Abyss and Rifts, NA East has 10, NA West has 6, South America has 6 and Asia has 11.\n\nThe pairings will not stay fixed. The team says it will update them periodically to keep combat balanced, so the same faction can be matched together, such as Asmodian against Asmodian. Players can check the list to see who their server faces today, but should expect that rival to change later.",
+    "etiketler": [
+     "#AION2",
+     "#Abyss",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "es": {
+    "baslik": "AION 2 revela los emparejamientos de servidores el 25 de noviembre",
+    "ozet": "Ya están publicados los pares de servidores del Abyss y las Rift en Europa, Norteamérica, Sudamérica y Asia, con cambios periódicos.",
+    "metin": "AION 2 ha revelado el 25 de noviembre los emparejamientos de servidores para Spacetime Rifts y el Abyss. Según un aviso en Steam, los jugadores ya pueden consultar contra qué servidor se enfrentará su comunidad.\n\nEl sistema funciona de servidor a servidor. Si el servidor Asmodian Israphel se empareja con el servidor Elyos Siel, cada jugador Asmodian de Israphel que entre en el Abyss se encontrará con los Elyos de Siel. Hay listas separadas para Europa, NA East, NA West, Sudamérica y Asia. Europa tiene 25 pares tanto para el Abyss como para las Rift, NA East tiene 10, NA West 6, Sudamérica 6 y Asia 11.\n\nLos emparejamientos no son permanentes. El equipo los actualizará periódicamente para equilibrar el combate, así que incluso una misma facción puede coincidir, como Asmodian contra Asmodian. Los jugadores pueden revisar hoy quién es el rival de su servidor, pero deben contar con que cambie más adelante.",
+    "etiketler": [
+     "#AION2",
+     "#Abyss",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "fr": {
+    "baslik": "AION 2 dévoile les appariements de serveurs le 25 novembre",
+    "ozet": "Les paires de serveurs pour l'Abyss et les Rift sont publiées pour l'Europe, l'Amérique du Nord, du Sud et l'Asie, et évolueront régulièrement.",
+    "metin": "AION 2 a dévoilé le 25 novembre les appariements de serveurs pour les Spacetime Rifts et l'Abyss. Selon un avis publié sur Steam, les joueurs peuvent désormais voir contre quel serveur leur communauté sera opposée.\n\nLe principe est d'opposer les serveurs deux à deux. Si le serveur Asmodian Israphel est apparié au serveur Elyos Siel, chaque Asmodian d'Israphel qui entre dans l'Abyss croisera les Elyos de Siel. Des listes distinctes existent pour l'Europe, NA East, NA West, l'Amérique du Sud et l'Asie. L'Europe compte 25 paires pour l'Abyss comme pour les Rift, NA East 10, NA West 6, l'Amérique du Sud 6 et l'Asie 11.\n\nCes appariements ne sont pas permanents. L'équipe les mettra à jour régulièrement pour équilibrer les combats, et une même faction peut donc être appariée, comme Asmodian contre Asmodian. Les joueurs peuvent consulter la liste pour connaître leur adversaire du jour, mais celui-ci pourra changer plus tard.",
+    "etiketler": [
+     "#AION2",
+     "#Abyss",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "de": {
+    "baslik": "AION 2 enthüllt Server-Paarungen am 25. November",
+    "ozet": "Die Server-Paarungen für Abyss und Rift in Europa, Nordamerika, Südamerika und Asien stehen fest und sollen regelmäßig angepasst werden.",
+    "metin": "AION 2 hat am 25. November die Server-Paarungen für Spacetime Rifts und den Abyss bekannt gegeben. Laut einer Steam-Mitteilung können Spieler nun nachsehen, gegen welchen Server ihre Gemeinschaft antritt.\n\nDas Prinzip: Ist der Asmodian-Server Israphel mit dem Elyos-Server Siel gepaart, trifft jeder Israphel-Asmodian im Abyss auf Siels Elyos. Es gibt getrennte Listen für Europa, NA East, NA West, Südamerika und Asien. Europa hat jeweils 25 Paare für Abyss und Rift, NA East 10, NA West 6, Südamerika 6 und Asien 11.\n\nDie Paarungen sind nicht dauerhaft. Das Team will sie regelmäßig anpassen, um den Kampf ausgewogen zu halten; deshalb können auch gleiche Fraktionen zusammenkommen, etwa Asmodian gegen Asmodian. Spieler können in der Liste prüfen, wer heute ihr Gegner ist, sollten aber mit einem späteren Wechsel rechnen.",
+    "etiketler": [
+     "#AION2",
+     "#Abyss",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "nl": {
+    "baslik": "AION 2 maakt serverkoppelingen bekend op 25 november",
+    "ozet": "De serverparen voor Abyss en Rift in Europa, Noord-Amerika, Zuid-Amerika en Azië zijn bekend en worden regelmatig aangepast.",
+    "metin": "AION 2 heeft op 25 november de serverkoppelingen voor Spacetime Rifts en de Abyss bekendgemaakt. Volgens een bericht op Steam kunnen spelers nu zien tegen welke server hun gemeenschap uitkomt.\n\nHet principe: als de Asmodian-server Israphel gekoppeld is aan de Elyos-server Siel, komt elke Israphel-Asmodian in de Abyss Siels Elyos tegen. Er zijn aparte lijsten voor Europa, NA East, NA West, Zuid-Amerika en Azië. Europa heeft voor zowel Abyss als Rift 25 paren, NA East 10, NA West 6, Zuid-Amerika 6 en Azië 11.\n\nDe koppelingen zijn niet blijvend. Het team wil ze regelmatig bijwerken om het gevecht in balans te houden, dus ook dezelfde factie kan aan elkaar gekoppeld worden, zoals Asmodian tegen Asmodian. Spelers kunnen in de lijst zien wie nu hun tegenstander is, maar die kan later veranderen.",
+    "etiketler": [
+     "#AION2",
+     "#Abyss",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "zh": {
+    "baslik": "AION 2公布服务器匹配名单，11月25日发布",
+    "ozet": "深渊与时空裂隙的服务器配对已公布，覆盖欧洲、北美、南美和亚洲，并将定期调整。",
+    "metin": "AION 2在11月25日通过Steam公告公布了服务器匹配名单。玩家现在可以查看自己的服务器在Spacetime Rifts和Abyss等模式中会遇到哪个服务器。\n\n规则是服务器对服务器：如果Asmodian服务器Israphel与Elyos服务器Siel配对，进入Abyss的每名Israphel Asmodian玩家都会遇到Siel的Elyos玩家。名单按欧洲、NA East、NA West、南美和亚洲分别发布。欧洲的Abyss与Rift各有25组配对，NA East有10组，NA West有6组，南美有6组，亚洲有11组。\n\n配对并不固定。团队表示会定期更新，以保持战斗平衡，因此同一阵营也可能被配在一起，例如Asmodian对Asmodian。玩家可以在名单中查看今天的对手，但这个对手以后可能会被替换。",
+    "etiketler": [
+     "#AION2",
+     "#Abyss",
+     "#Steam",
+     "#PC"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "aion-2-server-matchmaking-eslesmeleri-2026-11-25",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/3393110/view/675138605143818266",
+   "teyit_zamani": "2026-11-25T09:10:22+00:00",
+   "oyuncuya_fayda": "Oyuncular Abyss ve Rift'te hangi sunucuyla karşılaşacaklarını görüp hazırlanabilir, eşleşmelerin değişebileceğini bilir.",
+   "hype": 5,
+   "eklenme": "2026-11-25T12:22:53.688556+03:00"
+  }
+ },
+ {
+  "id": "aion-2-twitch-drops-2026-11-25",
+  "oyun": "AION 2",
+  "tarih": "2026-11-25",
+  "tur": "haber",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam duyurusu",
+    "url": "https://store.steampowered.com/news/app/3393110/view/675137971401261893"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "AION 2 Twitch Drops başladı: 10 saatlik ödül listesi",
+    "ozet": "AION 2'de katılımcı Twitch yayınlarını izleyen oyuncular, 9 Aralık'a kadar 30 dakikadan 10 saate uzanan oyun içi ödüller kazanabiliyor.",
+    "metin": "AION 2'nin Twitch Drops etkinliği 25 Kasım 2026'da başladı. Steam'deki resmî duyuruya göre oyuncular, etkinlik süresince katılımcı AION 2 yayınlarını izleyerek oyun içi ödül kazanabiliyor.\n\nEtkinlik PST ile 25 Kasım'da 06:00'da başlayıp 9 Aralık'ta 23:59'da bitiyor; CET karşılığı 25 Kasım 15:00 ile 10 Aralık 08:59. Tüm kanallarda izleme süresi geçerli. 30 dakikada 15 adet Resurrection Spiritstone, 1 saatte 15 adet Artisan's Roasted Fogus, 2 saatte 3 adet Customization Voucher geliyor. 4 saatte 7 günlük Appearance Change Voucher, 6 saatte 20 adet Battle Enhance Scroll, 8 saatte 3 adet Soul Codex: Reset, 10 saatte 6 adet Sync Stone (Unique) veriliyor. Ödüllerin hepsi hesaba bağlı (Bound).\n\nÖdülleri envanterden 23 Aralık 23:59 PST'ye, yani 24 Aralık 08:59 CET'e kadar almak gerekiyor. Oyuncular ilerlemeyi Twitch Drops sayfasından kontrol edebilir; ayrıntılar için resmî SSS'ye bakılabilir.",
+    "etiketler": [
+     "#AION2",
+     "#TwitchDrops",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "en": {
+    "baslik": "AION 2 Twitch Drops live until December 9 with 7 rewards",
+    "ozet": "Viewers of participating AION 2 Twitch streams can earn in-game rewards for 30 minutes to 10 hours of watch time until December 9 PST.",
+    "metin": "AION 2 started a new Twitch Drops event on November 25, 2026. According to the official announcement on Steam, players can earn in-game rewards by watching participating AION 2 streams during the event period.\n\nThe event runs from 06:00 PST on November 25 to 23:59 PST on December 9, which is 15:00 CET on November 25 to 08:59 CET on December 10. Watch time counts on all channels. 30 minutes earns 15 Resurrection Spiritstone, 1 hour gives 15 Artisan's Roasted Fogus, and 2 hours gives 3 Customization Vouchers. At 4 hours there is a 7-day Appearance Change Voucher, at 6 hours 20 Battle Enhance Scrolls, at 8 hours 3 Soul Codex: Reset, and at 10 hours 6 Sync Stones (Unique). All rewards are Bound.\n\nDrops must be claimed from the inventory before 23:59 PST on December 23, or 08:59 CET on December 24. Players can track progress on the Twitch Drops page, and the official FAQ has more details.",
+    "etiketler": [
+     "#AION2",
+     "#TwitchDrops",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "es": {
+    "baslik": "AION 2 estrena Twitch Drops hasta el 9 de diciembre",
+    "ozet": "Quien vea streams participantes de AION 2 en Twitch puede ganar recompensas dentro del juego, con tiempos de 30 minutos a 10 horas.",
+    "metin": "AION 2 ha iniciado un nuevo evento de Twitch Drops el 25 de noviembre de 2026. Según el anuncio oficial en Steam, los jugadores pueden ganar recompensas dentro del juego viendo streams participantes de AION 2 durante el evento.\n\nEl evento va de las 06:00 PST del 25 de noviembre a las 23:59 PST del 9 de diciembre; en horario CET, de las 15:00 del 25 de noviembre a las 08:59 del 10 de diciembre. Cuenta el tiempo de visionado en todos los canales. Con 30 minutos se obtienen 15 Resurrection Spiritstone, con 1 hora 15 Artisan's Roasted Fogus y con 2 horas 3 Customization Voucher. A las 4 horas llega un Appearance Change Voucher de 7 días, a las 6 horas 20 Battle Enhance Scroll, a las 8 horas 3 Soul Codex: Reset y a las 10 horas 6 Sync Stone (Unique). Todas las recompensas son vinculadas (Bound).\n\nHay que reclamar los drops desde el inventario antes de las 23:59 PST del 23 de diciembre, es decir, las 08:59 CET del 24 de diciembre. Los jugadores pueden seguir su progreso en la página de Twitch Drops y consultar las preguntas frecuentes oficiales.",
+    "etiketler": [
+     "#AION2",
+     "#TwitchDrops",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "fr": {
+    "baslik": "AION 2 : Twitch Drops jusqu'au 9 décembre, 7 récompenses",
+    "ozet": "Les spectateurs des streams Twitch participants d'AION 2 gagnent des récompenses en jeu, de 30 minutes à 10 heures de visionnage.",
+    "metin": "AION 2 a lancé un nouvel événement Twitch Drops le 25 novembre 2026. D'après l'annonce officielle sur Steam, les joueurs peuvent gagner des récompenses en jeu en regardant des streams AION 2 participants pendant l'événement.\n\nL'événement va de 06:00 PST le 25 novembre à 23:59 PST le 9 décembre, soit de 15:00 CET le 25 novembre à 08:59 CET le 10 décembre. Le temps de visionnage compte sur toutes les chaînes. 30 minutes donnent 15 Resurrection Spiritstone, 1 heure 15 Artisan's Roasted Fogus et 2 heures 3 Customization Voucher. À 4 heures, un Appearance Change Voucher de 7 jours ; à 6 heures, 20 Battle Enhance Scroll ; à 8 heures, 3 Soul Codex: Reset ; à 10 heures, 6 Sync Stone (Unique). Toutes les récompenses sont liées (Bound).\n\nLes drops doivent être récupérés dans l'inventaire avant 23:59 PST le 23 décembre, soit 08:59 CET le 24 décembre. La progression se suit sur la page Twitch Drops, et la FAQ officielle donne plus de détails.",
+    "etiketler": [
+     "#AION2",
+     "#TwitchDrops",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "de": {
+    "baslik": "AION 2 Twitch Drops bis 9. Dezember mit 7 Belohnungen",
+    "ozet": "Wer teilnehmende AION-2-Streams auf Twitch schaut, erhält Ingame-Belohnungen für 30 Minuten bis 10 Stunden Zuschauzeit.",
+    "metin": "AION 2 hat am 25. November 2026 ein neues Twitch-Drops-Event gestartet. Laut der offiziellen Ankündigung auf Steam können Spieler Ingame-Belohnungen erhalten, indem sie während des Events teilnehmende AION-2-Streams ansehen.\n\nDas Event läuft von 06:00 PST am 25. November bis 23:59 PST am 9. Dezember, in CET von 15:00 am 25. November bis 08:59 am 10. Dezember. Die Zuschauzeit zählt auf allen Kanälen. Nach 30 Minuten gibt es 15 Resurrection Spiritstone, nach 1 Stunde 15 Artisan's Roasted Fogus und nach 2 Stunden 3 Customization Voucher. Nach 4 Stunden folgt ein Appearance Change Voucher für 7 Tage, nach 6 Stunden 20 Battle Enhance Scroll, nach 8 Stunden 3 Soul Codex: Reset und nach 10 Stunden 6 Sync Stone (Unique). Alle Belohnungen sind gebunden (Bound).\n\nDie Drops müssen vor dem 23. Dezember, 23:59 PST, im Inventar abgeholt werden, das entspricht dem 24. Dezember, 08:59 CET. Den Fortschritt können Spieler auf der Twitch-Drops-Seite prüfen; weitere Details nennt die offizielle FAQ.",
+    "etiketler": [
+     "#AION2",
+     "#TwitchDrops",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "nl": {
+    "baslik": "AION 2 Twitch Drops tot 9 december met 7 beloningen",
+    "ozet": "Wie deelnemende AION 2-streams op Twitch kijkt, verdient beloningen in het spel voor 30 minuten tot 10 uur kijktijd.",
+    "metin": "AION 2 is op 25 november 2026 gestart met een nieuw Twitch Drops-evenement. Volgens de officiële aankondiging op Steam kunnen spelers beloningen in het spel verdienen door tijdens het evenement deelnemende AION 2-streams te bekijken.\n\nHet evenement loopt van 06:00 PST op 25 november tot 23:59 PST op 9 december, oftewel van 15:00 CET op 25 november tot 08:59 CET op 10 december. Kijktijd telt op alle kanalen. Na 30 minuten krijg je 15 Resurrection Spiritstone, na 1 uur 15 Artisan's Roasted Fogus en na 2 uur 3 Customization Voucher. Na 4 uur volgt een Appearance Change Voucher van 7 dagen, na 6 uur 20 Battle Enhance Scroll, na 8 uur 3 Soul Codex: Reset en na 10 uur 6 Sync Stone (Unique). Alle beloningen zijn gebonden (Bound).\n\nDe drops moet je vóór 23:59 PST op 23 december uit je inventaris claimen, dat is 08:59 CET op 24 december. Spelers kunnen hun voortgang op de Twitch Drops-pagina volgen; de officiële FAQ geeft meer details.",
+    "etiketler": [
+     "#AION2",
+     "#TwitchDrops",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "zh": {
+    "baslik": "AION 2 Twitch Drops开启：12月9日前可领7种奖励",
+    "ozet": "观看参与活动的AION 2 Twitch直播，累计30分钟至10小时即可领取游戏内奖励。",
+    "metin": "AION 2于2026年11月25日开启了新一轮Twitch Drops活动。根据Steam上的官方公告，玩家在活动期间观看参与活动的AION 2 Twitch直播，即可获得游戏内奖励。\n\n活动时间为太平洋时间11月25日06:00至12月9日23:59，对应中欧时间11月25日15:00至12月10日08:59。所有频道的观看时间均有效。观看30分钟可获得15个Resurrection Spiritstone，1小时获得15个Artisan's Roasted Fogus，2小时获得3张Customization Voucher。4小时可得1张7天Appearance Change Voucher，6小时获得20个Battle Enhance Scroll，8小时获得3个Soul Codex: Reset，10小时获得6个Sync Stone (Unique)。所有奖励均为绑定（Bound）。\n\n玩家需要在12月23日23:59 PST之前，也就是12月24日08:59 CET之前，从库存中领取掉落奖励。进度可以在Twitch Drops页面查看，更多细节请参阅官方常见问题。",
+    "etiketler": [
+     "#AION2",
+     "#TwitchDrops",
+     "#Steam",
+     "#PC"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "aion-2-twitch-drops-daevasgiving-2026-11-25",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/3393110/view/675137971401261893",
+   "teyit_zamani": "2026-11-25T09:10:02+00:00",
+   "oyuncuya_fayda": "Oyuncular hangi izleme süresinde hangi oyun içi ödülün verildiğini ve ödülleri ne zamana kadar almaları gerektiğini öğrenebilir.",
+   "hype": 4,
+   "senaryo_atlanan": {
+    "es": "Tek düzeltme sonrası: sahneler[3].veri.etiqueta: bilinmeyen alan"
+   },
+   "eklenme": "2026-11-25T12:22:53.688556+03:00"
+  }
+ },
+ {
   "id": "arknights-endfield-surum-2026-11-25",
   "oyun": "Arknights: Endfield",
   "tarih": "2026-11-25",

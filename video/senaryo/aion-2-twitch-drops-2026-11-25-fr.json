@@ -1,0 +1,127 @@
+{
+ "id": "aion-2-twitch-drops-2026-11-25",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Regarder des streams AION 2 sur Twitch rapporte des récompenses en jeu jusqu'au 9 décembre.",
+   "veri": {
+    "ust_etiket": "TWITCH DROPS",
+    "baslik": "AION 2 : Twitch Drops en cours",
+    "vurgu": [
+     "Twitch Drops"
+    ],
+    "tuslar": [
+     "A",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "TWITCH DROPS EN COURS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "30 minutes donnent 15 Resurrection Spiritstone, 2 heures donnent 3 Customization Voucher et 10 heures donnent 6 Sync Stone.",
+   "veri": {
+    "baslik": "Regardez et gagnez",
+    "maddeler": [
+     {
+      "metin": "30 min : 15 Resurrection Spiritstone",
+      "tetik": "30"
+     },
+     {
+      "metin": "2 heures : 3 Customization Voucher",
+      "tetik": "2"
+     },
+     {
+      "metin": "10 heures : 6 Sync Stone (Unique)",
+      "tetik": "10"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "RÉCOMPENSES",
+    "alt": "DE 30 MINUTES À 10 HEURES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "À 4 heures, un Appearance Change Voucher de 7 jours ; à 6 heures, 20 Battle Enhance Scroll ; à 8 heures, 3 Soul Codex: Reset.",
+   "veri": {
+    "baslik": "Récompenses intermédiaires",
+    "maddeler": [
+     {
+      "metin": "4 heures : Appearance Change Voucher",
+      "tetik": "4"
+     },
+     {
+      "metin": "6 heures : 20 Battle Enhance Scroll",
+      "tetik": "6"
+     },
+     {
+      "metin": "8 heures : 3 Soul Codex: Reset",
+      "tetik": "8"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "VISIONNAGE PLUS LONG",
+    "alt": "4, 6 ET 8 HEURES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "L'événement se termine le 9 décembre, mais les drops sont à récupérer dans l'inventaire avant le 23 décembre.",
+   "veri": {
+    "etiket": "Fin de l'événement (PST)",
+    "tarih": "9 décembre",
+    "not": "À récupérer avant 23:59 PST le 23 décembre."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "RÉCUPÉREZ VOS DROPS",
+    "alt": "AVANT LE 23 DÉCEMBRE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Allez-vous regarder des streams pour ces récompenses ?",
+   "veri": {
+    "cagri": "Toutes les récompenses sur le site",
+    "alt": "Dates et liste des gains dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

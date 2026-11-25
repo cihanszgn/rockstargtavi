@@ -1,0 +1,127 @@
+{
+ "id": "aion-2-twitch-drops-2026-11-25",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Watching AION 2 Twitch streams earns you in-game rewards until December 9.",
+   "veri": {
+    "ust_etiket": "TWITCH DROPS",
+    "baslik": "AION 2 Twitch Drops are live",
+    "vurgu": [
+     "Twitch Drops"
+    ],
+    "tuslar": [
+     "A",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "TWITCH DROPS ARE LIVE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "30 minutes of watching gives 15 Resurrection Spiritstone, 2 hours gives 3 Customization Vouchers, and 10 hours gives 6 Sync Stones.",
+   "veri": {
+    "baslik": "Watch to earn",
+    "maddeler": [
+     {
+      "metin": "30 min: 15 Resurrection Spiritstone",
+      "tetik": "30"
+     },
+     {
+      "metin": "2 hours: 3 Customization Vouchers",
+      "tetik": "2"
+     },
+     {
+      "metin": "10 hours: 6 Sync Stones (Unique)",
+      "tetik": "10"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "WATCH REWARDS",
+    "alt": "30 MINUTES TO 10 HOURS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "At 4 hours you get a 7-day Appearance Change Voucher, at 6 hours 20 Battle Enhance Scrolls, and at 8 hours 3 Soul Codex: Reset.",
+   "veri": {
+    "baslik": "Mid-tier rewards",
+    "maddeler": [
+     {
+      "metin": "4 hours: Appearance Change Voucher",
+      "tetik": "4"
+     },
+     {
+      "metin": "6 hours: 20 Battle Enhance Scrolls",
+      "tetik": "6"
+     },
+     {
+      "metin": "8 hours: 3 Soul Codex: Reset",
+      "tetik": "8"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "LONGER WATCH TIME",
+    "alt": "4, 6 AND 8 HOURS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "The event ends December 9, but drops must be claimed from your inventory by December 23.",
+   "veri": {
+    "etiket": "Event ends (PST)",
+    "tarih": "December 9",
+    "not": "Claim rewards by 23:59 PST on December 23."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "CLAIM YOUR DROPS",
+    "alt": "BY DECEMBER 23"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Will you watch streams for these rewards?",
+   "veri": {
+    "cagri": "All rewards on the site",
+    "alt": "Dates and reward list in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

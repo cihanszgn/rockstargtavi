@@ -1,0 +1,127 @@
+{
+ "id": "aion-2-twitch-drops-2026-11-25",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "AION 2'de Twitch yayını izleyenler 9 Aralık'a kadar oyun içi ödül kazanıyor.",
+   "veri": {
+    "ust_etiket": "TWITCH DROPS",
+    "baslik": "AION 2 Twitch Drops başladı",
+    "vurgu": [
+     "Twitch Drops"
+    ],
+    "tuslar": [
+     "A",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "TWITCH DROPS BAŞLADI"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "30 dakikada 15 Resurrection Spiritstone, 2 saatte 3 Customization Voucher, 10 saatte ise 6 Sync Stone geliyor.",
+   "veri": {
+    "baslik": "İzledikçe kazan",
+    "maddeler": [
+     {
+      "metin": "30 dakika: 15 Resurrection Spiritstone",
+      "tetik": "30"
+     },
+     {
+      "metin": "2 saat: 3 Customization Voucher",
+      "tetik": "2"
+     },
+     {
+      "metin": "10 saat: 6 Sync Stone (Unique)",
+      "tetik": "10"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "İZLEME ÖDÜLLERİ",
+    "alt": "30 DAKİKADAN 10 SAATE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "4 saatte 7 günlük Appearance Change Voucher, 6 saatte 20 Battle Enhance Scroll, 8 saatte 3 Soul Codex: Reset veriliyor.",
+   "veri": {
+    "baslik": "Orta kademe ödüller",
+    "maddeler": [
+     {
+      "metin": "4 saat: Appearance Change Voucher",
+      "tetik": "4"
+     },
+     {
+      "metin": "6 saat: 20 Battle Enhance Scroll",
+      "tetik": "6"
+     },
+     {
+      "metin": "8 saat: 3 Soul Codex: Reset",
+      "tetik": "8"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DAHA UZUN İZLEME",
+    "alt": "4, 6 VE 8 SAAT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Etkinlik 9 Aralık'ta bitiyor, ama ödülleri envanterden 23 Aralık'a kadar almak gerekiyor.",
+   "veri": {
+    "etiket": "Etkinlik bitiyor (PST)",
+    "tarih": "9 Aralık",
+    "not": "Ödüller 23 Aralık 23:59 PST'ye kadar alınmalı."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "ÖDÜLLERİ AL",
+    "alt": "23 ARALIK'A KADAR"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Sen ödül için yayın izler misin?",
+   "veri": {
+    "cagri": "Bütün ödüller sitede",
+    "alt": "Tarihler ve ödül listesi haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
