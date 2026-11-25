@@ -1,0 +1,98 @@
+{
+ "id": "mario-kart-world-1-9-0-guncelleme-2026-11-24",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Mario Kart World'ün 1.9.0 güncellemesi yayında: 8 yeni pist ve 2 Knockout rotası geliyor.",
+   "veri": {
+    "ust_etiket": "VER. 1.9.0",
+    "baslik": "Mario Kart World'e 8 yeni pist geldi",
+    "vurgu": [
+     "8 yeni pist"
+    ],
+    "tuslar": [
+     "R",
+     "K"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "MARIO KART WORLD",
+    "alt": "VER. 1.9.0 • SWITCH 2"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "8 yeni pist, mevcut parkurların yeniden düzenlenmiş hâli. Knockout Tour'a 2 yeni rota ekleniyor ve menüden son yarış kayıtları izlenebiliyor.",
+   "veri": {
+    "baslik": "Yeni pistler ve rotalar",
+    "maddeler": [
+     {
+      "metin": "8 yeni pist, mevcut parkurların yeniden düzenlenmiş hâli",
+      "tetik": "yeniden"
+     },
+     {
+      "metin": "Knockout Tour'a 2 yeni rota",
+      "tetik": "Knockout"
+     },
+     {
+      "metin": "Son yarış kayıtları menüden izlenebilir",
+      "tetik": "menüden"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "YENİ İÇERİK",
+    "alt": "PİST VE ROTALAR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Ver. 1.9.0 güncellemesi 24 Kasım'da Nintendo Switch 2 için yayımlandı.",
+   "veri": {
+    "etiket": "Ver. 1.9.0 yayında",
+    "tarih": "24 Kasım",
+    "not": "Nintendo Switch 2 için yayımlandı."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "YAYIN TARİHİ",
+    "alt": "NINTENDO SWITCH 2"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Hangi yeni pisti ilk deneyeceksin?",
+   "veri": {
+    "cagri": "Hangi yeni pisti ilk deneyeceksin?",
+    "alt": "Tüm pist ve rota ayrıntıları haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

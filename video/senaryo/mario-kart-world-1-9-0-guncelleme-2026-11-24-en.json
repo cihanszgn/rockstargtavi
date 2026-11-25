@@ -1,0 +1,98 @@
+{
+ "id": "mario-kart-world-1-9-0-guncelleme-2026-11-24",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Mario Kart World's 1.9.0 update is out, adding 8 new courses and 2 Knockout Tour routes.",
+   "veri": {
+    "ust_etiket": "VER. 1.9.0",
+    "baslik": "8 new courses arrive",
+    "vurgu": [
+     "8 new courses"
+    ],
+    "tuslar": [
+     "R",
+     "K"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "MARIO KART WORLD",
+    "alt": "VER. 1.9.0 • SWITCH 2"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "The update adds 8 remixed courses and 2 new Knockout Tour routes. Replays of recent races and battles are saved in the menu.",
+   "veri": {
+    "baslik": "New content",
+    "maddeler": [
+     {
+      "metin": "8 remixed courses",
+      "tetik": "remixed"
+     },
+     {
+      "metin": "2 new Knockout Tour routes",
+      "tetik": "Knockout"
+     },
+     {
+      "metin": "Recent races and battles saved for replay",
+      "tetik": "replays"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NEW CONTENT",
+    "alt": "COURSES AND ROUTES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Ver. 1.9.0 went live on November 24 on Nintendo Switch 2, and it is available now.",
+   "veri": {
+    "etiket": "Ver. 1.9.0 is live",
+    "tarih": "November 24",
+    "not": "Available now on Nintendo Switch 2."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "RELEASE DATE",
+    "alt": "NINTENDO SWITCH 2"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Which new course will you try first?",
+   "veri": {
+    "cagri": "Which new course will you try first?",
+    "alt": "Every route and replay detail is in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

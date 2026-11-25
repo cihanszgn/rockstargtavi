@@ -1,0 +1,98 @@
+{
+ "id": "mario-kart-world-1-9-0-guncelleme-2026-11-24",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Mario Kart World reçoit la mise à jour 1.9.0 avec 8 nouveaux circuits et 2 routes Knockout Tour.",
+   "veri": {
+    "ust_etiket": "VER. 1.9.0",
+    "baslik": "8 nouveaux circuits arrivent",
+    "vurgu": [
+     "8 nouveaux circuits"
+    ],
+    "tuslar": [
+     "R",
+     "K"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "MARIO KART WORLD",
+    "alt": "VERSION 1.9.0 • SWITCH 2"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "La mise à jour apporte 8 circuits remixés et 2 nouvelles routes Knockout Tour. Un replay garde aussi vos dernières courses et batailles dans le menu.",
+   "veri": {
+    "baslik": "Nouveautés",
+    "maddeler": [
+     {
+      "metin": "8 circuits remixés",
+      "tetik": "remixés"
+     },
+     {
+      "metin": "2 nouvelles routes Knockout Tour",
+      "tetik": "Knockout"
+     },
+     {
+      "metin": "Dernières courses et batailles en replay",
+      "tetik": "replay"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NOUVEAUTÉS",
+    "alt": "CIRCUITS ET ROUTES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "La version 1.9.0 est sortie le 24 novembre sur Nintendo Switch 2 et elle est disponible dès maintenant.",
+   "veri": {
+    "etiket": "Version 1.9.0 disponible",
+    "tarih": "24 novembre",
+    "not": "Disponible dès maintenant sur Nintendo Switch 2."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "DATE DE SORTIE",
+    "alt": "NINTENDO SWITCH 2"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Quel circuit allez-vous essayer en premier ?",
+   "veri": {
+    "cagri": "Quel circuit allez-vous essayer en premier ?",
+    "alt": "Toutes les routes et nouveautés sont dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
