@@ -1,0 +1,106 @@
+{
+ "id": "pc-store-together-performans-yamasi-2026-11-25",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "El parche de PC Store Together baja la carga de texturas de 12,3 GB a 4,7 GB.",
+   "veri": {
+    "ust_etiket": "PARCHE DE RENDIMIENTO",
+    "baslik": "Carga: de 12,3 a 4,7 GB",
+    "vurgu": [
+     "4,7 GB"
+    ],
+    "tuslar": [
+     "P",
+     "C"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PC STORE TOGETHER",
+    "alt": "PARCHE DE RENDIMIENTO"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Debería acabar con las cargas infinitas en PC con poca memoria de vídeo. Las tarjetas con menos de 7 GB cargan texturas a mitad de tamaño.",
+   "veri": {
+    "baslik": "Carga y memoria",
+    "maddeler": [
+     {
+      "metin": "Menos cargas infinitas",
+      "tetik": "cargas"
+     },
+     {
+      "metin": "Menos de 7 GB: mitad de textura",
+      "tetik": "mitad"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CARGA Y MEMORIA",
+    "alt": "MITAD DE TEXTURA BAJO 7 GB"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Se corrigieron los tirones al dejar cajas, cuando habla o paga un cliente y por el autoguardado.",
+   "veri": {
+    "baslik": "Tirones corregidos",
+    "maddeler": [
+     {
+      "metin": "Entrega de cajas",
+      "tetik": "cajas"
+     },
+     {
+      "metin": "Habla y pago del cliente",
+      "tetik": "paga"
+     },
+     {
+      "metin": "Autoguardado",
+      "tetik": "autoguardado"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "TIRONES CORREGIDOS",
+    "alt": "ENTREGA, PAGO Y GUARDADO"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Te ha mejorado el rendimiento?",
+   "veri": {
+    "cagri": "Todos los cambios en la web",
+    "alt": "Fuentes y detalles en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

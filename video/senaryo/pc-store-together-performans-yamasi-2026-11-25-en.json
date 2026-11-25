@@ -1,0 +1,110 @@
+{
+ "id": "pc-store-together-performans-yamasi-2026-11-25",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "PC Store Together's new patch cuts texture loading from 12.3 GB to 4.7 GB.",
+   "veri": {
+    "ust_etiket": "PERFORMANCE PATCH",
+    "baslik": "Loading drops to 4.7 GB",
+    "vurgu": [
+     "4.7 GB"
+    ],
+    "tuslar": [
+     "P",
+     "C"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PC STORE TOGETHER",
+    "alt": "PERFORMANCE PATCH"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "That should fix loading screens that never finish on PCs with less video memory, and install size is smaller. Cards under 7 GB load textures at half size.",
+   "veri": {
+    "baslik": "Loading and memory",
+    "maddeler": [
+     {
+      "metin": "Faster loading screen",
+      "tetik": "loading"
+     },
+     {
+      "metin": "Smaller download and install",
+      "tetik": "install"
+     },
+     {
+      "metin": "Under 7 GB: half-size textures",
+      "tetik": "half"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "LOADING AND MEMORY",
+    "alt": "HALF TEXTURES UNDER 7 GB"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Stutters are fixed when cartons arrive, when customers speak or pay, and during autosave.",
+   "veri": {
+    "baslik": "Stutters fixed",
+    "maddeler": [
+     {
+      "metin": "Carton delivery stutter",
+      "tetik": "cartons"
+     },
+     {
+      "metin": "Customer speech and payment",
+      "tetik": "pay"
+     },
+     {
+      "metin": "Autosave hitch",
+      "tetik": "autosave"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "STUTTERS FIXED",
+    "alt": "DELIVERY, PAYMENT, AUTOSAVE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Did the patch fix your stutters?",
+   "veri": {
+    "cagri": "Every fix on the site",
+    "alt": "Sources and details are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

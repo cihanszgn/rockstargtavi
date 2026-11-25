@@ -1,0 +1,106 @@
+{
+ "id": "pc-store-together-performans-yamasi-2026-11-25",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Le correctif de PC Store Together réduit le chargement des textures de 12,3 Go à 4,7 Go.",
+   "veri": {
+    "ust_etiket": "CORRECTIF PERFORMANCE",
+    "baslik": "Textures : 12,3 Go à 4,7 Go",
+    "vurgu": [
+     "4,7 Go"
+    ],
+    "tuslar": [
+     "P",
+     "C"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PC STORE TOGETHER",
+    "alt": "CORRECTIF PERFORMANCE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Les chargements interminables devraient disparaître sur les PC peu dotés en mémoire vidéo. Sous 7 Go, les textures se chargent à moitié taille.",
+   "veri": {
+    "baslik": "Chargement et mémoire",
+    "maddeler": [
+     {
+      "metin": "Chargements plus courts",
+      "tetik": "chargements"
+     },
+     {
+      "metin": "Sous 7 Go : textures réduites",
+      "tetik": "textures"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CHARGEMENT ET MÉMOIRE",
+    "alt": "TEXTURES RÉDUITES SOUS 7 GO"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Les saccades sont corrigées pour les cartons, les clients qui parlent ou paient, et la sauvegarde automatique.",
+   "veri": {
+    "baslik": "Saccades corrigées",
+    "maddeler": [
+     {
+      "metin": "Livraison des cartons",
+      "tetik": "cartons"
+     },
+     {
+      "metin": "Parole et paiement client",
+      "tetik": "paient"
+     },
+     {
+      "metin": "Sauvegarde automatique",
+      "tetik": "sauvegarde"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "SACCADES CORRIGÉES",
+    "alt": "LIVRAISON, PAIEMENT, SAUVEGARDE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Le jeu est-il plus fluide pour vous ?",
+   "veri": {
+    "cagri": "Tous les correctifs sur le site",
+    "alt": "Sources et détails dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

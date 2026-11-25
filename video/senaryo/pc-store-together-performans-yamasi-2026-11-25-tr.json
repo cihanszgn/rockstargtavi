@@ -1,0 +1,110 @@
+{
+ "id": "pc-store-together-performans-yamasi-2026-11-25",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "PC Store Together yaması doku yüklemesini 12,3 GB'dan 4,7 GB'a indirdi.",
+   "veri": {
+    "ust_etiket": "PERFORMANS YAMASI",
+    "baslik": "Yükleme 12,3 GB'dan 4,7 GB'a",
+    "vurgu": [
+     "4,7 GB'a"
+    ],
+    "tuslar": [
+     "P",
+     "C"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PC STORE TOGETHER",
+    "alt": "PERFORMANS YAMASI"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Düşük video belleğinde bitmeyen yükleme ekranı düzelmeli, kurulum boyutu da küçülüyor. 7 GB altı ekran kartları dokuları yarı boyutta yüklüyor.",
+   "veri": {
+    "baslik": "Yükleme ve bellek",
+    "maddeler": [
+     {
+      "metin": "Yükleme ekranı daha hızlı",
+      "tetik": "yükleme"
+     },
+     {
+      "metin": "İndirme ve kurulum küçüldü",
+      "tetik": "kurulum"
+     },
+     {
+      "metin": "7 GB altı: yarı boyut doku",
+      "tetik": "yarı"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "YÜKLEME VE BELLEK",
+    "alt": "7 GB ALTI İÇİN YARI DOKU"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Koli teslimi, konuşma ve ödeme anındaki takılmalar giderildi; otomatik kayıt takılması da düzeldi.",
+   "veri": {
+    "baslik": "Takılmalar giderildi",
+    "maddeler": [
+     {
+      "metin": "Koli teslimi takılması",
+      "tetik": "Koli"
+     },
+     {
+      "metin": "Konuşma ve ödeme anı",
+      "tetik": "ödeme"
+     },
+     {
+      "metin": "Otomatik kayıt takılması",
+      "tetik": "otomatik"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "TAKILMALAR GİDERİLDİ",
+    "alt": "TESLİMAT, ÖDEME, KAYIT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Yamadan sonra oyun sende daha akıcı mı?",
+   "veri": {
+    "cagri": "Tüm düzeltmeler sitede",
+    "alt": "Kaynak ve ayrıntılar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

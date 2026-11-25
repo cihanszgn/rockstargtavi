@@ -1,5 +1,115 @@
 [
  {
+  "id": "pc-store-together-performans-yamasi-2026-11-25",
+  "oyun": "PC Store Together",
+  "tarih": "2026-11-25",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam geliştirici duyurusu",
+    "url": "https://store.steampowered.com/news/app/4990940/view/714545101887504415"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "PC Store Together: doku yüklemesi 12,3 GB'dan 4,7 GB'a düştü",
+    "ozet": "Steam yaması, takılmaları ve yükleme sorunlarını azaltmak için doku yüklemesini yaklaşık 12,3 GB'dan 4,7 GB'a indirdi.",
+    "metin": "PC Store Together için Sykes Games ve Nightmare Studios, 25 Kasım'da performans odaklı bir güncelleme yayımladı. Steam duyurusuna göre yama, oyuncuların bildirdiği takılmaların, donmaların ve yüklenmeme sorunlarının büyük bölümünü gidermeyi hedefliyor.\n\nOyun artık yaklaşık 12,3 GB yerine yaklaşık 4,7 GB doku yüklüyor. Böylece düşük video belleğine sahip bilgisayarlarda bitmeyen yükleme ekranı sorununun çözülmesi bekleniyor; indirme ve kurulum boyutu da küçülüyor. 7 GB'ın altında video belleği olan ekran kartları dokuları otomatik olarak yarı boyutta, 3 GB'ın altındakiler dörtte bir boyutta yüklüyor. Kolinin teslimat alanına bırakılması, müşterinin konuşması ve nakit ya da kartla ödeme sırasındaki takılmalar giderildi. Otomatik kayıttan kaynaklanan, ev sahibinde 10–15 saniyede bir görülen takılma da düzeltildi; menüden kaydetme, çıkış ve ayrılma hâlâ anında kaydediyor.\n\nMağazadaki monitörler yakınlarında kimse yokken artık her karede yeniden çizilmiyor ve mağaza yoğunken işlemci kullanımı azalıyor. İlk açılışta oyun ekran kartına göre Düşük, Orta veya Yüksek grafik seçiyor; daha önce ayar seçtiyseniz o korunuyor. Yeniden başlattıktan sonra yeni bir şey ilk göründüğünde hâlâ kısa bir takılma görürseniz, geliştiriciler Steam başlatma seçeneklerine -force-d3d11 eklemenizi öneriyor.",
+    "etiketler": [
+     "#PCStoreTogether",
+     "#SykesGames",
+     "#NightmareStudios",
+     "#PC",
+     "#Steam"
+    ]
+   },
+   "en": {
+    "baslik": "PC Store Together patch cuts texture loading from 12.3 GB to 4.7 GB",
+    "ozet": "Sykes Games' Steam update targets stutters and failed loads, cutting texture loading to about 4.7 GB and shrinking install size.",
+    "metin": "PC Store Together received a performance update on November 25 from developers Sykes Games and Nightmare Studios. According to the Steam announcement, the patch aims to iron out most of the stutters, lag and failed loads that players reported.\n\nThe game now loads about 4.7 GB of textures instead of 12.3 GB, which should fix loading screens that never finished on PCs with less video memory. Download and install sizes are smaller too. Graphics cards with under 7 GB of video memory load textures at half size automatically, and those under 3 GB at a quarter. Stutters were fixed when a carton is dropped off at the delivery area, when a customer speaks and when a customer pays by cash or card. The host no longer gets a hitch every 10–15 seconds from autosave, while saving from the menu, quitting and leaving still save immediately.\n\nShop monitors no longer redraw every frame when nobody is near them, and CPU use drops while the shop is busy. On first launch the game now picks Low, Medium or High graphics for your card, keeping any setting you already chose. If a brief hitch still appears the first time something new shows up after a restart, the developers suggest adding -force-d3d11 to the Steam launch options.",
+    "etiketler": [
+     "#PCStoreTogether",
+     "#SykesGames",
+     "#NightmareStudios",
+     "#PC",
+     "#Steam"
+    ]
+   },
+   "fr": {
+    "baslik": "PC Store Together : textures chargées de 12,3 à 4,7 Go",
+    "ozet": "Le correctif Steam de Sykes Games réduit le chargement des textures à environ 4,7 Go et vise saccades et échecs de chargement.",
+    "metin": "PC Store Together a reçu le 25 novembre une mise à jour de performance de Sykes Games et Nightmare Studios. D'après l'annonce Steam, le correctif vise à régler l'essentiel des saccades, des ralentissements et des échecs de chargement signalés par les joueurs.\n\nLe jeu charge désormais environ 4,7 Go de textures au lieu de 12,3 Go, ce qui devrait corriger les écrans de chargement interminables sur les PC dotés de moins de mémoire vidéo. Les tailles de téléchargement et d'installation diminuent aussi. Les cartes graphiques de moins de 7 Go de mémoire vidéo chargent automatiquement les textures à moitié de leur taille, et celles de moins de 3 Go au quart. Les saccades ont été corrigées lors du dépôt d'un carton dans la zone de livraison, quand un client parle et quand il paie en espèces ou par carte. L'hôte ne subit plus d'à-coup toutes les 10–15 secondes à cause de la sauvegarde automatique ; sauvegarder depuis le menu, quitter et partir enregistrent toujours immédiatement.\n\nLes écrans du magasin ne se redessinent plus à chaque image quand personne n'est à proximité, et l'usage du processeur baisse quand la boutique est animée. Au premier lancement, le jeu choisit des graphismes Bas, Moyen ou Élevé selon votre carte, en conservant un réglage déjà choisi. Si un bref à-coup apparaît encore à la première apparition d'un nouvel élément après un redémarrage, les développeurs conseillent d'ajouter -force-d3d11 aux options de lancement Steam.",
+    "etiketler": [
+     "#PCStoreTogether",
+     "#SykesGames",
+     "#NightmareStudios",
+     "#PC",
+     "#Steam"
+    ]
+   },
+   "es": {
+    "baslik": "PC Store Together: la carga de texturas baja de 12,3 a 4,7 GB",
+    "ozet": "El parche de Sykes Games en Steam reduce la carga de texturas a unos 4,7 GB y busca corregir tirones y fallos de carga.",
+    "metin": "PC Store Together recibió el 25 de noviembre una actualización de rendimiento de sus desarrolladores, Sykes Games y Nightmare Studios. Según el anuncio en Steam, el parche busca corregir la mayoría de tirones, lag y fallos de carga que reportaron los jugadores.\n\nEl juego ahora carga unos 4,7 GB de texturas en lugar de 12,3 GB, lo que debería arreglar las pantallas de carga que nunca terminaban en PC con menos memoria de vídeo. También se reducen el tamaño de descarga y de instalación. Las tarjetas gráficas con menos de 7 GB de memoria de vídeo cargan las texturas a mitad de tamaño de forma automática, y las de menos de 3 GB a un cuarto. Se corrigieron los tirones al dejar una caja en la zona de entrega, cuando habla un cliente y cuando paga en efectivo o con tarjeta. El anfitrión ya no sufre un tirón cada 10–15 segundos por el autoguardado; guardar desde el menú, salir y abandonar la partida siguen guardando al instante.\n\nLos monitores de la tienda ya no se redibujan en cada fotograma cuando nadie está cerca, y baja el uso de CPU con la tienda concurrida. En el primer arranque el juego elige gráficos Bajo, Medio o Alto según tu tarjeta y respeta el ajuste que ya hubieras elegido. Si aún notas un tirón breve la primera vez que aparece algo nuevo tras reiniciar, los desarrolladores proponen añadir -force-d3d11 a las opciones de lanzamiento de Steam.",
+    "etiketler": [
+     "#PCStoreTogether",
+     "#SykesGames",
+     "#NightmareStudios",
+     "#PC",
+     "#Steam"
+    ]
+   },
+   "de": {
+    "baslik": "PC Store Together: Patch senkt Texturladung von 12,3 auf 4,7 GB",
+    "ozet": "Das Steam-Update von Sykes Games senkt die Texturladung auf etwa 4,7 GB und soll Ruckler und Ladeprobleme beheben.",
+    "metin": "PC Store Together hat am 25. November ein Performance-Update von Sykes Games und Nightmare Studios erhalten. Laut der Steam-Ankündigung soll der Patch die meisten Ruckler, Lags und Ladeprobleme beheben, die Spieler gemeldet hatten.\n\nDas Spiel lädt jetzt etwa 4,7 GB an Texturen statt 12,3 GB. Das soll Ladebildschirme beheben, die auf PCs mit weniger Grafikspeicher nie endeten; Download- und Installationsgröße sinken ebenfalls. Grafikkarten mit weniger als 7 GB Grafikspeicher laden Texturen automatisch in halber Größe, solche mit weniger als 3 GB in Viertelgröße. Behoben wurden Ruckler beim Abstellen eines Kartons im Lieferbereich, wenn ein Kunde spricht und wenn er bar oder per Karte zahlt. Der Host erleidet durch das Autosave nicht mehr alle 10–15 Sekunden einen Hänger; Speichern über das Menü, Beenden und Verlassen speichern weiterhin sofort.\n\nMonitore im Laden werden nicht mehr in jedem Frame neu gezeichnet, wenn niemand in der Nähe ist, und bei viel Betrieb sinkt die CPU-Last. Beim ersten Start wählt das Spiel passend zur Grafikkarte Niedrig, Mittel oder Hoch und behält eine bereits gewählte Einstellung. Tritt nach einem Neustart beim ersten Erscheinen von etwas Neuem weiterhin ein kurzer Ruckler auf, empfehlen die Entwickler, -force-d3d11 zu den Steam-Startoptionen hinzuzufügen.",
+    "etiketler": [
+     "#PCStoreTogether",
+     "#SykesGames",
+     "#NightmareStudios",
+     "#PC",
+     "#Steam"
+    ]
+   },
+   "nl": {
+    "baslik": "PC Store Together-patch verlaagt texturen van 12,3 naar 4,7 GB",
+    "ozet": "De Steam-update van Sykes Games verlaagt het laden van texturen tot ongeveer 4,7 GB en pakt haperingen en laadproblemen aan.",
+    "metin": "PC Store Together kreeg op 25 november een prestatie-update van Sykes Games en Nightmare Studios. Volgens de Steam-aankondiging moet de patch de meeste haperingen, lag en laadproblemen oplossen die spelers meldden.\n\nDe game laadt nu ongeveer 4,7 GB aan texturen in plaats van 12,3 GB. Dat moet laadschermen oplossen die op pc's met minder videogeheugen nooit klaar waren; de download- en installatiegrootte zijn ook kleiner. Videokaarten met minder dan 7 GB videogeheugen laden texturen automatisch op halve grootte, kaarten met minder dan 3 GB op een kwart. Opgelost zijn haperingen wanneer een doos in het afleverpunt wordt neergezet, wanneer een klant praat en wanneer een klant contant of met kaart betaalt. De host heeft geen hapering meer om de 10–15 seconden door autosave; opslaan via het menu, afsluiten en vertrekken slaan nog steeds direct op.\n\nMonitors in de winkel worden niet meer elk frame opnieuw getekend als niemand in de buurt is, en het cpu-gebruik daalt als de winkel druk is. Bij de eerste start kiest de game lage, gemiddelde of hoge graphics passend bij je videokaart en behoudt een al gekozen instelling. Zie je na een herstart nog steeds een korte hapering wanneer iets nieuws voor het eerst verschijnt, dan raden de ontwikkelaars aan -force-d3d11 aan de Steam-startopties toe te voegen.",
+    "etiketler": [
+     "#PCStoreTogether",
+     "#SykesGames",
+     "#NightmareStudios",
+     "#PC",
+     "#Steam"
+    ]
+   },
+   "zh": {
+    "baslik": "《PC Store Together》补丁:纹理加载从12.3 GB降至4.7 GB",
+    "ozet": "Steam性能补丁将纹理加载量降至约4.7 GB,并缩小下载与安装体积。",
+    "metin": "Sykes Games 和 Nightmare Studios 于11月25日为《PC Store Together》发布了性能优化更新。根据 Steam 公告,这次补丁旨在解决玩家反馈的大部分卡顿、延迟和无法加载的问题。\n\n游戏现在只加载约4.7 GB纹理,此前为12.3 GB,有望修复显存较小的电脑上加载界面一直不结束的问题,下载和安装体积也随之减小。显存低于7 GB的显卡会自动以一半尺寸加载纹理,低于3 GB则为四分之一。纸箱放到收货区、顾客说话以及顾客用现金或刷卡付款时的卡顿已修复。主机玩家每10–15秒因自动存档出现的卡顿也已解决,从菜单存档、退出和离开仍会立即存档。\n\n店内显示器在附近无人时不再每帧重绘,店铺繁忙时CPU占用也有所下降。首次启动时,游戏会根据显卡自动选择低、中或高画质,已选择的设置会保留。如果重启后新内容首次出现时仍有短暂卡顿,开发者建议在Steam启动选项中添加 -force-d3d11。",
+    "etiketler": [
+     "#PCStoreTogether",
+     "#SykesGames",
+     "#NightmareStudios",
+     "#PC",
+     "#Steam"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "pc-store-together-performans-yamasi-2026-11-25",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/4990940/view/714545101887504415",
+   "teyit_zamani": "2026-11-25T10:10:10+00:00",
+   "oyuncuya_fayda": "Oyuncular daha kısa yükleme ve daha az takılma bekleyebilir; düşük video belleğinde bitmeyen yükleme sorunu için çözüm hedefleniyor.",
+   "hype": 4,
+   "eklenme": "2026-11-25T13:19:17.092212+03:00"
+  }
+ },
+ {
   "id": "aion-2-server-matchmaking-2026-11-25",
   "oyun": "AION 2",
   "tarih": "2026-11-25",
