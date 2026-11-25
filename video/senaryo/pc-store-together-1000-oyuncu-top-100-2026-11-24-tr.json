@@ -1,0 +1,99 @@
+{
+ "id": "pc-store-together-1000-oyuncu-top-100-2026-11-24",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "PC Store Together lansmanda 1.000 oyuncuyu aştı ve Steam'in en çok satan ilk 100 oyunu arasına girdi.",
+   "veri": {
+    "ust_etiket": "STEAM LANSMANI",
+    "baslik": "1.000 oyuncu, Steam'de ilk 100",
+    "vurgu": [
+     "1.000"
+    ],
+    "tuslar": [
+     "P",
+     "C",
+     "S"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PC STORE TOGETHER",
+    "alt": "STEAM'DE İLK 100"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Geliştiriciler ilk güncellemenin yayında olduğunu, bir sonrakinin de çok yakında geleceğini söylüyor. Hata ve fikirler Discord'dan iletilebiliyor.",
+   "veri": {
+    "baslik": "Güncellemeler yolda",
+    "maddeler": [
+     {
+      "metin": "İlk güncelleme yayında",
+      "tetik": "ilk"
+     },
+     {
+      "metin": "Sıradaki güncelleme çok yakında",
+      "tetik": "sonrakinin"
+     },
+     {
+      "metin": "Hata ve fikirler Discord'da",
+      "tetik": "Discord'dan"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "GÜNCELLEMELER YOLDA",
+    "alt": "İLK GÜNCELLEME YAYINDA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Sykes Games ve Nightmare Studios, Steam duyurusunda tüm geri bildirimleri okuduklarını belirtiyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam geliştirici duyurusu",
+    "alinti": "Discord'da, yorumlarda ve forumlarda bize gönderdiğiniz her şeyi okuyoruz."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "SYKES GAMES • STEAM DUYURUSU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Sen oyunu denedin mi?",
+   "veri": {
+    "cagri": "Tamamı sitede",
+    "alt": "Kaynak ve ayrıntılar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

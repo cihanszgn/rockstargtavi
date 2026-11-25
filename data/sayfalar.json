@@ -32,7 +32,7 @@
 "2026-11-19"
 ],
 "de/index.html": [
-"9cf60548af0c",
+"40762da43a03",
 "2026-11-25"
 ],
 "de/kostenlose-spiele.html": [
@@ -120,7 +120,7 @@
 "2026-11-16"
 ],
 "de/spiele-news.html": [
-"f5789d0764b8",
+"2764dca9e5e3",
 "2026-11-25"
 ],
 "de/spiele/apex-legends.html": [
@@ -156,8 +156,8 @@
 "2026-11-16"
 ],
 "de/spiele/dota-2.html": [
-"7050f8e48311",
-"2026-11-19"
+"1958d561c799",
+"2026-11-25"
 ],
 "de/spiele/ea-sports-fc.html": [
 "313734d977e8",
@@ -192,7 +192,7 @@
 "2026-11-16"
 ],
 "de/spiele/index.html": [
-"645d79ceff80",
+"1206658fb57e",
 "2026-11-25"
 ],
 "de/spiele/knight-online.html": [
@@ -308,7 +308,7 @@
 "2026-11-24"
 ],
 "de/thema/pc.html": [
-"e2f93afb0cdc",
+"9e99dd2000ba",
 "2026-11-25"
 ],
 "de/thema/playstation.html": [
@@ -328,7 +328,7 @@
 "2026-11-24"
 ],
 "de/thema/steam.html": [
-"63b2b2104d86",
+"ee3a54fdf6d9",
 "2026-11-25"
 ],
 "de/thema/steamawards.html": [
@@ -344,11 +344,11 @@
 "2026-11-24"
 ],
 "de/thema/tur-guncelleme.html": [
-"7fe9be7cddc4",
+"2e5667a459b8",
 "2026-11-25"
 ],
 "de/thema/tur-haber.html": [
-"9ea249da7c47",
+"ee02de22914f",
 "2026-11-25"
 ],
 "de/thema/tur-indirim.html": [
@@ -358,6 +358,10 @@
 "de/thema/tur-ucretsiz.html": [
 "816733fff282",
 "2026-11-23"
+],
+"de/thema/valve.html": [
+"7c2438b36d52",
+"2026-11-25"
 ],
 "de/thema/worldofwarcraft.html": [
 "ea7300a4033a",
@@ -404,7 +408,7 @@
 "2026-11-25"
 ],
 "en/game-news.html": [
-"8a7e8994f3ba",
+"a17a23f1aaa5",
 "2026-11-25"
 ],
 "en/game/apex-legends.html": [
@@ -440,8 +444,8 @@
 "2026-11-16"
 ],
 "en/game/dota-2.html": [
-"4a3b107a5646",
-"2026-11-19"
+"9bd2acfdac7e",
+"2026-11-25"
 ],
 "en/game/ea-sports-fc.html": [
 "fa7d07b18e02",
@@ -476,7 +480,7 @@
 "2026-11-16"
 ],
 "en/game/index.html": [
-"d74f9ed2ec6d",
+"c253718d083b",
 "2026-11-25"
 ],
 "en/game/knight-online.html": [
@@ -644,7 +648,7 @@
 "2026-11-22"
 ],
 "en/index.html": [
-"2375cd9166c5",
+"e9d6d88e0278",
 "2026-11-25"
 ],
 "en/languages.html": [
@@ -696,7 +700,7 @@
 "2026-11-24"
 ],
 "en/tag/pc.html": [
-"96d3a6032e32",
+"7a62fbfbd485",
 "2026-11-25"
 ],
 "en/tag/playstation.html": [
@@ -716,7 +720,7 @@
 "2026-11-24"
 ],
 "en/tag/steam.html": [
-"8206f2e5c48a",
+"60f4dd7108f6",
 "2026-11-25"
 ],
 "en/tag/steamawards.html": [
@@ -732,11 +736,11 @@
 "2026-11-24"
 ],
 "en/tag/tur-guncelleme.html": [
-"d1d58735190c",
+"65c635490e01",
 "2026-11-25"
 ],
 "en/tag/tur-haber.html": [
-"e127aa859bc6",
+"1817fe3947a0",
 "2026-11-25"
 ],
 "en/tag/tur-indirim.html": [
@@ -746,6 +750,10 @@
 "en/tag/tur-ucretsiz.html": [
 "2789410bd544",
 "2026-11-23"
+],
+"en/tag/valve.html": [
+"e5580e51636d",
+"2026-11-25"
 ],
 "en/tag/worldofwarcraft.html": [
 "e469a7b5b89b",
@@ -856,7 +864,7 @@
 "2026-11-09"
 ],
 "es/index.html": [
-"307d120391e6",
+"e742bb86ff49",
 "2026-11-25"
 ],
 "es/juego/apex-legends.html": [
@@ -892,8 +900,8 @@
 "2026-11-16"
 ],
 "es/juego/dota-2.html": [
-"c2c701b25271",
-"2026-11-19"
+"072627ca2c63",
+"2026-11-25"
 ],
 "es/juego/ea-sports-fc.html": [
 "ab0c8d69871c",
@@ -928,7 +936,7 @@
 "2026-11-16"
 ],
 "es/juego/index.html": [
-"ef3f00929f19",
+"19928b8f9850",
 "2026-11-25"
 ],
 "es/juego/knight-online.html": [
@@ -1028,7 +1036,7 @@
 "2026-11-17"
 ],
 "es/noticias-juegos.html": [
-"bbd13d7d0c35",
+"8791315c61a3",
 "2026-11-25"
 ],
 "es/ofertas.html": [
@@ -1072,7 +1080,7 @@
 "2026-11-24"
 ],
 "es/tema/pc.html": [
-"4dd590da4c7c",
+"0201e30a414b",
 "2026-11-25"
 ],
 "es/tema/playstation.html": [
@@ -1092,7 +1100,7 @@
 "2026-11-24"
 ],
 "es/tema/steam.html": [
-"e41d28246c63",
+"fe85b5de57b8",
 "2026-11-25"
 ],
 "es/tema/steamawards.html": [
@@ -1108,11 +1116,11 @@
 "2026-11-24"
 ],
 "es/tema/tur-guncelleme.html": [
-"f5be415a0f55",
+"c66e39e209ad",
 "2026-11-25"
 ],
 "es/tema/tur-haber.html": [
-"7d784bcd261f",
+"7522d34f071b",
 "2026-11-25"
 ],
 "es/tema/tur-indirim.html": [
@@ -1122,6 +1130,10 @@
 "es/tema/tur-ucretsiz.html": [
 "e8ca84604bac",
 "2026-11-23"
+],
+"es/tema/valve.html": [
+"f3499bb58c8d",
+"2026-11-25"
 ],
 "es/tema/worldofwarcraft.html": [
 "9cdba35d1227",
@@ -1168,7 +1180,7 @@
 "2026-11-24"
 ],
 "etiket/pc.html": [
-"64c193209c6b",
+"f858d97cd471",
 "2026-11-25"
 ],
 "etiket/playstation.html": [
@@ -1188,7 +1200,7 @@
 "2026-11-24"
 ],
 "etiket/steam.html": [
-"494411e82047",
+"32c410ee726e",
 "2026-11-25"
 ],
 "etiket/steamawards.html": [
@@ -1204,11 +1216,11 @@
 "2026-11-24"
 ],
 "etiket/tur-guncelleme.html": [
-"2acbde160b64",
+"5db2a34729b9",
 "2026-11-25"
 ],
 "etiket/tur-haber.html": [
-"bff3bb11f462",
+"bcc169b58a60",
 "2026-11-25"
 ],
 "etiket/tur-indirim.html": [
@@ -1218,6 +1230,10 @@
 "etiket/tur-ucretsiz.html": [
 "07f148548f0c",
 "2026-11-23"
+],
+"etiket/valve.html": [
+"ebec61708601",
+"2026-11-25"
 ],
 "etiket/worldofwarcraft.html": [
 "e440772e728d",
@@ -1244,7 +1260,7 @@
 "2026-11-15"
 ],
 "fr/actus-jeux.html": [
-"48ce6e225ea5",
+"4bf97b068cb0",
 "2026-11-25"
 ],
 "fr/calendrier-sorties.html": [
@@ -1332,7 +1348,7 @@
 "2026-11-22"
 ],
 "fr/index.html": [
-"078b6b5b661b",
+"0dbab656c4bd",
 "2026-11-25"
 ],
 "fr/jeu/apex-legends.html": [
@@ -1368,8 +1384,8 @@
 "2026-11-16"
 ],
 "fr/jeu/dota-2.html": [
-"d31e26341926",
-"2026-11-19"
+"a29b2f86a737",
+"2026-11-25"
 ],
 "fr/jeu/ea-sports-fc.html": [
 "67d7ae12f1ba",
@@ -1404,7 +1420,7 @@
 "2026-11-16"
 ],
 "fr/jeu/index.html": [
-"16391ed8bb7a",
+"5f51f0ad0f3e",
 "2026-11-25"
 ],
 "fr/jeu/knight-online.html": [
@@ -1544,7 +1560,7 @@
 "2026-11-24"
 ],
 "fr/sujet/pc.html": [
-"050efab23b70",
+"a337974a5391",
 "2026-11-25"
 ],
 "fr/sujet/playstation.html": [
@@ -1564,7 +1580,7 @@
 "2026-11-24"
 ],
 "fr/sujet/steam.html": [
-"3885f4995fef",
+"d5af8b2b96d6",
 "2026-11-25"
 ],
 "fr/sujet/steamawards.html": [
@@ -1580,11 +1596,11 @@
 "2026-11-24"
 ],
 "fr/sujet/tur-guncelleme.html": [
-"d97ff7718d3b",
+"4a49d959e85b",
 "2026-11-25"
 ],
 "fr/sujet/tur-haber.html": [
-"a819b6a9d3b5",
+"6ac59e88cc14",
 "2026-11-25"
 ],
 "fr/sujet/tur-indirim.html": [
@@ -1594,6 +1610,10 @@
 "fr/sujet/tur-ucretsiz.html": [
 "70aebee6d673",
 "2026-11-23"
+],
+"fr/sujet/valve.html": [
+"0664db55826d",
+"2026-11-25"
 ],
 "fr/sujet/worldofwarcraft.html": [
 "36dc4fe59bee",
@@ -1652,7 +1672,7 @@
 "2026-11-15"
 ],
 "index.html": [
-"abb7192ee878",
+"744dc017fe6b",
 "2026-11-25"
 ],
 "indirimler.html": [
@@ -1672,7 +1692,7 @@
 "2026-11-16"
 ],
 "nl/gamenieuws.html": [
-"d14c5632360e",
+"5719e7295361",
 "2026-11-25"
 ],
 "nl/games/apex-legends.html": [
@@ -1708,8 +1728,8 @@
 "2026-11-16"
 ],
 "nl/games/dota-2.html": [
-"7fd2e2c808bd",
-"2026-11-19"
+"eca1c54d1e22",
+"2026-11-25"
 ],
 "nl/games/ea-sports-fc.html": [
 "b1621a9a51a2",
@@ -1744,7 +1764,7 @@
 "2026-11-16"
 ],
 "nl/games/index.html": [
-"a009c5d5266e",
+"33b85cc6490e",
 "2026-11-25"
 ],
 "nl/games/knight-online.html": [
@@ -1916,7 +1936,7 @@
 "2026-11-19"
 ],
 "nl/index.html": [
-"516e1f6e7f8d",
+"676fdbb809b8",
 "2026-11-25"
 ],
 "nl/nieuws.html": [
@@ -1948,7 +1968,7 @@
 "2026-11-24"
 ],
 "nl/onderwerp/pc.html": [
-"5bbf850b7c49",
+"8529aa118974",
 "2026-11-25"
 ],
 "nl/onderwerp/playstation.html": [
@@ -1968,7 +1988,7 @@
 "2026-11-24"
 ],
 "nl/onderwerp/steam.html": [
-"027e2fd085e5",
+"36abf5314a81",
 "2026-11-25"
 ],
 "nl/onderwerp/steamawards.html": [
@@ -1984,11 +2004,11 @@
 "2026-11-24"
 ],
 "nl/onderwerp/tur-guncelleme.html": [
-"62b4e93a3da5",
+"db0ed4428388",
 "2026-11-25"
 ],
 "nl/onderwerp/tur-haber.html": [
-"e92f8e1c81ff",
+"b17fa33428cf",
 "2026-11-25"
 ],
 "nl/onderwerp/tur-indirim.html": [
@@ -1998,6 +2018,10 @@
 "nl/onderwerp/tur-ucretsiz.html": [
 "4f0905d54201",
 "2026-11-23"
+],
+"nl/onderwerp/valve.html": [
+"223f9e4c2976",
+"2026-11-25"
 ],
 "nl/onderwerp/worldofwarcraft.html": [
 "ba47b34639c6",
@@ -2040,7 +2064,7 @@
 "2026-11-16"
 ],
 "oyun-haberleri.html": [
-"42d42162a0a6",
+"68dbbc29f207",
 "2026-11-25"
 ],
 "oyun/apex-legends.html": [
@@ -2076,8 +2100,8 @@
 "2026-11-16"
 ],
 "oyun/dota-2.html": [
-"acad40c094a3",
-"2026-11-19"
+"87f6a46c8b2e",
+"2026-11-25"
 ],
 "oyun/ea-sports-fc.html": [
 "5803eed2215b",
@@ -2112,7 +2136,7 @@
 "2026-11-16"
 ],
 "oyun/index.html": [
-"cbd9cd3a5d1b",
+"0d0231468e07",
 "2026-11-25"
 ],
 "oyun/knight-online.html": [
@@ -2408,7 +2432,7 @@
 "2026-11-24"
 ],
 "zh/huati/pc.html": [
-"9aafd396f9ef",
+"d645ce0e2d15",
 "2026-11-25"
 ],
 "zh/huati/playstation.html": [
@@ -2428,7 +2452,7 @@
 "2026-11-24"
 ],
 "zh/huati/steam.html": [
-"04d367f5fd84",
+"ea8572df4574",
 "2026-11-25"
 ],
 "zh/huati/steamawards.html": [
@@ -2444,11 +2468,11 @@
 "2026-11-24"
 ],
 "zh/huati/tur-guncelleme.html": [
-"79464996d047",
+"0510f5b92925",
 "2026-11-25"
 ],
 "zh/huati/tur-haber.html": [
-"1b9a0c5c4c5b",
+"262ce31c3b8e",
 "2026-11-25"
 ],
 "zh/huati/tur-indirim.html": [
@@ -2458,6 +2482,10 @@
 "zh/huati/tur-ucretsiz.html": [
 "21eace1c6eb6",
 "2026-11-23"
+],
+"zh/huati/valve.html": [
+"ed90186d46cf",
+"2026-11-25"
 ],
 "zh/huati/worldofwarcraft.html": [
 "579e61874f18",
@@ -2480,7 +2508,7 @@
 "2026-11-25"
 ],
 "zh/index.html": [
-"26124f9a8080",
+"f78d19ad4785",
 "2026-11-25"
 ],
 "zh/laiyuan.html": [
@@ -2504,7 +2532,7 @@
 "2026-11-24"
 ],
 "zh/youxi-xinwen.html": [
-"7cac1e4adf75",
+"c6c56f812d4b",
 "2026-11-25"
 ],
 "zh/youxi/apex-legends.html": [
@@ -2540,8 +2568,8 @@
 "2026-11-16"
 ],
 "zh/youxi/dota-2.html": [
-"2e474aa6924b",
-"2026-11-19"
+"e1b2811e5cb9",
+"2026-11-25"
 ],
 "zh/youxi/ea-sports-fc.html": [
 "1c6c9c60ebb0",
@@ -2576,7 +2604,7 @@
 "2026-11-16"
 ],
 "zh/youxi/index.html": [
-"9e2cee1cc946",
+"e532d41ef92c",
 "2026-11-25"
 ],
 "zh/youxi/knight-online.html": [

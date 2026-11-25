@@ -1,0 +1,127 @@
+{
+ "id": "dota-2-patch-7-42a-2026-11-24",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Dota 2 patch 7.42a is out now, fixing several server crashes.",
+   "veri": {
+    "ust_etiket": "DOTA 2 PATCH",
+    "baslik": "Dota 2 patch 7.42a is out",
+    "vurgu": [
+     "7.42a"
+    ],
+    "tuslar": [
+     "D",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "DOTA 2",
+    "alt": "PATCH 7.42A"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to Valve's Steam announcement, the patch also fixes hero and ability bugs plus some map visuals.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Valve Steam announcement",
+    "alinti": "Patch 7.42a is out now, with the patch notes linked and more issues fixed."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "VALVE • STEAM ANNOUNCEMENT"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Crashes are fixed when Tormentor dies, when Ristul's Devotion is built, and with Techies' Sticky Bomb.",
+   "veri": {
+    "baslik": "Crashes fixed",
+    "maddeler": [
+     {
+      "metin": "Server crash when Tormentor dies",
+      "tetik": "Tormentor"
+     },
+     {
+      "metin": "Crash building Ristul's Devotion",
+      "tetik": "Ristul's"
+     },
+     {
+      "metin": "Crash tied to Techies' Sticky Bomb",
+      "tetik": "Sticky"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CRASH FIXES",
+    "alt": "TORMENTOR, RISTUL'S, STICKY BOMB"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Morphling's Aghanim's Scepter bugs, Meepo's innate and Sniper's Headshot are fixed too.",
+   "veri": {
+    "baslik": "Hero fixes",
+    "maddeler": [
+     {
+      "metin": "Morphling with Aghanim's Scepter",
+      "tetik": "Morphling's"
+     },
+     {
+      "metin": "Meepo's innate ability",
+      "tetik": "Meepo's"
+     },
+     {
+      "metin": "Sniper's Headshot with several projectiles",
+      "tetik": "Sniper's"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "HERO FIXES",
+    "alt": "MORPHLING, MEEPO, SNIPER"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Will you jump in now, or wait a few days?",
+   "veri": {
+    "cagri": "Will you jump back in?",
+    "alt": "Patch notes are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

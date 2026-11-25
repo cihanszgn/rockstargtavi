@@ -1,0 +1,99 @@
+{
+ "id": "pc-store-together-1000-oyuncu-top-100-2026-11-24",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "PC Store Together a dépassé 1000 joueurs simultanés au lancement et entre dans le top 100 des ventes Steam.",
+   "veri": {
+    "ust_etiket": "LANCEMENT STEAM",
+    "baslik": "1000 joueurs et top 100 sur Steam",
+    "vurgu": [
+     "1000"
+    ],
+    "tuslar": [
+     "P",
+     "C",
+     "S"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PC STORE TOGETHER",
+    "alt": "TOP 100 SUR STEAM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Les développeurs annoncent que la première mise à jour est déjà disponible et que la suivante arrive très bientôt. Bugs et idées se signalent sur Discord.",
+   "veri": {
+    "baslik": "Mises à jour en route",
+    "maddeler": [
+     {
+      "metin": "Première mise à jour disponible",
+      "tetik": "première"
+     },
+     {
+      "metin": "La suivante arrive très bientôt",
+      "tetik": "suivante"
+     },
+     {
+      "metin": "Bugs et idées sur Discord",
+      "tetik": "Discord"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "MISES À JOUR",
+    "alt": "LA PREMIÈRE EST DISPONIBLE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Dans son annonce Steam, Sykes Games et Nightmare Studios disent lire tous les retours.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Annonce du studio sur Steam",
+    "alinti": "Nous lisons tout ce que vous nous envoyez, sur Discord, dans les avis et sur les forums."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "SYKES GAMES • ANNONCE STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Allez-vous l'essayer ?",
+   "veri": {
+    "cagri": "Tout est sur le site",
+    "alt": "Sources et détails dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

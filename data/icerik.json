@@ -1,5 +1,211 @@
 [
  {
+  "id": "dota-2-patch-7-42a-2026-11-24",
+  "oyun": "Dota 2",
+  "tarih": "2026-11-24",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Valve Steam duyurusu",
+    "url": "https://steamcommunity.com/games/dota2/announcements/detail/689774670193362170"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Dota 2 7.42a yaması yayında: çökme düzeltmeleri",
+    "ozet": "Valve'ın Steam duyurusuna göre 7.42a; sunucu çökmelerini, yetenek hatalarını ve harita kusurlarını düzeltiyor.",
+    "metin": "Valve, Dota 2 için 7.42a yamasını 24 Kasım 2026'da (UTC) Steam'de yayımladığı duyuruyla açıkladı. Yama notları bağlantısı ve düzeltme listesi aynı gönderide yer alıyor.\n\nDuyuruda, yeni yamayla birlikte birkaç sunucu çökmesinin giderildiği belirtiliyor. Listede Tormentor öldüğünde oluşan sunucu çökmesi, Ristul's Devotion yapılırken yaşanan çökme ve Techies'in Sticky Bomb ile ilgili çökme yer alıyor. Kez'in Grappling Claw'ı yansıtıldığında oluşan sunucu çökmesi de düzeltildi. Naga Siren'in Mirror Image yeteneği ise Power Treads geçişini artık kesmiyor.\n\nKahraman tarafında Morphling'in Aghanim's Scepter ile ilgili çok sayıda hata, Meepo'nun innate yeteneği ve Sniper'ın birden fazla mermi uçarken Headshot tetikleyememesi düzeltildi. Juggernaut'un Aghanim's Scepter ile dönerken %175 yerine %75 Item Potency değerine sahip olması da giderildi. Harita tarafında Immortal Gardens ve Autumn terrain'deki bazı görsel hatalar çözüldü. Oyuncular için yama, maç sırasındaki çökmeleri ve kahramanların beklenmedik davranışlarını azaltmayı hedefliyor.",
+    "etiketler": [
+     "#Dota2",
+     "#Valve",
+     "#PC"
+    ]
+   },
+   "en": {
+    "baslik": "Dota 2 patch 7.42a is out with crash fixes",
+    "ozet": "According to Valve's Steam announcement, 7.42a fixes server crashes, hero and ability bugs, and several map visuals.",
+    "metin": "Valve has released Dota 2 patch 7.42a, announced in a Steam community post dated November 24, 2026 (UTC). The update comes with a link to the full patch notes and a list of fixes.\n\nThe announcement says several server crashes have been addressed. The list includes a server crash when Tormentor dies, a crash when building Ristul's Devotion, a server crash when Kez's Grappling Claw is reflected, and a crash tied to Techies' Sticky Bomb. Naga Siren's Mirror Image also no longer interrupts Power Treads toggling.\n\nOn the hero side, Morphling's Aghanim's Scepter received numerous corrections, Meepo's innate ability was fixed, and Sniper can now proc Headshot with several projectiles in flight. Juggernaut's Item Potency while spinning with Aghanim's Scepter is also corrected from 175% to 75%. For players, the patch aims to reduce crashes during matches and unexpected hero behavior.",
+    "etiketler": [
+     "#Dota2",
+     "#Valve",
+     "#PC"
+    ]
+   },
+   "fr": {
+    "baslik": "Dota 2 : le patch 7.42a corrige plusieurs plantages",
+    "ozet": "Selon l'annonce de Valve sur Steam, le 7.42a corrige des plantages serveur, des bugs de héros et des soucis de carte.",
+    "metin": "Valve a publié le patch 7.42a de Dota 2, annoncé dans un message de la communauté Steam daté du 24 novembre 2026 (UTC). La mise à jour est accompagnée d'un lien vers les notes complètes et d'une liste de corrections.\n\nL'annonce indique que plusieurs plantages serveur ont été corrigés. Parmi eux figurent celui à la mort de Tormentor, celui lors de la construction de Ristul's Devotion, celui lié au renvoi du Grappling Claw de Kez et un bug lié à la Sticky Bomb de Techies. Une correction empêche aussi l'Image miroir de Naga Siren d'interrompre le changement de Power Treads.\n\nCôté héros, Morphling reçoit de nombreuses corrections avec Aghanim's Scepter, le talent inné de Meepo fonctionne de nouveau et Sniper peut déclencher Headshot avec plusieurs projectiles en vol. Le Item Potency de Juggernaut en rotation avec Aghanim's Scepter passe aussi de 175 % à 75 %. Pour les joueurs, le patch vise moins de plantages et des capacités au comportement plus cohérent.",
+    "etiketler": [
+     "#Dota2",
+     "#Valve",
+     "#PC"
+    ]
+   },
+   "es": {
+    "baslik": "Dota 2 lanza el parche 7.42a con arreglos de caídas",
+    "ozet": "Según el anuncio de Valve en Steam, 7.42a corrige caídas del servidor, errores de habilidades y algunos problemas del mapa.",
+    "metin": "Valve ha publicado el parche 7.42a de Dota 2, anunciado en una publicación de la comunidad de Steam fechada el 24 de noviembre de 2026 (UTC). La actualización incluye un enlace a las notas completas del parche y una lista de correcciones.\n\nEl anuncio indica que se han corregido varias caídas del servidor. La lista incluye la caída al morir Tormentor, la caída al construir Ristul's Devotion, la caída cuando se refleja el Grappling Claw de Kez y una relacionada con la Sticky Bomb de Techies. También se corrigió que la Mirror Image de Naga Siren interrumpiera el cambio de Power Treads.\n\nEn héroes, Morphling recibe numerosas correcciones con Aghanim's Scepter, la innata de Meepo vuelve a funcionar y Sniper puede activar Headshot con varios proyectiles en vuelo. Para los jugadores, el parche busca reducir las caídas y que las habilidades se comporten de forma más consistente.",
+    "etiketler": [
+     "#Dota2",
+     "#Valve",
+     "#PC"
+    ]
+   },
+   "de": {
+    "baslik": "Dota 2: Patch 7.42a veröffentlicht mit Absturzfixes",
+    "ozet": "Laut Valves Steam-Ankündigung behebt 7.42a Serverabstürze, Fehler bei Helden und Fähigkeiten sowie einige Kartenprobleme.",
+    "metin": "Valve hat den Dota-2-Patch 7.42a veröffentlicht, angekündigt in einem Steam-Community-Beitrag vom 24. November 2026 (UTC). Die Aktualisierung enthält einen Link zu den vollständigen Patchnotes und eine Liste mit Korrekturen.\n\nLaut Ankündigung wurden mehrere Serverabstürze behoben. Dazu gehören der Absturz beim Tod von Tormentor, der Absturz beim Bauen von Ristul's Devotion, der Absturz beim Reflektieren von Kez' Grappling Claw und ein Problem mit Techies' Sticky Bomb. Außerdem unterbricht die Mirror Image von Naga Siren das Umschalten der Power Treads nicht mehr.\n\nBei den Helden gibt es zahlreiche Korrekturen für Morphling mit Aghanim's Scepter. Meepos angeborene Fähigkeit funktioniert wieder, und Sniper kann Headshot auch bei mehreren fliegenden Projektilen auslösen. Für Spieler bedeutet der Patch vor allem weniger Abstürze und verlässlicheres Fähigkeitsverhalten.",
+    "etiketler": [
+     "#Dota2",
+     "#Valve",
+     "#PC"
+    ]
+   },
+   "nl": {
+    "baslik": "Dota 2 patch 7.42a is uit met crashfixes",
+    "ozet": "Volgens Valve's Steam-aankondiging herstelt 7.42a serverstoringen, fouten bij helden en vaardigheden en enkele kaartproblemen.",
+    "metin": "Valve heeft Dota 2-patch 7.42a uitgebracht, aangekondigd in een Steam-communitybericht van 24 november 2026 (UTC). De update bevat een link naar de volledige patchnotes en een lijst met oplossingen.\n\nVolgens de aankondiging zijn meerdere serverstoringen verholpen. Dat omvat een crash wanneer Tormentor sterft, een crash bij het bouwen van Ristul's Devotion, een crash wanneer Kez' Grappling Claw wordt teruggekaatst en een probleem met Techies' Sticky Bomb. Ook onderbreekt de Mirror Image van Naga Siren het wisselen van Power Treads niet meer.\n\nBij helden zijn er veel correcties voor Morphling met Aghanim's Scepter. Meepo's innate werkt weer en Sniper kan Headshot activeren bij meerdere vliegende projectielen. Voor spelers betekent de patch vooral minder crashes en consistenter gedrag van vaardigheden.",
+    "etiketler": [
+     "#Dota2",
+     "#Valve",
+     "#PC"
+    ]
+   },
+   "zh": {
+    "baslik": "Dota 2 7.42a补丁发布 修复多项服务器崩溃",
+    "ozet": "据Valve在Steam发布的公告，7.42a修复了多起服务器崩溃，并调整了英雄与技能的若干错误行为。",
+    "metin": "Valve已在Steam社区发布公告，Dota 2 7.42a补丁现已上线，公告附有完整补丁说明的链接。此次更新列出了一系列已修复的问题，公告时间为2026年11月24日（UTC）。\n\n其中服务器崩溃修复包括：Tormentor死亡时的崩溃、建造Ristul's Devotion时的崩溃、反射Kez的Grappling Claw时的崩溃，以及与Techies的Sticky Bomb相关的崩溃。另外，Naga Siren的Mirror Image不再打断Power Treads的切换。\n\n英雄方面，Morphling搭配Aghanim's Scepter的多项问题已得到修正，Meepo的天赋恢复正常，Sniper在多个弹道飞行时也能触发Headshot。对玩家而言，此补丁的主要意义是减少崩溃，并让技能表现更加一致。",
+    "etiketler": [
+     "#Dota2",
+     "#Valve",
+     "#PC"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "dota-2-patch-7-42a-2026-11-24",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://steamcommunity.com/games/dota2/announcements/detail/689774670193362170",
+   "teyit_zamani": "2026-11-25T00:10:02+00:00",
+   "oyuncuya_fayda": "Oyuncular sunucu çökmesi ve kahraman hatalarının giderildiğini öğrenip maçlarda daha istikrarlı bir deneyim bekleyebilir.",
+   "hype": 4,
+   "eklenme": "2026-11-25T03:19:13.128045+03:00"
+  }
+ },
+ {
+  "id": "pc-store-together-1000-oyuncu-top-100-2026-11-24",
+  "oyun": "PC Store Together",
+  "tarih": "2026-11-24",
+  "tur": "haber",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam resmî duyurusu",
+    "url": "https://store.steampowered.com/news/app/4990940/view/714544468141803056"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "PC Store Together 1.000 oyuncuyu aştı, Steam'de ilk 100'de",
+    "ozet": "Sykes Games ve Nightmare Studios, oyunun lansmanda 1.000 eşzamanlı oyuncuya ulaştığını ve ilk güncellemenin yayında olduğunu duyurdu.",
+    "metin": "PC Store Together, lansman gününde aynı anda 1.000 oyuncuyu aştı ve Steam'in en çok satan ilk 100 oyunu arasına girdi. Bunu geliştiriciler Sykes Games ve Nightmare Studios, Steam'deki resmî duyuruyla açıkladı.\n\nDuyuruda ekip, Discord'da, kullanıcı yorumlarında ve forumlarda gelen her mesajı okuduklarını belirtiyor. Oyuncuların karşılaştığı sorunları düzeltmeyi ve geri bildirimlere göre her güncellemede oyunu iyileştirmeyi sürdüreceklerini söylüyorlar. İlk güncelleme şimdiden yayında; bir sonraki ise çok yakında geliyor.\n\nOyuncular hata bildirmek ya da fikir iletmek için geliştiricilerin Discord sunucusunu kullanabilir. PC Store Together'ı şimdiden oynayanlar için bu, bir güncellemenin çıktığı, bir diğerinin yaklaştığı ve geri bildirimlerin doğrudan geliştiriciler tarafından okunduğu anlamına geliyor.",
+    "etiketler": [
+     "#PCStoreTogether",
+     "#SykesGames",
+     "#NightmareStudios",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "en": {
+    "baslik": "PC Store Together passes 1,000 players, hits Steam top 100",
+    "ozet": "Sykes Games and Nightmare Studios say the game passed 1,000 concurrent players at launch, and its first update is already live.",
+    "metin": "PC Store Together passed 1,000 simultaneous players on launch day and became one of the top 100 best-selling games on Steam. Developers Sykes Games and Nightmare Studios shared the milestone in an official Steam announcement.\n\nIn the post, the team says it is reading everything players send, whether on Discord, in reviews or on the forums. The developers say they will keep fixing the problems players run into and improve the game with every update based on that feedback. The first update is already live, and the next one is coming very soon.\n\nPlayers who hit a bug or have an idea can reach the team through its Discord server. For anyone already playing PC Store Together, that means one update is out, another is on the way, and the developers are reading feedback directly.",
+    "etiketler": [
+     "#PCStoreTogether",
+     "#SykesGames",
+     "#NightmareStudios",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "es": {
+    "baslik": "PC Store Together supera 1000 jugadores y entra al top 100",
+    "ozet": "Sykes Games y Nightmare Studios anuncian que el juego superó los 1000 jugadores simultáneos y que su primera actualización ya está disponible.",
+    "metin": "PC Store Together superó los 1000 jugadores simultáneos el día de su lanzamiento y se colocó entre los 100 juegos más vendidos de Steam. Sus desarrolladores, Sykes Games y Nightmare Studios, compartieron el hito en un anuncio oficial en Steam.\n\nEn el mensaje, el equipo asegura que lee todo lo que le llega por Discord, en las reseñas y en los foros. Los desarrolladores prometen seguir corrigiendo los problemas que encuentren los jugadores y mejorar el juego con cada actualización según sus comentarios. La primera actualización ya está disponible y la siguiente llegará muy pronto.\n\nQuien se tope con un error o tenga una idea puede escribir al equipo en su servidor de Discord. Para los jugadores de PC Store Together, significa que una actualización ya salió, otra está cerca y los comentarios los lee directamente el estudio.",
+    "etiketler": [
+     "#PCStoreTogether",
+     "#SykesGames",
+     "#NightmareStudios",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "fr": {
+    "baslik": "PC Store Together dépasse 1000 joueurs et entre au top 100",
+    "ozet": "Sykes Games et Nightmare Studios annoncent que le jeu a dépassé 1000 joueurs simultanés au lancement et que sa première mise à jour est disponible.",
+    "metin": "PC Store Together a dépassé 1000 joueurs simultanés le jour de son lancement et figure parmi les 100 jeux les plus vendus sur Steam. Les développeurs, Sykes Games et Nightmare Studios, ont partagé ce cap dans une annonce officielle sur Steam.\n\nDans ce message, l'équipe affirme lire tout ce que les joueurs envoient, que ce soit sur Discord, dans les avis ou sur les forums. Les développeurs promettent de continuer à corriger les problèmes rencontrés et d'améliorer le jeu à chaque mise à jour grâce à ces retours. La première mise à jour est déjà disponible, et la suivante arrive très bientôt.\n\nLes joueurs confrontés à un bug ou ayant une idée peuvent contacter l'équipe sur son serveur Discord. Pour ceux qui jouent déjà à PC Store Together, cela signifie qu'une mise à jour est sortie, qu'une autre approche et que les retours sont lus directement par le studio.",
+    "etiketler": [
+     "#PCStoreTogether",
+     "#SykesGames",
+     "#NightmareStudios",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "de": {
+    "baslik": "PC Store Together knackt 1.000 Spieler und Steam-Top-100",
+    "ozet": "Sykes Games und Nightmare Studios melden zum Start über 1.000 gleichzeitige Spieler und ein bereits veröffentlichtes erstes Update.",
+    "metin": "PC Store Together überschritt am Starttag 1.000 gleichzeitige Spieler und gehört zu den 100 meistverkauften Spielen auf Steam. Die Entwickler Sykes Games und Nightmare Studios teilten den Meilenstein in einer offiziellen Steam-Ankündigung mit.\n\nIn dem Beitrag erklärt das Team, es lese alles, was Spieler auf Discord, in Rezensionen und in den Foren schicken. Die Entwickler wollen weiter die Probleme beheben, auf die Spieler stoßen, und das Spiel mit jedem Update anhand des Feedbacks verbessern. Das erste Update ist bereits live, das nächste soll sehr bald folgen.\n\nWer auf einen Fehler stößt oder eine Idee hat, kann sich über den Discord-Server an das Team wenden. Für alle, die PC Store Together schon spielen, heißt das: Ein Update ist erschienen, ein weiteres ist nah, und das Feedback wird direkt von den Entwicklern gelesen.",
+    "etiketler": [
+     "#PCStoreTogether",
+     "#SykesGames",
+     "#NightmareStudios",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "nl": {
+    "baslik": "PC Store Together haalt 1.000 spelers en Steam-top 100",
+    "ozet": "Sykes Games en Nightmare Studios melden 1.000 gelijktijdige spelers bij de lancering en een eerste update die al live is.",
+    "metin": "PC Store Together kwam op de lanceerdag boven de 1.000 gelijktijdige spelers uit en hoort bij de 100 bestverkochte games op Steam. De ontwikkelaars, Sykes Games en Nightmare Studios, deelden die mijlpaal in een officiële Steam-aankondiging.\n\nIn het bericht zegt het team alles te lezen wat spelers sturen, via Discord, in reviews en op de forums. De ontwikkelaars willen de problemen blijven oplossen waar spelers tegenaan lopen en het spel met elke update verbeteren op basis van die feedback. De eerste update is al live en de volgende komt heel binnenkort.\n\nWie een bug tegenkomt of een idee heeft, kan het team bereiken via de Discord-server. Voor wie PC Store Together al speelt betekent dat: één update is uit, een tweede komt eraan en de ontwikkelaars lezen de feedback zelf.",
+    "etiketler": [
+     "#PCStoreTogether",
+     "#SykesGames",
+     "#NightmareStudios",
+     "#Steam",
+     "#PC"
+    ]
+   },
+   "zh": {
+    "baslik": "PC Store Together首日在线破1000，进入Steam前100",
+    "ozet": "Sykes Games与Nightmare Studios宣布游戏首日同时在线破1000，首次更新已上线。",
+    "metin": "PC Store Together在发售当天同时在线玩家人数突破1000，并跻身Steam畅销游戏前100名。开发商Sykes Games与Nightmare Studios在Steam官方公告中分享了这一里程碑。\n\n团队在公告中表示，他们会阅读玩家在Discord、评价区和论坛里发来的所有反馈，并会继续修复玩家遇到的问题，根据反馈让游戏在每次更新中变得更好。首次更新已经上线，下一次更新也将很快到来。\n\n遇到漏洞或有想法的玩家，可以通过开发团队的Discord服务器联系他们。对于正在游玩PC Store Together的玩家来说，这意味着一次更新已经发布，另一次即将到来，而且开发者会直接阅读大家的反馈。",
+    "etiketler": [
+     "#PCStoreTogether",
+     "#SykesGames",
+     "#NightmareStudios",
+     "#Steam",
+     "#PC"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "pc-store-together-steam-top-100-1000-oyuncu",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/4990940/view/714544468141803056",
+   "teyit_zamani": "2026-11-25T00:10:02+00:00",
+   "oyuncuya_fayda": "Oyuncular oyunun ilk güncellemesinin yayında olduğunu, yenisinin yakında geleceğini ve hataları Discord'dan bildirebileceklerini öğrenir.",
+   "hype": 3,
+   "eklenme": "2026-11-25T03:19:13.128045+03:00"
+  }
+ },
+ {
   "id": "apex-legends-javelin-anti-cheat-2026-11-24",
   "oyun": "Apex Legends",
   "tarih": "2026-11-24",

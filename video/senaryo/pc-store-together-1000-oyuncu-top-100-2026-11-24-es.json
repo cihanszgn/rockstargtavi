@@ -1,0 +1,99 @@
+{
+ "id": "pc-store-together-1000-oyuncu-top-100-2026-11-24",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "PC Store Together superó los 1000 jugadores simultáneos en su estreno y entró en el top 100 de Steam.",
+   "veri": {
+    "ust_etiket": "LANZAMIENTO EN STEAM",
+    "baslik": "1000 jugadores y top 100 en Steam",
+    "vurgu": [
+     "1000"
+    ],
+    "tuslar": [
+     "P",
+     "C",
+     "S"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PC STORE TOGETHER",
+    "alt": "TOP 100 EN STEAM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Los desarrolladores aseguran que la primera actualización ya está disponible y que la siguiente llegará muy pronto. Los errores e ideas se envían por Discord.",
+   "veri": {
+    "baslik": "Actualizaciones en camino",
+    "maddeler": [
+     {
+      "metin": "Primera actualización ya disponible",
+      "tetik": "primera"
+     },
+     {
+      "metin": "La siguiente llega muy pronto",
+      "tetik": "siguiente"
+     },
+     {
+      "metin": "Errores e ideas, por Discord",
+      "tetik": "Discord"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "ACTUALIZACIONES",
+    "alt": "LA PRIMERA YA ESTÁ DISPONIBLE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "En su anuncio de Steam, Sykes Games y Nightmare Studios dicen que leen todos los comentarios.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Anuncio del estudio en Steam",
+    "alinti": "Leemos todo lo que nos enviáis, en Discord, en las reseñas y en los foros."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "SYKES GAMES • ANUNCIO EN STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Probarás PC Store Together?",
+   "veri": {
+    "cagri": "Todo en la web",
+    "alt": "Fuentes y detalles en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

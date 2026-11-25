@@ -1,0 +1,127 @@
+{
+ "id": "dota-2-patch-7-42a-2026-11-24",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Dota 2 lanza el parche 7.42a con arreglos de caídas del servidor.",
+   "veri": {
+    "ust_etiket": "DOTA 2 PARCHE",
+    "baslik": "Dota 2 lanza el parche 7.42a",
+    "vurgu": [
+     "7.42a"
+    ],
+    "tuslar": [
+     "D",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "DOTA 2",
+    "alt": "PARCHE 7.42A"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según el anuncio de Valve en Steam, el parche también corrige errores de héroes, habilidades y algunos aspectos del mapa.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Anuncio de Valve en Steam",
+    "alinti": "El parche 7.42a ya está disponible; las notas completas están en el anuncio y se corrigieron más problemas."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "VALVE • ANUNCIO EN STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Se corrigieron caídas al morir Tormentor, al construir Ristul's Devotion y con la Sticky Bomb de Techies.",
+   "veri": {
+    "baslik": "Caídas corregidas",
+    "maddeler": [
+     {
+      "metin": "Caída del servidor al morir Tormentor",
+      "tetik": "Tormentor"
+     },
+     {
+      "metin": "Caída al construir Ristul's Devotion",
+      "tetik": "Ristul's"
+     },
+     {
+      "metin": "Caída con la Sticky Bomb de Techies",
+      "tetik": "Sticky"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CAÍDAS CORREGIDAS",
+    "alt": "TORMENTOR, RISTUL'S, STICKY BOMB"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "También se corrigen errores de Morphling con Aghanim's Scepter, la innata de Meepo y el Headshot de Sniper.",
+   "veri": {
+    "baslik": "Errores de héroes",
+    "maddeler": [
+     {
+      "metin": "Morphling con Aghanim's Scepter",
+      "tetik": "Morphling"
+     },
+     {
+      "metin": "Innata de Meepo",
+      "tetik": "Meepo"
+     },
+     {
+      "metin": "Headshot de Sniper con varios proyectiles",
+      "tetik": "Sniper"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "ERRORES DE HÉROES",
+    "alt": "MORPHLING, MEEPO, SNIPER"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Vas a jugar ya o prefieres esperar?",
+   "veri": {
+    "cagri": "¿Jugarás ya o esperarás?",
+    "alt": "Notas completas en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

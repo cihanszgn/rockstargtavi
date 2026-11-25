@@ -1,0 +1,127 @@
+{
+ "id": "dota-2-patch-7-42a-2026-11-24",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Dota 2 7.42a yayında: Tormentor ve Ristul's Devotion çökmeleri düzeltildi.",
+   "veri": {
+    "ust_etiket": "DOTA 2 YAMASI",
+    "baslik": "Dota 2 7.42a yayında",
+    "vurgu": [
+     "7.42a"
+    ],
+    "tuslar": [
+     "D",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "DOTA 2",
+    "alt": "YAMA 7.42A"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Valve'ın Steam duyurusuna göre sunucu çökmeleri, yetenek hataları ve harita kusurları da giderildi.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Valve Steam duyurusu",
+    "alinti": "Yama 7.42a yayında; yama notları duyuruda ve ek sorunlar da giderildi."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "VALVE • STEAM DUYURUSU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Tormentor öldüğünde, Ristul's Devotion yapılırken ve Techies'in Sticky Bomb'unda oluşan çökmeler giderildi.",
+   "veri": {
+    "baslik": "Sunucu çökmeleri düzeltildi",
+    "maddeler": [
+     {
+      "metin": "Tormentor ölümünde sunucu çökmesi",
+      "tetik": "Tormentor"
+     },
+     {
+      "metin": "Ristul's Devotion yapımında çökme",
+      "tetik": "Ristul's"
+     },
+     {
+      "metin": "Techies'in Sticky Bomb hatası",
+      "tetik": "Sticky"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "ÇÖKME DÜZELTMELERİ",
+    "alt": "TORMENTOR VE RISTUL'S DEVOTION"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Morphling'in Aghanim's Scepter hataları, Meepo'nun innate yeteneği ve Sniper'ın Headshot sorunu da düzeltildi.",
+   "veri": {
+    "baslik": "Kahraman hataları",
+    "maddeler": [
+     {
+      "metin": "Morphling ile Aghanim's Scepter",
+      "tetik": "Morphling"
+     },
+     {
+      "metin": "Meepo'nun innate yeteneği",
+      "tetik": "Meepo'nun"
+     },
+     {
+      "metin": "Sniper'ın Headshot sorunu",
+      "tetik": "Sniper'ın"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "KAHRAMAN HATALARI",
+    "alt": "MORPHLING, MEEPO, SNIPER"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Hemen oynar mısın, yoksa bekler misin?",
+   "veri": {
+    "cagri": "Yamayı oynayacak mısın?",
+    "alt": "Yama notları haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

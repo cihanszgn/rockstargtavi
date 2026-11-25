@@ -1,0 +1,127 @@
+{
+ "id": "dota-2-patch-7-42a-2026-11-24",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Dota 2 : le patch 7.42a est disponible avec plusieurs corrections de plantages.",
+   "veri": {
+    "ust_etiket": "DOTA 2 PATCH",
+    "baslik": "Dota 2 : le patch 7.42a arrive",
+    "vurgu": [
+     "7.42a"
+    ],
+    "tuslar": [
+     "D",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "DOTA 2",
+    "alt": "PATCH 7.42A"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Selon l'annonce de Valve sur Steam, le patch corrige aussi des bugs de héros, de capacités et quelques éléments de carte.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Annonce de Valve sur Steam",
+    "alinti": "Le patch 7.42a est disponible ; les notes complètes sont dans l'annonce et d'autres problèmes sont corrigés."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "VALVE • ANNONCE STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Des plantages sont corrigés à la mort de Tormentor, à la construction de Ristul's Devotion et avec la Sticky Bomb de Techies.",
+   "veri": {
+    "baslik": "Plantages corrigés",
+    "maddeler": [
+     {
+      "metin": "Plantage serveur à la mort de Tormentor",
+      "tetik": "Tormentor"
+     },
+     {
+      "metin": "Plantage lors de la construction de Ristul's Devotion",
+      "tetik": "Ristul's"
+     },
+     {
+      "metin": "Plantage lié à la Sticky Bomb de Techies",
+      "tetik": "Sticky"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "PLANTAGES CORRIGÉS",
+    "alt": "TORMENTOR, RISTUL'S, STICKY BOMB"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Morphling avec Aghanim's Scepter, le talent inné de Meepo et Headshot de Sniper sont aussi corrigés.",
+   "veri": {
+    "baslik": "Corrections des héros",
+    "maddeler": [
+     {
+      "metin": "Morphling avec Aghanim's Scepter",
+      "tetik": "Morphling"
+     },
+     {
+      "metin": "Talent inné de Meepo",
+      "tetik": "Meepo"
+     },
+     {
+      "metin": "Headshot de Sniper avec plusieurs projectiles",
+      "tetik": "Sniper"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CORRECTIONS HÉROS",
+    "alt": "MORPHLING, MEEPO, SNIPER"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Allez-vous jouer tout de suite ou attendre ?",
+   "veri": {
+    "cagri": "Vous jouez maintenant ?",
+    "alt": "Notes complètes dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

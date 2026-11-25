@@ -1,0 +1,99 @@
+{
+ "id": "pc-store-together-1000-oyuncu-top-100-2026-11-24",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "PC Store Together passed 1,000 players on launch day and entered Steam's top 100 best-sellers.",
+   "veri": {
+    "ust_etiket": "STEAM LAUNCH",
+    "baslik": "1,000 players, Steam top 100",
+    "vurgu": [
+     "1,000"
+    ],
+    "tuslar": [
+     "P",
+     "C",
+     "S"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PC STORE TOGETHER",
+    "alt": "STEAM TOP 100"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "The developers say the first update is already live and the next one is coming very soon. Bugs and ideas can be sent through Discord.",
+   "veri": {
+    "baslik": "Updates on the way",
+    "maddeler": [
+     {
+      "metin": "First update is live",
+      "tetik": "first"
+     },
+     {
+      "metin": "Next update coming very soon",
+      "tetik": "next"
+     },
+     {
+      "metin": "Report bugs on Discord",
+      "tetik": "Discord"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "UPDATES ON THE WAY",
+    "alt": "FIRST UPDATE IS LIVE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "In the Steam post, Sykes Games and Nightmare Studios say they read every bit of feedback.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam developer announcement",
+    "alinti": "We're reading everything you send us, on Discord, in the reviews and on the forums."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "SYKES GAMES • STEAM ANNOUNCEMENT"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Will you try PC Store Together?",
+   "veri": {
+    "cagri": "Full story on the site",
+    "alt": "Sources and details are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
