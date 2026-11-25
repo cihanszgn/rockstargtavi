@@ -357,7 +357,7 @@ def ayni_yayin(a, b):
     if a.get('yayinci') != b.get('yayinci') or a.get('platform') == b.get('platform'):
         return 'farkli'
     sa, sb = a.get('sure_sn', 0), b.get('sure_sn', 0)
-    ta, tb = ' '.join(yk.oyun_belirtecleri(a.get('baslik', ''))), ' '.join(yk.oyun_belirtecleri(b.get('baslik', '')))
+    ta, tb = ' '.join(yk.oyun_belirtecleri(a.get('baslik') or '')), ' '.join(yk.oyun_belirtecleri(b.get('baslik') or ''))
     date_delta = abs(yk.iso_epoch(a['tarih'])-yk.iso_epoch(b['tarih'])) if a.get('tarih') and b.get('tarih') else math.inf
     if min(sa, sb) >= 5400 and abs(sa-sb) <= max(120, .03*max(sa, sb)) and date_delta <= 2*86400 and ta and tb and difflib.SequenceMatcher(None, ta, tb).ratio() >= .75:
         return 'muhtemel_ayni_yayin_inceleme'
@@ -383,7 +383,7 @@ def cift_kaynak_engeli(vod, dizin):
 
 def metin_tekrar(item, vod, dizin):
     import yayin_klip as yk
-    text = ' '.join(yk.oyun_belirtecleri(item.get('dokum_metni', '')))
+    text = ' '.join(yk.oyun_belirtecleri(item.get('dokum_metni') or ''))
     if len(text.split()) < 15:
         return None
     for path in (pathlib.Path(dizin)/'cikti').glob('*/*.json'):
@@ -391,7 +391,7 @@ def metin_tekrar(item, vod, dizin):
             p = json.loads(path.read_text(encoding='utf-8'))
             if p.get('platform') == vod['platform'] or p.get('yayinci') != vod['yayinci']:
                 continue
-            old = ' '.join(yk.oyun_belirtecleri(p.get('dokum_metni', '')))
+            old = ' '.join(yk.oyun_belirtecleri(p.get('dokum_metni') or ''))
             if len(old.split()) >= 15 and difflib.SequenceMatcher(None, text, old, autojunk=False).ratio() >= .8:
                 return str(path)
         except (OSError, ValueError):

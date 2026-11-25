@@ -1631,18 +1631,29 @@ def otomatik_bekleyenler(manifest: dict) -> list[str]:
                   if (e.get("onay") or {}).get("otomatik") is True and ks.onay_gecerli(e) and not e.get("youtube"))
 
 
-def _sayi(v) -> float:
+def _sayi(v) -> float | None:
+    if isinstance(v, bool) or v is None:
+        return None
     try:
         sayi = float(v)
     except (OverflowError, TypeError, ValueError):
-        return 0.0
-    return sayi if math.isfinite(sayi) else 0.0
+        return None
+    return sayi if math.isfinite(sayi) else None
 
 
-def _sohbet_puani(o: dict) -> float:
-    """Klip anında izleyicinin tepkisi (0-100; sohbette gülme/ortak konu). Eski pakette alan yoksa zirve puanı aynı ölçüdür."""
+def _sohbet_puani(o: dict) -> float | None:
+    """Klip anında izleyicinin tepkisi (0-100; sohbette gülme/ortak konu).
+    Sohbet ölçülmediyse None döner (yalnız döküm taramasından gelen `['tarama']` adayı, YouTube klibi
+    ya da sohbet/zirve puanı olmayan paket). Eski pakette `sohbet_puani` yoksa `zirve_puani` aynı ölçüdür."""
     p = o.get("paket") or {}
-    return _sayi(p["sohbet_puani"] if p.get("sohbet_puani") is not None else p.get("zirve_puani"))
+    if p.get("platform") == "youtube":
+        return None
+    kaynaklar = p.get("aday_kaynaklari")
+    if isinstance(kaynaklar, list) and kaynaklar and "sohbet" not in kaynaklar:
+        if p.get("zirve_mesaj_sayisi") is None and p.get("puan_bilesenleri") is None:
+            return None
+    ham = p["sohbet_puani"] if p.get("sohbet_puani") is not None else p.get("zirve_puani")
+    return _sayi(ham)
 
 
 def otomatik_sec(ogeler: list[dict], manifest: dict, sosyal: dict, kayit: dict, gun: str, ayar: dict,
@@ -1652,9 +1663,10 @@ def otomatik_sec(ogeler: list[dict], manifest: dict, sosyal: dict, kayit: dict, 
     Cio'nun kararı korunur: manifestte kaydı olan klip yalnız KENDİ otomatik kaydıysa (ve geri çekilmediyse) yeniden onaylanır.
     `en_eski` (epoch sn) verilirse mp4'ü bundan önce kesilmiş klip otomatik onaylanmaz (2026-11-23, Cio: birikmiş eski klipler
     paylaşılmaz, yalnız o günün analizinden çıkanlar gizli yüklenir); elle onay bundan etkilenmez.
-    Kalite (2026-11-24, Cio: "paylaşılanlar komik değil"): içerik başlığı ve en az `otomatik_min_konusma_puani` gerekir.
-    Sohbet puanı `otomatik_min_sohbet_puani` ve üstü olmalı veya içerik puanı en az 9 olmalı.
-    Sıra: içerik puanı, sohbet puanı, eşitlikte tarama sırası (en yeni yayın önce).
+    Kalite (2026-11-24, Cio: "paylaşılanlar komik değil"; 2026-11-25: ölçülmemiş sohbet ayrımı): içerik başlığı ve en az
+    `otomatik_min_konusma_puani` gerekir. Sohbet ölçüldüyse `otomatik_min_sohbet_puani` ve üstü olmalı veya içerik puanı en az 9
+    olmalı; sohbet ölçülmediyse (`['tarama']` / YouTube / sohbet puanı yok) içerik puanı tek başına yeter.
+    Sıra: içerik puanı, ölçülmüş sohbet puanı (ölçülmemiş en sonda), eşitlikte tarama sırası (en yeni yayın önce).
     Yayıncı başına en çok `otomatik_yayinci_basina` klip alınır.
     -> (onaylananlar, atlama notları)"""
     k = sy.klip_ayari(sosyal)
@@ -1694,7 +1706,7 @@ def otomatik_sec(ogeler: list[dict], manifest: dict, sosyal: dict, kayit: dict, 
             dusuk_icerik_sayisi += 1
             continue
         sohbet = _sohbet_puani(o)
-        if icerik < 9 and sohbet < k["otomatik_min_sohbet_puani"]:
+        if icerik < 9 and sohbet is not None and sohbet < k["otomatik_min_sohbet_puani"]:
             zayif_sayisi += 1
             continue
         basliklar = (paket.get("baslik"), o["metin"]["baslik"])
@@ -1703,7 +1715,7 @@ def otomatik_sec(ogeler: list[dict], manifest: dict, sosyal: dict, kayit: dict, 
                for baslik in map(ks.sade, basliklar)):
             jenerik_sayisi += 1
             continue
-        adaylar.append((icerik, sohbet, o))
+        adaylar.append((icerik, sohbet if sohbet is not None else -1.0, o))
     adaylar.sort(key=lambda aday: aday[:2], reverse=True)
     yayinci_sayisi: dict[str, int] = {}
     for _, _, o in adaylar:

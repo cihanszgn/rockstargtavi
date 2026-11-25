@@ -263,8 +263,8 @@ def yayinci_bul(ayar: dict, platform: str, kanal: str) -> dict | None:
 TR_KUCUK = str.maketrans({'I': 'ı', 'İ': 'i'})
 
 
-def tr_kucuk(s: str) -> str:
-    return s.translate(TR_KUCUK).lower()
+def tr_kucuk(s: str | None) -> str:
+    return (s or '').translate(TR_KUCUK).lower()
 
 
 def oyun_belirtecleri(s: str) -> list[str]:

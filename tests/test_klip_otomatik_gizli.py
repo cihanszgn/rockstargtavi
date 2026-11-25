@@ -322,6 +322,38 @@ class OtomatikOnay(KlipYayinTemel):
         self.assertEqual(len(secilen), 5)
         self.assertEqual((sy.klip_ayari({})["otomatik_min_sohbet_puani"], sy.klip_ayari({})["otomatik_yayinci_basina"]), (60, 2))
 
+    def test_olculmemis_sohbet_ile_olculmus_dusuk_sohbet_ayrimi(self):
+        # 1: tarama-only (sohbet ölçülmemiş, sohbet_puani=0, zirve_mesaj_sayisi=None) + kon 8 -> kabul
+        self.paket_yaz(klasor="eraycan-20261111-aaa1", ad="klip-01", vod="https://kick.com/eray/videos/v1",
+                       yayin_tarihi="2026-11-11", baslik="Tarama adayı güçlü espri yaptı",
+                       aday_kaynaklari=["tarama"], sohbet_puani=0, zirve_mesaj_sayisi=None, konusma_puani=8)
+        # 2: ölçülmüş düşük sohbet (40) + kon 8 -> ret
+        self.paket_yaz(klasor="eraycan-20261112-aaa2", ad="klip-01", vod="https://kick.com/eray/videos/v2",
+                       yayin_tarihi="2026-11-12", baslik="Ölçülmüş düşük sohbetli an",
+                       aday_kaynaklari=["sohbet"], sohbet_puani=40, zirve_mesaj_sayisi=35, konusma_puani=8)
+        # 3: ölçülmüş düşük sohbet (40) + kon 9 -> kabul
+        self.paket_yaz(klasor="eraycan-20261113-aaa3", ad="klip-01", vod="https://kick.com/eray/videos/v3",
+                       yayin_tarihi="2026-11-13", baslik="Çok güçlü dokuz puanlık espri",
+                       aday_kaynaklari=["sohbet"], sohbet_puani=40, zirve_mesaj_sayisi=35, konusma_puani=9)
+        # 4: kon None (sohbet ölçülmemiş) -> ret
+        self.paket_yaz(klasor="eraycan-20261114-aaa4", ad="klip-01", vod="https://kick.com/eray/videos/v4",
+                       yayin_tarihi="2026-11-14", baslik="İçerik puanı olmayan klip",
+                       aday_kaynaklari=["tarama"], sohbet_puani=0, zirve_mesaj_sayisi=None, konusma_puani=None)
+        # 5: ölçülmüş yüksek sohbet (75) + kon 8 -> tarama-only kon 8'den önce sıralanır
+        self.paket_yaz(klasor="eraycan-20261115-aaa5", ad="klip-01", vod="https://kick.com/eray/videos/v5",
+                       yayin_tarihi="2026-11-15", baslik="Yüksek sohbetli sekiz puanlık an",
+                       aday_kaynaklari=["sohbet", "tarama"], sohbet_puani=75, zirve_mesaj_sayisi=None, konusma_puani=8)
+        # 6: YouTube (sohbet yok) + kon 8 -> kabul
+        self.paket_yaz(klasor="eraycan-20261116-aaa6", ad="klip-01", vod="https://www.youtube.com/watch?v=abcdefghijk",
+                       platform="youtube", yayin_tarihi="2026-11-16", baslik="YouTube videosundan sekiz puanlık an",
+                       aday_kaynaklari=["altyazi_tarama"], sohbet_puani=50, zirve_mesaj_sayisi=None, konusma_puani=8)
+        sosyal = {"klip": {"otomatik_gizli": True, "gizli_gunluk_en_fazla": 8, "otomatik_yayinci_basina": 0}}
+        (secilen, notlar), _m = self.sec(sosyal=sosyal)
+        # Sıra: kon 9 (11-13) > kon 8 sohbet 75 (11-15) > kon 8 ölçülmemiş (11-16, 11-11 yeni önce)
+        self.assertEqual([o["yayin_tarihi"] for o in secilen], ["2026-11-13", "2026-11-15", "2026-11-16", "2026-11-11"])
+        self.assertIn("içerik puanı düşük/yok: 1 klip", notlar)
+        self.assertTrue(any("1 klip izleyici tepkisi zayıf" in n for n in notlar))
+
     def test_icerik_esigi_ayarlanabilir_ve_gecersiz_deger_varsayilana_doner(self):
         anahtar = "otomatik_min_konusma_puani"
         self.assertEqual(sy.klip_ayari({})[anahtar], 8)

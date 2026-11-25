@@ -134,6 +134,18 @@ class PaketVeCiftKaynak(unittest.TestCase):
             self.assertEqual(q.metin_tekrar({'dokum_metni':text},v,d),str(p))
             self.assertIsNone(q.metin_tekrar({'dokum_metni':'Merhaba dünya'},v,d))
 
+    def test_metin_tekrar_ve_tr_kucuk_none_dokumde_cokmez(self):
+        text='Bugün arkadaşım bir kapı açtı ve içeriden bir adam çıktı sonra ikisi de şaşırıp bir süre güldü.'
+        self.assertEqual(y.tr_kucuk(None), '')
+        self.assertEqual(y.oyun_belirtecleri(None), [])
+        with tempfile.TemporaryDirectory() as d:
+            p=pathlib.Path(d)/'cikti'/'test'/'klip-01.json'
+            p.parent.mkdir(parents=True)
+            p.write_text(json.dumps({'platform':'kick','yayinci':'Örnek','dokum_metni':None}),encoding='utf-8')
+            v=q.normalle(INFO, SETTINGS)
+            self.assertIsNone(q.metin_tekrar({'dokum_metni':text},v,d))
+            self.assertIsNone(q.metin_tekrar({'dokum_metni':None},v,d))
+
     def test_referans_iki_ayri_ses_parcasi(self):
         item={'klip_baslangic_sn':290,'klip_bitis_sn':330}
         q.ses_referanslari(item,[{'aralik':[0,300],'youtube_ses':'a.wav','ses_bas_sn':0},
