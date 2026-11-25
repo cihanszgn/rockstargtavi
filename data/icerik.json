@@ -1,5 +1,108 @@
 [
  {
+  "id": "no-asteroids-1-0-2-guncelleme-2026-11-25",
+  "oyun": "No Asteroids",
+  "tarih": "2026-11-25",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam geliştirici duyurusu",
+    "url": "https://store.steampowered.com/news/app/5527800/view/698782503191707654"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "No Asteroids 1.0.2: kaya satışı ve daha güçlü Lance geldi",
+    "ozet": "Kaya satışı oyunun 35. gününden itibaren açılıyor; birim başına 2 dolar ve maden yükü öncelikli, Lance'in şarjı da hızlanıyor.",
+    "metin": "No Asteroids, Unruled Games'in geliştirdiği ve yayımladığı birinci şahıs maden ve yıkım oyunu. Oyunun 1.0.2 güncellemesi 25 Kasım 2026'da Steam'de yayımlandı.\n\nGüncellemeyle kaya satışı geliyor: maden kayası 35. günden itibaren fazla yük alanına sığdığında birim başına 2 dolara satılabiliyor, ancak mineral yükü önceliklidir. Lance'in madencilik gücü belirgin biçimde artırıldı, şarjı hızlandırıldı ve bekleme süresi kısaltıldı; sağ tık şarjlı atışla sürekli ateş arasında geçiş yapıyor. Orbital Strike veya Collapsar satın alındığında Lance ve Slicer açılıyor; daha önce sahip olunan araçlar kalıyor.\n\nTarayıcıda artık her mineral için ayrı renk seçilebiliyor ya da tek tek gizlenebiliyor; karanlık madde parıltısı görünür oldu. Dronlar yüzden uzak durup yakındaki gaz ceplerini açmaktan kaçınıyor ve gemi kontrollerinden kapatılabiliyor. Temizlik ödülü de değişti: her onarılan hasar noktası 5 dolar, tamamlanan oda 100 dolar; kampanya başına bir kez veriliyor. Oyuncular ayrıca Ayarlar'dan iniş ve dönüş sahnelerini atlayabiliyor.\n\nOyuncu açısından fark net: 35. günden sonra fazla kaya para getirebilir, daha güçlü Lance madenciliği hızlandırır ve temizlik hedefleri daha ulaşılabilir hale gelir. Ayrıntılar Steam duyurusunda yer alıyor.",
+    "etiketler": [
+     "#NoAsteroids",
+     "#UnruledGames",
+     "#PC",
+     "#Steam"
+    ]
+   },
+   "en": {
+    "baslik": "No Asteroids 1.0.2 adds rock sales and a stronger Lance",
+    "ozet": "Rock becomes sellable from day 35 at $2 per unit, mineral cargo gets priority, and the Lance charges faster and mines harder.",
+    "metin": "No Asteroids, a first-person mining and destruction game from Unruled Games, received its 1.0.2 update on November 25, 2026 on Steam. The patch was built from player reports since launch.\n\nThe biggest change is a new way to earn money. From day 35, ordinary rock mined in a run can fill spare cargo space and be sold for $2 per unit, with mineral cargo taking priority. The Lance is also much stronger: mining power is substantially higher, it charges faster and has a shorter cooldown, and right-click now switches between charged shots and continuous fire. The Lance and Slicer unlock after you buy an Orbital Strike or Collapsar, and tools you already own stay available.\n\nScanner and drone changes focus on readability. Each discovered mineral can get its own scanner color or be hidden from the scanner, and dark matter's glow is now visible. Drones keep farther from your face, try to stay out of your view, avoid opening gas pockets near you, and can be switched off from the ship controls. Scanners, drones, Shaker charges and drilling rigs also work on large detached asteroid pieces.\n\nFor cleaning, the update removes unreachable dirt and damage from cleaning progress, so 100% completion is possible. Each restored damage spot pays $5 and each completed room pays $100, once per campaign, and existing saves receive rewards they already earned. Flight cutscenes can now be skipped in Settings, mouse look recovers after window switches, and ship rendering runs faster. Full details are in the Steam announcement.",
+    "etiketler": [
+     "#NoAsteroids",
+     "#UnruledGames",
+     "#PC",
+     "#Steam"
+    ]
+   },
+   "es": {
+    "baslik": "No Asteroids 1.0.2 trae venta de roca y un Lance más fuerte",
+    "ozet": "La roca se puede vender desde el día 35 a 2 dólares por unidad, la carga de minerales va primero y el Lance carga más rápido.",
+    "metin": "No Asteroids, un juego de minería y destrucción en primera persona de Unruled Games, recibió la actualización 1.0.2 el 25 de noviembre de 2026 en Steam. El parche responde a los comentarios de los jugadores desde el lanzamiento.\n\nEl cambio más importante es una nueva forma de ganar dinero. Desde el día 35, la roca normal extraída puede ocupar el espacio libre de la carga y venderse a 2 dólares por unidad, pero la carga de minerales tiene prioridad. El Lance también mejora mucho: tiene más potencia minera, carga más rápido, reduce su enfriamiento y el clic derecho alterna entre disparos cargados y fuego continuo. Lance y Slicer se desbloquean al comprar Orbital Strike o Collapsar, y las herramientas que ya tenías siguen disponibles.\n\nLos escáneres y drones también cambian. Puedes asignar un color distinto a cada mineral descubierto u ocultar minerales concretos, y el brillo de la materia oscura ahora es visible. Los drones se alejan de tu cara, evitan abrir bolsas de gas cerca de ti y pueden desactivarse desde los controles de la nave.\n\nEn la limpieza, la actualización elimina suciedad y daño inalcanzables, así que el 100% ya es posible. Cada punto de daño restaurado paga 5 dólares y cada sala completada 100 dólares, una vez por campaña. Además, hay escenas de vuelo que pueden omitirse en Ajustes y el rendimiento de renderizado de la nave mejora. Los detalles completos están en el anuncio de Steam.",
+    "etiketler": [
+     "#NoAsteroids",
+     "#UnruledGames",
+     "#PC",
+     "#Steam"
+    ]
+   },
+   "fr": {
+    "baslik": "No Asteroids 1.0.2 : vente de roche et Lance renforcé",
+    "ozet": "La roche se vend dès le jour 35 à 2 dollars l'unité, la cargaison de minéraux passe en premier et le Lance se recharge plus vite.",
+    "metin": "No Asteroids, un jeu de minage et de destruction à la première personne développé et édité par Unruled Games, a reçu sa mise à jour 1.0.2 le 25 novembre 2026 sur Steam. Le correctif s'appuie sur les retours des joueurs depuis le lancement.\n\nLa nouveauté principale concerne l'argent. À partir du jour 35, la roche ordinaire extraite peut remplir l'espace de cargaison libre et se vendre 2 dollars l'unité, la cargaison de minéraux restant prioritaire. Le Lance gagne nettement en puissance de minage, se recharge plus vite et a un temps de recharge réduit ; le clic droit alterne entre tirs chargés et tir continu. Le Lance et le Slicer se débloquent après l'achat d'une Orbital Strike ou d'un Collapsar, et les outils déjà possédés restent disponibles.\n\nLes scanners et les drones gagnent en lisibilité. Chaque minéral peut recevoir sa propre couleur de scanner ou être masqué, et la lueur de la matière noire est désormais visible. Les drones restent plus loin du visage, évitent d'ouvrir des poches de gaz près de vous et peuvent être désactivés depuis les commandes du vaisseau.\n\nCôté nettoyage, la mise à jour supprime la saleté et les dégâts inaccessibles, ce qui rend les 100 % possibles. Chaque point de dégâts réparé rapporte 5 dollars et chaque pièce terminée 100 dollars, une fois par campagne ; les sauvegardes existantes reçoivent les récompenses déjà gagnées. Les séquences de vol peuvent aussi être passées dans les Paramètres, et le rendu du vaisseau est plus rapide. Tous les détails figurent dans l'annonce Steam.",
+    "etiketler": [
+     "#NoAsteroids",
+     "#UnruledGames",
+     "#PC",
+     "#Steam"
+    ]
+   },
+   "de": {
+    "baslik": "No Asteroids 1.0.2 bringt Gesteinsverkauf und stärkeren Lance",
+    "ozet": "Gestein lässt sich ab Tag 35 für 2 Dollar pro Einheit verkaufen, Mineralfracht hat Vorrang und der Lance lädt schneller.",
+    "metin": "No Asteroids, ein Mining- und Zerstörungsspiel aus der Ich-Perspektive von Unruled Games, bekommt am 25. November 2026 auf Steam das Update 1.0.2. Die Änderungen beruhen auf Rückmeldungen seit dem Start.\n\nDas wichtigste Neue ist ein zusätzlicher Verdienst. Ab Tag 35 kann gewöhnliches Gestein, das den freien Frachtraum füllt, für 2 Dollar pro Einheit verkauft werden; Mineralfracht hat dabei Vorrang. Der Lance wurde deutlich verstärkt: mehr Abbauleistung, schnelleres Aufladen und kürzere Abklingzeit. Ein Rechtsklick wechselt zwischen aufgeladenen Schüssen und Dauerfeuer. Lance und Slicer werden nach dem Kauf eines Orbital Strike oder Collapsar freigeschaltet, bereits besessene Werkzeuge bleiben verfügbar.\n\nScanner und Drohnen bekommen ebenfalls Änderungen. Jedes entdeckte Mineral kann eine eigene Scannerfarbe erhalten oder ausgeblendet werden, und das Leuchten der Dunklen Materie ist nun sichtbar. Drohnen bleiben weiter vom Gesicht entfernt, meiden offene Gasblasen in der Nähe und lassen sich über die Schiffssteuerung abschalten.\n\nBei der Reinigung entfernt das Update unerreichbaren Schmutz und Schaden aus dem Fortschritt, sodass 100 % möglich sind. Jede wiederhergestellte Schadensstelle bringt 5 Dollar, jeder fertige Raum 100 Dollar, jeweils einmal pro Kampagne. Außerdem können Flugsequenzen in den Einstellungen übersprungen werden, und die Darstellung des Schiffs läuft schneller. Die vollständigen Details stehen in der Steam-Ankündigung.",
+    "etiketler": [
+     "#NoAsteroids",
+     "#UnruledGames",
+     "#PC",
+     "#Steam"
+    ]
+   },
+   "nl": {
+    "baslik": "No Asteroids 1.0.2 brengt steenverkoop en sterkere Lance",
+    "ozet": "Steen is vanaf dag 35 te verkopen voor 2 dollar per eenheid, mineraallading gaat voor en de Lance laadt sneller op.",
+    "metin": "No Asteroids, een mijn- en vernietigingsspel in het eerstepersoonsperspectief van Unruled Games, krijgt op 25 november 2026 update 1.0.2 op Steam. De wijzigingen zijn gebaseerd op meldingen van spelers sinds de lancering.\n\nDe grootste nieuwigheid gaat over geld verdienen. Vanaf dag 35 kan gewoon gesteente dat in de vrije ruimte van de lading past, voor 2 dollar per stuk worden verkocht, waarbij mineraallading voorrang heeft. De Lance is flink sterker geworden: hogere mijnkracht, sneller opladen en een kortere cooldown. Met de rechtermuisknop schakel je tussen opgeladen schoten en doorlopend vuur. Lance en Slicer worden ontgrendeld na aankoop van een Orbital Strike of Collapsar, en gereedschap dat je al hebt blijft beschikbaar.\n\nScanner en drones krijgen ook aanpassingen. Elk ontdekt mineraal kan een eigen scannerkleur krijgen of verborgen worden, en de gloed van donkere materie is nu zichtbaar. Drones blijven verder van je gezicht, proberen uit beeld te blijven, openen geen gasbellen in je buurt en kunnen via de scheepsbesturing worden uitgeschakeld.\n\nBij het schoonmaken verwijdert de update onbereikbaar vuil en schade uit de voortgang, zodat 100% haalbaar is. Elk hersteld schadepunt levert 5 dollar op en elke voltooide kamer 100 dollar, eenmaal per campagne. Bestaande saves krijgen de beloningen die al verdiend zijn. Vluchtscènes kun je in de instellingen overslaan en het renderen van het schip is sneller. Alle details staan in de Steam-aankondiging.",
+    "etiketler": [
+     "#NoAsteroids",
+     "#UnruledGames",
+     "#PC",
+     "#Steam"
+    ]
+   },
+   "zh": {
+    "baslik": "No Asteroids 1.0.2更新：可卖岩石，Lance更强",
+    "ozet": "第35天起可出售岩石，每单位2美元；矿物货物优先，Lance充能更快、采矿威力更强。",
+    "metin": "No Asteroids是Unruled Games开发并发行的第一人称采矿与破坏游戏。其1.0.2更新已于2026年11月25日在Steam上发布，内容主要根据玩家发布以来的反馈制作。\n\n本次更新最大的变化是增加了收入方式。从第35天起，采集到的普通岩石若占用了剩余货舱空间，即可以每单位2美元出售，但矿物货物仍然优先。Lance的采矿威力大幅提升，充能更快，冷却时间更短，鼠标右键可在蓄力射击与持续射击之间切换。购买Orbital Strike或Collapsar后即可解锁Lance和Slicer，已拥有的工具依然可用。扫描仪与无人机也有调整：每种已发现矿物可设置不同扫描颜色或隐藏，暗物质的光芒现已可见，无人机会远离玩家面部，并可在飞船控制中关闭。\n\n清洁进度中无法触及的污垢和损伤已被移除，使100%完成成为可能。每处修复的损伤点奖励5美元，每个完成的房间奖励100美元，每个战役仅一次；已有存档也会获得已赚取的奖励。设置中新增飞行过场动画跳过选项，切换窗口后视角无响应的问题也已修复，飞船渲染性能有所提升。",
+    "etiketler": [
+     "#NoAsteroids",
+     "#UnruledGames",
+     "#PC",
+     "#Steam"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "no-asteroids-1-0-2-kaya-satisi-lance",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/5527800/view/698782503191707654",
+   "teyit_zamani": "2026-11-25T01:10:04+00:00",
+   "oyuncuya_fayda": "Oyuncular kaya satışını, güçlü Lance'i ve temizlik ödüllerini hemen kullanabilir ve yeni ayarları deneyebilir.",
+   "hype": 4,
+   "eklenme": "2026-11-25T04:15:23.614814+03:00"
+  }
+ },
+ {
   "id": "dota-2-patch-7-42a-2026-11-24",
   "oyun": "Dota 2",
   "tarih": "2026-11-24",

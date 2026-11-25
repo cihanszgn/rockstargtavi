@@ -1,0 +1,98 @@
+{
+ "id": "no-asteroids-1-0-2-guncelleme-2026-11-25",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "La mise à jour 1.0.2 de No Asteroids permet de vendre la roche, et le Lance frappe plus fort.",
+   "veri": {
+    "ust_etiket": "MISE À JOUR 1.0.2",
+    "baslik": "No Asteroids 1.0.2 : vente de roche",
+    "vurgu": [
+     "vente de roche"
+    ],
+    "tuslar": [
+     "N",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "NO ASTEROIDS",
+    "alt": "MISE À JOUR 1.0.2 • PC"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "D'après l'annonce d'Unruled Games sur Steam, cette mise à jour répond aux retours reçus depuis le lancement.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Annonce du développeur sur Steam",
+    "alinti": "Merci pour vos retours depuis le lancement ! Cette mise à jour ajoute de nouvelles façons de gagner de l'argent et des corrections."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "UNRULED GAMES • STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "La roche se vend dès le jour 35 à 2 dollars l'unité, et la cargaison de minéraux passe en priorité. Le Lance mine plus fort et se recharge plus vite.",
+   "veri": {
+    "baslik": "Minage renforcé",
+    "maddeler": [
+     {
+      "metin": "Roche vendable dès le jour 35",
+      "tetik": "roche"
+     },
+     {
+      "metin": "2 dollars l'unité",
+      "tetik": "dollars"
+     },
+     {
+      "metin": "Lance : plus de puissance",
+      "tetik": "Lance"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "VENTE DE ROCHE",
+    "alt": "JOUR 35 • 2 DOLLARS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Vous reprenez le Lance tout de suite, ou vous attendez ?",
+   "veri": {
+    "cagri": "Tout est sur notre site, Control A Game.",
+    "alt": "Vous reprenez le Lance maintenant, ou vous attendez ?"
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

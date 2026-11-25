@@ -1,0 +1,98 @@
+{
+ "id": "no-asteroids-1-0-2-guncelleme-2026-11-25",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "La actualización 1.0.2 de No Asteroids permite vender roca extra por 2 dólares la unidad, y el Lance pega más fuerte.",
+   "veri": {
+    "ust_etiket": "ACTUALIZACIÓN 1.0.2",
+    "baslik": "No Asteroids 1.0.2 trae venta de roca",
+    "vurgu": [
+     "venta de roca"
+    ],
+    "tuslar": [
+     "N",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "NO ASTEROIDS",
+    "alt": "1.0.2 • PC"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según el anuncio de Unruled Games en Steam, la actualización responde a los comentarios recibidos desde el lanzamiento.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Anuncio del desarrollador en Steam",
+    "alinti": "Gracias por sus comentarios desde el lanzamiento. Esta actualización trae más formas de ganar dinero, nuevas opciones y correcciones."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "UNRULED GAMES • STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "La roca se vende desde el día 35 a 2 dólares, y la carga de minerales va primero. El Lance mina más fuerte y carga más rápido.",
+   "veri": {
+    "baslik": "Minería más rentable",
+    "maddeler": [
+     {
+      "metin": "Roca vendible desde el día 35",
+      "tetik": "roca"
+     },
+     {
+      "metin": "2 dólares por unidad",
+      "tetik": "dólares"
+     },
+     {
+      "metin": "Lance: más potencia y carga rápida",
+      "tetik": "Lance"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "VENTA DE ROCA",
+    "alt": "DÍA 35 • 2 DÓLARES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Volverás ya al Lance o esperarás a vender roca?",
+   "veri": {
+    "cagri": "Todos los detalles en nuestra web, Control A Game.",
+    "alt": "¿Volverás ya al Lance o esperarás a vender roca?"
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,98 @@
+{
+ "id": "no-asteroids-1-0-2-guncelleme-2026-11-25",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "No Asteroids'ta 1.0.2 ile kaya satışı ve daha güçlü Lance geliyor.",
+   "veri": {
+    "ust_etiket": "1.0.2 GÜNCELLEMESİ",
+    "baslik": "No Asteroids'ta kaya satışı geldi",
+    "vurgu": [
+     "kaya satışı"
+    ],
+    "tuslar": [
+     "N",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "NO ASTEROIDS",
+    "alt": "1.0.2 GÜNCELLEMESİ • PC"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Unruled Games'in Steam duyurusuna göre güncelleme, lansmandan sonra gelen geri bildirimleri topluyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam geliştirici duyurusu",
+    "alinti": "Lansmandan bu yana gelen geri bildirimlere dayanan bu güncelleme, yeni kazanç yolları ve düzeltmeler getiriyor."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "UNRULED GAMES • STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Güncellemeyle 35. günden itibaren fazla kaya satılabiliyor, birim fiyatı 2 dolar. Lance çok daha güçlü ve şarjı hızlı.",
+   "veri": {
+    "baslik": "Kaya satışı ve Lance",
+    "maddeler": [
+     {
+      "metin": "35. günden kaya satışı",
+      "tetik": "35."
+     },
+     {
+      "metin": "Birim başına 2 dolar",
+      "tetik": "birim"
+     },
+     {
+      "metin": "Lance daha güçlü, şarj hızlı",
+      "tetik": "Lance"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "KAYA SATIŞI",
+    "alt": "35. GÜNDEN İTİBAREN"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Lance'le hemen mi döneceksin, yoksa kaya satışını mı bekleyeceksin?",
+   "veri": {
+    "cagri": "Tamamı sitemizde, Control A Game'de.",
+    "alt": "Lance'le hemen mi döneceksin?"
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

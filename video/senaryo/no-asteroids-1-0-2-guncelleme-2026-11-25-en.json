@@ -1,0 +1,98 @@
+{
+ "id": "no-asteroids-1-0-2-guncelleme-2026-11-25",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "The No Asteroids 1.0.2 update lets miners sell extra rock for $2 a unit, and the Lance hits harder.",
+   "veri": {
+    "ust_etiket": "1.0.2 UPDATE",
+    "baslik": "No Asteroids 1.0.2: rock sales arrive",
+    "vurgu": [
+     "rock sales"
+    ],
+    "tuslar": [
+     "N",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "NO ASTEROIDS",
+    "alt": "1.0.2 UPDATE • PC"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to Unruled Games' Steam announcement, the update builds on player feedback since launch.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam developer announcement",
+    "alinti": "Thanks for all your feedback since launch! This update brings more ways to earn money, new options, and fixes based on your reports."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "UNRULED GAMES • STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Rock sells from day 35 for $2 per unit, and mineral cargo gets priority. The Lance mines harder, charges faster, and right-click switches firing modes.",
+   "veri": {
+    "baslik": "Mining gets bigger",
+    "maddeler": [
+     {
+      "metin": "Rock sales from day 35",
+      "tetik": "Rock"
+     },
+     {
+      "metin": "$2 per unit, minerals first",
+      "tetik": "$2"
+     },
+     {
+      "metin": "Lance: more power, faster charge",
+      "tetik": "Lance"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "ROCK SALES",
+    "alt": "DAY 35 • $2 PER UNIT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Would you dive back in now, or wait for rock sales?",
+   "veri": {
+    "cagri": "Read the full story on our site, Control A Game.",
+    "alt": "Would you dive back in now, or wait for rock sales?"
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
