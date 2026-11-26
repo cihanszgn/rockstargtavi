@@ -1097,6 +1097,22 @@
   "url": "https://www.youtube.com/shorts/hjjbFUcPUgs",
   "zaman": "2026-11-25T17:00:59+00:00"
  },
+ "hype-20261125-daea97fc-klip-03|klip|youtube|short": {
+  "bicim": "short",
+  "boyut": 8804331,
+  "dil": "klip",
+  "durum": "tamam",
+  "gizli": true,
+  "hesap": "klip",
+  "id": "hype-20261125-daea97fc-klip-03",
+  "kimlik": "_XGE92dPbrU",
+  "niyet_zamani": "2026-11-26T20:41:26+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status&upload_id=AFy3sg2XzfkkbLCxI_VxzwoTX8qlguk2B97Nhw_SqP--vOIJ2Uxp3dCSu3Ctn7qxf53PDahtONKupnBjVEKcH0MImz_S91sQNijHfkisqz57jzw",
+  "platform": "youtube",
+  "sosyal_tur": "klip",
+  "url": "https://www.youtube.com/shorts/_XGE92dPbrU",
+  "zaman": "2026-11-26T20:41:26+00:00"
+ },
  "jahrein-20261116-82e22279-klip-02|klip|youtube|short": {
   "bicim": "short",
   "dil": "klip",
@@ -1225,6 +1241,38 @@
   "sosyal_tur": "klip",
   "url": "https://www.youtube.com/shorts/HT4STVMhhr8",
   "zaman": "2026-11-19T01:16:54+00:00"
+ },
+ "kemalcan-parlak-20261124-3FWynfRH-klip-01|klip|youtube|short": {
+  "bicim": "short",
+  "boyut": 3849242,
+  "dil": "klip",
+  "durum": "tamam",
+  "gizli": true,
+  "hesap": "klip",
+  "id": "kemalcan-parlak-20261124-3FWynfRH-klip-01",
+  "kimlik": "ZmxW5cnJZc0",
+  "niyet_zamani": "2026-11-26T20:41:26+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status&upload_id=AFy3sg2IzJThQA8fk6G1acT-trto6FOemvA724WVoQr1Wo15ohRtc4d6R_ezUqc5JsGdXoKtHI0REToGsYmJW03-WaHRna8Tu_LJb9N0yQ6TAFU",
+  "platform": "youtube",
+  "sosyal_tur": "klip",
+  "url": "https://www.youtube.com/shorts/ZmxW5cnJZc0",
+  "zaman": "2026-11-26T20:41:26+00:00"
+ },
+ "kemalcan-parlak-20261124-3FWynfRH-klip-03|klip|youtube|short": {
+  "bicim": "short",
+  "boyut": 4414208,
+  "dil": "klip",
+  "durum": "tamam",
+  "gizli": true,
+  "hesap": "klip",
+  "id": "kemalcan-parlak-20261124-3FWynfRH-klip-03",
+  "kimlik": "-0BHI81X7qE",
+  "niyet_zamani": "2026-11-26T20:41:26+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status&upload_id=AFy3sg04c5apc0pFtmGbeApZoMqfAHg4-ilvFNga26UKCvlSdAg-DFsFT7lEc3W5RCB1Y4LZitSZNq7FtdVUl0qUQme5T2WDvSpMXkaMU_uRWA",
+  "platform": "youtube",
+  "sosyal_tur": "klip",
+  "url": "https://www.youtube.com/shorts/-0BHI81X7qE",
+  "zaman": "2026-11-26T20:41:26+00:00"
  },
  "league-of-legends-new-dawn-2027-ilk-duyuru|en|instagram|gorsel": {
   "bicim": "gorsel",
@@ -1765,6 +1813,22 @@
   "sosyal_tur": "haber",
   "url": "https://www.instagram.com/p/DgFltr-FEvN/",
   "zaman": "2026-11-23T14:25:02+00:00"
+ },
+ "tolunay-oren-20261125-7b945630-klip-03|klip|youtube|short": {
+  "bicim": "short",
+  "boyut": 5283846,
+  "dil": "klip",
+  "durum": "tamam",
+  "gizli": true,
+  "hesap": "klip",
+  "id": "tolunay-oren-20261125-7b945630-klip-03",
+  "kimlik": "8gEzdj-0pYw",
+  "niyet_zamani": "2026-11-26T20:41:26+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status&upload_id=AFy3sg1mzvGSQtm75NmnYrHH_BoenNKvJTKfbw8sm9dNcjxngl3Nzl2iOtgHDgAU7DgkrV7ww9zusF-_f4LrcWPdX8MN0ej5ExV-cGvOCPN3xw",
+  "platform": "youtube",
+  "sosyal_tur": "klip",
+  "url": "https://www.youtube.com/shorts/8gEzdj-0pYw",
+  "zaman": "2026-11-26T20:41:26+00:00"
  },
  "ucretsiz-70450cdb07a78190ecb3|tr|instagram|gorsel": {
   "bicim": "gorsel",
