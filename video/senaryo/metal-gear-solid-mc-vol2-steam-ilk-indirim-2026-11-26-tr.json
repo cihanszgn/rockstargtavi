@@ -1,0 +1,123 @@
+{
+ "id": "metal-gear-solid-mc-vol2-steam-ilk-indirim-2026-11-26",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Metal Gear Solid: Master Collection Vol.2, Steam'de şu anda ilk kez %20 indirimde.",
+   "veri": {
+    "ust_etiket": "STEAM İNDİRİMİ",
+    "baslik": "Metal Gear Solid Vol.2 %20 indirimde",
+    "vurgu": [
+     "%20 indirimde"
+    ],
+    "tuslar": [
+     "M",
+     "G",
+     "S"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "METAL GEAR SOLID",
+    "alt": "MASTER COLLECTION VOL.2"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Steam'deki resmî duyuruya göre koleksiyon ilk kez indirime girdi. Oran %20, bitiş tarihi 9 Aralık.",
+   "veri": {
+    "baslik": "Steam'de ilk indirim",
+    "maddeler": [
+     {
+      "metin": "Steam'de ilk kez indirim",
+      "tetik": "ilk"
+     },
+     {
+      "metin": "Oran: %20",
+      "tetik": "%20"
+     },
+     {
+      "metin": "Bitiş: 9 Aralık",
+      "tetik": "Aralık"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "İLK İNDİRİM",
+    "alt": "%20 • 9 ARALIK'A KADAR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "İndirim 9 Aralık'a kadar sürüyor; koleksiyonu bu tarihe kadar Steam'de alabilirsiniz.",
+   "veri": {
+    "etiket": "İndirimin bitişi",
+    "tarih": "9 Aralık",
+    "not": "Kaçırmadan alın."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "İNDİRİM BİTİYOR",
+    "alt": "9 ARALIK'A KADAR"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Koleksiyon PC'de, Steam üzerinden %20 indirimle satışta.",
+   "veri": {
+    "baslik": "PC'de Steam",
+    "platformlar": [],
+    "sayilar": [
+     {
+      "deger": "20",
+      "etiket": "% İNDİRİM",
+      "tetik": "indirim"
+     }
+    ],
+    "not": "Bölgesel fiyat için mağazaya bakın."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PC • STEAM",
+    "alt": "%20 İNDİRİM"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Bu indirimi alır mısın, yoksa bitişini mi beklersin? Tamamı sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "İndirimi alacak mısın?",
+    "alt": "Fiyat ve ayrıntılar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

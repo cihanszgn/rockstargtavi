@@ -1,0 +1,123 @@
+{
+ "id": "metal-gear-solid-mc-vol2-steam-ilk-indirim-2026-11-26",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Metal Gear Solid: Master Collection Vol.2 bénéficie de 20 % de réduction sur Steam pour la première fois.",
+   "veri": {
+    "ust_etiket": "PROMO STEAM",
+    "baslik": "Metal Gear Solid Vol.2 : 20 % de réduction",
+    "vurgu": [
+     "20 % de réduction"
+    ],
+    "tuslar": [
+     "M",
+     "G",
+     "S"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "METAL GEAR SOLID",
+    "alt": "MASTER COLLECTION VOL.2"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "D'après l'annonce officielle de Steam, c'est la première fois que cette réduction s'applique. Elle se termine le 9 décembre.",
+   "veri": {
+    "baslik": "Réduction sur Steam",
+    "maddeler": [
+     {
+      "metin": "Première réduction sur Steam",
+      "tetik": "première"
+     },
+     {
+      "metin": "Réduction de 20 %",
+      "tetik": "réduction"
+     },
+     {
+      "metin": "Fin le 9 décembre",
+      "tetik": "décembre"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "RÉDUCTION SUR STEAM",
+    "alt": "20 % JUSQU'AU 9 DÉCEMBRE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "La réduction se termine le 9 décembre, donc profitez-en avant cette date.",
+   "veri": {
+    "etiket": "Fin de la réduction",
+    "tarih": "9 décembre",
+    "not": "Achetez-la avant cette date."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "FIN DE LA RÉDUCTION",
+    "alt": "AVANT LE 9 DÉCEMBRE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "La collection est disponible sur PC via Steam, avec 20 % de réduction.",
+   "veri": {
+    "baslik": "PC via Steam",
+    "platformlar": [],
+    "sayilar": [
+     {
+      "deger": "20",
+      "etiket": "% RÉDUCTION",
+      "tetik": "réduction"
+     }
+    ],
+    "not": "Vérifiez le prix de votre région sur la boutique Steam."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PC • STEAM",
+    "alt": "20 % DE RÉDUCTION"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Allez-vous la prendre maintenant ou attendre une autre promo ? Tout est sur notre site, Control A Game.",
+   "veri": {
+    "cagri": "Allez-vous l'acheter ?",
+    "alt": "Tous les détails dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,123 @@
+{
+ "id": "metal-gear-solid-mc-vol2-steam-ilk-indirim-2026-11-26",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Metal Gear Solid: Master Collection Vol.2 is 20% off on Steam for the first time.",
+   "veri": {
+    "ust_etiket": "STEAM DEAL",
+    "baslik": "Metal Gear Solid Vol.2 hits 20% off",
+    "vurgu": [
+     "20% off"
+    ],
+    "tuslar": [
+     "M",
+     "G",
+     "S"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "METAL GEAR SOLID",
+    "alt": "MASTER COLLECTION VOL.2"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "According to Steam's official announcement, the 20% discount is running for the first time. It ends December 9.",
+   "veri": {
+    "baslik": "Steam deal at a glance",
+    "maddeler": [
+     {
+      "metin": "First Steam discount",
+      "tetik": "first"
+     },
+     {
+      "metin": "20% off right now",
+      "tetik": "20%"
+     },
+     {
+      "metin": "Ends December 9",
+      "tetik": "December"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "STEAM DEAL",
+    "alt": "20% OFF UNTIL DECEMBER 9"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "The sale ends December 9, so buy before the deadline if you want the collection at 20% off.",
+   "veri": {
+    "etiket": "Sale ends",
+    "tarih": "December 9",
+    "not": "Get it before the deadline."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "SALE ENDS",
+    "alt": "DECEMBER 9"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "The collection is available on PC through Steam, at 20% off.",
+   "veri": {
+    "baslik": "PC via Steam",
+    "platformlar": [],
+    "sayilar": [
+     {
+      "deger": "20",
+      "etiket": "% OFF",
+      "tetik": "off"
+     }
+    ],
+    "not": "Check your regional price on the store page."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PC • STEAM",
+    "alt": "20% OFF"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Will you grab it now, or wait for a bigger sale? Read the full story on our site, Control A Game.",
+   "veri": {
+    "cagri": "Will you buy it?",
+    "alt": "Full details in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
