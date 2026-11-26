@@ -1369,6 +1369,20 @@
   "url": "https://www.instagram.com/p/DgBtf-yF3mF/",
   "zaman": "2026-11-22T02:16:06+00:00"
  },
+ "pc-store-together-performans-yamasi-2026-11-25|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 6480444,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "pc-store-together-performans-yamasi-2026-11-25",
+  "kimlik": "yNul9E79m4o",
+  "niyet_zamani": "2026-11-26T07:24:04+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg3whzMPnh1hXmtJpy0hIXMkWUxJnBH1VAMDzVmJ_w0PGZe64WuxngONwo_cTrXjKKJPhWa1lW6JkHEwl8ZTvC_kCW0X6YHG-IokdLjjQQ",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/yNul9E79m4o",
+  "zaman": "2026-11-26T07:24:04+00:00"
+ },
  "pc-store-together-rusca-cince-buyuk-guncelleme|tr|youtube|short": {
   "bicim": "short",
   "boyut": 7287583,
