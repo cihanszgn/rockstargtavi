@@ -775,6 +775,21 @@
   "url": "https://www.instagram.com/p/Df0PlYmDaMi/",
   "zaman": "2026-11-16T20:44:33+00:00"
  },
+ "forza-horizon-6-itasha-moderasyon-aciklamasi|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 8152451,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "forza-horizon-6-itasha-moderasyon-2026-11-25",
+  "kapak_not": "küçük resim yüklenmedi: POST https://www.googleapis.com/upload/youtube/v3/thumbnails/set → HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"The user has uploaded too many thumbnails recently. Please try the request again later.\",\n    \"errors\": [\n      {\n        \"message\": \"The user has uploaded too many thumbnails recently. Please tr",
+  "kimlik": "glOQK5swHj4",
+  "niyet_zamani": "2026-11-26T11:32:05+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg0nrjwLNnOXVxkc0wpTJmB6SlgSsRe1jfLI7sgQeOmLTzJj8lr7ROu2USHxMGaE_IfhFLaVF_OfjjyRAXS4Bg8uaGlnxu3l1MZDYC0uRw",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/glOQK5swHj4",
+  "zaman": "2026-11-26T11:32:05+00:00"
+ },
  "grand-theft-auto-vi-resmen-cikti-2026-11-19|tr|instagram|gorsel": {
   "bicim": "gorsel",
   "dil": "tr",
