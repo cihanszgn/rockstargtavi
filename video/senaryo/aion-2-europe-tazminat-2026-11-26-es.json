@@ -1,0 +1,104 @@
+{
+ "id": "aion-2-europe-tazminat-2026-11-26",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Los jugadores europeos de AION 2 reciben compensación por los fallos de red, con 80 Soul Codex.",
+   "veri": {
+    "ust_etiket": "SERVIDORES EUROPEOS",
+    "baslik": "AION 2: compensación en Europa",
+    "vurgu": [
+     "compensación"
+    ],
+    "tuslar": [
+     "A",
+     "I",
+     "O",
+     "N"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "COMPENSACIÓN EN EUROPA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "El paquete incluye 10 Odyle Energy, 30 unidades de varios Scroll, 80 Soul Codex, 4 Selection Chest y 3 Instant Clear Ticket de Daily Dungeon y otros 3 de Nightmare.",
+   "veri": {
+    "baslik": "Paquete de compensación",
+    "maddeler": [
+     {
+      "metin": "10 Odyle Energy",
+      "tetik": "Odyle"
+     },
+     {
+      "metin": "30 unidades de varios Scroll",
+      "tetik": "30"
+     },
+     {
+      "metin": "80 Soul Codex",
+      "tetik": "Soul"
+     },
+     {
+      "metin": "4 cofres, 3+3 Instant Clear Ticket",
+      "tetik": "Nightmare"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "PAQUETE DE COMPENSACIÓN",
+    "alt": "OBJETOS LIGADOS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Odyle Energy, los cofres y los tickets caducan el 16 de diciembre a las 08:00 CET, y el correo dura 14 días.",
+   "veri": {
+    "etiket": "Fecha de caducidad",
+    "tarih": "16 de diciembre",
+    "not": "08:00 CET; el correo caduca en 14 días."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "CADUCIDAD",
+    "alt": "16 DE DICIEMBRE, 08:00 CET"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Te parece suficiente esta compensación?",
+   "veri": {
+    "cagri": "Lista completa en la web",
+    "alt": "Fuente y fechas de caducidad en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

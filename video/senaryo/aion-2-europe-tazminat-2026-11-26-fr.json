@@ -1,0 +1,104 @@
+{
+ "id": "aion-2-europe-tazminat-2026-11-26",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Les joueurs européens d'AION 2 reçoivent une compensation pour les problèmes réseau, dont 80 Soul Codex.",
+   "veri": {
+    "ust_etiket": "SERVEURS EUROPÉENS",
+    "baslik": "AION 2 : compensation en Europe",
+    "vurgu": [
+     "compensation"
+    ],
+    "tuslar": [
+     "A",
+     "I",
+     "O",
+     "N"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "COMPENSATION EN EUROPE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Le lot contient 10 Odyle Energy, 30 exemplaires de plusieurs Scroll, 80 Soul Codex, 4 Selection Chest, plus 3 Instant Clear Ticket Daily Dungeon et 3 Nightmare.",
+   "veri": {
+    "baslik": "Lot de compensation",
+    "maddeler": [
+     {
+      "metin": "10 Odyle Energy",
+      "tetik": "Odyle"
+     },
+     {
+      "metin": "30 exemplaires de plusieurs Scroll",
+      "tetik": "30"
+     },
+     {
+      "metin": "80 Soul Codex",
+      "tetik": "Soul"
+     },
+     {
+      "metin": "4 coffres, 3+3 Instant Clear Ticket",
+      "tetik": "Nightmare"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "LOT DE COMPENSATION",
+    "alt": "OBJETS LIÉS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Odyle Energy, les coffres et les tickets expirent le 16 décembre à 08:00 CET, et le courrier en jeu dure 14 jours.",
+   "veri": {
+    "etiket": "Date d'expiration",
+    "tarih": "16 décembre",
+    "not": "08:00 CET ; le courrier expire sous 14 jours."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "EXPIRATION",
+    "alt": "16 DÉCEMBRE, 08:00 CET"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Cette compensation vous paraît-elle suffisante ?",
+   "veri": {
+    "cagri": "Liste complète sur le site",
+    "alt": "Source et dates d'expiration dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

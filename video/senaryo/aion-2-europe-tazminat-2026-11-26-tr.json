@@ -1,0 +1,104 @@
+{
+ "id": "aion-2-europe-tazminat-2026-11-26",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "AION 2'nin Avrupa'daki oyuncuları ağ sorunları için tazminat aldı: 80 Soul Codex dahil.",
+   "veri": {
+    "ust_etiket": "AVRUPA SUNUCULARI",
+    "baslik": "AION 2 Avrupa tazminatı geldi",
+    "vurgu": [
+     "tazminatı"
+    ],
+    "tuslar": [
+     "A",
+     "I",
+     "O",
+     "N"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "AVRUPA TAZMİNATI"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Pakette 10 Odyle Energy, Scroll'lardan 30'ar adet, 80 Soul Codex, 4 Selection Chest ve Nightmare bileti var.",
+   "veri": {
+    "baslik": "Tazminat paketi",
+    "maddeler": [
+     {
+      "metin": "10 Odyle Energy",
+      "tetik": "Odyle"
+     },
+     {
+      "metin": "Scroll'lardan 30'ar adet",
+      "tetik": "30'ar"
+     },
+     {
+      "metin": "80 Soul Codex",
+      "tetik": "Soul"
+     },
+     {
+      "metin": "4 Chest, 3+3 Instant Clear Ticket",
+      "tetik": "Nightmare"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "TAZMİNAT PAKETİ",
+    "alt": "BAĞLI EŞYALAR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Odyle Energy, sandık ve biletler 16 Aralık'ta 08:00 CET'te sona eriyor; posta 14 gün sürüyor.",
+   "veri": {
+    "etiket": "Süre doluyor",
+    "tarih": "16 Aralık",
+    "not": "08:00 CET; posta 14 gün içinde sona erer."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "SON KULLANMA",
+    "alt": "16 ARALIK, 08:00 CET"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Sence bu tazminat yeterli mi?",
+   "veri": {
+    "cagri": "Tüm liste sitede",
+    "alt": "Kaynak ve son kullanma tarihleri haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

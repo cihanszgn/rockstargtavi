@@ -1,0 +1,104 @@
+{
+ "id": "aion-2-europe-tazminat-2026-11-26",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "AION 2 European players are getting compensation for network issues, including 80 Soul Codex.",
+   "veri": {
+    "ust_etiket": "EUROPEAN SERVERS",
+    "baslik": "AION 2 Europe compensation arrives",
+    "vurgu": [
+     "compensation"
+    ],
+    "tuslar": [
+     "A",
+     "I",
+     "O",
+     "N"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "AION 2",
+    "alt": "EUROPE COMPENSATION"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "The package holds 10 Odyle Energy, 30 each of several Scrolls, 80 Soul Codex, 4 Selection Chests, and 3 Daily Dungeon plus 3 Nightmare Instant Clear Tickets.",
+   "veri": {
+    "baslik": "Compensation package",
+    "maddeler": [
+     {
+      "metin": "10 Odyle Energy",
+      "tetik": "Odyle"
+     },
+     {
+      "metin": "30 each of several Scrolls",
+      "tetik": "30"
+     },
+     {
+      "metin": "80 Soul Codex",
+      "tetik": "Soul"
+     },
+     {
+      "metin": "4 Chests, 3+3 Instant Clear Tickets",
+      "tetik": "Nightmare"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "COMPENSATION PACKAGE",
+    "alt": "BOUND ITEMS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Odyle Energy, the chests and the tickets expire on December 16 at 08:00 CET, and the in-game mail lasts 14 days.",
+   "veri": {
+    "etiket": "Expiry date",
+    "tarih": "December 16",
+    "not": "08:00 CET; mail expires within 14 days."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "EXPIRY",
+    "alt": "DECEMBER 16, 08:00 CET"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Is this compensation enough for you?",
+   "veri": {
+    "cagri": "Full list on the site",
+    "alt": "Source and expiry dates are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
