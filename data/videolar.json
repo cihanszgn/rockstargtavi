@@ -821,8 +821,8 @@
     "mp4_1080": "no-asteroids-1-0-2-guncelleme-2026-11-25-en-3e95d96fb678-1080.mp4",
     "mp4_540": "no-asteroids-1-0-2-guncelleme-2026-11-25-en-3e95d96fb678-540.mp4",
     "mp4_720": "no-asteroids-1-0-2-guncelleme-2026-11-25-en-3e95d96fb678-720.mp4",
-    "sure": 30.8,
-    "uretildi": "2026-11-26T03:55:57+03:00",
+    "sure": 29.2,
+    "uretildi": "2026-11-26T05:24:29+03:00",
     "vtt": "no-asteroids-1-0-2-guncelleme-2026-11-25-en-3e95d96fb678.vtt",
     "youtube": ""
    },
@@ -834,7 +834,7 @@
     "mp4_540": "no-asteroids-1-0-2-guncelleme-2026-11-25-es-11d8a83b4606-540.mp4",
     "mp4_720": "no-asteroids-1-0-2-guncelleme-2026-11-25-es-11d8a83b4606-720.mp4",
     "sure": 34.1,
-    "uretildi": "2026-11-26T04:16:45+03:00",
+    "uretildi": "2026-11-26T05:43:02+03:00",
     "vtt": "no-asteroids-1-0-2-guncelleme-2026-11-25-es-11d8a83b4606.vtt",
     "youtube": ""
    },
@@ -846,7 +846,7 @@
     "mp4_540": "no-asteroids-1-0-2-guncelleme-2026-11-25-fr-18eace73f414-540.mp4",
     "mp4_720": "no-asteroids-1-0-2-guncelleme-2026-11-25-fr-18eace73f414-720.mp4",
     "sure": 26.9,
-    "uretildi": "2026-11-26T04:36:49+03:00",
+    "uretildi": "2026-11-26T05:59:27+03:00",
     "vtt": "no-asteroids-1-0-2-guncelleme-2026-11-25-fr-18eace73f414.vtt",
     "youtube": ""
    },
@@ -857,9 +857,59 @@
     "mp4_1080": "no-asteroids-1-0-2-guncelleme-2026-11-25-tr-8434c4c668df-1080.mp4",
     "mp4_540": "no-asteroids-1-0-2-guncelleme-2026-11-25-tr-8434c4c668df-540.mp4",
     "mp4_720": "no-asteroids-1-0-2-guncelleme-2026-11-25-tr-8434c4c668df-720.mp4",
-    "sure": 29.3,
-    "uretildi": "2026-11-26T03:35:01+03:00",
+    "sure": 26.8,
+    "uretildi": "2026-11-26T05:04:46+03:00",
     "vtt": "no-asteroids-1-0-2-guncelleme-2026-11-25-tr-8434c4c668df.vtt",
+    "youtube": ""
+   }
+  },
+  "pc-store-together-buyuk-guncelleme-2026-11-26": {
+   "en": {
+    "anahtar": "1e4838213cfc",
+    "instagram": "",
+    "kapak": "pc-store-together-buyuk-guncelleme-2026-11-26-en-1e4838213cfc-kapak.jpg",
+    "mp4_1080": "pc-store-together-buyuk-guncelleme-2026-11-26-en-1e4838213cfc-1080.mp4",
+    "mp4_540": "pc-store-together-buyuk-guncelleme-2026-11-26-en-1e4838213cfc-540.mp4",
+    "mp4_720": "pc-store-together-buyuk-guncelleme-2026-11-26-en-1e4838213cfc-720.mp4",
+    "sure": 37.3,
+    "uretildi": "2026-11-26T05:10:20+03:00",
+    "vtt": "pc-store-together-buyuk-guncelleme-2026-11-26-en-1e4838213cfc.vtt",
+    "youtube": ""
+   },
+   "es": {
+    "anahtar": "429f89d10187",
+    "instagram": "",
+    "kapak": "pc-store-together-buyuk-guncelleme-2026-11-26-es-429f89d10187-kapak.jpg",
+    "mp4_1080": "pc-store-together-buyuk-guncelleme-2026-11-26-es-429f89d10187-1080.mp4",
+    "mp4_540": "pc-store-together-buyuk-guncelleme-2026-11-26-es-429f89d10187-540.mp4",
+    "mp4_720": "pc-store-together-buyuk-guncelleme-2026-11-26-es-429f89d10187-720.mp4",
+    "sure": 36.4,
+    "uretildi": "2026-11-26T05:29:31+03:00",
+    "vtt": "pc-store-together-buyuk-guncelleme-2026-11-26-es-429f89d10187.vtt",
+    "youtube": ""
+   },
+   "fr": {
+    "anahtar": "4c00a6e6fcc6",
+    "instagram": "",
+    "kapak": "pc-store-together-buyuk-guncelleme-2026-11-26-fr-4c00a6e6fcc6-kapak.jpg",
+    "mp4_1080": "pc-store-together-buyuk-guncelleme-2026-11-26-fr-4c00a6e6fcc6-1080.mp4",
+    "mp4_540": "pc-store-together-buyuk-guncelleme-2026-11-26-fr-4c00a6e6fcc6-540.mp4",
+    "mp4_720": "pc-store-together-buyuk-guncelleme-2026-11-26-fr-4c00a6e6fcc6-720.mp4",
+    "sure": 30.2,
+    "uretildi": "2026-11-26T05:47:15+03:00",
+    "vtt": "pc-store-together-buyuk-guncelleme-2026-11-26-fr-4c00a6e6fcc6.vtt",
+    "youtube": ""
+   },
+   "tr": {
+    "anahtar": "7b237a14a975",
+    "instagram": "",
+    "kapak": "pc-store-together-buyuk-guncelleme-2026-11-26-tr-7b237a14a975-kapak.jpg",
+    "mp4_1080": "pc-store-together-buyuk-guncelleme-2026-11-26-tr-7b237a14a975-1080.mp4",
+    "mp4_540": "pc-store-together-buyuk-guncelleme-2026-11-26-tr-7b237a14a975-540.mp4",
+    "mp4_720": "pc-store-together-buyuk-guncelleme-2026-11-26-tr-7b237a14a975-720.mp4",
+    "sure": 32.6,
+    "uretildi": "2026-11-26T04:51:32+03:00",
+    "vtt": "pc-store-together-buyuk-guncelleme-2026-11-26-tr-7b237a14a975.vtt",
     "youtube": ""
    }
   },
@@ -871,8 +921,8 @@
     "mp4_1080": "pc-store-together-performans-yamasi-2026-11-25-en-980f0d5fa880-1080.mp4",
     "mp4_540": "pc-store-together-performans-yamasi-2026-11-25-en-980f0d5fa880-540.mp4",
     "mp4_720": "pc-store-together-performans-yamasi-2026-11-25-en-980f0d5fa880-720.mp4",
-    "sure": 28.2,
-    "uretildi": "2026-11-26T03:50:55+03:00",
+    "sure": 31.1,
+    "uretildi": "2026-11-26T05:20:07+03:00",
     "vtt": "pc-store-together-performans-yamasi-2026-11-25-en-980f0d5fa880.vtt",
     "youtube": ""
    },
@@ -884,7 +934,7 @@
     "mp4_540": "pc-store-together-performans-yamasi-2026-11-25-es-1e1de67b4559-540.mp4",
     "mp4_720": "pc-store-together-performans-yamasi-2026-11-25-es-1e1de67b4559-720.mp4",
     "sure": 31.2,
-    "uretildi": "2026-11-26T04:11:33+03:00",
+    "uretildi": "2026-11-26T05:38:20+03:00",
     "vtt": "pc-store-together-performans-yamasi-2026-11-25-es-1e1de67b4559.vtt",
     "youtube": ""
    },
@@ -896,7 +946,7 @@
     "mp4_540": "pc-store-together-performans-yamasi-2026-11-25-fr-8495a52a4259-540.mp4",
     "mp4_720": "pc-store-together-performans-yamasi-2026-11-25-fr-8495a52a4259-720.mp4",
     "sure": 27.1,
-    "uretildi": "2026-11-26T04:32:40+03:00",
+    "uretildi": "2026-11-26T05:55:53+03:00",
     "vtt": "pc-store-together-performans-yamasi-2026-11-25-fr-8495a52a4259.vtt",
     "youtube": ""
    },
@@ -907,8 +957,8 @@
     "mp4_1080": "pc-store-together-performans-yamasi-2026-11-25-tr-3e3df1bd89dc-1080.mp4",
     "mp4_540": "pc-store-together-performans-yamasi-2026-11-25-tr-3e3df1bd89dc-540.mp4",
     "mp4_720": "pc-store-together-performans-yamasi-2026-11-25-tr-3e3df1bd89dc-720.mp4",
-    "sure": 29.6,
-    "uretildi": "2026-11-26T03:29:48+03:00",
+    "sure": 28.7,
+    "uretildi": "2026-11-26T05:00:21+03:00",
     "vtt": "pc-store-together-performans-yamasi-2026-11-25-tr-3e3df1bd89dc.vtt",
     "youtube": ""
    }
@@ -1088,8 +1138,8 @@
     "mp4_1080": "vrchat-holiday-gifting-2026-11-25-en-fd51b51b1650-1080.mp4",
     "mp4_540": "vrchat-holiday-gifting-2026-11-25-en-fd51b51b1650-540.mp4",
     "mp4_720": "vrchat-holiday-gifting-2026-11-25-en-fd51b51b1650-720.mp4",
-    "sure": 37.3,
-    "uretildi": "2026-11-26T03:46:21+03:00",
+    "sure": 36.1,
+    "uretildi": "2026-11-26T05:15:28+03:00",
     "vtt": "vrchat-holiday-gifting-2026-11-25-en-fd51b51b1650.vtt",
     "youtube": ""
    },
@@ -1101,7 +1151,7 @@
     "mp4_540": "vrchat-holiday-gifting-2026-11-25-es-1ef771011bb6-540.mp4",
     "mp4_720": "vrchat-holiday-gifting-2026-11-25-es-1ef771011bb6-720.mp4",
     "sure": 35.6,
-    "uretildi": "2026-11-26T04:06:48+03:00",
+    "uretildi": "2026-11-26T05:34:09+03:00",
     "vtt": "vrchat-holiday-gifting-2026-11-25-es-1ef771011bb6.vtt",
     "youtube": ""
    },
@@ -1113,7 +1163,7 @@
     "mp4_540": "vrchat-holiday-gifting-2026-11-25-fr-3d50aefc8188-540.mp4",
     "mp4_720": "vrchat-holiday-gifting-2026-11-25-fr-3d50aefc8188-720.mp4",
     "sure": 36.5,
-    "uretildi": "2026-11-26T04:28:26+03:00",
+    "uretildi": "2026-11-26T05:52:02+03:00",
     "vtt": "vrchat-holiday-gifting-2026-11-25-fr-3d50aefc8188.vtt",
     "youtube": ""
    },
@@ -1124,8 +1174,8 @@
     "mp4_1080": "vrchat-holiday-gifting-2026-11-25-tr-8238a7ad7cb9-1080.mp4",
     "mp4_540": "vrchat-holiday-gifting-2026-11-25-tr-8238a7ad7cb9-540.mp4",
     "mp4_720": "vrchat-holiday-gifting-2026-11-25-tr-8238a7ad7cb9-720.mp4",
-    "sure": 28.4,
-    "uretildi": "2026-11-26T03:24:31+03:00",
+    "sure": 29.1,
+    "uretildi": "2026-11-26T04:55:56+03:00",
     "vtt": "vrchat-holiday-gifting-2026-11-25-tr-8238a7ad7cb9.vtt",
     "youtube": ""
    }
