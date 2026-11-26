@@ -1,0 +1,112 @@
+{
+ "id": "appulse-steam-cikis-2026-11-26",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Appulse sort aujourd'hui sur Steam : une bille de flipper protège votre vaisseau.",
+   "veri": {
+    "ust_etiket": "ROGUELITE • PC",
+    "baslik": "Appulse sort aujourd'hui sur Steam",
+    "vurgu": [
+     "aujourd'hui sur Steam"
+    ],
+    "tuslar": [
+     "Z",
+     "Q",
+     "D"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "APPULSE",
+    "alt": "PINBALL ROGUELITE SHOOTER"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Le jeu est sorti le 26 novembre sur PC Windows, via Steam.",
+   "veri": {
+    "etiket": "Sortie Steam",
+    "tarih": "26 novembre",
+    "not": "PC Windows, Steam"
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "SORTIE STEAM",
+    "alt": "PC WINDOWS"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Le recul de l'arme guide la bille, et il faut protéger le vaisseau contre des vagues de robots.",
+   "veri": {
+    "baslik": "La bille protège",
+    "maddeler": [
+     {
+      "metin": "Le recul guide la bille",
+      "tetik": "recul"
+     },
+     {
+      "metin": "Protéger le vaisseau des robots",
+      "tetik": "robots"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "BILLE ET VAISSEAU",
+    "alt": "VAGUES DE ROBOTS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "La fiche Steam le décrit comme un shooter palpitant inspiré des mécaniques du flipper.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Fiche Steam",
+    "alinti": "Un shooter palpitant vu de dessus, inspiré des mécaniques du flipper."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "STEAM • FICHE DU JEU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Allez-vous l'acheter le premier jour ?",
+   "veri": {
+    "cagri": "Allez-vous l'acheter le premier jour ?",
+    "alt": "Control A Game"
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

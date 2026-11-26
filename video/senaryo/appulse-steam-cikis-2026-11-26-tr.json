@@ -1,0 +1,112 @@
+{
+ "id": "appulse-steam-cikis-2026-11-26",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Appulse bugün Steam'de çıktı: flipper topu uzay gemisini koruyor.",
+   "veri": {
+    "ust_etiket": "ROGUELITE • PC",
+    "baslik": "Appulse bugün Steam'de çıktı",
+    "vurgu": [
+     "bugün Steam'de"
+    ],
+    "tuslar": [
+     "W",
+     "A",
+     "D"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "APPULSE",
+    "alt": "PINBALL ROGUELITE SHOOTER"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Oyun 26 Kasım'da Windows PC'de Steam üzerinden çıktı.",
+   "veri": {
+    "etiket": "Steam çıkışı",
+    "tarih": "26 Kasım",
+    "not": "Windows PC, Steam"
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "STEAM ÇIKIŞI",
+    "alt": "WINDOWS PC"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Top silah geri tepmesiyle yönlendiriliyor, robot dalgalarına karşı gemiyi koruyor.",
+   "veri": {
+    "baslik": "Top gemiyi koruyor",
+    "maddeler": [
+     {
+      "metin": "Silah geri tepmesiyle top yönlendirilir",
+      "tetik": "tepmesiyle"
+     },
+     {
+      "metin": "Robot dalgalarına karşı savunma",
+      "tetik": "robot"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "TOP GEMİYİ KORUYOR",
+    "alt": "ROBOT DALGALARI"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam sayfası oyunu pinball mekaniklerinden esinlenen üst açılı bir nişancı olarak tanımlıyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam mağaza sayfası",
+    "alinti": "Pinball mekaniklerinden esinlenen heyecan verici bir üst açılı nişancı."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "STEAM MAĞAZA SAYFASI"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Appulse'i ilk gün mü alırsın?",
+   "veri": {
+    "cagri": "Appulse'i ilk gün mü alırsın?",
+    "alt": "Tamamı sitemizde, CTRL+A GAME"
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

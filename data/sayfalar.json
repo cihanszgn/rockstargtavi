@@ -32,7 +32,7 @@
 "2026-11-19"
 ],
 "de/index.html": [
-"e84bb40b9f4d",
+"a04019575365",
 "2026-11-27"
 ],
 "de/kostenlose-spiele.html": [
@@ -120,12 +120,12 @@
 "2026-11-16"
 ],
 "de/spiele-news.html": [
-"a4b449d19736",
+"e67163fef6f3",
 "2026-11-27"
 ],
 "de/spiele/apex-legends.html": [
-"5258f02ab22d",
-"2026-11-26"
+"fe05b818e268",
+"2026-11-27"
 ],
 "de/spiele/battlefield-6.html": [
 "a754522f56b6",
@@ -192,7 +192,7 @@
 "2026-11-16"
 ],
 "de/spiele/index.html": [
-"906322970689",
+"2514a8d3c00d",
 "2026-11-27"
 ],
 "de/spiele/knight-online.html": [
@@ -292,8 +292,8 @@
 "2026-11-27"
 ],
 "de/thema/apexlegends.html": [
-"296882ddd29f",
-"2026-11-26"
+"19b2923af189",
+"2026-11-27"
 ],
 "de/thema/blizzard.html": [
 "7d121d2bb74b",
@@ -301,6 +301,10 @@
 ],
 "de/thema/counterstrike2.html": [
 "980bb21288e2",
+"2026-11-27"
+],
+"de/thema/ea.html": [
+"cd19cfbb1ec5",
 "2026-11-27"
 ],
 "de/thema/finalfantasyxiv.html": [
@@ -320,7 +324,7 @@
 "2026-11-27"
 ],
 "de/thema/pc.html": [
-"af4cabf82e5b",
+"12858a226233",
 "2026-11-27"
 ],
 "de/thema/pcstoretogether.html": [
@@ -328,11 +332,11 @@
 "2026-11-27"
 ],
 "de/thema/playstation.html": [
-"d12b90dd1f53",
+"79b7a6712a3d",
 "2026-11-27"
 ],
 "de/thema/ps5.html": [
-"70744bfa0584",
+"964474856af1",
 "2026-11-27"
 ],
 "de/thema/riotgames.html": [
@@ -356,11 +360,11 @@
 "2026-11-27"
 ],
 "de/thema/tur-cikis.html": [
-"b470013b7c21",
+"a929c0d294b8",
 "2026-11-27"
 ],
 "de/thema/tur-guncelleme.html": [
-"f6a2123c9437",
+"f4b2272f1d00",
 "2026-11-27"
 ],
 "de/thema/tur-haber.html": [
@@ -424,12 +428,12 @@
 "2026-11-27"
 ],
 "en/game-news.html": [
-"5e23bbc81ffe",
+"e6d534b57ea4",
 "2026-11-27"
 ],
 "en/game/apex-legends.html": [
-"84d8af605c81",
-"2026-11-26"
+"c83302e246ad",
+"2026-11-27"
 ],
 "en/game/battlefield-6.html": [
 "51862778743b",
@@ -496,7 +500,7 @@
 "2026-11-16"
 ],
 "en/game/index.html": [
-"1ead834e4b11",
+"4b5fecef934b",
 "2026-11-27"
 ],
 "en/game/knight-online.html": [
@@ -668,7 +672,7 @@
 "2026-11-22"
 ],
 "en/index.html": [
-"f6aba7bb692f",
+"196671ae723d",
 "2026-11-27"
 ],
 "en/languages.html": [
@@ -700,8 +704,8 @@
 "2026-11-27"
 ],
 "en/tag/apexlegends.html": [
-"f9bf46b461f3",
-"2026-11-26"
+"fe5df8d9fbd9",
+"2026-11-27"
 ],
 "en/tag/blizzard.html": [
 "a16720c7e996",
@@ -709,6 +713,10 @@
 ],
 "en/tag/counterstrike2.html": [
 "872b716046b1",
+"2026-11-27"
+],
+"en/tag/ea.html": [
+"aaf8d0e6e9dc",
 "2026-11-27"
 ],
 "en/tag/finalfantasyxiv.html": [
@@ -728,7 +736,7 @@
 "2026-11-27"
 ],
 "en/tag/pc.html": [
-"7ad6f5343016",
+"46c2b4dc088d",
 "2026-11-27"
 ],
 "en/tag/pcstoretogether.html": [
@@ -736,11 +744,11 @@
 "2026-11-27"
 ],
 "en/tag/playstation.html": [
-"27114c5e38bd",
+"1aac08d3d5b5",
 "2026-11-27"
 ],
 "en/tag/ps5.html": [
-"e01172c84142",
+"92483d8f603b",
 "2026-11-27"
 ],
 "en/tag/riotgames.html": [
@@ -764,11 +772,11 @@
 "2026-11-27"
 ],
 "en/tag/tur-cikis.html": [
-"b343cb846436",
+"2cdc2865c859",
 "2026-11-27"
 ],
 "en/tag/tur-guncelleme.html": [
-"9476d193454d",
+"47534840f0f9",
 "2026-11-27"
 ],
 "en/tag/tur-haber.html": [
@@ -896,12 +904,12 @@
 "2026-11-09"
 ],
 "es/index.html": [
-"6ccde45a292e",
+"462d3da23c48",
 "2026-11-27"
 ],
 "es/juego/apex-legends.html": [
-"d7dfde5ae9ac",
-"2026-11-26"
+"11bba4468ab7",
+"2026-11-27"
 ],
 "es/juego/battlefield-6.html": [
 "004a5d6d98c0",
@@ -968,7 +976,7 @@
 "2026-11-16"
 ],
 "es/juego/index.html": [
-"dcd90db30be7",
+"cc7597515fe9",
 "2026-11-27"
 ],
 "es/juego/knight-online.html": [
@@ -1072,7 +1080,7 @@
 "2026-11-17"
 ],
 "es/noticias-juegos.html": [
-"e4de19b0b12b",
+"f36a2355b470",
 "2026-11-27"
 ],
 "es/ofertas.html": [
@@ -1096,8 +1104,8 @@
 "2026-11-27"
 ],
 "es/tema/apexlegends.html": [
-"658b05e2ce42",
-"2026-11-26"
+"0fb1794f4e2a",
+"2026-11-27"
 ],
 "es/tema/blizzard.html": [
 "db2fea07b9c2",
@@ -1105,6 +1113,10 @@
 ],
 "es/tema/counterstrike2.html": [
 "70d339be6dcf",
+"2026-11-27"
+],
+"es/tema/ea.html": [
+"a6291d8b7310",
 "2026-11-27"
 ],
 "es/tema/finalfantasyxiv.html": [
@@ -1124,7 +1136,7 @@
 "2026-11-27"
 ],
 "es/tema/pc.html": [
-"7521347c3bbb",
+"3999a263a0c9",
 "2026-11-27"
 ],
 "es/tema/pcstoretogether.html": [
@@ -1132,11 +1144,11 @@
 "2026-11-27"
 ],
 "es/tema/playstation.html": [
-"fce2a1d4d28e",
+"2bb5191aad15",
 "2026-11-27"
 ],
 "es/tema/ps5.html": [
-"dafd10415640",
+"7f53c3888439",
 "2026-11-27"
 ],
 "es/tema/riotgames.html": [
@@ -1160,11 +1172,11 @@
 "2026-11-27"
 ],
 "es/tema/tur-cikis.html": [
-"a39b51ea16ee",
+"7e24ca1fc5ef",
 "2026-11-27"
 ],
 "es/tema/tur-guncelleme.html": [
-"b3deaaca4c33",
+"e1816ffd784c",
 "2026-11-27"
 ],
 "es/tema/tur-haber.html": [
@@ -1208,8 +1220,8 @@
 "2026-11-27"
 ],
 "etiket/apexlegends.html": [
-"10d1e2401b8f",
-"2026-11-26"
+"258573270e88",
+"2026-11-27"
 ],
 "etiket/blizzard.html": [
 "24c5c4830620",
@@ -1217,6 +1229,10 @@
 ],
 "etiket/counterstrike2.html": [
 "695ab61a0891",
+"2026-11-27"
+],
+"etiket/ea.html": [
+"b2d45b5ba9fd",
 "2026-11-27"
 ],
 "etiket/finalfantasyxiv.html": [
@@ -1228,7 +1244,7 @@
 "2026-11-27"
 ],
 "etiket/guncelleme.html": [
-"9e0f8f8d4a24",
+"4978eca4c1e2",
 "2026-11-27"
 ],
 "etiket/mobil.html": [
@@ -1240,7 +1256,7 @@
 "2026-11-27"
 ],
 "etiket/pc.html": [
-"ceeedbe55680",
+"18c7059a3347",
 "2026-11-27"
 ],
 "etiket/pcstoretogether.html": [
@@ -1248,11 +1264,11 @@
 "2026-11-27"
 ],
 "etiket/playstation.html": [
-"e64f31b2e0fa",
+"efaeac4bc1b1",
 "2026-11-27"
 ],
 "etiket/ps5.html": [
-"187b1abd5f77",
+"5dc0c62375c7",
 "2026-11-27"
 ],
 "etiket/riotgames.html": [
@@ -1276,11 +1292,11 @@
 "2026-11-27"
 ],
 "etiket/tur-cikis.html": [
-"fd2b70ebed66",
+"b92315a534a5",
 "2026-11-27"
 ],
 "etiket/tur-guncelleme.html": [
-"d9aa01de4b09",
+"e4f453846e27",
 "2026-11-27"
 ],
 "etiket/tur-haber.html": [
@@ -1324,7 +1340,7 @@
 "2026-11-15"
 ],
 "fr/actus-jeux.html": [
-"7f4c7a100a34",
+"43a604f10db0",
 "2026-11-27"
 ],
 "fr/calendrier-sorties.html": [
@@ -1412,12 +1428,12 @@
 "2026-11-22"
 ],
 "fr/index.html": [
-"c850f4601a2a",
+"dd5487229805",
 "2026-11-27"
 ],
 "fr/jeu/apex-legends.html": [
-"1cadc29613fe",
-"2026-11-26"
+"eb2758a99846",
+"2026-11-27"
 ],
 "fr/jeu/battlefield-6.html": [
 "4ca8e287845b",
@@ -1484,7 +1500,7 @@
 "2026-11-16"
 ],
 "fr/jeu/index.html": [
-"3972936f8cb5",
+"291695bc60ae",
 "2026-11-27"
 ],
 "fr/jeu/knight-online.html": [
@@ -1608,8 +1624,8 @@
 "2026-11-27"
 ],
 "fr/sujet/apexlegends.html": [
-"b991815c83cc",
-"2026-11-26"
+"505df9517c16",
+"2026-11-27"
 ],
 "fr/sujet/blizzard.html": [
 "4b955e20ca0c",
@@ -1617,6 +1633,10 @@
 ],
 "fr/sujet/counterstrike2.html": [
 "170197887d16",
+"2026-11-27"
+],
+"fr/sujet/ea.html": [
+"94910553f62c",
 "2026-11-27"
 ],
 "fr/sujet/finalfantasyxiv.html": [
@@ -1636,7 +1656,7 @@
 "2026-11-27"
 ],
 "fr/sujet/pc.html": [
-"fa49d1ec5cda",
+"7d697b5ed068",
 "2026-11-27"
 ],
 "fr/sujet/pcstoretogether.html": [
@@ -1644,11 +1664,11 @@
 "2026-11-27"
 ],
 "fr/sujet/playstation.html": [
-"72530214ef35",
+"0576690b6c79",
 "2026-11-27"
 ],
 "fr/sujet/ps5.html": [
-"eb1f93c59299",
+"47180f99d57e",
 "2026-11-27"
 ],
 "fr/sujet/riotgames.html": [
@@ -1672,11 +1692,11 @@
 "2026-11-27"
 ],
 "fr/sujet/tur-cikis.html": [
-"143313fc7cd4",
+"65930fd75293",
 "2026-11-27"
 ],
 "fr/sujet/tur-guncelleme.html": [
-"fba1e4e5de5c",
+"f2a999dc0e14",
 "2026-11-27"
 ],
 "fr/sujet/tur-haber.html": [
@@ -1752,7 +1772,7 @@
 "2026-11-15"
 ],
 "index.html": [
-"6a33c153952b",
+"c22388ecb565",
 "2026-11-27"
 ],
 "indirimler.html": [
@@ -1772,12 +1792,12 @@
 "2026-11-16"
 ],
 "nl/gamenieuws.html": [
-"0657b86696d0",
+"393575b1b8df",
 "2026-11-27"
 ],
 "nl/games/apex-legends.html": [
-"9c67712b199d",
-"2026-11-26"
+"60933ae655ca",
+"2026-11-27"
 ],
 "nl/games/battlefield-6.html": [
 "153a22d5ab84",
@@ -1844,7 +1864,7 @@
 "2026-11-16"
 ],
 "nl/games/index.html": [
-"8b0a9a35a4ac",
+"ce83b9faab87",
 "2026-11-27"
 ],
 "nl/games/knight-online.html": [
@@ -2020,7 +2040,7 @@
 "2026-11-19"
 ],
 "nl/index.html": [
-"161ca52022d4",
+"3735b710566c",
 "2026-11-27"
 ],
 "nl/nieuws.html": [
@@ -2032,8 +2052,8 @@
 "2026-11-27"
 ],
 "nl/onderwerp/apexlegends.html": [
-"a504a3b1042f",
-"2026-11-26"
+"d0bc6626a448",
+"2026-11-27"
 ],
 "nl/onderwerp/blizzard.html": [
 "8346c0ce643d",
@@ -2041,6 +2061,10 @@
 ],
 "nl/onderwerp/counterstrike2.html": [
 "d7148d82e835",
+"2026-11-27"
+],
+"nl/onderwerp/ea.html": [
+"5c1e0f12d129",
 "2026-11-27"
 ],
 "nl/onderwerp/finalfantasyxiv.html": [
@@ -2060,7 +2084,7 @@
 "2026-11-27"
 ],
 "nl/onderwerp/pc.html": [
-"3e044b6e4d53",
+"fcceeef91ae9",
 "2026-11-27"
 ],
 "nl/onderwerp/pcstoretogether.html": [
@@ -2068,11 +2092,11 @@
 "2026-11-27"
 ],
 "nl/onderwerp/playstation.html": [
-"e5afedba6cbb",
+"799343401327",
 "2026-11-27"
 ],
 "nl/onderwerp/ps5.html": [
-"2c4b21a8b52b",
+"07736c94721f",
 "2026-11-27"
 ],
 "nl/onderwerp/riotgames.html": [
@@ -2096,11 +2120,11 @@
 "2026-11-27"
 ],
 "nl/onderwerp/tur-cikis.html": [
-"00bea8e7787e",
+"5461814d90b1",
 "2026-11-27"
 ],
 "nl/onderwerp/tur-guncelleme.html": [
-"d3abbbe55e85",
+"ae447bd79659",
 "2026-11-27"
 ],
 "nl/onderwerp/tur-haber.html": [
@@ -2160,12 +2184,12 @@
 "2026-11-16"
 ],
 "oyun-haberleri.html": [
-"f0c4f405dd86",
+"b94f1b614533",
 "2026-11-27"
 ],
 "oyun/apex-legends.html": [
-"49440316e6e7",
-"2026-11-26"
+"93c06c3fd621",
+"2026-11-27"
 ],
 "oyun/battlefield-6.html": [
 "2879343afac3",
@@ -2232,7 +2256,7 @@
 "2026-11-16"
 ],
 "oyun/index.html": [
-"13f26b9e7928",
+"9db6da5d85e5",
 "2026-11-27"
 ],
 "oyun/knight-online.html": [
@@ -2512,8 +2536,8 @@
 "2026-11-27"
 ],
 "zh/huati/apexlegends.html": [
-"b07687f78f27",
-"2026-11-26"
+"778f6f69c2a0",
+"2026-11-27"
 ],
 "zh/huati/blizzard.html": [
 "e26a8b950e65",
@@ -2521,6 +2545,10 @@
 ],
 "zh/huati/counterstrike2.html": [
 "49ca6c78b375",
+"2026-11-27"
+],
+"zh/huati/ea.html": [
+"4a25515876b2",
 "2026-11-27"
 ],
 "zh/huati/finalfantasyxiv.html": [
@@ -2540,7 +2568,7 @@
 "2026-11-27"
 ],
 "zh/huati/pc.html": [
-"ef3dd0071d4b",
+"0f3884f9b68a",
 "2026-11-27"
 ],
 "zh/huati/pcstoretogether.html": [
@@ -2548,11 +2576,11 @@
 "2026-11-27"
 ],
 "zh/huati/playstation.html": [
-"9dd0195c0924",
+"6892519b6ba8",
 "2026-11-27"
 ],
 "zh/huati/ps5.html": [
-"1764934b43b4",
+"70f3253edd6c",
 "2026-11-27"
 ],
 "zh/huati/riotgames.html": [
@@ -2576,11 +2604,11 @@
 "2026-11-27"
 ],
 "zh/huati/tur-cikis.html": [
-"d64d891631df",
+"9c77f26a3025",
 "2026-11-27"
 ],
 "zh/huati/tur-guncelleme.html": [
-"1cae4827e2a2",
+"b724b7905eba",
 "2026-11-27"
 ],
 "zh/huati/tur-haber.html": [
@@ -2620,7 +2648,7 @@
 "2026-11-27"
 ],
 "zh/index.html": [
-"4cea9db9def0",
+"ac2a5e591f75",
 "2026-11-27"
 ],
 "zh/laiyuan.html": [
@@ -2644,12 +2672,12 @@
 "2026-11-26"
 ],
 "zh/youxi-xinwen.html": [
-"5a86c6e2deeb",
+"474eacf70b7a",
 "2026-11-27"
 ],
 "zh/youxi/apex-legends.html": [
-"468eac3d4132",
-"2026-11-26"
+"1c138c77be41",
+"2026-11-27"
 ],
 "zh/youxi/battlefield-6.html": [
 "dccf6738979e",
@@ -2716,7 +2744,7 @@
 "2026-11-16"
 ],
 "zh/youxi/index.html": [
-"898719ea8b96",
+"068e15136e7a",
 "2026-11-27"
 ],
 "zh/youxi/knight-online.html": [

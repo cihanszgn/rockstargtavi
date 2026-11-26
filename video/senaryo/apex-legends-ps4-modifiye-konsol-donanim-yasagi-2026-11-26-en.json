@@ -1,0 +1,99 @@
+{
+ "id": "apex-legends-ps4-modifiye-konsol-donanim-yasagi-2026-11-26",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Apex Legends players using modified PlayStation 4 consoles to cheat will get hardware bans on their consoles.",
+   "veri": {
+    "ust_etiket": "APEX LEGENDS",
+    "baslik": "Hardware bans for modified PS4",
+    "vurgu": [
+     "Hardware bans"
+    ],
+    "tuslar": [
+     "P",
+     "S",
+     "4"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "APEX LEGENDS",
+    "alt": "MODIFIED PS4 CONSOLES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to the official Steam post, the developer has confirmed modified consoles are being used in the game, and it has contacted Sony.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Official Steam post",
+    "alinti": "Modified PlayStation 4 consoles are confirmed in use; dedicated detection is in place and Sony has been contacted."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "APEX LEGENDS • STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "The Anti-Cheat team has put dedicated detection in place. Players caught with modified hardware will receive console bans. Playing on console is no exemption.",
+   "veri": {
+    "baslik": "How enforcement works",
+    "maddeler": [
+     {
+      "metin": "Dedicated detection is in place",
+      "tetik": "detection"
+     },
+     {
+      "metin": "Hardware bans for identified cheaters",
+      "tetik": "bans"
+     },
+     {
+      "metin": "Console play is no exemption",
+      "tetik": "exemption"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "HARDWARE BANS",
+    "alt": "NO CONSOLE EXEMPTION"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Would you say this penalty is enough? Read the full story on our site, Control A Game.",
+   "veri": {
+    "cagri": "Is this penalty enough?",
+    "alt": "Sources and details are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

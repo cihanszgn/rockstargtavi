@@ -1,0 +1,112 @@
+{
+ "id": "appulse-steam-cikis-2026-11-26",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Appulse sale hoy en Steam: una bola de pinball defiende tu nave.",
+   "veri": {
+    "ust_etiket": "ROGUELITE • PC",
+    "baslik": "Appulse sale hoy en Steam",
+    "vurgu": [
+     "hoy en Steam"
+    ],
+    "tuslar": [
+     "W",
+     "A",
+     "D"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "APPULSE",
+    "alt": "PINBALL ROGUELITE SHOOTER"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Salió el 26 de noviembre para PC con Windows, a través de Steam.",
+   "veri": {
+    "etiket": "Lanzamiento en Steam",
+    "tarih": "26 de noviembre",
+    "not": "Windows PC, Steam"
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "LANZAMIENTO",
+    "alt": "WINDOWS PC"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "El retroceso del arma dirige la bola y debes defender la nave de oleadas de robots.",
+   "veri": {
+    "baslik": "La bola protege la nave",
+    "maddeler": [
+     {
+      "metin": "El retroceso dirige la bola",
+      "tetik": "retroceso"
+     },
+     {
+      "metin": "Defensa contra oleadas de robots",
+      "tetik": "robots"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "BOLA Y NAVE",
+    "alt": "OLEADAS DE ROBOTS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "La página de Steam lo describe como un shooter emocionante inspirado en las mecánicas del pinball.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Página de Steam",
+    "alinti": "Un shooter emocionante desde arriba, inspirado en las mecánicas del pinball."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "STEAM • PÁGINA DE LA TIENDA"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Lo comprarás el primer día?",
+   "veri": {
+    "cagri": "¿Lo comprarás el primer día?",
+    "alt": "Control A Game"
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

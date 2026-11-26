@@ -1,0 +1,112 @@
+{
+ "id": "appulse-steam-cikis-2026-11-26",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Appulse launches today on Steam: a pinball ball defends your spaceship.",
+   "veri": {
+    "ust_etiket": "ROGUELITE • PC",
+    "baslik": "Appulse launches today on Steam",
+    "vurgu": [
+     "today on Steam"
+    ],
+    "tuslar": [
+     "W",
+     "A",
+     "D"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "APPULSE",
+    "alt": "PINBALL ROGUELITE SHOOTER"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Released on November 26 for Windows PC on Steam.",
+   "veri": {
+    "etiket": "Steam release",
+    "tarih": "November 26",
+    "not": "Windows PC, Steam"
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "STEAM RELEASE",
+    "alt": "WINDOWS PC"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Steer the ball with weapon recoil, and defend the mothership from robot waves.",
+   "veri": {
+    "baslik": "Recoil steers the ball",
+    "maddeler": [
+     {
+      "metin": "Weapon recoil steers the ball",
+      "tetik": "recoil"
+     },
+     {
+      "metin": "Defend the mothership from robot waves",
+      "tetik": "robot"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "BALL CONTROL",
+    "alt": "ROBOT WAVES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "The Steam store page calls it a thrilling top-down shooter inspired by pinball mechanics.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam store page",
+    "alinti": "A thrilling top-down shooter inspired by pinball mechanics."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "STEAM STORE PAGE"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Will you buy it on day one?",
+   "veri": {
+    "cagri": "Will you buy it on day one?",
+    "alt": "Read more on our site"
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,135 @@
+{
+ "id": "infinity-nikki-3-0-ps5-2026-11-26",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Infinity Nikki 3.0 arrive aujourd'hui sur PS5, avec deux nouvelles villes et 160 tirages gratuits.",
+   "veri": {
+    "ust_etiket": "VERSION 3.0",
+    "baslik": "Infinity Nikki 3.0 arrive sur PS5",
+    "vurgu": [
+     "arrive sur PS5"
+    ],
+    "tuslar": [
+     "P",
+     "S",
+     "5"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "INFINITY NIKKI",
+    "alt": "VERSION 3.0 • PS5"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Selon l'annonce du PlayStation Blog, la mise à jour sort aujourd'hui et mène l'histoire à Cicia et Ceremius.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Annonce du PlayStation Blog",
+    "alinti": "La version 3.0 sort aujourd'hui sur PS5 et emmène Nikki et Momo à Cicia et Ceremius."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "PLAYSTATION BLOG"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Cicia est la capitale des arts, Ceremius reste cachée dans la brume. Quatre capacités clés changent l'exploration.",
+   "veri": {
+    "baslik": "Deux nouvelles villes",
+    "maddeler": [
+     {
+      "metin": "Cicia : capitale des arts",
+      "tetik": "Cicia"
+     },
+     {
+      "metin": "Ceremius : dans la brume",
+      "tetik": "Ceremius"
+     },
+     {
+      "metin": "Quatre capacités clés",
+      "tetik": "capacités"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DEUX NOUVELLES VILLES",
+    "alt": "CICIA ET CEREMIUS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "L'anniversaire de Nikki apporte 160 tirages et 19 ensembles de vêtements, tous gratuits. L'histoire dure près de 10 heures.",
+   "veri": {
+    "baslik": "Récompenses gratuites",
+    "platformlar": [
+     "PS5"
+    ],
+    "sayilar": [
+     {
+      "deger": "160",
+      "etiket": "TIRAGES",
+      "tetik": "160"
+     },
+     {
+      "deger": "19",
+      "etiket": "TENUES",
+      "tetik": "19"
+     },
+     {
+      "deger": "10",
+      "etiket": "HEURES",
+      "tetik": "10"
+     }
+    ],
+    "not": "Les nouveaux joueurs peuvent choisir n'importe quel chapitre déjà sorti."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "RÉCOMPENSES GRATUITES",
+    "alt": "ANNIVERSAIRE DE NIKKI"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Quelle ville explorerez-vous en premier ?",
+   "veri": {
+    "cagri": "Tout est sur le site",
+    "alt": "Sources et détails dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

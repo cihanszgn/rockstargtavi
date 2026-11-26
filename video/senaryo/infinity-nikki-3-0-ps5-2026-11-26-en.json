@@ -1,0 +1,135 @@
+{
+ "id": "infinity-nikki-3-0-ps5-2026-11-26",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Infinity Nikki 3.0 is live on PS5 today, adding two new cities and 160 free draws.",
+   "veri": {
+    "ust_etiket": "VERSION 3.0",
+    "baslik": "Infinity Nikki 3.0 is live on PS5",
+    "vurgu": [
+     "live on PS5"
+    ],
+    "tuslar": [
+     "P",
+     "S",
+     "5"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "INFINITY NIKKI",
+    "alt": "VERSION 3.0 • PS5"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to PlayStation Blog, the update is out today.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "PlayStation Blog announcement",
+    "alinti": "Version 3.0 releases on PS5 today, taking Nikki and Momo to Cicia and Ceremius."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "PLAYSTATION BLOG"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Cicia is the capital of art; Ceremius lies hidden in the mist. Four key abilities change exploration.",
+   "veri": {
+    "baslik": "Two new cities",
+    "maddeler": [
+     {
+      "metin": "Cicia: capital of art",
+      "tetik": "Cicia"
+     },
+     {
+      "metin": "Ceremius: hidden in the mist",
+      "tetik": "Ceremius"
+     },
+     {
+      "metin": "Four key abilities",
+      "tetik": "abilities"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "TWO NEW CITIES",
+    "alt": "CICIA AND CEREMIUS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Nikki's Birthday brings 160 draws and 19 outfit sets, all free. The story runs nearly 10 hours.",
+   "veri": {
+    "baslik": "Free rewards",
+    "platformlar": [
+     "PS5"
+    ],
+    "sayilar": [
+     {
+      "deger": "160",
+      "etiket": "DRAWS",
+      "tetik": "160"
+     },
+     {
+      "deger": "19",
+      "etiket": "OUTFIT SETS",
+      "tetik": "19"
+     },
+     {
+      "deger": "10",
+      "etiket": "HOURS OF STORY",
+      "tetik": "10"
+     }
+    ],
+    "not": "New and returning players can pick any released chapter."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "FREE REWARDS",
+    "alt": "NIKKI'S BIRTHDAY"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Would you explore Cicia first?",
+   "veri": {
+    "cagri": "Every detail is on the site",
+    "alt": "Sources and story notes are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

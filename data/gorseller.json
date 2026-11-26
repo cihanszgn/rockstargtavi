@@ -81,6 +81,12 @@
   "boy": 1080,
   "kilit": true
  },
+ "appulse-steam-cikis-2026-11-26": {
+  "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3498700/5551d6ea2d075752c744830204eb47a5376817ed/header.jpg",
+  "kaynak": "Steam",
+  "en": 460,
+  "boy": 215
+ },
  "ark-survival-ascended-turkey-trial-2026-11-21": {
   "url": "https://clan.akamai.steamstatic.com/images/44719856/324a13d53fee81fe3d27f50807ef6c67851647c4.jpg",
   "kaynak": "Steam",
@@ -322,6 +328,12 @@
  "hounded-ps5-2027-duyuru-2026-11-17": {
   "url": "https://blog.playstation.com/tachyon/2048/11/35ee932cfac0044b7c4d4d1d41f95533dd2f3202-scaled.jpg",
   "kaynak": "PlayStation Blog (resmî duyuru)",
+  "en": 2560,
+  "boy": 1440
+ },
+ "infinity-nikki-3-0-ps5-2026-11-26": {
+  "url": "https://blog.playstation.com/tachyon/2048/11/2a1b04b0d0c0589134242513d7310e67844936c9-scaled.jpeg",
+  "kaynak": "PlayStation Blog",
   "en": 2560,
   "boy": 1440
  },

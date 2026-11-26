@@ -1,0 +1,135 @@
+{
+ "id": "infinity-nikki-3-0-ps5-2026-11-26",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Infinity Nikki'nin 3.0 güncellemesi bugün PS5'te: iki yeni şehir ve 160 ücretsiz çekiliş geliyor.",
+   "veri": {
+    "ust_etiket": "VERSİYON 3.0",
+    "baslik": "Infinity Nikki 3.0 bugün PS5'te",
+    "vurgu": [
+     "bugün PS5'te"
+    ],
+    "tuslar": [
+     "P",
+     "S",
+     "5"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "INFINITY NIKKI",
+    "alt": "VERSİYON 3.0 • PS5"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "PlayStation Blog'a göre güncelleme bugün yayında.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "PlayStation Blog duyurusu",
+    "alinti": "Version 3.0 bugün PS5'te yayında; macera Cicia ve Ceremius şehirlerine taşınıyor."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "PLAYSTATION BLOG"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Cicia sanat başkenti, Ceremius ise sisin ardında. Dört temel yetenek keşfi değiştiriyor.",
+   "veri": {
+    "baslik": "İki yeni şehir",
+    "maddeler": [
+     {
+      "metin": "Cicia: sanat başkenti",
+      "tetik": "Cicia"
+     },
+     {
+      "metin": "Ceremius: sisin ardında",
+      "tetik": "Ceremius"
+     },
+     {
+      "metin": "Dört temel yetenek",
+      "tetik": "yetenek"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "İKİ YENİ ŞEHİR",
+    "alt": "CICIA VE CEREMIUS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "160 çekiliş ve 19 kıyafet takımı ücretsiz; hikâye yaklaşık 10 saat.",
+   "veri": {
+    "baslik": "Ücretsiz ödüller",
+    "platformlar": [
+     "PS5"
+    ],
+    "sayilar": [
+     {
+      "deger": "160",
+      "etiket": "ÇEKİLİŞ",
+      "tetik": "160"
+     },
+     {
+      "deger": "19",
+      "etiket": "KIYAFET TAKIMI",
+      "tetik": "19"
+     },
+     {
+      "deger": "10",
+      "etiket": "SAAT HİKÂYE",
+      "tetik": "10"
+     }
+    ],
+    "not": "Yeni ve dönen oyuncular bölüm seçebilir."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "ÜCRETSİZ ÖDÜLLER",
+    "alt": "NİKKİ'NİN DOĞUM GÜNÜ"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Yeni şehri ilk gün keşfeder misin?",
+   "veri": {
+    "cagri": "Bütün ayrıntılar sitede",
+    "alt": "Güncelleme notları ve yeni şehirler haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

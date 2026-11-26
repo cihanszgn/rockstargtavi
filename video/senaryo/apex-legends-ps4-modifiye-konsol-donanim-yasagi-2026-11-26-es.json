@@ -1,0 +1,99 @@
+{
+ "id": "apex-legends-ps4-modifiye-konsol-donanim-yasagi-2026-11-26",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Los jugadores de Apex Legends que usen consolas PlayStation 4 modificadas para hacer trampa recibirán baneos de hardware.",
+   "veri": {
+    "ust_etiket": "APEX LEGENDS",
+    "baslik": "Baneos de hardware a PS4",
+    "vurgu": [
+     "Baneos de hardware"
+    ],
+    "tuslar": [
+     "P",
+     "S",
+     "4"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "APEX LEGENDS",
+    "alt": "PS4 MODIFICADAS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según la publicación oficial en Steam, el desarrollador confirmó el uso de consolas modificadas y contactó a Sony.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Publicación oficial en Steam",
+    "alinti": "Se confirma el uso de consolas PlayStation 4 modificadas; hay detección específica y se contactó a Sony."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "APEX LEGENDS • STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "El equipo Anti-Cheat ya aplica detección específica. Quienes sean identificados recibirán baneos de hardware. Jugar en consola no ofrece exención.",
+   "veri": {
+    "baslik": "Cómo se aplicará",
+    "maddeler": [
+     {
+      "metin": "Detección específica activa",
+      "tetik": "detección"
+     },
+     {
+      "metin": "Baneo de hardware en la consola",
+      "tetik": "baneos"
+     },
+     {
+      "metin": "Jugar en consola no exime",
+      "tetik": "exención"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "BANEO DE HARDWARE",
+    "alt": "SIN EXENCIÓN EN CONSOLA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "¿Te parece suficiente esta sanción? Todos los detalles en nuestra web, Control A Game.",
+   "veri": {
+    "cagri": "¿Te parece suficiente?",
+    "alt": "Fuentes y detalles en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "id": "apex-legends-ps4-modifiye-konsol-donanim-yasagi-2026-11-26",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Les joueurs d'Apex Legends qui utilisent des PlayStation 4 modifiées pour tricher recevront un bannissement matériel de leur console.",
+   "veri": {
+    "ust_etiket": "APEX LEGENDS",
+    "baslik": "Bannissement matériel PS4",
+    "vurgu": [
+     "Bannissement matériel"
+    ],
+    "tuslar": [
+     "P",
+     "S",
+     "4"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "APEX LEGENDS",
+    "alt": "PS4 MODIFIÉES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Selon l'annonce officielle sur Steam, le développeur confirme l'usage de consoles modifiées et a contacté Sony.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Annonce officielle sur Steam",
+    "alinti": "Usage confirmé de consoles PlayStation 4 modifiées ; détection dédiée en place et contact établi avec Sony."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "APEX LEGENDS • STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "L'équipe Anti-Cheat a mis en place une détection dédiée. Les joueurs identifiés recevront un bannissement matériel. Jouer sur console n'offre aucune exemption.",
+   "veri": {
+    "baslik": "Ce qui change",
+    "maddeler": [
+     {
+      "metin": "Détection dédiée déployée",
+      "tetik": "détection"
+     },
+     {
+      "metin": "Bannissement matériel des contrevenants",
+      "tetik": "bannissement"
+     },
+     {
+      "metin": "Aucune exemption sur console",
+      "tetik": "exemption"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "BANNISSEMENT MATÉRIEL",
+    "alt": "AUCUNE EXEMPTION"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Cette sanction vous semble-t-elle suffisante ? Tout est sur notre site, Control A Game.",
+   "veri": {
+    "cagri": "Sanction suffisante ?",
+    "alt": "Sources et détails dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

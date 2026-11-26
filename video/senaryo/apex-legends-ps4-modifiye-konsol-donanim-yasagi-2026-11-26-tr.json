@@ -1,0 +1,99 @@
+{
+ "id": "apex-legends-ps4-modifiye-konsol-donanim-yasagi-2026-11-26",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Apex Legends'ta modifiye PS4 ile hile yapanların konsolları donanım yasağıyla kapatılacak.",
+   "veri": {
+    "ust_etiket": "APEX LEGENDS",
+    "baslik": "Hilecilere donanım yasağı",
+    "vurgu": [
+     "donanım yasağı"
+    ],
+    "tuslar": [
+     "P",
+     "S",
+     "4"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "APEX LEGENDS",
+    "alt": "MODİFİYE PS4 KONSOLLAR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Oyunun resmî Steam duyurusu, değiştirilmiş konsolların kullanımını teyit ediyor ve Sony ile temas kurulduğunu belirtiyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam geliştirici duyurusu",
+    "alinti": "Değiştirilmiş PlayStation 4 konsollarının kullanımı teyit edildi; Anti-Cheat ekibi özel tespit önlemleri uyguluyor."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "EA APEX LEGENDS • STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Anti-Cheat ekibi özel tespit önlemleri uyguluyor. Tespit edilen oyuncuların konsoluna donanım yasağı gelecek. Konsolda oynamak muafiyet sağlamıyor.",
+   "veri": {
+    "baslik": "Yaptırım nasıl işliyor",
+    "maddeler": [
+     {
+      "metin": "Özel tespit önlemleri devrede",
+      "tetik": "tespit"
+     },
+     {
+      "metin": "Konsola donanım yasağı",
+      "tetik": "donanım"
+     },
+     {
+      "metin": "Konsolda oynamak muafiyet değil",
+      "tetik": "muafiyet"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "HİLE VE KONSOL",
+    "alt": "DONANIM YASAĞI GELİYOR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Sence bu yaptırım yeterli mi? Tamamı sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "Sence yeterli mi?",
+    "alt": "Kaynaklar ve ayrıntılar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
