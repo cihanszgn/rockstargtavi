@@ -1,0 +1,128 @@
+{
+ "id": "vrchat-holiday-gifting-2026-11-25",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "VRChat'te tatil hediye etkinliği geri geldi; hediye gönderen herkes ödül alıyor.",
+   "veri": {
+    "ust_etiket": "TATİL ETKİNLİĞİ",
+    "baslik": "VRChat'te tatil hediye etkinliği",
+    "vurgu": [
+     "hediye"
+    ],
+    "tuslar": [
+     "V",
+     "R",
+     "C"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "VRCHAT",
+    "alt": "HOLIDAY GIFTING"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Topluluk üç ortak hedefe ulaşırsa herkes ödül alır: Princess of Frost, Ice Crown ve Iced Out Watch.",
+   "veri": {
+    "baslik": "Ortak hedefler",
+    "maddeler": [
+     {
+      "metin": "İlk hedef: Princess of Frost çıkartması",
+      "tetik": "Princess"
+     },
+     {
+      "metin": "İkinci hedef: Ice Crown",
+      "tetik": "Ice"
+     },
+     {
+      "metin": "Üçüncü hedef: Iced Out Watch",
+      "tetik": "Iced"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "ORTAK HEDEFLER",
+    "alt": "HERKESE ÖDÜL"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Hype Train her oyuncuda geri döndü; 10, 20 ve 30 hediyede farklı ödüller açılıyor.",
+   "veri": {
+    "baslik": "Hype Train geri döndü",
+    "maddeler": [
+     {
+      "metin": "10 hediye: Frosty Ski Goggles",
+      "tetik": "10"
+     },
+     {
+      "metin": "20 hediye: Hot Cup of Generosity",
+      "tetik": "20"
+     },
+     {
+      "metin": "30 hediye: Cozy Lodge Portal ve 500 VRChat Credits",
+      "tetik": "30"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "HYPE TRAIN ÖDÜLLERİ",
+    "alt": "HER OYUNCUYA BİR KEZ"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Etkinlik 4 Ocak 2027'ye kadar sürüyor.",
+   "veri": {
+    "etiket": "Etkinlik bitişi",
+    "tarih": "4 Ocak 2027",
+    "not": "Tüm görevleri tamamlayanlara Ocak ayında 5.000 bonus kredi."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "ETKİNLİK SONU",
+    "alt": "4 OCAK 2027"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Hangi ödülü ilk hedeflersin?",
+   "veri": {
+    "cagri": "Bütün detaylar sitede",
+    "alt": "Ödül listesi ve hedefler haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

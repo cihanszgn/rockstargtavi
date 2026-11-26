@@ -1,0 +1,128 @@
+{
+ "id": "vrchat-holiday-gifting-2026-11-25",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "VRChat's holiday gifting event is back, and every gift you send earns a reward.",
+   "veri": {
+    "ust_etiket": "HOLIDAY EVENT",
+    "baslik": "VRChat holiday gifting event is back",
+    "vurgu": [
+     "gifting"
+    ],
+    "tuslar": [
+     "V",
+     "R",
+     "C"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "VRCHAT",
+    "alt": "HOLIDAY GIFTING"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Three community milestones give everyone a reward: the Princess of Frost sticker, the Ice Crown and the Iced Out Watch.",
+   "veri": {
+    "baslik": "Community goals",
+    "maddeler": [
+     {
+      "metin": "First goal: Princess of Frost sticker",
+      "tetik": "Princess"
+     },
+     {
+      "metin": "Second goal: Ice Crown",
+      "tetik": "Ice"
+     },
+     {
+      "metin": "Third goal: Iced Out Watch",
+      "tetik": "Iced"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "COMMUNITY GOALS",
+    "alt": "EVERYONE GETS THE REWARD"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "The Hype Train is back in every instance, with rewards at 10, 20 and 30 gifts.",
+   "veri": {
+    "baslik": "Hype Train is back",
+    "maddeler": [
+     {
+      "metin": "10 gifts: Frosty Ski Goggles",
+      "tetik": "10"
+     },
+     {
+      "metin": "20 gifts: Hot Cup of Generosity",
+      "tetik": "20"
+     },
+     {
+      "metin": "30 gifts: Cozy Lodge Portal and 500 VRChat Credits",
+      "tetik": "30"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "HYPE TRAIN TIERS",
+    "alt": "EACH REWARD ONCE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "The event runs until January 4, 2027. Gifters who complete every task also get 5,000 bonus credits in January.",
+   "veri": {
+    "etiket": "Event ends",
+    "tarih": "January 4, 2027",
+    "not": "Complete every task for 5,000 bonus credits."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "EVENT END",
+    "alt": "JANUARY 4, 2027"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Which reward would you chase first?",
+   "veri": {
+    "cagri": "Every reward on the site",
+    "alt": "Milestones and Hype Train tiers are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

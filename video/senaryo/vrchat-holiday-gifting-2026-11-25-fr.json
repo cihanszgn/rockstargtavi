@@ -1,0 +1,128 @@
+{
+ "id": "vrchat-holiday-gifting-2026-11-25",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "L'événement de cadeaux des fêtes de VRChat revient, et chaque cadeau envoyé rapporte une récompense.",
+   "veri": {
+    "ust_etiket": "ÉVÉNEMENT DES FÊTES",
+    "baslik": "VRChat relance ses cadeaux des fêtes",
+    "vurgu": [
+     "cadeaux"
+    ],
+    "tuslar": [
+     "V",
+     "R",
+     "C"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "VRCHAT",
+    "alt": "CADEAUX DES FÊTES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Trois objectifs communautaires donnent une récompense à tous : l'autocollant Princess of Frost, la couronne Ice Crown et la montre Iced Out Watch.",
+   "veri": {
+    "baslik": "Objectifs communs",
+    "maddeler": [
+     {
+      "metin": "Premier objectif : autocollant Princess of Frost",
+      "tetik": "Princess"
+     },
+     {
+      "metin": "Deuxième objectif : couronne Ice Crown",
+      "tetik": "Ice"
+     },
+     {
+      "metin": "Troisième objectif : montre Iced Out Watch",
+      "tetik": "Iced"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "OBJECTIFS COMMUNS",
+    "alt": "RÉCOMPENSE POUR TOUS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Le Hype Train revient dans chaque instance, avec des récompenses à 10, 20 et 30 cadeaux.",
+   "veri": {
+    "baslik": "Hype Train revient",
+    "maddeler": [
+     {
+      "metin": "10 cadeaux : Frosty Ski Goggles",
+      "tetik": "10"
+     },
+     {
+      "metin": "20 cadeaux : Hot Cup of Generosity",
+      "tetik": "20"
+     },
+     {
+      "metin": "30 cadeaux : Cozy Lodge Portal et 500 VRChat Credits",
+      "tetik": "30"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "PALIERS DU HYPE TRAIN",
+    "alt": "UNE SEULE FOIS PAR JOUEUR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "L'événement dure jusqu'au 4 janvier 2027. Les donateurs qui accomplissent toutes les tâches reçoivent aussi 5 000 crédits en janvier.",
+   "veri": {
+    "etiket": "Fin de l'événement",
+    "tarih": "4 janvier 2027",
+    "not": "Tâches accomplies : 5 000 crédits bonus en janvier."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "FIN DE L'ÉVÉNEMENT",
+    "alt": "4 JANVIER 2027"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Quelle récompense viseriez-vous en premier ?",
+   "veri": {
+    "cagri": "Tous les détails sur le site",
+    "alt": "Objectifs et paliers du Hype Train dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
