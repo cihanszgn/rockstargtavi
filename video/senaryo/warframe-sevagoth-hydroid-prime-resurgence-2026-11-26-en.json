@@ -1,0 +1,98 @@
+{
+ "id": "warframe-sevagoth-hydroid-prime-resurgence-2026-11-26",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Warframe's Sevagoth Prime and Hydroid Prime are available together for the first time.",
+   "veri": {
+    "ust_etiket": "WARFRAME • PRIME RESURGENCE",
+    "baslik": "Sevagoth and Hydroid Prime, together",
+    "vurgu": [
+     "together"
+    ],
+    "tuslar": [
+     "P",
+     "R"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "WARFRAME",
+    "alt": "PRIME RESURGENCE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to Steam's official post, their Prime Weapons and Prime Accessories are available with them too.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam official news post",
+    "alinti": "Prime weapons and accessories are available together with both Warframes."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "STEAM NEWS POST"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Sevagoth Prime is built around damage over time and survivability. Hydroid Prime makes enemies vulnerable to Corrosive damage and can suspend them with Tentacle Swarm.",
+   "veri": {
+    "baslik": "Two very different Primes",
+    "maddeler": [
+     {
+      "metin": "Sevagoth: damage over time",
+      "tetik": "Sevagoth"
+     },
+     {
+      "metin": "Hydroid: Corrosive damage",
+      "tetik": "Hydroid"
+     },
+     {
+      "metin": "Tentacle Swarm suspends foes",
+      "tetik": "Tentacle Swarm"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "TWO DIFFERENT PRIMES",
+    "alt": "SEVAGOTH AND HYDROID"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Would you grab both right away, or wait?",
+   "veri": {
+    "cagri": "Full story on our site",
+    "alt": "Details are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

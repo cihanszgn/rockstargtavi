@@ -1,0 +1,98 @@
+{
+ "id": "warframe-sevagoth-hydroid-prime-resurgence-2026-11-26",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Pour la première fois, Sevagoth Prime et Hydroid Prime sont disponibles ensemble dans Warframe.",
+   "veri": {
+    "ust_etiket": "WARFRAME • PRIME RESURGENCE",
+    "baslik": "Sevagoth et Hydroid Prime ensemble",
+    "vurgu": [
+     "ensemble"
+    ],
+    "tuslar": [
+     "P",
+     "R"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "WARFRAME",
+    "alt": "PRIME RESURGENCE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Selon l'annonce officielle sur Steam, leurs armes et accessoires Prime sont aussi disponibles.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Annonce officielle sur Steam",
+    "alinti": "Les armes et accessoires Prime sont disponibles avec les deux Warframe."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "ANNONCE STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Sevagoth Prime mise sur les dégâts dans la durée et une grande survie. Hydroid Prime rend les ennemis vulnérables aux dégâts corrosifs et peut les suspendre avec Tentacle Swarm.",
+   "veri": {
+    "baslik": "Deux Prime très différents",
+    "maddeler": [
+     {
+      "metin": "Sevagoth : dégâts sur la durée",
+      "tetik": "Sevagoth"
+     },
+     {
+      "metin": "Hydroid : dégâts corrosifs",
+      "tetik": "Hydroid"
+     },
+     {
+      "metin": "Tentacle Swarm suspend",
+      "tetik": "Tentacle Swarm"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DEUX PRIME DIFFÉRENTS",
+    "alt": "SEVAGOTH ET HYDROID"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Les prendriez-vous tout de suite, ou attendriez-vous ?",
+   "veri": {
+    "cagri": "Tout est sur notre site",
+    "alt": "Détails complets dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

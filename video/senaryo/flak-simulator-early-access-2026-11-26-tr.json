@@ -1,0 +1,115 @@
+{
+ "id": "flak-simulator-early-access-2026-11-26",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Flak Simulator Steam'de Erken Erişim'e çıktı; uçaksavar topunun başına geçebilirsin.",
+   "veri": {
+    "ust_etiket": "STEAM ERKEN ERİŞİM",
+    "baslik": "Flak Simulator Erken Erişim'de",
+    "vurgu": [
+     "Erken Erişim'de"
+    ],
+    "tuslar": [
+     "F",
+     "L",
+     "K"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "FLAK SIMULATOR",
+    "alt": "STEAM ERKEN ERİŞİM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Şimdilik Flak 37, Flak 38 ve Opel Blitz üzerindeki Flak 38 var. Görevler Almanya ve Kuzey Afrika'da geçiyor.",
+   "veri": {
+    "baslik": "Şu an oynanabilenler",
+    "maddeler": [
+     {
+      "metin": "Flak 37: 88 mm uçaksavar topu",
+      "tetik": "Flak"
+     },
+     {
+      "metin": "Opel Blitz: konvoy eskortu",
+      "tetik": "Opel"
+     },
+     {
+      "metin": "Almanya ve Kuzey Afrika görevleri",
+      "tetik": "Almanya"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "ŞU ANKİ İÇERİK",
+    "alt": "SİLAHLAR VE GÖREVLER"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Sırada Bofors, Tobruk Kuşatması, Britanya Savaşı bölgesi ve Doğu Cephesi var. Iron Nest ile paket almak iki oyunda yüzde 10 indirim sağlıyor.",
+   "veri": {
+    "baslik": "Sırada neler var",
+    "maddeler": [
+     {
+      "metin": "Bofors 40 mm otomatik top",
+      "tetik": "Bofors"
+     },
+     {
+      "metin": "Tobruk Kuşatması görevi",
+      "tetik": "Tobruk"
+     },
+     {
+      "metin": "Doğu Cephesi",
+      "tetik": "Doğu"
+     },
+     {
+      "metin": "Iron Nest paketi: iki oyunda %10",
+      "tetik": "Iron"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "GELECEK İÇERİK",
+    "alt": "IRON NEST PAKETİ %10"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Sen ilk günden denersin, yoksa daha fazla içerik mi beklersin?",
+   "veri": {
+    "cagri": "Tamamı sitede",
+    "alt": "Kaynak ve içerik listesi haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

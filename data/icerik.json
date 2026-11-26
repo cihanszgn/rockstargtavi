@@ -1,5 +1,320 @@
 [
  {
+  "id": "flak-simulator-early-access-2026-11-26",
+  "oyun": "Flak Simulator",
+  "tarih": "2026-11-26",
+  "tur": "cikis",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam resmî duyurusu",
+    "url": "https://store.steampowered.com/news/app/5268810/view/686397604216440139"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Flak Simulator Steam Erken Erişim'de, 26 Kasım",
+    "ozet": "Flak Simulator Steam'de Erken Erişim'e açıldı; Flak 37, Flak 38 ve Opel Blitz ile Almanya ve Kuzey Afrika görevleri oynanabiliyor.",
+    "metin": "Flak Simulator, uçaksavar topçusu temalı oyun olarak 26 Kasım'da Steam'de Erken Erişim'e çıktı. Yapım ekibinin resmî Steam duyurusuna göre oyun artık herkes için oynanabilir durumda.\n\nEkip, bunun yayımladığı ilk oyun olduğunu ve 50.000'den fazla kişinin istek listesine eklediğini belirtiyor. Oyunu topluluk geri bildirimiyle geliştirmeyi, Erken Erişim boyunca görev, silah ve savaş bölgesi seçkisini genişletmeyi planlıyor. Şu an Flak 37 (88 mm uçaksavar topu), Flak 38 (20 mm otomatik top) ve konvoy eskortu görevlerinde kullanılan, Opel Blitz üzerindeki mobil Flak 38 platformu var. Görevler Almanya'da gündüz ve gece, Schweinfurt baskını ile Kuzey Afrika'da gündüz ve konvoy eskortunu kapsıyor.\n\nPlanlanan içerikte Commonwealth kuvvetleri, 40 mm Bofors otomatik topu, QF 3.7 inç uçaksavar topu, Tobruk Kuşatması görevi, Britanya Savaşı bölgesi ve Doğu Cephesi yer alıyor. Iron Nest ile alınan paket iki oyunda %10 indirim sağlıyor; duyuruda bölgesel fiyat verilmiyor. Uçaksavar simülasyonu sevenler oyunu bugün Steam'de deneyebilir, ancak yeni içeriklerin çoğu henüz yolda.",
+    "etiketler": [
+     "#FlakSimulator",
+     "#IronNest",
+     "#Steam",
+     "#EarlyAccess"
+    ]
+   },
+   "en": {
+    "baslik": "Flak Simulator enters Steam Early Access on November 26",
+    "ozet": "Flak Simulator is live in Steam Early Access with the Flak 37, Flak 38 and Opel Blitz, plus missions in Germany and North Africa.",
+    "metin": "Flak Simulator, an anti-aircraft gun game, entered Early Access on Steam on November 26. According to the developer's official Steam announcement, the game is now available for everyone to play.\n\nThe team says this is its first released game and that more than 50,000 people had wishlisted it. It plans to develop the game with community feedback and expand missions, guns and theatres of war during Early Access. Current content includes the Flak 37 88 mm anti-aircraft artillery, the Flak 38 20 mm autocannon and the Opel Blitz with Flak 38, a mobile platform used in convoy escort missions. Missions cover Germany by day and night, the Schweinfurt raid, and North Africa by day plus convoy escort.\n\nPlanned additions include Commonwealth forces, the Bofors 40 mm autocannon, the QF 3.7-inch anti-aircraft artillery, a Siege of Tobruk mission, a Battle of Britain biome and the Eastern Front. A bundle with Iron Nest saves 10% on both games, and the announcement lists no regional prices. Players who enjoy anti-aircraft simulation can try it on Steam today, though much of the planned content is still to come.",
+    "etiketler": [
+     "#FlakSimulator",
+     "#IronNest",
+     "#Steam",
+     "#EarlyAccess"
+    ]
+   },
+   "es": {
+    "baslik": "Flak Simulator llega a acceso anticipado de Steam el 26 de noviembre",
+    "ozet": "Flak Simulator ya está en acceso anticipado en Steam con el Flak 37, el Flak 38 y el Opel Blitz, y misiones en Alemania y el norte de África.",
+    "metin": "Flak Simulator, un juego de artillería antiaérea, llegó el 26 de noviembre al acceso anticipado de Steam. Según el anuncio oficial del equipo en Steam, el juego ya está disponible para que cualquiera pueda jugarlo.\n\nEl estudio explica que es el primer juego que publica y que más de 50.000 personas lo habían añadido a su lista de deseados. Quiere desarrollarlo junto a la comunidad y ampliar misiones, cañones y escenarios de guerra durante el acceso anticipado. Ahora mismo hay el Flak 37 (artillería antiaérea de 88 mm), el Flak 38 (cañón automático de 20 mm) y el Opel Blitz con Flak 38, una plataforma móvil para misiones de escolta de convoyes. Las misiones abarcan Alemania de día y de noche, la incursión sobre Schweinfurt y el norte de África de día, además de la escolta de convoyes.\n\nEntre las incorporaciones previstas figuran las fuerzas de la Commonwealth, el cañón automático Bofors de 40 mm, la artillería antiaérea QF 3.7 pulgadas, una misión del Asedio de Tobruk, un bioma de la Batalla de Inglaterra y el Frente Oriental. Un pack con Iron Nest ahorra un 10% en ambos juegos; el anuncio no indica precios regionales. Quien disfrute de la simulación antiaérea puede probarlo hoy en Steam, aunque gran parte del contenido aún está por llegar.",
+    "etiketler": [
+     "#FlakSimulator",
+     "#IronNest",
+     "#Steam",
+     "#EarlyAccess"
+    ]
+   },
+   "fr": {
+    "baslik": "Flak Simulator sort en accès anticipé sur Steam le 26 novembre",
+    "ozet": "Flak Simulator est disponible en accès anticipé sur Steam avec le Flak 37, le Flak 38 et l'Opel Blitz, et des missions en Allemagne et en Afrique du Nord.",
+    "metin": "Flak Simulator, un jeu de défense antiaérienne, est sorti en accès anticipé sur Steam le 26 novembre. D'après l'annonce officielle de l'équipe sur Steam, le jeu est désormais accessible à tous.\n\nL'équipe précise qu'il s'agit de son premier jeu publié et que plus de 50 000 personnes l'avaient ajouté à leur liste de souhaits. Elle prévoit de le développer avec les retours de la communauté et d'élargir missions, canons et théâtres d'opérations pendant l'accès anticipé. Pour l'instant, on trouve le Flak 37 (artillerie antiaérienne de 88 mm), le Flak 38 (canon automatique de 20 mm) et l'Opel Blitz équipé d'un Flak 38, une plateforme mobile pour les missions d'escorte de convoi. Les missions couvrent l'Allemagne de jour et de nuit, le raid sur Schweinfurt, ainsi que l'Afrique du Nord de jour et l'escorte de convoi.\n\nParmi les ajouts prévus figurent les forces du Commonwealth, le canon automatique Bofors de 40 mm, l'artillerie antiaérienne QF 3,7 pouces, une mission du siège de Tobrouk, un biome de la bataille d'Angleterre et le front de l'Est. Un pack avec Iron Nest offre 10% de réduction sur les deux jeux ; l'annonce ne donne pas de prix régionaux. Les amateurs de simulation antiaérienne peuvent l'essayer dès aujourd'hui sur Steam, même si une grande partie du contenu reste à venir.",
+    "etiketler": [
+     "#FlakSimulator",
+     "#IronNest",
+     "#Steam",
+     "#EarlyAccess"
+    ]
+   },
+   "de": {
+    "baslik": "Flak Simulator startet am 26. November in Steam Early Access",
+    "ozet": "Flak Simulator ist im Steam Early Access mit Flak 37, Flak 38 und Opel Blitz spielbar, Missionen führen nach Deutschland und Nordafrika.",
+    "metin": "Flak Simulator, ein Spiel um Flugabwehrgeschütze, ist am 26. November in den Early Access auf Steam gestartet. Laut der offiziellen Steam-Ankündigung des Entwicklerteams kann ab sofort jeder das Spiel spielen.\n\nDas Team nennt es sein erstes veröffentlichtes Spiel und sagt, mehr als 50.000 Menschen hätten es auf die Wunschliste gesetzt. Es will das Spiel gemeinsam mit der Community entwickeln und Missionen, Geschütze und Kriegsschauplätze im Early Access ausbauen. Aktuell gibt es die Flak 37 (88-mm-Flugabwehrkanone), die Flak 38 (20-mm-Maschinenkanone) und den Opel Blitz mit Flak 38, eine mobile Plattform für Geleitschutzmissionen. Die Missionen führen nach Deutschland bei Tag und Nacht, zum Angriff auf Schweinfurt sowie nach Nordafrika bei Tag und im Geleitschutz.\n\nGeplant sind Commonwealth-Truppen, die 40-mm-Bofors-Kanone, die QF-3.7-inch-Flugabwehrkanone, eine Mission zur Belagerung von Tobruk, ein Biom zur Luftschlacht um England und die Ostfront. Ein Bundle mit Iron Nest spart 10 % bei beiden Spielen; regionale Preise nennt die Ankündigung nicht. Wer Flugabwehr-Simulationen mag, kann heute auf Steam einsteigen, doch ein großer Teil der angekündigten Inhalte fehlt noch.",
+    "etiketler": [
+     "#FlakSimulator",
+     "#IronNest",
+     "#Steam",
+     "#EarlyAccess"
+    ]
+   },
+   "nl": {
+    "baslik": "Flak Simulator verschijnt 26 november in Steam Early Access",
+    "ozet": "Flak Simulator is in Steam Early Access speelbaar met de Flak 37, Flak 38 en Opel Blitz, met missies in Duitsland en Noord-Afrika.",
+    "metin": "Flak Simulator, een spel over luchtafweergeschut, is op 26 november in Early Access op Steam verschenen. Volgens de officiële Steam-aankondiging van het ontwikkelteam kan iedereen het spel nu spelen.\n\nHet team noemt het zijn eerste uitgebrachte spel en zegt dat meer dan 50.000 mensen het op hun verlanglijst hadden gezet. Het wil het spel samen met de community ontwikkelen en tijdens Early Access missies, kanonnen en oorlogsgebieden uitbreiden. Nu zijn de Flak 37 (88 mm luchtafweergeschut), de Flak 38 (20 mm automatisch kanon) en de Opel Blitz met Flak 38 beschikbaar, een mobiel platform voor konvooibegeleiding. De missies spelen zich af in Duitsland overdag en 's nachts, tijdens de aanval op Schweinfurt, en in Noord-Afrika overdag en bij konvooibegeleiding.\n\nGeplande toevoegingen zijn Commonwealth-troepen, het 40 mm Bofors-kanon, het QF 3.7-inch luchtafweergeschut, een missie over het beleg van Tobroek, een Battle of Britain-biome en het Oostfront. Een bundel met Iron Nest bespaart 10% op beide spellen; de aankondiging noemt geen regionale prijzen. Wie van luchtafweersimulaties houdt, kan het vandaag op Steam proberen, al moet veel van de geplande inhoud nog komen.",
+    "etiketler": [
+     "#FlakSimulator",
+     "#IronNest",
+     "#Steam",
+     "#EarlyAccess"
+    ]
+   },
+   "zh": {
+    "baslik": "Flak Simulator 于11月26日登陆Steam抢先体验",
+    "ozet": "Flak Simulator 已在Steam开启抢先体验，现有Flak 37、Flak 38和Opel Blitz，任务设在德国与北非。",
+    "metin": "防空炮题材游戏 Flak Simulator 于11月26日在Steam开启抢先体验。根据开发团队发布的Steam官方公告，现在所有玩家都可以游玩。\n\n团队表示，这是他们发布的第一款游戏，已有超过50000人将其加入愿望单。团队计划在抢先体验期间依靠社区反馈开发，并扩充任务、火炮和战区。目前的内容包括Flak 37（88毫米高射炮）、Flak 38（20毫米自动炮），以及用于车队护航任务的Opel Blitz搭载Flak 38移动平台。任务涵盖德国的白天与夜晚、施韦因富特空袭，以及北非的白天和车队护航。\n\n计划加入的内容有英联邦部队、40毫米Bofors自动炮、QF 3.7英寸高射炮、托布鲁克围城任务、不列颠之战地图和东线战场。购买与Iron Nest的捆绑包，两款游戏均可享受10%折扣；公告未列出各地区价格。喜欢防空模拟的玩家今天即可在Steam上试玩，不过不少计划内容仍在路上。",
+    "etiketler": [
+     "#FlakSimulator",
+     "#IronNest",
+     "#Steam",
+     "#EarlyAccess"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "flak-simulator-steam-erken-erisim-cikis",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/5268810/view/686397604216440139",
+   "teyit_zamani": "2026-11-26T21:10:10+00:00",
+   "oyuncuya_fayda": "Oyuncular güncel silah ve görev listesini, planlanan içeriği ve Iron Nest paket indirimini öğrenip oyunu bugün deneyebilir.",
+   "hype": 5,
+   "senaryo_atlanan": {
+    "fr": "Tek düzeltme sonrası: sahneler[1].veri.maddeler[1].tetik: \"Opel\" bu sahnenin anlatımında geçmiyor; sahneler[2].veri.maddeler[2].tetik: \"Angleterre\" bu sahnenin anlatımında geçmiyor"
+   },
+   "eklenme": "2026-11-27T00:29:57.025205+03:00"
+  }
+ },
+ {
+  "id": "warframe-sevagoth-hydroid-prime-resurgence-2026-11-26",
+  "oyun": "Warframe",
+  "tarih": "2026-11-26",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam",
+    "url": "https://store.steampowered.com/news/app/230410/view/689775303935918188"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Warframe: Sevagoth Prime ve Hydroid Prime ilk kez birlikte geliyor",
+    "ozet": "Steam'deki resmî haber sayfasına göre iki Prime Warframe, Prime silah ve aksesuarlarıyla bir arada sunuluyor; fiyat ve bitiş tarihi haberde yer almıyor.",
+    "metin": "Warframe'de Sevagoth Prime ve Hydroid Prime, 26 Kasım'da yayımlanan resmî Steam haberine göre ilk kez birlikte sunuluyor. Haberin başlığı iki karakterin Prime Resurgence kapsamında geldiğini belirtiyor.\n\nHaberde iki Prime Warframe'in yanı sıra Prime silahları ve Prime aksesuarları da birlikte anılıyor. Sevagoth Prime, zaman içinde hasar veren yetenekleri ve kaotik çatışmalarda yüksek hayatta kalma gücüyle öne çıkıyor. Hydroid Prime ise sağanak yağmur benzeri saldırılarla düşmanları Corrosive hasarına karşı daha savunmasız hale getiriyor ve Tentacle Swarm yeteneğiyle düşmanları geçici olarak askıya alabiliyor.\n\nOyuncular için temel değişiklik, iki Prime karakterin ve ilgili Prime eşyaların artık birlikte bulunabilmesi. Haber, Prime Warframe'lerin nasıl kazanılacağını ve Prime eşyaların nasıl satın alınacağını anlatan bir rehber videosuna bağlanıyor. Fiyat, bölge veya bitiş tarihi haberde yer almadığı için bu ayrıntılar Steam sayfasında kontrol edilmeli.",
+    "etiketler": [
+     "#Warframe",
+     "#Steam",
+     "#PC",
+     "#PrimeResurgence"
+    ]
+   },
+   "en": {
+    "baslik": "Warframe: Sevagoth Prime and Hydroid Prime are available together",
+    "ozet": "Steam's official news page says both Prime Warframes come with their Prime Weapons and Prime Accessories; no price or end date is listed.",
+    "metin": "Warframe's Sevagoth Prime and Hydroid Prime are available together for the first time ever, according to an official Steam news post published on November 26. The headline says both Warframes enter Prime Resurgence.\n\nThe post also lists their signature Prime Weapons and Prime Accessories. Sevagoth Prime is built around damage over time and high survivability in chaotic firefights. Hydroid Prime calls down torrential downpours that make enemies more vulnerable to Corrosive damage, and his Tentacle Swarm ability can temporarily suspend them.\n\nFor players, the main change is that both Warframes and their related Prime items can now be obtained together. The post links to a guide explaining how to earn Prime Warframes and how to purchase Prime items. It does not list prices, regions or an end date, so those details should be checked on the Steam page.",
+    "etiketler": [
+     "#Warframe",
+     "#Steam",
+     "#PC",
+     "#PrimeResurgence"
+    ]
+   },
+   "es": {
+    "baslik": "Warframe: Sevagoth Prime e Hydroid Prime, disponibles juntos",
+    "ozet": "La noticia oficial de Steam indica que ambos Prime llegan con sus armas y accesorios Prime; no figuran precio ni fecha de fin.",
+    "metin": "Según la noticia oficial publicada en Steam el 26 de noviembre, Sevagoth Prime e Hydroid Prime están disponibles juntos por primera vez en Warframe. El titular indica que ambos entran en Prime Resurgence.\n\nLa publicación también menciona sus armas y accesorios Prime característicos. Sevagoth Prime se centra en el daño a lo largo del tiempo y en una gran supervivencia en combates caóticos. Hydroid Prime desata lluvias torrenciales que dejan a los enemigos más expuestos al daño corrosivo y, con Tentacle Swarm, puede suspenderlos temporalmente.\n\nPara los jugadores, el cambio principal es que ambos Warframe y sus objetos Prime relacionados ya pueden conseguirse juntos. La noticia enlaza una guía sobre cómo obtener los Warframe Prime y cómo comprar los objetos Prime. No se indican precios, regiones ni fecha de fin, así que conviene revisar esos datos en la página de Steam.",
+    "etiketler": [
+     "#Warframe",
+     "#Steam",
+     "#PC",
+     "#PrimeResurgence"
+    ]
+   },
+   "fr": {
+    "baslik": "Warframe : Sevagoth Prime et Hydroid Prime disponibles ensemble",
+    "ozet": "L'annonce officielle sur Steam précise que les deux Prime sont proposés avec leurs armes et accessoires Prime ; prix et date de fin ne figurent pas.",
+    "metin": "Selon l'annonce officielle publiée sur Steam le 26 novembre, Sevagoth Prime et Hydroid Prime sont disponibles ensemble pour la première fois dans Warframe. Le titre indique que les deux personnages rejoignent Prime Resurgence.\n\nL'annonce mentionne aussi leurs armes et accessoires Prime. Sevagoth Prime repose sur les dégâts dans la durée et une grande survie dans les combats chaotiques. Hydroid Prime déclenche des averses torrentielles qui rendent les ennemis plus vulnérables aux dégâts corrosifs et peut les suspendre temporairement avec Tentacle Swarm.\n\nPour les joueurs, le changement principal est que les deux Warframe et leurs objets Prime associés peuvent désormais être obtenus ensemble. L'annonce renvoie vers un guide expliquant comment obtenir les Warframe Prime et acheter les objets Prime. Prix, régions et date de fin ne sont pas précisés : ces détails sont à vérifier sur la page Steam.",
+    "etiketler": [
+     "#Warframe",
+     "#Steam",
+     "#PC",
+     "#PrimeResurgence"
+    ]
+   },
+   "de": {
+    "baslik": "Warframe: Sevagoth Prime und Hydroid Prime erstmals gemeinsam erhältlich",
+    "ozet": "Laut offizieller Steam-Meldung sind beide Prime-Warframes samt Prime-Waffen und Prime-Zubehör verfügbar; Preis und Enddatum nennt die Meldung nicht.",
+    "metin": "Laut der offiziellen Steam-Meldung vom 26. November sind Sevagoth Prime und Hydroid Prime in Warframe erstmals gemeinsam verfügbar. Die Überschrift nennt beide Warframes im Zusammenhang mit Prime Resurgence.\n\nDie Meldung führt außerdem ihre Prime-Waffen und Prime-Zubehörteile auf. Sevagoth Prime setzt auf Schaden über Zeit und hohe Überlebensfähigkeit in chaotischen Gefechten. Hydroid Prime entfesselt sintflutartige Regenfälle, die Gegner anfälliger für Korrosionsschaden machen, und kann sie mit seiner Fähigkeit Tentacle Swarm kurzzeitig festsetzen.\n\nFür Spieler ist die wichtigste Neuerung, dass beide Warframes und die zugehörigen Prime-Gegenstände nun gemeinsam erhältlich sind. Die Meldung verlinkt einen Leitfaden, der erklärt, wie man Prime-Warframes erhält und Prime-Gegenstände kauft. Preise, Regionen und ein Enddatum nennt sie nicht; diese Angaben sollten auf der Steam-Seite geprüft werden.",
+    "etiketler": [
+     "#Warframe",
+     "#Steam",
+     "#PC",
+     "#PrimeResurgence"
+    ]
+   },
+   "nl": {
+    "baslik": "Warframe: Sevagoth Prime en Hydroid Prime voor het eerst samen",
+    "ozet": "Volgens de officiële Steam-aankondiging zijn beide Prime-Warframes samen met Prime-wapens en Prime-accessoires beschikbaar; prijs en einddatum ontbreken.",
+    "metin": "Volgens de officiële nieuwsaankondiging op Steam van 26 november zijn Sevagoth Prime en Hydroid Prime in Warframe voor het eerst samen beschikbaar. De kop meldt dat beide Warframes onderdeel worden van Prime Resurgence.\n\nDe aankondiging noemt ook hun kenmerkende Prime-wapens en Prime-accessoires. Sevagoth Prime draait om schade over tijd en een hoge overlevingskans in chaotische gevechten. Hydroid Prime roept hevige regenbuien op die vijanden kwetsbaarder maken voor Corrosive-schade, en met zijn Tentacle Swarm-vaardigheid kan hij vijanden tijdelijk vastzetten.\n\nVoor spelers is de belangrijkste verandering dat beide Warframes en de bijbehorende Prime-items nu samen te verkrijgen zijn. De aankondiging linkt naar een gids over het verdienen van Prime-Warframes en het kopen van Prime-items. Prijzen, regio's of een einddatum staan er niet bij; die gegevens moet je op de Steam-pagina controleren.",
+    "etiketler": [
+     "#Warframe",
+     "#Steam",
+     "#PC",
+     "#PrimeResurgence"
+    ]
+   },
+   "zh": {
+    "baslik": "Warframe：Sevagoth Prime与Hydroid Prime首次同时上线",
+    "ozet": "据Steam官方新闻，两位Prime Warframe将与Prime武器和配件一同提供；新闻未公布价格、地区与截止时间，相关细节请查看Steam页面。",
+    "metin": "据Steam官方新闻于11月26日发布的消息，Warframe的Sevagoth Prime与Hydroid Prime首次可以同时获得。标题显示，两位Warframe参与Prime Resurgence活动。\n\n新闻还列出了他们的专属Prime武器与Prime配件。Sevagoth Prime擅长持续伤害，并能在混乱的交火中保持较高的生存能力。Hydroid Prime会召唤暴雨般的攻击，使敌人更容易受到腐蚀伤害，并可借助触手群技能短暂困住敌人。\n\n对玩家而言，主要变化是两位Warframe及相关Prime物品现在可以一同获得。新闻链接了一份指南，介绍如何获得Prime Warframe以及如何购买Prime物品。新闻未列出价格、地区或截止日期，相关信息请在Steam页面查看。",
+    "etiketler": [
+     "#Warframe",
+     "#Steam",
+     "#PC",
+     "#PrimeResurgence"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "warframe-sevagoth-hydroid-prime-prime-resurgence-2026-11-26",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/230410/view/689775303935918188",
+   "teyit_zamani": "2026-11-26T21:10:02+00:00",
+   "oyuncuya_fayda": "Oyuncular iki Prime Warframe'i ve ilgili Prime eşyalarını birlikte edinebilir.",
+   "hype": 5,
+   "eklenme": "2026-11-27T00:29:57.025205+03:00"
+  }
+ },
+ {
+  "id": "hitman-the-mutiny-bawma-elusive-target-2026-11-26",
+  "oyun": "HITMAN World of Assassination",
+  "tarih": "2026-11-26",
+  "tur": "haber",
+  "platform": [
+   "Xbox Series X|S",
+   "Xbox One",
+   "ROG Xbox Ally",
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Xbox Wire",
+    "url": "https://news.xbox.com/en-us/2026/11/26/hitman-bawma-elusive-target/"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "HITMAN World of Assassination: The Mutiny 24 Aralık'a kadar",
+    "ozet": "Lenny Kravitz'in seslendirdiği Bawma'lı The Mutiny görevi 26 Kasım'da başladı; 24 Aralık'a kadar Xbox ve PC'de oynanabiliyor.",
+    "metin": "HITMAN World of Assassination'a yeni Elusive Target görevi The Mutiny geldi. Görev 26 Kasım'da başladı ve 24 Aralık 2026'ya kadar oynanabilecek; Xbox Wire'ın duyurusuna göre Grammy ödüllü Lenny Kravitz, 007 First Light'taki Aleph'in Korsan Kralı Bawma'ya hem görüntüsünü hem sesini ödünç veriyor.\n\nAmbrose Island'da Bawma bu kez Agent 47'yi doğrudan yönlendiriyor ve onu üç asi teğmenin peşine gönderiyor. Üçü de Voodoo Doll ile etkisiz hâle getirilebiliyor: malzemeleri topla, Ritual Bowl'a ekle ve Madame Serafine'in yaptığı oyuncağı al. Görev Xbox Series X|S, Xbox One, ROG Xbox Ally X, ROG Xbox Ally ve PC'de açık. Birlikte çıkan Rockstar Pack $5.99/€5.99/£4.99 fiyatında.\n\nYeni oyuncular görevi Free Demo üzerinden deneyebiliyor; HITMAN World of Assassination sahipleri için ise ücretsiz. Görev kalkınca oyuna ya da Ambrose Island konumuna sahip olanlar Arcade sürümü The Retaliator'ı ve Special Assignment'ı ücretsiz korur. IOI Account ile görevi bitirenler Rock Royalty Duck'ı da açar.",
+    "etiketler": [
+     "#HITMAN",
+     "#IOInteractive",
+     "#Xbox",
+     "#ElusiveTarget"
+    ]
+   },
+   "en": {
+    "baslik": "HITMAN World of Assassination: The Mutiny runs until December 24",
+    "ozet": "Lenny Kravitz voices Bawma in The Mutiny, a new Elusive Target live from November 26 on Xbox and PC, free for owners and demo players.",
+    "metin": "HITMAN World of Assassination has a new Elusive Target called The Mutiny. The mission went live on November 26 and runs through December 24, 2026; according to Xbox Wire, Grammy winner Lenny Kravitz lends his likeness and voice to Bawma, the Pirate King of Aleph from 007 First Light.\n\nOn Ambrose Island, Bawma briefs Agent 47 personally this time and sends him after three rogue lieutenants. All three can be eliminated with a Voodoo Doll: gather the ingredients, add them to the Ritual Bowl and pick up the doll Madame Serafine creates. The mission is available on Xbox Series X|S, Xbox One, ROG Xbox Ally X, ROG Xbox Ally and PC. The Rockstar Pack launching alongside it costs $5.99/€5.99/£4.99.\n\nNew players can try the mission through the Free Demo, and it is free for all HITMAN World of Assassination players. When it expires, owners of the game or the Ambrose Island location keep The Retaliator, the Arcade version, and its Special Assignment for free. Finishing the mission with an IOI Account also unlocks the Rock Royalty Duck.",
+    "etiketler": [
+     "#HITMAN",
+     "#IOInteractive",
+     "#Xbox",
+     "#ElusiveTarget"
+    ]
+   },
+   "es": {
+    "baslik": "HITMAN World of Assassination: The Mutiny, hasta el 24 de diciembre",
+    "ozet": "Lenny Kravitz da voz a Bawma en The Mutiny, un nuevo Elusive Target disponible desde el 26 de noviembre en Xbox y PC.",
+    "metin": "HITMAN World of Assassination estrena un nuevo Elusive Target llamado The Mutiny. La misión está disponible desde el 26 de noviembre y durará hasta el 24 de diciembre de 2026; según Xbox Wire, el ganador del Grammy Lenny Kravitz presta su imagen y su voz a Bawma, el Rey Pirata de Aleph de 007 First Light.\n\nEn Ambrose Island, Bawma da el briefing a Agent 47 en persona y lo envía contra tres lugartenientes rebeldes. Los tres pueden eliminarse con un Voodoo Doll: reúne los ingredientes, añádelos al Ritual Bowl y recoge el muñeco que crea Madame Serafine. La misión está disponible en Xbox Series X|S, Xbox One, ROG Xbox Ally X, ROG Xbox Ally y PC. El Rockstar Pack que llega a la vez cuesta $5.99/€5.99/£4.99.\n\nLos jugadores nuevos pueden probarla con la Free Demo y es gratis para todos los jugadores de HITMAN World of Assassination. Al expirar, quienes tengan el juego o la ubicación Ambrose Island conservan gratis The Retaliator, la versión Arcade, y su Special Assignment. Completarla con una IOI Account desbloquea también el Rock Royalty Duck.",
+    "etiketler": [
+     "#HITMAN",
+     "#IOInteractive",
+     "#Xbox",
+     "#ElusiveTarget"
+    ]
+   },
+   "fr": {
+    "baslik": "HITMAN World of Assassination : The Mutiny jusqu'au 24 décembre",
+    "ozet": "Lenny Kravitz prête sa voix à Bawma dans The Mutiny, nouvelle Elusive Target disponible dès le 26 novembre sur Xbox et PC.",
+    "metin": "HITMAN World of Assassination accueille une nouvelle Elusive Target, The Mutiny. La mission est disponible depuis le 26 novembre et le restera jusqu'au 24 décembre 2026 ; selon Xbox Wire, Lenny Kravitz, lauréat d'un Grammy, prête son image et sa voix à Bawma, le Roi des pirates d'Aleph issu de 007 First Light.\n\nSur Ambrose Island, Bawma briefe cette fois Agent 47 en personne et l'envoie contre trois lieutenants rebelles. Les trois peuvent être éliminés avec une Voodoo Doll : rassemblez les ingrédients, ajoutez-les au Ritual Bowl et récupérez la poupée créée par Madame Serafine. La mission est disponible sur Xbox Series X|S, Xbox One, ROG Xbox Ally X, ROG Xbox Ally et PC. Le Rockstar Pack lancé en même temps coûte $5.99/€5.99/£4.99.\n\nLes nouveaux joueurs peuvent l'essayer via la Free Demo, et elle est gratuite pour tous les joueurs de HITMAN World of Assassination. À son expiration, les possesseurs du jeu ou du lieu Ambrose Island gardent gratuitement The Retaliator, la version Arcade, et son Special Assignment. Terminer la mission avec un IOI Account débloque aussi le Rock Royalty Duck.",
+    "etiketler": [
+     "#HITMAN",
+     "#IOInteractive",
+     "#Xbox",
+     "#ElusiveTarget"
+    ]
+   },
+   "de": {
+    "baslik": "HITMAN World of Assassination: The Mutiny bis 24. Dezember",
+    "ozet": "Lenny Kravitz spricht Bawma im neuen Elusive Target The Mutiny, das seit dem 26. November auf Xbox und PC verfügbar ist.",
+    "metin": "HITMAN World of Assassination hat mit The Mutiny ein neues Elusive Target erhalten. Die Mission ist seit dem 26. November verfügbar und läuft bis zum 24. Dezember 2026; laut Xbox Wire leiht Grammy-Preisträger Lenny Kravitz Bawma, dem Piratenkönig von Aleph aus 007 First Light, sein Gesicht und seine Stimme.\n\nAuf Ambrose Island briefet Bawma Agent 47 diesmal persönlich und schickt ihn gegen drei abtrünnige Leutnants. Alle drei lassen sich mit einer Voodoo Doll ausschalten: Zutaten sammeln, in die Ritual Bowl geben und die Puppe von Madame Serafine abholen. Die Mission erscheint auf Xbox Series X|S, Xbox One, ROG Xbox Ally X, ROG Xbox Ally und PC. Das gleichzeitig erscheinende Rockstar Pack kostet $5.99/€5.99/£4.99.\n\nNeue Spieler können die Mission über die Free Demo ausprobieren, alle Spieler von HITMAN World of Assassination spielen sie kostenlos. Nach dem Ablauf behalten Besitzer des Spiels oder des Standorts Ambrose Island The Retaliator, die Arcade-Version, samt Special Assignment kostenlos. Wer die Mission mit einem IOI Account abschließt, schaltet außerdem die Rock Royalty Duck frei.",
+    "etiketler": [
+     "#HITMAN",
+     "#IOInteractive",
+     "#Xbox",
+     "#ElusiveTarget"
+    ]
+   },
+   "nl": {
+    "baslik": "HITMAN World of Assassination: The Mutiny tot 24 december",
+    "ozet": "Lenny Kravitz speelt Bawma in The Mutiny, een nieuw Elusive Target dat sinds 26 november op Xbox en pc beschikbaar is.",
+    "metin": "HITMAN World of Assassination heeft met The Mutiny een nieuw Elusive Target gekregen. De missie is sinds 26 november beschikbaar en loopt tot 24 december 2026; volgens Xbox Wire leent Grammy-winnaar Lenny Kravitz zijn uiterlijk en stem aan Bawma, de Piratenkoning van Aleph uit 007 First Light.\n\nOp Ambrose Island briefet Bawma Agent 47 dit keer zelf en stuurt hem op drie afvallige luitenants af. Alle drie zijn uit te schakelen met een Voodoo Doll: verzamel ingrediënten, doe ze in de Ritual Bowl en haal de pop op bij Madame Serafine. De missie verschijnt op Xbox Series X|S, Xbox One, ROG Xbox Ally X, ROG Xbox Ally en pc. De tegelijk uitkomende Rockstar Pack kost $5.99/€5.99/£4.99.\n\nNieuwe spelers kunnen de missie proberen via de Free Demo en alle spelers van HITMAN World of Assassination spelen haar gratis. Na afloop houden bezitters van het spel of de locatie Ambrose Island The Retaliator, de Arcade-versie, met de Special Assignment gratis. Wie de missie met een IOI Account voltooit, ontgrendelt ook de Rock Royalty Duck.",
+    "etiketler": [
+     "#HITMAN",
+     "#IOInteractive",
+     "#Xbox",
+     "#ElusiveTarget"
+    ]
+   },
+   "zh": {
+    "baslik": "HITMAN World of Assassination新增The Mutiny任务",
+    "ozet": "限时目标The Mutiny已于11月26日上线，持续到12月24日，新玩家可通过免费试玩体验。",
+    "metin": "《HITMAN World of Assassination》推出全新限时目标任务The Mutiny，任务已于11月26日开放，将持续到2026年12月24日。据Xbox Wire报道，格莱美奖得主Lenny Kravitz为《007 First Light》中的Aleph海盗王Bawma提供形象与配音，该角色首次进入World of Assassination。\n\n在任务中，Bawma亲自向Agent 47下达简报，并在Ambrose Island上指引他对付三名叛变的副手。玩家可以收集材料放入Ritual Bowl，取得Madame Serafine制作的Voodoo Doll，再通过刺、扔进水里、射击、爆破、火焰或电击等方式“击杀”玩偶来除掉目标。任务登陆Xbox Series X|S、Xbox One、ROG Xbox Ally X、ROG Xbox Ally和PC。同步推出的Rockstar Pack售价为$5.99/€5.99/£4.99。\n\n新玩家可通过Free Demo免费体验该任务，所有HITMAN World of Assassination玩家也可免费游玩。任务到期后会从游戏中移除，但拥有本作或Ambrose Island地点的玩家仍可免费保留街机版The Retaliator及其Special Assignment。任务开放期间使用IOI Account完成任务，还能解锁Rock Royalty Duck。",
+    "etiketler": [
+     "#HITMAN",
+     "#IOInteractive",
+     "#Xbox",
+     "#ElusiveTarget"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "hitman-the-mutiny-bawma-elusive-target",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://news.xbox.com/en-us/2026/11/26/hitman-bawma-elusive-target/",
+   "teyit_zamani": "2026-11-26T21:22:30+00:00",
+   "oyuncuya_fayda": "Oyuncular The Mutiny görevini 24 Aralık'a kadar ücretsiz oynayıp Rock Royalty Duck ödülünü açabilir.",
+   "hype": 6,
+   "eklenme": "2026-11-27T00:29:57.025205+03:00"
+  }
+ },
+ {
   "id": "marvel-rivals-incursion-point-yama-2026-11-26",
   "oyun": "Marvel Rivals",
   "tarih": "2026-11-26",

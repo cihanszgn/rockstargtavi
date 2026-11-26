@@ -1,0 +1,98 @@
+{
+ "id": "warframe-sevagoth-hydroid-prime-resurgence-2026-11-26",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Warframe'de Sevagoth Prime ve Hydroid Prime ilk kez birlikte geliyor.",
+   "veri": {
+    "ust_etiket": "WARFRAME • PRIME RESURGENCE",
+    "baslik": "Sevagoth ve Hydroid birlikte geliyor",
+    "vurgu": [
+     "birlikte geliyor"
+    ],
+    "tuslar": [
+     "P",
+     "R"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "WARFRAME",
+    "alt": "PRIME RESURGENCE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam'in resmî haberine göre Prime silah ve aksesuarlar da birlikte sunuluyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam resmî haber sayfası",
+    "alinti": "Sevagoth Prime ve Hydroid Prime, Prime silah ve aksesuarlarıyla birlikte ilk kez sunuluyor."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "STEAM HABER SAYFASI"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Sevagoth Prime hasar ve dayanıklılıkla öne çıkıyor. Hydroid Prime ise Tentacle Swarm ile düşmanları askıya alıyor.",
+   "veri": {
+    "baslik": "İki Prime karakter",
+    "maddeler": [
+     {
+      "metin": "Sevagoth: hasar ve dayanıklılık",
+      "tetik": "Sevagoth"
+     },
+     {
+      "metin": "Hydroid: Corrosive hasarı",
+      "tetik": "Hydroid"
+     },
+     {
+      "metin": "Tentacle Swarm ile askı",
+      "tetik": "Tentacle Swarm"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "İKİ PRIME KARAKTER",
+    "alt": "SEVAGOTH VE HYDROID"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. İki Prime'ı hemen mi alırsın, yoksa bekler misin?",
+   "veri": {
+    "cagri": "Tamamı sitemizde, Control A Game'de",
+    "alt": "Prime Resurgence ayrıntıları haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

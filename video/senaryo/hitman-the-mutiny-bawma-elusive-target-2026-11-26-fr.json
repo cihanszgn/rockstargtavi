@@ -1,0 +1,93 @@
+{
+ "id": "hitman-the-mutiny-bawma-elusive-target-2026-11-26",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Lenny Kravitz incarne Bawma dans HITMAN World of Assassination avec The Mutiny, jusqu'au 24 décembre.",
+   "veri": {
+    "ust_etiket": "ELUSIVE TARGET",
+    "baslik": "The Mutiny jusqu'au 24 décembre",
+    "vurgu": [
+     "24 décembre"
+    ],
+    "tuslar": [
+     "47"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "HITMAN",
+    "alt": "THE MUTINY"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Bawma briefe lui-même Agent 47 sur Ambrose Island et l'envoie contre trois lieutenants rebelles. Chacun peut tomber grâce à une Voodoo Doll de Madame Serafine.",
+   "veri": {
+    "baslik": "Résumé de la mission",
+    "maddeler": [
+     {
+      "metin": "Trois lieutenants rebelles",
+      "tetik": "trois"
+     },
+     {
+      "metin": "Élimination par Voodoo Doll",
+      "tetik": "Voodoo"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "AMBROSE ISLAND",
+    "alt": "VOODOO DOLL"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "The Mutiny a débuté le 26 novembre et disparaîtra le 24 décembre. Les propriétaires gardent gratuitement The Retaliator, la version Arcade.",
+   "veri": {
+    "etiket": "Fin de la mission",
+    "tarih": "24 décembre",
+    "not": "Les propriétaires gardent The Retaliator."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "THE MUTINY",
+    "alt": "JUSQU'AU 24 DÉCEMBRE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Tu te lances dès le premier jour ?",
+   "veri": {
+    "cagri": "Tout est sur le site",
+    "alt": "Sources et détails dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

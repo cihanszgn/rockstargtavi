@@ -1,0 +1,98 @@
+{
+ "id": "warframe-sevagoth-hydroid-prime-resurgence-2026-11-26",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Por primera vez, Sevagoth Prime e Hydroid Prime están disponibles juntos en Warframe.",
+   "veri": {
+    "ust_etiket": "WARFRAME • PRIME RESURGENCE",
+    "baslik": "Sevagoth e Hydroid Prime, juntos",
+    "vurgu": [
+     "juntos"
+    ],
+    "tuslar": [
+     "P",
+     "R"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "WARFRAME",
+    "alt": "PRIME RESURGENCE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según la noticia oficial de Steam, también se mencionan sus armas y accesorios Prime.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Noticia oficial de Steam",
+    "alinti": "Las armas y accesorios Prime también se mencionan en la noticia."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "NOTICIA DE STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Sevagoth Prime destaca por el daño a lo largo del tiempo y su supervivencia. Hydroid Prime deja a los enemigos más expuestos al daño corrosivo y puede suspenderlos con Tentacle Swarm.",
+   "veri": {
+    "baslik": "Dos Prime muy distintos",
+    "maddeler": [
+     {
+      "metin": "Sevagoth: daño con el tiempo",
+      "tetik": "Sevagoth"
+     },
+     {
+      "metin": "Hydroid: daño corrosivo",
+      "tetik": "Hydroid"
+     },
+     {
+      "metin": "Tentacle Swarm suspende enemigos",
+      "tetik": "Tentacle Swarm"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DOS PRIME DISTINTOS",
+    "alt": "SEVAGOTH E HYDROID"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Los conseguirías ya o esperarías?",
+   "veri": {
+    "cagri": "Todos los detalles en nuestra web",
+    "alt": "La noticia completa está en el sitio."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

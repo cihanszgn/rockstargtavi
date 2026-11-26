@@ -1,0 +1,115 @@
+{
+ "id": "flak-simulator-early-access-2026-11-26",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Flak Simulator ya está en acceso anticipado en Steam y puedes ponerte al mando de los cañones antiaéreos.",
+   "veri": {
+    "ust_etiket": "ACCESO ANTICIPADO",
+    "baslik": "Flak Simulator, en acceso anticipado",
+    "vurgu": [
+     "acceso anticipado"
+    ],
+    "tuslar": [
+     "F",
+     "L",
+     "K"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "FLAK SIMULATOR",
+    "alt": "ACCESO ANTICIPADO EN STEAM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Por ahora hay el Flak 37, el Flak 38 y el Opel Blitz con un Flak 38. Las misiones transcurren en Alemania y el norte de África.",
+   "veri": {
+    "baslik": "Ya se puede jugar",
+    "maddeler": [
+     {
+      "metin": "Flak 37: artillería de 88 mm",
+      "tetik": "Flak"
+     },
+     {
+      "metin": "Opel Blitz: escolta de convoyes",
+      "tetik": "Opel"
+     },
+     {
+      "metin": "Misiones en Alemania y norte de África",
+      "tetik": "Alemania"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CONTENIDO ACTUAL",
+    "alt": "CAÑONES Y MISIONES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Llegarán el Bofors, la misión del Asedio de Tobruk, un bioma de la Batalla de Inglaterra y el Frente Oriental. El pack con Iron Nest ahorra un 10% en ambos juegos.",
+   "veri": {
+    "baslik": "Lo que viene",
+    "maddeler": [
+     {
+      "metin": "Cañón automático Bofors de 40 mm",
+      "tetik": "Bofors"
+     },
+     {
+      "metin": "Misión del Asedio de Tobruk",
+      "tetik": "Tobruk"
+     },
+     {
+      "metin": "Bioma de la Batalla de Inglaterra",
+      "tetik": "Inglaterra"
+     },
+     {
+      "metin": "Pack Iron Nest: 10% en ambos",
+      "tetik": "Iron"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CONTENIDO PREVISTO",
+    "alt": "PACK IRON NEST 10%"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Lo pruebas desde el primer día o esperas a que crezca el contenido?",
+   "veri": {
+    "cagri": "Todo en la web",
+    "alt": "Fuentes y lista de contenido en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

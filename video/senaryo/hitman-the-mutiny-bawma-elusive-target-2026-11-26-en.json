@@ -1,0 +1,97 @@
+{
+ "id": "hitman-the-mutiny-bawma-elusive-target-2026-11-26",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Lenny Kravitz joins HITMAN World of Assassination as Bawma in The Mutiny, live until December 24.",
+   "veri": {
+    "ust_etiket": "ELUSIVE TARGET",
+    "baslik": "The Mutiny runs until December 24",
+    "vurgu": [
+     "December 24"
+    ],
+    "tuslar": [
+     "47"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "HITMAN",
+    "alt": "THE MUTINY"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Bawma briefs Agent 47 himself on Ambrose Island and sends him after three rogue lieutenants. Each one can be taken out with a Voodoo Doll made by Madame Serafine.",
+   "veri": {
+    "baslik": "Mission overview",
+    "maddeler": [
+     {
+      "metin": "Bawma briefs Agent 47 himself",
+      "tetik": "briefs"
+     },
+     {
+      "metin": "Three rogue lieutenants",
+      "tetik": "three"
+     },
+     {
+      "metin": "Voodoo Doll takedowns",
+      "tetik": "Voodoo"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "AMBROSE ISLAND",
+    "alt": "VOODOO DOLL"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "The Mutiny started on November 26 and leaves the game on December 24. Owners keep the Arcade version, The Retaliator, for free.",
+   "veri": {
+    "etiket": "Mission expires",
+    "tarih": "December 24",
+    "not": "Owners keep The Retaliator for free."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "THE MUTINY",
+    "alt": "UNTIL DECEMBER 24"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Everything is on our site, Control A Game. Will you jump in on day one?",
+   "veri": {
+    "cagri": "Everything on the site",
+    "alt": "Sources and details in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

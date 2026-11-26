@@ -1,0 +1,115 @@
+{
+ "id": "flak-simulator-early-access-2026-11-26",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Flak Simulator is now in Steam Early Access, and you can man the anti-aircraft guns today.",
+   "veri": {
+    "ust_etiket": "STEAM EARLY ACCESS",
+    "baslik": "Flak Simulator hits Early Access",
+    "vurgu": [
+     "Early Access"
+    ],
+    "tuslar": [
+     "F",
+     "L",
+     "K"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "FLAK SIMULATOR",
+    "alt": "STEAM EARLY ACCESS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Current guns are the Flak 37, the Flak 38 and the Opel Blitz carrying a Flak 38. Missions run across Germany and North Africa.",
+   "veri": {
+    "baslik": "Playable now",
+    "maddeler": [
+     {
+      "metin": "Flak 37: 88 mm artillery",
+      "tetik": "Flak"
+     },
+     {
+      "metin": "Opel Blitz convoy platform",
+      "tetik": "Opel"
+     },
+     {
+      "metin": "Germany and North Africa missions",
+      "tetik": "Germany"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CURRENT CONTENT",
+    "alt": "GUNS AND MISSIONS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Coming next are the Bofors, a Siege of Tobruk mission, a Battle of Britain biome and the Eastern Front. A bundle with Iron Nest saves 10% on both games.",
+   "veri": {
+    "baslik": "Coming next",
+    "maddeler": [
+     {
+      "metin": "Bofors 40 mm autocannon",
+      "tetik": "Bofors"
+     },
+     {
+      "metin": "Siege of Tobruk mission",
+      "tetik": "Tobruk"
+     },
+     {
+      "metin": "Battle of Britain biome",
+      "tetik": "Britain"
+     },
+     {
+      "metin": "Iron Nest bundle: 10% off both",
+      "tetik": "Iron"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "UPCOMING CONTENT",
+    "alt": "IRON NEST BUNDLE 10% OFF"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Will you jump in on day one, or wait for more content?",
+   "veri": {
+    "cagri": "Full story on the site",
+    "alt": "Sources and content list are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

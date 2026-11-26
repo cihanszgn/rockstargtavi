@@ -1,0 +1,93 @@
+{
+ "id": "hitman-the-mutiny-bawma-elusive-target-2026-11-26",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Lenny Kravitz llega a HITMAN World of Assassination como Bawma en The Mutiny, hasta el 24 de diciembre.",
+   "veri": {
+    "ust_etiket": "ELUSIVE TARGET",
+    "baslik": "The Mutiny, hasta el 24 de diciembre",
+    "vurgu": [
+     "24 de diciembre"
+    ],
+    "tuslar": [
+     "47"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "HITMAN",
+    "alt": "THE MUTINY"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Bawma da el briefing a Agent 47 en Ambrose Island y lo envía contra tres lugartenientes rebeldes. Cada uno puede caer con un Voodoo Doll creado por Madame Serafine.",
+   "veri": {
+    "baslik": "Resumen de la misión",
+    "maddeler": [
+     {
+      "metin": "Tres lugartenientes rebeldes",
+      "tetik": "tres"
+     },
+     {
+      "metin": "Caída con Voodoo Doll",
+      "tetik": "Voodoo"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "AMBROSE ISLAND",
+    "alt": "VOODOO DOLL"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "The Mutiny empezó el 26 de noviembre y se retira el 24 de diciembre. Quienes tienen el juego conservan The Retaliator, la versión Arcade, gratis.",
+   "veri": {
+    "etiket": "La misión se retira",
+    "tarih": "24 de diciembre",
+    "not": "Los dueños conservan The Retaliator gratis."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "THE MUTINY",
+    "alt": "HASTA EL 24 DE DICIEMBRE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Lo probarás desde el primer día?",
+   "veri": {
+    "cagri": "Todo en la web",
+    "alt": "Fuentes y detalles en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

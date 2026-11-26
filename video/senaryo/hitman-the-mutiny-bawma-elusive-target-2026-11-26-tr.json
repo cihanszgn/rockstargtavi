@@ -1,0 +1,93 @@
+{
+ "id": "hitman-the-mutiny-bawma-elusive-target-2026-11-26",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "HITMAN World of Assassination'da Lenny Kravitz'in Bawma'sı The Mutiny görevinde 24 Aralık'a kadar oynanıyor.",
+   "veri": {
+    "ust_etiket": "ELUSIVE TARGET",
+    "baslik": "The Mutiny 24 Aralık'a kadar",
+    "vurgu": [
+     "24 Aralık'a"
+    ],
+    "tuslar": [
+     "47"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "HITMAN",
+    "alt": "THE MUTINY"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Bawma, Ambrose Island'da Agent 47'yi üç asi teğmenin peşine gönderiyor. Üçü de Voodoo Doll ile etkisiz hâle getirilebiliyor.",
+   "veri": {
+    "baslik": "Görevin özeti",
+    "maddeler": [
+     {
+      "metin": "Üç asi teğmen hedefte",
+      "tetik": "üç"
+     },
+     {
+      "metin": "Voodoo Doll ile etkisiz hâle getirme",
+      "tetik": "Voodoo"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "AMBROSE ISLAND",
+    "alt": "VOODOO DOLL"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Görev 26 Kasım'da başladı ve 24 Aralık'ta kalkıyor. Oyun sahipleri Arcade sürümü The Retaliator'ı ücretsiz korur.",
+   "veri": {
+    "etiket": "Görev kalkıyor",
+    "tarih": "24 Aralık",
+    "not": "Sahipler The Retaliator'ı ücretsiz korur."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "THE MUTINY",
+    "alt": "24 ARALIK'A KADAR"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Sen The Mutiny'ye ilk gün atlar mısın?",
+   "veri": {
+    "cagri": "Tamamı sitede",
+    "alt": "Kaynak ve ayrıntılar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
