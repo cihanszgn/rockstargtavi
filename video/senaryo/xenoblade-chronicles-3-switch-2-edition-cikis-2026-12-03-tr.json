@@ -1,0 +1,128 @@
+{
+ "id": "xenoblade-chronicles-3-switch-2-edition-cikis-2026-12-03",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Xenoblade Chronicles 3 – Nintendo Switch 2 Edition 3 Aralık'ta çıkıyor.",
+   "veri": {
+    "ust_etiket": "SWITCH 2 EDITION",
+    "baslik": "Xenoblade Chronicles 3: 3 Aralık'ta",
+    "vurgu": [
+     "3 Aralık'ta"
+    ],
+    "tuslar": [
+     "X",
+     "C",
+     "3"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "XENOBLADE CHRONICLES 3",
+    "alt": "NINTENDO SWITCH 2 EDITION"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Yeni Heroes' Vault modunda dalgalar halinde gelen düşmanları yenip gücünüzü artırıyorsunuz. Yeni kahraman Shimmer ise hızlı bir saldırgan.",
+   "veri": {
+    "baslik": "Yenilikler",
+    "maddeler": [
+     {
+      "metin": "Yeni Heroes' Vault modu",
+      "tetik": "Vault"
+     },
+     {
+      "metin": "Dalgalar halinde düşmanlar",
+      "tetik": "dalgalar"
+     },
+     {
+      "metin": "Yeni kahraman Shimmer",
+      "tetik": "Shimmer"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "YENİ MOD VE KAHRAMAN",
+    "alt": "HEROES' VAULT • SHIMMER"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Uyumlu televizyonda 4K, portatif modda full HD ve saniyede 60 kare sunuyor.",
+   "veri": {
+    "baslik": "Switch 2'de daha akıcı",
+    "platformlar": [],
+    "sayilar": [
+     {
+      "deger": "4K",
+      "etiket": "TV MODU",
+      "tetik": "4K"
+     },
+     {
+      "deger": "60",
+      "etiket": "KARE / SN",
+      "tetik": "60"
+     }
+    ],
+    "not": "4K için uyumlu televizyon gerekir."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "4K VE 60 KARE",
+    "alt": "YALNIZ NINTENDO SWITCH 2"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Switch sürümü olanlar için yükseltme paketi de var; yeni sürüm 3 Aralık'ta çıkıyor.",
+   "veri": {
+    "etiket": "Çıkış tarihi",
+    "tarih": "3 Aralık",
+    "not": "Dijital ve fiziksel sürüm."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "ÇIKIŞ TARİHİ",
+    "alt": "3 ARALIK"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Yükseltme mi alırsın, yoksa yeni mi başlarsın?",
+   "veri": {
+    "cagri": "Fiyatlar ve ayrıntılar sitede",
+    "alt": "Kaynak ve yükseltme bilgisi haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

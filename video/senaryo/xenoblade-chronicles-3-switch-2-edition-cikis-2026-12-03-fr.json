@@ -1,0 +1,128 @@
+{
+ "id": "xenoblade-chronicles-3-switch-2-edition-cikis-2026-12-03",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Xenoblade Chronicles 3 – Nintendo Switch 2 Edition sortira le 3 décembre, exclusivement sur Switch 2.",
+   "veri": {
+    "ust_etiket": "SWITCH 2 EDITION",
+    "baslik": "Xenoblade Chronicles 3 : 3 décembre",
+    "vurgu": [
+     "3 décembre"
+    ],
+    "tuslar": [
+     "X",
+     "C",
+     "3"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "XENOBLADE CHRONICLES 3",
+    "alt": "NINTENDO SWITCH 2 EDITION"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Le nouveau mode Heroes' Vault oppose des vagues d'ennemis, et un nouveau Héros nommé Shimmer attaque à toute vitesse.",
+   "veri": {
+    "baslik": "Nouveautés",
+    "maddeler": [
+     {
+      "metin": "Nouveau mode Heroes' Vault",
+      "tetik": "Vault"
+     },
+     {
+      "metin": "Des vagues d'ennemis",
+      "tetik": "vagues"
+     },
+     {
+      "metin": "Nouveau Héros : Shimmer",
+      "tetik": "Shimmer"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NOUVEAU MODE ET HÉROS",
+    "alt": "HEROES' VAULT • SHIMMER"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "Sur un téléviseur compatible, le jeu passe en 4K, en mode portable en full HD, à 60 images par seconde.",
+   "veri": {
+    "baslik": "Plus net sur Switch 2",
+    "platformlar": [],
+    "sayilar": [
+     {
+      "deger": "4K",
+      "etiket": "MODE TV",
+      "tetik": "4K"
+     },
+     {
+      "deger": "60",
+      "etiket": "IMAGES / S",
+      "tetik": "60"
+     }
+    ],
+    "not": "La 4K nécessite un téléviseur compatible."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "4K ET 60 IMAGES",
+    "alt": "NINTENDO SWITCH 2 UNIQUEMENT"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Les possesseurs de la version Switch peuvent acheter un pack de mise à niveau séparé ; la sortie est le 3 décembre.",
+   "veri": {
+    "etiket": "Date de sortie",
+    "tarih": "3 décembre",
+    "not": "Versions numérique et physique."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "DATE DE SORTIE",
+    "alt": "3 DÉCEMBRE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Vous mettrez à niveau ou repartirez de zéro ?",
+   "veri": {
+    "cagri": "Prix et détails sur le site",
+    "alt": "Source et mise à niveau dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

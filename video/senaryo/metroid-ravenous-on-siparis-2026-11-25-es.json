@@ -1,0 +1,115 @@
+{
+ "id": "metroid-ravenous-on-siparis-2026-11-25",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "La nueva aventura de Samus, Metroid Ravenous, ya acepta reservas y llega el 28 de enero de 2027.",
+   "veri": {
+    "ust_etiket": "METROID RAVENOUS",
+    "baslik": "Metroid Ravenous ya acepta reservas",
+    "vurgu": [
+     "reservas"
+    ],
+    "tuslar": [
+     "M",
+     "R"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "METROID RAVENOUS",
+    "alt": "RESERVAS ABIERTAS"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según la página oficial de Nintendo, Samus cae en una emboscada y queda varada en una luna extraña.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Página oficial de Nintendo",
+    "alinti": "Samus cae en una emboscada de atacantes desconocidos y queda varada en una luna desconocida."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "NINTENDO • NOM NOM NOM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Debe usar sus instintos de Metroid recién despertados para devorar a sus enemigos sin convertirse en comida.",
+   "veri": {
+    "baslik": "La misión de Samus",
+    "maddeler": [
+     {
+      "metin": "Devorar a sus enemigos",
+      "tetik": "devorar"
+     },
+     {
+      "metin": "Instintos recién despertados",
+      "tetik": "instintos"
+     },
+     {
+      "metin": "No convertirse en comida",
+      "tetik": "comida"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "LA MISIÓN DE SAMUS",
+    "alt": "DEVORAR SIN SER COMIDA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Las reservas ya están abiertas y el juego sale el 28 de enero de 2027.",
+   "veri": {
+    "etiket": "Fecha de lanzamiento",
+    "tarih": "28 de enero de 2027",
+    "not": "Las reservas ya están abiertas."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "FECHA DE LANZAMIENTO",
+    "alt": "RESERVAS YA ABIERTAS"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "¿Reservarás ahora o esperarás al lanzamiento? Todos los detalles en nuestra web, Control A Game.",
+   "veri": {
+    "cagri": "¿Reservar ya o esperar?",
+    "alt": "Todos los detalles en nuestra web, Control A Game."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

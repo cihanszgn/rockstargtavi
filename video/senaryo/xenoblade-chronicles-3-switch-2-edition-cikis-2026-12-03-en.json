@@ -1,0 +1,128 @@
+{
+ "id": "xenoblade-chronicles-3-switch-2-edition-cikis-2026-12-03",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Xenoblade Chronicles 3 – Nintendo Switch 2 Edition launches December 3, only on Switch 2.",
+   "veri": {
+    "ust_etiket": "SWITCH 2 EDITION",
+    "baslik": "Xenoblade Chronicles 3 lands December 3",
+    "vurgu": [
+     "December 3"
+    ],
+    "tuslar": [
+     "X",
+     "C",
+     "3"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "XENOBLADE CHRONICLES 3",
+    "alt": "NINTENDO SWITCH 2 EDITION"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "The new Heroes' Vault mode throws waves of enemies at you, and a new hero named Shimmer attacks at lightning speed.",
+   "veri": {
+    "baslik": "What's new",
+    "maddeler": [
+     {
+      "metin": "New Heroes' Vault mode",
+      "tetik": "Vault"
+     },
+     {
+      "metin": "Waves of enemies",
+      "tetik": "waves"
+     },
+     {
+      "metin": "New Hero: Shimmer",
+      "tetik": "Shimmer"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NEW MODE AND HERO",
+    "alt": "HEROES' VAULT • SHIMMER"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "On a compatible TV it runs in 4K, in handheld it's full HD, and it targets 60 frames per second.",
+   "veri": {
+    "baslik": "Sharper on Switch 2",
+    "platformlar": [],
+    "sayilar": [
+     {
+      "deger": "4K",
+      "etiket": "TV MODE",
+      "tetik": "4K"
+     },
+     {
+      "deger": "60",
+      "etiket": "FRAMES / SEC",
+      "tetik": "60"
+     }
+    ],
+    "not": "4K needs a compatible television."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "4K AND 60 FPS",
+    "alt": "NINTENDO SWITCH 2 ONLY"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Players who own the Switch original can buy a separate upgrade pack, and the new edition arrives December 3.",
+   "veri": {
+    "etiket": "Launch date",
+    "tarih": "December 3",
+    "not": "Digital and physical versions."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "LAUNCH DATE",
+    "alt": "DECEMBER 3"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Every price and detail is on our site, Control A Game. Will you upgrade, or start fresh?",
+   "veri": {
+    "cagri": "Prices and details on the site",
+    "alt": "Sources and upgrade info in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

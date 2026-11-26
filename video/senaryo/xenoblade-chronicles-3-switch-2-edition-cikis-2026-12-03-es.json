@@ -1,0 +1,128 @@
+{
+ "id": "xenoblade-chronicles-3-switch-2-edition-cikis-2026-12-03",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Xenoblade Chronicles 3 – Nintendo Switch 2 Edition llega el 3 de diciembre en exclusiva a Switch 2.",
+   "veri": {
+    "ust_etiket": "SWITCH 2 EDITION",
+    "baslik": "Xenoblade Chronicles 3: 3 de diciembre",
+    "vurgu": [
+     "3 de diciembre"
+    ],
+    "tuslar": [
+     "X",
+     "C",
+     "3"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "XENOBLADE CHRONICLES 3",
+    "alt": "NINTENDO SWITCH 2 EDITION"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "El nuevo modo Heroes' Vault enfrenta oleadas de enemigos, y un nuevo Héroe mítico llamado Shimmer ataca a toda velocidad.",
+   "veri": {
+    "baslik": "Novedades",
+    "maddeler": [
+     {
+      "metin": "Nuevo modo Heroes' Vault",
+      "tetik": "Vault"
+     },
+     {
+      "metin": "Oleadas de enemigos",
+      "tetik": "oleadas"
+     },
+     {
+      "metin": "Nuevo Héroe: Shimmer",
+      "tetik": "Shimmer"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NUEVO MODO Y HÉROE",
+    "alt": "HEROES' VAULT • SHIMMER"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "platform",
+   "anlatim": "En una tele compatible se ve en 4K, en modo portátil en full HD y apunta a 60 imágenes por segundo.",
+   "veri": {
+    "baslik": "Más nítido en Switch 2",
+    "platformlar": [],
+    "sayilar": [
+     {
+      "deger": "4K",
+      "etiket": "MODO TV",
+      "tetik": "4K"
+     },
+     {
+      "deger": "60",
+      "etiket": "IMÁGENES / S",
+      "tetik": "60"
+     }
+    ],
+    "not": "El 4K requiere un televisor compatible."
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "4K Y 60 IMÁGENES",
+    "alt": "SOLO NINTENDO SWITCH 2"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Quien tiene la versión de Switch puede comprar un pack de mejora aparte; la nueva edición sale el 3 de diciembre.",
+   "veri": {
+    "etiket": "Fecha de lanzamiento",
+    "tarih": "3 de diciembre",
+    "not": "Versión digital y física."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "LANZAMIENTO",
+    "alt": "3 DE DICIEMBRE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Mejorarás tu copia o empezarás de cero?",
+   "veri": {
+    "cagri": "Precios y detalles en la web",
+    "alt": "Fuente e info de mejora en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

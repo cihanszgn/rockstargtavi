@@ -1,0 +1,115 @@
+{
+ "id": "metroid-ravenous-on-siparis-2026-11-25",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "La nouvelle aventure de Samus, Metroid Ravenous, est en précommande et sort le 28 janvier 2027.",
+   "veri": {
+    "ust_etiket": "METROID RAVENOUS",
+    "baslik": "Metroid Ravenous en précommande",
+    "vurgu": [
+     "en précommande"
+    ],
+    "tuslar": [
+     "M",
+     "R"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "METROID RAVENOUS",
+    "alt": "PRÉCOMMANDE OUVERTE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Selon la page officielle de Nintendo, Samus est attaquée puis bloquée sur une lune inconnue.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Page officielle de Nintendo",
+    "alinti": "Samus est attaquée par des assaillants inconnus et se retrouve bloquée sur une lune inconnue."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "NINTENDO • NOM NOM NOM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Elle doit utiliser ses instincts Metroid fraîchement éveillés pour dévorer ses ennemis sans devenir un repas.",
+   "veri": {
+    "baslik": "La mission de Samus",
+    "maddeler": [
+     {
+      "metin": "Dévorer ses ennemis",
+      "tetik": "dévorer"
+     },
+     {
+      "metin": "Instincts Metroid éveillés",
+      "tetik": "instincts"
+     },
+     {
+      "metin": "Ne pas devenir un repas",
+      "tetik": "repas"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "LA MISSION DE SAMUS",
+    "alt": "DÉVORER SANS ÊTRE DÉVORÉE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "La précommande est ouverte dès maintenant, et le jeu sort le 28 janvier 2027.",
+   "veri": {
+    "etiket": "Date de sortie",
+    "tarih": "28 janvier 2027",
+    "not": "Précommande ouverte dès maintenant."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "DATE DE SORTIE",
+    "alt": "PRÉCOMMANDE OUVERTE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Vous précommandez maintenant, ou vous attendez la sortie ? Tout est sur notre site, Control A Game.",
+   "veri": {
+    "cagri": "Précommander ou attendre ?",
+    "alt": "Tout est sur notre site, Control A Game."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

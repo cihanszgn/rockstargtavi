@@ -1,0 +1,116 @@
+{
+ "id": "metroid-ravenous-on-siparis-2026-11-25",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Samus'ın yeni macerası Metroid Ravenous ön siparişe açıldı ve 28 Ocak 2027'de çıkacak.",
+   "veri": {
+    "ust_etiket": "METROID RAVENOUS",
+    "baslik": "Metroid Ravenous ön siparişte: 28 Ocak 2027",
+    "vurgu": [
+     "ön siparişte",
+     "28 Ocak 2027"
+    ],
+    "tuslar": [
+     "M",
+     "R"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "METROID RAVENOUS",
+    "alt": "ÖN SİPARİŞ AÇIK"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Resmî sayfaya göre Samus pusuya düşüp tanınmayan bir uyduda mahsur kalıyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Nintendo resmî sayfası",
+    "alinti": "Samus bilinmeyen saldırganların pususuna düşüyor ve tanınmayan bir uyduda mahsur kalıyor."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "NINTENDO • NOM NOM NOM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Samus, içgüdülerini kullanarak düşmanlarını yutmalı ve yem olmamalı.",
+   "veri": {
+    "baslik": "Samus'ın görevi",
+    "maddeler": [
+     {
+      "metin": "Yeni uyanan içgüdüler",
+      "tetik": "içgüdülerini"
+     },
+     {
+      "metin": "Düşmanları yutmak",
+      "tetik": "yutmalı"
+     },
+     {
+      "metin": "Yem olmamak",
+      "tetik": "yem"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "SAMUS'UN GÖREVİ",
+    "alt": "YUTMAK VE YEM OLMAMAK"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Ön siparişi şimdiden verebilirsiniz; oyun 28 Ocak 2027'de çıkıyor.",
+   "veri": {
+    "etiket": "Çıkış tarihi",
+    "tarih": "28 Ocak 2027",
+    "not": "Ön sipariş şimdiden açık."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "ÇIKIŞ TARİHİ",
+    "alt": "ÖN SİPARİŞ AÇIK"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Ön siparişe girer misin, yoksa çıkışı mı beklersin? Tamamı sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "Ön sipariş mi, bekleyiş mi?",
+    "alt": "Tamamı sitemizde, Control A Game'de."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,115 @@
+{
+ "id": "metroid-ravenous-on-siparis-2026-11-25",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Samus's new adventure, Metroid Ravenous, is open for pre-order and launches January 28, 2027.",
+   "veri": {
+    "ust_etiket": "METROID RAVENOUS",
+    "baslik": "Metroid Ravenous: January 28, 2027",
+    "vurgu": [
+     "January 28, 2027"
+    ],
+    "tuslar": [
+     "M",
+     "R"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "METROID RAVENOUS",
+    "alt": "PRE-ORDER OPEN"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Nintendo's official page says Samus is ambushed and stranded on an unfamiliar moon.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Nintendo official page",
+    "alinti": "Samus is ambushed by unknown attackers and stranded on an unfamiliar moon."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "NINTENDO • NOM NOM NOM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "She must use her newly awakened Metroid instincts to devour her foes without becoming a meal herself.",
+   "veri": {
+    "baslik": "Samus's mission",
+    "maddeler": [
+     {
+      "metin": "Devour her foes",
+      "tetik": "devour"
+     },
+     {
+      "metin": "Newly awakened instincts",
+      "tetik": "instincts"
+     },
+     {
+      "metin": "Avoid becoming a meal",
+      "tetik": "meal"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "SAMUS'S MISSION",
+    "alt": "DEVOUR, DON'T BE DEVOURED"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Pre-orders are open now, and the game is due on January 28, 2027.",
+   "veri": {
+    "etiket": "Release date",
+    "tarih": "January 28, 2027",
+    "not": "Pre-orders are open now."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "RELEASE DATE",
+    "alt": "PRE-ORDER NOW"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Will you pre-order now, or wait for launch? Read the full story on our site, Control A Game.",
+   "veri": {
+    "cagri": "Pre-order now, or wait?",
+    "alt": "Read the full story on our site, Control A Game."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
