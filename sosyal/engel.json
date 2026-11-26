@@ -1,1 +1,8 @@
-{}
+{
+ "instagram|tr": {
+  "bitis": "2026-11-27T05:02:09+00:00",
+  "neden": "\"OAuthException\",\"error_subcode\":2207051,\"is_transient\":false,\"error_user_msg\":\"Topluluğumuzu korumak için bazı hareketleri kısıtlıyoruz. Hata yaptığımızı düşünüyorsan bize bildir.\",\"error_user_title\":\"eylem engellendi\",\"fbtrace_id\":\"AXABiP2aED59UDKkNOgr8Fi\"}}",
+  "sayi": 1,
+  "son": "2026-11-26T23:02:09+00:00"
+ }
+}
