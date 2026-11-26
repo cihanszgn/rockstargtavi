@@ -1,5 +1,5 @@
 {
- "guncel": "2026-11-25T14:42:12Z",
+ "guncel": "2026-11-26T14:04:47Z",
  "kaynak": "https://www.cheapshark.com",
  "magazalar": [
   {
@@ -165,6 +165,40 @@
    "dealRating": 10.0,
    "thumb": "https://sttc.gamersgate.com/images/product/code-vein-deluxe-edition/cover-180-26ad0a.jpg",
    "enDusuk": 6.76
+  },
+  {
+   "dealID": "tZtWDm4EV8cRgKxuSlCxLJ3cIGJp2rdidQQA0CozlOE%3D",
+   "gameID": "237067",
+   "title": "Middle-earth: The Shadow Bundle",
+   "storeID": "7",
+   "salePrice": 7.49,
+   "normalPrice": 79.98,
+   "savings": 90.64,
+   "metacriticScore": 0,
+   "steamRatingText": "Very Positive",
+   "steamRatingPercent": 90,
+   "steamAppID": "648168",
+   "releaseDate": 0,
+   "dealRating": 10.0,
+   "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/subs/648168/capsule_231x87.jpg?t=1773778564",
+   "enDusuk": 5.59
+  },
+  {
+   "dealID": "V%2BClsNbtpiiHQeErZc4IbgBoXbaCkNVcreabZQ9R3T0%3D",
+   "gameID": "229470",
+   "title": "Neverwinter Nights: Enhanced Edition Digital Deluxe Edition",
+   "storeID": "7",
+   "salePrice": 6.85,
+   "normalPrice": 68.29,
+   "savings": 89.97,
+   "metacriticScore": 0,
+   "steamRatingText": null,
+   "steamRatingPercent": 0,
+   "steamAppID": null,
+   "releaseDate": 0,
+   "dealRating": 10.0,
+   "thumb": "https://images.gog-statics.com/3835cdf37b0927a05d44a7a7972d6828345afbc04f270914ab361350cbc2ad2d_product_tile_117h.webp",
+   "enDusuk": 6.82
   },
   {
    "dealID": "D%2Fvo4iP2dqX6%2Fm%2FuR7UIZEClDzwKKtL4d2%2FOekOD8rA%3D",
@@ -422,6 +456,23 @@
    "enDusuk": 2.81
   },
   {
+   "dealID": "lx1Ldqb2ETEm0PJHIwoF8aVhlAvtMNpyHN%2B3M64aUek%3D",
+   "gameID": "294665",
+   "title": "The LEGO Games Bundle",
+   "storeID": "7",
+   "salePrice": 12.99,
+   "normalPrice": 99.99,
+   "savings": 87.01,
+   "metacriticScore": 0,
+   "steamRatingText": "Very Positive",
+   "steamRatingPercent": 87,
+   "steamAppID": "466140",
+   "releaseDate": 0,
+   "dealRating": 10.0,
+   "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/subs/466140/capsule_231x87.jpg?t=1773438562",
+   "enDusuk": 12.99
+  },
+  {
    "dealID": "92SQ6YGXvM24Gm5h%2FRWdlcLRV8G2OLDw7PJCjPr5v8A%3D",
    "gameID": "174472",
    "title": "Dragon Ball Fighter Z  FighterZ Edition",
@@ -454,6 +505,23 @@
    "dealRating": 10.0,
    "thumb": "https://sttc.gamersgate.com/images/product/soulcalibur-vi-deluxe-edition/cover-180-b25d00.jpg",
    "enDusuk": 11.28
+  },
+  {
+   "dealID": "f8l9hEEImPnYBa29xA2TgGNe9%2FHFmuxhhhSOWdUYOVY%3D",
+   "gameID": "213719",
+   "title": "Omega Labyrinth Life - Deluxe Edition",
+   "storeID": "27",
+   "salePrice": 12.81,
+   "normalPrice": 79.99,
+   "savings": 83.99,
+   "metacriticScore": 0,
+   "steamRatingText": null,
+   "steamRatingPercent": 0,
+   "steamAppID": null,
+   "releaseDate": 0,
+   "dealRating": 10.0,
+   "thumb": "https://sttc.gamersgate.com/images/product/omega-labyrinth-life-deluxe-edition/cover-180-4b5d80.jpg",
+   "enDusuk": 10.65
   },
   {
    "dealID": "RKpDfTkja6hvA%2FotuH6FnIuUEk4BtZDwGm0DJ2xsyss%3D",
@@ -658,40 +726,6 @@
    "dealRating": 10.0,
    "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/subs/785847/capsule_231x87.jpg?t=1698432746",
    "enDusuk": 5.91
-  },
-  {
-   "dealID": "GbuwYYGcMsW8hFsmf9xqtSqxJDG2ePqShKtL%2B3hcgdM%3D",
-   "gameID": "237067",
-   "title": "Middle-earth: The Shadow Bundle",
-   "storeID": "23",
-   "salePrice": 5.91,
-   "normalPrice": 69.99,
-   "savings": 91.56,
-   "metacriticScore": 0,
-   "steamRatingText": "Very Positive",
-   "steamRatingPercent": 90,
-   "steamAppID": "648168",
-   "releaseDate": 0,
-   "dealRating": 10.0,
-   "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/subs/648168/capsule_231x87.jpg?t=1773778564",
-   "enDusuk": 5.59
-  },
-  {
-   "dealID": "LFnZANQDb4O%2Bdar7TdwK8h57Y0SxRc8WxfteFYBNkME%3D",
-   "gameID": "325983",
-   "title": "Batman: Arkham Bundle",
-   "storeID": "7",
-   "salePrice": 16.45,
-   "normalPrice": 119.95,
-   "savings": 86.29,
-   "metacriticScore": 0,
-   "steamRatingText": null,
-   "steamRatingPercent": 0,
-   "steamAppID": null,
-   "releaseDate": 0,
-   "dealRating": 10.0,
-   "thumb": "https://images.gog-statics.com/8480718b9eda57e44a6193fb92954b9195b8b7032458a96fb6a42f183ab089ee_product_tile_117h.webp",
-   "enDusuk": 16.45
   }
  ]
 }
