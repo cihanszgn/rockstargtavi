@@ -1609,14 +1609,17 @@
  "takvim-dawn-of-war-iv-2026-12-03-7|tr|instagram|gorsel": {
   "bicim": "gorsel",
   "dil": "tr",
-  "durum": "niyet",
-  "engel": true,
+  "durum": "tamam",
   "icerik_dili": "tr",
   "id": "takvim-dawn-of-war-iv-2026-12-03-7",
   "kapsayici": "17871769836694894",
+  "kimlik": null,
   "niyet_zamani": "2026-11-26T01:24:32+00:00",
+  "not": "Instagram engeli sonrası kapsayıcı ERROR; yayımlanmış olabileceğinden yeniden denenmedi",
   "platform": "instagram",
-  "sosyal_tur": "takvim"
+  "sosyal_tur": "takvim",
+  "url": null,
+  "zaman": "2026-11-26T13:44:57+00:00"
  },
  "takvim-hela-of-mice-and-magic-2026-12-01-14|en|instagram|gorsel": {
   "bicim": "gorsel",
