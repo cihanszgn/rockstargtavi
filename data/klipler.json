@@ -536,6 +536,42 @@
    },
    "youtube": "https://www.youtube.com/shorts/hjjbFUcPUgs"
   },
+  "hype-20261125-daea97fc-klip-03": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/hype",
+   "metin": {
+    "aciklama": "Gasp edilirken gaspçının parasını alan yayıncı, üstünden az para çıkınca sitem ediyor.\nKaynak: https://kick.com/hype\nKomixsi",
+    "baslik": "Hype gaspçıdan az para çıkınca söyleniyor",
+    "etiketler": [
+     "#Hype",
+     "#Kick",
+     "#GrandTheftAutoVI",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "d6ecf6d90d6e463c69f3390308055e4e67e62b05e2b22bf0637ba73fc0dfa64e",
+    "otomatik": true,
+    "ozet": "dc71d2f4db00c06b823dc3f2dc3078d81a8cf29d793fda4d33b5b2ae114c4413",
+    "zaman": "2026-11-26T20:34:08Z"
+   },
+   "otomatik": true,
+   "oyun": "Grand Theft Auto VI",
+   "paket": "cikti/hype-20261125-daea97fc/klip-03.json",
+   "sure": 26.61,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-25",
+   "yayinci": "Hype",
+   "yayinda": {
+    "kapak": "klip-hype-20261125-daea97fc-klip-03-kapak.jpg",
+    "mp4_1080": "klip-hype-20261125-daea97fc-klip-03-1080.mp4",
+    "mp4_540": "klip-hype-20261125-daea97fc-klip-03-540.mp4",
+    "mp4_720": "klip-hype-20261125-daea97fc-klip-03-720.mp4",
+    "sure": 26.61,
+    "yuklenen_ozet": "dc71d2f4db00c06b823dc3f2dc3078d81a8cf29d793fda4d33b5b2ae114c4413",
+    "zaman": "2026-11-26T20:34:28Z"
+   }
+  },
   "jahrein-20261116-82e22279-klip-02": {
    "hesap": "klip",
    "kanal_url": "https://kick.com/jahrein",
@@ -710,6 +746,76 @@
    },
    "youtube": "https://www.youtube.com/shorts/HT4STVMhhr8"
   },
+  "kemalcan-parlak-20261124-3FWynfRH-klip-01": {
+   "hesap": "klip",
+   "kanal_url": "https://www.youtube.com/@KendineMüzisyenKM",
+   "metin": {
+    "aciklama": "Aslanın görüldüğü yerde aslan maskesiyle gezen kişi şaşkınlık yaratıyor.\nKaynak: https://www.youtube.com/@KendineMüzisyenKM\nYayının bu anı: https://youtu.be/3FWynfRHNrU?t=338\nKomixsi",
+    "baslik": "Kemalcan aslan maskeli adama şaşırıyor",
+    "etiketler": [
+     "#Kemalcan",
+     "#Youtube",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "39a4b10c64f64062767e1ef6c0d2e873d4a936da50c8e2e1188812b6eeab9612",
+    "otomatik": true,
+    "ozet": "9fffb4b86d43957354fa68a2472a1fd4721aed616e14d62fe3ecd67e3670adf5",
+    "zaman": "2026-11-26T20:34:08Z"
+   },
+   "otomatik": true,
+   "oyun": "",
+   "paket": "cikti/kemalcan-parlak-20261124-3FWynfRH/klip-01.json",
+   "sure": 19.08,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-24",
+   "yayinci": "Kemalcan Parlak",
+   "yayinda": {
+    "kapak": "klip-kemalcan-parlak-20261124-3FWynfRH-klip-01-kapak.jpg",
+    "mp4_1080": "klip-kemalcan-parlak-20261124-3FWynfRH-klip-01-1080.mp4",
+    "mp4_540": "klip-kemalcan-parlak-20261124-3FWynfRH-klip-01-540.mp4",
+    "mp4_720": "klip-kemalcan-parlak-20261124-3FWynfRH-klip-01-720.mp4",
+    "sure": 19.08,
+    "yuklenen_ozet": "9fffb4b86d43957354fa68a2472a1fd4721aed616e14d62fe3ecd67e3670adf5",
+    "zaman": "2026-11-26T20:34:45Z"
+   }
+  },
+  "kemalcan-parlak-20261124-3FWynfRH-klip-03": {
+   "hesap": "klip",
+   "kanal_url": "https://www.youtube.com/@KendineMüzisyenKM",
+   "metin": {
+    "aciklama": "Mahalledeki aslana karşı tedbir sorulunca okey oynadıkları cevabı geliyor.\nKaynak: https://www.youtube.com/@KendineMüzisyenKM\nYayının bu anı: https://youtu.be/3FWynfRHNrU?t=728\nKomixsi",
+    "baslik": "Kemalcan aslana karşı okey tedbirini duyuyor",
+    "etiketler": [
+     "#Kemalcan",
+     "#Youtube",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "3538193ec2dc72f4580e776dc9a100557ed08736d6c8f93cbc9bb1dd64b35d76",
+    "otomatik": true,
+    "ozet": "1d44402ed5990d5f8cb7cc56cee7ba8514e1c636dadeccfa26772c00cb6e3009",
+    "zaman": "2026-11-26T20:34:08Z"
+   },
+   "otomatik": true,
+   "oyun": "",
+   "paket": "cikti/kemalcan-parlak-20261124-3FWynfRH/klip-03.json",
+   "sure": 23.94,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-24",
+   "yayinci": "Kemalcan Parlak",
+   "yayinda": {
+    "kapak": "klip-kemalcan-parlak-20261124-3FWynfRH-klip-03-kapak.jpg",
+    "mp4_1080": "klip-kemalcan-parlak-20261124-3FWynfRH-klip-03-1080.mp4",
+    "mp4_540": "klip-kemalcan-parlak-20261124-3FWynfRH-klip-03-540.mp4",
+    "mp4_720": "klip-kemalcan-parlak-20261124-3FWynfRH-klip-03-720.mp4",
+    "sure": 23.94,
+    "yuklenen_ozet": "1d44402ed5990d5f8cb7cc56cee7ba8514e1c636dadeccfa26772c00cb6e3009",
+    "zaman": "2026-11-26T20:35:02Z"
+   }
+  },
   "rraenee-20261118-13c4146d-klip-03": {
    "hesap": "klip",
    "kanal_url": "https://kick.com/rraenee",
@@ -746,6 +852,41 @@
     "zaman": "2026-11-23T18:55:16Z"
    },
    "youtube": "https://www.youtube.com/shorts/09h8mGeRF1M"
+  },
+  "tolunay-oren-20261125-7b945630-klip-03": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/tolunayoren",
+   "metin": {
+    "aciklama": "Kaynak: https://kick.com/tolunayoren\nKomixsi",
+    "baslik": "Tolunay eleştiriyi üstüne alınmıyor",
+    "etiketler": [
+     "#Tolunay",
+     "#Kick",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "1052c016e5a6914f7d21236ef4e41e0e65997c3c2bef112e10d76aadab69ea3e",
+    "otomatik": true,
+    "ozet": "0c030c07c8c454cdc122f03452b847fea2118fdd64788725dd256e2e6c7caf04",
+    "zaman": "2026-11-26T20:34:08Z"
+   },
+   "otomatik": true,
+   "oyun": "",
+   "paket": "cikti/tolunay-oren-20261125-7b945630/klip-03.json",
+   "sure": 49.3,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-25",
+   "yayinci": "Tolunay Ören",
+   "yayinda": {
+    "kapak": "klip-tolunay-oren-20261125-7b945630-klip-03-kapak.jpg",
+    "mp4_1080": "klip-tolunay-oren-20261125-7b945630-klip-03-1080.mp4",
+    "mp4_540": "klip-tolunay-oren-20261125-7b945630-klip-03-540.mp4",
+    "mp4_720": "klip-tolunay-oren-20261125-7b945630-klip-03-720.mp4",
+    "sure": 49.3,
+    "yuklenen_ozet": "0c030c07c8c454cdc122f03452b847fea2118fdd64788725dd256e2e6c7caf04",
+    "zaman": "2026-11-26T20:35:23Z"
+   }
   },
   "wtcn-20261117-6bbe5c53-klip-02": {
    "kanal_url": "https://kick.com/wtcn",
