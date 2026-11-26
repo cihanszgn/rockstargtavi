@@ -1,0 +1,123 @@
+{
+ "id": "marvel-rivals-incursion-point-yama-2026-11-26",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Marvel Rivals' new 18 vs. 18 map, Incursion Point, lands on November 26.",
+   "veri": {
+    "ust_etiket": "NEW PATCH",
+    "baslik": "Incursion Point lands November 26",
+    "vurgu": [
+     "Incursion Point"
+    ],
+    "tuslar": [
+     "I",
+     "P"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "MARVEL RIVALS",
+    "alt": "INCURSION POINT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to the official Steam announcement, the patch has no server downtime.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Official Steam announcement",
+    "alinti": "No server downtime."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "MARVEL RIVALS • STEAM NEWS"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Incursion Point hosts an 18 vs. 18 Chrono Annihilation mode. It will not be available on PS4.",
+   "veri": {
+    "baslik": "New map and mode",
+    "maddeler": [
+     {
+      "metin": "18 vs. 18 Chrono Annihilation",
+      "tetik": "18"
+     },
+     {
+      "metin": "Not available on PS4",
+      "tetik": "PS4"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NEW MAP AND MODE",
+    "alt": "INCURSION POINT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Lady Loki, Scarlet Witch and Moon Knight bundles arrive, and Black Friday discounts reach 40 percent.",
+   "veri": {
+    "baslik": "Bundles and sale",
+    "maddeler": [
+     {
+      "metin": "Lady Loki Envious Emerald Bundle",
+      "tetik": "Lady"
+     },
+     {
+      "metin": "Scarlet Witch and Moon Knight bundles",
+      "tetik": "Scarlet"
+     },
+     {
+      "metin": "Up to 40% off in the Black Friday Sale",
+      "tetik": "discounts"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "BUNDLES AND SALE",
+    "alt": "UP TO 40% OFF"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Which hero will you bring to Incursion Point?",
+   "veri": {
+    "cagri": "Read the full story",
+    "alt": "Map, bundles and sale are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

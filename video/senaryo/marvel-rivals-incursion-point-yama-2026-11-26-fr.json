@@ -1,0 +1,119 @@
+{
+ "id": "marvel-rivals-incursion-point-yama-2026-11-26",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Marvel Rivals ajoute la carte Incursion Point en mode 18 contre 18 le 26 novembre.",
+   "veri": {
+    "ust_etiket": "NOUVEAU PATCH",
+    "baslik": "Incursion Point arrive le 26 novembre",
+    "vurgu": [
+     "Incursion Point"
+    ],
+    "tuslar": [
+     "I",
+     "P"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "MARVEL RIVALS",
+    "alt": "INCURSION POINT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Selon l'annonce officielle sur Steam, la mise à jour se fera sans coupure de serveurs.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Annonce officielle sur Steam",
+    "alinti": "Aucune coupure de serveurs."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "MARVEL RIVALS • ANNONCE STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Incursion Point propose le mode 18 contre 18 Chrono Annihilation. La carte n'arrive pas sur PS4.",
+   "veri": {
+    "baslik": "Carte et mode nouveaux",
+    "maddeler": [
+     {
+      "metin": "Mode 18 contre 18 Chrono Annihilation",
+      "tetik": "18"
+     },
+     {
+      "metin": "Indisponible sur PS4",
+      "tetik": "PS4"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CARTE ET MODE NOUVEAUX",
+    "alt": "INCURSION POINT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Les packs Lady Loki, Scarlet Witch et Moon Knight arrivent, avec des réductions allant jusqu'à 40 %.",
+   "veri": {
+    "baslik": "Packs et promo",
+    "maddeler": [
+     {
+      "metin": "Packs Lady Loki, Scarlet Witch et Moon Knight",
+      "tetik": "Lady"
+     },
+     {
+      "metin": "Réductions Black Friday jusqu'à 40 %",
+      "tetik": "réductions"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "PACKS ET PROMO",
+    "alt": "JUSQU'À 40 %"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Quel héros emmèneriez-vous sur la nouvelle carte ?",
+   "veri": {
+    "cagri": "Tout est sur le site",
+    "alt": "Carte, packs et promo dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

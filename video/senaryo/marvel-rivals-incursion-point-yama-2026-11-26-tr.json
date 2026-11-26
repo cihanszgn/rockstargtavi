@@ -1,0 +1,123 @@
+{
+ "id": "marvel-rivals-incursion-point-yama-2026-11-26",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Marvel Rivals'ın yeni haritası Incursion Point, 26 Kasım'da geliyor.",
+   "veri": {
+    "ust_etiket": "YENİ YAMA",
+    "baslik": "Incursion Point 26 Kasım'da geliyor",
+    "vurgu": [
+     "Incursion Point"
+    ],
+    "tuslar": [
+     "I",
+     "P"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "MARVEL RIVALS",
+    "alt": "INCURSION POINT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam'deki resmî duyuruya göre yamada sunucu kesintisi yok.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam resmî duyuru",
+    "alinti": "Sunucu kesintisi yok; yamayı kurup hemen oynayabilirsiniz."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "MARVEL RIVALS • STEAM DUYURUSU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Incursion Point, 18'e 18 Chrono Annihilation modunda oynanıyor. Harita PS4'te yok.",
+   "veri": {
+    "baslik": "Yeni harita ve mod",
+    "maddeler": [
+     {
+      "metin": "18'e 18 Chrono Annihilation",
+      "tetik": "Chrono"
+     },
+     {
+      "metin": "PS4'te yok",
+      "tetik": "PS4'te"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "YENİ HARİTA VE MOD",
+    "alt": "INCURSION POINT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Lady Loki, Scarlet Witch ve Moon Knight paketleri geliyor. Black Friday indirimi yüzde 40'a kadar.",
+   "veri": {
+    "baslik": "Paketler ve indirim",
+    "maddeler": [
+     {
+      "metin": "Lady Loki Envious Emerald paketi",
+      "tetik": "Lady"
+     },
+     {
+      "metin": "Scarlet Witch ve Moon Knight paketleri",
+      "tetik": "Scarlet"
+     },
+     {
+      "metin": "Black Friday'de yüzde 40'a kadar indirim",
+      "tetik": "indirim"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "PAKETLER VE İNDİRİM",
+    "alt": "YÜZDE 40'A KADAR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Yeni haritada hangi kahramanla başlarsın?",
+   "veri": {
+    "cagri": "Bütün detaylar sitede",
+    "alt": "Harita, paketler ve indirim haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
