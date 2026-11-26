@@ -1,0 +1,110 @@
+{
+ "id": "pc-store-together-buyuk-guncelleme-2026-11-26",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "PC Store Together'a Rusça ve Çince dil desteği geldi, mağaza 39. seviyeye kadar büyüyor.",
+   "veri": {
+    "ust_etiket": "GÜNCELLEME",
+    "baslik": "PC Store Together'a Rusça ve Çince geldi",
+    "vurgu": [
+     "Rusça ve Çince"
+    ],
+    "tuslar": [
+     "P",
+     "C"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PC STORE TOGETHER",
+    "alt": "RUSÇA VE ÇİNCE DİL DESTEĞİ"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Güncellemeyle 64 yeni ürün ve 14 yeni lisans geliyor. Lisanslar 26. seviyeden 39. seviyeye kadar açılıyor.",
+   "veri": {
+    "baslik": "Yeni içerik",
+    "maddeler": [
+     {
+      "metin": "64 yeni ürün",
+      "tetik": "64"
+     },
+     {
+      "metin": "14 yeni ürün lisansı",
+      "tetik": "14"
+     },
+     {
+      "metin": "Seviye 26'dan 39'a açılım",
+      "tetik": "26"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "YENİ İÇERİK",
+    "alt": "64 ÜRÜN VE 14 LİSANS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Dört yeni dekorasyon 28. ile 38. seviye arasında açılıyor. Ayrıca 44 aksesuar ve 97 PC bileşeni paketi yeniden tasarlandı.",
+   "veri": {
+    "baslik": "Dekor ve paketler",
+    "maddeler": [
+     {
+      "metin": "Dört yeni dekorasyon",
+      "tetik": "dekorasyon"
+     },
+     {
+      "metin": "44 aksesuar paketi yenilendi",
+      "tetik": "44"
+     },
+     {
+      "metin": "97 PC bileşen paketi yenilendi",
+      "tetik": "97"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DEKOR VE AMBALAJ",
+    "alt": "44 AKSESUAR, 97 BİLEŞEN"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. İlk hangi seviye lisansını açarsın?",
+   "veri": {
+    "cagri": "Tamamı sitemizde",
+    "alt": "Lisans listesi ve dil desteği haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

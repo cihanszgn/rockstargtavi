@@ -1,0 +1,110 @@
+{
+ "id": "pc-store-together-buyuk-guncelleme-2026-11-26",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "PC Store Together ajoute le russe et le chinois, et votre magasin grandit jusqu'au niveau 39.",
+   "veri": {
+    "ust_etiket": "MISE À JOUR",
+    "baslik": "PC Store Together : russe et chinois",
+    "vurgu": [
+     "russe et chinois"
+    ],
+    "tuslar": [
+     "P",
+     "C"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PC STORE TOGETHER",
+    "alt": "RUSSE ET CHINOIS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "La mise à jour ajoute 64 nouveaux produits et 14 nouvelles licences. Les licences se débloquent du niveau 26 au niveau 39.",
+   "veri": {
+    "baslik": "Nouveau contenu",
+    "maddeler": [
+     {
+      "metin": "64 nouveaux produits",
+      "tetik": "64"
+     },
+     {
+      "metin": "14 nouvelles licences",
+      "tetik": "14"
+     },
+     {
+      "metin": "Du niveau 26 au 39",
+      "tetik": "26"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NOUVEAU CONTENU",
+    "alt": "64 PRODUITS ET 14 LICENCES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Quatre nouvelles décorations se débloquent entre les niveaux 28 et 38. Les 44 emballages d'accessoires et 97 emballages de composants ont été refaits.",
+   "veri": {
+    "baslik": "Décors et emballages",
+    "maddeler": [
+     {
+      "metin": "Quatre nouvelles décorations",
+      "tetik": "décorations"
+     },
+     {
+      "metin": "44 emballages d'accessoires",
+      "tetik": "44"
+     },
+     {
+      "metin": "97 emballages de composants",
+      "tetik": "97"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DÉCORS ET EMBALLAGES",
+    "alt": "44 ACCESSOIRES, 97 COMPOSANTS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Quelle licence débloqueriez-vous en premier ?",
+   "veri": {
+    "cagri": "Tout est sur notre site",
+    "alt": "Liste des licences et langues dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

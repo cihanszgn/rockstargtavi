@@ -1,0 +1,110 @@
+{
+ "id": "pc-store-together-buyuk-guncelleme-2026-11-26",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "PC Store Together just added Russian and Chinese, and your shop now grows up to level 39.",
+   "veri": {
+    "ust_etiket": "UPDATE",
+    "baslik": "PC Store Together adds Russian and Chinese",
+    "vurgu": [
+     "Russian and Chinese"
+    ],
+    "tuslar": [
+     "P",
+     "C"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PC STORE TOGETHER",
+    "alt": "RUSSIAN AND CHINESE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "The update adds 64 new products and 14 new licences. Licences unlock from level 26 up to level 39.",
+   "veri": {
+    "baslik": "New content",
+    "maddeler": [
+     {
+      "metin": "64 new products",
+      "tetik": "64"
+     },
+     {
+      "metin": "14 new licences",
+      "tetik": "14"
+     },
+     {
+      "metin": "Levels 26 to 39",
+      "tetik": "26"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NEW CONTENT",
+    "alt": "64 PRODUCTS AND 14 LICENCES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Four new decorations unlock between levels 28 and 38. Plus, 44 accessory packs and 97 PC component packs have been redesigned.",
+   "veri": {
+    "baslik": "Decor and packaging",
+    "maddeler": [
+     {
+      "metin": "Four new decorations",
+      "tetik": "decorations"
+     },
+     {
+      "metin": "44 accessory packages",
+      "tetik": "44"
+     },
+     {
+      "metin": "97 PC component packages",
+      "tetik": "97"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DECOR AND PACKAGING",
+    "alt": "44 ACCESSORIES, 97 COMPONENTS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Which licence would you unlock first?",
+   "veri": {
+    "cagri": "Read the full story on our site",
+    "alt": "Licence list and language support are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

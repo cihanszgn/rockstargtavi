@@ -32,7 +32,7 @@
 "2026-11-19"
 ],
 "de/index.html": [
-"b2398989af21",
+"7caef7dd3ead",
 "2026-11-26"
 ],
 "de/kostenlose-spiele.html": [
@@ -120,7 +120,7 @@
 "2026-11-16"
 ],
 "de/spiele-news.html": [
-"367902d698df",
+"bd22bf188e56",
 "2026-11-26"
 ],
 "de/spiele/apex-legends.html": [
@@ -316,7 +316,11 @@
 "2026-11-25"
 ],
 "de/thema/pc.html": [
-"d82ca8452541",
+"772785eabfa3",
+"2026-11-26"
+],
+"de/thema/pcstoretogether.html": [
+"5f0262802fb9",
 "2026-11-26"
 ],
 "de/thema/playstation.html": [
@@ -336,7 +340,7 @@
 "2026-11-24"
 ],
 "de/thema/steam.html": [
-"588116fe641b",
+"61143c134019",
 "2026-11-26"
 ],
 "de/thema/steamawards.html": [
@@ -352,7 +356,7 @@
 "2026-11-24"
 ],
 "de/thema/tur-guncelleme.html": [
-"32e270390e03",
+"3a5c2792f077",
 "2026-11-26"
 ],
 "de/thema/tur-haber.html": [
@@ -416,7 +420,7 @@
 "2026-11-26"
 ],
 "en/game-news.html": [
-"961b24f4f6f4",
+"bb9b2a5d9605",
 "2026-11-26"
 ],
 "en/game/apex-legends.html": [
@@ -656,7 +660,7 @@
 "2026-11-22"
 ],
 "en/index.html": [
-"6eaf256bffc2",
+"f2fcdbfa0b1c",
 "2026-11-26"
 ],
 "en/languages.html": [
@@ -716,7 +720,11 @@
 "2026-11-25"
 ],
 "en/tag/pc.html": [
-"6a2358dbd253",
+"b13f79da5c8d",
+"2026-11-26"
+],
+"en/tag/pcstoretogether.html": [
+"6c668dc04eaa",
 "2026-11-26"
 ],
 "en/tag/playstation.html": [
@@ -736,7 +744,7 @@
 "2026-11-25"
 ],
 "en/tag/steam.html": [
-"a6e9a3b3cb74",
+"d8fed7fca692",
 "2026-11-26"
 ],
 "en/tag/steamawards.html": [
@@ -752,7 +760,7 @@
 "2026-11-25"
 ],
 "en/tag/tur-guncelleme.html": [
-"d2857843fade",
+"cca34e3585c9",
 "2026-11-26"
 ],
 "en/tag/tur-haber.html": [
@@ -880,7 +888,7 @@
 "2026-11-09"
 ],
 "es/index.html": [
-"da812771e287",
+"c203b603a6f0",
 "2026-11-26"
 ],
 "es/juego/apex-legends.html": [
@@ -1052,7 +1060,7 @@
 "2026-11-17"
 ],
 "es/noticias-juegos.html": [
-"7c0f8546ba4a",
+"cc7de9470f4d",
 "2026-11-26"
 ],
 "es/ofertas.html": [
@@ -1104,7 +1112,11 @@
 "2026-11-25"
 ],
 "es/tema/pc.html": [
-"c76e1acea1b2",
+"fa2d727a5ed2",
+"2026-11-26"
+],
+"es/tema/pcstoretogether.html": [
+"5644d0932d2b",
 "2026-11-26"
 ],
 "es/tema/playstation.html": [
@@ -1124,7 +1136,7 @@
 "2026-11-25"
 ],
 "es/tema/steam.html": [
-"4827a287a999",
+"5d77be48298f",
 "2026-11-26"
 ],
 "es/tema/steamawards.html": [
@@ -1140,7 +1152,7 @@
 "2026-11-25"
 ],
 "es/tema/tur-guncelleme.html": [
-"fb0a4d3cc3a5",
+"d5afcda5c4a5",
 "2026-11-26"
 ],
 "es/tema/tur-haber.html": [
@@ -1203,6 +1215,10 @@
 "d308918256fd",
 "2026-11-25"
 ],
+"etiket/guncelleme.html": [
+"a1c8bf3e4e60",
+"2026-11-26"
+],
 "etiket/mobil.html": [
 "8709c86b303d",
 "2026-11-25"
@@ -1212,7 +1228,11 @@
 "2026-11-25"
 ],
 "etiket/pc.html": [
-"4361cd8ded37",
+"c6fe62de4d86",
+"2026-11-26"
+],
+"etiket/pcstoretogether.html": [
+"13d9073a3eaf",
 "2026-11-26"
 ],
 "etiket/playstation.html": [
@@ -1232,7 +1252,7 @@
 "2026-11-25"
 ],
 "etiket/steam.html": [
-"ba7c2c7bfdb1",
+"7f2b2c609c66",
 "2026-11-26"
 ],
 "etiket/steamawards.html": [
@@ -1248,7 +1268,7 @@
 "2026-11-25"
 ],
 "etiket/tur-guncelleme.html": [
-"aeb9e609c483",
+"a0c329be9c02",
 "2026-11-26"
 ],
 "etiket/tur-haber.html": [
@@ -1292,7 +1312,7 @@
 "2026-11-15"
 ],
 "fr/actus-jeux.html": [
-"0a1458a5f27a",
+"d19e3207565a",
 "2026-11-26"
 ],
 "fr/calendrier-sorties.html": [
@@ -1380,7 +1400,7 @@
 "2026-11-22"
 ],
 "fr/index.html": [
-"6f7e13451968",
+"ae213f8de767",
 "2026-11-26"
 ],
 "fr/jeu/apex-legends.html": [
@@ -1600,7 +1620,11 @@
 "2026-11-25"
 ],
 "fr/sujet/pc.html": [
-"b255a6fffc9b",
+"3f3b0278434a",
+"2026-11-26"
+],
+"fr/sujet/pcstoretogether.html": [
+"c190f1ae177c",
 "2026-11-26"
 ],
 "fr/sujet/playstation.html": [
@@ -1620,7 +1644,7 @@
 "2026-11-25"
 ],
 "fr/sujet/steam.html": [
-"513d82894280",
+"a589a37a8c08",
 "2026-11-26"
 ],
 "fr/sujet/steamawards.html": [
@@ -1636,7 +1660,7 @@
 "2026-11-25"
 ],
 "fr/sujet/tur-guncelleme.html": [
-"8ec6db41a8a6",
+"592f9505d9ac",
 "2026-11-26"
 ],
 "fr/sujet/tur-haber.html": [
@@ -1712,7 +1736,7 @@
 "2026-11-15"
 ],
 "index.html": [
-"ec54accd04c6",
+"520303c233f1",
 "2026-11-26"
 ],
 "indirimler.html": [
@@ -1732,7 +1756,7 @@
 "2026-11-16"
 ],
 "nl/gamenieuws.html": [
-"a05ee313b21e",
+"71bf0cc0c97a",
 "2026-11-26"
 ],
 "nl/games/apex-legends.html": [
@@ -1976,7 +2000,7 @@
 "2026-11-19"
 ],
 "nl/index.html": [
-"7d576b677de5",
+"82bf802b6e43",
 "2026-11-26"
 ],
 "nl/nieuws.html": [
@@ -2016,7 +2040,11 @@
 "2026-11-25"
 ],
 "nl/onderwerp/pc.html": [
-"d2710667a4e0",
+"c550cf22d69a",
+"2026-11-26"
+],
+"nl/onderwerp/pcstoretogether.html": [
+"35a908d90e39",
 "2026-11-26"
 ],
 "nl/onderwerp/playstation.html": [
@@ -2036,7 +2064,7 @@
 "2026-11-24"
 ],
 "nl/onderwerp/steam.html": [
-"f8bf7ecc58ec",
+"42a81c40c28a",
 "2026-11-26"
 ],
 "nl/onderwerp/steamawards.html": [
@@ -2052,7 +2080,7 @@
 "2026-11-24"
 ],
 "nl/onderwerp/tur-guncelleme.html": [
-"5e155ab8e8b7",
+"04027b1d81e5",
 "2026-11-26"
 ],
 "nl/onderwerp/tur-haber.html": [
@@ -2112,7 +2140,7 @@
 "2026-11-16"
 ],
 "oyun-haberleri.html": [
-"32a2a1a68750",
+"624582284f8a",
 "2026-11-26"
 ],
 "oyun/apex-legends.html": [
@@ -2488,7 +2516,11 @@
 "2026-11-25"
 ],
 "zh/huati/pc.html": [
-"d3ce56e09e51",
+"fff2ab18a411",
+"2026-11-26"
+],
+"zh/huati/pcstoretogether.html": [
+"270de0b6e0fa",
 "2026-11-26"
 ],
 "zh/huati/playstation.html": [
@@ -2508,7 +2540,7 @@
 "2026-11-24"
 ],
 "zh/huati/steam.html": [
-"c756860b1967",
+"60b18b1ed7d5",
 "2026-11-26"
 ],
 "zh/huati/steamawards.html": [
@@ -2524,7 +2556,7 @@
 "2026-11-24"
 ],
 "zh/huati/tur-guncelleme.html": [
-"e9352184db35",
+"9877d4925737",
 "2026-11-26"
 ],
 "zh/huati/tur-haber.html": [
@@ -2564,7 +2596,7 @@
 "2026-11-25"
 ],
 "zh/index.html": [
-"4256a16ffc14",
+"9e816dd146fc",
 "2026-11-26"
 ],
 "zh/laiyuan.html": [
@@ -2588,7 +2620,7 @@
 "2026-11-25"
 ],
 "zh/youxi-xinwen.html": [
-"41fefabd4eff",
+"8bf2d2a379ec",
 "2026-11-26"
 ],
 "zh/youxi/apex-legends.html": [
