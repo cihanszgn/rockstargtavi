@@ -1,0 +1,128 @@
+{
+ "id": "space-marine-2-16-0-yama-2026-11-26",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Warhammer 40,000: Space Marine 2's 16.0 patch is live, and Vanguard gets a major expansion.",
+   "veri": {
+    "ust_etiket": "PATCH 16.0",
+    "baslik": "Space Marine 2 patch 16.0 is live",
+    "vurgu": [
+     "16.0"
+    ],
+    "tuslar": [
+     "S",
+     "M",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "SPACE MARINE 2",
+    "alt": "PATCH 16.0 IS LIVE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam's official patch notes confirm the update reached every platform.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam official patch notes",
+    "alinti": "The 16.0 patch is now live on every platform, with a major expansion to the Vanguard class."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "STEAM PATCH NOTES"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Vanguard's Grapnel Launcher now works at close range. Bulwark gains Wargear 2.3 and can equip a cloak. Chaos Siege Mode adds a new Sector map.",
+   "veri": {
+    "baslik": "New content",
+    "maddeler": [
+     {
+      "metin": "Vanguard: Grapnel at close range",
+      "tetik": "Grapnel"
+     },
+     {
+      "metin": "Bulwark: Wargear 2.3 and cloak",
+      "tetik": "Wargear"
+     },
+     {
+      "metin": "Chaos Siege: Sector #3 map",
+      "tetik": "Sector"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NEW CONTENT",
+    "alt": "VANGUARD • BULWARK • SECTOR #3"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "yama_fark",
+   "anlatim": "Revenge now lasts 10 seconds, up from 8, and the Las Fusil fires 90 rounds per minute, up from 45.",
+   "veri": {
+    "baslik": "Revenge and Las Fusil",
+    "satirlar": [
+     {
+      "ad": "Revenge duration (sec)",
+      "eski": "8",
+      "yeni": "10",
+      "tetik": "Revenge"
+     },
+     {
+      "ad": "Las Fusil fire rate (rpm)",
+      "eski": "45",
+      "yeni": "90",
+      "tetik": "Las"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "yama",
+    "baslik": "BALANCE CHANGE",
+    "alt": "REVENGE • LAS FUSIL"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Will you jump into Vanguard first?",
+   "veri": {
+    "cagri": "Every change on the site",
+    "alt": "Sources and map updates are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

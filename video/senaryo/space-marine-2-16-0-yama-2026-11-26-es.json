@@ -1,0 +1,128 @@
+{
+ "id": "space-marine-2-16-0-yama-2026-11-26",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "El parche 16.0 de Space Marine 2 ya está disponible, con una gran ampliación para Vanguard.",
+   "veri": {
+    "ust_etiket": "PARCHE 16.0",
+    "baslik": "Space Marine 2 parche 16.0 ya disponible",
+    "vurgu": [
+     "16.0"
+    ],
+    "tuslar": [
+     "S",
+     "M",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "SPACE MARINE 2",
+    "alt": "PARCHE 16.0 DISPONIBLE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Las notas oficiales de Steam confirman que la actualización llegó a todas las plataformas.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Notas oficiales de Steam",
+    "alinti": "La actualización 16.0 ya llega a todas las plataformas y amplía la clase Vanguard."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "NOTAS DE PARCHE EN STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Vanguard usa el Grapnel Launcher a corta distancia. Bulwark equipa Wargear 2.3 y puede llevar capa. Chaos Siege suma el mapa Sector.",
+   "veri": {
+    "baslik": "Contenido nuevo",
+    "maddeler": [
+     {
+      "metin": "Vanguard: Grapnel a corta distancia",
+      "tetik": "Grapnel"
+     },
+     {
+      "metin": "Bulwark: Wargear 2.3 y capa",
+      "tetik": "Wargear"
+     },
+     {
+      "metin": "Chaos Siege: mapa Sector #3",
+      "tetik": "Sector"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CONTENIDO NUEVO",
+    "alt": "VANGUARD • BULWARK • SECTOR #3"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "yama_fark",
+   "anlatim": "Revenge dura 10 segundos, antes 8, y el Las Fusil dispara 90 disparos por minuto, antes 45.",
+   "veri": {
+    "baslik": "Revenge y Las Fusil",
+    "satirlar": [
+     {
+      "ad": "Duración de Revenge (s)",
+      "eski": "8",
+      "yeni": "10",
+      "tetik": "Revenge"
+     },
+     {
+      "ad": "Cadencia del Las Fusil",
+      "eski": "45",
+      "yeni": "90",
+      "tetik": "Las"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "yama",
+    "baslik": "AJUSTE DE EQUILIBRIO",
+    "alt": "REVENGE • LAS FUSIL"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Vas a probar Vanguard primero?",
+   "veri": {
+    "cagri": "Todos los cambios en la web",
+    "alt": "Fuentes y novedades de mapas en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

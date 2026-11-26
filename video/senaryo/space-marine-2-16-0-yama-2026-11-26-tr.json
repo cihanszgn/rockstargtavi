@@ -1,0 +1,128 @@
+{
+ "id": "space-marine-2-16-0-yama-2026-11-26",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Space Marine 2'nin 16.0 yaması yayında: Vanguard'a büyük genişleme geldi.",
+   "veri": {
+    "ust_etiket": "16.0 YAMA",
+    "baslik": "Space Marine 2 16.0 yayında",
+    "vurgu": [
+     "16.0"
+    ],
+    "tuslar": [
+     "S",
+     "M",
+     "2"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "SPACE MARINE 2",
+    "alt": "16.0 YAMASI"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam'deki resmî yama notlarına göre güncelleme tüm platformlarda yayında.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam resmî yama notları",
+    "alinti": "Yama tüm platformlarda yayında; Vanguard sınıfı büyük bir genişleme alıyor."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "STEAM YAMA NOTLARI"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Vanguard'ın Grapnel Launcher'ı yakın mesafede kullanılabiliyor. Bulwark, Wargear 2.3 ile pelerin takabiliyor. Chaos Siege Mode'a yeni Sector haritası geliyor.",
+   "veri": {
+    "baslik": "Yeni içerik geliyor",
+    "maddeler": [
+     {
+      "metin": "Vanguard: Grapnel yakın mesafede",
+      "tetik": "Grapnel"
+     },
+     {
+      "metin": "Bulwark: Wargear 2.3 ve pelerin",
+      "tetik": "Wargear"
+     },
+     {
+      "metin": "Chaos Siege: Sector #3 haritası",
+      "tetik": "Sector"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "YENİ İÇERİK",
+    "alt": "VANGUARD • BULWARK • SECTOR #3"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "yama_fark",
+   "anlatim": "Revenge'in süresi 8 saniyeden 10 saniyeye çıkıyor, Las Fusil'in ateş hızı 45'ten 90'a yükseliyor.",
+   "veri": {
+    "baslik": "Revenge ve Las Fusil",
+    "satirlar": [
+     {
+      "ad": "Revenge süresi (sn)",
+      "eski": "8",
+      "yeni": "10",
+      "tetik": "Revenge"
+     },
+     {
+      "ad": "Las Fusil ateş hızı (dk)",
+      "eski": "45",
+      "yeni": "90",
+      "tetik": "Las"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "yama",
+    "baslik": "DENGE DEĞİŞİKLİĞİ",
+    "alt": "REVENGE • LAS FUSIL"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Yeni Vanguard'ı denemek ister misin?",
+   "veri": {
+    "cagri": "Bütün değişiklikler sitede",
+    "alt": "Harita ve silah detayları haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
