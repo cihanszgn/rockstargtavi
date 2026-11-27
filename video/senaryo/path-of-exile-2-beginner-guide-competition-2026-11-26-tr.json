@@ -1,0 +1,99 @@
+{
+ "id": "path-of-exile-2-beginner-guide-competition-2026-11-26",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Path of Exile 2 için yeni oyunculara rehber video yarışması başladı; birincilik ödülü stüdyo gezisi.",
+   "veri": {
+    "ust_etiket": "PATH OF EXILE 2",
+    "baslik": "Path of Exile 2 rehber yarışması",
+    "vurgu": [
+     "yarışması"
+    ],
+    "tuslar": [
+     "P",
+     "O",
+     "E"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PATH OF EXILE 2",
+    "alt": "REHBER VİDEO YARIŞMASI"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Yeni başlayanlara özgün rehber çekilecek: uzun videolar YouTube'da, kısa videolar ayrı platformlarda. Yapay zekâ içeriği yasak.",
+   "veri": {
+    "baslik": "Nasıl katılınır",
+    "maddeler": [
+     {
+      "metin": "Uzun video: 5 dakikanın üzerinde, YouTube",
+      "tetik": "uzun"
+     },
+     {
+      "metin": "Kısa video: 1 dakikanın üzerinde",
+      "tetik": "kısa"
+     },
+     {
+      "metin": "Yapay zekâ içeriği yasak",
+      "tetik": "Yapay"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NASIL KATILINIR",
+    "alt": "UZUN VE KISA VİDEO"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Gönderim 31 Ocak 2027'de bitiyor; kazananı topluluk oyu ve ilk 10'u inceleyen stüdyo seçecek.",
+   "veri": {
+    "etiket": "Başvuru bitişi",
+    "tarih": "31 Ocak",
+    "not": "Saat 23:59 (PST) itibarıyla kapanıyor."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "SON BAŞVURU",
+    "alt": "31 OCAK 2027, 23:59 PST"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Birincilik ödülü stüdyo gezisi. Tamamı sitemizde, Control A Game'de. Sen rehber çekerdin mi?",
+   "veri": {
+    "cagri": "Tüm kurallar sitede",
+    "alt": "Ödüller ve katılım şartları haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

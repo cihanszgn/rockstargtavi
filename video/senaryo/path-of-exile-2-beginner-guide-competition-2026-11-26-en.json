@@ -1,0 +1,99 @@
+{
+ "id": "path-of-exile-2-beginner-guide-competition-2026-11-26",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Path of Exile 2 has launched a beginner video guide competition, and first place wins a trip to the developer's office.",
+   "veri": {
+    "ust_etiket": "PATH OF EXILE 2",
+    "baslik": "Path of Exile 2 guide contest",
+    "vurgu": [
+     "contest"
+    ],
+    "tuslar": [
+     "P",
+     "O",
+     "E"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PATH OF EXILE 2",
+    "alt": "BEGINNER GUIDE CONTEST"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Entrants make an original guide for new players. Long videos go on YouTube, short ones on supported short-video platforms, and AI-generated content is banned.",
+   "veri": {
+    "baslik": "How to enter",
+    "maddeler": [
+     {
+      "metin": "Long video: over 5 minutes, YouTube",
+      "tetik": "Long"
+     },
+     {
+      "metin": "Short video: over 1 minute",
+      "tetik": "short"
+     },
+     {
+      "metin": "No AI-generated content",
+      "tetik": "AI-generated"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "HOW TO ENTER",
+    "alt": "LONG AND SHORT VIDEO"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Entries close on January 31, 2027. Winners come from a community vote, and Grinding Gear Games judges the top 10.",
+   "veri": {
+    "etiket": "Entries close",
+    "tarih": "January 31",
+    "not": "Deadline is 11:59 PM (PST)."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "DEADLINE",
+    "alt": "JANUARY 31, 2027, 11:59 PM PST"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "First place wins a studio trip. Read the full story on our site, Control A Game. Would you make a guide?",
+   "veri": {
+    "cagri": "Every rule on the site",
+    "alt": "Prizes and entry rules are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

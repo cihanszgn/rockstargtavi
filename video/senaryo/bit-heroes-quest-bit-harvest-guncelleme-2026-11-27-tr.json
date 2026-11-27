@@ -1,0 +1,99 @@
+{
+ "id": "bit-heroes-quest-bit-harvest-guncelleme-2026-11-27",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Bit Heroes Quest'te Bit Harvest Sezonu bir hafta daha sürüyor.",
+   "veri": {
+    "ust_etiket": "STEAM GÜNCELLEMESİ",
+    "baslik": "Bit Harvest bir hafta daha sürüyor",
+    "vurgu": [
+     "Bit Harvest"
+    ],
+    "tuslar": [
+     "B",
+     "H",
+     "Q"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "BIT HEROES QUEST",
+    "alt": "BIT HARVEST SEZONU"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Wisp'leri Sardinex'e götürüp ödül al. Deadryad şemasını sezon bitmeden aç. Evcil hayvan yumurtalarında ve aksesuar kutularında özel ödüller var.",
+   "veri": {
+    "baslik": "Sezon ödülleri",
+    "maddeler": [
+     {
+      "metin": "Wisp'ler Sardinex'te ödülle takas edilir",
+      "tetik": "Sardinex"
+     },
+     {
+      "metin": "Deadryad şeması sezon bitmeden açılır",
+      "tetik": "Deadryad"
+     },
+     {
+      "metin": "Özel yumurta ve aksesuar kutuları",
+      "tetik": "aksesuar"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "SEZON ÖDÜLLERİ",
+    "alt": "SARDINEX VE DEADRYAD"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Ninja Invasion 3 Aralık'a kadar sürüyor. Gauntlet ve Inferno Dimension Expedition ise 10 Aralık'a kadar.",
+   "veri": {
+    "etiket": "Ninja Invasion bitiyor",
+    "tarih": "3 Aralık",
+    "not": "Gauntlet ve Inferno Dimension Expedition 10 Aralık'a kadar."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "NINJA INVASION",
+    "alt": "3 ARALIK'A KADAR"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Sen hangi etkinliğe önce girersin?",
+   "veri": {
+    "cagri": "Bütün etkinlikler sitede",
+    "alt": "Kaynak ve ayrıntılar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

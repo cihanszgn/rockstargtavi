@@ -1,0 +1,99 @@
+{
+ "id": "bit-heroes-quest-bit-harvest-guncelleme-2026-11-27",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Bit Heroes Quest's Season of Bit Harvest runs for one more week on Steam.",
+   "veri": {
+    "ust_etiket": "STEAM UPDATE",
+    "baslik": "Bit Harvest runs one more week",
+    "vurgu": [
+     "one more week"
+    ],
+    "tuslar": [
+     "B",
+     "H",
+     "Q"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "BIT HEROES QUEST",
+    "alt": "SEASON OF BIT HARVEST"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Bring Wisps to Sardinex for rewards. Unlock the Deadryad schematic before the season ends. Pet eggs and accessory boxes hold Leg Day, Honew, Hollow Light and Shear Horror.",
+   "veri": {
+    "baslik": "Season rewards",
+    "maddeler": [
+     {
+      "metin": "Trade Wisps for rewards at Sardinex",
+      "tetik": "Sardinex"
+     },
+     {
+      "metin": "Deadryad schematic unlocks before season end",
+      "tetik": "Deadryad"
+     },
+     {
+      "metin": "Special pet eggs and accessory boxes",
+      "tetik": "eggs"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "SEASON REWARDS",
+    "alt": "SARDINEX AND DEADRYAD"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "The Ninja Invasion event runs until December 3. Gauntlet and Inferno Dimension Expedition events both run until December 10.",
+   "veri": {
+    "etiket": "Ninja Invasion ends",
+    "tarih": "December 3",
+    "not": "Gauntlet and Inferno Dimension Expedition run until December 10."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "NINJA INVASION",
+    "alt": "UNTIL DECEMBER 3"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Which event will you jump into first?",
+   "veri": {
+    "cagri": "Every event on the site",
+    "alt": "Source and details are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

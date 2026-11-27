@@ -1,0 +1,99 @@
+{
+ "id": "path-of-exile-2-beginner-guide-competition-2026-11-26",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Path of Exile 2 lance un concours de vidéos pour débutants, avec un voyage au studio pour le vainqueur.",
+   "veri": {
+    "ust_etiket": "PATH OF EXILE 2",
+    "baslik": "Path of Exile 2 : concours de guides",
+    "vurgu": [
+     "concours"
+    ],
+    "tuslar": [
+     "P",
+     "O",
+     "E"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PATH OF EXILE 2",
+    "alt": "CONCOURS POUR DÉBUTANTS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Les participants créent un guide original pour débutants. Vidéos longues sur YouTube, courtes sur des plateformes compatibles, sans contenu généré par IA.",
+   "veri": {
+    "baslik": "Comment participer",
+    "maddeler": [
+     {
+      "metin": "Longue : plus de 5 minutes, YouTube",
+      "tetik": "longues"
+     },
+     {
+      "metin": "Courte : plus de 1 minute",
+      "tetik": "courtes"
+     },
+     {
+      "metin": "Aucun contenu généré par IA",
+      "tetik": "IA"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "COMMENT PARTICIPER",
+    "alt": "VIDÉO LONGUE OU COURTE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Les envois ferment le 31 janvier 2027. Les gagnants viennent d'un vote de la communauté, et Grinding Gear Games juge le top 10.",
+   "veri": {
+    "etiket": "Fin des envois",
+    "tarih": "31 janvier",
+    "not": "Clôture à 11:59 PM (PST)."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "DATE LIMITE",
+    "alt": "31 JANVIER 2027, 11:59 PM PST"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Le premier prix est un voyage au studio. Tout est sur notre site, Control A Game. Tu ferais un guide ?",
+   "veri": {
+    "cagri": "Toutes les règles sur le site",
+    "alt": "Prix et conditions dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

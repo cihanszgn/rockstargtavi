@@ -1,0 +1,99 @@
+{
+ "id": "bit-heroes-quest-bit-harvest-guncelleme-2026-11-27",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "La Season of Bit Harvest de Bit Heroes Quest dura una semana más.",
+   "veri": {
+    "ust_etiket": "ACTUALIZACIÓN EN STEAM",
+    "baslik": "Bit Harvest dura una semana más",
+    "vurgu": [
+     "una semana más"
+    ],
+    "tuslar": [
+     "B",
+     "H",
+     "Q"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "BIT HEROES QUEST",
+    "alt": "SEASON OF BIT HARVEST"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Lleva Wisps a Sardinex para canjearlos por recompensas. Desbloquea el esquema de Deadryad antes de que termine la temporada. Leg Day, Honew, Hollow Light y Shear Horror salen en huevos y cajas especiales.",
+   "veri": {
+    "baslik": "Recompensas de temporada",
+    "maddeler": [
+     {
+      "metin": "Canjea Wisps por recompensas en Sardinex",
+      "tetik": "Sardinex"
+     },
+     {
+      "metin": "Esquema de Deadryad antes del fin",
+      "tetik": "Deadryad"
+     },
+     {
+      "metin": "Huevos de mascota y cajas de accesorios",
+      "tetik": "huevos"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "RECOMPENSAS",
+    "alt": "SARDINEX Y DEADRYAD"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Ninja Invasion termina el 3 de diciembre. Gauntlet y la expedición Inferno Dimension duran hasta el 10 de diciembre.",
+   "veri": {
+    "etiket": "Termina Ninja Invasion",
+    "tarih": "3 de diciembre",
+    "not": "Gauntlet e Inferno Dimension Expedition, hasta el 10 de diciembre."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "NINJA INVASION",
+    "alt": "HASTA EL 3 DE DICIEMBRE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Qué evento jugarás primero?",
+   "veri": {
+    "cagri": "Todos los eventos en la web",
+    "alt": "Fuente y detalles en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

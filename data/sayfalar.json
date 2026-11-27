@@ -32,7 +32,7 @@
 "2026-11-19"
 ],
 "de/index.html": [
-"a04019575365",
+"49c1aa589849",
 "2026-11-27"
 ],
 "de/kostenlose-spiele.html": [
@@ -120,7 +120,7 @@
 "2026-11-16"
 ],
 "de/spiele-news.html": [
-"e67163fef6f3",
+"6894a9d8751b",
 "2026-11-27"
 ],
 "de/spiele/apex-legends.html": [
@@ -192,7 +192,7 @@
 "2026-11-16"
 ],
 "de/spiele/index.html": [
-"2514a8d3c00d",
+"3469d1da82c9",
 "2026-11-27"
 ],
 "de/spiele/knight-online.html": [
@@ -228,7 +228,7 @@
 "2026-11-16"
 ],
 "de/spiele/path-of-exile-2.html": [
-"9f79d5e2b591",
+"733dcf741888",
 "2026-11-27"
 ],
 "de/spiele/path-of-exile.html": [
@@ -311,6 +311,10 @@
 "04531ce90a9d",
 "2026-11-25"
 ],
+"de/thema/grindinggeargames.html": [
+"1e32cc10b69c",
+"2026-11-27"
+],
 "de/thema/gtavi.html": [
 "cf6f2a7fc8ff",
 "2026-11-27"
@@ -323,8 +327,12 @@
 "0d124acdf3bd",
 "2026-11-27"
 ],
+"de/thema/pathofexile2.html": [
+"28c5881ecabe",
+"2026-11-27"
+],
 "de/thema/pc.html": [
-"12858a226233",
+"16128d0a50c0",
 "2026-11-27"
 ],
 "de/thema/pcstoretogether.html": [
@@ -348,7 +356,7 @@
 "2026-11-27"
 ],
 "de/thema/steam.html": [
-"674c8b92b0ec",
+"729209d0048d",
 "2026-11-27"
 ],
 "de/thema/steamawards.html": [
@@ -364,11 +372,11 @@
 "2026-11-27"
 ],
 "de/thema/tur-guncelleme.html": [
-"f4b2272f1d00",
+"324ef63310b2",
 "2026-11-27"
 ],
 "de/thema/tur-haber.html": [
-"0315c8e7a71c",
+"25af2596b41b",
 "2026-11-27"
 ],
 "de/thema/tur-indirim.html": [
@@ -428,7 +436,7 @@
 "2026-11-27"
 ],
 "en/game-news.html": [
-"e6d534b57ea4",
+"beb7b4f23358",
 "2026-11-27"
 ],
 "en/game/apex-legends.html": [
@@ -500,7 +508,7 @@
 "2026-11-16"
 ],
 "en/game/index.html": [
-"4b5fecef934b",
+"08539464e566",
 "2026-11-27"
 ],
 "en/game/knight-online.html": [
@@ -536,7 +544,7 @@
 "2026-11-16"
 ],
 "en/game/path-of-exile-2.html": [
-"216f0d591e8b",
+"225b9c3d11cc",
 "2026-11-27"
 ],
 "en/game/path-of-exile.html": [
@@ -672,7 +680,7 @@
 "2026-11-22"
 ],
 "en/index.html": [
-"196671ae723d",
+"b022ab45b63e",
 "2026-11-27"
 ],
 "en/languages.html": [
@@ -723,6 +731,10 @@
 "0c81960af2b2",
 "2026-11-25"
 ],
+"en/tag/grindinggeargames.html": [
+"ebc0584a0b97",
+"2026-11-27"
+],
 "en/tag/gtavi.html": [
 "1be1bef11c96",
 "2026-11-27"
@@ -735,8 +747,12 @@
 "90615b55a6bd",
 "2026-11-27"
 ],
+"en/tag/pathofexile2.html": [
+"cb555188e416",
+"2026-11-27"
+],
 "en/tag/pc.html": [
-"46c2b4dc088d",
+"ee8a2c0f3da5",
 "2026-11-27"
 ],
 "en/tag/pcstoretogether.html": [
@@ -760,7 +776,7 @@
 "2026-11-27"
 ],
 "en/tag/steam.html": [
-"b569676334ea",
+"babd1424e8e4",
 "2026-11-27"
 ],
 "en/tag/steamawards.html": [
@@ -776,11 +792,11 @@
 "2026-11-27"
 ],
 "en/tag/tur-guncelleme.html": [
-"47534840f0f9",
+"b19654f96120",
 "2026-11-27"
 ],
 "en/tag/tur-haber.html": [
-"d566cc5947f3",
+"7f98167e447d",
 "2026-11-27"
 ],
 "en/tag/tur-indirim.html": [
@@ -904,7 +920,7 @@
 "2026-11-09"
 ],
 "es/index.html": [
-"462d3da23c48",
+"7b9edfe34ac3",
 "2026-11-27"
 ],
 "es/juego/apex-legends.html": [
@@ -976,7 +992,7 @@
 "2026-11-16"
 ],
 "es/juego/index.html": [
-"cc7597515fe9",
+"2b83424afa7a",
 "2026-11-27"
 ],
 "es/juego/knight-online.html": [
@@ -1012,7 +1028,7 @@
 "2026-11-16"
 ],
 "es/juego/path-of-exile-2.html": [
-"0ef6644cb585",
+"b99b5f3811a5",
 "2026-11-27"
 ],
 "es/juego/path-of-exile.html": [
@@ -1080,7 +1096,7 @@
 "2026-11-17"
 ],
 "es/noticias-juegos.html": [
-"f36a2355b470",
+"0034dbd657d5",
 "2026-11-27"
 ],
 "es/ofertas.html": [
@@ -1123,6 +1139,10 @@
 "95ddd7669135",
 "2026-11-25"
 ],
+"es/tema/grindinggeargames.html": [
+"e440a1396527",
+"2026-11-27"
+],
 "es/tema/gtavi.html": [
 "49e3df15d36c",
 "2026-11-27"
@@ -1135,8 +1155,12 @@
 "89c08f064506",
 "2026-11-27"
 ],
+"es/tema/pathofexile2.html": [
+"bf3bc082e8ea",
+"2026-11-27"
+],
 "es/tema/pc.html": [
-"3999a263a0c9",
+"881fea38855c",
 "2026-11-27"
 ],
 "es/tema/pcstoretogether.html": [
@@ -1160,7 +1184,7 @@
 "2026-11-27"
 ],
 "es/tema/steam.html": [
-"be8a2f533b42",
+"9d2bf06a23aa",
 "2026-11-27"
 ],
 "es/tema/steamawards.html": [
@@ -1176,11 +1200,11 @@
 "2026-11-27"
 ],
 "es/tema/tur-guncelleme.html": [
-"e1816ffd784c",
+"f4b5701818b6",
 "2026-11-27"
 ],
 "es/tema/tur-haber.html": [
-"4f3531166b39",
+"6db06b68f23d",
 "2026-11-27"
 ],
 "es/tema/tur-indirim.html": [
@@ -1239,6 +1263,10 @@
 "33e68f2ac1b7",
 "2026-11-25"
 ],
+"etiket/grindinggeargames.html": [
+"11ba905f4419",
+"2026-11-27"
+],
 "etiket/gtavi.html": [
 "c7a704df138a",
 "2026-11-27"
@@ -1255,8 +1283,12 @@
 "61dcaa558fe5",
 "2026-11-27"
 ],
+"etiket/pathofexile2.html": [
+"fb060da5bd88",
+"2026-11-27"
+],
 "etiket/pc.html": [
-"18c7059a3347",
+"ef209f5d087e",
 "2026-11-27"
 ],
 "etiket/pcstoretogether.html": [
@@ -1280,7 +1312,7 @@
 "2026-11-27"
 ],
 "etiket/steam.html": [
-"e8a809e7e898",
+"052ad76a0b4b",
 "2026-11-27"
 ],
 "etiket/steamawards.html": [
@@ -1296,11 +1328,11 @@
 "2026-11-27"
 ],
 "etiket/tur-guncelleme.html": [
-"e4f453846e27",
+"22c4e55ea9cf",
 "2026-11-27"
 ],
 "etiket/tur-haber.html": [
-"da9f98cc60b0",
+"42aa5853df6f",
 "2026-11-27"
 ],
 "etiket/tur-indirim.html": [
@@ -1340,7 +1372,7 @@
 "2026-11-15"
 ],
 "fr/actus-jeux.html": [
-"43a604f10db0",
+"909a543cdfef",
 "2026-11-27"
 ],
 "fr/calendrier-sorties.html": [
@@ -1428,7 +1460,7 @@
 "2026-11-22"
 ],
 "fr/index.html": [
-"dd5487229805",
+"fafbde2d2967",
 "2026-11-27"
 ],
 "fr/jeu/apex-legends.html": [
@@ -1500,7 +1532,7 @@
 "2026-11-16"
 ],
 "fr/jeu/index.html": [
-"291695bc60ae",
+"001370dceb7e",
 "2026-11-27"
 ],
 "fr/jeu/knight-online.html": [
@@ -1536,7 +1568,7 @@
 "2026-11-16"
 ],
 "fr/jeu/path-of-exile-2.html": [
-"968e6cb9aa20",
+"69a7ade98bd9",
 "2026-11-27"
 ],
 "fr/jeu/path-of-exile.html": [
@@ -1643,6 +1675,10 @@
 "dc30a76f4931",
 "2026-11-25"
 ],
+"fr/sujet/grindinggeargames.html": [
+"9b2da7249fe4",
+"2026-11-27"
+],
 "fr/sujet/gtavi.html": [
 "7106aca875a7",
 "2026-11-27"
@@ -1655,8 +1691,12 @@
 "7b0ad57ec39b",
 "2026-11-27"
 ],
+"fr/sujet/pathofexile2.html": [
+"fabbad2a7d0e",
+"2026-11-27"
+],
 "fr/sujet/pc.html": [
-"7d697b5ed068",
+"e34d969ebdf9",
 "2026-11-27"
 ],
 "fr/sujet/pcstoretogether.html": [
@@ -1680,7 +1720,7 @@
 "2026-11-27"
 ],
 "fr/sujet/steam.html": [
-"3c6710dbaf5b",
+"9a778ce55051",
 "2026-11-27"
 ],
 "fr/sujet/steamawards.html": [
@@ -1696,11 +1736,11 @@
 "2026-11-27"
 ],
 "fr/sujet/tur-guncelleme.html": [
-"f2a999dc0e14",
+"dc7ea73f21f8",
 "2026-11-27"
 ],
 "fr/sujet/tur-haber.html": [
-"5fa1021f93db",
+"0d4a467d6188",
 "2026-11-27"
 ],
 "fr/sujet/tur-indirim.html": [
@@ -1772,7 +1812,7 @@
 "2026-11-15"
 ],
 "index.html": [
-"c22388ecb565",
+"ddb57c2a7463",
 "2026-11-27"
 ],
 "indirimler.html": [
@@ -1792,7 +1832,7 @@
 "2026-11-16"
 ],
 "nl/gamenieuws.html": [
-"393575b1b8df",
+"bcf54f62381a",
 "2026-11-27"
 ],
 "nl/games/apex-legends.html": [
@@ -1864,7 +1904,7 @@
 "2026-11-16"
 ],
 "nl/games/index.html": [
-"ce83b9faab87",
+"435e2d5c93c8",
 "2026-11-27"
 ],
 "nl/games/knight-online.html": [
@@ -1900,7 +1940,7 @@
 "2026-11-16"
 ],
 "nl/games/path-of-exile-2.html": [
-"6d46f9df5311",
+"53e84e787308",
 "2026-11-27"
 ],
 "nl/games/path-of-exile.html": [
@@ -2040,7 +2080,7 @@
 "2026-11-19"
 ],
 "nl/index.html": [
-"3735b710566c",
+"de69c5836c04",
 "2026-11-27"
 ],
 "nl/nieuws.html": [
@@ -2071,6 +2111,10 @@
 "9b80227f130d",
 "2026-11-25"
 ],
+"nl/onderwerp/grindinggeargames.html": [
+"152f21ac6cb2",
+"2026-11-27"
+],
 "nl/onderwerp/gtavi.html": [
 "0ced0e0ee552",
 "2026-11-27"
@@ -2083,8 +2127,12 @@
 "e6f7a8fd9857",
 "2026-11-27"
 ],
+"nl/onderwerp/pathofexile2.html": [
+"db41f1e22112",
+"2026-11-27"
+],
 "nl/onderwerp/pc.html": [
-"fcceeef91ae9",
+"9f3d55e956ed",
 "2026-11-27"
 ],
 "nl/onderwerp/pcstoretogether.html": [
@@ -2108,7 +2156,7 @@
 "2026-11-27"
 ],
 "nl/onderwerp/steam.html": [
-"27b43eab4a46",
+"e36c74627c29",
 "2026-11-27"
 ],
 "nl/onderwerp/steamawards.html": [
@@ -2124,11 +2172,11 @@
 "2026-11-27"
 ],
 "nl/onderwerp/tur-guncelleme.html": [
-"ae447bd79659",
+"00f07a71827b",
 "2026-11-27"
 ],
 "nl/onderwerp/tur-haber.html": [
-"e54f16373e59",
+"96c1173e7d50",
 "2026-11-27"
 ],
 "nl/onderwerp/tur-indirim.html": [
@@ -2184,7 +2232,7 @@
 "2026-11-16"
 ],
 "oyun-haberleri.html": [
-"b94f1b614533",
+"74623d481937",
 "2026-11-27"
 ],
 "oyun/apex-legends.html": [
@@ -2256,7 +2304,7 @@
 "2026-11-16"
 ],
 "oyun/index.html": [
-"9db6da5d85e5",
+"9e683169848e",
 "2026-11-27"
 ],
 "oyun/knight-online.html": [
@@ -2292,7 +2340,7 @@
 "2026-11-16"
 ],
 "oyun/path-of-exile-2.html": [
-"0223f7e8006b",
+"e2995952c5a3",
 "2026-11-27"
 ],
 "oyun/path-of-exile.html": [
@@ -2555,6 +2603,10 @@
 "69e820388fb7",
 "2026-11-25"
 ],
+"zh/huati/grindinggeargames.html": [
+"2295ca52e916",
+"2026-11-27"
+],
 "zh/huati/gtavi.html": [
 "93fcd2725f72",
 "2026-11-27"
@@ -2567,8 +2619,12 @@
 "a8ed2a7bcd6f",
 "2026-11-27"
 ],
+"zh/huati/pathofexile2.html": [
+"7e144a3da57c",
+"2026-11-27"
+],
 "zh/huati/pc.html": [
-"0f3884f9b68a",
+"75095150a6a5",
 "2026-11-27"
 ],
 "zh/huati/pcstoretogether.html": [
@@ -2592,7 +2648,7 @@
 "2026-11-27"
 ],
 "zh/huati/steam.html": [
-"0043c5b985c4",
+"63be7b74a8a6",
 "2026-11-27"
 ],
 "zh/huati/steamawards.html": [
@@ -2608,11 +2664,11 @@
 "2026-11-27"
 ],
 "zh/huati/tur-guncelleme.html": [
-"b724b7905eba",
+"7ed7d8d980d3",
 "2026-11-27"
 ],
 "zh/huati/tur-haber.html": [
-"8f9b57f44b49",
+"03e882a51e27",
 "2026-11-27"
 ],
 "zh/huati/tur-indirim.html": [
@@ -2648,7 +2704,7 @@
 "2026-11-27"
 ],
 "zh/index.html": [
-"ac2a5e591f75",
+"77b52d4349d1",
 "2026-11-27"
 ],
 "zh/laiyuan.html": [
@@ -2672,7 +2728,7 @@
 "2026-11-26"
 ],
 "zh/youxi-xinwen.html": [
-"474eacf70b7a",
+"e0b8d288f51e",
 "2026-11-27"
 ],
 "zh/youxi/apex-legends.html": [
@@ -2744,7 +2800,7 @@
 "2026-11-16"
 ],
 "zh/youxi/index.html": [
-"068e15136e7a",
+"7618f175b25c",
 "2026-11-27"
 ],
 "zh/youxi/knight-online.html": [
@@ -2780,7 +2836,7 @@
 "2026-11-16"
 ],
 "zh/youxi/path-of-exile-2.html": [
-"f0e951ea5eb6",
+"296506c0f000",
 "2026-11-27"
 ],
 "zh/youxi/path-of-exile.html": [
