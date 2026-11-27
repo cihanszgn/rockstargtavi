@@ -892,6 +892,76 @@
    },
    "youtube": "https://www.youtube.com/shorts/8gEzdj-0pYw"
   },
+  "tolunay-oren-20261126-bf631e29-klip-02": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/tolunayoren",
+   "metin": {
+    "aciklama": "Doğum günü kutlaması, elden ayaktan düşmeden vefat etme dileğine dönüşüyor.\nKaynak: https://kick.com/tolunayoren\nKomixsi",
+    "baslik": "Tolunay ilginç bir doğum günü dileği ediyor",
+    "etiketler": [
+     "#Tolunay",
+     "#Kick",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "69aec9702bf060476925d89d94b6715af85e7ef509079c2bc489abb09f314c5d",
+    "otomatik": true,
+    "ozet": "ee45b12c1270871bc29855f3ad4f3102f704997596780d6d2983c40e95ce396b",
+    "zaman": "2026-11-27T15:03:27Z"
+   },
+   "otomatik": true,
+   "oyun": "",
+   "paket": "cikti/tolunay-oren-20261126-bf631e29/klip-02.json",
+   "sure": 19.33,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-26",
+   "yayinci": "Tolunay Ören",
+   "yayinda": {
+    "kapak": "klip-tolunay-oren-20261126-bf631e29-klip-02-kapak.jpg",
+    "mp4_1080": "klip-tolunay-oren-20261126-bf631e29-klip-02-1080.mp4",
+    "mp4_540": "klip-tolunay-oren-20261126-bf631e29-klip-02-540.mp4",
+    "mp4_720": "klip-tolunay-oren-20261126-bf631e29-klip-02-720.mp4",
+    "sure": 19.33,
+    "yuklenen_ozet": "ee45b12c1270871bc29855f3ad4f3102f704997596780d6d2983c40e95ce396b",
+    "zaman": "2026-11-27T15:03:41Z"
+   }
+  },
+  "tolunay-oren-20261126-tkm0Pz-j-klip-02": {
+   "hesap": "klip",
+   "kanal_url": "https://www.youtube.com/@TolunayOren",
+   "metin": {
+    "aciklama": "Tolunay duasında abonelere McLaren, abone olmayan izleyicilere yalnız Cupra Leon diliyor.\nKaynak: https://www.youtube.com/@TolunayOren\nYayının bu anı: https://youtu.be/tkm0Pz-jwDc?t=2975\nKomixsi",
+    "baslik": "Tolunay duada abonelere ayrıcalık yapıyor",
+    "etiketler": [
+     "#Tolunay",
+     "#Youtube",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "f444e55e5eb48592b8fd5dd6a323fd2db52ec4ccbec02740318bfa7a43254e2d",
+    "otomatik": true,
+    "ozet": "39cf8062187133cb1ee2734b37467eb50797049e29472eba9005c9f1b063f988",
+    "zaman": "2026-11-27T15:03:27Z"
+   },
+   "otomatik": true,
+   "oyun": "",
+   "paket": "cikti/tolunay-oren-20261126-tkm0Pz-j/klip-02.json",
+   "sure": 59.0,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-26",
+   "yayinci": "Tolunay Ören",
+   "yayinda": {
+    "kapak": "klip-tolunay-oren-20261126-tkm0Pz-j-klip-02-kapak.jpg",
+    "mp4_1080": "klip-tolunay-oren-20261126-tkm0Pz-j-klip-02-1080.mp4",
+    "mp4_540": "klip-tolunay-oren-20261126-tkm0Pz-j-klip-02-540.mp4",
+    "mp4_720": "klip-tolunay-oren-20261126-tkm0Pz-j-klip-02-720.mp4",
+    "sure": 59.0,
+    "yuklenen_ozet": "39cf8062187133cb1ee2734b37467eb50797049e29472eba9005c9f1b063f988",
+    "zaman": "2026-11-27T15:04:21Z"
+   }
+  },
   "wtcn-20261117-6bbe5c53-klip-02": {
    "kanal_url": "https://kick.com/wtcn",
    "metin": {
