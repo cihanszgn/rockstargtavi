@@ -1,0 +1,99 @@
+{
+ "id": "warframe-tau-cikis-2026-11-27",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Warframe's new star chart, Fornax, arrives on December 9 across all platforms.",
+   "veri": {
+    "ust_etiket": "NEW STAR CHART",
+    "baslik": "Warframe: Tau launches December 9",
+    "vurgu": [
+     "December 9"
+    ],
+    "tuslar": [
+     "T",
+     "A",
+     "U"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "WARFRAME",
+    "alt": "TAU • FORNAX"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Fornax has linked hubs like the Lastbloom Lounge and Manifold 90-BF. A new Syndicate, the Fornax Informer, joins the story, while the Steel Path raises difficulty.",
+   "veri": {
+    "baslik": "Inside Fornax",
+    "maddeler": [
+     {
+      "metin": "Linked hubs: Lastbloom Lounge, Manifold 90-BF",
+      "tetik": "hubs"
+     },
+     {
+      "metin": "New Syndicate: Fornax Informer",
+      "tetik": "Syndicate"
+     },
+     {
+      "metin": "Steel Path raises difficulty",
+      "tetik": "Steel Path"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "INSIDE FORNAX",
+    "alt": "Syndicate and Steel Path"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Kullervo Prime Access also arrives December 9, with five new TennoGen customizations.",
+   "veri": {
+    "etiket": "Release",
+    "tarih": "December 9",
+    "not": "Kullervo Prime and TennoGen cosmetics arrive the same day."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "KULLERVO PRIME",
+    "alt": "ARRIVES DECEMBER 9"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Will you try Fornax on day one, or wait a bit? Read the full story on our site, Control A Game.",
+   "veri": {
+    "cagri": "Will you try Fornax on day one?",
+    "alt": "Full story on our site."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

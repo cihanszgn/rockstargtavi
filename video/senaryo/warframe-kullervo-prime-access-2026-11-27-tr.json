@@ -1,0 +1,119 @@
+{
+ "id": "warframe-kullervo-prime-access-2026-11-27",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Warframe'in Kullervo Prime Access paketi 9 Aralık'ta, Tau ile birlikte geliyor.",
+   "veri": {
+    "ust_etiket": "PRIME ACCESS",
+    "baslik": "Warframe: Kullervo Prime Access 9 Aralık'ta",
+    "vurgu": [
+     "9 Aralık'ta"
+    ],
+    "tuslar": [
+     "W",
+     "F"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "WARFRAME",
+    "alt": "KULLERVO PRIME ACCESS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam'deki resmî Warframe duyurusuna göre Kullervo, Prime Access'e katılıyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam geliştirici duyurusu",
+    "alinti": "Kullervo, Warframe: Tau'nun çıkışıyla birlikte 9 Aralık'ta Prime Access'e katılıyor."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "STEAM DUYURUSU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Pakette Kullervo Prime ve Vitrica Prime var. Rauta Prime'ın statü şansı artıyor. Glifler, Kotinos Prime zırhı ve 90 günlük iki güçlendirici de var.",
+   "veri": {
+    "baslik": "Paketin içeriği",
+    "maddeler": [
+     {
+      "metin": "Kullervo Prime ve Vitrica Prime",
+      "tetik": "Vitrica"
+     },
+     {
+      "metin": "Rauta Prime: daha yüksek statü şansı",
+      "tetik": "Rauta"
+     },
+     {
+      "metin": "Özel glifler ve Kotinos Prime zırhı",
+      "tetik": "Glifler"
+     },
+     {
+      "metin": "90 günlük iki güçlendirici",
+      "tetik": "90"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "PRIME PAKETİ",
+    "alt": "KULLERVO, RAUTA, VITRICA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Kullervo Prime Access, Warframe: Tau ile aynı gün, 9 Aralık'ta geliyor.",
+   "veri": {
+    "etiket": "Prime Access tarihi",
+    "tarih": "9 Aralık",
+    "not": "Warframe: Tau ile aynı gün"
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "PRIME ACCESS",
+    "alt": "9 ARALIK'TA"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Kullervo'yu ilk gün alır mısın?",
+   "veri": {
+    "cagri": "Tamamı sitemizde, Control A Game'de.",
+    "alt": "Kullervo'yu ilk gün alır mısın?"
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

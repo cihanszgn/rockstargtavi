@@ -1,0 +1,99 @@
+{
+ "id": "warframe-tau-cikis-2026-11-27",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "El nuevo mapa estelar de Warframe, Fornax, llega el 9 de diciembre a todas las plataformas.",
+   "veri": {
+    "ust_etiket": "NUEVO MAPA ESTELAR",
+    "baslik": "Warframe: Tau llega el 9 de diciembre",
+    "vurgu": [
+     "9 de diciembre"
+    ],
+    "tuslar": [
+     "T",
+     "A",
+     "U"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "WARFRAME",
+    "alt": "TAU • FORNAX"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Fornax tiene zonas conectadas como Lastbloom Lounge y Manifold 90-BF. Una nueva sindicatura, Fornax Informer, cuenta la historia, y el Camino de Acero sube la dificultad.",
+   "veri": {
+    "baslik": "Dentro de Fornax",
+    "maddeler": [
+     {
+      "metin": "Zonas conectadas: Lastbloom Lounge, Manifold 90-BF",
+      "tetik": "zonas"
+     },
+     {
+      "metin": "Nueva sindicatura: Fornax Informer",
+      "tetik": "sindicatura"
+     },
+     {
+      "metin": "Camino de Acero: más dificultad",
+      "tetik": "Camino de Acero"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DENTRO DE FORNAX",
+    "alt": "Sindicatura y Camino de Acero"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Kullervo Prime Access también llega el 9 de diciembre, junto con cinco nuevas personalizaciones TennoGen.",
+   "veri": {
+    "etiket": "Llegada",
+    "tarih": "9 de diciembre",
+    "not": "Kullervo Prime y las personalizaciones llegan ese día."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "KULLERVO PRIME",
+    "alt": "LLEGA EL 9 DE DICIEMBRE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "¿Probarás Fornax el primer día o esperarás un poco? Todos los detalles en nuestra web, Control A Game.",
+   "veri": {
+    "cagri": "¿Probarás Fornax el primer día?",
+    "alt": "Noticia completa en nuestra web."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

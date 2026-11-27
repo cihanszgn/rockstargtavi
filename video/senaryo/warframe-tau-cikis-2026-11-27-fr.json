@@ -1,0 +1,99 @@
+{
+ "id": "warframe-tau-cikis-2026-11-27",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "La nouvelle carte stellaire de Warframe, Fornax, arrive le 9 décembre sur toutes les plateformes.",
+   "veri": {
+    "ust_etiket": "NOUVELLE CARTE STELLAIRE",
+    "baslik": "Warframe: Tau sort le 9 décembre",
+    "vurgu": [
+     "9 décembre"
+    ],
+    "tuslar": [
+     "T",
+     "A",
+     "U"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "WARFRAME",
+    "alt": "TAU • FORNAX"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Fornax compte des zones reliées, comme le Lastbloom Lounge et Manifold 90-BF. Un nouveau syndicat, le Fornax Informer, ajoute une enquête, et le Steel Path relève la difficulté.",
+   "veri": {
+    "baslik": "Dans Fornax",
+    "maddeler": [
+     {
+      "metin": "Zones reliées : Lastbloom Lounge, Manifold 90-BF",
+      "tetik": "zones"
+     },
+     {
+      "metin": "Nouveau syndicat : Fornax Informer",
+      "tetik": "syndicat"
+     },
+     {
+      "metin": "Steel Path : difficulté relevée",
+      "tetik": "Steel Path"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DANS FORNAX",
+    "alt": "Syndicat et Steel Path"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Kullervo Prime Access arrive aussi le 9 décembre, avec cinq nouvelles personnalisations TennoGen.",
+   "veri": {
+    "etiket": "Sortie",
+    "tarih": "9 décembre",
+    "not": "Kullervo Prime et les personnalisations sortent ce jour-là."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "KULLERVO PRIME",
+    "alt": "SORTIE LE 9 DÉCEMBRE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Testerez-vous Fornax dès le premier jour, ou attendrez-vous un peu ? Tout est sur notre site, Control A Game.",
+   "veri": {
+    "cagri": "Testerez-vous Fornax dès le premier jour ?",
+    "alt": "Tout l'article est sur notre site."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

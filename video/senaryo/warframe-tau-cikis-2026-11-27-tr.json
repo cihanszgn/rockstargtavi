@@ -1,0 +1,99 @@
+{
+ "id": "warframe-tau-cikis-2026-11-27",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Warframe'in yeni yıldız haritası Fornax, 9 Aralık'ta tüm platformlarda geliyor.",
+   "veri": {
+    "ust_etiket": "YENİ YILDIZ HARİTASI",
+    "baslik": "Warframe: Tau 9 Aralık'ta çıkıyor",
+    "vurgu": [
+     "9 Aralık'ta"
+    ],
+    "tuslar": [
+     "T",
+     "A",
+     "U"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "WARFRAME",
+    "alt": "TAU • FORNAX"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Fornax'ta Lastbloom Lounge ve Manifold 90-BF gibi bağlantılı merkezler var. Yeni sendika Fornax Informer, Steel Path ise zorluğu artırıyor.",
+   "veri": {
+    "baslik": "Fornax'ta neler var?",
+    "maddeler": [
+     {
+      "metin": "Bağlantılı merkezler: Lastbloom Lounge, Manifold 90-BF",
+      "tetik": "merkezler"
+     },
+     {
+      "metin": "Yeni sendika: Fornax Informer",
+      "tetik": "sendika"
+     },
+     {
+      "metin": "Steel Path zorluğu",
+      "tetik": "Steel Path"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "FORNAX'TA NELER VAR",
+    "alt": "Sendika ve Steel Path"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Kullervo Prime Access 9 Aralık'ta erişime açılıyor, TennoGen kozmetikleri de aynı gün geliyor.",
+   "veri": {
+    "etiket": "Erişim",
+    "tarih": "9 Aralık",
+    "not": "Kullervo Prime ve TennoGen kozmetikleri aynı gün."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "KULLERVO PRIME",
+    "alt": "9 ARALIK'TA ERİŞİME AÇILIR"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Fornax'ı ilk gün mü deneyeceksin? Tamamı sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "Fornax'ı ilk gün deneyecek misin?",
+    "alt": "Haberin tamamı sitemizde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

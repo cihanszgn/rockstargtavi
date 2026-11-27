@@ -1,0 +1,119 @@
+{
+ "id": "warframe-kullervo-prime-access-2026-11-27",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "El paquete Kullervo Prime Access de Warframe llega el 9 de diciembre, el mismo día que Warframe: Tau.",
+   "veri": {
+    "ust_etiket": "PRIME ACCESS",
+    "baslik": "Warframe: Kullervo Prime, 9 de diciembre",
+    "vurgu": [
+     "9 de diciembre"
+    ],
+    "tuslar": [
+     "W",
+     "F"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "WARFRAME",
+    "alt": "KULLERVO PRIME ACCESS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según la publicación oficial de Warframe en Steam, Kullervo se une a Prime Access.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Anuncio oficial en Steam",
+    "alinti": "Kullervo se une a Prime Access el 9 de diciembre, junto con el lanzamiento de Warframe: Tau."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "ANUNCIO EN STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "El paquete incluye Kullervo Prime y Vitrica Prime. Rauta Prime sube su probabilidad de estado. Los glifos, el conjunto Kotinos Prime y dos potenciadores de 90 días completan la oferta.",
+   "veri": {
+    "baslik": "Contenido del paquete",
+    "maddeler": [
+     {
+      "metin": "Kullervo Prime y Vitrica Prime",
+      "tetik": "Vitrica"
+     },
+     {
+      "metin": "Rauta Prime: más probabilidad de estado",
+      "tetik": "Rauta"
+     },
+     {
+      "metin": "Glifos exclusivos",
+      "tetik": "glifos"
+     },
+     {
+      "metin": "Dos potenciadores de 90 días",
+      "tetik": "90"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CONTENIDO DEL PAQUETE",
+    "alt": "KULLERVO, RAUTA, VITRICA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Kullervo Prime Access llega el 9 de diciembre, el mismo día que Warframe: Tau.",
+   "veri": {
+    "etiket": "Fecha de Prime Access",
+    "tarih": "9 de diciembre",
+    "not": "Mismo día que Warframe: Tau"
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "PRIME ACCESS",
+    "alt": "9 DE DICIEMBRE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Lo comprarás el primer día?",
+   "veri": {
+    "cagri": "Todos los detalles en nuestra web, Control A Game.",
+    "alt": "¿Lo comprarás el primer día?"
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

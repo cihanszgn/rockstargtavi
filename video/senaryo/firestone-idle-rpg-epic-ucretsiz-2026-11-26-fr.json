@@ -1,0 +1,99 @@
+{
+ "id": "firestone-idle-rpg-epic-ucretsiz-2026-11-26",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Firestone – Idle Clicker Online RPG est gratuit sur l'Epic Games Store jusqu'au 3 décembre.",
+   "veri": {
+    "ust_etiket": "JEU GRATUIT EPIC",
+    "baslik": "Firestone gratuit sur Epic",
+    "vurgu": [
+     "gratuit"
+    ],
+    "tuslar": [
+     "E",
+     "G",
+     "S"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "FIRESTONE",
+    "alt": "EPIC GAMES STORE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Ce RPG idle fantasy propose une progression AFK et des récompenses hors ligne. On collecte héros et équipement, on maîtrise les formations et on affronte des boss.",
+   "veri": {
+    "baslik": "Ce que propose le jeu",
+    "maddeler": [
+     {
+      "metin": "Progression AFK",
+      "tetik": "AFK"
+     },
+     {
+      "metin": "Récompenses hors ligne",
+      "tetik": "récompenses"
+     },
+     {
+      "metin": "Collecter héros et équipement",
+      "tetik": "héros"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "RPG IDLE FANTASY",
+    "alt": "PROGRESSION AFK"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "L'offre gratuite se termine le 3 décembre à 16:00 UTC, alors récupérez-le avant.",
+   "veri": {
+    "etiket": "Fin de l'offre",
+    "tarih": "3 décembre",
+    "not": "Gratuit jusqu'à 16:00 UTC."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "PÉRIODE GRATUITE",
+    "alt": "3 DÉC. 16:00 UTC"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Vous allez le récupérer ?",
+   "veri": {
+    "cagri": "Tout est sur le site",
+    "alt": "Sources dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "id": "firestone-idle-rpg-epic-ucretsiz-2026-11-26",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Firestone – Idle Clicker Online RPG is free on the Epic Games Store until December 3.",
+   "veri": {
+    "ust_etiket": "EPIC FREE GAME",
+    "baslik": "Firestone is free on Epic",
+    "vurgu": [
+     "free"
+    ],
+    "tuslar": [
+     "E",
+     "G",
+     "S"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "FIRESTONE",
+    "alt": "EPIC GAMES STORE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "This fantasy idle RPG offers AFK progression and offline rewards. You collect heroes and gear, master formations and fight epic bosses.",
+   "veri": {
+    "baslik": "What the game offers",
+    "maddeler": [
+     {
+      "metin": "AFK progression",
+      "tetik": "AFK"
+     },
+     {
+      "metin": "Offline rewards",
+      "tetik": "offline"
+     },
+     {
+      "metin": "Collect heroes and gear",
+      "tetik": "heroes"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "FANTASY IDLE RPG",
+    "alt": "AFK PROGRESSION"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "The free offer ends on December 3 at 16:00 UTC, so claim it before then.",
+   "veri": {
+    "etiket": "Offer ends",
+    "tarih": "December 3",
+    "not": "Free until 16:00 UTC."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "FREE PERIOD",
+    "alt": "DECEMBER 3 16:00 UTC"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Will you claim it?",
+   "veri": {
+    "cagri": "Every detail on the site",
+    "alt": "Sources are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

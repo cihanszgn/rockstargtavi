@@ -1,0 +1,99 @@
+{
+ "id": "firestone-idle-rpg-epic-ucretsiz-2026-11-26",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Firestone – Idle Clicker Online RPG, Epic Games Store'da 3 Aralık'a kadar ücretsiz.",
+   "veri": {
+    "ust_etiket": "EPIC ÜCRETSİZ OYUN",
+    "baslik": "Firestone Epic'te ücretsiz",
+    "vurgu": [
+     "ücretsiz"
+    ],
+    "tuslar": [
+     "E",
+     "G",
+     "S"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "FIRESTONE",
+    "alt": "EPIC GAMES STORE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Fantastik bir idle RPG olan oyun AFK ilerleme ve çevrimdışı ödüller sunuyor. Kahramanlar ve ekipman topluyor, boss'ları yeniliyorsunuz.",
+   "veri": {
+    "baslik": "Oyunda neler var",
+    "maddeler": [
+     {
+      "metin": "AFK ilerleme",
+      "tetik": "AFK"
+     },
+     {
+      "metin": "Çevrimdışı ödüller",
+      "tetik": "çevrimdışı"
+     },
+     {
+      "metin": "Kahraman ve ekipman toplama",
+      "tetik": "Kahramanlar"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "FANTASTİK IDLE RPG",
+    "alt": "AFK İLERLEME"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Kampanya 3 Aralık'ta 16:00 UTC'de bitiyor, yani o zamana kadar kütüphanene ekleyebilirsin.",
+   "veri": {
+    "etiket": "Kampanya bitiyor",
+    "tarih": "3 Aralık",
+    "not": "16:00 UTC'ye kadar ücretsiz."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "ÜCRETSİZ DÖNEM",
+    "alt": "3 ARALIK 16:00 UTC"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Sen idle RPG oynar mısın?",
+   "veri": {
+    "cagri": "Bütün ayrıntılar sitede",
+    "alt": "Kaynaklar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
