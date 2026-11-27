@@ -1,0 +1,128 @@
+{
+ "id": "limbus-company-schemacraft-sinerji-yonu-2026-11-27",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Cambia el plan de sinergias de Schemacraft en Limbus Company y se retira el aviso del 26 de noviembre.",
+   "veri": {
+    "ust_etiket": "SCHEMACRAFT",
+    "baslik": "Cambia el plan de Schemacraft",
+    "vurgu": [
+     "Schemacraft"
+    ],
+    "tuslar": [
+     "E",
+     "G",
+     "O"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "LIMBUS COMPANY",
+    "alt": "SINERGIAS DE SCHEMACRAFT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Las nuevas sinergias solo funcionarán en Schemacraft y se activan con un E.G.O de etapa 3 o superior.",
+   "veri": {
+    "baslik": "Sinergias de Schemacraft",
+    "maddeler": [
+     {
+      "metin": "Solo dentro de Schemacraft",
+      "tetik": "solo"
+     },
+     {
+      "metin": "E.G.O de etapa 3 o superior",
+      "tetik": "etapa"
+     },
+     {
+      "metin": "Se activan al incluirlo o usarlo",
+      "tetik": "activan"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NUEVAS SINERGIAS",
+    "alt": "ETAPA 3 O SUPERIOR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Durante la partida, la etapa del E.G.O sube temporalmente hasta 5, y la de la cuenta se refleja; incluso un E.G.O que no tengas sirve.",
+   "veri": {
+    "baslik": "La etapa sube temporal",
+    "maddeler": [
+     {
+      "metin": "Subida temporal hasta 5",
+      "tetik": "temporalmente"
+     },
+     {
+      "metin": "La etapa de la cuenta cuenta",
+      "tetik": "cuenta"
+     },
+     {
+      "metin": "Sirve un E.G.O que no tengas",
+      "tetik": "tengas"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "ETAPA DEL E.G.O",
+    "alt": "SUBE DURANTE LA PARTIDA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "La encuesta sobre mejoras empieza el 3 de diciembre y el calendario llegará con los resultados.",
+   "veri": {
+    "etiket": "Empieza la encuesta",
+    "tarih": "3 de diciembre",
+    "not": "El calendario llegará con los resultados."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "ENCUESTA",
+    "alt": "EMPIEZA EL 3 DE DICIEMBRE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Basta la etapa 3 para Schemacraft?",
+   "veri": {
+    "cagri": "Todos los detalles en la web",
+    "alt": "Fuentes y detalles en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "id": "limbus-company-schemacraft-sinerji-yonu-2026-11-27",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Le plan des synergies de Schemacraft change dans Limbus Company, et l'annonce du 26 novembre est retirée.",
+   "veri": {
+    "ust_etiket": "SCHEMACRAFT",
+    "baslik": "Schemacraft : le plan change",
+    "vurgu": [
+     "Schemacraft"
+    ],
+    "tuslar": [
+     "E",
+     "G",
+     "O"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "LIMBUS COMPANY",
+    "alt": "SYNERGIES SCHEMACRAFT"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Les nouvelles synergies ne vaudront que dans Schemacraft, avec un E.G.O de palier 3 ou plus.",
+   "veri": {
+    "baslik": "Synergies de Schemacraft",
+    "maddeler": [
+     {
+      "metin": "Uniquement dans Schemacraft",
+      "tetik": "Schemacraft"
+     },
+     {
+      "metin": "E.G.O de palier 3 ou plus",
+      "tetik": "palier"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NOUVELLES SYNERGIES",
+    "alt": "PALIER 3 OU PLUS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Pendant une partie, le palier d'un E.G.O monte temporairement jusqu'à 5, celui du compte est conservé, et même un E.G.O non possédé fonctionne.",
+   "veri": {
+    "baslik": "Le palier monte",
+    "maddeler": [
+     {
+      "metin": "Hausse temporaire jusqu'à 5",
+      "tetik": "temporairement"
+     },
+     {
+      "metin": "Palier du compte conservé",
+      "tetik": "compte"
+     },
+     {
+      "metin": "E.G.O non possédé accepté",
+      "tetik": "possédé"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "PALIER DE L'E.G.O",
+    "alt": "MONTE PENDANT LA PARTIE"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Le sondage sur les améliorations commence le 3 décembre ; le calendrier suivra les résultats.",
+   "veri": {
+    "etiket": "Début du sondage",
+    "tarih": "3 décembre",
+    "not": "Le calendrier suivra les résultats."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "SONDAGE",
+    "alt": "DÈS LE 3 DÉCEMBRE"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Le palier 3 suffit-il pour Schemacraft ?",
+   "veri": {
+    "cagri": "Tout est sur le site",
+    "alt": "Sources et détails dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

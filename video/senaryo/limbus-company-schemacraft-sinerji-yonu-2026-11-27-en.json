@@ -1,0 +1,128 @@
+{
+ "id": "limbus-company-schemacraft-sinerji-yonu-2026-11-27",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Limbus Company's Schemacraft synergy plan has changed, and the November 26 notice is withdrawn.",
+   "veri": {
+    "ust_etiket": "SCHEMACRAFT",
+    "baslik": "Schemacraft plan changes",
+    "vurgu": [
+     "Schemacraft"
+    ],
+    "tuslar": [
+     "E",
+     "G",
+     "O"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "LIMBUS COMPANY",
+    "alt": "SCHEMACRAFT SYNERGIES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "New synergies will apply only inside Schemacraft, triggered by an E.G.O at stage 3 or higher.",
+   "veri": {
+    "baslik": "Schemacraft-only synergies",
+    "maddeler": [
+     {
+      "metin": "Only inside Schemacraft",
+      "tetik": "only"
+     },
+     {
+      "metin": "Needs E.G.O at stage 3 or higher",
+      "tetik": "stage"
+     },
+     {
+      "metin": "Triggered when assigned or used",
+      "tetik": "triggered"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NEW SYNERGIES",
+    "alt": "STAGE 3 OR HIGHER"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "During a run, E.G.O stage can be raised temporarily, up to 5; the account stage still carries over, and even unowned E.G.O can unlock it.",
+   "veri": {
+    "baslik": "Stage rises temporarily",
+    "maddeler": [
+     {
+      "metin": "Temporary boost up to 5",
+      "tetik": "temporarily"
+     },
+     {
+      "metin": "Account stage still counts",
+      "tetik": "account"
+     },
+     {
+      "metin": "Unowned E.G.O works too",
+      "tetik": "unowned"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "E.G.O STAGE",
+    "alt": "RISES DURING A RUN"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "A survey on structural improvements begins December 3, and timing will follow the results.",
+   "veri": {
+    "etiket": "Survey begins",
+    "tarih": "December 3",
+    "not": "Timing will follow the results."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "SURVEY",
+    "alt": "STARTS DECEMBER 3"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Is stage 3 enough for Schemacraft synergies?",
+   "veri": {
+    "cagri": "Full story on the site",
+    "alt": "Sources and details are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "id": "limbus-company-schemacraft-sinerji-yonu-2026-11-27",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Limbus Company'de Schemacraft sinerji planı değişti: 26 Kasım duyurusu geri çekildi.",
+   "veri": {
+    "ust_etiket": "SCHEMACRAFT",
+    "baslik": "Schemacraft planı değişti",
+    "vurgu": [
+     "Schemacraft"
+    ],
+    "tuslar": [
+     "E",
+     "G",
+     "O"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "LIMBUS COMPANY",
+    "alt": "SCHEMACRAFT SİNERJİLERİ"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Yeni sinerjiler yalnızca Schemacraft'ta geçerli; 3. aşama veya üzeri E.G.O kullanılınca devreye girecek.",
+   "veri": {
+    "baslik": "Schemacraft'a özel sinerji",
+    "maddeler": [
+     {
+      "metin": "Yalnızca Schemacraft içinde geçerli",
+      "tetik": "yalnızca"
+     },
+     {
+      "metin": "3. aşama veya üzeri E.G.O gerekir",
+      "tetik": "aşama"
+     },
+     {
+      "metin": "Kullanılınca devreye girer",
+      "tetik": "kullanılınca"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "YENİ SİNERJİLER",
+    "alt": "3. AŞAMA VE ÜZERİ"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "E.G.O aşaması oyun sırasında geçici olarak 5'e kadar çıkabilecek; hesaptaki aşama da yansıyacak.",
+   "veri": {
+    "baslik": "Aşama geçici yükselir",
+    "maddeler": [
+     {
+      "metin": "Geçici olarak 5'e kadar",
+      "tetik": "geçici"
+     },
+     {
+      "metin": "Hesaptaki aşama yansıyor",
+      "tetik": "hesaptaki"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "E.G.O AŞAMASI",
+    "alt": "OYUN SIRASINDA YÜKSELİR"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Anket 3 Aralık'ta başlıyor; zamanlama sonuçlara göre duyurulacak.",
+   "veri": {
+    "etiket": "Anket başlıyor",
+    "tarih": "3 Aralık",
+    "not": "Zamanlama sonuçlara göre açıklanacak."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "ANKET",
+    "alt": "3 ARALIK'TA BAŞLIYOR"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Sizce 3. aşama sinerjisi yeterli mi?",
+   "veri": {
+    "cagri": "Tamamı sitede",
+    "alt": "Kaynak ve ayrıntılar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
