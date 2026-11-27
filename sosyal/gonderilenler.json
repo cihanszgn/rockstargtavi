@@ -1489,6 +1489,21 @@
   "url": "https://www.youtube.com/shorts/r_jtjKqqseo",
   "zaman": "2026-11-26T09:45:06+00:00"
  },
+ "path-of-exile-2-beginner-guide-video-yarismasi|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 7207194,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "path-of-exile-2-beginner-guide-competition-2026-11-26",
+  "kapak_not": "küçük resim yüklenmedi: POST https://www.googleapis.com/upload/youtube/v3/thumbnails/set → HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"The user has uploaded too many thumbnails recently. Please try the request again later.\",\n    \"errors\": [\n      {\n        \"message\": \"The user has uploaded too many thumbnails recently. Please tr",
+  "kimlik": "a9seqJHD7kc",
+  "niyet_zamani": "2026-11-27T10:45:23+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg3AP--AMsrpTA4M_r9TGXKS-SBIxITIMIppl36XnZYVD2f43xxsILPfi3zk-YtWwtC_lKNkGs_5W0_qHV694IkLTXdOERsk2252mdtH3w",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/a9seqJHD7kc",
+  "zaman": "2026-11-27T10:45:23+00:00"
+ },
  "pc-store-together-performans-yamasi-2026-11-25|tr|instagram|reel": {
   "bicim": "reel",
   "dil": "tr",
@@ -2027,6 +2042,20 @@
   "sosyal_tur": "haber",
   "url": "https://www.instagram.com/p/DgFskC7jUHE/",
   "zaman": "2026-11-23T15:24:52+00:00"
+ },
+ "warframe-sevagoth-hydroid-prime-prime-resurgence-2026-11-26|tr|instagram|reel": {
+  "bicim": "reel",
+  "dil": "tr",
+  "durum": "tamam",
+  "icerik_dili": "tr",
+  "id": "warframe-sevagoth-hydroid-prime-resurgence-2026-11-26",
+  "kapsayici": "17872144656694894",
+  "kimlik": "18099853931395977",
+  "niyet_zamani": "2026-11-27T10:45:23+00:00",
+  "platform": "instagram",
+  "sosyal_tur": "haber",
+  "url": "https://www.instagram.com/reel/DgPfxRtMisJ/",
+  "zaman": "2026-11-27T10:45:23+00:00"
  },
  "warframe-sevagoth-hydroid-prime-prime-resurgence-2026-11-26|tr|youtube|short": {
   "bicim": "short",
