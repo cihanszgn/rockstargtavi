@@ -1,0 +1,99 @@
+{
+ "id": "gta-vi-kriminal-profil-sistemi-2026-11-27",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Rockstar savait que certains joueurs de GTA VI rejetteraient son système de profil criminel.",
+   "veri": {
+    "ust_etiket": "GTA VI",
+    "baslik": "Profil criminel en débat",
+    "vurgu": [
+     "Profil criminel"
+    ],
+    "tuslar": [
+     "G",
+     "T",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "GTA VI",
+    "alt": "SYSTÈME DE PROFIL CRIMINEL"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Selon IGN, Rob Nelson s'attendait à ce que certains joueurs rejettent ce nouveau système.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "IGN",
+    "alinti": "Vous pouvez toujours faire ce que vous vouliez avant, mais vous avez désormais d'autres options."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE : IGN",
+    "alt": "ROB NELSON • IGN"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Les tirs à la tête font pencher votre profil vers psychopathe, tandis que viser les genoux le garde plus proche de professionnel. Le système suit votre jeu en permanence.",
+   "veri": {
+    "baslik": "Comment le profil évolue",
+    "maddeler": [
+     {
+      "metin": "Tirs à la tête : vers psychopathe",
+      "tetik": "tête"
+     },
+     {
+      "metin": "Tirs aux genoux : plus proche de professionnel",
+      "tetik": "genoux"
+     },
+     {
+      "metin": "Suit votre jeu en permanence",
+      "tetik": "suit"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "ÉVOLUTION DU PROFIL",
+    "alt": "TÊTE ET GENOUX"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Rockstar affirme que vous pouvez jouer comme avant, avec plus d'options. Tout est sur notre site, Control A Game. Viserez-vous la tête dès la première partie ?",
+   "veri": {
+    "cagri": "Tous les détails sur le site",
+    "alt": "Sources et citations dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

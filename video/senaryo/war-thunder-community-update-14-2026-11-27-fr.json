@@ -1,0 +1,115 @@
+{
+ "id": "war-thunder-community-update-14-2026-11-27",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "War Thunder reçoit des bombes à fragmentation guidées GNSS et une nouvelle visée pour hélicoptères.",
+   "veri": {
+    "ust_etiket": "ANNONCE SUR STEAM",
+    "baslik": "Bombes à fragmentation GNSS",
+    "vurgu": [
+     "GNSS"
+    ],
+    "tuslar": [
+     "W",
+     "T"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "WAR THUNDER",
+    "alt": "BOMBES GUIDÉES GNSS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "D'après l'annonce officielle sur Steam, ces armes arrivent avec la prochaine grande mise à jour.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Annonce officielle sur Steam",
+    "alinti": "La prochaine grande mise à jour franchit une étape de plus avec les armes à fragmentation guidées GNSS."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "ANNONCE STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Les plans comprennent une visée pour hélicoptères, des unités côtières de missiles et un nouveau chargement de munitions.",
+   "veri": {
+    "baslik": "Plans annoncés",
+    "maddeler": [
+     {
+      "metin": "Fenêtre de visée à la troisième personne",
+      "tetik": "visée"
+     },
+     {
+      "metin": "Unités côtières de missiles",
+      "tetik": "côtières"
+     },
+     {
+      "metin": "Chargement de munitions recommandé",
+      "tetik": "munitions"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "PLANS ANNONCÉS",
+    "alt": "HÉLICOPTÈRES ET CÔTES"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Le code de décalque gratuit reste valable jusqu'au 18 décembre, donc profitez-en à temps.",
+   "veri": {
+    "etiket": "Décalque gratuit",
+    "tarih": "18 décembre",
+    "not": "Le code est actif dès le 27 novembre."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "DÉCALQUE GRATUIT",
+    "alt": "27 NOV – 18 DÉC"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Quel nouveau véhicule vous attire le plus ? Tout est sur notre site, Control A Game.",
+   "veri": {
+    "cagri": "Quel véhicule vous attire ?",
+    "alt": "Détails hélicoptères, côtes et décalques dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

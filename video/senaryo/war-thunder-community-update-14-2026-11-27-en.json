@@ -1,0 +1,115 @@
+{
+ "id": "war-thunder-community-update-14-2026-11-27",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "War Thunder is getting GNSS-guided cluster bombs, plus a new helicopter aiming window.",
+   "veri": {
+    "ust_etiket": "STEAM ANNOUNCEMENT",
+    "baslik": "GNSS-guided cluster bombs are coming",
+    "vurgu": [
+     "GNSS-guided"
+    ],
+    "tuslar": [
+     "W",
+     "T"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "WAR THUNDER",
+    "alt": "GNSS CLUSTER BOMBS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to the official Steam post, GNSS cluster weapons are planned for the next major update.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Official Steam post",
+    "alinti": "The next major update takes one more step forward with GNSS guided Cluster weapons."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "STEAM POST"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Planned changes include a helicopter aiming window, coastal missile units and recommended ammo loading.",
+   "veri": {
+    "baslik": "Planned changes",
+    "maddeler": [
+     {
+      "metin": "Third-person aiming window for helicopters",
+      "tetik": "aiming"
+     },
+     {
+      "metin": "Coastal missile units in Nuclear Escalation",
+      "tetik": "coastal"
+     },
+     {
+      "metin": "Recommended ammo loading on the spawn screen",
+      "tetik": "ammo"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "PLANNED CHANGES",
+    "alt": "HELICOPTERS AND COASTAL UNITS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "A free decal code works until December 18, so grab the returning decals before then.",
+   "veri": {
+    "etiket": "Free decal code",
+    "tarih": "December 18",
+    "not": "Code opens November 27 and closes December 18."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "FREE DECAL",
+    "alt": "NOV 27 – DEC 18"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Which new vehicle excites you most? Read the full story on our site, Control A Game.",
+   "veri": {
+    "cagri": "Which new vehicle excites you?",
+    "alt": "Helicopter, coastal and decal details in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

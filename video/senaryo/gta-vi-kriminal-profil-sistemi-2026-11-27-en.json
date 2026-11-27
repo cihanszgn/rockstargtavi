@@ -1,0 +1,99 @@
+{
+ "id": "gta-vi-kriminal-profil-sistemi-2026-11-27",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Rockstar knew some GTA VI players would reject its criminal profile system.",
+   "veri": {
+    "ust_etiket": "GTA VI",
+    "baslik": "Criminal profile debate",
+    "vurgu": [
+     "Criminal profile"
+    ],
+    "tuslar": [
+     "G",
+     "T",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "GTA VI",
+    "alt": "CRIMINAL PROFILE SYSTEM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to IGN, Rob Nelson expected some players to reject the new system.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "IGN",
+    "alinti": "You can still do whatever you wanted to do before, but now you have other options."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "IGN REPORT",
+    "alt": "ROB NELSON • IGN"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Headshot kills push your profile toward psycho, while kneecapping keeps it nearer professional. The system tracks your play all game.",
+   "veri": {
+    "baslik": "How the profile shifts",
+    "maddeler": [
+     {
+      "metin": "Headshot kills shift it toward psycho",
+      "tetik": "Headshot"
+     },
+     {
+      "metin": "Kneecapping keeps you nearer professional",
+      "tetik": "kneecapping"
+     },
+     {
+      "metin": "It tracks your play all game",
+      "tetik": "tracks"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "HOW IT SHIFTS",
+    "alt": "HEADSHOTS AND KNEECAPS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Rockstar says you can still play as before, with more options. Read the full story on our site, Control A Game. Would you go for headshots on your first run?",
+   "veri": {
+    "cagri": "Every detail on the site",
+    "alt": "Sources and quotes are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

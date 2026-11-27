@@ -1,0 +1,115 @@
+{
+ "id": "war-thunder-community-update-14-2026-11-27",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "War Thunder'a GNSS güdümlü kümeleme bombası geliyor; helikopterler de yeni nişan penceresi alıyor.",
+   "veri": {
+    "ust_etiket": "STEAM DUYURUSU",
+    "baslik": "GNSS güdümlü kümeleme bombası geliyor",
+    "vurgu": [
+     "GNSS"
+    ],
+    "tuslar": [
+     "W",
+     "T"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "WAR THUNDER",
+    "alt": "GNSS KÜMELEME BOMBASI"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam'deki resmî duyuruya göre bu, sonraki büyük güncellemenin planlarında yer alıyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam resmî duyurusu",
+    "alinti": "Sonraki büyük güncellemede GNSS güdümlü kümeleme silahları ile pilotlara yeni taktik seçenekler geliyor."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "STEAM DUYURUSU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Planlarda helikopter nişan penceresi, kıyı füze birimleri ve yeni mühimmat yüklemesi var.",
+   "veri": {
+    "baslik": "Planlanan yenilikler",
+    "maddeler": [
+     {
+      "metin": "Helikopterlerde üçüncü şahıs nişan penceresi",
+      "tetik": "nişan"
+     },
+     {
+      "metin": "Kıyı füze birimleri",
+      "tetik": "kıyı"
+     },
+     {
+      "metin": "Kara araçlarında yeni mühimmat yüklemesi",
+      "tetik": "yükleme"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "PLANLANAN YENİLİKLER",
+    "alt": "HELİKOPTER VE KIYI BİRİMLERİ"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "tarih",
+   "anlatim": "Verilen kodla ücretsiz dekal alınabiliyor; son gün 18 Aralık'a kadar.",
+   "veri": {
+    "etiket": "Ücretsiz dekal kodu",
+    "tarih": "18 Aralık",
+    "not": "Kod 27 Kasım'da açılıyor, 18 Aralık'ta kapanıyor."
+   },
+   "alt_kart": {
+    "simge": "takvim",
+    "baslik": "DEKAL KODU",
+    "alt": "27 KASIM – 18 ARALIK"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Hangi yeni araç seni daha çok heyecanlandırıyor? Tüm ayrıntılar sitemizde, Control A Game'de.",
+   "veri": {
+    "cagri": "Hangi araç sizi heyecanlandırıyor?",
+    "alt": "Helikopter, kıyı ve dekal ayrıntıları haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

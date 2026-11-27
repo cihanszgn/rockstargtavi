@@ -1,0 +1,99 @@
+{
+ "id": "gta-vi-kriminal-profil-sistemi-2026-11-27",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Rockstar, GTA VI'daki kriminal profil sisteminin bazı oyuncular tarafından reddedileceğini biliyordu.",
+   "veri": {
+    "ust_etiket": "GTA VI",
+    "baslik": "Kriminal profil tartışılıyor",
+    "vurgu": [
+     "Kriminal profil"
+    ],
+    "tuslar": [
+     "G",
+     "T",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "GTA VI",
+    "alt": "KRİMİNAL PROFİL"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "IGN'e göre Nelson bu tepkiyi önceden düşünmüştü.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "IGN",
+    "alinti": "Oyuncular önceden yapmak istediklerini hâlâ yapabilir; artık ek seçenekler de var."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "IGN AKTARIMI",
+    "alt": "ROB NELSON • IGN"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Kafaya nişan alan oyuncu profili psikopat yönüne iter; bacaklara nişan almak bu etkiyi azaltır. Profil tüm oyun boyunca izler.",
+   "veri": {
+    "baslik": "Profil nasıl işliyor?",
+    "maddeler": [
+     {
+      "metin": "Kafa atışları profili psikopat yönüne iter",
+      "tetik": "Kafaya"
+     },
+     {
+      "metin": "Bacak nişanı etkiyi azaltır",
+      "tetik": "bacaklara"
+     },
+     {
+      "metin": "Profil tüm oyunda izlenir",
+      "tetik": "izler"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "PROFİL NASIL İŞLER?",
+    "alt": "KAFA VE BACAK NİŞANI"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. İlk oynayışta hangi tarzı seçersin?",
+   "veri": {
+    "cagri": "Tüm ayrıntılar sitede",
+    "alt": "Kaynaklar ve alıntılar haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

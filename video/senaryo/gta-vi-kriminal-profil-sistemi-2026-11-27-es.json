@@ -1,0 +1,99 @@
+{
+ "id": "gta-vi-kriminal-profil-sistemi-2026-11-27",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Rockstar sabía que algunos jugadores de GTA VI rechazarían su sistema de perfil criminal.",
+   "veri": {
+    "ust_etiket": "GTA VI",
+    "baslik": "Perfil criminal en debate",
+    "vurgu": [
+     "Perfil criminal"
+    ],
+    "tuslar": [
+     "G",
+     "T",
+     "A"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "GTA VI",
+    "alt": "SISTEMA DE PERFIL CRIMINAL"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según IGN, Rob Nelson esperaba que algunos jugadores rechazaran el nuevo sistema.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "IGN",
+    "alinti": "Todavía puedes hacer lo que querías antes, pero ahora tienes otras opciones."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE: IGN",
+    "alt": "ROB NELSON • IGN"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Los disparos a la cabeza llevan tu perfil hacia psicópata, mientras que disparar a las rodillas lo mantiene más cerca de profesional. El sistema registra tu juego todo el tiempo.",
+   "veri": {
+    "baslik": "Cómo cambia el perfil",
+    "maddeler": [
+     {
+      "metin": "Disparos a la cabeza: hacia psicópata",
+      "tetik": "cabeza"
+     },
+     {
+      "metin": "Disparos a rodillas: cerca de profesional",
+      "tetik": "rodillas"
+     },
+     {
+      "metin": "Registra tu juego todo el tiempo",
+      "tetik": "registra"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "CÓMO CAMBIA",
+    "alt": "CABEZA Y RODILLAS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Rockstar dice que puedes jugar como antes, con más opciones. Todos los detalles en nuestra web, Control A Game. ¿Irías directo a la cabeza en tu primera partida?",
+   "veri": {
+    "cagri": "Todos los detalles en la web",
+    "alt": "Fuentes y citas en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

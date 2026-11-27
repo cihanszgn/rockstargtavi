@@ -1,5 +1,224 @@
 [
  {
+  "id": "war-thunder-community-update-14-2026-11-27",
+  "oyun": "War Thunder",
+  "tarih": "2026-11-27",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam resmî duyurusu",
+    "url": "https://store.steampowered.com/news/app/236390/view/711167402164880864"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "War Thunder'a GNSS güdümlü kümeleme bombası geliyor",
+    "ozet": "Steam'deki 14. Topluluk Güncellemesi, sonraki büyük sürümün planlarını ve 18 Aralık'a kadar geçerli ücretsiz dekal kodunu paylaştı.",
+    "metin": "War Thunder'ın Steam'de yayımlanan Topluluk Güncellemesi No.14, 27 Kasım 2026'da yayımlandı ve yılın son topluluk güncellemesi olarak tanıtıldı. Duyuru, sonraki büyük güncellemenin planlarını ve 2027'ye bakışı ele alıyor; oyun ekibi bu içeriklerin değişebileceğini, ertelenebileceğini ya da iptal edilebileceğini de belirtti.\n\nPlanların başında GNSS güdümlü kümeleme silahları geliyor. AGM-154A JSOW (BLU-97/B), Nuclear Escalation'da hafif zırhlı hedeflere karşı kümeleme başlıklı bir seçenek sunacak. Helikopterlerde üçüncü şahıs görünümünde bir nişan penceresi yer alacak; Wildcat'teki Marlet ile Ka-50, Ka-52, Mi-35P ve Mi-28NM'deki Vikhr füzeleri için kullanılabilecek. Duyuruya göre Nuclear Escalation'a kıyı füze birimleri de eklendi. Yeni araçlar arasında Fransa ve İsrail için VBCI Philoctetes ile Çin'in VT-4 tabanlı, ihracat pazarını hedefleyen VN20'si var.\n\nKara araçlarında mühimmat yükleme ekranı da yenileniyor. Tanklar artık en iyi açılmış zırh delici mermiden önerilen bir miktarla ve HE ile duman gibi durumsal mermilerden küçük bir seçkiyle açılacak. Öneriyi aşan miktarlarda kaydırıcı sarıya, daha savunmasız raflara girince kırmızıya dönecek. Hangarda ise X-ray görünümünde aracı boşaltıp doldurabilen yeni bir mühimmat kaydırıcısı olacak.\n\nOyuncular için en somut fırsat ücretsiz dekallar. 'No Sekrit Dokuments, Please', 'Sekrit Dokuments)))' ve 'Nigel Was Here' dekalleri geri dönüyor; duyurudaki kod 27 Kasım 11:00 GMT ile 18 Aralık 11:00 GMT arasında geçerli, dekaller ise Decals > Special > Other/Snails altında bulunuyor. Daha önce alamadıysanız bu süre içinde kodu kullanmanız gerekiyor.",
+    "etiketler": [
+     "#WarThunder",
+     "#Steam",
+     "#PC",
+     "#Guncelleme"
+    ]
+   },
+   "en": {
+    "baslik": "War Thunder plans GNSS-guided cluster bombs for next update",
+    "ozet": "Steam's Community Update No.14 also details helicopter aiming windows, coastal missile units, ammo loading changes and a free decal code.",
+    "metin": "War Thunder's Community Update No.14 was posted on Steam on November 27, 2026, and billed as the last community update of the year. It looks ahead to the next major update and into 2027, while warning that everything shown may change, be delayed or be cancelled.\n\nThe headline addition is GNSS-guided cluster weaponry. The AGM-154A JSOW (BLU-97/B) will give pilots a cluster-warhead option against lightly armored targets such as SPAAs and radar vehicles in Nuclear Escalation. Helicopters will get a third-person aiming zone window, similar to fixed-wing aircraft, for Marlet missiles on the Wildcat and Vikhr missiles on the Ka-50, Ka-52, Mi-35P and Mi-28NM. The post also says coastal missile units have arrived in Nuclear Escalation, and that France and Israel will receive the VBCI Philoctetes, while China's VN20, based on the VT-4, is aimed at export.\n\nGround vehicle ammo loading is being reworked. By default, a tank will load a recommended amount of its best unlocked anti-tank shell plus a few situational rounds such as HE and smoke, staying within its safer ammo racks. The slider turns yellow above that suggestion and red when more vulnerable racks are filled. A reset button restores the recommendation, and the hangar gets an ammo slider that shows how much fits in each rack in X-ray view.\n\nFor players, the most immediate item is the free decal code. The 'No Sekrit Dokuments, Please', 'Sekrit Dokuments)))' and 'Nigel Was Here' decals return, redeemable with the code from the post from November 27 at 11:00 GMT until December 18 at 11:00 GMT. They can then be found under Decals > Special > Other/Snails.",
+    "etiketler": [
+     "#WarThunder",
+     "#Steam",
+     "#PC",
+     "#Guncelleme"
+    ]
+   },
+   "es": {
+    "baslik": "War Thunder prepara bombas de racimo guiadas por GNSS",
+    "ozet": "La Actualización Comunitaria No.14 en Steam detalla visores para helicópteros, unidades costeras, cambios de munición y un código de calcomanía gratis.",
+    "metin": "La Actualización Comunitaria No.14 de War Thunder se publicó en Steam el 27 de noviembre de 2026 y se presentó como la última del año. El anuncio repasa los planes para la próxima gran actualización y lo que llega en 2027, pero advierte de que las funciones mostradas pueden cambiar, retrasarse o cancelarse.\n\nLa novedad principal son las armas de racimo guiadas por GNSS. El AGM-154A JSOW (BLU-97/B) ofrecerá a los pilotos una opción de carga de racimo contra objetivos ligeramente blindados, como SPAA o vehículos de radar, en Nuclear Escalation. Los helicópteros tendrán una ventana de puntería en tercera persona para los misiles Marlet del Wildcat y los Vikhr del Ka-50, Ka-52, Mi-35P y Mi-28NM. El anuncio también indica que las unidades costeras de misiles ya llegaron a Nuclear Escalation, y que Francia e Israel recibirán el VBCI Philoctetes, mientras China prepara el VN20, basado en el VT-4 y orientado a la exportación.\n\nLa carga de munición de los vehículos terrestres también cambia. Por defecto, el juego cargará una cantidad recomendada del mejor proyectil antitanque desbloqueado, junto con algunas rondas situacionales como HE y humo, dentro de los compartimentos más seguros. El control se pondrá amarillo al superar esa sugerencia y rojo al llenar compartimentos más vulnerables. Un botón restablece la selección recomendada, y el hangar tendrá un nuevo deslizador de munición en vista de rayos X.\n\nPara los jugadores, lo más inmediato es el código de calcomanía gratis. Las calcomanías 'No Sekrit Dokuments, Please', 'Sekrit Dokuments)))' y 'Nigel Was Here' vuelven y se canjean con el código del anuncio desde el 27 de noviembre a las 11:00 GMT hasta el 18 de diciembre a las 11:00 GMT; después aparecen en Decals > Special > Other/Snails. Quien no las consiguió antes tiene hasta esa fecha.",
+    "etiketler": [
+     "#WarThunder",
+     "#Steam",
+     "#PC",
+     "#Guncelleme"
+    ]
+   },
+   "fr": {
+    "baslik": "War Thunder prépare des bombes à fragmentation guidées GNSS",
+    "ozet": "La mise à jour communautaire No.14 sur Steam détaille des viseurs pour hélicoptères, des unités côtières, des munitions et un code de décalque gratuit.",
+    "metin": "La mise à jour communautaire No.14 de War Thunder a été publiée sur Steam le 27 novembre 2026 et présentée comme la dernière de l'année. Elle détaille les projets pour la prochaine grande mise à jour et pour 2027, tout en avertissant que les fonctions présentées peuvent changer, être retardées ou annulées.\n\nLe principal ajout concerne les bombes à fragmentation guidées GNSS. L'AGM-154A JSOW (BLU-97/B) offrira aux pilotes une option à charge en grappe contre des cibles légèrement blindées, comme les SPAA ou les véhicules radar, dans Nuclear Escalation. Les hélicoptères auront une fenêtre de visée à la troisième personne pour les missiles Marlet du Wildcat et Vikhr des Ka-50, Ka-52, Mi-35P et Mi-28NM. L'annonce indique aussi que des unités côtières de missiles sont arrivées dans Nuclear Escalation, et que la France et Israël recevront le VBCI Philoctetes, tandis que le VN20 chinois, basé sur le VT-4, vise l'export.\n\nLe chargement de munitions des véhicules terrestres est revu. Par défaut, le jeu charge une quantité recommandée de votre meilleur obus antichar débloqué, ainsi que quelques obus situationnels comme HE et fumigène, dans les compartiments les plus sûrs. Le curseur passe au jaune au-delà de cette suggestion, puis au rouge lorsqu'il remplit des compartiments plus vulnérables. Un bouton rétablit la sélection recommandée, et le hangar reçoit un curseur de munitions en vue radiographique.\n\nPour les joueurs, l'information la plus immédiate est le décalque gratuit. Les décalques 'No Sekrit Dokuments, Please', 'Sekrit Dokuments)))' et 'Nigel Was Here' reviennent ; le code de l'annonce est valable du 27 novembre à 11h00 GMT au 18 décembre à 11h00 GMT, puis le décalque se trouve dans Decals > Special > Other/Snails. Si vous ne les avez pas eus, c'est le moment d'agir.",
+    "etiketler": [
+     "#WarThunder",
+     "#Steam",
+     "#PC",
+     "#Guncelleme"
+    ]
+   },
+   "de": {
+    "baslik": "War Thunder plant GNSS-gelenkte Clusterbomben für Flugzeuge",
+    "ozet": "Das Community-Update Nr. 14 auf Steam nennt neue Zielhilfen für Hubschrauber, Küstenraketen, Munitionsänderungen und einen kostenlosen Dekal-Code.",
+    "metin": "Das Steam-Community-Update Nr. 14 zu War Thunder erschien am 27. November 2026 und wurde als letztes Community-Update des Jahres angekündigt. Es gibt einen Ausblick auf das nächste große Update und auf 2027; zugleich warnt das Team, dass alle gezeigten Funktionen sich ändern, verzögern oder gestrichen werden können.\n\nDen Schwerpunkt bilden GNSS-gelenkte Clusterwaffen. Die AGM-154A JSOW (BLU-97/B) soll Piloten eine Option mit Clustersprengkopf gegen leicht gepanzerte Ziele wie SPAAs oder Radarfahrzeuge in Nuclear Escalation geben. Helikopter erhalten ein Zielzonenfenster in der Dritte-Person-Ansicht für Marlet-Raketen der Wildcat und Vikhr-Raketen der Ka-50, Ka-52, Mi-35P und Mi-28NM. Laut Ankündigung sind außerdem Küsten-Raketensysteme in Nuclear Escalation eingetroffen; Frankreich und Israel erhalten den Schützenpanzer VBCI Philoctetes, China den VN20 auf Basis des VT-4 für den Exportmarkt.\n\nAuch die Munitionsbeladung am Boden wird überarbeitet. Standardmäßig lädt das Spiel eine empfohlene Menge der besten freigeschalteten Panzerabwehrgranate sowie einige situative Geschosse wie HE und Rauch, innerhalb der sichereren Munitionsfächer. Der Regler wird gelb, sobald man über die Empfehlung geht, und rot, wenn gefährdetere Fächer befüllt werden. Eine Schaltfläche setzt auf die Empfehlung zurück, und im Hangar gibt es einen Munitionsregler mit Röntgenansicht.\n\nFür Spieler ist der kostenlose Dekal-Code das Konkreteste. Die Dekals 'No Sekrit Dokuments, Please', 'Sekrit Dokuments)))' und 'Nigel Was Here' kehren zurück und lassen sich mit dem Code aus dem Beitrag einlösen, gültig vom 27. November, 11:00 GMT, bis zum 18. Dezember, 11:00 GMT. Danach findet man sie unter Decals > Special > Other/Snails. Wer sie bisher verpasst hat, sollte den Zeitraum nutzen.",
+    "etiketler": [
+     "#WarThunder",
+     "#Steam",
+     "#PC",
+     "#Guncelleme"
+    ]
+   },
+   "nl": {
+    "baslik": "War Thunder plant GNSS-gestuurde clusterbommen",
+    "ozet": "Community-update nr. 14 op Steam beschrijft nieuwe richthulp voor helikopters, kustraketeenheden, munitiewijzigingen en een gratis decal-code.",
+    "metin": "Community-update nr. 14 voor War Thunder verscheen op Steam op 27 november 2026 en werd aangekondigd als de laatste community-update van dit jaar. De update kijkt vooruit naar de volgende grote update en naar 2027, met de waarschuwing dat getoonde functies kunnen veranderen, vertraging oplopen of worden geschrapt.\n\nHet belangrijkste nieuws zijn GNSS-gestuurde clusterwapens. De AGM-154A JSOW (BLU-97/B) geeft piloten een clusterkop tegen licht gepantserde doelen, zoals SPAA's of radarvoertuigen, in Nuclear Escalation. Helikopters krijgen een richtzone in de derdepersoonsweergave voor Marlet-raketten op de Wildcat en Vikhr-raketten op de Ka-50, Ka-52, Mi-35P en Mi-28NM. Volgens de post zijn ook kustraketeenheden in Nuclear Escalation aangekomen. Frankrijk en Israël krijgen de VBCI Philoctetes, en China de VN20, gebaseerd op de VT-4 en bedoeld voor export.\n\nOok de munitie-lading op grondvoertuigen wordt herzien. Standaard laadt het spel een aanbevolen hoeveelheid van je beste ontgrendelde pantserbrekende granaat, plus enkele situationele granaten zoals HE en rook, binnen de veiligere munitierekken. De schuif wordt geel boven het advies en rood wanneer kwetsbaardere rekken worden gevuld. Een resetknop herstelt de aanbeveling, en in de hangar komt een munitieschuif met röntgenweergave.\n\nVoor spelers is de gratis decal-code het concreetst. De decals 'No Sekrit Dokuments, Please', 'Sekrit Dokuments)))' en 'Nigel Was Here' keren terug en zijn in te wisselen met de code uit de post, geldig van 27 november om 11:00 GMT tot 18 december om 11:00 GMT. Daarna staan ze onder Decals > Special > Other/Snails. Wie ze eerder miste, heeft tot die datum de tijd.",
+    "etiketler": [
+     "#WarThunder",
+     "#Steam",
+     "#PC",
+     "#Guncelleme"
+    ]
+   },
+   "zh": {
+    "baslik": "War Thunder计划加入GNSS制导集束炸弹",
+    "ozet": "Steam社区更新第14期还介绍了直升机第三人称瞄准框、沿岸导弹单位、地面载具弹药装填调整，以及直至12月18日有效的免费涂装代码。",
+    "metin": "War Thunder的Steam社区更新第14期于2026年11月27日发布，官方称这是今年最后一次社区更新。更新内容介绍了下一次大型更新的计划以及2027年的展望，同时提醒所有展示的内容都可能变更、延期甚至取消。\n\n重点是GNSS制导集束武器。AGM-154A JSOW（BLU-97/B）将为飞行员提供集束弹头选项，可在Nuclear Escalation中对付防空车辆或雷达车辆等轻装甲目标。直升机将获得第三人称瞄准框，用于Wildcat的Marlet导弹以及Ka-50、Ka-52、Mi-35P和Mi-28NM的Vikhr导弹。公告还称沿岸导弹单位已加入Nuclear Escalation，法国和以色列将获得VBCI Philoctetes，中国的VN20则面向出口市场。\n\n地面载具的弹药装填也有改进。默认情况下，游戏会装入最佳已解锁穿甲弹的推荐数量，以及少量HE和烟雾弹等特定用途弹药，并保持在更安全的弹药架阶段内。超出推荐量时滑块变黄，装入更易损的弹架时变红。另有按钮可一键恢复推荐配置，机库中还将新增弹药滑块。\n\n对玩家来说，最直接的是免费涂装。No Sekrit Dokuments, Please、Sekrit Dokuments)))和Nigel Was Here涂装回归，可用公告中的代码兑换，有效期为11月27日11:00（GMT）至12月18日11:00（GMT）。兑换后可在Decals > Special > Other/Snails中找到。",
+    "etiketler": [
+     "#WarThunder",
+     "#Steam",
+     "#PC",
+     "#Guncelleme"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "war-thunder-community-update-14-gnss-kume-bombasi",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/236390/view/711167402164880864",
+   "teyit_zamani": "2026-11-27T12:10:02+00:00",
+   "oyuncuya_fayda": "Oyuncular ücretsiz dekal kodunu 18 Aralık'a kadar kullanabilir ve planlanan yenilikleri takip edebilir.",
+   "hype": 5,
+   "eklenme": "2026-11-27T15:18:33.908097+03:00"
+  }
+ },
+ {
+  "id": "gta-vi-kriminal-profil-sistemi-2026-11-27",
+  "oyun": "Grand Theft Auto VI",
+  "tarih": "2026-11-27",
+  "tur": "haber",
+  "platform": [],
+  "kaynaklar": [
+   {
+    "ad": "IGN",
+    "url": "https://www.ign.com/articles/rockstar-north-boss-knew-some-gta-6-players-would-reject-new-systems-like-criminal-profiles-but-insists-you-can-still-do-whatever-you-wanted-to-do-before"
+   },
+   {
+    "ad": "GamesRadar+",
+    "url": "https://www.gamesradar.com/games/grand-theft-auto/rockstar-boss-knew-some-gta-6-players-would-reject-the-criminal-profile-system-but-assures-you-can-still-do-whatever-you-wanted-to-do-before/"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "GTA VI'da kriminal profil: Rockstar 'istediğini yapabilirsin' dedi",
+    "ozet": "Rockstar North eş-stüdyo başkanı Rob Nelson, kriminal profil sisteminin eski oynanış tarzını engellemediğini, yalnızca seçenek eklediğini söyledi.",
+    "metin": "Grand Theft Auto VI'daki kriminal profil sistemi, Jason ve Lucia'nın açık dünyada ve görevlerde ne kadar şiddet uyguladığını arka planda izliyor. IGN'in 27 Kasım'da yayımladığı habere göre Rockstar North eş-stüdyo başkanı Rob Nelson, bu sistemin bazı oyuncular tarafından reddedileceğini VGC'ye söyledi.\n\nHaberde aktarılan açıklamaya göre Nelson, sistemin 'her şeyi değiştirmediğini, GTA'nın neler olabileceğini değiştirdiğini' söyledi. 'Önceden yapmak istediğin her şeyi hâlâ yapabilirsin, ama artık başka seçeneklerin de var' dedi. Oyunun başında Lucia'nın silahındaki mermileri çıkardığını, iki karakterin yarı meşru bir hayata çalışmaya çalıştığını anlattı. IGN, kafa atışlarının bacak nişanına tercih edilmesinin profili 'profesyonel'den 'psikopat' ve 'kurtarılamaz' uçlarına kaydırdığını bildirdi.\n\nGamesRadar+'ın aktardığına göre oyuncu tepkileri karışık: bazıları sistemi rol yapma deneyimini zenginleştiren bir özellik olarak görürken bazıları Vice City'deki bir kıyımın yargılanmasından rahatsız. Oyuncu için pratik sonuç: profil tarzını yansıtıyor, ama Nelson'a göre eski oynanış tarzı hâlâ mümkün; yalnızca dünyanın tepkisi değişebiliyor.",
+    "etiketler": [
+     "#GTAVI",
+     "#Rockstar",
+     "#RockstarNorth",
+     "#KriminalProfil"
+    ]
+   },
+   "en": {
+    "baslik": "GTA VI criminal profile: Rockstar says you can still play your way",
+    "ozet": "Rockstar North co-studio head Rob Nelson said the system opens new choices without blocking the playstyles players used before.",
+    "metin": "Grand Theft Auto VI's criminal profile system quietly tracks how violently Jason and Lucia act across its open world and missions. According to IGN's 27 November report, Rockstar North co-studio head Rob Nelson told VGC that some players will likely reject the system.\n\nNelson said the system 'doesn't change everything; it changes what GTA can be,' adding that players 'can still do whatever you wanted to do before, but now you have other options.' He also pointed to GTA 5's opening bank robbery in North Yankton, saying that in GTA VI, Lucia removes the bullets from her gun at the start of the game and the characters are trying to build a semi-legitimate life. IGN reports that choosing headshots over kneecaps moves your profile from 'professional' toward 'psycho' and eventually 'irredeemable.'\n\nGamesRadar+ describes player reactions as mixed: some enjoy the added roleplay, while others dislike the idea that their Vice City rampage is being judged. For players, the practical takeaway is that the profile reflects how you play, but according to Rockstar the old playstyle remains possible, and only the world's reactions may change.",
+    "etiketler": [
+     "#GTAVI",
+     "#Rockstar",
+     "#RockstarNorth",
+     "#KriminalProfil"
+    ]
+   },
+   "es": {
+    "baslik": "GTA VI, perfil criminal: Rockstar dice que puedes jugar a tu manera",
+    "ozet": "Rob Nelson, codirector del estudio de Rockstar North, explicó que el sistema añade opciones sin impedir los estilos de juego anteriores.",
+    "metin": "Grand Theft Auto VI incluye un sistema de perfil criminal que registra en segundo plano cómo actúan Jason y Lucia en el mundo abierto y en las misiones. Según IGN, en su informe del 27 de noviembre, Rob Nelson, codirector del estudio de Rockstar North, dijo a VGC que algunos jugadores probablemente rechazarán el sistema.\n\nNelson afirmó que el sistema «no cambia todo; cambia lo que GTA puede ser» y que los jugadores «siguen pudiendo hacer lo que querían antes, pero ahora tienen otras opciones». También recordó que GTA 5 empezaba con un atraco a un banco en North Yankton, mientras que en GTA VI Lucia saca las balas de su arma al inicio del juego. IGN informa de que elegir disparos a la cabeza en lugar de a las rodillas aleja el perfil de «profesional» y lo acerca a «psicópata» e «irredimible».\n\nGamesRadar+ describe las reacciones como mixtas: a algunos les gusta el rol que aporta, mientras que otros no quieren que su rampage en Vice City sea juzgado. Para el jugador, el perfil refleja cómo juega, pero según Rockstar el estilo anterior sigue siendo posible; solo cambia la reacción del mundo.",
+    "etiketler": [
+     "#GTAVI",
+     "#Rockstar",
+     "#RockstarNorth",
+     "#KriminalProfil"
+    ]
+   },
+   "fr": {
+    "baslik": "GTA VI, profil criminel : Rockstar assure qu'on joue à sa façon",
+    "ozet": "Rob Nelson, codirecteur du studio Rockstar North, explique que le système ajoute des choix sans bloquer les styles de jeu précédents.",
+    "metin": "Grand Theft Auto VI intègre un système de profil criminel qui suit en arrière-plan la violence de Jason et Lucia dans le monde ouvert et les missions. Selon IGN, dans son article du 27 novembre, Rob Nelson, codirecteur du studio Rockstar North, a déclaré à VGC que certains joueurs rejetteront probablement ce système.\n\nNelson affirme que le système « ne change pas tout, il change ce que GTA peut être » et que les joueurs « peuvent toujours faire ce qu'ils voulaient faire avant, mais ont désormais d'autres options ». Il rappelle que GTA 5 s'ouvrait sur un braquage de banque à North Yankton, alors que dans GTA VI, Lucia retire les balles de son arme au début du jeu. IGN indique que privilégier les tirs à la tête plutôt qu'aux genoux fait passer le profil de « professionnel » vers « psychopathe », puis « irrécupérable ».\n\nGamesRadar+ décrit des réactions partagées : certains apprécient l'ajout au jeu de rôle, d'autres n'aiment pas que leur saccage de Vice City soit jugé. Pour le joueur, le profil reflète sa façon de jouer, mais selon Rockstar l'ancien style reste possible ; seule la réaction du monde peut changer.",
+    "etiketler": [
+     "#GTAVI",
+     "#Rockstar",
+     "#RockstarNorth",
+     "#KriminalProfil"
+    ]
+   },
+   "de": {
+    "baslik": "GTA VI Kriminalprofil: Rockstar sagt, man kann spielen, wie man will",
+    "ozet": "Rob Nelson, Co-Studioleiter von Rockstar North, sagt, das System öffne neue Entscheidungen, ohne frühere Spielweisen zu blockieren.",
+    "metin": "Grand Theft Auto VI verfügt über ein Kriminalprofil, das im Hintergrund erfasst, wie gewalttätig Jason und Lucia in der offenen Welt und in Missionen handeln. Laut IGN, in dessen Bericht vom 27. November, sagte der Co-Studioleiter von Rockstar North, Rob Nelson, gegenüber VGC, dass einige Spieler das System wohl ablehnen werden.\n\nNelson erklärte, das System ändere nicht alles, sondern verändere, was GTA sein kann. Man könne weiterhin alles tun, was man vorher wollte, nur gebe es nun weitere Optionen. Außerdem verwies er auf den Bankraub in North Yankton zu Beginn von GTA 5, während in GTA VI Lucia zu Spielbeginn die Kugeln aus ihrer Waffe nimmt. IGN berichtet, dass Kopfschüsse statt Kniescheiben das Profil von „professionell“ in Richtung „psycho“ und schließlich „unverbesserlich“ verschieben.\n\nGamesRadar+ beschreibt gemischte Reaktionen: Manche schätzen den Rollenspielaspekt, andere stören sich daran, dass ihr Rampage in Vice City bewertet wird. Für Spieler heißt das praktisch: Das Profil spiegelt die Spielweise wider, doch laut Rockstar bleibt der bisherige Stil möglich; nur die Reaktion der Welt kann sich ändern.",
+    "etiketler": [
+     "#GTAVI",
+     "#Rockstar",
+     "#RockstarNorth",
+     "#KriminalProfil"
+    ]
+   },
+   "nl": {
+    "baslik": "GTA VI-profiel: Rockstar zegt dat je nog steeds je eigen weg kiest",
+    "ozet": "Rob Nelson, co-studiohoofd van Rockstar North, zegt dat het systeem nieuwe keuzes biedt zonder eerdere speelstijlen te blokkeren.",
+    "metin": "Grand Theft Auto VI heeft een crimineel profiel dat op de achtergrond bijhoudt hoe gewelddadig Jason en Lucia optreden in de open wereld en bij missies. Volgens IGN, in het bericht van 27 november, vertelde het co-studiohoofd van Rockstar North, Rob Nelson, aan VGC dat sommige spelers het systeem waarschijnlijk zullen afwijzen.\n\nNelson zei dat het systeem niet alles verandert, maar verandert wat GTA kan zijn. Je kunt nog steeds doen wat je vroeger wilde, maar nu zijn er extra opties. Hij wees ook op de bankoverval in North Yankton waarmee GTA 5 begon, terwijl Lucia in GTA VI aan het begin de kogels uit haar wapen haalt. IGN meldt dat koppen schieten in plaats van knieën het profiel van 'professioneel' richting 'psycho' en uiteindelijk 'onverbeterlijk' duwt.\n\nGamesRadar+ ziet gemengde reacties: sommigen waarderen de rollenspelelementen, anderen vinden het vervelend dat hun Vice City-bloedbad wordt beoordeeld. Voor spelers betekent dit vooral dat het profiel je speelstijl weerspiegelt, maar volgens Rockstar blijft de oude stijl mogelijk; alleen de reactie van de wereld verandert.",
+    "etiketler": [
+     "#GTAVI",
+     "#Rockstar",
+     "#RockstarNorth",
+     "#KriminalProfil"
+    ]
+   },
+   "zh": {
+    "baslik": "GTA VI犯罪档案系统：Rockstar称玩家仍可自由行事",
+    "ozet": "Rockstar North联合工作室负责人Rob Nelson表示，该系统增加了选择，并未限制玩家以往的游戏方式。",
+    "metin": "Grand Theft Auto VI的犯罪档案系统会在后台记录杰森和卢西亚在开放世界与任务中的暴力行为。据IGN于11月27日发布的报道，Rockstar North联合工作室负责人Rob Nelson在接受VGC采访时表示，部分玩家可能会拒绝这一系统。\n\nNelson表示，该系统“并没有改变一切，而是改变了GTA可以成为的样子”，玩家“仍然可以做以前想做的任何事，只是现在多了其他选择”。他还提到，GTA 5开场是北扬克顿的银行抢劫，而在GTA VI开头，卢西亚会先取出枪里的子弹。IGN指出，爆头而非打膝盖会让档案从“专业”滑向“变态”乃至“无可救药”。\n\nGamesRadar+称玩家反应不一：有人喜欢它为角色扮演增添的元素，也有人不满自己在Vice City的杀戮被评判。对玩家而言，档案反映的是你的玩法；按Rockstar的说法，以往的风格依然可行，变化的只是游戏世界的反应。",
+    "etiketler": [
+     "#GTAVI",
+     "#Rockstar",
+     "#RockstarNorth",
+     "#KriminalProfil"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "gta-vi-kriminal-profil-rockstar-north-yorum-2026-11-27",
+   "teyit_turu": "birincil",
+   "resmi_url": "",
+   "birincil_kaynak": {
+    "kisi": "Rob Nelson",
+    "gorev": "Rockstar North eş-stüdyo başkanı",
+    "kurum": "Rockstar North",
+    "tur": "roportaj",
+    "olgu": "Kriminal profil sisteminin oyuncuların eski oynanış tarzını engellemediğini, yalnızca yeni seçenekler eklediğini ve bazı oyuncuların sistemi reddedebileceğini açıklaması."
+   },
+   "capraz_kaynaklar": [
+    "https://www.ign.com/articles/rockstar-north-boss-knew-some-gta-6-players-would-reject-new-systems-like-criminal-profiles-but-insists-you-can-still-do-whatever-you-wanted-to-do-before",
+    "https://www.gamesradar.com/games/grand-theft-auto/rockstar-boss-knew-some-gta-6-players-would-reject-the-criminal-profile-system-but-assures-you-can-still-do-whatever-you-wanted-to-do-before/"
+   ],
+   "teyit_zamani": "2026-11-27T12:15:57+00:00",
+   "oyuncuya_fayda": "Oyuncular kriminal profilin tarzlarını nasıl izlediğini ve eski oynanışın hâlâ mümkün olduğunu öğrenir.",
+   "hype": 6,
+   "eklenme": "2026-11-27T15:18:33.908097+03:00"
+  }
+ },
+ {
   "id": "limbus-company-schemacraft-sinerji-yonu-2026-11-27",
   "oyun": "Limbus Company",
   "tarih": "2026-11-27",
