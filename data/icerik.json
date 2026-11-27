@@ -1,5 +1,108 @@
 [
  {
+  "id": "stellaris-4-6-1-oos-2026-11-27",
+  "oyun": "Stellaris",
+  "tarih": "2026-11-27",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam",
+    "url": "https://store.steampowered.com/news/app/281990/view/687523504123283083"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Stellaris 4.6.1 önizlemesi: çok oyunculu OOS %7'ye indi",
+    "ozet": "Geliştirici yazısı, Resync düğmesinin senkron sorunlarının önemli bir kısmını gidermesini beklediğini ve 4.6.1'in önümüzdeki hafta geleceğini söylüyor.",
+    "metin": "Stellaris, 27 Kasım 2026'da yayımlanan 442. Dev Diary yazısıyla çok oyunculu istikrar çalışmasını ve 4.6.1 sürümünün ön notlarını paylaştı. Steam'deki resmî duyuruda geliştirici, OOS (senkron dışı) oranının 4.5.3 ve 4.5.4 sürümlerinden sonra ortalama %7'ye indiğini yazıyor; hedef yaklaşık %30'du ve bu seviyeye 4.3.5 civarında ulaşılmıştı. Geliştirici bu düzeyi Stellaris için benzeri görülmemiş bir istikrar olarak tanımlıyor.\n\nYazıya göre Resync düğmesi, kalan OOS sorunlarının önemli bir kısmını gidermeli. Oyuncular özellikle Resync sonrasında tekrarlayan OOS yaşarsa kayıt dosyalarını ve raporlarını geliştiriciye göndermeye davet ediliyor. Ekip, bu raporların sorunların temizlenmesine yardımcı olacağını belirtiyor.\n\n4.6.1 ön notlarında MSI'ya Inquisitor filosu, Golden Museum için imparatorluk başına bir sınırı, Cryo-Pods kurulumu için 1500 alloy maliyeti ve seviye 10 odak ödülü için 1300 yerine 1125 puan var. Geliştiriciye göre sürümün önümüzdeki hafta yayımlanması planlanıyor; yazının güncellemesinde ise 4.6.1'in stellaris_test dalında açık beta olarak yayında olduğu bildiriliyor.\n\nOyuncular için en somut fayda, çok oyunculu oyunlarda OOS oranının önceki sürümlere göre çok daha düşük olması ve sürüm çıkmadan önce beta ile denemenin mümkün olması. Sorunları raporlamak hem kendi maçlarınızı hem de sonraki yamaları iyileştirmeye yardımcı olur.",
+    "etiketler": [
+     "#Stellaris",
+     "#Steam",
+     "#PC",
+     "#Multiplayer"
+    ]
+   },
+   "en": {
+    "baslik": "Stellaris 4.6.1 preview: multiplayer OOS drops to 7%",
+    "ozet": "The developer expects the Resync button to fix much of the remaining out-of-sync trouble, and says 4.6.1 is planned for next week.",
+    "metin": "Stellaris received Dev Diary #442 on November 27, 2026, with an update on multiplayer stability and preliminary notes for patch 4.6.1. The official Steam post says the average Out of Sync (OOS) rate fell to 7% after versions 4.5.3 and 4.5.4, which the developer calls unprecedented stability for Stellaris. The original target was roughly 30%, first reached around version 4.3.5.\n\nThe post says the Resync button should handle a significant part of the remaining OOS cases. Players who still hit desyncs, especially ones that come back after a resync, are asked to send their saves and reports so the team can clear them up.\n\nThe 4.6.1 notes list an Inquisitor shipset for MSI, a limit of one Golden Museum per empire, and a cost of 1500 Alloys to install Cryo-Pods at colonies. Level 10 of the focus rewards now needs 1125 points instead of 1300. The release is planned for sometime next week, and an update in the post says 4.6.1 is already live as an open beta on the stellaris_test branch.\n\nFor players, the practical takeaway is a much lower average OOS rate in multiplayer and a chance to try 4.6.1 in beta before it lands. Reports from real matches help the developers finish the job.",
+    "etiketler": [
+     "#Stellaris",
+     "#Steam",
+     "#PC",
+     "#Multiplayer"
+    ]
+   },
+   "es": {
+    "baslik": "Stellaris 4.6.1: el OOS multijugador baja al 7 %",
+    "ozet": "El desarrollador confía en que el botón Resync resuelva buena parte de los fallos restantes, y 4.6.1 está previsto para la próxima semana.",
+    "metin": "Stellaris publicó su Dev Diary #442 el 27 de noviembre de 2026, con novedades sobre la estabilidad multijugador y notas preliminares de la versión 4.6.1. Según la entrada oficial en Steam, el promedio de OOS (fuera de sincronización) bajó al 7 % tras las versiones 4.5.3 y 4.5.4, un nivel que el desarrollador describe como inédito para Stellaris. La meta original era cerca del 30 %, alcanzada hacia la versión 4.3.5.\n\nEl botón Resync debería resolver buena parte de los OOS restantes. Si los problemas reaparecen después de resincronizar, el equipo pide enviar partidas guardadas e informes para corregirlos.\n\nLas notas de 4.6.1 incluyen la flota Inquisitor para MSI, un límite de un Golden Museum por imperio y un coste de 1500 alloys para instalar Cryo-Pods en colonias. El nivel 10 de recompensas de enfoque pasa de 1300 a 1125 puntos. Según la entrada, la versión se publicará la próxima semana, y una actualización del mensaje indica que 4.6.1 ya está en beta abierta en la rama stellaris_test.\n\nPara los jugadores, lo más útil es que el promedio de OOS en multijugador es mucho menor y que la beta permite probar 4.6.1 antes del lanzamiento. Los informes de partidas reales ayudan al equipo a terminar el trabajo.",
+    "etiketler": [
+     "#Stellaris",
+     "#Steam",
+     "#PC",
+     "#Multiplayer"
+    ]
+   },
+   "fr": {
+    "baslik": "Stellaris 4.6.1 : l'OOS multijoueur tombe à 7 %",
+    "ozet": "Le développeur espère que le bouton Resync réglera une grande partie des désynchronisations restantes, et 4.6.1 est prévu la semaine prochaine.",
+    "metin": "Stellaris a publié son Dev Diary n° 442 le 27 novembre 2026, avec un point sur la stabilité du multijoueur et des notes préliminaires pour la mise à jour 4.6.1. Selon le message officiel sur Steam, le taux moyen d'OOS (hors synchronisation) est tombé à 7 % après les versions 4.5.3 et 4.5.4, un niveau que le développeur juge inédit pour Stellaris. L'objectif initial était d'environ 30 %, atteint vers la version 4.3.5.\n\nLe bouton Resync devrait traiter une part importante des OOS restants. Si des problèmes reviennent après une resynchronisation, l'équipe demande d'envoyer les sauvegardes et les rapports pour les corriger.\n\nLes notes de 4.6.1 prévoient une flotte Inquisitor pour MSI, une limite d'un Golden Museum par empire et un coût de 1500 Alloys pour installer des Cryo-Pods dans les colonies. Le niveau 10 des récompenses de focus passe de 1300 à 1125 points. La sortie est prévue la semaine prochaine, et une mise à jour du message indique que 4.6.1 est déjà disponible en bêta ouverte sur la branche stellaris_test.\n\nPour les joueurs, l'intérêt concret est un taux d'OOS moyen nettement plus bas en multijoueur et la possibilité de tester 4.6.1 en bêta avant sa sortie. Les rapports tirés de vraies parties aident l'équipe à finir le travail.",
+    "etiketler": [
+     "#Stellaris",
+     "#Steam",
+     "#PC",
+     "#Multiplayer"
+    ]
+   },
+   "de": {
+    "baslik": "Stellaris 4.6.1 Vorschau: Multiplayer-OOS sinkt auf 7 %",
+    "ozet": "Der Entwickler erwartet, dass der Resync-Button einen großen Teil der verbleibenden Synchronisationsprobleme löst; 4.6.1 ist für nächste Woche geplant.",
+    "metin": "Stellaris hat am 27. November 2026 den Dev Diary Nr. 442 veröffentlicht, mit einem Update zur Multiplayer-Stabilität und vorläufigen Notizen zum Patch 4.6.1. Im offiziellen Steam-Beitrag heißt es, dass die durchschnittliche Out-of-Sync-Rate (OOS) nach den Versionen 4.5.3 und 4.5.4 auf 7 % gefallen ist. Das Ziel lag bei rund 30 %, das um Version 4.3.5 erreicht wurde; den aktuellen Wert bezeichnet der Entwickler als für Stellaris beispiellos stabil.\n\nLaut Beitrag soll der Resync-Button einen großen Teil der übrigen OOS-Fälle abfangen. Wer weiterhin Desyncs erlebt, besonders solche, die nach einem Resync wieder auftreten, wird gebeten, Speicherstände und Berichte einzureichen, damit das Team sie beheben kann.\n\nDie vorläufigen Notizen zu 4.6.1 nennen ein Inquisitor-Schiffsset für MSI, eine Begrenzung des Golden Museum auf eins pro Imperium und 1500 Alloys für die Installation von Cryo-Pods in Kolonien. Für Stufe 10 der Fokus-Belohnungen sind nun 1125 statt 1300 Punkte nötig. Die Veröffentlichung ist für nächste Woche geplant; ein Update im Beitrag meldet, dass 4.6.1 bereits als offene Beta auf dem Branch stellaris_test läuft.\n\nFür Spieler bedeutet das vor allem: Im Mehrspielermodus sollte die OOS-Quote deutlich niedriger liegen, und mit der Beta lässt sich 4.6.1 vor dem Start testen. Berichte aus echten Partien helfen dem Team, den Rest zu beheben.",
+    "etiketler": [
+     "#Stellaris",
+     "#Steam",
+     "#PC",
+     "#Multiplayer"
+    ]
+   },
+   "nl": {
+    "baslik": "Stellaris 4.6.1 preview: multiplayer-OOS zakt naar 7%",
+    "ozet": "De ontwikkelaar verwacht dat de Resync-knop een groot deel van de resterende synchronisatieproblemen oplost; 4.6.1 staat gepland voor volgende week.",
+    "metin": "Stellaris kreeg op 27 november 2026 Dev Diary #442, met een update over de stabiliteit van multiplayer en voorlopige notities bij patch 4.6.1. In het officiële Steam-bericht staat dat het gemiddelde Out of Sync-percentage (OOS) na de versies 4.5.3 en 4.5.4 is gezakt naar 7%. Het doel lag rond 30%, dat rond versie 4.3.5 werd bereikt. De ontwikkelaar noemt dit voor Stellaris een ongekend stabiel niveau.\n\nVolgens het bericht moet de Resync-knop een groot deel van de overgebleven OOS-gevallen opvangen. Wie nog desyncs tegenkomt, vooral die na een resync terugkomen, wordt gevraagd om opslagbestanden en meldingen in te sturen, zodat het team ze kan verhelpen.\n\nDe voorlopige notities voor 4.6.1 noemen een Inquisitor-schepenset voor MSI, een limiet van één Golden Museum per imperium en 1500 Alloys om Cryo-Pods in kolonies te installeren. Voor niveau 10 van de focusbeloningen zijn nu 1125 punten nodig in plaats van 1300. De uitgave staat gepland voor volgende week; een update in het bericht meldt dat 4.6.1 al als open bèta op de stellaris_test-branch draait.\n\nVoor spelers betekent dit vooral een lager gemiddeld OOS-percentage in multiplayer en de kans om 4.6.1 vóór de release in de bèta te proberen. Meldingen uit echte partijen helpen het team de rest op te lossen.",
+    "etiketler": [
+     "#Stellaris",
+     "#Steam",
+     "#PC",
+     "#Multiplayer"
+    ]
+   },
+   "zh": {
+    "baslik": "Stellaris 4.6.1预览：多人联机OOS率降至7%",
+    "ozet": "开发者表示，重新同步按钮预计可解决剩余大部分不同步问题，4.6.1计划于下周发布，目前已在测试分支开放公测版本。",
+    "metin": "Stellaris于2026年11月27日发布第442期开发者日志（Dev Diary #442），介绍了多人联机稳定性的最新进展，并给出4.6.1版本的初步更新说明。Steam官方公告称，4.5.3和4.5.4版本之后，多人对局中的平均OOS（不同步）比例降至7%。此前的目标约为30%，大约在4.3.5版本时已经达到。开发者认为，这一稳定程度在Stellaris中前所未有。\n\n公告指出，重新同步按钮预计能够处理剩余OOS问题中的大部分。如果玩家仍遇到不同步，尤其是在重新同步后再次出现的情况，建议提交存档和报告，帮助团队彻底修复。\n\n4.6.1的初步说明包括：MSI获得Inquisitor舰船套装；Golden Museum每个帝国仅限一座；在殖民地安装Cryo-Pods需要1500合金。焦点奖励第10级所需点数也从1300降至1125。公告提到，该版本计划于下周发布；帖子的更新显示，4.6.1已在stellaris_test分支以公开测试版形式上线。\n\n对玩家而言，最直接的好处是多人对局中的OOS平均比例大幅降低，同时可以在正式发布前通过测试版体验4.6.1。来自真实对局的反馈，将有助于团队完成后续修复。",
+    "etiketler": [
+     "#Stellaris",
+     "#Steam",
+     "#PC",
+     "#Multiplayer"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "stellaris-dev-diary-442-oos-4-6-1",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/281990/view/687523504123283083",
+   "teyit_zamani": "2026-11-27T13:10:03+00:00",
+   "oyuncuya_fayda": "Çok oyunculu oyuncular OOS oranının düştüğünü ve 4.6.1 betasını sürüm öncesi deneyebileceklerini öğrenir.",
+   "hype": 3,
+   "eklenme": "2026-11-27T16:13:06.110938+03:00"
+  }
+ },
+ {
   "id": "war-thunder-community-update-14-2026-11-27",
   "oyun": "War Thunder",
   "tarih": "2026-11-27",

@@ -1,0 +1,121 @@
+{
+ "id": "stellaris-4-6-1-oos-2026-11-27",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Stellaris's multiplayer OOS rate has dropped to an average of 7%, according to the developer.",
+   "veri": {
+    "ust_etiket": "DEV DIARY 442",
+    "baslik": "Multiplayer OOS drops to 7%",
+    "vurgu": [
+     "OOS",
+     "7%"
+    ],
+    "tuslar": [
+     "O",
+     "O",
+     "S"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "STELLARIS",
+    "alt": "4.6.1 PREVIEW"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam's developer post says the Resync button should clear a significant share of the remaining desyncs.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam developer post",
+    "alinti": "The Resync button should handle a significant portion of the remaining OOSes; report those that reoccur after resync."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "STEAM • DEVELOPER POST"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "4.6.1 is planned for next week. MSI gets the Inquisitor shipset, and installing Cryo-Pods now costs 1500 Alloys.",
+   "veri": {
+    "baslik": "4.6.1 preview",
+    "maddeler": [
+     {
+      "metin": "MSI gets the Inquisitor shipset",
+      "tetik": "MSI"
+     },
+     {
+      "metin": "Cryo-Pods install: 1500 Alloys",
+      "tetik": "Cryo-Pods"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "4.6.1 PREVIEW",
+    "alt": "MSI • CRYO-PODS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "The open beta is already live on the test branch, and level 10 of the focus rewards now needs 1125 points.",
+   "veri": {
+    "baslik": "Beta and focus rewards",
+    "maddeler": [
+     {
+      "metin": "Open beta is live on the test branch",
+      "tetik": "beta"
+     },
+     {
+      "metin": "Level 10 needs 1125 points",
+      "tetik": "1125"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "BETA AND REWARDS",
+    "alt": "TEST BRANCH"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "All the full details are on our site, Control A Game. Have you run into multiplayer desyncs lately?",
+   "veri": {
+    "cagri": "Full notes on our site",
+    "alt": "Sources and details in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

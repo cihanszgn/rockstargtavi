@@ -1,0 +1,121 @@
+{
+ "id": "stellaris-4-6-1-oos-2026-11-27",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Le taux d'OOS multijoueur de Stellaris est tombé à 7 % en moyenne, selon le développeur.",
+   "veri": {
+    "ust_etiket": "DEV DIARY 442",
+    "baslik": "OOS multijoueur tombe à 7 %",
+    "vurgu": [
+     "OOS",
+     "7 %"
+    ],
+    "tuslar": [
+     "O",
+     "O",
+     "S"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "STELLARIS",
+    "alt": "APERÇU 4.6.1"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Le message officiel sur Steam indique que le bouton Resync devrait régler une grande partie des problèmes restants.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Message du développeur sur Steam",
+    "alinti": "Le bouton Resync devrait gérer une part importante des OOS restants ; signalez ceux qui reviennent après resync."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "STEAM • MESSAGE DU STUDIO"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "La version 4.6.1 est prévue la semaine prochaine. MSI reçoit la flotte Inquisitor, et installer les Cryo-Pods coûte 1500 Alloys.",
+   "veri": {
+    "baslik": "Nouveautés de 4.6.1",
+    "maddeler": [
+     {
+      "metin": "MSI reçoit la flotte Inquisitor",
+      "tetik": "MSI"
+     },
+     {
+      "metin": "Cryo-Pods : 1500 Alloys",
+      "tetik": "Cryo-Pods"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NOUVEAUTÉS 4.6.1",
+    "alt": "MSI • CRYO-PODS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "La bêta ouverte est déjà en ligne sur la branche test, et le niveau 10 des récompenses demande 1125 points.",
+   "veri": {
+    "baslik": "Bêta et récompenses",
+    "maddeler": [
+     {
+      "metin": "Bêta ouverte déjà en ligne",
+      "tetik": "bêta"
+     },
+     {
+      "metin": "Niveau 10 : 1125 points",
+      "tetik": "1125"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "BÊTA ET RÉCOMPENSES",
+    "alt": "BRANCHE DE TEST"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tout est sur notre site, Control A Game. Avez-vous eu des désynchronisations en multijoueur ?",
+   "veri": {
+    "cagri": "Tout est sur notre site",
+    "alt": "Sources et détails dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

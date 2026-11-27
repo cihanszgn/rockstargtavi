@@ -1,0 +1,121 @@
+{
+ "id": "stellaris-4-6-1-oos-2026-11-27",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Stellaris'ın çok oyunculu OOS oranı, geliştiricinin açıklamasına göre %7'ye indi.",
+   "veri": {
+    "ust_etiket": "DEV DIARY 442",
+    "baslik": "OOS oranı %7'ye indi",
+    "vurgu": [
+     "OOS",
+     "%7"
+    ],
+    "tuslar": [
+     "O",
+     "O",
+     "S"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "STELLARIS",
+    "alt": "4.6.1 ÖNİZLEMESİ"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam duyurusuna göre Resync düğmesi kalan senkron sorunlarının önemli bir kısmını gidermeli.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam geliştirici duyurusu",
+    "alinti": "Resync düğmesi, kalan OOS sorunlarının önemli bir kısmını gidermeli; tekrarlayanları raporlayın."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "STEAM • GELİŞTİRİCİ DUYURUSU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Sürüm 4.6.1 önümüzdeki hafta çıkıyor. MSI'ya Inquisitor filosu geliyor, Cryo-Pods kurulumu 1500 alloy oluyor.",
+   "veri": {
+    "baslik": "4.6.1 önizlemesi",
+    "maddeler": [
+     {
+      "metin": "MSI'ya Inquisitor filosu geliyor",
+      "tetik": "MSI"
+     },
+     {
+      "metin": "Cryo-Pods kurulumu 1500 alloy",
+      "tetik": "Cryo-Pods"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "4.6.1 ÖN NOTLARI",
+    "alt": "MSI • CRYO-PODS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "4.6.1 açık beta olarak test dalında yayında; odak ödülleri 10. seviyeye 1125 puanla ulaşıyor.",
+   "veri": {
+    "baslik": "Beta ve odak ödülleri",
+    "maddeler": [
+     {
+      "metin": "Açık beta yayında",
+      "tetik": "beta"
+     },
+     {
+      "metin": "Seviye 10 için 1125 puan",
+      "tetik": "1125"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "BETA VE ÖDÜLLER",
+    "alt": "TEST DALINDA AÇIK BETA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Çok oyunculu maçlarda OOS yaşadın mı?",
+   "veri": {
+    "cagri": "Tamamı sitemizde",
+    "alt": "Sürüm notları haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
