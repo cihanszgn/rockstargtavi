@@ -1,23 +1,13 @@
 {
- "guncel": "2026-11-26T14:04:47Z",
+ "guncel": "2026-11-27T00:30:13Z",
  "epic": [
-  {
-   "baslik": "Mark of the Deep",
-   "slug": "mark-of-the-deep-f7dc08",
-   "resim": "https://cdn1.epicgames.com/spt-assets/83a240506a884c10ad8fb99694e57a0d/mark-of-the-deep-w1ygr.png",
-   "baslangic": "2026-11-19T16:00:00.000Z",
-   "bitis": "2026-11-26T16:00:00.000Z",
-   "durum": "simdi",
-   "normal": 279.0,
-   "para": "TRY"
-  },
   {
    "baslik": "Bread and Fred",
    "slug": "bread-and-fred-1db362",
    "resim": "https://cdn1.epicgames.com/spt-assets/545b4dd8bb364c12b719268198a93ef3/bread-and-fred-3jnwn.jpg",
    "baslangic": "2026-11-26T16:00:00.000Z",
    "bitis": "2026-12-03T16:00:00.000Z",
-   "durum": "yakinda",
+   "durum": "simdi",
    "normal": 115.0,
    "para": "TRY"
   },
@@ -27,7 +17,7 @@
    "resim": "https://cdn1.epicgames.com/spt-assets/69576a28f7154fe9a0dce97508da5163/firestone-online-idle-rpg-1inmf.jpg",
    "baslangic": "2026-11-26T16:00:00.000Z",
    "bitis": "2026-12-03T16:00:00.000Z",
-   "durum": "yakinda",
+   "durum": "simdi",
    "normal": 0.0,
    "para": "TRY"
   },
@@ -44,20 +34,20 @@
  ],
  "cheapshark": [
   {
-   "dealID": "J3QoV3DZfxoGHf0gnngRHd1PS4AMm%2Fuqeh6CmIov%2Fk4%3D",
-   "gameID": "297257",
-   "title": "Mark of the Deep",
+   "dealID": "%2F5DFE%2F2K%2FVul88oIaSEPBozm0YOSy8ep%2BifmrdL4J2o%3D",
+   "gameID": "261055",
+   "title": "Bread and Fred",
    "storeID": "25",
    "salePrice": 0.0,
-   "normalPrice": 19.99,
+   "normalPrice": 14.99,
    "savings": 100.0,
-   "metacriticScore": 81,
+   "metacriticScore": 73,
    "steamRatingText": "Mostly Positive",
-   "steamRatingPercent": 71,
-   "steamAppID": "1933370",
-   "releaseDate": 1737676800,
+   "steamRatingPercent": 78,
+   "steamAppID": "1607680",
+   "releaseDate": 1684800000,
    "dealRating": 10.0,
-   "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1933370/29d6d17e4e203130ce7305717343b953452be8cd/capsule_231x87.jpg?t=1788364373"
+   "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1607680/f5df5f261dc7c5c58bda1f1c3709fefa80d78466/capsule_231x87.jpg?t=1773071421"
   },
   {
    "dealID": "9C%2B2hwINwXpuTAKoxmx56nS29WPr5Tt9tH%2BCX7Ls1uQ%3D",

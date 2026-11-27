@@ -1,5 +1,5 @@
 {
- "guncel": "2026-11-26T14:04:47Z",
+ "guncel": "2026-11-27T00:30:13Z",
  "kaynak": "https://www.cheapshark.com",
  "magazalar": [
   {
@@ -65,20 +65,20 @@
  ],
  "firsatlar": [
   {
-   "dealID": "J3QoV3DZfxoGHf0gnngRHd1PS4AMm%2Fuqeh6CmIov%2Fk4%3D",
-   "gameID": "297257",
-   "title": "Mark of the Deep",
+   "dealID": "%2F5DFE%2F2K%2FVul88oIaSEPBozm0YOSy8ep%2BifmrdL4J2o%3D",
+   "gameID": "261055",
+   "title": "Bread and Fred",
    "storeID": "25",
    "salePrice": 0.0,
-   "normalPrice": 19.99,
+   "normalPrice": 14.99,
    "savings": 100.0,
-   "metacriticScore": 81,
+   "metacriticScore": 73,
    "steamRatingText": "Mostly Positive",
-   "steamRatingPercent": 71,
-   "steamAppID": "1933370",
-   "releaseDate": 1737676800,
+   "steamRatingPercent": 78,
+   "steamAppID": "1607680",
+   "releaseDate": 1684800000,
    "dealRating": 10.0,
-   "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1933370/29d6d17e4e203130ce7305717343b953452be8cd/capsule_231x87.jpg?t=1788364373",
+   "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1607680/f5df5f261dc7c5c58bda1f1c3709fefa80d78466/capsule_231x87.jpg?t=1773071421",
    "enDusuk": 0.0
   },
   {
