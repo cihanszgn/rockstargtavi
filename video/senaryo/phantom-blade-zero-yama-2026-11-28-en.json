@@ -1,0 +1,99 @@
+{
+ "id": "phantom-blade-zero-yama-2026-11-28",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Phantom Blade Zero's 1.0304629 patch is out, and camera assist gets a new setting.",
+   "veri": {
+    "ust_etiket": "PATCH NOTES",
+    "baslik": "Phantom Blade Zero patch 1.0304629",
+    "vurgu": [
+     "1.0304629"
+    ],
+    "tuslar": [
+     "P",
+     "A",
+     "T"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PHANTOM BLADE ZERO",
+    "alt": "PATCH 1.0304629"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to Steam's official patch notes, the update is 7 GB on PC, and players should remove third-party mods before installing.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam official patch notes",
+    "alinti": "Patch download size is 7 GB; remove third-party mods before updating."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "STEAM • PATCH NOTES"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "A new Combat Assist section lands in Settings. With Automatic Strong Camera Assist off, strong camera help only applies while you attack an enemy. Mouse players also get a target-switch sensitivity setting, and 0 turns mouse switching off.",
+   "veri": {
+    "baslik": "New settings",
+    "maddeler": [
+     {
+      "metin": "Combat Assist section in Settings",
+      "tetik": "Combat"
+     },
+     {
+      "metin": "Strong camera help only while attacking",
+      "tetik": "camera"
+     },
+     {
+      "metin": "Mouse target-switch sensitivity; 0 turns it off",
+      "tetik": "sensitivity"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NEW SETTINGS",
+    "alt": "COMBAT ASSIST AND CAMERA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full patch story on our site, Control A Game. Will you try the new camera assist first?",
+   "veri": {
+    "cagri": "Every patch detail on the site",
+    "alt": "Fixes and changes are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

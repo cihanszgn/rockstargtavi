@@ -1,5 +1,108 @@
 [
  {
+  "id": "phantom-blade-zero-yama-2026-11-28",
+  "oyun": "Phantom Blade Zero",
+  "tarih": "2026-11-28",
+  "tur": "guncelleme",
+  "platform": [
+   "PC"
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Steam",
+    "url": "https://store.steampowered.com/news/app/4115450/view/698782503191709241"
+   }
+  ],
+  "diller": {
+   "tr": {
+    "baslik": "Phantom Blade Zero 1.0304629 yaması: kamera ve hedef ayarları",
+    "ozet": "Yama PC'de 7 GB indirme boyutuyla geliyor; yeni Combat Assist bölümü, kamera yardımı seçeneği ve çok sayıda hata düzeltmesi içeriyor.",
+    "metin": "Phantom Blade Zero için 1.0304629 yaması 28 Kasım'da Steam'de yayımlandı. Güncelleme PC'de 7 GB'lık bir indirme boyutuna sahip ve Steam'deki resmî yama notlarında ayrıntılı olarak anlatılıyor.\n\nYamayla ayarlar menüsüne yeni bir Combat Assist bölümü ve Automatic Strong Camera Assist seçeneği eklendi. Bu seçenek kapalıyken güçlü kamera yardımı yalnızca bir düşmana saldırırken devreye giriyor. Fare ile kilitlenme yapanlar için Mouse Lock-On Target Switching Sensitivity ayarı da geldi; değer 0 yapıldığında fareyle hedef değiştirme tamamen kapanıyor. Bellek kullanımı azaltıldı; ara sahnelerde ve karlı bölgelerde, boss savaşlarında ise performans iyileştirildi.\n\nDüzeltmeler arasında AMD Radeon RX 9000 serisi kartlarda görülen parlak kare hatası, bazı ara sahnelerdeki oynatma sorunları ve ilerlemeyi engelleyen görev hataları var. Defy Destiny başarımının açılmama hatası giderildi; diğer tüm başarımları kazanmış oyuncular oyunu bir sonraki açtıklarında başarımı otomatik kazanacak. Güncellemeden önce üçüncü taraf modları kaldırmak, sorun yaşanırsa shader önbelleğini temizlemek öneriliyor.",
+    "etiketler": [
+     "#PhantomBladeZero",
+     "#Steam",
+     "#PC",
+     "#Patch"
+    ]
+   },
+   "en": {
+    "baslik": "Phantom Blade Zero 1.0304629 patch: camera assist and lock-on",
+    "ozet": "The update is 7 GB on PC and adds a Combat Assist section, a camera assist option, mouse target-switch sensitivity and many bug fixes.",
+    "metin": "Patch 1.0304629 for Phantom Blade Zero went live on Steam on November 28. The update is 7 GB on PC, and Steam's official patch notes advise removing third-party mods before updating.\n\nThe patch adds a Combat Assist section to the Settings menu, along with an Automatic Strong Camera Assist option. When that option is off, strong camera help applies only while you attack an enemy; otherwise the camera makes only minor adjustments. Mouse players also get a Mouse Lock-On Target Switching Sensitivity setting, and setting it to 0 turns off mouse-based target switching. Memory use is lower, with the biggest gains in cutscenes and snowy areas, and boss fights run better.\n\nBug fixes cover an AMD Radeon RX 9000 Series issue that could create bright square artifacts in volumetric clouds, cutscene playback problems and several progression blockers. A Defy Destiny achievement bug is also fixed: players who already met the requirements will unlock it automatically the next time they launch the game. If you run into crashes or stuttering, clear your shader cache.",
+    "etiketler": [
+     "#PhantomBladeZero",
+     "#Steam",
+     "#PC",
+     "#Patch"
+    ]
+   },
+   "es": {
+    "baslik": "Phantom Blade Zero: parche 1.0304629 añade ayudas de cámara",
+    "ozet": "La actualización pesa 7 GB en PC e incluye una sección Combat Assist, una opción de cámara, sensibilidad de objetivo con ratón y correcciones.",
+    "metin": "La actualización 1.0304629 de Phantom Blade Zero llegó a Steam el 28 de noviembre. En PC pesa 7 GB y las notas oficiales de parche recomiendan quitar los mods de terceros antes de actualizar.\n\nEl parche añade una sección de Combat Assist en el menú de ajustes y una opción de Automatic Strong Camera Assist. Con esa opción desactivada, la ayuda fuerte de cámara solo se aplica mientras atacas a un enemigo. También llega el ajuste de sensibilidad para cambiar de objetivo con el ratón mientras fijas el objetivo; si lo pones en 0, ese cambio con ratón queda desactivado. El uso de memoria baja, con mejoras notables en las escenas y en zonas nevadas, y algunos combates contra jefes rinden mejor.\n\nEntre las correcciones figuran un fallo que mostraba cuadros brillantes en las nubes volumétricas de las RX 9000 de AMD, problemas de reproducción en algunas escenas y varios bloqueos de progresión. También se corrigió que el logro Defy Destiny no se desbloqueara; quienes ya cumplen los requisitos lo obtendrán al iniciar el juego tras actualizar. Si aparecen fallos o tirones, borra la caché de shaders.",
+    "etiketler": [
+     "#PhantomBladeZero",
+     "#Steam",
+     "#PC",
+     "#Patch"
+    ]
+   },
+   "fr": {
+    "baslik": "Phantom Blade Zero : patch 1.0304629 et nouvelle aide caméra",
+    "ozet": "La mise à jour pèse 7 Go sur PC et ajoute une section Combat Assist, une aide caméra, une sensibilité de ciblage souris et des corrections.",
+    "metin": "La mise à jour 1.0304629 de Phantom Blade Zero est sortie sur Steam le 28 novembre. Sur PC, elle pèse 7 Go et les notes officielles conseillent de retirer les mods tiers avant de l'installer.\n\nLe patch ajoute une section Combat Assist dans les paramètres, avec une option Automatic Strong Camera Assist. Désactivée, cette aide de caméra forte ne s'active que lorsque vous attaquez un ennemi. Le réglage de sensibilité du changement de cible à la souris, verrouillée sur une cible, est aussi ajouté ; à 0, il désactive ce changement à la souris. La mémoire utilisée diminue, surtout dans les cinématiques et les zones enneigées, et certains combats de boss tournent mieux.\n\nLes corrections traitent des artefacts carrés lumineux dans les nuages volumétriques sur les Radeon RX 9000 d'AMD, des problèmes de lecture de cinématiques et plusieurs blocages de progression. Le succès Defy Destiny est aussi corrigé : les joueurs qui remplissent déjà les conditions l'obtiendront automatiquement au prochain lancement. En cas de plantages ou de saccades, videz le cache des shaders.",
+    "etiketler": [
+     "#PhantomBladeZero",
+     "#Steam",
+     "#PC",
+     "#Patch"
+    ]
+   },
+   "de": {
+    "baslik": "Phantom Blade Zero Patch 1.0304629: Kamera-Hilfe und Zielwahl",
+    "ozet": "Das Update wiegt 7 GB auf dem PC und bringt einen neuen Combat-Assist-Bereich, Zielwechsel-Einstellungen und zahlreiche Fehlerbehebungen.",
+    "metin": "Für Phantom Blade Zero ist am 28. November der Patch 1.0304629 auf Steam erschienen. Das Update benötigt auf dem PC einen Download von 7 GB. Die offiziellen Patch-Notizen raten dazu, vor dem Update Mods von Drittanbietern zu entfernen.\n\nNeu ist ein Bereich Combat Assist in den Einstellungen mit der Option Automatic Strong Camera Assist. Ist sie deaktiviert, greift die starke Kamerahilfe nur, wenn Sie einen Gegner angreifen. Außerdem gibt es die Einstellung Mouse Lock-On Target Switching Sensitivity: Bei dem Wert 0 wird der Zielwechsel per Maus abgeschaltet. Der Speicherbedarf für Videospeicher und Arbeitsspeicher sinkt, besonders in Zwischensequenzen und Schneegebieten; auch einige Bosskämpfe laufen flüssiger.\n\nBehoben wurden unter anderem helle Bildfehler in volumetrischen Wolken auf AMD-Radeon-RX-9000-Karten, Abspielprobleme bei Zwischensequenzen und mehrere Fortschrittsblockaden. Das Problem, dass sich der Erfolg Defy Destiny nicht freischalten ließ, ist ebenfalls gelöst; wer alle anderen Erfolge hat, erhält ihn beim nächsten Start automatisch. Bei Abstürzen oder Rucklern hilft das Leeren des Shader-Caches.",
+    "etiketler": [
+     "#PhantomBladeZero",
+     "#Steam",
+     "#PC",
+     "#Patch"
+    ]
+   },
+   "nl": {
+    "baslik": "Phantom Blade Zero patch 1.0304629: camerahulp en doelwitkeuze",
+    "ozet": "De update weegt 7 GB op pc en voegt een Combat Assist-menu, instellingen voor doelwisselen met de muis en tal van bugfixes toe.",
+    "metin": "Phantom Blade Zero heeft op 28 november de patch 1.0304629 op Steam gekregen. Op pc is de download 7 GB groot. Volgens de officiële patchnotities kun je beter mods van derden verwijderen voordat je de update installeert.\n\nIn de instellingen staat nu een Combat Assist-sectie met de optie Automatic Strong Camera Assist. Staat die uit, dan helpt de sterke cameraassist alleen wanneer je een vijand aanvalt. Ook nieuw is de instelling Mouse Lock-On Target Switching Sensitivity: op 0 schakel je het wisselen van doel met de muis uit. Het geheugengebruik daalt, vooral bij tussenfilmpjes en besneeuwde gebieden, en sommige bossgevechten lopen soepeler.\n\nDe fixes omvatten heldere vierkante artefacten in volumetrische wolken op AMD Radeon RX 9000-kaarten, afspeelproblemen bij tussenfilmpjes en meerdere blokkades in de voortgang. Ook de Defy Destiny-prestatie is hersteld: spelers die alle andere prestaties hebben, krijgen die na het volgende opstarten automatisch. Bij crashes of haperingen kun je de shadercache wissen.",
+    "etiketler": [
+     "#PhantomBladeZero",
+     "#Steam",
+     "#PC",
+     "#Patch"
+    ]
+   },
+   "zh": {
+    "baslik": "Phantom Blade Zero 1.0304629补丁上线：战斗辅助与镜头设置",
+    "ozet": "更新包约7 GB，新增战斗辅助菜单与鼠标切换目标灵敏度，并修复多项进度与成就问题。",
+    "metin": "Phantom Blade Zero于11月28日在Steam上发布1.0304629版本更新，PC端下载体积为7 GB。官方更新说明建议在更新前移除第三方模组。\n\n本次更新在设置中新增“战斗辅助”分区，并提供自动强镜头辅助选项：关闭时，强力镜头辅助仅在攻击敌人时生效。鼠标锁定目标切换灵敏度也已加入，设为0即可关闭鼠标切换目标。内存占用有所降低，过场动画和雪地区域改善最明显，部分boss战性能也有提升。\n\n修复内容包括AMD Radeon RX 9000系列显卡在部分驱动下体积云出现亮色方块、部分过场动画播放异常，以及若干阻碍剧情推进的问题。成就“Defy Destiny”无法解锁的问题也已修复，已满足条件的玩家在下次启动游戏时会自动获得。遇到崩溃或卡顿时，可尝试清理着色器缓存。",
+    "etiketler": [
+     "#PhantomBladeZero",
+     "#Steam",
+     "#PC",
+     "#Patch"
+    ]
+   }
+  },
+  "otomasyon": {
+   "konu": "phantom-blade-zero-1-0304629-yama-notlari",
+   "teyit_turu": "resmi",
+   "resmi_url": "https://store.steampowered.com/news/app/4115450/view/698782503191709241",
+   "teyit_zamani": "2026-11-28T06:10:02+00:00",
+   "oyuncuya_fayda": "Oyuncular yeni kamera ve hedef ayarlarını kendi tercihlerine göre düzenleyebilir.",
+   "hype": 5,
+   "eklenme": "2026-11-28T09:13:02.448271+03:00"
+  }
+ },
+ {
   "id": "warframe-tau-cikis-2026-11-27",
   "oyun": "Warframe",
   "tarih": "2026-11-27",

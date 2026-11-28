@@ -1,0 +1,99 @@
+{
+ "id": "phantom-blade-zero-yama-2026-11-28",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Phantom Blade Zero'nun 1.0304629 yaması çıktı; kamera yardımına yeni bir ayar geliyor.",
+   "veri": {
+    "ust_etiket": "YAMA NOTLARI",
+    "baslik": "Phantom Blade Zero 1.0304629 yaması",
+    "vurgu": [
+     "1.0304629"
+    ],
+    "tuslar": [
+     "P",
+     "A",
+     "T"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PHANTOM BLADE ZERO",
+    "alt": "1.0304629 YAMASI"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Steam'deki resmî yama notlarına göre PC'de 7 GB'lık indirme var; güncellemeden önce modları kaldırın.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam resmî yama notları",
+    "alinti": "Yama indirme boyutu 7 GB; güncellemeden önce üçüncü taraf modların kaldırılması öneriliyor."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "STEAM • YAMA NOTLARI"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Combat Assist bölümü geldi. Otomatik güçlü kamera yardımı kapalıyken güçlü yardım yalnızca düşmana saldırırken devreye giriyor. Fare hedef hassasiyeti de ayarlanabiliyor.",
+   "veri": {
+    "baslik": "Yeni ayarlar",
+    "maddeler": [
+     {
+      "metin": "Combat Assist bölümü eklendi",
+      "tetik": "Combat"
+     },
+     {
+      "metin": "Otomatik güçlü kamera yardımı seçeneği",
+      "tetik": "kamera"
+     },
+     {
+      "metin": "Fare hedef hassasiyeti ayarı",
+      "tetik": "hassasiyeti"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "YENİ AYARLAR",
+    "alt": "COMBAT ASSIST"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Yama notlarının tamamı sitemizde, Control A Game'de. Yeni kamera ayarını ilk sen mi deneyeceksin?",
+   "veri": {
+    "cagri": "Tüm yama notları sitede",
+    "alt": "Düzeltme listesi haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

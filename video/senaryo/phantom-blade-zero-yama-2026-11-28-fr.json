@@ -1,0 +1,99 @@
+{
+ "id": "phantom-blade-zero-yama-2026-11-28",
+ "dil": "fr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "La mise à jour 1.0304629 de Phantom Blade Zero est sortie, avec une nouvelle aide caméra.",
+   "veri": {
+    "ust_etiket": "NOTES DE PATCH",
+    "baslik": "Phantom Blade Zero : patch 1.0304629",
+    "vurgu": [
+     "1.0304629"
+    ],
+    "tuslar": [
+     "P",
+     "A",
+     "T"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "PHANTOM BLADE ZERO",
+    "alt": "PATCH 1.0304629"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "D'après les notes officielles de Steam, le patch pèse 7 Go sur PC et il faut retirer les mods tiers avant de l'installer.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Notes officielles de patch Steam",
+    "alinti": "Taille du téléchargement : 7 Go ; retirez les mods tiers avant la mise à jour."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "SOURCE OFFICIELLE",
+    "alt": "STEAM • NOTES DE PATCH"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Une section Combat Assist arrive dans les paramètres. Si l'aide caméra automatique est désactivée, l'aide forte ne s'active qu'en attaquant un ennemi. Une sensibilité de changement de cible à la souris est aussi ajoutée ; à 0, elle se coupe.",
+   "veri": {
+    "baslik": "Nouveaux réglages",
+    "maddeler": [
+     {
+      "metin": "Section Combat Assist",
+      "tetik": "Combat"
+     },
+     {
+      "metin": "Aide caméra forte uniquement en attaque",
+      "tetik": "caméra"
+     },
+     {
+      "metin": "Sensibilité de ciblage à la souris",
+      "tetik": "sensibilité"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "NOUVEAUX RÉGLAGES",
+    "alt": "COMBAT ASSIST ET CAMÉRA"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Toutes les notes sont sur notre site, Control A Game. Essaierez-vous d'abord la nouvelle aide caméra ?",
+   "veri": {
+    "cagri": "Toutes les notes sur le site",
+    "alt": "Corrections et changements dans l'article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
