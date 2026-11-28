@@ -2174,6 +2174,20 @@
   "url": "https://www.instagram.com/p/DgFskC7jUHE/",
   "zaman": "2026-11-23T15:24:52+00:00"
  },
+ "warframe-kullervo-prime-access-2026-11-27|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 8340362,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "warframe-kullervo-prime-access-2026-11-27",
+  "kimlik": "JDM79SZlMbM",
+  "niyet_zamani": "2026-11-28T11:44:15+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg3mDa4V7wGtI0VUZu76vbj4u_ynhg04ZNSpyUipgymZrCOVllJCQAssui2_Omxf2hFaoNuS0nzYowCTmbr5XHx36q8k6-nfBoWZ-eqrFgI",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/JDM79SZlMbM",
+  "zaman": "2026-11-28T11:44:15+00:00"
+ },
  "warframe-sevagoth-hydroid-prime-prime-resurgence-2026-11-26|tr|instagram|reel": {
   "bicim": "reel",
   "dil": "tr",
@@ -2201,6 +2215,20 @@
   "sosyal_tur": "haber",
   "url": "https://www.youtube.com/shorts/WiCTmoE5r-Y",
   "zaman": "2026-11-27T06:44:57+00:00"
+ },
+ "warframe-tau-cikis-9-aralik|tr|instagram|reel": {
+  "bicim": "reel",
+  "dil": "tr",
+  "durum": "tamam",
+  "icerik_dili": "tr",
+  "id": "warframe-tau-cikis-2026-11-27",
+  "kapsayici": "17872420446694894",
+  "kimlik": "18457357975120692",
+  "niyet_zamani": "2026-11-28T11:44:15+00:00",
+  "platform": "instagram",
+  "sosyal_tur": "haber",
+  "url": "https://www.instagram.com/reel/DgSLTFMtFHf/",
+  "zaman": "2026-11-28T11:44:15+00:00"
  },
  "warframe-tau-cikis-9-aralik|tr|youtube|short": {
   "bicim": "short",
