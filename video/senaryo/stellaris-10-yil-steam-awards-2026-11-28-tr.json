@@ -1,0 +1,98 @@
+{
+ "id": "stellaris-10-yil-steam-awards-2026-11-28",
+ "dil": "tr",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Stellaris 10 yaşında ve Labor of Love ödülüne aday gösterilebilir.",
+   "veri": {
+    "ust_etiket": "10. YIL",
+    "baslik": "Stellaris 10 yaşında",
+    "vurgu": [
+     "10 yaşında"
+    ],
+    "tuslar": [
+     "S",
+     "T"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "STELLARIS",
+    "alt": "STEAM AWARDS ADAYLIĞI"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Resmî Steam duyurusuna göre bu ödül, uzun süre sonra da içerik alan eski oyunları kutluyor.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Steam resmî duyurusu",
+    "alinti": "Labor of Love ödülü, çıkıştan uzun süre sonra da yeni içerik alan eski oyunları kutluyor."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "RESMÎ KAYNAK",
+    "alt": "STEAM HABER DUYURUSU"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "On yılda 170'ten fazla ücretsiz yama geldi. Modcular için 2.000'den fazla iyileştirme var. Aday gösterimi 30 Kasım'da kapanıyor.",
+   "veri": {
+    "baslik": "On yıllık destek",
+    "maddeler": [
+     {
+      "metin": "170'ten fazla ücretsiz yama",
+      "tetik": "170"
+     },
+     {
+      "metin": "Modcular için 2.000'den fazla iyileştirme",
+      "tetik": "2.000"
+     },
+     {
+      "metin": "Aday gösterimi 30 Kasım'da kapanıyor",
+      "tetik": "kapanıyor"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "ON YILLIK DESTEK",
+    "alt": "YAMA VE İYİLEŞTİRME"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Tamamı sitemizde, Control A Game'de. Stellaris'ı aday gösterir misiniz?",
+   "veri": {
+    "cagri": "Tamamı sitemizde",
+    "alt": "Aday gösterim ve yama ayrıntıları haberde."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

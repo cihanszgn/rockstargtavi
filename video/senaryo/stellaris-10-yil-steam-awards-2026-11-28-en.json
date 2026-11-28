@@ -1,0 +1,98 @@
+{
+ "id": "stellaris-10-yil-steam-awards-2026-11-28",
+ "dil": "en",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Stellaris turns 10 and can be nominated for the Labor of Love award.",
+   "veri": {
+    "ust_etiket": "10 YEARS",
+    "baslik": "Stellaris turns 10",
+    "vurgu": [
+     "turns 10"
+    ],
+    "tuslar": [
+     "S",
+     "T"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "STELLARIS",
+    "alt": "STEAM AWARDS NOMINATIONS"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "According to the official Steam post, this award celebrates older games that keep getting new content.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Official Steam post",
+    "alinti": "The Labor of Love award celebrates older games that keep getting new content after launch."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "OFFICIAL SOURCE",
+    "alt": "STEAM NEWS POST"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "Over ten years, Stellaris received more than 170 free patches. Modders also got over 2,000 improvements. Nominations close November 30.",
+   "veri": {
+    "baslik": "Ten years of support",
+    "maddeler": [
+     {
+      "metin": "More than 170 free patches",
+      "tetik": "170"
+     },
+     {
+      "metin": "Over 2,000 improvements for modders",
+      "tetik": "2,000"
+     },
+     {
+      "metin": "Nominations close November 30",
+      "tetik": "close"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "TEN YEARS OF SUPPORT",
+    "alt": "PATCHES AND IMPROVEMENTS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Read the full story on our site, Control A Game. Will you nominate Stellaris?",
+   "veri": {
+    "cagri": "Read the full story on our site",
+    "alt": "Patch notes and nomination details are in the article."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}

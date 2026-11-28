@@ -1,0 +1,98 @@
+{
+ "id": "stellaris-10-yil-steam-awards-2026-11-28",
+ "dil": "es",
+ "fps": 30,
+ "boyut": [
+  1080,
+  1920
+ ],
+ "sablon_surumu": 1,
+ "okunus": {},
+ "sahneler": [
+  {
+   "sablon": "baslik",
+   "anlatim": "Stellaris cumple 10 años y puede ser nominado al premio Labor of Love.",
+   "veri": {
+    "ust_etiket": "10 AÑOS",
+    "baslik": "Stellaris cumple 10 años",
+    "vurgu": [
+     "cumple 10"
+    ],
+    "tuslar": [
+     "S",
+     "T"
+    ]
+   },
+   "alt_kart": {
+    "simge": "guncelleme",
+    "baslik": "STELLARIS",
+    "alt": "NOMINACIONES EN STEAM AWARDS"
+   },
+   "maskot": {
+    "hareket": "zipla"
+   }
+  },
+  {
+   "sablon": "kaynak",
+   "anlatim": "Según la publicación oficial en Steam, este premio reconoce juegos antiguos que siguen recibiendo contenido.",
+   "veri": {
+    "kaynak": 0,
+    "ad": "Publicación oficial en Steam",
+    "alinti": "El premio Labor of Love reconoce juegos antiguos que siguen recibiendo contenido nuevo mucho después de su lanzamiento."
+   },
+   "alt_kart": {
+    "simge": "kaynak",
+    "baslik": "FUENTE OFICIAL",
+    "alt": "PUBLICACIÓN EN STEAM"
+   },
+   "maskot": {
+    "hareket": "tara"
+   }
+  },
+  {
+   "sablon": "maddeler",
+   "anlatim": "En diez años, Stellaris recibió más de 170 parches gratuitos. Los modders también recibieron más de 2.000 mejoras. Las nominaciones cierran el 30 de noviembre.",
+   "veri": {
+    "baslik": "Diez años de apoyo",
+    "maddeler": [
+     {
+      "metin": "Más de 170 parches gratuitos",
+      "tetik": "170"
+     },
+     {
+      "metin": "Más de 2.000 mejoras para modders",
+      "tetik": "2.000"
+     },
+     {
+      "metin": "Las nominaciones cierran el 30 de noviembre",
+      "tetik": "cierran"
+     }
+    ]
+   },
+   "alt_kart": {
+    "simge": "liste",
+    "baslik": "DIEZ AÑOS DE APOYO",
+    "alt": "PARCHES Y MEJORAS"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  },
+  {
+   "sablon": "kapanis",
+   "anlatim": "Todos los detalles en nuestra web, Control A Game. ¿Vas a nominar a Stellaris?",
+   "veri": {
+    "cagri": "Todos los detalles en la web",
+    "alt": "Parches y nominación explicados en la noticia."
+   },
+   "alt_kart": {
+    "simge": "site",
+    "baslik": "CTRL+A GAME",
+    "alt": "CTRL-AGAME.COM"
+   },
+   "maskot": {
+    "hareket": "bas"
+   }
+  }
+ ]
+}
