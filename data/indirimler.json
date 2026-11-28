@@ -1,5 +1,5 @@
 {
- "guncel": "2026-11-27T14:02:51Z",
+ "guncel": "2026-11-28T13:21:07Z",
  "kaynak": "https://www.cheapshark.com",
  "magazalar": [
   {
@@ -65,6 +65,23 @@
  ],
  "firsatlar": [
   {
+   "dealID": "oyadBOu1z6MVss1%2BMfCBqCSpNd8cUcuA9cl2j7PtgMc%3D",
+   "gameID": "273928",
+   "title": "Suicide Squad: Kill the Justice League",
+   "storeID": "25",
+   "salePrice": 3.49,
+   "normalPrice": 69.99,
+   "savings": 95.01,
+   "metacriticScore": 63,
+   "steamRatingText": "Mixed",
+   "steamRatingPercent": 62,
+   "steamAppID": "315210",
+   "releaseDate": 1706832000,
+   "dealRating": 10.0,
+   "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/315210/capsule_231x87.jpg?t=1777940046",
+   "enDusuk": 1.23
+  },
+  {
    "dealID": "%2F5DFE%2F2K%2FVul88oIaSEPBozm0YOSy8ep%2BifmrdL4J2o%3D",
    "gameID": "261055",
    "title": "Bread and Fred",
@@ -80,23 +97,6 @@
    "dealRating": 10.0,
    "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1607680/f5df5f261dc7c5c58bda1f1c3709fefa80d78466/capsule_231x87.jpg?t=1773071421",
    "enDusuk": 0.0
-  },
-  {
-   "dealID": "nF9%2FdPXYPajMwowT9vhxtb%2BbzqK%2FsuFSBFt5snmLx24%3D",
-   "gameID": "273928",
-   "title": "Suicide Squad: Kill the Justice League",
-   "storeID": "30",
-   "salePrice": 3.08,
-   "normalPrice": 69.99,
-   "savings": 95.6,
-   "metacriticScore": 63,
-   "steamRatingText": "Mixed",
-   "steamRatingPercent": 62,
-   "steamAppID": "315210",
-   "releaseDate": 1706832000,
-   "dealRating": 10.0,
-   "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/315210/capsule_231x87.jpg?t=1777940046",
-   "enDusuk": 1.23
   },
   {
    "dealID": "atVBzdCGbdc5VWjW6wtGCD%2Fa190qthDq45We4qtokmY%3D",
@@ -422,6 +422,23 @@
    "enDusuk": 6.99
   },
   {
+   "dealID": "fYnuwa6Wo4bsWJriS6m72su%2BXwtlDaqzaMQuTaQY%2Bj4%3D",
+   "gameID": "213719",
+   "title": "Omega Labyrinth Life - Deluxe Edition",
+   "storeID": "23",
+   "salePrice": 12.2,
+   "normalPrice": 79.99,
+   "savings": 84.75,
+   "metacriticScore": 0,
+   "steamRatingText": null,
+   "steamRatingPercent": 0,
+   "steamAppID": null,
+   "releaseDate": 0,
+   "dealRating": 10.0,
+   "thumb": "https://sttc.gamersgate.com/images/product/omega-labyrinth-life-deluxe-edition/cover-180-4b5d80.jpg",
+   "enDusuk": 10.65
+  },
+  {
    "dealID": "LiMSqxt11RNPWRYjNLaI9o4gGviVZxA1gFRXZHdaXMg%3D",
    "gameID": "171780",
    "title": "Ni no Kuni II: Revenant Kingdom - The Prince's Edition",
@@ -454,6 +471,23 @@
    "dealRating": 10.0,
    "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/subs/75825/capsule_231x87.jpg?t=1705948029",
    "enDusuk": 2.81
+  },
+  {
+   "dealID": "90wST8tlULCWRPj8dLw4qVYmGEzueBlsqD36g5J6bRE%3D",
+   "gameID": "285770",
+   "title": "CUSTOM MECH WARS ULTIMATE EDITION",
+   "storeID": "23",
+   "salePrice": 12.71,
+   "normalPrice": 74.99,
+   "savings": 83.05,
+   "metacriticScore": 0,
+   "steamRatingText": null,
+   "steamRatingPercent": 0,
+   "steamAppID": null,
+   "releaseDate": 0,
+   "dealRating": 10.0,
+   "thumb": "https://sttc.gamersgate.com/images/product/custom-mech-wars-ultimate-edition/cover-180-572cfa.jpg",
+   "enDusuk": 11.39
   },
   {
    "dealID": "lx1Ldqb2ETEm0PJHIwoF8aVhlAvtMNpyHN%2B3M64aUek%3D",
@@ -507,21 +541,21 @@
    "enDusuk": 11.28
   },
   {
-   "dealID": "f8l9hEEImPnYBa29xA2TgGNe9%2FHFmuxhhhSOWdUYOVY%3D",
-   "gameID": "213719",
-   "title": "Omega Labyrinth Life - Deluxe Edition",
-   "storeID": "27",
-   "salePrice": 12.81,
+   "dealID": "UqITXzYubLQYiw6dKSqL9D0K2zy7Mzzzad1KPkqjjG4%3D",
+   "gameID": "306649",
+   "title": "001 Game Creator",
+   "storeID": "25",
+   "salePrice": 15.99,
    "normalPrice": 79.99,
-   "savings": 83.99,
+   "savings": 80.01,
    "metacriticScore": 0,
    "steamRatingText": null,
    "steamRatingPercent": 0,
    "steamAppID": null,
-   "releaseDate": 0,
+   "releaseDate": 1754352000,
    "dealRating": 10.0,
-   "thumb": "https://sttc.gamersgate.com/images/product/omega-labyrinth-life-deluxe-edition/cover-180-4b5d80.jpg",
-   "enDusuk": 10.65
+   "thumb": "https://cdn1.epicgames.com/spt-assets/97e9bb2248774701a884df9776c8ca09/001-game-creator-rp5sm.jpg",
+   "enDusuk": 15.99
   },
   {
    "dealID": "RKpDfTkja6hvA%2FotuH6FnIuUEk4BtZDwGm0DJ2xsyss%3D",
@@ -692,40 +726,6 @@
    "dealRating": 10.0,
    "thumb": "https://images.greenmangaming.com/954b123f74ce43e6a39abdaee7d33a61/cbc991bb102c4ad2a819a17b06e1701c.jpg",
    "enDusuk": 6.16
-  },
-  {
-   "dealID": "CY0qkv0hCaks4qtSWhqd1Y0V4px%2B2%2BKDVuagr%2FKS7FE%3D",
-   "gameID": "233317",
-   "title": "Watch Dogs Legion Deluxe Edition",
-   "storeID": "27",
-   "salePrice": 9.69,
-   "normalPrice": 69.99,
-   "savings": 86.16,
-   "metacriticScore": 0,
-   "steamRatingText": null,
-   "steamRatingPercent": 0,
-   "steamAppID": null,
-   "releaseDate": 0,
-   "dealRating": 10.0,
-   "thumb": "https://store.ubisoft.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/default/dw4954dda5/images/large/60c1d9160d253c133844ea16.jpg?sw=197&amp;sh=261&amp;sm=fit",
-   "enDusuk": 6.49
-  },
-  {
-   "dealID": "o1xlhLpb3VyKF7qgLENW3eVPY0GWlZJTHsDUoEY%2FUvU%3D",
-   "gameID": "252842",
-   "title": "LEGO Star Wars: The Skywalker Saga Galactic Edition",
-   "storeID": "23",
-   "salePrice": 5.91,
-   "normalPrice": 69.99,
-   "savings": 91.56,
-   "metacriticScore": 0,
-   "steamRatingText": "Very Positive",
-   "steamRatingPercent": 90,
-   "steamAppID": "785847",
-   "releaseDate": 1667260800,
-   "dealRating": 10.0,
-   "thumb": "https://shared.fastly.steamstatic.com/store_item_assets/steam/subs/785847/capsule_231x87.jpg?t=1698432746",
-   "enDusuk": 5.91
   }
  ]
 }
