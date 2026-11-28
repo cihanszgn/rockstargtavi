@@ -990,6 +990,20 @@
   "url": "https://www.youtube.com/shorts/_XGW5efe5x8",
   "zaman": "2026-11-18T09:03:45+00:00"
  },
+ "gta-vi-kriminal-profil-rockstar-north-yorum-2026-11-27|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 5983045,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "gta-vi-kriminal-profil-sistemi-2026-11-27",
+  "kimlik": "fV4Pgt63KC8",
+  "niyet_zamani": "2026-11-28T13:45:33+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg0HoOT4ILBrY0r78-PeT7hy7q7VKhA4IjuNXD3ovWS65270Xdf30ha6WysehBNkRCxTvr6EpJClUutqU1L10wvrEhCTMiL9t31jf3nZwo4",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/fV4Pgt63KC8",
+  "zaman": "2026-11-28T13:45:33+00:00"
+ },
  "gta-vi-playstation-tarihinin-en-buyuk-cikisi-2026-11-23|tr|instagram|reel": {
   "bicim": "reel",
   "dil": "tr",
@@ -2173,6 +2187,20 @@
   "sosyal_tur": "haber",
   "url": "https://www.instagram.com/p/DgFskC7jUHE/",
   "zaman": "2026-11-23T15:24:52+00:00"
+ },
+ "warframe-kullervo-prime-access-2026-11-27|tr|instagram|reel": {
+  "bicim": "reel",
+  "dil": "tr",
+  "durum": "tamam",
+  "icerik_dili": "tr",
+  "id": "warframe-kullervo-prime-access-2026-11-27",
+  "kapsayici": "17872453404694894",
+  "kimlik": "17979147615156912",
+  "niyet_zamani": "2026-11-28T13:45:33+00:00",
+  "platform": "instagram",
+  "sosyal_tur": "haber",
+  "url": "https://www.instagram.com/reel/DgSZLpaB2uq/",
+  "zaman": "2026-11-28T13:45:33+00:00"
  },
  "warframe-kullervo-prime-access-2026-11-27|tr|youtube|short": {
   "bicim": "short",
