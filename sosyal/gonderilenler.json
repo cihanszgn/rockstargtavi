@@ -2202,6 +2202,20 @@
   "url": "https://www.youtube.com/shorts/WiCTmoE5r-Y",
   "zaman": "2026-11-27T06:44:57+00:00"
  },
+ "warframe-tau-cikis-9-aralik|tr|youtube|short": {
+  "bicim": "short",
+  "boyut": 6110719,
+  "dil": "tr",
+  "durum": "tamam",
+  "id": "warframe-tau-cikis-2026-11-27",
+  "kimlik": "uP5niIhb0pI",
+  "niyet_zamani": "2026-11-28T09:43:29+00:00",
+  "oturum": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,localizations&upload_id=AFy3sg3-TaCi0TbC6rrrFrbpF3VDMI_GqjIFezSgcD-mbKURyPNYc3n99MRQH-rVHS96lmwPtsLCaUW5vWof_xR5oEaiqYLcPeZ411-Zc3mXJA",
+  "platform": "youtube",
+  "sosyal_tur": "haber",
+  "url": "https://www.youtube.com/shorts/uP5niIhb0pI",
+  "zaman": "2026-11-28T09:43:29+00:00"
+ },
  "warhammer-40k-dawn-of-war-iv-2026-11-23|tr|instagram|gorsel": {
   "bicim": "gorsel",
   "dil": "tr",
