@@ -287,6 +287,41 @@
    },
    "youtube": "https://www.youtube.com/shorts/_b_BR4MiFDc"
   },
+  "eraycan-20261122-RfeN-mLv-klip-03": {
+   "hesap": "klip",
+   "kanal_url": "https://www.youtube.com/@erayozkenar",
+   "metin": {
+    "aciklama": "Yanlış çeviri tartışması \"yarım dil biliyorsun\" lafıyla bitiyor.\nKaynak: https://www.youtube.com/@erayozkenar\nYayının bu anı: https://youtu.be/RfeN-mLv2r0?t=6779\nKomixsi",
+    "baslik": "Eray'ın yayınında yarım dil esprisi dönüyor",
+    "etiketler": [
+     "#Eray",
+     "#Youtube",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "986df259d86d2fdc835a9574c2438147bd0f69419721b4408d8480b56b0498a2",
+    "otomatik": true,
+    "ozet": "56f24f2b921063d585d7cfd056bce1082c08870fceea397a730cf25092596704",
+    "zaman": "2026-11-28T14:44:24Z"
+   },
+   "otomatik": true,
+   "oyun": "",
+   "paket": "cikti/eraycan-20261122-RfeN-mLv/klip-03.json",
+   "sure": 21.2,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-22",
+   "yayinci": "Eraycan",
+   "yayinda": {
+    "kapak": "klip-eraycan-20261122-RfeN-mLv-klip-03-kapak.jpg",
+    "mp4_1080": "klip-eraycan-20261122-RfeN-mLv-klip-03-1080.mp4",
+    "mp4_540": "klip-eraycan-20261122-RfeN-mLv-klip-03-540.mp4",
+    "mp4_720": "klip-eraycan-20261122-RfeN-mLv-klip-03-720.mp4",
+    "sure": 21.2,
+    "yuklenen_ozet": "56f24f2b921063d585d7cfd056bce1082c08870fceea397a730cf25092596704",
+    "zaman": "2026-11-28T14:44:45Z"
+   }
+  },
   "eraycan-20261123-bc01e91d-klip-01": {
    "hesap": "klip",
    "kanal_url": "https://kick.com/eray",
@@ -963,6 +998,77 @@
     "zaman": "2026-11-27T15:04:21Z"
    },
    "youtube": "https://www.youtube.com/shorts/CCx8vC6URQM"
+  },
+  "tolunay-oren-20261127-52kRfZp8-klip-03": {
+   "hesap": "klip",
+   "kanal_url": "https://www.youtube.com/@TolunayOren",
+   "metin": {
+    "aciklama": "Tarih sorgusunda aile evinde LoL oynadığını yeminlerle savunuyor.\nKaynak: https://www.youtube.com/@TolunayOren\nYayının bu anı: https://youtu.be/52kRfZp8wZA?t=11060\nKomixsi",
+    "baslik": "Tolunay LoL oynadığına yemin ediyor",
+    "etiketler": [
+     "#Tolunay",
+     "#Youtube",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "ee9cadbee3e49e8ae2d8328b6d2ce7fda95effdf13b85b98b32a5e4835fb3ef1",
+    "otomatik": true,
+    "ozet": "3e38347ea2d99e89b143a9c475ebfa7b070126a8819bc733259a577bbe6f28d2",
+    "zaman": "2026-11-28T14:44:24Z"
+   },
+   "otomatik": true,
+   "oyun": "",
+   "paket": "cikti/tolunay-oren-20261127-52kRfZp8/klip-03.json",
+   "sure": 34.63,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-27",
+   "yayinci": "Tolunay Ören",
+   "yayinda": {
+    "kapak": "klip-tolunay-oren-20261127-52kRfZp8-klip-03-kapak.jpg",
+    "mp4_1080": "klip-tolunay-oren-20261127-52kRfZp8-klip-03-1080.mp4",
+    "mp4_540": "klip-tolunay-oren-20261127-52kRfZp8-klip-03-540.mp4",
+    "mp4_720": "klip-tolunay-oren-20261127-52kRfZp8-klip-03-720.mp4",
+    "sure": 34.63,
+    "yuklenen_ozet": "3e38347ea2d99e89b143a9c475ebfa7b070126a8819bc733259a577bbe6f28d2",
+    "zaman": "2026-11-28T14:45:09Z"
+   }
+  },
+  "tolunay-oren-20261127-a4ca3092-klip-02": {
+   "hesap": "klip",
+   "kanal_url": "https://kick.com/tolunayoren",
+   "metin": {
+    "aciklama": "Kaynak: https://kick.com/tolunayoren\nKomixsi",
+    "baslik": "Tolunay'da şikayet konuşması küfre dönüyor",
+    "etiketler": [
+     "#Tolunay",
+     "#Kick",
+     "#EASportsFC27",
+     "#Komixsi"
+    ]
+   },
+   "onay": {
+    "metin_ozeti": "7e6a14d2422a967bca9e153cdcec014da5bea10b2d56fe1379810a0d4ad9ef74",
+    "otomatik": true,
+    "ozet": "84acad00339986cd1a75bfed1bce1a6625f64e5df91d76beb6527bf2da444153",
+    "zaman": "2026-11-28T14:44:24Z"
+   },
+   "otomatik": true,
+   "oyun": "EA Sports FC 27",
+   "paket": "cikti/tolunay-oren-20261127-a4ca3092/klip-02.json",
+   "sure": 46.31,
+   "tur": "klip",
+   "yayin_tarihi": "2026-11-27",
+   "yayinci": "Tolunay Ören",
+   "yayinda": {
+    "kapak": "klip-tolunay-oren-20261127-a4ca3092-klip-02-kapak.jpg",
+    "mp4_1080": "klip-tolunay-oren-20261127-a4ca3092-klip-02-1080.mp4",
+    "mp4_540": "klip-tolunay-oren-20261127-a4ca3092-klip-02-540.mp4",
+    "mp4_720": "klip-tolunay-oren-20261127-a4ca3092-klip-02-720.mp4",
+    "sure": 46.31,
+    "yuklenen_ozet": "84acad00339986cd1a75bfed1bce1a6625f64e5df91d76beb6527bf2da444153",
+    "zaman": "2026-11-28T14:45:28Z"
+   }
   },
   "wtcn-20261117-6bbe5c53-klip-02": {
    "kanal_url": "https://kick.com/wtcn",
